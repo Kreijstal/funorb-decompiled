@@ -11,7 +11,8 @@ final class sd extends am {
         if (param0 <= 123) {
             return;
         }
-        ie.a(14837);
+        int discarded$0 = 14837;
+        ie.a();
     }
 
     final int[] a(byte param0, int param1) {
@@ -100,7 +101,7 @@ final class sd extends am {
         }
     }
 
-    final static void a(rm param0, int param1, int param2) {
+    final static void a(rm param0) {
         RuntimeException var3 = null;
         int var3_int = 0;
         byte[] var4 = null;
@@ -142,13 +143,13 @@ final class sd extends am {
         try {
           L0: {
             if (param0.field_u == null) {
-              param0.field_u = new short[param1];
-              param0.field_n = new short[param1];
-              param0.field_x = new short[param1];
-              param0.field_s = new byte[param1];
+              param0.field_u = new short[1];
+              param0.field_n = new short[1];
+              param0.field_x = new short[1];
+              param0.field_s = new byte[1];
               return;
             } else {
-              if (param1 + param0.field_k >= param0.field_u.length) {
+              if (1 + param0.field_k >= param0.field_u.length) {
                 var3_int = (3 + 3 * param0.field_k) / 2;
                 var20 = new byte[var3_int];
                 var16 = var20;
@@ -212,11 +213,11 @@ final class sd extends am {
               break L1;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 44 + 0 + 41);
+          throw rb.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + 1 + 44 + 0 + 41);
         }
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         int var1 = 127;
         field_s = null;
     }
@@ -228,11 +229,14 @@ final class sd extends am {
         ((sd) this).field_v = 0;
     }
 
-    final static la a(boolean param0, int param1, byte param2, int param3, boolean param4) {
+    final static la a(boolean param0, int param1, byte param2, int param3) {
         if (param2 > -62) {
             return null;
         }
-        return hc.a(false, param0, param3, 8505, false, param1);
+        int discarded$0 = 1;
+        int discarded$1 = 0;
+        int discarded$2 = 8505;
+        return hc.a(false, true, param3);
     }
 
     final static boolean b(int param0) {

@@ -20,12 +20,12 @@ final class uu extends sna {
             field_vb = null;
         }
         for (var4 = 0; var4 < param0; var4++) {
-            var6[var4] = param2;
+            var6[var4] = '*';
         }
         return new String(var6);
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         field_vb = null;
         field_zb = null;
     }
@@ -39,14 +39,15 @@ final class uu extends sna {
             ((uu) this).field_Ab = param0;
             ((uu) this).field_Cb = param1;
             ((uu) this).field_xb = fw.field_h[((uu) this).field_Cb].field_c;
-            ((uu) this).field_v = this.b(true);
+            int discarded$0 = 1;
+            ((uu) this).field_v = this.b();
             ((uu) this).a(-1, new sna("buy", (sna) null, 294, 70, 80, 20, qd.field_l));
         } catch (RuntimeException runtimeException) {
             throw pe.a((Throwable) (Object) runtimeException, "uu.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
     }
 
-    private final kv b(boolean param0) {
+    private final kv b() {
         String var3 = null;
         kv var4 = null;
         L0: {
@@ -62,7 +63,8 @@ final class uu extends sna {
           dg.c(86, 10, 288, 24, 16700507);
           jha.field_g.c(((uu) this).field_Bb, 102, 26, 11796224, -1);
           hfa.field_z.c(((uu) this).field_Bb, 102, 26, 65793, -1);
-          int discarded$1 = g.field_g.a(((uu) this).field_xb, 102, 36, 240, 70, 8553090, -1, 0, 0, 14);
+          int discarded$2 = g.field_g.a(((uu) this).field_xb, 102, 36, 240, 70, 8553090, -1, 0, 0, 14);
+          int discarded$3 = 1;
           var3 = lga.a(true, new String[1], vla.field_u);
           jha.field_g.a(var3, 43, 86, 16699649, -1);
           hfa.field_z.a(var3, 43, 86, 65793, -1);

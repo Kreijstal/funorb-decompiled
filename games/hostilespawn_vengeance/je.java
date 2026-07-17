@@ -9,12 +9,12 @@ final class je {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }
 
-    final static ak[] a(fd param0, int param1) {
+    final static ak[] a(fd param0) {
         RuntimeException var2 = null;
         int[] var3 = null;
         ak[] var4 = null;
@@ -56,10 +56,10 @@ final class je {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             } else {
-              var8 = param0.a(param1 ^ -83);
+              var8 = param0.a(-81);
               L1: while (true) {
                 if (var8.field_f != 0) {
-                  if (param1 == var8.field_f) {
+                  if (2 == var8.field_f) {
                     stackOut_10_0 = new ak[]{};
                     stackIn_11_0 = stackOut_10_0;
                     return stackIn_11_0;
@@ -123,7 +123,7 @@ final class je {
               break L3;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param1 + 41);
+          throw wg.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + 2 + 41);
         }
         return stackIn_16_0;
     }

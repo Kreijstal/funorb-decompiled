@@ -71,7 +71,7 @@ final class hc {
         }
     }
 
-    final static wh[] a(byte param0) {
+    final static wh[] a() {
         return new wh[]{ml.field_F, wd.field_b, bf.field_a};
     }
 

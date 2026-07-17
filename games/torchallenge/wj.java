@@ -8,13 +8,13 @@ final class wj {
     static int field_a;
     static String field_d;
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         field_c = null;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;

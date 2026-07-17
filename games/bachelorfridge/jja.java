@@ -43,12 +43,14 @@ final class jja extends tda {
                   var5 = param2;
                   L2: while (true) {
                     if (var6.field_r >= var5) {
-                      this.a(var5, param0, var4_int, var4_int + var5, var6, (byte) 12);
+                      int discarded$2 = 12;
+                      this.a(var5, param0, var4_int, var4_int + var5, var6);
                       var6.field_r = var6.field_r - var5;
                       var6 = (fh) (Object) ((jja) this).field_k.c(0);
                       continue L1;
                     } else {
-                      this.a(var6.field_r, param0, var4_int, var5 + var4_int, var6, (byte) 12);
+                      int discarded$3 = 12;
+                      this.a(var6.field_r, param0, var4_int, var5 + var4_int, var6);
                       var5 = var5 - var6.field_r;
                       var4_int = var4_int + var6.field_r;
                       if (!((jja) this).field_l.a(var4_int, var6, param0, var5, false)) {
@@ -98,7 +100,7 @@ final class jja extends tda {
         }
     }
 
-    private final void a(int param0, int[] param1, int param2, int param3, fh param4, byte param5) {
+    private final void a(int param0, int[] param1, int param2, int param3, fh param4) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
@@ -372,13 +374,14 @@ final class jja extends tda {
     }
 
     final static void c(int param0) {
-        lq.g(1);
+        int discarded$0 = 1;
+        lq.g();
     }
 
     final static void b(int param0) {
         cha.field_l = ig.field_m.g(76);
         CharSequence var2 = (CharSequence) (Object) cha.field_l;
-        tca.field_a = fq.a(param0 ^ param0, var2);
+        tca.field_a = fq.a(0, var2);
     }
 
     public static void c(byte param0) {
@@ -404,14 +407,7 @@ final class jja extends tda {
     }
 
     final static void a(int param0, int param1, int param2) {
-        if (param1 != -1) {
-          field_m = null;
-          cq discarded$4 = ic.a(param0, rt.field_a[param2], -31855);
-          return;
-        } else {
-          cq discarded$5 = ic.a(param0, rt.field_a[param2], -31855);
-          return;
-        }
+        cq discarded$0 = ic.a(param0, rt.field_a[param2], -31855);
     }
 
     private final void a(int param0, int param1, fh param2) {

@@ -133,7 +133,7 @@ final class ug extends ic {
         return stackIn_14_0 != 0;
     }
 
-    private final int b(cc param0, int param1) {
+    private final int b(cc param0) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
@@ -469,7 +469,9 @@ final class ug extends ic {
               stackIn_61_0 = stackOut_60_0;
               return stackIn_61_0 != 0;
             } else {
-              param3.field_D.a(param3.field_l, this.a(param3, 15), this.b(param3, -16385));
+              int discarded$2 = 15;
+              int discarded$3 = -16385;
+              param3.field_D.a(param3.field_l, this.a(param3), this.b(param3));
               if (param2 == -128) {
                 stackOut_65_0 = 0;
                 stackIn_66_0 = stackOut_65_0;
@@ -542,11 +544,8 @@ final class ug extends ic {
     private final void c(int param0, int param1) {
         cc var3 = null;
         int var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        if (param1 != -16596) {
-            ((ug) this).d(-16);
-        }
         if (!((((ug) this).field_C[param0] & 2) == 0)) {
-            var3 = (cc) (Object) ((ug) this).field_H.field_q.h(param1 + 5445);
+            var3 = (cc) (Object) ((ug) this).field_H.field_q.h(-11151);
             while (var3 != null) {
                 if (~var3.field_u == ~param0) {
                     if (((ug) this).field_s[param0][var3.field_F] == null) {
@@ -570,50 +569,42 @@ final class ug extends ic {
     }
 
     final static boolean a(int param0, char param1) {
-        int stackIn_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
         L0: {
-          if (param0 == -1) {
-            break L0;
-          } else {
-            field_T = null;
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
-            L3: {
+          L1: {
+            L2: {
               if (param1 < 65) {
-                break L3;
+                break L2;
               } else {
                 if (90 >= param1) {
-                  break L2;
+                  break L1;
                 } else {
-                  break L3;
+                  break L2;
                 }
               }
             }
-            L4: {
+            L3: {
               if (97 > param1) {
-                break L4;
+                break L3;
               } else {
                 if (param1 > 122) {
-                  break L4;
+                  break L3;
                 } else {
-                  break L2;
+                  break L1;
                 }
               }
             }
-            stackOut_9_0 = 0;
-            stackIn_10_0 = stackOut_9_0;
-            break L1;
+            stackOut_7_0 = 0;
+            stackIn_8_0 = stackOut_7_0;
+            break L0;
           }
-          stackOut_8_0 = 1;
-          stackIn_10_0 = stackOut_8_0;
-          break L1;
+          stackOut_6_0 = 1;
+          stackIn_8_0 = stackOut_6_0;
+          break L0;
         }
-        return stackIn_10_0 != 0;
+        return stackIn_8_0 != 0;
     }
 
     private final int b(int param0, cc param1) {
@@ -830,7 +821,8 @@ final class ug extends ic {
             cb.field_a = new gk(param2);
             df.field_h = param0;
             di.field_d = param1;
-            nl.d(-1321745375);
+            int discarded$1 = -1321745375;
+            nl.d();
         } catch (RuntimeException runtimeException) {
             throw ie.a((Throwable) (Object) runtimeException, "ug.KA(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
@@ -851,16 +843,13 @@ final class ug extends ic {
         cc var3 = null;
         int var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (!((4 & ((ug) this).field_C[param0]) == 0)) {
-            var3 = (cc) (Object) ((ug) this).field_H.field_q.h(param1 ^ -12545);
+            var3 = (cc) (Object) ((ug) this).field_H.field_q.h(-11151);
             while (var3 != null) {
                 if (!(var3.field_u != param0)) {
                     var3.field_i = 0;
                 }
                 var3 = (cc) (Object) ((ug) this).field_H.field_q.e(0);
             }
-        }
-        if (param1 != 6798) {
-            ((ug) this).field_w = true;
         }
     }
 
@@ -900,16 +889,13 @@ final class ug extends ic {
     }
 
     private final void a(int param0, boolean param1, int param2) {
-        if (param1) {
-            ((ug) this).field_S = 17;
-        }
     }
 
     private final void a(int param0, int param1) {
         int var4 = 0;
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (0 <= param1) {
-          ((ug) this).field_u[param1] = param0;
+          ((ug) this).field_u[param1] = 12800;
           ((ug) this).field_y[param1] = 8192;
           ((ug) this).field_o[param1] = 16383;
           ((ug) this).field_A[param1] = 8192;
@@ -937,7 +923,7 @@ final class ug extends ic {
         }
     }
 
-    private final synchronized void a(boolean param0, boolean param1, ok param2, int param3) {
+    private final synchronized void a(boolean param0, boolean param1, ok param2) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
@@ -1029,7 +1015,7 @@ final class ug extends ic {
         return stackIn_3_0;
     }
 
-    private final void g(int param0) {
+    private final void g() {
         int var2 = 0;
         int var3 = 0;
         long var4 = 0L;
@@ -1046,8 +1032,10 @@ final class ug extends ic {
             if (((ug) this).field_L != var3) {
               break L0;
             } else {
-              this.a(((ug) this).field_l, ((ug) this).field_w, ((ug) this).field_K, -1);
-              this.g(32675);
+              int discarded$3 = -1;
+              this.a(((ug) this).field_l, ((ug) this).field_w, ((ug) this).field_K);
+              int discarded$4 = 32675;
+              this.g();
               return;
             }
           }
@@ -1086,7 +1074,8 @@ final class ug extends ic {
                     if (((ug) this).field_R.e()) {
                       if (null != ((ug) this).field_K) {
                         ((ug) this).a(((ug) this).field_K, ((ug) this).field_w, (byte) 120);
-                        this.g(32675);
+                        int discarded$5 = 32675;
+                        this.g();
                         return;
                       } else {
                         L5: {
@@ -1426,7 +1415,8 @@ final class ug extends ic {
                       if (var3 == 224) {
                         var4 = param0 & 15;
                         var5 = (param0 >> 8 & 127) + ((8323499 & param0) >> 9);
-                        this.e(var4, var5, -128);
+                        int discarded$1 = -128;
+                        this.e(var4, var5);
                         return;
                       } else {
                         var3 = param0 & 255;
@@ -1459,8 +1449,8 @@ final class ug extends ic {
     }
 
     final synchronized void b(int[] param0, int param1, int param2) {
-        int var4_int = 0;
         RuntimeException var4 = null;
+        int var4_int = 0;
         long var5 = 0L;
         int var7 = 0;
         int var8 = 0;
@@ -1500,7 +1490,8 @@ final class ug extends ic {
                       ((ug) this).field_H.b(param0, param1, var7);
                       param2 = param2 - var7;
                       param1 = param1 + var7;
-                      this.g(32675);
+                      int discarded$1 = 32675;
+                      this.g();
                       if (((ug) this).field_R.g()) {
                         continue L3;
                       } else {
@@ -1636,9 +1627,7 @@ final class ug extends ic {
         for (var3 = 0; var3 < 16; var3++) {
             ((ug) this).field_r[var3] = ((ug) this).field_F[var3];
         }
-        if (param0) {
-            field_T = null;
-        }
+        field_T = null;
         int var5 = 0;
         var3 = var5;
         while (var5 < 16) {
@@ -1647,7 +1636,7 @@ final class ug extends ic {
         }
     }
 
-    final static int f(int param0) {
+    final static int f() {
         return rd.field_z;
     }
 
@@ -1667,11 +1656,11 @@ final class ug extends ic {
         }
     }
 
-    private final void e(int param0, int param1, int param2) {
+    private final void e(int param0, int param1) {
         ((ug) this).field_A[param0] = param1;
     }
 
-    private final int a(cc param0, int param1) {
+    private final int a(cc param0) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -1811,9 +1800,6 @@ final class ug extends ic {
 
     private final void b(int param0, int param1, int param2) {
         ((ug) this).field_U[param2] = param0;
-        if (param1 != -1) {
-            ((ug) this).field_S = 32;
-        }
         ((ug) this).field_B[param2] = (int)(2097152.0 * Math.pow(2.0, 0.00054931640625 * (double)param0) + 0.5);
     }
 
@@ -1840,7 +1826,8 @@ final class ug extends ic {
                   ((ug) this).field_J = ((ug) this).field_J + (long)var2 * (long)var5;
                   ((ug) this).field_H.d(var5);
                   param0 = param0 - var5;
-                  this.g(32675);
+                  int discarded$41 = 32675;
+                  this.g();
                   if (((ug) this).field_R.g()) {
                     continue L2;
                   } else {
@@ -1866,7 +1853,8 @@ final class ug extends ic {
             return;
         }
         try {
-            this.a(true, param1, param0, -1);
+            int discarded$0 = -1;
+            this.a(true, param1, param0);
         } catch (RuntimeException runtimeException) {
             throw ie.a((Throwable) (Object) runtimeException, "ug.T(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
@@ -1876,46 +1864,38 @@ final class ug extends ic {
         cc var6 = null;
         int var7 = 0;
         cc var8 = null;
-        L0: {
-          var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-          if (param0 == 91) {
-            break L0;
-          } else {
-            this.b((byte) 92, 20, -113, -69);
-            break L0;
-          }
-        }
+        var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         var8 = ((ug) this).field_s[param2][param1];
         if (var8 != null) {
-          L1: {
+          L0: {
             ((ug) this).field_s[param2][param1] = null;
             if ((2 & ((ug) this).field_C[param2]) == 0) {
               var8.field_k = 0;
-              break L1;
+              break L0;
             } else {
               var6 = (cc) (Object) ((ug) this).field_H.field_q.h(-11151);
-              L2: while (true) {
+              L1: while (true) {
                 if (var6 == null) {
-                  break L1;
+                  break L0;
                 } else {
-                  L3: {
+                  L2: {
                     if (var8.field_u != var6.field_u) {
-                      break L3;
+                      break L2;
                     } else {
                       if (var6.field_k >= 0) {
-                        break L3;
+                        break L2;
                       } else {
                         if (var6 == var8) {
-                          break L3;
+                          break L2;
                         } else {
                           var8.field_k = 0;
-                          break L1;
+                          break L0;
                         }
                       }
                     }
                   }
                   var6 = (cc) (Object) ((ug) this).field_H.field_q.e(0);
-                  continue L2;
+                  continue L1;
                 }
               }
             }
@@ -1935,28 +1915,28 @@ final class ug extends ic {
         int var9 = 0;
         ig var10 = null;
         ig var11 = null;
+        Object stackIn_15_0 = null;
+        cc stackIn_15_1 = null;
+        Object stackIn_16_0 = null;
+        cc stackIn_16_1 = null;
         Object stackIn_17_0 = null;
         cc stackIn_17_1 = null;
-        Object stackIn_18_0 = null;
-        cc stackIn_18_1 = null;
-        Object stackIn_19_0 = null;
-        cc stackIn_19_1 = null;
-        int stackIn_19_2 = 0;
+        int stackIn_17_2 = 0;
+        Object stackOut_14_0 = null;
+        cc stackOut_14_1 = null;
         Object stackOut_16_0 = null;
         cc stackOut_16_1 = null;
-        Object stackOut_18_0 = null;
-        cc stackOut_18_1 = null;
-        int stackOut_18_2 = 0;
-        Object stackOut_17_0 = null;
-        cc stackOut_17_1 = null;
-        int stackOut_17_2 = 0;
+        int stackOut_16_2 = 0;
+        Object stackOut_15_0 = null;
+        cc stackOut_15_1 = null;
+        int stackOut_15_2 = 0;
         L0: {
           var9 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           this.a((byte) 91, param2, param3, 64);
           if ((((ug) this).field_C[param3] & 2) == 0) {
             break L0;
           } else {
-            var5 = (cc) (Object) ((ug) this).field_H.field_q.b(param0 ^ 2861);
+            var5 = (cc) (Object) ((ug) this).field_H.field_q.b(2850);
             L1: while (true) {
               if (var5 == null) {
                 break L0;
@@ -1992,93 +1972,92 @@ final class ug extends ic {
         } else {
           var6 = var10.field_j[param2];
           if (var6 != null) {
-            var7 = new cc();
-            var7.field_u = param3;
-            var7.field_C = var6;
-            var7.field_o = var11;
-            if (param0 == 15) {
-              L3: {
-                var7.field_q = var10.field_q[param2];
-                var7.field_z = var10.field_n[param2];
-                var7.field_F = param2;
-                var7.field_t = 1024 + var11.field_l * (param1 * param1 * var10.field_m[param2]) >> 11;
-                var7.field_v = 255 & var10.field_s[param2];
-                var7.field_h = -(var10.field_p[param2] & 32767) + (param2 << 8);
-                var7.field_r = 0;
-                var7.field_k = -1;
-                var7.field_n = 0;
-                var7.field_E = 0;
-                var7.field_m = 0;
-                if (((ug) this).field_E[param3] != 0) {
-                  L4: {
-                    var7.field_D = ag.b(var6, this.b(950080514, var7), 0, this.b(var7, -16385));
+            L3: {
+              var7 = new cc();
+              var7.field_u = param3;
+              var7.field_C = var6;
+              var7.field_o = var11;
+              var7.field_q = var10.field_q[param2];
+              var7.field_z = var10.field_n[param2];
+              var7.field_F = param2;
+              var7.field_t = 1024 + var11.field_l * (param1 * param1 * var10.field_m[param2]) >> 11;
+              var7.field_v = 255 & var10.field_s[param2];
+              var7.field_h = -(var10.field_p[param2] & 32767) + (param2 << 8);
+              var7.field_r = 0;
+              var7.field_k = -1;
+              var7.field_n = 0;
+              var7.field_E = 0;
+              var7.field_m = 0;
+              if (((ug) this).field_E[param3] != 0) {
+                L4: {
+                  int discarded$3 = -16385;
+                  var7.field_D = ag.b(var6, this.b(950080514, var7), 0, this.b(var7));
+                  stackOut_14_0 = this;
+                  stackOut_14_1 = (cc) var7;
+                  stackIn_16_0 = stackOut_14_0;
+                  stackIn_16_1 = stackOut_14_1;
+                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_1 = stackOut_14_1;
+                  if (var11.field_p[param2] >= 0) {
                     stackOut_16_0 = this;
-                    stackOut_16_1 = (cc) var7;
-                    stackIn_18_0 = stackOut_16_0;
-                    stackIn_18_1 = stackOut_16_1;
+                    stackOut_16_1 = (cc) (Object) stackIn_16_1;
+                    stackOut_16_2 = 0;
                     stackIn_17_0 = stackOut_16_0;
                     stackIn_17_1 = stackOut_16_1;
-                    if (var11.field_p[param2] >= 0) {
-                      stackOut_18_0 = this;
-                      stackOut_18_1 = (cc) (Object) stackIn_18_1;
-                      stackOut_18_2 = 0;
-                      stackIn_19_0 = stackOut_18_0;
-                      stackIn_19_1 = stackOut_18_1;
-                      stackIn_19_2 = stackOut_18_2;
-                      break L4;
-                    } else {
-                      stackOut_17_0 = this;
-                      stackOut_17_1 = (cc) (Object) stackIn_17_1;
-                      stackOut_17_2 = 1;
-                      stackIn_19_0 = stackOut_17_0;
-                      stackIn_19_1 = stackOut_17_1;
-                      stackIn_19_2 = stackOut_17_2;
-                      break L4;
-                    }
+                    stackIn_17_2 = stackOut_16_2;
+                    break L4;
+                  } else {
+                    stackOut_15_0 = this;
+                    stackOut_15_1 = (cc) (Object) stackIn_15_1;
+                    stackOut_15_2 = 1;
+                    stackIn_17_0 = stackOut_15_0;
+                    stackIn_17_1 = stackOut_15_1;
+                    stackIn_17_2 = stackOut_15_2;
+                    break L4;
                   }
-                  ((ug) this).a(stackIn_19_1, stackIn_19_2 != 0, (byte) 101);
-                  break L3;
-                } else {
-                  var7.field_D = ag.b(var6, this.b(950080514, var7), this.a(var7, 15), this.b(var7, -16385));
-                  break L3;
                 }
+                ((ug) this).a(stackIn_17_1, stackIn_17_2 != 0, (byte) 101);
+                break L3;
+              } else {
+                int discarded$4 = 15;
+                int discarded$5 = -16385;
+                var7.field_D = ag.b(var6, this.b(950080514, var7), this.a(var7), this.b(var7));
+                break L3;
               }
-              L5: {
-                if (var11.field_p[param2] < 0) {
-                  var7.field_D.f(-1);
-                  break L5;
-                } else {
-                  break L5;
-                }
+            }
+            L5: {
+              if (var11.field_p[param2] < 0) {
+                var7.field_D.f(-1);
+                break L5;
+              } else {
+                break L5;
               }
-              L6: {
-                if (var7.field_z < 0) {
-                  break L6;
-                } else {
-                  L7: {
-                    var8 = ((ug) this).field_G[param3][var7.field_z];
-                    if (var8 == null) {
+            }
+            L6: {
+              if (var7.field_z < 0) {
+                break L6;
+              } else {
+                L7: {
+                  var8 = ((ug) this).field_G[param3][var7.field_z];
+                  if (var8 == null) {
+                    break L7;
+                  } else {
+                    if (0 > var8.field_k) {
+                      ((ug) this).field_s[param3][var8.field_F] = null;
+                      var8.field_k = 0;
                       break L7;
                     } else {
-                      if (0 > var8.field_k) {
-                        ((ug) this).field_s[param3][var8.field_F] = null;
-                        var8.field_k = 0;
-                        break L7;
-                      } else {
-                        break L7;
-                      }
+                      break L7;
                     }
                   }
-                  ((ug) this).field_G[param3][var7.field_z] = var7;
-                  break L6;
                 }
+                ((ug) this).field_G[param3][var7.field_z] = var7;
+                break L6;
               }
-              ((ug) this).field_H.field_q.a((gi) (Object) var7, 255);
-              ((ug) this).field_s[param3][param2] = var7;
-              return;
-            } else {
-              return;
             }
+            ((ug) this).field_H.field_q.a((gi) (Object) var7, 255);
+            ((ug) this).field_s[param3][param2] = var7;
+            return;
           } else {
             return;
           }
@@ -2094,23 +2073,14 @@ final class ug extends ic {
                 ((ug) this).field_G[param2][var4] = null;
             }
         }
-        if (param1 != 0) {
-            field_I = null;
-        }
+        field_I = null;
     }
 
     private final synchronized void a(int param0, byte param1, int param2) {
         int var4 = 0;
         int var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        if (param1 != 70) {
-            boolean discarded$0 = ug.a(-61, '');
-        }
-        if (param0 >= 0) {
-            ((ug) this).field_Q[param0] = 256;
-        } else {
-            for (var4 = 0; 16 > var4; var4++) {
-                ((ug) this).field_Q[var4] = 256;
-            }
+        for (var4 = 0; 16 > var4; var4++) {
+            ((ug) this).field_Q[var4] = 256;
         }
     }
 
@@ -2319,9 +2289,6 @@ final class ug extends ic {
     }
 
     final static sa[] c(byte param0) {
-        if (param0 != -23) {
-            field_m = null;
-        }
         return new sa[]{oh.field_c, ei.field_n, cd.field_c, pi.field_N, vb.field_q, qj.field_b, db.field_d, b.field_i, wd.field_d, sc.field_d, cm.field_P, lb.field_z, bc.field_a, vj.field_d};
     }
 

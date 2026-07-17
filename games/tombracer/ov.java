@@ -269,7 +269,8 @@ final class ov extends nv implements mra {
         try {
           L0: {
             if (!Character.isISOControl(param1)) {
-              if (!q.a(param1, 11955)) {
+              int discarded$6 = 11955;
+              if (!q.a(param1)) {
                 var6 = aba.field_c;
                 var2 = var6;
                 var3 = 0;
@@ -404,180 +405,178 @@ final class ov extends nv implements mra {
             var11 = var8;
             var12 = -var8;
             var13 = -1;
-            if (!param3) {
-              L2: {
-                if (param2 < gca.field_d) {
+            L2: {
+              if (param2 < gca.field_d) {
+                break L2;
+              } else {
+                if (param2 <= hc.field_h) {
+                  var39 = vaa.field_a[param2];
+                  var16 = rp.a(ss.field_c, -16226, pka.field_b, param6 - param1);
+                  var17 = rp.a(ss.field_c, -16226, pka.field_b, param6 - -param1);
+                  var18 = rp.a(ss.field_c, -16226, pka.field_b, param6 + -var8);
+                  var19 = rp.a(ss.field_c, -16226, pka.field_b, param6 - -var8);
+                  nra.a((byte) -55, param4, var18, var39, var16);
+                  nra.a((byte) -55, param5, var19, var39, var18);
+                  nra.a((byte) -55, param4, var17, var39, var19);
                   break L2;
                 } else {
-                  if (param2 <= hc.field_h) {
-                    var39 = vaa.field_a[param2];
-                    var16 = rp.a(ss.field_c, -16226, pka.field_b, param6 - param1);
-                    var17 = rp.a(ss.field_c, -16226, pka.field_b, param6 - -param1);
-                    var18 = rp.a(ss.field_c, -16226, pka.field_b, param6 + -var8);
-                    var19 = rp.a(ss.field_c, -16226, pka.field_b, param6 - -var8);
-                    nra.a((byte) -55, param4, var18, var39, var16);
-                    nra.a((byte) -55, param5, var19, var39, var18);
-                    nra.a((byte) -55, param4, var17, var39, var19);
-                    break L2;
-                  } else {
-                    break L2;
-                  }
+                  break L2;
                 }
               }
-              var14 = -1;
-              L3: while (true) {
-                if (var9 <= var7_int) {
-                  break L0;
-                } else {
-                  L4: {
-                    var14 += 2;
-                    var13 += 2;
-                    var10 = var10 + var13;
-                    var12 = var12 + var14;
-                    if (0 > var12) {
+            }
+            var14 = -1;
+            L3: while (true) {
+              if (var9 <= var7_int) {
+                break L0;
+              } else {
+                L4: {
+                  var14 += 2;
+                  var13 += 2;
+                  var10 = var10 + var13;
+                  var12 = var12 + var14;
+                  if (0 > var12) {
+                    break L4;
+                  } else {
+                    if (var11 >= 1) {
+                      var11--;
+                      var12 = var12 - (var11 << 1);
+                      pqa.field_m[var11] = var7_int;
                       break L4;
                     } else {
-                      if (var11 >= 1) {
-                        var11--;
-                        var12 = var12 - (var11 << 1);
-                        pqa.field_m[var11] = var7_int;
-                        break L4;
-                      } else {
-                        break L4;
-                      }
+                      break L4;
                     }
                   }
-                  L5: {
-                    var7_int++;
-                    if (0 <= var10) {
-                      var9--;
-                      var10 = var10 - (var9 << 1);
-                      var15 = param2 - var9;
-                      var16 = param2 + var9;
-                      if (var16 < gca.field_d) {
-                        break L5;
-                      } else {
-                        if (hc.field_h >= var15) {
-                          if (var8 <= var9) {
-                            L6: {
-                              var17 = rp.a(ss.field_c, -16226, pka.field_b, param6 - -var7_int);
-                              var18 = rp.a(ss.field_c, -16226, pka.field_b, -var7_int + param6);
-                              if (var16 > hc.field_h) {
-                                break L6;
-                              } else {
-                                nra.a((byte) -55, param4, var17, vaa.field_a[var16], var18);
-                                break L6;
-                              }
-                            }
-                            if (gca.field_d <= var15) {
-                              nra.a((byte) -55, param4, var17, vaa.field_a[var15], var18);
-                              break L5;
+                }
+                L5: {
+                  var7_int++;
+                  if (0 <= var10) {
+                    var9--;
+                    var10 = var10 - (var9 << 1);
+                    var15 = param2 - var9;
+                    var16 = param2 + var9;
+                    if (var16 < gca.field_d) {
+                      break L5;
+                    } else {
+                      if (hc.field_h >= var15) {
+                        if (var8 <= var9) {
+                          L6: {
+                            var17 = rp.a(ss.field_c, -16226, pka.field_b, param6 - -var7_int);
+                            var18 = rp.a(ss.field_c, -16226, pka.field_b, -var7_int + param6);
+                            if (var16 > hc.field_h) {
+                              break L6;
                             } else {
-                              break L5;
-                            }
-                          } else {
-                            L7: {
-                              var17 = pqa.field_m[var9];
-                              var18 = rp.a(ss.field_c, -16226, pka.field_b, param6 - -var7_int);
-                              var19 = rp.a(ss.field_c, -16226, pka.field_b, -var7_int + param6);
-                              var20 = rp.a(ss.field_c, -16226, pka.field_b, var17 + param6);
-                              var21 = rp.a(ss.field_c, -16226, pka.field_b, -var17 + param6);
-                              if (var16 <= hc.field_h) {
-                                var40 = vaa.field_a[var16];
-                                nra.a((byte) -55, param4, var21, var40, var19);
-                                nra.a((byte) -55, param5, var20, var40, var21);
-                                nra.a((byte) -55, param4, var18, var40, var20);
-                                break L7;
-                              } else {
-                                break L7;
-                              }
-                            }
-                            if (var15 >= gca.field_d) {
-                              var41 = vaa.field_a[var15];
-                              nra.a((byte) -55, param4, var21, var41, var19);
-                              nra.a((byte) -55, param5, var20, var41, var21);
-                              nra.a((byte) -55, param4, var18, var41, var20);
-                              break L5;
-                            } else {
-                              break L5;
+                              nra.a((byte) -55, param4, var17, vaa.field_a[var16], var18);
+                              break L6;
                             }
                           }
+                          if (gca.field_d <= var15) {
+                            nra.a((byte) -55, param4, var17, vaa.field_a[var15], var18);
+                            break L5;
+                          } else {
+                            break L5;
+                          }
                         } else {
-                          break L5;
+                          L7: {
+                            var17 = pqa.field_m[var9];
+                            var18 = rp.a(ss.field_c, -16226, pka.field_b, param6 - -var7_int);
+                            var19 = rp.a(ss.field_c, -16226, pka.field_b, -var7_int + param6);
+                            var20 = rp.a(ss.field_c, -16226, pka.field_b, var17 + param6);
+                            var21 = rp.a(ss.field_c, -16226, pka.field_b, -var17 + param6);
+                            if (var16 <= hc.field_h) {
+                              var40 = vaa.field_a[var16];
+                              nra.a((byte) -55, param4, var21, var40, var19);
+                              nra.a((byte) -55, param5, var20, var40, var21);
+                              nra.a((byte) -55, param4, var18, var40, var20);
+                              break L7;
+                            } else {
+                              break L7;
+                            }
+                          }
+                          if (var15 >= gca.field_d) {
+                            var41 = vaa.field_a[var15];
+                            nra.a((byte) -55, param4, var21, var41, var19);
+                            nra.a((byte) -55, param5, var20, var41, var21);
+                            nra.a((byte) -55, param4, var18, var41, var20);
+                            break L5;
+                          } else {
+                            break L5;
+                          }
                         }
+                      } else {
+                        break L5;
                       }
-                    } else {
-                      break L5;
                     }
+                  } else {
+                    break L5;
                   }
-                  var15 = param2 + -var7_int;
-                  var16 = param2 - -var7_int;
-                  if (var16 < gca.field_d) {
+                }
+                var15 = param2 + -var7_int;
+                var16 = param2 - -var7_int;
+                if (var16 < gca.field_d) {
+                  continue L3;
+                } else {
+                  if (hc.field_h < var15) {
                     continue L3;
                   } else {
-                    if (hc.field_h < var15) {
+                    var17 = var9 + param6;
+                    var18 = param6 + -var9;
+                    if (var17 < pka.field_b) {
                       continue L3;
                     } else {
-                      var17 = var9 + param6;
-                      var18 = param6 + -var9;
-                      if (var17 < pka.field_b) {
+                      if (var18 > ss.field_c) {
                         continue L3;
                       } else {
-                        if (var18 > ss.field_c) {
-                          continue L3;
-                        } else {
-                          var17 = rp.a(ss.field_c, -16226, pka.field_b, var17);
-                          var18 = rp.a(ss.field_c, -16226, pka.field_b, var18);
-                          if (var8 <= var7_int) {
-                            L8: {
-                              if (hc.field_h >= var16) {
-                                nra.a((byte) -55, param4, var17, vaa.field_a[var16], var18);
-                                break L8;
-                              } else {
-                                break L8;
-                              }
-                            }
-                            if (gca.field_d <= var15) {
-                              nra.a((byte) -55, param4, var17, vaa.field_a[var15], var18);
-                              continue L3;
+                        var17 = rp.a(ss.field_c, -16226, pka.field_b, var17);
+                        var18 = rp.a(ss.field_c, -16226, pka.field_b, var18);
+                        if (var8 <= var7_int) {
+                          L8: {
+                            if (hc.field_h >= var16) {
+                              nra.a((byte) -55, param4, var17, vaa.field_a[var16], var18);
+                              break L8;
                             } else {
-                              continue L3;
+                              break L8;
                             }
+                          }
+                          if (gca.field_d <= var15) {
+                            nra.a((byte) -55, param4, var17, vaa.field_a[var15], var18);
+                            continue L3;
                           } else {
-                            L9: {
-                              if (var11 < var7_int) {
-                                stackOut_40_0 = pqa.field_m[var7_int];
-                                stackIn_41_0 = stackOut_40_0;
-                                break L9;
-                              } else {
-                                stackOut_39_0 = var11;
-                                stackIn_41_0 = stackOut_39_0;
-                                break L9;
-                              }
-                            }
-                            L10: {
-                              var19 = stackIn_41_0;
-                              var20 = rp.a(ss.field_c, -16226, pka.field_b, param6 + var19);
-                              var21 = rp.a(ss.field_c, -16226, pka.field_b, -var19 + param6);
-                              if (var16 <= hc.field_h) {
-                                var42 = vaa.field_a[var16];
-                                nra.a((byte) -55, param4, var21, var42, var18);
-                                nra.a((byte) -55, param5, var20, var42, var21);
-                                nra.a((byte) -55, param4, var17, var42, var20);
-                                break L10;
-                              } else {
-                                break L10;
-                              }
-                            }
-                            if (var15 < gca.field_d) {
-                              continue L3;
+                            continue L3;
+                          }
+                        } else {
+                          L9: {
+                            if (var11 < var7_int) {
+                              stackOut_40_0 = pqa.field_m[var7_int];
+                              stackIn_41_0 = stackOut_40_0;
+                              break L9;
                             } else {
-                              var43 = vaa.field_a[var15];
-                              nra.a((byte) -55, param4, var21, var43, var18);
-                              nra.a((byte) -55, param5, var20, var43, var21);
-                              nra.a((byte) -55, param4, var17, var43, var20);
-                              continue L3;
+                              stackOut_39_0 = var11;
+                              stackIn_41_0 = stackOut_39_0;
+                              break L9;
                             }
+                          }
+                          L10: {
+                            var19 = stackIn_41_0;
+                            var20 = rp.a(ss.field_c, -16226, pka.field_b, param6 + var19);
+                            var21 = rp.a(ss.field_c, -16226, pka.field_b, -var19 + param6);
+                            if (var16 <= hc.field_h) {
+                              var42 = vaa.field_a[var16];
+                              nra.a((byte) -55, param4, var21, var42, var18);
+                              nra.a((byte) -55, param5, var20, var42, var21);
+                              nra.a((byte) -55, param4, var17, var42, var20);
+                              break L10;
+                            } else {
+                              break L10;
+                            }
+                          }
+                          if (var15 < gca.field_d) {
+                            continue L3;
+                          } else {
+                            var43 = vaa.field_a[var15];
+                            nra.a((byte) -55, param4, var21, var43, var18);
+                            nra.a((byte) -55, param5, var20, var43, var21);
+                            nra.a((byte) -55, param4, var17, var43, var20);
+                            continue L3;
                           }
                         }
                       }
@@ -585,14 +584,12 @@ final class ov extends nv implements mra {
                   }
                 }
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var7, "ov.AA(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw tba.a((Throwable) (Object) var7, "ov.AA(" + param0 + 44 + param1 + 44 + param2 + 44 + 0 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
         }
     }
 
@@ -740,42 +737,17 @@ final class ov extends nv implements mra {
     }
 
     final static boolean a(byte param0, int param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        if (param0 <= -58) {
-          L0: {
-            L1: {
-              if (uk.a(param2, (byte) 2, param1)) {
-                break L1;
-              } else {
-                if (!pr.a(param1, -23611, param2)) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L0;
-                } else {
-                  break L1;
-                }
-              }
-            }
-            stackOut_5_0 = 1;
-            stackIn_7_0 = stackOut_5_0;
-            break L0;
-          }
-          return stackIn_7_0 != 0;
-        } else {
-          return true;
-        }
+        return uk.a(param2, (byte) 2, param1) || pr.a(param1, -23611, param2);
     }
 
-    final static boolean b(int param0, int param1) {
+    final static boolean b() {
         int var2 = 0;
         int stackIn_4_0 = 0;
         int stackOut_2_0 = 0;
         int stackOut_3_0 = 0;
         L0: {
           L1: {
-            var2 = -1 % ((param0 - 63) / 46);
+            var2 = -1;
             if (hb.field_t == null) {
               break L1;
             } else {

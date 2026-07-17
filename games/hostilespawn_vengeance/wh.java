@@ -9,7 +9,7 @@ final class wh {
     static fa field_c;
     static nc field_d;
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_a = null;
         field_d = null;
@@ -19,9 +19,11 @@ final class wh {
 
     final static void b(int param0) {
         int var1 = lm.e(0);
-        int var2 = ti.a((byte) -1);
+        int discarded$0 = -1;
+        int var2 = ti.a();
         ne.field_j.a(var1 + (ac.field_a << 1), s.field_g + -ac.field_g, var2 - -(ac.field_g << 1), hg.field_f + -ac.field_a, 5);
-        rh.d((byte) -93);
+        int discarded$25 = -93;
+        rh.d();
         if (param0 <= 99) {
             field_e = null;
         }
@@ -31,10 +33,7 @@ final class wh {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
-        int stackIn_33_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_32_0 = 0;
-        int stackOut_31_0 = 0;
         var3 = HostileSpawn.field_I ? 1 : 0;
         try {
           L0: {
@@ -143,48 +142,33 @@ final class wh {
             }
             L12: {
               if (148 == ln.field_a.field_y[param1]) {
-                L13: {
-                  if (param0) {
-                    stackOut_32_0 = 0;
-                    stackIn_33_0 = stackOut_32_0;
-                    break L13;
-                  } else {
-                    stackOut_31_0 = 1;
-                    stackIn_33_0 = stackOut_31_0;
-                    break L13;
-                  }
-                }
-                mf.a(stackIn_33_0 != 0, 4);
+                mf.a(true, 4);
                 break L12;
               } else {
                 break L12;
               }
             }
-            if (param0) {
+            L13: {
               L14: {
-                L15: {
-                  if (ln.field_a.field_y[param1] < 480) {
-                    break L15;
+                if (ln.field_a.field_y[param1] < 480) {
+                  break L14;
+                } else {
+                  if (ln.field_a.field_y[param1] <= 583) {
+                    break L13;
                   } else {
-                    if (ln.field_a.field_y[param1] <= 583) {
-                      break L14;
-                    } else {
-                      break L15;
-                    }
+                    break L14;
                   }
                 }
-                ln.field_a.field_y[param1] = 513;
-                break L14;
               }
-              break L0;
-            } else {
-              return;
+              ln.field_a.field_y[param1] = 513;
+              break L13;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var2, "wh.A(" + param0 + 44 + param1 + 41);
+          throw wg.a((Throwable) (Object) var2, "wh.A(" + 1 + 44 + param1 + 41);
         }
     }
 

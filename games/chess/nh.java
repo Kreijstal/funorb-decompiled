@@ -39,8 +39,8 @@ final class nh {
         double var21 = 0.0;
         double var23 = 0.0;
         double var25 = 0.0;
-        var2 = param0 * 128;
-        var3 = param0;
+        var2 = 0;
+        var3 = 0;
         L0: while (true) {
           if (var3 >= 512) {
             return;
@@ -3367,7 +3367,7 @@ final class nh {
         int var2 = field_p[0];
         int var3 = var2 / wb.field_h;
         int var4 = var2 - var3 * wb.field_h;
-        field_n = param0 - var4;
+        field_n = 370 - var4;
         field_f = param1 - var3;
     }
 

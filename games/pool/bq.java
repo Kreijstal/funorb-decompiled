@@ -11,21 +11,65 @@ final class bq extends ma {
     static String field_s;
     static boolean field_o;
 
-    final static void a(int param0, dd param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void a(int param0, dd param1) {
+        RuntimeException var9 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
-            pq.field_m = param4;
-            jc.field_h = param3;
-            ad.field_r = param6;
-            ej.field_g = param5;
-            se.field_h = param0;
+          L0: {
+            pq.field_m = 15;
+            jc.field_h = 80;
+            ad.field_r = 2;
+            ej.field_g = -2400;
+            se.field_h = 40;
             rf.field_c = 40;
-            li.field_e = param2;
+            li.field_e = 80;
             vn.field_j = param1;
-            if (param7 != -1) {
-                field_n = null;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var9 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var9;
+            stackOut_2_1 = new StringBuilder().append("bq.A(").append(40).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param1 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
-        } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "bq.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + 40 + 41);
+          }
+          throw wm.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 80 + 44 + 80 + 44 + 15 + 44 + -2400 + 44 + 2 + 44 + -1 + 44 + 40 + 41);
         }
     }
 
@@ -214,7 +258,7 @@ final class bq extends ma {
         ((bq) this).field_l = param0;
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_n = null;
         field_s = null;
         field_q = null;

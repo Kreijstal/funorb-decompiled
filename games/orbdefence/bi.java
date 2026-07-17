@@ -7,7 +7,7 @@ final class bi {
     static String field_b;
     static String field_d;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         int var1 = 0;
@@ -15,7 +15,7 @@ final class bi {
         field_d = null;
     }
 
-    final static int a(CharSequence param0, char param1, int param2) {
+    final static int a(CharSequence param0, char param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

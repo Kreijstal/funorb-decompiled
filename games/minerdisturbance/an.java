@@ -94,9 +94,9 @@ final class an {
         field_a = null;
     }
 
-    final static void a(int param0, int param1) {
+    final static void a() {
         rj.field_c = 20000000L;
-        int var2 = 31 % ((param0 - 76) / 38);
+        int var2 = 1;
     }
 
     final static pe a(byte param0, String param1) {
@@ -214,7 +214,7 @@ final class an {
         }
     }
 
-    final static boolean c(int param0) {
+    final static boolean c() {
         if (ij.field_o == null) {
             return false;
         }

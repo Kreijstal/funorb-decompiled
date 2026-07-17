@@ -15,17 +15,14 @@ final class go {
         field_f = null;
         field_a = null;
         field_d = null;
-        if (param0 != -7393) {
-            field_b = '￾';
-        }
     }
 
-    final static String a(byte param0) {
+    final static String a() {
         int var1 = 0;
         return jl.field_e.d(-1);
     }
 
-    final static mf a(boolean param0, int param1, boolean param2, int param3, boolean param4, boolean param5) {
+    final static mf a(boolean param0, int param1, boolean param2, int param3, boolean param4) {
         try {
             Object var6 = null;
             Object var7 = null;
@@ -73,7 +70,7 @@ final class go {
                   }
                 }
                 L5: {
-                  var8 = dp.field_v.a(81, param2, (ve) var6, param1, (ve) var7);
+                  var8 = dp.field_v.a(81, false, (ve) var6, param1, (ve) var7);
                   if (param0) {
                     var8.f(-10476);
                     break L5;

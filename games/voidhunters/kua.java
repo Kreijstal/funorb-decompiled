@@ -9,15 +9,12 @@ final class kua {
     float[][] field_c;
     int[] field_d;
 
-    final static int a(byte param0) {
+    final static int a() {
         return (kib.field_d << 4) + ((idb.field_p << 2) - -lla.field_h);
     }
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 != 181765988) {
-            field_e = false;
-        }
     }
 
     kua(int[] param0, int[] param1, int[] param2, float[][] param3) {

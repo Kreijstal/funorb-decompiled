@@ -7,7 +7,7 @@ final class n extends br {
     byte[] field_f;
     static boolean field_g;
 
-    final static void b(boolean param0) {
+    final static void b() {
         L0: {
           rn.a(-54);
           if (dk.field_Ib != null) {
@@ -17,10 +17,14 @@ final class n extends br {
             break L0;
           }
         }
-        tb.b(4862);
-        qb.b(31);
-        da.b(-8);
-        if (ib.b(23517)) {
+        int discarded$34 = 4862;
+        tb.b();
+        int discarded$35 = 31;
+        qb.b();
+        int discarded$36 = -8;
+        da.b();
+        int discarded$37 = 23517;
+        if (ib.b()) {
           ma.field_a.b((byte) -35, 1);
           cb.a(0, false);
           ak.a((byte) -111);
@@ -31,7 +35,7 @@ final class n extends br {
         }
     }
 
-    final static boolean c(byte param0) {
+    final static boolean c() {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
         int stackOut_7_0 = 0;

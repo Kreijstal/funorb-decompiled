@@ -11,7 +11,7 @@ final class qd extends ma implements ke {
     private v field_Ib;
     private boolean field_Eb;
 
-    public static void o(int param0) {
+    public static void o() {
         field_Gb = null;
         field_Fb = null;
         field_Cb = null;
@@ -111,22 +111,22 @@ final class qd extends ma implements ke {
         String var4_ref = null;
         dj var5 = null;
         int var6 = 0;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
-        String stackIn_34_2 = null;
+        String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
         RuntimeException stackOut_31_0 = null;
         StringBuilder stackOut_31_1 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
+        String stackOut_31_2 = null;
+        RuntimeException stackOut_30_0 = null;
+        StringBuilder stackOut_30_1 = null;
+        String stackOut_30_2 = null;
         var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
@@ -164,38 +164,30 @@ final class qd extends ma implements ke {
               }
             }
             L2: {
-              if (param0 == -92) {
-                break L2;
-              } else {
-                boolean discarded$3 = ((qd) this).k(33);
-                break L2;
-              }
-            }
-            L3: {
               var5 = new dj((ma) this, wi.field_e, var4_ref);
               if (!param1.field_b) {
-                L4: {
+                L3: {
                   if (((qd) this).field_Hb) {
-                    hf discarded$4 = var5.a(cd.field_a, false, (fd) this);
-                    break L4;
+                    hf discarded$2 = var5.a(cd.field_a, false, (fd) this);
+                    break L3;
                   } else {
                     if (5 == param1.field_a) {
                       var5.a(false, jf.field_fb, 11);
                       var5.a(false, qk.field_d, 17);
-                      break L4;
+                      break L3;
                     } else {
                       var5.a(false, f.field_m, -1);
-                      break L4;
+                      break L3;
                     }
                   }
                 }
                 if (param1.field_a == 3) {
                   var5.a(false, nl.field_o, 7);
-                  break L3;
+                  break L2;
                 } else {
                   if (param1.field_a == 6) {
                     var5.a(false, bb.field_d, 9);
-                    break L3;
+                    break L2;
                   } else {
                     ((qd) this).a(33, (vg) (Object) var5);
                     return;
@@ -203,8 +195,8 @@ final class qd extends ma implements ke {
                 }
               } else {
                 if (!param1.field_d) {
-                  hf discarded$5 = var5.a(cd.field_a, false, (fd) this);
-                  break L3;
+                  hf discarded$3 = var5.a(cd.field_a, false, (fd) this);
+                  break L2;
                 } else {
                   ((qd) this).a(33, (vg) (Object) new ih((qd) this));
                   return;
@@ -216,33 +208,33 @@ final class qd extends ma implements ke {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var4 = decompiledCaughtException;
-            stackOut_31_0 = (RuntimeException) var4;
-            stackOut_31_1 = new StringBuilder().append("qd.F(").append(param0).append(44);
-            stackIn_33_0 = stackOut_31_0;
-            stackIn_33_1 = stackOut_31_1;
-            stackIn_32_0 = stackOut_31_0;
-            stackIn_32_1 = stackOut_31_1;
+            stackOut_29_0 = (RuntimeException) var4;
+            stackOut_29_1 = new StringBuilder().append("qd.F(").append(-92).append(44);
+            stackIn_31_0 = stackOut_29_0;
+            stackIn_31_1 = stackOut_29_1;
+            stackIn_30_0 = stackOut_29_0;
+            stackIn_30_1 = stackOut_29_1;
             if (param1 == null) {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
-              stackOut_33_2 = "null";
-              stackIn_34_0 = stackOut_33_0;
-              stackIn_34_1 = stackOut_33_1;
-              stackIn_34_2 = stackOut_33_2;
-              break L5;
+              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
+              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_2 = "null";
+              stackIn_32_0 = stackOut_31_0;
+              stackIn_32_1 = stackOut_31_1;
+              stackIn_32_2 = stackOut_31_2;
+              break L4;
             } else {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
-              stackOut_32_2 = "{...}";
-              stackIn_34_0 = stackOut_32_0;
-              stackIn_34_1 = stackOut_32_1;
-              stackIn_34_2 = stackOut_32_2;
-              break L5;
+              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
+              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_2 = "{...}";
+              stackIn_32_0 = stackOut_30_0;
+              stackIn_32_1 = stackOut_30_1;
+              stackIn_32_2 = stackOut_30_2;
+              break L4;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 44 + param2 + 41);
+          throw ie.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 44 + param2 + 41);
         }
     }
 
@@ -252,7 +244,8 @@ final class qd extends ma implements ke {
             return;
         }
         try {
-            lk.b(1);
+            int discarded$0 = 1;
+            lk.b();
             ((qd) this).d(param2);
         } catch (RuntimeException runtimeException) {
             throw ie.a((Throwable) (Object) runtimeException, "qd.G(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);

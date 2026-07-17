@@ -7,7 +7,7 @@ final class pe extends k {
     static String field_n;
     static String field_l;
 
-    public static void d(int param0) {
+    public static void d() {
         field_n = null;
         field_l = null;
     }

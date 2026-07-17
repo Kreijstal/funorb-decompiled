@@ -12,11 +12,11 @@ final class rh {
     da field_d;
     String field_b;
 
-    public static void b(int param0) {
+    public static void b() {
         field_g = null;
     }
 
-    final static e a(int param0) {
+    final static e a() {
         return ti.field_f;
     }
 

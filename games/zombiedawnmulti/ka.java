@@ -83,12 +83,12 @@ final class ka {
 
     final static void a(int param0, byte param1) {
         int var2 = 0;
-        nf.field_b = (param0 << 16) / 150;
-        nf.field_c = param0 * 400 / 150;
-        nf.field_a = param0 * 100 / 150;
+        nf.field_b = 21845;
+        nf.field_c = 133;
+        nf.field_a = 33;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_m = null;
         field_s = null;
         field_f = null;
@@ -120,13 +120,14 @@ final class ka {
         String stackOut_8_2 = null;
         try {
           L0: {
-            if (ud.a(param2, param3, param1, (byte) -42)) {
+            int discarded$9 = -42;
+            if (ud.a(param2, param3, param1)) {
               L1: {
                 if (param0 == -1) {
                   break L1;
                 } else {
                   var5 = null;
-                  ri discarded$2 = ka.a(-91, -49, -2, (ul) null);
+                  ri discarded$10 = ka.a(-91, -49, -2, (ul) null);
                   break L1;
                 }
               }

@@ -44,7 +44,7 @@ final class hd extends oh {
               if (var4 >= var7.length) {
                 var1_int = -250 + var2 / 4;
                 vm.field_Jb.b(var1_int, 120, 8421631);
-                tp.field_e.a(var1_int, param0, dp.field_r / 4);
+                tp.field_e.a(var1_int, 120, dp.field_r / 4);
                 sr.field_F.a(var1_int, 120, dp.field_r);
                 var8 = fe.field_H;
                 var9 = 0;
@@ -84,11 +84,11 @@ final class hd extends oh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var1, "hd.A(" + param0 + 41);
+          throw r.a((Throwable) (Object) var1, "hd.A(" + 120 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_p = null;
         field_j = null;
         field_r = null;
@@ -260,11 +260,11 @@ final class hd extends oh {
     final static ld a(int param0, int param1) {
         ld var2 = new ld();
         ua.field_d.a((byte) -113, (oh) (Object) var2);
-        cp.a(param0, 1);
+        cp.a(6, 1);
         return var2;
     }
 
-    final static void c(boolean param0) {
+    final static void c() {
         int var2 = 0;
         int var3 = 0;
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;

@@ -43,12 +43,7 @@ class se extends re {
         param1 = 252645135 & (param1 >>> 4) + param1;
         param1 = param1 + (param1 >>> 8);
         param1 = param1 + (param1 >>> 16);
-        if (param0) {
-          field_k = null;
-          return 255 & param1;
-        } else {
-          return 255 & param1;
-        }
+        return 255 & param1;
     }
 
     se(long param0, String param1) {

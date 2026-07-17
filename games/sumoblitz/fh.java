@@ -115,7 +115,7 @@ final class fh extends ov implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    final static dk a(String param0, int param1) {
+    final static dk a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -228,7 +228,7 @@ final class fh extends ov implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    final static gk a(pl param0, int param1) {
+    final static gk a(pl param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -261,27 +261,41 @@ final class fh extends ov implements java.awt.image.ImageProducer, java.awt.imag
             var2_int = param0.b(8, (byte) -92);
             if (var2_int <= 0) {
               L1: {
-                var3 = kh.a(param0, false) ? 1 : 0;
-                var4 = kh.a(param0, false) ? 1 : 0;
+                int discarded$23 = 0;
+                var3 = kh.a(param0) ? 1 : 0;
+                int discarded$24 = 0;
+                var4 = kh.a(param0) ? 1 : 0;
                 var5 = new gk();
                 var5.field_D = (short)param0.b(16, (byte) -119);
-                var5.field_Q = sm.a(var5.field_Q, param0, -119, 16);
-                var5.field_B = sm.a(var5.field_B, param0, -120, 16);
-                var5.field_r = sm.a(var5.field_r, param0, -127, 16);
+                int discarded$25 = 16;
+                var5.field_Q = sm.a(var5.field_Q, param0, -119);
+                int discarded$26 = 16;
+                var5.field_B = sm.a(var5.field_B, param0, -120);
+                int discarded$27 = 16;
+                var5.field_r = sm.a(var5.field_r, param0, -127);
                 var5.field_n = (short)param0.b(16, (byte) -117);
-                var5.field_A = sm.a(var5.field_A, param0, -128, 16);
-                var5.field_b = sm.a(var5.field_b, param0, -116, 16);
-                var5.field_l = sm.a(var5.field_l, param0, -126, 16);
+                int discarded$28 = 16;
+                var5.field_A = sm.a(var5.field_A, param0, -128);
+                int discarded$29 = 16;
+                var5.field_b = sm.a(var5.field_b, param0, -116);
+                int discarded$30 = 16;
+                var5.field_l = sm.a(var5.field_l, param0, -126);
                 if (var3 == 0) {
                   break L1;
                 } else {
                   var5.field_c = (short)param0.b(16, (byte) -94);
-                  var5.field_x = sm.a(var5.field_x, param0, -128, 16);
-                  var5.field_g = sm.a(var5.field_g, param0, -124, 16);
-                  var5.field_L = sm.a(var5.field_L, param0, -113, 16);
-                  var5.field_e = sm.a(var5.field_e, param0, -127, 16);
-                  var5.field_k = sm.a(var5.field_k, param0, -118, 16);
-                  var5.field_h = sm.a(var5.field_h, param0, -121, 16);
+                  int discarded$31 = 16;
+                  var5.field_x = sm.a(var5.field_x, param0, -128);
+                  int discarded$32 = 16;
+                  var5.field_g = sm.a(var5.field_g, param0, -124);
+                  int discarded$33 = 16;
+                  var5.field_L = sm.a(var5.field_L, param0, -113);
+                  int discarded$34 = 16;
+                  var5.field_e = sm.a(var5.field_e, param0, -127);
+                  int discarded$35 = 16;
+                  var5.field_k = sm.a(var5.field_k, param0, -118);
+                  int discarded$36 = 16;
+                  var5.field_h = sm.a(var5.field_h, param0, -121);
                   break L1;
                 }
               }
@@ -289,25 +303,33 @@ final class fh extends ov implements java.awt.image.ImageProducer, java.awt.imag
                 if (var4 == 0) {
                   break L2;
                 } else {
-                  int discarded$1 = param0.b(16, (byte) -127);
-                  var5.field_z = sm.a(var5.field_z, param0, -121, 16);
-                  var5.field_C = sm.a(var5.field_C, param0, -117, 16);
-                  var5.field_G = sm.a(var5.field_G, param0, -114, 16);
-                  var5.field_y = sm.a(var5.field_y, param0, -117, 16);
-                  var5.field_R = sm.a(var5.field_R, param0, -113, 16);
+                  int discarded$37 = param0.b(16, (byte) -127);
+                  int discarded$38 = 16;
+                  var5.field_z = sm.a(var5.field_z, param0, -121);
+                  int discarded$39 = 16;
+                  var5.field_C = sm.a(var5.field_C, param0, -117);
+                  int discarded$40 = 16;
+                  var5.field_G = sm.a(var5.field_G, param0, -114);
+                  int discarded$41 = 16;
+                  var5.field_y = sm.a(var5.field_y, param0, -117);
+                  int discarded$42 = 16;
+                  var5.field_R = sm.a(var5.field_R, param0, -113);
                   break L2;
                 }
               }
               L3: {
-                if (!kh.a(param0, false)) {
+                int discarded$43 = 0;
+                if (!kh.a(param0)) {
                   break L3;
                 } else {
-                  var5.field_K = sm.a(var5.field_K, param0, -112, 16);
+                  int discarded$44 = 16;
+                  var5.field_K = sm.a(var5.field_K, param0, -112);
                   break L3;
                 }
               }
               L4: {
-                if (!kh.a(param0, false)) {
+                int discarded$45 = 0;
+                if (!kh.a(param0)) {
                   break L4;
                 } else {
                   var5.field_a = ua.a(16, 0, var5.field_a, param0);
@@ -470,7 +492,7 @@ final class fh extends ov implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_j = null;
         field_n = null;
     }

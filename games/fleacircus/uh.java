@@ -18,27 +18,23 @@ final class uh extends lh {
 
     final static rh a(int param0, int param1, boolean param2, boolean param3, int param4) {
         RuntimeException var5 = null;
-        Object stackIn_2_0 = null;
         rh stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         rh stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
         try {
           L0: {
-            if (param1 == 26) {
-              stackOut_3_0 = ag.a(param2, param4, false, param0, param3, 1);
-              stackIn_4_0 = stackOut_3_0;
-              break L0;
-            } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
-              return (rh) (Object) stackIn_2_0;
-            }
+            int discarded$4 = 1;
+            int discarded$5 = 1;
+            int discarded$6 = 1;
+            int discarded$7 = 0;
+            stackOut_3_0 = ag.a(false, param4);
+            stackIn_4_0 = stackOut_3_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw pf.a((Throwable) (Object) var5, "uh.D(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw pf.a((Throwable) (Object) var5, "uh.D(" + 1 + 44 + 26 + 44 + 0 + 44 + 1 + 44 + param4 + 41);
         }
         return stackIn_4_0;
     }
@@ -112,19 +108,23 @@ final class uh extends lh {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
+        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
+          L0: {
             field_t = null;
             field_o = null;
             field_n = null;
             field_m = null;
             field_k = null;
             field_s = null;
-            if (param0 != 8) {
-                field_n = null;
-            }
-        } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "uh.C(" + param0 + 41);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw pf.a((Throwable) (Object) var1, "uh.C(" + 8 + 41);
         }
     }
 
@@ -1975,7 +1975,7 @@ final class uh extends lh {
         }
         L204: {
           var2 = tf.a(0, "LABEL_FLEAINFO");
-          var3 = -26 / ((-20 - param0) / 37);
+          var3 = -13;
           if (var2 == null) {
             break L204;
           } else {

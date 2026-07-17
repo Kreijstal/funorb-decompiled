@@ -12,14 +12,11 @@ final class ha {
     private boolean field_f;
     private fc field_e;
 
-    final static void a(String param0, String param1, int param2) {
-        if (param2 >= -58) {
-            return;
-        }
+    final static void a(String param0, String param1) {
         try {
             uf.a(param0, -108, param1, false);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "ha.F(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "ha.F(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + -111 + 41);
         }
     }
 
@@ -638,46 +635,42 @@ final class ha {
         int var9 = 0;
         int[] var10 = null;
         var9 = Lexicominos.field_L ? 1 : 0;
-        if (param2 == -15) {
-          var10 = qc.field_b[((ha) this).field_i][param3 % 4];
-          var5 = var10;
-          var6 = 0;
-          L0: while (true) {
-            if (var6 >= 4) {
-              return true;
-            } else {
-              L1: {
-                var7 = param1 - -var10[var6 * 2];
-                var8 = param0 + var10[1 + var6 * 2];
-                if (var7 < 0) {
+        var10 = qc.field_b[((ha) this).field_i][param3 % 4];
+        var5 = var10;
+        var6 = 0;
+        L0: while (true) {
+          if (var6 >= 4) {
+            return true;
+          } else {
+            L1: {
+              var7 = param1 - -var10[var6 * 2];
+              var8 = param0 + var10[1 + var6 * 2];
+              if (var7 < 0) {
+                break L1;
+              } else {
+                if (var7 >= 12) {
                   break L1;
                 } else {
-                  if (var7 >= 12) {
+                  if (var8 < 0) {
                     break L1;
                   } else {
-                    if (var8 < 0) {
-                      break L1;
-                    } else {
-                      if (var8 < 18) {
-                        if (((ha) this).field_e.field_w[var8][var7] != 0) {
-                          break L1;
-                        } else {
-                          var6++;
-                          continue L0;
-                        }
+                    if (var8 < 18) {
+                      if (((ha) this).field_e.field_w[var8][var7] != 0) {
+                        break L1;
                       } else {
                         var6++;
                         continue L0;
                       }
+                    } else {
+                      var6++;
+                      continue L0;
                     }
                   }
                 }
               }
-              return false;
             }
+            return false;
           }
-        } else {
-          return false;
         }
     }
 

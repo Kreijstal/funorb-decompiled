@@ -74,16 +74,20 @@ final class md implements Iterator {
         return stackIn_10_0;
     }
 
-    private final void a(int param0) {
-        ((md) this).field_d = 1;
-        ((md) this).field_c = null;
-        if (param0 < 82) {
-            return;
-        }
+    private final void a() {
+        RuntimeException var2 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
+          L0: {
+            ((md) this).field_d = 1;
+            ((md) this).field_c = null;
             ((md) this).field_g = ((md) this).field_e.field_a[0].field_f;
-        } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "md.C(" + param0 + 41);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw oj.a((Throwable) (Object) var2, "md.C(" + 101 + 41);
         }
     }
 
@@ -228,21 +232,23 @@ final class md implements Iterator {
               var5_int = sa.a((byte) 119, 3 * (param3 + -param2));
               var6 = param2 * 3;
               var7 = -10 + var5_int;
-              qc.b(0);
+              int discarded$2 = 0;
+              qc.b();
               if (0 >= param4.field_s) {
                 break L1;
               } else {
                 if (null == param4.field_z) {
                   break L1;
                 } else {
-                  ef.c(-13730);
+                  int discarded$3 = -13730;
+                  ef.c();
                   break L1;
                 }
               }
             }
             ni.field_f = 0;
             var8 = 0;
-            var9 = 101 % ((param0 - -60) / 54);
+            var9 = 0;
             L2: while (true) {
               L3: {
                 L4: {
@@ -443,7 +449,7 @@ final class md implements Iterator {
           L17: {
             var5 = decompiledCaughtException;
             stackOut_56_0 = (RuntimeException) var5;
-            stackOut_56_1 = new StringBuilder().append("md.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_56_1 = new StringBuilder().append("md.D(").append(-2).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
             stackIn_59_0 = stackOut_56_0;
             stackIn_59_1 = stackOut_56_1;
             stackIn_57_0 = stackOut_56_0;
@@ -566,7 +572,8 @@ final class md implements Iterator {
         try {
           L0: {
             ((md) this).field_e = param0;
-            this.a(101);
+            int discarded$3 = 101;
+            this.a();
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

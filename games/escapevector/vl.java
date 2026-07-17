@@ -49,7 +49,7 @@ final class vl {
     }
 
     final static void b(int param0, int param1) {
-        RuntimeException var2 = null;
+        RuntimeException runtimeException = null;
         int var2_int = 0;
         ed[] var3 = null;
         ed[] var4 = null;
@@ -123,47 +123,39 @@ final class vl {
                     break L6;
                   }
                 }
-                L7: {
-                  if (param0 == 1) {
-                    break L7;
-                  } else {
-                    vl.a(98);
-                    break L7;
-                  }
-                }
                 var4 = qi.field_M[param1];
                 var5 = 0;
-                L8: while (true) {
+                L7: while (true) {
                   if (3 <= var5) {
                     fl.a(-1, param1);
                     break L0;
                   } else {
-                    L9: {
+                    L8: {
                       if (var3 == null) {
                         param1 = 0;
                         var3 = hb.field_b[param1];
                         var4 = qi.field_M[param1];
-                        break L9;
+                        break L8;
                       } else {
-                        break L9;
+                        break L8;
                       }
                     }
-                    L10: {
+                    L9: {
                       var6 = var3[var5];
                       var7 = var5 + 14;
                       var8 = mb.field_f;
                       if (var2_int == 0) {
-                        break L10;
+                        break L9;
                       } else {
                         var8 = ob.field_b;
-                        break L10;
+                        break L9;
                       }
                     }
                     var8[var7] = var6;
                     var9 = var4[var5];
                     jm.field_K[var7] = var9;
                     var5++;
-                    continue L8;
+                    continue L7;
                   }
                 }
               }
@@ -171,8 +163,8 @@ final class vl {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2, "vl.B(" + param0 + 44 + param1 + 41);
+          runtimeException = decompiledCaughtException;
+          throw t.a((Throwable) (Object) runtimeException, "vl.B(" + 1 + 44 + param1 + 41);
         }
     }
 
@@ -217,13 +209,13 @@ final class vl {
         ((vl) this).field_b = new int[1 + param2];
     }
 
-    final static int[] a(int param0, int param1, int param2, byte param3) {
+    final static int[] a(int param0, int param1, int param2) {
         int var5 = 0;
         int var6 = EscapeVector.field_A;
         int[] var7 = new int[param2];
         int[] var4 = var7;
         for (var5 = 0; var5 < param2; var5++) {
-            var7[var5] = (var5 + (param1 - -1)) * param0;
+            var7[var5] = (var5 + (param1 - -1)) * 10;
         }
         return var4;
     }

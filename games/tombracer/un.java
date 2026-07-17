@@ -195,7 +195,7 @@ final class un extends ci {
         }
     }
 
-    private final void c(int param0) {
+    private final void c() {
         double var2 = 0.0;
         int var4 = 0;
         int var5 = 0;
@@ -225,10 +225,11 @@ final class un extends ci {
         if (param0 != 116) {
             return;
         }
-        this.c(28427);
+        int discarded$0 = 28427;
+        this.c();
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_r = null;
         field_q = null;
     }

@@ -21,7 +21,7 @@ final class uv implements wwa {
         int var2 = 0;
         int var3 = 0;
         var2 = kba.field_a.a(param1, (byte) 121) + -kba.field_a.field_d;
-        var3 = param0 - -(var2 / 4);
+        var3 = 128 - -(var2 / 4);
         if (var3 <= 250) {
           if (var3 < 6) {
             var3 = 6;
@@ -177,7 +177,7 @@ final class uv implements wwa {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_a = null;
     }

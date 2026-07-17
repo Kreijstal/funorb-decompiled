@@ -63,6 +63,9 @@ final class kp {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
         int var12 = 0;
         RuntimeException decompiledCaughtException = null;
         var12 = Torquing.field_u;
@@ -109,39 +112,48 @@ final class kp {
                 if (param1 <= 0) {
                   break L5;
                 } else {
-                  L6: {
-                    if (param3 == 16) {
-                      break L6;
-                    } else {
-                      field_d = 3;
-                      break L6;
-                    }
-                  }
                   var6_int = param5 * ph.field_j + param2;
                   var7 = ph.field_j + -param0;
                   param5 = -param1;
-                  L7: while (true) {
+                  L6: while (true) {
                     if (param5 >= 0) {
                       break L0;
                     } else {
                       param2 = -param0;
-                      L8: while (true) {
+                      L7: while (true) {
                         if (param2 >= 0) {
                           var6_int = var6_int + var7;
                           param5++;
-                          continue L7;
+                          continue L6;
                         } else {
-                          L9: {
+                          L8: {
                             var8 = ph.field_e[var6_int];
-                            if (param4 >= (var8 & 65280) >> 8) {
-                              break L9;
+                            if ((var8 & 65280) >> 8 <= 64) {
+                              break L8;
                             } else {
-                              break L9;
+                              if ((var8 >> 8 & 255) < (var8 & 16711680) >> 16) {
+                                break L8;
+                              } else {
+                                L9: {
+                                  var9 = (510 & var8 >> 15) - 60;
+                                  if (255 < var9) {
+                                    var9 = 255;
+                                    break L9;
+                                  } else {
+                                    break L9;
+                                  }
+                                }
+                                var10 = 65280 & var8;
+                                var10 = 65280 & -(var10 >> 5) + (var10 >> 1);
+                                var11 = (var8 & 255) >> 3;
+                                ph.field_e[var6_int] = gm.a(gm.a(var10, var9 << 16), var11);
+                                break L8;
+                              }
                             }
                           }
                           var6_int++;
                           param2++;
-                          continue L8;
+                          continue L7;
                         }
                       }
                     }
@@ -154,7 +166,7 @@ final class kp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var6, "kp.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw rb.a((Throwable) (Object) var6, "kp.B(" + param0 + 44 + param1 + 44 + param2 + 44 + 16 + 44 + 64 + 44 + param5 + 41);
         }
     }
 
@@ -234,11 +246,8 @@ final class kp {
             }
             StringBuilder discarded$0 = var6.append(var9);
         }
-        StringBuilder discarded$5 = var6.reverse();
+        StringBuilder discarded$1 = var6.reverse();
         var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
-        if (param0 != -87) {
-            return null;
-        }
         return var6.toString();
     }
 

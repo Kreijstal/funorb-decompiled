@@ -27,7 +27,7 @@ final class lob implements dja {
         return (tv) (Object) stackIn_1_0;
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         RuntimeException var1 = null;
         faa var1_ref = null;
         int var2 = 0;
@@ -52,90 +52,84 @@ final class lob implements dja {
         var9 = VoidHunters.field_G;
         try {
           L0: {
-            L1: {
-              var1_ref = qga.field_b;
-              if (param0) {
-                break L1;
-              } else {
-                field_b = -108;
-                break L1;
-              }
-            }
+            var1_ref = qga.field_b;
             var2 = var1_ref.e((byte) -91);
             if (var2 == 0) {
-              L2: {
+              L1: {
                 if (om.field_c != null) {
-                  break L2;
+                  break L1;
                 } else {
                   om.field_c = new pr(128);
                   mq.field_k = 0;
+                  break L1;
+                }
+              }
+              L2: {
+                if (var1_ref.e((byte) -101) != 1) {
+                  stackOut_13_0 = 0;
+                  stackIn_14_0 = stackOut_13_0;
+                  break L2;
+                } else {
+                  stackOut_11_0 = 1;
+                  stackIn_14_0 = stackOut_11_0;
                   break L2;
                 }
               }
               L3: {
-                if (var1_ref.e((byte) -101) != 1) {
-                  stackOut_13_0 = 0;
-                  stackIn_14_0 = stackOut_13_0;
-                  break L3;
-                } else {
-                  stackOut_11_0 = 1;
-                  stackIn_14_0 = stackOut_11_0;
-                  break L3;
-                }
-              }
-              L4: {
-                L5: {
+                L4: {
                   var3_int = stackIn_14_0;
                   var4_ref_String = var1_ref.a(-1);
                   if (var3_int != 0) {
-                    break L5;
+                    break L4;
                   } else {
                     var5 = var4_ref_String;
                     if (var9 == 0) {
-                      break L4;
+                      break L3;
                     } else {
-                      break L5;
+                      break L4;
                     }
                   }
                 }
                 var5 = var1_ref.a(-1);
-                break L4;
+                break L3;
               }
-              L6: {
-                var6 = nf.a(var4_ref_String, false);
+              L5: {
+                int discarded$4 = 0;
+                var6 = nf.a(var4_ref_String);
                 var7 = var1_ref.a(-1);
                 var8 = jwa.a(false, (CharSequence) (Object) var4_ref_String);
                 if (null != var8) {
-                  break L6;
+                  break L5;
                 } else {
                   var8 = var4_ref_String;
-                  break L6;
+                  break L5;
                 }
               }
-              L7: {
+              L6: {
                 if (null != var6) {
-                  break L7;
+                  break L6;
                 } else {
-                  var6 = nf.a(var7, false);
+                  int discarded$5 = 0;
+                  var6 = nf.a(var7);
                   if (null == var6) {
-                    break L7;
+                    break L6;
                   } else {
                     om.field_c.a((fh) (Object) var6, (byte) -124, (long)var8.hashCode());
-                    break L7;
+                    break L6;
                   }
                 }
               }
-              L8: {
+              L7: {
                 if (var6 == null) {
                   var6 = new vu();
                   om.field_c.a((fh) (Object) var6, (byte) -106, (long)var8.hashCode());
-                  int fieldTemp$2 = mq.field_k;
+                  int fieldTemp$6 = mq.field_k;
                   mq.field_k = mq.field_k + 1;
-                  var6.field_yb = fieldTemp$2;
+                  var6.field_yb = fieldTemp$6;
                   st.field_o.b(-10258, (ksa) (Object) var6);
-                  break L8;
+                  break L7;
                 } else {
-                  break L8;
+                  break L7;
                 }
               }
               var6.field_vb = var7;
@@ -146,12 +140,12 @@ final class lob implements dja {
               if (var2 != 1) {
                 if (var2 != 2) {
                   if (var2 == 3) {
-                    L9: {
+                    L8: {
                       if (iwa.field_b != 2) {
-                        break L9;
+                        break L8;
                       } else {
                         iwa.field_b = 1;
-                        break L9;
+                        break L8;
                       }
                     }
                     return;
@@ -170,36 +164,36 @@ final class lob implements dja {
                     }
                   }
                 } else {
-                  L10: {
+                  L9: {
                     if (iwa.field_b != 1) {
-                      break L10;
+                      break L9;
                     } else {
                       iwa.field_b = 2;
-                      break L10;
+                      break L9;
                     }
                   }
                   return;
                 }
               } else {
-                L11: {
+                L10: {
                   if (ae.field_f == null) {
                     ae.field_f = new pr(128);
                     vob.field_p = 0;
+                    break L10;
+                  } else {
+                    break L10;
+                  }
+                }
+                L11: {
+                  var3 = var1_ref.a(-1);
+                  if (!var3.equals((Object) (Object) "")) {
                     break L11;
                   } else {
+                    var3 = null;
                     break L11;
                   }
                 }
                 L12: {
-                  var3 = var1_ref.a(-1);
-                  if (!var3.equals((Object) (Object) "")) {
-                    break L12;
-                  } else {
-                    var3 = null;
-                    break L12;
-                  }
-                }
-                L13: {
                   var4_ref_String = var1_ref.a(-1);
                   var5 = var1_ref.a(-1);
                   var6 = di.a(var4_ref_String, 0);
@@ -207,33 +201,33 @@ final class lob implements dja {
                     var6 = di.a(var5, 0);
                     if (null != var6) {
                       ae.field_f.a((fh) (Object) var6, (byte) -31, (long)jwa.a(false, (CharSequence) (Object) var4_ref_String).hashCode());
-                      break L13;
+                      break L12;
                     } else {
-                      break L13;
+                      break L12;
                     }
+                  } else {
+                    break L12;
+                  }
+                }
+                L13: {
+                  if (var6 == null) {
+                    var6 = new vu();
+                    ae.field_f.a((fh) (Object) var6, (byte) -112, (long)jwa.a(false, (CharSequence) (Object) var4_ref_String).hashCode());
+                    int fieldTemp$7 = vob.field_p;
+                    vob.field_p = vob.field_p + 1;
+                    var6.field_yb = fieldTemp$7;
+                    mr.field_M.b(-10258, (ksa) (Object) var6);
+                    break L13;
                   } else {
                     break L13;
                   }
                 }
                 L14: {
-                  if (var6 == null) {
-                    var6 = new vu();
-                    ae.field_f.a((fh) (Object) var6, (byte) -112, (long)jwa.a(false, (CharSequence) (Object) var4_ref_String).hashCode());
-                    int fieldTemp$3 = vob.field_p;
-                    vob.field_p = vob.field_p + 1;
-                    var6.field_yb = fieldTemp$3;
-                    mr.field_M.b(-10258, (ksa) (Object) var6);
-                    break L14;
-                  } else {
-                    break L14;
-                  }
-                }
-                L15: {
                   if (var3 != null) {
                     var3 = var3.intern();
-                    break L15;
+                    break L14;
                   } else {
-                    break L15;
+                    break L14;
                   }
                 }
                 var6.field_Fb = var4_ref_String;
@@ -241,50 +235,50 @@ final class lob implements dja {
                 var6.field_Ab = var3;
                 var6.b(-3846);
                 var7_ref = (vu) (Object) mr.field_M.d(0);
-                L16: while (true) {
-                  L17: {
-                    L18: {
-                      L19: {
+                L15: while (true) {
+                  L16: {
+                    L17: {
+                      L18: {
                         if (var7_ref == null) {
-                          break L19;
+                          break L18;
                         } else {
                           stackOut_55_0 = (vu) var7_ref;
                           stackIn_66_0 = stackOut_55_0;
                           stackIn_56_0 = stackOut_55_0;
                           if (var9 != 0) {
-                            break L18;
+                            break L17;
                           } else {
                             if (!qob.a(stackIn_56_0, 7569, var6)) {
-                              break L19;
+                              break L18;
                             } else {
                               var7_ref = (vu) (Object) mr.field_M.a((byte) 78);
                               if (var9 == 0) {
-                                continue L16;
+                                continue L15;
                               } else {
-                                break L19;
+                                break L18;
                               }
                             }
                           }
                         }
                       }
-                      L20: {
+                      L19: {
                         if (null != var7_ref) {
-                          break L20;
+                          break L19;
                         } else {
                           mr.field_M.b(-10258, (ksa) (Object) var6);
                           if (var9 == 0) {
-                            break L17;
+                            break L16;
                           } else {
-                            break L20;
+                            break L19;
                           }
                         }
                       }
                       stackOut_64_0 = (vu) var6;
                       stackIn_66_0 = stackOut_64_0;
-                      break L18;
+                      break L17;
                     }
                     al.a((ksa) (Object) stackIn_66_0, (ksa) (Object) var7_ref, 2);
-                    break L17;
+                    break L16;
                   }
                   return;
                 }
@@ -294,7 +288,7 @@ final class lob implements dja {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var1, "lob.D(" + param0 + 41);
+          throw rta.a((Throwable) (Object) var1, "lob.D(" + 1 + 41);
         }
     }
 
@@ -506,19 +500,14 @@ final class lob implements dja {
                   }
                 }
               }
-              if (param3 == 256) {
-                break L1;
-              } else {
-                field_a = null;
-                break L1;
-              }
+              break L1;
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var6, "lob.F(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw rta.a((Throwable) (Object) var6, "lob.F(" + param0 + 44 + param1 + 44 + param2 + 44 + 256 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
@@ -610,27 +599,19 @@ final class lob implements dja {
         return (tv[]) (Object) stackIn_4_0;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            L1: {
-              field_a = null;
-              if (param0 > 88) {
-                break L1;
-              } else {
-                int discarded$2 = lob.a(-76, (CharSequence) null);
-                break L1;
-              }
-            }
+            field_a = null;
             field_c = null;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var1, "lob.E(" + param0 + 41);
+          throw rta.a((Throwable) (Object) var1, "lob.E(" + 102 + 41);
         }
     }
 

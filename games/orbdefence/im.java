@@ -78,15 +78,15 @@ final class im {
         }
     }
 
-    final static String a(char param0, int param1, int param2) {
+    final static String a(char param0, int param1) {
         int var4 = 0;
         int var5 = OrbDefence.field_D ? 1 : 0;
         char[] var6 = new char[param1];
         char[] var3 = var6;
         for (var4 = 0; var4 < param1; var4++) {
-            var6[var4] = param0;
+            var6[var4] = '*';
         }
-        var4 = 70 / ((0 - param2) / 53);
+        var4 = -70;
         return new String(var3);
     }
 
@@ -104,7 +104,7 @@ final class im {
         return var2;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
     }

@@ -390,7 +390,7 @@ class rb extends rf {
         ((rb) this).field_f[-1 + (((rb) this).field_g + -param1)] = (byte)param1;
     }
 
-    final static boolean e(byte param0) {
+    final static boolean e() {
         return true;
     }
 
@@ -690,7 +690,7 @@ class rb extends rf {
         }
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_h = null;
     }
 

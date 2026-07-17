@@ -104,14 +104,11 @@ abstract class pb {
             cb.field_m = param0;
             cc.field_a = param1;
             CrazyCrystals.field_D = param3;
-            if (param4 != 1843275042) {
-                field_b = null;
-            }
             oi.field_d = (ob) (Object) new ap();
             hc.field_a = new ni(param1);
             ch.field_d = new pk(oi.field_d, hc.field_a);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "pb.S(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 44 + param7 + 44 + param8 + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "pb.S(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + 1843275042 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 44 + param7 + 44 + param8 + 41);
         }
     }
 

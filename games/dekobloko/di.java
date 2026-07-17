@@ -10,7 +10,7 @@ class di extends a {
     static String field_G;
     static long field_F;
 
-    public static void c(int param0) {
+    public static void c() {
         field_A = null;
         field_G = null;
         field_D = null;

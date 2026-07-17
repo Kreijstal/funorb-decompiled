@@ -17,7 +17,7 @@ final class ce {
         return ((ce) this).field_d;
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_a = null;
         field_c = null;
         field_f = null;
@@ -52,7 +52,8 @@ final class ce {
         ((ce) this).field_d = true;
         ((ce) this).field_g = param0 ? true : false;
         if (param1 != -75) {
-            ce.b(true);
+            int discarded$0 = 1;
+            ce.b();
         }
     }
 

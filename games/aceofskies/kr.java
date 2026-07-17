@@ -358,12 +358,13 @@ public final class kr extends bf {
 
     final void b(int param0, int param1) throws lp {
         L0: {
-          int discarded$23 = ((kr) this).field_Rc.EndScene();
+          int discarded$33 = ((kr) this).field_Rc.EndScene();
           if (!((kr) this).field_xc.a(false)) {
-            int fieldTemp$24 = ((kr) this).field_Hc + 1;
+            int fieldTemp$34 = ((kr) this).field_Hc + 1;
             ((kr) this).field_Hc = ((kr) this).field_Hc + 1;
-            if (fieldTemp$24 <= 50) {
-              boolean discarded$25 = this.h(true);
+            if (fieldTemp$34 <= 50) {
+              int discarded$35 = 1;
+              boolean discarded$36 = this.h();
               break L0;
             } else {
               throw new lp();
@@ -371,14 +372,15 @@ public final class kr extends bf {
           } else {
             ((kr) this).field_Hc = 0;
             if (jagdx.gf.a(-1, ((kr) this).field_xc.a(0, -96))) {
-              boolean discarded$26 = this.h(true);
+              int discarded$37 = 1;
+              boolean discarded$38 = this.h();
               break L0;
             } else {
               break L0;
             }
           }
         }
-        int discarded$27 = ((kr) this).field_Rc.BeginScene();
+        int discarded$39 = ((kr) this).field_Rc.BeginScene();
     }
 
     final void G(int param0) {
@@ -485,13 +487,14 @@ public final class kr extends bf {
         int stackOut_7_2 = 0;
         int stackOut_7_3 = 0;
         L0: {
-          int discarded$5 = ((kr) this).field_Rc.SetTexture(((kr) this).field_F, param0.b(110));
+          int discarded$8 = ((kr) this).field_Rc.SetTexture(((kr) this).field_F, param0.b(110));
           var3 = -65 % ((param1 - 26) / 32);
           if (((kr) this).field_Oc[((kr) this).field_F] != param0.field_a) {
             L1: {
-              var4 = kr.a(param0.field_a, 2);
-              int discarded$6 = ((kr) this).field_Rc.SetSamplerState(((kr) this).field_F, 6, var4);
-              int discarded$7 = ((kr) this).field_Rc.SetSamplerState(((kr) this).field_F, 5, var4);
+              int discarded$9 = 2;
+              var4 = kr.a(param0.field_a);
+              int discarded$10 = ((kr) this).field_Rc.SetSamplerState(((kr) this).field_F, 6, var4);
+              int discarded$11 = ((kr) this).field_Rc.SetSamplerState(((kr) this).field_F, 5, var4);
               ((kr) this).field_Oc[((kr) this).field_F] = param0.field_a;
               if (param0.field_b) {
                 stackOut_12_0 = 0;
@@ -545,10 +548,11 @@ public final class kr extends bf {
                   stackIn_20_3 = stackOut_19_3;
                   break L3;
                 } else {
+                  int discarded$12 = 2;
                   stackOut_18_0 = (jagdx.IDirect3DDevice) (Object) stackIn_18_0;
                   stackOut_18_1 = stackIn_18_1;
                   stackOut_18_2 = stackIn_18_2;
-                  stackOut_18_3 = kr.a(param0.field_a, 2);
+                  stackOut_18_3 = kr.a(param0.field_a);
                   stackIn_20_0 = stackOut_18_0;
                   stackIn_20_1 = stackOut_18_1;
                   stackIn_20_2 = stackOut_18_2;
@@ -556,7 +560,7 @@ public final class kr extends bf {
                   break L3;
                 }
               }
-              int discarded$8 = ((jagdx.IDirect3DDevice) (Object) stackIn_20_0).SetSamplerState(stackIn_20_1, stackIn_20_2, stackIn_20_3);
+              int discarded$13 = ((jagdx.IDirect3DDevice) (Object) stackIn_20_0).SetSamplerState(stackIn_20_1, stackIn_20_2, stackIn_20_3);
               ((kr) this).field_Ac[((kr) this).field_F] = param0.field_b;
               break L0;
             }
@@ -594,10 +598,11 @@ public final class kr extends bf {
                   stackIn_9_3 = stackOut_8_3;
                   break L5;
                 } else {
+                  int discarded$14 = 2;
                   stackOut_7_0 = (jagdx.IDirect3DDevice) (Object) stackIn_7_0;
                   stackOut_7_1 = stackIn_7_1;
                   stackOut_7_2 = stackIn_7_2;
-                  stackOut_7_3 = kr.a(param0.field_a, 2);
+                  stackOut_7_3 = kr.a(param0.field_a);
                   stackIn_9_0 = stackOut_7_0;
                   stackIn_9_1 = stackOut_7_1;
                   stackIn_9_2 = stackOut_7_2;
@@ -605,7 +610,7 @@ public final class kr extends bf {
                   break L5;
                 }
               }
-              int discarded$9 = ((jagdx.IDirect3DDevice) (Object) stackIn_9_0).SetSamplerState(stackIn_9_1, stackIn_9_2, stackIn_9_3);
+              int discarded$15 = ((jagdx.IDirect3DDevice) (Object) stackIn_9_0).SetSamplerState(stackIn_9_1, stackIn_9_2, stackIn_9_3);
               ((kr) this).field_Ac[((kr) this).field_F] = param0.field_b;
               break L0;
             } else {
@@ -632,7 +637,7 @@ public final class kr extends bf {
         return (qi) (Object) new og((kr) this, param4, param0, param3, param2);
     }
 
-    private final static int a(ke param0, int param1) {
+    private final static int a(ke param0) {
         if (fg.field_A == param0) {
             return 2;
         }
@@ -818,7 +823,8 @@ public final class kr extends bf {
             break L3;
           }
         }
-        int discarded$1 = ((kr) this).field_Rc.SetTextureStageState(((kr) this).field_F, var6, var7 | kr.a(param3, (byte) -68));
+        int discarded$2 = -68;
+        int discarded$3 = ((kr) this).field_Rc.SetTextureStageState(((kr) this).field_F, var6, var7 | kr.a(param3));
     }
 
     final void a(pa param0, boolean param1) {
@@ -851,11 +857,32 @@ public final class kr extends bf {
     }
 
     final void m(byte param0) {
-        if (param0 >= -124) {
+        int var2 = 0;
+        int stackIn_5_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_3_0 = 0;
+        L0: {
+          if (param0 < -124) {
+            break L0;
+          } else {
             ((kr) this).field_Rc = null;
+            break L0;
+          }
         }
-        int var2 = ((kr) this).field_Lc[((kr) this).field_F] ? kr.a(((kr) this).field_w[((kr) this).field_F], true) : 1;
-        int discarded$0 = ((kr) this).field_Rc.SetTextureStageState(((kr) this).field_F, 4, var2);
+        L1: {
+          if (!((kr) this).field_Lc[((kr) this).field_F]) {
+            stackOut_4_0 = 1;
+            stackIn_5_0 = stackOut_4_0;
+            break L1;
+          } else {
+            int discarded$5 = 1;
+            stackOut_3_0 = kr.a(((kr) this).field_w[((kr) this).field_F]);
+            stackIn_5_0 = stackOut_3_0;
+            break L1;
+          }
+        }
+        var2 = stackIn_5_0;
+        int discarded$6 = ((kr) this).field_Rc.SetTextureStageState(((kr) this).field_F, 4, var2);
     }
 
     final static ha createToolkit(java.awt.Canvas param0, d param1, gk param2, Integer param3) {
@@ -998,10 +1025,31 @@ public final class kr extends bf {
     }
 
     final void N(int param0) {
-        int var2 = ((kr) this).field_Lc[((kr) this).field_F] ? kr.a(((kr) this).field_H[((kr) this).field_F], true) : 1;
-        int discarded$9 = ((kr) this).field_Rc.SetTextureStageState(((kr) this).field_F, 1, var2);
-        if (param0 != 0) {
+        int var2 = 0;
+        int stackIn_3_0 = 0;
+        int stackOut_2_0 = 0;
+        int stackOut_1_0 = 0;
+        L0: {
+          if (!((kr) this).field_Lc[((kr) this).field_F]) {
+            stackOut_2_0 = 1;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          } else {
+            int discarded$14 = 1;
+            stackOut_1_0 = kr.a(((kr) this).field_H[((kr) this).field_F]);
+            stackIn_3_0 = stackOut_1_0;
+            break L0;
+          }
+        }
+        L1: {
+          var2 = stackIn_3_0;
+          int discarded$15 = ((kr) this).field_Rc.SetTextureStageState(((kr) this).field_F, 1, var2);
+          if (param0 == 0) {
+            break L1;
+          } else {
             ((kr) this).field_Mc = true;
+            break L1;
+          }
         }
     }
 
@@ -1348,7 +1396,7 @@ public final class kr extends bf {
         return (qi) (Object) new og((kr) this, param6, param3, param2, param5, param0, param4);
     }
 
-    private final static int a(as param0, boolean param1) {
+    private final static int a(as param0) {
         if (param0 == bd.field_C) {
           return 2;
         } else {
@@ -1386,7 +1434,7 @@ public final class kr extends bf {
         return (fa) (Object) new dxVertexLayout((kr) this, param0);
     }
 
-    private final static int a(jb param0, byte param1) {
+    private final static int a(jb param0) {
         if (param0 == dl.field_p) {
           return 2;
         } else {
@@ -1417,7 +1465,7 @@ public final class kr extends bf {
         int discarded$1 = ((kr) this).field_Rc.SetTextureStageState(((kr) this).field_F, 11, param0);
     }
 
-    private final boolean h(boolean param0) {
+    private final boolean h() {
         int var4 = 0;
         int var2 = ((kr) this).field_Rc.TestCooperativeLevel();
         if (0 != var2) {
@@ -1518,19 +1566,12 @@ public final class kr extends bf {
 
     final void a(int param0, java.awt.Canvas param1, Object param2) {
         if (param0 != 0) {
-            boolean discarded$0 = this.h(true);
+            int discarded$0 = 1;
+            boolean discarded$1 = this.h();
         }
     }
 
     private final static int a(boolean param0, st param1) {
-        L0: {
-          if (param0) {
-            break L0;
-          } else {
-            field_Sc = null;
-            break L0;
-          }
-        }
         if (param1 == gj.field_b) {
           return 1;
         } else {
@@ -1975,7 +2016,8 @@ public final class kr extends bf {
             break L2;
           }
         }
-        int discarded$1 = ((kr) this).field_Rc.SetTextureStageState(((kr) this).field_F, var5, var6 | kr.a(param0, (byte) -68));
+        int discarded$2 = -68;
+        int discarded$3 = ((kr) this).field_Rc.SetTextureStageState(((kr) this).field_F, var5, var6 | kr.a(param0));
     }
 
     final go a(int param0, int param1, boolean param2, int[][] param3) {

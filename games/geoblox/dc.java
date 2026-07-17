@@ -6,14 +6,11 @@ final class dc {
     static rh field_c;
     static int field_b;
 
-    public static void b(int param0) {
+    public static void b() {
         field_c = null;
-        if (param0 < 121) {
-            field_b = 78;
-        }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var2 = 0;
         ja var3 = null;

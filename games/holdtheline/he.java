@@ -196,7 +196,7 @@ final class he extends ub {
         ((he) this).field_F = 256;
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_G = null;
     }
 
@@ -216,7 +216,8 @@ final class he extends ub {
                 var6 = new hj(((he) this).field_B.field_x, ((he) this).field_B.field_u);
                 hf.a(var6, -1);
                 ((he) this).field_B.a(param0, 0, 0, param3);
-                dm.b((byte) -10);
+                int discarded$1 = -10;
+                dm.b();
                 var6.d(param2 - -((he) this).field_k, param1 + ((he) this).field_o, ((he) this).field_F);
                 return;
               }

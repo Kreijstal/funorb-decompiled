@@ -11,8 +11,9 @@ final class bm {
     static nn field_b;
 
     final static void a(int param0) {
-        cg.d(param0 ^ 36);
-        lj.a(param0, 30);
+        int discarded$0 = 32;
+        cg.d();
+        lj.a(4, 30);
     }
 
     final static lm a(String param0, int param1, int param2) {
@@ -86,27 +87,16 @@ final class bm {
         return stackIn_3_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
-        if (param0 != 110) {
-          bm.a(95);
-          field_b = null;
-          field_f = null;
-          field_g = null;
-          field_a = null;
-          field_e = null;
-          return;
-        } else {
-          field_b = null;
-          field_f = null;
-          field_g = null;
-          field_a = null;
-          field_e = null;
-          return;
-        }
+        field_b = null;
+        field_f = null;
+        field_g = null;
+        field_a = null;
+        field_e = null;
     }
 
-    final static void b(byte param0) {
+    final static void b() {
     }
 
     static {

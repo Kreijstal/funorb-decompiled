@@ -27,9 +27,6 @@ final class c {
         byte[] var14 = null;
         byte[] var16 = null;
         byte[] var17 = null;
-        byte stackIn_21_0 = 0;
-        byte stackIn_22_0 = 0;
-        byte stackOut_20_0 = 0;
         var8 = MonkeyPuzzle2.field_F ? 1 : 0;
         if (null == ((c) this).field_f) {
           L0: {
@@ -67,11 +64,7 @@ final class c {
                       var12 = new java.math.BigInteger(var16);
                       var7_ref_java_math_BigInteger = var12.modPow(((c) this).field_d, ((c) this).field_i);
                       var5 = var7_ref_java_math_BigInteger.toByteArray();
-                      if (var8 == 0) {
-                        break L1;
-                      } else {
-                        break L2;
-                      }
+                      break L1;
                     }
                   }
                 }
@@ -84,24 +77,17 @@ final class c {
                 var17 = ie.a(-51, var10.field_g, -5 + var10.field_h + -var16.length, 5);
                 var7 = 0;
                 L3: while (true) {
-                  if (var7 < 64) {
-                    stackOut_20_0 = var17[var7];
-                    stackIn_22_0 = stackOut_20_0;
-                    stackIn_21_0 = stackOut_20_0;
-                    if (var8 == 0) {
-                      if (stackIn_22_0 != var5[var7 + 1]) {
-                        throw new RuntimeException();
-                      } else {
-                        var7++;
-                        continue L3;
-                      }
-                    } else {
-                      return stackIn_21_0 != 0;
-                    }
-                  } else {
+                  if (var7 >= 64) {
                     ((c) this).field_f = var10;
                     ((c) this).field_g = new ca[var3];
                     return true;
+                  } else {
+                    if (var17[var7] != var5[var7 + 1]) {
+                      throw new RuntimeException();
+                    } else {
+                      var7++;
+                      continue L3;
+                    }
                   }
                 }
               }
@@ -119,69 +105,42 @@ final class c {
     final void b(boolean param0) {
         int var2 = 0;
         int var3 = 0;
+        int var4 = 0;
         var3 = MonkeyPuzzle2.field_F ? 1 : 0;
         if (((c) this).field_g != null) {
           var2 = 0;
-          if (!param0) {
-            return;
-          } else {
+          if (param0) {
             L0: while (true) {
-              L1: {
-                L2: {
-                  if (var2 >= ((c) this).field_g.length) {
-                    break L2;
+              if (var2 >= ((c) this).field_g.length) {
+                var4 = 0;
+                var2 = var4;
+                L1: while (true) {
+                  if (var4 >= ((c) this).field_g.length) {
+                    return;
                   } else {
-                    if (var3 != 0) {
-                      break L1;
+                    if (((c) this).field_g[var4] != null) {
+                      ((c) this).field_g[var4].c(16311);
+                      var4++;
+                      continue L1;
                     } else {
-                      L3: {
-                        if (null == ((c) this).field_g[var2]) {
-                          break L3;
-                        } else {
-                          ((c) this).field_g[var2].b(-1);
-                          break L3;
-                        }
-                      }
-                      var2++;
-                      if (var3 == 0) {
-                        continue L0;
-                      } else {
-                        break L2;
-                      }
+                      var4++;
+                      continue L1;
                     }
                   }
                 }
-                var2 = 0;
-                break L1;
-              }
-              L4: while (true) {
-                L5: {
-                  if (var2 >= ((c) this).field_g.length) {
-                    break L5;
-                  } else {
-                    if (var3 != 0) {
-                      break L5;
-                    } else {
-                      L6: {
-                        if (((c) this).field_g[var2] == null) {
-                          break L6;
-                        } else {
-                          ((c) this).field_g[var2].c(16311);
-                          break L6;
-                        }
-                      }
-                      var2++;
-                      if (var3 == 0) {
-                        continue L4;
-                      } else {
-                        break L5;
-                      }
-                    }
-                  }
+              } else {
+                if (null != ((c) this).field_g[var2]) {
+                  ((c) this).field_g[var2].b(-1);
+                  var2++;
+                  continue L0;
+                } else {
+                  var2++;
+                  continue L0;
                 }
-                return;
               }
             }
+          } else {
+            return;
           }
         } else {
           return;
@@ -197,230 +156,118 @@ final class c {
         le var13 = null;
         int var14 = 0;
         int var15 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_14_0 = 0;
-        int stackIn_22_0 = 0;
-        int stackIn_24_0 = 0;
-        int stackIn_24_1 = 0;
-        int stackIn_26_0 = 0;
-        int stackIn_31_0 = 0;
-        int stackIn_34_0 = 0;
-        int stackIn_42_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_23_1 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_27_1 = 0;
-        int stackOut_41_0 = 0;
-        int stackOut_33_0 = 0;
-        var15 = MonkeyPuzzle2.field_F ? 1 : 0;
-        var9 = param3 + (param7 + param6);
-        var10 = new le[]{new le(var9, var9), new le(param1, var9), new le(var9, var9), new le(var9, param1), new le(64, 64), new le(var9, param1), new le(var9, var9), new le(param1, var9), new le(var9, var9)};
-        var11_ref_le__ = var10;
-        le[] discarded$1 = c.a(-50, -14, 118, -7, 1, -75, 1, 23, false);
-        var12 = 0;
-        L0: while (true) {
-          L1: {
-            L2: {
-              if (var11_ref_le__.length <= var12) {
-                break L2;
-              } else {
-                var13 = var11_ref_le__[var12];
-                stackOut_2_0 = 0;
-                stackIn_11_0 = stackOut_2_0;
-                stackIn_3_0 = stackOut_2_0;
-                if (var15 != 0) {
-                  break L1;
-                } else {
-                  var14 = stackIn_3_0;
-                  L3: while (true) {
-                    L4: {
-                      L5: {
-                        if (var14 >= var13.field_s.length) {
-                          break L5;
-                        } else {
-                          var13.field_s[var14] = param5;
-                          var14++;
-                          if (var15 != 0) {
-                            break L4;
-                          } else {
-                            if (var15 == 0) {
-                              continue L3;
-                            } else {
-                              break L5;
-                            }
-                          }
-                        }
-                      }
-                      var12++;
-                      break L4;
-                    }
-                    if (var15 == 0) {
-                      continue L0;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-              }
-            }
-            stackOut_10_0 = 0;
-            stackIn_11_0 = stackOut_10_0;
-            break L1;
+        L0: {
+          var15 = MonkeyPuzzle2.field_F ? 1 : 0;
+          var9 = param3 + (param7 + 1);
+          var10 = new le[]{new le(var9, var9), new le(param1, var9), new le(var9, var9), new le(var9, param1), new le(64, 64), new le(var9, param1), new le(var9, var9), new le(param1, var9), new le(var9, var9)};
+          var11_ref_le__ = var10;
+          if (param8) {
+            break L0;
+          } else {
+            le[] discarded$1 = c.a(-50, -14, 118, -7, 1, -75, 1, 23, false);
+            break L0;
           }
-          var11 = stackIn_11_0;
-          L6: while (true) {
-            L7: {
+        }
+        var12 = 0;
+        L1: while (true) {
+          if (var11_ref_le__.length <= var12) {
+            var11 = 0;
+            L2: while (true) {
               if (param7 <= var11) {
-                stackOut_21_0 = 0;
-                stackIn_22_0 = stackOut_21_0;
-                break L7;
-              } else {
-                stackOut_13_0 = 0;
-                stackIn_22_0 = stackOut_13_0;
-                stackIn_14_0 = stackOut_13_0;
-                if (var15 != 0) {
-                  break L7;
-                } else {
-                  var12 = stackIn_14_0;
-                  L8: while (true) {
-                    L9: {
-                      if (var12 >= var9) {
-                        var11++;
-                        break L9;
-                      } else {
-                        var10[6].field_s[var12 + var9 * (-var11 + var9 + -1)] = param2;
-                        var10[8].field_s[var12 + (-var11 + var9 - 1) * var9] = param2;
-                        var10[2].field_s[var12 * var9 + -var11 + (var9 - 1)] = param2;
-                        var10[8].field_s[var9 * var12 - (var11 + (1 + -var9))] = param2;
-                        var12++;
-                        if (var15 != 0) {
-                          break L9;
-                        } else {
-                          continue L8;
-                        }
-                      }
-                    }
-                    continue L6;
-                  }
-                }
-              }
-            }
-            var11 = stackIn_22_0;
-            L10: while (true) {
-              stackOut_23_0 = var11;
-              stackOut_23_1 = param7;
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              L11: while (true) {
-                L12: {
-                  if (stackIn_24_0 >= stackIn_24_1) {
-                    stackOut_30_0 = 0;
-                    stackIn_31_0 = stackOut_30_0;
-                    break L12;
-                  } else {
-                    stackOut_25_0 = 0;
-                    stackIn_31_0 = stackOut_25_0;
-                    stackIn_26_0 = stackOut_25_0;
-                    if (var15 != 0) {
-                      break L12;
-                    } else {
-                      var12 = stackIn_26_0;
-                      if (var9 <= var12) {
-                        var11++;
-                        continue L10;
-                      } else {
-                        var10[0].field_s[var9 * var11 + var12] = param4;
-                        var10[0].field_s[var9 * var12 + var11] = param4;
-                        stackOut_27_0 = ~var12;
-                        stackOut_27_1 = ~(-var11 + var9);
-                        stackIn_24_0 = stackOut_27_0;
-                        stackIn_24_1 = stackOut_27_1;
-                        continue L11;
-                      }
-                    }
-                  }
-                }
-                var11 = stackIn_31_0;
-                L13: while (true) {
-                  L14: {
-                    if (param1 <= var11) {
-                      stackOut_41_0 = 0;
-                      stackIn_42_0 = stackOut_41_0;
-                      break L14;
-                    } else {
-                      stackOut_33_0 = 0;
-                      stackIn_42_0 = stackOut_33_0;
-                      stackIn_34_0 = stackOut_33_0;
-                      if (var15 != 0) {
-                        break L14;
-                      } else {
-                        var12 = stackIn_34_0;
-                        L15: while (true) {
-                          L16: {
-                            if (var12 >= param7) {
-                              var11++;
-                              break L16;
-                            } else {
-                              var10[7].field_s[param1 * (-1 + var9 + -var12) + var11] = param2;
-                              var10[5].field_s[var9 * var11 + (var9 + -1 + -var12)] = param2;
-                              var10[1].field_s[param1 * var12 - -var11] = param4;
-                              var10[3].field_s[var11 * var9 + var12] = param4;
-                              var12++;
-                              if (var15 != 0) {
-                                break L16;
+                var11 = 0;
+                L3: while (true) {
+                  if (var11 >= param7) {
+                    var11 = 0;
+                    L4: while (true) {
+                      if (param1 <= var11) {
+                        var11 = 0;
+                        L5: while (true) {
+                          if (var11 >= param1 >> 1) {
+                            return var10;
+                          } else {
+                            var12 = 0;
+                            L6: while (true) {
+                              if (var12 < 1) {
+                                var10[1].field_s[param1 * (var9 + -var12 - 1) + var11] = param0;
+                                var10[3].field_s[var9 * var11 - var12 - (1 + -var9)] = param0;
+                                var10[7].field_s[var11 + var12 * param1] = param0;
+                                var10[5].field_s[var9 * var11 - -var12] = param0;
+                                var12++;
+                                continue L6;
                               } else {
-                                continue L15;
+                                var11++;
+                                continue L5;
                               }
                             }
                           }
-                          continue L13;
                         }
-                      }
-                    }
-                  }
-                  var11 = stackIn_42_0;
-                  L17: while (true) {
-                    L18: {
-                      if (var11 >= param1 >> 1) {
-                        break L18;
                       } else {
                         var12 = 0;
-                        L19: while (true) {
-                          L20: {
-                            if (param6 <= var12) {
-                              var11++;
-                              break L20;
-                            } else {
-                              var10[1].field_s[param1 * (var9 + -var12 - 1) + var11] = param0;
-                              var10[3].field_s[var9 * var11 - var12 - (1 + -var9)] = param0;
-                              var10[7].field_s[var11 + var12 * param1] = param0;
-                              var10[5].field_s[var9 * var11 - -var12] = param0;
-                              var12++;
-                              if (var15 != 0) {
-                                break L20;
-                              } else {
-                                continue L19;
-                              }
-                            }
-                          }
-                          if (var15 == 0) {
-                            continue L17;
+                        L7: while (true) {
+                          if (var12 >= param7) {
+                            var11++;
+                            continue L4;
                           } else {
-                            break L18;
+                            var10[7].field_s[param1 * (-1 + var9 + -var12) + var11] = param2;
+                            var10[5].field_s[var9 * var11 + (var9 + -1 + -var12)] = param2;
+                            var10[1].field_s[param1 * var12 - -var11] = param4;
+                            var10[3].field_s[var11 * var9 + var12] = param4;
+                            var12++;
+                            continue L7;
                           }
                         }
                       }
                     }
-                    return var10;
+                  } else {
+                    var12 = 0;
+                    L8: while (true) {
+                      if (var9 > var12) {
+                        var10[0].field_s[var9 * var11 + var12] = param4;
+                        var10[0].field_s[var9 * var12 + var11] = param4;
+                        if (var12 < -var11 + var9) {
+                          var10[2].field_s[var9 * var11 + var12] = param4;
+                          var10[6].field_s[var11 + var9 * var12] = param4;
+                          var12++;
+                          continue L8;
+                        } else {
+                          var12++;
+                          continue L8;
+                        }
+                      } else {
+                        var11++;
+                        continue L3;
+                      }
+                    }
                   }
                 }
+              } else {
+                var12 = 0;
+                L9: while (true) {
+                  if (var12 >= var9) {
+                    var11++;
+                    continue L2;
+                  } else {
+                    var10[6].field_s[var12 + var9 * (-var11 + var9 + -1)] = param2;
+                    var10[8].field_s[var12 + (-var11 + var9 - 1) * var9] = param2;
+                    var10[2].field_s[var12 * var9 + -var11 + (var9 - 1)] = param2;
+                    var10[8].field_s[var9 * var12 - (var11 + (1 + -var9))] = param2;
+                    var12++;
+                    continue L9;
+                  }
+                }
+              }
+            }
+          } else {
+            var13 = var11_ref_le__[var12];
+            var14 = 0;
+            L10: while (true) {
+              if (var14 >= var13.field_s.length) {
+                var12++;
+                continue L1;
+              } else {
+                var13.field_s[var14] = param5;
+                var14++;
+                continue L10;
               }
             }
           }
@@ -431,7 +278,7 @@ final class c {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_j = null;
         field_h = null;
     }

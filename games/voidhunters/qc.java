@@ -43,10 +43,10 @@ abstract class qc implements kd {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var4 = new llb((long)param1, (llb) null, param2);
+            var4 = new llb(0L, (llb) null, param2);
             var4.field_eb = ((qc) this).field_n;
             var4.field_Y = param0;
-            var4.a(5, param1 + 124, ((qc) this).field_n.b(var4.field_R), 0, ((qc) this).field_e);
+            var4.a(5, 124, ((qc) this).field_n.b(var4.field_R), 0, ((qc) this).field_e);
             stackOut_0_0 = (llb) var4;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -56,7 +56,7 @@ abstract class qc implements kd {
           L1: {
             var4_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var4_ref;
-            stackOut_2_1 = new StringBuilder().append("qc.U(").append(param0).append(44).append(param1).append(44);
+            stackOut_2_1 = new StringBuilder().append("qc.U(").append(param0).append(44).append(0).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -90,7 +90,7 @@ abstract class qc implements kd {
         int var6 = VoidHunters.field_G;
         try {
             ((qc) this).field_h.field_wb.b(-561, this.b(param1, 0, param2));
-            if (!(param0 <= ~((qc) this).field_h.field_wb.field_lb.c(3))) {
+            if (!(((qc) this).field_h.field_wb.field_lb.c(3) <= 256)) {
                 ksa discarded$0 = ((qc) this).field_h.field_wb.field_lb.a(true);
             }
             var4_int = 5;
@@ -103,7 +103,7 @@ abstract class qc implements kd {
             ((qc) this).field_h.field_wb.field_G = var4_int;
             ((qc) this).field_h.field_wb.field_K = -var4_int + ((qc) this).field_h.field_G;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "qc.L(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "qc.L(" + -257 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -180,8 +180,8 @@ abstract class qc implements kd {
     }
 
     private final ij a(int param0, byte param1, String param2) {
-        RuntimeException var4 = null;
-        ij var4_ref = null;
+        ij var4 = null;
+        RuntimeException var4_ref = null;
         int var5 = 0;
         int var6 = 0;
         String var7 = null;
@@ -208,11 +208,11 @@ abstract class qc implements kd {
         var9 = VoidHunters.field_G;
         try {
           L0: {
-            var5 = -120 / ((-80 - param1) / 41);
-            var4_ref = new ij();
+            var5 = -120;
+            var4 = new ij();
             L1: while (true) {
               if (param2 == null) {
-                stackOut_17_0 = (ij) var4_ref;
+                stackOut_17_0 = (ij) var4;
                 stackIn_18_0 = stackOut_17_0;
                 break L0;
               } else {
@@ -237,9 +237,9 @@ abstract class qc implements kd {
                               }
                             }
                           }
-                          int incrementValue$2 = var8;
+                          int incrementValue$4 = var8;
                           var8--;
-                          var6 = var6 - ((qc) this).field_n.a(param2.charAt(incrementValue$2));
+                          var6 = var6 - ((qc) this).field_n.a(param2.charAt(incrementValue$4));
                           continue L3;
                         }
                       }
@@ -253,9 +253,9 @@ abstract class qc implements kd {
                             if (param0 >= var6) {
                               break L6;
                             } else {
-                              int incrementValue$3 = var8;
+                              int incrementValue$5 = var8;
                               var8--;
-                              var6 = var6 - ((qc) this).field_n.a(param2.charAt(incrementValue$3));
+                              var6 = var6 - ((qc) this).field_n.a(param2.charAt(incrementValue$5));
                               continue L7;
                             }
                           }
@@ -270,7 +270,7 @@ abstract class qc implements kd {
                     break L2;
                   }
                 }
-                var4_ref.b(-10258, (ksa) (Object) new ila(var7));
+                var4.b(-10258, (ksa) (Object) new ila(var7));
                 continue L1;
               }
             }
@@ -278,9 +278,9 @@ abstract class qc implements kd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
-            var4 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var4;
-            stackOut_19_1 = new StringBuilder().append("qc.R(").append(param0).append(44).append(param1).append(44);
+            var4_ref = decompiledCaughtException;
+            stackOut_19_0 = (RuntimeException) var4_ref;
+            stackOut_19_1 = new StringBuilder().append("qc.R(").append(param0).append(44).append(-128).append(44);
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -308,7 +308,7 @@ abstract class qc implements kd {
         return stackIn_18_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_q = null;
         field_g = null;
     }
@@ -449,14 +449,11 @@ abstract class qc implements kd {
 
     abstract void a(int param0);
 
-    final static asb b(int param0) {
+    final static asb b() {
         return pj.a((byte) 52, qw.field_e.field_a);
     }
 
     private final llb a(int param0, int param1) {
-        if (param0 != 4) {
-            return null;
-        }
         llb var3 = new llb(0L, (llb) null);
         var3.field_gb = prb.a(true, 2263074);
         return var3;
@@ -596,37 +593,33 @@ abstract class qc implements kd {
             var4_int = ((qc) this).field_h.field_hb + -25;
             var5 = up.a((byte) -67, '\n', param0);
             var6 = var5;
-            if (!param1) {
-              var7 = 0;
-              L1: while (true) {
-                if (var6.length <= var7) {
-                  break L0;
-                } else {
-                  L2: {
-                    var8 = var6[var7];
-                    if (var4_int <= ((qc) this).field_n.b(var8)) {
-                      var9 = this.a(var4_int, (byte) -128, var8);
-                      var10 = (ila) (Object) var9.d(0);
-                      L3: while (true) {
-                        if (var10 == null) {
-                          break L2;
-                        } else {
-                          this.a(-257, param2, var10.field_d);
-                          var10 = (ila) (Object) var9.a((byte) 26);
-                          continue L3;
-                        }
+            var7 = 0;
+            L1: while (true) {
+              if (var6.length <= var7) {
+                break L0;
+              } else {
+                L2: {
+                  var8 = var6[var7];
+                  if (var4_int <= ((qc) this).field_n.b(var8)) {
+                    var9 = this.a(var4_int, (byte) -128, var8);
+                    var10 = (ila) (Object) var9.d(0);
+                    L3: while (true) {
+                      if (var10 == null) {
+                        break L2;
+                      } else {
+                        this.a(-257, param2, var10.field_d);
+                        var10 = (ila) (Object) var9.a((byte) 26);
+                        continue L3;
                       }
-                    } else {
-                      this.a(-257, param2, var8);
-                      break L2;
                     }
+                  } else {
+                    this.a(-257, param2, var8);
+                    break L2;
                   }
-                  var7++;
-                  continue L1;
                 }
+                var7++;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -657,7 +650,7 @@ abstract class qc implements kd {
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 44 + param2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + 0 + 44 + param2 + 41);
         }
     }
 

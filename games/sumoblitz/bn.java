@@ -643,7 +643,7 @@ final class bn extends ar {
         int var1 = 0;
         nv.field_a = nv.field_a + 1;
         jt.field_u = 150;
-        var1 = nv.field_a / param0;
+        var1 = nv.field_a / 2;
         if (un.field_a.length - 1 == var1) {
           ta.field_b = ta.field_b + 1;
           if (ps.field_e[12] != ta.field_b) {
@@ -685,7 +685,8 @@ final class bn extends ar {
     }
 
     bn(v param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (mh) (Object) fw.a(0));
+        super(param1, (mh) (Object) fw.a());
+        int discarded$0 = 0;
         try {
             ((bn) this).field_U = param1;
             ((bn) this).field_Q = param0;
@@ -695,7 +696,7 @@ final class bn extends ar {
         }
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_O = null;
         int var1 = 83;
     }

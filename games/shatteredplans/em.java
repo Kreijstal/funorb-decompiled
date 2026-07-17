@@ -18,55 +18,47 @@ final class em implements jk {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
+        int stackIn_9_0 = 0;
         int stackIn_11_0 = 0;
-        int stackIn_13_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
         int stackOut_10_0 = 0;
+        int stackOut_8_0 = 0;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
-            L1: {
-              if (param1 > 113) {
-                break L1;
-              } else {
-                field_j = 43;
-                break L1;
-              }
-            }
             var3_int = 1;
-            L2: while (true) {
+            L1: while (true) {
               if (param2 <= 1) {
                 if (param2 != 1) {
-                  stackOut_12_0 = var3_int;
-                  stackIn_13_0 = stackOut_12_0;
+                  stackOut_10_0 = var3_int;
+                  stackIn_11_0 = stackOut_10_0;
                   break L0;
                 } else {
-                  stackOut_10_0 = var3_int * param0;
-                  stackIn_11_0 = stackOut_10_0;
-                  return stackIn_11_0;
+                  stackOut_8_0 = var3_int * param0;
+                  stackIn_9_0 = stackOut_8_0;
+                  return stackIn_9_0;
                 }
               } else {
-                L3: {
+                L2: {
                   if ((param2 & 1) != 0) {
                     var3_int = var3_int * param0;
-                    break L3;
+                    break L2;
                   } else {
-                    break L3;
+                    break L2;
                   }
                 }
                 param2 = param2 >> 1;
                 param0 = param0 * param0;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var3, "em.A(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw r.a((Throwable) (Object) var3, "em.A(" + param0 + 44 + 121 + 44 + param2 + 41);
         }
-        return stackIn_13_0;
+        return stackIn_11_0;
     }
 
     public static void a(int param0) {
@@ -79,7 +71,7 @@ final class em implements jk {
         }
     }
 
-    final static void a(va param0, int param1) {
+    final static void a(va param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -242,7 +234,7 @@ final class em implements jk {
                     }
                     L5: {
                       var8 = stackIn_17_0;
-                      if (param4[param2] != null) {
+                      if (param4[7] != null) {
                         stackOut_19_0 = param4[7].field_p;
                         stackIn_20_0 = stackOut_19_0;
                         break L5;
@@ -456,7 +448,7 @@ final class em implements jk {
           L23: {
             var6 = decompiledCaughtException;
             stackOut_72_0 = (RuntimeException) var6;
-            stackOut_72_1 = new StringBuilder().append("em.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_72_1 = new StringBuilder().append("em.C(").append(param0).append(44).append(param1).append(44).append(7).append(44).append(param3).append(44);
             stackIn_74_0 = stackOut_72_0;
             stackIn_74_1 = stackOut_72_1;
             stackIn_73_0 = stackOut_72_0;

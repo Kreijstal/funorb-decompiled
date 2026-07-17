@@ -11,27 +11,34 @@ final class ep extends le {
     static int field_i;
     int field_k;
 
-    final static void c(byte param0) {
+    final static void c() {
         int var1_int = 0;
-        int var2 = ZombieDawn.field_J;
-        wo.field_yb.a(true);
-        for (var1_int = 0; var1_int < 32; var1_int++) {
-            ji.field_c[var1_int] = 0L;
-        }
-        if (param0 != -50) {
-            return;
-        }
+        RuntimeException var1 = null;
+        int var2 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var2 = ZombieDawn.field_J;
         try {
-            for (var1_int = 0; var1_int < 32; var1_int++) {
-                ZombieDawn.field_E[var1_int] = 0L;
+          L0: {
+            wo.field_yb.a(true);
+            var1_int = 0;
+            L1: while (true) {
+              if (var1_int >= 32) {
+                break L0;
+              } else {
+                ji.field_c[var1_int] = 0L;
+                var1_int++;
+                continue L1;
+              }
             }
-            fc.field_Ob = 0;
-        } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "ep.C(" + param0 + 41);
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw sh.a((Throwable) (Object) var1, "ep.C(" + -50 + 41);
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void a(int param0, int param1) {
         pk.field_N = param1;
         b.field_l = param0;
         if (null != wo.field_xb) {
@@ -39,7 +46,7 @@ final class ep extends le {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_h = null;
         field_l = null;
     }

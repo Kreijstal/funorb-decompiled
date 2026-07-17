@@ -146,12 +146,12 @@ class mf extends al {
           L0: {
             if (hl.a(true)) {
               boolean discarded$15 = pj.field_i.a(aa.field_Vb, true, p.field_m, false);
-              pj.field_i.j(param0 ^ param0);
+              pj.field_i.j(0);
               L1: while (true) {
                 if (!nj.b((byte) 28)) {
                   break L0;
                 } else {
-                  boolean discarded$16 = pj.field_i.a(dg.field_e, tb.field_m, param0 ^ -81);
+                  boolean discarded$16 = pj.field_i.a(dg.field_e, tb.field_m, -81);
                   continue L1;
                 }
               }
@@ -175,7 +175,7 @@ class mf extends al {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) var1, "mf.I(" + param0 + 41);
+          throw oi.a((Throwable) (Object) var1, "mf.I(" + 0 + 41);
         }
     }
 
@@ -199,7 +199,7 @@ class mf extends al {
         field_w = null;
     }
 
-    final static int b(int param0) {
+    final static int b() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;

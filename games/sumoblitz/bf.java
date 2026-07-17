@@ -7,18 +7,19 @@ final class bf {
     static String field_d;
     static String[] field_c;
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_d = null;
         field_c = null;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         if (!ms.field_a) {
             throw new IllegalStateException();
         }
         pu.field_m = true;
-        jv.a(true, false);
+        int discarded$0 = 0;
+        jv.a(true);
         jv.field_a = 0;
     }
 

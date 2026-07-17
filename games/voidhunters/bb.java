@@ -4,7 +4,7 @@
 final class bb extends rqa {
     static String field_o;
 
-    final static void a(ds param0, boolean param1) {
+    final static void a(ds param0) {
         int var2_int = 0;
         try {
             wl.field_q = param0.e(1869) << 5;

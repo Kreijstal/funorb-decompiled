@@ -25,7 +25,8 @@ final class om extends qm {
             ((om) this).field_G = 79;
         }
         super.a(param0, param1, param2, param3, -125);
-        this.e(-385446591);
+        int discarded$0 = -385446591;
+        this.e();
     }
 
     final void b(int param0, boolean param1, int param2) {
@@ -36,10 +37,11 @@ final class om extends qm {
         ((om) this).field_J = (16711422 & param0) >> 1;
         ((om) this).field_K = (16711422 & param2) >> 1;
         ((om) this).field_C = param2;
-        this.e(-385446591);
+        int discarded$0 = -385446591;
+        this.e();
     }
 
-    final static void g(byte param0) {
+    final static void g() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -66,7 +68,8 @@ final class om extends qm {
               if (var2 == 0) {
                 var4 = (aa) (Object) ve.field_o.b(12623);
                 if (var4 == null) {
-                  ka.b(false);
+                  int discarded$5 = 0;
+                  ka.b();
                   return;
                 } else {
                   L2: {
@@ -97,8 +100,11 @@ final class om extends qm {
                 }
               } else {
                 if (1 != var2) {
-                  jh.a((Throwable) null, "LR1: " + nn.g((byte) -25), (byte) 20);
-                  ka.b(false);
+                  int discarded$6 = -25;
+                  int discarded$7 = 20;
+                  jh.a((Throwable) null, "LR1: " + nn.g());
+                  int discarded$8 = 0;
+                  ka.b();
                   break L1;
                 } else {
                   var4_int = var9.i(-1);
@@ -124,7 +130,8 @@ final class om extends qm {
                       }
                     }
                     if (var5_ref_ko == null) {
-                      ka.b(false);
+                      int discarded$9 = 0;
+                      ka.b();
                       return;
                     } else {
                       var5_ref_ko.a(true);
@@ -154,67 +161,59 @@ final class om extends qm {
         int var12 = 0;
         int var13 = 0;
         qb var14 = null;
-        int stackIn_7_0 = 0;
-        int stackIn_10_0 = 0;
+        int stackIn_5_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_7_0 = 0;
         int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        L0: {
-          var13 = ArcanistsMulti.field_G ? 1 : 0;
-          if (param1 == -5179) {
-            break L0;
-          } else {
-            ((om) this).field_K = 98;
-            break L0;
-          }
-        }
+        var13 = ArcanistsMulti.field_G ? 1 : 0;
         var14 = new qb(((om) this).field_z * 2, ((om) this).field_k);
         fk.a(var14, -23095);
         var5 = ((om) this).field_k >> 1;
         var6 = 0;
-        L1: while (true) {
+        L0: while (true) {
           if (((om) this).field_k <= var6) {
             oo.c(-15405);
             return var14;
           } else {
-            L2: {
+            L1: {
               var7 = (((om) this).field_z * 2 - 1) * (var6 >> 1) % (((om) this).field_z * 2);
               var8 = param2 & 16711935;
               var9 = param2 & 65280;
               var10 = var6 + -var5;
               var11 = 128 + (int)(128.0 * (Math.sqrt((double)(var5 * var5 + -(var10 * var10))) / (double)var5));
               if (var11 < 256) {
-                stackOut_6_0 = (-16711936 & var8 * var11 | var9 * var11 & 16711680) >>> 8;
-                stackIn_7_0 = stackOut_6_0;
-                break L2;
+                stackOut_4_0 = (-16711936 & var8 * var11 | var9 * var11 & 16711680) >>> 8;
+                stackIn_5_0 = stackOut_4_0;
+                break L1;
               } else {
-                stackOut_5_0 = var8 | var9;
-                stackIn_7_0 = stackOut_5_0;
-                break L2;
+                stackOut_3_0 = var8 | var9;
+                stackIn_5_0 = stackOut_3_0;
+                break L1;
               }
             }
-            L3: {
-              var12 = stackIn_7_0;
+            L2: {
+              var12 = stackIn_5_0;
               de.f(var7, var6, ((om) this).field_z, var12);
               de.f(var7 + -(2 * ((om) this).field_z), var6, ((om) this).field_z, var12);
               var8 = 16711935 & param0;
               var9 = param0 & 65280;
               if (var11 < 256) {
-                stackOut_9_0 = (-16711936 & var11 * var8 | 16711680 & var11 * var9) >>> 8;
-                stackIn_10_0 = stackOut_9_0;
-                break L3;
+                stackOut_7_0 = (-16711936 & var11 * var8 | 16711680 & var11 * var9) >>> 8;
+                stackIn_8_0 = stackOut_7_0;
+                break L2;
               } else {
-                stackOut_8_0 = var8 | var9;
-                stackIn_10_0 = stackOut_8_0;
-                break L3;
+                stackOut_6_0 = var8 | var9;
+                stackIn_8_0 = stackOut_6_0;
+                break L2;
               }
             }
-            var12 = stackIn_10_0;
+            var12 = stackIn_8_0;
             de.f(var7 - -((om) this).field_z, var6, ((om) this).field_z, var12);
             de.f(-((om) this).field_z + var7, var6, ((om) this).field_z, var12);
             var6++;
-            continue L1;
+            continue L0;
           }
         }
     }
@@ -246,39 +245,32 @@ final class om extends qm {
     final static qb[] a(int param0, int param1, byte param2, eg param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        Object stackIn_5_0 = null;
-        qb[] stackIn_7_0 = null;
+        qb[] stackIn_5_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
+        String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        qb[] stackOut_6_0 = null;
-        Object stackOut_4_0 = null;
+        qb[] stackOut_4_0 = null;
         Object stackOut_1_0 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
         try {
           L0: {
             if (fc.a(-124, param3, param1, param0)) {
-              if (param2 <= -117) {
-                stackOut_6_0 = gg.a(0);
-                stackIn_7_0 = stackOut_6_0;
-                break L0;
-              } else {
-                stackOut_4_0 = null;
-                stackIn_5_0 = stackOut_4_0;
-                return (qb[]) (Object) stackIn_5_0;
-              }
+              int discarded$2 = 0;
+              stackOut_4_0 = gg.a();
+              stackIn_5_0 = stackOut_4_0;
+              break L0;
             } else {
               stackOut_1_0 = null;
               stackIn_2_0 = stackOut_1_0;
@@ -289,33 +281,33 @@ final class om extends qm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var4;
-            stackOut_8_1 = new StringBuilder().append("om.F(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackOut_6_0 = (RuntimeException) var4;
+            stackOut_6_1 = new StringBuilder().append("om.F(").append(param0).append(44).append(param1).append(44).append(-123).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
             if (param3 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
               break L1;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
               break L1;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
-        return stackIn_7_0;
+        return stackIn_5_0;
     }
 
     private final void a(int param0, int param1, qb param2, int param3) {
@@ -433,14 +425,14 @@ final class om extends qm {
         }
     }
 
-    private final void e(int param0) {
+    private final void e() {
         ((om) this).field_N = new qb[]{this.a(((om) this).field_y, -5179, ((om) this).field_C), this.a(((om) this).field_J, -5179, ((om) this).field_K)};
         ((om) this).field_D = this.a(1);
         ((om) this).field_F = ((om) this).field_D.b();
         ((om) this).field_A = new qb(((om) this).field_k >> 1, ((om) this).field_k);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_M = null;
         field_L = null;
         field_x = null;

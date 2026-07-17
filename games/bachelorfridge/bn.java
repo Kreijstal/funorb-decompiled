@@ -9,7 +9,7 @@ final class bn extends kj {
     private int field_f;
     static ee field_i;
 
-    public static void c(int param0) {
+    public static void c() {
         field_i = null;
         field_h = null;
     }
@@ -48,16 +48,22 @@ final class bn extends kj {
               if (lk.field_r >= 10) {
                 if (!ad.d((byte) 27)) {
                   dg.d();
-                  rha.a(240, false, 320);
-                  av.a(0, -83, param1, 0);
+                  int discarded$82 = 320;
+                  int discarded$83 = 0;
+                  int discarded$84 = 240;
+                  rha.a();
+                  int discarded$85 = 0;
+                  av.a(0, -83, param1);
                   break L1;
                 } else {
                   if (0 == jv.field_j) {
                     rda.a(0, param2, false);
-                    av.a(0, -76, param1, 0);
+                    int discarded$86 = 0;
+                    av.a(0, -76, param1);
                     break L1;
                   } else {
-                    jq.a(param1, -128);
+                    int discarded$87 = -128;
+                    jq.a(param1);
                     break L1;
                   }
                 }
@@ -72,7 +78,9 @@ final class bn extends kj {
                     break L2;
                   }
                 }
-                lha.a(kla.f(param0 + -10284), dea.field_o, wea.b(false), var3_int != 0, 3);
+                int discarded$88 = 0;
+                int discarded$89 = 3;
+                lha.a(kla.f(param0 + -10284), dea.field_o, wea.b(), var3_int != 0);
                 break L1;
               }
             }
@@ -162,7 +170,7 @@ final class bn extends kj {
         try {
           L0: {
             if (g.a(param3, param2, -30744, param0)) {
-              var4_int = -101 / ((-66 - param1) / 41);
+              var4_int = -101;
               stackOut_3_0 = nja.a(true);
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -200,7 +208,7 @@ final class bn extends kj {
               break L1;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw pe.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + -117 + 44 + param2 + 44 + param3 + 41);
         }
         return stackIn_4_0;
     }
@@ -217,9 +225,9 @@ final class bn extends kj {
         int var10 = 0;
         Object var11 = null;
         var10 = BachelorFridge.field_y;
-        int fieldTemp$4 = ((bn) this).field_f - 1;
+        int fieldTemp$5 = ((bn) this).field_f - 1;
         ((bn) this).field_f = ((bn) this).field_f - 1;
-        if (fieldTemp$4 == 0) {
+        if (fieldTemp$5 == 0) {
           return true;
         } else {
           L0: {
@@ -236,13 +244,13 @@ final class bn extends kj {
                     var3 += 16;
                     var4 = kla.a(96, ((bn) this).field_e.field_h.field_w, -2147483648);
                     var5 = kla.a(48, ((bn) this).field_e.field_h.field_w, -2147483648);
-                    int discarded$5 = kla.a(50, ((bn) this).field_e.field_h.field_w, -2147483648);
+                    int discarded$6 = kla.a(50, ((bn) this).field_e.field_h.field_w, -2147483648);
                     var6 = 128 + var4;
                     var7 = 64 + var5;
                     var8 = (int)(Math.sin((double)var3 * 300.0) * 100.0) * 0;
                     var9 = new rea(var6, var8, var7, kla.a(3, ((bn) this).field_e.field_h.field_w, -2147483648));
-                    int discarded$6 = kla.a(3, ((bn) this).field_e.field_h.field_w, -2147483648);
-                    int discarded$7 = kla.a(5000, ((bn) this).field_e.field_h.field_w, -2147483648);
+                    int discarded$7 = kla.a(3, ((bn) this).field_e.field_h.field_w, -2147483648);
+                    int discarded$8 = kla.a(5000, ((bn) this).field_e.field_h.field_w, -2147483648);
                     var9.field_o = (double)(-kla.a(2, ((bn) this).field_e.field_h.field_w, -2147483648) + -1);
                     var9.field_n = 64;
                     var9.field_h = -1;
@@ -257,7 +265,8 @@ final class bn extends kj {
             }
           }
           L2: {
-            dha.a(((bn) this).field_g, ((bn) this).field_f, ((bn) this).field_e.field_h.field_w, 75);
+            int discarded$9 = 75;
+            dha.a(((bn) this).field_g, ((bn) this).field_f, ((bn) this).field_e.field_h.field_w);
             if (param0 >= 21) {
               break L2;
             } else {

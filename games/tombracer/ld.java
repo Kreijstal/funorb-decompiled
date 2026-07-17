@@ -100,7 +100,7 @@ abstract class ld extends ota {
         throw new Error();
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = -35;
         field_d = null;
         field_f = null;

@@ -49,14 +49,16 @@ final class fo extends sp implements ai {
           L0: {
             L1: {
               if (param2 == ((fo) this).field_A) {
-                mu.e(0);
+                int discarded$22 = 0;
+                mu.e();
                 break L1;
               } else {
                 if (param2 != ((fo) this).field_B) {
                   if (((fo) this).field_C != param2) {
                     break L1;
                   } else {
-                    vi.e(4);
+                    int discarded$23 = 4;
+                    vi.e();
                     break L1;
                   }
                 } else {

@@ -732,7 +732,7 @@ final class ti extends qa {
         return 0;
     }
 
-    final static void c(boolean param0) {
+    final static void c() {
         i var1 = (i) (Object) id.field_e.c(0);
         if (var1 == null) {
             throw new IllegalStateException();
@@ -743,7 +743,7 @@ final class ti extends qa {
         cd.field_g.a((ne) (Object) var1, false);
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_v = null;
         field_A = null;
         field_q = null;

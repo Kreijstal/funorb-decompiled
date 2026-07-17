@@ -7,7 +7,7 @@ final class hd {
     static boolean field_b;
     static boolean field_a;
 
-    final static void a(String param0, String param1, int param2) {
+    final static void a(String param0, String param1) {
         try {
             fd.a(86, false, param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -16,14 +16,10 @@ final class hd {
     }
 
     final static String a(int param0) {
-        if (param0 != 0) {
-            field_a = false;
-            return ql.field_a;
-        }
         return ql.field_a;
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_c = null;
     }
 
@@ -180,18 +176,11 @@ final class hd {
         return stackIn_13_0;
     }
 
-    final static kh[] b(byte param0) {
-        Object var2 = null;
-        if (param0 != 87) {
-          var2 = null;
-          String discarded$2 = hd.a('￦', (byte) -39, (String) null, (String) null);
-          return new kh[]{aa.field_d, of.field_f, qe.field_x};
-        } else {
-          return new kh[]{aa.field_d, of.field_f, qe.field_x};
-        }
+    final static kh[] b() {
+        return new kh[]{aa.field_d, of.field_f, qe.field_x};
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;

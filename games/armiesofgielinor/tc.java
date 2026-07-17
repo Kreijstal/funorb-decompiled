@@ -385,12 +385,12 @@ class tc {
         return true;
     }
 
-    final static void a(int param0, rs param1, byte param2) {
+    final static void a(int param0, rs param1) {
         bv var5 = null;
         int var4 = 0;
         try {
             var5 = vl.field_n;
-            var5.h(32161, param0);
+            var5.h(32161, 5);
             var5.field_q = var5.field_q + 1;
             var4 = var5.field_q;
             var5.b(1, 1);
@@ -403,7 +403,7 @@ class tc {
             int discarded$0 = var5.b((byte) -39, var4);
             var5.e(-var4 + var5.field_q, 5930);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "tc.OB(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 105 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "tc.OB(" + 5 + 44 + (param1 != null ? "{...}" : "null") + 44 + 105 + 41);
         }
     }
 
@@ -607,16 +607,14 @@ class tc {
     }
 
     final static int a(int param0, boolean param1, boolean param2, int param3) {
-        if (!param2) {
-            tc.a((java.applet.Applet) null, (String) null, (byte) 39, (String) null, -75L);
-        }
         return et.a(-3);
     }
 
     final static int b(int param0) {
         oi.field_c.a(18199);
         if (!ai.field_T.a(true)) {
-            return ep.b((byte) -120);
+            int discarded$0 = -120;
+            return ep.b();
         }
         return 0;
     }

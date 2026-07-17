@@ -58,7 +58,7 @@ final class ih {
         return stackIn_6_0 != 0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         field_b = null;
@@ -156,7 +156,7 @@ final class ih {
             L2: {
               var9 = stackIn_4_0;
               var10 = vf.field_L.field_m;
-              if (var7 >= var10) {
+              if (~var7 <= ~var10) {
                 stackOut_6_0 = 0;
                 stackIn_7_0 = stackOut_6_0;
                 break L2;
@@ -168,7 +168,7 @@ final class ih {
             }
             L3: {
               var11 = stackIn_7_0;
-              if (var6 >= param0) {
+              if (var6 <= 0) {
                 stackOut_9_0 = 0;
                 stackIn_10_0 = stackOut_9_0;
                 break L3;
@@ -180,7 +180,7 @@ final class ih {
             }
             L4: {
               var12 = stackIn_10_0;
-              if (-1 < var7) {
+              if (var7 > 0) {
                 stackOut_12_0 = var7;
                 stackIn_13_0 = stackOut_12_0;
                 break L4;
@@ -193,7 +193,7 @@ final class ih {
             L5: {
               var13 = stackIn_13_0;
               var14 = var6 - -var9;
-              if (var14 > var8) {
+              if (~var14 < ~var8) {
                 var14 = var8;
                 break L5;
               } else {
@@ -202,7 +202,7 @@ final class ih {
             }
             L6: {
               var15 = var11 + var7;
-              if (var15 > var10) {
+              if (~var15 < ~var10) {
                 var15 = var10;
                 break L6;
               } else {
@@ -231,14 +231,14 @@ final class ih {
                     continue L7;
                   } else {
                     L9: {
-                      if (var34[var16] != -1) {
-                        if (-16777216 != var35[var18]) {
-                          if (var35[var18] == -1) {
+                      if (var34[var16] != 0) {
+                        if (var35[var18] != 16777215) {
+                          if (var35[var18] == 0) {
                             break L9;
                           } else {
                             L10: {
                               var24 = tl.field_g[-1 + var35[var18]];
-                              if (-3 != var24.field_z) {
+                              if (var24.field_z != 2) {
                                 stackOut_34_0 = 0;
                                 stackIn_35_0 = stackOut_34_0;
                                 break L10;
@@ -279,7 +279,7 @@ final class ih {
                                         break L14;
                                       } else {
                                         if (var25 != 0) {
-                                          var26_ref.a(param0 ^ -97, (float)param3, 8, param2.field_w, param2.field_M, 0, param2.field_u, (float)param1, param2.field_F, param2.field_C, 0.0f);
+                                          var26_ref.a(96, (float)param3, 8, param2.field_w, param2.field_M, 0, param2.field_u, (float)param1, param2.field_F, param2.field_C, 0.0f);
                                           break L13;
                                         } else {
                                           break L14;
@@ -296,7 +296,8 @@ final class ih {
                                 }
                               }
                             }
-                            if (ik.a(var24, param2, false)) {
+                            int discarded$1 = 0;
+                            if (ik.a(var24, param2)) {
                               return;
                             } else {
                               break L9;
@@ -334,7 +335,7 @@ final class ih {
           L15: {
             var4 = decompiledCaughtException;
             stackOut_53_0 = (RuntimeException) var4;
-            stackOut_53_1 = new StringBuilder().append("ih.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_53_1 = new StringBuilder().append("ih.A(").append(-1).append(44).append(param1).append(44);
             stackIn_55_0 = stackOut_53_0;
             stackIn_55_1 = stackOut_53_1;
             stackIn_54_0 = stackOut_53_0;

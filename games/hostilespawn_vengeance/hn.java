@@ -29,7 +29,7 @@ final class hn {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
         field_e = null;

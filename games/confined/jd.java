@@ -11,7 +11,7 @@ final class jd {
     static boolean field_c;
     static bi field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_b = null;
         field_d = null;
@@ -20,16 +20,16 @@ final class jd {
         field_h = null;
     }
 
-    final static nf[] a(int param0, int param1, int param2, int param3, boolean param4) {
+    final static nf[] a(int param0, int param1, int param2) {
         nf[] var6 = new nf[9];
         nf[] var5 = var6;
-        nf dupTemp$0 = wm.a(param3, true, param2);
+        nf dupTemp$0 = wm.a(1, true, param2);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        nf dupTemp$1 = wm.a(param3, true, param0);
+        nf dupTemp$1 = wm.a(1, true, param0);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
@@ -42,9 +42,6 @@ final class jd {
     final static void a(int param0, long param1) {
         if (!(param1 > 0L)) {
             return;
-        }
-        if (param0 != 1) {
-            field_c = true;
         }
         if (param1 % 10L == 0L) {
             wd.a(-1L + param1, -1);

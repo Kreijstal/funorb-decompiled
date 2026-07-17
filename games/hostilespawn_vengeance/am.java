@@ -55,7 +55,7 @@ class am {
               break L1;
             }
             L3: {
-              if (param0 >= ~param3.field_e) {
+              if (param3.field_e >= 0) {
                 var4_int = -param3.field_e + 16;
                 sc.field_l.a(param2, param1, var4_int, var4_int);
                 break L3;
@@ -70,7 +70,7 @@ class am {
           L4: {
             var4 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var4;
-            stackOut_10_1 = new StringBuilder().append("am.K(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_10_1 = new StringBuilder().append("am.K(").append(-1).append(44).append(param1).append(44).append(param2).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -343,7 +343,8 @@ class am {
             L4: {
               r.field_a = 0;
               if (ha.field_t == 1) {
-                ue.a(250, false);
+                int discarded$2 = 0;
+                ue.a(250);
                 var3 = 1;
                 var4_int = 0;
                 L5: while (true) {
@@ -402,7 +403,8 @@ class am {
               }
             }
             L10: {
-              ue.a(250, false);
+              int discarded$3 = 0;
+              ue.a(250);
               if (param1 > 89) {
                 break L10;
               } else {

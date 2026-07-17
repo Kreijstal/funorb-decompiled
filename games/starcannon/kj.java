@@ -126,7 +126,7 @@ final class kj extends vk implements ga {
         return stackIn_4_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_E = null;
         field_y = null;
     }

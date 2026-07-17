@@ -44,19 +44,25 @@ final class tk {
                 break L0;
               }
             }
-            if (var4 < 10) {
-              var4 = 10;
-              te.a(30, param2, param1, var4, 80, 0, ui.field_F, 0, (byte) -102);
-              return;
-            } else {
-              if (-40 + ui.field_F.field_v < var4) {
-                var4 = -40 + ui.field_F.field_v;
-                te.a(30, param2, param1, var4, 80, 0, ui.field_F, 0, (byte) -102);
+            if (var4 >= 10) {
+              if (-40 + ui.field_F.field_v >= var4) {
+                int discarded$6 = -102;
+                int discarded$7 = 0;
+                te.a(30, param2, param1, var4, 80, 0, ui.field_F);
                 return;
               } else {
-                te.a(30, param2, param1, var4, 80, 0, ui.field_F, 0, (byte) -102);
+                var4 = -40 + ui.field_F.field_v;
+                int discarded$8 = -102;
+                int discarded$9 = 0;
+                te.a(30, param2, param1, var4, 80, 0, ui.field_F);
                 return;
               }
+            } else {
+              var4 = 10;
+              int discarded$10 = -102;
+              int discarded$11 = 0;
+              te.a(30, param2, param1, var4, 80, 0, ui.field_F);
+              return;
             }
           } else {
             return;

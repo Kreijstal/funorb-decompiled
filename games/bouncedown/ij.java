@@ -6,7 +6,7 @@ final class ij {
     static int[] field_b;
     static boolean field_a;
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0) {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -22,7 +22,7 @@ final class ij {
               }
             }
             L2: {
-              if (wb.field_a <= param1) {
+              if (wb.field_a <= 2) {
                 break L2;
               } else {
                 wb.field_a = 2;
@@ -43,11 +43,11 @@ final class ij {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ii.a((Throwable) (Object) var2, "ij.C(" + param0 + 44 + param1 + 41);
+          throw ii.a((Throwable) (Object) var2, "ij.C(" + param0 + 44 + 2 + 41);
         }
     }
 
-    final static void a(gk param0, byte param1) {
+    final static void a(gk param0) {
         byte[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -594,7 +594,7 @@ final class ij {
             }
             L59: {
               var2 = mg.a((byte) 48, "arr");
-              var3 = 44 % ((param1 - 23) / 59);
+              var3 = 0;
               if (var2 != null) {
                 wa.field_a = c.a(0, var2);
                 break L59;
@@ -678,49 +678,49 @@ final class ij {
               break L65;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_232_0, stackIn_232_2 + 44 + param1 + 41);
+          throw ii.a((Throwable) (Object) stackIn_232_0, stackIn_232_2 + 44 + -123 + 41);
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            if (param0 < -66) {
-              L1: {
-                if (~oa.field_a == ~(0 - fe.field_i)) {
+            L1: {
+              if (~oa.field_a == ~(0 - fe.field_i)) {
+                break L1;
+              } else {
+                if (oa.field_a != 250 + -fe.field_i) {
                   break L1;
                 } else {
-                  if (oa.field_a != 250 + -fe.field_i) {
-                    break L1;
-                  } else {
-                    break L1;
-                  }
+                  break L1;
                 }
               }
-              oa.field_a = oa.field_a + 1;
-              break L0;
-            } else {
-              return;
             }
+            oa.field_a = oa.field_a + 1;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ii.a((Throwable) (Object) var1, "ij.B(" + param0 + 41);
+          throw ii.a((Throwable) (Object) var1, "ij.B(" + -105 + 41);
         }
     }
 
     public static void a(boolean param0) {
-        if (!param0) {
-            return;
-        }
+        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
+          L0: {
             field_b = null;
             field_c = null;
-        } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "ij.A(" + param0 + 41);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw ii.a((Throwable) (Object) var1, "ij.A(" + 1 + 41);
         }
     }
 
@@ -758,7 +758,7 @@ final class ij {
               gk.field_i[q.field_M] = param5;
               th.field_c[q.field_M] = param4;
               var6_int = param5 + (param0 + param4);
-              if (param3 != var6_int) {
+              if (0 != var6_int) {
                 stackOut_10_0 = 1000 * param0 / var6_int;
                 stackIn_11_0 = stackOut_10_0;
                 break L3;
@@ -792,7 +792,7 @@ final class ij {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw ii.a((Throwable) (Object) var6, "ij.D(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw ii.a((Throwable) (Object) var6, "ij.D(" + param0 + 44 + param1 + 44 + param2 + 44 + 0 + 44 + param4 + 44 + param5 + 41);
         }
     }
 

@@ -4,12 +4,12 @@
 final class na {
     static String field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         int var1 = 80;
     }
 
-    final static int a(CharSequence param0, byte param1) {
+    final static int a(CharSequence param0) {
         RuntimeException var2 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -31,7 +31,9 @@ final class na {
         String stackOut_3_2 = null;
         try {
           L0: {
-            stackOut_0_0 = tj.a(10, param0, true, true);
+            int discarded$4 = 1;
+            int discarded$5 = 1;
+            stackOut_0_0 = tj.a(10, param0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -72,10 +74,6 @@ final class na {
         if (!(sh.field_e == null)) {
             sh.field_e.b(-1);
             sh.field_e = null;
-        }
-        if (!param0) {
-            field_a = null;
-            return;
         }
     }
 

@@ -54,17 +54,9 @@ final class vp implements hc {
                     var4 = 0;
                     L2: while (true) {
                       if (var4 >= 5) {
-                        L3: {
-                          var4 = 0;
-                          if (param0 == -4121) {
-                            break L3;
-                          } else {
-                            vp.c(9);
-                            break L3;
-                          }
-                        }
+                        var4 = 0;
                         var5 = 0;
-                        L4: while (true) {
+                        L3: while (true) {
                           if (var5 >= 5) {
                             hq.field_a = true;
                             break L0;
@@ -74,30 +66,30 @@ final class vp implements hc {
                             var12.a(var7, (byte) -107);
                             cb.field_b[var5] = new byte[8][];
                             var8 = 0;
-                            L5: while (true) {
+                            L4: while (true) {
                               if (var8 >= 8) {
                                 var12.a(var6, (byte) -107);
                                 var8 = (2 + var6.field_e.length) / 3;
                                 vf.field_K[var5] = new byte[var8][8][];
                                 var9 = 0;
-                                L6: while (true) {
+                                L5: while (true) {
                                   if (var9 >= var8) {
                                     var5++;
-                                    continue L4;
+                                    continue L3;
                                   } else {
                                     var12.a(var9 * 3, -39);
                                     var10 = 0;
-                                    L7: while (true) {
+                                    L6: while (true) {
                                       if (var10 >= 8) {
                                         var4++;
-                                        jm.a(var3, param0 + 13984, var4);
+                                        jm.a(var3, 9863, var4);
                                         var9++;
-                                        continue L6;
+                                        continue L5;
                                       } else {
                                         kh.a(var5, var12, var10 << 8, false, 2150);
                                         vf.field_K[var5][var9][var10] = ge.a(16, vf.field_F);
                                         var10++;
-                                        continue L7;
+                                        continue L6;
                                       }
                                     }
                                   }
@@ -106,7 +98,7 @@ final class vp implements hc {
                                 kh.a(var5, var12, var8 << 8, false, 2150);
                                 cb.field_b[var5][var8] = ge.a(16, vf.field_F);
                                 var8++;
-                                continue L5;
+                                continue L4;
                               }
                             }
                           }
@@ -129,7 +121,7 @@ final class vp implements hc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var2, "vp.A(" + param0 + 44 + param1 + 41);
+          throw nb.a((Throwable) (Object) var2, "vp.A(" + -4121 + 44 + param1 + 41);
         }
     }
 
@@ -201,7 +193,7 @@ final class vp implements hc {
         ((vp) this).field_i = 0;
     }
 
-    final static void c(int param0) {
+    final static void c() {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -217,14 +209,6 @@ final class vp implements hc {
             break L0;
           } else {
             break L0;
-          }
-        }
-        L2: {
-          if (param0 <= -103) {
-            break L2;
-          } else {
-            field_b = null;
-            break L2;
           }
         }
     }
@@ -328,7 +312,11 @@ final class vp implements hc {
               if (!this.b(param0 ^ 11508)) {
                 break L1;
               } else {
-                if (!ud.a(13, 12, 17860, 15)) {
+                int discarded$13 = 15;
+                int discarded$14 = 17860;
+                int discarded$15 = 12;
+                int discarded$16 = 13;
+                if (!ud.a()) {
                   break L1;
                 } else {
                   stackOut_4_0 = 1;
@@ -350,7 +338,8 @@ final class vp implements hc {
     public final void a(int param0) {
         int var2 = 83 % ((50 - param0) / 45);
         if (((vp) this).a((byte) 87)) {
-            ei.a((((vp) this).field_i & 8) == 0 ? true : false, false);
+            int discarded$0 = 0;
+            ei.a((((vp) this).field_i & 8) == 0 ? true : false);
         }
     }
 

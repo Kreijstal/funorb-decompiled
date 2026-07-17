@@ -25,15 +25,12 @@ final class ph extends ki {
     final static void a(int param0, qc param1, int param2, int param3, int param4, qc param5) {
         le.field_k = param3;
         nh.field_h = param2;
-        if (param0 != 14835) {
-            return;
-        }
         try {
             nh.field_f = param4;
             ld.field_y = param5;
             pk.field_a = param1;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "ph.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "ph.B(" + 14835 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -122,7 +119,7 @@ final class ph extends ki {
                     var10.fillRect(2, 2, 3 * param3, 30);
                     var10.setColor(java.awt.Color.black);
                     var10.drawRect(1, 1, 301, 31);
-                    var10.fillRect(3 * param3 + 2, param1, -(3 * param3) + 300, 30);
+                    var10.fillRect(3 * param3 + 2, 2, -(3 * param3) + 300, 30);
                     var10.setFont(sj.field_F);
                     var10.setColor(java.awt.Color.white);
                     var10.drawString(param0, (-(6 * param0.length()) + 304) / 2, 22);
@@ -194,7 +191,7 @@ final class ph extends ki {
           }
           L9: {
             stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(44).append(param1).append(44);
+            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(44).append(2).append(44);
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;

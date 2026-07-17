@@ -47,7 +47,7 @@ abstract class ui implements wd {
         return ((ui) this).d(5);
     }
 
-    final static short[] a(pa param0, int param1, short[] param2, int param3) {
+    final static short[] a(pa param0, int param1, short[] param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

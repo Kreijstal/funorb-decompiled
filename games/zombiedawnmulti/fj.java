@@ -22,7 +22,7 @@ final class fj extends gn {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         try {
             if (null != bg.field_e) {
                 try {
@@ -69,7 +69,7 @@ final class fj extends gn {
         var10 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
-            var2_int = 20 % ((-42 - param0) / 36);
+            var2_int = 2;
             if (((param1.field_w | param1.field_x | param1.field_r | param1.field_y) & 3) != 0) {
               var3 = (3 & param1.field_r) + param1.field_x;
               var3 = -(var3 & 3) + (4 + var3);
@@ -115,7 +115,7 @@ final class fj extends gn {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var2;
-            stackOut_11_1 = new StringBuilder().append("fj.B(").append(param0).append(44);
+            stackOut_11_1 = new StringBuilder().append("fj.B(").append(100).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -212,7 +212,7 @@ final class fj extends gn {
           L0: {
             var5 = pb.a(param1, param3, -256, param0);
             var4 = var5;
-            var5[param2].field_u = var5[3].field_w;
+            var5[3].field_u = var5[3].field_w;
             var5[1].field_z = var5[1].field_x;
             var5[7].field_z = var5[7].field_x;
             var5[5].field_u = var5[5].field_w;
@@ -275,7 +275,7 @@ final class fj extends gn {
           }
           L3: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param2).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(3).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;

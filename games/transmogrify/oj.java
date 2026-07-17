@@ -331,15 +331,12 @@ final class oj extends ag {
         return 2;
     }
 
-    final static void a(ti param0, int param1) {
+    final static void a(ti param0) {
         try {
             og.a((byte) 92);
-            if (param1 != 256) {
-                uj discarded$0 = oj.a((byte) 117);
-            }
             sb.a(param0.field_w, param0.field_r, param0.field_s);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "oj.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "oj.D(" + (param0 != null ? "{...}" : "null") + 44 + 256 + 41);
         }
     }
 
@@ -651,15 +648,11 @@ final class oj extends ag {
         if (jh.field_n == rh.field_v) {
             throw new IllegalStateException();
         }
-        if (rh.field_v == gd.field_l) {
-            rh.field_v = jh.field_n;
-            return q.field_h;
-        }
-        if (param0 == 32) {
+        if (rh.field_v != gd.field_l) {
             return null;
         }
-        field_m = null;
-        return null;
+        rh.field_v = jh.field_n;
+        return q.field_h;
     }
 
     final synchronized void d(int param0) {

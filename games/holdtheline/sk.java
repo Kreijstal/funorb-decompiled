@@ -206,13 +206,13 @@ final class sk {
 
     public static void a(int param0) {
         field_b = null;
-        int var1 = -75 / ((param0 - 56) / 32);
+        int var1 = 18;
         field_c = null;
         field_f = null;
         field_a = null;
     }
 
-    final static int a(byte param0) {
+    final static int a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -260,7 +260,8 @@ final class sk {
                             }
                           }
                         }
-                        ah.b(false);
+                        int discarded$2 = 0;
+                        ah.b();
                         break L3;
                       }
                     }
@@ -271,7 +272,8 @@ final class sk {
                     if (2 == pa.field_h) {
                       break L3;
                     } else {
-                      ah.b(false);
+                      int discarded$3 = 0;
+                      ah.b();
                       break L3;
                     }
                   }

@@ -55,7 +55,7 @@ abstract class kma implements nua {
     final static void a(boolean param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
-        int var3 = 32 % ((43 - param1) / 57);
+        int var3 = 0;
         if (null != fj.field_c) {
             var4 = fj.field_c.d(-1, param0);
             if (var4 == -2) {

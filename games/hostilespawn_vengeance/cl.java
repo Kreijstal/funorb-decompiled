@@ -11,7 +11,7 @@ final class cl extends am {
     static gb field_i;
     int field_n;
 
-    public static void c(int param0) {
+    public static void c() {
         field_h = null;
         field_i = null;
         field_o = null;

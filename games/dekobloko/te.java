@@ -62,19 +62,21 @@ final class te extends wm {
             if (var4.length() != 0) {
               var5 = var4;
               if (!client.a(param1 + 111, var5)) {
-                if (qf.a(var5, 0)) {
+                int discarded$12 = 0;
+                if (qf.a(var5)) {
                   stackOut_8_0 = uk.field_y;
                   stackIn_9_0 = stackOut_8_0;
                   return stackIn_9_0;
                 } else {
                   if (!mc.a(var5, (byte) -121)) {
-                    if (!this.c(param0, (byte) 14)) {
+                    int discarded$13 = 14;
+                    if (!this.c(param0)) {
                       L1: {
                         if (param1 == -11) {
                           break L1;
                         } else {
                           var6 = null;
-                          String discarded$2 = ((te) this).a((String) null, (byte) -103);
+                          String discarded$14 = ((te) this).a((String) null, (byte) -103);
                           break L1;
                         }
                       }
@@ -170,17 +172,13 @@ final class te extends wm {
         }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_q = null;
-        if (param0 != 0) {
-            Object var2 = null;
-            int discarded$0 = te.a((String) null, 15, -79, (String[]) null, (mm) null);
-        }
         field_v = null;
         field_t = null;
     }
 
-    private final boolean c(String param0, byte param1) {
+    private final boolean c(String param0) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -555,7 +553,8 @@ final class te extends wm {
                     break L1;
                   }
                 }
-                if (!this.c(param0, (byte) 14)) {
+                int discarded$2 = 14;
+                if (!this.c(param0)) {
                   stackOut_11_0 = dc.field_b;
                   stackIn_12_0 = stackOut_11_0;
                   break L0;

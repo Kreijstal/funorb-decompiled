@@ -58,14 +58,12 @@ final class nja {
             }
             var3 = (Object) (Object) new pa(ok.field_Bb, kh.field_r, fl.field_j[0], fd.field_D[0], lq.field_A[0], eha.field_s[0], var21);
         }
-        al.b(-18073);
+        int discarded$0 = -18073;
+        al.b();
         return (kv) var3;
     }
 
-    final static void a(int param0) {
-        if (param0 < 70) {
-            return;
-        }
+    final static void a() {
         hl.field_I = false;
         sea.field_j = ig.field_m.b(16711935) == 0 ? true : false;
     }

@@ -71,7 +71,7 @@ abstract class gf extends ld {
                   break L1;
                 }
               }
-              var5_int = 120 / ((param1 - 31) / 56);
+              var5_int = 120;
               stackOut_9_0 = 0;
               stackIn_10_0 = stackOut_9_0;
               break L0;
@@ -86,7 +86,7 @@ abstract class gf extends ld {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var5;
-            stackOut_11_1 = new StringBuilder().append("gf.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_11_1 = new StringBuilder().append("gf.C(").append(param0).append(44).append(90).append(44).append(param2).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -127,7 +127,7 @@ abstract class gf extends ld {
         }
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         int var1 = 38;
         field_cb = null;
         field_X = null;
@@ -271,78 +271,39 @@ abstract class gf extends ld {
 
     boolean h(int param0) {
         int var3 = 0;
-        Object var4 = null;
         var3 = SolKnight.field_L ? 1 : 0;
-        if (param0 == 1784) {
-          if (((gf) this).field_U != null) {
-            if (((gf) this).field_U == ah.field_j) {
-              int fieldTemp$5 = ((gf) this).field_bb + 1;
-              ((gf) this).field_bb = ((gf) this).field_bb + 1;
-              if (((gf) this).field_ab == fieldTemp$5) {
-                ((gf) this).field_U = kc.field_I;
-                ((gf) this).b(((gf) this).field_S.field_x + 12 - -((gf) this).field_eb, 0, ((gf) this).field_W, ((gf) this).field_S.field_t + 12);
-                ((gf) this).field_bb = 0;
-                ((gf) this).field_V.field_H = 0;
-                return super.h(param0);
-              } else {
-                ((gf) this).field_V.field_H = -((((gf) this).field_bb << 8) / ((gf) this).field_ab) + 256;
-                return super.h(param0);
-              }
+        if (((gf) this).field_U != null) {
+          if (((gf) this).field_U == ah.field_j) {
+            int fieldTemp$2 = ((gf) this).field_bb + 1;
+            ((gf) this).field_bb = ((gf) this).field_bb + 1;
+            if (((gf) this).field_ab == fieldTemp$2) {
+              ((gf) this).field_U = kc.field_I;
+              ((gf) this).b(((gf) this).field_S.field_x + 12 - -((gf) this).field_eb, 0, ((gf) this).field_W, ((gf) this).field_S.field_t + 12);
+              ((gf) this).field_bb = 0;
+              ((gf) this).field_V.field_H = 0;
+              return super.h(1784);
             } else {
-              if (((gf) this).field_U == oa.field_j) {
-                int fieldTemp$6 = ((gf) this).field_bb + 1;
-                ((gf) this).field_bb = ((gf) this).field_bb + 1;
-                if (fieldTemp$6 != ((gf) this).field_db) {
-                  ((gf) this).field_V.field_H = (((gf) this).field_bb << 8) / ((gf) this).field_db;
-                  return super.h(param0);
-                } else {
-                  ((gf) this).field_U = null;
-                  ((gf) this).field_V.field_H = 256;
-                  return super.h(param0);
-                }
-              } else {
-                return super.h(param0);
-              }
+              ((gf) this).field_V.field_H = -((((gf) this).field_bb << 8) / ((gf) this).field_ab) + 256;
+              return super.h(1784);
             }
           } else {
-            return super.h(param0);
+            if (((gf) this).field_U == oa.field_j) {
+              int fieldTemp$3 = ((gf) this).field_bb + 1;
+              ((gf) this).field_bb = ((gf) this).field_bb + 1;
+              if (fieldTemp$3 != ((gf) this).field_db) {
+                ((gf) this).field_V.field_H = (((gf) this).field_bb << 8) / ((gf) this).field_db;
+                return super.h(1784);
+              } else {
+                ((gf) this).field_U = null;
+                ((gf) this).field_V.field_H = 256;
+                return super.h(1784);
+              }
+            } else {
+              return super.h(1784);
+            }
           }
         } else {
-          var4 = null;
-          boolean discarded$7 = ((gf) this).a('ﾴ', (byte) -22, -26, (rc) null);
-          if (((gf) this).field_U != null) {
-            if (((gf) this).field_U == ah.field_j) {
-              int fieldTemp$8 = ((gf) this).field_bb + 1;
-              ((gf) this).field_bb = ((gf) this).field_bb + 1;
-              if (((gf) this).field_ab == fieldTemp$8) {
-                ((gf) this).field_U = kc.field_I;
-                ((gf) this).b(((gf) this).field_S.field_x + 12 - -((gf) this).field_eb, 0, ((gf) this).field_W, ((gf) this).field_S.field_t + 12);
-                ((gf) this).field_bb = 0;
-                ((gf) this).field_V.field_H = 0;
-                return super.h(param0);
-              } else {
-                ((gf) this).field_V.field_H = -((((gf) this).field_bb << 8) / ((gf) this).field_ab) + 256;
-                return super.h(param0);
-              }
-            } else {
-              if (((gf) this).field_U == oa.field_j) {
-                int fieldTemp$9 = ((gf) this).field_bb + 1;
-                ((gf) this).field_bb = ((gf) this).field_bb + 1;
-                if (fieldTemp$9 != ((gf) this).field_db) {
-                  ((gf) this).field_V.field_H = (((gf) this).field_bb << 8) / ((gf) this).field_db;
-                  return super.h(param0);
-                } else {
-                  ((gf) this).field_U = null;
-                  ((gf) this).field_V.field_H = 256;
-                  return super.h(param0);
-                }
-              } else {
-                return super.h(param0);
-              }
-            }
-          } else {
-            return super.h(param0);
-          }
+          return super.h(1784);
         }
     }
 

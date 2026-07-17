@@ -11,18 +11,15 @@ final class vn {
     static String field_a;
     static md[] field_c;
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_g = null;
         field_h = null;
         field_c = null;
-        if (param0 < 60) {
-            return;
-        }
         field_d = null;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         if (!n.a((byte) -74)) {
             return;
         }

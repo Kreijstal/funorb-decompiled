@@ -7,7 +7,7 @@ final class kf {
     static qj[] field_d;
     static int field_a;
 
-    public static void b(int param0) {
+    public static void b() {
         field_d = null;
     }
 
@@ -40,15 +40,7 @@ final class kf {
             var4 = param1.b(param2, 20095);
             var3 = var4;
             if (null != var4) {
-              L1: {
-                if (param0 <= -45) {
-                  break L1;
-                } else {
-                  kf.a(false);
-                  break L1;
-                }
-              }
-              stackOut_5_0 = new mh(var4);
+              stackOut_5_0 = new mh(var3);
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {
@@ -59,10 +51,10 @@ final class kf {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var3_ref = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var3_ref;
-            stackOut_7_1 = new StringBuilder().append("kf.A(").append(param0).append(44);
+            stackOut_7_1 = new StringBuilder().append("kf.A(").append(-97).append(44);
             stackIn_10_0 = stackOut_7_0;
             stackIn_10_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -74,7 +66,7 @@ final class kf {
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
-              break L2;
+              break L1;
             } else {
               stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
               stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
@@ -82,7 +74,7 @@ final class kf {
               stackIn_11_0 = stackOut_8_0;
               stackIn_11_1 = stackOut_8_1;
               stackIn_11_2 = stackOut_8_2;
-              break L2;
+              break L1;
             }
           }
           throw sl.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param2 + 41);
@@ -90,7 +82,7 @@ final class kf {
         return stackIn_6_0;
     }
 
-    final static oi a(String param0, boolean param1) {
+    final static oi a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -203,9 +195,10 @@ final class kf {
         }
     }
 
-    final static void a(int param0) {
-        r.f(-635);
-        qc.b(param0, (byte) -42);
+    final static void a() {
+        int discarded$0 = -635;
+        r.f();
+        qc.b(4, (byte) -42);
     }
 
     final static void a(boolean param0) {

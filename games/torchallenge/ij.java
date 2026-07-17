@@ -39,7 +39,8 @@ final class ij extends fk {
                 break L1;
               }
             }
-            stackOut_2_0 = la.a((byte) 123, param0.field_v.length(), '*');
+            int discarded$2 = 42;
+            stackOut_2_0 = la.a((byte) 123, param0.field_v.length());
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

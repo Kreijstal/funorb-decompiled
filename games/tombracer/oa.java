@@ -36,9 +36,11 @@ final class oa extends ha implements e {
         ((oa) this).field_h = false;
         try {
           L0: {
-            if (in.a("sw3d", 480)) {
+            int discarded$7 = 480;
+            if (in.a("sw3d")) {
               L1: {
-                ho.b(false);
+                int discarded$8 = 0;
+                ho.b();
                 this.MA(((oa) this).field_c, 0, 0);
                 ija.a(true, (byte) 98, false);
                 ((oa) this).field_h = true;
@@ -475,11 +477,13 @@ final class oa extends ha implements e {
         ((oa) this).field_o.d(8);
         this.FA();
         if (((oa) this).field_h) {
-            rpa.a(true, false, true);
+            int discarded$0 = 1;
+            rpa.a(true, false);
             ((oa) this).field_h = false;
         }
         this.g();
-        ho.a(-1);
+        int discarded$1 = -1;
+        ho.a();
         ((oa) this).field_s = true;
     }
 

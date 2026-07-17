@@ -29,12 +29,12 @@ final class km extends jtb {
         }
     }
 
-    final static void e(int param0) {
+    final static void e() {
         fva.field_p = true;
         ow.field_b = 0;
     }
 
-    final static void a(asb param0, byte param1) {
+    final static void a(asb param0) {
         RuntimeException var2 = null;
         faa var2_ref = null;
         int var3 = 0;
@@ -68,7 +68,8 @@ final class km extends jtb {
             var2_ref = var9;
             var3 = var9.e((byte) -87);
             var9.p(-23497);
-            gs.field_a = bh.a(var9, (byte) -122);
+            int discarded$2 = -122;
+            gs.field_a = bh.a(var9);
             raa.field_p = new int[var3][];
             eha.field_o = new wma[var3];
             var4 = 0;
@@ -91,7 +92,8 @@ final class km extends jtb {
                   }
                 }
               } else {
-                eha.field_o[var4] = ur.a(var8, (byte) -105);
+                int discarded$3 = -105;
+                eha.field_o[var4] = ur.a(var8);
                 var4++;
                 continue L1;
               }
@@ -129,14 +131,15 @@ final class km extends jtb {
         }
     }
 
-    final static void f(byte param0) {
+    final static void f() {
         if (qmb.field_q == 10) {
           twa.b(29);
           qmb.field_q = 11;
           dga.field_a = true;
           return;
         } else {
-          if (!nua.b(true)) {
+          int discarded$3 = 1;
+          if (!nua.b()) {
             twa.b(29);
             qmb.field_q = 11;
             dga.field_a = true;

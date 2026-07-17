@@ -13,25 +13,20 @@ final class sd extends rg {
         return db.field_c * var3 / 224;
     }
 
-    final static boolean a(int param0, byte param1, int param2, int param3) {
+    final static boolean a() {
         if (!nh.field_m) {
           if (!ee.field_b) {
-            if (eo.a(param3, true, param2)) {
+            if (eo.a(15, true, 13)) {
               return true;
             } else {
-              if (!sh.field_L) {
-                if (param1 <= 67) {
-                  int discarded$2 = sd.a((byte) 79, 66, 86);
-                  return wl.a(param0, 59, param2);
-                } else {
-                  return wl.a(param0, 59, param2);
-                }
-              } else {
+              if (sh.field_L) {
                 return false;
+              } else {
+                return wl.a(12, 59, 13);
               }
             }
           } else {
-            return ai.a(false, param2, param3);
+            return ai.a(false, 13, 15);
           }
         } else {
           return ra.field_f.a(0, pn.field_d, sj.field_p);
@@ -41,21 +36,23 @@ final class sd extends rg {
     final static boolean h(int param0) {
         if (param0 != 3853) {
             boolean discarded$0 = sd.h(-41);
-            return ho.a(jl.b(0), 61);
+            int discarded$1 = 61;
+            return ho.a(jl.b(0));
         }
-        return ho.a(jl.b(0), 61);
+        int discarded$2 = 61;
+        return ho.a(jl.b(0));
     }
 
     final static int a(byte param0, int param1, int param2) {
         int var3 = param1 >> 16;
-        int var5 = -61 % ((73 - param0) / 44);
+        int var5 = 0;
         int var4 = param1 & 65535;
         int var6 = param2 >> 16;
         int var7 = param2 & 65535;
         return param2 * var3 + var6 * var4 - -(var7 * var4 >> 16);
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_E = null;
         field_G = null;
     }

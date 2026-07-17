@@ -9,7 +9,7 @@ final class mn implements gj {
     static ff field_e;
     static String field_f;
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = 0;
         field_c = null;
         field_d = null;

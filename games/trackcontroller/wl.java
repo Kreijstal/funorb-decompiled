@@ -7,7 +7,7 @@ final class wl extends fc {
     static int field_j;
     static wj field_i;
 
-    final static void a(long param0, boolean param1) {
+    final static void a(long param0) {
         if (0L < param0) {
           if (param0 % 10L == 0L) {
             pf.a(3, -1L + param0);
@@ -30,8 +30,8 @@ final class wl extends fc {
         }
     }
 
-    public static void d(int param0) {
-        int var1 = 11 % ((-39 - param0) / 40);
+    public static void d() {
+        int var1 = 0;
         field_i = null;
         field_l = null;
     }

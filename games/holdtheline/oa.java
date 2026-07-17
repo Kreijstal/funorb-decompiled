@@ -8,7 +8,7 @@ final class oa extends el {
     private String field_r;
     static String field_o;
 
-    final static boolean b(byte param0) {
+    final static boolean b() {
         if (bk.field_w < 10) {
             return false;
         }
@@ -52,7 +52,7 @@ final class oa extends el {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_s = null;
         field_o = null;
         field_p = null;
@@ -94,12 +94,8 @@ final class oa extends el {
             try {
               try {
                 var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
-                if (param0) {
-                  param1.getAppletContext().showDocument(ah.a(var2, param1, (byte) 45), "_top");
-                  return;
-                } else {
-                  return;
-                }
+                param1.getAppletContext().showDocument(ah.a(var2, param1, (byte) 45), "_top");
+                return;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -111,7 +107,7 @@ final class oa extends el {
               L0: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_6_0 = (RuntimeException) var2_ref2;
-                stackOut_6_1 = new StringBuilder().append("oa.E(").append(param0).append(44);
+                stackOut_6_1 = new StringBuilder().append("oa.E(").append(1).append(44);
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;

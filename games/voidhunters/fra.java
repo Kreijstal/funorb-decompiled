@@ -60,16 +60,8 @@ final class fra {
             var8 = 0;
             L1: while (true) {
               if (var8 >= param0.length) {
-                L2: {
-                  if (param2 == 2) {
-                    break L2;
-                  } else {
-                    fra.a(25);
-                    break L2;
-                  }
-                }
                 if (em.a(5220, var5, param1, var7, param3, var4_int, var6)) {
-                  L3: {
+                  L2: {
                     var8 = param3;
                     var9 = param1;
                     var10 = param3 + -(var4_int - -var5 >> 1);
@@ -77,55 +69,55 @@ final class fra {
                     if (Math.abs(var10) < Math.abs(var11)) {
                       if (0 < var10) {
                         var8 = var8 + (var5 - var4_int);
-                        break L3;
+                        break L2;
                       } else {
                         var8 = var8 - (var5 + -var4_int);
-                        break L3;
+                        break L2;
                       }
                     } else {
                       if (var11 > 0) {
                         var9 = var9 + (-var6 + var7);
-                        break L3;
+                        break L2;
                       } else {
                         var9 = var9 - (var7 - var6);
-                        break L3;
+                        break L2;
                       }
                     }
                   }
-                  L4: {
+                  L3: {
                     var10 = 0;
                     var17 = 0;
                     var11 = var17;
                     if (var17 >= param0.length) {
-                      break L4;
+                      break L3;
                     } else {
-                      L5: {
+                      L4: {
                         var12 = param0[var17];
                         var13 = param0[1 + var17];
                         var14 = param0[(2 + var17) % param0.length];
                         var15 = param0[(var17 - -3) % param0.length];
                         if (-1 == ng.a(8, param1, (byte) 93, param3, var14, var8, var13, var12, var15, var9)) {
                           var17 += 2;
-                          break L5;
+                          break L4;
                         } else {
                           var10++;
-                          break L5;
+                          break L4;
                         }
                       }
                       var17 += 2;
                       var17 += 2;
-                      break L4;
+                      break L3;
                     }
                   }
-                  L6: {
+                  L5: {
                     if (var10 % 2 != 1) {
                       stackOut_37_0 = 0;
                       stackIn_38_0 = stackOut_37_0;
-                      break L6;
+                      break L5;
                     } else {
                       stackOut_36_0 = 1;
                       stackIn_38_0 = stackOut_36_0;
-                      break L6;
+                      break L5;
                     }
                   }
                   break L0;
@@ -135,40 +127,40 @@ final class fra {
                   return stackIn_22_0 != 0;
                 }
               } else {
-                L7: {
+                L6: {
                   var9 = param0[var8];
                   if (var5 < var9) {
                     var5 = var9;
+                    break L6;
+                  } else {
+                    break L6;
+                  }
+                }
+                L7: {
+                  var10 = param0[1 + var8];
+                  if (var9 >= var4_int) {
                     break L7;
                   } else {
+                    var4_int = var9;
                     break L7;
                   }
                 }
                 L8: {
-                  var10 = param0[1 + var8];
-                  if (var9 >= var4_int) {
+                  if (var10 > var7) {
+                    var7 = var10;
                     break L8;
                   } else {
-                    var4_int = var9;
                     break L8;
                   }
                 }
                 L9: {
-                  if (var10 > var7) {
-                    var7 = var10;
-                    break L9;
-                  } else {
-                    break L9;
-                  }
-                }
-                L10: {
                   if (var6 > var10) {
                     var6 = var10;
                     var8 += 2;
-                    break L10;
+                    break L9;
                   } else {
                     var8 += 2;
-                    break L10;
+                    break L9;
                   }
                 }
                 var8 += 2;
@@ -178,7 +170,7 @@ final class fra {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L11: {
+          L10: {
             var4 = decompiledCaughtException;
             stackOut_39_0 = (RuntimeException) var4;
             stackOut_39_1 = new StringBuilder().append("fra.C(");
@@ -193,7 +185,7 @@ final class fra {
               stackIn_42_0 = stackOut_41_0;
               stackIn_42_1 = stackOut_41_1;
               stackIn_42_2 = stackOut_41_2;
-              break L11;
+              break L10;
             } else {
               stackOut_40_0 = (RuntimeException) (Object) stackIn_40_0;
               stackOut_40_1 = (StringBuilder) (Object) stackIn_40_1;
@@ -201,17 +193,18 @@ final class fra {
               stackIn_42_0 = stackOut_40_0;
               stackIn_42_1 = stackOut_40_1;
               stackIn_42_2 = stackOut_40_2;
-              break L11;
+              break L10;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw rta.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + 44 + param1 + 44 + 2 + 44 + param3 + 41);
         }
         return stackIn_38_0 != 0;
     }
 
-    final static int a(byte param0) {
+    final static int a() {
         int var1 = 5;
-        return sea.a(-19) - seb.a(27546) / 2;
+        int discarded$0 = 27546;
+        return sea.a(-19) - seb.a() / 2;
     }
 
     static {

@@ -62,7 +62,7 @@ final class vi {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         int var1 = 0;
         field_d = null;

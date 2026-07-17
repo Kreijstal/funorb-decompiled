@@ -5,13 +5,13 @@ final class oi {
     static String field_b;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = 0;
         field_b = null;
         field_a = null;
     }
 
-    final static int b(int param0) {
+    final static int b() {
         int var1 = 1;
         return 1;
     }

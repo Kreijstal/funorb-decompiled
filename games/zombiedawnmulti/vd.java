@@ -59,7 +59,8 @@ final class vd {
                     break L1;
                   } else {
                     L2: {
-                      var4 = tg.a(param1, false);
+                      int discarded$1 = 0;
+                      var4 = tg.a(param1);
                       if (var4 == null) {
                         break L2;
                       } else {
@@ -172,54 +173,14 @@ final class vd {
         return stackIn_34_0 != 0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }
 
     final static void a(boolean param0, long param1) {
-        long stackIn_7_0 = 0L;
-        long stackIn_8_0 = 0L;
-        long stackIn_9_0 = 0L;
-        int stackIn_9_1 = 0;
-        long stackOut_6_0 = 0L;
-        long stackOut_8_0 = 0L;
-        int stackOut_8_1 = 0;
-        long stackOut_7_0 = 0L;
-        int stackOut_7_1 = 0;
-        if (param1 > 0L) {
-          if (!param0) {
-            if (param1 % 10L == 0L) {
-              L0: {
-                be.a(-1L + param1, true);
-                stackOut_6_0 = 1L;
-                stackIn_8_0 = stackOut_6_0;
-                stackIn_7_0 = stackOut_6_0;
-                if (param0) {
-                  stackOut_8_0 = stackIn_8_0;
-                  stackOut_8_1 = 0;
-                  stackIn_9_0 = stackOut_8_0;
-                  stackIn_9_1 = stackOut_8_1;
-                  break L0;
-                } else {
-                  stackOut_7_0 = stackIn_7_0;
-                  stackOut_7_1 = 1;
-                  stackIn_9_0 = stackOut_7_0;
-                  stackIn_9_1 = stackOut_7_1;
-                  break L0;
-                }
-              }
-              be.a(stackIn_9_0, stackIn_9_1 != 0);
-              return;
-            } else {
-              be.a(param1, true);
-              return;
-            }
-          } else {
+        if (param1 <= 0L) {
             return;
-          }
-        } else {
-          return;
         }
     }
 

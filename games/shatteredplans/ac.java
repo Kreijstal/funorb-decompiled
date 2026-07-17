@@ -16,9 +16,6 @@ final class ac extends wf {
     final static void a(int param0, sq param1) {
         sq var3 = null;
         sq var2 = null;
-        if (param0 != 1) {
-            return;
-        }
         try {
             if (null != hm.field_q) {
                 var3 = !hm.field_q.field_k ? hm.field_q : hm.field_q.field_l;
@@ -29,9 +26,9 @@ final class ac extends wf {
                     js.field_b[fieldTemp$0] = var3;
                 }
             }
-            lp.a(param0 + 1546006976, param1);
+            lp.a(1546006977, param1);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "ac.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw r.a((Throwable) (Object) runtimeException, "ac.E(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -293,7 +290,7 @@ final class ac extends wf {
         }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_t = null;
         field_s = null;
         field_r = null;
@@ -304,7 +301,7 @@ final class ac extends wf {
         field_v = null;
     }
 
-    final static boolean d(int param0) {
+    final static boolean d() {
         return lg.field_e != null && lg.field_e.f((byte) -99);
     }
 

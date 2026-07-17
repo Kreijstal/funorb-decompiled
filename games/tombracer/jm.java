@@ -11,7 +11,7 @@ final class jm extends kca {
     private tra field_o;
     static String[] field_k;
 
-    final static void b(byte param0) {
+    final static void b() {
         if (!(tga.field_a != null)) {
             return;
         }
@@ -19,7 +19,7 @@ final class jm extends kca {
         tga.field_a = null;
     }
 
-    final static qca a(pr[] param0, kda param1, int param2) {
+    final static qca a(pr[] param0, kda param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         long var3_long = 0L;
@@ -499,7 +499,8 @@ final class jm extends kca {
               var5 = var4;
               if (!ld.a(false, var5)) {
                 if (!qda.a((byte) -72, var5)) {
-                  if (!eba.a(var5, 6912)) {
+                  int discarded$6 = 6912;
+                  if (!eba.a(var5)) {
                     if (this.b(-37, param1)) {
                       stackOut_14_0 = waa.field_e;
                       stackIn_15_0 = stackOut_14_0;

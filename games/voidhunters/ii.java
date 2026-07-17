@@ -40,9 +40,6 @@ final class ii implements d {
 
     private final lra b(int param0, int param1) {
         fh var3 = ((ii) this).field_f.a((long)param1, 77);
-        if (param0 != -2) {
-            boolean discarded$0 = ((ii) this).a(-32, (byte) 119);
-        }
         if (var3 != null) {
             return (lra) (Object) var3;
         }

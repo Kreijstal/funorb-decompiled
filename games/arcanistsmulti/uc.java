@@ -7,7 +7,7 @@ final class uc {
     static kc field_d;
     static int field_a;
 
-    final static kc b(int param0) {
+    final static kc b() {
         int var1 = 0;
         return nl.field_Gb.field_Eb;
     }
@@ -20,19 +20,17 @@ final class uc {
     }
 
     final static void a(int param0) {
-        if (param0 != 3) {
-            return;
-        }
-        ag.a(ag.field_C, (byte) -104);
+        int discarded$0 = -104;
+        ag.a(ag.field_C);
     }
 
-    final static void c(int param0) {
+    final static void c() {
         if (!(!oj.field_i)) {
             gb.a(14);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         int var1 = 0;
         field_d = null;

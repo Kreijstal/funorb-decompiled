@@ -7,7 +7,7 @@ final class iob extends vhb {
     static int field_g;
     private static String field_z;
 
-    public static void c(int param0) {
+    public static void c() {
         field_e = null;
     }
 

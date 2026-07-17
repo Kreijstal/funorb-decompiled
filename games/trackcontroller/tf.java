@@ -46,7 +46,7 @@ final class tf {
         var6 = TrackController.field_F ? 1 : 0;
         try {
           var2_int = param1.length();
-          if (param0 == var2_int) {
+          if (0 == var2_int) {
             stackOut_3_0 = oc.field_j;
             stackIn_4_0 = stackOut_3_0;
             return stackIn_4_0;
@@ -159,7 +159,7 @@ final class tf {
           L7: {
             var2 = decompiledCaughtException;
             stackOut_48_0 = (RuntimeException) var2;
-            stackOut_48_1 = new StringBuilder().append("tf.A(").append(param0).append(44);
+            stackOut_48_1 = new StringBuilder().append("tf.A(").append(0).append(44);
             stackIn_50_0 = stackOut_48_0;
             stackIn_50_1 = stackOut_48_1;
             stackIn_49_0 = stackOut_48_0;
@@ -193,80 +193,72 @@ final class tf {
             RuntimeException var4_ref2 = null;
             rc var5 = null;
             ub var5_ref = null;
-            rc stackIn_3_0 = null;
-            ub stackIn_5_0 = null;
+            rc stackIn_1_0 = null;
+            ub stackIn_3_0 = null;
+            RuntimeException stackIn_5_0 = null;
+            StringBuilder stackIn_5_1 = null;
+            RuntimeException stackIn_6_0 = null;
+            StringBuilder stackIn_6_1 = null;
             RuntimeException stackIn_7_0 = null;
             StringBuilder stackIn_7_1 = null;
-            RuntimeException stackIn_8_0 = null;
-            StringBuilder stackIn_8_1 = null;
-            RuntimeException stackIn_9_0 = null;
-            StringBuilder stackIn_9_1 = null;
-            String stackIn_9_2 = null;
+            String stackIn_7_2 = null;
             Throwable decompiledCaughtException = null;
-            rc stackOut_2_0 = null;
-            ub stackOut_4_0 = null;
+            rc stackOut_0_0 = null;
+            ub stackOut_2_0 = null;
+            RuntimeException stackOut_4_0 = null;
+            StringBuilder stackOut_4_1 = null;
             RuntimeException stackOut_6_0 = null;
             StringBuilder stackOut_6_1 = null;
-            RuntimeException stackOut_8_0 = null;
-            StringBuilder stackOut_8_1 = null;
-            String stackOut_8_2 = null;
-            RuntimeException stackOut_7_0 = null;
-            StringBuilder stackOut_7_1 = null;
-            String stackOut_7_2 = null;
+            String stackOut_6_2 = null;
+            RuntimeException stackOut_5_0 = null;
+            StringBuilder stackOut_5_1 = null;
+            String stackOut_5_2 = null;
             try {
               try {
-                L0: {
-                  var4 = Class.forName("qb");
-                  if (param1) {
-                    break L0;
-                  } else {
-                    field_b = null;
-                    break L0;
-                  }
-                }
+                var4 = Class.forName("qb");
                 var5 = (rc) var4.newInstance();
                 var5.a(param0, -48, param3, param2);
-                stackOut_2_0 = (rc) var5;
-                stackIn_3_0 = stackOut_2_0;
-                return stackIn_3_0;
+                stackOut_0_0 = (rc) var5;
+                stackIn_1_0 = stackOut_0_0;
+                return stackIn_1_0;
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var4_ref = decompiledCaughtException;
                 var5_ref = new ub();
                 ((rc) (Object) var5_ref).a(param0, -123, param3, param2);
-                stackOut_4_0 = (ub) var5_ref;
-                stackIn_5_0 = stackOut_4_0;
-                return (rc) (Object) stackIn_5_0;
+                stackOut_2_0 = (ub) var5_ref;
+                stackIn_3_0 = stackOut_2_0;
+                return (rc) (Object) stackIn_3_0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L1: {
+              L0: {
                 var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) var4_ref2;
-                stackOut_6_1 = new StringBuilder().append("tf.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
-                stackIn_8_0 = stackOut_6_0;
-                stackIn_8_1 = stackOut_6_1;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
+                stackOut_4_0 = (RuntimeException) var4_ref2;
+                stackOut_4_1 = new StringBuilder().append("tf.C(").append(param0).append(44).append(1).append(44).append(param2).append(44);
+                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_1 = stackOut_4_1;
+                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_1 = stackOut_4_1;
                 if (param3 == null) {
-                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-                  stackOut_8_2 = "null";
-                  stackIn_9_0 = stackOut_8_0;
-                  stackIn_9_1 = stackOut_8_1;
-                  stackIn_9_2 = stackOut_8_2;
-                  break L1;
+                  stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+                  stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+                  stackOut_6_2 = "null";
+                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_1 = stackOut_6_1;
+                  stackIn_7_2 = stackOut_6_2;
+                  break L0;
                 } else {
-                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-                  stackOut_7_2 = "{...}";
-                  stackIn_9_0 = stackOut_7_0;
-                  stackIn_9_1 = stackOut_7_1;
-                  stackIn_9_2 = stackOut_7_2;
-                  break L1;
+                  stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+                  stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+                  stackOut_5_2 = "{...}";
+                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_1 = stackOut_5_1;
+                  stackIn_7_2 = stackOut_5_2;
+                  break L0;
                 }
               }
-              throw sl.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+              throw sl.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

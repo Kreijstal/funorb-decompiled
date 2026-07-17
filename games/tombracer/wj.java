@@ -13,7 +13,7 @@ final class wj {
                 wj.a((byte) 1);
             }
             var5 = ql.field_k;
-            var5.k(param1, -2988);
+            var5.k(4, -2988);
             var5.field_h = var5.field_h + 1;
             var4 = var5.field_h;
             var5.i(1, 0);
@@ -26,13 +26,13 @@ final class wj {
             int discarded$0 = var5.g(var4, 64);
             var5.d(var5.field_h - var4, (byte) 16);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "wj.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "wj.C(" + (param0 != null ? "{...}" : "null") + 44 + 4 + 44 + param2 + 41);
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         String var7 = null;
-        if (bta.field_q != param3) {
+        if (bta.field_q != 2) {
             var7 = lw.field_i;
         } else {
             var7 = jaa.field_a;

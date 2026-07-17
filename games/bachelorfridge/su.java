@@ -9,7 +9,7 @@ final class su {
     gw[][] field_f;
     static String field_a;
 
-    private final void b(int param0) {
+    private final void b() {
         int var2 = 0;
         int var3 = 0;
         cda var4 = null;
@@ -54,12 +54,9 @@ final class su {
     public static void a(boolean param0) {
         field_e = null;
         field_a = null;
-        if (!param0) {
-            field_e = null;
-        }
     }
 
-    private final void a(int param0) {
+    private final void a() {
         int var2 = 0;
         int var3 = 0;
         cda var4 = null;
@@ -92,9 +89,11 @@ final class su {
             ((su) this).field_f = new gw[11][((su) this).field_c.length + -1];
             ((su) this).field_d = new gw[11][-1 + ((su) this).field_c.length];
             ((su) this).field_b = new cea[11][((su) this).field_c.length + -1];
-            this.a(123);
+            int discarded$0 = 123;
+            this.a();
             this.b(true);
-            this.b(-12);
+            int discarded$1 = -12;
+            this.b();
         } catch (RuntimeException runtimeException) {
             throw pe.a((Throwable) (Object) runtimeException, "su.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }

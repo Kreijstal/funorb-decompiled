@@ -171,7 +171,7 @@ final class bj extends ci {
         ((bj) this).field_m[((bj) this).field_n] = ((bj) this).field_m[0] + 4096;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_s = null;
         field_p = null;
     }

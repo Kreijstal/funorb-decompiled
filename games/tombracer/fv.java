@@ -84,7 +84,7 @@ final class fv {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         int var1 = -14;

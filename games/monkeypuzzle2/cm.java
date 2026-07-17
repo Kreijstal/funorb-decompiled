@@ -348,7 +348,7 @@ final class cm extends ua implements ql {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         le var1 = null;
         RuntimeException var1_ref = null;
         le var2 = null;
@@ -363,7 +363,8 @@ final class cm extends ua implements ql {
             ig.b();
             ge.d();
             uj.field_i = 0;
-            ec.b(-128);
+            int discarded$2 = -128;
+            ec.b();
             var2 = var1.d();
             var3 = 0;
             L1: while (true) {

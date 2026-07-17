@@ -16,12 +16,12 @@ final class hf extends fa {
     static tf field_m;
     static long field_t;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_m = null;
         int var1 = 0;
     }
 
-    final static boolean b(byte param0) {
+    final static boolean b() {
         return sm.field_l;
     }
 

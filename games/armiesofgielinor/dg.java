@@ -7,7 +7,7 @@ final class dg {
     static int field_c;
     private kl field_d;
 
-    final static void b(byte param0) {
+    final static void b() {
         int var1 = 0;
         int var2 = 0;
         int stackIn_3_0 = 0;
@@ -55,65 +55,21 @@ final class dg {
     }
 
     final static String a(int param0) {
-        String var1 = null;
-        var1 = "";
-        if (param0 > -69) {
-          L0: {
-            field_a = null;
-            if (null == np.field_Qb) {
-              break L0;
-            } else {
-              var1 = np.field_Qb.m(-15056);
-              break L0;
-            }
-          }
-          L1: {
-            if (var1.length() == 0) {
-              var1 = rn.b(true);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          L2: {
-            if (var1.length() == 0) {
-              var1 = ko.field_a;
-              break L2;
-            } else {
-              break L2;
-            }
-          }
-          return var1;
-        } else {
-          L3: {
-            if (null == np.field_Qb) {
-              break L3;
-            } else {
-              var1 = np.field_Qb.m(-15056);
-              break L3;
-            }
-          }
-          L4: {
-            if (var1.length() == 0) {
-              var1 = rn.b(true);
-              break L4;
-            } else {
-              break L4;
-            }
-          }
-          L5: {
-            if (var1.length() == 0) {
-              var1 = ko.field_a;
-              break L5;
-            } else {
-              break L5;
-            }
-          }
-          return var1;
+        String var1 = "";
+        if (null != np.field_Qb) {
+            var1 = np.field_Qb.m(-15056);
         }
+        if (!(var1.length() != 0)) {
+            int discarded$0 = 1;
+            var1 = rn.b();
+        }
+        if (!(var1.length() != 0)) {
+            var1 = ko.field_a;
+        }
+        return var1;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
     }
@@ -162,7 +118,8 @@ final class dg {
         }
         es.field_d = lo.a("bones", param0 + -28106, "basic", ((dg) this).field_d);
         wf.field_B = fk.a("boneshadows", (byte) -124, ((dg) this).field_d, "basic");
-        go.field_g = nh.a("player_ring", "basic", ((dg) this).field_d, false);
+        int discarded$0 = 0;
+        go.field_g = nh.a("player_ring", "basic", ((dg) this).field_d);
         wl.field_N = fk.a("shadows", (byte) -128, ((dg) this).field_d, "basic")[0];
     }
 

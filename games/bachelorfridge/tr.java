@@ -51,12 +51,7 @@ final class tr {
             var8_int = 0;
             L1: while (true) {
               if (param1.field_v.length <= var8_int) {
-                if (param6 == -26512) {
-                  break L0;
-                } else {
-                  tr.a(-31);
-                  return;
-                }
+                break L0;
               } else {
                 L2: {
                   var9 = var8_int % param1.field_q;
@@ -129,7 +124,7 @@ final class tr {
               break L4;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw pe.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param5 + 44 + -26512 + 44 + param7 + 41);
         }
     }
 

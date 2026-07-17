@@ -41,9 +41,11 @@ abstract class ct extends vb {
               L0: {
                 if (var4 == 1) {
                   L1: {
-                    var5_int = bb.a(gt.a((byte) -46), (byte) 127, ju.e(123));
+                    int discarded$7 = -46;
+                    int discarded$8 = 123;
+                    var5_int = bb.a(gt.a(), (byte) 127, ju.e());
                     if (-1 != var5_int) {
-                      gt.a(param0 + 115, rp.field_m, var5_int, sd.field_j);
+                      gt.a(123, rp.field_m, var5_int, sd.field_j);
                       rp.field_m = null;
                       sd.field_j = null;
                       break L1;
@@ -66,11 +68,14 @@ abstract class ct extends vb {
                 if (var4 != 2) {
                   break L2;
                 } else {
-                  var5_int = mj.a(la.a(4), param0 ^ 11, ((ct) this).field_E, ve.a(true), ce.g(-3), sa.b(-25752), of.a(false));
+                  int discarded$9 = -3;
+                  int discarded$10 = -25752;
+                  int discarded$11 = 0;
+                  var5_int = mj.a(la.a(4), 3, ((ct) this).field_E, ve.a(true), ce.g(), sa.b(), of.a());
                   if (-1 == var5_int) {
                     break L2;
                   } else {
-                    pp.a(sd.field_j, var5_int, rp.field_m, param0 + 26318);
+                    pp.a(sd.field_j, var5_int, rp.field_m, 26326);
                     sd.field_j = null;
                     rp.field_m = null;
                     break L2;
@@ -96,17 +101,18 @@ abstract class ct extends vb {
                     vs.field_f = false;
                     break L3;
                   } else {
-                    var5_int = pi.a(((ct) this).field_E, la.a(4), 0, ((ct) this).field_r, sa.b(-25752), false);
+                    int discarded$12 = -25752;
+                    var5_int = pi.a(((ct) this).field_E, la.a(4), 0, ((ct) this).field_r, sa.b(), false);
                     if (var5_int == -1) {
                       break L3;
                     } else {
                       if (0 != var5_int) {
-                        li.a(param0 ^ 118, var5_int, rp.field_m);
+                        li.a(126, var5_int, rp.field_m);
                         rp.field_m = null;
                         break L3;
                       } else {
                         dl.field_o = as.field_b;
-                        um.d(param0 ^ 9);
+                        um.d(1);
                         ob.field_d = 10;
                         ks.field_b = false;
                         break L3;
@@ -153,15 +159,16 @@ abstract class ct extends vb {
               }
               L8: {
                 if (var4 == 7) {
-                  po.a(bm.m(param0 + 117), (byte) -104);
+                  int discarded$13 = -104;
+                  po.a(bm.m(125));
                   break L8;
                 } else {
                   break L8;
                 }
               }
               L9: {
-                if (var4 == param0) {
-                  la.a(true, bm.m(param0 ^ 114));
+                if (var4 == 8) {
+                  la.a(true, bm.m(122));
                   break L9;
                 } else {
                   break L9;
@@ -169,7 +176,7 @@ abstract class ct extends vb {
               }
               L10: {
                 if (var4 == 9) {
-                  lb.a(61, bm.m(param0 + 119));
+                  lb.a(61, bm.m(127));
                   break L10;
                 } else {
                   break L10;
@@ -297,7 +304,8 @@ abstract class ct extends vb {
         try {
           L0: {
             L1: {
-              this.a(640, true, param1, param2, 480);
+              int discarded$2 = 480;
+              this.a(640, true, param1, param2);
               if (param0 == -60) {
                 break L1;
               } else {
@@ -340,7 +348,8 @@ abstract class ct extends vb {
     }
 
     private final void e(byte param0) {
-        String var2 = pl.b(111);
+        int discarded$0 = 111;
+        String var2 = pl.b();
         rr.a(var2, (byte) -108, bm.m(108));
         int var3 = 64 % ((56 - param0) / 61);
     }
@@ -369,9 +378,10 @@ abstract class ct extends vb {
           L0: {
             if (!jr.a((byte) 32)) {
               if (bl.field_c >= 10) {
-                if (uk.a((byte) -5)) {
+                int discarded$3 = -5;
+                if (uk.a()) {
                   if (ob.field_d == 0) {
-                    int discarded$2 = this.a(8, false, false);
+                    int discarded$4 = this.a(8, false, false);
                     break L0;
                   } else {
                     ic.a(nh.field_e, false);
@@ -410,7 +420,7 @@ abstract class ct extends vb {
                   break L1;
                 }
               }
-              int discarded$3 = this.a(stackIn_5_1, stackIn_5_2 != 0, false);
+              int discarded$5 = this.a(stackIn_5_1, stackIn_5_2 != 0, false);
               break L0;
             }
           }
@@ -418,7 +428,7 @@ abstract class ct extends vb {
         }
     }
 
-    private final void a(int param0, boolean param1, String param2, int param3, int param4) {
+    private final void a(int param0, boolean param1, String param2, int param3) {
         Exception var6 = null;
         RuntimeException var6_ref = null;
         String var6_ref2 = null;
@@ -458,7 +468,7 @@ abstract class ct extends vb {
         try {
           try {
             L0: {
-              if (((ct) this).b(param1)) {
+              if (((ct) this).b(true)) {
                 L1: {
                   L2: {
                     ((ct) this).field_w = ((ct) this).getCodeBase().getHost();
@@ -533,7 +543,7 @@ abstract class ct extends vb {
                   }
                 }
                 qr.field_b = Boolean.valueOf(((ct) this).getParameter("simplemode")).booleanValue();
-                ((ct) this).a(param0, 0, param3, param2, ((ct) this).field_u, 480, 32);
+                ((ct) this).a(640, 0, param3, param2, ((ct) this).field_u, 480, 32);
                 break L0;
               } else {
                 return;
@@ -554,7 +564,7 @@ abstract class ct extends vb {
           L8: {
             var6_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var6_ref;
-            stackOut_21_1 = new StringBuilder().append("ct.K(").append(param0).append(44).append(param1).append(44);
+            stackOut_21_1 = new StringBuilder().append("ct.K(").append(640).append(44).append(1).append(44);
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -581,7 +591,7 @@ abstract class ct extends vb {
         }
     }
 
-    private final void n(int param0) {
+    private final void n() {
         ho.field_d[12] = -1;
         ho.field_d[13] = -1;
         ho.field_d[5] = -1;
@@ -609,7 +619,8 @@ abstract class ct extends vb {
 
     final int p(int param0) {
         int var2 = 0;
-        var2 = this.j(-76);
+        int discarded$7 = -76;
+        var2 = this.j();
         if (param0 != 16637) {
           return -117;
         } else {
@@ -629,7 +640,9 @@ abstract class ct extends vb {
               if (!fh.field_e[1]) {
                 break L2;
               } else {
-                io.a((byte) -117, 2);
+                int discarded$8 = 2;
+                int discarded$9 = -117;
+                io.a();
                 break L2;
               }
             }
@@ -637,7 +650,9 @@ abstract class ct extends vb {
               if (!fh.field_e[2]) {
                 break L3;
               } else {
-                pl.c(3, 0);
+                int discarded$10 = 0;
+                int discarded$11 = 3;
+                pl.c();
                 break L3;
               }
             }
@@ -669,7 +684,9 @@ abstract class ct extends vb {
               if (!fh.field_e[6]) {
                 break L7;
               } else {
-                mj.a((byte) 84, 7);
+                int discarded$12 = 7;
+                int discarded$13 = 84;
+                mj.a();
                 break L7;
               }
             }
@@ -689,12 +706,12 @@ abstract class ct extends vb {
         fh.field_e[1] = true;
     }
 
-    private final void g(int param0) {
+    private final void g() {
         int var2 = 0;
         fh.field_e[4] = true;
     }
 
-    private final void k(int param0) {
+    private final void k() {
         int var2 = nm.field_c.g(-53);
         int var3 = (var2 & 1) != 0 ? 1 : 0;
         int var4 = -1 + ag.field_s;
@@ -703,16 +720,8 @@ abstract class ct extends vb {
         wc.a(ea.a(0, var5), bm.m(125), 14301, var3 != 0);
     }
 
-    private final int j(int param0) {
+    private final int j() {
         int var2 = 0;
-        L0: {
-          if (param0 < -35) {
-            break L0;
-          } else {
-            this.e((byte) 71);
-            break L0;
-          }
-        }
         if (((ct) this).field_e) {
           return -1;
         } else {
@@ -722,21 +731,22 @@ abstract class ct extends vb {
             if (vs.field_f) {
               return -1;
             } else {
-              var2 = pi.a(((ct) this).field_E, la.a(4), 0, ((ct) this).field_r, sa.b(-25752), true);
+              int discarded$2 = -25752;
+              var2 = pi.a(((ct) this).field_E, la.a(4), 0, ((ct) this).field_r, sa.b(), true);
               if (var2 != -1) {
-                L1: {
+                L0: {
                   if (var2 == 0) {
-                    break L1;
+                    break L0;
                   } else {
                     if (var2 == 1) {
-                      break L1;
+                      break L0;
                     } else {
-                      L2: {
+                      L1: {
                         if (!v.field_a) {
                           ((ct) this).a(-103, "reconnect");
-                          break L2;
+                          break L1;
                         } else {
-                          break L2;
+                          break L1;
                         }
                       }
                       rc.c((byte) 124);
@@ -747,15 +757,15 @@ abstract class ct extends vb {
                     }
                   }
                 }
-                L3: {
+                L2: {
                   if (ob.field_d != 11) {
-                    break L3;
+                    break L2;
                   } else {
                     if (sk.field_a == 0) {
                       um.d(1);
-                      break L3;
+                      break L2;
                     } else {
-                      break L3;
+                      break L2;
                     }
                   }
                 }
@@ -793,7 +803,7 @@ abstract class ct extends vb {
         }
         fb.field_e = ((ct) this).field_D;
         qm.a(fb.field_e, (byte) -44);
-        ka.a(-31808, ((ct) this).field_z, ((ct) this).field_w, 5000, ((ct) this).field_F, param1, ((ct) this).field_A, 5000, fb.field_e, ((ct) this).field_s, ((ct) this).field_y, ((ct) this).field_u, pt.field_b, param2);
+        ka.a(-31808, ((ct) this).field_z, ((ct) this).field_w, 5000, ((ct) this).field_F, false, ((ct) this).field_A, 5000, fb.field_e, ((ct) this).field_s, ((ct) this).field_y, ((ct) this).field_u, pt.field_b, param2);
         hh.a(((ct) this).field_F, ((ct) this).field_w, ((ct) this).field_y, param2, (byte) -36, pt.field_b, fb.field_e, ((ct) this).field_u, ((ct) this).field_s);
         du.k(-128);
         jd.field_c = qj.g(param6 + 8180);
@@ -803,8 +813,10 @@ abstract class ct extends vb {
         ju.field_m = param5;
         mb.field_q = param3;
         uk.field_e = param4;
-        this.n(-1);
-        qj.h(34);
+        int discarded$1 = -1;
+        this.n();
+        int discarded$2 = 34;
+        qj.h();
     }
 
     private final static Boolean h(int param0) {
@@ -852,7 +864,8 @@ abstract class ct extends vb {
               if (jf.field_a != null) {
                 break L1;
               } else {
-                var6 = nk.b((byte) 127);
+                int discarded$13 = 127;
+                var6 = nk.b();
                 var4 = var6.getSize();
                 aj.field_s.a(0, var4.width, var4.height);
                 break L1;
@@ -865,7 +878,8 @@ abstract class ct extends vb {
           }
         }
         L2: {
-          kc.a(0);
+          int discarded$14 = 0;
+          kc.a();
           fb.a(92);
           if (im.a(true)) {
             break L2;
@@ -873,7 +887,8 @@ abstract class ct extends vb {
             if (ob.field_d == 11) {
               break L2;
             } else {
-              mb.c((byte) 125);
+              int discarded$15 = 125;
+              mb.c();
               break L2;
             }
           }
@@ -896,7 +911,8 @@ abstract class ct extends vb {
                 if (~var3 <= ~fb.b(0)) {
                   break L4;
                 } else {
-                  if (~ro.c((byte) -37) >= ~var3) {
+                  int discarded$16 = -37;
+                  if (~ro.c() >= ~var3) {
                     break L4;
                   } else {
                     break L5;
@@ -905,7 +921,8 @@ abstract class ct extends vb {
               }
             }
             ((ct) this).field_q = false;
-            te.b(true);
+            int discarded$17 = 1;
+            te.b();
             rc.c((byte) -110);
             li.a(11, 2, oi.field_b);
             np.b(34066);
@@ -941,7 +958,8 @@ abstract class ct extends vb {
           }
           L9: {
             var3 = stackIn_24_0;
-            sk.field_a = lb.a(0);
+            int discarded$18 = 0;
+            sk.field_a = lb.a();
             if (var3 == 0) {
               break L9;
             } else {
@@ -1159,7 +1177,8 @@ abstract class ct extends vb {
             if (3 != bl.field_c) {
               break L21;
             } else {
-              if (!bu.a(uj.field_b, cf.field_f, oi.field_a, false)) {
+              int discarded$19 = 0;
+              if (!bu.a(uj.field_b, cf.field_f, oi.field_a)) {
                 break L21;
               } else {
                 if (gh.a((byte) 15, cf.field_f)) {
@@ -1216,7 +1235,8 @@ abstract class ct extends vb {
                         break L25;
                       }
                     }
-                    hr.a(stackIn_103_0 != 0, stackIn_103_1, stackIn_103_2 != 0, (byte) -61);
+                    int discarded$20 = -61;
+                    hr.a(stackIn_103_0 != 0, stackIn_103_1, stackIn_103_2 != 0);
                     break L22;
                   }
                   L26: {
@@ -1231,8 +1251,10 @@ abstract class ct extends vb {
                     if (rt.field_h != null) {
                       break L27;
                     } else {
-                      rt.field_h = pj.c((byte) -101);
-                      co.field_c = ci.b(15);
+                      int discarded$21 = -101;
+                      rt.field_h = pj.c();
+                      int discarded$22 = 15;
+                      co.field_c = ci.b();
                       break L27;
                     }
                   }
@@ -1240,7 +1262,8 @@ abstract class ct extends vb {
                   oi.field_a = null;
                   uj.field_b = null;
                   cf.field_f = null;
-                  wb.a((java.applet.Applet) this, 17337);
+                  int discarded$23 = 17337;
+                  wb.a((java.applet.Applet) this);
                   te.a(67);
                   bl.field_c = 10;
                   break L21;
@@ -1283,7 +1306,8 @@ abstract class ct extends vb {
                       }
                     }
                   }
-                  fh.a(-82, 0.0f, kc.a(dt.field_b, gm.field_w, fn.field_a, 50));
+                  int discarded$24 = 50;
+                  fh.a(-82, 0.0f, kc.a(dt.field_b, gm.field_w, fn.field_a));
                   break L30;
                 }
               }
@@ -1355,7 +1379,8 @@ abstract class ct extends vb {
           }
           L38: {
             if (fh.field_e[8]) {
-              ei.a(-114);
+              int discarded$25 = -114;
+              ei.a();
               break L38;
             } else {
               break L38;
@@ -1378,7 +1403,7 @@ abstract class ct extends vb {
         return param0 & param1;
     }
 
-    private final void d(byte param0) {
+    private final void d() {
         fh.field_e[2] = true;
     }
 
@@ -1388,13 +1413,16 @@ abstract class ct extends vb {
             this.m(param0 + -41);
         }
         if (!(!param2)) {
-            this.d((byte) 56);
+            int discarded$0 = 56;
+            this.d();
         }
         if (param4) {
-            this.g(67);
+            int discarded$1 = 67;
+            this.g();
         }
         if (!(!param1)) {
-            this.l(-11);
+            int discarded$2 = -11;
+            this.l();
         }
         if (param0 != 62) {
             ((ct) this).field_z = -91L;
@@ -1424,11 +1452,13 @@ abstract class ct extends vb {
               } else {
                 L1: {
                   if (var2 == 1) {
-                    br.f(113);
+                    int discarded$10 = 113;
+                    br.f();
                     break L1;
                   } else {
                     if (2 == var2) {
-                      ce.a((byte) 116);
+                      int discarded$11 = 116;
+                      ce.a();
                       break L1;
                     } else {
                       if (var2 != 3) {
@@ -1455,15 +1485,18 @@ abstract class ct extends vb {
                                           } else {
                                             if (17 != var2) {
                                               if (var2 == 18) {
-                                                to.g(0);
+                                                int discarded$12 = 0;
+                                                to.g();
                                                 break L1;
                                               } else {
                                                 v.a("MGS1: " + dl.k((byte) 65), (byte) -52, (Throwable) null);
-                                                te.b(true);
+                                                int discarded$13 = 1;
+                                                te.b();
                                                 break L1;
                                               }
                                             } else {
-                                              this.k(-105);
+                                              int discarded$14 = -105;
+                                              this.k();
                                               break L1;
                                             }
                                           }
@@ -1483,7 +1516,8 @@ abstract class ct extends vb {
                                         break L3;
                                       }
                                     }
-                                    var4 = um.a(stackIn_25_0 != 0, 1);
+                                    int discarded$15 = 1;
+                                    var4 = um.a(stackIn_25_0 != 0);
                                     pj.a(0, var4);
                                     break L1;
                                   }
@@ -1493,15 +1527,18 @@ abstract class ct extends vb {
                                 break L1;
                               }
                             } else {
-                              gu.a(4);
+                              int discarded$16 = 4;
+                              gu.a();
                               break L1;
                             }
                           } else {
-                            rq.a((byte) 126);
+                            int discarded$17 = 126;
+                            rq.a();
                             break L1;
                           }
                         } else {
-                          qo.a((byte) -26);
+                          int discarded$18 = -26;
+                          qo.a();
                           break L1;
                         }
                       } else {
@@ -1517,7 +1554,8 @@ abstract class ct extends vb {
           }
         }
         v.a("MGS2: " + dl.k((byte) 65), (byte) -52, (Throwable) null);
-        te.b(true);
+        int discarded$19 = 1;
+        te.b();
     }
 
     public static void o(int param0) {
@@ -1530,7 +1568,7 @@ abstract class ct extends vb {
         field_t = null;
     }
 
-    private final void l(int param0) {
+    private final void l() {
         fh.field_e[5] = true;
     }
 

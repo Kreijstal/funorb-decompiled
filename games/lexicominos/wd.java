@@ -12,94 +12,86 @@ final class wd {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        int stackIn_13_0 = 0;
+        int stackIn_11_0 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
+        String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
+        int stackOut_10_0 = 0;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
         RuntimeException stackOut_14_0 = null;
         StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
         var6 = Lexicominos.field_L ? 1 : 0;
         try {
           L0: {
-            L1: {
-              if (param0 == -72) {
-                break L1;
-              } else {
-                field_a = null;
-                break L1;
-              }
-            }
             var3_int = 0;
             var4 = param2.length();
             var5 = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (var4 <= var5) {
-                stackOut_12_0 = var3_int;
-                stackIn_13_0 = stackOut_12_0;
+                stackOut_10_0 = var3_int;
+                stackIn_11_0 = stackOut_10_0;
                 break L0;
               } else {
-                L3: {
+                L2: {
                   if (param1 != param2.charAt(var5)) {
                     var5++;
                     var5++;
-                    break L3;
+                    break L2;
                   } else {
                     var3_int++;
                     var5++;
-                    break L3;
+                    break L2;
                   }
                 }
                 var5++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var3 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var3;
-            stackOut_14_1 = new StringBuilder().append("wd.B(").append(param0).append(44).append(param1).append(44);
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackOut_12_0 = (RuntimeException) var3;
+            stackOut_12_1 = new StringBuilder().append("wd.B(").append(-72).append(44).append(param1).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
             if (param2 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
-              break L4;
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L3;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
-              break L4;
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L3;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw ld.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
         }
-        return stackIn_13_0;
+        return stackIn_11_0;
     }
 
-    final static String a(boolean param0, CharSequence param1, byte param2) {
+    final static String a(boolean param0, CharSequence param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -128,7 +120,7 @@ final class wd {
         var6 = Lexicominos.field_L ? 1 : 0;
         try {
           var4 = 81;
-          var3 = fj.a(param1, 100, param0);
+          var3 = fj.a(param1, 100, false);
           if (var3 != null) {
             stackOut_3_0 = (String) var3;
             stackIn_4_0 = stackOut_3_0;
@@ -155,7 +147,7 @@ final class wd {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var3_ref;
-            stackOut_14_1 = new StringBuilder().append("wd.A(").append(param0).append(44);
+            stackOut_14_1 = new StringBuilder().append("wd.A(").append(0).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -182,7 +174,7 @@ final class wd {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
     }
 

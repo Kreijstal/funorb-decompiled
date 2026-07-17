@@ -15,7 +15,7 @@ final class f implements cj {
     static int field_g;
     static String field_h;
 
-    public static void a(int param0) {
+    public static void a() {
         field_h = null;
         field_i = null;
         field_a = null;

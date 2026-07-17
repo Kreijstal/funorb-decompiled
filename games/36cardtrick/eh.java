@@ -11,7 +11,7 @@ final class eh extends qb {
     int field_n;
     int field_k;
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         return ja.field_b.a(2);
     }
 
@@ -43,7 +43,7 @@ final class eh extends qb {
         var11 = Main.field_T;
         if (0L < param1) {
           if (param1 < 6582952005840035281L) {
-            if (param1 % 37L == (long)param0) {
+            if (param1 % 37L == 0L) {
               return null;
             } else {
               var3 = 0;

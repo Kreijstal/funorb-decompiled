@@ -113,7 +113,7 @@ final class gf extends kj {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_h = null;
         field_i = null;
     }
@@ -293,7 +293,7 @@ final class gf extends kj {
         }
     }
 
-    final static ema a(long param0, boolean param1) {
+    final static ema a(long param0) {
         return (ema) (Object) iga.field_c.a(param0, (byte) -87);
     }
 

@@ -12,7 +12,7 @@ final class ln {
         throw new IllegalStateException();
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         field_e = null;

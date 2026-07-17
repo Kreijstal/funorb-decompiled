@@ -299,35 +299,9 @@ class id {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 < 8000) {
-            break L0;
-          } else {
-            if (param0 <= 48000) {
-              L1: {
-                field_m = param0;
-                if (!param1) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              field_o = stackIn_7_0 != 0;
-              field_u = 10;
-              return;
-            } else {
-              break L0;
-            }
-          }
-        }
-        throw new IllegalArgumentException();
+        field_m = 22050;
+        field_o = true;
+        field_u = 10;
     }
 
     void b(int param0) throws Exception {
@@ -338,12 +312,12 @@ class id {
     }
 
     private final void a(int param0) {
-        ((id) this).field_p = ((id) this).field_p - 256;
+        ((id) this).field_p = ((id) this).field_p - param0;
         if (((id) this).field_p < 0) {
             ((id) this).field_p = 0;
         }
         if (((id) this).field_h != null) {
-            ((id) this).field_h.a(256);
+            ((id) this).field_h.a(param0);
             return;
         }
     }
@@ -369,7 +343,7 @@ class id {
         od var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_o) {
             break L0;
           } else {
@@ -379,7 +353,7 @@ class id {
         }
         L1: {
           eg.a(param0, 0, var3);
-          ((id) this).field_p = ((id) this).field_p - 256;
+          ((id) this).field_p = ((id) this).field_p - param1;
           if (((id) this).field_h == null) {
             break L1;
           } else {
@@ -546,7 +520,7 @@ class id {
           if (((id) this).field_h == null) {
             break L17;
           } else {
-            ((id) this).field_h.a(param0, 0, 256);
+            ((id) this).field_h.a(param0, 0, param1);
             break L17;
           }
         }

@@ -8,7 +8,7 @@ final class w extends dqa implements ln, oo {
     private sn field_z;
     private kja field_x;
 
-    private final String j(byte param0) {
+    private final String j() {
         return "</col></u>";
     }
 
@@ -118,6 +118,8 @@ final class w extends dqa implements ln, oo {
             ((w) this).field_z = param0;
             ((w) this).field_w = new htb(tn.field_b, (sba) null);
             ((w) this).field_w.field_q = (wwa) (Object) new vva();
+            int discarded$2 = 1;
+            int discarded$3 = -30;
             var7 = isa.a(hm.field_o, new String[2], 81);
             var3 = 20;
             var4 = new bob(loa.field_o, 0, 0, 0, 0, 16777215, -1, 3, 0, loa.field_o.field_k, -1, 2147483647, true);
@@ -279,7 +281,8 @@ final class w extends dqa implements ln, oo {
           L0: {
             L1: {
               if (((w) this).field_w == param3) {
-                cnb.f((byte) -74);
+                int discarded$2 = -74;
+                cnb.f();
                 ((w) this).field_z.l((byte) -106);
                 break L1;
               } else {
@@ -325,11 +328,11 @@ final class w extends dqa implements ln, oo {
         }
     }
 
-    public static void i(byte param0) {
+    public static void i() {
         field_v = null;
     }
 
-    private final String c(boolean param0) {
+    private final String c() {
         return "<u=2164A2><col=2164A2>";
     }
 

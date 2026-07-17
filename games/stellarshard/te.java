@@ -16,7 +16,7 @@ final class te {
         field_a = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, pb param6, int param7, byte param8) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, pb param6) {
         int var9_int = 0;
         RuntimeException var9 = null;
         int var10 = 0;
@@ -40,27 +40,27 @@ final class te {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var9_int = -param5 + (param3 + param6.field_t - -param2);
-            var10 = param0 + (param3 + (param2 + param6.field_t));
+            var9_int = param3 + param6.field_t - -param2;
+            var10 = 30 + (param3 + (param2 + param6.field_t));
             var11 = param1 + (param6.field_s + (param6.field_y >> 1));
-            ti.a(var9_int, 0, var10, var11 - -param7);
-            param6.d(-1 + param2, param1 - 1, param4);
-            param6.d(param2 + -1, 1 + param1, param4);
+            ti.a(var9_int, 0, var10, var11);
+            param6.d(-1 + param2, param1 - 1, 80);
+            param6.d(param2 + -1, 1 + param1, 80);
             ti.b(pk.field_i);
-            ti.a(var9_int + 1, 0, 1 + var10, var11 + param7);
-            param6.d(1 + param2, param1 + -1, param4);
-            param6.d(param2 + 1, param1 - -1, param4);
+            ti.a(var9_int + 1, 0, 1 + var10, var11);
+            param6.d(1 + param2, param1 + -1, 80);
+            param6.d(param2 + 1, param1 - -1, 80);
             ti.b(pk.field_i);
             var12 = -39;
-            var10 = param6.field_t + param6.field_v - -param2 + -param3 + -param5;
-            var9_int = param2 + (param6.field_t + param6.field_v) + (-param3 + -param0);
-            ti.a(var9_int, var11 - param7, var10, 480);
-            param6.d(param2 - 1, param1 + -1, param4);
-            param6.d(-1 + param2, 1 + param1, param4);
+            var10 = param6.field_t + param6.field_v - -param2 + -param3;
+            var9_int = param2 + (param6.field_t + param6.field_v) + (-param3 + -30);
+            ti.a(var9_int, var11, var10, 480);
+            param6.d(param2 - 1, param1 + -1, 80);
+            param6.d(-1 + param2, 1 + param1, 80);
             ti.b(pk.field_i);
-            ti.a(1 + var9_int, -param7 + var11, 1 + var10, 480);
-            param6.d(1 + param2, -1 + param1, param4);
-            param6.d(param2 + 1, 1 + param1, param4);
+            ti.a(1 + var9_int, var11, 1 + var10, 480);
+            param6.d(1 + param2, -1 + param1, 80);
+            param6.d(param2 + 1, 1 + param1, 80);
             ti.b(pk.field_i);
             break L0;
           }
@@ -69,7 +69,7 @@ final class te {
           L1: {
             var9 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var9;
-            stackOut_2_1 = new StringBuilder().append("te.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+            stackOut_2_1 = new StringBuilder().append("te.B(").append(30).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(80).append(44).append(0).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -92,25 +92,22 @@ final class te {
               break L1;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param7 + 44 + -102 + 41);
+          throw ma.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 0 + 44 + -102 + 41);
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, pb param4, int param5, int param6, int param7, int param8) {
+    final static void a(int param0, int param1, int param2, int param3, pb param4) {
         try {
-            vh.field_i = param1;
-            i.field_a = param6;
+            vh.field_i = 129;
+            i.field_a = 134;
             kk.field_o = 0;
-            t.field_a = param0;
+            t.field_a = 8;
             ug.field_f = param4;
-            vi.field_d = param3;
-            bl.field_d = param2;
-            if (param7 <= 59) {
-                field_c = 117;
-            }
-            pk.field_g = param5;
+            vi.field_d = 0;
+            bl.field_d = 1500;
+            pk.field_g = 40;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "te.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + param6 + 44 + param7 + 44 + 0 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "te.A(" + 8 + 44 + 129 + 44 + 1500 + 44 + 0 + 44 + (param4 != null ? "{...}" : "null") + 44 + 40 + 44 + 134 + 44 + 97 + 44 + 0 + 41);
         }
     }
 

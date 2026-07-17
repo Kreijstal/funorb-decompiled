@@ -332,7 +332,8 @@ final class vpa implements ntb {
             return;
         }
         try {
-            var3.field_a = (hkb[]) (Object) sqb.a((tv[]) (Object) var3.field_a, (tv[]) (Object) var3.field_a, 1, fi.field_p, false);
+            int discarded$0 = 0;
+            var3.field_a = (hkb[]) (Object) sqb.a((tv[]) (Object) var3.field_a, (tv[]) (Object) var3.field_a, 1, fi.field_p);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "vpa.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }

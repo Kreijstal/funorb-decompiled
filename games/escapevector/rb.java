@@ -8,10 +8,7 @@ final class rb extends hg {
     String field_g;
     int field_i;
 
-    public static void a(byte param0) {
-        if (param0 != -85) {
-            return;
-        }
+    public static void a() {
         field_h = null;
         field_k = null;
         field_j = null;

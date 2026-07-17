@@ -313,17 +313,14 @@ final class tca implements Runnable {
         var5.d(param0.field_i, 0);
         var5.c((byte) 110, param0.field_m);
         var5.e(param0.field_o, -1615464796);
-        var5.e(param0.field_j, param1 + -1615464801);
+        var5.e(param0.field_j, -1615464796);
         var5.e(param0.field_k, -1615464796);
-        if (param1 != 5) {
-            return;
-        }
         try {
             var5.e(param0.field_h, -1615464796);
             int discarded$0 = var5.a(var4, 19);
             var5.b((byte) 124, -var4 + var5.field_g);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "tca.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "tca.D(" + (param0 != null ? "{...}" : "null") + 44 + 5 + 44 + param2 + 41);
         }
     }
 

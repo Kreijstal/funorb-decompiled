@@ -10,7 +10,7 @@ abstract class vi {
     int field_f;
     static int field_a;
 
-    final static void a(n param0, byte param1, int[] param2, boolean param3, boolean param4, int[] param5, boolean param6) {
+    final static void a(n param0, byte param1, int[] param2, boolean param3, boolean param4, int[] param5) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
@@ -89,7 +89,7 @@ abstract class vi {
         try {
           L0: {
             var7_int = 2147483647;
-            var9 = -47 % ((param1 - -36) / 57);
+            var9 = 0;
             var8 = -2147483648;
             var22 = param5[3] >> 2;
             var23 = param5[4] >> 2;
@@ -185,44 +185,40 @@ abstract class vi {
                     }
                   }
                 }
-                L4: {
-                  if (param3) {
-                    var10 = param2[3];
-                    var11 = param2[4];
-                    var12 = param2[5];
-                    var13 = param2[6];
-                    var14 = param2[7];
-                    var15 = param2[8];
-                    var16 = param2[9];
-                    var17 = param2[10];
-                    var18 = param2[11];
-                    var19 = 0;
-                    L5: while (true) {
-                      if (var19 >= param0.field_D) {
-                        break L4;
+                var10 = param2[3];
+                var11 = param2[4];
+                var12 = param2[5];
+                var13 = param2[6];
+                var14 = param2[7];
+                var15 = param2[8];
+                var16 = param2[9];
+                var17 = param2[10];
+                var18 = param2[11];
+                var19 = 0;
+                L4: while (true) {
+                  L5: {
+                    if (var19 >= param0.field_D) {
+                      break L5;
+                    } else {
+                      stackOut_57_0 = ~hc.field_f.length;
+                      stackIn_59_0 = stackOut_57_0;
+                      if (stackIn_59_0 >= ~var19) {
+                        break L5;
                       } else {
-                        stackOut_57_0 = ~hc.field_f.length;
-                        stackIn_59_0 = stackOut_57_0;
-                        if (stackIn_59_0 >= ~var19) {
-                          break L4;
-                        } else {
-                          var20 = param0.field_r[var19];
-                          var21 = param0.field_e[var19];
-                          var22 = param0.field_K[var19];
-                          hc.field_f[var19] = var13 * var21 + var20 * var10 - -(var16 * var22) >> 16;
-                          le.field_m[var19] = var17 * var22 + (var14 * var21 + var20 * var11) >> 16;
-                          fl.field_d[var19] = var20 * var12 - (-(var15 * var21) + -(var18 * var22)) >> 16;
-                          var19++;
-                          continue L5;
-                        }
+                        var20 = param0.field_r[var19];
+                        var21 = param0.field_e[var19];
+                        var22 = param0.field_K[var19];
+                        hc.field_f[var19] = var13 * var21 + var20 * var10 - -(var16 * var22) >> 16;
+                        le.field_m[var19] = var17 * var22 + (var14 * var21 + var20 * var11) >> 16;
+                        fl.field_d[var19] = var20 * var12 - (-(var15 * var21) + -(var18 * var22)) >> 16;
+                        var19++;
+                        continue L4;
                       }
                     }
-                  } else {
-                    break L4;
                   }
+                  rh.a(false, param0, (byte) -115, var7_int, var8);
+                  break L0;
                 }
-                rh.a(param6, param0, (byte) -115, var7_int, var8);
-                break L0;
               } else {
                 L6: {
                   var25 = param0.field_f[var24];
@@ -257,16 +253,6 @@ abstract class vi {
                     break L6;
                   }
                 }
-                L9: {
-                  if (!param4) {
-                    break L9;
-                  } else {
-                    aa.field_c[var24] = var28 >> fc.field_e;
-                    kf.field_b[var24] = var29 >> fc.field_e;
-                    be.field_b[var24] = var30;
-                    break L9;
-                  }
-                }
                 var24++;
                 continue L1;
               }
@@ -274,7 +260,7 @@ abstract class vi {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L10: {
+          L9: {
             var7 = decompiledCaughtException;
             stackOut_65_0 = (RuntimeException) var7;
             stackOut_65_1 = new StringBuilder().append("vi.E(");
@@ -289,7 +275,7 @@ abstract class vi {
               stackIn_69_0 = stackOut_68_0;
               stackIn_69_1 = stackOut_68_1;
               stackIn_69_2 = stackOut_68_2;
-              break L10;
+              break L9;
             } else {
               stackOut_66_0 = (RuntimeException) (Object) stackIn_66_0;
               stackOut_66_1 = (StringBuilder) (Object) stackIn_66_1;
@@ -297,12 +283,12 @@ abstract class vi {
               stackIn_69_0 = stackOut_66_0;
               stackIn_69_1 = stackOut_66_1;
               stackIn_69_2 = stackOut_66_2;
-              break L10;
+              break L9;
             }
           }
-          L11: {
+          L10: {
             stackOut_69_0 = (RuntimeException) (Object) stackIn_69_0;
-            stackOut_69_1 = ((StringBuilder) (Object) stackIn_69_1).append(stackIn_69_2).append(44).append(param1).append(44);
+            stackOut_69_1 = ((StringBuilder) (Object) stackIn_69_1).append(stackIn_69_2).append(44).append(-116).append(44);
             stackIn_72_0 = stackOut_69_0;
             stackIn_72_1 = stackOut_69_1;
             stackIn_70_0 = stackOut_69_0;
@@ -314,7 +300,7 @@ abstract class vi {
               stackIn_73_0 = stackOut_72_0;
               stackIn_73_1 = stackOut_72_1;
               stackIn_73_2 = stackOut_72_2;
-              break L11;
+              break L10;
             } else {
               stackOut_70_0 = (RuntimeException) (Object) stackIn_70_0;
               stackOut_70_1 = (StringBuilder) (Object) stackIn_70_1;
@@ -322,12 +308,12 @@ abstract class vi {
               stackIn_73_0 = stackOut_70_0;
               stackIn_73_1 = stackOut_70_1;
               stackIn_73_2 = stackOut_70_2;
-              break L11;
+              break L10;
             }
           }
-          L12: {
+          L11: {
             stackOut_73_0 = (RuntimeException) (Object) stackIn_73_0;
-            stackOut_73_1 = ((StringBuilder) (Object) stackIn_73_1).append(stackIn_73_2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_73_1 = ((StringBuilder) (Object) stackIn_73_1).append(stackIn_73_2).append(44).append(1).append(44).append(0).append(44);
             stackIn_76_0 = stackOut_73_0;
             stackIn_76_1 = stackOut_73_1;
             stackIn_74_0 = stackOut_73_0;
@@ -339,7 +325,7 @@ abstract class vi {
               stackIn_77_0 = stackOut_76_0;
               stackIn_77_1 = stackOut_76_1;
               stackIn_77_2 = stackOut_76_2;
-              break L12;
+              break L11;
             } else {
               stackOut_74_0 = (RuntimeException) (Object) stackIn_74_0;
               stackOut_74_1 = (StringBuilder) (Object) stackIn_74_1;
@@ -347,10 +333,10 @@ abstract class vi {
               stackIn_77_0 = stackOut_74_0;
               stackIn_77_1 = stackOut_74_1;
               stackIn_77_2 = stackOut_74_2;
-              break L12;
+              break L11;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_77_0, stackIn_77_2 + 44 + param6 + 41);
+          throw ma.a((Throwable) (Object) stackIn_77_0, stackIn_77_2 + 44 + 0 + 41);
         }
     }
 
@@ -375,47 +361,44 @@ abstract class vi {
         try {
           L0: {
             L1: {
-              if (param0) {
+              if (null == na.field_d) {
                 break L1;
               } else {
-                field_a = 90;
+                na.field_d.i(-21535);
                 break L1;
               }
             }
             L2: {
-              if (null == na.field_d) {
-                break L2;
-              } else {
-                na.field_d.i(-21535);
-                break L2;
-              }
-            }
-            L3: {
               if (null != qf.field_d) {
                 qf.field_d.k(29960);
-                break L3;
+                break L2;
               } else {
-                break L3;
+                break L2;
               }
             }
-            ld.e((byte) -111);
+            int discarded$1 = -111;
+            ld.e();
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1, "vi.A(" + param0 + 41);
+          throw ma.a((Throwable) (Object) var1, "vi.A(" + 1 + 41);
         }
     }
 
     public static void b(byte param0) {
+        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
+          L0: {
             field_c = null;
-            if (param0 <= 79) {
-                vi.a(true);
-            }
-        } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "vi.B(" + param0 + 41);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw ma.a((Throwable) (Object) var1, "vi.B(" + 82 + 41);
         }
     }
 

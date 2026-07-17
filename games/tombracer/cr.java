@@ -8,81 +8,43 @@ final class cr {
     static String field_b;
 
     final static int a(boolean param0, int param1) {
-        int stackIn_5_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_19_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_8_0 = 0;
+        int stackIn_4_0 = 0;
+        int stackIn_8_0 = 0;
         int stackOut_7_0 = 0;
-        int stackOut_4_0 = 0;
+        int stackOut_6_0 = 0;
         int stackOut_3_0 = 0;
-        if (param0) {
-          param1 = param1 & 8191;
-          if (param1 >= 4096) {
-            L0: {
-              if (param1 >= 6144) {
-                stackOut_18_0 = -ida.field_b[-param1 + 8192];
-                stackIn_19_0 = stackOut_18_0;
-                break L0;
-              } else {
-                stackOut_17_0 = -ida.field_b[-4096 + param1];
-                stackIn_19_0 = stackOut_17_0;
-                break L0;
-              }
+        int stackOut_2_0 = 0;
+        param1 = param1 & 8191;
+        if (param1 >= 4096) {
+          L0: {
+            if (param1 >= 6144) {
+              stackOut_7_0 = -ida.field_b[-param1 + 8192];
+              stackIn_8_0 = stackOut_7_0;
+              break L0;
+            } else {
+              stackOut_6_0 = -ida.field_b[-4096 + param1];
+              stackIn_8_0 = stackOut_6_0;
+              break L0;
             }
-            return stackIn_19_0;
-          } else {
-            L1: {
-              if (param1 < 2048) {
-                stackOut_14_0 = ida.field_b[param1];
-                stackIn_15_0 = stackOut_14_0;
-                break L1;
-              } else {
-                stackOut_13_0 = ida.field_b[4096 + -param1];
-                stackIn_15_0 = stackOut_13_0;
-                break L1;
-              }
-            }
-            return stackIn_15_0;
           }
+          return stackIn_8_0;
         } else {
-          field_b = null;
-          param1 = param1 & 8191;
-          if (param1 >= 4096) {
-            L2: {
-              if (param1 >= 6144) {
-                stackOut_8_0 = -ida.field_b[-param1 + 8192];
-                stackIn_9_0 = stackOut_8_0;
-                break L2;
-              } else {
-                stackOut_7_0 = -ida.field_b[-4096 + param1];
-                stackIn_9_0 = stackOut_7_0;
-                break L2;
-              }
+          L1: {
+            if (param1 < 2048) {
+              stackOut_3_0 = ida.field_b[param1];
+              stackIn_4_0 = stackOut_3_0;
+              break L1;
+            } else {
+              stackOut_2_0 = ida.field_b[4096 + -param1];
+              stackIn_4_0 = stackOut_2_0;
+              break L1;
             }
-            return stackIn_9_0;
-          } else {
-            L3: {
-              if (param1 < 2048) {
-                stackOut_4_0 = ida.field_b[param1];
-                stackIn_5_0 = stackOut_4_0;
-                break L3;
-              } else {
-                stackOut_3_0 = ida.field_b[4096 + -param1];
-                stackIn_5_0 = stackOut_3_0;
-                break L3;
-              }
-            }
-            return stackIn_5_0;
           }
+          return stackIn_4_0;
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_b = null;
     }
 
@@ -108,7 +70,7 @@ final class cr {
         }
     }
 
-    final static void a(int[] param0, int param1, int param2, int param3, byte param4) {
+    final static void a(int[] param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;

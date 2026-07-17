@@ -41,24 +41,24 @@ final class iha {
               } else {
                 L2: {
                   param1 = field_f - field_h >> 16;
-                  if (param1 >= -param2) {
-                    if (param1 <= param2) {
+                  if (param1 >= -2) {
+                    if (param1 <= 2) {
                       param0 = field_a + field_i >> 16;
-                      if (param0 >= -param2) {
-                        if (param0 <= param5 + param2) {
+                      if (param0 >= -2) {
+                        if (param0 <= param5 + 2) {
                           L3: {
-                            if (param0 >= param2) {
-                              if (param0 <= param5 - param2) {
+                            if (param0 >= 2) {
+                              if (param0 <= param5 - 2) {
                                 stackOut_15_0 = param8;
                                 stackIn_16_0 = stackOut_15_0;
                                 break L3;
                               } else {
-                                stackOut_14_0 = (param5 + param2 - param0) * field_d >> 8;
+                                stackOut_14_0 = (param5 + 2 - param0) * field_d >> 8;
                                 stackIn_16_0 = stackOut_14_0;
                                 break L3;
                               }
                             } else {
-                              stackOut_12_0 = (param0 + param2) * field_d >> 8;
+                              stackOut_12_0 = (param0 + 2) * field_d >> 8;
                               stackIn_16_0 = stackOut_12_0;
                               break L3;
                             }
@@ -147,10 +147,10 @@ final class iha {
           }
         }
         L2: {
-          var11 = var11 - param4;
-          var12 = var12 - param4;
-          var13 = var13 + param4;
-          var14 = var14 + param4;
+          var11 = var11 - 2;
+          var12 = var12 - 2;
+          var13 = var13 + 2;
+          var14 = var14 + 2;
           if (var11 >= bea.field_b) {
             break L2;
           } else {
@@ -182,14 +182,14 @@ final class iha {
             break L5;
           }
         }
-        field_e = 256 / param4;
-        field_d = param5 * 128 / param4;
+        field_e = 128;
+        field_d = param5 * 128 / 2;
         field_h = (var12 - param1) * var7;
         field_i = (var12 - param1) * var8;
         field_g = (var11 - param0) * var7;
         field_c = (var11 - param0) * var8;
         field_b = param6;
-        iha.a(param0, param1, param4, 0, 0, var9, bea.field_l, var12 * bea.field_g + var11, param5, var7, var8, var12 - var14, var11 - var13, bea.field_g - (var13 - var11));
+        iha.a(param0, param1, 2, 0, 0, var9, bea.field_l, var12 * bea.field_g + var11, param5, var7, var8, var12 - var14, var11 - var13, bea.field_g - (var13 - var11));
     }
 
     public static void a() {

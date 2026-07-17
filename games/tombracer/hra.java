@@ -6,7 +6,7 @@ final class hra {
     static int field_b;
     static String field_c;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
     }

@@ -9,7 +9,7 @@ final class d {
     String field_f;
     String field_d;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_e = null;
         field_c = null;
     }
@@ -28,7 +28,8 @@ final class d {
               if (qg.field_d) {
                 break L1;
               } else {
-                if (bd.c(false)) {
+                int discarded$2 = 0;
+                if (bd.c()) {
                   break L1;
                 } else {
                   stackOut_3_0 = 1;
@@ -104,106 +105,102 @@ final class d {
         var23 = Lexicominos.field_L ? 1 : 0;
         try {
           L0: {
-            var11_int = -param0 + 256;
-            if (param7 == -61498200) {
-              var12 = -param3;
-              L1: while (true) {
-                if (var12 >= 0) {
-                  break L0;
-                } else {
-                  var13 = -param5;
-                  L2: while (true) {
-                    if (var13 >= 0) {
-                      param10 = param10 + param2;
-                      param6 = param6 + param4;
-                      var12++;
-                      continue L1;
-                    } else {
-                      L3: {
-                        int incrementValue$2 = param6;
-                        param6++;
-                        param9 = param1[incrementValue$2];
-                        if (param9 == 0) {
-                          param10++;
-                          break L3;
-                        } else {
-                          L4: {
-                            var14 = (param9 & 16725506) >> 16;
-                            var15 = 255 & param9 >> 8;
-                            var16 = 255 & param9;
-                            var17 = param8[param10];
-                            var18 = 255 & var17 >> 16;
-                            var19 = 15 & var17 >> 8;
-                            var20 = 255 & var17;
-                            if (~var14 < ~var15) {
-                              if (var16 < var14) {
-                                stackOut_14_0 = var14;
-                                stackIn_15_0 = stackOut_14_0;
-                                break L4;
-                              } else {
-                                stackOut_13_0 = var16;
-                                stackIn_15_0 = stackOut_13_0;
-                                break L4;
-                              }
+            var11_int = 192;
+            var12 = -param3;
+            L1: while (true) {
+              if (var12 >= 0) {
+                break L0;
+              } else {
+                var13 = -param5;
+                L2: while (true) {
+                  if (var13 >= 0) {
+                    param10 = param10 + param2;
+                    param6 = param6 + param4;
+                    var12++;
+                    continue L1;
+                  } else {
+                    L3: {
+                      int incrementValue$2 = param6;
+                      param6++;
+                      param9 = param1[incrementValue$2];
+                      if (param9 == 0) {
+                        param10++;
+                        break L3;
+                      } else {
+                        L4: {
+                          var14 = (param9 & 16725506) >> 16;
+                          var15 = 255 & param9 >> 8;
+                          var16 = 255 & param9;
+                          var17 = param8[param10];
+                          var18 = 255 & var17 >> 16;
+                          var19 = 15 & var17 >> 8;
+                          var20 = 255 & var17;
+                          if (~var14 < ~var15) {
+                            if (var16 < var14) {
+                              stackOut_14_0 = var14;
+                              stackIn_15_0 = stackOut_14_0;
+                              break L4;
                             } else {
-                              if (~var15 >= ~var16) {
-                                stackOut_11_0 = var16;
-                                stackIn_15_0 = stackOut_11_0;
-                                break L4;
-                              } else {
-                                stackOut_10_0 = var15;
-                                stackIn_15_0 = stackOut_10_0;
-                                break L4;
-                              }
+                              stackOut_13_0 = var16;
+                              stackIn_15_0 = stackOut_13_0;
+                              break L4;
+                            }
+                          } else {
+                            if (~var15 >= ~var16) {
+                              stackOut_11_0 = var16;
+                              stackIn_15_0 = stackOut_11_0;
+                              break L4;
+                            } else {
+                              stackOut_10_0 = var15;
+                              stackIn_15_0 = stackOut_10_0;
+                              break L4;
                             }
                           }
-                          L5: {
-                            var21 = stackIn_15_0;
-                            if (var18 > var19) {
-                              if (~var18 < ~var20) {
-                                stackOut_21_0 = var18;
-                                stackIn_22_0 = stackOut_21_0;
-                                break L5;
-                              } else {
-                                stackOut_20_0 = var20;
-                                stackIn_22_0 = stackOut_20_0;
-                                break L5;
-                              }
-                            } else {
-                              if (var19 <= var20) {
-                                stackOut_18_0 = var20;
-                                stackIn_22_0 = stackOut_18_0;
-                                break L5;
-                              } else {
-                                stackOut_17_0 = var19;
-                                stackIn_22_0 = stackOut_17_0;
-                                break L5;
-                              }
-                            }
-                          }
-                          L6: {
-                            var22 = stackIn_22_0;
-                            if (var21 > var22) {
-                              param9 = var22 * var15 / var21 << 8 | var14 * var22 / var21 << 16 | var16 * var22 / var21;
-                              break L6;
-                            } else {
-                              break L6;
-                            }
-                          }
-                          int incrementValue$3 = param10;
-                          param10++;
-                          param8[incrementValue$3] = tb.a(vg.a(16711935, param0 * vg.a(param9, 16711935) - -(var11_int * vg.a(var17, 16711935)) >> 8), vg.a(param0 * vg.a(65280, param9) - -(var11_int * vg.a(var17, 65280)), 16711696) >> 8);
-                          break L3;
                         }
+                        L5: {
+                          var21 = stackIn_15_0;
+                          if (var18 > var19) {
+                            if (~var18 < ~var20) {
+                              stackOut_21_0 = var18;
+                              stackIn_22_0 = stackOut_21_0;
+                              break L5;
+                            } else {
+                              stackOut_20_0 = var20;
+                              stackIn_22_0 = stackOut_20_0;
+                              break L5;
+                            }
+                          } else {
+                            if (var19 <= var20) {
+                              stackOut_18_0 = var20;
+                              stackIn_22_0 = stackOut_18_0;
+                              break L5;
+                            } else {
+                              stackOut_17_0 = var19;
+                              stackIn_22_0 = stackOut_17_0;
+                              break L5;
+                            }
+                          }
+                        }
+                        L6: {
+                          var22 = stackIn_22_0;
+                          if (var21 > var22) {
+                            param9 = var22 * var15 / var21 << 8 | var14 * var22 / var21 << 16 | var16 * var22 / var21;
+                            break L6;
+                          } else {
+                            break L6;
+                          }
+                        }
+                        int incrementValue$3 = param10;
+                        param10++;
+                        param8[incrementValue$3] = tb.a(vg.a(16711935, 64 * vg.a(param9, 16711935) - -(var11_int * vg.a(var17, 16711935)) >> 8), vg.a(64 * vg.a(65280, param9) - -(var11_int * vg.a(var17, 65280)), 16711696) >> 8);
+                        break L3;
                       }
-                      var13++;
-                      continue L2;
                     }
+                    var13++;
+                    continue L2;
                   }
                 }
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -211,7 +208,7 @@ final class d {
           L7: {
             var11 = decompiledCaughtException;
             stackOut_30_0 = (RuntimeException) var11;
-            stackOut_30_1 = new StringBuilder().append("d.C(").append(param0).append(44);
+            stackOut_30_1 = new StringBuilder().append("d.C(").append(64).append(44);
             stackIn_32_0 = stackOut_30_0;
             stackIn_32_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
@@ -236,7 +233,7 @@ final class d {
           }
           L8: {
             stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-            stackOut_33_1 = ((StringBuilder) (Object) stackIn_33_1).append(stackIn_33_2).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44);
+            stackOut_33_1 = ((StringBuilder) (Object) stackIn_33_1).append(stackIn_33_2).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(-61498200).append(44);
             stackIn_35_0 = stackOut_33_0;
             stackIn_35_1 = stackOut_33_1;
             stackIn_34_0 = stackOut_33_0;

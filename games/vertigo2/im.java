@@ -357,7 +357,8 @@ final class im {
                   } else {
                     if (param3 > 0) {
                       L6: {
-                        this.d(-122);
+                        int discarded$2 = -122;
+                        this.d();
                         var9_int = param3;
                         if (((im) this).field_b < var9_int) {
                           var9_int = ((im) this).field_b;
@@ -397,9 +398,9 @@ final class im {
                               break L8;
                             } else {
                               param3--;
-                              int incrementValue$1 = param1;
+                              int incrementValue$3 = param1;
                               param1++;
-                              param2[incrementValue$1] = (byte) 0;
+                              param2[incrementValue$3] = (byte) 0;
                               ((im) this).field_d = ((im) this).field_d + 1L;
                               continue L10;
                             }
@@ -700,7 +701,7 @@ final class im {
         }
     }
 
-    private final void d(int param0) throws IOException {
+    private final void d() throws IOException {
         int var3 = 0;
         int var4 = 0;
         int var5 = Vertigo2.field_L ? 1 : 0;

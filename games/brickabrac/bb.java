@@ -142,7 +142,7 @@ final class bb implements ub {
         ((bb) this).field_f = 1;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
     }

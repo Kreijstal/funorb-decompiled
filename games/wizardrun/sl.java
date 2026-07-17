@@ -23,7 +23,7 @@ final class sl extends na {
         }
     }
 
-    final static vi d(byte param0) {
+    final static vi d() {
         return ol.field_c;
     }
 
@@ -399,7 +399,7 @@ final class sl extends na {
         }
     }
 
-    private final void f(int param0) {
+    private final void f() {
         try {
             int var2 = 0;
             Exception var4 = null;
@@ -445,15 +445,12 @@ final class sl extends na {
         }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_q = null;
         field_o = null;
-        if (param0 != -1) {
-            sl.a(-54, 7, -58);
-        }
     }
 
-    final static o g(int param0) {
+    final static o g() {
         int var4_int = 0;
         int var5 = wizardrun.field_H;
         int var1 = tf.field_b[0] * cg.field_k[0];
@@ -471,84 +468,76 @@ final class sl extends na {
         try {
             IOException iOException = null;
             Exception var4 = null;
+            va stackIn_3_0 = null;
+            int stackIn_3_1 = 0;
+            va stackIn_4_0 = null;
+            int stackIn_4_1 = 0;
             va stackIn_5_0 = null;
             int stackIn_5_1 = 0;
-            va stackIn_6_0 = null;
-            int stackIn_6_1 = 0;
-            va stackIn_7_0 = null;
-            int stackIn_7_1 = 0;
-            int stackIn_7_2 = 0;
+            int stackIn_5_2 = 0;
             Throwable decompiledCaughtException = null;
+            va stackOut_2_0 = null;
+            int stackOut_2_1 = 0;
             va stackOut_4_0 = null;
             int stackOut_4_1 = 0;
-            va stackOut_6_0 = null;
-            int stackOut_6_1 = 0;
-            int stackOut_6_2 = 0;
-            va stackOut_5_0 = null;
-            int stackOut_5_1 = 0;
-            int stackOut_5_2 = 0;
+            int stackOut_4_2 = 0;
+            va stackOut_3_0 = null;
+            int stackOut_3_1 = 0;
+            int stackOut_3_2 = 0;
             if (null != ((sl) this).field_p) {
               try {
                 L0: {
                   L1: {
-                    if (param0 == 3) {
-                      break L1;
-                    } else {
-                      ((sl) this).field_p = null;
-                      break L1;
-                    }
-                  }
-                  L2: {
                     ((sl) this).field_i.field_m = 0;
-                    stackOut_4_0 = ((sl) this).field_i;
-                    stackOut_4_1 = 11;
-                    stackIn_6_0 = stackOut_4_0;
-                    stackIn_6_1 = stackOut_4_1;
-                    stackIn_5_0 = stackOut_4_0;
-                    stackIn_5_1 = stackOut_4_1;
+                    stackOut_2_0 = ((sl) this).field_i;
+                    stackOut_2_1 = 11;
+                    stackIn_4_0 = stackOut_2_0;
+                    stackIn_4_1 = stackOut_2_1;
+                    stackIn_3_0 = stackOut_2_0;
+                    stackIn_3_1 = stackOut_2_1;
                     if (param1) {
-                      stackOut_6_0 = (va) (Object) stackIn_6_0;
-                      stackOut_6_1 = stackIn_6_1;
-                      stackOut_6_2 = 2;
-                      stackIn_7_0 = stackOut_6_0;
-                      stackIn_7_1 = stackOut_6_1;
-                      stackIn_7_2 = stackOut_6_2;
-                      break L2;
+                      stackOut_4_0 = (va) (Object) stackIn_4_0;
+                      stackOut_4_1 = stackIn_4_1;
+                      stackOut_4_2 = 2;
+                      stackIn_5_0 = stackOut_4_0;
+                      stackIn_5_1 = stackOut_4_1;
+                      stackIn_5_2 = stackOut_4_2;
+                      break L1;
                     } else {
-                      stackOut_5_0 = (va) (Object) stackIn_5_0;
-                      stackOut_5_1 = stackIn_5_1;
-                      stackOut_5_2 = 3;
-                      stackIn_7_0 = stackOut_5_0;
-                      stackIn_7_1 = stackOut_5_1;
-                      stackIn_7_2 = stackOut_5_2;
-                      break L2;
+                      stackOut_3_0 = (va) (Object) stackIn_3_0;
+                      stackOut_3_1 = stackIn_3_1;
+                      stackOut_3_2 = 3;
+                      stackIn_5_0 = stackOut_3_0;
+                      stackIn_5_1 = stackOut_3_1;
+                      stackIn_5_2 = stackOut_3_2;
+                      break L1;
                     }
                   }
-                  ((va) (Object) stackIn_7_0).b((byte) stackIn_7_1, stackIn_7_2);
+                  ((va) (Object) stackIn_5_0).b((byte) stackIn_5_1, stackIn_5_2);
                   ((sl) this).field_i.a(0L, (byte) 106);
-                  ((sl) this).field_p.a(((sl) this).field_i.field_k.length, ((sl) this).field_i.field_k, param0 ^ 2, 0);
+                  ((sl) this).field_p.a(((sl) this).field_i.field_k.length, ((sl) this).field_i.field_k, 1, 0);
                   break L0;
                 }
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
-                L3: {
+                L2: {
                   iOException = (IOException) (Object) decompiledCaughtException;
                   try {
-                    L4: {
+                    L3: {
                       ((sl) this).field_p.b((byte) 76);
-                      break L4;
+                      break L3;
                     }
                   } catch (java.lang.Exception decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
-                    L5: {
+                    L4: {
                       var4 = (Exception) (Object) decompiledCaughtException;
-                      break L5;
+                      break L4;
                     }
                   }
                   ((sl) this).field_k = ((sl) this).field_k + 1;
                   ((sl) this).field_p = null;
                   ((sl) this).field_n = -2;
-                  break L3;
+                  break L2;
                 }
               }
               return;
@@ -614,7 +603,8 @@ final class sl extends na {
                 }
                 if (param2 > 118) {
                   ((sl) this).field_p = (hi) param1;
-                  this.f(-73);
+                  int discarded$1 = -73;
+                  this.f();
                   this.a(3, param0);
                   ((sl) this).field_g.field_m = 0;
                   ((sl) this).field_c = null;

@@ -13,15 +13,13 @@ final class dh extends fc {
     int field_o;
     int field_j;
 
-    final static nk a(int param0, int param1, int param2, int param3) {
+    final static nk a() {
         nk var4 = new nk();
-        var4.field_i = param2;
-        var4.field_m = new int[param3];
+        var4.field_i = 0;
+        var4.field_m = new int[1];
         qh.field_e.a((byte) -93, (fc) (Object) var4);
-        gj.a(2, var4, param0);
-        if (param1 != -1) {
-            field_i = null;
-        }
+        int discarded$0 = 5;
+        gj.a(2, var4);
         return var4;
     }
 
@@ -200,12 +198,12 @@ final class dh extends fc {
         }
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_r = null;
         field_i = null;
     }
 
-    final static qj[] e(int param0) {
+    final static qj[] e() {
         qj[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -221,20 +219,12 @@ final class dh extends fc {
         int[] var22 = null;
         byte[] var23 = null;
         int[] var24 = null;
-        L0: {
-          var8 = TrackController.field_F ? 1 : 0;
-          var1 = new qj[gi.field_o];
-          if (param0 == 2) {
-            break L0;
-          } else {
-            field_p = -49;
-            break L0;
-          }
-        }
+        var8 = TrackController.field_F ? 1 : 0;
+        var1 = new qj[gi.field_o];
         var2 = 0;
-        L1: while (true) {
+        L0: while (true) {
           if (var2 >= gi.field_o) {
-            ff.b(param0 + 46);
+            ff.b(48);
             return var1;
           } else {
             var3 = cf.field_p[var2] * j.field_f[var2];
@@ -247,30 +237,30 @@ final class dh extends fc {
               var13 = var16;
               var6 = var13;
               var7 = 0;
-              L2: while (true) {
+              L1: while (true) {
                 if (var3 <= var7) {
                   var1[var2] = (qj) (Object) new d(ab.field_a, qe.field_p, ka.field_f[var2], vb.field_a[var2], cf.field_p[var2], j.field_f[var2], var24);
                   var2++;
-                  continue L1;
+                  continue L0;
                 } else {
                   var6[var7] = ok.a(tc.a(var23[var7] << 24, -16777216), qe.field_z[tc.a(255, (int) var21[var7])]);
                   var7++;
-                  continue L2;
+                  continue L1;
                 }
               }
             } else {
               var9 = new int[var3];
               var22 = var9;
               var6_int = 0;
-              L3: while (true) {
+              L2: while (true) {
                 if (var3 <= var6_int) {
                   var1[var2] = new qj(ab.field_a, qe.field_p, ka.field_f[var2], vb.field_a[var2], cf.field_p[var2], j.field_f[var2], var22);
                   var2++;
-                  continue L1;
+                  continue L0;
                 } else {
                   var9[var6_int] = qe.field_z[tc.a((int) var21[var6_int], 255)];
                   var6_int++;
-                  continue L3;
+                  continue L2;
                 }
               }
             }
@@ -322,30 +312,26 @@ final class dh extends fc {
                 of.field_g = param1;
                 try {
                   L1: {
-                    if (param0 == -19136) {
-                      L2: {
-                        var6 = param2.getParameter("cookieprefix");
-                        var5 = var6;
-                        var5 = var6;
-                        var4 = param2.getParameter("cookiehost");
-                        var5 = var4;
-                        var5 = var4;
-                        var7 = var6 + "settings=" + param1 + "; version=1; path=/; domain=" + var4;
-                        var5 = var7;
-                        var5 = var7;
-                        if (param1.length() != 0) {
-                          var5 = var7 + "; Expires=" + rb.a(94608000000L + qg.a(false), (byte) -111) + "; Max-Age=" + 94608000L;
-                          break L2;
-                        } else {
-                          var5 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
-                          break L2;
-                        }
+                    L2: {
+                      var6 = param2.getParameter("cookieprefix");
+                      var5 = var6;
+                      var5 = var6;
+                      var4 = param2.getParameter("cookiehost");
+                      var5 = var4;
+                      var5 = var4;
+                      var7 = var6 + "settings=" + param1 + "; version=1; path=/; domain=" + var4;
+                      var5 = var7;
+                      var5 = var7;
+                      if (param1.length() != 0) {
+                        var5 = var7 + "; Expires=" + rb.a(94608000000L + qg.a(false), (byte) -111) + "; Max-Age=" + 94608000L;
+                        break L2;
+                      } else {
+                        var5 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+                        break L2;
                       }
-                      sj.a(param2, "document.cookie=\"" + var5 + "\"", -24531);
-                      break L1;
-                    } else {
-                      return;
                     }
+                    sj.a(param2, "document.cookie=\"" + var5 + "\"", -24531);
+                    break L1;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -362,7 +348,7 @@ final class dh extends fc {
               L4: {
                 var3_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_11_0 = (RuntimeException) var3_ref;
-                stackOut_11_1 = new StringBuilder().append("dh.C(").append(param0).append(44);
+                stackOut_11_1 = new StringBuilder().append("dh.C(").append(-19136).append(44);
                 stackIn_13_0 = stackOut_11_0;
                 stackIn_13_1 = stackOut_11_1;
                 stackIn_12_0 = stackOut_11_0;
@@ -511,9 +497,10 @@ final class dh extends fc {
                             continue L3;
                           } else {
                             var5++;
-                            var10 = uk.a((CharSequence) (Object) var9, 10);
-                            StringBuilder discarded$3 = var6.append(param2.substring(var7, var8));
-                            StringBuilder discarded$4 = var6.append(param1[var10]);
+                            int discarded$5 = 10;
+                            var10 = uk.a((CharSequence) (Object) var9);
+                            StringBuilder discarded$6 = var6.append(param2.substring(var7, var8));
+                            StringBuilder discarded$7 = var6.append(param1[var10]);
                             var7 = var5;
                             continue L3;
                           }
@@ -523,7 +510,7 @@ final class dh extends fc {
                       }
                     }
                   } else {
-                    StringBuilder discarded$5 = var6.append(param2.substring(var7));
+                    StringBuilder discarded$8 = var6.append(param2.substring(var7));
                     stackOut_24_0 = var6.toString();
                     stackIn_25_0 = stackOut_24_0;
                     break L0;
@@ -555,7 +542,8 @@ final class dh extends fc {
                         continue L1;
                       } else {
                         var5++;
-                        var8 = uk.a((CharSequence) (Object) var7_ref_String, 10);
+                        int discarded$9 = 10;
+                        var8 = uk.a((CharSequence) (Object) var7_ref_String);
                         var4 = var4 + (param1[var8].length() - var5 + var6_int);
                         continue L1;
                       }

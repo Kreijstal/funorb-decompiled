@@ -180,7 +180,7 @@ final class mn extends le {
         }
     }
 
-    private final void a(int param0) {
+    private final void a() {
         int var2 = 0;
         int var3 = 0;
         int var4 = ZombieDawn.field_J;
@@ -253,7 +253,8 @@ final class mn extends le {
                   }
                 }
                 if (((mn) this).field_o <= 0) {
-                  this.a(0);
+                  int discarded$1 = 0;
+                  this.a();
                   ((mn) this).b(-27598);
                   return true;
                 } else {
@@ -476,22 +477,14 @@ final class mn extends le {
                 }
               }
             }
-            L16: {
-              if (!param0) {
-                break L16;
-              } else {
-                ((mn) this).field_p = -128;
-                break L16;
-              }
-            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L17: {
+          L16: {
             var3 = decompiledCaughtException;
             stackOut_45_0 = (RuntimeException) var3;
-            stackOut_45_1 = new StringBuilder().append("mn.E(").append(param0).append(44);
+            stackOut_45_1 = new StringBuilder().append("mn.E(").append(0).append(44);
             stackIn_47_0 = stackOut_45_0;
             stackIn_47_1 = stackOut_45_1;
             stackIn_46_0 = stackOut_45_0;
@@ -503,7 +496,7 @@ final class mn extends le {
               stackIn_48_0 = stackOut_47_0;
               stackIn_48_1 = stackOut_47_1;
               stackIn_48_2 = stackOut_47_2;
-              break L17;
+              break L16;
             } else {
               stackOut_46_0 = (RuntimeException) (Object) stackIn_46_0;
               stackOut_46_1 = (StringBuilder) (Object) stackIn_46_1;
@@ -511,7 +504,7 @@ final class mn extends le {
               stackIn_48_0 = stackOut_46_0;
               stackIn_48_1 = stackOut_46_1;
               stackIn_48_2 = stackOut_46_2;
-              break L17;
+              break L16;
             }
           }
           throw sh.a((Throwable) (Object) stackIn_48_0, stackIn_48_2 + 41);
@@ -549,7 +542,8 @@ final class mn extends le {
             }
             var3 = var2.field_w;
             var4 = var2.field_t;
-            hk.i(1584);
+            int discarded$0 = 1584;
+            hk.i();
             kh.field_a = new vn(var3, 3 * var4 / 4);
             kh.field_a.a();
             var2.e(0, 0);

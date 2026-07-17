@@ -75,11 +75,9 @@ final class il {
         int stackIn_6_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_18_0 = 0;
-        int stackIn_22_0 = 0;
         int stackIn_24_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_23_0 = 0;
-        int stackOut_21_0 = 0;
         int stackOut_17_0 = 0;
         int stackOut_10_0 = 0;
         int stackOut_5_0 = 0;
@@ -98,15 +96,9 @@ final class il {
                     var3 = 0;
                     L2: while (true) {
                       if (var2.length <= var3) {
-                        if (param0) {
-                          stackOut_23_0 = 0;
-                          stackIn_24_0 = stackOut_23_0;
-                          break L0;
-                        } else {
-                          stackOut_21_0 = 1;
-                          stackIn_22_0 = stackOut_21_0;
-                          return stackIn_22_0 != 0;
-                        }
+                        stackOut_23_0 = 0;
+                        stackIn_24_0 = stackOut_23_0;
+                        break L0;
                       } else {
                         var4 = var2[var3];
                         if (param1 == var4) {
@@ -145,7 +137,7 @@ final class il {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var2_ref, "il.C(" + param0 + 44 + param1 + 41);
+          throw vk.a((Throwable) (Object) var2_ref, "il.C(" + 1 + 44 + param1 + 41);
         }
         return stackIn_24_0 != 0;
     }
@@ -249,7 +241,7 @@ final class il {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         field_c = null;

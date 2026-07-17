@@ -15,7 +15,7 @@ final class ha {
         return (java.applet.Applet) (Object) wi.field_f;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }

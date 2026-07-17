@@ -18,7 +18,7 @@ final class sd {
     private long field_m;
     private long field_c;
 
-    private final void a(byte param0) throws IOException {
+    private final void a() throws IOException {
         int var4 = 0;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         ((sd) this).field_a = 0;
@@ -35,7 +35,8 @@ final class sd {
         if (param1 < 5) {
             return null;
         }
-        return me.a(param0, true, 2097152, false, 1, false);
+        int discarded$0 = 0;
+        return me.a(param0, true, 2097152, false, 1);
     }
 
     final void c(byte param0) throws IOException {
@@ -532,7 +533,8 @@ final class sd {
                 if (~param0 >= ~((sd) this).field_e.length) {
                   if (param0 > 0) {
                     L6: {
-                      this.a((byte) 0);
+                      int discarded$2 = 0;
+                      this.a();
                       var9_int = param0;
                       if (~((sd) this).field_a > ~var9_int) {
                         var9_int = ((sd) this).field_a;
@@ -596,9 +598,9 @@ final class sd {
                               break L10;
                             } else {
                               param0--;
-                              int incrementValue$1 = param3;
+                              int incrementValue$3 = param3;
                               param3++;
-                              param1[incrementValue$1] = (byte) 0;
+                              param1[incrementValue$3] = (byte) 0;
                               ((sd) this).field_d = ((sd) this).field_d + 1L;
                               continue L12;
                             }
@@ -769,7 +771,7 @@ final class sd {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_g = null;
         field_l = null;
     }

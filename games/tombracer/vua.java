@@ -173,7 +173,7 @@ final class vua extends qr {
         }
     }
 
-    final static boolean e(int param0, int param1, int param2) {
+    final static boolean e(int param0, int param1) {
         boolean stackIn_3_0 = false;
         boolean stackIn_4_0 = false;
         boolean stackIn_5_0 = false;
@@ -219,7 +219,8 @@ final class vua extends qr {
                 break L1;
               }
             }
-            return stackIn_9_0 != 0 & (cra.a(param1, -28, param0) | wq.b(param1, param0, 8000));
+            int discarded$2 = 8000;
+            return stackIn_9_0 != 0 & (cra.a(param1, -28, param0) | wq.b(param1, param0));
           }
         } else {
           return false;

@@ -79,7 +79,7 @@ abstract class ana extends at {
         }
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_t = null;
         field_u = null;
         field_r = null;
@@ -279,7 +279,8 @@ abstract class ana extends at {
             ((ana) this).field_n = param1.field_l.a(-27449, ((ana) this).field_q);
             ((ana) this).field_m = new taa(((ana) this).field_q, ((ana) this).field_n);
             ((ana) this).a(27799, (at) (Object) ((ana) this).field_m);
-            ((ana) this).field_n.a(16776960, 119, pk.a(param1, true));
+            int discarded$2 = 1;
+            ((ana) this).field_n.a(16776960, 119, pk.a(param1));
             ((ana) this).field_l = 100;
             if (!param1.field_p) {
               break L0;
@@ -377,50 +378,46 @@ abstract class ana extends at {
         try {
           L0: {
             var5_int = 0;
-            if (param0) {
-              var6 = param3;
-              var7 = -param3;
-              var8 = -1;
-              hba.a(param1, param2 - param3, tj.field_b[param4], 7, param2 - -param3);
-              L1: while (true) {
-                if (var6 <= var5_int) {
-                  break L0;
-                } else {
-                  L2: {
-                    var8 += 2;
-                    var5_int++;
-                    var7 = var7 + var8;
-                    if (var7 < 0) {
-                      break L2;
-                    } else {
-                      var6--;
-                      var7 = var7 - (var6 << 1);
-                      var9_ref_int__ = tj.field_b[param4 - -var6];
-                      var10_ref_int__ = tj.field_b[param4 - var6];
-                      var11_int = var5_int + param2;
-                      var12_int = param2 + -var5_int;
-                      hba.a(param1, var12_int, var9_ref_int__, 7, var11_int);
-                      hba.a(param1, var12_int, var10_ref_int__, 7, var11_int);
-                      break L2;
-                    }
+            var6 = param3;
+            var7 = -param3;
+            var8 = -1;
+            hba.a(param1, param2 - param3, tj.field_b[param4], 7, param2 - -param3);
+            L1: while (true) {
+              if (var6 <= var5_int) {
+                break L0;
+              } else {
+                L2: {
+                  var8 += 2;
+                  var5_int++;
+                  var7 = var7 + var8;
+                  if (var7 < 0) {
+                    break L2;
+                  } else {
+                    var6--;
+                    var7 = var7 - (var6 << 1);
+                    var9_ref_int__ = tj.field_b[param4 - -var6];
+                    var10_ref_int__ = tj.field_b[param4 - var6];
+                    var11_int = var5_int + param2;
+                    var12_int = param2 + -var5_int;
+                    hba.a(param1, var12_int, var9_ref_int__, 7, var11_int);
+                    hba.a(param1, var12_int, var10_ref_int__, 7, var11_int);
+                    break L2;
                   }
-                  var9 = var6 + param2;
-                  var10 = param2 + -var6;
-                  var11 = tj.field_b[param4 + var5_int];
-                  var12 = tj.field_b[-var5_int + param4];
-                  hba.a(param1, var10, var11, 7, var9);
-                  hba.a(param1, var10, var12, 7, var9);
-                  continue L1;
                 }
+                var9 = var6 + param2;
+                var10 = param2 + -var6;
+                var11 = tj.field_b[param4 + var5_int];
+                var12 = tj.field_b[-var5_int + param4];
+                hba.a(param1, var10, var11, 7, var9);
+                hba.a(param1, var10, var12, 7, var9);
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var5, "ana.N(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw pe.a((Throwable) (Object) var5, "ana.N(" + 1 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 

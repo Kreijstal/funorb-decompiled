@@ -30,7 +30,8 @@ final class dc {
             if (var3 != 0) {
                 return false;
             }
-            aj.a(-1045);
+            int discarded$0 = -1045;
+            aj.a();
             return true;
         }
         if (11 == wh.field_c) {
@@ -47,9 +48,10 @@ final class dc {
                     return false;
                 }
             }
-            if (!(!vh.a((byte) 70))) {
+            int discarded$5 = 70;
+            if (!(!vh.a())) {
                 Object var4 = null;
-                ce.a(param1, (byte) -85, qa.field_y, fa.field_r, cd.field_a, (String) null);
+                ce.a(15, (byte) -85, qa.field_y, fa.field_r, cd.field_a, (String) null);
             }
             return true;
         }
@@ -187,7 +189,7 @@ final class dc {
         qi.a(param0, (byte) -108);
     }
 
-    final static boolean a(CharSequence param0, byte param1) {
+    final static boolean a(CharSequence param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -216,7 +218,8 @@ final class dc {
         var3 = client.field_A ? 1 : 0;
         try {
           L0: {
-            if (cb.a(true, param0, 4564)) {
+            int discarded$6 = 4564;
+            if (cb.a(true, param0)) {
               var2_int = 0;
               L1: while (true) {
                 if (param0.length() <= var2_int) {
@@ -273,7 +276,7 @@ final class dc {
         return stackIn_14_0 != 0;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int[] var1_array = null;
         int var1_int = 0;

@@ -5,7 +5,7 @@ final class eh extends rqa {
     static int field_p;
     static String field_o;
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
     }
 

@@ -17,7 +17,7 @@ final class sq {
         throw new IllegalStateException();
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         wj.field_c = new String[kq.field_Jb];
         wj.field_c[16] = g.field_b;
         wj.field_c[21] = mg.field_L;
@@ -30,7 +30,7 @@ final class sq {
         wj.field_c[11] = ie.field_Sb;
         wj.field_c[5] = ro.field_a;
         wj.field_c[7] = dk.field_l;
-        wj.field_c[param0] = jp.field_j;
+        wj.field_c[13] = jp.field_j;
         wj.field_c[15] = pp.field_x;
         wj.field_c[20] = hr.field_z;
     }

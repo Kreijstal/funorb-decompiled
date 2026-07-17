@@ -16,7 +16,7 @@ final class fn extends RuntimeException {
     static int field_i;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_g = null;
         field_h = null;

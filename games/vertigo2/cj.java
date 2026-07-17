@@ -281,7 +281,7 @@ class cj extends iq implements dq {
         return stackIn_17_0 != 0;
     }
 
-    private final void h(int param0) {
+    private final void h() {
         int var4 = Vertigo2.field_L ? 1 : 0;
         vp var2 = new vp(((cj) this).field_C);
         iq var3 = (iq) (Object) var2.d(4);
@@ -518,7 +518,8 @@ class cj extends iq implements dq {
 
     void a(boolean param0, int param1, int param2, int param3, int param4) {
         super.a(param0, param1, param2, param3, param4);
-        this.h(-641);
+        int discarded$0 = -641;
+        this.h();
     }
 
     private final void a(int param0, boolean param1, StringBuilder param2, Hashtable param3) {
@@ -562,29 +563,25 @@ class cj extends iq implements dq {
         try {
           L0: {
             var5 = new vp(((cj) this).field_C);
-            if (!param1) {
-              var6 = (iq) (Object) var5.d(4);
-              L1: while (true) {
-                if (var6 == null) {
-                  break L0;
-                } else {
-                  StringBuilder discarded$12 = param2.append(10);
-                  var7 = 0;
-                  L2: while (true) {
-                    if (param0 < var7) {
-                      StringBuilder discarded$13 = var6.a(param3, 1 + param0, (byte) -79, param2);
-                      var6 = (iq) (Object) var5.c(2);
-                      continue L1;
-                    } else {
-                      StringBuilder discarded$14 = param2.append(32);
-                      var7++;
-                      continue L2;
-                    }
+            var6 = (iq) (Object) var5.d(4);
+            L1: while (true) {
+              if (var6 == null) {
+                break L0;
+              } else {
+                StringBuilder discarded$12 = param2.append(10);
+                var7 = 0;
+                L2: while (true) {
+                  if (param0 < var7) {
+                    StringBuilder discarded$13 = var6.a(param3, 1 + param0, (byte) -79, param2);
+                    var6 = (iq) (Object) var5.c(2);
+                    continue L1;
+                  } else {
+                    StringBuilder discarded$14 = param2.append(32);
+                    var7++;
+                    continue L2;
                   }
                 }
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -592,7 +589,7 @@ class cj extends iq implements dq {
           L3: {
             var5_ref = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var5_ref;
-            stackOut_10_1 = new StringBuilder().append("cj.U(").append(param0).append(44).append(param1).append(44);
+            stackOut_10_1 = new StringBuilder().append("cj.U(").append(param0).append(44).append(0).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -1102,14 +1099,15 @@ class cj extends iq implements dq {
         }
         ql.field_L.a(0, param0);
         int var4 = ji.field_n.l(0) ? 1 : 0;
-        if (param1 != ~kf.field_c) {
+        if (kf.field_c != 0) {
             if (!(var4 != 0)) {
                 param0 = false;
-                on.a(9110);
+                int discarded$0 = 9110;
+                on.a();
             }
         }
         if (param0) {
-            ji.field_n.a(param2, 538, param3);
+            ji.field_n.a(15, 538, 13);
         }
         if (!(var4 == 0)) {
             ql.field_L.a(0, param0);

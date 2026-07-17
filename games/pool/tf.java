@@ -8,24 +8,11 @@ final class tf {
     static String field_b;
 
     final static dd a(int param0, int param1) {
-        if (param0 == -17104) {
-          if (mp.field_V <= 0) {
-            if (!ap.field_w[param1]) {
-              return ua.field_r;
-            } else {
-              return mm.field_j;
-            }
-          } else {
-            return ua.field_r;
-          }
+        if (mp.field_V > 0) {
+          return ua.field_r;
         } else {
-          field_a = null;
-          if (mp.field_V <= 0) {
-            if (!ap.field_w[param1]) {
-              return ua.field_r;
-            } else {
-              return mm.field_j;
-            }
+          if (ap.field_w[param1]) {
+            return mm.field_j;
           } else {
             return ua.field_r;
           }
@@ -53,7 +40,8 @@ final class tf {
             return true;
           }
         } else {
-          th.b(-1);
+          int discarded$2 = -1;
+          th.b();
           return true;
         }
     }

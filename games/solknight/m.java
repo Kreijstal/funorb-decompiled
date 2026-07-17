@@ -37,7 +37,7 @@ final class m extends gg {
           L0: {
             var3_int = 0;
             var4 = param2.length();
-            var5 = param0;
+            var5 = 0;
             L1: while (true) {
               if (var4 <= var5) {
                 stackOut_10_0 = var3_int;
@@ -64,7 +64,7 @@ final class m extends gg {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var3;
-            stackOut_12_1 = new StringBuilder().append("m.D(").append(param0).append(44).append(param1).append(44);
+            stackOut_12_1 = new StringBuilder().append("m.D(").append(0).append(44).append(param1).append(44);
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -92,7 +92,7 @@ final class m extends gg {
         return stackIn_11_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_h = null;
     }
 
@@ -101,101 +101,32 @@ final class m extends gg {
     }
 
     final static rb a(int param0, int param1, int param2, byte param3, int param4, int param5) {
-        rb var6 = null;
-        if (param3 != -6) {
-          field_h = null;
-          var6 = new rb(param0, param2, param1, param5, param4);
-          pk.a((byte) 32, var6);
-          return var6;
-        } else {
-          var6 = new rb(param0, param2, param1, param5, param4);
-          pk.a((byte) 32, var6);
-          return var6;
-        }
+        rb var6 = new rb(param0, param2, param1, param5, param4);
+        pk.a((byte) 32, var6);
+        return var6;
     }
 
-    final static void b(boolean param0) {
+    final static void b() {
+        RuntimeException var1 = null;
+        int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var3 = SolKnight.field_L ? 1 : 0;
         try {
-            IOException var1 = null;
-            RuntimeException var1_ref = null;
-            int var1_int = 0;
-            IOException var2 = null;
-            int var3 = 0;
-            Throwable decompiledCaughtException = null;
-            var3 = SolKnight.field_L ? 1 : 0;
-            try {
-              L0: {
-                L1: {
-                  if (il.field_c == null) {
-                    break L1;
-                  } else {
-                    il.field_c.a((byte) 92);
-                    break L1;
-                  }
-                }
-                if (!param0) {
-                  L2: {
-                    if (pf.field_d != null) {
-                      pf.field_d.a(5);
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  }
-                  L3: {
-                    if (null != hc.field_c) {
-                      {
-                        L4: {
-                          hc.field_c.d(false);
-                          break L4;
-                        }
-                      }
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                  if (tk.field_p != null) {
-                    var1_int = 0;
-                    L6: while (true) {
-                      if (tk.field_p.length <= var1_int) {
-                        break L0;
-                      } else {
-                        L7: {
-                          if (null == tk.field_p[var1_int]) {
-                            var1_int++;
-                            break L7;
-                          } else {
-                            {
-                              L8: {
-                                tk.field_p[var1_int].d(false);
-                                var1_int++;
-                                break L8;
-                              }
-                            }
-                            break L7;
-                          }
-                        }
-                        var1_int++;
-                        continue L6;
-                      }
-                    }
-                  } else {
-                    return;
-                  }
-                } else {
-                  return;
-                }
+          L0: {
+            L1: {
+              if (il.field_c == null) {
+                break L1;
+              } else {
+                il.field_c.a((byte) 92);
+                break L1;
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
-              decompiledCaughtException = decompiledCaughtParameter2;
-              var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-              throw fc.a((Throwable) (Object) var1_ref, "m.C(" + param0 + 41);
             }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw fc.a((Throwable) (Object) var1, "m.C(" + 0 + 41);
         }
     }
 

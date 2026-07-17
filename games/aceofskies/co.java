@@ -14,7 +14,7 @@ final class co {
     static String field_a;
     static String field_g;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_j = null;
         field_g = null;

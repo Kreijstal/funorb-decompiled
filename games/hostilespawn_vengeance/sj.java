@@ -13,7 +13,7 @@ final class sj {
     static sg field_a;
     static bd field_e;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_h = null;
         field_f = null;
@@ -74,7 +74,8 @@ final class sj {
                     } else {
                       be.field_g = new td((java.net.Socket) db.field_o.field_c, jj.field_k);
                       var2 = new vi(13);
-                      hm.a(ab.field_c, mm.field_s, var2, nj.field_a, 4122);
+                      int discarded$1 = 4122;
+                      hm.a(ab.field_c, mm.field_s, var2, nj.field_a);
                       var2.d(87, 15);
                       var2.b(ik.field_a, 25251);
                       be.field_g.a(13, var2.field_n, (byte) -70, 0);
@@ -144,7 +145,7 @@ final class sj {
         }
     }
 
-    final static void b(boolean param0) {
+    final static void b() {
         ji var1 = null;
         RuntimeException var1_ref = null;
         ji var2 = null;
@@ -241,7 +242,7 @@ final class sj {
         }
     }
 
-    final static void a(int[] param0, oj param1, int param2, int param3, int param4) {
+    final static void a(int[] param0, oj param1, int param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;

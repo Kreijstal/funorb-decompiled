@@ -32,7 +32,9 @@ final class fl {
             if (param1 >= -107) {
                 field_f = null;
             }
-            hf.a(param0, (byte) 9, true);
+            int discarded$0 = 1;
+            int discarded$1 = 9;
+            hf.a(param0);
         } catch (RuntimeException runtimeException) {
             throw ig.a((Throwable) (Object) runtimeException, "fl.I(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
@@ -54,7 +56,7 @@ final class fl {
             var5_int = ((fl) this).field_m.a(param3);
             var6 = ((fl) this).field_m.field_z + ((fl) this).field_m.field_L;
             var7 = param1;
-            if (var5_int + (var7 - param0) > qn.field_l) {
+            if (var5_int + (var7 - -6) > qn.field_l) {
                 var7 = -6 + -var5_int + qn.field_l;
             }
             var8 = 32 + (param2 - ((fl) this).field_m.field_z);
@@ -65,7 +67,7 @@ final class fl {
             qn.f(1 + var7, 1 + var8, 4 + var5_int, var6 + 4, ((fl) this).field_c);
             ((fl) this).field_m.b(param3, var7 + 3, ((fl) this).field_m.field_z + var8 - -3, ((fl) this).field_v, -1);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "fl.J(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "fl.J(" + -6 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -163,22 +165,22 @@ final class fl {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        String stackIn_28_2 = null;
+        String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
         RuntimeException stackOut_25_0 = null;
         StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
+        String stackOut_25_2 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
         var15 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
@@ -258,20 +260,12 @@ final class fl {
               }
             }
             L9: {
-              if (param0) {
-                break L9;
-              } else {
-                ((fl) this).field_w = null;
-                break L9;
-              }
-            }
-            L10: {
               var13 = 32 + param1 - ((fl) this).field_m.field_z;
               if (qn.field_g < var6 + var13 - -var10) {
                 var13 = -var10 + (param1 + -var6);
-                break L10;
+                break L9;
               } else {
-                break L10;
+                break L9;
               }
             }
             qn.b(var12, var13, var9 - -var5_int, var10 + var6, ((fl) this).field_s);
@@ -281,33 +275,33 @@ final class fl {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L11: {
+          L10: {
             var5 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) var5;
-            stackOut_25_1 = new StringBuilder().append("fl.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+            stackOut_23_0 = (RuntimeException) var5;
+            stackOut_23_1 = new StringBuilder().append("fl.A(").append(1).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_25_0 = stackOut_23_0;
+            stackIn_25_1 = stackOut_23_1;
+            stackIn_24_0 = stackOut_23_0;
+            stackIn_24_1 = stackOut_23_1;
             if (param3 == null) {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
-              break L11;
+              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_2 = "null";
+              stackIn_26_0 = stackOut_25_0;
+              stackIn_26_1 = stackOut_25_1;
+              stackIn_26_2 = stackOut_25_2;
+              break L10;
             } else {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
-              stackOut_26_2 = "{...}";
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_28_2 = stackOut_26_2;
-              break L11;
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "{...}";
+              stackIn_26_0 = stackOut_24_0;
+              stackIn_26_1 = stackOut_24_1;
+              stackIn_26_2 = stackOut_24_2;
+              break L10;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 41);
         }
     }
 
@@ -384,9 +378,9 @@ final class fl {
             ((fl) this).field_v = 15658734;
             ((fl) this).field_r = 3;
             var4.field_o = 15658734;
-            ip discarded$10 = var4.a(0, (byte) -102).a(15658734, (byte) -108).a(ue.a(10066329, 8947848, 1, 7829367), 53);
-            ip discarded$11 = var4.a(1, (byte) -119).a(ue.a(10066329, 11184810, 1, 13421772), 31);
-            ip discarded$12 = var4.a(3, (byte) -128).a(ue.a(7829367, 8947848, 1, 10066329), -128).a(1, 1).a((byte) 81, 1);
+            ip discarded$12 = var4.a(0, (byte) -102).a(15658734, (byte) -108).a(ue.a(10066329, 8947848, 1, 7829367), 53);
+            ip discarded$13 = var4.a(1, (byte) -119).a(ue.a(10066329, 11184810, 1, 13421772), 31);
+            ip discarded$14 = var4.a(3, (byte) -128).a(ue.a(7829367, 8947848, 1, 10066329), -128).a(1, 1).a((byte) 81, 1);
             var5 = new wk[9];
             var16 = new nj(32, 32);
             var18 = var16;
@@ -394,22 +388,24 @@ final class fl {
             L1: while (true) {
               if (var7_int >= var18.field_B.length) {
                 var5[4] = (wk) (Object) var18;
-                ip discarded$13 = var4.a(4, (byte) -105).a(true, (byte) 66).a(var5, param0 + -13421900);
-                ip discarded$14 = var4.a(5, (byte) -113).a(mg.a(65793, 0, (byte) -125, 0, 0), -126).a(true, (byte) 121).a(-1, (byte) -109);
+                ip discarded$15 = var4.a(4, (byte) -105).a(true, (byte) 66).a(var5, param0 + -13421900);
+                ip discarded$16 = var4.a(5, (byte) -113).a(mg.a(65793, 0, (byte) -125, 0, 0), -126).a(true, (byte) 121).a(-1, (byte) -109);
                 ((fl) this).field_j = (kh) (Object) var4;
                 var6 = new ao(var4, true);
                 var6.field_n = 0;
                 var7 = new ao(var4, true);
                 var7.field_n = 0;
-                var7.a(-128, ak.b(8947848, 5));
-                ip discarded$15 = var7.a(1, (byte) -85).a(ak.b(11184810, 5), 67).a(2236962, (byte) -127);
+                int discarded$17 = 5;
+                var7.a(-128, ak.b(8947848));
+                int discarded$18 = 5;
+                ip discarded$19 = var7.a(1, (byte) -85).a(ak.b(11184810), 67).a(2236962, (byte) -127);
                 ((fl) this).field_i = (kh) (Object) new tk(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924);
-                or discarded$16 = new or(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
-                kp discarded$17 = new kp(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
+                or discarded$20 = new or(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+                kp discarded$21 = new kp(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
                 var8 = new ao();
                 var17.a((lk) (Object) var8, param0 ^ 13413726);
-                ip discarded$18 = var8.a(0, (byte) -128).a(ue.a(7829367, 15658734, param0 ^ 13421773, 10066329), 36).a(1118481, (byte) 27).b(-1, param0 ^ 13421751);
-                ip discarded$19 = var8.a(4, (byte) -108).a(true, (byte) 104).a(var5, -126);
+                ip discarded$22 = var8.a(0, (byte) -128).a(ue.a(7829367, 15658734, param0 ^ 13421773, 10066329), 36).a(1118481, (byte) 27).b(-1, param0 ^ 13421751);
+                ip discarded$23 = var8.a(4, (byte) -108).a(true, (byte) 104).a(var5, -126);
                 ((fl) this).field_w = (kh) (Object) var8;
                 var9 = new wk[9];
                 var10 = new wk[9];

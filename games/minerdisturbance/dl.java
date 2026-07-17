@@ -9,22 +9,20 @@ final class dl {
     static String field_f;
     static String field_a;
 
-    final static void a(boolean param0, wh param1, int param2, int param3, int param4) {
-        if (param2 != -32532) {
-            return;
-        }
+    final static void a(boolean param0, wh param1) {
         try {
-            nj.field_e.a(false, param1, !param0 ? true : false, 1000000, param3, param4);
+            nj.field_e.a(false, param1, !param0 ? true : false, 1000000, 1048576, 256);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "dl.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "dl.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + -32532 + 44 + 1048576 + 44 + 256 + 41);
         }
     }
 
-    final static String b(byte param0) {
-        return bi.a(sj.field_d, true);
+    final static String b() {
+        int discarded$0 = 1;
+        return bi.a(sj.field_d);
     }
 
-    final static String a(sb param0, int param1, int param2) {
+    final static String a(sb param0) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -54,10 +52,10 @@ final class dl {
           try {
             L0: {
               var3_int = param0.b(true);
-              if (var3_int <= param1) {
+              if (var3_int <= 80) {
                 break L0;
               } else {
-                var3_int = param1;
+                var3_int = 80;
                 break L0;
               }
             }
@@ -102,7 +100,7 @@ final class dl {
               break L1;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 44 + -27898 + 41);
+          throw lj.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 80 + 44 + -27898 + 41);
         }
     }
 
@@ -147,7 +145,7 @@ final class dl {
         try {
           L0: {
             if (cn.a(param1, 258, param2, param4)) {
-              var5_int = 1 / ((37 - param3) / 62);
+              var5_int = -1;
               stackOut_3_0 = bh.a((byte) 104, param0.a(false, param2, param1));
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -187,7 +185,7 @@ final class dl {
           }
           L2: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param1).append(44).append(param2).append(44).append(122).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -223,107 +221,97 @@ final class dl {
         long var4 = 0L;
         int var6 = 0;
         int var7 = 0;
-        Object var8 = null;
-        int stackIn_29_0 = 0;
+        int stackIn_27_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_28_0 = 0;
+        int stackOut_26_0 = 0;
         var7 = MinerDisturbance.field_ab;
         try {
           L0: {
-            L1: {
-              if (param0 <= -69) {
-                break L1;
-              } else {
-                var8 = null;
-                dl.a(false, (wh) null, -17, -116, -117);
-                break L1;
-              }
-            }
             var1_int = 0;
             var2 = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (!mm.b((byte) 102)) {
-                L3: {
+                L2: {
                   pn.field_a.a(sj.a(nk.field_w, (byte) 126, gb.field_e), sj.a(wi.field_w, (byte) 124, m.field_e), -1);
                   if (pn.field_a.b(true)) {
                     var1_int = 1;
-                    break L3;
+                    break L2;
                   } else {
-                    break L3;
+                    break L2;
                   }
                 }
-                L4: {
-                  L5: {
+                L3: {
+                  L4: {
                     var3 = 0;
                     if (var1_int == 0) {
-                      break L5;
+                      break L4;
                     } else {
                       if (pn.field_a.field_e < 0) {
-                        break L5;
+                        break L4;
                       } else {
                         var3 = wf.field_P[pn.field_a.field_e];
                         if (var3 == 2) {
                           om.a(-22126);
-                          break L4;
+                          break L3;
                         } else {
                           if (var3 == 5) {
                             om.a(-22126);
-                            break L4;
+                            break L3;
                           } else {
-                            break L4;
+                            break L3;
                           }
                         }
                       }
                     }
                   }
                   if (var2 == 0) {
-                    break L4;
+                    break L3;
                   } else {
                     if (2 != ti.field_M) {
                       om.a(-22126);
-                      break L4;
+                      break L3;
                     } else {
-                      break L4;
+                      break L3;
                     }
                   }
                 }
-                L6: {
+                L5: {
                   if (var3 != 0) {
-                    break L6;
+                    break L5;
                   } else {
                     if (ti.field_M == 2) {
                       var4 = -tl.field_o + sf.a((byte) -57);
                       var6 = (int)((10999L + -var4) / 1000L);
                       if (var6 > 0) {
-                        break L6;
+                        break L5;
                       } else {
                         var3 = 2;
                         qd.a(-63, true, 5);
-                        break L6;
+                        break L5;
                       }
                     } else {
-                      break L6;
+                      break L5;
                     }
                   }
                 }
-                stackOut_28_0 = var3;
-                stackIn_29_0 = stackOut_28_0;
+                stackOut_26_0 = var3;
+                stackIn_27_0 = stackOut_26_0;
                 break L0;
               } else {
-                L7: {
+                L6: {
                   pn.field_a.b((byte) 117);
                   if (!pn.field_a.b(true)) {
-                    break L7;
+                    break L6;
                   } else {
                     var1_int = 1;
-                    break L7;
+                    break L6;
                   }
                 }
                 if (13 != lj.field_t) {
-                  continue L2;
+                  continue L1;
                 } else {
                   var2 = 1;
-                  continue L2;
+                  continue L1;
                 }
               }
             }
@@ -331,12 +319,12 @@ final class dl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var1, "dl.B(" + param0 + 41);
+          throw lj.a((Throwable) (Object) var1, "dl.B(" + -123 + 41);
         }
-        return stackIn_29_0;
+        return stackIn_27_0;
     }
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void a(java.awt.Component param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -395,7 +383,7 @@ final class dl {
         return gd.field_B;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
         field_a = null;
         field_b = null;

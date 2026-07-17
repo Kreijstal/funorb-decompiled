@@ -182,8 +182,13 @@ final class ib {
     }
 
     private final static int a(int param0, int param1) {
-        int var2 = 0;
-        for (var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1; te.a(param1, var2, 1) > param0; var2--) {
+        int var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1;
+        while (true) {
+            int discarded$1 = 1;
+            if (te.a(param1, var2) <= param0) {
+                break;
+            }
+            var2--;
         }
         return var2;
     }

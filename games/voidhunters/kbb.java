@@ -81,23 +81,19 @@ final class kbb extends le {
           L0: {
             djb.field_s = new ima[5][];
             ok.field_b = new sw[5];
-            ok.field_b[0] = tg.a(param3 + 14135, param1, "basic", "tinyfont_graphics2");
+            ok.field_b[0] = tg.a(14223, param1, "basic", "tinyfont_graphics2");
             djb.field_s[0] = ima.a(param2, "basic", "tinyfont_graphics2");
             ok.field_b[1] = tg.a(14223, param1, "basic", "antigrav_24_graphics2");
             djb.field_s[1] = ima.a(param2, "basic", "font_antigrav_24_alpha");
             ok.field_b[2] = tg.a(14223, param1, "basic", "antigrav_18_graphics2");
             djb.field_s[2] = ima.a(param2, "basic", "font_antigrav_18_alpha");
-            ok.field_b[3] = tg.a(mgb.a((int) param3, 14295), param1, "basic", "calibri_11_graphics2");
+            ok.field_b[3] = tg.a(mgb.a(88, 14295), param1, "basic", "calibri_11_graphics2");
             djb.field_s[3] = ima.a(param2, "basic", "font_calibri_11_alpha");
             ok.field_b[4] = tg.a(14223, param1, "basic", "calibri_12_graphics2");
             djb.field_s[4] = ima.a(param2, "basic", "font_calibri_12_alpha");
-            if (param3 == 88) {
-              nkb.a(false, "Finished unpacking raw fonts");
-              po.field_o = true;
-              break L0;
-            } else {
-              return;
-            }
+            nkb.a(false, "Finished unpacking raw fonts");
+            po.field_o = true;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -179,7 +175,7 @@ final class kbb extends le {
           }
           L4: {
             stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(param3).append(44);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(88).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -287,9 +283,9 @@ final class kbb extends le {
         }
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_q = null;
-        int var1 = -4 % ((-75 - param0) / 37);
+        int var1 = 0;
     }
 
     private final void a(byte param0, int param1, int param2, int param3) {
@@ -302,103 +298,103 @@ final class kbb extends le {
         int var11 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_14_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_12_0 = 0;
+        Object stackIn_15_0 = null;
+        Object stackIn_16_0 = null;
         Object stackIn_17_0 = null;
-        Object stackIn_18_0 = null;
-        Object stackIn_19_0 = null;
-        int stackIn_19_1 = 0;
+        int stackIn_17_1 = 0;
+        Object stackIn_25_0 = null;
+        int stackIn_25_1 = 0;
+        Object stackIn_26_0 = null;
+        int stackIn_26_1 = 0;
         Object stackIn_27_0 = null;
         int stackIn_27_1 = 0;
-        Object stackIn_28_0 = null;
-        int stackIn_28_1 = 0;
-        Object stackIn_29_0 = null;
-        int stackIn_29_1 = 0;
-        int stackIn_29_2 = 0;
+        int stackIn_27_2 = 0;
+        Object stackIn_31_0 = null;
+        Object stackIn_32_0 = null;
         Object stackIn_33_0 = null;
-        Object stackIn_34_0 = null;
-        Object stackIn_35_0 = null;
-        int stackIn_35_1 = 0;
+        int stackIn_33_1 = 0;
+        Object stackIn_38_0 = null;
+        int stackIn_38_1 = 0;
+        Object stackIn_39_0 = null;
+        int stackIn_39_1 = 0;
         Object stackIn_40_0 = null;
         int stackIn_40_1 = 0;
-        Object stackIn_41_0 = null;
-        int stackIn_41_1 = 0;
-        Object stackIn_42_0 = null;
-        int stackIn_42_1 = 0;
-        int stackIn_42_2 = 0;
+        int stackIn_40_2 = 0;
+        Object stackIn_43_0 = null;
+        Object stackIn_44_0 = null;
         Object stackIn_45_0 = null;
-        Object stackIn_46_0 = null;
-        Object stackIn_47_0 = null;
-        int stackIn_47_1 = 0;
+        int stackIn_45_1 = 0;
+        Object stackIn_49_0 = null;
+        int stackIn_49_1 = 0;
+        Object stackIn_50_0 = null;
+        int stackIn_50_1 = 0;
         Object stackIn_51_0 = null;
         int stackIn_51_1 = 0;
-        Object stackIn_52_0 = null;
-        int stackIn_52_1 = 0;
-        Object stackIn_53_0 = null;
-        int stackIn_53_1 = 0;
-        int stackIn_53_2 = 0;
+        int stackIn_51_2 = 0;
+        Object stackIn_58_0 = null;
+        int stackIn_58_1 = 0;
+        Object stackIn_59_0 = null;
+        int stackIn_59_1 = 0;
         Object stackIn_60_0 = null;
         int stackIn_60_1 = 0;
-        Object stackIn_61_0 = null;
-        int stackIn_61_1 = 0;
-        Object stackIn_62_0 = null;
-        int stackIn_62_1 = 0;
-        int stackIn_62_2 = 0;
+        int stackIn_60_2 = 0;
         int stackOut_2_0 = 0;
         int stackOut_1_0 = 0;
         int stackOut_5_0 = 0;
         int stackOut_4_0 = 0;
+        int stackOut_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_11_0 = 0;
         int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_12_0 = 0;
+        Object stackOut_57_0 = null;
+        int stackOut_57_1 = 0;
         Object stackOut_59_0 = null;
         int stackOut_59_1 = 0;
-        Object stackOut_61_0 = null;
-        int stackOut_61_1 = 0;
-        int stackOut_61_2 = 0;
-        Object stackOut_60_0 = null;
-        int stackOut_60_1 = 0;
-        int stackOut_60_2 = 0;
+        int stackOut_59_2 = 0;
+        Object stackOut_58_0 = null;
+        int stackOut_58_1 = 0;
+        int stackOut_58_2 = 0;
+        Object stackOut_42_0 = null;
         Object stackOut_44_0 = null;
-        Object stackOut_46_0 = null;
-        int stackOut_46_1 = 0;
-        Object stackOut_45_0 = null;
-        int stackOut_45_1 = 0;
+        int stackOut_44_1 = 0;
+        Object stackOut_43_0 = null;
+        int stackOut_43_1 = 0;
+        Object stackOut_48_0 = null;
+        int stackOut_48_1 = 0;
         Object stackOut_50_0 = null;
         int stackOut_50_1 = 0;
-        Object stackOut_52_0 = null;
-        int stackOut_52_1 = 0;
-        int stackOut_52_2 = 0;
-        Object stackOut_51_0 = null;
-        int stackOut_51_1 = 0;
-        int stackOut_51_2 = 0;
+        int stackOut_50_2 = 0;
+        Object stackOut_49_0 = null;
+        int stackOut_49_1 = 0;
+        int stackOut_49_2 = 0;
+        Object stackOut_30_0 = null;
         Object stackOut_32_0 = null;
-        Object stackOut_34_0 = null;
-        int stackOut_34_1 = 0;
-        Object stackOut_33_0 = null;
-        int stackOut_33_1 = 0;
+        int stackOut_32_1 = 0;
+        Object stackOut_31_0 = null;
+        int stackOut_31_1 = 0;
+        Object stackOut_37_0 = null;
+        int stackOut_37_1 = 0;
         Object stackOut_39_0 = null;
         int stackOut_39_1 = 0;
-        Object stackOut_41_0 = null;
-        int stackOut_41_1 = 0;
-        int stackOut_41_2 = 0;
-        Object stackOut_40_0 = null;
-        int stackOut_40_1 = 0;
-        int stackOut_40_2 = 0;
+        int stackOut_39_2 = 0;
+        Object stackOut_38_0 = null;
+        int stackOut_38_1 = 0;
+        int stackOut_38_2 = 0;
+        Object stackOut_14_0 = null;
         Object stackOut_16_0 = null;
-        Object stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        Object stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
+        int stackOut_16_1 = 0;
+        Object stackOut_15_0 = null;
+        int stackOut_15_1 = 0;
+        Object stackOut_24_0 = null;
+        int stackOut_24_1 = 0;
         Object stackOut_26_0 = null;
         int stackOut_26_1 = 0;
-        Object stackOut_28_0 = null;
-        int stackOut_28_1 = 0;
-        int stackOut_28_2 = 0;
-        Object stackOut_27_0 = null;
-        int stackOut_27_1 = 0;
-        int stackOut_27_2 = 0;
+        int stackOut_26_2 = 0;
+        Object stackOut_25_0 = null;
+        int stackOut_25_1 = 0;
+        int stackOut_25_2 = 0;
         L0: {
           var11 = VoidHunters.field_G;
           if (param1 < param2) {
@@ -425,37 +421,29 @@ final class kbb extends le {
         }
         L2: {
           var6 = stackIn_6_0;
-          if (param0 <= -10) {
+          if (var5 < param3) {
+            stackOut_8_0 = param3;
+            stackIn_9_0 = stackOut_8_0;
             break L2;
           } else {
-            kbb.e((byte) 5);
+            stackOut_7_0 = var5;
+            stackIn_9_0 = stackOut_7_0;
             break L2;
           }
         }
         L3: {
-          if (var5 < param3) {
-            stackOut_10_0 = param3;
-            stackIn_11_0 = stackOut_10_0;
-            break L3;
-          } else {
-            stackOut_9_0 = var5;
-            stackIn_11_0 = stackOut_9_0;
-            break L3;
-          }
-        }
-        L4: {
-          var5 = stackIn_11_0;
+          var5 = stackIn_9_0;
           if (var6 <= param3) {
-            stackOut_13_0 = var6;
-            stackIn_14_0 = stackOut_13_0;
-            break L4;
+            stackOut_11_0 = var6;
+            stackIn_12_0 = stackOut_11_0;
+            break L3;
           } else {
-            stackOut_12_0 = param3;
-            stackIn_14_0 = stackOut_12_0;
-            break L4;
+            stackOut_10_0 = param3;
+            stackIn_12_0 = stackOut_10_0;
+            break L3;
           }
         }
-        var6 = stackIn_14_0;
+        var6 = stackIn_12_0;
         var7 = -var6 + var5;
         ((kbb) this).field_l = (var5 + var6) / 2;
         if (0 >= var7) {
@@ -465,32 +453,32 @@ final class kbb extends le {
               ((kbb) this).field_k = 0;
               return;
             } else {
-              L5: {
-                stackOut_59_0 = this;
-                stackOut_59_1 = var7 << 12;
-                stackIn_61_0 = stackOut_59_0;
-                stackIn_61_1 = stackOut_59_1;
-                stackIn_60_0 = stackOut_59_0;
-                stackIn_60_1 = stackOut_59_1;
+              L4: {
+                stackOut_57_0 = this;
+                stackOut_57_1 = var7 << 12;
+                stackIn_59_0 = stackOut_57_0;
+                stackIn_59_1 = stackOut_57_1;
+                stackIn_58_0 = stackOut_57_0;
+                stackIn_58_1 = stackOut_57_1;
                 if (((kbb) this).field_l <= 2048) {
-                  stackOut_61_0 = this;
-                  stackOut_61_1 = stackIn_61_1;
-                  stackOut_61_2 = ((kbb) this).field_l * 2;
-                  stackIn_62_0 = stackOut_61_0;
-                  stackIn_62_1 = stackOut_61_1;
-                  stackIn_62_2 = stackOut_61_2;
-                  break L5;
+                  stackOut_59_0 = this;
+                  stackOut_59_1 = stackIn_59_1;
+                  stackOut_59_2 = ((kbb) this).field_l * 2;
+                  stackIn_60_0 = stackOut_59_0;
+                  stackIn_60_1 = stackOut_59_1;
+                  stackIn_60_2 = stackOut_59_2;
+                  break L4;
                 } else {
-                  stackOut_60_0 = this;
-                  stackOut_60_1 = stackIn_60_1;
-                  stackOut_60_2 = -(((kbb) this).field_l * 2) + 8192;
-                  stackIn_62_0 = stackOut_60_0;
-                  stackIn_62_1 = stackOut_60_1;
-                  stackIn_62_2 = stackOut_60_2;
-                  break L5;
+                  stackOut_58_0 = this;
+                  stackOut_58_1 = stackIn_58_1;
+                  stackOut_58_2 = -(((kbb) this).field_l * 2) + 8192;
+                  stackIn_60_0 = stackOut_58_0;
+                  stackIn_60_1 = stackOut_58_1;
+                  stackIn_60_2 = stackOut_58_2;
+                  break L4;
                 }
               }
-              ((kbb) this).field_k = stackIn_62_1 / stackIn_62_2;
+              ((kbb) this).field_k = stackIn_60_1 / stackIn_60_2;
               return;
             }
           } else {
@@ -503,57 +491,57 @@ final class kbb extends le {
           var10 = (-param3 + var5 << 12) / var7;
           if (var5 != param2) {
             if (var5 != param1) {
-              L6: {
-                stackOut_44_0 = this;
-                stackIn_46_0 = stackOut_44_0;
-                stackIn_45_0 = stackOut_44_0;
+              L5: {
+                stackOut_42_0 = this;
+                stackIn_44_0 = stackOut_42_0;
+                stackIn_43_0 = stackOut_42_0;
                 if (var6 != param2) {
-                  stackOut_46_0 = this;
-                  stackOut_46_1 = -var8 + 20480;
-                  stackIn_47_0 = stackOut_46_0;
-                  stackIn_47_1 = stackOut_46_1;
-                  break L6;
+                  stackOut_44_0 = this;
+                  stackOut_44_1 = -var8 + 20480;
+                  stackIn_45_0 = stackOut_44_0;
+                  stackIn_45_1 = stackOut_44_1;
+                  break L5;
                 } else {
-                  stackOut_45_0 = this;
-                  stackOut_45_1 = var9 + 12288;
-                  stackIn_47_0 = stackOut_45_0;
-                  stackIn_47_1 = stackOut_45_1;
-                  break L6;
+                  stackOut_43_0 = this;
+                  stackOut_43_1 = var9 + 12288;
+                  stackIn_45_0 = stackOut_43_0;
+                  stackIn_45_1 = stackOut_43_1;
+                  break L5;
                 }
               }
-              ((kbb) this).field_i = stackIn_47_1;
+              ((kbb) this).field_i = stackIn_45_1;
               ((kbb) this).field_i = ((kbb) this).field_i / 6;
               if (((kbb) this).field_l > 0) {
                 if (4096 <= ((kbb) this).field_l) {
                   ((kbb) this).field_k = 0;
                   return;
                 } else {
-                  L7: {
-                    stackOut_50_0 = this;
-                    stackOut_50_1 = var7 << 12;
-                    stackIn_52_0 = stackOut_50_0;
-                    stackIn_52_1 = stackOut_50_1;
-                    stackIn_51_0 = stackOut_50_0;
-                    stackIn_51_1 = stackOut_50_1;
+                  L6: {
+                    stackOut_48_0 = this;
+                    stackOut_48_1 = var7 << 12;
+                    stackIn_50_0 = stackOut_48_0;
+                    stackIn_50_1 = stackOut_48_1;
+                    stackIn_49_0 = stackOut_48_0;
+                    stackIn_49_1 = stackOut_48_1;
                     if (((kbb) this).field_l <= 2048) {
-                      stackOut_52_0 = this;
-                      stackOut_52_1 = stackIn_52_1;
-                      stackOut_52_2 = ((kbb) this).field_l * 2;
-                      stackIn_53_0 = stackOut_52_0;
-                      stackIn_53_1 = stackOut_52_1;
-                      stackIn_53_2 = stackOut_52_2;
-                      break L7;
+                      stackOut_50_0 = this;
+                      stackOut_50_1 = stackIn_50_1;
+                      stackOut_50_2 = ((kbb) this).field_l * 2;
+                      stackIn_51_0 = stackOut_50_0;
+                      stackIn_51_1 = stackOut_50_1;
+                      stackIn_51_2 = stackOut_50_2;
+                      break L6;
                     } else {
-                      stackOut_51_0 = this;
-                      stackOut_51_1 = stackIn_51_1;
-                      stackOut_51_2 = -(((kbb) this).field_l * 2) + 8192;
-                      stackIn_53_0 = stackOut_51_0;
-                      stackIn_53_1 = stackOut_51_1;
-                      stackIn_53_2 = stackOut_51_2;
-                      break L7;
+                      stackOut_49_0 = this;
+                      stackOut_49_1 = stackIn_49_1;
+                      stackOut_49_2 = -(((kbb) this).field_l * 2) + 8192;
+                      stackIn_51_0 = stackOut_49_0;
+                      stackIn_51_1 = stackOut_49_1;
+                      stackIn_51_2 = stackOut_49_2;
+                      break L6;
                     }
                   }
-                  ((kbb) this).field_k = stackIn_53_1 / stackIn_53_2;
+                  ((kbb) this).field_k = stackIn_51_1 / stackIn_51_2;
                   return;
                 }
               } else {
@@ -561,54 +549,54 @@ final class kbb extends le {
                 return;
               }
             } else {
-              L8: {
-                stackOut_32_0 = this;
-                stackIn_34_0 = stackOut_32_0;
-                stackIn_33_0 = stackOut_32_0;
+              L7: {
+                stackOut_30_0 = this;
+                stackIn_32_0 = stackOut_30_0;
+                stackIn_31_0 = stackOut_30_0;
                 if (var6 != param3) {
-                  stackOut_34_0 = this;
-                  stackOut_34_1 = 12288 + -var10;
-                  stackIn_35_0 = stackOut_34_0;
-                  stackIn_35_1 = stackOut_34_1;
-                  break L8;
+                  stackOut_32_0 = this;
+                  stackOut_32_1 = 12288 + -var10;
+                  stackIn_33_0 = stackOut_32_0;
+                  stackIn_33_1 = stackOut_32_1;
+                  break L7;
                 } else {
-                  stackOut_33_0 = this;
-                  stackOut_33_1 = 4096 - -var8;
-                  stackIn_35_0 = stackOut_33_0;
-                  stackIn_35_1 = stackOut_33_1;
-                  break L8;
+                  stackOut_31_0 = this;
+                  stackOut_31_1 = 4096 - -var8;
+                  stackIn_33_0 = stackOut_31_0;
+                  stackIn_33_1 = stackOut_31_1;
+                  break L7;
                 }
               }
-              ((kbb) this).field_i = stackIn_35_1;
+              ((kbb) this).field_i = stackIn_33_1;
               ((kbb) this).field_i = ((kbb) this).field_i / 6;
               if (((kbb) this).field_l > 0) {
                 if (4096 > ((kbb) this).field_l) {
-                  L9: {
-                    stackOut_39_0 = this;
-                    stackOut_39_1 = var7 << 12;
-                    stackIn_41_0 = stackOut_39_0;
-                    stackIn_41_1 = stackOut_39_1;
-                    stackIn_40_0 = stackOut_39_0;
-                    stackIn_40_1 = stackOut_39_1;
+                  L8: {
+                    stackOut_37_0 = this;
+                    stackOut_37_1 = var7 << 12;
+                    stackIn_39_0 = stackOut_37_0;
+                    stackIn_39_1 = stackOut_37_1;
+                    stackIn_38_0 = stackOut_37_0;
+                    stackIn_38_1 = stackOut_37_1;
                     if (((kbb) this).field_l <= 2048) {
-                      stackOut_41_0 = this;
-                      stackOut_41_1 = stackIn_41_1;
-                      stackOut_41_2 = ((kbb) this).field_l * 2;
-                      stackIn_42_0 = stackOut_41_0;
-                      stackIn_42_1 = stackOut_41_1;
-                      stackIn_42_2 = stackOut_41_2;
-                      break L9;
+                      stackOut_39_0 = this;
+                      stackOut_39_1 = stackIn_39_1;
+                      stackOut_39_2 = ((kbb) this).field_l * 2;
+                      stackIn_40_0 = stackOut_39_0;
+                      stackIn_40_1 = stackOut_39_1;
+                      stackIn_40_2 = stackOut_39_2;
+                      break L8;
                     } else {
-                      stackOut_40_0 = this;
-                      stackOut_40_1 = stackIn_40_1;
-                      stackOut_40_2 = -(((kbb) this).field_l * 2) + 8192;
-                      stackIn_42_0 = stackOut_40_0;
-                      stackIn_42_1 = stackOut_40_1;
-                      stackIn_42_2 = stackOut_40_2;
-                      break L9;
+                      stackOut_38_0 = this;
+                      stackOut_38_1 = stackIn_38_1;
+                      stackOut_38_2 = -(((kbb) this).field_l * 2) + 8192;
+                      stackIn_40_0 = stackOut_38_0;
+                      stackIn_40_1 = stackOut_38_1;
+                      stackIn_40_2 = stackOut_38_2;
+                      break L8;
                     }
                   }
-                  ((kbb) this).field_k = stackIn_42_1 / stackIn_42_2;
+                  ((kbb) this).field_k = stackIn_40_1 / stackIn_40_2;
                   return;
                 } else {
                   ((kbb) this).field_k = 0;
@@ -620,54 +608,54 @@ final class kbb extends le {
               }
             }
           } else {
-            L10: {
-              stackOut_16_0 = this;
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_17_0 = stackOut_16_0;
+            L9: {
+              stackOut_14_0 = this;
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_15_0 = stackOut_14_0;
               if (var6 != param1) {
-                stackOut_18_0 = this;
-                stackOut_18_1 = -var9 + 4096;
-                stackIn_19_0 = stackOut_18_0;
-                stackIn_19_1 = stackOut_18_1;
-                break L10;
+                stackOut_16_0 = this;
+                stackOut_16_1 = -var9 + 4096;
+                stackIn_17_0 = stackOut_16_0;
+                stackIn_17_1 = stackOut_16_1;
+                break L9;
               } else {
-                stackOut_17_0 = this;
-                stackOut_17_1 = 20480 - -var10;
-                stackIn_19_0 = stackOut_17_0;
-                stackIn_19_1 = stackOut_17_1;
-                break L10;
+                stackOut_15_0 = this;
+                stackOut_15_1 = 20480 - -var10;
+                stackIn_17_0 = stackOut_15_0;
+                stackIn_17_1 = stackOut_15_1;
+                break L9;
               }
             }
-            ((kbb) this).field_i = stackIn_19_1;
+            ((kbb) this).field_i = stackIn_17_1;
             ((kbb) this).field_i = ((kbb) this).field_i / 6;
             if (((kbb) this).field_l > 0) {
               if (4096 > ((kbb) this).field_l) {
-                L11: {
-                  stackOut_26_0 = this;
-                  stackOut_26_1 = var7 << 12;
-                  stackIn_28_0 = stackOut_26_0;
-                  stackIn_28_1 = stackOut_26_1;
-                  stackIn_27_0 = stackOut_26_0;
-                  stackIn_27_1 = stackOut_26_1;
+                L10: {
+                  stackOut_24_0 = this;
+                  stackOut_24_1 = var7 << 12;
+                  stackIn_26_0 = stackOut_24_0;
+                  stackIn_26_1 = stackOut_24_1;
+                  stackIn_25_0 = stackOut_24_0;
+                  stackIn_25_1 = stackOut_24_1;
                   if (((kbb) this).field_l <= 2048) {
-                    stackOut_28_0 = this;
-                    stackOut_28_1 = stackIn_28_1;
-                    stackOut_28_2 = ((kbb) this).field_l * 2;
-                    stackIn_29_0 = stackOut_28_0;
-                    stackIn_29_1 = stackOut_28_1;
-                    stackIn_29_2 = stackOut_28_2;
-                    break L11;
+                    stackOut_26_0 = this;
+                    stackOut_26_1 = stackIn_26_1;
+                    stackOut_26_2 = ((kbb) this).field_l * 2;
+                    stackIn_27_0 = stackOut_26_0;
+                    stackIn_27_1 = stackOut_26_1;
+                    stackIn_27_2 = stackOut_26_2;
+                    break L10;
                   } else {
-                    stackOut_27_0 = this;
-                    stackOut_27_1 = stackIn_27_1;
-                    stackOut_27_2 = -(((kbb) this).field_l * 2) + 8192;
-                    stackIn_29_0 = stackOut_27_0;
-                    stackIn_29_1 = stackOut_27_1;
-                    stackIn_29_2 = stackOut_27_2;
-                    break L11;
+                    stackOut_25_0 = this;
+                    stackOut_25_1 = stackIn_25_1;
+                    stackOut_25_2 = -(((kbb) this).field_l * 2) + 8192;
+                    stackIn_27_0 = stackOut_25_0;
+                    stackIn_27_1 = stackOut_25_1;
+                    stackIn_27_2 = stackOut_25_2;
+                    break L10;
                   }
                 }
-                ((kbb) this).field_k = stackIn_29_1 / stackIn_29_2;
+                ((kbb) this).field_k = stackIn_27_1 / stackIn_27_2;
                 return;
               } else {
                 ((kbb) this).field_k = 0;

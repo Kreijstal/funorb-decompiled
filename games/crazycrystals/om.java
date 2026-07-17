@@ -157,7 +157,7 @@ abstract class om extends qm implements he {
         }
     }
 
-    private final boolean a(qm param0, boolean param1) {
+    private final boolean a(qm param0) {
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -286,7 +286,8 @@ abstract class om extends qm implements he {
             if (var5_int == 80) {
               L2: {
                 if (cp.field_k[81]) {
-                  stackOut_10_0 = this.a(param2, false);
+                  int discarded$3 = 0;
+                  stackOut_10_0 = this.a(param2);
                   stackIn_11_0 = stackOut_10_0;
                   break L2;
                 } else {
@@ -540,56 +541,26 @@ abstract class om extends qm implements he {
         if (0 == param3) {
           if (((om) this).field_i != null) {
             ((om) this).field_i.a(param0, false, param2, (qm) this, true);
-            if (((om) this).field_w == null) {
-              if (param1 >= -12) {
-                ((om) this).field_w = null;
-                return;
-              } else {
-                return;
-              }
-            } else {
+            if (((om) this).field_w != null) {
               ((om) this).field_w.a(((om) this).field_j + param0, (byte) -127, ((om) this).field_r + param2, param3);
-              if (param1 >= -12) {
-                ((om) this).field_w = null;
-                return;
-              } else {
-                return;
-              }
+              return;
+            } else {
+              return;
             }
           } else {
-            if (((om) this).field_w == null) {
-              if (param1 >= -12) {
-                ((om) this).field_w = null;
-                return;
-              } else {
-                return;
-              }
-            } else {
+            if (((om) this).field_w != null) {
               ((om) this).field_w.a(((om) this).field_j + param0, (byte) -127, ((om) this).field_r + param2, param3);
-              if (param1 >= -12) {
-                ((om) this).field_w = null;
-                return;
-              } else {
-                return;
-              }
+              return;
+            } else {
+              return;
             }
           }
         } else {
-          if (((om) this).field_w == null) {
-            if (param1 >= -12) {
-              ((om) this).field_w = null;
-              return;
-            } else {
-              return;
-            }
-          } else {
+          if (((om) this).field_w != null) {
             ((om) this).field_w.a(((om) this).field_j + param0, (byte) -127, ((om) this).field_r + param2, param3);
-            if (param1 >= -12) {
-              ((om) this).field_w = null;
-              return;
-            } else {
-              return;
-            }
+            return;
+          } else {
+            return;
           }
         }
     }
@@ -1083,7 +1054,7 @@ abstract class om extends qm implements he {
           L0: {
             L1: {
               L2: {
-                var3_int = 7 / ((param0 - -63) / 46);
+                var3_int = 7;
                 if (null == ((om) this).field_w) {
                   break L2;
                 } else {
@@ -1111,7 +1082,7 @@ abstract class om extends qm implements he {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var3;
-            stackOut_6_1 = new StringBuilder().append("om.W(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("om.W(").append(4).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;

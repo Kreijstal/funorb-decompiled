@@ -18,7 +18,7 @@ final class nd implements jm {
     static volatile int field_l;
     private int field_o;
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         int var1 = 0;
         field_h = null;

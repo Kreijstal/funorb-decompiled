@@ -6,11 +6,14 @@ final class h extends gi {
     int[] field_j;
     boolean field_i;
 
-    final static void a(boolean param0) {
-        int var1 = jj.c(32059);
-        int var2 = kf.a(false);
+    final static void a() {
+        int discarded$0 = 32059;
+        int var1 = jj.c();
+        int discarded$1 = 0;
+        int var2 = kf.a();
         ia.field_a.a(var2 + (ch.field_B << 1), hg.field_rb - lg.field_i, var1 + (lg.field_i << 1), -ch.field_B + jc.field_i, 7453);
-        hl.a(0);
+        int discarded$2 = 0;
+        hl.a();
     }
 
     final static void d(int param0) {

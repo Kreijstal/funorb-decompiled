@@ -14,19 +14,16 @@ final class la extends l {
 
     final static void a(int param0, eh param1) {
         gj var2 = null;
-        if (param0 != 1048576) {
-            return;
-        }
         try {
             gj.a(param1.a("headers.packvorbis", 100, ""));
             var2 = gj.a(param1, "jagex logo2.packvorbis", "");
             ml discarded$0 = var2.a();
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "la.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "la.B(" + 1048576 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_h = null;
         field_i = null;
         field_m = null;
@@ -57,7 +54,8 @@ final class la extends l {
             if (null == wc.field_f) {
               break L0;
             } else {
-              wl.a(1048576, param0 + -10509, param1, param3, param2);
+              int discarded$3 = 1;
+              wl.a(1048576, param0 + -10509, param1, param3);
               break L0;
             }
           }
@@ -75,7 +73,7 @@ final class la extends l {
                       if (null == qi.field_b) {
                         break L2;
                       } else {
-                        vg.field_B.a(param2, 37, qi.field_b);
+                        vg.field_B.a(true, 37, qi.field_b);
                         break L2;
                       }
                     }
@@ -97,7 +95,7 @@ final class la extends l {
           L3: {
             var4_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var4_ref;
-            stackOut_17_1 = new StringBuilder().append("la.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_17_1 = new StringBuilder().append("la.A(").append(param0).append(44).append(param1).append(44).append(1).append(44);
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;

@@ -13,7 +13,7 @@ abstract class mg extends df implements el {
 
     abstract int h(int param0);
 
-    public static void i(int param0) {
+    public static void i() {
         field_F = null;
         field_C = null;
         field_E = null;

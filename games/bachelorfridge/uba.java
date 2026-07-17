@@ -49,7 +49,7 @@ final class uba extends td {
         var3 = BachelorFridge.field_y;
         try {
           L0: {
-            var2_int = param0;
+            var2_int = 0;
             L1: while (true) {
               if (var2_int >= param1.length) {
                 break L0;
@@ -65,7 +65,7 @@ final class uba extends td {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var2;
-            stackOut_5_1 = new StringBuilder().append("uba.C(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("uba.C(").append(0).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;

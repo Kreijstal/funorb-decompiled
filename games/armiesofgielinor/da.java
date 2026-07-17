@@ -70,7 +70,8 @@ final class da {
     final static void a(int param0) {
         mv.field_d = mg.field_e.g(1);
         CharSequence var2 = (CharSequence) (Object) mv.field_d;
-        ft.field_p = k.a(var2, false);
+        int discarded$0 = 0;
+        ft.field_p = k.a(var2);
     }
 
     final static boolean a(int param0, java.applet.Applet param1) {
@@ -420,14 +421,15 @@ final class da {
           L0: {
             param0 = ha.b(param0, param4, -4);
             var5_int = param2[param0].length;
-            var6 = param1;
+            var6 = 0;
             L1: while (true) {
               if (var6 >= var5_int) {
                 break L0;
               } else {
                 var7 = var6;
                 var8 = jj.a((byte) 103, var7, param2, param0);
-                var9 = t.a(var8, param3, (byte) 118);
+                int discarded$2 = 118;
+                var9 = t.a(var8, param3);
                 aw.field_j[param4][param0][var7] = var9;
                 var6++;
                 continue L1;
@@ -439,7 +441,7 @@ final class da {
           L2: {
             var5 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var5;
-            stackOut_5_1 = new StringBuilder().append("da.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_5_1 = new StringBuilder().append("da.B(").append(param0).append(44).append(0).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -503,16 +505,17 @@ final class da {
     }
 
     final static void b(int param0) {
-        t.field_c = kv.k(5);
+        int discarded$0 = 5;
+        t.field_c = kv.k();
         rl.field_C = new gk();
         if (param0 != -2) {
             Object var2 = null;
-            boolean discarded$0 = da.a(43, (java.applet.Applet) null);
+            boolean discarded$1 = da.a(43, (java.applet.Applet) null);
         }
         td.a(true, true, param0 + 25);
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -570,7 +573,8 @@ final class da {
                 }
               } else {
                 if (1 != var2) {
-                  af.a((Throwable) null, 70, "LR1: " + cm.b(false));
+                  int discarded$1 = 0;
+                  af.a((Throwable) null, 70, "LR1: " + cm.b());
                   dj.a((byte) -127);
                   break L1;
                 } else {

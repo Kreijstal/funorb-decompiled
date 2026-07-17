@@ -67,7 +67,7 @@ final class pk {
         return stackIn_1_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         int var1 = 1;
@@ -75,13 +75,56 @@ final class pk {
     }
 
     final static boolean b(byte param0) {
-        if (fk.field_ab < 10) {
+        int stackIn_7_0 = 0;
+        int stackIn_16_0 = 0;
+        int stackOut_15_0 = 0;
+        int stackOut_14_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_5_0 = 0;
+        if (param0 == 109) {
+          if (fk.field_ab >= 10) {
+            if (gk.field_kb) {
+              return false;
+            } else {
+              L0: {
+                if (mg.a(-114)) {
+                  stackOut_15_0 = 0;
+                  stackIn_16_0 = stackOut_15_0;
+                  break L0;
+                } else {
+                  stackOut_14_0 = 1;
+                  stackIn_16_0 = stackOut_14_0;
+                  break L0;
+                }
+              }
+              return stackIn_16_0 != 0;
+            }
+          } else {
             return false;
-        }
-        if (gk.field_kb) {
+          }
+        } else {
+          field_a = null;
+          if (fk.field_ab >= 10) {
+            if (gk.field_kb) {
+              return false;
+            } else {
+              L1: {
+                if (mg.a(-114)) {
+                  stackOut_6_0 = 0;
+                  stackIn_7_0 = stackOut_6_0;
+                  break L1;
+                } else {
+                  stackOut_5_0 = 1;
+                  stackIn_7_0 = stackOut_5_0;
+                  break L1;
+                }
+              }
+              return stackIn_7_0 != 0;
+            }
+          } else {
             return false;
+          }
         }
-        return !mg.a(-114) ? true : false;
     }
 
     static {

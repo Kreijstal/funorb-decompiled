@@ -17,24 +17,24 @@ final class tf {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        int stackIn_45_0 = 0;
-        RuntimeException stackIn_47_0 = null;
-        StringBuilder stackIn_47_1 = null;
-        RuntimeException stackIn_48_0 = null;
-        StringBuilder stackIn_48_1 = null;
-        RuntimeException stackIn_49_0 = null;
-        StringBuilder stackIn_49_1 = null;
-        String stackIn_49_2 = null;
+        int stackIn_41_0 = 0;
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
+        RuntimeException stackIn_44_0 = null;
+        StringBuilder stackIn_44_1 = null;
+        RuntimeException stackIn_45_0 = null;
+        StringBuilder stackIn_45_1 = null;
+        String stackIn_45_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_44_0 = 0;
-        RuntimeException stackOut_46_0 = null;
-        StringBuilder stackOut_46_1 = null;
-        RuntimeException stackOut_48_0 = null;
-        StringBuilder stackOut_48_1 = null;
-        String stackOut_48_2 = null;
-        RuntimeException stackOut_47_0 = null;
-        StringBuilder stackOut_47_1 = null;
-        String stackOut_47_2 = null;
+        int stackOut_40_0 = 0;
+        RuntimeException stackOut_42_0 = null;
+        StringBuilder stackOut_42_1 = null;
+        RuntimeException stackOut_44_0 = null;
+        StringBuilder stackOut_44_1 = null;
+        String stackOut_44_2 = null;
+        RuntimeException stackOut_43_0 = null;
+        StringBuilder stackOut_43_1 = null;
+        String stackOut_43_2 = null;
         var11 = ZombieDawn.field_J;
         try {
           L0: {
@@ -43,99 +43,86 @@ final class tf {
                 break L1;
               } else {
                 if (param3 <= 36) {
-                  L2: {
-                    var4_int = 0;
-                    if (param1 == 5) {
-                      break L2;
-                    } else {
-                      field_b = null;
-                      break L2;
-                    }
-                  }
+                  var4_int = 0;
                   var5 = 0;
                   var6 = 0;
                   var7 = param2.length();
                   var8 = 0;
-                  L3: while (true) {
+                  L2: while (true) {
                     if (var7 <= var8) {
                       if (var5 != 0) {
-                        stackOut_44_0 = var6;
-                        stackIn_45_0 = stackOut_44_0;
+                        stackOut_40_0 = var6;
+                        stackIn_41_0 = stackOut_40_0;
                         break L0;
                       } else {
                         throw new NumberFormatException();
                       }
                     } else {
-                      L4: {
-                        L5: {
+                      L3: {
+                        L4: {
                           var9 = param2.charAt(var8);
                           if (var8 == 0) {
                             if (var9 == 45) {
                               var4_int = 1;
                               var8++;
-                              break L4;
+                              break L3;
                             } else {
                               if (var9 != 43) {
-                                break L5;
+                                break L4;
                               } else {
-                                if (param0) {
-                                  var8++;
-                                  break L4;
-                                } else {
-                                  break L5;
-                                }
+                                break L4;
                               }
                             }
                           } else {
-                            break L5;
+                            break L4;
                           }
                         }
-                        L6: {
-                          L7: {
+                        L5: {
+                          L6: {
                             if (var9 < 48) {
-                              break L7;
+                              break L6;
                             } else {
                               if (var9 <= 57) {
                                 var9 -= 48;
-                                break L6;
+                                break L5;
                               } else {
+                                break L6;
+                              }
+                            }
+                          }
+                          L7: {
+                            if (65 > var9) {
+                              break L7;
+                            } else {
+                              if (90 < var9) {
                                 break L7;
+                              } else {
+                                var9 -= 55;
+                                break L5;
                               }
                             }
                           }
                           L8: {
-                            if (65 > var9) {
-                              break L8;
-                            } else {
-                              if (90 < var9) {
-                                break L8;
-                              } else {
-                                var9 -= 55;
-                                break L6;
-                              }
-                            }
-                          }
-                          L9: {
                             if (var9 < 97) {
-                              break L9;
+                              break L8;
                             } else {
                               if (var9 <= 122) {
                                 var9 -= 87;
-                                break L6;
+                                break L5;
                               } else {
-                                break L9;
+                                break L8;
                               }
                             }
                           }
                           throw new NumberFormatException();
                         }
                         if (var9 < param3) {
-                          L10: {
+                          L9: {
                             if (var4_int != 0) {
                               var9 = -var9;
-                              break L10;
+                              break L9;
                             } else {
-                              break L10;
+                              break L9;
                             }
                           }
                           var10 = param3 * var6 - -var9;
@@ -144,14 +131,15 @@ final class tf {
                           } else {
                             var5 = 1;
                             var6 = var10;
-                            break L4;
+                            var8++;
+                            break L3;
                           }
                         } else {
                           throw new NumberFormatException();
                         }
                       }
                       var8++;
-                      continue L3;
+                      continue L2;
                     }
                   }
                 } else {
@@ -163,35 +151,35 @@ final class tf {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L11: {
+          L10: {
             var4 = decompiledCaughtException;
-            stackOut_46_0 = (RuntimeException) var4;
-            stackOut_46_1 = new StringBuilder().append("tf.A(").append(param0).append(44).append(param1).append(44);
-            stackIn_48_0 = stackOut_46_0;
-            stackIn_48_1 = stackOut_46_1;
-            stackIn_47_0 = stackOut_46_0;
-            stackIn_47_1 = stackOut_46_1;
+            stackOut_42_0 = (RuntimeException) var4;
+            stackOut_42_1 = new StringBuilder().append("tf.A(").append(1).append(44).append(5).append(44);
+            stackIn_44_0 = stackOut_42_0;
+            stackIn_44_1 = stackOut_42_1;
+            stackIn_43_0 = stackOut_42_0;
+            stackIn_43_1 = stackOut_42_1;
             if (param2 == null) {
-              stackOut_48_0 = (RuntimeException) (Object) stackIn_48_0;
-              stackOut_48_1 = (StringBuilder) (Object) stackIn_48_1;
-              stackOut_48_2 = "null";
-              stackIn_49_0 = stackOut_48_0;
-              stackIn_49_1 = stackOut_48_1;
-              stackIn_49_2 = stackOut_48_2;
-              break L11;
+              stackOut_44_0 = (RuntimeException) (Object) stackIn_44_0;
+              stackOut_44_1 = (StringBuilder) (Object) stackIn_44_1;
+              stackOut_44_2 = "null";
+              stackIn_45_0 = stackOut_44_0;
+              stackIn_45_1 = stackOut_44_1;
+              stackIn_45_2 = stackOut_44_2;
+              break L10;
             } else {
-              stackOut_47_0 = (RuntimeException) (Object) stackIn_47_0;
-              stackOut_47_1 = (StringBuilder) (Object) stackIn_47_1;
-              stackOut_47_2 = "{...}";
-              stackIn_49_0 = stackOut_47_0;
-              stackIn_49_1 = stackOut_47_1;
-              stackIn_49_2 = stackOut_47_2;
-              break L11;
+              stackOut_43_0 = (RuntimeException) (Object) stackIn_43_0;
+              stackOut_43_1 = (StringBuilder) (Object) stackIn_43_1;
+              stackOut_43_2 = "{...}";
+              stackIn_45_0 = stackOut_43_0;
+              stackIn_45_1 = stackOut_43_1;
+              stackIn_45_2 = stackOut_43_2;
+              break L10;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_49_0, stackIn_49_2 + 44 + param3 + 41);
+          throw sh.a((Throwable) (Object) stackIn_45_0, stackIn_45_2 + 44 + param3 + 41);
         }
-        return stackIn_45_0;
+        return stackIn_41_0;
     }
 
     final fa b(int param0) {
@@ -216,7 +204,7 @@ final class tf {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int[] var1_array = null;
         int var2 = 0;

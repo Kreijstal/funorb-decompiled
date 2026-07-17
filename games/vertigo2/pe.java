@@ -28,7 +28,7 @@ final class pe extends li {
     int field_D;
     int field_v;
 
-    final static wp a(String param0, boolean param1) {
+    final static wp a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -151,19 +151,16 @@ final class pe extends li {
         ((pe) this).field_K = null;
     }
 
-    final static void a(ud param0, int param1) {
+    final static void a(ud param0) {
         param0.field_z = new int[]{-1};
-        if (param1 <= 82) {
-            return;
-        }
         try {
             param0.field_u = new char[]{'?'};
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "pe.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "pe.D(" + (param0 != null ? "{...}" : "null") + 44 + 97 + 41);
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_u = null;
         field_L = null;
         field_t = null;

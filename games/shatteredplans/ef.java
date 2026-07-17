@@ -25,7 +25,7 @@ final class ef {
         }
     }
 
-    final static boolean a(char param0, boolean param1) {
+    final static boolean a(char param0) {
         int stackIn_25_0 = 0;
         int stackIn_28_0 = 0;
         int stackOut_26_0 = 0;
@@ -105,7 +105,7 @@ final class ef {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         kc.field_b = new pf();
     }
 

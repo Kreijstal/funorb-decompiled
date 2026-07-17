@@ -5,11 +5,11 @@ final class cda {
     gfa[] field_b;
     int field_a;
 
-    final static hn a(int param0) {
+    final static hn a() {
         return saa.field_a;
     }
 
-    final static void a(int param0, lu param1, ht param2, boolean param3) {
+    final static void a(int param0, lu param1, ht param2) {
         try {
             RuntimeException var4 = null;
             int var5 = 0;

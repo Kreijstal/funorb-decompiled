@@ -9,11 +9,11 @@ final class ln extends ana {
     private boolean field_z;
     private boolean field_y;
 
-    private final void h(int param0) {
+    private final void h() {
         ((ln) this).field_n.field_p = 0;
     }
 
-    final static byte[] a(int param0, byte[] param1, int param2, int param3) {
+    final static byte[] a(int param0, byte[] param1, int param2) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         int var5_int = 0;
@@ -179,7 +179,8 @@ final class ln extends ana {
         if (!(((ln) this).field_n.field_p >= 256)) {
             return false;
         }
-        this.h(-11007);
+        int discarded$0 = -11007;
+        this.h();
         return true;
     }
 
@@ -193,7 +194,7 @@ final class ln extends ana {
         }
     }
 
-    final static void f(int param0) {
+    final static void f() {
         int var1_int = 0;
         int var3 = BachelorFridge.field_y;
         try {
@@ -201,9 +202,9 @@ final class ln extends ana {
             for (var1_int = 0; jl.field_q.length > var1_int; var1_int++) {
                 fi.field_m.a((long)jl.field_q[var1_int].hashCode(), (byte) 86, (bw) (Object) new ji(var1_int - -1));
             }
-            int var2 = -38 % ((param0 - 43) / 46);
+            int var2 = 0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ln.B(" + param0 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "ln.B(" + -93 + 41);
         }
     }
 

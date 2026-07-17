@@ -88,10 +88,10 @@ abstract class wm {
           ae.field_b = param12;
           db.field_m = param8;
           mk.field_c = param1;
-          sh.field_b = ao.a(param5, "gameprivacy", param2 + 2993, "lobby");
+          sh.field_b = ao.a(param5, "gameprivacy", 2993, "lobby");
           ad.field_c = ao.a(param5, "ratedgame", 2993, "lobby");
           sa.field_c = ao.a(param5, "opentome", 2993, "lobby");
-          gi.field_c = ao.a(param5, "allowspectators", param2 + 2993, "lobby");
+          gi.field_c = ao.a(param5, "allowspectators", 2993, "lobby");
           gf.field_a = new String[5];
           gf.field_a[4] = be.field_g;
           gf.field_a[1] = jh.field_c;
@@ -120,7 +120,7 @@ abstract class wm {
           fe.field_h = new ci(0L, qn.field_P);
           fe.field_h.field_fb = 1;
           ln.field_cc = new ci(0L, sc.field_h, qf.field_h.toUpperCase());
-          he.field_Hb = new ci((long)param2, ma.field_G, em.field_M.toUpperCase());
+          he.field_Hb = new ci(0L, ma.field_G, em.field_M.toUpperCase());
           oh.field_a = new ci(0L, hl.field_d);
           ue.field_d = new ci(0L, bo.field_e, ql.field_b);
           in.field_b = new ci(0L, e.field_M, de.field_a);

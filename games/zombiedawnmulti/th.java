@@ -215,7 +215,7 @@ final class th {
         }
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_d = null;
         field_e = null;
         field_c = null;
@@ -258,7 +258,7 @@ final class th {
         }
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         byte[] var2 = null;
         if (wc.j(112)) {
             fn.field_b = true;

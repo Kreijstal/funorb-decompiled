@@ -19,7 +19,7 @@ abstract class ph {
 
     abstract void a(int param0, int param1, int param2);
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_g = null;
         field_h = null;
@@ -27,12 +27,7 @@ abstract class ph {
     }
 
     final static void a(int param0, boolean param1) {
-        if (param0 != 25899) {
-            field_h = null;
-            nh.a((byte) -72, true, true);
-            return;
-        }
-        nh.a((byte) -72, true, true);
+        nh.a((byte) -72, true, param1);
     }
 
     static {

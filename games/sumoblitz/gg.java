@@ -8,7 +8,7 @@ final class gg extends pj {
     static ki field_r;
     static qr field_t;
 
-    final static boolean a(String param0, String param1, int param2) {
+    final static boolean a(String param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
@@ -65,7 +65,8 @@ final class gg extends pj {
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0 != 0;
             } else {
-              if (!hp.a(param0, true)) {
+              int discarded$6 = 1;
+              if (!hp.a(param0)) {
                 if (ao.a(param0, 30996)) {
                   stackOut_9_0 = 0;
                   stackIn_10_0 = stackOut_9_0;
@@ -165,7 +166,7 @@ final class gg extends pj {
         return stackIn_26_0 != 0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_t = null;
         field_r = null;
     }
@@ -240,7 +241,8 @@ final class gg extends pj {
             }
             iw.field_b = 0;
             td.field_m = false;
-            ke.a(false);
+            int discarded$1 = 0;
+            ke.a();
             oc.field_e = 1000;
             ag.a(0, oh.field_e % 5 + 1);
             break L0;

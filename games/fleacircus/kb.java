@@ -16,17 +16,17 @@ final class kb extends lh {
     final static void a(int param0, ke param1, rh param2, int param3) {
         wf.field_c = bm.f((byte) 73) * param3 / 1000;
         fl.a((byte) 101, param2);
-        if (param0 != -1) {
-            return;
-        }
         try {
             vc.a((byte) 125, param2);
-            ed.a(param2, (byte) -111);
-            kl.b(param0 ^ -31208);
-            aa.c((byte) -65);
+            int discarded$0 = -111;
+            ed.a(param2);
+            int discarded$1 = 31207;
+            kl.b();
+            int discarded$2 = -65;
+            aa.c();
             vg.field_z = -wf.field_c;
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "kb.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "kb.A(" + -1 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
     }
 
@@ -163,7 +163,7 @@ final class kb extends lh {
     }
 
     final static void a(int param0, boolean param1) {
-        nb.field_a.a(param0, param0, 0);
+        nb.field_a.a(0, 0, 0);
     }
 
     final static uc a(java.awt.Component param0, int param1, int param2, int param3) {

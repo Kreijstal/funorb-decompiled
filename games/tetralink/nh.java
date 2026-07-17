@@ -259,21 +259,13 @@ final class nh extends hl {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            L1: {
-              field_Pb = null;
-              field_Ob = null;
-              if (!param0) {
-                break L1;
-              } else {
-                nh.a(113, -89, (id) null, true, true);
-                break L1;
-              }
-            }
+            field_Pb = null;
+            field_Ob = null;
             field_Lb = null;
             field_Mb = null;
             field_Kb = null;
@@ -282,7 +274,7 @@ final class nh extends hl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) var1, "nh.E(" + param0 + 41);
+          throw oi.a((Throwable) (Object) var1, "nh.E(" + 0 + 41);
         }
     }
 
@@ -348,7 +340,8 @@ final class nh extends hl {
                 break L1;
               } else {
                 if (param2.field_u != null) {
-                  wc.i(3);
+                  int discarded$1 = 3;
+                  wc.i();
                   break L1;
                 } else {
                   break L1;
@@ -606,72 +599,64 @@ final class nh extends hl {
                 break L2;
               }
             }
+            var6 = var5 + var4_int + (param1 - -param0 + param1);
             L3: {
-              var6 = var5 + var4_int + (param1 - -param0 + param1);
-              if (param2 <= -67) {
+              if (~var6 >= ~((nh) this).field_Hb) {
                 break L3;
               } else {
-                ((nh) this).field_Rb = null;
+                var5 = var5 + (((nh) this).field_Hb - var6);
+                var6 = ((nh) this).field_Hb;
                 break L3;
               }
             }
             L4: {
-              if (~var6 >= ~((nh) this).field_Hb) {
+              if (1 != ((nh) this).field_xb) {
                 break L4;
               } else {
-                var5 = var5 + (((nh) this).field_Hb - var6);
-                var6 = ((nh) this).field_Hb;
+                param1 = param1 + (-var6 + ((nh) this).field_Hb) / 2;
                 break L4;
               }
             }
             L5: {
-              if (1 != ((nh) this).field_xb) {
+              if (((nh) this).field_xb == 2) {
+                param1 = param1 + (((nh) this).field_Hb - var6);
                 break L5;
               } else {
-                param1 = param1 + (-var6 + ((nh) this).field_Hb) / 2;
                 break L5;
               }
             }
             L6: {
-              if (((nh) this).field_xb == 2) {
-                param1 = param1 + (((nh) this).field_Hb - var6);
+              if (((nh) this).field_Qb != null) {
+                ((nh) this).field_Qb.a((byte) -105, var4_int, 0, ((nh) this).field_R, param1);
+                ((nh) this).field_Qb.field_J = ((nh) this).field_J;
                 break L6;
               } else {
                 break L6;
               }
             }
             L7: {
-              if (((nh) this).field_Qb != null) {
-                ((nh) this).field_Qb.a((byte) -105, var4_int, 0, ((nh) this).field_R, param1);
-                ((nh) this).field_Qb.field_J = ((nh) this).field_J;
-                break L7;
-              } else {
-                break L7;
-              }
-            }
-            L8: {
               if (null == ((nh) this).field_Rb) {
-                break L8;
+                break L7;
               } else {
-                L9: {
-                  L10: {
+                L8: {
+                  L9: {
                     ((nh) this).field_Rb.a((byte) -106, var5, 0, ((nh) this).field_R, param1 - -var4_int + param0);
                     if (null == ((nh) this).field_Qb) {
-                      break L10;
+                      break L9;
                     } else {
                       ((nh) this).field_Rb.field_xb = 0;
                       if (TetraLink.field_J == 0) {
-                        break L9;
+                        break L8;
                       } else {
-                        break L10;
+                        break L9;
                       }
                     }
                   }
                   ((nh) this).field_Rb.field_xb = ((nh) this).field_xb;
-                  break L9;
+                  break L8;
                 }
                 ((nh) this).field_Rb.field_J = ((nh) this).field_J;
-                break L8;
+                break L7;
               }
             }
             break L0;
@@ -679,7 +664,7 @@ final class nh extends hl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) var4, "nh.C(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw oi.a((Throwable) (Object) var4, "nh.C(" + param0 + 44 + param1 + 44 + -105 + 41);
         }
     }
 

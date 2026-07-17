@@ -90,7 +90,7 @@ final class um {
         return true;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = -48;
         field_c = null;
         field_b = null;

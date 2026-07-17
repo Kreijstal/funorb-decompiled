@@ -15,7 +15,7 @@ final class rl {
         return pc.field_db;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_a = null;
         field_b = null;
         field_c = null;
@@ -55,7 +55,7 @@ final class rl {
               } else {
                 if (param1 > 0) {
                   var6_int = param0[0].field_s;
-                  var7 = param0[param2].field_s;
+                  var7 = param0[2].field_s;
                   var8 = param0[1].field_s;
                   param0[0].c(param5, param3, param4);
                   param0[2].c(-var7 + param1 + param5, param3, param4);
@@ -109,7 +109,7 @@ final class rl {
               break L3;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw dd.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 44 + 2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 

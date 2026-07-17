@@ -30,7 +30,8 @@ final class ud extends qt {
                   jm.a(-1, false, -2);
                   return;
                 } else {
-                  nt.j(13459);
+                  int discarded$4 = 13459;
+                  nt.j();
                   gg.h((byte) -125);
                   System.gc();
                   dd.a((byte) 98);
@@ -52,7 +53,8 @@ final class ud extends qt {
                     jm.a(-1, false, -2);
                     return;
                   } else {
-                    nt.j(13459);
+                    int discarded$5 = 13459;
+                    nt.j();
                     gg.h((byte) -125);
                     System.gc();
                     dd.a((byte) 98);
@@ -85,7 +87,8 @@ final class ud extends qt {
                       jm.a(-1, false, -2);
                       return;
                     } else {
-                      nt.j(13459);
+                      int discarded$6 = 13459;
+                      nt.j();
                       gg.h((byte) -125);
                       System.gc();
                       dd.a((byte) 98);
@@ -108,7 +111,8 @@ final class ud extends qt {
                         jm.a(-1, false, -2);
                         break L1;
                       } else {
-                        nt.j(13459);
+                        int discarded$7 = 13459;
+                        nt.j();
                         gg.h((byte) -125);
                         System.gc();
                         dd.a((byte) 98);
@@ -715,7 +719,7 @@ final class ud extends qt {
         }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_A = null;
         field_B = null;
     }
@@ -738,7 +742,8 @@ final class ud extends qt {
                     if (null == uv.field_i) {
                       if (ow.field_b == null) {
                         L1: {
-                          ml.c(false);
+                          int discarded$16 = 0;
+                          ml.c();
                           if (param4) {
                             df.field_H = ub.field_B;
                             break L1;
@@ -750,7 +755,9 @@ final class ud extends qt {
                         L2: {
                           gt.a(param4, 1);
                           if (ns.field_a > 0) {
-                            we.a(param7, param4, (byte) -119, param6);
+                            int discarded$17 = 11;
+                            int discarded$18 = -119;
+                            we.a(param7, param4);
                             break L2;
                           } else {
                             break L2;
@@ -762,13 +769,13 @@ final class ud extends qt {
                           if (fj.field_a <= 0) {
                             break L3;
                           } else {
-                            ri.a(102, param4, param7, param6);
+                            ri.a(102, param4, param7, 11);
                             break L3;
                           }
                         }
                         L4: {
                           if (ee.field_b > 0) {
-                            lu.a(param7, param6, -2, param9, param4);
+                            lu.a(param7, 11, -2, param9, param4);
                             break L4;
                           } else {
                             break L4;
@@ -791,11 +798,11 @@ final class ud extends qt {
                           }
                           bf.field_u.field_zb.field_E = null;
                           mc.field_d.field_lb = true;
-                          e.a(bf.field_u, param3, param2, param6, 92);
+                          e.a(bf.field_u, param3, param2, 11, 92);
                           break L5;
                         }
-                        w.a(param2, param0, param6, param8, param5, param3, param1);
-                        e.a(bs.field_c, param3, param2, param6, 38);
+                        w.a(param2, false, 11, 16777215, true, param3, 16777215);
+                        e.a(bs.field_c, param3, param2, 11, 38);
                         de.field_c = de.field_c + 1;
                         return;
                       } else {
@@ -815,7 +822,9 @@ final class ud extends qt {
                 df.field_H = ub.field_B;
                 gt.a(param4, 1);
                 if (ns.field_a > 0) {
-                  we.a(param7, param4, (byte) -119, param6);
+                  int discarded$19 = 11;
+                  int discarded$20 = -119;
+                  we.a(param7, param4);
                   break L7;
                 } else {
                   break L7;
@@ -826,7 +835,7 @@ final class ud extends qt {
               if (fj.field_a <= 0) {
                 L8: {
                   if (ee.field_b > 0) {
-                    lu.a(param7, param6, -2, param9, param4);
+                    lu.a(param7, 11, -2, param9, param4);
                     break L8;
                   } else {
                     break L8;
@@ -837,33 +846,33 @@ final class ud extends qt {
                     mc.field_d.field_lb = false;
                     bf.field_u.field_zb.field_E = no.field_I;
                     hl.a(true, bf.field_u.field_Ab);
-                    w.a(param2, param0, param6, param8, param5, param3, param1);
-                    e.a(bs.field_c, param3, param2, param6, 38);
+                    w.a(param2, false, 11, 16777215, true, param3, 16777215);
+                    e.a(bs.field_c, param3, param2, 11, 38);
                     de.field_c = de.field_c + 1;
                     return;
                   } else {
                     bf.field_u.field_zb.field_E = null;
                     mc.field_d.field_lb = true;
-                    e.a(bf.field_u, param3, param2, param6, 92);
-                    w.a(param2, param0, param6, param8, param5, param3, param1);
-                    e.a(bs.field_c, param3, param2, param6, 38);
+                    e.a(bf.field_u, param3, param2, 11, 92);
+                    w.a(param2, false, 11, 16777215, true, param3, 16777215);
+                    e.a(bs.field_c, param3, param2, 11, 38);
                     de.field_c = de.field_c + 1;
                     return;
                   }
                 } else {
                   bf.field_u.field_zb.field_E = null;
                   mc.field_d.field_lb = true;
-                  e.a(bf.field_u, param3, param2, param6, 92);
-                  w.a(param2, param0, param6, param8, param5, param3, param1);
-                  e.a(bs.field_c, param3, param2, param6, 38);
+                  e.a(bf.field_u, param3, param2, 11, 92);
+                  w.a(param2, false, 11, 16777215, true, param3, 16777215);
+                  e.a(bs.field_c, param3, param2, 11, 38);
                   de.field_c = de.field_c + 1;
                   return;
                 }
               } else {
                 L9: {
-                  ri.a(102, param4, param7, param6);
+                  ri.a(102, param4, param7, 11);
                   if (ee.field_b > 0) {
-                    lu.a(param7, param6, -2, param9, param4);
+                    lu.a(param7, 11, -2, param9, param4);
                     break L9;
                   } else {
                     break L9;
@@ -886,11 +895,11 @@ final class ud extends qt {
                   }
                   bf.field_u.field_zb.field_E = null;
                   mc.field_d.field_lb = true;
-                  e.a(bf.field_u, param3, param2, param6, 92);
+                  e.a(bf.field_u, param3, param2, 11, 92);
                   break L10;
                 }
-                w.a(param2, param0, param6, param8, param5, param3, param1);
-                e.a(bs.field_c, param3, param2, param6, 38);
+                w.a(param2, false, 11, 16777215, true, param3, 16777215);
+                e.a(bs.field_c, param3, param2, 11, 38);
                 de.field_c = de.field_c + 1;
                 return;
               }
@@ -899,7 +908,9 @@ final class ud extends qt {
                 df.field_H = (ea.field_a - 640) / 2;
                 gt.a(param4, 1);
                 if (ns.field_a > 0) {
-                  we.a(param7, param4, (byte) -119, param6);
+                  int discarded$21 = 11;
+                  int discarded$22 = -119;
+                  we.a(param7, param4);
                   break L12;
                 } else {
                   break L12;
@@ -911,13 +922,13 @@ final class ud extends qt {
                 if (fj.field_a <= 0) {
                   break L13;
                 } else {
-                  ri.a(102, param4, param7, param6);
+                  ri.a(102, param4, param7, 11);
                   break L13;
                 }
               }
               L14: {
                 if (ee.field_b > 0) {
-                  lu.a(param7, param6, -2, param9, param4);
+                  lu.a(param7, 11, -2, param9, param4);
                   break L14;
                 } else {
                   break L14;
@@ -933,8 +944,8 @@ final class ud extends qt {
                     mc.field_d.field_lb = false;
                     bf.field_u.field_zb.field_E = no.field_I;
                     hl.a(true, bf.field_u.field_Ab);
-                    w.a(param2, param0, param6, param8, param5, param3, param1);
-                    e.a(bs.field_c, param3, param2, param6, 38);
+                    w.a(param2, false, 11, 16777215, true, param3, 16777215);
+                    e.a(bs.field_c, param3, param2, 11, 38);
                     de.field_c = de.field_c + 1;
                     return;
                   }
@@ -942,9 +953,9 @@ final class ud extends qt {
               }
               bf.field_u.field_zb.field_E = null;
               mc.field_d.field_lb = true;
-              e.a(bf.field_u, param3, param2, param6, 92);
-              w.a(param2, param0, param6, param8, param5, param3, param1);
-              e.a(bs.field_c, param3, param2, param6, 38);
+              e.a(bf.field_u, param3, param2, 11, 92);
+              w.a(param2, false, 11, 16777215, true, param3, 16777215);
+              e.a(bs.field_c, param3, param2, 11, 38);
               de.field_c = de.field_c + 1;
               return;
             }
@@ -959,7 +970,8 @@ final class ud extends qt {
                   if (null == uv.field_i) {
                     if (ow.field_b == null) {
                       L17: {
-                        ml.c(false);
+                        int discarded$23 = 0;
+                        ml.c();
                         if (param4) {
                           df.field_H = ub.field_B;
                           break L17;
@@ -971,7 +983,9 @@ final class ud extends qt {
                       L18: {
                         gt.a(param4, 1);
                         if (ns.field_a > 0) {
-                          we.a(param7, param4, (byte) -119, param6);
+                          int discarded$24 = 11;
+                          int discarded$25 = -119;
+                          we.a(param7, param4);
                           break L18;
                         } else {
                           break L18;
@@ -983,13 +997,13 @@ final class ud extends qt {
                         if (fj.field_a <= 0) {
                           break L19;
                         } else {
-                          ri.a(102, param4, param7, param6);
+                          ri.a(102, param4, param7, 11);
                           break L19;
                         }
                       }
                       L20: {
                         if (ee.field_b > 0) {
-                          lu.a(param7, param6, -2, param9, param4);
+                          lu.a(param7, 11, -2, param9, param4);
                           break L20;
                         } else {
                           break L20;
@@ -1012,11 +1026,11 @@ final class ud extends qt {
                         }
                         bf.field_u.field_zb.field_E = null;
                         mc.field_d.field_lb = true;
-                        e.a(bf.field_u, param3, param2, param6, 92);
+                        e.a(bf.field_u, param3, param2, 11, 92);
                         break L21;
                       }
-                      w.a(param2, param0, param6, param8, param5, param3, param1);
-                      e.a(bs.field_c, param3, param2, param6, 38);
+                      w.a(param2, false, 11, 16777215, true, param3, 16777215);
+                      e.a(bs.field_c, param3, param2, 11, 38);
                       de.field_c = de.field_c + 1;
                       return;
                     } else {
@@ -1035,7 +1049,9 @@ final class ud extends qt {
                 df.field_H = (ea.field_a - 640) / 2;
                 gt.a(param4, 1);
                 if (ns.field_a > 0) {
-                  we.a(param7, param4, (byte) -119, param6);
+                  int discarded$26 = 11;
+                  int discarded$27 = -119;
+                  we.a(param7, param4);
                   break L23;
                 } else {
                   break L23;
@@ -1047,13 +1063,13 @@ final class ud extends qt {
                 if (fj.field_a <= 0) {
                   break L24;
                 } else {
-                  ri.a(102, param4, param7, param6);
+                  ri.a(102, param4, param7, 11);
                   break L24;
                 }
               }
               L25: {
                 if (ee.field_b > 0) {
-                  lu.a(param7, param6, -2, param9, param4);
+                  lu.a(param7, 11, -2, param9, param4);
                   break L25;
                 } else {
                   break L25;
@@ -1076,11 +1092,11 @@ final class ud extends qt {
                 }
                 bf.field_u.field_zb.field_E = null;
                 mc.field_d.field_lb = true;
-                e.a(bf.field_u, param3, param2, param6, 92);
+                e.a(bf.field_u, param3, param2, 11, 92);
                 break L26;
               }
-              w.a(param2, param0, param6, param8, param5, param3, param1);
-              e.a(bs.field_c, param3, param2, param6, 38);
+              w.a(param2, false, 11, 16777215, true, param3, 16777215);
+              e.a(bs.field_c, param3, param2, 11, 38);
               de.field_c = de.field_c + 1;
               return;
             } else {
@@ -1088,7 +1104,9 @@ final class ud extends qt {
                 df.field_H = ub.field_B;
                 gt.a(param4, 1);
                 if (ns.field_a > 0) {
-                  we.a(param7, param4, (byte) -119, param6);
+                  int discarded$28 = 11;
+                  int discarded$29 = -119;
+                  we.a(param7, param4);
                   break L28;
                 } else {
                   break L28;
@@ -1100,13 +1118,13 @@ final class ud extends qt {
                 if (fj.field_a <= 0) {
                   break L29;
                 } else {
-                  ri.a(102, param4, param7, param6);
+                  ri.a(102, param4, param7, 11);
                   break L29;
                 }
               }
               L30: {
                 if (ee.field_b > 0) {
-                  lu.a(param7, param6, -2, param9, param4);
+                  lu.a(param7, 11, -2, param9, param4);
                   break L30;
                 } else {
                   break L30;
@@ -1129,11 +1147,11 @@ final class ud extends qt {
                 }
                 bf.field_u.field_zb.field_E = null;
                 mc.field_d.field_lb = true;
-                e.a(bf.field_u, param3, param2, param6, 92);
+                e.a(bf.field_u, param3, param2, 11, 92);
                 break L31;
               }
-              w.a(param2, param0, param6, param8, param5, param3, param1);
-              e.a(bs.field_c, param3, param2, param6, 38);
+              w.a(param2, false, 11, 16777215, true, param3, 16777215);
+              e.a(bs.field_c, param3, param2, 11, 38);
               de.field_c = de.field_c + 1;
               return;
             }
@@ -1143,7 +1161,9 @@ final class ud extends qt {
             df.field_H = ub.field_B;
             gt.a(param4, 1);
             if (ns.field_a > 0) {
-              we.a(param7, param4, (byte) -119, param6);
+              int discarded$30 = 11;
+              int discarded$31 = -119;
+              we.a(param7, param4);
               break L33;
             } else {
               break L33;
@@ -1155,13 +1175,13 @@ final class ud extends qt {
             if (fj.field_a <= 0) {
               break L34;
             } else {
-              ri.a(102, param4, param7, param6);
+              ri.a(102, param4, param7, 11);
               break L34;
             }
           }
           L35: {
             if (ee.field_b > 0) {
-              lu.a(param7, param6, -2, param9, param4);
+              lu.a(param7, 11, -2, param9, param4);
               break L35;
             } else {
               break L35;
@@ -1184,11 +1204,11 @@ final class ud extends qt {
             }
             bf.field_u.field_zb.field_E = null;
             mc.field_d.field_lb = true;
-            e.a(bf.field_u, param3, param2, param6, 92);
+            e.a(bf.field_u, param3, param2, 11, 92);
             break L36;
           }
-          w.a(param2, param0, param6, param8, param5, param3, param1);
-          e.a(bs.field_c, param3, param2, param6, 38);
+          w.a(param2, false, 11, 16777215, true, param3, 16777215);
+          e.a(bs.field_c, param3, param2, 11, 38);
           de.field_c = de.field_c + 1;
           return;
         }
@@ -1205,185 +1225,181 @@ final class ud extends qt {
         um.field_e.c((byte) 80);
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3) {
+    final static boolean a() {
         int var4 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_44_0 = 0;
-        int stackOut_43_0 = 0;
-        int stackOut_42_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        if (param2 == 17860) {
-          if (fb.field_J == null) {
+        int stackIn_9_0 = 0;
+        int stackIn_42_0 = 0;
+        int stackOut_41_0 = 0;
+        int stackOut_40_0 = 0;
+        int stackOut_8_0 = 0;
+        int stackOut_7_0 = 0;
+        if (fb.field_J == null) {
+          if (!vg.field_Wb) {
+            if (!kd.field_s) {
+              if (9 != cc.field_e) {
+                if (cc.field_e != 10) {
+                  if (11 != cc.field_e) {
+                    if (cc.field_e == 80) {
+                      if (!ph.a(true)) {
+                        return false;
+                      } else {
+                        vg.field_Wb = true;
+                        return true;
+                      }
+                    } else {
+                      return false;
+                    }
+                  } else {
+                    return ov.a(15, -14, 13);
+                  }
+                } else {
+                  return ov.a(15, -14, 13);
+                }
+              } else {
+                return ov.a(15, -14, 13);
+              }
+            } else {
+              return ov.a(15, -14, 13);
+            }
+          } else {
+            if (ph.a(true)) {
+              L0: {
+                if (!hd.a(false, 12, 13)) {
+                  stackOut_41_0 = 0;
+                  stackIn_42_0 = stackOut_41_0;
+                  break L0;
+                } else {
+                  stackOut_40_0 = 1;
+                  stackIn_42_0 = stackOut_40_0;
+                  break L0;
+                }
+              }
+              L1: {
+                L2: {
+                  var4 = stackIn_42_0;
+                  if (80 == cc.field_e) {
+                    break L2;
+                  } else {
+                    if (84 == cc.field_e) {
+                      break L2;
+                    } else {
+                      break L1;
+                    }
+                  }
+                }
+                vg.field_Wb = false;
+                var4 = 1;
+                break L1;
+              }
+              L3: {
+                if (13 != cc.field_e) {
+                  break L3;
+                } else {
+                  td.a(89);
+                  var4 = 1;
+                  vg.field_Wb = false;
+                  break L3;
+                }
+              }
+              return var4 != 0;
+            } else {
+              return false;
+            }
+          }
+        } else {
+          if (cc.field_e != 13) {
             if (!vg.field_Wb) {
               if (!kd.field_s) {
                 if (9 != cc.field_e) {
                   if (cc.field_e != 10) {
                     if (11 != cc.field_e) {
                       if (cc.field_e == 80) {
-                        if (!ph.a(true)) {
-                          return false;
-                        } else {
+                        if (ph.a(true)) {
                           vg.field_Wb = true;
                           return true;
+                        } else {
+                          return false;
                         }
                       } else {
                         return false;
                       }
                     } else {
-                      return ov.a(15, param2 ^ -17866, param0);
+                      return ov.a(15, -14, 13);
                     }
                   } else {
-                    return ov.a(15, param2 ^ -17866, param0);
+                    return ov.a(15, -14, 13);
                   }
                 } else {
-                  return ov.a(15, param2 ^ -17866, param0);
+                  return ov.a(15, -14, 13);
                 }
               } else {
-                return ov.a(15, param2 ^ -17866, param0);
+                return ov.a(15, -14, 13);
               }
             } else {
               if (ph.a(true)) {
-                L0: {
-                  if (!hd.a(false, param1, param0)) {
-                    stackOut_43_0 = 0;
-                    stackIn_44_0 = stackOut_43_0;
-                    break L0;
+                L4: {
+                  if (!hd.a(false, 12, 13)) {
+                    stackOut_8_0 = 0;
+                    stackIn_9_0 = stackOut_8_0;
+                    break L4;
                   } else {
-                    stackOut_42_0 = 1;
-                    stackIn_44_0 = stackOut_42_0;
-                    break L0;
+                    stackOut_7_0 = 1;
+                    stackIn_9_0 = stackOut_7_0;
+                    break L4;
                   }
                 }
-                L1: {
-                  L2: {
-                    var4 = stackIn_44_0;
-                    if (80 == cc.field_e) {
-                      break L2;
-                    } else {
-                      if (84 == cc.field_e) {
-                        break L2;
-                      } else {
-                        break L1;
-                      }
-                    }
-                  }
-                  vg.field_Wb = false;
-                  var4 = 1;
-                  break L1;
-                }
-                L3: {
-                  if (13 != cc.field_e) {
-                    break L3;
-                  } else {
-                    td.a(89);
-                    var4 = 1;
-                    vg.field_Wb = false;
-                    break L3;
-                  }
-                }
-                return var4 != 0;
-              } else {
-                return false;
-              }
-            }
-          } else {
-            if (cc.field_e != 13) {
-              if (!vg.field_Wb) {
-                if (!kd.field_s) {
-                  if (9 != cc.field_e) {
-                    if (cc.field_e != 10) {
-                      if (11 != cc.field_e) {
-                        if (cc.field_e == 80) {
-                          if (ph.a(true)) {
-                            vg.field_Wb = true;
-                            return true;
-                          } else {
-                            return false;
-                          }
-                        } else {
-                          return false;
-                        }
-                      } else {
-                        return ov.a(15, param2 ^ -17866, param0);
-                      }
-                    } else {
-                      return ov.a(15, param2 ^ -17866, param0);
-                    }
-                  } else {
-                    return ov.a(15, param2 ^ -17866, param0);
-                  }
-                } else {
-                  return ov.a(15, param2 ^ -17866, param0);
-                }
-              } else {
-                if (ph.a(true)) {
-                  L4: {
-                    if (!hd.a(false, param1, param0)) {
-                      stackOut_10_0 = 0;
-                      stackIn_11_0 = stackOut_10_0;
-                      break L4;
-                    } else {
-                      stackOut_9_0 = 1;
-                      stackIn_11_0 = stackOut_9_0;
-                      break L4;
-                    }
-                  }
-                  var4 = stackIn_11_0;
-                  if (80 != cc.field_e) {
-                    if (84 != cc.field_e) {
-                      L5: {
-                        if (13 != cc.field_e) {
-                          break L5;
-                        } else {
-                          td.a(89);
-                          var4 = 1;
-                          vg.field_Wb = false;
-                          break L5;
-                        }
-                      }
-                      return var4 != 0;
-                    } else {
-                      L6: {
-                        vg.field_Wb = false;
-                        var4 = 1;
-                        if (13 != cc.field_e) {
-                          break L6;
-                        } else {
-                          td.a(89);
-                          var4 = 1;
-                          vg.field_Wb = false;
-                          break L6;
-                        }
-                      }
-                      return var4 != 0;
-                    }
-                  } else {
-                    L7: {
-                      vg.field_Wb = false;
-                      var4 = 1;
+                var4 = stackIn_9_0;
+                if (80 != cc.field_e) {
+                  if (84 != cc.field_e) {
+                    L5: {
                       if (13 != cc.field_e) {
-                        break L7;
+                        break L5;
                       } else {
                         td.a(89);
                         var4 = 1;
                         vg.field_Wb = false;
-                        break L7;
+                        break L5;
+                      }
+                    }
+                    return var4 != 0;
+                  } else {
+                    L6: {
+                      vg.field_Wb = false;
+                      var4 = 1;
+                      if (13 != cc.field_e) {
+                        break L6;
+                      } else {
+                        td.a(89);
+                        var4 = 1;
+                        vg.field_Wb = false;
+                        break L6;
                       }
                     }
                     return var4 != 0;
                   }
                 } else {
-                  return false;
+                  L7: {
+                    vg.field_Wb = false;
+                    var4 = 1;
+                    if (13 != cc.field_e) {
+                      break L7;
+                    } else {
+                      td.a(89);
+                      var4 = 1;
+                      vg.field_Wb = false;
+                      break L7;
+                    }
+                  }
+                  return var4 != 0;
                 }
+              } else {
+                return false;
               }
-            } else {
-              fb.field_J = null;
-              return true;
             }
+          } else {
+            fb.field_J = null;
+            return true;
           }
-        } else {
-          return false;
         }
     }
 

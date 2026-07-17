@@ -584,7 +584,7 @@ final class hf {
         return stackIn_10_0 != 0;
     }
 
-    final static int a(int param0, nu param1, int param2) {
+    final static int a(int param0, nu param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

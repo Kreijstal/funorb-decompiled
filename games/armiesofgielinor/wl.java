@@ -15,7 +15,7 @@ abstract class wl extends tj {
     static String field_I;
     boolean field_L;
 
-    final static io a(kl param0, int param1, boolean param2) {
+    final static io a(kl param0, int param1) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -93,7 +93,7 @@ abstract class wl extends tj {
         ((wl) this).a(te.field_l + -param0 >> 1, param0, ij.field_x + -param2 >> 1, 8192, param2);
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         field_I = null;
         field_M = null;
         field_N = null;
@@ -134,7 +134,8 @@ abstract class wl extends tj {
               break L0;
             }
             L2: {
-              vn.a(bo.field_b, 3);
+              int discarded$2 = 3;
+              vn.a(bo.field_b);
               qn.b();
               ((wl) this).b(0, 1851680193, 0);
               super.a(-param0 - ((wl) this).field_B, -param1 - ((wl) this).field_p, (byte) -106, param3);
@@ -192,29 +193,21 @@ abstract class wl extends tj {
           }
         }
         L4: {
-          if (param1 == -13337) {
+          if (param0 < 4) {
             break L4;
           } else {
-            field_K = null;
+            param0 = param0 >>> 2;
+            var2 += 2;
             break L4;
           }
         }
         L5: {
-          if (param0 < 4) {
-            break L5;
-          } else {
-            param0 = param0 >>> 2;
-            var2 += 2;
-            break L5;
-          }
-        }
-        L6: {
           if (param0 < 1) {
-            break L6;
+            break L5;
           } else {
             var2++;
             param0 = param0 >>> 1;
-            break L6;
+            break L5;
           }
         }
         return var2 - -param0;
@@ -291,7 +284,6 @@ abstract class wl extends tj {
     final static void a(int param0, boolean param1) {
         int var2 = 0;
         String var3 = null;
-        Object var4 = null;
         int stackIn_6_0 = 0;
         int stackIn_13_0 = 0;
         String stackIn_22_0 = null;
@@ -343,8 +335,8 @@ abstract class wl extends tj {
           if (param0 >= 9) {
             break L1;
           } else {
-            var4 = null;
-            io discarded$2 = wl.a((kl) null, -105, true);
+            int discarded$9 = 1;
+            io discarded$10 = wl.a((kl) null, -105);
             break L1;
           }
         }
@@ -371,7 +363,8 @@ abstract class wl extends tj {
           break L2;
         }
         L4: {
-          tq.a(stackIn_13_0 != 0, false);
+          int discarded$11 = 0;
+          tq.a(stackIn_13_0 != 0);
           if (null == rd.field_j) {
             break L4;
           } else {
@@ -500,7 +493,7 @@ abstract class wl extends tj {
         int var1_int = 0;
         int var2 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-            qc.field_h.a(param0);
+            qc.field_h.a(0);
             for (var1_int = 0; var1_int < 32; var1_int++) {
                 jb.field_u[var1_int] = 0L;
             }
@@ -509,7 +502,7 @@ abstract class wl extends tj {
             }
             kb.field_A = 0;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "wl.GA(" + param0 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "wl.GA(" + 0 + 41);
         }
     }
 

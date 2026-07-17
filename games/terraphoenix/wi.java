@@ -16,13 +16,13 @@ final class wi extends eb {
 
     final static void a(byte param0, e param1, int param2, int param3) {
         try {
-            int var4_int = 26 % ((param0 - -37) / 38);
+            int var4_int = 0;
             if (!(param1 == null)) {
                 param1.a(0, param2 - 32, (byte) 127, 1, param3 - 64, kg.field_r[45]);
             }
             kg.field_r[76].c(-32 + param2, -64 + param3, 128);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "wi.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "wi.A(" + -80 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -174,7 +174,7 @@ final class wi extends eb {
         return stackIn_20_0 != 0;
     }
 
-    final static void h(int param0) {
+    final static void h() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

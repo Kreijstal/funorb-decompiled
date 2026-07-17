@@ -12,8 +12,9 @@ final class uf {
 
     private final boolean a(byte param0, int param1, int param2, byte[] param3, boolean param4) {
         try {
-            RuntimeException var6 = null;
-            Object var6_ref = null;
+            Object var6 = null;
+            RuntimeException var6_ref = null;
+            Object var6_ref2 = null;
             IOException var7 = null;
             int var7_int = 0;
             int var8 = 0;
@@ -35,14 +36,14 @@ final class uf {
             int stackIn_40_0 = 0;
             int stackIn_61_0 = 0;
             int stackIn_62_0 = 0;
-            int stackIn_66_0 = 0;
+            int stackIn_64_0 = 0;
+            RuntimeException stackIn_68_0 = null;
+            StringBuilder stackIn_68_1 = null;
+            RuntimeException stackIn_69_0 = null;
+            StringBuilder stackIn_69_1 = null;
             RuntimeException stackIn_70_0 = null;
             StringBuilder stackIn_70_1 = null;
-            RuntimeException stackIn_71_0 = null;
-            StringBuilder stackIn_71_1 = null;
-            RuntimeException stackIn_72_0 = null;
-            StringBuilder stackIn_72_1 = null;
-            String stackIn_72_2 = null;
+            String stackIn_70_2 = null;
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
@@ -56,19 +57,19 @@ final class uf {
             int stackOut_33_0 = 0;
             int stackOut_60_0 = 0;
             int stackOut_61_0 = 0;
-            int stackOut_65_0 = 0;
+            int stackOut_63_0 = 0;
+            RuntimeException stackOut_67_0 = null;
+            StringBuilder stackOut_67_1 = null;
             RuntimeException stackOut_69_0 = null;
             StringBuilder stackOut_69_1 = null;
-            RuntimeException stackOut_71_0 = null;
-            StringBuilder stackOut_71_1 = null;
-            String stackOut_71_2 = null;
-            RuntimeException stackOut_70_0 = null;
-            StringBuilder stackOut_70_1 = null;
-            String stackOut_70_2 = null;
+            String stackOut_69_2 = null;
+            RuntimeException stackOut_68_0 = null;
+            StringBuilder stackOut_68_1 = null;
+            String stackOut_68_2 = null;
             var16 = StarCannon.field_A;
             try {
-              var6_ref = (Object) (Object) ((uf) this).field_b;
-              synchronized (var6_ref) {
+              var6_ref2 = (Object) (Object) ((uf) this).field_b;
+              synchronized (var6_ref2) {
                 try {
                   L0: {
                     L1: {
@@ -84,7 +85,7 @@ final class uf {
                         if ((long)(6 + param2 * 6) <= ((uf) this).field_e.b(false)) {
                           L2: {
                             ((uf) this).field_e.a((long)(param2 * 6), 0);
-                            ((uf) this).field_e.a(param0 ^ 38, cb.field_b, 0, 6);
+                            ((uf) this).field_e.a(0, cb.field_b, 0, 6);
                             var7_int = (255 & cb.field_b[5]) + (cb.field_b[3] << 16 & 16711680) - -(cb.field_b[4] << 8 & 65280);
                             if (var7_int <= 0) {
                               break L2;
@@ -135,7 +136,7 @@ final class uf {
                                 if (param2 > 65535) {
                                   try {
                                     L7: {
-                                      ((uf) this).field_b.a(param0 + -38, cb.field_b, 0, 10);
+                                      ((uf) this).field_b.a(0, cb.field_b, 0, 10);
                                       decompiledRegionSelector1 = 0;
                                       break L7;
                                     }
@@ -314,50 +315,42 @@ final class uf {
                   }
                 } catch (java.io.IOException decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
-                  L19: {
-                    var7 = (IOException) (Object) decompiledCaughtException;
-                    if (param0 == 38) {
-                      break L19;
-                    } else {
-                      ((uf) this).field_b = null;
-                      break L19;
-                    }
-                  }
-                  stackOut_65_0 = 0;
-                  stackIn_66_0 = stackOut_65_0;
-                  return stackIn_66_0 != 0;
+                  var7 = (IOException) (Object) decompiledCaughtException;
+                  stackOut_63_0 = 0;
+                  stackIn_64_0 = stackOut_63_0;
+                  return stackIn_64_0 != 0;
                 }
                 return stackIn_62_0 != 0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
               decompiledCaughtException = decompiledCaughtParameter3;
-              L20: {
-                var6 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_69_0 = (RuntimeException) var6;
-                stackOut_69_1 = new StringBuilder().append("uf.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
-                stackIn_71_0 = stackOut_69_0;
-                stackIn_71_1 = stackOut_69_1;
-                stackIn_70_0 = stackOut_69_0;
-                stackIn_70_1 = stackOut_69_1;
+              L19: {
+                var6_ref = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_67_0 = (RuntimeException) var6_ref;
+                stackOut_67_1 = new StringBuilder().append("uf.D(").append(38).append(44).append(param1).append(44).append(param2).append(44);
+                stackIn_69_0 = stackOut_67_0;
+                stackIn_69_1 = stackOut_67_1;
+                stackIn_68_0 = stackOut_67_0;
+                stackIn_68_1 = stackOut_67_1;
                 if (param3 == null) {
-                  stackOut_71_0 = (RuntimeException) (Object) stackIn_71_0;
-                  stackOut_71_1 = (StringBuilder) (Object) stackIn_71_1;
-                  stackOut_71_2 = "null";
-                  stackIn_72_0 = stackOut_71_0;
-                  stackIn_72_1 = stackOut_71_1;
-                  stackIn_72_2 = stackOut_71_2;
-                  break L20;
+                  stackOut_69_0 = (RuntimeException) (Object) stackIn_69_0;
+                  stackOut_69_1 = (StringBuilder) (Object) stackIn_69_1;
+                  stackOut_69_2 = "null";
+                  stackIn_70_0 = stackOut_69_0;
+                  stackIn_70_1 = stackOut_69_1;
+                  stackIn_70_2 = stackOut_69_2;
+                  break L19;
                 } else {
-                  stackOut_70_0 = (RuntimeException) (Object) stackIn_70_0;
-                  stackOut_70_1 = (StringBuilder) (Object) stackIn_70_1;
-                  stackOut_70_2 = "{...}";
-                  stackIn_72_0 = stackOut_70_0;
-                  stackIn_72_1 = stackOut_70_1;
-                  stackIn_72_2 = stackOut_70_2;
-                  break L20;
+                  stackOut_68_0 = (RuntimeException) (Object) stackIn_68_0;
+                  stackOut_68_1 = (StringBuilder) (Object) stackIn_68_1;
+                  stackOut_68_2 = "{...}";
+                  stackIn_70_0 = stackOut_68_0;
+                  stackIn_70_1 = stackOut_68_1;
+                  stackIn_70_2 = stackOut_68_2;
+                  break L19;
                 }
               }
-              throw sd.a((Throwable) (Object) stackIn_72_0, stackIn_72_2 + 44 + param4 + 41);
+              throw sd.a((Throwable) (Object) stackIn_70_0, stackIn_70_2 + 44 + param4 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -717,7 +710,7 @@ final class uf {
         }
     }
 
-    final static String a(Throwable param0, int param1) throws IOException {
+    final static String a(Throwable param0) throws IOException {
         String var2 = null;
         PrintWriter var4 = null;
         String var5 = null;

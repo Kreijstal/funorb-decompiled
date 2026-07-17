@@ -126,13 +126,20 @@ final class ga {
                     break L1;
                   } else {
                     tg.a(param1, false, param0 + 49);
-                    lj.a(0, param2, 0, (byte) -128);
+                    int discarded$16 = -128;
+                    int discarded$17 = 0;
+                    lj.a(0, param2);
                     break L1;
                   }
                 } else {
                   lf.a();
-                  ra.a(320, 150, 240);
-                  lj.a(0, param2, 0, (byte) -128);
+                  int discarded$18 = 240;
+                  int discarded$19 = 150;
+                  int discarded$20 = 320;
+                  ra.a();
+                  int discarded$21 = -128;
+                  int discarded$22 = 0;
+                  lj.a(0, param2);
                   break L1;
                 }
               } else {
@@ -146,7 +153,8 @@ final class ga {
                     break L2;
                   }
                 }
-                hd.a(aa.a((byte) 92), (byte) -90, ik.a((byte) 94), var3_int != 0, te.field_E);
+                int discarded$23 = 92;
+                hd.a(aa.a(), (byte) -90, ik.a((byte) 94), var3_int != 0, te.field_E);
                 break L1;
               }
             }
@@ -189,7 +197,7 @@ final class ga {
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         di.field_x.b(123, (w) (Object) new mh());
     }
 

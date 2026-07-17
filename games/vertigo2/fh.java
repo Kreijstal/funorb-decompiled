@@ -12,7 +12,7 @@ class fh extends gp {
     fh() {
     }
 
-    final static void a(String param0, int param1) {
+    final static void a(String param0) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -33,9 +33,9 @@ class fh extends gp {
         }
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_u = null;
-        int var1 = -58 / ((-23 - param0) / 51);
+        int var1 = -58;
         field_t = null;
         field_x = null;
         field_y = null;

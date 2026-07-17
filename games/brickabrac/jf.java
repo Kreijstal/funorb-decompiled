@@ -114,15 +114,12 @@ final class jf {
         return stackIn_1_0;
     }
 
-    final static void d(int param0) {
-        if (param0 != -99) {
-            field_g = null;
-        }
+    final static void d() {
         ii var1 = (ii) (Object) fr.field_M.a(127);
         if (!(var1 != null)) {
             var1 = new ii();
         }
-        var1.a(lb.field_l, lb.field_i, lb.field_c, lb.field_d, param0 ^ 194, lb.field_f, lb.field_b, lb.field_j);
+        var1.a(lb.field_l, lb.field_i, lb.field_c, lb.field_d, -161, lb.field_f, lb.field_b, lb.field_j);
         hi.field_v.a((nm) (Object) var1, (byte) 3);
     }
 
@@ -316,7 +313,7 @@ final class jf {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
         field_k = null;

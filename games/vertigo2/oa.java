@@ -96,7 +96,7 @@ final class oa extends da {
         return stackIn_9_0;
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_o = null;
         field_s = null;
     }

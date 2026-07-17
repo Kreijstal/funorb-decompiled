@@ -181,7 +181,7 @@ final class c {
         }
     }
 
-    final static int a(int param0, int param1, byte param2) {
+    final static int a(int param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -234,63 +234,61 @@ final class c {
           }
         }
         if (~param9 == ~param1) {
-          return wh.a(param7, param9, param0, param5, param6, param3, param10, param2, param4, 98);
+          return wh.a(param7, param9, param0, param5, 8, param3, param10, param2, param4, 98);
         } else {
           if (param7 != param3) {
-            if (param8 == 98) {
-              L1: {
-                var11 = -param9 + param1;
-                var12 = -param3 + param7;
-                var13 = var12;
-                var14 = -var11;
-                var15 = rf.a(aj.a(var13, false, var13) + aj.a(var14, false, var14), -128);
-                if (0L < od.a((long)var13, (long)param10, false) - -od.a((long)var14, (long)param4, false)) {
-                  param9 = param9 - lh.a(var15, (byte) -73, (long)(var13 * param6));
-                  param3 = param3 - lh.a(var15, (byte) -90, (long)(var14 * param6));
-                  break L1;
-                } else {
-                  param9 = param9 + lh.a(var15, (byte) -95, (long)(var13 * param6));
-                  param3 = param3 + lh.a(var15, (byte) -111, (long)(param6 * var14));
-                  break L1;
-                }
-              }
-              var16 = aj.a(var11, false, param4) - aj.a(var12, false, param10);
-              if (var16 == 0) {
-                return -1;
+            L1: {
+              var11 = -param9 + param1;
+              var12 = -param3 + param7;
+              var13 = var12;
+              var14 = -var11;
+              var15 = rf.a(aj.a(var13, false, var13) + aj.a(var14, false, var14), -128);
+              int discarded$2 = 0;
+              int discarded$3 = 0;
+              if (0L < od.a((long)var13, (long)param10) - -od.a((long)var14, (long)param4)) {
+                param9 = param9 - lh.a(var15, (byte) -73, (long)(var13 * 8));
+                param3 = param3 - lh.a(var15, (byte) -90, (long)(var14 * 8));
+                break L1;
               } else {
-                L2: {
-                  var17 = lh.a(var16, (byte) -82, (long)(aj.a(var12, false, param5 + -param9) + -aj.a(var11, false, -param3 + param2)));
-                  if (var17 <= 0) {
-                    break L2;
-                  } else {
-                    if (var17 <= -param0 + 65536) {
-                      var18 = lh.a(var11, (byte) -110, (long)(-param9 + param5 - -aj.a(var17, false, param10)));
-                      if (var18 < 0) {
+                param9 = param9 + lh.a(var15, (byte) -95, (long)(var13 * 8));
+                param3 = param3 + lh.a(var15, (byte) -111, (long)(8 * var14));
+                break L1;
+              }
+            }
+            var16 = aj.a(var11, false, param4) - aj.a(var12, false, param10);
+            if (var16 == 0) {
+              return -1;
+            } else {
+              L2: {
+                var17 = lh.a(var16, (byte) -82, (long)(aj.a(var12, false, param5 + -param9) + -aj.a(var11, false, -param3 + param2)));
+                if (var17 <= 0) {
+                  break L2;
+                } else {
+                  if (var17 <= -param0 + 65536) {
+                    var18 = lh.a(var11, (byte) -110, (long)(-param9 + param5 - -aj.a(var17, false, param10)));
+                    if (var18 < 0) {
+                      break L2;
+                    } else {
+                      if (var18 > 65536) {
                         break L2;
                       } else {
-                        if (var18 > 65536) {
-                          break L2;
-                        } else {
-                          return var17 - -param0;
-                        }
+                        return var17 - -param0;
                       }
-                    } else {
-                      break L2;
                     }
+                  } else {
+                    break L2;
                   }
                 }
-                return -1;
               }
-            } else {
-              return -7;
+              return -1;
             }
           } else {
-            return cq.a(param3, param6, (byte) -112, param2, param10, param5, param0, param9, param4, param1);
+            return cq.a(param3, 8, (byte) -112, param2, param10, param5, param0, param9, param4, param1);
           }
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_a = null;
         field_c = null;

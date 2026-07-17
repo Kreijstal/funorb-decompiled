@@ -142,7 +142,8 @@ public final class Pixelate extends lb {
         L0: {
           var16 = null;
           var12 = field_H ? 1 : 0;
-          ce.field_g = ql.g(13428);
+          int discarded$20 = 13428;
+          ce.field_g = ql.g();
           gf.a(-29949);
           if (ib.field_f == null) {
             break L0;
@@ -151,7 +152,8 @@ public final class Pixelate extends lb {
               break L0;
             } else {
               ln.a(116);
-              wi.b((byte) -53);
+              int discarded$21 = -53;
+              wi.b();
               break L0;
             }
           }
@@ -187,7 +189,8 @@ public final class Pixelate extends lb {
           if (!nn.field_i) {
             break L2;
           } else {
-            this.q(-18528);
+            int discarded$22 = -18528;
+            this.q();
             nn.field_i = false;
             break L2;
           }
@@ -209,7 +212,7 @@ public final class Pixelate extends lb {
             if (bd.a(true)) {
               L5: {
                 if (re.a(122)) {
-                  boolean discarded$1 = this.b(false, 4);
+                  boolean discarded$23 = this.b(false, 4);
                   break L5;
                 } else {
                   break L5;
@@ -227,7 +230,8 @@ public final class Pixelate extends lb {
           L6: {
             if (h.field_R) {
               if (aj.b((byte) -70)) {
-                if (!hf.b((byte) 100)) {
+                int discarded$24 = 100;
+                if (!hf.b()) {
                   if (pe.a(false)) {
                     L7: {
                       stackOut_48_0 = this;
@@ -382,7 +386,8 @@ public final class Pixelate extends lb {
                   }
                 }
               } else {
-                so.c(4478);
+                int discarded$25 = 4478;
+                so.c();
                 break L6;
               }
             } else {
@@ -447,7 +452,8 @@ public final class Pixelate extends lb {
                         }
                       }
                     }
-                    nn.a(true);
+                    int discarded$26 = 1;
+                    nn.a();
                     if (var3 != 1) {
                       L23: {
                         if (oc.field_G) {
@@ -467,7 +473,8 @@ public final class Pixelate extends lb {
                                   break L25;
                                 }
                               }
-                              la.a(stackIn_177_0, 11, false, -25528);
+                              int discarded$27 = -25528;
+                              la.a(stackIn_177_0, 11, false);
                               break L24;
                             } else {
                               L26: {
@@ -481,11 +488,13 @@ public final class Pixelate extends lb {
                                   break L26;
                                 }
                               }
-                              la.a(stackIn_173_0, 0, false, -25528);
+                              int discarded$28 = -25528;
+                              la.a(stackIn_173_0, 0, false);
                               break L24;
                             }
                           }
-                          nm.a(0);
+                          int discarded$29 = 0;
+                          nm.a();
                           wo.b(109, fc.field_e).a(2, 0, false);
                           oc.field_G = false;
                           md.field_Y = false;
@@ -554,8 +563,11 @@ public final class Pixelate extends lb {
             } else {
               if (mn.field_e != 9) {
                 if (mn.field_e == 14) {
-                  nm.a(0);
-                  ga.a(150, ne.a(-1879863704, 2000), 1024, 3, hp.j(0), fb.b((byte) 79), rg.field_d, ne.a(-1879863704, 8), cl.field_f.length, sl.a(1));
+                  int discarded$30 = 0;
+                  nm.a();
+                  int discarded$31 = 79;
+                  int discarded$32 = 1;
+                  ga.a(150, ne.a(-1879863704, 2000), 1024, 3, hp.j(0), fb.b(), rg.field_d, ne.a(-1879863704, 8), cl.field_f.length, sl.a());
                   fc.a(ba.a(-26573), 64, nc.b(119));
                   ti.field_t = -2;
                   oc.field_G = true;
@@ -565,8 +577,10 @@ public final class Pixelate extends lb {
                   if (mn.field_e == 15) {
                     L31: {
                       if (oc.field_G) {
-                        nm.a(0);
-                        ak.i(0);
+                        int discarded$33 = 0;
+                        nm.a();
+                        int discarded$34 = 0;
+                        ak.i();
                         ek.a(true);
                         og.field_l = true;
                         ti.field_t = 0;
@@ -590,7 +604,8 @@ public final class Pixelate extends lb {
                         if (!oc.field_G) {
                           break L32;
                         } else {
-                          pl.c(true);
+                          int discarded$35 = 1;
+                          pl.c();
                           continue L17;
                         }
                       }
@@ -785,7 +800,8 @@ public final class Pixelate extends lb {
                                 }
                               }
                               L44: {
-                                nm.a(0);
+                                int discarded$36 = 0;
+                                nm.a();
                                 if (md.field_Y) {
                                   ro.field_e.a(false, 250, false);
                                   break L44;
@@ -809,7 +825,8 @@ public final class Pixelate extends lb {
                       }
                     }
                     L45: {
-                      nm.a(0);
+                      int discarded$37 = 0;
+                      nm.a();
                       if (vi.field_o.f(255) == 0) {
                         stackOut_90_0 = 0;
                         stackIn_91_0 = stackOut_90_0;
@@ -852,7 +869,8 @@ public final class Pixelate extends lb {
                         }
                         L49: {
                           oa.field_i = stackIn_100_0 != 0;
-                          bg.a(2);
+                          int discarded$38 = 2;
+                          bg.a();
                           var15 = new ii(var4_ref_String__, var5, var3 != 0, var9, var6, var7, var8);
                           var15.a((byte) 20, (we) (Object) vi.field_o);
                           if (1 != vi.field_o.f(255)) {
@@ -890,7 +908,8 @@ public final class Pixelate extends lb {
                   }
                 }
               } else {
-                nm.a(0);
+                int discarded$39 = 0;
+                nm.a();
                 ti.field_t = 11;
                 dj.field_c = false;
                 ie.field_F = vi.field_o.h(5);
@@ -905,55 +924,86 @@ public final class Pixelate extends lb {
 
     final void c(int param0) {
         Pixelate.p(param0 + -19640);
-        ph.a(111);
+        int discarded$0 = 111;
+        ph.a();
         bb.a((byte) 76);
         ef.a(true);
-        ck.a((byte) -109);
-        de.d(-1);
-        uk.b(false);
+        int discarded$1 = -109;
+        ck.a();
+        int discarded$2 = -1;
+        de.d();
+        int discarded$3 = 0;
+        uk.b();
         ab.a(false);
-        oo.a(true);
-        vi.e(-97);
-        ho.b(11799);
-        jj.b(-4136);
-        rp.a(-1);
+        int discarded$4 = 1;
+        oo.a();
+        int discarded$5 = -97;
+        vi.e();
+        int discarded$6 = 11799;
+        ho.b();
+        int discarded$7 = -4136;
+        jj.b();
+        int discarded$8 = -1;
+        rp.a();
         vf.a(-109);
-        vd.a(70);
+        int discarded$9 = 70;
+        vd.a();
         qh.a(param0 + -22862);
         r.a(-31558);
-        lb.c(true);
-        qa.a(true);
+        int discarded$10 = 1;
+        lb.c();
+        int discarded$11 = 1;
+        qa.a();
         tn.b(true);
-        ll.a((byte) -57);
-        wb.a(-116);
+        int discarded$12 = -57;
+        ll.a();
+        int discarded$13 = -116;
+        wb.a();
         v.a(false);
         t.e();
         fm.a(-34);
         jl.a();
         wp.b(param0 + -23028);
-        we.b((byte) 114);
-        hm.b((byte) 9);
-        he.a(0);
+        int discarded$14 = 114;
+        we.b();
+        int discarded$15 = 9;
+        hm.b();
+        int discarded$16 = 0;
+        he.a();
         la.b(param0 + -23114);
-        pa.a(82);
+        int discarded$17 = 82;
+        pa.a();
         gb.a(false);
-        nf.a((byte) -107);
-        sf.a((byte) 61);
-        th.a((byte) -96);
-        dk.a((byte) -93);
-        aa.a(-127);
-        bl.b(-46342);
-        nc.b(false);
-        ha.a(true);
+        int discarded$18 = -107;
+        nf.a();
+        int discarded$19 = 61;
+        sf.a();
+        int discarded$20 = -96;
+        th.a();
+        int discarded$21 = -93;
+        dk.a();
+        int discarded$22 = -127;
+        aa.a();
+        int discarded$23 = -46342;
+        bl.b();
+        int discarded$24 = 0;
+        nc.b();
+        int discarded$25 = 1;
+        ha.a();
         re.a(true);
         mk.a((byte) -85);
         co.a(true);
-        ii.b((byte) -101);
+        int discarded$26 = -101;
+        ii.b();
         dg.a(1048576);
-        aq.a((byte) 119);
-        rf.c((byte) -53);
-        gm.a(-1);
-        am.a((byte) -125);
+        int discarded$27 = 119;
+        aq.a();
+        int discarded$28 = -53;
+        rf.c();
+        int discarded$29 = -1;
+        gm.a();
+        int discarded$30 = -125;
+        am.a();
         uo.b(127);
         mo.a((byte) -84);
         fa.d(-3);
@@ -961,287 +1011,451 @@ public final class Pixelate extends lb {
         lm.a(-2575);
         nk.a(true);
         dh.a(true);
-        sc.a((byte) -108);
-        lg.a((byte) -120);
-        ea.a(true);
+        int discarded$31 = -108;
+        sc.a();
+        int discarded$32 = -120;
+        lg.a();
+        int discarded$33 = 1;
+        ea.a();
         rg.a(1762);
-        pc.m(25208);
-        lh.c(7);
-        ti.h(-69);
+        int discarded$34 = 25208;
+        pc.m();
+        int discarded$35 = 7;
+        lh.c();
+        int discarded$36 = -69;
+        ti.h();
         nl.b(-101);
-        in.a(-69);
+        int discarded$37 = -69;
+        in.a();
         sg.g();
         km.a((byte) 106);
-        po.a((byte) 91);
+        int discarded$38 = 91;
+        po.a();
         mm.d();
         nh.b((byte) 108);
-        pf.b(65);
+        int discarded$39 = 65;
+        pf.b();
         tp.b(true);
-        ed.a(75);
+        int discarded$40 = 75;
+        ed.a();
         e.a(200);
-        sk.a((byte) 99);
-        ak.a((byte) 59);
-        eq.b((byte) 87);
-        vg.a(true);
-        uj.d(true);
-        qj.a(false);
-        kj.b(117);
-        vh.b(-8);
+        int discarded$41 = 99;
+        sk.a();
+        int discarded$42 = 59;
+        ak.a();
+        int discarded$43 = 87;
+        eq.b();
+        int discarded$44 = 1;
+        vg.a();
+        int discarded$45 = 1;
+        uj.d();
+        int discarded$46 = 0;
+        qj.a();
+        int discarded$47 = 117;
+        kj.b();
+        int discarded$48 = -8;
+        vh.b();
         jp.b((byte) -63);
-        rm.a((byte) -116);
-        cn.a(-59);
+        int discarded$49 = -116;
+        rm.a();
+        int discarded$50 = -59;
+        cn.a();
         kn.m(param0 + -12614);
-        dm.r(-103);
-        ko.n(-100);
-        on.g((byte) 106);
-        vk.g((byte) 125);
-        pl.e((byte) 64);
-        jh.a((byte) -123);
+        int discarded$51 = -103;
+        dm.r();
+        int discarded$52 = -100;
+        ko.n();
+        int discarded$53 = 106;
+        on.g();
+        int discarded$54 = 125;
+        vk.g();
+        int discarded$55 = 64;
+        pl.e();
+        int discarded$56 = -123;
+        jh.a();
         be.a(118);
-        fh.f((byte) 123);
-        tg.a(true);
+        int discarded$57 = 123;
+        fh.f();
+        int discarded$58 = 1;
+        tg.a();
         d.a(false);
         fg.a(9882);
         qd.b();
         nd.b(param0 + -23110);
         fi.a();
-        jb.a((byte) 33);
-        kh.a(21601);
-        ig.a((byte) 2);
+        int discarded$59 = 33;
+        jb.a();
+        int discarded$60 = 21601;
+        kh.a();
+        int discarded$61 = 2;
+        ig.a();
         dd.b(116);
-        so.a(true);
+        int discarded$62 = 1;
+        so.a();
         op.f((byte) 122);
-        bg.b((byte) -101);
+        int discarded$63 = -101;
+        bg.b();
         ma.c((byte) -112);
-        rb.b(true);
-        fk.e(108);
-        al.a((byte) 51);
-        kk.b(true);
+        int discarded$64 = 1;
+        rb.b();
+        int discarded$65 = 108;
+        fk.e();
+        int discarded$66 = 51;
+        al.a();
+        int discarded$67 = 1;
+        kk.b();
         pb.c(0);
         mj.a(param0 ^ 3805);
-        kf.d(126);
+        int discarded$68 = 126;
+        kf.d();
         hd.a((byte) 125);
-        ql.f(0);
+        int discarded$69 = 0;
+        ql.f();
         wc.b((byte) 34);
         da.b((byte) -13);
-        se.f(21476);
-        pe.a(7);
-        an.b(-1);
-        ek.a(14);
-        di.a(false);
-        ro.a(false);
+        int discarded$70 = 21476;
+        se.f();
+        int discarded$71 = 7;
+        pe.a();
+        int discarded$72 = -1;
+        an.b();
+        int discarded$73 = 14;
+        ek.a();
+        int discarded$74 = 0;
+        di.a();
+        int discarded$75 = 0;
+        ro.a();
         lo.j(58);
-        gp.j(0);
-        fb.j(118);
+        int discarded$76 = 0;
+        gp.j();
+        int discarded$77 = 118;
+        fb.j();
         vp.c((byte) 89);
-        pi.b((byte) 122);
+        int discarded$78 = 122;
+        pi.b();
         pd.b((byte) -88);
-        wi.c((byte) 121);
+        int discarded$79 = 121;
+        wi.c();
         oe.m(1);
         wo.a(true);
-        ci.d(-12424);
+        int discarded$80 = -12424;
+        ci.d();
         ep.b(param0 + -23120);
         pk.a(4194303);
-        of.a((byte) 79);
+        int discarded$81 = 79;
+        of.a();
         ej.a(-115);
         em.a(param0 ^ 23098);
-        oh.a(false);
-        bf.a((byte) -91);
+        int discarded$82 = 0;
+        oh.a();
+        int discarded$83 = -91;
+        bf.a();
         nn.c(param0 + -23119);
-        pm.b(0);
+        int discarded$84 = 0;
+        pm.b();
         sl.a(false);
-        bj.b((byte) 109);
+        int discarded$85 = 109;
+        bj.b();
         fc.a(32);
         hq.f((byte) -49);
         l.e(param0 + -20899);
-        mp.a(true);
+        int discarded$86 = 1;
+        mp.a();
         uh.f(103);
         fe.a(param0 ^ -23078);
-        hp.b((byte) -15);
-        aj.a((byte) -38);
+        int discarded$87 = -15;
+        hp.b();
+        int discarded$88 = -38;
+        aj.a();
         lj.a(-1);
-        to.f((byte) 23);
+        int discarded$89 = 23;
+        to.f();
         dp.e(param0 ^ 23116);
-        fq.f((byte) -123);
-        wh.f((byte) 49);
-        ol.c(false);
-        ij.e(-124);
-        wa.a(0);
+        int discarded$90 = -123;
+        fq.f();
+        int discarded$91 = 49;
+        wh.f();
+        int discarded$92 = 0;
+        ol.c();
+        int discarded$93 = -124;
+        ij.e();
+        int discarded$94 = 0;
+        wa.a();
         ra.a(false);
-        ao.a(true);
+        int discarded$95 = 1;
+        ao.a();
         qi.b((byte) 106);
         dc.a(param0 ^ -23119);
         ta.a();
         lk.d(0);
-        bm.d(0);
-        wn.f(111);
+        int discarded$96 = 0;
+        bm.d();
+        int discarded$97 = 111;
+        wn.f();
         nj.b((byte) 97);
         rj.c((byte) -104);
         rn.a(512);
-        cg.i(100);
+        int discarded$98 = 100;
+        cg.i();
         gg.e((byte) 45);
-        fj.a((byte) 119);
+        int discarded$99 = 119;
+        fj.a();
         gn.b((byte) -106);
         qf.a(false);
-        ic.e((byte) -63);
-        uc.b(-120);
+        int discarded$100 = -63;
+        ic.e();
+        int discarded$101 = -120;
+        uc.b();
         ja.c();
-        jk.a(20);
-        rl.c((byte) -79);
-        cl.a(938035464);
-        bq.a((byte) 124);
-        cd.a(false);
+        int discarded$102 = 20;
+        jk.a();
+        int discarded$103 = -79;
+        rl.c();
+        int discarded$104 = 938035464;
+        cl.a();
+        int discarded$105 = 124;
+        bq.a();
+        int discarded$106 = 0;
+        cd.a();
         oi.a(param0 ^ param0);
         hk.a(param0 + -23207);
-        ri.b(10);
-        ap.a(11924);
+        int discarded$107 = 10;
+        ri.b();
+        int discarded$108 = 11924;
+        ap.a();
         gf.c(param0 + -31989);
         q.a();
         ai.a((byte) -92);
         fd.b(-24465);
         ok.a((byte) -118);
-        jo.a((byte) -123);
+        int discarded$109 = -123;
+        jo.a();
         w.c(param0 + -23174);
-        f.a(-26570);
+        int discarded$110 = -26570;
+        f.a();
         hg.a(94);
-        kd.c(-127);
+        int discarded$111 = -127;
+        kd.c();
         ng.f(param0 + -23118);
-        qm.j(89);
-        ie.a(0);
-        ka.l(127);
-        ud.a(-43);
-        ch.d((byte) -105);
+        int discarded$112 = 89;
+        qm.j();
+        int discarded$113 = 0;
+        ie.a();
+        int discarded$114 = 127;
+        ka.l();
+        int discarded$115 = -43;
+        ud.a();
+        int discarded$116 = -105;
+        ch.d();
         nm.a(false);
-        ce.a(true);
+        int discarded$117 = 1;
+        ce.a();
         en.a();
         wf.a((byte) -66);
-        qg.a((byte) 124);
-        dn.a((byte) -41);
-        ui.a(23652);
-        te.j(1);
+        int discarded$118 = 124;
+        qg.a();
+        int discarded$119 = -41;
+        dn.a();
+        int discarded$120 = 23652;
+        ui.a();
+        int discarded$121 = 1;
+        te.j();
         il.b(param0 ^ -6504);
         u.a(param0 + -23002);
-        qe.g(69);
+        int discarded$122 = 69;
+        qe.g();
         kp.d((byte) -58);
         le.a(1);
-        eh.d(29731);
-        uf.a((byte) 73);
+        int discarded$123 = 29731;
+        eh.d();
+        int discarded$124 = 73;
+        uf.a();
         k.d(false);
         i.c(-56);
         vm.a(116);
         bo.a(true);
-        pj.a(false);
-        ul.c((byte) -69);
-        jf.a(-31476);
-        ee.d(-3);
+        int discarded$125 = 0;
+        pj.a();
+        int discarded$126 = -69;
+        ul.c();
+        int discarded$127 = -31476;
+        jf.a();
+        int discarded$128 = -3;
+        ee.d();
         ca.b(64);
         td.a(param0 + -23112);
         qn.a(-1);
         sn.a(param0 ^ 23118);
-        un.b((byte) -6);
+        int discarded$129 = -6;
+        un.b();
         qc.a();
         qp.a((byte) -84);
-        gk.f(false);
+        int discarded$130 = 0;
+        gk.f();
         c.o(12669);
-        hb.f((byte) 82);
-        oc.a((byte) -9);
-        a.a(16);
-        db.k(1861726552);
-        vc.a((byte) -87);
-        md.c(false);
+        int discarded$131 = 82;
+        hb.f();
+        int discarded$132 = -9;
+        oc.a();
+        int discarded$133 = 16;
+        a.a();
+        int discarded$134 = 1861726552;
+        db.k();
+        int discarded$135 = -87;
+        vc.a();
+        int discarded$136 = 0;
+        md.c();
         h.a(98);
-        mg.d(101);
+        int discarded$137 = 101;
+        mg.d();
         ih.a(-1);
-        hc.a((byte) 103);
+        int discarded$138 = 103;
+        hc.a();
         si.a((byte) 95);
-        tm.e((byte) -89);
-        od.j(15967);
-        ve.b((byte) -70);
-        ke.a(-19064);
-        oj.n(-8012);
-        oa.b(true);
-        gj.f((byte) -28);
-        jg.j(-87);
-        no.f(0);
-        bh.a((byte) 94);
+        int discarded$139 = -89;
+        tm.e();
+        int discarded$140 = 15967;
+        od.j();
+        int discarded$141 = -70;
+        ve.b();
+        int discarded$142 = -19064;
+        ke.a();
+        int discarded$143 = -8012;
+        oj.n();
+        int discarded$144 = 1;
+        oa.b();
+        int discarded$145 = -28;
+        gj.f();
+        int discarded$146 = -87;
+        jg.j();
+        int discarded$147 = 0;
+        no.f();
+        int discarded$148 = 94;
+        bh.a();
         wd.a(1);
         bn.m(param0 ^ -23082);
-        kl.b((byte) -105);
-        pg.a(true);
+        int discarded$149 = -105;
+        kl.b();
+        int discarded$150 = 1;
+        pg.a();
         ah.g(-520925311);
-        wm.a(false);
-        tj.j(109);
-        eg.g(-6835);
+        int discarded$151 = 0;
+        wm.a();
+        int discarded$152 = 109;
+        tj.j();
+        int discarded$153 = -6835;
+        eg.g();
         p.a();
-        na.a((byte) 4);
-        kb.a((byte) 125);
+        int discarded$154 = 4;
+        na.a();
+        int discarded$155 = 125;
+        kb.a();
         sh.a(true);
         nb.a(param0 ^ -23078);
-        ue.a(30);
-        rh.a((byte) 64);
-        gi.a(-112);
-        lc.a((byte) 90);
-        cm.a(128);
-        m.b((byte) -10);
+        int discarded$156 = 30;
+        ue.a();
+        int discarded$157 = 64;
+        rh.a();
+        int discarded$158 = -112;
+        gi.a();
+        int discarded$159 = 90;
+        lc.a();
+        int discarded$160 = 128;
+        cm.a();
+        int discarded$161 = -10;
+        m.b();
         ad.c(param0 ^ -23054);
         ia.a(param0 ^ -23069);
-        gh.c(-102);
-        ip.e(8192);
-        jc.a(14518);
+        int discarded$162 = -102;
+        gh.c();
+        int discarded$163 = 8192;
+        ip.e();
+        int discarded$164 = 14518;
+        jc.a();
         sd.a((byte) -120);
         im.j(param0 ^ -16156);
         gd.a(0);
-        ff.a(-46);
-        mc.a(-1);
-        hf.a((byte) 22);
+        int discarded$165 = -46;
+        ff.a();
+        int discarded$166 = -1;
+        mc.a();
+        int discarded$167 = 22;
+        hf.a();
         um.a(-127);
         og.a(17);
-        fl.a(0);
+        int discarded$168 = 0;
+        fl.a();
         bd.a(param0 + -23048);
         ug.e(param0 ^ 15191);
-        io.a(105);
-        go.a((byte) 124);
-        gq.e(100);
+        int discarded$169 = 105;
+        io.a();
+        int discarded$170 = 124;
+        go.a();
+        int discarded$171 = 100;
+        gq.e();
         wk.c(-19101);
         ge.a(param0 + -23119);
-        id.c(-118);
+        int discarded$172 = -118;
+        id.c();
         vl.a(param0 ^ 23118);
-        ln.a((byte) -113);
-        ib.a(2);
-        rk.a(10934);
+        int discarded$173 = -113;
+        ln.a();
+        int discarded$174 = 2;
+        ib.a();
+        int discarded$175 = 10934;
+        rk.a();
         up.a((byte) 104);
-        tk.a(7);
+        int discarded$176 = 7;
+        tk.a();
         qk.a(6);
-        vn.a(false);
-        jm.a(-1345);
-        fo.b((byte) -89);
-        ki.c(25335);
+        int discarded$177 = 0;
+        vn.a();
+        int discarded$178 = -1345;
+        jm.a();
+        int discarded$179 = -89;
+        fo.b();
+        int discarded$180 = 25335;
+        ki.c();
         jd.e(param0 ^ -9315);
         li.a((byte) 48);
         ba.c(3);
-        wl.a(false);
-        ji.a(-14186);
-        ae.b((byte) 69);
+        int discarded$181 = 0;
+        wl.a();
+        int discarded$182 = -14186;
+        ji.a();
+        int discarded$183 = 69;
+        ae.b();
         wg.a((byte) -27);
         jn.a(29353);
         lp.a((byte) -114);
         fp.a(param0 + 329385410);
         sm.a((byte) -115);
-        df.a(3);
+        int discarded$184 = 3;
+        df.a();
         lf.a(0);
-        mn.b((byte) -26);
+        int discarded$185 = -26;
+        mn.b();
         bi.a(-8);
         rd.a(-5778);
-        ec.e(0);
-        g.e(-30055);
+        int discarded$186 = 0;
+        ec.e();
+        int discarded$187 = -30055;
+        g.e();
         bc.e(param0 ^ 23056);
-        kc.f(16);
-        ag.e(-1);
-        qo.b(true);
-        dq.a(-120);
-        ni.a((byte) -13);
-        dj.b(-125);
-        hn.c((byte) -125);
+        int discarded$188 = 16;
+        kc.f();
+        int discarded$189 = -1;
+        ag.e();
+        int discarded$190 = 1;
+        qo.b();
+        int discarded$191 = -120;
+        dq.a();
+        int discarded$192 = -13;
+        ni.a();
+        int discarded$193 = -125;
+        dj.b();
+        int discarded$194 = -125;
+        hn.c();
         el.a(param0 ^ -13666);
         ((Pixelate) this).field_w = null;
     }
@@ -1272,12 +1486,14 @@ public final class Pixelate extends lb {
     }
 
     final void b(int param0) {
-        kp.c((byte) -92);
+        int discarded$0 = -92;
+        kp.c();
         int var2 = -13 % ((-23 - param0) / 61);
         if (!(ib.field_f == null)) {
             ln.a(121);
         }
-        sn.a((byte) -91);
+        int discarded$1 = -91;
+        sn.a();
     }
 
     final static void a(boolean param0, byte param1, int param2, boolean param3, int param4, int param5, int param6) {
@@ -2353,7 +2569,9 @@ public final class Pixelate extends lb {
               }
               L4: {
                 L5: {
-                  ho.a(ep.a(30022), 12402);
+                  int discarded$5 = 30022;
+                  int discarded$6 = 12402;
+                  ho.a(ep.a());
                   if (fc.field_e == 4) {
                     break L5;
                   } else {
@@ -2440,8 +2658,10 @@ public final class Pixelate extends lb {
                 }
               }
               L13: {
-                un.a((byte) 87);
-                if (!hf.b((byte) 100)) {
+                int discarded$7 = 87;
+                un.a();
+                int discarded$8 = 100;
+                if (!hf.b()) {
                   if (pe.a(false)) {
                     L14: {
                       if (ib.field_f == null) {
@@ -2461,7 +2681,8 @@ public final class Pixelate extends lb {
                       break L13;
                     } else {
                       t.a(0, 0, t.field_j, t.field_d);
-                      dj.a(ab.field_c[0].field_F, ab.field_c[0].field_E, ab.field_c, -1501881951);
+                      int discarded$9 = -1501881951;
+                      dj.a(ab.field_c[0].field_F, ab.field_c[0].field_E, ab.field_c);
                       break L13;
                     }
                   }
@@ -2507,7 +2728,8 @@ public final class Pixelate extends lb {
         int var8 = 0;
         int var9 = 0;
         var9 = field_H ? 1 : 0;
-        ho.a(-29810);
+        int discarded$21 = -29810;
+        ho.a();
         if (ji.field_b == null) {
           if (we.field_p != null) {
             li.a(90.0f, -1, rh.field_r);
@@ -2565,9 +2787,11 @@ public final class Pixelate extends lb {
                   L2: {
                     gn.a((byte) 112);
                     rj.i(7902);
-                    wo.a(3);
+                    int discarded$22 = 3;
+                    wo.a();
                     id.b(param1 + -2);
-                    nd.a(3);
+                    int discarded$23 = 3;
+                    nd.a();
                     if (param1 == 4) {
                       break L2;
                     } else {
@@ -2587,9 +2811,11 @@ public final class Pixelate extends lb {
               } else {
                 li.a(96.0f, -1, no.field_g);
                 ((Pixelate) this).d(param1 ^ 123);
-                rk.field_e = vn.a(pf.field_d, "basic", "font", hd.field_c, 22510);
+                int discarded$24 = 22510;
+                rk.field_e = vn.a(pf.field_d, "basic", "font", hd.field_c);
                 qj.field_e = bf.a(param1 ^ 4, dg.field_d, "", qn.field_l, "arial13");
-                nh.a((byte) 117);
+                int discarded$25 = 117;
+                nh.a();
                 bm.field_u = bi.a("basic", "background", pf.field_d, (byte) -36);
                 pm.a(13728, 0, lb.a(pf.field_d, 23, "basic", "level1"));
                 pm.a(13728, 1, lb.a(pf.field_d, -128, "basic", "level2"));
@@ -2618,7 +2844,7 @@ public final class Pixelate extends lb {
                 ih.field_a = eh.a("tick", "basic", (byte) 47, pf.field_d);
                 hp.field_Gb = bi.a("basic", "timer", pf.field_d, (byte) -86);
                 ll.field_m = eh.a("marker", "basic", (byte) 47, pf.field_d);
-                tf[] discarded$1 = bf.a(5, "basic", "frame");
+                tf[] discarded$26 = bf.a(5, "basic", "frame");
                 ab.field_c = bf.a(param1 + 1, "basic", "frame_filled");
                 bi.field_g = bf.a(5, "basic", "frame_raised");
                 in.field_B = bi.a("basic", "gameframe", pf.field_d, (byte) -25);
@@ -2636,18 +2862,28 @@ public final class Pixelate extends lb {
                 nm.field_f = bi.a("basic", "kite", pf.field_d, (byte) -77);
                 hb.field_hb = bi.a("basic", "bow", pf.field_d, (byte) -30);
                 jo.field_j = bi.a("basic", "lobby_logo", pf.field_d, (byte) -62);
-                em.a(eh.a("scrollbutton", "basic", (byte) 47, pf.field_d), -77);
+                int discarded$27 = -77;
+                em.a(eh.a("scrollbutton", "basic", (byte) 47, pf.field_d));
                 var4 = bi.a("basic", "background_fireworks", pf.field_d, (byte) -38);
                 var5 = bi.a("basic", "sprite_fireworks", pf.field_d, (byte) -95);
-                md.a(var4, var5, 80);
-                nb.a(0, eh.a("tiles0", "basic", (byte) 47, pf.field_d), (byte) -53);
-                nb.a(1, eh.a("tiles1", "basic", (byte) 47, pf.field_d), (byte) -53);
-                nb.a(2, eh.a("tiles2", "basic", (byte) 47, pf.field_d), (byte) -53);
-                nb.a(3, eh.a("tiles3", "basic", (byte) 47, pf.field_d), (byte) -53);
-                nb.a(4, eh.a("tiles4", "basic", (byte) 47, pf.field_d), (byte) -53);
-                nb.a(5, eh.a("tiles5", "basic", (byte) 47, pf.field_d), (byte) -53);
-                nb.a(6, eh.a("tiles6", "basic", (byte) 47, pf.field_d), (byte) -53);
-                nb.a(7, eh.a("tiles7", "basic", (byte) 47, pf.field_d), (byte) -53);
+                int discarded$28 = 80;
+                md.a(var4, var5);
+                int discarded$29 = -53;
+                nb.a(0, eh.a("tiles0", "basic", (byte) 47, pf.field_d));
+                int discarded$30 = -53;
+                nb.a(1, eh.a("tiles1", "basic", (byte) 47, pf.field_d));
+                int discarded$31 = -53;
+                nb.a(2, eh.a("tiles2", "basic", (byte) 47, pf.field_d));
+                int discarded$32 = -53;
+                nb.a(3, eh.a("tiles3", "basic", (byte) 47, pf.field_d));
+                int discarded$33 = -53;
+                nb.a(4, eh.a("tiles4", "basic", (byte) 47, pf.field_d));
+                int discarded$34 = -53;
+                nb.a(5, eh.a("tiles5", "basic", (byte) 47, pf.field_d));
+                int discarded$35 = -53;
+                nb.a(6, eh.a("tiles6", "basic", (byte) 47, pf.field_d));
+                int discarded$36 = -53;
+                nb.a(7, eh.a("tiles7", "basic", (byte) 47, pf.field_d));
                 oo.field_c = new tf[22];
                 oo.field_c[0] = bi.a("basic", "achievement0", pf.field_d, (byte) -75);
                 oo.field_c[1] = bi.a("basic", "achievement1", pf.field_d, (byte) -57);
@@ -2691,7 +2927,9 @@ public final class Pixelate extends lb {
                   if (fo.field_u.length <= var8) {
                     gg.a(true, lp.field_c, rg.field_d, qn.field_l, hp.field_Hb, la.field_c, var7, 2, 2, var7, uk.field_u, param1 + 29, ap.field_d, dg.field_d, cl.field_f);
                     fe.field_a = false;
-                    ri.a(200, (byte) -126);
+                    int discarded$37 = -126;
+                    int discarded$38 = 200;
+                    ri.a();
                     am.a(qn.field_l, true, dg.field_d);
                     eg.a((byte) -94, 0, 0, 16777215, (java.applet.Applet) this, ic.field_bb);
                     hd.field_c = null;
@@ -2887,7 +3125,7 @@ public final class Pixelate extends lb {
         ((Pixelate) this).a("Pixelate", 640, 13);
     }
 
-    private final void q(int param0) {
+    private final void q() {
         if (!(null == lf.field_f)) {
             be.a(79, lf.field_f);
             lf.field_f = null;
@@ -2901,7 +3139,8 @@ public final class Pixelate extends lb {
         ab.field_f = wb.a(9, (byte) 124);
         lj.field_c = wb.a(10, (byte) 124);
         uk.field_u = wb.a(11, (byte) 124);
-        ho.a(-29810);
+        int discarded$0 = -29810;
+        ho.a();
     }
 
     private final void a(boolean param0, boolean param1) {
@@ -2937,7 +3176,8 @@ public final class Pixelate extends lb {
               } else {
                 L1: {
                   if (wl.field_b) {
-                    d.a(-17540);
+                    int discarded$12 = -17540;
+                    d.a();
                     break L1;
                   } else {
                     tm.a(-20822);
@@ -2963,7 +3203,9 @@ public final class Pixelate extends lb {
                       if (null == wh.field_p) {
                         break L3;
                       } else {
-                        md.a(wh.field_p, true, 3);
+                        int discarded$13 = 3;
+                        int discarded$14 = 1;
+                        md.a(wh.field_p);
                         break L3;
                       }
                     }
@@ -2981,7 +3223,8 @@ public final class Pixelate extends lb {
                       }
                     }
                     L5: {
-                      la.a(stackIn_77_0, var3, true, -25528);
+                      int discarded$15 = -25528;
+                      la.a(stackIn_77_0, var3, true);
                       if (!wl.field_b) {
                         break L5;
                       } else {
@@ -2992,7 +3235,8 @@ public final class Pixelate extends lb {
                       }
                     }
                     if (tk.a((byte) -104, ti.field_t)) {
-                      nm.a(0);
+                      int discarded$16 = 0;
+                      nm.a();
                       break L2;
                     } else {
                       break L2;
@@ -3057,14 +3301,16 @@ public final class Pixelate extends lb {
                     if (fc.field_e != -2) {
                       if (tk.a((byte) -104, fc.field_e)) {
                         wo.b(-79, fc.field_e).e((byte) -83);
-                        f.b(0);
+                        int discarded$17 = 0;
+                        f.b();
                         break L6;
                       } else {
                         break L6;
                       }
                     } else {
                       var3 = 1;
-                      f.b(0);
+                      int discarded$18 = 0;
+                      f.b();
                       break L6;
                     }
                   }
@@ -3074,12 +3320,14 @@ public final class Pixelate extends lb {
                     if (ec.field_t != 32) {
                       break L10;
                     } else {
-                      nm.a(0);
+                      int discarded$19 = 0;
+                      nm.a();
                       break L10;
                     }
                   }
                   L11: {
-                    f.b(0);
+                    int discarded$20 = 0;
+                    f.b();
                     if (ti.field_t == -1) {
                       break L11;
                     } else {
@@ -3271,7 +3519,8 @@ public final class Pixelate extends lb {
                 break L26;
               }
             }
-            la.a(stackIn_98_0, -1, var3 != 0, -25528);
+            int discarded$21 = -25528;
+            la.a(stackIn_98_0, -1, var3 != 0);
             break L24;
           } else {
             break L24;
@@ -3292,13 +3541,14 @@ public final class Pixelate extends lb {
           if (param1) {
             break L28;
           } else {
-            boolean discarded$1 = this.b(false, 93);
+            boolean discarded$22 = this.b(false, 93);
             break L28;
           }
         }
         L29: {
           if (ti.field_t == -5) {
-            qg.a(io.field_c.c((byte) 8), 11, false);
+            int discarded$23 = 0;
+            qg.a(io.field_c.c((byte) 8), 11);
             ia.field_d = true;
             ti.field_t = fc.field_e;
             break L29;
@@ -3341,7 +3591,9 @@ public final class Pixelate extends lb {
         try {
           L0: {
             if (param1 == 0) {
-              stackOut_3_0 = tj.a(param2, param0, true, true);
+              int discarded$4 = 1;
+              int discarded$5 = 1;
+              stackOut_3_0 = tj.a(param2, param0);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

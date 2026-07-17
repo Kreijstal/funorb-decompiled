@@ -16,26 +16,24 @@ final class sd extends lga {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int stackIn_13_0 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
+        int stackIn_10_0 = 0;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        int stackOut_9_0 = 0;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -43,83 +41,63 @@ final class sd extends lga {
             var4 = param2.length();
             var5 = 0;
             L1: while (true) {
-              L2: {
-                L3: {
-                  L4: {
-                    if (var4 <= var5) {
-                      break L4;
-                    } else {
-                      var8 = param0;
-                      var7 = param2.charAt(var5);
-                      if (var6 != 0) {
-                        if (var7 == var8) {
-                          break L2;
-                        } else {
-                          break L3;
-                        }
-                      } else {
-                        L5: {
-                          if (var7 == var8) {
-                            var3_int++;
-                            break L5;
-                          } else {
-                            break L5;
-                          }
-                        }
-                        var5++;
-                        if (var6 == 0) {
-                          continue L1;
-                        } else {
-                          break L4;
-                        }
-                      }
-                    }
-                  }
+              if (var4 <= var5) {
+                L2: {
                   if (param1 == 93) {
                     break L2;
+                  } else {
+                    field_G = 37;
+                    break L2;
+                  }
+                }
+                stackOut_9_0 = var3_int;
+                stackIn_10_0 = stackOut_9_0;
+                break L0;
+              } else {
+                L3: {
+                  if (param2.charAt(var5) == param0) {
+                    var3_int++;
+                    break L3;
                   } else {
                     break L3;
                   }
                 }
-                field_G = 37;
-                break L2;
+                var5++;
+                continue L1;
               }
-              stackOut_12_0 = var3_int;
-              stackIn_13_0 = stackOut_12_0;
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L4: {
             var3 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var3;
-            stackOut_14_1 = new StringBuilder().append("sd.F(").append(param0).append(44).append(param1).append(44);
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackOut_11_0 = (RuntimeException) var3;
+            stackOut_11_1 = new StringBuilder().append("sd.F(").append(param0).append(44).append(param1).append(44);
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
             if (param2 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
-              break L6;
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L4;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
-              break L6;
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L4;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
         }
-        return stackIn_13_0;
+        return stackIn_10_0;
     }
 
     final boolean a(ae param0, boolean param1) {
@@ -217,98 +195,73 @@ final class sd extends lga {
             if (var5 == null) {
               L0: {
                 var5 = ((sd) this).field_E;
-                if (var13 == 0) {
+                if (var5.equals((Object) (Object) ((sd) this).field_o)) {
                   break L0;
                 } else {
-                  var5 = ko.field_g;
+                  ((sd) this).field_o = var5;
+                  ((sd) this).b(18758);
                   break L0;
                 }
               }
               L1: {
-                if (var5.equals((Object) (Object) ((sd) this).field_o)) {
-                  break L1;
-                } else {
-                  ((sd) this).field_o = var5;
-                  ((sd) this).b(18758);
-                  break L1;
-                }
-              }
-              L2: {
-                super.a(param0, param1, param2, param3);
-                var6 = ((sd) this).field_I.b(-4666);
-                var17 = (oaa) (Object) ((sd) this).field_r;
-                var9 = ((sd) this).field_i + param0;
-                var10 = var17.a(param1, (ae) this, (byte) -89) + (var17.a((ae) this, 14157).b(param2 + -117) >> 1);
-                if (gla.field_p == var6) {
-                  break L2;
-                } else {
-                  if (var6 == tea.field_b) {
+                L2: {
+                  super.a(param0, param1, param2, param3);
+                  var6 = ((sd) this).field_I.b(-4666);
+                  var17 = (oaa) (Object) ((sd) this).field_r;
+                  var9 = ((sd) this).field_i + param0;
+                  var10 = var17.a(param1, (ae) this, (byte) -89) + (var17.a((ae) this, 14157).b(param2 + -117) >> 1);
+                  if (gla.field_p == var6) {
                     break L2;
                   } else {
-                    L3: {
+                    if (var6 == tea.field_b) {
+                      break L2;
+                    } else {
                       if (fp.field_c != var6) {
-                        break L3;
+                        if (var6 == uh.field_k) {
+                          var15 = pq.field_b[1];
+                          var15.a(var9, -(var15.field_q >> 1) + var10, 256);
+                          break L1;
+                        } else {
+                          break L1;
+                        }
                       } else {
                         var14 = pq.field_b[2];
                         var14.a(var9, -(var14.field_q >> 1) + var10, 256);
-                        if (var13 != 0) {
-                          break L3;
+                        break L1;
+                      }
+                    }
+                  }
+                }
+                L3: {
+                  L4: {
+                    var16 = pq.field_b[0];
+                    var11 = var16.field_n << 1;
+                    var12 = var16.field_k << 1;
+                    if (((sd) this).field_H == null) {
+                      break L4;
+                    } else {
+                      if (((sd) this).field_H.field_m < var11) {
+                        break L4;
+                      } else {
+                        if (var12 > ((sd) this).field_H.field_q) {
+                          break L4;
                         } else {
-                          return;
+                          nm.a(((sd) this).field_H, (byte) 120);
+                          bea.a();
+                          break L3;
                         }
                       }
                     }
-                    if (var6 == uh.field_k) {
-                      var15 = pq.field_b[1];
-                      var15.a(var9, -(var15.field_q >> 1) + var10, 256);
-                      if (var13 != 0) {
-                        break L2;
-                      } else {
-                        return;
-                      }
-                    } else {
-                      return;
-                    }
                   }
+                  ((sd) this).field_H = new iu(var11, var12);
+                  nm.a(((sd) this).field_H, (byte) 121);
+                  break L3;
                 }
+                var16.a(112, 144, var16.field_n << 4, var16.field_k << 4, -((sd) this).field_F << 10, 4096);
+                pfa.a(1);
+                ((sd) this).field_H.a(var9 - (var16.field_n >> 1), var10 + -var16.field_k, 256);
+                break L1;
               }
-              L4: {
-                var16 = pq.field_b[0];
-                var11 = var16.field_n << 1;
-                var12 = var16.field_k << 1;
-                if (((sd) this).field_H == null) {
-                  break L4;
-                } else {
-                  if (((sd) this).field_H.field_m < var11) {
-                    break L4;
-                  } else {
-                    if (var12 > ((sd) this).field_H.field_q) {
-                      break L4;
-                    } else {
-                      nm.a(((sd) this).field_H, (byte) 120);
-                      bea.a();
-                      if (var13 == 0) {
-                        var16.a(112, 144, var16.field_n << 4, var16.field_k << 4, -((sd) this).field_F << 10, 4096);
-                        pfa.a(1);
-                        ((sd) this).field_H.a(var9 - (var16.field_n >> 1), var10 + -var16.field_k, 256);
-                        return;
-                      } else {
-                        ((sd) this).field_H = new iu(var11, var12);
-                        nm.a(((sd) this).field_H, (byte) 121);
-                        var16.a(112, 144, var16.field_n << 4, var16.field_k << 4, -((sd) this).field_F << 10, 4096);
-                        pfa.a(1);
-                        ((sd) this).field_H.a(var9 - (var16.field_n >> 1), var10 + -var16.field_k, 256);
-                        return;
-                      }
-                    }
-                  }
-                }
-              }
-              ((sd) this).field_H = new iu(var11, var12);
-              nm.a(((sd) this).field_H, (byte) 121);
-              var16.a(112, 144, var16.field_n << 4, var16.field_k << 4, -((sd) this).field_F << 10, 4096);
-              pfa.a(1);
-              ((sd) this).field_H.a(var9 - (var16.field_n >> 1), var10 + -var16.field_k, 256);
               return;
             } else {
               L5: {
@@ -332,28 +285,17 @@ final class sd extends lga {
                   if (var6 == tea.field_b) {
                     break L6;
                   } else {
-                    L7: {
-                      if (fp.field_c != var6) {
-                        break L7;
+                    if (fp.field_c != var6) {
+                      if (var6 != uh.field_k) {
+                        return;
                       } else {
-                        var14 = pq.field_b[2];
-                        var14.a(var9, -(var14.field_q >> 1) + var10, 256);
-                        if (var13 != 0) {
-                          break L7;
-                        } else {
-                          return;
-                        }
-                      }
-                    }
-                    if (var6 == uh.field_k) {
-                      var15 = pq.field_b[1];
-                      var15.a(var9, -(var15.field_q >> 1) + var10, 256);
-                      if (var13 != 0) {
-                        break L6;
-                      } else {
+                        var15 = pq.field_b[1];
+                        var15.a(var9, -(var15.field_q >> 1) + var10, 256);
                         return;
                       }
                     } else {
+                      var14 = pq.field_b[2];
+                      var14.a(var9, -(var14.field_q >> 1) + var10, 256);
                       return;
                     }
                   }
@@ -367,19 +309,10 @@ final class sd extends lga {
                   if (var12 <= ((sd) this).field_H.field_q) {
                     nm.a(((sd) this).field_H, (byte) 120);
                     bea.a();
-                    if (var13 == 0) {
-                      var16.a(112, 144, var16.field_n << 4, var16.field_k << 4, -((sd) this).field_F << 10, 4096);
-                      pfa.a(1);
-                      ((sd) this).field_H.a(var9 - (var16.field_n >> 1), var10 + -var16.field_k, 256);
-                      return;
-                    } else {
-                      ((sd) this).field_H = new iu(var11, var12);
-                      nm.a(((sd) this).field_H, (byte) 121);
-                      var16.a(112, 144, var16.field_n << 4, var16.field_k << 4, -((sd) this).field_F << 10, 4096);
-                      pfa.a(1);
-                      ((sd) this).field_H.a(var9 - (var16.field_n >> 1), var10 + -var16.field_k, 256);
-                      return;
-                    }
+                    var16.a(112, 144, var16.field_n << 4, var16.field_k << 4, -((sd) this).field_F << 10, 4096);
+                    pfa.a(1);
+                    ((sd) this).field_H.a(var9 - (var16.field_n >> 1), var10 + -var16.field_k, 256);
+                    return;
                   } else {
                     ((sd) this).field_H = new iu(var11, var12);
                     nm.a(((sd) this).field_H, (byte) 121);
@@ -406,183 +339,154 @@ final class sd extends lga {
               }
             }
           } else {
-            L8: {
+            L7: {
               var5 = ko.field_g;
               if (var5.equals((Object) (Object) ((sd) this).field_o)) {
-                break L8;
+                break L7;
               } else {
                 ((sd) this).field_o = var5;
                 ((sd) this).b(18758);
-                break L8;
+                break L7;
               }
             }
-            L9: {
-              L10: {
+            L8: {
+              L9: {
                 super.a(param0, param1, param2, param3);
                 var6 = ((sd) this).field_I.b(-4666);
                 var17 = (oaa) (Object) ((sd) this).field_r;
                 var9 = ((sd) this).field_i + param0;
                 var10 = var17.a(param1, (ae) this, (byte) -89) + (var17.a((ae) this, 14157).b(param2 + -117) >> 1);
                 if (gla.field_p == var6) {
-                  break L10;
+                  break L9;
                 } else {
                   if (var6 == tea.field_b) {
-                    break L10;
+                    break L9;
                   } else {
-                    L11: {
-                      if (fp.field_c != var6) {
-                        break L11;
+                    if (fp.field_c != var6) {
+                      if (var6 == uh.field_k) {
+                        var15 = pq.field_b[1];
+                        var15.a(var9, -(var15.field_q >> 1) + var10, 256);
+                        break L8;
                       } else {
-                        var14 = pq.field_b[2];
-                        var14.a(var9, -(var14.field_q >> 1) + var10, 256);
-                        if (var13 == 0) {
-                          break L9;
-                        } else {
-                          break L11;
-                        }
-                      }
-                    }
-                    if (var6 == uh.field_k) {
-                      var15 = pq.field_b[1];
-                      var15.a(var9, -(var15.field_q >> 1) + var10, 256);
-                      if (var13 == 0) {
-                        break L9;
-                      } else {
-                        break L10;
+                        break L8;
                       }
                     } else {
-                      break L9;
+                      var14 = pq.field_b[2];
+                      var14.a(var9, -(var14.field_q >> 1) + var10, 256);
+                      break L8;
                     }
                   }
                 }
               }
-              L12: {
-                L13: {
+              L10: {
+                L11: {
                   var16 = pq.field_b[0];
                   var11 = var16.field_n << 1;
                   var12 = var16.field_k << 1;
                   if (((sd) this).field_H == null) {
-                    break L13;
+                    break L11;
                   } else {
                     if (((sd) this).field_H.field_m < var11) {
-                      break L13;
+                      break L11;
                     } else {
                       if (var12 > ((sd) this).field_H.field_q) {
-                        break L13;
+                        break L11;
                       } else {
                         nm.a(((sd) this).field_H, (byte) 120);
                         bea.a();
-                        if (var13 == 0) {
-                          break L12;
-                        } else {
-                          break L13;
-                        }
+                        break L10;
                       }
                     }
                   }
                 }
                 ((sd) this).field_H = new iu(var11, var12);
                 nm.a(((sd) this).field_H, (byte) 121);
-                break L12;
+                break L10;
               }
               var16.a(112, 144, var16.field_n << 4, var16.field_k << 4, -((sd) this).field_F << 10, 4096);
               pfa.a(1);
               ((sd) this).field_H.a(var9 - (var16.field_n >> 1), var10 + -var16.field_k, 256);
-              break L9;
+              break L8;
             }
             return;
           }
         } else {
-          L14: {
+          L12: {
             var5 = ko.field_g;
             if (var5.equals((Object) (Object) ((sd) this).field_o)) {
-              break L14;
+              break L12;
             } else {
               ((sd) this).field_o = var5;
               ((sd) this).b(18758);
-              break L14;
+              break L12;
             }
           }
-          L15: {
-            L16: {
+          L13: {
+            L14: {
               super.a(param0, param1, param2, param3);
               var6 = ((sd) this).field_I.b(-4666);
               var17 = (oaa) (Object) ((sd) this).field_r;
               var9 = ((sd) this).field_i + param0;
               var10 = var17.a(param1, (ae) this, (byte) -89) + (var17.a((ae) this, 14157).b(param2 + -117) >> 1);
               if (gla.field_p == var6) {
-                break L16;
+                break L14;
               } else {
                 if (var6 == tea.field_b) {
-                  break L16;
+                  break L14;
                 } else {
-                  L17: {
-                    if (fp.field_c != var6) {
-                      break L17;
+                  if (fp.field_c != var6) {
+                    if (var6 == uh.field_k) {
+                      var15 = pq.field_b[1];
+                      var15.a(var9, -(var15.field_q >> 1) + var10, 256);
+                      break L13;
                     } else {
-                      var14 = pq.field_b[2];
-                      var14.a(var9, -(var14.field_q >> 1) + var10, 256);
-                      if (var13 == 0) {
-                        break L15;
-                      } else {
-                        break L17;
-                      }
-                    }
-                  }
-                  if (var6 == uh.field_k) {
-                    var15 = pq.field_b[1];
-                    var15.a(var9, -(var15.field_q >> 1) + var10, 256);
-                    if (var13 == 0) {
-                      break L15;
-                    } else {
-                      break L16;
+                      break L13;
                     }
                   } else {
-                    break L15;
+                    var14 = pq.field_b[2];
+                    var14.a(var9, -(var14.field_q >> 1) + var10, 256);
+                    break L13;
                   }
                 }
               }
             }
-            L18: {
-              L19: {
+            L15: {
+              L16: {
                 var16 = pq.field_b[0];
                 var11 = var16.field_n << 1;
                 var12 = var16.field_k << 1;
                 if (((sd) this).field_H == null) {
-                  break L19;
+                  break L16;
                 } else {
                   if (((sd) this).field_H.field_m < var11) {
-                    break L19;
+                    break L16;
                   } else {
                     if (var12 > ((sd) this).field_H.field_q) {
-                      break L19;
+                      break L16;
                     } else {
                       nm.a(((sd) this).field_H, (byte) 120);
                       bea.a();
-                      if (var13 == 0) {
-                        break L18;
-                      } else {
-                        break L19;
-                      }
+                      break L15;
                     }
                   }
                 }
               }
               ((sd) this).field_H = new iu(var11, var12);
               nm.a(((sd) this).field_H, (byte) 121);
-              break L18;
+              break L15;
             }
             var16.a(112, 144, var16.field_n << 4, var16.field_k << 4, -((sd) this).field_F << 10, 4096);
             pfa.a(1);
             ((sd) this).field_H.a(var9 - (var16.field_n >> 1), var10 + -var16.field_k, 256);
-            break L15;
+            break L13;
           }
           return;
         }
     }
 
     sd(nua param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (isa) (Object) nk.a(-21819));
+        super(param1, (isa) (Object) nk.a());
+        int discarded$0 = -21819;
         try {
             ((sd) this).field_I = param0;
             ((sd) this).field_E = param1;
@@ -592,12 +496,7 @@ final class sd extends lga {
         }
     }
 
-    public static void g(byte param0) {
-        if (param0 != 10) {
-            field_J = null;
-            field_J = null;
-            return;
-        }
+    public static void g() {
         field_J = null;
     }
 

@@ -260,7 +260,7 @@ final class wd extends gha {
         try {
           L0: {
             L1: {
-              var4_int = 99 / ((param1 - 76) / 34);
+              var4_int = 99;
               super.a(-85, (gha) (Object) param0);
               if (!param2) {
                 bl.a((Object[]) (Object) ((wd) this).field_u, 0, (Object[]) (Object) param0.field_u, 0, 6);
@@ -345,7 +345,7 @@ final class wd extends gha {
               break L5;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 44 + param2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + 110 + 44 + param2 + 41);
         }
     }
 

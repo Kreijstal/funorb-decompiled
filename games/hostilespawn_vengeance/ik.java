@@ -194,7 +194,7 @@ final class ik {
         return stackIn_38_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
     }
 

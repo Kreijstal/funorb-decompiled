@@ -30,14 +30,14 @@ final class vd extends wa implements fg {
         }
     }
 
-    public static void l(int param0) {
+    public static void l() {
         field_X = null;
         field_Z = null;
         field_V = null;
         field_Y = null;
     }
 
-    final static hh a(String param0, int param1) {
+    final static hh a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
@@ -84,7 +84,8 @@ final class vd extends wa implements fg {
                   } else {
                     var3 = param0.substring(0, var2_int);
                     var4 = param0.substring(var2_int + 1);
-                    var5 = j.a(var3, 0);
+                    int discarded$2 = 0;
+                    var5 = j.a(var3);
                     if (var5 == null) {
                       stackOut_14_0 = qc.a(28320, var4);
                       stackIn_15_0 = stackOut_14_0;

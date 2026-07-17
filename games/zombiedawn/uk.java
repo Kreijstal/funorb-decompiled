@@ -7,25 +7,24 @@ final class uk {
     static String field_b;
 
     public static void a(int param0) {
-        if (param0 != -21) {
-            return;
-        }
         field_c = null;
         field_b = null;
         field_a = null;
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         if (ld.field_j < 20) {
             return true;
         }
-        if (!bj.d(18840)) {
+        int discarded$2 = 18840;
+        if (!bj.d()) {
             return true;
         }
         if (sd.field_b <= 0) {
             return false;
         }
-        if (nm.c(-23022)) {
+        int discarded$6 = -23022;
+        if (nm.c()) {
             return false;
         }
         return true;
@@ -38,7 +37,7 @@ final class uk {
     }
 
     final static String a(int param0, byte param1, int param2) {
-        int var3 = -37 % ((param1 - -79) / 44);
+        int var3 = -1;
         return param0 + "/" + param2;
     }
 

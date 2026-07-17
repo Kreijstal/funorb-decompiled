@@ -57,7 +57,8 @@ abstract class jg {
         try {
           L0: {
             if (!qda.a((byte) -72, param2)) {
-              if (!eba.a(param2, 6912)) {
+              int discarded$8 = 6912;
+              if (!eba.a(param2)) {
                 if (ld.a(false, param2)) {
                   stackOut_8_0 = 0;
                   stackIn_9_0 = stackOut_8_0;
@@ -81,7 +82,7 @@ abstract class jg {
                             break L0;
                           } else {
                             var4 = null;
-                            boolean discarded$2 = jg.a(104, (String) null, (String) null);
+                            boolean discarded$9 = jg.a(104, (String) null, (String) null);
                             return true;
                           }
                         } else {

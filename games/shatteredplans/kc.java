@@ -18,7 +18,7 @@ final class kc {
     static byte[][] field_l;
     static int[] field_m;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_l = null;
         field_b = null;
         field_m = null;

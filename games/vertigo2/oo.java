@@ -39,8 +39,8 @@ final class oo {
         double var21 = 0.0;
         double var23 = 0.0;
         double var25 = 0.0;
-        var2 = param0 * 128;
-        var3 = param0;
+        var2 = 0;
+        var3 = 0;
         L0: while (true) {
           if (var3 >= 512) {
             return;

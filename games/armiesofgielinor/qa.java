@@ -5,7 +5,7 @@ final class qa extends dr {
     static boolean field_F;
     static String field_E;
 
-    final static int h(int param0) {
+    final static int h() {
         return 1;
     }
 
@@ -82,7 +82,7 @@ final class qa extends dr {
         of.field_Jb = dk.field_s[param0];
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_E = null;
     }
 

@@ -8,7 +8,7 @@ final class og {
     static hh field_a;
     static String[] field_c;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
         field_a = null;
@@ -31,7 +31,7 @@ final class og {
             oh.field_h.field_p = oh.field_h.field_p + 1;
             if (oh.field_h.field_p < 2) {
               L0: {
-                if (oh.field_h.field_p < param0) {
+                if (oh.field_h.field_p < 2) {
                   break L0;
                 } else {
                   if (param1 != 50) {
@@ -51,7 +51,7 @@ final class og {
                 return 2;
               } else {
                 L1: {
-                  if (oh.field_h.field_p < param0) {
+                  if (oh.field_h.field_p < 2) {
                     break L1;
                   } else {
                     if (param1 != 50) {
@@ -74,7 +74,7 @@ final class og {
             oh.field_h.field_p = oh.field_h.field_p + 1;
             if (oh.field_h.field_p < 2) {
               L2: {
-                if (oh.field_h.field_p < param0) {
+                if (oh.field_h.field_p < 2) {
                   break L2;
                 } else {
                   if (param1 != 50) {
@@ -94,7 +94,7 @@ final class og {
                 return 2;
               } else {
                 L3: {
-                  if (oh.field_h.field_p < param0) {
+                  if (oh.field_h.field_p < 2) {
                     break L3;
                   } else {
                     if (param1 != 50) {
@@ -120,7 +120,7 @@ final class og {
             if (param1 == 51) {
               return 2;
             } else {
-              if (oh.field_h.field_p >= param0) {
+              if (oh.field_h.field_p >= 2) {
                 if (param1 != 50) {
                   if (4 > oh.field_h.field_p) {
                     return -1;
@@ -139,7 +139,7 @@ final class og {
               }
             }
           } else {
-            if (oh.field_h.field_p >= param0) {
+            if (oh.field_h.field_p >= 2) {
               if (param1 == 50) {
                 return 5;
               } else {
@@ -186,7 +186,8 @@ final class og {
         var1 = jk.l(-889);
         var2 = ba.a((byte) 101);
         kf.field_i.a(var1 - -(tj.field_y << 1), qa.field_u - dg.field_b, -tj.field_y + ic.field_b, (byte) 110, (dg.field_b << 1) + var2);
-        hd.a((byte) 8);
+        int discarded$25 = 8;
+        hd.a();
         if (param0) {
           field_e = 33;
           return;

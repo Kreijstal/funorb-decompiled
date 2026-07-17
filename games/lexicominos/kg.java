@@ -105,7 +105,9 @@ final class kg extends nb implements ue, jk {
             ((kg) this).field_F = param0;
             ((kg) this).field_E = new kf(n.field_h, (vd) null);
             ((kg) this).field_E.field_i = (rd) (Object) new v();
-            var7 = da.a(new String[2], ol.field_p, false);
+            int discarded$2 = 1;
+            int discarded$3 = 0;
+            var7 = da.a(new String[2], ol.field_p);
             var3 = 20;
             var4 = new ik(ql.field_Q, 0, 0, 0, 0, 16777215, -1, 3, 0, ql.field_Q.field_E, -1, 2147483647, true);
             ((kg) this).field_B = new bc(var7, (rd) (Object) var4);
@@ -164,7 +166,7 @@ final class kg extends nb implements ue, jk {
         return "</col></u>";
     }
 
-    final static String g(int param0) {
+    final static String g() {
         return ig.field_a.c(false);
     }
 
@@ -245,11 +247,11 @@ final class kg extends nb implements ue, jk {
         }
     }
 
-    public static void i(int param0) {
+    public static void i() {
         field_G = null;
     }
 
-    private final String e(boolean param0) {
+    private final String e() {
         return "<u=2164A2><col=2164A2>";
     }
 

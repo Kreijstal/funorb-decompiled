@@ -89,7 +89,7 @@ final class we {
                   }
                 }
                 L6: {
-                  var8 = dh.field_vb.a((ae) var6, (byte) -60, param1, param0, (ae) var7);
+                  var8 = dh.field_vb.a((ae) var6, (byte) -60, false, param0, (ae) var7);
                   if (param5) {
                     var8.b(-2);
                     break L6;
@@ -97,7 +97,7 @@ final class we {
                     break L6;
                   }
                 }
-                stackOut_14_0 = new mi((tk) (Object) var8, param3, param4);
+                stackOut_14_0 = new mi((tk) (Object) var8, true, param4);
                 stackIn_15_0 = stackOut_14_0;
                 break L0;
               }
@@ -304,7 +304,7 @@ final class we {
                           var10 = 0;
                           L17: while (true) {
                             if (var10 >= ((we) this).field_p) {
-                              var10 = param0;
+                              var10 = 0;
                               L18: while (true) {
                                 if (((we) this).field_p <= var10) {
                                   break L16;
@@ -323,7 +323,7 @@ final class we {
                             }
                           }
                         } else {
-                          var10 = param0;
+                          var10 = 0;
                           L19: while (true) {
                             if (((we) this).field_p <= var10) {
                               break L16;
@@ -507,7 +507,7 @@ final class we {
           L36: {
             var3 = decompiledCaughtException;
             stackOut_95_0 = (RuntimeException) var3;
-            stackOut_95_1 = new StringBuilder().append("we.C(").append(param0).append(44);
+            stackOut_95_1 = new StringBuilder().append("we.C(").append(0).append(44);
             stackIn_97_0 = stackOut_95_0;
             stackIn_97_1 = stackOut_95_1;
             stackIn_96_0 = stackOut_95_0;

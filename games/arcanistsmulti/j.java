@@ -10,7 +10,7 @@ final class j implements pf {
     private ti field_d;
     static volatile int field_g;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         field_f = null;
@@ -192,7 +192,7 @@ final class j implements pf {
         return stackIn_4_0;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         try {
             if (null != pg.field_f) {
                 try {
@@ -212,9 +212,6 @@ final class j implements pf {
 
     final static void a(boolean param0) {
         nj.field_c = 0;
-        if (param0) {
-            int discarded$0 = j.a(121, 53, 31);
-        }
         ef.field_r = true;
     }
 
@@ -284,7 +281,6 @@ final class j implements pf {
         Object var8 = null;
         String var9 = null;
         int var10 = 0;
-        Object var11 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -340,8 +336,8 @@ final class j implements pf {
               if (param1 == 5592405) {
                 break L3;
               } else {
-                var11 = null;
-                j.a(false, (String) null, true, false);
+                int discarded$1 = 0;
+                j.a(false, (String) null, true);
                 break L3;
               }
             }
@@ -387,18 +383,15 @@ final class j implements pf {
         }
     }
 
-    final static void a(boolean param0, String param1, boolean param2, boolean param3) {
+    final static void a(boolean param0, String param1, boolean param2) {
         try {
             hk.d(-24225);
             p.field_b.f(-117);
-            if (param3) {
-                int discarded$0 = j.a(-101, 37, 87);
-            }
             wh.field_f = new e(ge.field_g, (String) null, hk.field_s, param0, param2);
             g.field_e = new no(p.field_b, (qm) (Object) wh.field_f);
             p.field_b.b((qm) (Object) g.field_e, 15637);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "j.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "j.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + 0 + 41);
         }
     }
 

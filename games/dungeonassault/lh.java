@@ -140,20 +140,16 @@ final class lh {
               }
             }
             gf.e(var12, var13, var9 - -var5_int, var6 + var10, ((lh) this).field_k);
-            if (param1 == -81) {
-              gf.b(var12 - -1, 1 + var13, var5_int + var9 + -2, -2 + (var6 + var10), ((lh) this).field_j);
-              int discarded$1 = ((lh) this).field_f.a(param2, ((lh) this).field_e + var12, var13 + ((lh) this).field_l, var9, var10, ((lh) this).field_a, -1, 0, 0, var7);
-              break L0;
-            } else {
-              return;
-            }
+            gf.b(var12 - -1, 1 + var13, var5_int + var9 + -2, -2 + (var6 + var10), ((lh) this).field_j);
+            int discarded$1 = ((lh) this).field_f.a(param2, ((lh) this).field_e + var12, var13 + ((lh) this).field_l, var9, var10, ((lh) this).field_a, -1, 0, 0, var7);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var5 = decompiledCaughtException;
             stackOut_26_0 = (RuntimeException) var5;
-            stackOut_26_1 = new StringBuilder().append("lh.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_26_1 = new StringBuilder().append("lh.B(").append(param0).append(44).append(-81).append(44);
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;

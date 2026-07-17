@@ -57,7 +57,7 @@ final class jj implements Runnable {
               }
             }
             var5_array = new String[]{"c:/rscache/", "/rscache/", field_t, "c:/windows/", "c:/winnt/", "c:/", "/tmp/", ""};
-            var6 = param0;
+            var6 = 0;
             L1: while (true) {
               if (var6 < var5_array.length) {
                 L2: {
@@ -110,10 +110,11 @@ final class jj implements Runnable {
         if (param0 > -105) {
             ((jj) this).field_c = null;
         }
-        return this.a(0, (Object) null, 0, 5, 0);
+        int discarded$0 = 0;
+        return this.a(0, (Object) null, 0, 5);
     }
 
-    private final wk a(int param0, Object param1, int param2, int param3, int param4) {
+    private final wk a(int param0, Object param1, int param2, int param3) {
         wk var6 = null;
         Object var7 = null;
         Throwable var8 = null;
@@ -149,42 +150,45 @@ final class jj implements Runnable {
             Object var7 = null;
             wk discarded$0 = ((jj) this).a(-115, (Runnable) null, -90);
         }
-        return this.a((param1 << 16) - -param0, (Object) null, (param3 << 16) + param2, 6, 0);
+        int discarded$1 = 0;
+        return this.a((param1 << 16) - -param0, (Object) null, (param3 << 16) + param2, 6);
     }
 
     final wk a(int param0, Class param1, String param2) {
         if (param0 > -50) {
             ((jj) this).run();
         }
-        return this.a(0, (Object) (Object) new Object[2], 0, 9, 0);
+        int discarded$0 = 0;
+        return this.a(0, (Object) (Object) new Object[2], 0, 9);
     }
 
     private final wk a(boolean param0, String param1, int param2, int param3) {
-        if (param2 != 1) {
-            return null;
-        }
-        return this.a(param3, (Object) (Object) param1, 0, param0 ? 22 : 1, 0);
+        int discarded$0 = 0;
+        return this.a(param3, (Object) (Object) param1, 0, 1);
     }
 
     final wk a(boolean param0, java.awt.Frame param1) {
         if (param0) {
             return null;
         }
-        return this.a(0, (Object) (Object) param1, 0, 7, 0);
+        int discarded$0 = 0;
+        return this.a(0, (Object) (Object) param1, 0, 7);
     }
 
     final wk a(int param0, Runnable param1, int param2) {
         if (param2 != 0) {
             return null;
         }
-        return this.a(param0, (Object) (Object) param1, 0, 2, 0);
+        int discarded$0 = 0;
+        return this.a(param0, (Object) (Object) param1, 0, 2);
     }
 
     final wk a(Class[] param0, int param1, Class param2, String param3) {
         if (param1 < 29) {
             boolean discarded$0 = ((jj) this).a(38);
         }
-        return this.a(0, (Object) (Object) new Object[3], 0, 8, 0);
+        int discarded$1 = 0;
+        return this.a(0, (Object) (Object) new Object[3], 0, 8);
     }
 
     final wk a(int param0, int param1, String param2) {
@@ -209,7 +213,8 @@ final class jj implements Runnable {
 
     final wk a(int param0, java.net.URL param1) {
         int var3 = -127 % ((48 - param0) / 60);
-        return this.a(0, (Object) (Object) param1, 0, 4, 0);
+        int discarded$0 = 0;
+        return this.a(0, (Object) (Object) param1, 0, 4);
     }
 
     public final void run() {

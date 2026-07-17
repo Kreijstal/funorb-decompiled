@@ -7,13 +7,13 @@ final class o {
     static String field_b;
     static String field_a;
 
-    public static void b(byte param0) {
+    public static void b() {
         field_a = null;
         field_d = null;
         field_b = null;
     }
 
-    final static hj a(int param0, int param1) {
+    final static hj a(int param0) {
         if (param0 != 2) {
           if (param0 != 3) {
             if (param0 >= 4) {
@@ -140,7 +140,9 @@ final class o {
 
     final static uh a(byte param0) {
         int var1 = 48 / ((param0 - -52) / 57);
-        return ub.a(1, 111);
+        int discarded$0 = 111;
+        int discarded$1 = 1;
+        return ub.a();
     }
 
     static {

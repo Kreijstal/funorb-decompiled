@@ -17,26 +17,25 @@ final class pb extends le {
     private int field_r;
 
     private final void d(int param0) {
-        ((pb) this).field_q = ((pb) this).field_h * 24 + (12 - -this.a(270415848));
-        ((pb) this).field_j = ((pb) this).field_k * 24 + (12 - -this.a(270415848));
+        int discarded$0 = 270415848;
+        ((pb) this).field_q = ((pb) this).field_h * 24 + (12 - -this.a());
+        int discarded$1 = 270415848;
+        ((pb) this).field_j = ((pb) this).field_k * 24 + (12 - -this.a());
         ((pb) this).field_o = -pb.a(so.field_a, 50, 1);
     }
 
-    private final int a(int param0) {
-        if (param0 != 270415848) {
-            ((pb) this).field_q = -61;
-        }
+    private final int a() {
         return -9 + pb.a(so.field_a, 18, 1);
     }
 
-    final static dj a(boolean param0, boolean param1, int param2, boolean param3, int param4) {
-        return hd.a(false, true, param2, param1 ? 1 : 0, param0, param3);
+    final static dj a(boolean param0, boolean param1, int param2) {
+        return hd.a(false, true, param2, param1 ? 1 : 0, true, true);
     }
 
     final static void a(int param0, byte param1, int param2) {
         ja.field_d = param0;
         ck.field_n = param2;
-        int var3 = -16 / ((param1 - -11) / 63);
+        int var3 = -16;
     }
 
     final void e(byte param0) {
@@ -90,7 +89,7 @@ final class pb extends le {
         }
     }
 
-    final static void d(byte param0) {
+    final static void d() {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -173,7 +172,7 @@ final class pb extends le {
         }
     }
 
-    final static void c(byte param0) {
+    final static void c() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -230,7 +229,8 @@ final class pb extends le {
                     }
                   }
                 } else {
-                  ae.a((Throwable) null, 10331, "LR1: " + cb.f(3));
+                  int discarded$1 = 3;
+                  ae.a((Throwable) null, 10331, "LR1: " + cb.f());
                   p.a(1);
                   break L1;
                 }
@@ -421,7 +421,8 @@ final class pb extends le {
               }
             }
             if (param1 > 0) {
-              if (ul.a(param1, (byte) 77)) {
+              int discarded$8 = 77;
+              if (ul.a(param1)) {
                 stackOut_6_0 = (int)((long)param1 * ((long)param0.nextInt() & 4294967295L) >> 32);
                 stackIn_7_0 = stackOut_6_0;
                 return stackIn_7_0;
@@ -481,8 +482,10 @@ final class pb extends le {
         this.d(152);
         ((pb) this).field_l = pb.a(so.field_a, 10, 1) + 25 >> 2;
         ((pb) this).field_p = 0;
-        ((pb) this).field_i = 12 + 24 * ((pb) this).field_h + this.a(270415848);
-        ((pb) this).field_m = 12 + (((pb) this).field_k * 24 + this.a(270415848));
+        int discarded$0 = 270415848;
+        ((pb) this).field_i = 12 + 24 * ((pb) this).field_h + this.a();
+        int discarded$1 = 270415848;
+        ((pb) this).field_m = 12 + (((pb) this).field_k * 24 + this.a());
         ((pb) this).field_r = pb.a(so.field_a, 10, 1) + param2;
         ((pb) this).field_o = 0;
         ((pb) this).field_n = pb.a(so.field_a, 1, 1);

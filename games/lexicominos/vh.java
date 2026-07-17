@@ -5,70 +5,30 @@ final class vh {
     static int field_b;
     static ng field_a;
 
-    final static void a(boolean param0, int param1) {
-        kd var2 = null;
-        RuntimeException var2_ref = null;
+    final static void a() {
+        RuntimeException var2 = null;
         int var3 = 0;
         vb var4 = null;
-        ng stackIn_2_0 = null;
-        ng stackIn_3_0 = null;
-        ng stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
         RuntimeException decompiledCaughtException = null;
-        ng stackOut_1_0 = null;
-        ng stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        ng stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
         var3 = Lexicominos.field_L ? 1 : 0;
         try {
           L0: {
-            L1: {
-              stackOut_1_0 = jl.field_a;
-              stackIn_3_0 = stackOut_1_0;
-              stackIn_2_0 = stackOut_1_0;
-              if (param0) {
-                stackOut_3_0 = (ng) (Object) stackIn_3_0;
-                stackOut_3_1 = 0;
-                stackIn_4_0 = stackOut_3_0;
-                stackIn_4_1 = stackOut_3_1;
-                break L1;
-              } else {
-                stackOut_2_0 = (ng) (Object) stackIn_2_0;
-                stackOut_2_1 = 1;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
-                break L1;
-              }
-            }
-            var4 = (vb) (Object) ((ng) (Object) stackIn_4_0).a(stackIn_4_1 != 0);
-            L2: while (true) {
+            var4 = (vb) (Object) jl.field_a.a(true);
+            L1: while (true) {
               if (var4 == null) {
-                if (!param0) {
-                  var2 = ci.field_f.a(true);
-                  L3: while (true) {
-                    if (var2 == null) {
-                      break L0;
-                    } else {
-                      ck.a(4, 2);
-                      var2 = ci.field_f.f(2);
-                      continue L3;
-                    }
-                  }
-                } else {
-                  return;
-                }
+                break L0;
               } else {
-                vi.a(4, var4, 1);
+                int discarded$2 = 1;
+                vi.a(4, var4);
                 var4 = (vb) (Object) jl.field_a.f(2);
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          throw ld.a((Throwable) (Object) var2_ref, "vh.A(" + param0 + 44 + 4 + 41);
+          var2 = decompiledCaughtException;
+          throw ld.a((Throwable) (Object) var2, "vh.A(" + 0 + 44 + 4 + 41);
         }
     }
 

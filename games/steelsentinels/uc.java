@@ -15,7 +15,7 @@ final class uc {
     static String[][] field_h;
     static int[] field_b;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_h = null;
         field_j = null;
         field_d = null;
@@ -40,7 +40,7 @@ final class uc {
               if (param0) {
                 break L1;
               } else {
-                boolean discarded$2 = uc.a(-115, 79);
+                boolean discarded$6 = uc.a(-115, 79);
                 break L1;
               }
             }
@@ -52,13 +52,14 @@ final class uc {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    ma.a(3, var5, -2864);
+                    int discarded$7 = -2864;
+                    ma.a(param1, var5);
                     var5 = (kf) (Object) je.field_w.a((byte) -40);
                     continue L3;
                   }
                 }
               } else {
-                vh.a(3, var4, (byte) 107);
+                vh.a(param1, var4, (byte) 107);
                 var4 = (tc) (Object) ic.field_B.a((byte) -53);
                 continue L2;
               }
@@ -67,7 +68,7 @@ final class uc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var2, "uc.B(" + param0 + 44 + 3 + 41);
+          throw ci.a((Throwable) (Object) var2, "uc.B(" + param0 + 44 + param1 + 41);
         }
     }
 

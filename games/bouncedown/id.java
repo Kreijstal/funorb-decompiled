@@ -6,7 +6,7 @@ final class id extends ai {
     static boolean field_g;
     int[] field_h;
 
-    public static void b(byte param0) {
+    public static void b() {
         field_i = null;
     }
 

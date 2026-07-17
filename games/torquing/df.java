@@ -74,7 +74,7 @@ final class df extends fj {
         }
     }
 
-    public static void k(int param0) {
+    public static void k() {
         field_r = null;
         field_p = null;
         field_q = null;

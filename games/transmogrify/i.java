@@ -9,7 +9,7 @@ final class i {
     static int[] field_b;
     static String field_c;
 
-    final static boolean a(char param0, int param1) {
+    final static boolean a(char param0) {
         if (32 <= param0) {
           if (param0 <= 126) {
             return true;
@@ -106,7 +106,7 @@ final class i {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         ng.field_i = null;
         ej.field_n = false;
         ne.field_a = null;
@@ -114,7 +114,7 @@ final class i {
         bd.field_p = null;
     }
 
-    final static boolean b(boolean param0) {
+    final static boolean b() {
         if (null == nk.field_b) {
             return false;
         }
@@ -124,7 +124,7 @@ final class i {
         return true;
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_f = null;
         field_d = null;
         field_e = null;

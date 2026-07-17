@@ -17,38 +17,28 @@ final class mq {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        Object var4 = null;
-        int stackIn_8_0 = 0;
-        int stackIn_11_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_9_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
-        int stackOut_7_0 = 0;
+        int stackOut_8_0 = 0;
+        int stackOut_5_0 = 0;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
-            L1: {
-              if (param0 == 8230) {
-                break L1;
-              } else {
-                var4 = null;
-                mq.a((fr) null, (byte) 109);
-                break L1;
-              }
-            }
             var2_int = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (param1 <= var2_int) {
-                stackOut_10_0 = 1;
-                stackIn_11_0 = stackOut_10_0;
+                stackOut_8_0 = 1;
+                stackIn_9_0 = stackOut_8_0;
                 break L0;
               } else {
                 if (!wm.field_f[var2_int]) {
-                  stackOut_7_0 = 0;
-                  stackIn_8_0 = stackOut_7_0;
-                  return stackIn_8_0 != 0;
+                  stackOut_5_0 = 0;
+                  stackIn_6_0 = stackOut_5_0;
+                  return stackIn_6_0 != 0;
                 } else {
                   var2_int++;
-                  continue L2;
+                  continue L1;
                 }
               }
             }
@@ -56,24 +46,24 @@ final class mq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qo.a((Throwable) (Object) var2, "mq.C(" + param0 + 44 + param1 + 41);
+          throw qo.a((Throwable) (Object) var2, "mq.C(" + 8230 + 44 + param1 + 41);
         }
-        return stackIn_11_0 != 0;
+        return stackIn_9_0 != 0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
     }
 
-    final static void a(fr param0, byte param1) {
+    final static void a(fr param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
+        byte[] var5 = null;
+        byte[] var6 = null;
+        byte[] var7 = null;
         ip var8 = null;
-        qb var10 = null;
-        b var12 = null;
-        byte[] var20 = null;
-        byte[] var21 = null;
-        byte[] var22 = null;
+        qb var9 = null;
+        b var10 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -93,11 +83,12 @@ final class mq {
         try {
           L0: {
             L1: {
-              var2_int = 71 / ((param1 - 40) / 59);
+              var2_int = 71;
               if (null == ic.field_b) {
                 var8 = new ip();
-                var20 = var8.a((byte) 10, 128, 128, 16);
-                ic.field_b = aj.a((byte) -123, var20, false);
+                var5 = var8.a((byte) 10, 128, 128, 16);
+                int discarded$14 = 0;
+                ic.field_b = aj.a((byte) -123, var5);
                 break L1;
               } else {
                 break L1;
@@ -107,20 +98,25 @@ final class mq {
               if (qu.field_j != null) {
                 break L2;
               } else {
-                var10 = new qb();
-                var21 = var10.a(16, (byte) -8, 128, 128);
-                qu.field_j = aj.a((byte) -117, var21, false);
+                var9 = new qb();
+                var6 = var9.a(16, (byte) -8, 128, 128);
+                int discarded$15 = 0;
+                qu.field_j = aj.a((byte) -117, var6);
                 break L2;
               }
             }
             L3: {
-              var12 = param0.field_Sb;
-              if (!var12.b((byte) -101)) {
+              var10 = param0.field_Sb;
+              if (!var10.b((byte) -101)) {
                 break L3;
               } else {
                 if (null == dj.field_m) {
-                  var22 = mr.a(0.6000000238418579f, 0.5f, 128, -30865, (ab) (Object) new vu(419684), 4.0f, 4.0f, 16.0f, 16, 8, 128);
-                  dj.field_m = aj.a((byte) -126, var22, false);
+                  int discarded$16 = 128;
+                  int discarded$17 = 8;
+                  int discarded$18 = 16;
+                  var7 = mr.a(0.6000000238418579f, 0.5f, 128, -30865, (ab) (Object) new vu(419684), 4.0f, 4.0f, 16.0f);
+                  int discarded$19 = 0;
+                  dj.field_m = aj.a((byte) -126, var7);
                   break L3;
                 } else {
                   break L3;
@@ -157,7 +153,7 @@ final class mq {
               break L4;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param1 + 41);
+          throw qo.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + 123 + 41);
         }
     }
 
@@ -204,7 +200,7 @@ final class mq {
         try {
           L0: {
             L1: {
-              var6_int = -param0 + param4;
+              var6_int = param4;
               var7 = 0;
               if (param2 < -106) {
                 break L1;
@@ -222,7 +218,7 @@ final class mq {
                 L3: {
                   L4: {
                     L5: {
-                      var8 = param3.charAt(var7 + param0);
+                      var8 = param3.charAt(var7);
                       if (var8 <= 0) {
                         break L5;
                       } else {
@@ -395,7 +391,7 @@ final class mq {
           L7: {
             var6 = decompiledCaughtException;
             stackOut_69_0 = (RuntimeException) var6;
-            stackOut_69_1 = new StringBuilder().append("mq.D(").append(param0).append(44);
+            stackOut_69_1 = new StringBuilder().append("mq.D(").append(0).append(44);
             stackIn_71_0 = stackOut_69_0;
             stackIn_71_1 = stackOut_69_1;
             stackIn_70_0 = stackOut_69_0;

@@ -7,7 +7,7 @@ final class vl {
     static int[] field_d;
     static boolean field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
         field_a = null;
@@ -43,7 +43,10 @@ final class vl {
                 break L1;
               }
             }
-            stackOut_2_0 = sm.a(param0, false, 10, true);
+            int discarded$6 = 1;
+            int discarded$7 = 10;
+            int discarded$8 = 0;
+            stackOut_2_0 = sm.a(param0);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

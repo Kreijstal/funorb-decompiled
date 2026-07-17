@@ -19,9 +19,6 @@ final class on {
         try {
             ao.field_Gb = true;
             pa.field_o.field_V = param1;
-            if (param0 <= 99) {
-                field_d = false;
-            }
             var2_int = ca.field_M.field_c;
             var3 = ca.field_M.field_b;
             var4 = pa.field_o.field_C.a(param1, 272, pa.field_o.field_fb);
@@ -31,13 +28,13 @@ final class on {
             pa.field_o.a(24, -44 + jj.field_a.field_ub, jj.field_a.field_K - 48, (byte) -71, 16);
             nk.field_H.a(120, 24, 80, (byte) -101, -24 + (-20 + jj.field_a.field_ub));
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "on.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "on.C(" + 106 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
     final static void a(int param0) {
         int var2 = 0;
-        int var1 = 118 / ((24 - param0) / 46);
+        int var1 = -118;
         if (32 >= ag.field_c) {
             qe.a((byte) 56, 0);
         } else {
@@ -49,7 +46,7 @@ final class on {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
     }

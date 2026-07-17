@@ -7,7 +7,7 @@ final class pg {
     static String[] field_d;
     static int field_c;
 
-    final static void a(boolean param0) {
+    final static void a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         double var2 = 0.0;
@@ -149,7 +149,7 @@ final class pg {
         return stackIn_13_0;
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_b = null;
         field_a = null;
         field_d = null;

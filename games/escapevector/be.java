@@ -5,13 +5,8 @@ final class be {
     static String field_a;
     static pn field_b;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
-        if (param0 > -103) {
-            field_a = null;
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 
@@ -32,13 +27,13 @@ final class be {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    q.c(param0, (byte) -63);
+                    q.c(6, (byte) -63);
                     var2 = nf.field_w.b((byte) 70);
                     continue L2;
                   }
                 }
               } else {
-                r.a(-118, var4, param0);
+                r.a(-118, var4, 6);
                 var4 = (bd) (Object) rd.field_b.b((byte) 70);
                 continue L1;
               }
@@ -47,7 +42,7 @@ final class be {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2_ref, "be.B(" + param0 + 44 + 17205 + 41);
+          throw t.a((Throwable) (Object) var2_ref, "be.B(" + 6 + 44 + 17205 + 41);
         }
     }
 

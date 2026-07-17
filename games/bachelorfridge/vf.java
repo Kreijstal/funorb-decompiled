@@ -164,18 +164,18 @@ abstract class vf extends vd {
         }
     }
 
-    final static void a(String param0, int param1, int param2, String param3, String param4, int param5) {
+    final static void a(String param0, int param1, int param2, String param3, String param4) {
         gs var6 = null;
         try {
-            var6 = new gs(2, param0, param1, param3, param4);
+            var6 = new gs(2, param0, 0, param3, param4);
             ija.a((byte) 105, var6);
             int var7 = -6 / ((70 - param2) / 45);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "vf.EA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + 2 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "vf.EA(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + 2 + 41);
         }
     }
 
-    public static void j(int param0) {
+    public static void j() {
         field_D = null;
         int var1 = -123;
         field_F = null;

@@ -269,9 +269,6 @@ abstract class ob extends vi {
     }
 
     final static void a(int param0, ge param1, int param2) {
-        if (param0 != 20) {
-            return;
-        }
         try {
             he.field_e.b((byte) -98, 58);
             he.field_e.f(param2, (byte) -7);
@@ -283,7 +280,7 @@ abstract class ob extends vi {
             he.field_e.f(param1.field_m, (byte) -111);
             he.field_e.f(param1.field_h, (byte) -124);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "ob.KA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "ob.KA(" + 20 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 

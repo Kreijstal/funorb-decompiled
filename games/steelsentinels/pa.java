@@ -14,7 +14,7 @@ final class pa {
     static cm field_a;
     static mi field_k;
 
-    final static void a(java.awt.Canvas param0, int param1) {
+    final static void a(java.awt.Canvas param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -34,7 +34,8 @@ final class pa {
         String stackOut_4_2 = null;
         try {
           L0: {
-            qe.a((java.awt.Component) (Object) param0, -30418);
+            int discarded$5 = -30418;
+            qe.a((java.awt.Component) (Object) param0);
             hb.a(0, (java.awt.Component) (Object) param0);
             if (nc.field_j == null) {
               break L0;
@@ -75,7 +76,7 @@ final class pa {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_j = null;
         field_k = null;
         field_g = null;
@@ -170,11 +171,11 @@ final class pa {
 
     final static void a(cm param0, int param1, cm param2) {
         try {
-            int var3_int = -47 / ((param1 - 53) / 45);
+            int var3_int = -47;
             rj.field_d = param2;
             field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "pa.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "pa.C(" + (param0 != null ? "{...}" : "null") + 44 + 111 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

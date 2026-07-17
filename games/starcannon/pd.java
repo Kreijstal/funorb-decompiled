@@ -7,7 +7,7 @@ final class pd {
     static int[] field_d;
     static int field_b;
 
-    final static void a(String param0, int param1, byte param2) {
+    final static void a(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_26_0 = null;
@@ -30,87 +30,83 @@ final class pd {
           L0: {
             s.field_c = false;
             ic.field_a = false;
-            if (param2 == -77) {
-              L1: {
-                if (null == fa.field_G) {
-                  break L1;
-                } else {
-                  if (fa.field_G.field_G) {
-                    L2: {
-                      var3_int = 1;
-                      if (8 != param1) {
-                        break L2;
-                      } else {
-                        L3: {
-                          param1 = 2;
-                          if (tc.field_x) {
-                            param0 = pk.field_b;
-                            break L3;
-                          } else {
-                            param0 = ag.field_k;
-                            break L3;
-                          }
-                        }
-                        wi.field_c.b((byte) -79, lc.field_hb);
-                        break L2;
-                      }
-                    }
-                    L4: {
-                      if (10 != param1) {
-                        break L4;
-                      } else {
-                        qc.a(false);
-                        var3_int = 0;
-                        break L4;
-                      }
-                    }
-                    L5: {
-                      if (var3_int == 0) {
-                        break L5;
-                      } else {
-                        L6: {
-                          if (ic.field_a) {
-                            param0 = fb.a(oh.field_b, param2 ^ -50, new String[1]);
-                            break L6;
-                          } else {
-                            break L6;
-                          }
-                        }
-                        L7: {
-                          if (!vj.field_V) {
-                            break L7;
-                          } else {
-                            param0 = jl.field_k;
-                            break L7;
-                          }
-                        }
-                        fa.field_G.a(param0, param1, true);
-                        break L5;
-                      }
-                    }
-                    if (256 == param1) {
-                      break L1;
+            L1: {
+              if (null == fa.field_G) {
+                break L1;
+              } else {
+                if (fa.field_G.field_G) {
+                  L2: {
+                    var3_int = 1;
+                    if (8 != param1) {
+                      break L2;
                     } else {
-                      if (param1 != 10) {
+                      L3: {
+                        param1 = 2;
                         if (tc.field_x) {
-                          break L1;
+                          param0 = pk.field_b;
+                          break L3;
                         } else {
-                          wi.field_c.a(false);
-                          return;
+                          param0 = ag.field_k;
+                          break L3;
                         }
+                      }
+                      wi.field_c.b((byte) -79, lc.field_hb);
+                      break L2;
+                    }
+                  }
+                  L4: {
+                    if (10 != param1) {
+                      break L4;
+                    } else {
+                      qc.a(false);
+                      var3_int = 0;
+                      break L4;
+                    }
+                  }
+                  L5: {
+                    if (var3_int == 0) {
+                      break L5;
+                    } else {
+                      L6: {
+                        if (ic.field_a) {
+                          param0 = fb.a(oh.field_b, 125, new String[1]);
+                          break L6;
+                        } else {
+                          break L6;
+                        }
+                      }
+                      L7: {
+                        if (!vj.field_V) {
+                          break L7;
+                        } else {
+                          param0 = jl.field_k;
+                          break L7;
+                        }
+                      }
+                      fa.field_G.a(param0, param1, true);
+                      break L5;
+                    }
+                  }
+                  if (256 == param1) {
+                    break L1;
+                  } else {
+                    if (param1 != 10) {
+                      if (tc.field_x) {
+                        break L1;
                       } else {
+                        wi.field_c.a(false);
                         return;
                       }
+                    } else {
+                      return;
                     }
-                  } else {
-                    return;
                   }
+                } else {
+                  return;
                 }
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -140,15 +136,15 @@ final class pd {
               break L8;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 44 + param1 + 44 + param2 + 41);
+          throw sd.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 44 + param1 + 44 + -77 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
     }
 
-    final static int a(CharSequence param0, int param1) {
+    final static int a(CharSequence param0) {
         RuntimeException var2 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;

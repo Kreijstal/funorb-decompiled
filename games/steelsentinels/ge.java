@@ -90,8 +90,6 @@ final class ge extends gb {
                     break L1;
                   } else {
                     var3 = (Object) (Object) dn.field_Ub;
-                    var4 = var3;
-                    var4 = var3;
                     break L1;
                   }
                 }
@@ -109,7 +107,8 @@ final class ge extends gb {
                   }
                 }
               }
-              stackOut_9_0 = fc.a(-19571, param1, (String) var3, (String) var4, -1);
+              int discarded$2 = -1;
+              stackOut_9_0 = fc.a(-19571, param1, (String) var3, (String) var4);
               stackIn_10_0 = stackOut_9_0;
               break L0;
             } else {
@@ -185,13 +184,17 @@ final class ge extends gb {
     }
 
     final static int a(int param0, byte param1) {
-        param0--;
-        param0 = param0 | param0 >>> 1;
-        param0 = param0 | param0 >>> 2;
-        param0 = param0 | param0 >>> 4;
-        param0 = param0 | param0 >>> 8;
-        param0 = param0 | param0 >>> 16;
-        return param0 + 1;
+        if (param1 != -32) {
+          return -20;
+        } else {
+          param0--;
+          param0 = param0 | param0 >>> 1;
+          param0 = param0 | param0 >>> 2;
+          param0 = param0 | param0 >>> 4;
+          param0 = param0 | param0 >>> 8;
+          param0 = param0 | param0 >>> 16;
+          return param0 + 1;
+        }
     }
 
     ge() {

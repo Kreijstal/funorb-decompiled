@@ -9,7 +9,7 @@ final class nw {
     private gn field_f;
     static nu field_b;
 
-    public static void c(byte param0) {
+    public static void c() {
         int var1 = 119;
         field_c = null;
         field_a = null;

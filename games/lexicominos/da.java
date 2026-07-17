@@ -162,7 +162,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static String a(String[] args, String param1, boolean param2) {
+    final static String a(String[] args, String param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -213,62 +213,54 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         var11 = Lexicominos.field_L ? 1 : 0;
         try {
           L0: {
-            L1: {
-              if (!param2) {
-                break L1;
-              } else {
-                field_b = 126;
-                break L1;
-              }
-            }
             var3_int = param1.length();
             var4 = var3_int;
             var5 = 0;
-            L2: while (true) {
+            L1: while (true) {
               var6_int = param1.indexOf("<%", var5);
               if (var6_int >= 0) {
                 var5 = var6_int + 2;
-                L3: while (true) {
-                  L4: {
+                L2: while (true) {
+                  L3: {
                     if (var3_int <= var5) {
-                      break L4;
+                      break L3;
                     } else {
                       stackOut_11_0 = ne.a((byte) 115, param1.charAt(var5));
                       stackIn_13_0 = stackOut_11_0;
                       if (!stackIn_13_0) {
-                        break L4;
+                        break L3;
                       } else {
                         var5++;
-                        continue L3;
+                        continue L2;
                       }
                     }
                   }
                   var7_ref_String = param1.substring(var6_int - -2, var5);
-                  if (bc.a(param2, (CharSequence) (Object) var7_ref_String)) {
-                    L5: {
+                  if (bc.a(false, (CharSequence) (Object) var7_ref_String)) {
+                    L4: {
                       if (~var3_int >= ~var5) {
-                        break L5;
+                        break L4;
                       } else {
                         if (param1.charAt(var5) != 62) {
-                          break L5;
+                          break L4;
                         } else {
                           var5++;
                           var8 = si.a((byte) 120, (CharSequence) (Object) var7_ref_String);
                           var4 = var4 + (args[var8].length() + var6_int + -var5);
-                          break L5;
+                          break L4;
                         }
                       }
                     }
-                    continue L2;
+                    continue L1;
                   } else {
-                    continue L2;
+                    continue L1;
                   }
                 }
               } else {
                 var6 = new StringBuilder(var4);
                 var7 = 0;
                 var5 = 0;
-                L6: while (true) {
+                L5: while (true) {
                   var8 = param1.indexOf("<%", var5);
                   if (0 > var8) {
                     StringBuilder discarded$3 = var6.append(param1.substring(var7));
@@ -277,26 +269,26 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                     break L0;
                   } else {
                     var5 = 2 + var8;
-                    L7: while (true) {
-                      L8: {
+                    L6: while (true) {
+                      L7: {
                         if (var3_int <= var5) {
-                          break L8;
+                          break L7;
                         } else {
                           if (!ne.a((byte) 85, param1.charAt(var5))) {
-                            break L8;
+                            break L7;
                           } else {
                             var5++;
-                            continue L7;
+                            continue L6;
                           }
                         }
                       }
                       var9 = param1.substring(var8 - -2, var5);
-                      if (!bc.a(param2, (CharSequence) (Object) var9)) {
-                        continue L6;
+                      if (!bc.a(false, (CharSequence) (Object) var9)) {
+                        continue L5;
                       } else {
-                        L9: {
+                        L8: {
                           if (var3_int <= var5) {
-                            break L9;
+                            break L8;
                           } else {
                             if (param1.charAt(var5) == 62) {
                               var5++;
@@ -304,13 +296,13 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                               StringBuilder discarded$4 = var6.append(param1.substring(var7, var8));
                               StringBuilder discarded$5 = var6.append(args[var10]);
                               var7 = var5;
-                              break L9;
+                              break L8;
                             } else {
-                              break L9;
+                              break L8;
                             }
                           }
                         }
-                        continue L6;
+                        continue L5;
                       }
                     }
                   }
@@ -320,7 +312,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L10: {
+          L9: {
             var3 = decompiledCaughtException;
             stackOut_48_0 = (RuntimeException) var3;
             stackOut_48_1 = new StringBuilder().append("da.B(");
@@ -335,7 +327,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               stackIn_52_0 = stackOut_51_0;
               stackIn_52_1 = stackOut_51_1;
               stackIn_52_2 = stackOut_51_2;
-              break L10;
+              break L9;
             } else {
               stackOut_49_0 = (RuntimeException) (Object) stackIn_49_0;
               stackOut_49_1 = (StringBuilder) (Object) stackIn_49_1;
@@ -343,10 +335,10 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               stackIn_52_0 = stackOut_49_0;
               stackIn_52_1 = stackOut_49_1;
               stackIn_52_2 = stackOut_49_2;
-              break L10;
+              break L9;
             }
           }
-          L11: {
+          L10: {
             stackOut_52_0 = (RuntimeException) (Object) stackIn_52_0;
             stackOut_52_1 = ((StringBuilder) (Object) stackIn_52_1).append(stackIn_52_2).append(44);
             stackIn_55_0 = stackOut_52_0;
@@ -360,7 +352,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               stackIn_56_0 = stackOut_55_0;
               stackIn_56_1 = stackOut_55_1;
               stackIn_56_2 = stackOut_55_2;
-              break L11;
+              break L10;
             } else {
               stackOut_53_0 = (RuntimeException) (Object) stackIn_53_0;
               stackOut_53_1 = (StringBuilder) (Object) stackIn_53_1;
@@ -368,10 +360,10 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               stackIn_56_0 = stackOut_53_0;
               stackIn_56_1 = stackOut_53_1;
               stackIn_56_2 = stackOut_53_2;
-              break L11;
+              break L10;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_56_0, stackIn_56_2 + 44 + param2 + 41);
+          throw ld.a((Throwable) (Object) stackIn_56_0, stackIn_56_2 + 44 + 0 + 41);
         }
         return stackIn_47_0;
     }
@@ -802,30 +794,22 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            L1: {
-              if (param0 >= 121) {
-                break L1;
-              } else {
-                String discarded$2 = da.a((String[]) null, (String) null, false);
-                break L1;
-              }
-            }
             field_a = null;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ld.a((Throwable) (Object) var1, "da.A(" + param0 + 41);
+          throw ld.a((Throwable) (Object) var1, "da.A(" + 123 + 41);
         }
     }
 
-    final static void a(int[] param0, boolean param1, int[] param2, boolean param3, boolean param4, pk param5, byte param6) {
+    final static void a(int[] param0, boolean param1, int[] param2, boolean param3, boolean param4, pk param5) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
@@ -922,72 +906,70 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             var14 = param0[4] * var28 + (var27 * param0[3] - -(var29 * param0[5])) >> 14;
             var17 = param0[7] * var28 + var27 * param0[6] - -(var29 * param0[8]) >> 14;
             var16 = var25 * param0[7] + (param0[6] * var24 + param0[8] * var26) >> 14;
-            if (param6 <= -19) {
-              var21 = param0[0] + -param2[0];
-              var22 = -param2[1] + param0[1];
-              var23 = -param2[2] + param0[2];
-              var9 = var23 * param2[5] + (param2[4] * var22 + var21 * param2[3]) >> 16 - sb.field_d;
-              var10 = var22 * param2[7] + var21 * param2[6] - -(param2[8] * var23) >> 16 - sb.field_d;
-              var11 = var21 * param2[9] - (-(var22 * param2[10]) - var23 * param2[11]) >> 16;
-              var21 = k.field_g;
-              var22 = k.field_a;
-              var23 = 0;
-              L1: while (true) {
-                if (var23 >= param5.field_w) {
-                  L2: {
-                    if (param5.field_y == null) {
+            var21 = param0[0] + -param2[0];
+            var22 = -param2[1] + param0[1];
+            var23 = -param2[2] + param0[2];
+            var9 = var23 * param2[5] + (param2[4] * var22 + var21 * param2[3]) >> 16 - sb.field_d;
+            var10 = var22 * param2[7] + var21 * param2[6] - -(param2[8] * var23) >> 16 - sb.field_d;
+            var11 = var21 * param2[9] - (-(var22 * param2[10]) - var23 * param2[11]) >> 16;
+            var21 = k.field_g;
+            var22 = k.field_a;
+            var23 = 0;
+            L1: while (true) {
+              if (var23 >= param5.field_w) {
+                L2: {
+                  if (param5.field_y == null) {
+                    break L2;
+                  } else {
+                    if (null == param5.field_i) {
                       break L2;
                     } else {
-                      if (null == param5.field_i) {
+                      if (null == param5.field_p) {
                         break L2;
                       } else {
-                        if (null == param5.field_p) {
+                        if (null == param5.field_o) {
                           break L2;
                         } else {
-                          if (null == param5.field_o) {
+                          if (param5.field_l == null) {
                             break L2;
                           } else {
-                            if (param5.field_l == null) {
+                            if (param5.field_u == null) {
                               break L2;
                             } else {
-                              if (param5.field_u == null) {
+                              if (null == param5.field_C) {
                                 break L2;
                               } else {
-                                if (null == param5.field_C) {
+                                if (param5.field_r == null) {
                                   break L2;
                                 } else {
-                                  if (param5.field_r == null) {
+                                  if (param5.field_t == null) {
                                     break L2;
                                   } else {
-                                    if (param5.field_t == null) {
-                                      break L2;
-                                    } else {
-                                      var23 = 0;
-                                      L3: while (true) {
-                                        if (var23 >= param5.field_H) {
-                                          break L2;
-                                        } else {
-                                          var24 = param5.field_y[var23];
-                                          var25 = param5.field_i[var23];
-                                          var26 = param5.field_p[var23];
-                                          pl.field_c[var23] = (var24 * var12 + var25 * var15 + var18 * var26 >> 16) + var9;
-                                          bd.field_k[var23] = var10 + (var24 * var13 + var25 * var16 - -(var19 * var26) >> 16);
-                                          wg.field_j[var23] = (var17 * var25 + var14 * var24 + var26 * var20 >> 16) + var11;
-                                          var24 = param5.field_o[var23];
-                                          var25 = param5.field_l[var23];
-                                          var26 = param5.field_u[var23];
-                                          vg.field_c[var23] = var9 + (var18 * var26 + (var12 * var24 + var25 * var15) >> 16);
-                                          kd.field_b[var23] = (var13 * var24 + (var16 * var25 + var19 * var26) >> 16) + var10;
-                                          pf.field_k[var23] = (var24 * var14 - -(var25 * var17) + var26 * var20 >> 16) + var11;
-                                          var24 = param5.field_C[var23];
-                                          var25 = param5.field_r[var23];
-                                          var26 = param5.field_t[var23];
-                                          kd.field_g[var23] = var9 - -(var24 * var12 - -(var25 * var15) - -(var26 * var18) >> 16);
-                                          kc.field_l[var23] = (var19 * var26 + (var25 * var16 + var24 * var13) >> 16) + var10;
-                                          ee.field_f[var23] = var11 - -(var25 * var17 + (var14 * var24 - -(var26 * var20)) >> 16);
-                                          var23++;
-                                          continue L3;
-                                        }
+                                    var23 = 0;
+                                    L3: while (true) {
+                                      if (var23 >= param5.field_H) {
+                                        break L2;
+                                      } else {
+                                        var24 = param5.field_y[var23];
+                                        var25 = param5.field_i[var23];
+                                        var26 = param5.field_p[var23];
+                                        pl.field_c[var23] = (var24 * var12 + var25 * var15 + var18 * var26 >> 16) + var9;
+                                        bd.field_k[var23] = var10 + (var24 * var13 + var25 * var16 - -(var19 * var26) >> 16);
+                                        wg.field_j[var23] = (var17 * var25 + var14 * var24 + var26 * var20 >> 16) + var11;
+                                        var24 = param5.field_o[var23];
+                                        var25 = param5.field_l[var23];
+                                        var26 = param5.field_u[var23];
+                                        vg.field_c[var23] = var9 + (var18 * var26 + (var12 * var24 + var25 * var15) >> 16);
+                                        kd.field_b[var23] = (var13 * var24 + (var16 * var25 + var19 * var26) >> 16) + var10;
+                                        pf.field_k[var23] = (var24 * var14 - -(var25 * var17) + var26 * var20 >> 16) + var11;
+                                        var24 = param5.field_C[var23];
+                                        var25 = param5.field_r[var23];
+                                        var26 = param5.field_t[var23];
+                                        kd.field_g[var23] = var9 - -(var24 * var12 - -(var25 * var15) - -(var26 * var18) >> 16);
+                                        kc.field_l[var23] = (var19 * var26 + (var25 * var16 + var24 * var13) >> 16) + var10;
+                                        ee.field_f[var23] = var11 - -(var25 * var17 + (var14 * var24 - -(var26 * var20)) >> 16);
+                                        var23++;
+                                        continue L3;
                                       }
                                     }
                                   }
@@ -999,96 +981,81 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                       }
                     }
                   }
-                  L4: {
-                    if (param1) {
-                      var9 = param0[3];
-                      var10 = param0[4];
-                      var11 = param0[5];
-                      var12 = param0[6];
-                      var13 = param0[7];
-                      var14 = param0[8];
-                      var15 = param0[9];
-                      var16 = param0[10];
-                      var17 = param0[11];
-                      var18 = 0;
-                      L5: while (true) {
-                        if (param5.field_A <= var18) {
-                          break L4;
-                        } else {
-                          stackOut_57_0 = ~var18;
-                          stackIn_59_0 = stackOut_57_0;
-                          if (stackIn_59_0 <= ~qf.field_q.length) {
-                            break L4;
-                          } else {
-                            var19 = param5.field_z[var18];
-                            var20 = param5.field_b[var18];
-                            var21 = param5.field_c[var18];
-                            qf.field_q[var18] = var21 * var15 + (var9 * var19 + var12 * var20) >> 16;
-                            ee.field_b[var18] = var21 * var16 + (var10 * var19 + var20 * var13) >> 16;
-                            wh.field_e[var18] = var21 * var17 + (var19 * var11 - -(var14 * var20)) >> 16;
-                            var18++;
-                            continue L5;
-                          }
-                        }
-                      }
+                }
+                var9 = param0[3];
+                var10 = param0[4];
+                var11 = param0[5];
+                var12 = param0[6];
+                var13 = param0[7];
+                var14 = param0[8];
+                var15 = param0[9];
+                var16 = param0[10];
+                var17 = param0[11];
+                var18 = 0;
+                L4: while (true) {
+                  L5: {
+                    if (param5.field_A <= var18) {
+                      break L5;
                     } else {
-                      break L4;
+                      stackOut_57_0 = ~var18;
+                      stackIn_59_0 = stackOut_57_0;
+                      if (stackIn_59_0 <= ~qf.field_q.length) {
+                        break L5;
+                      } else {
+                        var19 = param5.field_z[var18];
+                        var20 = param5.field_b[var18];
+                        var21 = param5.field_c[var18];
+                        qf.field_q[var18] = var21 * var15 + (var9 * var19 + var12 * var20) >> 16;
+                        ee.field_b[var18] = var21 * var16 + (var10 * var19 + var20 * var13) >> 16;
+                        wh.field_e[var18] = var21 * var17 + (var19 * var11 - -(var14 * var20)) >> 16;
+                        var18++;
+                        continue L4;
+                      }
                     }
                   }
-                  he.a(var8, param5, 109, var7_int, param4);
+                  int discarded$1 = 0;
+                  he.a(var8, param5, 109, var7_int);
                   break L0;
-                } else {
-                  L6: {
-                    var24 = param5.field_h[var23];
-                    var25 = param5.field_I[var23];
-                    var26 = param5.field_g[var23];
-                    var27 = (var12 * var24 - -(var25 * var15) - -(var26 * var18) >> -sb.field_d + 16) + var9;
-                    var28 = (var19 * var26 + (var13 * var24 + var16 * var25) >> -sb.field_d + 16) + var10;
-                    var29 = var11 - -(var17 * var25 + (var24 * var14 - -(var20 * var26)) >> 16);
-                    if (50 > var29) {
-                      qd.field_a[var23] = -2147483648;
+                }
+              } else {
+                L6: {
+                  var24 = param5.field_h[var23];
+                  var25 = param5.field_I[var23];
+                  var26 = param5.field_g[var23];
+                  var27 = (var12 * var24 - -(var25 * var15) - -(var26 * var18) >> -sb.field_d + 16) + var9;
+                  var28 = (var19 * var26 + (var13 * var24 + var16 * var25) >> -sb.field_d + 16) + var10;
+                  var29 = var11 - -(var17 * var25 + (var24 * var14 - -(var20 * var26)) >> 16);
+                  if (50 > var29) {
+                    qd.field_a[var23] = -2147483648;
+                    break L6;
+                  } else {
+                    L7: {
+                      ej.field_c[var23] = var27 / var29 + var21;
+                      fk.field_d[var23] = var22 + var28 / var29;
+                      if (~var29 < ~var8) {
+                        var8 = var29;
+                        break L7;
+                      } else {
+                        break L7;
+                      }
+                    }
+                    qd.field_a[var23] = var29;
+                    if (var7_int <= var29) {
                       break L6;
                     } else {
-                      L7: {
-                        ej.field_c[var23] = var27 / var29 + var21;
-                        fk.field_d[var23] = var22 + var28 / var29;
-                        if (~var29 < ~var8) {
-                          var8 = var29;
-                          break L7;
-                        } else {
-                          break L7;
-                        }
-                      }
-                      qd.field_a[var23] = var29;
-                      if (var7_int <= var29) {
-                        break L6;
-                      } else {
-                        var7_int = var29;
-                        break L6;
-                      }
+                      var7_int = var29;
+                      break L6;
                     }
                   }
-                  L8: {
-                    if (!param3) {
-                      break L8;
-                    } else {
-                      pd.field_l[var23] = var27 >> sb.field_d;
-                      cl.field_U[var23] = var28 >> sb.field_d;
-                      pc.field_n[var23] = var29;
-                      break L8;
-                    }
-                  }
-                  var23++;
-                  continue L1;
                 }
+                var23++;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L8: {
             var7 = decompiledCaughtException;
             stackOut_65_0 = (RuntimeException) var7;
             stackOut_65_1 = new StringBuilder().append("da.C(");
@@ -1103,7 +1070,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               stackIn_69_0 = stackOut_68_0;
               stackIn_69_1 = stackOut_68_1;
               stackIn_69_2 = stackOut_68_2;
-              break L9;
+              break L8;
             } else {
               stackOut_66_0 = (RuntimeException) (Object) stackIn_66_0;
               stackOut_66_1 = (StringBuilder) (Object) stackIn_66_1;
@@ -1111,12 +1078,12 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               stackIn_69_0 = stackOut_66_0;
               stackIn_69_1 = stackOut_66_1;
               stackIn_69_2 = stackOut_66_2;
-              break L9;
+              break L8;
             }
           }
-          L10: {
+          L9: {
             stackOut_69_0 = (RuntimeException) (Object) stackIn_69_0;
-            stackOut_69_1 = ((StringBuilder) (Object) stackIn_69_1).append(stackIn_69_2).append(44).append(param1).append(44);
+            stackOut_69_1 = ((StringBuilder) (Object) stackIn_69_1).append(stackIn_69_2).append(44).append(1).append(44);
             stackIn_72_0 = stackOut_69_0;
             stackIn_72_1 = stackOut_69_1;
             stackIn_70_0 = stackOut_69_0;
@@ -1128,7 +1095,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               stackIn_73_0 = stackOut_72_0;
               stackIn_73_1 = stackOut_72_1;
               stackIn_73_2 = stackOut_72_2;
-              break L10;
+              break L9;
             } else {
               stackOut_70_0 = (RuntimeException) (Object) stackIn_70_0;
               stackOut_70_1 = (StringBuilder) (Object) stackIn_70_1;
@@ -1136,12 +1103,12 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               stackIn_73_0 = stackOut_70_0;
               stackIn_73_1 = stackOut_70_1;
               stackIn_73_2 = stackOut_70_2;
-              break L10;
+              break L9;
             }
           }
-          L11: {
+          L10: {
             stackOut_73_0 = (RuntimeException) (Object) stackIn_73_0;
-            stackOut_73_1 = ((StringBuilder) (Object) stackIn_73_1).append(stackIn_73_2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_73_1 = ((StringBuilder) (Object) stackIn_73_1).append(stackIn_73_2).append(44).append(0).append(44).append(0).append(44);
             stackIn_76_0 = stackOut_73_0;
             stackIn_76_1 = stackOut_73_1;
             stackIn_74_0 = stackOut_73_0;
@@ -1153,7 +1120,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               stackIn_77_0 = stackOut_76_0;
               stackIn_77_1 = stackOut_76_1;
               stackIn_77_2 = stackOut_76_2;
-              break L11;
+              break L10;
             } else {
               stackOut_74_0 = (RuntimeException) (Object) stackIn_74_0;
               stackOut_74_1 = (StringBuilder) (Object) stackIn_74_1;
@@ -1161,10 +1128,10 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               stackIn_77_0 = stackOut_74_0;
               stackIn_77_1 = stackOut_74_1;
               stackIn_77_2 = stackOut_74_2;
-              break L11;
+              break L10;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_77_0, stackIn_77_2 + 44 + param6 + 41);
+          throw ld.a((Throwable) (Object) stackIn_77_0, stackIn_77_2 + 44 + -58 + 41);
         }
     }
 

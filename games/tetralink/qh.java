@@ -68,39 +68,28 @@ final class qh extends d implements ih, cg {
         }
     }
 
-    final static boolean a(int param0, int param1, byte param2, int param3, int param4, boolean param5, int param6) {
-        L0: {
-          if (!ak.a(3058)) {
-            break L0;
-          } else {
-            L1: {
-              we.a(param5, param0, param2 + 28, param4);
-              if (null == hd.field_s) {
-                break L1;
-              } else {
-                if (!hd.field_s.a(param4, param1, param5, (byte) 53, param6)) {
-                  break L1;
-                } else {
-                  param5 = false;
-                  gg.c((byte) 43);
-                  break L1;
+    final static boolean a(int param0, int param1, byte param2, int param3, int param4, boolean param5) {
+        if (ak.a(3058)) {
+            we.a(param5, 15, -2, 13);
+            if (null != hd.field_s) {
+                if (hd.field_s.a(13, 11, param5, (byte) 53, 0)) {
+                    param5 = false;
+                    int discarded$0 = 43;
+                    gg.c();
                 }
-              }
             }
-            ej.a(param5, param4, (byte) 107);
-            mn.a(param5, -1, param3);
+            int discarded$1 = 107;
+            int discarded$2 = 13;
+            ej.a(param5);
+            int discarded$3 = 14;
+            int discarded$4 = -1;
+            mn.a(param5);
             param5 = false;
-            break L0;
-          }
         }
-        if (param2 != -30) {
-          return true;
-        } else {
-          return param5;
-        }
+        return param5;
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_l = null;
     }
 
@@ -227,34 +216,22 @@ final class qh extends d implements ih, cg {
         return ((qh) this).field_m.h(-30886);
     }
 
-    final static void a(boolean param0, byte param1, int param2, ri param3, int param4) {
+    final static void a(boolean param0, byte param1, int param2, ri param3) {
         try {
-            bn.field_c.a(param3, param2, !param0 ? true : false, param4, 1000000, (byte) -128);
-            int var5_int = 120 / ((param1 - -1) / 47);
+            bn.field_c.a(param3, 1048576, false, 256, 1000000, (byte) -128);
+            int var5_int = -120;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "qh.D(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "qh.D(" + 1 + 44 + -56 + 44 + 1048576 + 44 + (param3 != null ? "{...}" : "null") + 44 + 256 + 41);
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        Object var8 = null;
-        ck.field_bb.a((byte) -85, param2, 0, param3, param0);
-        if (param4 == 1000000) {
-          if (gl.field_o != null) {
-            gl.field_o.a(param5, param3, param5 + -d.field_e, param1, param3, 0);
-            return;
-          } else {
-            return;
-          }
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        ck.field_bb.a((byte) -85, 640, 0, param3, param0);
+        if (gl.field_o != null) {
+          gl.field_o.a(param5, param3, param5 + -d.field_e, param1, param3, 0);
+          return;
         } else {
-          var8 = null;
-          qh.a((gd) null, -102, -101, -48, -5, -49, (rb) null);
-          if (gl.field_o == null) {
-            return;
-          } else {
-            gl.field_o.a(param5, param3, param5 + -d.field_e, param1, param3, 0);
-            return;
-          }
+          return;
         }
     }
 

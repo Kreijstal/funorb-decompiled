@@ -15,6 +15,9 @@ final class id extends ms {
 
     public static void c(boolean param0) {
         field_m = null;
+        if (param0) {
+            field_m = null;
+        }
     }
 
     final static ce a(int param0, int param1, java.awt.Canvas param2, int param3) {

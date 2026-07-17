@@ -19,7 +19,7 @@ final class be {
     static int field_g;
     private int field_i;
 
-    public static void b(int param0) {
+    public static void b() {
         field_n = null;
         field_o = null;
         field_e = null;
@@ -968,7 +968,7 @@ final class be {
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         int var1 = 0;
         return tf.field_i;
     }

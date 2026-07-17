@@ -210,12 +210,12 @@ class oa {
     }
 
     private final void a(int param0) {
-        ((oa) this).field_m = ((oa) this).field_m - 256;
+        ((oa) this).field_m = ((oa) this).field_m - param0;
         if (((oa) this).field_m < 0) {
             ((oa) this).field_m = 0;
         }
         if (((oa) this).field_i != null) {
-            ((oa) this).field_i.d(256);
+            ((oa) this).field_i.d(param0);
             return;
         }
     }
@@ -269,7 +269,8 @@ class oa {
                       field_q = null;
                       break L0;
                     } else {
-                      wl.a(50L, false);
+                      int discarded$1 = 0;
+                      wl.a(50L);
                       continue L2;
                     }
                   }
@@ -451,35 +452,9 @@ class oa {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 < 8000) {
-            break L0;
-          } else {
-            if (param0 <= 48000) {
-              L1: {
-                field_h = param0;
-                if (!param1) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              field_k = stackIn_7_0 != 0;
-              field_o = 10;
-              return;
-            } else {
-              break L0;
-            }
-          }
-        }
-        throw new IllegalArgumentException();
+        field_h = 22050;
+        field_k = true;
+        field_o = 10;
     }
 
     private final void a(int[] param0, int param1) {
@@ -500,7 +475,7 @@ class oa {
         wh var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_k) {
             break L0;
           } else {
@@ -510,7 +485,7 @@ class oa {
         }
         L1: {
           pd.a(param0, 0, var3);
-          ((oa) this).field_m = ((oa) this).field_m - 256;
+          ((oa) this).field_m = ((oa) this).field_m - param1;
           if (((oa) this).field_i == null) {
             break L1;
           } else {
@@ -677,7 +652,7 @@ class oa {
           if (((oa) this).field_i == null) {
             break L17;
           } else {
-            ((oa) this).field_i.a(param0, 0, 256);
+            ((oa) this).field_i.a(param0, 0, param1);
             break L17;
           }
         }

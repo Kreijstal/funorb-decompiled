@@ -12,7 +12,6 @@ final class u extends br {
     final static int b(int param0, int param1) {
         int var2 = 0;
         int var3 = 0;
-        Object var4 = null;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         vh.field_Gb = null;
         vo.field_o = null;
@@ -20,103 +19,17 @@ final class u extends br {
         var2 = qe.field_f;
         qe.field_f = ll.field_b;
         ll.field_b = var2;
-        if (param1 == 5) {
-          if (param0 != 51) {
-            if (param0 != 50) {
-              i.field_a.field_p = 1;
-              i.field_a.field_n = i.field_a.field_n + 1;
-              if (i.field_a.field_n < 2) {
-                L0: {
-                  if (i.field_a.field_n < 2) {
-                    break L0;
-                  } else {
-                    if (param0 != 50) {
-                      break L0;
-                    } else {
-                      return 5;
-                    }
-                  }
-                }
-                if (4 > i.field_a.field_n) {
-                  return -1;
-                } else {
-                  return 1;
-                }
-              } else {
-                if (param0 == 51) {
-                  return 2;
-                } else {
-                  L1: {
-                    if (i.field_a.field_n < 2) {
-                      break L1;
-                    } else {
-                      if (param0 != 50) {
-                        break L1;
-                      } else {
-                        return 5;
-                      }
-                    }
-                  }
-                  if (4 > i.field_a.field_n) {
-                    return -1;
-                  } else {
-                    return 1;
-                  }
-                }
-              }
-            } else {
-              i.field_a.field_p = 5;
-              i.field_a.field_n = i.field_a.field_n + 1;
-              if (i.field_a.field_n < 2) {
-                L2: {
-                  if (i.field_a.field_n < 2) {
-                    break L2;
-                  } else {
-                    if (param0 != 50) {
-                      break L2;
-                    } else {
-                      return 5;
-                    }
-                  }
-                }
-                if (4 > i.field_a.field_n) {
-                  return -1;
-                } else {
-                  return 1;
-                }
-              } else {
-                if (param0 == 51) {
-                  return 2;
-                } else {
-                  L3: {
-                    if (i.field_a.field_n < 2) {
-                      break L3;
-                    } else {
-                      if (param0 != 50) {
-                        break L3;
-                      } else {
-                        return 5;
-                      }
-                    }
-                  }
-                  if (4 > i.field_a.field_n) {
-                    return -1;
-                  } else {
-                    return 1;
-                  }
-                }
-              }
-            }
-          } else {
-            i.field_a.field_p = 2;
+        if (param0 != 51) {
+          if (param0 != 50) {
+            i.field_a.field_p = 1;
             i.field_a.field_n = i.field_a.field_n + 1;
             if (i.field_a.field_n < 2) {
-              L4: {
+              L0: {
                 if (i.field_a.field_n < 2) {
-                  break L4;
+                  break L0;
                 } else {
                   if (param0 != 50) {
-                    break L4;
+                    break L0;
                   } else {
                     return 5;
                   }
@@ -131,106 +44,12 @@ final class u extends br {
               if (param0 == 51) {
                 return 2;
               } else {
-                if (i.field_a.field_n >= 2) {
-                  if (param0 == 50) {
-                    return 5;
-                  } else {
-                    if (4 > i.field_a.field_n) {
-                      return -1;
-                    } else {
-                      return 1;
-                    }
-                  }
-                } else {
-                  if (4 > i.field_a.field_n) {
-                    return -1;
-                  } else {
-                    return 1;
-                  }
-                }
-              }
-            }
-          }
-        } else {
-          var4 = null;
-          ll discarded$1 = u.a(-78, (go) null, 25, -28, -35, -43);
-          if (param0 != 51) {
-            if (param0 != 50) {
-              i.field_a.field_p = 1;
-              i.field_a.field_n = i.field_a.field_n + 1;
-              if (i.field_a.field_n >= 2) {
-                if (param0 == 51) {
-                  return 2;
-                } else {
-                  if (i.field_a.field_n >= 2) {
-                    if (param0 != 50) {
-                      if (4 > i.field_a.field_n) {
-                        return -1;
-                      } else {
-                        return 1;
-                      }
-                    } else {
-                      return 5;
-                    }
-                  } else {
-                    if (4 > i.field_a.field_n) {
-                      return -1;
-                    } else {
-                      return 1;
-                    }
-                  }
-                }
-              } else {
-                if (i.field_a.field_n >= 2) {
-                  if (param0 == 50) {
-                    return 5;
-                  } else {
-                    if (4 > i.field_a.field_n) {
-                      return -1;
-                    } else {
-                      return 1;
-                    }
-                  }
-                } else {
-                  if (4 > i.field_a.field_n) {
-                    return -1;
-                  } else {
-                    return 1;
-                  }
-                }
-              }
-            } else {
-              i.field_a.field_p = 5;
-              i.field_a.field_n = i.field_a.field_n + 1;
-              if (i.field_a.field_n >= 2) {
-                if (param0 == 51) {
-                  return 2;
-                } else {
-                  if (i.field_a.field_n >= 2) {
-                    if (param0 != 50) {
-                      if (4 > i.field_a.field_n) {
-                        return -1;
-                      } else {
-                        return 1;
-                      }
-                    } else {
-                      return 5;
-                    }
-                  } else {
-                    if (4 > i.field_a.field_n) {
-                      return -1;
-                    } else {
-                      return 1;
-                    }
-                  }
-                }
-              } else {
-                L5: {
+                L1: {
                   if (i.field_a.field_n < 2) {
-                    break L5;
+                    break L1;
                   } else {
                     if (param0 != 50) {
-                      break L5;
+                      break L1;
                     } else {
                       return 5;
                     }
@@ -244,42 +63,85 @@ final class u extends br {
               }
             }
           } else {
-            i.field_a.field_p = 2;
+            i.field_a.field_p = 5;
             i.field_a.field_n = i.field_a.field_n + 1;
-            if (i.field_a.field_n >= 2) {
-              if (param0 == 51) {
-                return 2;
-              } else {
-                if (i.field_a.field_n >= 2) {
+            if (i.field_a.field_n < 2) {
+              L2: {
+                if (i.field_a.field_n < 2) {
+                  break L2;
+                } else {
                   if (param0 != 50) {
-                    if (4 > i.field_a.field_n) {
-                      return -1;
-                    } else {
-                      return 1;
-                    }
+                    break L2;
                   } else {
                     return 5;
                   }
+                }
+              }
+              if (4 > i.field_a.field_n) {
+                return -1;
+              } else {
+                return 1;
+              }
+            } else {
+              if (param0 == 51) {
+                return 2;
+              } else {
+                L3: {
+                  if (i.field_a.field_n < 2) {
+                    break L3;
+                  } else {
+                    if (param0 != 50) {
+                      break L3;
+                    } else {
+                      return 5;
+                    }
+                  }
+                }
+                if (4 > i.field_a.field_n) {
+                  return -1;
                 } else {
+                  return 1;
+                }
+              }
+            }
+          }
+        } else {
+          i.field_a.field_p = 2;
+          i.field_a.field_n = i.field_a.field_n + 1;
+          if (i.field_a.field_n >= 2) {
+            if (param0 == 51) {
+              return 2;
+            } else {
+              if (i.field_a.field_n >= 2) {
+                if (param0 != 50) {
                   if (4 > i.field_a.field_n) {
                     return -1;
                   } else {
                     return 1;
                   }
+                } else {
+                  return 5;
+                }
+              } else {
+                if (4 > i.field_a.field_n) {
+                  return -1;
+                } else {
+                  return 1;
+                }
+              }
+            }
+          } else {
+            if (i.field_a.field_n >= 2) {
+              if (param0 == 50) {
+                return 5;
+              } else {
+                if (4 > i.field_a.field_n) {
+                  return -1;
+                } else {
+                  return 1;
                 }
               }
             } else {
-              L6: {
-                if (i.field_a.field_n < 2) {
-                  break L6;
-                } else {
-                  if (param0 != 50) {
-                    break L6;
-                  } else {
-                    return 5;
-                  }
-                }
-              }
               if (4 > i.field_a.field_n) {
                 return -1;
               } else {
@@ -291,19 +153,12 @@ final class u extends br {
     }
 
     final static ja[] a(int param0, int param1, int param2, int param3, int param4) {
-        if (param0 != 21242) {
-            return null;
-        }
-        return qa.a(param3, 0, 1, 3, (byte) 127, param2, param1, 1, 1);
+        return qa.a(0, 0, 1, 3, (byte) 127, 65793, 0, 1, 1);
     }
 
     final static ul a(int param0, int param1) {
-        if (param0 != 5) {
-          field_k = null;
-          return wm.a(param1, 1, true, false, 19, false);
-        } else {
-          return wm.a(param1, 1, true, false, 19, false);
-        }
+        int discarded$0 = 0;
+        return wm.a(param1, 1, true, false, 19);
     }
 
     public static void a(int param0) {
@@ -312,7 +167,7 @@ final class u extends br {
         field_j = null;
     }
 
-    final static int a(byte param0) {
+    final static int a() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -452,7 +307,7 @@ final class u extends br {
         String stackOut_9_2 = null;
         try {
           L0: {
-            var8 = m.a(param5, param1, param4, param3, param2, 88);
+            var8 = m.a(param5, param1, param4, 0, param2, 88);
             var6 = var8;
             if (param0 == 10386) {
               if (var8 != null) {
@@ -502,7 +357,7 @@ final class u extends br {
               break L1;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw fa.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param2 + 44 + 0 + 44 + param4 + 44 + param5 + 41);
         }
         return stackIn_7_0;
     }

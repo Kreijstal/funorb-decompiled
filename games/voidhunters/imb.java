@@ -8,7 +8,7 @@ final class imb implements ntb, utb {
     int field_d;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
     }
 

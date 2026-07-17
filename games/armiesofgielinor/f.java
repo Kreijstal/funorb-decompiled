@@ -16,7 +16,7 @@ final class f extends uq {
         return false;
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_A = null;
         field_D = null;
         field_C = null;

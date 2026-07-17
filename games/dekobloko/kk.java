@@ -22,7 +22,7 @@ final class kk implements gl {
     static String field_q;
     static byte[] field_l;
 
-    final static String a(boolean param0, boolean param1, boolean param2, boolean param3) {
+    final static String a(boolean param0, boolean param1, boolean param2) {
         int var4 = 0;
         if (!(!param2)) {
             var4 += 4;
@@ -43,9 +43,6 @@ final class kk implements gl {
         int var4 = var5.field_n;
         var5.a(true, 1);
         var5.a(true, param2.field_v);
-        if (param1 != -15016) {
-            return;
-        }
         try {
             var5.a(true, param2.field_p);
             var5.a(param2.field_s, false);
@@ -55,7 +52,7 @@ final class kk implements gl {
             int discarded$0 = var5.a((byte) -15, var4);
             var5.b(var5.field_n - var4, true);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "kk.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "kk.C(" + param0 + 44 + -15016 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

@@ -12,21 +12,10 @@ final class gha extends rqa {
     }
 
     final static int a(byte param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        Object var5 = null;
-        var2 = param1 * (param1 * param1 >> 12) >> 12;
-        var3 = param1 * 6 + -61440;
-        if (param0 <= 54) {
-          var5 = null;
-          ue discarded$2 = gha.a((byte[]) null, 119, (byte) -84, (jp) null);
-          var4 = (param1 * var3 >> 12) + 40960;
-          return var4 * var2 >> 12;
-        } else {
-          var4 = (param1 * var3 >> 12) + 40960;
-          return var4 * var2 >> 12;
-        }
+        int var2 = param1 * (param1 * param1 >> 12) >> 12;
+        int var3 = param1 * 6 + -61440;
+        int var4 = (param1 * var3 >> 12) + 40960;
+        return var4 * var2 >> 12;
     }
 
     final static ue a(byte[] param0, int param1, byte param2, jp param3) {
@@ -34,42 +23,42 @@ final class gha extends rqa {
         RuntimeException var4 = null;
         byte[] var10 = null;
         Object stackIn_4_0 = null;
-        Object stackIn_16_0 = null;
-        ue stackIn_18_0 = null;
+        Object stackIn_14_0 = null;
+        ue stackIn_16_0 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
+        String stackIn_20_2 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
-        String stackIn_22_2 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_25_2 = null;
+        String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_15_0 = null;
-        ue stackOut_17_0 = null;
+        Object stackOut_13_0 = null;
+        ue stackOut_15_0 = null;
         Object stackOut_3_0 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
         RuntimeException stackOut_19_0 = null;
         StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
         RuntimeException stackOut_21_0 = null;
         StringBuilder stackOut_21_1 = null;
         String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
         try {
           L0: {
             if (param0 != null) {
@@ -79,48 +68,40 @@ final class gha extends rqa {
                   jaggl.OpenGL.glShaderSourceRawARB(var4_long, param0);
                   jaggl.OpenGL.glCompileShaderARB(var4_long);
                   jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35713, rm.field_f, 0);
-                  if (param2 == -15) {
-                    break L1;
-                  } else {
-                    field_o = 36;
-                    break L1;
-                  }
-                }
-                L2: {
                   if (rm.field_f[0] != 0) {
-                    break L2;
+                    break L1;
                   } else {
-                    L3: {
+                    L2: {
                       if (rm.field_f[0] == -1) {
                         System.out.println("Shader compile failed:");
-                        break L3;
+                        break L2;
                       } else {
-                        break L3;
+                        break L2;
                       }
                     }
-                    L4: {
+                    L3: {
                       jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35716, rm.field_f, 1);
                       if (-2 < rm.field_f[1]) {
                         var10 = new byte[rm.field_f[1]];
                         jaggl.OpenGL.glGetInfoLogARB(var4_long, rm.field_f[1], rm.field_f, 0, var10, 0);
                         System.out.println(new String(var10));
-                        break L4;
+                        break L3;
                       } else {
-                        break L4;
+                        break L3;
                       }
                     }
                     if (0 != rm.field_f[0]) {
-                      break L2;
+                      break L1;
                     } else {
                       jaggl.OpenGL.glDeleteObjectARB(var4_long);
-                      stackOut_15_0 = null;
-                      stackIn_16_0 = stackOut_15_0;
-                      return (ue) (Object) stackIn_16_0;
+                      stackOut_13_0 = null;
+                      stackIn_14_0 = stackOut_13_0;
+                      return (ue) (Object) stackIn_14_0;
                     }
                   }
                 }
-                stackOut_17_0 = new ue(param3, var4_long, param1);
-                stackIn_18_0 = stackOut_17_0;
+                stackOut_15_0 = new ue(param3, var4_long, param1);
+                stackIn_16_0 = stackOut_15_0;
                 break L0;
               } else {
                 stackOut_3_0 = null;
@@ -133,60 +114,60 @@ final class gha extends rqa {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var4 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var4;
-            stackOut_19_1 = new StringBuilder().append("gha.D(");
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackOut_17_0 = (RuntimeException) var4;
+            stackOut_17_1 = new StringBuilder().append("gha.D(");
+            stackIn_19_0 = stackOut_17_0;
+            stackIn_19_1 = stackOut_17_1;
+            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_1 = stackOut_17_1;
             if (param0 == null) {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "null";
+              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_1 = stackOut_19_1;
+              stackIn_20_2 = stackOut_19_2;
+              break L4;
+            } else {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "{...}";
+              stackIn_20_0 = stackOut_18_0;
+              stackIn_20_1 = stackOut_18_1;
+              stackIn_20_2 = stackOut_18_2;
+              break L4;
+            }
+          }
+          L5: {
+            stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(param1).append(44).append(-15).append(44);
+            stackIn_22_0 = stackOut_20_0;
+            stackIn_22_1 = stackOut_20_1;
+            stackIn_21_0 = stackOut_20_0;
+            stackIn_21_1 = stackOut_20_1;
+            if (param3 == null) {
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "null";
+              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_1 = stackOut_22_1;
+              stackIn_23_2 = stackOut_22_2;
+              break L5;
+            } else {
               stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
               stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
-              break L5;
-            } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackOut_21_2 = "{...}";
+              stackIn_23_0 = stackOut_21_0;
+              stackIn_23_1 = stackOut_21_1;
+              stackIn_23_2 = stackOut_21_2;
               break L5;
             }
           }
-          L6: {
-            stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(44).append(param1).append(44).append(param2).append(44);
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
-            if (param3 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
-              break L6;
-            } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
-              break L6;
-            }
-          }
-          throw rta.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 41);
         }
-        return stackIn_18_0;
+        return stackIn_16_0;
     }
 
     public static void a(int param0) {

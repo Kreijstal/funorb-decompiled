@@ -8,7 +8,7 @@ final class av extends jt {
     static il field_B;
     static int[] field_C;
 
-    final static void a(fs param0, boolean param1) {
+    final static void a(fs param0) {
         try {
             byte[] var2 = null;
             RuntimeException var2_ref = null;
@@ -145,11 +145,8 @@ final class av extends jt {
     final static void a(int param0, boolean param1, int param2) {
         eh.field_a = 0;
         rc.field_k = param2;
-        if (param0 != -7753) {
-            field_C = null;
-        }
         if (!(0 > rc.field_k)) {
-            iv.field_g[rc.field_k].b(param0 + -875, param1);
+            iv.field_g[rc.field_k].b(-8628, param1);
         }
         if (0 == rc.field_k) {
             if (7 != nj.field_b) {

@@ -12,7 +12,7 @@ abstract class rl extends oh {
     rl() {
     }
 
-    final static void d(int param0) {
+    final static void d() {
         md var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -22,15 +22,17 @@ abstract class rl extends oh {
         try {
           var1 = tp.field_f;
           L0: while (true) {
-            if (!cn.b(114)) {
+            int discarded$8 = 114;
+            if (!cn.b()) {
               field_g = null;
               return;
             } else {
               var1.d(8, 8);
-              int fieldTemp$2 = var1.field_f + 1;
+              int fieldTemp$9 = var1.field_f + 1;
               var1.field_f = var1.field_f + 1;
-              var2 = fieldTemp$2;
-              ke.a(var1, -9129);
+              var2 = fieldTemp$9;
+              int discarded$10 = -9129;
+              ke.a(var1);
               tp.field_f.c((byte) 47, var1.field_f - var2);
               continue L0;
             }
@@ -86,7 +88,7 @@ abstract class rl extends oh {
         int var1 = -1 % ((57 - param0) / 63);
     }
 
-    final static nd c(int param0) {
+    final static nd c() {
         if (null == p.field_i) {
           p.field_i = new nd();
           p.field_i.a(ai.field_h, false);
@@ -122,18 +124,12 @@ abstract class rl extends oh {
     }
 
     final static void a(byte param0, int param1, int param2) {
-        int var3 = 0;
-        L0: {
-          pc.field_y = 0;
-          lo.field_b = null;
-          rc.field_a = ol.field_z[param1];
-          jo.field_o = param1;
-          if (param1 == 0) {
+        pc.field_y = 0;
+        lo.field_b = null;
+        rc.field_a = ol.field_z[param1];
+        jo.field_o = param1;
+        if (!(param1 != 0)) {
             vh.field_a = true;
-            break L0;
-          } else {
-            break L0;
-          }
         }
         uo.field_o = param2;
         dk.field_h = param2;
@@ -141,21 +137,17 @@ abstract class rl extends oh {
         ob.field_l = 10;
         wd.field_j = 60;
         fn.field_j = 8;
-        if (param0 != 26) {
-          return;
-        } else {
-          je.field_j = qk.field_F;
-          we.field_h = sm.field_f;
-          b.field_a = ka.field_n;
-          fp.field_a = ei.field_F;
-          var3 = param2;
-          mb.field_g = mb.field_g + var3;
-          sa.n(-26);
-          a.field_b = null;
-          qn.field_n = 0;
-          gh.field_C = 0;
-          return;
-        }
+        je.field_j = qk.field_F;
+        we.field_h = sm.field_f;
+        b.field_a = ka.field_n;
+        fp.field_a = ei.field_F;
+        int var3 = param2;
+        mb.field_g = mb.field_g + var3;
+        int discarded$0 = -26;
+        sa.n();
+        a.field_b = null;
+        qn.field_n = 0;
+        gh.field_C = 0;
     }
 
     final static int b(int param0, byte param1) {

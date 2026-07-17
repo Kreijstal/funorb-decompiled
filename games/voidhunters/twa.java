@@ -184,7 +184,8 @@ final class twa implements ntb {
     }
 
     final static void b(int param0) {
-        lba.a(-1);
+        int discarded$4 = -1;
+        lba.a();
         if (param0 <= 25) {
           field_b = null;
           tla.field_c = true;

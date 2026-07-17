@@ -85,7 +85,7 @@ final class of extends te implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    private final synchronized void a(boolean param0) {
+    private final synchronized void a() {
         if (!(null != ((of) this).field_j)) {
             return;
         }
@@ -175,12 +175,15 @@ final class of extends te implements java.awt.image.ImageProducer, java.awt.imag
                 ((of) this).addConsumer((java.awt.image.ImageConsumer) null);
             }
             ((of) this).field_d = param3.createImage((java.awt.image.ImageProducer) this);
-            this.a(true);
-            boolean discarded$0 = param3.prepareImage(((of) this).field_d, (java.awt.image.ImageObserver) this);
-            this.a(true);
+            int discarded$0 = 1;
+            this.a();
             boolean discarded$1 = param3.prepareImage(((of) this).field_d, (java.awt.image.ImageObserver) this);
-            this.a(true);
-            boolean discarded$2 = param3.prepareImage(((of) this).field_d, (java.awt.image.ImageObserver) this);
+            int discarded$2 = 1;
+            this.a();
+            boolean discarded$3 = param3.prepareImage(((of) this).field_d, (java.awt.image.ImageObserver) this);
+            int discarded$4 = 1;
+            this.a();
+            boolean discarded$5 = param3.prepareImage(((of) this).field_d, (java.awt.image.ImageObserver) this);
             ((of) this).a(0);
         } catch (RuntimeException runtimeException) {
             throw qk.a((Throwable) (Object) runtimeException, "of.E(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
@@ -189,18 +192,19 @@ final class of extends te implements java.awt.image.ImageProducer, java.awt.imag
 
     final void a(int param0, int param1, java.awt.Graphics param2, int param3) {
         try {
-            this.a(true);
+            int discarded$0 = 1;
+            this.a();
             if (param3 <= 34) {
                 Object var6 = null;
                 ((of) this).a(16, 118, (byte) 14, (java.awt.Component) null);
             }
-            boolean discarded$0 = param2.drawImage(((of) this).field_d, param1, param0, (java.awt.image.ImageObserver) this);
+            boolean discarded$1 = param2.drawImage(((of) this).field_d, param1, param0, (java.awt.image.ImageObserver) this);
         } catch (RuntimeException runtimeException) {
             throw qk.a((Throwable) (Object) runtimeException, "of.F(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_n = null;
         field_h = null;
         field_i = null;
@@ -208,7 +212,7 @@ final class of extends te implements java.awt.image.ImageProducer, java.awt.imag
         field_m = null;
     }
 
-    final static ef[] a(he param0, int param1) {
+    final static ef[] a(he param0) {
         RuntimeException var2 = null;
         int[] var3 = null;
         ef[] var4 = null;
@@ -222,28 +226,26 @@ final class of extends te implements java.awt.image.ImageProducer, java.awt.imag
         int[] var12 = null;
         ef[] stackIn_3_0 = null;
         ef[] stackIn_9_0 = null;
-        Object stackIn_12_0 = null;
-        ef[] stackIn_17_0 = null;
+        ef[] stackIn_16_0 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        String stackIn_21_2 = null;
+        String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ef[] stackOut_16_0 = null;
-        Object stackOut_11_0 = null;
+        ef[] stackOut_15_0 = null;
         ef[] stackOut_8_0 = null;
         ef[] stackOut_2_0 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
         RuntimeException stackOut_19_0 = null;
         StringBuilder stackOut_19_1 = null;
         String stackOut_19_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
         var7 = Terraphoenix.field_V;
         try {
           L0: {
@@ -258,28 +260,22 @@ final class of extends te implements java.awt.image.ImageProducer, java.awt.imag
                     var9 = var10;
                     var3 = var9;
                     var4 = new ef[var12.length >> 2];
-                    if (param1 == 5) {
-                      var5 = 0;
-                      L2: while (true) {
-                        if (var5 >= var4.length) {
-                          stackOut_16_0 = (ef[]) var4;
-                          stackIn_17_0 = stackOut_16_0;
-                          break L0;
-                        } else {
-                          var6 = new ef();
-                          var4[var5] = var6;
-                          var6.field_d = var3[var5 << 2];
-                          var6.field_e = var3[1 + (var5 << 2)];
-                          var6.field_g = var3[2 + (var5 << 2)];
-                          var6.field_f = var3[3 + (var5 << 2)];
-                          var5++;
-                          continue L2;
-                        }
+                    var5 = 0;
+                    L2: while (true) {
+                      if (var5 >= var4.length) {
+                        stackOut_15_0 = (ef[]) var4;
+                        stackIn_16_0 = stackOut_15_0;
+                        break L0;
+                      } else {
+                        var6 = new ef();
+                        var4[var5] = var6;
+                        var6.field_d = var3[var5 << 2];
+                        var6.field_e = var3[1 + (var5 << 2)];
+                        var6.field_g = var3[2 + (var5 << 2)];
+                        var6.field_f = var3[3 + (var5 << 2)];
+                        var5++;
+                        continue L2;
                       }
-                    } else {
-                      stackOut_11_0 = null;
-                      stackIn_12_0 = stackOut_11_0;
-                      return (ef[]) (Object) stackIn_12_0;
                     }
                   } else {
                     stackOut_8_0 = new ef[]{};
@@ -301,33 +297,33 @@ final class of extends te implements java.awt.image.ImageProducer, java.awt.imag
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) var2;
-            stackOut_18_1 = new StringBuilder().append("of.J(");
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
+            stackOut_17_0 = (RuntimeException) var2;
+            stackOut_17_1 = new StringBuilder().append("of.J(");
+            stackIn_19_0 = stackOut_17_0;
+            stackIn_19_1 = stackOut_17_1;
+            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_1 = stackOut_17_1;
             if (param0 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
-              break L3;
-            } else {
               stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
               stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
+              stackOut_19_2 = "null";
+              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_1 = stackOut_19_1;
+              stackIn_20_2 = stackOut_19_2;
+              break L3;
+            } else {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "{...}";
+              stackIn_20_0 = stackOut_18_0;
+              stackIn_20_1 = stackOut_18_1;
+              stackIn_20_2 = stackOut_18_2;
               break L3;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param1 + 41);
+          throw qk.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + 5 + 41);
         }
-        return stackIn_17_0;
+        return stackIn_16_0;
     }
 
     public final synchronized boolean isConsumer(java.awt.image.ImageConsumer param0) {

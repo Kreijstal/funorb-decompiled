@@ -10,7 +10,7 @@ abstract class tja {
 
     abstract rf b(int param0);
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
     }

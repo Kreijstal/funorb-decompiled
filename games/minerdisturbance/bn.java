@@ -19,7 +19,7 @@ final class bn implements uj {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         field_a = null;

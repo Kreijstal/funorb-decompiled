@@ -633,11 +633,12 @@ final class hi extends ic {
             ((hi) this).field_A.a(((hi) this).field_i + param0, ((hi) this).field_m + param1, param2, param3);
             return;
         }
-        ka var5 = new ka(((hi) this).field_A.field_p, ((hi) this).field_A.field_l);
-        ad.a(-13, var5);
+        ka var6 = new ka(((hi) this).field_A.field_p, ((hi) this).field_A.field_l);
+        ad.a(-13, var6);
         ((hi) this).field_A.a(0, 0, param2, param3);
-        ie.b((byte) -9);
-        var5.d(param1 + ((hi) this).field_m, param0 + ((hi) this).field_i, ((hi) this).field_H);
+        int discarded$0 = -9;
+        ie.b();
+        var6.d(param1 + ((hi) this).field_m, param0 + ((hi) this).field_i, ((hi) this).field_H);
     }
 
     static {

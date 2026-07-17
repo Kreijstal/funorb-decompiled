@@ -34,28 +34,82 @@ final class ii extends nm {
 
     final static boolean a(boolean param0, char param1) {
         if (param1 >= 32) {
-          if (126 < param1) {
-            if (param0) {
-              L0: {
-                if (param1 < 160) {
+          if (126 >= param1) {
+            return true;
+          } else {
+            L0: {
+              if (param1 < 160) {
+                break L0;
+              } else {
+                if (255 < param1) {
                   break L0;
                 } else {
-                  if (255 < param1) {
-                    break L0;
-                  } else {
-                    return true;
-                  }
+                  return true;
                 }
               }
-              if (param1 != 8364) {
-                if (param1 != 338) {
-                  if (param1 != 8212) {
-                    if (param1 != 339) {
+            }
+            L1: {
+              if (param1 == 8364) {
+                break L1;
+              } else {
+                if (param1 == 338) {
+                  break L1;
+                } else {
+                  if (param1 == 8212) {
+                    break L1;
+                  } else {
+                    if (param1 == 339) {
+                      break L1;
+                    } else {
                       if (param1 != 376) {
                         return false;
                       } else {
                         return true;
                       }
+                    }
+                  }
+                }
+              }
+            }
+            return true;
+          }
+        } else {
+          if (param1 >= 160) {
+            if (255 >= param1) {
+              return true;
+            } else {
+              L2: {
+                if (param1 == 8364) {
+                  break L2;
+                } else {
+                  if (param1 == 338) {
+                    break L2;
+                  } else {
+                    if (param1 == 8212) {
+                      break L2;
+                    } else {
+                      if (param1 == 339) {
+                        break L2;
+                      } else {
+                        if (param1 != 376) {
+                          return false;
+                        } else {
+                          return true;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              return true;
+            }
+          } else {
+            if (param1 != 8364) {
+              if (param1 != 338) {
+                if (param1 != 8212) {
+                  if (param1 != 339) {
+                    if (param1 != 376) {
+                      return false;
                     } else {
                       return true;
                     }
@@ -71,67 +125,11 @@ final class ii extends nm {
             } else {
               return true;
             }
-          } else {
-            return true;
-          }
-        } else {
-          if (param0) {
-            if (param1 >= 160) {
-              if (255 < param1) {
-                if (param1 != 8364) {
-                  if (param1 != 338) {
-                    if (param1 != 8212) {
-                      if (param1 != 339) {
-                        if (param1 != 376) {
-                          return false;
-                        } else {
-                          return true;
-                        }
-                      } else {
-                        return true;
-                      }
-                    } else {
-                      return true;
-                    }
-                  } else {
-                    return true;
-                  }
-                } else {
-                  return true;
-                }
-              } else {
-                return true;
-              }
-            } else {
-              if (param1 != 8364) {
-                if (param1 != 338) {
-                  if (param1 != 8212) {
-                    if (param1 != 339) {
-                      if (param1 == 376) {
-                        return true;
-                      } else {
-                        return false;
-                      }
-                    } else {
-                      return true;
-                    }
-                  } else {
-                    return true;
-                  }
-                } else {
-                  return true;
-                }
-              } else {
-                return true;
-              }
-            }
-          } else {
-            return true;
           }
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_l = null;
         field_r = null;
         field_s = null;

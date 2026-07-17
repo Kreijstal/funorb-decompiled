@@ -433,10 +433,7 @@ final class lca extends bca {
         }
     }
 
-    public static void d(byte param0) {
-        if (param0 > -84) {
-            field_s = 4;
-        }
+    public static void d() {
         field_r = null;
     }
 

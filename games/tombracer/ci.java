@@ -203,7 +203,7 @@ abstract class ci extends vg {
         ((ci) this).field_g = param1 ? true : false;
     }
 
-    final static kg a(byte[] param0, byte param1) {
+    final static kg a(byte[] param0) {
         kg var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -232,7 +232,7 @@ abstract class ci extends vg {
             if (param0 != null) {
               var2 = new kg(param0, ak.field_p, pg.field_C, mq.field_b, iga.field_m, mga.field_g, ck.field_c);
               loa.a((byte) -70);
-              var3 = -23 % ((-28 - param1) / 37);
+              var3 = -1;
               stackOut_3_0 = (kg) var2;
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -270,7 +270,7 @@ abstract class ci extends vg {
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + -123 + 41);
         }
         return stackIn_4_0;
     }

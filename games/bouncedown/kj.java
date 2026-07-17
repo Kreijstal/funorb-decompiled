@@ -6,7 +6,7 @@ final class kj extends ai {
     static String field_g;
     static int field_i;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_g = null;
     }
 

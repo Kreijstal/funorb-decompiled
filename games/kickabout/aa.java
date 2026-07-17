@@ -157,7 +157,7 @@ class aa extends ps {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_h = null;
         field_f = null;
     }

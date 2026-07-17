@@ -7,24 +7,21 @@ final class sh {
     static int field_d;
     static String field_c;
 
-    final static int c(int param0) {
-        int var1 = 124 % ((param0 - 17) / 56);
+    final static int c() {
+        int var1 = 0;
         return ce.field_r - ej.field_D;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
-        if (param0 != -16088) {
-            int discarded$0 = sh.c(11);
-        }
+    final static void a(int param0, int param1, int param2, int param3) {
         param3--;
         param2++;
-        pb.a(0, param3, param1, param3 - -param2);
+        pb.a(0, param3, 640, param3 - -param2);
         ic.field_db.f(0, param3 - 17);
         pb.c();
-        pb.c(0, param3, param1, 0, 128);
-        pb.c(0, param3 - -1, param1, 0, 96);
-        pb.c(0, param3 + 2, param1, 0, 64);
-        pb.c(0, param3 + 3, param1, 0, 32);
+        pb.c(0, param3, 640, 0, 128);
+        pb.c(0, param3 - -1, 640, 0, 96);
+        pb.c(0, param3 + 2, 640, 0, 64);
+        pb.c(0, param3 + 3, 640, 0, 32);
     }
 
     final static void a(int param0, boolean param1, boolean param2) {
@@ -121,11 +118,11 @@ final class sh {
         }
     }
 
-    final static de[] b(int param0) {
+    final static de[] b() {
         return new de[]{qd.field_o, mj.field_Vb, h.field_Y};
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
     }

@@ -10,7 +10,7 @@ final class uf {
     static de field_g;
     static int field_e;
 
-    final static void a(boolean param0, int param1) {
+    final static void a(boolean param0) {
         if (!(null == lf.field_b)) {
             lf.field_b.a(param0, 256);
         }
@@ -43,12 +43,9 @@ final class uf {
             var5 = (CharSequence) (Object) param1;
             qj.field_a = cc.a(var5, (byte) 101);
             vj.field_o = param2;
-            if (param0 >= -122) {
-                uf.a(32, (byte) 33, -101);
-            }
             hi.a(97);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "uf.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "uf.A(" + -127 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
@@ -63,7 +60,7 @@ final class uf {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         field_g = null;

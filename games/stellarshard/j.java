@@ -8,7 +8,7 @@ final class j {
         return (byte)j.a(8, param0);
     }
 
-    final static int a(byte[] param0, int param1, byte[] param2, int param3, int param4) {
+    final static int a(byte[] param0, int param1, byte[] param2, int param3) {
         Object var5 = null;
         Throwable var6 = null;
         int stackIn_2_0 = 0;

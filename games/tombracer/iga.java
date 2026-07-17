@@ -106,7 +106,7 @@ final class iga extends ija implements java.awt.image.ImageProducer {
         }
     }
 
-    private final synchronized void a(int param0, int param1, int param2, int param3, boolean param4) {
+    private final synchronized void a(int param0, int param1, int param2, int param3) {
         if (((iga) this).field_n == null) {
           return;
         } else {
@@ -144,10 +144,11 @@ final class iga extends ija implements java.awt.image.ImageProducer {
             if (param3 < 61) {
                 iga.a(90);
             }
-            this.a(param4, param0, param7, param2, true);
+            int discarded$0 = 1;
+            this.a(param4, param0, param7, param2);
             var9 = param6.getClip();
             param6.clipRect(param5, param1, param7, param0);
-            boolean discarded$0 = param6.drawImage(((iga) this).field_l, param5 - param2, -param4 + param1, (java.awt.image.ImageObserver) (Object) ((iga) this).field_p);
+            boolean discarded$1 = param6.drawImage(((iga) this).field_l, param5 - param2, -param4 + param1, (java.awt.image.ImageObserver) (Object) ((iga) this).field_p);
             param6.setClip(var9);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "iga.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 44 + param7 + 41);

@@ -10,7 +10,7 @@ final class jd extends ne {
     static String field_n;
     static String field_i;
 
-    final static void b(boolean param0) {
+    final static void b() {
         int var1 = 0;
         if (ql.field_d <= 32) {
             um.a(0, false);

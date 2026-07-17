@@ -12,7 +12,7 @@ final class ii extends gn {
     int field_e;
     int field_k;
 
-    final static void b(int param0) {
+    final static void b() {
         int var1_int = 0;
         RuntimeException var1 = null;
         eg var2 = null;
@@ -42,7 +42,7 @@ final class ii extends gn {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_h = null;
         field_m = null;
     }
@@ -68,7 +68,8 @@ final class ii extends gn {
         try {
           L0: {
             L1: {
-              ic.field_h.a(param0, cq.e(15137), 0);
+              int discarded$2 = 15137;
+              ic.field_h.a(param0, cq.e(), 0);
               da.field_h.a((gn) (Object) param0, 3);
               if (param1 >= 47) {
                 break L1;

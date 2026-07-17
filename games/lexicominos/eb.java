@@ -123,7 +123,7 @@ final class eb {
         }
     }
 
-    final static String c(byte param0) {
+    final static String c() {
         if (af.field_b) {
             return null;
         }
@@ -207,13 +207,13 @@ final class eb {
         return stackIn_3_0 != 0;
     }
 
-    final static db a(byte param0) {
+    final static db a() {
         int var4_int = 0;
         int var6 = Lexicominos.field_L ? 1 : 0;
         int var1 = bd.field_m[0] * pb.field_h[0];
         byte[] var2 = be.field_f[0];
         int[] var3 = new int[var1];
-        int var5 = -59 % ((param0 - -55) / 54);
+        int var5 = 0;
         for (var4_int = 0; var4_int < var1; var4_int++) {
             var3[var4_int] = ci.field_b[vg.a(255, (int) var2[var4_int])];
         }
@@ -265,7 +265,7 @@ final class eb {
               }
             }
             ne.field_a.field_j = param0[param2];
-            ne.field_a.field_h = param1;
+            ne.field_a.field_h = 1;
             var5_int = 255 & param3;
             var6 = -1;
             var7 = -1;
@@ -314,7 +314,7 @@ final class eb {
               break L3;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw ld.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + 1 + 44 + param2 + 44 + param3 + 41);
         }
         return stackIn_12_0;
     }
@@ -375,7 +375,7 @@ final class eb {
               if (param3 == 256) {
                 break L1;
               } else {
-                boolean discarded$2 = this.a(20, (byte[][]) null, (byte) -51);
+                boolean discarded$4 = this.a(20, (byte[][]) null, (byte) -51);
                 break L1;
               }
             }
@@ -389,7 +389,8 @@ final class eb {
                 var6 = 0;
                 L3: while (true) {
                   if (param0.length <= var6) {
-                    if (!this.a(param0, 28)) {
+                    int discarded$5 = 28;
+                    if (!this.a(param0)) {
                       stackOut_7_0 = 256;
                       stackIn_8_0 = stackOut_7_0;
                       continue L2;
@@ -417,7 +418,8 @@ final class eb {
                     }
                     var7 = stackIn_13_0[stackIn_13_1];
                     var5_int = 255 & var7[rh.a(param3 + 14561, param1, var7.length)];
-                    param0[var6] = el.a((byte)var5_int, (byte) 26);
+                    int discarded$6 = 26;
+                    param0[var6] = el.a((byte)var5_int);
                     var6++;
                     continue L3;
                   }
@@ -587,14 +589,14 @@ final class eb {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_a = null;
         field_f = null;
         field_b = null;
         field_d = null;
     }
 
-    private final boolean a(char[] param0, int param1) {
+    private final boolean a(char[] param0) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -832,7 +834,7 @@ final class eb {
         ((eb) this).field_g = param0;
     }
 
-    final static int d(byte param0) {
+    final static int d() {
         return ph.field_b;
     }
 

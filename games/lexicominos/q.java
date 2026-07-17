@@ -14,16 +14,17 @@ abstract class q {
     static aj field_d;
 
     final static void a(byte param0, boolean param1) {
-        jd.a(param1, false, 37);
+        int discarded$0 = 37;
+        jd.a(param1, false);
         int var2 = -28 / ((-10 - param0) / 47);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_a = null;
     }
 
-    final static String a(long param0, byte param1) {
+    final static String a(long param0) {
         ad.field_b.setTime(new Date(param0));
         int var3 = ad.field_b.get(7);
         int var4 = ad.field_b.get(5);

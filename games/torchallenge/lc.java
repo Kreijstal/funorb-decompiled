@@ -24,13 +24,9 @@ final class lc extends da {
         return param1 < 2048 ? k.field_d[-param1 + 2048] : -k.field_d[-2048 + param1];
     }
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         ll.field_i = true;
         ji.field_y = 15000L + ol.a(256);
-        if (param0 != 1) {
-            Object var2 = null;
-            lc.a(20, (uf) null, -87, (byte[]) null, -9, (java.math.BigInteger) null, (java.math.BigInteger) null);
-        }
         return gj.field_c == 11 ? true : false;
     }
 
@@ -110,7 +106,7 @@ final class lc extends da {
         try {
           L0: {
             L1: {
-              var7_int = dh.a(param2 + 8, param4);
+              var7_int = dh.a(8, param4);
               if (af.field_d == null) {
                 af.field_d = new java.security.SecureRandom();
                 break L1;
@@ -144,7 +140,7 @@ final class lc extends da {
                 L5: {
                   L6: {
                     nh.field_eb.field_q = 0;
-                    nh.field_eb.a(param4, param0, param3, -16384);
+                    nh.field_eb.a(param4, 0, param3, -16384);
                     nh.field_eb.c(var7_int, (byte) 36);
                     nh.field_eb.a(var15, (byte) -124);
                     if (null == bi.field_d) {
@@ -168,7 +164,7 @@ final class lc extends da {
                   if (var11 >= 4) {
                     bi.field_d.a(param4, (byte) 106);
                     bi.field_d.a(param6, true, param5);
-                    param1.a(bi.field_d.field_q, param2, bi.field_d.field_m, param2 ^ -16384);
+                    param1.a(bi.field_d.field_q, 0, bi.field_d.field_m, -16384);
                     param1.a(nh.field_eb.field_q, 0, nh.field_eb.field_m, -16384);
                     break L0;
                   } else {
@@ -189,7 +185,7 @@ final class lc extends da {
           L8: {
             var7 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var7;
-            stackOut_20_1 = new StringBuilder().append("lc.D(").append(param0).append(44);
+            stackOut_20_1 = new StringBuilder().append("lc.D(").append(0).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -214,7 +210,7 @@ final class lc extends da {
           }
           L9: {
             stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(44).append(param2).append(44);
+            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(44).append(0).append(44);
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -347,7 +343,7 @@ final class lc extends da {
         return var2;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_m = null;
         field_n = null;
         field_p = null;

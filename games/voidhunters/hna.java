@@ -212,7 +212,7 @@ final class hna extends pca implements ntb {
         }
     }
 
-    final static void a(pe param0, lta param1, boolean param2, byte param3) {
+    final static void a(pe param0, lta param1, boolean param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;

@@ -42,24 +42,16 @@ final class st {
               var5 = 0;
               L1: while (true) {
                 if (var3 <= var5) {
-                  L2: {
-                    if (param0) {
-                      break L2;
-                    } else {
-                      st.a((byte) -3);
-                      break L2;
-                    }
-                  }
                   stackOut_15_0 = (me[]) var4;
                   stackIn_16_0 = stackOut_15_0;
                   break L0;
                 } else {
-                  L3: {
+                  L2: {
                     if (!tn.a(101, param1)) {
                       var6 = param1.b((byte) 83, eo.a(112, var5 - 1));
                       var4[var5] = var4[var6];
                       var5++;
-                      break L3;
+                      break L2;
                     } else {
                       var6_ref_me = new me();
                       int discarded$6 = param1.b((byte) 110, 24);
@@ -71,7 +63,7 @@ final class st {
                       int discarded$11 = param1.b((byte) 103, 12);
                       var4[var5] = var6_ref_me;
                       var5++;
-                      break L3;
+                      break L2;
                     }
                   }
                   var5++;
@@ -84,10 +76,10 @@ final class st {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var2 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var2;
-            stackOut_17_1 = new StringBuilder().append("st.C(").append(param0).append(44);
+            stackOut_17_1 = new StringBuilder().append("st.C(").append(1).append(44);
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -99,7 +91,7 @@ final class st {
               stackIn_20_0 = stackOut_19_0;
               stackIn_20_1 = stackOut_19_1;
               stackIn_20_2 = stackOut_19_2;
-              break L4;
+              break L3;
             } else {
               stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
               stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
@@ -107,7 +99,7 @@ final class st {
               stackIn_20_0 = stackOut_18_0;
               stackIn_20_1 = stackOut_18_1;
               stackIn_20_2 = stackOut_18_2;
-              break L4;
+              break L3;
             }
           }
           throw pn.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
@@ -115,7 +107,7 @@ final class st {
         return stackIn_16_0;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_a = null;
         field_b = null;
     }
@@ -124,47 +116,34 @@ final class st {
         throw new IllegalStateException();
     }
 
-    final static String a(boolean param0, boolean param1, boolean param2, boolean param3) {
+    final static String a(boolean param0, boolean param1, boolean param2) {
         int var4 = 0;
         var4 = 0;
-        if (!param0) {
+        if (param0) {
           L0: {
-            if (param2) {
-              var4 += 2;
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          if (!param1) {
-            field_a = null;
-            return wd.field_G[var4];
-          } else {
-            return wd.field_G[var4];
-          }
-        } else {
-          L1: {
             var4 += 4;
             if (param2) {
               var4 += 2;
+              break L0;
+            } else {
+              break L0;
+            }
+          }
+          return wd.field_G[var4];
+        } else {
+          L1: {
+            if (param2) {
+              var4 += 2;
               break L1;
             } else {
               break L1;
             }
           }
-          if (param1) {
-            return wd.field_G[var4];
-          } else {
-            field_a = null;
-            return wd.field_G[var4];
-          }
+          return wd.field_G[var4];
         }
     }
 
-    final static void a(byte param0) {
-        if (param0 != 87) {
-            field_b = null;
-        }
+    final static void a() {
     }
 
     static {

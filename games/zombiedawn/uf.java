@@ -81,13 +81,7 @@ final class uf extends le {
         }
     }
 
-    public static void a(int param0) {
-        if (param0 > -17) {
-            field_n = null;
-            field_n = null;
-            field_o = null;
-            return;
-        }
+    public static void a() {
         field_n = null;
         field_o = null;
     }

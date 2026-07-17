@@ -3,45 +3,10 @@
  */
 final class bdb extends rqa {
     final static boolean a(int param0, boolean param1, int param2) {
-        Object var4 = null;
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        if (param1) {
-          L0: {
-            var4 = null;
-            bdb.a(-42, -9, 37, 119, 111, 16, 52, (int[]) null, 30, true);
-            if ((param2 & 2048) == 0) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
-              break L0;
-            } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if ((param2 & 2048) == 0) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              break L1;
-            } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
-        }
+        return (param2 & 2048) != 0;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int[] param7, int param8, boolean param9) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int[] param7, int param8) {
         int[] var10 = null;
         RuntimeException var10_ref = null;
         int var11 = 0;

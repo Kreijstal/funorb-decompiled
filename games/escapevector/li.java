@@ -67,7 +67,7 @@ final class li {
         }
     }
 
-    private final boolean[] a(int[] param0, int param1, int param2, byte param3) {
+    private final boolean[] a(int[] param0, int param1, int param2) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -153,7 +153,8 @@ final class li {
                                     } else {
                                       var17 = var16 + var11;
                                       if (var17 < ((li) this).field_B) {
-                                        ((li) this).field_s[var15] = df.a(((li) this).field_s[var15], this.c(var14, var17, -2));
+                                        int discarded$2 = -2;
+                                        ((li) this).field_s[var15] = df.a(((li) this).field_s[var15], this.c(var14, var17));
                                         var16++;
                                         continue L6;
                                       } else {
@@ -177,7 +178,8 @@ final class li {
                   }
                 }
               } else {
-                stackOut_8_0 = this.g(0);
+                int discarded$3 = 0;
+                stackOut_8_0 = this.g();
                 stackIn_9_0 = stackOut_8_0;
                 return stackIn_9_0;
               }
@@ -315,20 +317,18 @@ final class li {
         int var4 = var3.field_r - -var3.field_x;
         int var5 = var4 / 2;
         int var6 = (-var5 + var4) / 2;
-        if (param1 != -5425) {
-            this.a(85, false, 28, 3);
-        }
         ed var7 = new ed(var4, var4);
         var7.g();
         em.a(var6, var6, var5, var5, param0);
-        md.field_D.a(param1 + 5535);
+        md.field_D.a(110);
         return var7;
     }
 
     private final void a(boolean param0, int param1, int param2, int param3) {
         this.f(98, param1, param2);
         this.a(false, param1, param2);
-        this.d(param1, param2, 109);
+        int discarded$0 = 109;
+        this.d(param1, param2);
         this.b(89, param1, param2);
         if (param3 != 4) {
             this.a(-104, 44, -51, -65, 36, -11, -3);
@@ -352,9 +352,6 @@ final class li {
         int var15 = 0;
         var15 = var15 | var6 & var12 << var7;
         var15 = var15 | var13 << var9 & var8;
-        if (param1) {
-            return;
-        }
         var15 = var15 | var14 << var11 & var10;
         em.field_i[param3] = var15;
     }
@@ -367,7 +364,7 @@ final class li {
         field_r = null;
     }
 
-    private final void e(int param0) {
+    private final void e() {
         int var2 = (((li) this).field_f - ((li) this).field_j.a(true)) / 2;
         int var3 = (((li) this).field_f - ((li) this).field_v * ((li) this).field_n.field_Mb) / 2;
         int var4 = ((li) this).field_n.field_Mb * ((li) this).field_v;
@@ -397,7 +394,8 @@ final class li {
             return;
         }
         int var5 = ((li) this).field_n.field_Mb * ((li) this).field_v;
-        int var6 = this.f(56);
+        int discarded$0 = 56;
+        int var6 = this.f();
         int var7 = var6 - var5;
         if (param3 > var6) {
             this.a(param1, param0, -var6 + param2, 4);
@@ -408,7 +406,7 @@ final class li {
         }
     }
 
-    private final tc[] a(cn param0, int param1) {
+    private final tc[] a(cn param0) {
         int var3_int = 0;
         RuntimeException var3 = null;
         tc[] var4 = null;
@@ -503,7 +501,7 @@ final class li {
         return var11;
     }
 
-    private final int d(byte param0) {
+    private final int d() {
         int var2 = 1;
         int var3 = ((li) this).field_a / ((li) this).field_n.field_Mb;
         int var4 = ((li) this).field_K / ((li) this).field_n.field_D;
@@ -514,7 +512,7 @@ final class li {
         return var2;
     }
 
-    private final int[] a(int[] param0, int param1, boolean param2) {
+    private final int[] a(int[] param0, int param1) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -613,7 +611,7 @@ final class li {
     private final int a(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var7 = this.a(param4, (byte) -119, param5, param0);
         int var8 = this.a(param3, (byte) -119, param5, param0);
-        int var9 = -param1 + param2;
+        int var9 = -param1 + 256;
         int var10 = param1;
         int var11 = var7 * var9 + var8 * var10 >> 8;
         return var11;
@@ -933,9 +931,6 @@ final class li {
         fk.a(var6 - -var8, ((li) this).field_F, 73, 0, ((li) this).field_g, -var8 + param4, param0 - var8, 0, var7 - -var8);
         ih var9 = fh.field_g;
         int var10 = var9.field_x + var9.field_r;
-        if (param1 != 104) {
-            ((li) this).field_E = false;
-        }
         int var11 = -var8 + (param4 - (var10 - -var9.field_x));
         int var12 = 15658734;
         String var13 = null == ((li) this).field_D ? sj.field_k : af.field_b;
@@ -955,7 +950,7 @@ final class li {
         ((li) this).field_j.a(var6, 3);
     }
 
-    private final boolean c(int param0, int param1, int param2) {
+    private final boolean c(int param0, int param1) {
         return 0 != (1 << param1 & param0);
     }
 
@@ -978,12 +973,9 @@ final class li {
             }
             var6 = var4.b((byte) 70);
         }
-        if (param0 < 40) {
-            ((li) this).field_e = null;
-        }
     }
 
-    private final void d(int param0, int param1, int param2) {
+    private final void d(int param0, int param1) {
         sa var5 = null;
         int var6 = 0;
         int var7 = EscapeVector.field_A;
@@ -1016,17 +1008,14 @@ final class li {
         this.a((int[]) null, var15, var12 + param0, param3, (boolean[]) null, param2, (byte) -72, var16, var13 - -param4);
     }
 
-    private final void c(byte param0) {
+    private final void c() {
         ih var2 = fh.field_g;
         int var3 = 16777215;
         int var4 = 16777215;
-        if (param0 != -112) {
-            ((li) this).field_b = 95;
-        }
         ((li) this).field_j.a(var4, var2, var3, 125);
     }
 
-    private final String[] b(cn param0, int param1) {
+    private final String[] b(cn param0) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String[] var4 = null;
@@ -1107,7 +1096,7 @@ final class li {
         return stackIn_5_0;
     }
 
-    private final void b(int param0) {
+    private final void b() {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -1143,9 +1132,6 @@ final class li {
         if (!(var4 == 0)) {
             var3 = var3 - param1;
         }
-        if (param0 != -29) {
-            ((li) this).field_e = null;
-        }
         if (var4 != 0) {
             return var3 * 255 / param1;
         }
@@ -1159,7 +1145,7 @@ final class li {
         ((li) this).field_I = !((li) this).field_I ? true : false;
     }
 
-    private final boolean[] g(int param0) {
+    private final boolean[] g() {
         int var2 = 0;
         int var3 = EscapeVector.field_A;
         for (var2 = 0; ((li) this).field_s.length > var2; var2++) {
@@ -1222,7 +1208,7 @@ final class li {
         }
     }
 
-    private final int f(int param0) {
+    private final int f() {
         int var2 = ((li) this).field_n.field_Mb * ((li) this).field_v;
         int var3 = var2 / 2;
         int var4 = ((li) this).field_n.field_t >> 16;
@@ -1233,9 +1219,6 @@ final class li {
 
     private final void e(int param0, int param1, int param2) {
         int var4 = ((li) this).field_n.field_H >> 16;
-        if (param0 > -117) {
-            return;
-        }
         int var5 = ((li) this).field_n.field_p >> 16;
         this.a(param2, var4, ((li) this).field_y, 256, param1, var5, 4);
     }
@@ -1243,9 +1226,6 @@ final class li {
     private final void a(int param0, int param1, int param2) {
         int var4 = ((li) this).field_n.field_Mb * ((li) this).field_v;
         int var5 = ((li) this).field_n.field_D * ((li) this).field_v;
-        if (param1 != -32279) {
-            ed discarded$0 = this.a(91, -67);
-        }
         int var6 = (((li) this).field_f - var4) / 2 - -param0;
         int var7 = var4 + var6;
         int var8 = (((li) this).field_H - var5) / 2 - -param2;
@@ -1257,9 +1237,6 @@ final class li {
     }
 
     private final int a(int param0, byte param1, int param2, int param3) {
-        if (param1 != -119) {
-            ed discarded$0 = this.a(118, -21);
-        }
         return (param3 & param0) >> param2;
     }
 
@@ -1288,7 +1265,7 @@ final class li {
         var4 = EscapeVector.field_A;
         try {
           L0: {
-            var3_int = param0;
+            var3_int = 0;
             L1: while (true) {
               if (param1.length <= var3_int) {
                 stackOut_4_0 = (boolean[]) param1;
@@ -1306,7 +1283,7 @@ final class li {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var3;
-            stackOut_6_1 = new StringBuilder().append("li.Q(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("li.Q(").append(0).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -1335,10 +1312,6 @@ final class li {
     }
 
     private final void a(boolean param0, int param1, int param2) {
-        if (param0) {
-            Object var5 = null;
-            boolean[] discarded$0 = this.a(122, (boolean[]) null);
-        }
         if (null == ((li) this).field_D) {
             return;
         }
@@ -1396,9 +1369,13 @@ final class li {
               }
             }
           }
-          ((li) this).field_j = new wd(var2, this.a(var4, 0), this.b(var3, 11125));
-          this.c((byte) -112);
-          this.e(126);
+          int discarded$4 = 0;
+          int discarded$5 = 11125;
+          ((li) this).field_j = new wd(var2, this.a(var4), this.b(var3));
+          int discarded$6 = -112;
+          this.c();
+          int discarded$7 = 126;
+          this.e();
           return;
         } else {
           return;
@@ -1409,9 +1386,6 @@ final class li {
         int[] var8 = null;
         int[] var9 = null;
         boolean[] var10 = null;
-        if (param1 <= 60) {
-            return;
-        }
         int[][] var11 = ((li) this).field_n.field_V;
         int[][] var6 = var11;
         int var7 = param4 * ((li) this).field_n.field_Mb - -param0;
@@ -1423,8 +1397,10 @@ final class li {
                 return;
             }
             var8 = var11[var7];
-            var9 = this.a(var8, param4, true);
-            var10 = this.a(var8, ((li) this).field_v, ((li) this).field_v, (byte) 109);
+            int discarded$0 = 1;
+            var9 = this.a(var8, param4);
+            int discarded$1 = 109;
+            var10 = this.a(var8, ((li) this).field_v, ((li) this).field_v);
             this.a(var9, ((li) this).field_v, param3, 256, var10, ((li) this).field_F, (byte) -99, ((li) this).field_v, param2);
             return;
         }
@@ -1526,8 +1502,10 @@ final class li {
             ((li) this).field_E = stackIn_4_1 != 0;
             ((li) this).field_n = param0;
             this.c(0);
-            ((li) this).field_v = this.d((byte) -105);
-            this.b(100);
+            int discarded$2 = -105;
+            ((li) this).field_v = this.d();
+            int discarded$3 = 100;
+            this.b();
             this.a(true);
             break L0;
           }

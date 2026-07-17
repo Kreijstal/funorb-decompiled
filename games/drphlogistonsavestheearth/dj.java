@@ -91,7 +91,7 @@ final class dj extends pj implements ke {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void a() {
         RuntimeException var2 = null;
         int var3 = 0;
         nl var4 = null;
@@ -100,38 +100,30 @@ final class dj extends pj implements ke {
         var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
-            L1: {
-              var4 = (nl) (Object) gf.field_A.h(-11151);
-              if (!param0) {
-                break L1;
-              } else {
-                field_N = -49;
-                break L1;
-              }
-            }
-            L2: while (true) {
+            var4 = (nl) (Object) gf.field_A.h(-11151);
+            L1: while (true) {
               if (var4 == null) {
                 var5 = (h) (Object) eg.field_c.h(-11151);
-                L3: while (true) {
+                L2: while (true) {
                   if (var5 == null) {
                     break L0;
                   } else {
                     bj.a(5, -81, var5);
                     var5 = (h) (Object) eg.field_c.e(0);
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
                 fc.a(-105, var4, 5);
                 var4 = (nl) (Object) gf.field_A.e(0);
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "dj.F(" + param0 + 44 + 5 + 41);
+          throw ie.a((Throwable) (Object) var2, "dj.F(" + 0 + 44 + 5 + 41);
         }
     }
 

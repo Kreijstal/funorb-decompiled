@@ -16,7 +16,7 @@ final class uh extends vg {
     static String field_i;
     private int[] field_m;
 
-    public static void d(int param0) {
+    public static void d() {
         field_h = null;
         field_k = null;
         field_i = null;

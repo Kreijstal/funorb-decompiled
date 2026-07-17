@@ -20,7 +20,7 @@ final class upa extends vg {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void a(boolean param0) {
         jea stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         jea stackIn_5_0 = null;
@@ -213,7 +213,7 @@ final class upa extends vg {
         int stackOut_23_2 = 0;
         tga.a(-21953, -640 + bea.field_g >> 1, 640 + bea.field_g >> 1, 0, bea.field_a);
         if (mla.field_a <= 0) {
-          if (gt.field_a <= param1) {
+          if (gt.field_a <= 0) {
             if (0 < fp.field_e) {
               L0: {
                 if (null != fta.field_b) {
@@ -226,7 +226,7 @@ final class upa extends vg {
               L1: {
                 L2: {
                   stackOut_57_0 = nra.field_c;
-                  stackOut_57_1 = param1 + 118;
+                  stackOut_57_1 = 118;
                   stackIn_60_0 = stackOut_57_0;
                   stackIn_60_1 = stackOut_57_1;
                   stackIn_58_0 = stackOut_57_0;
@@ -319,7 +319,7 @@ final class upa extends vg {
             L6: {
               L7: {
                 stackOut_43_0 = nra.field_c;
-                stackOut_43_1 = param1 + 118;
+                stackOut_43_1 = 118;
                 stackIn_46_0 = stackOut_43_0;
                 stackIn_46_1 = stackOut_43_1;
                 stackIn_44_0 = stackOut_43_0;
@@ -409,7 +409,7 @@ final class upa extends vg {
           L11: {
             L12: {
               stackOut_3_0 = nra.field_a;
-              stackOut_3_1 = param1 + 80;
+              stackOut_3_1 = 80;
               stackIn_6_0 = stackOut_3_0;
               stackIn_6_1 = stackOut_3_1;
               stackIn_4_0 = stackOut_3_0;
@@ -484,7 +484,7 @@ final class upa extends vg {
             break L13;
           }
           ((jea) (Object) stackIn_11_0).b(stackIn_11_1, stackIn_11_2 != 0);
-          if (gt.field_a > param1) {
+          if (gt.field_a > 0) {
             L15: {
               if (null != fta.field_b) {
                 fta.field_b.d(nra.field_c.field_qb, 0);
@@ -496,7 +496,7 @@ final class upa extends vg {
             L16: {
               L17: {
                 stackOut_29_0 = nra.field_c;
-                stackOut_29_1 = param1 + 118;
+                stackOut_29_1 = 118;
                 stackIn_32_0 = stackOut_29_0;
                 stackIn_32_1 = stackOut_29_1;
                 stackIn_30_0 = stackOut_29_0;
@@ -589,7 +589,7 @@ final class upa extends vg {
                 L22: {
                   L23: {
                     stackOut_16_0 = nra.field_c;
-                    stackOut_16_1 = param1 + 118;
+                    stackOut_16_1 = 118;
                     stackIn_19_0 = stackOut_16_0;
                     stackIn_19_1 = stackOut_16_1;
                     stackIn_17_0 = stackOut_16_0;
@@ -674,9 +674,6 @@ final class upa extends vg {
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        if (param1 != 0) {
-            return false;
-        }
         return hh.a(param2, (byte) 5, param0) & wu.a(-17, param0, param2);
     }
 

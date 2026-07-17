@@ -12,7 +12,7 @@ final class hg extends lh {
     static sf field_k;
     static String[] field_p;
 
-    final static boolean a(String param0, int param1) {
+    final static boolean a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -110,7 +110,7 @@ final class hg extends lh {
         se.field_b = se.field_b + ag.field_f;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_i = null;
         field_p = null;
         field_k = null;
@@ -136,9 +136,6 @@ final class hg extends lh {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         kh.field_g = param4;
-        if (param0 != 0) {
-            hg.a(127);
-        }
         hb.field_t = param1;
         cm.field_f = param3;
         ta.field_y = param2;

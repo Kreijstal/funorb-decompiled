@@ -15,7 +15,7 @@ final class ao {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_h = null;
         field_b = null;
         field_a = null;
@@ -91,14 +91,6 @@ final class ao {
                   var13 = 0;
                   L2: while (true) {
                     if (var3_int <= var11) {
-                      L3: {
-                        if (param1 == -837539512) {
-                          break L3;
-                        } else {
-                          field_c = -59;
-                          break L3;
-                        }
-                      }
                       stackOut_16_0 = (int[]) var4;
                       stackIn_17_0 = stackOut_16_0;
                       break L0;
@@ -108,16 +100,16 @@ final class ao {
                       var4[var11] = (var6 * var15 / var14 - -(var9 * var13 / var14) << 8) + ((var8 * var13 / var14 + var15 * var5 / var14 << 16) + var7 * var15 / var14) - -(var13 * var10 / var14);
                       var13++;
                       if (var13 >= var14) {
-                        L4: {
+                        L3: {
                           var13 = 0;
                           var5 = var8;
                           var7 = var10;
                           var12++;
                           var6 = var9;
                           if (param0.length <= 1 + var12) {
-                            break L4;
+                            break L3;
                           } else {
-                            break L4;
+                            break L3;
                           }
                         }
                         var11++;
@@ -140,7 +132,7 @@ final class ao {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var3 = decompiledCaughtException;
             stackOut_18_0 = (RuntimeException) var3;
             stackOut_18_1 = new StringBuilder().append("ao.A(");
@@ -155,7 +147,7 @@ final class ao {
               stackIn_21_0 = stackOut_20_0;
               stackIn_21_1 = stackOut_20_1;
               stackIn_21_2 = stackOut_20_2;
-              break L5;
+              break L4;
             } else {
               stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
               stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
@@ -163,12 +155,12 @@ final class ao {
               stackIn_21_0 = stackOut_19_0;
               stackIn_21_1 = stackOut_19_1;
               stackIn_21_2 = stackOut_19_2;
-              break L5;
+              break L4;
             }
           }
-          L6: {
+          L5: {
             stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(44).append(param1).append(44);
+            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(44).append(-837539512).append(44);
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -180,7 +172,7 @@ final class ao {
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
-              break L6;
+              break L5;
             } else {
               stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
               stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
@@ -188,7 +180,7 @@ final class ao {
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
               stackIn_24_2 = stackOut_22_2;
-              break L6;
+              break L5;
             }
           }
           throw fa.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);

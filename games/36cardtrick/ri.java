@@ -36,7 +36,7 @@ final class ri {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         kc var1 = null;
         kc var2 = null;
         int var3 = 0;

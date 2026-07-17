@@ -18,28 +18,31 @@ abstract class fe {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_10_0 = 0;
+        int stackIn_8_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
+        int stackOut_7_0 = 0;
         var4 = stellarshard.field_B;
         try {
           L0: {
             L1: {
-              if (param0 <= -100) {
-                break L1;
-              } else {
-                field_f = null;
-                break L1;
-              }
-            }
-            L2: {
               if (param2 > param1) {
                 var3_int = param1;
                 param1 = param2;
                 param2 = var3_int;
+                L2: while (true) {
+                  if (0 == param2) {
+                    break L1;
+                  } else {
+                    var3_int = param1 % param2;
+                    param1 = param2;
+                    param2 = var3_int;
+                    continue L2;
+                  }
+                }
+              } else {
                 L3: while (true) {
                   if (0 == param2) {
-                    break L2;
+                    break L1;
                   } else {
                     var3_int = param1 % param2;
                     param1 = param2;
@@ -47,32 +50,21 @@ abstract class fe {
                     continue L3;
                   }
                 }
-              } else {
-                L4: while (true) {
-                  if (0 == param2) {
-                    break L2;
-                  } else {
-                    var3_int = param1 % param2;
-                    param1 = param2;
-                    param2 = var3_int;
-                    continue L4;
-                  }
-                }
               }
             }
-            stackOut_9_0 = param1;
-            stackIn_10_0 = stackOut_9_0;
+            stackOut_7_0 = param1;
+            stackIn_8_0 = stackOut_7_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var3, "fe.E(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw ma.a((Throwable) (Object) var3, "fe.E(" + -102 + 44 + param1 + 44 + param2 + 41);
         }
-        return stackIn_10_0;
+        return stackIn_8_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_g = null;
         field_c = null;
@@ -80,7 +72,7 @@ abstract class fe {
         field_d = null;
     }
 
-    final static void a(ka param0, int param1) {
+    final static void a(ka param0) {
         int var2_int = 0;
         try {
             ci.field_b = param0.c((byte) 86) << 5;

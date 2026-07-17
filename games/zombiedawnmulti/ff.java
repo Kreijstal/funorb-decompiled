@@ -13,17 +13,20 @@ class ff extends qa {
     final static void f(int param0) {
         int var1 = 0;
         int var2 = 0;
-        var1 = bl.c(-42);
+        int discarded$3 = -42;
+        var1 = bl.c();
         if (param0 != -4604) {
           field_t = null;
           var2 = ii.b((byte) -126);
           qf.field_c.a(-ic.field_g + eb.field_M, ch.field_i - e.field_a, (e.field_a << 1) + var1, var2 - -(ic.field_g << 1), 12018);
-          up.b(-125);
+          int discarded$4 = -125;
+          up.b();
           return;
         } else {
           var2 = ii.b((byte) -126);
           qf.field_c.a(-ic.field_g + eb.field_M, ch.field_i - e.field_a, (e.field_a << 1) + var1, var2 - -(ic.field_g << 1), 12018);
-          up.b(-125);
+          int discarded$5 = -125;
+          up.b();
           return;
         }
     }
@@ -81,7 +84,7 @@ class ff extends qa {
     protected ff() {
     }
 
-    final static void a(byte param0, int param1) {
+    final static void a() {
         RuntimeException var2 = null;
         int var3 = 0;
         vg var4 = null;
@@ -89,33 +92,25 @@ class ff extends qa {
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
-            L1: {
-              if (param0 == 126) {
-                break L1;
-              } else {
-                ff.a(-116, -3);
-                break L1;
-              }
-            }
-            var4 = (vg) (Object) ag.field_i.c(param0 + -74);
-            L2: while (true) {
+            var4 = (vg) (Object) ag.field_i.c(52);
+            L1: while (true) {
               if (var4 == null) {
                 break L0;
               } else {
                 vi.a(7, var4, (byte) -123);
                 var4 = (vg) (Object) ag.field_i.b(6);
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var2, "ff.IA(" + param0 + 44 + 7 + 41);
+          throw fa.a((Throwable) (Object) var2, "ff.IA(" + 126 + 44 + 7 + 41);
         }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_q = null;
         field_u = null;
         field_t = null;

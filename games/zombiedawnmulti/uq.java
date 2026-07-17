@@ -127,7 +127,7 @@ final class uq {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_f = null;
         field_e = null;
@@ -136,7 +136,7 @@ final class uq {
         field_d = null;
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void a(java.applet.Applet param0) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -159,13 +159,9 @@ final class uq {
             String stackOut_7_2 = null;
             try {
               try {
-                if (param1 == 3) {
-                  var2 = new java.net.URL(param0.getCodeBase(), "toserverlist.ws");
-                  param0.getAppletContext().showDocument(gf.a(param0, true, var2), "_top");
-                  return;
-                } else {
-                  return;
-                }
+                var2 = new java.net.URL(param0.getCodeBase(), "toserverlist.ws");
+                param0.getAppletContext().showDocument(gf.a(param0, true, var2), "_top");
+                return;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -200,7 +196,7 @@ final class uq {
                   break L0;
                 }
               }
-              throw fa.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 41);
+              throw fa.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 3 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

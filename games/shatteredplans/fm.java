@@ -11,7 +11,7 @@ final class fm {
     private byte[] field_h;
     private int[] field_g;
 
-    final static void a(boolean param0, int param1) {
+    final static void a(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         L0: {
@@ -23,7 +23,9 @@ final class fm {
                 break L1;
               } else {
                 bj.field_K = bh.field_p.a(0);
-                vr.a(-15469, 2);
+                int discarded$29 = 2;
+                int discarded$30 = -15469;
+                vr.a();
                 break L1;
               }
             }
@@ -31,12 +33,14 @@ final class fm {
               var2 = 3;
               break L0;
             } else {
-              re.a((java.awt.Canvas) (Object) bj.field_K, false);
+              int discarded$31 = 0;
+              re.a((java.awt.Canvas) (Object) bj.field_K);
               var2 = 2;
               break L0;
             }
           } else {
-            if (w.d(true)) {
+            int discarded$32 = 1;
+            if (w.d()) {
               var2 = 0;
               break L0;
             } else {
@@ -532,7 +536,7 @@ final class fm {
         return stackIn_26_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_e = null;
         field_d = null;

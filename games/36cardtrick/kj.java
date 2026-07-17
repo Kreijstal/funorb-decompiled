@@ -83,122 +83,114 @@ class kj extends cj {
           }
         }
         L1: {
-          if (param0 == 104) {
+          var4 = 1;
+          var5 = 0;
+          if (param1 != 3) {
             break L1;
           } else {
-            field_q = null;
+            var4 = -1;
             break L1;
           }
         }
         L2: {
-          var4 = 1;
-          var5 = 0;
-          if (param1 != 3) {
+          if (param1 != 1) {
             break L2;
           } else {
-            var4 = -1;
+            var5 = 1;
             break L2;
           }
         }
         L3: {
-          if (param1 != 1) {
+          if (4 != param1) {
             break L3;
           } else {
+            var4 = 1;
             var5 = 1;
             break L3;
           }
         }
         L4: {
-          if (4 != param1) {
+          if (param1 == 5) {
+            var4 = -1;
+            var5 = 1;
             break L4;
           } else {
-            var4 = 1;
-            var5 = 1;
             break L4;
           }
         }
         L5: {
-          if (param1 == 5) {
-            var4 = -1;
-            var5 = 1;
+          if (param1 == 6) {
+            var5 = -1;
+            var4 = 1;
             break L5;
           } else {
             break L5;
           }
         }
         L6: {
-          if (param1 == 6) {
-            var5 = -1;
-            var4 = 1;
-            break L6;
-          } else {
-            break L6;
-          }
-        }
-        L7: {
-          L8: {
+          L7: {
             if (param1 == 7) {
-              break L8;
+              break L7;
             } else {
               if (param1 == 8) {
-                break L8;
-              } else {
                 break L7;
+              } else {
+                break L6;
               }
             }
           }
           var5 = -1;
           var4 = -1;
-          break L7;
+          break L6;
         }
-        L9: {
+        L8: {
           if (11 == param1) {
             var4 = -1;
+            break L8;
+          } else {
+            break L8;
+          }
+        }
+        L9: {
+          if (param1 != 12) {
             break L9;
           } else {
+            var4 = -1;
+            var5 = -1;
             break L9;
           }
         }
         L10: {
-          if (param1 != 12) {
+          if (param1 == 13) {
+            var5 = -1;
+            var4 = 1;
             break L10;
           } else {
-            var4 = -1;
-            var5 = -1;
             break L10;
           }
         }
         L11: {
-          if (param1 == 13) {
-            var5 = -1;
-            var4 = 1;
+          if (param1 == 14) {
+            var4 = -1;
+            var5 = 1;
             break L11;
           } else {
             break L11;
           }
         }
         L12: {
-          if (param1 == 14) {
-            var4 = -1;
-            var5 = 1;
-            break L12;
-          } else {
-            break L12;
-          }
-        }
-        L13: {
           if (param1 == 15) {
             var4 = 1;
             var5 = 1;
-            break L13;
+            break L12;
           } else {
-            break L13;
+            break L12;
           }
         }
         nl.field_c = lf.a(var2 * var4, var5 * var2, true);
     }
 
-    private final void a(kj param0, int param1) {
+    private final void a(kj param0) {
         RuntimeException var3 = null;
         RuntimeException stackIn_97_0 = null;
         StringBuilder stackIn_97_1 = null;
@@ -552,7 +544,7 @@ class kj extends cj {
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_q = null;
         field_z = null;
     }
@@ -611,7 +603,8 @@ class kj extends cj {
           L0: {
             L1: {
               ((kj) this).field_e = param0;
-              this.a(param1, 1);
+              int discarded$2 = 1;
+              this.a(param1);
               if (param6 == null) {
                 break L1;
               } else {

@@ -14,7 +14,7 @@ final class en extends d {
         }
     }
 
-    final static void e(byte param0) {
+    final static void e() {
         RuntimeException var1 = null;
         int var2 = 0;
         og var3 = null;
@@ -52,7 +52,8 @@ final class en extends d {
                 }
               }
               if (var3 == null) {
-                ih.b(true);
+                int discarded$3 = 1;
+                ih.b();
                 return;
               } else {
                 L3: {
@@ -91,7 +92,8 @@ final class en extends d {
                                       var19[1][4 * var14 + 1] = wh.field_y[var11];
                                       var19[1][2 + var14 * 4] = vo.field_d[var11];
                                       var19[1][4 * var14 - -3] = vp.field_F[var11];
-                                      if (bn.a(vl.field_d[var11], -17310)) {
+                                      int discarded$4 = -17310;
+                                      if (bn.a(vl.field_d[var11])) {
                                         if (vp.field_F[var11] + wh.field_y[var11] - -vo.field_d[var11] == 0) {
                                           var6[1][var14] = null;
                                           var14--;
@@ -116,7 +118,8 @@ final class en extends d {
                                   var19[0][var10 * 4 + 1] = wh.field_y[var11];
                                   var19[0][4 * var10 - -2] = vo.field_d[var11];
                                   var19[0][var10 * 4 - -3] = vp.field_F[var11];
-                                  if (bn.a(vl.field_d[var11], -17310)) {
+                                  int discarded$5 = -17310;
+                                  if (bn.a(vl.field_d[var11])) {
                                     if (wh.field_y[var11] + (vo.field_d[var11] + vp.field_F[var11]) != 0) {
                                       break L9;
                                     } else {
@@ -185,7 +188,7 @@ final class en extends d {
         return false;
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_v = null;
     }
 

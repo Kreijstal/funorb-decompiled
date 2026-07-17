@@ -35,7 +35,7 @@ final class oj {
               } else {
                 v.field_d = param2;
                 tj.field_l = true;
-                pj.b(param1 + -6347, param3);
+                pj.b(-6446, param3);
                 break L1;
               }
             }
@@ -48,31 +48,23 @@ final class oj {
               } else {
                 v.field_d = param2;
                 tj.field_l = true;
-                pj.b(param1 + -6347, param3);
+                pj.b(-6446, param3);
                 break L1;
               }
             }
           }
         }
-        L2: {
-          if (param1 == -99) {
-            break L2;
-          } else {
-            oj.a((byte) 15);
-            break L2;
-          }
-        }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
-        int var1 = -5 / ((-50 - param0) / 60);
+        int var1 = 5;
         field_c = null;
         field_b = null;
         field_g = null;
     }
 
-    final static sa a(String param0, byte param1) {
+    final static sa a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;
@@ -127,12 +119,14 @@ final class oj {
                   var5 = 0;
                   L1: while (true) {
                     if (var5 >= var4.length) {
-                      stackOut_18_0 = ib.a(var3[var3.length + -1], false);
+                      int discarded$4 = 0;
+                      stackOut_18_0 = ib.a(var3[var3.length + -1]);
                       stackIn_19_0 = stackOut_18_0;
                       break L0;
                     } else {
                       var6 = var4[var5];
-                      var7 = ie.a(var6, (byte) -55);
+                      int discarded$5 = -55;
+                      var7 = ie.a(var6);
                       if (var7 == null) {
                         var5++;
                         continue L1;

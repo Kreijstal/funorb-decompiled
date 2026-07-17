@@ -458,7 +458,7 @@ final class an extends ql {
         }
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_j = null;
         field_d = null;
         field_l = null;
@@ -470,29 +470,21 @@ final class an extends ql {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_8_0 = 0;
         int stackIn_12_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_11_0 = 0;
-        int stackOut_7_0 = 0;
         var4 = HostileSpawn.field_I ? 1 : 0;
         try {
           L0: {
             var3_int = 1;
             L1: while (true) {
               if (param2 <= 1) {
-                if (param0 >= 97) {
-                  if (param2 == 1) {
-                    stackOut_11_0 = var3_int * param1;
-                    stackIn_12_0 = stackOut_11_0;
-                    break L0;
-                  } else {
-                    return var3_int;
-                  }
+                if (param2 == 1) {
+                  stackOut_11_0 = var3_int * param1;
+                  stackIn_12_0 = stackOut_11_0;
+                  break L0;
                 } else {
-                  stackOut_7_0 = 73;
-                  stackIn_8_0 = stackOut_7_0;
-                  return stackIn_8_0;
+                  return var3_int;
                 }
               } else {
                 L2: {
@@ -512,7 +504,7 @@ final class an extends ql {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var3, "an.B(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw wg.a((Throwable) (Object) var3, "an.B(" + 121 + 44 + param1 + 44 + param2 + 41);
         }
         return stackIn_12_0;
     }

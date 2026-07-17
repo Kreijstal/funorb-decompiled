@@ -47,7 +47,7 @@ final class wd {
     private boolean field_O;
     int field_P;
 
-    final static int a(boolean param0, boolean param1) {
+    final static int a(boolean param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -273,7 +273,8 @@ final class wd {
                       }
                     }
                     L15: while (true) {
-                      if (!nf.e(32722)) {
+                      int discarded$1 = 32722;
+                      if (!nf.e()) {
                         break L13;
                       } else {
                         L16: {
@@ -444,7 +445,7 @@ final class wd {
         this.a((byte) -64);
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_k = null;
         field_D = null;
         field_C = null;

@@ -47,53 +47,36 @@ final class db {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_33_0 = 0;
-        int stackIn_37_0 = 0;
-        int stackOut_32_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        if (param3 == 1661761121) {
-          if (sm.field_d >= param4) {
-            if (param2 >= sm.field_d) {
-              if (ko.field_b >= param1) {
-                if (ko.field_b <= param0) {
-                  var5 = param2 + param4 >> 1;
-                  var6 = param0 + param1 >> 1;
-                  var7 = -param4 + param2 >> 1;
-                  var8 = -param1 + param0 >> 1;
-                  if (var8 < var7) {
-                    L0: {
-                      if (Math.abs(var5 + -sm.field_d) + Math.abs(var6 + -ko.field_b) * var7 / var8 > var7) {
-                        stackOut_32_0 = 0;
-                        stackIn_33_0 = stackOut_32_0;
-                        break L0;
-                      } else {
-                        stackOut_31_0 = 1;
-                        stackIn_33_0 = stackOut_31_0;
-                        break L0;
-                      }
+        int stackIn_13_0 = 0;
+        int stackOut_12_0 = 0;
+        int stackOut_11_0 = 0;
+        if (sm.field_d >= param4) {
+          if (param2 >= sm.field_d) {
+            if (ko.field_b >= param1) {
+              if (ko.field_b <= param0) {
+                var5 = param2 + param4 >> 1;
+                var6 = param0 + param1 >> 1;
+                var7 = -param4 + param2 >> 1;
+                var8 = -param1 + param0 >> 1;
+                if (var8 < var7) {
+                  L0: {
+                    if (Math.abs(var5 + -sm.field_d) + Math.abs(var6 + -ko.field_b) * var7 / var8 > var7) {
+                      stackOut_12_0 = 0;
+                      stackIn_13_0 = stackOut_12_0;
+                      break L0;
+                    } else {
+                      stackOut_11_0 = 1;
+                      stackIn_13_0 = stackOut_11_0;
+                      break L0;
                     }
-                    return stackIn_33_0 != 0;
-                  } else {
-                    L1: {
-                      if (Math.abs(var6 - ko.field_b) - -(Math.abs(var5 - sm.field_d) * var8 / var7) > var8) {
-                        stackOut_36_0 = 0;
-                        stackIn_37_0 = stackOut_36_0;
-                        break L1;
-                      } else {
-                        stackOut_35_0 = 1;
-                        stackIn_37_0 = stackOut_35_0;
-                        break L1;
-                      }
-                    }
-                    return stackIn_37_0 != 0;
                   }
+                  return stackIn_13_0 != 0;
                 } else {
-                  return false;
+                  if (Math.abs(var6 - ko.field_b) - -(Math.abs(var5 - sm.field_d) * var8 / var7) > var8) {
+                    return false;
+                  } else {
+                    return true;
+                  }
                 }
               } else {
                 return false;
@@ -105,47 +88,7 @@ final class db {
             return false;
           }
         } else {
-          field_e = null;
-          if (sm.field_d >= param4) {
-            if (param2 >= sm.field_d) {
-              if (ko.field_b >= param1) {
-                if (ko.field_b <= param0) {
-                  var5 = param2 + param4 >> 1;
-                  var6 = param0 + param1 >> 1;
-                  var7 = -param4 + param2 >> 1;
-                  var8 = -param1 + param0 >> 1;
-                  if (var8 < var7) {
-                    L2: {
-                      if (Math.abs(var5 + -sm.field_d) + Math.abs(var6 + -ko.field_b) * var7 / var8 > var7) {
-                        stackOut_14_0 = 0;
-                        stackIn_15_0 = stackOut_14_0;
-                        break L2;
-                      } else {
-                        stackOut_13_0 = 1;
-                        stackIn_15_0 = stackOut_13_0;
-                        break L2;
-                      }
-                    }
-                    return stackIn_15_0 != 0;
-                  } else {
-                    if (Math.abs(var6 - ko.field_b) - -(Math.abs(var5 - sm.field_d) * var8 / var7) > var8) {
-                      return false;
-                    } else {
-                      return true;
-                    }
-                  }
-                } else {
-                  return false;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return false;
-            }
-          } else {
-            return false;
-          }
+          return false;
         }
     }
 
@@ -181,7 +124,8 @@ final class db {
           if (null != bk.field_a) {
             L0: {
               var6 = (CharSequence) (Object) param0;
-              var2 = (Object) (Object) k.a(var6, false);
+              int discarded$4 = 0;
+              var2 = (Object) (Object) k.a(var6);
               if (var2 != null) {
                 break L0;
               } else {
@@ -202,7 +146,8 @@ final class db {
               if (var3 != null) {
                 L3: {
                   var7 = (CharSequence) (Object) var3.field_Mb;
-                  var4 = k.a(var7, false);
+                  int discarded$5 = 0;
+                  var4 = k.a(var7);
                   if (var4 != null) {
                     break L3;
                   } else {

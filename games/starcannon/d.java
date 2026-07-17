@@ -178,7 +178,8 @@ final class d {
                                                       ((d) this).field_d = ((d) this).field_d - 1;
                                                       ((d) this).field_a = ((d) this).field_a - 1;
                                                       var9 = this;
-                                                      boolean discarded$6 = v.a(new d((d) var9, 14), -4001);
+                                                      int discarded$12 = -4001;
+                                                      boolean discarded$13 = v.a(new d((d) var9, 14));
                                                       ((d) this).field_d = ((d) this).field_d + 1;
                                                       ((d) this).field_a = ((d) this).field_a + 1;
                                                       break L12;
@@ -187,7 +188,8 @@ final class d {
                                                     }
                                                   }
                                                   var10 = this;
-                                                  boolean discarded$7 = v.a(new d((d) var10, 14), -4001);
+                                                  int discarded$14 = -4001;
+                                                  boolean discarded$15 = v.a(new d((d) var10, 14));
                                                   ((d) this).field_d = ((d) this).field_d + 1;
                                                   ((d) this).field_a = ((d) this).field_a + 1;
                                                   break L11;
@@ -195,7 +197,8 @@ final class d {
                                               }
                                               L13: {
                                                 var11 = this;
-                                                boolean discarded$8 = v.a(new d((d) var11, 14), -4001);
+                                                int discarded$16 = -4001;
+                                                boolean discarded$17 = v.a(new d((d) var11, 14));
                                                 if (((d) this).field_i > 1) {
                                                   L14: {
                                                     ((d) this).field_a = ((d) this).field_a + 1;
@@ -206,14 +209,16 @@ final class d {
                                                       ((d) this).field_a = ((d) this).field_a + 1;
                                                       ((d) this).field_d = ((d) this).field_d + 1;
                                                       var12 = this;
-                                                      boolean discarded$9 = v.a(new d((d) var12, 14), -4001);
+                                                      int discarded$18 = -4001;
+                                                      boolean discarded$19 = v.a(new d((d) var12, 14));
                                                       ((d) this).field_a = ((d) this).field_a - 1;
                                                       ((d) this).field_d = ((d) this).field_d - 1;
                                                       break L14;
                                                     }
                                                   }
                                                   var13 = this;
-                                                  boolean discarded$10 = v.a(new d((d) var13, 14), -4001);
+                                                  int discarded$20 = -4001;
+                                                  boolean discarded$21 = v.a(new d((d) var13, 14));
                                                   ((d) this).field_d = ((d) this).field_d - 1;
                                                   ((d) this).field_a = ((d) this).field_a - 1;
                                                   break L13;
@@ -263,7 +268,8 @@ final class d {
                                       } else {
                                         L17: {
                                           var8 = this;
-                                          boolean discarded$11 = v.a(new d((d) var8, 13), -4001);
+                                          int discarded$22 = -4001;
+                                          boolean discarded$23 = v.a(new d((d) var8, 13));
                                           var4 = -16;
                                           var3 = -((d) this).field_d + ((d) this).field_a;
                                           var5 = (int)Math.sqrt((double)(var3 * var3 - -(var4 * var4)));
@@ -784,27 +790,23 @@ final class d {
         RuntimeException var3 = null;
         ij var4 = null;
         ij stackIn_6_0 = null;
-        byte[] stackIn_9_0 = null;
-        byte[] stackIn_11_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         ij stackOut_5_0 = null;
-        byte[] stackOut_10_0 = null;
-        byte[] stackOut_8_0 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         try {
           L0: {
             if (param2 != null) {
@@ -814,17 +816,9 @@ final class d {
                 ((kk) (Object) var4).a(-5361, param2);
                 stackOut_5_0 = (ij) var4;
                 stackIn_6_0 = stackOut_5_0;
-                return (Object) (Object) stackIn_6_0;
+                break L0;
               } else {
-                if (param0) {
-                  stackOut_10_0 = rg.a((byte) 10, param2);
-                  stackIn_11_0 = stackOut_10_0;
-                  break L0;
-                } else {
-                  stackOut_8_0 = (byte[]) param2;
-                  stackIn_9_0 = stackOut_8_0;
-                  return (Object) (Object) stackIn_9_0;
-                }
+                return (Object) (Object) param2;
               }
             } else {
               return null;
@@ -834,36 +828,36 @@ final class d {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var3;
-            stackOut_12_1 = new StringBuilder().append("d.A(").append(param0).append(44).append(param1).append(44);
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackOut_8_0 = (RuntimeException) var3;
+            stackOut_8_1 = new StringBuilder().append("d.A(").append(0).append(44).append(param1).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
             if (param2 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
               break L1;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
               break L1;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw sd.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
         }
-        return (Object) (Object) stackIn_11_0;
+        return (Object) (Object) stackIn_6_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_n = null;
         field_m = null;

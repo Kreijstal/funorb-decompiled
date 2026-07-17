@@ -75,44 +75,36 @@ final class hl extends pg {
                 break L4;
               }
             }
-            L5: {
-              var26 = de.field_l;
-              var25 = var26;
-              var24 = var25;
-              var23 = var24;
-              var10 = var23;
-              if (param3 == 2232) {
-                break L5;
-              } else {
-                field_l = null;
-                break L5;
-              }
-            }
+            var26 = de.field_l;
+            var25 = var26;
+            var24 = var25;
+            var23 = var24;
+            var10 = var23;
             var15 = var6;
-            L6: while (true) {
+            L5: while (true) {
               if (var7 <= var15) {
                 break L0;
               } else {
                 var16 = var8;
-                L7: while (true) {
+                L6: while (true) {
                   if (var9 <= var16) {
                     var15++;
-                    continue L6;
+                    continue L5;
                   } else {
-                    L8: {
+                    L7: {
                       var12 = var16 - param1;
                       var13 = -param0 + var15;
                       var14 = var13 * var13 + var12 * var12;
                       if (var14 < var5_int) {
-                        L9: {
+                        L8: {
                           if (var14 != 0) {
-                            break L9;
+                            break L8;
                           } else {
                             var14 = 1;
-                            break L9;
+                            break L8;
                           }
                         }
-                        L10: {
+                        L9: {
                           var11 = var16 + var15 * de.field_e;
                           var17 = 256 - -(param2 * var14 / var5_int) - param2;
                           var18 = var26[var11];
@@ -121,53 +113,53 @@ final class hl extends pg {
                           var21 = 255 & var18;
                           if (0 < var17) {
                             if (var17 != 256) {
-                              L11: {
+                              L10: {
                                 if (var17 <= var20) {
                                   var20 = -(var17 * (var20 - var17) / (256 - var17)) + var17;
-                                  break L11;
+                                  break L10;
                                 } else {
                                   var20 = var20 + (256 + -var17);
-                                  break L11;
+                                  break L10;
                                 }
                               }
-                              L12: {
+                              L11: {
                                 if (var17 <= var19) {
                                   var19 = var17 - var17 * (var19 - var17) / (256 + -var17);
-                                  break L12;
+                                  break L11;
                                 } else {
                                   var19 = var19 + (256 + -var17);
-                                  break L12;
+                                  break L11;
                                 }
                               }
                               if (var17 > var21) {
                                 var21 = var21 + (256 - var17);
-                                break L10;
+                                break L9;
                               } else {
                                 var21 = var17 + -(var17 * (var21 + -var17) / (-var17 + 256));
-                                break L10;
+                                break L9;
                               }
                             } else {
                               var10[var11] = fj.b(fj.b(var19 << 16, var20 << 8), var21);
                               var16++;
-                              continue L7;
+                              continue L6;
                             }
                           } else {
                             var20 = -var20 + 255;
                             var19 = 255 + -var19;
                             var21 = -var21 + 255;
-                            break L10;
+                            break L9;
                           }
                         }
                         var10[var11] = fj.b(fj.b(var19 << 16, var20 << 8), var21);
                         var16++;
-                        break L8;
+                        break L7;
                       } else {
                         var16++;
-                        break L8;
+                        break L7;
                       }
                     }
                     var16++;
-                    continue L7;
+                    continue L6;
                   }
                 }
               }
@@ -176,11 +168,11 @@ final class hl extends pg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var5, "hl.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw aa.a((Throwable) (Object) var5, "hl.B(" + param0 + 44 + param1 + 44 + param2 + 44 + 2232 + 44 + param4 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_m = null;
         field_h = null;
         field_l = null;

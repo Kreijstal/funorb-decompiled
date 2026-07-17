@@ -12,16 +12,13 @@ final class ab {
     private be field_g;
     static String field_d;
 
-    final static int e(int param0) {
+    final static int e() {
         int var1 = 0;
         if (!(lg.field_W <= var1)) {
             var1 = lg.field_W;
         }
         if (var1 < bf.field_r) {
             var1 = bf.field_r;
-        }
-        if (param0 != -28199) {
-            field_e = -18;
         }
         if (!(tg.field_e <= var1)) {
             var1 = tg.field_e;
@@ -313,7 +310,7 @@ final class ab {
         return stackIn_5_0 != 0;
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_c = null;
         field_a = null;
         field_d = null;
@@ -330,7 +327,7 @@ final class ab {
         return var2;
     }
 
-    final static boolean c(int param0) {
+    final static boolean c() {
         return null != kb.field_i || jh.field_h;
     }
 

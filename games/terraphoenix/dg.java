@@ -16,80 +16,45 @@ final class dg {
         if (le.field_r != null) {
             return le.field_r;
         }
-        dg.b(false);
+        int discarded$0 = 0;
+        dg.b();
         return (java.applet.Applet) (Object) gm.field_f;
     }
 
-    public static void b(boolean param0) {
-        if (!param0) {
-          java.applet.Applet discarded$2 = dg.a(false);
-          field_e = null;
-          field_a = null;
-          field_c = null;
-          return;
-        } else {
-          field_e = null;
-          field_a = null;
-          field_c = null;
-          return;
-        }
+    public static void b() {
+        field_e = null;
+        field_a = null;
+        field_c = null;
     }
 
-    final static String a(boolean param0, boolean param1, byte param2, boolean param3) {
+    final static String a(boolean param0, boolean param1) {
         int var4 = 0;
-        if (param2 == -76) {
-          var4 = 0;
-          if (param0) {
-            L0: {
-              var4 += 4;
-              if (param1) {
-                var4 += 2;
-                break L0;
-              } else {
-                break L0;
-              }
+        var4 = 0;
+        if (param0) {
+          L0: {
+            var4 += 4;
+            if (param1) {
+              var4 += 2;
+              break L0;
+            } else {
+              break L0;
             }
-            return ug.field_a[var4];
-          } else {
-            L1: {
-              if (param1) {
-                var4 += 2;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            return ug.field_a[var4];
           }
+          return ug.field_a[var4];
         } else {
-          field_c = null;
-          var4 = 0;
-          if (!param0) {
-            L2: {
-              if (param1) {
-                var4 += 2;
-                break L2;
-              } else {
-                break L2;
-              }
+          L1: {
+            if (param1) {
+              var4 += 2;
+              break L1;
+            } else {
+              break L1;
             }
-            return ug.field_a[var4];
-          } else {
-            L3: {
-              var4 += 4;
-              if (param1) {
-                var4 += 2;
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            return ug.field_a[var4];
           }
+          return ug.field_a[var4];
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         uc var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

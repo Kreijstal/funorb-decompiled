@@ -71,7 +71,7 @@ final class wk {
               }
             }
             L2: {
-              var8 = param0 + -((wk) this).field_k.field_u + param1;
+              var8 = 32 + -((wk) this).field_k.field_u + param1;
               if (var6 + (var8 - -6) > ra.field_e) {
                 var8 = -6 + (ra.field_e + -var6);
                 break L2;
@@ -89,7 +89,7 @@ final class wk {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var5;
-            stackOut_7_1 = new StringBuilder().append("wk.F(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_7_1 = new StringBuilder().append("wk.F(").append(32).append(44).append(param1).append(44).append(param2).append(44);
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -127,13 +127,13 @@ final class wk {
         field_a = null;
     }
 
-    final static void a(int param0, boolean param1, byte param2) {
+    final static void a(int param0, boolean param1) {
         pf var5 = null;
         String var6_ref_String = null;
         int var6 = 0;
         int var7 = 0;
         ud var3 = ae.a(param1, param0, -13047);
-        int var4 = -99 / ((param2 - 58) / 54);
+        int var4 = 49;
         if (var3 != null) {
             hd.field_s.a(19, false);
             var5 = hd.field_s;
@@ -144,14 +144,16 @@ final class wk {
             var7 = li.field_o;
             var5.field_j.a(0, var7, -18, 0, var6);
         }
-        ko.a(param0, param1, (byte) -64);
+        int discarded$0 = -64;
+        ko.a(param0, param1);
     }
 
     final static int a(int param0, boolean param1, int param2, int param3) {
         if (param0 != 15658734) {
             return 0;
         }
-        return bh.h((byte) -47);
+        int discarded$0 = -47;
+        return bh.h();
     }
 
     private final void a(int param0, String param1, int param2, int param3) {
@@ -536,7 +538,7 @@ final class wk {
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         return ug.o(-102) || mb.field_C <= 0;
     }
 

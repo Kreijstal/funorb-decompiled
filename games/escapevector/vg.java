@@ -36,12 +36,12 @@ abstract class vg extends bb {
         int var2 = 15 / ((param0 - 45) / 53);
     }
 
-    public static void i(byte param0) {
+    public static void i() {
         field_T = null;
         field_U = null;
     }
 
-    final static int a(dk[] param0, byte param1) {
+    final static int a(dk[] param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         dk[] var3 = null;
@@ -340,9 +340,6 @@ abstract class vg extends bb {
 
     final static String a(String param0, String param1, byte param2, String param3) {
         int var5 = EscapeVector.field_A;
-        if (param2 != 111) {
-            field_T = null;
-        }
         int var4 = param0.indexOf(param1);
         while (var4 != -1) {
             param0 = param0.substring(0, var4) + param3 + param0.substring(var4 - -param1.length());

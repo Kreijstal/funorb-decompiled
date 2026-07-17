@@ -102,33 +102,29 @@ final class wsb {
     }
 
     private final void a(String param0, byte param1, int param2, String param3, String param4, asb param5) {
-        ujb[] var10 = null;
-        ujb var9 = null;
-        ujb var11 = null;
+        ujb[] var9 = null;
+        ujb var8 = null;
+        ujb var10 = null;
         try {
             if (((wsb) this).field_i.length <= ((wsb) this).field_h) {
-                var10 = new ujb[((wsb) this).field_h * 2];
-                ujb[] var7 = var10;
-                cua.a((Object[]) (Object) ((wsb) this).field_i, 0, (Object[]) (Object) var10, 0, ((wsb) this).field_h);
-                ((wsb) this).field_i = var10;
+                var9 = new ujb[((wsb) this).field_h * 2];
+                ujb[] var7 = var9;
+                cua.a((Object[]) (Object) ((wsb) this).field_i, 0, (Object[]) (Object) var9, 0, ((wsb) this).field_h);
+                ((wsb) this).field_i = var9;
             }
-            if (param1 != -62) {
-                Object var8 = null;
-                ((wsb) this).a((String) null, 126, (String) null, (asb) null);
-            }
-            var9 = new ujb();
-            var11 = var9;
-            ujb var7_ref = var11;
-            var11.field_b = param2;
-            var11.field_f = param5;
-            var11.field_a = param0;
-            var11.field_e = param3;
-            var11.field_i = param4;
+            var8 = new ujb();
+            var10 = var8;
+            ujb var7_ref = var10;
+            var10.field_b = param2;
+            var10.field_f = param5;
+            var10.field_a = param0;
+            var10.field_e = param3;
+            var10.field_i = param4;
             int fieldTemp$0 = ((wsb) this).field_h;
             ((wsb) this).field_h = ((wsb) this).field_h + 1;
-            ((wsb) this).field_i[fieldTemp$0] = var9;
+            ((wsb) this).field_i[fieldTemp$0] = var8;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "wsb.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "wsb.A(" + (param0 != null ? "{...}" : "null") + 44 + -62 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -323,7 +319,7 @@ final class wsb {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_c = null;
         field_e = null;
     }

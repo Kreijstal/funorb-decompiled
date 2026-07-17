@@ -7,14 +7,6 @@ class el extends fb {
     static String field_f;
 
     void a(boolean param0, int param1, int param2, byte param3, boolean param4, int param5, int param6) {
-        L0: {
-          if (param3 <= -59) {
-            break L0;
-          } else {
-            el.b(126);
-            break L0;
-          }
-        }
         if (param1 == 24) {
           if (param2 != 24) {
             ((el) this).field_a.h(-80).b(param5, -param2 + param6, param1 * 2, param2 * 3, ek.field_f[((el) this).field_a.field_u]);
@@ -38,12 +30,9 @@ class el extends fb {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_h = null;
         field_f = null;
-        if (param0 != 2) {
-            return;
-        }
         field_g = null;
     }
 

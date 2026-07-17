@@ -80,15 +80,15 @@ final class wo {
             cp.field_c = new ao(0L, em.field_J, ag.field_d, tp.field_f);
             ud.field_J = new vh(0L, (vh) null);
             ba.field_sb = new vh(0L, uo.field_Lb);
-            ba.field_sb.field_Fb = param0;
+            ba.field_sb.field_Fb = 1;
             qk.field_e = new vh(0L, lf.field_d, jh.field_g);
             mb.field_f = new vh(0L, sd.field_Q, f.field_d);
             rc.field_b = new vh(0L, ei.field_A);
-            ud.field_J.a(param0 + -103, ba.field_sb);
+            ud.field_J.a(-102, ba.field_sb);
             ud.field_J.a(92, qk.field_e);
             ud.field_J.a(14, mb.field_f);
             ud.field_J.a(127, (vh) (Object) aj.field_Mb);
-            ud.field_J.a(param0 ^ -107, rc.field_b);
+            ud.field_J.a(-108, rc.field_b);
             aj.field_Mb.field_Sb.field_Sb.a((byte) -87, uo.field_Lb);
             aj.field_Mb.field_Sb.field_Sb.field_cb = 1;
             var5 = aj.field_Mb.field_Sb.field_Sb;
@@ -105,7 +105,7 @@ final class wo {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("wo.D(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("wo.D(").append(1).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -167,7 +167,7 @@ final class wo {
         return var2;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_b = null;
         field_f = null;
         field_g = null;

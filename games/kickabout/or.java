@@ -11,7 +11,7 @@ final class or {
         return fj.field_c;
     }
 
-    final static void b(boolean param0) {
+    final static void b() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -49,17 +49,13 @@ final class or {
         System.out.println("Error: " + aj.a(-1, "%0a", "\n", param0));
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         field_a = null;
-        if (param0 <= 33) {
-            Object var2 = null;
-            or.a((String) null, 5);
-        }
     }
 
-    final static void a(nu param0, int param1, int param2, byte param3) {
+    final static void a(nu param0, int param1, int param2) {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;

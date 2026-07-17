@@ -131,7 +131,8 @@ final class mh implements Runnable {
                     var3 = var4.getOutputStream();
                     var3.write(17);
                     var5 = (CharSequence) (Object) ("JAGGRAB " + ((mh) this).field_a.getFile() + "\n\n");
-                    var3.write(qo.a(var5, (byte) -116));
+                    int discarded$1 = -116;
+                    var3.write(qo.a(var5));
                     ((mh) this).field_f = new DataInputStream(var4.getInputStream());
                     break L7;
                   } else {
@@ -275,34 +276,17 @@ final class mh implements Runnable {
         }
     }
 
-    final static void c(int param0) {
-        vl var1 = null;
-        ga var2 = null;
-        if (param0 != 0) {
-            field_l = null;
-            var1 = (vl) (Object) lf.field_e.c(param0 + 69);
-            if (!(var1 != null)) {
-                ak.a((byte) -112);
-                return;
-            }
-            var2 = s.field_e;
-            int discarded$0 = var2.i(-1478490344);
-            int discarded$1 = var2.i(-1478490344);
-            int discarded$2 = var2.i(-1478490344);
-            int discarded$3 = var2.i(-1478490344);
-            var1.a(true);
-            return;
-        }
-        var1 = (vl) (Object) lf.field_e.c(param0 + 69);
+    final static void c() {
+        vl var1 = (vl) (Object) lf.field_e.c(69);
         if (!(var1 != null)) {
             ak.a((byte) -112);
             return;
         }
-        var2 = s.field_e;
-        int discarded$4 = var2.i(-1478490344);
-        int discarded$5 = var2.i(-1478490344);
-        int discarded$6 = var2.i(-1478490344);
-        int discarded$7 = var2.i(-1478490344);
+        ga var2 = s.field_e;
+        int discarded$0 = var2.i(-1478490344);
+        int discarded$1 = var2.i(-1478490344);
+        int discarded$2 = var2.i(-1478490344);
+        int discarded$3 = var2.i(-1478490344);
         var1.a(true);
     }
 
@@ -323,7 +307,7 @@ final class mh implements Runnable {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_l = null;
         field_c = null;
         field_i = null;

@@ -35,14 +35,14 @@ final class un {
     }
 
     final static void a(int param0, int param1) {
-        cj.field_h = param0;
+        cj.field_h = 200;
         uc.field_a = 0;
         uf.field_a = new int[3];
-        ph.field_e = new na[15 * param0];
+        ph.field_e = new na[3000];
         int var2 = 0;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         int var1 = 0;
         if (224 > ll.field_q) {
           var1 = ll.field_q % 32;

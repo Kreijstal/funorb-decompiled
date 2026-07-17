@@ -13,7 +13,7 @@ final class id {
         return param0 ^ param1;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
         field_e = null;
     }

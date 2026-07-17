@@ -10,13 +10,13 @@ final class ng extends wf {
     static String[] field_l;
     static String field_h;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_i = null;
         field_g = null;
         field_j = null;
         field_l = null;
         field_h = null;
-        int var1 = 36 / ((param0 - 32) / 49);
+        int var1 = 36;
     }
 
     private ng() throws Throwable {
@@ -26,15 +26,13 @@ final class ng extends wf {
     final static void a(boolean param0, java.awt.Canvas param1) {
         try {
             if (!(gl.field_y != 11)) {
-                sd.q(274);
-            }
-            if (param0) {
-                ng.a((byte) 43);
+                int discarded$0 = 274;
+                sd.q();
             }
             ch.a(58, ea.field_n, g.field_A, ah.field_a);
             ah.a(0, 0, (byte) 90, param1);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "ng.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "ng.B(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

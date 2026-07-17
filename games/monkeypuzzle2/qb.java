@@ -7,7 +7,7 @@ final class qb {
     static am field_a;
     static boolean field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         field_d = null;
@@ -25,16 +25,11 @@ final class qb {
             var2 = (hk) (Object) bd.field_c.a((byte) -117);
             L1: while (true) {
               if (var2 == null) {
-                if (param0 == 256) {
-                  break L0;
-                } else {
-                  field_a = null;
-                  return;
-                }
+                break L0;
               } else {
                 L2: {
                   if (!var2.field_h.d(-3548)) {
-                    var2.c(param0 + -20078);
+                    var2.c(-19822);
                     break L2;
                   } else {
                     var2.field_g.g(re.field_e * var2.field_j / 256);
@@ -49,7 +44,7 @@ final class qb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw la.a((Throwable) (Object) var2_ref, "qb.D(" + param0 + 44 + param1 + 41);
+          throw la.a((Throwable) (Object) var2_ref, "qb.D(" + 256 + 44 + param1 + 41);
         }
     }
 
@@ -146,7 +141,7 @@ final class qb {
         }
     }
 
-    final static char a(char param0, int param1) {
+    final static char a(char param0) {
         int var2 = 0;
         int var3 = 0;
         var3 = MonkeyPuzzle2.field_F ? 1 : 0;

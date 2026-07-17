@@ -5,36 +5,19 @@ final class pt {
     static rk field_b;
     static int field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
-        if (param0 != 0) {
-            field_a = 24;
-        }
     }
 
-    final static String a(byte param0, int param1, char param2) {
-        char[] var3 = null;
+    final static String a(byte param0, int param1) {
         int var4 = 0;
-        int var5 = 0;
-        char[] var6 = null;
-        var5 = AceOfSkies.field_G ? 1 : 0;
-        var6 = new char[param1];
-        var3 = var6;
-        var4 = 0;
-        L0: while (true) {
-          if (param1 <= var4) {
-            if (param0 != -126) {
-              pt.a(54);
-              return new String(var3);
-            } else {
-              return new String(var3);
-            }
-          } else {
+        int var5 = AceOfSkies.field_G ? 1 : 0;
+        char[] var6 = new char[param1];
+        char[] var3 = var6;
+        for (var4 = 0; param1 > var4; var4++) {
             var6[var4] = '*';
-            var4++;
-            continue L0;
-          }
         }
+        return new String(var3);
     }
 
     public final String toString() {

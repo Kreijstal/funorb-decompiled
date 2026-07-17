@@ -61,7 +61,7 @@ final class hb extends bg {
         }
     }
 
-    final static void e(int param0) {
+    final static void e() {
         fh.field_t = null;
         ug.field_c = null;
     }
@@ -148,33 +148,25 @@ final class hb extends bg {
         var11 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
-            L1: {
-              if (param2 > 88) {
-                break L1;
-              } else {
-                hb.c(105);
-                break L1;
-              }
-            }
             var6_int = pk.a((byte) -14, cj.field_D, param4, ua.field_e);
             var7 = pk.a((byte) -14, cj.field_D, param1, ua.field_e);
             var8 = pk.a((byte) -14, ib.field_a, param5, ap.field_e);
             var9 = pk.a((byte) -14, ib.field_a, param0, ap.field_e);
             var10 = var6_int;
-            L2: while (true) {
+            L1: while (true) {
               if (var7 < var10) {
                 break L0;
               } else {
                 ki.a(-112, var8, vl.field_e[var10], var9, param3);
                 var10++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var6, "hb.H(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw wn.a((Throwable) (Object) var6, "hb.H(" + param0 + 44 + param1 + 44 + 94 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 

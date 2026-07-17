@@ -40,7 +40,7 @@ abstract class wl extends tb {
         String stackOut_13_2 = null;
         try {
           L0: {
-            if (!super.a(param0, param1, param2, param3)) {
+            if (!super.a(29657, param1, param2, param3)) {
               if (((wl) this).field_Q != null) {
                 L1: {
                   if (param1 != 98) {
@@ -52,7 +52,7 @@ abstract class wl extends tb {
                 }
                 L2: {
                   if (param1 == 99) {
-                    boolean discarded$5 = ((wl) this).field_Q.a(param0 ^ -2147453991, param3);
+                    boolean discarded$5 = ((wl) this).field_Q.a(-2147483648, param3);
                     break L2;
                   } else {
                     break L2;
@@ -75,7 +75,7 @@ abstract class wl extends tb {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var5;
-            stackOut_12_1 = new StringBuilder().append("wl.Q(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_12_1 = new StringBuilder().append("wl.Q(").append(29657).append(44).append(param1).append(44).append(param2).append(44);
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -115,7 +115,7 @@ abstract class wl extends tb {
         super.i(param0);
     }
 
-    final static void l(int param0) {
+    final static void l() {
         o.field_g = null;
         pd.field_g = null;
         qh.field_g = false;
@@ -286,79 +286,42 @@ abstract class wl extends tb {
     boolean d(boolean param0) {
         int var3 = 0;
         var3 = stellarshard.field_B;
-        if (!param0) {
-          ((wl) this).i(-92);
-          if (((wl) this).field_X != null) {
-            if (hj.field_d == ((wl) this).field_X) {
-              int fieldTemp$4 = ((wl) this).field_U + 1;
+        if (((wl) this).field_X != null) {
+          if (hj.field_d == ((wl) this).field_X) {
+            int fieldTemp$2 = ((wl) this).field_U + 1;
+            ((wl) this).field_U = ((wl) this).field_U + 1;
+            if (((wl) this).field_V == fieldTemp$2) {
+              ((wl) this).field_X = fj.field_i;
+              ((wl) this).a(((wl) this).field_S, 12 - -((wl) this).field_Y.field_p, (byte) -97, ((wl) this).field_Z + 12 + ((wl) this).field_Y.field_t);
+              ((wl) this).field_Q.field_A = 0;
+              ((wl) this).field_U = 0;
+              return super.d(true);
+            } else {
+              ((wl) this).field_Q.field_A = -((((wl) this).field_U << 8) / ((wl) this).field_V) + 256;
+              return super.d(true);
+            }
+          } else {
+            if (cj.field_b == ((wl) this).field_X) {
+              int fieldTemp$3 = ((wl) this).field_U + 1;
               ((wl) this).field_U = ((wl) this).field_U + 1;
-              if (((wl) this).field_V == fieldTemp$4) {
-                ((wl) this).field_X = fj.field_i;
-                ((wl) this).a(((wl) this).field_S, 12 - -((wl) this).field_Y.field_p, (byte) -97, ((wl) this).field_Z + 12 + ((wl) this).field_Y.field_t);
-                ((wl) this).field_Q.field_A = 0;
-                ((wl) this).field_U = 0;
+              if (((wl) this).field_bb == fieldTemp$3) {
+                ((wl) this).field_Q.field_A = 256;
+                ((wl) this).field_X = null;
                 return super.d(true);
               } else {
-                ((wl) this).field_Q.field_A = -((((wl) this).field_U << 8) / ((wl) this).field_V) + 256;
+                ((wl) this).field_Q.field_A = (((wl) this).field_U << 8) / ((wl) this).field_bb;
                 return super.d(true);
               }
             } else {
-              if (cj.field_b == ((wl) this).field_X) {
-                int fieldTemp$5 = ((wl) this).field_U + 1;
-                ((wl) this).field_U = ((wl) this).field_U + 1;
-                if (((wl) this).field_bb == fieldTemp$5) {
-                  ((wl) this).field_Q.field_A = 256;
-                  ((wl) this).field_X = null;
-                  return super.d(true);
-                } else {
-                  ((wl) this).field_Q.field_A = (((wl) this).field_U << 8) / ((wl) this).field_bb;
-                  return super.d(true);
-                }
-              } else {
-                return super.d(true);
-              }
+              return super.d(true);
             }
-          } else {
-            return super.d(true);
           }
         } else {
-          if (((wl) this).field_X != null) {
-            if (hj.field_d == ((wl) this).field_X) {
-              int fieldTemp$6 = ((wl) this).field_U + 1;
-              ((wl) this).field_U = ((wl) this).field_U + 1;
-              if (((wl) this).field_V == fieldTemp$6) {
-                ((wl) this).field_X = fj.field_i;
-                ((wl) this).a(((wl) this).field_S, 12 - -((wl) this).field_Y.field_p, (byte) -97, ((wl) this).field_Z + 12 + ((wl) this).field_Y.field_t);
-                ((wl) this).field_Q.field_A = 0;
-                ((wl) this).field_U = 0;
-                return super.d(true);
-              } else {
-                ((wl) this).field_Q.field_A = -((((wl) this).field_U << 8) / ((wl) this).field_V) + 256;
-                return super.d(true);
-              }
-            } else {
-              if (cj.field_b == ((wl) this).field_X) {
-                int fieldTemp$7 = ((wl) this).field_U + 1;
-                ((wl) this).field_U = ((wl) this).field_U + 1;
-                if (((wl) this).field_bb == fieldTemp$7) {
-                  ((wl) this).field_Q.field_A = 256;
-                  ((wl) this).field_X = null;
-                  return super.d(true);
-                } else {
-                  ((wl) this).field_Q.field_A = (((wl) this).field_U << 8) / ((wl) this).field_bb;
-                  return super.d(true);
-                }
-              } else {
-                return super.d(true);
-              }
-            }
-          } else {
-            return super.d(true);
-          }
+          return super.d(true);
         }
     }
 
-    public static void k(int param0) {
+    public static void k() {
         int var1 = 47;
         field_W = null;
         field_T = null;
@@ -484,10 +447,8 @@ abstract class wl extends tb {
     }
 
     final static pf a(int param0, int param1) {
-        if (param0 != 1) {
-            return null;
-        }
-        return na.a(1, 255, param1, false, false, true);
+        int discarded$0 = 1;
+        return na.a(1, 255, param1, false, false);
     }
 
     static {

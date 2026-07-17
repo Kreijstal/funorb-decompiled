@@ -49,7 +49,7 @@ final class eg extends oh {
         ((eg) this).field_v.a((byte) -113, (oh) (Object) new ne(((eg) this).field_w, param0, param2, 0));
     }
 
-    final static void a(int param0, wj param1, boolean param2) {
+    final static void a(int param0, wj param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -77,7 +77,7 @@ final class eg extends oh {
           L0: {
             var7 = js.field_f;
             var8 = var7;
-            var8.h(param0, 255);
+            var8.h(3, 255);
             var8.field_j = var8.field_j + 1;
             var4 = var8.field_j;
             var8.c(1, (byte) -86);
@@ -107,7 +107,7 @@ final class eg extends oh {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var3;
-            stackOut_8_1 = new StringBuilder().append("eg.F(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("eg.F(").append(3).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -141,8 +141,8 @@ final class eg extends oh {
         return null != ck.field_a ? true : false;
     }
 
-    final static tq c(int param0, int param1) {
-        tq var2 = new tq(param0, false);
+    final static tq c() {
+        tq var2 = new tq(1, false);
         return var2;
     }
 

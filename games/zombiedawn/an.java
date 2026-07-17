@@ -254,7 +254,8 @@ class an extends ga {
           L0: {
             if (param2 > 118) {
               if (ph.a(param0, 31043, param1, param3)) {
-                stackOut_6_0 = dn.f((byte) 43);
+                int discarded$2 = 43;
+                stackOut_6_0 = dn.f();
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
@@ -528,7 +529,7 @@ class an extends ga {
             if (param1.field_x == null) {
               return;
             } else {
-              var3_int = param0;
+              var3_int = 0;
               L1: while (true) {
                 L2: {
                   if (var3_int >= 50) {
@@ -569,7 +570,7 @@ class an extends ga {
           L5: {
             var3_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var3_ref;
-            stackOut_13_1 = new StringBuilder().append("an.J(").append(param0).append(44);
+            stackOut_13_1 = new StringBuilder().append("an.J(").append(0).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;

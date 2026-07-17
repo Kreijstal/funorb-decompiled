@@ -78,14 +78,14 @@ final class ej {
 
     final static int a(int param0, int param1) {
         param1 = ((param1 & -1431655765) >>> 1) + (param1 & 1431655765);
-        param1 = (param1 & param0) + ((-858993460 & param1) >>> 2);
+        param1 = (param1 & 858993459) + ((-858993460 & param1) >>> 2);
         param1 = (param1 >>> 4) + param1 & 252645135;
         param1 = param1 + (param1 >>> 8);
         param1 = param1 + (param1 >>> 16);
         return param1 & 255;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_a = null;
         field_f = null;

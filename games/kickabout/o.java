@@ -142,7 +142,7 @@ final class o {
           L0: {
             var7 = new vn(param1, false, false, true, true);
             var9 = var7;
-            var3 = 91 / ((param0 - 2) / 60);
+            var3 = 91;
             var4_int = 0;
             L1: while (true) {
               if (var9.field_p.length <= var4_int) {
@@ -181,7 +181,7 @@ final class o {
           L4: {
             var2 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var2;
-            stackOut_12_1 = new StringBuilder().append("o.B(").append(param0).append(44);
+            stackOut_12_1 = new StringBuilder().append("o.B(").append(107).append(44);
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -239,7 +239,7 @@ final class o {
         return var2;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         nl var2 = null;
@@ -248,7 +248,8 @@ final class o {
         var3 = Kickabout.field_G;
         try {
           L0: {
-            df.d(true);
+            int discarded$2 = 1;
+            df.d();
             var1_int = 0;
             L1: while (true) {
               if (var1_int >= 3) {

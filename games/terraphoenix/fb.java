@@ -48,7 +48,7 @@ final class fb extends uf {
             }
             return var2;
         }
-        var2 = param0;
+        var2 = 2;
         if (-65536 > param1) {
             var2 += 16;
             param1 = param1 >> 16;
@@ -77,25 +77,22 @@ final class fb extends uf {
         int var2_int = param1.a(-16384);
         lb.field_d = var2_int << 18 & 1835008;
         hb.field_j = hb.field_j + (var2_int >> 3);
-        lb.field_d = lb.field_d + (param1.i(param0 + -4642) << 2);
-        var2_int = param1.a(param0 + 4552);
+        lb.field_d = lb.field_d + (param1.i(-25578) << 2);
+        var2_int = param1.a(-16384);
         jc.field_D = (63 & var2_int) << 15;
         lb.field_d = lb.field_d + (var2_int >> 6);
         jc.field_D = jc.field_D + (param1.a(-16384) << 7);
         var2_int = param1.a(-16384);
         jc.field_D = jc.field_D + (var2_int >> 1);
-        if (param0 != -20936) {
-            return;
-        }
         try {
             dc.field_a = (var2_int & 1) << 16;
             dc.field_a = dc.field_a + param1.i(-25578);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "fb.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "fb.B(" + -20936 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_m = null;
         field_n = null;
     }

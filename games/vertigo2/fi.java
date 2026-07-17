@@ -18,9 +18,9 @@ final class fi {
             bf.field_a = param1;
             ed.field_t = true;
             df.field_l = new fj(ch.field_e, sg.field_a, param2, tk.field_e, bf.field_a);
-            ch.field_e.b((iq) (Object) df.field_l, param0 ^ param0);
+            ch.field_e.b((iq) (Object) df.field_l, 0);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "fi.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "fi.B(" + 31820 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -42,7 +42,7 @@ final class fi {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_j = null;
         field_e = null;
         field_b = null;
@@ -141,7 +141,7 @@ final class fi {
         }
     }
 
-    final static co a(int param0, r param1, r param2, int param3, byte param4) {
+    final static co a(int param0, r param1, r param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
@@ -183,7 +183,8 @@ final class fi {
           L0: {
             var5_int = 0;
             if (hq.a(124, param0, param3, param1)) {
-              stackOut_3_0 = m.a(param2.a(param0, param3, (byte) -103), 0);
+              int discarded$2 = 0;
+              stackOut_3_0 = m.a(param2.a(param0, param3, (byte) -103));
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

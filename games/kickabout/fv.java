@@ -68,14 +68,6 @@ final class fv implements hc {
               var3 = 0;
               L1: while (true) {
                 if (param1.length() <= var3) {
-                  L2: {
-                    if (param0 < -84) {
-                      break L2;
-                    } else {
-                      field_c = null;
-                      break L2;
-                    }
-                  }
                   Process discarded$2 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param1 + "\"");
                   stackOut_17_0 = 1;
                   stackIn_18_0 = stackOut_17_0;
@@ -105,10 +97,10 @@ final class fv implements hc {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L3: {
+          L2: {
             var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var2_ref2;
-            stackOut_21_1 = new StringBuilder().append("fv.B(").append(param0).append(44);
+            stackOut_21_1 = new StringBuilder().append("fv.B(").append(-92).append(44);
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -120,7 +112,7 @@ final class fv implements hc {
               stackIn_24_0 = stackOut_23_0;
               stackIn_24_1 = stackOut_23_1;
               stackIn_24_2 = stackOut_23_2;
-              break L3;
+              break L2;
             } else {
               stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
               stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
@@ -128,7 +120,7 @@ final class fv implements hc {
               stackIn_24_0 = stackOut_22_0;
               stackIn_24_1 = stackOut_22_1;
               stackIn_24_2 = stackOut_22_2;
-              break L3;
+              break L2;
             }
           }
           throw nb.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
@@ -404,7 +396,7 @@ final class fv implements hc {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_b = null;
         field_c = null;
         field_a = null;

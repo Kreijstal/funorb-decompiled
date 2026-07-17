@@ -37,7 +37,7 @@ final class bk extends t {
         }
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void a(java.applet.Applet param0) {
         String var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;
@@ -114,7 +114,7 @@ final class bk extends t {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_i = null;
         field_j = null;
         field_k = null;

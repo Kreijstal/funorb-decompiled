@@ -458,7 +458,7 @@ final class nn implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static int a(aga param0, aga param1, byte param2) {
+    final static int a(aga param0, aga param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -634,28 +634,75 @@ final class nn implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     }
 
     final static void a(byte param0, sna param1) {
+        sna var2 = null;
+        RuntimeException var2_ref = null;
+        int var3 = 0;
+        sna var4 = null;
         sna var5 = null;
-        int var3 = BachelorFridge.field_y;
-        sna var4 = (sna) (Object) param1.field_z.b((byte) 90);
-        sna var2 = var4;
-        while (var4 != null) {
-            var4.field_hb = 0;
-            var4.field_p = 0;
-            var4.field_I = 0;
-            var4.field_rb = 0;
-            var5 = (sna) (Object) param1.field_z.c(param0 ^ -126);
-            var5 = var5;
-        }
-        if (param0 != -126) {
-            return;
-        }
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        var3 = BachelorFridge.field_y;
         try {
-            param1.field_rb = 0;
-            param1.field_p = 0;
-            param1.field_hb = 0;
-            param1.field_I = 0;
-        } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "nn.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+          L0: {
+            var4 = (sna) (Object) param1.field_z.b((byte) 90);
+            var2 = var4;
+            L1: while (true) {
+              if (var4 == null) {
+                break L0;
+              } else {
+                var4.field_hb = 0;
+                var4.field_p = 0;
+                var4.field_I = 0;
+                var4.field_rb = 0;
+                var5 = (sna) (Object) param1.field_z.c(0);
+                var5 = var5;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2_ref = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var2_ref;
+            stackOut_6_1 = new StringBuilder().append("nn.A(").append(-126).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param1 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
+            }
+          }
+          throw pe.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
     }
 

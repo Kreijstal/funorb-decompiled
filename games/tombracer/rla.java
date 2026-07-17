@@ -16,7 +16,7 @@ final class rla extends b implements tsa {
     il field_H;
     static String field_y;
 
-    private final void a(String param0, byte param1) {
+    private final void a(String param0) {
         if (!(((rla) this).field_z.field_I != null)) {
             return;
         }
@@ -38,7 +38,8 @@ final class rla extends b implements tsa {
             if (hc.field_h >= param4) {
                 param1 = rp.a(ss.field_c, -16226, pka.field_b, param1);
                 param0 = rp.a(ss.field_c, param2 ^ 16224, pka.field_b, param0);
-                uea.a(param0, param3, param4, param1, false);
+                int discarded$0 = 0;
+                uea.a(param0, param3, param4, param1);
             }
         }
         if (param2 != -2) {
@@ -69,9 +70,6 @@ final class rla extends b implements tsa {
     private final void a(int param0, int param1, int param2, boolean param3, int param4) {
         super.a((byte) -31, param4, param0, param2, param1);
         ((rla) this).field_I.a((byte) -31, param4 - 20, ((rla) this).field_C, 0, 0);
-        if (param3) {
-            this.a((byte) -97);
-        }
         ((rla) this).field_E.a((byte) -31, 20, ((rla) this).field_C, -20 + param4, 0);
         if (!(!((rla) this).field_G)) {
             ((rla) this).field_F.a((byte) -31, param4, -((rla) this).field_C + param0, 0, ((rla) this).field_C);
@@ -220,7 +218,8 @@ final class rla extends b implements tsa {
           L0: {
             L1: {
               if (!((rla) this).j((byte) -73)) {
-                this.d(-21088);
+                int discarded$2 = -21088;
+                this.d();
                 break L1;
               } else {
                 this.a((byte) 119);
@@ -347,7 +346,7 @@ final class rla extends b implements tsa {
         }
     }
 
-    private final void d(int param0) {
+    private final void d() {
         int var2 = ((rla) this).field_z.c(23112);
         int var3 = var2;
         int var4 = 0;
@@ -359,7 +358,8 @@ final class rla extends b implements tsa {
         ((rla) this).field_z.a((byte) -31, ((rla) this).field_m, var2, 0, 0);
         ((rla) this).field_F = new cca(0, 0, 0, 0, (isa) (Object) new pu(), (ae) (Object) ((rla) this).field_z, (isa) null);
         if (!(var4 == 0)) {
-            ((rla) this).field_F.a(1, st.b(-5412), true);
+            int discarded$0 = -5412;
+            ((rla) this).field_F.a(1, st.b(), true);
         }
         ((rla) this).field_F.a((byte) -31, ((rla) this).field_m, ((rla) this).field_p - ((rla) this).field_C, 0, ((rla) this).field_C);
         ((rla) this).field_G = true;
@@ -372,7 +372,7 @@ final class rla extends b implements tsa {
         return ((rla) this).field_G;
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_x = null;
         field_D = null;
         field_y = null;
@@ -585,7 +585,8 @@ final class rla extends b implements tsa {
                                     this.a((byte) 122);
                                     break L5;
                                   } else {
-                                    this.d(-21088);
+                                    int discarded$4 = -21088;
+                                    this.d();
                                     break L5;
                                   }
                                 }
@@ -609,7 +610,8 @@ final class rla extends b implements tsa {
                                   } else {
                                     if (param0 < 128) {
                                       var6 = ((rla) this).field_w + param0;
-                                      this.a(var6, (byte) 106);
+                                      int discarded$5 = 106;
+                                      this.a(var6);
                                       stackOut_55_0 = 1;
                                       stackIn_56_0 = stackOut_55_0;
                                       return stackIn_56_0 != 0;
@@ -626,7 +628,8 @@ final class rla extends b implements tsa {
                           if (((rla) this).j((byte) 88)) {
                             break L6;
                           } else {
-                            this.d(-21088);
+                            int discarded$6 = -21088;
+                            this.d();
                             break L6;
                           }
                         }
@@ -667,7 +670,8 @@ final class rla extends b implements tsa {
                   }
                   L10: {
                     if (!((rla) this).j((byte) 101)) {
-                      this.d(-21088);
+                      int discarded$7 = -21088;
+                      this.d();
                       break L10;
                     } else {
                       break L10;

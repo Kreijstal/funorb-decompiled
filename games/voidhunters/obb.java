@@ -4,7 +4,7 @@
 final class obb extends rqa {
     static String[] field_o;
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
     }
 
@@ -12,40 +12,32 @@ final class obb extends rqa {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_7_0 = 0;
+        int stackIn_5_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
+        int stackOut_4_0 = 0;
         var4 = VoidHunters.field_G;
         try {
           L0: {
-            L1: {
-              if (param1 == -18644) {
-                break L1;
-              } else {
-                field_o = null;
-                break L1;
-              }
-            }
             var3_int = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (param0 <= 0) {
-                stackOut_6_0 = var3_int;
-                stackIn_7_0 = stackOut_6_0;
+                stackOut_4_0 = var3_int;
+                stackIn_5_0 = stackOut_4_0;
                 break L0;
               } else {
                 var3_int = 1 & param2 | var3_int << 1;
                 param0--;
                 param2 = param2 >>> 1;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var3, "obb.B(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw rta.a((Throwable) (Object) var3, "obb.B(" + param0 + 44 + -18644 + 44 + param2 + 41);
         }
-        return stackIn_7_0;
+        return stackIn_5_0;
     }
 
     final nc a(nc[] param0, int param1) {

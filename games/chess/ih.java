@@ -195,7 +195,7 @@ final class ih extends bf {
         }
     }
 
-    public static void i(byte param0) {
+    public static void i() {
         field_Q = null;
         field_V = null;
         field_T = null;
@@ -203,19 +203,19 @@ final class ih extends bf {
         field_S = null;
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3) {
+    final static void a(int param0, boolean param1) {
         rf.a((byte) -122, param1);
-        bb.a(param1, 69, param0, param2);
+        int discarded$0 = 15;
+        int discarded$1 = 13;
+        int discarded$2 = 69;
+        bb.a(param1);
     }
 
     private final void a(mf param0, int param1, String param2, int param3, int param4) {
-        if (param3 != -2200) {
-            return;
-        }
         try {
             rc.field_a.b(param2, (param0.field_y >> 1) + (param1 + param0.field_u), param0.field_r + (param4 - 5), 16777215, -1);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "ih.P(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "ih.P(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + -2200 + 44 + param4 + 41);
         }
     }
 

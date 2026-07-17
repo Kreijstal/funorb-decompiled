@@ -30,7 +30,7 @@ final class ui {
         }
     }
 
-    final static ca a(bv param0, int param1, int param2) {
+    final static ca a(bv param0, int param1) {
         ca var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -58,7 +58,8 @@ final class ui {
           L0: {
             if (0 != param1) {
               var3 = new ca();
-              no.a(param0, (uo) (Object) var3, param1, -24721);
+              int discarded$2 = -24721;
+              no.a(param0, (uo) (Object) var3, param1);
               var4 = 0;
               stackOut_3_0 = (ca) var3;
               stackIn_4_0 = stackOut_3_0;
@@ -117,7 +118,7 @@ final class ui {
         }
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_e = null;
         field_a = null;
         field_k = null;
@@ -273,7 +274,7 @@ final class ui {
         }
         L4: {
           var8 = stackIn_12_0;
-          var10 = -98 % ((11 - param2) / 40);
+          var10 = 0;
           var9 = 0;
           if (var5 != 0) {
             var9++;
@@ -1110,12 +1111,9 @@ final class ui {
         try {
             qs.a(param1.a("", 96, "headers.packvorbis"));
             var2 = qs.a(param1, "jagex logo2.packvorbis", "");
-            if (param0 >= -102) {
-                ui.a(-11, -82, (byte) 79, 117, -17);
-            }
             sn discarded$0 = var2.c();
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "ui.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "ui.G(" + -124 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

@@ -12,7 +12,7 @@ final class me extends hf {
     int field_f;
     static sl field_g;
 
-    final static void b(int param0) {
+    final static void b() {
         if (fj.field_p != null) {
             fj.field_p.c();
             if (!(null == oh.field_a)) {
@@ -25,19 +25,13 @@ final class me extends hf {
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_g = null;
-        if (param0 != -40) {
-            return;
-        }
         field_j = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         jk.field_d = 1;
-        if (param0 != 38) {
-            me.c((byte) -26);
-        }
     }
 
     final static void a(int param0, qc param1) {
@@ -49,9 +43,6 @@ final class me extends hf {
             h.field_b = var2_int << 18 & 1835008;
             h.field_b = h.field_b + (param1.b(true) << 2);
             var2_int = param1.c((byte) 34);
-            if (param0 <= 105) {
-                me.a((byte) 114);
-            }
             fe.field_g = var2_int << 15 & 2064384;
             h.field_b = h.field_b + (var2_int >> 6);
             fe.field_g = fe.field_g + (param1.c((byte) 34) << 7);
@@ -60,7 +51,7 @@ final class me extends hf {
             lc.field_b = (var2_int & 1) << 16;
             lc.field_b = lc.field_b + param1.b(true);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "me.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "me.B(" + 116 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

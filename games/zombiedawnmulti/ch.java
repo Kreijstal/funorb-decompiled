@@ -41,7 +41,7 @@ final class ch {
         }
     }
 
-    final static int b(int param0) {
+    final static int b() {
         try {
             IOException var1 = null;
             int var1_int = 0;
@@ -91,7 +91,8 @@ final class ch {
                     if (la.field_d == 2) {
                       vh.field_Gb = new ej((java.net.Socket) vo.field_o.field_d, p.field_a);
                       var2 = new k(13);
-                      mo.a(o.field_b, var2, ej.field_q, db.field_e, (byte) -124);
+                      int discarded$1 = -124;
+                      mo.a(o.field_b, var2, ej.field_q, db.field_e);
                       var2.a(108, 15);
                       var2.b(-128, kk.field_q);
                       vh.field_Gb.a(0, -100, 13, var2.field_m);

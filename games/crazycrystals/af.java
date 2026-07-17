@@ -5,7 +5,7 @@ final class af extends qb {
     private java.nio.ByteBuffer field_d;
     static dl[] field_c;
 
-    public static void c(int param0) {
+    public static void c() {
         field_c = null;
     }
 

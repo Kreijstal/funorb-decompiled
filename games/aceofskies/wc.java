@@ -4,7 +4,7 @@
 final class wc {
     static int[] field_a;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
     }
 
@@ -135,40 +135,7 @@ final class wc {
     }
 
     final static boolean a(byte param0, int param1, int param2) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        if (param0 >= -38) {
-          L0: {
-            field_a = null;
-            if (-1 == (33 & param1)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
-              break L0;
-            } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (-1 == (33 & param1)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              break L1;
-            } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
-        }
+        return (33 & param1) != 0;
     }
 
     static {

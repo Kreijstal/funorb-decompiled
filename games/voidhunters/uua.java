@@ -73,7 +73,7 @@ final class uua extends rqa {
         return stackIn_4_0;
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_p = null;
     }
 

@@ -21,7 +21,7 @@ public final class Virogrid extends od {
     private int[] field_J;
     public static boolean field_F;
 
-    private final void r(int param0) {
+    private final void r() {
         int var2 = 0;
         int var3 = 0;
         var3 = field_F ? 1 : 0;
@@ -58,11 +58,12 @@ public final class Virogrid extends od {
         }
     }
 
-    private final void e(byte param0) {
+    private final void e() {
         int var2 = (id.field_r % 20480 << 12) % 83886080;
         si.a(nk.field_K, new double[3], new double[3], 700.0, 200.0, sj.field_j, 23967451 + var2, var2 - -59918628, 0, 16711680, ke.field_p.field_k);
         si.a(nk.field_K, new double[3], new double[3], 500.0, 200.0, sj.field_j, var2 - -59918628, 83820544 + var2, 0, 16711680, ke.field_p.field_k);
-        this.s(-1933);
+        int discarded$0 = -1933;
+        this.s();
     }
 
     private final void a(eh param0, byte param1, eh param2, eh param3, eh param4, eh param5) {
@@ -157,14 +158,16 @@ public final class Virogrid extends od {
             vg.field_H = a.a("", param5, -95, "smallfont", param4);
             mc.field_b = a.a("", param5, -120, "menufont", param4);
             re.field_o = a.a("", param5, -110, "tinyfont", param4);
-            var13 = sn.a(param5, "starfield", "", false);
+            int discarded$8 = 0;
+            var13 = sn.a(param5, "starfield", "");
             sj.field_j = new mg(2560, 256);
             sj.field_j.b();
             var13.b(0, 0);
             var13.b(1280, 0);
             ca.field_M.a((byte) 29);
             eh.field_l = vc.a(param5, "logo", "", (byte) 114);
-            mg discarded$3 = sn.a(param5, "splash", "", false);
+            int discarded$9 = 0;
+            mg discarded$10 = sn.a(param5, "splash", "");
             tk.field_d = ke.a("walk1", "", param5, 32370);
             ic.field_y = ke.a("walk2", "", param5, 32370);
             wh.field_b = ke.a("walk3", "", param5, 32370);
@@ -178,12 +181,14 @@ public final class Virogrid extends od {
             jl.field_E = 16777215;
             ti.field_b = 8437759;
             cb.field_d = ke.a(32, param5, "", "achievements_large");
-            mj.field_F = sn.a(param2, "unachieved", "basic", false);
-            ad.field_b = sn.a(param2, "orbcoin", "basic", false);
+            int discarded$11 = 0;
+            mj.field_F = sn.a(param2, "unachieved", "basic");
+            int discarded$12 = 0;
+            ad.field_b = sn.a(param2, "orbcoin", "basic");
             var8 = cb.field_d.length;
             vd.field_Y = new mg[var8];
             qc.a(123);
-            var9_int = -67 / ((param1 - -11) / 58);
+            var9_int = 67;
             var10 = 0;
             L1: while (true) {
               if (var8 <= var10) {
@@ -192,13 +197,14 @@ public final class Virogrid extends od {
                 mj.field_F.b(0, 0, 32, 32);
                 ul.b((byte) 108);
                 kd.field_p = ke.a(32, param5, "", "viewicons");
-                mg discarded$4 = this.b(131586, -9105, 30136);
-                mg discarded$5 = this.b(263172, -9105, 6316128);
+                mg discarded$13 = this.b(131586, -9105, 30136);
+                mg discarded$14 = this.b(263172, -9105, 6316128);
                 var9 = new mg[2][];
                 var9[0] = ke.a(32, param5, "", "turntime_icons");
                 var9[1] = ke.a(32, param5, "", "gridwidth_icons");
                 nn.a(var9, var9, 2, ra.field_e, m.field_a, param3, param2, true, -27871, wc.field_c, wc.field_c, wf.field_e, wn.field_j, 2, ng.field_T);
-                ak.field_e = sn.a(param5, "lobbyicon", "", false);
+                int discarded$15 = 0;
+                ak.field_e = sn.a(param5, "lobbyicon", "");
                 fk.a((kj) (Object) new vl(param0, param5, 8, 128));
                 break L0;
               } else {
@@ -241,7 +247,7 @@ public final class Virogrid extends od {
           }
           L3: {
             stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44).append(param1).append(44);
+            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44).append(-105).append(44);
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -354,9 +360,11 @@ public final class Virogrid extends od {
 
     final void c(boolean param0) {
         ((Virogrid) this).a(77, 14, 4, 0, 2, 1, false, 121);
-        i var3 = new i();
-        var3.a(128, 9, !param0 ? true : false);
-        pe.a((java.awt.Component) (Object) fi.field_v, var3, ei.field_c, param0, (byte) -18, 22050);
+        i var2 = new i();
+        var2.a(128, 9, !param0 ? true : false);
+        int discarded$0 = 22050;
+        int discarded$1 = -18;
+        pe.a((java.awt.Component) (Object) fi.field_v, var2, ei.field_c, param0);
         ((Virogrid) this).a(false, true, -118, true, false, false, false);
         jc.field_i[60] = 4;
         jc.field_i[67] = 1;
@@ -371,14 +379,16 @@ public final class Virogrid extends od {
         jc.field_i[58] = -2;
         jc.field_i[66] = 1;
         db.a((byte) 81, 200);
-        this.r(114);
+        int discarded$2 = 114;
+        this.r();
     }
 
     private final boolean c(byte param0, boolean param1) {
         int var3 = 0;
         int var4 = 0;
         var4 = field_F ? 1 : 0;
-        a.b((byte) 69);
+        int discarded$8 = 69;
+        a.b();
         if (null == pj.field_c) {
           L0: {
             if (param0 == -42) {
@@ -418,7 +428,8 @@ public final class Virogrid extends od {
                     if (var3 >= 12) {
                       hm.field_c = 10;
                       i.field_y = 10;
-                      fh.a((byte) -89);
+                      int discarded$9 = -89;
+                      fh.a();
                       qc.a(50, (byte) 111);
                       bm.c(-111, 50);
                       ei.a(0, oi.field_c[0]);
@@ -451,7 +462,7 @@ public final class Virogrid extends od {
                 sb.a(-90);
                 return false;
               } else {
-                boolean discarded$3 = vg.field_B.a(el.field_d, 0, af.field_g, oi.field_c[var3], 0);
+                boolean discarded$10 = vg.field_B.a(el.field_d, 0, af.field_g, oi.field_c[var3], 0);
                 var3++;
                 continue L2;
               }
@@ -549,10 +560,11 @@ public final class Virogrid extends od {
                                                                                                   } else {
                                                                                                     al.a(hn.field_u, 13, 78.0f);
                                                                                                     if (param1) {
-                                                                                                      ge.b(18887);
+                                                                                                      int discarded$11 = 18887;
+                                                                                                      ge.b();
                                                                                                       ((Virogrid) this).b(true);
                                                                                                       af.field_g = new jg(pj.field_c, sf.field_O);
-                                                                                                      ml discarded$4 = af.field_g.a((byte) 86, "", "menu_select");
+                                                                                                      ml discarded$12 = af.field_g.a((byte) 86, "", "menu_select");
                                                                                                       of.field_b = af.field_g.a((byte) 112, "", "tetralink_invalid_move");
                                                                                                       tk.field_c = new ml[5];
                                                                                                       td.field_d = new ml[5];
@@ -565,7 +577,7 @@ public final class Virogrid extends od {
                                                                                                           u.field_t = af.field_g.a((byte) 110, "", "tetralink_start_game");
                                                                                                           f.field_j = af.field_g.a((byte) 118, "", "tetralink_winning_line_sound_winner");
                                                                                                           cg.field_d = af.field_g.a((byte) 82, "", "tetralink_winning_line_sound_loser");
-                                                                                                          ml discarded$5 = af.field_g.a((byte) 90, "", "tetralink_title_appear");
+                                                                                                          ml discarded$13 = af.field_g.a((byte) 90, "", "tetralink_title_appear");
                                                                                                           ih.field_d = af.field_g.a((byte) 99, "", "tetralink_dissolve");
                                                                                                           af.field_k = af.field_g.a((byte) 103, "", "tetralink_dissolve_in");
                                                                                                           dj.field_f = new ml[3];
@@ -632,7 +644,9 @@ public final class Virogrid extends od {
                                                         }
                                                       }
                                                     }
-                                                    al.a(pe.a(te.field_g, nh.field_r, el.field_d, 0, 0), 13, 45.0f);
+                                                    int discarded$14 = 0;
+                                                    int discarded$15 = 0;
+                                                    al.a(pe.a(te.field_g, nh.field_r, el.field_d), 13, 45.0f);
                                                     return false;
                                                   } else {
                                                     break L9;
@@ -687,7 +701,7 @@ public final class Virogrid extends od {
         }
     }
 
-    private final void s(int param0) {
+    private final void s() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -848,7 +862,8 @@ public final class Virogrid extends od {
                   var6 = 3;
                   L6: while (true) {
                     if (~var34.length >= ~var6) {
-                      this.e((byte) -62);
+                      int discarded$3 = -62;
+                      this.e();
                       kg.field_c.a(pe.field_j, bi.field_c);
                       nb.field_x.a(pe.field_j, bi.field_c);
                       kf.field_c.a(pe.field_j, bi.field_c);
@@ -926,7 +941,8 @@ public final class Virogrid extends od {
                 var6_ref_int__[1] = (var3 >> 4) + 128;
                 var35[2] = 80;
                 var37[2] = 128;
-                var7 = si.a(8437759);
+                int discarded$4 = 8437759;
+                var7 = si.a();
                 qf.a(240, 0, 0, var38, var39, var37, var7, var7, var7);
                 var3 = var36[0];
                 var10[0] = var36[1];
@@ -989,7 +1005,8 @@ public final class Virogrid extends od {
                       break L9;
                     }
                   } else {
-                    rk.a(var4_ref_pm.field_m, var4_ref_pm.field_h, var4_ref_pm.field_r << 3, 10000);
+                    int discarded$5 = 10000;
+                    rk.a(var4_ref_pm.field_m, var4_ref_pm.field_h, var4_ref_pm.field_r << 3);
                     var4_ref_pm = (pm) (Object) gd.field_n.a(16213);
                     continue L12;
                   }
@@ -1104,96 +1121,102 @@ public final class Virogrid extends od {
           L0: {
             fk.a(1.0f);
             fk.a();
-            if (param0 == 1053) {
-              L1: {
-                var27 = qb.a(param1, "", "scenery_walls");
-                var4 = qb.a(param1, "", "scenery_walls2");
-                var5 = qb.a(param1, "", "scenery_game-table");
-                var6 = qb.a(param1, "", "scenery_floor");
-                var7 = qb.a(param1, "", "scenery_props1");
-                var8 = qb.a(param1, "", "scenery_props2");
-                var9 = qb.a(param1, "", "scenery_ceiling");
-                var10 = qb.a(param1, "", "scenery_door");
-                var11 = qb.a(param1, "", "scenery_game-screen_back");
-                var12 = qb.a(param1, "", "scenery_game-screen_front");
-                var13 = qb.a(param1, "", "scenery_game-screen_front-left");
-                var14 = qb.a(param1, "", "scenery_game-screen_back-left");
-                var15 = qb.a(param1, "", "scenery_game-screen_back-top");
-                var16 = qb.a(param1, "", "scenery_game-screen_front-right");
-                var17 = qb.a(param1, "", "scenery_game-screen_back-right");
-                var18 = qb.a(param1, "", "scenery_game-screen_front-top");
-                var19 = qb.a(param1, "", "scenery_game-screen_front-black");
-                var20 = qb.a(param1, "", "scenery_game-screen_back-black");
-                this.a(var11, (byte) 69);
-                this.a(var12, (byte) 69);
-                this.a(var13, (byte) 69);
-                this.a(var14, (byte) 69);
-                this.a(var16, (byte) 69);
-                this.a(var17, (byte) 69);
-                this.a(var15, (byte) 69);
-                this.a(var18, (byte) 69);
-                this.a(var19, (byte) 69);
-                this.a(var20, (byte) 69);
-                ((Virogrid) this).field_J = this.a((byte) 124, var11);
-                ((Virogrid) this).field_K = this.a((byte) 118, var12);
-                ((Virogrid) this).field_D = this.a((byte) 94, var13);
-                ((Virogrid) this).field_B = this.a((byte) 116, var16);
-                ((Virogrid) this).field_C = this.a((byte) 74, var18);
-                ((Virogrid) this).field_L = this.a((byte) 116, var19);
-                ((Virogrid) this).field_M = this.a((byte) 64, var14);
-                ((Virogrid) this).field_G = this.a((byte) 69, var17);
-                ((Virogrid) this).field_H = this.a((byte) 107, var15);
-                ((Virogrid) this).field_N = this.a((byte) 69, var20);
-                var21 = 96;
-                var22 = 2260;
-                var23 = 0;
-                var24 = 256;
-                var25 = 0;
-                if (db.b((byte) 13, 0)) {
-                  var26 = qb.a(param1, "", "ghost_untextured");
-                  ri.field_a = (il) (Object) var26.a(var21, var22, var23, var24, var25);
-                  var23 = 64;
-                  var21 = 42;
-                  break L1;
-                } else {
-                  break L1;
-                }
+            L1: {
+              var27 = qb.a(param1, "", "scenery_walls");
+              var4 = qb.a(param1, "", "scenery_walls2");
+              var5 = qb.a(param1, "", "scenery_game-table");
+              var6 = qb.a(param1, "", "scenery_floor");
+              var7 = qb.a(param1, "", "scenery_props1");
+              var8 = qb.a(param1, "", "scenery_props2");
+              var9 = qb.a(param1, "", "scenery_ceiling");
+              var10 = qb.a(param1, "", "scenery_door");
+              var11 = qb.a(param1, "", "scenery_game-screen_back");
+              var12 = qb.a(param1, "", "scenery_game-screen_front");
+              var13 = qb.a(param1, "", "scenery_game-screen_front-left");
+              var14 = qb.a(param1, "", "scenery_game-screen_back-left");
+              var15 = qb.a(param1, "", "scenery_game-screen_back-top");
+              var16 = qb.a(param1, "", "scenery_game-screen_front-right");
+              var17 = qb.a(param1, "", "scenery_game-screen_back-right");
+              var18 = qb.a(param1, "", "scenery_game-screen_front-top");
+              var19 = qb.a(param1, "", "scenery_game-screen_front-black");
+              var20 = qb.a(param1, "", "scenery_game-screen_back-black");
+              int discarded$10 = 69;
+              this.a(var11);
+              int discarded$11 = 69;
+              this.a(var12);
+              int discarded$12 = 69;
+              this.a(var13);
+              int discarded$13 = 69;
+              this.a(var14);
+              int discarded$14 = 69;
+              this.a(var16);
+              int discarded$15 = 69;
+              this.a(var17);
+              int discarded$16 = 69;
+              this.a(var15);
+              int discarded$17 = 69;
+              this.a(var18);
+              int discarded$18 = 69;
+              this.a(var19);
+              int discarded$19 = 69;
+              this.a(var20);
+              ((Virogrid) this).field_J = this.a((byte) 124, var11);
+              ((Virogrid) this).field_K = this.a((byte) 118, var12);
+              ((Virogrid) this).field_D = this.a((byte) 94, var13);
+              ((Virogrid) this).field_B = this.a((byte) 116, var16);
+              ((Virogrid) this).field_C = this.a((byte) 74, var18);
+              ((Virogrid) this).field_L = this.a((byte) 116, var19);
+              ((Virogrid) this).field_M = this.a((byte) 64, var14);
+              ((Virogrid) this).field_G = this.a((byte) 69, var17);
+              ((Virogrid) this).field_H = this.a((byte) 107, var15);
+              ((Virogrid) this).field_N = this.a((byte) 69, var20);
+              var21 = 96;
+              var22 = 2260;
+              var23 = 0;
+              var24 = 256;
+              var25 = 0;
+              if (db.b((byte) 13, 0)) {
+                var26 = qb.a(param1, "", "ghost_untextured");
+                ri.field_a = (il) (Object) var26.a(var21, var22, var23, var24, var25);
+                var23 = 64;
+                var21 = 42;
+                break L1;
+              } else {
+                break L1;
               }
-              kf.field_c = (il) (Object) var27.a(var21, var22, var23, var24, var25);
-              cm.field_k = (il) (Object) var4.a(var21, var22, var23, var24, var25);
-              fl.field_s = (il) (Object) var5.a(var21, var22, var23, var24, var25);
-              nb.field_x = (il) (Object) var6.a(var21, var22, var23, var24, var25);
-              ba.field_c = (il) (Object) var7.a(var21, var22, var23, var24, var25);
-              wf.field_j = (il) (Object) var8.a(var21, var22, var23, var24, var25);
-              kg.field_c = (il) (Object) var9.a(var21, var22, var23, var24, var25);
-              lk.field_Qb = (il) (Object) var10.a(var21, var22, var23, var24, var25);
-              var13.d();
-              var14.d();
-              var14.a((ll) (Object) var13, 0, 0, 0, false);
-              var16.d();
-              var17.d();
-              var17.a((ll) (Object) var16, 0, 0, 0, false);
-              th.field_y = (il) (Object) var11.a(var21, var22, var23, var24, var25);
-              ee.field_a = (il) (Object) var12.a(var21, var22, var23, var24, var25);
-              qg.field_h = (il) (Object) var14.a(var21, var22, var23, var24, var25);
-              jg.field_i = (il) (Object) var17.a(var21, var22, var23, var24, var25);
-              pj.field_a = (il) (Object) var15.a(var21, var22, var23, var24, var25);
-              ab.field_L = (il) (Object) var13.a(var21, var22, var23, var24, var25);
-              rc.field_o = (il) (Object) var16.a(var21, var22, var23, var24, var25);
-              og.field_l = (il) (Object) var18.a(var21, var22, var23, var24, var25);
-              hn.field_x = (il) (Object) var20.a(var21, var22, var23, var24, var25);
-              td.field_i = (il) (Object) var19.a(var21, var22, var23, var24, var25);
-              break L0;
-            } else {
-              return;
             }
+            kf.field_c = (il) (Object) var27.a(var21, var22, var23, var24, var25);
+            cm.field_k = (il) (Object) var4.a(var21, var22, var23, var24, var25);
+            fl.field_s = (il) (Object) var5.a(var21, var22, var23, var24, var25);
+            nb.field_x = (il) (Object) var6.a(var21, var22, var23, var24, var25);
+            ba.field_c = (il) (Object) var7.a(var21, var22, var23, var24, var25);
+            wf.field_j = (il) (Object) var8.a(var21, var22, var23, var24, var25);
+            kg.field_c = (il) (Object) var9.a(var21, var22, var23, var24, var25);
+            lk.field_Qb = (il) (Object) var10.a(var21, var22, var23, var24, var25);
+            var13.d();
+            var14.d();
+            var14.a((ll) (Object) var13, 0, 0, 0, false);
+            var16.d();
+            var17.d();
+            var17.a((ll) (Object) var16, 0, 0, 0, false);
+            th.field_y = (il) (Object) var11.a(var21, var22, var23, var24, var25);
+            ee.field_a = (il) (Object) var12.a(var21, var22, var23, var24, var25);
+            qg.field_h = (il) (Object) var14.a(var21, var22, var23, var24, var25);
+            jg.field_i = (il) (Object) var17.a(var21, var22, var23, var24, var25);
+            pj.field_a = (il) (Object) var15.a(var21, var22, var23, var24, var25);
+            ab.field_L = (il) (Object) var13.a(var21, var22, var23, var24, var25);
+            rc.field_o = (il) (Object) var16.a(var21, var22, var23, var24, var25);
+            og.field_l = (il) (Object) var18.a(var21, var22, var23, var24, var25);
+            hn.field_x = (il) (Object) var20.a(var21, var22, var23, var24, var25);
+            td.field_i = (il) (Object) var19.a(var21, var22, var23, var24, var25);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var3;
-            stackOut_7_1 = new StringBuilder().append("Virogrid.GB(").append(param0).append(44);
+            stackOut_7_1 = new StringBuilder().append("Virogrid.GB(").append(1053).append(44);
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -1965,7 +1988,8 @@ public final class Virogrid extends od {
                   var2 = 0;
                   break L0;
                 } else {
-                  lm.a(i.field_y, -1, true, nf.field_g, 0);
+                  int discarded$8 = 0;
+                  lm.a(i.field_y, -1, true, nf.field_g);
                   break L0;
                 }
               } else {
@@ -1976,10 +2000,12 @@ public final class Virogrid extends od {
           if (i.field_y != -2) {
             if (hm.field_c != -2) {
               if (we.field_l >= 16) {
-                lm.a(hm.field_c, 1 + (-we.field_l + 32), false, pg.field_g, 0);
+                int discarded$9 = 0;
+                lm.a(hm.field_c, 1 + (-we.field_l + 32), false, pg.field_g);
                 break L0;
               } else {
-                lm.a(i.field_y, we.field_l - -1, false, nf.field_g, 0);
+                int discarded$10 = 0;
+                lm.a(i.field_y, we.field_l - -1, false, nf.field_g);
                 break L0;
               }
             } else {
@@ -1988,13 +2014,15 @@ public final class Virogrid extends od {
                 ej.a(false, 25680);
                 break L0;
               } else {
-                lm.a(i.field_y, -1, false, nf.field_g, 0);
+                int discarded$11 = 0;
+                lm.a(i.field_y, -1, false, nf.field_g);
                 break L0;
               }
             }
           } else {
             if (we.field_l >= 16) {
-              lm.a(hm.field_c, -1, false, pg.field_g, 0);
+              int discarded$12 = 0;
+              lm.a(hm.field_c, -1, false, pg.field_g);
               break L0;
             } else {
               var2 = 0;
@@ -2008,8 +2036,10 @@ public final class Virogrid extends od {
             break L2;
           } else {
             df.b(0, 0, 640, 480, 3158064);
-            this.e((byte) -62);
-            pc.a(mk.field_bb, (byte) -86);
+            int discarded$13 = -62;
+            this.e();
+            int discarded$14 = -86;
+            pc.a(mk.field_bb);
             si.a(nk.field_K, new double[3], new double[3], 64.0, 114.0, mk.field_bb, 2621440, 10420224, 10485760, 26148864, ke.field_p.field_k);
             lk.field_Qb.a(pe.field_j, bi.field_c);
             var33 = new int[12];
@@ -2384,7 +2414,8 @@ public final class Virogrid extends od {
             if (hm.field_c != 10) {
               break L30;
             } else {
-              ij.a((byte) 105);
+              int discarded$15 = 105;
+              ij.a();
               break L30;
             }
           }
@@ -2819,9 +2850,6 @@ public final class Virogrid extends od {
             df.c(29, 29, var5, param2 - -(var5 * param0));
         }
         ul.b((byte) 93);
-        if (param1 != -9105) {
-            this.e(true);
-        }
         return var4;
     }
 
@@ -2880,17 +2908,24 @@ public final class Virogrid extends od {
     final void d(int param0) {
         int var3 = field_F ? 1 : 0;
         Virogrid.u(240);
-        hj.a(17);
+        int discarded$0 = 17;
+        hj.a();
         l.b(-6325);
         p.c(param0 + -32);
         ud.a((byte) -94);
-        fj.a((byte) -99);
+        int discarded$1 = -99;
+        fj.a();
         rh.b(param0 ^ 57);
-        bn.a((byte) -118);
-        rk.a(-97);
-        ld.a((byte) -110);
-        cg.a(-65);
-        nf.a(-28637);
+        int discarded$2 = -118;
+        bn.a();
+        int discarded$3 = -97;
+        rk.a();
+        int discarded$4 = -110;
+        ld.a();
+        int discarded$5 = -65;
+        cg.a();
+        int discarded$6 = -28637;
+        nf.a();
         wd.a(param0 ^ -8518);
         em.a(-85);
         od.d(false);
@@ -2898,277 +2933,424 @@ public final class Virogrid extends od {
         uk.b(param0 + -6490);
         og.b(param0 + 74);
         me.a(param0);
-        cb.b(3981);
+        int discarded$7 = 3981;
+        cb.b();
         df.a();
-        eh.a((byte) -104);
+        int discarded$8 = -104;
+        eh.a();
         e.a();
-        ak.a(4472);
+        int discarded$9 = 4472;
+        ak.a();
         jc.b((byte) 110);
-        hc.a(true);
-        se.a((byte) 79);
-        rb.a((byte) -13);
-        vm.a((byte) -106);
-        oh.a(true);
-        td.a(6666);
-        kb.a(122);
-        pc.a(-30114);
-        ih.a(81);
-        cj.a(-99);
-        nm.a(26523);
+        int discarded$10 = 1;
+        hc.a();
+        int discarded$11 = 79;
+        se.a();
+        int discarded$12 = -13;
+        rb.a();
+        int discarded$13 = -106;
+        vm.a();
+        int discarded$14 = 1;
+        oh.a();
+        int discarded$15 = 6666;
+        td.a();
+        int discarded$16 = 122;
+        kb.a();
+        int discarded$17 = -30114;
+        pc.a();
+        int discarded$18 = 81;
+        ih.a();
+        int discarded$19 = -99;
+        cj.a();
+        int discarded$20 = 26523;
+        nm.a();
         hm.b(param0 ^ -126);
         wf.a(param0 ^ -28608);
-        qc.a((byte) 9);
-        h.a(true);
+        int discarded$21 = 9;
+        qc.a();
+        int discarded$22 = 1;
+        h.a();
         li.b((byte) 112);
-        jg.a(28275);
-        dk.a(-124);
-        sb.b(-851125662);
+        int discarded$23 = 28275;
+        jg.a();
+        int discarded$24 = -124;
+        dk.a();
+        int discarded$25 = -851125662;
+        sb.b();
         ha.a(param0 + 79);
-        nh.a(false);
-        el.d(-127);
-        oi.c(122);
+        int discarded$26 = 0;
+        nh.a();
+        int discarded$27 = -127;
+        el.d();
+        int discarded$28 = 122;
+        oi.c();
         ic.b(23320);
         pi.a(param0 ^ -29216);
         il.a();
         qb.b();
         uf.a(98);
-        ee.b((byte) 119);
+        int discarded$29 = 119;
+        ee.b();
         rl.d(0);
         wb.c(true);
-        bd.a(95);
+        int discarded$30 = 95;
+        bd.a();
         tn.f(param0 + 31);
-        ke.d(-51);
-        wg.a(0);
-        sd.a((byte) 113);
+        int discarded$31 = -51;
+        ke.d();
+        int discarded$32 = 0;
+        wg.a();
+        int discarded$33 = 113;
+        sd.a();
         ah.a((byte) -115);
         ib.a(-60);
-        k.a(1000);
-        we.a((byte) -104);
-        gi.a((byte) -103);
-        en.g(0);
-        qm.j(124);
+        int discarded$34 = 1000;
+        k.a();
+        int discarded$35 = -104;
+        we.a();
+        int discarded$36 = -103;
+        gi.a();
+        int discarded$37 = 0;
+        en.g();
+        int discarded$38 = 124;
+        qm.j();
         km.f(param0 + 2147483647);
         ga.i(param0 ^ -91);
-        ao.g(-119);
+        int discarded$39 = -119;
+        ao.g();
         dj.a(false);
-        um.g(0);
+        int discarded$40 = 0;
+        um.g();
         bg.g(param0);
         lk.e((byte) 10);
         an.a((byte) 26);
-        pl.a((byte) -120);
+        int discarded$41 = -120;
+        pl.a();
         pj.a(false);
         oe.b(param0);
         hk.d(false);
         jm.a(param0);
-        he.g(7);
+        int discarded$42 = 7;
+        he.g();
         fk.c();
-        vl.a(false);
+        int discarded$43 = 0;
+        vl.a();
         ll.a((byte) -64);
         pg.b(param0 + 8192);
         s.a(-1);
         i.a((byte) -78);
         ln.a(true);
-        wn.d(79);
+        int discarded$44 = 79;
+        wn.d();
         qj.b();
         pa.c(true);
         ua.b();
         eg.c(param0 ^ -55);
         ef.a(-3);
         kf.a(-1);
-        vj.b((byte) 17);
+        int discarded$45 = 17;
+        vj.b();
         ea.a(-74);
-        sj.a((byte) 121);
-        jd.a(true);
-        ba.a(14);
+        int discarded$46 = 121;
+        sj.a();
+        int discarded$47 = 1;
+        jd.a();
+        int discarded$48 = 14;
+        ba.a();
         fh.a(10061);
         vf.a(false);
         je.h(-202);
-        b.j((byte) -22);
+        int discarded$49 = -22;
+        b.j();
         vc.g((byte) 108);
-        de.g(false);
-        sh.g(true);
+        int discarded$50 = 0;
+        de.g();
+        int discarded$51 = 1;
+        sh.g();
         qh.f(8246);
-        jl.f(15354);
-        ca.f((byte) 15);
-        uh.a(false);
+        int discarded$52 = 15354;
+        jl.f();
+        int discarded$53 = 15;
+        ca.f();
+        int discarded$54 = 0;
+        uh.a();
         id.a((byte) 24);
-        o.a((byte) 67);
-        ig.a(-77);
-        ii.a((byte) 6);
-        ac.a(-95);
+        int discarded$55 = 67;
+        o.a();
+        int discarded$56 = -77;
+        ig.a();
+        int discarded$57 = 6;
+        ii.a();
+        int discarded$58 = -95;
+        ac.a();
         qi.a(25651);
-        of.a((byte) 110);
+        int discarded$59 = 110;
+        of.a();
         lg.a(param0 ^ -122);
         ne.a(false);
-        ul.a((byte) -96);
-        bk.a((byte) 122);
-        hg.f((byte) 103);
+        int discarded$60 = -96;
+        ul.a();
+        int discarded$61 = 122;
+        bk.a();
+        int discarded$62 = 103;
+        hg.f();
         mm.a(false);
-        dd.b((byte) -58);
-        m.b(-314);
+        int discarded$63 = -58;
+        dd.b();
+        int discarded$64 = -314;
+        m.b();
         ia.a(44);
-        ab.e(-16349);
-        va.a(-91);
+        int discarded$65 = -16349;
+        ab.e();
+        int discarded$66 = -91;
+        va.a();
         na.e((byte) 56);
         sk.a((byte) -52);
         qf.c();
         ff.a();
-        nn.a(53);
+        int discarded$67 = 53;
+        nn.a();
         bf.c(param0 ^ 20391);
         ji.a(-112);
-        am.b((byte) 88);
-        ei.a(-59);
-        lb.b(7);
-        lm.a((byte) -94);
+        int discarded$68 = 88;
+        am.b();
+        int discarded$69 = -59;
+        ei.a();
+        int discarded$70 = 7;
+        lb.b();
+        int discarded$71 = -94;
+        lm.a();
         pn.c(true);
-        qk.c(2);
-        ub.f(-121);
+        int discarded$72 = 2;
+        qk.c();
+        int discarded$73 = -121;
+        ub.f();
         gl.a(param0 + 3);
-        bl.d(false);
-        oa.c((byte) -127);
+        int discarded$74 = 0;
+        bl.d();
+        int discarded$75 = -127;
+        oa.c();
         c.a(false);
         nb.d(-30419);
-        rf.a(-24750);
-        mk.k(-16);
+        int discarded$76 = -24750;
+        rf.a();
+        int discarded$77 = -16;
+        mk.k();
         aj.a(false);
         gj.c();
         tf.a(0);
         wm.c(0);
-        af.a(99);
-        mn.a(0);
-        lh.b(false);
+        int discarded$78 = 99;
+        af.a();
+        int discarded$79 = 0;
+        mn.a();
+        int discarded$80 = 0;
+        lh.b();
         sm.a(param0 + -1);
         cf.a(112);
         ag.b(25);
-        g.b((byte) -108);
-        md.b(46);
+        int discarded$81 = -108;
+        g.b();
+        int discarded$82 = 46;
+        md.b();
         wh.a(param0 + -23862);
         bb.a();
-        db.a(6);
-        bc.a((byte) -101);
+        int discarded$83 = 6;
+        db.a();
+        int discarded$84 = -101;
+        bc.a();
         aa.a(false);
-        lj.a(67);
+        int discarded$85 = 67;
+        lj.a();
         nl.c(120);
-        ql.a((byte) -87);
-        rj.a(6);
-        ie.b(0);
-        fi.c(false);
+        int discarded$86 = -87;
+        ql.a();
+        int discarded$87 = 6;
+        rj.a();
+        int discarded$88 = 0;
+        ie.b();
+        int discarded$89 = 0;
+        fi.c();
         tg.a((byte) -78);
         ec.a(param0 + -3298);
-        dc.h(-126);
+        int discarded$90 = -126;
+        dc.h();
         gg.g(-1);
-        fd.e(1);
+        int discarded$91 = 1;
+        fd.e();
         ma.d(param0);
-        jk.a((byte) 110);
+        int discarded$92 = 110;
+        jk.a();
         nj.b();
-        tk.a(0);
-        kh.a((byte) 81);
+        int discarded$93 = 0;
+        tk.a();
+        int discarded$94 = 81;
+        kh.a();
         qa.a(8342);
-        mc.a(false);
-        oj.f((byte) -111);
+        int discarded$95 = 0;
+        mc.a();
+        int discarded$96 = -111;
+        oj.f();
         wc.a(param0 + 200);
         ad.a(param0 + 90);
         u.b((byte) -11);
-        th.e(-5);
+        int discarded$97 = -5;
+        th.e();
         sl.a(param0 + 1);
         rn.a((byte) -38);
-        te.a((byte) 126);
-        mf.f(-93);
+        int discarded$98 = 126;
+        te.a();
+        int discarded$99 = -93;
+        mf.f();
         gd.b((byte) 104);
         ug.a(-97);
         ch.a(0);
         hl.a();
-        sg.d(-2);
+        int discarded$100 = -2;
+        sg.d();
         fm.a((byte) -54);
         hd.a(3881);
-        d.e((byte) -73);
-        fe.h(32498);
-        ge.a(72);
+        int discarded$101 = -73;
+        d.e();
+        int discarded$102 = 32498;
+        fe.h();
+        int discarded$103 = 72;
+        ge.a();
         rc.a(param0 + -24021);
         qd.a(true);
-        ej.f(2);
-        vd.l(-1);
-        wa.f((byte) 39);
+        int discarded$104 = 2;
+        ej.f();
+        int discarded$105 = -1;
+        vd.l();
+        int discarded$106 = 39;
+        wa.f();
         mb.h((byte) 126);
-        dg.a((byte) 41);
+        int discarded$107 = 41;
+        dg.a();
         nk.a(35);
-        w.a(-116);
-        ng.g(false);
-        gn.g(true);
+        int discarded$108 = -116;
+        w.a();
+        int discarded$109 = 0;
+        ng.g();
+        int discarded$110 = 1;
+        gn.g();
         qe.b((byte) -36);
-        fn.b((byte) 97);
-        ok.f(-100);
+        int discarded$111 = 97;
+        fn.b();
+        int discarded$112 = -100;
+        ok.f();
         qn.c((byte) -124);
-        gb.e(117);
+        int discarded$113 = 117;
+        gb.e();
         al.g(-1);
-        jb.a((byte) -99);
-        gf.a((byte) 124);
+        int discarded$114 = -99;
+        jb.a();
+        int discarded$115 = 124;
+        gf.a();
         dn.a((byte) 112);
-        bm.c(2797);
-        tl.b((byte) -71);
+        int discarded$116 = 2797;
+        bm.c();
+        int discarded$117 = -71;
+        tl.b();
         nd.a((byte) 114);
-        ce.a((byte) 107);
-        vg.f(-114);
-        gk.a((byte) -127);
+        int discarded$118 = 107;
+        ce.a();
+        int discarded$119 = -114;
+        vg.f();
+        int discarded$120 = -127;
+        gk.a();
         eb.a(true);
-        dm.e(-48);
+        int discarded$121 = -48;
+        dm.e();
         lc.a(-26834);
         mj.g(-108);
         ph.d(param0 ^ 121);
         bh.a();
-        ed.a((byte) 51);
+        int discarded$122 = 51;
+        ed.a();
         j.b(param0 ^ -116);
         f.b((byte) 103);
-        jf.a((byte) -124);
+        int discarded$123 = -124;
+        jf.a();
         ij.a(-25621);
-        pm.a(0);
+        int discarded$124 = 0;
+        pm.a();
         fl.a(-24488);
         dh.a(-128);
-        pe.a((byte) -79);
-        la.a((byte) 108);
+        int discarded$125 = -79;
+        pe.a();
+        int discarded$126 = 108;
+        la.a();
         hf.b(param0 ^ -125);
-        ti.b(-88);
+        int discarded$127 = -88;
+        ti.b();
         cc.b(false);
-        a.c(false);
+        int discarded$128 = 0;
+        a.c();
         ae.a((byte) -125);
         kn.h(param0);
-        oc.c(false);
-        hn.a((byte) -9);
-        ai.b(false);
+        int discarded$129 = 0;
+        oc.c();
+        int discarded$130 = -9;
+        hn.a();
+        int discarded$131 = 0;
+        ai.b();
         gh.d(false);
-        vb.b((byte) 112);
-        ka.c(-85);
-        sa.a((byte) -52);
+        int discarded$132 = 112;
+        vb.b();
+        int discarded$133 = -85;
+        ka.c();
+        int discarded$134 = -52;
+        sa.a();
         kg.b((byte) 123);
-        dl.a(0);
-        bj.a((byte) -62);
-        qg.a(114);
+        int discarded$135 = 0;
+        dl.a();
+        int discarded$136 = -62;
+        bj.a();
+        int discarded$137 = 114;
+        qg.a();
         ob.a(param0 + 29137);
         sf.a(100);
-        co.a((byte) 103);
+        int discarded$138 = 103;
+        co.a();
         mh.b((byte) 51);
-        re.b(-120);
+        int discarded$139 = -120;
+        re.b();
         vi.b(param0 + 31856);
-        bi.a(46);
+        int discarded$140 = 46;
+        bi.a();
         fb.a((byte) 21);
-        ra.a(false);
-        tm.a(-74);
+        int discarded$141 = 0;
+        ra.a();
+        int discarded$142 = -74;
+        tm.a();
         da.a(param0 ^ 8355711);
-        cm.c(115);
+        int discarded$143 = 115;
+        cm.c();
         fa.d(0);
         jj.a((byte) 74);
-        ri.b(2);
-        di.h(46);
-        sn.c((byte) -89);
-        ve.c(true);
+        int discarded$144 = 2;
+        ri.b();
+        int discarded$145 = 46;
+        di.h();
+        int discarded$146 = -89;
+        sn.c();
+        int discarded$147 = 1;
+        ve.c();
         kd.c((byte) -124);
-        kk.c((byte) -8);
-        ci.h(-104);
-        on.a((byte) 120);
-        pb.a((byte) 111);
-        wl.a((byte) -75);
+        int discarded$148 = -8;
+        kk.c();
+        int discarded$149 = -104;
+        ci.h();
+        int discarded$150 = 120;
+        on.a();
+        int discarded$151 = 111;
+        pb.a();
+        int discarded$152 = -75;
+        wl.a();
         mi.e(12);
-        hh.a((byte) -124);
+        int discarded$153 = -124;
+        hh.a();
         ((Virogrid) this).field_N = null;
         ((Virogrid) this).field_C = null;
         ((Virogrid) this).field_I = null;
@@ -3183,7 +3365,7 @@ public final class Virogrid extends od {
         ((Virogrid) this).field_M = null;
     }
 
-    private final void a(qb param0, byte param1) {
+    private final void a(qb param0) {
         try {
             param0.a(0, 154, 0);
             param0.a(256, 256, 256, 32);

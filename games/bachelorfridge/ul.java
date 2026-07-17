@@ -5,7 +5,7 @@ abstract class ul extends eo {
     static String field_o;
     int field_n;
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_o = null;
     }
 

@@ -25,7 +25,7 @@ final class dc {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = -119;
         field_a = null;
         field_b = null;

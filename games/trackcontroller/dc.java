@@ -167,36 +167,32 @@ final class dc extends ic {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         int var17 = 0;
         var17 = TrackController.field_F ? 1 : 0;
-        if (param1 == 1581360577) {
-          if (param3 >= param15) {
-            if (param0 <= param3) {
-              if (param0 > param15) {
-                ld.a(param2, param13, param12, param11, param9, param4, param6, param5, param0, param3, param14, param15, param7, true, param8, ll.field_i, param10);
-                return;
-              } else {
-                ld.a(param14, param13, param11, param12, param7, param4, param5, param6, param15, param3, param2, param0, param9, true, param8, ll.field_i, param10);
-                return;
-              }
+        if (param3 >= param15) {
+          if (param0 <= param3) {
+            if (param0 > param15) {
+              ld.a(param2, param13, param12, param11, param9, param4, param6, param5, param0, param3, param14, param15, param7, true, param8, ll.field_i, param10);
+              return;
             } else {
-              ld.a(param10, param5, param12, param8, param9, param7, param6, param13, param3, param0, param14, param15, param4, true, param11, ll.field_i, param2);
+              ld.a(param14, param13, param11, param12, param7, param4, param5, param6, param15, param3, param2, param0, param9, true, param8, ll.field_i, param10);
               return;
             }
           } else {
-            if (param0 <= param15) {
-              if (param3 >= param0) {
-                ld.a(param10, param6, param11, param8, param7, param9, param5, param13, param3, param15, param2, param0, param4, true, param12, ll.field_i, param14);
-                return;
-              } else {
-                ld.a(param2, param6, param8, param11, param4, param9, param13, param5, param0, param15, param10, param3, param7, true, param12, ll.field_i, param14);
-                return;
-              }
-            } else {
-              ld.a(param14, param5, param8, param12, param4, param7, param13, param6, param15, param0, param10, param3, param9, true, param11, ll.field_i, param2);
-              return;
-            }
+            ld.a(param10, param5, param12, param8, param9, param7, param6, param13, param3, param0, param14, param15, param4, true, param11, ll.field_i, param2);
+            return;
           }
         } else {
-          return;
+          if (param0 <= param15) {
+            if (param3 >= param0) {
+              ld.a(param10, param6, param11, param8, param7, param9, param5, param13, param3, param15, param2, param0, param4, true, param12, ll.field_i, param14);
+              return;
+            } else {
+              ld.a(param2, param6, param8, param11, param4, param9, param13, param5, param0, param15, param10, param3, param7, true, param12, ll.field_i, param14);
+              return;
+            }
+          } else {
+            ld.a(param14, param5, param8, param12, param4, param7, param13, param6, param15, param0, param10, param3, param9, true, param11, ll.field_i, param2);
+            return;
+          }
         }
     }
 

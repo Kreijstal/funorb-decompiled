@@ -14,7 +14,7 @@ final class di {
     }
 
     final static int a(byte param0, int param1) {
-        int var2 = 25 % ((param0 - 66) / 58);
+        int var2 = 0;
         return mg.field_f[param1 & 2047];
     }
 

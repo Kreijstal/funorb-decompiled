@@ -4,7 +4,7 @@
 final class hv {
     static int[] field_a;
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         return eea.a(df.field_s, eaa.field_a, 12);
     }
 

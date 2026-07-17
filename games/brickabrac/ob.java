@@ -10,7 +10,7 @@ final class ob extends r {
     static long field_G;
     static vl field_F;
 
-    public static void b(int param0) {
+    public static void b() {
         field_F = null;
         field_E = null;
         field_H = null;

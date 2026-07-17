@@ -252,17 +252,14 @@ class vc extends wd {
         if (!(param0 == 0)) {
             return;
         }
-        if (param2 <= 33) {
-            Object var9 = null;
-            vc.a(-55, (bl) null);
-        }
-        sf var10 = (sf) (Object) ((vc) this).field_j;
+        sf var5 = (sf) (Object) ((vc) this).field_j;
         ui var6 = ((vc) this).field_E;
         if (var6 != null) {
-            var7 = var10.a(param3, -116, (lk) this);
-            var8 = var10.a(param1, (lk) this, (byte) 51);
+            var7 = var5.a(param3, -116, (lk) this);
+            var8 = var5.a(param1, (lk) this, (byte) 51);
             do {
-                ck.a(-2 + var6.field_h + var7, 2 + var6.field_r, var6.field_i + 2, var8 + var6.field_l + -2, 14677);
+                int discarded$0 = 14677;
+                ck.a(-2 + var6.field_h + var7, 2 + var6.field_r, var6.field_i + 2, var8 + var6.field_l + -2);
                 var6 = var6.field_n;
             } while (var6 != null);
         }

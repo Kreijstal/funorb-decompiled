@@ -5,11 +5,11 @@ final class il {
     static int field_a;
     static int[][] field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
     }
 
-    final static void a(ci param0, ci param1, byte param2) {
+    final static void a(ci param0, ci param1) {
         try {
             if (!(param0.field_I != null)) {
                 param0.field_I = new jc();
@@ -25,7 +25,8 @@ final class il {
             }
             me.field_e = param0.field_I;
             cl.field_e = param1.field_I;
-            ab.d((byte) -42);
+            int discarded$0 = -42;
+            ab.d();
         } catch (RuntimeException runtimeException) {
             throw fk.a((Throwable) (Object) runtimeException, "il.B(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 15 + 41);
         }
@@ -56,7 +57,7 @@ final class il {
           var8 = wb.field_c;
           var9 = new km(16, param2);
           var9.e();
-          wb.c(0, param0, 16, param2, param5, param1);
+          wb.c(0, 0, 16, param2, param5, param1);
           var10 = null;
           if (param3) {
             var13 = var9.c();

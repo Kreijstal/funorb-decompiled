@@ -199,12 +199,12 @@ class gp {
     }
 
     private final void b(int param0) {
-        ((gp) this).field_h = ((gp) this).field_h - 256;
+        ((gp) this).field_h = ((gp) this).field_h - param0;
         if (((gp) this).field_h < 0) {
             ((gp) this).field_h = 0;
         }
         if (((gp) this).field_s != null) {
-            ((gp) this).field_s.a(256);
+            ((gp) this).field_s.a(param0);
             return;
         }
     }
@@ -434,35 +434,9 @@ class gp {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 < 8000) {
-            break L0;
-          } else {
-            if (param0 <= 48000) {
-              L1: {
-                field_p = param0;
-                if (!param1) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              field_j = stackIn_7_0 != 0;
-              field_b = 10;
-              return;
-            } else {
-              break L0;
-            }
-          }
-        }
-        throw new IllegalArgumentException();
+        field_p = 22050;
+        field_j = true;
+        field_b = 10;
     }
 
     void f() throws Exception {
@@ -490,7 +464,7 @@ class gp {
         gq var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_j) {
             break L0;
           } else {
@@ -500,7 +474,7 @@ class gp {
         }
         L1: {
           d.a(param0, 0, var3);
-          ((gp) this).field_h = ((gp) this).field_h - 256;
+          ((gp) this).field_h = ((gp) this).field_h - param1;
           if (((gp) this).field_s == null) {
             break L1;
           } else {
@@ -667,7 +641,7 @@ class gp {
           if (((gp) this).field_s == null) {
             break L17;
           } else {
-            ((gp) this).field_s.b(param0, 0, 256);
+            ((gp) this).field_s.b(param0, 0, param1);
             break L17;
           }
         }

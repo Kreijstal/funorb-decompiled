@@ -11,7 +11,7 @@ final class vh {
     static String field_f;
     static mi field_a;
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         long var1 = 0L;
         long var3 = 0L;
         int var5 = 0;

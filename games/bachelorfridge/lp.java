@@ -158,7 +158,7 @@ final class lp extends bca {
         }
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_t = null;
         field_q = null;
     }

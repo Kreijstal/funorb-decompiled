@@ -51,132 +51,59 @@ final class nia extends lw {
             var2 += 2;
             param0 = param0 >> 2;
         }
-        return 49;
+        if (param1) {
+            return 49;
+        }
+        if (!(-2 <= param0)) {
+            param0 = param0 >> 1;
+            var2++;
+        }
+        return var2;
     }
 
     final void a(int param0, byte param1) {
-        if (((nia) this).field_e == 0) {
-          if (param0 == 35) {
-            ((nia) this).b(1);
-            ((nia) this).c(100);
-            sh.field_I = true;
-            if (BachelorFridge.field_y == 0) {
-              if (param1 == 73) {
-                return;
-              } else {
-                java.applet.Applet discarded$9 = nia.d(124);
-                return;
-              }
+        L0: {
+          L1: {
+            if (((nia) this).field_e != 0) {
+              break L1;
             } else {
-              L0: {
-                if (param0 != 11) {
-                  break L0;
-                } else {
-                  if (0 == ((nia) this).field_e) {
-                    return;
-                  } else {
-                    ((nia) this).b(param1 ^ 72);
-                    ((nia) this).b((byte) 112);
-                    if (!um.a(true)) {
-                      break L0;
-                    } else {
-                      if (!((nia) this).c((byte) 95)) {
-                        break L0;
-                      } else {
-                        fla.b(param1 + 23548);
-                        if (param1 == 73) {
-                          return;
-                        } else {
-                          java.applet.Applet discarded$10 = nia.d(124);
-                          return;
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-              if (param1 == 73) {
-                return;
-              } else {
-                java.applet.Applet discarded$11 = nia.d(124);
-                return;
-              }
-            }
-          } else {
-            L1: {
-              if (param0 != 11) {
+              if (param0 != 35) {
                 break L1;
               } else {
-                if (0 == ((nia) this).field_e) {
-                  return;
-                } else {
-                  ((nia) this).b(param1 ^ 72);
-                  ((nia) this).b((byte) 112);
-                  if (!um.a(true)) {
-                    break L1;
-                  } else {
-                    if (!((nia) this).c((byte) 95)) {
-                      break L1;
-                    } else {
-                      fla.b(param1 + 23548);
-                      if (param1 == 73) {
-                        return;
-                      } else {
-                        java.applet.Applet discarded$12 = nia.d(124);
-                        return;
-                      }
-                    }
-                  }
-                }
+                ((nia) this).b(1);
+                ((nia) this).c(100);
+                sh.field_I = true;
+                break L0;
               }
             }
-            if (param1 == 73) {
-              return;
-            } else {
-              java.applet.Applet discarded$13 = nia.d(124);
-              return;
-            }
           }
-        } else {
-          if (param0 == 11) {
+          if (param0 != 11) {
+            break L0;
+          } else {
             if (0 == ((nia) this).field_e) {
               return;
             } else {
               ((nia) this).b(param1 ^ 72);
               ((nia) this).b((byte) 112);
-              if (um.a(true)) {
+              if (!um.a(true)) {
+                break L0;
+              } else {
                 if (!((nia) this).c((byte) 95)) {
-                  if (param1 == 73) {
-                    return;
-                  } else {
-                    java.applet.Applet discarded$14 = nia.d(124);
-                    return;
-                  }
+                  break L0;
                 } else {
                   fla.b(param1 + 23548);
-                  if (param1 == 73) {
-                    return;
-                  } else {
-                    java.applet.Applet discarded$15 = nia.d(124);
-                    return;
-                  }
-                }
-              } else {
-                if (param1 == 73) {
-                  return;
-                } else {
-                  java.applet.Applet discarded$16 = nia.d(124);
-                  return;
+                  break L0;
                 }
               }
             }
+          }
+        }
+        L2: {
+          if (param1 == 73) {
+            break L2;
           } else {
-            if (param1 == 73) {
-              return;
-            } else {
-              java.applet.Applet discarded$17 = nia.d(124);
-              return;
-            }
+            java.applet.Applet discarded$2 = nia.d(124);
+            break L2;
           }
         }
     }
@@ -192,30 +119,18 @@ final class nia extends lw {
     }
 
     final void a(byte param0) {
-        int var2 = 0;
-        L0: {
-          var2 = (int)((1.0 - Math.cos((double)(4 * vr.field_b) * 3.141592653589793 / 100.0)) * 256.0);
-          if (((nia) this).field_e == 1) {
+        int var2 = (int)((1.0 - Math.cos((double)(4 * vr.field_b) * 3.141592653589793 / 100.0)) * 256.0);
+        if (!(((nia) this).field_e != 1)) {
             vg.a(sia.field_j, 9280, 22997, 37000, var2 + 4096, 1760, var2 + 4096, sia.field_j.field_o << 3, sia.field_j.field_n << 3);
-            break L0;
-          } else {
-            break L0;
-          }
         }
         if (param0 < 103) {
-          ((nia) this).a(8);
-          return;
-        } else {
-          return;
+            ((nia) this).a(8);
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_l = null;
         field_m = null;
-        if (param0) {
-            int discarded$0 = nia.a(-47, true);
-        }
     }
 
     nia() {
@@ -258,11 +173,7 @@ final class nia extends lw {
               } else {
                 sd.field_b[var4] = gna.a(rla.a(false, 16711680) - -(var4 * var1_int), (byte) -64, var4 * var3 + lda.a(16711680, (byte) -21), tf.a(-127, 16711680) - -(var4 * var2));
                 var4++;
-                if (var5 == 0) {
-                  continue L2;
-                } else {
-                  return;
-                }
+                continue L2;
               }
             }
           }
@@ -274,88 +185,36 @@ final class nia extends lw {
     }
 
     final static String d(byte param0) {
-        String var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        int var5 = 0;
-        String var6 = null;
-        String var7 = null;
-        String var8 = null;
-        String stackIn_6_0 = null;
-        String stackIn_16_0 = null;
-        String stackOut_5_0 = null;
-        String stackOut_15_0 = null;
-        var5 = BachelorFridge.field_y;
-        var6 = "(" + f.field_b + " " + ef.field_l + " " + bd.field_j + ") " + ri.field_a;
-        if (dw.field_f > 0) {
-          var1 = var6 + ":";
-          var2 = 0;
-          L0: while (true) {
-            if (var2 < dw.field_f) {
-              L1: {
-                stackOut_5_0 = var1 + 32;
-                stackIn_16_0 = stackOut_5_0;
-                stackIn_6_0 = stackOut_5_0;
-                if (var5 != 0) {
-                  break L1;
-                } else {
-                  L2: {
-                    L3: {
-                      var7 = stackIn_6_0;
-                      var3 = 255 & ig.field_m.field_h[var2];
-                      var4 = var3 >> 4;
-                      if (var4 >= 10) {
-                        break L3;
-                      } else {
-                        var4 += 48;
-                        if (var5 == 0) {
-                          break L2;
-                        } else {
-                          break L3;
-                        }
-                      }
-                    }
-                    var4 += 55;
-                    break L2;
-                  }
-                  L4: {
-                    L5: {
-                      var3 = var3 & 15;
-                      var8 = var7 + (char)var4;
-                      if (10 <= var3) {
-                        break L5;
-                      } else {
-                        var3 += 48;
-                        if (var5 == 0) {
-                          break L4;
-                        } else {
-                          break L5;
-                        }
-                      }
-                    }
-                    var3 += 55;
-                    break L4;
-                  }
-                  var1 = var8 + (char)var3;
-                  var2++;
-                  if (var5 == 0) {
-                    continue L0;
-                  } else {
-                    stackOut_15_0 = (String) var1;
-                    stackIn_16_0 = stackOut_15_0;
-                    break L1;
-                  }
-                }
-              }
-              return stackIn_16_0;
-            } else {
-              return var1;
-            }
-          }
-        } else {
-          return var6;
+        int var5 = BachelorFridge.field_y;
+        if (param0 > -80) {
+            return null;
         }
+        String var1 = "(" + f.field_b + " " + ef.field_l + " " + bd.field_j + ") " + ri.field_a;
+        if (dw.field_f > 0) {
+            var1 = var1 + ":";
+            for (var2 = 0; var2 < dw.field_f; var2++) {
+                var1 = var1 + 32;
+                var3 = 255 & ig.field_m.field_h[var2];
+                var4 = var3 >> 4;
+                if (var4 < 10) {
+                    var4 += 48;
+                } else {
+                    var4 += 55;
+                }
+                var3 = var3 & 15;
+                var1 = var1 + (char)var4;
+                if (10 > var3) {
+                    var3 += 48;
+                } else {
+                    var3 += 55;
+                }
+                var1 = var1 + (char)var3;
+            }
+        }
+        return var1;
     }
 
     static {

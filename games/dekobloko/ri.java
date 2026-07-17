@@ -178,44 +178,40 @@ final class ri {
                   break L3;
                 }
                 ef.field_R.field_n = 0;
-                if (param1 >= 101) {
-                  L5: {
-                    L6: {
-                      ef.field_R.a(false, param2, param6, param0);
-                      ef.field_R.e(102, var7_int);
-                      ef.field_R.a((byte) -105, var15);
-                      if (ba.field_b == null) {
-                        break L6;
+                L5: {
+                  L6: {
+                    ef.field_R.a(false, param2, param6, 0);
+                    ef.field_R.e(102, var7_int);
+                    ef.field_R.a((byte) -105, var15);
+                    if (ba.field_b == null) {
+                      break L6;
+                    } else {
+                      if (100 <= ba.field_b.field_r.length) {
+                        break L5;
                       } else {
-                        if (100 <= ba.field_b.field_r.length) {
-                          break L5;
-                        } else {
-                          break L6;
-                        }
+                        break L6;
                       }
                     }
-                    ba.field_b = new wl(100);
-                    break L5;
                   }
-                  ba.field_b.field_n = 0;
-                  ba.field_b.a(true, 10);
-                  var11 = 0;
-                  var9 = var11;
-                  L7: while (true) {
-                    if (4 <= var11) {
-                      ba.field_b.d(-1, param2);
-                      ba.field_b.a(param4, param3, true);
-                      param5.a(false, ba.field_b.field_n, ba.field_b.field_r, 0);
-                      param5.a(false, ef.field_R.field_n, ef.field_R.field_r, 0);
-                      break L0;
-                    } else {
-                      ba.field_b.a(var15[var11], false);
-                      var11++;
-                      continue L7;
-                    }
+                  ba.field_b = new wl(100);
+                  break L5;
+                }
+                ba.field_b.field_n = 0;
+                ba.field_b.a(true, 10);
+                var11 = 0;
+                var9 = var11;
+                L7: while (true) {
+                  if (4 <= var11) {
+                    ba.field_b.d(-1, param2);
+                    ba.field_b.a(param4, param3, true);
+                    param5.a(false, ba.field_b.field_n, ba.field_b.field_r, 0);
+                    param5.a(false, ef.field_R.field_n, ef.field_R.field_r, 0);
+                    break L0;
+                  } else {
+                    ba.field_b.a(var15[var11], false);
+                    var11++;
+                    continue L7;
                   }
-                } else {
-                  return;
                 }
               } else {
                 var8[var9] = rk.field_K.nextInt();
@@ -229,7 +225,7 @@ final class ri {
           L8: {
             var7 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var7;
-            stackOut_22_1 = new StringBuilder().append("ri.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_22_1 = new StringBuilder().append("ri.B(").append(0).append(44).append(115).append(44).append(param2).append(44);
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -380,9 +376,9 @@ final class ri {
             }
           }
           if (((ri) this).field_q) {
-            int fieldTemp$1 = ((ri) this).field_u - 1;
+            int fieldTemp$2 = ((ri) this).field_u - 1;
             ((ri) this).field_u = ((ri) this).field_u - 1;
-            if (fieldTemp$1 > 0) {
+            if (fieldTemp$2 > 0) {
               return;
             } else {
               ((ri) this).field_u = ((ri) this).field_s;
@@ -391,7 +387,8 @@ final class ri {
                 return;
               } else {
                 L1: {
-                  this.d(60);
+                  int discarded$3 = 60;
+                  this.d();
                   if (!param0) {
                     break L1;
                   } else {
@@ -448,7 +445,7 @@ final class ri {
         }
     }
 
-    private final void d(int param0) {
+    private final void d() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -712,30 +709,22 @@ final class ri {
                 break L2;
               }
             }
-            L3: {
-              if (param3 < -57) {
-                break L3;
-              } else {
-                field_i = -11;
-                break L3;
-              }
-            }
             var9 = 0;
-            L4: while (true) {
+            L3: while (true) {
               if (var9 >= 3) {
                 fb.field_c[0][1].c(param4 + 9, var8 + var7_int + param0, 18, -var8 + 18);
                 break L0;
               } else {
                 fb.field_c[0][1].c(var9 * 18 + -27 + param4, 72 + param0, 18, 18);
                 var9++;
-                continue L4;
+                continue L3;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var7, "ri.G(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + 0 + 41);
+          throw dh.a((Throwable) (Object) var7, "ri.G(" + param0 + 44 + param1 + 44 + param2 + 44 + -115 + 44 + param4 + 44 + param5 + 44 + 0 + 41);
         }
     }
 
@@ -877,13 +866,9 @@ final class ri {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
         field_k = null;
-        if (param0 != -91) {
-            Object var2 = null;
-            ri.a(-34, (byte) -93, 92, (java.math.BigInteger) null, (java.math.BigInteger) null, (wl) null, (byte[]) null);
-        }
     }
 
     private ri() throws Throwable {

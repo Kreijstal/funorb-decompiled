@@ -20,70 +20,66 @@ final class ge {
         var4 = MinerDisturbance.field_ab;
         try {
           L0: {
-            if (param1 == 85) {
-              L1: {
-                if (!param2) {
-                  var5 = 0;
-                  var3_int = var5;
-                  L2: while (true) {
-                    if (var5 >= 25) {
-                      break L1;
-                    } else {
-                      L3: {
-                        if (sd.field_c[var5] != param0) {
+            L1: {
+              if (!param2) {
+                var5 = 0;
+                var3_int = var5;
+                L2: while (true) {
+                  if (var5 >= 25) {
+                    break L1;
+                  } else {
+                    L3: {
+                      if (sd.field_c[var5] != param0) {
+                        break L3;
+                      } else {
+                        if (null == gl.field_u[var5]) {
                           break L3;
                         } else {
-                          if (null == gl.field_u[var5]) {
-                            break L3;
-                          } else {
-                            kf.a(gl.field_u[var5], (byte) -111);
-                            gl.field_u[var5] = null;
-                            return;
-                          }
+                          kf.a(gl.field_u[var5], (byte) -111);
+                          gl.field_u[var5] = null;
+                          return;
                         }
                       }
-                      var5++;
-                      continue L2;
                     }
+                    var5++;
+                    continue L2;
                   }
-                } else {
-                  var3_int = 0;
-                  L4: while (true) {
-                    if (var3_int >= 25) {
-                      break L1;
-                    } else {
-                      L5: {
-                        if (rb.field_l[var3_int] != param0) {
-                          break L5;
+                }
+              } else {
+                var3_int = 0;
+                L4: while (true) {
+                  if (var3_int >= 25) {
+                    break L1;
+                  } else {
+                    L5: {
+                      if (rb.field_l[var3_int] != param0) {
+                        break L5;
+                      } else {
+                        if (null != dn.field_t[var3_int]) {
+                          kf.a(dn.field_t[var3_int], (byte) -114);
+                          dn.field_t[var3_int] = null;
+                          return;
                         } else {
-                          if (null != dn.field_t[var3_int]) {
-                            kf.a(dn.field_t[var3_int], (byte) -114);
-                            dn.field_t[var3_int] = null;
-                            return;
-                          } else {
-                            break L5;
-                          }
+                          break L5;
                         }
                       }
-                      var3_int++;
-                      continue L4;
                     }
+                    var3_int++;
+                    continue L4;
                   }
                 }
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var3, "ge.C(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw lj.a((Throwable) (Object) var3, "ge.C(" + param0 + 44 + 85 + 44 + param2 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_g = null;
         field_d = null;
         field_a = null;
@@ -92,7 +88,7 @@ final class ge {
         field_h = null;
     }
 
-    final static ih a(byte[] param0, int param1) {
+    final static ih a(byte[] param0) {
         ih var2 = null;
         RuntimeException var2_ref = null;
         ih stackIn_4_0 = null;

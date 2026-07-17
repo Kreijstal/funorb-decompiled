@@ -9,7 +9,7 @@ final class e {
     static wf field_c;
     static oh field_f;
 
-    public static void b(byte param0) {
+    public static void b() {
         field_e = null;
         field_b = null;
         field_f = null;
@@ -19,16 +19,13 @@ final class e {
     }
 
     final static void a(int param0, byte param1, int param2, oh[] param3) {
-        if (param1 != -92) {
-            return;
-        }
         try {
             nm.field_o = new ve(param3);
-            ng.field_D = param0;
-            fl.field_b = param2;
+            ng.field_D = 8;
+            fl.field_b = 12;
             ca.b(-69);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "e.B(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "e.B(" + 8 + 44 + -92 + 44 + 12 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 

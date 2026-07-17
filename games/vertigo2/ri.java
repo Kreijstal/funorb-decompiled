@@ -16,14 +16,14 @@ final class ri extends li {
     static String field_o;
     boolean field_v;
 
-    public static void a(int param0) {
+    public static void a() {
         field_r = null;
         field_z = null;
         field_o = null;
         field_x = null;
     }
 
-    final static void b(boolean param0, int param1) {
+    final static void b(boolean param0) {
         if (null != nj.field_b) {
             if (!nj.field_b.a((byte) -51, param0)) {
                 return;

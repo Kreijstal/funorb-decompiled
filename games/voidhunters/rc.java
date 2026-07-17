@@ -6,7 +6,7 @@ final class rc implements dja {
     static int field_b;
 
     final static boolean a(int param0, byte param1, int param2) {
-        int var3 = 27 / ((param1 - 42) / 36);
+        int var3 = 27;
         return (540800 & param2) != 0 ? true : false;
     }
 
@@ -23,7 +23,7 @@ final class rc implements dja {
         return (tv) (Object) new qdb();
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 

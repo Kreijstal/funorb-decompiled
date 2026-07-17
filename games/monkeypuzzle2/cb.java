@@ -82,7 +82,7 @@ final class cb {
         }
     }
 
-    final static void b(boolean param0) {
+    final static void b() {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -100,7 +100,7 @@ final class cb {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         field_b = null;

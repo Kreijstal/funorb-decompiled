@@ -36,7 +36,8 @@ abstract class gg extends fd {
               b.field_Eb = new mg(((gg) this).field_g, ((gg) this).field_m);
               break L0;
             }
-            kb.a(b.field_Eb, 16865);
+            int discarded$2 = 16865;
+            kb.a(b.field_Eb);
             df.c();
             ((gg) this).b(0, 23, 0);
             super.a(param0, -param1 + -((gg) this).field_l, -param2 + -((gg) this).field_u, param3);
@@ -269,14 +270,11 @@ abstract class gg extends fd {
 
     final static void a(int param0, wg param1, boolean param2, int param3) {
         try {
-            if (!param2) {
-                field_F = null;
-            }
             jf.field_o = param1;
             oe.field_f = param0;
             qg.field_w = param3;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "gg.HA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "gg.HA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 1 + 44 + param3 + 41);
         }
     }
 
@@ -291,7 +289,7 @@ abstract class gg extends fd {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         pc.field_b = hc.a(-9986);
         jg.field_e = 0;
     }

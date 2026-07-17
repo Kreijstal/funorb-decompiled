@@ -13,34 +13,30 @@ final class ph extends rqa {
         int var3 = 0;
         int var4 = 0;
         String var5 = null;
-        var2 = param1 % 1000;
-        if (param0 == 10) {
-          L0: {
-            var3 = param1 / 1000;
-            var4 = var3 / 60;
-            var3 = var3 % 60;
-            var5 = "";
-            if (var4 <= 0) {
-              break L0;
-            } else {
-              var5 = var5 + var4 + iw.field_D + ":";
-              break L0;
-            }
-          }
-          if (0 >= var4) {
-            if (0 < var3) {
-              var5 = var5 + var3 + htb.field_v;
-              return var5;
-            } else {
-              var5 = var5 + var2 + scb.field_p;
-              return var5;
-            }
+        L0: {
+          var2 = param1 % 1000;
+          var3 = param1 / 1000;
+          var4 = var3 / 60;
+          var3 = var3 % 60;
+          var5 = "";
+          if (var4 <= 0) {
+            break L0;
           } else {
+            var5 = var5 + var4 + iw.field_D + ":";
+            break L0;
+          }
+        }
+        if (0 >= var4) {
+          if (0 < var3) {
             var5 = var5 + var3 + htb.field_v;
+            return var5;
+          } else {
+            var5 = var5 + var2 + scb.field_p;
             return var5;
           }
         } else {
-          return null;
+          var5 = var5 + var3 + htb.field_v;
+          return var5;
         }
     }
 

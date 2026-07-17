@@ -24,7 +24,7 @@ final class dg {
         return ma.field_g;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_g = null;
         field_l = null;
         field_d = null;
@@ -521,7 +521,7 @@ final class dg {
         return (dg) this;
     }
 
-    final static void d(int param0) {
+    final static void d() {
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -551,15 +551,18 @@ final class dg {
                 if (var2 != 1) {
                   if (2 != var2) {
                     fk.a(-93, (Throwable) null, "A1: " + hc.a(false));
-                    mk.a(false);
+                    int discarded$6 = 0;
+                    mk.a();
                     break L1;
                   } else {
                     var15 = (cf) (Object) sf.field_a.c(false);
                     if (var15 == null) {
-                      mk.a(false);
+                      int discarded$7 = 0;
+                      mk.a();
                       return;
                     } else {
-                      var15.field_u = lh.h(-7990);
+                      int discarded$8 = -7990;
+                      var15.field_u = lh.h();
                       var15.field_t = var15.field_u[0];
                       var15.field_s = true;
                       var15.b(false);
@@ -572,12 +575,14 @@ final class dg {
                     var11.b(false);
                     break L1;
                   } else {
-                    mk.a(false);
+                    int discarded$9 = 0;
+                    mk.a();
                     return;
                   }
                 }
               } else {
-                var10 = lh.h(-7990);
+                int discarded$10 = -7990;
+                var10 = lh.h();
                 var18 = var10;
                 var17 = var18;
                 var16 = var17;
@@ -598,7 +603,8 @@ final class dg {
                       var14.b(false);
                       break L1;
                     } else {
-                      mk.a(false);
+                      int discarded$11 = 0;
+                      mk.a();
                       return;
                     }
                   } else {
@@ -848,7 +854,7 @@ final class dg {
         ((dg) this).field_c = -1;
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void a(boolean param0) {
         if (!(!ak.a(3058))) {
             param0 = false;
         }
@@ -885,7 +891,7 @@ final class dg {
         }
     }
 
-    final static void a(boolean param0, boolean param1, boolean param2, int param3) {
+    final static void a(boolean param0, boolean param1, boolean param2) {
         RuntimeException var4 = null;
         hl var5 = null;
         hl var6 = null;
@@ -1267,15 +1273,7 @@ final class dg {
               }
             }
             L21: {
-              if (!param1) {
-                break L21;
-              } else {
-                field_e = -1;
-                break L21;
-              }
-            }
-            L22: {
-              L23: {
+              L22: {
                 stackOut_63_0 = tl.field_P;
                 stackOut_63_1 = 0;
                 stackIn_67_0 = stackOut_63_0;
@@ -1283,7 +1281,7 @@ final class dg {
                 stackIn_64_0 = stackOut_63_0;
                 stackIn_64_1 = stackOut_63_1;
                 if (!param0) {
-                  break L23;
+                  break L22;
                 } else {
                   stackOut_64_0 = (hl) (Object) stackIn_64_0;
                   stackOut_64_1 = stackIn_64_1;
@@ -1292,7 +1290,7 @@ final class dg {
                   stackIn_65_0 = stackOut_64_0;
                   stackIn_65_1 = stackOut_64_1;
                   if (param2) {
-                    break L23;
+                    break L22;
                   } else {
                     stackOut_65_0 = (hl) (Object) stackIn_65_0;
                     stackOut_65_1 = stackIn_65_1;
@@ -1301,7 +1299,7 @@ final class dg {
                     stackIn_66_0 = stackOut_65_0;
                     stackIn_66_1 = stackOut_65_1;
                     if (lg.field_S) {
-                      break L23;
+                      break L22;
                     } else {
                       stackOut_66_0 = (hl) (Object) stackIn_66_0;
                       stackOut_66_1 = stackIn_66_1;
@@ -1309,7 +1307,7 @@ final class dg {
                       stackIn_68_0 = stackOut_66_0;
                       stackIn_68_1 = stackOut_66_1;
                       stackIn_68_2 = stackOut_66_2;
-                      break L22;
+                      break L21;
                     }
                   }
                 }
@@ -1320,10 +1318,10 @@ final class dg {
               stackIn_68_0 = stackOut_67_0;
               stackIn_68_1 = stackOut_67_1;
               stackIn_68_2 = stackOut_67_2;
-              break L22;
+              break L21;
             }
-            L24: {
-              L25: {
+            L23: {
+              L24: {
                 ((hl) (Object) stackIn_68_0).a(stackIn_68_1, stackIn_68_2 != 0);
                 stackOut_68_0 = fk.field_V;
                 stackOut_68_1 = 0;
@@ -1332,7 +1330,7 @@ final class dg {
                 stackIn_69_0 = stackOut_68_0;
                 stackIn_69_1 = stackOut_68_1;
                 if (!param0) {
-                  break L25;
+                  break L24;
                 } else {
                   stackOut_69_0 = (hl) (Object) stackIn_69_0;
                   stackOut_69_1 = stackIn_69_1;
@@ -1341,7 +1339,7 @@ final class dg {
                   stackIn_70_0 = stackOut_69_0;
                   stackIn_70_1 = stackOut_69_1;
                   if (param2) {
-                    break L25;
+                    break L24;
                   } else {
                     stackOut_70_0 = (hl) (Object) stackIn_70_0;
                     stackOut_70_1 = stackIn_70_1;
@@ -1350,7 +1348,7 @@ final class dg {
                     stackIn_71_0 = stackOut_70_0;
                     stackIn_71_1 = stackOut_70_1;
                     if (lg.field_S) {
-                      break L25;
+                      break L24;
                     } else {
                       stackOut_71_0 = (hl) (Object) stackIn_71_0;
                       stackOut_71_1 = stackIn_71_1;
@@ -1358,7 +1356,7 @@ final class dg {
                       stackIn_73_0 = stackOut_71_0;
                       stackIn_73_1 = stackOut_71_1;
                       stackIn_73_2 = stackOut_71_2;
-                      break L24;
+                      break L23;
                     }
                   }
                 }
@@ -1369,10 +1367,10 @@ final class dg {
               stackIn_73_0 = stackOut_72_0;
               stackIn_73_1 = stackOut_72_1;
               stackIn_73_2 = stackOut_72_2;
-              break L24;
+              break L23;
             }
-            L26: {
-              L27: {
+            L25: {
+              L26: {
                 ((hl) (Object) stackIn_73_0).a(stackIn_73_1, stackIn_73_2 != 0);
                 stackOut_73_0 = fj.field_b;
                 stackOut_73_1 = 0;
@@ -1381,7 +1379,7 @@ final class dg {
                 stackIn_74_0 = stackOut_73_0;
                 stackIn_74_1 = stackOut_73_1;
                 if (!param0) {
-                  break L27;
+                  break L26;
                 } else {
                   stackOut_74_0 = (hl) (Object) stackIn_74_0;
                   stackOut_74_1 = stackIn_74_1;
@@ -1390,7 +1388,7 @@ final class dg {
                   stackIn_75_0 = stackOut_74_0;
                   stackIn_75_1 = stackOut_74_1;
                   if (param2) {
-                    break L27;
+                    break L26;
                   } else {
                     stackOut_75_0 = (hl) (Object) stackIn_75_0;
                     stackOut_75_1 = stackIn_75_1;
@@ -1399,7 +1397,7 @@ final class dg {
                     stackIn_76_0 = stackOut_75_0;
                     stackIn_76_1 = stackOut_75_1;
                     if (!lg.field_S) {
-                      break L27;
+                      break L26;
                     } else {
                       stackOut_76_0 = (hl) (Object) stackIn_76_0;
                       stackOut_76_1 = stackIn_76_1;
@@ -1407,7 +1405,7 @@ final class dg {
                       stackIn_78_0 = stackOut_76_0;
                       stackIn_78_1 = stackOut_76_1;
                       stackIn_78_2 = stackOut_76_2;
-                      break L26;
+                      break L25;
                     }
                   }
                 }
@@ -1418,37 +1416,39 @@ final class dg {
               stackIn_78_0 = stackOut_77_0;
               stackIn_78_1 = stackOut_77_1;
               stackIn_78_2 = stackOut_77_2;
-              break L26;
+              break L25;
             }
-            L28: {
+            L27: {
               ((hl) (Object) stackIn_78_0).a(stackIn_78_1, stackIn_78_2 != 0);
               we.field_e.field_g.c(true);
               if (qe.field_a == null) {
-                break L28;
+                break L27;
               } else {
-                L29: {
+                L28: {
                   if (qi.field_n.field_F != 0) {
-                    tb.a(param3, -15289);
-                    break L29;
+                    tb.a(11, -15289);
+                    break L28;
                   } else {
-                    break L29;
+                    break L28;
                   }
                 }
-                L30: {
+                L29: {
                   if (rn.field_c.field_F == 0) {
-                    break L30;
+                    break L29;
                   } else {
                     if (!kl.field_a) {
-                      l.a(0, param3);
-                      break L30;
+                      int discarded$2 = 11;
+                      int discarded$3 = 0;
+                      l.a();
+                      break L29;
                     } else {
-                      oi.a((byte) 126, param3);
-                      break L30;
+                      oi.a((byte) 126, 11);
+                      break L29;
                     }
                   }
                 }
-                hg.a(param3, qe.field_a, 30544, true);
-                break L28;
+                hg.a(11, qe.field_a, 30544, true);
+                break L27;
               }
             }
             break L0;
@@ -1456,7 +1456,7 @@ final class dg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) var4, "dg.D(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw oi.a((Throwable) (Object) var4, "dg.D(" + param0 + 44 + 0 + 44 + param2 + 44 + 11 + 41);
         }
     }
 

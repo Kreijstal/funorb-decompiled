@@ -75,17 +75,11 @@ final class kl extends td {
         return (ii) (Object) stackIn_4_0;
     }
 
-    final static void a(int param0, int param1) {
-        pf var2 = null;
-        var2 = sja.field_fb;
-        var2.c(param1, (byte) 125);
+    final static void a() {
+        pf var2 = sja.field_fb;
+        var2.c(11, (byte) 125);
         var2.d(1, 0);
-        if (param0 <= 19) {
-          return;
-        } else {
-          var2.d(3, 0);
-          return;
-        }
+        var2.d(3, 0);
     }
 
     final static void a(byte param0, kv param1) {
@@ -97,7 +91,6 @@ final class kl extends td {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_2_0 = null;
         StringBuilder stackOut_2_1 = null;
@@ -110,20 +103,14 @@ final class kl extends td {
         try {
           L0: {
             kka.field_h = param1;
-            if (param0 > 1) {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 1;
-              break L0;
-            }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("kl.B(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("kl.B(").append(94).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -147,11 +134,6 @@ final class kl extends td {
             }
           }
           throw pe.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 

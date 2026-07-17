@@ -473,7 +473,7 @@ final class fga extends f {
           if (param0.field_i.length == 0) {
             return null;
           } else {
-            return new fga(param0, (int)((long)param0.field_f * 256L * (long)param1 / (long)(100 * vka.field_s)), param2 << 6, param3 << 6);
+            return new fga(param0, (int)((long)param0.field_f * 256L * 100L / (long)(100 * vka.field_s)), param2 << 6, param3 << 6);
           }
         } else {
           return null;
@@ -1786,12 +1786,12 @@ final class fga extends f {
         }
     }
 
-    final static fga a(gd param0, int param1, int param2) {
+    final static fga a(gd param0) {
         if (param0.field_i != null) {
           if (param0.field_i.length == 0) {
             return null;
           } else {
-            return new fga(param0, (int)((long)param0.field_f * 256L * (long)param1 / (long)(100 * vka.field_s)), 6144);
+            return new fga(param0, (int)((long)param0.field_f * 256L * 100L / (long)(100 * vka.field_s)), 6144);
           }
         } else {
           return null;

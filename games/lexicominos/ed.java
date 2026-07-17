@@ -164,7 +164,7 @@ abstract class ed extends ca {
         }
     }
 
-    final static eb[] a(sh param0, boolean param1) {
+    final static eb[] a(sh param0) {
         eb[] var2 = null;
         RuntimeException var2_ref = null;
         wf var3 = null;

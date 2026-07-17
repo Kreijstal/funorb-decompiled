@@ -372,7 +372,7 @@ final class oc extends fi {
         }
     }
 
-    final static td j(int param0) {
+    final static td j() {
         return (td) (Object) new kf();
     }
 

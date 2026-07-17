@@ -13,7 +13,7 @@ final class dc extends a {
     static o field_j;
     static java.awt.Canvas field_q;
 
-    final static void d(byte param0) {
+    final static void d() {
         if (null != ah.field_e) {
             ah.field_e.f(true);
         }
@@ -21,7 +21,7 @@ final class dc extends a {
         gf.field_cb.c(-3399, (rc) (Object) sj.field_d);
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_j = null;
         field_l = null;
         field_q = null;
@@ -58,7 +58,8 @@ final class dc extends a {
         try {
           L0: {
             L1: {
-              if (null != wd.a(param0, -112)) {
+              int discarded$10 = -112;
+              if (null != wd.a(param0)) {
                 stackOut_2_0 = 0;
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
@@ -237,14 +238,14 @@ final class dc extends a {
         return stackIn_16_0;
     }
 
-    final static void a(dj param0, int param1, byte param2) {
+    final static void a(dj param0) {
         jd var3 = id.field_c;
         try {
-            var3.e(param1, -2147483648);
+            var3.e(7, -2147483648);
             var3.c(36, param0.field_i);
             var3.c(108, param0.field_h);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "dc.I(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 46 + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "dc.I(" + (param0 != null ? "{...}" : "null") + 44 + 7 + 44 + 46 + 41);
         }
     }
 

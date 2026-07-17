@@ -11,7 +11,7 @@ final class gb extends nt {
         ((gb) this).field_u = false;
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_t = null;
     }
 

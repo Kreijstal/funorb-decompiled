@@ -6,10 +6,10 @@ final class glb {
     static String[] field_c;
     static String field_a;
 
-    final static void c(int param0) {
-        RuntimeException var1 = null;
-        qw var1_ref = null;
-        nl var1_ref2 = null;
+    final static void c() {
+        qw var1 = null;
+        nl var1_ref = null;
+        RuntimeException var1_ref2 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -18,72 +18,64 @@ final class glb {
         try {
           L0: {
             L1: {
-              if (param0 == 17043) {
-                break L1;
-              } else {
-                field_a = null;
-                break L1;
-              }
-            }
-            L2: {
               if (ms.field_y == null) {
-                break L2;
+                break L1;
               } else {
                 if (ms.field_y.b(-42)) {
-                  break L2;
+                  break L1;
                 } else {
-                  var1_ref = (qw) (Object) ms.field_y.d(0);
-                  L3: while (true) {
-                    if (var1_ref == null) {
-                      break L2;
+                  var1 = (qw) (Object) ms.field_y.d(0);
+                  L2: while (true) {
+                    if (var1 == null) {
+                      break L1;
                     } else {
-                      L4: {
-                        if (!var1_ref.field_k.b((byte) -63)) {
-                          var1_ref.b(-3846);
-                          break L4;
+                      L3: {
+                        if (!var1.field_k.b((byte) -63)) {
+                          var1.b(-3846);
+                          break L3;
                         } else {
-                          break L4;
+                          break L3;
                         }
                       }
-                      var1_ref = (qw) (Object) ms.field_y.a((byte) 77);
-                      continue L3;
+                      var1 = (qw) (Object) ms.field_y.a((byte) 77);
+                      continue L2;
                     }
                   }
                 }
               }
             }
-            L5: {
+            L4: {
               if (null == gtb.field_d) {
-                break L5;
+                break L4;
               } else {
                 if (!gtb.field_d.b(-74)) {
-                  var1_ref2 = (nl) (Object) gtb.field_d.d(0);
-                  L6: while (true) {
-                    if (var1_ref2 == null) {
-                      break L5;
+                  var1_ref = (nl) (Object) gtb.field_d.d(0);
+                  L5: while (true) {
+                    if (var1_ref == null) {
+                      break L4;
                     } else {
-                      L7: {
-                        if (!var1_ref2.field_h) {
-                          nmb.a((byte) -91, var1_ref2.field_d);
-                          var1_ref2.b(param0 ^ -19863);
-                          break L7;
+                      L6: {
+                        if (!var1_ref.field_h) {
+                          nmb.a((byte) -91, var1_ref.field_d);
+                          var1_ref.b(-3846);
+                          break L6;
                         } else {
-                          L8: {
-                            if (!var1_ref2.field_g) {
-                              break L8;
+                          L7: {
+                            if (!var1_ref.field_g) {
+                              break L7;
                             } else {
-                              var2 = uv.a(param0 + -16915, var1_ref2.field_i);
-                              var3 = pja.b((byte) 119, var1_ref2.field_i, var1_ref2.field_f);
-                              var1_ref2.field_d.a(param0 ^ 16915, var3, var2);
-                              break L8;
+                              var2 = uv.a(128, var1_ref.field_i);
+                              var3 = pja.b((byte) 119, var1_ref.field_i, var1_ref.field_f);
+                              var1_ref.field_d.a(128, var3, var2);
+                              break L7;
                             }
                           }
-                          var1_ref2.field_h = false;
-                          break L7;
+                          var1_ref.field_h = false;
+                          break L6;
                         }
                       }
-                      var1_ref2 = (nl) (Object) gtb.field_d.a((byte) 12);
-                      continue L6;
+                      var1_ref = (nl) (Object) gtb.field_d.a((byte) 12);
+                      continue L5;
                     }
                   }
                 } else {
@@ -95,8 +87,8 @@ final class glb {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var1, "glb.C(" + param0 + 41);
+          var1_ref2 = decompiledCaughtException;
+          throw rta.a((Throwable) (Object) var1_ref2, "glb.C(" + 17043 + 41);
         }
     }
 
@@ -120,7 +112,7 @@ final class glb {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_c = null;
         field_a = null;
     }

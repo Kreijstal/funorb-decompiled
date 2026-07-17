@@ -38,7 +38,7 @@ final class lp extends vd implements gj {
         ((lp) this).field_x = param1;
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_v = null;
         field_A = null;
         field_w = null;
@@ -127,24 +127,22 @@ final class lp extends vd implements gj {
         int var9 = 0;
         lm var10 = null;
         int var11 = 0;
-        Object var12 = null;
-        Object var13 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        RuntimeException stackIn_32_0 = null;
+        StringBuilder stackIn_32_1 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
-        String stackIn_35_2 = null;
+        String stackIn_33_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_30_0 = null;
+        StringBuilder stackOut_30_1 = null;
         RuntimeException stackOut_32_0 = null;
         StringBuilder stackOut_32_1 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
+        String stackOut_32_2 = null;
+        RuntimeException stackOut_31_0 = null;
+        StringBuilder stackOut_31_1 = null;
+        String stackOut_31_2 = null;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
@@ -157,8 +155,8 @@ final class lp extends vd implements gj {
                 jb.field_d = kp.field_j + jc.field_r >> 1;
                 fe.field_B = kp.field_j + jc.field_r >> 1;
                 oi.field_a = be.field_h;
-                var13 = null;
-                qj.a((sq) null, -1);
+                int discarded$2 = -1;
+                qj.a((sq) null);
                 return;
               } else {
                 L1: {
@@ -167,17 +165,8 @@ final class lp extends vd implements gj {
                   var3 = param1.field_b;
                   var4 = param1.field_j;
                   var5 = param1.field_q;
-                  if (param0 == 1546006977) {
-                    break L1;
-                  } else {
-                    var12 = null;
-                    lp.a((mg) null, (byte) -74, (ob) null);
-                    break L1;
-                  }
-                }
-                L2: {
                   if (param1.field_q != -1) {
-                    break L2;
+                    break L1;
                   } else {
                     var6 = uq.field_m.a(5607, param1.field_c);
                     var7 = wk.a(-9615, var6, (nq) (Object) rs.field_Cb, new int[1]);
@@ -186,68 +175,69 @@ final class lp extends vd implements gj {
                     if (param1.field_f != null) {
                       var8 = param1.field_f;
                       var9 = 0;
-                      L3: while (true) {
+                      L2: while (true) {
                         if (var8.length <= var9) {
-                          break L2;
+                          break L1;
                         } else {
                           var10 = var8[var9];
                           var6 = uq.field_m.a(5607, var10.field_b);
                           var7 = wk.a(-9615, var6, (nq) (Object) rs.field_Cb, new int[1]);
                           var5 = var5 + (13 * var7 - -rs.field_Cb.field_q);
                           var9++;
-                          continue L3;
+                          continue L2;
                         }
                       }
                     } else {
-                      break L2;
+                      break L1;
                     }
                   }
                 }
-                L4: {
+                L3: {
                   if ((1 & param1.field_n) == 0) {
                     var2_int = var2_int + 3;
-                    break L4;
+                    break L3;
                   } else {
                     var2_int = 637 + -var2_int;
+                    break L3;
+                  }
+                }
+                L4: {
+                  if ((param1.field_n & 2) != 0) {
+                    var3 = 477 - var3;
+                    break L4;
+                  } else {
+                    var3 = 55 - -var3;
                     break L4;
                   }
                 }
                 L5: {
-                  if ((param1.field_n & 2) != 0) {
-                    var3 = 477 - var3;
+                  if ((2 & param1.field_n) == 0) {
                     break L5;
                   } else {
-                    var3 = 55 - -var3;
+                    var3 = var3 - var5;
                     break L5;
                   }
                 }
                 L6: {
-                  if ((2 & param1.field_n) == 0) {
+                  if ((param1.field_n & 1) == 0) {
                     break L6;
                   } else {
-                    var3 = var3 - var5;
+                    var2_int = var2_int - var4;
                     break L6;
                   }
                 }
                 L7: {
-                  if ((param1.field_n & 1) == 0) {
-                    break L7;
-                  } else {
-                    var2_int = var2_int - var4;
-                    break L7;
-                  }
-                }
-                L8: {
                   jb.field_d = var4 + var2_int;
                   tp.field_b = var3 + var5;
                   oi.field_a = var3;
                   fe.field_B = var2_int;
-                  qj.a(param1, param0 ^ -1546006978);
+                  int discarded$3 = -1;
+                  qj.a(param1);
                   if (param1.field_c.indexOf("<%tabresizehint>") != -1) {
                     uq.field_m.a("", 27275, "tabresizehint");
-                    break L8;
+                    break L7;
                   } else {
-                    break L8;
+                    break L7;
                   }
                 }
                 if (ol.field_g != null) {
@@ -264,33 +254,33 @@ final class lp extends vd implements gj {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L8: {
             var2 = decompiledCaughtException;
-            stackOut_32_0 = (RuntimeException) var2;
-            stackOut_32_1 = new StringBuilder().append("lp.I(").append(param0).append(44);
-            stackIn_34_0 = stackOut_32_0;
-            stackIn_34_1 = stackOut_32_1;
-            stackIn_33_0 = stackOut_32_0;
-            stackIn_33_1 = stackOut_32_1;
+            stackOut_30_0 = (RuntimeException) var2;
+            stackOut_30_1 = new StringBuilder().append("lp.I(").append(1546006977).append(44);
+            stackIn_32_0 = stackOut_30_0;
+            stackIn_32_1 = stackOut_30_1;
+            stackIn_31_0 = stackOut_30_0;
+            stackIn_31_1 = stackOut_30_1;
             if (param1 == null) {
-              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
-              stackOut_34_2 = "null";
-              stackIn_35_0 = stackOut_34_0;
-              stackIn_35_1 = stackOut_34_1;
-              stackIn_35_2 = stackOut_34_2;
-              break L9;
+              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
+              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_2 = "null";
+              stackIn_33_0 = stackOut_32_0;
+              stackIn_33_1 = stackOut_32_1;
+              stackIn_33_2 = stackOut_32_2;
+              break L8;
             } else {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
-              stackOut_33_2 = "{...}";
-              stackIn_35_0 = stackOut_33_0;
-              stackIn_35_1 = stackOut_33_1;
-              stackIn_35_2 = stackOut_33_2;
-              break L9;
+              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
+              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_2 = "{...}";
+              stackIn_33_0 = stackOut_31_0;
+              stackIn_33_1 = stackOut_31_1;
+              stackIn_33_2 = stackOut_31_2;
+              break L8;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + 41);
+          throw r.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 41);
         }
     }
 

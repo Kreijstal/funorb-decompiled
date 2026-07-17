@@ -15,7 +15,7 @@ final class me extends wo {
         ((me) this).field_Eb = -72 + (so.c(144) + param0);
     }
 
-    public static void x(int param0) {
+    public static void x() {
         field_Fb = null;
         field_Cb = null;
         field_Hb = null;
@@ -140,26 +140,26 @@ final class me extends wo {
         op var11 = null;
         Object stackIn_3_0 = null;
         Object stackIn_8_0 = null;
-        Object stackIn_34_0 = null;
+        Object stackIn_32_0 = null;
+        RuntimeException stackIn_34_0 = null;
+        StringBuilder stackIn_34_1 = null;
+        RuntimeException stackIn_35_0 = null;
+        StringBuilder stackIn_35_1 = null;
         RuntimeException stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;
-        RuntimeException stackIn_37_0 = null;
-        StringBuilder stackIn_37_1 = null;
-        RuntimeException stackIn_38_0 = null;
-        StringBuilder stackIn_38_1 = null;
-        String stackIn_38_2 = null;
+        String stackIn_36_2 = null;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_7_0 = null;
-        Object stackOut_33_0 = null;
+        Object stackOut_31_0 = null;
         Object stackOut_2_0 = null;
+        RuntimeException stackOut_33_0 = null;
+        StringBuilder stackOut_33_1 = null;
         RuntimeException stackOut_35_0 = null;
         StringBuilder stackOut_35_1 = null;
-        RuntimeException stackOut_37_0 = null;
-        StringBuilder stackOut_37_1 = null;
-        String stackOut_37_2 = null;
-        RuntimeException stackOut_36_0 = null;
-        StringBuilder stackOut_36_1 = null;
-        String stackOut_36_2 = null;
+        String stackOut_35_2 = null;
+        RuntimeException stackOut_34_0 = null;
+        StringBuilder stackOut_34_1 = null;
+        String stackOut_34_2 = null;
         var9 = ZombieDawn.field_J;
         try {
           L0: {
@@ -184,31 +184,24 @@ final class me extends wo {
                             break L3;
                           } else {
                             if (var10[var8_int].field_d == param5) {
-                              L4: {
-                                if (param2 == 0) {
-                                  break L4;
-                                } else {
-                                  if (var10[var8_int].field_f != param2) {
-                                    break L3;
-                                  } else {
+                              if (var10[var8_int].field_f != 0) {
+                                break L3;
+                              } else {
+                                L4: {
+                                  if (var7 == 0) {
                                     break L4;
-                                  }
-                                }
-                              }
-                              L5: {
-                                if (var7 == 0) {
-                                  break L5;
-                                } else {
-                                  if (param4 >= var10[var8_int].field_b) {
-                                    break L3;
                                   } else {
-                                    break L5;
+                                    if (param4 >= var10[var8_int].field_b) {
+                                      break L3;
+                                    } else {
+                                      break L4;
+                                    }
                                   }
                                 }
+                                var7 = 1;
+                                param4 = var10[var8_int].field_b;
+                                break L3;
                               }
-                              var7 = 1;
-                              param4 = var10[var8_int].field_b;
-                              break L3;
                             } else {
                               break L3;
                             }
@@ -227,16 +220,16 @@ final class me extends wo {
                   break L1;
                 }
               }
-              var11 = param3.a(param4, 1525233840, param5, param2, param1);
-              var7 = 116 % ((47 - param0) / 60);
-              L6: while (true) {
+              var11 = param3.a(param4, 1525233840, param5, 0, param1);
+              var7 = 0;
+              L5: while (true) {
                 if (0 != var11.field_f) {
                   var8 = (java.awt.Frame) var11.field_d;
                   if (var8 != null) {
                     if (2 == var11.field_f) {
                       jb.a(-41, var8, param3);
-                      stackOut_33_0 = null;
-                      stackIn_34_0 = stackOut_33_0;
+                      stackOut_31_0 = null;
+                      stackIn_32_0 = stackOut_31_0;
                       break L0;
                     } else {
                       return var8;
@@ -246,7 +239,7 @@ final class me extends wo {
                   }
                 } else {
                   ld.a(10L, (byte) 118);
-                  continue L6;
+                  continue L5;
                 }
               }
             } else {
@@ -257,35 +250,35 @@ final class me extends wo {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L6: {
             var6 = decompiledCaughtException;
-            stackOut_35_0 = (RuntimeException) var6;
-            stackOut_35_1 = new StringBuilder().append("me.G(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
-            stackIn_37_0 = stackOut_35_0;
-            stackIn_37_1 = stackOut_35_1;
-            stackIn_36_0 = stackOut_35_0;
-            stackIn_36_1 = stackOut_35_1;
+            stackOut_33_0 = (RuntimeException) var6;
+            stackOut_33_1 = new StringBuilder().append("me.G(").append(114).append(44).append(param1).append(44).append(0).append(44);
+            stackIn_35_0 = stackOut_33_0;
+            stackIn_35_1 = stackOut_33_1;
+            stackIn_34_0 = stackOut_33_0;
+            stackIn_34_1 = stackOut_33_1;
             if (param3 == null) {
-              stackOut_37_0 = (RuntimeException) (Object) stackIn_37_0;
-              stackOut_37_1 = (StringBuilder) (Object) stackIn_37_1;
-              stackOut_37_2 = "null";
-              stackIn_38_0 = stackOut_37_0;
-              stackIn_38_1 = stackOut_37_1;
-              stackIn_38_2 = stackOut_37_2;
-              break L7;
+              stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
+              stackOut_35_1 = (StringBuilder) (Object) stackIn_35_1;
+              stackOut_35_2 = "null";
+              stackIn_36_0 = stackOut_35_0;
+              stackIn_36_1 = stackOut_35_1;
+              stackIn_36_2 = stackOut_35_2;
+              break L6;
             } else {
-              stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
-              stackOut_36_1 = (StringBuilder) (Object) stackIn_36_1;
-              stackOut_36_2 = "{...}";
-              stackIn_38_0 = stackOut_36_0;
-              stackIn_38_1 = stackOut_36_1;
-              stackIn_38_2 = stackOut_36_2;
-              break L7;
+              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
+              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
+              stackOut_34_2 = "{...}";
+              stackIn_36_0 = stackOut_34_0;
+              stackIn_36_1 = stackOut_34_1;
+              stackIn_36_2 = stackOut_34_2;
+              break L6;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + 44 + param4 + 44 + param5 + 41);
+          throw sh.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + 44 + param4 + 44 + param5 + 41);
         }
-        return (java.awt.Frame) (Object) stackIn_34_0;
+        return (java.awt.Frame) (Object) stackIn_32_0;
     }
 
     private final int f(int param0, int param1) {

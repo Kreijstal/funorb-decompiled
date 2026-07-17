@@ -22,6 +22,9 @@ final class qn extends am {
 
     final static String a(boolean param0, int param1, boolean param2, boolean param3) {
         int var4 = 0;
+        if (!(!param3)) {
+            var4 += 4;
+        }
         if (param0) {
             var4 += 2;
         }
@@ -34,7 +37,7 @@ final class qn extends am {
         return dn.field_f[var4];
     }
 
-    private final void b(boolean param0) {
+    private final void b() {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -142,9 +145,10 @@ final class qn extends am {
     }
 
     final void a(byte param0) {
-        this.b(false);
+        int discarded$0 = 0;
+        this.b();
         if (param0 < 123) {
-            String discarded$0 = qn.a(true, -8, false, false);
+            String discarded$1 = qn.a(true, -8, false, false);
         }
     }
 

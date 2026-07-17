@@ -141,7 +141,7 @@ final class ge {
         return stackIn_19_0;
     }
 
-    final static jg b(byte param0) {
+    final static jg b() {
         String var1 = aa.a(-54);
         if (var1 != null) {
             if (var1.indexOf('@') >= 0) {
@@ -158,7 +158,7 @@ final class ge {
         field_g = null;
     }
 
-    final static ni a(byte param0, int param1, int param2, pi[] param3, byte[] param4, int param5) {
+    final static ni a(byte param0, int param1, int param2, pi[] param3, byte[] param4) {
         RuntimeException var6 = null;
         int[] var6_array = null;
         int[] var7 = null;
@@ -262,7 +262,7 @@ final class ge {
               var31 = var38;
               var9 = var31;
               var11 = -2 / ((48 - param0) / 43);
-              var10 = new int[]{0, param1, param5};
+              var10 = new int[]{0, param1, 1};
               var55 = new byte[256][];
               var48 = var55;
               var41 = var48;
@@ -427,75 +427,67 @@ final class ge {
               break L10;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 44 + param5 + 41);
+          throw dh.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 44 + 1 + 41);
         }
         return stackIn_27_0;
     }
 
     final static void a(int param0, int param1, byte param2, ud param3) {
-        RuntimeException runtimeException = null;
+        RuntimeException var4 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
         String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              ai.a(80, 0, param3, param0, param1);
-              if (param2 == 127) {
-                break L1;
-              } else {
-                ge.a((byte) 73);
-                break L1;
-              }
-            }
+            ai.a(80, 0, param3, param0, param1);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("ge.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+          L1: {
+            var4 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var4;
+            stackOut_2_1 = new StringBuilder().append("ge.D(").append(param0).append(44).append(param1).append(44).append(127).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param3 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
-              break L2;
-            } else {
               stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
               stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              break L2;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw dh.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         pn.field_bb = new String[qb.field_u];
         pn.field_bb[18] = gg.field_E;
         pn.field_bb[17] = ue.field_d;
@@ -510,21 +502,14 @@ final class ge {
         pn.field_bb[19] = wk.field_k;
         pn.field_bb[6] = jd.field_Zb;
         pn.field_bb[13] = vh.field_c;
-        if (param0 != 123) {
-            field_e = 114;
-        }
         pn.field_bb[16] = uj.field_e;
     }
 
     final static void a(byte param0, jk param1) {
         try {
-            if (param0 > -65) {
-                Object var3 = null;
-                ni discarded$0 = ge.a((byte) -116, -89, -66, (pi[]) null, (byte[]) null, 119);
-            }
             me.field_z = param1;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "ge.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "ge.G(" + -93 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

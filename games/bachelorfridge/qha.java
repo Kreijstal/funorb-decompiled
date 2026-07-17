@@ -11,7 +11,7 @@ final class qha {
     private int field_a;
     static String field_h;
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_h = null;
     }
@@ -36,7 +36,7 @@ final class qha {
         StringBuilder stackOut_5_1 = null;
         String stackOut_5_2 = null;
         try {
-          var4_float = (float)(((qha) this).field_a - param1) + (float)param2 / 100.0f;
+          var4_float = (float)(((qha) this).field_a - -1) + (float)param2 / 100.0f;
           ((qha) this).field_b = (float)((qha) this).field_e * var4_float / (float)(((qha) this).field_g + 1);
           if (param2 == 0) {
             ((qha) this).field_d = param0.field_a;
@@ -73,7 +73,7 @@ final class qha {
               break L0;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 44 + param2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + -1 + 44 + param2 + 41);
         }
     }
 

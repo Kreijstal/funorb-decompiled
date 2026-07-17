@@ -105,21 +105,13 @@ abstract class rl extends ee implements bn {
         return 250 < gi.field_a;
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_h = null;
         field_j = null;
         field_n = null;
         field_p = null;
-        if (param0 > -65) {
-          boolean discarded$2 = rl.d(true);
-          field_i = null;
-          field_l = null;
-          return;
-        } else {
-          field_i = null;
-          field_l = null;
-          return;
-        }
+        field_i = null;
+        field_l = null;
     }
 
     public final void a(rn param0, int param1) {
@@ -203,7 +195,7 @@ abstract class rl extends ee implements bn {
         }
     }
 
-    final static String a(long param0, int param1) {
+    final static String a(long param0) {
         int var3 = 0;
         long var4 = 0L;
         StringBuilder var6 = null;

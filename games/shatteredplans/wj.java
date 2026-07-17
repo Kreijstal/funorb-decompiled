@@ -110,7 +110,8 @@ final class wj extends oh {
                           }
                         }
                       }
-                      if (rr.a(wl.field_f, param0, (byte) 64)) {
+                      int discarded$1 = 64;
+                      if (rr.a(wl.field_f, param0)) {
                         dn.field_h = wl.field_f;
                         if (null == dn.field_h) {
                           break L3;
@@ -401,7 +402,7 @@ final class wj extends oh {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_n = null;
         field_k = null;
     }
@@ -415,23 +416,20 @@ final class wj extends oh {
         int var4 = 0;
         try {
             var5 = js.field_f;
-            var5.h(param1, param0 + -65);
+            var5.h(4, 255);
             var5.field_j = var5.field_j + 1;
             var4 = var5.field_j;
             var5.c(1, (byte) -59);
             var5.c(param2.field_j, (byte) -104);
             var5.c(param2.field_l, (byte) -75);
-            if (param0 != 320) {
-                field_n = null;
-            }
             var5.e(11135, param2.field_i);
             var5.e(11135, param2.field_n);
-            var5.e(param0 ^ 10815, param2.field_m);
-            var5.e(param0 + 10815, param2.field_h);
-            int discarded$0 = var5.a(var4, param0 + -446);
+            var5.e(11135, param2.field_m);
+            var5.e(11135, param2.field_h);
+            int discarded$0 = var5.a(var4, -126);
             var5.b(-var4 + var5.field_j, (byte) 127);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "wj.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw r.a((Throwable) (Object) runtimeException, "wj.B(" + 320 + 44 + 4 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

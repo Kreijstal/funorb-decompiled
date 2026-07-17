@@ -219,7 +219,7 @@ final class gg implements Runnable {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_e = null;
         field_d = null;
         field_f = null;

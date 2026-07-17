@@ -10,25 +10,15 @@ final class nj {
     static int[] field_g;
     static md field_f;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
-        if (param0 != 84) {
-          field_e = -125L;
-          field_c = null;
-          field_d = null;
-          field_g = null;
-          field_a = null;
-          return;
-        } else {
-          field_c = null;
-          field_d = null;
-          field_g = null;
-          field_a = null;
-          return;
-        }
+        field_c = null;
+        field_d = null;
+        field_g = null;
+        field_a = null;
     }
 
-    final static void a(nh param0, nh param1, int param2) {
+    final static void a(nh param0, nh param1) {
         try {
             hf.field_pb = param0;
             jb.field_Qb = param1;

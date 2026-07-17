@@ -7,7 +7,7 @@ final class dh {
     static int field_c;
     static String field_a;
 
-    final static am a(String param0, byte param1) {
+    final static am a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -127,108 +127,20 @@ final class dh {
         kd.field_a = null;
         ii.field_T = 0;
         pg.field_a = null;
-        if (param0) {
-          var2 = oh.field_c;
-          oh.field_c = pi.field_o;
-          if (param1 != 51) {
-            if (50 == param1) {
-              lg.field_n.field_a = 5;
-              pi.field_o = var2;
-              lg.field_n.field_b = lg.field_n.field_b + 1;
-              if (lg.field_n.field_b < 2) {
-                L0: {
-                  if (lg.field_n.field_b < 2) {
-                    break L0;
-                  } else {
-                    if (param1 != 50) {
-                      break L0;
-                    } else {
-                      return 5;
-                    }
-                  }
-                }
-                if (lg.field_n.field_b >= 4) {
-                  return 1;
-                } else {
-                  return -1;
-                }
-              } else {
-                if (51 == param1) {
-                  return 2;
-                } else {
-                  L1: {
-                    if (lg.field_n.field_b < 2) {
-                      break L1;
-                    } else {
-                      if (param1 != 50) {
-                        break L1;
-                      } else {
-                        return 5;
-                      }
-                    }
-                  }
-                  if (lg.field_n.field_b >= 4) {
-                    return 1;
-                  } else {
-                    return -1;
-                  }
-                }
-              }
-            } else {
-              lg.field_n.field_a = 1;
-              pi.field_o = var2;
-              lg.field_n.field_b = lg.field_n.field_b + 1;
-              if (lg.field_n.field_b < 2) {
-                L2: {
-                  if (lg.field_n.field_b < 2) {
-                    break L2;
-                  } else {
-                    if (param1 != 50) {
-                      break L2;
-                    } else {
-                      return 5;
-                    }
-                  }
-                }
-                if (lg.field_n.field_b >= 4) {
-                  return 1;
-                } else {
-                  return -1;
-                }
-              } else {
-                if (51 == param1) {
-                  return 2;
-                } else {
-                  L3: {
-                    if (lg.field_n.field_b < 2) {
-                      break L3;
-                    } else {
-                      if (param1 != 50) {
-                        break L3;
-                      } else {
-                        return 5;
-                      }
-                    }
-                  }
-                  if (lg.field_n.field_b >= 4) {
-                    return 1;
-                  } else {
-                    return -1;
-                  }
-                }
-              }
-            }
-          } else {
-            lg.field_n.field_a = 2;
+        var2 = oh.field_c;
+        oh.field_c = pi.field_o;
+        if (param1 != 51) {
+          if (50 == param1) {
+            lg.field_n.field_a = 5;
             pi.field_o = var2;
             lg.field_n.field_b = lg.field_n.field_b + 1;
             if (lg.field_n.field_b < 2) {
-              L4: {
+              L0: {
                 if (lg.field_n.field_b < 2) {
-                  break L4;
+                  break L0;
                 } else {
                   if (param1 != 50) {
-                    break L4;
+                    break L0;
                   } else {
                     return 5;
                   }
@@ -243,12 +155,55 @@ final class dh {
               if (51 == param1) {
                 return 2;
               } else {
-                L5: {
+                L1: {
                   if (lg.field_n.field_b < 2) {
-                    break L5;
+                    break L1;
                   } else {
                     if (param1 != 50) {
-                      break L5;
+                      break L1;
+                    } else {
+                      return 5;
+                    }
+                  }
+                }
+                if (lg.field_n.field_b >= 4) {
+                  return 1;
+                } else {
+                  return -1;
+                }
+              }
+            }
+          } else {
+            lg.field_n.field_a = 1;
+            pi.field_o = var2;
+            lg.field_n.field_b = lg.field_n.field_b + 1;
+            if (lg.field_n.field_b < 2) {
+              L2: {
+                if (lg.field_n.field_b < 2) {
+                  break L2;
+                } else {
+                  if (param1 != 50) {
+                    break L2;
+                  } else {
+                    return 5;
+                  }
+                }
+              }
+              if (lg.field_n.field_b >= 4) {
+                return 1;
+              } else {
+                return -1;
+              }
+            } else {
+              if (51 == param1) {
+                return 2;
+              } else {
+                L3: {
+                  if (lg.field_n.field_b < 2) {
+                    break L3;
+                  } else {
+                    if (param1 != 50) {
+                      break L3;
                     } else {
                       return 5;
                     }
@@ -263,92 +218,24 @@ final class dh {
             }
           }
         } else {
-          field_a = null;
-          var2 = oh.field_c;
-          oh.field_c = pi.field_o;
-          if (param1 != 51) {
-            if (50 == param1) {
-              lg.field_n.field_a = 5;
-              pi.field_o = var2;
-              lg.field_n.field_b = lg.field_n.field_b + 1;
-              if (lg.field_n.field_b >= 2) {
-                if (51 == param1) {
-                  return 2;
-                } else {
-                  if (lg.field_n.field_b >= 2) {
-                    if (param1 != 50) {
-                      if (lg.field_n.field_b >= 4) {
-                        return 1;
-                      } else {
-                        return -1;
-                      }
-                    } else {
-                      return 5;
-                    }
-                  } else {
-                    if (lg.field_n.field_b >= 4) {
-                      return 1;
-                    } else {
-                      return -1;
-                    }
-                  }
-                }
-              } else {
-                L6: {
-                  if (lg.field_n.field_b < 2) {
-                    break L6;
-                  } else {
-                    if (param1 != 50) {
-                      break L6;
-                    } else {
-                      return 5;
-                    }
-                  }
-                }
-                if (lg.field_n.field_b >= 4) {
-                  return 1;
-                } else {
-                  return -1;
-                }
-              }
+          lg.field_n.field_a = 2;
+          pi.field_o = var2;
+          lg.field_n.field_b = lg.field_n.field_b + 1;
+          if (lg.field_n.field_b >= 2) {
+            if (51 == param1) {
+              return 2;
             } else {
-              lg.field_n.field_a = 1;
-              pi.field_o = var2;
-              lg.field_n.field_b = lg.field_n.field_b + 1;
               if (lg.field_n.field_b >= 2) {
-                if (51 == param1) {
-                  return 2;
-                } else {
-                  if (lg.field_n.field_b >= 2) {
-                    if (param1 != 50) {
-                      if (lg.field_n.field_b >= 4) {
-                        return 1;
-                      } else {
-                        return -1;
-                      }
-                    } else {
-                      return 5;
-                    }
+                if (param1 != 50) {
+                  if (lg.field_n.field_b >= 4) {
+                    return 1;
                   } else {
-                    if (lg.field_n.field_b >= 4) {
-                      return 1;
-                    } else {
-                      return -1;
-                    }
+                    return -1;
                   }
+                } else {
+                  return 5;
                 }
               } else {
-                L7: {
-                  if (lg.field_n.field_b < 2) {
-                    break L7;
-                  } else {
-                    if (param1 != 50) {
-                      break L7;
-                    } else {
-                      return 5;
-                    }
-                  }
-                }
                 if (lg.field_n.field_b >= 4) {
                   return 1;
                 } else {
@@ -357,43 +244,17 @@ final class dh {
               }
             }
           } else {
-            lg.field_n.field_a = 2;
-            pi.field_o = var2;
-            lg.field_n.field_b = lg.field_n.field_b + 1;
             if (lg.field_n.field_b >= 2) {
-              if (51 == param1) {
-                return 2;
+              if (param1 == 50) {
+                return 5;
               } else {
-                if (lg.field_n.field_b >= 2) {
-                  if (param1 != 50) {
-                    if (lg.field_n.field_b >= 4) {
-                      return 1;
-                    } else {
-                      return -1;
-                    }
-                  } else {
-                    return 5;
-                  }
+                if (lg.field_n.field_b >= 4) {
+                  return 1;
                 } else {
-                  if (lg.field_n.field_b >= 4) {
-                    return 1;
-                  } else {
-                    return -1;
-                  }
+                  return -1;
                 }
               }
             } else {
-              L8: {
-                if (lg.field_n.field_b < 2) {
-                  break L8;
-                } else {
-                  if (param1 != 50) {
-                    break L8;
-                  } else {
-                    return 5;
-                  }
-                }
-              }
               if (lg.field_n.field_b >= 4) {
                 return 1;
               } else {

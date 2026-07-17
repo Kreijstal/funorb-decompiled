@@ -124,10 +124,11 @@ final class hj extends gd {
 
     final static cn[] a(int param0, int param1, byte param2, int param3, int param4) {
         int var5 = 6 / ((param2 - 62) / 33);
-        return ba.a(param0, 3, -102, param3, param4, 1, 1, param1, 1);
+        int discarded$0 = 1;
+        return ba.a(param0, 3, -102, param3, param4, 1, 1, param1);
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_ab = null;
         field_Z = null;
         field_U = null;
@@ -139,7 +140,7 @@ final class hj extends gd {
         field_Q = null;
     }
 
-    final static void g(int param0) {
+    final static void g() {
         fe.field_k = new md();
         int var1 = 29;
     }
@@ -194,54 +195,44 @@ final class hj extends gd {
         float var11 = 0.0f;
         int var12 = 0;
         int var13 = 0;
-        Object var14 = null;
         cn var15 = null;
         var13 = DungeonAssault.field_K;
-        var15 = new cn(param0, param4);
-        var15.field_w = -param1;
-        var15.field_A = -param1;
+        var15 = new cn(80, param4);
+        var15.field_w = -20;
+        var15.field_A = -20;
         var7 = param2 & 16711935;
         jh.a(var15);
         var8 = param2 & 65280;
         var9 = 0;
         L0: while (true) {
           if (var9 >= param4) {
-            L1: {
-              jh.b();
-              if (param3 == 3) {
-                break L1;
-              } else {
-                var14 = null;
-                this.a(38, 87, (cn) null, (byte) 84);
-                break L1;
-              }
-            }
+            jh.b();
             return var15;
           } else {
             var10 = 0;
-            L2: while (true) {
-              if (param0 <= var10) {
+            L1: while (true) {
+              if (80 <= var10) {
                 var9++;
                 continue L0;
               } else {
-                var11 = -(float)Math.sqrt((double)((float)((var9 + -(param4 >> 1)) * (var9 + -(param4 >> 1)) + (-(param0 >> 1) + var10) * (var10 - (param0 >> 1))) / (float)(param0 * param0 / 4))) + 1.0f;
+                var11 = -(float)Math.sqrt((double)((float)((var9 + -(param4 >> 1)) * (var9 + -(param4 >> 1)) + (-40 + var10) * (var10 - 40)) / (float)1600)) + 1.0f;
                 var12 = (int)(512.0f * var11);
                 if (var12 <= -1) {
-                  L3: {
+                  L2: {
                     if (-257 < var12) {
                       var12 = 256;
-                      break L3;
+                      break L2;
                     } else {
-                      break L3;
+                      break L2;
                     }
                   }
                   param2 = (var8 * var12 & 16711680 | -16711936 & var7 * var12) >>> 8;
-                  var15.field_B[param0 * var9 - -var10] = param2;
+                  var15.field_B[80 * var9 - -var10] = param2;
                   var10++;
-                  continue L2;
+                  continue L1;
                 } else {
                   var10++;
-                  continue L2;
+                  continue L1;
                 }
               }
             }

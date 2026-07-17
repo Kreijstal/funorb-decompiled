@@ -176,17 +176,9 @@ final class ee extends ms {
         String stackOut_10_2 = null;
         try {
           L0: {
-            L1: {
-              var3_int = param0.field_j;
-              var4 = se.a((byte) 86, (CharSequence) (Object) param2);
-              param0.g(0, var4.length);
-              if (param1 < -36) {
-                break L1;
-              } else {
-                ee.a(true);
-                break L1;
-              }
-            }
+            var3_int = param0.field_j;
+            var4 = se.a((byte) 86, (CharSequence) (Object) param2);
+            param0.g(0, var4.length);
             param0.field_j = param0.field_j + ak.field_v.a(var4, param0.field_j, -6309, param0.field_h, 0, var4.length);
             stackOut_3_0 = -var3_int + param0.field_j;
             stackIn_4_0 = stackOut_3_0;
@@ -194,7 +186,7 @@ final class ee extends ms {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var3 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var3;
             stackOut_5_1 = new StringBuilder().append("ee.J(");
@@ -209,7 +201,7 @@ final class ee extends ms {
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               stackIn_9_2 = stackOut_8_2;
-              break L2;
+              break L1;
             } else {
               stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
               stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
@@ -217,12 +209,12 @@ final class ee extends ms {
               stackIn_9_0 = stackOut_6_0;
               stackIn_9_1 = stackOut_6_1;
               stackIn_9_2 = stackOut_6_2;
-              break L2;
+              break L1;
             }
           }
-          L3: {
+          L2: {
             stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44).append(param1).append(44);
+            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44).append(-87).append(44);
             stackIn_12_0 = stackOut_9_0;
             stackIn_12_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -234,7 +226,7 @@ final class ee extends ms {
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
-              break L3;
+              break L2;
             } else {
               stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
               stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
@@ -242,7 +234,7 @@ final class ee extends ms {
               stackIn_13_0 = stackOut_10_0;
               stackIn_13_1 = stackOut_10_1;
               stackIn_13_2 = stackOut_10_2;
-              break L3;
+              break L2;
             }
           }
           throw r.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
@@ -3508,7 +3500,7 @@ final class ee extends ms {
           }
         }
         L359: {
-          var3 = -15 % ((42 - param0) / 35);
+          var3 = -1;
           var2 = nb.a("text_ordinals,2", 123);
           if (null != var2) {
             eh.field_I[2] = rm.a(var2, 17746);

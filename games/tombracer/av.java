@@ -77,29 +77,25 @@ final class av {
             var10 = 5;
             dh.field_e.a(var9_int + -10, param7, -23776, var10, 5);
             pq.field_g.a(dh.field_e.field_G - mka.field_b.field_G, param7, -23776, 0, 0);
-            if (param3 == -5327) {
-              var10 = var10 + (param7 + param5);
-              mka.field_b.a(mka.field_b.field_G, param7, -23776, 0, pq.field_g.field_G);
-              lra.field_d.a(lra.field_d.b((byte) 69), param6, param3 + -18449, var10, 5);
-              var11 = qpa.field_b.b((byte) 69);
-              qpa.field_b.a(var11, param6, -23776, var10, var9_int + -5 + -var11);
-              var12 = 5 + (param6 + var10);
-              lra.field_e.a(var9_int, param1, -23776, 0, 0);
-              ep.field_r.a(var9_int, var12, -23776, param1, 0);
-              ep.field_r.field_w = hca.c(ep.field_r.field_t, 2105376, 3, 11579568, -112, 8421504);
-              var12 = var12 + param1;
-              wi.field_s.a(var9_int, var12, -23776, -(var12 / 2) + param0, -(var9_int / 2) + param8);
-              break L0;
-            } else {
-              return;
-            }
+            var10 = var10 + (param7 + param5);
+            mka.field_b.a(mka.field_b.field_G, param7, -23776, 0, pq.field_g.field_G);
+            lra.field_d.a(lra.field_d.b((byte) 69), param6, -23776, var10, 5);
+            var11 = qpa.field_b.b((byte) 69);
+            qpa.field_b.a(var11, param6, -23776, var10, var9_int + -5 + -var11);
+            var12 = 5 + (param6 + var10);
+            lra.field_e.a(var9_int, 20, -23776, 0, 0);
+            ep.field_r.a(var9_int, var12, -23776, 20, 0);
+            ep.field_r.field_w = hca.c(ep.field_r.field_t, 2105376, 3, 11579568, -112, 8421504);
+            var12 = var12 + 20;
+            wi.field_s.a(var9_int, var12, -23776, -(var12 / 2) + param0, -(var9_int / 2) + param8);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var9 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var9;
-            stackOut_7_1 = new StringBuilder().append("av.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_7_1 = new StringBuilder().append("av.C(").append(param0).append(44).append(20).append(44).append(param2).append(44).append(-5327).append(44);
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -129,7 +125,7 @@ final class av {
     final static void a(int param0, fia param1, int param2, String param3, int param4, int param5, int param6, int param7, int param8) {
         try {
             wea.field_a = param4;
-            int var9_int = -25 / ((44 - param2) / 33);
+            int var9_int = 25;
             pu.field_b = param0;
             wk.field_n = param5;
             pca.field_a = param3;
@@ -141,7 +137,7 @@ final class av {
             ep.field_k = new ss(param1);
             uja.field_a = new fma(wg.field_l, ep.field_k);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "av.J(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "av.J(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 103 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
         }
     }
 
@@ -165,7 +161,8 @@ final class av {
         if (var6 == 0) {
             return;
         }
-        ((av) this).field_f.a(param2, this.b(param3, 8421504), 0, param1);
+        int discarded$0 = 8421504;
+        ((av) this).field_f.a(param2, this.b(param3), 0, param1);
         param3++;
         this.a(param0, -1 + param1, param2, param3);
         this.a(true, 1 + param1, param2, param3);
@@ -173,7 +170,7 @@ final class av {
         this.a(param0, param1, param2 - -1, param3);
     }
 
-    private final void a(int param0) {
+    private final void a() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -239,10 +236,7 @@ final class av {
         return ((av) this).field_a;
     }
 
-    private final int b(int param0, int param1) {
-        if (param1 != 8421504) {
-            ((av) this).field_f = null;
-        }
+    private final int b(int param0) {
         return -param0 + -100;
     }
 
@@ -353,7 +347,7 @@ final class av {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_b = null;
     }
 
@@ -384,7 +378,8 @@ final class av {
         if (param3 <= 79) {
             return;
         }
-        this.a(66);
+        int discarded$0 = 66;
+        this.a();
         this.a(true);
     }
 

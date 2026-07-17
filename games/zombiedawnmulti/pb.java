@@ -13,32 +13,28 @@ final class pb {
     static int field_d;
 
     final static boolean a(int param0, int param1, int param2) {
-        int stackIn_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackOut_8_0 = 0;
+        int stackOut_7_0 = 0;
         if (!ch.a(param2, false)) {
           return false;
         } else {
-          if (param1 == -20) {
-            if (param0 != 255) {
-              if (param0 >= 19) {
-                return false;
-              } else {
-                L0: {
-                  if ((1 << -32 + param2 & em.field_O[param0]) == 0) {
-                    stackOut_10_0 = 0;
-                    stackIn_11_0 = stackOut_10_0;
-                    break L0;
-                  } else {
-                    stackOut_9_0 = 1;
-                    stackIn_11_0 = stackOut_9_0;
-                    break L0;
-                  }
-                }
-                return stackIn_11_0 != 0;
-              }
-            } else {
+          if (param0 != 255) {
+            if (param0 >= 19) {
               return false;
+            } else {
+              L0: {
+                if ((1 << -32 + param2 & em.field_O[param0]) == 0) {
+                  stackOut_8_0 = 0;
+                  stackIn_9_0 = stackOut_8_0;
+                  break L0;
+                } else {
+                  stackOut_7_0 = 1;
+                  stackIn_9_0 = stackOut_7_0;
+                  break L0;
+                }
+              }
+              return stackIn_9_0 != 0;
             }
           } else {
             return false;
@@ -197,7 +193,7 @@ final class pb {
         return stackIn_3_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_c = null;
         field_i = null;
@@ -286,7 +282,7 @@ final class pb {
         }
     }
 
-    final static int a(int param0, int param1, boolean param2) {
+    final static int a(int param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;

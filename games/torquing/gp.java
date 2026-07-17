@@ -124,7 +124,7 @@ final class gp extends tk implements wg {
         }
     }
 
-    public static void k(byte param0) {
+    public static void k() {
         field_L = null;
         field_M = null;
         field_P = null;

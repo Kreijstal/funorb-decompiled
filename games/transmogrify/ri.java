@@ -72,62 +72,31 @@ class ri extends wf {
     final static void a(int param0, int param1, int param2, int param3, byte param4, int param5, int param6, int param7) {
         int var9 = 0;
         var9 = Transmogrify.field_A ? 1 : 0;
-        if (param4 >= -117) {
-          int discarded$1 = ri.a(-105, -75);
-          if (param5 < param6) {
-            if (param6 >= param3) {
-              if (param3 <= param5) {
-                ca.a(param7, param5, param0, param1, param2, true, param3, param6, sb.field_h);
-                return;
-              } else {
-                ca.a(param7, param3, param2, param1, param0, true, param5, param6, sb.field_h);
-                return;
-              }
+        if (param5 < param6) {
+          if (param6 >= param3) {
+            if (param3 <= param5) {
+              ca.a(param7, param5, param0, param1, param2, true, param3, param6, sb.field_h);
+              return;
             } else {
-              ca.a(param2, param6, param7, param1, param0, true, param5, param3, sb.field_h);
+              ca.a(param7, param3, param2, param1, param0, true, param5, param6, sb.field_h);
               return;
             }
           } else {
-            if (param3 <= param5) {
-              if (param6 < param3) {
-                ca.a(param0, param3, param2, param1, param7, true, param6, param5, sb.field_h);
-                return;
-              } else {
-                ca.a(param0, param6, param7, param1, param2, true, param3, param5, sb.field_h);
-                return;
-              }
-            } else {
-              ca.a(param2, param5, param0, param1, param7, true, param6, param3, sb.field_h);
-              return;
-            }
+            ca.a(param2, param6, param7, param1, param0, true, param5, param3, sb.field_h);
+            return;
           }
         } else {
-          if (param5 < param6) {
-            if (param6 >= param3) {
-              if (param3 <= param5) {
-                ca.a(param7, param5, param0, param1, param2, true, param3, param6, sb.field_h);
-                return;
-              } else {
-                ca.a(param7, param3, param2, param1, param0, true, param5, param6, sb.field_h);
-                return;
-              }
+          if (param3 <= param5) {
+            if (param6 < param3) {
+              ca.a(param0, param3, param2, param1, param7, true, param6, param5, sb.field_h);
+              return;
             } else {
-              ca.a(param2, param6, param7, param1, param0, true, param5, param3, sb.field_h);
+              ca.a(param0, param6, param7, param1, param2, true, param3, param5, sb.field_h);
               return;
             }
           } else {
-            if (param3 <= param5) {
-              if (param6 < param3) {
-                ca.a(param0, param3, param2, param1, param7, true, param6, param5, sb.field_h);
-                return;
-              } else {
-                ca.a(param0, param6, param7, param1, param2, true, param3, param5, sb.field_h);
-                return;
-              }
-            } else {
-              ca.a(param2, param5, param0, param1, param7, true, param6, param3, sb.field_h);
-              return;
-            }
+            ca.a(param2, param5, param0, param1, param7, true, param6, param3, sb.field_h);
+            return;
           }
         }
     }

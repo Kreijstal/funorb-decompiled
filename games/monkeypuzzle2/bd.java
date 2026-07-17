@@ -35,20 +35,14 @@ final class bd {
         }
     }
 
-    final static boolean a(int param0) {
-        if (param0 == 25951) {
-          if (null != ol.field_g) {
-            if (!dk.field_h.b(param0 + -25949)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+    final static boolean a() {
+        if (null == ol.field_g) {
             return false;
-          }
-        } else {
-          return true;
         }
+        if (!dk.field_h.b(2)) {
+            return false;
+        }
+        return true;
     }
 
     static {

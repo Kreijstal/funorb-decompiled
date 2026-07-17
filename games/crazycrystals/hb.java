@@ -127,7 +127,7 @@ final class hb extends jb {
                                     break L9;
                                   } else {
                                     if (var15[var13 + -1] == 0) {
-                                      kh.b(var17, var16, param0, param6);
+                                      kh.b(var17, var16, param0, 1);
                                       break L8;
                                     } else {
                                       break L9;
@@ -139,7 +139,7 @@ final class hb extends jb {
                                     break L10;
                                   } else {
                                     if (0 == var15[-param4.field_l + var13]) {
-                                      kh.b(var17, var16, param0, param6);
+                                      kh.b(var17, var16, param0, 1);
                                       break L8;
                                     } else {
                                       break L10;
@@ -151,7 +151,7 @@ final class hb extends jb {
                                     break L11;
                                   } else {
                                     if (var15[1 + var13] == 0) {
-                                      kh.b(var17, var16, param0, param6);
+                                      kh.b(var17, var16, param0, 1);
                                       break L8;
                                     } else {
                                       break L11;
@@ -164,7 +164,7 @@ final class hb extends jb {
                                   if (var15[var13 - -param4.field_l] != 0) {
                                     break L8;
                                   } else {
-                                    kh.b(var17, var16, param0, param6);
+                                    kh.b(var17, var16, param0, 1);
                                     break L8;
                                   }
                                 }
@@ -215,11 +215,11 @@ final class hb extends jb {
               break L12;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_46_0, stackIn_46_2 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw dn.a((Throwable) (Object) stackIn_46_0, stackIn_46_2 + 44 + param5 + 44 + 1 + 44 + param7 + 41);
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_h = null;
         field_l = null;
         field_k = null;

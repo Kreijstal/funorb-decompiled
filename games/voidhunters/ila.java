@@ -4,7 +4,7 @@
 final class ila extends ksa {
     String field_d;
 
-    final static void c(byte param0) {
+    final static void c() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -306,7 +306,7 @@ final class ila extends ksa {
         }
     }
 
-    final static String a(byte[] param0, int param1) {
+    final static String a(byte[] param0) {
         String var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -337,7 +337,7 @@ final class ila extends ksa {
               var3 = 0;
               L1: while (true) {
                 if (var3 >= param0.length) {
-                  var3 = 84 % ((param1 - -26) / 46);
+                  var3 = 0;
                   stackOut_9_0 = var2 + "]";
                   stackIn_10_0 = stackOut_9_0;
                   break L0;
@@ -386,7 +386,7 @@ final class ila extends ksa {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + -88 + 41);
         }
         return stackIn_10_0;
     }

@@ -10,7 +10,7 @@ final class qf {
     static String field_a;
     static String field_c;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
         int var1 = 0;
         field_c = null;
@@ -28,9 +28,6 @@ final class qf {
         ek.field_e = param4;
         hq.field_e = param0;
         db.field_c = param1;
-        if (param3 < 9) {
-            return;
-        }
         try {
             er.field_a = param6;
             gm.field_i = param7;
@@ -38,11 +35,11 @@ final class qf {
             ou.field_h = new vo(param8);
             oi.field_c = new dd(ai.field_T, ou.field_h);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "qf.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + (param8 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "qf.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + 103 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + (param8 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
     }
 
     final static void a(int param0) {
@@ -53,13 +50,13 @@ final class qf {
         rl.field_C.a((kb) (Object) pq.field_a, 0);
     }
 
-    final static void a(nr param0, int param1, int param2, nr param3, int param4, int param5) {
+    final static void a(nr param0, int param1, int param2, nr param3) {
         try {
-            et.field_b = param1;
-            el.field_c = param2;
-            cp.field_a = param4;
+            et.field_b = 8;
+            el.field_c = 8;
+            cp.field_a = 2;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "qf.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + -125 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "qf.D(" + (param0 != null ? "{...}" : "null") + 44 + 8 + 44 + 8 + 44 + (param3 != null ? "{...}" : "null") + 44 + 2 + 44 + -125 + 41);
         }
     }
 

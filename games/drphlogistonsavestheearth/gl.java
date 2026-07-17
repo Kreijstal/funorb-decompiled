@@ -10,25 +10,22 @@ final class gl extends RuntimeException {
     static int field_c;
     Throwable field_a;
 
-    final static void a(int param0, int param1, byte param2, int param3, int param4, nh param5, int param6, int param7, int param8) {
+    final static void a(int param0, int param1, byte param2, int param3, int param4, nh param5) {
         try {
-            if (param2 > -91) {
-                field_e = null;
-            }
-            ph.field_e = param6;
+            ph.field_e = -2;
             af.field_d = param0;
             hf.field_z = param5;
             ca.field_db = param1;
-            ac.field_a = param3;
-            fe.field_a = param7;
-            ib.field_l = param8;
-            hd.field_B = param4;
+            ac.field_a = 15;
+            fe.field_a = 10;
+            ib.field_l = 3072;
+            hd.field_B = 30;
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "gl.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 44 + param7 + 44 + param8 + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "gl.B(" + param0 + 44 + param1 + 44 + -96 + 44 + 15 + 44 + 30 + 44 + (param5 != null ? "{...}" : "null") + 44 + -2 + 44 + 10 + 44 + 3072 + 41);
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_f = null;
         field_e = null;
         field_g = null;

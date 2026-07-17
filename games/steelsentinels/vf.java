@@ -9,7 +9,7 @@ final class vf {
     static String field_f;
     static int field_e;
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_a = null;
         int var1 = 1;
@@ -62,13 +62,13 @@ final class vf {
                       return;
                     }
                   } else {
-                    tc.a(87, 6);
+                    tc.a(87, param1);
                     var2 = fg.field_Ub.a((byte) -111);
                     continue L2;
                   }
                 }
               } else {
-                vm.a(6, -103, var5);
+                vm.a(param1, -103, var5);
                 var5 = (rh) (Object) ol.field_Vb.a((byte) -92);
                 continue L1;
               }
@@ -77,7 +77,7 @@ final class vf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var2_ref, "vf.A(" + param0 + 44 + 6 + 41);
+          throw ci.a((Throwable) (Object) var2_ref, "vf.A(" + param0 + 44 + param1 + 41);
         }
     }
 

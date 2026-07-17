@@ -10,7 +10,7 @@ final class dk {
     static Random field_a;
     static int field_e;
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void a(java.applet.Applet param0) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -84,7 +84,7 @@ final class dk {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         bi var1 = null;
         ld var2 = null;
         var1 = (bi) (Object) bb.field_a.b(77);

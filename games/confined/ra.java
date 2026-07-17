@@ -7,7 +7,7 @@ abstract class ra implements dm {
     static mn field_d;
     static String field_b;
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_d = null;
         field_b = null;
         field_c = null;

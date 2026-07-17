@@ -22,13 +22,10 @@ final class sd {
         field_j = null;
     }
 
-    final static void a(byte param0) {
-        if (param0 != -63) {
-            field_i = null;
-        }
+    final static void a() {
     }
 
-    final static boolean a(ni param0, int param1) {
+    final static boolean a(ni param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

@@ -231,7 +231,7 @@ final class to extends tm {
         return param1 == 0 ? ij.field_t : ld.field_h;
     }
 
-    final static ml[] a(byte param0) {
+    final static ml[] a() {
         return new ml[]{eo.field_Xb, ug.field_v, ve.field_l};
     }
 

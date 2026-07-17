@@ -8,7 +8,7 @@ final class hb extends coa {
     static String field_u;
     static String field_v;
 
-    final static mi a(in param0, boolean param1) {
+    final static mi a(in param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         StringBuilder var3 = null;
@@ -128,7 +128,7 @@ final class hb extends coa {
     public hb() {
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_w = null;
         field_v = null;
         field_u = null;

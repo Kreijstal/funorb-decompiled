@@ -5,7 +5,7 @@ final class id {
     static ed field_a;
     static byte[][] field_b;
 
-    final static void c(int param0) {
+    final static void c() {
         ed var1 = null;
         ed var2 = null;
         int var3 = 0;
@@ -33,18 +33,15 @@ final class id {
     final static void a(int param0, int param1) {
         jn.field_c = 33;
         jn.field_a = 21845;
-        jn.field_e = param0 * 50 / 150;
+        jn.field_e = 133;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
-        if (param0 != -17129) {
-            return;
-        }
         field_a = null;
     }
 
-    final static int a(int param0) {
+    final static int a() {
         ak var1 = rc.field_a;
         if (aj.b(-126)) {
             return var1.a(1, 0);

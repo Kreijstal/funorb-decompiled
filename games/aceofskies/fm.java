@@ -140,9 +140,6 @@ final class fm extends sk {
 
     final static void a(int param0, byte param1, int param2) {
         int var3 = 1 << param2;
-        if (param1 != 111) {
-            return;
-        }
         if (!((var3 & hg.field_D) == 0)) {
             return;
         }
@@ -150,17 +147,19 @@ final class fm extends sk {
         r.field_n = r.field_n | var3;
         nk.field_g.a(92, (wf) (Object) new iq(param2));
         if (!tt.field_a) {
-            sb.field_c.a(param1 + 6, (wf) (Object) new oc(param2, param0, ct.field_x, bo.field_h, se.field_b, ei.field_a - or.field_a));
+            sb.field_c.a(117, (wf) (Object) new oc(param2, param0, ct.field_x, bo.field_h, se.field_b, ei.field_a - or.field_a));
             if (param2 != 6) {
                 return;
             }
             nk.field_g.a(116, (wf) (Object) new iq(-1));
-            si.c(true);
+            int discarded$0 = 1;
+            si.c();
             return;
         }
         if (param2 == 6) {
             nk.field_g.a(116, (wf) (Object) new iq(-1));
-            si.c(true);
+            int discarded$1 = 1;
+            si.c();
             return;
         }
     }

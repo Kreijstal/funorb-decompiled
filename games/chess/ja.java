@@ -15,15 +15,7 @@ final class ja extends f {
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            L1: {
-              field_g = null;
-              if (param0 == -115) {
-                break L1;
-              } else {
-                field_g = null;
-                break L1;
-              }
-            }
+            field_g = null;
             field_e = null;
             field_h = null;
             field_c = null;
@@ -32,11 +24,11 @@ final class ja extends f {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fk.a((Throwable) (Object) var1, "ja.H(" + param0 + 41);
+          throw fk.a((Throwable) (Object) var1, "ja.H(" + -115 + 41);
         }
     }
 
-    final static void a(um param0, int param1) {
+    final static void a(um param0) {
         ci var2 = null;
         RuntimeException var2_ref = null;
         ci var3 = null;
@@ -63,7 +55,7 @@ final class ja extends f {
             fg.field_d = new ok(0L, cn.field_b, d.field_Lb, vc.field_b);
             hb.field_a = new ci(0L, (ci) null);
             oj.field_c = new ci(0L, qn.field_P);
-            oj.field_c.field_fb = param1;
+            oj.field_c.field_fb = 1;
             le.field_e = new ci(0L, bo.field_e, ei.field_s);
             kf.field_t = new ci(0L, l.field_j, hm.field_b);
             dk.field_h = new ci(0L, sj.field_k);
@@ -72,7 +64,7 @@ final class ja extends f {
             hb.field_a.a((byte) 123, kf.field_t);
             hb.field_a.a((byte) 125, (ci) (Object) ea.field_bb);
             hb.field_a.a((byte) 127, dk.field_h);
-            ea.field_bb.field_Kb.field_Jb.a(qn.field_P, param1 + 2147483647);
+            ea.field_bb.field_Kb.field_Jb.a(qn.field_P, -2147483648);
             var2 = ea.field_bb.field_Kb.field_Jb;
             ea.field_bb.field_Kb.field_Jb.field_cb = 1;
             var2.field_fb = 1;
@@ -110,7 +102,7 @@ final class ja extends f {
               break L1;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
+          throw fk.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + 1 + 41);
         }
     }
 
@@ -267,13 +259,15 @@ final class ja extends f {
             L1: {
               var5_int = ql.a(-116, 3 * (-param3 + param1));
               var6 = 3 * param3;
-              ki.a(0);
+              int discarded$2 = 0;
+              ki.a();
               var7 = var5_int + -10;
               if (param0.field_j <= 0) {
                 break L1;
               } else {
                 if (null != param0.field_y) {
-                  dh.a((byte) 95);
+                  int discarded$3 = 95;
+                  dh.a();
                   break L1;
                 } else {
                   break L1;
@@ -554,11 +548,12 @@ final class ja extends f {
                 if (param0 >= 126) {
                   break L1;
                 } else {
-                  jd discarded$2 = ja.a((byte) 47, (java.applet.Applet) null);
+                  jd discarded$4 = ja.a((byte) 47, (java.applet.Applet) null);
                   break L1;
                 }
               }
-              var3 = hb.a(2);
+              int discarded$5 = 2;
+              var3 = hb.a();
               var4 = 0;
               L2: while (true) {
                 L3: {

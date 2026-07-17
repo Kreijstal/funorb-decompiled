@@ -49,7 +49,7 @@ final class ira extends mfb {
         return true;
     }
 
-    public static void l(int param0) {
+    public static void l() {
         field_b = null;
         field_c = null;
     }
@@ -115,7 +115,7 @@ final class ira extends mfb {
                 break L1;
               } else {
                 var5 = null;
-                boolean discarded$2 = ira.a(1L, (String) null, 31);
+                boolean discarded$5 = ira.a(1L, (String) null, 31);
                 break L1;
               }
             }
@@ -137,7 +137,8 @@ final class ira extends mfb {
                 if (null == lqa.field_o) {
                   break L4;
                 } else {
-                  if (null == pjb.a(param0, true)) {
+                  int discarded$6 = 1;
+                  if (null == pjb.a(param0)) {
                     break L4;
                   } else {
                     stackOut_9_0 = 1;

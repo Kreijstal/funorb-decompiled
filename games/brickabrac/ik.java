@@ -20,7 +20,7 @@ final class ik implements Iterator {
         return param0 & param1;
     }
 
-    private final void b(int param0) {
+    private final void b() {
         ((ik) this).field_d = 1;
         ((ik) this).field_h = ((ik) this).field_e.field_d[0].field_e;
         ((ik) this).field_k = null;
@@ -83,25 +83,23 @@ final class ik implements Iterator {
         RuntimeException var2 = null;
         int var3 = 0;
         int stackIn_16_0 = 0;
-        int stackIn_18_0 = 0;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        String stackIn_22_2 = null;
+        String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_17_0 = 0;
         int stackOut_15_0 = 0;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
         RuntimeException stackOut_19_0 = null;
         StringBuilder stackOut_19_1 = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        String stackOut_21_2 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
+        String stackOut_19_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
@@ -142,47 +140,41 @@ final class ik implements Iterator {
                 }
               }
             }
-            if (param0 == -31126) {
-              stackOut_17_0 = var2_int;
-              stackIn_18_0 = stackOut_17_0;
-              break L0;
-            } else {
-              stackOut_15_0 = -27;
-              stackIn_16_0 = stackOut_15_0;
-              return stackIn_16_0;
-            }
+            stackOut_15_0 = var2_int;
+            stackIn_16_0 = stackOut_15_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_19_0 = (RuntimeException) var2;
-            stackOut_19_1 = new StringBuilder().append("ik.F(").append(param0).append(44);
-            stackIn_21_0 = stackOut_19_0;
-            stackIn_21_1 = stackOut_19_1;
-            stackIn_20_0 = stackOut_19_0;
-            stackIn_20_1 = stackOut_19_1;
+            stackOut_17_0 = (RuntimeException) var2;
+            stackOut_17_1 = new StringBuilder().append("ik.F(").append(-31126).append(44);
+            stackIn_19_0 = stackOut_17_0;
+            stackIn_19_1 = stackOut_17_1;
+            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_1 = stackOut_17_1;
             if (param1 == null) {
-              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
-              stackOut_21_2 = "null";
-              stackIn_22_0 = stackOut_21_0;
-              stackIn_22_1 = stackOut_21_1;
-              stackIn_22_2 = stackOut_21_2;
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "null";
+              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_1 = stackOut_19_1;
+              stackIn_20_2 = stackOut_19_2;
               break L3;
             } else {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
-              stackOut_20_2 = "{...}";
-              stackIn_22_0 = stackOut_20_0;
-              stackIn_22_1 = stackOut_20_1;
-              stackIn_22_2 = stackOut_20_2;
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "{...}";
+              stackIn_20_0 = stackOut_18_0;
+              stackIn_20_1 = stackOut_18_1;
+              stackIn_20_2 = stackOut_18_2;
               break L3;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 41);
+          throw qb.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
         }
-        return stackIn_18_0;
+        return stackIn_16_0;
     }
 
     public final void remove() {
@@ -193,7 +185,7 @@ final class ik implements Iterator {
         ((ik) this).field_k = null;
     }
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         bg var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -267,7 +259,7 @@ final class ik implements Iterator {
         return stackIn_17_0 != 0;
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_g = null;
         field_f = null;
         field_i = null;
@@ -321,7 +313,8 @@ final class ik implements Iterator {
         ((ik) this).field_k = null;
         try {
             ((ik) this).field_e = param0;
-            this.b(-101);
+            int discarded$0 = -101;
+            this.b();
         } catch (RuntimeException runtimeException) {
             throw qb.a((Throwable) (Object) runtimeException, "ik.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }

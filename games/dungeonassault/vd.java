@@ -7,7 +7,7 @@ final class vd {
     static int field_a;
     static String field_b;
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = 0;
         field_b = null;
         field_c = null;

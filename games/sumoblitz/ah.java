@@ -256,12 +256,12 @@ class ah {
         ((ah) this).field_l = ((ah) this).field_l + 1;
     }
 
-    private final void k(int param0) {
+    private final void k() {
         ((ah) this).field_n = false;
         ((ah) this).field_m = this.e((byte) -5);
     }
 
-    private final void j(byte param0) {
+    private final void j() {
         ((ah) this).field_t = ((ah) this).field_t + 1;
         if (!(10 >= ((ah) this).field_t)) {
             ((ah) this).field_t = 10;
@@ -340,7 +340,7 @@ class ah {
         }
     }
 
-    private final void e(int param0) {
+    private final void e() {
         ((ah) this).field_y = ((ah) this).field_y + 1;
         if (10 < ((ah) this).field_y) {
             ((ah) this).field_y = 10;
@@ -554,7 +554,8 @@ class ah {
             }
           }
           L1: {
-            if (this.f(62)) {
+            int discarded$13 = 62;
+            if (this.f()) {
               ((ah) this).field_r = ((ah) this).field_r + 1;
               break L1;
             } else {
@@ -575,7 +576,8 @@ class ah {
                 if (0 != ((ah) this).field_j) {
                   break L3;
                 } else {
-                  this.m((byte) 116);
+                  int discarded$14 = 116;
+                  this.m();
                   break L3;
                 }
               }
@@ -605,15 +607,18 @@ class ah {
                     var9 = var12;
                     var6 = var9;
                     var2 = var6;
-                    ((ah) this).field_q.a((ms) (Object) new aj(100, ((ah) this).field_C, ((ah) this).field_z, this.a(0), ((ah) this).field_s, Math.random() / 100.0, (int)var15[0] << 8, (int)var15[1] << 8, ((ah) this).field_Q, 0, this.e((byte) -5) >> 8), (byte) 39);
+                    int discarded$15 = 0;
+                    ((ah) this).field_q.a((ms) (Object) new aj(100, ((ah) this).field_C, ((ah) this).field_z, this.a(), ((ah) this).field_s, Math.random() / 100.0, (int)var15[0] << 8, (int)var15[1] << 8, ((ah) this).field_Q, 0, this.e((byte) -5) >> 8), (byte) 39);
                     var16 = kt.a((byte) -16, var2, (float)(((ah) this).field_s + 2.0943951023931953));
                     var13 = var16;
                     var10 = var13;
                     var7 = var10;
                     var2 = var7;
-                    ((ah) this).field_q.a((ms) (Object) new aj(100, ((ah) this).field_C, ((ah) this).field_z, this.a(0), ((ah) this).field_s, Math.random() / 100.0, (int)var16[0] << 8, (int)var16[1] << 8, ((ah) this).field_Q, 1, this.e((byte) -5) >> 8), (byte) 39);
+                    int discarded$16 = 0;
+                    ((ah) this).field_q.a((ms) (Object) new aj(100, ((ah) this).field_C, ((ah) this).field_z, this.a(), ((ah) this).field_s, Math.random() / 100.0, (int)var16[0] << 8, (int)var16[1] << 8, ((ah) this).field_Q, 1, this.e((byte) -5) >> 8), (byte) 39);
                     var17 = kt.a((byte) -43, var2, (float)(4.1887902047863905 + ((ah) this).field_s));
-                    ((ah) this).field_q.a((ms) (Object) new aj(100, ((ah) this).field_C, ((ah) this).field_z, this.a(0), ((ah) this).field_s, Math.random() / 100.0, (int)var17[0] << 8, (int)var17[1] << 8, ((ah) this).field_Q, 2, this.e((byte) -5) >> 8), (byte) 39);
+                    int discarded$17 = 0;
+                    ((ah) this).field_q.a((ms) (Object) new aj(100, ((ah) this).field_C, ((ah) this).field_z, this.a(), ((ah) this).field_s, Math.random() / 100.0, (int)var17[0] << 8, (int)var17[1] << 8, ((ah) this).field_Q, 2, this.e((byte) -5) >> 8), (byte) 39);
                     break L5;
                   } else {
                     break L5;
@@ -668,7 +673,8 @@ class ah {
                     if (0 != ((ah) this).field_Q) {
                       break L9;
                     } else {
-                      ab.a(lr.field_a[((ah) this).field_Q], ((ah) this).field_q, (ah) this, 40, ((ah) this).field_z, ((ah) this).field_C, (byte) 121);
+                      int discarded$18 = 121;
+                      ab.a(lr.field_a[((ah) this).field_Q], ((ah) this).field_q, (ah) this, 40, ((ah) this).field_z, ((ah) this).field_C);
                       break L9;
                     }
                   }
@@ -685,10 +691,16 @@ class ah {
                       }
                     }
                     if (((ah) this).field_k % 2 != 0) {
-                      ((ah) this).field_q.a((ms) (Object) new eq(50, ((ah) this).field_C + (fi.a(2048, he.field_o, (byte) -96) + -1024) >> 8, -1024 + (((ah) this).field_z - -fi.a(2048, he.field_o, (byte) -96)) >> 8, this.a(0), ((ah) this).field_M - -1, true), (byte) 39);
+                      int discarded$19 = -96;
+                      int discarded$20 = -96;
+                      int discarded$21 = 0;
+                      ((ah) this).field_q.a((ms) (Object) new eq(50, ((ah) this).field_C + (fi.a(2048, he.field_o) + -1024) >> 8, -1024 + (((ah) this).field_z - -fi.a(2048, he.field_o)) >> 8, this.a(), ((ah) this).field_M - -1, true), (byte) 39);
                       break L10;
                     } else {
-                      ((ah) this).field_q.a((ms) (Object) new eq(50, -1024 + ((ah) this).field_C + fi.a(2048, he.field_o, (byte) -96) >> 8, -1024 + (((ah) this).field_z + fi.a(2048, he.field_o, (byte) -96)) >> 8, this.a(0), 1 + ((ah) this).field_M, false), (byte) 39);
+                      int discarded$22 = -96;
+                      int discarded$23 = -96;
+                      int discarded$24 = 0;
+                      ((ah) this).field_q.a((ms) (Object) new eq(50, -1024 + ((ah) this).field_C + fi.a(2048, he.field_o) >> 8, -1024 + (((ah) this).field_z + fi.a(2048, he.field_o)) >> 8, this.a(), 1 + ((ah) this).field_M, false), (byte) 39);
                       break L10;
                     }
                   } else {
@@ -707,7 +719,8 @@ class ah {
                         if (((ah) this).field_c != 0) {
                           break L13;
                         } else {
-                          this.k(1261228232);
+                          int discarded$25 = 1261228232;
+                          this.k();
                           break L13;
                         }
                       }
@@ -777,7 +790,7 @@ class ah {
         int var2 = 117 % ((74 - param0) / 47);
     }
 
-    private final int a(int param0) {
+    private final int a() {
         int var2 = 0;
         L0: {
           var2 = -1414832128;
@@ -909,16 +922,17 @@ class ah {
         return 5120;
     }
 
-    private final void m(byte param0) {
+    private final void m() {
         ((ah) this).field_c = 12;
         ((ah) this).field_n = true;
         ((ah) this).field_q = new jn();
         ts.a(((ah) this).field_C, ((ah) this).field_q, -16240, 40, lr.field_a[((ah) this).field_Q], ((ah) this).field_z);
         int var2 = 0;
-        gn.a(19 + fi.a(3, he.field_o, (byte) -96), true);
+        int discarded$0 = -96;
+        gn.a(19 + fi.a(3, he.field_o), true);
     }
 
-    private final void l(int param0) {
+    private final void l() {
         int var2 = 0;
         int var3 = 0;
         L0: {
@@ -1061,7 +1075,7 @@ class ah {
         ((ah) this).field_m = ((ah) this).field_m >> 1;
     }
 
-    private final void b(byte param0) {
+    private final void b() {
         ((ah) this).field_I = ((ah) this).field_I + 1;
         if (((ah) this).field_I > 10) {
             ((ah) this).field_I = 10;
@@ -1106,18 +1120,21 @@ class ah {
           var3 = param1;
           if (0 != var3) {
             if (1 == var3) {
-              this.e(0);
+              int discarded$3 = 0;
+              this.e();
               break L1;
             } else {
               if (var3 != 2) {
                 break L1;
               } else {
-                this.j((byte) 98);
+                int discarded$4 = 98;
+                this.j();
                 break L1;
               }
             }
           } else {
-            this.b((byte) 61);
+            int discarded$5 = 61;
+            this.b();
             break L1;
           }
         }
@@ -1131,7 +1148,7 @@ class ah {
         ((ah) this).c((byte) 35);
     }
 
-    private final boolean f(int param0) {
+    private final boolean f() {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -2440,7 +2457,8 @@ class ah {
         ((ah) this).field_C = param2;
         ((ah) this).field_N = param1;
         ((ah) this).field_Q = param0;
-        this.l(125);
+        int discarded$0 = 125;
+        this.l();
         ((ah) this).field_q = new jn();
     }
 

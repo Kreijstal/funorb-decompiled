@@ -9,7 +9,7 @@ abstract class ri extends lc {
     boolean field_D;
     private int field_A;
 
-    private final int k(int param0) {
+    private final int k() {
         int stackIn_5_0 = 0;
         int stackOut_4_0 = 0;
         int stackOut_3_0 = 0;
@@ -99,7 +99,7 @@ abstract class ri extends lc {
         String stackOut_9_2 = null;
         try {
           L0: {
-            var4_int = param1.a(param0, param2);
+            var4_int = param1.a(param0, false);
             var5 = param1.a(var4_int, param3, 125);
             stackOut_0_0 = fl.a(-69, var4_int, param1, var5);
             stackIn_1_0 = stackOut_0_0;
@@ -160,7 +160,7 @@ abstract class ri extends lc {
           }
           L3: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param2).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(0).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -198,7 +198,8 @@ abstract class ri extends lc {
 
     boolean f(byte param0) {
         if (param0 == -33) {
-          ((ri) this).field_A = this.k(0);
+          int discarded$4 = 0;
+          ((ri) this).field_A = this.k();
           if (((ri) this).field_A == 0) {
             if (((ri) this).field_D) {
               return false;
@@ -210,7 +211,8 @@ abstract class ri extends lc {
           }
         } else {
           ((ri) this).field_E = null;
-          ((ri) this).field_A = this.k(0);
+          int discarded$5 = 0;
+          ((ri) this).field_A = this.k();
           if (((ri) this).field_A == 0) {
             if (((ri) this).field_D) {
               return false;
@@ -237,7 +239,8 @@ abstract class ri extends lc {
             if (ml.field_d != null) {
               if (ml.field_d.field_s >= ((ri) this).field_k) {
                 if (ml.field_d.field_q >= ((ri) this).field_m) {
-                  kh.a(ml.field_d, 1);
+                  int discarded$4 = 1;
+                  kh.a(ml.field_d);
                   na.a();
                   ((ri) this).b(0, -11, 0);
                   if (param2 < 33) {
@@ -254,7 +257,8 @@ abstract class ri extends lc {
                   }
                 } else {
                   ml.field_d = new tg(((ri) this).field_k, ((ri) this).field_m);
-                  kh.a(ml.field_d, 1);
+                  int discarded$5 = 1;
+                  kh.a(ml.field_d);
                   na.a();
                   ((ri) this).b(0, -11, 0);
                   if (param2 < 33) {
@@ -272,7 +276,8 @@ abstract class ri extends lc {
                 }
               } else {
                 ml.field_d = new tg(((ri) this).field_k, ((ri) this).field_m);
-                kh.a(ml.field_d, 1);
+                int discarded$6 = 1;
+                kh.a(ml.field_d);
                 na.a();
                 ((ri) this).b(0, -11, 0);
                 if (param2 < 33) {
@@ -290,7 +295,8 @@ abstract class ri extends lc {
               }
             } else {
               ml.field_d = new tg(((ri) this).field_k, ((ri) this).field_m);
-              kh.a(ml.field_d, 1);
+              int discarded$7 = 1;
+              kh.a(ml.field_d);
               na.a();
               ((ri) this).b(0, -11, 0);
               if (param2 < 33) {
@@ -312,7 +318,7 @@ abstract class ri extends lc {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_B = null;
         field_C = null;
     }
@@ -337,7 +343,8 @@ abstract class ri extends lc {
         int stackOut_12_0 = 0;
         if (param0 == 21) {
           L0: {
-            var2 = this.k(0);
+            int discarded$4 = 0;
+            var2 = this.k();
             var3 = var2 - ((ri) this).field_A;
             if (var3 > 0) {
               ((ri) this).field_A = ((ri) this).field_A + (-1 + var3 + 8) / 8;
@@ -380,7 +387,8 @@ abstract class ri extends lc {
         } else {
           L4: {
             ((ri) this).field_D = false;
-            var2 = this.k(0);
+            int discarded$5 = 0;
+            var2 = this.k();
             var3 = var2 - ((ri) this).field_A;
             if (var3 > 0) {
               ((ri) this).field_A = ((ri) this).field_A + (-1 + var3 + 8) / 8;

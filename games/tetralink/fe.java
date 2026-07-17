@@ -5,7 +5,7 @@ final class fe {
     static String field_a;
     static int[] field_b;
 
-    final static void a(ri param0, int param1, boolean param2, int param3) {
+    final static void a(ri param0) {
         Object var4 = null;
         RuntimeException var4_ref = null;
         Throwable var5 = null;
@@ -29,7 +29,8 @@ final class fe {
           L0: {
             L1: {
               if (null != bn.field_c) {
-                qh.a(param2, (byte) -56, 1048576, param0, param1);
+                int discarded$3 = 256;
+                qh.a(true, (byte) -56, 1048576, param0);
                 break L1;
               } else {
                 break L1;
@@ -41,14 +42,14 @@ final class fe {
               var4 = (Object) (Object) ch.field_q;
               synchronized (var4) {
                 L2: {
-                  ic.field_b.b(param1, -1, 94);
+                  ic.field_b.b(256, -1, 94);
                   if (param0 != oa.field_B) {
                     L3: {
                       ic.field_b.d(19);
                       ch.field_q.c();
                       oa.field_B = param0;
                       if (null != oa.field_B) {
-                        ic.field_b.a(param2, oa.field_B, (byte) 23);
+                        ic.field_b.a(true, oa.field_B, (byte) 23);
                         break L3;
                       } else {
                         break L3;
@@ -91,11 +92,11 @@ final class fe {
               break L4;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param1 + 44 + param2 + 44 + 113 + 41);
+          throw oi.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + 256 + 44 + 1 + 44 + 113 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }

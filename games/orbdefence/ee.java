@@ -54,7 +54,7 @@ final class ee {
         try {
           L0: {
             L1: {
-              if (param0 > ~param2) {
+              if (param2 > 0) {
                 var8 = new byte[param1];
                 var4 = var8;
                 var5_int = 0;
@@ -86,7 +86,7 @@ final class ee {
           L3: {
             var4_ref = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var4_ref;
-            stackOut_8_1 = new StringBuilder().append("ee.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_8_1 = new StringBuilder().append("ee.D(").append(-1).append(44).append(param1).append(44).append(param2).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -129,7 +129,7 @@ final class ee {
         return ((ee) this).field_e;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
         field_b = null;
         field_d = null;

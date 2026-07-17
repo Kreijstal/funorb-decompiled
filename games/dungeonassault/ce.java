@@ -15,7 +15,7 @@ final class ce extends kl {
     static int field_w;
     StringBuilder field_u;
 
-    public static void d(byte param0) {
+    public static void d() {
         field_m = null;
         field_v = null;
         field_o = null;
@@ -103,14 +103,15 @@ final class ce extends kl {
                 }
                 return;
             }
-            if (!pe.a((CharSequence) (Object) ((ce) this).field_u, ob.field_Yb, (byte) -105)) {
+            int discarded$5 = -105;
+            if (!pe.a((CharSequence) (Object) ((ce) this).field_u, ob.field_Yb)) {
                 if (param0) {
                     field_v = null;
                     return;
                 }
                 return;
             }
-            StringBuilder discarded$6 = ((ce) this).field_u.append(ob.field_Yb);
+            StringBuilder discarded$12 = ((ce) this).field_u.append(ob.field_Yb);
             if (param0) {
                 field_v = null;
                 return;
@@ -124,7 +125,8 @@ final class ce extends kl {
             }
             return;
         }
-        StringBuilder discarded$19 = am.a(((ce) this).field_u, ' ', -1 + ((ce) this).field_u.length(), false);
+        int discarded$35 = 0;
+        StringBuilder discarded$38 = am.a(((ce) this).field_u, ' ', -1 + ((ce) this).field_u.length());
         if (param0) {
             field_v = null;
             return;

@@ -45,7 +45,7 @@ final class lc extends gg {
         var4 = SolKnight.field_L ? 1 : 0;
         try {
           L0: {
-            var2_int = param0;
+            var2_int = 0;
             L1: while (true) {
               if (param1.length() <= var2_int) {
                 stackOut_9_0 = 0;
@@ -76,7 +76,7 @@ final class lc extends gg {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var2;
-            stackOut_11_1 = new StringBuilder().append("lc.F(").append(param0).append(44);
+            stackOut_11_1 = new StringBuilder().append("lc.F(").append(0).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -104,7 +104,7 @@ final class lc extends gg {
         return stackIn_10_0 != 0;
     }
 
-    final static boolean b(boolean param0) {
+    final static boolean b() {
         return og.field_b;
     }
 
@@ -513,34 +513,24 @@ final class lc extends gg {
     }
 
     final static void a(int param0, int param1, int param2, hi param3) {
-        fh.field_b = param1;
-        if (param0 != 5292) {
-            return;
-        }
+        fh.field_b = 0;
         try {
             he.field_c = param3;
-            pg.field_b = param2;
+            pg.field_b = 0;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "lc.D(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "lc.D(" + 5292 + 44 + 0 + 44 + 0 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
     final static void a(int param0, long param1) {
         try {
-            Object var4 = null;
+            InterruptedException var3 = null;
             Throwable decompiledCaughtException = null;
             {
               L0: {
                 Thread.sleep(param1);
                 break L0;
               }
-            }
-            if (param0 != 2767) {
-              var4 = null;
-              lc.a(14, 1, (String) null, (le) null, (mg) null);
-              return;
-            } else {
-              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

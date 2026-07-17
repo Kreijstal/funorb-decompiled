@@ -36,7 +36,6 @@ final class fm {
         int var3 = 0;
         int var4 = 0;
         int stackIn_7_0 = 0;
-        int stackIn_11_0 = 0;
         int stackIn_13_0 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -47,7 +46,6 @@ final class fm {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         int stackOut_12_0 = 0;
-        int stackOut_10_0 = 0;
         int stackOut_6_0 = 0;
         RuntimeException stackOut_14_0 = null;
         StringBuilder stackOut_14_1 = null;
@@ -63,19 +61,14 @@ final class fm {
             var2_int = 0;
             L1: while (true) {
               if (var2_int >= param1.length()) {
-                if (param0) {
-                  stackOut_12_0 = 0;
-                  stackIn_13_0 = stackOut_12_0;
-                  break L0;
-                } else {
-                  stackOut_10_0 = 0;
-                  stackIn_11_0 = stackOut_10_0;
-                  return stackIn_11_0 != 0;
-                }
+                stackOut_12_0 = 0;
+                stackIn_13_0 = stackOut_12_0;
+                break L0;
               } else {
                 L2: {
                   var3 = param1.charAt(var2_int);
-                  if (ak.a((char) var3, (byte) 67)) {
+                  int discarded$5 = 67;
+                  if (ak.a((char) var3)) {
                     break L2;
                   } else {
                     if (!em.a((byte) -65, (char) var3)) {
@@ -97,7 +90,7 @@ final class fm {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var2;
-            stackOut_14_1 = new StringBuilder().append("fm.B(").append(param0).append(44);
+            stackOut_14_1 = new StringBuilder().append("fm.B(").append(1).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;

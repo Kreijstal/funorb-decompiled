@@ -6,7 +6,7 @@ final class ld {
     static String field_a;
     static java.math.BigInteger field_c;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         field_b = null;

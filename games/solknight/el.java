@@ -818,7 +818,7 @@ final class el extends a {
         }
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_j = null;
         field_k = null;
         field_o = null;

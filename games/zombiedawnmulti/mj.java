@@ -26,59 +26,29 @@ final class mj extends cj {
           this.c(0, param1, param3, param2);
           return;
         } else {
-          this.b(param2, param1, param3, 126);
+          int discarded$2 = 126;
+          this.b(param2, param1, param3);
           return;
         }
     }
 
-    private final int b(int param0, boolean param1, int param2, int param3) {
-        int var5 = 0;
-        int var6 = 0;
+    private final int b(int param0, boolean param1, int param2) {
         int var7 = 0;
         int var8 = 0;
-        L0: {
-          var5 = 0;
-          var6 = -((mj) this).field_Lb.field_z + ((mj) this).field_Gb.field_z;
-          if (var6 > 0) {
+        int var5 = 0;
+        int var6 = -((mj) this).field_Lb.field_z + ((mj) this).field_Gb.field_z;
+        if (!(var6 <= 0)) {
             var7 = ((mj) this).field_Lb.field_Q;
             var8 = param0 - param2;
             var5 = (var6 / 2 + var8 * var7) / var6;
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        if (!param1) {
-          L1: {
-            if (param0 + -param2 >= var5) {
-              break L1;
-            } else {
-              var5 = param0 - param2;
-              break L1;
-            }
-          }
-          if (0 <= var5) {
-            return var5;
-          } else {
-            var5 = 0;
-            return var5;
-          }
-        } else {
-          L2: {
-            if (var5 >= 0) {
-              break L2;
-            } else {
-              var5 = 0;
-              break L2;
-            }
-          }
-          if (var5 <= -param2 + param0) {
-            return var5;
-          } else {
+        if (param0 + -param2 < var5) {
             var5 = param0 - param2;
-            return var5;
-          }
         }
+        if (!(0 <= var5)) {
+            var5 = 0;
+        }
+        return var5;
     }
 
     final boolean k(int param0) {
@@ -113,7 +83,7 @@ final class mj extends cj {
         }
     }
 
-    public static void i(int param0) {
+    public static void i() {
         field_Fb = null;
         field_Ob = null;
         field_Mb = null;
@@ -167,14 +137,16 @@ final class mj extends cj {
     final int a(int param0, int param1, int param2) {
         if (param2 == -18367) {
           if (((mj) this).field_Jb) {
-            return this.b(param0, false, param1, -10596);
+            int discarded$10 = -10596;
+            return this.b(param0, false, param1);
           } else {
             return this.a(param0, false, 69, param1);
           }
         } else {
-          boolean discarded$6 = ((mj) this).k(33);
+          boolean discarded$11 = ((mj) this).k(33);
           if (((mj) this).field_Jb) {
-            return this.b(param0, false, param1, -10596);
+            int discarded$12 = -10596;
+            return this.b(param0, false, param1);
           } else {
             return this.a(param0, false, 69, param1);
           }
@@ -221,7 +193,7 @@ final class mj extends cj {
         }
     }
 
-    private final void b(int param0, int param1, int param2, int param3) {
+    private final void b(int param0, int param1, int param2) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -661,7 +633,7 @@ final class mj extends cj {
             var9 = -param1 + param3;
             var10 = -var8 + var7;
             var11 = 0;
-            if (param0 < var9) {
+            if (0 < var9) {
               var11 = (var9 / 2 + param2 * var10) / var9;
               break L3;
             } else {
@@ -741,7 +713,7 @@ final class mj extends cj {
             var9 = -param1 + param3;
             var10 = -var8 + var7;
             var11 = 0;
-            if (param0 < var9) {
+            if (0 < var9) {
               var11 = (var9 / 2 + param2 * var10) / var9;
               break L5;
             } else {
@@ -819,58 +791,23 @@ final class mj extends cj {
     }
 
     private final int a(int param0, boolean param1, int param2, int param3) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        L0: {
-          var5 = 0;
-          var6 = ((mj) this).field_Gb.field_zb + -((mj) this).field_Lb.field_zb;
-          var7 = -86 % ((18 - param2) / 38);
-          if (var6 <= 0) {
-            break L0;
-          } else {
+        int var5 = 0;
+        int var6 = ((mj) this).field_Gb.field_zb + -((mj) this).field_Lb.field_zb;
+        int var7 = 0;
+        if (var6 > 0) {
             var8 = ((mj) this).field_Lb.field_x;
             var9 = param0 + -param3;
             var5 = (var6 / 2 + var9 * var8) / var6;
-            break L0;
-          }
         }
-        if (param1) {
-          L1: {
-            if (var5 < 0) {
-              var5 = 0;
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          if (var5 <= param0 - param3) {
-            return var5;
-          } else {
+        if (!(var5 <= -param3 + param0)) {
             var5 = -param3 + param0;
-            return var5;
-          }
-        } else {
-          L2: {
-            if (var5 > -param3 + param0) {
-              var5 = -param3 + param0;
-              break L2;
-            } else {
-              break L2;
-            }
-          }
-          L3: {
-            if (var5 >= 0) {
-              break L3;
-            } else {
-              var5 = 0;
-              break L3;
-            }
-          }
-          return var5;
         }
+        if (var5 < 0) {
+            var5 = 0;
+        }
+        return var5;
     }
 
     mj(long param0, cj param1, ja param2, ja param3, cj param4, cj param5, boolean param6) {

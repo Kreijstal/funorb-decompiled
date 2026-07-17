@@ -6,39 +6,19 @@ final class im {
     static String field_a;
     static int[] field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
         field_a = null;
     }
 
     final static void a(boolean param0, boolean param1) {
-        if (!param0) {
-          L0: {
-            field_a = null;
-            if (ol.a(-128)) {
-              param1 = false;
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          kq.a((byte) -57, param1);
-          ms.b(20975);
-          return;
-        } else {
-          L1: {
-            if (ol.a(-128)) {
-              param1 = false;
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          kq.a((byte) -57, param1);
-          ms.b(20975);
-          return;
+        if (!(!ol.a(-128))) {
+            param1 = false;
         }
+        kq.a((byte) -57, param1);
+        int discarded$0 = 20975;
+        ms.b();
     }
 
     final static void a(fs param0, ob param1, int param2) {
@@ -170,7 +150,7 @@ final class im {
         }
     }
 
-    final static String a(CharSequence param0, byte param1) {
+    final static String a(CharSequence param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String stackIn_1_0 = null;
@@ -194,7 +174,8 @@ final class im {
         try {
           L0: {
             var2_int = 0;
-            stackOut_0_0 = nn.a(-105, param0, false);
+            int discarded$2 = 0;
+            stackOut_0_0 = nn.a(-105, param0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

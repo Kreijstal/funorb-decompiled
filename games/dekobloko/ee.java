@@ -13,7 +13,7 @@ final class ee {
     static int[] field_b;
     private int[] field_d;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_g = null;
         field_a = null;
@@ -22,18 +22,19 @@ final class ee {
 
     final int a(boolean param0) {
         if (!(0 != ((ee) this).field_e)) {
-            this.b(-1);
+            int discarded$0 = -1;
+            this.b();
             ((ee) this).field_e = 256;
         }
         if (param0) {
             return 55;
         }
-        int fieldTemp$0 = ((ee) this).field_e - 1;
+        int fieldTemp$1 = ((ee) this).field_e - 1;
         ((ee) this).field_e = ((ee) this).field_e - 1;
-        return ((ee) this).field_d[fieldTemp$0];
+        return ((ee) this).field_d[fieldTemp$1];
     }
 
-    private final void b(int param0) {
+    private final void b() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -127,7 +128,8 @@ final class ee {
                 var2 = 0;
                 L2: while (true) {
                   if (var2 >= 256) {
-                    this.b(-1);
+                    int discarded$1 = -1;
+                    this.b();
                     ((ee) this).field_e = 256;
                     return;
                   } else {
@@ -254,9 +256,9 @@ final class ee {
     final static boolean a(byte param0, boolean param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
-        int stackIn_30_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_28_0 = 0;
+        int stackIn_28_0 = 0;
+        int stackOut_27_0 = 0;
+        int stackOut_26_0 = 0;
         L0: {
           if (param1) {
             if (ad.field_i[param3] >= ad.field_i[param2]) {
@@ -300,22 +302,18 @@ final class ee {
         var5 = mk.field_b[param2] + ln.field_a[param2] + oa.field_e[param2];
         if (var5 <= var4) {
           if (var4 <= var5) {
-            if (param0 > 97) {
-              L1: {
-                if (param3 >= param2) {
-                  stackOut_29_0 = 0;
-                  stackIn_30_0 = stackOut_29_0;
-                  break L1;
-                } else {
-                  stackOut_28_0 = 1;
-                  stackIn_30_0 = stackOut_28_0;
-                  break L1;
-                }
+            L1: {
+              if (param3 >= param2) {
+                stackOut_27_0 = 0;
+                stackIn_28_0 = stackOut_27_0;
+                break L1;
+              } else {
+                stackOut_26_0 = 1;
+                stackIn_28_0 = stackOut_26_0;
+                break L1;
               }
-              return stackIn_30_0 != 0;
-            } else {
-              return false;
             }
+            return stackIn_28_0 != 0;
           } else {
             return false;
           }

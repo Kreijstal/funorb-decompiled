@@ -10,7 +10,7 @@ final class qr {
     private String field_c;
     private boolean field_f;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
     }
 
@@ -34,7 +34,7 @@ final class qr {
         return ((qr) this).field_c;
     }
 
-    final static void c(int param0) {
+    final static void c() {
     }
 
     final void a(boolean param0, byte param1) {
@@ -62,10 +62,12 @@ final class qr {
         if (mp.field_V > 0) {
           if (fk.field_gb == null) {
             L0: {
-              ne.field_u = wp.a(640, lg.field_s, (byte) 0, 480, 0, 0);
+              int discarded$4 = 0;
+              int discarded$5 = 0;
+              ne.field_u = wp.a(640, lg.field_s, (byte) 0, 480);
               if (null != ne.field_u) {
                 var2 = 2;
-                kc.a((java.awt.Canvas) (Object) ne.field_u, param0 ^ -28040);
+                kc.a((java.awt.Canvas) (Object) ne.field_u, 2);
                 break L0;
               } else {
                 var2 = 3;
@@ -80,90 +82,26 @@ final class qr {
                   break L1;
                 } else {
                   kk.a(param1, 4, var2);
-                  if (param0 != -28038) {
-                    field_a = null;
-                    return;
-                  } else {
-                    return;
-                  }
+                  return;
                 }
               }
             }
-            if (param0 != -28038) {
-              field_a = null;
-              return;
-            } else {
-              return;
-            }
+            return;
           } else {
             L2: {
               ne.field_u = fk.field_gb.b(-71);
-              ab.a(25692, 2);
+              int discarded$6 = 2;
+              int discarded$7 = 25692;
+              ab.a();
               if (null != ne.field_u) {
                 var2 = 2;
-                kc.a((java.awt.Canvas) (Object) ne.field_u, param0 ^ -28040);
+                kc.a((java.awt.Canvas) (Object) ne.field_u, 2);
                 break L2;
               } else {
                 var2 = 3;
                 break L2;
               }
             }
-            if (fk.field_gb == null) {
-              if (fe.field_J) {
-                kk.a(param1, 4, var2);
-                if (param0 != -28038) {
-                  field_a = null;
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                if (param0 != -28038) {
-                  field_a = null;
-                  return;
-                } else {
-                  return;
-                }
-              }
-            } else {
-              if (param0 != -28038) {
-                field_a = null;
-                return;
-              } else {
-                return;
-              }
-            }
-          }
-        } else {
-          if (hk.b(-120)) {
-            var2 = 0;
-            if (fk.field_gb == null) {
-              if (fe.field_J) {
-                kk.a(param1, 4, var2);
-                if (param0 != -28038) {
-                  field_a = null;
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                if (param0 == -28038) {
-                  return;
-                } else {
-                  field_a = null;
-                  return;
-                }
-              }
-            } else {
-              if (param0 != -28038) {
-                field_a = null;
-                return;
-              } else {
-                return;
-              }
-            }
-          } else {
-            var2 = 1;
             L3: {
               if (fk.field_gb != null) {
                 break L3;
@@ -172,19 +110,38 @@ final class qr {
                   break L3;
                 } else {
                   kk.a(param1, 4, var2);
-                  if (param0 == -28038) {
-                    return;
-                  } else {
-                    field_a = null;
-                    return;
-                  }
+                  return;
                 }
               }
             }
-            if (param0 == -28038) {
-              return;
+            return;
+          }
+        } else {
+          if (hk.b(-120)) {
+            L4: {
+              var2 = 0;
+              if (fk.field_gb != null) {
+                break L4;
+              } else {
+                if (!fe.field_J) {
+                  break L4;
+                } else {
+                  kk.a(param1, 4, var2);
+                  return;
+                }
+              }
+            }
+            return;
+          } else {
+            var2 = 1;
+            if (fk.field_gb == null) {
+              if (fe.field_J) {
+                kk.a(param1, 4, var2);
+                return;
+              } else {
+                return;
+              }
             } else {
-              field_a = null;
               return;
             }
           }

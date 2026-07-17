@@ -50,7 +50,7 @@ final class ck extends rqa {
         var20 = var22;
         var13 = var20;
         var14 = 1.0f;
-        var15 = (float)param1;
+        var15 = (float)0;
         var10 = (float)param5 / 32767.0f;
         var12 = -var10 + 1.0f;
         var11 = -(float)Math.sqrt((double)(1.0f - var10 * var10));
@@ -148,7 +148,7 @@ final class ck extends rqa {
         }
     }
 
-    final static boolean b(boolean param0) {
+    final static boolean b() {
         if (null == wba.field_o) {
             return false;
         }
@@ -158,17 +158,16 @@ final class ck extends rqa {
         return true;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
     }
 
     final static ij a(int param0, String param1) {
-        RuntimeException var2 = null;
-        ij var2_ref = null;
+        ij var2 = null;
+        RuntimeException var2_ref = null;
         qab var3 = null;
         int var4 = 0;
         int var5 = 0;
-        Object stackIn_3_0 = null;
         ij stackIn_19_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -179,7 +178,6 @@ final class ck extends rqa {
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         ij stackOut_18_0 = null;
-        Object stackOut_2_0 = null;
         RuntimeException stackOut_20_0 = null;
         StringBuilder stackOut_20_1 = null;
         RuntimeException stackOut_22_0 = null;
@@ -191,63 +189,57 @@ final class ck extends rqa {
         var5 = VoidHunters.field_G;
         try {
           L0: {
-            var2_ref = new ij();
-            if (param0 == -1) {
-              var3 = new qab(param1);
-              L1: while (true) {
-                if (var3.a((byte) -111)) {
-                  stackOut_18_0 = (ij) var2_ref;
-                  stackIn_19_0 = stackOut_18_0;
-                  break L0;
-                } else {
-                  var4 = var3.a(param0 ^ 75);
-                  if (!Character.isWhitespace((char) var4)) {
-                    L2: {
-                      if (var4 == 34) {
+            var2 = new ij();
+            var3 = new qab(param1);
+            L1: while (true) {
+              if (var3.a((byte) -111)) {
+                stackOut_18_0 = (ij) var2;
+                stackIn_19_0 = stackOut_18_0;
+                break L0;
+              } else {
+                var4 = var3.a(-76);
+                if (!Character.isWhitespace((char) var4)) {
+                  L2: {
+                    if (var4 == 34) {
+                      break L2;
+                    } else {
+                      if (var4 == 39) {
                         break L2;
                       } else {
-                        if (var4 == 39) {
-                          break L2;
+                        if (var4 == 40) {
+                          var2.b(-10258, (ksa) (Object) new tsa(wdb.field_vb, var3.field_b - 1));
+                          continue L1;
                         } else {
-                          if (var4 == 40) {
-                            var2_ref.b(param0 + -10257, (ksa) (Object) new tsa(wdb.field_vb, var3.field_b - 1));
+                          if (var4 == 41) {
+                            var2.b(-10258, (ksa) (Object) new tsa(ua.field_o, -1 + var3.field_b));
                             continue L1;
                           } else {
-                            if (var4 == 41) {
-                              var2_ref.b(-10258, (ksa) (Object) new tsa(ua.field_o, -1 + var3.field_b));
+                            if (var4 == 44) {
+                              var2.b(-10258, (ksa) (Object) new tsa(jwa.field_l, -1 + var3.field_b));
                               continue L1;
                             } else {
-                              if (var4 == 44) {
-                                var2_ref.b(-10258, (ksa) (Object) new tsa(jwa.field_l, -1 + var3.field_b));
-                                continue L1;
-                              } else {
-                                var2_ref.b(param0 ^ 10257, (ksa) (Object) ir.a(-20, var3));
-                                continue L1;
-                              }
+                              var2.b(-10258, (ksa) (Object) ir.a(-20, var3));
+                              continue L1;
                             }
                           }
                         }
                       }
                     }
-                    var2_ref.b(param0 ^ 10257, (ksa) (Object) iba.a(117, var3));
-                    continue L1;
-                  } else {
-                    continue L1;
                   }
+                  var2.b(-10258, (ksa) (Object) iba.a(117, var3));
+                  continue L1;
+                } else {
+                  continue L1;
                 }
               }
-            } else {
-              stackOut_2_0 = null;
-              stackIn_3_0 = stackOut_2_0;
-              return (ij) (Object) stackIn_3_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var2 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) var2;
-            stackOut_20_1 = new StringBuilder().append("ck.C(").append(param0).append(44);
+            var2_ref = decompiledCaughtException;
+            stackOut_20_0 = (RuntimeException) var2_ref;
+            stackOut_20_1 = new StringBuilder().append("ck.C(").append(-1).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;

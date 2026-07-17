@@ -49,17 +49,19 @@ final class ee extends em {
         }
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_H = null;
         field_E = null;
         field_K = null;
     }
 
-    final static void i(int param0) {
-        int var1 = ma.o(-14933);
+    final static void i() {
+        int discarded$0 = -14933;
+        int var1 = ma.o();
         int var2 = ei.n(0);
         rb.field_e.a(var2 - -(rf.field_b << 1), lj.field_p + -rf.field_b, var1 - -(pm.field_c << 1), 26202, cg.field_o - pm.field_c);
-        ik.n(-107);
+        int discarded$1 = -107;
+        ik.n();
     }
 
     final static void a(String param0, String[] param1, byte param2, int param3) {
@@ -112,14 +114,16 @@ final class ee extends em {
           ic.field_l = kd.field_p;
           if (param3 != 255) {
             if (100 > param3) {
-              vk.field_g = ij.a(param3, param0, true);
+              int discarded$6 = 1;
+              vk.field_g = ij.a(param3, param0);
               return;
             } else {
               if (param3 <= 105) {
                 vk.field_g = rh.a(124, param1);
                 return;
               } else {
-                vk.field_g = ij.a(param3, param0, true);
+                int discarded$7 = 1;
+                vk.field_g = ij.a(param3, param0);
                 return;
               }
             }
@@ -135,7 +139,8 @@ final class ee extends em {
                 break L1;
               }
             }
-            vk.field_g = hn.a(stackIn_7_0 != 0, (byte) 105);
+            int discarded$8 = 105;
+            vk.field_g = hn.a(stackIn_7_0 != 0);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -195,7 +200,7 @@ final class ee extends em {
         }
     }
 
-    final static boolean e(byte param0) {
+    final static boolean e() {
         int var1_int = 0;
         RuntimeException var1 = null;
         tc var2 = null;

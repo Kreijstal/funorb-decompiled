@@ -6,7 +6,7 @@ final class gm {
     static int[] field_c;
     static String field_b;
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void a(java.applet.Applet param0) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -31,7 +31,8 @@ final class gm {
               try {
                 L0: {
                   var2 = new java.net.URL(param0.getCodeBase(), "toserverlist.ws");
-                  param0.getAppletContext().showDocument(gh.a(param0, var2, (byte) 67), "_top");
+                  int discarded$2 = 67;
+                  param0.getAppletContext().showDocument(gh.a(param0, var2), "_top");
                   break L0;
                 }
               } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -169,7 +170,7 @@ final class gm {
         return stackIn_8_0 != 0;
     }
 
-    final static String a(boolean param0, boolean param1, boolean param2, int param3) {
+    final static String a(boolean param0, boolean param1) {
         int var4 = 0;
         if (!(!param0)) {
             var4 += 4;
@@ -177,9 +178,7 @@ final class gm {
         if (!(!param1)) {
             var4 += 2;
         }
-        if (!(!param2)) {
-            var4++;
-        }
+        var4++;
         return pf.field_m[var4];
     }
 

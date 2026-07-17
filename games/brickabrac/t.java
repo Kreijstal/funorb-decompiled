@@ -11,7 +11,7 @@ final class t {
     static mh field_f;
     static boolean field_g;
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_f = null;
         field_b = null;
@@ -43,13 +43,9 @@ final class t {
           L0: {
             ge.a(-2846, (java.awt.Component) (Object) param1);
             b.a(20616, (java.awt.Component) (Object) param1);
-            if (!param0) {
-              if (null != qa.field_x) {
-                qa.field_x.a((java.awt.Component) (Object) param1, -117);
-                break L0;
-              } else {
-                return;
-              }
+            if (null != qa.field_x) {
+              qa.field_x.a((java.awt.Component) (Object) param1, -117);
+              break L0;
             } else {
               return;
             }
@@ -59,7 +55,7 @@ final class t {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var2;
-            stackOut_6_1 = new StringBuilder().append("t.B(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("t.B(").append(0).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;

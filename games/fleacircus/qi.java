@@ -9,7 +9,7 @@ final class qi {
     static int field_f;
     static String field_a;
 
-    final static void a(java.math.BigInteger param0, int param1, int param2, byte[] param3, ni param4, java.math.BigInteger param5, byte param6) {
+    final static void a(java.math.BigInteger param0, int param1, int param2, byte[] param3, ni param4, java.math.BigInteger param5) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int[] var8 = null;
@@ -119,7 +119,7 @@ final class qi {
                 L5: {
                   L6: {
                     ri.field_x.field_i = 0;
-                    ri.field_x.a(param3, param1, param2, 0);
+                    ri.field_x.a(param3, param1, 0, 0);
                     ri.field_x.d(var7_int, 0);
                     ri.field_x.a(0, var15);
                     if (fleas.field_B == null) {
@@ -189,7 +189,7 @@ final class qi {
           }
           L9: {
             stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-            stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(44).append(param1).append(44).append(0).append(44);
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
@@ -266,7 +266,7 @@ final class qi {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_e = null;
         field_a = null;
@@ -320,7 +320,7 @@ final class qi {
                 break L1;
               } else {
                 var9 = null;
-                byte[] discarded$2 = qi.a((byte[]) null, -34);
+                byte[] discarded$3 = qi.a((byte[]) null, -34);
                 break L1;
               }
             }
@@ -376,7 +376,8 @@ final class qi {
                         var11 = var13;
                         var6 = var11;
                         if (var3 == 1) {
-                          int discarded$3 = fe.a(var17, var5_int, param0, var4, 9);
+                          int discarded$4 = 9;
+                          int discarded$5 = fe.a(var6, var5_int, param0, var4);
                           break L6;
                         } else {
                           var7 = (Object) (Object) se.field_c;

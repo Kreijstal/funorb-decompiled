@@ -98,10 +98,7 @@ final class dm extends nb {
     }
 
     final static void a(byte param0, boolean param1) {
-        if (param0 != 80) {
-            field_q = null;
-        }
-        uo.a(true, param0 + -28598, param1);
+        uo.a(true, -28518, param1);
     }
 
     final String e(int param0) {
@@ -123,7 +120,7 @@ final class dm extends nb {
     dm() {
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_q = null;
         field_s = null;
         field_r = null;

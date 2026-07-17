@@ -23,7 +23,7 @@ abstract class ji {
 
     abstract void h(int param0);
 
-    final static void f(int param0) {
+    final static void f() {
         pk var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -244,8 +244,8 @@ abstract class ji {
         var8 = Geoblox.field_C;
         try {
           L0: {
-            var4_int = param3.e((byte) -17, param1);
-            if (var4_int != param2) {
+            var4_int = param3.e((byte) -17, 16);
+            if (var4_int != 0) {
               L1: {
                 L2: {
                   if (param0 == null) {
@@ -325,7 +325,7 @@ abstract class ji {
           }
           L7: {
             stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(16).append(44).append(0).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -392,7 +392,7 @@ abstract class ji {
         }
     }
 
-    final static na[] c(int param0) {
+    final static na[] c() {
         int var2 = 0;
         int var3 = Geoblox.field_C;
         na[] var1 = new na[sb.field_a];
@@ -403,7 +403,7 @@ abstract class ji {
         return var1;
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_n = null;
         field_r = null;
         field_a = null;

@@ -878,7 +878,7 @@ final class al extends tn {
           if (param0.field_m.length == 0) {
             return null;
           } else {
-            return new al(param0, (int)((long)param0.field_j * 256L * (long)param1 / (long)(100 * ap.field_j)), param2 << 6);
+            return new al(param0, (int)((long)param0.field_j * 256L * 100L / (long)(100 * ap.field_j)), param2 << 6);
           }
         } else {
           return null;

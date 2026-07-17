@@ -9,7 +9,7 @@ final class bl {
     private fl field_a;
     private fl field_e;
 
-    private final hb b(int param0, int param1, int[] param2, int param3) {
+    private final hb b(int param0, int param1, int[] param2) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
@@ -157,7 +157,8 @@ final class bl {
               if (((bl) this).field_f.a(param1, (byte) 121) != 1) {
                 throw new RuntimeException();
               } else {
-                stackOut_7_0 = this.b(0, param1, param2, 79289964);
+                int discarded$4 = 79289964;
+                stackOut_7_0 = this.b(0, param1, param2);
                 stackIn_8_0 = stackOut_7_0;
                 return stackIn_8_0;
               }
@@ -167,7 +168,8 @@ final class bl {
               return (hb) (Object) stackIn_5_0;
             }
           } else {
-            stackOut_1_0 = this.b(param1, 0, param2, 79289964);
+            int discarded$5 = 79289964;
+            stackOut_1_0 = this.b(param1, 0, param2);
             stackIn_2_0 = stackOut_1_0;
             return stackIn_2_0;
           }
@@ -279,38 +281,33 @@ final class bl {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void a() {
         RuntimeException var2 = null;
         int var3 = 0;
         cf var4 = null;
         RuntimeException decompiledCaughtException = null;
         var3 = Transmogrify.field_A ? 1 : 0;
         try {
-          L0: {
-            var4 = (cf) (Object) mh.field_e.a((byte) -95);
-            L1: while (true) {
-              if (var4 == null) {
-                if (!param0) {
-                  break L0;
-                } else {
-                  field_d = null;
-                  return;
-                }
-              } else {
-                gj.a((byte) 83, var4, 2);
-                var4 = (cf) (Object) mh.field_e.a(true);
-                continue L1;
-              }
+          var4 = (cf) (Object) mh.field_e.a((byte) -95);
+          L0: while (true) {
+            if (var4 == null) {
+              field_d = null;
+              return;
+            } else {
+              int discarded$2 = 2;
+              gj.a((byte) 83, var4);
+              var4 = (cf) (Object) mh.field_e.a(true);
+              continue L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ch.a((Throwable) (Object) var2, "bl.A(" + param0 + 44 + 2 + 41);
+          throw ch.a((Throwable) (Object) var2, "bl.A(" + 0 + 44 + 2 + 41);
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_d = null;
         field_b = null;
     }

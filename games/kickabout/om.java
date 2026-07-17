@@ -30,7 +30,7 @@ final class om extends hd {
         this(param0, param1.field_Cb, param1.field_Db, param2);
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_Eb = null;
         field_zb = null;
         field_yb = null;
@@ -95,19 +95,23 @@ final class om extends hd {
                     var4.c((byte) -109);
                     break L0;
                   } else {
-                    lr.b((byte) -116);
+                    int discarded$5 = -116;
+                    lr.b();
                     return;
                   }
                 }
               } else {
-                bd.a("A1: " + tr.b(0), (Throwable) null, param0 + 1);
-                lr.b((byte) -116);
+                int discarded$6 = 0;
+                bd.a("A1: " + tr.b(), (Throwable) null, param0 + 1);
+                int discarded$7 = -116;
+                lr.b();
                 return;
               }
             } else {
               var3_ref_k = (k) (Object) ci.field_f.g(param0 ^ 24009);
               if (var3_ref_k == null) {
-                lr.b((byte) -116);
+                int discarded$8 = -116;
+                lr.b();
                 return;
               } else {
                 L3: {
@@ -123,7 +127,8 @@ final class om extends hd {
                 }
                 var8.field_n = var8.field_n + 4;
                 if (!var8.h(param0)) {
-                  lr.b((byte) -116);
+                  int discarded$9 = -116;
+                  lr.b();
                   return;
                 } else {
                   var3_ref_k.c((byte) -109);

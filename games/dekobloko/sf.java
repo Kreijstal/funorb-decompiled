@@ -12,7 +12,7 @@ abstract class sf extends be {
 
     abstract byte[] g(byte param0);
 
-    final static String c(int param0) {
+    final static String c() {
         Object var1 = null;
         Object var2 = null;
         String var3_ref_String = null;
@@ -51,10 +51,12 @@ abstract class sf extends be {
               if (2 != pk.field_r) {
                 break L2;
               } else {
-                if (!hl.a((byte) -53)) {
+                int discarded$7 = -53;
+                if (!hl.a()) {
                   L3: {
                     L4: {
-                      if (qe.a(cf.field_c, 3)) {
+                      int discarded$8 = 3;
+                      if (qe.a(cf.field_c)) {
                         break L4;
                       } else {
                         var2 = (Object) (Object) cm.a((byte) 96, se.field_V, new String[1]);
@@ -69,7 +71,9 @@ abstract class sf extends be {
                     break L3;
                   }
                   if (jh.field_h) {
-                    ca.a((String) null, (String) null, (String) var2, (byte) 125, 2, 0);
+                    int discarded$9 = 0;
+                    int discarded$10 = 2;
+                    ca.a((String) null, (String) null, (String) var2, (byte) 125);
                     qn.l(13);
                     break L2;
                   } else {
@@ -98,7 +102,8 @@ abstract class sf extends be {
             }
             L6: {
               if (null != var2) {
-                cl.a((String) null, 0, ij.field_c, (String) var2, -24503);
+                int discarded$11 = -24503;
+                cl.a((String) null, 0, ij.field_c, (String) var2);
                 break L6;
               } else {
                 L7: {
@@ -235,7 +240,8 @@ abstract class sf extends be {
                         break L7;
                       } else {
                         if (!wc.field_n) {
-                          aj.a(-1045);
+                          int discarded$12 = -1045;
+                          aj.a();
                           break L7;
                         } else {
                           break L7;
@@ -247,7 +253,8 @@ abstract class sf extends be {
                   }
                 }
                 L18: {
-                  cl.a(var5, var7, tl.field_q[var6], var4 + mm.c(dj.field_ab.toString()), -24503);
+                  int discarded$13 = -24503;
+                  cl.a(var5, var7, tl.field_q[var6], var4 + mm.c(dj.field_ab.toString()));
                   if (!jg.field_i) {
                     jb.field_f.field_jb = false;
                     break L18;
@@ -266,7 +273,7 @@ abstract class sf extends be {
                 break L6;
               }
             }
-            var3 = 125 % ((30 - param0) / 41);
+            var3 = 0;
             stackOut_96_0 = var1;
             stackIn_97_0 = stackOut_96_0;
             break L0;
@@ -274,35 +281,27 @@ abstract class sf extends be {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = (Object) (Object) decompiledCaughtException;
-          throw dh.a((Throwable) var1, "sf.C(" + param0 + 41);
+          throw dh.a((Throwable) var1, "sf.C(" + -36 + 41);
         }
         return (String) (Object) stackIn_97_0;
     }
 
     abstract int a(boolean param0);
 
-    public static void f(byte param0) {
+    public static void f() {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            L1: {
-              field_y = null;
-              field_E = null;
-              if (param0 <= -123) {
-                break L1;
-              } else {
-                field_B = -69;
-                break L1;
-              }
-            }
+            field_y = null;
+            field_E = null;
             field_C = null;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var1, "sf.A(" + param0 + 41);
+          throw dh.a((Throwable) (Object) var1, "sf.A(" + -126 + 41);
         }
     }
 

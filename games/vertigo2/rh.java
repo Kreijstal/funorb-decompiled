@@ -24,9 +24,6 @@ final class rh extends cj implements ij {
         d[] var7 = new d[param1];
         d[] var3 = var7;
         int[] var4 = new int[param1];
-        if (param0 != 27812) {
-            ((rh) this).field_J = null;
-        }
         for (var5 = 0; ((rh) this).field_N > var5; var5++) {
             var7[var5] = ((rh) this).field_P[var5];
             var4[var5] = ((rh) this).field_J[var5];
@@ -126,7 +123,7 @@ final class rh extends cj implements ij {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = -2;
         field_I = null;
         field_G = null;
@@ -166,14 +163,9 @@ final class rh extends cj implements ij {
             var3 = 1;
             L1: while (true) {
               if (var3 >= param1.length()) {
-                if (param0 == 288) {
-                  stackOut_9_0 = 1;
-                  stackIn_10_0 = stackOut_9_0;
-                  break L0;
-                } else {
-                  field_G = null;
-                  return true;
-                }
+                stackOut_9_0 = 1;
+                stackIn_10_0 = stackOut_9_0;
+                break L0;
               } else {
                 if (var2_int == param1.charAt(var3)) {
                   var3++;
@@ -191,7 +183,7 @@ final class rh extends cj implements ij {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var2;
-            stackOut_11_1 = new StringBuilder().append("rh.A(").append(param0).append(44);
+            stackOut_11_1 = new StringBuilder().append("rh.A(").append(288).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -224,9 +216,6 @@ final class rh extends cj implements ij {
         int var5 = Vertigo2.field_L ? 1 : 0;
         char[] var6 = new char[param1];
         char[] var3 = var6;
-        if (param0 >= -93) {
-            return null;
-        }
         for (var4 = 0; param1 > var4; var4++) {
             var6[var4] = '*';
         }
@@ -315,7 +304,7 @@ final class rh extends cj implements ij {
         }
     }
 
-    final static boolean e(byte param0) {
+    final static boolean e() {
         return ii.field_z;
     }
 
@@ -441,7 +430,7 @@ final class rh extends cj implements ij {
         nm.field_F = param1;
     }
 
-    final static er[] a(er param0, int param1) {
+    final static er[] a(er param0) {
         er[] var2 = null;
         RuntimeException var2_ref = null;
         er[] var3 = null;

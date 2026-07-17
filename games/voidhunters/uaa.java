@@ -86,11 +86,11 @@ final class uaa extends rqa {
         return stackIn_5_0 != 0;
     }
 
-    final static void b(int param0, int param1) {
+    final static void b() {
         faa var2 = dpa.field_p;
-        var2.h(24335, param1);
+        var2.h(24335, 4);
         var2.c(0, 1);
-        int var3 = 124 % ((-14 - param0) / 59);
+        int var3 = 0;
         var2.c(0, 2);
     }
 
@@ -108,7 +108,7 @@ final class uaa extends rqa {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_p = null;
     }
 

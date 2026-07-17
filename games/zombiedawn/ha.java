@@ -11,17 +11,14 @@ final class ha {
     public static void a(int param0) {
         field_c = null;
         field_d = null;
-        if (param0 != 127) {
-            field_a = -74;
-        }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         fp.field_H = dj.field_e.field_H.field_u + 300;
         ac.field_t = -300;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         Object var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

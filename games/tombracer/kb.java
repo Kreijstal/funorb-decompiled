@@ -55,10 +55,11 @@ final class kb extends vg {
               return df.field_J[param0];
             }
           } else {
-            return dia.a(param2, param0, param1, (byte) 124);
+            int discarded$3 = 124;
+            return dia.a(param2, param0, param1);
           }
         } else {
-          boolean discarded$1 = kb.a(-126, -35, (byte) 96);
+          boolean discarded$4 = kb.a(-126, -35, (byte) 96);
           var5 = param4;
           if (0 != var5) {
             if (var5 != 1) {
@@ -95,7 +96,8 @@ final class kb extends vg {
               return df.field_J[param0];
             }
           } else {
-            return dia.a(param2, param0, param1, (byte) 124);
+            int discarded$5 = 124;
+            return dia.a(param2, param0, param1);
           }
         }
     }
@@ -149,9 +151,6 @@ final class kb extends vg {
 
     final static void a(int param0, boolean param1) {
         gva.field_b.a(-63, param1);
-        if (param0 != 2753) {
-            field_p = 0.6975499391555786f;
-        }
     }
 
     static {

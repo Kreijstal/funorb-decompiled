@@ -311,7 +311,7 @@ final class ba extends gn implements dm {
         return stackIn_1_0;
     }
 
-    final static void a(le param0, int param1) {
+    final static void a(le param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

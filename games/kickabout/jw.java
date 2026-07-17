@@ -26,13 +26,14 @@ final class jw extends hd {
 
     final static boolean a(char param0, int param1) {
         if (!Character.isISOControl(param0)) {
-          if (!vt.a(param0, true)) {
+          int discarded$8 = 1;
+          if (!vt.a(param0)) {
             if (param0 != 45) {
               if (160 != param0) {
                 if (param0 != 32) {
                   if (param0 != 95) {
                     if (param1 != 160) {
-                      boolean discarded$2 = jw.a('1', 48);
+                      boolean discarded$9 = jw.a('1', 48);
                       return false;
                     } else {
                       return false;
@@ -122,7 +123,8 @@ final class jw extends hd {
                                             } else {
                                               sl.field_Eb = true;
                                               ps.a(-25246, false, false, false, false, false, false);
-                                              mk.b(-1622);
+                                              int discarded$2 = -1622;
+                                              mk.b();
                                               et.field_d.field_x = new la[]{new la(-800, -800, 1800, 1800)};
                                               et.field_d.field_B = et.field_d.field_x;
                                               return;
@@ -186,7 +188,8 @@ final class jw extends hd {
                 }
                 sl.field_Eb = true;
                 ps.a(-25246, false, false, false, false, false, false);
-                mk.b(-1622);
+                int discarded$3 = -1622;
+                mk.b();
                 et.field_d.field_x = new la[]{new la(-800, -800, 1800, 1800)};
                 et.field_d.field_B = et.field_d.field_x;
                 break L0;

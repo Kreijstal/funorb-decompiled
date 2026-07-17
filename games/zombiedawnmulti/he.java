@@ -149,13 +149,13 @@ final class he implements nl {
         int var4 = 0;
         byte[] var5 = null;
         int var6 = 0;
-        byte[] var8 = null;
-        cr var9 = null;
-        ga var10 = null;
+        byte[] var7 = null;
+        cr var8 = null;
+        ga var9 = null;
+        byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
-        byte[] var14 = null;
         RuntimeException decompiledCaughtException = null;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
@@ -168,44 +168,44 @@ final class he implements nl {
                 break L1;
               }
             }
-            var10 = s.field_e;
-            var2 = var10.g(31365);
+            var9 = s.field_e;
+            var2 = var9.g(31365);
             if (var2 == 0) {
-              var9 = (cr) (Object) dc.field_Gb.c(param0 + 9430);
-              if (var9 == null) {
+              var8 = (cr) (Object) dc.field_Gb.c(param0 + 9430);
+              if (var8 == null) {
                 ak.a((byte) -128);
                 return;
               } else {
                 L2: {
-                  var4 = var10.g(param0 + 40720);
+                  var4 = var9.g(param0 + 40720);
                   if (var4 != 0) {
-                    var14 = new byte[var4];
-                    var13 = var14;
+                    var13 = new byte[var4];
                     var12 = var13;
                     var11 = var12;
-                    var8 = var11;
-                    var5 = var8;
-                    var10.a(0, -6351, var4, var14);
+                    var10 = var11;
+                    var7 = var10;
+                    var5 = var7;
+                    var9.a(0, -6351, var4, var13);
                     break L2;
                   } else {
                     var5 = null;
                     break L2;
                   }
                 }
-                var10.field_j = var10.field_j + 4;
-                if (!var10.c(false)) {
+                var9.field_j = var9.field_j + 4;
+                if (!var9.c(false)) {
                   ak.a((byte) -113);
                   return;
                 } else {
-                  var9.field_f = var5;
-                  var9.field_h = true;
-                  var9.a(true);
+                  var8.field_f = var5;
+                  var8.field_h = true;
+                  var8.a(true);
                   break L0;
                 }
               }
             } else {
               if (var2 == 1) {
-                var3 = var10.i(-1478490344);
+                var3 = var9.i(-1478490344);
                 var4_ref_n = (n) (Object) nq.field_s.c(param0 ^ -9398);
                 L3: while (true) {
                   L4: {
@@ -229,7 +229,8 @@ final class he implements nl {
                   }
                 }
               } else {
-                bd.a("A1: " + ci.a(0), (Throwable) null, false);
+                int discarded$1 = 0;
+                bd.a("A1: " + ci.a(0), (Throwable) null);
                 ak.a((byte) -111);
                 return;
               }
@@ -278,7 +279,7 @@ final class he implements nl {
         }
     }
 
-    final static long b(byte param0) {
+    final static long b() {
         return -mo.field_Gb + bl.a((byte) 56);
     }
 

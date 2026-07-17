@@ -242,7 +242,8 @@ final class uf {
               ri.a(param10, param16, param7 ^ -17016, param5, param6);
               tb.a(-92, param6);
               wp.a(param2, param11, param18, param19, param13, param17, param8, param0, param14, param6, param15, param12, param9, (byte) 117, param4);
-              ew.a(param3, param6, param1, 0);
+              int discarded$3 = 0;
+              ew.a(true, param6, param1);
               sb.b((byte) -124);
               if (param7 == 16971) {
                 break L1;
@@ -251,8 +252,10 @@ final class uf {
                 break L1;
               }
             }
-            na.h(0);
-            tq.g((byte) -47);
+            int discarded$4 = 0;
+            na.h();
+            int discarded$5 = -47;
+            tq.g();
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -335,7 +338,7 @@ final class uf {
           }
           L5: {
             stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(param3).append(44);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(1).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -638,22 +641,49 @@ final class uf {
     }
 
     final static boolean c(int param0) {
-        if (hl.field_d >= 20) {
-          if (hh.b((byte) 97)) {
-            if (rl.field_n > 0) {
-              if (vr.d(1)) {
-                return false;
+        Object var2 = null;
+        if (param0 == 608) {
+          if (hl.field_d >= 20) {
+            int discarded$16 = 97;
+            if (hh.b()) {
+              if (rl.field_n > 0) {
+                int discarded$17 = 1;
+                if (vr.d()) {
+                  return false;
+                } else {
+                  return true;
+                }
               } else {
-                return true;
+                return false;
               }
             } else {
-              return false;
+              return true;
             }
           } else {
             return true;
           }
         } else {
-          return true;
+          var2 = null;
+          uf.a((ut[][]) null, (sj) null, (int[]) null, true, (byte[]) null, (kg[]) null, (sj) null, 32, (String[][]) null, (String[][]) null, (sj) null, (byte[]) null, (String[]) null, 71, (String[]) null, (ut[][]) null, (int[]) null, -120, 61, (String[]) null);
+          if (hl.field_d >= 20) {
+            int discarded$18 = 97;
+            if (hh.b()) {
+              if (rl.field_n > 0) {
+                int discarded$19 = 1;
+                if (vr.d()) {
+                  return false;
+                } else {
+                  return true;
+                }
+              } else {
+                return false;
+              }
+            } else {
+              return true;
+            }
+          } else {
+            return true;
+          }
         }
     }
 

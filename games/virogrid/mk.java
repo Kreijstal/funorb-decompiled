@@ -9,14 +9,14 @@ final class mk extends dc implements ta {
     static String field_fb;
     static mg field_bb;
 
-    private final void g(boolean param0) {
+    private final void g() {
         if (!((mk) this).field_G) {
             return;
         }
         ((mk) this).field_G = false;
     }
 
-    private final tg a(String param0, cd param1, byte param2) {
+    private final tg a(String param0, cd param1) {
         tg var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -126,10 +126,7 @@ final class mk extends dc implements ta {
         return stackIn_1_0;
     }
 
-    public static void k(int param0) {
-        if (param0 != -16) {
-            return;
-        }
+    public static void k() {
         field_gb = null;
         field_fb = null;
         field_cb = null;
@@ -159,7 +156,8 @@ final class mk extends dc implements ta {
           L0: {
             L1: {
               if (param1 == ((mk) this).field_db) {
-                this.g(false);
+                int discarded$2 = 0;
+                this.g();
                 break L1;
               } else {
                 break L1;
@@ -204,7 +202,7 @@ final class mk extends dc implements ta {
         }
     }
 
-    final static boolean a(jc param0, int param1) {
+    final static boolean a(jc param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -352,7 +350,8 @@ final class mk extends dc implements ta {
             var4.field_g = ((mk) this).field_g;
             var4.field_w = (ol) (Object) new aj(dk.field_j, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true);
             ((mk) this).a(var4, (byte) -78);
-            ((mk) this).field_db = this.a(je.field_I, (cd) this, (byte) 75);
+            int discarded$2 = 75;
+            ((mk) this).field_db = this.a(je.field_I, (cd) this);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

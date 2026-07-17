@@ -65,7 +65,7 @@ final class ri {
         }
     }
 
-    private final void a(uq param0, int param1) {
+    private final void a(uq param0) {
         RuntimeException var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -129,26 +129,27 @@ final class ri {
     }
 
     private final void a(Object param0, byte param1, int param2, long param3) {
-        uq var9 = null;
+        uq var6 = null;
         f var7 = null;
         int var8 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-            if (!(((ri) this).field_f >= param2)) {
+            if (!(((ri) this).field_f >= 1)) {
                 throw new IllegalStateException();
             }
             this.a(param3, -75);
-            ((ri) this).field_a = ((ri) this).field_a - param2;
+            ((ri) this).field_a = ((ri) this).field_a - 1;
             while (0 > ((ri) this).field_a) {
-                var9 = (uq) (Object) ((ri) this).field_e.a(false);
-                this.a(var9, 0);
+                var6 = (uq) (Object) ((ri) this).field_e.a(false);
+                int discarded$0 = 0;
+                this.a(var6);
             }
-            int var6_int = 105 % ((4 - param1) / 34);
-            var7 = new f(param0, param2);
+            int var6_int = 0;
+            var7 = new f(param0, 1);
             ((ri) this).field_g.a((tc) (Object) var7, false, param3);
             ((ri) this).field_e.a(-96, (ms) (Object) var7);
             ((uq) (Object) var7).field_q = 0L;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "ri.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "ri.B(" + (param0 != null ? "{...}" : "null") + 44 + -46 + 44 + 1 + 44 + param3 + 41);
         }
     }
 
@@ -157,7 +158,8 @@ final class ri {
             return;
         }
         uq var4 = (uq) (Object) ((ri) this).field_g.a(13497, param0);
-        this.a(var4, 0);
+        int discarded$0 = 0;
+        this.a(var4);
     }
 
     final void a(Object param0, int param1, long param2) {
@@ -223,7 +225,7 @@ final class ri {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = 0;
         field_b = null;
         field_c = null;

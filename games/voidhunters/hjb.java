@@ -72,7 +72,7 @@ final class hjb extends rqa {
         return stackIn_4_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
         int var1 = -89;
     }

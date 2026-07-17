@@ -45,7 +45,8 @@ final class qt extends rqa {
               if (var3 != 0) {
                 return false;
               } else {
-                or.a(0);
+                int discarded$2 = 0;
+                or.a();
                 return true;
               }
             } else {
@@ -121,7 +122,8 @@ final class qt extends rqa {
             if (var3 != 0) {
               return false;
             } else {
-              or.a(0);
+              int discarded$3 = 0;
+              or.a();
               return true;
             }
           } else {
@@ -264,7 +266,7 @@ final class qt extends rqa {
         return stackIn_3_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
     }
 

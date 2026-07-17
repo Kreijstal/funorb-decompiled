@@ -56,13 +56,34 @@ final class vc extends rg implements ie {
     }
 
     final static boolean e(boolean param0) {
-        if (gl.field_y < 10) {
+        int stackIn_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
+        if (!param0) {
+          if (gl.field_y >= 10) {
+            if (ge.field_x) {
+              return false;
+            } else {
+              L0: {
+                int discarded$6 = 1;
+                if (i.b()) {
+                  stackOut_7_0 = 0;
+                  stackIn_8_0 = stackOut_7_0;
+                  break L0;
+                } else {
+                  stackOut_6_0 = 1;
+                  stackIn_8_0 = stackOut_6_0;
+                  break L0;
+                }
+              }
+              return stackIn_8_0 != 0;
+            }
+          } else {
             return false;
+          }
+        } else {
+          return false;
         }
-        if (ge.field_x) {
-            return false;
-        }
-        return !i.b(true) ? true : false;
     }
 
     final String f(int param0) {

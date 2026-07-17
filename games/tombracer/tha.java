@@ -209,7 +209,7 @@ final class tha extends b implements tsa {
         ((tha) this).a((ae) (Object) ((tha) this).field_x, -1);
     }
 
-    public static void c(int param0) {
+    public static void c() {
         int var1 = 0;
         field_y = null;
         field_B = null;
@@ -259,7 +259,8 @@ final class tha extends b implements tsa {
                 }
               }
             } else {
-              pn.f(-804227775);
+              int discarded$2 = -804227775;
+              pn.f();
               return;
             }
           }

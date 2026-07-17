@@ -186,7 +186,7 @@ final class pi extends fw {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_O = null;
         field_P = null;
         field_M = null;

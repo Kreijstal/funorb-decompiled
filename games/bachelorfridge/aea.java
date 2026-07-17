@@ -174,7 +174,7 @@ final class aea extends k {
         return var3;
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_k = null;
     }
 

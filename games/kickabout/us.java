@@ -10,15 +10,11 @@ final class us extends gn {
     static int field_e;
     static String[] field_h;
 
-    final static int a(byte param0) {
-        if (param0 >= -69) {
-            field_g = null;
-            return ck.field_d;
-        }
+    final static int a() {
         return ck.field_d;
     }
 
-    final static void g(byte param0) {
+    final static void g() {
         Object var1 = null;
         int var2 = 0;
         String var3 = null;
@@ -27,18 +23,20 @@ final class us extends gn {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int stackIn_24_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_22_0 = 0;
+        int stackIn_22_0 = 0;
         int stackOut_21_0 = 0;
+        int stackOut_20_0 = 0;
+        int stackOut_19_0 = 0;
         if (null == et.field_d) {
           return;
         } else {
-          kb.h(-92);
+          int discarded$3 = -92;
+          kb.h();
           if (mc.field_a != 0) {
             L0: {
               var1 = null;
-              var2 = je.a(false);
+              int discarded$4 = 0;
+              var2 = je.a();
               if (var2 != -1) {
                 var1 = (Object) (Object) rr.field_g[var2];
                 break L0;
@@ -46,57 +44,53 @@ final class us extends gn {
                 break L0;
               }
             }
-            if (param0 <= -75) {
-              ul.a((byte) -126, (String) var1);
-              if (-1 != var2) {
-                if (dd.field_f >= 60) {
-                  return;
-                } else {
-                  L1: {
-                    var3 = ep.field_c[var2];
-                    var4 = pb.field_C.b(var3, mc.field_a + -44);
-                    if (dd.field_f > 0) {
-                      L2: {
-                        var6 = 60;
-                        var7 = dd.field_f;
-                        if (var3.length() < 70) {
-                          var6 = 10;
-                          var7 = Math.max(0, var6 - (60 - var7));
-                          break L2;
-                        } else {
-                          break L2;
-                        }
+            ul.a((byte) -126, (String) var1);
+            if (-1 != var2) {
+              if (dd.field_f >= 60) {
+                return;
+              } else {
+                L1: {
+                  var3 = ep.field_c[var2];
+                  var4 = pb.field_C.b(var3, mc.field_a + -44);
+                  if (dd.field_f > 0) {
+                    L2: {
+                      var6 = 60;
+                      var7 = dd.field_f;
+                      if (var3.length() < 70) {
+                        var6 = 10;
+                        var7 = Math.max(0, var6 - (60 - var7));
+                        break L2;
+                      } else {
+                        break L2;
                       }
-                      var8 = (-var7 + var6) * var3.length() / var6;
-                      var3 = var3.substring(0, var8);
-                      break L1;
-                    } else {
-                      break L1;
                     }
+                    var8 = (-var7 + var6) * var3.length() / var6;
+                    var3 = var3.substring(0, var8);
+                    break L1;
+                  } else {
+                    break L1;
                   }
-                  L3: {
-                    if (var4 == 1) {
-                      stackOut_23_0 = 16;
-                      stackIn_24_0 = stackOut_23_0;
+                }
+                L3: {
+                  if (var4 == 1) {
+                    stackOut_21_0 = 16;
+                    stackIn_22_0 = stackOut_21_0;
+                    break L3;
+                  } else {
+                    if (var4 == 2) {
+                      stackOut_20_0 = 6;
+                      stackIn_22_0 = stackOut_20_0;
                       break L3;
                     } else {
-                      if (var4 == 2) {
-                        stackOut_22_0 = 6;
-                        stackIn_24_0 = stackOut_22_0;
-                        break L3;
-                      } else {
-                        stackOut_21_0 = 0;
-                        stackIn_24_0 = stackOut_21_0;
-                        break L3;
-                      }
+                      stackOut_19_0 = 0;
+                      stackIn_22_0 = stackOut_19_0;
+                      break L3;
                     }
                   }
-                  var5 = stackIn_24_0;
-                  var3 = wj.a("</>", "</shad></col>", true, wj.a("<>", "<col=ffff00><shad=010101>", true, var3));
-                  int discarded$1 = pb.field_C.a(var3, (-mc.field_a + 640 >> 1) - -72, -10 + (var5 - -458) + -48, -44 + mc.field_a - 50, 48, 16777215, -1, 0, 0, 16);
-                  return;
                 }
-              } else {
+                var5 = stackIn_22_0;
+                var3 = wj.a("</>", "</shad></col>", true, wj.a("<>", "<col=ffff00><shad=010101>", true, var3));
+                int discarded$5 = pb.field_C.a(var3, (-mc.field_a + 640 >> 1) - -72, -10 + (var5 - -458) + -48, -44 + mc.field_a - 50, 48, 16777215, -1, 0, 0, 16);
                 return;
               }
             } else {
@@ -108,12 +102,12 @@ final class us extends gn {
         }
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         field_h = null;
         field_f = null;
         field_g = null;
         field_i = null;
-        int var1 = 36 % ((-42 - param0) / 32);
+        int var1 = 0;
     }
 
     static {

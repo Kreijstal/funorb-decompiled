@@ -12,38 +12,31 @@ final class cca extends rva {
     final static iu[] a(int param0, cn param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        iu[] stackIn_6_0 = null;
+        iu[] stackIn_4_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
+        String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        iu[] stackOut_5_0 = null;
+        iu[] stackOut_3_0 = null;
         Object stackOut_1_0 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
         StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
         try {
           L0: {
             if (jna.a(false, param0, param3, param1)) {
-              L1: {
-                if (param2 <= -7) {
-                  break L1;
-                } else {
-                  field_z = 29L;
-                  break L1;
-                }
-              }
-              stackOut_5_0 = pn.i(94);
-              stackIn_6_0 = stackOut_5_0;
+              int discarded$2 = 94;
+              stackOut_3_0 = pn.i();
+              stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
               stackOut_1_0 = null;
@@ -53,35 +46,35 @@ final class cca extends rva {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var4 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var4;
-            stackOut_7_1 = new StringBuilder().append("cca.E(").append(param0).append(44);
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackOut_5_0 = (RuntimeException) var4;
+            stackOut_5_1 = new StringBuilder().append("cca.E(").append(param0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
-              break L2;
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
-              break L2;
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param2 + 44 + param3 + 41);
+          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + -97 + 44 + param3 + 41);
         }
-        return stackIn_6_0;
+        return stackIn_4_0;
     }
 
     private final void g(byte param0) {
@@ -915,11 +908,12 @@ final class cca extends rva {
                         break L5;
                       }
                     }
-                    this.c(-31791);
+                    int discarded$16 = -31791;
+                    this.c();
                     return;
                   } else {
                     L7: {
-                      boolean discarded$6 = this.a(-26, -25);
+                      boolean discarded$17 = this.a(-26, -25);
                       if (((cca) this).field_x == null) {
                         stackOut_47_0 = ((cca) this).field_m;
                         stackIn_48_0 = stackOut_47_0;
@@ -1045,7 +1039,8 @@ final class cca extends rva {
                         break L11;
                       }
                     }
-                    this.c(-31791);
+                    int discarded$18 = -31791;
+                    this.c();
                     return;
                   }
                 } else {
@@ -1054,7 +1049,7 @@ final class cca extends rva {
                     if (param0 == 88) {
                       break L13;
                     } else {
-                      boolean discarded$7 = this.a(-26, -25);
+                      boolean discarded$19 = this.a(-26, -25);
                       break L13;
                     }
                   }
@@ -1184,7 +1179,8 @@ final class cca extends rva {
                       break L18;
                     }
                   }
-                  this.c(-31791);
+                  int discarded$20 = -31791;
+                  this.c();
                   return;
                 }
               } else {
@@ -1193,7 +1189,7 @@ final class cca extends rva {
                   if (param0 == 88) {
                     break L20;
                   } else {
-                    boolean discarded$8 = this.a(-26, -25);
+                    boolean discarded$21 = this.a(-26, -25);
                     break L20;
                   }
                 }
@@ -1323,7 +1319,8 @@ final class cca extends rva {
                     break L25;
                   }
                 }
-                this.c(-31791);
+                int discarded$22 = -31791;
+                this.c();
                 return;
               }
             }
@@ -1460,11 +1457,12 @@ final class cca extends rva {
                   break L31;
                 }
               }
-              this.c(-31791);
+              int discarded$23 = -31791;
+              this.c();
               return;
             } else {
               L33: {
-                boolean discarded$9 = this.a(-26, -25);
+                boolean discarded$24 = this.a(-26, -25);
                 if (((cca) this).field_x == null) {
                   stackOut_162_0 = ((cca) this).field_m;
                   stackIn_163_0 = stackOut_162_0;
@@ -1590,7 +1588,8 @@ final class cca extends rva {
                   break L37;
                 }
               }
-              this.c(-31791);
+              int discarded$25 = -31791;
+              this.c();
               return;
             }
           } else {
@@ -1722,11 +1721,12 @@ final class cca extends rva {
                   break L43;
                 }
               }
-              this.c(-31791);
+              int discarded$26 = -31791;
+              this.c();
               return;
             } else {
               L45: {
-                boolean discarded$10 = this.a(-26, -25);
+                boolean discarded$27 = this.a(-26, -25);
                 if (((cca) this).field_x == null) {
                   stackOut_125_0 = ((cca) this).field_m;
                   stackIn_126_0 = stackOut_125_0;
@@ -1852,7 +1852,8 @@ final class cca extends rva {
                   break L49;
                 }
               }
-              this.c(-31791);
+              int discarded$28 = -31791;
+              this.c();
               return;
             }
           }
@@ -1985,11 +1986,12 @@ final class cca extends rva {
                 break L55;
               }
             }
-            this.c(-31791);
+            int discarded$29 = -31791;
+            this.c();
             return;
           } else {
             L57: {
-              boolean discarded$11 = this.a(-26, -25);
+              boolean discarded$30 = this.a(-26, -25);
               if (((cca) this).field_x == null) {
                 stackOut_87_0 = ((cca) this).field_m;
                 stackIn_88_0 = stackOut_87_0;
@@ -2115,7 +2117,8 @@ final class cca extends rva {
                 break L61;
               }
             }
-            this.c(-31791);
+            int discarded$31 = -31791;
+            this.c();
             return;
           }
         }
@@ -2189,7 +2192,7 @@ final class cca extends rva {
         return stackIn_4_0 != 0;
     }
 
-    private final void c(int param0) {
+    private final void c() {
         int var3 = TombRacer.field_G ? 1 : 0;
         if (((cca) this).field_x == null) {
             if (((cca) this).field_D == null) {
@@ -2238,7 +2241,8 @@ final class cca extends rva {
     final void a(int param0, int param1, ae param2, int param3) {
         try {
             super.a(param0, param1, param2, param3);
-            this.c(-31791);
+            int discarded$0 = -31791;
+            this.c();
             this.g((byte) -125);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "cca.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
@@ -2246,55 +2250,25 @@ final class cca extends rva {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        Object var7 = null;
         if (param5 < pka.field_b) {
           gt.a(param1, param5, param3, param2, 10, param0);
-          if (param4 != 936441872) {
-            var7 = null;
-            iu[] discarded$10 = cca.a(-19, (cn) null, 56, -52);
-            return;
-          } else {
-            return;
-          }
+          return;
         } else {
           if (ss.field_c < param1) {
             gt.a(param1, param5, param3, param2, 10, param0);
-            if (param4 == 936441872) {
-              return;
-            } else {
-              var7 = null;
-              iu[] discarded$11 = cca.a(-19, (cn) null, 56, -52);
-              return;
-            }
+            return;
           } else {
             if (param3 < gca.field_d) {
               gt.a(param1, param5, param3, param2, 10, param0);
-              if (param4 == 936441872) {
-                return;
-              } else {
-                var7 = null;
-                iu[] discarded$12 = cca.a(-19, (cn) null, 56, -52);
-                return;
-              }
+              return;
             } else {
               if (hc.field_h < param0) {
                 gt.a(param1, param5, param3, param2, 10, param0);
-                if (param4 == 936441872) {
-                  return;
-                } else {
-                  var7 = null;
-                  iu[] discarded$13 = cca.a(-19, (cn) null, 56, -52);
-                  return;
-                }
+                return;
               } else {
-                caa.a(param2, param1, param5, param3, param0, param4 ^ 936441872);
-                if (param4 != 936441872) {
-                  var7 = null;
-                  iu[] discarded$14 = cca.a(-19, (cn) null, 56, -52);
-                  return;
-                } else {
-                  return;
-                }
+                int discarded$2 = 0;
+                caa.a(param2, param1, param5, param3, param0);
+                return;
               }
             }
           }

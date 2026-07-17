@@ -22,7 +22,7 @@ final class jh extends vd implements ok {
         }
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_v = null;
         field_B = null;
     }
@@ -124,7 +124,7 @@ final class jh extends vd implements ok {
         }
     }
 
-    final static void a(qr param0, qr param1, qr param2, qr param3, int param4) {
+    final static void a(qr param0, qr param1, qr param2, qr param3) {
         RuntimeException var5 = null;
         String var5_ref = null;
         int var6 = 0;

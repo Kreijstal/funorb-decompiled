@@ -6,7 +6,7 @@ final class oc {
     static java.security.SecureRandom field_a;
     static float field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = 1;
         field_a = null;
     }

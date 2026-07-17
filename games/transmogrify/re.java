@@ -43,7 +43,7 @@ final class re {
     boolean[] field_w;
     int field_l;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_y = null;
         field_m = null;
         field_a = null;

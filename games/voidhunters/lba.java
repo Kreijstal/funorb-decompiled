@@ -75,11 +75,11 @@ final class lba extends rqa {
         return stackIn_3_0;
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_o = null;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         rg.field_b = false;
         tla.field_c = false;
         cea.a(-86, -1);

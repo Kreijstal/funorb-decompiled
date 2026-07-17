@@ -14,7 +14,7 @@ final class q extends jg {
     private int field_l;
     static String field_k;
 
-    private final long c(byte param0) {
+    private final long c() {
         int var9 = 0;
         int var10 = Confined.field_J ? 1 : 0;
         int var6 = 0;
@@ -83,7 +83,8 @@ final class q extends jg {
         if (param0 != 10) {
             field_n = null;
         }
-        ((q) this).field_m = ((q) this).field_m + this.c((byte) 105);
+        int discarded$0 = 105;
+        ((q) this).field_m = ((q) this).field_m + this.c();
         if (((q) this).field_m < ((q) this).field_p) {
             return (((q) this).field_p + -((q) this).field_m) / 1000000L;
         }

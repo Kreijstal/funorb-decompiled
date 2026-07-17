@@ -384,7 +384,7 @@ final class el extends gh {
                   break L2;
                 } else {
                   if (((el) this).field_Wb.length() > 0) {
-                    StringBuilder discarded$5 = dm.a(' ', 200, ((el) this).field_Wb, -1 + ((el) this).field_Wb.length());
+                    StringBuilder discarded$6 = dm.a(' ', 200, ((el) this).field_Wb, -1 + ((el) this).field_Wb.length());
                     break L2;
                   } else {
                     break L2;
@@ -392,8 +392,9 @@ final class el extends gh {
                 }
               }
               L3: {
-                if (fj.a(de.field_c, (CharSequence) (Object) ((el) this).field_Wb, -99)) {
-                  StringBuilder discarded$6 = ((el) this).field_Wb.append(de.field_c);
+                int discarded$7 = -99;
+                if (fj.a(de.field_c, (CharSequence) (Object) ((el) this).field_Wb)) {
+                  StringBuilder discarded$8 = ((el) this).field_Wb.append(de.field_c);
                   break L3;
                 } else {
                   L4: {
@@ -401,7 +402,7 @@ final class el extends gh {
                       break L4;
                     } else {
                       if (91 == de.field_c) {
-                        StringBuilder discarded$7 = ((el) this).field_Wb.append(de.field_c);
+                        StringBuilder discarded$9 = ((el) this).field_Wb.append(de.field_c);
                         break L3;
                       } else {
                         break L4;
@@ -413,7 +414,7 @@ final class el extends gh {
                       break L5;
                     } else {
                       if (35 == de.field_c) {
-                        StringBuilder discarded$8 = ((el) this).field_Wb.append(de.field_c);
+                        StringBuilder discarded$10 = ((el) this).field_Wb.append(de.field_c);
                         break L3;
                       } else {
                         break L5;
@@ -423,7 +424,7 @@ final class el extends gh {
                   if (de.field_c != 93) {
                     break L3;
                   } else {
-                    StringBuilder discarded$9 = ((el) this).field_Wb.append(de.field_c);
+                    StringBuilder discarded$11 = ((el) this).field_Wb.append(de.field_c);
                     break L3;
                   }
                 }
@@ -684,7 +685,7 @@ final class el extends gh {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_Sb = null;
         field_Zb = null;
         field_ac = null;

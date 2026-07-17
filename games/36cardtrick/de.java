@@ -8,7 +8,7 @@ final class de {
     int field_a;
     static int field_b;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_e = null;
     }
 
@@ -85,7 +85,7 @@ final class de {
                   if (param0 >= 17) {
                     break L3;
                   } else {
-                    int discarded$1 = de.a(93);
+                    int discarded$2 = de.a(93);
                     break L3;
                   }
                 }
@@ -113,7 +113,8 @@ final class de {
                         var18 = 0;
                         L6: while (true) {
                           if (var18 >= 3) {
-                            me.a(false, false, nl.field_c, true, var17, rh.field_h, false);
+                            int discarded$3 = 0;
+                            me.a(false, false, nl.field_c, true, var17, rh.field_h);
                             fj.a(-102, var8, var12, var14, var9, var7, var17, var13);
                             var15++;
                             continue L4;

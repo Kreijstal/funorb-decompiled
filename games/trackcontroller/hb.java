@@ -163,14 +163,15 @@ final class hb {
                             break L6;
                           } else {
                             var5 = (DataInputStream) var4.field_e;
-                            int discarded$1 = var5.read();
+                            int discarded$2 = var5.read();
                             var5.close();
                             break L6;
                           }
                         }
                         break L0;
                       } else {
-                        wl.a(1L, false);
+                        int discarded$3 = 0;
+                        wl.a(1L);
                         continue L5;
                       }
                     }
@@ -196,13 +197,13 @@ final class hb {
     }
 
     final static cg[] a(int param0, la param1) {
-        RuntimeException var2 = null;
         int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         cg[] var4 = null;
         int var5 = 0;
-        cg var6 = null;
         int var6_int = 0;
+        cg var6 = null;
         int var7 = 0;
         cg[] stackIn_14_0 = null;
         RuntimeException stackIn_16_0 = null;
@@ -225,9 +226,9 @@ final class hb {
         var7 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
-            var2_int = param1.d(param0 ^ 12, 8);
+            var2_int = param1.d(0, 8);
             if (var2_int <= 0) {
-              var3 = param1.d(0, param0);
+              var3 = param1.d(0, 12);
               var4 = new cg[var3];
               var5 = 0;
               L1: while (true) {
@@ -239,13 +240,13 @@ final class hb {
                   L2: {
                     if (lf.a((byte) -68, param1)) {
                       var6 = new cg();
-                      int discarded$6 = param1.d(0, 24);
-                      int discarded$7 = param1.d(0, 24);
-                      var6.field_a = param1.d(param0 ^ 12, 24);
-                      int discarded$8 = param1.d(0, 9);
-                      int discarded$9 = param1.d(0, 12);
-                      int discarded$10 = param1.d(param0 + -12, 12);
-                      int discarded$11 = param1.d(0, 12);
+                      int discarded$102 = param1.d(0, 24);
+                      int discarded$103 = param1.d(0, 24);
+                      var6.field_a = param1.d(0, 24);
+                      int discarded$104 = param1.d(0, 9);
+                      int discarded$105 = param1.d(0, 12);
+                      int discarded$106 = param1.d(0, 12);
+                      int discarded$107 = param1.d(0, 12);
                       var4[var5] = var6;
                       var5++;
                       break L2;
@@ -269,7 +270,7 @@ final class hb {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var2;
-            stackOut_15_1 = new StringBuilder().append("hb.A(").append(param0).append(44);
+            stackOut_15_1 = new StringBuilder().append("hb.A(").append(12).append(44);
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -405,34 +406,80 @@ final class hb {
         }
     }
 
-    private final void a(long param0, int param1) {
+    private final void a(long param0) {
         vh var4 = (vh) (Object) ((hb) this).field_e.a(param0, 20);
         this.a((byte) -108, var4);
     }
 
     private final void a(int param0, int param1, long param2, Object param3) {
-        vh var8 = null;
-        ad var6 = null;
-        int var7 = TrackController.field_F ? 1 : 0;
-        if (!(((hb) this).field_b >= param0)) {
-            throw new IllegalStateException();
-        }
-        this.a(param2, -89);
-        ((hb) this).field_g = ((hb) this).field_g - param0;
-        while (((hb) this).field_g < 0) {
-            var8 = (vh) (Object) ((hb) this).field_h.a(65);
-            this.a((byte) -103, var8);
-        }
-        if (param1 >= -53) {
-            return;
-        }
+        vh var6 = null;
+        RuntimeException var6_ref = null;
+        int var7 = 0;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        var7 = TrackController.field_F ? 1 : 0;
         try {
-            var6 = new ad(param3, param0);
-            ((hb) this).field_e.a((fc) (Object) var6, param2, -1);
-            ((hb) this).field_h.a((gb) (Object) var6, 8466);
-            ((vh) (Object) var6).field_m = 0L;
-        } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "hb.D(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+          L0: {
+            if (((hb) this).field_b < 1) {
+              throw new IllegalStateException();
+            } else {
+              int discarded$2 = -89;
+              this.a(param2);
+              ((hb) this).field_g = ((hb) this).field_g - 1;
+              L1: while (true) {
+                if (((hb) this).field_g >= 0) {
+                  break L0;
+                } else {
+                  var6 = (vh) (Object) ((hb) this).field_h.a(65);
+                  this.a((byte) -103, var6);
+                  continue L1;
+                }
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var6_ref = decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) var6_ref;
+            stackOut_9_1 = new StringBuilder().append("hb.D(").append(1).append(44).append(-84).append(44).append(param2).append(44);
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param3 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L2;
+            } else {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L2;
+            }
+          }
+          throw sl.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
         }
     }
 
@@ -440,7 +487,7 @@ final class hb {
         throw new Error();
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
         field_i = null;

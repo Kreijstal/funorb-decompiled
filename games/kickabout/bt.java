@@ -72,11 +72,12 @@ final class bt {
         }
         var5[2].a(0, var7);
         ta.e(118);
-        pd.a(var6, 20684);
+        int discarded$0 = 20684;
+        pd.a(var6);
         return var6;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         field_d = null;
@@ -84,7 +85,7 @@ final class bt {
         field_b = null;
     }
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;

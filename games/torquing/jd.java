@@ -72,7 +72,7 @@ final class jd extends jh {
         }
     }
 
-    final static boolean g(byte param0) {
+    final static boolean g() {
         pm var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -99,7 +99,7 @@ final class jd extends jh {
               return stackIn_4_0 != 0;
             } else {
               var2 = 0;
-              var3 = 60 / ((param0 - -84) / 40);
+              var3 = -60;
               L1: while (true) {
                 if (var1.field_l <= var2) {
                   stackOut_19_0 = 1;
@@ -141,7 +141,7 @@ final class jd extends jh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var1_ref, "jd.M(" + param0 + 41);
+          throw rb.a((Throwable) (Object) var1_ref, "jd.M(" + -126 + 41);
         }
         return stackIn_20_0 != 0;
     }
@@ -166,7 +166,7 @@ final class jd extends jh {
         }
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_D = null;
         field_F = null;
     }
@@ -180,7 +180,7 @@ final class jd extends jh {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void a() {
         q var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -189,38 +189,34 @@ final class jd extends jh {
         var3 = Torquing.field_u;
         try {
           L0: {
-            L1: {
-              var4 = (ni) (Object) vb.field_f.b(0);
-              if (param0) {
-                break L1;
-              } else {
-                boolean discarded$2 = jd.g((byte) -33);
-                break L1;
-              }
-            }
-            L2: while (true) {
+            var4 = (ni) (Object) vb.field_f.b(0);
+            L1: while (true) {
               if (var4 == null) {
                 var2 = qf.field_a.b(0);
-                L3: while (true) {
+                L2: while (true) {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    lc.b(0, 6);
+                    int discarded$12 = 6;
+                    int discarded$13 = 0;
+                    lc.b();
                     var2 = qf.field_a.f(-24059);
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
-                l.a(var4, 6, 1);
+                int discarded$14 = 1;
+                int discarded$15 = 6;
+                l.a(var4);
                 var4 = (ni) (Object) vb.field_f.f(-24059);
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var2_ref, "jd.L(" + param0 + 44 + 6 + 41);
+          throw rb.a((Throwable) (Object) var2_ref, "jd.L(" + 1 + 44 + 6 + 41);
         }
     }
 

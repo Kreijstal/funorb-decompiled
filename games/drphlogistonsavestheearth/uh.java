@@ -17,9 +17,6 @@ class uh extends gi {
     uh field_n;
 
     final static nh[] a(byte param0, int param1) {
-        if (param0 != 121) {
-            field_s = null;
-        }
         nh[] var3 = new nh[9];
         nh[] var2 = var3;
         var3[4] = mi.a(64, (byte) -93, param1);
@@ -28,7 +25,8 @@ class uh extends gi {
 
     final static he e(int param0) {
         he var1 = new he(oe.field_b, ih.field_K, kh.field_i[0], vi.field_b[0], gf.field_o[0], qa.field_J[0], a.field_e[0], aj.field_a);
-        oc.a((byte) -21);
+        int discarded$0 = -21;
+        oc.a();
         return var1;
     }
 

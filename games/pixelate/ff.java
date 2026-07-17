@@ -17,69 +17,62 @@ final class ff {
 
     final static tf[] a(fm param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
-        Object stackIn_2_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
+        String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
         String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
         try {
-          if (param3 == -3) {
-            if (rk.a(param2, false, param0, param1)) {
-              return ff.b(0);
-            } else {
-              return null;
-            }
+          if (rk.a(param2, false, param0, param1)) {
+            int discarded$2 = 0;
+            return ff.b();
           } else {
-            stackOut_1_0 = null;
-            stackIn_2_0 = stackOut_1_0;
-            return (tf[]) (Object) stackIn_2_0;
+            return null;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L0: {
             var4 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var4;
-            stackOut_7_1 = new StringBuilder().append("ff.B(");
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackOut_6_0 = (RuntimeException) var4;
+            stackOut_6_1 = new StringBuilder().append("ff.B(");
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
             if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
-              break L0;
-            } else {
               stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
               stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L0;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
               break L0;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw aa.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 44 + param2 + 44 + -3 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_a = null;
         field_h = null;
@@ -91,7 +84,7 @@ final class ff {
         field_g = null;
     }
 
-    final static String a(int param0, String param1, byte param2) {
+    final static String a(int param0, String param1) {
         RuntimeException var3 = null;
         int var5 = 0;
         int var6 = 0;
@@ -137,9 +130,10 @@ final class ff {
                 stackIn_8_0 = stackOut_7_0;
                 return stackIn_8_0;
               } else {
-                var8 = re.a(param1, -1);
+                int discarded$2 = -1;
+                var8 = re.a(param1);
                 if (var8 != null) {
-                  fa discarded$1 = vp.field_Hb.a((fa) (Object) var8, 1504642273);
+                  fa discarded$3 = vp.field_Hb.a((fa) (Object) var8, 1504642273);
                   L1: while (true) {
                     var7 = (im) (Object) vp.field_Hb.f(1504642273);
                     if (var7 != null) {
@@ -202,7 +196,7 @@ final class ff {
         return (String) (Object) stackIn_17_0;
     }
 
-    private final static tf[] b(int param0) {
+    private final static tf[] b() {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
@@ -219,11 +213,12 @@ final class ff {
             }
             var1[var2] = new tf(tj.field_y, jb.field_a, fa.field_b[var2], e.field_b[var2], gf.field_g[var2], ge.field_c[var2], var5);
         }
-        re.b(140);
+        int discarded$0 = 140;
+        re.b();
         return var1;
     }
 
-    final static hh[] a(fm param0, int param1, int param2, byte param3) {
+    final static hh[] a(fm param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         hh[] stackIn_4_0 = null;
@@ -248,7 +243,8 @@ final class ff {
           L0: {
             if (rk.a(param1, false, param0, param2)) {
               var4_int = 0;
-              stackOut_3_0 = gb.a((byte) -96);
+              int discarded$2 = -96;
+              stackOut_3_0 = gb.a();
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

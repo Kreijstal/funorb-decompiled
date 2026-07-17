@@ -15,12 +15,13 @@ final class wa extends kd {
 
     final static void a(byte param0, long param1) {
         try {
+            InterruptedException var3 = null;
+            Throwable decompiledCaughtException = null;
             {
+              L0: {
                 Thread.sleep(param1);
-            }
-            if (param0 != 5) {
-                field_k = null;
-                return;
+                break L0;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -113,7 +114,7 @@ final class wa extends kd {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_k = null;
         int var1 = 1;
         field_j = null;

@@ -57,7 +57,8 @@ final class t extends gd {
                   }
                 }
                 ((t) this).field_r = (dt) param2;
-                this.e(0);
+                int discarded$1 = 0;
+                this.e();
                 this.a(71, param0);
                 ((t) this).field_i = null;
                 ((t) this).field_b.field_p = 0;
@@ -580,12 +581,8 @@ final class t extends gd {
                   }
                   ((fs) (Object) stackIn_6_0).b((byte) stackIn_6_1, stackIn_6_2);
                   ((t) this).field_n.b(0L, 1105594440);
-                  if (param0 >= 63) {
-                    ((t) this).field_r.a(0, -2, ((t) this).field_n.field_n, ((t) this).field_n.field_n.length);
-                    break L0;
-                  } else {
-                    return;
-                  }
+                  ((t) this).field_r.a(0, -2, ((t) this).field_n.field_n, ((t) this).field_n.field_n.length);
+                  break L0;
                 }
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -618,7 +615,7 @@ final class t extends gd {
         }
     }
 
-    private final void e(int param0) {
+    private final void e() {
         try {
             Exception var3 = null;
             Throwable decompiledCaughtException = null;

@@ -35,7 +35,7 @@ final class cb implements ks {
           L0: {
             if (-1 != ((cb) this).field_a) {
               L1: {
-                var5_int = param0 << param3;
+                var5_int = 1 << param3;
                 if (-1 == (((cb) this).field_e & var5_int)) {
                   ((cb) this).field_g = param1.field_o;
                   ((cb) this).field_c = param1.field_l;
@@ -55,7 +55,7 @@ final class cb implements ks {
                   throw new RuntimeException();
                 }
               }
-              param1.a(((cb) this).field_a, param2, 0, vta.field_d[param3]);
+              param1.a(((cb) this).field_a, 0, 0, vta.field_d[param3]);
               ((cb) this).field_h[param3] = (wia) (Object) param1;
               ((cb) this).field_e = ((cb) this).field_e | var5_int;
               break L0;
@@ -68,7 +68,7 @@ final class cb implements ks {
           L3: {
             runtimeException = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) runtimeException;
-            stackOut_10_1 = new StringBuilder().append("cb.B(").append(param0).append(44);
+            stackOut_10_1 = new StringBuilder().append("cb.B(").append(1).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -91,7 +91,7 @@ final class cb implements ks {
               break L3;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param2 + 44 + param3 + 41);
+          throw tba.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + 0 + 44 + param3 + 41);
         }
     }
 

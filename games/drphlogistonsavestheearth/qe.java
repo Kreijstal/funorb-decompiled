@@ -488,7 +488,8 @@ final class qe implements Runnable {
             }
             ch.field_B = param1;
             lg.field_i = param0;
-            h.a(true);
+            int discarded$0 = 1;
+            h.a();
         } catch (RuntimeException runtimeException) {
             throw ie.a((Throwable) (Object) runtimeException, "qe.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
@@ -523,9 +524,9 @@ final class qe implements Runnable {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_8_0 = 0;
+        int stackIn_6_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
+        int stackOut_5_0 = 0;
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
@@ -539,33 +540,25 @@ final class qe implements Runnable {
                 break L1;
               }
             }
-            L2: {
-              if (param0 == 26) {
-                break L2;
-              } else {
-                qe.c(-113);
-                break L2;
-              }
-            }
-            L3: while (true) {
+            L2: while (true) {
               if (0 == param2) {
-                stackOut_7_0 = param1;
-                stackIn_8_0 = stackOut_7_0;
+                stackOut_5_0 = param1;
+                stackIn_6_0 = stackOut_5_0;
                 break L0;
               } else {
                 var3_int = param1 % param2;
                 param1 = param2;
                 param2 = var3_int;
-                continue L3;
+                continue L2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var3, "qe.A(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw ie.a((Throwable) (Object) var3, "qe.A(" + 26 + 44 + param1 + 44 + param2 + 41);
         }
-        return stackIn_8_0;
+        return stackIn_6_0;
     }
 
     private qe(java.net.Socket param0, bl param1, int param2) throws IOException {

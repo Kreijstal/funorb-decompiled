@@ -21,7 +21,7 @@ final class ve {
             L1: while (true) {
               if (var2_int >= fc.field_z) {
                 L2: {
-                  var3 = -108 % ((param0 - 73) / 39);
+                  var3 = -3;
                   uf.a(kl.field_a, param1 + fc.field_z, 1512033985, false, param1 + param1, param1, bh.field_e);
                   if (fc.field_z > param1) {
                     fc.field_z = param1;
@@ -41,11 +41,11 @@ final class ve {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var2, "ve.B(" + param0 + 44 + param1 + 41);
+          throw wg.a((Throwable) (Object) var2, "ve.B(" + -125 + 44 + param1 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         field_c = null;

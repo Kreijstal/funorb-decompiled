@@ -9,11 +9,11 @@ final class rd implements qi {
     static String field_d;
     static int[] field_e;
 
-    final static ma b(int param0) {
+    final static ma b() {
         return new ma(0, 0, io.field_n.field_p, 0, (pf) null, io.field_n.field_x, io.field_n.field_g, io.field_n.field_p, io.field_n.field_p, io.field_n.field_z, io.field_n.field_j, false, true, 32768, 0);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_f = null;
         field_d = null;

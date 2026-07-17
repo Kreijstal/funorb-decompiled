@@ -1893,12 +1893,12 @@ final class mf extends hj {
         }
     }
 
-    final static mf a(qp param0, int param1, int param2) {
+    final static mf a(qp param0) {
         if (param0.field_p != null) {
           if (param0.field_p.length == 0) {
             return null;
           } else {
-            return new mf(param0, (int)((long)param0.field_n * 256L * (long)param1 / (long)(100 * du.field_k)), 6144);
+            return new mf(param0, (int)((long)param0.field_n * 256L * 100L / (long)(100 * du.field_k)), 6144);
           }
         } else {
           return null;

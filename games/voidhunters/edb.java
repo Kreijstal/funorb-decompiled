@@ -4,7 +4,7 @@
 final class edb extends rqa {
     static int[] field_o;
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
         int var1 = -7;
     }

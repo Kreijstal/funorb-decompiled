@@ -17,7 +17,7 @@ final class tda extends jg {
         return param1 & 255;
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         int var1 = 0;
         field_b = null;
     }
@@ -186,10 +186,10 @@ final class tda extends jg {
         }
     }
 
-    final static void a(int param0, byte param1) {
+    final static void a() {
         ara.field_xb = 0;
-        sd.field_K = param0;
-        wea.field_d = new gqa[param0 * 15];
+        sd.field_K = 200;
+        wea.field_d = new gqa[3000];
         baa.field_b = new int[3];
     }
 

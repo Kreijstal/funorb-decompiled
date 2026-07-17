@@ -7,7 +7,7 @@ final class kka extends ob {
     static String field_r;
     static float field_q;
 
-    public static void c(byte param0) {
+    public static void c() {
         field_r = null;
         field_o = null;
         field_p = null;

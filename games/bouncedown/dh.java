@@ -21,15 +21,15 @@ final class dh implements Iterator {
         ((dh) this).field_g = null;
     }
 
-    private final void a(int param0) {
+    private final void a() {
         ((dh) this).field_h = ((dh) this).field_c.field_b[0].field_c;
         ((dh) this).field_f = 1;
         ((dh) this).field_g = null;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        RuntimeException var5 = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -59,28 +59,24 @@ final class dh implements Iterator {
                 break L2;
               }
             }
-            if (param1 == 1232050056) {
-              var7 = var5_int;
-              L3: while (true) {
-                if (var7 >= var6) {
-                  break L0;
-                } else {
-                  var8 = 48 * var7 / param4 + 152;
-                  var9 = var8 | (var8 << 16 | var8 << 8);
-                  na.field_d[param3 + na.field_e * (var7 + param0)] = var9;
-                  na.field_d[param3 + (param0 + var7) * na.field_e - -param2] = var9;
-                  var7++;
-                  continue L3;
-                }
+            var7 = var5_int;
+            L3: while (true) {
+              if (var7 >= var6) {
+                break L0;
+              } else {
+                var8 = 48 * var7 / param4 + 152;
+                var9 = var8 | (var8 << 16 | var8 << 8);
+                na.field_d[param3 + na.field_e * (var7 + param0)] = var9;
+                na.field_d[param3 + (param0 + var7) * na.field_e - -param2] = var9;
+                var7++;
+                continue L3;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ii.a((Throwable) (Object) var5, "dh.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw ii.a((Throwable) (Object) var5, "dh.A(" + param0 + 44 + 1232050056 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -130,7 +126,7 @@ final class dh implements Iterator {
         return false;
     }
 
-    final static void a(boolean param0, String param1, float param2, int param3) {
+    final static void a(boolean param0, String param1, float param2) {
         try {
             if (!(q.field_A != null)) {
                 q.field_A = new db(q.field_N, ej.field_c);
@@ -138,13 +134,14 @@ final class dh implements Iterator {
             }
             q.field_A.a(param0, param2, param1, 65536);
             na.a();
-            pj.a(true, 1);
+            int discarded$0 = 1;
+            pj.a(true);
         } catch (RuntimeException runtimeException) {
             throw ii.a((Throwable) (Object) runtimeException, "dh.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + -608757616 + 41);
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_d = null;
         field_b = null;
         field_e = null;
@@ -155,7 +152,8 @@ final class dh implements Iterator {
         ((dh) this).field_g = null;
         try {
             ((dh) this).field_c = param0;
-            this.a(-1);
+            int discarded$0 = -1;
+            this.a();
         } catch (RuntimeException runtimeException) {
             throw ii.a((Throwable) (Object) runtimeException, "dh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }

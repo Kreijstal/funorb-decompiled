@@ -125,11 +125,12 @@ final class ii implements pf {
               if (!param1) {
                 break L1;
               } else {
-                int discarded$2 = ii.a((byte) 81);
+                int discarded$4 = ii.a((byte) 81);
                 break L1;
               }
             }
-            stackOut_2_0 = sc.a(kd.a(param2, param0, param3), (byte) 68);
+            int discarded$5 = 68;
+            stackOut_2_0 = sc.a(kd.a(param2, param0, param3));
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -166,7 +167,7 @@ final class ii implements pf {
         return stackIn_3_0;
     }
 
-    final static int a(int param0) {
+    final static int a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -271,7 +272,7 @@ final class ii implements pf {
         return stackIn_24_0;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_b = null;
         field_e = null;
         field_d = null;

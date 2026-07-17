@@ -6,7 +6,7 @@ final class qb {
 
     final static void a(int param0, byte param1, ql param2) {
         ih var5 = ud.field_b;
-        var5.e(8, param0);
+        var5.e(8, 5);
         var5.field_i = var5.field_i + 1;
         int var4 = var5.field_i;
         var5.a(-11, 1);
@@ -23,11 +23,11 @@ final class qb {
             int discarded$0 = var5.c(var4, -30532);
             var5.c((byte) -111, -var4 + var5.field_i);
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "qb.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "qb.A(" + 5 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static String a(CharSequence param0, byte param1) {
+    final static String a(CharSequence param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
@@ -164,8 +164,8 @@ final class qb {
         return stackIn_26_0;
     }
 
-    final static void a(int param0, int param1) {
-        na.field_f = 1000000000L / (long)param0;
+    final static void a() {
+        na.field_f = 20000000L;
     }
 
     static {

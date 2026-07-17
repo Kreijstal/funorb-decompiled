@@ -122,7 +122,7 @@ final class kw extends llb {
         ((kw) this).field_Hb = -4 + param2;
     }
 
-    private final void n(int param0) {
+    private final void n() {
         if (null == ((kw) this).field_Db) {
             return;
         }
@@ -151,7 +151,7 @@ final class kw extends llb {
         }
     }
 
-    private final void e(byte param0) {
+    private final void e() {
         if (!(((kw) this).field_Db != null)) {
             return;
         }
@@ -213,7 +213,8 @@ final class kw extends llb {
                   if (((kw) this).field_zb) {
                     L3: {
                       ((kw) this).field_Gb = this.k(-1);
-                      ((kw) this).field_Ab = this.m(-10001);
+                      int discarded$3 = -10001;
+                      ((kw) this).field_Ab = this.m();
                       if (((kw) this).field_Ab <= 0) {
                         break L3;
                       } else {
@@ -268,9 +269,9 @@ final class kw extends llb {
             }
             L6: {
               if (!((kw) this).field_pb) {
-                int dupTemp$1 = ((kw) this).field_Eb.length();
-                ((kw) this).field_Gb = dupTemp$1;
-                ((kw) this).field_Ab = dupTemp$1;
+                int dupTemp$4 = ((kw) this).field_Eb.length();
+                ((kw) this).field_Gb = dupTemp$4;
+                ((kw) this).field_Ab = dupTemp$4;
                 break L6;
               } else {
                 break L6;
@@ -320,7 +321,8 @@ final class kw extends llb {
                     L11: {
                       var8 = (String) var7.getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
                       this.b(true);
-                      this.a(var8, false);
+                      int discarded$5 = 0;
+                      this.a(var8);
                       break L11;
                     }
                   } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -342,7 +344,7 @@ final class kw extends llb {
         }
     }
 
-    private final void a(String param0, boolean param1) {
+    private final void a(String param0) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -380,12 +382,13 @@ final class kw extends llb {
             L2: {
               if (((kw) this).field_Ab != ((kw) this).field_Eb.length()) {
                 var4 = ((kw) this).field_Eb.toString().substring(((kw) this).field_Ab, ((kw) this).field_Eb.length());
-                StringBuilder discarded$9 = npa.a(((kw) this).field_Ab, false, ((kw) this).field_Eb, ' ');
-                StringBuilder discarded$10 = ((kw) this).field_Eb.append(param0);
-                StringBuilder discarded$11 = ((kw) this).field_Eb.append(var4);
+                int discarded$11 = 32;
+                StringBuilder discarded$12 = npa.a(((kw) this).field_Ab, false, ((kw) this).field_Eb);
+                StringBuilder discarded$13 = ((kw) this).field_Eb.append(param0);
+                StringBuilder discarded$14 = ((kw) this).field_Eb.append(var4);
                 break L2;
               } else {
-                StringBuilder discarded$12 = ((kw) this).field_Eb.append(param0);
+                StringBuilder discarded$15 = ((kw) this).field_Eb.append(param0);
                 break L2;
               }
             }
@@ -427,7 +430,8 @@ final class kw extends llb {
     }
 
     final void a(boolean param0) {
-        StringBuilder discarded$5 = npa.a(0, !param0 ? true : false, ((kw) this).field_Eb, ' ');
+        int discarded$8 = 32;
+        StringBuilder discarded$11 = npa.a(0, !param0 ? true : false, ((kw) this).field_Eb);
         if (!param0) {
             ((kw) this).a(97, -10, -98);
         }
@@ -520,13 +524,14 @@ final class kw extends llb {
                     }
                     L5: {
                       if (((kw) this).field_Ab == ((kw) this).field_Eb.length()) {
-                        StringBuilder discarded$4 = ((kw) this).field_Eb.append(param2);
+                        StringBuilder discarded$8 = ((kw) this).field_Eb.append(param2);
                         break L5;
                       } else {
                         var5 = ((kw) this).field_Eb.toString().substring(((kw) this).field_Ab, ((kw) this).field_Eb.length());
-                        StringBuilder discarded$5 = npa.a(((kw) this).field_Ab, false, ((kw) this).field_Eb, ' ');
-                        StringBuilder discarded$6 = ((kw) this).field_Eb.append(param2);
-                        StringBuilder discarded$7 = ((kw) this).field_Eb.append(var5);
+                        int discarded$9 = 32;
+                        StringBuilder discarded$10 = npa.a(((kw) this).field_Ab, false, ((kw) this).field_Eb);
+                        StringBuilder discarded$11 = ((kw) this).field_Eb.append(param2);
+                        StringBuilder discarded$12 = ((kw) this).field_Eb.append(var5);
                         break L5;
                       }
                     }
@@ -565,7 +570,8 @@ final class kw extends llb {
                         } else {
                           L7: {
                             if (si.field_o[82]) {
-                              stackOut_40_0 = this.m(-10001);
+                              int discarded$13 = -10001;
+                              stackOut_40_0 = this.m();
                               stackIn_41_0 = stackOut_40_0;
                               break L7;
                             } else {
@@ -594,7 +600,8 @@ final class kw extends llb {
                                 if (param0 != 65) {
                                   break L8;
                                 } else {
-                                  this.e((byte) 116);
+                                  int discarded$14 = 116;
+                                  this.e();
                                   return true;
                                 }
                               }
@@ -617,7 +624,8 @@ final class kw extends llb {
                               if (67 != param0) {
                                 break L6;
                               } else {
-                                this.n(11090);
+                                int discarded$15 = 11090;
+                                this.n();
                                 return true;
                               }
                             }
@@ -909,7 +917,7 @@ final class kw extends llb {
         mob discarded$0 = ((kw) this).field_Db.a((byte) -45, (java.awt.datatransfer.Transferable) (Object) var3);
     }
 
-    private final int m(int param0) {
+    private final int m() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -947,8 +955,9 @@ final class kw extends llb {
             ((kw) this).field_Ab = var2;
             ((kw) this).field_Gb = var2;
             var4 = ((kw) this).field_Eb.toString().substring(var3, ((kw) this).field_Eb.length());
-            StringBuilder discarded$0 = npa.a(var2, !param0 ? true : false, ((kw) this).field_Eb, ' ');
-            StringBuilder discarded$1 = ((kw) this).field_Eb.append(var4);
+            int discarded$0 = 32;
+            StringBuilder discarded$1 = npa.a(var2, !param0 ? true : false, ((kw) this).field_Eb);
+            StringBuilder discarded$2 = ((kw) this).field_Eb.append(var4);
             ((kw) this).field_Fb.field_R = ((kw) this).field_Eb.toString();
         }
         if (!param0) {

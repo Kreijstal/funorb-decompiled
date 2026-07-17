@@ -6,10 +6,7 @@ final class vg {
     static String field_b;
     static ta field_c;
 
-    final static boolean a(int param0) {
-        if (param0 != 3) {
-            return true;
-        }
+    final static boolean a() {
         if (eq.field_g == null) {
             return false;
         }
@@ -20,21 +17,14 @@ final class vg {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        pi var3 = null;
-        var3 = k.field_h;
+        pi var3 = k.field_h;
         var3.e(-13413, param2);
         var3.a(-29, 3);
         var3.a(-127, 9);
         var3.b((byte) 121, param0);
-        if (param1) {
-          field_c = null;
-          return;
-        } else {
-          return;
-        }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_b = null;
         field_c = null;

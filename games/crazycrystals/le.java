@@ -4,7 +4,7 @@
 final class le extends ln {
     static dl[][] field_g;
 
-    final static void a(int param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;
@@ -29,14 +29,6 @@ final class le extends ln {
           L0: {
             L1: {
               var12 = kd.field_n;
-              if (param0 == 15295) {
-                break L1;
-              } else {
-                le.b(115);
-                break L1;
-              }
-            }
-            L2: {
               var2 = var12.h(255);
               if (var2 == 0) {
                 var10 = wl.a((byte) -93);
@@ -50,7 +42,7 @@ final class le extends ln {
                 var5 = var12;
                 var6 = ((ng) (Object) var5).h(255);
                 var7 = 0;
-                L3: while (true) {
+                L2: while (true) {
                   if (var7 >= var6) {
                     var15 = (dp) (Object) pm.field_c.g(32073);
                     if (var15 != null) {
@@ -58,7 +50,7 @@ final class le extends ln {
                       var15.field_g = var3;
                       var15.field_f = var18[0];
                       var15.a(false);
-                      break L2;
+                      break L1;
                     } else {
                       jj.a(4);
                       return;
@@ -66,36 +58,38 @@ final class le extends ln {
                   } else {
                     var9[var7] = ((ng) (Object) var5).b((byte) -75);
                     var7++;
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
                 if (var2 == 1) {
-                  var11 = (ca) (Object) gn.field_Q.g(param0 ^ 18166);
+                  var11 = (ca) (Object) gn.field_Q.g(32073);
                   if (var11 != null) {
                     var11.a(false);
-                    break L2;
+                    break L1;
                   } else {
                     jj.a(4);
                     return;
                   }
                 } else {
                   if (var2 == 2) {
-                    var13 = (dp) (Object) pm.field_c.g(param0 ^ 18166);
+                    var13 = (dp) (Object) pm.field_c.g(32073);
                     if (var13 != null) {
                       var13.field_g = wl.a((byte) -117);
                       var13.field_k = true;
                       var13.field_f = var13.field_g[0];
                       var13.a(false);
-                      break L2;
+                      break L1;
                     } else {
-                      jj.a(param0 + -15291);
+                      jj.a(4);
                       return;
                     }
                   } else {
-                    wp.a((Throwable) null, "A1: " + ug.a(-1815), 21862);
+                    int discarded$2 = -1815;
+                    int discarded$3 = 21862;
+                    wp.a((Throwable) null, "A1: " + ug.a());
                     jj.a(4);
-                    break L2;
+                    break L1;
                   }
                 }
               }
@@ -105,18 +99,15 @@ final class le extends ln {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw dn.a((Throwable) (Object) var1, "le.B(" + param0 + 41);
+          throw dn.a((Throwable) (Object) var1, "le.B(" + 15295 + 41);
         }
     }
 
     public static void b(int param0) {
         field_g = null;
-        if (param0 != -1) {
-            field_g = null;
-        }
     }
 
-    final static java.applet.Applet b(byte param0) {
+    final static java.applet.Applet b() {
         if (tk.field_i != null) {
             return tk.field_i;
         }

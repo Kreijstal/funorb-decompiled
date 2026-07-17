@@ -10,12 +10,21 @@ final class mk extends kd {
     static cd field_h;
 
     final static void a(int param0) {
-        if (!(qg.field_d)) {
-            throw new IllegalStateException();
+        if (!qg.field_d) {
+          throw new IllegalStateException();
+        } else {
+          if (param0 != 14891) {
+            return;
+          } else {
+            u.field_tb = true;
+            q.a((byte) -69, true);
+            ta.field_g = 0;
+            return;
+          }
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = 0;
         field_l = null;
         field_h = null;

@@ -87,22 +87,12 @@ final class ui {
         }
     }
 
-    public static void a(byte param0) {
-        Object var2 = null;
-        if (param0 <= 109) {
-          var2 = null;
-          ui.a((int[]) null, 61, 21, -49, 90);
-          field_c = null;
-          field_b = null;
-          return;
-        } else {
-          field_c = null;
-          field_b = null;
-          return;
-        }
+    public static void a() {
+        field_c = null;
+        field_b = null;
     }
 
-    final static int b(byte param0) {
+    final static int b() {
         return 1;
     }
 

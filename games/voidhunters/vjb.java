@@ -9,16 +9,22 @@ abstract class vjb {
     final static void a(byte param0) {
         if (param0 <= 75) {
           vjb.a((byte) 48);
-          lnb.d(0);
-          ebb.a((byte) -74);
+          int discarded$12 = 0;
+          lnb.d();
+          int discarded$13 = -74;
+          ebb.a();
           crb.field_v = null;
-          fea.a(-1);
+          int discarded$14 = -1;
+          fea.a();
           return;
         } else {
-          lnb.d(0);
-          ebb.a((byte) -74);
+          int discarded$15 = 0;
+          lnb.d();
+          int discarded$16 = -74;
+          ebb.a();
           crb.field_v = null;
-          fea.a(-1);
+          int discarded$17 = -1;
+          fea.a();
           return;
         }
     }

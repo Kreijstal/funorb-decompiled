@@ -9,7 +9,7 @@ final class tj {
     static int field_c;
     static String field_d;
 
-    final static void a(int param0) {
+    final static void a() {
         hc.a(17, 0);
     }
 
@@ -85,19 +85,10 @@ final class tj {
     }
 
     public static void a(boolean param0) {
-        Object var2 = null;
         field_d = null;
         field_b = null;
         field_f = null;
-        if (!param0) {
-          var2 = null;
-          tc discarded$2 = tj.a(-41, 14, -14, -105, -92, 72, 120, (int[]) null, -116);
-          field_e = null;
-          return;
-        } else {
-          field_e = null;
-          return;
-        }
+        field_e = null;
     }
 
     static {

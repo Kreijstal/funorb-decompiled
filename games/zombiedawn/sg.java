@@ -391,11 +391,13 @@ class sg extends ki implements hh {
             if (!((sg) this).field_hb) {
               return;
             } else {
-              ub.b((byte) 50);
+              int discarded$4 = 50;
+              ub.b();
               return;
             }
           } else {
-            c.a(65);
+            int discarded$5 = 65;
+            c.a();
             return;
           }
         } else {

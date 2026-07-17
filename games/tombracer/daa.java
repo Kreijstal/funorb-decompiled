@@ -94,7 +94,7 @@ final class daa {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_f = null;
         field_c = null;
         field_d = null;

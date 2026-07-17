@@ -103,7 +103,7 @@ final class ki {
         return qg.field_d;
     }
 
-    final static void a(Object param0, ab param1, int param2) {
+    final static void a(Object param0, ab param1) {
         Exception var3 = null;
         RuntimeException var3_ref = null;
         int var3_int = 0;
@@ -240,7 +240,7 @@ final class ki {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         int var1 = 128;

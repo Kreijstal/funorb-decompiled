@@ -571,7 +571,7 @@ final class fn {
         }
     }
 
-    final static void d(byte param0) {
+    final static void d() {
         ut var1 = null;
         RuntimeException var1_ref = null;
         ut var2 = null;
@@ -582,7 +582,7 @@ final class fn {
         try {
           L0: {
             var1 = new ut(540, 140);
-            iw.a(param0 + 26, var1);
+            iw.a(-102, var1);
             t.c();
             on.b();
             up.field_p = 0;
@@ -591,14 +591,6 @@ final class fn {
             var3 = 0;
             L1: while (true) {
               if (var3 >= 15) {
-                L2: {
-                  if (param0 == -128) {
-                    break L2;
-                  } else {
-                    field_b = null;
-                    break L2;
-                  }
-                }
                 tm.field_v.e();
                 var1.f(0, 0);
                 ta.e(127);
@@ -614,7 +606,7 @@ final class fn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1_ref, "fn.F(" + param0 + 41);
+          throw nb.a((Throwable) (Object) var1_ref, "fn.F(" + -128 + 41);
         }
     }
 
@@ -699,7 +691,7 @@ final class fn {
         return stackIn_10_0 != 0;
     }
 
-    final static void i(int param0) {
+    final static void i() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -707,7 +699,7 @@ final class fn {
         var2 = Kickabout.field_G;
         try {
           L0: {
-            e.field_n = new v[param0];
+            e.field_n = new v[18];
             var1_int = 0;
             L1: while (true) {
               if (~e.field_n.length >= ~var1_int) {
@@ -722,7 +714,7 @@ final class fn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "fn.R(" + param0 + 41);
+          throw nb.a((Throwable) (Object) var1, "fn.R(" + 18 + 41);
         }
     }
 
@@ -738,7 +730,7 @@ final class fn {
         try {
           L0: {
             mn.field_a = param0;
-            var3 = -110 / ((67 - param1) / 54);
+            var3 = -110;
             var2_ref = (ag) (Object) ps.field_a.g(24009);
             L1: while (true) {
               if (var2_ref == null) {
@@ -798,7 +790,7 @@ final class fn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var2, "fn.Q(" + param0 + 44 + param1 + 41);
+          throw nb.a((Throwable) (Object) var2, "fn.Q(" + param0 + 44 + -32 + 41);
         }
     }
 
@@ -903,7 +895,7 @@ final class fn {
         return stackIn_7_0 != 0;
     }
 
-    final static String f(int param0) {
+    final static String f() {
         Object var1 = null;
         Object var2 = null;
         String var3 = null;
@@ -938,10 +930,11 @@ final class fn {
               }
             }
             L2: {
-              if (~ov.field_b != param0) {
+              if (ov.field_b != 2) {
                 break L2;
               } else {
-                if (jc.b(param0 + -3194)) {
+                int discarded$4 = -3197;
+                if (jc.b()) {
                   break L2;
                 } else {
                   L3: {
@@ -1085,7 +1078,8 @@ final class fn {
                           if (iw.field_l) {
                             break L6;
                           } else {
-                            hp.b(0);
+                            int discarded$5 = 0;
+                            hp.b();
                             break L6;
                           }
                         }
@@ -1109,7 +1103,8 @@ final class fn {
                   }
                 }
                 L15: {
-                  nv.a(var7, sg.field_c[var6], var4 + hu.c(cq.field_m.toString()), var5, (byte) 34);
+                  int discarded$6 = 34;
+                  nv.a(var7, sg.field_c[var6], var4 + hu.c(cq.field_m.toString()), var5);
                   if (!vg.field_Wb) {
                     ij.field_s.field_gb = false;
                     break L15;
@@ -1124,7 +1119,8 @@ final class fn {
                   break L5;
                 }
               } else {
-                nv.a(0, ag.field_e, (String) var2, (String) null, (byte) 34);
+                int discarded$7 = 34;
+                nv.a(0, ag.field_e, (String) var2, (String) null);
                 break L5;
               }
             }
@@ -1135,7 +1131,7 @@ final class fn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = (Object) (Object) decompiledCaughtException;
-          throw nb.a((Throwable) var1, "fn.EA(" + param0 + 41);
+          throw nb.a((Throwable) var1, "fn.EA(" + -3 + 41);
         }
         return (String) (Object) stackIn_99_0;
     }

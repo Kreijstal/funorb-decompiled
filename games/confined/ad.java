@@ -45,15 +45,11 @@ final class ad {
         try {
           var4_float = (float)param2 / 100.0f + (float)(1 + ((ad) this).field_c);
           ((ad) this).field_g = var4_float * (float)((ad) this).field_a / (float)(1 + ((ad) this).field_i);
-          if (param1) {
-            if (param2 == 0) {
-              ((ad) this).field_e = param0.field_a;
-              return;
-            } else {
-              ((ad) this).field_e = param0.field_c + " - " + param2 + "%";
-              return;
-            }
+          if (param2 == 0) {
+            ((ad) this).field_e = param0.field_a;
+            return;
           } else {
+            ((ad) this).field_e = param0.field_c + " - " + param2 + "%";
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -84,7 +80,7 @@ final class ad {
               break L0;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 44 + param2 + 41);
+          throw sd.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 1 + 44 + param2 + 41);
         }
     }
 

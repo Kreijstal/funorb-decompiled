@@ -11,7 +11,7 @@ final class bk {
     static int field_e;
     static String field_h;
 
-    public static void b(int param0) {
+    public static void b() {
         field_d = null;
         field_g = null;
         field_c = null;
@@ -22,12 +22,14 @@ final class bk {
     }
 
     final static int a(int param0) {
-        wk.a(nj.a(-70), 0);
+        int discarded$8 = 0;
+        wk.a(nj.a(-70));
         if (param0 != 2) {
-            int discarded$0 = bk.a(31);
-            return oa.field_a.get(2);
+          int discarded$9 = bk.a(31);
+          return oa.field_a.get(2);
+        } else {
+          return oa.field_a.get(2);
         }
-        return oa.field_a.get(2);
     }
 
     static {

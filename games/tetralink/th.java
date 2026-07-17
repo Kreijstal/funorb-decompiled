@@ -75,7 +75,7 @@ abstract class th {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_p = null;
         field_i = null;
         field_e = null;
@@ -127,12 +127,13 @@ abstract class th {
                         break L2;
                       } else {
                         var6 = null;
-                        mh discarded$2 = th.a(-51, (String) null);
+                        mh discarded$4 = th.a(-51, (String) null);
                         break L2;
                       }
                     }
                     var4 = param1.substring(1 + var2_int);
-                    var5 = cf.a(var3, (byte) -124);
+                    int discarded$5 = -124;
+                    var5 = cf.a(var3);
                     if (var5 != null) {
                       stackOut_12_0 = (mh) var5;
                       stackIn_13_0 = stackOut_12_0;

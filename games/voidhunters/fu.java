@@ -74,9 +74,11 @@ final class fu extends rqa {
     final static boolean a(int param0) {
         if (param0 >= 43) {
           if (ef.field_z >= 20) {
-            if (eu.a(true)) {
+            int discarded$16 = 1;
+            if (eu.a()) {
               if (jl.field_p > 0) {
-                if (nua.b(true)) {
+                int discarded$17 = 1;
+                if (nua.b()) {
                   return false;
                 } else {
                   return true;
@@ -93,9 +95,11 @@ final class fu extends rqa {
         } else {
           field_o = null;
           if (ef.field_z >= 20) {
-            if (eu.a(true)) {
+            int discarded$18 = 1;
+            if (eu.a()) {
               if (jl.field_p > 0) {
-                if (nua.b(true)) {
+                int discarded$19 = 1;
+                if (nua.b()) {
                   return false;
                 } else {
                   return true;

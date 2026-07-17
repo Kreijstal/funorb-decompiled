@@ -9,7 +9,7 @@ final class fc {
     private int[] field_e;
     private int field_f;
 
-    private final void a(int param0) {
+    private final void a() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -238,7 +238,8 @@ final class fc {
             for (var2_int = 0; param0.length > var2_int; var2_int++) {
                 ((fc) this).field_b[var2_int] = param0[var2_int];
             }
-            this.a(-104);
+            int discarded$0 = -104;
+            this.a();
         } catch (RuntimeException runtimeException) {
             throw pn.a((Throwable) (Object) runtimeException, "fc.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }

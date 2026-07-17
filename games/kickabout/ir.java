@@ -37,7 +37,8 @@ final class ir extends tm {
                 break L1;
               }
             }
-            stackOut_2_0 = new li(mi.a(true));
+            int discarded$2 = 1;
+            stackOut_2_0 = new li(mi.a());
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -88,28 +89,32 @@ final class ir extends tm {
           if (gs.field_b) {
             on.g(ni.field_l.field_b.field_s, ni.field_l.field_b.field_J, ni.field_l.field_b.field_q, ni.field_l.field_b.field_mb);
             ni.field_l.field_b.a(122, param0);
-            gp.a(param0, (byte) -93);
+            int discarded$4 = -93;
+            gp.a(param0);
             return;
           } else {
-            gp.a(param0, (byte) -93);
+            int discarded$5 = -93;
+            gp.a(param0);
             return;
           }
         } else {
           ir.a(false, 111);
           ti.a(63, param0);
           if (!gs.field_b) {
-            gp.a(param0, (byte) -93);
+            int discarded$6 = -93;
+            gp.a(param0);
             return;
           } else {
             on.g(ni.field_l.field_b.field_s, ni.field_l.field_b.field_J, ni.field_l.field_b.field_q, ni.field_l.field_b.field_mb);
             ni.field_l.field_b.a(122, param0);
-            gp.a(param0, (byte) -93);
+            int discarded$7 = -93;
+            gp.a(param0);
             return;
           }
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_A = null;
         field_C = null;
         field_B = null;
@@ -120,49 +125,17 @@ final class ir extends tm {
     }
 
     final static void a(float param0, int param1, float param2, float param3, float param4, float param5, float param6) {
-        if (rq.field_D == null) {
-          vg.field_Bb = new gq();
-          rq.field_D = new dp((lq) (Object) vg.field_Bb);
-          pi.field_b.a((lq) (Object) rq.field_D);
-          qd.field_c = new tf();
-          rq.field_D.a(param5);
-          rq.field_D.f(param4);
-          rq.field_D.c(param0);
-          if (param1 <= -10) {
-            rq.field_D.b(param6);
-            rq.field_D.e(param3);
-            rq.field_D.d(param2);
-            return;
-          } else {
-            field_A = null;
-            rq.field_D.b(param6);
-            rq.field_D.e(param3);
-            rq.field_D.d(param2);
-            return;
-          }
-        } else {
-          if (null == vg.field_Bb) {
-            vg.field_Bb = new gq();
-            rq.field_D = new dp((lq) (Object) vg.field_Bb);
-            pi.field_b.a((lq) (Object) rq.field_D);
-            qd.field_c = new tf();
-            rq.field_D.a(param5);
-            rq.field_D.f(param4);
-            rq.field_D.c(param0);
-            if (param1 <= -10) {
+        if (rq.field_D != null) {
+          if (null != vg.field_Bb) {
+            if (null != qd.field_c) {
+              rq.field_D.a(param5);
+              rq.field_D.f(param4);
+              rq.field_D.c(param0);
               rq.field_D.b(param6);
               rq.field_D.e(param3);
               rq.field_D.d(param2);
               return;
             } else {
-              field_A = null;
-              rq.field_D.b(param6);
-              rq.field_D.e(param3);
-              rq.field_D.d(param2);
-              return;
-            }
-          } else {
-            if (null == qd.field_c) {
               vg.field_Bb = new gq();
               rq.field_D = new dp((lq) (Object) vg.field_Bb);
               pi.field_b.a((lq) (Object) rq.field_D);
@@ -170,36 +143,36 @@ final class ir extends tm {
               rq.field_D.a(param5);
               rq.field_D.f(param4);
               rq.field_D.c(param0);
-              if (param1 <= -10) {
-                rq.field_D.b(param6);
-                rq.field_D.e(param3);
-                rq.field_D.d(param2);
-                return;
-              } else {
-                field_A = null;
-                rq.field_D.b(param6);
-                rq.field_D.e(param3);
-                rq.field_D.d(param2);
-                return;
-              }
-            } else {
-              rq.field_D.a(param5);
-              rq.field_D.f(param4);
-              rq.field_D.c(param0);
-              if (param1 <= -10) {
-                rq.field_D.b(param6);
-                rq.field_D.e(param3);
-                rq.field_D.d(param2);
-                return;
-              } else {
-                field_A = null;
-                rq.field_D.b(param6);
-                rq.field_D.e(param3);
-                rq.field_D.d(param2);
-                return;
-              }
+              rq.field_D.b(param6);
+              rq.field_D.e(param3);
+              rq.field_D.d(param2);
+              return;
             }
+          } else {
+            vg.field_Bb = new gq();
+            rq.field_D = new dp((lq) (Object) vg.field_Bb);
+            pi.field_b.a((lq) (Object) rq.field_D);
+            qd.field_c = new tf();
+            rq.field_D.a(param5);
+            rq.field_D.f(param4);
+            rq.field_D.c(param0);
+            rq.field_D.b(param6);
+            rq.field_D.e(param3);
+            rq.field_D.d(param2);
+            return;
           }
+        } else {
+          vg.field_Bb = new gq();
+          rq.field_D = new dp((lq) (Object) vg.field_Bb);
+          pi.field_b.a((lq) (Object) rq.field_D);
+          qd.field_c = new tf();
+          rq.field_D.a(param5);
+          rq.field_D.f(param4);
+          rq.field_D.c(param0);
+          rq.field_D.b(param6);
+          rq.field_D.e(param3);
+          rq.field_D.d(param2);
+          return;
         }
     }
 

@@ -13,7 +13,7 @@ final class hh extends uf {
     static ci field_m;
     static String field_k;
 
-    public static void a(int param0) {
+    public static void a() {
         field_l = null;
         field_p = null;
         field_k = null;
@@ -98,7 +98,7 @@ final class hh extends uf {
                         } else {
                           L8: {
                             var9 = l.field_i[var7];
-                            if (param4 >= (255 & var9 >> 8)) {
+                            if (64 >= (255 & var9 >> 8)) {
                               break L8;
                             } else {
                               if (~((65280 & var9) >> 8) > ~(var9 >> 16 & 255)) {
@@ -138,7 +138,7 @@ final class hh extends uf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw qk.a((Throwable) (Object) var6, "hh.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw qk.a((Throwable) (Object) var6, "hh.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + 64 + 44 + param5 + 41);
         }
     }
 

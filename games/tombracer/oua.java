@@ -13,8 +13,10 @@ final class oua {
             ha stackOut_4_0 = null;
             try {
               L0: {
-                if (mja.a(param2)) {
-                  if (in.a("jagdx", 480)) {
+                int discarded$9 = -50;
+                if (mja.a()) {
+                  int discarded$10 = 480;
+                  if (in.a("jagdx")) {
                     var5 = Class.forName("cta");
                     var6 = var5.getDeclaredMethod("createToolkit", new Class[4]);
                     stackOut_4_0 = (ha) var6.invoke((Object) null, new Object[4]);

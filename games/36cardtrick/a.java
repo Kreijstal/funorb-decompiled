@@ -8,8 +8,9 @@ final class a extends ch {
     private jd field_m;
     static sg field_n;
 
-    final static jk e(int param0) {
-        return new jk(ja.a(-7705), oj.a(104));
+    final static jk e() {
+        int discarded$0 = -7705;
+        return new jk(ja.a(), oj.a(104));
     }
 
     public static void d(int param0) {
@@ -490,7 +491,8 @@ final class a extends ch {
                   }
                 }
                 ((a) this).field_m = (jd) param0;
-                this.f(29034);
+                int discarded$1 = 29034;
+                this.f();
                 this.a((byte) 85, param1);
                 ((a) this).field_i.field_i = 0;
                 ((a) this).field_j = null;
@@ -568,7 +570,7 @@ final class a extends ch {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int[] param3, int param4) {
+    final static void a(int param0, int param1, int param2, int[] param3) {
         int[] var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
@@ -663,7 +665,7 @@ final class a extends ch {
             int stackOut_4_1 = 0;
             int stackOut_4_2 = 0;
             if (null != ((a) this).field_m) {
-              var3 = -115 / ((param0 - -61) / 55);
+              var3 = -57;
               try {
                 L0: {
                   L1: {
@@ -730,7 +732,7 @@ final class a extends ch {
         }
     }
 
-    final static wb a(wb param0, int[] param1, int param2) {
+    final static wb a(wb param0, int[] param1) {
         wb var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -841,7 +843,7 @@ final class a extends ch {
         return stackIn_1_0;
     }
 
-    private final void f(int param0) {
+    private final void f() {
         try {
             Exception var3 = null;
             Throwable decompiledCaughtException = null;
@@ -888,9 +890,9 @@ final class a extends ch {
                     }
                 }
             }
-            qa.field_b.b(param1, param3, param5, param4, param2);
+            qa.field_b.b(param1, param3, param5, param4, -1);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "a.N(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "a.N(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + -1 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 

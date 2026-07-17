@@ -36,34 +36,32 @@ final class gf extends ma {
         Class stackIn_20_0 = null;
         Class stackIn_23_0 = null;
         Class stackIn_26_0 = null;
-        Object stackIn_29_0 = null;
-        Class stackIn_31_0 = null;
+        Object stackIn_28_0 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        RuntimeException stackIn_32_0 = null;
+        StringBuilder stackIn_32_1 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
-        String stackIn_35_2 = null;
+        String stackIn_33_2 = null;
         RuntimeException decompiledCaughtException = null;
         Class stackOut_2_0 = null;
         Class stackOut_6_0 = null;
         Class stackOut_13_0 = null;
-        Class stackOut_30_0 = null;
-        Object stackOut_28_0 = null;
+        Object stackOut_27_0 = null;
         Class stackOut_25_0 = null;
         Class stackOut_22_0 = null;
         Class stackOut_19_0 = null;
         Class stackOut_16_0 = null;
         Class stackOut_9_0 = null;
+        RuntimeException stackOut_30_0 = null;
+        StringBuilder stackOut_30_1 = null;
         RuntimeException stackOut_32_0 = null;
         StringBuilder stackOut_32_1 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
+        String stackOut_32_2 = null;
+        RuntimeException stackOut_31_0 = null;
+        StringBuilder stackOut_31_1 = null;
+        String stackOut_31_2 = null;
         try {
           L0: {
             if (param1.equals((Object) (Object) "B")) {
@@ -86,15 +84,9 @@ final class gf extends ma {
                       if (!param1.equals((Object) (Object) "F")) {
                         if (!param1.equals((Object) (Object) "D")) {
                           if (!param1.equals((Object) (Object) "C")) {
-                            if (param0 == 0) {
-                              stackOut_30_0 = Class.forName(param1);
-                              stackIn_31_0 = stackOut_30_0;
-                              break L0;
-                            } else {
-                              stackOut_28_0 = null;
-                              stackIn_29_0 = stackOut_28_0;
-                              return (Class) (Object) stackIn_29_0;
-                            }
+                            stackOut_27_0 = null;
+                            stackIn_28_0 = stackOut_27_0;
+                            break L0;
                           } else {
                             stackOut_25_0 = Character.TYPE;
                             stackIn_26_0 = stackOut_25_0;
@@ -128,33 +120,33 @@ final class gf extends ma {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_32_0 = (RuntimeException) var2;
-            stackOut_32_1 = new StringBuilder().append("gf.A(").append(param0).append(44);
-            stackIn_34_0 = stackOut_32_0;
-            stackIn_34_1 = stackOut_32_1;
-            stackIn_33_0 = stackOut_32_0;
-            stackIn_33_1 = stackOut_32_1;
+            stackOut_30_0 = (RuntimeException) var2;
+            stackOut_30_1 = new StringBuilder().append("gf.A(").append(0).append(44);
+            stackIn_32_0 = stackOut_30_0;
+            stackIn_32_1 = stackOut_30_1;
+            stackIn_31_0 = stackOut_30_0;
+            stackIn_31_1 = stackOut_30_1;
             if (param1 == null) {
-              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
-              stackOut_34_2 = "null";
-              stackIn_35_0 = stackOut_34_0;
-              stackIn_35_1 = stackOut_34_1;
-              stackIn_35_2 = stackOut_34_2;
+              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
+              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_2 = "null";
+              stackIn_33_0 = stackOut_32_0;
+              stackIn_33_1 = stackOut_32_1;
+              stackIn_33_2 = stackOut_32_2;
               break L1;
             } else {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
-              stackOut_33_2 = "{...}";
-              stackIn_35_0 = stackOut_33_0;
-              stackIn_35_1 = stackOut_33_1;
-              stackIn_35_2 = stackOut_33_2;
+              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
+              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_2 = "{...}";
+              stackIn_33_0 = stackOut_31_0;
+              stackIn_33_1 = stackOut_31_1;
+              stackIn_33_2 = stackOut_31_2;
               break L1;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + 41);
+          throw oj.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 41);
         }
-        return stackIn_31_0;
+        return (Class) (Object) stackIn_28_0;
     }
 
     final rj a(byte param0, String param1) {

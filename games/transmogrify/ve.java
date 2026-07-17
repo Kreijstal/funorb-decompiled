@@ -36,7 +36,7 @@ final class ve extends lj {
         try {
           L0: {
             var2_int = param1.charAt(0);
-            var3 = param0;
+            var3 = 1;
             L1: while (true) {
               if (param1.length() <= var3) {
                 stackOut_8_0 = 1;
@@ -59,7 +59,7 @@ final class ve extends lj {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var2;
-            stackOut_10_1 = new StringBuilder().append("ve.D(").append(param0).append(44);
+            stackOut_10_1 = new StringBuilder().append("ve.D(").append(1).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -149,7 +149,8 @@ final class ve extends lj {
               if (null != vh.field_l) {
                 if (var10 <= vh.field_l.field_n) {
                   if (vh.field_l.field_m >= var11) {
-                    oj.a(vh.field_l, 256);
+                    int discarded$8 = 256;
+                    oj.a(vh.field_l);
                     sb.c();
                     var17.a(112, 144, var17.field_r << 4, var17.field_s << 4, -((ve) this).field_C << 10, 4096);
                     fi.c(true);
@@ -157,7 +158,8 @@ final class ve extends lj {
                     return;
                   } else {
                     vh.field_l = new ti(var10, var11);
-                    oj.a(vh.field_l, 256);
+                    int discarded$9 = 256;
+                    oj.a(vh.field_l);
                     var17.a(112, 144, var17.field_r << 4, var17.field_s << 4, -((ve) this).field_C << 10, 4096);
                     fi.c(true);
                     vh.field_l.c(-var17.field_r + var5, var6 - var17.field_s, 256);
@@ -165,7 +167,8 @@ final class ve extends lj {
                   }
                 } else {
                   vh.field_l = new ti(var10, var11);
-                  oj.a(vh.field_l, 256);
+                  int discarded$10 = 256;
+                  oj.a(vh.field_l);
                   var17.a(112, 144, var17.field_r << 4, var17.field_s << 4, -((ve) this).field_C << 10, 4096);
                   fi.c(true);
                   vh.field_l.c(-var17.field_r + var5, var6 - var17.field_s, 256);
@@ -173,7 +176,8 @@ final class ve extends lj {
                 }
               } else {
                 vh.field_l = new ti(var10, var11);
-                oj.a(vh.field_l, 256);
+                int discarded$11 = 256;
+                oj.a(vh.field_l);
                 var17.a(112, 144, var17.field_r << 4, var17.field_s << 4, -((ve) this).field_C << 10, 4096);
                 fi.c(true);
                 vh.field_l.c(-var17.field_r + var5, var6 - var17.field_s, 256);
@@ -187,7 +191,8 @@ final class ve extends lj {
             if (null != vh.field_l) {
               if (var10 <= vh.field_l.field_n) {
                 if (vh.field_l.field_m >= var11) {
-                  oj.a(vh.field_l, 256);
+                  int discarded$12 = 256;
+                  oj.a(vh.field_l);
                   sb.c();
                   var16.a(112, 144, var16.field_r << 4, var16.field_s << 4, -((ve) this).field_C << 10, 4096);
                   fi.c(true);
@@ -195,7 +200,8 @@ final class ve extends lj {
                   return;
                 } else {
                   vh.field_l = new ti(var10, var11);
-                  oj.a(vh.field_l, 256);
+                  int discarded$13 = 256;
+                  oj.a(vh.field_l);
                   var16.a(112, 144, var16.field_r << 4, var16.field_s << 4, -((ve) this).field_C << 10, 4096);
                   fi.c(true);
                   vh.field_l.c(-var16.field_r + var5, var6 - var16.field_s, 256);
@@ -203,7 +209,8 @@ final class ve extends lj {
                 }
               } else {
                 vh.field_l = new ti(var10, var11);
-                oj.a(vh.field_l, 256);
+                int discarded$14 = 256;
+                oj.a(vh.field_l);
                 var16.a(112, 144, var16.field_r << 4, var16.field_s << 4, -((ve) this).field_C << 10, 4096);
                 fi.c(true);
                 vh.field_l.c(-var16.field_r + var5, var6 - var16.field_s, 256);
@@ -211,7 +218,8 @@ final class ve extends lj {
               }
             } else {
               vh.field_l = new ti(var10, var11);
-              oj.a(vh.field_l, 256);
+              int discarded$15 = 256;
+              oj.a(vh.field_l);
               var16.a(112, 144, var16.field_r << 4, var16.field_s << 4, -((ve) this).field_C << 10, 4096);
               fi.c(true);
               vh.field_l.c(-var16.field_r + var5, var6 - var16.field_s, 256);

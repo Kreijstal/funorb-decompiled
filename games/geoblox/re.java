@@ -9,7 +9,7 @@ final class re extends hf {
     static boolean field_j;
     int field_k;
 
-    public static void b(int param0) {
+    public static void b() {
         field_f = null;
         field_h = null;
         field_i = null;

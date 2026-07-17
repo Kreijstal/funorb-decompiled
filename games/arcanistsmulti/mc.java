@@ -9,12 +9,9 @@ final class mc {
     final static void a(int param0, int param1, int param2, boolean param3) {
         ib.a(param3, 2);
         kb.a(param3, param0, -32507, param1);
-        if (param2 > -79) {
-            mc.a(55);
-        }
     }
 
-    final static kc a(byte param0) {
+    final static kc a() {
         return ee.field_g.field_Cb;
     }
 

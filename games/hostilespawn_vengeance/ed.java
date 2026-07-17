@@ -142,7 +142,7 @@ final class ed implements Iterable {
         return (Iterator) (Object) new oe((ed) this);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_d = null;
         field_a = null;
@@ -159,7 +159,8 @@ final class ed implements Iterable {
         if (null != jj.field_d) {
             jj.field_d.g((byte) -19);
         }
-        String var1 = bn.b(-104);
+        int discarded$0 = -104;
+        String var1 = bn.b();
         ib.field_e = new lk(var1, (String) null, true, false, false);
         im.field_e.c((ag) (Object) ke.field_s, 86);
         ke.field_s.b((ag) (Object) ib.field_e, (byte) 110);

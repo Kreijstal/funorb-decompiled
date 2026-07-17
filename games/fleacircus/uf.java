@@ -103,7 +103,7 @@ final class uf {
                   stackIn_8_0 = stackOut_7_0;
                   break L0;
                 } else {
-                  param1.setCharAt(var5, param2);
+                  param1.setCharAt(var5, ' ');
                   var5++;
                   continue L1;
                 }
@@ -142,7 +142,7 @@ final class uf {
               break L2;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param2 + 44 + param3 + 41);
+          throw pf.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + 32 + 44 + param3 + 41);
         }
         return stackIn_8_0;
     }
@@ -385,7 +385,7 @@ final class uf {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_l = null;
         field_e = null;
         field_b = null;

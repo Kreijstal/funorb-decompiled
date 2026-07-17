@@ -30,33 +30,28 @@ final class fl {
             ((fl) this).field_g = param0;
         }
         if (!(((fl) this).field_f.length > param0)) {
-            this.f(param0, param1 ^ 43);
+            int discarded$0 = -34;
+            this.f(param0);
         }
         ((fl) this).field_f[param0] = param2;
-        if (param1 != -11) {
-            int discarded$0 = ((fl) this).a((byte) -34);
-        }
     }
 
-    final static void b(int param0, int param1) {
+    final static void b() {
         w var2 = na.field_r;
-        if (param0 != 1) {
-            fl.a(-53);
-        }
-        var2.h(param1, 0);
+        var2.h(4, 0);
         var2.b(-9469, 1);
         var2.b(-9469, 2);
     }
 
-    private final void f(int param0, int param1) {
-        int var4 = 48 % ((38 - param1) / 47);
+    private final void f(int param0) {
+        int var4 = 0;
         int[] var5 = new int[this.d(16912, param0)];
         int[] var3 = var5;
         og.a(((fl) this).field_f, 0, var5, 0, ((fl) this).field_f.length);
         ((fl) this).field_f = var5;
     }
 
-    final static void a(w param0, boolean param1) {
+    final static void a(w param0) {
         try {
             RuntimeException var2 = null;
             int var3 = 0;
@@ -371,14 +366,6 @@ final class fl {
         var3 = ((fl) this).field_f.length;
         L0: while (true) {
           if (param1 < var3) {
-            L1: {
-              if (param0 == 16912) {
-                break L1;
-              } else {
-                ((fl) this).e(-83, -127);
-                break L1;
-              }
-            }
             return var3;
           } else {
             if (!((fl) this).field_d) {

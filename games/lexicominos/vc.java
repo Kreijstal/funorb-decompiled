@@ -37,9 +37,6 @@ final class vc extends nb implements jk {
         kk.field_o = param1;
         hc.field_fb = param4;
         sb.field_f = param3;
-        if (param0 != -5094) {
-            field_D = null;
-        }
     }
 
     final kf a(int param0, String param1, vd param2) {
@@ -275,13 +272,10 @@ final class vc extends nb implements jk {
         }
         ((vc) this).field_H = var3;
         ((vc) this).field_J = param1;
-        if (param0 < 69) {
-            return;
-        }
         ((vc) this).field_B = var4;
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_G = null;
         field_D = null;
         field_K = null;

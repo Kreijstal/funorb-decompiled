@@ -14,7 +14,7 @@ final class wd implements qi {
     static String field_f;
     static int field_d;
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_c = null;
         field_k = null;

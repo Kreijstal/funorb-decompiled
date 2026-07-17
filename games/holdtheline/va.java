@@ -114,15 +114,16 @@ final class va {
                     break L0;
                   } else {
                     L2: {
-                      if (gl.a(param1, (byte) -37)) {
+                      int discarded$20 = -37;
+                      if (gl.a(param1)) {
                         var6 = new uj();
-                        int discarded$12 = param1.h(24, 7);
-                        int discarded$13 = param1.h(24, 7);
+                        int discarded$21 = param1.h(24, 7);
+                        int discarded$22 = param1.h(24, 7);
                         var6.field_g = param1.h(24, 7);
-                        int discarded$14 = param1.h(9, 7);
-                        int discarded$15 = param1.h(12, 7);
-                        int discarded$16 = param1.h(12, 7);
-                        int discarded$17 = param1.h(12, 7);
+                        int discarded$23 = param1.h(9, 7);
+                        int discarded$24 = param1.h(12, 7);
+                        int discarded$25 = param1.h(12, 7);
+                        int discarded$26 = param1.h(12, 7);
                         var4[var5] = var6;
                         break L2;
                       } else {

@@ -460,7 +460,7 @@ final class t extends ti {
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_x = null;
         int var1 = -1;
         field_q = null;

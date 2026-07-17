@@ -14,13 +14,10 @@ final class nbb extends anb implements ntb, ofa, utb {
             param1.field_p = ((nbb) this).field_p;
             param1.field_t = ((nbb) this).field_t;
             ((nbb) this).field_p = 0;
-            if (!param0) {
-                ((nbb) this).field_x = true;
-            }
             ((nbb) this).field_o = 0;
             ((nbb) this).field_t = 0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "nbb.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "nbb.G(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

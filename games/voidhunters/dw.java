@@ -6,7 +6,7 @@ final class dw implements wwa {
     static int[] field_a;
     static dfa field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
     }

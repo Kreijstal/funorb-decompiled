@@ -10,18 +10,15 @@ abstract class ue {
     abstract boolean a(int param0);
 
     final static dl[] a(int param0, int param1, int param2, int param3, int param4) {
-        if (param0 != 9) {
-            return null;
-        }
         dl[] var6 = new dl[9];
         dl[] var5 = var6;
-        dl dupTemp$0 = mc.a(param2, -65, param1);
+        dl dupTemp$0 = mc.a(1, -65, param1);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        dl dupTemp$1 = mc.a(param2, -34, param4);
+        dl dupTemp$1 = mc.a(1, -34, param4);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
@@ -82,14 +79,17 @@ abstract class ue {
 
     final static void b(byte param0) {
         int var1 = 92;
-        no.e((byte) -23);
+        int discarded$3 = -23;
+        no.e();
         if (null != jd.field_D) {
             fq.a(-65, jd.field_D);
         }
         vf.a(-1);
-        ub.b(0);
+        int discarded$20 = 0;
+        ub.b();
         ug.a((byte) -127);
-        if (!(!b.b(0))) {
+        int discarded$31 = 0;
+        if (!(!b.b())) {
             tp.field_f.d(8, 1);
             ak.a(0, (byte) -48);
         }

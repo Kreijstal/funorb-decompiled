@@ -6,7 +6,7 @@ import java.util.*;
 final class oma {
     static int[] field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
     }
 
@@ -19,9 +19,9 @@ final class oma {
                 boolean discarded$0 = var9.b(true);
                 var9 = (cia) (Object) param2.c(0);
             }
-            int var7 = -10 / ((param4 - -9) / 53);
+            int var7 = 10;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "oma.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "oma.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + -72 + 44 + (param5 != null ? "{...}" : "null") + 41);
         }
     }
 

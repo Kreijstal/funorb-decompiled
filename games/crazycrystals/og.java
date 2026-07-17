@@ -406,9 +406,7 @@ class og extends qm implements he {
                 }
             }
         }
-        if (param0 != 0) {
-            og.h(124);
-        }
+        og.h(124);
         if (md.field_q <= param2) {
             if (md.field_q + fl.field_a.field_l > param2) {
                 if (param1 >= gf.field_a) {
@@ -624,7 +622,7 @@ class og extends qm implements he {
         try {
           L0: {
             var5 = new tm(((og) this).field_v);
-            var6 = (qm) (Object) var5.a(param2);
+            var6 = (qm) (Object) var5.a((byte) 81);
             L1: while (true) {
               if (var6 == null) {
                 break L0;
@@ -633,7 +631,7 @@ class og extends qm implements he {
                 var7 = 0;
                 L2: while (true) {
                   if (param0 < var7) {
-                    StringBuilder discarded$13 = var6.a(1 + param0, param2 ^ -34, param1, param3);
+                    StringBuilder discarded$13 = var6.a(1 + param0, -113, param1, param3);
                     var6 = (qm) (Object) var5.b(103);
                     continue L1;
                   } else {
@@ -675,7 +673,7 @@ class og extends qm implements he {
           }
           L4: {
             stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(param2).append(44);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(81).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;

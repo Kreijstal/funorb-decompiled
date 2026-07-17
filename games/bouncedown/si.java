@@ -404,30 +404,26 @@ final class si implements Runnable {
         var6.field_b = param2;
         var6.field_d = param1;
         var6.field_g = param4;
-        if (param3 == -20766) {
-          var6.field_c = param0;
-          var7 = this;
-          synchronized (var7) {
-            L0: {
-              L1: {
-                if (null == ((si) this).field_k) {
-                  ((si) this).field_p = var6;
-                  ((si) this).field_k = var6;
-                  break L1;
-                } else {
-                  ((si) this).field_k.field_a = var6;
-                  ((si) this).field_k = var6;
-                  break L1;
-                }
+        var6.field_c = param0;
+        var7 = this;
+        synchronized (var7) {
+          L0: {
+            L1: {
+              if (null == ((si) this).field_k) {
+                ((si) this).field_p = var6;
+                ((si) this).field_k = var6;
+                break L1;
+              } else {
+                ((si) this).field_k.field_a = var6;
+                ((si) this).field_k = var6;
+                break L1;
               }
-              this.notify();
-              break L0;
             }
+            this.notify();
+            break L0;
           }
-          return var6;
-        } else {
-          return null;
         }
+        return var6;
     }
 
     final mk a(String param0, int param1, int param2) {
@@ -458,10 +454,10 @@ final class si implements Runnable {
             String var7 = null;
             Exception var8 = null;
             ok var8_ref = null;
-            ok stackIn_11_0 = null;
+            ok stackIn_12_0 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            ok stackOut_10_0 = null;
+            ok stackOut_11_0 = null;
             L0: {
               if (param0 == 33) {
                 var4 = "jagex_" + param2 + "_preferences" + param3 + "_rc.dat";
@@ -479,13 +475,7 @@ final class si implements Runnable {
             var5_array = new String[]{"c:/rscache/", "/rscache/", field_i, "c:/windows/", "c:/winnt/", "c:/", "/tmp/", ""};
             var6 = 0;
             L1: while (true) {
-              if (var5_array.length <= var6) {
-                if (param1 != -11227) {
-                  return null;
-                } else {
-                  return null;
-                }
-              } else {
+              if (var5_array.length > var6) {
                 L2: {
                   var7 = var5_array[var6];
                   if (0 >= var7.length()) {
@@ -502,8 +492,8 @@ final class si implements Runnable {
                 try {
                   L3: {
                     var8_ref = new ok(new File(var7, var4), "rw", 10000L);
-                    stackOut_10_0 = (ok) var8_ref;
-                    stackIn_11_0 = stackOut_10_0;
+                    stackOut_11_0 = (ok) var8_ref;
+                    stackIn_12_0 = stackOut_11_0;
                     decompiledRegionSelector0 = 0;
                     break L3;
                   }
@@ -517,10 +507,12 @@ final class si implements Runnable {
                   }
                 }
                 if (decompiledRegionSelector0 == 0) {
-                  return stackIn_11_0;
+                  return stackIn_12_0;
                 } else {
                   continue L1;
                 }
+              } else {
+                return null;
               }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -552,10 +544,7 @@ final class si implements Runnable {
     }
 
     private final mk a(boolean param0, int param1, int param2, String param3) {
-        if (param2 != 1689798128) {
-            field_w = null;
-        }
-        return this.a(param0 ? 22 : 1, (Object) (Object) param3, param1, -20766, 0);
+        return this.a(1, (Object) (Object) param3, param1, -20766, 0);
     }
 
     final mk a(String param0, Class param1, byte param2) {

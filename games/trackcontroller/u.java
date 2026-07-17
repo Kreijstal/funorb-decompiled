@@ -67,7 +67,7 @@ final class u extends fc {
         }
     }
 
-    final static oi a(String param0, boolean param1) {
+    final static oi a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -153,7 +153,7 @@ final class u extends fc {
         return stackIn_10_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_k = null;
         field_l = null;
     }

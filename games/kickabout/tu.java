@@ -276,14 +276,17 @@ abstract class tu extends ma implements hc {
         L0: {
           var5 = Kickabout.field_G;
           var2 = 0;
-          if (!n.a(false)) {
+          int discarded$7 = 0;
+          if (!n.a()) {
             if (ng.a(-4)) {
-              if (nv.i(0)) {
+              int discarded$8 = 0;
+              if (nv.i()) {
                 np.h(-1);
                 break L0;
               } else {
                 L1: {
-                  var3 = pg.a(-3);
+                  int discarded$9 = -3;
+                  var3 = pg.a();
                   if (var3 != 2) {
                     if (3 != var3) {
                       if (var3 == 4) {
@@ -306,7 +309,8 @@ abstract class tu extends ma implements hc {
                 break L0;
               }
             } else {
-              if (up.a((byte) -3)) {
+              int discarded$10 = -3;
+              if (up.a()) {
                 L2: {
                   stackOut_33_0 = this;
                   stackOut_33_1 = param0 + -18856;
@@ -364,9 +368,11 @@ abstract class tu extends ma implements hc {
                 break L0;
               } else {
                 if (vi.c(2915)) {
-                  if (!nv.i(0)) {
+                  int discarded$11 = 0;
+                  if (!nv.i()) {
                     L6: {
-                      var3 = df.g(-61);
+                      int discarded$12 = -61;
+                      var3 = df.g();
                       if (var3 == 1) {
                         ql.a((byte) 50, true, dg.field_f);
                         break L6;
@@ -381,7 +387,8 @@ abstract class tu extends ma implements hc {
                     break L0;
                   }
                 } else {
-                  if (!nv.i(0)) {
+                  int discarded$13 = 0;
+                  if (!nv.i()) {
                     var2 = 1;
                     var3 = -1;
                     L7: while (true) {
@@ -486,12 +493,15 @@ abstract class tu extends ma implements hc {
         java.awt.Canvas var2 = null;
         int var4 = 0;
         var4 = Kickabout.field_G;
-        var2 = ln.l(64);
+        int discarded$6 = 64;
+        var2 = ln.l();
         if (!uf.c(608)) {
           wr.a(var2, -14142);
           return;
         } else {
-          va.a(var2, pn.g(2368), 0);
+          int discarded$7 = 2368;
+          int discarded$8 = 0;
+          va.a(var2, pn.g());
           return;
         }
     }
@@ -533,13 +543,13 @@ abstract class tu extends ma implements hc {
 
     public abstract boolean a(int param0, int param1, char param2);
 
-    final static int a(int param0, int param1, int param2) {
+    final static int a(int param0, int param1) {
         param0 = param0 >> 8;
         param1 = param1 >> 8;
         return pc.a(param1 * param1 + param0 * param0, -524289);
     }
 
-    public static void q(int param0) {
+    public static void q() {
         field_D = null;
         field_C = null;
         field_E = null;
@@ -553,7 +563,7 @@ abstract class tu extends ma implements hc {
         var3 = Kickabout.field_G;
         L0: while (true) {
           if (!dr.a(-125, uc.field_A)) {
-            var2 = -80;
+            var2 = 80 / ((param0 - -28) / 48);
             return;
           } else {
             if (((tu) this).a(so.field_b, un.field_e, 1)) {

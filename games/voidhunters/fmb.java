@@ -9,21 +9,16 @@ final class fmb extends rqa {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         ah.field_o[3] = param3;
-        if (param0 < 2) {
-          return;
-        } else {
-          ah.field_o[0] = param2;
-          ah.field_o[2] = param1;
-          ah.field_o[1] = param4;
-          return;
-        }
+        ah.field_o[0] = param2;
+        ah.field_o[2] = param1;
+        ah.field_o[1] = param4;
     }
 
     fmb(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_p = null;
         field_o = null;
         field_q = null;

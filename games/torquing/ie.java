@@ -5,12 +5,12 @@ final class ie {
     static double[][] field_a;
     static bi field_b;
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_b = null;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         double var2 = 0.0;

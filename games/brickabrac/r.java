@@ -11,7 +11,7 @@ class r extends um {
     static String field_v;
     static int[] field_C;
 
-    public static void d(byte param0) {
+    public static void d() {
         field_C = null;
         field_v = null;
         field_y = null;
@@ -45,12 +45,13 @@ class r extends um {
               if (param0 >= 72) {
                 break L1;
               } else {
-                int discarded$2 = r.a((byte) 33, 79);
+                int discarded$4 = r.a((byte) 33, 79);
                 break L1;
               }
             }
             L2: {
-              var2_int = qp.a(kb.field_Yb, gh.field_f, (byte) -22);
+              int discarded$5 = -22;
+              var2_int = qp.a(kb.field_Yb, gh.field_f);
               if (var2_int != 1) {
                 break L2;
               } else {
@@ -110,7 +111,8 @@ class r extends um {
     final static boolean c(byte param0) {
         if (param0 < -80) {
           if (qg.field_A >= 20) {
-            if (kb.i(7457)) {
+            int discarded$13 = 7457;
+            if (kb.i()) {
               if (fp.field_x > 0) {
                 if (am.i(0)) {
                   return false;
@@ -127,9 +129,10 @@ class r extends um {
             return true;
           }
         } else {
-          boolean discarded$5 = r.c((byte) 16);
+          boolean discarded$14 = r.c((byte) 16);
           if (qg.field_A >= 20) {
-            if (kb.i(7457)) {
+            int discarded$15 = 7457;
+            if (kb.i()) {
               if (fp.field_x > 0) {
                 if (am.i(0)) {
                   return false;

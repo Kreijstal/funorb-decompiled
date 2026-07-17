@@ -25,27 +25,13 @@ class pb {
     private tda[] field_g;
 
     final static void a(int param0, boolean param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 < 8000) {
             break L0;
           } else {
             if (param0 <= 48000) {
-              L1: {
-                field_j = param0;
-                if (!param1) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              field_q = stackIn_7_0 != 0;
+              field_j = param0;
+              field_q = true;
               field_k = 10;
               return;
             } else {
@@ -279,12 +265,12 @@ class pb {
     }
 
     private final void b(int param0) {
-        ((pb) this).field_s = ((pb) this).field_s - 256;
+        ((pb) this).field_s = ((pb) this).field_s - param0;
         if (((pb) this).field_s < 0) {
             ((pb) this).field_s = 0;
         }
         if (((pb) this).field_n != null) {
-            ((pb) this).field_n.a(256);
+            ((pb) this).field_n.a(param0);
             return;
         }
     }
@@ -307,7 +293,7 @@ class pb {
         tda var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_q) {
             break L0;
           } else {
@@ -317,7 +303,7 @@ class pb {
         }
         L1: {
           bl.a(param0, 0, var3);
-          ((pb) this).field_s = ((pb) this).field_s - 256;
+          ((pb) this).field_s = ((pb) this).field_s - param1;
           if (((pb) this).field_n == null) {
             break L1;
           } else {
@@ -484,7 +470,7 @@ class pb {
           if (((pb) this).field_n == null) {
             break L17;
           } else {
-            ((pb) this).field_n.a(param0, 0, 256);
+            ((pb) this).field_n.a(param0, 0, param1);
             break L17;
           }
         }

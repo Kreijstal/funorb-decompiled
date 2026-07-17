@@ -6,7 +6,7 @@ final class so extends am {
     static cd field_s;
     static cd field_u;
 
-    public static void g(byte param0) {
+    public static void g() {
         field_t = null;
         field_s = null;
         field_u = null;

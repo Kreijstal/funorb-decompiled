@@ -1186,31 +1186,23 @@ class mh extends ba {
           return false;
         } else {
           if (!rk.a((byte) -95, param1)) {
-            L0: {
-              if (param1 == 45) {
-                break L0;
-              } else {
-                if (param1 == 160) {
-                  break L0;
-                } else {
-                  if (32 == param1) {
-                    break L0;
+            if (param1 != 45) {
+              if (param1 != 160) {
+                if (32 != param1) {
+                  if (95 != param1) {
+                    return false;
                   } else {
-                    if (95 == param1) {
-                      break L0;
-                    } else {
-                      if (!param0) {
-                        field_gb = -56;
-                        return false;
-                      } else {
-                        return false;
-                      }
-                    }
+                    return true;
                   }
+                } else {
+                  return true;
                 }
+              } else {
+                return true;
               }
+            } else {
+              return true;
             }
-            return true;
           } else {
             return true;
           }

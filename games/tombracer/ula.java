@@ -127,9 +127,6 @@ final class ula extends nv {
         if (!(param2 >= ((ula) this).field_u)) {
             return false;
         }
-        if (param0 < 16) {
-            return true;
-        }
         if (((ula) this).field_x.a(0, param1)) {
             return true;
         }
@@ -364,12 +361,12 @@ final class ula extends nv {
         }
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_v = null;
         field_t = null;
     }
 
-    private final void j(byte param0) {
+    private final void j() {
         up var2 = new up((gma) (Object) ((ula) this).e(6), ((ula) this).field_p);
         int discarded$0 = ((ula) this).b(true).a(124, ((ula) this).field_g.e(9648), var2, ((ula) this).field_g.a((byte) 55) + ((ula) this).field_n * 2, ((ula) this).field_g.c(-107) + 2 * ((ula) this).field_n, ((ula) this).field_g.d(3));
         ((ula) this).c(false);
@@ -394,14 +391,10 @@ final class ula extends nv {
         if (!(param1 >= ((ula) this).field_o)) {
             return false;
         }
-        if (!(((ula) this).field_q.a(0, param2))) {
-            return false;
-        }
-        if (!param0) {
-            ((ula) this).field_p = null;
+        if (((ula) this).field_q.a(0, param2)) {
             return true;
         }
-        return true;
+        return false;
     }
 
     private final int a(up param0, byte param1) {
@@ -439,7 +432,8 @@ final class ula extends nv {
             L2: {
               var3_int = param0.field_j;
               var4 = param0.field_b;
-              if (this.b(8)) {
+              int discarded$7 = 8;
+              if (this.b()) {
                 break L2;
               } else {
                 if (!this.a(113, var3_int, var4)) {
@@ -449,14 +443,16 @@ final class ula extends nv {
                     ((ula) this).field_s = ((ula) this).field_r;
                     break L2;
                   } else {
-                    this.j((byte) -67);
+                    int discarded$8 = -67;
+                    this.j();
                     break L2;
                   }
                 }
               }
             }
             L3: {
-              if (!this.b(8)) {
+              int discarded$9 = 8;
+              if (!this.b()) {
                 break L3;
               } else {
                 if (this.a(true, var4, var3_int)) {
@@ -504,7 +500,7 @@ final class ula extends nv {
         return stackIn_12_0;
     }
 
-    final static boolean k(byte param0) {
+    final static boolean k() {
         int var1 = -55;
         return uja.field_a.a(false);
     }
@@ -517,12 +513,13 @@ final class ula extends nv {
         if (-1 > ((ula) this).field_s) {
             ((ula) this).field_s = ((ula) this).field_s - 1;
             if (-1 == ((ula) this).field_s) {
-                this.j((byte) -67);
+                int discarded$1 = -67;
+                this.j();
             }
         }
     }
 
-    private final boolean b(int param0) {
+    private final boolean b() {
         return 0 != ((ula) this).field_s;
     }
 

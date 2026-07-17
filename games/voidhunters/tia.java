@@ -14,11 +14,11 @@ final class tia extends mu {
     int field_I;
     private no field_E;
 
-    public static void a(int param0) {
+    public static void a() {
         field_J = null;
         field_M = null;
         field_G = null;
-        int var1 = -23 % ((-30 - param0) / 60);
+        int var1 = 0;
         field_K = null;
     }
 
@@ -122,10 +122,8 @@ final class tia extends mu {
     }
 
     final static int a(boolean param0, int param1, int param2, boolean param3) {
-        if (param0) {
-            tia.a(-64);
-        }
-        return rt.c(1);
+        int discarded$0 = 1;
+        return rt.c();
     }
 
     final int e(int param0) {
@@ -203,36 +201,32 @@ final class tia extends mu {
             ((tia) this).field_L = param2;
             ((tia) this).field_H = param0;
             ((tia) this).field_D = -1;
-            if (param1 == 28) {
-              L1: {
-                if (param2 == null) {
-                  break L1;
-                } else {
-                  L2: {
-                    if (((tia) this).field_H < -1) {
+            L1: {
+              if (param2 == null) {
+                break L1;
+              } else {
+                L2: {
+                  if (((tia) this).field_H < -1) {
+                    break L2;
+                  } else {
+                    if (((tia) this).field_H >= ((tia) this).field_L.length) {
                       break L2;
                     } else {
-                      if (((tia) this).field_H >= ((tia) this).field_L.length) {
-                        break L2;
-                      } else {
-                        break L1;
-                      }
+                      break L1;
                     }
                   }
-                  throw new IllegalStateException();
                 }
+                throw new IllegalStateException();
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var4 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var4;
-            stackOut_8_1 = new StringBuilder().append("tia.MA(").append(param0).append(44).append(param1).append(44);
+            stackOut_8_1 = new StringBuilder().append("tia.MA(").append(param0).append(44).append(28).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;

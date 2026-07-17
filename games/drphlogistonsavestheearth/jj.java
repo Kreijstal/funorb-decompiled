@@ -7,18 +7,18 @@ final class jj {
     static he[] field_a;
     static og field_d;
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         field_d = null;
     }
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         int var1 = -2;
         return fl.field_a.b(64);
     }
 
-    final static int c(int param0) {
+    final static int c() {
         return uk.field_e + -hg.field_rb;
     }
 

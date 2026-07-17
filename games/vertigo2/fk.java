@@ -20,7 +20,7 @@ final class fk extends sn {
     private int field_r;
     private int field_s;
 
-    final static void f(int param0) {
+    final static void f() {
         kb.field_e.field_m = 0;
         kb.field_e.field_j = 0;
     }
@@ -74,25 +74,22 @@ final class fk extends sn {
         return (java.awt.Container) (Object) ob.e((byte) 116);
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_A = null;
         field_G = null;
     }
 
     private final void a(int param0, int param1, db param2, int param3) {
         try {
-            param2.a(param1, param0, (byte) -61);
+            param2.a(param1, -1, (byte) -61);
             param2.c((byte) 119, param3);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "fk.E(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "fk.E(" + -1 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
     }
 
     final static int a(byte param0, int param1) {
         param1 = param1 & 8191;
-        if (param0 != -118) {
-            return 88;
-        }
         if (4096 > param1) {
             return param1 >= 2048 ? -jc.field_b[param1 - 2048] : jc.field_b[-param1 + 2048];
         }
@@ -735,7 +732,7 @@ final class fk extends sn {
         }
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void a(java.applet.Applet param0) {
         String var3 = null;
         long var4 = 0L;
         tb.field_b = true;
@@ -896,60 +893,53 @@ final class fk extends sn {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_15_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_14_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_14_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_2_0 = 0;
+        int stackOut_13_0 = 0;
+        int stackOut_8_0 = 0;
         var8 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
-            if (param1 == 1282642017) {
-              var3_int = 0;
-              var4 = be.field_t;
-              L1: while (true) {
-                if (mn.field_q.length <= var3_int) {
-                  stackOut_14_0 = -1;
-                  stackIn_15_0 = stackOut_14_0;
-                  break L0;
-                } else {
-                  L2: {
-                    var5 = gd.field_s[var3_int];
-                    if (0 > var5) {
-                      var4 = var4 + gd.field_k;
-                      break L2;
+            var3_int = 0;
+            var4 = be.field_t;
+            L1: while (true) {
+              if (mn.field_q.length <= var3_int) {
+                stackOut_13_0 = -1;
+                stackIn_14_0 = stackOut_13_0;
+                break L0;
+              } else {
+                L2: {
+                  var5 = gd.field_s[var3_int];
+                  if (0 > var5) {
+                    var4 = var4 + gd.field_k;
+                    break L2;
+                  } else {
+                    int discarded$3 = 0;
+                    var6 = uc.a(mn.field_q[var3_int], true);
+                    var7 = -(var6 >> 1) + vm.field_c;
+                    var4 = var4 + al.field_z;
+                    if (pe.a(kd.field_z + (qc.field_z << 1), var4, param0, param2, (byte) 17, var7 - gl.field_l, (gl.field_l << 1) + var6)) {
+                      stackOut_8_0 = var5;
+                      stackIn_9_0 = stackOut_8_0;
+                      return stackIn_9_0;
                     } else {
-                      var6 = uc.a(mn.field_q[var3_int], true, false);
-                      var7 = -(var6 >> 1) + vm.field_c;
-                      var4 = var4 + al.field_z;
-                      if (pe.a(kd.field_z + (qc.field_z << 1), var4, param0, param2, (byte) 17, var7 - gl.field_l, (gl.field_l << 1) + var6)) {
-                        stackOut_9_0 = var5;
-                        stackIn_10_0 = stackOut_9_0;
-                        return stackIn_10_0;
-                      } else {
-                        var4 = var4 + (kd.field_z + ((qc.field_z << 1) + al.field_z));
-                        break L2;
-                      }
+                      var4 = var4 + (kd.field_z + ((qc.field_z << 1) + al.field_z));
+                      break L2;
                     }
                   }
-                  var3_int++;
-                  continue L1;
                 }
+                var3_int++;
+                continue L1;
               }
-            } else {
-              stackOut_2_0 = 111;
-              stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var3, "fk.N(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw wn.a((Throwable) (Object) var3, "fk.N(" + param0 + 44 + 1282642017 + 44 + param2 + 41);
         }
-        return stackIn_15_0;
+        return stackIn_14_0;
     }
 
     final sn c() {

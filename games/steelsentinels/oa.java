@@ -476,28 +476,13 @@ class oa extends lh {
     }
 
     final static boolean a(int param0, char param1) {
-        if (param0 == -4278) {
-          if (48 <= param1) {
-            if (param1 > 57) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+        if (48 > param1) {
             return false;
-          }
-        } else {
-          field_M = null;
-          if (48 <= param1) {
-            if (param1 > 57) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
         }
+        if (param1 > 57) {
+            return false;
+        }
+        return true;
     }
 
     final void a(byte param0, int param1, int param2, int param3, lh param4, int param5) {
@@ -537,8 +522,10 @@ class oa extends lh {
     }
 
     final static void f(int param0) {
-        rh.a(false);
-        jb.c((byte) -70);
+        int discarded$0 = 0;
+        rh.a();
+        int discarded$1 = -70;
+        jb.c();
         n.field_x = null;
         ke.a(2);
         if (param0 != -12161) {

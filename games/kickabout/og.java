@@ -10,7 +10,7 @@ abstract class og {
 
     abstract void a(int param0, int param1, int param2, java.awt.Graphics param3);
 
-    final static void a(int param0, ut[] param1, int param2, int param3) {
+    final static void a(int param0, ut[] param1) {
         RuntimeException var4 = null;
         ut var4_ref = null;
         int var5 = 0;
@@ -67,7 +67,7 @@ abstract class og {
                         var19 = param1[p.a((byte) -24, 3)];
                         var8 = var18[var6] + (896 + -var19.field_o >> 1);
                         var9 = var20[var6] + (1344 + -var19.field_v >> 1);
-                        var19.c(param2 + var8, var9 + 15);
+                        var19.c(15 + var8, var9 + 15);
                         var6++;
                         continue L3;
                       }
@@ -76,8 +76,8 @@ abstract class og {
                     var16 = param1[p.a((byte) -24, 3)];
                     var8 = 448 + var15[var6] + -(var16.field_o >> 1);
                     var9 = var17[var6] + -(var16.field_v >> 1) + 10;
-                    var16.c(var8 + param2, var9 + 15);
-                    var16.c(var8 + param2, 1359 - var9 - var16.field_v);
+                    var16.c(var8 + 15, var9 + 15);
+                    var16.c(var8 + 15, 1359 - var9 - var16.field_v);
                     var6++;
                     continue L2;
                   }
@@ -95,11 +95,11 @@ abstract class og {
                         var4_ref = var11;
                         var5 = el.a(29430, 10, 896 + -var11.field_o >> 1);
                         var6 = el.a(29430, 10, 50 + -(var11.field_v >> 1));
-                        var11.c(var5 + param2, var6 + 15);
-                        var4_ref.c(param2 - -var5, -var11.field_v + -var6 + 1359);
+                        var11.c(var5 + 15, var6 + 15);
+                        var4_ref.c(15 - -var5, -var11.field_v + -var6 + 1359);
                         var5 = el.a(29430, 10, -var11.field_o + 896 >> 1);
                         var6 = el.a(29430, 10, 1344 + -var11.field_v >> 1);
-                        param1[p.a((byte) -24, 3)].c(var5 + param2, 15 + var6);
+                        param1[p.a((byte) -24, 3)].c(var5 + 15, 15 + var6);
                         break L1;
                       } else {
                         break L1;
@@ -115,15 +115,15 @@ abstract class og {
                     var6_ref_ut = param1[p.a((byte) -24, 3)];
                     var7 = el.a(29430, 10, -var6_ref_ut.field_o + 896 >> 1);
                     var8 = el.a(29430, 10, 1344 + -var6_ref_ut.field_v >> 1);
-                    var6_ref_ut.c(var7 + param2, var8 + 15);
+                    var6_ref_ut.c(var7 + 15, var8 + 15);
                     break L1;
                   } else {
                     var13 = param1[var6];
                     var7_ref_ut = var13;
                     var8 = el.a(29430, 10, var12[var6] + (896 - var13.field_o >> 1));
                     var9 = el.a(29430, 10, 60 - ((var13.field_v >> 1) + -var14[var6]));
-                    var13.c(var8 + param2, var9 + 15);
-                    var7_ref_ut.c(var8 + param2, -var13.field_v + -var9 + 1359);
+                    var13.c(var8 + 15, var9 + 15);
+                    var7_ref_ut.c(var8 + 15, -var13.field_v + -var9 + 1359);
                     var6++;
                     continue L5;
                   }
@@ -168,7 +168,7 @@ abstract class og {
               break L7;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param2 + 44 + 15 + 41);
+          throw nb.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + 15 + 44 + 15 + 41);
         }
     }
 
@@ -228,7 +228,7 @@ abstract class og {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             } else {
-              StringBuilder discarded$2 = dj.a(0, ' ', -11407, c.field_a);
+              StringBuilder discarded$3 = dj.a(0, ' ', -11407, c.field_a);
               var3_int = 0;
               var4 = 0;
               var5 = -1;
@@ -268,9 +268,10 @@ abstract class og {
                     if (var11_int == 0) {
                       break L4;
                     } else {
-                      StringBuilder discarded$3 = c.field_a.append(var11_int);
+                      StringBuilder discarded$4 = c.field_a.append(var11_int);
                       var3_int++;
-                      var11_int = (char)(255 & mf.a((char) var11_int, (byte) -104));
+                      int discarded$5 = -104;
+                      var11_int = (char)(255 & mf.a((char) var11_int));
                       break L4;
                     }
                   }

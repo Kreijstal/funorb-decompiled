@@ -1743,33 +1743,25 @@ final class ij extends ib {
         try {
           L0: {
             L1: {
-              if (param0) {
-                break L1;
-              } else {
-                ((ij) this).field_p = -111;
-                break L1;
-              }
-            }
-            L2: {
-              L3: {
+              L2: {
                 if (param1 != 1) {
-                  break L3;
+                  break L2;
                 } else {
                   if (s.field_i) {
-                    break L3;
+                    break L2;
                   } else {
                     if (of.field_A <= 1) {
-                      break L3;
+                      break L2;
                     } else {
                       if (tl.field_c != 0) {
-                        break L3;
+                        break L2;
                       } else {
                         qi.field_a = qi.field_a + 1;
                         if (qi.field_a > of.field_A) {
                           qi.field_a = of.field_A;
-                          break L2;
+                          break L1;
                         } else {
-                          break L2;
+                          break L1;
                         }
                       }
                     }
@@ -1780,38 +1772,38 @@ final class ij extends ib {
                 pk.field_h = pk.field_h + 12;
                 fe.field_e = true;
                 if (pk.field_h <= 100) {
-                  break L2;
+                  break L1;
                 } else {
                   pk.field_h = 100;
-                  break L2;
+                  break L1;
                 }
               } else {
                 if (param1 != 4) {
-                  break L2;
+                  break L1;
                 } else {
-                  L4: {
+                  L3: {
                     ai.field_c = ai.field_c + 12;
                     if (ai.field_c > 100) {
                       ai.field_c = 100;
-                      break L4;
+                      break L3;
                     } else {
-                      break L4;
+                      break L3;
                     }
                   }
-                  L5: {
+                  L4: {
                     if (null != vf.field_L) {
-                      break L5;
+                      break L4;
                     } else {
                       vf.field_L = fe.field_c;
                       nj.field_o.a((p) (Object) vf.field_L);
-                      break L5;
+                      break L4;
                     }
                   }
                   if (vf.field_L != null) {
                     vf.field_L.d(ai.field_c / 2);
-                    break L2;
+                    break L1;
                   } else {
-                    break L2;
+                    break L1;
                   }
                 }
               }
@@ -1821,7 +1813,7 @@ final class ij extends ib {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var3, "ij.A(" + param0 + 44 + param1 + 41);
+          throw ma.a((Throwable) (Object) var3, "ij.A(" + 1 + 44 + param1 + 41);
         }
     }
 

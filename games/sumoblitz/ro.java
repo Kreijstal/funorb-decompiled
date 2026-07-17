@@ -100,7 +100,7 @@ final class ro {
             var15 = Sumoblitz.field_L ? 1 : 0;
             try {
               L0: {
-                var4_int = 65 / ((9 - param0) / 55);
+                var4_int = -32;
                 var5 = (Object) (Object) new rd();
                 ((rd) var5).field_p = param1.e(-31302);
                 ((rd) var5).field_t = param1.c(true);
@@ -248,7 +248,7 @@ final class ro {
               L16: {
                 var4 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_34_0 = (RuntimeException) var4;
-                stackOut_34_1 = new StringBuilder().append("ro.K(").append(param0).append(44);
+                stackOut_34_1 = new StringBuilder().append("ro.K(").append(127).append(44);
                 stackIn_36_0 = stackOut_34_0;
                 stackIn_36_1 = stackOut_34_1;
                 stackIn_35_0 = stackOut_34_0;
@@ -305,7 +305,7 @@ final class ro {
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         ks.field_x = fw.c(false);
         rf.field_a = new dg();
         sm.a((byte) 127, true, true);
@@ -477,7 +477,7 @@ final class ro {
         return var2;
     }
 
-    final static void a(ah param0, byte param1) {
+    final static void a(ah param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;

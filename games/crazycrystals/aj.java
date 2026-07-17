@@ -43,32 +43,28 @@ final class aj extends ig {
             param4 = param4 + ia.field_i;
             var7 = param2 + 48 * param3;
             var8 = go.field_l.a(param5, 148);
-            if (param0 == 32293) {
-              L1: {
-                var9 = oe.field_a[2].field_s * oe.field_a[2].field_m + (oe.field_a[2].field_t + -param4) * 12;
-                if (var9 < 0) {
-                  var9 = -var9;
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              var9 = 48 + -(param1 * (48 - var9) >> 5);
-              if (var9 < 48) {
-                L2: {
-                  if (16 > var9) {
-                    var9 = (15 + -var9) * 64 / 16 * 259 - -16760896;
-                    break L2;
-                  } else {
-                    var9 = 262913 * ((-(var9 * 64) + 3008) / 32);
-                    break L2;
-                  }
-                }
-                int discarded$1 = ((vc) (Object) var6).a(param5, 486, -((vc) (Object) var6).field_o + var7 + (18 + (-(var8 * 10) + 10)), 148, 1000, var9, -1, 0, 0, 20);
-                break L0;
+            L1: {
+              var9 = oe.field_a[2].field_s * oe.field_a[2].field_m + (oe.field_a[2].field_t + -param4) * 12;
+              if (var9 < 0) {
+                var9 = -var9;
+                break L1;
               } else {
-                return;
+                break L1;
               }
+            }
+            var9 = 48 + -(param1 * (48 - var9) >> 5);
+            if (var9 < 48) {
+              L2: {
+                if (16 > var9) {
+                  var9 = (15 + -var9) * 64 / 16 * 259 - -16760896;
+                  break L2;
+                } else {
+                  var9 = 262913 * ((-(var9 * 64) + 3008) / 32);
+                  break L2;
+                }
+              }
+              int discarded$1 = ((vc) (Object) var6).a(param5, 486, -((vc) (Object) var6).field_o + var7 + (18 + (-(var8 * 10) + 10)), 148, 1000, var9, -1, 0, 0, 20);
+              break L0;
             } else {
               return;
             }
@@ -78,7 +74,7 @@ final class aj extends ig {
           L3: {
             var6_ref = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var6_ref;
-            stackOut_12_1 = new StringBuilder().append("aj.P(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_12_1 = new StringBuilder().append("aj.P(").append(32293).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -168,7 +164,7 @@ final class aj extends ig {
         }
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_s = null;
     }
 

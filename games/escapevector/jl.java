@@ -151,7 +151,8 @@ class jl {
         ((jl) this).field_o = var2 * 3 / 4;
         ((jl) this).field_f = ((jl) this).c((byte) 111);
         ((jl) this).field_i = ((jl) this).field_f / 2;
-        ((jl) this).field_e = ((jl) this).field_f + (((jl) this).field_i - -this.a(((jl) this).field_b, (byte) 113));
+        int discarded$0 = 113;
+        ((jl) this).field_e = ((jl) this).field_f + (((jl) this).field_i - -this.a(((jl) this).field_b));
     }
 
     final static void b(int param0) {
@@ -216,17 +217,9 @@ class jl {
             return;
           } else {
             if (((jl) this).field_b.length != 0) {
-              L0: {
-                var17 = ((jl) this).field_b;
-                if (param0) {
-                  break L0;
-                } else {
-                  ((jl) this).a((byte) 91, 82);
-                  break L0;
-                }
-              }
+              var17 = ((jl) this).field_b;
               var4 = 0;
-              L1: while (true) {
+              L0: while (true) {
                 if (var17.length <= var4) {
                   return;
                 } else {
@@ -245,14 +238,14 @@ class jl {
                       var15 = ((jl) this).field_h.a(var5, var7, var8, var9, param1, var10, var11, var12, var13, var14);
                       param1 = param1 + var15 * ((jl) this).field_f;
                       var4++;
-                      continue L1;
+                      continue L0;
                     } else {
                       var4++;
-                      continue L1;
+                      continue L0;
                     }
                   } else {
                     var4++;
-                    continue L1;
+                    continue L0;
                   }
                 }
               }
@@ -280,7 +273,7 @@ class jl {
         return ((jl) this).field_e;
     }
 
-    private final int a(String[] param0, byte param1) {
+    private final int a(String[] param0) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String[] var4 = null;

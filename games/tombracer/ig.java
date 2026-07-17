@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ig {
-    final static void a(int param0) {
+    final static void a() {
         RuntimeException runtimeException = null;
         int var2 = 0;
         pha var3 = null;
@@ -74,13 +74,13 @@ final class ig {
             if (null != param1.field_f) {
                 param1.c(-7975);
             }
-            int var3_int = -105 % ((-33 - param0) / 48);
+            int var3_int = 0;
             param1.field_g = param2.field_g;
             param1.field_f = param2;
             param1.field_f.field_g = param1;
             param1.field_g.field_f = param1;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "ig.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "ig.A(" + 31 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

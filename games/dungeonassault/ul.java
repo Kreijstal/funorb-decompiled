@@ -7,7 +7,7 @@ final class ul {
     static String field_d;
     static char[] field_c;
 
-    final static void a(la param0, int param1) {
+    final static void a(la param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -126,7 +126,7 @@ final class ul {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
         field_d = null;

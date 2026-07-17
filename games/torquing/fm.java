@@ -192,97 +192,86 @@ final class fm extends hn implements ng {
         int var4 = 0;
         int var5 = 0;
         char[] var6 = null;
-        int stackIn_10_0 = 0;
-        int stackIn_17_0 = 0;
-        int stackIn_20_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_15_0 = 0;
+        int stackIn_18_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_16_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_9_0 = 0;
+        int stackOut_14_0 = 0;
+        int stackOut_17_0 = 0;
+        int stackOut_7_0 = 0;
         var5 = Torquing.field_u;
         try {
           L0: {
             L1: {
-              if (param0 == 32) {
-                break L1;
-              } else {
-                field_E = -78;
-                break L1;
-              }
-            }
-            L2: {
-              L3: {
+              L2: {
                 if (0 >= param1) {
-                  break L3;
+                  break L2;
                 } else {
                   if (param1 < 128) {
+                    break L1;
+                  } else {
                     break L2;
+                  }
+                }
+              }
+              L3: {
+                if (param1 < 160) {
+                  break L3;
+                } else {
+                  if (param1 <= 255) {
+                    break L1;
                   } else {
                     break L3;
                   }
                 }
               }
               L4: {
-                if (param1 < 160) {
-                  break L4;
-                } else {
-                  if (param1 <= 255) {
-                    break L2;
-                  } else {
-                    break L4;
-                  }
-                }
-              }
-              L5: {
                 if (param1 == 0) {
-                  break L5;
+                  break L4;
                 } else {
                   var6 = ef.field_c;
                   var2 = var6;
                   var3 = 0;
-                  L6: while (true) {
+                  L5: while (true) {
                     if (var3 >= var6.length) {
-                      break L5;
+                      break L4;
                     } else {
                       var4 = var6[var3];
                       if (param1 == var4) {
-                        stackOut_16_0 = 1;
-                        stackIn_17_0 = stackOut_16_0;
-                        return stackIn_17_0 != 0;
+                        stackOut_14_0 = 1;
+                        stackIn_15_0 = stackOut_14_0;
+                        return stackIn_15_0 != 0;
                       } else {
                         var3++;
-                        continue L6;
+                        continue L5;
                       }
                     }
                   }
                 }
               }
-              stackOut_19_0 = 0;
-              stackIn_20_0 = stackOut_19_0;
+              stackOut_17_0 = 0;
+              stackIn_18_0 = stackOut_17_0;
               break L0;
             }
-            stackOut_9_0 = 1;
-            stackIn_10_0 = stackOut_9_0;
-            return stackIn_10_0 != 0;
+            stackOut_7_0 = 1;
+            stackIn_8_0 = stackOut_7_0;
+            return stackIn_8_0 != 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var2_ref, "fm.E(" + param0 + 44 + param1 + 41);
+          throw rb.a((Throwable) (Object) var2_ref, "fm.E(" + 32 + 44 + param1 + 41);
         }
-        return stackIn_20_0 != 0;
+        return stackIn_18_0 != 0;
     }
 
     final static void a(boolean param0, int param1, String param2, String param3) {
         eo.field_a = param3;
         vo.field_g = param2;
-        if (param1 != -78) {
-            return;
-        }
         try {
             jk.a(ii.field_m, (byte) -79, param0);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "fm.F(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "fm.F(" + param0 + 44 + -78 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -313,13 +302,15 @@ final class fm extends hn implements ng {
                 if (((fm) this).field_D != param1) {
                   if (param1 != ((fm) this).field_C) {
                     if (((fm) this).field_B == param1) {
-                      eh.c((byte) 90);
+                      int discarded$5 = 90;
+                      eh.c();
                       break L1;
                     } else {
                       break L1;
                     }
                   } else {
-                    m.a(11);
+                    int discarded$6 = 11;
+                    m.a();
                     break L1;
                   }
                 } else {
@@ -389,7 +380,7 @@ final class fm extends hn implements ng {
         ((fm) this).a((gm) (Object) ((fm) this).field_B, -6938);
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_F = null;
     }
 

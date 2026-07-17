@@ -8,7 +8,7 @@ final class pk {
     static String field_b;
     static int[] field_d;
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_a = null;
         field_e = null;
@@ -25,12 +25,13 @@ final class pk {
         fd.a(4, 0);
     }
 
-    final static void b(int param0) {
+    final static void b() {
         if (!ai.field_c) {
             throw new IllegalStateException();
         }
         sh.field_t = true;
-        ma.a(true, 0);
+        int discarded$0 = 0;
+        ma.a(true);
         bl.field_a = 0;
     }
 

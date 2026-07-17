@@ -7,7 +7,7 @@ final class df extends rqa {
     static aba field_o;
     static int field_p;
 
-    public static void f(byte param0) {
+    public static void f() {
         field_o = null;
     }
 

@@ -528,7 +528,7 @@ final class bba implements ntb {
         return ((bba) this).field_b;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_f = null;
         field_e = null;
     }

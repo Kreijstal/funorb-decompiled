@@ -9,7 +9,7 @@ final class ei {
     private java.util.zip.Inflater field_b;
     static String field_c;
 
-    final static void a(int param0) {
+    final static void a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         dl var2 = null;
@@ -26,10 +26,11 @@ final class ei {
                 break L0;
               } else {
                 var2.g(65, 8);
-                int fieldTemp$5 = var2.field_g + 1;
+                int fieldTemp$10 = var2.field_g + 1;
                 var2.field_g = var2.field_g + 1;
-                var3 = fieldTemp$5;
-                hb.a(var2, 24732);
+                var3 = fieldTemp$10;
+                int discarded$11 = 24732;
+                hb.a(var2);
                 q.field_p.b(var2.field_g + -var3, (byte) 118);
                 continue L1;
               }
@@ -44,18 +45,15 @@ final class ei {
 
     final static void a(int param0, java.awt.Component param1) {
         try {
-            if (param0 < 95) {
-                ei.a(true);
-            }
             param1.setFocusTraversalKeysEnabled(false);
             param1.addKeyListener((java.awt.event.KeyListener) (Object) ua.field_d);
             param1.addFocusListener((java.awt.event.FocusListener) (Object) ua.field_d);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "ei.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "ei.D(" + 107 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static boolean a(String param0, byte param1) {
+    final static boolean a(String param0) {
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
         RuntimeException stackIn_3_0 = null;
@@ -252,9 +250,6 @@ final class ei {
     }
 
     public static void a(boolean param0) {
-        if (param0) {
-            return;
-        }
         field_c = null;
         field_d = null;
     }

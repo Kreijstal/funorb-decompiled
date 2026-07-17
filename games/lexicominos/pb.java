@@ -7,7 +7,7 @@ final class pb extends kd {
     static String field_j;
     static le field_i;
 
-    final static boolean c(boolean param0) {
+    final static boolean c() {
         nl.field_c = true;
         mc.field_i = 15000L + rf.c(0);
         return ta.field_g == 11 ? true : false;

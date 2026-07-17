@@ -299,7 +299,7 @@ class id {
         ic var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_f) {
             break L0;
           } else {
@@ -309,7 +309,7 @@ class id {
         }
         L1: {
           kg.a(param0, 0, var3);
-          ((id) this).field_k = ((id) this).field_k - 256;
+          ((id) this).field_k = ((id) this).field_k - param1;
           if (((id) this).field_l == null) {
             break L1;
           } else {
@@ -476,7 +476,7 @@ class id {
           if (((id) this).field_l == null) {
             break L17;
           } else {
-            ((id) this).field_l.b(param0, 0, 256);
+            ((id) this).field_l.b(param0, 0, param1);
             break L17;
           }
         }
@@ -484,35 +484,9 @@ class id {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 < 8000) {
-            break L0;
-          } else {
-            if (param0 <= 48000) {
-              L1: {
-                field_d = param0;
-                if (!param1) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              field_f = stackIn_7_0 != 0;
-              field_o = 10;
-              return;
-            } else {
-              break L0;
-            }
-          }
-        }
-        throw new IllegalArgumentException();
+        field_d = 22050;
+        field_f = true;
+        field_o = 10;
     }
 
     final synchronized void g() {
@@ -532,12 +506,12 @@ class id {
     }
 
     private final void b(int param0) {
-        ((id) this).field_k = ((id) this).field_k - 256;
+        ((id) this).field_k = ((id) this).field_k - param0;
         if (((id) this).field_k < 0) {
             ((id) this).field_k = 0;
         }
         if (((id) this).field_l != null) {
-            ((id) this).field_l.d(256);
+            ((id) this).field_l.d(param0);
             return;
         }
     }

@@ -4,11 +4,11 @@
 final class pl extends bia {
     static String field_e;
 
-    final static khb[] c(byte param0) {
+    final static khb[] c() {
         return new khb[]{up.field_o, hha.field_p, dua.field_p};
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         int var1 = -1;
         field_e = null;
     }

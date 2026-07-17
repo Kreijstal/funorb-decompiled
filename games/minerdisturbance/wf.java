@@ -227,9 +227,6 @@ abstract class wf extends cc {
     }
 
     final static void a(int param0, int param1, byte param2, int param3, int param4) {
-        if (param2 != 8) {
-            field_N = null;
-        }
         ti.a((byte) 127);
         eh.f(param1, param0, param3, param4);
     }
@@ -252,7 +249,7 @@ abstract class wf extends cc {
         }
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_Y = null;
         field_P = null;
         field_V = null;
@@ -266,9 +263,6 @@ abstract class wf extends cc {
         int var3 = 0;
         int var5 = 0;
         int var4 = 0;
-        if (param0 != -4) {
-            ((wf) this).b(true);
-        }
         if (((wf) this).field_O > 0) {
             var2 = ((wf) this).field_S;
             var3 = ((wf) this).field_X;
@@ -285,7 +279,7 @@ abstract class wf extends cc {
             }
             ((wf) this).a(var3, var2, (byte) 55);
         }
-        return super.n(param0);
+        return super.n(-4);
     }
 
     static {

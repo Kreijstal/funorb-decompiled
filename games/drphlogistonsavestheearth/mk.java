@@ -11,7 +11,7 @@ final class mk {
     static he[] field_e;
     static String field_d;
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         field_g = null;
@@ -30,7 +30,7 @@ final class mk {
         try {
           L0: {
             ae.a(1, pf.field_f, cc.field_B, gg.field_b, true, 0, param1);
-            var3 = 77 / ((param0 - 21) / 63);
+            var3 = -77;
             var2_int = 0;
             L1: while (true) {
               if (gg.field_b <= var2_int) {
@@ -54,7 +54,7 @@ final class mk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "mk.A(" + param0 + 44 + param1 + 41);
+          throw ie.a((Throwable) (Object) var2, "mk.A(" + -91 + 44 + param1 + 41);
         }
     }
 

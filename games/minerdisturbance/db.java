@@ -9,7 +9,7 @@ final class db extends RuntimeException {
     Throwable field_c;
     static byte[][] field_b;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_f = null;
     }

@@ -9,8 +9,9 @@ final class ol {
     static String[] field_b;
     static rk field_f;
 
-    final static ad a(int param0) {
-        return new ad(ti.a((byte) -120), rl.a(true));
+    final static ad a() {
+        int discarded$0 = 1;
+        return new ad(ti.a((byte) -120), rl.a());
     }
 
     public static void a(boolean param0) {
@@ -95,7 +96,7 @@ final class ol {
         return (hm) (Object) stackIn_3_0;
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean a(char param0) {
         RuntimeException var2 = null;
         char[] var2_array = null;
         int var3 = 0;

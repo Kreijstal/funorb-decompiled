@@ -10,14 +10,7 @@ final class gm extends di {
         ql.field_d = new int[3];
         kf.field_M = 200;
         pd.field_g = new hl[3000];
-        if (param0 != -3504) {
-          field_J = null;
-          ic.field_c = 0;
-          return;
-        } else {
-          ic.field_c = 0;
-          return;
-        }
+        ic.field_c = 0;
     }
 
     private gm(mm param0, int param1) {
@@ -28,7 +21,7 @@ final class gm extends di {
         this(hh.field_e, param0);
     }
 
-    public static void d(int param0) {
+    public static void d() {
         int var1 = -85;
         field_J = null;
     }
@@ -57,7 +50,8 @@ final class gm extends di {
         try {
           L0: {
             var3_int = 61 / ((param1 - 59) / 53);
-            stackOut_0_0 = vb.a('*', param0.field_E.length(), -12681);
+            int discarded$2 = -12681;
+            stackOut_0_0 = vb.a('*', param0.field_E.length());
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

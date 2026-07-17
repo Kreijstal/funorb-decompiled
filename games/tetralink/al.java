@@ -83,29 +83,23 @@ class al implements kg, jh {
     }
 
     final static void a(int param0, boolean param1, byte[] param2, int param3, boolean param4, int param5) {
-        bc var10 = null;
+        bc var6 = null;
         int var7 = 0;
         int var8 = 0;
         try {
-            var10 = nd.field_Lb;
-            var10.f(param3, (byte) -92);
-            var10.field_t = var10.field_t + 1;
-            var7 = var10.field_t;
-            var10.a(4, !param4 ? true : false);
-            var10.a(param5, false);
-            var8 = param0;
-            if (param1) {
-                var8 += 128;
-            }
-            var10.a(var8, false);
-            if (!param4) {
-                Object var9 = null;
-                al.a((String) null, (byte) -79);
-            }
-            var10.a(0, 128, param2, param2.length);
-            var10.b(-var7 + var10.field_t, -2);
+            var6 = nd.field_Lb;
+            var6.f(11, (byte) -92);
+            var6.field_t = var6.field_t + 1;
+            var7 = var6.field_t;
+            var6.a(4, false);
+            var6.a(param5, false);
+            var8 = 0;
+            var8 += 128;
+            var6.a(var8, false);
+            var6.a(0, 128, param2, param2.length);
+            var6.b(-var7 + var6.field_t, -2);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "al.FA(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "al.FA(" + 0 + 44 + 1 + 44 + (param2 != null ? "{...}" : "null") + 44 + 11 + 44 + 1 + 44 + param5 + 41);
         }
     }
 
@@ -836,7 +830,7 @@ class al implements kg, jh {
         }
     }
 
-    private final int a(int param0, na param1, byte param2, int param3) {
+    private final int a(int param0, na param1, byte param2) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_1_0 = 0;
@@ -860,7 +854,7 @@ class al implements kg, jh {
         try {
           L0: {
             var5_int = -77 % ((61 - param2) / 48);
-            stackOut_0_0 = param3 + (param1.field_o + (((al) this).field_j + param0 + param1.field_w));
+            stackOut_0_0 = param1.field_o + (((al) this).field_j + param0 + param1.field_w);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -892,7 +886,7 @@ class al implements kg, jh {
               break L1;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param2 + 44 + param3 + 41);
+          throw oi.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param2 + 44 + 0 + 41);
         }
         return stackIn_1_0;
     }
@@ -925,11 +919,12 @@ class al implements kg, jh {
                 break L1;
               } else {
                 var5 = null;
-                int discarded$2 = ((al) this).b((na) null, -6);
+                int discarded$4 = ((al) this).b((na) null, -6);
                 break L1;
               }
             }
-            stackOut_2_0 = this.a(param1, param0, (byte) 120, 0);
+            int discarded$5 = 0;
+            stackOut_2_0 = this.a(param1, param0, (byte) 120);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -966,15 +961,12 @@ class al implements kg, jh {
         return stackIn_3_0;
     }
 
-    final static void a(String param0, byte param1) {
+    final static void a(String param0) {
         try {
             rb.field_Nb = param0;
-            if (param1 != 24) {
-                field_l = null;
-            }
             t.a(12, 0);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "al.LA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "al.LA(" + (param0 != null ? "{...}" : "null") + 44 + 24 + 41);
         }
     }
 
@@ -985,23 +977,22 @@ class al implements kg, jh {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        Object var14 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
-        String stackIn_30_2 = null;
+        String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
         RuntimeException stackOut_27_0 = null;
         StringBuilder stackOut_27_1 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
+        String stackOut_27_2 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
+        String stackOut_26_2 = null;
         var13 = TetraLink.field_J;
         try {
           L0: {
@@ -1010,7 +1001,8 @@ class al implements kg, jh {
               var9_int = ((al) this).b(param0, 75);
               var10 = this.d(param0, -19);
               if (((al) this).field_p) {
-                int discarded$1 = ((al) this).field_b.a(((al) this).c(param0, 4373), this.a(0, param0, param1, param6), this.a(param7, param0, (byte) -24, param2), var9_int, var10, param5, param4, ((al) this).field_k, ((al) this).field_d, ((al) this).field_c);
+                int discarded$5 = 0;
+                int discarded$6 = ((al) this).field_b.a(((al) this).c(param0, 4373), this.a(0, param0, param1, 0), this.a(param7, param0, (byte) -24), var9_int, var10, param5, param4, ((al) this).field_k, ((al) this).field_d, ((al) this).field_c);
                 break L1;
               } else {
                 L2: {
@@ -1049,11 +1041,13 @@ class al implements kg, jh {
                         if (var12 != 2) {
                           break L1;
                         } else {
-                          ((al) this).field_b.c(((al) this).c(param0, 4373), var9_int + this.a(0, param0, param1, param6), this.a(param7, param0, (byte) 122, param2) + var11, param5, param4);
+                          int discarded$7 = 0;
+                          ((al) this).field_b.c(((al) this).c(param0, 4373), var9_int + this.a(0, param0, param1, 0), this.a(param7, param0, (byte) 122) + var11, param5, param4);
                           break L1;
                         }
                       } else {
-                        ((al) this).field_b.a(((al) this).c(param0, 4373), this.a(0, param0, param1, param6) + (var9_int >> 1), var11 + this.a(param7, param0, (byte) 120, param2), param5, param4);
+                        int discarded$8 = 0;
+                        ((al) this).field_b.a(((al) this).c(param0, 4373), this.a(0, param0, param1, 0) + (var9_int >> 1), var11 + this.a(param7, param0, (byte) 120), param5, param4);
                         break L1;
                       }
                     }
@@ -1061,17 +1055,9 @@ class al implements kg, jh {
                     break L4;
                   }
                 }
-                ((al) this).field_b.b(((al) this).c(param0, 4373), this.a(0, param0, param1, param6), var11 + this.a(param7, param0, (byte) -79, param2), param5, param4);
+                int discarded$9 = 0;
+                ((al) this).field_b.b(((al) this).c(param0, 4373), this.a(0, param0, param1, 0), var11 + this.a(param7, param0, (byte) -79), param5, param4);
                 break L1;
-              }
-            }
-            L5: {
-              if (param3 >= 37) {
-                break L5;
-              } else {
-                var14 = null;
-                al.a((String) null, (byte) -67);
-                break L5;
               }
             }
             dh.a(-581);
@@ -1079,33 +1065,33 @@ class al implements kg, jh {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L5: {
             var9 = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) var9;
-            stackOut_27_1 = new StringBuilder().append("al.OA(");
-            stackIn_29_0 = stackOut_27_0;
-            stackIn_29_1 = stackOut_27_1;
-            stackIn_28_0 = stackOut_27_0;
-            stackIn_28_1 = stackOut_27_1;
+            stackOut_25_0 = (RuntimeException) var9;
+            stackOut_25_1 = new StringBuilder().append("al.OA(");
+            stackIn_27_0 = stackOut_25_0;
+            stackIn_27_1 = stackOut_25_1;
+            stackIn_26_0 = stackOut_25_0;
+            stackIn_26_1 = stackOut_25_1;
             if (param0 == null) {
-              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
-              stackOut_29_2 = "null";
-              stackIn_30_0 = stackOut_29_0;
-              stackIn_30_1 = stackOut_29_1;
-              stackIn_30_2 = stackOut_29_2;
-              break L6;
+              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
+              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_2 = "null";
+              stackIn_28_0 = stackOut_27_0;
+              stackIn_28_1 = stackOut_27_1;
+              stackIn_28_2 = stackOut_27_2;
+              break L5;
             } else {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
-              stackOut_28_2 = "{...}";
-              stackIn_30_0 = stackOut_28_0;
-              stackIn_30_1 = stackOut_28_1;
-              stackIn_30_2 = stackOut_28_2;
-              break L6;
+              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
+              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_2 = "{...}";
+              stackIn_28_0 = stackOut_26_0;
+              stackIn_28_1 = stackOut_26_1;
+              stackIn_28_2 = stackOut_26_2;
+              break L5;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw oi.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 44 + param1 + 44 + 0 + 44 + 45 + 44 + param4 + 44 + param5 + 44 + 0 + 44 + param7 + 41);
         }
     }
 
@@ -1395,7 +1381,7 @@ class al implements kg, jh {
         return stackIn_3_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_l = null;
         field_i = null;

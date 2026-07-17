@@ -138,7 +138,7 @@ abstract class rd extends oh {
         return stackIn_20_0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_i = null;
         field_g = null;
     }
@@ -153,7 +153,7 @@ abstract class rd extends oh {
     rd() {
     }
 
-    final static hm[] a(md param0, int param1) {
+    final static hm[] a(md param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

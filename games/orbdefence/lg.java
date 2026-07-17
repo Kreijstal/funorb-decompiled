@@ -32,14 +32,15 @@ final class lg {
             L1: {
               og.field_n[0] = tl.field_f.nextInt();
               og.field_n[1] = tl.field_f.nextInt();
-              og.field_n[param0] = (int)tg.field_a;
+              og.field_n[3] = (int)tg.field_a;
               og.field_n[2] = (int)(tg.field_a >> 32);
               pg.field_c.field_i = 0;
               pg.field_c.b(og.field_n[0], -1);
               pg.field_c.b(og.field_n[1], -1);
               pg.field_c.b(og.field_n[2], -1);
               pg.field_c.b(og.field_n[3], -1);
-              kb.a(pg.field_c, false);
+              int discarded$1 = 0;
+              kb.a(pg.field_c);
               pg.field_c.b((byte) -60, param1);
               param2.a(pg.field_c, 27557);
               uk.field_b.field_i = 0;
@@ -109,7 +110,7 @@ final class lg {
             }
             cg.a((mg) (Object) uk.field_b, pc.field_W, 0, nc.field_ab, pg.field_c);
             uk.field_b.d(uk.field_b.field_i - var5_int, -2);
-            bh.a(-1, param0 + -4);
+            bh.a(-1, -1);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -117,7 +118,7 @@ final class lg {
           L8: {
             var5 = decompiledCaughtException;
             stackOut_18_0 = (RuntimeException) var5;
-            stackOut_18_1 = new StringBuilder().append("lg.E(").append(param0).append(44).append(param1).append(44);
+            stackOut_18_1 = new StringBuilder().append("lg.E(").append(3).append(44).append(param1).append(44);
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -147,10 +148,7 @@ final class lg {
     final static dc a(int param0, boolean param1) {
         dc var2 = new dc();
         mj.field_m.a(-125, (ca) (Object) var2);
-        if (param1) {
-            return null;
-        }
-        tg.a(-87, param0);
+        tg.a(-87, 4);
         return var2;
     }
 
@@ -168,7 +166,7 @@ final class lg {
         int var3 = 0;
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         return ed.field_b.a(0);
     }
 

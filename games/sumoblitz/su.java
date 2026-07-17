@@ -172,7 +172,8 @@ final class su extends RuntimeException {
         int stackOut_3_0 = 0;
         if (param0 == 0) {
           if (!nt.field_r) {
-            if (vs.b((byte) 9)) {
+            int discarded$16 = 9;
+            if (vs.b()) {
               return true;
             } else {
               return false;
@@ -184,12 +185,13 @@ final class su extends RuntimeException {
           }
         } else {
           var2 = null;
-          qj discarded$5 = su.a(6, (on) null, (byte[]) null, -63);
+          qj discarded$17 = su.a(6, (on) null, (byte[]) null, -63);
           if (nt.field_r) {
             return true;
           } else {
             L0: {
-              if (!vs.b((byte) 9)) {
+              int discarded$18 = 9;
+              if (!vs.b()) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L0;

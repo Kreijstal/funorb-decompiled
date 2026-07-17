@@ -29,7 +29,7 @@ final class fl extends at {
         }
     }
 
-    private final void d(byte param0) {
+    private final void d() {
         if (!(((fl) this).field_n.field_s.field_y != 31)) {
             ((fl) this).field_n.a(24831, 101, kna.field_g[31]);
             wf.a(34, (byte) 126);
@@ -46,13 +46,14 @@ final class fl extends at {
             break L0;
           }
         }
-        int fieldTemp$2 = ((fl) this).field_k - 1;
+        int fieldTemp$4 = ((fl) this).field_k - 1;
         ((fl) this).field_k = ((fl) this).field_k - 1;
-        if (fieldTemp$2 <= 0) {
+        if (fieldTemp$4 <= 0) {
           if (((fl) this).field_n.field_j > 0) {
             return false;
           } else {
-            this.d((byte) -82);
+            int discarded$5 = -82;
+            this.d();
             var2 = 2 % ((param0 - 71) / 47);
             return true;
           }

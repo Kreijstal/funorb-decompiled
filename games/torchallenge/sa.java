@@ -52,7 +52,7 @@ final class sa {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
     }
 
@@ -61,7 +61,7 @@ final class sa {
         int var4 = 0;
         try {
             var5 = dk.field_s;
-            var5.d(25, param1);
+            var5.d(25, 6);
             var5.field_q = var5.field_q + 1;
             var4 = var5.field_q;
             if (param0 < 11) {
@@ -79,7 +79,7 @@ final class sa {
             param2.field_j = var5.i(67);
             var5.a(var5.field_q - var4, -112);
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "sa.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "sa.A(" + param0 + 44 + 6 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

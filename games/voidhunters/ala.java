@@ -7,7 +7,8 @@ final class ala extends rqa {
     }
 
     final static void a(int param0, int param1) {
-        int discarded$4 = rt.c(1);
+        int discarded$6 = 1;
+        int discarded$10 = rt.c();
         if (param1 != 15877) {
             ala.a(50, -58);
         }

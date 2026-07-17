@@ -282,7 +282,7 @@ final class ak extends a {
           L0: {
             L1: {
               L2: {
-                if (param0 <= ~param1) {
+                if (param1 <= 0) {
                   break L2;
                 } else {
                   if (128 > param1) {
@@ -338,12 +338,12 @@ final class ak extends a {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw la.a((Throwable) (Object) var2_ref, "ak.DA(" + param0 + 44 + param1 + 41);
+          throw la.a((Throwable) (Object) var2_ref, "ak.DA(" + -1 + 44 + param1 + 41);
         }
         return stackIn_17_0 != 0;
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_u = null;
         field_t = null;
     }

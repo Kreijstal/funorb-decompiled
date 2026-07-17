@@ -6,7 +6,7 @@ final class hc {
     static wb field_b;
     static String field_c;
 
-    final static void a(boolean param0, boolean param1) {
+    final static void a(boolean param0) {
         if (!(null == ab.field_D)) {
             ab.field_D.a(-1);
             ab.field_D = null;
@@ -23,7 +23,7 @@ final class hc {
         ue.field_c = false;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
         field_c = null;

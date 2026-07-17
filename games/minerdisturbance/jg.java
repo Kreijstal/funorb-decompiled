@@ -134,7 +134,8 @@ final class jg extends cb {
             if (param2 >= -100) {
                 jg.b((byte) -17);
             }
-            t.a(param3, rf.field_a, 0);
+            int discarded$0 = 0;
+            t.a(param3, rf.field_a);
         } catch (RuntimeException runtimeException) {
             throw lj.a((Throwable) (Object) runtimeException, "jg.E(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
         }

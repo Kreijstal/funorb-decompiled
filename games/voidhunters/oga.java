@@ -83,11 +83,13 @@ final class oga extends rqa {
         if (param0 <= 27) {
             boolean discarded$0 = oga.a(23, 89, -52, 81, -123, -26, false);
         }
-        if (!(!wq.e((byte) 105))) {
+        int discarded$5 = 105;
+        if (!(!wq.e())) {
             gaa.a(param2, 11343, param4, param6);
             if (null != cka.field_o) {
                 if (cka.field_o.a(param6, -11, param1, param4, param3)) {
-                    lnb.d(0);
+                    int discarded$6 = 0;
+                    lnb.d();
                     param6 = false;
                 }
             }
@@ -98,7 +100,7 @@ final class oga extends rqa {
         return param6;
     }
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean a(char param0) {
         if (param0 >= 32) {
             if (!(param0 > 126)) {
                 return true;
@@ -123,7 +125,7 @@ final class oga extends rqa {
         return true;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         try {
             int var1_int = 0;
             RuntimeException var1 = null;

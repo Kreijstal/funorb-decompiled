@@ -7,7 +7,7 @@ final class tq {
     static String field_d;
     static int field_b;
 
-    final static void a(boolean param0, boolean param1) {
+    final static void a(boolean param0) {
         al.a(-47, param0);
         wc.a(param0, true);
     }
@@ -32,7 +32,7 @@ final class tq {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0) {
         bv var2 = vl.field_n;
         var2.h(32161, param0);
         var2.b(1, 1);
@@ -55,54 +55,47 @@ final class tq {
         int[] var18 = null;
         int[] var19 = null;
         int[] var20 = null;
-        var20 = qn.field_d;
-        var19 = var20;
-        var18 = var19;
-        var17 = var18;
-        var15 = var17;
-        var6 = var15;
-        var7 = qn.field_l;
-        var8 = qn.field_g;
-        var9 = new wk(param4, -(2 * param4) + param2);
-        var9.b();
-        qn.a(0, 0, param4, -(2 * param4) + param2, param0, param5);
-        var10 = new wk(param4, param4);
-        var10.b();
-        if (param1) {
-          return null;
-        } else {
-          L0: {
-            qn.f(0, 0, param4, param4, param0);
-            var11 = new wk(16, param4);
-            var11.b();
-            qn.f(0, 0, 16, param4, param0);
-            var12 = new wk(param4, param4);
-            var12.b();
-            qn.f(0, 0, param4, param4, param5);
-            var13 = new wk(16, param4);
-            var13.b();
-            qn.f(0, 0, 16, param4, param5);
-            var14 = null;
-            if (param3 <= 0) {
-              break L0;
-            } else {
-              var16 = new wk(16, 16);
-              var14 = (Object) (Object) var16;
-              var16.b();
-              qn.f(0, 0, 16, 16, param3);
-              break L0;
-            }
+        L0: {
+          var20 = qn.field_d;
+          var19 = var20;
+          var18 = var19;
+          var17 = var18;
+          var15 = var17;
+          var6 = var15;
+          var7 = qn.field_l;
+          var8 = qn.field_g;
+          var9 = new wk(3, -6 + param2);
+          var9.b();
+          qn.a(0, 0, 3, -6 + param2, param0, param5);
+          var10 = new wk(3, 3);
+          var10.b();
+          qn.f(0, 0, 3, 3, param0);
+          var11 = new wk(16, 3);
+          var11.b();
+          qn.f(0, 0, 16, 3, param0);
+          var12 = new wk(3, 3);
+          var12.b();
+          qn.f(0, 0, 3, 3, param5);
+          var13 = new wk(16, 3);
+          var13.b();
+          qn.f(0, 0, 16, 3, param5);
+          var14 = null;
+          if (param3 <= 0) {
+            break L0;
+          } else {
+            var16 = new wk(16, 16);
+            var14 = (Object) (Object) var16;
+            var16.b();
+            qn.f(0, 0, 16, 16, param3);
+            break L0;
           }
-          qn.a(var20, var7, var8);
-          return new wk[]{var10, var11, var10, var9, (wk) var14, var9, var12, var13, var12};
         }
+        qn.a(var20, var7, var8);
+        return new wk[]{var10, var11, var10, var9, (wk) var14, var9, var12, var13, var12};
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
-        if (param0 != -84) {
-            field_d = null;
-        }
     }
 
     static {

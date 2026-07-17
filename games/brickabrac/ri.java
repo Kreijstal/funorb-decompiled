@@ -212,7 +212,11 @@ final class ri extends ib implements en {
     }
 
     final static void h(int param0) {
-        aa.a((byte) 96);
+        if (param0 > -41) {
+            return;
+        }
+        int discarded$0 = 96;
+        aa.a();
         ko.a(-32120);
     }
 
@@ -295,7 +299,7 @@ final class ri extends ib implements en {
         return stackIn_11_0;
     }
 
-    final static byte[] a(byte[] param0, int param1, pi param2, int param3) {
+    final static byte[] a(byte[] param0, int param1, pi param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -338,7 +342,7 @@ final class ri extends ib implements en {
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
-            var4_int = param2.c(param1, (byte) -112);
+            var4_int = param2.c(16, (byte) -112);
             if (var4_int != 0) {
               L1: {
                 L2: {
@@ -419,7 +423,7 @@ final class ri extends ib implements en {
           }
           L7: {
             stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(44).append(param1).append(44);
+            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(44).append(16).append(44);
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -447,14 +451,14 @@ final class ri extends ib implements en {
         return stackIn_18_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_I = null;
         field_O = null;
         field_L = null;
         field_N = null;
     }
 
-    final static void c(boolean param0) {
+    final static void c() {
         int var1 = 0;
         if (ki.field_d < 224) {
             var1 = ki.field_d % 32;

@@ -51,7 +51,7 @@ final class bb extends wf {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var3_int = 126 % ((-44 - param1) / 37);
+            var3_int = 2;
             var4 = null;
             stackOut_0_0 = u.a(param0, 0, (String) null, false, -107, 0, param2);
             stackIn_1_0 = stackOut_0_0;
@@ -87,7 +87,7 @@ final class bb extends wf {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(param1).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(127).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -115,7 +115,7 @@ final class bb extends wf {
         return stackIn_1_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_m = null;
     }
 

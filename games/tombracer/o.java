@@ -34,16 +34,10 @@ final class o extends ora implements sca {
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        if (param0 != -1) {
-            return true;
-        }
-        return (540800 & param2) != 0 ? true : false;
+        return (540800 & param2) != 0;
     }
 
-    final static boolean e(int param0) {
-        if (param0 != 540800) {
-            return false;
-        }
+    final static boolean e() {
         if (oba.field_e == null) {
             return false;
         }

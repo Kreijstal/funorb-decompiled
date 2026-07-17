@@ -108,7 +108,7 @@ final class v implements Runnable {
         }
     }
 
-    final static java.awt.Container a(boolean param0) {
+    final static java.awt.Container a() {
         if (!(ah.field_q == null)) {
             return (java.awt.Container) (Object) ah.field_q;
         }
@@ -281,7 +281,8 @@ final class v implements Runnable {
               if (var2 == 0) {
                 var4 = (af) (Object) pf.field_b.b(-79);
                 if (var4 == null) {
-                  oj.c(-2290);
+                  int discarded$3 = -2290;
+                  oj.c();
                   return;
                 } else {
                   L2: {
@@ -314,7 +315,8 @@ final class v implements Runnable {
               } else {
                 if (var2 != 1) {
                   qe.a(-115, "LR1: " + bh.b((byte) -96), (Throwable) null);
-                  oj.c(-2290);
+                  int discarded$4 = -2290;
+                  oj.c();
                   break L1;
                 } else {
                   var4_int = var10.e(-64);
@@ -340,7 +342,8 @@ final class v implements Runnable {
                       }
                     }
                     if (var5_ref_fk == null) {
-                      oj.c(-2290);
+                      int discarded$5 = -2290;
+                      oj.c();
                       return;
                     } else {
                       var5_ref_fk.c(20);

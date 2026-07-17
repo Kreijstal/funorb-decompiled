@@ -15,7 +15,7 @@ final class o extends wf {
     static int field_i;
     private static String field_z;
 
-    public static void d(int param0) {
+    public static void d() {
         field_o = null;
     }
 

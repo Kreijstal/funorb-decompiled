@@ -551,7 +551,7 @@ final class df extends tj implements fb, he {
               if (((df) this).field_Q != param0) {
                 break L1;
               } else {
-                boolean discarded$3 = ((df) this).field_S.a(11, (kb) this);
+                boolean discarded$5 = ((df) this).field_S.a(11, (kb) this);
                 break L1;
               }
             }
@@ -566,7 +566,8 @@ final class df extends tj implements fb, he {
             }
             L3: {
               if (((df) this).field_S == param0) {
-                this.c(false);
+                int discarded$6 = 0;
+                this.c();
                 break L3;
               } else {
                 break L3;
@@ -645,7 +646,7 @@ final class df extends tj implements fb, he {
               if (param1 == 11) {
                 break L1;
               } else {
-                String discarded$2 = ((df) this).m(64);
+                String discarded$13 = ((df) this).m(64);
                 break L1;
               }
             }
@@ -654,7 +655,8 @@ final class df extends tj implements fb, he {
                 if (((df) this).field_R != param4) {
                   if (param4 == ((df) this).field_N) {
                     if (((df) this).field_P) {
-                      ft.e(17);
+                      int discarded$14 = 17;
+                      ft.e();
                       break L2;
                     } else {
                       if (!((df) this).field_F) {
@@ -673,7 +675,8 @@ final class df extends tj implements fb, he {
                   break L2;
                 }
               } else {
-                this.c(false);
+                int discarded$15 = 0;
+                this.c();
                 break L2;
               }
             }
@@ -711,7 +714,7 @@ final class df extends tj implements fb, he {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_K = null;
     }
 
@@ -750,7 +753,7 @@ final class df extends tj implements fb, he {
         return ((df) this).field_Q.field_v;
     }
 
-    private final void c(boolean param0) {
+    private final void c() {
         L0: {
           L1: {
             if (df.k(30)) {
@@ -772,7 +775,7 @@ final class df extends tj implements fb, he {
         }
     }
 
-    final static void l(int param0) {
+    final static void l() {
         hf.field_a = 0;
     }
 

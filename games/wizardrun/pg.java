@@ -13,7 +13,7 @@ final class pg extends wl {
     static int field_n;
     private int field_k;
 
-    final static int d(byte param0) {
+    final static int d() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -90,7 +90,8 @@ final class pg extends wl {
                         break L6;
                       } else {
                         var3 = 2;
-                        le.a(true, 5, 15991);
+                        int discarded$1 = 15991;
+                        le.a(true, 5);
                         break L6;
                       }
                     }
@@ -126,28 +127,14 @@ final class pg extends wl {
         return stackIn_27_0;
     }
 
-    final static void a(long param0, int param1) {
+    final static void a(long param0) {
         try {
             InterruptedException var3 = null;
             Throwable decompiledCaughtException = null;
-            try {
+            {
               L0: {
-                L1: {
-                  Thread.sleep(param0);
-                  if (param1 == 2) {
-                    break L1;
-                  } else {
-                    field_n = -55;
-                    break L1;
-                  }
-                }
+                Thread.sleep(param0);
                 break L0;
-              }
-            } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              L2: {
-                var3 = (InterruptedException) (Object) decompiledCaughtException;
-                break L2;
               }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -199,64 +186,56 @@ final class pg extends wl {
         var9 = wizardrun.field_H;
         try {
           L0: {
-            var6_int = param5 + -param2;
+            var6_int = param5;
             var7 = 0;
             L1: while (true) {
               if (var6_int <= var7) {
-                L2: {
-                  if (param0 == 8220) {
-                    break L2;
-                  } else {
-                    field_n = -99;
-                    break L2;
-                  }
-                }
                 stackOut_68_0 = var6_int;
                 stackIn_69_0 = stackOut_68_0;
                 break L0;
               } else {
-                L3: {
-                  L4: {
-                    L5: {
-                      var8 = param3.charAt(param2 + var7);
+                L2: {
+                  L3: {
+                    L4: {
+                      var8 = param3.charAt(var7);
                       if (var8 <= 0) {
-                        break L5;
+                        break L4;
                       } else {
                         if (var8 < 128) {
-                          break L4;
+                          break L3;
                         } else {
-                          break L5;
+                          break L4;
                         }
                       }
                     }
-                    L6: {
+                    L5: {
                       if (var8 < 160) {
-                        break L6;
+                        break L5;
                       } else {
                         if (255 < var8) {
-                          break L6;
+                          break L5;
                         } else {
-                          break L4;
+                          break L3;
                         }
                       }
                     }
                     if (var8 == 8364) {
                       param1[param4 - -var7] = (byte) -128;
-                      break L3;
+                      break L2;
                     } else {
                       if (var8 == 8218) {
                         param1[param4 - -var7] = (byte) -126;
-                        break L3;
+                        break L2;
                       } else {
                         if (var8 != 402) {
                           if (var8 == 8222) {
                             param1[var7 + param4] = (byte) -124;
-                            break L3;
+                            break L2;
                           } else {
                             if (var8 != 8230) {
                               if (var8 == 8224) {
                                 param1[var7 + param4] = (byte) -122;
-                                break L3;
+                                break L2;
                               } else {
                                 if (var8 != 8225) {
                                   if (710 != var8) {
@@ -266,31 +245,31 @@ final class pg extends wl {
                                           if (338 != var8) {
                                             if (var8 == 381) {
                                               param1[param4 - -var7] = (byte) -114;
-                                              break L3;
+                                              break L2;
                                             } else {
                                               if (var8 != 8216) {
                                                 if (var8 == 8217) {
                                                   param1[param4 - -var7] = (byte) -110;
-                                                  break L3;
+                                                  break L2;
                                                 } else {
                                                   if (8220 == var8) {
                                                     param1[param4 + var7] = (byte) -109;
-                                                    break L3;
+                                                    break L2;
                                                   } else {
                                                     if (var8 != 8221) {
                                                       if (8226 == var8) {
                                                         param1[var7 + param4] = (byte) -107;
-                                                        break L3;
+                                                        break L2;
                                                       } else {
                                                         if (var8 == 8211) {
                                                           param1[var7 + param4] = (byte) -106;
-                                                          break L3;
+                                                          break L2;
                                                         } else {
                                                           if (8212 != var8) {
                                                             if (var8 != 732) {
                                                               if (8482 == var8) {
                                                                 param1[param4 + var7] = (byte) -103;
-                                                                break L3;
+                                                                break L2;
                                                               } else {
                                                                 if (var8 != 353) {
                                                                   if (var8 != 8250) {
@@ -298,88 +277,88 @@ final class pg extends wl {
                                                                       if (382 != var8) {
                                                                         if (var8 == 376) {
                                                                           param1[param4 + var7] = (byte) -97;
-                                                                          break L3;
+                                                                          break L2;
                                                                         } else {
                                                                           param1[var7 + param4] = (byte) 63;
-                                                                          break L3;
+                                                                          break L2;
                                                                         }
                                                                       } else {
                                                                         param1[var7 + param4] = (byte) -98;
-                                                                        break L3;
+                                                                        break L2;
                                                                       }
                                                                     } else {
                                                                       param1[param4 + var7] = (byte) -100;
-                                                                      break L3;
+                                                                      break L2;
                                                                     }
                                                                   } else {
                                                                     param1[param4 + var7] = (byte) -101;
-                                                                    break L3;
+                                                                    break L2;
                                                                   }
                                                                 } else {
                                                                   param1[var7 + param4] = (byte) -102;
-                                                                  break L3;
+                                                                  break L2;
                                                                 }
                                                               }
                                                             } else {
                                                               param1[param4 - -var7] = (byte) -104;
-                                                              break L3;
+                                                              break L2;
                                                             }
                                                           } else {
                                                             param1[var7 + param4] = (byte) -105;
-                                                            break L3;
+                                                            break L2;
                                                           }
                                                         }
                                                       }
                                                     } else {
                                                       param1[var7 + param4] = (byte) -108;
-                                                      break L3;
+                                                      break L2;
                                                     }
                                                   }
                                                 }
                                               } else {
                                                 param1[var7 + param4] = (byte) -111;
-                                                break L3;
+                                                break L2;
                                               }
                                             }
                                           } else {
                                             param1[var7 + param4] = (byte) -116;
-                                            break L3;
+                                            break L2;
                                           }
                                         } else {
                                           param1[param4 - -var7] = (byte) -117;
-                                          break L3;
+                                          break L2;
                                         }
                                       } else {
                                         param1[param4 - -var7] = (byte) -118;
-                                        break L3;
+                                        break L2;
                                       }
                                     } else {
                                       param1[param4 + var7] = (byte) -119;
-                                      break L3;
+                                      break L2;
                                     }
                                   } else {
                                     param1[var7 + param4] = (byte) -120;
-                                    break L3;
+                                    break L2;
                                   }
                                 } else {
                                   param1[var7 + param4] = (byte) -121;
-                                  break L3;
+                                  break L2;
                                 }
                               }
                             } else {
                               param1[var7 + param4] = (byte) -123;
-                              break L3;
+                              break L2;
                             }
                           }
                         } else {
                           param1[param4 + var7] = (byte) -125;
-                          break L3;
+                          break L2;
                         }
                       }
                     }
                   }
                   param1[var7 + param4] = (byte)var8;
-                  break L3;
+                  break L2;
                 }
                 var7++;
                 continue L1;
@@ -388,10 +367,10 @@ final class pg extends wl {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L6: {
             var6 = decompiledCaughtException;
             stackOut_70_0 = (RuntimeException) var6;
-            stackOut_70_1 = new StringBuilder().append("pg.G(").append(param0).append(44);
+            stackOut_70_1 = new StringBuilder().append("pg.G(").append(8220).append(44);
             stackIn_72_0 = stackOut_70_0;
             stackIn_72_1 = stackOut_70_1;
             stackIn_71_0 = stackOut_70_0;
@@ -403,7 +382,7 @@ final class pg extends wl {
               stackIn_73_0 = stackOut_72_0;
               stackIn_73_1 = stackOut_72_1;
               stackIn_73_2 = stackOut_72_2;
-              break L7;
+              break L6;
             } else {
               stackOut_71_0 = (RuntimeException) (Object) stackIn_71_0;
               stackOut_71_1 = (StringBuilder) (Object) stackIn_71_1;
@@ -411,12 +390,12 @@ final class pg extends wl {
               stackIn_73_0 = stackOut_71_0;
               stackIn_73_1 = stackOut_71_1;
               stackIn_73_2 = stackOut_71_2;
-              break L7;
+              break L6;
             }
           }
-          L8: {
+          L7: {
             stackOut_73_0 = (RuntimeException) (Object) stackIn_73_0;
-            stackOut_73_1 = ((StringBuilder) (Object) stackIn_73_1).append(stackIn_73_2).append(44).append(param2).append(44);
+            stackOut_73_1 = ((StringBuilder) (Object) stackIn_73_1).append(stackIn_73_2).append(44).append(0).append(44);
             stackIn_75_0 = stackOut_73_0;
             stackIn_75_1 = stackOut_73_1;
             stackIn_74_0 = stackOut_73_0;
@@ -428,7 +407,7 @@ final class pg extends wl {
               stackIn_76_0 = stackOut_75_0;
               stackIn_76_1 = stackOut_75_1;
               stackIn_76_2 = stackOut_75_2;
-              break L8;
+              break L7;
             } else {
               stackOut_74_0 = (RuntimeException) (Object) stackIn_74_0;
               stackOut_74_1 = (StringBuilder) (Object) stackIn_74_1;
@@ -436,7 +415,7 @@ final class pg extends wl {
               stackIn_76_0 = stackOut_74_0;
               stackIn_76_1 = stackOut_74_1;
               stackIn_76_2 = stackOut_74_2;
-              break L8;
+              break L7;
             }
           }
           throw bd.a((Throwable) (Object) stackIn_76_0, stackIn_76_2 + 44 + param4 + 44 + param5 + 41);
@@ -449,7 +428,7 @@ final class pg extends wl {
         mh.field_ob = null;
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_r = null;
     }
 
@@ -457,9 +436,6 @@ final class pg extends wl {
         mg var5 = null;
         int var4 = 0;
         try {
-            if (!param1) {
-                pg.a(122L, 90);
-            }
             var5 = n.field_b;
             var5.c((byte) 92, param0);
             var5.field_m = var5.field_m + 1;
@@ -474,14 +450,11 @@ final class pg extends wl {
             int discarded$0 = var5.e(var4, -1182887024);
             var5.a(-var4 + var5.field_m, -117);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "pg.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "pg.A(" + param0 + 44 + 1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static void a(byte param0) {
-        if (param0 != -97) {
-            field_q = false;
-        }
+    final static void a() {
         td.field_f.c((ub) (Object) new ki(), -123);
     }
 

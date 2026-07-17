@@ -117,7 +117,7 @@ final class nd {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         sc.field_h = rk.field_e;
         h.field_T = 10 + sc.field_h.c(we.field_o[20]);
         int var1 = sc.field_h.c(we.field_o[21]);

@@ -13,62 +13,31 @@ final class wl {
     final static void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7) {
         int var9 = 0;
         var9 = HoldTheLine.field_D;
-        if (param2 != 102) {
-          field_a = null;
-          if (param0 >= param7) {
-            if (param5 <= param0) {
-              if (param7 >= param5) {
-                qe.a(param6, param5, param0, param3, tc.field_b, false, param4, param7, param1);
-                return;
-              } else {
-                qe.a(param4, param7, param0, param3, tc.field_b, false, param6, param5, param1);
-                return;
-              }
+        if (param0 >= param7) {
+          if (param5 <= param0) {
+            if (param7 >= param5) {
+              qe.a(param6, param5, param0, param3, tc.field_b, false, param4, param7, param1);
+              return;
             } else {
-              qe.a(param3, param7, param5, param4, tc.field_b, false, param6, param0, param1);
+              qe.a(param4, param7, param0, param3, tc.field_b, false, param6, param5, param1);
               return;
             }
           } else {
-            if (param7 >= param5) {
-              if (param0 < param5) {
-                qe.a(param4, param0, param7, param6, tc.field_b, false, param3, param5, param1);
-                return;
-              } else {
-                qe.a(param3, param5, param7, param6, tc.field_b, false, param4, param0, param1);
-                return;
-              }
-            } else {
-              qe.a(param6, param0, param5, param4, tc.field_b, false, param3, param7, param1);
-              return;
-            }
+            qe.a(param3, param7, param5, param4, tc.field_b, false, param6, param0, param1);
+            return;
           }
         } else {
-          if (param0 >= param7) {
-            if (param5 <= param0) {
-              if (param7 >= param5) {
-                qe.a(param6, param5, param0, param3, tc.field_b, false, param4, param7, param1);
-                return;
-              } else {
-                qe.a(param4, param7, param0, param3, tc.field_b, false, param6, param5, param1);
-                return;
-              }
+          if (param7 >= param5) {
+            if (param0 < param5) {
+              qe.a(param4, param0, param7, param6, tc.field_b, false, param3, param5, param1);
+              return;
             } else {
-              qe.a(param3, param7, param5, param4, tc.field_b, false, param6, param0, param1);
+              qe.a(param3, param5, param7, param6, tc.field_b, false, param4, param0, param1);
               return;
             }
           } else {
-            if (param7 >= param5) {
-              if (param0 < param5) {
-                qe.a(param4, param0, param7, param6, tc.field_b, false, param3, param5, param1);
-                return;
-              } else {
-                qe.a(param3, param5, param7, param6, tc.field_b, false, param4, param0, param1);
-                return;
-              }
-            } else {
-              qe.a(param6, param0, param5, param4, tc.field_b, false, param3, param7, param1);
-              return;
-            }
+            qe.a(param6, param0, param5, param4, tc.field_b, false, param3, param7, param1);
+            return;
           }
         }
     }
@@ -204,7 +173,7 @@ final class wl {
         return stackIn_30_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_e = null;
         field_b = null;

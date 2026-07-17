@@ -21,7 +21,7 @@ final class nf {
     private int field_c;
     private int field_n;
 
-    final static void a(byte param0) {
+    final static void a() {
         al.field_g = new vna();
     }
 

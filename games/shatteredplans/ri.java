@@ -36,7 +36,7 @@ final class ri extends f implements od, bp {
         }
     }
 
-    final static void k(int param0) {
+    final static void k() {
         int var2 = 0;
         L0: {
           var2 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -211,7 +211,8 @@ final class ri extends f implements od, bp {
             var5_int = param2.a(126, param1);
             var6 = param2.a(var5_int, (byte) 106, param0);
             var7 = 72 % ((38 - param4) / 49);
-            stackOut_0_0 = mf.a(var6, var5_int, param2, param3, -121);
+            int discarded$2 = -121;
+            stackOut_0_0 = mf.a(var6, var5_int, param2, param3);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -972,7 +973,8 @@ final class ri extends f implements od, bp {
                         ol.b((byte) -125);
                         break L1;
                       } else {
-                        qc.h(30252);
+                        int discarded$305 = 30252;
+                        qc.h();
                         break L1;
                       }
                     }

@@ -11,7 +11,7 @@ final class ag implements Iterator {
     static nf field_e;
     private ak field_b;
 
-    public static void b(int param0) {
+    public static void b() {
         field_e = null;
         field_c = null;
     }

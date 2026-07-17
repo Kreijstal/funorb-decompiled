@@ -28,7 +28,8 @@ class ln extends hl {
         int var4 = 0;
         e[] var5 = null;
         var4 = HoldTheLine.field_D;
-        var5 = wg.a(4);
+        int discarded$2 = 4;
+        var5 = wg.a();
         var2 = var5;
         var3 = 0;
         L0: while (true) {
@@ -134,18 +135,19 @@ class ln extends hl {
               if (param0 >= 92) {
                 break L1;
               } else {
-                float discarded$17 = ln.a(11, -0.14343492686748505f);
+                float discarded$21 = ln.a(11, -0.14343492686748505f);
                 break L1;
               }
             }
-            if (ii.a((byte) -118)) {
-              boolean discarded$18 = r.field_a.a(ab.field_lb, di.field_r, true, false);
+            int discarded$22 = -118;
+            if (ii.a()) {
+              boolean discarded$23 = r.field_a.a(ab.field_lb, di.field_r, true, false);
               r.field_a.g((byte) -59);
               L2: while (true) {
                 if (!qh.c(-44)) {
                   break L0;
                 } else {
-                  boolean discarded$19 = r.field_a.a(aa.field_n, pk.field_M, (byte) 117);
+                  boolean discarded$24 = r.field_a.a(aa.field_n, pk.field_M, (byte) 117);
                   continue L2;
                 }
               }

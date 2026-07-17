@@ -212,7 +212,7 @@ abstract class ub {
         return stackIn_16_0;
     }
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         return null != lj.field_a && tb.field_f == ik.field_e;
     }
 

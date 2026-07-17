@@ -8,7 +8,7 @@ final class te extends ma {
     static dd field_n;
     static short[] field_m;
 
-    public static void c(byte param0) {
+    public static void c() {
         field_p = null;
         field_o = null;
         field_m = null;
@@ -23,33 +23,26 @@ final class te extends ma {
         }
     }
 
-    final static void b(int param0, int param1) {
+    final static void b() {
         oq var2 = ej.field_j;
-        var2.b(false, param0);
+        var2.b(false, 11);
         var2.a(1, false);
         var2.a(1, false);
     }
 
     final static void a(byte param0, int param1, int param2) {
         gg.field_g = param1;
-        if (param0 > -21) {
-            return;
-        }
         ci.field_i = param2;
     }
 
     final static int a(int param0, int param1) {
         param1--;
-        if (param0 != -17931) {
-          return -27;
-        } else {
-          param1 = param1 | param1 >>> 1;
-          param1 = param1 | param1 >>> 2;
-          param1 = param1 | param1 >>> 4;
-          param1 = param1 | param1 >>> 8;
-          param1 = param1 | param1 >>> 16;
-          return 1 + param1;
-        }
+        param1 = param1 | param1 >>> 1;
+        param1 = param1 | param1 >>> 2;
+        param1 = param1 | param1 >>> 4;
+        param1 = param1 | param1 >>> 8;
+        param1 = param1 | param1 >>> 16;
+        return 1 + param1;
     }
 
     static {

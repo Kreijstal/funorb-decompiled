@@ -262,21 +262,11 @@ final class wi extends dl {
         }
     }
 
-    public static void b(byte param0) {
-        if (param0 != -54) {
-          field_h = null;
-          field_i = null;
-          field_j = null;
-          field_h = null;
-          field_n = null;
-          return;
-        } else {
-          field_i = null;
-          field_j = null;
-          field_h = null;
-          field_n = null;
-          return;
-        }
+    public static void b() {
+        field_i = null;
+        field_j = null;
+        field_h = null;
+        field_n = null;
     }
 
     private final java.net.Socket a(int param0, int param1, String param2, String param3) throws IOException {
@@ -291,41 +281,41 @@ final class wi extends dl {
         java.net.Socket var13 = null;
         String var14 = null;
         String var15 = null;
-        java.net.Socket stackIn_11_0 = null;
-        Object stackIn_25_0 = null;
+        java.net.Socket stackIn_9_0 = null;
+        Object stackIn_23_0 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
+        String stackIn_27_2 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
-        String stackIn_29_2 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
-        String stackIn_32_2 = null;
+        String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
-        java.net.Socket stackOut_10_0 = null;
-        Object stackOut_24_0 = null;
+        java.net.Socket stackOut_8_0 = null;
+        Object stackOut_22_0 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
         RuntimeException stackOut_26_0 = null;
         StringBuilder stackOut_26_1 = null;
+        String stackOut_26_2 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        String stackOut_25_2 = null;
+        RuntimeException stackOut_27_0 = null;
+        StringBuilder stackOut_27_1 = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        String stackOut_29_2 = null;
         RuntimeException stackOut_28_0 = null;
         StringBuilder stackOut_28_1 = null;
         String stackOut_28_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
         var12 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
@@ -347,30 +337,22 @@ final class wi extends dl {
               var14 = var7.readLine();
               var8 = var14;
               var8 = var14;
-              if (param0 < -61) {
-                break L2;
-              } else {
-                int discarded$1 = wi.a((byte) -52, 76);
-                break L2;
-              }
-            }
-            L3: {
               if (var14 == null) {
-                break L3;
+                break L2;
               } else {
-                L4: {
+                L3: {
                   if (var14.startsWith("HTTP/1.0 200")) {
-                    break L4;
+                    break L3;
                   } else {
                     if (!var14.startsWith("HTTP/1.1 200")) {
-                      L5: {
+                      L4: {
                         if (var14.startsWith("HTTP/1.0 407")) {
-                          break L5;
+                          break L4;
                         } else {
                           if (!var14.startsWith("HTTP/1.1 407")) {
-                            break L3;
+                            break L2;
                           } else {
-                            break L5;
+                            break L4;
                           }
                         }
                       }
@@ -379,29 +361,29 @@ final class wi extends dl {
                       var8 = var10;
                       var8 = var10;
                       var8 = var7.readLine();
-                      L6: while (true) {
-                        L7: {
+                      L5: while (true) {
+                        L6: {
                           if (var8 == null) {
-                            break L7;
+                            break L6;
                           } else {
                             if (var9 >= 50) {
-                              break L7;
+                              break L6;
                             } else {
                               if (!var8.toLowerCase().startsWith(var10)) {
                                 var9++;
                                 var8 = var7.readLine();
-                                continue L6;
+                                continue L5;
                               } else {
-                                L8: {
+                                L7: {
                                   var15 = var8.substring(var10.length()).trim();
                                   var8 = var15;
                                   var8 = var15;
                                   var11 = var15.indexOf(' ');
                                   if (var11 == -1) {
-                                    break L8;
+                                    break L7;
                                   } else {
                                     var8 = var15.substring(0, var11);
-                                    break L8;
+                                    break L7;
                                   }
                                 }
                                 throw new ef(var8);
@@ -412,100 +394,87 @@ final class wi extends dl {
                         throw new ef("");
                       }
                     } else {
-                      break L4;
+                      break L3;
                     }
                   }
                 }
-                stackOut_10_0 = (java.net.Socket) var13;
-                stackIn_11_0 = stackOut_10_0;
-                return stackIn_11_0;
+                stackOut_8_0 = (java.net.Socket) var13;
+                stackIn_9_0 = stackOut_8_0;
+                return stackIn_9_0;
               }
             }
             var6.close();
             var7.close();
             var13.close();
-            stackOut_24_0 = null;
-            stackIn_25_0 = stackOut_24_0;
+            stackOut_22_0 = null;
+            stackIn_23_0 = stackOut_22_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L8: {
             var5 = decompiledCaughtException;
-            stackOut_26_0 = (RuntimeException) var5;
-            stackOut_26_1 = new StringBuilder().append("wi.F(").append(param0).append(44).append(param1).append(44);
-            stackIn_28_0 = stackOut_26_0;
-            stackIn_28_1 = stackOut_26_1;
-            stackIn_27_0 = stackOut_26_0;
-            stackIn_27_1 = stackOut_26_1;
+            stackOut_24_0 = (RuntimeException) var5;
+            stackOut_24_1 = new StringBuilder().append("wi.F(").append(-83).append(44).append(param1).append(44);
+            stackIn_26_0 = stackOut_24_0;
+            stackIn_26_1 = stackOut_24_1;
+            stackIn_25_0 = stackOut_24_0;
+            stackIn_25_1 = stackOut_24_1;
             if (param2 == null) {
+              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
+              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_2 = "null";
+              stackIn_27_0 = stackOut_26_0;
+              stackIn_27_1 = stackOut_26_1;
+              stackIn_27_2 = stackOut_26_2;
+              break L8;
+            } else {
+              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_2 = "{...}";
+              stackIn_27_0 = stackOut_25_0;
+              stackIn_27_1 = stackOut_25_1;
+              stackIn_27_2 = stackOut_25_2;
+              break L8;
+            }
+          }
+          L9: {
+            stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
+            stackOut_27_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(44);
+            stackIn_29_0 = stackOut_27_0;
+            stackIn_29_1 = stackOut_27_1;
+            stackIn_28_0 = stackOut_27_0;
+            stackIn_28_1 = stackOut_27_1;
+            if (param3 == null) {
+              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
+              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_2 = "null";
+              stackIn_30_0 = stackOut_29_0;
+              stackIn_30_1 = stackOut_29_1;
+              stackIn_30_2 = stackOut_29_2;
+              break L9;
+            } else {
               stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
               stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
-              stackOut_28_2 = "null";
-              stackIn_29_0 = stackOut_28_0;
-              stackIn_29_1 = stackOut_28_1;
-              stackIn_29_2 = stackOut_28_2;
-              break L9;
-            } else {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
-              stackOut_27_2 = "{...}";
-              stackIn_29_0 = stackOut_27_0;
-              stackIn_29_1 = stackOut_27_1;
-              stackIn_29_2 = stackOut_27_2;
+              stackOut_28_2 = "{...}";
+              stackIn_30_0 = stackOut_28_0;
+              stackIn_30_1 = stackOut_28_1;
+              stackIn_30_2 = stackOut_28_2;
               break L9;
             }
           }
-          L10: {
-            stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-            stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(44);
-            stackIn_31_0 = stackOut_29_0;
-            stackIn_31_1 = stackOut_29_1;
-            stackIn_30_0 = stackOut_29_0;
-            stackIn_30_1 = stackOut_29_1;
-            if (param3 == null) {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
-              stackOut_31_2 = "null";
-              stackIn_32_0 = stackOut_31_0;
-              stackIn_32_1 = stackOut_31_1;
-              stackIn_32_2 = stackOut_31_2;
-              break L10;
-            } else {
-              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
-              stackOut_30_2 = "{...}";
-              stackIn_32_0 = stackOut_30_0;
-              stackIn_32_1 = stackOut_30_1;
-              stackIn_32_2 = stackOut_30_2;
-              break L10;
-            }
-          }
-          throw qb.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 41);
+          throw qb.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 41);
         }
-        return (java.net.Socket) (Object) stackIn_25_0;
+        return (java.net.Socket) (Object) stackIn_23_0;
     }
 
     final static int a(byte param0, int param1) {
         int var2 = 0;
-        int var3 = 0;
-        L0: {
-          var2 = 0;
-          if ((param1 & 7) != 0) {
+        if (!((param1 & 7) == 0)) {
             var2 = -(param1 & 7) + 8;
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        if (param0 > -71) {
-          wi.b((byte) -125);
-          var3 = var2 + param1;
-          return var3;
-        } else {
-          var3 = var2 + param1;
-          return var3;
-        }
+        int var3 = var2 + param1;
+        return var3;
     }
 
     private final java.net.Socket a(int param0, java.net.Proxy param1) throws IOException {
@@ -658,7 +627,7 @@ final class wi extends dl {
         ((wi) this).field_l = java.net.ProxySelector.getDefault();
     }
 
-    final static int c(int param0) {
+    final static int c() {
         return ge.field_w;
     }
 

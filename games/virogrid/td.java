@@ -28,7 +28,7 @@ final class td {
         }
     }
 
-    final static void a(int param0, java.awt.Canvas param1, int param2, int param3) {
+    final static void a(int param0, java.awt.Canvas param1) {
         java.awt.Graphics var4 = null;
         Exception var4_ref = null;
         RuntimeException var4_ref2 = null;
@@ -51,13 +51,9 @@ final class td {
         try {
           try {
             var4 = param1.getGraphics();
-            ca.field_M.a((byte) 120, param2, var4, param3);
-            if (param0 == -30179) {
-              var4.dispose();
-              return;
-            } else {
-              return;
-            }
+            ca.field_M.a((byte) 120, 0, var4, 0);
+            var4.dispose();
+            return;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var4_ref = (Exception) (Object) decompiledCaughtException;
@@ -69,7 +65,7 @@ final class td {
           L0: {
             var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var4_ref2;
-            stackOut_6_1 = new StringBuilder().append("td.B(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("td.B(").append(-30179).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -92,11 +88,11 @@ final class td {
               break L0;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param2 + 44 + param3 + 41);
+          throw kg.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 0 + 44 + 0 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_i = null;
         field_b = null;
         field_e = null;
@@ -131,13 +127,14 @@ final class td {
         String stackOut_8_2 = null;
         try {
           L0: {
-            if (hn.a(param3, param2, param0, (byte) 109)) {
+            int discarded$9 = 109;
+            if (hn.a(param3, param2, param0)) {
               L1: {
                 if (param1 == 6887) {
                   break L1;
                 } else {
                   var5 = null;
-                  mg[] discarded$2 = td.a(37, -9, -75, (eh) null);
+                  mg[] discarded$10 = td.a(37, -9, -75, (eh) null);
                   break L1;
                 }
               }

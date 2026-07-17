@@ -5,7 +5,7 @@ final class rn {
     static lg field_b;
     static String field_a;
 
-    final static void a(byte[] param0, int param1) {
+    final static void a(byte[] param0) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -70,7 +70,7 @@ final class rn {
             var16 = new de(param0);
             var17 = var16;
             var17.field_j = -2 + param0.length;
-            t.field_h = var17.f(param1 + 2);
+            t.field_h = var17.f(2);
             bn.field_c = new int[t.field_h];
             uf.field_n = new int[t.field_h];
             sl.field_d = new int[t.field_h];
@@ -91,7 +91,7 @@ final class rn {
                     var4 = 0;
                     L3: while (true) {
                       if (var4 >= t.field_h) {
-                        var4 = param1;
+                        var4 = 0;
                         L4: while (true) {
                           if (t.field_h <= var4) {
                             var17.field_j = -(t.field_h * 8) + -7 + param0.length - (var3 + -1) * 3;
@@ -303,11 +303,11 @@ final class rn {
               break L17;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_54_0, stackIn_54_2 + 44 + param1 + 41);
+          throw sh.a((Throwable) (Object) stackIn_54_0, stackIn_54_2 + 44 + 0 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }

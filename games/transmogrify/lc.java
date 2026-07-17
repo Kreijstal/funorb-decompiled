@@ -363,7 +363,7 @@ final class lc extends ag {
         int var8 = 0;
         int var9 = 0;
         var9 = Transmogrify.field_A ? 1 : 0;
-        var3 = -117 % ((param0 - -62) / 44);
+        var3 = 0;
         var4 = 240 & param1;
         if (var4 == 128) {
           var5 = param1 & 15;
@@ -691,11 +691,11 @@ final class lc extends ag {
         }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_L = null;
     }
 
-    private final int a(kc param0, int param1) {
+    private final int a(kc param0) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
@@ -797,30 +797,36 @@ final class lc extends ag {
                     var11.c(5);
                     break L1;
                   } else {
-                    pc.a(1);
+                    int discarded$7 = 1;
+                    pc.a();
                     return;
                   }
                 } else {
                   if (var2 == 2) {
                     var15 = (oh) (Object) oc.field_G.a((byte) -95);
                     if (var15 != null) {
-                      var15.field_g = rf.c(false);
+                      int discarded$8 = 0;
+                      var15.field_g = rf.c();
                       var15.field_k = var15.field_g[0];
                       var15.field_i = true;
                       var15.c(5);
                       break L1;
                     } else {
-                      pc.a(1);
+                      int discarded$9 = 1;
+                      pc.a();
                       return;
                     }
                   } else {
-                    d.a((Throwable) null, 63, "A1: " + ik.q(48));
-                    pc.a(1);
+                    int discarded$10 = 48;
+                    d.a((Throwable) null, 63, "A1: " + ik.q());
+                    int discarded$11 = 1;
+                    pc.a();
                     break L1;
                   }
                 }
               } else {
-                var10 = rf.c(false);
+                int discarded$12 = 0;
+                var10 = rf.c();
                 var18 = var10;
                 var17 = var18;
                 var16 = var17;
@@ -835,7 +841,8 @@ final class lc extends ag {
                   if (var6 <= var7) {
                     var14 = (oh) (Object) oc.field_G.a((byte) -95);
                     if (var14 == null) {
-                      pc.a(1);
+                      int discarded$13 = 1;
+                      pc.a();
                       return;
                     } else {
                       var14.field_i = true;
@@ -868,10 +875,6 @@ final class lc extends ag {
     private final void a(int param0, boolean param1, int param2) {
         ((lc) this).field_t[param0] = param2;
         ((lc) this).field_D[param0] = (int)(2097152.0 * Math.pow(2.0, 0.00054931640625 * (double)param2) + 0.5);
-        if (param1) {
-            Object var5 = null;
-            boolean discarded$0 = ((lc) this).a(101, (kc) null);
-        }
     }
 
     private final void c(int param0, int param1) {
@@ -941,9 +944,6 @@ final class lc extends ag {
     }
 
     private final void a(int param0, int param1, int param2, int param3) {
-        if (param0 != 8373600) {
-            this.a((byte) 42, false);
-        }
     }
 
     private final void b(int param0, byte param1) {
@@ -1015,9 +1015,7 @@ final class lc extends ag {
         for (var3 = 0; var3 < 16; var3++) {
             ((lc) this).field_H[var3] = ((lc) this).field_G[var3];
         }
-        if (param0) {
-            this.e(-49, -104, 66);
-        }
+        this.e(-49, -104, 66);
         int var5 = 0;
         var3 = var5;
         while (var5 < 16) {
@@ -1162,12 +1160,9 @@ final class lc extends ag {
     }
 
     private final void e(int param0, int param1, int param2) {
-        if (param1 != 872) {
-            ((lc) this).field_N = null;
-        }
     }
 
-    private final int b(kc param0, byte param1) {
+    private final int b(kc param0) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -1316,41 +1311,33 @@ final class lc extends ag {
         int var4 = 0;
         L0: {
           var4 = Transmogrify.field_A ? 1 : 0;
-          if (param0 == -60) {
-            break L0;
-          } else {
-            ((lc) this).field_F = null;
-            break L0;
-          }
-        }
-        L1: {
           if (0 == (((lc) this).field_v[param1] & 2)) {
-            break L1;
+            break L0;
           } else {
             var3 = (kc) (Object) ((lc) this).field_m.field_q.a((byte) -95);
-            L2: while (true) {
+            L1: while (true) {
               if (var3 == null) {
-                break L1;
+                break L0;
               } else {
-                L3: {
+                L2: {
                   if (param1 != var3.field_u) {
-                    break L3;
+                    break L2;
                   } else {
                     if (null == ((lc) this).field_u[param1][var3.field_i]) {
                       if (var3.field_p >= 0) {
-                        break L3;
+                        break L2;
                       } else {
                         var3.field_p = 0;
-                        break L3;
+                        break L2;
                       }
                     } else {
                       var3 = (kc) (Object) ((lc) this).field_m.field_q.a(true);
-                      continue L2;
+                      continue L1;
                     }
                   }
                 }
                 var3 = (kc) (Object) ((lc) this).field_m.field_q.a(true);
-                continue L2;
+                continue L1;
               }
             }
           }
@@ -1365,7 +1352,7 @@ final class lc extends ag {
             return;
         }
         ((lc) this).field_u[param3][param2] = null;
-        if (param0 == (((lc) this).field_v[param3] & 2)) {
+        if (0 == (((lc) this).field_v[param3] & 2)) {
             var8.field_p = 0;
         } else {
             var6 = (kc) (Object) ((lc) this).field_m.field_q.a((byte) -95);
@@ -1919,11 +1906,14 @@ final class lc extends ag {
               var7.field_p = -1;
               var7.field_z = 0;
               if (((lc) this).field_P[param0] == 0) {
-                var7.field_y = bb.a(var6, this.a(var7, (byte) 106), this.b(var7, (byte) -77), this.a(var7, 1135851910));
+                int discarded$3 = -77;
+                int discarded$4 = 1135851910;
+                var7.field_y = bb.a(var6, this.a(var7, (byte) 106), this.b(var7), this.a(var7));
                 break L3;
               } else {
                 L4: {
-                  var7.field_y = bb.a(var6, this.a(var7, (byte) 123), 0, this.a(var7, 1135851910));
+                  int discarded$5 = 1135851910;
+                  var7.field_y = bb.a(var6, this.a(var7, (byte) 123), 0, this.a(var7));
                   stackOut_15_0 = this;
                   stackOut_15_1 = 0;
                   stackIn_17_0 = stackOut_15_0;
@@ -2222,7 +2212,9 @@ final class lc extends ag {
                 }
               }
               if (var8 == 0) {
-                param4.field_y.a(param4.field_r, this.b(param4, (byte) -77), this.a(param4, 1135851910));
+                int discarded$2 = -77;
+                int discarded$3 = 1135851910;
+                param4.field_y.a(param4.field_r, this.b(param4), this.a(param4));
                 stackOut_62_0 = 0;
                 stackIn_63_0 = stackOut_62_0;
                 break L0;

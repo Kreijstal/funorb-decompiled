@@ -8,7 +8,7 @@ final class cna extends llb {
     llb field_yb;
     static int[] field_zb;
 
-    public static void h(int param0) {
+    public static void h() {
         field_zb = null;
         field_xb = null;
         field_wb = null;
@@ -292,7 +292,7 @@ final class cna extends llb {
         int var6 = 0;
         int var7 = 0;
         L0: {
-          var5 = 60 % ((param0 - -53) / 39);
+          var5 = 0;
           var4 = -param2;
           var6 = -param2;
           if (null == ((cna) this).field_vb) {

@@ -114,7 +114,8 @@ final class dh extends kc {
             ((dh) this).field_Ob.a(var9_int, 5, 3 - -ga.field_r, ga.field_r, (byte) -120);
             var10 = 5 + (5 + var9_int);
             var11 = 3 + (3 + 2 * ga.field_r);
-            var12 = ih.a(param0, var10, param2, 246);
+            int discarded$1 = 246;
+            var12 = ih.a(param0, var10, param2);
             var13 = ql.a(10, param3, var11, param1);
             ((dh) this).a(var10, var12, var13, var11, (byte) -120);
             break L0;
@@ -290,7 +291,7 @@ final class dh extends kc {
         }
     }
 
-    final static void a(eg param0, byte param1) {
+    final static void a(eg param0) {
         Object var2 = null;
         int var3_int = 0;
         qb var3 = null;
@@ -531,14 +532,17 @@ final class dh extends kc {
                     if (((dh) this).field_Ib.length() <= 0) {
                       break L2;
                     } else {
-                      StringBuilder discarded$2 = qj.a(-1 + ((dh) this).field_Ib.length(), ((dh) this).field_Ib, ' ', false);
+                      int discarded$5 = 0;
+                      int discarded$6 = 32;
+                      StringBuilder discarded$7 = qj.a(-1 + ((dh) this).field_Ib.length(), ((dh) this).field_Ib);
                       break L2;
                     }
                   }
                 }
                 L3: {
                   L4: {
-                    if (bj.a(ed.field_Bb, (CharSequence) (Object) ((dh) this).field_Ib, (byte) -71)) {
+                    int discarded$8 = -71;
+                    if (bj.a(ed.field_Bb, (CharSequence) (Object) ((dh) this).field_Ib)) {
                       break L4;
                     } else {
                       L5: {
@@ -570,7 +574,7 @@ final class dh extends kc {
                       }
                     }
                   }
-                  StringBuilder discarded$3 = ((dh) this).field_Ib.append(ed.field_Bb);
+                  StringBuilder discarded$9 = ((dh) this).field_Ib.append(ed.field_Bb);
                   break L3;
                 }
                 if (vn.field_d != 84) {
@@ -1036,7 +1040,9 @@ final class dh extends kc {
               if (0 >= ((dh) this).field_Ib.length()) {
                 break L0;
               } else {
-                StringBuilder discarded$6 = qj.a(((dh) this).field_Ib.length() - 1, ((dh) this).field_Ib, ' ', false);
+                int discarded$10 = 0;
+                int discarded$11 = 32;
+                StringBuilder discarded$12 = qj.a(((dh) this).field_Ib.length() - 1, ((dh) this).field_Ib);
                 break L0;
               }
             }
@@ -1061,7 +1067,7 @@ final class dh extends kc {
                   if (((dh) this).field_Ib.length() <= 0) {
                     break L3;
                   } else {
-                    StringBuilder discarded$7 = ((dh) this).field_Ib.append(var2);
+                    StringBuilder discarded$13 = ((dh) this).field_Ib.append(var2);
                     break L3;
                   }
                 }
@@ -1077,7 +1083,7 @@ final class dh extends kc {
                   }
                 }
               }
-              StringBuilder discarded$8 = ((dh) this).field_Ib.append(var2);
+              StringBuilder discarded$14 = ((dh) this).field_Ib.append(var2);
               break L1;
             }
           }
@@ -1114,10 +1120,6 @@ final class dh extends kc {
     }
 
     final static int a(int param0, boolean param1, int param2) {
-        if (!param1) {
-            Object var4 = null;
-            dh.a((int[]) null, 52, -9);
-        }
         int var3 = -1 + param2 & param0 >> 31;
         return var3 + (param0 + (param0 >>> 31)) % param2;
     }

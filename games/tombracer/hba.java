@@ -6,36 +6,22 @@ final class hba {
     static ena field_c;
     static float[] field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
     }
 
     final static void a(int param0, long param1, byte param2, int param3) {
-        nra var5 = null;
-        if (null == ql.field_k) {
-          return;
-        } else {
-          var5 = new nra();
-          if (param2 < 1) {
-            field_a = null;
-            var5.a(-7, param1);
-            var5.a(param3, -71);
-            var5.b(40, param0);
-            var5.a(qa.field_b, bh.field_o, nta.field_h, cka.field_Z, -113);
-            var5.a(et.field_j, nb.field_c, false, lra.field_f, cfa.field_b);
-            hw.a((byte) -111, 1, 74, (bo) (Object) var5);
+        if (!(null != ql.field_k)) {
             return;
-          } else {
-            var5.a(-7, param1);
-            var5.a(param3, -71);
-            var5.b(40, param0);
-            var5.a(qa.field_b, bh.field_o, nta.field_h, cka.field_Z, -113);
-            var5.a(et.field_j, nb.field_c, false, lra.field_f, cfa.field_b);
-            hw.a((byte) -111, 1, 74, (bo) (Object) var5);
-            return;
-          }
         }
+        nra var5 = new nra();
+        var5.a(-7, param1);
+        var5.a(param3, -71);
+        var5.b(40, param0);
+        var5.a(qa.field_b, bh.field_o, nta.field_h, cka.field_Z, -113);
+        var5.a(et.field_j, nb.field_c, false, lra.field_f, cfa.field_b);
+        hw.a((byte) -111, 1, 74, (bo) (Object) var5);
     }
 
     static {

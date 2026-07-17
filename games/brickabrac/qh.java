@@ -17,7 +17,7 @@ final class qh {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_j = null;
         field_e = null;
         field_c = null;

@@ -245,7 +245,7 @@ final class uj {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_h = null;
         field_g = null;
@@ -332,7 +332,7 @@ final class uj {
                         return;
                       } else {
                         var4 = param1.field_p;
-                        param1.b(param0, var17.field_q);
+                        param1.b(true, var17.field_q);
                         var5 = 0;
                         L2: while (true) {
                           if (~var17.field_B >= ~var5) {
@@ -534,7 +534,7 @@ final class uj {
               L24: {
                 var2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_62_0 = (RuntimeException) var2;
-                stackOut_62_1 = new StringBuilder().append("uj.C(").append(param0).append(44);
+                stackOut_62_1 = new StringBuilder().append("uj.C(").append(1).append(44);
                 stackIn_64_0 = stackOut_62_0;
                 stackIn_64_1 = stackOut_62_1;
                 stackIn_63_0 = stackOut_62_0;
@@ -566,7 +566,7 @@ final class uj {
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         if (vn.field_h != -vc.field_c) {
             if (250 + -vc.field_c != vn.field_h) {
             }

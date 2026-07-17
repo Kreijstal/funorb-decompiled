@@ -17,7 +17,7 @@ final class vg extends tc {
         return ik.field_d != null || iu.field_h;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_t = null;
         field_o = null;
         field_k = null;

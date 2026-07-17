@@ -122,7 +122,7 @@ final class ai implements Runnable {
         return null;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_h = null;
         field_b = null;
         field_j = null;
@@ -211,7 +211,8 @@ final class ai implements Runnable {
                       var3 = var4.getOutputStream();
                       var3.write(17);
                       var5 = (CharSequence) (Object) ("JAGGRAB " + ((ai) this).field_i.getFile() + "\n\n");
-                      var3.write(sn.a(var5, 83));
+                      int discarded$1 = 83;
+                      var3.write(sn.a(var5));
                       ((ai) this).field_e = new DataInputStream(var4.getInputStream());
                       break L7;
                     }
@@ -258,10 +259,6 @@ final class ai implements Runnable {
     final static boolean a(int param0, int param1) {
         if (!(-1 != param1)) {
             return true;
-        }
-        if (param0 != 100) {
-            Object var3 = null;
-            int discarded$0 = ai.a((rh) null, false, (String) null, 83, (rh) null, (byte) -124, -103);
         }
         return (1 << param1 & v.field_c) != 0 ? true : false;
     }
@@ -480,7 +477,9 @@ final class ai implements Runnable {
                       tp.field_f.a(true, 18);
                       tp.field_f.field_f = tp.field_f.field_f + 2;
                       var10 = tp.field_f.field_f;
-                      var11_ref_String = mf.a(le.b((byte) -20), -28697);
+                      int discarded$7 = -20;
+                      int discarded$8 = -28697;
+                      var11_ref_String = mf.a(le.b());
                       if (var11_ref_String == null) {
                         var11_ref_String = "";
                         break L6;
@@ -578,13 +577,15 @@ final class ai implements Runnable {
                       gj.field_k = kf.field_b;
                       break L9;
                     } else {
-                      boolean discarded$1 = fq.a(ui.b((byte) -123), (byte) 75);
+                      int discarded$9 = -123;
+                      boolean discarded$10 = fq.a(ui.b(), (byte) 75);
                       ja.field_f = new Boolean(hm.a((ng) (Object) kd.field_n, -2));
                       kd.field_n.field_f = 0;
                       break L9;
                     }
                   } else {
-                    cb.a(1148, le.b((byte) -20));
+                    int discarded$11 = -20;
+                    cb.a(1148, le.b());
                     re.field_j = bo.field_m;
                     jj.a(4);
                     ec.field_g = false;
@@ -639,7 +640,8 @@ final class ai implements Runnable {
                       if (var9_ref_String == null) {
                         break L14;
                       } else {
-                        ah.a(-72, var9_ref_String, le.b((byte) -20));
+                        int discarded$12 = -20;
+                        ah.a(-72, var9_ref_String, le.b());
                         break L14;
                       }
                     }
@@ -666,7 +668,8 @@ final class ai implements Runnable {
                   break L15;
                 } else {
                   L16: {
-                    if (30000L >= wd.d(-1322)) {
+                    int discarded$13 = -1322;
+                    if (30000L >= wd.d()) {
                       re.field_j = re.field_k;
                       break L16;
                     } else {

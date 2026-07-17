@@ -10,7 +10,7 @@ abstract class af {
     static String[] field_a;
     static int field_b;
 
-    final static String a(mo param0, byte param1) {
+    final static String a(mo param0) {
         Object var2 = null;
         Object var3 = null;
         String var3_ref = null;
@@ -173,7 +173,7 @@ abstract class af {
 
     abstract void a(vh param0, int param1);
 
-    public static void b(byte param0) {
+    public static void b() {
         field_a = null;
     }
 
@@ -252,7 +252,8 @@ abstract class af {
                     break L2;
                   }
                 }
-                wq.a(var4, false);
+                int discarded$2 = 0;
+                wq.a(var4);
                 var8 = dv.a(var4, -75, ":", "%3a");
                 var9 = dv.a(var8, -110, "@", "%40");
                 var10 = dv.a(var9, -68, "&", "%26");
@@ -309,7 +310,7 @@ abstract class af {
                     if (var5.field_g != 0) {
                       if (var5.field_g == 1) {
                         var6 = (DataInputStream) var5.field_f;
-                        int discarded$1 = var6.read();
+                        int discarded$3 = var6.read();
                         var6.close();
                         break L0;
                       } else {
@@ -338,14 +339,14 @@ abstract class af {
 
     abstract h a(byte param0);
 
-    final static void a(boolean param0, String param1, int param2) {
+    final static void a(boolean param0, String param1) {
         try {
             se.field_f = param0;
             ac.field_n = true;
             qc.field_a = new ro(rl.field_C, bv.field_t, param1, fh.field_i, se.field_f);
-            rl.field_C.a((kb) (Object) qc.field_a, param2 ^ param2);
+            rl.field_C.a((kb) (Object) qc.field_a, 0);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "af.K(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "af.K(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + -1 + 41);
         }
     }
 

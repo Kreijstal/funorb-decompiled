@@ -39,7 +39,7 @@ final class uj {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         if (null == ag.field_D) {
           ag.field_D = new String[46];
           ag.field_D[5] = gg.field_l;
@@ -105,7 +105,7 @@ final class uj {
         }
     }
 
-    final static short[] a(byte param0, short[] param1, pi param2, int param3) {
+    final static short[] a(byte param0, short[] param1, pi param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -153,7 +153,7 @@ final class uj {
         try {
           L0: {
             if (param0 < -53) {
-              var4_int = param2.c(param3, (byte) 61);
+              var4_int = param2.c(16, (byte) 61);
               if (var4_int != 0) {
                 L1: {
                   L2: {
@@ -264,7 +264,7 @@ final class uj {
               break L7;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + param3 + 41);
+          throw qb.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + 16 + 41);
         }
         return stackIn_19_0;
     }
@@ -502,7 +502,7 @@ final class uj {
         }
     }
 
-    final static byte[] a(CharSequence param0, boolean param1) {
+    final static byte[] a(CharSequence param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         byte[] var3 = null;

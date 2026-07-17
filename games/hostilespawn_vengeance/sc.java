@@ -126,7 +126,7 @@ final class sc implements Runnable {
 
     public static void a(int param0) {
         field_h = null;
-        int var1 = -6 / ((-27 - param0) / 46);
+        int var1 = -6;
         field_g = null;
         field_k = null;
         field_l = null;
@@ -267,7 +267,7 @@ final class sc implements Runnable {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         u.field_f = new String[34];
         u.field_f[4] = fh.field_e;
         u.field_f[16] = ch.field_d;
@@ -481,7 +481,8 @@ final class sc implements Runnable {
                                       break L10;
                                     } else {
                                       if (var9.field_I > 0) {
-                                        tk.a(8, jc.field_c, 1, true);
+                                        int discarded$1 = 1;
+                                        tk.a(8, jc.field_c, 1);
                                         break L10;
                                       } else {
                                         break L10;

@@ -14,14 +14,15 @@ final class bd {
     String field_a;
 
     final static void a(int param0) {
-        bn.c(0);
+        int discarded$3 = 0;
+        bn.c();
         vf.a((byte) -117, 4);
         if (param0 != 1849965346) {
             bd.b(51);
         }
     }
 
-    final static void a(kg param0, byte param1) {
+    final static void a(kg param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
@@ -87,7 +88,7 @@ final class bd {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_g = null;
         field_e = null;
         field_c = null;

@@ -6,7 +6,7 @@ final class ne {
     static jk field_b;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
     }

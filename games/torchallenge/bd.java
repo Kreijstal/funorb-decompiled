@@ -56,7 +56,8 @@ final class bd extends jl {
     final long c(int param0) {
         int var2 = 0;
         var2 = 24 / ((55 - param0) / 61);
-        ((bd) this).field_i = ((bd) this).field_i + this.f(122);
+        int discarded$2 = 122;
+        ((bd) this).field_i = ((bd) this).field_i + this.f();
         if (((bd) this).field_p > ((bd) this).field_i) {
           return (((bd) this).field_p - ((bd) this).field_i) / 1000000L;
         } else {
@@ -64,7 +65,7 @@ final class bd extends jl {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_k = null;
         field_j = null;
         field_n = null;
@@ -72,12 +73,12 @@ final class bd extends jl {
         field_m = null;
     }
 
-    final static void d(int param0) {
+    final static void d() {
         Object var2 = null;
         qa.a(121, (ej) null);
     }
 
-    private final long f(int param0) {
+    private final long f() {
         long var2 = 0L;
         long var4 = 0L;
         long var6 = 0L;
@@ -180,12 +181,13 @@ final class bd extends jl {
         }
     }
 
-    final static int e(int param0) {
+    final static int e() {
         wf.field_i.a((byte) -120);
         if (gb.field_d.b(-59)) {
             return 0;
         }
-        return df.c((byte) 35);
+        int discarded$0 = 35;
+        return df.c();
     }
 
     final void a(int param0) {

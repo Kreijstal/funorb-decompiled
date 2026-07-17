@@ -10,24 +10,13 @@ abstract class tl {
     static lc[] field_f;
     static String field_b;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
-        if (param0 >= -17) {
-          field_e = null;
-          field_a = null;
-          field_b = null;
-          field_e = null;
-          field_g = null;
-          field_f = null;
-          return;
-        } else {
-          field_a = null;
-          field_b = null;
-          field_e = null;
-          field_g = null;
-          field_f = null;
-          return;
-        }
+        field_a = null;
+        field_b = null;
+        field_e = null;
+        field_g = null;
+        field_f = null;
     }
 
     final static void e(byte param0) {
@@ -289,7 +278,7 @@ abstract class tl {
         }
     }
 
-    final static String b(byte param0) {
+    final static String b() {
         return vi.field_F;
     }
 

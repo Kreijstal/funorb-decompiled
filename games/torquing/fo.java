@@ -92,7 +92,7 @@ final class fo extends hn implements ng {
         }
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_E = null;
     }
 
@@ -115,12 +115,9 @@ final class fo extends hn implements ng {
         ((fo) this).field_J = param0;
     }
 
-    final static String i(int param0) {
+    final static String i() {
         if (!(bh.field_a != mg.field_b)) {
             return on.field_d;
-        }
-        if (param0 != 17543) {
-            field_E = null;
         }
         return vo.field_g;
     }

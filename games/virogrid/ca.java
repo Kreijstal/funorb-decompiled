@@ -71,7 +71,7 @@ final class ca extends fd implements bo, ta {
         }
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         field_L = null;
         field_Q = null;
         field_R = null;
@@ -638,10 +638,11 @@ final class ca extends fd implements bo, ta {
         }
     }
 
-    final static void a(String param0, byte param1) {
+    final static void a(String param0) {
         try {
             pi.a(param0, 0);
-            gk.a(false, bn.field_a, false);
+            int discarded$0 = 0;
+            gk.a(false, bn.field_a);
         } catch (RuntimeException runtimeException) {
             throw kg.a((Throwable) (Object) runtimeException, "ca.S(" + (param0 != null ? "{...}" : "null") + 44 + -124 + 41);
         }
@@ -949,44 +950,36 @@ final class ca extends fd implements bo, ta {
         return ((ca) this).field_E.field_n;
     }
 
-    final static int b(int param0, int param1, int param2) {
+    final static int b(int param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_7_0 = 0;
+        int stackIn_5_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
+        int stackOut_4_0 = 0;
         var4 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
-            L1: {
-              if (param2 == 13760) {
-                break L1;
-              } else {
-                field_L = null;
-                break L1;
-              }
-            }
             var3_int = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (param0 <= 0) {
-                stackOut_6_0 = var3_int;
-                stackIn_7_0 = stackOut_6_0;
+                stackOut_4_0 = var3_int;
+                stackIn_5_0 = stackOut_4_0;
                 break L0;
               } else {
                 var3_int = 1 & param1 | var3_int << 1;
                 param0--;
                 param1 = param1 >>> 1;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var3, "ca.M(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw kg.a((Throwable) (Object) var3, "ca.M(" + param0 + 44 + param1 + 44 + 13760 + 41);
         }
-        return stackIn_7_0;
+        return stackIn_5_0;
     }
 
     public final void a(int param0, tg param1, int param2, int param3, int param4) {
@@ -1017,7 +1010,7 @@ final class ca extends fd implements bo, ta {
                 break L1;
               } else {
                 var8 = null;
-                boolean discarded$2 = ((ca) this).a((fi) null, '', 57, -15);
+                boolean discarded$339 = ((ca) this).a((fi) null, '', 57, -15);
                 break L1;
               }
             }
@@ -1033,7 +1026,8 @@ final class ca extends fd implements bo, ta {
                         ee.a((byte) 49);
                         break L2;
                       } else {
-                        g.a((byte) -33);
+                        int discarded$340 = -33;
+                        g.a();
                         break L2;
                       }
                     } else {

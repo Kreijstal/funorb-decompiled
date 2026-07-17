@@ -10,7 +10,7 @@ final class pg {
     String field_d;
     int[] field_g;
 
-    final static void a(float param0, boolean param1, String param2, int param3) {
+    final static void a(float param0, boolean param1, String param2) {
         if (vi.field_n == null) {
             vi.field_n = new na(jl.field_I, m.field_e);
             jl.field_I.a((gl) (Object) vi.field_n, (byte) -1);

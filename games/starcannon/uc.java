@@ -39,7 +39,7 @@ abstract class uc implements he {
         return ((uc) this).c(4096);
     }
 
-    final static String c(byte param0) {
+    final static String c() {
         return jk.field_b;
     }
 

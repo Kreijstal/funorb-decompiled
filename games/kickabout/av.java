@@ -49,7 +49,7 @@ abstract class av {
         var7 = Kickabout.field_G;
         try {
           L0: {
-            var4_int = param3.field_c + param1;
+            var4_int = param3.field_c + 1;
             L1: while (true) {
               if (param3.field_l < var4_int) {
                 break L0;
@@ -82,7 +82,7 @@ abstract class av {
           L4: {
             var4 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var4;
-            stackOut_11_1 = new StringBuilder().append("av.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_11_1 = new StringBuilder().append("av.C(").append(param0).append(44).append(1).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -136,7 +136,7 @@ abstract class av {
 
     abstract java.net.Socket a(int param0) throws IOException;
 
-    public static void b(int param0) {
+    public static void b() {
         field_d = null;
         field_b = null;
     }

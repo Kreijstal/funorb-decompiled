@@ -9,7 +9,7 @@ final class ki {
     static String field_a;
     static String[][] field_d;
 
-    final static wd a(int param0) {
+    final static wd a() {
         if (nb.field_i == oh.field_L) {
             throw new IllegalStateException();
         }

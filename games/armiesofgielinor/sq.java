@@ -29,7 +29,7 @@ final class sq extends tc {
     final static String a(int param0, byte param1, int param2, int param3) {
         int var4 = 0;
         ic var5 = null;
-        var4 = -110 / ((param1 - -76) / 36);
+        var4 = -55;
         var5 = rd.field_j;
         if (var5 == null) {
           return "No game in progress.";
@@ -73,14 +73,16 @@ final class sq extends tc {
                     }
                   }
                   if (param0 != 500) {
-                    sq.a(false);
+                    int discarded$7 = 0;
+                    sq.a();
                     return;
                   } else {
                     return;
                   }
                 } else {
                   if (param0 != 500) {
-                    sq.a(false);
+                    int discarded$8 = 0;
+                    sq.a();
                     return;
                   } else {
                     return;
@@ -88,7 +90,8 @@ final class sq extends tc {
                 }
               } else {
                 if (param0 != 500) {
-                  sq.a(false);
+                  int discarded$9 = 0;
+                  sq.a();
                   return;
                 } else {
                   return;
@@ -102,14 +105,16 @@ final class sq extends tc {
             if (((sq) (Object) ((sq) this).field_b).field_m > 0) {
               ((sq) (Object) ((sq) this).field_b).b(500, param1);
               if (param0 != 500) {
-                sq.a(false);
+                int discarded$10 = 0;
+                sq.a();
                 return;
               } else {
                 return;
               }
             } else {
               if (param0 != 500) {
-                sq.a(false);
+                int discarded$11 = 0;
+                sq.a();
                 return;
               } else {
                 return;
@@ -117,7 +122,8 @@ final class sq extends tc {
             }
           } else {
             if (param0 != 500) {
-              sq.a(false);
+              int discarded$12 = 0;
+              sq.a();
               return;
             } else {
               return;
@@ -125,7 +131,8 @@ final class sq extends tc {
           }
         } else {
           if (param0 != 500) {
-            sq.a(false);
+            int discarded$13 = 0;
+            sq.a();
             return;
           } else {
             return;
@@ -133,7 +140,7 @@ final class sq extends tc {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_o = null;
         field_n = null;
         field_s = null;

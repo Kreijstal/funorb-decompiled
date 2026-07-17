@@ -5,7 +5,7 @@ final class ug {
     static dl field_a;
     static int field_b;
 
-    final static byte[] a(byte[] param0, int param1, int param2, boolean param3) {
+    final static byte[] a(byte[] param0, int param1, int param2) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         int var5_int = 0;
@@ -104,7 +104,7 @@ final class ug {
         field_a = null;
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean a() {
         return la.field_n;
     }
 

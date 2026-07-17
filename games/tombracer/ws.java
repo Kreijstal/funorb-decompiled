@@ -80,7 +80,7 @@ final class ws extends wda {
         return 4;
     }
 
-    final static void f(int param0) {
+    final static void f() {
     }
 
     static {

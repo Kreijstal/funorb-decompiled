@@ -15,7 +15,8 @@ final class h {
         var1 = -1;
         kk.field_n = kk.field_n + 1;
         if (kk.field_n < 140) {
-          cb.b((byte) 71);
+          int discarded$9 = 71;
+          cb.b();
           if (0 == kk.field_n % 20) {
             cg.a(true);
             return;
@@ -24,7 +25,8 @@ final class h {
           }
         } else {
           kk.field_n = 0;
-          cb.b((byte) 71);
+          int discarded$10 = 71;
+          cb.b();
           if (0 != kk.field_n % 20) {
             return;
           } else {
@@ -34,7 +36,7 @@ final class h {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         wg.field_i = ik.a(4);
         af.field_d = 0;
     }
@@ -219,7 +221,7 @@ final class h {
         return qg.field_f[param0 & 2047];
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_a = null;
         field_b = null;
         field_g = null;
@@ -233,7 +235,7 @@ final class h {
         return ph.n(-30146) || eh.field_a <= 0;
     }
 
-    final static void a(ke param0, byte param1) {
+    final static void a(ke param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_83_0 = null;
         StringBuilder stackIn_83_1 = null;
@@ -254,7 +256,8 @@ final class h {
         try {
           L0: {
             L1: {
-              if (ab.e(-28199) == 0) {
+              int discarded$1 = -28199;
+              if (ab.e() == 0) {
                 break L1;
               } else {
                 param0 = null;

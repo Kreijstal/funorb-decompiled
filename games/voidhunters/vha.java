@@ -5,7 +5,7 @@ final class vha extends rqa {
     static String[] field_o;
     static int field_p;
 
-    public static void e(byte param0) {
+    public static void e() {
         field_o = null;
     }
 

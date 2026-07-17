@@ -86,7 +86,7 @@ final class tba extends bca {
         }
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_r = null;
     }
 
@@ -100,9 +100,6 @@ final class tba extends bca {
     }
 
     final static void a(byte param0, int param1, int param2, int param3) {
-        if (param0 < 84) {
-            return;
-        }
         dm.field_g.field_g = 0;
         dm.field_g.d(12, 0);
         dm.field_g.e(ia.field_k.nextInt(), -1615464796);

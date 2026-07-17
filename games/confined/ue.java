@@ -15,7 +15,7 @@ class ue extends jl {
     ue() {
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void a(int param0, int param1, int param2, int param3) {
         nm.field_z = param2;
         af.field_Z = param1;
         dh.field_Ab = param3;

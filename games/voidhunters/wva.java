@@ -5,14 +5,14 @@ final class wva implements dja {
     static String field_a;
     static int field_b;
 
-    final static void b(byte param0) {
+    final static void b() {
         if (di.field_l != null) {
             di.field_l.a(-32339, dpa.field_p);
         }
-        int var1 = -93 % ((param0 - -11) / 55);
+        int var1 = 0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = 0;
         field_a = null;
     }
@@ -26,7 +26,7 @@ final class wva implements dja {
 
     final static void b(int param0, int param1) {
         faa var2 = dpa.field_p;
-        var2.h(24335, param0);
+        var2.h(24335, 6);
         var2.c(0, 1);
         var2.c(0, 0);
     }
@@ -37,9 +37,6 @@ final class wva implements dja {
             String var5 = null;
             String var4 = null;
             try {
-                if (param1 != 56) {
-                    field_a = null;
-                }
                 cta.field_p = param2;
                 try {
                     var3 = param0.getParameter("cookieprefix");
@@ -57,7 +54,7 @@ final class wva implements dja {
                 }
                 hg.a(-102, param0);
             } catch (RuntimeException runtimeException) {
-                throw rta.a((Throwable) (Object) runtimeException, "wva.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+                throw rta.a((Throwable) (Object) runtimeException, "wva.E(" + (param0 != null ? "{...}" : "null") + 44 + 56 + 44 + (param2 != null ? "{...}" : "null") + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -153,7 +150,7 @@ final class wva implements dja {
             var6 = (-1 + (param0 + var5_int)) / param0;
             param0 = var5_int / var6;
             var6 = 0;
-            var7 = param2;
+            var7 = 0;
             var8 = param3.length();
             var9 = 0;
             L2: while (true) {
@@ -239,7 +236,7 @@ final class wva implements dja {
           }
           L8: {
             stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(44).append(param2).append(44);
+            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(44).append(0).append(44);
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;

@@ -32,11 +32,11 @@ class ml extends va {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         L0: {
           L1: {
-            var6 = 44 / ((param5 - -43) / 56);
+            var6 = -44;
             if (param1 < ap.field_e) {
               break L1;
             } else {
@@ -61,7 +61,7 @@ class ml extends va {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_x = null;
         field_u = null;
         field_t = null;
@@ -84,14 +84,6 @@ class ml extends va {
         int[] var17 = null;
         int[] var18 = null;
         L0: {
-          if (param0 == -13) {
-            break L0;
-          } else {
-            ml.a(34, -51, 103, 63, -22, 15);
-            break L0;
-          }
-        }
-        L1: {
           var18 = bi.field_l;
           var17 = var18;
           var16 = var17;
@@ -106,7 +98,7 @@ class ml extends va {
           var10 = null;
           var11 = null;
           if (!param2) {
-            break L1;
+            break L0;
           } else {
             var13 = var9.c();
             var10 = (Object) (Object) var13;
@@ -116,12 +108,12 @@ class ml extends va {
             bi.b(0, 2, 2, 0);
             bi.b(0, 3, 1, 0);
             bi.b(0, 4, 1, 0);
-            break L1;
+            break L0;
           }
         }
-        L2: {
+        L1: {
           if (!param5) {
-            break L2;
+            break L1;
           } else {
             var14 = var9.c();
             var11 = (Object) (Object) var14;
@@ -131,14 +123,14 @@ class ml extends va {
             bi.b(14, 2, 2, 0);
             bi.b(15, 3, 1, 0);
             bi.b(15, 4, 1, 0);
-            break L2;
+            break L1;
           }
         }
         bi.a(var18, var7, var8);
         return new er[]{null, null, null, (er) var10, var9, (er) var11, null, null, null};
     }
 
-    final static void a(mi param0, byte param1) {
+    final static void a(mi param0) {
         Object var2 = null;
         RuntimeException var2_ref = null;
         oc var2_ref2 = null;

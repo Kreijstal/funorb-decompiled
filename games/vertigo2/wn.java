@@ -14,7 +14,7 @@ final class wn {
     int field_g;
     private boolean field_e;
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_d = null;
         field_i = null;
@@ -31,12 +31,11 @@ final class wn {
         return var2;
     }
 
-    final static void c(int param0) {
-        qh.a(-32739);
-        if (param0 != -2618) {
-            field_i = null;
-        }
-        ha.a((byte) 112);
+    final static void c() {
+        int discarded$0 = -32739;
+        qh.a();
+        int discarded$1 = 112;
+        ha.a();
     }
 
     final void a(int param0, byte param1, int param2, int param3, String param4, int param5) {
@@ -138,10 +137,9 @@ final class wn {
         int var2 = -117 % ((30 - param0) / 60);
     }
 
-    final static void a(String[] args, byte[] param1, int[] param2, String[][] param3, u[] param4, r param5, r param6, byte param7, er[][] param8, String[][] param9, r param10, int param11, byte[] param12, er[][] param13, int param14, int[] param15, boolean param16) {
+    final static void a(String[] args, byte[] param1, int[] param2, String[][] param3, u[] param4, r param5, r param6, byte param7, er[][] param8, String[][] param9, r param10, int param11, byte[] param12, er[][] param13, int param14, int[] param15) {
         RuntimeException var17 = null;
         Object var18 = null;
-        Object var19 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
@@ -341,13 +339,13 @@ final class wn {
         try {
           L0: {
             L1: {
-              var19 = null;
-              nk.a(param14, param9, param5, (byte) 58, param11, param1, param13, param3, args, param12, (String[]) null, param8, param10, param6, param2, 1, param16, param4, param15);
+              var18 = null;
+              nk.a(param14, param9, param5, (byte) 58, param11, param1, param13, param3, args, param12, (String[]) null, param8, param10, param6, param2, 1, true, param4, param15);
               if (param7 == -42) {
                 break L1;
               } else {
-                var18 = null;
-                wn.a((String[]) null, (byte[]) null, (int[]) null, (String[][]) null, (u[]) null, (r) null, (r) null, (byte) -38, (er[][]) null, (String[][]) null, (r) null, 49, (byte[]) null, (er[][]) null, 77, (int[]) null, true);
+                int discarded$1 = 1;
+                wn.a((String[]) null, (byte[]) null, (int[]) null, (String[][]) null, (u[]) null, (r) null, (r) null, (byte) -38, (er[][]) null, (String[][]) null, (r) null, 49, (byte[]) null, (er[][]) null, 77, (int[]) null);
                 break L1;
               }
             }
@@ -681,7 +679,7 @@ final class wn {
               break L14;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + 44 + param16 + 41);
+          throw wn.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + 44 + 1 + 41);
         }
     }
 
@@ -828,17 +826,15 @@ final class wn {
             if (se.field_A == null) {
                 se.field_A = new fi(64);
             }
-            if (param0 >= -43) {
-                wn.c(-19);
-            }
             if (!(jn.field_g != null)) {
                 jn.field_g = new fi(64);
             }
             vj.field_d = param2.field_M;
             tm.field_a = param1.field_M;
-            lh.a((byte) -22);
+            int discarded$0 = -22;
+            lh.a();
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "wn.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "wn.D(" + -122 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -850,7 +846,7 @@ final class wn {
         }
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean a(String param0) {
         RuntimeException var2 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -1145,8 +1141,8 @@ final class wn {
         try {
           L0: {
             L1: {
-              var14 = param2.a(param0);
-              var8 = param6.a(param0);
+              var14 = param2.a(false);
+              var8 = param6.a(false);
               if (lo.field_k == null) {
                 if (ce.a((byte) 116, false)) {
                   break L1;
@@ -1252,7 +1248,8 @@ final class wn {
                       uh.field_Wb.f(18, -93);
                       uh.field_Wb.field_u = uh.field_Wb.field_u + 2;
                       var10 = uh.field_Wb.field_u;
-                      var11_ref_String = vq.a(ob.e((byte) 74), (byte) 114);
+                      int discarded$5 = 114;
+                      var11_ref_String = vq.a(ob.e((byte) 74));
                       if (var11_ref_String == null) {
                         var11_ref_String = "";
                         break L7;
@@ -1298,13 +1295,16 @@ final class wn {
                       ca.field_b = -1;
                       break L8;
                     } else {
-                      boolean discarded$1 = c.a(tk.c(1), (byte) -104);
-                      mr.field_a = new Boolean(nr.a((ed) (Object) id.field_f, 67));
+                      int discarded$6 = 1;
+                      boolean discarded$7 = c.a(tk.c(), (byte) -104);
+                      int discarded$8 = 67;
+                      mr.field_a = new Boolean(nr.a((ed) (Object) id.field_f));
                       id.field_f.field_u = 0;
                       break L8;
                     }
                   } else {
-                    fk.a(ob.e((byte) -77), 11514);
+                    int discarded$9 = 11514;
+                    fk.a(ob.e((byte) -77));
                     nk.field_Kb = ql.field_K;
                     rm.b((byte) 117);
                     gn.field_d = false;
@@ -1414,7 +1414,7 @@ final class wn {
           L16: {
             var7 = decompiledCaughtException;
             stackOut_67_0 = (RuntimeException) var7;
-            stackOut_67_1 = new StringBuilder().append("wn.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_67_1 = new StringBuilder().append("wn.A(").append(0).append(44).append(param1).append(44);
             stackIn_69_0 = stackOut_67_0;
             stackIn_69_1 = stackOut_67_1;
             stackIn_68_0 = stackOut_67_0;

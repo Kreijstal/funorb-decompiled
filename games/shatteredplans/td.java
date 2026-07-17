@@ -176,15 +176,10 @@ final class td extends kg {
           }
           if (param0 < param6) {
             if (param6 <= param3) {
-              if ((-param0 + param6) * (param5 - param2) <= (-param2 + param4) * (-param0 + param3)) {
-                if (param1 > -74) {
-                  field_P = -5;
-                  return false;
-                } else {
-                  return false;
-                }
-              } else {
+              if ((-param0 + param6) * (param5 - param2) > (-param2 + param4) * (-param0 + param3)) {
                 return true;
+              } else {
+                return false;
               }
             } else {
               return false;
@@ -202,7 +197,7 @@ final class td extends kg {
         return ((td) this).field_F;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_O = null;
         int var1 = 0;
         field_N = null;

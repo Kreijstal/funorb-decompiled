@@ -12,7 +12,7 @@ final class dda extends dg implements uq {
         return 0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
     }
@@ -47,11 +47,6 @@ final class dda extends dg implements uq {
     }
 
     final static void a(int param0, boolean param1) {
-        if (param0 != 18090) {
-            field_d = null;
-            ll.field_o = false;
-            return;
-        }
         ll.field_o = false;
     }
 

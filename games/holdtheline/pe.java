@@ -36,14 +36,6 @@ final class pe {
             var9 = 0;
             L1: while (true) {
               if (var8 <= var9) {
-                L2: {
-                  if (param1 == 4209) {
-                    break L2;
-                  } else {
-                    field_d = null;
-                    break L2;
-                  }
-                }
                 break L0;
               } else {
                 var10 = var4_int - -((-var4_int + var6) * var9 / var8);
@@ -58,7 +50,7 @@ final class pe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var4, "pe.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw kk.a((Throwable) (Object) var4, "pe.C(" + param0 + 44 + 4209 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -259,7 +251,8 @@ final class pe {
                   }
                 }
               } else {
-                var3_int = mg.a(sj.field_G, sd.a(qg.field_a, new String[1], true), an.field_c, (byte) -59, p.field_j);
+                int discarded$2 = 1;
+                var3_int = mg.a(sj.field_G, sd.a(qg.field_a, new String[1]), an.field_c, (byte) -59, p.field_j);
                 var4 = -1;
                 var5 = 0;
                 L8: while (true) {
@@ -281,7 +274,8 @@ final class pe {
                     bc.a((Object[]) (Object) an.field_c, 0, (Object[]) (Object) qg.field_b, 0, var4);
                     aa.field_j = new String[-1 + (var3_int + -var4)];
                     bc.a((Object[]) (Object) an.field_c, var4 + 1, (Object[]) (Object) aa.field_j, 0, -var4 + var3_int - 1);
-                    var3_int = mg.a(sj.field_G, sd.a(b.field_b, new String[1], true), an.field_c, (byte) 118, p.field_j);
+                    int discarded$3 = 1;
+                    var3_int = mg.a(sj.field_G, sd.a(b.field_b, new String[1]), an.field_c, (byte) 118, p.field_j);
                     var4 = -1;
                     var5 = 0;
                     L10: while (true) {

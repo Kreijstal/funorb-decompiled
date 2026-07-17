@@ -196,22 +196,12 @@ abstract class gg extends be {
     }
 
     final static int b(int param0, int param1) {
-        if (param1 != 27935) {
-            return 72;
-        }
         return 5 * ((param0 - -1) * param0);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         uh.a(-9074);
-        if (param1 != 20763) {
-          int discarded$2 = gg.b(119, 2);
-          hk.f(param3, param0, param2, param4);
-          return;
-        } else {
-          hk.f(param3, param0, param2, param4);
-          return;
-        }
+        hk.f(param3, param0, param2, param4);
     }
 
     public static void c(int param0) {

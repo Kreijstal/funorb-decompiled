@@ -245,7 +245,7 @@ final class gg {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_c = null;
         field_a = null;
@@ -429,7 +429,7 @@ final class gg {
         return stackIn_1_0;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         if (!(qc.field_t)) {
             throw new IllegalStateException();
         }

@@ -108,9 +108,18 @@ final class je {
         }
     }
 
-    final static o[] a(int param0, byte param1, int param2, int param3, int param4) {
-        int var5 = -125 % ((param1 - 30) / 35);
-        return md.a(param2, param3, param0, 0, 1, -1, 1, 3, 1);
+    final static o[] a() {
+        int var5 = -1;
+        int discarded$0 = 1;
+        int discarded$1 = 3;
+        int discarded$2 = 1;
+        int discarded$3 = -1;
+        int discarded$4 = 1;
+        int discarded$5 = 0;
+        int discarded$6 = 0;
+        int discarded$7 = 0;
+        int discarded$8 = 65793;
+        return md.a();
     }
 
     final synchronized static long a(int param0) {
@@ -138,7 +147,7 @@ final class je {
         }
     }
 
-    final static boolean a(ia param0, ia param1, boolean param2) {
+    final static boolean a(ia param0, ia param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

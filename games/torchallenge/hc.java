@@ -35,7 +35,7 @@ final class hc extends ng {
         e discarded$0 = ol.a(-120, var8, var9);
     }
 
-    final static void a(uf param0, byte param1) {
+    final static void a(uf param0) {
         try {
             byte[] var2 = null;
             RuntimeException var2_ref = null;
@@ -155,20 +155,17 @@ final class hc extends ng {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, ka param8) {
-        dd.field_u = param5;
+        dd.field_u = 1500;
         vk.field_d = param8;
-        rl.field_f = param3;
-        pi.field_b = param6;
-        if (param1 < 86) {
-            return;
-        }
+        rl.field_f = 30;
+        pi.field_b = 80;
         try {
-            si.field_J = param0;
-            fd.field_f = param4;
-            vk.field_k = param7;
-            bh.field_t = param2;
+            si.field_J = 10;
+            fd.field_f = 80;
+            vk.field_k = 10;
+            bh.field_t = 10;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "hc.EA(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + (param8 != null ? "{...}" : "null") + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "hc.EA(" + 10 + 44 + 101 + 44 + 10 + 44 + 30 + 44 + 80 + 44 + 1500 + 44 + 80 + 44 + 10 + 44 + (param8 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -212,7 +209,7 @@ final class hc extends ng {
               if (param0 == -117) {
                 break L1;
               } else {
-                boolean discarded$7 = hc.c((byte) -46);
+                boolean discarded$8 = hc.c((byte) -46);
                 break L1;
               }
             }
@@ -282,16 +279,16 @@ final class hc extends ng {
                         var8_int = 1;
                         L8: while (true) {
                           if (var5 <= var8_int) {
-                            String[][] dupTemp$8 = new String[3][var6_int];
-                            var4_ref_ae.field_i = dupTemp$8;
-                            var8 = dupTemp$8;
+                            String[][] dupTemp$9 = new String[3][var6_int];
+                            var4_ref_ae.field_i = dupTemp$9;
+                            var8 = dupTemp$9;
                             var9 = new String[3][var6_int];
-                            long[][] dupTemp$9 = new long[3][var6_int];
-                            var4_ref_ae.field_t = dupTemp$9;
-                            var10 = dupTemp$9;
-                            int[][] dupTemp$10 = new int[3][var7 * var6_int];
-                            var4_ref_ae.field_l = dupTemp$10;
-                            var11 = dupTemp$10;
+                            long[][] dupTemp$10 = new long[3][var6_int];
+                            var4_ref_ae.field_t = dupTemp$10;
+                            var10 = dupTemp$10;
+                            int[][] dupTemp$11 = new int[3][var7 * var6_int];
+                            var4_ref_ae.field_l = dupTemp$11;
+                            var11 = dupTemp$11;
                             var12 = 0;
                             var13 = 0;
                             var14 = 0;
@@ -324,9 +321,9 @@ final class hc extends ng {
                                         if (var7 <= var25) {
                                           break L10;
                                         } else {
-                                          int incrementValue$11 = var15;
+                                          int incrementValue$12 = var15;
                                           var15++;
-                                          var11[0][incrementValue$11] = var28.i(51);
+                                          var11[0][incrementValue$12] = var28.i(51);
                                           var25++;
                                           continue L11;
                                         }
@@ -337,7 +334,8 @@ final class hc extends ng {
                                     if (var21 == null) {
                                       break L12;
                                     } else {
-                                      if (jc.a(var21, 26691)) {
+                                      int discarded$13 = 26691;
+                                      if (jc.a(var21)) {
                                         var8[1][var13] = mf.field_a;
                                         var9[1][var13] = null;
                                         var10[1][var13] = var22;
@@ -348,9 +346,9 @@ final class hc extends ng {
                                           if (var25 >= var7) {
                                             break L12;
                                           } else {
-                                            int incrementValue$12 = var16;
+                                            int incrementValue$14 = var16;
                                             var16++;
-                                            var11[1][incrementValue$12] = var28.i(46);
+                                            var11[1][incrementValue$14] = var28.i(46);
                                             var25++;
                                             continue L13;
                                           }
@@ -376,9 +374,9 @@ final class hc extends ng {
                                           if (var7 <= var25) {
                                             break L14;
                                           } else {
-                                            int incrementValue$13 = var17;
+                                            int incrementValue$15 = var17;
                                             var17++;
-                                            var11[2][incrementValue$13] = var28.i(param0 + 158);
+                                            var11[2][incrementValue$15] = var28.i(param0 + 158);
                                             var25++;
                                             continue L15;
                                           }
@@ -436,7 +434,7 @@ final class hc extends ng {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_T = null;
         field_P = null;
     }

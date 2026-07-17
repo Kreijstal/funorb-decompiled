@@ -13,7 +13,7 @@ final class uk extends wf {
     static km field_f;
     int field_k;
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         return 250 < it.field_c;
     }
 

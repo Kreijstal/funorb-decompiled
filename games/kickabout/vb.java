@@ -44,7 +44,7 @@ final class vb {
           L0: {
             var2_int = param1.length();
             var3 = 0L;
-            var5 = param0;
+            var5 = 0;
             L1: while (true) {
               if (var2_int <= var5) {
                 stackOut_4_0 = var3;
@@ -62,7 +62,7 @@ final class vb {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var2;
-            stackOut_6_1 = new StringBuilder().append("vb.D(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("vb.D(").append(0).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -90,7 +90,7 @@ final class vb {
         return stackIn_5_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_i = null;
         field_l = null;

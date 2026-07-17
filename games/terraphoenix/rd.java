@@ -161,7 +161,7 @@ final class rd extends ld {
         return stackIn_3_0;
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_s = null;
         field_k = null;
     }
@@ -667,7 +667,7 @@ final class rd extends ld {
         }
     }
 
-    final static Boolean b(byte param0) {
+    final static Boolean b() {
         Boolean var1 = ge.field_d;
         ge.field_d = null;
         return var1;

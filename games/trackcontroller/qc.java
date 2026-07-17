@@ -29,7 +29,6 @@ final class qc extends hk {
         java.net.Socket var13 = null;
         String var14 = null;
         String var15 = null;
-        Object stackIn_6_0 = null;
         java.net.Socket stackIn_13_0 = null;
         Object stackIn_29_0 = null;
         RuntimeException stackIn_31_0 = null;
@@ -49,7 +48,6 @@ final class qc extends hk {
         RuntimeException decompiledCaughtException = null;
         java.net.Socket stackOut_12_0 = null;
         Object stackOut_28_0 = null;
-        Object stackOut_5_0 = null;
         RuntimeException stackOut_30_0 = null;
         StringBuilder stackOut_30_1 = null;
         RuntimeException stackOut_32_0 = null;
@@ -75,101 +73,96 @@ final class qc extends hk {
               var6 = var13.getOutputStream();
               if (param1 == null) {
                 var6.write(("CONNECT " + ((qc) this).field_b + ":" + ((qc) this).field_c + " HTTP/1.0\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
+                var6.flush();
                 break L1;
               } else {
                 var6.write(("CONNECT " + ((qc) this).field_b + ":" + ((qc) this).field_c + " HTTP/1.0\n" + param1 + "\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
+                var6.flush();
                 break L1;
               }
             }
-            var6.flush();
-            if (param0 <= -97) {
-              L2: {
-                var7 = new BufferedReader((Reader) (Object) new InputStreamReader(var13.getInputStream()));
-                var14 = var7.readLine();
-                var8 = var14;
-                if (var14 != null) {
-                  L3: {
-                    if (var14.startsWith("HTTP/1.0 200")) {
-                      break L3;
-                    } else {
-                      if (!var14.startsWith("HTTP/1.1 200")) {
-                        L4: {
-                          if (var14.startsWith("HTTP/1.0 407")) {
+            L2: {
+              var7 = new BufferedReader((Reader) (Object) new InputStreamReader(var13.getInputStream()));
+              var14 = var7.readLine();
+              var8 = var14;
+              if (var14 != null) {
+                L3: {
+                  if (var14.startsWith("HTTP/1.0 200")) {
+                    break L3;
+                  } else {
+                    if (!var14.startsWith("HTTP/1.1 200")) {
+                      L4: {
+                        if (var14.startsWith("HTTP/1.0 407")) {
+                          break L4;
+                        } else {
+                          if (var14.startsWith("HTTP/1.1 407")) {
                             break L4;
                           } else {
-                            if (var14.startsWith("HTTP/1.1 407")) {
-                              break L4;
-                            } else {
-                              break L2;
-                            }
+                            break L2;
                           }
                         }
-                        var9 = 0;
-                        var8 = var7.readLine();
-                        var10 = "proxy-authenticate: ";
-                        var8 = var10;
-                        L5: while (true) {
-                          L6: {
-                            if (var8 == null) {
+                      }
+                      var9 = 0;
+                      var8 = var7.readLine();
+                      var10 = "proxy-authenticate: ";
+                      var8 = var10;
+                      L5: while (true) {
+                        L6: {
+                          if (var8 == null) {
+                            break L6;
+                          } else {
+                            if (var9 >= 50) {
                               break L6;
                             } else {
-                              if (var9 >= 50) {
-                                break L6;
-                              } else {
-                                if (var8.toLowerCase().startsWith(var10)) {
-                                  L7: {
-                                    var15 = var8.substring(var10.length()).trim();
+                              if (var8.toLowerCase().startsWith(var10)) {
+                                L7: {
+                                  var15 = var8.substring(var10.length()).trim();
+                                  var8 = var15;
+                                  var11 = var15.indexOf(' ');
+                                  if (-1 != var11) {
+                                    var8 = var15.substring(0, var11);
+                                    break L7;
+                                  } else {
                                     var8 = var15;
-                                    var11 = var15.indexOf(' ');
-                                    if (-1 != var11) {
-                                      var8 = var15.substring(0, var11);
-                                      break L7;
-                                    } else {
-                                      var8 = var15;
-                                      break L7;
-                                    }
+                                    break L7;
                                   }
-                                  throw new dj(var8);
-                                } else {
-                                  var9++;
-                                  var8 = var7.readLine();
-                                  continue L5;
                                 }
+                                throw new dj(var8);
+                              } else {
+                                var9++;
+                                var8 = var7.readLine();
+                                continue L5;
                               }
                             }
                           }
-                          throw new dj("");
                         }
-                      } else {
-                        break L3;
+                        throw new dj("");
                       }
+                    } else {
+                      break L3;
                     }
                   }
-                  stackOut_12_0 = (java.net.Socket) var13;
-                  stackIn_13_0 = stackOut_12_0;
-                  return stackIn_13_0;
-                } else {
-                  break L2;
                 }
+                stackOut_12_0 = (java.net.Socket) var13;
+                stackIn_13_0 = stackOut_12_0;
+                return stackIn_13_0;
+              } else {
+                break L2;
               }
-              var6.close();
-              var7.close();
-              var13.close();
-              stackOut_28_0 = null;
-              stackIn_29_0 = stackOut_28_0;
-              break L0;
-            } else {
-              stackOut_5_0 = null;
-              stackIn_6_0 = stackOut_5_0;
-              return (java.net.Socket) (Object) stackIn_6_0;
             }
+            var6.close();
+            var7.close();
+            var13.close();
+            stackOut_28_0 = null;
+            stackIn_29_0 = stackOut_28_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var5 = decompiledCaughtException;
             stackOut_30_0 = (RuntimeException) var5;
-            stackOut_30_1 = new StringBuilder().append("qc.E(").append(param0).append(44);
+            stackOut_30_1 = new StringBuilder().append("qc.E(").append(-124).append(44);
             stackIn_32_0 = stackOut_30_0;
             stackIn_32_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
@@ -382,7 +375,7 @@ final class qc extends hk {
           var14 = TrackController.field_F ? 1 : 0;
           var2 = -56 / ((param0 - -2) / 36);
           if (!Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
-            String discarded$2 = System.setProperty("java.net.useSystemProxies", "true");
+            String discarded$3 = System.setProperty("java.net.useSystemProxies", "true");
             break L0;
           } else {
             break L0;
@@ -489,7 +482,7 @@ final class qc extends hk {
           var7 = (java.net.URISyntaxException) (Object) decompiledCaughtException;
           return ((qc) this).b(0);
         }
-        boolean discarded$3 = var4.addAll((Collection) (Object) var5);
+        boolean discarded$4 = var4.addAll((Collection) (Object) var5);
         var7_array = var4.toArray();
         var8 = null;
         var9_array = var7_array;
@@ -506,7 +499,8 @@ final class qc extends hk {
             var12 = (java.net.Proxy) var11;
             try {
               L6: {
-                var13_ref2 = this.a(var12, (byte) 66);
+                int discarded$5 = 66;
+                var13_ref2 = this.a(var12);
                 if (var13_ref2 != null) {
                   stackOut_21_0 = (java.net.Socket) var13_ref2;
                   stackIn_22_0 = stackOut_21_0;
@@ -550,6 +544,9 @@ final class qc extends hk {
         if (!(!param2)) {
             var4 += 4;
         }
+        if (!(!param3)) {
+            var4 += 2;
+        }
         if (!(!param0)) {
             var4++;
         }
@@ -563,7 +560,7 @@ final class qc extends hk {
         ra.field_v = param0;
     }
 
-    private final java.net.Socket a(java.net.Proxy param0, byte param1) throws IOException {
+    private final java.net.Socket a(java.net.Proxy param0) throws IOException {
         RuntimeException var3 = null;
         java.net.SocketAddress var3_ref = null;
         Object var4 = null;

@@ -9,7 +9,7 @@ final class pa {
     static int field_b;
     static int field_c;
 
-    final static hg a(String param0, byte param1) {
+    final static hg a(String param0) {
         String var2 = null;
         RuntimeException var2_ref = null;
         hg var3 = null;
@@ -108,7 +108,7 @@ final class pa {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
     }
 
@@ -187,7 +187,8 @@ final class pa {
           if (Character.isISOControl(param1)) {
             return false;
           } else {
-            if (!de.a(param1, -17321)) {
+            int discarded$3 = -17321;
+            if (!de.a(param1)) {
               L0: {
                 if (param1 == 45) {
                   break L0;
@@ -214,11 +215,12 @@ final class pa {
           }
         } else {
           var3 = null;
-          boolean discarded$1 = pa.a((byte) -44, (vj) null);
+          boolean discarded$4 = pa.a((byte) -44, (vj) null);
           if (Character.isISOControl(param1)) {
             return false;
           } else {
-            if (!de.a(param1, -17321)) {
+            int discarded$5 = -17321;
+            if (!de.a(param1)) {
               if (param1 != 45) {
                 if (param1 != 160) {
                   L1: {
@@ -246,7 +248,7 @@ final class pa {
         }
     }
 
-    final static boolean a(CharSequence param0, boolean param1, int param2) {
+    final static boolean a(CharSequence param0) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -275,7 +277,7 @@ final class pa {
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
-            if (pf.a(1, param1, param0)) {
+            if (pf.a(1, false, param0)) {
               var3_int = 0;
               L1: while (true) {
                 if (param0.length() <= var3_int) {
@@ -327,7 +329,7 @@ final class pa {
               break L2;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 44 + 0 + 41);
+          throw ie.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + 0 + 44 + 0 + 41);
         }
         return stackIn_12_0 != 0;
     }

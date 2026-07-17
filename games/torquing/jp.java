@@ -32,7 +32,7 @@ abstract class jp {
 
     abstract void a(Object param0, boolean param1, byte param2);
 
-    public static void d(byte param0) {
+    public static void d() {
         field_p = null;
         int var1 = 5;
         field_n = null;

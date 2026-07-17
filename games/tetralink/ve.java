@@ -16,10 +16,11 @@ final class ve {
 
     final static ah b(int param0, int param1) {
         int var2 = 33 / ((param0 - 4) / 40);
-        return ai.a(false, param1, false, 1, (byte) 38, true);
+        int discarded$0 = 1;
+        return ai.a(false, param1, false, 1, (byte) 38);
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         ec.field_i = 0;
         ph.field_z = -1;
         sc.field_c = null;
@@ -49,12 +50,9 @@ final class ve {
                 fl.field_u.r(-127);
             }
             ao.field_c = new tl(param2, param1, false, true, true);
-            if (param0 != -1) {
-                field_a = null;
-            }
-            mm.field_u.e((na) (Object) ao.field_c, param0 + -27666);
+            mm.field_u.e((na) (Object) ao.field_c, -27667);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "ve.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "ve.D(" + -1 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

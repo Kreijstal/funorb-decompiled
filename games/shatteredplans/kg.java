@@ -354,30 +354,24 @@ class kg extends vg {
         }
     }
 
-    final static void f(byte param0) {
+    final static void f() {
         if (!(null == cb.field_h)) {
             cb.field_h.a(0);
-        }
-        if (param0 > -122) {
-            field_C = null;
-            return;
         }
     }
 
     final static void a(int param0, long param1, String param2) {
         CharSequence var5 = null;
-        if (param0 >= -41) {
-            return;
-        }
         try {
             gi.field_a = param2;
             em.field_h = 2;
             var5 = (CharSequence) (Object) param2;
-            nd.field_k = ji.a(var5, true);
+            int discarded$0 = 1;
+            nd.field_k = ji.a(var5);
             hd.field_k = param1;
             sr.field_h = true;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "kg.GA(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw r.a((Throwable) (Object) runtimeException, "kg.GA(" + -125 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -579,7 +573,7 @@ class kg extends vg {
         }
     }
 
-    public static void d(boolean param0) {
+    public static void d() {
         field_C = null;
     }
 

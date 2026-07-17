@@ -33,7 +33,7 @@ final class ug extends hi {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var2_int = -88 / ((2 - param0) / 56);
+            var2_int = 88;
             stackOut_0_0 = param1.b((byte) -72);
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -43,7 +43,7 @@ final class ug extends hi {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("ug.D(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("ug.D(").append(94).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -174,7 +174,7 @@ final class ug extends hi {
         return (String) (Object) stackIn_16_0;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_o = null;
         int var1 = -49;
         field_r = null;

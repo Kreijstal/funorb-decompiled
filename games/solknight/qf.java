@@ -12,7 +12,7 @@ final class qf {
     static int[] field_d;
     static int[] field_e;
 
-    public static void a(int param0) {
+    public static void a() {
         field_g = null;
         field_e = null;
         field_c = null;

@@ -6,13 +6,13 @@ final class jj {
     static int[] field_a;
     static int field_b;
 
-    final static void a(int param0) {
+    final static void a() {
         if (!(eb.field_H)) {
             throw new IllegalStateException();
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_c = null;
     }

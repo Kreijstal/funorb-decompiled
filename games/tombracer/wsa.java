@@ -137,31 +137,23 @@ final class wsa extends ci {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        int stackIn_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
+        int stackIn_3_0 = 0;
+        int stackOut_2_0 = 0;
+        int stackOut_1_0 = 0;
         L0: {
           var14 = TombRacer.field_G ? 1 : 0;
-          if (param1 == 27261) {
+          if (param3 <= 2048) {
+            stackOut_2_0 = (param0 + 4096) * param3 >> 12;
+            stackIn_3_0 = stackOut_2_0;
             break L0;
           } else {
-            wsa.c(81);
+            stackOut_1_0 = param0 + (param3 + -(param0 * param3 >> 12));
+            stackIn_3_0 = stackOut_1_0;
             break L0;
           }
         }
         L1: {
-          if (param3 <= 2048) {
-            stackOut_4_0 = (param0 + 4096) * param3 >> 12;
-            stackIn_5_0 = stackOut_4_0;
-            break L1;
-          } else {
-            stackOut_3_0 = param0 + (param3 + -(param0 * param3 >> 12));
-            stackIn_5_0 = stackOut_3_0;
-            break L1;
-          }
-        }
-        L2: {
-          var5 = stackIn_5_0;
+          var5 = stackIn_3_0;
           if (0 < var5) {
             param2 = param2 * 6;
             var6 = param3 + (param3 - var5);
@@ -181,21 +173,21 @@ final class wsa extends ci {
                     ((wsa) this).field_q = var5;
                     ((wsa) this).field_r = var12;
                     ((wsa) this).field_t = var6;
-                    break L2;
+                    break L1;
                   } else {
                     if (4 == var13) {
                       ((wsa) this).field_r = var6;
                       ((wsa) this).field_t = var11;
                       ((wsa) this).field_q = var5;
-                      break L2;
+                      break L1;
                     } else {
                       if (var13 != 5) {
-                        break L2;
+                        break L1;
                       } else {
                         ((wsa) this).field_r = var6;
                         ((wsa) this).field_q = var12;
                         ((wsa) this).field_t = var5;
-                        break L2;
+                        break L1;
                       }
                     }
                   }
@@ -203,33 +195,30 @@ final class wsa extends ci {
                   ((wsa) this).field_r = var5;
                   ((wsa) this).field_t = var6;
                   ((wsa) this).field_q = var11;
-                  break L2;
+                  break L1;
                 }
               } else {
                 ((wsa) this).field_q = var6;
                 ((wsa) this).field_t = var12;
                 ((wsa) this).field_r = var5;
-                break L2;
+                break L1;
               }
             } else {
               ((wsa) this).field_r = var11;
               ((wsa) this).field_q = var6;
               ((wsa) this).field_t = var5;
-              break L2;
+              break L1;
             }
           } else {
             ((wsa) this).field_q = param3;
             ((wsa) this).field_r = param3;
             ((wsa) this).field_t = param3;
-            break L2;
+            break L1;
           }
         }
     }
 
-    public static void c(int param0) {
-        if (param0 >= -27) {
-            field_v = null;
-        }
+    public static void c() {
         field_v = null;
     }
 
@@ -345,7 +334,7 @@ final class wsa extends ci {
         }
         L4: {
           var6 = stackIn_12_0;
-          ((wsa) this).field_p = (var6 + var5) / param0;
+          ((wsa) this).field_p = (var6 + var5) / 2;
           var7 = var5 + -var6;
           if (((wsa) this).field_p <= 0) {
             ((wsa) this).field_n = 0;
@@ -553,23 +542,23 @@ final class wsa extends ci {
         int var7 = 0;
         int stackIn_3_0 = 0;
         int stackIn_10_0 = 0;
+        int stackIn_13_0 = 0;
+        int stackIn_14_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_16_0 = 0;
-        int stackIn_17_0 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_18_1 = 0;
+        int stackIn_16_1 = 0;
         int stackOut_2_0 = 0;
         int stackOut_1_0 = 0;
         int stackOut_9_0 = 0;
         int stackOut_8_0 = 0;
         int stackOut_4_0 = 0;
-        int stackOut_14_0 = 0;
+        int stackOut_12_0 = 0;
+        int stackOut_11_0 = 0;
         int stackOut_13_0 = 0;
         int stackOut_15_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_17_1 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_16_1 = 0;
+        int stackOut_15_1 = 0;
+        int stackOut_14_0 = 0;
+        int stackOut_14_1 = 0;
         L0: {
           var5 = 15 & param3;
           if (var5 < 8) {
@@ -607,41 +596,37 @@ final class wsa extends ci {
             break L1;
           }
         }
-        var7 = stackIn_10_0;
-        if (param2 == 0) {
-          L3: {
-            if ((1 & var5) != 0) {
-              stackOut_14_0 = -var6;
-              stackIn_15_0 = stackOut_14_0;
-              break L3;
-            } else {
-              stackOut_13_0 = var6;
-              stackIn_15_0 = stackOut_13_0;
-              break L3;
-            }
+        L3: {
+          var7 = stackIn_10_0;
+          if ((1 & var5) != 0) {
+            stackOut_12_0 = -var6;
+            stackIn_13_0 = stackOut_12_0;
+            break L3;
+          } else {
+            stackOut_11_0 = var6;
+            stackIn_13_0 = stackOut_11_0;
+            break L3;
           }
-          L4: {
-            stackOut_15_0 = stackIn_15_0;
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_16_0 = stackOut_15_0;
-            if ((var5 & 2) == 0) {
-              stackOut_17_0 = stackIn_17_0;
-              stackOut_17_1 = var7;
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              break L4;
-            } else {
-              stackOut_16_0 = stackIn_16_0;
-              stackOut_16_1 = -var7;
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              break L4;
-            }
-          }
-          return stackIn_18_0 - -stackIn_18_1;
-        } else {
-          return -13;
         }
+        L4: {
+          stackOut_13_0 = stackIn_13_0;
+          stackIn_15_0 = stackOut_13_0;
+          stackIn_14_0 = stackOut_13_0;
+          if ((var5 & 2) == 0) {
+            stackOut_15_0 = stackIn_15_0;
+            stackOut_15_1 = var7;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            break L4;
+          } else {
+            stackOut_14_0 = stackIn_14_0;
+            stackOut_14_1 = -var7;
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            break L4;
+          }
+        }
+        return stackIn_16_0 - -stackIn_16_1;
     }
 
     static {

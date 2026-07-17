@@ -14,7 +14,7 @@ class ag extends cn {
         this(tj.field_e, param0);
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_t = null;
         field_o = null;
         field_p = null;
@@ -32,56 +32,30 @@ class ag extends cn {
         }
     }
 
-    final static String a(boolean param0, boolean param1, boolean param2, boolean param3) {
+    final static String a(boolean param0, boolean param1, boolean param2) {
         int var4 = 0;
         var4 = 0;
-        if (param1) {
-          if (param0) {
-            L0: {
-              var4 += 4;
-              if (param2) {
-                var4 += 2;
-                break L0;
-              } else {
-                break L0;
-              }
+        if (param0) {
+          L0: {
+            var4 += 4;
+            if (param2) {
+              var4 += 2;
+              break L0;
+            } else {
+              break L0;
             }
-            return tf.field_d[var4];
-          } else {
-            L1: {
-              if (param2) {
-                var4 += 2;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            return tf.field_d[var4];
           }
+          return tf.field_d[var4];
         } else {
-          field_q = -53;
-          if (!param0) {
-            L2: {
-              if (param2) {
-                var4 += 2;
-                break L2;
-              } else {
-                break L2;
-              }
+          L1: {
+            if (param2) {
+              var4 += 2;
+              break L1;
+            } else {
+              break L1;
             }
-            return tf.field_d[var4];
-          } else {
-            L3: {
-              var4 += 4;
-              if (param2) {
-                var4 += 2;
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            return tf.field_d[var4];
           }
+          return tf.field_d[var4];
         }
     }
 

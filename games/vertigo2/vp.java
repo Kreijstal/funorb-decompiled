@@ -232,7 +232,7 @@ final class vp {
     }
 
     final static int a(byte param0, int param1) {
-        int var2 = -36 / ((28 - param0) / 47);
+        int var2 = 36;
         return oj.field_O[param1].length;
     }
 

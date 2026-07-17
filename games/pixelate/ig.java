@@ -9,107 +9,96 @@ final class ig {
     static fm field_b;
 
     final static String a(int param0, char param1) {
-        if (param0 < 123) {
-            return null;
-        }
         return String.valueOf(param1);
     }
 
     final static id a(int param0, String param1) {
         RuntimeException var2 = null;
-        Object stackIn_4_0 = null;
-        id stackIn_8_0 = null;
-        Object stackIn_10_0 = null;
+        Object stackIn_2_0 = null;
+        id stackIn_6_0 = null;
+        Object stackIn_8_0 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
+        String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        id stackOut_7_0 = null;
-        Object stackOut_9_0 = null;
-        Object stackOut_3_0 = null;
+        id stackOut_5_0 = null;
+        Object stackOut_7_0 = null;
+        Object stackOut_1_0 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
         RuntimeException stackOut_11_0 = null;
         StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
         try {
           L0: {
-            L1: {
-              if (param0 == 200) {
-                break L1;
-              } else {
-                field_b = null;
-                break L1;
-              }
-            }
             if (qo.field_n != rj.field_F) {
-              L2: {
+              L1: {
                 if (qo.field_n != h.field_N) {
-                  break L2;
+                  break L1;
                 } else {
                   if (!param1.equals((Object) (Object) uh.field_m)) {
-                    break L2;
+                    break L1;
                   } else {
                     qo.field_n = wm.field_a;
-                    stackOut_7_0 = jc.field_f;
-                    stackIn_8_0 = stackOut_7_0;
-                    return stackIn_8_0;
+                    stackOut_5_0 = jc.field_f;
+                    stackIn_6_0 = stackOut_5_0;
+                    return stackIn_6_0;
                   }
                 }
               }
               qo.field_n = rj.field_F;
               uh.field_m = param1;
               jc.field_f = null;
-              stackOut_9_0 = null;
-              stackIn_10_0 = stackOut_9_0;
+              stackOut_7_0 = null;
+              stackIn_8_0 = stackOut_7_0;
               break L0;
             } else {
-              stackOut_3_0 = null;
-              stackIn_4_0 = stackOut_3_0;
-              return (id) (Object) stackIn_4_0;
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return (id) (Object) stackIn_2_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var2 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var2;
-            stackOut_11_1 = new StringBuilder().append("ig.A(").append(param0).append(44);
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackOut_9_0 = (RuntimeException) var2;
+            stackOut_9_1 = new StringBuilder().append("ig.A(").append(200).append(44);
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
-              break L3;
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L2;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
-              break L3;
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
         }
-        return (id) (Object) stackIn_10_0;
+        return (id) (Object) stackIn_8_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         field_b = null;

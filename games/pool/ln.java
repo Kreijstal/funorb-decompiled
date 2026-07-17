@@ -42,7 +42,7 @@ final class ln extends ma {
         try {
           L0: {
             if (vj.a(param0, param2, param3, (byte) 121)) {
-              var4_int = -39 / ((param1 - -12) / 57);
+              var4_int = -19;
               stackOut_3_0 = sg.h(152);
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -55,7 +55,7 @@ final class ln extends ma {
           L1: {
             var4 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var4;
-            stackOut_5_1 = new StringBuilder().append("ln.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_5_1 = new StringBuilder().append("ln.B(").append(param0).append(44).append(110).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -131,7 +131,7 @@ final class ln extends ma {
             var3_int = 0;
             L1: while (true) {
               if (param2.field_g.length <= var3_int) {
-                var3_int = param1;
+                var3_int = 0;
                 L2: while (true) {
                   if (var3_int >= param2.field_Y.length) {
                     var3_int = 0;
@@ -191,7 +191,7 @@ final class ln extends ma {
           }
           L5: {
             stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(param1).append(44);
+            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(0).append(44);
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;

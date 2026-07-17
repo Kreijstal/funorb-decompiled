@@ -72,9 +72,6 @@ abstract class jc extends gl implements sf {
         if (null != ((jc) this).field_F) {
             ((jc) this).field_F.a(((jc) this).field_w + param0, -124, param2, ((jc) this).field_u + param3);
         }
-        if (param1 >= -106) {
-            ((jc) this).a(25, (byte) -75, -102, -86, -98);
-        }
     }
 
     public static void f(byte param0) {
@@ -384,7 +381,8 @@ abstract class jc extends gl implements sf {
                     stackIn_13_0 = stackOut_12_0;
                     break L2;
                   } else {
-                    stackOut_11_0 = this.a(param1, 0);
+                    int discarded$3 = 0;
+                    stackOut_11_0 = this.a(param1);
                     stackIn_13_0 = stackOut_11_0;
                     break L2;
                   }
@@ -430,7 +428,7 @@ abstract class jc extends gl implements sf {
         return stackIn_15_0 != 0;
     }
 
-    private final boolean a(gl param0, int param1) {
+    private final boolean a(gl param0) {
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;

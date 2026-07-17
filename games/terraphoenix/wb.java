@@ -13,7 +13,7 @@ final class wb extends IOException {
     static ak[] field_b;
     static int[] field_a;
 
-    final static void b(int param0) {
+    final static void b() {
         uj.field_c = false;
         ea.field_m = -1;
         ga.field_j = 0;
@@ -21,11 +21,11 @@ final class wb extends IOException {
         lb.field_b = -1;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_h = null;
         field_b = null;
-        int var1 = -76 / ((param0 - -70) / 49);
+        int var1 = 76;
     }
 
     wb(String param0) {

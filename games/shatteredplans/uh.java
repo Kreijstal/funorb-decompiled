@@ -197,29 +197,25 @@ final class uh {
         String stackOut_7_2 = null;
         try {
           L0: {
-            if (param0) {
-              L1: {
-                var4_float = (float)param1 / 100.0f + (float)(((uh) this).field_j + 1);
-                ((uh) this).field_h = var4_float * (float)((uh) this).field_a / (float)(1 + ((uh) this).field_f);
-                if (param1 == 0) {
-                  ((uh) this).field_c = param2.field_f;
-                  break L1;
-                } else {
-                  ((uh) this).field_c = param2.field_c + " - " + param1 + "%";
-                  break L1;
-                }
+            L1: {
+              var4_float = (float)param1 / 100.0f + (float)(((uh) this).field_j + 1);
+              ((uh) this).field_h = var4_float * (float)((uh) this).field_a / (float)(1 + ((uh) this).field_f);
+              if (param1 == 0) {
+                ((uh) this).field_c = param2.field_f;
+                break L1;
+              } else {
+                ((uh) this).field_c = param2.field_c + " - " + param1 + "%";
+                break L1;
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var4;
-            stackOut_6_1 = new StringBuilder().append("uh.D(").append(param0).append(44).append(param1).append(44);
+            stackOut_6_1 = new StringBuilder().append("uh.D(").append(1).append(44).append(param1).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;

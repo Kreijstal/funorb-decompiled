@@ -19,7 +19,7 @@ final class fg extends gj {
         int var16 = 0;
         int var17 = 0;
         var17 = DungeonAssault.field_K;
-        var16 = 53 % ((param12 - 24) / 48);
+        var16 = 1;
         if (param3 < param2) {
           if (param0 <= param2) {
             if (param0 > param3) {
@@ -119,7 +119,8 @@ final class fg extends gj {
 
     final long a(int param0) {
         int var2 = 0;
-        ((fg) this).field_h = ((fg) this).field_h + this.c(0);
+        int discarded$2 = 0;
+        ((fg) this).field_h = ((fg) this).field_h + this.c();
         if (((fg) this).field_h < ((fg) this).field_l) {
           return (((fg) this).field_l - ((fg) this).field_h) / 1000000L;
         } else {
@@ -165,7 +166,7 @@ final class fg extends gj {
         }
     }
 
-    private final long c(int param0) {
+    private final long c() {
         long var2 = 0L;
         long var4 = 0L;
         long var6 = 0L;

@@ -11,13 +11,10 @@ final class dk {
     }
 
     final static boolean a(int param0, byte param1, int param2) {
-        if (param1 >= -57) {
-            return true;
-        }
-        return (540800 & param0) != 0 ? true : false;
+        return (540800 & param0) != 0;
     }
 
-    final static ns a(byte param0) {
+    final static ns a() {
         try {
             Throwable var1 = null;
             ns stackIn_1_0 = null;

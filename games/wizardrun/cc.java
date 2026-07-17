@@ -93,7 +93,7 @@ final class cc implements bf {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         int var1 = -38;
         field_a = null;

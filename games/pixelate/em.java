@@ -6,32 +6,23 @@ final class em {
     static String field_b;
     static String field_c;
 
-    final static void a(byte param0) {
-        if (param0 > -13) {
-            field_a = null;
-            oa.field_j = 0;
-            return;
-        }
+    final static void a() {
         oa.field_j = 0;
     }
 
     final static void a(byte param0, lc param1, int param2) {
         pc var3 = null;
         try {
-            if (param0 != -7) {
-                Object var4 = null;
-                em.a((String) null, 12L, (String) null, 43, (ak) null, -102, (gp) null, (int[]) null, 46);
-            }
             var3 = aa.field_f;
             var3.g(param2, 15514);
             var3.e(160, param1.field_k);
             var3.e(160, param1.field_s);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "em.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "em.A(" + -7 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
-    final static void a(tf[] param0, int param1) {
+    final static void a(tf[] param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -107,13 +98,10 @@ final class em {
 
     final static void a(String param0, long param1, String param2, int param3, ak param4, int param5, gp param6, int[] param7, int param8) {
         try {
-            if (param5 != -163) {
-                em.a((byte) 53);
-            }
             bj.field_d = param6;
             eg.field_n = new wi(param4, param1, param2, param0, param3, param8, param7);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "em.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 44 + (param7 != null ? "{...}" : "null") + 44 + param8 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "em.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + -163 + 44 + (param6 != null ? "{...}" : "null") + 44 + (param7 != null ? "{...}" : "null") + 44 + param8 + 41);
         }
     }
 
@@ -128,16 +116,19 @@ final class em {
 
     final static void a(vj param0, int param1, int param2, fm param3) {
         try {
-            ub.field_a = pf.a(true) * param2 / 1000;
-            nj.a(param3, (byte) 14);
+            int discarded$0 = 1;
+            ub.field_a = pf.a() * param2 / 1000;
+            int discarded$1 = 14;
+            nj.a(param3);
             dk.a(false, param3);
             ec.a(false, param3);
-            op.e(260);
+            int discarded$2 = 260;
+            op.e();
             ng.g(0);
             ga.field_f = -ub.field_a;
-            int var4_int = 26 % ((param1 - 1) / 55);
+            int var4_int = 0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "em.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "em.B(" + (param0 != null ? "{...}" : "null") + 44 + 74 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 

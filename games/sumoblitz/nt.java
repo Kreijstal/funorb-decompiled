@@ -99,12 +99,9 @@ class nt extends ms {
         try {
             var4 = new DataInputStream((InputStream) (Object) new BufferedInputStream((InputStream) (Object) new FileInputStream(param2)));
             var4.readFully(param0, 0, param3);
-            if (param1 != 7039) {
-                field_r = true;
-            }
             var4.close();
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "nt.J(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "nt.J(" + (param0 != null ? "{...}" : "null") + 44 + 7039 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
     }
 
@@ -115,7 +112,7 @@ class nt extends ms {
         ((nt) this).field_o = param2;
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_m = null;
         field_n = null;
         field_l = null;

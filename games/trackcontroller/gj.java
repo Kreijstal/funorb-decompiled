@@ -9,20 +9,20 @@ final class gj {
     static String field_d;
     static String field_e;
 
-    final static int a(byte param0) {
+    final static int a() {
         return da.field_o;
     }
 
-    final static void a(int param0, nk param1, int param2) {
+    final static void a(int param0, nk param1) {
         la var3 = null;
         try {
             var3 = ra.field_C;
-            var3.c(param2, 7);
-            var3.a(param0, (byte) -93);
+            var3.c(5, 7);
+            var3.a(2, (byte) -93);
             var3.a(0, (byte) -69);
             var3.a(param1.field_i, (byte) -120);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "gj.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "gj.C(" + 2 + 44 + (param1 != null ? "{...}" : "null") + 44 + 5 + 41);
         }
     }
 
@@ -35,7 +35,6 @@ final class gj {
         int var6 = 0;
         bl stackIn_4_0 = null;
         bl stackIn_10_0 = null;
-        Object stackIn_14_0 = null;
         bl stackIn_16_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -47,7 +46,6 @@ final class gj {
         RuntimeException decompiledCaughtException = null;
         bl stackOut_3_0 = null;
         bl stackOut_15_0 = null;
-        Object stackOut_13_0 = null;
         bl stackOut_9_0 = null;
         RuntimeException stackOut_17_0 = null;
         StringBuilder stackOut_17_1 = null;
@@ -66,19 +64,14 @@ final class gj {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             } else {
-              var3 = qi.c(19664);
+              int discarded$2 = 19664;
+              var3 = qi.c();
               var4 = 0;
               L1: while (true) {
                 if (var4 >= var3.length) {
-                  if (param0 >= 96) {
-                    stackOut_15_0 = oi.field_a;
-                    stackIn_16_0 = stackOut_15_0;
-                    break L0;
-                  } else {
-                    stackOut_13_0 = null;
-                    stackIn_14_0 = stackOut_13_0;
-                    return (bl) (Object) stackIn_14_0;
-                  }
+                  stackOut_15_0 = oi.field_a;
+                  stackIn_16_0 = stackOut_15_0;
+                  break L0;
                 } else {
                   var5 = var3[var4];
                   if (var5.a(var2, false)) {
@@ -98,7 +91,7 @@ final class gj {
           L2: {
             var2_ref = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var2_ref;
-            stackOut_17_1 = new StringBuilder().append("gj.B(").append(param0).append(44);
+            stackOut_17_1 = new StringBuilder().append("gj.B(").append(100).append(44);
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -126,7 +119,7 @@ final class gj {
         return stackIn_16_0;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         int var1 = -33;
         field_f = null;
         field_a = null;
@@ -137,10 +130,6 @@ final class gj {
 
     final static int a(int param0, int param1, int param2) {
         int var3 = param2 >> 31 & -1 + param1;
-        if (param0 != 2) {
-            Object var4 = null;
-            bl discarded$0 = gj.a(107, (java.applet.Applet) null);
-        }
         return var3 + (param2 - -(param2 >>> 31)) % param1;
     }
 

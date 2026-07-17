@@ -27,43 +27,39 @@ final class ww extends rqa {
         var6 = VoidHunters.field_G;
         try {
           L0: {
-            if (param3 == 75) {
-              param4--;
-              param1--;
-              var5_int = param1 + -7;
-              L1: while (true) {
-                if (param4 >= var5_int) {
-                  L2: while (true) {
-                    if (param1 <= param4) {
-                      break L0;
-                    } else {
-                      param4++;
-                      param2[param4] = param0;
-                      continue L2;
-                    }
+            param4--;
+            param1--;
+            var5_int = param1 + -7;
+            L1: while (true) {
+              if (param4 >= var5_int) {
+                L2: while (true) {
+                  if (param1 <= param4) {
+                    break L0;
+                  } else {
+                    param4++;
+                    param2[param4] = param0;
+                    continue L2;
                   }
-                } else {
-                  param4++;
-                  param2[param4] = param0;
-                  param4++;
-                  param2[param4] = param0;
-                  param4++;
-                  param2[param4] = param0;
-                  param4++;
-                  param2[param4] = param0;
-                  param4++;
-                  param2[param4] = param0;
-                  param4++;
-                  param2[param4] = param0;
-                  param4++;
-                  param2[param4] = param0;
-                  param4++;
-                  param2[param4] = param0;
-                  continue L1;
                 }
+              } else {
+                param4++;
+                param2[param4] = param0;
+                param4++;
+                param2[param4] = param0;
+                param4++;
+                param2[param4] = param0;
+                param4++;
+                param2[param4] = param0;
+                param4++;
+                param2[param4] = param0;
+                param4++;
+                param2[param4] = param0;
+                param4++;
+                param2[param4] = param0;
+                param4++;
+                param2[param4] = param0;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -94,7 +90,7 @@ final class ww extends rqa {
               break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param3 + 44 + param4 + 41);
+          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + 75 + 44 + param4 + 41);
         }
     }
 
@@ -165,7 +161,7 @@ final class ww extends rqa {
         return stackIn_3_0;
     }
 
-    final static void a(Object[] param0, int param1, Object[] param2, int param3) {
+    final static void a(Object[] param0, int param1, Object[] param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

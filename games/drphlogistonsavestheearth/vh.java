@@ -53,8 +53,10 @@ final class vh {
               break L0;
             }
           }
-          if (fl.a(param3, param0, param1, (byte) -98)) {
-            return hd.c(true);
+          int discarded$9 = -98;
+          if (fl.a(param3, param0, param1)) {
+            int discarded$10 = 1;
+            return hd.c();
           } else {
             return null;
           }

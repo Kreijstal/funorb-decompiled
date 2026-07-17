@@ -5,14 +5,14 @@ final class kd {
     static iw field_b;
     static int[][] field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }
 
     final static ki a(byte param0, int param1) {
         int var2 = 0;
-        var2 = 39 % ((param0 - -45) / 59);
+        var2 = 0;
         if (sn.field_d == null) {
           if (-1 == param1) {
             return sn.field_d;
@@ -36,9 +36,9 @@ final class kd {
           return;
         } else {
           L0: {
-            var3 = -135 + param1;
-            var4 = -35 + param0;
-            var5 = param2;
+            var3 = 185;
+            var4 = 205;
+            var5 = 256;
             if (75 > td.field_u) {
               var5 = (td.field_u << 8) / 75;
               break L0;
@@ -58,7 +58,7 @@ final class kd {
             jq.a(7161, sn.field_a);
             nk.b();
             lk.b();
-            ok.b(param2);
+            ok.b(256);
             if (256 > var5) {
               lk.b(0, 0, lk.field_b, lk.field_c, 0, 256 + -var5);
               break L2;
@@ -301,7 +301,7 @@ final class kd {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void a(boolean param0) {
         ut.field_o.a(120, param0);
     }
 

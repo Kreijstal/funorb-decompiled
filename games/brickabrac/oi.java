@@ -15,7 +15,8 @@ final class oi {
             return;
         }
         try {
-            int discarded$0 = td.a(param5, ((oi) this).field_b.field_j[((oi) this).field_f[param3 % ((oi) this).field_e]], param1, param2, param0, 10792131);
+            int discarded$0 = 10792131;
+            int discarded$1 = td.a(param5, ((oi) this).field_b.field_j[((oi) this).field_f[param3 % ((oi) this).field_e]], param1, param2, param0);
         } catch (RuntimeException runtimeException) {
             throw qb.a((Throwable) (Object) runtimeException, "oi.G(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
         }
@@ -35,51 +36,18 @@ final class oi {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
         field_a = null;
     }
 
     final static boolean a(int param0, int param1, int param2, int param3) {
-        if (param1 == -1) {
-          if (null != bm.field_d) {
-            if (!bm.field_d.b(param1 ^ -2100)) {
-              if (no.field_p != null) {
-                if (!no.field_p.d((byte) 119)) {
-                  if (!na.j((byte) -60)) {
-                    if (qa.a(param3, param0, (byte) 108, param2)) {
-                      return true;
-                    } else {
-                      return false;
-                    }
-                  } else {
-                    return true;
-                  }
-                } else {
-                  no.field_p = null;
-                  cr.f((byte) -55);
-                  return true;
-                }
-              } else {
-                if (!na.j((byte) -60)) {
-                  if (qa.a(param3, param0, (byte) 108, param2)) {
-                    return true;
-                  } else {
-                    return false;
-                  }
-                } else {
-                  return true;
-                }
-              }
-            } else {
-              cr.f((byte) -123);
-              return true;
-            }
-          } else {
+        if (null != bm.field_d) {
+          if (!bm.field_d.b(2099)) {
             if (no.field_p != null) {
               if (!no.field_p.d((byte) 119)) {
                 if (!na.j((byte) -60)) {
-                  if (qa.a(param3, param0, (byte) 108, param2)) {
+                  if (qa.a(15, 13, (byte) 108, 12)) {
                     return true;
                   } else {
                     return false;
@@ -94,7 +62,7 @@ final class oi {
               }
             } else {
               if (!na.j((byte) -60)) {
-                if (qa.a(param3, param0, (byte) 108, param2)) {
+                if (qa.a(15, 13, (byte) 108, 12)) {
                   return true;
                 } else {
                   return false;
@@ -103,9 +71,38 @@ final class oi {
                 return true;
               }
             }
+          } else {
+            cr.f((byte) -123);
+            return true;
           }
         } else {
-          return true;
+          if (no.field_p != null) {
+            if (!no.field_p.d((byte) 119)) {
+              if (!na.j((byte) -60)) {
+                if (qa.a(15, 13, (byte) 108, 12)) {
+                  return true;
+                } else {
+                  return false;
+                }
+              } else {
+                return true;
+              }
+            } else {
+              no.field_p = null;
+              cr.f((byte) -55);
+              return true;
+            }
+          } else {
+            if (!na.j((byte) -60)) {
+              if (qa.a(15, 13, (byte) 108, 12)) {
+                return true;
+              } else {
+                return false;
+              }
+            } else {
+              return true;
+            }
+          }
         }
     }
 

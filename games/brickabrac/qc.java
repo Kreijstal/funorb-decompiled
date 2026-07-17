@@ -12,7 +12,7 @@ final class qc extends nm {
     static mf field_k;
     int field_m;
 
-    final static oh a(String param0, int param1) {
+    final static oh a(String param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -68,13 +68,13 @@ final class qc extends nm {
         }
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_n = null;
         field_l = null;
         field_k = null;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         try {
             int var1_int = 0;
             RuntimeException var1 = null;
@@ -99,51 +99,47 @@ final class qc extends nm {
                     break L2;
                   }
                 }
-                if (param0 == 14676) {
-                  L3: {
-                    if (oc.field_k == null) {
-                      break L3;
-                    } else {
-                      {
-                        L4: {
-                          oc.field_k.a(false);
-                          break L4;
-                        }
+                L3: {
+                  if (oc.field_k == null) {
+                    break L3;
+                  } else {
+                    {
+                      L4: {
+                        oc.field_k.a(false);
+                        break L4;
                       }
-                      break L3;
                     }
+                    break L3;
                   }
-                  L6: {
-                    if (null != v.field_g) {
-                      var1_int = 0;
-                      L7: while (true) {
-                        if (var1_int >= v.field_g.length) {
-                          break L6;
-                        } else {
-                          L8: {
-                            if (null == v.field_g[var1_int]) {
-                              break L8;
-                            } else {
-                              break L8;
-                            }
-                          }
-                          var1_int++;
-                          continue L7;
-                        }
-                      }
-                    } else {
-                      break L6;
-                    }
-                  }
-                  break L0;
-                } else {
-                  return;
                 }
+                L6: {
+                  if (null != v.field_g) {
+                    var1_int = 0;
+                    L7: while (true) {
+                      if (var1_int >= v.field_g.length) {
+                        break L6;
+                      } else {
+                        L8: {
+                          if (null == v.field_g[var1_int]) {
+                            break L8;
+                          } else {
+                            break L8;
+                          }
+                        }
+                        var1_int++;
+                        continue L7;
+                      }
+                    }
+                  } else {
+                    break L6;
+                  }
+                }
+                break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = (RuntimeException) (Object) decompiledCaughtException;
-              throw qb.a((Throwable) (Object) var1, "qc.E(" + param0 + 41);
+              throw qb.a((Throwable) (Object) var1, "qc.E(" + 14676 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -152,27 +148,25 @@ final class qc extends nm {
         }
     }
 
-    final static void c(int param0) {
+    final static void c() {
         RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
-            if (m.a(param0 ^ 27146)) {
-              boolean discarded$17 = wo.field_b.a(rj.field_b, fh.field_g, param0 + -27268, true);
-              if (param0 == 27144) {
-                wo.field_b.i(82);
-                L1: while (true) {
-                  if (!jl.a((byte) 5)) {
-                    break L0;
-                  } else {
-                    boolean discarded$18 = wo.field_b.a(go.field_b, dc.field_b, true);
-                    continue L1;
-                  }
+            int discarded$19 = 2;
+            if (m.a()) {
+              boolean discarded$20 = wo.field_b.a(rj.field_b, fh.field_g, -124, true);
+              wo.field_b.i(82);
+              L1: while (true) {
+                int discarded$21 = 5;
+                if (!jl.a()) {
+                  break L0;
+                } else {
+                  boolean discarded$22 = wo.field_b.a(go.field_b, dc.field_b, true);
+                  continue L1;
                 }
-              } else {
-                return;
               }
             } else {
               L2: {
@@ -194,7 +188,7 @@ final class qc extends nm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.a((Throwable) (Object) var1, "qc.D(" + param0 + 41);
+          throw qb.a((Throwable) (Object) var1, "qc.D(" + 27144 + 41);
         }
     }
 
@@ -202,7 +196,7 @@ final class qc extends nm {
         this(param0, -1);
     }
 
-    final static String a(long param0, byte param1) {
+    final static String a(long param0) {
         long var7 = 0L;
         int var9 = 0;
         int var10 = 0;

@@ -98,42 +98,34 @@ final class fj {
           break L10;
         }
         L12: {
-          if (param0 > 116) {
-            break L12;
-          } else {
-            field_c = null;
-            break L12;
-          }
-        }
-        L13: {
-          L14: {
+          L13: {
             if (null == lk.field_Tb) {
-              break L14;
+              break L13;
             } else {
               if (lk.field_Tb.length < param1 + param2) {
-                break L14;
-              } else {
                 break L13;
+              } else {
+                break L12;
               }
             }
           }
           lk.field_Tb = new int[2 * (param2 - -param1)];
-          break L13;
+          break L12;
         }
-        L15: {
-          L16: {
+        L14: {
+          L15: {
             if (null == jg.field_b) {
-              break L16;
+              break L15;
             } else {
               if (param2 > jg.field_b.length) {
-                break L16;
-              } else {
                 break L15;
+              } else {
+                break L14;
               }
             }
           }
           jg.field_b = new boolean[param2 * 2];
-          break L15;
+          break L14;
         }
         dj.field_c = -2147483648;
         ka.field_m = 0;
@@ -142,16 +134,13 @@ final class fj {
         bl.field_F = -2147483648;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
-        if (param0 > -47) {
-            field_a = null;
-        }
         field_b = null;
     }
 
-    final static tf[] a(hg param0, int param1) {
+    final static tf[] a(hg param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

@@ -90,7 +90,7 @@ final class wa {
         ((wa) this).field_c.field_t = ((wa) this).field_c;
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_b = null;
         field_d = null;
     }

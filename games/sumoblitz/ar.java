@@ -20,7 +20,7 @@ class ar extends wp {
         }
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         field_E = null;
         field_M = null;
         field_N = null;
@@ -98,7 +98,7 @@ class ar extends wp {
         }
     }
 
-    final static void e(byte param0) {
+    final static void e() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -431,14 +431,11 @@ class ar extends wp {
         if (!(param3 == 0)) {
             return;
         }
-        de var9 = (de) (Object) ((ar) this).field_w;
-        if (param2 >= -35) {
-            field_L = null;
-        }
+        de var5 = (de) (Object) ((ar) this).field_w;
         s var6 = ((ar) this).field_J;
         if (var6 != null) {
-            var7 = var9.a(param0, (pk) this, 16098);
-            var8 = var9.b(param1, (pk) this, 0);
+            var7 = var5.a(param0, (pk) this, 16098);
+            var8 = var5.b(param1, (pk) this, 0);
             do {
                 pp.a(-2 + (var6.field_l + var8), var6.field_t + 2, -13181, -2 + (var7 + var6.field_s), 2 + var6.field_p);
                 var6 = var6.field_r;

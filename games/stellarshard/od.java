@@ -34,15 +34,12 @@ final class od extends ah {
         int var5 = fj.field_k.get(2);
         int var6 = fj.field_k.get(1);
         int var7 = fj.field_k.get(11);
-        if (param0 != 10) {
-            od.d((byte) 71);
-        }
         int var8 = fj.field_k.get(12);
         int var9 = fj.field_k.get(13);
         return rl.field_c[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + ng.field_a[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
-    final static boolean a(char param0, boolean param1) {
+    final static boolean a(char param0) {
         int stackIn_11_0 = 0;
         int stackOut_10_0 = 0;
         int stackOut_9_0 = 0;
@@ -276,7 +273,8 @@ final class od extends ah {
                   }
                 }
               } else {
-                ((od) this).field_u = qj.a('<', param0.e((byte) 106), 10287);
+                int discarded$1 = 10287;
+                ((od) this).field_u = qj.a('<', param0.e((byte) 106));
                 break L1;
               }
             }

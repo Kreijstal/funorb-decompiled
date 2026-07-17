@@ -64,9 +64,10 @@ final class ef {
         String stackOut_9_2 = null;
         try {
           L0: {
-            var5_int = -125 % ((param0 - -63) / 57);
+            var5_int = -1;
             if (kk.a(param2, 1, param1, param3)) {
-              stackOut_3_0 = rj.a(param4.b(5, param1, param3), 18118);
+              int discarded$2 = 18118;
+              stackOut_3_0 = rj.a(param4.b(5, param1, param3));
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -80,7 +81,7 @@ final class ef {
           L1: {
             var5 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var5;
-            stackOut_5_1 = new StringBuilder().append("ef.E(").append(param0).append(44).append(param1).append(44);
+            stackOut_5_1 = new StringBuilder().append("ef.E(").append(61).append(44).append(param1).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -137,7 +138,7 @@ final class ef {
         throw new IllegalStateException();
     }
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         if (sp.field_c == null) {
             return false;
         }
@@ -148,14 +149,14 @@ final class ef {
     }
 
     final static String a(int param0, int param1, CharSequence[] param2, int param3) {
-        RuntimeException var4 = null;
-        CharSequence var4_ref = null;
+        CharSequence var4 = null;
         int var4_int = 0;
+        RuntimeException var4_ref = null;
         int var5 = 0;
         int var6_int = 0;
         StringBuilder var6 = null;
-        int var7 = 0;
         CharSequence var7_ref_CharSequence = null;
+        int var7 = 0;
         CharSequence var8 = null;
         int var9 = 0;
         CharSequence var10 = null;
@@ -192,9 +193,9 @@ final class ef {
               return stackIn_4_0;
             } else {
               if (param3 == 1) {
-                var10 = param2[param0];
-                var4_ref = var10;
-                if (var4_ref != null) {
+                var10 = param2[0];
+                var4 = var10;
+                if (var4 != null) {
                   stackOut_10_0 = ((Object) (Object) var10).toString();
                   stackIn_11_0 = stackOut_10_0;
                   return stackIn_11_0;
@@ -204,14 +205,14 @@ final class ef {
                   return stackIn_9_0;
                 }
               } else {
-                var4_int = param3 + param0;
+                var4_int = param3;
                 var5 = 0;
-                var6_int = param0;
+                var6_int = 0;
                 L1: while (true) {
                   if (var4_int <= var6_int) {
                     L2: {
                       var6 = new StringBuilder(var5);
-                      var7 = param0;
+                      var7 = 0;
                       if (var4_int <= var7) {
                         break L2;
                       } else {
@@ -232,7 +233,7 @@ final class ef {
                         break L2;
                       }
                     }
-                    var7 = 74 % ((param1 - -43) / 59);
+                    var7 = 0;
                     stackOut_28_0 = var6.toString();
                     stackIn_29_0 = stackOut_28_0;
                     break L0;
@@ -259,9 +260,9 @@ final class ef {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
-            var4 = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) var4;
-            stackOut_30_1 = new StringBuilder().append("ef.D(").append(param0).append(44).append(param1).append(44);
+            var4_ref = decompiledCaughtException;
+            stackOut_30_0 = (RuntimeException) var4_ref;
+            stackOut_30_1 = new StringBuilder().append("ef.D(").append(0).append(44).append(39).append(44);
             stackIn_32_0 = stackOut_30_0;
             stackIn_32_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
@@ -289,7 +290,7 @@ final class ef {
         return stackIn_29_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_g = null;
         field_b = null;

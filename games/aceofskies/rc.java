@@ -88,7 +88,8 @@ final class rc extends hh {
               }
             }
           }
-          rl.a((byte) 0);
+          int discarded$2 = 0;
+          rl.a();
           ob.field_d = 11;
           break L0;
         }

@@ -9,7 +9,7 @@ class uk extends gb {
     static boolean[] field_w;
 
     final static boolean b(int param0, int param1) {
-        if (0 != (param0 << param1 & hj.field_a)) {
+        if (0 != (1 << param1 & hj.field_a)) {
           return true;
         } else {
           if (cf.a(qc.field_gb[param1], (byte) 118)) {

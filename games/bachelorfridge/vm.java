@@ -252,12 +252,14 @@ abstract class vm {
                 var5_int = mda.a((-param1 + param2) * 3, 16);
                 var6 = param1 * 3;
                 var7 = var5_int + -10;
-                qh.c((byte) 89);
+                int discarded$2 = 89;
+                qh.c();
                 if (param3.field_n <= 0) {
                   break L1;
                 } else {
                   if (param3.field_d != null) {
-                    ej.a(-11163);
+                    int discarded$3 = -11163;
+                    ej.a();
                     break L1;
                   } else {
                     break L1;
@@ -561,13 +563,13 @@ abstract class vm {
 
     abstract void c(int param0);
 
-    public static void a(byte param0) {
+    public static void a() {
         try {
             field_i = null;
-            int var1_int = -127 % ((param0 - 71) / 46);
+            int var1_int = -1;
             field_g = null;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "vm.H(" + param0 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "vm.H(" + -87 + 41);
         }
     }
 

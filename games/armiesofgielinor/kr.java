@@ -350,24 +350,17 @@ final class kr extends oj {
         var13 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
-            L1: {
-              t.field_d = fk.a("frame_top", (byte) -124, param2, "commonui");
-              ip.field_c = fk.a("frame_bottom", (byte) -125, param2, "commonui");
-              gt.field_e = ic.a("jagex_logo_grey", (byte) 51, "commonui", param2);
-              bb.field_b = fk.a("button", (byte) -124, param2, "commonui");
-              db.field_a = ac.a(param2, "validation", (byte) -4, "commonui");
-              gl.field_e = (ka) (Object) it.a("arezzo12", param2, param3, (byte) -87, "commonui");
-              ArmiesOfGielinor.field_J = (ka) (Object) it.a("arezzo14", param2, param3, (byte) -87, "commonui");
-              bv.field_t = (ka) (Object) it.a("arezzo14bold", param2, param3, (byte) -87, "commonui");
-              var4_ref = new wk(param0.a("", 45, "button.gif"), (java.awt.Component) (Object) si.field_b);
-              if (!param1) {
-                break L1;
-              } else {
-                kr.g(90);
-                break L1;
-              }
-            }
-            ru discarded$1 = pv.a("commonui", "dropdown", param2, 24914);
+            t.field_d = fk.a("frame_top", (byte) -124, param2, "commonui");
+            ip.field_c = fk.a("frame_bottom", (byte) -125, param2, "commonui");
+            gt.field_e = ic.a("jagex_logo_grey", (byte) 51, "commonui", param2);
+            bb.field_b = fk.a("button", (byte) -124, param2, "commonui");
+            db.field_a = ac.a(param2, "validation", (byte) -4, "commonui");
+            gl.field_e = (ka) (Object) it.a("arezzo12", param2, param3, (byte) -87, "commonui");
+            ArmiesOfGielinor.field_J = (ka) (Object) it.a("arezzo14", param2, param3, (byte) -87, "commonui");
+            bv.field_t = (ka) (Object) it.a("arezzo14bold", param2, param3, (byte) -87, "commonui");
+            var4_ref = new wk(param0.a("", 45, "button.gif"), (java.awt.Component) (Object) si.field_b);
+            int discarded$3 = 24914;
+            ru discarded$4 = pv.a("commonui", "dropdown", param2);
             var5 = lo.a("screen_options", -28106, "commonui", param2);
             oa.field_H = new ru[4];
             dq.field_e = new ru[4];
@@ -376,21 +369,21 @@ final class kr extends oj {
             var7 = new int[4][];
             var7[0] = var5[0].field_j;
             var8 = 1;
-            L2: while (true) {
-              L3: {
-                L4: {
+            L1: while (true) {
+              L2: {
+                L3: {
                   if (~var8 <= ~var7.length) {
-                    break L4;
+                    break L3;
                   } else {
                     var7[var8] = (int[]) var7[0].clone();
                     var8++;
                     if (var13 != 0) {
-                      break L3;
+                      break L2;
                     } else {
                       if (var13 == 0) {
-                        continue L2;
+                        continue L1;
                       } else {
-                        break L4;
+                        break L3;
                       }
                     }
                   }
@@ -399,60 +392,61 @@ final class kr extends oj {
                 var7[2][var8] = 16777215;
                 var7[1][var8] = 2394342;
                 var7[3][var8] = 4767999;
-                break L3;
+                break L2;
               }
               var9 = 0;
-              L5: while (true) {
-                L6: {
-                  L7: {
+              L4: while (true) {
+                L5: {
+                  L6: {
                     if (var9 >= 3) {
-                      break L7;
+                      break L6;
                     } else {
                       var10 = var6[var9];
                       stackOut_13_0 = 0;
                       stackIn_23_0 = stackOut_13_0;
                       stackIn_14_0 = stackOut_13_0;
                       if (var13 != 0) {
-                        break L6;
+                        break L5;
                       } else {
                         var11_int = stackIn_14_0;
-                        L8: while (true) {
-                          L9: {
-                            L10: {
+                        L7: while (true) {
+                          L8: {
+                            L9: {
                               if (~var10.length >= ~var11_int) {
-                                break L10;
+                                break L9;
                               } else {
                                 var10[var11_int] = vf.a(var7[var11_int], -13546, var5[var9]);
                                 var11_int++;
                                 if (var13 != 0) {
-                                  break L9;
+                                  break L8;
                                 } else {
                                   if (var13 == 0) {
-                                    continue L8;
+                                    continue L7;
                                   } else {
-                                    break L10;
+                                    break L9;
                                   }
                                 }
                               }
                             }
                             var9++;
-                            break L9;
+                            break L8;
                           }
                           if (var13 == 0) {
-                            continue L5;
+                            continue L4;
                           } else {
-                            break L7;
+                            break L6;
                           }
                         }
                       }
                     }
                   }
                   var9 = var4_ref.field_v;
-                  rq.a((byte) -56);
+                  int discarded$5 = -56;
+                  rq.a();
                   var4_ref.b();
                   stackOut_22_0 = 0;
                   stackIn_23_0 = stackOut_22_0;
-                  break L6;
+                  break L5;
                 }
                 qn.c(stackIn_23_0, 0, qn.field_l, qn.field_g);
                 var10_ref = new wk(var9, var9);
@@ -472,7 +466,7 @@ final class kr extends oj {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L11: {
+          L10: {
             var4 = decompiledCaughtException;
             stackOut_25_0 = (RuntimeException) var4;
             stackOut_25_1 = new StringBuilder().append("kr.D(");
@@ -487,7 +481,7 @@ final class kr extends oj {
               stackIn_29_0 = stackOut_28_0;
               stackIn_29_1 = stackOut_28_1;
               stackIn_29_2 = stackOut_28_2;
-              break L11;
+              break L10;
             } else {
               stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
               stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
@@ -495,12 +489,12 @@ final class kr extends oj {
               stackIn_29_0 = stackOut_26_0;
               stackIn_29_1 = stackOut_26_1;
               stackIn_29_2 = stackOut_26_2;
-              break L11;
+              break L10;
             }
           }
-          L12: {
+          L11: {
             stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-            stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(44).append(param1).append(44);
+            stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(44).append(0).append(44);
             stackIn_32_0 = stackOut_29_0;
             stackIn_32_1 = stackOut_29_1;
             stackIn_30_0 = stackOut_29_0;
@@ -512,7 +506,7 @@ final class kr extends oj {
               stackIn_33_0 = stackOut_32_0;
               stackIn_33_1 = stackOut_32_1;
               stackIn_33_2 = stackOut_32_2;
-              break L12;
+              break L11;
             } else {
               stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
               stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
@@ -520,10 +514,10 @@ final class kr extends oj {
               stackIn_33_0 = stackOut_30_0;
               stackIn_33_1 = stackOut_30_1;
               stackIn_33_2 = stackOut_30_2;
-              break L12;
+              break L11;
             }
           }
-          L13: {
+          L12: {
             stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
             stackOut_33_1 = ((StringBuilder) (Object) stackIn_33_1).append(stackIn_33_2).append(44);
             stackIn_36_0 = stackOut_33_0;
@@ -537,7 +531,7 @@ final class kr extends oj {
               stackIn_37_0 = stackOut_36_0;
               stackIn_37_1 = stackOut_36_1;
               stackIn_37_2 = stackOut_36_2;
-              break L13;
+              break L12;
             } else {
               stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
               stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
@@ -545,7 +539,7 @@ final class kr extends oj {
               stackIn_37_0 = stackOut_34_0;
               stackIn_37_1 = stackOut_34_1;
               stackIn_37_2 = stackOut_34_2;
-              break L13;
+              break L12;
             }
           }
           throw ig.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + 41);
@@ -1068,7 +1062,8 @@ final class kr extends oj {
         field_D = new bo();
         gb.a(24, 0, 180, 460, 160, 465, new int[12], -59);
         gb.a(30, 23, 180, 460, 160, 320, new int[5], -52);
-        bt.a(26);
+        int discarded$0 = 26;
+        bt.a();
         gb.a(30, 1, 180, 460, 100, 400, new int[8], -90);
         gb.a(30, 24, 180, 460, 100, 400, new int[9], -43);
         gb.a(30, 2, 180, 460, 100, 400, new int[6], -75);
@@ -1083,7 +1078,8 @@ final class kr extends oj {
         gb.a(30, 12, 60, 580, 440, 470, new int[4], -114);
         gb.a(30, 13, 60, 580, 440, 470, new int[1], -78);
         gb.a(30, 20, 60, 580, 440, 470, new int[4], -95);
-        vt.a(-120);
+        int discarded$1 = -120;
+        vt.a();
         gb.a(30, 8, 280, 360, 438, 440, new int[2], -119);
         gb.a(30, 9, 280, 360, 438, 440, new int[1], -27);
         gb.a(30, 10, 180, 460, 400, 460, new int[2], -70);

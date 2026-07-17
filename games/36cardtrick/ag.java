@@ -100,37 +100,19 @@ final class ag implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     }
 
     final static void a(int param0, int param1) {
-        if (param1 == 0) {
-          if (fe.field_a == param0) {
-            return;
-          } else {
-            L0: {
-              fe.field_a = param0;
-              if (null != vc.field_a) {
-                vc.field_a.a(param0 * 64 / 80);
-                break L0;
-              } else {
-                break L0;
-              }
-            }
-            return;
-          }
+        if (fe.field_a == param0) {
+          return;
         } else {
-          field_f = -41;
-          if (fe.field_a == param0) {
-            return;
-          } else {
-            L1: {
-              fe.field_a = param0;
-              if (null != vc.field_a) {
-                vc.field_a.a(param0 * 64 / 80);
-                break L1;
-              } else {
-                break L1;
-              }
+          L0: {
+            fe.field_a = param0;
+            if (null != vc.field_a) {
+              vc.field_a.a(param0 * 64 / 80);
+              break L0;
+            } else {
+              break L0;
             }
-            return;
           }
+          return;
         }
     }
 
@@ -230,7 +212,8 @@ final class ag implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         if (!(null == pc.field_a)) {
             pc.field_a.s(2);
         }
-        String var1 = hh.b((byte) 23);
+        int discarded$0 = 23;
+        String var1 = hh.b();
         i.field_a = new ak(var1, (String) null, true, false, false);
         sd.field_c.b((lk) (Object) vb.field_h, (byte) -71);
         vb.field_h.c((lk) (Object) i.field_a, (byte) 33);
@@ -406,7 +389,7 @@ final class ag implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
         field_g = null;

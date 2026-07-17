@@ -7,7 +7,7 @@ final class pl {
     int field_d;
     static String field_b;
 
-    final static int a(byte param0) {
+    final static int a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -64,9 +64,6 @@ final class pl {
     public static void a(int param0) {
         field_c = null;
         field_b = null;
-        if (param0 != 0) {
-            field_a = 0.024353690445423126f;
-        }
     }
 
     static {

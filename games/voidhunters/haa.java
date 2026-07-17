@@ -5,7 +5,7 @@ final class haa extends rqa {
     static String field_o;
     static String field_p;
 
-    final static boolean a(char param0, boolean param1) {
+    final static boolean a(char param0) {
         if (param0 < 48) {
             return false;
         }
@@ -41,7 +41,8 @@ final class haa extends rqa {
               if (param1 < -119) {
                 break L1;
               } else {
-                boolean discarded$2 = haa.a('ﾛ', true);
+                int discarded$4 = 1;
+                boolean discarded$5 = haa.a('ﾛ');
                 break L1;
               }
             }
@@ -82,7 +83,7 @@ final class haa extends rqa {
         return stackIn_3_0;
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_o = null;
         field_p = null;
     }

@@ -18,7 +18,7 @@ final class ig {
                 if (gk.field_a[param3] <= gk.field_a[param1]) {
                   var4 = cj.field_b[param3] + fb.field_m[param3] + k.field_i[param3];
                   var5 = fb.field_m[param1] + (k.field_i[param1] + cj.field_b[param1]);
-                  var6 = 76 % ((-38 - param2) / 45);
+                  var6 = 0;
                   if (var4 < var5) {
                     return true;
                   } else {
@@ -53,7 +53,7 @@ final class ig {
                 if (hg.field_a[param3] <= hg.field_a[param1]) {
                   var4 = cj.field_b[param3] + fb.field_m[param3] + k.field_i[param3];
                   var5 = fb.field_m[param1] + (k.field_i[param1] + cj.field_b[param1]);
-                  var6 = 76 % ((-38 - param2) / 45);
+                  var6 = 0;
                   if (var4 < var5) {
                     return true;
                   } else {
@@ -85,7 +85,7 @@ final class ig {
         }
     }
 
-    final static sl a(String param0, int param1, boolean param2) {
+    final static sl a(String param0, int param1) {
         sl var3 = null;
         RuntimeException var3_ref = null;
         sl stackIn_1_0 = null;

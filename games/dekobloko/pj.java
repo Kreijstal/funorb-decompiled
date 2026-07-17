@@ -25,7 +25,7 @@ final class pj extends sf {
         return param0 ^ param1;
     }
 
-    public static void h(byte param0) {
+    public static void h() {
         field_N = null;
         field_G = null;
         field_L = null;
@@ -55,7 +55,7 @@ final class pj extends sf {
         return ac.field_A;
     }
 
-    final static void a(ve param0, byte param1) {
+    final static void a(ve param0) {
         ve var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -137,9 +137,6 @@ final class pj extends sf {
     final static void a(int param0, int param1, int param2) {
         ul.field_d = param2;
         qk.field_d = param1;
-        if (param0 != 31004) {
-            int discarded$0 = pj.d(-44);
-        }
     }
 
     pj() {

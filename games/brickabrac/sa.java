@@ -8,11 +8,12 @@ abstract class sa extends qg implements vc {
 
     public abstract void a(boolean param0, byte param1);
 
-    private final void j(boolean param0) {
+    private final void j() {
         int var3 = 0;
         var3 = BrickABrac.field_J ? 1 : 0;
         L0: while (true) {
-          if (!nl.a(ch.field_g, (byte) 64)) {
+          int discarded$8 = 64;
+          if (!nl.a(ch.field_g)) {
             return;
           } else {
             if (!((sa) this).a(jl.field_e, (byte) 47, si.field_a)) {
@@ -38,10 +39,11 @@ abstract class sa extends qg implements vc {
         int stackOut_8_0 = 0;
         int stackOut_9_0 = 0;
         if (dc.field_b == 13) {
-          th.b(param1 ^ 103);
+          int discarded$2 = 1;
+          th.b();
           return true;
         } else {
-          if (dc.field_b == param1) {
+          if (dc.field_b == 102) {
             hd.field_a.f((byte) 41);
             return true;
           } else {
@@ -74,13 +76,14 @@ abstract class sa extends qg implements vc {
 
     public abstract boolean a(int param0, char param1, int param2);
 
-    private final void i(boolean param0) {
+    private final void i() {
     }
 
     final void g(int param0) {
         int var3 = 0;
         int var4 = BrickABrac.field_J ? 1 : 0;
-        java.awt.Canvas var2 = gd.a((byte) 0);
+        int discarded$0 = 0;
+        java.awt.Canvas var2 = gd.a();
         if (!(!r.c((byte) -84))) {
             pk.a((byte) 68, var2, mj.a((byte) -81));
             return;
@@ -102,10 +105,15 @@ abstract class sa extends qg implements vc {
             field_E = false;
         }
         if (pe.field_i) {
-            boolean discarded$1 = jj.a((byte) -123);
-            ck.a(var2, 0, 14209, 0);
+            int discarded$2 = -123;
+            boolean discarded$3 = jj.a();
+            int discarded$4 = 0;
+            int discarded$5 = 14209;
+            int discarded$6 = 0;
+            ck.a(var2);
         } else {
-            this.i(false);
+            int discarded$7 = 0;
+            this.i();
         }
     }
 
@@ -129,7 +137,8 @@ abstract class sa extends qg implements vc {
                 ch.field_g[9] = -1;
                 ch.field_g[10] = -1;
                 kp.field_d = new Vector();
-                op.a((vc) this, 0);
+                int discarded$0 = 0;
+                op.a((vc) this);
             } catch (RuntimeException runtimeException) {
                 throw qb.a((Throwable) (Object) runtimeException, "sa.HB(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
             }
@@ -153,7 +162,7 @@ abstract class sa extends qg implements vc {
         }
     }
 
-    private final void r(int param0) {
+    private final void r() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -180,13 +189,16 @@ abstract class sa extends qg implements vc {
         L0: {
           var5 = BrickABrac.field_J ? 1 : 0;
           var2 = 0;
-          if (m.a(2)) {
+          int discarded$6 = 2;
+          if (m.a()) {
             ((sa) this).a(false, (byte) 28);
             break L0;
           } else {
-            if (!lg.a(9)) {
+            int discarded$7 = 9;
+            if (!lg.a()) {
               if (!dj.c((byte) -33)) {
-                if (!uc.f(21651)) {
+                int discarded$8 = 21651;
+                if (!uc.f()) {
                   if (me.b(-34)) {
                     nk.a(114);
                     break L0;
@@ -194,7 +206,8 @@ abstract class sa extends qg implements vc {
                     var2 = 1;
                     var3 = -1;
                     L1: while (true) {
-                      if (!jl.a((byte) 5)) {
+                      int discarded$9 = 5;
+                      if (!jl.a()) {
                         break L0;
                       } else {
                         L2: {
@@ -244,7 +257,8 @@ abstract class sa extends qg implements vc {
                     break L0;
                   } else {
                     L5: {
-                      var3 = vh.h(0);
+                      int discarded$10 = 0;
+                      var3 = vh.h();
                       if (1 != var3) {
                         break L5;
                       } else {
@@ -312,7 +326,8 @@ abstract class sa extends qg implements vc {
                 break L0;
               } else {
                 L10: {
-                  var3 = md.f((byte) 124);
+                  int discarded$11 = 124;
+                  var3 = md.f();
                   if (var3 == 2) {
                     nc.b(102);
                     break L10;
@@ -375,9 +390,9 @@ abstract class sa extends qg implements vc {
         char[] var6 = new char[param2];
         char[] var3 = var6;
         for (var4 = 0; param2 > var4; var4++) {
-            var6[var4] = param0;
+            var6[var4] = '*';
         }
-        var4 = -55 / ((param1 - 75) / 40);
+        var4 = -55;
         return new String(var3);
     }
 
@@ -540,10 +555,10 @@ abstract class sa extends qg implements vc {
     }
 
     final void f(int param0) {
+        e var2_ref_e = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        e var5 = null;
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
@@ -560,7 +575,8 @@ abstract class sa extends qg implements vc {
           } else {
             if (ua.field_d.field_e) {
               nc.b(84);
-              ee.c(4);
+              int discarded$8 = 4;
+              ee.c();
               break L0;
             } else {
               break L0;
@@ -616,7 +632,8 @@ abstract class sa extends qg implements vc {
           }
         }
         L5: {
-          this.j(true);
+          int discarded$9 = 1;
+          this.j();
           if (un.field_f) {
             if (!og.h(-26090)) {
               if (al.field_j.a(23570)) {
@@ -628,7 +645,8 @@ abstract class sa extends qg implements vc {
                 break L5;
               }
             } else {
-              this.r(10);
+              int discarded$10 = 10;
+              this.r();
               break L5;
             }
           } else {
@@ -647,9 +665,11 @@ abstract class sa extends qg implements vc {
             break L6;
           } else {
             L7: while (true) {
-              var5 = (e) (Object) lp.field_wb.c(3);
-              if (var5 != null) {
-                df.a(var5, 4, -161);
+              var2_ref_e = (e) (Object) lp.field_wb.c(3);
+              if (var2_ref_e != null) {
+                int discarded$11 = -161;
+                int discarded$12 = 4;
+                df.a(var2_ref_e);
                 continue L7;
               } else {
                 break L6;
@@ -658,8 +678,11 @@ abstract class sa extends qg implements vc {
           }
         }
         L8: {
-          fk.a(14114);
-          tm.a((byte) 110, 0);
+          int discarded$13 = 14114;
+          fk.a();
+          int discarded$14 = 0;
+          int discarded$15 = 110;
+          tm.a();
           if (!ui.a(false)) {
             break L8;
           } else {

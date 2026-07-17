@@ -12,14 +12,9 @@ final class pi {
         la.field_b = new vn();
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_d = null;
-        if (param0 > -19) {
-            pi.a(true);
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 

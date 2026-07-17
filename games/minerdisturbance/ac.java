@@ -8,10 +8,12 @@ final class ac {
     final static void a(byte param0) {
         if (param0 != -116) {
             ac.a((byte) 39);
-            mk.a(false, al.field_s, 0);
+            int discarded$0 = 0;
+            mk.a(false, al.field_s);
             return;
         }
-        mk.a(false, al.field_s, 0);
+        int discarded$1 = 0;
+        mk.a(false, al.field_s);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {

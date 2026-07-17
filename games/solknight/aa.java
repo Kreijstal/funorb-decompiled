@@ -6,23 +6,18 @@ abstract class aa {
 
     final static void a(byte param0, int param1) {
         jf.field_b = di.field_j[param1];
-        if (param0 < 25) {
-            return;
-        }
         wa.field_a = qj.field_a[param1];
         uf.field_r = qb.field_W[param1];
     }
 
     abstract wb a(int param0);
 
-    final static void a(int param0, byte param1, mg param2, int param3, int param4, o[] param5, int param6, int param7, int param8, mg param9, o[] param10, int param11, int param12, int param13) {
-        if (param1 != -93) {
-            return;
-        }
+    final static void a(int param0, byte param1, mg param2, int param3, int param4, o[] param5, int param6, int param7, int param8, mg param9, o[] param10, int param11) {
         try {
-            sf.b(false);
+            int discarded$0 = 0;
+            sf.b();
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "aa.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 44 + param7 + 44 + param8 + 44 + (param9 != null ? "{...}" : "null") + 44 + (param10 != null ? "{...}" : "null") + 44 + param11 + 44 + param12 + 44 + 240 + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "aa.D(" + param0 + 44 + -93 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + 8 + 44 + (param5 != null ? "{...}" : "null") + 44 + 320 + 44 + 8 + 44 + param8 + 44 + (param9 != null ? "{...}" : "null") + 44 + (param10 != null ? "{...}" : "null") + 44 + param11 + 44 + 2 + 44 + 240 + 41);
         }
     }
 

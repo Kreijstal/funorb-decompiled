@@ -12,7 +12,7 @@ final class tc {
     private int field_b;
     private boolean field_a;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_d = null;
     }
 
@@ -27,7 +27,8 @@ final class tc {
     private final void b(int param0, int param1) {
         int[] var3 = null;
         int[] var4 = null;
-        var4 = new int[this.a(param1, (byte) -41)];
+        int discarded$2 = -41;
+        var4 = new int[this.a(param1)];
         var3 = var4;
         if (param0 != 28083) {
           ((tc) this).field_b = -28;
@@ -118,7 +119,7 @@ final class tc {
         }
     }
 
-    private final int a(int param0, byte param1) {
+    private final int a(int param0) {
         int var3 = 0;
         var3 = ((tc) this).field_e.length;
         L0: while (true) {

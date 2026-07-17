@@ -18,116 +18,104 @@ final class hl implements fp {
     private int field_m;
     static int field_n;
 
-    final static eo a(String param0, int param1) {
+    final static eo a(String param0) {
         Object var2 = null;
         eo var3 = null;
         String var4 = null;
         CharSequence var5 = null;
         CharSequence var6 = null;
         Object stackIn_2_0 = null;
-        eo stackIn_11_0 = null;
+        eo stackIn_12_0 = null;
         Object stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        Object stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
         Object stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
-        Object stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        Object stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        String stackIn_20_2 = null;
+        String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_15_0 = null;
-        eo stackOut_10_0 = null;
+        eo stackOut_11_0 = null;
         Object stackOut_1_0 = null;
+        Object stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
         Object stackOut_17_0 = null;
         StringBuilder stackOut_17_1 = null;
-        Object stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
-        Object stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
+        String stackOut_17_2 = null;
+        Object stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
         try {
-          L0: {
-            if (null != gd.field_c) {
-              L1: {
-                var5 = (CharSequence) (Object) param0;
-                var2 = (Object) (Object) hq.a(param1 ^ 123, var5);
-                if (var2 != null) {
-                  break L1;
-                } else {
-                  var2 = (Object) (Object) var5;
-                  break L1;
-                }
+          if (null != gd.field_c) {
+            L0: {
+              var5 = (CharSequence) (Object) param0;
+              var2 = (Object) (Object) hq.a(122, var5);
+              if (var2 != null) {
+                break L0;
+              } else {
+                var2 = (Object) (Object) var5;
+                break L0;
               }
-              var3 = (eo) (Object) gd.field_c.a((long)((String) var2).hashCode(), false);
-              L2: while (true) {
-                if (var3 == null) {
-                  if (param1 != 1) {
-                    int discarded$2 = hl.a(-34);
-                    stackOut_15_0 = null;
-                    stackIn_16_0 = stackOut_15_0;
-                    break L0;
-                  } else {
-                    return null;
-                  }
-                } else {
-                  L3: {
-                    var6 = (CharSequence) (Object) var3.field_Zb;
-                    var4 = hq.a(param1 ^ 104, var6);
-                    if (var4 != null) {
-                      break L3;
-                    } else {
-                      var4 = var3.field_Zb;
-                      break L3;
-                    }
-                  }
-                  if (!var4.equals(var2)) {
-                    var3 = (eo) (Object) gd.field_c.a(param1 ^ -98);
-                    continue L2;
-                  } else {
-                    stackOut_10_0 = (eo) var3;
-                    stackIn_11_0 = stackOut_10_0;
-                    return stackIn_11_0;
-                  }
-                }
-              }
-            } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
-              return (eo) (Object) stackIn_2_0;
             }
+            var3 = (eo) (Object) gd.field_c.a((long)((String) var2).hashCode(), false);
+            L1: while (true) {
+              if (var3 != null) {
+                L2: {
+                  var6 = (CharSequence) (Object) var3.field_Zb;
+                  var4 = hq.a(105, var6);
+                  if (var4 != null) {
+                    break L2;
+                  } else {
+                    var4 = var3.field_Zb;
+                    break L2;
+                  }
+                }
+                if (!var4.equals(var2)) {
+                  var3 = (eo) (Object) gd.field_c.a(-97);
+                  continue L1;
+                } else {
+                  stackOut_11_0 = (eo) var3;
+                  stackIn_12_0 = stackOut_11_0;
+                  return stackIn_12_0;
+                }
+              } else {
+                return null;
+              }
+            }
+          } else {
+            stackOut_1_0 = null;
+            stackIn_2_0 = stackOut_1_0;
+            return (eo) (Object) stackIn_2_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var2 = (Object) (Object) decompiledCaughtException;
-            stackOut_17_0 = var2;
-            stackOut_17_1 = new StringBuilder().append("hl.E(");
-            stackIn_19_0 = stackOut_17_0;
-            stackIn_19_1 = stackOut_17_1;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
+            stackOut_15_0 = var2;
+            stackOut_15_1 = new StringBuilder().append("hl.E(");
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
             if (param0 == null) {
-              stackOut_19_0 = stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
-              stackOut_19_2 = "null";
-              stackIn_20_0 = stackOut_19_0;
-              stackIn_20_1 = stackOut_19_1;
-              stackIn_20_2 = stackOut_19_2;
-              break L4;
+              stackOut_17_0 = stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
+              break L3;
             } else {
-              stackOut_18_0 = stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
-              stackOut_18_2 = "{...}";
-              stackIn_20_0 = stackOut_18_0;
-              stackIn_20_1 = stackOut_18_1;
-              stackIn_20_2 = stackOut_18_2;
-              break L4;
+              stackOut_16_0 = stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              break L3;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param1 + 41);
+          throw wm.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + 1 + 41);
         }
-        return (eo) (Object) stackIn_16_0;
     }
 
     public final void a(boolean param0, int param1, byte param2, int param3, ei param4) {
@@ -251,14 +239,11 @@ final class hl implements fp {
         field_a = null;
     }
 
-    final static int a(int param0) {
-        if (param0 != 23467) {
-            return 80;
-        }
+    final static int a() {
         return rl.field_a;
     }
 
-    final static void a(dd param0, int param1) {
+    final static void a(dd param0) {
         try {
             int var2_int = 0;
             mm.field_c = param0;

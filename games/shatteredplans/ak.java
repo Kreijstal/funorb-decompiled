@@ -68,7 +68,7 @@ final class ak extends jc {
         try {
           L0: {
             L1: {
-              if (param0 <= param1) {
+              if (param0 <= 0) {
                 break L1;
               } else {
                 if (param2.field_h <= param0) {
@@ -113,7 +113,8 @@ final class ak extends jc {
                       break L2;
                     }
                   }
-                  var5 = wi.a(stackIn_8_0, stackIn_8_1, (wa) (Object) stackIn_8_2, stackIn_8_3, stackIn_8_4, param2.field_g + param0, param1 + -3903);
+                  int discarded$1 = -3903;
+                  var5 = wi.a(stackIn_8_0, stackIn_8_1, (wa) (Object) stackIn_8_2, stackIn_8_3, stackIn_8_4, param2.field_g + param0);
                   param2.field_h = param0;
                   L3: while (true) {
                     L4: {
@@ -153,7 +154,7 @@ final class ak extends jc {
           L6: {
             var3 = decompiledCaughtException;
             stackOut_18_0 = (RuntimeException) var3;
-            stackOut_18_1 = new StringBuilder().append("ak.K(").append(param0).append(44).append(param1).append(44);
+            stackOut_18_1 = new StringBuilder().append("ak.K(").append(param0).append(44).append(0).append(44);
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -182,7 +183,7 @@ final class ak extends jc {
 
     final static void a(bc param0, byte param1, boolean param2, bc param3) {
         try {
-            int var4_int = -57 / ((param1 - 22) / 37);
+            int var4_int = 28;
             ba.a(n.field_o, dm.field_h, 124, fg.field_b, se.field_m, mc.field_o, l.field_a, oh.field_a, param2, (nq) (Object) ul.field_xb, ii.field_u, gn.field_w);
             bh.field_m = ae.a(93, "lobby", param3, "chatfilter");
             jf.field_d[1] = gm.field_o;
@@ -190,11 +191,11 @@ final class ak extends jc {
             jf.field_d[2] = ue.field_d;
             ne.a(param0, (byte) -64, (nq) (Object) ge.field_p);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "ak.I(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw r.a((Throwable) (Object) runtimeException, "ak.I(" + (param0 != null ? "{...}" : "null") + 44 + -81 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static void f(byte param0) {
+    final static void f() {
         L0: {
           if (di.field_m == 0) {
             sg.a(true, false, 50, vr.field_d, tk.field_C);
@@ -225,36 +226,28 @@ final class ak extends jc {
     }
 
     final static boolean a(boolean param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
-        L0: {
-          if (!ol.a(-126)) {
-            break L0;
-          } else {
-            L1: {
-              o.a(param3, param6, false, param2);
-              if (null == hp.field_m) {
-                break L1;
-              } else {
-                if (!hp.field_m.a(param6, param1, -16, param5, param3)) {
-                  break L1;
-                } else {
-                  ai.a(3);
-                  param3 = false;
-                  break L1;
-                }
-              }
-            }
+        if (!ol.a(-126)) {
+            return param3;
+        }
+        o.a(param3, param6, false, param2);
+        if (null == hp.field_m) {
             jl.a(-21, param3, param6);
             nf.a(-126, param4, param3);
             param3 = false;
-            break L0;
-          }
+            return param3;
         }
-        if (!param0) {
-          field_A = false;
-          return param3;
-        } else {
-          return param3;
+        if (!hp.field_m.a(param6, param1, -16, param5, param3)) {
+            jl.a(-21, param3, param6);
+            nf.a(-126, param4, param3);
+            param3 = false;
+            return param3;
         }
+        ai.a(3);
+        param3 = false;
+        jl.a(-21, param3, param6);
+        nf.a(-126, param4, param3);
+        param3 = false;
+        return param3;
     }
 
     final static void c(int param0, int param1) {
@@ -286,7 +279,7 @@ final class ak extends jc {
         }
     }
 
-    final static void i(int param0) {
+    final static void i() {
         int var2 = 0;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
         if (qa.field_t > 0) {
@@ -315,7 +308,8 @@ final class ak extends jc {
               return;
             }
           } else {
-            nj.a(438);
+            int discarded$4 = 438;
+            nj.a();
             if (bc.field_b <= 0) {
               L2: {
                 if (ee.field_k > 0) {
@@ -367,7 +361,8 @@ final class ak extends jc {
                   return;
                 }
               } else {
-                nj.a(438);
+                int discarded$5 = 438;
+                nj.a();
                 if (bc.field_b <= 0) {
                   L6: {
                     if (ee.field_k > 0) {
@@ -416,7 +411,8 @@ final class ak extends jc {
                   return;
                 }
               } else {
-                nj.a(438);
+                int discarded$6 = 438;
+                nj.a();
                 if (bc.field_b <= 0) {
                   L10: {
                     if (ee.field_k > 0) {
@@ -444,7 +440,8 @@ final class ak extends jc {
           } else {
             bc.field_b = bc.field_b - 1;
             if (qa.field_t > 0) {
-              nj.a(438);
+              int discarded$7 = 438;
+              nj.a();
               if (bc.field_b > 0) {
                 L12: {
                   qo.a(22353, bc.field_b);
@@ -528,7 +525,7 @@ final class ak extends jc {
             var5 = 0;
             L1: while (true) {
               if (var4 <= var5) {
-                var6 = 6 % ((-32 - param0) / 50);
+                var6 = 0;
                 stackOut_8_0 = var3_int;
                 stackIn_9_0 = stackOut_8_0;
                 break L0;
@@ -552,7 +549,7 @@ final class ak extends jc {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var3;
-            stackOut_10_1 = new StringBuilder().append("ak.Q(").append(param0).append(44);
+            stackOut_10_1 = new StringBuilder().append("ak.Q(").append(-116).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;

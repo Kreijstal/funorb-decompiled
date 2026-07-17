@@ -44,7 +44,7 @@ final class pg {
         var3 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
-            param1.a(param0);
+            param1.a(false);
             var2 = (he) (Object) te.field_f.a((byte) -126);
             L1: while (true) {
               L2: {
@@ -73,7 +73,7 @@ final class pg {
           L3: {
             var2_ref = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var2_ref;
-            stackOut_9_1 = new StringBuilder().append("pg.E(").append(param0).append(44);
+            stackOut_9_1 = new StringBuilder().append("pg.E(").append(0).append(44);
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -112,7 +112,7 @@ final class pg {
         field_i = null;
     }
 
-    final static String a(int param0) {
+    final static String a() {
         return rf.field_a;
     }
 

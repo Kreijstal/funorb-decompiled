@@ -56,7 +56,8 @@ final class gb {
         if (param0 != 0) {
             return false;
         }
-        return lq.a(bm.m(116), 61);
+        int discarded$0 = 61;
+        return lq.a(bm.m(116));
     }
 
     final pa[] b(int param0) {

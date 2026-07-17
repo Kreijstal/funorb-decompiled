@@ -19,7 +19,8 @@ final class bk extends mf {
         var7.field_c = 81;
         var7.field_l = param3;
         int var5 = 20 + (var7.field_c + var7.field_b);
-        if (tj.a(true)) {
+        int discarded$3 = 1;
+        if (tj.a()) {
             var8 = new bd(16, ba.field_Q, (ok) (Object) pn.field_a);
             var8.field_j = 320 + -(var8.field_f / 2);
             var8.field_b = var5;
@@ -34,7 +35,7 @@ final class bk extends mf {
             var7.a((byte) -120, var9);
         }
         bd var10 = new bd(14, fl.field_b, (ok) (Object) pn.field_a);
-        var10.field_j = -(var10.field_f / 2) + param0;
+        var10.field_j = -(var10.field_f / 2) + 320;
         var10.field_b = var5;
         var7.a((byte) -111, var10);
         var7.a(param2, 26206, 0);
@@ -203,7 +204,7 @@ final class bk extends mf {
         return stackIn_9_0;
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_i = null;
         field_h = null;
         field_j = null;

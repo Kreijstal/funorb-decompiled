@@ -5,50 +5,40 @@ final class kra {
     static int[] field_a;
     static String field_b;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        int stackIn_9_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        if (!li.field_i) {
+        int stackIn_5_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_3_0 = 0;
+        if (li.field_i) {
+          og.field_r.a(param7, param5, param3, param4 << 24 | param0, false, param6, param1);
+          return;
+        } else {
           L0: {
             if (param4 <= 1) {
               break L0;
             } else {
               L1: {
                 if (param4 < 255) {
-                  stackOut_8_0 = -param4 + 255;
-                  stackIn_9_0 = stackOut_8_0;
+                  stackOut_4_0 = -param4 + 255;
+                  stackIn_5_0 = stackOut_4_0;
                   break L1;
                 } else {
-                  stackOut_7_0 = 0;
-                  stackIn_9_0 = stackOut_7_0;
+                  stackOut_3_0 = 0;
+                  stackIn_5_0 = stackOut_3_0;
                   break L1;
                 }
               }
-              bfb.field_b = stackIn_9_0;
+              bfb.field_b = stackIn_5_0;
               dma.f(param5, param3, param6, param7, param0, param1);
               break L0;
             }
           }
-          if (param2 != 16994) {
-            field_a = null;
-            return;
-          } else {
-            return;
-          }
-        } else {
-          og.field_r.a(param7, param5, param3, param4 << 24 | param0, false, param6, param1);
-          if (param2 == 16994) {
-            return;
-          } else {
-            field_a = null;
-            return;
-          }
+          return;
         }
     }
 

@@ -14,7 +14,7 @@ final class sb {
         field_a = null;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         hg.field_t = null;
         uo.field_b = null;
         jn.field_k = null;

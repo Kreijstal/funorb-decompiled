@@ -51,51 +51,43 @@ final class wc extends q {
                     var3 = 0;
                     L3: while (true) {
                       if (kb.field_b <= var3) {
-                        L4: {
-                          if (param0 == 10842) {
-                            break L4;
-                          } else {
-                            field_s = null;
-                            break L4;
-                          }
-                        }
                         kb.field_b = var2_int;
                         int fieldTemp$5 = kb.field_b;
                         kb.field_b = kb.field_b + 1;
                         hi.field_j[fieldTemp$5] = param1;
                         break L0;
                       } else {
-                        L5: {
-                          L6: {
+                        L4: {
+                          L5: {
                             if (param1.field_f == hi.field_j[var3].field_f) {
                               var4 = hi.field_j[var3].a((byte) -72);
                               if (kl.field_r < oc.field_b[var4]) {
                                 oc.field_b[var4] = oc.field_b[var4] - 1;
-                                break L5;
+                                break L4;
                               } else {
-                                break L6;
+                                break L5;
                               }
                             } else {
-                              break L6;
+                              break L5;
                             }
                           }
                           int incrementValue$6 = var2_int;
                           var2_int++;
                           hi.field_j[incrementValue$6] = hi.field_j[var3];
-                          break L5;
+                          break L4;
                         }
                         var3++;
                         continue L3;
                       }
                     }
                   } else {
-                    L7: {
+                    L6: {
                       if (hi.field_j[var2_int].field_f != param1.field_f) {
-                        break L7;
+                        break L6;
                       } else {
                         int dupTemp$7 = hi.field_j[var2_int].a((byte) -72);
                         oc.field_b[dupTemp$7] = oc.field_b[dupTemp$7] + 1;
-                        break L7;
+                        break L6;
                       }
                     }
                     var2_int++;
@@ -111,10 +103,10 @@ final class wc extends q {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L7: {
             var2 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var2;
-            stackOut_22_1 = new StringBuilder().append("wc.C(").append(param0).append(44);
+            stackOut_22_1 = new StringBuilder().append("wc.C(").append(10842).append(44);
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -126,7 +118,7 @@ final class wc extends q {
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
-              break L8;
+              break L7;
             } else {
               stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
               stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
@@ -134,7 +126,7 @@ final class wc extends q {
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
               stackIn_25_2 = stackOut_23_2;
-              break L8;
+              break L7;
             }
           }
           throw rb.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
@@ -232,24 +224,19 @@ final class wc extends q {
         if (m.field_w[param1] == -1) {
             return true;
         }
-        if (param0) {
-            boolean discarded$0 = wc.a(false, -49);
-        }
+        boolean discarded$4 = wc.a(false, -49);
         if (!ia.a(-22426, m.field_w[param1])) {
             return false;
         }
         return true;
     }
 
-    final static void a(qp param0, byte param1, int param2) {
+    final static void a(qp param0) {
         try {
             tl.field_p.a((byte) 54, (q) (Object) param0);
-            if (param1 != 99) {
-                field_s = null;
-            }
             l.a(4, param0, 1);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "wc.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 4 + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "wc.E(" + (param0 != null ? "{...}" : "null") + 44 + 99 + 44 + 4 + 41);
         }
     }
 

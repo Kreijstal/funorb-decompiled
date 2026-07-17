@@ -17,7 +17,7 @@ final class ng extends rq {
         }
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_f = null;
         field_e = null;
     }
@@ -29,7 +29,7 @@ final class ng extends rq {
         return true;
     }
 
-    final static void e(int param0) {
+    final static void e() {
         jp.b((byte) 126);
     }
 
@@ -96,9 +96,9 @@ final class ng extends rq {
             Object var7 = null;
             Object var8 = null;
             am var9 = null;
-            ki stackIn_11_0 = null;
+            ki stackIn_9_0 = null;
             Throwable decompiledCaughtException = null;
-            ki stackOut_10_0 = null;
+            ki stackOut_8_0 = null;
             try {
               L0: {
                 L1: {
@@ -139,17 +139,9 @@ final class ng extends rq {
                     break L2;
                   }
                 }
-                L5: {
-                  var9 = wt.field_i.a(false, param3, (wl) var7, param5, (wl) var8);
-                  if (!param4) {
-                    break L5;
-                  } else {
-                    var9.c((byte) -81);
-                    break L5;
-                  }
-                }
-                stackOut_10_0 = new ki((rb) (Object) var9, param2, param0);
-                stackIn_11_0 = stackOut_10_0;
+                var9 = wt.field_i.a(false, param3, (wl) var7, param5, (wl) var8);
+                stackOut_8_0 = new ki((rb) (Object) var9, true, param0);
+                stackIn_9_0 = stackOut_8_0;
                 break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -157,7 +149,7 @@ final class ng extends rq {
               var6 = (IOException) (Object) decompiledCaughtException;
               throw new RuntimeException(var6.toString());
             }
-            return stackIn_11_0;
+            return stackIn_9_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

@@ -11,12 +11,9 @@ final class fm extends vg {
     static String field_l;
     private int field_f;
 
-    public static void d(int param0) {
+    public static void d() {
         field_h = null;
         field_l = null;
-        if (param0 > -119) {
-            field_j = 3;
-        }
     }
 
     final int b(int param0) {
@@ -25,180 +22,91 @@ final class fm extends vg {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, byte param8, int param9) {
-        if (param2 < pka.field_b) {
-          aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
-          if (param8 > -58) {
-            fm.d(31);
-            return;
+        if (param2 >= pka.field_b) {
+          if (ss.field_c >= param2) {
+            if (param1 >= pka.field_b) {
+              if (ss.field_c >= param1) {
+                if (pka.field_b <= param7) {
+                  if (param7 <= ss.field_c) {
+                    if (pka.field_b <= param0) {
+                      if (ss.field_c >= param0) {
+                        if (gca.field_d <= param5) {
+                          if (param5 <= hc.field_h) {
+                            if (param9 >= gca.field_d) {
+                              if (param9 <= hc.field_h) {
+                                if (gca.field_d <= param3) {
+                                  if (param3 <= hc.field_h) {
+                                    if (param6 >= gca.field_d) {
+                                      if (param6 > hc.field_h) {
+                                        aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
+                                        return;
+                                      } else {
+                                        g.a(param7, param1, param0, param3, -93, param6, param2, param9, param4, param5);
+                                        return;
+                                      }
+                                    } else {
+                                      aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
+                                      return;
+                                    }
+                                  } else {
+                                    aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
+                                    return;
+                                  }
+                                } else {
+                                  aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
+                                  return;
+                                }
+                              } else {
+                                aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
+                                return;
+                              }
+                            } else {
+                              aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
+                              return;
+                            }
+                          } else {
+                            aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
+                            return;
+                          }
+                        } else {
+                          aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
+                          return;
+                        }
+                      } else {
+                        aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
+                        return;
+                      }
+                    } else {
+                      aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
+                      return;
+                    }
+                  } else {
+                    aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
+                    return;
+                  }
+                } else {
+                  aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
+                  return;
+                }
+              } else {
+                aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
+                return;
+              }
+            } else {
+              aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
+              return;
+            }
           } else {
+            aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
             return;
           }
         } else {
-          if (ss.field_c < param2) {
-            aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
-            if (param8 > -58) {
-              fm.d(31);
-              return;
-            } else {
-              return;
-            }
-          } else {
-            if (param1 < pka.field_b) {
-              aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
-              if (param8 > -58) {
-                fm.d(31);
-                return;
-              } else {
-                return;
-              }
-            } else {
-              if (ss.field_c < param1) {
-                aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
-                if (param8 > -58) {
-                  fm.d(31);
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                if (pka.field_b > param7) {
-                  aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
-                  if (param8 > -58) {
-                    fm.d(31);
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  if (param7 > ss.field_c) {
-                    aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
-                    if (param8 > -58) {
-                      fm.d(31);
-                      return;
-                    } else {
-                      return;
-                    }
-                  } else {
-                    if (pka.field_b > param0) {
-                      aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
-                      if (param8 > -58) {
-                        fm.d(31);
-                        return;
-                      } else {
-                        return;
-                      }
-                    } else {
-                      if (ss.field_c < param0) {
-                        aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
-                        if (param8 <= -58) {
-                          return;
-                        } else {
-                          fm.d(31);
-                          return;
-                        }
-                      } else {
-                        if (gca.field_d > param5) {
-                          aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
-                          if (param8 <= -58) {
-                            return;
-                          } else {
-                            fm.d(31);
-                            return;
-                          }
-                        } else {
-                          if (param5 > hc.field_h) {
-                            aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
-                            if (param8 <= -58) {
-                              return;
-                            } else {
-                              fm.d(31);
-                              return;
-                            }
-                          } else {
-                            if (param9 < gca.field_d) {
-                              aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
-                              if (param8 <= -58) {
-                                return;
-                              } else {
-                                fm.d(31);
-                                return;
-                              }
-                            } else {
-                              if (param9 > hc.field_h) {
-                                aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
-                                if (param8 > -58) {
-                                  fm.d(31);
-                                  return;
-                                } else {
-                                  return;
-                                }
-                              } else {
-                                if (gca.field_d > param3) {
-                                  aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
-                                  if (param8 > -58) {
-                                    fm.d(31);
-                                    return;
-                                  } else {
-                                    return;
-                                  }
-                                } else {
-                                  if (param3 > hc.field_h) {
-                                    aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
-                                    if (param8 <= -58) {
-                                      return;
-                                    } else {
-                                      fm.d(31);
-                                      return;
-                                    }
-                                  } else {
-                                    if (param6 < gca.field_d) {
-                                      aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
-                                      if (param8 <= -58) {
-                                        return;
-                                      } else {
-                                        fm.d(31);
-                                        return;
-                                      }
-                                    } else {
-                                      if (param6 > hc.field_h) {
-                                        aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
-                                        if (param8 <= -58) {
-                                          return;
-                                        } else {
-                                          fm.d(31);
-                                          return;
-                                        }
-                                      } else {
-                                        g.a(param7, param1, param0, param3, -93, param6, param2, param9, param4, param5);
-                                        if (param8 > -58) {
-                                          fm.d(31);
-                                          return;
-                                        } else {
-                                          return;
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
+          aea.a(param1, param7, param2, param0, param6, param5, param3, param4, (byte) -73, param9);
+          return;
         }
     }
 
     final static int a(boolean param0, int param1) {
-        if (param0) {
-            field_h = null;
-            return jg.a(255, (byte) -96, param1);
-        }
         return jg.a(255, (byte) -96, param1);
     }
 

@@ -11,7 +11,7 @@ final class un {
     static String field_d;
     static int[] field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_f = null;
         field_a = null;
@@ -25,67 +25,59 @@ final class un {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_16_0 = 0;
+        int stackIn_5_0 = 0;
+        int stackIn_14_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_15_0 = 0;
-        int stackOut_6_0 = 0;
+        int stackOut_13_0 = 0;
+        int stackOut_4_0 = 0;
         try {
           L0: {
-            L1: {
-              if (param0 == -49) {
-                break L1;
-              } else {
-                field_h = 77;
-                break L1;
-              }
-            }
             var3_int = 0;
             var4 = ba.field_wb;
-            L2: while (true) {
+            L1: while (true) {
               if (qp.field_Sb.length <= var3_int) {
-                stackOut_15_0 = -1;
-                stackIn_16_0 = stackOut_15_0;
+                stackOut_13_0 = -1;
+                stackIn_14_0 = stackOut_13_0;
                 break L0;
               } else {
-                L3: {
+                L2: {
                   var5 = ll.field_a[var3_int];
                   if (var5 < 0) {
                     var4 = var4 + ob.field_u;
                     var3_int++;
-                    break L3;
+                    break L2;
                   } else {
-                    var6 = wm.a(true, param0 ^ -35, qp.field_Sb[var3_int]);
+                    var6 = wm.a(true, 18, qp.field_Sb[var3_int]);
                     var7 = ad.field_u + -(var6 >> 1);
                     var4 = var4 + bj.field_m;
                     if (!tj.a(param2, -59, kh.field_yc - -(oc.field_B << 1), param1, var6 + (qi.field_g << 1), var4, -qi.field_g + var7)) {
                       var4 = var4 + (kh.field_yc + (oc.field_B << 1) - -bj.field_m);
                       var3_int++;
                       var3_int++;
-                      break L3;
+                      break L2;
                     } else {
-                      stackOut_6_0 = var5;
-                      stackIn_7_0 = stackOut_6_0;
-                      return stackIn_7_0;
+                      stackOut_4_0 = var5;
+                      stackIn_5_0 = stackOut_4_0;
+                      return stackIn_5_0;
                     }
                   }
                 }
                 var3_int++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) var3, "un.E(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw wm.a((Throwable) (Object) var3, "un.E(" + -49 + 44 + param1 + 44 + param2 + 41);
         }
-        return stackIn_16_0;
+        return stackIn_14_0;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         int var1 = 0;
-        var1 = 69 % ((param0 - -18) / 59);
+        var1 = 1;
         if (im.field_fc != 0 - cl.field_h) {
           if (im.field_fc != 250 + -cl.field_h) {
             im.field_fc = im.field_fc + 1;
@@ -104,7 +96,7 @@ final class un {
         ne.field_r.d((byte) 47);
     }
 
-    final static void a(int param0, bj param1, byte param2) {
+    final static void a(int param0, bj param1) {
         oq var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_3_0 = null;
@@ -125,7 +117,7 @@ final class un {
         String stackOut_3_2 = null;
         try {
           var3 = ej.field_j;
-          var3.b(false, param0);
+          var3.b(false, 2);
           var3.a(param1.field_n, false);
           var3.a((byte) -81, param1.field_l);
           return;
@@ -134,7 +126,7 @@ final class un {
           L0: {
             var3_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3_ref;
-            stackOut_2_1 = new StringBuilder().append("un.D(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("un.D(").append(2).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;

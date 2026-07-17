@@ -7,15 +7,15 @@ final class ae {
     static String field_b;
     static int[][] field_a;
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
         field_a = null;
         field_d = null;
-        int var1 = 40 % ((param0 - 22) / 63);
+        int var1 = 0;
         field_c = null;
     }
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         if (null == oi.field_k) {
             return false;
         }
@@ -25,7 +25,7 @@ final class ae {
         return true;
     }
 
-    final static ii a(int param0, ci param1, int param2, boolean param3) {
+    final static ii a(int param0, ci param1, int param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;

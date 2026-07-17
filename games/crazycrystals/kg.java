@@ -487,7 +487,7 @@ final class kg extends od {
         return ((kg) this).field_v != 0;
     }
 
-    final static kg a(ko param0, int param1, int param2) {
+    final static kg a(ko param0, int param1) {
         if (param0.field_k != null) {
           if (param0.field_k.length == 0) {
             return null;

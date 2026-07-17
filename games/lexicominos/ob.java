@@ -50,7 +50,7 @@ final class ob extends bl {
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
-                param1.setCharAt(var5, ' ');
+                param1.setCharAt(var5, param3);
                 var5++;
                 continue L2;
               }
@@ -84,7 +84,7 @@ final class ob extends bl {
               break L3;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param2 + 44 + 32 + 41);
+          throw ld.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param2 + 44 + param3 + 41);
         }
         return stackIn_7_0;
     }

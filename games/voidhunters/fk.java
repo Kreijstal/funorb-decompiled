@@ -6,11 +6,11 @@ final class fk extends tb {
     static int field_e;
     static String field_d;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
     }
 
-    final static int b(int param0) {
+    final static int b() {
         int var1 = 0;
         return klb.field_r.i(-101);
     }

@@ -16,7 +16,7 @@ final class pg extends o {
     int field_p;
     static String field_n;
 
-    public static void c(byte param0) {
+    public static void c() {
         field_o = null;
         field_n = null;
         field_v = null;
@@ -28,20 +28,18 @@ final class pg extends o {
             return;
         }
         tl.field_Fb = param1;
-        rh.field_c.field_I.e(param0 ^ 31039);
+        rh.field_c.field_I.e(-31023);
         rh.field_c.a((byte) 126, (ci) (Object) tl.field_Fb);
-        if (param0 != -18) {
-            return;
-        }
         try {
             an.field_c = true;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "pg.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "pg.A(" + -18 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static vg a(int param0) {
-        return new vg(jb.f(98), kb.j(-111));
+    final static vg a() {
+        int discarded$0 = -111;
+        return new vg(jb.f(98), kb.j());
     }
 
     pg() {

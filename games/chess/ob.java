@@ -17,7 +17,7 @@ final class ob extends wm {
     static String field_x;
     static String field_A;
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_B = null;
         field_x = null;
         field_r = null;
@@ -28,7 +28,7 @@ final class ob extends wm {
         field_A = null;
     }
 
-    final static void f(int param0) {
+    final static void f() {
         int var1_int = 0;
         int var2 = Chess.field_G;
         try {
@@ -36,12 +36,12 @@ final class ob extends wm {
             for (var1_int = 0; var1_int < 32; var1_int++) {
                 vj.field_f[var1_int] = 0L;
             }
-            for (var1_int = param0; var1_int < 32; var1_int++) {
+            for (var1_int = 0; var1_int < 32; var1_int++) {
                 fi.field_d[var1_int] = 0L;
             }
             hk.field_M = 0;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "ob.P(" + param0 + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "ob.P(" + 0 + 41);
         }
     }
 

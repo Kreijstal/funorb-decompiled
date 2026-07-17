@@ -27,7 +27,7 @@ final class fh extends bw {
     un field_B;
     int field_r;
 
-    public static void c(byte param0) {
+    public static void c() {
         field_s = null;
         field_i = null;
     }
@@ -40,7 +40,7 @@ final class fh extends bw {
         ((fh) this).field_z = null;
     }
 
-    final static kv[] a(String param0, vr param1, String param2, int param3) {
+    final static kv[] a(String param0, vr param1, String param2) {
         kv[] var4 = null;
         RuntimeException var4_ref = null;
         kv[] var5 = null;

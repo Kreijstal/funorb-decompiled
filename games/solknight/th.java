@@ -31,7 +31,8 @@ final class th extends si {
           L0: {
             L1: {
               f.a(0, (java.awt.Component) (Object) param1);
-              ch.a((java.awt.Component) (Object) param1, 122);
+              int discarded$14 = 122;
+              ch.a((java.awt.Component) (Object) param1);
               if (null != ah.field_d) {
                 ah.field_d.a((java.awt.Component) (Object) param1, true);
                 break L1;

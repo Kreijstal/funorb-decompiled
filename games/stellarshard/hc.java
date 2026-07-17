@@ -198,55 +198,47 @@ final class hc {
     }
 
     private final void a(byte param0, String param1, int param2, int param3) {
-        RuntimeException var5 = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
+        String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
         RuntimeException stackOut_9_0 = null;
         StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
-              if (param0 < -83) {
-                break L1;
-              } else {
-                hc.a(92);
-                break L1;
-              }
-            }
-            L2: {
               var5_int = ((hc) this).field_g.b(param1);
               var6 = ((hc) this).field_g.field_r + ((hc) this).field_g.field_x;
               var7 = param3;
               if (ti.field_i < 6 + var7 + var5_int) {
                 var7 = -var5_int + (ti.field_i + -6);
-                break L2;
+                break L1;
               } else {
-                break L2;
+                break L1;
               }
             }
-            L3: {
+            L2: {
               var8 = 32 + (param2 - ((hc) this).field_g.field_x);
               if (ti.field_b >= var8 - -var6 - -6) {
-                break L3;
+                break L2;
               } else {
                 var8 = -6 + (-var6 + ti.field_b);
-                break L3;
+                break L2;
               }
             }
             ti.b(var7, var8, var5_int + 6, 6 + var6, ((hc) this).field_n);
@@ -256,43 +248,45 @@ final class hc {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var5 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var5;
-            stackOut_9_1 = new StringBuilder().append("hc.H(").append(param0).append(44);
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackOut_7_0 = (RuntimeException) var5;
+            stackOut_7_1 = new StringBuilder().append("hc.H(").append(-95).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
-              break L4;
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
-              break L4;
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param2 + 44 + param3 + 41);
+          throw ma.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
-    final static void a(pf param0, pf param1, pf param2, boolean param3, byte param4) {
+    final static void a(pf param0, pf param1, pf param2, boolean param3) {
         try {
             al.field_f = de.a("", -47);
             al.field_f.a(false, true);
-            fh.a(param0, param2, param1, (byte) -108);
+            int discarded$0 = -108;
+            fh.a(param0, param2, param1);
             int var5_int = 0;
-            pe.b(4);
+            int discarded$1 = 4;
+            pe.b();
             el.field_E = ok.field_a;
             o.field_l = ok.field_a;
         } catch (RuntimeException runtimeException) {
@@ -427,9 +421,12 @@ final class hc {
             ((hc) this).field_q = -1;
             var4.field_n = 15658734;
             ((hc) this).field_e = 3;
-            db discarded$10 = var4.a((byte) 119, 0).a(param0 ^ -2, 15658734).a((byte) 102, cj.a(7829367, 10066329, 8947848, -17768));
-            db discarded$11 = var4.a((byte) 10, 1).a((byte) 104, cj.a(13421772, 10066329, 11184810, -17768));
-            db discarded$12 = var4.a((byte) 115, 3).a((byte) 100, cj.a(10066329, 7829367, 8947848, -17768)).a(1, false).b(-2147483648, 1);
+            int discarded$14 = -17768;
+            db discarded$15 = var4.a((byte) 119, 0).a(param0 ^ -2, 15658734).a((byte) 102, cj.a(7829367, 10066329, 8947848));
+            int discarded$16 = -17768;
+            db discarded$17 = var4.a((byte) 10, 1).a((byte) 104, cj.a(13421772, 10066329, 11184810));
+            int discarded$18 = -17768;
+            db discarded$19 = var4.a((byte) 115, 3).a((byte) 100, cj.a(10066329, 7829367, 8947848)).a(1, false).b(-2147483648, 1);
             var5 = new pb[9];
             var16 = new jc(32, 32);
             var18 = var16;
@@ -437,22 +434,23 @@ final class hc {
             L1: while (true) {
               if (var18.field_z.length <= var7_int) {
                 var5[4] = (pb) (Object) var18;
-                db discarded$13 = var4.a((byte) 116, 4).a((byte) 126, true).a((byte) 120, var5);
-                db discarded$14 = var4.a((byte) -113, 5).a((byte) 120, di.a(0, 0, 0, 65793, (byte) -80)).a((byte) 124, true).a(-1, -1);
+                db discarded$20 = var4.a((byte) 116, 4).a((byte) 126, true).a((byte) 120, var5);
+                db discarded$21 = var4.a((byte) -113, 5).a((byte) 120, di.a(0, 0, 0, 65793, (byte) -80)).a((byte) 124, true).a(-1, -1);
                 ((hc) this).field_b = (uk) (Object) var4;
                 var6 = new tc(var4, true);
                 var6.field_h = 0;
                 var7 = new tc(var4, true);
                 var7.field_h = 0;
                 var7.a(-74, he.a((byte) -121, 8947848));
-                db discarded$15 = var7.a((byte) 120, 1).a((byte) 89, he.a((byte) -120, 11184810)).a(-1, 2236962);
+                db discarded$22 = var7.a((byte) 120, 1).a((byte) 89, he.a((byte) -120, 11184810)).a(-1, 2236962);
                 ((hc) this).field_j = (uk) (Object) new bb(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924);
-                hh discarded$16 = new hh(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
-                df discarded$17 = new df(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
+                hh discarded$23 = new hh(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+                df discarded$24 = new df(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
                 var8 = new tc();
                 var17.a((id) (Object) var8, (byte) -34);
-                db discarded$18 = var8.a((byte) -104, 0).a((byte) 108, cj.a(10066329, 7829367, 15658734, -17768)).a(-1, 1118481).a(false, -1);
-                db discarded$19 = var8.a((byte) 115, 4).a((byte) 124, true).a((byte) 110, var5);
+                int discarded$25 = -17768;
+                db discarded$26 = var8.a((byte) -104, 0).a((byte) 108, cj.a(10066329, 7829367, 15658734)).a(-1, 1118481).a(false, -1);
+                db discarded$27 = var8.a((byte) 115, 4).a((byte) 124, true).a((byte) 110, var5);
                 ((hc) this).field_d = (uk) (Object) var8;
                 var9 = new pb[9];
                 var9[4] = new pb(2, 1);

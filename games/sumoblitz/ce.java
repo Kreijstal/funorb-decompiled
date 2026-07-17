@@ -18,7 +18,7 @@ abstract class ce extends ms {
     ce() {
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_l = null;
         field_p = null;
         field_q = null;

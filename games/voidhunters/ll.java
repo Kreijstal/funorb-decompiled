@@ -8,13 +8,14 @@ final class ll extends rqa {
     static aja field_p;
     static boolean field_o;
 
-    final static int a(int param0) {
+    final static int a() {
         int var1 = -17;
         ho.field_a.a(0);
         if (ff.field_o.e(0)) {
             return 0;
         }
-        return vq.g(-6269);
+        int discarded$0 = -6269;
+        return vq.g();
     }
 
     ll(String param0, Class[] param1, String param2) {
@@ -92,7 +93,7 @@ final class ll extends rqa {
         field_p = null;
     }
 
-    final static void e(byte param0) {
+    final static void e() {
         Exception exception = null;
         Object var1 = null;
         File var1_ref = null;
@@ -113,7 +114,8 @@ final class ll extends rqa {
         if (var1_ref == null) {
           return;
         } else {
-          exception = (Exception) asa.a(var1_ref, (byte) -48);
+          int discarded$2 = -48;
+          exception = (Exception) asa.a(var1_ref);
           if (!((Object) exception instanceof Hashtable)) {
             return;
           } else {
@@ -150,7 +152,8 @@ final class ll extends rqa {
           L0: {
             ao.field_o = ao.field_o + 65536;
             L1: while (true) {
-              if (jca.a(si.field_r, ao.field_o, (byte) 74) < 65536) {
+              int discarded$2 = 74;
+              if (jca.a(si.field_r, ao.field_o) < 65536) {
                 L2: {
                   var2_int = -1;
                   if (lqa.field_p != null) {
@@ -348,7 +351,7 @@ final class ll extends rqa {
                   stackOut_66_0 = 127;
                   stackIn_68_0 = stackOut_66_0;
                   L13: while (true) {
-                    if (!ata.e(stackIn_68_0)) {
+                    if (!ata.e()) {
                       stackOut_81_0 = 0;
                       stackIn_82_0 = stackOut_81_0;
                       break L0;

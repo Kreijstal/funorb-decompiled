@@ -53,14 +53,15 @@ final class dg extends pj {
               if (param0 > 100) {
                 break L1;
               } else {
-                hj discarded$1 = this.i(114);
+                hj discarded$4 = this.i(114);
                 break L1;
               }
             }
             L2: while (true) {
               if (var6 >= var5_int) {
                 L3: {
-                  oc.g((byte) -105);
+                  int discarded$5 = -105;
+                  oc.g();
                   if (((dg) this).field_L.field_o + param2 < ul.field_i) {
                     break L3;
                   } else {
@@ -68,7 +69,8 @@ final class dg extends pj {
                     param3.c(-((dg) this).field_A, 0);
                     param3.c(-((dg) this).field_A + 2 * ((dg) this).field_D, 0);
                     ((dg) this).field_F.e(0, 0);
-                    oc.g((byte) -105);
+                    int discarded$6 = -105;
+                    oc.g();
                     ((dg) this).field_G.c(param2, param1);
                     break L3;
                   }
@@ -82,7 +84,8 @@ final class dg extends pj {
                         param3.c(-var7, 0);
                         param3.c(-var7 + 2 * ((dg) this).field_D, 0);
                         ((dg) this).field_L.e(0, 0);
-                        oc.g((byte) -105);
+                        int discarded$7 = -105;
+                        oc.g();
                         ((dg) this).field_G.c(var5_int + -((dg) this).field_L.field_o, param1);
                         break L4;
                       } else {
@@ -165,7 +168,8 @@ final class dg extends pj {
                 ul.a(var5, var4, var8 << 8 | var8 | var8 << 16);
             }
         }
-        oc.g((byte) -105);
+        int discarded$0 = -105;
+        oc.g();
         return var3;
     }
 
@@ -180,74 +184,68 @@ final class dg extends pj {
         int var12 = 0;
         int var13 = 0;
         hj var14 = null;
-        int stackIn_7_0 = 0;
-        int stackIn_10_0 = 0;
+        int stackIn_5_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_7_0 = 0;
         int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        L0: {
-          var13 = OrbDefence.field_D ? 1 : 0;
-          if (param1 == -45) {
-            break L0;
-          } else {
-            ((dg) this).field_J = 82;
-            break L0;
-          }
-        }
+        var13 = OrbDefence.field_D ? 1 : 0;
         var14 = new hj(2 * ((dg) this).field_D, ((dg) this).field_r);
         de.a(-127, var14);
         var5 = ((dg) this).field_r >> 1;
         var6 = 0;
-        L1: while (true) {
+        L0: while (true) {
           if (var6 >= ((dg) this).field_r) {
-            oc.g((byte) -105);
+            int discarded$1 = -105;
+            oc.g();
             return var14;
           } else {
-            L2: {
+            L1: {
               var7 = (var6 >> 1) * (2 * ((dg) this).field_D + -1) % (((dg) this).field_D * 2);
               var8 = 16711935 & param0;
               var9 = param0 & 65280;
               var10 = var6 - var5;
               var11 = (int)(128.0 * (Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5)) + 128;
               if (var11 < 256) {
-                stackOut_6_0 = (16711680 & var9 * var11 | -16711936 & var8 * var11) >>> 8;
-                stackIn_7_0 = stackOut_6_0;
-                break L2;
+                stackOut_4_0 = (16711680 & var9 * var11 | -16711936 & var8 * var11) >>> 8;
+                stackIn_5_0 = stackOut_4_0;
+                break L1;
               } else {
-                stackOut_5_0 = var9 | var8;
-                stackIn_7_0 = stackOut_5_0;
-                break L2;
+                stackOut_3_0 = var9 | var8;
+                stackIn_5_0 = stackOut_3_0;
+                break L1;
               }
             }
-            L3: {
-              var12 = stackIn_7_0;
+            L2: {
+              var12 = stackIn_5_0;
               ul.d(var7, var6, ((dg) this).field_D, var12);
               ul.d(-(((dg) this).field_D * 2) + var7, var6, ((dg) this).field_D, var12);
               var8 = 16711935 & param2;
               var9 = 65280 & param2;
               if (256 <= var11) {
-                stackOut_9_0 = var9 | var8;
-                stackIn_10_0 = stackOut_9_0;
-                break L3;
+                stackOut_7_0 = var9 | var8;
+                stackIn_8_0 = stackOut_7_0;
+                break L2;
               } else {
-                stackOut_8_0 = (16711680 & var9 * var11 | -16711936 & var11 * var8) >>> 8;
-                stackIn_10_0 = stackOut_8_0;
-                break L3;
+                stackOut_6_0 = (16711680 & var9 * var11 | -16711936 & var11 * var8) >>> 8;
+                stackIn_8_0 = stackOut_6_0;
+                break L2;
               }
             }
-            var12 = stackIn_10_0;
+            var12 = stackIn_8_0;
             ul.d(((dg) this).field_D + var7, var6, ((dg) this).field_D, var12);
             ul.d(var7 + -((dg) this).field_D, var6, ((dg) this).field_D, var12);
             var6++;
-            continue L1;
+            continue L0;
           }
         }
     }
 
     final void a(int param0, int param1, int param2, byte param3, int param4) {
         super.a(param0, param1, param2, param3, param4);
-        this.c(false);
+        int discarded$0 = 0;
+        this.c();
     }
 
     final void a(int param0, int param1, int param2) {
@@ -255,10 +253,11 @@ final class dg extends pj {
         ((dg) this).field_H = param2 >> 1 & 8355711;
         ((dg) this).field_x = param2;
         ((dg) this).field_K = (param1 & param0) >> 1;
-        this.c(false);
+        int discarded$0 = 0;
+        this.c();
     }
 
-    private final void c(boolean param0) {
+    private final void c() {
         ((dg) this).field_E = new hj[]{this.a(((dg) this).field_y, (byte) -45, ((dg) this).field_x), this.a(((dg) this).field_K, (byte) -45, ((dg) this).field_H)};
         ((dg) this).field_L = this.i(90);
         ((dg) this).field_F = ((dg) this).field_L.b();
@@ -278,7 +277,8 @@ final class dg extends pj {
         if (!(((dg) this).field_J >= 65536)) {
             id.a(var5 + ((dg) this).field_m, (((dg) this).field_m * ((dg) this).field_J >> 16) + var5, var6 - -((dg) this).field_r, var6, 734);
             this.a(111, var6, var5, ((dg) this).field_E[1]);
-            oc.g((byte) -105);
+            int discarded$0 = -105;
+            oc.g();
         }
     }
 

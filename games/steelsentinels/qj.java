@@ -541,16 +541,13 @@ final class qj {
 
     final static void a(long param0, String param1, int param2, int param3, int param4) {
         kh.field_q = param0;
-        if (param3 != -29368) {
-            return;
-        }
         try {
             wn.field_f = param4;
             hk.field_ic = param2;
             fi.field_t = param1;
             ob.field_v = true;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "qj.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "qj.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + -29368 + 44 + param4 + 41);
         }
     }
 

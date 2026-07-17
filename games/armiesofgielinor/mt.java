@@ -85,7 +85,9 @@ final class mt {
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
-                var3[var4_int] = (byte)(int)sa.a(param0, -1, -15329);
+                int discarded$4 = -15329;
+                int discarded$5 = -1;
+                var3[var4_int] = (byte)(int)sa.a(param0);
                 var4_int++;
                 continue L1;
               }

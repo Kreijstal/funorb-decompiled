@@ -84,7 +84,7 @@ final class wi {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_b = null;
         field_q = null;
     }
@@ -130,9 +130,9 @@ final class wi {
             }
             return;
           } else {
-            int fieldTemp$1 = ((wi) this).field_l - 1;
+            int fieldTemp$2 = ((wi) this).field_l - 1;
             ((wi) this).field_l = ((wi) this).field_l - 1;
-            if (fieldTemp$1 > 0) {
+            if (fieldTemp$2 > 0) {
               return;
             } else {
               ((wi) this).field_l = ((wi) this).field_i;
@@ -141,7 +141,8 @@ final class wi {
                 return;
               } else {
                 L3: {
-                  this.c((byte) -128);
+                  int discarded$3 = -128;
+                  this.c();
                   if (param0 == -44) {
                     break L3;
                   } else {
@@ -189,7 +190,7 @@ final class wi {
         return stackIn_6_0 != 0;
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean a() {
         dg var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -199,10 +200,8 @@ final class wi {
         int stackIn_11_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_20_0 = 0;
-        int stackIn_22_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
-        int stackOut_21_0 = 0;
         int stackOut_19_0 = 0;
         int stackOut_10_0 = 0;
         int stackOut_15_0 = 0;
@@ -219,15 +218,9 @@ final class wi {
               var2 = 0;
               L1: while (true) {
                 if (var2 >= var1.field_r) {
-                  if (!param0) {
-                    stackOut_21_0 = 1;
-                    stackIn_22_0 = stackOut_21_0;
-                    break L0;
-                  } else {
-                    stackOut_19_0 = 0;
-                    stackIn_20_0 = stackOut_19_0;
-                    return stackIn_20_0 != 0;
-                  }
+                  stackOut_19_0 = 1;
+                  stackIn_20_0 = stackOut_19_0;
+                  break L0;
                 } else {
                   L2: {
                     if (var4.field_m[var2] != null) {
@@ -264,9 +257,9 @@ final class wi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var1_ref, "wi.F(" + param0 + 41);
+          throw sd.a((Throwable) (Object) var1_ref, "wi.F(" + 0 + 41);
         }
-        return stackIn_22_0 != 0;
+        return stackIn_20_0 != 0;
     }
 
     final gj a(int param0) {
@@ -291,7 +284,7 @@ final class wi {
         }
     }
 
-    private final void c(byte param0) {
+    private final void c() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

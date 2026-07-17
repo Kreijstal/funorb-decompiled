@@ -27,7 +27,7 @@ final class hc implements Iterator {
         return ((hc) this).field_c != ((hc) this).field_a.field_c;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_e = null;
         field_d = null;
         field_b = null;
@@ -41,7 +41,7 @@ final class hc implements Iterator {
         ((hc) this).field_f = null;
     }
 
-    final static void a(int param0, byte param1) {
+    final static void a(int param0) {
         nk var2 = qn.field_U;
         var2.f(param0, -95);
         int var3 = 30;

@@ -48,16 +48,8 @@ final class gd {
         kj.field_c = param2;
         id.field_D = param2;
         rl.field_f = true;
-        if (param1 != 32767) {
-          gd.a((byte) -51);
-          te.field_eb = param0;
-          ul.field_d = param0;
-          return;
-        } else {
-          te.field_eb = param0;
-          ul.field_d = param0;
-          return;
-        }
+        te.field_eb = param0;
+        ul.field_d = param0;
     }
 
     final static long a(int param0) {
@@ -68,7 +60,7 @@ final class gd {
         return pd.a(-22826) - pi.field_i;
     }
 
-    private final void a(boolean param0) {
+    private final void a() {
         ((gd) this).field_J = false;
     }
 
@@ -89,7 +81,8 @@ final class gd {
             ((gd) this).field_B[var6] = (short)(((gd) this).field_B[var6] + param2);
             ((gd) this).field_m[var6] = (short)(((gd) this).field_m[var6] + param0);
         }
-        this.a(true);
+        int discarded$0 = 1;
+        this.a();
     }
 
     final void b(int param0) {
@@ -194,7 +187,8 @@ final class gd {
             if (param0 != 0) {
               return;
             } else {
-              this.a(true);
+              int discarded$2 = 1;
+              this.a();
               return;
             }
           } else {

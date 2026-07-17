@@ -37,13 +37,10 @@ final class dj {
     }
 
     private final int a(byte param0, int param1) {
-        if (param0 != -33) {
-            return 65;
-        }
         return uca.field_c.a(param1, 0);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 

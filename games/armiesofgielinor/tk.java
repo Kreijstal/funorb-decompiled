@@ -23,75 +23,59 @@ final class tk implements kh {
             Object var6 = null;
             Object var7 = null;
             bm var8 = null;
-            Object stackIn_2_0 = null;
-            kl stackIn_17_0 = null;
+            kl stackIn_13_0 = null;
             Throwable decompiledCaughtException = null;
-            kl stackOut_16_0 = null;
-            Object stackOut_1_0 = null;
+            kl stackOut_12_0 = null;
             try {
               L0: {
-                if (param2 == 1) {
-                  L1: {
-                    var6 = null;
-                    if (null != vq.field_c.field_r) {
-                      rg.field_b = new ue(vq.field_c.field_r, 5200, 0);
-                      vq.field_c.field_r = null;
-                      var6 = (Object) (Object) new bc(255, rg.field_b, new ue(vq.field_c.field_d, 12000, 0), 2097152);
-                      break L1;
-                    } else {
-                      break L1;
-                    }
+                L1: {
+                  var6 = null;
+                  if (null != vq.field_c.field_r) {
+                    rg.field_b = new ue(vq.field_c.field_r, 5200, 0);
+                    vq.field_c.field_r = null;
+                    var6 = (Object) (Object) new bc(255, rg.field_b, new ue(vq.field_c.field_d, 12000, 0), 2097152);
+                    break L1;
+                  } else {
+                    break L1;
                   }
-                  L2: {
-                    var7 = null;
-                    if (null != rg.field_b) {
-                      L3: {
-                        if (mu.field_b != null) {
-                          break L3;
-                        } else {
-                          mu.field_b = new ue[vq.field_c.field_c.length];
-                          break L3;
-                        }
-                      }
-                      L4: {
-                        if (mu.field_b[param0] != null) {
-                          break L4;
-                        } else {
-                          mu.field_b[param0] = new ue(vq.field_c.field_c[param0], 12000, 0);
-                          vq.field_c.field_c[param0] = null;
-                          break L4;
-                        }
-                      }
-                      var7 = (Object) (Object) new bc(param0, rg.field_b, mu.field_b[param0], 2097152);
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  }
-                  L5: {
-                    var8 = oi.field_c.a(param3, (bc) var7, param0, 0, (bc) var6);
-                    if (param4) {
-                      var8.c(31637);
-                      break L5;
-                    } else {
-                      break L5;
-                    }
-                  }
-                  stackOut_16_0 = new kl((ew) (Object) var8, param1, param5);
-                  stackIn_17_0 = stackOut_16_0;
-                  break L0;
-                } else {
-                  stackOut_1_0 = null;
-                  stackIn_2_0 = stackOut_1_0;
-                  return (kl) (Object) stackIn_2_0;
                 }
+                L2: {
+                  var7 = null;
+                  if (null != rg.field_b) {
+                    L3: {
+                      if (mu.field_b != null) {
+                        break L3;
+                      } else {
+                        mu.field_b = new ue[vq.field_c.field_c.length];
+                        break L3;
+                      }
+                    }
+                    L4: {
+                      if (mu.field_b[param0] != null) {
+                        break L4;
+                      } else {
+                        mu.field_b[param0] = new ue(vq.field_c.field_c[param0], 12000, 0);
+                        vq.field_c.field_c[param0] = null;
+                        break L4;
+                      }
+                    }
+                    var7 = (Object) (Object) new bc(param0, rg.field_b, mu.field_b[param0], 2097152);
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+                var8 = oi.field_c.a(false, (bc) var7, param0, 0, (bc) var6);
+                stackOut_12_0 = new kl((ew) (Object) var8, param1, param5);
+                stackIn_13_0 = stackOut_12_0;
+                break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Object) (Object) decompiledCaughtException;
               throw new RuntimeException(((IOException) var6).toString());
             }
-            return stackIn_17_0;
+            return stackIn_13_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -99,7 +83,7 @@ final class tk implements kh {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
     }
 

@@ -10,7 +10,7 @@ final class lmb {
         return !hb.field_c ? true : false;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
     }
 

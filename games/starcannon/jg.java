@@ -219,10 +219,7 @@ final class jg extends dk {
         field_F = null;
     }
 
-    final static void e(byte param0) {
-        if (param0 < 99) {
-            field_F = null;
-        }
+    final static void e() {
     }
 
     jg(he param0) {

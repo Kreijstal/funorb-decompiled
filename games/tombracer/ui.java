@@ -350,7 +350,7 @@ final class ui {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        int var5 = -116 / ((param1 - -4) / 43);
+        int var5 = -58;
         if (pka.field_b <= param3) {
             if (!(param3 > ss.field_c)) {
                 param0 = rp.a(hc.field_h, -16226, gca.field_d, param0);

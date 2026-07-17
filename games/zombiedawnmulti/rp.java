@@ -25,17 +25,21 @@ final class rp {
     int[] field_g;
     static String field_e;
 
-    public static void a(int param0) {
-        if (param0 != 5) {
-            return;
-        }
+    public static void a() {
+        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
+          L0: {
             field_b = null;
             field_l = null;
             field_e = null;
             field_r = null;
-        } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "rp.I(" + param0 + 41);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw fa.a((Throwable) (Object) var1, "rp.I(" + 5 + 41);
         }
     }
 
@@ -327,7 +331,8 @@ final class rp {
                       if (1 > ((rp) this).field_a) {
                         break L4;
                       } else {
-                        ((rp) this).field_v = this.d(-16777216);
+                        int discarded$2 = -16777216;
+                        ((rp) this).field_v = this.d();
                         ((rp) this).field_h = this.d((byte) 84);
                         ((rp) this).field_n = this.c(param0 ^ 16741);
                         this.a((byte) 62);
@@ -348,7 +353,8 @@ final class rp {
                                   }
                                 } else {
                                   var5 = this.d((byte) 85);
-                                  ((rp) this).field_t[var5] = this.f((byte) -53);
+                                  int discarded$3 = -53;
+                                  ((rp) this).field_t[var5] = this.f();
                                   var4++;
                                   continue L6;
                                 }
@@ -639,35 +645,27 @@ final class rp {
         return stackIn_7_0;
     }
 
-    private final int f(byte param0) {
+    private final int f() {
         RuntimeException var2 = null;
-        int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
-        int stackOut_1_0 = 0;
         try {
           L0: {
             ((rp) this).field_u = ((rp) this).field_u + 2;
-            if (param0 == -53) {
-              stackOut_3_0 = (255 & ((rp) this).field_o[-1 + ((rp) this).field_u]) + ((255 & ((rp) this).field_o[((rp) this).field_u + -2]) << 8);
-              stackIn_4_0 = stackOut_3_0;
-              break L0;
-            } else {
-              stackOut_1_0 = 116;
-              stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0;
-            }
+            stackOut_3_0 = (255 & ((rp) this).field_o[-1 + ((rp) this).field_u]) + ((255 & ((rp) this).field_o[((rp) this).field_u + -2]) << 8);
+            stackIn_4_0 = stackOut_3_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var2, "rp.V(" + param0 + 41);
+          throw fa.a((Throwable) (Object) var2, "rp.V(" + -53 + 41);
         }
         return stackIn_4_0;
     }
 
-    final static void e(byte param0) {
+    final static void e() {
         RuntimeException var1 = null;
         ga var1_ref = null;
         int var2 = 0;
@@ -725,7 +723,8 @@ final class rp {
               L4: {
                 var6 = md.a((byte) -55, var4_ref_String);
                 var7 = var1_ref.f((byte) -89);
-                var8 = tg.a((CharSequence) (Object) var4_ref_String, false);
+                int discarded$9 = 0;
+                var8 = tg.a((CharSequence) (Object) var4_ref_String);
                 if (var8 != null) {
                   break L4;
                 } else {
@@ -752,9 +751,9 @@ final class rp {
                 } else {
                   var6 = new ml();
                   bh.field_f.a(-1, (qa) (Object) var6, (long)var8.hashCode());
-                  int fieldTemp$2 = fn.field_d;
+                  int fieldTemp$10 = fn.field_d;
                   fn.field_d = fn.field_d + 1;
-                  var6.field_Mb = fieldTemp$2;
+                  var6.field_Mb = fieldTemp$10;
                   jf.field_d.a((br) (Object) var6, false);
                   break L6;
                 }
@@ -788,9 +787,10 @@ final class rp {
                     return;
                   } else {
                     if (var2 != 4) {
-                      bd.a("F1: " + ci.a(0), (Throwable) null, false);
+                      int discarded$11 = 0;
+                      bd.a("F1: " + ci.a(0), (Throwable) null);
                       ak.a((byte) -119);
-                      var3 = 67 % ((-12 - param0) / 48);
+                      var3 = 1;
                       break L0;
                     } else {
                       ge.field_zb = 1;
@@ -824,15 +824,18 @@ final class rp {
                 L11: {
                   var4_ref_String = var1_ref.f((byte) -14);
                   var5 = var1_ref.f((byte) -45);
-                  var6 = dn.a(var4_ref_String, false);
+                  int discarded$12 = 0;
+                  var6 = dn.a(var4_ref_String);
                   if (null != var6) {
                     break L11;
                   } else {
-                    var6 = dn.a(var5, false);
+                    int discarded$13 = 0;
+                    var6 = dn.a(var5);
                     if (var6 == null) {
                       break L11;
                     } else {
-                      ol.field_o.a(-1, (qa) (Object) var6, (long)tg.a((CharSequence) (Object) var4_ref_String, false).hashCode());
+                      int discarded$14 = 0;
+                      ol.field_o.a(-1, (qa) (Object) var6, (long)tg.a((CharSequence) (Object) var4_ref_String).hashCode());
                       break L11;
                     }
                   }
@@ -840,10 +843,11 @@ final class rp {
                 L12: {
                   if (var6 == null) {
                     var6 = new ml();
-                    ol.field_o.a(-1, (qa) (Object) var6, (long)tg.a((CharSequence) (Object) var4_ref_String, false).hashCode());
-                    int fieldTemp$3 = dc.field_Fb;
+                    int discarded$15 = 0;
+                    ol.field_o.a(-1, (qa) (Object) var6, (long)tg.a((CharSequence) (Object) var4_ref_String).hashCode());
+                    int fieldTemp$16 = dc.field_Fb;
                     dc.field_Fb = dc.field_Fb + 1;
-                    var6.field_Mb = fieldTemp$3;
+                    var6.field_Mb = fieldTemp$16;
                     ro.field_M.a((br) (Object) var6, false);
                     break L12;
                   } else {
@@ -878,7 +882,8 @@ final class rp {
                   }
                   L16: {
                     if (var7_ref != null) {
-                      vc.a((br) (Object) var7_ref, (br) (Object) var6, true);
+                      int discarded$17 = 1;
+                      vc.a((br) (Object) var7_ref, (br) (Object) var6);
                       break L16;
                     } else {
                       ro.field_M.a((br) (Object) var6, false);
@@ -893,7 +898,7 @@ final class rp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var1, "rp.K(" + param0 + 41);
+          throw fa.a((Throwable) (Object) var1, "rp.K(" + 96 + 41);
         }
     }
 
@@ -943,30 +948,22 @@ final class rp {
         }
     }
 
-    private final int d(int param0) {
+    private final int d() {
         RuntimeException var2 = null;
-        int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
-        int stackOut_1_0 = 0;
         try {
           L0: {
             ((rp) this).field_u = ((rp) this).field_u + 4;
-            if (param0 == -16777216) {
-              stackOut_3_0 = (255 & ((rp) this).field_o[-1 + ((rp) this).field_u]) + (((((rp) this).field_o[-3 + ((rp) this).field_u] & 255) << 16) + (-16777216 & ((rp) this).field_o[((rp) this).field_u + -4] << 24)) - -((((rp) this).field_o[((rp) this).field_u + -2] & 255) << 8);
-              stackIn_4_0 = stackOut_3_0;
-              break L0;
-            } else {
-              stackOut_1_0 = 34;
-              stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0;
-            }
+            stackOut_3_0 = (255 & ((rp) this).field_o[-1 + ((rp) this).field_u]) + (((((rp) this).field_o[-3 + ((rp) this).field_u] & 255) << 16) + (-16777216 & ((rp) this).field_o[((rp) this).field_u + -4] << 24)) - -((((rp) this).field_o[((rp) this).field_u + -2] & 255) << 8);
+            stackIn_4_0 = stackOut_3_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var2, "rp.G(" + param0 + 41);
+          throw fa.a((Throwable) (Object) var2, "rp.G(" + -16777216 + 41);
         }
         return stackIn_4_0;
     }
@@ -1180,7 +1177,7 @@ final class rp {
                 L1: while (true) {
                   if (~var5 <= ~var4.length) {
                     L2: {
-                      if (param1 == 6) {
+                      if (6 == 6) {
                         break L2;
                       } else {
                         ((rp) this).a(-101, 43, 112);
@@ -1219,7 +1216,7 @@ final class rp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var4_ref, "rp.E(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw fa.a((Throwable) (Object) var4_ref, "rp.E(" + param0 + 44 + 6 + 44 + param2 + 41);
         }
         return stackIn_24_0 != 0;
     }
@@ -1271,24 +1268,28 @@ final class rp {
     }
 
     private final void f(int param0, int param1) {
-        int fieldTemp$0 = ((rp) this).field_u;
-        ((rp) this).field_u = ((rp) this).field_u + 1;
-        ((rp) this).field_o[fieldTemp$0] = (byte)tq.b(255, param1 >> 24);
-        int fieldTemp$1 = ((rp) this).field_u;
-        ((rp) this).field_u = ((rp) this).field_u + 1;
-        ((rp) this).field_o[fieldTemp$1] = (byte)tq.b(param1 >> 16, 255);
-        int fieldTemp$2 = ((rp) this).field_u;
-        ((rp) this).field_u = ((rp) this).field_u + 1;
-        ((rp) this).field_o[fieldTemp$2] = (byte)tq.b(255, param1 >> 8);
-        if (param0 < 8) {
-            return;
-        }
+        RuntimeException var3 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
-            int fieldTemp$3 = ((rp) this).field_u;
+          L0: {
+            int fieldTemp$7 = ((rp) this).field_u;
             ((rp) this).field_u = ((rp) this).field_u + 1;
-            ((rp) this).field_o[fieldTemp$3] = (byte)tq.b(255, param1);
-        } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "rp.N(" + param0 + 44 + param1 + 41);
+            ((rp) this).field_o[fieldTemp$7] = (byte)tq.b(255, param1 >> 24);
+            int fieldTemp$8 = ((rp) this).field_u;
+            ((rp) this).field_u = ((rp) this).field_u + 1;
+            ((rp) this).field_o[fieldTemp$8] = (byte)tq.b(param1 >> 16, 255);
+            int fieldTemp$9 = ((rp) this).field_u;
+            ((rp) this).field_u = ((rp) this).field_u + 1;
+            ((rp) this).field_o[fieldTemp$9] = (byte)tq.b(255, param1 >> 8);
+            int fieldTemp$10 = ((rp) this).field_u;
+            ((rp) this).field_u = ((rp) this).field_u + 1;
+            ((rp) this).field_o[fieldTemp$10] = (byte)tq.b(255, param1);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw fa.a((Throwable) (Object) var3, "rp.N(" + 79 + 44 + param1 + 41);
         }
     }
 
@@ -1322,18 +1323,22 @@ final class rp {
     }
 
     private final void a(byte param0, int param1) {
+        RuntimeException var3 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
-            int fieldTemp$0 = ((rp) this).field_u;
+          L0: {
+            int fieldTemp$6 = ((rp) this).field_u;
             ((rp) this).field_u = ((rp) this).field_u + 1;
-            ((rp) this).field_o[fieldTemp$0] = (byte)tq.b(param1 >> 8, 255);
-            int fieldTemp$1 = ((rp) this).field_u;
+            ((rp) this).field_o[fieldTemp$6] = (byte)tq.b(param1 >> 8, 255);
+            int fieldTemp$7 = ((rp) this).field_u;
             ((rp) this).field_u = ((rp) this).field_u + 1;
-            ((rp) this).field_o[fieldTemp$1] = (byte)tq.b(param1, 255);
-            if (param0 != -23) {
-                ((rp) this).field_c = null;
-            }
-        } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "rp.AA(" + param0 + 44 + param1 + 41);
+            ((rp) this).field_o[fieldTemp$7] = (byte)tq.b(param1, 255);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw fa.a((Throwable) (Object) var3, "rp.AA(" + -23 + 44 + param1 + 41);
         }
     }
 
@@ -1347,7 +1352,8 @@ final class rp {
         try {
           L0: {
             L1: {
-              var2_long = (long)this.d(-16777216) & 4294967295L;
+              int discarded$4 = -16777216;
+              var2_long = (long)this.d() & 4294967295L;
               if (param0 == 16741) {
                 break L1;
               } else {
@@ -1355,7 +1361,8 @@ final class rp {
                 break L1;
               }
             }
-            var4 = (long)this.d(-16777216) & 4294967295L;
+            int discarded$5 = -16777216;
+            var4 = (long)this.d() & 4294967295L;
             stackOut_3_0 = var4 + (var2_long << 32);
             stackIn_4_0 = stackOut_3_0;
             break L0;

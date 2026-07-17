@@ -14,7 +14,7 @@ final class cja {
     int field_i;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void a() {
         field_j = null;
     }
 

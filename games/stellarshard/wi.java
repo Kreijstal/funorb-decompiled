@@ -5,12 +5,12 @@ final class wi {
     static String field_b;
     static boolean field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
     }
 
     final static int a(int param0, byte param1, int param2) {
-        int var3 = 78 / ((-24 - param1) / 55);
+        int var3 = -39;
         int var4 = param0 >> 16;
         int var5 = param0 & 65535;
         int var6 = param2 >> 16;

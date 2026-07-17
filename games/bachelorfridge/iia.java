@@ -41,14 +41,11 @@ final class iia extends jm {
 
     final static void a(int param0, vr param1) {
         le var2 = le.a(param1, "", "fridge4");
-        if (param0 != -167571320) {
-            return;
-        }
         try {
             ni.field_l = (ss) (Object) var2.a(0, 485, 0, -5120, 12800);
             ni.field_l.a(128, 122, 128);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "iia.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "iia.A(" + -167571320 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -241,7 +238,7 @@ final class iia extends jm {
         }
     }
 
-    final static void a(pia param0, int param1) {
+    final static void a(pia param0) {
         int var2_int = 0;
         int var3 = 0;
         try {
@@ -276,7 +273,7 @@ final class iia extends jm {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
         field_n = null;
         field_q = null;

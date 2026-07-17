@@ -253,28 +253,24 @@ final class lja implements ntb {
         String stackOut_6_2 = null;
         try {
           L0: {
-            if (param0 == 32) {
-              L1: {
-                if (((lja) this).field_h == ls.field_r) {
-                  break L1;
-                } else {
-                  ((lja) this).field_h = ls.field_r;
-                  param1.f(true);
-                  param1.a(param0 ^ 86, true);
-                  break L1;
-                }
+            L1: {
+              if (((lja) this).field_h == ls.field_r) {
+                break L1;
+              } else {
+                ((lja) this).field_h = ls.field_r;
+                param1.f(true);
+                param1.a(118, true);
+                break L1;
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) runtimeException;
-            stackOut_5_1 = new StringBuilder().append("lja.E(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("lja.E(").append(32).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -841,7 +837,7 @@ final class lja implements ntb {
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         int var1 = 0;
         field_c = null;
     }

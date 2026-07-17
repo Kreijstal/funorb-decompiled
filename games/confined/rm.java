@@ -54,7 +54,8 @@ final class rm {
             ((rm) this).field_F[var5] = (short)(((rm) this).field_F[var5] + param1);
         }
         var5 = 104 % ((67 - param2) / 37);
-        this.a((byte) 67);
+        int discarded$0 = 67;
+        this.a();
     }
 
     final void b(int param0) {
@@ -267,7 +268,7 @@ final class rm {
         field_D = null;
     }
 
-    private final void a(byte param0) {
+    private final void a() {
         ((rm) this).field_p = false;
     }
 
@@ -283,7 +284,8 @@ final class rm {
             Object var8 = null;
             rm.a((String) null, (byte) -76, (String) null);
         }
-        this.a((byte) 67);
+        int discarded$0 = 67;
+        this.a();
     }
 
     rm() {

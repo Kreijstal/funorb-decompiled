@@ -5,7 +5,7 @@ abstract class qg {
     qfa field_b;
     static soa field_a;
 
-    public static void c(int param0) {
+    public static void c() {
         field_a = null;
     }
 
@@ -15,7 +15,7 @@ abstract class qg {
 
     abstract void a(boolean param0, int param1);
 
-    final static int a(slb param0, boolean param1) {
+    final static int a(slb param0) {
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;
         int stackIn_8_0 = 0;

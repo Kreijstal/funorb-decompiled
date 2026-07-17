@@ -7,7 +7,7 @@ abstract class cc {
 
     abstract void a(int param0, java.awt.Component param1);
 
-    final static void b(boolean param0) {
+    final static void b() {
         int var1_int = 0;
         RuntimeException var1 = null;
         double var2 = 0.0;
@@ -60,16 +60,9 @@ abstract class cc {
             ge.d();
         }
         vj.a(1, param1);
-        if (param0 != 192) {
-            cc.a(-77);
-            return;
-        }
     }
 
-    public static void a(int param0) {
-        if (param0 != 256) {
-            return;
-        }
+    public static void a() {
         field_a = null;
     }
 

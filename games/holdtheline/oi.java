@@ -9,7 +9,7 @@ final class oi {
     static w field_e;
     static byte[] field_d;
 
-    final static int a(byte param0) {
+    final static int a() {
         return u.field_V;
     }
 
@@ -19,7 +19,8 @@ final class oi {
         if (param1 != ik.field_i) {
           return;
         } else {
-          var2 = hh.a(91);
+          int discarded$1 = 91;
+          var2 = hh.a();
           if (var2 != -1) {
             if (qj.field_I == -1) {
               L0: {
@@ -113,7 +114,7 @@ final class oi {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_e = null;
         field_a = null;
         field_d = null;

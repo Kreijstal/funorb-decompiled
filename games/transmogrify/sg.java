@@ -27,7 +27,7 @@ final class sg {
               if (-3 != ((sg) this).field_i) {
                 break L0;
               } else {
-                if (((sg) this).field_b <= 0) {
+                if (-1 >= ((sg) this).field_b) {
                   break L0;
                 } else {
                   return 2;
@@ -36,7 +36,8 @@ final class sg {
             }
             if (~((sg) this).field_c != ~ua.field_e) {
               if (kl.field_c == 2) {
-                if (b.a(((sg) this).field_m, (byte) 24)) {
+                int discarded$4 = 24;
+                if (b.a(((sg) this).field_m)) {
                   return 1;
                 } else {
                   return 0;
@@ -52,13 +53,14 @@ final class sg {
           }
         } else {
           var3 = null;
-          int discarded$1 = sg.a(97, (byte) 55, 108, (byte[]) null);
+          int discarded$5 = sg.a(97, (byte) 55, 108, (byte[]) null);
           if (!((sg) this).field_g) {
             if (((sg) this).field_i == 2) {
               if (-1 >= ((sg) this).field_b) {
                 if (~((sg) this).field_c != ~ua.field_e) {
-                  if (kl.field_c == -3) {
-                    if (b.a(((sg) this).field_m, (byte) 24)) {
+                  if (kl.field_c == 2) {
+                    int discarded$6 = 24;
+                    if (b.a(((sg) this).field_m)) {
                       return 1;
                     } else {
                       return 0;
@@ -75,7 +77,8 @@ final class sg {
             } else {
               if (~((sg) this).field_c != ~ua.field_e) {
                 if (kl.field_c == -3) {
-                  if (b.a(((sg) this).field_m, (byte) 24)) {
+                  int discarded$7 = 24;
+                  if (b.a(((sg) this).field_m)) {
                     return 1;
                   } else {
                     return 0;
@@ -169,7 +172,7 @@ final class sg {
         return stackIn_5_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_p = null;
         field_o = null;
         field_k = null;

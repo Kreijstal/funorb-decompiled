@@ -131,7 +131,7 @@ final class bb extends hd {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_Db = null;
         field_Nb = null;
         field_Mb = null;
@@ -527,7 +527,7 @@ final class bb extends hd {
         int var4 = 0;
         int var5 = 0;
         var5 = Kickabout.field_G;
-        var2 = -45 % ((param0 - 92) / 32);
+        var2 = 0;
         var3 = rp.b(-27666);
         var4 = 0;
         L0: while (true) {
@@ -589,17 +589,20 @@ final class bb extends hd {
                     }
                     Object var8 = null;
                     gp.a(var5, -128, ov.field_b, param3, at.field_Kb, (String) null);
-                    gk.a(at.field_Kb, var5, ik.field_A, ov.field_b, (byte) -51);
+                    int discarded$0 = -51;
+                    gk.a(at.field_Kb, var5, ik.field_A, ov.field_b);
                     fa.b(125);
-                    jm.b(68);
+                    int discarded$1 = 68;
+                    jm.b();
                 } else {
-                    gw.a(8);
+                    int discarded$2 = 8;
+                    gw.a();
                     fa.b(-123);
                 }
             }
         }
         if (param1 > -20) {
-            boolean discarded$0 = ((bb) this).h(-11);
+            boolean discarded$3 = ((bb) this).h(-11);
         }
     }
 

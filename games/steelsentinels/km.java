@@ -277,7 +277,7 @@ final class km {
         return stackIn_69_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_j = null;
         field_e = null;
@@ -290,14 +290,11 @@ final class km {
         try {
             uc.field_e[param6] = param2;
             uc.field_k[param6] = param3;
-            if (param0 != -44) {
-                field_e = null;
-            }
             uc.field_d[param6] = param1;
             uc.field_c[param6] = param5;
             uc.field_f[param6] = param4;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "km.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "km.C(" + -44 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
         }
     }
 
@@ -322,24 +319,32 @@ final class km {
         L0: {
           var10 = SteelSentinels.field_G;
           var13 = ul.a(param0, (byte) 67);
+          if (param1 > 29) {
+            break L0;
+          } else {
+            field_c = 12;
+            break L0;
+          }
+        }
+        L1: {
           var3 = var13.field_Q;
           if (var3 == 2) {
             var3 = 0;
-            L1: while (true) {
+            L2: while (true) {
               if (n.field_z.length <= var3) {
-                break L0;
+                break L1;
               } else {
                 var4_int = n.field_z[var3];
                 var22 = nl.a(var4_int, (byte) 127);
                 var6 = 0;
-                L2: while (true) {
+                L3: while (true) {
                   if (var22.length + -8 <= var6) {
                     var3++;
-                    continue L1;
+                    continue L2;
                   } else {
                     if (var22[var6] != param0) {
                       var6++;
-                      continue L2;
+                      continue L3;
                     } else {
                       return db.a(si.field_F, -66, new String[1]);
                     }
@@ -348,31 +353,31 @@ final class km {
               }
             }
           } else {
-            L3: {
+            L4: {
               if (4 == var3) {
-                break L3;
+                break L4;
               } else {
                 if (var3 == 2048) {
-                  break L3;
+                  break L4;
                 } else {
                   if (var3 == 8) {
                     var3 = 0;
                     var4_int = 0;
-                    L4: while (true) {
+                    L5: while (true) {
                       if (var4_int >= n.field_z.length) {
                         var4 = lj.field_g[0];
                         var5 = 0;
                         var6 = 0;
-                        L5: while (true) {
+                        L6: while (true) {
                           if (var6 < n.field_z.length) {
                             var7 = n.field_z[var6];
                             var25 = nl.a(var7, (byte) 123);
                             var9 = 0;
-                            L6: while (true) {
+                            L7: while (true) {
                               if (-8 + var25.length > var9) {
                                 if (var25[var9] != param0) {
                                   var9++;
-                                  continue L6;
+                                  continue L7;
                                 } else {
                                   var5++;
                                   if (var5 >= var3 - 1) {
@@ -385,17 +390,17 @@ final class km {
                                     } else {
                                       var4 = var4 + cd.field_c[var6] + lj.field_g[2];
                                       var6++;
-                                      continue L5;
+                                      continue L6;
                                     }
                                   } else {
                                     var4 = var4 + cd.field_c[var6] + lj.field_g[1];
                                     var6++;
-                                    continue L5;
+                                    continue L6;
                                   }
                                 }
                               } else {
                                 var6++;
-                                continue L5;
+                                continue L6;
                               }
                             }
                           } else {
@@ -406,45 +411,45 @@ final class km {
                         var5 = n.field_z[var4_int];
                         var24 = nl.a(var5, (byte) 124);
                         var7 = 0;
-                        L7: while (true) {
+                        L8: while (true) {
                           if (var7 < -8 + var24.length) {
                             if (var24[var7] == param0) {
                               var3++;
                               var4_int++;
-                              continue L4;
+                              continue L5;
                             } else {
                               var7++;
-                              continue L7;
+                              continue L8;
                             }
                           } else {
                             var4_int++;
-                            continue L4;
+                            continue L5;
                           }
                         }
                       }
                     }
                   } else {
-                    break L0;
+                    break L1;
                   }
                 }
               }
             }
             var3 = 0;
-            L8: while (true) {
+            L9: while (true) {
               if (n.field_z.length <= var3) {
-                break L0;
+                break L1;
               } else {
                 var4_int = n.field_z[var3];
                 var23 = nl.a(var4_int, (byte) 126);
                 var6 = 0;
-                L9: while (true) {
+                L10: while (true) {
                   if (-8 + var23.length <= var6) {
                     var3++;
-                    continue L8;
+                    continue L9;
                   } else {
                     if (var23[var6] != param0) {
                       var6++;
-                      continue L9;
+                      continue L10;
                     } else {
                       return db.a(nj.field_T, -54, new String[1]);
                     }

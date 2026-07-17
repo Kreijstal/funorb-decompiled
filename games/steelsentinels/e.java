@@ -109,7 +109,7 @@ final class e {
         ((e) this).field_d = param0 ? true : false;
     }
 
-    final static byte a(char param0, int param1) {
+    final static byte a(char param0) {
         int var2 = 0;
         int var3 = 0;
         var3 = SteelSentinels.field_G;

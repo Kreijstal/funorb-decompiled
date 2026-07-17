@@ -10,7 +10,7 @@ final class kf extends hd {
     private hd field_Cb;
     static String field_zb;
 
-    final static void a(int param0, byte param1) {
+    final static void a(int param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -18,39 +18,31 @@ final class kf extends hd {
         var3 = Kickabout.field_G;
         try {
           L0: {
-            L1: {
-              if (param1 == 63) {
-                break L1;
-              } else {
-                kf.c(true);
-                break L1;
-              }
-            }
             na.a(kt.field_g, true, wf.field_O, er.field_k, 1, param0, 0);
             var2_int = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (var2_int >= wf.field_O) {
-                L3: {
+                L2: {
                   na.a(lm.field_V, false, wf.field_O - -param0, vi.field_s, 1, param0 + param0, param0);
                   if (wf.field_O <= param0) {
-                    break L3;
+                    break L2;
                   } else {
                     wf.field_O = param0;
-                    break L3;
+                    break L2;
                   }
                 }
                 break L0;
               } else {
                 pf.field_d[var2_int - -param0] = var2_int;
                 var2_int++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var2, "kf.C(" + param0 + 44 + param1 + 41);
+          throw nb.a((Throwable) (Object) var2, "kf.C(" + param0 + 44 + 63 + 41);
         }
     }
 
@@ -358,7 +350,7 @@ final class kf extends hd {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_yb = null;
         field_zb = null;
     }

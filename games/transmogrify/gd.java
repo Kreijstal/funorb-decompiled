@@ -13,7 +13,7 @@ final class gd extends wf {
     static int[] field_n;
     static int field_m;
 
-    public static void d(int param0) {
+    public static void d() {
         field_k = null;
         field_n = null;
         field_l = null;
@@ -90,45 +90,55 @@ final class gd extends wf {
 
     final static String a(byte param0, boolean param1, boolean param2, boolean param3) {
         int var4 = 0;
-        if (param0 >= -80) {
-          L0: {
-            String discarded$2 = gd.a((byte) -80, false, false, false);
-            var4 = 0;
-            if (param2) {
-              var4 += 2;
-              break L0;
-            } else {
-              break L0;
+        if (param0 < -80) {
+          var4 = 0;
+          if (param3) {
+            L0: {
+              var4 += 4;
+              if (param2) {
+                var4 += 2;
+                break L0;
+              } else {
+                break L0;
+              }
             }
-          }
-          L1: {
-            if (param1) {
-              var4++;
-              break L1;
-            } else {
-              break L1;
+            return ba.field_l[var4];
+          } else {
+            L1: {
+              if (param2) {
+                var4 += 2;
+                break L1;
+              } else {
+                break L1;
+              }
             }
+            return ba.field_l[var4];
           }
-          return ba.field_l[var4];
         } else {
-          L2: {
-            var4 = 0;
-            if (param2) {
-              var4 += 2;
-              break L2;
-            } else {
-              break L2;
+          String discarded$2 = gd.a((byte) -80, false, false, false);
+          var4 = 0;
+          if (!param3) {
+            L2: {
+              if (param2) {
+                var4 += 2;
+                break L2;
+              } else {
+                break L2;
+              }
             }
-          }
-          L3: {
-            if (param1) {
-              var4++;
-              break L3;
-            } else {
-              break L3;
+            return ba.field_l[var4];
+          } else {
+            L3: {
+              var4 += 4;
+              if (param2) {
+                var4 += 2;
+                break L3;
+              } else {
+                break L3;
+              }
             }
+            return ba.field_l[var4];
           }
-          return ba.field_l[var4];
         }
     }
 

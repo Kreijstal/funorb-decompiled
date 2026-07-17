@@ -27,7 +27,7 @@ final class oqa extends osa {
         int var2 = 6 % ((param0 - -69) / 42);
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_s = null;
         field_t = null;
         field_v = null;

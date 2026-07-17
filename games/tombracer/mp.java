@@ -9,11 +9,11 @@ final class mp {
     static jpa field_d;
     static String field_b;
 
-    final static void a(String param0, java.applet.Applet param1, int param2) {
+    final static void a(String param0, java.applet.Applet param1) {
         try {
-            Throwable throwable = null;
-            RuntimeException runtimeException = null;
             String var3 = null;
+            Throwable var3_ref = null;
+            RuntimeException var3_ref2 = null;
             String var4 = null;
             String var5 = null;
             RuntimeException stackIn_12_0 = null;
@@ -68,25 +68,18 @@ final class mp {
                           }
                         }
                       }
-                      var5 = var5 + "; Expires=" + ida.a(bva.b((byte) -107) - -94608000000L, param2 + 21406) + "; Max-Age=" + 94608000L;
+                      int discarded$5 = -1;
+                      var5 = var5 + "; Expires=" + ida.a(bva.b((byte) -107) - -94608000000L) + "; Max-Age=" + 94608000L;
                       break L2;
                     }
-                    L4: {
-                      lb.a(param1, 19467, "document.cookie=\"" + var5 + "\"");
-                      if (param2 == -21407) {
-                        break L4;
-                      } else {
-                        mp.a(-2);
-                        break L4;
-                      }
-                    }
+                    lb.a(param1, 19467, "document.cookie=\"" + var5 + "\"");
                     break L1;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
-                  L5: {
-                    throwable = decompiledCaughtException;
-                    break L5;
+                  L4: {
+                    var3_ref = decompiledCaughtException;
+                    break L4;
                   }
                 }
                 v.a((byte) 64, param1);
@@ -94,9 +87,9 @@ final class mp {
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L6: {
-                runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_11_0 = (RuntimeException) runtimeException;
+              L5: {
+                var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_11_0 = (RuntimeException) var3_ref2;
                 stackOut_11_1 = new StringBuilder().append("mp.C(");
                 stackIn_14_0 = stackOut_11_0;
                 stackIn_14_1 = stackOut_11_1;
@@ -109,7 +102,7 @@ final class mp {
                   stackIn_15_0 = stackOut_14_0;
                   stackIn_15_1 = stackOut_14_1;
                   stackIn_15_2 = stackOut_14_2;
-                  break L6;
+                  break L5;
                 } else {
                   stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
                   stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
@@ -117,10 +110,10 @@ final class mp {
                   stackIn_15_0 = stackOut_12_0;
                   stackIn_15_1 = stackOut_12_1;
                   stackIn_15_2 = stackOut_12_2;
-                  break L6;
+                  break L5;
                 }
               }
-              L7: {
+              L6: {
                 stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
                 stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44);
                 stackIn_18_0 = stackOut_15_0;
@@ -134,7 +127,7 @@ final class mp {
                   stackIn_19_0 = stackOut_18_0;
                   stackIn_19_1 = stackOut_18_1;
                   stackIn_19_2 = stackOut_18_2;
-                  break L7;
+                  break L6;
                 } else {
                   stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
                   stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
@@ -142,10 +135,10 @@ final class mp {
                   stackIn_19_0 = stackOut_16_0;
                   stackIn_19_1 = stackOut_16_1;
                   stackIn_19_2 = stackOut_16_2;
-                  break L7;
+                  break L6;
                 }
               }
-              throw tba.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param2 + 41);
+              throw tba.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + -21407 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -492,14 +485,14 @@ final class mp {
             pm.field_a[2] = 9474303;
             lpa.field_s = param11;
             pm.field_a[4] = 16711935;
-            kq.field_c = param2;
+            kq.field_c = true;
             pm.field_a[0] = 16764000;
             pm.field_a[1] = 6356832;
             bn.field_t = param7;
             bma.field_t[3] = 16736511;
             bma.field_t[2] = 16736352;
             sva.field_d = 8421504;
-            bma.field_t[param6] = 16764000;
+            bma.field_t[0] = 16764000;
             pm.field_a[4] = 16711935;
             bma.field_t[1] = 6356832;
             var12_ref = new iu(4, 4);
@@ -523,8 +516,8 @@ final class mp {
             v.field_i.b(-124, sua.field_K);
             pq.field_g = new jea(0L, param5);
             pq.field_g.field_H = lpa.field_s;
-            sua.field_K.b(param6 + -124, pq.field_g);
-            sua.field_K.a(param6 ^ -10966);
+            sua.field_K.b(-124, pq.field_g);
+            sua.field_K.a(-10966);
             mka.field_b = new jea(0L, (jea) null);
             mka.field_b.field_w = var16;
             sua.field_K.b(-125, mka.field_b);
@@ -610,7 +603,7 @@ final class mp {
                         kva.field_p[var18] = new jea(0L, bn.field_t);
                         kva.field_p[var18].field_bb = 1;
                         wba.field_p[var18].b(-122, bt.field_c[var18]);
-                        wba.field_p[var18].b(param6 + -125, oka.field_y[var18]);
+                        wba.field_p[var18].b(-125, oka.field_y[var18]);
                         wba.field_p[var18].b(-125, kva.field_p[var18]);
                         wba.field_p[var18].a(-10966);
                         era.field_e.b(-127, wba.field_p[var18]);
@@ -629,7 +622,8 @@ final class mp {
                 ara.field_ub = new jea(0L, param8);
                 ara.field_ub.field_r = ge.field_G;
                 era.field_e.b(-128, ara.field_ub);
-                stackOut_30_0 = o.e(540800);
+                int discarded$1 = 540800;
+                stackOut_30_0 = o.e();
                 stackIn_31_0 = stackOut_30_0 ? 1 : 0;
                 break L2;
               }
@@ -706,7 +700,7 @@ final class mp {
           }
           L15: {
             stackOut_47_0 = (RuntimeException) (Object) stackIn_47_0;
-            stackOut_47_1 = ((StringBuilder) (Object) stackIn_47_1).append(stackIn_47_2).append(44).append(param2).append(44);
+            stackOut_47_1 = ((StringBuilder) (Object) stackIn_47_1).append(stackIn_47_2).append(44).append(1).append(44);
             stackIn_50_0 = stackOut_47_0;
             stackIn_50_1 = stackOut_47_1;
             stackIn_48_0 = stackOut_47_0;
@@ -781,7 +775,7 @@ final class mp {
           }
           L18: {
             stackOut_59_0 = (RuntimeException) (Object) stackIn_59_0;
-            stackOut_59_1 = ((StringBuilder) (Object) stackIn_59_1).append(stackIn_59_2).append(44).append(param6).append(44);
+            stackOut_59_1 = ((StringBuilder) (Object) stackIn_59_1).append(stackIn_59_2).append(44).append(0).append(44);
             stackIn_62_0 = stackOut_59_0;
             stackIn_62_1 = stackOut_59_1;
             stackIn_60_0 = stackOut_59_0;

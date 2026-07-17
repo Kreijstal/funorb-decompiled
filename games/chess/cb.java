@@ -17,9 +17,9 @@ final class cb {
     final static void a(int param0, String param1, String param2) {
         try {
             i.a(false, param2, -5136, param1);
-            int var3_int = 59 % ((param0 - 43) / 38);
+            int var3_int = 0;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "cb.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "cb.C(" + 82 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -29,7 +29,7 @@ final class cb {
         field_h = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         Object var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

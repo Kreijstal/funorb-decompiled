@@ -39,7 +39,7 @@ final class h extends o {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void a() {
         RuntimeException var2 = null;
         int var3 = 0;
         pg var4 = null;
@@ -52,7 +52,8 @@ final class h extends o {
               if (var4 == null) {
                 break L0;
               } else {
-                tm.a(false, var4, param0);
+                int discarded$4 = 7;
+                tm.a(false, var4);
                 var4 = (pg) (Object) nd.field_h.a((byte) -122);
                 continue L1;
               }
@@ -61,7 +62,7 @@ final class h extends o {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fk.a((Throwable) (Object) var2, "h.A(" + param0 + 44 + 0 + 41);
+          throw fk.a((Throwable) (Object) var2, "h.A(" + 7 + 44 + 0 + 41);
         }
     }
 

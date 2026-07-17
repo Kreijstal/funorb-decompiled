@@ -8,7 +8,7 @@ final class dk implements ca {
     static String field_a;
     static int field_d;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_e = null;
         field_b = null;
@@ -124,7 +124,7 @@ final class dk implements ca {
         try {
           L0: {
             var3 = vh.a(bl.field_t, "", param2);
-            ai.a(param1 ^ param1, var3);
+            ai.a(0, var3);
             stackOut_0_0 = new wh(var3, param0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -134,7 +134,7 @@ final class dk implements ca {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3_ref;
-            stackOut_2_1 = new StringBuilder().append("dk.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_2_1 = new StringBuilder().append("dk.C(").append(param0).append(44).append(1).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;

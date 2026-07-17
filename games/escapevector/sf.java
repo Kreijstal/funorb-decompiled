@@ -118,7 +118,8 @@ final class sf {
                           }
                         } else {
                           var7 = param1.charAt(var6);
-                          if (d.a((char) var7, -11217)) {
+                          int discarded$1 = -11217;
+                          if (d.a((char) var7)) {
                             L7: {
                               var8 = eo.a(227, (char) var7);
                               if (0 == var8) {
@@ -259,7 +260,7 @@ final class sf {
         ((sf) this).field_o = ((sf) this).field_o + ((sf) this).field_k;
     }
 
-    final static tk a(String param0, byte param1) {
+    final static tk a(String param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

@@ -8,7 +8,7 @@ final class ke {
     static String field_e;
     static bd field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
         field_e = null;

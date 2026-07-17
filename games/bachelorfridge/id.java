@@ -12,14 +12,16 @@ final class id extends pn {
     id(vr param0) {
         try {
             ((id) this).field_b = bla.a(29611, "basic", "tiles_pizza", param0);
-            this.a(128);
+            int discarded$0 = 128;
+            this.a();
         } catch (RuntimeException runtimeException) {
             throw pe.a((Throwable) (Object) runtimeException, "id.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }
     }
 
     final static void e(int param0, int param1) {
-        cq discarded$12 = ol.a(pja.field_a[param1][kla.a(3, m.field_a, -2147483648)], true);
+        int discarded$22 = 1;
+        cq discarded$25 = ol.a(pja.field_a[param1][kla.a(3, m.field_a, -2147483648)]);
         if (param0 != 49) {
             id.e(68, -5);
         }
@@ -34,7 +36,7 @@ final class id extends pn {
         }
     }
 
-    private final void a(int param0) {
+    private final void a() {
         ((id) this).field_a = new kv[4];
         kv var6 = new kv(384, 192);
         kv var2 = var6;
@@ -87,7 +89,7 @@ final class id extends pn {
         field_j = null;
     }
 
-    final static void a(vr param0, int param1) {
+    final static void a(vr param0) {
         dv var2 = null;
         try {
             dv.b(param0.a((byte) 123, "", "headers.packvorbis"));

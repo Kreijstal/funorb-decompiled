@@ -26,7 +26,7 @@ final class fg {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         try {
             int var1 = 0;
             Exception var2 = null;

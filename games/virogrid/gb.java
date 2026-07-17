@@ -13,19 +13,25 @@ final class gb extends tg {
     static String field_M;
 
     final static void c(byte param0) {
-        nk.field_K = si.a(vm.field_d, new double[3], new double[3]);
-        pe.field_j = si.b(nk.field_K);
+        if (param0 != -44) {
+          return;
+        } else {
+          nk.field_K = si.a(vm.field_d, new double[3], new double[3]);
+          pe.field_j = si.b(nk.field_K);
+          return;
+        }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_H = null;
         field_M = null;
         field_L = null;
         field_F = null;
     }
 
-    final static boolean g(boolean param0) {
-        return ak.b(-31609);
+    final static boolean g() {
+        int discarded$0 = -31609;
+        return ak.b();
     }
 
     final int a(int param0, int param1) {

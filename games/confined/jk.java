@@ -682,7 +682,7 @@ final class jk {
         return var3;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         bg.field_d = tl.a(4314);
         vg.field_Z = new sh();
         wl.a(-106, true, true);
@@ -690,7 +690,7 @@ final class jk {
 
     final static int a(byte param0, int param1) {
         int var2 = 0;
-        int var4 = -29 / ((param0 - 87) / 36);
+        int var4 = -29;
         if (!((param1 & 7) == 0)) {
             var2 = 8 - (7 & param1);
         }
@@ -698,7 +698,7 @@ final class jk {
         return var3;
     }
 
-    final static nf b(int param0) {
+    final static nf b() {
         int var4_int = 0;
         int var5 = Confined.field_J ? 1 : 0;
         int var1 = sd.field_f[0] * rg.field_I[0];
@@ -713,9 +713,6 @@ final class jk {
     }
 
     public static void a(int param0) {
-        if (param0 >= -72) {
-            return;
-        }
         field_c = null;
     }
 

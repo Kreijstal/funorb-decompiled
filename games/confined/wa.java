@@ -9,7 +9,7 @@ final class wa {
     String field_c;
     int field_f;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
     }
 
@@ -21,17 +21,9 @@ final class wa {
         var3 = Confined.field_J ? 1 : 0;
         try {
           L0: {
-            L1: {
-              sb.a(0, cg.field_f, hj.field_j, mc.field_c, (byte) 92, param0, true);
-              if (param1 == 117) {
-                break L1;
-              } else {
-                wa.a(-119);
-                break L1;
-              }
-            }
+            sb.a(0, cg.field_f, hj.field_j, mc.field_c, (byte) 92, param0, true);
             var2_int = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (mc.field_c <= var2_int) {
                 sb.a(param0, mi.field_f, ka.field_P, mc.field_c + param0, (byte) 92, param0 + param0, false);
                 if (mc.field_c <= param0) {
@@ -43,22 +35,19 @@ final class wa {
               } else {
                 sj.field_rb[param0 + var2_int] = var2_int;
                 var2_int++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var2, "wa.C(" + param0 + 44 + param1 + 41);
+          throw sd.a((Throwable) (Object) var2, "wa.C(" + param0 + 44 + 117 + 41);
         }
     }
 
     final static void a(int param0) {
         vf.a((byte) -126, 17);
-        if (param0 != -20683) {
-            field_d = null;
-        }
     }
 
     static {

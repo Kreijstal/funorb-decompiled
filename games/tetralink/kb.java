@@ -17,29 +17,20 @@ final class kb extends mc {
         try {
             gl.field_o = param1;
             ck.field_bb.field_fb.b(1);
-            if (param0) {
-                field_t = -13;
-            }
             ck.field_bb.a((byte) 112, (hl) (Object) gl.field_o);
             hi.field_a = true;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "kb.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "kb.A(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static void a(int param0, int param1, int param2, byte param3) {
+    final static void a(int param0, int param1, int param2) {
         bm.field_n = param0;
         uj.field_w = param2;
         wa.field_d = param1;
     }
 
-    public static void a(int param0) {
-        if (param0 != 111) {
-            field_p = null;
-            field_q = null;
-            field_p = null;
-            return;
-        }
+    public static void a() {
         field_q = null;
         field_p = null;
     }
@@ -51,7 +42,7 @@ final class kb extends mc {
         ((kb) this).field_o = param0;
     }
 
-    final static char a(char param0, int param1) {
+    final static char a(char param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

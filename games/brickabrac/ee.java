@@ -8,7 +8,7 @@ final class ee extends vi {
     int field_t;
     static boolean[][] field_r;
 
-    final static String b(boolean param0) {
+    final static String b() {
         if (!(jm.field_f != ik.field_g)) {
             return fj.field_Qb;
         }
@@ -19,14 +19,16 @@ final class ee extends vi {
         super(param0, param1, param2, param3, param4);
     }
 
-    final static void c(int param0) {
-        if (!(lg.a(9))) {
+    final static void c() {
+        int discarded$5 = 9;
+        if (!(lg.a())) {
             return;
         }
-        bq.a(false, 4, (byte) 104);
+        int discarded$6 = 104;
+        bq.a(false, 4);
     }
 
-    final static void d(byte param0) {
+    final static void d() {
         ag.field_K = null;
         dl.field_d = null;
         cn.field_a = null;
@@ -180,7 +182,7 @@ final class ee extends vi {
         return stackIn_3_0;
     }
 
-    public static void e(int param0) {
+    public static void e() {
         int var1 = 2;
         field_s = null;
         field_p = null;

@@ -20,9 +20,9 @@ final class hb implements Iterable {
             param1.removeMouseListener((java.awt.event.MouseListener) (Object) ub.field_e);
             param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) ub.field_e);
             param1.removeFocusListener((java.awt.event.FocusListener) (Object) ub.field_e);
-            wn.field_d = param0;
+            wn.field_d = 0;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "hb.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "hb.E(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -435,7 +435,7 @@ final class hb implements Iterable {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_g = null;
         field_j = null;
         field_h = null;
@@ -512,72 +512,64 @@ final class hb implements Iterable {
           break L6;
         }
         L8: {
-          if (param0 < -118) {
-            break L8;
-          } else {
-            field_j = null;
-            break L8;
-          }
-        }
-        L9: {
-          L10: {
+          L9: {
             if (mb.field_T == null) {
-              break L10;
+              break L9;
             } else {
               if (mb.field_T.length < param1) {
-                break L10;
-              } else {
                 break L9;
+              } else {
+                break L8;
               }
             }
           }
           mb.field_T = new int[2 * param1];
-          break L9;
+          break L8;
         }
-        L11: {
-          L12: {
+        L10: {
+          L11: {
             if (null == eb.field_u) {
-              break L12;
+              break L11;
             } else {
               if (param1 <= eb.field_u.length) {
-                break L11;
+                break L10;
               } else {
-                break L12;
+                break L11;
               }
             }
           }
           eb.field_u = new int[2 * param1];
-          break L11;
+          break L10;
         }
-        L13: {
-          L14: {
+        L12: {
+          L13: {
             if (un.field_j == null) {
-              break L14;
+              break L13;
             } else {
               if (param2 + param1 <= un.field_j.length) {
-                break L13;
+                break L12;
               } else {
-                break L14;
+                break L13;
               }
             }
           }
           un.field_j = new int[(param2 + param1) * 2];
-          break L13;
+          break L12;
         }
-        L15: {
-          L16: {
+        L14: {
+          L15: {
             if (null == vd.field_g) {
-              break L16;
+              break L15;
             } else {
               if (vd.field_g.length >= param1) {
-                break L15;
+                break L14;
               } else {
-                break L16;
+                break L15;
               }
             }
           }
           vd.field_g = new boolean[param1 * 2];
-          break L15;
+          break L14;
         }
         k.field_Lb = -2147483648;
         nj.field_S = 2147483647;

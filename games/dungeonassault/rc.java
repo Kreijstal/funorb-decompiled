@@ -5,12 +5,12 @@ final class rc {
     static java.applet.Applet field_b;
     private static qk field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }
 
-    final static cn a(String param0, nh param1, String param2, byte param3) {
+    final static cn a(String param0, nh param1, String param2) {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -181,7 +181,7 @@ final class rc {
         gg.a((byte) -103, (String) null, "");
     }
 
-    final static void c(int param0) {
+    final static void c() {
         bh.field_M = false;
         int discarded$0 = ra.field_c.c(true);
     }

@@ -23,7 +23,7 @@ final class kf extends gm {
         field_D = null;
     }
 
-    private final void h(int param0) {
+    private final void h() {
         ((kf) this).field_C = new t[]{this.b(((kf) this).field_J, ((kf) this).field_I, (byte) 49), this.b(((kf) this).field_y, ((kf) this).field_z, (byte) 49)};
         ((kf) this).field_E = this.b(false);
         ((kf) this).field_H = ((kf) this).field_E.b();
@@ -89,7 +89,7 @@ final class kf extends gm {
               } else {
                 var9_int = 0;
                 L2: while (true) {
-                  var9_int = param0.indexOf((int) param1, var9_int);
+                  var9_int = param0.indexOf('_', var9_int);
                   if (var9_int >= 0) {
                     var6 = var6 + var7;
                     var9_int++;
@@ -103,7 +103,7 @@ final class kf extends gm {
             var9 = new StringBuilder(var6);
             var10 = 0;
             L3: while (true) {
-              var11 = param0.indexOf((int) param1, var10);
+              var11 = param0.indexOf('_', var10);
               if (var11 >= 0) {
                 StringBuilder discarded$3 = var9.append(param0.substring(var10, var11));
                 var10 = var11 - -1;
@@ -147,7 +147,7 @@ final class kf extends gm {
           }
           L5: {
             stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(param1).append(44);
+            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(95).append(44);
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -247,7 +247,7 @@ final class kf extends gm {
         this(param0, param1, param2, param3, param4, param5, param6, 8355711 & param5 >> 1, 8355711 & param6 >> 1);
     }
 
-    final static void b(int param0, int param1) {
+    final static void b() {
         RuntimeException var2 = null;
         int var3 = 0;
         cb var4 = null;
@@ -260,7 +260,7 @@ final class kf extends gm {
               if (var4 == null) {
                 break L0;
               } else {
-                pd.a(var4, true, param0);
+                pd.a(var4, true, 2);
                 var4 = (cb) (Object) ae.field_nb.f(-24059);
                 continue L1;
               }
@@ -269,14 +269,15 @@ final class kf extends gm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var2, "kf.F(" + param0 + 44 + -8190 + 41);
+          throw rb.a((Throwable) (Object) var2, "kf.F(" + 2 + 44 + -8190 + 41);
         }
     }
 
     final void a(byte param0, int param1, int param2, int param3, int param4) {
         int var6 = -126 / ((66 - param0) / 57);
         super.a((byte) 125, param1, param2, param3, param4);
-        this.h(-917474783);
+        int discarded$0 = -917474783;
+        this.h();
     }
 
     private final t b(boolean param0) {
@@ -305,9 +306,6 @@ final class kf extends gm {
 
     final static String a(int param0) {
         String var1 = "";
-        if (param0 != 17241) {
-            field_D = null;
-        }
         if (!(un.field_k == null)) {
             var1 = un.field_k.i(-116);
         }
@@ -441,10 +439,11 @@ final class kf extends gm {
         }
         ((kf) this).field_J = param1;
         ((kf) this).field_z = (param0 & 16711422) >> 1;
-        this.h(-917474783);
+        int discarded$0 = -917474783;
+        this.h();
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         Object var2 = null;
         uj.a((String) null, -32082, ol.field_a);
     }

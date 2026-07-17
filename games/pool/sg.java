@@ -19,7 +19,8 @@ final class sg extends ob {
         if (param0 != 0) {
             int discarded$0 = ((sg) this).a(true, -54);
         }
-        if (this.g(1) > param1) {
+        int discarded$1 = 1;
+        if (this.g() > param1) {
             if (param1 < 2) {
                 return 152 * (param1 % 3) + 173;
             }
@@ -28,7 +29,7 @@ final class sg extends ob {
         return super.d(param0, param1);
     }
 
-    final static byte[] a(int param0, int param1, byte[] param2, byte param3) {
+    final static byte[] a(int param0, int param1, byte[] param2) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -61,7 +62,7 @@ final class sg extends ob {
             var5 = 0;
             L1: while (true) {
               if (var5 >= param2.length) {
-                var6 = 45 / ((44 - param0) / 56);
+                var6 = 22;
                 L2: while (true) {
                   if (var5 >= var8.length) {
                     stackOut_7_0 = (byte[]) var4;
@@ -85,7 +86,7 @@ final class sg extends ob {
           L3: {
             var4_ref = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var4_ref;
-            stackOut_9_1 = new StringBuilder().append("sg.IB(").append(param0).append(44).append(param1).append(44);
+            stackOut_9_1 = new StringBuilder().append("sg.IB(").append(-116).append(44).append(param1).append(44);
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -113,7 +114,7 @@ final class sg extends ob {
         return stackIn_8_0;
     }
 
-    private final int g(int param0) {
+    private final int g() {
         return ((sg) this).field_h.length - 1;
     }
 
@@ -121,7 +122,8 @@ final class sg extends ob {
         if (!param1) {
             int discarded$0 = ((sg) this).a(-39, -95);
         }
-        if (!(this.g(1) != param0)) {
+        int discarded$1 = 1;
+        if (!(this.g() != param0)) {
             return true;
         }
         return param0 < 5 ? true : false;
@@ -144,7 +146,8 @@ final class sg extends ob {
         if (param0) {
             int discarded$0 = ((sg) this).a(112, -81);
         }
-        if (this.g(1) > param1) {
+        int discarded$1 = 1;
+        if (this.g() > param1) {
             return ((sg) this).d(0, param1) + 140;
         }
         return super.a(false, param1);
@@ -154,7 +157,8 @@ final class sg extends ob {
         if (param1 < 2) {
             return 130;
         }
-        if (param1 < this.g(1)) {
+        int discarded$0 = 1;
+        if (param1 < this.g()) {
             return 260;
         }
         if (param0 != 6) {
@@ -195,7 +199,8 @@ final class sg extends ob {
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         dd var7 = null;
         int var8 = 0;
-        if (!(this.g(1) <= param0)) {
+        int discarded$0 = 1;
+        if (!(this.g() <= param0)) {
             var7 = !((sg) this).a(param0, true) ? ne.field_t[param0] : og.field_K[param0];
             var8 = -var7.field_z + (-param2 + param1) >> 1;
             var7.a(param2 + var8, var8 + param5);
@@ -221,7 +226,8 @@ final class sg extends ob {
         if (param0 != 69) {
             return -22;
         }
-        if (this.g(1) > param1) {
+        int discarded$0 = 1;
+        if (this.g() > param1) {
             return 120;
         }
         return 36;

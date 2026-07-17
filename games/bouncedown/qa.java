@@ -11,11 +11,11 @@ final class qa extends ai {
         throw new Error();
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_g = null;
     }
 
-    final static String a(CharSequence param0, boolean param1) {
+    final static String a(CharSequence param0) {
         String var2 = null;
         RuntimeException var2_ref = null;
         String stackIn_3_0 = null;
@@ -39,7 +39,8 @@ final class qa extends ai {
         try {
           L0: {
             L1: {
-              var2 = pa.a(ma.a((byte) 120, param0), 7);
+              int discarded$2 = 7;
+              var2 = pa.a(ma.a((byte) 120, param0));
               if (var2 != null) {
                 break L1;
               } else {

@@ -91,7 +91,7 @@ final class mm implements Runnable {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         qi.field_c = false;
         int discarded$0 = kj.field_d.i((byte) -101);
     }
@@ -174,7 +174,8 @@ final class mm implements Runnable {
                       var3 = var4.getOutputStream();
                       var3.write(17);
                       var5 = (CharSequence) (Object) ("JAGGRAB " + ((mm) this).field_k.getFile() + "\n\n");
-                      var3.write(vg.a(var5, (byte) -126));
+                      int discarded$1 = -126;
+                      var3.write(vg.a(var5));
                       ((mm) this).field_c = new DataInputStream(var4.getInputStream());
                       break L7;
                     }

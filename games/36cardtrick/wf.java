@@ -147,9 +147,11 @@ final class wf {
     final static kc[] a(int param0, int param1, int param2, int param3, int param4) {
         if (param1 != 1) {
           wf.a(120, -107);
-          return ma.a(param2, 1, param3, 1, 3, param4, 1, param0, (byte) -22);
+          int discarded$4 = -22;
+          return ma.a(param2, 1, param3, 1, 3, param4, 1, param0);
         } else {
-          return ma.a(param2, 1, param3, 1, 3, param4, 1, param0, (byte) -22);
+          int discarded$5 = -22;
+          return ma.a(param2, 1, param3, 1, 3, param4, 1, param0);
         }
     }
 

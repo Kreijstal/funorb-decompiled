@@ -13,7 +13,7 @@ final class wha implements dja {
         return (tv[]) (Object) new crb[param1];
     }
 
-    final static void a(int param0) {
+    final static void a() {
         wga.field_a = new lwa(fh.field_g, lo.field_b, kn.field_p, qc.field_q, (llb) (Object) urb.field_o, iga.field_o);
     }
 
@@ -155,7 +155,7 @@ final class wha implements dja {
                   }
                 } else {
                   if (iv.field_o == 2) {
-                    var3_int = wva.a(kjb.field_o, ob.field_l, 0, isa.a(wma.field_M, new String[1], param0 + 93), boa.field_a);
+                    var3_int = wva.a(kjb.field_o, ob.field_l, 0, isa.a(wma.field_M, new String[1], 95), boa.field_a);
                     var4 = -1;
                     var5 = 0;
                     L6: while (true) {
@@ -360,7 +360,7 @@ final class wha implements dja {
                         if (5 != iv.field_o) {
                           throw new IllegalArgumentException();
                         } else {
-                          var3_int = wva.a(kjb.field_o, ob.field_l, param0 + -2, tl.field_o, boa.field_a);
+                          var3_int = wva.a(kjb.field_o, ob.field_l, 0, tl.field_o, boa.field_a);
                           var4 = 3 - -var3_int;
                           bra.field_f = new String[var4];
                           edb.field_o = new int[var4];
@@ -399,7 +399,7 @@ final class wha implements dja {
                           var3_int = wva.a(kjb.field_o, ob.field_l, 0, oda.field_t, boa.field_a);
                           break L21;
                         } else {
-                          var3_int = wva.a(kjb.field_o, ob.field_l, param0 ^ 2, moa.field_n, boa.field_a);
+                          var3_int = wva.a(kjb.field_o, ob.field_l, 0, moa.field_n, boa.field_a);
                           break L21;
                         }
                       }
@@ -494,7 +494,7 @@ final class wha implements dja {
                     L31: while (true) {
                       if (bra.field_f.length <= var4) {
                         L32: {
-                          if (param0 != iv.field_o) {
+                          if (2 != iv.field_o) {
                             mba.field_a.a(param1, -1, 0, uca.a(true, kc.field_b, uia.field_b));
                             break L32;
                           } else {
@@ -586,7 +586,7 @@ final class wha implements dja {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var3, "wha.C(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw rta.a((Throwable) (Object) var3, "wha.C(" + 2 + 44 + param1 + 44 + param2 + 41);
         }
     }
 

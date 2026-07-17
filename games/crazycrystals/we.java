@@ -11,7 +11,7 @@ final class we extends jb {
     int field_m;
     int field_j;
 
-    public static void a(int param0) {
+    public static void a() {
         field_l = null;
     }
 
@@ -182,7 +182,7 @@ final class we extends jb {
         return stackIn_6_0;
     }
 
-    final static byte[] a(String param0, int param1) {
+    final static byte[] a(String param0) {
         RuntimeException var2 = null;
         byte[] stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -245,7 +245,7 @@ final class we extends jb {
         if (param1 > -38) {
             return null;
         }
-        return qk.a(param4, 112, param0, param3, false, !param2 ? 0 : 1);
+        return qk.a(param4, 112, true, true, false, 1);
     }
 
     we(int param0, int param1, int param2, int param3, int param4, int param5) {

@@ -14,7 +14,7 @@ final class un {
     static java.awt.Frame field_b;
     short field_d;
 
-    final static int a(int param0) {
+    final static int a() {
         no.field_n.a(false);
         if (!nn.field_c.b(20)) {
             return hm.c(3);

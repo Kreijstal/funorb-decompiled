@@ -74,21 +74,16 @@ final class ll {
         return stackIn_4_0;
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void a() {
         vi.field_q = 0;
         vi.field_p = ke.field_c;
         el.field_e = 0;
         uj.field_d = 0;
         si.field_ob = new sd(2);
-        if (param0 != 49) {
-          return;
-        } else {
-          si.field_ob.a(-1, param1, kk.a(param0 + 10423, ef.field_j, jb.field_b), param0 + -134);
-          return;
-        }
+        si.field_ob.a(-1, true, kk.a(10472, ef.field_j, jb.field_b), -85);
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_d = null;
         field_b = null;
     }
@@ -159,7 +154,8 @@ final class ll {
                     var8 = var10;
                     var8 = var10;
                     if (param1 >= 0L) {
-                      var8 = var10 + "; Expires=" + wc.a(1000L * param1 + ll.a(1000), -1) + "; Max-Age=" + param1;
+                      int discarded$1 = -1;
+                      var8 = var10 + "; Expires=" + wc.a(1000L * param1 + ll.a(1000)) + "; Max-Age=" + param1;
                       break L1;
                     } else {
                       var8 = var10 + "; Discard;";

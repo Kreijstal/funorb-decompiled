@@ -108,13 +108,15 @@ class ed extends qk implements vb {
             return;
         }
         if (((ed) this).field_Ab) {
-            fj.c(-120);
+            int discarded$0 = -120;
+            fj.c();
             return;
         }
         if (!((ed) this).field_Fb) {
             return;
         }
-        pn.c(-11090);
+        int discarded$1 = -11090;
+        pn.c();
     }
 
     ed(h param0, dj param1, String param2, boolean param3, boolean param4) {
@@ -136,93 +138,93 @@ class ed extends qk implements vb {
     final static void a(boolean param0, byte param1) {
         int var2 = 0;
         int var3 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_11_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_13_0 = 0;
-        int stackIn_14_0 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_17_0 = 0;
-        int stackIn_17_1 = 0;
-        int stackIn_25_0 = 0;
+        int stackIn_13_1 = 0;
+        int stackIn_21_0 = 0;
+        int stackIn_29_0 = 0;
+        int stackIn_30_0 = 0;
+        int stackIn_31_0 = 0;
+        int stackIn_32_0 = 0;
         int stackIn_33_0 = 0;
-        int stackIn_34_0 = 0;
-        int stackIn_35_0 = 0;
-        int stackIn_36_0 = 0;
-        int stackIn_37_0 = 0;
-        int stackIn_37_1 = 0;
-        int stackIn_45_0 = 0;
+        int stackIn_33_1 = 0;
+        int stackIn_41_0 = 0;
+        int stackIn_46_0 = 0;
+        int stackIn_47_0 = 0;
+        int stackIn_48_0 = 0;
+        int stackIn_49_0 = 0;
         int stackIn_50_0 = 0;
         int stackIn_51_0 = 0;
-        int stackIn_52_0 = 0;
-        int stackIn_53_0 = 0;
-        int stackIn_54_0 = 0;
-        int stackIn_55_0 = 0;
-        int stackIn_55_1 = 0;
-        int stackIn_61_0 = 0;
+        int stackIn_51_1 = 0;
+        int stackIn_57_0 = 0;
+        int stackIn_70_0 = 0;
+        int stackIn_71_0 = 0;
+        int stackIn_72_0 = 0;
+        int stackIn_73_0 = 0;
         int stackIn_74_0 = 0;
         int stackIn_75_0 = 0;
-        int stackIn_76_0 = 0;
-        int stackIn_77_0 = 0;
-        int stackIn_78_0 = 0;
-        int stackIn_79_0 = 0;
-        int stackIn_79_1 = 0;
-        int stackIn_85_0 = 0;
+        int stackIn_75_1 = 0;
+        int stackIn_81_0 = 0;
+        int stackIn_89_0 = 0;
+        int stackIn_90_0 = 0;
+        int stackIn_91_0 = 0;
+        int stackIn_92_0 = 0;
         int stackIn_93_0 = 0;
         int stackIn_94_0 = 0;
-        int stackIn_95_0 = 0;
-        int stackIn_96_0 = 0;
-        int stackIn_97_0 = 0;
-        int stackIn_98_0 = 0;
-        int stackIn_98_1 = 0;
-        int stackIn_104_0 = 0;
+        int stackIn_94_1 = 0;
+        int stackIn_100_0 = 0;
+        int stackOut_87_0 = 0;
+        int stackOut_88_0 = 0;
+        int stackOut_89_0 = 0;
+        int stackOut_90_0 = 0;
         int stackOut_91_0 = 0;
         int stackOut_92_0 = 0;
+        int stackOut_92_1 = 0;
         int stackOut_93_0 = 0;
-        int stackOut_94_0 = 0;
-        int stackOut_95_0 = 0;
-        int stackOut_96_0 = 0;
-        int stackOut_96_1 = 0;
+        int stackOut_93_1 = 0;
         int stackOut_97_0 = 0;
-        int stackOut_97_1 = 0;
-        int stackOut_101_0 = 0;
+        int stackOut_68_0 = 0;
+        int stackOut_69_0 = 0;
+        int stackOut_70_0 = 0;
+        int stackOut_71_0 = 0;
         int stackOut_72_0 = 0;
         int stackOut_73_0 = 0;
+        int stackOut_73_1 = 0;
         int stackOut_74_0 = 0;
-        int stackOut_75_0 = 0;
-        int stackOut_76_0 = 0;
-        int stackOut_77_0 = 0;
-        int stackOut_77_1 = 0;
+        int stackOut_74_1 = 0;
         int stackOut_78_0 = 0;
-        int stackOut_78_1 = 0;
-        int stackOut_82_0 = 0;
-        int stackOut_49_0 = 0;
+        int stackOut_45_0 = 0;
+        int stackOut_44_0 = 0;
+        int stackOut_46_0 = 0;
+        int stackOut_47_0 = 0;
         int stackOut_48_0 = 0;
+        int stackOut_49_0 = 0;
+        int stackOut_49_1 = 0;
         int stackOut_50_0 = 0;
-        int stackOut_51_0 = 0;
-        int stackOut_52_0 = 0;
-        int stackOut_53_0 = 0;
-        int stackOut_53_1 = 0;
+        int stackOut_50_1 = 0;
         int stackOut_54_0 = 0;
-        int stackOut_54_1 = 0;
-        int stackOut_58_0 = 0;
+        int stackOut_28_0 = 0;
+        int stackOut_29_0 = 0;
+        int stackOut_30_0 = 0;
+        int stackOut_31_0 = 0;
+        int stackOut_31_1 = 0;
         int stackOut_32_0 = 0;
-        int stackOut_33_0 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_35_1 = 0;
+        int stackOut_32_1 = 0;
         int stackOut_36_0 = 0;
-        int stackOut_36_1 = 0;
-        int stackOut_40_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_8_0 = 0;
+        int stackOut_9_0 = 0;
         int stackOut_10_0 = 0;
         int stackOut_11_0 = 0;
+        int stackOut_11_1 = 0;
         int stackOut_12_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_15_1 = 0;
+        int stackOut_12_1 = 0;
         int stackOut_16_0 = 0;
-        int stackOut_16_1 = 0;
-        int stackOut_20_0 = 0;
         if (null == jb.field_z) {
           if (null == r.field_b) {
             L0: {
@@ -241,53 +243,54 @@ class ed extends qk implements vb {
                         if (!ef.field_r) {
                           break L2;
                         } else {
-                          stackOut_91_0 = 1;
-                          stackIn_93_0 = stackOut_91_0;
+                          stackOut_87_0 = 1;
+                          stackIn_89_0 = stackOut_87_0;
                           break L1;
                         }
                       }
                     }
-                    stackOut_92_0 = 0;
-                    stackIn_93_0 = stackOut_92_0;
+                    stackOut_88_0 = 0;
+                    stackIn_89_0 = stackOut_88_0;
                     break L1;
                   }
                   L3: {
                     L4: {
-                      var3 = stackIn_93_0;
-                      stackOut_93_0 = 0;
-                      stackIn_97_0 = stackOut_93_0;
-                      stackIn_94_0 = stackOut_93_0;
+                      var3 = stackIn_89_0;
+                      stackOut_89_0 = 0;
+                      stackIn_93_0 = stackOut_89_0;
+                      stackIn_90_0 = stackOut_89_0;
                       if (!param0) {
                         break L4;
                       } else {
-                        stackOut_94_0 = stackIn_94_0;
-                        stackIn_97_0 = stackOut_94_0;
-                        stackIn_95_0 = stackOut_94_0;
-                        if (!gj.a(29372)) {
+                        int discarded$10 = 29372;
+                        stackOut_90_0 = stackIn_90_0;
+                        stackIn_93_0 = stackOut_90_0;
+                        stackIn_91_0 = stackOut_90_0;
+                        if (!gj.a()) {
                           break L4;
                         } else {
-                          stackOut_95_0 = stackIn_95_0;
-                          stackIn_97_0 = stackOut_95_0;
-                          stackIn_96_0 = stackOut_95_0;
+                          stackOut_91_0 = stackIn_91_0;
+                          stackIn_93_0 = stackOut_91_0;
+                          stackIn_92_0 = stackOut_91_0;
                           if (var3 != 0) {
                             break L4;
                           } else {
-                            stackOut_96_0 = stackIn_96_0;
-                            stackOut_96_1 = 1;
-                            stackIn_98_0 = stackOut_96_0;
-                            stackIn_98_1 = stackOut_96_1;
+                            stackOut_92_0 = stackIn_92_0;
+                            stackOut_92_1 = 1;
+                            stackIn_94_0 = stackOut_92_0;
+                            stackIn_94_1 = stackOut_92_1;
                             break L3;
                           }
                         }
                       }
                     }
-                    stackOut_97_0 = stackIn_97_0;
-                    stackOut_97_1 = 0;
-                    stackIn_98_0 = stackOut_97_0;
-                    stackIn_98_1 = stackOut_97_1;
+                    stackOut_93_0 = stackIn_93_0;
+                    stackOut_93_1 = 0;
+                    stackIn_94_0 = stackOut_93_0;
+                    stackIn_94_1 = stackOut_93_1;
                     break L3;
                   }
-                  ui.a(stackIn_98_0, stackIn_98_1 != 0);
+                  ui.a(stackIn_94_0, stackIn_94_1 != 0);
                   if (var3 == 0) {
                     break L0;
                   } else {
@@ -295,13 +298,14 @@ class ed extends qk implements vb {
                       ml.a(false, -101);
                       return;
                     } else {
-                      if (!gj.a(29372)) {
+                      int discarded$11 = 29372;
+                      if (!gj.a()) {
                         ml.a(false, -101);
                         return;
                       } else {
-                        stackOut_101_0 = 1;
-                        stackIn_104_0 = stackOut_101_0;
-                        ml.a(stackIn_104_0 != 0, -101);
+                        stackOut_97_0 = 1;
+                        stackIn_100_0 = stackOut_97_0;
+                        ml.a(stackIn_100_0 != 0, -101);
                         break L0;
                       }
                     }
@@ -323,54 +327,55 @@ class ed extends qk implements vb {
                       if (!ef.field_r) {
                         break L6;
                       } else {
-                        stackOut_72_0 = 1;
-                        stackIn_74_0 = stackOut_72_0;
+                        stackOut_68_0 = 1;
+                        stackIn_70_0 = stackOut_68_0;
                         break L5;
                       }
                     }
                   }
-                  stackOut_73_0 = 0;
-                  stackIn_74_0 = stackOut_73_0;
+                  stackOut_69_0 = 0;
+                  stackIn_70_0 = stackOut_69_0;
                   break L5;
                 }
                 L7: {
                   L8: {
-                    var3 = stackIn_74_0;
-                    stackOut_74_0 = 0;
-                    stackIn_78_0 = stackOut_74_0;
-                    stackIn_75_0 = stackOut_74_0;
+                    var3 = stackIn_70_0;
+                    stackOut_70_0 = 0;
+                    stackIn_74_0 = stackOut_70_0;
+                    stackIn_71_0 = stackOut_70_0;
                     if (!param0) {
                       break L8;
                     } else {
-                      stackOut_75_0 = stackIn_75_0;
-                      stackIn_78_0 = stackOut_75_0;
-                      stackIn_76_0 = stackOut_75_0;
-                      if (!gj.a(29372)) {
+                      int discarded$12 = 29372;
+                      stackOut_71_0 = stackIn_71_0;
+                      stackIn_74_0 = stackOut_71_0;
+                      stackIn_72_0 = stackOut_71_0;
+                      if (!gj.a()) {
                         break L8;
                       } else {
-                        stackOut_76_0 = stackIn_76_0;
-                        stackIn_78_0 = stackOut_76_0;
-                        stackIn_77_0 = stackOut_76_0;
+                        stackOut_72_0 = stackIn_72_0;
+                        stackIn_74_0 = stackOut_72_0;
+                        stackIn_73_0 = stackOut_72_0;
                         if (var3 != 0) {
                           break L8;
                         } else {
-                          stackOut_77_0 = stackIn_77_0;
-                          stackOut_77_1 = 1;
-                          stackIn_79_0 = stackOut_77_0;
-                          stackIn_79_1 = stackOut_77_1;
+                          stackOut_73_0 = stackIn_73_0;
+                          stackOut_73_1 = 1;
+                          stackIn_75_0 = stackOut_73_0;
+                          stackIn_75_1 = stackOut_73_1;
                           break L7;
                         }
                       }
                     }
                   }
-                  stackOut_78_0 = stackIn_78_0;
-                  stackOut_78_1 = 0;
-                  stackIn_79_0 = stackOut_78_0;
-                  stackIn_79_1 = stackOut_78_1;
+                  stackOut_74_0 = stackIn_74_0;
+                  stackOut_74_1 = 0;
+                  stackIn_75_0 = stackOut_74_0;
+                  stackIn_75_1 = stackOut_74_1;
                   break L7;
                 }
                 L9: {
-                  ui.a(stackIn_79_0, stackIn_79_1 != 0);
+                  ui.a(stackIn_75_0, stackIn_75_1 != 0);
                   if (var3 == 0) {
                     break L9;
                   } else {
@@ -378,13 +383,14 @@ class ed extends qk implements vb {
                       ml.a(false, -101);
                       return;
                     } else {
-                      if (!gj.a(29372)) {
+                      int discarded$13 = 29372;
+                      if (!gj.a()) {
                         ml.a(false, -101);
                         return;
                       } else {
-                        stackOut_82_0 = 1;
-                        stackIn_85_0 = stackOut_82_0;
-                        ml.a(stackIn_85_0 != 0, -101);
+                        stackOut_78_0 = 1;
+                        stackIn_81_0 = stackOut_78_0;
+                        ml.a(stackIn_81_0 != 0, -101);
                         break L9;
                       }
                     }
@@ -408,53 +414,54 @@ class ed extends qk implements vb {
                 if (hi.field_a) {
                   L10: {
                     if (!ef.field_r) {
-                      stackOut_49_0 = 0;
-                      stackIn_50_0 = stackOut_49_0;
+                      stackOut_45_0 = 0;
+                      stackIn_46_0 = stackOut_45_0;
                       break L10;
                     } else {
-                      stackOut_48_0 = 1;
-                      stackIn_50_0 = stackOut_48_0;
+                      stackOut_44_0 = 1;
+                      stackIn_46_0 = stackOut_44_0;
                       break L10;
                     }
                   }
                   L11: {
                     L12: {
-                      var3 = stackIn_50_0;
-                      stackOut_50_0 = 0;
-                      stackIn_54_0 = stackOut_50_0;
-                      stackIn_51_0 = stackOut_50_0;
+                      var3 = stackIn_46_0;
+                      stackOut_46_0 = 0;
+                      stackIn_50_0 = stackOut_46_0;
+                      stackIn_47_0 = stackOut_46_0;
                       if (!param0) {
                         break L12;
                       } else {
-                        stackOut_51_0 = stackIn_51_0;
-                        stackIn_54_0 = stackOut_51_0;
-                        stackIn_52_0 = stackOut_51_0;
-                        if (!gj.a(29372)) {
+                        int discarded$14 = 29372;
+                        stackOut_47_0 = stackIn_47_0;
+                        stackIn_50_0 = stackOut_47_0;
+                        stackIn_48_0 = stackOut_47_0;
+                        if (!gj.a()) {
                           break L12;
                         } else {
-                          stackOut_52_0 = stackIn_52_0;
-                          stackIn_54_0 = stackOut_52_0;
-                          stackIn_53_0 = stackOut_52_0;
+                          stackOut_48_0 = stackIn_48_0;
+                          stackIn_50_0 = stackOut_48_0;
+                          stackIn_49_0 = stackOut_48_0;
                           if (var3 != 0) {
                             break L12;
                           } else {
-                            stackOut_53_0 = stackIn_53_0;
-                            stackOut_53_1 = 1;
-                            stackIn_55_0 = stackOut_53_0;
-                            stackIn_55_1 = stackOut_53_1;
+                            stackOut_49_0 = stackIn_49_0;
+                            stackOut_49_1 = 1;
+                            stackIn_51_0 = stackOut_49_0;
+                            stackIn_51_1 = stackOut_49_1;
                             break L11;
                           }
                         }
                       }
                     }
-                    stackOut_54_0 = stackIn_54_0;
-                    stackOut_54_1 = 0;
-                    stackIn_55_0 = stackOut_54_0;
-                    stackIn_55_1 = stackOut_54_1;
+                    stackOut_50_0 = stackIn_50_0;
+                    stackOut_50_1 = 0;
+                    stackIn_51_0 = stackOut_50_0;
+                    stackIn_51_1 = stackOut_50_1;
                     break L11;
                   }
                   L13: {
-                    ui.a(stackIn_55_0, stackIn_55_1 != 0);
+                    ui.a(stackIn_51_0, stackIn_51_1 != 0);
                     if (var3 == 0) {
                       break L13;
                     } else {
@@ -462,13 +469,14 @@ class ed extends qk implements vb {
                         ml.a(false, -101);
                         return;
                       } else {
-                        if (!gj.a(29372)) {
+                        int discarded$15 = 29372;
+                        if (!gj.a()) {
                           ml.a(false, -101);
                           return;
                         } else {
-                          stackOut_58_0 = 1;
-                          stackIn_61_0 = stackOut_58_0;
-                          ml.a(stackIn_61_0 != 0, -101);
+                          stackOut_54_0 = 1;
+                          stackIn_57_0 = stackOut_54_0;
+                          ml.a(stackIn_57_0 != 0, -101);
                           break L13;
                         }
                       }
@@ -479,41 +487,42 @@ class ed extends qk implements vb {
                   L14: {
                     L15: {
                       var3 = 0;
-                      stackOut_32_0 = 0;
-                      stackIn_36_0 = stackOut_32_0;
-                      stackIn_33_0 = stackOut_32_0;
+                      stackOut_28_0 = 0;
+                      stackIn_32_0 = stackOut_28_0;
+                      stackIn_29_0 = stackOut_28_0;
                       if (!param0) {
                         break L15;
                       } else {
-                        stackOut_33_0 = stackIn_33_0;
-                        stackIn_36_0 = stackOut_33_0;
-                        stackIn_34_0 = stackOut_33_0;
-                        if (!gj.a(29372)) {
+                        int discarded$16 = 29372;
+                        stackOut_29_0 = stackIn_29_0;
+                        stackIn_32_0 = stackOut_29_0;
+                        stackIn_30_0 = stackOut_29_0;
+                        if (!gj.a()) {
                           break L15;
                         } else {
-                          stackOut_34_0 = stackIn_34_0;
-                          stackIn_36_0 = stackOut_34_0;
-                          stackIn_35_0 = stackOut_34_0;
+                          stackOut_30_0 = stackIn_30_0;
+                          stackIn_32_0 = stackOut_30_0;
+                          stackIn_31_0 = stackOut_30_0;
                           if (var3 != 0) {
                             break L15;
                           } else {
-                            stackOut_35_0 = stackIn_35_0;
-                            stackOut_35_1 = 1;
-                            stackIn_37_0 = stackOut_35_0;
-                            stackIn_37_1 = stackOut_35_1;
+                            stackOut_31_0 = stackIn_31_0;
+                            stackOut_31_1 = 1;
+                            stackIn_33_0 = stackOut_31_0;
+                            stackIn_33_1 = stackOut_31_1;
                             break L14;
                           }
                         }
                       }
                     }
-                    stackOut_36_0 = stackIn_36_0;
-                    stackOut_36_1 = 0;
-                    stackIn_37_0 = stackOut_36_0;
-                    stackIn_37_1 = stackOut_36_1;
+                    stackOut_32_0 = stackIn_32_0;
+                    stackOut_32_1 = 0;
+                    stackIn_33_0 = stackOut_32_0;
+                    stackIn_33_1 = stackOut_32_1;
                     break L14;
                   }
                   L16: {
-                    ui.a(stackIn_37_0, stackIn_37_1 != 0);
+                    ui.a(stackIn_33_0, stackIn_33_1 != 0);
                     if (var3 == 0) {
                       break L16;
                     } else {
@@ -521,13 +530,14 @@ class ed extends qk implements vb {
                         ml.a(false, -101);
                         return;
                       } else {
-                        if (!gj.a(29372)) {
+                        int discarded$17 = 29372;
+                        if (!gj.a()) {
                           ml.a(false, -101);
                           return;
                         } else {
-                          stackOut_40_0 = 1;
-                          stackIn_45_0 = stackOut_40_0;
-                          ml.a(stackIn_45_0 != 0, -101);
+                          stackOut_36_0 = 1;
+                          stackIn_41_0 = stackOut_36_0;
+                          ml.a(stackIn_41_0 != 0, -101);
                           break L16;
                         }
                       }
@@ -542,91 +552,93 @@ class ed extends qk implements vb {
               return;
             }
           } else {
-            var2 = 25 % ((38 - param1) / 34);
-            if (cb.field_b) {
-              if (io.field_A) {
-                L17: {
-                  L18: {
-                    if (!hi.field_a) {
-                      break L18;
-                    } else {
-                      if (!ef.field_r) {
-                        break L18;
-                      } else {
-                        stackOut_10_0 = 1;
-                        stackIn_12_0 = stackOut_10_0;
-                        break L17;
-                      }
-                    }
-                  }
-                  stackOut_11_0 = 0;
-                  stackIn_12_0 = stackOut_11_0;
+            L17: {
+              var2 = 25 % ((38 - param1) / 34);
+              if (!cb.field_b) {
+                break L17;
+              } else {
+                if (!io.field_A) {
                   break L17;
-                }
-                L19: {
-                  L20: {
-                    var3 = stackIn_12_0;
-                    stackOut_12_0 = 0;
-                    stackIn_16_0 = stackOut_12_0;
-                    stackIn_13_0 = stackOut_12_0;
-                    if (!param0) {
-                      break L20;
-                    } else {
-                      stackOut_13_0 = stackIn_13_0;
-                      stackIn_16_0 = stackOut_13_0;
-                      stackIn_14_0 = stackOut_13_0;
-                      if (!gj.a(29372)) {
-                        break L20;
+                } else {
+                  L18: {
+                    L19: {
+                      if (!hi.field_a) {
+                        break L19;
                       } else {
-                        stackOut_14_0 = stackIn_14_0;
-                        stackIn_16_0 = stackOut_14_0;
-                        stackIn_15_0 = stackOut_14_0;
-                        if (var3 != 0) {
-                          break L20;
-                        } else {
-                          stackOut_15_0 = stackIn_15_0;
-                          stackOut_15_1 = 1;
-                          stackIn_17_0 = stackOut_15_0;
-                          stackIn_17_1 = stackOut_15_1;
+                        if (!ef.field_r) {
                           break L19;
+                        } else {
+                          stackOut_6_0 = 1;
+                          stackIn_8_0 = stackOut_6_0;
+                          break L18;
                         }
                       }
                     }
+                    stackOut_7_0 = 0;
+                    stackIn_8_0 = stackOut_7_0;
+                    break L18;
                   }
-                  stackOut_16_0 = stackIn_16_0;
-                  stackOut_16_1 = 0;
-                  stackIn_17_0 = stackOut_16_0;
-                  stackIn_17_1 = stackOut_16_1;
-                  break L19;
-                }
-                L21: {
-                  ui.a(stackIn_17_0, stackIn_17_1 != 0);
+                  L20: {
+                    L21: {
+                      var3 = stackIn_8_0;
+                      stackOut_8_0 = 0;
+                      stackIn_12_0 = stackOut_8_0;
+                      stackIn_9_0 = stackOut_8_0;
+                      if (!param0) {
+                        break L21;
+                      } else {
+                        int discarded$18 = 29372;
+                        stackOut_9_0 = stackIn_9_0;
+                        stackIn_12_0 = stackOut_9_0;
+                        stackIn_10_0 = stackOut_9_0;
+                        if (!gj.a()) {
+                          break L21;
+                        } else {
+                          stackOut_10_0 = stackIn_10_0;
+                          stackIn_12_0 = stackOut_10_0;
+                          stackIn_11_0 = stackOut_10_0;
+                          if (var3 != 0) {
+                            break L21;
+                          } else {
+                            stackOut_11_0 = stackIn_11_0;
+                            stackOut_11_1 = 1;
+                            stackIn_13_0 = stackOut_11_0;
+                            stackIn_13_1 = stackOut_11_1;
+                            break L20;
+                          }
+                        }
+                      }
+                    }
+                    stackOut_12_0 = stackIn_12_0;
+                    stackOut_12_1 = 0;
+                    stackIn_13_0 = stackOut_12_0;
+                    stackIn_13_1 = stackOut_12_1;
+                    break L20;
+                  }
+                  ui.a(stackIn_13_0, stackIn_13_1 != 0);
                   if (var3 == 0) {
-                    break L21;
+                    break L17;
                   } else {
                     if (!param0) {
                       ml.a(false, -101);
                       return;
                     } else {
-                      if (!gj.a(29372)) {
+                      int discarded$19 = 29372;
+                      if (!gj.a()) {
                         ml.a(false, -101);
                         return;
                       } else {
-                        stackOut_20_0 = 1;
-                        stackIn_25_0 = stackOut_20_0;
-                        ml.a(stackIn_25_0 != 0, -101);
-                        break L21;
+                        stackOut_16_0 = 1;
+                        stackIn_21_0 = stackOut_16_0;
+                        ml.a(stackIn_21_0 != 0, -101);
+                        break L17;
                       }
                     }
                   }
                 }
-                return;
-              } else {
-                return;
               }
-            } else {
-              return;
             }
+            return;
           }
         }
     }
@@ -838,7 +850,7 @@ class ed extends qk implements vb {
         }
     }
 
-    final static String k(int param0) {
+    final static String k() {
         if (!(in.field_Gb != sk.field_a)) {
             return ln.field_Q;
         }
@@ -855,13 +867,10 @@ class ed extends qk implements vb {
         ai var2 = null;
         try {
             ai.a(param1.a("", "headers.packvorbis", -1));
-            if (param0 != -17) {
-                field_tb = null;
-            }
             var2 = ai.a(param1, "jagex logo2.packvorbis", "");
             wf discarded$0 = var2.c();
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "ed.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "ed.F(" + -17 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -929,16 +938,13 @@ class ed extends qk implements vb {
     }
 
     final static void a(byte param0, boolean param1) {
-        if (param0 != 90) {
-            return;
-        }
         if (pm.field_b != null) {
             de.b(de.field_i, de.field_c, -de.field_i + de.field_h, de.field_k + -de.field_c);
             pm.field_b.a(param1, true);
         }
     }
 
-    final static void j(int param0) {
+    final static void j() {
         int var1 = ea.field_F * ea.field_F;
         int var2 = -(jo.field_e * jo.field_e) + var1;
         int var3 = (-ma.field_N + vd.field_k) * var2 / var1 + ma.field_N;

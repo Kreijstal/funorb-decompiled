@@ -21,7 +21,7 @@ final class ei extends ia {
         ((ei) this).field_s = false;
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_n = null;
         field_x = null;
         field_v = null;
@@ -41,8 +41,8 @@ final class ei extends ia {
         var8 = SteelSentinels.field_G;
         try {
           L0: {
-            pb.h(param0, param1, param2, param3, 12105914);
-            pb.e(1 + param0, param1 - -1, -2 + param2, param3 + -2, 16251129, 10461345);
+            pb.h(5, param1, 166, 8, 12105914);
+            pb.e(6, param1 - -1, 164, 6, 16251129, 10461345);
             var6 = 42;
             var5_int = 64;
             var7 = 1;
@@ -50,7 +50,7 @@ final class ei extends ia {
               if (var7 > 6) {
                 break L0;
               } else {
-                pb.h(var7 + param0, var7 + param1, -(var7 * 2) + param2, -(var7 * 2) + param3, 16251129, var5_int);
+                pb.h(var7 + 5, var7 + param1, -(var7 * 2) + 166, -(var7 * 2) + 8, 16251129, var5_int);
                 var5_int = var5_int >> 1;
                 var7++;
                 continue L1;
@@ -60,7 +60,7 @@ final class ei extends ia {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var5, "ei.H(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + -96 + 41);
+          throw ci.a((Throwable) (Object) var5, "ei.H(" + 5 + 44 + param1 + 44 + 166 + 44 + 8 + 44 + -96 + 41);
         }
     }
 
@@ -96,7 +96,8 @@ final class ei extends ia {
         try {
           L0: {
             var5 = (CharSequence) (Object) param1;
-            var3 = va.a(var5, -1);
+            int discarded$2 = -1;
+            var3 = va.a(var5);
             if (var3 != null) {
               stackOut_2_0 = (String) var3;
               stackIn_3_0 = stackOut_2_0;
@@ -202,7 +203,8 @@ final class ei extends ia {
         try {
           L0: {
             var4 = (CharSequence) (Object) param0;
-            if (!m.a(var4, (byte) 127)) {
+            int discarded$9 = 127;
+            if (!m.a(var4)) {
               stackOut_2_0 = fa.field_d;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0;
@@ -342,7 +344,7 @@ final class ei extends ia {
         var4 = SteelSentinels.field_G;
         try {
           L0: {
-            var2_int = param0;
+            var2_int = 0;
             L1: while (true) {
               if (param1.length <= var2_int) {
                 stackOut_4_0 = (wk[]) param1;
@@ -364,7 +366,7 @@ final class ei extends ia {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var2;
-            stackOut_6_1 = new StringBuilder().append("ei.J(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("ei.J(").append(0).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -396,9 +398,6 @@ final class ei extends ia {
         kj var3 = mm.field_g;
         var3.a(param2, (byte) -117);
         var3.a((byte) 127, 3);
-        if (param1 != -23) {
-            field_v = null;
-        }
         var3.a((byte) 121, 10);
         var3.d(param0, 98);
     }

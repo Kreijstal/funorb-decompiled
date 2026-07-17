@@ -24,7 +24,7 @@ final class hd extends sh {
         int discarded$0 = ((hd) this).field_F.a(((hd) this).field_J, ((hd) this).field_C + (var8 + var5), ((hd) this).field_C + var6, -((hd) this).field_C + ((hd) this).field_K, -(((hd) this).field_C * 2) + ((hd) this).field_h, ((hd) this).field_G, -1, !((hd) this).field_B ? 2 : 0, 1, ((hd) this).field_F.field_o);
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         field_H = null;
         field_D = null;
         field_I = null;

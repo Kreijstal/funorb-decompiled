@@ -28,15 +28,10 @@ final class ib extends kd {
     }
 
     final static void c(int param0) {
-        if (param0 > -21) {
-            field_s = null;
-            lf.a(17, (byte) 77);
-            return;
-        }
         lf.a(17, (byte) 77);
     }
 
-    private final void a(int param0, pr param1, int param2) {
+    private final void a(int param0, pr param1) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -340,20 +335,12 @@ final class ib extends kd {
                 }
               }
             }
-            L7: {
-              if (param3 == 1048575) {
-                break L7;
-              } else {
-                ib.c(-60);
-                break L7;
-              }
-            }
             param2.field_o.a(param5, param0, param4);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L7: {
             var7 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var7;
             stackOut_24_1 = new StringBuilder().append("ib.A(").append(param0).append(44).append(param1).append(44);
@@ -368,7 +355,7 @@ final class ib extends kd {
               stackIn_27_0 = stackOut_26_0;
               stackIn_27_1 = stackOut_26_1;
               stackIn_27_2 = stackOut_26_2;
-              break L8;
+              break L7;
             } else {
               stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
               stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
@@ -376,12 +363,12 @@ final class ib extends kd {
               stackIn_27_0 = stackOut_25_0;
               stackIn_27_1 = stackOut_25_1;
               stackIn_27_2 = stackOut_25_2;
-              break L8;
+              break L7;
             }
           }
-          L9: {
+          L8: {
             stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-            stackOut_27_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_27_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(44).append(1048575).append(44).append(param4).append(44);
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
@@ -393,7 +380,7 @@ final class ib extends kd {
               stackIn_30_0 = stackOut_29_0;
               stackIn_30_1 = stackOut_29_1;
               stackIn_30_2 = stackOut_29_2;
-              break L9;
+              break L8;
             } else {
               stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
               stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
@@ -401,7 +388,7 @@ final class ib extends kd {
               stackIn_30_0 = stackOut_28_0;
               stackIn_30_1 = stackOut_28_1;
               stackIn_30_2 = stackOut_28_2;
-              break L9;
+              break L8;
             }
           }
           throw wm.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 41);
@@ -520,17 +507,11 @@ final class ib extends kd {
 
     public static void d(int param0) {
         field_s = null;
-        if (param0 != -1) {
-            field_q = null;
-            field_u = null;
-            field_q = null;
-            return;
-        }
         field_u = null;
         field_q = null;
     }
 
-    final static int[] a(double[] param0, int param1) {
+    final static int[] a(double[] param0) {
         RuntimeException var2 = null;
         int[] stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -605,11 +586,13 @@ final class ib extends kd {
                 var2 = param0;
                 L2: while (true) {
                   if (var2 <= var3.field_D) {
-                    this.a(var2, var3, 1048575);
+                    int discarded$4 = 1048575;
+                    this.a(var2, var3);
                     var3.field_D = var3.field_D - var2;
                     break L1;
                   } else {
-                    this.a(var3.field_D, var3, 1048575);
+                    int discarded$5 = 1048575;
+                    this.a(var3.field_D, var3);
                     var2 = var2 - var3.field_D;
                     if (((ib) this).field_w.a(var2, (int[]) null, 0, 1, var3)) {
                       break L1;

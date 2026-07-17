@@ -27,7 +27,7 @@ class bp {
     void b() throws Exception {
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void a(int param0, boolean param1) {
         int stackIn_7_0 = 0;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
@@ -386,12 +386,12 @@ class bp {
     }
 
     private final void b(int param0) {
-        ((bp) this).field_o = ((bp) this).field_o - 256;
+        ((bp) this).field_o = ((bp) this).field_o - param0;
         if (((bp) this).field_o < 0) {
             ((bp) this).field_o = 0;
         }
         if (((bp) this).field_p != null) {
-            ((bp) this).field_p.a(256);
+            ((bp) this).field_p.a(param0);
             return;
         }
     }
@@ -414,7 +414,7 @@ class bp {
         kd var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_r) {
             break L0;
           } else {
@@ -424,7 +424,7 @@ class bp {
         }
         L1: {
           qn.a(param0, 0, var3);
-          ((bp) this).field_o = ((bp) this).field_o - 256;
+          ((bp) this).field_o = ((bp) this).field_o - param1;
           if (((bp) this).field_p == null) {
             break L1;
           } else {
@@ -591,7 +591,7 @@ class bp {
           if (((bp) this).field_p == null) {
             break L17;
           } else {
-            ((bp) this).field_p.a(param0, 0, 256);
+            ((bp) this).field_p.a(param0, 0, param1);
             break L17;
           }
         }

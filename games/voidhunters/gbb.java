@@ -78,29 +78,105 @@ final class gbb extends rqa {
         return stackIn_3_0;
     }
 
-    final static boolean a(int param0, int param1, int param2, byte param3) {
+    final static boolean a() {
         int var4 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_44_0 = 0;
-        int stackOut_43_0 = 0;
-        int stackOut_42_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        if (param3 == 23) {
-          if (wga.field_a == null) {
-            if (!fva.field_p) {
-              L0: {
-                if (uga.field_d) {
+        int stackIn_8_0 = 0;
+        int stackIn_42_0 = 0;
+        int stackOut_41_0 = 0;
+        int stackOut_40_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
+        if (wga.field_a == null) {
+          if (!fva.field_p) {
+            L0: {
+              if (uga.field_d) {
+                break L0;
+              } else {
+                if (9 == pma.field_o) {
                   break L0;
                 } else {
-                  if (9 == pma.field_o) {
+                  if (pma.field_o == 10) {
                     break L0;
                   } else {
-                    if (pma.field_o == 10) {
+                    if (pma.field_o == 11) {
                       break L0;
                     } else {
+                      if (pma.field_o != 80) {
+                        return false;
+                      } else {
+                        if (lmb.a(118)) {
+                          fva.field_p = true;
+                          return true;
+                        } else {
+                          return false;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            return ic.a(13, -9307, 15);
+          } else {
+            if (lmb.a(-115)) {
+              L1: {
+                if (!tl.b(12, 13, -85)) {
+                  stackOut_41_0 = 0;
+                  stackIn_42_0 = stackOut_41_0;
+                  break L1;
+                } else {
+                  stackOut_40_0 = 1;
+                  stackIn_42_0 = stackOut_40_0;
+                  break L1;
+                }
+              }
+              L2: {
+                L3: {
+                  var4 = stackIn_42_0;
+                  if (pma.field_o == 80) {
+                    break L3;
+                  } else {
+                    if (84 == pma.field_o) {
+                      break L3;
+                    } else {
+                      break L2;
+                    }
+                  }
+                }
+                var4 = 1;
+                fva.field_p = false;
+                break L2;
+              }
+              L4: {
+                if (pma.field_o == 13) {
+                  int discarded$4 = 26718;
+                  dr.a();
+                  var4 = 1;
+                  fva.field_p = false;
+                  break L4;
+                } else {
+                  break L4;
+                }
+              }
+              return var4 != 0;
+            } else {
+              return false;
+            }
+          }
+        } else {
+          if (pma.field_o == 13) {
+            wga.field_a = null;
+            return true;
+          } else {
+            if (!fva.field_p) {
+              if (!uga.field_d) {
+                if (9 != pma.field_o) {
+                  L5: {
+                    if (pma.field_o == 10) {
+                      break L5;
+                    } else {
                       if (pma.field_o == 11) {
-                        break L0;
+                        break L5;
                       } else {
                         if (pma.field_o != 80) {
                           return false;
@@ -115,158 +191,82 @@ final class gbb extends rqa {
                       }
                     }
                   }
+                  return ic.a(13, -9307, 15);
+                } else {
+                  return ic.a(13, -9307, 15);
                 }
+              } else {
+                return ic.a(13, -9307, 15);
               }
-              return ic.a(param0, -9307, param1);
             } else {
               if (lmb.a(-115)) {
-                L1: {
-                  if (!tl.b(param2, param0, -85)) {
-                    stackOut_43_0 = 0;
-                    stackIn_44_0 = stackOut_43_0;
-                    break L1;
+                L6: {
+                  if (!tl.b(12, 13, -85)) {
+                    stackOut_7_0 = 0;
+                    stackIn_8_0 = stackOut_7_0;
+                    break L6;
                   } else {
-                    stackOut_42_0 = 1;
-                    stackIn_44_0 = stackOut_42_0;
-                    break L1;
+                    stackOut_6_0 = 1;
+                    stackIn_8_0 = stackOut_6_0;
+                    break L6;
                   }
                 }
-                L2: {
-                  L3: {
-                    var4 = stackIn_44_0;
-                    if (pma.field_o == 80) {
-                      break L3;
-                    } else {
-                      if (84 == pma.field_o) {
-                        break L3;
-                      } else {
-                        break L2;
-                      }
-                    }
-                  }
-                  var4 = 1;
-                  fva.field_p = false;
-                  break L2;
-                }
-                L4: {
-                  if (pma.field_o == 13) {
-                    dr.a(26718);
+                var4 = stackIn_8_0;
+                if (pma.field_o == 80) {
+                  L7: {
                     var4 = 1;
                     fva.field_p = false;
-                    break L4;
-                  } else {
-                    break L4;
-                  }
-                }
-                return var4 != 0;
-              } else {
-                return false;
-              }
-            }
-          } else {
-            if (pma.field_o == 13) {
-              wga.field_a = null;
-              return true;
-            } else {
-              if (!fva.field_p) {
-                if (!uga.field_d) {
-                  if (9 != pma.field_o) {
-                    L5: {
-                      if (pma.field_o == 10) {
-                        break L5;
-                      } else {
-                        if (pma.field_o == 11) {
-                          break L5;
-                        } else {
-                          if (pma.field_o != 80) {
-                            return false;
-                          } else {
-                            if (lmb.a(118)) {
-                              fva.field_p = true;
-                              return true;
-                            } else {
-                              return false;
-                            }
-                          }
-                        }
-                      }
-                    }
-                    return ic.a(param0, -9307, param1);
-                  } else {
-                    return ic.a(param0, -9307, param1);
-                  }
-                } else {
-                  return ic.a(param0, -9307, param1);
-                }
-              } else {
-                if (lmb.a(-115)) {
-                  L6: {
-                    if (!tl.b(param2, param0, -85)) {
-                      stackOut_9_0 = 0;
-                      stackIn_10_0 = stackOut_9_0;
-                      break L6;
+                    if (pma.field_o == 13) {
+                      int discarded$5 = 26718;
+                      dr.a();
+                      var4 = 1;
+                      fva.field_p = false;
+                      break L7;
                     } else {
-                      stackOut_8_0 = 1;
-                      stackIn_10_0 = stackOut_8_0;
-                      break L6;
+                      break L7;
                     }
                   }
-                  var4 = stackIn_10_0;
-                  if (pma.field_o == 80) {
-                    L7: {
+                  return var4 != 0;
+                } else {
+                  if (84 == pma.field_o) {
+                    L8: {
                       var4 = 1;
                       fva.field_p = false;
                       if (pma.field_o == 13) {
-                        dr.a(26718);
+                        int discarded$6 = 26718;
+                        dr.a();
                         var4 = 1;
                         fva.field_p = false;
-                        break L7;
+                        break L8;
                       } else {
-                        break L7;
+                        break L8;
                       }
                     }
                     return var4 != 0;
                   } else {
-                    if (84 == pma.field_o) {
-                      L8: {
+                    L9: {
+                      if (pma.field_o == 13) {
+                        int discarded$7 = 26718;
+                        dr.a();
                         var4 = 1;
                         fva.field_p = false;
-                        if (pma.field_o == 13) {
-                          dr.a(26718);
-                          var4 = 1;
-                          fva.field_p = false;
-                          break L8;
-                        } else {
-                          break L8;
-                        }
+                        break L9;
+                      } else {
+                        break L9;
                       }
-                      return var4 != 0;
-                    } else {
-                      L9: {
-                        if (pma.field_o == 13) {
-                          dr.a(26718);
-                          var4 = 1;
-                          fva.field_p = false;
-                          break L9;
-                        } else {
-                          break L9;
-                        }
-                      }
-                      return var4 != 0;
                     }
+                    return var4 != 0;
                   }
-                } else {
-                  return false;
                 }
+              } else {
+                return false;
               }
             }
           }
-        } else {
-          return true;
         }
     }
 
-    final static void a(fh param0, fh param1, byte param2) {
+    final static void a(fh param0, fh param1) {
         try {
             if (!(null == param0.field_d)) {
                 param0.d((byte) -35);
@@ -282,7 +282,9 @@ final class gbb extends rqa {
 
     public static void b(boolean param0) {
         field_p = null;
-        field_o = 71;
+        if (!param0) {
+            field_o = 71;
+        }
     }
 
     static {

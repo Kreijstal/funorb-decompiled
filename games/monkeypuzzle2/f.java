@@ -140,7 +140,7 @@ class f extends kc {
         return sj.field_g;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_e = null;
         field_j = null;
         field_g = null;

@@ -596,19 +596,21 @@ final class bh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         String var1 = null;
         if (rk.field_f) {
           if (ki.field_c != null) {
             ki.field_c.n(10);
-            var1 = vd.d(85);
+            int discarded$2 = 85;
+            var1 = vd.d();
             om.field_p = new w(var1, (String) null, true, false, false);
             vg.field_Z.c((fj) (Object) dn.field_b, 0);
             dn.field_b.a((fj) (Object) om.field_p, (byte) -72);
             dn.field_b.m(118);
             return;
           } else {
-            var1 = vd.d(85);
+            int discarded$3 = 85;
+            var1 = vd.d();
             om.field_p = new w(var1, (String) null, true, false, false);
             vg.field_Z.c((fj) (Object) dn.field_b, 0);
             dn.field_b.a((fj) (Object) om.field_p, (byte) -72);

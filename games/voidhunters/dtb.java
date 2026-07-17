@@ -4,7 +4,7 @@
 final class dtb implements dja {
     static String field_a;
 
-    public static void b(byte param0) {
+    public static void b() {
         field_a = null;
     }
 
@@ -13,7 +13,7 @@ final class dtb implements dja {
         return (tv) (Object) new bea();
     }
 
-    final static fm[] a(eab param0, int param1) {
+    final static fm[] a(eab param0) {
         RuntimeException var2 = null;
         int[] var3 = null;
         fm[] var4 = null;

@@ -6,7 +6,7 @@ final class gm {
     static String field_b;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         int var1 = 0;

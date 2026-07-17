@@ -11,16 +11,13 @@ class pca extends uqb implements ntb {
     public void b(faa param0, int param1) {
         try {
             super.b(param0, -121);
-            if (param1 >= -109) {
-                field_m = -29;
-            }
             this.a((byte) -121, param0);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "pca.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "pca.B(" + (param0 != null ? "{...}" : "null") + 44 + -123 + 41);
         }
     }
 
-    private final void a(faa param0, int param1) {
+    private final void a(faa param0) {
         RuntimeException var3 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -82,47 +79,36 @@ class pca extends uqb implements ntb {
     public void b(byte param0, tv param1) {
         pca var5 = null;
         pca var6 = null;
-        if (param0 < 54) {
-            return;
-        }
         try {
             var5 = (pca) (Object) param1;
             var6 = var5;
             super.b((byte) 126, param1);
             var6.field_k = var5.field_k;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "pca.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "pca.D(" + 88 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
     private final void a(byte param0, faa param1) {
         RuntimeException var3 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           L0: {
-            L1: {
-              if (param0 < -116) {
-                break L1;
-              } else {
-                boolean discarded$2 = pca.a(-90, -61, 89);
-                break L1;
-              }
-            }
             if (em.field_o) {
               param1.a(-632, ((pca) this).field_k, hab.field_h);
               break L0;
@@ -132,33 +118,33 @@ class pca extends uqb implements ntb {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var3;
-            stackOut_6_1 = new StringBuilder().append("pca.I(").append(param0).append(44);
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("pca.I(").append(-121).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
-              break L2;
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L1;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
-              break L2;
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
     }
 
@@ -269,7 +255,7 @@ class pca extends uqb implements ntb {
           L0: {
             L1: {
               L2: {
-                var3_int = -110 / ((param0 - 22) / 59);
+                var3_int = -110;
                 var4 = (pca) (Object) param1;
                 if (super.a((byte) -50, param1)) {
                   break L2;
@@ -294,7 +280,7 @@ class pca extends uqb implements ntb {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var3;
-            stackOut_6_1 = new StringBuilder().append("pca.C(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("pca.C(").append(90).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -329,7 +315,8 @@ class pca extends uqb implements ntb {
                 ((pca) this).a((tv) null, -35);
             }
             super.a(param0, param1);
-            this.a(param0, 0);
+            int discarded$0 = 0;
+            this.a(param0);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "pca.H(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }

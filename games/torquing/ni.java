@@ -120,7 +120,7 @@ final class ni extends q {
         try {
           L0: {
             L1: {
-              var6_int = -param2 + param5;
+              var6_int = param5;
               if (param3 == -12421) {
                 break L1;
               } else {
@@ -138,7 +138,7 @@ final class ni extends q {
                 L3: {
                   L4: {
                     L5: {
-                      var8 = param1.charAt(var7 + param2);
+                      var8 = param1.charAt(var7);
                       if (var8 <= 0) {
                         break L5;
                       } else {
@@ -336,7 +336,7 @@ final class ni extends q {
           }
           L8: {
             stackOut_73_0 = (RuntimeException) (Object) stackIn_73_0;
-            stackOut_73_1 = ((StringBuilder) (Object) stackIn_73_1).append(stackIn_73_2).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_73_1 = ((StringBuilder) (Object) stackIn_73_1).append(stackIn_73_2).append(44).append(0).append(44).append(param3).append(44);
             stackIn_75_0 = stackOut_73_0;
             stackIn_75_1 = stackOut_73_1;
             stackIn_74_0 = stackOut_73_0;
@@ -439,7 +439,8 @@ final class ni extends q {
                     }
                     L3: {
                       if (param3 >= 0L) {
-                        var7 = var10 + "; Expires=" + ka.a(param3 * 1000L + km.b(-1), -2) + "; Max-Age=" + param3;
+                        int discarded$1 = -2;
+                        var7 = var10 + "; Expires=" + ka.a(param3 * 1000L + km.b(-1)) + "; Max-Age=" + param3;
                         break L3;
                       } else {
                         var7 = var10 + "; Discard;";
@@ -546,23 +547,30 @@ final class ni extends q {
     }
 
     final static k a(int param0, int param1) {
+        k[] var2 = null;
         int var3 = 0;
-        int var4 = Torquing.field_u;
-        k[] var5 = vc.c(0);
-        k[] var2 = var5;
-        for (var3 = 0; var5.length > var3; var3++) {
-            if (var5[var3].field_g == param1) {
-                return var5[var3];
-            }
-        }
-        if (param0 >= 74) {
+        int var4 = 0;
+        k[] var5 = null;
+        var4 = Torquing.field_u;
+        int discarded$2 = 0;
+        var5 = vc.c();
+        var2 = var5;
+        var3 = 0;
+        L0: while (true) {
+          if (var5.length <= var3) {
             return null;
+          } else {
+            if (var5[var3].field_g != param1) {
+              var3++;
+              continue L0;
+            } else {
+              return var5[var3];
+            }
+          }
         }
-        field_l = null;
-        return null;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_l = null;
     }
 
@@ -592,7 +600,7 @@ final class ni extends q {
             try {
               L1: {
                 var4 = param0.getGraphics();
-                mk.field_b.a(86, param2, param1, var4);
+                mk.field_b.a(86, 0, 0, var4);
                 var4.dispose();
                 var5 = -27 / ((69 - param3) / 50);
                 break L1;
@@ -635,7 +643,7 @@ final class ni extends q {
               break L3;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw rb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 0 + 44 + 0 + 44 + param3 + 41);
         }
     }
 

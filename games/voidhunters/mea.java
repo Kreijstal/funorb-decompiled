@@ -104,7 +104,7 @@ abstract class mea extends ksa {
         return 1;
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_e = null;
     }
 
@@ -330,7 +330,7 @@ abstract class mea extends ksa {
         }
     }
 
-    final static String a(boolean param0) {
+    final static String a() {
         return qga.field_b.a(-1);
     }
 

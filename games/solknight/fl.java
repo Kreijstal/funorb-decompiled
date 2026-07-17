@@ -192,98 +192,53 @@ final class fl {
         }
     }
 
-    final synchronized static byte[] a(int param0, int param1) {
+    final synchronized static byte[] a(int param0) {
         byte[] var2_ref_byte__ = null;
         int var2 = 0;
         byte[] var3 = null;
-        Object var4 = null;
-        L0: {
-          if (param0 != 100) {
-            break L0;
-          } else {
-            if (kk.field_e <= 0) {
-              break L0;
-            } else {
-              int fieldTemp$3 = kk.field_e - 1;
-              kk.field_e = kk.field_e - 1;
-              var2_ref_byte__ = ng.field_g[fieldTemp$3];
-              ng.field_g[kk.field_e] = null;
-              return var2_ref_byte__;
+        if (param0 == 100) {
+            if (kk.field_e > 0) {
+                int fieldTemp$0 = kk.field_e - 1;
+                kk.field_e = kk.field_e - 1;
+                var2_ref_byte__ = ng.field_g[fieldTemp$0];
+                ng.field_g[kk.field_e] = null;
+                return var2_ref_byte__;
             }
-          }
         }
-        L1: {
-          if (param0 != 5000) {
-            break L1;
-          } else {
-            if (0 >= nf.field_V) {
-              break L1;
-            } else {
-              int fieldTemp$4 = nf.field_V - 1;
-              nf.field_V = nf.field_V - 1;
-              var2_ref_byte__ = hc.field_e[fieldTemp$4];
-              hc.field_e[nf.field_V] = null;
-              return var2_ref_byte__;
+        if (param0 == 5000) {
+            if (0 < nf.field_V) {
+                int fieldTemp$1 = nf.field_V - 1;
+                nf.field_V = nf.field_V - 1;
+                var2_ref_byte__ = hc.field_e[fieldTemp$1];
+                hc.field_e[nf.field_V] = null;
+                return var2_ref_byte__;
             }
-          }
         }
-        L2: {
-          if (param1 == -1) {
-            break L2;
-          } else {
-            var4 = null;
-            fl.a(40, -45, 42, 86, 61, (o) null);
-            break L2;
-          }
-        }
-        L3: {
-          if (30000 != param0) {
-            break L3;
-          } else {
-            if (sf.field_c > 0) {
-              int fieldTemp$5 = sf.field_c - 1;
-              sf.field_c = sf.field_c - 1;
-              var2_ref_byte__ = ef.field_d[fieldTemp$5];
-              ef.field_d[sf.field_c] = null;
-              return var2_ref_byte__;
-            } else {
-              break L3;
+        if (30000 == param0) {
+            if (!(sf.field_c <= 0)) {
+                int fieldTemp$2 = sf.field_c - 1;
+                sf.field_c = sf.field_c - 1;
+                var2_ref_byte__ = ef.field_d[fieldTemp$2];
+                ef.field_d[sf.field_c] = null;
+                return var2_ref_byte__;
             }
-          }
         }
-        L4: {
-          if (rg.field_d == null) {
-            break L4;
-          } else {
-            var2 = 0;
-            L5: while (true) {
-              if (~var2 <= ~sf.field_i.length) {
-                break L4;
-              } else {
-                L6: {
-                  if (sf.field_i[var2] != param0) {
-                    break L6;
-                  } else {
-                    if (cl.field_l[var2] <= 0) {
-                      break L6;
-                    } else {
-                      cl.field_l[var2] = cl.field_l[var2] - 1;
-                      var3 = rg.field_d[var2][cl.field_l[var2] - 1];
-                      rg.field_d[var2][cl.field_l[var2]] = null;
-                      return var3;
+        if (rg.field_d != null) {
+            for (var2 = 0; ~var2 > ~sf.field_i.length; var2++) {
+                if (sf.field_i[var2] == param0) {
+                    if (cl.field_l[var2] > 0) {
+                        cl.field_l[var2] = cl.field_l[var2] - 1;
+                        var3 = rg.field_d[var2][cl.field_l[var2] - 1];
+                        rg.field_d[var2][cl.field_l[var2]] = null;
+                        return var3;
                     }
-                  }
                 }
-                var2++;
-                continue L5;
-              }
             }
-          }
         }
         return new byte[param0];
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         al var1 = (al) (Object) uc.field_a.e((byte) 86);
         if (var1 == null) {
             var1 = new al();
@@ -292,7 +247,7 @@ final class fl {
         cj.field_a.a((gg) (Object) var1, -7044);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }

@@ -24,7 +24,7 @@ final class og extends pj {
         return ((og) this).field_w.field_h;
     }
 
-    final static void a(String param0, int param1) {
+    final static void a(String param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -210,7 +210,7 @@ final class og extends pj {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_z = null;
         field_y = null;
         field_x = null;
@@ -247,13 +247,13 @@ final class og extends pj {
           L0: {
             var5 = ij.field_L;
             var1 = var5;
-            var2 = 0;
+            var2 = param0;
             L1: while (true) {
               if (var2 >= var5.length) {
                 break L0;
               } else {
                 var3 = var5[var2];
-                var3.d(0);
+                var3.d(param0);
                 var2++;
                 continue L1;
               }
@@ -262,7 +262,7 @@ final class og extends pj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var1_ref, "og.H(" + 0 + 41);
+          throw sh.a((Throwable) (Object) var1_ref, "og.H(" + param0 + 41);
         }
     }
 

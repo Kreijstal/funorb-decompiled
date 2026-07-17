@@ -6,25 +6,22 @@ final class wja extends ci {
     private int field_n;
     static String field_o;
 
-    final static void a(String param0, int param1) {
+    final static void a(String param0) {
         int var4 = 0;
         int var5 = 0;
         rv.field_c.field_r = param0;
         uv.field_o = true;
         int var2_int = gn.field_C.field_f;
         int var3 = gn.field_C.field_e;
-        if (param1 != 15165) {
-            return;
-        }
         try {
             var4 = rv.field_c.field_H.a(param0, 272, rv.field_c.field_P);
             var5 = -(var4 / 2) + (-103 + var3 / 2);
             wo.field_k.a(320, -(2 * var5) + (var3 - 120), -23776, var5, (-320 + var2_int) / 2);
             wo.field_k.field_w = hca.c(wo.field_k.field_t, 2105376, 3, 11579568, -118, 8421504);
             rv.field_c.a(-24 + (wo.field_k.field_G + -24), -20 + wo.field_k.field_t + -24, -23776, 16, 24);
-            bma.field_v.a(80, 24, param1 ^ -26595, -24 + wo.field_k.field_t - 20, 120);
+            bma.field_v.a(80, 24, -23776, -24 + wo.field_k.field_t - 20, 120);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "wja.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "wja.D(" + (param0 != null ? "{...}" : "null") + 44 + 15165 + 41);
         }
     }
 
@@ -152,7 +149,7 @@ final class wja extends ci {
         ((wja) this).field_m = 4096;
     }
 
-    final static void d(byte param0) {
+    final static void d() {
     }
 
     final int[][] b(int param0, int param1) {

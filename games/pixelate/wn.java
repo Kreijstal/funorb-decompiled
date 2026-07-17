@@ -24,11 +24,8 @@ final class wn extends rf {
         ((wn) this).field_a = (byte)(int)(1.0 + Math.random() * 255.0);
     }
 
-    final static void d(int param0) {
+    final static void d() {
         io.field_d = hm.a(64);
-        if (param0 >= -11) {
-            wn.c(16);
-        }
         on.field_ob = 0;
     }
 
@@ -538,7 +535,7 @@ final class wn extends rf {
         }
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_q = null;
         field_t = null;
     }
@@ -612,84 +609,80 @@ final class wn extends rf {
         try {
             IOException iOException = null;
             Exception var4 = null;
+            we stackIn_4_0 = null;
+            int stackIn_4_1 = 0;
+            we stackIn_5_0 = null;
+            int stackIn_5_1 = 0;
             we stackIn_6_0 = null;
             int stackIn_6_1 = 0;
-            we stackIn_7_0 = null;
-            int stackIn_7_1 = 0;
-            we stackIn_8_0 = null;
-            int stackIn_8_1 = 0;
-            int stackIn_8_2 = 0;
+            int stackIn_6_2 = 0;
             Throwable decompiledCaughtException = null;
+            we stackOut_3_0 = null;
+            int stackOut_3_1 = 0;
             we stackOut_5_0 = null;
             int stackOut_5_1 = 0;
-            we stackOut_7_0 = null;
-            int stackOut_7_1 = 0;
-            int stackOut_7_2 = 0;
-            we stackOut_6_0 = null;
-            int stackOut_6_1 = 0;
-            int stackOut_6_2 = 0;
-            if (param0 == 73) {
-              if (((wn) this).field_s == null) {
-                return;
-              } else {
-                try {
-                  L0: {
-                    L1: {
-                      ((wn) this).field_b.field_m = 0;
-                      stackOut_5_0 = ((wn) this).field_b;
-                      stackOut_5_1 = 160;
-                      stackIn_7_0 = stackOut_5_0;
-                      stackIn_7_1 = stackOut_5_1;
+            int stackOut_5_2 = 0;
+            we stackOut_4_0 = null;
+            int stackOut_4_1 = 0;
+            int stackOut_4_2 = 0;
+            if (((wn) this).field_s == null) {
+              return;
+            } else {
+              try {
+                L0: {
+                  L1: {
+                    ((wn) this).field_b.field_m = 0;
+                    stackOut_3_0 = ((wn) this).field_b;
+                    stackOut_3_1 = 160;
+                    stackIn_5_0 = stackOut_3_0;
+                    stackIn_5_1 = stackOut_3_1;
+                    stackIn_4_0 = stackOut_3_0;
+                    stackIn_4_1 = stackOut_3_1;
+                    if (!param1) {
+                      stackOut_5_0 = (we) (Object) stackIn_5_0;
+                      stackOut_5_1 = stackIn_5_1;
+                      stackOut_5_2 = 3;
                       stackIn_6_0 = stackOut_5_0;
                       stackIn_6_1 = stackOut_5_1;
-                      if (!param1) {
-                        stackOut_7_0 = (we) (Object) stackIn_7_0;
-                        stackOut_7_1 = stackIn_7_1;
-                        stackOut_7_2 = 3;
-                        stackIn_8_0 = stackOut_7_0;
-                        stackIn_8_1 = stackOut_7_1;
-                        stackIn_8_2 = stackOut_7_2;
-                        break L1;
-                      } else {
-                        stackOut_6_0 = (we) (Object) stackIn_6_0;
-                        stackOut_6_1 = stackIn_6_1;
-                        stackOut_6_2 = 2;
-                        stackIn_8_0 = stackOut_6_0;
-                        stackIn_8_1 = stackOut_6_1;
-                        stackIn_8_2 = stackOut_6_2;
-                        break L1;
-                      }
+                      stackIn_6_2 = stackOut_5_2;
+                      break L1;
+                    } else {
+                      stackOut_4_0 = (we) (Object) stackIn_4_0;
+                      stackOut_4_1 = stackIn_4_1;
+                      stackOut_4_2 = 2;
+                      stackIn_6_0 = stackOut_4_0;
+                      stackIn_6_1 = stackOut_4_1;
+                      stackIn_6_2 = stackOut_4_2;
+                      break L1;
                     }
-                    ((we) (Object) stackIn_8_0).e(stackIn_8_1, stackIn_8_2);
-                    ((wn) this).field_b.a(0L, -59);
-                    ((wn) this).field_s.a(((wn) this).field_b.field_k.length, -85, 0, ((wn) this).field_b.field_k);
-                    break L0;
                   }
-                } catch (java.io.IOException decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  L2: {
-                    iOException = (IOException) (Object) decompiledCaughtException;
-                    try {
-                      L3: {
-                        ((wn) this).field_s.b(-1);
-                        break L3;
-                      }
-                    } catch (java.lang.Exception decompiledCaughtParameter1) {
-                      decompiledCaughtException = decompiledCaughtParameter1;
-                      L4: {
-                        var4 = (Exception) (Object) decompiledCaughtException;
-                        break L4;
-                      }
-                    }
-                    ((wn) this).field_h = ((wn) this).field_h + 1;
-                    ((wn) this).field_m = -2;
-                    ((wn) this).field_s = null;
-                    break L2;
-                  }
+                  ((we) (Object) stackIn_6_0).e(stackIn_6_1, stackIn_6_2);
+                  ((wn) this).field_b.a(0L, -59);
+                  ((wn) this).field_s.a(((wn) this).field_b.field_k.length, -85, 0, ((wn) this).field_b.field_k);
+                  break L0;
                 }
-                return;
+              } catch (java.io.IOException decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                L2: {
+                  iOException = (IOException) (Object) decompiledCaughtException;
+                  try {
+                    L3: {
+                      ((wn) this).field_s.b(-1);
+                      break L3;
+                    }
+                  } catch (java.lang.Exception decompiledCaughtParameter1) {
+                    decompiledCaughtException = decompiledCaughtParameter1;
+                    L4: {
+                      var4 = (Exception) (Object) decompiledCaughtException;
+                      break L4;
+                    }
+                  }
+                  ((wn) this).field_h = ((wn) this).field_h + 1;
+                  ((wn) this).field_m = -2;
+                  ((wn) this).field_s = null;
+                  break L2;
+                }
               }
-            } else {
               return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {

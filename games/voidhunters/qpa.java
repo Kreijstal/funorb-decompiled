@@ -6,7 +6,12 @@ final class qpa {
     static String field_a;
 
     public static void a(boolean param0) {
-        field_b = null;
+        if (!param0) {
+            field_b = null;
+            field_b = null;
+            field_a = null;
+            return;
+        }
         field_b = null;
         field_a = null;
     }

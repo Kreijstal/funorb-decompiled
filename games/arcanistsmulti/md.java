@@ -14,51 +14,43 @@ final class md {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
-        int stackIn_9_0 = 0;
+        int stackIn_7_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_8_0 = 0;
+        int stackOut_6_0 = 0;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         try {
           L0: {
-            L1: {
-              var3_int = 0;
-              if (!param0) {
-                break L1;
-              } else {
-                md.a((byte) 28);
-                break L1;
-              }
-            }
+            var3_int = 0;
             var4 = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (var4 >= 58) {
-                stackOut_8_0 = var3_int;
-                stackIn_9_0 = stackOut_8_0;
+                stackOut_6_0 = var3_int;
+                stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
-                L3: {
+                L2: {
                   if ((param1 & 1L << var4) == 0L) {
-                    break L3;
+                    break L2;
                   } else {
-                    break L3;
+                    break L2;
                   }
                 }
                 var4++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var3, "md.A(" + param0 + 44 + param1 + 41);
+          throw aa.a((Throwable) (Object) var3, "md.A(" + 0 + 44 + param1 + 41);
         }
-        return stackIn_9_0;
+        return stackIn_7_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
-        int var1 = 17 % ((param0 - 37) / 56);
+        int var1 = 0;
         field_f = null;
         field_e = null;
         field_a = null;

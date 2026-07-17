@@ -12,11 +12,13 @@ abstract class jb {
 
     abstract void a(java.awt.Component param0, byte param1);
 
-    final static int[] a(int param0, int param1, int param2) {
+    final static int[] a(int param0, int param1) {
         int var3 = bk.a((byte) 92, param1);
-        int var4 = im.a(param1, true);
+        int discarded$0 = 1;
+        int var4 = im.a(param1);
         int var5 = bk.a((byte) 92, param0);
-        int var6 = im.a(param0, true);
+        int discarded$1 = 1;
+        int var6 = im.a(param0);
         int var7 = (int)((long)var5 * (long)var3 >> 16);
         int var8 = (int)((long)var3 * (long)var6 >> 16);
         int var9 = (int)((long)var4 * (long)var5 >> 16);
@@ -51,7 +53,7 @@ abstract class jb {
         String stackOut_9_2 = null;
         try {
           L0: {
-            var8 = ph.a(param5, param1, param3, param0, 10, param2);
+            var8 = ph.a(param5, param1, 0, param0, 10, param2);
             var6 = var8;
             if (var8 != null) {
               var7 = new ck();
@@ -78,7 +80,7 @@ abstract class jb {
           L1: {
             var6_ref = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var6_ref;
-            stackOut_8_1 = new StringBuilder().append("jb.E(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_8_1 = new StringBuilder().append("jb.E(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(0).append(44).append(param4).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -114,7 +116,7 @@ abstract class jb {
         field_e = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         ji var1 = (ji) (Object) vc.field_d.d(9272);
         if (!(var1 != null)) {
             gb.g(-17464);

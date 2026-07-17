@@ -6,7 +6,7 @@ final class vi {
     static int field_a;
     static String field_b;
 
-    final static void a(int param0, boolean param1) {
+    final static void a(int param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -535,7 +535,7 @@ final class vi {
         var4 = 0;
         if (!param2) {
           if (!param1) {
-            var5 = 53 % ((param0 - 77) / 33);
+            var5 = 2;
             if (param3) {
               var4++;
               return ol.field_a[var4];
@@ -544,7 +544,7 @@ final class vi {
             }
           } else {
             var4 += 2;
-            var5 = 53 % ((param0 - 77) / 33);
+            var5 = 2;
             if (param3) {
               var4++;
               return ol.field_a[var4];
@@ -556,7 +556,7 @@ final class vi {
           var4 += 4;
           if (param1) {
             var4 += 2;
-            var5 = 53 % ((param0 - 77) / 33);
+            var5 = 2;
             if (!param3) {
               return ol.field_a[var4];
             } else {
@@ -564,7 +564,7 @@ final class vi {
               return ol.field_a[var4];
             }
           } else {
-            var5 = 53 % ((param0 - 77) / 33);
+            var5 = 2;
             if (param3) {
               var4++;
               return ol.field_a[var4];
@@ -606,32 +606,28 @@ final class vi {
         }
     }
 
-    final static String b(byte param0) {
+    final static String b() {
         if (cb.field_v == wi.field_f) {
           return ag.field_e;
         } else {
           if (ui.field_kb == wi.field_f) {
             return li.field_d;
           } else {
-            if (uc.field_c.a(param0 ^ 87)) {
-              if (param0 != -55) {
-                return null;
-              } else {
-                return aa.field_s;
-              }
-            } else {
+            if (!uc.field_c.a(-98)) {
               return li.field_d;
+            } else {
+              return aa.field_s;
             }
           }
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
     }
 
-    final static void c(byte param0) {
+    final static void c() {
         cg.a((byte) -105, 17);
     }
 

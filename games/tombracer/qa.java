@@ -57,14 +57,6 @@ final class qa {
             var3_int = 0;
             L1: while (true) {
               if (param1.length - 1 <= var3_int) {
-                L2: {
-                  if (param0) {
-                    break L2;
-                  } else {
-                    field_b = -62;
-                    break L2;
-                  }
-                }
                 stackOut_9_0 = param1.length + -1;
                 stackIn_10_0 = stackOut_9_0;
                 break L0;
@@ -82,10 +74,10 @@ final class qa {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var3 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var3;
-            stackOut_11_1 = new StringBuilder().append("qa.G(").append(param0).append(44);
+            stackOut_11_1 = new StringBuilder().append("qa.G(").append(1).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -97,7 +89,7 @@ final class qa {
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
-              break L3;
+              break L2;
             } else {
               stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
               stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
@@ -105,7 +97,7 @@ final class qa {
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
               stackIn_14_2 = stackOut_12_2;
-              break L3;
+              break L2;
             }
           }
           throw tba.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param2 + 41);
@@ -123,7 +115,7 @@ final class qa {
           L0: {
             var4 = -param2 + param0;
             var5 = ua.a(var4, 14);
-            if (var4 <= param1) {
+            if (var4 <= 0) {
               var6 = -1;
               break L0;
             } else {
@@ -160,7 +152,8 @@ final class qa {
 
     final void b(int param0) {
         Object var3 = null;
-        if (!this.a(0)) {
+        int discarded$2 = 0;
+        if (!this.a()) {
           return;
         } else {
           ((qa) this).field_n.a(((qa) this).field_e, ((qa) this).field_p, ((qa) this).field_k, ((qa) this).field_c, ((qa) this).field_l, ((qa) this).field_a, 51);
@@ -182,7 +175,7 @@ final class qa {
             }
           } else {
             var3 = null;
-            int discarded$1 = qa.a(true, (mi[]) null, 44);
+            int discarded$3 = qa.a(true, (mi[]) null, 44);
             if (!((qa) this).field_a.f((byte) 33)) {
               if (!((qa) this).field_a.field_A) {
                 ((qa) this).field_d.a(((qa) this).field_p, ((qa) this).field_k, ((qa) this).field_e, -88, ((qa) this).field_a, ((qa) this).field_c, ((qa) this).field_l);
@@ -287,17 +280,13 @@ final class qa {
     }
 
     private final boolean a(int param0, byte param1, int param2, int param3, int param4) {
-        if (param1 == 59) {
-          if (param0 >= ((qa) this).field_p) {
-            if (param2 >= ((qa) this).field_c) {
-              if (param3 <= ((qa) this).field_k) {
-                if (((qa) this).field_l < 0) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
+        if (param0 >= ((qa) this).field_p) {
+          if (param2 >= ((qa) this).field_c) {
+            if (0 <= ((qa) this).field_k) {
+              if (((qa) this).field_l < 0) {
                 return false;
+              } else {
+                return true;
               }
             } else {
               return false;
@@ -306,24 +295,7 @@ final class qa {
             return false;
           }
         } else {
-          ((qa) this).field_g = -31;
-          if (param0 >= ((qa) this).field_p) {
-            if (param2 >= ((qa) this).field_c) {
-              if (param3 <= ((qa) this).field_k) {
-                if (((qa) this).field_l < 0) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return false;
-            }
-          } else {
-            return false;
-          }
+          return false;
         }
     }
 
@@ -358,7 +330,7 @@ final class qa {
         }
     }
 
-    private final boolean a(int param0) {
+    private final boolean a() {
         return this.a(aaa.a(false), (byte) 59, koa.b(0), 0, 0);
     }
 

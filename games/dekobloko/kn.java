@@ -62,44 +62,40 @@ final class kn extends bh {
         String stackOut_13_2 = null;
         try {
           L0: {
-            if (param1 == -39) {
-              L1: {
-                var6_int = 2;
-                if ((Object) (Object) se.field_S != (Object) (Object) param0) {
-                  break L1;
-                } else {
-                  var6_int = 1;
-                  break L1;
-                }
+            L1: {
+              var6_int = 2;
+              if ((Object) (Object) se.field_S != (Object) (Object) param0) {
+                break L1;
+              } else {
+                var6_int = 1;
+                break L1;
               }
-              L2: {
-                param0.c(param3, -var6_int + param5, -var6_int + param2, 0, -1);
-                param0.c(param3, -var6_int + param5, param2, 0, -1);
-                param0.c(param3, -var6_int + param5, param2 + var6_int, 0, -1);
-                param0.c(param3, param5, -var6_int + param2, 0, -1);
-                param0.c(param3, param5, param2 - -var6_int, 0, -1);
-                param0.c(param3, param5 + var6_int, -var6_int + param2, 0, -1);
-                param0.c(param3, var6_int + param5, param2, 0, -1);
-                param0.c(param3, var6_int + param5, var6_int + param2, 0, -1);
-                if ((Object) (Object) w.field_kb == (Object) (Object) param0) {
-                  param0.c(param3, 1 + param5, param2 + -var6_int, 0, -1);
-                  param0.c(param3, -1 + param5, param2 + -var6_int, 0, -1);
-                  param0.c(param3, var6_int + param5, -1 + param2, 0, -1);
-                  param0.c(param3, -var6_int + param5, -1 + param2, 0, -1);
-                  param0.c(param3, var6_int + param5, param2 - -1, 0, -1);
-                  param0.c(param3, -var6_int + param5, 1 + param2, 0, -1);
-                  param0.c(param3, param5 - -1, var6_int + param2, 0, -1);
-                  param0.c(param3, -1 + param5, param2 + var6_int, 0, -1);
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              param0.c(param3, param5, param2, param4, -1);
-              break L0;
-            } else {
-              return;
             }
+            L2: {
+              param0.c(param3, -var6_int + param5, -var6_int + param2, 0, -1);
+              param0.c(param3, -var6_int + param5, param2, 0, -1);
+              param0.c(param3, -var6_int + param5, param2 + var6_int, 0, -1);
+              param0.c(param3, param5, -var6_int + param2, 0, -1);
+              param0.c(param3, param5, param2 - -var6_int, 0, -1);
+              param0.c(param3, param5 + var6_int, -var6_int + param2, 0, -1);
+              param0.c(param3, var6_int + param5, param2, 0, -1);
+              param0.c(param3, var6_int + param5, var6_int + param2, 0, -1);
+              if ((Object) (Object) w.field_kb == (Object) (Object) param0) {
+                param0.c(param3, 1 + param5, param2 + -var6_int, 0, -1);
+                param0.c(param3, -1 + param5, param2 + -var6_int, 0, -1);
+                param0.c(param3, var6_int + param5, -1 + param2, 0, -1);
+                param0.c(param3, -var6_int + param5, -1 + param2, 0, -1);
+                param0.c(param3, var6_int + param5, param2 - -1, 0, -1);
+                param0.c(param3, -var6_int + param5, 1 + param2, 0, -1);
+                param0.c(param3, param5 - -1, var6_int + param2, 0, -1);
+                param0.c(param3, -1 + param5, param2 + var6_int, 0, -1);
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            param0.c(param3, param5, param2, param4, -1);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -131,7 +127,7 @@ final class kn extends bh {
           }
           L4: {
             stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44).append(-39).append(44).append(param2).append(44);
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;

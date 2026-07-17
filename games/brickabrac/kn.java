@@ -19,115 +19,107 @@ final class kn extends tk {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
+        char[] stackIn_6_0 = null;
+        int stackIn_6_1 = 0;
+        char[] stackIn_7_0 = null;
+        int stackIn_7_1 = 0;
         char[] stackIn_8_0 = null;
         int stackIn_8_1 = 0;
-        char[] stackIn_9_0 = null;
-        int stackIn_9_1 = 0;
-        char[] stackIn_10_0 = null;
-        int stackIn_10_1 = 0;
-        int stackIn_10_2 = 0;
+        int stackIn_8_2 = 0;
+        char[] stackIn_13_0 = null;
+        int stackIn_13_1 = 0;
+        char[] stackIn_14_0 = null;
+        int stackIn_14_1 = 0;
         char[] stackIn_15_0 = null;
         int stackIn_15_1 = 0;
-        char[] stackIn_16_0 = null;
-        int stackIn_16_1 = 0;
-        char[] stackIn_17_0 = null;
-        int stackIn_17_1 = 0;
-        int stackIn_17_2 = 0;
+        int stackIn_15_2 = 0;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_25_2 = null;
+        String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
+        char[] stackOut_12_0 = null;
+        int stackOut_12_1 = 0;
         char[] stackOut_14_0 = null;
         int stackOut_14_1 = 0;
-        char[] stackOut_16_0 = null;
-        int stackOut_16_1 = 0;
-        int stackOut_16_2 = 0;
-        char[] stackOut_15_0 = null;
-        int stackOut_15_1 = 0;
-        char stackOut_15_2 = 0;
+        int stackOut_14_2 = 0;
+        char[] stackOut_13_0 = null;
+        int stackOut_13_1 = 0;
+        char stackOut_13_2 = 0;
+        char[] stackOut_5_0 = null;
+        int stackOut_5_1 = 0;
         char[] stackOut_7_0 = null;
         int stackOut_7_1 = 0;
-        char[] stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
-        int stackOut_9_2 = 0;
-        char[] stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        char stackOut_8_2 = 0;
+        int stackOut_7_2 = 0;
+        char[] stackOut_6_0 = null;
+        int stackOut_6_1 = 0;
+        char stackOut_6_2 = 0;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
         RuntimeException stackOut_22_0 = null;
         StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
+        String stackOut_22_2 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
             L1: {
-              if (param0 > 59) {
-                break L1;
-              } else {
-                field_z = -79;
-                break L1;
-              }
-            }
-            L2: {
               if (1 == param2) {
                 ((kn) this).field_D = param1.d(-1);
-                break L2;
+                break L1;
               } else {
                 if (param2 != 2) {
                   if (param2 != 3) {
                     if (param2 != 4) {
-                      break L2;
+                      break L1;
                     } else {
                       ((kn) this).field_A = true;
-                      break L2;
+                      break L1;
                     }
                   } else {
                     var4_int = param1.l(255);
                     ((kn) this).field_u = new char[var4_int];
                     ((kn) this).field_v = new int[var4_int];
                     var5 = 0;
-                    L3: while (true) {
+                    L2: while (true) {
                       if (var4_int <= var5) {
-                        break L2;
+                        break L1;
                       } else {
-                        L4: {
+                        L3: {
                           ((kn) this).field_v[var5] = param1.i(65280);
                           var6 = param1.b(true);
-                          stackOut_14_0 = ((kn) this).field_u;
-                          stackOut_14_1 = var5;
-                          stackIn_16_0 = stackOut_14_0;
-                          stackIn_16_1 = stackOut_14_1;
-                          stackIn_15_0 = stackOut_14_0;
-                          stackIn_15_1 = stackOut_14_1;
+                          stackOut_12_0 = ((kn) this).field_u;
+                          stackOut_12_1 = var5;
+                          stackIn_14_0 = stackOut_12_0;
+                          stackIn_14_1 = stackOut_12_1;
+                          stackIn_13_0 = stackOut_12_0;
+                          stackIn_13_1 = stackOut_12_1;
                           if (0 == var6) {
-                            stackOut_16_0 = (char[]) (Object) stackIn_16_0;
-                            stackOut_16_1 = stackIn_16_1;
-                            stackOut_16_2 = 0;
-                            stackIn_17_0 = stackOut_16_0;
-                            stackIn_17_1 = stackOut_16_1;
-                            stackIn_17_2 = stackOut_16_2;
-                            break L4;
+                            stackOut_14_0 = (char[]) (Object) stackIn_14_0;
+                            stackOut_14_1 = stackIn_14_1;
+                            stackOut_14_2 = 0;
+                            stackIn_15_0 = stackOut_14_0;
+                            stackIn_15_1 = stackOut_14_1;
+                            stackIn_15_2 = stackOut_14_2;
+                            break L3;
                           } else {
-                            stackOut_15_0 = (char[]) (Object) stackIn_15_0;
-                            stackOut_15_1 = stackIn_15_1;
-                            stackOut_15_2 = cq.a((byte) -11, (byte) var6);
-                            stackIn_17_0 = stackOut_15_0;
-                            stackIn_17_1 = stackOut_15_1;
-                            stackIn_17_2 = stackOut_15_2;
-                            break L4;
+                            stackOut_13_0 = (char[]) (Object) stackIn_13_0;
+                            stackOut_13_1 = stackIn_13_1;
+                            stackOut_13_2 = cq.a((byte) -11, (byte) var6);
+                            stackIn_15_0 = stackOut_13_0;
+                            stackIn_15_1 = stackOut_13_1;
+                            stackIn_15_2 = stackOut_13_2;
+                            break L3;
                           }
                         }
-                        stackIn_17_0[stackIn_17_1] = (char) stackIn_17_2;
+                        stackIn_15_0[stackIn_15_1] = (char) stackIn_15_2;
                         var5++;
-                        continue L3;
+                        continue L2;
                       }
                     }
                   }
@@ -136,40 +128,40 @@ final class kn extends tk {
                   ((kn) this).field_x = new int[var4_int];
                   ((kn) this).field_w = new char[var4_int];
                   var5 = 0;
-                  L5: while (true) {
+                  L4: while (true) {
                     if (var5 >= var4_int) {
-                      break L2;
+                      break L1;
                     } else {
-                      L6: {
+                      L5: {
                         ((kn) this).field_x[var5] = param1.i(65280);
                         var6 = param1.b(true);
-                        stackOut_7_0 = ((kn) this).field_w;
-                        stackOut_7_1 = var5;
-                        stackIn_9_0 = stackOut_7_0;
-                        stackIn_9_1 = stackOut_7_1;
-                        stackIn_8_0 = stackOut_7_0;
-                        stackIn_8_1 = stackOut_7_1;
+                        stackOut_5_0 = ((kn) this).field_w;
+                        stackOut_5_1 = var5;
+                        stackIn_7_0 = stackOut_5_0;
+                        stackIn_7_1 = stackOut_5_1;
+                        stackIn_6_0 = stackOut_5_0;
+                        stackIn_6_1 = stackOut_5_1;
                         if (0 == var6) {
-                          stackOut_9_0 = (char[]) (Object) stackIn_9_0;
-                          stackOut_9_1 = stackIn_9_1;
-                          stackOut_9_2 = 0;
-                          stackIn_10_0 = stackOut_9_0;
-                          stackIn_10_1 = stackOut_9_1;
-                          stackIn_10_2 = stackOut_9_2;
-                          break L6;
+                          stackOut_7_0 = (char[]) (Object) stackIn_7_0;
+                          stackOut_7_1 = stackIn_7_1;
+                          stackOut_7_2 = 0;
+                          stackIn_8_0 = stackOut_7_0;
+                          stackIn_8_1 = stackOut_7_1;
+                          stackIn_8_2 = stackOut_7_2;
+                          break L5;
                         } else {
-                          stackOut_8_0 = (char[]) (Object) stackIn_8_0;
-                          stackOut_8_1 = stackIn_8_1;
-                          stackOut_8_2 = cq.a((byte) -112, (byte) var6);
-                          stackIn_10_0 = stackOut_8_0;
-                          stackIn_10_1 = stackOut_8_1;
-                          stackIn_10_2 = stackOut_8_2;
-                          break L6;
+                          stackOut_6_0 = (char[]) (Object) stackIn_6_0;
+                          stackOut_6_1 = stackIn_6_1;
+                          stackOut_6_2 = cq.a((byte) -112, (byte) var6);
+                          stackIn_8_0 = stackOut_6_0;
+                          stackIn_8_1 = stackOut_6_1;
+                          stackIn_8_2 = stackOut_6_2;
+                          break L5;
                         }
                       }
-                      stackIn_10_0[stackIn_10_1] = (char) stackIn_10_2;
+                      stackIn_8_0[stackIn_8_1] = (char) stackIn_8_2;
                       var5++;
-                      continue L5;
+                      continue L4;
                     }
                   }
                 }
@@ -179,33 +171,33 @@ final class kn extends tk {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L6: {
             var4 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var4;
-            stackOut_22_1 = new StringBuilder().append("kn.D(").append(param0).append(44);
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackOut_20_0 = (RuntimeException) var4;
+            stackOut_20_1 = new StringBuilder().append("kn.D(").append(104).append(44);
+            stackIn_22_0 = stackOut_20_0;
+            stackIn_22_1 = stackOut_20_1;
+            stackIn_21_0 = stackOut_20_0;
+            stackIn_21_1 = stackOut_20_1;
             if (param1 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
-              break L7;
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "null";
+              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_1 = stackOut_22_1;
+              stackIn_23_2 = stackOut_22_2;
+              break L6;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
-              break L7;
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "{...}";
+              stackIn_23_0 = stackOut_21_0;
+              stackIn_23_1 = stackOut_21_1;
+              stackIn_23_2 = stackOut_21_2;
+              break L6;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param2 + 41);
+          throw qb.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param2 + 41);
         }
     }
 
@@ -292,13 +284,17 @@ final class kn extends tk {
     final static void a(boolean param0, java.awt.Canvas param1) {
         try {
             if (11 == i.field_j) {
-                mk.a(-1);
+                int discarded$0 = -1;
+                mk.a();
             }
             if (!param0) {
                 kn.a((byte) -116);
             }
             bf.a(ri.field_N, 8192, ep.field_a, vq.field_C);
-            ck.a(param1, 0, 14209, 0);
+            int discarded$1 = 0;
+            int discarded$2 = 14209;
+            int discarded$3 = 0;
+            ck.a(param1);
         } catch (RuntimeException runtimeException) {
             throw qb.a((Throwable) (Object) runtimeException, "kn.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }

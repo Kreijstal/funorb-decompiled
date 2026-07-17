@@ -140,7 +140,7 @@ final class cb {
         return stackIn_9_0 != 0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_e = null;
         field_a = null;
@@ -150,7 +150,7 @@ final class cb {
         field_c = null;
     }
 
-    final static void a(jt param0, byte param1) {
+    final static void a(jt param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

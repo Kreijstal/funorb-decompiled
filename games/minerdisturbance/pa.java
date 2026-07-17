@@ -7,7 +7,7 @@ final class pa {
     static rc[] field_a;
     static int[][] field_b;
 
-    final static ed a(byte param0) {
+    final static ed a() {
         if (!(ic.field_l != mc.field_t)) {
             throw new IllegalStateException();
         }

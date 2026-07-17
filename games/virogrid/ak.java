@@ -45,46 +45,39 @@ final class ak {
         int var4 = 0;
         int var5 = 0;
         int stackIn_5_0 = 0;
-        int stackIn_10_0 = 0;
+        int stackIn_9_0 = 0;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
+        String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
+        int stackOut_8_0 = 0;
         int stackOut_4_0 = 0;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
         RuntimeException stackOut_12_0 = null;
         StringBuilder stackOut_12_1 = null;
         String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
         var5 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
             if (0 < param0) {
               if (!am.a((byte) -56, param0)) {
-                L1: {
-                  var3_int = -(int)(4294967296L % (long)param0) + -2147483648;
-                  if (param1 < -56) {
-                    break L1;
-                  } else {
-                    field_f = null;
-                    break L1;
-                  }
-                }
-                L2: while (true) {
+                var3_int = -(int)(4294967296L % (long)param0) + -2147483648;
+                L1: while (true) {
                   var4 = param2.nextInt();
                   if (var4 >= var3_int) {
-                    continue L2;
+                    continue L1;
                   } else {
-                    stackOut_9_0 = bj.b(param0, var4, 1);
-                    stackIn_10_0 = stackOut_9_0;
+                    int discarded$2 = 1;
+                    stackOut_8_0 = bj.b(param0, var4);
+                    stackIn_9_0 = stackOut_8_0;
                     break L0;
                   }
                 }
@@ -99,49 +92,49 @@ final class ak {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var3 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var3;
-            stackOut_11_1 = new StringBuilder().append("ak.F(").append(param0).append(44).append(param1).append(44);
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackOut_10_0 = (RuntimeException) var3;
+            stackOut_10_1 = new StringBuilder().append("ak.F(").append(param0).append(44).append(-74).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
             if (param2 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
-              break L3;
-            } else {
               stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
               stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
-              break L3;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L2;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L2;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
+          throw kg.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
         }
-        return stackIn_10_0;
+        return stackIn_9_0;
     }
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         oc.field_l = true;
         hc.field_a = 15000L + hc.a(-9986);
         return j.field_l == 11 ? true : false;
     }
 
-    final static mg[] a(int param0, int param1, int param2, byte param3) {
+    final static mg[] a(int param0, int param1) {
         int var5 = 0;
         int var6 = Virogrid.field_F ? 1 : 0;
         mg[] var7 = new mg[9];
         mg[] var4 = var7;
-        var7[0] = eg.a(param2, (byte) 29, param0);
+        var7[0] = eg.a(1, (byte) 29, param0);
         for (var5 = 1; var5 < 9; var5++) {
             var7[var5] = var7[0];
         }
@@ -149,7 +142,7 @@ final class ak {
         return var4;
     }
 
-    final static void c(int param0) {
+    final static void c() {
         se.field_f = new String[ad.field_c];
         se.field_f[19] = rk.field_d;
         se.field_f[13] = ej.field_H;
@@ -167,7 +160,7 @@ final class ak {
         se.field_f[21] = kn.field_F;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_c = null;
         field_b = null;
@@ -424,21 +417,18 @@ final class ak {
         return stackIn_69_0;
     }
 
-    final static void a(int param0, oc param1, int param2) {
+    final static void a(int param0, oc param1) {
         hg var3 = null;
         try {
             var3 = gk.field_g;
-            var3.g(param2, param0 + 26047);
-            if (param0 != -26039) {
-                field_c = null;
-            }
+            var3.g(3, 8);
             var3.a(5, 56);
             var3.a(0, -114);
             var3.a((byte) -126, param1.field_j);
             var3.a(param1.field_g, -90);
             var3.a(param1.field_m, -96);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "ak.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "ak.B(" + -26039 + 44 + (param1 != null ? "{...}" : "null") + 44 + 3 + 41);
         }
     }
 

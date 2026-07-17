@@ -146,9 +146,6 @@ final class mja extends td {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        if (param2 != 3) {
-            field_r = null;
-        }
         tca.field_f = param1;
         gaa.field_k = param0;
         mm.field_z = param3;
@@ -164,7 +161,7 @@ final class mja extends td {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_q = null;
         field_r = null;
         int var1 = -25;

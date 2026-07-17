@@ -6,7 +6,7 @@ final class de implements java.awt.event.KeyListener, java.awt.event.FocusListen
     static int[] field_b;
     static String field_a;
 
-    final static void a(sj param0, sj param1, byte param2) {
+    final static void a(sj param0, sj param1) {
         try {
             gs.field_d = param0;
             gd.field_c = param1;
@@ -16,9 +16,9 @@ final class de implements java.awt.event.KeyListener, java.awt.event.FocusListen
     }
 
     final static void b(int param0, byte param1) {
-        vp.field_a = (param0 << 16) / 150;
-        vp.field_f = param0 * 400 / 150;
-        vp.field_c = param0 * 100 / 150;
+        vp.field_a = 21845;
+        vp.field_f = 133;
+        vp.field_c = 33;
     }
 
     final static int a(int param0, byte param1) {
@@ -116,7 +116,7 @@ final class de implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -586,7 +586,7 @@ final class de implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         int var2 = 0;
         if (!(iu.field_i <= 0)) {
             iu.field_i = iu.field_i - 1;

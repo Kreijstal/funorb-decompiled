@@ -19,30 +19,17 @@ final class wf extends ug {
         return pf.a(0) - d.field_k;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_h = null;
         field_i = null;
-        if (param0 != -47) {
-            field_m = null;
-            return;
-        }
         field_m = null;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         da.field_a = param2;
-        if (param3 != 8192) {
-          wf.a((byte) 47);
-          nf.field_M = param1;
-          hb.field_n = param0;
-          gi.field_a = param4;
-          return;
-        } else {
-          nf.field_M = param1;
-          hb.field_n = param0;
-          gi.field_a = param4;
-          return;
-        }
+        nf.field_M = param1;
+        hb.field_n = param0;
+        gi.field_a = param4;
     }
 
     private wf() throws Throwable {

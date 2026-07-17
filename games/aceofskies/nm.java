@@ -9,7 +9,7 @@ final class nm {
     static boolean field_a;
     private int[] field_d;
 
-    final static char a(byte param0, int param1) {
+    final static char a(byte param0) {
         int var2 = 0;
         int var3 = 0;
         var2 = param0 & 255;
@@ -42,15 +42,12 @@ final class nm {
         DataInputStream var4 = null;
         try {
             var4 = new DataInputStream((InputStream) (Object) new BufferedInputStream((InputStream) (Object) new FileInputStream(param2)));
-            if (param0 > -64) {
-                nm.a(115);
-            }
             {
                 var4.readFully(param3, 0, param1);
             }
             var4.close();
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "nm.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "nm.B(" + -106 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 

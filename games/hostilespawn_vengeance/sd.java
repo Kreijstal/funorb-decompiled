@@ -8,7 +8,7 @@ class sd extends cn {
     static bd field_t;
     static boolean field_u;
 
-    final static void a(int param0, int param1) {
+    final static void a() {
         try {
             Throwable var2 = null;
             Throwable decompiledCaughtException = null;
@@ -49,60 +49,52 @@ class sd extends cn {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_14_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_12_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_13_0 = 0;
-        int stackOut_9_0 = 0;
+        int stackOut_11_0 = 0;
+        int stackOut_7_0 = 0;
         var8 = HostileSpawn.field_I ? 1 : 0;
         try {
           L0: {
-            L1: {
-              if (param0 == 2) {
-                break L1;
-              } else {
-                field_u = true;
-                break L1;
-              }
-            }
             var3_int = 0;
             var4 = s.field_g;
-            L2: while (true) {
+            L1: while (true) {
               if (var3_int >= hf.field_d.length) {
-                stackOut_13_0 = -1;
-                stackIn_14_0 = stackOut_13_0;
+                stackOut_11_0 = -1;
+                stackIn_12_0 = stackOut_11_0;
                 break L0;
               } else {
-                L3: {
+                L2: {
                   var5 = jf.field_b[var3_int];
                   if (0 <= var5) {
                     var6 = wb.a(111, true, hf.field_d[var3_int]);
                     var7 = -(var6 >> 1) + wk.field_c;
                     var4 = var4 + cl.field_l;
                     if (uk.a(-jd.field_l + var7, param2, var6 + (jd.field_l << 1), var4, 124, param1, (ab.field_b << 1) + eh.field_d)) {
-                      stackOut_9_0 = var5;
-                      stackIn_10_0 = stackOut_9_0;
-                      return stackIn_10_0;
+                      stackOut_7_0 = var5;
+                      stackIn_8_0 = stackOut_7_0;
+                      return stackIn_8_0;
                     } else {
                       var4 = var4 + (eh.field_d + cl.field_l + (ab.field_b << 1));
-                      break L3;
+                      break L2;
                     }
                   } else {
                     var4 = var4 + kb.field_d;
-                    break L3;
+                    break L2;
                   }
                 }
                 var3_int++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var3, "sd.EA(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw wg.a((Throwable) (Object) var3, "sd.EA(" + 2 + 44 + param1 + 44 + param2 + 41);
         }
-        return stackIn_14_0;
+        return stackIn_12_0;
     }
 
     sd(int param0) {
@@ -112,7 +104,8 @@ class sd extends cn {
     public final void a(int param0, int param1, int param2, ag param3, boolean param4) {
         try {
             if (param4) {
-                ij.a(param3.field_x, param3.field_s, param3.field_m + param0, param3.field_v + param1, false);
+                int discarded$0 = 0;
+                ij.a(param3.field_x, param3.field_s, param3.field_m + param0, param3.field_v + param1);
             }
             super.a(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {

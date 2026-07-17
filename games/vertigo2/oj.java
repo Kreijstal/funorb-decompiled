@@ -217,14 +217,6 @@ final class oj extends cj implements ij {
             }
           }
         }
-        L1: {
-          if (param4 >= 80) {
-            break L1;
-          } else {
-            oj.a(-117, 112, 11, -72, (byte) 107, -108, 19, -31);
-            break L1;
-          }
-        }
     }
 
     oj(nc param0) {
@@ -343,7 +335,7 @@ final class oj extends cj implements ij {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_I = null;
         field_O = null;
         field_H = null;

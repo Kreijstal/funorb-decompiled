@@ -49,8 +49,9 @@ final class gg extends li {
               try {
                 L0: {
                   var3 = new java.net.URL(param2.getCodeBase(), param0);
-                  var3 = ar.a(param2, var3, 0);
-                  hc.a(var3.toString(), 16011, param1, param2);
+                  int discarded$2 = 0;
+                  var3 = ar.a(param2, var3);
+                  hc.a(var3.toString(), 16011, true, param2);
                   break L0;
                 }
               } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -90,7 +91,7 @@ final class gg extends li {
               }
               L2: {
                 stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-                stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44).append(param1).append(44);
+                stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44).append(1).append(44);
                 stackIn_9_0 = stackOut_7_0;
                 stackIn_9_1 = stackOut_7_1;
                 stackIn_8_0 = stackOut_7_0;
@@ -122,7 +123,7 @@ final class gg extends li {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_s = null;
         field_o = null;
         field_n = null;

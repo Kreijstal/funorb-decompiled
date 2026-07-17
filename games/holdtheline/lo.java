@@ -45,7 +45,7 @@ class lo {
         tj var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_t) {
             break L0;
           } else {
@@ -55,7 +55,7 @@ class lo {
         }
         L1: {
           bc.a(param0, 0, var3);
-          ((lo) this).field_b = ((lo) this).field_b - 256;
+          ((lo) this).field_b = ((lo) this).field_b - param1;
           if (((lo) this).field_m == null) {
             break L1;
           } else {
@@ -222,7 +222,7 @@ class lo {
           if (((lo) this).field_m == null) {
             break L17;
           } else {
-            ((lo) this).field_m.b(param0, 0, 256);
+            ((lo) this).field_m.b(param0, 0, param1);
             break L17;
           }
         }
@@ -249,7 +249,8 @@ class lo {
                       field_c = null;
                       break L0;
                     } else {
-                      qe.a(50L, (byte) 45);
+                      int discarded$1 = 45;
+                      qe.a(50L);
                       continue L2;
                     }
                   }
@@ -302,12 +303,12 @@ class lo {
     }
 
     private final void a(int param0) {
-        ((lo) this).field_b = ((lo) this).field_b - 256;
+        ((lo) this).field_b = ((lo) this).field_b - param0;
         if (((lo) this).field_b < 0) {
             ((lo) this).field_b = 0;
         }
         if (((lo) this).field_m != null) {
-            ((lo) this).field_m.a(256);
+            ((lo) this).field_m.a(param0);
             return;
         }
     }
@@ -452,35 +453,9 @@ class lo {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 < 8000) {
-            break L0;
-          } else {
-            if (param0 <= 48000) {
-              L1: {
-                field_l = param0;
-                if (!param1) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              field_t = stackIn_7_0 != 0;
-              field_f = 10;
-              return;
-            } else {
-              break L0;
-            }
-          }
-        }
-        throw new IllegalArgumentException();
+        field_l = 22050;
+        field_t = true;
+        field_f = 10;
     }
 
     final synchronized void d() {

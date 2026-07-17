@@ -66,10 +66,11 @@ final class uv extends gm {
                     if (var6_int >= 8) {
                       break L0;
                     } else {
-                      var7 = new float[]{0.0f, (float)(-(1 + fi.a(param5, he.field_o, (byte) -96)))};
-                      float[] dupTemp$1 = kt.a((byte) -92, var7, (float)(0.0 + 0.017453292519943295 * (double)(2048.0f / (float)var6_int)));
-                      var11 = dupTemp$1;
-                      var7 = dupTemp$1;
+                      int discarded$3 = -96;
+                      var7 = new float[]{0.0f, (float)(-(1 + fi.a(param5, he.field_o)))};
+                      float[] dupTemp$4 = kt.a((byte) -92, var7, (float)(0.0 + 0.017453292519943295 * (double)(2048.0f / (float)var6_int)));
+                      var11 = dupTemp$4;
+                      var7 = dupTemp$4;
                       var8 = new vt(24, param3, param1, param0, (int)var11[0] << 8, (int)var11[1] << 8, 1);
                       param4.a((ms) (Object) var8, (byte) 39);
                       var6_int++;
@@ -77,7 +78,8 @@ final class uv extends gm {
                     }
                   }
                 } else {
-                  var7 = new float[]{0.0f, (float)(-(fi.a(param5, he.field_o, (byte) -96) + 1))};
+                  int discarded$5 = -96;
+                  var7 = new float[]{0.0f, (float)(-(fi.a(param5, he.field_o) + 1))};
                   var15 = kt.a((byte) -115, var7, (float)(0.0 + (double)(2048.0f / (float)var6_int) * 0.017453292519943295));
                   var14 = var15;
                   var13 = var14;
@@ -279,7 +281,7 @@ final class uv extends gm {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_o = null;
     }
 
@@ -293,24 +295,24 @@ final class uv extends gm {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        int stackIn_42_0 = 0;
+        int stackIn_40_0 = 0;
+        RuntimeException stackIn_42_0 = null;
+        StringBuilder stackIn_42_1 = null;
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;
-        RuntimeException stackIn_45_0 = null;
-        StringBuilder stackIn_45_1 = null;
-        RuntimeException stackIn_46_0 = null;
-        StringBuilder stackIn_46_1 = null;
-        String stackIn_46_2 = null;
+        String stackIn_44_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_41_0 = 0;
+        int stackOut_39_0 = 0;
+        RuntimeException stackOut_41_0 = null;
+        StringBuilder stackOut_41_1 = null;
         RuntimeException stackOut_43_0 = null;
         StringBuilder stackOut_43_1 = null;
-        RuntimeException stackOut_45_0 = null;
-        StringBuilder stackOut_45_1 = null;
-        String stackOut_45_2 = null;
-        RuntimeException stackOut_44_0 = null;
-        StringBuilder stackOut_44_1 = null;
-        String stackOut_44_2 = null;
+        String stackOut_43_2 = null;
+        RuntimeException stackOut_42_0 = null;
+        StringBuilder stackOut_42_1 = null;
+        String stackOut_42_2 = null;
         var11 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
@@ -337,8 +339,8 @@ final class uv extends gm {
                       if (var5 == 0) {
                         throw new NumberFormatException();
                       } else {
-                        stackOut_41_0 = var6;
-                        stackIn_42_0 = stackOut_41_0;
+                        stackOut_39_0 = var6;
+                        stackIn_40_0 = stackOut_39_0;
                         break L0;
                       }
                     } else {
@@ -353,11 +355,7 @@ final class uv extends gm {
                               if (var9 != 43) {
                                 break L5;
                               } else {
-                                if (param2) {
-                                  break L4;
-                                } else {
-                                  break L5;
-                                }
+                                break L5;
                               }
                             }
                           } else {
@@ -439,33 +437,33 @@ final class uv extends gm {
           decompiledCaughtException = decompiledCaughtParameter0;
           L11: {
             var4 = decompiledCaughtException;
-            stackOut_43_0 = (RuntimeException) var4;
-            stackOut_43_1 = new StringBuilder().append("uv.D(").append(param0).append(44);
-            stackIn_45_0 = stackOut_43_0;
-            stackIn_45_1 = stackOut_43_1;
-            stackIn_44_0 = stackOut_43_0;
-            stackIn_44_1 = stackOut_43_1;
+            stackOut_41_0 = (RuntimeException) var4;
+            stackOut_41_1 = new StringBuilder().append("uv.D(").append(param0).append(44);
+            stackIn_43_0 = stackOut_41_0;
+            stackIn_43_1 = stackOut_41_1;
+            stackIn_42_0 = stackOut_41_0;
+            stackIn_42_1 = stackOut_41_1;
             if (param1 == null) {
-              stackOut_45_0 = (RuntimeException) (Object) stackIn_45_0;
-              stackOut_45_1 = (StringBuilder) (Object) stackIn_45_1;
-              stackOut_45_2 = "null";
-              stackIn_46_0 = stackOut_45_0;
-              stackIn_46_1 = stackOut_45_1;
-              stackIn_46_2 = stackOut_45_2;
+              stackOut_43_0 = (RuntimeException) (Object) stackIn_43_0;
+              stackOut_43_1 = (StringBuilder) (Object) stackIn_43_1;
+              stackOut_43_2 = "null";
+              stackIn_44_0 = stackOut_43_0;
+              stackIn_44_1 = stackOut_43_1;
+              stackIn_44_2 = stackOut_43_2;
               break L11;
             } else {
-              stackOut_44_0 = (RuntimeException) (Object) stackIn_44_0;
-              stackOut_44_1 = (StringBuilder) (Object) stackIn_44_1;
-              stackOut_44_2 = "{...}";
-              stackIn_46_0 = stackOut_44_0;
-              stackIn_46_1 = stackOut_44_1;
-              stackIn_46_2 = stackOut_44_2;
+              stackOut_42_0 = (RuntimeException) (Object) stackIn_42_0;
+              stackOut_42_1 = (StringBuilder) (Object) stackIn_42_1;
+              stackOut_42_2 = "{...}";
+              stackIn_44_0 = stackOut_42_0;
+              stackIn_44_1 = stackOut_42_1;
+              stackIn_44_2 = stackOut_42_2;
               break L11;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_46_0, stackIn_46_2 + 44 + param2 + 44 + param3 + 41);
+          throw qo.a((Throwable) (Object) stackIn_44_0, stackIn_44_2 + 44 + 1 + 44 + param3 + 41);
         }
-        return stackIn_42_0;
+        return stackIn_40_0;
     }
 
     static {

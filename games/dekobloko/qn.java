@@ -47,7 +47,7 @@ final class qn extends t {
         }
     }
 
-    public static void n(byte param0) {
+    public static void n() {
         field_pb = null;
         field_rb = null;
     }
@@ -60,29 +60,21 @@ final class qn extends t {
         var3 = client.field_A ? 1 : 0;
         try {
           L0: {
-            L1: {
-              if (param0 == -20494) {
-                break L1;
-              } else {
-                field_pb = null;
-                break L1;
-              }
-            }
             var4 = (ug) (Object) qi.field_Q.c((byte) 125);
-            L2: while (true) {
+            L1: while (true) {
               if (var4 == null) {
                 break L0;
               } else {
                 in.a(var4, (byte) -70, 2);
                 var4 = (ug) (Object) qi.field_Q.d(true);
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var2, "qn.HA(" + param0 + 44 + 2 + 41);
+          throw dh.a((Throwable) (Object) var2, "qn.HA(" + -20494 + 44 + 2 + 41);
         }
     }
 
@@ -316,39 +308,31 @@ final class qn extends t {
                 var5 = 0;
                 L1: while (true) {
                   if (var5 >= ((kl) var18).field_o) {
-                    L2: {
-                      if (param2 == 4210752) {
-                        break L2;
-                      } else {
-                        field_pb = null;
-                        break L2;
-                      }
-                    }
                     aa.field_f.a((bh) var18, 2777);
                     break L0;
                   } else {
                     try {
-                      L3: {
-                        L4: {
-                          L5: {
+                      L2: {
+                        L3: {
+                          L4: {
                             var6_int = param3.d((byte) -21);
                             if (0 == var6_int) {
-                              break L5;
+                              break L4;
                             } else {
                               if (var6_int == 1) {
-                                break L5;
+                                break L4;
                               } else {
                                 if (var6_int == 2) {
-                                  break L5;
+                                  break L4;
                                 } else {
-                                  L6: {
+                                  L5: {
                                     if (var6_int == 3) {
-                                      break L6;
+                                      break L5;
                                     } else {
                                       if (4 == var6_int) {
-                                        break L6;
+                                        break L5;
                                       } else {
-                                        break L4;
+                                        break L3;
                                       }
                                     }
                                   }
@@ -357,27 +341,27 @@ final class qn extends t {
                                   var9 = param3.d((byte) -72);
                                   var10 = new String[var9];
                                   var11_int = 0;
-                                  L7: while (true) {
+                                  L6: while (true) {
                                     if (~var11_int <= ~var9) {
-                                      L8: {
+                                      L7: {
                                         var23 = new byte[var9][];
                                         var22 = var23;
                                         var21 = var22;
                                         var19 = var21;
                                         var11 = var19;
                                         if (var6_int != 3) {
-                                          break L8;
+                                          break L7;
                                         } else {
                                           var12_int = 0;
-                                          L9: while (true) {
+                                          L8: while (true) {
                                             if (~var9 >= ~var12_int) {
-                                              break L8;
+                                              break L7;
                                             } else {
                                               var13 = param3.i(7553);
                                               var11[var12_int] = new byte[var13];
                                               param3.a(var23[var12_int], 0, (byte) 127, var13);
                                               var12_int++;
-                                              continue L9;
+                                              continue L8;
                                             }
                                           }
                                         }
@@ -386,28 +370,28 @@ final class qn extends t {
                                       var12 = new Class[var9];
                                       var17 = 0;
                                       var13 = var17;
-                                      L10: while (true) {
+                                      L9: while (true) {
                                         if (var9 <= var17) {
                                           ((kl) var18).field_t[var5] = param1.a(-10962, var8, cg.a(var20, (byte) -108), var12);
                                           ((kl) var18).field_s[var5] = var23;
-                                          break L4;
+                                          break L3;
                                         } else {
                                           var12[var17] = cg.a(var10[var17], (byte) -122);
                                           var17++;
-                                          continue L10;
+                                          continue L9;
                                         }
                                       }
                                     } else {
                                       var10[var11_int] = param3.c((byte) -38);
                                       var11_int++;
-                                      continue L7;
+                                      continue L6;
                                     }
                                   }
                                 }
                               }
                             }
                           }
-                          L11: {
+                          L10: {
                             var16 = param3.c((byte) -38);
                             String dupTemp$1 = param3.c((byte) -38);
                             var15 = dupTemp$1;
@@ -415,38 +399,38 @@ final class qn extends t {
                             var9 = 0;
                             if (1 == var6_int) {
                               var9 = param3.i(7553);
-                              break L11;
+                              break L10;
                             } else {
-                              break L11;
+                              break L10;
                             }
                           }
                           ((kl) var18).field_u[var5] = var6_int;
                           ((kl) var18).field_q[var5] = var9;
                           ((kl) var18).field_y[var5] = param1.a(false, var15, cg.a(var16, (byte) 9));
-                          break L4;
+                          break L3;
                         }
-                        break L3;
+                        break L2;
                       }
                     } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                       decompiledCaughtException = decompiledCaughtParameter0;
-                      L12: {
+                      L11: {
                         var6 = (ClassNotFoundException) (Object) decompiledCaughtException;
                         ((kl) var18).field_A[var5] = -1;
-                        break L12;
+                        break L11;
                       }
                     } catch (java.lang.Exception decompiledCaughtParameter3) {
                       decompiledCaughtException = decompiledCaughtParameter3;
-                      L15: {
+                      L14: {
                         var6_ref3 = (Exception) (Object) decompiledCaughtException;
                         ((kl) var18).field_A[var5] = -4;
-                        break L15;
+                        break L14;
                       }
                     } catch (java.lang.Throwable decompiledCaughtParameter4) {
                       decompiledCaughtException = decompiledCaughtParameter4;
-                      L16: {
+                      L15: {
                         var6_ref4 = decompiledCaughtException;
                         ((kl) var18).field_A[var5] = -5;
-                        break L16;
+                        break L15;
                       }
                     }
                     var5++;
@@ -456,7 +440,7 @@ final class qn extends t {
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
               decompiledCaughtException = decompiledCaughtParameter5;
-              L17: {
+              L16: {
                 var4 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_35_0 = (RuntimeException) var4;
                 stackOut_35_1 = new StringBuilder().append("qn.JA(").append(param0).append(44);
@@ -471,7 +455,7 @@ final class qn extends t {
                   stackIn_38_0 = stackOut_37_0;
                   stackIn_38_1 = stackOut_37_1;
                   stackIn_38_2 = stackOut_37_2;
-                  break L17;
+                  break L16;
                 } else {
                   stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
                   stackOut_36_1 = (StringBuilder) (Object) stackIn_36_1;
@@ -479,12 +463,12 @@ final class qn extends t {
                   stackIn_38_0 = stackOut_36_0;
                   stackIn_38_1 = stackOut_36_1;
                   stackIn_38_2 = stackOut_36_2;
-                  break L17;
+                  break L16;
                 }
               }
-              L18: {
+              L17: {
                 stackOut_38_0 = (RuntimeException) (Object) stackIn_38_0;
-                stackOut_38_1 = ((StringBuilder) (Object) stackIn_38_1).append(stackIn_38_2).append(44).append(param2).append(44);
+                stackOut_38_1 = ((StringBuilder) (Object) stackIn_38_1).append(stackIn_38_2).append(44).append(4210752).append(44);
                 stackIn_40_0 = stackOut_38_0;
                 stackIn_40_1 = stackOut_38_1;
                 stackIn_39_0 = stackOut_38_0;
@@ -496,7 +480,7 @@ final class qn extends t {
                   stackIn_41_0 = stackOut_40_0;
                   stackIn_41_1 = stackOut_40_1;
                   stackIn_41_2 = stackOut_40_2;
-                  break L18;
+                  break L17;
                 } else {
                   stackOut_39_0 = (RuntimeException) (Object) stackIn_39_0;
                   stackOut_39_1 = (StringBuilder) (Object) stackIn_39_1;
@@ -504,7 +488,7 @@ final class qn extends t {
                   stackIn_41_0 = stackOut_39_0;
                   stackIn_41_1 = stackOut_39_1;
                   stackIn_41_2 = stackOut_39_2;
-                  break L18;
+                  break L17;
                 }
               }
               throw dh.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + 41);

@@ -175,9 +175,6 @@ final class mq extends je {
         int var5 = 0;
         int var6 = 0;
         int var7 = ArmiesOfGielinor.field_M ? 1 : 0;
-        if (param1 != 23312) {
-            ((mq) this).a(-87, (byte) 117, -22);
-        }
         if (param2 == ((mq) this).field_Pb) {
             ((mq) this).f((byte) -106);
             this.c(0, -123);
@@ -206,9 +203,11 @@ final class mq extends je {
                     }
                     Object var8 = null;
                     it.a(var5, -91, rs.field_t, qd.field_G, param0, (String) null);
-                    jh.a(qd.field_G, dj.field_e, var5, rs.field_t, param1 ^ 4124);
+                    int discarded$0 = 19212;
+                    jh.a(qd.field_G, dj.field_e, var5, rs.field_t);
                     e.a((byte) -126);
-                    wf.g(-20873);
+                    int discarded$1 = -20873;
+                    wf.g();
                 }
             }
         }

@@ -98,7 +98,7 @@ abstract class ok extends tj {
         }
     }
 
-    final static void a(int param0, pq param1, pq param2, byte param3) {
+    final static void a(int param0, pq param1, pq param2) {
         RuntimeException var4 = null;
         long var4_long = 0L;
         int var6 = 0;
@@ -172,14 +172,22 @@ abstract class ok extends tj {
                       var7 = lh.a((int)var10, (byte) -112, (long)var7);
                       var12 = rj.a((long)param1.field_I, (byte) -48, (long)var6) - -rj.a((long)param1.field_t, (byte) -48, (long)var7) >> 16;
                       var14 = rj.a((long)param2.field_I, (byte) -48, (long)var6) + rj.a((long)param2.field_t, (byte) -48, (long)var7) >> 16;
-                      param1.field_I = (int)((long)param1.field_I - od.a((long)var6, var12, false));
-                      param1.field_t = (int)((long)param1.field_t - od.a((long)var7, var12, false));
-                      param2.field_I = (int)((long)param2.field_I - od.a((long)var6, var14, false));
-                      param2.field_t = (int)((long)param2.field_t - od.a((long)var7, var14, false));
-                      param1.field_I = (int)((long)param1.field_I + (od.a((long)(tl.field_K * var6), var14, false) >> 8));
-                      param1.field_t = (int)((long)param1.field_t + (od.a((long)(tl.field_K * var7), var14, false) >> 8));
-                      param2.field_I = (int)((long)param2.field_I + (od.a((long)(tl.field_K * var6), var12, false) >> 8));
-                      param2.field_t = (int)((long)param2.field_t + (od.a((long)(tl.field_K * var7), var12, false) >> 8));
+                      int discarded$9 = 0;
+                      param1.field_I = (int)((long)param1.field_I - od.a((long)var6, var12));
+                      int discarded$10 = 0;
+                      param1.field_t = (int)((long)param1.field_t - od.a((long)var7, var12));
+                      int discarded$11 = 0;
+                      param2.field_I = (int)((long)param2.field_I - od.a((long)var6, var14));
+                      int discarded$12 = 0;
+                      param2.field_t = (int)((long)param2.field_t - od.a((long)var7, var14));
+                      int discarded$13 = 0;
+                      param1.field_I = (int)((long)param1.field_I + (od.a((long)(tl.field_K * var6), var14) >> 8));
+                      int discarded$14 = 0;
+                      param1.field_t = (int)((long)param1.field_t + (od.a((long)(tl.field_K * var7), var14) >> 8));
+                      int discarded$15 = 0;
+                      param2.field_I = (int)((long)param2.field_I + (od.a((long)(tl.field_K * var6), var12) >> 8));
+                      int discarded$16 = 0;
+                      param2.field_t = (int)((long)param2.field_t + (od.a((long)(tl.field_K * var7), var12) >> 8));
                       param1.field_b = ca.field_l * param1.field_b >> 8;
                       param1.field_K = ca.field_l * param1.field_K >> 8;
                       param1.field_n = ca.field_l * param1.field_n >> 8;
@@ -188,7 +196,7 @@ abstract class ok extends tj {
                       param2.field_n = param2.field_n * ca.field_l >> 8;
                       param1.field_v = 1;
                       param2.field_v = 1;
-                      var18 = -53 / ((param3 - 62) / 39);
+                      var18 = -53;
                       var16 = param1.e(-14770) + param2.e(-14770);
                       if (wm.field_ac.length > or.field_l) {
                         wm.field_ac[or.field_l][0] = param1.field_g + param2.field_g >> 1;
@@ -203,9 +211,9 @@ abstract class ok extends tj {
                       if (or.field_l >= wd.field_Qb.length) {
                         break L4;
                       } else {
-                        int fieldTemp$1 = or.field_l;
+                        int fieldTemp$17 = or.field_l;
                         or.field_l = or.field_l + 1;
-                        wd.field_Qb[fieldTemp$1] = (int)(-var16 + var4_long);
+                        wd.field_Qb[fieldTemp$17] = (int)(-var16 + var4_long);
                         break L4;
                       }
                     }
@@ -269,11 +277,11 @@ abstract class ok extends tj {
               break L6;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param3 + 41);
+          throw wm.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + 105 + 41);
         }
     }
 
-    private final void c(ei param0, int param1) {
+    private final void c(ei param0) {
         RuntimeException var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -336,9 +344,7 @@ abstract class ok extends tj {
     }
 
     final static int k(byte param0) {
-        if (param0 != 59) {
-            dd[] discarded$0 = ok.l((byte) -91);
-        }
+        dd[] discarded$0 = ok.l((byte) -91);
         return er.field_R;
     }
 
@@ -346,7 +352,8 @@ abstract class ok extends tj {
         if (!(null == ((ok) this).field_gb)) {
             if (!(((ok) this).field_gb == tm.field_h)) {
                 ((ok) this).b(12 - -((ok) this).field_jb - -((ok) this).field_lb.field_y, 31936, 12 - -((ok) this).field_lb.field_l);
-                this.c(((ok) this).field_lb, -111052767);
+                int discarded$0 = -111052767;
+                this.c(((ok) this).field_lb);
             }
             ((ok) this).field_ib.field_T = 256;
             ((ok) this).field_gb = null;
@@ -392,14 +399,6 @@ abstract class ok extends tj {
             }
           }
         }
-        L1: {
-          if (param0 == -20) {
-            break L1;
-          } else {
-            ((ok) this).field_kb = 54;
-            break L1;
-          }
-        }
         return super.g((byte) -20);
     }
 
@@ -409,7 +408,8 @@ abstract class ok extends tj {
         }
         ((ok) this).field_gb = tm.field_h;
         ((ok) this).field_hb = 0;
-        this.c(((ok) this).field_lb, -111052767);
+        int discarded$0 = -111052767;
+        this.c(((ok) this).field_lb);
         ((ok) this).field_ib.field_T = 0;
         ((ok) this).field_lb = null;
         if (param0 != 50) {
@@ -422,70 +422,41 @@ abstract class ok extends tj {
         return super.a(false);
     }
 
-    final static dd j(byte param0) {
-        int var1 = 0;
-        Object var3 = null;
-        int[] var5 = null;
+    final static dd j() {
+        int[] var15 = null;
+        int[] var8 = null;
         int var5_int = 0;
+        Object var3 = null;
+        byte[] var20 = null;
+        int[] var21 = null;
+        int[] var17 = null;
+        int[] var13 = null;
+        int[] var11 = null;
+        int[] var5 = null;
         int var6 = 0;
-        int var7 = 0;
-        Object var8 = null;
-        int[] var9 = null;
-        int[] var12 = null;
-        int[] var14 = null;
-        int[] var16 = null;
-        int[] var18 = null;
-        byte[] var19 = null;
-        int[] var20 = null;
-        byte[] var21 = null;
-        int[] var22 = null;
-        L0: {
-          var7 = Pool.field_O;
-          if (param0 < -63) {
-            break L0;
-          } else {
-            var8 = null;
-            ok.a(101, (pq) null, (pq) null, (byte) 35);
-            break L0;
-          }
-        }
-        L1: {
-          var1 = pd.field_a[0] * rc.field_f[0];
-          var19 = v.field_b[0];
-          if (gg.field_d[0]) {
-            var21 = wg.field_Sb[0];
-            var22 = new int[var1];
-            var18 = var22;
-            var14 = var18;
-            var12 = var14;
-            var5 = var12;
-            var6 = 0;
-            L2: while (true) {
-              if (var6 >= var1) {
-                var3 = (Object) (Object) new lp(vd.field_c, tq.field_r, el.field_I[0], ih.field_d[0], pd.field_a[0], rc.field_f[0], var22);
-                break L1;
-              } else {
-                var5[var6] = md.a(rb.b(-16777216, var21[var6] << 24), ma.field_h[rb.b(255, (int) var19[var6])]);
-                var6++;
-                continue L2;
-              }
+        int[] var19 = null;
+        int var7 = Pool.field_O;
+        int var1 = pd.field_a[0] * rc.field_f[0];
+        byte[] var18 = v.field_b[0];
+        if (!gg.field_d[0]) {
+            var19 = new int[var1];
+            var15 = var19;
+            var8 = var15;
+            for (var5_int = 0; var1 > var5_int; var5_int++) {
+                var8[var5_int] = ma.field_h[rb.b((int) var18[var5_int], 255)];
             }
-          } else {
-            var20 = new int[var1];
-            var16 = var20;
-            var9 = var16;
-            var5_int = 0;
-            L3: while (true) {
-              if (var1 <= var5_int) {
-                var3 = (Object) (Object) new dd(vd.field_c, tq.field_r, el.field_I[0], ih.field_d[0], pd.field_a[0], rc.field_f[0], var20);
-                break L1;
-              } else {
-                var9[var5_int] = ma.field_h[rb.b((int) var19[var5_int], 255)];
-                var5_int++;
-                continue L3;
-              }
+            var3 = (Object) (Object) new dd(vd.field_c, tq.field_r, el.field_I[0], ih.field_d[0], pd.field_a[0], rc.field_f[0], var19);
+        } else {
+            var20 = wg.field_Sb[0];
+            var21 = new int[var1];
+            var17 = var21;
+            var13 = var17;
+            var11 = var13;
+            var5 = var11;
+            for (var6 = 0; var6 < var1; var6++) {
+                var5[var6] = md.a(rb.b(-16777216, var20[var6] << 24), ma.field_h[rb.b(255, (int) var18[var6])]);
             }
-          }
+            var3 = (Object) (Object) new lp(vd.field_c, tq.field_r, el.field_I[0], ih.field_d[0], pd.field_a[0], rc.field_f[0], var21);
         }
         sh.h(-1);
         return (dd) var3;
@@ -498,13 +469,14 @@ abstract class ok extends tj {
             ((ok) this).field_kb = param3;
             ((ok) this).field_jb = param2;
             ((ok) this).field_nb = param4;
-            this.c(param1, -111052767);
+            int discarded$0 = -111052767;
+            this.c(param1);
         } catch (RuntimeException runtimeException) {
             throw wm.a((Throwable) (Object) runtimeException, "ok.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
-    public static void i(byte param0) {
+    public static void i() {
         field_mb = null;
         field_pb = null;
         field_ob = null;
@@ -534,7 +506,7 @@ abstract class ok extends tj {
         String stackOut_12_2 = null;
         try {
           L0: {
-            if (!super.a(param0, param1, param2, param3)) {
+            if (!super.a(param0, param1, false, param3)) {
               L1: {
                 if (((ok) this).field_ib == null) {
                   break L1;
@@ -569,7 +541,7 @@ abstract class ok extends tj {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var5;
-            stackOut_11_1 = new StringBuilder().append("ok.U(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_11_1 = new StringBuilder().append("ok.U(").append(param0).append(44).append(param1).append(44).append(0).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;

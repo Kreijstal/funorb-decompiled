@@ -240,7 +240,8 @@ final class ia extends rk {
                   mk.field_J.a((li) (Object) param1, false);
                   break L4;
                 } else {
-                  jn.a((li) (Object) param1, (li) (Object) var2, 18724);
+                  int discarded$3 = 18724;
+                  jn.a((li) (Object) param1, (li) (Object) var2);
                   break L4;
                 }
               }
@@ -357,7 +358,7 @@ final class ia extends rk {
             hk.field_q = param0.field_C;
             cg.field_e = param9.field_E;
             ga.field_jb = param9.field_N;
-            nq.a(param2.field_w, param2.field_C, param6, param2.field_u, param2.field_N, (byte[]) null, param2.field_A, param2.field_bb, param2.field_D, param2.field_i, param2.field_X, param2.field_L, param2.field_E, param4, param2.field_T, param8, param7, param2.field_k, param2.field_o, -92, (lg) null, param5, param3, param2.field_a);
+            nq.a(param2.field_w, param2.field_C, 0, param2.field_u, param2.field_N, (byte[]) null, param2.field_A, param2.field_bb, param2.field_D, param2.field_i, param2.field_X, param2.field_L, param2.field_E, param4, param2.field_T, param8, param7, param2.field_k, param2.field_o, -92, (lg) null, param5, 0, param2.field_a);
             param0.field_u = hm.field_C;
             param0.field_X = kc.field_e;
             param0.field_E = da.field_k;
@@ -744,7 +745,7 @@ final class ia extends rk {
           }
           L38: {
             stackOut_90_0 = (RuntimeException) (Object) stackIn_90_0;
-            stackOut_90_1 = ((StringBuilder) (Object) stackIn_90_1).append(stackIn_90_2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44).append(param8).append(44);
+            stackOut_90_1 = ((StringBuilder) (Object) stackIn_90_1).append(stackIn_90_2).append(44).append(0).append(44).append(param4).append(44).append(param5).append(44).append(0).append(44).append(param7).append(44).append(param8).append(44);
             stackIn_92_0 = stackOut_90_0;
             stackIn_92_1 = stackOut_90_1;
             stackIn_91_0 = stackOut_90_0;
@@ -771,7 +772,7 @@ final class ia extends rk {
         }
     }
 
-    public static void j(int param0) {
+    public static void j() {
         field_I = null;
         field_H = null;
         field_E = null;

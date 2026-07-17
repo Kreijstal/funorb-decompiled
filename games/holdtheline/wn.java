@@ -14,7 +14,7 @@ final class wn {
     private int field_c;
     static String field_k;
 
-    private final void a(byte param0) {
+    private final void a() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -167,11 +167,8 @@ final class wn {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_g = null;
-        if (param0 != 28820) {
-            return;
-        }
         field_a = null;
         field_k = null;
         field_f = null;
@@ -246,7 +243,8 @@ final class wn {
             for (var2_int = 0; var2_int < param0.length; var2_int++) {
                 ((wn) this).field_b[var2_int] = param0[var2_int];
             }
-            this.a((byte) 106);
+            int discarded$0 = 106;
+            this.a();
         } catch (RuntimeException runtimeException) {
             throw kk.a((Throwable) (Object) runtimeException, "wn.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }

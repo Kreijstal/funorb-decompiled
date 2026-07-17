@@ -19,7 +19,7 @@ final class gg {
     ul field_d;
     static int field_c;
 
-    final static void a(int param0, boolean param1, boolean param2, boolean param3) {
+    final static void a(int param0, boolean param1, boolean param2) {
         RuntimeException var4 = null;
         cj var5 = null;
         cj var6 = null;
@@ -541,7 +541,7 @@ final class gg {
                   if (jp.field_b.field_T == 0) {
                     break L28;
                   } else {
-                    jk.a(param0, 1);
+                    jk.a(11, 1);
                     break L28;
                   }
                 }
@@ -550,15 +550,17 @@ final class gg {
                     break L29;
                   } else {
                     if (la.field_k) {
-                      ag.a(param0, (byte) 98);
+                      ag.a(11, (byte) 98);
                       break L29;
                     } else {
-                      uo.b(true, param0);
+                      uo.b(true, 11);
                       break L29;
                     }
                   }
                 }
-                ld.a(ej.field_n, true, param0, 1);
+                int discarded$2 = 1;
+                int discarded$3 = 11;
+                ld.a(ej.field_n, true);
                 break L27;
               } else {
                 break L27;
@@ -569,7 +571,7 @@ final class gg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var4, "gg.D(" + param0 + 44 + param1 + 44 + param2 + 44 + 1 + 41);
+          throw fa.a((Throwable) (Object) var4, "gg.D(" + 11 + 44 + param1 + 44 + param2 + 44 + 1 + 41);
         }
     }
 
@@ -589,7 +591,7 @@ final class gg {
         return fa.field_Ib;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_b = null;
         field_m = null;
@@ -638,7 +640,7 @@ final class gg {
             break L1;
           }
         }
-        var2 = 2 / ((param0 - -11) / 49);
+        var2 = 1;
     }
 
     static {

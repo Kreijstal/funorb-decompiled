@@ -39,7 +39,8 @@ final class sf {
         } else {
             ((sf) this).field_w = false;
         }
-        gh var3 = this.b((byte) 65);
+        int discarded$0 = 65;
+        gh var3 = this.b();
         if (var3 != null) {
             if (!(((sf) this).field_j != null)) {
                 ((sf) this).field_j = var3.field_I;
@@ -116,7 +117,7 @@ final class sf {
         return true;
     }
 
-    private final gh b(byte param0) {
+    private final gh b() {
         int var2 = 0;
         int var3 = 0;
         var3 = SteelSentinels.field_G;
@@ -155,7 +156,8 @@ final class sf {
         if (param0 <= 57) {
             field_d = 94;
         }
-        gh var4 = this.b((byte) 65);
+        int discarded$0 = 65;
+        gh var4 = this.b();
         gh var5 = var4;
         if (var5 != null) {
             if (null != ((sf) this).field_j) {
@@ -165,7 +167,7 @@ final class sf {
         ((sf) this).field_j = null;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_f = null;
         field_l = null;
         field_b = null;
@@ -200,9 +202,9 @@ final class sf {
             param1 = param1 & 255;
             param2 = param2 & 255;
             var6_int = param3.field_z;
-            var7 = param4 * var6_int;
-            for (var10 = param4; var10 < param0; var10++) {
-                var8 = (param2 * (param0 + -var10) + (-param4 + var10) * param1) / (-param4 + param0);
+            var7 = 0 * var6_int;
+            for (var10 = 0; var10 < 10; var10++) {
+                var8 = (param2 * (10 + -var10) + var10 * param1) / 10;
                 var8 = var8 * 65793;
                 for (var9 = 0; var6_int > var9; var9++) {
                     if (!(0 == param3.field_E[var7 + var9])) {
@@ -213,7 +215,7 @@ final class sf {
             }
             int var11 = -52 % ((35 - param5) / 37);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "sf.C(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "sf.C(" + 10 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + 0 + 44 + param5 + 41);
         }
     }
 
@@ -233,7 +235,7 @@ final class sf {
         }
     }
 
-    final static dm a(String param0, int param1) {
+    final static dm a(String param0) {
         RuntimeException var2 = null;
         dm stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -375,7 +377,7 @@ final class sf {
                 if (param1 == 23123) {
                   break L2;
                 } else {
-                  boolean discarded$1 = ((sf) this).a(115, -6);
+                  boolean discarded$2 = ((sf) this).a(115, -6);
                   break L2;
                 }
               }
@@ -417,7 +419,8 @@ final class sf {
               }
               L5: {
                 L6: {
-                  var9 = this.b((byte) 65);
+                  int discarded$3 = 65;
+                  var9 = this.b();
                   if (var9 == null) {
                     break L6;
                   } else {

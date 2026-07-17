@@ -6,7 +6,7 @@ final class k {
     static String[] field_a;
     static String field_b;
 
-    final static String a(CharSequence param0, boolean param1) {
+    final static String a(CharSequence param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

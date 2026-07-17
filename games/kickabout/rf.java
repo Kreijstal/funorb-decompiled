@@ -67,7 +67,8 @@ final class rf {
           L0: {
             pv.field_I = new nm[5][17];
             hq.field_b = new nm[5];
-            de.a(param1, param3, (byte) -69);
+            int discarded$2 = -69;
+            de.a(param1, param3);
             var10 = new ef(0);
             var11 = var10;
             L1: while (true) {
@@ -155,9 +156,9 @@ final class rf {
                             var6++;
                             continue L4;
                           } else {
-                            int incrementValue$1 = var7;
+                            int incrementValue$3 = var7;
                             var7++;
-                            pv.field_I[var5][var6] = pv.field_I[incrementValue$1][var6];
+                            pv.field_I[var5][var6] = pv.field_I[incrementValue$3][var6];
                             continue L5;
                           }
                         }
@@ -264,13 +265,17 @@ final class rf {
         nq.field_F.a(2, oe.field_f, (byte) 19, 20);
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
+        int[] var1_array = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
+        int[] var7 = null;
+        int[] var9 = null;
+        int[] var11 = null;
         int[] var13 = null;
         int[] var14 = null;
         int stackIn_6_0 = 0;
@@ -284,6 +289,10 @@ final class rf {
         try {
           L0: {
             var13 = new int[256];
+            var11 = var13;
+            var9 = var11;
+            var7 = var9;
+            var1_array = var7;
             var2 = 0;
             L1: while (true) {
               if (var2 >= var13.length) {
@@ -310,7 +319,8 @@ final class rf {
                           }
                         }
                       } else {
-                        kj.field_b[var3] = eo.a(var13, var3, 210);
+                        int discarded$1 = 210;
+                        kj.field_b[var3] = eo.a(var1_array, var3);
                         var3++;
                         continue L3;
                       }
@@ -383,12 +393,12 @@ final class rf {
         return ~(param0 & -param0) == ~param0;
     }
 
-    final static void a(hr param0, int param1, boolean param2) {
+    final static void a(hr param0) {
         ml var5 = null;
         int var4 = 0;
         try {
             var5 = or.field_d;
-            var5.b(param1, (byte) -75);
+            var5.b(5, (byte) -75);
             var5.field_n = var5.field_n + 1;
             var4 = var5.field_n;
             var5.a(125, 1);
@@ -401,7 +411,7 @@ final class rf {
             int discarded$0 = var5.a(var4, false);
             var5.c(62, var5.field_n + -var4);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "rf.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 1 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "rf.A(" + (param0 != null ? "{...}" : "null") + 44 + 5 + 44 + 1 + 41);
         }
     }
 
@@ -418,7 +428,7 @@ final class rf {
         int var7 = (int)((long)var5 * (long)var3 >> 16);
         int var8 = (int)((long)var6 * (long)var3 >> 16);
         int var9 = (int)((long)var4 * (long)var5 >> 16);
-        int var11 = 94 % ((param1 - -46) / 59);
+        int var11 = 0;
         int var10 = (int)((long)var4 * (long)var6 >> 16);
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }

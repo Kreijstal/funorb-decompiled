@@ -5,21 +5,11 @@ final class hc {
     static int field_b;
     static int field_a;
 
-    final static void a(int param0, int param1) {
-        mi var2 = null;
-        Object var3 = null;
-        var2 = uh.field_Wb;
-        var2.j(param1, 122);
+    final static void a() {
+        mi var2 = uh.field_Wb;
+        var2.j(11, 122);
         var2.f(1, -117);
-        if (param0 >= -25) {
-          var3 = null;
-          hc.a((String) null, -33, true, (java.applet.Applet) null);
-          var2.f(1, -90);
-          return;
-        } else {
-          var2.f(1, -90);
-          return;
-        }
+        var2.f(1, -90);
     }
 
     final static void a(String param0, int param1, boolean param2, java.applet.Applet param3) {
@@ -63,7 +53,8 @@ final class hc {
                 if (!jj.field_v.startsWith("win")) {
                   break L0;
                 } else {
-                  if (!eb.a(param0, true)) {
+                  int discarded$6 = 1;
+                  if (!eb.a(param0)) {
                     break L0;
                   } else {
                     return;

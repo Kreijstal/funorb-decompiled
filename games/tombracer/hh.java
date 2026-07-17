@@ -7,22 +7,14 @@ final class hh {
     static int[] field_c;
 
     final static boolean a(int param0, byte param1, int param2) {
-        if (param1 != 5) {
-            return true;
-        }
         return false;
     }
 
     final static void a(int param0, boolean param1) {
-        if (param0 != 40) {
-            field_a = null;
-            wi.field_s.b(108, param1);
-            return;
-        }
         wi.field_s.b(108, param1);
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         field_b = null;

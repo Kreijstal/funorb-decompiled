@@ -14,7 +14,7 @@ final class og {
     static int field_c;
     static String[] field_h;
 
-    final static void a(byte param0) {
+    final static void a() {
         ph.field_h = null;
         uj.field_b = null;
         ig.field_H = null;

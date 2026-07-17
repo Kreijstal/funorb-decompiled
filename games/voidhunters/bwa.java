@@ -72,7 +72,7 @@ final class bwa extends llb {
         return true;
     }
 
-    private final int a(llb param0, int param1, int param2, llb param3, int param4) {
+    private final int a(llb param0, int param1, int param2, llb param3) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int stackIn_1_0 = 0;
@@ -369,7 +369,7 @@ final class bwa extends llb {
                   if (param11 == null) {
                     break L6;
                   } else {
-                    StringBuilder discarded$1 = ((bwa) this).field_Fb.append(param11);
+                    StringBuilder discarded$19 = ((bwa) this).field_Fb.append(param11);
                     break L6;
                   }
                 }
@@ -417,12 +417,18 @@ final class bwa extends llb {
                       var18 = 0;
                       var18 = 0;
                       var18 = this.a(6300, var28[0], gca.field_p, var16, var18, param6);
-                      var18 = this.a(var28[0], var18, var16, ((bwa) this).field_Db[6], 28488);
-                      var18 = this.a(var28[0], var18, var16, ((bwa) this).field_Db[9], 28488);
-                      var18 = this.a(var28[0], var18, var16, ((bwa) this).field_Db[5], 28488);
-                      var18 = this.a(var28[0], var18, var16, ((bwa) this).field_Db[7], 28488);
-                      var18 = this.a(var28[0], var18, var16, ((bwa) this).field_Db[15], 28488);
-                      var18 = this.a(var28[0], var18, var16, ((bwa) this).field_Db[4], 28488);
+                      int discarded$20 = 28488;
+                      var18 = this.a(var28[0], var18, var16, ((bwa) this).field_Db[6]);
+                      int discarded$21 = 28488;
+                      var18 = this.a(var28[0], var18, var16, ((bwa) this).field_Db[9]);
+                      int discarded$22 = 28488;
+                      var18 = this.a(var28[0], var18, var16, ((bwa) this).field_Db[5]);
+                      int discarded$23 = 28488;
+                      var18 = this.a(var28[0], var18, var16, ((bwa) this).field_Db[7]);
+                      int discarded$24 = 28488;
+                      var18 = this.a(var28[0], var18, var16, ((bwa) this).field_Db[15]);
+                      int discarded$25 = 28488;
+                      var18 = this.a(var28[0], var18, var16, ((bwa) this).field_Db[4]);
                       if (var18 <= var17) {
                         break L12;
                       } else {
@@ -433,11 +439,16 @@ final class bwa extends llb {
                     L13: {
                       var18 = 0;
                       var18 = this.a(6300, var28[1], oqb.field_n, var16, var18, param6);
-                      var18 = this.a(var28[1], var18, var16, ((bwa) this).field_Db[16], 28488);
-                      var18 = this.a(var28[1], var18, var16, ((bwa) this).field_Db[17], 28488);
-                      var18 = this.a(var28[1], var18, var16, ((bwa) this).field_Db[18], 28488);
-                      var18 = this.a(var28[1], var18, var16, ((bwa) this).field_Db[19], 28488);
-                      var18 = this.a(var28[1], var18, var16, ((bwa) this).field_Db[20], 28488);
+                      int discarded$26 = 28488;
+                      var18 = this.a(var28[1], var18, var16, ((bwa) this).field_Db[16]);
+                      int discarded$27 = 28488;
+                      var18 = this.a(var28[1], var18, var16, ((bwa) this).field_Db[17]);
+                      int discarded$28 = 28488;
+                      var18 = this.a(var28[1], var18, var16, ((bwa) this).field_Db[18]);
+                      int discarded$29 = 28488;
+                      var18 = this.a(var28[1], var18, var16, ((bwa) this).field_Db[19]);
+                      int discarded$30 = 28488;
+                      var18 = this.a(var28[1], var18, var16, ((bwa) this).field_Db[20]);
                       if (var18 <= var17) {
                         break L13;
                       } else {
@@ -448,9 +459,12 @@ final class bwa extends llb {
                     L14: {
                       var18 = 0;
                       var18 = this.a(6300, var28[2], jrb.field_p, var16, var18, param6);
-                      var18 = this.a(var28[2], var18, var16, ((bwa) this).field_Db[13], 28488);
-                      var18 = this.a(var28[2], var18, var16, ((bwa) this).field_Db[21], 28488);
-                      var18 = this.a(var28[2], var18, var16, ((bwa) this).field_Db[11], 28488);
+                      int discarded$31 = 28488;
+                      var18 = this.a(var28[2], var18, var16, ((bwa) this).field_Db[13]);
+                      int discarded$32 = 28488;
+                      var18 = this.a(var28[2], var18, var16, ((bwa) this).field_Db[21]);
+                      int discarded$33 = 28488;
+                      var18 = this.a(var28[2], var18, var16, ((bwa) this).field_Db[11]);
                       if (var18 <= var17) {
                         break L14;
                       } else {
@@ -505,11 +519,13 @@ final class bwa extends llb {
                     var28[2].a(39 + 2 * var16, -128, var16, var21, var17);
                     var22 = var21;
                     ((bwa) this).field_Ab.a(0, -94, var19 + 26, 24, 10 + var17 + var22);
-                    ((bwa) this).field_Ab.field_gb = uwa.a(11579568, ((bwa) this).field_Ab.field_G, 2105376, 8421504, 104, 3);
+                    int discarded$34 = 3;
+                    ((bwa) this).field_Ab.field_gb = uwa.a(11579568, ((bwa) this).field_Ab.field_G, 2105376, 8421504, 104);
                     var23 = 26 + var19;
                     var24 = 10 + (24 + (var22 + var17));
                     var25 = jv.a((byte) -109, param0, param2, var23);
-                    var26 = lma.a(param3, param1, var24, (byte) -16);
+                    int discarded$35 = -16;
+                    var26 = lma.a(param3, param1, var24);
                     ((bwa) this).a(var25, 0, var23, var26, var24);
                     break L0;
                   } else {
@@ -575,11 +591,13 @@ final class bwa extends llb {
             ((bwa) this).field_Bb.a(13, -65, var15_int, var16, nna.field_w * var17);
             var16 = var16 + var17 * nna.field_w;
             ((bwa) this).field_Ab.a(0, 116, 13 + var15_int + 13, 24, var16 + 10);
-            ((bwa) this).field_Ab.field_gb = uwa.a(11579568, ((bwa) this).field_Ab.field_G, 2105376, 8421504, 117, 3);
+            int discarded$36 = 3;
+            ((bwa) this).field_Ab.field_gb = uwa.a(11579568, ((bwa) this).field_Ab.field_G, 2105376, 8421504, 117);
             var18 = 13 + (var15_int + 13);
             var19 = 34 - -var16;
             var20 = jv.a((byte) -109, param0, param2, var18);
-            var21 = lma.a(param3, param1, var19, (byte) -16);
+            int discarded$37 = -16;
+            var21 = lma.a(param3, param1, var19);
             ((bwa) this).a(var20, -77, var18, var21, var19);
             break L0;
           }
@@ -587,10 +605,7 @@ final class bwa extends llb {
     }
 
     final static boolean a(int param0, byte param1, int param2) {
-        if (param1 <= 118) {
-            return true;
-        }
-        return (32 & param0) != 0 ? true : false;
+        return (32 & param0) != 0;
     }
 
     private final int a(int param0, llb param1, String param2, int param3, int param4, llb param5) {

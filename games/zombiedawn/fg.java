@@ -64,7 +64,8 @@ final class fg extends al {
         L0: {
           var22 = ZombieDawn.field_J;
           super.a((byte) -75);
-          li.a(false);
+          int discarded$6 = 0;
+          li.a();
           var2 = 3 + bj.field_q.field_x + bj.field_q.field_I;
           var3 = 600;
           var6 = vh.field_b + 200;
@@ -96,7 +97,7 @@ final class fg extends al {
             break L2;
           } else {
             var23 = null;
-            String discarded$3 = fg.a((String) null, 98, (String) null, (String) null);
+            String discarded$7 = fg.a((String) null, 98, (String) null, (String) null);
             break L2;
           }
         }
@@ -356,7 +357,7 @@ final class fg extends al {
               }
             }
             sg.field_jb.c(gj.field_k[0][1], var10, var5 + (var9 + 75), 0, 0);
-            int discarded$4 = bj.field_q.a(gj.field_g[0][1], var10, var5 + var9 - -95, var3, 440, 16777215, 0, 0, 0, var2);
+            int discarded$8 = bj.field_q.a(gj.field_g[0][1], var10, var5 + var9 - -95, var3, 440, 16777215, 0, 0, 0, var2);
             if (var7 != 0) {
               break L3;
             } else {
@@ -366,7 +367,8 @@ final class fg extends al {
             }
           }
         }
-        bj.field_q.b(uk.a(1 + ((fg) this).field_n, (byte) 58, 1 + this.a(true)), 634 + vh.field_b, id.field_M + 410, 16777215, 0);
+        int discarded$9 = 1;
+        bj.field_q.b(uk.a(1 + ((fg) this).field_n, (byte) 58, 1 + this.a()), 634 + vh.field_b, id.field_M + 410, 16777215, 0);
     }
 
     final int a(boolean param0, int param1) {
@@ -381,7 +383,7 @@ final class fg extends al {
         ((fg) this).field_n = 0;
     }
 
-    final static vn d(int param0) {
+    final static vn d() {
         int[] var20 = null;
         int[] var16 = null;
         int[] var13 = null;
@@ -444,7 +446,8 @@ final class fg extends al {
           }
           L1: {
             var2 = stackIn_5_0;
-            if (((fg) this).field_n != this.a(true)) {
+            int discarded$2 = 1;
+            if (((fg) this).field_n != this.a()) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L1;
@@ -609,7 +612,7 @@ final class fg extends al {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_m = null;
     }
 
@@ -635,7 +638,8 @@ final class fg extends al {
                 if (2 != param0) {
                   break L3;
                 } else {
-                  if (((fg) this).field_n == this.a(true)) {
+                  int discarded$2 = 1;
+                  if (((fg) this).field_n == this.a()) {
                     break L1;
                   } else {
                     break L3;
@@ -656,7 +660,7 @@ final class fg extends al {
         }
     }
 
-    final static jc a(int param0, int param1, int param2, int param3, int param4) {
+    final static jc a(int param0, int param1, int param2, int param3) {
         int var6 = ZombieDawn.field_J;
         jc var5 = (jc) (Object) on.field_g.b((byte) 26);
         while (var5 != null) {
@@ -668,12 +672,9 @@ final class fg extends al {
         var5 = new jc();
         var5.field_s = param3;
         var5.field_o = 1;
-        var5.field_u = param1;
-        if (param2 != 1) {
-            return null;
-        }
+        var5.field_u = 10;
         on.field_g.a(0, (le) (Object) var5);
-        pm.a(0, param0, var5);
+        pm.a(0, 3, var5);
         return var5;
     }
 
@@ -693,7 +694,7 @@ final class fg extends al {
         }
     }
 
-    private final int a(boolean param0) {
+    private final int a() {
         return be.field_j <= 0 ? 7 : gj.field_g.length + -1;
     }
 
@@ -705,7 +706,8 @@ final class fg extends al {
         }
         ((fg) this).field_n = ((fg) this).field_n + 1;
         if (!param0) {
-            if (!(((fg) this).field_n != this.a(true))) {
+            int discarded$0 = 1;
+            if (!(((fg) this).field_n != this.a())) {
                 var3 = kg.field_i;
                 kg.field_i = 96;
                 ((fg) this).field_b.a(1, -1);

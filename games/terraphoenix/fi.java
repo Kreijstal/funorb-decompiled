@@ -105,7 +105,7 @@ final class fi extends di {
         return stackIn_10_0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_p = null;
         field_m = null;
         field_n = null;

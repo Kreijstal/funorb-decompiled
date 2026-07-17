@@ -85,7 +85,7 @@ final class uma extends sh {
               }
             }
             var6_int = 0;
-            var7 = param2;
+            var7 = 0;
             L2: while (true) {
               if (param3.field_p <= var7) {
                 break L0;
@@ -119,7 +119,7 @@ final class uma extends sh {
           L5: {
             var6 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var6;
-            stackOut_12_1 = new StringBuilder().append("uma.N(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_12_1 = new StringBuilder().append("uma.N(").append(param0).append(44).append(param1).append(44).append(0).append(44);
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -198,7 +198,7 @@ final class uma extends sh {
         return stackIn_3_0;
     }
 
-    final static void n(int param0) {
+    final static void n() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -296,13 +296,10 @@ final class uma extends sh {
     }
 
     private final void a(byte param0, wj param1, String param2, int param3, int param4) {
-        if (param0 != -68) {
-            return;
-        }
         try {
             oc.field_l.a(param2, param4 - -param1.field_s - -(param1.field_p >> 1), -5 + param1.field_v + param3, 16777215, -1);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "uma.Q(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "uma.Q(" + -68 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -329,7 +326,7 @@ final class uma extends sh {
         }
     }
 
-    public static void m(int param0) {
+    public static void m() {
         field_O = null;
         field_P = null;
         field_J = null;

@@ -12,7 +12,7 @@ final class tp {
     static String field_f;
     static String field_d;
 
-    public static void a(int param0) {
+    public static void a() {
         field_g = null;
         field_d = null;
         field_h = null;
@@ -34,14 +34,10 @@ final class tp {
             var4 = (bj) (Object) tm.field_i.c((byte) 73);
             L1: while (true) {
               if (var4 == null) {
-                if (param0) {
-                  break L0;
-                } else {
-                  field_f = null;
-                  return;
-                }
+                break L0;
               } else {
-                un.a(2, var4, (byte) -51);
+                int discarded$2 = -51;
+                un.a(2, var4);
                 var4 = (bj) (Object) tm.field_i.f((byte) -5);
                 continue L1;
               }
@@ -50,7 +46,7 @@ final class tp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) var2, "tp.A(" + param0 + 44 + 2 + 41);
+          throw wm.a((Throwable) (Object) var2, "tp.A(" + 1 + 44 + 2 + 41);
         }
     }
 

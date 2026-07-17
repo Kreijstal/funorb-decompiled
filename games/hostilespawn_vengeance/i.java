@@ -12,7 +12,7 @@ final class i {
     static char[] field_g;
     static boolean field_d;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
         field_g = null;
@@ -87,148 +87,144 @@ final class i {
               L0: {
                 var18 = (Object) (Object) new ng();
                 ((ng) var18).field_t = param1.l(32270);
-                if (param0 == 29821) {
-                  ((ng) var18).field_h = param1.d(param0 + -21626);
-                  ((ng) var18).field_n = new int[((ng) var18).field_t];
-                  ((ng) var18).field_q = new int[((ng) var18).field_t];
-                  ((ng) var18).field_m = new int[((ng) var18).field_t];
-                  ((ng) var18).field_o = new byte[((ng) var18).field_t][][];
-                  ((ng) var18).field_j = new kk[((ng) var18).field_t];
-                  ((ng) var18).field_r = new kk[((ng) var18).field_t];
-                  var5 = 0;
-                  L1: while (true) {
-                    if (var5 >= ((ng) var18).field_t) {
-                      td.field_o.a((am) var18, 92);
-                      break L0;
-                    } else {
-                      try {
-                        L2: {
-                          L3: {
-                            L4: {
-                              var6_int = param1.l(param0 ^ 2675);
-                              if (var6_int == 0) {
+                ((ng) var18).field_h = param1.d(8195);
+                ((ng) var18).field_n = new int[((ng) var18).field_t];
+                ((ng) var18).field_q = new int[((ng) var18).field_t];
+                ((ng) var18).field_m = new int[((ng) var18).field_t];
+                ((ng) var18).field_o = new byte[((ng) var18).field_t][][];
+                ((ng) var18).field_j = new kk[((ng) var18).field_t];
+                ((ng) var18).field_r = new kk[((ng) var18).field_t];
+                var5 = 0;
+                L1: while (true) {
+                  if (var5 >= ((ng) var18).field_t) {
+                    td.field_o.a((am) var18, 92);
+                    break L0;
+                  } else {
+                    try {
+                      L2: {
+                        L3: {
+                          L4: {
+                            var6_int = param1.l(32270);
+                            if (var6_int == 0) {
+                              break L4;
+                            } else {
+                              if (var6_int == 1) {
                                 break L4;
                               } else {
-                                if (var6_int == 1) {
-                                  break L4;
-                                } else {
-                                  if (var6_int != 2) {
-                                    L5: {
-                                      if (var6_int == 3) {
+                                if (var6_int != 2) {
+                                  L5: {
+                                    if (var6_int == 3) {
+                                      break L5;
+                                    } else {
+                                      if (4 == var6_int) {
                                         break L5;
                                       } else {
-                                        if (4 == var6_int) {
-                                          break L5;
-                                        } else {
-                                          break L3;
-                                        }
+                                        break L3;
                                       }
                                     }
-                                    var20 = param1.o(32);
-                                    var21 = param1.o(32);
-                                    var9 = param1.l(param0 ^ 2675);
-                                    var10 = new String[var9];
-                                    var11_int = 0;
-                                    L6: while (true) {
-                                      if (var11_int >= var9) {
-                                        L7: {
-                                          var24 = new byte[var9][];
-                                          var23 = var24;
-                                          var22 = var23;
-                                          var19 = var22;
-                                          var11 = var19;
-                                          if (var6_int != 3) {
-                                            break L7;
-                                          } else {
-                                            var12_int = 0;
-                                            L8: while (true) {
-                                              if (~var9 >= ~var12_int) {
-                                                break L7;
-                                              } else {
-                                                var13 = param1.d(8195);
-                                                var11[var12_int] = new byte[var13];
-                                                param1.a(var13, 0, var24[var12_int], -18181);
-                                                var12_int++;
-                                                continue L8;
-                                              }
+                                  }
+                                  var20 = param1.o(32);
+                                  var21 = param1.o(32);
+                                  var9 = param1.l(32270);
+                                  var10 = new String[var9];
+                                  var11_int = 0;
+                                  L6: while (true) {
+                                    if (var11_int >= var9) {
+                                      L7: {
+                                        var24 = new byte[var9][];
+                                        var23 = var24;
+                                        var22 = var23;
+                                        var19 = var22;
+                                        var11 = var19;
+                                        if (var6_int != 3) {
+                                          break L7;
+                                        } else {
+                                          var12_int = 0;
+                                          L8: while (true) {
+                                            if (~var9 >= ~var12_int) {
+                                              break L7;
+                                            } else {
+                                              var13 = param1.d(8195);
+                                              var11[var12_int] = new byte[var13];
+                                              param1.a(var13, 0, var24[var12_int], -18181);
+                                              var12_int++;
+                                              continue L8;
                                             }
                                           }
                                         }
-                                        ((ng) var18).field_q[var5] = var6_int;
-                                        var12 = new Class[var9];
-                                        var17 = 0;
-                                        var13 = var17;
-                                        L9: while (true) {
-                                          if (var9 <= var17) {
-                                            ((ng) var18).field_j[var5] = param2.a(var12, ue.a(0, var20), var21, 115);
-                                            ((ng) var18).field_o[var5] = var24;
-                                            break L3;
-                                          } else {
-                                            var12[var17] = ue.a(0, var10[var17]);
-                                            var17++;
-                                            continue L9;
-                                          }
-                                        }
-                                      } else {
-                                        var10[var11_int] = param1.o(32);
-                                        var11_int++;
-                                        continue L6;
                                       }
+                                      ((ng) var18).field_q[var5] = var6_int;
+                                      var12 = new Class[var9];
+                                      var17 = 0;
+                                      var13 = var17;
+                                      L9: while (true) {
+                                        if (var9 <= var17) {
+                                          ((ng) var18).field_j[var5] = param2.a(var12, ue.a(0, var20), var21, 115);
+                                          ((ng) var18).field_o[var5] = var24;
+                                          break L3;
+                                        } else {
+                                          var12[var17] = ue.a(0, var10[var17]);
+                                          var17++;
+                                          continue L9;
+                                        }
+                                      }
+                                    } else {
+                                      var10[var11_int] = param1.o(32);
+                                      var11_int++;
+                                      continue L6;
                                     }
-                                  } else {
-                                    break L4;
                                   }
+                                } else {
+                                  break L4;
                                 }
                               }
                             }
-                            L10: {
-                              var15 = param1.o(32);
-                              var7 = var15;
-                              var16 = param1.o(param0 + -29789);
-                              var8 = var16;
-                              var9 = 0;
-                              if (var6_int == 1) {
-                                var9 = param1.d(8195);
-                                break L10;
-                              } else {
-                                break L10;
-                              }
-                            }
-                            ((ng) var18).field_q[var5] = var6_int;
-                            ((ng) var18).field_n[var5] = var9;
-                            ((ng) var18).field_r[var5] = param2.a((byte) 104, ue.a(0, var15), var16);
-                            break L3;
                           }
-                          break L2;
+                          L10: {
+                            var15 = param1.o(32);
+                            var7 = var15;
+                            var16 = param1.o(32);
+                            var8 = var16;
+                            var9 = 0;
+                            if (var6_int == 1) {
+                              var9 = param1.d(8195);
+                              break L10;
+                            } else {
+                              break L10;
+                            }
+                          }
+                          ((ng) var18).field_q[var5] = var6_int;
+                          ((ng) var18).field_n[var5] = var9;
+                          ((ng) var18).field_r[var5] = param2.a((byte) 104, ue.a(0, var15), var16);
+                          break L3;
                         }
-                      } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
-                        decompiledCaughtException = decompiledCaughtParameter0;
-                        L11: {
-                          var6 = (ClassNotFoundException) (Object) decompiledCaughtException;
-                          ((ng) var18).field_m[var5] = -1;
-                          break L11;
-                        }
-                      } catch (java.lang.Exception decompiledCaughtParameter3) {
-                        decompiledCaughtException = decompiledCaughtParameter3;
-                        L14: {
-                          var6_ref3 = (Exception) (Object) decompiledCaughtException;
-                          ((ng) var18).field_m[var5] = -4;
-                          break L14;
-                        }
-                      } catch (java.lang.Throwable decompiledCaughtParameter4) {
-                        decompiledCaughtException = decompiledCaughtParameter4;
-                        L15: {
-                          var6_ref4 = decompiledCaughtException;
-                          ((ng) var18).field_m[var5] = -5;
-                          break L15;
-                        }
+                        break L2;
                       }
-                      var5++;
-                      continue L1;
+                    } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L11: {
+                        var6 = (ClassNotFoundException) (Object) decompiledCaughtException;
+                        ((ng) var18).field_m[var5] = -1;
+                        break L11;
+                      }
+                    } catch (java.lang.Exception decompiledCaughtParameter3) {
+                      decompiledCaughtException = decompiledCaughtParameter3;
+                      L14: {
+                        var6_ref3 = (Exception) (Object) decompiledCaughtException;
+                        ((ng) var18).field_m[var5] = -4;
+                        break L14;
+                      }
+                    } catch (java.lang.Throwable decompiledCaughtParameter4) {
+                      decompiledCaughtException = decompiledCaughtParameter4;
+                      L15: {
+                        var6_ref4 = decompiledCaughtException;
+                        ((ng) var18).field_m[var5] = -5;
+                        break L15;
+                      }
                     }
+                    var5++;
+                    continue L1;
                   }
-                } else {
-                  return;
                 }
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
@@ -236,7 +232,7 @@ final class i {
               L16: {
                 var4 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_36_0 = (RuntimeException) var4;
-                stackOut_36_1 = new StringBuilder().append("i.A(").append(param0).append(44);
+                stackOut_36_1 = new StringBuilder().append("i.A(").append(29821).append(44);
                 stackIn_38_0 = stackOut_36_0;
                 stackIn_38_1 = stackOut_36_1;
                 stackIn_37_0 = stackOut_36_0;

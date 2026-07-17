@@ -8,7 +8,7 @@ final class ln extends jh {
     static int field_D;
     static int field_G;
 
-    final static void a(int param0, int param1, uf[] param2, byte param3) {
+    final static void a(int param0, int param1, uf[] param2) {
         uf var4 = null;
         try {
             var4 = param2[param2.length + -1];
@@ -71,7 +71,7 @@ final class ln extends jh {
         return param2 < param1 ? param1 : param0 < param2 ? param0 : param2;
     }
 
-    public static void h(byte param0) {
+    public static void h() {
         field_H = null;
     }
 
@@ -129,8 +129,9 @@ final class ln extends jh {
     }
 
     final static void a(byte param0, int param1) {
-        int var2 = -73 % ((33 - param0) / 38);
-        oe.a(true, param1, false);
+        int var2 = -1;
+        int discarded$0 = 0;
+        oe.a(true, param1);
     }
 
     final gm a(boolean param0) {

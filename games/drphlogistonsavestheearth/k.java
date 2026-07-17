@@ -9,7 +9,7 @@ final class k extends si {
     private vd field_K;
     static int[] field_I;
 
-    public static void g(byte param0) {
+    public static void g() {
         field_M = null;
         field_J = null;
         field_H = null;
@@ -17,16 +17,10 @@ final class k extends si {
     }
 
     final static int b(int param0, int param1) {
-        if (param0 != 0) {
-            return 45;
-        }
         return uc.field_b[param1 & 2047];
     }
 
     final static void a(int param0, int param1) {
-        if (param0 != 0) {
-            return;
-        }
         ma.field_vb = 1000000000L / (long)param1;
     }
 

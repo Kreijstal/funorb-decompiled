@@ -296,7 +296,8 @@ final class ul {
         ((ul) this).field_a.a(8310, ((ul) this).field_s, ((ul) this).field_c);
         int var2 = -25 % ((50 - param0) / 48);
         aj.field_A = false;
-        cq var3 = pb.a(((ul) this).field_s, 8089, 0, ((ul) this).field_c, lt.field_m, 0);
+        int discarded$0 = 0;
+        cq var3 = pb.a(((ul) this).field_s, 8089, 0, ((ul) this).field_c, lt.field_m);
         if (!(var3 != null)) {
             ((ul) this).e(2);
         }

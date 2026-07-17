@@ -46,9 +46,11 @@ final class wea implements dv {
 
     final static void a(int param0, int param1, sq param2, boolean param3, java.awt.Component param4, fia param5) {
         try {
-            nba.a(param5, param2, param1, param0, param0, param4, -45, param3);
+            int discarded$0 = 1;
+            int discarded$1 = -45;
+            nba.a(param5, param2, 1024, 22050, 22050, param4);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "wea.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "wea.D(" + 22050 + 44 + 1024 + 44 + (param2 != null ? "{...}" : "null") + 44 + 1 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -82,7 +84,8 @@ final class wea implements dv {
                 break L1;
               }
             }
-            stackOut_2_0 = tp.a(((wea) this).field_e[param1], ((wea) this).field_b[param1], param3, param2, (byte) -125);
+            int discarded$2 = -125;
+            stackOut_2_0 = tp.a(((wea) this).field_e[param1], ((wea) this).field_b[param1], param3, param2);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

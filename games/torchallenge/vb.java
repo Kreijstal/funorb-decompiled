@@ -32,38 +32,30 @@ abstract class vb {
 
     abstract void c(int param0);
 
-    final static String a(boolean param0, boolean param1, boolean param2, boolean param3) {
+    final static String a(boolean param0, boolean param1, boolean param2) {
         int var4 = 0;
         var4 = 0;
-        if (!param2) {
+        if (param2) {
           L0: {
-            if (param1) {
-              var4 += 2;
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          if (param0) {
-            return null;
-          } else {
-            return rc.field_s[var4];
-          }
-        } else {
-          L1: {
             var4 += 4;
             if (param1) {
               var4 += 2;
+              break L0;
+            } else {
+              break L0;
+            }
+          }
+          return null;
+        } else {
+          L1: {
+            if (param1) {
+              var4 += 2;
               break L1;
             } else {
               break L1;
             }
           }
-          if (param0) {
-            return null;
-          } else {
-            return rc.field_s[var4];
-          }
+          return null;
         }
     }
 
@@ -239,22 +231,13 @@ abstract class vb {
     final static String a(int param0, byte param1, int param2) {
         String var3 = null;
         String[] var4 = null;
-        L0: {
-          if (null != aa.field_h[param0][param2]) {
-            var3 = aa.field_h[param0][param2];
-            break L0;
-          } else {
+        if (null == aa.field_h[param0][param2]) {
             var4 = new String[]{wj.field_d, Integer.toString(param2)};
             var3 = qa.a(122, (CharSequence[]) (Object) var4);
-            break L0;
-          }
-        }
-        if (param1 != 109) {
-          field_a = null;
-          return var3;
         } else {
-          return var3;
+            var3 = aa.field_h[param0][param2];
         }
+        return var3;
     }
 
     abstract boolean b(int param0);

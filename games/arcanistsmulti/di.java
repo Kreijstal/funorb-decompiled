@@ -81,7 +81,7 @@ final class di {
         return ((di) this).c(-107);
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_n = null;
         field_c = null;
         field_l = null;

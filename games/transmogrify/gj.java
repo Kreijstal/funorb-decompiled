@@ -226,7 +226,7 @@ final class gj implements Runnable {
         }
     }
 
-    final static int a(byte param0, String param1, boolean param2) {
+    final static int a(byte param0, String param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var5 = 0;
@@ -263,7 +263,7 @@ final class gj implements Runnable {
           L0: {
             var3_int = 0;
             var15 = param1.toCharArray();
-            var5 = -108 % ((param0 - 46) / 49);
+            var5 = 0;
             var6 = 0;
             L1: while (true) {
               if (var6 >= param1.length()) {
@@ -340,7 +340,7 @@ final class gj implements Runnable {
           L8: {
             var3 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var3;
-            stackOut_24_1 = new StringBuilder().append("gj.B(").append(param0).append(44);
+            stackOut_24_1 = new StringBuilder().append("gj.B(").append(-39).append(44);
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
@@ -446,17 +446,14 @@ final class gj implements Runnable {
         }
     }
 
-    final static void a(byte param0, cf param1, int param2) {
+    final static void a(byte param0, cf param1) {
         hj var3 = ff.field_D;
-        var3.a(false, param2);
-        var3.f(param0 + 6306, param1.field_g);
-        if (param0 != 83) {
-            return;
-        }
+        var3.a(false, 2);
+        var3.f(6389, param1.field_g);
         try {
             var3.c(param1.field_h, -159688920);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "gj.N(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "gj.N(" + 83 + 44 + (param1 != null ? "{...}" : "null") + 44 + 2 + 41);
         }
     }
 
@@ -500,7 +497,7 @@ final class gj implements Runnable {
         var5 = Transmogrify.field_A ? 1 : 0;
         try {
           var2_int = param1.length();
-          if (var2_int == param0) {
+          if (var2_int == 0) {
             stackOut_3_0 = ai.field_a;
             stackIn_4_0 = stackOut_3_0;
             return stackIn_4_0;
@@ -553,7 +550,7 @@ final class gj implements Runnable {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_23_0 = (RuntimeException) var2;
-            stackOut_23_1 = new StringBuilder().append("gj.I(").append(param0).append(44);
+            stackOut_23_1 = new StringBuilder().append("gj.I(").append(0).append(44);
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -580,7 +577,7 @@ final class gj implements Runnable {
         }
     }
 
-    final static void e(int param0) {
+    final static void e() {
         ha.field_a = null;
         hk.field_c = null;
     }
@@ -756,7 +753,7 @@ final class gj implements Runnable {
         return ((gj) this).field_d.read();
     }
 
-    final static String a(int param0) {
+    final static String a() {
         if (w.field_a == null) {
             return "";
         }
@@ -774,30 +771,30 @@ final class gj implements Runnable {
         int var7 = 0;
         int stackIn_3_0 = 0;
         int stackIn_12_0 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_23_0 = 0;
-        int stackIn_26_0 = 0;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
+        int stackIn_19_0 = 0;
+        int stackIn_24_0 = 0;
+        int stackIn_27_0 = 0;
         RuntimeException stackIn_36_0 = null;
         StringBuilder stackIn_36_1 = null;
         RuntimeException stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
-        String stackIn_37_2 = null;
+        RuntimeException stackIn_38_0 = null;
+        StringBuilder stackIn_38_1 = null;
+        String stackIn_38_2 = null;
         RuntimeException decompiledCaughtException = null;
         int stackOut_11_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_25_0 = 0;
+        int stackOut_18_0 = 0;
+        int stackOut_23_0 = 0;
+        int stackOut_26_0 = 0;
         int stackOut_2_0 = 0;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
+        RuntimeException stackOut_35_0 = null;
+        StringBuilder stackOut_35_1 = null;
+        RuntimeException stackOut_37_0 = null;
+        StringBuilder stackOut_37_1 = null;
+        String stackOut_37_2 = null;
         RuntimeException stackOut_36_0 = null;
         StringBuilder stackOut_36_1 = null;
         String stackOut_36_2 = null;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        String stackOut_35_2 = null;
         var7 = Transmogrify.field_A ? 1 : 0;
         try {
           if (ll.field_Q == lj.field_z) {
@@ -840,55 +837,63 @@ final class gj implements Runnable {
                 }
               }
             }
-            L2: while (true) {
-              L3: {
+            L2: {
+              if (param1 > 83) {
+                break L2;
+              } else {
+                field_f = null;
+                break L2;
+              }
+            }
+            L3: while (true) {
+              L4: {
                 if (0 > md.field_k) {
                   nf.field_l.field_h = 0;
                   if (ue.a(1, 0)) {
                     md.field_k = nf.field_l.l(-12135);
                     nf.field_l.field_h = 0;
                     tg.field_a = param0[md.field_k];
-                    break L3;
+                    break L4;
                   } else {
-                    stackOut_17_0 = 0;
-                    stackIn_18_0 = stackOut_17_0;
-                    return stackIn_18_0 != 0;
+                    stackOut_18_0 = 0;
+                    stackIn_19_0 = stackOut_18_0;
+                    return stackIn_19_0 != 0;
                   }
                 } else {
-                  break L3;
+                  break L4;
                 }
               }
               if (!ce.a(0)) {
-                stackOut_22_0 = 0;
-                stackIn_23_0 = stackOut_22_0;
-                return stackIn_23_0 != 0;
+                stackOut_23_0 = 0;
+                stackIn_24_0 = stackOut_23_0;
+                return stackIn_24_0 != 0;
               } else {
                 if (aa.field_a != 0) {
-                  L4: {
+                  L5: {
                     var4 = aa.field_a;
                     if (lj.field_x == 0.0) {
-                      break L4;
+                      break L5;
                     } else {
                       var4 = (int)((double)var4 + d.field_c.nextGaussian() * lj.field_x);
                       if (0 <= var4) {
-                        break L4;
+                        break L5;
                       } else {
                         var4 = 0;
-                        break L4;
+                        break L5;
                       }
                     }
                   }
                   var5 = new b((long)var4 + var2_long, md.field_k, new byte[tg.field_a]);
                   var6 = 0;
-                  L5: while (true) {
+                  L6: while (true) {
                     if (tg.field_a <= var6) {
                       le.field_C.a((wf) (Object) var5, -100);
                       md.field_k = -1;
-                      continue L2;
+                      continue L3;
                     } else {
                       var5.field_h[var6] = nf.field_l.field_g[var6];
                       var6++;
-                      continue L5;
+                      continue L6;
                     }
                   }
                 } else {
@@ -897,9 +902,9 @@ final class gj implements Runnable {
                   dg.field_a = ca.field_e;
                   ca.field_e = md.field_k;
                   md.field_k = -1;
-                  stackOut_25_0 = 1;
-                  stackIn_26_0 = stackOut_25_0;
-                  return stackIn_26_0 != 0;
+                  stackOut_26_0 = 1;
+                  stackIn_27_0 = stackOut_26_0;
+                  return stackIn_27_0 != 0;
                 }
               }
             }
@@ -910,33 +915,33 @@ final class gj implements Runnable {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L7: {
             var2 = decompiledCaughtException;
-            stackOut_34_0 = (RuntimeException) var2;
-            stackOut_34_1 = new StringBuilder().append("gj.L(");
-            stackIn_36_0 = stackOut_34_0;
-            stackIn_36_1 = stackOut_34_1;
-            stackIn_35_0 = stackOut_34_0;
-            stackIn_35_1 = stackOut_34_1;
+            stackOut_35_0 = (RuntimeException) var2;
+            stackOut_35_1 = new StringBuilder().append("gj.L(");
+            stackIn_37_0 = stackOut_35_0;
+            stackIn_37_1 = stackOut_35_1;
+            stackIn_36_0 = stackOut_35_0;
+            stackIn_36_1 = stackOut_35_1;
             if (param0 == null) {
+              stackOut_37_0 = (RuntimeException) (Object) stackIn_37_0;
+              stackOut_37_1 = (StringBuilder) (Object) stackIn_37_1;
+              stackOut_37_2 = "null";
+              stackIn_38_0 = stackOut_37_0;
+              stackIn_38_1 = stackOut_37_1;
+              stackIn_38_2 = stackOut_37_2;
+              break L7;
+            } else {
               stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
               stackOut_36_1 = (StringBuilder) (Object) stackIn_36_1;
-              stackOut_36_2 = "null";
-              stackIn_37_0 = stackOut_36_0;
-              stackIn_37_1 = stackOut_36_1;
-              stackIn_37_2 = stackOut_36_2;
-              break L6;
-            } else {
-              stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
-              stackOut_35_1 = (StringBuilder) (Object) stackIn_35_1;
-              stackOut_35_2 = "{...}";
-              stackIn_37_0 = stackOut_35_0;
-              stackIn_37_1 = stackOut_35_1;
-              stackIn_37_2 = stackOut_35_2;
-              break L6;
+              stackOut_36_2 = "{...}";
+              stackIn_38_0 = stackOut_36_0;
+              stackIn_38_1 = stackOut_36_1;
+              stackIn_38_2 = stackOut_36_2;
+              break L7;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_37_0, stackIn_37_2 + 44 + 114 + 41);
+          throw ch.a((Throwable) (Object) stackIn_38_0, stackIn_38_2 + 44 + param1 + 41);
         }
     }
 

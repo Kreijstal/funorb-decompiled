@@ -89,12 +89,18 @@ final class jk extends ki {
             fc.a(-83, uo.field_d);
             go.field_d.a(0, 0, go.field_d.field_x / 2, go.field_d.field_z);
             sc.b(-114);
-            pl.a(n.field_c, 0);
-            pl.a(vj.field_b, 0);
-            pl.a(jg.field_a, 0);
-            pl.a(ig.field_P, 0);
-            pl.a(go.field_d, 0);
-            pl.a(uo.field_d, 0);
+            int discarded$6 = 0;
+            pl.a(n.field_c);
+            int discarded$7 = 0;
+            pl.a(vj.field_b);
+            int discarded$8 = 0;
+            pl.a(jg.field_a);
+            int discarded$9 = 0;
+            pl.a(ig.field_P);
+            int discarded$10 = 0;
+            pl.a(go.field_d);
+            int discarded$11 = 0;
+            pl.a(uo.field_d);
             return true;
           }
         } else {
@@ -176,7 +182,8 @@ final class jk extends ki {
         if (param0) {
           if (((jk) this).b((byte) -112)) {
             L0: {
-              var8 = ge.a(((jk) this).field_m, param3, -20777);
+              int discarded$2 = -20777;
+              var8 = ge.a(((jk) this).field_m, param3);
               if (!var8.a((byte) -84, param3, ((jk) this).field_m)) {
                 hh.a(n.field_c, 0, 1, var8, -8562, param3, vj.field_b);
                 var8.a(((jk) this).field_m, param3, (byte) 78);
@@ -195,7 +202,8 @@ final class jk extends ki {
           field_w = null;
           if (((jk) this).b((byte) -112)) {
             L1: {
-              var7 = ge.a(((jk) this).field_m, param3, -20777);
+              int discarded$3 = -20777;
+              var7 = ge.a(((jk) this).field_m, param3);
               if (!var7.a((byte) -84, param3, ((jk) this).field_m)) {
                 hh.a(n.field_c, 0, 1, var7, -8562, param3, vj.field_b);
                 var7.a(((jk) this).field_m, param3, (byte) 78);
@@ -238,23 +246,13 @@ final class jk extends ki {
         }
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_u = null;
         field_v = null;
-        if (param0 != -46) {
-          field_r = null;
-          field_r = null;
-          field_t = null;
-          field_w = null;
-          field_s = null;
-          return;
-        } else {
-          field_r = null;
-          field_t = null;
-          field_w = null;
-          field_s = null;
-          return;
-        }
+        field_r = null;
+        field_t = null;
+        field_w = null;
+        field_s = null;
     }
 
     static {

@@ -256,17 +256,11 @@ abstract class im extends bb {
             }
             ((im) this).a(var2, (byte) -25, var3);
         }
-        if (param0 != -7) {
-            ((im) this).field_H = -80;
-        }
-        return super.h(param0);
+        return super.h(-7);
     }
 
-    public static void k(int param0) {
+    public static void k() {
         field_J = null;
-        if (param0 >= -74) {
-            return;
-        }
         field_L = null;
     }
 

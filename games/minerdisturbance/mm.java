@@ -56,7 +56,7 @@ final class mm implements uj {
         }
     }
 
-    final static void a(boolean param0, wh param1, int param2, int param3, boolean param4, int param5) {
+    final static void a(boolean param0, wh param1, int param2, int param3) {
         Object var6 = null;
         Object var6_ref = null;
         RuntimeException var6_ref2 = null;
@@ -93,7 +93,7 @@ final class mm implements uj {
                 L2: {
                   de.field_b = param1;
                   if (null != de.field_b) {
-                    km.field_a.a(de.field_b, param4, param0, 2, param2, -22604);
+                    km.field_a.a(de.field_b, true, false, 2, 2, -22604);
                     break L2;
                   } else {
                     break L2;
@@ -111,7 +111,7 @@ final class mm implements uj {
           L3: {
             var6_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var6_ref2;
-            stackOut_14_1 = new StringBuilder().append("mm.C(").append(param0).append(44);
+            stackOut_14_1 = new StringBuilder().append("mm.C(").append(0).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -134,7 +134,7 @@ final class mm implements uj {
               break L3;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + 2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + 2 + 44 + param3 + 44 + 1 + 44 + 2 + 41);
         }
     }
 

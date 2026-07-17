@@ -32,22 +32,24 @@ final class de {
 
     final static void c(int param0) {
         if (fk.field_ab == 10) {
-          ga.b(false);
+          int discarded$10 = 0;
+          ga.b();
           fk.field_ab = 11;
           if (param0 == 11) {
             uh.field_o = true;
             return;
           } else {
-            float discarded$6 = de.a(48, 16, -49);
+            float discarded$11 = de.a(48, 16, -49);
             uh.field_o = true;
             return;
           }
         } else {
           if (!uc.a(-114)) {
-            ga.b(false);
+            int discarded$12 = 0;
+            ga.b();
             fk.field_ab = 11;
             if (param0 != 11) {
-              float discarded$7 = de.a(48, 16, -49);
+              float discarded$13 = de.a(48, 16, -49);
               uh.field_o = true;
               return;
             } else {
@@ -59,7 +61,7 @@ final class de {
               uh.field_o = true;
               return;
             } else {
-              float discarded$8 = de.a(48, 16, -49);
+              float discarded$14 = de.a(48, 16, -49);
               uh.field_o = true;
               return;
             }
@@ -231,7 +233,7 @@ final class de {
               }
             }
             var3 = stackIn_3_0;
-            var4 = 127 / ((13 - param0) / 63);
+            var4 = -127;
             stackOut_3_0 = var3;
             stackIn_4_0 = stackOut_3_0;
             break L0;
@@ -241,7 +243,7 @@ final class de {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var2;
-            stackOut_5_1 = new StringBuilder().append("de.D(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("de.D(").append(104).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;

@@ -7,8 +7,8 @@ final class sk {
     static og field_c;
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4) {
-        RuntimeException var5 = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -38,16 +38,8 @@ final class sk {
                 break L2;
               }
             }
-            L3: {
-              if (param3) {
-                break L3;
-              } else {
-                field_b = true;
-                break L3;
-              }
-            }
             var7 = var5_int;
-            L4: while (true) {
+            L3: while (true) {
               if (var7 >= var6) {
                 break L0;
               } else {
@@ -56,14 +48,14 @@ final class sk {
                 ki.field_a[param0 + ki.field_j * (param4 + var7)] = var9;
                 ki.field_a[param0 + ki.field_j * (param4 + var7) + param1] = var9;
                 var7++;
-                continue L4;
+                continue L3;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var5, "sk.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw sd.a((Throwable) (Object) var5, "sk.B(" + param0 + 44 + param1 + 44 + param2 + 44 + 1 + 44 + param4 + 41);
         }
     }
 
@@ -71,7 +63,7 @@ final class sk {
         throw new IllegalStateException();
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
     }

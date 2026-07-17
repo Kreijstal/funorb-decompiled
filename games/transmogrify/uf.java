@@ -75,14 +75,6 @@ final class uf {
             var3 = 0;
             L1: while (true) {
               if (var3 >= var2_int) {
-                L2: {
-                  if (!param0) {
-                    break L2;
-                  } else {
-                    field_a = -121;
-                    break L2;
-                  }
-                }
                 stackOut_11_0 = vc.field_N;
                 stackIn_12_0 = stackOut_11_0;
                 break L0;
@@ -105,10 +97,10 @@ final class uf {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var2 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var2;
-            stackOut_13_1 = new StringBuilder().append("uf.D(").append(param0).append(44);
+            stackOut_13_1 = new StringBuilder().append("uf.D(").append(0).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -120,7 +112,7 @@ final class uf {
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
-              break L3;
+              break L2;
             } else {
               stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
               stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
@@ -128,7 +120,7 @@ final class uf {
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
               stackIn_16_2 = stackOut_14_2;
-              break L3;
+              break L2;
             }
           }
           throw ch.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
@@ -138,12 +130,9 @@ final class uf {
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 < 43) {
-            field_a = 114;
-        }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         return !dl.field_l.b(-26753);
     }
 

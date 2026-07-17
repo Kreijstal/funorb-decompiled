@@ -57,9 +57,10 @@ final class pi extends vf {
         String stackOut_9_2 = null;
         try {
           L0: {
-            var5_int = -107 % ((-62 - param2) / 58);
+            var5_int = 0;
             if (mf.a(param4, param1, 116, param3)) {
-              stackOut_3_0 = ni.a(param0.a(param1, -28153, param4), -108);
+              int discarded$2 = -108;
+              stackOut_3_0 = ni.a(param0.a(param1, -28153, param4));
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -98,7 +99,7 @@ final class pi extends vf {
           }
           L2: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param1).append(44).append(-128).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -146,21 +147,11 @@ final class pi extends vf {
             break L1;
           }
         }
-        if (param1 == -12718) {
-          if (ad.field_j > 2) {
-            ad.field_j = 2;
-            return;
-          } else {
-            return;
-          }
+        if (ad.field_j > 2) {
+          ad.field_j = 2;
+          return;
         } else {
-          pi.j(-27);
-          if (ad.field_j <= 2) {
-            return;
-          } else {
-            ad.field_j = 2;
-            return;
-          }
+          return;
         }
     }
 
@@ -300,14 +291,16 @@ final class pi extends vf {
                 ((pi) this).field_Q = new dm(var12, var13);
                 Geoblox.a(1, ((pi) this).field_Q);
                 var19.a(112, 144, var19.field_s << 4, var19.field_o << 4, -((pi) this).field_P << 10, 4096);
-                id.a(true);
+                int discarded$8 = 1;
+                id.a();
                 ((pi) this).field_Q.c(-(var19.field_s >> 1) + var9, var10 - var19.field_o, 256);
                 return;
               } else {
                 Geoblox.a(1, ((pi) this).field_Q);
                 vb.c();
                 var19.a(112, 144, var19.field_s << 4, var19.field_o << 4, -((pi) this).field_P << 10, 4096);
-                id.a(true);
+                int discarded$9 = 1;
+                id.a();
                 ((pi) this).field_Q.c(-(var19.field_s >> 1) + var9, var10 - var19.field_o, 256);
                 return;
               }
@@ -315,7 +308,8 @@ final class pi extends vf {
               ((pi) this).field_Q = new dm(var12, var13);
               Geoblox.a(1, ((pi) this).field_Q);
               var19.a(112, 144, var19.field_s << 4, var19.field_o << 4, -((pi) this).field_P << 10, 4096);
-              id.a(true);
+              int discarded$10 = 1;
+              id.a();
               ((pi) this).field_Q.c(-(var19.field_s >> 1) + var9, var10 - var19.field_o, 256);
               return;
             }
@@ -323,7 +317,8 @@ final class pi extends vf {
             ((pi) this).field_Q = new dm(var12, var13);
             Geoblox.a(1, ((pi) this).field_Q);
             var19.a(112, 144, var19.field_s << 4, var19.field_o << 4, -((pi) this).field_P << 10, 4096);
-            id.a(true);
+            int discarded$11 = 1;
+            id.a();
             ((pi) this).field_Q.c(-(var19.field_s >> 1) + var9, var10 - var19.field_o, 256);
             return;
           }
@@ -353,14 +348,16 @@ final class pi extends vf {
                   ((pi) this).field_Q = new dm(var12, var13);
                   Geoblox.a(1, ((pi) this).field_Q);
                   var18.a(112, 144, var18.field_s << 4, var18.field_o << 4, -((pi) this).field_P << 10, 4096);
-                  id.a(true);
+                  int discarded$12 = 1;
+                  id.a();
                   ((pi) this).field_Q.c(-(var18.field_s >> 1) + var9, var10 - var18.field_o, 256);
                   return;
                 } else {
                   Geoblox.a(1, ((pi) this).field_Q);
                   vb.c();
                   var18.a(112, 144, var18.field_s << 4, var18.field_o << 4, -((pi) this).field_P << 10, 4096);
-                  id.a(true);
+                  int discarded$13 = 1;
+                  id.a();
                   ((pi) this).field_Q.c(-(var18.field_s >> 1) + var9, var10 - var18.field_o, 256);
                   return;
                 }
@@ -368,7 +365,8 @@ final class pi extends vf {
                 ((pi) this).field_Q = new dm(var12, var13);
                 Geoblox.a(1, ((pi) this).field_Q);
                 var18.a(112, 144, var18.field_s << 4, var18.field_o << 4, -((pi) this).field_P << 10, 4096);
-                id.a(true);
+                int discarded$14 = 1;
+                id.a();
                 ((pi) this).field_Q.c(-(var18.field_s >> 1) + var9, var10 - var18.field_o, 256);
                 return;
               }
@@ -376,7 +374,8 @@ final class pi extends vf {
               ((pi) this).field_Q = new dm(var12, var13);
               Geoblox.a(1, ((pi) this).field_Q);
               var18.a(112, 144, var18.field_s << 4, var18.field_o << 4, -((pi) this).field_P << 10, 4096);
-              id.a(true);
+              int discarded$15 = 1;
+              id.a();
               ((pi) this).field_Q.c(-(var18.field_s >> 1) + var9, var10 - var18.field_o, 256);
               return;
             }
@@ -384,14 +383,9 @@ final class pi extends vf {
         }
     }
 
-    public static void j(int param0) {
+    public static void j() {
         field_R = null;
         field_S = null;
-        if (param0 != 24033) {
-            field_R = null;
-            field_O = null;
-            return;
-        }
         field_O = null;
     }
 
@@ -400,7 +394,8 @@ final class pi extends vf {
     }
 
     pi(dg param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (dh) (Object) ah.a((byte) -66));
+        super(param1, (dh) (Object) ah.a());
+        int discarded$0 = -66;
         try {
             ((pi) this).field_M = param0;
             ((pi) this).field_N = param1;

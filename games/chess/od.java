@@ -1,8 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.applet.Applet;
-
 final class od extends fb {
     int field_S;
     static long[] field_N;
@@ -19,113 +17,79 @@ final class od extends fb {
 
     final static void a(boolean param0, java.applet.Applet param1) {
         try {
-            Throwable var2 = null;
-            RuntimeException var2_ref = null;
+            java.net.URL var2 = null;
+            Throwable var2_ref = null;
+            RuntimeException var2_ref2 = null;
             String var3 = null;
-            java.net.URL var4 = null;
-            java.applet.Applet stackIn_1_0 = null;
-            java.applet.Applet stackIn_2_0 = null;
-            java.applet.Applet stackIn_3_0 = null;
-            int stackIn_3_1 = 0;
-            RuntimeException stackIn_10_0 = null;
-            StringBuilder stackIn_10_1 = null;
-            RuntimeException stackIn_11_0 = null;
-            StringBuilder stackIn_11_1 = null;
-            RuntimeException stackIn_12_0 = null;
-            StringBuilder stackIn_12_1 = null;
-            String stackIn_12_2 = null;
+            RuntimeException stackIn_5_0 = null;
+            StringBuilder stackIn_5_1 = null;
+            RuntimeException stackIn_6_0 = null;
+            StringBuilder stackIn_6_1 = null;
+            RuntimeException stackIn_7_0 = null;
+            StringBuilder stackIn_7_1 = null;
+            String stackIn_7_2 = null;
             Throwable decompiledCaughtException = null;
-            java.applet.Applet stackOut_0_0 = null;
-            java.applet.Applet stackOut_2_0 = null;
-            int stackOut_2_1 = 0;
-            java.applet.Applet stackOut_1_0 = null;
-            int stackOut_1_1 = 0;
-            RuntimeException stackOut_9_0 = null;
-            StringBuilder stackOut_9_1 = null;
-            RuntimeException stackOut_11_0 = null;
-            StringBuilder stackOut_11_1 = null;
-            String stackOut_11_2 = null;
-            RuntimeException stackOut_10_0 = null;
-            StringBuilder stackOut_10_1 = null;
-            String stackOut_10_2 = null;
+            RuntimeException stackOut_4_0 = null;
+            StringBuilder stackOut_4_1 = null;
+            RuntimeException stackOut_6_0 = null;
+            StringBuilder stackOut_6_1 = null;
+            String stackOut_6_2 = null;
+            RuntimeException stackOut_5_0 = null;
+            StringBuilder stackOut_5_1 = null;
+            String stackOut_5_2 = null;
             try {
               L0: {
                 try {
                   L1: {
-                    L2: {
-                      var4 = param1.getCodeBase();
-                      var3 = rh.a(var4, param1, (byte) -87).getFile();
-                      Object discarded$6 = u.a(param1, true, new Object[2], "updatelinks");
-                      Object discarded$7 = u.a(param1, true, new Object[2], "updatelinks");
-                      stackOut_0_0 = (java.applet.Applet) param1;
-                      stackIn_2_0 = stackOut_0_0;
-                      stackIn_1_0 = stackOut_0_0;
-                      if (param0) {
-                        stackOut_2_0 = (java.applet.Applet) (Object) stackIn_2_0;
-                        stackOut_2_1 = 0;
-                        stackIn_3_0 = stackOut_2_0;
-                        stackIn_3_1 = stackOut_2_1;
-                        break L2;
-                      } else {
-                        stackOut_1_0 = (java.applet.Applet) (Object) stackIn_1_0;
-                        stackOut_1_1 = 1;
-                        stackIn_3_0 = stackOut_1_0;
-                        stackIn_3_1 = stackOut_1_1;
-                        break L2;
-                      }
-                    }
-                    L3: {
-                      Object discarded$8 = u.a(stackIn_3_0, stackIn_3_1 != 0, new Object[2], "updatelinks");
-                      if (!param0) {
-                        break L3;
-                      } else {
-                        od.b(false);
-                        break L3;
-                      }
-                    }
+                    var2 = param1.getCodeBase();
+                    int discarded$7 = -87;
+                    var3 = rh.a(var2, param1).getFile();
+                    Object discarded$8 = u.a(param1, true, new Object[2], "updatelinks");
                     Object discarded$9 = u.a(param1, true, new Object[2], "updatelinks");
                     Object discarded$10 = u.a(param1, true, new Object[2], "updatelinks");
                     Object discarded$11 = u.a(param1, true, new Object[2], "updatelinks");
+                    Object discarded$12 = u.a(param1, true, new Object[2], "updatelinks");
+                    Object discarded$13 = u.a(param1, true, new Object[2], "updatelinks");
                     break L1;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
-                  L4: {
-                    var2 = decompiledCaughtException;
-                    break L4;
+                  L2: {
+                    var2_ref = decompiledCaughtException;
+                    break L2;
                   }
                 }
                 break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L5: {
-                var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_9_0 = (RuntimeException) var2_ref;
-                stackOut_9_1 = new StringBuilder().append("od.A(").append(param0).append(44);
-                stackIn_11_0 = stackOut_9_0;
-                stackIn_11_1 = stackOut_9_1;
-                stackIn_10_0 = stackOut_9_0;
-                stackIn_10_1 = stackOut_9_1;
+              L3: {
+                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_4_0 = (RuntimeException) var2_ref2;
+                stackOut_4_1 = new StringBuilder().append("od.A(").append(0).append(44);
+                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_1 = stackOut_4_1;
+                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_1 = stackOut_4_1;
                 if (param1 == null) {
-                  stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-                  stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-                  stackOut_11_2 = "null";
-                  stackIn_12_0 = stackOut_11_0;
-                  stackIn_12_1 = stackOut_11_1;
-                  stackIn_12_2 = stackOut_11_2;
-                  break L5;
+                  stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+                  stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+                  stackOut_6_2 = "null";
+                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_1 = stackOut_6_1;
+                  stackIn_7_2 = stackOut_6_2;
+                  break L3;
                 } else {
-                  stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-                  stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-                  stackOut_10_2 = "{...}";
-                  stackIn_12_0 = stackOut_10_0;
-                  stackIn_12_1 = stackOut_10_1;
-                  stackIn_12_2 = stackOut_10_2;
-                  break L5;
+                  stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+                  stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+                  stackOut_5_2 = "{...}";
+                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_1 = stackOut_5_1;
+                  stackIn_7_2 = stackOut_5_2;
+                  break L3;
                 }
               }
-              throw fk.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+              throw fk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -241,11 +205,11 @@ final class od extends fb {
         return stackIn_16_0 != 0;
     }
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         return wc.field_E;
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_O = null;
         field_X = null;
         field_N = null;

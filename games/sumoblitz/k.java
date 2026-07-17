@@ -84,7 +84,7 @@ final class k {
         return stackIn_7_0 != 0;
     }
 
-    final static void a(pd param0, int param1, byte param2) {
+    final static void a(pd param0, int param1) {
         pl var3 = null;
         try {
             var3 = as.field_v;
@@ -96,7 +96,7 @@ final class k {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 

@@ -12,28 +12,22 @@ final class tm {
     static String field_b;
     static String field_h;
 
-    final static void a(boolean param0, pg param1, int param2) {
+    final static void a(boolean param0, pg param1) {
         nk var3 = null;
         try {
             var3 = qn.field_U;
-            var3.f(param2, -114);
-            if (param0) {
-                field_d = -61;
-            }
+            var3.f(7, -114);
             var3.c(param1.field_q, (byte) -91);
             var3.c(param1.field_u, (byte) -60);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "tm.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "tm.C(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 7 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_h = null;
         field_a = null;
-        if (param0 <= 5) {
-            field_d = -35;
-        }
     }
 
     final static String b(byte param0) {
@@ -45,12 +39,6 @@ final class tm {
         String var6 = null;
         String var7 = null;
         String var8 = null;
-        int stackIn_12_0 = 0;
-        int stackIn_12_1 = 0;
-        int stackIn_14_0 = 0;
-        int stackIn_14_1 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_11_1 = 0;
         var5 = Chess.field_G;
         var6 = "(" + lf.field_T + " " + wc.field_u + " " + hh.field_o + ") " + wg.field_B;
         if (sb.field_sb > 0) {
@@ -58,73 +46,35 @@ final class tm {
           var2 = 0;
           L0: while (true) {
             if (sb.field_sb > var2) {
-              var7 = var1 + 32;
-              var3 = 255 & tk.field_h.field_o[var2];
-              var4 = var3 >> 4;
-              var3 = var3 & 15;
-              stackOut_11_0 = ~var4;
-              stackOut_11_1 = -11;
-              stackIn_14_0 = stackOut_11_0;
-              stackIn_14_1 = stackOut_11_1;
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              if (var5 != 0) {
-                if (stackIn_14_0 > stackIn_14_1) {
-                  String discarded$4 = tm.b((byte) 71);
-                  return var7;
-                } else {
-                  return var7;
-                }
-              } else {
-                L1: {
-                  L2: {
-                    if (stackIn_12_0 > stackIn_12_1) {
-                      break L2;
-                    } else {
-                      var4 += 55;
-                      if (var5 == 0) {
-                        break L1;
-                      } else {
-                        break L2;
-                      }
-                    }
-                  }
+              L1: {
+                var7 = var1 + 32;
+                var3 = 255 & tk.field_h.field_o[var2];
+                var4 = var3 >> 4;
+                var3 = var3 & 15;
+                if (var4 < 10) {
                   var4 += 48;
                   break L1;
-                }
-                L3: {
-                  L4: {
-                    if (var3 < 10) {
-                      break L4;
-                    } else {
-                      var3 += 55;
-                      if (var5 == 0) {
-                        break L3;
-                      } else {
-                        break L4;
-                      }
-                    }
-                  }
-                  var3 += 48;
-                  break L3;
-                }
-                var8 = var7 + (char)var4;
-                var1 = var8 + (char)var3;
-                var2++;
-                if (var5 == 0) {
-                  continue L0;
                 } else {
-                  if (param0 > -119) {
-                    String discarded$5 = tm.b((byte) 71);
-                    return var1;
-                  } else {
-                    return var1;
-                  }
+                  var4 += 55;
+                  break L1;
                 }
               }
+              L2: {
+                if (var3 < 10) {
+                  var3 += 48;
+                  break L2;
+                } else {
+                  var3 += 55;
+                  break L2;
+                }
+              }
+              var8 = var7 + (char)var4;
+              var1 = var8 + (char)var3;
+              var2++;
+              continue L0;
             } else {
               if (param0 > -119) {
-                String discarded$6 = tm.b((byte) 71);
+                String discarded$2 = tm.b((byte) 71);
                 return var1;
               } else {
                 return var1;
@@ -133,7 +83,7 @@ final class tm {
           }
         } else {
           if (param0 > -119) {
-            String discarded$7 = tm.b((byte) 71);
+            String discarded$3 = tm.b((byte) 71);
             return var6;
           } else {
             return var6;

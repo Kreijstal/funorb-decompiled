@@ -19,75 +19,38 @@ abstract class mb extends dc {
     boolean f(int param0) {
         int var3 = 0;
         var3 = Virogrid.field_F ? 1 : 0;
-        if (param0 != 3) {
-          ((mb) this).field_lb = -93;
-          if (null != ((mb) this).field_fb) {
-            if (dk.field_e != ((mb) this).field_fb) {
-              if (vf.field_b == ((mb) this).field_fb) {
-                int fieldTemp$4 = ((mb) this).field_jb + 1;
-                ((mb) this).field_jb = ((mb) this).field_jb + 1;
-                if (((mb) this).field_hb != fieldTemp$4) {
-                  ((mb) this).field_kb.field_H = (((mb) this).field_jb << 8) / ((mb) this).field_hb;
-                  return super.f(3);
-                } else {
-                  ((mb) this).field_fb = null;
-                  ((mb) this).field_kb.field_H = 256;
-                  return super.f(3);
-                }
+        if (null != ((mb) this).field_fb) {
+          if (dk.field_e != ((mb) this).field_fb) {
+            if (vf.field_b == ((mb) this).field_fb) {
+              int fieldTemp$2 = ((mb) this).field_jb + 1;
+              ((mb) this).field_jb = ((mb) this).field_jb + 1;
+              if (((mb) this).field_hb != fieldTemp$2) {
+                ((mb) this).field_kb.field_H = (((mb) this).field_jb << 8) / ((mb) this).field_hb;
+                return super.f(3);
               } else {
+                ((mb) this).field_fb = null;
+                ((mb) this).field_kb.field_H = 256;
                 return super.f(3);
               }
             } else {
-              int fieldTemp$5 = ((mb) this).field_jb + 1;
-              ((mb) this).field_jb = ((mb) this).field_jb + 1;
-              if (fieldTemp$5 == ((mb) this).field_cb) {
-                ((mb) this).field_fb = lm.field_e;
-                ((mb) this).a(((mb) this).field_lb + (12 - -((mb) this).field_ib.field_m), param0 ^ 3, ((mb) this).field_nb, 12 + ((mb) this).field_ib.field_g);
-                ((mb) this).field_kb.field_H = 0;
-                ((mb) this).field_jb = 0;
-                return super.f(3);
-              } else {
-                ((mb) this).field_kb.field_H = 256 + -((((mb) this).field_jb << 8) / ((mb) this).field_cb);
-                return super.f(3);
-              }
+              return super.f(3);
             }
           } else {
-            return super.f(3);
+            int fieldTemp$3 = ((mb) this).field_jb + 1;
+            ((mb) this).field_jb = ((mb) this).field_jb + 1;
+            if (fieldTemp$3 == ((mb) this).field_cb) {
+              ((mb) this).field_fb = lm.field_e;
+              ((mb) this).a(((mb) this).field_lb + (12 - -((mb) this).field_ib.field_m), 0, ((mb) this).field_nb, 12 + ((mb) this).field_ib.field_g);
+              ((mb) this).field_kb.field_H = 0;
+              ((mb) this).field_jb = 0;
+              return super.f(3);
+            } else {
+              ((mb) this).field_kb.field_H = 256 + -((((mb) this).field_jb << 8) / ((mb) this).field_cb);
+              return super.f(3);
+            }
           }
         } else {
-          if (null != ((mb) this).field_fb) {
-            if (dk.field_e != ((mb) this).field_fb) {
-              if (vf.field_b == ((mb) this).field_fb) {
-                int fieldTemp$6 = ((mb) this).field_jb + 1;
-                ((mb) this).field_jb = ((mb) this).field_jb + 1;
-                if (((mb) this).field_hb != fieldTemp$6) {
-                  ((mb) this).field_kb.field_H = (((mb) this).field_jb << 8) / ((mb) this).field_hb;
-                  return super.f(3);
-                } else {
-                  ((mb) this).field_fb = null;
-                  ((mb) this).field_kb.field_H = 256;
-                  return super.f(3);
-                }
-              } else {
-                return super.f(3);
-              }
-            } else {
-              int fieldTemp$7 = ((mb) this).field_jb + 1;
-              ((mb) this).field_jb = ((mb) this).field_jb + 1;
-              if (fieldTemp$7 == ((mb) this).field_cb) {
-                ((mb) this).field_fb = lm.field_e;
-                ((mb) this).a(((mb) this).field_lb + (12 - -((mb) this).field_ib.field_m), param0 ^ 3, ((mb) this).field_nb, 12 + ((mb) this).field_ib.field_g);
-                ((mb) this).field_kb.field_H = 0;
-                ((mb) this).field_jb = 0;
-                return super.f(3);
-              } else {
-                ((mb) this).field_kb.field_H = 256 + -((((mb) this).field_jb << 8) / ((mb) this).field_cb);
-                return super.f(3);
-              }
-            }
-          } else {
-            return super.f(3);
-          }
+          return super.f(3);
         }
     }
 
@@ -169,10 +132,6 @@ abstract class mb extends dc {
     }
 
     final static String a(boolean param0, char param1) {
-        if (!param0) {
-            java.applet.Applet discarded$0 = mb.g((byte) -40);
-            return String.valueOf(param1);
-        }
         return String.valueOf(param1);
     }
 
@@ -213,9 +172,6 @@ abstract class mb extends dc {
     }
 
     private final void c(int param0, fi param1) {
-        if (param0 != 6) {
-            return;
-        }
         try {
             if (((mb) this).field_kb != null) {
                 ((mb) this).field_kb.a(false);
@@ -229,7 +185,7 @@ abstract class mb extends dc {
             ((mb) this).a((fi) (Object) ((mb) this).field_kb, (byte) -78);
             ((mb) this).field_ib = null;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "mb.P(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "mb.P(" + 6 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -255,7 +211,7 @@ abstract class mb extends dc {
     }
 
     final static void a(int param0, byte param1, mg[] param2, int param3, int param4) {
-        RuntimeException var5 = null;
+        RuntimeException runtimeException = null;
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -293,22 +249,18 @@ abstract class mb extends dc {
                   param2[2].d(-var6 + param0 + param3, param4);
                   df.b(od.field_m);
                   df.h(param3 - -var5_int, param4, -var6 + param0 + param3, param2[1].field_z + param4);
-                  if (param1 == -117) {
-                    var8 = param3 + var5_int;
-                    var9 = param0 + (param3 + -var6);
-                    param3 = var8;
-                    L2: while (true) {
-                      if (var9 <= param3) {
-                        df.a(od.field_m);
-                        break L0;
-                      } else {
-                        param2[1].d(param3, param4);
-                        param3 = param3 + var7;
-                        continue L2;
-                      }
+                  var8 = param3 + var5_int;
+                  var9 = param0 + (param3 + -var6);
+                  param3 = var8;
+                  L2: while (true) {
+                    if (var9 <= param3) {
+                      df.a(od.field_m);
+                      break L0;
+                    } else {
+                      param2[1].d(param3, param4);
+                      param3 = param3 + var7;
+                      continue L2;
                     }
-                  } else {
-                    return;
                   }
                 } else {
                   break L1;
@@ -320,9 +272,9 @@ abstract class mb extends dc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var5 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var5;
-            stackOut_11_1 = new StringBuilder().append("mb.Q(").append(param0).append(44).append(param1).append(44);
+            runtimeException = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) runtimeException;
+            stackOut_11_1 = new StringBuilder().append("mb.Q(").append(param0).append(44).append(-117).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -349,7 +301,7 @@ abstract class mb extends dc {
         }
     }
 
-    final static void i(byte param0) {
+    final static void i() {
         mi.field_d = sh.field_qb.h(-118);
         CharSequence var2 = (CharSequence) (Object) mi.field_d;
         wn.field_n = c.a(var2, true);

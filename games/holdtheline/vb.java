@@ -7,7 +7,7 @@ final class vb {
     static boolean field_b;
     static ud[] field_a;
 
-    final static void a(int param0, int param1, int param2) {
+    final static void a() {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -18,9 +18,9 @@ final class vb {
         if (cf.field_q >= 0) {
           L0: {
             var3 = 185;
-            var4 = -35 + param1;
+            var4 = 205;
             var5 = 256;
-            if (param0 < ~cf.field_q) {
+            if (cf.field_q < 75) {
               var5 = (cf.field_q << 8) / 75;
               break L0;
             } else {
@@ -47,7 +47,8 @@ final class vb {
               break L2;
             }
           }
-          dm.b((byte) -10);
+          int discarded$1 = -10;
+          dm.b();
           if (cf.field_q >= 150) {
             w.field_c.d(15 + var3, 10 + var4, var5);
             var6 = -125 + cf.field_q;
@@ -286,7 +287,8 @@ final class vb {
 
     final static void a(int param0, hj param1) {
         try {
-            ok.a(32381);
+            int discarded$2 = 32381;
+            ok.a();
             if (param0 > -44) {
                 vb.a(51);
             }
@@ -297,21 +299,17 @@ final class vb {
     }
 
     final static boolean a(int param0, char param1) {
-        if (param0 == 332243496) {
-          if (Character.isISOControl(param1)) {
-            return false;
-          } else {
-            if (!dg.a((byte) -68, param1)) {
-              if (param1 != 45) {
-                if (param1 != 160) {
-                  if (param1 != 32) {
-                    if (param1 == 95) {
-                      return true;
-                    } else {
-                      return false;
-                    }
-                  } else {
+        if (Character.isISOControl(param1)) {
+          return false;
+        } else {
+          if (!dg.a((byte) -68, param1)) {
+            if (param1 != 45) {
+              if (param1 != 160) {
+                if (param1 != 32) {
+                  if (param1 == 95) {
                     return true;
+                  } else {
+                    return false;
                   }
                 } else {
                   return true;
@@ -322,9 +320,9 @@ final class vb {
             } else {
               return true;
             }
+          } else {
+            return true;
           }
-        } else {
-          return false;
         }
     }
 

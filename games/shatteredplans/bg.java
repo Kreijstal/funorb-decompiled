@@ -81,7 +81,7 @@ final class bg {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
         field_f = null;
@@ -167,11 +167,10 @@ final class bg {
     }
 
     final static void a(int param0, int param1) {
-        int var2 = 0;
-        var2 = (182 + -pf.field_a[0].field_z) / (param1 - 1);
+        int var2 = (182 + -pf.field_a[0].field_z) / (param1 - 1);
         dc.field_F = new bi(var2, 2);
         pf.field_d = new bi(var2 + pf.field_a[0].field_z / 4, 2);
-        ra.a(param0 + 2499);
+        ra.a(-113);
         dc.field_F.e();
         gf.f(0, 0, dc.field_F.field_z, 10790052);
         gf.f(0, 1, dc.field_F.field_z, 16777215);
@@ -183,12 +182,6 @@ final class bg {
         gf.f(0, 0, pf.field_d.field_z, 10790052);
         gf.f(0, 1, pf.field_d.field_z, 16777215);
         cg.i(0);
-        if (param0 != -2612) {
-          field_f = null;
-          return;
-        } else {
-          return;
-        }
     }
 
     final boolean a(byte param0, String param1) {

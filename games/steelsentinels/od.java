@@ -28,10 +28,10 @@ final class od extends RuntimeException {
         field_g = null;
     }
 
-    final static c a(int param0, boolean param1) {
+    final static c a() {
         c var2 = new c();
         fg.field_Ub.a(3, (ck) (Object) var2);
-        tc.a(87, param0);
+        tc.a(87, 6);
         return var2;
     }
 

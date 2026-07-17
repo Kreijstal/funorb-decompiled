@@ -11,37 +11,35 @@ final class ok extends sna {
     sga field_xb;
     sna field_Ab;
 
-    final static boolean a(CharSequence param0, char param1, byte param2) {
+    final static boolean a(CharSequence param0, char param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_6_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_17_0 = 0;
-        int stackIn_19_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_18_0 = 0;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        String stackIn_23_2 = null;
+        String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         int stackOut_5_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_8_0 = 0;
+        int stackOut_17_0 = 0;
+        int stackOut_15_0 = 0;
+        int stackOut_10_0 = 0;
         int stackOut_1_0 = 0;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
         RuntimeException stackOut_21_0 = null;
         StringBuilder stackOut_21_1 = null;
         String stackOut_21_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
         try {
           L0: {
             if (io.a(true, param1)) {
@@ -51,30 +49,24 @@ final class ok extends sna {
                 return stackIn_6_0 != 0;
               } else {
                 var3_int = param0.length();
-                if (param2 == -19) {
-                  if (12 > var3_int) {
-                    if (mp.a(true, param1)) {
-                      if (var3_int != 0) {
-                        stackOut_18_0 = 1;
-                        stackIn_19_0 = stackOut_18_0;
-                        break L0;
-                      } else {
-                        stackOut_16_0 = 0;
-                        stackIn_17_0 = stackOut_16_0;
-                        return stackIn_17_0 != 0;
-                      }
+                if (12 > var3_int) {
+                  if (mp.a(true, param1)) {
+                    if (var3_int != 0) {
+                      stackOut_17_0 = 1;
+                      stackIn_18_0 = stackOut_17_0;
+                      break L0;
                     } else {
-                      return true;
+                      stackOut_15_0 = 0;
+                      stackIn_16_0 = stackOut_15_0;
+                      return stackIn_16_0 != 0;
                     }
                   } else {
-                    stackOut_11_0 = 0;
-                    stackIn_12_0 = stackOut_11_0;
-                    return stackIn_12_0 != 0;
+                    return true;
                   }
                 } else {
-                  stackOut_8_0 = 0;
-                  stackIn_9_0 = stackOut_8_0;
-                  return stackIn_9_0 != 0;
+                  stackOut_10_0 = 0;
+                  stackIn_11_0 = stackOut_10_0;
+                  return stackIn_11_0 != 0;
                 }
               }
             } else {
@@ -87,36 +79,36 @@ final class ok extends sna {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) var3;
-            stackOut_20_1 = new StringBuilder().append("ok.DA(");
-            stackIn_22_0 = stackOut_20_0;
-            stackIn_22_1 = stackOut_20_1;
-            stackIn_21_0 = stackOut_20_0;
-            stackIn_21_1 = stackOut_20_1;
+            stackOut_19_0 = (RuntimeException) var3;
+            stackOut_19_1 = new StringBuilder().append("ok.DA(");
+            stackIn_21_0 = stackOut_19_0;
+            stackIn_21_1 = stackOut_19_1;
+            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_1 = stackOut_19_1;
             if (param0 == null) {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
-              stackOut_22_2 = "null";
-              stackIn_23_0 = stackOut_22_0;
-              stackIn_23_1 = stackOut_22_1;
-              stackIn_23_2 = stackOut_22_2;
-              break L1;
-            } else {
               stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
               stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
-              stackOut_21_2 = "{...}";
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_23_1 = stackOut_21_1;
-              stackIn_23_2 = stackOut_21_2;
+              stackOut_21_2 = "null";
+              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_1 = stackOut_21_1;
+              stackIn_22_2 = stackOut_21_2;
+              break L1;
+            } else {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "{...}";
+              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_1 = stackOut_20_1;
+              stackIn_22_2 = stackOut_20_2;
               break L1;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param1 + 44 + param2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param1 + 44 + -19 + 41);
         }
-        return stackIn_19_0 != 0;
+        return stackIn_18_0 != 0;
     }
 
-    final static sna f(byte param0) {
+    final static sna f() {
         return p.field_n.field_vb;
     }
 
@@ -142,20 +134,11 @@ final class ok extends sna {
     }
 
     final static int c(int param0, int param1) {
-        be var2 = null;
-        Object var3 = null;
-        var2 = mg.a((byte) -126, param0);
-        if (var2 == null) {
-          return 0;
-        } else {
-          if (param1 != -26684) {
-            var3 = null;
-            boolean discarded$2 = ok.a((CharSequence) null, 'H', (byte) -6);
-            return vla.a(-64, var2);
-          } else {
-            return vla.a(-64, var2);
-          }
+        be var2 = mg.a((byte) -126, param0);
+        if (!(var2 != null)) {
+            return 0;
         }
+        return vla.a(-64, var2);
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
@@ -187,29 +170,24 @@ final class ok extends sna {
     }
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        if (!param1) {
-          if (eo.field_l <= param4) {
-            if (pw.field_x >= param4) {
-              if (param5 >= eo.field_l) {
-                if (param5 <= pw.field_x) {
-                  if (param6 >= eo.field_l) {
-                    if (pw.field_x >= param6) {
-                      if (param8 >= eo.field_l) {
-                        if (pw.field_x >= param8) {
-                          if (an.field_q <= param0) {
-                            if (param0 <= ha.field_n) {
-                              if (an.field_q <= param3) {
-                                if (ha.field_n >= param3) {
-                                  if (param7 >= an.field_q) {
-                                    if (param7 <= ha.field_n) {
-                                      if (an.field_q <= param2) {
-                                        if (ha.field_n >= param2) {
-                                          oda.a(param2, param5, param7, param0, 123, param4, param6, param3, param9, param8);
-                                          return;
-                                        } else {
-                                          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
-                                          return;
-                                        }
+        if (eo.field_l <= param4) {
+          if (pw.field_x >= param4) {
+            if (param5 >= eo.field_l) {
+              if (param5 <= pw.field_x) {
+                if (param6 >= eo.field_l) {
+                  if (pw.field_x >= param6) {
+                    if (param8 >= eo.field_l) {
+                      if (pw.field_x >= param8) {
+                        if (an.field_q <= param0) {
+                          if (param0 <= ha.field_n) {
+                            if (an.field_q <= param3) {
+                              if (ha.field_n >= param3) {
+                                if (param7 >= an.field_q) {
+                                  if (param7 <= ha.field_n) {
+                                    if (an.field_q <= param2) {
+                                      if (ha.field_n >= param2) {
+                                        oda.a(param2, param5, param7, param0, 123, param4, param6, param3, param9, param8);
+                                        return;
                                       } else {
                                         vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
                                         return;
@@ -271,6 +249,7 @@ final class ok extends sna {
             return;
           }
         } else {
+          vba.a(param4, param5, param6, param0, param9, param7, param8, -128, param2, param3);
           return;
         }
     }

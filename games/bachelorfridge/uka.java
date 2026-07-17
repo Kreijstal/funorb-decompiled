@@ -101,10 +101,7 @@ final class uka extends qm implements java.awt.image.ImageProducer, java.awt.ima
         }
     }
 
-    final static ema a(long param0, int param1) {
-        if (param1 != 28791) {
-            return null;
-        }
+    final static ema a(long param0) {
         return (ema) (Object) wi.field_i.a(param0, (byte) -87);
     }
 
@@ -284,7 +281,7 @@ final class uka extends qm implements java.awt.image.ImageProducer, java.awt.ima
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_i = null;
         field_h = null;
         field_k = null;
@@ -293,12 +290,12 @@ final class uka extends qm implements java.awt.image.ImageProducer, java.awt.ima
     public final void requestTopDownLeftRightResend(java.awt.image.ImageConsumer param0) {
     }
 
-    final static void a(int param0, kia param1, int param2, boolean param3, byte param4) {
+    final static void a(int param0, kia param1, int param2, boolean param3) {
         try {
             int var5_int = -1;
-            kw.field_j.a(param1, !param3 ? true : false, 1000000, param2, param0, true);
+            kw.field_j.a(param1, !param3 ? true : false, 1000000, 256, 1048576, true);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "uka.H(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + -112 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "uka.H(" + 1048576 + 44 + (param1 != null ? "{...}" : "null") + 44 + 256 + 44 + param3 + 44 + -112 + 41);
         }
     }
 
@@ -322,9 +319,10 @@ final class uka extends qm implements java.awt.image.ImageProducer, java.awt.ima
         StringBuilder stackOut_5_1 = null;
         String stackOut_5_2 = null;
         try {
-          var4_int = 17 % ((70 - param1) / 38);
+          var4_int = 0;
           if (g.a(param3, param0, -30744, param2)) {
-            return mfa.a(10583);
+            int discarded$2 = 10583;
+            return mfa.a();
           } else {
             return null;
           }
@@ -333,7 +331,7 @@ final class uka extends qm implements java.awt.image.ImageProducer, java.awt.ima
           L0: {
             var4 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var4;
-            stackOut_4_1 = new StringBuilder().append("uka.F(").append(param0).append(44).append(param1).append(44);
+            stackOut_4_1 = new StringBuilder().append("uka.F(").append(param0).append(44).append(126).append(44);
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;

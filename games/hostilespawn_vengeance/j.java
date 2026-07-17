@@ -7,7 +7,7 @@ final class j {
     static int field_c;
     static bd field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         int var1 = 0;
         field_a = null;
@@ -21,82 +21,74 @@ final class j {
         int var4 = 0;
         int var5 = 0;
         char[] var6 = null;
-        int stackIn_10_0 = 0;
-        int stackIn_17_0 = 0;
-        int stackIn_20_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_15_0 = 0;
+        int stackIn_18_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_19_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_14_0 = 0;
+        int stackOut_17_0 = 0;
         var5 = HostileSpawn.field_I ? 1 : 0;
         try {
           L0: {
             L1: {
-              if (!param0) {
-                break L1;
-              } else {
-                field_b = null;
-                break L1;
-              }
-            }
-            L2: {
               if (param1 <= 0) {
-                break L2;
+                break L1;
               } else {
                 if (param1 < 128) {
-                  stackOut_9_0 = 1;
-                  stackIn_10_0 = stackOut_9_0;
-                  return stackIn_10_0 != 0;
+                  stackOut_7_0 = 1;
+                  stackIn_8_0 = stackOut_7_0;
+                  return stackIn_8_0 != 0;
                 } else {
-                  break L2;
+                  break L1;
                 }
               }
             }
-            L3: {
+            L2: {
               if (param1 < 160) {
-                break L3;
+                break L2;
               } else {
                 if (param1 > 255) {
-                  break L3;
+                  break L2;
                 } else {
                   return true;
                 }
               }
             }
-            L4: {
+            L3: {
               if (param1 == 0) {
-                break L4;
+                break L3;
               } else {
                 var6 = kh.field_hb;
                 var2 = var6;
                 var3 = 0;
-                L5: while (true) {
+                L4: while (true) {
                   if (var3 >= var6.length) {
-                    break L4;
+                    break L3;
                   } else {
                     var4 = var6[var3];
                     if (param1 == var4) {
-                      stackOut_16_0 = 1;
-                      stackIn_17_0 = stackOut_16_0;
-                      return stackIn_17_0 != 0;
+                      stackOut_14_0 = 1;
+                      stackIn_15_0 = stackOut_14_0;
+                      return stackIn_15_0 != 0;
                     } else {
                       var3++;
-                      continue L5;
+                      continue L4;
                     }
                   }
                 }
               }
             }
-            stackOut_19_0 = 0;
-            stackIn_20_0 = stackOut_19_0;
+            stackOut_17_0 = 0;
+            stackIn_18_0 = stackOut_17_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw wg.a((Throwable) (Object) var2_ref, "j.C(" + param0 + 44 + param1 + 41);
+          throw wg.a((Throwable) (Object) var2_ref, "j.C(" + 0 + 44 + param1 + 41);
         }
-        return stackIn_20_0 != 0;
+        return stackIn_18_0 != 0;
     }
 
     final static int a(int param0, int param1, int param2, byte param3, byte[] param4, CharSequence param5) {

@@ -5,20 +5,18 @@ final class vb {
     static String field_a;
     static String[] field_b;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }
 
     final static void a(int param0, byte param1, ak param2) {
         try {
-            if (param1 != 84) {
-                field_a = null;
-            }
             oh.field_j.a((ne) (Object) param2, false);
-            g.a(param0, param2, (byte) 50);
+            int discarded$0 = 50;
+            g.a(4, param2);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "vb.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "vb.A(" + 4 + 44 + 84 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

@@ -19,7 +19,7 @@ abstract class o {
 
     abstract void a(int param0, int param1, int param2);
 
-    final static void b(int param0) {
+    final static void b() {
         ha var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -30,13 +30,14 @@ abstract class o {
           L0: {
             var1 = pg.field_fb;
             L1: while (true) {
-              if (!wk.b(1816)) {
+              int discarded$9 = 1816;
+              if (!wk.b()) {
                 break L0;
               } else {
                 var1.f(8, 950);
-                int fieldTemp$5 = var1.field_k + 1;
+                int fieldTemp$10 = var1.field_k + 1;
                 var1.field_k = var1.field_k + 1;
-                var2 = fieldTemp$5;
+                var2 = fieldTemp$10;
                 qh.a(124, var1);
                 pg.field_fb.a(var1.field_k + -var2, (byte) -75);
                 continue L1;
@@ -51,13 +52,11 @@ abstract class o {
     }
 
     final static pf a(int param0, int param1, int param2, boolean param3, boolean param4) {
-        if (param1 != 2) {
-            field_c = null;
-        }
-        return na.a(param0, 255, param2, param3, false, param4);
+        int discarded$0 = 1;
+        return na.a(1, 255, param2, false, false);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_l = null;
         field_g = null;
         field_h = null;
@@ -89,8 +88,6 @@ abstract class o {
             param1 = var14.field_a;
             var2 = var14.field_f + " | ";
             var11 = var2;
-            var2 = var11;
-            var11 = var2;
             break L0;
           } else {
             var2 = "";
@@ -102,19 +99,17 @@ abstract class o {
         param1.printStackTrace(var4);
         var4.close();
         var5 = var15.toString();
-        var11 = var5;
-        var2 = var11;
+        var2 = var5;
         var11 = var5;
         var6 = new BufferedReader((Reader) (Object) new StringReader(var5));
         var7 = var6.readLine();
-        var11 = var7;
-        var2 = var11;
+        var2 = var7;
         var11 = var7;
         L1: while (true) {
           var8 = var6.readLine();
+          var2 = var8;
           var11 = var8;
           var2 = var11;
-          var11 = var8;
           if (var8 != null) {
             L2: {
               var9 = var8.indexOf('(');
@@ -162,19 +157,18 @@ abstract class o {
             var2 = var2 + 32;
             continue L1;
           } else {
-            if (param0 == 1) {
-              var2 = var2 + "| " + var7;
-              return var2;
-            } else {
-              return null;
-            }
+            var2 = var11;
+            var11 = var2;
+            var2 = var11;
+            var2 = var2 + "| " + var7;
+            return var2;
           }
         }
     }
 
     abstract void a(int param0, int param1);
 
-    final static void a(qe param0, boolean param1) {
+    final static void a(qe param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var4 = 0;
@@ -244,7 +238,8 @@ abstract class o {
                   if (qe.field_e != 2047) {
                     break L4;
                   } else {
-                    hj.a(250, 5, 1);
+                    int discarded$2 = 1;
+                    hj.a(250, 5);
                     break L4;
                   }
                 }
@@ -403,7 +398,8 @@ abstract class o {
                     if (!pk.a(-12663, 0)) {
                       break L18;
                     } else {
-                      hj.a(242, 13, 1);
+                      int discarded$3 = 1;
+                      hj.a(242, 13);
                       break L18;
                     }
                   }

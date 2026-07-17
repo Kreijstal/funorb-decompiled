@@ -114,7 +114,7 @@ class ah extends qf {
         }
     }
 
-    final static String c(int param0) {
+    final static String c() {
         return eb.field_c;
     }
 

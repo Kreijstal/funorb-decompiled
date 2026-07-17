@@ -51,9 +51,6 @@ final class rma extends mfb {
     }
 
     final static void b(int param0, byte param1) {
-        if (param1 != 71) {
-            return;
-        }
         kib.field_d = 3 & param0 >> 4;
         if (kib.field_d > 2) {
             kib.field_d = 2;
@@ -89,7 +86,7 @@ final class rma extends mfb {
         }
     }
 
-    public static void l(int param0) {
+    public static void l() {
         field_c = null;
         field_d = null;
     }

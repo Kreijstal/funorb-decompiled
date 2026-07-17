@@ -5,7 +5,7 @@ final class msa {
     static int field_a;
     static String field_b;
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean a(char param0) {
         char[] var2 = null;
         int var2_int = 0;
         RuntimeException var2_ref = null;

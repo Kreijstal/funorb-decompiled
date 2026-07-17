@@ -4,7 +4,7 @@
 final class ra {
     static String field_a;
 
-    final static void a(int param0) {
+    final static void a() {
         Object var1_ref_Object = null;
         int var1 = 0;
         Throwable var2 = null;
@@ -25,7 +25,7 @@ final class ra {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
     }
 

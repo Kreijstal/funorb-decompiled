@@ -19,10 +19,7 @@ abstract class fu {
 
     abstract void a(byte param0);
 
-    final static int[] a(boolean param0) {
-        if (!param0) {
-            return null;
-        }
+    final static int[] a() {
         return new int[8];
     }
 
@@ -36,7 +33,8 @@ abstract class fu {
             var3[var4_int] = ud.field_e[pg.a((int) var2[var4_int], 255)];
         }
         ll var4 = new ll(pu.field_a, cc.field_i, lh.field_a[0], lg.field_j[0], ji.field_b[0], ee.field_e[0], var3);
-        kf.f(1);
+        int discarded$0 = 1;
+        kf.f();
         return var4;
     }
 
@@ -56,7 +54,7 @@ abstract class fu {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_d = null;
     }
 

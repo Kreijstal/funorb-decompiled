@@ -37,10 +37,12 @@ final class fe extends l {
             ((fe) this).field_q = true;
             ((fe) this).field_i = param3;
             ((fe) this).field_h = 2;
-            var7 = this.a(param2, param4, param3, 0);
+            int discarded$0 = 0;
+            var7 = this.a(param2, param4, param3);
             var7.field_k[0] = param0 + -param3.b(param2);
             var7.field_k[param2.length()] = param0;
-            bf.a(param2, var7, 0, param3, 15553);
+            int discarded$1 = 15553;
+            bf.a(param2, var7, 0, param3);
         } catch (RuntimeException runtimeException) {
             throw vk.a((Throwable) (Object) runtimeException, "fe.P(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
         }
@@ -72,11 +74,13 @@ final class fe extends l {
             return;
         }
         try {
-            var7 = this.a(param0, param4, param2, 0);
+            int discarded$0 = 0;
+            var7 = this.a(param0, param4, param2);
             var8 = var7;
             var7.field_k[0] = param3;
             var8.field_k[param0.length()] = param3 + param2.b(param0);
-            bf.a(param0, var8, 0, param2, 15553);
+            int discarded$1 = 15553;
+            bf.a(param0, var8, 0, param2);
         } catch (RuntimeException runtimeException) {
             throw vk.a((Throwable) (Object) runtimeException, "fe.Q(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
         }
@@ -91,7 +95,7 @@ final class fe extends l {
         field_k = null;
     }
 
-    private final tg a(String param0, int param1, se param2, int param3) {
+    private final tg a(String param0, int param1, se param2) {
         tg var5 = null;
         RuntimeException var5_ref = null;
         tg var6 = null;
@@ -264,11 +268,13 @@ final class fe extends l {
               ((fe) this).field_q = true;
               ((fe) this).field_i = param2;
               var8 = -121 % ((34 - param3) / 47);
-              var9 = this.a(param1, param0, param2, 0);
+              int discarded$2 = 0;
+              var9 = this.a(param1, param0, param2);
               var7 = param2.b(param1);
               var9.field_k[0] = param4 + -(var7 >> 1);
               var9.field_k[param1.length()] = param4 - -(var7 >> 1);
-              bf.a(param1, var9, 0, param2, 15553);
+              int discarded$3 = 15553;
+              bf.a(param1, var9, 0, param2);
               break L0;
             }
           }
@@ -594,7 +600,8 @@ final class fe extends l {
                           break L9;
                         }
                       }
-                      bf.a(stackIn_41_0, stackIn_41_1, stackIn_41_2, param7, 15553);
+                      int discarded$1 = 15553;
+                      bf.a(stackIn_41_0, stackIn_41_1, stackIn_41_2, param7);
                       break L8;
                     } else {
                       break L8;

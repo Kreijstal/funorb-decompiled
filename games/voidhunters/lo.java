@@ -7,7 +7,7 @@ final class lo {
     static wf[] field_a;
     static phb[] field_c;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         field_c = null;
@@ -74,18 +74,18 @@ final class lo {
             L1: {
               var4_int = param3.a(true, 0);
               if (var4_int < 0) {
-                var4_int = var4_int - param1;
+                var4_int = var4_int - 4194304;
                 break L1;
               } else {
                 break L1;
               }
             }
             L2: {
-              var5 = param3.a(param0, 0);
+              var5 = param3.a(0, 0);
               if (var5 >= 0) {
                 break L2;
               } else {
-                var5 = var5 - param1;
+                var5 = var5 - 4194304;
                 break L2;
               }
             }
@@ -93,13 +93,13 @@ final class lo {
             var7 = param3.a(0, ip.field_p.height);
             var8 = -var4_int + var6;
             var9 = var7 + -var5;
-            var10 = var4_int / param1 * param1;
-            var11 = param1 * (var5 / param1);
-            var12 = var8 / param1;
-            var13 = var9 / param1;
+            var10 = var4_int / 4194304 * 4194304;
+            var11 = 4194304 * (var5 / 4194304);
+            var12 = var8 / 4194304;
+            var13 = var9 / 4194304;
             var14 = var10;
             var15 = var11;
-            var16 = param0;
+            var16 = 0;
             L3: while (true) {
               if (var16 > var12) {
                 break L0;
@@ -107,19 +107,19 @@ final class lo {
                 var17 = 0;
                 L4: while (true) {
                   if (var13 < var17) {
-                    var14 = var14 + param1;
+                    var14 = var14 + 4194304;
                     var15 = var11;
                     var16++;
                     continue L3;
                   } else {
-                    var18 = var14 + param1;
-                    var19 = var15 - -param1;
+                    var18 = var14 + 4194304;
+                    var19 = var15 - -4194304;
                     var20 = param3.a(var14, (byte) 127);
                     var21 = param3.b(true, var15);
                     var22 = param3.a(var18, (byte) 127);
                     var23 = param3.b(true, var19);
                     param2.b(var20, var21, var22 - var20, -var21 + var23);
-                    var15 = var15 + param1;
+                    var15 = var15 + 4194304;
                     var17++;
                     continue L4;
                   }
@@ -132,7 +132,7 @@ final class lo {
           L5: {
             var4 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var4;
-            stackOut_13_1 = new StringBuilder().append("lo.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_13_1 = new StringBuilder().append("lo.A(").append(0).append(44).append(4194304).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;

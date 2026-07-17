@@ -8,7 +8,7 @@ final class ug extends rqa {
         super(param0, param1, param2);
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         field_o = null;
     }
 
@@ -80,7 +80,7 @@ final class ug extends rqa {
         return stackIn_3_0;
     }
 
-    final static void e(byte param0) {
+    final static void e() {
         System.out.println("set_loading_missions(" + unb.field_o + ")");
         System.out.println("set_trap_mouse(" + pcb.field_o + ")");
         System.out.println("set_tab_for_scores(" + me.field_r + ")");
@@ -377,18 +377,13 @@ final class ug extends rqa {
         System.out.println("set_self_destruct_timer(" + oq.field_y + ")");
         System.out.println("set_player_repair_time(" + wra.field_p + ")");
         System.out.println("set_player_repair_amount(" + gka.field_q + ")");
-        if (param0 != 106) {
-          return;
-        } else {
-          System.out.println("set_ai_repair_time(" + uja.field_b + ")");
-          System.out.println("set_ai_repair_amount(" + ela.field_q + ")");
-          System.out.println("set_fighter_repair_time(" + wj.field_p + ")");
-          System.out.println("set_fighter_repair_amount(" + bjb.field_o + ")");
-          System.out.println("set_ready_room_mission_time(" + oq.field_h + ")");
-          System.out.println("set_ready_room_mutator_time(" + oq.field_z + ")");
-          System.out.println("set_ready_room_team_time(" + oq.field_j + ")");
-          return;
-        }
+        System.out.println("set_ai_repair_time(" + uja.field_b + ")");
+        System.out.println("set_ai_repair_amount(" + ela.field_q + ")");
+        System.out.println("set_fighter_repair_time(" + wj.field_p + ")");
+        System.out.println("set_fighter_repair_amount(" + bjb.field_o + ")");
+        System.out.println("set_ready_room_mission_time(" + oq.field_h + ")");
+        System.out.println("set_ready_room_mutator_time(" + oq.field_z + ")");
+        System.out.println("set_ready_room_team_time(" + oq.field_j + ")");
     }
 
     static {

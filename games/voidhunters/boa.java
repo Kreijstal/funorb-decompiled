@@ -221,7 +221,8 @@ final class boa implements ntb {
             }
             {
                 if (var2_int >= 0) {
-                    if (30000L >= mw.e(0)) {
+                    int discarded$4 = 0;
+                    if (30000L >= mw.e()) {
                         return false;
                     }
                 }
@@ -268,7 +269,8 @@ final class boa implements ntb {
               }
             }
             L2: {
-              if (!ikb.a(var3.field_c, var3.field_c, false)) {
+              int discarded$10 = 0;
+              if (!ikb.a(var3.field_c, var3.field_c)) {
                 break L2;
               } else {
                 var4 = 1;
@@ -341,7 +343,8 @@ final class boa implements ntb {
           L0: {
             var3 = (boa) (Object) param1;
             var4 = -3 / ((param0 - 22) / 59);
-            stackOut_0_0 = wpb.a(var3.field_c, var3.field_c, (byte) 28);
+            int discarded$2 = 28;
+            stackOut_0_0 = wpb.a(var3.field_c, var3.field_c);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -378,7 +381,7 @@ final class boa implements ntb {
         return stackIn_1_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }

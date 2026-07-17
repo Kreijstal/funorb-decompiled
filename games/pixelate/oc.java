@@ -30,19 +30,21 @@ final class oc extends ng {
         if (param0 <= 73) {
           var3 = null;
           ((oc) this).a(59, -16, -71, (ng) null);
-          ((oc) this).field_F = this.c(true);
+          int discarded$2 = 1;
+          ((oc) this).field_F = this.c();
           ((oc) this).field_K = ((oc) this).field_F.e();
           ((oc) this).field_L = new tf(((oc) this).field_C >> 1, ((oc) this).field_C);
           return;
         } else {
-          ((oc) this).field_F = this.c(true);
+          int discarded$3 = 1;
+          ((oc) this).field_F = this.c();
           ((oc) this).field_K = ((oc) this).field_F.e();
           ((oc) this).field_L = new tf(((oc) this).field_C >> 1, ((oc) this).field_C);
           return;
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_U = null;
         field_H = null;
         field_N = null;
@@ -52,7 +54,7 @@ final class oc extends ng {
         field_X = null;
     }
 
-    private final tf c(boolean param0) {
+    private final tf c() {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -72,11 +74,12 @@ final class oc extends ng {
                 t.a(var5, var4, var8 << 8 | var8 | var8 << 16);
             }
         }
-        ia.a((byte) 92);
+        int discarded$0 = 92;
+        ia.a();
         return var3;
     }
 
-    final static void a(te param0, boolean param1) {
+    final static void a(te param0) {
         try {
             bn.field_I.a((ak) (Object) param0, (byte) 26);
         } catch (RuntimeException runtimeException) {
@@ -100,7 +103,8 @@ final class oc extends ng {
           if (65536 > ((oc) this).field_Q) {
             hp.a(var6 + (((oc) this).field_E * ((oc) this).field_Q >> 16), ((oc) this).field_C + var7, var6 + ((oc) this).field_E, (byte) -126, var7);
             this.a(((oc) this).field_P[1], 1177347297, var6, var7);
-            ia.a((byte) 92);
+            int discarded$2 = 92;
+            ia.a();
             return;
           } else {
             return;
@@ -240,7 +244,8 @@ final class oc extends ng {
           var6 = 0;
           L0: while (true) {
             if (((oc) this).field_C <= var6) {
-              ia.a((byte) 92);
+              int discarded$2 = 92;
+              ia.a();
               return var15;
             } else {
               L1: {
@@ -289,7 +294,8 @@ final class oc extends ng {
           var6 = 0;
           L3: while (true) {
             if (((oc) this).field_C <= var6) {
-              ia.a((byte) 92);
+              int discarded$3 = 92;
+              ia.a();
               return var16;
             } else {
               L4: {
@@ -340,66 +346,61 @@ final class oc extends ng {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        String stackIn_19_2 = null;
+        String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
         RuntimeException stackOut_16_0 = null;
         StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
         var8 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
-            L1: {
-              var5_int = param2 + ((oc) this).field_E;
-              if (param1 == 1177347297) {
-                break L1;
-              } else {
-                ((oc) this).field_M = -54;
-                break L1;
-              }
-            }
+            var5_int = param2 + ((oc) this).field_E;
             hp.a(((oc) this).field_F.field_F + param2, ((oc) this).field_C + param3, var5_int - ((oc) this).field_F.field_F, (byte) -112, param3);
             var6 = param2 - ((oc) this).field_R;
-            L2: while (true) {
+            L1: while (true) {
               if (var5_int <= var6) {
-                L3: {
-                  ia.a((byte) 92);
+                L2: {
+                  int discarded$3 = 92;
+                  ia.a();
                   if (((oc) this).field_F.field_F + param2 >= t.field_e) {
                     h.a(-122, ((oc) this).field_L);
                     param0.b(-((oc) this).field_R, 0);
                     param0.b(-((oc) this).field_R + ((oc) this).field_M * 2, 0);
                     ((oc) this).field_K.g(0, 0);
-                    ia.a((byte) 92);
+                    int discarded$4 = 92;
+                    ia.a();
                     ((oc) this).field_L.b(param2, param3);
-                    break L3;
+                    break L2;
                   } else {
-                    break L3;
+                    break L2;
                   }
                 }
                 if (-((oc) this).field_F.field_F + var5_int <= t.field_h) {
-                  h.a(param1 + -1177347371, ((oc) this).field_L);
+                  h.a(-74, ((oc) this).field_L);
                   var7 = ((oc) this).field_E - (((oc) this).field_F.field_F + -((oc) this).field_R);
-                  L4: while (true) {
+                  L3: while (true) {
                     if (((oc) this).field_M * 2 >= var7) {
                       param0.b(-var7, 0);
                       param0.b(-var7 + ((oc) this).field_M * 2, 0);
                       ((oc) this).field_F.g(0, 0);
-                      ia.a((byte) 92);
+                      int discarded$5 = 92;
+                      ia.a();
                       ((oc) this).field_L.b(-((oc) this).field_F.field_F + var5_int, param3);
                       break L0;
                     } else {
                       var7 = var7 - 2 * ((oc) this).field_M;
-                      continue L4;
+                      continue L3;
                     }
                   }
                 } else {
@@ -408,39 +409,39 @@ final class oc extends ng {
               } else {
                 param0.b(var6, param3);
                 var6 = var6 + param0.field_F;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var5 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var5;
-            stackOut_16_1 = new StringBuilder().append("oc.A(");
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackOut_14_0 = (RuntimeException) var5;
+            stackOut_14_1 = new StringBuilder().append("oc.A(");
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
             if (param0 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
-              break L5;
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L4;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
-              break L5;
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L4;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw aa.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + 1177347297 + 44 + param2 + 44 + param3 + 41);
         }
     }
 

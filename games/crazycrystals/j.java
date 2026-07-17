@@ -130,17 +130,17 @@ final class j implements Runnable {
         }
     }
 
-    final static void a(ak param0, int param1, boolean param2) {
+    final static void a(ak param0) {
         md var3 = tp.field_f;
         try {
-            var3.d(8, param1);
+            var3.d(8, 3);
             var3.a(true, 5);
             var3.a(true, 0);
             var3.c(-161478600, param0.field_g);
             var3.a(true, param0.field_h);
             var3.a(true, param0.field_j);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "j.I(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 0 + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "j.I(" + (param0 != null ? "{...}" : "null") + 44 + 3 + 44 + 0 + 41);
         }
     }
 
@@ -250,7 +250,6 @@ final class j implements Runnable {
             InterruptedException var4 = null;
             Throwable var5 = null;
             int var6 = 0;
-            Object var7 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             var6 = CrazyCrystals.field_B;
@@ -377,8 +376,8 @@ final class j implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter4;
               L17: {
                 var1_ref = (Exception) (Object) decompiledCaughtException;
-                var7 = null;
-                wp.a((Throwable) (Object) var1_ref, (String) null, 21862);
+                int discarded$1 = 21862;
+                wp.a((Throwable) (Object) var1_ref, (String) null);
                 break L17;
               }
             }
@@ -472,7 +471,7 @@ final class j implements Runnable {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_i = null;
         field_h = null;
     }

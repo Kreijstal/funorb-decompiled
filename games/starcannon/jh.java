@@ -14,7 +14,7 @@ final class jh {
     private uh field_g;
     static String field_e;
 
-    public static void b(int param0) {
+    public static void b() {
         field_e = null;
         field_b = null;
         field_f = null;
@@ -54,10 +54,10 @@ final class jh {
             IOException var2 = null;
             ia var4 = null;
             ia var5 = null;
-            int stackIn_11_0 = 0;
+            int stackIn_9_0 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_10_0 = 0;
-            int stackOut_9_0 = 0;
+            int stackOut_8_0 = 0;
+            int stackOut_7_0 = 0;
             L0: {
               if (null != ah.field_e) {
                 break L0;
@@ -69,14 +69,6 @@ final class jh {
             if (0 == ah.field_e.field_b) {
               return false;
             } else {
-              L1: {
-                if (param0 == -68) {
-                  break L1;
-                } else {
-                  field_e = null;
-                  break L1;
-                }
-              }
               long dupTemp$2 = dd.b(71);
               ca.field_Y = dupTemp$2;
               ik.field_p = dupTemp$2;
@@ -86,30 +78,30 @@ final class jh {
                 return true;
               } else {
                 try {
-                  L2: {
-                    L3: {
+                  L1: {
+                    L2: {
                       m.field_b = new sb((java.net.Socket) ah.field_e.field_f, og.field_a);
                       d.field_b.field_g = 0;
                       var4 = se.field_p;
                       var5 = var4;
                       if (!param1) {
-                        stackOut_10_0 = -1;
-                        stackIn_11_0 = stackOut_10_0;
-                        break L3;
+                        stackOut_8_0 = -1;
+                        stackIn_9_0 = stackOut_8_0;
+                        break L2;
                       } else {
-                        stackOut_9_0 = -2;
-                        stackIn_11_0 = stackOut_9_0;
-                        break L3;
+                        stackOut_7_0 = -2;
+                        stackIn_9_0 = stackOut_7_0;
+                        break L2;
                       }
                     }
-                    wc.field_i = stackIn_11_0;
-                    hh.field_a = stackIn_11_0;
-                    bh.field_d = stackIn_11_0;
+                    wc.field_i = stackIn_9_0;
+                    hh.field_a = stackIn_9_0;
+                    bh.field_d = stackIn_9_0;
                     var5.field_g = 0;
                     r.field_c = ua.field_b;
                     oe.a(r.field_d, 32, (rb) (Object) d.field_b, bf.field_s, jg.field_A);
                     nf.a(-1, (byte) 95);
-                    break L2;
+                    break L1;
                   }
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;

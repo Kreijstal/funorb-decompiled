@@ -8,7 +8,7 @@ final class fj {
     static int field_a;
     static int field_b;
 
-    final static void a(aa param0, byte param1) {
+    final static void a(aa param0) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -31,13 +31,13 @@ final class fj {
         long stackIn_3_1 = 0L;
         String stackIn_3_2 = null;
         int stackIn_3_3 = 0;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        String stackIn_26_2 = null;
+        String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         String stackOut_0_0 = null;
         long stackOut_0_1 = 0L;
@@ -50,14 +50,14 @@ final class fj {
         long stackOut_1_1 = 0L;
         String stackOut_1_2 = null;
         int stackOut_1_3 = 0;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
         RuntimeException stackOut_23_0 = null;
         StringBuilder stackOut_23_1 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
+        String stackOut_23_2 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
         try {
           L0: {
             L1: {
@@ -157,18 +157,10 @@ final class fj {
                 }
               }
             }
-            L6: {
-              eg.field_n.c(-24);
-              eg.field_n.b(false, (byte) -98);
-              eg.field_n.a(param0.field_j, param0.field_l, -3);
-              eg.field_n.b(8893);
-              if (param1 > 96) {
-                break L6;
-              } else {
-                field_a = -88;
-                break L6;
-              }
-            }
+            eg.field_n.c(-24);
+            eg.field_n.b(false, (byte) -98);
+            eg.field_n.a(param0.field_j, param0.field_l, -3);
+            eg.field_n.b(8893);
             eg.field_n.a((byte) 99, param0);
             var13 = eg.field_n;
             var3 = uo.field_a;
@@ -178,33 +170,33 @@ final class fj {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L6: {
             var2 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) var2;
-            stackOut_23_1 = new StringBuilder().append("fj.A(");
-            stackIn_25_0 = stackOut_23_0;
-            stackIn_25_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
+            stackOut_21_0 = (RuntimeException) var2;
+            stackOut_21_1 = new StringBuilder().append("fj.A(");
+            stackIn_23_0 = stackOut_21_0;
+            stackIn_23_1 = stackOut_21_1;
+            stackIn_22_0 = stackOut_21_0;
+            stackIn_22_1 = stackOut_21_1;
             if (param0 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
-              stackOut_25_2 = "null";
-              stackIn_26_0 = stackOut_25_0;
-              stackIn_26_1 = stackOut_25_1;
-              stackIn_26_2 = stackOut_25_2;
-              break L7;
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "null";
+              stackIn_24_0 = stackOut_23_0;
+              stackIn_24_1 = stackOut_23_1;
+              stackIn_24_2 = stackOut_23_2;
+              break L6;
             } else {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
-              stackOut_24_2 = "{...}";
-              stackIn_26_0 = stackOut_24_0;
-              stackIn_26_1 = stackOut_24_1;
-              stackIn_26_2 = stackOut_24_2;
-              break L7;
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "{...}";
+              stackIn_24_0 = stackOut_22_0;
+              stackIn_24_1 = stackOut_22_1;
+              stackIn_24_2 = stackOut_22_2;
+              break L6;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + param1 + 41);
+          throw aa.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + 125 + 41);
         }
     }
 
@@ -234,7 +226,7 @@ final class fj {
             L0: {
               var5 = -63 % ((param2 - 41) / 63);
               var4 = param3.getGraphics();
-              qa.field_f.a(var4, false, param0, param1);
+              qa.field_f.a(var4, false, 0, 0);
               var4.dispose();
               break L0;
             }
@@ -250,7 +242,7 @@ final class fj {
           L1: {
             var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var4_ref2;
-            stackOut_4_1 = new StringBuilder().append("fj.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_4_1 = new StringBuilder().append("fj.D(").append(0).append(44).append(0).append(44).append(param2).append(44);
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -278,15 +270,12 @@ final class fj {
     }
 
     final static void a(boolean param0, int param1) {
-        if (param0) {
-            return;
-        }
         ui.field_a = 133;
         ui.field_j = 21845;
         ui.field_k = 33;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
     }
 

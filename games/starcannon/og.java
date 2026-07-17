@@ -9,7 +9,7 @@ final class og {
     static hl[] field_d;
     static String field_e;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
         field_a = null;
@@ -23,7 +23,7 @@ final class og {
     final static rj a(int param0, byte param1) {
         rj var2 = new rj();
         sd.field_d.b(124, (rf) (Object) var2);
-        u.a(param0, 1);
+        u.a(4, 1);
         return var2;
     }
 

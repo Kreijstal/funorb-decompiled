@@ -9,19 +9,17 @@ final class oi {
     static String field_c;
 
     final synchronized static byte[] a(boolean param0, int param1) {
-        byte[] var2_ref_byte__ = null;
-        int var2 = 0;
-        byte[] var3 = null;
+        byte[] var2 = null;
         L0: {
           if (param1 != 100) {
             break L0;
           } else {
             if (hb.field_b > 0) {
-              int fieldTemp$6 = hb.field_b - 1;
+              int fieldTemp$4 = hb.field_b - 1;
               hb.field_b = hb.field_b - 1;
-              var2_ref_byte__ = dj.field_I[fieldTemp$6];
+              var2 = dj.field_I[fieldTemp$4];
               dj.field_I[hb.field_b] = null;
-              return var2_ref_byte__;
+              return var2;
             } else {
               break L0;
             }
@@ -32,63 +30,17 @@ final class oi {
             break L1;
           } else {
             if (0 < ah.field_d) {
-              int fieldTemp$7 = ah.field_d - 1;
+              int fieldTemp$5 = ah.field_d - 1;
               ah.field_d = ah.field_d - 1;
-              var2_ref_byte__ = rd.field_s[fieldTemp$7];
+              var2 = rd.field_s[fieldTemp$5];
               rd.field_s[ah.field_d] = null;
-              return var2_ref_byte__;
+              return var2;
             } else {
               break L1;
             }
           }
         }
-        if (!param0) {
-          L2: {
-            if (param1 != 30000) {
-              break L2;
-            } else {
-              if (ag.field_i <= 0) {
-                break L2;
-              } else {
-                int fieldTemp$8 = ag.field_i - 1;
-                ag.field_i = ag.field_i - 1;
-                var2_ref_byte__ = sd.field_C[fieldTemp$8];
-                sd.field_C[ag.field_i] = null;
-                return var2_ref_byte__;
-              }
-            }
-          }
-          L3: {
-            if (sg.field_c == null) {
-              break L3;
-            } else {
-              var2 = 0;
-              L4: while (true) {
-                if (var2 >= nk.field_c.length) {
-                  break L3;
-                } else {
-                  if (nk.field_c[var2] == param1) {
-                    if (0 < oa.field_b[var2]) {
-                      oa.field_b[var2] = oa.field_b[var2] - 1;
-                      var3 = sg.field_c[var2][oa.field_b[var2] - 1];
-                      sg.field_c[var2][oa.field_b[var2]] = null;
-                      return var3;
-                    } else {
-                      var2++;
-                      continue L4;
-                    }
-                  } else {
-                    var2++;
-                    continue L4;
-                  }
-                }
-              }
-            }
-          }
-          return new byte[param1];
-        } else {
-          return null;
-        }
+        return null;
     }
 
     final static void a(int param0, int param1) {
@@ -108,13 +60,13 @@ final class oi {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    gj.a((byte) -88, param0, var5);
+                    gj.a((byte) -88, 5, var5);
                     var5 = (ea) (Object) ea.field_g.d(1);
                     continue L2;
                   }
                 }
               } else {
-                tj.a(param0, 86, var4);
+                tj.a(5, 86, var4);
                 var4 = (se) (Object) sj.field_g.d(1);
                 continue L1;
               }
@@ -123,7 +75,7 @@ final class oi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2, "oi.B(" + param0 + 44 + 116 + 41);
+          throw t.a((Throwable) (Object) var2, "oi.B(" + 5 + 44 + 116 + 41);
         }
     }
 
@@ -182,7 +134,7 @@ final class oi {
         String stackOut_9_2 = null;
         try {
           L0: {
-            var5 = -59 % ((41 - param0) / 39);
+            var5 = -1;
             var4_int = param3.a((byte) 127, param2);
             var6 = param3.a(param1, -101, var4_int);
             stackOut_0_0 = rd.a(var4_int, -122, var6, param3);
@@ -194,7 +146,7 @@ final class oi {
           L1: {
             var4 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var4;
-            stackOut_2_1 = new StringBuilder().append("oi.C(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("oi.C(").append(-39).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -272,7 +224,7 @@ final class oi {
         return stackIn_1_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         int var1 = 59;
         field_e = null;

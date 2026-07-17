@@ -93,7 +93,7 @@ final class om extends ml {
         return stackIn_3_0;
     }
 
-    final static int a(int param0, int param1, byte[] param2, int param3) {
+    final static int a(int param0, int param1, byte[] param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -168,10 +168,6 @@ final class om extends ml {
     }
 
     public static void c(byte param0) {
-        if (param0 < 76) {
-            Object var2 = null;
-            om.a((String) null, (byte) -77);
-        }
         field_C = null;
     }
 

@@ -645,7 +645,7 @@ final class uf extends ql {
         }
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_f = null;
         field_g = null;
         field_d = null;

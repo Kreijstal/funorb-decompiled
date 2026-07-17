@@ -15,7 +15,7 @@ final class ol extends gh {
     static int field_Ub;
     static int field_dc;
 
-    final static qb d(byte param0) {
+    final static qb d() {
         int fieldTemp$0 = mg.field_hc - 1;
         mg.field_hc = mg.field_hc - 1;
         if (!(0 <= fieldTemp$0)) {
@@ -26,29 +26,53 @@ final class ol extends gh {
     }
 
     final static void l(int param0) {
-        jf.c(true);
+        int discarded$3 = 1;
+        jf.c();
         if (param0 != 0) {
             field_bc = 91;
         }
     }
 
     final static boolean j(int param0) {
-        if (nj.field_Q >= 20) {
-          if (ri.c(6995)) {
-            if (ua.field_o > 0) {
-              if (a.a(105)) {
-                return false;
+        if (param0 == 0) {
+          if (nj.field_Q >= 20) {
+            if (ri.c(6995)) {
+              if (ua.field_o > 0) {
+                int discarded$8 = 105;
+                if (a.a()) {
+                  return false;
+                } else {
+                  return true;
+                }
               } else {
-                return true;
+                return false;
               }
             } else {
-              return false;
+              return true;
             }
           } else {
             return true;
           }
         } else {
-          return true;
+          ol.l(15);
+          if (nj.field_Q >= 20) {
+            if (ri.c(6995)) {
+              if (ua.field_o > 0) {
+                int discarded$9 = 105;
+                if (a.a()) {
+                  return false;
+                } else {
+                  return true;
+                }
+              } else {
+                return false;
+              }
+            } else {
+              return true;
+            }
+          } else {
+            return true;
+          }
         }
     }
 
@@ -56,13 +80,13 @@ final class ol extends gh {
         if (param3 + (param0 - -param2) <= pb.field_j) {
             return param0 - -param2;
         }
-        if (!(param1 > param0 - param3)) {
+        if (!(0 > param0 - param3)) {
             return -param3 + param0;
         }
         return pb.field_j + -param3;
     }
 
-    final static boolean a(int[] param0, int param1, int param2) {
+    final static boolean a(int[] param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -131,35 +155,31 @@ final class ol extends gh {
         return stackIn_5_0 != 0;
     }
 
-    final static ud a(int param0, boolean param1, int param2, int param3) {
+    final static ud a() {
         ud var4 = null;
         int var5 = 0;
         var5 = SteelSentinels.field_G;
-        if (param1) {
-          var4 = (ud) (Object) uf.field_f.e(13058);
-          L0: while (true) {
-            if (var4 != null) {
-              if (var4.field_t == param2) {
-                return var4;
-              } else {
-                var4 = (ud) (Object) uf.field_f.a((byte) -86);
-                continue L0;
-              }
-            } else {
-              var4 = new ud();
-              var4.field_u = 10;
-              var4.field_t = param2;
-              uf.field_f.a(3, (ck) (Object) var4);
-              r.a(27153, var4, param0);
+        var4 = (ud) (Object) uf.field_f.e(13058);
+        L0: while (true) {
+          if (var4 != null) {
+            if (var4.field_t == 0) {
               return var4;
+            } else {
+              var4 = (ud) (Object) uf.field_f.a((byte) -86);
+              continue L0;
             }
+          } else {
+            var4 = new ud();
+            var4.field_u = 10;
+            var4.field_t = 0;
+            uf.field_f.a(3, (ck) (Object) var4);
+            r.a(27153, var4, 7);
+            return var4;
           }
-        } else {
-          return null;
         }
     }
 
-    public static void k(int param0) {
+    public static void k() {
         field_Xb = null;
         field_cc = null;
         field_Sb = null;
@@ -588,7 +608,8 @@ final class ol extends gh {
               }
               L2: {
                 if (pm.field_T == 14) {
-                  um.f((byte) 3);
+                  int discarded$2 = 3;
+                  um.f();
                   break L2;
                 } else {
                   break L2;
@@ -639,62 +660,70 @@ final class ol extends gh {
                   break L4;
                 }
               }
-              if (!td.field_Sb) {
-                return;
-              } else {
-                lc.field_c = null;
-                un.field_b = new ul();
-                var13 = ge.field_m;
-                var11 = var13;
-                var9 = var11;
-                var7 = var9;
-                var4 = var7;
-                var1_array = var4;
-                var2 = 0;
-                L8: while (true) {
-                  if (8 <= var2) {
-                    var14 = ce.field_t;
-                    var12 = var14;
-                    var10 = var12;
-                    var8 = var10;
-                    var5 = var8;
-                    var1_array = var5;
-                    var6 = 0;
-                    var2 = var6;
-                    L9: while (true) {
-                      if (8 <= var6) {
-                        td.field_Sb = false;
-                        L10: {
-                          if (!jc.field_d) {
-                            break L10;
-                          } else {
-                            oa.f(-12161);
-                            im.a(true);
-                            ub.a(true);
-                            jc.field_d = false;
-                            break L10;
-                          }
+              L8: {
+                if (!td.field_Sb) {
+                  break L8;
+                } else {
+                  lc.field_c = null;
+                  un.field_b = new ul();
+                  var13 = ge.field_m;
+                  var11 = var13;
+                  var9 = var11;
+                  var7 = var9;
+                  var4 = var7;
+                  var1_array = var4;
+                  var2 = 0;
+                  L9: while (true) {
+                    if (8 <= var2) {
+                      var14 = ce.field_t;
+                      var12 = var14;
+                      var10 = var12;
+                      var8 = var10;
+                      var5 = var8;
+                      var1_array = var5;
+                      var6 = 0;
+                      var2 = var6;
+                      L10: while (true) {
+                        if (8 <= var6) {
+                          td.field_Sb = false;
+                          break L8;
+                        } else {
+                          var14[var6] = 0;
+                          var6++;
+                          continue L10;
                         }
-                        break L0;
-                      } else {
-                        var14[var6] = 0;
-                        var6++;
-                        continue L9;
                       }
+                    } else {
+                      var13[var2] = 0;
+                      var2++;
+                      continue L9;
                     }
-                  } else {
-                    var13[var2] = 0;
-                    var2++;
-                    continue L8;
                   }
                 }
+              }
+              if (param0) {
+                L11: {
+                  if (!jc.field_d) {
+                    break L11;
+                  } else {
+                    oa.f(-12161);
+                    im.a(true);
+                    int discarded$3 = 1;
+                    ub.a();
+                    jc.field_d = false;
+                    break L11;
+                  }
+                }
+                break L0;
+              } else {
+                return;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var1, "ol.G(" + 1 + 41);
+          throw ci.a((Throwable) (Object) var1, "ol.G(" + param0 + 41);
         }
     }
 

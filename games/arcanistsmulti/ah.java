@@ -9,16 +9,17 @@ final class ah {
     static int[] field_f;
     static String field_d;
 
-    final static void a(qb[] param0, int param1, int param2, int param3, qb[] param4, dj param5, int param6, int param7, int param8, int param9, int param10) {
+    final static void a(qb[] param0, int param1, int param2, int param3, qb[] param4, dj param5, int param6, int param7, int param8, int param9) {
         try {
             int var11_int = 0;
-            fk.d(-11);
+            int discarded$0 = -11;
+            fk.d();
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "ah.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 44 + -97 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "ah.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 8 + 44 + 8 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 44 + param7 + 44 + 2 + 44 + param9 + 44 + -97 + 41);
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_e = null;
         field_d = null;

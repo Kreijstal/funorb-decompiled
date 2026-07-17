@@ -13,16 +13,13 @@ final class ga {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        rh.field_c.a(param0, param1, -2147483648, param5, param2);
-        if (param3 != 22478) {
-            field_a = null;
-        }
+        rh.field_c.a(5, 640, -2147483648, param5, 0);
         if (!(tl.field_Fb == null)) {
             tl.field_Fb.a(param5, param6, -hf.field_g + param4, param5, param4, 6);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
     }

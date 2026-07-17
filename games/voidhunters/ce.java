@@ -5,7 +5,7 @@ final class ce extends rqa {
     static ij field_p;
     static byte[] field_o;
 
-    public static void a(int param0) {
+    public static void a() {
         field_p = null;
         field_o = null;
     }
@@ -79,7 +79,7 @@ final class ce extends rqa {
         return stackIn_3_0;
     }
 
-    final static void b(boolean param0) {
+    final static void b() {
         ema.field_o = new mfb[12];
         ema.field_o[0] = (mfb) (Object) new fpb();
         ema.field_o[1] = (mfb) (Object) new deb();
@@ -95,7 +95,7 @@ final class ce extends rqa {
         ema.field_o[10] = (mfb) (Object) new jeb();
     }
 
-    final static void a(asb param0, boolean param1) {
+    final static void a(asb param0) {
         fca var2 = null;
         try {
             fca.b(param0.a("", true, "headers.packvorbis"));

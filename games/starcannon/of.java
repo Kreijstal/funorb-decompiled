@@ -8,7 +8,7 @@ final class of extends rf {
     static int field_f;
     int field_h;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_j = null;
         field_g = null;
     }

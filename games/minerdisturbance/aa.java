@@ -34,30 +34,22 @@ final class aa {
     private final int a(int param0, int param1) {
         int var3 = 0;
         int var4 = 0;
-        L0: {
-          var4 = MinerDisturbance.field_ab;
-          if (param0 == -32676) {
-            break L0;
-          } else {
-            ((aa) this).field_c = null;
-            break L0;
-          }
-        }
+        var4 = MinerDisturbance.field_ab;
         var3 = ((aa) this).field_c.length;
-        L1: while (true) {
+        L0: while (true) {
           if (var3 > param1) {
             return var3;
           } else {
             if (!((aa) this).field_k) {
               var3 = var3 + ((aa) this).field_a;
-              continue L1;
+              continue L0;
             } else {
               if (0 == var3) {
                 var3 = 1;
-                continue L1;
+                continue L0;
               } else {
                 var3 = var3 * ((aa) this).field_a;
-                continue L1;
+                continue L0;
               }
             }
           }
@@ -79,9 +71,6 @@ final class aa {
         int[] var4 = new int[this.a(-32676, param1)];
         int[] var3 = var4;
         ai.a(((aa) this).field_c, 0, var4, 0, ((aa) this).field_c.length);
-        if (param0 > -27) {
-            ((aa) this).field_k = false;
-        }
         ((aa) this).field_c = var4;
     }
 
@@ -124,7 +113,7 @@ final class aa {
         this.a(1 + ((aa) this).field_g, param1, param0 + -6632);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_h = null;
         field_l = null;
         field_e = null;

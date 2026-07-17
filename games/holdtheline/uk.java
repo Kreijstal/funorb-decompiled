@@ -72,7 +72,7 @@ final class uk extends IOException {
         super(param0);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = 97;
         field_c = null;
         field_f = null;
@@ -82,7 +82,7 @@ final class uk extends IOException {
         field_g = null;
     }
 
-    final static kg a(String param0, boolean param1, int param2, boolean param3) {
+    final static kg a(String param0) {
         int var4_int = 0;
         RuntimeException var4 = null;
         kg stackIn_1_0 = null;
@@ -105,8 +105,8 @@ final class uk extends IOException {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var4_int = -104 % ((42 - param2) / 54);
-            stackOut_0_0 = new kg(param0, true, param1);
+            var4_int = 0;
+            stackOut_0_0 = new kg(param0, true, false);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -138,7 +138,7 @@ final class uk extends IOException {
               break L1;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + param2 + 44 + 1 + 41);
+          throw kk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 0 + 44 + 105 + 44 + 1 + 41);
         }
         return stackIn_1_0;
     }

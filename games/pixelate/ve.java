@@ -11,7 +11,7 @@ final class ve extends ak {
     private ak field_Fb;
     private int field_Hb;
 
-    public static void b(byte param0) {
+    public static void b() {
         field_Ib = null;
         field_Jb = null;
         field_Gb = null;
@@ -432,98 +432,57 @@ final class ve extends ak {
         Object var10 = null;
         Object var11 = null;
         int[] var12 = null;
+        tf var13 = null;
+        tf var14 = null;
         int[] var15 = null;
         int[] var16 = null;
-        tf var17 = null;
-        tf var18 = null;
-        int[] var19 = null;
-        tf var20 = null;
-        tf var21 = null;
-        int[] var22 = null;
-        var22 = t.field_k;
-        var19 = var22;
-        var16 = var19;
-        var15 = var16;
-        var12 = var15;
-        var6 = var12;
-        var7 = t.field_j;
-        var8 = t.field_d;
-        var9 = new tf(16, param3);
-        var9.c();
-        if (!param4) {
-          L0: {
-            field_Kb = 20;
-            t.g(0, 0, 16, param3, param5, param2);
-            var10 = null;
-            if (param0) {
-              var17 = var9.a();
-              var10 = (Object) (Object) var17;
-              var17.c();
-              t.b(0, 0, 5, 0);
-              t.b(0, 1, 3, 0);
-              t.b(0, 2, 2, 0);
-              t.b(0, 3, 1, 0);
-              t.b(0, 4, 1, 0);
-              break L0;
-            } else {
-              break L0;
-            }
+        int[] var17 = null;
+        int[] var18 = null;
+        L0: {
+          var18 = t.field_k;
+          var17 = var18;
+          var16 = var17;
+          var15 = var16;
+          var12 = var15;
+          var6 = var12;
+          var7 = t.field_j;
+          var8 = t.field_d;
+          var9 = new tf(16, param3);
+          var9.c();
+          t.g(0, 0, 16, param3, param5, param2);
+          var10 = null;
+          if (param0) {
+            var13 = var9.a();
+            var10 = (Object) (Object) var13;
+            var13.c();
+            t.b(0, 0, 5, 0);
+            t.b(0, 1, 3, 0);
+            t.b(0, 2, 2, 0);
+            t.b(0, 3, 1, 0);
+            t.b(0, 4, 1, 0);
+            break L0;
+          } else {
+            break L0;
           }
-          L1: {
-            var11 = null;
-            if (param1) {
-              var18 = var9.a();
-              var11 = (Object) (Object) var18;
-              var18.c();
-              t.b(11, 0, 5, 0);
-              t.b(13, 1, 3, 0);
-              t.b(14, 2, 2, 0);
-              t.b(15, 3, 1, 0);
-              t.b(15, 4, 1, 0);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          t.a(var22, var7, var8);
-          return new tf[]{null, null, null, (tf) var10, var9, (tf) var11, null, null, null};
-        } else {
-          L2: {
-            t.g(0, 0, 16, param3, param5, param2);
-            var10 = null;
-            if (param0) {
-              var20 = var9.a();
-              var10 = (Object) (Object) var20;
-              var20.c();
-              t.b(0, 0, 5, 0);
-              t.b(0, 1, 3, 0);
-              t.b(0, 2, 2, 0);
-              t.b(0, 3, 1, 0);
-              t.b(0, 4, 1, 0);
-              break L2;
-            } else {
-              break L2;
-            }
-          }
-          L3: {
-            var11 = null;
-            if (param1) {
-              var21 = var9.a();
-              var11 = (Object) (Object) var21;
-              var21.c();
-              t.b(11, 0, 5, 0);
-              t.b(13, 1, 3, 0);
-              t.b(14, 2, 2, 0);
-              t.b(15, 3, 1, 0);
-              t.b(15, 4, 1, 0);
-              break L3;
-            } else {
-              break L3;
-            }
-          }
-          t.a(var22, var7, var8);
-          return new tf[]{null, null, null, (tf) var10, var9, (tf) var11, null, null, null};
         }
+        L1: {
+          var11 = null;
+          if (param1) {
+            var14 = var9.a();
+            var11 = (Object) (Object) var14;
+            var14.c();
+            t.b(11, 0, 5, 0);
+            t.b(13, 1, 3, 0);
+            t.b(14, 2, 2, 0);
+            t.b(15, 3, 1, 0);
+            t.b(15, 4, 1, 0);
+            break L1;
+          } else {
+            break L1;
+          }
+        }
+        t.a(var18, var7, var8);
+        return new tf[]{null, null, null, (tf) var10, var9, (tf) var11, null, null, null};
     }
 
     final int b(int param0, boolean param1) {
@@ -555,7 +514,7 @@ final class ve extends ak {
                     break L1;
                   } else {
                     if (((ve) this).field_Eb.length() > 0) {
-                      StringBuilder discarded$5 = nk.a(((ve) this).field_Eb, -1 + ((ve) this).field_Eb.length(), ' ', 16736352);
+                      StringBuilder discarded$6 = nk.a(((ve) this).field_Eb, -1 + ((ve) this).field_Eb.length(), ' ', 16736352);
                       break L1;
                     } else {
                       break L1;
@@ -563,8 +522,9 @@ final class ve extends ak {
                   }
                 }
                 L2: {
-                  if (aq.a(nj.field_f, (CharSequence) (Object) ((ve) this).field_Eb, (byte) -117)) {
-                    StringBuilder discarded$6 = ((ve) this).field_Eb.append(nj.field_f);
+                  int discarded$7 = -117;
+                  if (aq.a(nj.field_f, (CharSequence) (Object) ((ve) this).field_Eb)) {
+                    StringBuilder discarded$8 = ((ve) this).field_Eb.append(nj.field_f);
                     break L2;
                   } else {
                     L3: {
@@ -572,7 +532,7 @@ final class ve extends ak {
                         break L3;
                       } else {
                         if (nj.field_f == 91) {
-                          StringBuilder discarded$7 = ((ve) this).field_Eb.append(nj.field_f);
+                          StringBuilder discarded$9 = ((ve) this).field_Eb.append(nj.field_f);
                           break L2;
                         } else {
                           break L3;
@@ -584,7 +544,7 @@ final class ve extends ak {
                         break L4;
                       } else {
                         if (nj.field_f == 35) {
-                          StringBuilder discarded$8 = ((ve) this).field_Eb.append(nj.field_f);
+                          StringBuilder discarded$10 = ((ve) this).field_Eb.append(nj.field_f);
                           break L2;
                         } else {
                           break L4;
@@ -594,7 +554,7 @@ final class ve extends ak {
                     if (nj.field_f != 93) {
                       break L2;
                     } else {
-                      StringBuilder discarded$9 = ((ve) this).field_Eb.append(nj.field_f);
+                      StringBuilder discarded$11 = ((ve) this).field_Eb.append(nj.field_f);
                       break L2;
                     }
                   }
@@ -724,7 +684,8 @@ final class ve extends ak {
             ((ve) this).field_Lb.a(3 - -fq.field_q, fq.field_q, 5, 256, var9_int);
             var10 = var9_int + 10;
             var11 = 6 + 2 * fq.field_q;
-            var12 = ui.a(param2, param0, var10, (byte) -1);
+            int discarded$1 = -1;
+            var12 = ui.a(param2, param0, var10);
             var13 = pj.a(var11, param1, param3, (byte) 67);
             ((ve) this).a(var13, var11, var12, 256, var10);
             break L0;
@@ -836,7 +797,7 @@ final class ve extends ak {
         }
     }
 
-    final static void j(int param0) {
+    final static void j() {
         cd.field_e = new String[d.field_b];
         cd.field_e[17] = ap.field_i;
         cd.field_e[20] = sh.field_c;

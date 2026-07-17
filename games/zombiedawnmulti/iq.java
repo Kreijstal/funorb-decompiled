@@ -10,9 +10,6 @@ final class iq {
     static String field_a;
 
     final static int[][] a(int param0) {
-        if (param0 != 45) {
-            boolean discarded$0 = iq.a((byte) -49, 120);
-        }
         return uf.field_b;
     }
 
@@ -29,17 +26,13 @@ final class iq {
         if (!(param1 % 100 == 0)) {
             return true;
         }
-        if (!(0 == param1 % 400)) {
-            return false;
-        }
-        if (param0 != 98) {
-            field_c = null;
+        if (0 == param1 % 400) {
             return true;
         }
-        return true;
+        return false;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         pi.a(135, true, 170, true, new int[11], 470, 1, 30);
         pi.a(118, true, 170, true, new int[8], 460, 2, 34);
         pi.a(430, false, 0, true, new int[2], 640, 3, 40);

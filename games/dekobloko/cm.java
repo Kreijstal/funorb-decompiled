@@ -151,7 +151,7 @@ final class cm implements Iterator {
         }
     }
 
-    private final void b(byte param0) {
+    private final void b() {
         int var2 = 4;
         ((cm) this).field_e = 1;
         ((cm) this).field_j = null;
@@ -257,7 +257,8 @@ final class cm implements Iterator {
                     if (var5 >= var3_int) {
                       break L3;
                     } else {
-                      if (!fl.a(param1.charAt(var5), (byte) 23)) {
+                      int discarded$5 = 23;
+                      if (!fl.a(param1.charAt(var5))) {
                         break L3;
                       } else {
                         var5++;
@@ -304,7 +305,8 @@ final class cm implements Iterator {
                         if (var3_int <= var5) {
                           break L7;
                         } else {
-                          if (!fl.a(param1.charAt(var5), (byte) 23)) {
+                          int discarded$6 = 23;
+                          if (!fl.a(param1.charAt(var5))) {
                             break L7;
                           } else {
                             var5++;
@@ -322,9 +324,9 @@ final class cm implements Iterator {
                           } else {
                             var5++;
                             var10 = cb.a((byte) 100, (CharSequence) (Object) var9);
-                            StringBuilder discarded$3 = var6.append(param1.substring(var7, var8));
+                            StringBuilder discarded$7 = var6.append(param1.substring(var7, var8));
                             var7 = var5;
-                            StringBuilder discarded$4 = var6.append(param2[var10]);
+                            StringBuilder discarded$8 = var6.append(param2[var10]);
                             continue L5;
                           }
                         }
@@ -333,7 +335,7 @@ final class cm implements Iterator {
                       }
                     }
                   } else {
-                    StringBuilder discarded$5 = var6.append(param1.substring(var7));
+                    StringBuilder discarded$9 = var6.append(param1.substring(var7));
                     stackOut_27_0 = var6.toString();
                     stackIn_28_0 = stackOut_27_0;
                     break L0;
@@ -404,7 +406,8 @@ final class cm implements Iterator {
         ((cm) this).field_j = null;
         try {
             ((cm) this).field_k = param0;
-            this.b((byte) -117);
+            int discarded$0 = -117;
+            this.b();
         } catch (RuntimeException runtimeException) {
             throw dh.a((Throwable) (Object) runtimeException, "cm.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }

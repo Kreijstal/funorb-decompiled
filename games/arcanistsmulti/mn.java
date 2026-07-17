@@ -106,7 +106,7 @@ final class mn extends rl {
         return stackIn_9_0;
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_w = null;
         field_t = null;
         int var1 = 0;

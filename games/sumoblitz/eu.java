@@ -4,7 +4,7 @@
 abstract class eu {
     static ri[] field_a;
 
-    final static int a(byte param0) {
+    final static int a() {
         return lq.field_d;
     }
 
@@ -12,7 +12,7 @@ abstract class eu {
         field_a = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7) {
+    final static void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
         RuntimeException var8 = null;
         int var8_int = 0;
         int var9 = 0;
@@ -80,94 +80,90 @@ abstract class eu {
               }
             }
             var8_int = 0;
-            if (param0 <= -64) {
-              L3: {
-                if (param2 < param1) {
-                  stackOut_12_0 = param2;
-                  stackIn_13_0 = stackOut_12_0;
-                  break L3;
-                } else {
-                  stackOut_11_0 = param1;
-                  stackIn_13_0 = stackOut_11_0;
-                  break L3;
-                }
+            L3: {
+              if (param2 < param1) {
+                stackOut_12_0 = param2;
+                stackIn_13_0 = stackOut_12_0;
+                break L3;
+              } else {
+                stackOut_11_0 = param1;
+                stackIn_13_0 = stackOut_11_0;
+                break L3;
               }
-              var9 = stackIn_13_0;
-              var10 = param2 >> 1;
-              var11 = param1 >> 1;
-              var12 = param4;
-              var13 = new int[var11 * var10];
-              L4: while (true) {
-                jaggl.OpenGL.glTexImage2Di(param3, var8_int, param5, param2, param1, 0, 32993, param6, var12, 0);
-                if (var9 > 1) {
-                  var15 = 0;
-                  var24 = 0;
-                  var25 = param2 + var24;
-                  var14 = var13;
-                  var26 = 0;
-                  L5: while (true) {
-                    if (var26 >= var11) {
-                      var13 = var12;
-                      param2 = var10;
-                      param1 = var11;
-                      var12 = var14;
-                      var8_int++;
-                      var10 = var10 >> 1;
-                      var11 = var11 >> 1;
-                      var9 = var9 >> 1;
-                      continue L4;
-                    } else {
-                      var27 = 0;
-                      L6: while (true) {
-                        if (var10 <= var27) {
-                          var24 = var24 + param2;
-                          var25 = var25 + param2;
-                          var26++;
-                          continue L5;
-                        } else {
-                          int incrementValue$5 = var24;
-                          var24++;
-                          var16 = var12[incrementValue$5];
-                          int incrementValue$6 = var24;
-                          var24++;
-                          var17 = var12[incrementValue$6];
-                          int incrementValue$7 = var25;
-                          var25++;
-                          var18 = var12[incrementValue$7];
-                          var21 = var16 >> 8 & 255;
-                          int incrementValue$8 = var25;
-                          var25++;
-                          var19 = var12[incrementValue$8];
-                          var23 = var16 >> 24 & 255;
-                          var22 = 255 & var16;
-                          var20 = var16 >> 16 & 255;
-                          var20 = var20 + ((var17 & 16749302) >> 16);
-                          var23 = var23 + (var17 >> 24 & 255);
-                          var21 = var21 + ((65490 & var17) >> 8);
-                          var22 = var22 + (255 & var17);
-                          var23 = var23 + (255 & var18 >> 24);
-                          var21 = var21 + ((65476 & var18) >> 8);
-                          var22 = var22 + (var18 & 255);
-                          var20 = var20 + (255 & var18 >> 16);
-                          var21 = var21 + (var19 >> 8 & 255);
-                          var23 = var23 + (var19 >> 24 & 255);
-                          var22 = var22 + (255 & var19);
-                          var20 = var20 + (255 & var19 >> 16);
-                          int incrementValue$9 = var15;
-                          var15++;
-                          var13[incrementValue$9] = ic.a(ic.a(eb.a(var21, 1020) << 6, ic.a(eb.a(16711680, var20 << 14), eb.a(1020, var23) << 22)), eb.a(var22 >> 2, 255));
-                          var27++;
-                          continue L6;
-                        }
+            }
+            var9 = stackIn_13_0;
+            var10 = param2 >> 1;
+            var11 = param1 >> 1;
+            var12 = param4;
+            var13 = new int[var11 * var10];
+            L4: while (true) {
+              jaggl.OpenGL.glTexImage2Di(param3, var8_int, param5, param2, param1, 0, 32993, param6, var12, 0);
+              if (var9 > 1) {
+                var15 = 0;
+                var24 = 0;
+                var25 = param2 + var24;
+                var14 = var13;
+                var26 = 0;
+                L5: while (true) {
+                  if (var26 >= var11) {
+                    var13 = var12;
+                    param2 = var10;
+                    param1 = var11;
+                    var12 = var14;
+                    var8_int++;
+                    var10 = var10 >> 1;
+                    var11 = var11 >> 1;
+                    var9 = var9 >> 1;
+                    continue L4;
+                  } else {
+                    var27 = 0;
+                    L6: while (true) {
+                      if (var10 <= var27) {
+                        var24 = var24 + param2;
+                        var25 = var25 + param2;
+                        var26++;
+                        continue L5;
+                      } else {
+                        int incrementValue$5 = var24;
+                        var24++;
+                        var16 = var12[incrementValue$5];
+                        int incrementValue$6 = var24;
+                        var24++;
+                        var17 = var12[incrementValue$6];
+                        int incrementValue$7 = var25;
+                        var25++;
+                        var18 = var12[incrementValue$7];
+                        var21 = var16 >> 8 & 255;
+                        int incrementValue$8 = var25;
+                        var25++;
+                        var19 = var12[incrementValue$8];
+                        var23 = var16 >> 24 & 255;
+                        var22 = 255 & var16;
+                        var20 = var16 >> 16 & 255;
+                        var20 = var20 + ((var17 & 16749302) >> 16);
+                        var23 = var23 + (var17 >> 24 & 255);
+                        var21 = var21 + ((65490 & var17) >> 8);
+                        var22 = var22 + (255 & var17);
+                        var23 = var23 + (255 & var18 >> 24);
+                        var21 = var21 + ((65476 & var18) >> 8);
+                        var22 = var22 + (var18 & 255);
+                        var20 = var20 + (255 & var18 >> 16);
+                        var21 = var21 + (var19 >> 8 & 255);
+                        var23 = var23 + (var19 >> 24 & 255);
+                        var22 = var22 + (255 & var19);
+                        var20 = var20 + (255 & var19 >> 16);
+                        int incrementValue$9 = var15;
+                        var15++;
+                        var13[incrementValue$9] = ic.a(ic.a(eb.a(var21, 1020) << 6, ic.a(eb.a(16711680, var20 << 14), eb.a(1020, var23) << 22)), eb.a(var22 >> 2, 255));
+                        var27++;
+                        continue L6;
                       }
                     }
                   }
-                } else {
-                  break L0;
                 }
+              } else {
+                break L0;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -175,7 +171,7 @@ abstract class eu {
           L7: {
             var8 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var8;
-            stackOut_24_1 = new StringBuilder().append("eu.BA(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_24_1 = new StringBuilder().append("eu.BA(").append(-122).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;

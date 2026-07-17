@@ -114,7 +114,7 @@ final class ae extends og implements vd {
         return stackIn_10_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_G = null;
         field_D = null;
         field_C = null;
@@ -153,7 +153,8 @@ final class ae extends og implements vd {
                   break L1;
                 } else {
                   if (((ae) this).field_z == param4) {
-                    hf.a(4);
+                    int discarded$26 = 4;
+                    hf.a();
                     break L1;
                   } else {
                     var6_int = -40 % ((param0 - 83) / 36);

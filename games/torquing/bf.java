@@ -7,7 +7,7 @@ final class bf {
     static int field_d;
     static double[] field_b;
 
-    final static sm a(int param0, int param1, la param2, byte param3) {
+    final static sm a(int param0, int param1, la param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_5_0 = null;
@@ -29,7 +29,8 @@ final class bf {
         try {
           var4_int = -46;
           if (nd.a(param0, param2, -1, param1)) {
-            return oi.a((byte) -97);
+            int discarded$2 = -97;
+            return oi.a();
           } else {
             return null;
           }

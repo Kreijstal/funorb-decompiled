@@ -8,7 +8,7 @@ final class ve extends cm implements vh {
     static tf field_R;
     static int[] field_T;
 
-    public static void j(byte param0) {
+    public static void j() {
         field_Q = null;
         field_T = null;
         field_S = null;
@@ -25,7 +25,7 @@ final class ve extends cm implements vh {
         }
     }
 
-    final static int c(boolean param0) {
+    final static int c() {
         if (tj.field_u) {
           return -1;
         } else {
@@ -44,7 +44,7 @@ final class ve extends cm implements vh {
         }
     }
 
-    final static void a(qb param0, byte param1) {
+    final static void a(qb param0) {
         qb var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -238,15 +238,8 @@ final class ve extends cm implements vh {
     }
 
     final static void a(boolean param0, int param1, int param2) {
-        hn var3 = null;
-        var3 = new hn(7, new int[2]);
+        hn var3 = new hn(7, new int[2]);
         ii.a(var3, 109);
-        if (!param0) {
-          field_Q = null;
-          return;
-        } else {
-          return;
-        }
     }
 
     ve(se param0, hh param1) {
@@ -295,7 +288,8 @@ final class ve extends cm implements vh {
                 if (param1 == hf.field_a) {
                   ((ve) this).field_i = ((ve) this).field_i + 10;
                   var3 = (Object) (Object) je.field_n;
-                  if (!ai.a(99)) {
+                  int discarded$25 = 99;
+                  if (!ai.a()) {
                     break L1;
                   } else {
                     var3 = (Object) (Object) lj.field_k;
@@ -380,7 +374,7 @@ final class ve extends cm implements vh {
         }
     }
 
-    final static void q(int param0) {
+    final static void q() {
         RuntimeException var1 = null;
         tv var1_ref = null;
         int var2 = 0;
@@ -394,7 +388,8 @@ final class ve extends cm implements vh {
         try {
           L0: {
             L1: {
-              var8 = h.a(17475);
+              int discarded$2 = 17475;
+              var8 = h.a();
               var1_ref = var8;
               if (var8 == null) {
                 break L1;
@@ -440,7 +435,7 @@ final class ve extends cm implements vh {
                               break L6;
                             } else {
                               if (var3[var4] != "") {
-                                gv discarded$1 = gm.a(var3[var4], false, (byte) -116);
+                                gv discarded$3 = gm.a(var3[var4], false, (byte) -116);
                                 break L5;
                               } else {
                                 break L6;

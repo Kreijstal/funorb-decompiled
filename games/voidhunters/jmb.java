@@ -12,7 +12,7 @@ final class jmb extends rqa {
         super(param0, param1, param2);
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_q = null;
         field_r = null;
         field_s = null;

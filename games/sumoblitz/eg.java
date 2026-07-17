@@ -11,6 +11,9 @@ final class eg extends ms {
     public static void c(boolean param0) {
         field_n = null;
         field_l = null;
+        if (param0) {
+            field_n = null;
+        }
     }
 
     eg() {

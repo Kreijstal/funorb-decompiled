@@ -27,34 +27,34 @@ final class vf extends pg {
         String stackIn_6_0 = null;
         String stackIn_10_0 = null;
         String stackIn_14_0 = null;
-        String stackIn_19_0 = null;
-        String stackIn_23_0 = null;
-        String stackIn_27_0 = null;
-        String stackIn_31_0 = null;
+        String stackIn_17_0 = null;
+        String stackIn_21_0 = null;
+        String stackIn_25_0 = null;
+        String stackIn_29_0 = null;
+        RuntimeException stackIn_32_0 = null;
+        StringBuilder stackIn_32_1 = null;
+        RuntimeException stackIn_33_0 = null;
+        StringBuilder stackIn_33_1 = null;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
-        RuntimeException stackIn_36_0 = null;
-        StringBuilder stackIn_36_1 = null;
-        String stackIn_36_2 = null;
+        String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
         String stackOut_2_0 = null;
         String stackOut_9_0 = null;
         String stackOut_13_0 = null;
-        String stackOut_22_0 = null;
-        String stackOut_26_0 = null;
-        String stackOut_30_0 = null;
-        String stackOut_18_0 = null;
+        String stackOut_20_0 = null;
+        String stackOut_24_0 = null;
+        String stackOut_28_0 = null;
+        String stackOut_16_0 = null;
         String stackOut_5_0 = null;
+        RuntimeException stackOut_31_0 = null;
+        StringBuilder stackOut_31_1 = null;
         RuntimeException stackOut_33_0 = null;
         StringBuilder stackOut_33_1 = null;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        String stackOut_35_2 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
+        String stackOut_33_2 = null;
+        RuntimeException stackOut_32_0 = null;
+        StringBuilder stackOut_32_1 = null;
+        String stackOut_32_2 = null;
         try {
           L0: {
             if (param2 == 3) {
@@ -73,28 +73,20 @@ final class vf extends pg {
                     stackIn_14_0 = stackOut_13_0;
                     return stackIn_14_0;
                   } else {
-                    L1: {
-                      if (param0 < -5) {
-                        break L1;
-                      } else {
-                        field_o = -110;
-                        break L1;
-                      }
-                    }
                     if (param2 != 9) {
                       if (10 == param2) {
-                        stackOut_22_0 = oj.field_c;
-                        stackIn_23_0 = stackOut_22_0;
-                        return stackIn_23_0;
+                        stackOut_20_0 = oj.field_c;
+                        stackIn_21_0 = stackOut_20_0;
+                        return stackIn_21_0;
                       } else {
                         if (11 == param2) {
-                          stackOut_26_0 = wd.field_f;
-                          stackIn_27_0 = stackOut_26_0;
-                          return stackIn_27_0;
+                          stackOut_24_0 = wd.field_f;
+                          stackIn_25_0 = stackOut_24_0;
+                          return stackIn_25_0;
                         } else {
                           if (param2 == 14) {
-                            stackOut_30_0 = tj.a(-17, new String[1], ji.field_k);
-                            stackIn_31_0 = stackOut_30_0;
+                            stackOut_28_0 = tj.a(-17, new String[1], ji.field_k);
+                            stackIn_29_0 = stackOut_28_0;
                             break L0;
                           } else {
                             return null;
@@ -102,9 +94,9 @@ final class vf extends pg {
                         }
                       }
                     } else {
-                      stackOut_18_0 = v.field_n;
-                      stackIn_19_0 = stackOut_18_0;
-                      return stackIn_19_0;
+                      stackOut_16_0 = v.field_n;
+                      stackIn_17_0 = stackOut_16_0;
+                      return stackIn_17_0;
                     }
                   }
                 }
@@ -117,46 +109,42 @@ final class vf extends pg {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var3 = decompiledCaughtException;
-            stackOut_33_0 = (RuntimeException) var3;
-            stackOut_33_1 = new StringBuilder().append("vf.B(").append(param0).append(44);
-            stackIn_35_0 = stackOut_33_0;
-            stackIn_35_1 = stackOut_33_1;
-            stackIn_34_0 = stackOut_33_0;
-            stackIn_34_1 = stackOut_33_1;
+            stackOut_31_0 = (RuntimeException) var3;
+            stackOut_31_1 = new StringBuilder().append("vf.B(").append(-111).append(44);
+            stackIn_33_0 = stackOut_31_0;
+            stackIn_33_1 = stackOut_31_1;
+            stackIn_32_0 = stackOut_31_0;
+            stackIn_32_1 = stackOut_31_1;
             if (param1 == null) {
-              stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
-              stackOut_35_1 = (StringBuilder) (Object) stackIn_35_1;
-              stackOut_35_2 = "null";
-              stackIn_36_0 = stackOut_35_0;
-              stackIn_36_1 = stackOut_35_1;
-              stackIn_36_2 = stackOut_35_2;
-              break L2;
+              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
+              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_2 = "null";
+              stackIn_34_0 = stackOut_33_0;
+              stackIn_34_1 = stackOut_33_1;
+              stackIn_34_2 = stackOut_33_2;
+              break L1;
             } else {
-              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
-              stackOut_34_2 = "{...}";
-              stackIn_36_0 = stackOut_34_0;
-              stackIn_36_1 = stackOut_34_1;
-              stackIn_36_2 = stackOut_34_2;
-              break L2;
+              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
+              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_2 = "{...}";
+              stackIn_34_0 = stackOut_32_0;
+              stackIn_34_1 = stackOut_32_1;
+              stackIn_34_2 = stackOut_32_2;
+              break L1;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + 44 + param2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 44 + param2 + 41);
         }
-        return stackIn_31_0;
+        return stackIn_29_0;
     }
 
-    final static cg a(long param0, int param1) {
-        if (param1 != 8192) {
-            field_h = null;
-            return (cg) (Object) kn.field_qb.a(param0, (byte) -121);
-        }
+    final static cg a(long param0) {
         return (cg) (Object) kn.field_qb.a(param0, (byte) -121);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_i = null;
         field_h = null;
         field_p = null;
@@ -184,7 +172,9 @@ final class vf extends pg {
     private static void $cfr$clinit() {
         field_g = new so(1);
         field_p = "Press '<col=ffffff><%0></col>' or '<col=ffffff><%1></col>' to cycle through your minions or to centre on your Arcanist.<br>  Use the '<col=ffffff>Arrow keys</col>' to scroll around the map.";
-        km.a(100, 50);
+        int discarded$0 = 50;
+        int discarded$1 = 100;
+        km.a();
         field_v = new int[8192];
         field_h = "Spellbook not acquired";
     }

@@ -15,79 +15,39 @@ final class mk {
         int var2 = 0;
         int var3 = 0;
         var2 = 255 & param1;
-        if (param0 == -13) {
-          if (var2 != 0) {
-            if (var2 >= 128) {
-              if (160 <= var2) {
-                return (char)var2;
-              } else {
-                L0: {
-                  var3 = hc.field_o[var2 - 128];
-                  if (var3 == 0) {
-                    var3 = 63;
-                    break L0;
-                  } else {
-                    break L0;
-                  }
-                }
-                var2 = var3;
-                return (char)var2;
-              }
+        if (var2 != 0) {
+          if (var2 >= 128) {
+            if (160 <= var2) {
+              return (char)var2;
             } else {
+              L0: {
+                var3 = hc.field_o[var2 - 128];
+                if (var3 == 0) {
+                  var3 = 63;
+                  break L0;
+                } else {
+                  break L0;
+                }
+              }
+              var2 = var3;
               return (char)var2;
             }
           } else {
-            throw new IllegalArgumentException("" + Integer.toString(var2, 16));
+            return (char)var2;
           }
         } else {
-          field_a = null;
-          if (var2 != 0) {
-            if (var2 < 128) {
-              return (char)var2;
-            } else {
-              L1: {
-                if (160 > var2) {
-                  L2: {
-                    var3 = hc.field_o[var2 - 128];
-                    if (var3 == 0) {
-                      var3 = 63;
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  }
-                  var2 = var3;
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              return (char)var2;
-            }
-          } else {
-            throw new IllegalArgumentException("" + Integer.toString(var2, 16));
-          }
+          throw new IllegalArgumentException("" + Integer.toString(var2, 16));
         }
     }
 
-    final static void a(boolean param0) {
-        if (null == wa.field_e) {
-          if (param0) {
+    final static void a() {
+        if (null != wa.field_e) {
+            wa.field_e.d(-15488);
+            wa.field_e = null;
             mk.a(-109);
             return;
-          } else {
-            return;
-          }
-        } else {
-          wa.field_e.d(-15488);
-          wa.field_e = null;
-          if (!param0) {
-            return;
-          } else {
-            mk.a(-109);
-            return;
-          }
         }
+        mk.a(-109);
     }
 
     final static void a(int param0, String param1, int param2, boolean param3, long param4, int param5) {

@@ -76,7 +76,7 @@ final class ofb extends rqa {
         super(param0, param1, param2);
     }
 
-    final static phb a(int param0, int param1, asb param2, int param3) {
+    final static phb a(int param0, int param1, asb param2) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         phb stackIn_4_0 = null;
@@ -101,7 +101,8 @@ final class ofb extends rqa {
         try {
           L0: {
             if (pa.a(param0, 2, param2, param1)) {
-              stackOut_3_0 = jgb.a(-91);
+              int discarded$2 = -91;
+              stackOut_3_0 = jgb.a();
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -191,7 +192,7 @@ final class ofb extends rqa {
                 var3 = up.a((byte) -67, '.', param1);
                 if (2 <= var3.length) {
                   var4 = var3;
-                  var5 = param0;
+                  var5 = 0;
                   L1: while (true) {
                     if (var4.length <= var5) {
                       stackOut_17_0 = qj.a((byte) -74, var3[-1 + var3.length]);
@@ -227,7 +228,7 @@ final class ofb extends rqa {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_19_0 = (RuntimeException) var2;
-            stackOut_19_1 = new StringBuilder().append("ofb.B(").append(param0).append(44);
+            stackOut_19_1 = new StringBuilder().append("ofb.B(").append(0).append(44);
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;

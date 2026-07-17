@@ -32,12 +32,19 @@ final class dn {
     }
 
     final static void a(int param0) {
-        if (!(oi.field_d)) {
-            throw new IllegalStateException();
+        if (!oi.field_d) {
+          throw new IllegalStateException();
+        } else {
+          pg.field_h = true;
+          j.a(true, param0 ^ -8319);
+          j.field_l = 0;
+          if (param0 != 8192) {
+            dn.a((byte) 73);
+            return;
+          } else {
+            return;
+          }
         }
-        pg.field_h = true;
-        j.a(true, -127);
-        j.field_l = 0;
     }
 
     static {

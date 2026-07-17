@@ -11,8 +11,9 @@ final class vi extends nt {
     static dc field_y;
     private int field_s;
 
-    final static void e(int param0) {
-        od.a(5178);
+    final static void e() {
+        int discarded$0 = 5178;
+        od.a();
         rd.a(4, -27);
     }
 
@@ -41,7 +42,7 @@ final class vi extends nt {
         return super.a(-2567);
     }
 
-    final static boolean f(int param0) {
+    final static boolean f() {
         int var1 = 0;
         if (null == kd.field_a[0]) {
           L0: {
@@ -159,7 +160,7 @@ final class vi extends nt {
         ((vi) this).field_w = param4;
     }
 
-    final static void c(byte param0) {
+    final static void c() {
         RuntimeException var1 = null;
         int var2 = 0;
         km var3 = null;
@@ -181,147 +182,145 @@ final class vi extends nt {
         var12 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
-            if (param0 == -77) {
-              var13 = ig.field_a;
-              var16 = var13;
-              var2 = var16.e(-31302);
-              var3 = (km) (Object) dk.field_a.b(122);
-              L1: while (true) {
-                L2: {
-                  if (var3 == null) {
+            var13 = ig.field_a;
+            var16 = var13;
+            var2 = var16.e(-31302);
+            var3 = (km) (Object) dk.field_a.b(122);
+            L1: while (true) {
+              L2: {
+                if (var3 == null) {
+                  break L2;
+                } else {
+                  if (var2 == var3.field_n) {
                     break L2;
                   } else {
-                    if (var2 == var3.field_n) {
-                      break L2;
-                    } else {
-                      var3 = (km) (Object) dk.field_a.d((byte) 18);
-                      continue L1;
-                    }
+                    var3 = (km) (Object) dk.field_a.d((byte) 18);
+                    continue L1;
                   }
                 }
-                if (var3 != null) {
-                  L3: {
-                    var4 = var16.e(-31302);
-                    if (var4 != 0) {
-                      var5 = var3.field_l;
-                      rf.field_b[0] = qv.field_o;
-                      var6_int = 1;
-                      L4: while (true) {
-                        if (var4 <= var6_int) {
-                          tn.b(var4, -2147483648, var5);
-                          var6_int = 0;
-                          L5: while (true) {
-                            if (var4 <= var6_int) {
-                              qr.a(13136, var5);
-                              var6 = new String[2][var5];
-                              var20 = new int[2][var5 * 4];
-                              var8 = se.field_d;
-                              var9 = 0;
-                              var10 = 0;
-                              L6: while (true) {
-                                if (var9 >= var8) {
-                                  var14 = 0;
-                                  var9 = var14;
-                                  var15 = 0;
-                                  var10 = var15;
-                                  L7: while (true) {
-                                    if (var14 < var8) {
-                                      L8: {
-                                        var11 = pd.field_q[var14 + var5];
-                                        var6[1][var15] = rf.field_b[var11];
-                                        var20[1][4 * var15] = lj.field_a[var11];
-                                        var20[1][1 + 4 * var15] = jf.field_f[var11];
-                                        var20[1][2 + 4 * var15] = ic.field_c[var11];
-                                        var20[1][var15 * 4 + 3] = field_z[var11];
-                                        if (!ea.a(rf.field_b[var11], (byte) -25)) {
+              }
+              if (var3 != null) {
+                L3: {
+                  var4 = var16.e(-31302);
+                  if (var4 != 0) {
+                    var5 = var3.field_l;
+                    rf.field_b[0] = qv.field_o;
+                    var6_int = 1;
+                    L4: while (true) {
+                      if (var4 <= var6_int) {
+                        tn.b(var4, -2147483648, var5);
+                        var6_int = 0;
+                        L5: while (true) {
+                          if (var4 <= var6_int) {
+                            qr.a(13136, var5);
+                            var6 = new String[2][var5];
+                            var20 = new int[2][var5 * 4];
+                            var8 = se.field_d;
+                            var9 = 0;
+                            var10 = 0;
+                            L6: while (true) {
+                              if (var9 >= var8) {
+                                var14 = 0;
+                                var9 = var14;
+                                var15 = 0;
+                                var10 = var15;
+                                L7: while (true) {
+                                  if (var14 < var8) {
+                                    L8: {
+                                      var11 = pd.field_q[var14 + var5];
+                                      var6[1][var15] = rf.field_b[var11];
+                                      var20[1][4 * var15] = lj.field_a[var11];
+                                      var20[1][1 + 4 * var15] = jf.field_f[var11];
+                                      var20[1][2 + 4 * var15] = ic.field_c[var11];
+                                      var20[1][var15 * 4 + 3] = field_z[var11];
+                                      int discarded$2 = -25;
+                                      if (!ea.a(rf.field_b[var11])) {
+                                        break L8;
+                                      } else {
+                                        if (jf.field_f[var11] - (-ic.field_c[var11] - field_z[var11]) != 0) {
                                           break L8;
                                         } else {
-                                          if (jf.field_f[var11] - (-ic.field_c[var11] - field_z[var11]) != 0) {
-                                            break L8;
-                                          } else {
-                                            var6[1][var15] = null;
-                                            var15--;
-                                            break L8;
-                                          }
+                                          var6[1][var15] = null;
+                                          var15--;
+                                          break L8;
                                         }
                                       }
-                                      var15++;
-                                      var14++;
-                                      continue L7;
-                                    } else {
-                                      var3.b(false);
-                                      break L3;
                                     }
+                                    var15++;
+                                    var14++;
+                                    continue L7;
+                                  } else {
+                                    var3.b(false);
+                                    break L3;
                                   }
-                                } else {
-                                  L9: {
-                                    var11 = pd.field_q[var9];
-                                    var6[0][var10] = rf.field_b[var11];
-                                    var20[0][var10 * 4] = lj.field_a[var11];
-                                    var20[0][var10 * 4 + 1] = jf.field_f[var11];
-                                    var20[0][2 + 4 * var10] = ic.field_c[var11];
-                                    var20[0][var10 * 4 + 3] = field_z[var11];
-                                    if (ea.a(rf.field_b[var11], (byte) -25)) {
-                                      if (field_z[var11] + jf.field_f[var11] + ic.field_c[var11] == 0) {
-                                        var6[0][var10] = null;
-                                        var10--;
-                                        break L9;
-                                      } else {
-                                        break L9;
-                                      }
+                                }
+                              } else {
+                                L9: {
+                                  var11 = pd.field_q[var9];
+                                  var6[0][var10] = rf.field_b[var11];
+                                  var20[0][var10 * 4] = lj.field_a[var11];
+                                  var20[0][var10 * 4 + 1] = jf.field_f[var11];
+                                  var20[0][2 + 4 * var10] = ic.field_c[var11];
+                                  var20[0][var10 * 4 + 3] = field_z[var11];
+                                  int discarded$3 = -25;
+                                  if (ea.a(rf.field_b[var11])) {
+                                    if (field_z[var11] + jf.field_f[var11] + ic.field_c[var11] == 0) {
+                                      var6[0][var10] = null;
+                                      var10--;
+                                      break L9;
                                     } else {
                                       break L9;
                                     }
+                                  } else {
+                                    break L9;
                                   }
-                                  var9++;
-                                  var10++;
-                                  continue L6;
                                 }
+                                var9++;
+                                var10++;
+                                continue L6;
                               }
-                            } else {
-                              L10: {
-                                nm.a((fs) (Object) var16, (byte) 61);
-                                if (var6_int == 0) {
-                                  oc.a(bb.field_l, qk.field_U, true, var6_int, sd.field_f, ch.field_d);
-                                  break L10;
-                                } else {
-                                  oc.a(bb.field_l, qk.field_U, true, var6_int, sd.field_f, ch.field_d);
-                                  break L10;
-                                }
-                              }
-                              var6_int++;
-                              continue L5;
                             }
+                          } else {
+                            L10: {
+                              nm.a((fs) (Object) var16, (byte) 61);
+                              if (var6_int == 0) {
+                                oc.a(bb.field_l, qk.field_U, true, var6_int, sd.field_f, ch.field_d);
+                                break L10;
+                              } else {
+                                oc.a(bb.field_l, qk.field_U, true, var6_int, sd.field_f, ch.field_d);
+                                break L10;
+                              }
+                            }
+                            var6_int++;
+                            continue L5;
                           }
-                        } else {
-                          rf.field_b[var6_int] = var13.d(-1);
-                          var6_int++;
-                          continue L4;
                         }
+                      } else {
+                        rf.field_b[var6_int] = var13.d(-1);
+                        var6_int++;
+                        continue L4;
                       }
-                    } else {
-                      var3.b(false);
-                      break L3;
                     }
+                  } else {
+                    var3.b(false);
+                    break L3;
                   }
-                  break L0;
-                } else {
-                  kk.a((byte) -115);
-                  return;
                 }
+                break L0;
+              } else {
+                kk.a((byte) -115);
+                return;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qo.a((Throwable) (Object) var1, "vi.A(" + param0 + 41);
+          throw qo.a((Throwable) (Object) var1, "vi.A(" + -77 + 41);
         }
     }
 
-    final static void a(int param0, byte param1) {
+    final static void a() {
         RuntimeException var2 = null;
         int var3 = 0;
         id var4 = null;
@@ -338,13 +337,13 @@ final class vi extends nt {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    pd.a((byte) -65, param0, var5);
+                    pd.a((byte) -65, 3, var5);
                     var5 = (of) (Object) oi.field_b.d((byte) 18);
                     continue L2;
                   }
                 }
               } else {
-                km.a((byte) -120, param0, var4);
+                km.a((byte) -120, 3, var4);
                 var4 = (id) (Object) ow.field_f.d((byte) 18);
                 continue L1;
               }
@@ -353,18 +352,19 @@ final class vi extends nt {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qo.a((Throwable) (Object) var2, "vi.D(" + param0 + 44 + -73 + 41);
+          throw qo.a((Throwable) (Object) var2, "vi.D(" + 3 + 44 + -73 + 41);
         }
     }
 
     final static String a(int param0, boolean param1, boolean param2, boolean param3) {
-        int var4 = param0;
+        int var4 = 0;
+        if (param3) {
+            var4 += 4;
+        }
         if (param1) {
             var4 += 2;
         }
-        if (param2) {
-            var4++;
-        }
+        var4++;
         return kr.field_f[var4];
     }
 

@@ -191,7 +191,7 @@ final class ep {
         ep.a(oo.field_f, oo.field_e, oo.field_g, oo.field_d);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -303,7 +303,7 @@ final class ep {
                           if (param1 < 0) {
                             return;
                           } else {
-                            ep.a(oo.field_i, param0, param6, 0, param3 >> 16, param5 >> 16);
+                            ep.a(oo.field_i, param0, 16711680, 0, param3 >> 16, param5 >> 16);
                             param5 = param5 + var8;
                             param3 = param3 + var7;
                             param0 = param0 + oo.field_b;
@@ -312,7 +312,7 @@ final class ep {
                           }
                         }
                       } else {
-                        ep.a(oo.field_i, param0, param6, 0, param3 >> 16, param4 >> 16);
+                        ep.a(oo.field_i, param0, 16711680, 0, param3 >> 16, param4 >> 16);
                         param4 = param4 + var9;
                         param3 = param3 + var7;
                         param0 = param0 + oo.field_b;
@@ -331,7 +331,7 @@ final class ep {
                         if (param1 < 0) {
                           return;
                         } else {
-                          ep.a(oo.field_i, param0, param6, 0, param5 >> 16, param3 >> 16);
+                          ep.a(oo.field_i, param0, 16711680, 0, param5 >> 16, param3 >> 16);
                           param5 = param5 + var8;
                           param3 = param3 + var7;
                           param0 = param0 + oo.field_b;
@@ -340,7 +340,7 @@ final class ep {
                         }
                       }
                     } else {
-                      ep.a(oo.field_i, param0, param6, 0, param4 >> 16, param3 >> 16);
+                      ep.a(oo.field_i, param0, 16711680, 0, param4 >> 16, param3 >> 16);
                       param4 = param4 + var9;
                       param3 = param3 + var7;
                       param0 = param0 + oo.field_b;
@@ -404,7 +404,7 @@ final class ep {
                           if (param2 < 0) {
                             return;
                           } else {
-                            ep.a(oo.field_i, param0, param6, 0, param4 >> 16, param5 >> 16);
+                            ep.a(oo.field_i, param0, 16711680, 0, param4 >> 16, param5 >> 16);
                             param5 = param5 + var9;
                             param4 = param4 + var8;
                             param0 = param0 + oo.field_b;
@@ -413,7 +413,7 @@ final class ep {
                           }
                         }
                       } else {
-                        ep.a(oo.field_i, param0, param6, 0, param3 >> 16, param5 >> 16);
+                        ep.a(oo.field_i, param0, 16711680, 0, param3 >> 16, param5 >> 16);
                         param5 = param5 + var9;
                         param3 = param3 + var7;
                         param0 = param0 + oo.field_b;
@@ -432,7 +432,7 @@ final class ep {
                         if (param2 < 0) {
                           return;
                         } else {
-                          ep.a(oo.field_i, param0, param6, 0, param5 >> 16, param4 >> 16);
+                          ep.a(oo.field_i, param0, 16711680, 0, param5 >> 16, param4 >> 16);
                           param5 = param5 + var9;
                           param4 = param4 + var8;
                           param0 = param0 + oo.field_b;
@@ -441,7 +441,7 @@ final class ep {
                         }
                       }
                     } else {
-                      ep.a(oo.field_i, param0, param6, 0, param5 >> 16, param3 >> 16);
+                      ep.a(oo.field_i, param0, 16711680, 0, param5 >> 16, param3 >> 16);
                       param5 = param5 + var9;
                       param3 = param3 + var7;
                       param0 = param0 + oo.field_b;
@@ -508,7 +508,7 @@ final class ep {
                       if (param0 < 0) {
                         return;
                       } else {
-                        ep.a(oo.field_i, param2, param6, 0, param5 >> 16, param4 >> 16);
+                        ep.a(oo.field_i, param2, 16711680, 0, param5 >> 16, param4 >> 16);
                         param4 = param4 + var7;
                         param5 = param5 + var9;
                         param2 = param2 + oo.field_b;
@@ -517,7 +517,7 @@ final class ep {
                       }
                     }
                   } else {
-                    ep.a(oo.field_i, param2, param6, 0, param5 >> 16, param3 >> 16);
+                    ep.a(oo.field_i, param2, 16711680, 0, param5 >> 16, param3 >> 16);
                     param3 = param3 + var8;
                     param5 = param5 + var9;
                     param2 = param2 + oo.field_b;
@@ -536,7 +536,7 @@ final class ep {
                       if (param0 < 0) {
                         return;
                       } else {
-                        ep.a(oo.field_i, param2, param6, 0, param4 >> 16, param5 >> 16);
+                        ep.a(oo.field_i, param2, 16711680, 0, param4 >> 16, param5 >> 16);
                         param4 = param4 + var7;
                         param5 = param5 + var9;
                         param2 = param2 + oo.field_b;
@@ -545,7 +545,7 @@ final class ep {
                       }
                     }
                   } else {
-                    ep.a(oo.field_i, param2, param6, 0, param3 >> 16, param5 >> 16);
+                    ep.a(oo.field_i, param2, 16711680, 0, param3 >> 16, param5 >> 16);
                     param3 = param3 + var8;
                     param5 = param5 + var9;
                     param2 = param2 + oo.field_b;
@@ -588,7 +588,7 @@ final class ep {
                       if (param1 < 0) {
                         return;
                       } else {
-                        ep.a(oo.field_i, param2, param6, 0, param3 >> 16, param4 >> 16);
+                        ep.a(oo.field_i, param2, 16711680, 0, param3 >> 16, param4 >> 16);
                         param4 = param4 + var8;
                         param3 = param3 + var7;
                         param2 = param2 + oo.field_b;
@@ -597,7 +597,7 @@ final class ep {
                       }
                     }
                   } else {
-                    ep.a(oo.field_i, param2, param6, 0, param5 >> 16, param4 >> 16);
+                    ep.a(oo.field_i, param2, 16711680, 0, param5 >> 16, param4 >> 16);
                     param4 = param4 + var8;
                     param5 = param5 + var9;
                     param2 = param2 + oo.field_b;
@@ -616,7 +616,7 @@ final class ep {
                       if (param1 < 0) {
                         return;
                       } else {
-                        ep.a(oo.field_i, param2, param6, 0, param4 >> 16, param3 >> 16);
+                        ep.a(oo.field_i, param2, 16711680, 0, param4 >> 16, param3 >> 16);
                         param4 = param4 + var8;
                         param3 = param3 + var7;
                         param2 = param2 + oo.field_b;
@@ -625,7 +625,7 @@ final class ep {
                       }
                     }
                   } else {
-                    ep.a(oo.field_i, param2, param6, 0, param4 >> 16, param5 >> 16);
+                    ep.a(oo.field_i, param2, 16711680, 0, param4 >> 16, param5 >> 16);
                     param4 = param4 + var8;
                     param5 = param5 + var9;
                     param2 = param2 + oo.field_b;
@@ -690,7 +690,7 @@ final class ep {
                       if (param2 < 0) {
                         return;
                       } else {
-                        ep.a(oo.field_i, param1, param6, 0, param4 >> 16, param3 >> 16);
+                        ep.a(oo.field_i, param1, 16711680, 0, param4 >> 16, param3 >> 16);
                         param3 = param3 + var9;
                         param4 = param4 + var8;
                         param1 = param1 + oo.field_b;
@@ -699,7 +699,7 @@ final class ep {
                       }
                     }
                   } else {
-                    ep.a(oo.field_i, param1, param6, 0, param4 >> 16, param5 >> 16);
+                    ep.a(oo.field_i, param1, 16711680, 0, param4 >> 16, param5 >> 16);
                     param5 = param5 + var7;
                     param4 = param4 + var8;
                     param1 = param1 + oo.field_b;
@@ -718,7 +718,7 @@ final class ep {
                       if (param2 < 0) {
                         return;
                       } else {
-                        ep.a(oo.field_i, param1, param6, 0, param3 >> 16, param4 >> 16);
+                        ep.a(oo.field_i, param1, 16711680, 0, param3 >> 16, param4 >> 16);
                         param3 = param3 + var9;
                         param4 = param4 + var8;
                         param1 = param1 + oo.field_b;
@@ -727,7 +727,7 @@ final class ep {
                       }
                     }
                   } else {
-                    ep.a(oo.field_i, param1, param6, 0, param5 >> 16, param4 >> 16);
+                    ep.a(oo.field_i, param1, 16711680, 0, param5 >> 16, param4 >> 16);
                     param5 = param5 + var7;
                     param4 = param4 + var8;
                     param1 = param1 + oo.field_b;
@@ -792,7 +792,7 @@ final class ep {
                       if (param0 < 0) {
                         return;
                       } else {
-                        ep.a(oo.field_i, param1, param6, 0, param5 >> 16, param3 >> 16);
+                        ep.a(oo.field_i, param1, 16711680, 0, param5 >> 16, param3 >> 16);
                         param3 = param3 + var7;
                         param5 = param5 + var9;
                         param1 = param1 + oo.field_b;
@@ -801,7 +801,7 @@ final class ep {
                       }
                     }
                   } else {
-                    ep.a(oo.field_i, param1, param6, 0, param4 >> 16, param3 >> 16);
+                    ep.a(oo.field_i, param1, 16711680, 0, param4 >> 16, param3 >> 16);
                     param3 = param3 + var7;
                     param4 = param4 + var8;
                     param1 = param1 + oo.field_b;
@@ -820,7 +820,7 @@ final class ep {
                     if (param0 < 0) {
                       return;
                     } else {
-                      ep.a(oo.field_i, param1, param6, 0, param3 >> 16, param5 >> 16);
+                      ep.a(oo.field_i, param1, 16711680, 0, param3 >> 16, param5 >> 16);
                       param3 = param3 + var7;
                       param5 = param5 + var9;
                       param1 = param1 + oo.field_b;
@@ -829,7 +829,7 @@ final class ep {
                     }
                   }
                 } else {
-                  ep.a(oo.field_i, param1, param6, 0, param3 >> 16, param4 >> 16);
+                  ep.a(oo.field_i, param1, 16711680, 0, param3 >> 16, param4 >> 16);
                   param3 = param3 + var7;
                   param4 = param4 + var8;
                   param1 = param1 + oo.field_b;

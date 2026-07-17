@@ -13,7 +13,7 @@ final class tj {
     private tk field_c;
     static int field_h;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
         int var1 = -35;
         field_b = null;
@@ -230,9 +230,6 @@ final class tj {
     }
 
     final static int a(int param0) {
-        if (param0 != 0) {
-            field_f = null;
-        }
         return (int)(1000000000L / vg.field_i);
     }
 

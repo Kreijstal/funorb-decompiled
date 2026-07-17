@@ -13,7 +13,7 @@ final class lc {
     static String field_d;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_h = null;
         field_j = null;
         field_f = null;
@@ -31,7 +31,8 @@ final class lc {
         int var3 = -(th.field_g * th.field_g) + var2;
         int var4 = ja.field_f - -(var3 * (te.field_P - ja.field_f) / var2);
         oj.field_a.a((byte) -116, 640, var4, 120, vi.field_d);
-        qh.a(5, eh.field_w, 640, te.field_P - 24, 1000000, fn.field_Q, 0);
+        int discarded$0 = 0;
+        qh.a(5, eh.field_w, 640, te.field_P - 24, 1000000, fn.field_Q);
     }
 
     static {

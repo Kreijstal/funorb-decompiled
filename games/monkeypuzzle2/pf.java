@@ -25,7 +25,7 @@ final class pf {
         }
     }
 
-    final static int b(int param0) {
+    final static int b() {
         return -sc.field_g + h.field_b;
     }
 
@@ -34,13 +34,13 @@ final class pf {
         return jg.a((byte) 80, param1, pb.field_n);
     }
 
-    final static void a(byte param0, vl param1, int param2) {
+    final static void a(byte param0, vl param1) {
         hb var6 = null;
         int var5 = 0;
         try {
             var6 = gf.field_c;
             int var4 = 95 / ((param0 - -41) / 42);
-            var6.b(true, param2);
+            var6.b(true, 4);
             var6.field_h = var6.field_h + 1;
             var5 = var6.field_h;
             var6.b(1, -49152);
@@ -53,11 +53,11 @@ final class pf {
             int discarded$0 = var6.a((byte) -47, var5);
             var6.a(-var5 + var6.field_h, (byte) -116);
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "pf.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw la.a((Throwable) (Object) runtimeException, "pf.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 4 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = 39;
         field_b = null;
         field_c = null;

@@ -139,7 +139,7 @@ final class hh {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         int var1 = 55;
         field_a = null;
         field_d = null;

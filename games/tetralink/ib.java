@@ -7,7 +7,7 @@ final class ib {
     static String field_d;
     static String field_c;
 
-    final static long a(byte param0) {
+    final static long a() {
         return -sj.field_k + k.a(0);
     }
 

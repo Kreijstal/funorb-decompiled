@@ -95,7 +95,7 @@ class f extends qf implements pl {
         }
     }
 
-    final static void b(String param0, String param1, int param2) {
+    final static void b(String param0, String param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -218,20 +218,24 @@ class f extends qf implements pl {
           return;
         } else {
           if (param0 < -48) {
-            vl.field_n = od.a(480, 0, 0, -3, ka.field_i, 640);
+            int discarded$8 = 640;
+            vl.field_n = od.a(480, 0, 0, -3, ka.field_i);
             if (null != vl.field_n) {
-              sl.a((java.awt.Canvas) (Object) vl.field_n, 57);
+              int discarded$9 = 57;
+              sl.a((java.awt.Canvas) (Object) vl.field_n);
               return;
             } else {
               return;
             }
           } else {
             field_qb = -112;
-            vl.field_n = od.a(480, 0, 0, -3, ka.field_i, 640);
+            int discarded$10 = 640;
+            vl.field_n = od.a(480, 0, 0, -3, ka.field_i);
             if (null == vl.field_n) {
               return;
             } else {
-              sl.a((java.awt.Canvas) (Object) vl.field_n, 57);
+              int discarded$11 = 57;
+              sl.a((java.awt.Canvas) (Object) vl.field_n);
               return;
             }
           }
@@ -246,13 +250,15 @@ class f extends qf implements pl {
           if (param0 == -104) {
             if (!((f) this).field_mb) {
               if (((f) this).field_gb) {
-                wl.b(-1);
+                int discarded$8 = -1;
+                wl.b();
                 return;
               } else {
                 return;
               }
             } else {
-              tj.b((byte) -65);
+              int discarded$9 = -65;
+              tj.b();
               return;
             }
           } else {
@@ -261,11 +267,13 @@ class f extends qf implements pl {
               if (!((f) this).field_gb) {
                 return;
               } else {
-                wl.b(-1);
+                int discarded$10 = -1;
+                wl.b();
                 return;
               }
             } else {
-              tj.b((byte) -65);
+              int discarded$11 = -65;
+              tj.b();
               return;
             }
           }
@@ -340,7 +348,7 @@ class f extends qf implements pl {
         return stackIn_4_0;
     }
 
-    public static void n(int param0) {
+    public static void n() {
         field_hb = null;
         int var1 = 0;
         field_kb = null;
@@ -348,7 +356,7 @@ class f extends qf implements pl {
         field_lb = null;
     }
 
-    final static void o(int param0) {
+    final static void o() {
         int var1_int = 0;
         float var1 = 0.0f;
         int var2 = 0;
@@ -957,7 +965,7 @@ class f extends qf implements pl {
         }
     }
 
-    final static wa p(int param0) {
+    final static wa p() {
         if (null == uf.field_f) {
           uf.field_f = new wa();
           uf.field_f.a(9, ng.field_F);
@@ -1168,7 +1176,10 @@ class f extends qf implements pl {
                 break L1;
               }
             }
-            stackOut_2_0 = pa.a(param1, true, 10, 87);
+            int discarded$6 = 87;
+            int discarded$7 = 10;
+            int discarded$8 = 1;
+            stackOut_2_0 = pa.a(param1);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

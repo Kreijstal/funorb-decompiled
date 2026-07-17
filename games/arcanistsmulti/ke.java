@@ -173,7 +173,7 @@ final class ke extends wn {
               }
             }
             kh.a(param6, param3, mj.field_r, param7, param8, param10, param13, param9, true, new ec(param4), param8, param13, param2, pn.field_d, ol.field_f, ql.field_a, param2, tg.field_d, new ec(param0), wm.field_I);
-            dk.a(param11, (byte) -72, param12, param5, param1);
+            dk.a(param11, (byte) -72, true, param5, param1);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -279,7 +279,7 @@ final class ke extends wn {
               break L5;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param12 + 44 + param13 + 44 + param14 + 41);
+          throw aa.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + 1 + 44 + param13 + 44 + param14 + 41);
         }
     }
 

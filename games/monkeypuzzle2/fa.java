@@ -540,7 +540,8 @@ final class fa extends wl {
                   }
                 }
                 ((fa) this).field_o = (id) param2;
-                this.e(-1);
+                int discarded$1 = -1;
+                this.e();
                 this.a(param1, (byte) 109);
                 ((fa) this).field_k = null;
                 ((fa) this).field_g.field_h = 0;
@@ -638,7 +639,7 @@ final class fa extends wl {
     public fa() {
     }
 
-    private final void e(int param0) {
+    private final void e() {
         try {
             Exception var3 = null;
             Throwable decompiledCaughtException = null;

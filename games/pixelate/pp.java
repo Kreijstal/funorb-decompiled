@@ -844,7 +844,7 @@ final class pp extends sj {
           if (param0.field_n.length == 0) {
             return null;
           } else {
-            return new pp(param0, (int)((long)param0.field_o * 256L * (long)param1 / (long)(100 * mm.field_h)), param2 << 6);
+            return new pp(param0, (int)((long)param0.field_o * 256L * 100L / (long)(100 * mm.field_h)), param2 << 6);
           }
         } else {
           return null;

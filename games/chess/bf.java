@@ -11,7 +11,7 @@ abstract class bf extends ma implements ee {
 
     abstract int c(boolean param0);
 
-    final static void g(byte param0) {
+    final static void g() {
         o.field_a[520] = 59;
         o.field_a[222] = 58;
         o.field_a[192] = 28;
@@ -32,11 +32,8 @@ abstract class bf extends ma implements ee {
         super(param0, param1, param2, param3, param4);
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void a() {
         ji.field_U = 20000000L;
-        if (!param0) {
-            bf.d(true);
-        }
     }
 
     public static void d(boolean param0) {

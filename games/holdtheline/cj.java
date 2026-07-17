@@ -214,10 +214,12 @@ class cj extends rm {
 
     final static void a(gn param0, gn param1, gn param2, int param3, boolean param4) {
         try {
-            fj.field_o = qn.a("", -7079);
+            int discarded$0 = -7079;
+            fj.field_o = qn.a("");
             fj.field_o.a(false, 107);
             i.a(true, param0, param1, param2);
-            qj.h(-1);
+            int discarded$1 = -1;
+            qj.h();
             ak.field_b = gg.field_M;
             if (param3 < 98) {
                 field_M = null;
@@ -363,13 +365,14 @@ class cj extends rm {
             var7 = var5.a((n) this, param2, 13112);
             var8 = var5.a(param0 ^ 1337393829, (n) this, param1);
             do {
-                ei.a(var6.field_l - -2, var6.field_n + 2, var7 + (var6.field_j + -2), -2 + var8 - -var6.field_s, (byte) 19);
+                int discarded$0 = 19;
+                ei.a(var6.field_l - -2, var6.field_n + 2, var7 + (var6.field_j + -2), -2 + var8 - -var6.field_s);
                 var6 = var6.field_p;
             } while (var6 != null);
         }
     }
 
-    final static dk k(int param0) {
+    final static dk k() {
         int var1 = 0;
         if (wd.field_p == null) {
             wd.field_p = new dk(mo.field_w, 20, 0, 0, 0, 11579568, -1, 0, 0, mo.field_w.field_G, -1, 2147483647, true);

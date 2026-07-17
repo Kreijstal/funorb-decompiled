@@ -7,7 +7,7 @@ final class de {
     static boolean[][] field_c;
     static int field_d;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
         field_c = null;
@@ -34,7 +34,8 @@ final class de {
         var2 = 0;
         L0: while (true) {
           if (vl.field_b <= var2) {
-            p.a(0);
+            int discarded$1 = 0;
+            p.a();
             return var1;
           } else {
             var3 = lg.field_e[var2] * pg.field_r[var2];
@@ -51,6 +52,7 @@ final class de {
                 if (var3 <= var7) {
                   var1[var2] = (ka) (Object) new el(ij.field_B, le.field_g, ug.field_e[var2], dd.field_t[var2], pg.field_r[var2], lg.field_e[var2], var24);
                   var2++;
+                  var2++;
                   continue L0;
                 } else {
                   var6[var7] = p.a(jh.a(255, (int) var23[var7]) << 24, td.field_m[jh.a(255, (int) var21[var7])]);
@@ -65,6 +67,7 @@ final class de {
               L2: while (true) {
                 if (var3 <= var6_int) {
                   var1[var2] = new ka(ij.field_B, le.field_g, ug.field_e[var2], dd.field_t[var2], pg.field_r[var2], lg.field_e[var2], var22);
+                  var2++;
                   var2++;
                   continue L0;
                 } else {
@@ -87,10 +90,10 @@ final class de {
         int stackIn_4_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_16_0 = 0;
-        int stackIn_21_0 = 0;
+        int stackIn_19_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
-        int stackOut_20_0 = 0;
+        int stackOut_18_0 = 0;
         int stackOut_10_0 = 0;
         int stackOut_15_0 = 0;
         var3 = TorChallenge.field_F ? 1 : 0;
@@ -106,42 +109,34 @@ final class de {
               var2 = 0;
               L1: while (true) {
                 if (var1.field_p <= var2) {
-                  L2: {
-                    if (param0 == -1) {
-                      break L2;
-                    } else {
-                      field_a = null;
-                      break L2;
-                    }
-                  }
-                  stackOut_20_0 = 1;
-                  stackIn_21_0 = stackOut_20_0;
+                  stackOut_18_0 = 1;
+                  stackIn_19_0 = stackOut_18_0;
                   break L0;
                 } else {
-                  L3: {
+                  L2: {
                     if (null != var4.field_j[var2]) {
                       if (var4.field_j[var2].field_d != 0) {
-                        break L3;
+                        break L2;
                       } else {
                         stackOut_10_0 = 0;
                         stackIn_11_0 = stackOut_10_0;
                         return stackIn_11_0 != 0;
                       }
                     } else {
-                      break L3;
+                      break L2;
                     }
                   }
-                  L4: {
+                  L3: {
                     if (null != var4.field_q[var2]) {
                       if (var4.field_q[var2].field_d != 0) {
-                        break L4;
+                        break L3;
                       } else {
                         stackOut_15_0 = 0;
                         stackIn_16_0 = stackOut_15_0;
                         return stackIn_16_0 != 0;
                       }
                     } else {
-                      break L4;
+                      break L3;
                     }
                   }
                   var2++;
@@ -153,9 +148,9 @@ final class de {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var1_ref, "de.D(" + param0 + 41);
+          throw oj.a((Throwable) (Object) var1_ref, "de.D(" + -1 + 41);
         }
-        return stackIn_21_0 != 0;
+        return stackIn_19_0 != 0;
     }
 
     final static void b(int param0) {
@@ -205,8 +200,10 @@ final class de {
                       L3: {
                         if (lj.field_n[var10] != null) {
                           lj.field_n[var10].field_kb = 0;
+                          var10++;
                           break L3;
                         } else {
+                          var10++;
                           break L3;
                         }
                       }
@@ -252,7 +249,7 @@ final class de {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var2_int = 64 % ((-52 - param0) / 32);
+            var2_int = 0;
             stackOut_0_0 = param1.b((byte) 79);
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -262,7 +259,7 @@ final class de {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("de.F(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("de.F(").append(30).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -294,200 +291,102 @@ final class de {
         int var2 = 0;
         int var3 = 0;
         var3 = TorChallenge.field_F ? 1 : 0;
-        if (param0 < 100) {
-          boolean discarded$1 = de.a(-50);
-          if (param1 != 0) {
-            if (param1 < 0) {
-              throw new IllegalArgumentException("");
-            } else {
-              if (32768 <= param1) {
-                if (param1 >= 131072) {
-                  if (param1 >= 33554432) {
-                    if (param1 < 536870912) {
-                      if (param1 < 134217728) {
-                        var2 = 5;
-                        param1 = param1 >> (var2 << 1);
-                        return dd.field_p[param1 - 32768] << var2;
-                      } else {
-                        var2 = 6;
-                        param1 = param1 >> (var2 << 1);
-                        return dd.field_p[param1 - 32768] << var2;
-                      }
-                    } else {
-                      var2 = 7;
+        if (param1 != 0) {
+          if (param1 < 0) {
+            throw new IllegalArgumentException("");
+          } else {
+            if (32768 <= param1) {
+              if (param1 >= 131072) {
+                if (param1 >= 33554432) {
+                  if (param1 < 536870912) {
+                    if (param1 >= 134217728) {
+                      var2 = 6;
                       param1 = param1 >> (var2 << 1);
                       return dd.field_p[param1 - 32768] << var2;
-                    }
-                  } else {
-                    if (2097152 > param1) {
-                      if (param1 >= 524288) {
-                        var2 = 2;
-                        param1 = param1 >> (var2 << 1);
-                        return dd.field_p[param1 - 32768] << var2;
-                      } else {
-                        var2 = 1;
-                        param1 = param1 >> (var2 << 1);
-                        return dd.field_p[param1 - 32768] << var2;
-                      }
-                    } else {
-                      if (param1 < 8388608) {
-                        var2 = 3;
-                        param1 = param1 >> (var2 << 1);
-                        return dd.field_p[param1 - 32768] << var2;
-                      } else {
-                        var2 = 4;
-                        param1 = param1 >> (var2 << 1);
-                        return dd.field_p[param1 - 32768] << var2;
-                      }
-                    }
-                  }
-                } else {
-                  return dd.field_p[-32768 + param1];
-                }
-              } else {
-                if (param1 < 128) {
-                  if (param1 < 8) {
-                    if (param1 >= 2) {
-                      var2 = 7;
-                      param1 = param1 << (var2 << 1);
-                      return dd.field_p[param1 - 32768] >> var2;
-                    } else {
-                      return 256;
-                    }
-                  } else {
-                    if (param1 < 32) {
-                      var2 = 6;
-                      param1 = param1 << (var2 << 1);
-                      return dd.field_p[param1 - 32768] >> var2;
                     } else {
                       var2 = 5;
-                      param1 = param1 << (var2 << 1);
-                      return dd.field_p[param1 - 32768] >> var2;
-                    }
-                  }
-                } else {
-                  if (2048 <= param1) {
-                    if (param1 < 8192) {
-                      var2 = 2;
-                      param1 = param1 << (var2 << 1);
-                      return dd.field_p[param1 - 32768] >> var2;
-                    } else {
-                      var2 = 1;
-                      param1 = param1 << (var2 << 1);
-                      return dd.field_p[param1 - 32768] >> var2;
-                    }
-                  } else {
-                    if (param1 < 512) {
-                      var2 = 4;
-                      param1 = param1 << (var2 << 1);
-                      return dd.field_p[param1 - 32768] >> var2;
-                    } else {
-                      var2 = 3;
-                      param1 = param1 << (var2 << 1);
-                      return dd.field_p[param1 - 32768] >> var2;
-                    }
-                  }
-                }
-              }
-            }
-          } else {
-            return 0;
-          }
-        } else {
-          if (param1 != 0) {
-            if (param1 < 0) {
-              throw new IllegalArgumentException("");
-            } else {
-              if (32768 <= param1) {
-                if (param1 >= 131072) {
-                  if (param1 >= 33554432) {
-                    if (param1 < 536870912) {
-                      if (param1 >= 134217728) {
-                        var2 = 6;
-                        param1 = param1 >> (var2 << 1);
-                        return dd.field_p[param1 - 32768] << var2;
-                      } else {
-                        var2 = 5;
-                        param1 = param1 >> (var2 << 1);
-                        return dd.field_p[param1 - 32768] << var2;
-                      }
-                    } else {
-                      var2 = 7;
                       param1 = param1 >> (var2 << 1);
                       return dd.field_p[param1 - 32768] << var2;
                     }
                   } else {
-                    if (2097152 > param1) {
-                      if (param1 < 524288) {
-                        var2 = 1;
-                        param1 = param1 >> (var2 << 1);
-                        return dd.field_p[param1 - 32768] << var2;
-                      } else {
-                        var2 = 2;
-                        param1 = param1 >> (var2 << 1);
-                        return dd.field_p[param1 - 32768] << var2;
-                      }
-                    } else {
-                      if (param1 >= 8388608) {
-                        var2 = 4;
-                        param1 = param1 >> (var2 << 1);
-                        return dd.field_p[param1 - 32768] << var2;
-                      } else {
-                        var2 = 3;
-                        param1 = param1 >> (var2 << 1);
-                        return dd.field_p[param1 - 32768] << var2;
-                      }
-                    }
+                    var2 = 7;
+                    param1 = param1 >> (var2 << 1);
+                    return dd.field_p[param1 - 32768] << var2;
                   }
                 } else {
-                  return dd.field_p[-32768 + param1];
-                }
-              } else {
-                L0: {
-                  if (param1 < 128) {
-                    if (param1 < 8) {
-                      if (param1 < 2) {
-                        return 256;
-                      } else {
-                        var2 = 7;
-                        break L0;
-                      }
+                  if (2097152 > param1) {
+                    if (param1 < 524288) {
+                      var2 = 1;
+                      param1 = param1 >> (var2 << 1);
+                      return dd.field_p[param1 - 32768] << var2;
                     } else {
-                      if (param1 >= 32) {
-                        var2 = 5;
-                        break L0;
-                      } else {
-                        var2 = 6;
-                        break L0;
-                      }
+                      var2 = 2;
+                      param1 = param1 >> (var2 << 1);
+                      return dd.field_p[param1 - 32768] << var2;
                     }
                   } else {
-                    if (2048 <= param1) {
-                      if (param1 >= 8192) {
-                        var2 = 1;
-                        break L0;
-                      } else {
-                        var2 = 2;
-                        break L0;
-                      }
+                    if (param1 >= 8388608) {
+                      var2 = 4;
+                      param1 = param1 >> (var2 << 1);
+                      return dd.field_p[param1 - 32768] << var2;
                     } else {
-                      if (param1 < 512) {
-                        var2 = 4;
-                        break L0;
-                      } else {
-                        var2 = 3;
-                        break L0;
-                      }
+                      var2 = 3;
+                      param1 = param1 >> (var2 << 1);
+                      return dd.field_p[param1 - 32768] << var2;
                     }
                   }
                 }
-                param1 = param1 << (var2 << 1);
-                return dd.field_p[param1 - 32768] >> var2;
+              } else {
+                return dd.field_p[-32768 + param1];
+              }
+            } else {
+              if (param1 < 128) {
+                if (param1 < 8) {
+                  if (param1 >= 2) {
+                    var2 = 7;
+                    param1 = param1 << (var2 << 1);
+                    return dd.field_p[param1 - 32768] >> var2;
+                  } else {
+                    return 256;
+                  }
+                } else {
+                  if (param1 < 32) {
+                    var2 = 6;
+                    param1 = param1 << (var2 << 1);
+                    return dd.field_p[param1 - 32768] >> var2;
+                  } else {
+                    var2 = 5;
+                    param1 = param1 << (var2 << 1);
+                    return dd.field_p[param1 - 32768] >> var2;
+                  }
+                }
+              } else {
+                if (2048 <= param1) {
+                  if (param1 < 8192) {
+                    var2 = 2;
+                    param1 = param1 << (var2 << 1);
+                    return dd.field_p[param1 - 32768] >> var2;
+                  } else {
+                    var2 = 1;
+                    param1 = param1 << (var2 << 1);
+                    return dd.field_p[param1 - 32768] >> var2;
+                  }
+                } else {
+                  if (param1 < 512) {
+                    var2 = 4;
+                    param1 = param1 << (var2 << 1);
+                    return dd.field_p[param1 - 32768] >> var2;
+                  } else {
+                    var2 = 3;
+                    param1 = param1 << (var2 << 1);
+                    return dd.field_p[param1 - 32768] >> var2;
+                  }
+                }
               }
             }
-          } else {
-            return 0;
           }
+        } else {
+          return 0;
         }
     }
 

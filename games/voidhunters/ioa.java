@@ -94,7 +94,7 @@ final class ioa extends rqa {
         if (kba.field_a == null) {
           return;
         } else {
-          var8 = ohb.a(param0, -26, param1);
+          var8 = ohb.a(param0, -26, 0);
           var9 = var8;
           if (param2 < -31) {
             if (var9 == null) {
@@ -113,7 +113,7 @@ final class ioa extends rqa {
               var3 = new nl();
               var3.field_h = true;
               var3.field_d = var13;
-              var3.field_l = param1;
+              var3.field_l = 0;
               var3.field_g = false;
               var3.field_k = param0;
               gtb.field_d.b(-10258, (ksa) (Object) var3);
@@ -142,7 +142,7 @@ final class ioa extends rqa {
               var3 = new nl();
               var3.field_h = true;
               var3.field_d = var11;
-              var3.field_l = param1;
+              var3.field_l = 0;
               var3.field_g = false;
               var3.field_k = param0;
               gtb.field_d.b(-10258, (ksa) (Object) var3);

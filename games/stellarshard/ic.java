@@ -25,7 +25,7 @@ abstract class ic implements w {
 
     abstract String b(byte param0);
 
-    public static void d(byte param0) {
+    public static void d() {
         field_b = null;
         field_d = null;
     }
@@ -171,7 +171,6 @@ abstract class ic implements w {
         RuntimeException var2 = null;
         int var3 = 0;
         fk var4 = null;
-        af var5 = null;
         RuntimeException decompiledCaughtException = null;
         var3 = stellarshard.field_B;
         try {
@@ -179,22 +178,10 @@ abstract class ic implements w {
             var4 = (fk) (Object) ib.field_c.b(-88);
             L1: while (true) {
               if (var4 == null) {
-                if (param1 >= 30) {
-                  var5 = (af) (Object) pf.field_b.b(-110);
-                  L2: while (true) {
-                    if (var5 == null) {
-                      break L0;
-                    } else {
-                      kg.a(param0, var5, false);
-                      var5 = (af) (Object) pf.field_b.b((byte) 87);
-                      continue L2;
-                    }
-                  }
-                } else {
-                  return;
-                }
+                break L0;
               } else {
-                th.a(param0, var4, 1);
+                int discarded$2 = 1;
+                th.a(5, var4);
                 var4 = (fk) (Object) ib.field_c.b((byte) 106);
                 continue L1;
               }
@@ -203,7 +190,7 @@ abstract class ic implements w {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var2, "ic.J(" + param0 + 44 + param1 + 41);
+          throw ma.a((Throwable) (Object) var2, "ic.J(" + 5 + 44 + 55 + 41);
         }
     }
 

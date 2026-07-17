@@ -84,7 +84,7 @@ class dfa {
             rv.field_n = null;
             pw.field_w = null;
             var10_int = 0;
-            var11 = param3;
+            var11 = 0;
             L1: while (true) {
               if (mja.field_s.length <= var11) {
                 L2: {
@@ -114,8 +114,8 @@ class dfa {
                 }
                 L4: {
                   uma.field_M = param7.field_z;
-                  uma.field_M.d(param3 + 91);
-                  ola.field_g = new wma(param8);
+                  uma.field_M.d(91);
+                  ola.field_g = new wma(1024);
                   if (null != param6.field_z) {
                     break L4;
                   } else {
@@ -124,10 +124,10 @@ class dfa {
                   }
                 }
                 bia.field_g = param6.field_z;
-                bia.field_g.d(param3 + 92);
+                bia.field_g.d(92);
                 wi.field_i = new wma(param1);
                 wda.field_a = 0L;
-                kla.field_x = param0;
+                kla.field_x = 150;
                 break L0;
               } else {
                 var10_int = var10_int + (255 & mja.field_s[var11]);
@@ -141,7 +141,7 @@ class dfa {
           L5: {
             var10 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var10;
-            stackOut_12_1 = new StringBuilder().append("dfa.VB(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_12_1 = new StringBuilder().append("dfa.VB(").append(150).append(44).append(param1).append(44).append(param2).append(44).append(0).append(44);
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -216,7 +216,7 @@ class dfa {
           }
           L8: {
             stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(44).append(param8).append(44);
+            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(44).append(1024).append(44);
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -276,7 +276,7 @@ class dfa {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
     }
 

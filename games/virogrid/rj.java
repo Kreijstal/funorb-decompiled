@@ -128,20 +128,13 @@ final class rj implements ol {
     }
 
     final static void a(int param0, boolean param1, long param2) {
-        hg var4 = null;
-        int var5 = 0;
-        var4 = gk.field_g;
+        hg var4 = gk.field_g;
         var4.g(param0, 8);
         var4.field_l = var4.field_l + 1;
-        var5 = var4.field_l;
+        int var5 = var4.field_l;
         var4.a(6, -119);
         var4.a((byte) 67, param2);
-        if (param1) {
-          return;
-        } else {
-          var4.b(-var5 + var4.field_l, -1);
-          return;
-        }
+        var4.b(-var5 + var4.field_l, -1);
     }
 
     final static void a(int param0, byte param1) {
@@ -177,7 +170,7 @@ final class rj implements ol {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_i = null;
         field_j = null;
         field_d = null;
@@ -186,36 +179,32 @@ final class rj implements ol {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var9 = 0;
         var9 = Virogrid.field_F ? 1 : 0;
-        if (param4 < -26) {
-          if (param1 >= param5) {
-            if (param7 <= param1) {
-              if (param5 < param7) {
-                li.a(param5, param0, param7, df.field_d, param1, param3, param2, param6, (byte) -68);
-                return;
-              } else {
-                li.a(param7, param3, param5, df.field_d, param1, param0, param2, param6, (byte) -59);
-                return;
-              }
+        if (param1 >= param5) {
+          if (param7 <= param1) {
+            if (param5 < param7) {
+              li.a(param5, param0, param7, df.field_d, param1, param3, param2, param6, (byte) -68);
+              return;
             } else {
-              li.a(param5, param0, param1, df.field_d, param7, param6, param2, param3, (byte) 75);
+              li.a(param7, param3, param5, df.field_d, param1, param0, param2, param6, (byte) -59);
               return;
             }
           } else {
-            if (param7 <= param5) {
-              if (param7 <= param1) {
-                li.a(param7, param3, param1, df.field_d, param5, param6, param2, param0, (byte) -58);
-                return;
-              } else {
-                li.a(param1, param6, param7, df.field_d, param5, param3, param2, param0, (byte) 112);
-                return;
-              }
-            } else {
-              li.a(param1, param6, param5, df.field_d, param7, param0, param2, param3, (byte) -105);
-              return;
-            }
+            li.a(param5, param0, param1, df.field_d, param7, param6, param2, param3, (byte) 75);
+            return;
           }
         } else {
-          return;
+          if (param7 <= param5) {
+            if (param7 <= param1) {
+              li.a(param7, param3, param1, df.field_d, param5, param6, param2, param0, (byte) -58);
+              return;
+            } else {
+              li.a(param1, param6, param7, df.field_d, param5, param3, param2, param0, (byte) 112);
+              return;
+            }
+          } else {
+            li.a(param1, param6, param5, df.field_d, param7, param0, param2, param3, (byte) -105);
+            return;
+          }
         }
     }
 

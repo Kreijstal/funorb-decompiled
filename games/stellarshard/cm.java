@@ -9,14 +9,14 @@ final class cm {
     static String field_e;
 
     public static void a(int param0) {
-        int var1 = -21 / ((-47 - param0) / 36);
+        int var1 = -21;
         field_b = null;
         field_e = null;
         field_d = null;
         field_c = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
     }
 
     static {

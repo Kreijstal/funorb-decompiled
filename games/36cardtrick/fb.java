@@ -26,10 +26,7 @@ final class fb {
     }
 
     final static kc[] a(int param0, int param1, int param2, int param3) {
-        if (param0 != 18457) {
-            return null;
-        }
-        return h.b(1, param2, param0 + -2695, param1, param3);
+        return h.b(1, param2, 15762, param1, param3);
     }
 
     static {

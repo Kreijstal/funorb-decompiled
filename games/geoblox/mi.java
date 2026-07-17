@@ -48,22 +48,22 @@ class mi extends kg {
 
     private final void a(int param0, mi param1) {
         RuntimeException var3 = null;
+        RuntimeException stackIn_97_0 = null;
+        StringBuilder stackIn_97_1 = null;
+        RuntimeException stackIn_98_0 = null;
+        StringBuilder stackIn_98_1 = null;
         RuntimeException stackIn_99_0 = null;
         StringBuilder stackIn_99_1 = null;
-        RuntimeException stackIn_100_0 = null;
-        StringBuilder stackIn_100_1 = null;
-        RuntimeException stackIn_101_0 = null;
-        StringBuilder stackIn_101_1 = null;
-        String stackIn_101_2 = null;
+        String stackIn_99_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_96_0 = null;
+        StringBuilder stackOut_96_1 = null;
         RuntimeException stackOut_98_0 = null;
         StringBuilder stackOut_98_1 = null;
-        RuntimeException stackOut_100_0 = null;
-        StringBuilder stackOut_100_1 = null;
-        String stackOut_100_2 = null;
-        RuntimeException stackOut_99_0 = null;
-        StringBuilder stackOut_99_1 = null;
-        String stackOut_99_2 = null;
+        String stackOut_98_2 = null;
+        RuntimeException stackOut_97_0 = null;
+        StringBuilder stackOut_97_1 = null;
+        String stackOut_97_2 = null;
         try {
           L0: {
             L1: {
@@ -366,45 +366,37 @@ class mi extends kg {
                 break L1;
               }
             }
-            L38: {
-              if (param0 == -2147483648) {
-                break L38;
-              } else {
-                field_B = null;
-                break L38;
-              }
-            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L39: {
+          L38: {
             var3 = decompiledCaughtException;
-            stackOut_98_0 = (RuntimeException) var3;
-            stackOut_98_1 = new StringBuilder().append("mi.B(").append(param0).append(44);
-            stackIn_100_0 = stackOut_98_0;
-            stackIn_100_1 = stackOut_98_1;
-            stackIn_99_0 = stackOut_98_0;
-            stackIn_99_1 = stackOut_98_1;
+            stackOut_96_0 = (RuntimeException) var3;
+            stackOut_96_1 = new StringBuilder().append("mi.B(").append(-2147483648).append(44);
+            stackIn_98_0 = stackOut_96_0;
+            stackIn_98_1 = stackOut_96_1;
+            stackIn_97_0 = stackOut_96_0;
+            stackIn_97_1 = stackOut_96_1;
             if (param1 == null) {
-              stackOut_100_0 = (RuntimeException) (Object) stackIn_100_0;
-              stackOut_100_1 = (StringBuilder) (Object) stackIn_100_1;
-              stackOut_100_2 = "null";
-              stackIn_101_0 = stackOut_100_0;
-              stackIn_101_1 = stackOut_100_1;
-              stackIn_101_2 = stackOut_100_2;
-              break L39;
+              stackOut_98_0 = (RuntimeException) (Object) stackIn_98_0;
+              stackOut_98_1 = (StringBuilder) (Object) stackIn_98_1;
+              stackOut_98_2 = "null";
+              stackIn_99_0 = stackOut_98_0;
+              stackIn_99_1 = stackOut_98_1;
+              stackIn_99_2 = stackOut_98_2;
+              break L38;
             } else {
-              stackOut_99_0 = (RuntimeException) (Object) stackIn_99_0;
-              stackOut_99_1 = (StringBuilder) (Object) stackIn_99_1;
-              stackOut_99_2 = "{...}";
-              stackIn_101_0 = stackOut_99_0;
-              stackIn_101_1 = stackOut_99_1;
-              stackIn_101_2 = stackOut_99_2;
-              break L39;
+              stackOut_97_0 = (RuntimeException) (Object) stackIn_97_0;
+              stackOut_97_1 = (StringBuilder) (Object) stackIn_97_1;
+              stackOut_97_2 = "{...}";
+              stackIn_99_0 = stackOut_97_0;
+              stackIn_99_1 = stackOut_97_1;
+              stackIn_99_2 = stackOut_97_2;
+              break L38;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_101_0, stackIn_101_2 + 41);
+          throw t.a((Throwable) (Object) stackIn_99_0, stackIn_99_2 + 41);
         }
     }
 
@@ -412,7 +404,7 @@ class mi extends kg {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_R = null;
         field_E = null;
         field_y = null;

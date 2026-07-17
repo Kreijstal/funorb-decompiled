@@ -15,7 +15,7 @@ class cia extends bw {
     int field_k;
     int field_q;
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         if (dma.field_b == null) {
             return false;
         }
@@ -69,15 +69,12 @@ class cia extends bw {
     }
 
     private final void b(int param0, int param1, int param2, int param3) {
-        if (param2 != 15704) {
-            return;
-        }
         ((cia) this).field_h = param3;
         ((cia) this).field_i = param1;
         ((cia) this).field_q = param0;
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_n = null;
         field_f = null;
     }

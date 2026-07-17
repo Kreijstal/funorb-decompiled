@@ -20,12 +20,9 @@ final class ga implements Iterator {
 
     final static void a(int param0, pb param1) {
         try {
-            if (param0 != -8039) {
-                field_a = null;
-            }
             eh.field_f = param1;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "ga.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "ga.B(" + -8039 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -53,7 +50,7 @@ final class ga implements Iterator {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
     }
 

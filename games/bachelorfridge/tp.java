@@ -96,7 +96,7 @@ final class tp extends ana {
         }
     }
 
-    private final void e(int param0) {
+    private final void e() {
     }
 
     final boolean c(byte param0) {
@@ -106,10 +106,11 @@ final class tp extends ana {
           return false;
         } else {
           if (!((tp) this).field_y.a((byte) -106)) {
-            int fieldTemp$2 = ((tp) this).field_l - 1;
+            int fieldTemp$4 = ((tp) this).field_l - 1;
             ((tp) this).field_l = ((tp) this).field_l - 1;
-            if (fieldTemp$2 < 0) {
-              this.e(-1);
+            if (fieldTemp$4 < 0) {
+              int discarded$5 = -1;
+              this.e();
               return true;
             } else {
               L0: {

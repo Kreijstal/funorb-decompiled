@@ -137,7 +137,7 @@ class ro extends am {
         return pm.field_p;
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_t = null;
     }
 
@@ -313,7 +313,7 @@ class ro extends am {
                       break L1;
                     } else {
                       L2: {
-                        var4_int = -28 / ((param0 - -42) / 52);
+                        var4_int = -28;
                         if (!param2.a(-12749)) {
                           break L2;
                         } else {
@@ -345,7 +345,7 @@ class ro extends am {
           L3: {
             var4 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var4;
-            stackOut_17_1 = new StringBuilder().append("ro.O(").append(param0).append(44);
+            stackOut_17_1 = new StringBuilder().append("ro.O(").append(54).append(44);
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;

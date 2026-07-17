@@ -8,7 +8,7 @@ final class gh {
     static String field_e;
     static String field_d;
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
         field_b = null;
@@ -16,7 +16,7 @@ final class gh {
         field_a = null;
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void a(java.applet.Applet param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

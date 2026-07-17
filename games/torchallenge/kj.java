@@ -182,7 +182,8 @@ class kj extends ee implements gk {
             L1: {
               if (((kj) this).a(param0, param1, -125, param2)) {
                 ((kj) this).a(param2, 127, param0, param1);
-                this.a(param0, param2, param1, 127);
+                int discarded$2 = 127;
+                this.a(param0, param2, param1);
                 break L1;
               } else {
                 break L1;
@@ -519,13 +520,13 @@ class kj extends ee implements gk {
             param1.addMouseListener((java.awt.event.MouseListener) (Object) te.field_b);
             param1.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) te.field_b);
             param1.addFocusListener((java.awt.event.FocusListener) (Object) te.field_b);
-            int var2_int = -85 % ((param0 - -48) / 57);
+            int var2_int = 0;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "kj.CC(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "kj.CC(" + 54 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    private final void a(Hashtable param0, StringBuilder param1, int param2, int param3) {
+    private final void a(Hashtable param0, StringBuilder param1, int param2) {
         nj var5 = null;
         RuntimeException var5_ref = null;
         ee var6 = null;

@@ -50,7 +50,7 @@ class lk extends qb {
                 if (var5 == 0) {
                   break L1;
                 } else {
-                  boolean discarded$4 = ((lk) this).a(param1, eg.field_b, param2, ij.field_e, eg.field_f, -1, (lk) this);
+                  boolean discarded$5 = ((lk) this).a(param1, eg.field_b, param2, ij.field_e, eg.field_f, -1, (lk) this);
                   break L1;
                 }
               }
@@ -102,7 +102,8 @@ class lk extends qb {
           }
         }
         sa.field_c = k.field_c;
-        hi.a(((lk) this).b((byte) -79), (byte) -111);
+        int discarded$6 = -111;
+        hi.a(((lk) this).b((byte) -79));
         if (param0 == -116) {
           return param3;
         } else {
@@ -764,7 +765,8 @@ class lk extends qb {
                 break L1;
               }
             }
-            stackOut_2_0 = ol.a(var5, param3, var4_int, 505437496);
+            int discarded$2 = 505437496;
+            stackOut_2_0 = ol.a(var5, param3, var4_int);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

@@ -10,7 +10,7 @@ final class lb {
     static double field_g;
     static bh field_d;
 
-    final static nh a(ed param0, byte param1) {
+    final static nh a(ed param0) {
         RuntimeException var2 = null;
         nh stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -73,7 +73,7 @@ final class lb {
         ii.field_z = false;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
         field_d = null;
         field_c = null;
@@ -99,10 +99,11 @@ final class lb {
         }
     }
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void a(java.applet.Applet param0) {
         try {
             rp.a(param0, -2112, "");
-            pd.a(param0, 1000000);
+            int discarded$0 = 1000000;
+            pd.a(param0);
         } catch (RuntimeException runtimeException) {
             throw wn.a((Throwable) (Object) runtimeException, "lb.D(" + (param0 != null ? "{...}" : "null") + 44 + 80 + 41);
         }

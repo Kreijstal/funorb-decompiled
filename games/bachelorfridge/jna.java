@@ -43,7 +43,8 @@ final class jna extends bw {
             }
             L2: {
               if (lna.field_q) {
-                qfa.a(param0, param6, param7, (byte) -115, param6, param4, param5, param1, 20);
+                int discarded$13 = 20;
+                qfa.a(param0, param6, param7, (byte) -115, param6, param4, param5, param1);
                 bi.field_h.a(19842, param3);
                 if (!param3) {
                   break L2;
@@ -127,21 +128,17 @@ final class jna extends bw {
         var6 = BachelorFridge.field_y;
         var7 = new kv[9];
         var4 = var7;
-        var7[0] = ik.b(param1, param3, 2);
+        var7[0] = ik.b(1, param3, 2);
         var5 = 1;
-        if (param2 == 106) {
-          L0: while (true) {
-            if (9 <= var5) {
-              var4[4] = ik.b(64, param0, 2);
-              return var4;
-            } else {
-              var7[var5] = var7[0];
-              var5++;
-              continue L0;
-            }
+        L0: while (true) {
+          if (9 <= var5) {
+            var4[4] = ik.b(64, param0, 2);
+            return var4;
+          } else {
+            var7[var5] = var7[0];
+            var5++;
+            continue L0;
           }
-        } else {
-          return null;
         }
     }
 
@@ -164,10 +161,6 @@ final class jna extends bw {
     final static void a(boolean param0, boolean param1) {
         wia.a(param1, (byte) 31);
         kh.a((byte) -74, param1);
-        if (param0) {
-            return;
-        }
-        field_f = null;
     }
 
     static {

@@ -11,22 +11,19 @@ final class gk {
     static bb field_h;
     static int field_g;
 
-    final static void a(String param0, int param1, long param2, int param3, byte param4) {
+    final static void a(String param0, int param1, long param2, int param3) {
         vb.field_h = param1;
         oc.field_f = param0;
         nu.field_j = true;
-        if (param4 > -49) {
-            return;
-        }
         try {
             qh.field_c = param2;
             qs.field_K = param3;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "gk.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "gk.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + -51 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_h = null;
         field_c = null;

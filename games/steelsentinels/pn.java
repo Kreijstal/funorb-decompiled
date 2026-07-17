@@ -67,10 +67,10 @@ final class pn implements Runnable {
             String var7 = null;
             Exception var8 = null;
             sn var8_ref = null;
-            sn stackIn_13_0 = null;
+            sn stackIn_12_0 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            sn stackOut_12_0 = null;
+            sn stackOut_11_0 = null;
             L0: {
               if (param2 != 33) {
                 if (34 == param2) {
@@ -87,50 +87,46 @@ final class pn implements Runnable {
             }
             var5_array = new String[]{"c:/rscache/", "/rscache/", field_l, "c:/windows/", "c:/winnt/", "c:/", "/tmp/", ""};
             var6 = 0;
-            if (param1 == 11677) {
-              L1: while (true) {
-                if (var6 < var5_array.length) {
-                  L2: {
-                    var7 = var5_array[var6];
-                    if (var7.length() <= 0) {
+            L1: while (true) {
+              if (var6 < var5_array.length) {
+                L2: {
+                  var7 = var5_array[var6];
+                  if (var7.length() <= 0) {
+                    break L2;
+                  } else {
+                    if (new File(var7).exists()) {
                       break L2;
                     } else {
-                      if (new File(var7).exists()) {
-                        break L2;
-                      } else {
-                        var6++;
-                        continue L1;
-                      }
-                    }
-                  }
-                  try {
-                    L3: {
-                      var8_ref = new sn(new File(var7, var4), "rw", 10000L);
-                      stackOut_12_0 = (sn) var8_ref;
-                      stackIn_13_0 = stackOut_12_0;
-                      decompiledRegionSelector0 = 0;
-                      break L3;
-                    }
-                  } catch (java.lang.Exception decompiledCaughtParameter0) {
-                    decompiledCaughtException = decompiledCaughtParameter0;
-                    L4: {
-                      var8 = (Exception) (Object) decompiledCaughtException;
                       var6++;
-                      decompiledRegionSelector0 = 1;
-                      break L4;
+                      continue L1;
                     }
                   }
-                  if (decompiledRegionSelector0 == 0) {
-                    return stackIn_13_0;
-                  } else {
-                    continue L1;
-                  }
-                } else {
-                  return null;
                 }
+                try {
+                  L3: {
+                    var8_ref = new sn(new File(var7, var4), "rw", 10000L);
+                    stackOut_11_0 = (sn) var8_ref;
+                    stackIn_12_0 = stackOut_11_0;
+                    decompiledRegionSelector0 = 0;
+                    break L3;
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L4: {
+                    var8 = (Exception) (Object) decompiledCaughtException;
+                    var6++;
+                    decompiledRegionSelector0 = 1;
+                    break L4;
+                  }
+                }
+                if (decompiledRegionSelector0 == 0) {
+                  return stackIn_12_0;
+                } else {
+                  continue L1;
+                }
+              } else {
+                return null;
               }
-            } else {
-              return null;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -689,11 +685,7 @@ final class pn implements Runnable {
     }
 
     private final wj a(int param0, boolean param1, boolean param2, String param3) {
-        if (param1) {
-            Object var6 = null;
-            wj discarded$0 = ((pn) this).a((String) null, -15, 36);
-        }
-        return this.a(0, param0, 108, (Object) (Object) param3, param2 ? 22 : 1);
+        return this.a(0, param0, 108, (Object) (Object) param3, 1);
     }
 
     pn(int param0, String param1, int param2, boolean param3) throws Exception {

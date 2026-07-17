@@ -15,9 +15,9 @@ final class mla extends rqa {
             Object var6 = null;
             Object var7 = null;
             ga var8 = null;
-            asb stackIn_15_0 = null;
+            asb stackIn_13_0 = null;
             Throwable decompiledCaughtException = null;
-            asb stackOut_14_0 = null;
+            asb stackOut_12_0 = null;
             try {
               L0: {
                 L1: {
@@ -59,23 +59,15 @@ final class mla extends rqa {
                 }
                 L5: {
                   var8 = ho.field_a.a(param4, 5, (fo) var6, (fo) var7, param3);
-                  if (!param1) {
-                    break L5;
-                  } else {
-                    var8.b((byte) -82);
-                    break L5;
-                  }
-                }
-                L6: {
                   if (param2 <= -48) {
-                    break L6;
+                    break L5;
                   } else {
                     asb discarded$2 = mla.a(false, false, 36, false, -48, -32);
-                    break L6;
+                    break L5;
                   }
                 }
-                stackOut_14_0 = new asb((fnb) (Object) var8, param0, param5);
-                stackIn_15_0 = stackOut_14_0;
+                stackOut_12_0 = new asb((fnb) (Object) var8, param0, param5);
+                stackIn_13_0 = stackOut_12_0;
                 break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -83,7 +75,7 @@ final class mla extends rqa {
               var6 = (Object) (Object) decompiledCaughtException;
               throw new RuntimeException(((IOException) var6).toString());
             }
-            return stackIn_15_0;
+            return stackIn_13_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -110,7 +102,7 @@ final class mla extends rqa {
         }
     }
 
-    final static int a(String param0, ds param1, int param2) {
+    final static int a(String param0, ds param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;

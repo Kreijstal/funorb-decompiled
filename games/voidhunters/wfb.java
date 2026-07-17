@@ -105,7 +105,8 @@ final class wfb {
             }
         }
         if (!(!param2)) {
-            this.a(true);
+            int discarded$1 = 1;
+            this.a();
         }
         this.a((byte) 110);
     }
@@ -151,7 +152,7 @@ final class wfb {
         }
     }
 
-    private final void a(boolean param0) {
+    private final void a() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -286,7 +287,8 @@ final class wfb {
             ((wfb) this).field_d = 0;
             ((wfb) this).field_q = 256;
             ((wfb) this).field_b = param1;
-            this.a(true);
+            int discarded$0 = 1;
+            this.a();
             this.a((byte) 121);
             ((wfb) this).field_k = true;
             ((wfb) this).field_a = 6;

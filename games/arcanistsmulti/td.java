@@ -12,9 +12,6 @@ final class td extends df implements vb {
     final static void a(boolean param0, int param1, int param2) {
         vd.field_l = param2;
         to.field_p = param1;
-        if (!param0) {
-            field_E = null;
-        }
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
@@ -95,7 +92,8 @@ final class td extends df implements vb {
                   return;
                 }
               } else {
-                wk.k(970210916);
+                int discarded$2 = 970210916;
+                wk.k();
                 return;
               }
             } else {
@@ -193,7 +191,8 @@ final class td extends df implements vb {
             if (param0 instanceof byte[]) {
               var4 = (byte[]) param0;
               if (param2) {
-                stackOut_8_0 = dd.a(var4, 0);
+                int discarded$2 = 0;
+                stackOut_8_0 = dd.a(var4);
                 stackIn_9_0 = stackOut_8_0;
                 return stackIn_9_0;
               } else {
@@ -342,7 +341,7 @@ final class td extends df implements vb {
         return stackIn_14_0;
     }
 
-    final static boolean e(boolean param0) {
+    final static boolean e() {
         return qf.field_d >= 2;
     }
 

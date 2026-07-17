@@ -31,15 +31,7 @@ final class pd {
     }
 
     private final void a(int param0, java.awt.Frame param1) {
-        L0: {
-          ((pd) this).field_a.setFullScreenWindow((java.awt.Window) (Object) param1);
-          if (param0 == -779675038) {
-            break L0;
-          } else {
-            ((pd) this).field_a = null;
-            break L0;
-          }
-        }
+        ((pd) this).field_a.setFullScreenWindow((java.awt.Window) (Object) param1);
     }
 
     public pd() throws Exception {

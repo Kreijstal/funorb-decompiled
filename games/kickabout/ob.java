@@ -202,7 +202,8 @@ final class ob extends tj {
                   if (Math.abs(var4) >= 8388608) {
                     break L6;
                   } else {
-                    var5 = tu.a(var3_int, var4, -23146);
+                    int discarded$4 = -23146;
+                    var5 = tu.a(var3_int, var4);
                     if (var5 == 0) {
                       break L6;
                     } else {
@@ -221,9 +222,10 @@ final class ob extends tj {
                   if (!((ob) this).field_y) {
                     if (((ob) this).field_x) {
                       var5 = 41;
-                      var6 = tu.a(var3_int, var4, -23146);
+                      int discarded$5 = -23146;
+                      var6 = tu.a(var3_int, var4);
                       var7 = var6 >> 10;
-                      wh discarded$2 = he.a(128, false, 240, we.field_f + var7, var5);
+                      wh discarded$6 = he.a(128, false, 240, we.field_f + var7, var5);
                       break L8;
                     } else {
                       break L8;
@@ -283,7 +285,7 @@ final class ob extends tj {
                       break L13;
                     }
                   }
-                  wh discarded$3 = he.a(128, false, 240, var6 - -jo.field_E, var5);
+                  wh discarded$7 = he.a(128, false, 240, var6 - -jo.field_E, var5);
                   break L8;
                 }
               }
@@ -342,7 +344,7 @@ final class ob extends tj {
         }
     }
 
-    public static void i(int param0) {
+    public static void i() {
         field_R = null;
         int var1 = 60;
         field_F = null;
@@ -388,7 +390,8 @@ final class ob extends tj {
             ((ob) this).field_L = false;
         }
         if (((ob) this).field_J != param3) {
-            this.a((byte) -113, param3, 300);
+            int discarded$1 = 300;
+            this.a((byte) -113, param3);
         }
         qo.field_l[((ob) this).field_l].a(((ob) this).field_D, ((ob) this).field_G);
     }
@@ -774,7 +777,7 @@ final class ob extends tj {
         }
     }
 
-    private final void a(byte param0, int param1, int param2) {
+    private final void a(byte param0, int param1) {
         int var4 = ei.a(300, (byte) -23);
         int var5 = we.a(300, false);
         ((ob) this).field_J = param1;
@@ -1163,7 +1166,8 @@ final class ob extends tj {
             ((ob) this).field_Q = new cc();
             ((ob) this).field_Q.a(8, ((ob) this).field_G);
             ((ob) this).field_D = new int[12];
-            this.a((byte) 127, 1200, 300);
+            int discarded$0 = 300;
+            this.a((byte) 127, 1200);
             ((ob) this).field_N = ((ob) this).field_t;
             ((ob) this).field_M = ((ob) this).field_v;
             ((ob) this).field_E = ((ob) this).field_p;

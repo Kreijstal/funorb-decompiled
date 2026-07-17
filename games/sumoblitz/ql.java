@@ -37,7 +37,7 @@ final class ql extends rw {
         return 100;
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_z = null;
         field_A = null;
     }

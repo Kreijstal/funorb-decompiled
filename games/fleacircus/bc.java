@@ -33,7 +33,7 @@ final class bc extends c implements nh {
         }
     }
 
-    final static void s(int param0) {
+    final static void s() {
         ok.field_w = false;
         c.field_S = 0;
         gf.field_b = null;
@@ -211,13 +211,10 @@ final class bc extends c implements nh {
 
     final static void a(rh param0, int param1, rh param2) {
         try {
-            if (param1 != 1) {
-                field_Y = 0.266666013076163;
-            }
             wf.field_b = param0;
             ub.field_b = param2;
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "bc.CA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "bc.CA(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

@@ -7,27 +7,27 @@ final class ogb extends rqa {
     final static void a(int param0, int param1) {
         si.field_s = 133;
         si.field_p = 33;
-        int var2 = 98 / ((1 - param0) / 62);
+        int var2 = -98;
         si.field_r = 21845;
     }
 
-    final static void a(boolean param0, int param1, int param2, int param3, dja param4, int param5, dja param6, int param7, int param8, int param9, int param10, int param11, dja param12, int param13, byte param14) {
+    final static void a(boolean param0, int param1, int param2, int param3, dja param4, int param5, dja param6, int param7, int param8, int param9, int param10, int param11, dja param12) {
         try {
-            qha.field_o = param11;
-            ehb.field_g = param8;
-            vi.field_o = param10;
-            pr.field_d = param13;
-            kha.field_v = param9;
-            pra.field_o = param1;
+            qha.field_o = 72;
+            ehb.field_g = 70;
+            vi.field_o = 69;
+            pr.field_d = 68;
+            kha.field_v = 65;
+            pra.field_o = 62;
             wc.field_a = param6;
             uqa.field_q = param4;
-            pka.field_o = param3;
+            pka.field_o = 64;
             nia.field_o = param0 ? true : false;
             gva.field_a = param12;
-            fk.field_e = param5;
-            iva.field_o = param2;
+            fk.field_e = 66;
+            iva.field_o = 71;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "ogb.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 44 + param7 + 44 + param8 + 44 + param9 + 44 + param10 + 44 + param11 + 44 + (param12 != null ? "{...}" : "null") + 44 + param13 + 44 + 91 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "ogb.B(" + param0 + 44 + 62 + 44 + 71 + 44 + 64 + 44 + (param4 != null ? "{...}" : "null") + 44 + 66 + 44 + (param6 != null ? "{...}" : "null") + 44 + 2000 + 44 + 70 + 44 + 65 + 44 + 69 + 44 + 72 + 44 + (param12 != null ? "{...}" : "null") + 44 + 68 + 44 + 91 + 41);
         }
     }
 
@@ -35,7 +35,7 @@ final class ogb extends rqa {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;

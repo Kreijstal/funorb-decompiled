@@ -26,90 +26,82 @@ final class ika {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        Object stackIn_2_0 = null;
-        tk stackIn_4_0 = null;
+        tk stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        tk stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        tk stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
         String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           L0: {
             var2_int = param1.e((byte) 118);
             var3 = param1.e((byte) 45);
             var4 = param1.e((byte) 80);
-            if (param0 == 85) {
-              var5 = param1.e((byte) 61);
-              var6 = param1.b(16711935);
-              var7 = param1.b(16711935);
-              var8 = param1.e((byte) 97);
-              var9 = param1.b(16711935);
-              var10 = param1.e((byte) 118);
-              var11 = param1.e((byte) 83);
-              var12 = param1.e((byte) 54);
-              var13 = param1.e((byte) 102);
-              var14 = param1.e((byte) 47);
-              var15 = param1.e((byte) 124);
-              var16 = param1.e((byte) 77);
-              var17 = param1.e((byte) 45);
-              var18 = param1.e((byte) 59);
-              var19 = param1.b(16711935);
-              stackOut_3_0 = new tk(var2_int, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, var13, var14, var15, var16, var17, var18, var19);
-              stackIn_4_0 = stackOut_3_0;
-              break L0;
-            } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
-              return (tk) (Object) stackIn_2_0;
-            }
+            var5 = param1.e((byte) 61);
+            var6 = param1.b(16711935);
+            var7 = param1.b(16711935);
+            var8 = param1.e((byte) 97);
+            var9 = param1.b(16711935);
+            var10 = param1.e((byte) 118);
+            var11 = param1.e((byte) 83);
+            var12 = param1.e((byte) 54);
+            var13 = param1.e((byte) 102);
+            var14 = param1.e((byte) 47);
+            var15 = param1.e((byte) 124);
+            var16 = param1.e((byte) 77);
+            var17 = param1.e((byte) 45);
+            var18 = param1.e((byte) 59);
+            var19 = param1.b(16711935);
+            stackOut_2_0 = new tk(var2_int, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, var13, var14, var15, var16, var17, var18, var19);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var2;
-            stackOut_5_1 = new StringBuilder().append("ika.E(").append(param0).append(44);
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("ika.E(").append(85).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
-              break L1;
-            } else {
               stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
               stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L1;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
               break L1;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
-        return stackIn_4_0;
+        return stackIn_3_0;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -136,30 +128,37 @@ final class ika {
                 if ((1 & param1) == 0) {
                   break L1;
                 } else {
-                  ce.a(true, param3, param5, "" + var9, param2, true);
-                  param2 = param2 + (param0 + jha.field_g.a("" + var9) - -2);
-                  ce.a(true, param3, param5, "" + var10, param2, true);
-                  param2 = param2 + (jha.field_g.a("" + var10) + param0 - -2);
+                  int discarded$24 = 1;
+                  ce.a(true, 16777215, 52, "" + var9, param2);
+                  param2 = param2 + (3 + jha.field_g.a("" + var9) - -2);
+                  int discarded$25 = 1;
+                  ce.a(true, 16777215, 52, "" + var10, param2);
+                  param2 = param2 + (jha.field_g.a("" + var10) + 5);
                   break L1;
                 }
               }
               return;
             } else {
-              ce.a(true, param3, param5, "" + var11, param2, true);
-              param2 = param2 + (jha.field_g.a("" + var11) + (param0 + 2));
-              ce.a(true, param3, param5, "" + var12, param2, true);
-              param2 = param2 + (2 + (jha.field_g.a("" + var11) - -param0));
+              int discarded$26 = 1;
+              ce.a(true, 16777215, 52, "" + var11, param2);
+              param2 = param2 + (jha.field_g.a("" + var11) + 5);
+              int discarded$27 = 1;
+              ce.a(true, 16777215, 52, "" + var12, param2);
+              param2 = param2 + (2 + (jha.field_g.a("" + var11) - -3));
               if ((param1 & 32) == 0) {
                 L2: {
-                  ce.a(true, param3, param5, ":", param2, true);
-                  param2 = param2 + (jha.field_g.a(":") + param0);
+                  int discarded$28 = 1;
+                  ce.a(true, 16777215, 52, ":", param2);
+                  param2 = param2 + (jha.field_g.a(":") + 3);
                   if ((1 & param1) == 0) {
                     break L2;
                   } else {
-                    ce.a(true, param3, param5, "" + var9, param2, true);
-                    param2 = param2 + (param0 + jha.field_g.a("" + var9) - -2);
-                    ce.a(true, param3, param5, "" + var10, param2, true);
-                    param2 = param2 + (jha.field_g.a("" + var10) + param0 - -2);
+                    int discarded$29 = 1;
+                    ce.a(true, 16777215, 52, "" + var9, param2);
+                    param2 = param2 + (3 + jha.field_g.a("" + var9) - -2);
+                    int discarded$30 = 1;
+                    ce.a(true, 16777215, 52, "" + var10, param2);
+                    param2 = param2 + (jha.field_g.a("" + var10) + 5);
                     break L2;
                   }
                 }
@@ -167,29 +166,34 @@ final class ika {
               } else {
                 if (0 == (param6 & 1)) {
                   L3: {
-                    ce.a(true, param3, param5, ":", param2, true);
-                    param2 = param2 + (jha.field_g.a(":") + param0);
+                    int discarded$31 = 1;
+                    ce.a(true, 16777215, 52, ":", param2);
+                    param2 = param2 + (jha.field_g.a(":") + 3);
                     if ((1 & param1) == 0) {
                       break L3;
                     } else {
-                      ce.a(true, param3, param5, "" + var9, param2, true);
-                      param2 = param2 + (param0 + jha.field_g.a("" + var9) - -2);
-                      ce.a(true, param3, param5, "" + var10, param2, true);
-                      param2 = param2 + (jha.field_g.a("" + var10) + param0 - -2);
+                      int discarded$32 = 1;
+                      ce.a(true, 16777215, 52, "" + var9, param2);
+                      param2 = param2 + (3 + jha.field_g.a("" + var9) - -2);
+                      int discarded$33 = 1;
+                      ce.a(true, 16777215, 52, "" + var10, param2);
+                      param2 = param2 + (jha.field_g.a("" + var10) + 5);
                       break L3;
                     }
                   }
                   return;
                 } else {
                   L4: {
-                    param2 = param2 + (jha.field_g.a(":") + param0);
+                    param2 = param2 + (jha.field_g.a(":") + 3);
                     if ((1 & param1) == 0) {
                       break L4;
                     } else {
-                      ce.a(true, param3, param5, "" + var9, param2, true);
-                      param2 = param2 + (param0 + jha.field_g.a("" + var9) - -2);
-                      ce.a(true, param3, param5, "" + var10, param2, true);
-                      param2 = param2 + (jha.field_g.a("" + var10) + param0 - -2);
+                      int discarded$34 = 1;
+                      ce.a(true, 16777215, 52, "" + var9, param2);
+                      param2 = param2 + (3 + jha.field_g.a("" + var9) - -2);
+                      int discarded$35 = 1;
+                      ce.a(true, 16777215, 52, "" + var10, param2);
+                      param2 = param2 + (jha.field_g.a("" + var10) + 5);
                       break L4;
                     }
                   }
@@ -206,60 +210,72 @@ final class ika {
                 if ((1 & param1) == 0) {
                   break L5;
                 } else {
-                  ce.a(true, param3, param5, "" + var9, param2, true);
-                  param2 = param2 + (param0 + jha.field_g.a("" + var9) - -2);
-                  ce.a(true, param3, param5, "" + var10, param2, true);
-                  param2 = param2 + (jha.field_g.a("" + var10) + param0 - -2);
+                  int discarded$36 = 1;
+                  ce.a(true, 16777215, 52, "" + var9, param2);
+                  param2 = param2 + (3 + jha.field_g.a("" + var9) - -2);
+                  int discarded$37 = 1;
+                  ce.a(true, 16777215, 52, "" + var10, param2);
+                  param2 = param2 + (jha.field_g.a("" + var10) + 5);
                   break L5;
                 }
               }
               return;
             } else {
-              ce.a(true, param3, param5, "" + var11, param2, true);
-              param2 = param2 + (jha.field_g.a("" + var11) + (param0 + 2));
-              ce.a(true, param3, param5, "" + var12, param2, true);
-              param2 = param2 + (2 + (jha.field_g.a("" + var11) - -param0));
+              int discarded$38 = 1;
+              ce.a(true, 16777215, 52, "" + var11, param2);
+              param2 = param2 + (jha.field_g.a("" + var11) + 5);
+              int discarded$39 = 1;
+              ce.a(true, 16777215, 52, "" + var12, param2);
+              param2 = param2 + (2 + (jha.field_g.a("" + var11) - -3));
               if ((param1 & 32) == 0) {
-                ce.a(true, param3, param5, ":", param2, true);
+                int discarded$40 = 1;
+                ce.a(true, 16777215, 52, ":", param2);
                 L6: {
-                  param2 = param2 + (jha.field_g.a(":") + param0);
+                  param2 = param2 + (jha.field_g.a(":") + 3);
                   if ((1 & param1) == 0) {
                     break L6;
                   } else {
-                    ce.a(true, param3, param5, "" + var9, param2, true);
-                    param2 = param2 + (param0 + jha.field_g.a("" + var9) - -2);
-                    ce.a(true, param3, param5, "" + var10, param2, true);
-                    param2 = param2 + (jha.field_g.a("" + var10) + param0 - -2);
+                    int discarded$41 = 1;
+                    ce.a(true, 16777215, 52, "" + var9, param2);
+                    param2 = param2 + (3 + jha.field_g.a("" + var9) - -2);
+                    int discarded$42 = 1;
+                    ce.a(true, 16777215, 52, "" + var10, param2);
+                    param2 = param2 + (jha.field_g.a("" + var10) + 5);
                     break L6;
                   }
                 }
                 return;
               } else {
                 if (0 == (param6 & 1)) {
-                  ce.a(true, param3, param5, ":", param2, true);
+                  int discarded$43 = 1;
+                  ce.a(true, 16777215, 52, ":", param2);
                   L7: {
-                    param2 = param2 + (jha.field_g.a(":") + param0);
+                    param2 = param2 + (jha.field_g.a(":") + 3);
                     if ((1 & param1) == 0) {
                       break L7;
                     } else {
-                      ce.a(true, param3, param5, "" + var9, param2, true);
-                      param2 = param2 + (param0 + jha.field_g.a("" + var9) - -2);
-                      ce.a(true, param3, param5, "" + var10, param2, true);
-                      param2 = param2 + (jha.field_g.a("" + var10) + param0 - -2);
+                      int discarded$44 = 1;
+                      ce.a(true, 16777215, 52, "" + var9, param2);
+                      param2 = param2 + (3 + jha.field_g.a("" + var9) - -2);
+                      int discarded$45 = 1;
+                      ce.a(true, 16777215, 52, "" + var10, param2);
+                      param2 = param2 + (jha.field_g.a("" + var10) + 5);
                       break L7;
                     }
                   }
                   return;
                 } else {
                   L8: {
-                    param2 = param2 + (jha.field_g.a(":") + param0);
+                    param2 = param2 + (jha.field_g.a(":") + 3);
                     if ((1 & param1) == 0) {
                       break L8;
                     } else {
-                      ce.a(true, param3, param5, "" + var9, param2, true);
-                      param2 = param2 + (param0 + jha.field_g.a("" + var9) - -2);
-                      ce.a(true, param3, param5, "" + var10, param2, true);
-                      param2 = param2 + (jha.field_g.a("" + var10) + param0 - -2);
+                      int discarded$46 = 1;
+                      ce.a(true, 16777215, 52, "" + var9, param2);
+                      param2 = param2 + (3 + jha.field_g.a("" + var9) - -2);
+                      int discarded$47 = 1;
+                      ce.a(true, 16777215, 52, "" + var10, param2);
+                      param2 = param2 + (jha.field_g.a("" + var10) + 5);
                       break L8;
                     }
                   }
@@ -279,29 +295,27 @@ final class ika {
 
     final static void a(byte param0, il param1) {
         try {
-            if (param0 != 18) {
-                ika.a(70, -118, -128, -79, -74, -69, 108, -112);
-            }
             jka.field_l = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ika.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "ika.A(" + 18 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
     }
 
     private ika(lu param0) {
         ((ika) this).field_b = new eaa();
         try {
-            this.a(param0, 0);
+            int discarded$0 = 0;
+            this.a(param0);
         } catch (RuntimeException runtimeException) {
             throw pe.a((Throwable) (Object) runtimeException, "ika.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }
     }
 
-    private final void a(lu param0, int param1) {
+    private final void a(lu param0) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

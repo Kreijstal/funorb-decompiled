@@ -11,17 +11,17 @@ final class ja {
     static cr field_e;
     static od field_f;
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         if (!il.field_a) {
             return false;
         }
-        if (param0 != ~ui.field_g) {
+        if (ui.field_g != 0) {
             return false;
         }
         return true;
     }
 
-    final static String a(String param0, byte param1) {
+    final static String a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
@@ -107,7 +107,7 @@ final class ja {
         return stackIn_8_0;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_f = null;
         field_e = null;
         field_d = null;

@@ -10,10 +10,7 @@ abstract class nj {
     static int field_a;
     static pg[][] field_d;
 
-    public static void b(byte param0) {
-        if (param0 != -93) {
-            field_c = null;
-        }
+    public static void b() {
         field_c = null;
         field_d = null;
         field_b = null;
@@ -21,17 +18,14 @@ abstract class nj {
     }
 
     final static void a(int param0, int param1, int param2, int param3, bd param4, int param5) {
-        if (param3 != 22173) {
-            return;
-        }
         try {
-            ld.a(param1 << 5, (byte) -84, param5 << 8, param0, param4, param2);
+            ld.a(4096, (byte) -84, param5 << 8, param0, param4, param2);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "nj.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "nj.B(" + param0 + 44 + 128 + 44 + param2 + 44 + 22173 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 41);
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -199,15 +193,15 @@ abstract class nj {
                                                         if (var12 != 5) {
                                                           if (var12 == 7) {
                                                             if (var7 < var17.length) {
-                                                              int incrementValue$3 = var7;
+                                                              int incrementValue$8 = var7;
                                                               var7++;
-                                                              var6[incrementValue$3] = var2;
-                                                              int incrementValue$4 = var7;
+                                                              var6[incrementValue$8] = var2;
+                                                              int incrementValue$9 = var7;
                                                               var7++;
-                                                              var6[incrementValue$4] = var3;
-                                                              int incrementValue$5 = var7;
+                                                              var6[incrementValue$9] = var3;
+                                                              int incrementValue$10 = var7;
                                                               var7++;
-                                                              var6[incrementValue$5] = (int)var8_ref_p.field_c;
+                                                              var6[incrementValue$10] = (int)var8_ref_p.field_c;
                                                               break L3;
                                                             } else {
                                                               break L3;
@@ -233,7 +227,8 @@ abstract class nj {
                                                                           break L3;
                                                                         } else {
                                                                           if (var12 == 34) {
-                                                                            f.a(var2, var3, var8_ref_p, 2);
+                                                                            int discarded$11 = 2;
+                                                                            f.a(var2, var3, var8_ref_p);
                                                                             break L3;
                                                                           } else {
                                                                             if (33 == var12) {
@@ -242,7 +237,8 @@ abstract class nj {
                                                                             } else {
                                                                               if (var12 != 12) {
                                                                                 if (var12 == 13) {
-                                                                                  ka.a(var2, var8_ref_p, var3, 128);
+                                                                                  int discarded$12 = 128;
+                                                                                  ka.a(var2, var8_ref_p, var3);
                                                                                   break L3;
                                                                                 } else {
                                                                                   if (var12 != 14) {
@@ -260,7 +256,8 @@ abstract class nj {
                                                                                     bi.a(var8_ref_p, var3, var2, -49);
                                                                                     break L3;
                                                                                   } else {
-                                                                                    mg.a(var8_ref_p, var2, var3, 2);
+                                                                                    int discarded$13 = 2;
+                                                                                    mg.a(var8_ref_p, var2, var3);
                                                                                     break L3;
                                                                                   }
                                                                                 }
@@ -325,11 +322,13 @@ abstract class nj {
                                         pf.a(var3, true, var8_ref_p, var2);
                                         break L3;
                                       } else {
-                                        ic.a(var2, var3, var8_ref_p, (byte) 107);
+                                        int discarded$14 = 107;
+                                        ic.a(var2, var3, var8_ref_p);
                                         break L3;
                                       }
                                     } else {
-                                      nm.a(var2, var8_ref_p, var3, 25);
+                                      int discarded$15 = 25;
+                                      nm.a(var2, var8_ref_p, var3);
                                       break L3;
                                     }
                                   }
@@ -369,41 +368,39 @@ abstract class nj {
     final static java.net.URL a(java.applet.Applet param0, boolean param1, java.net.URL param2) {
         Object var3 = null;
         Object var4 = null;
-        Object stackIn_9_0 = null;
-        java.net.URL stackIn_11_0 = null;
+        java.net.URL stackIn_9_0 = null;
+        Object stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        Object stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
         Object stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
         Object stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         Object stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
         Object stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        Object stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        Object stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_18_2 = null;
+        String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        java.net.URL stackOut_10_0 = null;
-        Object stackOut_8_0 = null;
+        java.net.URL stackOut_8_0 = null;
+        Object stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
         Object stackOut_12_0 = null;
         StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        Object stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        Object stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        Object stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
         Object stackOut_14_0 = null;
         StringBuilder stackOut_14_1 = null;
         String stackOut_14_2 = null;
-        Object stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        Object stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        Object stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        Object stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
         try {
           L0: {
             L1: {
@@ -434,82 +431,76 @@ abstract class nj {
                 }
               }
             }
-            if (param1) {
-              stackOut_10_0 = ig.a(true, param2, (String) var3, -1, (String) var4);
-              stackIn_11_0 = stackOut_10_0;
-              break L0;
-            } else {
-              stackOut_8_0 = null;
-              stackIn_9_0 = stackOut_8_0;
-              return (java.net.URL) (Object) stackIn_9_0;
-            }
+            stackOut_8_0 = ig.a(true, param2, (String) var3, -1, (String) var4);
+            stackIn_9_0 = stackOut_8_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var3 = (Object) (Object) decompiledCaughtException;
-            stackOut_12_0 = var3;
-            stackOut_12_1 = new StringBuilder().append("nj.H(");
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackOut_10_0 = var3;
+            stackOut_10_1 = new StringBuilder().append("nj.H(");
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
             if (param0 == null) {
-              stackOut_14_0 = stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
+              stackOut_12_0 = stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
               break L3;
             } else {
-              stackOut_13_0 = stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
+              stackOut_11_0 = stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
               break L3;
             }
           }
           L4: {
-            stackOut_15_0 = stackIn_15_0;
-            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(param1).append(44);
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackOut_13_0 = stackIn_13_0;
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(1).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
             if (param2 == null) {
-              stackOut_17_0 = stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
+              stackOut_15_0 = stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
               break L4;
             } else {
-              stackOut_16_0 = stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackOut_14_0 = stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
               break L4;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
         }
-        return stackIn_11_0;
+        return stackIn_9_0;
     }
 
-    final static gb a(int param0, int param1, boolean param2, boolean param3, int param4) {
+    final static gb a(int param0, int param1) {
         if (param0 <= 66) {
             return null;
         }
-        return bf.a(false, param2, param1, 1, param3, -31);
+        return bf.a(false, true, param1, 1, false, -31);
     }
 
-    final static int a(oc param0, oc param1, int param2) {
+    final static int a(oc param0, oc param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

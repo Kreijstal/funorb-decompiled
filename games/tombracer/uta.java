@@ -26,6 +26,92 @@ abstract class uta implements sia {
     private final void a(boolean param0, String param1) {
         gka var3 = null;
         RuntimeException var3_ref = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        try {
+          L0: {
+            L1: {
+              L2: {
+                var3 = (gka) (Object) ((uta) this).field_s.f(-80);
+                if (var3 == null) {
+                  break L2;
+                } else {
+                  if (param1.equals((Object) (Object) var3.field_h)) {
+                    break L1;
+                  } else {
+                    break L2;
+                  }
+                }
+              }
+              ((uta) this).field_s.a((byte) 88, (vg) (Object) new gka(param1));
+              break L1;
+            }
+            L3: {
+              if (((uta) this).field_s.a((byte) -16) > 30) {
+                vg discarded$2 = ((uta) this).field_s.c((byte) 22);
+                break L3;
+              } else {
+                break L3;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var3_ref = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var3_ref;
+            stackOut_8_1 = new StringBuilder().append("uta.W(").append(1).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param1 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L4;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L4;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+        }
+    }
+
+    private final void a(int param0, String param1, int param2) {
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        String[] var5 = null;
+        String[] var6 = null;
+        int var7 = 0;
+        String var8 = null;
+        vna var9 = null;
+        gka var10 = null;
+        int var11 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -42,48 +128,49 @@ abstract class uta implements sia {
         RuntimeException stackOut_11_0 = null;
         StringBuilder stackOut_11_1 = null;
         String stackOut_11_2 = null;
+        var11 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
-            L1: {
-              if (param0) {
-                break L1;
+            var4_int = -10 + ((uta) this).field_a.field_G - 15;
+            var5 = rga.a(32287, param1, '\n');
+            var6 = var5;
+            var7 = 0;
+            L1: while (true) {
+              if (var7 >= var6.length) {
+                break L0;
               } else {
-                ((uta) this).field_h = -36;
-                break L1;
-              }
-            }
-            L2: {
-              L3: {
-                var3 = (gka) (Object) ((uta) this).field_s.f(-80);
-                if (var3 == null) {
-                  break L3;
-                } else {
-                  if (param1.equals((Object) (Object) var3.field_h)) {
-                    break L2;
+                L2: {
+                  var8 = var6[var7];
+                  if (var4_int <= ((uta) this).field_m.b(var8)) {
+                    var9 = this.a(var4_int, true, var8);
+                    var10 = (gka) (Object) var9.f(-80);
+                    L3: while (true) {
+                      if (var10 == null) {
+                        break L2;
+                      } else {
+                        int discarded$17 = 230;
+                        this.b(var10.field_h, param2);
+                        var10 = (gka) (Object) var9.e(122);
+                        continue L3;
+                      }
+                    }
                   } else {
-                    break L3;
+                    int discarded$18 = 230;
+                    this.b(var8, param2);
+                    break L2;
                   }
                 }
-              }
-              ((uta) this).field_s.a((byte) 88, (vg) (Object) new gka(param1));
-              break L2;
-            }
-            L4: {
-              if (((uta) this).field_s.a((byte) -16) > 30) {
-                vg discarded$2 = ((uta) this).field_s.c((byte) 22);
-                break L4;
-              } else {
-                break L4;
+                var7++;
+                continue L1;
               }
             }
-            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var3_ref = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var3_ref;
-            stackOut_10_1 = new StringBuilder().append("uta.W(").append(param0).append(44);
+          L4: {
+            var4 = decompiledCaughtException;
+            stackOut_10_0 = (RuntimeException) var4;
+            stackOut_10_1 = new StringBuilder().append("uta.Q(").append(24219).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -95,7 +182,7 @@ abstract class uta implements sia {
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
-              break L5;
+              break L4;
             } else {
               stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
               stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
@@ -103,111 +190,10 @@ abstract class uta implements sia {
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
               stackIn_13_2 = stackOut_11_2;
-              break L5;
+              break L4;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
-        }
-    }
-
-    private final void a(int param0, String param1, int param2) {
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        String[] var5 = null;
-        String[] var6 = null;
-        int var7 = 0;
-        String var8 = null;
-        vna var9 = null;
-        gka var10 = null;
-        int var11 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        var11 = TombRacer.field_G ? 1 : 0;
-        try {
-          L0: {
-            L1: {
-              var4_int = -10 + ((uta) this).field_a.field_G - 15;
-              var5 = rga.a(32287, param1, '\n');
-              if (param0 == 24219) {
-                break L1;
-              } else {
-                boolean discarded$2 = ((uta) this).a(-59);
-                break L1;
-              }
-            }
-            var6 = var5;
-            var7 = 0;
-            L2: while (true) {
-              if (var7 >= var6.length) {
-                break L0;
-              } else {
-                L3: {
-                  var8 = var6[var7];
-                  if (var4_int <= ((uta) this).field_m.b(var8)) {
-                    var9 = this.a(var4_int, true, var8);
-                    var10 = (gka) (Object) var9.f(param0 ^ -24277);
-                    L4: while (true) {
-                      if (var10 == null) {
-                        break L3;
-                      } else {
-                        this.b(var10.field_h, param2, 230);
-                        var10 = (gka) (Object) var9.e(param0 ^ 24289);
-                        continue L4;
-                      }
-                    }
-                  } else {
-                    this.b(var8, param2, param0 + -23989);
-                    break L3;
-                  }
-                }
-                var7++;
-                continue L2;
-              }
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var4 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var4;
-            stackOut_12_1 = new StringBuilder().append("uta.Q(").append(param0).append(44);
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
-            if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
-              break L5;
-            } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
-              break L5;
-            }
-          }
-          throw tba.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param2 + 41);
         }
     }
 
@@ -219,7 +205,6 @@ abstract class uta implements sia {
         int var7 = 0;
         int var8 = 0;
         String var9 = null;
-        Object stackIn_20_0 = null;
         vna stackIn_22_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -230,7 +215,6 @@ abstract class uta implements sia {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         vna stackOut_21_0 = null;
-        Object stackOut_19_0 = null;
         RuntimeException stackOut_23_0 = null;
         StringBuilder stackOut_23_1 = null;
         RuntimeException stackOut_25_0 = null;
@@ -245,15 +229,9 @@ abstract class uta implements sia {
             var4_ref = new vna();
             L1: while (true) {
               if (param2 == null) {
-                if (param1) {
-                  stackOut_21_0 = (vna) var4_ref;
-                  stackIn_22_0 = stackOut_21_0;
-                  break L0;
-                } else {
-                  stackOut_19_0 = null;
-                  stackIn_20_0 = stackOut_19_0;
-                  return (vna) (Object) stackIn_20_0;
-                }
+                stackOut_21_0 = (vna) var4_ref;
+                stackIn_22_0 = stackOut_21_0;
+                break L0;
               } else {
                 L2: {
                   var5 = ((uta) this).field_m.b(param2);
@@ -319,7 +297,7 @@ abstract class uta implements sia {
           L7: {
             var4 = decompiledCaughtException;
             stackOut_23_0 = (RuntimeException) var4;
-            stackOut_23_1 = new StringBuilder().append("uta.M(").append(param0).append(44).append(param1).append(44);
+            stackOut_23_1 = new StringBuilder().append("uta.M(").append(param0).append(44).append(1).append(44);
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -368,7 +346,7 @@ abstract class uta implements sia {
     }
 
     private final jea a(int param0, int param1) {
-        int var4 = -128 / ((-18 - param0) / 61);
+        int var4 = -128;
         jea var3 = new jea(0L, (jea) null);
         var3.field_w = eca.a(4, 2263074);
         return var3;
@@ -526,52 +504,44 @@ abstract class uta implements sia {
                 }
               }
             }
-            if (param0 == 0) {
-              L3: {
-                if (param1 == qda.field_i) {
-                  break L3;
-                } else {
-                  L4: {
-                    if (param1 != ns.field_g) {
-                      sj.field_b = new int[param1];
-                      var3_int = 0;
-                      L5: while (true) {
-                        if (param1 <= var3_int) {
-                          break L4;
-                        } else {
-                          sj.field_b[var3_int] = (var3_int << 12) / param1;
-                          var3_int++;
-                          continue L5;
-                        }
+            L3: {
+              if (param1 == qda.field_i) {
+                break L3;
+              } else {
+                L4: {
+                  if (param1 != ns.field_g) {
+                    sj.field_b = new int[param1];
+                    var3_int = 0;
+                    L5: while (true) {
+                      if (param1 <= var3_int) {
+                        break L4;
+                      } else {
+                        sj.field_b[var3_int] = (var3_int << 12) / param1;
+                        var3_int++;
+                        continue L5;
                       }
-                    } else {
-                      sj.field_b = ht.field_Fb;
-                      break L4;
                     }
+                  } else {
+                    sj.field_b = ht.field_Fb;
+                    break L4;
                   }
-                  hba.field_b = -1 + param1;
-                  qda.field_i = param1;
-                  break L3;
                 }
+                hba.field_b = -1 + param1;
+                qda.field_i = param1;
+                break L3;
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) runtimeException, "uta.L(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw tba.a((Throwable) (Object) runtimeException, "uta.L(" + 0 + 44 + param1 + 44 + param2 + 41);
         }
     }
 
-    private final jea a(byte param0, int param1) {
+    private final jea a() {
         jea var3 = new jea();
-        if (param0 <= 80) {
-            Object var4 = null;
-            this.a(true, (String) null);
-        }
         var3.field_w = sva.a(65793, 0, 4);
         return var3;
     }
@@ -579,181 +549,166 @@ abstract class uta implements sia {
     private final jea a(String param0, int param1, int param2) {
         jea var4 = null;
         RuntimeException var4_ref = null;
-        Object stackIn_2_0 = null;
-        jea stackIn_4_0 = null;
+        jea stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        jea stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        jea stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
         String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           L0: {
             var4 = new jea(0L, (jea) null, param0);
-            if (param1 == 16733525) {
-              var4.field_H = ((uta) this).field_m;
-              var4.field_ib = param2;
-              var4.a(((uta) this).field_m.b(var4.field_r), ((uta) this).field_k, -23776, 0, 5);
-              stackOut_3_0 = (jea) var4;
-              stackIn_4_0 = stackOut_3_0;
-              break L0;
-            } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
-              return (jea) (Object) stackIn_2_0;
-            }
+            var4.field_H = ((uta) this).field_m;
+            var4.field_ib = param2;
+            var4.a(((uta) this).field_m.b(var4.field_r), ((uta) this).field_k, -23776, 0, 5);
+            stackOut_2_0 = (jea) var4;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4_ref = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var4_ref;
-            stackOut_5_1 = new StringBuilder().append("uta.J(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackOut_4_0 = (RuntimeException) var4_ref;
+            stackOut_4_1 = new StringBuilder().append("uta.J(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
-              break L1;
-            } else {
               stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
               stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L1;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + param2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 16733525 + 44 + param2 + 41);
         }
-        return stackIn_4_0;
+        return stackIn_3_0;
     }
 
     public boolean a(byte param0, char param1, int param2) {
         jea var5 = null;
         int var6 = 0;
         String var7 = null;
+        Object stackIn_15_0 = null;
+        Object stackIn_16_0 = null;
         Object stackIn_17_0 = null;
-        Object stackIn_18_0 = null;
-        Object stackIn_19_0 = null;
-        vg stackIn_19_1 = null;
+        vg stackIn_17_1 = null;
+        Object stackOut_14_0 = null;
         Object stackOut_16_0 = null;
-        Object stackOut_18_0 = null;
-        vg stackOut_18_1 = null;
-        Object stackOut_17_0 = null;
-        vg stackOut_17_1 = null;
-        L0: {
-          var6 = TombRacer.field_G ? 1 : 0;
-          if (param0 == -72) {
-            break L0;
-          } else {
-            field_l = null;
-            break L0;
-          }
-        }
+        vg stackOut_16_1 = null;
+        Object stackOut_15_0 = null;
+        vg stackOut_15_1 = null;
+        var6 = TombRacer.field_G ? 1 : 0;
         if (96 == param1) {
-          this.d(2);
+          int discarded$2 = 2;
+          this.d();
           return true;
         } else {
           if (((uta) this).field_j) {
-            L1: {
+            L0: {
               if (84 != param2) {
                 if (param2 != 98) {
                   if (99 == param2) {
                     if (((uta) this).field_g == null) {
-                      break L1;
+                      break L0;
                     } else {
                       if (((uta) this).field_s.field_e != ((uta) this).field_g.field_e) {
                         ((uta) this).field_g = (gka) (Object) ((uta) this).field_g.field_e;
                         ((uta) this).field_o.a((byte) 74, ((uta) this).field_g.field_h);
-                        break L1;
+                        break L0;
                       } else {
-                        break L1;
+                        break L0;
                       }
                     }
                   } else {
                     if (param2 != 80) {
-                      boolean discarded$1 = ((uta) this).field_o.a(param2, param0 + -19624, param1);
-                      break L1;
+                      boolean discarded$3 = ((uta) this).field_o.a(param2, -19696, param1);
+                      break L0;
                     } else {
-                      ((uta) this).e(param0 + 21375);
-                      break L1;
+                      ((uta) this).e(21303);
+                      break L0;
                     }
                   }
                 } else {
-                  L2: {
+                  L1: {
                     if (((uta) this).field_g == null) {
-                      break L2;
+                      break L1;
                     } else {
                       if (((uta) this).field_g.field_a != ((uta) this).field_s.field_e) {
-                        break L2;
-                      } else {
                         break L1;
+                      } else {
+                        break L0;
                       }
                     }
                   }
-                  L3: {
-                    stackOut_16_0 = this;
-                    stackIn_18_0 = stackOut_16_0;
-                    stackIn_17_0 = stackOut_16_0;
+                  L2: {
+                    stackOut_14_0 = this;
+                    stackIn_16_0 = stackOut_14_0;
+                    stackIn_15_0 = stackOut_14_0;
                     if (null != ((uta) this).field_g) {
-                      stackOut_18_0 = this;
-                      stackOut_18_1 = ((uta) this).field_g.field_a;
-                      stackIn_19_0 = stackOut_18_0;
-                      stackIn_19_1 = stackOut_18_1;
-                      break L3;
+                      stackOut_16_0 = this;
+                      stackOut_16_1 = ((uta) this).field_g.field_a;
+                      stackIn_17_0 = stackOut_16_0;
+                      stackIn_17_1 = stackOut_16_1;
+                      break L2;
                     } else {
-                      stackOut_17_0 = this;
-                      stackOut_17_1 = ((uta) this).field_s.f(-80);
-                      stackIn_19_0 = stackOut_17_0;
-                      stackIn_19_1 = stackOut_17_1;
-                      break L3;
+                      stackOut_15_0 = this;
+                      stackOut_15_1 = ((uta) this).field_s.f(-80);
+                      stackIn_17_0 = stackOut_15_0;
+                      stackIn_17_1 = stackOut_15_1;
+                      break L2;
                     }
                   }
-                  ((uta) this).field_g = (gka) (Object) stackIn_19_1;
+                  ((uta) this).field_g = (gka) (Object) stackIn_17_1;
                   if (((uta) this).field_g == null) {
-                    break L1;
+                    break L0;
                   } else {
                     ((uta) this).field_o.a((byte) 12, ((uta) this).field_g.field_h);
-                    break L1;
+                    break L0;
                   }
                 }
               } else {
                 var7 = ((uta) this).field_o.e((byte) -124);
                 if (var7.length() > 0) {
-                  L4: {
+                  L3: {
                     this.a(24219, ((uta) this).field_t + var7, 5635925);
                     var5 = (jea) (Object) ((uta) this).field_a.field_tb.field_J.b(3);
                     if (!((uta) this).a(var7, (byte) -112)) {
                       var5.field_ib = 16733525;
-                      break L4;
+                      break L3;
                     } else {
-                      break L4;
+                      break L3;
                     }
                   }
                   ((uta) this).field_o.d((byte) -113);
                   this.a(true, var7);
                   ((uta) this).field_g = null;
-                  break L1;
+                  break L0;
                 } else {
                   return true;
                 }
@@ -790,7 +745,7 @@ abstract class uta implements sia {
 
     abstract boolean a(String param0, byte param1);
 
-    private final void d(int param0) {
+    private final void d() {
         Object stackIn_1_0 = null;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
@@ -929,9 +884,6 @@ abstract class uta implements sia {
 
     final static bb a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = TombRacer.field_G ? 1 : 0;
-        if (param2 != 0) {
-            field_f = null;
-        }
         bb var5 = (bb) (Object) mg.field_b.f(-80);
         while (var5 != null) {
             if (!(param1 != var5.field_n)) {
@@ -940,20 +892,20 @@ abstract class uta implements sia {
             var5 = (bb) (Object) mg.field_b.e(126);
         }
         var5 = new bb();
-        var5.field_j = param3;
+        var5.field_j = 10;
         var5.field_i = 1;
         var5.field_n = param1;
         mg.field_b.b((byte) -48, (vg) (Object) var5);
-        pc.a(false, param0, var5);
+        pc.a(false, 3, var5);
         return var5;
     }
 
-    private final void b(String param0, int param1, int param2) {
+    private final void b(String param0, int param1) {
         int var4_int = 0;
         jea var5 = null;
         int var6 = TombRacer.field_G ? 1 : 0;
         try {
-            ((uta) this).field_a.field_tb.b(param2 ^ -155, this.a(param0, 16733525, param1));
+            ((uta) this).field_a.field_tb.b(-125, this.a(param0, 16733525, param1));
             if (((uta) this).field_a.field_tb.field_J.a((byte) -16) > 256) {
                 vg discarded$0 = ((uta) this).field_a.field_tb.field_J.c(-106);
             }
@@ -964,13 +916,10 @@ abstract class uta implements sia {
                 var4_int = var4_int + ((uta) this).field_k;
                 var5 = (jea) (Object) ((uta) this).field_a.field_tb.field_J.e(116);
             }
-            if (param2 != 230) {
-                ((uta) this).field_i = null;
-            }
             ((uta) this).field_a.field_tb.field_t = var4_int;
             ((uta) this).field_a.field_tb.field_T = -var4_int + ((uta) this).field_a.field_t;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "uta.U(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "uta.U(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 230 + 41);
         }
     }
 
@@ -1031,7 +980,9 @@ abstract class uta implements sia {
             ((uta) this).field_m = param0;
             ((uta) this).field_k = ((uta) this).field_m.field_w + ((uta) this).field_m.field_k;
             var3_int = 4 + ((uta) this).field_k;
-            var4 = this.a((byte) 104, 65793);
+            int discarded$2 = 65793;
+            int discarded$3 = 104;
+            var4 = this.a();
             var5 = var4;
             var6 = var4;
             var7 = var4;

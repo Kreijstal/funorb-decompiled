@@ -252,7 +252,7 @@ abstract class ac extends bb {
         return super.j(-55);
     }
 
-    public static void k(byte param0) {
+    public static void k() {
         field_Z = null;
         field_ab = null;
         field_gb = null;
@@ -302,7 +302,7 @@ abstract class ac extends bb {
         }
     }
 
-    final static void a(int param0, int param1, int param2, String param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void a(int param0, int param1, int param2, String param3, int param4, int param5, int param6, int param7) {
         RuntimeException var9 = null;
         int var9_int = 0;
         int var10 = 0;
@@ -347,10 +347,10 @@ abstract class ac extends bb {
             vc.field_f.a(0, var10, param2, 5, vc.field_f.g(-2147483648));
             var11 = qa.field_N.g(-2147483648);
             qa.field_N.a(0, var10, param2, var9_int + (-5 + -var11), var11);
-            cc.field_bc.a(0, 0, param4, 0, var9_int);
+            cc.field_bc.a(0, 0, 20, 0, var9_int);
             var13 = 5 + var10 - -param2;
-            in.field_d.a(0, param4, var13, 0, var9_int);
-            var13 = var13 + param4;
+            in.field_d.a(0, 20, var13, 0, var9_int);
+            var13 = var13 + 20;
             in.field_d.field_I = se.a(3, 2105376, 11579568, in.field_d.field_Lb, 8421504, 13574);
             hh.field_a.a(0, param7 + -(var13 / 2), var13, param1 + -(var9_int / 2), var9_int);
             break L0;
@@ -383,7 +383,7 @@ abstract class ac extends bb {
               break L2;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + -126 + 41);
+          throw ci.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 20 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + -126 + 41);
         }
     }
 

@@ -18,7 +18,7 @@ final class ab {
     static String field_m;
     static fa field_a;
 
-    final static int b(int param0) {
+    final static int b() {
         return wf.field_q;
     }
 
@@ -30,7 +30,7 @@ final class ab {
         return mk.field_j.e(-1);
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         int var1 = 0;
         Object var2 = null;
         Throwable var3 = null;

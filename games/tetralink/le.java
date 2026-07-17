@@ -379,9 +379,9 @@ final class le extends hl {
         }
     }
 
-    public static void j(int param0) {
+    public static void j() {
         field_Lb = null;
-        int var1 = -107 % ((10 - param0) / 47);
+        int var1 = 0;
         field_Vb = null;
     }
 
@@ -500,7 +500,8 @@ final class le extends hl {
               this.e(144, 0);
               ((le) this).field_Zb = param0;
               ((le) this).field_Yb = ((le) this).field_Pb[((le) this).field_Zb];
-              ba.a(((le) this).field_Yb, 123);
+              int discarded$586 = 123;
+              ba.a(((le) this).field_Yb);
               ((le) this).field_Yb.e(144, 12);
               break L0;
             } else {
@@ -530,12 +531,16 @@ final class le extends hl {
                 var8 = null;
                 eo.a(-3, var5, param1, ka.field_m, sf.field_d, (String) null);
                 pf.a(ka.field_m, sf.field_d, var5, vj.field_o, (byte) 88);
-                go.c((byte) 42);
-                kj.a((byte) 45);
+                int discarded$587 = 42;
+                go.c();
+                int discarded$588 = 45;
+                kj.a();
                 break L0;
               } else {
-                cm.a((byte) -119);
-                go.c((byte) 42);
+                int discarded$589 = -119;
+                cm.a();
+                int discarded$590 = 42;
+                go.c();
                 break L0;
               }
             }
@@ -608,14 +613,6 @@ final class le extends hl {
                   break L4;
                 }
               }
-              L6: {
-                if (param0 == 128) {
-                  break L6;
-                } else {
-                  le.j(100);
-                  break L6;
-                }
-              }
               stackOut_19_0 = 0;
               stackIn_20_0 = stackOut_19_0;
               break L0;
@@ -627,7 +624,7 @@ final class le extends hl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) var2_ref, "le.A(" + param0 + 44 + param1 + 41);
+          throw oi.a((Throwable) (Object) var2_ref, "le.A(" + 128 + 44 + param1 + 41);
         }
         return stackIn_20_0 != 0;
     }
@@ -657,9 +654,6 @@ final class le extends hl {
         int var3 = 0;
         int var4 = 0;
         int var6 = TetraLink.field_J;
-        if (param0 != 144) {
-            return;
-        }
         ((le) this).field_Nb = param1;
         for (var5 = 0; ((le) this).field_Kb > var5; var5++) {
             var3 = var5 * ((le) this).field_Ob;
@@ -686,7 +680,8 @@ final class le extends hl {
         if (((le) this).field_Yb == null) {
             if ((Object) (Object) gl.field_o == this) {
                 if (!(var4 == 0)) {
-                    go.c((byte) 42);
+                    int discarded$0 = 42;
+                    go.c();
                     return true;
                 }
             }

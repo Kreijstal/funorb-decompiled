@@ -51,7 +51,7 @@ final class ic extends tb implements mi {
         }
     }
 
-    public static void l(int param0) {
+    public static void l() {
         field_S = null;
         field_T = null;
         field_Q = null;
@@ -113,7 +113,7 @@ final class ic extends tb implements mi {
         String stackOut_13_2 = null;
         try {
           L0: {
-            var4_int = 121 / ((param1 - -44) / 61);
+            var4_int = 60;
             if (!param3.a((byte) 73)) {
               stackOut_2_0 = (String) param2;
               stackIn_3_0 = stackOut_2_0;
@@ -154,7 +154,7 @@ final class ic extends tb implements mi {
           }
           L2: {
             stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44).append(param1).append(44);
+            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44).append(114).append(44);
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -359,7 +359,7 @@ final class ic extends tb implements mi {
         }
     }
 
-    final static boolean a(String param0, String param1, int param2) {
+    final static boolean a(String param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int stackIn_5_0 = 0;

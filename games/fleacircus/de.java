@@ -33,9 +33,6 @@ final class de {
     }
 
     final static void a(byte param0, int param1, int param2, int param3) {
-        if (param0 != 88) {
-            field_h = null;
-        }
         gb.a(si.field_R);
         int var4 = param1 * 16;
         int var5 = 16 * param3;

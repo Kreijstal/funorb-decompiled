@@ -10,7 +10,7 @@ final class dn extends hd {
     static String field_Ab;
     static String[] field_Eb;
 
-    final static void a(int param0) {
+    final static void a() {
         int var1 = -1;
     }
 
@@ -28,7 +28,7 @@ final class dn extends hd {
         ((dn) this).field_q = 5 + (var2.field_o - -5);
     }
 
-    final static String a(String param0, boolean param1) {
+    final static String a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
@@ -118,7 +118,7 @@ final class dn extends hd {
         if (param0 != -5) {
             field_Ab = null;
         }
-        fw.field_G = (double)10;
+        fw.field_G = (double)param1;
     }
 
     final static void a(boolean param0, int param1, boolean param2) {
@@ -129,7 +129,7 @@ final class dn extends hd {
             if (var3 != -2) {
                 if (!(-1 == var3)) {
                     var4 = ck.field_b.b(26) ? 1 : 0;
-                    nu.a(119, ck.field_b.field_Eb, var3, param1, var4 != 0, ck.field_b.a(-15596));
+                    nu.a(119, ck.field_b.field_Eb, var3, 14, var4 != 0, ck.field_b.a(-15596));
                 }
                 ck.field_b = null;
                 da.b(108);
@@ -137,13 +137,10 @@ final class dn extends hd {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_zb = null;
         field_Db = null;
         field_Ab = null;
-        if (!param0) {
-            return;
-        }
         field_Eb = null;
         field_Cb = null;
     }

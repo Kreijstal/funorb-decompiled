@@ -9,8 +9,14 @@ final class inb extends rqa {
     public static void b(boolean param0) {
         field_p = null;
         field_o = null;
-        field_q = null;
-        field_q = null;
+        if (!param0) {
+          field_q = null;
+          field_q = null;
+          return;
+        } else {
+          field_q = null;
+          return;
+        }
     }
 
     inb(String param0, Class[] param1, String param2) {

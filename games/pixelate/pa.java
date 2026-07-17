@@ -76,7 +76,7 @@ final class pa {
         return stackIn_3_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 

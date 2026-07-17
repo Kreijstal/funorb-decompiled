@@ -6,7 +6,7 @@ final class mj {
     static int field_b;
     static String field_c;
 
-    final static String a(int param0, int param1, CharSequence[] param2, byte param3) {
+    final static String a(int param0, int param1, CharSequence[] param2) {
         CharSequence var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
@@ -51,7 +51,7 @@ final class mj {
               return stackIn_4_0;
             } else {
               if (param1 == 1) {
-                var10 = param2[param0];
+                var10 = param2[0];
                 var4 = var10;
                 if (var4 != null) {
                   stackOut_10_0 = ((Object) (Object) var10).toString();
@@ -63,13 +63,13 @@ final class mj {
                   return stackIn_9_0;
                 }
               } else {
-                var4_int = param0 + param1;
+                var4_int = param1;
                 var5 = 0;
-                var6_int = param0;
+                var6_int = 0;
                 L1: while (true) {
                   if (var4_int <= var6_int) {
                     var6 = new StringBuilder(var5);
-                    var7 = param0;
+                    var7 = 0;
                     L2: while (true) {
                       if (var4_int <= var7) {
                         stackOut_24_0 = var6.toString();
@@ -113,7 +113,7 @@ final class mj {
           L5: {
             var4_ref = decompiledCaughtException;
             stackOut_26_0 = (RuntimeException) var4_ref;
-            stackOut_26_1 = new StringBuilder().append("mj.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_26_1 = new StringBuilder().append("mj.A(").append(0).append(44).append(param1).append(44);
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
@@ -141,7 +141,7 @@ final class mj {
         return stackIn_25_0;
     }
 
-    final static nd a(String param0, byte param1) {
+    final static nd a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

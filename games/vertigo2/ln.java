@@ -10,7 +10,7 @@ final class ln {
     static tr field_d;
     static er[] field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_g = null;
         field_f = null;
         field_a = null;
@@ -19,11 +19,11 @@ final class ln {
         field_d = null;
     }
 
-    final static boolean c(int param0) {
+    final static boolean c() {
         return !cl.field_c.a((byte) -105);
     }
 
-    final static void b(int param0) {
+    final static void b() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

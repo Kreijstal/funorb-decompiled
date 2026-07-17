@@ -9,12 +9,9 @@ final class ll implements uk {
     static hl field_c;
     static int field_d;
 
-    final static void c(int param0) {
+    final static void c() {
         Object var2 = null;
         mj.a((String) null, "", 99);
-        if (param0 != 32270) {
-            field_b = 127;
-        }
     }
 
     public ll() {
@@ -23,7 +20,7 @@ final class ll implements uk {
         ((ll) this).field_e = 1;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_c = null;
     }
 
@@ -162,6 +159,11 @@ final class ll implements uk {
 
     final static void a(int param0) {
         jg.field_pb = 512;
+        if (param0 != 16) {
+            field_d = 114;
+            wh.field_c = 0;
+            return;
+        }
         wh.field_c = 0;
     }
 

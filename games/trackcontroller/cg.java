@@ -10,7 +10,7 @@ final class cg {
     static String field_b;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_f = null;
         field_e = null;

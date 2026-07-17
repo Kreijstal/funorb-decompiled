@@ -22,7 +22,7 @@ final class nm extends ana {
         ((nm) this).field_B.field_r = 0;
     }
 
-    final static void f(int param0) {
+    final static void f() {
     }
 
     final static void a(vr param0, vr param1, int param2, vr param3) {
@@ -104,7 +104,7 @@ final class nm extends ana {
             jca.field_a = (po) (Object) rc.a(param3, (byte) 113, param1, "arezzo14", "commonui");
             qia.field_a = (po) (Object) rc.a(param3, (byte) 113, param1, "arezzo14bold", "commonui");
             var17 = new kv(param0.a((byte) 123, "", "button.gif"), (java.awt.Component) (Object) dca.field_y);
-            ee discarded$1 = ch.a(param1, -1, "commonui", "dropdown");
+            ee discarded$2 = ch.a(param1, -1, "commonui", "dropdown");
             var5 = bla.a(29611, "commonui", "screen_options", param1);
             sh.field_G = new ee[4];
             sb.field_l = new ee[4];
@@ -123,7 +123,7 @@ final class nm extends ana {
                 var21[2][var8] = 16777215;
                 var21[1][var8] = 2394342;
                 var21[3][var8] = 4767999;
-                var9 = -29 % ((param2 - 6) / 43);
+                var9 = -1;
                 var10_int = 0;
                 L2: while (true) {
                   if (3 <= var10_int) {
@@ -153,7 +153,8 @@ final class nm extends ana {
                         var10_int++;
                         continue L2;
                       } else {
-                        var14[var12_int] = hea.a(var5[var10_int], var21[var12_int], (byte) 117);
+                        int discarded$3 = 117;
+                        var14[var12_int] = hea.a(var5[var10_int], var21[var12_int]);
                         var12_int++;
                         continue L3;
                       }
@@ -222,7 +223,7 @@ final class nm extends ana {
           }
           L6: {
             stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(44).append(param2).append(44);
+            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(44).append(111).append(44);
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -323,7 +324,7 @@ final class nm extends ana {
 
     private final void a(int param0, int param1, int param2) {
         ad var4 = null;
-        if (~param2 <= param0) {
+        if (param2 >= 0) {
             if (param2 < ((nm) this).field_q.field_h.field_z) {
                 if (param1 >= 0) {
                     if (param1 < ((nm) this).field_q.field_h.field_B) {
@@ -338,7 +339,7 @@ final class nm extends ana {
         ((nm) this).a(param2, param1, ((nm) this).field_B, 0);
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_C = null;
     }
 

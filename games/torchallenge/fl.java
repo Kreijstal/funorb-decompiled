@@ -9,7 +9,7 @@ final class fl extends vb {
     static int field_v;
     static ka[] field_s;
 
-    public static void e(int param0) {
+    public static void e() {
         field_s = null;
         field_t = null;
     }
@@ -147,7 +147,8 @@ final class fl extends vb {
                 }
                 L4: {
                   ((fl) this).field_u = (wb) param1;
-                  this.d((byte) 2);
+                  int discarded$2 = 2;
+                  this.d();
                   this.a(param0, (byte) -71);
                   ((fl) this).field_o.field_q = 0;
                   ((fl) this).field_p = null;
@@ -155,7 +156,7 @@ final class fl extends vb {
                     break L4;
                   } else {
                     var7 = null;
-                    boolean discarded$1 = fl.a((pa) null, (byte) 59);
+                    boolean discarded$3 = fl.a((pa) null, (byte) 59);
                     break L4;
                   }
                 }
@@ -278,27 +279,19 @@ final class fl extends vb {
         ((fl) this).field_f = (byte)(int)(255.0 * Math.random() + 1.0);
     }
 
-    private final void d(byte param0) {
+    private final void d() {
         try {
             Exception var3 = null;
             Throwable decompiledCaughtException = null;
             if (null != ((fl) this).field_u) {
-              L0: {
-                if (param0 == 2) {
-                  break L0;
-                } else {
-                  field_s = null;
-                  break L0;
-                }
-              }
               {
-                L1: {
+                L0: {
                   ((fl) this).field_d.field_q = 0;
                   ((fl) this).field_d.d(6, (byte) 122);
                   ((fl) this).field_d.a((byte) -124, 3);
                   ((fl) this).field_d.a(0, (byte) 106);
                   ((fl) this).field_u.a(((fl) this).field_d.field_m.length, 0, (byte) 121, ((fl) this).field_d.field_m);
-                  break L1;
+                  break L0;
                 }
               }
               return;

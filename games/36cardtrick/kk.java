@@ -9,45 +9,35 @@ final class kk {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        Object var5 = null;
-        int stackIn_7_0 = 0;
+        int stackIn_5_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
+        int stackOut_4_0 = 0;
         var4 = Main.field_T;
         try {
           L0: {
-            L1: {
-              if (param1 >= 113) {
-                break L1;
-              } else {
-                var5 = null;
-                ef discarded$2 = kk.a((wb[]) null, (byte[]) null, -29, 88, 105);
-                break L1;
-              }
-            }
             var3_int = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (param2 <= 0) {
-                stackOut_6_0 = var3_int;
-                stackIn_7_0 = stackOut_6_0;
+                stackOut_4_0 = var3_int;
+                stackIn_5_0 = stackOut_4_0;
                 break L0;
               } else {
                 var3_int = var3_int << 1 | param0 & 1;
                 param2--;
                 param0 = param0 >>> 1;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var3, "kk.C(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw ma.a((Throwable) (Object) var3, "kk.C(" + param0 + 44 + 127 + 44 + param2 + 41);
         }
-        return stackIn_7_0;
+        return stackIn_5_0;
     }
 
-    final static ef a(wb[] param0, byte[] param1, int param2, int param3, int param4) {
+    final static ef a(wb[] param0, byte[] param1) {
         RuntimeException var5 = null;
         int[] var5_array = null;
         int[] var6 = null;
@@ -124,7 +114,7 @@ final class kk {
         var28 = Main.field_T;
         try {
           L0: {
-            if (param3 == param0.length) {
+            if (256 == param0.length) {
               var46 = new int[256];
               var41 = var46;
               var36 = var41;
@@ -145,7 +135,7 @@ final class kk {
               var34 = var39;
               var29 = var34;
               var8 = var29;
-              var9 = new int[]{0, param4, param2};
+              var9 = new int[]{0, 16777215, 1};
               var48 = new byte[256][];
               var43 = var48;
               var38 = var43;
@@ -295,12 +285,12 @@ final class kk {
               break L9;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw ma.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 44 + 1 + 44 + 256 + 44 + 16777215 + 41);
         }
         return stackIn_24_0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
     }
 
@@ -335,40 +325,36 @@ final class kk {
           L0: {
             var8 = new w(param1.a((byte) 7, "", "logo.fo3d"));
             var10 = var8;
-            var3 = var10.f(param0 ^ -16903);
+            var3 = var10.f(99);
             var10.f(true);
-            ga.field_b = hk.a(param0 + 17076, var10);
+            ga.field_b = hk.a(78, var10);
             il.field_a = new mg[var3];
             sk.field_b = new int[var3][];
             var4 = 0;
-            if (param0 == -16998) {
-              L1: while (true) {
-                if (var3 <= var4) {
-                  var10.g(8);
-                  var9 = 0;
-                  var4 = var9;
-                  L2: while (true) {
-                    if (var9 >= var3) {
-                      break L0;
-                    } else {
-                      var5 = il.field_a[var9];
-                      var5.a(6, 6, param0 + 10328, 1, 6);
-                      var5.a((byte) 124);
-                      var6 = new int[]{var5.field_f + var5.field_e >> 1, var5.field_u + var5.field_s >> 1, var5.field_i + var5.field_z >> 1};
-                      sk.field_b[var9] = var6;
-                      var5.a(false, -var6[0], -var6[1], -var6[2]);
-                      var9++;
-                      continue L2;
-                    }
+            L1: while (true) {
+              if (var3 <= var4) {
+                var10.g(8);
+                var9 = 0;
+                var4 = var9;
+                L2: while (true) {
+                  if (var9 >= var3) {
+                    break L0;
+                  } else {
+                    var5 = il.field_a[var9];
+                    var5.a(6, 6, -6670, 1, 6);
+                    var5.a((byte) 124);
+                    var6 = new int[]{var5.field_f + var5.field_e >> 1, var5.field_u + var5.field_s >> 1, var5.field_i + var5.field_z >> 1};
+                    sk.field_b[var9] = var6;
+                    var5.a(false, -var6[0], -var6[1], -var6[2]);
+                    var9++;
+                    continue L2;
                   }
-                } else {
-                  il.field_a[var4] = nb.a((byte) 119, var8);
-                  var4++;
-                  continue L1;
                 }
+              } else {
+                il.field_a[var4] = nb.a((byte) 119, var8);
+                var4++;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -376,7 +362,7 @@ final class kk {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var2;
-            stackOut_9_1 = new StringBuilder().append("kk.D(").append(param0).append(44);
+            stackOut_9_1 = new StringBuilder().append("kk.D(").append(-16998).append(44);
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;

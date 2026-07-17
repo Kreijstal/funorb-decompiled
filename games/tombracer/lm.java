@@ -19,7 +19,7 @@ final class lm extends ci {
         this.a(param0, (byte) -55);
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_m = null;
         field_r = null;
         field_p = null;

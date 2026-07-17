@@ -61,7 +61,7 @@ final class th {
         var7 = Kickabout.field_G;
         try {
           L0: {
-            var5_int = param0;
+            var5_int = 0;
             L1: while (true) {
               if (qe.field_b.length <= var5_int) {
                 break L0;
@@ -92,7 +92,7 @@ final class th {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var5;
-            stackOut_8_1 = new StringBuilder().append("th.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_8_1 = new StringBuilder().append("th.C(").append(0).append(44).append(param1).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -144,7 +144,7 @@ final class th {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         gn var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

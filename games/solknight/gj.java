@@ -180,7 +180,7 @@ class gj {
         ej var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_u) {
             break L0;
           } else {
@@ -190,7 +190,7 @@ class gj {
         }
         L1: {
           fk.a(param0, 0, var3);
-          ((gj) this).field_c = ((gj) this).field_c - 256;
+          ((gj) this).field_c = ((gj) this).field_c - param1;
           if (((gj) this).field_f == null) {
             break L1;
           } else {
@@ -357,7 +357,7 @@ class gj {
           if (((gj) this).field_f == null) {
             break L17;
           } else {
-            ((gj) this).field_f.a(param0, 0, 256);
+            ((gj) this).field_f.a(param0, 0, param1);
             break L17;
           }
         }
@@ -416,12 +416,12 @@ class gj {
     }
 
     private final void a(int param0) {
-        ((gj) this).field_c = ((gj) this).field_c - 256;
+        ((gj) this).field_c = ((gj) this).field_c - param0;
         if (((gj) this).field_c < 0) {
             ((gj) this).field_c = 0;
         }
         if (((gj) this).field_f != null) {
-            ((gj) this).field_f.a(256);
+            ((gj) this).field_f.a(param0);
             return;
         }
     }
@@ -454,7 +454,7 @@ class gj {
     void b(int param0) throws Exception {
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void a(int param0, boolean param1) {
         int stackIn_7_0 = 0;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;

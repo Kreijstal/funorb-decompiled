@@ -25,7 +25,7 @@ final class wh {
         return 1 + param0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_e = null;
         field_h = null;
@@ -39,18 +39,12 @@ final class wh {
     }
 
     final static void a(byte param0, boolean param1) {
-        if (param0 != 117) {
-            qb discarded$0 = wh.a(89);
-        }
         wn.field_z.a(param1, (byte) -127);
     }
 
     final static qb a(int param0) {
         int var4_int = 0;
         int var5 = ArcanistsMulti.field_G ? 1 : 0;
-        if (param0 > -100) {
-            field_f = null;
-        }
         int var1 = ho.field_i[0] * jg.field_p[0];
         byte[] var2 = ln.field_I[0];
         int[] var3 = new int[var1];
@@ -58,7 +52,8 @@ final class wh {
             var3[var4_int] = ph.field_c[dg.a(255, (int) var2[var4_int])];
         }
         qb var4 = new qb(pb.field_g, gn.field_a, hl.field_l[0], be.field_d[0], jg.field_p[0], ho.field_i[0], var3);
-        dk.a(-18229);
+        int discarded$0 = -18229;
+        dk.a();
         return var4;
     }
 

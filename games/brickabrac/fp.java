@@ -49,12 +49,12 @@ final class fp extends lh {
               var5 = ma.field_O.field_N;
               var6 = new jp(var4_int, var5);
               var6.g();
-              ma.field_O.b(param2, var4_int / param0, 2 + ma.field_O.field_F, 0, -1);
+              ma.field_O.b(param2, var4_int / 2, 2 + ma.field_O.field_F, 0, -1);
               kc.field_q.a((byte) 124);
               var7 = new jp(var4_int * param1, var5 * param1);
               var7.g();
               var6.a(0, 0, param1 * var4_int, param1 * var5);
-              gp.a(var5 * param1, 0, param1 * var4_int, param0 ^ 2, 0);
+              gp.a(var5 * param1, 0, param1 * var4_int, 0, 0);
               kc.field_q.a((byte) 126);
               if (param3) {
                 var8 = var7.field_D;
@@ -96,7 +96,7 @@ final class fp extends lh {
           L4: {
             var4 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var4;
-            stackOut_12_1 = new StringBuilder().append("fp.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_12_1 = new StringBuilder().append("fp.B(").append(2).append(44).append(param1).append(44);
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -128,7 +128,7 @@ final class fp extends lh {
         if (lb.field_c >= param2 - -param1) {
             return param2;
         }
-        if (param0 >= ~(-param1 + (param2 - -param3))) {
+        if (-param1 + (param2 - -param3) >= 0) {
             return param2 + param3 - param1;
         }
         return lb.field_c + -param1;
@@ -148,7 +148,7 @@ final class fp extends lh {
         ((fp) this).a(0);
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_B = null;
         field_u = null;
         field_y = null;

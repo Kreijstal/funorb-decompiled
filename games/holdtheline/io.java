@@ -67,7 +67,7 @@ final class io {
         return ((io) this).field_d;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         field_f = null;

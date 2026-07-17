@@ -130,7 +130,7 @@ final class vg implements mh {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_k = null;
     }
 

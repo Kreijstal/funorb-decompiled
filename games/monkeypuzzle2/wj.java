@@ -110,13 +110,14 @@ abstract class wj extends hf implements vc {
         String stackOut_8_2 = null;
         try {
           L0: {
-            if (wg.a(param3, param1, param2, -3)) {
+            int discarded$9 = -3;
+            if (wg.a(param3, param1, param2)) {
               L1: {
                 if (param0 == 83) {
                   break L1;
                 } else {
                   var5 = null;
-                  le[] discarded$2 = wj.a((byte) -96, -124, (ad) null, -100);
+                  le[] discarded$10 = wj.a((byte) -96, -124, (ad) null, -100);
                   break L1;
                 }
               }
@@ -162,32 +163,29 @@ abstract class wj extends hf implements vc {
 
     abstract String a(int param0, String param1);
 
-    final static void a(int param0, wf param1, int param2) {
+    final static void a(int param0, wf param1) {
         hb var5 = null;
         int var4 = 0;
         try {
             var5 = gf.field_c;
-            var5.b(true, param2);
+            var5.b(true, 5);
             var5.field_h = var5.field_h + 1;
             var4 = var5.field_h;
-            var5.b(1, param0 + -74685);
-            var5.b(param1.field_e, param0 + -74685);
+            var5.b(1, -49152);
+            var5.b(param1.field_e, -49152);
             var5.a(param1.field_f, false);
             var5.a(-803539344, param1.field_g);
             var5.a(-803539344, param1.field_k);
-            if (param0 != 25533) {
-                boolean discarded$0 = wj.d(80);
-            }
             var5.a(-803539344, param1.field_l);
             var5.a(-803539344, param1.field_j);
-            int discarded$1 = var5.a((byte) -59, var4);
+            int discarded$0 = var5.a((byte) -59, var4);
             var5.a(-var4 + var5.field_h, (byte) -113);
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "wj.V(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw la.a((Throwable) (Object) runtimeException, "wj.V(" + 25533 + 44 + (param1 != null ? "{...}" : "null") + 44 + 5 + 41);
         }
     }
 
-    final static void d(byte param0) {
+    final static void d() {
         if (!(me.field_f == null)) {
             me.field_f.g((byte) -75);
         }

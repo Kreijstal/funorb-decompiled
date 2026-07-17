@@ -1023,7 +1023,7 @@ class cr extends fh {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_eb = null;
         field_E = null;
         field_Z = null;
@@ -1552,12 +1552,13 @@ class cr extends fh {
                 break L1;
               } else {
                 var5 = null;
-                er discarded$2 = cr.a(0, (r) null, (byte) 109, 59);
+                er discarded$4 = cr.a(0, (r) null, (byte) 109, 59);
                 break L1;
               }
             }
             if (hq.a(124, param3, param0, param1)) {
-              stackOut_5_0 = ej.a((byte) 89);
+              int discarded$5 = 89;
+              stackOut_5_0 = ej.a();
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {

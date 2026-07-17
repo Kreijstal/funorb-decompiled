@@ -1476,72 +1476,56 @@ final class hc {
         }
     }
 
-    final static la a(boolean param0, boolean param1, int param2, int param3, boolean param4, int param5) {
+    final static la a(boolean param0, boolean param1, int param2) {
         try {
             Object var6 = null;
             Object var7 = null;
             gl var8 = null;
-            la stackIn_14_0 = null;
+            la stackIn_10_0 = null;
             Throwable decompiledCaughtException = null;
-            la stackOut_13_0 = null;
+            la stackOut_9_0 = null;
             try {
               L0: {
                 L1: {
-                  if (param3 == 8505) {
-                    break L1;
-                  } else {
-                    field_c = null;
-                    break L1;
-                  }
-                }
-                L2: {
                   var6 = null;
                   if (hq.field_a.field_t != null) {
                     jd.field_F = new o(hq.field_a.field_t, 5200, 0);
                     hq.field_a.field_t = null;
                     var6 = (Object) (Object) new pb(255, jd.field_F, new o(hq.field_a.field_n, 12000, 0), 2097152);
-                    break L2;
+                    break L1;
                   } else {
-                    break L2;
+                    break L1;
                   }
                 }
-                L3: {
+                L2: {
                   var7 = null;
                   if (jd.field_F == null) {
-                    break L3;
+                    break L2;
                   } else {
-                    L4: {
+                    L3: {
                       if (uj.field_b != null) {
-                        break L4;
+                        break L3;
                       } else {
                         uj.field_b = new o[hq.field_a.field_w.length];
-                        break L4;
+                        break L3;
                       }
                     }
-                    L5: {
+                    L4: {
                       if (uj.field_b[param2] != null) {
-                        break L5;
+                        break L4;
                       } else {
                         uj.field_b[param2] = new o(hq.field_a.field_w[param2], 12000, 0);
                         hq.field_a.field_w[param2] = null;
-                        break L5;
+                        break L4;
                       }
                     }
                     var7 = (Object) (Object) new pb(param2, jd.field_F, uj.field_b[param2], 2097152);
-                    break L3;
+                    break L2;
                   }
                 }
-                L6: {
-                  var8 = no.field_n.a((pb) var7, (byte) 101, param2, (pb) var6, param0);
-                  if (!param4) {
-                    break L6;
-                  } else {
-                    var8.d(-118);
-                    break L6;
-                  }
-                }
-                stackOut_13_0 = new la((me) (Object) var8, param1, param5);
-                stackIn_14_0 = stackOut_13_0;
+                var8 = no.field_n.a((pb) var7, (byte) 101, param2, (pb) var6, false);
+                stackOut_9_0 = new la((me) (Object) var8, true, 1);
+                stackIn_10_0 = stackOut_9_0;
                 break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -1549,7 +1533,7 @@ final class hc {
               var6 = (Object) (Object) decompiledCaughtException;
               throw new RuntimeException(((IOException) var6).toString());
             }
-            return stackIn_14_0;
+            return stackIn_10_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -1557,7 +1541,7 @@ final class hc {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_u = null;
         field_c = null;
         field_d = null;

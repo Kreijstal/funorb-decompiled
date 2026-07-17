@@ -7,7 +7,7 @@ final class qa extends dj {
     static String field_F;
     static String field_G;
 
-    final static int a(tv param0, int param1) {
+    final static int a(tv param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -109,17 +109,14 @@ final class qa extends dj {
     qa() {
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_E = null;
         field_F = null;
         field_H = null;
         field_G = null;
     }
 
-    final static wc h(int param0) {
-        if (param0 >= -58) {
-            field_E = null;
-        }
+    final static wc h() {
         if (wb.field_p == null) {
             wb.field_p = new wc();
             wb.field_p.a(gf.field_a, 3422);
@@ -265,7 +262,7 @@ final class qa extends dj {
         }
     }
 
-    final static void i(int param0) {
+    final static void i() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;

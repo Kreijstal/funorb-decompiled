@@ -17,7 +17,8 @@ final class jp extends qr {
         } else {
           if (oq.field_j == 85) {
             if (((jp) this).field_Db.length() > 0) {
-              StringBuilder discarded$16 = aj.a(((jp) this).field_Db, ((jp) this).field_Db.length() - 1, -121, ' ');
+              int discarded$17 = 32;
+              StringBuilder discarded$18 = aj.a(((jp) this).field_Db, ((jp) this).field_Db.length() - 1, -121);
               if (((jp) this).field_Db.length() < 12) {
                 L0: {
                   var2 = Character.toLowerCase(ho.field_h);
@@ -36,15 +37,15 @@ final class jp extends qr {
                       break L1;
                     } else {
                       L2: {
-                        StringBuilder discarded$17 = ((jp) this).field_Db.append(var2);
+                        StringBuilder discarded$19 = ((jp) this).field_Db.append(var2);
                         if (hq.a(-103, (char) var2)) {
-                          StringBuilder discarded$18 = ((jp) this).field_Db.append(var2);
+                          StringBuilder discarded$20 = ((jp) this).field_Db.append(var2);
                           break L2;
                         } else {
                           if (!dk.a((byte) 55, (char) var2)) {
                             break L2;
                           } else {
-                            StringBuilder discarded$19 = ((jp) this).field_Db.append(var2);
+                            StringBuilder discarded$21 = ((jp) this).field_Db.append(var2);
                             break L2;
                           }
                         }
@@ -101,7 +102,7 @@ final class jp extends qr {
                   }
                 }
                 if (hq.a(-103, (char) var2)) {
-                  StringBuilder discarded$20 = ((jp) this).field_Db.append(var2);
+                  StringBuilder discarded$22 = ((jp) this).field_Db.append(var2);
                   if (oq.field_j != 84) {
                     if (param0 < -93) {
                       L6: {
@@ -201,7 +202,7 @@ final class jp extends qr {
                       }
                     }
                   } else {
-                    StringBuilder discarded$21 = ((jp) this).field_Db.append(var2);
+                    StringBuilder discarded$23 = ((jp) this).field_Db.append(var2);
                     if (oq.field_j != 84) {
                       if (param0 < -93) {
                         L12: {
@@ -300,15 +301,15 @@ final class jp extends qr {
                       break L18;
                     } else {
                       L19: {
-                        StringBuilder discarded$22 = ((jp) this).field_Db.append(var2);
+                        StringBuilder discarded$24 = ((jp) this).field_Db.append(var2);
                         if (hq.a(-103, (char) var2)) {
-                          StringBuilder discarded$23 = ((jp) this).field_Db.append(var2);
+                          StringBuilder discarded$25 = ((jp) this).field_Db.append(var2);
                           break L19;
                         } else {
                           if (!dk.a((byte) 55, (char) var2)) {
                             break L19;
                           } else {
-                            StringBuilder discarded$24 = ((jp) this).field_Db.append(var2);
+                            StringBuilder discarded$26 = ((jp) this).field_Db.append(var2);
                             break L19;
                           }
                         }
@@ -345,7 +346,7 @@ final class jp extends qr {
                 }
                 if (hq.a(-103, (char) var2)) {
                   L22: {
-                    StringBuilder discarded$25 = ((jp) this).field_Db.append(var2);
+                    StringBuilder discarded$27 = ((jp) this).field_Db.append(var2);
                     if (oq.field_j != 84) {
                       break L22;
                     } else {
@@ -424,7 +425,7 @@ final class jp extends qr {
                     }
                   } else {
                     L27: {
-                      StringBuilder discarded$26 = ((jp) this).field_Db.append(var2);
+                      StringBuilder discarded$28 = ((jp) this).field_Db.append(var2);
                       if (oq.field_j != 84) {
                         break L27;
                       } else {
@@ -502,15 +503,15 @@ final class jp extends qr {
                     break L32;
                   } else {
                     L33: {
-                      StringBuilder discarded$27 = ((jp) this).field_Db.append(var2);
+                      StringBuilder discarded$29 = ((jp) this).field_Db.append(var2);
                       if (hq.a(-103, (char) var2)) {
-                        StringBuilder discarded$28 = ((jp) this).field_Db.append(var2);
+                        StringBuilder discarded$30 = ((jp) this).field_Db.append(var2);
                         break L33;
                       } else {
                         if (!dk.a((byte) 55, (char) var2)) {
                           break L33;
                         } else {
-                          StringBuilder discarded$29 = ((jp) this).field_Db.append(var2);
+                          StringBuilder discarded$31 = ((jp) this).field_Db.append(var2);
                           break L33;
                         }
                       }
@@ -547,7 +548,7 @@ final class jp extends qr {
               }
               if (hq.a(-103, (char) var2)) {
                 L36: {
-                  StringBuilder discarded$30 = ((jp) this).field_Db.append(var2);
+                  StringBuilder discarded$32 = ((jp) this).field_Db.append(var2);
                   if (oq.field_j != 84) {
                     break L36;
                   } else {
@@ -626,7 +627,7 @@ final class jp extends qr {
                   }
                 } else {
                   L41: {
-                    StringBuilder discarded$31 = ((jp) this).field_Db.append(var2);
+                    StringBuilder discarded$33 = ((jp) this).field_Db.append(var2);
                     if (oq.field_j != 84) {
                       break L41;
                     } else {
@@ -685,7 +686,7 @@ final class jp extends qr {
         }
     }
 
-    final static boolean a(String param0, byte param1) {
+    final static boolean a(String param0) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         boolean stackIn_1_0 = false;
@@ -709,7 +710,8 @@ final class jp extends qr {
         try {
           L0: {
             var3 = (CharSequence) (Object) param0;
-            stackOut_0_0 = ci.field_d.equals((Object) (Object) ji.a(var3, true));
+            int discarded$2 = 1;
+            stackOut_0_0 = ci.field_d.equals((Object) (Object) ji.a(var3));
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -989,7 +991,8 @@ final class jp extends qr {
           }
         } else {
           L2: while (true) {
-            if (!cc.e((byte) 55)) {
+            int discarded$8 = 55;
+            if (!cc.e()) {
               if (param0 < -42) {
                 ((jp) this).field_zb.field_z = ((jp) this).field_Db.toString();
                 if (param1) {
@@ -1030,7 +1033,8 @@ final class jp extends qr {
                   break L3;
                 } else {
                   if (0 < ((jp) this).field_Db.length()) {
-                    StringBuilder discarded$5 = aj.a(((jp) this).field_Db, ((jp) this).field_Db.length() + -1, 29, ' ');
+                    int discarded$9 = 32;
+                    StringBuilder discarded$10 = aj.a(((jp) this).field_Db, ((jp) this).field_Db.length() + -1, 29);
                     break L3;
                   } else {
                     break L3;
@@ -1038,8 +1042,9 @@ final class jp extends qr {
                 }
               }
               L4: {
-                if (vi.a(ho.field_h, (CharSequence) (Object) ((jp) this).field_Db, (byte) 119)) {
-                  StringBuilder discarded$6 = ((jp) this).field_Db.append(ho.field_h);
+                int discarded$11 = 119;
+                if (vi.a(ho.field_h, (CharSequence) (Object) ((jp) this).field_Db)) {
+                  StringBuilder discarded$12 = ((jp) this).field_Db.append(ho.field_h);
                   break L4;
                 } else {
                   L5: {
@@ -1047,7 +1052,7 @@ final class jp extends qr {
                       break L5;
                     } else {
                       if (91 == ho.field_h) {
-                        StringBuilder discarded$7 = ((jp) this).field_Db.append(ho.field_h);
+                        StringBuilder discarded$13 = ((jp) this).field_Db.append(ho.field_h);
                         break L4;
                       } else {
                         break L5;
@@ -1059,7 +1064,7 @@ final class jp extends qr {
                       break L6;
                     } else {
                       if (ho.field_h == 35) {
-                        StringBuilder discarded$8 = ((jp) this).field_Db.append(ho.field_h);
+                        StringBuilder discarded$14 = ((jp) this).field_Db.append(ho.field_h);
                         break L4;
                       } else {
                         break L6;
@@ -1069,7 +1074,7 @@ final class jp extends qr {
                   if (ho.field_h != 93) {
                     break L4;
                   } else {
-                    StringBuilder discarded$9 = ((jp) this).field_Db.append(ho.field_h);
+                    StringBuilder discarded$15 = ((jp) this).field_Db.append(ho.field_h);
                     break L4;
                   }
                 }
@@ -1100,23 +1105,20 @@ final class jp extends qr {
                 le.field_e.a(true, (vg) (Object) ed.field_h);
             }
             ed.field_h.a(param3, param0, 65536, param1);
-            if (param2 <= 118) {
-                jp.g(-100);
-            }
             gf.b();
             og.a(0, true);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "jp.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw r.a((Throwable) (Object) runtimeException, "jp.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 121 + 44 + param3 + 41);
         }
     }
 
     final static void g(byte param0) {
-        Object var2 = null;
         dp.field_t = false;
         if (mr.field_h == null) {
           L0: {
             if (0 != em.field_h) {
-              qq.c(false);
+              int discarded$8 = 0;
+              qq.c();
               break L0;
             } else {
               break L0;
@@ -1126,15 +1128,16 @@ final class jp extends qr {
           if (param0 >= 83) {
             return;
           } else {
-            var2 = null;
-            jp.a((String[]) null, false);
+            int discarded$9 = 0;
+            jp.a((String[]) null);
             return;
           }
         } else {
           L1: {
             mr.field_h.h(0);
             if (0 != em.field_h) {
-              qq.c(false);
+              int discarded$10 = 0;
+              qq.c();
               break L1;
             } else {
               break L1;
@@ -1144,14 +1147,14 @@ final class jp extends qr {
           if (param0 >= 83) {
             return;
           } else {
-            var2 = null;
-            jp.a((String[]) null, false);
+            int discarded$11 = 0;
+            jp.a((String[]) null);
             return;
           }
         }
     }
 
-    final static void a(String[] args, boolean param1) {
+    final static void a(String[] args) {
         RuntimeException var2 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;

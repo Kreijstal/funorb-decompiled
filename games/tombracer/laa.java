@@ -223,7 +223,7 @@ final class laa extends b implements tsa {
         }
     }
 
-    final static int a(int param0, int param1, byte[] param2, int param3, CharSequence param4, byte param5) {
+    final static int a(int param0, int param1, byte[] param2, int param3, CharSequence param4) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -265,7 +265,7 @@ final class laa extends b implements tsa {
         var9 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
-            var6_int = -param3 + param1;
+            var6_int = param1;
             var7 = 0;
             L1: while (true) {
               if (var7 >= var6_int) {
@@ -276,7 +276,7 @@ final class laa extends b implements tsa {
                 L2: {
                   L3: {
                     L4: {
-                      var8 = param4.charAt(param3 + var7);
+                      var8 = param4.charAt(var7);
                       if (var8 <= 0) {
                         break L4;
                       } else {
@@ -474,7 +474,7 @@ final class laa extends b implements tsa {
           }
           L7: {
             stackOut_73_0 = (RuntimeException) (Object) stackIn_73_0;
-            stackOut_73_1 = ((StringBuilder) (Object) stackIn_73_1).append(stackIn_73_2).append(44).append(param3).append(44);
+            stackOut_73_1 = ((StringBuilder) (Object) stackIn_73_1).append(stackIn_73_2).append(44).append(0).append(44);
             stackIn_75_0 = stackOut_73_0;
             stackIn_75_1 = stackOut_73_1;
             stackIn_74_0 = stackOut_73_0;

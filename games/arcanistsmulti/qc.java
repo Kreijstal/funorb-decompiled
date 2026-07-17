@@ -24,21 +24,11 @@ final class qc {
     }
 
     final static void a(boolean param0, int param1, int param2) {
-        ab var3 = null;
-        var3 = he.field_e;
+        ab var3 = he.field_e;
         var3.b((byte) -38, param2);
-        if (param0) {
-          field_e = 51;
-          var3.f(3, (byte) -22);
-          var3.f(9, (byte) -98);
-          var3.c(param1, (byte) -60);
-          return;
-        } else {
-          var3.f(3, (byte) -22);
-          var3.f(9, (byte) -98);
-          var3.c(param1, (byte) -60);
-          return;
-        }
+        var3.f(3, (byte) -22);
+        var3.f(9, (byte) -98);
+        var3.c(param1, (byte) -60);
     }
 
     final static boolean a(int param0, boolean param1, CharSequence param2) {
@@ -209,7 +199,7 @@ final class qc {
         return stackIn_35_0 != 0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_f = null;
         field_b = null;

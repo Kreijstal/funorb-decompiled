@@ -18,7 +18,7 @@ final class jla extends htb {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = 0;
         field_B = null;
     }
@@ -32,7 +32,7 @@ final class jla extends htb {
         }
     }
 
-    final static dnb a(byte[] param0, byte param1, int param2) {
+    final static dnb a(byte[] param0) {
         dnb var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -57,9 +57,10 @@ final class jla extends htb {
         try {
           L0: {
             var3 = new dnb(param0);
-            var4 = -111 / ((param1 - -2) / 45);
+            var4 = -111;
             ahb.field_o.b(-10258, (ksa) (Object) var3);
-            nv.a((byte) -61, var3, 6);
+            int discarded$2 = 6;
+            nv.a((byte) -61, var3);
             stackOut_0_0 = (dnb) var3;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -92,7 +93,7 @@ final class jla extends htb {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + 6 + 41);
+          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 64 + 44 + 6 + 41);
         }
         return stackIn_1_0;
     }

@@ -14,11 +14,11 @@ final class tc {
         int var5 = 0;
         char[] var6 = null;
         int stackIn_8_0 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_21_0 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_19_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_20_0 = 0;
-        int stackOut_17_0 = 0;
+        int stackOut_18_0 = 0;
+        int stackOut_15_0 = 0;
         int stackOut_7_0 = 0;
         var5 = Geoblox.field_C;
         try {
@@ -46,32 +46,24 @@ final class tc {
                   }
                 }
               }
-              L4: {
-                if (param0 == -112) {
-                  break L4;
-                } else {
-                  field_b = null;
-                  break L4;
-                }
-              }
               if (param1 != 0) {
                 var6 = lf.field_e;
                 var2 = var6;
                 var3 = 0;
-                L5: while (true) {
+                L4: while (true) {
                   if (var6.length <= var3) {
-                    stackOut_20_0 = 0;
-                    stackIn_21_0 = stackOut_20_0;
+                    stackOut_18_0 = 0;
+                    stackIn_19_0 = stackOut_18_0;
                     break L0;
                   } else {
                     var4 = var6[var3];
                     if (var4 == param1) {
-                      stackOut_17_0 = 1;
-                      stackIn_18_0 = stackOut_17_0;
-                      return stackIn_18_0 != 0;
+                      stackOut_15_0 = 1;
+                      stackIn_16_0 = stackOut_15_0;
+                      return stackIn_16_0 != 0;
                     } else {
                       var3++;
-                      continue L5;
+                      continue L4;
                     }
                   }
                 }
@@ -86,9 +78,9 @@ final class tc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2_ref, "tc.A(" + param0 + 44 + param1 + 41);
+          throw t.a((Throwable) (Object) var2_ref, "tc.A(" + -112 + 44 + param1 + 41);
         }
-        return stackIn_21_0 != 0;
+        return stackIn_19_0 != 0;
     }
 
     public static void a(boolean param0) {
@@ -173,7 +165,8 @@ final class tc {
                     break L3;
                   }
                 }
-                oj.a(param2, 20000000);
+                int discarded$1 = 20000000;
+                oj.a(param2);
                 break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

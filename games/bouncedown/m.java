@@ -72,11 +72,7 @@ final class m implements Iterable {
         throw new Error();
     }
 
-    final static int a(byte param0) {
-        if (param0 <= 1) {
-            field_e = null;
-            return wh.field_d;
-        }
+    final static int a() {
         return wh.field_d;
     }
 

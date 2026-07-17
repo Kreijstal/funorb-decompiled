@@ -160,8 +160,8 @@ final class mb extends ml {
         try {
           L0: {
             tf.a(-86, param17, param16, param11);
-            id.a(param20, param5, param3 + 26883, param10, param7);
-            eg.b(param2, param8, param3);
+            id.a(param20, param5, 26883, param10, param7);
+            eg.b(param2, param8, 0);
             te.a(-4440, param19, param13, param14, param9, param12);
             ad.a(param4, param15, param1, (byte) 106);
             gn.a(param0, param18, false, param6);
@@ -172,7 +172,7 @@ final class mb extends ml {
           L1: {
             var21 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var21;
-            stackOut_2_1 = new StringBuilder().append("mb.Q(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44).append(param8).append(44).append(param9).append(44).append(param10).append(44);
+            stackOut_2_1 = new StringBuilder().append("mb.Q(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(0).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44).append(param8).append(44).append(param9).append(44).append(param10).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -299,7 +299,7 @@ final class mb extends ml {
         }
     }
 
-    final static int[][] a(ln[] param0, boolean param1) {
+    final static int[][] a(ln[] param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int[][] var3 = null;
@@ -461,7 +461,7 @@ final class mb extends ml {
         super(param0);
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_o = null;
         field_p = null;
         field_n = null;

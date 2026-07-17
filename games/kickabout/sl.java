@@ -96,7 +96,8 @@ final class sl extends hd {
             var10 = 5 + var9_int + 5;
             var11 = 3 + (sh.field_c * 2 + 3);
             var12 = ou.b(var10, param0, param2, 127);
-            var13 = nj.a(param1, param3, var11, 29079);
+            int discarded$1 = 29079;
+            var13 = nj.a(param1, param3, var11);
             ((sl) this).a(true, var10, var12, var13, var11);
             break L0;
           }

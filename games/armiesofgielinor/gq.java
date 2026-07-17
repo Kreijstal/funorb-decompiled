@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gq {
-    final static void a(ru param0, int param1, int param2, int param3) {
+    final static void a(ru param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -281,7 +281,7 @@ final class gq {
                     } else {
                       int incrementValue$267 = param5;
                       param5++;
-                      param0[incrementValue$267] = param3;
+                      param0[incrementValue$267] = 1;
                       var12++;
                       continue L2;
                     }
@@ -297,7 +297,7 @@ final class gq {
                   } else {
                     int incrementValue$269 = param5;
                     param5++;
-                    param0[incrementValue$269] = param3;
+                    param0[incrementValue$269] = 1;
                     break L3;
                   }
                 }
@@ -310,7 +310,7 @@ final class gq {
                   } else {
                     int incrementValue$271 = param5;
                     param5++;
-                    param0[incrementValue$271] = param3;
+                    param0[incrementValue$271] = 1;
                     break L4;
                   }
                 }
@@ -323,7 +323,7 @@ final class gq {
                   } else {
                     int incrementValue$273 = param5;
                     param5++;
-                    param0[incrementValue$273] = param3;
+                    param0[incrementValue$273] = 1;
                     break L5;
                   }
                 }
@@ -336,7 +336,7 @@ final class gq {
                 } else {
                   int incrementValue$275 = param5;
                   param5++;
-                  param0[incrementValue$275] = param3;
+                  param0[incrementValue$275] = 1;
                   var12++;
                   continue L1;
                 }

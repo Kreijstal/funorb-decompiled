@@ -9,7 +9,7 @@ final class ljb extends rqa {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_p = null;
     }
 

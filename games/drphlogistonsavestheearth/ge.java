@@ -27,7 +27,8 @@ final class ge {
         if (param0 > -46) {
             return;
         }
-        this.b(0);
+        int discarded$0 = 0;
+        this.b();
         ((ge) this).field_b.c(104);
     }
 
@@ -81,7 +82,8 @@ final class ge {
                     }
                   }
                 }
-                this.b(0);
+                int discarded$2 = 0;
+                this.b();
                 break L2;
               }
             }
@@ -96,7 +98,8 @@ final class ge {
                   param1 = param1 + var5_int;
                   param0 = param0 - var5_int;
                   ((ge) this).field_j = ((ge) this).field_l.length;
-                  this.b(0);
+                  int discarded$3 = 0;
+                  this.b();
                   break L4;
                 } else {
                   break L4;
@@ -354,7 +357,8 @@ final class ge {
         String stackOut_16_2 = null;
         var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          var3 = ui.a(param1, param2, -3);
+          int discarded$4 = -3;
+          var3 = ui.a(false, param2);
           if (var3 != null) {
             stackOut_3_0 = (String) var3;
             stackIn_4_0 = stackOut_3_0;
@@ -365,7 +369,7 @@ final class ge {
                 break L0;
               } else {
                 var6 = null;
-                String discarded$2 = ge.a((byte) -112, false, (CharSequence) null);
+                String discarded$5 = ge.a((byte) -112, false, (CharSequence) null);
                 break L0;
               }
             }
@@ -390,7 +394,7 @@ final class ge {
           L2: {
             var3_ref = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var3_ref;
-            stackOut_15_1 = new StringBuilder().append("ge.K(").append(param0).append(44).append(param1).append(44);
+            stackOut_15_1 = new StringBuilder().append("ge.K(").append(param0).append(44).append(0).append(44);
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -713,7 +717,7 @@ final class ge {
         return ((ge) this).field_h;
     }
 
-    private final void a(byte param0) throws IOException {
+    private final void a() throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
@@ -747,7 +751,7 @@ final class ge {
         ((ge) this).field_a = param0;
     }
 
-    private final void b(int param0) throws IOException {
+    private final void b() throws IOException {
         long var2 = 0L;
         long var4 = 0L;
         int var6 = 0;
@@ -962,7 +966,8 @@ final class ge {
                     break L5;
                   } else {
                     L6: {
-                      this.a((byte) -102);
+                      int discarded$2 = -102;
+                      this.a();
                       var9_int = param2;
                       if (var9_int <= ((ge) this).field_q) {
                         break L6;
@@ -1018,9 +1023,9 @@ final class ge {
                           if (param0 >= var9_int) {
                             break L9;
                           } else {
-                            int incrementValue$1 = param0;
+                            int incrementValue$3 = param0;
                             param0++;
-                            param1[incrementValue$1] = (byte) 0;
+                            param1[incrementValue$3] = (byte) 0;
                             param2--;
                             ((ge) this).field_a = ((ge) this).field_a + 1L;
                             continue L11;

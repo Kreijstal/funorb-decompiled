@@ -12,15 +12,12 @@ final class q {
     static int field_d;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_f = null;
         field_g = null;
         field_i = null;
         field_c = null;
-        if (param0 != 4) {
-            boolean discarded$0 = q.a(125, (byte) -14, -93, -34, -5, -28, 57);
-        }
         field_h = null;
     }
 
@@ -28,7 +25,7 @@ final class q {
         throw new IllegalStateException();
     }
 
-    final static boolean a(CharSequence param0, boolean param1, int param2) {
+    final static boolean a(CharSequence param0) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -57,7 +54,8 @@ final class q {
         var4 = Transmogrify.field_A ? 1 : 0;
         try {
           L0: {
-            if (vg.a(param1, param0, (byte) 26)) {
+            int discarded$14 = 26;
+            if (vg.a(false, param0)) {
               var3_int = 0;
               L1: while (true) {
                 if (var3_int >= param0.length()) {
@@ -65,7 +63,8 @@ final class q {
                   stackIn_11_0 = stackOut_10_0;
                   break L0;
                 } else {
-                  if (bc.a(param0.charAt(var3_int), -161)) {
+                  int discarded$15 = -161;
+                  if (bc.a(param0.charAt(var3_int))) {
                     var3_int++;
                     continue L1;
                   } else {
@@ -109,46 +108,42 @@ final class q {
               break L2;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 44 + 85 + 41);
+          throw ch.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + 0 + 44 + 85 + 41);
         }
         return stackIn_11_0 != 0;
     }
 
     final static boolean a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6) {
-        int stackIn_8_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_7_0 = 0;
-        if (param1 == 12) {
-          L0: {
-            L1: {
-              if (param5 > param4) {
+        int stackIn_6_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_5_0 = 0;
+        L0: {
+          L1: {
+            if (param5 > param4) {
+              break L1;
+            } else {
+              if (param4 >= param6 + param5) {
                 break L1;
               } else {
-                if (param4 >= param6 + param5) {
+                if (param2 > param0) {
                   break L1;
                 } else {
-                  if (param2 > param0) {
+                  if (param0 >= param2 - -param3) {
                     break L1;
                   } else {
-                    if (param0 >= param2 - -param3) {
-                      break L1;
-                    } else {
-                      stackOut_6_0 = 1;
-                      stackIn_8_0 = stackOut_6_0;
-                      break L0;
-                    }
+                    stackOut_4_0 = 1;
+                    stackIn_6_0 = stackOut_4_0;
+                    break L0;
                   }
                 }
               }
             }
-            stackOut_7_0 = 0;
-            stackIn_8_0 = stackOut_7_0;
-            break L0;
           }
-          return stackIn_8_0 != 0;
-        } else {
-          return false;
+          stackOut_5_0 = 0;
+          stackIn_6_0 = stackOut_5_0;
+          break L0;
         }
+        return stackIn_6_0 != 0;
     }
 
     static {

@@ -15,16 +15,18 @@ class c extends bb {
     private int field_K;
 
     private final void q(int param0) {
-        String var2 = this.p(0);
+        int discarded$0 = 0;
+        String var2 = this.p();
         if (param0 <= 82) {
             ((c) this).field_O = -105;
         }
         if (!(0 >= var2.length())) {
-            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.p(0)), (java.awt.datatransfer.ClipboardOwner) null);
+            int discarded$1 = 0;
+            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.p()), (java.awt.datatransfer.ClipboardOwner) null);
         }
     }
 
-    private final void c(boolean param0) {
+    private final void c() {
         int var2 = 0;
         int var3 = 0;
         if (!(((c) this).field_K == ((c) this).field_M)) {
@@ -37,7 +39,7 @@ class c extends bb {
         }
     }
 
-    final static void o(int param0) {
+    final static void o() {
         ij.field_H = null;
         of.field_d = null;
         vg.field_I = null;
@@ -101,7 +103,7 @@ class c extends bb {
         try {
           L0: {
             L1: {
-              if (param0 == ~((c) this).field_O) {
+              if (((c) this).field_O == -1) {
                 break L1;
               } else {
                 var3_int = ((c) this).field_O - ((c) this).field_i.length();
@@ -132,7 +134,7 @@ class c extends bb {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var3;
-            stackOut_9_1 = new StringBuilder().append("c.QA(").append(param0).append(44);
+            stackOut_9_1 = new StringBuilder().append("c.QA(").append(0).append(44);
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -254,7 +256,8 @@ class c extends bb {
                     if (((c) this).field_R) {
                       L5: {
                         ((c) this).field_K = this.j(127);
-                        ((c) this).field_M = this.l(32);
+                        int discarded$1 = 32;
+                        ((c) this).field_M = this.l();
                         if (((c) this).field_M <= 0) {
                           break L5;
                         } else {
@@ -316,7 +319,7 @@ class c extends bb {
         return stackIn_18_0 != 0;
     }
 
-    private final void n(int param0) {
+    private final void n() {
         try {
             String var2 = null;
             Exception var2_ref = null;
@@ -324,7 +327,8 @@ class c extends bb {
             try {
               L0: {
                 var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
-                this.c(false);
+                int discarded$1 = 0;
+                this.c();
                 this.a(0, var2);
                 break L0;
               }
@@ -358,7 +362,7 @@ class c extends bb {
         }
     }
 
-    private final void m(int param0) {
+    private final void m() {
         int var8 = fleas.field_A ? 1 : 0;
         if (!((c) this).field_T) {
             ((c) this).field_n = 0;
@@ -395,9 +399,10 @@ class c extends bb {
         }
     }
 
-    private final void k(int param0) {
+    private final void k() {
         this.q(109);
-        this.c(false);
+        int discarded$0 = 0;
+        this.c();
     }
 
     private final int j(int param0) {
@@ -540,7 +545,7 @@ class c extends bb {
         }
     }
 
-    private final void d(byte param0) {
+    private final void d() {
         if (!(!(((c) this).field_s instanceof nk))) {
             ((nk) (Object) ((c) this).field_s).a(-31825, (c) this);
         }
@@ -555,13 +560,13 @@ class c extends bb {
         }
     }
 
-    private final String p(int param0) {
+    private final String p() {
         int var2 = ((c) this).field_M <= ((c) this).field_K ? ((c) this).field_M : ((c) this).field_K;
         int var3 = ((c) this).field_M > ((c) this).field_K ? ((c) this).field_M : ((c) this).field_K;
         return ((c) this).field_i.substring(var2, var3);
     }
 
-    final static void a(int param0, byte param1, int param2, dd[] param3, int param4, int param5, fa param6, dd[] param7, int param8, int param9, boolean param10, int param11) {
+    final static void a(int param0, byte param1, int param2, dd[] param3, int param4, int param5, fa param6, dd[] param7, int param8, int param9, boolean param10) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -612,7 +617,7 @@ class c extends bb {
         try {
           L0: {
             L1: {
-              ib.a(param0, param9, param6, param3, param7, param2, 0, param8, param4, param2, param9, param5, 8, param10, param6);
+              ib.a(320, param9, param6, param3, param7, param2, 0, 240, 8, param2, param9, 2, 8, param10, param6);
               if (param1 > 66) {
                 break L1;
               } else {
@@ -627,7 +632,7 @@ class c extends bb {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("c.IA(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_3_1 = new StringBuilder().append("c.IA(").append(320).append(44).append(param1).append(44).append(param2).append(44);
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -652,7 +657,7 @@ class c extends bb {
           }
           L3: {
             stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-            stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(44).append(param4).append(44).append(param5).append(44);
+            stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(44).append(8).append(44).append(2).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -700,7 +705,7 @@ class c extends bb {
               break L4;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param8 + 44 + param9 + 44 + param10 + 44 + 8 + 41);
+          throw pf.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + 240 + 44 + param9 + 44 + param10 + 44 + 8 + 41);
         }
     }
 
@@ -728,7 +733,8 @@ class c extends bb {
           L0: {
             L1: {
               super.a(param0, param1, param2, (byte) -93);
-              this.m(127);
+              int discarded$3 = 127;
+              this.m();
               if (((c) this).field_v == 1) {
                 L2: {
                   if (((c) this).field_p instanceof eg) {
@@ -890,7 +896,8 @@ class c extends bb {
                         } else {
                           L3: {
                             if (~((c) this).field_K != ~((c) this).field_M) {
-                              this.c(false);
+                              int discarded$10 = 0;
+                              this.c();
                               break L3;
                             } else {
                               break L3;
@@ -910,9 +917,9 @@ class c extends bb {
                           L5: {
                             if (~((c) this).field_M <= ~((c) this).field_i.length()) {
                               ((c) this).field_i = ((c) this).field_i + param3;
-                              int dupTemp$1 = ((c) this).field_i.length();
-                              ((c) this).field_M = dupTemp$1;
-                              ((c) this).field_K = dupTemp$1;
+                              int dupTemp$11 = ((c) this).field_i.length();
+                              ((c) this).field_M = dupTemp$11;
+                              ((c) this).field_K = dupTemp$11;
                               break L5;
                             } else {
                               ((c) this).field_i = ((c) this).field_i.substring(0, ((c) this).field_M) + param3 + ((c) this).field_i.substring(((c) this).field_M, ((c) this).field_i.length());
@@ -935,13 +942,15 @@ class c extends bb {
                             break L6;
                           } else {
                             ((c) this).field_K = -1 + ((c) this).field_M;
-                            this.c(false);
+                            int discarded$12 = 0;
+                            this.c();
                             stackOut_75_0 = 1;
                             stackIn_76_0 = stackOut_75_0;
                             return stackIn_76_0 != 0;
                           }
                         } else {
-                          this.c(false);
+                          int discarded$13 = 0;
+                          this.c();
                           stackOut_72_0 = 1;
                           stackIn_73_0 = stackOut_72_0;
                           return stackIn_73_0 != 0;
@@ -949,14 +958,16 @@ class c extends bb {
                       } else {
                         if (param1 == 101) {
                           if (~((c) this).field_M != ~((c) this).field_K) {
-                            this.c(false);
+                            int discarded$14 = 0;
+                            this.c();
                             stackOut_69_0 = 1;
                             stackIn_70_0 = stackOut_69_0;
                             return stackIn_70_0 != 0;
                           } else {
                             if (((c) this).field_M < ((c) this).field_i.length()) {
                               ((c) this).field_K = ((c) this).field_M - -1;
-                              this.c(false);
+                              int discarded$15 = 0;
+                              this.c();
                               stackOut_67_0 = 1;
                               stackIn_68_0 = stackOut_67_0;
                               return stackIn_68_0 != 0;
@@ -981,7 +992,8 @@ class c extends bb {
                                     return stackIn_61_0 != 0;
                                   } else {
                                     if (param1 == 84) {
-                                      this.d((byte) 115);
+                                      int discarded$16 = 115;
+                                      this.d();
                                       stackOut_58_0 = 1;
                                       stackIn_59_0 = stackOut_58_0;
                                       return stackIn_59_0 != 0;
@@ -993,7 +1005,8 @@ class c extends bb {
                                           if (65 != param1) {
                                             break L7;
                                           } else {
-                                            this.k(-14);
+                                            int discarded$17 = -14;
+                                            this.k();
                                             stackOut_47_0 = 1;
                                             stackIn_48_0 = stackOut_47_0;
                                             return stackIn_48_0 != 0;
@@ -1018,7 +1031,8 @@ class c extends bb {
                                         break L6;
                                       } else {
                                         if (param1 == 67) {
-                                          this.n(-1);
+                                          int discarded$18 = -1;
+                                          this.n();
                                           stackOut_56_0 = 1;
                                           stackIn_57_0 = stackOut_56_0;
                                           return stackIn_57_0 != 0;
@@ -1042,8 +1056,9 @@ class c extends bb {
                                       stackIn_40_1 = stackOut_39_1;
                                       break L9;
                                     } else {
+                                      int discarded$19 = 32;
                                       stackOut_38_0 = this;
-                                      stackOut_38_1 = this.l(32);
+                                      stackOut_38_1 = this.l();
                                       stackIn_40_0 = stackOut_38_0;
                                       stackIn_40_1 = stackOut_38_1;
                                       break L9;
@@ -1142,7 +1157,7 @@ class c extends bb {
         return stackIn_78_0 != 0;
     }
 
-    private final int l(int param0) {
+    private final int l() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

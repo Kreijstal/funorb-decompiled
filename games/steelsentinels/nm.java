@@ -20,57 +20,47 @@ final class nm extends ia {
         hk var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        Object var4 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_13_2 = null;
+        String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
         RuntimeException stackOut_11_0 = null;
         StringBuilder stackOut_11_1 = null;
         String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
         var3 = SteelSentinels.field_G;
         try {
           L0: {
-            L1: {
-              param1.b(4);
-              var2 = (hk) (Object) ci.field_e.e(13058);
-              if (param0) {
-                break L1;
-              } else {
-                var4 = null;
-                nm.a(true, (hk) null);
-                break L1;
-              }
-            }
-            L2: while (true) {
-              L3: {
+            param1.b(4);
+            var2 = (hk) (Object) ci.field_e.e(13058);
+            L1: while (true) {
+              L2: {
                 if (var2 == null) {
-                  break L3;
+                  break L2;
                 } else {
                   if (!var2.a(param1, (byte) -63)) {
-                    break L3;
+                    break L2;
                   } else {
                     var2 = (hk) (Object) ci.field_e.a((byte) -101);
-                    continue L2;
+                    continue L1;
                   }
                 }
               }
-              L4: {
+              L3: {
                 if (var2 != null) {
                   ie.a((ck) (Object) var2, 30, (ck) (Object) param1);
-                  break L4;
+                  break L3;
                 } else {
                   ci.field_e.a(3, (ck) (Object) param1);
-                  break L4;
+                  break L3;
                 }
               }
               break L0;
@@ -78,38 +68,39 @@ final class nm extends ia {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var2_ref = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var2_ref;
-            stackOut_10_1 = new StringBuilder().append("nm.H(").append(param0).append(44);
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackOut_9_0 = (RuntimeException) var2_ref;
+            stackOut_9_1 = new StringBuilder().append("nm.H(").append(1).append(44);
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
             if (param1 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
-              break L5;
-            } else {
               stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
               stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
-              break L5;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L4;
+            } else {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L4;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
         }
     }
 
     final static void a(String param0, boolean param1, boolean param2, int param3) {
-        ql.j(-29713);
+        int discarded$3 = -29713;
+        ql.j();
         if (param3 != 12) {
             return;
         }
@@ -208,9 +199,9 @@ final class nm extends ia {
         return stackIn_9_0;
     }
 
-    final static void a(int param0, byte param1) {
+    final static void a() {
         kj var2 = mm.field_g;
-        var2.a(param0, (byte) -117);
+        var2.a(11, (byte) -117);
         var2.a((byte) 109, 1);
         var2.a((byte) 108, 1);
         int var3 = 30;
@@ -247,7 +238,8 @@ final class nm extends ia {
             if (((nm) this).field_x.a(param0, param1) != fa.field_d) {
               L1: {
                 if (!param0.equals((Object) (Object) ((nm) this).field_u)) {
-                  var3 = ri.a(param0, -98);
+                  int discarded$2 = -98;
+                  var3 = ri.a(param0);
                   if (!var3.a((byte) -72)) {
                     stackOut_7_0 = ma.field_Y;
                     stackIn_8_0 = stackOut_7_0;
@@ -312,7 +304,7 @@ final class nm extends ia {
         return stackIn_13_0;
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_o = null;
         field_t = null;
         field_q = null;
@@ -334,7 +326,7 @@ final class nm extends ia {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        qf.field_c.a(0, param1, param4, param3, param5);
+        qf.field_c.a(0, 0, param4, 5, 640);
         if (param6 <= 81) {
             field_n = null;
         }
@@ -632,14 +624,6 @@ final class nm extends ia {
                                     if (var2 == 15) {
                                       return 27;
                                     } else {
-                                      L0: {
-                                        if (param0 == 8241) {
-                                          break L0;
-                                        } else {
-                                          field_t = null;
-                                          break L0;
-                                        }
-                                      }
                                       return -1;
                                     }
                                   } else {

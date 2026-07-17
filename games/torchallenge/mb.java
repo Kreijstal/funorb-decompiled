@@ -9,7 +9,7 @@ final class mb {
     static ka[] field_d;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         field_a = null;

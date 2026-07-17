@@ -18,15 +18,10 @@ class mo {
         field_d = null;
         field_b = null;
         field_g = null;
-        if (param0 <= 84) {
-          return;
-        } else {
-          field_i = null;
-          field_e = null;
-          field_h = null;
-          field_f = null;
-          return;
-        }
+        field_i = null;
+        field_e = null;
+        field_h = null;
+        field_f = null;
     }
 
     final static void a(boolean param0) {

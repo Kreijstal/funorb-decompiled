@@ -13,20 +13,17 @@ final class ap {
     static int field_f;
 
     final static void a(String param0, int param1, int param2, int param3, String param4) {
-        if (param3 != 24092) {
-            return;
-        }
         try {
             nf.field_d.field_qb = param0;
             nf.field_d.field_K = nf.field_d.field_K + rh.field_y.field_K;
             nf.field_d.field_cb = param4;
             nf.field_d.field_N = param2;
             rh.field_y.field_D = rh.field_y.field_D + rh.field_y.field_K;
-            rh.field_y.field_K = param1;
+            rh.field_y.field_K = 0;
             nf.field_d.field_K = nf.field_d.field_K - rh.field_y.field_K;
             rh.field_y.field_D = rh.field_y.field_D - rh.field_y.field_K;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "ap.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "ap.A(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 44 + param2 + 44 + 24092 + 44 + (param4 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -57,7 +54,7 @@ final class ap {
         }
     }
 
-    final static tf[] a(int param0, int param1, int param2, int param3, int param4) {
+    final static tf[] a(int param0, int param1, int param2, int param3) {
         tf[] var5 = null;
         tf[] var6 = null;
         var6 = new tf[9];
@@ -71,7 +68,7 @@ final class ap {
         tf dupTemp$5 = cl.a(1, param0, (byte) -116);
         var6[8] = dupTemp$5;
         var5[7] = dupTemp$5;
-        var5[param2] = dupTemp$5;
+        var5[5] = dupTemp$5;
         if (param1 != 0) {
           var6[4] = cl.a(64, param1, (byte) -50);
           return var5;
@@ -173,7 +170,7 @@ final class ap {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_i = null;
         field_g = null;

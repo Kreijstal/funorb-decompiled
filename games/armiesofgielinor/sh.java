@@ -21,10 +21,12 @@ final class sh {
     private int field_i;
     static int[] field_r;
 
-    private final void a(byte param0) {
+    private final void a() {
         int var2 = ((sh) this).field_n.field_i >> 16;
-        wp var3 = we.a(var2, true);
-        io.a(var3, (byte) -34);
+        int discarded$0 = 1;
+        wp var3 = we.a(var2);
+        int discarded$1 = -34;
+        io.a(var3);
     }
 
     final void b(int param0) {
@@ -299,7 +301,8 @@ final class sh {
           var4 = ck.field_e[var3][((sh) this).field_k];
           var5 = 81 % ((param0 - -53) / 59);
           ((sh) this).field_n.a(-1, var4);
-          this.a((byte) 122);
+          int discarded$1 = 122;
+          this.a();
           var6 = ((sh) this).field_o;
           if (var6 != 1) {
             if (2 != var6) {
@@ -350,21 +353,18 @@ final class sh {
         }
     }
 
-    public static void b(byte param0) {
-        if (param0 != 40) {
-            return;
-        }
+    public static void b() {
         field_a = null;
         field_j = null;
         field_r = null;
         field_m = null;
     }
 
-    final static je d(byte param0) {
+    final static je d() {
         return ne.field_f.field_Jb;
     }
 
-    private final void c(byte param0) {
+    private final void c() {
         ((sh) this).field_d = true;
     }
 
@@ -389,7 +389,8 @@ final class sh {
         ((sh) this).a(-28);
         ((sh) this).a(0, 0, (byte) 115);
         ((sh) this).a(0, 1, so.field_b.field_g >> 1, -29001, 0, so.field_b.field_a >> 1);
-        this.c((byte) -79);
+        int discarded$0 = -79;
+        this.c();
     }
 
     static {

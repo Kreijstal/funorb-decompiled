@@ -185,51 +185,47 @@ final class kd extends rj {
         return ((kd) this).field_A;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_z = null;
     }
 
     final static boolean c(int param0, int param1, int param2) {
-        int stackIn_5_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        if (param0 <= -19) {
-          L0: {
-            if ((param1 & 393216) == 0) {
-              stackOut_4_0 = 0;
-              stackIn_5_0 = stackOut_4_0;
-              break L0;
-            } else {
-              stackOut_3_0 = 1;
-              stackIn_5_0 = stackOut_3_0;
-              break L0;
-            }
+        int stackIn_3_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackOut_2_0 = 0;
+        int stackOut_1_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
+        L0: {
+          if ((param1 & 393216) == 0) {
+            stackOut_2_0 = 0;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          } else {
+            stackOut_1_0 = 1;
+            stackIn_3_0 = stackOut_1_0;
+            break L0;
           }
-          L1: {
-            L2: {
-              if (stackIn_5_0 != 0 | pca.b(param2, 94, param1)) {
-                break L2;
+        }
+        L1: {
+          L2: {
+            if (stackIn_3_0 != 0 | pca.b(param2, 94, param1)) {
+              break L2;
+            } else {
+              if (!uu.a(param1, param2, (byte) -96)) {
+                stackOut_7_0 = 0;
+                stackIn_8_0 = stackOut_7_0;
+                break L1;
               } else {
-                if (!uu.a(param1, param2, (byte) -96)) {
-                  stackOut_9_0 = 0;
-                  stackIn_10_0 = stackOut_9_0;
-                  break L1;
-                } else {
-                  break L2;
-                }
+                break L2;
               }
             }
-            stackOut_8_0 = 1;
-            stackIn_10_0 = stackOut_8_0;
-            break L1;
           }
-          return stackIn_10_0 != 0;
-        } else {
-          return true;
+          stackOut_6_0 = 1;
+          stackIn_8_0 = stackOut_6_0;
+          break L1;
         }
+        return stackIn_8_0 != 0;
     }
 
     private kd() throws Throwable {

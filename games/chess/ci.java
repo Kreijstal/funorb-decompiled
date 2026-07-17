@@ -999,7 +999,7 @@ class ci extends ei {
         }
     }
 
-    public static void i(int param0) {
+    public static void i() {
         field_zb = null;
         field_J = null;
         field_x = null;
@@ -1100,9 +1100,9 @@ class ci extends ei {
             Object var6 = null;
             Object var7 = null;
             da var8 = null;
-            um stackIn_15_0 = null;
+            um stackIn_10_0 = null;
             Throwable decompiledCaughtException = null;
-            um stackOut_14_0 = null;
+            um stackOut_9_0 = null;
             try {
               L0: {
                 L1: {
@@ -1142,25 +1142,9 @@ class ci extends ei {
                     break L2;
                   }
                 }
-                L5: {
-                  if (param0 == -17288) {
-                    break L5;
-                  } else {
-                    field_J = null;
-                    break L5;
-                  }
-                }
-                L6: {
-                  var8 = ge.field_fb.a((byte) 14, param4, param1, (gd) var6, (gd) var7);
-                  if (param3) {
-                    var8.a((byte) 108);
-                    break L6;
-                  } else {
-                    break L6;
-                  }
-                }
-                stackOut_14_0 = new um((ua) (Object) var8, param5, param2);
-                stackIn_15_0 = stackOut_14_0;
+                var8 = ge.field_fb.a((byte) 14, false, param1, (gd) var6, (gd) var7);
+                stackOut_9_0 = new um((ua) (Object) var8, true, 1);
+                stackIn_10_0 = stackOut_9_0;
                 break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -1168,7 +1152,7 @@ class ci extends ei {
               var6 = (Object) (Object) decompiledCaughtException;
               throw new RuntimeException(((IOException) var6).toString());
             }
-            return stackIn_15_0;
+            return stackIn_10_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -1606,9 +1590,9 @@ class ci extends ei {
         return stackIn_7_0;
     }
 
-    final static void j(int param0) {
-        Object var2 = null;
-        ld.a(oc.field_o, (String) null, 0);
+    final static void j() {
+        int discarded$0 = 0;
+        ld.a(oc.field_o, (String) null);
     }
 
     final static boolean f(int param0) {

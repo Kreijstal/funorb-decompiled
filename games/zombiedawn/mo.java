@@ -14,7 +14,7 @@ final class mo {
         for (var4 = 0; param1 > var4; var4++) {
             var6[var4] = '*';
         }
-        var4 = -98 % ((param0 - 11) / 59);
+        var4 = 0;
         return new String(var3);
     }
 

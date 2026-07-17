@@ -4,7 +4,7 @@
 final class av implements dja {
     static ml[] field_a;
 
-    final static String a(char param0, int param1) {
+    final static String a(char param0) {
         return String.valueOf(param0);
     }
 
@@ -13,7 +13,7 @@ final class av implements dja {
         return (tv) (Object) new rna();
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
     }
 

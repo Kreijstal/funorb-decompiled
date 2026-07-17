@@ -330,7 +330,7 @@ final class kf {
         }
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean a() {
         return !vc.field_a.a(-121);
     }
 
@@ -369,7 +369,7 @@ final class kf {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var3_int = 39 % ((74 - param1) / 39);
+            var3_int = 0;
             var4 = param2.b(param0, 0);
             if (var4 != null) {
               stackOut_3_0 = new qd(var4);
@@ -384,7 +384,7 @@ final class kf {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var3;
-            stackOut_5_1 = new StringBuilder().append("kf.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_5_1 = new StringBuilder().append("kf.B(").append(param0).append(44).append(122).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;

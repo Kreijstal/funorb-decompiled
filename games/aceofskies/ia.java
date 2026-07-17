@@ -20,34 +20,30 @@ final class ia {
                         if (34844 == param0) {
                           break L0;
                         } else {
-                          if (param1 == -16445) {
-                            L1: {
-                              if (6409 == param0) {
+                          L1: {
+                            if (6409 == param0) {
+                              break L1;
+                            } else {
+                              if (param0 == 34846) {
                                 break L1;
                               } else {
-                                if (param0 == 34846) {
-                                  break L1;
+                                if (param0 == 6410) {
+                                  return 6410;
                                 } else {
-                                  if (param0 == 6410) {
-                                    return 6410;
-                                  } else {
-                                    if (34847 != param0) {
-                                      if (param0 == 6402) {
-                                        return 6402;
-                                      } else {
-                                        throw new IllegalArgumentException("");
-                                      }
+                                  if (34847 != param0) {
+                                    if (param0 == 6402) {
+                                      return 6402;
                                     } else {
-                                      return 6410;
+                                      throw new IllegalArgumentException("");
                                     }
+                                  } else {
+                                    return 6410;
                                   }
                                 }
                               }
                             }
-                            return 6409;
-                          } else {
-                            return -31;
                           }
+                          return 6409;
                         }
                       }
                     }
@@ -74,7 +70,7 @@ final class ia {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 

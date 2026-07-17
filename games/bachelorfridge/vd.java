@@ -235,7 +235,7 @@ class vd extends wj implements e {
         return stackIn_3_0;
     }
 
-    final static void a(double param0, int param1) {
+    final static void a(double param0) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

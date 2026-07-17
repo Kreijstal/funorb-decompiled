@@ -6,7 +6,7 @@ final class cj {
     static String field_b;
     static nc field_a;
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_b = null;
     }
@@ -33,10 +33,11 @@ final class cj {
         try {
           L0: {
             var1_int = 75 / ((param0 - 8) / 49);
-            boolean discarded$12 = u.field_b.a(-1, th.field_K, true, ee.field_l);
+            boolean discarded$28 = u.field_b.a(-1, th.field_K, true, ee.field_l);
             u.field_b.c(false);
             L1: while (true) {
-              if (!wk.a((byte) -56)) {
+              int discarded$29 = -56;
+              if (!wk.a()) {
                 if (he.field_b != -1) {
                   var2 = he.field_b;
                   h.a(-1, true);
@@ -73,7 +74,7 @@ final class cj {
                   }
                 }
               } else {
-                boolean discarded$13 = u.field_b.a(el.field_n, ta.field_d, (byte) -48);
+                boolean discarded$30 = u.field_b.a(el.field_n, ta.field_d, (byte) -48);
                 continue L1;
               }
             }

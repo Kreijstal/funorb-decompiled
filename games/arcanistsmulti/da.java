@@ -9,31 +9,31 @@ final class da {
     static String field_e;
     static int field_c;
 
-    final static void a(ha param0, boolean param1, byte param2) {
+    final static void a(ha param0) {
         try {
-            sb.a(param1, (byte) -33, param0, 256);
+            int discarded$0 = 256;
+            sb.a(true, (byte) -33, param0);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "da.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + -119 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "da.C(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 44 + -119 + 41);
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         if (param2 < 115) {
           field_d = null;
-          ec.a(65280);
+          int discarded$4 = 65280;
+          ec.a();
           de.a(param3, param4, param0, param1);
           return;
         } else {
-          ec.a(65280);
+          int discarded$5 = 65280;
+          ec.a();
           de.a(param3, param4, param0, param1);
           return;
         }
     }
 
     final static void a(pg param0, int param1, pg param2) {
-        if (param1 != 20) {
-            return;
-        }
         try {
             if (param2.field_a != null) {
                 param2.a(true);
@@ -43,20 +43,20 @@ final class da {
             param2.field_a.field_b = param2;
             param2.field_b.field_a = param2;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "da.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "da.A(" + (param0 != null ? "{...}" : "null") + 44 + 20 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
     public static void a(int param0) {
         field_d = null;
-        int var1 = -45 % ((-64 - param0) / 54);
+        int var1 = 0;
         field_b = null;
         field_e = null;
         field_a = null;
         field_f = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         int var1 = 0;
         ff.field_c = tj.field_t.b(ce.field_g[20]);
         var1 = tj.field_t.b(ce.field_g[21]);

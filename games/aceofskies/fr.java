@@ -47,12 +47,12 @@ final class fr {
         String stackOut_8_2 = null;
         try {
           L0: {
-            var13_int = param2;
+            var13_int = 0;
             L1: while (true) {
               if (param5 <= var13_int) {
                 break L0;
               } else {
-                qh.a(param2 + 2, param12, param10, param0, param9, param4, param1, param11, param5, param6, param3, var13_int, param8, param7);
+                qh.a(2, param12, param10, param0, param9, param4, param1, param11, param5, param6, param3, var13_int, param8, param7);
                 param11 = param11 + param7 * param8;
                 var13_int++;
                 continue L1;
@@ -64,7 +64,7 @@ final class fr {
           L2: {
             var13 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var13;
-            stackOut_4_1 = new StringBuilder().append("fr.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+            stackOut_4_1 = new StringBuilder().append("fr.C(").append(param0).append(44).append(param1).append(44).append(0).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -116,32 +116,19 @@ final class fr {
         }
     }
 
-    final static void a(boolean param0, int param1, boolean param2) {
-        if (param1 == 0) {
-          if (param0) {
-            gq.field_e = gq.field_e + 1;
-            us.a(param1 + 2069944240);
-            ef.field_m = ef.field_m + 1;
-            er.a((byte) -128);
-            return;
-          } else {
-            ef.field_m = ef.field_m + 1;
-            er.a((byte) -128);
-            return;
-          }
+    final static void a(boolean param0) {
+        if (param0) {
+          gq.field_e = gq.field_e + 1;
+          us.a(2069944240);
+          ef.field_m = ef.field_m + 1;
+          int discarded$4 = -128;
+          er.a();
+          return;
         } else {
-          field_e = 'L';
-          if (!param0) {
-            ef.field_m = ef.field_m + 1;
-            er.a((byte) -128);
-            return;
-          } else {
-            gq.field_e = gq.field_e + 1;
-            us.a(param1 + 2069944240);
-            ef.field_m = ef.field_m + 1;
-            er.a((byte) -128);
-            return;
-          }
+          ef.field_m = ef.field_m + 1;
+          int discarded$5 = -128;
+          er.a();
+          return;
         }
     }
 

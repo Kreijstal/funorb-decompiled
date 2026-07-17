@@ -338,35 +338,9 @@ class vka {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 < 8000) {
-            break L0;
-          } else {
-            if (param0 <= 48000) {
-              L1: {
-                field_s = param0;
-                if (!param1) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              field_r = stackIn_7_0 != 0;
-              field_u = 10;
-              return;
-            } else {
-              break L0;
-            }
-          }
-        }
-        throw new IllegalArgumentException();
+        field_s = 22050;
+        field_r = true;
+        field_u = 10;
     }
 
     final synchronized void a(f param0) {
@@ -413,7 +387,7 @@ class vka {
         f var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_r) {
             break L0;
           } else {
@@ -423,7 +397,7 @@ class vka {
         }
         L1: {
           cua.a(param0, 0, var3);
-          ((vka) this).field_l = ((vka) this).field_l - 256;
+          ((vka) this).field_l = ((vka) this).field_l - param1;
           if (((vka) this).field_m == null) {
             break L1;
           } else {
@@ -590,7 +564,7 @@ class vka {
           if (((vka) this).field_m == null) {
             break L17;
           } else {
-            ((vka) this).field_m.a(param0, 0, 256);
+            ((vka) this).field_m.a(param0, 0, param1);
             break L17;
           }
         }
@@ -658,12 +632,12 @@ class vka {
     }
 
     private final void b(int param0) {
-        ((vka) this).field_l = ((vka) this).field_l - 256;
+        ((vka) this).field_l = ((vka) this).field_l - param0;
         if (((vka) this).field_l < 0) {
             ((vka) this).field_l = 0;
         }
         if (((vka) this).field_m != null) {
-            ((vka) this).field_m.a(256);
+            ((vka) this).field_m.a(param0);
             return;
         }
     }

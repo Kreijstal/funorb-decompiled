@@ -13,7 +13,7 @@ final class ji implements Iterable {
     static mf field_a;
     static mh field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_g = null;
         field_b = null;
@@ -85,48 +85,40 @@ final class ji implements Iterable {
         return (Iterator) (Object) new ik((ji) this);
     }
 
-    final static void a(int param0, boolean param1, vm param2, int param3, int param4, boolean param5) {
+    final static void a(int param0, boolean param1, vm param2) {
         Object var6 = null;
         Object var6_ref = null;
         RuntimeException var6_ref2 = null;
         Throwable var7 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_16_2 = null;
+        String stackIn_14_2 = null;
         Throwable decompiledCaughtException = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
         RuntimeException stackOut_13_0 = null;
         StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
         try {
           L0: {
             var6_ref = (Object) (Object) eo.field_f;
             synchronized (var6_ref) {
               L1: {
-                L2: {
-                  if (param0 == 25459) {
-                    break L2;
-                  } else {
-                    field_g = null;
-                    break L2;
-                  }
-                }
                 if (fo.field_a != param2) {
-                  L3: {
+                  L2: {
                     fo.field_a = param2;
                     if (fo.field_a == null) {
-                      break L3;
+                      break L2;
                     } else {
-                      m.field_f.a(param4, fo.field_a, param3, param1, param0 + -25460, param5);
-                      break L3;
+                      m.field_f.a(1, fo.field_a, 1, true, -1, true);
+                      break L2;
                     }
                   }
                   break L1;
@@ -139,33 +131,33 @@ final class ji implements Iterable {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var6_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var6_ref2;
-            stackOut_13_1 = new StringBuilder().append("ji.B(").append(param0).append(44).append(param1).append(44);
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackOut_11_0 = (RuntimeException) var6_ref2;
+            stackOut_11_1 = new StringBuilder().append("ji.B(").append(25459).append(44).append(1).append(44);
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
             if (param2 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
-              break L4;
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L3;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
-              break L4;
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L3;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw qb.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + 1 + 44 + 1 + 44 + 1 + 41);
         }
     }
 
@@ -190,7 +182,7 @@ final class ji implements Iterable {
         }
     }
 
-    final static lo a(String param0, int param1) {
+    final static lo a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;

@@ -82,7 +82,8 @@ final class lj extends hg {
     }
 
     final long a(byte param0) {
-        ((lj) this).field_f = ((lj) this).field_f + this.c((byte) 10);
+        int discarded$0 = 10;
+        ((lj) this).field_f = ((lj) this).field_f + this.c();
         if (!(~((lj) this).field_i >= ~((lj) this).field_f)) {
             return (-((lj) this).field_f + ((lj) this).field_i) / 1000000L;
         }
@@ -202,7 +203,8 @@ final class lj extends hg {
                         }
                       }
                     }
-                    ql.a(640, 480, 0);
+                    int discarded$5 = 0;
+                    ql.a(640, 480);
                     break L0;
                   }
                 }
@@ -291,7 +293,8 @@ final class lj extends hg {
             gl.a(371, 32, -27327, 576, kf.field_b, 63);
             wm.field_H[var2].a();
             var10.b(0, 0, 128);
-            bj.a(var10.field_A, 0);
+            int discarded$6 = 0;
+            bj.a(var10.field_A);
             var10.a();
             gd.field_mb.c(-(gd.field_mb.field_n / 2) + 320, -5);
             de.d(4, 4, 0, 0, 640, 480);
@@ -312,7 +315,8 @@ final class lj extends hg {
             gl.a(385, 32, -27327, 576, kf.field_b, 63);
             wm.field_H[var2].a();
             var11.b(0, 0, 128);
-            bj.a(var11.field_A, 0);
+            int discarded$7 = 0;
+            bj.a(var11.field_A);
             var11.a();
             gd.field_mb.c(320 + -(gd.field_mb.field_n / 2), -5);
             de.d(4, 4, 0, 0, 640, 480);
@@ -342,16 +346,8 @@ final class lj extends hg {
           }
         }
         L10: {
-          if (param0) {
-            break L10;
-          } else {
-            lj.a(true, -39);
-            break L10;
-          }
-        }
-        L11: {
           if (param1 != 8) {
-            break L11;
+            break L10;
           } else {
             var14 = new qb(640, 480);
             var14.a();
@@ -369,10 +365,10 @@ final class lj extends hg {
             var15.b(0, 0, 255);
             o.field_F.c(343, -2);
             j.field_a.c(108, 6);
-            break L11;
+            break L10;
           }
         }
-        L12: {
+        L11: {
           if (param1 == 11) {
             var16 = new qb(640, 480);
             var16.a();
@@ -383,12 +379,12 @@ final class lj extends hg {
             var16.b(0, 0, 255);
             gd.field_mb.c(248 + -(gd.field_mb.field_n / 2), 10);
             gd.field_mb.c(72 + -(gd.field_mb.field_n / 2) + 320, 10);
-            break L12;
+            break L11;
           } else {
-            break L12;
+            break L11;
           }
         }
-        L13: {
+        L12: {
           if (param1 == 12) {
             var17 = new qb(640, 480);
             var17.a();
@@ -399,12 +395,13 @@ final class lj extends hg {
             var17.b(0, 0, 255);
             gd.field_mb.c(320 - (gd.field_mb.field_n / 2 - -72), 0);
             gd.field_mb.c(72 + (320 - gd.field_mb.field_n / 2), 0);
-            break L13;
+            break L12;
           } else {
-            break L13;
+            break L12;
           }
         }
-        rk.g(491697968);
+        int discarded$8 = 491697968;
+        rk.g();
     }
 
     public static void c(int param0) {
@@ -423,7 +420,7 @@ final class lj extends hg {
         }
     }
 
-    private final long c(byte param0) {
+    private final long c() {
         int var9 = 0;
         int var10 = ArcanistsMulti.field_G ? 1 : 0;
         long var2 = System.nanoTime();

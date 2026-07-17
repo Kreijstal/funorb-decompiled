@@ -64,7 +64,7 @@ final class um {
             var5.b((byte) -44);
             var5.a(255, var4, (long)(8 * param3));
             var6 = new byte[64];
-            var5.a(64767752, param0, var6);
+            var5.a(64767752, 0, var6);
             stackOut_6_0 = (byte[]) var6;
             stackIn_7_0 = stackOut_6_0;
             break L0;
@@ -74,7 +74,7 @@ final class um {
           L3: {
             var4_ref = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var4_ref;
-            stackOut_8_1 = new StringBuilder().append("um.C(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("um.C(").append(0).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -102,20 +102,12 @@ final class um {
         return stackIn_7_0;
     }
 
-    final static int a(int param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        var3 = param1 >> 16;
-        if (param2 != 11469) {
-          return 84;
-        } else {
-          var4 = param1 & 65535;
-          var5 = param0 >> 16;
-          var6 = param0 & 65535;
-          return param0 * var3 - -(var4 * var5) + (var4 * var6 >> 16);
-        }
+    final static int a(int param0, int param1) {
+        int var3 = param1 >> 16;
+        int var4 = param1 & 65535;
+        int var5 = param0 >> 16;
+        int var6 = param0 & 65535;
+        return param0 * var3 - -(var4 * var5) + (var4 * var6 >> 16);
     }
 
     final boolean b(int param0) {
@@ -138,7 +130,7 @@ final class um {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
         field_e = null;

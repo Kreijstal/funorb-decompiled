@@ -9,7 +9,7 @@ final class le {
     static String field_c;
     static String field_e;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
         field_b = null;
@@ -19,13 +19,14 @@ final class le {
     }
 
     final static void a(int param0) {
-        vi.b((byte) -45);
+        int discarded$3 = -45;
+        vi.b();
         if (param0 != 468713154) {
             le.a(-53);
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;

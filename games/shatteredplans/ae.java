@@ -11,14 +11,11 @@ final class ae {
     static boolean field_b;
     static int field_h;
 
-    final static vk c(int param0) {
-        if (param0 != 3) {
-            return null;
-        }
+    final static vk c() {
         return jp.field_Bb;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -122,9 +119,9 @@ final class ae {
                                           var12++;
                                           break L7;
                                         } else {
-                                          int incrementValue$3 = var15;
+                                          int incrementValue$4 = var15;
                                           var15++;
-                                          var37[0][incrementValue$3] = var28.a(16711680);
+                                          var37[0][incrementValue$4] = var28.a(16711680);
                                           var25++;
                                           continue L8;
                                         }
@@ -137,7 +134,8 @@ final class ae {
                                     if (var21 == null) {
                                       break L9;
                                     } else {
-                                      if (jp.a(var21, (byte) -105)) {
+                                      int discarded$5 = -105;
+                                      if (jp.a(var21)) {
                                         var8[1][var13] = ln.field_o;
                                         var9[1][var13] = null;
                                         var36[1][var13] = var22;
@@ -148,9 +146,9 @@ final class ae {
                                           if (var25 >= var7) {
                                             break L9;
                                           } else {
-                                            int incrementValue$4 = var16;
+                                            int incrementValue$6 = var16;
                                             var16++;
-                                            var37[1][incrementValue$4] = var28.a(16711680);
+                                            var37[1][incrementValue$6] = var28.a(16711680);
                                             var25++;
                                             continue L10;
                                           }
@@ -176,9 +174,9 @@ final class ae {
                                           if (var25 >= var7) {
                                             break L11;
                                           } else {
-                                            int incrementValue$5 = var17;
+                                            int incrementValue$7 = var17;
                                             var17++;
-                                            var37[2][incrementValue$5] = var28.a(16711680);
+                                            var37[2][incrementValue$7] = var28.a(16711680);
                                             var25++;
                                             continue L12;
                                           }
@@ -273,7 +271,7 @@ final class ae {
         field_d = null;
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         int var1 = 0;
         Object var2 = null;
         Throwable var3 = null;
@@ -297,7 +295,7 @@ final class ae {
         }
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void a(java.awt.Component param0) {
         try {
             param0.removeKeyListener((java.awt.event.KeyListener) (Object) im.field_c);
             param0.removeFocusListener((java.awt.event.FocusListener) (Object) im.field_c);

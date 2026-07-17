@@ -6,7 +6,7 @@ class tja implements ntb {
     bha[] field_c;
     static soa field_a;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
     }
@@ -527,7 +527,7 @@ class tja implements ntb {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var3_int = -83 % ((22 - param0) / 59);
+            var3_int = -1;
             var4 = (tja) (Object) param1;
             stackOut_0_0 = dn.a((tv[]) (Object) var4.field_c, false, 1, (tv[]) (Object) var4.field_c, -93);
             stackIn_1_0 = stackOut_0_0;
@@ -538,7 +538,7 @@ class tja implements ntb {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("tja.C(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("tja.C(").append(-123).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -651,7 +651,8 @@ class tja implements ntb {
           L0: {
             L1: {
               var3 = (tja) (Object) param1;
-              var3.field_c = (bha[]) (Object) sqb.a((tv[]) (Object) var3.field_c, (tv[]) (Object) var3.field_c, 1, uqa.field_q, false);
+              int discarded$2 = 0;
+              var3.field_c = (bha[]) (Object) sqb.a((tv[]) (Object) var3.field_c, (tv[]) (Object) var3.field_c, 1, uqa.field_q);
               if (param0 >= 54) {
                 break L1;
               } else {

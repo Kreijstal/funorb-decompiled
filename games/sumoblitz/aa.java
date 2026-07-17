@@ -22,13 +22,10 @@ abstract class aa {
     }
 
     final static void a(wi param0, boolean param1, ud param2, byte param3, int param4, java.awt.Component param5) {
-        if (param3 > -104) {
-            return;
-        }
         try {
-            hw.a(param5, param4, param4, (byte) 123, param1, param2, param0, 1024);
+            hw.a(param5, 48000, 48000, (byte) 123, true, param2, param0, 1024);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "aa.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "aa.B(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 44 + (param2 != null ? "{...}" : "null") + 44 + -125 + 44 + 48000 + 44 + (param5 != null ? "{...}" : "null") + 41);
         }
     }
 

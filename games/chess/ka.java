@@ -146,37 +146,33 @@ final class ka implements jm {
         try {
           L0: {
             var5 = (ak) (Object) nc.field_O.g(-18110);
-            if (param0 <= -31) {
-              L1: while (true) {
-                if (var5 == null) {
-                  var4 = (fd) (Object) fb.field_L.g(-18110);
-                  L2: while (true) {
-                    if (var4 == null) {
-                      break L0;
-                    } else {
-                      pk.a(3, -90, var4);
-                      var4 = (fd) (Object) fb.field_L.a((byte) -121);
-                      continue L2;
-                    }
+            L1: while (true) {
+              if (var5 == null) {
+                var4 = (fd) (Object) fb.field_L.g(-18110);
+                L2: while (true) {
+                  if (var4 == null) {
+                    break L0;
+                  } else {
+                    pk.a(3, -90, var4);
+                    var4 = (fd) (Object) fb.field_L.a((byte) -121);
+                    continue L2;
                   }
-                } else {
-                  sj.a(0, 3, var5);
-                  var5 = (ak) (Object) nc.field_O.a((byte) -112);
-                  continue L1;
                 }
+              } else {
+                sj.a(0, 3, var5);
+                var5 = (ak) (Object) nc.field_O.a((byte) -112);
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fk.a((Throwable) (Object) var2, "ka.B(" + param0 + 44 + 3 + 41);
+          throw fk.a((Throwable) (Object) var2, "ka.B(" + -76 + 44 + 3 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
         field_j = null;
         field_b = null;

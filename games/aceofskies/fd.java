@@ -9,7 +9,7 @@ final class fd {
     static String field_c;
     static int field_d;
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = 0;
         field_c = null;
         field_e = null;
@@ -35,7 +35,7 @@ final class fd {
         }
     }
 
-    final static boolean a(String param0, byte param1) {
+    final static boolean a(String param0) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         boolean stackIn_1_0 = false;
@@ -111,7 +111,7 @@ final class fd {
             var3_int = 1;
             L1: while (true) {
               if (param2 <= 1) {
-                if (param2 != param0) {
+                if (param2 != 1) {
                   stackOut_10_0 = var3_int;
                   stackIn_11_0 = stackOut_10_0;
                   break L0;
@@ -138,7 +138,7 @@ final class fd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pn.a((Throwable) (Object) var3, "fd.B(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw pn.a((Throwable) (Object) var3, "fd.B(" + 1 + 44 + param1 + 44 + param2 + 41);
         }
         return stackIn_11_0;
     }

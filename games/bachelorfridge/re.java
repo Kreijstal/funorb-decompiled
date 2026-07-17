@@ -7,21 +7,27 @@ final class re extends hfa {
     static int[][] field_F;
     static int field_E;
 
-    final static void a(int param0, hn param1, vr param2, boolean param3) {
+    final static void a(int param0, hn param1, vr param2) {
         try {
-            fa.field_l = param0 * fda.a(0) / 1000;
-            id.a(param2, 64);
-            kg.a(param2, 112);
-            sha.a(param2, false);
-            pr.c(-95);
-            uw.e(65536);
+            int discarded$0 = 0;
+            fa.field_l = param0 * fda.a() / 1000;
+            int discarded$1 = 64;
+            id.a(param2);
+            int discarded$2 = 112;
+            kg.a(param2);
+            int discarded$3 = 0;
+            sha.a(param2);
+            int discarded$4 = -95;
+            pr.c();
+            int discarded$5 = 65536;
+            uw.e();
             ur.field_d = -fa.field_l;
         } catch (RuntimeException runtimeException) {
             throw pe.a((Throwable) (Object) runtimeException, "re.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + 0 + 41);
         }
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_D = null;
         field_F = null;
     }

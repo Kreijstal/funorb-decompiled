@@ -51,7 +51,7 @@ final class tn extends rl {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_C = null;
         field_D = null;
         field_y = null;

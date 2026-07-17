@@ -13,11 +13,11 @@ abstract class du {
     static String[] field_b;
     static String[] field_g;
 
-    final static boolean c(int param0) {
+    final static boolean c() {
         return true;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_d = null;
         field_e = null;
         field_b = null;

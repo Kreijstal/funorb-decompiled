@@ -18,7 +18,7 @@ final class rk extends ag {
     int field_U;
     int field_V;
 
-    final static void g(int param0) {
+    final static void g() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -301,7 +301,7 @@ final class rk extends ag {
         }
     }
 
-    final static void f(int param0) {
+    final static void f() {
         jb.field_m = null;
         int var1 = 1;
         ik.field_e = null;
@@ -339,7 +339,8 @@ final class rk extends ag {
                         return false;
                     }
                 }
-                if (!le.a((byte) 82)) {
+                int discarded$2 = 82;
+                if (!le.a()) {
                     return true;
                 }
                 Object var5 = null;
@@ -494,7 +495,7 @@ final class rk extends ag {
         return stackIn_7_0 != 0;
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_R = null;
         field_O = null;
         field_J = null;

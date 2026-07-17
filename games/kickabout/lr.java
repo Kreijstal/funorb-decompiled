@@ -15,13 +15,10 @@ final class lr extends hs {
     static int field_q;
     static String field_j;
 
-    final static void b(byte param0) {
+    final static void b() {
         if (!(null == op.field_y)) {
             op.field_y.a(1);
             op.field_y = null;
-        }
-        if (param0 != -116) {
-            field_o = null;
         }
     }
 
@@ -364,13 +361,10 @@ final class lr extends hs {
     }
 
     private final void g(int param0, int param1) {
-        ((lr) this).field_a.a(mf.a(param1, ((lr) this).field_g, (byte) 0), param0 ^ -127);
+        ((lr) this).field_a.a(mf.a(param1, ((lr) this).field_g, (byte) 0), -119);
         if (!(!((lr) this).field_f)) {
             or.field_d.b(73, (byte) 112);
-            or.field_d.a(param0 ^ 96, param1);
-        }
-        if (param0 != 8) {
-            boolean discarded$0 = ((lr) this).e(29, 11);
+            or.field_d.a(104, param1);
         }
     }
 

@@ -7,7 +7,7 @@ abstract class ob {
     static hh field_d;
     static String field_c;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         int var1 = -26;
         field_c = null;
@@ -24,13 +24,13 @@ abstract class ob {
     final static ed[] a(int param0, int param1, int param2, int param3, int param4) {
         ed[] var6 = new ed[9];
         ed[] var5 = var6;
-        ed dupTemp$0 = of.a(param0, (byte) -87, param3);
+        ed dupTemp$0 = of.a(param0, (byte) -87, 1);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
-        var5[param2] = dupTemp$0;
+        var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        ed dupTemp$1 = of.a(param1, (byte) 104, param3);
+        ed dupTemp$1 = of.a(param1, (byte) 104, 1);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;

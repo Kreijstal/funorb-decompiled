@@ -123,7 +123,8 @@ abstract class fa extends pa {
                                           L5: {
                                             var8++;
                                             var19 = (CharSequence) (Object) var12_ref_String.substring(4);
-                                            var15 = pl.a(var19, -9816);
+                                            int discarded$2 = -9816;
+                                            var15 = pl.a(var19);
                                             var16_ref_cm = ((fa) this).field_B[var15];
                                             if (((fa) this).field_G == null) {
                                               stackOut_31_0 = var16_ref_cm.field_d;
@@ -197,7 +198,8 @@ abstract class fa extends pa {
               }
               if (var6 == -1) {
                 L8: {
-                  var11 = (char)(rc.a((char) var11, 22861) & 255);
+                  int discarded$3 = 22861;
+                  var11 = (char)(rc.a((char) var11) & 255);
                   if (((fa) this).field_t == null) {
                     break L8;
                   } else {
@@ -400,7 +402,8 @@ abstract class fa extends pa {
                     }
                   } else {
                     var4 = (CharSequence) (Object) param0.substring(6);
-                    field_s = pl.a(var4, -9816);
+                    int discarded$1 = -9816;
+                    field_s = pl.a(var4);
                     break L1;
                   }
                 } else {
@@ -443,7 +446,8 @@ abstract class fa extends pa {
     }
 
     final int a(char param0) {
-        return ((fa) this).field_z[rc.a(param0, 22861) & 255];
+        int discarded$0 = 22861;
+        return ((fa) this).field_z[rc.a(param0) & 255];
     }
 
     final int a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
@@ -626,7 +630,8 @@ abstract class fa extends pa {
                                         L2: {
                                           L3: {
                                             var13 = (CharSequence) (Object) var9_ref_String.substring(4);
-                                            var10 = pl.a(var13, -9816);
+                                            int discarded$2 = -9816;
+                                            var10 = pl.a(var13);
                                             var11_ref_cm = ((fa) this).field_B[var10];
                                             if (((fa) this).field_G == null) {
                                               stackOut_25_0 = var11_ref_cm.field_d;
@@ -700,7 +705,8 @@ abstract class fa extends pa {
               }
               if (var4 == -1) {
                 L6: {
-                  var8 = (char)(rc.a((char) var8, 22861) & 255);
+                  int discarded$3 = 22861;
+                  var8 = (char)(rc.a((char) var8) & 255);
                   if (((fa) this).field_t == null) {
                     break L6;
                   } else {
@@ -911,7 +917,8 @@ abstract class fa extends pa {
                                         try {
                                           L2: {
                                             var10 = (CharSequence) (Object) var8.substring(4);
-                                            var9_int = pl.a(var10, -9816);
+                                            int discarded$2 = -9816;
+                                            var9_int = pl.a(var10);
                                             var4 = var4 + ((fa) this).field_B[var9_int].field_e;
                                             var3 = 0;
                                             var6++;
@@ -967,7 +974,8 @@ abstract class fa extends pa {
                 }
                 if (var2 == -1) {
                   L4: {
-                    var7 = (char)(rc.a((char) var7, 22861) & 255);
+                    int discarded$3 = 22861;
+                    var7 = (char)(rc.a((char) var7) & 255);
                     var4 = var4 + ((fa) this).field_z[var7];
                     if (((fa) this).field_t == null) {
                       break L4;
@@ -1034,7 +1042,7 @@ abstract class fa extends pa {
         int stackOut_66_2 = 0;
         var17 = null;
         if (param0 != null) {
-          StringBuilder discarded$5 = uf.a(0, field_A, ' ', -118);
+          StringBuilder discarded$7 = uf.a(0, field_A, ' ', -118);
           var4 = 0;
           var5 = 0;
           var6 = -1;
@@ -1070,9 +1078,9 @@ abstract class fa extends pa {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$6 = field_A.append(60);
-                        StringBuilder discarded$7 = field_A.append(var15);
-                        StringBuilder discarded$8 = field_A.append(62);
+                        StringBuilder discarded$8 = field_A.append(60);
+                        StringBuilder discarded$9 = field_A.append(var15);
+                        StringBuilder discarded$10 = field_A.append(62);
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -1088,7 +1096,8 @@ abstract class fa extends pa {
                                             try {
                                               L4: {
                                                 var18 = (CharSequence) (Object) var15.substring(4);
-                                                var16_int = pl.a(var18, -9816);
+                                                int discarded$11 = -9816;
+                                                var16_int = pl.a(var18);
                                                 var4 = var4 + ((fa) this).field_B[var16_int].field_e;
                                                 var10 = 0;
                                                 break L4;
@@ -1259,8 +1268,9 @@ abstract class fa extends pa {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$9 = field_A.append(var14);
-                        var14 = (char)(rc.a((char) var14, 22861) & 255);
+                        StringBuilder discarded$12 = field_A.append(var14);
+                        int discarded$13 = 22861;
+                        var14 = (char)(rc.a((char) var14) & 255);
                         var4 = var4 + ((fa) this).field_z[var14];
                         if (((fa) this).field_t == null) {
                           break L15;

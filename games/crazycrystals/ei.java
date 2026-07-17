@@ -884,7 +884,7 @@ final class ei extends om {
         }
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         int var1 = 0;
         field_G = null;
     }

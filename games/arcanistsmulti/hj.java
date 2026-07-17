@@ -10,7 +10,7 @@ final class hj extends IOException {
     static String field_c;
     static int field_b;
 
-    final static void a(dj param0, eg param1, int param2) {
+    final static void a(dj param0, eg param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         oo var4 = null;
@@ -19,9 +19,7 @@ final class hj extends IOException {
         int var8 = 0;
         int var9 = 0;
         Object var10 = null;
-        Object var11 = null;
-        Object var12 = null;
-        int[] var16 = null;
+        int[] var14 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
@@ -63,26 +61,27 @@ final class hj extends IOException {
               param1.field_f = 0;
               bg.field_d = new kg(var3_int, param1, param1);
               th.field_d = new gn(var3_int, param1, param1, (ok) (Object) new la());
-              var4 = gj.b(-16635);
+              int discarded$3 = -16635;
+              var4 = gj.b();
               if (var4 == null) {
-                var11 = null;
-                jh.a((Throwable) null, "QC2", (byte) 20);
+                int discarded$4 = 20;
+                jh.a((Throwable) null, "QC2");
                 return;
               } else {
                 ff.a((byte) 91, var4);
-                var12 = null;
+                var10 = null;
                 mj.field_z = ck.a(65793, 5138823, 65793, 8947848, 1513239, 4020342, 65793, (dj) null, 97, 0, 2245737, 1513239, 1127256);
                 gl.field_c = ck.a(0, 0, 0, 0, 0, 0, 0, param0, 112, 16764006, 0, 0, 0);
                 ab.field_p = ck.a(0, 0, 0, 0, 0, 0, 0, param0, 81, 16777215, 0, 0, 0);
                 var5 = de.field_e;
                 var6 = de.field_j;
-                var16 = de.field_l;
+                var14 = de.field_l;
                 ql.field_c = new qb(10, 14);
                 ql.field_c.a();
                 var8 = 2;
                 L1: while (true) {
                   if (var8 >= 7) {
-                    de.a(var16, var5, var6);
+                    de.a(var14, var5, var6);
                     ag.field_C = bl.a(true, gl.field_c, ab.field_p, var4, mj.field_z);
                     co.field_f.field_G = new vn();
                     break L0;
@@ -94,8 +93,8 @@ final class hj extends IOException {
                 }
               }
             } else {
-              var10 = null;
-              jh.a((Throwable) null, "QC1", (byte) 20);
+              int discarded$5 = 20;
+              jh.a((Throwable) null, "QC1");
               return;
             }
           }
@@ -1019,7 +1018,7 @@ final class hj extends IOException {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         field_e = null;
@@ -1090,7 +1089,7 @@ final class hj extends IOException {
                     } else {
                       if (param2 < param3.field_Hb) {
                         var7_int = param5 - -(param3.field_hb * param2);
-                        param0.field_m[var7_int] = (byte)param4;
+                        param0.field_m[var7_int] = (byte) 0;
                         break L1;
                       } else {
                         break L1;
@@ -1200,7 +1199,7 @@ final class hj extends IOException {
                             } else {
                               int incrementValue$8 = var17;
                               var17++;
-                              param0.field_m[incrementValue$8] = (byte)param4;
+                              param0.field_m[incrementValue$8] = (byte) 0;
                               var18++;
                               continue L12;
                             }
@@ -1246,7 +1245,7 @@ final class hj extends IOException {
                               } else {
                                 int incrementValue$10 = var17;
                                 var17++;
-                                param0.field_m[incrementValue$10] = (byte)param4;
+                                param0.field_m[incrementValue$10] = (byte) 0;
                                 var18++;
                                 continue L17;
                               }
@@ -1322,7 +1321,7 @@ final class hj extends IOException {
               break L19;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_61_0, stackIn_61_2 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw aa.a((Throwable) (Object) stackIn_61_0, stackIn_61_2 + 44 + 0 + 44 + param5 + 44 + param6 + 41);
         }
     }
 
@@ -1330,7 +1329,7 @@ final class hj extends IOException {
         super(param0);
     }
 
-    final static qb a(int param0, eg param1, int param2, byte param3) {
+    final static qb a(int param0, eg param1, int param2) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         qb stackIn_4_0 = null;

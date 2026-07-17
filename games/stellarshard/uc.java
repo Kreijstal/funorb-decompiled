@@ -6,7 +6,7 @@ final class uc {
     static ka field_c;
     static int[] field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
     }

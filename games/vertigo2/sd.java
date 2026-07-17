@@ -92,8 +92,8 @@ final class sd extends oh {
     }
 
     final static void f(byte param0) {
-        Object var2 = null;
-        aj.a((String) null, "", (byte) 33);
+        int discarded$5 = 33;
+        aj.a((String) null, "");
         if (param0 != -1) {
             sd.f((byte) -45);
         }

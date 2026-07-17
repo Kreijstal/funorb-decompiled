@@ -68,11 +68,8 @@ final class ja extends tc {
         }
     }
 
-    final static boolean a(byte param0, int param1, int param2, int param3) {
-        if (param0 != -66) {
-            return false;
-        }
-        return ej.b(13, param2, param0 ^ 76, param1);
+    final static boolean a(byte param0, int param1, int param2) {
+        return ej.b(13, param2, -14, param1);
     }
 
     final boolean a(byte param0) {
@@ -412,7 +409,7 @@ final class ja extends tc {
         }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_o = null;
         int var1 = 0;
     }

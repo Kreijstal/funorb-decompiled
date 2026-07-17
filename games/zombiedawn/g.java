@@ -1613,17 +1613,15 @@ abstract class g extends fb {
         }
     }
 
-    public static void i(int param0) {
+    public static void i() {
         field_P = null;
         field_H = null;
     }
 
     final static void a(int param0, byte param1, int param2, int param3, int param4) {
-        hk.i(1584);
+        int discarded$0 = 1584;
+        hk.i();
         bi.c(param4, param0, param2, param3);
-        if (param1 != 99) {
-            field_P = null;
-        }
     }
 
     abstract void f(byte param0);

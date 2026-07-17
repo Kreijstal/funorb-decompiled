@@ -61,7 +61,7 @@ final class pi extends vg {
         }
     }
 
-    private final int a(boolean param0) {
+    private final int a() {
         return ((pi) this).field_j;
     }
 
@@ -140,8 +140,10 @@ final class pi extends vg {
                     } else {
                       if (param0.field_k != 0) {
                         L4: {
-                          var3_int = this.a(false);
-                          var4 = param0.a(false);
+                          int discarded$2 = 0;
+                          var3_int = this.a();
+                          int discarded$3 = 0;
+                          var4 = param0.a();
                           var5 = this.c(-30481);
                           var6 = param0.c(param1 ^ -30481);
                           if (var4 > var5) {
@@ -271,7 +273,7 @@ final class pi extends vg {
         return ((pi) this).field_i;
     }
 
-    private final void a(kh param0, int param1) {
+    private final void a(kh param0) {
         try {
             param0.h((byte) 112);
             ((pi) this).field_g = lka.a(-90, param0, 26);
@@ -339,7 +341,8 @@ final class pi extends vg {
 
     pi(kh param0) {
         try {
-            this.a(param0, -124);
+            int discarded$0 = -124;
+            this.a(param0);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "pi.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }

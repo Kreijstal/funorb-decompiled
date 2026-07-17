@@ -36,7 +36,7 @@ final class gq extends go {
         var5 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
-            var4_int = param0;
+            var4_int = 0;
             L1: while (true) {
               if (var4_int >= up.field_n.length) {
                 break L0;
@@ -56,7 +56,7 @@ final class gq extends go {
           L2: {
             var4 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var4;
-            stackOut_8_1 = new StringBuilder().append("gq.K(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_8_1 = new StringBuilder().append("gq.K(").append(0).append(44).append(param1).append(44).append(param2).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -87,7 +87,7 @@ final class gq extends go {
         super(param0, param1);
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_l = null;
         field_m = null;
     }

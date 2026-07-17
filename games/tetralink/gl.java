@@ -38,18 +38,15 @@ final class gl extends ka {
         }
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_n = null;
         field_o = null;
         field_q = null;
         field_p = null;
     }
 
-    final static void a(byte param0, int param1) {
+    final static void a() {
         mb.field_B = 20000000L;
-        if (param0 <= 121) {
-            field_p = null;
-        }
     }
 
     static {

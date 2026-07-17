@@ -42,7 +42,7 @@ final class tn extends o {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_j = null;
         field_l = null;
     }

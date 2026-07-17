@@ -82,14 +82,11 @@ final class te extends ak {
     final static void a(byte param0, java.awt.Component param1) {
         param1.removeMouseListener((java.awt.event.MouseListener) (Object) fj.field_c);
         param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) fj.field_c);
-        if (param0 != -47) {
-            return;
-        }
         try {
             param1.removeFocusListener((java.awt.event.FocusListener) (Object) fj.field_c);
             jm.field_o = 0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "te.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "te.A(" + -47 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -197,7 +194,8 @@ final class te extends ak {
                 if (var4 == 0) {
                   break L2;
                 } else {
-                  mj.a(false);
+                  int discarded$2 = 0;
+                  mj.a();
                   return true;
                 }
               }
@@ -311,7 +309,7 @@ final class te extends ak {
         }
     }
 
-    final static int n(int param0) {
+    final static int n() {
         return ba.field_f;
     }
 
@@ -734,7 +732,8 @@ final class te extends ak {
               this.a(0, (byte) -96);
               ((te) this).field_Lb = param0;
               ((te) this).field_Pb = ((te) this).field_Gb[((te) this).field_Lb];
-              oc.a(((te) this).field_Pb, true);
+              int discarded$221 = 1;
+              oc.a(((te) this).field_Pb);
               ((te) this).field_Pb.a(12, (byte) -104);
               break L0;
             } else {
@@ -764,12 +763,15 @@ final class te extends ak {
                 var8 = null;
                 dg.a(true, ce.field_d, var5, (String) null, jo.field_k, param3);
                 di.a(var5, fp.field_e, jo.field_k, (byte) 9, ce.field_d);
-                mj.a(false);
-                wn.d(-93);
+                int discarded$222 = 0;
+                mj.a();
+                int discarded$223 = -93;
+                wn.d();
                 break L0;
               } else {
                 pd.j(-127);
-                mj.a(false);
+                int discarded$224 = 0;
+                mj.a();
                 break L0;
               }
             }
@@ -783,13 +785,13 @@ final class te extends ak {
           if (param2 > 54) {
             break L3;
           } else {
-            boolean discarded$1 = ((te) this).a(-128, -51, 10);
+            boolean discarded$225 = ((te) this).a(-128, -51, 10);
             break L3;
           }
         }
     }
 
-    public static void j(int param0) {
+    public static void j() {
         field_Qb = null;
         field_Eb = null;
         field_Nb = null;

@@ -59,12 +59,14 @@ final class mg extends gh {
               this.c(-89, 0);
               ((mg) this).field_Sb = param0;
               ((mg) this).field_mc = ((mg) this).field_Vb[((mg) this).field_Sb];
-              wc.a(((mg) this).field_mc, -116);
+              int discarded$250 = -116;
+              wc.a(((mg) this).field_mc);
               ((mg) this).field_mc.c(43, 12);
               break L0;
             } else {
               if (((mg) this).field_bc[param0] == -1) {
-                jd.m(-6);
+                int discarded$251 = -6;
+                jd.m();
                 ke.a(2);
                 break L0;
               } else {
@@ -84,7 +86,8 @@ final class mg extends gh {
                 }
                 L2: {
                   if (ei.a(var6, 1) == 2) {
-                    il.a(1, var6, param1, -18853);
+                    int discarded$252 = -18853;
+                    il.a(1, var6, param1);
                     break L2;
                   } else {
                     break L2;
@@ -118,13 +121,10 @@ final class mg extends gh {
 
     final static void a(int[] param0, int param1, int param2) {
         try {
-            if (param1 != 7411) {
-                field_Tb = null;
-            }
             uc.field_e[param2] = param0;
             i.field_e[param2] = new ji(param2);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "mg.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "mg.C(" + (param0 != null ? "{...}" : "null") + 44 + 7411 + 44 + param2 + 41);
         }
     }
 
@@ -270,7 +270,8 @@ final class mg extends gh {
                   if (0 >= ((mg) this).field_cc[var13]) {
                     break L2;
                   } else {
-                    param6[var13] = var11 + fa.a(((mg) this).field_cc[var13], 29448).toUpperCase() + ": " + var12 + param6[var13];
+                    int discarded$1 = 29448;
+                    param6[var13] = var11 + fa.a(((mg) this).field_cc[var13]).toUpperCase() + ": " + var12 + param6[var13];
                     break L2;
                   }
                 }

@@ -75,7 +75,7 @@ final class c extends nl {
         return stackIn_3_0;
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_t = null;
         field_q = null;
         field_u = null;
@@ -89,7 +89,7 @@ final class c extends nl {
         this(kw.field_b, param0);
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         Object var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

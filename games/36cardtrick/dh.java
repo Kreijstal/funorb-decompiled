@@ -13,7 +13,7 @@ final class dh extends qb {
     int field_p;
     int field_l;
 
-    public static void b(byte param0) {
+    public static void b() {
         field_o = null;
         field_g = null;
     }
@@ -22,35 +22,35 @@ final class dh extends qb {
         int var4 = 0;
         var4 = 0;
         if (!param0) {
-          var4 += 2;
-          if (param1 > -86) {
-            return null;
-          } else {
-            L0: {
-              if (param2) {
-                var4++;
-                break L0;
-              } else {
-                break L0;
-              }
+          if (!param3) {
+            if (param1 > -86) {
+              return null;
+            } else {
+              return ek.field_a[var4];
             }
-            return ek.field_a[var4];
+          } else {
+            var4 += 2;
+            if (param1 > -86) {
+              return null;
+            } else {
+              return ek.field_a[var4];
+            }
           }
         } else {
           var4 += 4;
-          var4 += 2;
-          if (param1 > -86) {
-            return null;
-          } else {
-            L1: {
-              if (param2) {
-                var4++;
-                break L1;
-              } else {
-                break L1;
-              }
+          if (param3) {
+            var4 += 2;
+            if (param1 > -86) {
+              return null;
+            } else {
+              return ek.field_a[var4];
             }
-            return ek.field_a[var4];
+          } else {
+            if (param1 > -86) {
+              return null;
+            } else {
+              return ek.field_a[var4];
+            }
           }
         }
     }

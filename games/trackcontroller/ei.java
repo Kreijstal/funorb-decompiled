@@ -12,15 +12,11 @@ final class ei extends fc {
 
     final static void a(byte param0, java.awt.Component param1) {
         try {
-            if (param0 >= -119) {
-                Object var3 = null;
-                ei.a((qj) null, -127);
-            }
             param1.addMouseListener((java.awt.event.MouseListener) (Object) hd.field_p);
             param1.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) hd.field_p);
             param1.addFocusListener((java.awt.event.FocusListener) (Object) hd.field_p);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "ei.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "ei.C(" + -125 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -62,7 +58,7 @@ final class ei extends fc {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var3 = new ng(0, param0, 0);
+            var3 = new ng(0, 0, 0);
             var3.field_c = param1.field_c;
             var3.field_a = param1.field_a;
             var3.field_j = param1.field_j;
@@ -80,7 +76,7 @@ final class ei extends fc {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3_ref;
-            stackOut_2_1 = new StringBuilder().append("ei.B(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("ei.B(").append(0).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -133,7 +129,7 @@ final class ei extends fc {
         return stackIn_1_0;
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_m = null;
         field_j = null;
         field_i = null;
@@ -141,7 +137,7 @@ final class ei extends fc {
         int var1 = 0;
     }
 
-    final static String a(byte param0) {
+    final static String a() {
         if (!(gl.field_I >= 2)) {
             return ee.field_f;
         }
@@ -172,7 +168,7 @@ final class ei extends fc {
         return f.field_d;
     }
 
-    final static void a(qj param0, int param1) {
+    final static void a(qj param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -201,7 +197,7 @@ final class ei extends fc {
         try {
           L0: {
             L1: {
-              if (~(3 & (param0.field_q | param0.field_t)) != param1) {
+              if ((3 & (param0.field_q | param0.field_t)) != 0) {
                 var2_int = 4 - (3 & param0.field_t);
                 var3 = -(3 & param0.field_q) + 4;
                 var4 = param0.field_t + var2_int;
@@ -263,18 +259,20 @@ final class ei extends fc {
               break L4;
             }
           }
-          throw sl.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 41);
+          throw sl.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + -1 + 41);
         }
     }
 
-    final static void d(int param0) {
+    final static void d() {
         oj.a(-108);
         if (null != ki.field_f) {
             r.a(-32652, ki.field_f);
         }
-        ui.g(95);
+        int discarded$6 = 95;
+        ui.g();
         ij.a(13809);
-        mi.k(10228);
+        int discarded$15 = 10228;
+        mi.k();
         if (wf.a(-28510)) {
             ra.field_C.c(1, 7);
             me.a(-1, 0);

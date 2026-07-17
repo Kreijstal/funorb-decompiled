@@ -56,7 +56,7 @@ final class sb extends pc {
             if (var3 <= 1) {
               var4 = new byte[var2_int];
               param1.readFully(var4);
-              if (param0 <= var3) {
+              if (1 <= var3) {
                 stackOut_5_0 = db.a((byte) 109, var4);
                 stackIn_6_0 = stackOut_5_0;
                 break L0;
@@ -74,7 +74,7 @@ final class sb extends pc {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var2;
-            stackOut_7_1 = new StringBuilder().append("sb.L(").append(param0).append(44);
+            stackOut_7_1 = new StringBuilder().append("sb.L(").append(1).append(44);
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;

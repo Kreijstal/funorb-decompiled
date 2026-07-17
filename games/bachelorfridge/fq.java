@@ -17,16 +17,16 @@ final class fq extends td {
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_r = null;
         field_q = null;
         field_s = null;
         field_p = null;
     }
 
-    final static void a(int param0, byte param1) {
+    final static void a() {
         pf var2 = sja.field_fb;
-        var2.c(param0, (byte) 127);
+        var2.c(11, (byte) 127);
         var2.field_g = var2.field_g + 1;
         int var3 = var2.field_g;
         var2.d(2, 0);

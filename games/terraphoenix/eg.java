@@ -13,7 +13,7 @@ final class eg extends uf {
     static int field_h;
     int field_o;
 
-    public static void c(byte param0) {
+    public static void c() {
         field_n = null;
         field_k = null;
     }

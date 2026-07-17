@@ -17,7 +17,7 @@ final class bc extends jf implements qn {
     static wk[] field_rb;
     static String field_nb;
 
-    final static void a(String param0, ee param1, byte param2) {
+    final static void a(String param0, ee param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         String[] var4 = null;
@@ -172,7 +172,7 @@ final class bc extends jf implements qn {
               dj.field_k[0] = rb.field_g.nextInt();
               dj.field_k[1] = rb.field_g.nextInt();
               ne.field_y.field_p = 0;
-              dj.field_k[param1] = (int)(oa.field_G >> 32);
+              dj.field_k[2] = (int)(oa.field_G >> 32);
               dj.field_k[3] = (int)oa.field_G;
               ne.field_y.b(true, dj.field_k[0]);
               ne.field_y.b(true, dj.field_k[1]);
@@ -229,7 +229,8 @@ final class bc extends jf implements qn {
             }
             L6: {
               mm.field_g.a((byte) 124, var6);
-              var7 = gh.a(param1 ^ -82, wl.d((byte) -21));
+              int discarded$2 = -21;
+              var7 = gh.a(-84, wl.d());
               if (var7 != null) {
                 break L6;
               } else {
@@ -246,8 +247,9 @@ final class bc extends jf implements qn {
                 break L7;
               }
             }
-            qi.a(jd.field_ib, ne.field_y, (gi) (Object) mm.field_g, qe.field_d, 5);
-            mm.field_g.c(param1 ^ 28, -var5_int + mm.field_g.field_p);
+            int discarded$3 = 5;
+            qi.a(jd.field_ib, ne.field_y, (gi) (Object) mm.field_g, qe.field_d);
+            mm.field_g.c(30, -var5_int + mm.field_g.field_p);
             gj.a(0, -1);
             break L0;
           }
@@ -256,7 +258,7 @@ final class bc extends jf implements qn {
           L8: {
             var5 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var5;
-            stackOut_20_1 = new StringBuilder().append("bc.CA(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_20_1 = new StringBuilder().append("bc.CA(").append(param0).append(44).append(2).append(44).append(param2).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -319,7 +321,7 @@ final class bc extends jf implements qn {
         }
     }
 
-    final static void a(long param0, String param1, int param2) {
+    final static void a(long param0, String param1) {
         CharSequence var5 = null;
         try {
             ib.field_b = 2;
@@ -333,7 +335,7 @@ final class bc extends jf implements qn {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, wk param4, int param5, int param6) {
+    final static void a(int param0, int param1, int param2, int param3, wk param4) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8 = 0;
@@ -361,7 +363,7 @@ final class bc extends jf implements qn {
         try {
           L0: {
             param2 = param2 & 255;
-            param1 = param1 & param6;
+            param1 = param1 & 255;
             var7_int = param4.field_z;
             var8 = param3 * var7_int;
             var11 = param3;
@@ -379,7 +381,7 @@ final class bc extends jf implements qn {
                     continue L1;
                   } else {
                     L3: {
-                      if (param5 == param4.field_E[var10 + var8]) {
+                      if (param4.field_E[var10 + var8] == 16711680) {
                         param4.field_E[var10 + var8] = var9;
                         break L3;
                       } else {
@@ -421,7 +423,7 @@ final class bc extends jf implements qn {
               break L4;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param5 + 44 + param6 + 41);
+          throw ci.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + 16711680 + 44 + 255 + 41);
         }
     }
 
@@ -451,7 +453,7 @@ final class bc extends jf implements qn {
         return ((bc) this).field_zb;
     }
 
-    public static void i(byte param0) {
+    public static void i() {
         field_wb = null;
         field_qb = null;
         field_vb = null;

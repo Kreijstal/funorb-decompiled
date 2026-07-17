@@ -95,7 +95,7 @@ final class bc extends a {
                 break L1;
               }
             }
-            var4_int = -82 % ((-68 - param0) / 44);
+            var4_int = 0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -103,7 +103,7 @@ final class bc extends a {
           L5: {
             runtimeException = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) runtimeException;
-            stackOut_14_1 = new StringBuilder().append("bc.I(").append(param0).append(44);
+            stackOut_14_1 = new StringBuilder().append("bc.I(").append(-117).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -174,7 +174,7 @@ final class bc extends a {
         return dupTemp$0;
     }
 
-    final static String a(CharSequence param0, int param1) {
+    final static String a(CharSequence param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;

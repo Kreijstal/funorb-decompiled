@@ -257,7 +257,7 @@ final class fd extends uw {
         field_d = null;
     }
 
-    private final long a(int param0) {
+    private final long a() {
         int var8 = 0;
         int var9 = Sumoblitz.field_L ? 1 : 0;
         long var2 = System.nanoTime();
@@ -279,7 +279,7 @@ final class fd extends uw {
         return var6 / (long)((fd) this).field_f;
     }
 
-    final static int b(int param0) {
+    final static int b() {
         L0: {
           if (!oj.a(false)) {
             break L0;
@@ -295,7 +295,8 @@ final class fd extends uw {
     }
 
     final long a(byte param0) {
-        ((fd) this).field_l = ((fd) this).field_l + this.a(62);
+        int discarded$0 = 62;
+        ((fd) this).field_l = ((fd) this).field_l + this.a();
         if (!(~((fd) this).field_l <= ~((fd) this).field_e)) {
             return (((fd) this).field_e + -((fd) this).field_l) / 1000000L;
         }

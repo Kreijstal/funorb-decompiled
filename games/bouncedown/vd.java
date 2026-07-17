@@ -7,7 +7,7 @@ final class vd {
     static int field_a;
     static pb field_b;
 
-    final static jd a(int param0) {
+    final static jd a() {
         int var1 = 0;
         var1 = -63;
         if (ml.field_e == null) {
@@ -18,11 +18,11 @@ final class vd {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
     }
 
-    final static String a(byte param0, CharSequence param1, boolean param2) {
+    final static String a(byte param0, CharSequence param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -50,8 +50,9 @@ final class vd {
         String stackOut_13_2 = null;
         var6 = Bounce.field_N;
         try {
-          var3 = ih.a(false, param1, false);
-          var4 = 68 / ((-7 - param0) / 57);
+          int discarded$2 = 0;
+          var3 = ih.a(false, param1);
+          var4 = -68;
           if (var3 == null) {
             var5 = 0;
             L0: while (true) {
@@ -78,7 +79,7 @@ final class vd {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var3_ref;
-            stackOut_12_1 = new StringBuilder().append("vd.C(").append(param0).append(44);
+            stackOut_12_1 = new StringBuilder().append("vd.C(").append(88).append(44);
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -108,9 +109,6 @@ final class vd {
     final static void a(byte param0, wi param1) {
         int var2_int = 0;
         try {
-            if (param0 <= 35) {
-                field_a = 33;
-            }
             de.field_b = param1.a(-1640531527) << 5;
             var2_int = param1.d((byte) -104);
             kf.field_a = (7 & var2_int) << 18;
@@ -125,7 +123,7 @@ final class vd {
             ed.field_b = ed.field_b + (var2_int >> 1);
             qe.field_i = qe.field_i + param1.a(-1640531527);
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "vd.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "vd.B(" + 72 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

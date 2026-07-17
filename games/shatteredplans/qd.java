@@ -21,17 +21,14 @@ abstract class qd {
     }
 
     final static void a(int param0, int param1, int param2, int[] param3, byte param4, int param5, int param6) {
-        if (param4 != -5) {
-            return;
-        }
         try {
             qg.field_p[param6] = param3;
             qg.field_r[param6] = param2;
             qg.field_m[param6] = param5;
-            qg.field_l[param6] = param0;
+            qg.field_l[param6] = 25;
             qg.field_t[param6] = param1;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "qd.C(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+            throw r.a((Throwable) (Object) runtimeException, "qd.C(" + 25 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + -5 + 44 + param5 + 44 + param6 + 41);
         }
     }
 

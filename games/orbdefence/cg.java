@@ -118,14 +118,15 @@ final class cg {
               if (((cg) this).field_e < ((cg) this).field_a) {
                 break L1;
               } else {
-                this.c(-1);
+                int discarded$4 = -1;
+                this.c();
                 break L1;
               }
             }
             L2: {
-              int fieldTemp$2 = ((cg) this).field_e;
+              int fieldTemp$5 = ((cg) this).field_e;
               ((cg) this).field_e = ((cg) this).field_e + 1;
-              var3_int = fieldTemp$2;
+              var3_int = fieldTemp$5;
               ((cg) this).field_g[var3_int] = param0;
               var5 = param0.field_d;
               if (param1 == -83) {
@@ -195,13 +196,13 @@ final class cg {
 
     final static void a(mg param0, java.math.BigInteger param1, int param2, java.math.BigInteger param3, mg param4) {
         try {
-            jc.a(param0, 53, param2, param4.field_j, param4.field_i, param1, param3);
+            jc.a(param0, 53, 0, param4.field_j, param4.field_i, param1, param3);
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "cg.F(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "cg.F(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 0 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
         }
     }
 
-    private final void c(int param0) {
+    private final void c() {
         int var3 = 0;
         int var4 = OrbDefence.field_D ? 1 : 0;
         ((cg) this).field_a = ((cg) this).field_a << 1;

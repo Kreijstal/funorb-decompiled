@@ -5,10 +5,7 @@ final class wu implements mfa {
     static jta field_a;
 
     final static boolean a(int param0, int param1, int param2) {
-        if (param0 != -17) {
-            return true;
-        }
-        return 0 != (2048 & param2) ? true : false;
+        return 0 != (2048 & param2);
     }
 
     public final dg a(la param0, kh param1, boolean param2) {
@@ -456,7 +453,7 @@ final class wu implements mfa {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
     }
 

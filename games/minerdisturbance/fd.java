@@ -46,7 +46,7 @@ class fd extends ja {
     static boolean[] field_mb;
     static String[] field_kb;
 
-    private final void a(fd param0, int param1) {
+    private final void a(fd param0) {
         RuntimeException var3 = null;
         RuntimeException stackIn_100_0 = null;
         StringBuilder stackIn_100_1 = null;
@@ -400,7 +400,7 @@ class fd extends ja {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         String var1 = null;
         if (!gd.field_B) {
           throw new IllegalStateException();
@@ -413,7 +413,8 @@ class fd extends ja {
               break L0;
             }
           }
-          var1 = hn.c(105);
+          int discarded$2 = 105;
+          var1 = hn.c();
           di.field_D = new cl(var1, (String) null, true, false, false);
           mb.field_b.b(1, (fe) (Object) de.field_a);
           de.field_a.a((byte) -127, (fe) (Object) di.field_D);
@@ -500,74 +501,67 @@ class fd extends ja {
           }
         }
         L6: {
-          if (param0 == 3300) {
-            break L6;
-          } else {
-            field_mb = null;
-            break L6;
-          }
-        }
-        L7: {
-          L8: {
+          L7: {
             if (param1 == 7) {
-              break L8;
+              break L7;
             } else {
               if (param1 != 8) {
-                break L7;
+                break L6;
               } else {
-                break L8;
+                break L7;
               }
             }
           }
           var5 = -1;
           var4 = -1;
-          break L7;
+          break L6;
         }
-        L9: {
+        L8: {
           if (11 != param1) {
-            break L9;
+            break L8;
           } else {
             var4 = -1;
+            break L8;
+          }
+        }
+        L9: {
+          if (param1 == 12) {
+            var5 = -1;
+            var4 = -1;
+            break L9;
+          } else {
             break L9;
           }
         }
         L10: {
-          if (param1 == 12) {
-            var5 = -1;
-            var4 = -1;
+          if (param1 != 13) {
             break L10;
           } else {
+            var4 = 1;
+            var5 = -1;
             break L10;
           }
         }
         L11: {
-          if (param1 != 13) {
+          if (param1 == 14) {
+            var4 = -1;
+            var5 = 1;
             break L11;
           } else {
-            var4 = 1;
-            var5 = -1;
             break L11;
           }
         }
         L12: {
-          if (param1 == 14) {
-            var4 = -1;
-            var5 = 1;
-            break L12;
-          } else {
-            break L12;
-          }
-        }
-        L13: {
           if (param1 == 15) {
             var5 = 1;
             var4 = 1;
-            break L13;
+            break L12;
           } else {
-            break L13;
+            break L12;
           }
         }
-        tk.field_d = ql.a(var4 * var2, var5 * var2, 127);
+        int discarded$1 = 127;
+        tk.field_d = ql.a(var4 * var2, var5 * var2);
     }
 
     public static void g(int param0) {
@@ -583,18 +577,9 @@ class fd extends ja {
 
     final static ql a(int param0, int param1, int param2) {
         if (kn.field_H[param0].length <= param2) {
-          return null;
-        } else {
-          L0: {
-            if (param1 == -1) {
-              break L0;
-            } else {
-              fd.a(93, 0);
-              break L0;
-            }
-          }
-          return kn.field_H[param0][param2];
+            return null;
         }
+        return kn.field_H[param0][param2];
     }
 
     private fd(long param0, fd param1, int param2, int param3, int param4, int param5, String param6) {
@@ -647,7 +632,8 @@ class fd extends ja {
           L0: {
             L1: {
               ((fd) this).field_d = param0;
-              this.a(param1, -1);
+              int discarded$2 = -1;
+              this.a(param1);
               if (param6 == null) {
                 break L1;
               } else {

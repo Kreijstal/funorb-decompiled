@@ -19,19 +19,11 @@ final class jd {
         var4 = ZombieDawn.field_J;
         try {
           L0: {
-            L1: {
-              if (param0 > 74) {
-                break L1;
-              } else {
-                field_e = null;
-                break L1;
-              }
-            }
             var5 = jp.field_f;
             var1 = var5;
             var2 = 0;
             var3 = var5.length;
-            L2: while (true) {
+            L1: while (true) {
               if (var2 >= var3) {
                 break L0;
               } else {
@@ -59,18 +51,18 @@ final class jd {
                 int incrementValue$47 = var2;
                 var2++;
                 var5[incrementValue$47] = 0;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var1_ref, "jd.A(" + param0 + 41);
+          throw sh.a((Throwable) (Object) var1_ref, "jd.A(" + 91 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
         field_e = null;

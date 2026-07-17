@@ -15,14 +15,11 @@ final class gv extends qda {
     public gv() {
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_v = null;
         field_q = null;
         field_s = null;
         field_r = null;
-        if (param0) {
-            return;
-        }
         field_w = null;
     }
 
@@ -232,14 +229,6 @@ final class gv extends qda {
                   break L2;
                 }
               }
-              L5: {
-                if (param0 == 117) {
-                  break L5;
-                } else {
-                  field_r = null;
-                  break L5;
-                }
-              }
               return;
             } else {
               return;
@@ -255,59 +244,51 @@ final class gv extends qda {
         int var10 = 0;
         int var11 = 0;
         L0: {
-          if (param5 == 0) {
-            break L0;
-          } else {
-            gv.a(true);
-            break L0;
-          }
-        }
-        L1: {
           var10 = -(param2 * param7 / param8) + param6;
           if (~var10 > ~param0) {
-            break L1;
+            break L0;
           } else {
             if (~param9 > ~var10) {
-              break L1;
+              break L0;
             } else {
-              L2: {
+              L1: {
                 if (param3 > param6) {
                   if (var10 < param6) {
-                    break L1;
+                    break L0;
                   } else {
                     if (var10 > param3) {
-                      break L1;
+                      break L0;
                     } else {
-                      break L2;
+                      break L1;
                     }
                   }
                 } else {
                   if (param3 > var10) {
-                    break L1;
+                    break L0;
                   } else {
                     if (~var10 < ~param6) {
-                      break L1;
+                      break L0;
                     } else {
-                      break L2;
+                      break L1;
                     }
                   }
                 }
               }
               var11 = -(param2 << param1) / param8;
               if (var11 < 0) {
-                break L1;
+                break L0;
               } else {
                 if (1 << param1 <= var11) {
-                  break L1;
+                  break L0;
                 } else {
-                  L3: {
+                  L2: {
                     if (param4 == -1) {
-                      break L3;
+                      break L2;
                     } else {
                       if (~param4 >= ~var11) {
-                        break L1;
+                        break L0;
                       } else {
-                        break L3;
+                        break L2;
                       }
                     }
                   }
@@ -621,7 +602,8 @@ final class gv extends qda {
                               if (param0 > 26) {
                                 break L23;
                               } else {
-                                gv.a(false);
+                                int discarded$1 = 0;
+                                gv.a();
                                 break L23;
                               }
                             }

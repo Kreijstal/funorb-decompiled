@@ -5,9 +5,6 @@ class mu extends htb {
     private shb field_B;
 
     final static String a(int param0, int param1) {
-        if (param0 != -18879) {
-            return null;
-        }
         return Integer.toHexString(param1);
     }
 

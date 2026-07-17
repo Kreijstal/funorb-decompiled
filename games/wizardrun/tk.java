@@ -9,26 +9,23 @@ final class tk implements bf {
     private vd field_d;
     static int field_a;
 
-    final static void a(int param0, o param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void a(int param0, o param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
             r.field_a = param7;
             ta.field_a = param2;
-            ka.field_i = param3;
+            ka.field_i = 0;
             cb.field_a = 0;
             uk.field_b = param1;
-            sl.field_r = param0;
-            if (param6 != 2) {
-                tk.a(-15);
-            }
-            jg.field_m = param5;
-            kk.field_xb = param4;
+            sl.field_r = 0;
+            jg.field_m = 0;
+            kk.field_xb = 2500;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "tk.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + 0 + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "tk.C(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + 0 + 44 + 2500 + 44 + 0 + 44 + 2 + 44 + param7 + 44 + 0 + 41);
         }
     }
 
-    public static void a(int param0) {
-        int var1 = -36 / ((param0 - -42) / 63);
+    public static void a() {
+        int var1 = -18;
         field_f = null;
         field_e = null;
     }

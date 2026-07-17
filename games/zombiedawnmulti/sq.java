@@ -31,22 +31,22 @@ class sq extends gn {
         int[] var30 = null;
         int[] var31 = null;
         int[] var32 = null;
+        RuntimeException stackIn_42_0 = null;
+        StringBuilder stackIn_42_1 = null;
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;
-        RuntimeException stackIn_45_0 = null;
-        StringBuilder stackIn_45_1 = null;
-        RuntimeException stackIn_46_0 = null;
-        StringBuilder stackIn_46_1 = null;
-        String stackIn_46_2 = null;
+        String stackIn_44_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_41_0 = null;
+        StringBuilder stackOut_41_1 = null;
         RuntimeException stackOut_43_0 = null;
         StringBuilder stackOut_43_1 = null;
-        RuntimeException stackOut_45_0 = null;
-        StringBuilder stackOut_45_1 = null;
-        String stackOut_45_2 = null;
-        RuntimeException stackOut_44_0 = null;
-        StringBuilder stackOut_44_1 = null;
-        String stackOut_44_2 = null;
+        String stackOut_43_2 = null;
+        RuntimeException stackOut_42_0 = null;
+        StringBuilder stackOut_42_1 = null;
+        String stackOut_42_2 = null;
         var19 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
@@ -89,16 +89,8 @@ class sq extends gn {
                 break L5;
               } else {
                 if (param3 > 0) {
-                  L6: {
-                    var21 = param4.c();
-                    var32 = oo.field_i;
-                    if (param0 == 5) {
-                      break L6;
-                    } else {
-                      sq.g(-57);
-                      break L6;
-                    }
-                  }
+                  var21 = param4.c();
+                  var32 = oo.field_i;
                   var10 = oo.field_b;
                   var11 = oo.field_l;
                   var30 = new int[4];
@@ -113,7 +105,7 @@ class sq extends gn {
                   var22 = var25;
                   var15 = var22;
                   var16 = param7;
-                  L7: while (true) {
+                  L6: while (true) {
                     if (param3 + param7 <= var16) {
                       var21.g(-param4.field_r, -param4.field_y);
                       oo.a(var32, var10, var11);
@@ -121,68 +113,68 @@ class sq extends gn {
                       break L0;
                     } else {
                       var17 = param6;
-                      L8: while (true) {
+                      L7: while (true) {
                         if (var17 >= param6 - -param1) {
                           var13 = var13 + var14;
                           var16++;
-                          continue L7;
+                          continue L6;
                         } else {
-                          L9: {
+                          L8: {
                             var18 = var31[var13];
                             if (var18 == 0) {
-                              break L9;
+                              break L8;
                             } else {
-                              L10: {
+                              L9: {
                                 if (0 >= var17) {
-                                  break L10;
+                                  break L9;
                                 } else {
                                   if (-1 == var15[-1 + var13]) {
-                                    oo.d(var17, var16, param2, param5);
+                                    oo.d(var17, var16, param2, 1);
+                                    break L8;
+                                  } else {
                                     break L9;
+                                  }
+                                }
+                              }
+                              L10: {
+                                if (-1 >= var16) {
+                                  break L10;
+                                } else {
+                                  if (0 == var15[var13 - param4.field_x]) {
+                                    oo.d(var17, var16, param2, 1);
+                                    break L8;
                                   } else {
                                     break L10;
                                   }
                                 }
                               }
                               L11: {
-                                if (-1 >= var16) {
+                                if (param4.field_x + -1 <= var17) {
                                   break L11;
                                 } else {
-                                  if (0 == var15[var13 - param4.field_x]) {
-                                    oo.d(var17, var16, param2, param5);
-                                    break L9;
+                                  if (var15[var13 - -1] == 0) {
+                                    oo.d(var17, var16, param2, 1);
+                                    break L8;
                                   } else {
                                     break L11;
                                   }
                                 }
                               }
-                              L12: {
-                                if (param4.field_x + -1 <= var17) {
-                                  break L12;
-                                } else {
-                                  if (var15[var13 - -1] == 0) {
-                                    oo.d(var17, var16, param2, param5);
-                                    break L9;
-                                  } else {
-                                    break L12;
-                                  }
-                                }
-                              }
                               if (-1 + param4.field_w <= var16) {
-                                break L9;
+                                break L8;
                               } else {
                                 if (var15[var13 - -param4.field_x] != 0) {
-                                  break L9;
+                                  break L8;
                                 } else {
-                                  oo.d(var17, var16, param2, param5);
-                                  break L9;
+                                  oo.d(var17, var16, param2, 1);
+                                  break L8;
                                 }
                               }
                             }
                           }
                           var13++;
                           var17++;
-                          continue L8;
+                          continue L7;
                         }
                       }
                     }
@@ -196,33 +188,33 @@ class sq extends gn {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L13: {
+          L12: {
             var8 = decompiledCaughtException;
-            stackOut_43_0 = (RuntimeException) var8;
-            stackOut_43_1 = new StringBuilder().append("sq.RA(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
-            stackIn_45_0 = stackOut_43_0;
-            stackIn_45_1 = stackOut_43_1;
-            stackIn_44_0 = stackOut_43_0;
-            stackIn_44_1 = stackOut_43_1;
+            stackOut_41_0 = (RuntimeException) var8;
+            stackOut_41_1 = new StringBuilder().append("sq.RA(").append(5).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackIn_43_0 = stackOut_41_0;
+            stackIn_43_1 = stackOut_41_1;
+            stackIn_42_0 = stackOut_41_0;
+            stackIn_42_1 = stackOut_41_1;
             if (param4 == null) {
-              stackOut_45_0 = (RuntimeException) (Object) stackIn_45_0;
-              stackOut_45_1 = (StringBuilder) (Object) stackIn_45_1;
-              stackOut_45_2 = "null";
-              stackIn_46_0 = stackOut_45_0;
-              stackIn_46_1 = stackOut_45_1;
-              stackIn_46_2 = stackOut_45_2;
-              break L13;
+              stackOut_43_0 = (RuntimeException) (Object) stackIn_43_0;
+              stackOut_43_1 = (StringBuilder) (Object) stackIn_43_1;
+              stackOut_43_2 = "null";
+              stackIn_44_0 = stackOut_43_0;
+              stackIn_44_1 = stackOut_43_1;
+              stackIn_44_2 = stackOut_43_2;
+              break L12;
             } else {
-              stackOut_44_0 = (RuntimeException) (Object) stackIn_44_0;
-              stackOut_44_1 = (StringBuilder) (Object) stackIn_44_1;
-              stackOut_44_2 = "{...}";
-              stackIn_46_0 = stackOut_44_0;
-              stackIn_46_1 = stackOut_44_1;
-              stackIn_46_2 = stackOut_44_2;
-              break L13;
+              stackOut_42_0 = (RuntimeException) (Object) stackIn_42_0;
+              stackOut_42_1 = (StringBuilder) (Object) stackIn_42_1;
+              stackOut_42_2 = "{...}";
+              stackIn_44_0 = stackOut_42_0;
+              stackIn_44_1 = stackOut_42_1;
+              stackIn_44_2 = stackOut_42_2;
+              break L12;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_46_0, stackIn_46_2 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw fa.a((Throwable) (Object) stackIn_44_0, stackIn_44_2 + 44 + 1 + 44 + param6 + 44 + param7 + 41);
         }
     }
 
@@ -244,44 +236,40 @@ class sq extends gn {
         int var6 = 0;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         var4 = (wi) (Object) ((sq) this).field_T.c(105);
-        if (param0 == 23) {
-          L0: while (true) {
-            if (var4 != null) {
-              var5 = var4;
-              L1: while (true) {
-                if (var5 == null) {
-                  var4 = (wi) (Object) ((sq) this).field_T.b(6);
-                  continue L0;
-                } else {
-                  L2: {
-                    if (var5.field_k > param1) {
+        L0: while (true) {
+          if (var4 != null) {
+            var5 = var4;
+            L1: while (true) {
+              if (var5 == null) {
+                var4 = (wi) (Object) ((sq) this).field_T.b(6);
+                continue L0;
+              } else {
+                L2: {
+                  if (var5.field_k > param1) {
+                    break L2;
+                  } else {
+                    if (param2 < var5.field_f) {
                       break L2;
                     } else {
-                      if (param2 < var5.field_f) {
+                      if (param1 >= var5.field_j + var5.field_k) {
                         break L2;
                       } else {
-                        if (param1 >= var5.field_j + var5.field_k) {
+                        if (param2 > var5.field_n + var5.field_f) {
                           break L2;
                         } else {
-                          if (param2 > var5.field_n + var5.field_f) {
-                            break L2;
-                          } else {
-                            return var4;
-                          }
+                          return var4;
                         }
                       }
                     }
                   }
-                  var5 = var5.field_i;
-                  continue L1;
                 }
+                var5 = var5.field_i;
+                continue L1;
               }
-            } else {
-              return null;
             }
+          } else {
+            return null;
           }
-        } else {
-          return null;
         }
     }
 
@@ -473,11 +461,8 @@ class sq extends gn {
         }
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_P = null;
-        if (param0 != 2) {
-            field_R = -124;
-        }
         field_U = null;
     }
 
@@ -695,7 +680,7 @@ class sq extends gn {
         ((sq) this).a((byte) 94);
     }
 
-    final static void g(int param0) {
+    final static void g() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -761,7 +746,7 @@ class sq extends gn {
             var3 = 0;
             L2: while (true) {
               if (hq.field_m.length <= var3) {
-                var3 = -59 % ((param0 - 38) / 57);
+                var3 = 0;
                 break L0;
               } else {
                 L3: {
@@ -941,11 +926,11 @@ class sq extends gn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var1, "sq.WA(" + param0 + 41);
+          throw fa.a((Throwable) (Object) var1, "sq.WA(" + 114 + 41);
         }
     }
 
-    final static void a(int param0, ja[] param1, boolean param2) {
+    final static void a(int param0, ja[] param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         RuntimeException stackIn_14_0 = null;

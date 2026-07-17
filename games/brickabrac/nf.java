@@ -100,16 +100,12 @@ final class nf extends lg {
 
     final static void a(byte param0) {
         po.a(13);
-        field_T = null;
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         field_W = null;
         field_U = null;
         field_T = null;
-        if (param0 >= -18) {
-            nf.a((byte) 48);
-        }
     }
 
     final void a(int param0, int param1, int param2, byte param3) {
@@ -132,18 +128,77 @@ final class nf extends lg {
           if (var6 != hq.field_z) {
             var5 = ((nf) this).field_R.a(-118);
             if (var5 == null) {
-              L0: {
-                var5 = ((nf) this).field_S;
-                if (var13 == 0) {
-                  break L0;
-                } else {
-                  var5 = jb.field_G;
-                  break L0;
-                }
-              }
+              var5 = ((nf) this).field_S;
               if (var5.equals((Object) (Object) ((nf) this).field_A)) {
+                L0: {
+                  super.a(param0, param1, param2, param3);
+                  var6 = ((nf) this).field_R.b((byte) -31);
+                  var8_ref = (qe) (Object) ((nf) this).field_l;
+                  var9 = param1 - -((nf) this).field_o;
+                  var10 = var8_ref.a(param0, (byte) -107, (oc) this) + (var8_ref.c((oc) this, param3 ^ 32).a(0) >> 1);
+                  if (var6 == m.field_c) {
+                    break L0;
+                  } else {
+                    if (var6 == hq.field_z) {
+                      break L0;
+                    } else {
+                      if (lp.field_xb != var6) {
+                        if (ae.field_c == var6) {
+                          var15 = df.field_a[1];
+                          var15.f(var9, -(var15.field_C >> 1) + var10, 256);
+                          return;
+                        } else {
+                          return;
+                        }
+                      } else {
+                        var14 = df.field_a[2];
+                        var14.f(var9, var10 + -(var14.field_C >> 1), 256);
+                        return;
+                      }
+                    }
+                  }
+                }
+                var16 = df.field_a[0];
+                var11 = var16.field_x << 1;
+                var12 = var16.field_z << 1;
+                if (((nf) this).field_X != null) {
+                  if (var11 <= ((nf) this).field_X.field_D) {
+                    if (((nf) this).field_X.field_C < var12) {
+                      ((nf) this).field_X = new jp(var11, var12);
+                      fc.a(-86, ((nf) this).field_X);
+                      var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
+                      sc.b(-111);
+                      ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
+                      return;
+                    } else {
+                      fc.a(-70, ((nf) this).field_X);
+                      lb.d();
+                      var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
+                      sc.b(-111);
+                      ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
+                      return;
+                    }
+                  } else {
+                    ((nf) this).field_X = new jp(var11, var12);
+                    fc.a(-86, ((nf) this).field_X);
+                    var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
+                    sc.b(-111);
+                    ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
+                    return;
+                  }
+                } else {
+                  ((nf) this).field_X = new jp(var11, var12);
+                  fc.a(-86, ((nf) this).field_X);
+                  var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
+                  sc.b(-111);
+                  ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
+                  return;
+                }
+              } else {
                 L1: {
                   L2: {
+                    ((nf) this).field_A = var5;
+                    ((nf) this).i(param3 + 10);
                     super.a(param0, param1, param2, param3);
                     var6 = ((nf) this).field_R.b((byte) -31);
                     var8_ref = (qe) (Object) ((nf) this).field_l;
@@ -155,77 +210,57 @@ final class nf extends lg {
                       if (var6 == hq.field_z) {
                         break L2;
                       } else {
-                        L3: {
-                          if (lp.field_xb != var6) {
-                            break L3;
-                          } else {
-                            var14 = df.field_a[2];
-                            var14.f(var9, var10 + -(var14.field_C >> 1), 256);
-                            if (var13 == 0) {
-                              break L1;
-                            } else {
-                              break L3;
-                            }
-                          }
-                        }
-                        if (ae.field_c == var6) {
-                          var15 = df.field_a[1];
-                          var15.f(var9, -(var15.field_C >> 1) + var10, 256);
-                          if (var13 == 0) {
+                        if (lp.field_xb != var6) {
+                          if (ae.field_c == var6) {
+                            var15 = df.field_a[1];
+                            var15.f(var9, -(var15.field_C >> 1) + var10, 256);
                             break L1;
                           } else {
-                            break L2;
+                            break L1;
                           }
                         } else {
-                          return;
+                          var14 = df.field_a[2];
+                          var14.f(var9, var10 + -(var14.field_C >> 1), 256);
+                          break L1;
                         }
                       }
                     }
                   }
-                  L4: {
-                    var16 = df.field_a[0];
-                    var11 = var16.field_x << 1;
-                    var12 = var16.field_z << 1;
-                    if (((nf) this).field_X == null) {
-                      break L4;
-                    } else {
-                      if (var11 > ((nf) this).field_X.field_D) {
+                  L3: {
+                    L4: {
+                      var16 = df.field_a[0];
+                      var11 = var16.field_x << 1;
+                      var12 = var16.field_z << 1;
+                      if (((nf) this).field_X == null) {
                         break L4;
                       } else {
-                        if (((nf) this).field_X.field_C < var12) {
+                        if (var11 > ((nf) this).field_X.field_D) {
                           break L4;
                         } else {
-                          fc.a(-70, ((nf) this).field_X);
-                          lb.d();
-                          if (var13 == 0) {
-                            var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
-                            sc.b(-111);
-                            ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
-                            break L1;
+                          if (((nf) this).field_X.field_C < var12) {
+                            break L4;
                           } else {
-                            ((nf) this).field_X = new jp(var11, var12);
-                            fc.a(-86, ((nf) this).field_X);
-                            var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
-                            sc.b(-111);
-                            ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
-                            return;
+                            fc.a(-70, ((nf) this).field_X);
+                            lb.d();
+                            break L3;
                           }
                         }
                       }
                     }
+                    ((nf) this).field_X = new jp(var11, var12);
+                    fc.a(-86, ((nf) this).field_X);
+                    break L3;
                   }
-                  ((nf) this).field_X = new jp(var11, var12);
-                  fc.a(-86, ((nf) this).field_X);
                   var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
                   sc.b(-111);
                   ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
-                  return;
+                  break L1;
                 }
                 return;
-              } else {
+              }
+            } else {
+              if (var5.equals((Object) (Object) ((nf) this).field_A)) {
                 L5: {
-                  ((nf) this).field_A = var5;
-                  ((nf) this).i(param3 + 10);
                   super.a(param0, param1, param2, param3);
                   var6 = ((nf) this).field_R.b((byte) -31);
                   var8_ref = (qe) (Object) ((nf) this).field_l;
@@ -237,257 +272,53 @@ final class nf extends lg {
                     if (var6 == hq.field_z) {
                       break L5;
                     } else {
-                      L6: {
-                        if (lp.field_xb != var6) {
-                          break L6;
-                        } else {
-                          var14 = df.field_a[2];
-                          var14.f(var9, var10 + -(var14.field_C >> 1), 256);
-                          if (var13 != 0) {
-                            break L6;
-                          } else {
-                            return;
-                          }
-                        }
-                      }
-                      if (ae.field_c == var6) {
-                        var15 = df.field_a[1];
-                        var15.f(var9, -(var15.field_C >> 1) + var10, 256);
-                        if (var13 != 0) {
-                          break L5;
+                      if (lp.field_xb != var6) {
+                        if (ae.field_c == var6) {
+                          var15 = df.field_a[1];
+                          var15.f(var9, -(var15.field_C >> 1) + var10, 256);
+                          return;
                         } else {
                           return;
                         }
                       } else {
+                        var14 = df.field_a[2];
+                        var14.f(var9, var10 + -(var14.field_C >> 1), 256);
                         return;
                       }
                     }
                   }
                 }
-                L7: {
+                L6: {
                   var16 = df.field_a[0];
                   var11 = var16.field_x << 1;
                   var12 = var16.field_z << 1;
                   if (((nf) this).field_X == null) {
-                    break L7;
+                    break L6;
                   } else {
                     if (var11 > ((nf) this).field_X.field_D) {
-                      break L7;
+                      break L6;
                     } else {
                       if (((nf) this).field_X.field_C < var12) {
-                        break L7;
+                        break L6;
                       } else {
                         fc.a(-70, ((nf) this).field_X);
                         lb.d();
-                        if (var13 == 0) {
-                          var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
-                          sc.b(-111);
-                          ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
-                          return;
-                        } else {
-                          ((nf) this).field_X = new jp(var11, var12);
-                          fc.a(-86, ((nf) this).field_X);
-                          var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
-                          sc.b(-111);
-                          ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
-                          return;
-                        }
-                      }
-                    }
-                  }
-                }
-                ((nf) this).field_X = new jp(var11, var12);
-                fc.a(-86, ((nf) this).field_X);
-                var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
-                sc.b(-111);
-                ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
-                return;
-              }
-            } else {
-              L8: {
-                if (var5.equals((Object) (Object) ((nf) this).field_A)) {
-                  break L8;
-                } else {
-                  ((nf) this).field_A = var5;
-                  ((nf) this).i(param3 + 10);
-                  break L8;
-                }
-              }
-              L9: {
-                super.a(param0, param1, param2, param3);
-                var6 = ((nf) this).field_R.b((byte) -31);
-                var8_ref = (qe) (Object) ((nf) this).field_l;
-                var9 = param1 - -((nf) this).field_o;
-                var10 = var8_ref.a(param0, (byte) -107, (oc) this) + (var8_ref.c((oc) this, param3 ^ 32).a(0) >> 1);
-                if (var6 == m.field_c) {
-                  break L9;
-                } else {
-                  if (var6 == hq.field_z) {
-                    break L9;
-                  } else {
-                    L10: {
-                      if (lp.field_xb != var6) {
-                        break L10;
-                      } else {
-                        var14 = df.field_a[2];
-                        var14.f(var9, var10 + -(var14.field_C >> 1), 256);
-                        if (var13 != 0) {
-                          break L10;
-                        } else {
-                          return;
-                        }
-                      }
-                    }
-                    if (ae.field_c == var6) {
-                      var15 = df.field_a[1];
-                      var15.f(var9, -(var15.field_C >> 1) + var10, 256);
-                      if (var13 != 0) {
-                        break L9;
-                      } else {
+                        var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
+                        sc.b(-111);
+                        ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
                         return;
                       }
-                    } else {
-                      return;
                     }
                   }
                 }
-              }
-              var16 = df.field_a[0];
-              var11 = var16.field_x << 1;
-              var12 = var16.field_z << 1;
-              if (((nf) this).field_X != null) {
-                if (var11 <= ((nf) this).field_X.field_D) {
-                  if (((nf) this).field_X.field_C >= var12) {
-                    fc.a(-70, ((nf) this).field_X);
-                    lb.d();
-                    if (var13 == 0) {
-                      var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
-                      sc.b(-111);
-                      ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
-                      return;
-                    } else {
-                      ((nf) this).field_X = new jp(var11, var12);
-                      fc.a(-86, ((nf) this).field_X);
-                      var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
-                      sc.b(-111);
-                      ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
-                      return;
-                    }
-                  } else {
-                    ((nf) this).field_X = new jp(var11, var12);
-                    fc.a(-86, ((nf) this).field_X);
-                    var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
-                    sc.b(-111);
-                    ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
-                    return;
-                  }
-                } else {
-                  ((nf) this).field_X = new jp(var11, var12);
-                  fc.a(-86, ((nf) this).field_X);
-                  var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
-                  sc.b(-111);
-                  ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
-                  return;
-                }
-              } else {
                 ((nf) this).field_X = new jp(var11, var12);
                 fc.a(-86, ((nf) this).field_X);
                 var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
                 sc.b(-111);
                 ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
                 return;
-              }
-            }
-          } else {
-            var5 = jb.field_G;
-            if (var5.equals((Object) (Object) ((nf) this).field_A)) {
-              L11: {
-                super.a(param0, param1, param2, param3);
-                var6 = ((nf) this).field_R.b((byte) -31);
-                var8_ref = (qe) (Object) ((nf) this).field_l;
-                var9 = param1 - -((nf) this).field_o;
-                var10 = var8_ref.a(param0, (byte) -107, (oc) this) + (var8_ref.c((oc) this, param3 ^ 32).a(0) >> 1);
-                if (var6 == m.field_c) {
-                  break L11;
-                } else {
-                  if (var6 == hq.field_z) {
-                    break L11;
-                  } else {
-                    L12: {
-                      if (lp.field_xb != var6) {
-                        break L12;
-                      } else {
-                        var14 = df.field_a[2];
-                        var14.f(var9, var10 + -(var14.field_C >> 1), 256);
-                        if (var13 != 0) {
-                          break L12;
-                        } else {
-                          return;
-                        }
-                      }
-                    }
-                    if (ae.field_c == var6) {
-                      var15 = df.field_a[1];
-                      var15.f(var9, -(var15.field_C >> 1) + var10, 256);
-                      if (var13 != 0) {
-                        break L11;
-                      } else {
-                        return;
-                      }
-                    } else {
-                      return;
-                    }
-                  }
-                }
-              }
-              var16 = df.field_a[0];
-              var11 = var16.field_x << 1;
-              var12 = var16.field_z << 1;
-              if (((nf) this).field_X != null) {
-                if (var11 <= ((nf) this).field_X.field_D) {
-                  if (((nf) this).field_X.field_C >= var12) {
-                    fc.a(-70, ((nf) this).field_X);
-                    lb.d();
-                    if (var13 == 0) {
-                      var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
-                      sc.b(-111);
-                      ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
-                      return;
-                    } else {
-                      ((nf) this).field_X = new jp(var11, var12);
-                      fc.a(-86, ((nf) this).field_X);
-                      var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
-                      sc.b(-111);
-                      ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
-                      return;
-                    }
-                  } else {
-                    ((nf) this).field_X = new jp(var11, var12);
-                    fc.a(-86, ((nf) this).field_X);
-                    var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
-                    sc.b(-111);
-                    ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
-                    return;
-                  }
-                } else {
-                  ((nf) this).field_X = new jp(var11, var12);
-                  fc.a(-86, ((nf) this).field_X);
-                  var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
-                  sc.b(-111);
-                  ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
-                  return;
-                }
               } else {
-                ((nf) this).field_X = new jp(var11, var12);
-                fc.a(-86, ((nf) this).field_X);
-                var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
-                sc.b(-111);
-                ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
-                return;
-              }
-            } else {
-              L13: {
-                L14: {
+                L7: {
                   ((nf) this).field_A = var5;
                   ((nf) this).i(param3 + 10);
                   super.a(param0, param1, param2, param3);
@@ -496,71 +327,193 @@ final class nf extends lg {
                   var9 = param1 - -((nf) this).field_o;
                   var10 = var8_ref.a(param0, (byte) -107, (oc) this) + (var8_ref.c((oc) this, param3 ^ 32).a(0) >> 1);
                   if (var6 == m.field_c) {
-                    break L14;
+                    break L7;
                   } else {
                     if (var6 == hq.field_z) {
-                      break L14;
+                      break L7;
                     } else {
-                      L15: {
-                        if (lp.field_xb != var6) {
-                          break L15;
+                      if (lp.field_xb != var6) {
+                        if (ae.field_c != var6) {
+                          return;
                         } else {
-                          var14 = df.field_a[2];
-                          var14.f(var9, var10 + -(var14.field_C >> 1), 256);
-                          if (var13 == 0) {
-                            break L13;
-                          } else {
-                            break L15;
-                          }
-                        }
-                      }
-                      if (ae.field_c == var6) {
-                        var15 = df.field_a[1];
-                        var15.f(var9, -(var15.field_C >> 1) + var10, 256);
-                        if (var13 == 0) {
-                          break L13;
-                        } else {
-                          break L14;
+                          var15 = df.field_a[1];
+                          var15.f(var9, -(var15.field_C >> 1) + var10, 256);
+                          return;
                         }
                       } else {
-                        break L13;
+                        var14 = df.field_a[2];
+                        var14.f(var9, var10 + -(var14.field_C >> 1), 256);
+                        return;
                       }
                     }
                   }
                 }
-                L16: {
-                  L17: {
+                var16 = df.field_a[0];
+                var11 = var16.field_x << 1;
+                var12 = var16.field_z << 1;
+                if (((nf) this).field_X != null) {
+                  if (var11 <= ((nf) this).field_X.field_D) {
+                    if (((nf) this).field_X.field_C >= var12) {
+                      fc.a(-70, ((nf) this).field_X);
+                      lb.d();
+                      var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
+                      sc.b(-111);
+                      ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
+                      return;
+                    } else {
+                      ((nf) this).field_X = new jp(var11, var12);
+                      fc.a(-86, ((nf) this).field_X);
+                      var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
+                      sc.b(-111);
+                      ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
+                      return;
+                    }
+                  } else {
+                    ((nf) this).field_X = new jp(var11, var12);
+                    fc.a(-86, ((nf) this).field_X);
+                    var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
+                    sc.b(-111);
+                    ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
+                    return;
+                  }
+                } else {
+                  ((nf) this).field_X = new jp(var11, var12);
+                  fc.a(-86, ((nf) this).field_X);
+                  var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
+                  sc.b(-111);
+                  ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
+                  return;
+                }
+              }
+            }
+          } else {
+            var5 = jb.field_G;
+            if (var5.equals((Object) (Object) ((nf) this).field_A)) {
+              L8: {
+                super.a(param0, param1, param2, param3);
+                var6 = ((nf) this).field_R.b((byte) -31);
+                var8_ref = (qe) (Object) ((nf) this).field_l;
+                var9 = param1 - -((nf) this).field_o;
+                var10 = var8_ref.a(param0, (byte) -107, (oc) this) + (var8_ref.c((oc) this, param3 ^ 32).a(0) >> 1);
+                if (var6 == m.field_c) {
+                  break L8;
+                } else {
+                  if (var6 == hq.field_z) {
+                    break L8;
+                  } else {
+                    if (lp.field_xb != var6) {
+                      if (ae.field_c != var6) {
+                        return;
+                      } else {
+                        var15 = df.field_a[1];
+                        var15.f(var9, -(var15.field_C >> 1) + var10, 256);
+                        return;
+                      }
+                    } else {
+                      var14 = df.field_a[2];
+                      var14.f(var9, var10 + -(var14.field_C >> 1), 256);
+                      return;
+                    }
+                  }
+                }
+              }
+              var16 = df.field_a[0];
+              var11 = var16.field_x << 1;
+              var12 = var16.field_z << 1;
+              if (((nf) this).field_X != null) {
+                if (var11 <= ((nf) this).field_X.field_D) {
+                  if (((nf) this).field_X.field_C >= var12) {
+                    fc.a(-70, ((nf) this).field_X);
+                    lb.d();
+                    var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
+                    sc.b(-111);
+                    ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
+                    return;
+                  } else {
+                    ((nf) this).field_X = new jp(var11, var12);
+                    fc.a(-86, ((nf) this).field_X);
+                    var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
+                    sc.b(-111);
+                    ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
+                    return;
+                  }
+                } else {
+                  ((nf) this).field_X = new jp(var11, var12);
+                  fc.a(-86, ((nf) this).field_X);
+                  var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
+                  sc.b(-111);
+                  ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
+                  return;
+                }
+              } else {
+                ((nf) this).field_X = new jp(var11, var12);
+                fc.a(-86, ((nf) this).field_X);
+                var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
+                sc.b(-111);
+                ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
+                return;
+              }
+            } else {
+              L9: {
+                L10: {
+                  ((nf) this).field_A = var5;
+                  ((nf) this).i(param3 + 10);
+                  super.a(param0, param1, param2, param3);
+                  var6 = ((nf) this).field_R.b((byte) -31);
+                  var8_ref = (qe) (Object) ((nf) this).field_l;
+                  var9 = param1 - -((nf) this).field_o;
+                  var10 = var8_ref.a(param0, (byte) -107, (oc) this) + (var8_ref.c((oc) this, param3 ^ 32).a(0) >> 1);
+                  if (var6 == m.field_c) {
+                    break L10;
+                  } else {
+                    if (var6 == hq.field_z) {
+                      break L10;
+                    } else {
+                      if (lp.field_xb != var6) {
+                        if (ae.field_c == var6) {
+                          var15 = df.field_a[1];
+                          var15.f(var9, -(var15.field_C >> 1) + var10, 256);
+                          break L9;
+                        } else {
+                          break L9;
+                        }
+                      } else {
+                        var14 = df.field_a[2];
+                        var14.f(var9, var10 + -(var14.field_C >> 1), 256);
+                        break L9;
+                      }
+                    }
+                  }
+                }
+                L11: {
+                  L12: {
                     var16 = df.field_a[0];
                     var11 = var16.field_x << 1;
                     var12 = var16.field_z << 1;
                     if (((nf) this).field_X == null) {
-                      break L17;
+                      break L12;
                     } else {
                       if (var11 > ((nf) this).field_X.field_D) {
-                        break L17;
+                        break L12;
                       } else {
                         if (((nf) this).field_X.field_C < var12) {
-                          break L17;
+                          break L12;
                         } else {
                           fc.a(-70, ((nf) this).field_X);
                           lb.d();
-                          if (var13 == 0) {
-                            break L16;
-                          } else {
-                            break L17;
-                          }
+                          break L11;
                         }
                       }
                     }
                   }
                   ((nf) this).field_X = new jp(var11, var12);
                   fc.a(-86, ((nf) this).field_X);
-                  break L16;
+                  break L11;
                 }
                 var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
                 sc.b(-111);
                 ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
-                break L13;
+                break L9;
               }
               return;
             }
@@ -568,40 +521,29 @@ final class nf extends lg {
         } else {
           var5 = jb.field_G;
           if (var5.equals((Object) (Object) ((nf) this).field_A)) {
-            L18: {
+            L13: {
               super.a(param0, param1, param2, param3);
               var6 = ((nf) this).field_R.b((byte) -31);
               var8_ref = (qe) (Object) ((nf) this).field_l;
               var9 = param1 - -((nf) this).field_o;
               var10 = var8_ref.a(param0, (byte) -107, (oc) this) + (var8_ref.c((oc) this, param3 ^ 32).a(0) >> 1);
               if (var6 == m.field_c) {
-                break L18;
+                break L13;
               } else {
                 if (var6 == hq.field_z) {
-                  break L18;
+                  break L13;
                 } else {
-                  L19: {
-                    if (lp.field_xb != var6) {
-                      break L19;
+                  if (lp.field_xb != var6) {
+                    if (ae.field_c != var6) {
+                      return;
                     } else {
-                      var14 = df.field_a[2];
-                      var14.f(var9, var10 + -(var14.field_C >> 1), 256);
-                      if (var13 != 0) {
-                        break L19;
-                      } else {
-                        return;
-                      }
-                    }
-                  }
-                  if (ae.field_c == var6) {
-                    var15 = df.field_a[1];
-                    var15.f(var9, -(var15.field_C >> 1) + var10, 256);
-                    if (var13 != 0) {
-                      break L18;
-                    } else {
+                      var15 = df.field_a[1];
+                      var15.f(var9, -(var15.field_C >> 1) + var10, 256);
                       return;
                     }
                   } else {
+                    var14 = df.field_a[2];
+                    var14.f(var9, var10 + -(var14.field_C >> 1), 256);
                     return;
                   }
                 }
@@ -615,19 +557,10 @@ final class nf extends lg {
                 if (((nf) this).field_X.field_C >= var12) {
                   fc.a(-70, ((nf) this).field_X);
                   lb.d();
-                  if (var13 != 0) {
-                    ((nf) this).field_X = new jp(var11, var12);
-                    fc.a(-86, ((nf) this).field_X);
-                    var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
-                    sc.b(-111);
-                    ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
-                    return;
-                  } else {
-                    var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
-                    sc.b(-111);
-                    ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
-                    return;
-                  }
+                  var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
+                  sc.b(-111);
+                  ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
+                  return;
                 } else {
                   ((nf) this).field_X = new jp(var11, var12);
                   fc.a(-86, ((nf) this).field_X);
@@ -653,8 +586,8 @@ final class nf extends lg {
               return;
             }
           } else {
-            L20: {
-              L21: {
+            L14: {
+              L15: {
                 ((nf) this).field_A = var5;
                 ((nf) this).i(param3 + 10);
                 super.a(param0, param1, param2, param3);
@@ -663,71 +596,56 @@ final class nf extends lg {
                 var9 = param1 - -((nf) this).field_o;
                 var10 = var8_ref.a(param0, (byte) -107, (oc) this) + (var8_ref.c((oc) this, param3 ^ 32).a(0) >> 1);
                 if (var6 == m.field_c) {
-                  break L21;
+                  break L15;
                 } else {
                   if (var6 == hq.field_z) {
-                    break L21;
+                    break L15;
                   } else {
-                    L22: {
-                      if (lp.field_xb != var6) {
-                        break L22;
+                    if (lp.field_xb != var6) {
+                      if (ae.field_c == var6) {
+                        var15 = df.field_a[1];
+                        var15.f(var9, -(var15.field_C >> 1) + var10, 256);
+                        break L14;
                       } else {
-                        var14 = df.field_a[2];
-                        var14.f(var9, var10 + -(var14.field_C >> 1), 256);
-                        if (var13 == 0) {
-                          break L20;
-                        } else {
-                          break L22;
-                        }
-                      }
-                    }
-                    if (ae.field_c == var6) {
-                      var15 = df.field_a[1];
-                      var15.f(var9, -(var15.field_C >> 1) + var10, 256);
-                      if (var13 == 0) {
-                        break L20;
-                      } else {
-                        break L21;
+                        break L14;
                       }
                     } else {
-                      break L20;
+                      var14 = df.field_a[2];
+                      var14.f(var9, var10 + -(var14.field_C >> 1), 256);
+                      break L14;
                     }
                   }
                 }
               }
-              L23: {
-                L24: {
+              L16: {
+                L17: {
                   var16 = df.field_a[0];
                   var11 = var16.field_x << 1;
                   var12 = var16.field_z << 1;
                   if (((nf) this).field_X == null) {
-                    break L24;
+                    break L17;
                   } else {
                     if (var11 > ((nf) this).field_X.field_D) {
-                      break L24;
+                      break L17;
                     } else {
                       if (((nf) this).field_X.field_C < var12) {
-                        break L24;
+                        break L17;
                       } else {
                         fc.a(-70, ((nf) this).field_X);
                         lb.d();
-                        if (var13 == 0) {
-                          break L23;
-                        } else {
-                          break L24;
-                        }
+                        break L16;
                       }
                     }
                   }
                 }
                 ((nf) this).field_X = new jp(var11, var12);
                 fc.a(-86, ((nf) this).field_X);
-                break L23;
+                break L16;
               }
               var16.a(112, 144, var16.field_x << 4, var16.field_z << 4, -((nf) this).field_Q << 10, 4096);
               sc.b(-111);
               ((nf) this).field_X.f(-(var16.field_x >> 1) + var9, -var16.field_z + var10, 256);
-              break L20;
+              break L14;
             }
             return;
           }

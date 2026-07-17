@@ -10,7 +10,7 @@ final class ci extends qa {
     static String field_K;
     private String field_Y;
 
-    public static void i(int param0) {
+    public static void i() {
         field_K = null;
     }
 

@@ -12,58 +12,31 @@ final class eb implements pf {
     final static nk a(boolean param0, int param1, int param2, int param3) {
         nk var4 = null;
         int var5 = 0;
-        nk var6 = null;
-        nk var7 = null;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         var4 = (nk) (Object) pe.field_Lb.b(12623);
-        if (!param0) {
-          eb.a((byte) -57);
-          L0: while (true) {
-            if (var4 == null) {
-              var7 = new nk();
-              var4 = var7;
-              var7.field_p = param2;
-              var7.field_t = param1;
-              pe.field_Lb.b((pg) (Object) var7, -1);
-              fj.a(-26971, var7, 7);
-              return var7;
+        L0: while (true) {
+          if (var4 == null) {
+            var4 = new nk();
+            var4.field_p = 0;
+            var4.field_t = 10;
+            pe.field_Lb.b((pg) (Object) var4, -1);
+            int discarded$2 = 7;
+            fj.a(-26971, var4);
+            return var4;
+          } else {
+            if (var4.field_p != 0) {
+              var4 = (nk) (Object) pe.field_Lb.a(0);
+              continue L0;
             } else {
-              if (param2 != var4.field_p) {
-                var4 = (nk) (Object) pe.field_Lb.a(0);
-                continue L0;
-              } else {
-                return var4;
-              }
-            }
-          }
-        } else {
-          L1: while (true) {
-            if (var4 == null) {
-              var6 = new nk();
-              var4 = var6;
-              var6.field_p = param2;
-              var6.field_t = param1;
-              pe.field_Lb.b((pg) (Object) var6, -1);
-              fj.a(-26971, var6, 7);
-              return var6;
-            } else {
-              if (param2 != var4.field_p) {
-                var4 = (nk) (Object) pe.field_Lb.a(0);
-                continue L1;
-              } else {
-                return var4;
-              }
+              return var4;
             }
           }
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
-        if (param0 != 49) {
-            return;
-        }
         field_d = null;
     }
 
@@ -131,39 +104,13 @@ final class eb implements pf {
         }
     }
 
-    final static void a(int param0, boolean param1) {
-        Object var3 = null;
-        L0: {
-          ul.field_A = param0;
-          if (null != jl.field_h) {
+    final static void a(int param0) {
+        ul.field_A = param0;
+        if (!(null == jl.field_h)) {
             jl.field_h.a(param0, (byte) -66);
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        if (param1) {
-          L1: {
-            var3 = null;
-            eb.a(84, (jg) null);
-            if (gg.field_h != null) {
-              gg.field_h.a(2, param0);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          return;
-        } else {
-          L2: {
-            if (gg.field_h != null) {
-              gg.field_h.a(2, param0);
-              break L2;
-            } else {
-              break L2;
-            }
-          }
-          return;
+        if (!(gg.field_h == null)) {
+            gg.field_h.a(2, param0);
         }
     }
 
@@ -398,7 +345,7 @@ final class eb implements pf {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void a(boolean param0) {
         mj.a(-6578, param0);
         if (!(null == kh.field_c)) {
             fk.a(0, kh.field_c);
@@ -409,11 +356,12 @@ final class eb implements pf {
         try {
             ol.field_f = new ec(param0);
             mj.field_r = param3;
-            int var4_int = -103 / ((param2 - 31) / 55);
+            int var4_int = 51;
             tg.field_d = param1;
-            eg.b(403300833);
+            int discarded$0 = 403300833;
+            eg.b();
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "eb.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "eb.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + -117 + 44 + param3 + 41);
         }
     }
 

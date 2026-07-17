@@ -134,7 +134,7 @@ final class tba extends vg {
         return gba.a(-94, vca.field_d.field_c);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_m = null;
         field_l = null;
         field_g = null;

@@ -11,7 +11,7 @@ final class bp {
     private int field_g;
     static String field_c;
 
-    private final int c(int param0, int param1) {
+    private final int c(int param0) {
         int var3 = 0;
         int var4 = 0;
         var4 = DungeonAssault.field_K;
@@ -37,9 +37,6 @@ final class bp {
     }
 
     private final void a(int param0, int param1, int param2) {
-        if (param1 != 0) {
-            return;
-        }
         if (!(((bp) this).field_b >= param0)) {
             ((bp) this).field_b = param0;
         }
@@ -50,9 +47,10 @@ final class bp {
     }
 
     private final void d(int param0, int param1) {
-        int[] var5 = new int[this.c(param1, -13676)];
+        int discarded$0 = -13676;
+        int[] var5 = new int[this.c(param1)];
         int[] var3 = var5;
-        int var4 = -83 / ((param0 - 57) / 59);
+        int var4 = 41;
         cj.a(((bp) this).field_f, 0, var5, 0, ((bp) this).field_f.length);
         ((bp) this).field_f = var5;
     }
@@ -81,7 +79,7 @@ final class bp {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var3_int = -123 % ((-9 - param1) / 37);
+            var3_int = 0;
             var4 = new ha();
             ((um) (Object) var4).field_f = param0;
             ((um) (Object) var4).field_a = param2;
@@ -94,7 +92,7 @@ final class bp {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("bp.J(").append(param0).append(44).append(param1).append(44);
+            stackOut_2_1 = new StringBuilder().append("bp.J(").append(param0).append(44).append(127).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -122,7 +120,7 @@ final class bp {
         return (um) (Object) stackIn_1_0;
     }
 
-    final static void a(int param0, cn param1, int param2, byte param3) {
+    final static void a(int param0, cn param1, int param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -151,74 +149,70 @@ final class bp {
           L0: {
             param2 = param2 + param1.field_w;
             param0 = param0 + param1.field_A;
-            if (param3 == 99) {
-              L1: {
-                var4_int = param2 + param0 * gf.field_i;
-                var5 = 0;
-                var6 = param1.field_v;
-                var7 = param1.field_y;
-                var8 = gf.field_i + -var7;
-                if (gf.field_f > param0) {
-                  var10 = -param0 + gf.field_f;
-                  var5 = var5 + var7 * var10;
-                  param0 = gf.field_f;
-                  var6 = var6 - var10;
-                  var4_int = var4_int + var10 * gf.field_i;
-                  break L1;
-                } else {
-                  break L1;
-                }
+            L1: {
+              var4_int = param2 + param0 * gf.field_i;
+              var5 = 0;
+              var6 = param1.field_v;
+              var7 = param1.field_y;
+              var8 = gf.field_i + -var7;
+              if (gf.field_f > param0) {
+                var10 = -param0 + gf.field_f;
+                var5 = var5 + var7 * var10;
+                param0 = gf.field_f;
+                var6 = var6 - var10;
+                var4_int = var4_int + var10 * gf.field_i;
+                break L1;
+              } else {
+                break L1;
               }
-              L2: {
-                var9 = 0;
-                if (var6 + param0 > gf.field_e) {
-                  var6 = var6 - (-gf.field_e + param0 + var6);
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              L3: {
-                if (gf.field_j <= param2) {
-                  break L3;
-                } else {
-                  var10 = gf.field_j - param2;
-                  var7 = var7 - var10;
-                  param2 = gf.field_j;
-                  var9 = var9 + var10;
-                  var8 = var8 + var10;
-                  var5 = var5 + var10;
-                  var4_int = var4_int + var10;
-                  break L3;
-                }
-              }
-              L4: {
-                if (gf.field_h >= param2 + var7) {
-                  break L4;
-                } else {
-                  var10 = param2 + (var7 - gf.field_h);
-                  var8 = var8 + var10;
-                  var7 = var7 - var10;
-                  var9 = var9 + var10;
-                  break L4;
-                }
-              }
-              L5: {
-                if (var7 <= 0) {
-                  break L5;
-                } else {
-                  if (var6 > 0) {
-                    id.a(var4_int, 0, (byte) 104, var6, var9, param1.field_B, var5, var7, gf.field_b, var8);
-                    break L0;
-                  } else {
-                    break L5;
-                  }
-                }
-              }
-              return;
-            } else {
-              return;
             }
+            L2: {
+              var9 = 0;
+              if (var6 + param0 > gf.field_e) {
+                var6 = var6 - (-gf.field_e + param0 + var6);
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            L3: {
+              if (gf.field_j <= param2) {
+                break L3;
+              } else {
+                var10 = gf.field_j - param2;
+                var7 = var7 - var10;
+                param2 = gf.field_j;
+                var9 = var9 + var10;
+                var8 = var8 + var10;
+                var5 = var5 + var10;
+                var4_int = var4_int + var10;
+                break L3;
+              }
+            }
+            L4: {
+              if (gf.field_h >= param2 + var7) {
+                break L4;
+              } else {
+                var10 = param2 + (var7 - gf.field_h);
+                var8 = var8 + var10;
+                var7 = var7 - var10;
+                var9 = var9 + var10;
+                break L4;
+              }
+            }
+            L5: {
+              if (var7 <= 0) {
+                break L5;
+              } else {
+                if (var6 > 0) {
+                  id.a(var4_int, 0, (byte) 104, var6, var9, param1.field_B, var5, var7, gf.field_b, var8);
+                  break L0;
+                } else {
+                  break L5;
+                }
+              }
+            }
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -248,7 +242,7 @@ final class bp {
               break L6;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param2 + 44 + param3 + 41);
+          throw vk.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param2 + 44 + 99 + 41);
         }
     }
 
@@ -392,7 +386,7 @@ final class bp {
         return ((bp) this).field_f[param1];
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_h = null;
         field_e = null;
@@ -413,7 +407,7 @@ final class bp {
         this.a(1 + ((bp) this).field_b, 0, param0);
     }
 
-    final static void b(int param0) {
+    final static void b() {
         Object var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

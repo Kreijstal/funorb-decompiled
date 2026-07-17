@@ -13,140 +13,71 @@ abstract class dd {
 
     final static void a(int param0, int param1) {
         th var2 = ed.field_q;
-        var2.h(param1, 0);
-        if (param0 <= 32) {
-            return;
-        }
+        var2.h(6, 0);
         var2.c(1, -1);
         var2.c(0, -1);
     }
 
     final static int a(byte param0, int param1) {
         int var2 = 0;
-        L0: {
-          if (param0 == 34) {
-            break L0;
-          } else {
-            String discarded$1 = dd.a(true, false, true, -68);
-            break L0;
-          }
+        if (!(0 != param1)) {
+            return 0;
         }
-        if (0 == param1) {
-          return 0;
-        } else {
-          if (param1 <= 0) {
-            L1: {
-              var2 = 2;
-              if (param1 < -65536) {
-                var2 += 16;
-                param1 = param1 >> 16;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            L2: {
-              if (param1 >= -256) {
-                break L2;
-              } else {
-                param1 = param1 >> 8;
-                var2 += 8;
-                break L2;
-              }
-            }
-            L3: {
-              if (param1 < -16) {
-                var2 += 4;
-                param1 = param1 >> 4;
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            L4: {
-              if (param1 < -4) {
-                param1 = param1 >> 2;
-                var2 += 2;
-                break L4;
-              } else {
-                break L4;
-              }
-            }
-            L5: {
-              if (param1 >= -2) {
-                break L5;
-              } else {
-                var2++;
-                param1 = param1 >> 1;
-                break L5;
-              }
-            }
-            return var2;
-          } else {
-            L6: {
-              var2 = 1;
-              if (param1 > 65535) {
+        if (param1 > 0) {
+            var2 = 1;
+            if (!(param1 <= 65535)) {
                 param1 = param1 >> 16;
                 var2 += 16;
-                break L6;
-              } else {
-                break L6;
-              }
             }
-            L7: {
-              if (param1 > 255) {
+            if (!(param1 <= 255)) {
                 var2 += 8;
                 param1 = param1 >> 8;
-                break L7;
-              } else {
-                break L7;
-              }
             }
-            L8: {
-              if (param1 > 15) {
+            if (!(param1 <= 15)) {
                 var2 += 4;
                 param1 = param1 >> 4;
-                break L8;
-              } else {
-                break L8;
-              }
             }
-            L9: {
-              if (param1 <= 3) {
-                break L9;
-              } else {
+            if (param1 > 3) {
                 param1 = param1 >> 2;
                 var2 += 2;
-                break L9;
-              }
             }
-            L10: {
-              if (param1 <= 1) {
-                break L10;
-              } else {
+            if (param1 > 1) {
                 param1 = param1 >> 1;
                 var2++;
-                break L10;
-              }
             }
             return var2;
-          }
         }
+        var2 = 2;
+        if (!(param1 >= -65536)) {
+            var2 += 16;
+            param1 = param1 >> 16;
+        }
+        if (param1 < -256) {
+            param1 = param1 >> 8;
+            var2 += 8;
+        }
+        if (!(param1 >= -16)) {
+            var2 += 4;
+            param1 = param1 >> 4;
+        }
+        if (!(param1 >= -4)) {
+            param1 = param1 >> 2;
+            var2 += 2;
+        }
+        if (param1 < -2) {
+            var2++;
+            param1 = param1 >> 1;
+        }
+        return var2;
     }
 
-    final static String a(boolean param0, boolean param1, boolean param2, int param3) {
+    final static String a(boolean param0, boolean param1) {
         int var4 = 0;
         if (param1) {
             var4 += 4;
         }
         if (!(!param0)) {
             var4 += 2;
-        }
-        if (param2) {
-            var4++;
-        }
-        if (param3 != -11902) {
-            field_d = null;
         }
         return sb.field_c[var4];
     }
@@ -158,7 +89,7 @@ abstract class dd {
         field_f = null;
     }
 
-    final static void a(int[] param0, int param1) {
+    final static void a(int[] param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

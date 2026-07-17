@@ -8,7 +8,7 @@ final class td {
     static int field_a;
     static long field_e;
 
-    final static void a(int param0, byte param1) {
+    final static void a() {
         RuntimeException var2 = null;
         int var3 = 0;
         nn var4 = null;
@@ -21,7 +21,7 @@ final class td {
               if (var4 == null) {
                 break L0;
               } else {
-                pi.a((byte) 25, param0, var4);
+                pi.a((byte) 25, 2, var4);
                 var4 = (nn) (Object) ro.field_a.a(false);
                 continue L1;
               }
@@ -30,7 +30,7 @@ final class td {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var2, "td.A(" + param0 + 44 + -95 + 41);
+          throw sh.a((Throwable) (Object) var2, "td.A(" + 2 + 44 + -95 + 41);
         }
     }
 

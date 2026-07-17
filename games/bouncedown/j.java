@@ -9,14 +9,14 @@ final class j extends ai {
     int field_g;
     byte[] field_i;
 
-    final static gk a(boolean param0, byte param1, boolean param2, int param3, boolean param4, int param5) {
+    final static gk a(boolean param0, byte param1, boolean param2, int param3) {
         try {
             Object var6 = null;
             Object var7 = null;
             ce var8 = null;
-            gk stackIn_16_0 = null;
+            gk stackIn_13_0 = null;
             Throwable decompiledCaughtException = null;
-            gk stackOut_15_0 = null;
+            gk stackOut_12_0 = null;
             try {
               L0: {
                 L1: {
@@ -64,17 +64,9 @@ final class j extends ai {
                     break L3;
                   }
                 }
-                L6: {
-                  var8 = ih.field_Q.a(param2, (vh) var7, (vh) var6, param3, -18023);
-                  if (param0) {
-                    var8.b((byte) -124);
-                    break L6;
-                  } else {
-                    break L6;
-                  }
-                }
-                stackOut_15_0 = new gk((td) (Object) var8, param4, param5);
-                stackIn_16_0 = stackOut_15_0;
+                var8 = ih.field_Q.a(false, (vh) var7, (vh) var6, param3, -18023);
+                stackOut_12_0 = new gk((td) (Object) var8, true, 1);
+                stackIn_13_0 = stackOut_12_0;
                 break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -82,7 +74,7 @@ final class j extends ai {
               var6 = (Object) (Object) decompiledCaughtException;
               throw new RuntimeException(((IOException) var6).toString());
             }
-            return stackIn_16_0;
+            return stackIn_13_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -90,11 +82,11 @@ final class j extends ai {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_j = null;
     }
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean a(char param0) {
         if (param0 < 65) {
           if (param0 >= 97) {
             if (param0 <= 122) {
@@ -122,10 +114,10 @@ final class j extends ai {
         }
     }
 
-    final static void c(byte param0) {
+    final static void c() {
         ig.a(-102);
         fe.field_g = true;
-        int var1 = -119 % ((param0 - -35) / 46);
+        int var1 = 0;
         ee.field_c = true;
         q.field_N.k(-20281);
         fj.a(false, vb.field_o, -1);

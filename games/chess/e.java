@@ -20,30 +20,26 @@ final class e extends ma implements mj {
         int var6 = 0;
         fb[] var7 = null;
         var6 = Chess.field_G;
-        if (((e) this).field_Q < param1) {
+        if (((e) this).field_Q >= param1) {
+          return;
+        } else {
           var7 = new fb[param1];
           var3 = var7;
           var4 = new int[param1];
-          if (param0 != 2116) {
-            return;
-          } else {
-            var5 = 0;
-            L0: while (true) {
-              if (((e) this).field_Q <= var5) {
-                ((e) this).field_S = var3;
-                ((e) this).field_Q = param1;
-                ((e) this).field_K = var4;
-                return;
-              } else {
-                var7[var5] = ((e) this).field_S[var5];
-                var4[var5] = ((e) this).field_K[var5];
-                var5++;
-                continue L0;
-              }
+          var5 = 0;
+          L0: while (true) {
+            if (((e) this).field_Q <= var5) {
+              ((e) this).field_S = var3;
+              ((e) this).field_Q = param1;
+              ((e) this).field_K = var4;
+              return;
+            } else {
+              var7[var5] = ((e) this).field_S[var5];
+              var4[var5] = ((e) this).field_K[var5];
+              var5++;
+              continue L0;
             }
           }
-        } else {
-          return;
         }
     }
 
@@ -55,12 +51,12 @@ final class e extends ma implements mj {
         }
     }
 
-    final static void h(byte param0) {
+    final static void h() {
         cf.field_Jb = ud.a(2);
         s.field_K = 0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_M = null;
         field_T = null;
     }
@@ -324,7 +320,8 @@ final class e extends ma implements mj {
         int stackOut_8_0 = 0;
         vi.field_d = wb.field_h;
         fn.field_c = wb.field_c;
-        tf.a(90);
+        int discarded$1 = 90;
+        tf.a();
         wf.field_W.a(ql.field_d.field_M, 0, 0, -2 + (ql.field_d.field_pb + -40), true);
         fe.field_h.a(0, dc.field_q.field_M, -2147483648, fe.field_g, 0);
         if (param0 > -124) {
@@ -621,27 +618,25 @@ final class e extends ma implements mj {
         }
     }
 
-    final static void i(byte param0) {
+    final static void i() {
         RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = Chess.field_G;
         try {
           L0: {
-            if (mk.b(110)) {
-              boolean discarded$14 = ji.field_V.a(-126, hn.field_m, tj.field_o, true);
-              if (param0 >= 109) {
-                ji.field_V.f((byte) 64);
-                L1: while (true) {
-                  if (!kf.d(18954)) {
-                    break L0;
-                  } else {
-                    boolean discarded$15 = ji.field_V.a(d.field_Ib, -110, vg.field_a);
-                    continue L1;
-                  }
+            int discarded$19 = 110;
+            if (mk.b()) {
+              boolean discarded$20 = ji.field_V.a(-126, hn.field_m, tj.field_o, true);
+              ji.field_V.f((byte) 64);
+              L1: while (true) {
+                int discarded$21 = 18954;
+                if (!kf.d()) {
+                  break L0;
+                } else {
+                  boolean discarded$22 = ji.field_V.a(d.field_Ib, -110, vg.field_a);
+                  continue L1;
                 }
-              } else {
-                return;
               }
             } else {
               L2: {
@@ -663,7 +658,7 @@ final class e extends ma implements mj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fk.a((Throwable) (Object) var1, "e.J(" + param0 + 41);
+          throw fk.a((Throwable) (Object) var1, "e.J(" + 114 + 41);
         }
     }
 

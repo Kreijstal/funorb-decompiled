@@ -96,7 +96,8 @@ final class ai extends ck {
                 }
                 if (ln.field_h) {
                   en.a(79);
-                  am.b(-104);
+                  int discarded$3 = -104;
+                  am.b();
                   break L1;
                 } else {
                   break L1;
@@ -109,7 +110,9 @@ final class ai extends ck {
                   if (null != ol.field_ac) {
                     break L7;
                   } else {
-                    ol.field_ac = od.a(6, true);
+                    int discarded$4 = 1;
+                    int discarded$5 = 6;
+                    ol.field_ac = od.a();
                     break L7;
                   }
                 }

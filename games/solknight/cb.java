@@ -12,7 +12,7 @@ final class cb extends IOException {
         field_b = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -32,9 +32,6 @@ final class cb extends IOException {
 
     final static void b(int param0) {
         ce.field_f = null;
-        if (param0 != 32) {
-            return;
-        }
         rc.field_r = null;
     }
 
@@ -42,7 +39,7 @@ final class cb extends IOException {
         super(param0);
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         int var1 = 0;
         if (wc.field_a < 224) {
           var1 = wc.field_a % 32;

@@ -10,17 +10,18 @@ final class sj {
     static String field_b;
     private int field_a;
 
-    final static void a(p param0, int param1, int param2) {
+    final static void a(p param0) {
         try {
             rh.field_a.a(-81, (hf) (Object) param0);
-            ol.a(4, param0, 30175);
-            int var3_int = -18 % ((param1 - 3) / 40);
+            int discarded$0 = 30175;
+            ol.a(4, param0);
+            int var3_int = 0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "sj.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 4 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "sj.A(" + (param0 != null ? "{...}" : "null") + 44 + -56 + 44 + 4 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_g = null;
         field_e = null;
         field_b = null;
@@ -46,7 +47,7 @@ final class sj {
         }
     }
 
-    private final int b(int param0, int param1) {
+    private final int b(int param0) {
         int var3 = 0;
         int var4 = 0;
         var4 = Geoblox.field_C;
@@ -94,34 +95,20 @@ final class sj {
     }
 
     private final void a(int param0, int param1, int param2) {
-        if (param1 != 1) {
-          return;
-        } else {
-          L0: {
-            if (((sj) this).field_d < param2) {
-              ((sj) this).field_d = param2;
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          L1: {
-            if (((sj) this).field_f.length <= param2) {
-              this.c(param2, param1 ^ 25176);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          ((sj) this).field_f[param2] = param0;
-          return;
+        if (!(((sj) this).field_d >= param2)) {
+            ((sj) this).field_d = param2;
         }
+        if (!(((sj) this).field_f.length > param2)) {
+            this.c(param2, 25177);
+        }
+        ((sj) this).field_f[param2] = param0;
     }
 
     private final void c(int param0, int param1) {
         int[] var3 = null;
         int[] var4 = null;
-        var4 = new int[this.b(param0, 1)];
+        int discarded$2 = 1;
+        var4 = new int[this.b(param0)];
         var3 = var4;
         if (param1 != 25177) {
           ((sj) this).field_f = null;

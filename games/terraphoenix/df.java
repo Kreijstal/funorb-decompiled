@@ -15,7 +15,7 @@ final class df extends eb {
         try {
           L0: {
             re.a(pb.field_b, (byte) -26, ok.field_j, hm.field_L, true, 0, param1);
-            var2_int = param0;
+            var2_int = 0;
             L1: while (true) {
               if (var2_int >= pb.field_b) {
                 L2: {
@@ -38,11 +38,11 @@ final class df extends eb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qk.a((Throwable) (Object) var2, "df.D(" + param0 + 44 + param1 + 41);
+          throw qk.a((Throwable) (Object) var2, "df.D(" + 0 + 44 + param1 + 41);
         }
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         field_L = null;
         field_M = null;
         field_K = null;

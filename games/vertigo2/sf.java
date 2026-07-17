@@ -9,7 +9,7 @@ final class sf {
     static int[] field_e;
     static boolean[][] field_f;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
         field_e = null;
         field_b = null;
@@ -48,7 +48,8 @@ final class sf {
                 try {
                   L1: {
                     var2 = new java.net.URL(param0.getCodeBase(), "quit.ws");
-                    param0.getAppletContext().showDocument(ar.a(param0, var2, 0), "_top");
+                    int discarded$8 = 0;
+                    param0.getAppletContext().showDocument(ar.a(param0, var2), "_top");
                     if (param1 < -40) {
                       break L1;
                     } else {
@@ -149,62 +150,58 @@ final class sf {
         var13 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
-            if (param1 == 17) {
-              if (param3 < param2) {
-                L1: {
-                  var5_int = (param2 + param3) / 2;
-                  var6 = param3;
-                  var7 = param0[var5_int];
-                  param0[var5_int] = param0[param2];
-                  param0[param2] = var7;
-                  var8 = param4[var5_int];
-                  param4[var5_int] = param4[param2];
-                  param4[param2] = var8;
-                  if (2147483647 == var7) {
-                    stackOut_7_0 = 0;
-                    stackIn_8_0 = stackOut_7_0;
-                    break L1;
-                  } else {
-                    stackOut_6_0 = 1;
-                    stackIn_8_0 = stackOut_6_0;
-                    break L1;
-                  }
+            if (param3 < param2) {
+              L1: {
+                var5_int = (param2 + param3) / 2;
+                var6 = param3;
+                var7 = param0[var5_int];
+                param0[var5_int] = param0[param2];
+                param0[param2] = var7;
+                var8 = param4[var5_int];
+                param4[var5_int] = param4[param2];
+                param4[param2] = var8;
+                if (2147483647 == var7) {
+                  stackOut_7_0 = 0;
+                  stackIn_8_0 = stackOut_7_0;
+                  break L1;
+                } else {
+                  stackOut_6_0 = 1;
+                  stackIn_8_0 = stackOut_6_0;
+                  break L1;
                 }
-                var9 = stackIn_8_0;
-                var10 = param3;
-                L2: while (true) {
-                  if (param2 <= var10) {
-                    param0[param2] = param0[var6];
-                    param0[var6] = var7;
-                    param4[param2] = param4[var6];
-                    param4[var6] = var8;
-                    sf.a(param0, (byte) 17, -1 + var6, param3, param4);
-                    sf.a(param0, (byte) 17, param2, 1 + var6, param4);
-                    break L0;
-                  } else {
-                    L3: {
-                      if (param0[var10] > -(var10 & var9) + var7) {
-                        var11 = param0[var10];
-                        param0[var10] = param0[var6];
-                        param0[var6] = var11;
-                        var12 = param4[var10];
-                        param4[var10] = param4[var6];
-                        int incrementValue$1 = var6;
-                        var6++;
-                        param4[incrementValue$1] = var12;
-                        var10++;
-                        break L3;
-                      } else {
-                        var10++;
-                        break L3;
-                      }
+              }
+              var9 = stackIn_8_0;
+              var10 = param3;
+              L2: while (true) {
+                if (param2 <= var10) {
+                  param0[param2] = param0[var6];
+                  param0[var6] = var7;
+                  param4[param2] = param4[var6];
+                  param4[var6] = var8;
+                  sf.a(param0, (byte) 17, -1 + var6, param3, param4);
+                  sf.a(param0, (byte) 17, param2, 1 + var6, param4);
+                  break L0;
+                } else {
+                  L3: {
+                    if (param0[var10] > -(var10 & var9) + var7) {
+                      var11 = param0[var10];
+                      param0[var10] = param0[var6];
+                      param0[var6] = var11;
+                      var12 = param4[var10];
+                      param4[var10] = param4[var6];
+                      int incrementValue$1 = var6;
+                      var6++;
+                      param4[incrementValue$1] = var12;
+                      var10++;
+                      break L3;
+                    } else {
+                      var10++;
+                      break L3;
                     }
-                    var10++;
-                    continue L2;
                   }
+                  var10++;
+                  continue L2;
                 }
-              } else {
-                return;
               }
             } else {
               return;
@@ -240,7 +237,7 @@ final class sf {
           }
           L5: {
             stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(44).append(17).append(44).append(param2).append(44).append(param3).append(44);
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;

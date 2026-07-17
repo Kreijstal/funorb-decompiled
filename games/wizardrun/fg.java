@@ -81,7 +81,8 @@ final class fg {
                     }
                   }
                 } else {
-                  rg.a((Throwable) null, "HS1: " + ni.c(6), -562);
+                  int discarded$7 = 6;
+                  rg.a((Throwable) null, "HS1: " + ni.c(), -562);
                   ql.a(-48);
                   break L2;
                 }
@@ -116,16 +117,16 @@ final class fg {
                         var8_int = 1;
                         L8: while (true) {
                           if (var5 <= var8_int) {
-                            String[][] dupTemp$6 = new String[3][var6_int];
-                            var4_ref_nj.field_n = dupTemp$6;
-                            var8 = dupTemp$6;
+                            String[][] dupTemp$8 = new String[3][var6_int];
+                            var4_ref_nj.field_n = dupTemp$8;
+                            var8 = dupTemp$8;
                             var9 = new String[3][var6_int];
-                            long[][] dupTemp$7 = new long[3][var6_int];
-                            var4_ref_nj.field_q = dupTemp$7;
-                            var10 = dupTemp$7;
-                            int[][] dupTemp$8 = new int[3][var6_int * var7];
-                            var4_ref_nj.field_i = dupTemp$8;
-                            var11 = dupTemp$8;
+                            long[][] dupTemp$9 = new long[3][var6_int];
+                            var4_ref_nj.field_q = dupTemp$9;
+                            var10 = dupTemp$9;
+                            int[][] dupTemp$10 = new int[3][var6_int * var7];
+                            var4_ref_nj.field_i = dupTemp$10;
+                            var11 = dupTemp$10;
                             var12 = 0;
                             var13 = 0;
                             var14 = 0;
@@ -158,9 +159,9 @@ final class fg {
                                         if (var7 <= var25) {
                                           break L10;
                                         } else {
-                                          int incrementValue$9 = var15;
+                                          int incrementValue$11 = var15;
                                           var15++;
-                                          var11[0][incrementValue$9] = var27.i(255);
+                                          var11[0][incrementValue$11] = var27.i(255);
                                           var25++;
                                           continue L11;
                                         }
@@ -184,9 +185,9 @@ final class fg {
                                           if (var7 <= var25) {
                                             break L12;
                                           } else {
-                                            int incrementValue$10 = var16;
+                                            int incrementValue$12 = var16;
                                             var16++;
-                                            var11[1][incrementValue$10] = var27.i(255);
+                                            var11[1][incrementValue$12] = var27.i(255);
                                             var25++;
                                             continue L13;
                                           }
@@ -210,9 +211,9 @@ final class fg {
                                           if (var7 <= var25) {
                                             break L14;
                                           } else {
-                                            int incrementValue$11 = var17;
+                                            int incrementValue$13 = var17;
                                             var17++;
-                                            var11[2][incrementValue$11] = var27.i(255);
+                                            var11[2][incrementValue$13] = var27.i(255);
                                             var25++;
                                             continue L15;
                                           }
@@ -263,7 +264,7 @@ final class fg {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_d = null;
     }
 
@@ -300,7 +301,7 @@ final class fg {
         return stackIn_6_0;
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean a(char param0) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -324,7 +325,8 @@ final class fg {
         try {
           L0: {
             if (!Character.isISOControl(param0)) {
-              if (kl.a(param0, true)) {
+              int discarded$8 = 1;
+              if (kl.a(param0)) {
                 stackOut_6_0 = 1;
                 stackIn_7_0 = stackOut_6_0;
                 return stackIn_7_0 != 0;

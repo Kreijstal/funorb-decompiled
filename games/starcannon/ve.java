@@ -10,7 +10,7 @@ final class ve {
     static boolean field_d;
     private boolean field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_g = null;
     }
@@ -41,7 +41,8 @@ final class ve {
           L0: {
             ((ve) this).field_c = param0;
             if (((ve) this).field_e.length <= param0) {
-              this.d(param0, 0);
+              int discarded$4 = 0;
+              this.d(param0);
               break L0;
             } else {
               break L0;
@@ -52,7 +53,8 @@ final class ve {
         } else {
           L1: {
             if (((ve) this).field_e.length <= param0) {
-              this.d(param0, 0);
+              int discarded$5 = 0;
+              this.d(param0);
               break L1;
             } else {
               break L1;
@@ -63,7 +65,7 @@ final class ve {
         }
     }
 
-    private final void d(int param0, int param1) {
+    private final void d(int param0) {
         int[] var4 = new int[this.a(param0, (byte) -77)];
         int[] var3 = var4;
         ug.a(((ve) this).field_e, 0, var4, 0, ((ve) this).field_e.length);

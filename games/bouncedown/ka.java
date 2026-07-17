@@ -496,7 +496,7 @@ final class ka extends wf {
         }
     }
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void a(java.awt.Component param0) {
         try {
             param0.removeMouseListener((java.awt.event.MouseListener) (Object) nj.field_o);
             param0.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) nj.field_o);

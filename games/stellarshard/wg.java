@@ -9,7 +9,7 @@ final class wg extends RuntimeException {
     Throwable field_a;
     static int field_c;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_b = null;
         int var1 = 0;

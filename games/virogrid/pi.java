@@ -901,8 +901,8 @@ final class pi {
                       if (var12.field_Zb != null) {
                         var31 += 2;
                         var37 = new StringBuilder(64);
-                        StringBuilder discarded$4 = var37.append(ig.field_d);
-                        StringBuilder discarded$5 = var37.append(var12.field_Zb[0]);
+                        StringBuilder discarded$5 = var37.append(ig.field_d);
+                        StringBuilder discarded$6 = var37.append(var12.field_Zb[0]);
                         var38_int = 1;
                         L38: while (true) {
                           if (var12.field_ic <= var38_int) {
@@ -913,8 +913,8 @@ final class pi {
                             var31 = var31 + pg.field_e * var39;
                             break L37;
                           } else {
-                            StringBuilder discarded$6 = var37.append(", ");
-                            StringBuilder discarded$7 = var37.append(var12.field_Zb[var38_int]);
+                            StringBuilder discarded$7 = var37.append(", ");
+                            StringBuilder discarded$8 = var37.append(var12.field_Zb[var38_int]);
                             var38_int++;
                             continue L38;
                           }
@@ -946,7 +946,8 @@ final class pi {
                   }
                 }
                 L40: {
-                  var33 = ba.a(var32, var12.field_Eb, (byte) 83);
+                  int discarded$9 = 83;
+                  var33 = ba.a(var32, var12.field_Eb);
                   if (var33 != null) {
                     var34_int = var12.field_Tb.field_C.b(var33, -qi.field_d + var12.field_K - qi.field_d);
                     var12.field_Tb.field_H = 256 * var12.field_Mb / fn.field_c;
@@ -1072,7 +1073,7 @@ final class pi {
                           break L53;
                         } else {
                           if (0 == var12.field_tc.field_nb) {
-                            jd.a(var12, 17300, param0, var32);
+                            jd.a(var12, 17300, true, var32);
                             break L53;
                           } else {
                             L54: {
@@ -1154,9 +1155,6 @@ final class pi {
     final static void a(String param0, int param1, java.applet.Applet param2) {
         try {
             java.net.URL var3 = null;
-            if (param1 != -17713) {
-                field_a = null;
-            }
             try {
                 var3 = new java.net.URL(param2.getCodeBase(), param0);
                 var3 = og.a(-1, param2, var3);

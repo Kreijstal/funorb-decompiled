@@ -37,6 +37,7 @@ final class ba extends kn implements be, sh {
             ((ba) this).field_J = param0;
             ((ba) this).field_I = new hc(oh.field_A, (rm) null);
             ((ba) this).field_I.field_A = (ad) (Object) new wi();
+            int discarded$1 = -65;
             var7 = oa.a((byte) -98, tk.field_b, new String[2]);
             var3 = 20;
             var4 = new eg(bn.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, bn.field_d.field_I, -1, 2147483647, true);
@@ -89,7 +90,7 @@ final class ba extends kn implements be, sh {
         }
     }
 
-    private final String e(byte param0) {
+    private final String e() {
         return "</col></u>";
     }
 
@@ -334,10 +335,13 @@ final class ba extends kn implements be, sh {
     final static void a(bj param0, bj param1, bj param2, boolean param3, bj param4) {
         RuntimeException var5 = null;
         ri var6 = null;
-        di stackIn_3_0 = null;
-        di stackIn_4_0 = null;
-        di stackIn_5_0 = null;
-        int stackIn_5_1 = 0;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
@@ -359,19 +363,15 @@ final class ba extends kn implements be, sh {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        di stackOut_2_0 = null;
-        di stackOut_4_0 = null;
-        int stackOut_4_1 = 0;
-        di stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         RuntimeException stackOut_7_0 = null;
         StringBuilder stackOut_7_1 = null;
         RuntimeException stackOut_9_0 = null;
@@ -396,14 +396,6 @@ final class ba extends kn implements be, sh {
         RuntimeException stackOut_14_0 = null;
         StringBuilder stackOut_14_1 = null;
         String stackOut_14_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
         try {
           L0: {
             ph.field_a = wh.a(param4, "", "md_title_music");
@@ -415,48 +407,51 @@ final class ba extends kn implements be, sh {
             aa.field_e = wh.a(param4, "", "md_lose");
             var6 = new ri(param0, param1);
             boolean discarded$7 = km.field_a.a(false, ph.field_a, var6, 0, param2);
-            if (param3) {
-              L1: {
-                boolean discarded$8 = km.field_a.a(false, h.field_d, var6, 0, param2);
-                stackOut_2_0 = km.field_a;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_3_0 = stackOut_2_0;
-                if (param3) {
-                  stackOut_4_0 = (di) (Object) stackIn_4_0;
-                  stackOut_4_1 = 0;
-                  stackIn_5_0 = stackOut_4_0;
-                  stackIn_5_1 = stackOut_4_1;
-                  break L1;
-                } else {
-                  stackOut_3_0 = (di) (Object) stackIn_3_0;
-                  stackOut_3_1 = 1;
-                  stackIn_5_0 = stackOut_3_0;
-                  stackIn_5_1 = stackOut_3_1;
-                  break L1;
-                }
-              }
-              boolean discarded$9 = ((di) (Object) stackIn_5_0).a(stackIn_5_1 != 0, df.field_b, var6, 0, param2);
-              boolean discarded$10 = km.field_a.a(false, eg.field_p, var6, 0, param2);
-              boolean discarded$11 = km.field_a.a(false, hl.field_a, var6, 0, param2);
-              boolean discarded$12 = km.field_a.a(false, al.field_s, var6, 0, param2);
-              boolean discarded$13 = km.field_a.a(false, aa.field_e, var6, 0, param2);
-              km.field_a.e(100);
-              break L0;
-            } else {
-              return;
-            }
+            boolean discarded$8 = km.field_a.a(false, h.field_d, var6, 0, param2);
+            boolean discarded$9 = km.field_a.a(false, df.field_b, var6, 0, param2);
+            boolean discarded$10 = km.field_a.a(false, eg.field_p, var6, 0, param2);
+            boolean discarded$11 = km.field_a.a(false, hl.field_a, var6, 0, param2);
+            boolean discarded$12 = km.field_a.a(false, al.field_s, var6, 0, param2);
+            boolean discarded$13 = km.field_a.a(false, aa.field_e, var6, 0, param2);
+            km.field_a.e(100);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var5 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var5;
-            stackOut_7_1 = new StringBuilder().append("ba.D(");
+            stackOut_4_0 = (RuntimeException) var5;
+            stackOut_4_1 = new StringBuilder().append("ba.D(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L1;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L1;
+            }
+          }
+          L2: {
+            stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44);
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
-            if (param0 == null) {
+            if (param1 == null) {
               stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
               stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
               stackOut_9_2 = "null";
@@ -481,7 +476,7 @@ final class ba extends kn implements be, sh {
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
             stackIn_11_1 = stackOut_10_1;
-            if (param1 == null) {
+            if (param2 == null) {
               stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
               stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
               stackOut_12_2 = "null";
@@ -501,12 +496,12 @@ final class ba extends kn implements be, sh {
           }
           L4: {
             stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(1).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
             stackIn_14_1 = stackOut_13_1;
-            if (param2 == null) {
+            if (param4 == null) {
               stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
               stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
               stackOut_15_2 = "null";
@@ -524,32 +519,7 @@ final class ba extends kn implements be, sh {
               break L4;
             }
           }
-          L5: {
-            stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(param3).append(44);
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
-            if (param4 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
-              break L5;
-            } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
-              break L5;
-            }
-          }
-          throw lj.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
         }
     }
 

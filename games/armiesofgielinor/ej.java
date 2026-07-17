@@ -394,7 +394,7 @@ final class ej extends tc implements mm {
         var5 = param0 % ((ej) this).field_D.field_v;
         var6 = param0 / ((ej) this).field_D.field_v;
         var7 = ((ej) this).field_D.field_Eb[param0];
-        if (!var7.a(param1)) {
+        if (!var7.a(false)) {
           return;
         } else {
           L0: {
@@ -500,27 +500,19 @@ final class ej extends tc implements mm {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        int stackIn_5_0 = 0;
+        int stackIn_3_0 = 0;
+        int stackOut_1_0 = 0;
         int stackOut_2_0 = 0;
-        int stackOut_4_0 = 0;
-        L0: {
-          var14 = ArmiesOfGielinor.field_M ? 1 : 0;
-          var6 = 0;
-          if (param1 == -14092) {
-            break L0;
-          } else {
-            ((ej) this).field_E = 123;
-            break L0;
-          }
-        }
-        stackOut_2_0 = var6;
-        stackIn_5_0 = stackOut_2_0;
-        L1: while (true) {
-          if (stackIn_5_0 >= 8) {
+        var14 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = 0;
+        stackOut_1_0 = var6;
+        stackIn_3_0 = stackOut_1_0;
+        L0: while (true) {
+          if (stackIn_3_0 >= 8) {
             return;
           } else {
             if (((ej) this).field_I[var6].length >= param3) {
-              L2: {
+              L1: {
                 var7 = ((ej) this).field_I[var6][param3 - 1];
                 if (var7 != null) {
                   var8 = param2 % ((ej) this).field_D.field_v;
@@ -528,17 +520,17 @@ final class ej extends tc implements mm {
                   if (param0 != 0) {
                     var10 = 0;
                     var11_int = -param0;
-                    L3: while (true) {
+                    L2: while (true) {
                       if (param0 <= var11_int) {
                         var11 = (float)param4 * ((ej) this).field_P[55] / (float)var10;
                         var12 = -param0;
-                        L4: while (true) {
+                        L3: while (true) {
                           if (param0 > var12) {
                             var13 = -param0;
-                            L5: while (true) {
+                            L4: while (true) {
                               if (var13 >= param0) {
                                 var12++;
-                                continue L4;
+                                continue L3;
                               } else {
                                 if (param0 == Math.abs(var12) + Math.abs(var13)) {
                                   if (0 <= var12 + var8) {
@@ -547,40 +539,40 @@ final class ej extends tc implements mm {
                                         if (var9 - -var13 < ((ej) this).field_D.field_db) {
                                           ((ej) this).field_m.a(var7, false, var11, var6, (byte) -4, 0, var9 + var13, var8 + var12);
                                           var13++;
-                                          continue L5;
+                                          continue L4;
                                         } else {
                                           var13++;
-                                          continue L5;
+                                          continue L4;
                                         }
                                       } else {
                                         var13++;
-                                        continue L5;
+                                        continue L4;
                                       }
                                     } else {
                                       var13++;
-                                      continue L5;
+                                      continue L4;
                                     }
                                   } else {
                                     var13++;
-                                    continue L5;
+                                    continue L4;
                                   }
                                 } else {
                                   var13++;
-                                  continue L5;
+                                  continue L4;
                                 }
                               }
                             }
                           } else {
                             var6++;
-                            break L2;
+                            break L1;
                           }
                         }
                       } else {
                         var12 = -param0;
-                        L6: while (true) {
+                        L5: while (true) {
                           if (param0 <= var12) {
                             var11_int++;
-                            continue L3;
+                            continue L2;
                           } else {
                             if (param0 == Math.abs(var11_int) + Math.abs(var12)) {
                               if (var8 + var11_int >= 0) {
@@ -589,26 +581,26 @@ final class ej extends tc implements mm {
                                     if (((ej) this).field_D.field_db > var12 + var9) {
                                       var10++;
                                       var12++;
-                                      continue L6;
+                                      continue L5;
                                     } else {
                                       var12++;
-                                      continue L6;
+                                      continue L5;
                                     }
                                   } else {
                                     var12++;
-                                    continue L6;
+                                    continue L5;
                                   }
                                 } else {
                                   var12++;
-                                  continue L6;
+                                  continue L5;
                                 }
                               } else {
                                 var12++;
-                                continue L6;
+                                continue L5;
                               }
                             } else {
                               var12++;
-                              continue L6;
+                              continue L5;
                             }
                           }
                         }
@@ -617,16 +609,16 @@ final class ej extends tc implements mm {
                   } else {
                     ((ej) this).field_m.a(var7, false, ((ej) this).field_P[55] * (float)param4, var6, (byte) -4, 0, var9, var8);
                     var6++;
-                    break L2;
+                    break L1;
                   }
                 } else {
                   var6++;
-                  break L2;
+                  break L1;
                 }
               }
-              stackOut_4_0 = var6;
-              stackIn_5_0 = stackOut_4_0;
-              continue L1;
+              stackOut_2_0 = var6;
+              stackIn_3_0 = stackOut_2_0;
+              continue L0;
             } else {
               return;
             }
@@ -779,7 +771,8 @@ final class ej extends tc implements mm {
                           if (((ej) this).field_t != 0) {
                             break L11;
                           } else {
-                            this.a(((ej) this).field_p, 0);
+                            int discarded$4 = 0;
+                            this.a(((ej) this).field_p);
                             ((ej) this).field_S = null;
                             ((ej) this).field_M = (cl) (Object) ((ej) this).field_p.e((byte) 127);
                             break L11;
@@ -804,17 +797,20 @@ final class ej extends tc implements mm {
                                 }
                               }
                             } else {
-                              this.e(-24236);
+                              int discarded$5 = -24236;
+                              this.e();
                               break L1;
                             }
                           } else {
-                            this.i(0);
+                            int discarded$6 = 0;
+                            this.i();
                             break L1;
                           }
                         }
                       }
                     } else {
-                      this.g(-25523);
+                      int discarded$7 = -25523;
+                      this.g();
                       break L1;
                     }
                   }
@@ -872,7 +868,8 @@ final class ej extends tc implements mm {
           return;
         } else {
           L1: {
-            this.a(param1, ((ej) this).field_L, 23);
+            int discarded$2 = 23;
+            this.a(param1, ((ej) this).field_L);
             if (param0 <= -89) {
               break L1;
             } else {
@@ -1239,7 +1236,7 @@ final class ej extends tc implements mm {
         }
     }
 
-    private final void g(int param0) {
+    private final void g() {
         cl var2 = null;
         cl var3 = null;
         if (null != ((ej) this).field_M) {
@@ -1551,7 +1548,7 @@ final class ej extends tc implements mm {
         }
         var7 = 0.0f;
         var8 = 0.0f;
-        var9 = (float)param1;
+        var9 = (float)1;
         var10 = 1.0f;
         var11 = 0;
         L1: while (true) {
@@ -1628,7 +1625,7 @@ final class ej extends tc implements mm {
         }
     }
 
-    private final void e(int param0) {
+    private final void e() {
         jd var2 = null;
         L0: {
           var2 = ((ej) this).field_D.c(((ej) this).field_y, true, ((ej) this).field_E);
@@ -1706,7 +1703,7 @@ final class ej extends tc implements mm {
                         }
                       }
                       if (var5 == 0) {
-                        this.a(param0[var4_int], false, param1);
+                        this.a(param0[var4_int], false, -1);
                         break L3;
                       } else {
                         break L3;
@@ -1749,7 +1746,7 @@ final class ej extends tc implements mm {
               break L6;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param1 + 44 + param2 + 41);
+          throw ig.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + -1 + 44 + param2 + 41);
         }
     }
 
@@ -1830,7 +1827,7 @@ final class ej extends tc implements mm {
         }
     }
 
-    final static int a(bv param0, boolean param1) {
+    final static int a(bv param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_1_0 = 0;
@@ -1853,7 +1850,11 @@ final class ej extends tc implements mm {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var2_int = de.a(-108, param0, 4, 14, 30, 20);
+            int discarded$8 = 20;
+            int discarded$9 = 30;
+            int discarded$10 = 14;
+            int discarded$11 = 4;
+            var2_int = de.a(-108, param0);
             stackOut_0_0 = var2_int;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -1963,7 +1964,7 @@ final class ej extends tc implements mm {
         }
     }
 
-    private final void a(boolean param0, int param1, int param2) {
+    private final void a(boolean param0, int param1) {
         int var13 = 0;
         var13 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (((ej) this).field_D == null) {
@@ -2296,7 +2297,7 @@ final class ej extends tc implements mm {
         }
     }
 
-    private final void a(at param0, int param1) {
+    private final void a(at param0) {
         int var3_int = 0;
         RuntimeException var3 = null;
         Object var4 = null;
@@ -2390,10 +2391,10 @@ final class ej extends tc implements mm {
     }
 
     private final void a(int param0, int param1, int param2, int param3) {
-        this.a(0, -14092, param2, param0, param1);
+        this.a(0, -14092, param2, param0, 1);
     }
 
-    private final void i(int param0) {
+    private final void i() {
         float var3 = 0.0f;
         double var4 = 0.0;
         double var6 = 0.0;
@@ -2426,20 +2427,12 @@ final class ej extends tc implements mm {
         ne var35 = null;
         ne var36 = null;
         jd var37 = null;
-        int stackIn_61_0 = 0;
-        int stackOut_60_0 = 0;
-        int stackOut_59_0 = 0;
+        int stackIn_59_0 = 0;
+        int stackOut_58_0 = 0;
+        int stackOut_57_0 = 0;
         L0: {
           var33 = null;
           var32 = ArmiesOfGielinor.field_M ? 1 : 0;
-          if (param0 == 0) {
-            break L0;
-          } else {
-            ((ej) this).field_T = null;
-            break L0;
-          }
-        }
-        L1: {
           var34 = ((ej) this).field_F;
           if (((ej) this).field_D.field_H[((ej) this).field_z] + -((ej) this).field_q >= 50) {
             var3 = 1.401298464324817e-45f;
@@ -2449,33 +2442,33 @@ final class ej extends tc implements mm {
             var10 = 0.0;
             var34.b((byte) -122);
             var37 = (jd) (Object) ((ej) this).field_D.field_t[((ej) this).field_z].e((byte) 89);
-            L2: while (true) {
+            L1: while (true) {
               if (var37 == null) {
                 var13_int = 0;
-                L3: while (true) {
+                L2: while (true) {
                   if (((ej) this).field_D.field_Eb.length <= var13_int) {
                     var12 = 0;
                     var13_int = 0;
-                    L4: while (true) {
+                    L3: while (true) {
                       if (~((ej) this).field_D.field_Eb.length >= ~var13_int) {
-                        L5: {
+                        L4: {
                           if (var12 == 0) {
-                            break L5;
+                            break L4;
                           } else {
                             var13 = var34.a((byte) -84);
                             if (var13 == null) {
-                              break L5;
+                              break L4;
                             } else {
                               this.b(6, 4);
                               ((ej) this).field_B = ((ej) this).field_t;
                               var14 = var13.field_r;
                               int discarded$1 = var13.a((byte) 5, (ej) this);
                               if (var14 == -1) {
-                                break L5;
+                                break L4;
                               } else {
                                 if (0 <= var14) {
                                   ((ej) this).field_q = ((ej) this).field_q + bw.field_m[var14][8];
-                                  break L5;
+                                  break L4;
                                 } else {
                                   return;
                                 }
@@ -2483,189 +2476,189 @@ final class ej extends tc implements mm {
                             }
                           }
                         }
-                        this.b(7, param0 ^ 4);
-                        break L1;
+                        this.b(7, 4);
+                        break L0;
                       } else {
-                        L6: {
+                        L5: {
                           var36 = ((ej) this).field_D.field_Eb[var13_int];
                           if (null == var36.field_c) {
                             if (!var36.d(-37)) {
-                              break L6;
+                              break L5;
                             } else {
                               if (((ej) this).field_z != var36.field_a) {
-                                break L6;
+                                break L5;
                               } else {
                                 var15 = ((ej) this).field_D.field_E[((ej) this).field_z];
                                 var16 = var13_int % ((ej) this).field_D.field_v;
                                 var17 = var13_int / ((ej) this).field_D.field_v;
                                 var18 = 0;
-                                L7: while (true) {
+                                L6: while (true) {
                                   if (var18 >= 75) {
-                                    break L6;
+                                    break L5;
                                   } else {
-                                    L8: {
+                                    L7: {
                                       if (var18 == 72) {
-                                        break L8;
+                                        break L7;
                                       } else {
                                         if (var18 == 39) {
-                                          break L8;
+                                          break L7;
                                         } else {
                                           if (var18 != 7) {
                                             if (var18 == 34) {
-                                              break L8;
+                                              break L7;
                                             } else {
                                               if (var18 != 51) {
                                                 if (var18 != 27) {
-                                                  L9: {
+                                                  L8: {
                                                     var19 = bw.field_m[var18][1];
                                                     if (var36.field_h != 11) {
-                                                      break L9;
+                                                      break L8;
                                                     } else {
                                                       if (~var36.field_g == ~var19) {
-                                                        break L9;
-                                                      } else {
                                                         break L8;
+                                                      } else {
+                                                        break L7;
                                                       }
+                                                    }
+                                                  }
+                                                  L9: {
+                                                    if (-1 == var19) {
+                                                      if ((((ej) this).field_D.field_a[((ej) this).field_z][var19 + 1] & 1 << b.a(false, var18)) == 0) {
+                                                        break L7;
+                                                      } else {
+                                                        break L9;
+                                                      }
+                                                    } else {
+                                                      break L9;
                                                     }
                                                   }
                                                   L10: {
-                                                    if (-1 == var19) {
-                                                      if ((((ej) this).field_D.field_a[((ej) this).field_z][var19 + 1] & 1 << b.a(false, var18)) == 0) {
-                                                        break L8;
-                                                      } else {
-                                                        break L10;
-                                                      }
-                                                    } else {
-                                                      break L10;
-                                                    }
-                                                  }
-                                                  L11: {
                                                     var20 = ((ej) this).field_D.b(var17, -26813, var18, var16, ((ej) this).field_z) ? 1 : 0;
                                                     var21 = var20;
                                                     if (var20 != 0) {
-                                                      break L11;
+                                                      break L10;
                                                     } else {
-                                                      L12: {
+                                                      L11: {
                                                         ((ej) this).field_D.field_H[((ej) this).field_z] = ((ej) this).field_D.field_H[((ej) this).field_z] + ((ej) this).field_D.k(-116, ((ej) this).field_z);
-                                                        if (!((ej) this).field_D.b(var17, param0 ^ -26813, var18, var16, ((ej) this).field_z)) {
-                                                          stackOut_60_0 = 0;
-                                                          stackIn_61_0 = stackOut_60_0;
-                                                          break L12;
+                                                        if (!((ej) this).field_D.b(var17, -26813, var18, var16, ((ej) this).field_z)) {
+                                                          stackOut_58_0 = 0;
+                                                          stackIn_59_0 = stackOut_58_0;
+                                                          break L11;
                                                         } else {
-                                                          stackOut_59_0 = 1;
-                                                          stackIn_61_0 = stackOut_59_0;
-                                                          break L12;
+                                                          stackOut_57_0 = 1;
+                                                          stackIn_59_0 = stackOut_57_0;
+                                                          break L11;
                                                         }
                                                       }
-                                                      var21 = stackIn_61_0;
+                                                      var21 = stackIn_59_0;
                                                       ((ej) this).field_D.field_H[((ej) this).field_z] = ((ej) this).field_D.field_H[((ej) this).field_z] - ((ej) this).field_D.k(-101, ((ej) this).field_z);
-                                                      break L11;
+                                                      break L10;
                                                     }
                                                   }
                                                   if (var21 == 0) {
-                                                    break L8;
+                                                    break L7;
                                                   } else {
-                                                    L13: {
+                                                    L12: {
                                                       var22 = 0.0f;
                                                       var23 = bw.field_m[var18][4];
                                                       var22 = var22 + (float)var23 * ((ej) this).field_P[26];
                                                       var22 = this.a(var18, 1, var13_int);
                                                       var25 = bw.field_m[var18][1];
                                                       if (var25 == -1) {
-                                                        break L13;
+                                                        break L12;
                                                       } else {
                                                         var24 = var15[var25];
                                                         if (~var24 == ~bw.field_m[var18][2]) {
                                                           var22 = var22 + (float)var24 * ((ej) this).field_P[23];
-                                                          break L13;
+                                                          break L12;
                                                         } else {
-                                                          break L13;
+                                                          break L12;
                                                         }
                                                       }
                                                     }
-                                                    L14: {
+                                                    L13: {
                                                       var22 = var22 - ((ej) this).field_P[25] * (float)bw.field_m[var18][8] * 0.029999999329447746f;
                                                       var26 = bw.field_m[var18][10];
                                                       var27 = bw.field_m[var18][12];
                                                       if (18 == var27) {
                                                         var22 = var22 - ((ej) this).field_P[45];
-                                                        break L14;
+                                                        break L13;
                                                       } else {
-                                                        break L14;
+                                                        break L13;
                                                       }
                                                     }
-                                                    L15: {
-                                                      L16: {
+                                                    L14: {
+                                                      L15: {
                                                         if ((var26 & 2) != 0) {
-                                                          break L16;
+                                                          break L15;
                                                         } else {
                                                           if ((16 & var26) == 0) {
-                                                            break L15;
+                                                            break L14;
                                                           } else {
-                                                            break L16;
+                                                            break L15;
                                                           }
                                                         }
                                                       }
                                                       var22 = (float)((double)var22 + var8);
                                                       var28 = 0;
-                                                      L17: while (true) {
+                                                      L16: while (true) {
                                                         if (var28 >= 8) {
-                                                          break L15;
+                                                          break L14;
                                                         } else {
                                                           var22 = var22 + ((ej) this).field_P[15] * ((ej) this).field_A[var28][var13_int];
                                                           var28++;
-                                                          continue L17;
+                                                          continue L16;
                                                         }
                                                       }
                                                     }
-                                                    L18: {
+                                                    L17: {
                                                       if ((32 & var26) != 0) {
                                                         var22 = (float)((double)var22 + var10);
+                                                        break L17;
+                                                      } else {
+                                                        break L17;
+                                                      }
+                                                    }
+                                                    L18: {
+                                                      if (21 == var18) {
+                                                        var22 = (float)((double)var22 + var6);
                                                         break L18;
                                                       } else {
                                                         break L18;
                                                       }
                                                     }
                                                     L19: {
-                                                      if (21 == var18) {
-                                                        var22 = (float)((double)var22 + var6);
-                                                        break L19;
-                                                      } else {
-                                                        break L19;
-                                                      }
-                                                    }
-                                                    L20: {
-                                                      L21: {
+                                                      L20: {
                                                         if (var18 == 0) {
-                                                          break L21;
+                                                          break L20;
                                                         } else {
                                                           if (3 != var18) {
-                                                            break L20;
+                                                            break L19;
                                                           } else {
-                                                            break L21;
+                                                            break L20;
                                                           }
                                                         }
                                                       }
                                                       var22 = (float)((double)var22 + var4);
                                                       var28 = 0;
-                                                      L22: while (true) {
+                                                      L21: while (true) {
                                                         if (var28 >= 8) {
-                                                          break L20;
+                                                          break L19;
                                                         } else {
                                                           var22 = var22 + ((ej) this).field_P[44] * ((ej) this).field_A[var28][var13_int];
                                                           var22 = var22 - ((ej) this).field_K[var28][var13_int] * ((ej) this).field_P[44];
                                                           var28++;
-                                                          continue L22;
+                                                          continue L21;
                                                         }
                                                       }
                                                     }
-                                                    L23: {
+                                                    L22: {
                                                       var28 = 1;
                                                       if (var18 != 74) {
-                                                        break L23;
+                                                        break L22;
                                                       } else {
                                                         var28 = 2;
-                                                        break L23;
+                                                        break L22;
                                                       }
                                                     }
                                                     var29 = new jd(var16, var17, var18, ((ej) this).field_z, var23, var23, var28, 0, 0, ((ej) this).field_D, 0, 0, -1, true, 0);
@@ -2678,118 +2671,118 @@ final class ej extends tc implements mm {
                                                       var12 = 1;
                                                       if (var3 < var22) {
                                                         var3 = var22;
-                                                        break L8;
+                                                        break L7;
                                                       } else {
-                                                        break L8;
+                                                        break L7;
                                                       }
                                                     } else {
                                                       if (var21 == 0) {
-                                                        break L8;
+                                                        break L7;
                                                       } else {
                                                         var22 = var22 - ((ej) this).field_P[42];
                                                         var34.a((byte) -68, var18, var22);
-                                                        break L8;
+                                                        break L7;
                                                       }
                                                     }
                                                   }
                                                 } else {
-                                                  break L8;
+                                                  break L7;
                                                 }
                                               } else {
-                                                break L8;
+                                                break L7;
                                               }
                                             }
                                           } else {
-                                            break L8;
+                                            break L7;
                                           }
                                         }
                                       }
                                     }
                                     var18++;
-                                    continue L7;
+                                    continue L6;
                                   }
                                 }
                               }
                             }
                           } else {
-                            break L6;
+                            break L5;
                           }
                         }
                         var13_int++;
-                        continue L4;
+                        continue L3;
                       }
                     }
                   } else {
-                    L24: {
+                    L23: {
                       var35 = ((ej) this).field_D.field_Eb[var13_int];
                       var36 = var35;
                       var36 = var35;
                       if (~((ej) this).field_z == ~var35.field_a) {
-                        break L24;
+                        break L23;
                       } else {
                         if (var35.a(false)) {
                           var4 = var4 + (double)(((ej) this).field_P[21] * 2.0f / (float)((ej) this).field_D.field_W);
-                          break L24;
+                          break L23;
                         } else {
-                          break L24;
+                          break L23;
                         }
                       }
                     }
-                    L25: {
+                    L24: {
                       if (var35.c(83)) {
                         var10 = var10 + (double)((ej) this).field_P[17];
                         var6 = var6 + (double)((ej) this).field_P[13];
-                        break L25;
+                        break L24;
                       } else {
-                        break L25;
+                        break L24;
                       }
                     }
                     var13_int++;
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
-                L26: {
+                L25: {
                   if (var37.i(-21428)) {
                     var4 = var4 - (double)(((ej) this).field_P[22] * 2.0f / (float)((ej) this).field_D.field_W);
-                    break L26;
+                    break L25;
                   } else {
                     if (!var37.f((byte) -125)) {
-                      if (var37.s(param0 + 127)) {
+                      if (var37.s(127)) {
                         var10 = var10 - (double)((ej) this).field_P[18];
-                        break L26;
+                        break L25;
                       } else {
-                        break L26;
+                        break L25;
                       }
                     } else {
                       var6 = var6 - (double)((ej) this).field_P[14];
-                      break L26;
+                      break L25;
                     }
                   }
                 }
-                L27: {
-                  L28: {
+                L26: {
+                  L27: {
                     if (var37.p((byte) -113)) {
-                      break L28;
+                      break L27;
                     } else {
                       if (!var37.d((byte) 105)) {
                         var8 = var8 + (double)((ej) this).field_P[27];
-                        break L27;
+                        break L26;
                       } else {
-                        break L28;
+                        break L27;
                       }
                     }
                   }
                   var8 = var8 - (double)((ej) this).field_P[16];
-                  break L27;
+                  break L26;
                 }
                 var37 = (jd) (Object) ((ej) this).field_D.field_t[((ej) this).field_z].a((byte) 123);
-                continue L2;
+                continue L1;
               }
             }
           } else {
-            this.b(7, param0 ^ 4);
-            break L1;
+            this.b(7, 4);
+            break L0;
           }
         }
     }
@@ -2820,7 +2813,8 @@ final class ej extends tc implements mm {
           }
         }
         if (hf.field_c) {
-          if (os.e(-1)) {
+          int discarded$10 = -1;
+          if (os.e()) {
             L2: {
               if (!ro.b(param3, (byte) -59, param0)) {
                 stackOut_21_0 = 0;
@@ -2878,7 +2872,8 @@ final class ej extends tc implements mm {
                     if (80 != rs.field_q) {
                       return false;
                     } else {
-                      if (os.e(-1)) {
+                      int discarded$11 = -1;
+                      if (os.e()) {
                         hf.field_c = true;
                         return true;
                       } else {
@@ -2892,7 +2887,8 @@ final class ej extends tc implements mm {
               }
             }
           }
-          return cd.a(param0, param1, false);
+          int discarded$12 = 0;
+          return cd.a(param0, param1);
         }
     }
 
@@ -2906,17 +2902,14 @@ final class ej extends tc implements mm {
 
     private final void a(int param0, int param1, int param2, jd param3) {
         float var5_float = 0.0f;
-        if (param2 != 19551) {
-            return;
-        }
         try {
             var5_float = (float)param3.g((byte) 122);
             if (!(!param3.c(false))) {
                 var5_float = var5_float * ((ej) this).field_P[59];
             }
-            ((ej) this).field_m.a(param2 ^ -19507, param3.field_w, (float)param0 * var5_float, param1, param3.g(0), ((ej) this).field_n, param3.field_J);
+            ((ej) this).field_m.a(-110, param3.field_w, (float)param0 * var5_float, param1, param3.g(0), ((ej) this).field_n, param3.field_J);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "ej.G(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "ej.G(" + param0 + 44 + param1 + 44 + 19551 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -3087,9 +3080,10 @@ final class ej extends tc implements mm {
             ((ej) this).field_D = param0;
             ((ej) this).field_z = param1;
             ((ej) this).field_P = new float[62];
-            int discarded$2 = ns.a(false, 3, li.field_n);
+            int discarded$3 = ns.a(false, 3, li.field_n);
             ((ej) this).field_D.field_k.a((byte) -119, (tc) this);
-            aj.a(((ej) this).field_P, 117);
+            int discarded$4 = 117;
+            aj.a(((ej) this).field_P);
             ((ej) this).field_u = param3;
             var5_int = 0;
             var6 = (jd) (Object) ((ej) this).field_D.field_t[((ej) this).field_z].e((byte) 104);
@@ -3115,7 +3109,7 @@ final class ej extends tc implements mm {
                     ((ej) this).field_F = (sm) (Object) new ge((ej) this);
                     break L0;
                   } else {
-                    cl discarded$3 = this.b(var6, (byte) -68);
+                    cl discarded$5 = this.b(var6, (byte) -68);
                     var6 = (jd) (Object) ((ej) this).field_D.field_t[((ej) this).field_z].a((byte) 123);
                     continue L2;
                   }

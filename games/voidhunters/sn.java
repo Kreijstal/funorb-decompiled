@@ -9,10 +9,12 @@ final class sn extends os implements oo {
 
     public final void a(int param0, int param1, int param2, htb param3, int param4) {
         if (!(!((sn) this).field_ab)) {
-            rga.a(false, true, false);
+            int discarded$0 = 0;
+            rga.a(false, true);
             return;
         }
-        cnb.f((byte) -74);
+        int discarded$4 = -74;
+        cnb.f();
         if (param0 != 11) {
             return;
         }
@@ -24,7 +26,8 @@ final class sn extends os implements oo {
     }
 
     final void e(boolean param0) {
-        this.a(true, param0, tma.a(248, mtb.field_q, (byte) -124));
+        int discarded$0 = -124;
+        this.a(true, param0, tma.a(248, mtb.field_q));
     }
 
     final static void a(int param0, byte param1, int param2, int param3, int param4, int param5, lta param6) {
@@ -272,7 +275,8 @@ final class sn extends os implements oo {
         if (param0 == 248) {
           if (((sn) this).field_z) {
             if (!((sn) this).field_Z) {
-              var2 = nkb.a(10589);
+              int discarded$4 = 10589;
+              var2 = nkb.a();
               if (var2 == null) {
                 return super.a(248);
               } else {
@@ -289,7 +293,8 @@ final class sn extends os implements oo {
           ((sn) this).field_ab = false;
           if (((sn) this).field_z) {
             if (!((sn) this).field_Z) {
-              var2 = nkb.a(10589);
+              int discarded$5 = 10589;
+              var2 = nkb.a();
               if (var2 == null) {
                 return super.a(248);
               } else {

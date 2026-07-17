@@ -7,14 +7,14 @@ final class tw {
     static String field_b;
     static int[] field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         field_a = null;
         field_d = null;
     }
 
-    final static void a(int param0, jfa param1, int param2) {
+    final static void a(int param0, jfa param1) {
         int var3_int = 0;
         if (!(!bp.e(-29919))) {
             return;
@@ -32,7 +32,7 @@ final class tw {
         }
     }
 
-    final static cq a(je param0, byte param1) {
+    final static cq a(je param0) {
         cq var2 = null;
         RuntimeException var2_ref = null;
         cq stackIn_1_0 = null;

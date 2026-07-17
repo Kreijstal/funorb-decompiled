@@ -321,7 +321,7 @@ final class gm extends nl {
                 break L1;
               } else {
                 var12 = null;
-                cn discarded$2 = gm.a((sj) null, -89, (String) null, (sj) null, (String) null);
+                cn discarded$3 = gm.a((sj) null, -89, (String) null, (sj) null, (String) null);
                 break L1;
               }
             }
@@ -417,7 +417,8 @@ final class gm extends nl {
                     break L6;
                   }
                 }
-                var7 = ad.a(dh.a(param3.field_Eb, true), 26300);
+                int discarded$4 = 1;
+                var7 = ad.a(dh.a(param3.field_Eb), 26300);
                 var8 = Math.max(param2.field_F - -15, 66 + (param2.field_F + -(pb.field_C.a(var7) >> 1)));
                 pb.field_C.a(var7, var8, param2.field_T + 51, 16777215, -1);
                 if (param1) {
@@ -429,7 +430,7 @@ final class gm extends nl {
                   break L2;
                 }
               } else {
-                int discarded$3 = pb.field_C.a(pn.field_A, param2.field_F - -18, 40 + param2.field_T, param2.field_q + -36, param2.field_mb + -50, 11184810, -1, 1, 0, 16);
+                int discarded$5 = pb.field_C.a(pn.field_A, param2.field_F - -18, 40 + param2.field_T, param2.field_q + -36, param2.field_mb + -50, 11184810, -1, 1, 0, 16);
                 break L2;
               }
             }
@@ -554,95 +555,105 @@ final class gm extends nl {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
+        Object var9 = null;
         var8 = Kickabout.field_G;
         if (null == um.field_e) {
           return;
         } else {
           L0: {
-            if (ih.field_c == 0) {
-              var2 = 74;
+            if (param0 == 109) {
               break L0;
             } else {
-              if (ih.field_c != 1) {
-                var2 = 62;
-                break L0;
-              } else {
-                var2 = 68;
-                break L0;
-              }
+              var9 = null;
+              gv discarded$2 = gm.a((String) null, true, (byte) -48);
+              break L0;
             }
           }
           L1: {
+            if (ih.field_c == 0) {
+              var2 = 74;
+              break L1;
+            } else {
+              if (ih.field_c != 1) {
+                var2 = 62;
+                break L1;
+              } else {
+                var2 = 68;
+                break L1;
+              }
+            }
+          }
+          L2: {
             var2 = var2 + dq.a((byte) 127, 2, ru.field_l);
             var3 = tq.h(-2521);
             var4 = aq.a(true);
             if (512 <= Math.abs((((gm) this).field_M >> 16) - var3)) {
-              break L1;
+              break L2;
             } else {
               if (Math.abs(-var4 + (((gm) this).field_w >> 16)) >= 512) {
-                break L1;
+                break L2;
               } else {
-                L2: {
+                L3: {
                   var5 = ad.a(-var3 + (((gm) this).field_M >> 16), true, (((gm) this).field_w >> 16) + -var4);
                   var6 = -var5 + 512 >> 3;
                   if (var6 < 16) {
                     var6 = 0;
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                }
-                L3: {
-                  if (var6 <= 36) {
                     break L3;
                   } else {
-                    var6 = 36;
                     break L3;
                   }
                 }
                 L4: {
-                  var7 = 128 + ((((gm) this).field_M >> 16) - var3);
-                  if (var7 >= 0) {
+                  if (var6 <= 36) {
                     break L4;
                   } else {
-                    var7 = 0;
+                    var6 = 36;
                     break L4;
                   }
                 }
                 L5: {
-                  if (ih.field_c == 0) {
-                    var6 -= 20;
+                  var7 = 128 + ((((gm) this).field_M >> 16) - var3);
+                  if (var7 >= 0) {
                     break L5;
                   } else {
+                    var7 = 0;
                     break L5;
                   }
                 }
                 L6: {
-                  if (256 >= var7) {
+                  if (ih.field_c == 0) {
+                    var6 -= 20;
                     break L6;
                   } else {
-                    var7 = 256;
                     break L6;
                   }
                 }
                 L7: {
-                  if (ih.field_c != 1) {
+                  if (256 >= var7) {
                     break L7;
                   } else {
-                    var6 -= 8;
+                    var7 = 256;
                     break L7;
                   }
                 }
                 L8: {
-                  if (ih.field_c == 2) {
-                    var6 += 10;
+                  if (ih.field_c != 1) {
                     break L8;
                   } else {
+                    var6 -= 8;
                     break L8;
                   }
                 }
-                wh discarded$1 = he.a(var7, false, 240, tm.field_t + var6, var2);
-                break L1;
+                L9: {
+                  if (ih.field_c == 2) {
+                    var6 += 10;
+                    break L9;
+                  } else {
+                    break L9;
+                  }
+                }
+                wh discarded$3 = he.a(var7, false, 240, tm.field_t + var6, var2);
+                break L2;
               }
             }
           }
@@ -934,7 +945,8 @@ final class gm extends nl {
                 js.field_d.a((gn) (Object) var3, 3);
                 break L1;
               } else {
-                ge.a(var3, false);
+                int discarded$3 = 0;
+                ge.a(var3);
                 break L1;
               }
             }
@@ -1840,7 +1852,7 @@ final class gm extends nl {
           }
           return (uv.b(((gm) this).field_m >> 8, ((gm) this).field_k >> 8, (byte) 2) + 6144) % 8192 >> 2;
         }
-        var2 = -34;
+        var2 = -68 / ((param0 - -17) / 51);
         if (((gm) this).field_j >= 0) {
           if (((gm) this).field_j > 0) {
             if (((gm) this).field_n == -1) {
@@ -1879,16 +1891,18 @@ final class gm extends nl {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7, int param8, boolean param9, boolean param10, boolean param11, int param12, int param13) {
+    final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7, int param8, boolean param9, boolean param10, boolean param11) {
         sn.field_e = null;
         ma.b(true);
-        param11 = in.a(param4, 50, param5, param11, param13, param12, param1);
-        ud.a(false, param7, param9, param8, param10, param6, param5, param11, param3, param2);
+        int discarded$0 = 14;
+        int discarded$1 = 13;
+        int discarded$2 = 0;
+        param11 = in.a(15, 50, 11, param11);
+        ud.a(false, 16777215, param9, param8, param10, true, 11, param11, 16777215, param2);
         sb.a(param9, false, param8);
-        if (param0 >= -42) {
-            field_S = null;
-        }
-        jo.a(param11, param8, param13, -103);
+        int discarded$3 = -103;
+        int discarded$4 = 0;
+        jo.a(param11, param8);
     }
 
     final void g(byte param0) {
@@ -1947,7 +1961,7 @@ final class gm extends nl {
         }
     }
 
-    public static void i(byte param0) {
+    public static void i() {
         field_fb = null;
         field_Q = null;
         field_lb = null;

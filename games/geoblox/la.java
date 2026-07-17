@@ -507,8 +507,9 @@ final class la extends sh {
         return stackIn_10_0 != 0;
     }
 
-    final static void f(byte param0) {
-        fh.b(-6011);
+    final static void f() {
+        int discarded$0 = -6011;
+        fh.b();
         ii.field_a = true;
         cf.field_i = true;
         kd.field_e.f(10936);
@@ -522,8 +523,8 @@ final class la extends sh {
         ((la) this).field_G = ((la) this).field_m;
     }
 
-    public static void g(byte param0) {
-        int var1 = 47 % ((param0 - -51) / 55);
+    public static void g() {
+        int var1 = 0;
         field_E = null;
         field_I = null;
     }

@@ -74,7 +74,8 @@ final class ve {
                       break L4;
                     }
                   }
-                  this.a(param2, param0, ((ve) this).field_i, ((ve) this).field_j + (-0.5 + this.a(true)) * ((ve) this).field_h, param3, param4, param1, (byte) -69, 0);
+                  int discarded$1 = 1;
+                  this.a(param2, param0, ((ve) this).field_i, ((ve) this).field_j + (-0.5 + this.a()) * ((ve) this).field_h, param3, param4, param1, (byte) -69, 0);
                   var10++;
                   continue L2;
                 }
@@ -91,7 +92,7 @@ final class ve {
         }
     }
 
-    private final double a(boolean param0) {
+    private final double a() {
         return (double)hp.a((byte) 115, ((ve) this).field_l, 1000) / 1000.0;
     }
 
@@ -112,7 +113,8 @@ final class ve {
             } else {
               L1: {
                 var11 = param6 + (int)(nm.a(0, param3) * (double)param2);
-                var12 = param4 + (int)((double)param2 * gh.a(param3, (byte) 19));
+                int discarded$2 = 19;
+                var12 = param4 + (int)((double)param2 * gh.a(param3));
                 var13 = hp.a((byte) -86, ((ve) this).field_l, (int)(2.0 * ((ve) this).field_g));
                 var14 = param2 * 126 / ((ve) this).field_i + 60;
                 if (!param0) {
@@ -123,25 +125,18 @@ final class ve {
                   break L1;
                 }
               }
-              L2: {
-                if (param7 == -69) {
-                  break L2;
-                } else {
-                  ((ve) this).field_g = 0.8709670644428569;
-                  break L2;
-                }
-              }
               oo.g(param6, param4, var11, var12, param5);
               oo.g(param6 - -1, param4, var11, var12, param5);
               oo.g(param6, 1 + param4, var11, var12, param5);
               var15 = 0;
-              L3: while (true) {
+              L2: while (true) {
                 if (var15 >= var13) {
                   return;
                 } else {
-                  this.a(param0, param1, (int)((double)param2 * ((ve) this).field_e), (-0.5 + this.a(true)) * ((ve) this).field_f + param3, var12, param5, var11, (byte) -69, param8 + 1);
+                  int discarded$3 = 1;
+                  this.a(param0, param1, (int)((double)param2 * ((ve) this).field_e), (-0.5 + this.a()) * ((ve) this).field_f + param3, var12, param5, var11, (byte) -69, param8 + 1);
                   var15++;
-                  continue L3;
+                  continue L2;
                 }
               }
             }

@@ -39,43 +39,35 @@ final class el implements io {
         Object stackIn_2_0 = null;
         kp stackIn_5_0 = null;
         Object stackIn_8_0 = null;
-        byte[] stackIn_11_0 = null;
-        byte[] stackIn_13_0 = null;
+        byte[] stackIn_10_0 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
+        String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_12_0 = null;
-        byte[] stackOut_10_0 = null;
+        byte[] stackOut_9_0 = null;
         Object stackOut_7_0 = null;
         kp stackOut_4_0 = null;
         Object stackOut_1_0 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
         RuntimeException stackOut_14_0 = null;
         StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
         try {
           L0: {
             if (param2 != null) {
               if (param2.length <= 136) {
                 if (param0 == 94) {
-                  if (!param1) {
-                    stackOut_12_0 = (byte[]) param2;
-                    stackIn_13_0 = stackOut_12_0;
-                    break L0;
-                  } else {
-                    stackOut_10_0 = jl.a(param2, (byte) 45);
-                    stackIn_11_0 = stackOut_10_0;
-                    return (Object) (Object) stackIn_11_0;
-                  }
+                  stackOut_9_0 = jl.a(param2, (byte) 45);
+                  stackIn_10_0 = stackOut_9_0;
+                  break L0;
                 } else {
                   stackOut_7_0 = null;
                   stackIn_8_0 = stackOut_7_0;
@@ -98,62 +90,54 @@ final class el implements io {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3_ref = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var3_ref;
-            stackOut_14_1 = new StringBuilder().append("el.B(").append(param0).append(44).append(param1).append(44);
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackOut_12_0 = (RuntimeException) var3_ref;
+            stackOut_12_1 = new StringBuilder().append("el.B(").append(param0).append(44).append(0).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
             if (param2 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
               break L1;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
               break L1;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw sh.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
         }
-        return (Object) (Object) stackIn_13_0;
+        return (Object) (Object) stackIn_10_0;
     }
 
     final static int a(int param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_9_0 = 0;
         int stackIn_13_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_12_0 = 0;
-        int stackOut_8_0 = 0;
         var4 = ZombieDawn.field_J;
         try {
           L0: {
             var3_int = 1;
             L1: while (true) {
               if (param0 <= 1) {
-                if (param1 == 28913) {
-                  if (param0 == 1) {
-                    stackOut_12_0 = var3_int * param2;
-                    stackIn_13_0 = stackOut_12_0;
-                    break L0;
-                  } else {
-                    return var3_int;
-                  }
+                if (param0 == 1) {
+                  stackOut_12_0 = var3_int * param2;
+                  stackIn_13_0 = stackOut_12_0;
+                  break L0;
                 } else {
-                  stackOut_8_0 = 91;
-                  stackIn_9_0 = stackOut_8_0;
-                  return stackIn_9_0;
+                  return var3_int;
                 }
               } else {
                 L2: {
@@ -173,7 +157,7 @@ final class el implements io {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var3, "el.D(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw sh.a((Throwable) (Object) var3, "el.D(" + param0 + 44 + 28913 + 44 + param2 + 41);
         }
         return stackIn_13_0;
     }

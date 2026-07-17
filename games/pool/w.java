@@ -16,7 +16,7 @@ final class w {
     static int[][] field_j;
     static dd field_f;
 
-    public static void a(int param0) {
+    public static void a() {
         field_i = null;
         field_g = null;
         field_m = null;
@@ -37,19 +37,16 @@ final class w {
             var2 = 8 - (param1 & 7);
         }
         int var3 = param1 - -var2;
-        if (param0 != 8) {
-            return -16;
-        }
         return var3;
     }
 
     final static void a(int param0, int param1, int param2) {
         ad.field_u = param0;
         m.field_f = param2;
-        int var3 = 62 % ((59 - param1) / 59);
+        int var3 = 0;
     }
 
-    final static boolean a(boolean param0, CharSequence param1, byte param2) {
+    final static boolean a(boolean param0, CharSequence param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -78,7 +75,7 @@ final class w {
         var4 = Pool.field_O;
         try {
           L0: {
-            if (p.a(param1, (byte) -113, param0)) {
+            if (p.a(param1, (byte) -113, false)) {
               var3_int = 0;
               L1: while (true) {
                 if (var3_int >= param1.length()) {
@@ -86,7 +83,8 @@ final class w {
                   stackIn_13_0 = stackOut_12_0;
                   break L0;
                 } else {
-                  if (!uc.a(param1.charAt(var3_int), (byte) -51)) {
+                  int discarded$15 = -51;
+                  if (!uc.a(param1.charAt(var3_int))) {
                     stackOut_9_0 = 0;
                     stackIn_10_0 = stackOut_9_0;
                     return stackIn_10_0 != 0;
@@ -107,7 +105,7 @@ final class w {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var3;
-            stackOut_14_1 = new StringBuilder().append("w.D(").append(param0).append(44);
+            stackOut_14_1 = new StringBuilder().append("w.D(").append(0).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -136,7 +134,7 @@ final class w {
     }
 
     final static tc a(boolean param0, int param1) {
-        tc var2 = new tc(param1, param0);
+        tc var2 = new tc(1, false);
         return var2;
     }
 

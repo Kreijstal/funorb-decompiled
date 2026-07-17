@@ -60,7 +60,8 @@ final class hd extends un {
                 if (param1.equals((Object) (Object) ((hd) this).field_v)) {
                   break L1;
                 } else {
-                  var3 = ga.a(param1, false);
+                  int discarded$2 = 0;
+                  var3 = ga.a(param1);
                   if (!var3.d(-99)) {
                     stackOut_6_0 = ua.field_I;
                     stackIn_7_0 = stackOut_6_0;
@@ -207,50 +208,42 @@ final class hd extends un {
     }
 
     final static boolean a(int param0, char param1) {
-        int stackIn_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
         L0: {
-          if (param0 == -24315) {
-            break L0;
-          } else {
-            field_r = null;
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
-            L3: {
+          L1: {
+            L2: {
               if (param1 < 65) {
-                break L3;
+                break L2;
               } else {
                 if (param1 <= 90) {
-                  break L2;
+                  break L1;
                 } else {
-                  break L3;
+                  break L2;
                 }
               }
             }
-            L4: {
+            L3: {
               if (param1 < 97) {
-                break L4;
+                break L3;
               } else {
                 if (param1 > 122) {
-                  break L4;
+                  break L3;
                 } else {
-                  break L2;
+                  break L1;
                 }
               }
             }
-            stackOut_9_0 = 0;
-            stackIn_10_0 = stackOut_9_0;
-            break L1;
+            stackOut_7_0 = 0;
+            stackIn_8_0 = stackOut_7_0;
+            break L0;
           }
-          stackOut_8_0 = 1;
-          stackIn_10_0 = stackOut_8_0;
-          break L1;
+          stackOut_6_0 = 1;
+          stackIn_8_0 = stackOut_6_0;
+          break L0;
         }
-        return stackIn_10_0 != 0;
+        return stackIn_8_0 != 0;
     }
 
     final static void a(java.math.BigInteger param0, byte param1, java.math.BigInteger param2, k param3, k param4) {
@@ -262,7 +255,7 @@ final class hd extends un {
         }
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_w = null;
         field_r = null;
         field_t = null;
@@ -584,7 +577,7 @@ final class hd extends un {
         }
     }
 
-    final static String a(int param0, String param1, int param2) {
+    final static String a(int param0, String param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         String stackIn_7_0 = null;
@@ -635,7 +628,7 @@ final class hd extends un {
                   stackIn_11_0 = stackOut_10_0;
                   return stackIn_11_0;
                 } else {
-                  if (~param0 != param2) {
+                  if (param0 != 8) {
                     if (param0 != 9) {
                       if (param0 != 10) {
                         if (11 != param0) {
@@ -698,7 +691,7 @@ final class hd extends un {
               break L1;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 44 + param2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 44 + -9 + 41);
         }
         return stackIn_27_0;
     }

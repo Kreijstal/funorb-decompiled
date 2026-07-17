@@ -145,75 +145,38 @@ abstract class fj extends vg {
     boolean j(int param0) {
         int var3 = 0;
         var3 = EscapeVector.field_A;
-        if (param0 != -13907) {
-          field_eb = null;
-          if (null != ((fj) this).field_Z) {
-            if (((fj) this).field_Z == t.field_a) {
-              int fieldTemp$4 = ((fj) this).field_ab + 1;
+        if (null != ((fj) this).field_Z) {
+          if (((fj) this).field_Z == t.field_a) {
+            int fieldTemp$2 = ((fj) this).field_ab + 1;
+            ((fj) this).field_ab = ((fj) this).field_ab + 1;
+            if (((fj) this).field_gb != fieldTemp$2) {
+              ((fj) this).field_cb.field_F = -((((fj) this).field_ab << 8) / ((fj) this).field_gb) + 256;
+              return super.j(-13907);
+            } else {
+              ((fj) this).field_Z = mc.field_c;
+              ((fj) this).a(false, ((fj) this).field_ib, 12 - -((fj) this).field_hb.field_g, 12 - (-((fj) this).field_fb - ((fj) this).field_hb.field_x));
+              ((fj) this).field_ab = 0;
+              ((fj) this).field_cb.field_F = 0;
+              return super.j(-13907);
+            }
+          } else {
+            if (ff.field_b == ((fj) this).field_Z) {
+              int fieldTemp$3 = ((fj) this).field_ab + 1;
               ((fj) this).field_ab = ((fj) this).field_ab + 1;
-              if (((fj) this).field_gb != fieldTemp$4) {
-                ((fj) this).field_cb.field_F = -((((fj) this).field_ab << 8) / ((fj) this).field_gb) + 256;
+              if (fieldTemp$3 == ((fj) this).field_db) {
+                ((fj) this).field_Z = null;
+                ((fj) this).field_cb.field_F = 256;
                 return super.j(-13907);
               } else {
-                ((fj) this).field_Z = mc.field_c;
-                ((fj) this).a(false, ((fj) this).field_ib, 12 - -((fj) this).field_hb.field_g, 12 - (-((fj) this).field_fb - ((fj) this).field_hb.field_x));
-                ((fj) this).field_ab = 0;
-                ((fj) this).field_cb.field_F = 0;
+                ((fj) this).field_cb.field_F = (((fj) this).field_ab << 8) / ((fj) this).field_db;
                 return super.j(-13907);
               }
             } else {
-              if (ff.field_b == ((fj) this).field_Z) {
-                int fieldTemp$5 = ((fj) this).field_ab + 1;
-                ((fj) this).field_ab = ((fj) this).field_ab + 1;
-                if (fieldTemp$5 == ((fj) this).field_db) {
-                  ((fj) this).field_Z = null;
-                  ((fj) this).field_cb.field_F = 256;
-                  return super.j(-13907);
-                } else {
-                  ((fj) this).field_cb.field_F = (((fj) this).field_ab << 8) / ((fj) this).field_db;
-                  return super.j(-13907);
-                }
-              } else {
-                return super.j(-13907);
-              }
+              return super.j(-13907);
             }
-          } else {
-            return super.j(-13907);
           }
         } else {
-          if (null != ((fj) this).field_Z) {
-            if (((fj) this).field_Z == t.field_a) {
-              int fieldTemp$6 = ((fj) this).field_ab + 1;
-              ((fj) this).field_ab = ((fj) this).field_ab + 1;
-              if (((fj) this).field_gb != fieldTemp$6) {
-                ((fj) this).field_cb.field_F = -((((fj) this).field_ab << 8) / ((fj) this).field_gb) + 256;
-                return super.j(-13907);
-              } else {
-                ((fj) this).field_Z = mc.field_c;
-                ((fj) this).a(false, ((fj) this).field_ib, 12 - -((fj) this).field_hb.field_g, 12 - (-((fj) this).field_fb - ((fj) this).field_hb.field_x));
-                ((fj) this).field_ab = 0;
-                ((fj) this).field_cb.field_F = 0;
-                return super.j(-13907);
-              }
-            } else {
-              if (ff.field_b == ((fj) this).field_Z) {
-                int fieldTemp$7 = ((fj) this).field_ab + 1;
-                ((fj) this).field_ab = ((fj) this).field_ab + 1;
-                if (fieldTemp$7 == ((fj) this).field_db) {
-                  ((fj) this).field_Z = null;
-                  ((fj) this).field_cb.field_F = 256;
-                  return super.j(-13907);
-                } else {
-                  ((fj) this).field_cb.field_F = (((fj) this).field_ab << 8) / ((fj) this).field_db;
-                  return super.j(-13907);
-                }
-              } else {
-                return super.j(-13907);
-              }
-            }
-          } else {
-            return super.j(-13907);
-          }
+          return super.j(-13907);
         }
     }
 

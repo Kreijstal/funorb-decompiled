@@ -7,10 +7,10 @@ final class we {
     private vc field_b;
 
     final static void a(int param0, int param1) {
-        hd.field_c = param0 * 100 / 150;
-        hd.field_g = param0 * 400 / 150;
+        hd.field_c = 33;
+        hd.field_g = 133;
         int var2 = 115 % ((-69 - param1) / 53);
-        hd.field_b = (param0 << 16) / 150;
+        hd.field_b = 21845;
     }
 
     final lh b(int param0) {

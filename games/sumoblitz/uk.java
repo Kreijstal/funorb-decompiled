@@ -17,7 +17,7 @@ final class uk extends gt implements ai {
         }
     }
 
-    public static void g(boolean param0) {
+    public static void g() {
         field_lb = null;
     }
 
@@ -245,7 +245,7 @@ final class uk extends gt implements ai {
                       var6 = var2_int;
                       L5: while (true) {
                         if (var3 <= var6) {
-                          if (~var5.length() != param0) {
+                          if (var5.length() != 0) {
                             stackOut_31_0 = var5.toString();
                             stackIn_32_0 = stackOut_31_0;
                             break L0;
@@ -293,7 +293,7 @@ final class uk extends gt implements ai {
           L7: {
             var2 = decompiledCaughtException;
             stackOut_33_0 = (RuntimeException) var2;
-            stackOut_33_1 = new StringBuilder().append("uk.P(").append(param0).append(44);
+            stackOut_33_1 = new StringBuilder().append("uk.P(").append(-1).append(44);
             stackIn_35_0 = stackOut_33_0;
             stackIn_35_1 = stackOut_33_1;
             stackIn_34_0 = stackOut_33_0;

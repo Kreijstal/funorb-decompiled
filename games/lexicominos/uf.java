@@ -13,65 +13,35 @@ final class uf extends tj {
         int var17 = 0;
         var17 = Lexicominos.field_L ? 1 : 0;
         if (param9 < param6) {
-          if (param15 > param6) {
-            ul.a(param2, param15, param0, param9, lf.field_b, param11, param6, param10, param14, param8, param7, param12, -1464114640, param1, param5, param13, param4);
-            if (param3 != -28) {
-              field_n = -121;
+          if (param15 <= param6) {
+            if (param15 <= param9) {
+              ul.a(param7, param6, param13, param15, lf.field_b, param2, param9, param14, param5, param1, param11, param0, -1464114640, param4, param10, param12, param8);
               return;
             } else {
+              ul.a(param7, param6, param13, param9, lf.field_b, param11, param15, param10, param5, param4, param2, param12, -1464114640, param1, param14, param0, param8);
               return;
             }
           } else {
-            if (param15 > param9) {
-              ul.a(param7, param6, param13, param9, lf.field_b, param11, param15, param10, param5, param4, param2, param12, -1464114640, param1, param14, param0, param8);
-              if (param3 != -28) {
-                field_n = -121;
-                return;
-              } else {
-                return;
-              }
-            } else {
-              ul.a(param7, param6, param13, param15, lf.field_b, param2, param9, param14, param5, param1, param11, param0, -1464114640, param4, param10, param12, param8);
-              if (param3 != -28) {
-                field_n = -121;
-                return;
-              } else {
-                return;
-              }
-            }
+            ul.a(param2, param15, param0, param9, lf.field_b, param11, param6, param10, param14, param8, param7, param12, -1464114640, param1, param5, param13, param4);
+            return;
           }
         } else {
-          if (param15 > param9) {
-            ul.a(param2, param15, param0, param6, lf.field_b, param7, param9, param5, param14, param1, param11, param13, -1464114640, param8, param10, param12, param4);
-            if (param3 == -28) {
+          if (param15 <= param9) {
+            if (param6 >= param15) {
+              ul.a(param11, param9, param12, param15, lf.field_b, param2, param6, param14, param10, param8, param7, param0, -1464114640, param4, param5, param13, param1);
               return;
             } else {
-              field_n = -121;
+              ul.a(param11, param9, param12, param6, lf.field_b, param7, param15, param5, param10, param4, param2, param13, -1464114640, param8, param14, param0, param1);
               return;
             }
           } else {
-            if (param6 < param15) {
-              ul.a(param11, param9, param12, param6, lf.field_b, param7, param15, param5, param10, param4, param2, param13, param3 + -1464114612, param8, param14, param0, param1);
-              if (param3 == -28) {
-                return;
-              } else {
-                field_n = -121;
-                return;
-              }
-            } else {
-              ul.a(param11, param9, param12, param15, lf.field_b, param2, param6, param14, param10, param8, param7, param0, param3 + -1464114612, param4, param5, param13, param1);
-              if (param3 != -28) {
-                field_n = -121;
-                return;
-              } else {
-                return;
-              }
-            }
+            ul.a(param2, param15, param0, param6, lf.field_b, param7, param9, param5, param14, param1, param11, param13, -1464114640, param8, param10, param12, param4);
+            return;
           }
         }
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_l = null;
         field_o = null;
         field_m = null;

@@ -729,91 +729,87 @@ final class v {
         var15 = Torquing.field_u;
         try {
           L0: {
-            if (param3 == 77) {
-              var5_int = 0;
-              var6 = param4;
-              var7 = -param4;
-              var8 = -1;
-              var9 = ln.a(qg.field_z, kn.field_e, param1 + param4, 119);
-              var10 = ln.a(qg.field_z, kn.field_e, -param4 + param1, 94);
-              di.a(var10, (byte) 74, param2, qd.field_a[param0], var9);
-              L1: while (true) {
-                if (var6 <= var5_int) {
-                  break L0;
-                } else {
-                  L2: {
-                    var8 += 2;
-                    var7 = var7 + var8;
-                    if (0 < var7) {
-                      var6--;
-                      var7 = var7 - (var6 << 1);
-                      var11 = -var6 + param0;
-                      var12 = param0 + var6;
-                      if (var12 < j.field_q) {
-                        break L2;
-                      } else {
-                        if (var11 <= qk.field_p) {
-                          L3: {
-                            var13 = ln.a(qg.field_z, kn.field_e, param1 - -var5_int, param3 ^ 29);
-                            var14 = ln.a(qg.field_z, kn.field_e, param1 + -var5_int, 92);
-                            if (var12 > qk.field_p) {
-                              break L3;
-                            } else {
-                              di.a(var14, (byte) -96, param2, qd.field_a[var12], var13);
-                              break L3;
-                            }
-                          }
-                          if (j.field_q > var11) {
-                            break L2;
+            var5_int = 0;
+            var6 = param4;
+            var7 = -param4;
+            var8 = -1;
+            var9 = ln.a(qg.field_z, kn.field_e, param1 + param4, 119);
+            var10 = ln.a(qg.field_z, kn.field_e, -param4 + param1, 94);
+            di.a(var10, (byte) 74, param2, qd.field_a[param0], var9);
+            L1: while (true) {
+              if (var6 <= var5_int) {
+                break L0;
+              } else {
+                L2: {
+                  var8 += 2;
+                  var7 = var7 + var8;
+                  if (0 < var7) {
+                    var6--;
+                    var7 = var7 - (var6 << 1);
+                    var11 = -var6 + param0;
+                    var12 = param0 + var6;
+                    if (var12 < j.field_q) {
+                      break L2;
+                    } else {
+                      if (var11 <= qk.field_p) {
+                        L3: {
+                          var13 = ln.a(qg.field_z, kn.field_e, param1 - -var5_int, 80);
+                          var14 = ln.a(qg.field_z, kn.field_e, param1 + -var5_int, 92);
+                          if (var12 > qk.field_p) {
+                            break L3;
                           } else {
-                            di.a(var14, (byte) -93, param2, qd.field_a[var11], var13);
-                            break L2;
+                            di.a(var14, (byte) -96, param2, qd.field_a[var12], var13);
+                            break L3;
                           }
+                        }
+                        if (j.field_q > var11) {
+                          break L2;
                         } else {
+                          di.a(var14, (byte) -93, param2, qd.field_a[var11], var13);
                           break L2;
                         }
-                      }
-                    } else {
-                      break L2;
-                    }
-                  }
-                  var5_int++;
-                  var11 = param0 - var5_int;
-                  var12 = param0 + var5_int;
-                  if (j.field_q > var12) {
-                    continue L1;
-                  } else {
-                    if (qk.field_p >= var11) {
-                      L4: {
-                        var13 = ln.a(qg.field_z, kn.field_e, var6 + param1, param3 ^ 59);
-                        var14 = ln.a(qg.field_z, kn.field_e, param1 + -var6, 100);
-                        if (qk.field_p < var12) {
-                          break L4;
-                        } else {
-                          di.a(var14, (byte) -119, param2, qd.field_a[var12], var13);
-                          break L4;
-                        }
-                      }
-                      if (var11 < j.field_q) {
-                        continue L1;
                       } else {
-                        di.a(var14, (byte) -120, param2, qd.field_a[var11], var13);
-                        continue L1;
+                        break L2;
                       }
+                    }
+                  } else {
+                    break L2;
+                  }
+                }
+                var5_int++;
+                var11 = param0 - var5_int;
+                var12 = param0 + var5_int;
+                if (j.field_q > var12) {
+                  continue L1;
+                } else {
+                  if (qk.field_p >= var11) {
+                    L4: {
+                      var13 = ln.a(qg.field_z, kn.field_e, var6 + param1, 118);
+                      var14 = ln.a(qg.field_z, kn.field_e, param1 + -var6, 100);
+                      if (qk.field_p < var12) {
+                        break L4;
+                      } else {
+                        di.a(var14, (byte) -119, param2, qd.field_a[var12], var13);
+                        break L4;
+                      }
+                    }
+                    if (var11 < j.field_q) {
+                      continue L1;
                     } else {
+                      di.a(var14, (byte) -120, param2, qd.field_a[var11], var13);
                       continue L1;
                     }
+                  } else {
+                    continue L1;
                   }
                 }
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var5, "v.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw rb.a((Throwable) (Object) var5, "v.A(" + param0 + 44 + param1 + 44 + param2 + 44 + 77 + 44 + param4 + 41);
         }
     }
 

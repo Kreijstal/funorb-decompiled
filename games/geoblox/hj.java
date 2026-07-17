@@ -61,27 +61,20 @@ final class hj {
             break L5;
           }
         }
-        if (param0 == 58) {
-          return param1 + var2;
-        } else {
-          return -21;
-        }
+        return param1 + var2;
     }
 
     final static void a(byte param0, java.awt.Component param1) {
         try {
-            if (param0 != -85) {
-                field_c = false;
-            }
             param1.setFocusTraversalKeysEnabled(false);
             param1.addKeyListener((java.awt.event.KeyListener) (Object) je.field_j);
             param1.addFocusListener((java.awt.event.FocusListener) (Object) je.field_j);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "hj.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "hj.A(" + -85 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static dm[] a(int param0) {
+    final static dm[] a() {
         dm[] var1 = null;
         int var2 = 0;
         int var3 = 0;

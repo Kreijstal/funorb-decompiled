@@ -6,7 +6,7 @@ final class mgb extends rqa {
     static int field_q;
     static int[] field_p;
 
-    public static void e(byte param0) {
+    public static void e() {
         field_p = null;
     }
 

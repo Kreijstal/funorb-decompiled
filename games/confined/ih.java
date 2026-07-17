@@ -8,7 +8,7 @@ final class ih {
     static bi field_e;
     static int field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_e = null;
         field_c = null;
@@ -61,7 +61,7 @@ final class ih {
         return stackIn_10_0 != 0;
     }
 
-    final static jb a(boolean param0, boolean param1, boolean param2, boolean param3, byte param4) {
+    final static jb a(boolean param0, boolean param1, boolean param2, boolean param3) {
         int var6 = 0;
         int var7 = 0;
         jb var8 = null;
@@ -74,10 +74,6 @@ final class ih {
         jb stackIn_5_0 = null;
         jb stackIn_6_0 = null;
         int stackIn_6_1 = 0;
-        jb stackIn_7_0 = null;
-        jb stackIn_8_0 = null;
-        jb stackIn_9_0 = null;
-        int stackIn_9_1 = 0;
         jb stackOut_0_0 = null;
         jb stackOut_2_0 = null;
         int stackOut_2_1 = 0;
@@ -88,11 +84,6 @@ final class ih {
         int stackOut_5_1 = 0;
         jb stackOut_4_0 = null;
         int stackOut_4_1 = 0;
-        jb stackOut_6_0 = null;
-        jb stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        jb stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
         L0: {
           var8 = new jb(2);
           var9 = var8;
@@ -115,10 +106,11 @@ final class ih {
         }
         L1: {
           stackIn_3_0.field_n = stackIn_3_1 != 0;
+          var9.field_i = false;
           stackOut_3_0 = (jb) var9;
           stackIn_5_0 = stackOut_3_0;
           stackIn_4_0 = stackOut_3_0;
-          if (!param0) {
+          if (!param2) {
             stackOut_5_0 = (jb) (Object) stackIn_5_0;
             stackOut_5_1 = 0;
             stackIn_6_0 = stackOut_5_0;
@@ -133,45 +125,35 @@ final class ih {
           }
         }
         L2: {
-          stackIn_6_0.field_i = stackIn_6_1 != 0;
-          stackOut_6_0 = (jb) var9;
-          stackIn_8_0 = stackOut_6_0;
-          stackIn_7_0 = stackOut_6_0;
-          if (!param2) {
-            stackOut_8_0 = (jb) (Object) stackIn_8_0;
-            stackOut_8_1 = 0;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
-            break L2;
-          } else {
-            stackOut_7_0 = (jb) (Object) stackIn_7_0;
-            stackOut_7_1 = 1;
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            break L2;
-          }
-        }
-        L3: {
-          stackIn_9_0.field_t = stackIn_9_1 != 0;
+          stackIn_6_0.field_t = stackIn_6_1 != 0;
           var9.a((byte) -117, new bd(16, ba.field_Q, (ok) (Object) pn.field_a));
           var9.a((byte) -87, new bd(17, nh.field_a, (ok) (Object) pn.field_a));
           var8.field_h[0].field_b = 150;
           var8.field_h[0].field_j = 320 - var8.field_h[0].field_f / 2;
           var8.field_h[1].field_b = 250;
           var8.field_h[1].field_j = 320 + -(var8.field_h[1].field_f / 2);
-          var9.a(param1, 26206, -1);
+          var9.a(false, 26206, -1);
           var6 = var8.field_h[0].field_f;
           var7 = var8.field_h[1].field_f;
           if (var7 <= var6) {
-            break L3;
+            break L2;
           } else {
             var6 = var7;
+            break L2;
+          }
+        }
+        L3: {
+          var7 = pn.field_a.c(p.field_b);
+          if (var7 > var6) {
+            var6 = var7;
+            break L3;
+          } else {
             break L3;
           }
         }
         L4: {
-          var7 = pn.field_a.c(p.field_b);
-          if (var7 > var6) {
+          var7 = pn.field_a.c(fb.a(param2, param3, 0, false));
+          if (var6 < var7) {
             var6 = var7;
             break L4;
           } else {
@@ -179,8 +161,8 @@ final class ih {
           }
         }
         L5: {
-          var7 = pn.field_a.c(fb.a(param2, param3, 0, param0));
-          if (var6 < var7) {
+          var7 = pn.field_a.c(qc.a(param3, false, 2, param2));
+          if (var7 > var6) {
             var6 = var7;
             break L5;
           } else {
@@ -188,21 +170,12 @@ final class ih {
           }
         }
         L6: {
-          var7 = pn.field_a.c(qc.a(param3, param0, 2, param2));
-          if (var7 > var6) {
-            var6 = var7;
-            break L6;
-          } else {
-            break L6;
-          }
-        }
-        L7: {
-          var7 = pn.field_a.c(ah.a(param0, param3, -108, param2));
+          var7 = pn.field_a.c(ah.a(false, param3, -108, param2));
           if (var6 < var7) {
             var6 = var7;
-            break L7;
+            break L6;
           } else {
-            break L7;
+            break L6;
           }
         }
         var9.field_c = 76;
@@ -544,53 +517,45 @@ final class ih {
                   break L12;
                 }
               }
-              L13: {
-                if (param0) {
-                  break L13;
-                } else {
-                  field_d = null;
-                  break L13;
-                }
-              }
               var35 = ti.field_l[param2];
-              L14: while (true) {
+              L13: while (true) {
                 if (param6 <= param2) {
                   return;
                 } else {
-                  L15: {
+                  L14: {
                     var36 = var17_int >> 16;
                     if (var36 >= ti.field_e) {
-                      break L15;
+                      break L14;
                     } else {
                       var37 = -(var17_int >> 16) + (var18 >> 16);
                       if (var37 != 0) {
-                        L16: {
+                        L15: {
                           var38 = (-var21 + var22) / var37;
                           var39 = (-var25 + var26) / var37;
                           var40 = (var30 + -var29) / var37;
                           if (var36 - -var37 < ti.field_e) {
-                            break L16;
+                            break L15;
                           } else {
                             var37 = -1 + (-var36 + ti.field_e);
-                            break L16;
+                            break L15;
                           }
                         }
                         if (var36 >= 0) {
                           oc.a(var35 + var36, param1, 57, var21, var25, var29, var40, var38, var37, var39);
-                          break L15;
+                          break L14;
                         } else {
                           oc.a(var35, param1, 82, var21 + -(var38 * var36), var25 - var36 * var39, -(var40 * var36) + var29, var40, var38, var37 - -var36, var39);
-                          break L15;
+                          break L14;
                         }
                       } else {
                         if (var36 < 0) {
-                          break L15;
+                          break L14;
                         } else {
                           if (var36 < ti.field_e) {
                             oc.a(var36 - -var35, param1, 73, var21, var25, var29, 0, 0, var37, 0);
-                            break L15;
+                            break L14;
                           } else {
-                            break L15;
+                            break L14;
                           }
                         }
                       }
@@ -609,7 +574,7 @@ final class ih {
                     var35 = var35 + fn.field_g;
                     var22 = var22 + var24;
                     var25 = var25 + var27;
-                    continue L14;
+                    continue L13;
                   }
                 }
               }

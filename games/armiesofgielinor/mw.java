@@ -5,15 +5,12 @@ final class mw extends dr {
     static int[] field_F;
     static mp field_E;
 
-    public static void g(int param0) {
+    public static void g() {
         field_F = null;
         field_E = null;
-        if (param0 != 12600) {
-            field_E = null;
-        }
     }
 
-    final static void b(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void b(int param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;

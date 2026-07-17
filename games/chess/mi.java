@@ -324,20 +324,12 @@ final class mi extends nm {
                 }
               }
             }
-            L7: {
-              if (param4 == -2771) {
-                break L7;
-              } else {
-                ((mi) this).field_p = null;
-                break L7;
-              }
-            }
             param0.field_j.a(param5, param2, param3);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L7: {
             var7 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var7;
             stackOut_24_1 = new StringBuilder().append("mi.D(");
@@ -352,7 +344,7 @@ final class mi extends nm {
               stackIn_27_0 = stackOut_26_0;
               stackIn_27_1 = stackOut_26_1;
               stackIn_27_2 = stackOut_26_2;
-              break L8;
+              break L7;
             } else {
               stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
               stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
@@ -360,12 +352,12 @@ final class mi extends nm {
               stackIn_27_0 = stackOut_25_0;
               stackIn_27_1 = stackOut_25_1;
               stackIn_27_2 = stackOut_25_2;
-              break L8;
+              break L7;
             }
           }
-          L9: {
+          L8: {
             stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-            stackOut_27_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_27_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(-2771).append(44);
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
@@ -377,7 +369,7 @@ final class mi extends nm {
               stackIn_30_0 = stackOut_29_0;
               stackIn_30_1 = stackOut_29_1;
               stackIn_30_2 = stackOut_29_2;
-              break L9;
+              break L8;
             } else {
               stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
               stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
@@ -385,7 +377,7 @@ final class mi extends nm {
               stackIn_30_0 = stackOut_28_0;
               stackIn_30_1 = stackOut_28_1;
               stackIn_30_2 = stackOut_28_2;
-              break L9;
+              break L8;
             }
           }
           throw fk.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 41);
@@ -987,7 +979,8 @@ final class mi extends nm {
         int stackOut_9_10 = 0;
         int stackOut_9_11 = 0;
         L0: {
-          nc.i(20579);
+          int discarded$1 = 20579;
+          nc.i();
           if (param0 == -78) {
             break L0;
           } else {

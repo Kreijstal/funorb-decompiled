@@ -232,7 +232,7 @@ final class gn {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_j = null;
         field_e = null;

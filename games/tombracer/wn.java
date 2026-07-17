@@ -113,7 +113,7 @@ final class wn extends nv {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_n = null;
     }
 
@@ -183,7 +183,8 @@ final class wn extends nv {
                       break L0;
                     } else {
                       var6_ref_String = var4[var5];
-                      var7 = kua.a(var6_ref_String, -6962);
+                      int discarded$2 = -6962;
+                      var7 = kua.a(var6_ref_String);
                       if (var7 == null) {
                         var5++;
                         continue L1;

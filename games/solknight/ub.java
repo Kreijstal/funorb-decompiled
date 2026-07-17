@@ -15,10 +15,8 @@ final class ub {
 
     final static void a(dl param0, boolean param1, int param2, int param3, java.awt.Component param4, mf param5, boolean param6, int param7) {
         try {
-            gj.a(param7, param1, 10);
-            if (param6) {
-                field_a = null;
-            }
+            int discarded$0 = 10;
+            gj.a(param7, param1);
             kj.field_P = gj.a(param0, param4, 0, param2);
             ql.field_r = gj.a(param0, param4, 1, param3);
             ti.field_f = new e();
@@ -28,7 +26,7 @@ final class ub {
             ua.field_I.d(1349013231, la.field_k);
             kj.field_P.a((ej) (Object) ua.field_I);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "ub.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 44 + param7 + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "ub.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 44 + 0 + 44 + param7 + 41);
         }
     }
 

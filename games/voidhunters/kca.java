@@ -80,7 +80,7 @@ final class kca {
         return stackIn_7_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
     }
 

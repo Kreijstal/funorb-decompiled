@@ -107,7 +107,7 @@ final class fc extends td {
         }
     }
 
-    final static void a(int param0, int param1, kv param2, int param3, byte param4, int param5) {
+    final static void a(int param0, int param1, kv param2, int param3, byte param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -148,7 +148,7 @@ final class fc extends td {
           L2: {
             var6 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var6;
-            stackOut_5_1 = new StringBuilder().append("fc.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_5_1 = new StringBuilder().append("fc.B(").append(480).append(44).append(640).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -171,7 +171,7 @@ final class fc extends td {
               break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param3 + 44 + param4 + 44 + 0 + 41);
+          throw pe.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 0 + 44 + param4 + 44 + 0 + 41);
         }
     }
 

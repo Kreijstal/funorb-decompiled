@@ -41,13 +41,10 @@ final class n {
         return (n) this;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_k = null;
         field_h = null;
         field_c = null;
-        if (param0 != 23887) {
-            return;
-        }
         field_l = null;
     }
 
@@ -579,7 +576,7 @@ final class n {
         return (n) this;
     }
 
-    final static boolean c(int param0) {
+    final static boolean c() {
         if (null == da.field_a) {
             return false;
         }
@@ -603,7 +600,7 @@ final class n {
                 if (var4 == null) {
                   break L0;
                 } else {
-                  ch.a(18391, param0, var4);
+                  ch.a(18391, 7, var4);
                   var4 = (f) (Object) dj.field_c.f(2);
                   continue L1;
                 }
@@ -615,7 +612,7 @@ final class n {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ld.a((Throwable) (Object) var2, "n.M(" + param0 + 44 + param1 + 41);
+          throw ld.a((Throwable) (Object) var2, "n.M(" + 7 + 44 + param1 + 41);
         }
     }
 

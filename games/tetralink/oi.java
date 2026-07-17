@@ -148,20 +148,10 @@ abstract class oi {
     abstract void a(int param0, int param1);
 
     final static void a(byte param0, int param1) {
-        bc var2 = null;
-        var2 = nd.field_Lb;
-        if (param0 != 126) {
-          field_n = null;
-          var2.f(param1, (byte) -92);
-          var2.a(1, false);
-          var2.a(3, false);
-          return;
-        } else {
-          var2.f(param1, (byte) -92);
-          var2.a(1, false);
-          var2.a(3, false);
-          return;
-        }
+        bc var2 = nd.field_Lb;
+        var2.f(11, (byte) -92);
+        var2.a(1, false);
+        var2.a(3, false);
     }
 
     public static void a(int param0) {

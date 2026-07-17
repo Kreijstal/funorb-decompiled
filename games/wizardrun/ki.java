@@ -178,7 +178,8 @@ final class ki extends pe implements qd {
           L0: {
             L1: {
               if (((ki) this).field_H == param1) {
-                pc.a(-1);
+                int discarded$1 = -1;
+                pc.a();
                 break L1;
               } else {
                 if (param1 == ((ki) this).field_K) {

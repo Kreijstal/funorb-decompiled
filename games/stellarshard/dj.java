@@ -6,7 +6,7 @@ final class dj {
     static int[] field_b;
     static String field_c;
 
-    final static boolean a(pf param0, byte param1) {
+    final static boolean a(pf param0) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
@@ -65,7 +65,7 @@ final class dj {
         return stackIn_3_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         field_c = null;
@@ -153,7 +153,8 @@ final class dj {
                     break L4;
                   }
                 }
-                rl.a(param1, (byte) 15);
+                int discarded$1 = 15;
+                rl.a(param1);
                 break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

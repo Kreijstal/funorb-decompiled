@@ -5,7 +5,7 @@ final class ib {
     static int field_a;
     static String field_b;
 
-    final static int a(int param0, byte param1) {
+    final static int a(int param0) {
         int var2 = param0 >>> 1;
         var2 = var2 | var2 >>> 1;
         var2 = var2 | var2 >>> 2;
@@ -15,7 +15,7 @@ final class ib {
         return param0 & ~var2;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
     }
 
@@ -30,7 +30,7 @@ final class ib {
         try {
           L0: {
             L1: {
-              var3_int = 68 % ((9 - param0) / 62);
+              var3_int = 0;
               if (param2 != we.field_M) {
                 rh.field_O = new int[param2];
                 var4 = 0;
@@ -80,7 +80,7 @@ final class ib {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var3, "ib.A(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw wn.a((Throwable) (Object) var3, "ib.A(" + -122 + 44 + param1 + 44 + param2 + 41);
         }
     }
 

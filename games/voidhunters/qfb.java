@@ -90,14 +90,16 @@ final class qfb extends rqa {
             }
             var1 = dpa.field_p;
             L2: while (true) {
-              if (!apb.a(57)) {
+              int discarded$13 = 57;
+              if (!apb.a()) {
                 break L0;
               } else {
                 var1.h(param0 + 24327, 8);
-                int fieldTemp$5 = var1.field_e + 1;
+                int fieldTemp$14 = var1.field_e + 1;
                 var1.field_e = var1.field_e + 1;
-                var2 = fieldTemp$5;
-                ida.a(var1, (byte) 127);
+                var2 = fieldTemp$14;
+                int discarded$15 = 127;
+                ida.a(var1);
                 dpa.field_p.e(var1.field_e + -var2, -129);
                 continue L2;
               }

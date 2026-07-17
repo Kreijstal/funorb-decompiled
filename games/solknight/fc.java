@@ -15,7 +15,7 @@ final class fc extends gg {
     int field_j;
     short[] field_s;
 
-    final static int a(String param0, int param1, boolean param2, boolean param3, String param4, int param5) {
+    final static int a(String param0, int param1, boolean param2, boolean param3, String param4) {
         try {
             RuntimeException var6 = null;
             int var6_int = 0;
@@ -104,7 +104,8 @@ final class fc extends gg {
                         lf.field_a = pb.a(false, param4, kc.field_P, 0, (String) null);
                         break L3;
                       } else {
-                        lf.field_a = rj.a(param0, (byte) 102, param4, false);
+                        int discarded$10 = 0;
+                        lf.field_a = rj.a(param0, (byte) 102, param4);
                         break L3;
                       }
                     }
@@ -196,12 +197,13 @@ final class fc extends gg {
                       L9: {
                         kc.field_P = te.field_N.a(10526);
                         lh.field_s = te.field_N.j(255);
-                        int discarded$7 = te.field_N.j(255);
+                        int discarded$11 = te.field_N.j(255);
                         ob.field_l = te.field_N.i(-103);
                         var12 = te.field_N.g(87);
                         var7 = te.field_N.j(255);
                         if (0 != (var7 & 1)) {
-                          uf.d(31911);
+                          int discarded$12 = 31911;
+                          uf.d();
                           break L9;
                         } else {
                           break L9;
@@ -246,9 +248,9 @@ final class fc extends gg {
                         if (!b.field_b) {
                           break L13;
                         } else {
-                          int discarded$8 = te.field_N.j(255);
-                          int discarded$9 = te.field_N.j(255);
-                          int discarded$10 = te.field_N.e(true);
+                          int discarded$13 = te.field_N.j(255);
+                          int discarded$14 = te.field_N.j(255);
+                          int discarded$15 = te.field_N.e(true);
                           me.field_d = te.field_N.i(-105);
                           dk.field_l = new byte[me.field_d];
                           var8 = 0;
@@ -266,7 +268,8 @@ final class fc extends gg {
                       L15: {
                         ne.field_g = te.field_N.h(16);
                         var13 = (CharSequence) (Object) ne.field_g;
-                        kf.field_D = jg.a(var13, -2);
+                        int discarded$16 = -2;
+                        kf.field_D = jg.a(var13);
                         c.field_H = te.field_N.j(255);
                         ef.field_e = jj.field_Y;
                         if (lf.field_a.a(123) != dc.field_k) {
@@ -298,7 +301,7 @@ final class fc extends gg {
                             if (!lc.field_u) {
                               try {
                                 L19: {
-                                  Object discarded$11 = fd.a(ia.g(110), "unzap", (byte) 101);
+                                  Object discarded$17 = fd.a(ia.g(110), "unzap", (byte) 101);
                                   break L19;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -316,7 +319,7 @@ final class fc extends gg {
                         }
                         try {
                           L21: {
-                            Object discarded$12 = fd.a(-4476, ia.g(-63), "zap", new Object[1]);
+                            Object discarded$18 = fd.a(-4476, ia.g(-63), "zap", new Object[1]);
                             break L21;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -397,7 +400,7 @@ final class fc extends gg {
                 }
                 L28: {
                   var10 = null;
-                  ve discarded$13 = fc.a((Throwable) null, (String) null);
+                  ve discarded$19 = fc.a((Throwable) null, (String) null);
                   if (null == lf.field_d) {
                     if (je.field_c) {
                       L29: {

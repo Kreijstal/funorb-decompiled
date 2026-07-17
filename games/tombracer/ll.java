@@ -16,13 +16,13 @@ final class ll {
     int field_i;
     static String field_h;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_h = null;
         field_g = null;
         field_d = null;
     }
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0) {
         g[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -39,7 +39,7 @@ final class ll {
           L0: {
             var6 = qg.field_a;
             var2 = var6;
-            var3 = param1;
+            var3 = 0;
             L1: while (true) {
               if (var6.length <= var3) {
                 stackOut_8_0 = -1;
@@ -61,7 +61,7 @@ final class ll {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var2_ref, "ll.B(" + param0 + 44 + param1 + 41);
+          throw tba.a((Throwable) (Object) var2_ref, "ll.B(" + param0 + 44 + 0 + 41);
         }
         return stackIn_9_0;
     }

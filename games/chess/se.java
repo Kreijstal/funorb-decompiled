@@ -146,7 +146,7 @@ class se extends fb {
               return;
             } else {
               L1: {
-                var10_int = param7 / param5;
+                var10_int = param7 / 60;
                 var11 = var10_int / 60;
                 param7 = param7 % 60;
                 if (0 == (4 & param8)) {
@@ -167,23 +167,23 @@ class se extends fb {
                   break L2;
                 } else {
                   L3: {
-                    param1[var16].a(param2, param3, param6, param0);
-                    param2 = param2 + (param4 + param1[var16].field_j);
-                    param1[var17].a(param2, param3, param6, param0);
-                    param2 = param2 + (param4 + param1[var17].field_j);
+                    param1[var16].a(param2, param3, 0, param0);
+                    param2 = param2 + (3 + param1[var16].field_j);
+                    param1[var17].a(param2, param3, 0, param0);
+                    param2 = param2 + (3 + param1[var17].field_j);
                     if ((param8 & 64) == 0) {
-                      param9.a(param2, param3, param6, param0);
+                      param9.a(param2, param3, 0, param0);
                       break L3;
                     } else {
                       if ((param7 & 1) != 0) {
                         break L3;
                       } else {
-                        param9.a(param2, param3, param6, param0);
+                        param9.a(param2, param3, 0, param0);
                         break L3;
                       }
                     }
                   }
-                  param2 = param2 + (param9.field_j + param4);
+                  param2 = param2 + (param9.field_j + 3);
                   break L2;
                 }
               }
@@ -191,10 +191,10 @@ class se extends fb {
                 if ((2 & param8) != 0) {
                   L5: {
                     L6: {
-                      param1[var14].a(param2, param3, param6, param0);
-                      param2 = param2 + (param4 + param1[var14].field_j);
-                      param1[var15].a(param2, param3, param6, param0);
-                      param2 = param2 + (param1[var15].field_j - -param4);
+                      param1[var14].a(param2, param3, 0, param0);
+                      param2 = param2 + (3 + param1[var14].field_j);
+                      param1[var15].a(param2, param3, 0, param0);
+                      param2 = param2 + (param1[var15].field_j - -3);
                       if ((32 & param8) == 0) {
                         break L6;
                       } else {
@@ -205,10 +205,10 @@ class se extends fb {
                         }
                       }
                     }
-                    param9.a(param2, param3, param6, param0);
+                    param9.a(param2, param3, 0, param0);
                     break L5;
                   }
-                  param2 = param2 + (param9.field_j - -param4);
+                  param2 = param2 + (param9.field_j - -3);
                   break L4;
                 } else {
                   break L4;
@@ -218,10 +218,10 @@ class se extends fb {
                 if (0 == (1 & param8)) {
                   break L7;
                 } else {
-                  param1[var12].a(param2, param3, param6, param0);
-                  param2 = param2 + (param4 + param1[var12].field_j);
-                  param1[var13].a(param2, param3, param6, param0);
-                  param2 = param2 + (param1[var13].field_j + param4);
+                  param1[var12].a(param2, param3, 0, param0);
+                  param2 = param2 + (3 + param1[var12].field_j);
+                  param1[var13].a(param2, param3, 0, param0);
+                  param2 = param2 + (param1[var13].field_j + 3);
                   break L7;
                 }
               }
@@ -258,7 +258,7 @@ class se extends fb {
           }
           L9: {
             stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-            stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44).append(param8).append(44);
+            stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(44).append(param2).append(44).append(param3).append(44).append(3).append(44).append(60).append(44).append(0).append(44).append(param7).append(44).append(param8).append(44);
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
@@ -508,19 +508,16 @@ class se extends fb {
         if (param1 != 0) {
             return;
         }
-        mg var9 = (mg) (Object) ((se) this).field_n;
+        mg var5 = (mg) (Object) ((se) this).field_n;
         re var6 = ((se) this).field_R;
         if (var6 == null) {
         } else {
-            var7 = var9.a((mf) this, param3, -1581179903);
-            var8 = var9.a(0, param0, (mf) this);
+            var7 = var5.a((mf) this, param3, -1581179903);
+            var8 = var5.a(0, param0, (mf) this);
             do {
                 rc.a(var6.field_k + 2, false, -2 + (var7 - -var6.field_o), 2 + var6.field_l, var6.field_s + var8 + -2);
                 var6 = var6.field_q;
             } while (var6 != null);
-        }
-        if (param2 > -80) {
-            ((se) this).a(-120, true, 63, 80);
         }
     }
 
@@ -564,7 +561,8 @@ class se extends fb {
                 break L1;
               }
             }
-            var15 = var11 * mn.a(var9, 2278);
+            int discarded$1 = 2278;
+            var15 = var11 * mn.a(var9);
             var17 = 0;
             L2: while (true) {
               if (var17 >= param1.length) {

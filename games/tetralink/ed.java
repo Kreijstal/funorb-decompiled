@@ -278,45 +278,41 @@ final class ed extends en {
             break L1;
           }
         }
-        var4 = stackIn_8_0;
-        var5 = -param2 + var4;
-        var6 = -(var5 / 2) + -638 - -(int)a.field_d + param1;
-        var7 = var5 / 20;
-        if (param0 == 101) {
-          L2: {
-            L3: {
-              if (var5 < 0) {
+        L2: {
+          L3: {
+            var4 = stackIn_8_0;
+            var5 = -param2 + var4;
+            var6 = -(var5 / 2) + -638 - -(int)a.field_d + param1;
+            var7 = var5 / 20;
+            if (var5 < 0) {
+              break L3;
+            } else {
+              if (0 > var6) {
                 break L3;
               } else {
-                if (0 > var6) {
-                  break L3;
+                if (var7 <= 1) {
+                  break L2;
                 } else {
-                  if (var7 <= 1) {
-                    break L2;
-                  } else {
-                    break L3;
-                  }
+                  break L3;
                 }
               }
             }
-            var7 = -1;
-            break L2;
           }
-          L4: {
-            if (var7 != 1) {
-              break L4;
-            } else {
-              var7 = 1 + var6 / 26;
-              break L4;
-            }
-          }
-          return var7;
-        } else {
-          return -98;
+          var7 = -1;
+          break L2;
         }
+        L4: {
+          if (var7 != 1) {
+            break L4;
+          } else {
+            var7 = 1 + var6 / 26;
+            break L4;
+          }
+        }
+        return var7;
     }
 
-    final static int h(int param0) {
+    final static int h() {
         return hk.field_a;
     }
 
@@ -352,7 +348,7 @@ final class ed extends en {
         }
     }
 
-    final static se e(byte param0) {
+    final static se e() {
         try {
             Throwable var1 = null;
             se stackIn_1_0 = null;
@@ -628,7 +624,7 @@ final class ed extends en {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_U = null;
         field_V = null;
         field_P = null;

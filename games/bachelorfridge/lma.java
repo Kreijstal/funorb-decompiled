@@ -9,7 +9,7 @@ final class lma extends ana {
     static int field_x;
     private bea field_w;
 
-    private final void e(int param0) {
+    private final void e() {
         int var2 = 0;
     }
 
@@ -30,7 +30,7 @@ final class lma extends ana {
         }
     }
 
-    private final void f(int param0) {
+    private final void f() {
         hd var2 = null;
         op var3 = null;
         int var4 = 0;
@@ -82,7 +82,7 @@ final class lma extends ana {
         }
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_y = null;
         field_A = null;
         field_z = null;
@@ -100,13 +100,15 @@ final class lma extends ana {
         ((lma) this).field_l = ((lma) this).field_l - 1;
         if (!(0 > fieldTemp$0)) {
             if (((lma) this).field_l == 25) {
-                this.f(0);
+                int discarded$1 = 0;
+                this.f();
                 this.d(6);
                 return false;
             }
             return false;
         }
-        this.e(118);
+        int discarded$2 = 118;
+        this.e();
         return true;
     }
 
@@ -204,12 +206,12 @@ final class lma extends ana {
             var9 = 49;
             try {
               L1: {
-                var10_int = param3;
+                var10_int = 0;
                 L2: while (true) {
                   if (var5_int <= var10_int) {
                     break L1;
                   } else {
-                    var11 = cea.field_h.a(param3 ^ -22834, param1[var10_int]);
+                    var11 = cea.field_h.a(-22834, param1[var10_int]);
                     var6[var10_int] = var11.d((byte) 80);
                     var9 = (char)(var9 + 1);
                     var7[var10_int] = (char)var9;
@@ -310,7 +312,7 @@ final class lma extends ana {
           }
           L6: {
             stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44).append(param3).append(44);
+            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44).append(0).append(44);
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;

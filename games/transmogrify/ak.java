@@ -11,7 +11,7 @@ final class ak {
     private we field_d;
     static int field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
     }
 

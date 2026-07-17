@@ -55,7 +55,8 @@ final class sq {
             if (param1 instanceof byte[]) {
               var3 = (byte[]) param1;
               if (param2) {
-                stackOut_8_0 = ck.a(var3, false);
+                int discarded$4 = 0;
+                stackOut_8_0 = ck.a(var3);
                 stackIn_9_0 = stackOut_8_0;
                 return stackIn_9_0;
               } else {
@@ -69,7 +70,7 @@ final class sq {
                   break L0;
                 } else {
                   var4 = null;
-                  byte[] discarded$2 = sq.a(101, (Object) null, true);
+                  byte[] discarded$5 = sq.a(101, (Object) null, true);
                   break L0;
                 }
               }
@@ -285,87 +286,81 @@ final class sq {
               if (gf.field_k <= param0) {
                 return;
               } else {
-                L1: {
-                  if (param5 == -27259) {
-                    break L1;
-                  } else {
-                    field_i = null;
-                    break L1;
-                  }
-                }
                 if (param2 == 0) {
                   return;
                 } else {
-                  L2: {
+                  L1: {
                     if (param3 != 0) {
-                      break L2;
+                      break L1;
                     } else {
                       if (0 == param1) {
                         if (param6 == 0) {
                           return;
                         } else {
                           param2 = 1;
-                          break L2;
+                          break L1;
                         }
                       } else {
-                        break L2;
+                        break L1;
                       }
                     }
                   }
-                  L3: {
-                    L4: {
+                  L2: {
+                    L3: {
                       var9 = bj.field_J[param0];
                       var10 = var9;
                       var7_ref = var10;
                       if (var10 == null) {
-                        break L4;
+                        break L3;
                       } else {
                         if (~var10.field_g < ~param4) {
-                          break L4;
+                          break L3;
                         } else {
-                          L5: {
+                          L4: {
                             if (~param4 != ~var10.field_g) {
-                              break L5;
+                              break L4;
                             } else {
                               if (var10.field_h < param2) {
-                                break L4;
+                                break L3;
                               } else {
-                                break L5;
+                                break L4;
                               }
                             }
                           }
-                          L6: while (true) {
-                            L7: {
+                          L5: while (true) {
+                            L6: {
                               if (null == var7_ref.field_c) {
-                                break L7;
+                                break L6;
                               } else {
-                                L8: {
+                                L7: {
                                   if (~param4 < ~var7_ref.field_c.field_g) {
-                                    break L8;
+                                    break L7;
                                   } else {
                                     if (~param4 != ~var7_ref.field_c.field_g) {
-                                      break L7;
+                                      break L6;
                                     } else {
                                       if (~param2 <= ~var7_ref.field_c.field_h) {
-                                        break L7;
+                                        break L6;
                                       } else {
-                                        break L8;
+                                        break L7;
                                       }
                                     }
                                   }
                                 }
                                 var7_ref = var7_ref.field_c;
-                                continue L6;
+                                continue L5;
                               }
                             }
-                            var7_ref.field_c = wi.a(param1, param6, var7_ref.field_c, param3, param2, param4, -3903);
-                            break L3;
+                            int discarded$2 = -3903;
+                            var7_ref.field_c = wi.a(param1, param6, var7_ref.field_c, param3, param2, param4);
+                            break L2;
                           }
                         }
                       }
                     }
-                    bj.field_J[param0] = wi.a(param1, param6, var9, param3, param2, param4, -3903);
-                    break L3;
+                    int discarded$3 = -3903;
+                    bj.field_J[param0] = wi.a(param1, param6, var9, param3, param2, param4);
+                    break L2;
                   }
                   break L0;
                 }
@@ -375,11 +370,11 @@ final class sq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var7, "sq.G(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw r.a((Throwable) (Object) var7, "sq.G(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + -27259 + 44 + param6 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_s = null;
         field_p = null;
         field_i = null;

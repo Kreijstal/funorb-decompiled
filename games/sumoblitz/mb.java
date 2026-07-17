@@ -23,11 +23,16 @@ final class mb {
         field_k = null;
         field_i = null;
         field_e = null;
-        field_g = null;
-        field_d = null;
+        if (param0) {
+          return;
+        } else {
+          field_g = null;
+          field_d = null;
+          return;
+        }
     }
 
-    final static byte[] a(CharSequence param0, byte param1) {
+    final static byte[] a(CharSequence param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         byte[] var3 = null;
@@ -270,10 +275,7 @@ final class mb {
     }
 
     final static boolean a(boolean param0, int param1, int param2) {
-        if (!param0) {
-            return false;
-        }
-        return (param2 & 65536) != 0 ? true : false;
+        return (param2 & 65536) != 0;
     }
 
     static {

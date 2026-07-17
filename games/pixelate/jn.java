@@ -39,7 +39,8 @@ final class jn extends fa {
         ((jn) this).field_u = param0;
         ((jn) this).field_t = od.a((byte) 41, 640, 240);
         ((jn) this).field_y = od.a((byte) 41, 768, 256);
-        ((jn) this).field_o = nh.c((byte) 60);
+        int discarded$0 = 60;
+        ((jn) this).field_o = nh.c();
         ((jn) this).field_l = 0;
         ((jn) this).field_s = od.a((byte) 41, 50, 20);
         ((jn) this).field_w = od.a((byte) 41, 75, 25);

@@ -44,15 +44,15 @@ final class vv implements Iterator {
         try {
           L0: {
             L1: {
-              if (ws.field_b != param1) {
-                gs.field_b = new int[param1];
+              if (ws.field_b != 64) {
+                gs.field_b = new int[64];
                 var3_int = 0;
                 L2: while (true) {
-                  if (var3_int >= param1) {
-                    ws.field_b = param1;
+                  if (var3_int >= 64) {
+                    ws.field_b = 64;
                     break L1;
                   } else {
-                    gs.field_b[var3_int] = (var3_int << 12) / param1;
+                    gs.field_b[var3_int] = (var3_int << 12) / 64;
                     var3_int++;
                     continue L2;
                   }
@@ -62,38 +62,30 @@ final class vv implements Iterator {
               }
             }
             L3: {
-              if (param0 == -1203350004) {
-                break L3;
-              } else {
-                vv.a(86);
-                break L3;
-              }
-            }
-            L4: {
-              if (ts.field_c != param2) {
-                L5: {
-                  if (ws.field_b == param2) {
+              if (ts.field_c != 256) {
+                L4: {
+                  if (ws.field_b == 256) {
                     uv.field_o = gs.field_b;
-                    break L5;
+                    break L4;
                   } else {
-                    uv.field_o = new int[param2];
+                    uv.field_o = new int[256];
                     var5 = 0;
                     var3_int = var5;
-                    L6: while (true) {
-                      if (param2 <= var5) {
-                        break L5;
+                    L5: while (true) {
+                      if (var5 >= 256) {
+                        break L4;
                       } else {
-                        uv.field_o[var5] = (var5 << 12) / param2;
+                        uv.field_o[var5] = (var5 << 12) / 256;
                         var5++;
-                        continue L6;
+                        continue L5;
                       }
                     }
                   }
                 }
-                ts.field_c = param2;
-                break L4;
+                ts.field_c = 256;
+                break L3;
               } else {
-                break L4;
+                break L3;
               }
             }
             break L0;
@@ -101,7 +93,7 @@ final class vv implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qo.a((Throwable) (Object) var3, "vv.A(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw qo.a((Throwable) (Object) var3, "vv.A(" + -1203350004 + 44 + 64 + 44 + 256 + 41);
         }
     }
 
@@ -116,12 +108,9 @@ final class vv implements Iterator {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
-        if (param0 > -91) {
-            field_a = null;
-        }
     }
 
     static {

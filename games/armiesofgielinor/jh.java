@@ -18,6 +18,7 @@ final class jh extends mk {
             Exception var6_ref3 = null;
             Throwable var6_ref4 = null;
             int var6_int = 0;
+            String var7 = null;
             int var9 = 0;
             String[] var10 = null;
             int var11_int = 0;
@@ -32,10 +33,9 @@ final class jh extends mk {
             Object var18 = null;
             byte[][] var19 = null;
             String var20 = null;
-            String var21 = null;
+            byte[][] var21 = null;
             byte[][] var22 = null;
             byte[][] var23 = null;
-            byte[][] var24 = null;
             RuntimeException stackIn_35_0 = null;
             StringBuilder stackIn_35_1 = null;
             RuntimeException stackIn_36_0 = null;
@@ -111,18 +111,18 @@ final class jh extends mk {
                                         }
                                       }
                                     }
-                                    var20 = param0.g(1);
-                                    var21 = param0.g(param3 + 2);
+                                    var7 = param0.g(1);
+                                    var20 = param0.g(param3 + 2);
                                     var9 = param0.k(0);
                                     var10 = new String[var9];
                                     var11_int = 0;
                                     L6: while (true) {
                                       if (var9 <= var11_int) {
                                         L7: {
-                                          var24 = new byte[var9][];
-                                          var23 = var24;
+                                          var23 = new byte[var9][];
                                           var22 = var23;
-                                          var19 = var22;
+                                          var21 = var22;
+                                          var19 = var21;
                                           var11 = var19;
                                           if (var6_int != 3) {
                                             break L7;
@@ -134,7 +134,7 @@ final class jh extends mk {
                                               } else {
                                                 var13 = param0.i(1);
                                                 var11[var12_int] = new byte[var13];
-                                                param0.a(0, var13, 0, var24[var12_int]);
+                                                param0.a(0, var13, 0, var23[var12_int]);
                                                 var12_int++;
                                                 continue L8;
                                               }
@@ -147,11 +147,13 @@ final class jh extends mk {
                                         var13 = var17;
                                         L9: while (true) {
                                           if (var9 <= var17) {
-                                            ((dc) var18).field_r[var5] = param1.a(ah.a(var20, (byte) 90), 0, var12, var21);
-                                            ((dc) var18).field_u[var5] = var24;
+                                            int discarded$4 = 90;
+                                            ((dc) var18).field_r[var5] = param1.a(ah.a(var7), 0, var12, var20);
+                                            ((dc) var18).field_u[var5] = var23;
                                             break L3;
                                           } else {
-                                            var12[var17] = ah.a(var10[var17], (byte) 90);
+                                            int discarded$5 = 90;
+                                            var12[var17] = ah.a(var10[var17]);
                                             var17++;
                                             continue L9;
                                           }
@@ -167,7 +169,9 @@ final class jh extends mk {
                               }
                             }
                             L10: {
-                              var15 = param0.g(param3 + 2);
+                              String dupTemp$6 = param0.g(param3 + 2);
+                              var15 = dupTemp$6;
+                              var7 = dupTemp$6;
                               var16 = param0.g(1);
                               var9 = 0;
                               if (var6_int != 1) {
@@ -179,7 +183,8 @@ final class jh extends mk {
                             }
                             ((dc) var18).field_t[var5] = var6_int;
                             ((dc) var18).field_v[var5] = var9;
-                            ((dc) var18).field_k[var5] = param1.a(-30598, ah.a(var15, (byte) 90), var16);
+                            int discarded$7 = 90;
+                            ((dc) var18).field_k[var5] = param1.a(-30598, ah.a(var15), var16);
                             break L3;
                           }
                           break L2;
@@ -372,10 +377,7 @@ final class jh extends mk {
         return stackIn_10_0;
     }
 
-    final static boolean g(int param0) {
-        if (param0 != 2) {
-            field_l = null;
-        }
+    final static boolean g() {
         if (!(fk.field_b != -1)) {
             if (!(es.a(-122, 1))) {
                 return false;
@@ -393,18 +395,15 @@ final class jh extends mk {
         return es.a(-105, fk.field_b);
     }
 
-    final static void a(String param0, long param1, int param2, int param3, int param4) {
+    final static void a(String param0, long param1, int param2, int param3) {
         vt.field_l = param3;
         wn.field_db = param0;
         vi.field_e = param2;
-        if (param4 != 19212) {
-            return;
-        }
         try {
             lq.field_d = true;
             rt.field_z = param1;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "jh.Q(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "jh.Q(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + 19212 + 41);
         }
     }
 
@@ -479,13 +478,13 @@ final class jh extends mk {
         return stackIn_5_0;
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_j = null;
         field_l = null;
         field_k = null;
     }
 
-    final static void c(byte param0) {
+    final static void c() {
         try {
             java.lang.reflect.Method var1 = null;
             Exception var1_ref = null;

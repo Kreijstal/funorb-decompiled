@@ -36,7 +36,7 @@ final class sa extends na implements vd {
         this.a(-1, true, me.a(on.field_c, 20, 248));
     }
 
-    public static void d(boolean param0) {
+    public static void d() {
         field_nb = null;
         field_qb = null;
         field_rb = null;
@@ -44,7 +44,7 @@ final class sa extends na implements vd {
         field_mb = null;
     }
 
-    final static void n(int param0) {
+    final static void n() {
         int var1_int = 0;
         kg var4 = null;
         kg var5 = null;
@@ -59,16 +59,20 @@ final class sa extends na implements vd {
             for (var1_int = 0; var1_int < 3; var1_int++) {
                 q.field_a[var1_int] = new vh();
             }
-            var4 = kg.a(wm.field_a, 100, 0);
+            int discarded$0 = 0;
+            var4 = kg.a(wm.field_a, 100);
             var4.f(-1);
             ck.field_db = new am(var4);
-            var5 = kg.a(fb.field_c, 100, 0);
+            int discarded$1 = 0;
+            var5 = kg.a(fb.field_c, 100);
             var5.f(-1);
             vk.field_N = new am(var5);
-            var6 = kg.a(pe.field_h, 100, 0);
+            int discarded$2 = 0;
+            var6 = kg.a(pe.field_h, 100);
             var6.f(-1);
             fp.field_c = new am(var6);
-            var7 = kg.a(nj.field_c, 100, 0);
+            int discarded$3 = 0;
+            var7 = kg.a(nj.field_c, 100);
             var7.f(-1);
             aa.field_a = new am(var7);
             nh.field_F = je.field_j;

@@ -260,7 +260,7 @@ final class hn implements Runnable {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_b = null;
         field_n = null;
         field_d = null;
@@ -424,12 +424,13 @@ final class hn implements Runnable {
             ej.field_e = ao.a(param3, "frame_bottom", 2993, "commonui");
             vk.field_a = wk.a(param3, 1, "jagex_logo_grey", "commonui");
             bj.field_db = ao.a(param3, "button", 2993, "commonui");
-            uh.field_p = ol.a(param3, "validation", "commonui", (byte) -117);
+            int discarded$3 = -117;
+            uh.field_p = ol.a(param3, "validation", "commonui");
             rc.field_a = (lh) (Object) rc.a("commonui", 19131, "arezzo12", param3, param1);
             rb.field_b = (lh) (Object) rc.a("commonui", 19131, "arezzo14", param3, param1);
             tk.field_a = (lh) (Object) rc.a("commonui", 19131, "arezzo14bold", param3, param1);
             var17 = new km(param2.a("button.gif", 30045, ""), (java.awt.Component) (Object) ja.field_h);
-            rk discarded$1 = jn.a("dropdown", 8221, "commonui", param3);
+            rk discarded$4 = jn.a("dropdown", 8221, "commonui", param3);
             var5 = qm.a(1, "commonui", "screen_options", param3);
             mf.field_s = new rk[4];
             ia.field_e = new rk[4];
@@ -441,58 +442,55 @@ final class hn implements Runnable {
             var16 = var19;
             var7 = var16;
             var7[0] = var5[0].field_o;
-            if (param0 >= 65) {
-              var8 = 1;
-              L1: while (true) {
-                if (var8 >= var21.length) {
-                  var8 = var5[0].field_p[0];
-                  var21[2][var8] = 16777215;
-                  var21[1][var8] = 2394342;
-                  var21[3][var8] = 4767999;
-                  var9 = 0;
-                  L2: while (true) {
-                    if (var9 >= 3) {
-                      var9 = var17.field_t;
-                      r.k(3029);
-                      var17.e();
-                      wb.d(0, 0, wb.field_h, wb.field_c);
-                      var15 = new km(var9, var9);
-                      var18 = var15;
-                      var18.e();
-                      var17.d(0, 0);
-                      var11 = new km(var9, var9);
-                      var11.e();
-                      var17.d(-var17.field_w + var9, 0);
-                      var12 = new km(var17.field_w - var9 * 2, var9);
-                      var12.e();
-                      var17.d(-var9, 0);
-                      fd.a(28773);
-                      bj.field_db = new km[]{var15, var12, var11};
-                      break L0;
-                    } else {
-                      var14 = var6[var9];
-                      var10 = var14;
-                      var11_int = 0;
-                      L3: while (true) {
-                        if (var11_int >= var14.length) {
-                          var9++;
-                          continue L2;
-                        } else {
-                          var14[var11_int] = ch.a(true, var21[var11_int], var5[var9]);
-                          var11_int++;
-                          continue L3;
-                        }
+            var8 = 1;
+            L1: while (true) {
+              if (var8 >= var21.length) {
+                var8 = var5[0].field_p[0];
+                var21[2][var8] = 16777215;
+                var21[1][var8] = 2394342;
+                var21[3][var8] = 4767999;
+                var9 = 0;
+                L2: while (true) {
+                  if (var9 >= 3) {
+                    var9 = var17.field_t;
+                    r.k(3029);
+                    var17.e();
+                    wb.d(0, 0, wb.field_h, wb.field_c);
+                    var15 = new km(var9, var9);
+                    var18 = var15;
+                    var18.e();
+                    var17.d(0, 0);
+                    var11 = new km(var9, var9);
+                    var11.e();
+                    var17.d(-var17.field_w + var9, 0);
+                    var12 = new km(var17.field_w - var9 * 2, var9);
+                    var12.e();
+                    var17.d(-var9, 0);
+                    int discarded$5 = 28773;
+                    fd.a();
+                    bj.field_db = new km[]{var15, var12, var11};
+                    break L0;
+                  } else {
+                    var14 = var6[var9];
+                    var10 = var14;
+                    var11_int = 0;
+                    L3: while (true) {
+                      if (var11_int >= var14.length) {
+                        var9++;
+                        continue L2;
+                      } else {
+                        var14[var11_int] = ch.a(true, var21[var11_int], var5[var9]);
+                        var11_int++;
+                        continue L3;
                       }
                     }
                   }
-                } else {
-                  var7[var8] = (int[]) var21[0].clone();
-                  var8++;
-                  continue L1;
                 }
+              } else {
+                var7[var8] = (int[]) var21[0].clone();
+                var8++;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -500,7 +498,7 @@ final class hn implements Runnable {
           L4: {
             var4 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var4;
-            stackOut_14_1 = new StringBuilder().append("hn.E(").append(param0).append(44);
+            stackOut_14_1 = new StringBuilder().append("hn.E(").append(86).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -615,7 +613,8 @@ final class hn implements Runnable {
             da.field_F = da.field_F - 1;
         }
         if (da.field_F > 0) {
-            jb.a((byte) -89);
+            int discarded$0 = -89;
+            jb.a();
         }
     }
 

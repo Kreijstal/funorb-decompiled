@@ -12,7 +12,7 @@ final class rm implements Iterator {
     private vb field_f;
     private fl field_d;
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void a(java.awt.Component param0) {
         try {
             param0.addMouseListener((java.awt.event.MouseListener) (Object) om.field_b);
             param0.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) om.field_b);
@@ -26,7 +26,7 @@ final class rm implements Iterator {
         return ((rm) this).field_f.field_c != ((rm) this).field_b;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_e = null;
         field_g = null;

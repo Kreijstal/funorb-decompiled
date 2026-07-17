@@ -12,19 +12,13 @@ final class ef extends IOException {
     static String field_c;
 
     final static void a(int param0, int param1) {
-        pi var2 = null;
-        if (param0 != -22809) {
-          return;
-        } else {
-          var2 = k.field_h;
-          var2.e(-13413, param1);
-          var2.a(-5, 1);
-          var2.a(param0 ^ 22903, 1);
-          return;
-        }
+        pi var2 = k.field_h;
+        var2.e(-13413, param1);
+        var2.a(-5, 1);
+        var2.a(-112, 1);
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_f = null;
         field_d = null;
         field_e = null;
@@ -89,12 +83,8 @@ final class ef extends IOException {
           L0: {
             param0.d((-param0.field_x + param9) / 2 + (param2 + (param4 * 5 >> 16)), param5);
             param1.c((10 * param4 >> 16) + (param2 - (-((-param1.field_x + param9) / 2) + -(10 / param8))), -(22 / param8) + param5 + (param6 + 480 - param1.field_z));
-            if (!param3) {
-              param10.c((-param10.field_x + param9) / 2 + param2 + ((20 * param4 >> 16) + 10 / param8), 480 + (param5 - -param6 + -param10.field_z));
-              break L0;
-            } else {
-              return;
-            }
+            param10.c((-param10.field_x + param9) / 2 + param2 + ((20 * param4 >> 16) + 10 / param8), 480 + (param5 - -param6 + -param10.field_z));
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -151,7 +141,7 @@ final class ef extends IOException {
           }
           L3: {
             stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44).append(param8).append(44).append(param9).append(44);
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(param2).append(44).append(0).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44).append(param8).append(44).append(param9).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -199,11 +189,10 @@ final class ef extends IOException {
     }
 
     final static void a(String param0, int param1, int param2, String[] param3) {
-        RuntimeException var4 = null;
+        String[] var4 = null;
+        RuntimeException var4_ref = null;
         int var5 = 0;
         Object var6 = null;
-        Object var7 = null;
-        String[] var8 = null;
         int stackIn_5_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_7_0 = 0;
@@ -263,8 +252,9 @@ final class ef extends IOException {
                 return;
               } else {
                 if (param2 <= 105) {
-                  var8 = param3;
-                  md.a(var8, true);
+                  var4 = param3;
+                  int discarded$4 = 1;
+                  md.a(var4);
                   he.field_H = lm.a(param1 ^ 2167, param3);
                   break L0;
                 } else {
@@ -292,16 +282,16 @@ final class ef extends IOException {
                 }
               }
               he.field_H = cd.a(stackIn_7_0 != 0, stackIn_7_1 != 0);
-              var7 = null;
-              md.a((String[]) null, true);
+              int discarded$5 = 1;
+              md.a((String[]) null);
               return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            var4 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var4;
+            var4_ref = decompiledCaughtException;
+            stackOut_15_0 = (RuntimeException) var4_ref;
             stackOut_15_1 = new StringBuilder().append("ef.C(");
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;

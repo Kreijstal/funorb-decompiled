@@ -27,7 +27,8 @@ final class cj {
                 field_g = 35;
             }
             var4 = -1L;
-            oh.a(var4, var3, param1, var2, 0);
+            int discarded$0 = 0;
+            oh.a(var4, var3, param1, var2);
         } catch (RuntimeException runtimeException) {
             throw oj.a((Throwable) (Object) runtimeException, "cj.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
@@ -97,7 +98,7 @@ final class cj {
         return stackIn_17_0;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_l = null;
         field_k = null;
         field_a = null;

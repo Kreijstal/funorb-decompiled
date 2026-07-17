@@ -24,15 +24,11 @@ final class om {
         try {
             ((om) this).field_j = param1;
             ((om) this).field_c = false;
-            if (param0 != 1) {
-                Object var4 = null;
-                om.a(74, (fl) null, -105);
-            }
             ((om) this).field_g = null;
             ((om) this).field_l = null;
             ((om) this).field_f = null;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "om.K(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "om.K(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -119,7 +115,7 @@ final class om {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_p = null;
         field_n = null;
         field_e = null;
@@ -153,12 +149,13 @@ final class om {
               qj.field_I = -1;
               mc.field_b = param0;
               mn.field_b = -1;
-              nh.h(0);
+              int discarded$4 = 0;
+              nh.h();
               if (param1 > 10) {
                 break L1;
               } else {
                 var4 = null;
-                ql discarded$2 = om.a((String) null, (gn) null, (String) null, 14, (gn) null);
+                ql discarded$5 = om.a((String) null, (gn) null, (String) null, 14, (gn) null);
                 break L1;
               }
             }
@@ -196,7 +193,7 @@ final class om {
         }
     }
 
-    private final void a(va param0, int[] param1, boolean param2) {
+    private final void a(va param0, int[] param1) {
         ((om) this).field_l = param1;
         ((om) this).field_c = false;
         ((om) this).field_o = param0;
@@ -282,7 +279,8 @@ final class om {
             if (param3 == 8192) {
               var5_int = param4.c(param0, 3);
               var6 = param4.a(var5_int, param2, false);
-              stackOut_3_0 = ta.a(var5_int, var6, param4, param1, -105);
+              int discarded$2 = -105;
+              stackOut_3_0 = ta.a(var5_int, var6, param4, param1);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -428,32 +426,15 @@ final class om {
     }
 
     private final void a(int param0, int param1) {
-        if (param0 != 32768) {
-          field_i = null;
-          ((om) this).field_d = false;
-          ((om) this).field_a = param1;
-          return;
-        } else {
-          ((om) this).field_d = false;
-          ((om) this).field_a = param1;
-          return;
-        }
+        ((om) this).field_d = false;
+        ((om) this).field_a = param1;
     }
 
     private final void a(int param0, int param1, int param2) {
-        Object var5 = null;
         ((om) this).field_h = param1;
         ((om) this).field_m = param2;
         ((om) this).field_d = true;
-        if (param0 != 92682) {
-          var5 = null;
-          this.a((va) null, (int[]) null, true);
-          ((om) this).field_a = (int)Math.sqrt((double)(((om) this).field_m * ((om) this).field_m + ((om) this).field_h * ((om) this).field_h));
-          return;
-        } else {
-          ((om) this).field_a = (int)Math.sqrt((double)(((om) this).field_m * ((om) this).field_m + ((om) this).field_h * ((om) this).field_h));
-          return;
-        }
+        ((om) this).field_a = (int)Math.sqrt((double)(((om) this).field_m * ((om) this).field_m + ((om) this).field_h * ((om) this).field_h));
     }
 
     private final void a(int param0, kg param1, int[] param2) {
@@ -461,13 +442,10 @@ final class om {
         ((om) this).field_g = null;
         ((om) this).field_q = param1;
         ((om) this).field_c = false;
-        if (param0 != 4) {
-            return;
-        }
         try {
             ((om) this).field_f = null;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "om.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "om.G(" + 4 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -475,7 +453,8 @@ final class om {
         try {
             ((om) this).field_b = param1;
             this.a(32768, param0);
-            this.a(param2, param3, true);
+            int discarded$0 = 1;
+            this.a(param2, param3);
         } catch (RuntimeException runtimeException) {
             throw kk.a((Throwable) (Object) runtimeException, "om.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
         }
@@ -503,7 +482,8 @@ final class om {
         try {
           L0: {
             L1: {
-              lh.a((java.awt.Component) (Object) param1, false);
+              int discarded$8 = 0;
+              lh.a((java.awt.Component) (Object) param1);
               ic.a(23147, (java.awt.Component) (Object) param1);
               if (lb.field_u != null) {
                 lb.field_u.a((java.awt.Component) (Object) param1, -1);

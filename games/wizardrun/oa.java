@@ -14,44 +14,21 @@ final class oa {
         return eb.field_a;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
         field_c = null;
     }
 
     final static String a(byte param0, char param1, int param2) {
-        char[] var3 = null;
         int var4 = 0;
-        int var5 = 0;
-        char[] var6 = null;
-        var5 = wizardrun.field_H;
-        var6 = new char[param2];
-        var3 = var6;
-        if (param0 != -95) {
-          boolean discarded$2 = oa.a(-22);
-          var4 = 0;
-          L0: while (true) {
-            if (param2 <= var4) {
-              return new String(var6);
-            } else {
-              var6[var4] = param1;
-              var4++;
-              continue L0;
-            }
-          }
-        } else {
-          var4 = 0;
-          L1: while (true) {
-            if (param2 <= var4) {
-              return new String(var6);
-            } else {
-              var6[var4] = param1;
-              var4++;
-              continue L1;
-            }
-          }
+        int var5 = wizardrun.field_H;
+        char[] var6 = new char[param2];
+        char[] var3 = var6;
+        for (var4 = 0; param2 > var4; var4++) {
+            var6[var4] = '*';
         }
+        return new String(var6);
     }
 
     static {

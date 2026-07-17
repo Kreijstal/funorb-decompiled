@@ -34,7 +34,7 @@ final class ra {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         field_c = null;
@@ -46,7 +46,8 @@ final class ra {
         int var3 = 0;
         L0: {
           var3 = DungeonAssault.field_K;
-          jj.b((byte) -103);
+          int discarded$9 = -103;
+          jj.b();
           var1 = lc.a(hj.field_S, (byte) -98, eh.field_h);
           if (var1 == ak.field_n) {
             break L0;
@@ -62,36 +63,30 @@ final class ra {
           }
         }
         L1: {
-          if (param0 == 0) {
-            break L1;
-          } else {
-            ra.b(-102);
-            break L1;
-          }
-        }
-        L2: {
+          int discarded$10 = -102;
+          ra.b();
           if (1 == no.field_d) {
             var2 = lc.a(lc.field_c, (byte) -94, hm.field_k);
             if (var2 == kg.field_f) {
               um.field_g = null;
               kg.field_f = -1;
-              break L2;
+              break L1;
             } else {
               if (var2 != -1) {
                 kg.field_f = var2;
                 um.field_g = new rh(0, 0, 40, 80, 16711680, 768, 224);
-                break L2;
+                break L1;
               } else {
-                break L2;
+                break L1;
               }
             }
           } else {
-            break L2;
+            break L1;
           }
         }
     }
 
-    final static void c(int param0) {
+    final static void c() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -264,12 +259,12 @@ final class ra {
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         ha.field_k = new lc(ia.field_W, ll.field_r);
         cf discarded$0 = hd.a(false, 30, "menu_select");
         sa.field_v = sh.a(-77, "da_ambience_drip", new int[5]);
         hp.field_c = sh.a(-95, "da_ambience_insect", new int[3]);
-        dc.field_q = sh.a(param0 ^ -92, "da_door_open", new int[2]);
+        dc.field_q = sh.a(-83, "da_door_open", new int[2]);
         om.field_b = hd.a(false, 140, "da_ambience_burning_torches_loop_4000ms");
         k.field_f = hd.a(false, 256, "da_ambience_running_water_loop_1000ms");
         mh.field_f = hd.a(false, 51, "da_menu_fire");
@@ -295,51 +290,71 @@ final class ra {
         bf.a(125, 6, 115, -18228, "beastman");
         kn.a(256, "saurus_defeat", 7, 256, 124, 256, "saurus_reveal", "saurus_reveal");
         bf.a(146, 8, 197, -18228, "mercenary_knight");
-        to.a(150, -78, 150, 146, "priest", param0);
+        to.a(150, -78, 150, 146, "priest", 9);
         bf.a(170, 10, 197, -18228, "ork");
         kn.a(140, "goblin_defeat", 11, 139, 126, 138, "goblin_scout_special", "goblin_scout_reveal");
-        to.a(120, param0 ^ -117, 120, 159, "necromancer", 12);
+        to.a(120, -126, 120, 159, "necromancer", 12);
         bf.a(200, 13, 200, -18228, "ogre");
         to.a(138, -110, 214, 134, "enchantress", 14);
         bf.a(256, 15, 256, -18228, "saurus");
         ed.a("ork_defeat", 197, 16, 31353, "ork_reveal", 170);
         kn.a(165, "troll_defeat", 17, 149, 127, 165, "troll_reveal", "troll_reveal");
-        to.a(160, param0 ^ -119, 134, 130, "northman_ranger", 18);
+        to.a(160, -128, 134, 130, "northman_ranger", 18);
         to.a(100, -120, 146, 134, "dwarf_renegade", 19);
         bf.a(139, 20, 200, -18228, "thief");
         bf.a(171, 21, 156, -18228, "zealot");
-        bf.a(156, 22, 125, param0 + -18237, "darkelf_assassin");
+        bf.a(156, 22, 125, -18228, "darkelf_assassin");
         bf.a(138, 23, 148, -18228, "baerserker");
         bf.a(200, 24, 200, -18228, "ogre");
         bf.a(200, 25, 155, -18228, "spy");
         to.a(138, -93, 137, 135, "shapeshifter", 26);
-        bf.a(150, 27, 164, param0 + -18237, "black_knight");
-        bf.a(186, 28, 196, param0 ^ -18235, "minotaur");
+        bf.a(150, 27, 164, -18228, "black_knight");
+        bf.a(186, 28, 196, -18228, "minotaur");
         to.a(119, -126, 136, 140, "warlock", 29);
-        bf.a(172, 30, 173, param0 + -18237, "death_knight");
+        bf.a(172, 30, 173, -18228, "death_knight");
         bf.a(147, 31, 200, -18228, "chaos_champion");
         bf.a(74, 33, 73, -18228, "daemonette");
         to.a(190, -99, 198, 197, "dryad", 34);
-        ki.a(90, 15, 100, "giant_rats", -1);
-        ki.a(125, 16, 76, "rot_worms", -1);
-        ki.a(175, 17, 134, "troglodyte", -1);
-        ki.a(110, 18, 110, "giant_snake", -1);
-        ki.a(89, 19, 89, "giant_spider", -1);
-        ki.a(201, 20, 102, "skeleton_sentinals", -1);
-        ki.a(150, 21, 141, "corrosive_slime", param0 ^ -10);
-        ki.a(100, 22, 83, "razor_construct", -1);
-        ki.a(135, 23, 120, "rabid_wolf", -1);
-        ki.a(112, 24, 109, "vampire_bat", -1);
-        ki.a(180, 25, 91, "imp", -1);
-        ki.a(200, 26, 120, "stone_golem", -1);
-        ki.a(135, 27, 119, "spectre", -1);
-        ki.a(42, 28, 57, "banshee", -1);
-        ki.a(197, 29, 133, "raging_beast", -1);
-        ki.a(147, 30, 143, "basilisk", -1);
-        ki.a(99, 31, 125, "pit_demon", -1);
-        ki.a(114, 32, 114, "vampire_lord", -1);
-        ki.a(103, 33, 116, "hell_beast", -1);
-        ki.a(97, 34, 100, "demon_lord", -1);
+        int discarded$1 = -1;
+        ki.a(90, 15, 100, "giant_rats");
+        int discarded$2 = -1;
+        ki.a(125, 16, 76, "rot_worms");
+        int discarded$3 = -1;
+        ki.a(175, 17, 134, "troglodyte");
+        int discarded$4 = -1;
+        ki.a(110, 18, 110, "giant_snake");
+        int discarded$5 = -1;
+        ki.a(89, 19, 89, "giant_spider");
+        int discarded$6 = -1;
+        ki.a(201, 20, 102, "skeleton_sentinals");
+        int discarded$7 = -1;
+        ki.a(150, 21, 141, "corrosive_slime");
+        int discarded$8 = -1;
+        ki.a(100, 22, 83, "razor_construct");
+        int discarded$9 = -1;
+        ki.a(135, 23, 120, "rabid_wolf");
+        int discarded$10 = -1;
+        ki.a(112, 24, 109, "vampire_bat");
+        int discarded$11 = -1;
+        ki.a(180, 25, 91, "imp");
+        int discarded$12 = -1;
+        ki.a(200, 26, 120, "stone_golem");
+        int discarded$13 = -1;
+        ki.a(135, 27, 119, "spectre");
+        int discarded$14 = -1;
+        ki.a(42, 28, 57, "banshee");
+        int discarded$15 = -1;
+        ki.a(197, 29, 133, "raging_beast");
+        int discarded$16 = -1;
+        ki.a(147, 30, 143, "basilisk");
+        int discarded$17 = -1;
+        ki.a(99, 31, 125, "pit_demon");
+        int discarded$18 = -1;
+        ki.a(114, 32, 114, "vampire_lord");
+        int discarded$19 = -1;
+        ki.a(103, 33, 116, "hell_beast");
+        int discarded$20 = -1;
+        ki.a(97, 34, 100, "demon_lord");
         fi.a(160, -51, "tripwire_bell", 35);
         fi.a(60, 124, "hallofglass", 36);
         fi.a(58, 110, "magical_guardian", 37);

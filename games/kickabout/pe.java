@@ -6,7 +6,7 @@ final class pe {
     static String field_c;
     static String field_a;
 
-    final static int a(byte param0) {
+    final static int a() {
         if (hl.field_d >= 2) {
           if (vv.field_r == 0) {
             if (!bw.field_b.d(-93)) {
@@ -113,14 +113,15 @@ final class pe {
         var2 = Kickabout.field_G;
         try {
           L0: {
-            if (n.a(false)) {
-              boolean discarded$15 = mr.field_Z.a(gw.field_c, 31947, nq.field_J, true);
+            int discarded$19 = 0;
+            if (n.a()) {
+              boolean discarded$20 = mr.field_Z.a(gw.field_c, 31947, nq.field_J, true);
               mr.field_Z.n(2);
               L1: while (true) {
                 if (!nk.b((byte) -59)) {
                   break L0;
                 } else {
-                  boolean discarded$16 = mr.field_Z.a(il.field_c, (byte) -91, cc.field_e);
+                  boolean discarded$21 = mr.field_Z.a(il.field_c, (byte) -91, cc.field_e);
                   continue L1;
                 }
               }
@@ -150,9 +151,6 @@ final class pe {
 
     final static void b(int param0) {
         ol.field_R = false;
-        if (param0 != 0) {
-            field_a = null;
-        }
     }
 
     final static boolean a(la[] param0, byte param1, int[] param2) {
@@ -313,13 +311,10 @@ final class pe {
     }
 
     final static void a(byte param0, ef param1) {
-        if (param0 != 82) {
-            return;
-        }
         try {
             se.field_C = param1;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "pe.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "pe.A(" + 82 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -331,7 +326,7 @@ final class pe {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_a = null;
         field_b = null;
         field_c = null;

@@ -86,7 +86,8 @@ final class of {
         try {
           L0: {
             L1: {
-              cb.a(param1, param4.field_o, param4.field_m, param0, 5471, param2, 0);
+              int discarded$2 = 0;
+              cb.a(param1, param4.field_o, param4.field_m, param0, 5471, param2);
               if (param3 <= -110) {
                 break L1;
               } else {
@@ -209,9 +210,6 @@ final class of {
         int var3 = 0;
         int var4 = DungeonAssault.field_K;
         try {
-            if (param0 > -74) {
-                field_g = null;
-            }
             jh.c();
             if (!(im.field_e != null)) {
                 im.field_e = new cn(268, 268);
@@ -230,11 +228,11 @@ final class of {
             gf.d(2, 2, 0, 0, im.field_e.field_y, im.field_e.field_v);
             jh.b();
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "of.B(" + param0 + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "of.B(" + -91 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_q = null;
         field_j = null;
         field_p = null;

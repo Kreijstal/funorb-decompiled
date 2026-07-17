@@ -118,7 +118,7 @@ final class la {
         return ((la) this).field_a - -1;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_j = null;
         field_b = null;

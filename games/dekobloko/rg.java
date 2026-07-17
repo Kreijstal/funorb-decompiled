@@ -10,7 +10,7 @@ final class rg {
     static boolean field_c;
     static sk field_a;
 
-    final static boolean a(java.applet.Applet param0, byte param1) {
+    final static boolean a(java.applet.Applet param0) {
         try {
             String var2 = null;
             Throwable var2_ref = null;
@@ -273,13 +273,13 @@ final class rg {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         field_e = null;
         field_g = null;
         field_a = null;
-        int var1 = 36 / ((-41 - param0) / 35);
+        int var1 = 18;
         field_f = null;
     }
 

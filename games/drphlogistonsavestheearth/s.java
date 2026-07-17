@@ -12,20 +12,24 @@ final class s {
     static String field_h;
 
     public static void a(int param0) {
+        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
+          L0: {
             field_f = null;
             field_h = null;
             field_a = null;
             field_d = null;
-            if (param0 != 7) {
-                s.c((byte) -39);
-            }
-        } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "s.A(" + param0 + 41);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw ie.a((Throwable) (Object) var1, "s.A(" + 7 + 41);
         }
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         nh var1 = null;
         RuntimeException var1_ref = null;
         nh var2 = null;
@@ -45,21 +49,19 @@ final class s {
             var3 = 0;
             L1: while (true) {
               if (var3 >= 15) {
-                L2: {
-                  vh.field_f.c();
-                  var1.b(0, 0);
-                  if (param0 > 38) {
-                    break L2;
-                  } else {
-                    field_c = -37L;
-                    break L2;
-                  }
-                }
+                vh.field_f.c();
+                var1.b(0, 0);
                 cl.d((byte) -91);
                 break L0;
               } else {
                 var2.c(-2, -2, 16777215);
-                wj.g(4, 4, 0, 0, 540, 140);
+                int discarded$150 = 140;
+                int discarded$151 = 540;
+                int discarded$152 = 0;
+                int discarded$153 = 0;
+                int discarded$154 = 4;
+                int discarded$155 = 4;
+                wj.g();
                 var3++;
                 continue L1;
               }
@@ -68,7 +70,7 @@ final class s {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var1_ref, "s.B(" + param0 + 41);
+          throw ie.a((Throwable) (Object) var1_ref, "s.B(" + 104 + 41);
         }
     }
 
@@ -90,7 +92,11 @@ final class s {
                   break L1;
                 }
               } else {
-                df.field_l = n.a(0, sb.field_d, 640, 9764, 480, 0);
+                int discarded$19 = 0;
+                int discarded$20 = 480;
+                int discarded$21 = 9764;
+                int discarded$22 = 640;
+                df.field_l = n.a(0, sb.field_d);
                 if (df.field_l == null) {
                   var2_int = 3;
                   break L1;
@@ -102,7 +108,8 @@ final class s {
               }
             }
             L2: {
-              la.a((rf) (Object) cb.field_b, cb.field_b.field_E, param0, 240, (byte) -38, ni.field_q.field_E, 18, ch.field_z, var2_int, ee.field_c, ni.field_q.field_E, 320, 2, 8, (rf) (Object) ni.field_q, 30);
+              int discarded$23 = 30;
+              la.a((rf) (Object) cb.field_b, cb.field_b.field_E, param0, 240, (byte) -38, ni.field_q.field_E, 18, ch.field_z, var2_int, ee.field_c, ni.field_q.field_E, 320, 2, 8, (rf) (Object) ni.field_q);
               if (param1 < -117) {
                 break L2;
               } else {
@@ -467,7 +474,7 @@ final class s {
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         RuntimeException var1 = null;
         int stackIn_7_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -476,22 +483,14 @@ final class s {
         try {
           L0: {
             L1: {
-              if (param0 == -81) {
-                break L1;
-              } else {
-                field_f = null;
-                break L1;
-              }
-            }
-            L2: {
               if (vb.field_n <= 250) {
                 stackOut_6_0 = 0;
                 stackIn_7_0 = stackOut_6_0;
-                break L2;
+                break L1;
               } else {
                 stackOut_4_0 = 1;
                 stackIn_7_0 = stackOut_4_0;
-                break L2;
+                break L1;
               }
             }
             break L0;
@@ -499,7 +498,7 @@ final class s {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var1, "s.F(" + param0 + 41);
+          throw ie.a((Throwable) (Object) var1, "s.F(" + -81 + 41);
         }
         return stackIn_7_0 != 0;
     }

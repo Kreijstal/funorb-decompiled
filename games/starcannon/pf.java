@@ -21,7 +21,7 @@ final class pf {
         throw new IllegalStateException();
     }
 
-    final static boolean a(CharSequence param0, boolean param1, boolean param2) {
+    final static boolean a(CharSequence param0) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -50,7 +50,7 @@ final class pf {
         var4 = StarCannon.field_A;
         try {
           L0: {
-            if (!tj.a((byte) -79, param1, param0)) {
+            if (!tj.a((byte) -79, false, param0)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0 != 0;
@@ -103,12 +103,12 @@ final class pf {
               break L2;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 44 + 0 + 41);
+          throw sd.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + 0 + 44 + 0 + 41);
         }
         return stackIn_13_0 != 0;
     }
 
-    final static hl[] a(int param0) {
+    final static hl[] a() {
         hl[] var1 = null;
         int var2 = 0;
         int var3 = 0;

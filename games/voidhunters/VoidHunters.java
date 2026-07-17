@@ -13,22 +13,22 @@ public final class VoidHunters extends ms {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
+        String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
         RuntimeException stackOut_10_0 = null;
         StringBuilder stackOut_10_1 = null;
         String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         var5 = field_G;
         try {
           L0: {
@@ -49,46 +49,38 @@ public final class VoidHunters extends ms {
                 break L1;
               }
             }
-            L3: {
-              ((VoidHunters) this).field_D = param2;
-              if (param0 == -23134) {
-                break L3;
-              } else {
-                field_E = null;
-                break L3;
-              }
-            }
+            ((VoidHunters) this).field_D = param2;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var4 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var4;
-            stackOut_9_1 = new StringBuilder().append("VoidHunters.O(").append(param0).append(44);
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackOut_8_0 = (RuntimeException) var4;
+            stackOut_8_1 = new StringBuilder().append("VoidHunters.O(").append(-23134).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
-              break L4;
-            } else {
               stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
               stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
-              break L4;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param2 + 41);
         }
     }
 
@@ -219,9 +211,10 @@ public final class VoidHunters extends ms {
         return stackIn_21_0 != 0;
     }
 
-    private final static void m(int param0) {
+    private final static void m() {
         vj.e(-1);
-        oc.a(-1);
+        int discarded$0 = -1;
+        oc.a();
     }
 
     final static void a(int param0, int param1, int param2, int param3, String param4, int param5, boolean param6, boolean param7) {
@@ -252,7 +245,8 @@ public final class VoidHunters extends ms {
                   break L1;
                 } else {
                   if (hb.field_c) {
-                    or.a(0);
+                    int discarded$5 = 0;
+                    or.a();
                     break L1;
                   } else {
                     fva.field_p = true;
@@ -285,7 +279,8 @@ public final class VoidHunters extends ms {
                     }
                   }
                   if (dp.field_a.field_o != 0) {
-                    dr.a(26718);
+                    int discarded$6 = 26718;
+                    dr.a();
                     fva.field_p = false;
                     break L3;
                   } else {
@@ -364,7 +359,8 @@ public final class VoidHunters extends ms {
                   if (jkb.field_a) {
                     olb.d(991426348);
                     vjb.a((byte) 110);
-                    tr.a(-15400);
+                    int discarded$11 = -15400;
+                    tr.a();
                     enb.field_b = true;
                     idb.field_o = false;
                     bg.field_o = false;
@@ -372,7 +368,8 @@ public final class VoidHunters extends ms {
                     wgb.field_f = 0;
                     aeb.field_a = true;
                     jkb.field_a = false;
-                    lsb.a(true);
+                    int discarded$12 = 1;
+                    lsb.a();
                     break L1;
                   } else {
                     break L1;
@@ -387,7 +384,8 @@ public final class VoidHunters extends ms {
                     break L2;
                   } else {
                     if (jkb.field_a) {
-                      ie.a(13);
+                      int discarded$13 = 13;
+                      ie.a();
                       nkb.a(false, "Lobby packet");
                       return;
                     } else {
@@ -455,7 +453,8 @@ public final class VoidHunters extends ms {
                           nhb.field_p = false;
                           aeb.field_a = true;
                           aka.field_p = true;
-                          lsb.a(true);
+                          int discarded$14 = 1;
+                          lsb.a();
                           break L5;
                         }
                         di.field_l.a(true);
@@ -558,7 +557,7 @@ public final class VoidHunters extends ms {
                                             break L15;
                                           } else {
                                             if (idb.field_o) {
-                                              ana discarded$1 = lha.a(-118, fa.field_d[5]);
+                                              ana discarded$15 = lha.a(-118, fa.field_d[5]);
                                               break L15;
                                             } else {
                                               break L15;
@@ -630,7 +629,8 @@ public final class VoidHunters extends ms {
                   olb.d(991426348);
                   vqa.field_g = null;
                   ndb.field_a = null;
-                  var8 = nia.a(param0, di.field_l, qga.field_b, (byte) 120);
+                  int discarded$16 = 120;
+                  var8 = nia.a(param0, di.field_l, qga.field_b);
                   var3 = (Object) (Object) var8;
                   if (var8 != null) {
                     L21: {
@@ -663,8 +663,12 @@ public final class VoidHunters extends ms {
               L22: {
                 L23: {
                   nkb.a(false, "Entering lobby");
-                  am.a(shb.field_o, jrb.a(0), hj.a(8, (byte) -99), hj.a(2000, (byte) -116), jrb.b(false), true, ms.field_A.length, 150, 1024, sua.a(207));
-                  plb.a(hia.a(0), dm.i((byte) -90), true);
+                  int discarded$17 = 0;
+                  am.a(shb.field_o, jrb.a(0), hj.a(8, (byte) -99), hj.a(2000, (byte) -116), jrb.b(), true, ms.field_A.length, 150, 1024, sua.a(207));
+                  int discarded$18 = 0;
+                  int discarded$19 = -90;
+                  int discarded$20 = 1;
+                  plb.a(hia.a(), dm.i());
                   jkb.field_a = true;
                   lu.field_d = false;
                   if (vqa.field_g == null) {
@@ -684,7 +688,8 @@ public final class VoidHunters extends ms {
                   olb.d(991426348);
                   wgb.field_f = -2;
                   aka.field_p = true;
-                  lsb.a(true);
+                  int discarded$21 = 1;
+                  lsb.a();
                   break L0;
                 } else {
                   break L22;
@@ -771,14 +776,17 @@ public final class VoidHunters extends ms {
         L0: {
           var6 = field_G;
           aqb.field_f = ria.a(32);
-          lgb.field_o = gia.d(-2);
-          ji.e(200);
+          int discarded$18 = -2;
+          lgb.field_o = gia.d();
+          int discarded$19 = 200;
+          ji.e();
           if (psb.field_b == null) {
             break L0;
           } else {
             if (psb.field_b.field_a) {
               cqb.b((byte) 116);
-              gva.a((byte) -115);
+              int discarded$20 = -115;
+              gva.a();
               break L0;
             } else {
               break L0;
@@ -833,7 +841,8 @@ public final class VoidHunters extends ms {
             fka.a("Servicing login_create_ui...", (byte) -85);
             ala.a(tcb.field_o, 15877);
             fka.a("Finished servicing login_create_ui...", (byte) -72);
-            if (!this.h((byte) 125)) {
+            int discarded$21 = 125;
+            if (!this.h()) {
               break L4;
             } else {
               uob.field_e = true;
@@ -845,10 +854,12 @@ public final class VoidHunters extends ms {
               if (!ar.field_d) {
                 break L4;
               } else {
-                if (!this.l(0)) {
+                int discarded$22 = 0;
+                if (!this.l()) {
                   break L4;
                 } else {
-                  if (uc.b(-116)) {
+                  int discarded$23 = -116;
+                  if (uc.b()) {
                     break L4;
                   } else {
                     wu.a(true, false);
@@ -907,8 +918,10 @@ public final class VoidHunters extends ms {
                 this.d(true, -121);
                 break L4;
               } else {
-                if (!ffa.a(false)) {
-                  if (ck.b(false)) {
+                int discarded$24 = 0;
+                if (!ffa.a()) {
+                  int discarded$25 = 0;
+                  if (ck.b()) {
                     this.d(true, -126);
                     break L4;
                   } else {
@@ -918,7 +931,8 @@ public final class VoidHunters extends ms {
                 } else {
                   if (wp.field_b == wp.field_a) {
                     L9: {
-                      var3 = vdb.d(-31515);
+                      int discarded$26 = -31515;
+                      var3 = vdb.d();
                       if (var3 != 1) {
                         break L9;
                       } else {
@@ -948,7 +962,8 @@ public final class VoidHunters extends ms {
               if (var7 == null) {
                 break L10;
               } else {
-                dba.a(4, var7, 0);
+                int discarded$27 = 0;
+                dba.a(4, var7);
                 continue L11;
               }
             }
@@ -1186,7 +1201,8 @@ public final class VoidHunters extends ms {
               }
             }
             L27: {
-              if (!nb.b(true)) {
+              int discarded$28 = 1;
+              if (!nb.b()) {
                 break L27;
               } else {
                 L28: {
@@ -1204,9 +1220,13 @@ public final class VoidHunters extends ms {
                     }
                   }
                   iwa.a((byte) -30, 2);
-                  bta.a(50, 4);
+                  int discarded$29 = 4;
+                  int discarded$30 = 50;
+                  bta.a();
                   qf.a(6, (byte) -52);
-                  md.b(5, 0);
+                  int discarded$31 = 0;
+                  int discarded$32 = 5;
+                  md.b();
                   wq.a(-115);
                   if (1 == var4) {
                     L30: {
@@ -1268,7 +1288,8 @@ public final class VoidHunters extends ms {
                         jkb.field_a = false;
                         idb.field_o = false;
                         nhb.field_p = false;
-                        lsb.a(true);
+                        int discarded$33 = 1;
+                        lsb.a();
                         break L31;
                       }
                     }
@@ -1314,7 +1335,8 @@ public final class VoidHunters extends ms {
                   break L37;
                 }
                 L39: {
-                  if (nb.b(true)) {
+                  int discarded$34 = 1;
+                  if (nb.b()) {
                     break L39;
                   } else {
                     var5 = 0;
@@ -1322,7 +1344,8 @@ public final class VoidHunters extends ms {
                   }
                 }
                 if (var5 != 0) {
-                  km.f((byte) -119);
+                  int discarded$35 = -119;
+                  km.f();
                   break L27;
                 } else {
                   break L27;
@@ -1338,7 +1361,7 @@ public final class VoidHunters extends ms {
         }
     }
 
-    private final boolean l(int param0) {
+    private final boolean l() {
         return gcb.field_p;
     }
 
@@ -1346,46 +1369,38 @@ public final class VoidHunters extends ms {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_13_2 = null;
+        String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
         RuntimeException stackOut_10_0 = null;
         StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         var5 = field_G;
         try {
           L0: {
             L1: {
-              if (param1 == -19653) {
-                break L1;
-              } else {
-                ((VoidHunters) this).field_D = -9;
-                break L1;
-              }
-            }
-            L2: {
               if (((VoidHunters) this).field_C != -1) {
                 uga.field_g.a((byte) -115, 4000, param0);
-                break L2;
+                break L1;
               } else {
                 var4_int = 0;
-                L3: while (true) {
+                L2: while (true) {
                   if (param0.field_a.length <= var4_int) {
-                    break L2;
+                    break L1;
                   } else {
                     uga.field_g.b(param0.field_a[var4_int], (byte) 18, var4_int);
                     var4_int++;
-                    continue L3;
+                    continue L2;
                   }
                 }
               }
@@ -1395,33 +1410,33 @@ public final class VoidHunters extends ms {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var4 = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var4;
-            stackOut_10_1 = new StringBuilder().append("VoidHunters.C(");
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackOut_8_0 = (RuntimeException) var4;
+            stackOut_8_1 = new StringBuilder().append("VoidHunters.C(");
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
-              break L4;
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
-              break L4;
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param1 + 44 + param2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + -19653 + 44 + param2 + 41);
         }
     }
 
@@ -1434,7 +1449,8 @@ public final class VoidHunters extends ms {
         uga.field_g = new fdb((hbb) (Object) fi.field_o);
         hbb var3 = new hbb();
         dra var4 = new dra((hbb) (Object) fi.field_o, (hbb) (Object) uga.field_g, var3);
-        kr.a((byte) -32, true, bm.field_o, (java.awt.Component) (Object) igb.field_a, var4, 22050);
+        int discarded$0 = 22050;
+        kr.a((byte) -32, true, bm.field_o, (java.awt.Component) (Object) igb.field_a, var4);
         vfa var5 = new vfa((nka) (Object) new iab());
         var5.field_i = 0;
         var5.field_b = false;
@@ -1446,13 +1462,16 @@ public final class VoidHunters extends ms {
         this.f(false);
         fwa.field_g = new coa();
         fwa.field_g.a((byte) -65);
-        hjb.field_o = rrb.b(-89);
+        int discarded$1 = -89;
+        hjb.field_o = rrb.b();
         qcb.field_o = tc.field_b;
         ncb.field_a = sbb.field_o;
         if (!(!ef.field_E)) {
-            ll.e((byte) -120);
+            int discarded$2 = -120;
+            ll.e();
             jha.field_p = mva.a(jha.field_p, 68, (Object) (Object) "graphics_quality");
-            aw.a(false);
+            int discarded$3 = 0;
+            aw.a();
             nl.a(mva.a(kt.field_l, 93, (Object) (Object) "fx_volume"), -13205);
             re.a(mva.a(hlb.field_p, 21, (Object) (Object) "music_volume"), (byte) -99);
             eaa.field_q = mva.a(eaa.field_q, 36, (Object) (Object) "graphics_mode");
@@ -1467,7 +1486,7 @@ public final class VoidHunters extends ms {
         }
     }
 
-    private final void g(byte param0) {
+    private final void g() {
         int var2 = 0;
         int var3 = 0;
         uca var4 = null;
@@ -1848,11 +1867,15 @@ public final class VoidHunters extends ms {
         int stackOut_61_0 = 0;
         L0: {
           VoidHunters.n(0);
-          abb.a(4);
+          int discarded$583 = 4;
+          abb.a();
           no.a();
-          kla.a(89);
-          bw.a(9502);
-          hb.a(15873);
+          int discarded$584 = 89;
+          kla.a();
+          int discarded$585 = 9502;
+          bw.a();
+          int discarded$586 = 15873;
+          hb.a();
           veb.a(1);
           oua.a(true);
           kda.b(66);
@@ -1860,36 +1883,55 @@ public final class VoidHunters extends ms {
           pa.a(2);
           fdb.g(0);
           dra.c(98);
-          btb.a((byte) 94);
-          bda.a(-12407);
+          int discarded$587 = 94;
+          btb.a();
+          int discarded$588 = -12407;
+          bda.a();
           sh.a((byte) 89);
           ot.a(param0);
-          gob.a(26986);
-          tua.a(114);
+          int discarded$589 = 26986;
+          gob.a();
+          int discarded$590 = 114;
+          tua.a();
           coa.a(true);
-          boa.a(0);
+          int discarded$591 = 0;
+          boa.a();
           rrb.a(-106);
           ms.d(false);
-          hva.a(127);
-          bi.b(-19766);
+          int discarded$592 = 127;
+          hva.a();
+          int discarded$593 = -19766;
+          bi.b();
           fg.a(-25692);
           dma.b();
-          asb.a((byte) 112);
-          ds.j(-38);
+          int discarded$594 = 112;
+          asb.a();
+          int discarded$595 = -38;
+          ds.j();
           wt.a(-101);
-          tc.a((byte) 40);
+          int discarded$596 = 40;
+          tc.a();
           kia.a(3553);
-          kmb.a(32768);
-          wja.a(false);
+          int discarded$597 = 32768;
+          kmb.a();
+          int discarded$598 = 0;
+          wja.a();
           bsb.a(23870);
-          dp.a(8);
-          lmb.a((byte) -53);
-          pgb.a((byte) 75);
-          nqa.a((byte) -30);
+          int discarded$599 = 8;
+          dp.a();
+          int discarded$600 = -53;
+          lmb.a();
+          int discarded$601 = 75;
+          pgb.a();
+          int discarded$602 = -30;
+          nqa.a();
           mab.a(-23483);
-          wsb.b((byte) -108);
-          ufb.a(false);
-          vfa.c((byte) 120);
+          int discarded$603 = -108;
+          wsb.b();
+          int discarded$604 = 0;
+          ufb.a();
+          int discarded$605 = 120;
+          vfa.c();
           wf.a(3);
           if (param0) {
             stackOut_2_0 = 0;
@@ -1905,15 +1947,23 @@ public final class VoidHunters extends ms {
           uca.f(stackIn_3_0 != 0);
           kc.a(-106);
           djb.c((byte) -107);
-          fcb.a(111);
-          dla.a((byte) 101);
-          mn.a(-49);
-          ml.e(24388);
-          iwa.a((byte) -116);
-          igb.a(0);
-          ro.a(-47);
+          int discarded$606 = 111;
+          fcb.a();
+          int discarded$607 = 101;
+          dla.a();
+          int discarded$608 = -49;
+          mn.a();
+          int discarded$609 = 24388;
+          ml.e();
+          int discarded$610 = -116;
+          iwa.a();
+          int discarded$611 = 0;
+          igb.a();
+          int discarded$612 = -47;
+          ro.a();
           kma.c(-58);
-          lja.c((byte) 114);
+          int discarded$613 = 114;
+          lja.c();
           aqa.b(-69);
           if (param0) {
             stackOut_5_0 = 0;
@@ -1928,16 +1978,21 @@ public final class VoidHunters extends ms {
         L2: {
           qjb.c(stackIn_6_0 != 0);
           fra.a(2147483647);
-          jb.a(12472);
+          int discarded$614 = 12472;
+          jb.a();
           uj.a((byte) -95);
-          eqb.a(65);
+          int discarded$615 = 65;
+          eqb.a();
           es.a(param0);
-          pd.c((byte) 26);
+          int discarded$616 = 26;
+          pd.c();
           oma.a(28801);
-          bea.a(1);
+          int discarded$617 = 1;
+          bea.a();
           wm.a((byte) -110);
           una.a((byte) -98);
-          bba.b((byte) -76);
+          int discarded$618 = -76;
+          bba.b();
           if (param0) {
             stackOut_8_0 = 0;
             stackIn_9_0 = stackOut_8_0;
@@ -1951,17 +2006,25 @@ public final class VoidHunters extends ms {
         L3: {
           lbb.a(stackIn_9_0 != 0);
           et.a((byte) -102);
-          qsa.a(30089);
+          int discarded$619 = 30089;
+          qsa.a();
           crb.l(3);
           nbb.j((byte) -127);
-          it.c(3);
-          jo.a(true);
+          int discarded$620 = 3;
+          it.c();
+          int discarded$621 = 1;
+          jo.a();
           fba.b(117);
-          tj.g(-124);
-          rba.a(false);
-          aoa.a(false);
-          pe.h(3);
-          so.a((byte) 61);
+          int discarded$622 = -124;
+          tj.g();
+          int discarded$623 = 0;
+          rba.a();
+          int discarded$624 = 0;
+          aoa.a();
+          int discarded$625 = 3;
+          pe.h();
+          int discarded$626 = 61;
+          so.a();
           twa.a(32);
           tw.a(-120);
           rj.a();
@@ -1969,49 +2032,79 @@ public final class VoidHunters extends ms {
           cib.a(-18013);
           llb.f(-2147483648);
           bv.a(39);
-          hw.a(-1);
+          int discarded$627 = -1;
+          hw.a();
           bfb.b();
-          aaa.a((byte) 35);
-          tr.b(17674);
+          int discarded$628 = 35;
+          aaa.a();
+          int discarded$629 = 17674;
+          tr.b();
           vpa.a(param0);
-          qga.a(114);
-          qs.a(true);
-          joa.a(26936);
-          qua.a(16606);
-          sfa.a(false);
+          int discarded$630 = 114;
+          qga.a();
+          int discarded$631 = 1;
+          qs.a();
+          int discarded$632 = 26936;
+          joa.a();
+          int discarded$633 = 16606;
+          qua.a();
+          int discarded$634 = 0;
+          sfa.a();
           ara.a(true);
           cf.c(112);
-          dab.b((byte) -44);
-          tja.a(false);
+          int discarded$635 = -44;
+          dab.b();
+          int discarded$636 = 0;
+          tja.a();
           nwa.a(1);
-          rgb.a(true);
-          ptb.b((byte) 127);
-          tt.a((byte) 94);
-          jpa.a(true);
-          ika.b(1);
+          int discarded$637 = 1;
+          rgb.a();
+          int discarded$638 = 127;
+          ptb.b();
+          int discarded$639 = 94;
+          tt.a();
+          int discarded$640 = 1;
+          jpa.a();
+          int discarded$641 = 1;
+          ika.b();
           pob.a((byte) 24);
           lrb.a((byte) 118);
-          cc.c(6970);
-          iia.b(-15818);
-          om.b(-2684);
+          int discarded$642 = 6970;
+          cc.c();
+          int discarded$643 = -15818;
+          iia.b();
+          int discarded$644 = -2684;
+          om.b();
           jsb.b((byte) 11);
-          ih.b(-10570);
+          int discarded$645 = -10570;
+          ih.b();
           cqb.c(-120);
-          gda.c((byte) 18);
+          int discarded$646 = 18;
+          gda.c();
           lu.a((byte) 87);
           vra.a((byte) -66);
-          kl.b(-127);
+          int discarded$647 = -127;
+          kl.b();
           aib.a((byte) 48);
-          mqb.j((byte) -116);
-          rdb.c(51200);
-          rca.a(12035);
-          imb.a(64);
-          kra.a((byte) 70);
-          pea.a(true);
-          sra.a(96);
+          int discarded$648 = -116;
+          mqb.j();
+          int discarded$649 = 51200;
+          rdb.c();
+          int discarded$650 = 12035;
+          rca.a();
+          int discarded$651 = 64;
+          imb.a();
+          int discarded$652 = 70;
+          kra.a();
+          int discarded$653 = 1;
+          pea.a();
+          int discarded$654 = 96;
+          sra.a();
           ii.b(25498);
-          bmb.a((byte) -120);
-          dqb.a(15060);
+          int discarded$655 = -120;
+          bmb.a();
+          int discarded$656 = 15060;
+          dqb.a();
           if (param0) {
             stackOut_11_0 = 0;
             stackIn_12_0 = stackOut_11_0;
@@ -2036,33 +2129,51 @@ public final class VoidHunters extends ms {
         }
         L5: {
           hbb.c(stackIn_15_0 != 0);
-          gnb.b((byte) 19);
+          int discarded$657 = 19;
+          gnb.b();
           fkb.d(-25815);
           q.b();
           ht.a(false);
           vka.d();
-          iab.a(2);
-          um.a(100);
-          lc.a(95);
-          ssa.a(2);
-          pr.b(1);
-          spb.b(0);
-          enb.a((byte) 38);
+          int discarded$658 = 2;
+          iab.a();
+          int discarded$659 = 100;
+          um.a();
+          int discarded$660 = 95;
+          lc.a();
+          int discarded$661 = 2;
+          ssa.a();
+          int discarded$662 = 1;
+          pr.b();
+          int discarded$663 = 0;
+          spb.b();
+          int discarded$664 = 38;
+          enb.a();
           ae.e(-1);
           nl.a(2128263208);
-          mba.a((byte) 26);
+          int discarded$665 = 26;
+          mba.a();
           fgb.a(8);
-          cwa.a((byte) 74);
-          wia.a(9911);
-          ida.h((byte) -96);
-          ud.e(false);
-          rq.f(112);
-          rla.i((byte) 61);
+          int discarded$666 = 74;
+          cwa.a();
+          int discarded$667 = 9911;
+          wia.a();
+          int discarded$668 = -96;
+          ida.h();
+          int discarded$669 = 0;
+          ud.e();
+          int discarded$670 = 112;
+          rq.f();
+          int discarded$671 = 61;
+          rla.i();
           vla.e(3);
-          waa.i((byte) 115);
-          dj.a((byte) -114);
+          int discarded$672 = 115;
+          waa.i();
+          int discarded$673 = -114;
+          dj.a();
           rbb.b((byte) -29);
-          kr.a(-127);
+          int discarded$674 = -127;
+          kr.a();
           oca.b(-125);
           if (param0) {
             stackOut_17_0 = 0;
@@ -2077,31 +2188,50 @@ public final class VoidHunters extends ms {
         L6: {
           qpa.a(stackIn_18_0 != 0);
           bc.a(-22113);
-          gdb.a(-73);
-          lo.a(true);
-          psb.a(false);
-          oib.a(124);
-          vw.a((byte) 55);
+          int discarded$675 = -73;
+          gdb.a();
+          int discarded$676 = 1;
+          lo.a();
+          int discarded$677 = 0;
+          psb.a();
+          int discarded$678 = 124;
+          oib.a();
+          int discarded$679 = 55;
+          vw.a();
           wc.b(-20221);
           ona.c(125);
           pfa.b(63);
-          fwa.b(5);
-          ppb.a(37);
-          pjb.e((byte) 22);
-          aw.h(0);
-          wdb.e((byte) 127);
-          hqb.a((byte) -106);
-          lwa.h(0);
-          cna.h(1);
+          int discarded$680 = 5;
+          fwa.b();
+          int discarded$681 = 37;
+          ppb.a();
+          int discarded$682 = 22;
+          pjb.e();
+          int discarded$683 = 0;
+          aw.h();
+          int discarded$684 = 127;
+          wdb.e();
+          int discarded$685 = -106;
+          hqb.a();
+          int discarded$686 = 0;
+          lwa.h();
+          int discarded$687 = 1;
+          cna.h();
           bs.a((byte) 42);
-          ooa.h(126);
+          int discarded$688 = 126;
+          ooa.h();
           fh.d(-31049);
-          qc.a((byte) 78);
-          ffb.a(-106);
+          int discarded$689 = 78;
+          qc.a();
+          int discarded$690 = -106;
+          ffb.a();
           kw.g((byte) 124);
-          pia.e(-89);
-          bra.a(true);
-          cd.a(5);
+          int discarded$691 = -89;
+          pia.e();
+          int discarded$692 = 1;
+          bra.a();
+          int discarded$693 = 5;
+          cd.a();
           ebb.a(23357);
           if (param0) {
             stackOut_20_0 = 0;
@@ -2115,74 +2245,117 @@ public final class VoidHunters extends ms {
         }
         L7: {
           sqb.a(stackIn_21_0 != 0);
-          mr.l((byte) -16);
-          ija.a(true);
-          uc.a(0);
-          lm.a(127);
-          wk.a((byte) 80);
-          tjb.i(85);
-          jv.a((byte) -33);
+          int discarded$694 = -16;
+          mr.l();
+          int discarded$695 = 1;
+          ija.a();
+          int discarded$696 = 0;
+          uc.a();
+          int discarded$697 = 127;
+          lm.a();
+          int discarded$698 = 80;
+          wk.a();
+          int discarded$699 = 85;
+          tjb.i();
+          int discarded$700 = -33;
+          jv.a();
           tgb.b((byte) -58);
-          eua.a(-128);
-          feb.a((byte) 122);
-          alb.a(6947);
-          uv.a(22089);
+          int discarded$701 = -128;
+          eua.a();
+          int discarded$702 = 122;
+          feb.a();
+          int discarded$703 = 6947;
+          alb.a();
+          int discarded$704 = 22089;
+          uv.a();
           uea.a((byte) -18);
-          ei.a(false);
-          jba.a(true);
+          int discarded$705 = 0;
+          ei.a();
+          int discarded$706 = 1;
+          jba.a();
           bob.b(22540);
           shb.c((byte) 71);
           bl.i((byte) -17);
-          ar.b(54);
-          hnb.i(1);
+          int discarded$707 = 54;
+          ar.b();
+          int discarded$708 = 1;
+          hnb.i();
           fm.a((byte) -114);
           iw.f(-27545);
-          nva.f(-104);
-          htb.d(124);
+          int discarded$709 = -104;
+          nva.f();
+          int discarded$710 = 124;
+          htb.d();
           dqa.b(param0);
           oda.a(0);
-          pwa.a(-126);
+          int discarded$711 = -126;
+          pwa.a();
           whb.a(-113);
-          ub.c((byte) 104);
-          mo.d((byte) 46);
-          bhb.a(32);
+          int discarded$712 = 104;
+          ub.c();
+          int discarded$713 = 46;
+          mo.d();
+          int discarded$714 = 32;
+          bhb.a();
           umb.a(16214);
           pca.d(9);
-          hg.a(false);
-          gtb.a((byte) -88);
+          int discarded$715 = 0;
+          hg.a();
+          int discarded$716 = -88;
+          gtb.a();
           hp.a(false);
-          fnb.a(-19);
-          mia.a(-11954);
-          dv.a((byte) -98);
+          int discarded$717 = -19;
+          fnb.a();
+          int discarded$718 = -11954;
+          mia.a();
+          int discarded$719 = -98;
+          dv.a();
           sa.b();
           eka.b(0);
           gqb.a(126);
           uab.a(0);
           fca.a();
-          wma.b(118);
-          csa.a((byte) 124);
+          int discarded$720 = 118;
+          wma.b();
+          int discarded$721 = 124;
+          csa.a();
           cjb.a(0);
-          bd.a((byte) -103);
-          kea.a(115);
-          kca.a((byte) 127);
-          ps.a(1);
+          int discarded$722 = -103;
+          bd.a();
+          int discarded$723 = 115;
+          kea.a();
+          int discarded$724 = 127;
+          kca.a();
+          int discarded$725 = 1;
+          ps.a();
           cv.a();
-          dha.a(53);
-          fia.a((byte) -28);
+          int discarded$726 = 53;
+          dha.a();
+          int discarded$727 = -28;
+          fia.a();
           ota.a();
-          qd.a((byte) 66);
+          int discarded$728 = 66;
+          qd.a();
           pfb.a(118);
-          bbb.a(0);
-          jw.a(false);
-          rb.a((byte) -109);
-          ndb.a(91);
-          qdb.a((byte) -125);
-          odb.a(true);
+          int discarded$729 = 0;
+          bbb.a();
+          int discarded$730 = 0;
+          jw.a();
+          int discarded$731 = -109;
+          rb.a();
+          int discarded$732 = 91;
+          ndb.a();
+          int discarded$733 = -125;
+          qdb.a();
+          int discarded$734 = 1;
+          odb.a();
           dmb.a((byte) -128);
           wna.a((byte) -128);
-          lh.a(15261);
+          int discarded$735 = 15261;
+          lh.a();
           vp.b(-2404);
-          ehb.a(false);
+          int discarded$736 = 0;
+          ehb.a();
           if (param0) {
             stackOut_23_0 = 0;
             stackIn_24_0 = stackOut_23_0;
@@ -2195,33 +2368,51 @@ public final class VoidHunters extends ms {
         }
         L8: {
           lra.a(stackIn_24_0 != 0);
-          qeb.a((byte) -122);
-          tn.a((byte) 110);
-          bqa.a((byte) 124);
-          via.b(0);
-          qw.a(true);
+          int discarded$737 = -122;
+          qeb.a();
+          int discarded$738 = 110;
+          tn.a();
+          int discarded$739 = 124;
+          bqa.a();
+          int discarded$740 = 0;
+          via.b();
+          int discarded$741 = 1;
+          qw.a();
           wh.h(0);
           km.g((byte) 114);
           jma.e(100);
           ga.c((byte) -110);
           qda.a();
           tga.j(88);
-          uf.h((byte) -128);
+          int discarded$742 = -128;
+          uf.h();
           ttb.d(16711935);
-          kja.a(-30);
-          gm.e(-2459);
-          jla.a(-125);
-          eca.e(-27183);
-          reb.a(false);
-          w.i((byte) 77);
+          int discarded$743 = -30;
+          kja.a();
+          int discarded$744 = -2459;
+          gm.e();
+          int discarded$745 = -125;
+          jla.a();
+          int discarded$746 = -27183;
+          eca.e();
+          int discarded$747 = 0;
+          reb.a();
+          int discarded$748 = 77;
+          w.i();
           ut.a(-72);
-          cja.a(-17719);
-          ata.a(6344);
+          int discarded$749 = -17719;
+          cja.a();
+          int discarded$750 = 6344;
+          ata.a();
           fj.a(0);
-          ita.j((byte) 106);
-          vq.i((byte) -81);
-          sha.f(1);
-          nga.b((byte) -126);
+          int discarded$751 = 106;
+          ita.j();
+          int discarded$752 = -81;
+          vq.i();
+          int discarded$753 = 1;
+          sha.f();
+          int discarded$754 = -126;
+          nga.b();
           if (param0) {
             stackOut_26_0 = 0;
             stackIn_27_0 = stackOut_26_0;
@@ -2235,43 +2426,64 @@ public final class VoidHunters extends ms {
         L9: {
           vh.b(stackIn_27_0 != 0);
           al.a(true);
-          rlb.a(-120);
+          int discarded$755 = -120;
+          rlb.a();
           fbb.a(param0);
           kha.b(1);
-          mpb.g(0);
+          int discarded$756 = 0;
+          mpb.g();
           vf.a((byte) -26);
           tla.b(1);
-          rpa.f(1);
+          int discarded$757 = 1;
+          rpa.f();
           epb.c(13);
-          rtb.c((byte) 81);
+          int discarded$758 = 81;
+          rtb.c();
           pf.d((byte) -101);
-          pb.a((byte) -84);
+          int discarded$759 = -84;
+          pb.a();
           mj.a(17);
-          rga.a((byte) 108);
+          int discarded$760 = 108;
+          rga.a();
           oj.b(108);
-          kba.a(17121);
-          aba.a(-3696);
+          int discarded$761 = 17121;
+          kba.a();
+          int discarded$762 = -3696;
+          aba.a();
           atb.a(true);
           uda.b((byte) -96);
-          as.c(0);
+          int discarded$763 = 0;
+          as.c();
           je.b((byte) 117);
-          vmb.a(8192);
-          slb.a((byte) 13);
+          int discarded$764 = 8192;
+          vmb.a();
+          int discarded$765 = 13;
+          slb.a();
           uja.a((byte) -123);
-          jra.a((byte) -125);
-          jp.K(771);
-          esb.e(-118);
-          hma.a(-1);
+          int discarded$766 = -125;
+          jra.a();
+          int discarded$767 = 771;
+          jp.K();
+          int discarded$768 = -118;
+          esb.e();
+          int discarded$769 = -1;
+          hma.a();
           re.d(-2705);
-          ef.e(-100);
-          tda.g(29914);
+          int discarded$770 = -100;
+          ef.e();
+          int discarded$771 = 29914;
+          tda.g();
           qh.l((byte) -123);
           bk.e(80);
           vcb.j((byte) -7);
-          ta.a((byte) -109);
-          se.c(-27982);
-          ri.a(41);
-          ska.e(5697);
+          int discarded$772 = -109;
+          ta.a();
+          int discarded$773 = -27982;
+          se.c();
+          int discarded$774 = 41;
+          ri.a();
+          int discarded$775 = 5697;
+          ska.e();
           if (param0) {
             stackOut_29_0 = 0;
             stackIn_30_0 = stackOut_29_0;
@@ -2284,11 +2496,15 @@ public final class VoidHunters extends ms {
         }
         L10: {
           bna.a(stackIn_30_0 != 0);
-          aqb.b(true);
-          gab.a(15325);
-          pja.d(-1);
+          int discarded$776 = 1;
+          aqb.b();
+          int discarded$777 = 15325;
+          gab.a();
+          int discarded$778 = -1;
+          pja.d();
           wv.d(65280);
-          ul.a(-23460);
+          int discarded$779 = -23460;
+          ul.a();
           drb.e((byte) -85);
           jwa.d(-122);
           jlb.a(true);
@@ -2310,55 +2526,89 @@ public final class VoidHunters extends ms {
         }
         L11: {
           vn.a(stackIn_33_0 != 0);
-          kbb.e((byte) -117);
-          me.a(true);
-          lnb.e(1);
-          hpb.d(-6200);
+          int discarded$780 = -117;
+          kbb.e();
+          int discarded$781 = 1;
+          me.a();
+          int discarded$782 = 1;
+          lnb.e();
+          int discarded$783 = -6200;
+          hpb.d();
           qqa.e((byte) -104);
-          moa.d(-120);
-          cm.e((byte) -118);
+          int discarded$784 = -120;
+          moa.d();
+          int discarded$785 = -118;
+          cm.e();
           md.a(false);
           koa.d(19);
           gia.a(false);
-          rw.e((byte) 86);
+          int discarded$786 = 86;
+          rw.e();
           elb.c((byte) 78);
-          hk.d(-1210841460);
-          oqb.e((byte) -123);
+          int discarded$787 = -1210841460;
+          hk.d();
+          int discarded$788 = -123;
+          oqb.e();
           hc.a();
-          jn.a((byte) -101);
+          int discarded$789 = -101;
+          jn.a();
           lia.a(97);
           uva.a();
-          woa.a(-16777216);
-          cs.a((byte) 111);
-          hq.c((byte) -128);
+          int discarded$790 = -16777216;
+          woa.a();
+          int discarded$791 = 111;
+          cs.a();
+          int discarded$792 = -128;
+          hq.c();
           r.e((byte) -123);
-          ct.a((byte) -96);
-          mb.f((byte) -122);
-          of.a(8345);
+          int discarded$793 = -96;
+          ct.a();
+          int discarded$794 = -122;
+          mb.f();
+          int discarded$795 = 8345;
+          of.a();
           ob.c((byte) 42);
           nv.e(33);
-          mea.c(-95);
-          qg.c(-15081);
-          jjb.a(false);
+          int discarded$796 = -95;
+          mea.c();
+          int discarded$797 = -15081;
+          qg.c();
+          int discarded$798 = 0;
+          jjb.a();
           ne.a(-2);
-          uia.a(-4353);
-          gpa.a(-92);
-          im.c((byte) 105);
-          tob.a(91);
-          bt.a(-4509);
-          vab.a(false);
-          bkb.b(26);
-          oaa.c(124);
-          mnb.b(117);
-          dda.a(0);
-          uga.a((byte) -9);
+          int discarded$799 = -4353;
+          uia.a();
+          int discarded$800 = -92;
+          gpa.a();
+          int discarded$801 = 105;
+          im.c();
+          int discarded$802 = 91;
+          tob.a();
+          int discarded$803 = -4509;
+          bt.a();
+          int discarded$804 = 0;
+          vab.a();
+          int discarded$805 = 26;
+          bkb.b();
+          int discarded$806 = 124;
+          oaa.c();
+          int discarded$807 = 117;
+          mnb.b();
+          int discarded$808 = 0;
+          dda.a();
+          int discarded$809 = -9;
+          uga.a();
           iib.d(1);
           ku.a((byte) 108);
           uob.d(3168);
-          ti.a(true);
-          mw.d(13776);
-          ts.a((byte) 90);
-          tu.a((byte) 88);
+          int discarded$810 = 1;
+          ti.a();
+          int discarded$811 = 13776;
+          mw.d();
+          int discarded$812 = 90;
+          ts.a();
+          int discarded$813 = 88;
+          tu.a();
           if (param0) {
             stackOut_35_0 = 0;
             stackIn_36_0 = stackOut_35_0;
@@ -2371,42 +2621,62 @@ public final class VoidHunters extends ms {
         }
         L12: {
           cba.b(stackIn_36_0 != 0);
-          gib.a(15);
+          int discarded$814 = 15;
+          gib.a();
           ko.a(-35);
           mjb.a(-81);
           sv.e(0);
-          wu.d((byte) 46);
-          hab.e(-18951);
+          int discarded$815 = 46;
+          wu.d();
+          int discarded$816 = -18951;
+          hab.e();
           bib.c(param0);
-          kt.d((byte) -19);
+          int discarded$817 = -19;
+          kt.d();
           gna.b(false);
           vjb.b((byte) 53);
           ho.a(13032);
           ubb.f((byte) 42);
-          gn.e(106);
+          int discarded$818 = 106;
+          gn.e();
           qva.a(6);
           rab.a(148);
           gla.a(-5709);
-          fib.e(-113);
-          bva.b(23008);
+          int discarded$819 = -113;
+          fib.e();
+          int discarded$820 = 23008;
+          bva.b();
           tb.a(-75);
-          pl.b((byte) -109);
-          fk.a((byte) 80);
-          iob.c(-5509);
+          int discarded$821 = -109;
+          pl.b();
+          int discarded$822 = 80;
+          fk.a();
+          int discarded$823 = -5509;
+          iob.c();
           vhb.b(21053);
-          hla.a((byte) 39);
-          asa.a(20000000);
-          ue.a((byte) 124);
+          int discarded$824 = 39;
+          hla.a();
+          int discarded$825 = 20000000;
+          asa.a();
+          int discarded$826 = 124;
+          ue.a();
           sja.a((byte) 120);
           qb.a(111);
-          cl.a((byte) -99);
-          ccb.b((byte) 126);
-          amb.a(-46);
-          gl.a(0);
-          vva.a((byte) 121);
-          meb.a((byte) -52);
+          int discarded$827 = -99;
+          cl.a();
+          int discarded$828 = 126;
+          ccb.b();
+          int discarded$829 = -46;
+          amb.a();
+          int discarded$830 = 0;
+          gl.a();
+          int discarded$831 = 121;
+          vva.a();
+          int discarded$832 = -52;
+          meb.a();
           kpb.c(17433);
-          dw.a(118);
+          int discarded$833 = 118;
+          dw.a();
           if (param0) {
             stackOut_38_0 = 0;
             stackIn_39_0 = stackOut_38_0;
@@ -2419,143 +2689,226 @@ public final class VoidHunters extends ms {
         }
         L13: {
           qpb.b(stackIn_39_0 != 0);
-          kab.c(777);
-          qn.a(true);
-          ifa.a(95);
-          vu.e((byte) 113);
-          fa.c((byte) 119);
+          int discarded$834 = 777;
+          kab.c();
+          int discarded$835 = 1;
+          qn.a();
+          int discarded$836 = 95;
+          ifa.a();
+          int discarded$837 = 113;
+          vu.e();
+          int discarded$838 = 119;
+          fa.c();
           ujb.a((byte) -111);
-          lw.a(false);
-          kob.a(127);
+          int discarded$839 = 0;
+          lw.a();
+          int discarded$840 = 127;
+          kob.a();
           rqa.a(true);
           gva.a(true);
-          qab.b(0);
+          int discarded$841 = 0;
+          qab.b();
           kua.a(181765988);
-          nfb.b((byte) 120);
-          etb.b((byte) 43);
-          pn.a(-30938);
+          int discarded$842 = 120;
+          nfb.b();
+          int discarded$843 = 43;
+          etb.b();
+          int discarded$844 = -30938;
+          pn.a();
           nfa.d(-3408);
           rea.d(102);
           qsb.d(104);
           uw.d(34037);
-          lg.d(108);
+          int discarded$845 = 108;
+          lg.d();
           nnb.b(false);
-          pva.d(109);
+          int discarded$846 = 109;
+          pva.d();
           fpa.d(110);
-          hka.d(0);
-          fjb.a(105);
+          int discarded$847 = 0;
+          hka.d();
+          int discarded$848 = 105;
+          fjb.a();
           ecb.a(95);
-          wva.a(-13);
-          av.a(false);
-          dtb.b((byte) 124);
-          efb.b((byte) -80);
+          int discarded$849 = -13;
+          wva.a();
+          int discarded$850 = 0;
+          av.a();
+          int discarded$851 = 124;
+          dtb.b();
+          int discarded$852 = -80;
+          efb.b();
           akb.b((byte) 21);
-          fpb.l(62);
+          int discarded$853 = 62;
+          fpb.l();
           deb.i((byte) -125);
-          wqb.i((byte) 75);
+          int discarded$854 = 75;
+          wqb.i();
           mna.i((byte) 9);
-          teb.l(8192);
-          fma.i((byte) -22);
-          rma.l(3);
+          int discarded$855 = 8192;
+          teb.l();
+          int discarded$856 = -22;
+          fma.i();
+          int discarded$857 = 3;
+          rma.l();
           wca.l(-36);
-          ira.l(17036);
-          jeb.i((byte) -81);
-          ok.b((byte) -103);
+          int discarded$858 = 17036;
+          ira.l();
+          int discarded$859 = -81;
+          jeb.i();
+          int discarded$860 = -103;
+          ok.b();
           ej.b((byte) 124);
-          gfb.b((byte) 80);
-          dkb.b((byte) -120);
-          jga.a(-121);
+          int discarded$861 = 80;
+          gfb.b();
+          int discarded$862 = -120;
+          dkb.b();
+          int discarded$863 = -121;
+          jga.a();
           gs.b((byte) 120);
           gmb.a(-109);
           ng.a(false);
           ajb.c((byte) 44);
-          ns.a(102);
+          int discarded$864 = 102;
+          ns.a();
           ge.a((byte) 122);
-          eta.a(126);
-          mta.a(false);
+          int discarded$865 = 126;
+          eta.a();
+          int discarded$866 = 0;
+          mta.a();
           jdb.a(param0);
           cn.a(false);
-          vfb.a(92);
+          int discarded$867 = 92;
+          vfb.a();
           hsb.b((byte) 27);
-          bf.b((byte) 27);
-          nra.a(2);
-          wkb.a(-1);
+          int discarded$868 = 27;
+          bf.b();
+          int discarded$869 = 2;
+          nra.a();
+          int discarded$870 = -1;
+          wkb.a();
           mbb.a(50);
-          osb.a(1);
-          eoa.a(-18593);
+          int discarded$871 = 1;
+          osb.a();
+          int discarded$872 = -18593;
+          eoa.a();
           upb.b(50);
-          pu.a(124);
-          sl.a(-123);
-          lhb.b((byte) -116);
-          lob.b((byte) 102);
+          int discarded$873 = 124;
+          pu.a();
+          int discarded$874 = -123;
+          sl.a();
+          int discarded$875 = -116;
+          lhb.b();
+          int discarded$876 = 102;
+          lob.b();
           lka.a(8192);
           lsa.c((byte) -92);
           dfa.a((byte) 112);
           tpa.a(2);
           lp.b((byte) 43);
-          nna.c(true);
-          rg.a(-117);
-          us.b((byte) 32);
+          int discarded$877 = 1;
+          nna.c();
+          int discarded$878 = -117;
+          rg.a();
+          int discarded$879 = 32;
+          us.b();
           un.a(false);
-          cfa.c((byte) 83);
+          int discarded$880 = 83;
+          cfa.c();
           ea.a(10);
-          nj.a(false);
-          br.a(true);
+          int discarded$881 = 0;
+          nj.a();
+          int discarded$882 = 1;
+          br.a();
           t.a(1);
           vv.b(24358);
-          pbb.a(-652030847);
+          int discarded$883 = -652030847;
+          pbb.a();
           nrb.a(11227);
           bpa.a((byte) 68);
-          tia.a(-102);
-          jja.b((byte) -110);
-          uu.a(-19);
-          npa.a(true);
-          nf.a(27167);
-          ci.a(-5254);
+          int discarded$884 = -102;
+          tia.a();
+          int discarded$885 = -110;
+          jja.b();
+          int discarded$886 = -19;
+          uu.a();
+          int discarded$887 = 1;
+          npa.a();
+          int discarded$888 = 27167;
+          nf.a();
+          int discarded$889 = -5254;
+          ci.a();
           kgb.a(0);
-          nma.b((byte) -4);
-          skb.a(301);
+          int discarded$890 = -4;
+          nma.b();
+          int discarded$891 = 301;
+          skb.a();
           jd.a(125);
-          klb.b(true);
-          cka.a(-2);
-          wda.e((byte) -100);
-          wnb.e(0);
-          dpa.b(false);
+          int discarded$892 = 1;
+          klb.b();
+          int discarded$893 = -2;
+          cka.a();
+          int discarded$894 = -100;
+          wda.e();
+          int discarded$895 = 0;
+          wnb.e();
+          int discarded$896 = 0;
+          dpa.b();
           eq.e((byte) -105);
           uqa.a(1);
           gq.b(false);
           tca.a(-9028);
-          wg.b(false);
-          cg.b(false);
-          hca.e((byte) 124);
+          int discarded$897 = 0;
+          wg.b();
+          int discarded$898 = 0;
+          cg.b();
+          int discarded$899 = 124;
+          hca.e();
           og.a(23969);
-          ck.a(7311);
-          ema.a(0);
-          awa.a(-1);
-          dfb.e(105);
-          jrb.e(-2326);
+          int discarded$900 = 7311;
+          ck.a();
+          int discarded$901 = 0;
+          ema.a();
+          int discarded$902 = -1;
+          awa.a();
+          int discarded$903 = 105;
+          dfb.e();
+          int discarded$904 = -2326;
+          jrb.e();
           eja.a(2);
-          jfb.a(0);
-          baa.e((byte) -47);
+          int discarded$905 = 0;
+          jfb.a();
+          int discarded$906 = -47;
+          baa.e();
           nha.e((byte) 74);
-          vea.a(0);
+          int discarded$907 = 0;
+          vea.a();
           ltb.a(10);
-          apa.a(25837);
-          vha.e((byte) -5);
+          int discarded$908 = 25837;
+          apa.a();
+          int discarded$909 = -5;
+          vha.e();
           fu.e((byte) -125);
-          hjb.a(100);
-          oja.a(9141);
-          hha.a(0);
-          scb.a(30465);
+          int discarded$910 = 100;
+          hjb.a();
+          int discarded$911 = 9141;
+          oja.a();
+          int discarded$912 = 0;
+          hha.a();
+          int discarded$913 = 30465;
+          scb.a();
           nob.a(0);
           nw.e((byte) -93);
           ddb.e((byte) 89);
           ppa.b(param0);
           na.a(27358);
-          uka.a(0);
+          int discarded$914 = 0;
+          uka.a();
           fq.a(1);
-          vba.e((byte) -31);
-          qwa.a(123);
+          int discarded$915 = -31;
+          vba.e();
+          int discarded$916 = 123;
+          qwa.a();
           if (param0) {
             stackOut_41_0 = 0;
             stackIn_42_0 = stackOut_41_0;
@@ -2569,145 +2922,236 @@ public final class VoidHunters extends ms {
         L14: {
           inb.b(stackIn_42_0 != 0);
           hqa.e((byte) -115);
-          jqa.e((byte) 4);
+          int discarded$917 = 4;
+          jqa.e();
           ewa.b(false);
-          kj.a(0);
+          int discarded$918 = 0;
+          kj.a();
           s.a(18841);
-          hpa.a(2);
-          fv.a(16224);
-          sla.e((byte) 98);
+          int discarded$919 = 2;
+          hpa.a();
+          int discarded$920 = 16224;
+          fv.a();
+          int discarded$921 = 98;
+          sla.e();
           tsb.b(param0);
-          qf.a(34);
-          ji.a(200);
+          int discarded$922 = 34;
+          qf.a();
+          int discarded$923 = 200;
+          ji.a();
           lf.e((byte) 121);
           bsa.e((byte) -7);
           oha.a(-23714);
           nh.e((byte) 124);
-          hra.a(9839);
+          int discarded$924 = 9839;
+          hra.a();
           kaa.a(-21447);
-          wpb.a(0);
-          k.e((byte) -71);
+          int discarded$925 = 0;
+          wpb.a();
+          int discarded$926 = -71;
+          k.e();
           aj.e((byte) 32);
-          edb.a(-122);
+          int discarded$927 = -122;
+          edb.a();
           ueb.a(0);
-          sp.a(30388);
+          int discarded$928 = 30388;
+          sp.a();
           vbb.a(2051507073);
-          ufa.a(-92);
-          rsa.a(-1);
-          gjb.a(-118);
-          gp.a(-23822);
-          urb.a(0);
+          int discarded$929 = -92;
+          ufa.a();
+          int discarded$930 = -1;
+          rsa.a();
+          int discarded$931 = -118;
+          gjb.a();
+          int discarded$932 = -23822;
+          gp.a();
+          int discarded$933 = 0;
+          urb.a();
           cga.e((byte) -31);
-          tg.a(-32514);
+          int discarded$934 = -32514;
+          tg.a();
           mla.a(0);
-          eo.e(53562);
-          fc.a(95);
-          kq.e((byte) 84);
-          ki.a(-91);
+          int discarded$935 = 53562;
+          eo.e();
+          int discarded$936 = 95;
+          fc.a();
+          int discarded$937 = 84;
+          kq.e();
+          int discarded$938 = -91;
+          ki.a();
           cw.a(118);
-          leb.e((byte) -29);
+          int discarded$939 = -29;
+          leb.e();
           jda.a(0);
           gcb.a(0);
-          cab.a(106);
-          fha.a(25553);
-          ca.e((byte) 116);
-          lba.e((byte) 49);
-          icb.a(0);
+          int discarded$940 = 106;
+          cab.a();
+          int discarded$941 = 25553;
+          fha.a();
+          int discarded$942 = 116;
+          ca.e();
+          int discarded$943 = 49;
+          lba.e();
+          int discarded$944 = 0;
+          icb.a();
           erb.a(96);
-          uib.b(false);
+          int discarded$945 = 0;
+          uib.b();
           pp.a(256);
-          kk.e((byte) 107);
+          int discarded$946 = 107;
+          kk.e();
           jqb.e((byte) -15);
-          qi.a(101);
-          ff.a(-105);
-          ws.e(-122);
+          int discarded$947 = 101;
+          qi.a();
+          int discarded$948 = -105;
+          ff.a();
+          int discarded$949 = -122;
+          ws.e();
           te.b(param0);
-          ql.e((byte) 63);
-          mja.e((byte) 103);
-          nt.a(2);
+          int discarded$950 = 63;
+          ql.e();
+          int discarded$951 = 103;
+          mja.e();
+          int discarded$952 = 2;
+          nt.a();
           loa.a(-128);
-          ie.e(3575);
+          int discarded$953 = 3575;
+          ie.e();
           dob.e((byte) -66);
           kkb.e((byte) 40);
-          ica.e((byte) -20);
-          pha.a(22829);
-          bjb.b(false);
-          rib.e((byte) -128);
+          int discarded$954 = -20;
+          ica.e();
+          int discarded$955 = 22829;
+          pha.a();
+          int discarded$956 = 0;
+          bjb.b();
+          int discarded$957 = -128;
+          rib.e();
           qta.b(false);
-          fla.e((byte) -91);
+          int discarded$958 = -91;
+          fla.e();
           nkb.e((byte) -115);
-          opb.e((byte) 123);
-          acb.b(false);
-          hsa.a(111);
-          lib.a(0);
+          int discarded$959 = 123;
+          opb.e();
+          int discarded$960 = 0;
+          acb.b();
+          int discarded$961 = 111;
+          hsa.a();
+          int discarded$962 = 0;
+          lib.a();
           ll.e(1);
-          df.f((byte) -96);
-          jab.a(2);
+          int discarded$963 = -96;
+          df.f();
+          int discarded$964 = 2;
+          jab.a();
           wj.e((byte) -114);
           uhb.e((byte) 32);
-          ug.f((byte) -104);
+          int discarded$965 = -104;
+          ug.f();
           neb.e((byte) -57);
-          bka.a(0);
+          int discarded$966 = 0;
+          bka.a();
           hja.a(21);
           gba.a(-21968);
-          otb.b(true);
+          int discarded$967 = 1;
+          otb.b();
           ic.a(124);
-          nsa.e((byte) -115);
-          hj.a(87);
-          nd.b(false);
-          wlb.e((byte) -70);
-          mgb.e((byte) -49);
-          dt.e(44);
-          sj.a(0);
+          int discarded$968 = -115;
+          nsa.e();
+          int discarded$969 = 87;
+          hj.a();
+          int discarded$970 = 0;
+          nd.b();
+          int discarded$971 = -70;
+          wlb.e();
+          int discarded$972 = -49;
+          mgb.e();
+          int discarded$973 = 44;
+          dt.e();
+          int discarded$974 = 0;
+          sj.a();
           ina.a(-1721);
           mhb.e((byte) -127);
           omb.e((byte) -50);
-          oqa.e((byte) 53);
-          lea.a(33);
-          mqa.a(-125);
-          hcb.a(68);
-          psa.a(0);
-          rh.a(-51);
-          iua.e((byte) -119);
-          jgb.e(0);
-          jl.a(37);
-          bta.e((byte) -119);
+          int discarded$975 = 53;
+          oqa.e();
+          int discarded$976 = 33;
+          lea.a();
+          int discarded$977 = -125;
+          mqa.a();
+          int discarded$978 = 68;
+          hcb.a();
+          int discarded$979 = 0;
+          psa.a();
+          int discarded$980 = -51;
+          rh.a();
+          int discarded$981 = -119;
+          iua.e();
+          int discarded$982 = 0;
+          jgb.e();
+          int discarded$983 = 37;
+          jl.a();
+          int discarded$984 = -119;
+          bta.e();
           jnb.a(-126);
-          fd.e(-1);
-          ir.e((byte) 32);
+          int discarded$985 = -1;
+          fd.e();
+          int discarded$986 = 32;
+          ir.e();
           dsb.a(-23436);
-          ljb.a(-100);
-          era.a(42);
+          int discarded$987 = -100;
+          ljb.a();
+          int discarded$988 = 42;
+          era.a();
           ew.b(param0);
-          mk.e((byte) 7);
+          int discarded$989 = 7;
+          mk.e();
           ov.a(46);
           vg.e((byte) -114);
           lqb.a(122);
-          sdb.e((byte) 87);
-          cha.e((byte) 76);
-          stb.a(3);
-          qt.a(124);
+          int discarded$990 = 87;
+          sdb.e();
+          int discarded$991 = 76;
+          cha.e();
+          int discarded$992 = 3;
+          stb.a();
+          int discarded$993 = 124;
+          qt.a();
           gt.e((byte) 123);
-          vgb.a(51);
-          qja.a(124);
-          jna.b(true);
+          int discarded$994 = 51;
+          vgb.a();
+          int discarded$995 = 124;
+          qja.a();
+          int discarded$996 = 1;
+          jna.b();
           vnb.a(54);
           fsa.e((byte) 56);
-          epa.a(55);
-          tfb.e((byte) 112);
-          msa.e((byte) -61);
-          nr.e((byte) -127);
-          oba.a(-78);
+          int discarded$997 = 55;
+          epa.a();
+          int discarded$998 = 112;
+          tfb.e();
+          int discarded$999 = -61;
+          msa.e();
+          int discarded$1000 = -127;
+          nr.e();
+          int discarded$1001 = -78;
+          oba.a();
           hlb.e((byte) 95);
-          ieb.a(122);
-          pra.a(-75);
+          int discarded$1002 = 122;
+          ieb.a();
+          int discarded$1003 = -75;
+          pra.a();
           qla.e((byte) 126);
           seb.b(true);
-          tma.f((byte) 66);
+          int discarded$1004 = 66;
+          tma.f();
           cca.e((byte) -41);
-          mtb.e((byte) -117);
-          gwa.b(true);
-          nhb.a(12124934);
+          int discarded$1005 = -117;
+          mtb.e();
+          int discarded$1006 = 1;
+          gwa.b();
+          int discarded$1007 = 12124934;
+          nhb.a();
           if (param0) {
             stackOut_44_0 = 0;
             stackIn_45_0 = stackOut_44_0;
@@ -2720,7 +3164,8 @@ public final class VoidHunters extends ms {
         }
         L15: {
           tm.b(stackIn_45_0 != 0);
-          afa.b(true);
+          int discarded$1008 = 1;
+          afa.b();
           if (param0) {
             stackOut_47_0 = 0;
             stackIn_48_0 = stackOut_47_0;
@@ -2735,10 +3180,14 @@ public final class VoidHunters extends ms {
           iga.b(stackIn_48_0 != 0);
           aq.a(-10441);
           dwa.a(69);
-          uta.e((byte) 112);
-          bfa.a(70);
-          eg.a(-124);
-          aab.b(true);
+          int discarded$1009 = 112;
+          uta.e();
+          int discarded$1010 = 70;
+          bfa.a();
+          int discarded$1011 = -124;
+          eg.a();
+          int discarded$1012 = 1;
+          aab.b();
           bo.a(-26081);
           if (param0) {
             stackOut_50_0 = 0;
@@ -2752,40 +3201,62 @@ public final class VoidHunters extends ms {
         }
         L17: {
           qea.b(stackIn_51_0 != 0);
-          ee.e(-15435);
-          lb.a(-612363640);
-          tab.a(76);
+          int discarded$1013 = -15435;
+          ee.e();
+          int discarded$1014 = -612363640;
+          lb.a();
+          int discarded$1015 = 76;
+          tab.a();
           emb.a(23518);
-          mpa.a(-27645);
+          int discarded$1016 = -27645;
+          mpa.a();
           fb.e((byte) 42);
           rta.a(32);
-          iqb.a(122);
-          wpa.b(true);
-          dhb.a(6);
-          pua.a(80);
+          int discarded$1017 = 122;
+          iqb.a();
+          int discarded$1018 = 1;
+          wpa.b();
+          int discarded$1019 = 6;
+          dhb.a();
+          int discarded$1020 = 80;
+          pua.a();
           aha.a(1511754497);
-          eaa.a(-110);
-          vwa.a(32);
+          int discarded$1021 = -110;
+          eaa.a();
+          int discarded$1022 = 32;
+          vwa.a();
           bqb.e((byte) -96);
-          jmb.b(true);
-          ad.e((byte) -27);
+          int discarded$1023 = 1;
+          jmb.b();
+          int discarded$1024 = -27;
+          ad.e();
           hr.a(-60);
           dd.a(85);
-          bm.a(-28228);
-          aka.e((byte) -119);
-          gra.e((byte) -8);
-          fqb.a(27154);
-          pqa.a(0);
-          gkb.a(88);
-          jh.a(89);
-          hmb.a(21584);
+          int discarded$1025 = -28228;
+          bm.a();
+          int discarded$1026 = -119;
+          aka.e();
+          int discarded$1027 = -8;
+          gra.e();
+          int discarded$1028 = 27154;
+          fqb.a();
+          int discarded$1029 = 0;
+          pqa.a();
+          int discarded$1030 = 88;
+          gkb.a();
+          int discarded$1031 = 89;
+          jh.a();
+          int discarded$1032 = 21584;
+          hmb.a();
           rnb.e((byte) 127);
           web.e((byte) 102);
           eia.a(92);
           lna.e((byte) -115);
           u.a(4);
-          qia.e((byte) -87);
-          jha.e((byte) 127);
+          int discarded$1033 = -87;
+          qia.e();
+          int discarded$1034 = 127;
+          jha.e();
           fe.a(6425);
           keb.a(-87);
           if (param0) {
@@ -2800,65 +3271,102 @@ public final class VoidHunters extends ms {
         }
         L18: {
           esa.b(stackIn_54_0 != 0);
-          sga.e((byte) -97);
+          int discarded$1035 = -97;
+          sga.e();
           vl.a(127);
-          dua.f((byte) 106);
+          int discarded$1036 = 106;
+          dua.f();
           mp.b(false);
           rja.e((byte) -91);
           lva.a(617169759);
-          raa.a(0);
+          int discarded$1037 = 0;
+          raa.a();
           gka.a(-114);
-          eha.a(-17297);
-          vpb.a(1600);
-          ra.a(107);
-          kwa.b(true);
-          jea.e(-20005);
-          noa.a(194);
+          int discarded$1038 = -17297;
+          eha.a();
+          int discarded$1039 = 1600;
+          vpb.a();
+          int discarded$1040 = 107;
+          ra.a();
+          int discarded$1041 = 1;
+          kwa.b();
+          int discarded$1042 = -20005;
+          jea.e();
+          int discarded$1043 = 194;
+          noa.a();
           gsa.a(109);
-          ks.e((byte) 119);
+          int discarded$1044 = 119;
+          ks.e();
           js.a(-20626);
-          wd.a(0);
-          ena.a(-100);
-          tk.e((byte) 101);
-          job.e((byte) -16);
-          rd.a(-1);
+          int discarded$1045 = 0;
+          wd.a();
+          int discarded$1046 = -100;
+          ena.a();
+          int discarded$1047 = 101;
+          tk.e();
+          int discarded$1048 = -16;
+          job.e();
+          int discarded$1049 = -1;
+          rd.a();
           kn.a(16086);
           gk.a(116);
-          iv.a(117);
+          int discarded$1050 = 117;
+          iv.a();
           hgb.e((byte) 57);
           ejb.e(117);
-          vda.e((byte) 99);
-          up.e((byte) 65);
-          qmb.e((byte) -125);
+          int discarded$1051 = 99;
+          vda.e();
+          int discarded$1052 = 65;
+          up.e();
+          int discarded$1053 = -125;
+          qmb.e();
           wrb.a(100);
-          jm.e((byte) 71);
-          rf.a(15110);
-          pga.a(-29417);
+          int discarded$1054 = 71;
+          jm.e();
+          int discarded$1055 = 15110;
+          rf.a();
+          int discarded$1056 = -29417;
+          pga.a();
           nda.a(0);
-          lr.a(125);
+          int discarded$1057 = 125;
+          lr.a();
           qv.e((byte) -78);
-          pmb.a(-1);
+          int discarded$1058 = -1;
+          pmb.a();
           eob.a(127);
           jhb.e((byte) 53);
           sbb.a(-120);
-          dn.a(-52);
-          tnb.e((byte) -25);
-          usa.e((byte) 108);
+          int discarded$1059 = -52;
+          dn.a();
+          int discarded$1060 = -25;
+          tnb.e();
+          int discarded$1061 = 108;
+          usa.e();
           sta.a(63);
-          ceb.e((byte) -116);
-          qra.e((byte) -80);
+          int discarded$1062 = -116;
+          ceb.e();
+          int discarded$1063 = -80;
+          qra.e();
           po.a(69);
           mlb.e((byte) 92);
-          dh.e((byte) -99);
+          int discarded$1064 = -99;
+          dh.e();
           am.e(-1);
-          nlb.e((byte) -80);
-          plb.a(16);
+          int discarded$1065 = -80;
+          nlb.e();
+          int discarded$1066 = 16;
+          plb.a();
           fhb.a(-116);
-          cta.a(14675);
-          ahb.a(0);
-          vaa.e((byte) 21);
-          hwa.e((byte) 107);
-          vsa.a(-92);
+          int discarded$1067 = 14675;
+          cta.a();
+          int discarded$1068 = 0;
+          ahb.a();
+          int discarded$1069 = 21;
+          vaa.e();
+          int discarded$1070 = 107;
+          hwa.e();
+          int discarded$1071 = -92;
+          vsa.a();
           if (param0) {
             stackOut_56_0 = 0;
             stackIn_57_0 = stackOut_56_0;
@@ -2872,26 +3380,36 @@ public final class VoidHunters extends ms {
         L19: {
           vo.b(stackIn_57_0 != 0);
           qoa.a(9099);
-          wo.a(-124);
+          int discarded$1072 = -124;
+          wo.a();
           bpb.a(0);
-          kg.a(7848);
+          int discarded$1073 = 7848;
+          kg.a();
           eva.a(0);
           kpa.a(146);
-          we.e((byte) 97);
+          int discarded$1074 = 97;
+          we.e();
           ioa.e((byte) -102);
-          pma.e((byte) -102);
+          int discarded$1075 = -102;
+          pma.e();
           hoa.a(-123);
-          vqb.e((byte) -127);
+          int discarded$1076 = -127;
+          vqb.e();
           lcb.a(0);
           orb.a(-982);
-          ijb.a(-59);
-          wea.a(153);
+          int discarded$1077 = -59;
+          ijb.a();
+          int discarded$1078 = 153;
+          wea.a();
           lda.a(-2573);
           hv.e((byte) 15);
           ma.a(-17548);
-          tqa.a(76);
-          st.a(0);
-          qe.e((byte) 118);
+          int discarded$1079 = 76;
+          tqa.a();
+          int discarded$1080 = 0;
+          st.a();
+          int discarded$1081 = 118;
+          qe.e();
           if (param0) {
             stackOut_59_0 = 0;
             stackIn_60_0 = stackOut_59_0;
@@ -2904,10 +3422,14 @@ public final class VoidHunters extends ms {
         }
         L20: {
           gbb.b(stackIn_60_0 != 0);
-          fmb.a(0);
-          bja.f((byte) 92);
-          ip.e((byte) 62);
-          cu.a(163);
+          int discarded$1082 = 0;
+          fmb.a();
+          int discarded$1083 = 92;
+          bja.f();
+          int discarded$1084 = 62;
+          ip.e();
+          int discarded$1085 = 163;
+          cu.a();
           ag.b(false);
           if (param0) {
             stackOut_62_0 = 0;
@@ -2921,134 +3443,214 @@ public final class VoidHunters extends ms {
         }
         si.b(stackIn_63_0 != 0);
         egb.a(118);
-        oea.e((byte) -113);
-        nu.a(-10515);
-        jj.a(-17);
-        lgb.b(false);
+        int discarded$1086 = -113;
+        oea.e();
+        int discarded$1087 = -10515;
+        nu.a();
+        int discarded$1088 = -17;
+        jj.a();
+        int discarded$1089 = 0;
+        lgb.b();
         ega.e((byte) 28);
-        gr.a(12992);
-        uua.e((byte) -99);
+        int discarded$1090 = 12992;
+        gr.a();
+        int discarded$1091 = -99;
+        uua.e();
         wra.a(0);
         ss.a(169);
-        qna.a(-107);
+        int discarded$1092 = -107;
+        qna.a();
         rua.e((byte) 83);
         go.a(-25544);
-        ipa.a(176);
+        int discarded$1093 = 176;
+        ipa.a();
         ohb.e((byte) 84);
-        fi.a(177);
-        mwa.a(127);
-        uh.a(64);
+        int discarded$1094 = 177;
+        fi.a();
+        int discarded$1095 = 127;
+        mwa.a();
+        int discarded$1096 = 64;
+        uh.a();
         knb.e((byte) -118);
         qnb.a(0);
-        uaa.a(2);
-        ktb.e((byte) 126);
-        vk.e((byte) 69);
+        int discarded$1097 = 2;
+        uaa.a();
+        int discarded$1098 = 126;
+        ktb.e();
+        int discarded$1099 = 69;
+        vk.e();
         gha.a(0);
-        tta.a(113);
+        int discarded$1100 = 113;
+        tta.a();
         tdb.a(-120);
-        ula.a(-19013);
-        obb.a(21942);
-        jc.b(false);
+        int discarded$1101 = -19013;
+        ula.a();
+        int discarded$1102 = 21942;
+        obb.a();
+        int discarded$1103 = 0;
+        jc.b();
         lqa.e((byte) -122);
-        fda.f((byte) 51);
+        int discarded$1104 = 51;
+        fda.f();
         ukb.e((byte) -71);
         ju.e((byte) 65);
-        paa.e((byte) -28);
+        int discarded$1105 = -28;
+        paa.e();
         iha.a(-105);
         wba.a(-122);
         hia.e(0);
-        vtb.a(80);
+        int discarded$1106 = 80;
+        vtb.a();
         tba.e((byte) -89);
-        qhb.e((byte) -118);
-        jt.a(26468);
-        db.e(193);
-        rob.a(-33);
-        vs.a(7069);
+        int discarded$1107 = -118;
+        qhb.e();
+        int discarded$1108 = 26468;
+        jt.a();
+        int discarded$1109 = 193;
+        db.e();
+        int discarded$1110 = -33;
+        rob.a();
+        int discarded$1111 = 7069;
+        vs.a();
         mi.f((byte) -125);
-        nb.a(0);
-        hga.a(67);
+        int discarded$1112 = 0;
+        nb.a();
+        int discarded$1113 = 67;
+        hga.a();
         cqa.e((byte) -52);
-        tra.a(0);
-        ep.e((byte) 57);
+        int discarded$1114 = 0;
+        tra.a();
+        int discarded$1115 = 57;
+        ep.e();
         tq.b(true);
-        thb.a(200);
-        qcb.a(17231);
-        gca.a(-120);
-        qa.e((byte) -63);
+        int discarded$1116 = 200;
+        thb.a();
+        int discarded$1117 = 17231;
+        qcb.a();
+        int discarded$1118 = -120;
+        gca.a();
+        int discarded$1119 = -63;
+        qa.e();
         saa.a(-14010);
-        to.a(204);
+        int discarded$1120 = 204;
+        to.a();
         wjb.a(235);
-        jca.a(124);
-        tkb.a(3);
-        eh.a(0);
-        bga.a(207);
-        bnb.e((byte) -90);
+        int discarded$1121 = 124;
+        jca.a();
+        int discarded$1122 = 3;
+        tkb.a();
+        int discarded$1123 = 0;
+        eh.a();
+        int discarded$1124 = 207;
+        bga.a();
+        int discarded$1125 = -90;
+        bnb.e();
         bb.e((byte) 123);
-        oh.e((byte) 0);
+        int discarded$1126 = 0;
+        oh.e();
         jta.a(-29044);
-        geb.e((byte) 121);
-        tha.e((byte) -101);
-        lv.a(-126);
-        haa.e((byte) 91);
-        ap.a(215);
-        ib.a(-99);
-        mg.e(-105);
-        ldb.b(false);
-        ou.e((byte) -33);
-        vob.e((byte) -121);
-        cnb.e((byte) 84);
+        int discarded$1127 = 121;
+        geb.e();
+        int discarded$1128 = -101;
+        tha.e();
+        int discarded$1129 = -126;
+        lv.a();
+        int discarded$1130 = 91;
+        haa.e();
+        int discarded$1131 = 215;
+        ap.a();
+        int discarded$1132 = -99;
+        ib.a();
+        int discarded$1133 = -105;
+        mg.e();
+        int discarded$1134 = 0;
+        ldb.b();
+        int discarded$1135 = -33;
+        ou.e();
+        int discarded$1136 = -121;
+        vob.e();
+        int discarded$1137 = 84;
+        cnb.e();
         hm.a(-123);
-        ikb.a(221);
+        int discarded$1138 = 221;
+        ikb.a();
         dia.a(0);
         qtb.a(16407);
-        wl.a(-27266);
-        rhb.a(225);
+        int discarded$1139 = -27266;
+        wl.a();
+        int discarded$1140 = 225;
+        rhb.a();
         flb.a(-26016);
-        ce.a(8);
-        gh.a(14055);
+        int discarded$1141 = 8;
+        ce.a();
+        int discarded$1142 = 14055;
+        gh.a();
         dca.a(103);
-        vj.a(-128);
+        int discarded$1143 = -128;
+        vj.a();
         kp.a(46);
-        dsa.a(0);
-        fja.e((byte) -106);
-        tl.e((byte) -15);
+        int discarded$1144 = 0;
+        dsa.a();
+        int discarded$1145 = -106;
+        fja.e();
+        int discarded$1146 = -15;
+        tl.e();
         gu.a(232);
         rfa.e((byte) 49);
-        ah.a(233);
-        iqa.e((byte) 91);
+        int discarded$1147 = 233;
+        ah.a();
+        int discarded$1148 = 91;
+        iqa.e();
         bab.a(true);
         fob.a(75);
-        rc.a(540800);
-        vlb.a(-104);
-        ada.a(-1);
-        wga.a(-1);
+        int discarded$1149 = 540800;
+        rc.a();
+        int discarded$1150 = -104;
+        vlb.a();
+        int discarded$1151 = -1;
+        ada.a();
+        int discarded$1152 = -1;
+        wga.a();
         uk.c((byte) 67);
-        tib.f(6312);
-        ocb.d((byte) 126);
-        rm.f(2);
+        int discarded$1153 = 6312;
+        tib.f();
+        int discarded$1154 = 126;
+        ocb.d();
+        int discarded$1155 = 2;
+        rm.f();
         wgb.f(68);
         vqa.f(1);
-        oe.a((byte) 94);
-        hob.c((byte) -63);
+        int discarded$1156 = 94;
+        oe.a();
+        int discarded$1157 = -63;
+        hob.c();
         sc.c(123);
         ola.b(2);
-        glb.b(-17471);
-        rv.a(-1);
-        vib.a(84);
-        bca.a(-115);
-        pab.a(false);
+        int discarded$1158 = -17471;
+        glb.b();
+        int discarded$1159 = -1;
+        rv.a();
+        int discarded$1160 = 84;
+        vib.a();
+        int discarded$1161 = -115;
+        bca.a();
+        int discarded$1162 = 0;
+        pab.a();
         ev.a(28378);
-        eu.b(30826);
-        cp.a((byte) -127);
+        int discarded$1163 = 30826;
+        eu.b();
+        int discarded$1164 = -127;
+        cp.a();
         dib.a((byte) 89);
         lkb.a(199);
         mmb.a(2);
-        dgb.a(false);
+        int discarded$1165 = 0;
+        dgb.a();
         ((VoidHunters) this).field_F = null;
         ((VoidHunters) this).field_u = null;
     }
 
-    private final boolean h(byte param0) {
+    private final boolean h() {
         int var2 = 0;
         int var3 = field_G;
         mab.field_a = (VoidHunters) this;
@@ -3056,7 +3658,8 @@ public final class VoidHunters extends ms {
             return false;
         }
         fka.a("Initing menus", (byte) -62);
-        csa.b((byte) -111);
+        int discarded$0 = -111;
+        csa.b();
         for (var2 = 0; var2 < 10; var2++) {
             lo.field_a[var2] = new wf(var2);
         }
@@ -3064,16 +3667,19 @@ public final class VoidHunters extends ms {
         oab.field_o = 0;
         gib.a(-106, 50);
         fka.a("Playing music", (byte) -101);
-        hb.a(pab.field_k[0], (byte) -114);
+        int discarded$1 = -114;
+        hb.a(pab.field_k[0]);
         for (var2 = 0; var2 < 16; var2++) {
             fi.field_o.b(0, (byte) 18, var2);
         }
         wgb.a(jj.field_p, ama.field_o, qaa.field_a, -131, qua.field_b, nl.field_n, oma.field_i);
         fka.a("Initing audiohandler", (byte) -64);
-        qn.c((byte) 89);
+        int discarded$2 = 89;
+        qn.c();
         fkb.a(2096);
         fka.a("Finished loadloop", (byte) -128);
-        if (this.l(0)) {
+        int discarded$3 = 0;
+        if (this.l()) {
             if (fda.e((byte) 116)) {
                 wu.a(true, false);
             }
@@ -3082,13 +3688,14 @@ public final class VoidHunters extends ms {
     }
 
     final void b(int param0) {
-        prb.b(false);
+        int discarded$4 = 0;
+        prb.b();
         if (!(null == psb.field_b)) {
             cqb.b((byte) 86);
         }
         jn.a(1);
         if (param0 >= -102) {
-            String discarded$0 = VoidHunters.b(63, 91);
+            String discarded$5 = VoidHunters.b(63, 91);
         }
     }
 
@@ -3173,7 +3780,8 @@ public final class VoidHunters extends ms {
           }
         }
         L1: {
-          if (!eo.a(61848)) {
+          int discarded$17 = 61848;
+          if (!eo.a()) {
             break L1;
           } else {
             if (oab.field_o != 0) {
@@ -3205,7 +3813,8 @@ public final class VoidHunters extends ms {
             if (wp.field_a == maa.field_o) {
               hn.field_a = hn.field_a + 1;
               if (16 == hn.field_a) {
-                gnb.a(0);
+                int discarded$18 = 0;
+                gnb.a();
                 wp.field_a = tjb.field_wb;
                 break L3;
               } else {
@@ -3215,7 +3824,8 @@ public final class VoidHunters extends ms {
               if (tjb.field_wb == wp.field_a) {
                 if (!fda.e((byte) 102)) {
                   L4: {
-                    ek.b(false);
+                    int discarded$19 = 0;
+                    ek.b();
                     wgb.field_f = pw.field_a;
                     if (!kua.field_e) {
                       break L4;
@@ -3423,10 +4033,12 @@ public final class VoidHunters extends ms {
                     ((uca) (Object) stackIn_54_0).a((byte) stackIn_54_1, stackIn_54_2 != 0);
                     if (!jkb.field_a) {
                       L14: while (true) {
-                        if (!ata.e(127)) {
+                        int discarded$20 = 127;
+                        if (!ata.e()) {
                           break L10;
                         } else {
-                          if (!qmb.a(-22029)) {
+                          int discarded$21 = -22029;
+                          if (!qmb.a()) {
                             vqa.field_g.d((byte) 121);
                             continue L14;
                           } else {
@@ -3442,7 +4054,8 @@ public final class VoidHunters extends ms {
               }
             }
             L15: {
-              glb.c(17043);
+              int discarded$22 = 17043;
+              glb.c();
               if (null == wca.field_b) {
                 break L15;
               } else {
@@ -3531,7 +4144,8 @@ public final class VoidHunters extends ms {
                           var7 = (-dma.field_g + ip.field_p.width) / 2;
                           var8 = (-dma.field_j + ip.field_p.height) / 2;
                           js.a(-119, var8, var7);
-                          hlb.a(tqa.e((byte) 93), var4 != 0, sea.a(-99), 123);
+                          int discarded$23 = 123;
+                          hlb.a(tqa.e((byte) 93), var4 != 0, sea.a(-99));
                           cc.b(-1);
                           if (vqa.field_g.field_N) {
                             vqa.field_g.a((byte) 89, var4 != 0);
@@ -3546,10 +4160,12 @@ public final class VoidHunters extends ms {
                     }
                     var7 = 0;
                     L23: while (true) {
-                      if (!ata.e(127)) {
+                      int discarded$24 = 127;
+                      if (!ata.e()) {
                         break L19;
                       } else {
-                        if (qmb.a(-22029)) {
+                        int discarded$25 = -22029;
+                        if (qmb.a()) {
                           continue L23;
                         } else {
                           L24: {
@@ -3666,7 +4282,11 @@ public final class VoidHunters extends ms {
                                               }
                                             }
                                           }
-                                          if (gbb.a(13, 15, 12, (byte) 23)) {
+                                          int discarded$26 = 23;
+                                          int discarded$27 = 12;
+                                          int discarded$28 = 15;
+                                          int discarded$29 = 13;
+                                          if (gbb.a()) {
                                             continue L23;
                                           } else {
                                             break L24;
@@ -3715,7 +4335,8 @@ public final class VoidHunters extends ms {
               if (jkb.field_a) {
                 break L32;
               } else {
-                VoidHunters.m(-29130);
+                int discarded$30 = -29130;
+                VoidHunters.m();
                 break L32;
               }
             }
@@ -3743,13 +4364,13 @@ public final class VoidHunters extends ms {
             if (dv.field_c.d(0) == null) {
               break L3;
             } else {
-              int fieldTemp$2 = wva.field_b + 1;
+              int fieldTemp$31 = wva.field_b + 1;
               wva.field_b = wva.field_b + 1;
-              if (fieldTemp$2 != 335) {
+              if (fieldTemp$31 != 335) {
                 break L3;
               } else {
                 wva.field_b = 0;
-                ksa discarded$3 = dv.field_c.a(true);
+                ksa discarded$32 = dv.field_c.a(true);
                 break L3;
               }
             }
@@ -3802,7 +4423,8 @@ public final class VoidHunters extends ms {
         }
         L39: {
           L40: {
-            this.g((byte) -127);
+            int discarded$33 = -127;
+            this.g();
             if (!ssa.b(2)) {
               break L40;
             } else {
@@ -3924,7 +4546,7 @@ public final class VoidHunters extends ms {
                   ((VoidHunters) this).field_F.field_r = og.field_r.na(var4, var5, ((VoidHunters) this).field_F.field_q, ((VoidHunters) this).field_F.field_p);
                   break L1;
                 }
-                ((VoidHunters) this).field_F.c(dma.field_g / 2 + -(param2 / param0), dma.field_j / 2 - param1 / 2 - 1);
+                ((VoidHunters) this).field_F.c(dma.field_g / 2 + -(param2 / 2), dma.field_j / 2 - param1 / 2 - 1);
                 return;
               }
             }
@@ -4001,20 +4623,23 @@ public final class VoidHunters extends ms {
                     }
                   }
                 }
-                jc.a(-9934);
+                int discarded$20 = -9934;
+                jc.a();
                 break L0;
               } else {
                 break L0;
               }
             }
             if (fu.a(77)) {
-              hka.a(111, var10, rnb.a(0));
+              int discarded$21 = 0;
+              hka.a(111, var10, rnb.a());
               return;
             } else {
               if (uob.field_e) {
                 if (!hkb.b(-1)) {
                   uoa.a(lwa.field_vb, -1, 100.0f);
-                  pga.a(var10, true);
+                  int discarded$22 = 1;
+                  pga.a(var10);
                   return;
                 } else {
                   L3: {
@@ -4029,7 +4654,7 @@ public final class VoidHunters extends ms {
                             if (og.field_r.s()) {
                               break L5;
                             } else {
-                              boolean discarded$1 = og.field_r.b();
+                              boolean discarded$23 = og.field_r.b();
                               break L5;
                             }
                           }
@@ -4074,7 +4699,8 @@ public final class VoidHunters extends ms {
                     var3_int = (-dma.field_g + ip.field_p.width) / 2;
                     var4_int = (-dma.field_j + ip.field_p.height) / 2;
                     js.a(-89, var4_int, var3_int);
-                    fr.a(jnb.e(83), true);
+                    int discarded$24 = 1;
+                    fr.a(jnb.e(83));
                     cc.b(-1);
                     break L7;
                   }
@@ -4145,20 +4771,25 @@ public final class VoidHunters extends ms {
                           if (wna.field_e) {
                             break L15;
                           } else {
-                            this.a(2, 20 + cd.a(true), fk.b(-119));
+                            int discarded$25 = -119;
+                            this.a(2, 20 + cd.a(true), fk.b());
                             break L15;
                           }
                         }
-                        rw.a(false, (byte) 71);
+                        int discarded$26 = 71;
+                        int discarded$27 = 0;
+                        rw.a();
                         wna.field_e = true;
                         break L14;
                       } else {
-                        if (ffa.a(false)) {
+                        int discarded$28 = 0;
+                        if (ffa.a()) {
                           L16: {
                             ksa.a((phb[]) null, 8, 0, (phb[]) null, (phb[]) null, 8555923, 0, 15658751, 15658751, (no) (Object) dsb.field_p, dma.field_j / 2, 0, 0, -14109, dma.field_g / 2);
                             var4_int = 16;
                             var5_int = var4_int + eba.a(0);
-                            var6 = var4_int + geb.a(-22954);
+                            int discarded$29 = -22954;
+                            var6 = var4_int + geb.a();
                             var7 = ip.field_p.width / 2 - var5_int / 2;
                             var8 = -(var6 / 2) + ip.field_p.height / 2;
                             af.a((byte) -115, 255, var6, var7, var8 + -1, var5_int);
@@ -4175,7 +4806,8 @@ public final class VoidHunters extends ms {
                             }
                           }
                           ((VoidHunters) this).field_F.c(dma.field_g / 2 - var5_int / 2, dma.field_j / 2 - var6 / 2 + -1);
-                          ieb.f(-1321004447);
+                          int discarded$30 = -1321004447;
+                          ieb.f();
                           wna.field_e = true;
                           break L14;
                         } else {
@@ -4231,13 +4863,16 @@ public final class VoidHunters extends ms {
                               if (((VoidHunters) this).field_F == null) {
                                 break L21;
                               } else {
-                                var6 = gua.e((byte) -24);
-                                var7 = rg.b((byte) 102);
+                                int discarded$31 = -24;
+                                var6 = gua.e();
+                                int discarded$32 = 102;
+                                var7 = rg.b();
                                 break L21;
                               }
                             }
                           }
-                          var8_ref_kla = feb.a(og.field_r, true);
+                          int discarded$33 = 1;
+                          var8_ref_kla = feb.a(og.field_r);
                           var8_ref_kla.a(var6, var6 - -var4_int, var7, var7 + var5_int, (byte) -76);
                           var7 = (-dma.field_j + ip.field_p.height) / 2;
                           var6 = (ip.field_p.width + -dma.field_g) / 2;
@@ -4254,9 +4889,11 @@ public final class VoidHunters extends ms {
                         var4_int = di.field_l.field_m.c(0);
                         var5 = isa.a(to.field_q, new String[1], 106);
                         var6 = 1;
-                        var7 = (ip.field_p.width >> 1) - (tea.a(var6, var5, 13879) >> 1);
+                        int discarded$34 = 13879;
+                        var7 = (ip.field_p.width >> 1) - (tea.a(var6, var5) >> 1);
                         var8 = (ip.field_p.height >> 1) - (pqa.a(false, var6) >> 1);
-                        af.a((byte) -115, 200, fkb.a(var6, (byte) -121) * 8, var7 - 16, var8 + -(5 * fkb.a(var6, (byte) -121)), 32 + tea.a(var6, var5, 13879));
+                        int discarded$35 = 13879;
+                        af.a((byte) -115, 200, fkb.a(var6, (byte) -121) * 8, var7 - 16, var8 + -(5 * fkb.a(var6, (byte) -121)), 32 + tea.a(var6, var5));
                         pm.a(var7, 1, var8, var5, var6, 16777215, (byte) -101);
                         break L22;
                       }
@@ -4308,7 +4945,10 @@ public final class VoidHunters extends ms {
                         }
                         break L26;
                       } else {
-                        dh.a(var10, 0, 0, 0);
+                        int discarded$36 = 0;
+                        int discarded$37 = 0;
+                        int discarded$38 = 0;
+                        dh.a(var10);
                         break L26;
                       }
                     }
@@ -4318,7 +4958,8 @@ public final class VoidHunters extends ms {
                   }
                 }
               } else {
-                pga.a(var10, true);
+                int discarded$39 = 1;
+                pga.a(var10);
                 return;
               }
             }

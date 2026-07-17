@@ -49,18 +49,15 @@ final class wq extends oh {
         }
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_I = null;
         field_K = null;
-        if (param0 != -12477) {
-            return;
-        }
         field_M = null;
         field_G = null;
         field_L = null;
     }
 
-    final static void i(int param0) {
+    final static void i() {
         p.a(-33);
         rh.b(-14, 4);
     }

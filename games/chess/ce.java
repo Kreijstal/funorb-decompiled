@@ -14,17 +14,14 @@ final class ce {
         return param0 & param1;
     }
 
-    public static void a(boolean param0) {
-        if (!param0) {
-            return;
-        }
+    public static void a() {
         field_a = null;
         field_c = null;
         field_b = null;
         field_d = null;
     }
 
-    final static void a(ld param0, int param1) {
+    final static void a(ld param0) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -165,7 +162,8 @@ final class ce {
               if (0 != param0.field_k) {
                 break L2;
               } else {
-                if (sb.j((byte) 78)) {
+                int discarded$2 = 78;
+                if (sb.j()) {
                   break L2;
                 } else {
                   if (null != pd.field_Rb) {
@@ -197,7 +195,8 @@ final class ce {
               if (param0.field_k != 1) {
                 break L4;
               } else {
-                if (sb.j((byte) 78)) {
+                int discarded$3 = 78;
+                if (sb.j()) {
                   break L4;
                 } else {
                   if (pd.field_Rb == null) {

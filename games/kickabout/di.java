@@ -13,38 +13,34 @@ final class di {
         var5 = Kickabout.field_G;
         try {
           L0: {
-            if (param1) {
-              var3 = (hn) (Object) da.field_h.d(-9033);
-              L1: while (true) {
-                L2: {
-                  if (var3 == null) {
+            var3 = (hn) (Object) da.field_h.d(-9033);
+            L1: while (true) {
+              L2: {
+                if (var3 == null) {
+                  break L2;
+                } else {
+                  if (var3.field_i != 9) {
                     break L2;
                   } else {
-                    if (var3.field_i != 9) {
-                      break L2;
-                    } else {
-                      var3.c((byte) -109);
-                      var3 = (hn) (Object) da.field_h.d(-9033);
-                      continue L1;
-                    }
+                    var3.c((byte) -109);
+                    var3 = (hn) (Object) da.field_h.d(-9033);
+                    continue L1;
                   }
                 }
-                var4 = ic.field_h.a(param2, -86, param0);
-                ii.a(var4, 85);
-                break L0;
               }
-            } else {
-              return;
+              var4 = ic.field_h.a(param2, -86, param0);
+              ii.a(var4, 85);
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) runtimeException, "di.B(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw nb.a((Throwable) (Object) runtimeException, "di.B(" + param0 + 44 + 1 + 44 + param2 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 

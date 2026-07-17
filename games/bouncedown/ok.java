@@ -17,7 +17,7 @@ final class ok {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_c = null;
     }
 
@@ -71,7 +71,7 @@ final class ok {
         return cg.field_a;
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void a(java.applet.Applet param0) {
         String var2 = null;
         RuntimeException var2_ref = null;
         CharSequence var3 = null;
@@ -245,9 +245,9 @@ final class ok {
     final static tg[] a(int param0, int param1, int param2, int param3, int param4) {
         if (param0 != 18938) {
           boolean discarded$2 = ok.a(false, 11);
-          return jk.a(param1, 1, param3, -7139, param4, 1, 3, param2, 1);
+          return jk.a(0, 1, 0, -7139, 65793, 1, 3, 0, 1);
         } else {
-          return jk.a(param1, 1, param3, -7139, param4, 1, 3, param2, 1);
+          return jk.a(0, 1, 0, -7139, 65793, 1, 3, 0, 1);
         }
     }
 

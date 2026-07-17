@@ -8,7 +8,7 @@ final class rh {
         throw new IllegalStateException();
     }
 
-    final static void a(int param0) {
+    final static void a() {
     }
 
     static {

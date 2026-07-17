@@ -39,7 +39,7 @@ final class wa {
         }
     }
 
-    final static String a(boolean param0) {
+    final static String a() {
         int var1 = em.field_b;
         if (!(var1 >= 0)) {
             var1 = 0;
@@ -338,8 +338,8 @@ final class wa {
 
     final static void a(boolean param0, boolean param1, int param2) {
         int var3 = -32 / ((-43 - param2) / 32);
-        Object var4 = null;
-        fl.a(param1, param0, (String) null, -22175);
+        int discarded$0 = -22175;
+        fl.a(param1, param0, (String) null);
     }
 
     private final void a(byte param0) {

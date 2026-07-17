@@ -64,7 +64,8 @@ final class vk extends sh {
                 break L0;
               } else {
                 L3: {
-                  if (ml.a((char)var6, 21654)) {
+                  int discarded$10 = 21654;
+                  if (ml.a((char)var6)) {
                     var7 = param2.a((char)var6);
                     if (var5 < var7) {
                       var4_int = (char)var6;

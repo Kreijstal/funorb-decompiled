@@ -673,7 +673,8 @@ final class u extends uc implements jk {
         mb var2 = null;
         if (((u) this).field_D) {
           if (!((u) this).field_ub) {
-            var2 = jg.c(false);
+            int discarded$1 = 0;
+            var2 = jg.c();
             if (var2 == null) {
               if (param0 > -21) {
                 u.l((byte) -108);
@@ -708,7 +709,7 @@ final class u extends uc implements jk {
         }
     }
 
-    public static void j(byte param0) {
+    public static void j() {
         field_pb = null;
     }
 
@@ -851,13 +852,13 @@ final class u extends uc implements jk {
             throw new IllegalStateException();
         }
         if (jj.field_a != null) {
-            jj.field_a.g(true);
+            jj.field_a.g(!param0 ? true : false);
         }
-        String var1 = ni.a(false);
+        String var1 = ni.a(param0);
         eb.field_b = new ti(var1, (String) null, true, false, false);
         ug.field_A.a(-14579, (w) (Object) di.field_x);
         di.field_x.b(126, (w) (Object) eb.field_b);
-        di.field_x.f(true);
+        di.field_x.f(!param0 ? true : false);
     }
 
     final static void l(byte param0) {
@@ -1086,7 +1087,8 @@ final class u extends uc implements jk {
               }
               break L0;
             } else {
-              jd.a(false, true, 37);
+              int discarded$2 = 37;
+              jd.a(false, true);
               return;
             }
           }

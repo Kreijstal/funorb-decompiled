@@ -8,7 +8,7 @@ final class vk {
     static String field_e;
     static int field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_e = null;
         field_c = null;
@@ -16,12 +16,10 @@ final class vk {
 
     final static void a(int param0, tg[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, tj param9, tj param10, tg[] param11, int param12, int param13) {
         try {
-            if (param7 != 3) {
-                field_a = true;
-            }
-            va.a(2);
+            int discarded$0 = 2;
+            va.a();
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "vk.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + (param9 != null ? "{...}" : "null") + 44 + (param10 != null ? "{...}" : "null") + 44 + (param11 != null ? "{...}" : "null") + 44 + param12 + 44 + param13 + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "vk.A(" + 240 + 44 + (param1 != null ? "{...}" : "null") + 44 + 320 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + 3 + 44 + 2 + 44 + (param9 != null ? "{...}" : "null") + 44 + (param10 != null ? "{...}" : "null") + 44 + (param11 != null ? "{...}" : "null") + 44 + param12 + 44 + param13 + 41);
         }
     }
 

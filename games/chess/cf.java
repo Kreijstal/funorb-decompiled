@@ -383,7 +383,8 @@ final class cf extends ci {
     }
 
     final static void a(int param0, byte param1) {
-        int discarded$3 = ve.f((byte) -76);
+        int discarded$4 = -76;
+        int discarded$7 = ve.f();
         if (param1 >= -77) {
             field_Nb = false;
         }
@@ -457,7 +458,7 @@ final class cf extends ci {
         }
     }
 
-    final static String a(CharSequence param0, int param1, boolean param2) {
+    final static String a(CharSequence param0, int param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -548,8 +549,8 @@ final class cf extends ci {
 
     final static void a(int param0, boolean param1, boolean param2) {
         if (param0 <= 69) {
-            Object var4 = null;
-            String discarded$0 = cf.a((CharSequence) null, -29, false);
+            int discarded$0 = 0;
+            String discarded$1 = cf.a((CharSequence) null, -29);
         }
         if (!param1) {
             wb.b();
@@ -611,7 +612,8 @@ final class cf extends ci {
             var6 = var6 + 2 * ((cf) this).field_Ib;
             var7 = ((cf) this).field_Eb - (-(((cf) this).field_Fb * ((cf) this).field_Sb) + -((cf) this).field_Eb);
             var8 = ao.a(var6, param0, param1, param4);
-            var9 = sg.a(param3, var7, param2, 0);
+            int discarded$1 = 0;
+            var9 = sg.a(param3, var7, param2);
             ((cf) this).a(var8, var6, -2147483648, var7, var9);
             var10 = 0;
             L2: while (true) {

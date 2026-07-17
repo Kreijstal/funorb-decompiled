@@ -10,7 +10,7 @@ final class rh implements jk {
     static double field_e;
     static double field_d;
 
-    final static void b(byte param0) {
+    final static void b() {
         nf var1 = null;
         RuntimeException var1_ref = null;
         tm var2_ref_tm = null;
@@ -28,7 +28,8 @@ final class rh implements jk {
                 if (var1 == hs.field_j) {
                   break L1;
                 } else {
-                  no.a(hs.field_j, 1);
+                  int discarded$4 = 1;
+                  no.a(hs.field_j);
                   hs.field_j = var1;
                   break L1;
                 }
@@ -49,7 +50,8 @@ final class rh implements jk {
                 if (var2_ref_tm == null) {
                   break L3;
                 } else {
-                  gs.a(var2_ref_tm, true);
+                  int discarded$5 = 1;
+                  gs.a(var2_ref_tm);
                   break L3;
                 }
               } else {
@@ -81,7 +83,7 @@ final class rh implements jk {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_a = null;
         field_g = null;
@@ -92,7 +94,8 @@ final class rh implements jk {
         if (param0 > -119) {
             return;
         }
-        pc.c(-113);
+        int discarded$0 = -113;
+        pc.c();
         tc.field_G = null;
         jp.g((byte) 122);
     }

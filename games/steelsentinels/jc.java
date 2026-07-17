@@ -123,34 +123,19 @@ final class jc {
         return var2;
     }
 
-    final static String b(byte param0) {
+    final static String b() {
         if (!pg.field_A) {
           if (si.field_m >= ik.field_c) {
             if (ik.field_c + ni.field_c <= si.field_m) {
-              if (param0 == -122) {
-                return null;
-              } else {
-                field_j = null;
-                return null;
-              }
+              return null;
             } else {
               return rc.field_b;
             }
           } else {
-            if (param0 == -122) {
-              return null;
-            } else {
-              field_j = null;
-              return null;
-            }
+            return null;
           }
         } else {
-          if (param0 == -122) {
-            return null;
-          } else {
-            field_j = null;
-            return null;
-          }
+          return null;
         }
     }
 
@@ -227,7 +212,7 @@ final class jc {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         nm.field_n = null;
         dj.field_j = null;
         vl.field_r = false;
@@ -364,7 +349,7 @@ final class jc {
         return stackIn_10_0;
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_i = null;
         field_j = null;
         field_b = null;

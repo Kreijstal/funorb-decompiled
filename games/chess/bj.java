@@ -63,66 +63,36 @@ abstract class bj extends k {
         var3 = Chess.field_G;
         if (((bj) this).field_lb != null) {
           if (sg.field_f != ((bj) this).field_lb) {
-            if (cf.field_Tb != ((bj) this).field_lb) {
-              if (param0 >= -4) {
-                field_bb = null;
+            if (cf.field_Tb == ((bj) this).field_lb) {
+              int fieldTemp$2 = ((bj) this).field_fb + 1;
+              ((bj) this).field_fb = ((bj) this).field_fb + 1;
+              if (((bj) this).field_mb == fieldTemp$2) {
+                ((bj) this).field_kb.field_R = 256;
+                ((bj) this).field_lb = null;
                 return super.g((byte) -52);
               } else {
+                ((bj) this).field_kb.field_R = (((bj) this).field_fb << 8) / ((bj) this).field_mb;
                 return super.g((byte) -52);
               }
             } else {
-              int fieldTemp$2 = ((bj) this).field_fb + 1;
-              ((bj) this).field_fb = ((bj) this).field_fb + 1;
-              if (((bj) this).field_mb != fieldTemp$2) {
-                ((bj) this).field_kb.field_R = (((bj) this).field_fb << 8) / ((bj) this).field_mb;
-                if (param0 >= -4) {
-                  field_bb = null;
-                  return super.g((byte) -52);
-                } else {
-                  return super.g((byte) -52);
-                }
-              } else {
-                ((bj) this).field_kb.field_R = 256;
-                ((bj) this).field_lb = null;
-                if (param0 >= -4) {
-                  field_bb = null;
-                  return super.g((byte) -52);
-                } else {
-                  return super.g((byte) -52);
-                }
-              }
+              return super.g((byte) -52);
             }
           } else {
             int fieldTemp$3 = ((bj) this).field_fb + 1;
             ((bj) this).field_fb = ((bj) this).field_fb + 1;
-            if (fieldTemp$3 != ((bj) this).field_hb) {
-              ((bj) this).field_kb.field_R = 256 - (((bj) this).field_fb << 8) / ((bj) this).field_hb;
-              if (param0 >= -4) {
-                field_bb = null;
-                return super.g((byte) -52);
-              } else {
-                return super.g((byte) -52);
-              }
-            } else {
+            if (fieldTemp$3 == ((bj) this).field_hb) {
               ((bj) this).field_lb = ga.field_b;
               ((bj) this).b(((bj) this).field_nb, ((bj) this).field_qb + 12 - -((bj) this).field_ib.field_C, -18807, ((bj) this).field_ib.field_y + 12);
               ((bj) this).field_kb.field_R = 0;
               ((bj) this).field_fb = 0;
-              if (param0 < -4) {
-                return super.g((byte) -52);
-              } else {
-                field_bb = null;
-                return super.g((byte) -52);
-              }
+              return super.g((byte) -52);
+            } else {
+              ((bj) this).field_kb.field_R = 256 - (((bj) this).field_fb << 8) / ((bj) this).field_hb;
+              return super.g((byte) -52);
             }
           }
         } else {
-          if (param0 >= -4) {
-            field_bb = null;
-            return super.g((byte) -52);
-          } else {
-            return super.g((byte) -52);
-          }
+          return super.g((byte) -52);
         }
     }
 
@@ -206,13 +176,13 @@ abstract class bj extends k {
         String stackOut_12_2 = null;
         try {
           L0: {
-            if (!super.a(param0, param1, param2, param3)) {
+            if (!super.a(param0, param1, -1, param3)) {
               if (((bj) this).field_kb != null) {
                 L1: {
                   if (param1 != 98) {
                     break L1;
                   } else {
-                    boolean discarded$4 = ((bj) this).field_kb.a(~param2, param3);
+                    boolean discarded$4 = ((bj) this).field_kb.a(0, param3);
                     break L1;
                   }
                 }
@@ -241,7 +211,7 @@ abstract class bj extends k {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var5;
-            stackOut_11_1 = new StringBuilder().append("bj.KA(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_11_1 = new StringBuilder().append("bj.KA(").append(param0).append(44).append(param1).append(44).append(-1).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -273,54 +243,46 @@ abstract class bj extends k {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_12_0 = 0;
+        int stackIn_11_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_11_0 = 0;
-        int stackOut_2_0 = 0;
+        int stackOut_10_0 = 0;
         var4 = Chess.field_G;
         try {
           L0: {
-            if (param1 == -12076) {
-              var3_int = 1;
-              L1: while (true) {
-                if (param0 <= 1) {
-                  if (1 == param0) {
-                    stackOut_11_0 = var3_int * param2;
-                    stackIn_12_0 = stackOut_11_0;
-                    break L0;
-                  } else {
-                    return var3_int;
-                  }
+            var3_int = 1;
+            L1: while (true) {
+              if (param0 <= 1) {
+                if (1 == param0) {
+                  stackOut_10_0 = var3_int * param2;
+                  stackIn_11_0 = stackOut_10_0;
+                  break L0;
                 } else {
-                  L2: {
-                    if ((1 & param0) == 0) {
-                      break L2;
-                    } else {
-                      var3_int = var3_int * param2;
-                      break L2;
-                    }
-                  }
-                  param0 = param0 >> 1;
-                  param2 = param2 * param2;
-                  continue L1;
+                  return var3_int;
                 }
+              } else {
+                L2: {
+                  if ((1 & param0) == 0) {
+                    break L2;
+                  } else {
+                    var3_int = var3_int * param2;
+                    break L2;
+                  }
+                }
+                param0 = param0 >> 1;
+                param2 = param2 * param2;
+                continue L1;
               }
-            } else {
-              stackOut_2_0 = -33;
-              stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fk.a((Throwable) (Object) var3, "bj.R(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw fk.a((Throwable) (Object) var3, "bj.R(" + param0 + 44 + -12076 + 44 + param2 + 41);
         }
-        return stackIn_12_0;
+        return stackIn_11_0;
     }
 
-    public static void k(int param0) {
+    public static void k() {
         field_eb = null;
         field_cb = null;
         field_db = null;
@@ -330,7 +292,7 @@ abstract class bj extends k {
         field_jb = null;
     }
 
-    final static void a(na param0, boolean param1) {
+    final static void a(na param0) {
         try {
             ef.field_n.a((o) (Object) new tn(param0, (o) (Object) param0), (byte) -57);
             h.field_s.a((nm) (Object) param0);
@@ -360,18 +322,22 @@ abstract class bj extends k {
         try {
           L0: {
             ((bj) this).field_ib = param0;
-            if (((bj) this).field_lb == ga.field_b) {
-              ((bj) this).b(((bj) this).field_nb, ((bj) this).field_ib.field_C + ((bj) this).field_qb + 12, -18807, ((bj) this).field_ib.field_y + 12);
-              ((bj) this).field_fb = 0;
-              return;
-            } else {
-              if (((bj) this).field_lb == sg.field_f) {
-                break L0;
-              } else {
-                ((bj) this).field_lb = sg.field_f;
+            if (param1 > 45) {
+              if (((bj) this).field_lb == ga.field_b) {
+                ((bj) this).b(((bj) this).field_nb, ((bj) this).field_ib.field_C + ((bj) this).field_qb + 12, -18807, ((bj) this).field_ib.field_y + 12);
                 ((bj) this).field_fb = 0;
                 return;
+              } else {
+                if (((bj) this).field_lb == sg.field_f) {
+                  break L0;
+                } else {
+                  ((bj) this).field_lb = sg.field_f;
+                  ((bj) this).field_fb = 0;
+                  return;
+                }
               }
+            } else {
+              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -402,7 +368,7 @@ abstract class bj extends k {
               break L1;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + 117 + 41);
+          throw fk.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 41);
         }
     }
 

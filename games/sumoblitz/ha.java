@@ -73,7 +73,8 @@ abstract class ha {
         String stackOut_25_2 = null;
         try {
           if (param2 == ~param0) {
-            stackOut_2_0 = kl.a(param5, param1, param4, param6, -1);
+            int discarded$4 = -1;
+            stackOut_2_0 = kl.a(param5, param1, param4, param6);
             stackIn_3_0 = stackOut_2_0;
             return stackIn_3_0;
           } else {
@@ -93,7 +94,8 @@ abstract class ha {
                   return stackIn_12_0;
                 }
               } else {
-                stackOut_8_0 = aw.a(param4, param1, param3, 27541);
+                int discarded$5 = 27541;
+                stackOut_8_0 = aw.a(param4, param1, param3);
                 stackIn_9_0 = stackOut_8_0;
                 return stackIn_9_0;
               }

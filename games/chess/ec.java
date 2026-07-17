@@ -12,13 +12,14 @@ final class ec extends dm {
     static String field_f;
     static String field_g;
 
-    final static String e(byte param0) {
+    final static String e() {
         String var1 = "";
         if (!(null == um.field_b)) {
             var1 = um.field_b.i((byte) 52);
         }
         if (var1.length() == 0) {
-            var1 = am.b((byte) -84);
+            int discarded$0 = -84;
+            var1 = am.b();
         }
         if (!(var1.length() != 0)) {
             var1 = ql.field_e;
@@ -26,7 +27,7 @@ final class ec extends dm {
         return var1;
     }
 
-    final static int c(byte param0) {
+    final static int c() {
         un var1 = null;
         int var2 = 0;
         int stackIn_3_0 = 0;
@@ -48,24 +49,14 @@ final class ec extends dm {
         }
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_i = null;
         field_e = null;
         field_f = null;
-        if (param0 != 98) {
-          field_g = null;
-          field_l = null;
-          field_j = null;
-          field_g = null;
-          field_d = null;
-          return;
-        } else {
-          field_l = null;
-          field_j = null;
-          field_g = null;
-          field_d = null;
-          return;
-        }
+        field_l = null;
+        field_j = null;
+        field_g = null;
+        field_d = null;
     }
 
     final static boolean a(byte param0, int param1, int param2, boolean param3) {
@@ -84,7 +75,7 @@ final class ec extends dm {
             } else {
               if (gh.field_a[param1] >= gh.field_a[param2]) {
                 if (gh.field_a[param1] <= gh.field_a[param2]) {
-                  var5 = 28 / ((param0 - 59) / 61);
+                  var5 = 28;
                   var4 = in.field_j[param1] + (hn.field_e[param1] + oc.field_n[param1]);
                   var6 = in.field_j[param2] + hn.field_e[param2] - -oc.field_n[param2];
                   if (var6 <= var4) {
@@ -120,7 +111,7 @@ final class ec extends dm {
             if (gh.field_a[param1] <= gh.field_a[param2]) {
               if (hg.field_d[param2] <= hg.field_d[param1]) {
                 if (hg.field_d[param1] <= hg.field_d[param2]) {
-                  var5 = 28 / ((param0 - 59) / 61);
+                  var5 = 28;
                   var4 = in.field_j[param1] + (hn.field_e[param1] + oc.field_n[param1]);
                   var6 = in.field_j[param2] + hn.field_e[param2] - -oc.field_n[param2];
                   if (var6 <= var4) {

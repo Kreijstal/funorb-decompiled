@@ -8,7 +8,7 @@ final class vj extends mc {
     static long field_o;
     static String field_p;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_p = null;
     }
 
@@ -104,7 +104,7 @@ final class vj extends mc {
         }
     }
 
-    final static float a(float param0, boolean param1) {
+    final static float a(float param0) {
         float var2_float = 0.0f;
         RuntimeException var2 = null;
         int var3 = 0;

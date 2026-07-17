@@ -29,12 +29,9 @@ final class ti extends hc {
     final static void a(byte param0, int param1, int param2) {
         aa.field_d = param1;
         rj.field_e = param2;
-        if (param0 < 74) {
-            ti.a((byte) 82);
-        }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_L = null;
         field_P = null;
         field_O = null;
@@ -64,9 +61,6 @@ final class ti extends hc {
 
     final static void a(jb param0, boolean param1, int param2) {
         ld var3 = null;
-        if (!param1) {
-            return;
-        }
         try {
             var3 = sn.field_c;
             var3.d((byte) -61, param2);
@@ -74,11 +68,11 @@ final class ti extends hc {
             var3.c(0, 25564);
             var3.c(param0.field_n, 25564);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "ti.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "ti.D(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 44 + param2 + 41);
         }
     }
 
-    final static ea a(int param0) {
+    final static ea a() {
         int var4_int = 0;
         int var5 = MinerDisturbance.field_ab;
         int var1 = qk.field_b[0] * ng.field_e[0];

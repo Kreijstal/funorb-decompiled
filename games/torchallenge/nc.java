@@ -96,7 +96,7 @@ final class nc extends qd {
           if (param0.field_k.length == 0) {
             return null;
           } else {
-            return new nc(param0, (int)((long)param0.field_j * 256L * (long)param1 / (long)(100 * kh.field_p)), param2 << 6);
+            return new nc(param0, (int)((long)param0.field_j * 256L * 100L / (long)(100 * kh.field_p)), param2 << 6);
           }
         } else {
           return null;
@@ -234,7 +234,7 @@ final class nc extends qd {
           if (param0.field_k.length == 0) {
             return null;
           } else {
-            return new nc(param0, (int)((long)param0.field_j * 256L * (long)param1 / (long)(100 * kh.field_p)), param2 << 6, param3 << 6);
+            return new nc(param0, (int)((long)param0.field_j * 256L * 100L / (long)(100 * kh.field_p)), param2 << 6, param3 << 6);
           }
         } else {
           return null;

@@ -8,7 +8,7 @@ final class tj extends ms {
     byte[] field_m;
     static String field_o;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_k = null;
         field_o = null;
         int var1 = -87;
@@ -16,7 +16,7 @@ final class tj extends ms {
         field_l = null;
     }
 
-    final static wb c(byte param0) {
+    final static wb c() {
         int var4_int = 0;
         int var5 = Sumoblitz.field_L ? 1 : 0;
         int var1 = vg.field_k[0] * we.field_B[0];

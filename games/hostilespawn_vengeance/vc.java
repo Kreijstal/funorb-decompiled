@@ -29,37 +29,37 @@ final class vc extends java.awt.Canvas {
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
+        RuntimeException stackIn_108_0 = null;
+        StringBuilder stackIn_108_1 = null;
+        RuntimeException stackIn_109_0 = null;
+        StringBuilder stackIn_109_1 = null;
         RuntimeException stackIn_110_0 = null;
         StringBuilder stackIn_110_1 = null;
+        String stackIn_110_2 = null;
         RuntimeException stackIn_111_0 = null;
         StringBuilder stackIn_111_1 = null;
         RuntimeException stackIn_112_0 = null;
         StringBuilder stackIn_112_1 = null;
-        String stackIn_112_2 = null;
         RuntimeException stackIn_113_0 = null;
         StringBuilder stackIn_113_1 = null;
-        RuntimeException stackIn_114_0 = null;
-        StringBuilder stackIn_114_1 = null;
-        RuntimeException stackIn_115_0 = null;
-        StringBuilder stackIn_115_1 = null;
-        String stackIn_115_2 = null;
+        String stackIn_113_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_107_0 = null;
+        StringBuilder stackOut_107_1 = null;
         RuntimeException stackOut_109_0 = null;
         StringBuilder stackOut_109_1 = null;
+        String stackOut_109_2 = null;
+        RuntimeException stackOut_108_0 = null;
+        StringBuilder stackOut_108_1 = null;
+        String stackOut_108_2 = null;
+        RuntimeException stackOut_110_0 = null;
+        StringBuilder stackOut_110_1 = null;
+        RuntimeException stackOut_112_0 = null;
+        StringBuilder stackOut_112_1 = null;
+        String stackOut_112_2 = null;
         RuntimeException stackOut_111_0 = null;
         StringBuilder stackOut_111_1 = null;
         String stackOut_111_2 = null;
-        RuntimeException stackOut_110_0 = null;
-        StringBuilder stackOut_110_1 = null;
-        String stackOut_110_2 = null;
-        RuntimeException stackOut_112_0 = null;
-        StringBuilder stackOut_112_1 = null;
-        RuntimeException stackOut_114_0 = null;
-        StringBuilder stackOut_114_1 = null;
-        String stackOut_114_2 = null;
-        RuntimeException stackOut_113_0 = null;
-        StringBuilder stackOut_113_1 = null;
-        String stackOut_113_2 = null;
         var16 = HostileSpawn.field_I ? 1 : 0;
         try {
           L0: {
@@ -71,64 +71,56 @@ final class vc extends java.awt.Canvas {
                 break L1;
               }
             }
-            L2: {
-              if (param1 == -11112) {
-                break L2;
-              } else {
-                field_h = null;
-                break L2;
-              }
-            }
             var4_int = 0;
-            L3: while (true) {
-              L4: {
+            L2: while (true) {
+              L3: {
                 if (param3.field_e > 4) {
-                  break L4;
+                  break L3;
                 } else {
                   if (var4_int >= 4) {
-                    break L4;
+                    break L3;
                   } else {
-                    L5: {
+                    L4: {
                       if (param3.field_e > 4) {
-                        break L5;
+                        break L4;
                       } else {
                         param2[param0] = 0;
                         var5 = 0;
-                        L6: while (true) {
-                          L7: {
+                        L5: while (true) {
+                          L6: {
                             if (5 <= var5) {
-                              break L7;
+                              break L6;
                             } else {
                               param3.field_l.a(1, (byte) 94, param3.field_c);
-                              param3.a(param1 + 19685);
+                              param3.a(8573);
                               if (2 == param2[param3.field_j.b(-4)]) {
-                                L8: {
+                                L7: {
                                   if (4 > param3.field_e) {
                                     param3.field_e = 5;
-                                    break L8;
+                                    break L7;
                                   } else {
                                     param3.field_e = param3.field_e + 1;
-                                    break L8;
+                                    break L7;
                                   }
                                 }
                                 param3.field_l.a(-1, (byte) 94, param3.field_c);
                                 param3.a(8573);
-                                break L7;
+                                break L6;
                               } else {
                                 var5++;
-                                continue L6;
+                                continue L5;
                               }
                             }
                           }
                           var17 = 1;
                           var5 = var17;
-                          L9: while (true) {
+                          L8: while (true) {
                             if (var17 >= rc.field_e) {
                               param2[param0] = 3;
-                              break L5;
+                              break L4;
                             } else {
-                              L10: {
-                                L11: {
+                              L9: {
+                                L10: {
                                   var6 = 0;
                                   var7 = 0;
                                   var8 = re.field_n[var17];
@@ -136,50 +128,50 @@ final class vc extends java.awt.Canvas {
                                   var10 = (double)var8.field_j.field_e + var8.field_l.field_f;
                                   var12 = (double)var8.field_j.field_g + var8.field_l.field_a;
                                   if (var9 == 8) {
-                                    break L11;
+                                    break L10;
                                   } else {
                                     if (var9 == 27) {
-                                      break L11;
-                                    } else {
                                       break L10;
+                                    } else {
+                                      break L9;
                                     }
                                   }
                                 }
                                 var12 = var12 - 0.5;
                                 var10 = var10 - 0.5;
-                                break L10;
+                                break L9;
                               }
-                              L12: {
-                                L13: {
-                                  L14: {
+                              L11: {
+                                L12: {
+                                  L13: {
                                     var6 = (int)(24.0 * (-param3.field_l.field_f + ((double)(-param3.field_j.field_e) + var10)));
                                     var7 = (int)(((double)(-param3.field_j.field_g) + var12 - param3.field_l.field_a) * 24.0);
                                     var14 = 24;
                                     if (10 == var9) {
-                                      break L14;
+                                      break L13;
                                     } else {
                                       if (var9 == 11) {
-                                        break L14;
+                                        break L13;
                                       } else {
                                         if (var9 == 128) {
-                                          break L14;
+                                          break L13;
                                         } else {
                                           if (var9 == 129) {
-                                            break L14;
+                                            break L13;
                                           } else {
                                             if (var9 == 130) {
-                                              break L14;
+                                              break L13;
                                             } else {
                                               if (var9 == 131) {
-                                                break L14;
+                                                break L13;
                                               } else {
                                                 if (var9 == 132) {
-                                                  break L14;
+                                                  break L13;
                                                 } else {
                                                   if (var9 == 133) {
-                                                    break L14;
-                                                  } else {
                                                     break L13;
+                                                  } else {
+                                                    break L12;
                                                   }
                                                 }
                                               }
@@ -190,104 +182,104 @@ final class vc extends java.awt.Canvas {
                                     }
                                   }
                                   if (0 == var8.field_h) {
-                                    break L12;
+                                    break L11;
                                   } else {
                                     var14 = 24;
-                                    break L13;
+                                    break L12;
                                   }
                                 }
-                                L15: {
+                                L14: {
                                   if (var9 == 20) {
                                     var14 = 36;
-                                    break L15;
+                                    break L14;
                                   } else {
-                                    break L15;
+                                    break L14;
                                   }
                                 }
                                 if (~var6 > ~-var14) {
-                                  break L12;
+                                  break L11;
                                 } else {
                                   if (var14 < var6) {
-                                    break L12;
+                                    break L11;
                                   } else {
                                     if (~var7 > ~-var14) {
-                                      break L12;
+                                      break L11;
                                     } else {
                                       if (~var7 <= ~var14) {
-                                        break L12;
+                                        break L11;
                                       } else {
                                         if (var8.field_I <= 0) {
-                                          break L12;
+                                          break L11;
                                         } else {
-                                          L16: {
+                                          L15: {
                                             if (var9 < 12) {
-                                              break L16;
+                                              break L15;
                                             } else {
                                               if (var9 < 18) {
-                                                break L12;
+                                                break L11;
                                               } else {
-                                                break L16;
+                                                break L15;
                                               }
                                             }
                                           }
-                                          L17: {
-                                            var15 = var8.a(param3.field_i, param1 ^ 11019) ? 1 : 0;
+                                          L16: {
+                                            var15 = var8.a(param3.field_i, -109) ? 1 : 0;
                                             param3.field_e = 5;
                                             var8.field_F = 255;
                                             if (var15 == 0) {
-                                              break L17;
+                                              break L16;
                                             } else {
                                               var8.field_I = var8.field_I - 1;
-                                              break L17;
+                                              break L16;
                                             }
                                           }
-                                          L18: {
+                                          L17: {
                                             if (param3.field_e >= 4) {
                                               param3.field_e = 5;
                                               if (8 == var9) {
                                                 if (var15 != 0) {
                                                   var8.field_I = var8.field_I - 200;
-                                                  break L18;
+                                                  break L17;
                                                 } else {
-                                                  break L18;
+                                                  break L17;
                                                 }
                                               } else {
-                                                L19: {
+                                                L18: {
                                                   if (10 == var9) {
-                                                    break L19;
+                                                    break L18;
                                                   } else {
                                                     if (var9 == 11) {
-                                                      break L19;
+                                                      break L18;
                                                     } else {
                                                       if (var9 == 128) {
-                                                        break L19;
+                                                        break L18;
                                                       } else {
                                                         if (var9 == 129) {
-                                                          break L19;
+                                                          break L18;
                                                         } else {
                                                           if (130 == var9) {
-                                                            break L19;
+                                                            break L18;
                                                           } else {
                                                             if (var9 == 131) {
-                                                              break L19;
+                                                              break L18;
                                                             } else {
                                                               if (132 == var9) {
-                                                                break L19;
+                                                                break L18;
                                                               } else {
                                                                 if (var9 != 133) {
                                                                   if (var9 != 20) {
                                                                     if (var8.a((byte) 54)) {
                                                                       var8.field_I = var8.field_I - 200;
-                                                                      break L18;
+                                                                      break L17;
                                                                     } else {
-                                                                      break L18;
+                                                                      break L17;
                                                                     }
                                                                   } else {
                                                                     var8.field_I = var8.field_I - 200;
-                                                                    break L18;
+                                                                    break L17;
                                                                   }
                                                                 } else {
-                                                                  break L19;
+                                                                  break L18;
                                                                 }
                                                               }
                                                             }
@@ -298,68 +290,69 @@ final class vc extends java.awt.Canvas {
                                                   }
                                                 }
                                                 var8.field_I = var8.field_I - 200;
-                                                break L18;
+                                                break L17;
                                               }
                                             } else {
-                                              L20: {
+                                              L19: {
                                                 if (param3.field_i != 26) {
-                                                  break L20;
+                                                  break L19;
                                                 } else {
                                                   u.a(17, param3.field_j, true, 16, param3.field_l, 4);
-                                                  break L20;
+                                                  break L19;
                                                 }
                                               }
                                               param3.field_i = -1;
                                               if (var15 == 0) {
-                                                break L18;
+                                                break L17;
                                               } else {
                                                 var8.field_I = var8.field_I - 200;
                                                 if (!var8.field_b) {
-                                                  break L18;
+                                                  break L17;
                                                 } else {
                                                   if (var8.field_I > 0) {
-                                                    tk.a(8, jc.field_c, 1, true);
-                                                    break L18;
+                                                    int discarded$1 = 1;
+                                                    tk.a(8, jc.field_c, 1);
+                                                    break L17;
                                                   } else {
-                                                    break L18;
+                                                    break L17;
                                                   }
                                                 }
                                               }
                                             }
                                           }
-                                          L21: {
+                                          L20: {
                                             if (var8.field_I <= 0) {
-                                              L22: {
+                                              L21: {
                                                 var8.field_I = 0;
                                                 if (26 == param3.field_i) {
                                                   u.a(17, param3.field_j, true, 16, param3.field_l, 4);
-                                                  break L22;
+                                                  break L21;
                                                 } else {
-                                                  break L22;
+                                                  break L21;
                                                 }
                                               }
                                               param3.field_i = 3;
                                               if (!var8.field_b) {
-                                                break L21;
+                                                break L20;
                                               } else {
                                                 if (27 == var8.field_i) {
-                                                  break L21;
+                                                  break L20;
                                                 } else {
                                                   al.field_U[2] = al.field_U[2] + 1;
                                                   if (30 == al.field_U[2] + 1) {
                                                     ti.a(248, (byte) -120, 7);
-                                                    break L21;
+                                                    break L20;
                                                   } else {
-                                                    break L21;
+                                                    break L20;
                                                   }
                                                 }
                                               }
                                             } else {
-                                              break L21;
+                                              break L20;
                                             }
                                           }
                                           nh.a(var8, -29966);
-                                          break L12;
+                                          break L11;
                                         }
                                       }
                                     }
@@ -367,40 +360,40 @@ final class vc extends java.awt.Canvas {
                                 }
                               }
                               var17++;
-                              continue L9;
+                              continue L8;
                             }
                           }
                         }
                       }
                     }
                     var4_int++;
-                    continue L3;
+                    continue L2;
                   }
                 }
               }
-              L23: {
+              L22: {
                 if (param3.field_e > 4) {
-                  L24: {
+                  L23: {
                     if (uj.field_l == 1) {
                       if (ej.d((byte) 81)) {
                         eh.field_c.a(em.field_a[0], 50, uh.field_i);
-                        break L24;
+                        break L23;
                       } else {
-                        break L24;
+                        break L23;
                       }
+                    } else {
+                      break L23;
+                    }
+                  }
+                  L24: {
+                    if (26 == param3.field_i) {
+                      u.a(-1, param3.field_j, true, 16, param3.field_l, 28);
+                      break L24;
                     } else {
                       break L24;
                     }
                   }
                   L25: {
-                    if (26 == param3.field_i) {
-                      u.a(-1, param3.field_j, true, 16, param3.field_l, 28);
-                      break L25;
-                    } else {
-                      break L25;
-                    }
-                  }
-                  L26: {
                     jn.field_F[ib.field_c].field_c = (double)(int)(Math.random() * 256.0);
                     jn.field_F[ib.field_c].field_j.a((byte) 46, param3.field_j);
                     jn.field_F[ib.field_c].field_l.a(param3.field_l, -28860);
@@ -409,14 +402,14 @@ final class vc extends java.awt.Canvas {
                     jn.field_F[ib.field_c].field_i = 12;
                     ib.field_c = ib.field_c + 1;
                     if (5 != param3.field_e) {
-                      break L26;
+                      break L25;
                     } else {
                       hg.a((byte) 64, param3);
-                      break L26;
+                      break L25;
                     }
                   }
                   u.a(-1, param3.field_j, true, 16, param3.field_l, 35);
-                  break L23;
+                  break L22;
                 } else {
                   jn.field_F[ib.field_c].field_c = param3.field_c;
                   jn.field_F[ib.field_c].field_j.a((byte) 46, param3.field_j);
@@ -425,23 +418,23 @@ final class vc extends java.awt.Canvas {
                   jn.field_F[ib.field_c].field_h = 5;
                   jn.field_F[ib.field_c].field_i = 17;
                   ib.field_c = ib.field_c + 1;
-                  break L23;
+                  break L22;
+                }
+              }
+              L26: {
+                if (param3.field_e > 4) {
+                  param3.field_e = param3.field_e + 1;
+                  break L26;
+                } else {
+                  break L26;
                 }
               }
               L27: {
-                if (param3.field_e > 4) {
-                  param3.field_e = param3.field_e + 1;
-                  break L27;
-                } else {
-                  break L27;
-                }
-              }
-              L28: {
                 if (param3.field_e > 9) {
                   param3.field_i = -1;
-                  break L28;
+                  break L27;
                 } else {
-                  break L28;
+                  break L27;
                 }
               }
               break L0;
@@ -449,62 +442,62 @@ final class vc extends java.awt.Canvas {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L29: {
+          L28: {
             var4 = decompiledCaughtException;
-            stackOut_109_0 = (RuntimeException) var4;
-            stackOut_109_1 = new StringBuilder().append("vc.A(").append(param0).append(44).append(param1).append(44);
-            stackIn_111_0 = stackOut_109_0;
-            stackIn_111_1 = stackOut_109_1;
-            stackIn_110_0 = stackOut_109_0;
-            stackIn_110_1 = stackOut_109_1;
+            stackOut_107_0 = (RuntimeException) var4;
+            stackOut_107_1 = new StringBuilder().append("vc.A(").append(param0).append(44).append(-11112).append(44);
+            stackIn_109_0 = stackOut_107_0;
+            stackIn_109_1 = stackOut_107_1;
+            stackIn_108_0 = stackOut_107_0;
+            stackIn_108_1 = stackOut_107_1;
             if (param2 == null) {
+              stackOut_109_0 = (RuntimeException) (Object) stackIn_109_0;
+              stackOut_109_1 = (StringBuilder) (Object) stackIn_109_1;
+              stackOut_109_2 = "null";
+              stackIn_110_0 = stackOut_109_0;
+              stackIn_110_1 = stackOut_109_1;
+              stackIn_110_2 = stackOut_109_2;
+              break L28;
+            } else {
+              stackOut_108_0 = (RuntimeException) (Object) stackIn_108_0;
+              stackOut_108_1 = (StringBuilder) (Object) stackIn_108_1;
+              stackOut_108_2 = "{...}";
+              stackIn_110_0 = stackOut_108_0;
+              stackIn_110_1 = stackOut_108_1;
+              stackIn_110_2 = stackOut_108_2;
+              break L28;
+            }
+          }
+          L29: {
+            stackOut_110_0 = (RuntimeException) (Object) stackIn_110_0;
+            stackOut_110_1 = ((StringBuilder) (Object) stackIn_110_1).append(stackIn_110_2).append(44);
+            stackIn_112_0 = stackOut_110_0;
+            stackIn_112_1 = stackOut_110_1;
+            stackIn_111_0 = stackOut_110_0;
+            stackIn_111_1 = stackOut_110_1;
+            if (param3 == null) {
+              stackOut_112_0 = (RuntimeException) (Object) stackIn_112_0;
+              stackOut_112_1 = (StringBuilder) (Object) stackIn_112_1;
+              stackOut_112_2 = "null";
+              stackIn_113_0 = stackOut_112_0;
+              stackIn_113_1 = stackOut_112_1;
+              stackIn_113_2 = stackOut_112_2;
+              break L29;
+            } else {
               stackOut_111_0 = (RuntimeException) (Object) stackIn_111_0;
               stackOut_111_1 = (StringBuilder) (Object) stackIn_111_1;
-              stackOut_111_2 = "null";
-              stackIn_112_0 = stackOut_111_0;
-              stackIn_112_1 = stackOut_111_1;
-              stackIn_112_2 = stackOut_111_2;
-              break L29;
-            } else {
-              stackOut_110_0 = (RuntimeException) (Object) stackIn_110_0;
-              stackOut_110_1 = (StringBuilder) (Object) stackIn_110_1;
-              stackOut_110_2 = "{...}";
-              stackIn_112_0 = stackOut_110_0;
-              stackIn_112_1 = stackOut_110_1;
-              stackIn_112_2 = stackOut_110_2;
+              stackOut_111_2 = "{...}";
+              stackIn_113_0 = stackOut_111_0;
+              stackIn_113_1 = stackOut_111_1;
+              stackIn_113_2 = stackOut_111_2;
               break L29;
             }
           }
-          L30: {
-            stackOut_112_0 = (RuntimeException) (Object) stackIn_112_0;
-            stackOut_112_1 = ((StringBuilder) (Object) stackIn_112_1).append(stackIn_112_2).append(44);
-            stackIn_114_0 = stackOut_112_0;
-            stackIn_114_1 = stackOut_112_1;
-            stackIn_113_0 = stackOut_112_0;
-            stackIn_113_1 = stackOut_112_1;
-            if (param3 == null) {
-              stackOut_114_0 = (RuntimeException) (Object) stackIn_114_0;
-              stackOut_114_1 = (StringBuilder) (Object) stackIn_114_1;
-              stackOut_114_2 = "null";
-              stackIn_115_0 = stackOut_114_0;
-              stackIn_115_1 = stackOut_114_1;
-              stackIn_115_2 = stackOut_114_2;
-              break L30;
-            } else {
-              stackOut_113_0 = (RuntimeException) (Object) stackIn_113_0;
-              stackOut_113_1 = (StringBuilder) (Object) stackIn_113_1;
-              stackOut_113_2 = "{...}";
-              stackIn_115_0 = stackOut_113_0;
-              stackIn_115_1 = stackOut_113_1;
-              stackIn_115_2 = stackOut_113_2;
-              break L30;
-            }
-          }
-          throw wg.a((Throwable) (Object) stackIn_115_0, stackIn_115_2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_113_0, stackIn_113_2 + 41);
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         g.a((byte) -119, 4);
     }
 

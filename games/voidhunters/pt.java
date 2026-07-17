@@ -128,7 +128,7 @@ final class pt extends rqa {
           L7: {
             var6 = decompiledCaughtException;
             stackOut_18_0 = (RuntimeException) var6;
-            stackOut_18_1 = new StringBuilder().append("pt.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_18_1 = new StringBuilder().append("pt.B(").append(param0).append(44).append(1).append(44);
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;

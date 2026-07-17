@@ -76,7 +76,7 @@ final class eja extends rqa {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void a(int param0, int param1) {
         L0: {
           L1: {
             if (null == hb.field_d) {

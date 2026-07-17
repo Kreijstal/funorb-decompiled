@@ -138,7 +138,7 @@ final class np extends an {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_E = null;
         field_H = null;
     }
@@ -155,12 +155,9 @@ final class np extends an {
                 var5[var3] = ln.field_c[var3];
             }
             var2[var2.length + -1] = param1;
-            if (param0 != 9) {
-                field_H = null;
-            }
             ln.field_c = var2;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "np.F(" + param0 + 44 + param1 + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "np.F(" + 9 + 44 + param1 + 41);
         }
     }
 

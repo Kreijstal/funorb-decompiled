@@ -8,7 +8,7 @@ final class de extends oh {
     static String field_h;
     static int field_i;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_h = null;
         field_k = null;
     }

@@ -10,7 +10,7 @@ final class m {
     static String field_e;
     static int field_b;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_e = null;
         field_d = null;
@@ -56,8 +56,9 @@ final class m {
           L0: {
             if (param5.b((byte) -100)) {
               L1: {
-                if (~param1 == param3) {
-                  var10 = a.a(param5, -119);
+                if (param1 == 0) {
+                  int discarded$2 = -119;
+                  var10 = a.a(param5);
                   var6_array = var10;
                   if (var6_array != null) {
                     var7_int = 0;
@@ -90,7 +91,7 @@ final class m {
                   break L1;
                 }
               }
-              var11 = param5.a(param1, param0, param2, param3 + 28253, param4);
+              var11 = param5.a(param1, param0, param2, 28252, param4);
               L4: while (true) {
                 if (var11.field_a != 0) {
                   var7 = (java.awt.Frame) var11.field_g;
@@ -100,7 +101,8 @@ final class m {
                       stackIn_27_0 = stackOut_26_0;
                       break L0;
                     } else {
-                      tj.a(param5, var7, -23144);
+                      int discarded$3 = -23144;
+                      tj.a(param5, var7);
                       stackOut_24_0 = null;
                       stackIn_25_0 = stackOut_24_0;
                       return (java.awt.Frame) (Object) stackIn_25_0;
@@ -111,7 +113,7 @@ final class m {
                     return (java.awt.Frame) (Object) stackIn_22_0;
                   }
                 } else {
-                  hb.a(10L, param3 + 122);
+                  hb.a(10L, 121);
                   continue L4;
                 }
               }
@@ -126,7 +128,7 @@ final class m {
           L5: {
             var6 = decompiledCaughtException;
             stackOut_28_0 = (RuntimeException) var6;
-            stackOut_28_1 = new StringBuilder().append("m.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_28_1 = new StringBuilder().append("m.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(-1).append(44).append(param4).append(44);
             stackIn_30_0 = stackOut_28_0;
             stackIn_30_1 = stackOut_28_1;
             stackIn_29_0 = stackOut_28_0;
@@ -154,8 +156,8 @@ final class m {
         return stackIn_27_0;
     }
 
-    final static void a(boolean param0, int param1) {
-        bm.field_d.a((byte) 82, param1, 0);
+    final static void a(boolean param0) {
+        bm.field_d.a((byte) 82, 0, 0);
     }
 
     static {

@@ -10,13 +10,11 @@ abstract class jb implements vb {
     static int field_f;
 
     final static int a(byte param0, int param1, boolean param2, int param3) {
-        if (param0 <= 51) {
-            return 108;
-        }
-        return ve.f((byte) -76);
+        int discarded$0 = -76;
+        return ve.f();
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         int var1 = ug.field_b * ug.field_b;
         int var2 = var1 - da.field_F * da.field_F;
         int var3 = cb.field_a - -(var2 * (-cb.field_a + Chess.field_E) / var1);
@@ -60,7 +58,7 @@ abstract class jb implements vb {
         de.a(0, param1);
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_d = null;
         field_c = null;
         field_e = null;
@@ -77,13 +75,10 @@ abstract class jb implements vb {
             ue.field_e = param3;
             ol.field_N = param5;
             qh.field_c = (wm) (Object) new ob();
-            if (param0 != 350) {
-                field_c = null;
-            }
             ba.field_O = new on(param5);
             ge.field_fb = new hj(qh.field_c, ba.field_O);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "jb.H(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 44 + param7 + 44 + param8 + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "jb.H(" + 350 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 44 + param7 + 44 + param8 + 41);
         }
     }
 

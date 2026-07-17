@@ -122,13 +122,13 @@ final class tp implements iq {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_e = null;
         field_k = null;
     }
 
-    final static nk[] a(String param0, bc param1, String param2, byte param3) {
+    final static nk[] a(String param0, bc param1, String param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -273,13 +273,10 @@ final class tp implements iq {
 
     final static void a(int[] param0, long param1, String param2, String param3, int param4, ub param5, qr param6, int param7, int param8) {
         try {
-            if (param4 != 293) {
-                field_k = null;
-            }
             hp.field_l = param5;
             hp.field_m = new fc(param6, param1, param3, param2, param8, param7, param0);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "tp.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 44 + param7 + 44 + param8 + 41);
+            throw r.a((Throwable) (Object) runtimeException, "tp.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + 293 + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 44 + param7 + 44 + param8 + 41);
         }
     }
 

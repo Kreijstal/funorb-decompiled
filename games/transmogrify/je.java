@@ -7,7 +7,7 @@ final class je {
     static String field_c;
     static String field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         field_d = null;
@@ -20,13 +20,15 @@ final class je {
             g.field_A = true;
             return;
           } else {
-            bk.c(-19317);
+            int discarded$4 = -19317;
+            bk.c();
             gl.field_y = 11;
             g.field_A = true;
             return;
           }
         } else {
-          bk.c(-19317);
+          int discarded$5 = -19317;
+          bk.c();
           gl.field_y = 11;
           g.field_A = true;
           return;

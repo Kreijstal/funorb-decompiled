@@ -58,17 +58,6 @@ final class fh extends ln {
         if (0L >= param1) {
             return;
         }
-        if (!param0) {
-            field_j = null;
-            if (0L == param1 % 10L) {
-                g.a((byte) -98, -1L + param1);
-                g.a((byte) 6, 1L);
-            } else {
-                g.a((byte) 112, param1);
-                return;
-            }
-            return;
-        }
         if (0L == param1 % 10L) {
             g.a((byte) -98, -1L + param1);
             g.a((byte) 6, 1L);
@@ -78,7 +67,7 @@ final class fh extends ln {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_k = null;
         int var1 = 112;
         field_i = null;

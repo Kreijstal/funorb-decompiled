@@ -2323,7 +2323,9 @@ final class sob extends ha {
             lia discarded$0 = new lia();
             this.f(1);
             this.d(0);
-            ocb.a(true, (byte) 33, true);
+            int discarded$1 = 1;
+            int discarded$2 = 33;
+            ocb.a(true);
             ((sob) this).field_B = true;
             ((sob) this).field_E = (int)wt.a(false);
         } catch (Throwable throwable) {

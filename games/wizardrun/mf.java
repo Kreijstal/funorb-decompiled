@@ -119,7 +119,7 @@ abstract class mf extends r implements fj {
         return ((mf) this).a(-1, ((mf) this).field_i.field_k);
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_h = null;
         field_j = null;
         field_g = null;
@@ -200,7 +200,7 @@ abstract class mf extends r implements fj {
         }
     }
 
-    final static db a(String param0, String param1, kl param2, byte param3) {
+    final static db a(String param0, String param1, kl param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -255,7 +255,7 @@ abstract class mf extends r implements fj {
         String stackOut_9_2 = null;
         try {
           L0: {
-            var5 = 91 / ((-19 - param3) / 54);
+            var5 = 91;
             var4_int = param2.b(-1, param0);
             var6 = param2.a(var4_int, param1, -11986);
             stackOut_0_0 = of.a(param2, var6, (byte) -128, var4_int);
@@ -340,7 +340,7 @@ abstract class mf extends r implements fj {
               break L3;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param3 + 41);
+          throw bd.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + -108 + 41);
         }
         return stackIn_1_0;
     }

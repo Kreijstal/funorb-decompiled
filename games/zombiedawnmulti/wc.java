@@ -17,12 +17,12 @@ final class wc extends id {
 
     final static uj b(int param0, int param1) {
         wj var2 = new wj(param1);
-        var2.field_m.g(param0);
+        var2.field_m.g(-1);
         fd.field_M.a((br) (Object) var2, false);
         return var2.field_m;
     }
 
-    final static void i(int param0) {
+    final static void i() {
         RuntimeException var1 = null;
         int var2 = 0;
         dm var3 = null;
@@ -89,7 +89,7 @@ final class wc extends id {
         }
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_H = null;
         field_M = null;
         field_K = null;

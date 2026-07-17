@@ -10,10 +10,10 @@ final class ku implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     static String field_a;
     static hd field_d;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, int param4) {
         on.a(param2 - 8, param4 - 11, du.field_n, 20, 6, 0, param1);
         String var6 = vo.a((byte) -18, !bt.field_e ? ag.field_l : h.field_a, new String[1]);
-        q.field_d.a(var6, param2, param4, param0, param3);
+        q.field_d.a(var6, param2, param4, 16777215, -1);
     }
 
     public final synchronized void mouseMoved(java.awt.event.MouseEvent param0) {
@@ -604,14 +604,11 @@ final class ku implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     final static void a(String param0, int param1, boolean param2) {
         try {
             wq.field_g = true;
-            if (param1 != 4) {
-                field_a = null;
-            }
-            is.field_a = param2;
+            is.field_a = param2 ? true : false;
             rk.field_f = new wv(wd.field_l, fj.field_b, param0, hk.field_G, is.field_a);
             wd.field_l.a((fd) (Object) rk.field_f, false);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "ku.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "ku.B(" + (param0 != null ? "{...}" : "null") + 44 + 4 + 44 + param2 + 41);
         }
     }
 

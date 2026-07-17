@@ -17,45 +17,37 @@ class lb extends wi {
         er var4 = null;
         er var5 = null;
         int var6 = 0;
-        L0: {
-          var6 = Kickabout.field_G;
-          var4 = (er) (Object) ((lb) this).field_E.g(24009);
-          if (param1 == 2) {
-            break L0;
-          } else {
-            ((lb) this).field_I = null;
-            break L0;
-          }
-        }
-        L1: while (true) {
+        var6 = Kickabout.field_G;
+        var4 = (er) (Object) ((lb) this).field_E.g(24009);
+        L0: while (true) {
           if (var4 != null) {
             var5 = var4;
-            L2: while (true) {
+            L1: while (true) {
               if (var5 == null) {
-                var4 = (er) (Object) ((lb) this).field_E.c(param1 ^ 35);
-                continue L1;
+                var4 = (er) (Object) ((lb) this).field_E.c(33);
+                continue L0;
               } else {
-                L3: {
+                L2: {
                   if (param0 < var5.field_g) {
-                    break L3;
+                    break L2;
                   } else {
                     if (param2 < var5.field_m) {
-                      break L3;
+                      break L2;
                     } else {
                       if (var5.field_g - -var5.field_e <= param0) {
-                        break L3;
+                        break L2;
                       } else {
                         if (var5.field_m + var5.field_f >= param2) {
                           return var4;
                         } else {
-                          break L3;
+                          break L2;
                         }
                       }
                     }
                   }
                 }
                 var5 = var5.field_j;
-                continue L2;
+                continue L1;
               }
             }
           } else {
@@ -64,47 +56,37 @@ class lb extends wi {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2) {
-        Object var4 = null;
-        int stackIn_8_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_7_0 = 0;
+    final static boolean a(int param0, int param1) {
+        int stackIn_6_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_5_0 = 0;
         L0: {
-          if (param2 == 480) {
-            break L0;
-          } else {
-            var4 = null;
-            ak discarded$2 = lb.a((gm) null, 69);
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
+          L1: {
             if (20 + param0 <= 0) {
-              break L2;
+              break L1;
             } else {
               if (param1 <= 0) {
-                break L2;
+                break L1;
               } else {
                 if (param0 - 20 >= 640) {
-                  break L2;
+                  break L1;
                 } else {
                   if (480 <= -40 + param1) {
-                    break L2;
-                  } else {
-                    stackOut_6_0 = 1;
-                    stackIn_8_0 = stackOut_6_0;
                     break L1;
+                  } else {
+                    stackOut_4_0 = 1;
+                    stackIn_6_0 = stackOut_4_0;
+                    break L0;
                   }
                 }
               }
             }
           }
-          stackOut_7_0 = 0;
-          stackIn_8_0 = stackOut_7_0;
-          break L1;
+          stackOut_5_0 = 0;
+          stackIn_6_0 = stackOut_5_0;
+          break L0;
         }
-        return stackIn_8_0 != 0;
+        return stackIn_6_0 != 0;
     }
 
     final void b(int param0, int param1, int param2, int param3) {
@@ -132,12 +114,9 @@ class lb extends wi {
 
     final static void a(byte param0, int param1) {
         ml var2 = or.field_d;
-        if (param0 != -105) {
-            lb.i(83);
-        }
         var2.b(param1, (byte) -80);
         var2.a(116, 1);
-        var2.a(param0 ^ -32, 2);
+        var2.a(119, 2);
     }
 
     final void c(int param0, int param1, int param2, int param3) {
@@ -159,20 +138,18 @@ class lb extends wi {
 
     final static void a(int param0, String param1) {
         int var2_int = 0;
-        if (!(cq.e(15137))) {
+        int discarded$5 = 15137;
+        if (!(cq.e())) {
             return;
         }
         try {
-            if (param0 != -28153) {
-                field_L = null;
-            }
             or.field_d.b(89, (byte) 77);
             or.field_d.field_n = or.field_d.field_n + 2;
             var2_int = or.field_d.field_n;
             or.field_d.a(14190, param1);
             or.field_d.d(or.field_d.field_n + -var2_int, 62);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "lb.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "lb.C(" + -28153 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -260,7 +237,7 @@ class lb extends wi {
         }
     }
 
-    final static ak a(gm param0, int param1) {
+    final static ak a(gm param0) {
         ak var2 = null;
         RuntimeException var2_ref = null;
         ak stackIn_1_0 = null;
@@ -283,7 +260,7 @@ class lb extends wi {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var2 = new ak(param1);
+            var2 = new ak(1);
             var2.field_m = param0;
             stackOut_0_0 = (ak) var2;
             stackIn_1_0 = stackOut_0_0;
@@ -317,7 +294,7 @@ class lb extends wi {
               break L1;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 41);
+          throw nb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 1 + 41);
         }
         return stackIn_1_0;
     }

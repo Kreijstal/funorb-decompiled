@@ -7,7 +7,7 @@ class sl extends qm {
     static String field_q;
     static String field_n;
 
-    public static void b(int param0) {
+    public static void b() {
         field_p = null;
         field_q = null;
         int var1 = 1;
@@ -19,10 +19,7 @@ class sl extends qm {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_I, -1, 2147483647, false);
     }
 
-    final static void c(int param0) {
-        if (param0 != 2765) {
-            return;
-        }
+    final static void c() {
         wo var1 = (wo) (Object) bo.field_i.b(4095);
         if (!(var1 != null)) {
             throw new IllegalStateException();

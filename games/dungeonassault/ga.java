@@ -13,7 +13,7 @@ final class ga extends ip {
     static cn field_r;
     private boolean field_s;
 
-    public static void d(byte param0) {
+    public static void d() {
         field_r = null;
         field_o = null;
     }
@@ -213,31 +213,31 @@ final class ga extends ip {
         Object stackIn_3_0 = null;
         Object stackIn_8_0 = null;
         Object stackIn_26_0 = null;
-        Object stackIn_33_0 = null;
-        Object stackIn_36_0 = null;
-        java.awt.Frame stackIn_38_0 = null;
+        Object stackIn_32_0 = null;
+        Object stackIn_35_0 = null;
+        java.awt.Frame stackIn_37_0 = null;
+        RuntimeException stackIn_39_0 = null;
+        StringBuilder stackIn_39_1 = null;
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
         RuntimeException stackIn_41_0 = null;
         StringBuilder stackIn_41_1 = null;
-        RuntimeException stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
-        String stackIn_42_2 = null;
+        String stackIn_41_2 = null;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_25_0 = null;
         Object stackOut_7_0 = null;
-        java.awt.Frame stackOut_37_0 = null;
-        Object stackOut_35_0 = null;
-        Object stackOut_32_0 = null;
+        java.awt.Frame stackOut_36_0 = null;
+        Object stackOut_34_0 = null;
+        Object stackOut_31_0 = null;
         Object stackOut_2_0 = null;
-        RuntimeException stackOut_39_0 = null;
-        StringBuilder stackOut_39_1 = null;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        String stackOut_41_2 = null;
+        RuntimeException stackOut_38_0 = null;
+        StringBuilder stackOut_38_1 = null;
         RuntimeException stackOut_40_0 = null;
         StringBuilder stackOut_40_1 = null;
         String stackOut_40_2 = null;
+        RuntimeException stackOut_39_0 = null;
+        StringBuilder stackOut_39_1 = null;
+        String stackOut_39_2 = null;
         var9 = DungeonAssault.field_K;
         try {
           L0: {
@@ -309,37 +309,29 @@ final class ga extends ip {
                   break L1;
                 }
               }
-              L6: {
-                var11 = param0.a((byte) -102, param3, param1, param2, param5);
-                if (param4 > 99) {
-                  break L6;
-                } else {
-                  field_o = null;
-                  break L6;
-                }
-              }
-              L7: while (true) {
+              var11 = param0.a((byte) -102, param3, param1, param2, param5);
+              L6: while (true) {
                 if (var11.field_c != 0) {
                   var7 = (java.awt.Frame) var11.field_f;
                   if (var7 != null) {
                     if (2 != var11.field_c) {
-                      stackOut_37_0 = (java.awt.Frame) var7;
-                      stackIn_38_0 = stackOut_37_0;
+                      stackOut_36_0 = (java.awt.Frame) var7;
+                      stackIn_37_0 = stackOut_36_0;
                       break L0;
                     } else {
                       ng.a(param0, 48, var7);
-                      stackOut_35_0 = null;
-                      stackIn_36_0 = stackOut_35_0;
-                      return (java.awt.Frame) (Object) stackIn_36_0;
+                      stackOut_34_0 = null;
+                      stackIn_35_0 = stackOut_34_0;
+                      return (java.awt.Frame) (Object) stackIn_35_0;
                     }
                   } else {
-                    stackOut_32_0 = null;
-                    stackIn_33_0 = stackOut_32_0;
-                    return (java.awt.Frame) (Object) stackIn_33_0;
+                    stackOut_31_0 = null;
+                    stackIn_32_0 = stackOut_31_0;
+                    return (java.awt.Frame) (Object) stackIn_32_0;
                   }
                 } else {
                   pj.a(0, 10L);
-                  continue L7;
+                  continue L6;
                 }
               }
             } else {
@@ -350,35 +342,35 @@ final class ga extends ip {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L7: {
             var6 = decompiledCaughtException;
-            stackOut_39_0 = (RuntimeException) var6;
-            stackOut_39_1 = new StringBuilder().append("ga.B(");
-            stackIn_41_0 = stackOut_39_0;
-            stackIn_41_1 = stackOut_39_1;
-            stackIn_40_0 = stackOut_39_0;
-            stackIn_40_1 = stackOut_39_1;
+            stackOut_38_0 = (RuntimeException) var6;
+            stackOut_38_1 = new StringBuilder().append("ga.B(");
+            stackIn_40_0 = stackOut_38_0;
+            stackIn_40_1 = stackOut_38_1;
+            stackIn_39_0 = stackOut_38_0;
+            stackIn_39_1 = stackOut_38_1;
             if (param0 == null) {
-              stackOut_41_0 = (RuntimeException) (Object) stackIn_41_0;
-              stackOut_41_1 = (StringBuilder) (Object) stackIn_41_1;
-              stackOut_41_2 = "null";
-              stackIn_42_0 = stackOut_41_0;
-              stackIn_42_1 = stackOut_41_1;
-              stackIn_42_2 = stackOut_41_2;
-              break L8;
-            } else {
               stackOut_40_0 = (RuntimeException) (Object) stackIn_40_0;
               stackOut_40_1 = (StringBuilder) (Object) stackIn_40_1;
-              stackOut_40_2 = "{...}";
-              stackIn_42_0 = stackOut_40_0;
-              stackIn_42_1 = stackOut_40_1;
-              stackIn_42_2 = stackOut_40_2;
-              break L8;
+              stackOut_40_2 = "null";
+              stackIn_41_0 = stackOut_40_0;
+              stackIn_41_1 = stackOut_40_1;
+              stackIn_41_2 = stackOut_40_2;
+              break L7;
+            } else {
+              stackOut_39_0 = (RuntimeException) (Object) stackIn_39_0;
+              stackOut_39_1 = (StringBuilder) (Object) stackIn_39_1;
+              stackOut_39_2 = "{...}";
+              stackIn_41_0 = stackOut_39_0;
+              stackIn_41_1 = stackOut_39_1;
+              stackIn_41_2 = stackOut_39_2;
+              break L7;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw vk.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + 122 + 44 + param5 + 41);
         }
-        return stackIn_38_0;
+        return stackIn_37_0;
     }
 
     ga(rm param0, rm param1) {

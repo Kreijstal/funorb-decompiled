@@ -94,7 +94,7 @@ final class dl {
         return stackIn_8_0 != 0;
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_e = null;
         field_c = null;
         int var1 = -22;
@@ -113,9 +113,6 @@ final class dl {
 
     final static void a(byte param0, boolean param1) {
         se.field_g.a(param1, true);
-        if (param0 != 32) {
-            field_c = null;
-        }
     }
 
     final boolean e(int param0) {
@@ -321,12 +318,12 @@ final class dl {
                   }
                 }
               }
-              var4_int = param2;
+              var4_int = 0;
               L4: while (true) {
                 if (var4_int >= 5) {
                   L5: {
                     if (mc.field_f.field_yb != 0) {
-                      ik.field_b = new i(mc.field_f.field_V, mc.field_f.field_D, mc.field_f.field_gb, mc.field_f.field_ob, param0, jm.field_b, hr.field_m, uc.field_b, eq.field_h, hs.field_H, ms.field_k, (String) null, 0L);
+                      ik.field_b = new i(mc.field_f.field_V, mc.field_f.field_D, mc.field_f.field_gb, mc.field_f.field_ob, 0, jm.field_b, hr.field_m, uc.field_b, eq.field_h, hs.field_H, ms.field_k, (String) null, 0L);
                       break L5;
                     } else {
                       break L5;
@@ -369,7 +366,7 @@ final class dl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var4, "dl.J(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw ig.a((Throwable) (Object) var4, "dl.J(" + 0 + 44 + param1 + 44 + 0 + 44 + param3 + 41);
         }
     }
 

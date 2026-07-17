@@ -13,13 +13,13 @@ final class ata extends htb {
     static int field_H;
     static String field_G;
 
-    public static void a(int param0) {
+    public static void a() {
         field_G = null;
         field_L = null;
         field_K = null;
     }
 
-    final static boolean e(int param0) {
+    final static boolean e() {
         Object var1 = null;
         Object var1_ref = null;
         Throwable var2 = null;
@@ -34,7 +34,7 @@ final class ata extends htb {
             if (nwa.field_a != bva.field_c) {
               pma.field_o = npa.field_a[bva.field_c];
               jl.field_r = gca.field_q[bva.field_c];
-              bva.field_c = param0 & bva.field_c + 1;
+              bva.field_c = 127 & bva.field_c + 1;
               stackOut_4_0 = 1;
               stackIn_5_0 = stackOut_4_0;
               break L0;

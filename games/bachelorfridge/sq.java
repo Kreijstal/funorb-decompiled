@@ -92,9 +92,9 @@ final class sq {
             }
           }
         }
-        param2 = param2 + param1;
+        param2 = param2;
         var4 = param2 - 2;
-        var8 = param1;
+        var8 = 0;
         var5 = var8;
         L3: while (true) {
           if (var8 >= param2) {
@@ -246,7 +246,7 @@ final class sq {
 
     final static void a(int[] param0, int param1, int param2, int param3) {
         sq.d();
-        sq.a(param0, param1, param2);
+        sq.a(param0, 0, param2);
         sq.a(param3);
     }
 

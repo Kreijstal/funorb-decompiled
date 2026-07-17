@@ -14,24 +14,12 @@ final class wa extends tj {
     static int[] field_mb;
     private boolean field_lb;
 
-    final static void l(int param0) {
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        var1 = ir.field_h * ir.field_h;
-        var2 = -(em.field_P * em.field_P) + var1;
-        if (param0 != 23323) {
-          field_ib = null;
-          var3 = fd.field_J - -((-fd.field_J + cb.field_g) * var2 / var1);
-          fl.field_q.b(var3, 2147483647, tn.field_u, 640, 120);
-          mm.a(ja.field_b, cb.field_g + -24, 0, 640, 5, 118, kj.field_j);
-          return;
-        } else {
-          var3 = fd.field_J - -((-fd.field_J + cb.field_g) * var2 / var1);
-          fl.field_q.b(var3, 2147483647, tn.field_u, 640, 120);
-          mm.a(ja.field_b, cb.field_g + -24, 0, 640, 5, 118, kj.field_j);
-          return;
-        }
+    final static void l() {
+        int var1 = ir.field_h * ir.field_h;
+        int var2 = -(em.field_P * em.field_P) + var1;
+        int var3 = fd.field_J - -((-fd.field_J + cb.field_g) * var2 / var1);
+        fl.field_q.b(var3, 2147483647, tn.field_u, 640, 120);
+        mm.a(ja.field_b, cb.field_g + -24, 0, 640, 5, 118, kj.field_j);
     }
 
     final void a(int param0, int param1, int param2) {
@@ -62,7 +50,7 @@ final class wa extends tj {
         }
     }
 
-    public static void n(int param0) {
+    public static void n() {
         field_ob = null;
         field_qb = null;
         field_ib = null;
@@ -184,12 +172,12 @@ final class wa extends tj {
         }
     }
 
-    final static void i(byte param0) {
+    final static void i() {
         sq.field_c.field_e = 0;
         sq.field_c.field_a = 0;
     }
 
-    final static void m(int param0) {
+    final static void m() {
         if (null != vl.field_m) {
           if (vl.field_m.field_i == null) {
             vl.field_m = null;

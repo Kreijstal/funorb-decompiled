@@ -8,34 +8,21 @@ final class mn {
     static int[] field_a;
     int[] field_d;
 
-    final static void a(byte param0) {
+    final static void a() {
         ke.field_s.b((ag) (Object) new nb(), (byte) 110);
     }
 
-    final static void c(byte param0) {
-        if (param0 == 67) {
-          if (!md.field_k) {
+    final static void c() {
+        if (!md.field_k) {
             throw new IllegalStateException();
-          } else {
-            ka.field_r = true;
-            w.b(true, -23960);
-            fa.field_c = 0;
-            return;
-          }
-        } else {
-          field_b = null;
-          if (!md.field_k) {
-            throw new IllegalStateException();
-          } else {
-            ka.field_r = true;
-            w.b(true, -23960);
-            fa.field_c = 0;
-            return;
-          }
         }
+        ka.field_r = true;
+        int discarded$0 = -23960;
+        w.b(true);
+        fa.field_c = 0;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_a = null;
         int var1 = 0;
         field_b = null;

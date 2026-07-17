@@ -80,7 +80,7 @@ final class wd extends se {
     }
 
     final static void a(byte param0, int param1) {
-        int var2 = -16 / ((18 - param0) / 60);
+        int var2 = 16;
         fq.field_f.a(-3388, 17);
     }
 

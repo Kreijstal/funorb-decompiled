@@ -22,7 +22,7 @@ abstract class ch {
 
     abstract void a(Object param0, boolean param1, int param2);
 
-    public static void c(int param0) {
+    public static void c() {
         field_g = null;
     }
 

@@ -23,7 +23,7 @@ final class il {
         field_b = null;
     }
 
-    final static dd[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static dd[] a() {
         int var9 = 0;
         dd[] var10 = null;
         dd[] var11_ref_dd__ = null;
@@ -33,8 +33,8 @@ final class il {
         int var14 = 0;
         int var15 = 0;
         var15 = Pool.field_O;
-        var9 = param1 + param0 + param5;
-        var10 = new dd[]{new dd(var9, var9), new dd(param3, var9), new dd(var9, var9), new dd(var9, param3), new dd(64, 64), new dd(var9, param3), new dd(var9, var9), new dd(param3, var9), new dd(var9, var9)};
+        var9 = 3;
+        var10 = new dd[]{new dd(var9, var9), new dd(3, var9), new dd(var9, var9), new dd(var9, 3), new dd(64, 64), new dd(var9, 3), new dd(var9, var9), new dd(3, var9), new dd(var9, var9)};
         var11_ref_dd__ = var10;
         var12 = 0;
         L0: while (true) {
@@ -42,91 +42,83 @@ final class il {
             var10 = var11_ref_dd__;
             var11 = 0;
             L1: while (true) {
-              if (var11 >= param5) {
-                L2: {
-                  var11 = 0;
-                  if (param4 == 4) {
-                    break L2;
-                  } else {
-                    field_f = null;
-                    break L2;
-                  }
-                }
-                L3: while (true) {
-                  if (var11 >= param5) {
+              if (var11 >= 1) {
+                var11 = 0;
+                L2: while (true) {
+                  if (var11 >= 1) {
                     var11 = 0;
-                    L4: while (true) {
-                      if (var11 >= param3) {
+                    L3: while (true) {
+                      if (var11 >= 3) {
                         var11 = 0;
-                        L5: while (true) {
-                          if (param3 >> 1 <= var11) {
+                        L4: while (true) {
+                          if (1 <= var11) {
                             return var10;
                           } else {
                             var12 = 0;
-                            L6: while (true) {
-                              if (param1 <= var12) {
+                            L5: while (true) {
+                              if (var12 >= 1) {
                                 var11++;
-                                continue L5;
+                                continue L4;
                               } else {
-                                var10[1].field_D[var11 + (var9 - (var12 + 1)) * param3] = param7;
-                                var10[3].field_D[var11 * var9 - 1 - (-var9 + var12)] = param7;
-                                var10[7].field_D[var11 + var12 * param3] = param7;
-                                var10[5].field_D[var9 * var11 - -var12] = param7;
+                                var10[1].field_D[var11 + (var9 - (var12 + 1)) * 3] = 65793;
+                                var10[3].field_D[var11 * var9 - 1 - (-var9 + var12)] = 65793;
+                                var10[7].field_D[var11 + var12 * 3] = 65793;
+                                var10[5].field_D[var9 * var11 - -var12] = 65793;
                                 var12++;
-                                continue L6;
+                                continue L5;
                               }
                             }
                           }
                         }
                       } else {
                         var12 = 0;
-                        L7: while (true) {
-                          if (param5 > var12) {
-                            var10[7].field_D[var11 + (-1 + (-var12 + var9)) * param3] = param8;
-                            var10[5].field_D[var9 * var11 + var9 + -1 - var12] = param8;
-                            var10[1].field_D[param3 * var12 - -var11] = param2;
-                            var10[3].field_D[var9 * var11 - -var12] = param2;
+                        L6: while (true) {
+                          if (1 > var12) {
+                            var10[7].field_D[var11 + (-1 + (-var12 + var9)) * 3] = 0;
+                            var10[5].field_D[var9 * var11 + var9 + -1 - var12] = 0;
+                            var10[1].field_D[3 * var12 - -var11] = 0;
+                            var10[3].field_D[var9 * var11 - -var12] = 0;
                             var12++;
-                            continue L7;
+                            continue L6;
                           } else {
                             var11++;
-                            continue L4;
+                            continue L3;
                           }
                         }
                       }
                     }
                   } else {
                     var12 = 0;
-                    L8: while (true) {
+                    L7: while (true) {
                       if (var9 > var12) {
-                        var10[0].field_D[var9 * var11 + var12] = param2;
-                        var10[0].field_D[var12 * var9 + var11] = param2;
+                        var10[0].field_D[var9 * var11 + var12] = 0;
+                        var10[0].field_D[var12 * var9 + var11] = 0;
                         if (var12 < var9 + -var11) {
-                          var10[2].field_D[var9 * var11 + var12] = param2;
-                          var10[6].field_D[var12 * var9 + var11] = param2;
+                          var10[2].field_D[var9 * var11 + var12] = 0;
+                          var10[6].field_D[var12 * var9 + var11] = 0;
                           var12++;
-                          continue L8;
+                          continue L7;
                         } else {
                           var12++;
-                          continue L8;
+                          continue L7;
                         }
                       } else {
                         var11++;
-                        continue L3;
+                        continue L2;
                       }
                     }
                   }
                 }
               } else {
                 var12 = 0;
-                L9: while (true) {
+                L8: while (true) {
                   if (var9 > var12) {
-                    var10[6].field_D[(-1 + var9 - var11) * var9 + var12] = param8;
-                    var10[8].field_D[var9 * (-1 + -var11 + var9) - -var12] = param8;
-                    var10[2].field_D[-1 + var9 + (-var11 + var12 * var9)] = param8;
-                    var10[8].field_D[var9 * var12 - var11 - (-var9 + 1)] = param8;
+                    var10[6].field_D[(-1 + var9 - var11) * var9 + var12] = 0;
+                    var10[8].field_D[var9 * (-1 + -var11 + var9) - -var12] = 0;
+                    var10[2].field_D[-1 + var9 + (-var11 + var12 * var9)] = 0;
+                    var10[8].field_D[var9 * var12 - var11 - (-var9 + 1)] = 0;
                     var12++;
-                    continue L9;
+                    continue L8;
                   } else {
                     var11++;
                     continue L1;
@@ -137,14 +129,14 @@ final class il {
           } else {
             var13 = var11_ref_dd__[var12];
             var14 = 0;
-            L10: while (true) {
+            L9: while (true) {
               if (var13.field_D.length <= var14) {
                 var12++;
                 continue L0;
               } else {
-                var13.field_D[var14] = param6;
+                var13.field_D[var14] = 0;
                 var14++;
-                continue L10;
+                continue L9;
               }
             }
           }

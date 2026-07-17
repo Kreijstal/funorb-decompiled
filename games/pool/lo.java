@@ -9,7 +9,7 @@ final class lo extends IOException {
     static String field_d;
     static boolean field_a;
 
-    final static nq b(int param0) {
+    final static nq b() {
         if (null == ae.field_c) {
           ae.field_c = new nq();
           ae.field_c.a(lc.field_O, -76);
@@ -38,7 +38,7 @@ final class lo extends IOException {
         field_d = null;
     }
 
-    final static String a(long param0, int param1) {
+    final static String a(long param0) {
         return di.a(param0, 16, false, -112, 6, 10);
     }
 

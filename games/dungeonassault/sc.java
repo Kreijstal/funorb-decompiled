@@ -18,7 +18,7 @@ final class sc extends ch {
         return of.field_p;
     }
 
-    final static String a(int param0, ec param1, int param2) {
+    final static String a(int param0, ec param1) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -49,8 +49,8 @@ final class sc extends ch {
           try {
             L0: {
               var3_int = param1.d((byte) 58);
-              if (var3_int > param0) {
-                var3_int = param0;
+              if (var3_int > 80) {
+                var3_int = 80;
                 break L0;
               } else {
                 break L0;
@@ -75,7 +75,7 @@ final class sc extends ch {
           L1: {
             var3_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var3_ref;
-            stackOut_7_1 = new StringBuilder().append("sc.G(").append(param0).append(44);
+            stackOut_7_1 = new StringBuilder().append("sc.G(").append(80).append(44);
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;

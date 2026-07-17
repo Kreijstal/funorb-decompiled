@@ -12,22 +12,14 @@ final class lk extends pm {
     private String field_g;
 
     final static void a(boolean param0, int param1) {
-        if (param1 < 61) {
-            field_f = 84;
-            pn.a(false, (byte) -55, param0);
-            return;
-        }
         pn.a(false, (byte) -55, param0);
     }
 
-    final static ln e(int param0) {
-        if (param0 != 16516) {
-            return null;
-        }
+    final static ln e() {
         return (ln) (Object) new ab();
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_k = null;
         field_j = null;
     }

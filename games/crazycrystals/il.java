@@ -200,8 +200,9 @@ final class il extends l {
         var3 = -7 % ((19 - param0) / 47);
     }
 
-    final static boolean b(int param0) {
-        return hl.a(le.b((byte) -20), -94);
+    final static boolean b() {
+        int discarded$0 = -20;
+        return hl.a(le.b(), -94);
     }
 
     final void c(byte param0) {
@@ -220,7 +221,8 @@ final class il extends l {
         }
         int var2 = 0;
         if (param0 != -90) {
-            il.a(44, true, -68, -50, 65, false);
+            int discarded$0 = 0;
+            il.a(44, true, -68, -50, 65);
         }
         while (pd.field_g.length > var2) {
             q.field_a[ma.field_n[var2]].field_i = q.field_a[ma.field_n[var2]].field_i + pd.field_g[var2];
@@ -243,7 +245,7 @@ final class il extends l {
         ((il) this).field_g = null;
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3, int param4, boolean param5) {
+    final static void a(int param0, boolean param1, int param2, int param3, int param4) {
         dl[] var6 = h.field_d;
         if (!(!param1)) {
             var6 = af.field_c;

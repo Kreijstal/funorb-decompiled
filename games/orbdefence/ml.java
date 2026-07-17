@@ -15,7 +15,7 @@ final class ml {
     static uj field_e;
     static int field_j;
 
-    final static void a(int param0) {
+    final static void a() {
         try {
             Exception var1 = null;
             java.lang.reflect.Method var1_ref = null;
@@ -317,7 +317,7 @@ final class ml {
         }
     }
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         int var1 = 0;
         if (null == b.field_n) {
             return false;

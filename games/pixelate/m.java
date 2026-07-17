@@ -6,7 +6,7 @@ final class m extends fa {
     static String field_l;
     int field_m;
 
-    public static void b(byte param0) {
+    public static void b() {
         field_l = null;
     }
 
@@ -14,7 +14,7 @@ final class m extends fa {
         throw new Error();
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void a(java.applet.Applet param0) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -40,7 +40,7 @@ final class m extends fa {
               try {
                 L0: {
                   var2 = new java.net.URL(param0.getCodeBase(), "subscribe.ws");
-                  var3 = 83 % ((param1 - -11) / 38);
+                  var3 = 0;
                   param0.getAppletContext().showDocument(lg.a(false, param0, var2), "_top");
                   break L0;
                 }
@@ -79,7 +79,7 @@ final class m extends fa {
                   break L1;
                 }
               }
-              throw aa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+              throw aa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + -60 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -88,7 +88,7 @@ final class m extends fa {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         String var1 = null;
         if (!to.field_s) {
           throw new IllegalStateException();
@@ -101,7 +101,8 @@ final class m extends fa {
               break L0;
             }
           }
-          var1 = dd.a(0);
+          int discarded$2 = 0;
+          var1 = dd.a();
           nf.field_b = new be(var1, (String) null, true, false, false);
           wa.field_c.b(-6183, (ng) (Object) ph.field_l);
           ph.field_l.c((ng) (Object) nf.field_b, -127);

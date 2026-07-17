@@ -16,16 +16,17 @@ final class ed {
         }
     }
 
-    final static void a(boolean param0, mf param1, mf param2, byte param3) {
+    final static void a(boolean param0, mf param1, mf param2) {
         try {
-            ai.a(lp.field_Ab, (dh) (Object) ul.field_m, f.field_a, vo.field_C, im.field_d, wi.field_n, tk.field_t, ad.field_l, (byte) 61, param0, ic.field_c, fp.field_u);
-            ef.field_b = cr.a("lobby", param1, "chatfilter", 2);
+            ai.a(lp.field_Ab, (dh) (Object) ul.field_m, f.field_a, vo.field_C, im.field_d, wi.field_n, tk.field_t, ad.field_l, (byte) 61, true, ic.field_c, fp.field_u);
+            int discarded$0 = 2;
+            ef.field_b = cr.a("lobby", param1, "chatfilter");
             rh.field_e[0] = mc.field_a;
             rh.field_e[2] = sp.field_s;
             rh.field_e[1] = e.field_j;
             hk.a((dh) (Object) rd.field_e, (byte) 90, param2);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "ed.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + 104 + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "ed.D(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + 104 + 41);
         }
     }
 
@@ -163,7 +164,7 @@ final class ed {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_f = null;
         field_c = null;

@@ -468,11 +468,11 @@ abstract class sl {
     final static th a(int param0, int param1) {
         th var2 = new th();
         fh.field_b.a((byte) -122, (fc) (Object) var2);
-        nk.a(param0, -108);
+        nk.a(4, -108);
         return var2;
     }
 
-    final static void b(byte param0) {
+    final static void b() {
     }
 
     final static nl a(Throwable param0, String param1) {

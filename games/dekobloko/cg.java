@@ -174,7 +174,7 @@ final class cg {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
     }
@@ -186,7 +186,7 @@ final class cg {
         bf.field_o = 8;
     }
 
-    final static void b(boolean param0, int param1) {
+    final static void b(boolean param0) {
         L0: {
           if (lg.field_W > 0) {
             if (ve.field_Qb) {
@@ -226,7 +226,7 @@ final class cg {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        int[] var7 = ob.field_j[param0][param1][param2].field_D;
+        int[] var7 = ob.field_j[param0][2][param2].field_D;
         byte[] var8 = gf.field_f[param2].field_k;
         int[] var9 = ad.field_d.field_D;
         int var10 = 0;
@@ -528,8 +528,8 @@ final class cg {
         int var10 = 0;
         int var11 = 0;
         ck var3 = new ck(36, 36);
-        int[] var4 = ob.field_j[param0][param1][0].field_D;
-        byte[] var5 = gf.field_f[0].field_k;
+        int[] var4 = ob.field_j[param0][param1][param2].field_D;
+        byte[] var5 = gf.field_f[param2].field_k;
         int[] var6 = var3.field_D;
         int var7 = 0;
         int var8 = 0;
@@ -675,9 +675,6 @@ final class cg {
 
     final static void a(int param0, byte param1, int param2) {
         uf var3 = we.field_b;
-        if (param1 != -9) {
-            field_c = null;
-        }
         var3.f(param2, -4);
         var3.a(true, 3);
         var3.a(true, 8);

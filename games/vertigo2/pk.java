@@ -13,68 +13,42 @@ final class pk extends li {
     static int field_o;
     static String field_r;
 
-    public static void f(int param0) {
+    public static void f() {
         field_w = null;
         field_r = null;
         field_v = null;
     }
 
-    final static cr e(int param0) {
+    final static cr e() {
         return vd.field_d.field_Nb;
     }
 
     final static int a(byte param0, int param1, int param2, int param3) {
-        int stackIn_6_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_5_0 = 0;
+        int stackIn_5_0 = 0;
         int stackOut_4_0 = 0;
         int stackOut_3_0 = 0;
-        if (param0 != -14) {
-          L0: {
-            field_v = null;
-            if (param2 < param3) {
-              stackOut_11_0 = param3;
-              stackIn_12_0 = stackOut_11_0;
+        int stackOut_2_0 = 0;
+        L0: {
+          if (~param2 > ~param3) {
+            stackOut_4_0 = param3;
+            stackIn_5_0 = stackOut_4_0;
+            break L0;
+          } else {
+            if (param2 <= param1) {
+              stackOut_3_0 = param2;
+              stackIn_5_0 = stackOut_3_0;
               break L0;
             } else {
-              if (param2 <= param1) {
-                stackOut_10_0 = param2;
-                stackIn_12_0 = stackOut_10_0;
-                break L0;
-              } else {
-                stackOut_9_0 = param1;
-                stackIn_12_0 = stackOut_9_0;
-                break L0;
-              }
+              stackOut_2_0 = param1;
+              stackIn_5_0 = stackOut_2_0;
+              break L0;
             }
           }
-          return stackIn_12_0;
-        } else {
-          L1: {
-            if (param2 < param3) {
-              stackOut_5_0 = param3;
-              stackIn_6_0 = stackOut_5_0;
-              break L1;
-            } else {
-              if (param2 <= param1) {
-                stackOut_4_0 = param2;
-                stackIn_6_0 = stackOut_4_0;
-                break L1;
-              } else {
-                stackOut_3_0 = param1;
-                stackIn_6_0 = stackOut_3_0;
-                break L1;
-              }
-            }
-          }
-          return stackIn_6_0;
         }
+        return stackIn_5_0;
     }
 
-    final static int a(int param0) {
+    final static int a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -94,10 +68,11 @@ final class pk extends li {
         var2 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
-            boolean discarded$4 = ch.field_e.a(qj.field_c, true, (byte) -71, qe.field_Z);
+            boolean discarded$12 = ch.field_e.a(qj.field_c, true, (byte) -71, qe.field_Z);
             ch.field_e.l(0);
             L1: while (true) {
-              if (!gf.a(false)) {
+              int discarded$13 = 0;
+              if (!gf.a()) {
                 if (nm.field_F == -1) {
                   if (!ed.field_t) {
                     if (bf.field_b == um.field_F) {
@@ -134,7 +109,7 @@ final class pk extends li {
                   return stackIn_8_0;
                 }
               } else {
-                boolean discarded$5 = ch.field_e.a(-92, de.field_f, ji.field_r);
+                boolean discarded$14 = ch.field_e.a(-92, de.field_f, ji.field_r);
                 continue L1;
               }
             }

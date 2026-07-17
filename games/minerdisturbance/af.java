@@ -29,7 +29,7 @@ final class af extends pi {
         }
     }
 
-    final static int a(sb param0, ta param1, int param2) {
+    final static int a(sb param0, ta param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;

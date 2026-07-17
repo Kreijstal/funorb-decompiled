@@ -7,7 +7,7 @@ final class um {
     static String field_b;
     static int field_d;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
     }
 

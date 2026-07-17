@@ -9,8 +9,9 @@ final class tl extends qa {
     private String[] field_u;
     private int[] field_q;
 
-    final static boolean d(byte param0) {
-        return pd.a(jj.field_M, ql.field_a, 2);
+    final static boolean d() {
+        int discarded$0 = 2;
+        return pd.a(jj.field_M, ql.field_a);
     }
 
     final void a(k param0, byte param1) {
@@ -147,7 +148,7 @@ final class tl extends qa {
         try {
           L0: {
             L1: {
-              var4_int = 3 / ((param0 - -33) / 46);
+              var4_int = 1;
               if (param2 != 1) {
                 L2: {
                   if (2 == param2) {
@@ -181,7 +182,8 @@ final class tl extends qa {
                         } else {
                           L5: {
                             var7 = param1.d((byte) 69);
-                            var8 = r.a(var7, (byte) 35);
+                            int discarded$1 = 35;
+                            var8 = r.a(var7);
                             if (var8 != null) {
                               ((tl) this).field_q[var6] = var7;
                               ((tl) this).field_s[var6] = new int[var8.field_f];
@@ -219,7 +221,7 @@ final class tl extends qa {
           L7: {
             var4 = decompiledCaughtException;
             stackOut_19_0 = (RuntimeException) var4;
-            stackOut_19_1 = new StringBuilder().append("tl.M(").append(param0).append(44);
+            stackOut_19_1 = new StringBuilder().append("tl.M(").append(88).append(44);
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -269,7 +271,7 @@ final class tl extends qa {
         }
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_t = null;
     }
 

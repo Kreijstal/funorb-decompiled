@@ -62,7 +62,7 @@ class hg {
         }
     }
 
-    final static ui[] a(c param0, int param1) {
+    final static ui[] a(c param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

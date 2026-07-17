@@ -79,9 +79,6 @@ final class eia extends nv implements ut {
     }
 
     private final boolean a(boolean param0, int param1) {
-        if (!param0) {
-            ((eia) this).k(85);
-        }
         if (!((eia) this).field_u.a(0, param1)) {
             return false;
         }
@@ -96,9 +93,6 @@ final class eia extends nv implements ut {
     }
 
     private final boolean a(byte param0, int param1) {
-        if (param0 >= -109) {
-            ((eia) this).field_q = null;
-        }
         if (!((eia) this).field_t.a(0, param1)) {
             return false;
         }

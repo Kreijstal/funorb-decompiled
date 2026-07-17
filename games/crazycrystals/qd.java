@@ -7,7 +7,7 @@ final class qd extends ib {
     private Object field_o;
     static int field_r;
 
-    public static void i(int param0) {
+    public static void i() {
         field_p = null;
     }
 

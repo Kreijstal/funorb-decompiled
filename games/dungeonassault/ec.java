@@ -232,7 +232,7 @@ class ec extends ne {
         var9 = DungeonAssault.field_K;
         try {
           L0: {
-            var6_int = -param1 + param0;
+            var6_int = param0;
             var7 = 0;
             if (param3 == -1) {
               L1: while (true) {
@@ -241,7 +241,7 @@ class ec extends ne {
                     if (var6_int <= var7) {
                       break L3;
                     } else {
-                      var8 = param5.charAt(var7 + param1);
+                      var8 = param5.charAt(var7);
                       stackOut_5_0 = -1;
                       stackIn_187_0 = stackOut_5_0;
                       stackIn_6_0 = stackOut_5_0;
@@ -632,7 +632,7 @@ class ec extends ne {
           L35: {
             var6 = decompiledCaughtException;
             stackOut_188_0 = (RuntimeException) var6;
-            stackOut_188_1 = new StringBuilder().append("ec.QA(").append(param0).append(44).append(param1).append(44);
+            stackOut_188_1 = new StringBuilder().append("ec.QA(").append(param0).append(44).append(0).append(44);
             stackIn_191_0 = stackOut_188_0;
             stackIn_191_1 = stackOut_188_1;
             stackIn_189_0 = stackOut_188_0;
@@ -1136,7 +1136,7 @@ class ec extends ne {
         }
     }
 
-    final static q g(int param0) {
+    final static q g() {
         q var1 = null;
         RuntimeException var1_ref = null;
         q stackIn_1_0 = null;
@@ -1144,8 +1144,9 @@ class ec extends ne {
         q stackOut_0_0 = null;
         try {
           L0: {
-            var1 = new q(ce.field_x, tb.field_i, hg.field_t[0], fe.field_g[0], jc.field_f[param0], jn.field_k[0], ub.field_q[0], uo.field_b);
-            sb.a(500);
+            var1 = new q(ce.field_x, tb.field_i, hg.field_t[0], fe.field_g[0], jc.field_f[0], jn.field_k[0], ub.field_q[0], uo.field_b);
+            int discarded$1 = 500;
+            sb.a();
             stackOut_0_0 = (q) var1;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -1153,7 +1154,7 @@ class ec extends ne {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var1_ref, "ec.CB(" + param0 + 41);
+          throw vk.a((Throwable) (Object) var1_ref, "ec.CB(" + 0 + 41);
         }
         return stackIn_1_0;
     }
@@ -1229,20 +1230,24 @@ class ec extends ne {
         }
     }
 
-    public static void i(int param0) {
-        field_n = null;
-        field_k = null;
-        field_r = null;
-        field_l = null;
-        if (param0 != 25) {
-            return;
-        }
+    public static void i() {
+        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
+          L0: {
+            field_n = null;
+            field_k = null;
+            field_r = null;
+            field_l = null;
             field_i = null;
             field_q = null;
             field_j = null;
-        } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "ec.S(" + param0 + 41);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw vk.a((Throwable) (Object) var1, "ec.S(" + 25 + 41);
         }
     }
 
@@ -1484,7 +1489,7 @@ class ec extends ne {
         }
     }
 
-    final static void a(nh param0, boolean param1) {
+    final static void a(nh param0) {
         byte[] var2 = null;
         int var3 = 0;
         int stackIn_1987_0 = 0;
@@ -1497,14 +1502,16 @@ class ec extends ne {
           if (var2 == null) {
             break L0;
           } else {
-            ba.field_h = dj.a(var2, param1);
+            int discarded$800 = 0;
+            ba.field_h = dj.a(var2);
             break L0;
           }
         }
         L1: {
           var2 = gm.a("text_benefits,0", false);
           if (var2 != null) {
-            qk.field_b[0] = dj.a(var2, false);
+            int discarded$801 = 0;
+            qk.field_b[0] = dj.a(var2);
             break L1;
           } else {
             break L1;
@@ -1515,14 +1522,16 @@ class ec extends ne {
           if (null == var2) {
             break L2;
           } else {
-            qk.field_b[1] = dj.a(var2, param1);
+            int discarded$802 = 0;
+            qk.field_b[1] = dj.a(var2);
             break L2;
           }
         }
         L3: {
           var2 = gm.a("text_benefits,2", false);
           if (var2 != null) {
-            qk.field_b[2] = dj.a(var2, false);
+            int discarded$803 = 0;
+            qk.field_b[2] = dj.a(var2);
             break L3;
           } else {
             break L3;
@@ -1533,23 +1542,26 @@ class ec extends ne {
           if (null == var2) {
             break L4;
           } else {
-            qk.field_b[3] = dj.a(var2, false);
+            int discarded$804 = 0;
+            qk.field_b[3] = dj.a(var2);
             break L4;
           }
         }
         L5: {
           var2 = gm.a("achievement_names,0", false);
           if (null != var2) {
-            ce.field_o[0] = dj.a(var2, false);
+            int discarded$805 = 0;
+            ce.field_o[0] = dj.a(var2);
             break L5;
           } else {
             break L5;
           }
         }
         L6: {
-          var2 = gm.a("achievement_names,1", param1);
+          var2 = gm.a("achievement_names,1", false);
           if (var2 != null) {
-            ce.field_o[1] = dj.a(var2, false);
+            int discarded$806 = 0;
+            ce.field_o[1] = dj.a(var2);
             break L6;
           } else {
             break L6;
@@ -1560,7 +1572,8 @@ class ec extends ne {
           if (var2 == null) {
             break L7;
           } else {
-            ce.field_o[2] = dj.a(var2, false);
+            int discarded$807 = 0;
+            ce.field_o[2] = dj.a(var2);
             break L7;
           }
         }
@@ -1569,23 +1582,26 @@ class ec extends ne {
           if (var2 == null) {
             break L8;
           } else {
-            ce.field_o[3] = dj.a(var2, param1);
+            int discarded$808 = 0;
+            ce.field_o[3] = dj.a(var2);
             break L8;
           }
         }
         L9: {
-          var2 = gm.a("achievement_names,4", param1);
+          var2 = gm.a("achievement_names,4", false);
           if (var2 == null) {
             break L9;
           } else {
-            ce.field_o[4] = dj.a(var2, false);
+            int discarded$809 = 0;
+            ce.field_o[4] = dj.a(var2);
             break L9;
           }
         }
         L10: {
-          var2 = gm.a("achievement_names,5", param1);
+          var2 = gm.a("achievement_names,5", false);
           if (null != var2) {
-            ce.field_o[5] = dj.a(var2, false);
+            int discarded$810 = 0;
+            ce.field_o[5] = dj.a(var2);
             break L10;
           } else {
             break L10;
@@ -1596,14 +1612,16 @@ class ec extends ne {
           if (null == var2) {
             break L11;
           } else {
-            ce.field_o[6] = dj.a(var2, false);
+            int discarded$811 = 0;
+            ce.field_o[6] = dj.a(var2);
             break L11;
           }
         }
         L12: {
           var2 = gm.a("achievement_names,7", false);
           if (var2 != null) {
-            ce.field_o[7] = dj.a(var2, param1);
+            int discarded$812 = 0;
+            ce.field_o[7] = dj.a(var2);
             break L12;
           } else {
             break L12;
@@ -1614,7 +1632,8 @@ class ec extends ne {
           if (var2 == null) {
             break L13;
           } else {
-            ce.field_o[8] = dj.a(var2, param1);
+            int discarded$813 = 0;
+            ce.field_o[8] = dj.a(var2);
             break L13;
           }
         }
@@ -1623,32 +1642,36 @@ class ec extends ne {
           if (var2 == null) {
             break L14;
           } else {
-            ce.field_o[9] = dj.a(var2, false);
+            int discarded$814 = 0;
+            ce.field_o[9] = dj.a(var2);
             break L14;
           }
         }
         L15: {
-          var2 = gm.a("achievement_names,10", param1);
+          var2 = gm.a("achievement_names,10", false);
           if (var2 == null) {
             break L15;
           } else {
-            ce.field_o[10] = dj.a(var2, false);
+            int discarded$815 = 0;
+            ce.field_o[10] = dj.a(var2);
             break L15;
           }
         }
         L16: {
-          var2 = gm.a("achievement_names,11", param1);
+          var2 = gm.a("achievement_names,11", false);
           if (var2 == null) {
             break L16;
           } else {
-            ce.field_o[11] = dj.a(var2, false);
+            int discarded$816 = 0;
+            ce.field_o[11] = dj.a(var2);
             break L16;
           }
         }
         L17: {
           var2 = gm.a("achievement_names,12", false);
           if (null != var2) {
-            ce.field_o[12] = dj.a(var2, false);
+            int discarded$817 = 0;
+            ce.field_o[12] = dj.a(var2);
             break L17;
           } else {
             break L17;
@@ -1657,7 +1680,8 @@ class ec extends ne {
         L18: {
           var2 = gm.a("achievement_names,13", false);
           if (var2 != null) {
-            ce.field_o[13] = dj.a(var2, false);
+            int discarded$818 = 0;
+            ce.field_o[13] = dj.a(var2);
             break L18;
           } else {
             break L18;
@@ -1668,14 +1692,16 @@ class ec extends ne {
           if (null == var2) {
             break L19;
           } else {
-            ce.field_o[14] = dj.a(var2, false);
+            int discarded$819 = 0;
+            ce.field_o[14] = dj.a(var2);
             break L19;
           }
         }
         L20: {
           var2 = gm.a("achievement_names,15", false);
           if (null != var2) {
-            ce.field_o[15] = dj.a(var2, false);
+            int discarded$820 = 0;
+            ce.field_o[15] = dj.a(var2);
             break L20;
           } else {
             break L20;
@@ -1686,7 +1712,8 @@ class ec extends ne {
           if (null == var2) {
             break L21;
           } else {
-            ce.field_o[16] = dj.a(var2, param1);
+            int discarded$821 = 0;
+            ce.field_o[16] = dj.a(var2);
             break L21;
           }
         }
@@ -1695,14 +1722,16 @@ class ec extends ne {
           if (var2 == null) {
             break L22;
           } else {
-            ce.field_o[17] = dj.a(var2, false);
+            int discarded$822 = 0;
+            ce.field_o[17] = dj.a(var2);
             break L22;
           }
         }
         L23: {
-          var2 = gm.a("achievement_names,18", param1);
+          var2 = gm.a("achievement_names,18", false);
           if (null != var2) {
-            ce.field_o[18] = dj.a(var2, param1);
+            int discarded$823 = 0;
+            ce.field_o[18] = dj.a(var2);
             break L23;
           } else {
             break L23;
@@ -1711,7 +1740,8 @@ class ec extends ne {
         L24: {
           var2 = gm.a("achievement_names,19", false);
           if (var2 != null) {
-            ce.field_o[19] = dj.a(var2, param1);
+            int discarded$824 = 0;
+            ce.field_o[19] = dj.a(var2);
             break L24;
           } else {
             break L24;
@@ -1720,7 +1750,8 @@ class ec extends ne {
         L25: {
           var2 = gm.a("achievement_names,20", false);
           if (var2 != null) {
-            ce.field_o[20] = dj.a(var2, false);
+            int discarded$825 = 0;
+            ce.field_o[20] = dj.a(var2);
             break L25;
           } else {
             break L25;
@@ -1729,7 +1760,8 @@ class ec extends ne {
         L26: {
           var2 = gm.a("achievement_names,21", false);
           if (null != var2) {
-            ce.field_o[21] = dj.a(var2, false);
+            int discarded$826 = 0;
+            ce.field_o[21] = dj.a(var2);
             break L26;
           } else {
             break L26;
@@ -1738,7 +1770,8 @@ class ec extends ne {
         L27: {
           var2 = gm.a("achievement_names,22", false);
           if (var2 != null) {
-            ce.field_o[22] = dj.a(var2, false);
+            int discarded$827 = 0;
+            ce.field_o[22] = dj.a(var2);
             break L27;
           } else {
             break L27;
@@ -1749,7 +1782,8 @@ class ec extends ne {
           if (null == var2) {
             break L28;
           } else {
-            ce.field_o[23] = dj.a(var2, param1);
+            int discarded$828 = 0;
+            ce.field_o[23] = dj.a(var2);
             break L28;
           }
         }
@@ -1758,14 +1792,16 @@ class ec extends ne {
           if (null == var2) {
             break L29;
           } else {
-            ce.field_o[24] = dj.a(var2, false);
+            int discarded$829 = 0;
+            ce.field_o[24] = dj.a(var2);
             break L29;
           }
         }
         L30: {
           var2 = gm.a("achievement_names,25", false);
           if (null != var2) {
-            ce.field_o[25] = dj.a(var2, false);
+            int discarded$830 = 0;
+            ce.field_o[25] = dj.a(var2);
             break L30;
           } else {
             break L30;
@@ -1774,16 +1810,18 @@ class ec extends ne {
         L31: {
           var2 = gm.a("achievement_names,26", false);
           if (null != var2) {
-            ce.field_o[26] = dj.a(var2, false);
+            int discarded$831 = 0;
+            ce.field_o[26] = dj.a(var2);
             break L31;
           } else {
             break L31;
           }
         }
         L32: {
-          var2 = gm.a("achievement_names,27", param1);
+          var2 = gm.a("achievement_names,27", false);
           if (var2 != null) {
-            ce.field_o[27] = dj.a(var2, false);
+            int discarded$832 = 0;
+            ce.field_o[27] = dj.a(var2);
             break L32;
           } else {
             break L32;
@@ -1792,7 +1830,8 @@ class ec extends ne {
         L33: {
           var2 = gm.a("achievement_names,28", false);
           if (null != var2) {
-            ce.field_o[28] = dj.a(var2, false);
+            int discarded$833 = 0;
+            ce.field_o[28] = dj.a(var2);
             break L33;
           } else {
             break L33;
@@ -1801,25 +1840,28 @@ class ec extends ne {
         L34: {
           var2 = gm.a("achievement_names,29", false);
           if (null != var2) {
-            ce.field_o[29] = dj.a(var2, false);
+            int discarded$834 = 0;
+            ce.field_o[29] = dj.a(var2);
             break L34;
           } else {
             break L34;
           }
         }
         L35: {
-          var2 = gm.a("achievement_names,30", param1);
+          var2 = gm.a("achievement_names,30", false);
           if (var2 == null) {
             break L35;
           } else {
-            ce.field_o[30] = dj.a(var2, false);
+            int discarded$835 = 0;
+            ce.field_o[30] = dj.a(var2);
             break L35;
           }
         }
         L36: {
-          var2 = gm.a("achievement_names,31", param1);
+          var2 = gm.a("achievement_names,31", false);
           if (var2 != null) {
-            ce.field_o[31] = dj.a(var2, false);
+            int discarded$836 = 0;
+            ce.field_o[31] = dj.a(var2);
             break L36;
           } else {
             break L36;
@@ -1830,7 +1872,8 @@ class ec extends ne {
           if (null == var2) {
             break L37;
           } else {
-            ce.field_o[32] = dj.a(var2, false);
+            int discarded$837 = 0;
+            ce.field_o[32] = dj.a(var2);
             break L37;
           }
         }
@@ -1839,7 +1882,8 @@ class ec extends ne {
           if (var2 == null) {
             break L38;
           } else {
-            ce.field_o[33] = dj.a(var2, false);
+            int discarded$838 = 0;
+            ce.field_o[33] = dj.a(var2);
             break L38;
           }
         }
@@ -1848,14 +1892,16 @@ class ec extends ne {
           if (var2 == null) {
             break L39;
           } else {
-            ce.field_o[34] = dj.a(var2, false);
+            int discarded$839 = 0;
+            ce.field_o[34] = dj.a(var2);
             break L39;
           }
         }
         L40: {
-          var2 = gm.a("achievement_names,35", param1);
+          var2 = gm.a("achievement_names,35", false);
           if (var2 != null) {
-            ce.field_o[35] = dj.a(var2, false);
+            int discarded$840 = 0;
+            ce.field_o[35] = dj.a(var2);
             break L40;
           } else {
             break L40;
@@ -1866,7 +1912,8 @@ class ec extends ne {
           if (var2 == null) {
             break L41;
           } else {
-            ce.field_o[36] = dj.a(var2, false);
+            int discarded$841 = 0;
+            ce.field_o[36] = dj.a(var2);
             break L41;
           }
         }
@@ -1875,41 +1922,46 @@ class ec extends ne {
           if (null == var2) {
             break L42;
           } else {
-            ce.field_o[37] = dj.a(var2, false);
+            int discarded$842 = 0;
+            ce.field_o[37] = dj.a(var2);
             break L42;
           }
         }
         L43: {
-          var2 = gm.a("achievement_names,38", param1);
+          var2 = gm.a("achievement_names,38", false);
           if (null != var2) {
-            ce.field_o[38] = dj.a(var2, false);
+            int discarded$843 = 0;
+            ce.field_o[38] = dj.a(var2);
             break L43;
           } else {
             break L43;
           }
         }
         L44: {
-          var2 = gm.a("achievement_names,39", param1);
+          var2 = gm.a("achievement_names,39", false);
           if (var2 == null) {
             break L44;
           } else {
-            ce.field_o[39] = dj.a(var2, param1);
+            int discarded$844 = 0;
+            ce.field_o[39] = dj.a(var2);
             break L44;
           }
         }
         L45: {
-          var2 = gm.a("achievement_names,40", param1);
+          var2 = gm.a("achievement_names,40", false);
           if (null == var2) {
             break L45;
           } else {
-            ce.field_o[40] = dj.a(var2, false);
+            int discarded$845 = 0;
+            ce.field_o[40] = dj.a(var2);
             break L45;
           }
         }
         L46: {
           var2 = gm.a("achievement_names,41", false);
           if (var2 != null) {
-            ce.field_o[41] = dj.a(var2, false);
+            int discarded$846 = 0;
+            ce.field_o[41] = dj.a(var2);
             break L46;
           } else {
             break L46;
@@ -1918,7 +1970,8 @@ class ec extends ne {
         L47: {
           var2 = gm.a("achievement_names,42", false);
           if (var2 != null) {
-            ce.field_o[42] = dj.a(var2, param1);
+            int discarded$847 = 0;
+            ce.field_o[42] = dj.a(var2);
             break L47;
           } else {
             break L47;
@@ -1927,7 +1980,8 @@ class ec extends ne {
         L48: {
           var2 = gm.a("achievement_names,43", false);
           if (null != var2) {
-            ce.field_o[43] = dj.a(var2, false);
+            int discarded$848 = 0;
+            ce.field_o[43] = dj.a(var2);
             break L48;
           } else {
             break L48;
@@ -1938,14 +1992,16 @@ class ec extends ne {
           if (var2 == null) {
             break L49;
           } else {
-            ce.field_o[44] = dj.a(var2, param1);
+            int discarded$849 = 0;
+            ce.field_o[44] = dj.a(var2);
             break L49;
           }
         }
         L50: {
-          var2 = gm.a("achievement_names,45", param1);
+          var2 = gm.a("achievement_names,45", false);
           if (null != var2) {
-            ce.field_o[45] = dj.a(var2, param1);
+            int discarded$850 = 0;
+            ce.field_o[45] = dj.a(var2);
             break L50;
           } else {
             break L50;
@@ -1954,7 +2010,8 @@ class ec extends ne {
         L51: {
           var2 = gm.a("achievement_criteria,0", false);
           if (var2 != null) {
-            bb.field_k[0] = dj.a(var2, false);
+            int discarded$851 = 0;
+            bb.field_k[0] = dj.a(var2);
             break L51;
           } else {
             break L51;
@@ -1965,14 +2022,16 @@ class ec extends ne {
           if (null == var2) {
             break L52;
           } else {
-            bb.field_k[1] = dj.a(var2, false);
+            int discarded$852 = 0;
+            bb.field_k[1] = dj.a(var2);
             break L52;
           }
         }
         L53: {
           var2 = gm.a("achievement_criteria,2", false);
           if (null != var2) {
-            bb.field_k[2] = dj.a(var2, false);
+            int discarded$853 = 0;
+            bb.field_k[2] = dj.a(var2);
             break L53;
           } else {
             break L53;
@@ -1983,23 +2042,26 @@ class ec extends ne {
           if (var2 == null) {
             break L54;
           } else {
-            bb.field_k[3] = dj.a(var2, false);
+            int discarded$854 = 0;
+            bb.field_k[3] = dj.a(var2);
             break L54;
           }
         }
         L55: {
-          var2 = gm.a("achievement_criteria,4", param1);
+          var2 = gm.a("achievement_criteria,4", false);
           if (null != var2) {
-            bb.field_k[4] = dj.a(var2, param1);
+            int discarded$855 = 0;
+            bb.field_k[4] = dj.a(var2);
             break L55;
           } else {
             break L55;
           }
         }
         L56: {
-          var2 = gm.a("achievement_criteria,5", param1);
+          var2 = gm.a("achievement_criteria,5", false);
           if (var2 != null) {
-            bb.field_k[5] = dj.a(var2, false);
+            int discarded$856 = 0;
+            bb.field_k[5] = dj.a(var2);
             break L56;
           } else {
             break L56;
@@ -2010,14 +2072,16 @@ class ec extends ne {
           if (null == var2) {
             break L57;
           } else {
-            bb.field_k[6] = dj.a(var2, false);
+            int discarded$857 = 0;
+            bb.field_k[6] = dj.a(var2);
             break L57;
           }
         }
         L58: {
           var2 = gm.a("achievement_criteria,7", false);
           if (var2 != null) {
-            bb.field_k[7] = dj.a(var2, param1);
+            int discarded$858 = 0;
+            bb.field_k[7] = dj.a(var2);
             break L58;
           } else {
             break L58;
@@ -2026,7 +2090,8 @@ class ec extends ne {
         L59: {
           var2 = gm.a("achievement_criteria,8", false);
           if (var2 != null) {
-            bb.field_k[8] = dj.a(var2, param1);
+            int discarded$859 = 0;
+            bb.field_k[8] = dj.a(var2);
             break L59;
           } else {
             break L59;
@@ -2035,25 +2100,28 @@ class ec extends ne {
         L60: {
           var2 = gm.a("achievement_criteria,9", false);
           if (var2 != null) {
-            bb.field_k[9] = dj.a(var2, false);
+            int discarded$860 = 0;
+            bb.field_k[9] = dj.a(var2);
             break L60;
           } else {
             break L60;
           }
         }
         L61: {
-          var2 = gm.a("achievement_criteria,10", param1);
+          var2 = gm.a("achievement_criteria,10", false);
           if (null != var2) {
-            bb.field_k[10] = dj.a(var2, false);
+            int discarded$861 = 0;
+            bb.field_k[10] = dj.a(var2);
             break L61;
           } else {
             break L61;
           }
         }
         L62: {
-          var2 = gm.a("achievement_criteria,11", param1);
+          var2 = gm.a("achievement_criteria,11", false);
           if (var2 != null) {
-            bb.field_k[11] = dj.a(var2, param1);
+            int discarded$862 = 0;
+            bb.field_k[11] = dj.a(var2);
             break L62;
           } else {
             break L62;
@@ -2062,7 +2130,8 @@ class ec extends ne {
         L63: {
           var2 = gm.a("achievement_criteria,12", false);
           if (null != var2) {
-            bb.field_k[12] = dj.a(var2, false);
+            int discarded$863 = 0;
+            bb.field_k[12] = dj.a(var2);
             break L63;
           } else {
             break L63;
@@ -2071,16 +2140,18 @@ class ec extends ne {
         L64: {
           var2 = gm.a("achievement_criteria,13", false);
           if (null != var2) {
-            bb.field_k[13] = dj.a(var2, param1);
+            int discarded$864 = 0;
+            bb.field_k[13] = dj.a(var2);
             break L64;
           } else {
             break L64;
           }
         }
         L65: {
-          var2 = gm.a("achievement_criteria,14", param1);
+          var2 = gm.a("achievement_criteria,14", false);
           if (null != var2) {
-            bb.field_k[14] = dj.a(var2, false);
+            int discarded$865 = 0;
+            bb.field_k[14] = dj.a(var2);
             break L65;
           } else {
             break L65;
@@ -2089,7 +2160,8 @@ class ec extends ne {
         L66: {
           var2 = gm.a("achievement_criteria,15", false);
           if (null != var2) {
-            bb.field_k[15] = dj.a(var2, param1);
+            int discarded$866 = 0;
+            bb.field_k[15] = dj.a(var2);
             break L66;
           } else {
             break L66;
@@ -2098,7 +2170,8 @@ class ec extends ne {
         L67: {
           var2 = gm.a("achievement_criteria,16", false);
           if (var2 != null) {
-            bb.field_k[16] = dj.a(var2, param1);
+            int discarded$867 = 0;
+            bb.field_k[16] = dj.a(var2);
             break L67;
           } else {
             break L67;
@@ -2109,14 +2182,16 @@ class ec extends ne {
           if (var2 == null) {
             break L68;
           } else {
-            bb.field_k[17] = dj.a(var2, false);
+            int discarded$868 = 0;
+            bb.field_k[17] = dj.a(var2);
             break L68;
           }
         }
         L69: {
           var2 = gm.a("achievement_criteria,18", false);
           if (null != var2) {
-            bb.field_k[18] = dj.a(var2, false);
+            int discarded$869 = 0;
+            bb.field_k[18] = dj.a(var2);
             break L69;
           } else {
             break L69;
@@ -2125,7 +2200,8 @@ class ec extends ne {
         L70: {
           var2 = gm.a("achievement_criteria,19", false);
           if (var2 != null) {
-            bb.field_k[19] = dj.a(var2, false);
+            int discarded$870 = 0;
+            bb.field_k[19] = dj.a(var2);
             break L70;
           } else {
             break L70;
@@ -2134,7 +2210,8 @@ class ec extends ne {
         L71: {
           var2 = gm.a("achievement_criteria,20", false);
           if (null != var2) {
-            bb.field_k[20] = dj.a(var2, false);
+            int discarded$871 = 0;
+            bb.field_k[20] = dj.a(var2);
             break L71;
           } else {
             break L71;
@@ -2143,7 +2220,8 @@ class ec extends ne {
         L72: {
           var2 = gm.a("achievement_criteria,21", false);
           if (null != var2) {
-            bb.field_k[21] = dj.a(var2, false);
+            int discarded$872 = 0;
+            bb.field_k[21] = dj.a(var2);
             break L72;
           } else {
             break L72;
@@ -2154,7 +2232,8 @@ class ec extends ne {
           if (var2 == null) {
             break L73;
           } else {
-            bb.field_k[22] = dj.a(var2, false);
+            int discarded$873 = 0;
+            bb.field_k[22] = dj.a(var2);
             break L73;
           }
         }
@@ -2163,32 +2242,36 @@ class ec extends ne {
           if (var2 == null) {
             break L74;
           } else {
-            bb.field_k[23] = dj.a(var2, param1);
+            int discarded$874 = 0;
+            bb.field_k[23] = dj.a(var2);
             break L74;
           }
         }
         L75: {
           var2 = gm.a("achievement_criteria,24", false);
           if (null != var2) {
-            bb.field_k[24] = dj.a(var2, false);
+            int discarded$875 = 0;
+            bb.field_k[24] = dj.a(var2);
             break L75;
           } else {
             break L75;
           }
         }
         L76: {
-          var2 = gm.a("achievement_criteria,25", param1);
+          var2 = gm.a("achievement_criteria,25", false);
           if (null == var2) {
             break L76;
           } else {
-            bb.field_k[25] = dj.a(var2, false);
+            int discarded$876 = 0;
+            bb.field_k[25] = dj.a(var2);
             break L76;
           }
         }
         L77: {
           var2 = gm.a("achievement_criteria,26", false);
           if (var2 != null) {
-            bb.field_k[26] = dj.a(var2, false);
+            int discarded$877 = 0;
+            bb.field_k[26] = dj.a(var2);
             break L77;
           } else {
             break L77;
@@ -2199,25 +2282,28 @@ class ec extends ne {
           if (var2 == null) {
             break L78;
           } else {
-            bb.field_k[27] = dj.a(var2, false);
+            int discarded$878 = 0;
+            bb.field_k[27] = dj.a(var2);
             break L78;
           }
         }
         L79: {
           var2 = gm.a("achievement_criteria,28", false);
           if (var2 != null) {
-            bb.field_k[28] = dj.a(var2, false);
+            int discarded$879 = 0;
+            bb.field_k[28] = dj.a(var2);
             break L79;
           } else {
             break L79;
           }
         }
         L80: {
-          var2 = gm.a("achievement_criteria,29", param1);
+          var2 = gm.a("achievement_criteria,29", false);
           if (null == var2) {
             break L80;
           } else {
-            bb.field_k[29] = dj.a(var2, false);
+            int discarded$880 = 0;
+            bb.field_k[29] = dj.a(var2);
             break L80;
           }
         }
@@ -2226,7 +2312,8 @@ class ec extends ne {
           if (var2 == null) {
             break L81;
           } else {
-            bb.field_k[30] = dj.a(var2, param1);
+            int discarded$881 = 0;
+            bb.field_k[30] = dj.a(var2);
             break L81;
           }
         }
@@ -2235,14 +2322,16 @@ class ec extends ne {
           if (var2 == null) {
             break L82;
           } else {
-            bb.field_k[31] = dj.a(var2, false);
+            int discarded$882 = 0;
+            bb.field_k[31] = dj.a(var2);
             break L82;
           }
         }
         L83: {
           var2 = gm.a("achievement_criteria,32", false);
           if (null != var2) {
-            bb.field_k[32] = dj.a(var2, false);
+            int discarded$883 = 0;
+            bb.field_k[32] = dj.a(var2);
             break L83;
           } else {
             break L83;
@@ -2253,14 +2342,16 @@ class ec extends ne {
           if (var2 == null) {
             break L84;
           } else {
-            bb.field_k[33] = dj.a(var2, false);
+            int discarded$884 = 0;
+            bb.field_k[33] = dj.a(var2);
             break L84;
           }
         }
         L85: {
           var2 = gm.a("achievement_criteria,34", false);
           if (null != var2) {
-            bb.field_k[34] = dj.a(var2, false);
+            int discarded$885 = 0;
+            bb.field_k[34] = dj.a(var2);
             break L85;
           } else {
             break L85;
@@ -2271,14 +2362,16 @@ class ec extends ne {
           if (var2 == null) {
             break L86;
           } else {
-            bb.field_k[35] = dj.a(var2, false);
+            int discarded$886 = 0;
+            bb.field_k[35] = dj.a(var2);
             break L86;
           }
         }
         L87: {
           var2 = gm.a("achievement_criteria,36", false);
           if (var2 != null) {
-            bb.field_k[36] = dj.a(var2, false);
+            int discarded$887 = 0;
+            bb.field_k[36] = dj.a(var2);
             break L87;
           } else {
             break L87;
@@ -2289,7 +2382,8 @@ class ec extends ne {
           if (null == var2) {
             break L88;
           } else {
-            bb.field_k[37] = dj.a(var2, false);
+            int discarded$888 = 0;
+            bb.field_k[37] = dj.a(var2);
             break L88;
           }
         }
@@ -2298,7 +2392,8 @@ class ec extends ne {
           if (var2 == null) {
             break L89;
           } else {
-            bb.field_k[38] = dj.a(var2, false);
+            int discarded$889 = 0;
+            bb.field_k[38] = dj.a(var2);
             break L89;
           }
         }
@@ -2307,7 +2402,8 @@ class ec extends ne {
           if (var2 == null) {
             break L90;
           } else {
-            bb.field_k[39] = dj.a(var2, false);
+            int discarded$890 = 0;
+            bb.field_k[39] = dj.a(var2);
             break L90;
           }
         }
@@ -2316,7 +2412,8 @@ class ec extends ne {
           if (var2 == null) {
             break L91;
           } else {
-            bb.field_k[40] = dj.a(var2, param1);
+            int discarded$891 = 0;
+            bb.field_k[40] = dj.a(var2);
             break L91;
           }
         }
@@ -2325,14 +2422,16 @@ class ec extends ne {
           if (var2 == null) {
             break L92;
           } else {
-            bb.field_k[41] = dj.a(var2, false);
+            int discarded$892 = 0;
+            bb.field_k[41] = dj.a(var2);
             break L92;
           }
         }
         L93: {
           var2 = gm.a("achievement_criteria,42", false);
           if (null != var2) {
-            bb.field_k[42] = dj.a(var2, false);
+            int discarded$893 = 0;
+            bb.field_k[42] = dj.a(var2);
             break L93;
           } else {
             break L93;
@@ -2343,25 +2442,28 @@ class ec extends ne {
           if (null == var2) {
             break L94;
           } else {
-            bb.field_k[43] = dj.a(var2, false);
+            int discarded$894 = 0;
+            bb.field_k[43] = dj.a(var2);
             break L94;
           }
         }
         L95: {
           var2 = gm.a("achievement_criteria,44", false);
           if (var2 != null) {
-            bb.field_k[44] = dj.a(var2, false);
+            int discarded$895 = 0;
+            bb.field_k[44] = dj.a(var2);
             break L95;
           } else {
             break L95;
           }
         }
         L96: {
-          var2 = gm.a("achievement_criteria,45", param1);
+          var2 = gm.a("achievement_criteria,45", false);
           if (null == var2) {
             break L96;
           } else {
-            bb.field_k[45] = dj.a(var2, false);
+            int discarded$896 = 0;
+            bb.field_k[45] = dj.a(var2);
             break L96;
           }
         }
@@ -2370,7 +2472,8 @@ class ec extends ne {
           if (var2 == null) {
             break L97;
           } else {
-            qh.field_J[0] = dj.a(var2, false);
+            int discarded$897 = 0;
+            qh.field_J[0] = dj.a(var2);
             break L97;
           }
         }
@@ -2379,7 +2482,8 @@ class ec extends ne {
           if (null == var2) {
             break L98;
           } else {
-            qh.field_J[1] = dj.a(var2, param1);
+            int discarded$898 = 0;
+            qh.field_J[1] = dj.a(var2);
             break L98;
           }
         }
@@ -2388,16 +2492,18 @@ class ec extends ne {
           if (null == var2) {
             break L99;
           } else {
-            qh.field_J[2] = dj.a(var2, param1);
+            int discarded$899 = 0;
+            qh.field_J[2] = dj.a(var2);
             break L99;
           }
         }
         L100: {
-          var2 = gm.a("intro_captions,3", param1);
+          var2 = gm.a("intro_captions,3", false);
           if (null == var2) {
             break L100;
           } else {
-            qh.field_J[3] = dj.a(var2, false);
+            int discarded$900 = 0;
+            qh.field_J[3] = dj.a(var2);
             break L100;
           }
         }
@@ -2406,14 +2512,16 @@ class ec extends ne {
           if (null == var2) {
             break L101;
           } else {
-            qh.field_J[4] = dj.a(var2, false);
+            int discarded$901 = 0;
+            qh.field_J[4] = dj.a(var2);
             break L101;
           }
         }
         L102: {
           var2 = gm.a("intro_captions,5", false);
           if (var2 != null) {
-            qh.field_J[5] = dj.a(var2, false);
+            int discarded$902 = 0;
+            qh.field_J[5] = dj.a(var2);
             break L102;
           } else {
             break L102;
@@ -2424,14 +2532,16 @@ class ec extends ne {
           if (var2 == null) {
             break L103;
           } else {
-            qh.field_J[6] = dj.a(var2, false);
+            int discarded$903 = 0;
+            qh.field_J[6] = dj.a(var2);
             break L103;
           }
         }
         L104: {
-          var2 = gm.a("intro_captions,7", param1);
+          var2 = gm.a("intro_captions,7", false);
           if (var2 != null) {
-            qh.field_J[7] = dj.a(var2, false);
+            int discarded$904 = 0;
+            qh.field_J[7] = dj.a(var2);
             break L104;
           } else {
             break L104;
@@ -2440,7 +2550,8 @@ class ec extends ne {
         L105: {
           var2 = gm.a("intro_captions,8", false);
           if (var2 != null) {
-            qh.field_J[8] = dj.a(var2, param1);
+            int discarded$905 = 0;
+            qh.field_J[8] = dj.a(var2);
             break L105;
           } else {
             break L105;
@@ -2449,25 +2560,28 @@ class ec extends ne {
         L106: {
           var2 = gm.a("instructions_pages,0", false);
           if (var2 != null) {
-            en.field_a[0] = dj.a(var2, param1);
+            int discarded$906 = 0;
+            en.field_a[0] = dj.a(var2);
             break L106;
           } else {
             break L106;
           }
         }
         L107: {
-          var2 = gm.a("instructions_pages,1", param1);
+          var2 = gm.a("instructions_pages,1", false);
           if (null != var2) {
-            en.field_a[1] = dj.a(var2, false);
+            int discarded$907 = 0;
+            en.field_a[1] = dj.a(var2);
             break L107;
           } else {
             break L107;
           }
         }
         L108: {
-          var2 = gm.a("instructions_pages,2", param1);
+          var2 = gm.a("instructions_pages,2", false);
           if (null != var2) {
-            en.field_a[2] = dj.a(var2, false);
+            int discarded$908 = 0;
+            en.field_a[2] = dj.a(var2);
             break L108;
           } else {
             break L108;
@@ -2476,7 +2590,8 @@ class ec extends ne {
         L109: {
           var2 = gm.a("instructions_pages,3", false);
           if (var2 != null) {
-            en.field_a[3] = dj.a(var2, false);
+            int discarded$909 = 0;
+            en.field_a[3] = dj.a(var2);
             break L109;
           } else {
             break L109;
@@ -2487,7 +2602,8 @@ class ec extends ne {
           if (null == var2) {
             break L110;
           } else {
-            en.field_a[4] = dj.a(var2, false);
+            int discarded$910 = 0;
+            en.field_a[4] = dj.a(var2);
             break L110;
           }
         }
@@ -2496,7 +2612,8 @@ class ec extends ne {
           if (var2 == null) {
             break L111;
           } else {
-            en.field_a[5] = dj.a(var2, false);
+            int discarded$911 = 0;
+            en.field_a[5] = dj.a(var2);
             break L111;
           }
         }
@@ -2505,16 +2622,18 @@ class ec extends ne {
           if (var2 == null) {
             break L112;
           } else {
-            en.field_a[6] = dj.a(var2, param1);
+            int discarded$912 = 0;
+            en.field_a[6] = dj.a(var2);
             break L112;
           }
         }
         L113: {
-          var2 = gm.a("instructions_pages,7", param1);
+          var2 = gm.a("instructions_pages,7", false);
           if (var2 == null) {
             break L113;
           } else {
-            en.field_a[7] = dj.a(var2, false);
+            int discarded$913 = 0;
+            en.field_a[7] = dj.a(var2);
             break L113;
           }
         }
@@ -2523,7 +2642,8 @@ class ec extends ne {
           if (var2 == null) {
             break L114;
           } else {
-            uj.field_b = dj.a(var2, false);
+            int discarded$914 = 0;
+            uj.field_b = dj.a(var2);
             break L114;
           }
         }
@@ -2532,7 +2652,8 @@ class ec extends ne {
           if (null == var2) {
             break L115;
           } else {
-            an.field_D = dj.a(var2, param1);
+            int discarded$915 = 0;
+            an.field_D = dj.a(var2);
             break L115;
           }
         }
@@ -2541,7 +2662,8 @@ class ec extends ne {
           if (var2 == null) {
             break L116;
           } else {
-            sg.field_a = dj.a(var2, false);
+            int discarded$916 = 0;
+            sg.field_a = dj.a(var2);
             break L116;
           }
         }
@@ -2550,7 +2672,8 @@ class ec extends ne {
           if (null == var2) {
             break L117;
           } else {
-            ie.field_j[0] = dj.a(var2, false);
+            int discarded$917 = 0;
+            ie.field_j[0] = dj.a(var2);
             break L117;
           }
         }
@@ -2559,23 +2682,26 @@ class ec extends ne {
           if (null == var2) {
             break L118;
           } else {
-            ie.field_j[1] = dj.a(var2, false);
+            int discarded$918 = 0;
+            ie.field_j[1] = dj.a(var2);
             break L118;
           }
         }
         L119: {
           var2 = gm.a("instructions_subtitles_text,2", false);
           if (var2 != null) {
-            ie.field_j[2] = dj.a(var2, param1);
+            int discarded$919 = 0;
+            ie.field_j[2] = dj.a(var2);
             break L119;
           } else {
             break L119;
           }
         }
         L120: {
-          var2 = gm.a("instructions_subtitles_text,3", param1);
+          var2 = gm.a("instructions_subtitles_text,3", false);
           if (null != var2) {
-            ie.field_j[3] = dj.a(var2, false);
+            int discarded$920 = 0;
+            ie.field_j[3] = dj.a(var2);
             break L120;
           } else {
             break L120;
@@ -2586,7 +2712,8 @@ class ec extends ne {
           if (var2 == null) {
             break L121;
           } else {
-            ie.field_j[4] = dj.a(var2, false);
+            int discarded$921 = 0;
+            ie.field_j[4] = dj.a(var2);
             break L121;
           }
         }
@@ -2595,16 +2722,18 @@ class ec extends ne {
           if (var2 == null) {
             break L122;
           } else {
-            ie.field_j[5] = dj.a(var2, false);
+            int discarded$922 = 0;
+            ie.field_j[5] = dj.a(var2);
             break L122;
           }
         }
         L123: {
-          var2 = gm.a("instructions_subtitles_text,6", param1);
+          var2 = gm.a("instructions_subtitles_text,6", false);
           if (null == var2) {
             break L123;
           } else {
-            ie.field_j[6] = dj.a(var2, false);
+            int discarded$923 = 0;
+            ie.field_j[6] = dj.a(var2);
             break L123;
           }
         }
@@ -2613,14 +2742,16 @@ class ec extends ne {
           if (var2 == null) {
             break L124;
           } else {
-            ie.field_j[7] = dj.a(var2, false);
+            int discarded$924 = 0;
+            ie.field_j[7] = dj.a(var2);
             break L124;
           }
         }
         L125: {
           var2 = gm.a("tutorial_welcome1,0", false);
           if (var2 != null) {
-            bh.field_J[0] = dj.a(var2, false);
+            int discarded$925 = 0;
+            bh.field_J[0] = dj.a(var2);
             break L125;
           } else {
             break L125;
@@ -2629,16 +2760,18 @@ class ec extends ne {
         L126: {
           var2 = gm.a("tutorial_welcome1,1", false);
           if (var2 != null) {
-            bh.field_J[1] = dj.a(var2, param1);
+            int discarded$926 = 0;
+            bh.field_J[1] = dj.a(var2);
             break L126;
           } else {
             break L126;
           }
         }
         L127: {
-          var2 = gm.a("tutorial_welcome2,0", param1);
+          var2 = gm.a("tutorial_welcome2,0", false);
           if (null != var2) {
-            nf.field_C[0] = dj.a(var2, false);
+            int discarded$927 = 0;
+            nf.field_C[0] = dj.a(var2);
             break L127;
           } else {
             break L127;
@@ -2647,25 +2780,28 @@ class ec extends ne {
         L128: {
           var2 = gm.a("tutorial_welcome2,1", false);
           if (null != var2) {
-            nf.field_C[1] = dj.a(var2, false);
+            int discarded$928 = 0;
+            nf.field_C[1] = dj.a(var2);
             break L128;
           } else {
             break L128;
           }
         }
         L129: {
-          var2 = gm.a("tutorial_raiding1,1", param1);
+          var2 = gm.a("tutorial_raiding1,1", false);
           if (null != var2) {
-            rl.field_e[1] = dj.a(var2, false);
+            int discarded$929 = 0;
+            rl.field_e[1] = dj.a(var2);
             break L129;
           } else {
             break L129;
           }
         }
         L130: {
-          var2 = gm.a("tutorial_raiding2,0", param1);
+          var2 = gm.a("tutorial_raiding2,0", false);
           if (null != var2) {
-            co.field_J[0] = dj.a(var2, param1);
+            int discarded$930 = 0;
+            co.field_J[0] = dj.a(var2);
             break L130;
           } else {
             break L130;
@@ -2674,7 +2810,8 @@ class ec extends ne {
         L131: {
           var2 = gm.a("tutorial_raiding2,1", false);
           if (var2 != null) {
-            co.field_J[1] = dj.a(var2, false);
+            int discarded$931 = 0;
+            co.field_J[1] = dj.a(var2);
             break L131;
           } else {
             break L131;
@@ -2685,23 +2822,26 @@ class ec extends ne {
           if (var2 == null) {
             break L132;
           } else {
-            p.field_J[1] = dj.a(var2, param1);
+            int discarded$932 = 0;
+            p.field_J[1] = dj.a(var2);
             break L132;
           }
         }
         L133: {
-          var2 = gm.a("tutorial_raiders2,1", param1);
+          var2 = gm.a("tutorial_raiders2,1", false);
           if (null == var2) {
             break L133;
           } else {
-            je.field_f[1] = dj.a(var2, false);
+            int discarded$933 = 0;
+            je.field_f[1] = dj.a(var2);
             break L133;
           }
         }
         L134: {
-          var2 = gm.a("tutorial_raiders3,1", param1);
+          var2 = gm.a("tutorial_raiders3,1", false);
           if (var2 != null) {
-            og.field_a[1] = dj.a(var2, false);
+            int discarded$934 = 0;
+            og.field_a[1] = dj.a(var2);
             break L134;
           } else {
             break L134;
@@ -2710,7 +2850,8 @@ class ec extends ne {
         L135: {
           var2 = gm.a("tutorial_raiders4,0", false);
           if (null != var2) {
-            h.field_y[0] = dj.a(var2, param1);
+            int discarded$935 = 0;
+            h.field_y[0] = dj.a(var2);
             break L135;
           } else {
             break L135;
@@ -2719,61 +2860,68 @@ class ec extends ne {
         L136: {
           var2 = gm.a("tutorial_raiders4,1", false);
           if (var2 != null) {
-            h.field_y[1] = dj.a(var2, param1);
+            int discarded$936 = 0;
+            h.field_y[1] = dj.a(var2);
             break L136;
           } else {
             break L136;
           }
         }
         L137: {
-          var2 = gm.a("tutorial_rooms1,0", param1);
+          var2 = gm.a("tutorial_rooms1,0", false);
           if (null == var2) {
             break L137;
           } else {
-            pp.field_E[0] = dj.a(var2, false);
+            int discarded$937 = 0;
+            pp.field_E[0] = dj.a(var2);
             break L137;
           }
         }
         L138: {
-          var2 = gm.a("tutorial_rooms1,1", param1);
+          var2 = gm.a("tutorial_rooms1,1", false);
           if (null != var2) {
-            pp.field_E[1] = dj.a(var2, param1);
+            int discarded$938 = 0;
+            pp.field_E[1] = dj.a(var2);
             break L138;
           } else {
             break L138;
           }
         }
         L139: {
-          var2 = gm.a("tutorial_rooms2,1", param1);
+          var2 = gm.a("tutorial_rooms2,1", false);
           if (var2 == null) {
             break L139;
           } else {
-            np.field_C[1] = dj.a(var2, false);
+            int discarded$939 = 0;
+            np.field_C[1] = dj.a(var2);
             break L139;
           }
         }
         L140: {
-          var2 = gm.a("tutorial_firstroom1a,0", param1);
+          var2 = gm.a("tutorial_firstroom1a,0", false);
           if (var2 == null) {
             break L140;
           } else {
-            eg.field_b[0] = dj.a(var2, param1);
+            int discarded$940 = 0;
+            eg.field_b[0] = dj.a(var2);
             break L140;
           }
         }
         L141: {
-          var2 = gm.a("tutorial_firstroom1a,1", param1);
+          var2 = gm.a("tutorial_firstroom1a,1", false);
           if (null == var2) {
             break L141;
           } else {
-            eg.field_b[1] = dj.a(var2, false);
+            int discarded$941 = 0;
+            eg.field_b[1] = dj.a(var2);
             break L141;
           }
         }
         L142: {
           var2 = gm.a("tutorial_firstroom1b,0", false);
           if (null != var2) {
-            bn.field_m[0] = dj.a(var2, param1);
+            int discarded$942 = 0;
+            bn.field_m[0] = dj.a(var2);
             break L142;
           } else {
             break L142;
@@ -2784,7 +2932,8 @@ class ec extends ne {
           if (var2 == null) {
             break L143;
           } else {
-            bn.field_m[1] = dj.a(var2, false);
+            int discarded$943 = 0;
+            bn.field_m[1] = dj.a(var2);
             break L143;
           }
         }
@@ -2793,14 +2942,16 @@ class ec extends ne {
           if (var2 == null) {
             break L144;
           } else {
-            lp.field_q[1] = dj.a(var2, false);
+            int discarded$944 = 0;
+            lp.field_q[1] = dj.a(var2);
             break L144;
           }
         }
         L145: {
-          var2 = gm.a("tutorial_monster1,0", param1);
+          var2 = gm.a("tutorial_monster1,0", false);
           if (var2 != null) {
-            rl.field_i[0] = dj.a(var2, false);
+            int discarded$945 = 0;
+            rl.field_i[0] = dj.a(var2);
             break L145;
           } else {
             break L145;
@@ -2811,7 +2962,8 @@ class ec extends ne {
           if (null == var2) {
             break L146;
           } else {
-            rl.field_i[1] = dj.a(var2, false);
+            int discarded$946 = 0;
+            rl.field_i[1] = dj.a(var2);
             break L146;
           }
         }
@@ -2820,7 +2972,8 @@ class ec extends ne {
           if (var2 == null) {
             break L147;
           } else {
-            lb.field_d[1] = dj.a(var2, false);
+            int discarded$947 = 0;
+            lb.field_d[1] = dj.a(var2);
             break L147;
           }
         }
@@ -2829,14 +2982,16 @@ class ec extends ne {
           if (var2 == null) {
             break L148;
           } else {
-            le.field_c[1] = dj.a(var2, param1);
+            int discarded$948 = 0;
+            le.field_c[1] = dj.a(var2);
             break L148;
           }
         }
         L149: {
-          var2 = gm.a("tutorial_strategies1,0", param1);
+          var2 = gm.a("tutorial_strategies1,0", false);
           if (null != var2) {
-            tp.field_C[0] = dj.a(var2, false);
+            int discarded$949 = 0;
+            tp.field_C[0] = dj.a(var2);
             break L149;
           } else {
             break L149;
@@ -2845,7 +3000,8 @@ class ec extends ne {
         L150: {
           var2 = gm.a("tutorial_strategies1,1", false);
           if (null != var2) {
-            tp.field_C[1] = dj.a(var2, false);
+            int discarded$950 = 0;
+            tp.field_C[1] = dj.a(var2);
             break L150;
           } else {
             break L150;
@@ -2854,7 +3010,8 @@ class ec extends ne {
         L151: {
           var2 = gm.a("tutorial_strategies2,1", false);
           if (var2 != null) {
-            lp.field_F[1] = dj.a(var2, param1);
+            int discarded$951 = 0;
+            lp.field_F[1] = dj.a(var2);
             break L151;
           } else {
             break L151;
@@ -2863,7 +3020,8 @@ class ec extends ne {
         L152: {
           var2 = gm.a("tutorial_strategies3,1", false);
           if (null != var2) {
-            nl.field_f[1] = dj.a(var2, false);
+            int discarded$952 = 0;
+            nl.field_f[1] = dj.a(var2);
             break L152;
           } else {
             break L152;
@@ -2874,14 +3032,16 @@ class ec extends ne {
           if (null == var2) {
             break L153;
           } else {
-            ll.field_j[1] = dj.a(var2, param1);
+            int discarded$953 = 0;
+            ll.field_j[1] = dj.a(var2);
             break L153;
           }
         }
         L154: {
           var2 = gm.a("tutorial_trap1,0", false);
           if (null != var2) {
-            bb.field_t[0] = dj.a(var2, false);
+            int discarded$954 = 0;
+            bb.field_t[0] = dj.a(var2);
             break L154;
           } else {
             break L154;
@@ -2892,14 +3052,16 @@ class ec extends ne {
           if (var2 == null) {
             break L155;
           } else {
-            bb.field_t[1] = dj.a(var2, param1);
+            int discarded$955 = 0;
+            bb.field_t[1] = dj.a(var2);
             break L155;
           }
         }
         L156: {
           var2 = gm.a("tutorial_trap2,1", false);
           if (null != var2) {
-            ka.field_d[1] = dj.a(var2, false);
+            int discarded$956 = 0;
+            ka.field_d[1] = dj.a(var2);
             break L156;
           } else {
             break L156;
@@ -2910,7 +3072,8 @@ class ec extends ne {
           if (var2 == null) {
             break L157;
           } else {
-            eh.field_e[0] = dj.a(var2, false);
+            int discarded$957 = 0;
+            eh.field_e[0] = dj.a(var2);
             break L157;
           }
         }
@@ -2919,14 +3082,16 @@ class ec extends ne {
           if (null == var2) {
             break L158;
           } else {
-            eh.field_e[1] = dj.a(var2, param1);
+            int discarded$958 = 0;
+            eh.field_e[1] = dj.a(var2);
             break L158;
           }
         }
         L159: {
-          var2 = gm.a("tutorial_guardian2,1", param1);
+          var2 = gm.a("tutorial_guardian2,1", false);
           if (var2 != null) {
-            bk.field_f[1] = dj.a(var2, param1);
+            int discarded$959 = 0;
+            bk.field_f[1] = dj.a(var2);
             break L159;
           } else {
             break L159;
@@ -2937,14 +3102,16 @@ class ec extends ne {
           if (var2 == null) {
             break L160;
           } else {
-            hj.field_O[0] = dj.a(var2, param1);
+            int discarded$960 = 0;
+            hj.field_O[0] = dj.a(var2);
             break L160;
           }
         }
         L161: {
           var2 = gm.a("tutorial_victory,1", false);
           if (var2 != null) {
-            hj.field_O[1] = dj.a(var2, false);
+            int discarded$961 = 0;
+            hj.field_O[1] = dj.a(var2);
             break L161;
           } else {
             break L161;
@@ -2953,52 +3120,58 @@ class ec extends ne {
         L162: {
           var2 = gm.a("tutorial_defeat,0", false);
           if (var2 != null) {
-            ek.field_j[0] = dj.a(var2, param1);
+            int discarded$962 = 0;
+            ek.field_j[0] = dj.a(var2);
             break L162;
           } else {
             break L162;
           }
         }
         L163: {
-          var2 = gm.a("tutorial_defeat,1", param1);
+          var2 = gm.a("tutorial_defeat,1", false);
           if (null != var2) {
-            ek.field_j[1] = dj.a(var2, param1);
+            int discarded$963 = 0;
+            ek.field_j[1] = dj.a(var2);
             break L163;
           } else {
             break L163;
           }
         }
         L164: {
-          var2 = gm.a("tutorial_defeat_repeated,0", param1);
+          var2 = gm.a("tutorial_defeat_repeated,0", false);
           if (null != var2) {
-            rm.field_S[0] = dj.a(var2, param1);
+            int discarded$964 = 0;
+            rm.field_S[0] = dj.a(var2);
             break L164;
           } else {
             break L164;
           }
         }
         L165: {
-          var2 = gm.a("tutorial_defeat_repeated,1", param1);
+          var2 = gm.a("tutorial_defeat_repeated,1", false);
           if (null == var2) {
             break L165;
           } else {
-            rm.field_S[1] = dj.a(var2, false);
+            int discarded$965 = 0;
+            rm.field_S[1] = dj.a(var2);
             break L165;
           }
         }
         L166: {
           var2 = gm.a("tutorial_death,0", false);
           if (null != var2) {
-            wl.field_c[0] = dj.a(var2, false);
+            int discarded$966 = 0;
+            wl.field_c[0] = dj.a(var2);
             break L166;
           } else {
             break L166;
           }
         }
         L167: {
-          var2 = gm.a("tutorial_death,1", param1);
+          var2 = gm.a("tutorial_death,1", false);
           if (var2 != null) {
-            wl.field_c[1] = dj.a(var2, false);
+            int discarded$967 = 0;
+            wl.field_c[1] = dj.a(var2);
             break L167;
           } else {
             break L167;
@@ -3009,14 +3182,16 @@ class ec extends ne {
           if (null == var2) {
             break L168;
           } else {
-            ha.field_j[0] = dj.a(var2, false);
+            int discarded$968 = 0;
+            ha.field_j[0] = dj.a(var2);
             break L168;
           }
         }
         L169: {
           var2 = gm.a("tutorial_hoardroom,1", false);
           if (null != var2) {
-            ha.field_j[1] = dj.a(var2, false);
+            int discarded$969 = 0;
+            ha.field_j[1] = dj.a(var2);
             break L169;
           } else {
             break L169;
@@ -3027,7 +3202,8 @@ class ec extends ne {
           if (null == var2) {
             break L170;
           } else {
-            qa.field_e[0] = dj.a(var2, false);
+            int discarded$970 = 0;
+            qa.field_e[0] = dj.a(var2);
             break L170;
           }
         }
@@ -3036,23 +3212,26 @@ class ec extends ne {
           if (var2 == null) {
             break L171;
           } else {
-            qa.field_e[1] = dj.a(var2, param1);
+            int discarded$971 = 0;
+            qa.field_e[1] = dj.a(var2);
             break L171;
           }
         }
         L172: {
-          var2 = gm.a("tutorial_modifiers,0", param1);
+          var2 = gm.a("tutorial_modifiers,0", false);
           if (var2 == null) {
             break L172;
           } else {
-            tl.field_m[0] = dj.a(var2, false);
+            int discarded$972 = 0;
+            tl.field_m[0] = dj.a(var2);
             break L172;
           }
         }
         L173: {
-          var2 = gm.a("tutorial_modifiers,1", param1);
+          var2 = gm.a("tutorial_modifiers,1", false);
           if (var2 != null) {
-            tl.field_m[1] = dj.a(var2, false);
+            int discarded$973 = 0;
+            tl.field_m[1] = dj.a(var2);
             break L173;
           } else {
             break L173;
@@ -3061,7 +3240,8 @@ class ec extends ne {
         L174: {
           var2 = gm.a("tutorial_raid_complete,0", false);
           if (null != var2) {
-            ug.field_M[0] = dj.a(var2, param1);
+            int discarded$974 = 0;
+            ug.field_M[0] = dj.a(var2);
             break L174;
           } else {
             break L174;
@@ -3070,16 +3250,18 @@ class ec extends ne {
         L175: {
           var2 = gm.a("tutorial_raid_complete,1", false);
           if (var2 != null) {
-            ug.field_M[1] = dj.a(var2, false);
+            int discarded$975 = 0;
+            ug.field_M[1] = dj.a(var2);
             break L175;
           } else {
             break L175;
           }
         }
         L176: {
-          var2 = gm.a("tutorial_construction1,0", param1);
+          var2 = gm.a("tutorial_construction1,0", false);
           if (var2 != null) {
-            qh.field_E[0] = dj.a(var2, false);
+            int discarded$976 = 0;
+            qh.field_E[0] = dj.a(var2);
             break L176;
           } else {
             break L176;
@@ -3090,14 +3272,16 @@ class ec extends ne {
           if (null == var2) {
             break L177;
           } else {
-            qh.field_E[1] = dj.a(var2, false);
+            int discarded$977 = 0;
+            qh.field_E[1] = dj.a(var2);
             break L177;
           }
         }
         L178: {
           var2 = gm.a("tutorial_construction2,1", false);
           if (null != var2) {
-            dg.field_O[1] = dj.a(var2, param1);
+            int discarded$978 = 0;
+            dg.field_O[1] = dj.a(var2);
             break L178;
           } else {
             break L178;
@@ -3108,16 +3292,18 @@ class ec extends ne {
           if (var2 == null) {
             break L179;
           } else {
-            tg.field_e[1] = dj.a(var2, false);
+            int discarded$979 = 0;
+            tg.field_e[1] = dj.a(var2);
             break L179;
           }
         }
         L180: {
-          var2 = gm.a("tutorial_placeroom2,1", param1);
+          var2 = gm.a("tutorial_placeroom2,1", false);
           if (null == var2) {
             break L180;
           } else {
-            uo.field_g[1] = dj.a(var2, false);
+            int discarded$980 = 0;
+            uo.field_g[1] = dj.a(var2);
             break L180;
           }
         }
@@ -3126,14 +3312,16 @@ class ec extends ne {
           if (null == var2) {
             break L181;
           } else {
-            hh.field_n[0] = dj.a(var2, false);
+            int discarded$981 = 0;
+            hh.field_n[0] = dj.a(var2);
             break L181;
           }
         }
         L182: {
           var2 = gm.a("tutorial_stable1,1", false);
           if (null != var2) {
-            hh.field_n[1] = dj.a(var2, param1);
+            int discarded$982 = 0;
+            hh.field_n[1] = dj.a(var2);
             break L182;
           } else {
             break L182;
@@ -3142,7 +3330,8 @@ class ec extends ne {
         L183: {
           var2 = gm.a("tutorial_stable2,1", false);
           if (null != var2) {
-            fj.field_a[1] = dj.a(var2, false);
+            int discarded$983 = 0;
+            fj.field_a[1] = dj.a(var2);
             break L183;
           } else {
             break L183;
@@ -3151,7 +3340,8 @@ class ec extends ne {
         L184: {
           var2 = gm.a("tutorial_stable3,1", false);
           if (null != var2) {
-            k.field_a[1] = dj.a(var2, false);
+            int discarded$984 = 0;
+            k.field_a[1] = dj.a(var2);
             break L184;
           } else {
             break L184;
@@ -3162,16 +3352,18 @@ class ec extends ne {
           if (var2 == null) {
             break L185;
           } else {
-            rn.field_g[1] = dj.a(var2, false);
+            int discarded$985 = 0;
+            rn.field_g[1] = dj.a(var2);
             break L185;
           }
         }
         L186: {
-          var2 = gm.a("tutorial_end_justplay,0", param1);
+          var2 = gm.a("tutorial_end_justplay,0", false);
           if (null == var2) {
             break L186;
           } else {
-            kg.field_e[0] = dj.a(var2, false);
+            int discarded$986 = 0;
+            kg.field_e[0] = dj.a(var2);
             break L186;
           }
         }
@@ -3180,7 +3372,8 @@ class ec extends ne {
           if (var2 == null) {
             break L187;
           } else {
-            kg.field_e[1] = dj.a(var2, false);
+            int discarded$987 = 0;
+            kg.field_e[1] = dj.a(var2);
             break L187;
           }
         }
@@ -3189,23 +3382,26 @@ class ec extends ne {
           if (var2 == null) {
             break L188;
           } else {
-            vf.field_A[0] = dj.a(var2, false);
+            int discarded$988 = 0;
+            vf.field_A[0] = dj.a(var2);
             break L188;
           }
         }
         L189: {
-          var2 = gm.a("tutorial_dragonsofrenown1,1", param1);
+          var2 = gm.a("tutorial_dragonsofrenown1,1", false);
           if (var2 == null) {
             break L189;
           } else {
-            vf.field_A[1] = dj.a(var2, false);
+            int discarded$989 = 0;
+            vf.field_A[1] = dj.a(var2);
             break L189;
           }
         }
         L190: {
           var2 = gm.a("tutorial_dragonsofrenown2,1", false);
           if (var2 != null) {
-            qd.field_e[1] = dj.a(var2, param1);
+            int discarded$990 = 0;
+            qd.field_e[1] = dj.a(var2);
             break L190;
           } else {
             break L190;
@@ -3214,7 +3410,8 @@ class ec extends ne {
         L191: {
           var2 = gm.a("tutorial_dragonsofrenown3,1", false);
           if (var2 != null) {
-            rk.field_k[1] = dj.a(var2, false);
+            int discarded$991 = 0;
+            rk.field_k[1] = dj.a(var2);
             break L191;
           } else {
             break L191;
@@ -3225,41 +3422,46 @@ class ec extends ne {
           if (null == var2) {
             break L192;
           } else {
-            un.field_b[1] = dj.a(var2, false);
+            int discarded$992 = 0;
+            un.field_b[1] = dj.a(var2);
             break L192;
           }
         }
         L193: {
-          var2 = gm.a("tutorial_selectraiders,1", param1);
+          var2 = gm.a("tutorial_selectraiders,1", false);
           if (var2 != null) {
-            tp.field_A[1] = dj.a(var2, param1);
+            int discarded$993 = 0;
+            tp.field_A[1] = dj.a(var2);
             break L193;
           } else {
             break L193;
           }
         }
         L194: {
-          var2 = gm.a("tutorial_justplay_warning", param1);
+          var2 = gm.a("tutorial_justplay_warning", false);
           if (null == var2) {
             break L194;
           } else {
-            ub.field_r = dj.a(var2, false);
+            int discarded$994 = 0;
+            ub.field_r = dj.a(var2);
             break L194;
           }
         }
         L195: {
-          var2 = gm.a("goblin_runt", param1);
+          var2 = gm.a("goblin_runt", false);
           if (null == var2) {
             break L195;
           } else {
-            d.field_a = dj.a(var2, param1);
+            int discarded$995 = 0;
+            d.field_a = dj.a(var2);
             break L195;
           }
         }
         L196: {
           var2 = gm.a("saurus_spawn", false);
           if (null != var2) {
-            ng.field_J = dj.a(var2, false);
+            int discarded$996 = 0;
+            ng.field_J = dj.a(var2);
             break L196;
           } else {
             break L196;
@@ -3268,7 +3470,8 @@ class ec extends ne {
         L197: {
           var2 = gm.a("goblin_cleaver", false);
           if (null != var2) {
-            ub.field_l = dj.a(var2, false);
+            int discarded$997 = 0;
+            ub.field_l = dj.a(var2);
             break L197;
           } else {
             break L197;
@@ -3277,7 +3480,8 @@ class ec extends ne {
         L198: {
           var2 = gm.a("orc_warrior", false);
           if (null != var2) {
-            gj.field_a = dj.a(var2, false);
+            int discarded$998 = 0;
+            gj.field_a = dj.a(var2);
             break L198;
           } else {
             break L198;
@@ -3288,14 +3492,16 @@ class ec extends ne {
           if (var2 == null) {
             break L199;
           } else {
-            ml.field_c = dj.a(var2, false);
+            int discarded$999 = 0;
+            ml.field_c = dj.a(var2);
             break L199;
           }
         }
         L200: {
-          var2 = gm.a("beastman", param1);
+          var2 = gm.a("beastman", false);
           if (null != var2) {
-            DungeonAssault.field_J = dj.a(var2, param1);
+            int discarded$1000 = 0;
+            DungeonAssault.field_J = dj.a(var2);
             break L200;
           } else {
             break L200;
@@ -3304,7 +3510,8 @@ class ec extends ne {
         L201: {
           var2 = gm.a("saurus_slink", false);
           if (var2 != null) {
-            fb.field_b = dj.a(var2, param1);
+            int discarded$1001 = 0;
+            fb.field_b = dj.a(var2);
             break L201;
           } else {
             break L201;
@@ -3313,7 +3520,8 @@ class ec extends ne {
         L202: {
           var2 = gm.a("mercenary_knight", false);
           if (var2 != null) {
-            jl.field_b = dj.a(var2, false);
+            int discarded$1002 = 0;
+            jl.field_b = dj.a(var2);
             break L202;
           } else {
             break L202;
@@ -3322,7 +3530,8 @@ class ec extends ne {
         L203: {
           var2 = gm.a("priest", false);
           if (null != var2) {
-            jk.field_Cb = dj.a(var2, false);
+            int discarded$1003 = 0;
+            jk.field_Cb = dj.a(var2);
             break L203;
           } else {
             break L203;
@@ -3333,14 +3542,16 @@ class ec extends ne {
           if (null == var2) {
             break L204;
           } else {
-            dc.field_H = dj.a(var2, false);
+            int discarded$1004 = 0;
+            dc.field_H = dj.a(var2);
             break L204;
           }
         }
         L205: {
           var2 = gm.a("goblin_scout", false);
           if (null != var2) {
-            dn.field_W = dj.a(var2, false);
+            int discarded$1005 = 0;
+            dn.field_W = dj.a(var2);
             break L205;
           } else {
             break L205;
@@ -3351,14 +3562,16 @@ class ec extends ne {
           if (null == var2) {
             break L206;
           } else {
-            df.field_g = dj.a(var2, param1);
+            int discarded$1006 = 0;
+            df.field_g = dj.a(var2);
             break L206;
           }
         }
         L207: {
           var2 = gm.a("ogre_thug", false);
           if (var2 != null) {
-            lf.field_v = dj.a(var2, false);
+            int discarded$1007 = 0;
+            lf.field_v = dj.a(var2);
             break L207;
           } else {
             break L207;
@@ -3367,7 +3580,8 @@ class ec extends ne {
         L208: {
           var2 = gm.a("enchantress", false);
           if (null != var2) {
-            ok.field_jb = dj.a(var2, false);
+            int discarded$1008 = 0;
+            ok.field_jb = dj.a(var2);
             break L208;
           } else {
             break L208;
@@ -3378,14 +3592,16 @@ class ec extends ne {
           if (null == var2) {
             break L209;
           } else {
-            sd.field_I = dj.a(var2, false);
+            int discarded$1009 = 0;
+            sd.field_I = dj.a(var2);
             break L209;
           }
         }
         L210: {
           var2 = gm.a("orc_shaman", false);
           if (null != var2) {
-            ik.field_d = dj.a(var2, false);
+            int discarded$1010 = 0;
+            ik.field_d = dj.a(var2);
             break L210;
           } else {
             break L210;
@@ -3394,7 +3610,8 @@ class ec extends ne {
         L211: {
           var2 = gm.a("cave_troll", false);
           if (var2 != null) {
-            ua.field_d = dj.a(var2, false);
+            int discarded$1011 = 0;
+            ua.field_d = dj.a(var2);
             break L211;
           } else {
             break L211;
@@ -3403,7 +3620,8 @@ class ec extends ne {
         L212: {
           var2 = gm.a("northman_ranger", false);
           if (var2 != null) {
-            oa.field_i = dj.a(var2, false);
+            int discarded$1012 = 0;
+            oa.field_i = dj.a(var2);
             break L212;
           } else {
             break L212;
@@ -3412,7 +3630,8 @@ class ec extends ne {
         L213: {
           var2 = gm.a("dwarf_renegade", false);
           if (null != var2) {
-            ae.field_c = dj.a(var2, false);
+            int discarded$1013 = 0;
+            ae.field_c = dj.a(var2);
             break L213;
           } else {
             break L213;
@@ -3423,7 +3642,8 @@ class ec extends ne {
           if (null == var2) {
             break L214;
           } else {
-            o.field_l = dj.a(var2, false);
+            int discarded$1014 = 0;
+            o.field_l = dj.a(var2);
             break L214;
           }
         }
@@ -3432,14 +3652,16 @@ class ec extends ne {
           if (var2 == null) {
             break L215;
           } else {
-            bo.field_Mb = dj.a(var2, param1);
+            int discarded$1015 = 0;
+            bo.field_Mb = dj.a(var2);
             break L215;
           }
         }
         L216: {
           var2 = gm.a("dark_elf_assassin", false);
           if (var2 != null) {
-            op.field_b = dj.a(var2, false);
+            int discarded$1016 = 0;
+            op.field_b = dj.a(var2);
             break L216;
           } else {
             break L216;
@@ -3448,7 +3670,8 @@ class ec extends ne {
         L217: {
           var2 = gm.a("berserker", false);
           if (null != var2) {
-            lf.field_p = dj.a(var2, false);
+            int discarded$1017 = 0;
+            lf.field_p = dj.a(var2);
             break L217;
           } else {
             break L217;
@@ -3459,7 +3682,8 @@ class ec extends ne {
           if (var2 == null) {
             break L218;
           } else {
-            sp.field_f = dj.a(var2, false);
+            int discarded$1018 = 0;
+            sp.field_f = dj.a(var2);
             break L218;
           }
         }
@@ -3468,25 +3692,28 @@ class ec extends ne {
           if (var2 == null) {
             break L219;
           } else {
-            hp.field_d = dj.a(var2, param1);
+            int discarded$1019 = 0;
+            hp.field_d = dj.a(var2);
             break L219;
           }
         }
         L220: {
           var2 = gm.a("shapeshifter", false);
           if (null != var2) {
-            mp.field_g = dj.a(var2, false);
+            int discarded$1020 = 0;
+            mp.field_g = dj.a(var2);
             break L220;
           } else {
             break L220;
           }
         }
         L221: {
-          var2 = gm.a("black_knight", param1);
+          var2 = gm.a("black_knight", false);
           if (var2 == null) {
             break L221;
           } else {
-            ro.field_m = dj.a(var2, false);
+            int discarded$1021 = 0;
+            ro.field_m = dj.a(var2);
             break L221;
           }
         }
@@ -3495,32 +3722,36 @@ class ec extends ne {
           if (var2 == null) {
             break L222;
           } else {
-            uf.field_c = dj.a(var2, param1);
+            int discarded$1022 = 0;
+            uf.field_c = dj.a(var2);
             break L222;
           }
         }
         L223: {
           var2 = gm.a("warlock", false);
           if (null != var2) {
-            kf.field_i = dj.a(var2, param1);
+            int discarded$1023 = 0;
+            kf.field_i = dj.a(var2);
             break L223;
           } else {
             break L223;
           }
         }
         L224: {
-          var2 = gm.a("death_knight", param1);
+          var2 = gm.a("death_knight", false);
           if (var2 == null) {
             break L224;
           } else {
-            e.field_k = dj.a(var2, param1);
+            int discarded$1024 = 0;
+            e.field_k = dj.a(var2);
             break L224;
           }
         }
         L225: {
           var2 = gm.a("chaos_champion", false);
           if (var2 != null) {
-            ih.field_v = dj.a(var2, param1);
+            int discarded$1025 = 0;
+            ih.field_v = dj.a(var2);
             break L225;
           } else {
             break L225;
@@ -3531,14 +3762,16 @@ class ec extends ne {
           if (var2 == null) {
             break L226;
           } else {
-            gh.field_e = dj.a(var2, param1);
+            int discarded$1026 = 0;
+            gh.field_e = dj.a(var2);
             break L226;
           }
         }
         L227: {
           var2 = gm.a("daemonette", false);
           if (var2 != null) {
-            sg.field_f = dj.a(var2, false);
+            int discarded$1027 = 0;
+            sg.field_f = dj.a(var2);
             break L227;
           } else {
             break L227;
@@ -3547,7 +3780,8 @@ class ec extends ne {
         L228: {
           var2 = gm.a("dryad", false);
           if (null != var2) {
-            lm.field_r = dj.a(var2, false);
+            int discarded$1028 = 0;
+            lm.field_r = dj.a(var2);
             break L228;
           } else {
             break L228;
@@ -3556,7 +3790,8 @@ class ec extends ne {
         L229: {
           var2 = gm.a("none", false);
           if (null != var2) {
-            ic.field_A = dj.a(var2, false);
+            int discarded$1029 = 0;
+            ic.field_A = dj.a(var2);
             break L229;
           } else {
             break L229;
@@ -3565,7 +3800,8 @@ class ec extends ne {
         L230: {
           var2 = gm.a("unknown", false);
           if (var2 != null) {
-            ie.field_n = dj.a(var2, param1);
+            int discarded$1030 = 0;
+            ie.field_n = dj.a(var2);
             break L230;
           } else {
             break L230;
@@ -3576,34 +3812,38 @@ class ec extends ne {
           if (null == var2) {
             break L231;
           } else {
-            cm.field_S = dj.a(var2, false);
+            int discarded$1031 = 0;
+            cm.field_S = dj.a(var2);
             break L231;
           }
         }
         L232: {
-          var2 = gm.a("entrance", param1);
+          var2 = gm.a("entrance", false);
           if (null == var2) {
             break L232;
           } else {
-            wi.field_mb = dj.a(var2, param1);
+            int discarded$1032 = 0;
+            wi.field_mb = dj.a(var2);
             break L232;
           }
         }
         L233: {
           var2 = gm.a("pit", false);
           if (var2 != null) {
-            go.field_F = dj.a(var2, false);
+            int discarded$1033 = 0;
+            go.field_F = dj.a(var2);
             break L233;
           } else {
             break L233;
           }
         }
         L234: {
-          var2 = gm.a("snakes", param1);
+          var2 = gm.a("snakes", false);
           if (var2 == null) {
             break L234;
           } else {
-            ce.field_m = dj.a(var2, false);
+            int discarded$1034 = 0;
+            ce.field_m = dj.a(var2);
             break L234;
           }
         }
@@ -3612,41 +3852,46 @@ class ec extends ne {
           if (var2 == null) {
             break L235;
           } else {
-            i.field_w = dj.a(var2, false);
+            int discarded$1035 = 0;
+            i.field_w = dj.a(var2);
             break L235;
           }
         }
         L236: {
           var2 = gm.a("hidden_pit", false);
           if (null != var2) {
-            oh.field_q = dj.a(var2, param1);
+            int discarded$1036 = 0;
+            oh.field_q = dj.a(var2);
             break L236;
           } else {
             break L236;
           }
         }
         L237: {
-          var2 = gm.a("teleport", param1);
+          var2 = gm.a("teleport", false);
           if (var2 == null) {
             break L237;
           } else {
-            ld.field_h = dj.a(var2, false);
+            int discarded$1037 = 0;
+            ld.field_h = dj.a(var2);
             break L237;
           }
         }
         L238: {
-          var2 = gm.a("hidden_nails", param1);
+          var2 = gm.a("hidden_nails", false);
           if (null == var2) {
             break L238;
           } else {
-            nm.field_mb = dj.a(var2, false);
+            int discarded$1038 = 0;
+            nm.field_mb = dj.a(var2);
             break L238;
           }
         }
         L239: {
           var2 = gm.a("bottomless_pit", false);
           if (null != var2) {
-            dd.field_z = dj.a(var2, false);
+            int discarded$1039 = 0;
+            dd.field_z = dj.a(var2);
             break L239;
           } else {
             break L239;
@@ -3657,14 +3902,16 @@ class ec extends ne {
           if (null == var2) {
             break L240;
           } else {
-            ll.field_u = dj.a(var2, false);
+            int discarded$1040 = 0;
+            ll.field_u = dj.a(var2);
             break L240;
           }
         }
         L241: {
           var2 = gm.a("hidden_darts", false);
           if (var2 != null) {
-            sm.field_a = dj.a(var2, false);
+            int discarded$1041 = 0;
+            sm.field_a = dj.a(var2);
             break L241;
           } else {
             break L241;
@@ -3675,14 +3922,16 @@ class ec extends ne {
           if (null == var2) {
             break L242;
           } else {
-            fg.field_o = dj.a(var2, false);
+            int discarded$1042 = 0;
+            fg.field_o = dj.a(var2);
             break L242;
           }
         }
         L243: {
           var2 = gm.a("poison_gas", false);
           if (null != var2) {
-            ea.field_b = dj.a(var2, param1);
+            int discarded$1043 = 0;
+            ea.field_b = dj.a(var2);
             break L243;
           } else {
             break L243;
@@ -3693,7 +3942,8 @@ class ec extends ne {
           if (null == var2) {
             break L244;
           } else {
-            cp.field_O = dj.a(var2, param1);
+            int discarded$1044 = 0;
+            cp.field_O = dj.a(var2);
             break L244;
           }
         }
@@ -3702,7 +3952,8 @@ class ec extends ne {
           if (null == var2) {
             break L245;
           } else {
-            cb.field_c = dj.a(var2, false);
+            int discarded$1045 = 0;
+            cb.field_c = dj.a(var2);
             break L245;
           }
         }
@@ -3711,14 +3962,16 @@ class ec extends ne {
           if (null == var2) {
             break L246;
           } else {
-            jb.field_Ub = dj.a(var2, false);
+            int discarded$1046 = 0;
+            jb.field_Ub = dj.a(var2);
             break L246;
           }
         }
         L247: {
           var2 = gm.a("giant_snake", false);
           if (var2 != null) {
-            wi.field_rb = dj.a(var2, false);
+            int discarded$1047 = 0;
+            wi.field_rb = dj.a(var2);
             break L247;
           } else {
             break L247;
@@ -3729,7 +3982,8 @@ class ec extends ne {
           if (null == var2) {
             break L248;
           } else {
-            pd.field_G = dj.a(var2, param1);
+            int discarded$1048 = 0;
+            pd.field_G = dj.a(var2);
             break L248;
           }
         }
@@ -3738,50 +3992,56 @@ class ec extends ne {
           if (var2 == null) {
             break L249;
           } else {
-            hg.field_p = dj.a(var2, param1);
+            int discarded$1049 = 0;
+            hg.field_p = dj.a(var2);
             break L249;
           }
         }
         L250: {
           var2 = gm.a("corrosive_slime", false);
           if (null != var2) {
-            gi.field_P = dj.a(var2, false);
+            int discarded$1050 = 0;
+            gi.field_P = dj.a(var2);
             break L250;
           } else {
             break L250;
           }
         }
         L251: {
-          var2 = gm.a("razor_construct", param1);
+          var2 = gm.a("razor_construct", false);
           if (var2 != null) {
-            jj.field_a = dj.a(var2, false);
+            int discarded$1051 = 0;
+            jj.field_a = dj.a(var2);
             break L251;
           } else {
             break L251;
           }
         }
         L252: {
-          var2 = gm.a("rabid_wolf", param1);
+          var2 = gm.a("rabid_wolf", false);
           if (var2 == null) {
             break L252;
           } else {
-            g.field_Kb = dj.a(var2, param1);
+            int discarded$1052 = 0;
+            g.field_Kb = dj.a(var2);
             break L252;
           }
         }
         L253: {
           var2 = gm.a("vampire_bats", false);
           if (var2 != null) {
-            sf.field_i = dj.a(var2, false);
+            int discarded$1053 = 0;
+            sf.field_i = dj.a(var2);
             break L253;
           } else {
             break L253;
           }
         }
         L254: {
-          var2 = gm.a("imp", param1);
+          var2 = gm.a("imp", false);
           if (var2 != null) {
-            jb.field_Vb = dj.a(var2, false);
+            int discarded$1054 = 0;
+            jb.field_Vb = dj.a(var2);
             break L254;
           } else {
             break L254;
@@ -3792,14 +4052,16 @@ class ec extends ne {
           if (var2 == null) {
             break L255;
           } else {
-            wf.field_v = dj.a(var2, false);
+            int discarded$1055 = 0;
+            wf.field_v = dj.a(var2);
             break L255;
           }
         }
         L256: {
           var2 = gm.a("spectre", false);
           if (null != var2) {
-            ih.field_s = dj.a(var2, false);
+            int discarded$1056 = 0;
+            ih.field_s = dj.a(var2);
             break L256;
           } else {
             break L256;
@@ -3808,34 +4070,38 @@ class ec extends ne {
         L257: {
           var2 = gm.a("banshee", false);
           if (var2 != null) {
-            cc.field_a = dj.a(var2, param1);
+            int discarded$1057 = 0;
+            cc.field_a = dj.a(var2);
             break L257;
           } else {
             break L257;
           }
         }
         L258: {
-          var2 = gm.a("raging_beast", param1);
+          var2 = gm.a("raging_beast", false);
           if (null != var2) {
-            hb.field_h = dj.a(var2, param1);
+            int discarded$1058 = 0;
+            hb.field_h = dj.a(var2);
             break L258;
           } else {
             break L258;
           }
         }
         L259: {
-          var2 = gm.a("basilisk", param1);
+          var2 = gm.a("basilisk", false);
           if (null == var2) {
             break L259;
           } else {
-            field_q = dj.a(var2, param1);
+            int discarded$1059 = 0;
+            field_q = dj.a(var2);
             break L259;
           }
         }
         L260: {
           var2 = gm.a("pit_demon", false);
           if (null != var2) {
-            kk.field_i = dj.a(var2, param1);
+            int discarded$1060 = 0;
+            kk.field_i = dj.a(var2);
             break L260;
           } else {
             break L260;
@@ -3844,7 +4110,8 @@ class ec extends ne {
         L261: {
           var2 = gm.a("vampire_lord", false);
           if (null != var2) {
-            ea.field_a = dj.a(var2, false);
+            int discarded$1061 = 0;
+            ea.field_a = dj.a(var2);
             break L261;
           } else {
             break L261;
@@ -3853,7 +4120,8 @@ class ec extends ne {
         L262: {
           var2 = gm.a("hell_beast", false);
           if (var2 != null) {
-            kf.field_q = dj.a(var2, param1);
+            int discarded$1062 = 0;
+            kf.field_q = dj.a(var2);
             break L262;
           } else {
             break L262;
@@ -3864,23 +4132,26 @@ class ec extends ne {
           if (var2 == null) {
             break L263;
           } else {
-            gj.field_b = dj.a(var2, false);
+            int discarded$1063 = 0;
+            gj.field_b = dj.a(var2);
             break L263;
           }
         }
         L264: {
-          var2 = gm.a("tripwire_bell", param1);
+          var2 = gm.a("tripwire_bell", false);
           if (var2 == null) {
             break L264;
           } else {
-            mi.field_b = dj.a(var2, param1);
+            int discarded$1064 = 0;
+            mi.field_b = dj.a(var2);
             break L264;
           }
         }
         L265: {
-          var2 = gm.a("hall_of_glass", param1);
+          var2 = gm.a("hall_of_glass", false);
           if (null != var2) {
-            nj.field_d = dj.a(var2, false);
+            int discarded$1065 = 0;
+            nj.field_d = dj.a(var2);
             break L265;
           } else {
             break L265;
@@ -3891,14 +4162,16 @@ class ec extends ne {
           if (null == var2) {
             break L266;
           } else {
-            ll.field_s = dj.a(var2, false);
+            int discarded$1066 = 0;
+            ll.field_s = dj.a(var2);
             break L266;
           }
         }
         L267: {
           var2 = gm.a("desc_goblin_runt", false);
           if (var2 != null) {
-            nm.field_lb = dj.a(var2, false);
+            int discarded$1067 = 0;
+            nm.field_lb = dj.a(var2);
             break L267;
           } else {
             break L267;
@@ -3907,7 +4180,8 @@ class ec extends ne {
         L268: {
           var2 = gm.a("desc_saurus_spawn", false);
           if (var2 != null) {
-            a.field_p = dj.a(var2, false);
+            int discarded$1068 = 0;
+            a.field_p = dj.a(var2);
             break L268;
           } else {
             break L268;
@@ -3916,7 +4190,8 @@ class ec extends ne {
         L269: {
           var2 = gm.a("desc_goblin_cleaver", false);
           if (null != var2) {
-            mm.field_m = dj.a(var2, false);
+            int discarded$1069 = 0;
+            mm.field_m = dj.a(var2);
             break L269;
           } else {
             break L269;
@@ -3925,18 +4200,20 @@ class ec extends ne {
         L270: {
           var2 = gm.a("desc_orc_warrior", false);
           if (var2 != null) {
-            fm.field_d = dj.a(var2, false);
+            int discarded$1070 = 0;
+            fm.field_d = dj.a(var2);
             break L270;
           } else {
             break L270;
           }
         }
         L271: {
-          var2 = gm.a("desc_witch", param1);
+          var2 = gm.a("desc_witch", false);
           if (var2 == null) {
             break L271;
           } else {
-            fj.field_c = dj.a(var2, false);
+            int discarded$1071 = 0;
+            fj.field_c = dj.a(var2);
             break L271;
           }
         }
@@ -3945,14 +4222,16 @@ class ec extends ne {
           if (null == var2) {
             break L272;
           } else {
-            gh.field_j = dj.a(var2, false);
+            int discarded$1072 = 0;
+            gh.field_j = dj.a(var2);
             break L272;
           }
         }
         L273: {
           var2 = gm.a("desc_saurus_slink", false);
           if (var2 != null) {
-            in.field_t = dj.a(var2, param1);
+            int discarded$1073 = 0;
+            in.field_t = dj.a(var2);
             break L273;
           } else {
             break L273;
@@ -3963,7 +4242,8 @@ class ec extends ne {
           if (null == var2) {
             break L274;
           } else {
-            hj.field_ab = dj.a(var2, param1);
+            int discarded$1074 = 0;
+            hj.field_ab = dj.a(var2);
             break L274;
           }
         }
@@ -3972,14 +4252,16 @@ class ec extends ne {
           if (null == var2) {
             break L275;
           } else {
-            fc.field_h = dj.a(var2, false);
+            int discarded$1075 = 0;
+            fc.field_h = dj.a(var2);
             break L275;
           }
         }
         L276: {
-          var2 = gm.a("desc_orc_blademaster", param1);
+          var2 = gm.a("desc_orc_blademaster", false);
           if (var2 != null) {
-            tb.field_h = dj.a(var2, false);
+            int discarded$1076 = 0;
+            tb.field_h = dj.a(var2);
             break L276;
           } else {
             break L276;
@@ -3990,14 +4272,16 @@ class ec extends ne {
           if (null == var2) {
             break L277;
           } else {
-            uc.field_Q = dj.a(var2, param1);
+            int discarded$1077 = 0;
+            uc.field_Q = dj.a(var2);
             break L277;
           }
         }
         L278: {
           var2 = gm.a("desc_necromancer", false);
           if (var2 != null) {
-            lg.field_r = dj.a(var2, false);
+            int discarded$1078 = 0;
+            lg.field_r = dj.a(var2);
             break L278;
           } else {
             break L278;
@@ -4008,14 +4292,16 @@ class ec extends ne {
           if (null == var2) {
             break L279;
           } else {
-            ba.field_a = dj.a(var2, param1);
+            int discarded$1079 = 0;
+            ba.field_a = dj.a(var2);
             break L279;
           }
         }
         L280: {
           var2 = gm.a("desc_enchantress", false);
           if (var2 != null) {
-            a.field_l = dj.a(var2, false);
+            int discarded$1080 = 0;
+            a.field_l = dj.a(var2);
             break L280;
           } else {
             break L280;
@@ -4026,7 +4312,8 @@ class ec extends ne {
           if (null == var2) {
             break L281;
           } else {
-            df.field_f = dj.a(var2, false);
+            int discarded$1081 = 0;
+            df.field_f = dj.a(var2);
             break L281;
           }
         }
@@ -4035,16 +4322,18 @@ class ec extends ne {
           if (var2 == null) {
             break L282;
           } else {
-            ik.field_c = dj.a(var2, false);
+            int discarded$1082 = 0;
+            ik.field_c = dj.a(var2);
             break L282;
           }
         }
         L283: {
-          var2 = gm.a("desc_cave_troll", param1);
+          var2 = gm.a("desc_cave_troll", false);
           if (null == var2) {
             break L283;
           } else {
-            h.field_n = dj.a(var2, false);
+            int discarded$1083 = 0;
+            h.field_n = dj.a(var2);
             break L283;
           }
         }
@@ -4053,14 +4342,16 @@ class ec extends ne {
           if (var2 == null) {
             break L284;
           } else {
-            oe.field_p = dj.a(var2, false);
+            int discarded$1084 = 0;
+            oe.field_p = dj.a(var2);
             break L284;
           }
         }
         L285: {
           var2 = gm.a("desc_dwarf_renegade", false);
           if (var2 != null) {
-            ta.field_h = dj.a(var2, false);
+            int discarded$1085 = 0;
+            ta.field_h = dj.a(var2);
             break L285;
           } else {
             break L285;
@@ -4071,14 +4362,16 @@ class ec extends ne {
           if (var2 == null) {
             break L286;
           } else {
-            ai.field_k = dj.a(var2, param1);
+            int discarded$1086 = 0;
+            ai.field_k = dj.a(var2);
             break L286;
           }
         }
         L287: {
           var2 = gm.a("desc_zealot", false);
           if (var2 != null) {
-            pk.field_q = dj.a(var2, false);
+            int discarded$1087 = 0;
+            pk.field_q = dj.a(var2);
             break L287;
           } else {
             break L287;
@@ -4089,23 +4382,26 @@ class ec extends ne {
           if (var2 == null) {
             break L288;
           } else {
-            he.field_r = dj.a(var2, false);
+            int discarded$1088 = 0;
+            he.field_r = dj.a(var2);
             break L288;
           }
         }
         L289: {
-          var2 = gm.a("desc_berserker", param1);
+          var2 = gm.a("desc_berserker", false);
           if (var2 == null) {
             break L289;
           } else {
-            gh.field_b = dj.a(var2, false);
+            int discarded$1089 = 0;
+            gh.field_b = dj.a(var2);
             break L289;
           }
         }
         L290: {
           var2 = gm.a("desc_ogre_brute", false);
           if (var2 != null) {
-            dk.field_a = dj.a(var2, false);
+            int discarded$1090 = 0;
+            dk.field_a = dj.a(var2);
             break L290;
           } else {
             break L290;
@@ -4114,18 +4410,20 @@ class ec extends ne {
         L291: {
           var2 = gm.a("desc_spy", false);
           if (var2 != null) {
-            hc.field_g = dj.a(var2, param1);
+            int discarded$1091 = 0;
+            hc.field_g = dj.a(var2);
             break L291;
           } else {
             break L291;
           }
         }
         L292: {
-          var2 = gm.a("desc_shapeshifter", param1);
+          var2 = gm.a("desc_shapeshifter", false);
           if (var2 == null) {
             break L292;
           } else {
-            eb.field_M = dj.a(var2, false);
+            int discarded$1092 = 0;
+            eb.field_M = dj.a(var2);
             break L292;
           }
         }
@@ -4134,14 +4432,16 @@ class ec extends ne {
           if (var2 == null) {
             break L293;
           } else {
-            ql.field_l = dj.a(var2, false);
+            int discarded$1093 = 0;
+            ql.field_l = dj.a(var2);
             break L293;
           }
         }
         L294: {
           var2 = gm.a("desc_minotaur", false);
           if (var2 != null) {
-            jm.field_g = dj.a(var2, param1);
+            int discarded$1094 = 0;
+            jm.field_g = dj.a(var2);
             break L294;
           } else {
             break L294;
@@ -4152,14 +4452,16 @@ class ec extends ne {
           if (null == var2) {
             break L295;
           } else {
-            qi.field_c = dj.a(var2, false);
+            int discarded$1095 = 0;
+            qi.field_c = dj.a(var2);
             break L295;
           }
         }
         L296: {
           var2 = gm.a("desc_death_knight", false);
           if (null != var2) {
-            kj.field_i = dj.a(var2, false);
+            int discarded$1096 = 0;
+            kj.field_i = dj.a(var2);
             break L296;
           } else {
             break L296;
@@ -4170,32 +4472,36 @@ class ec extends ne {
           if (null == var2) {
             break L297;
           } else {
-            no.field_b = dj.a(var2, param1);
+            int discarded$1097 = 0;
+            no.field_b = dj.a(var2);
             break L297;
           }
         }
         L298: {
           var2 = gm.a("desc_centaur", false);
           if (null != var2) {
-            oo.field_e = dj.a(var2, false);
+            int discarded$1098 = 0;
+            oo.field_e = dj.a(var2);
             break L298;
           } else {
             break L298;
           }
         }
         L299: {
-          var2 = gm.a("desc_daemonette", param1);
+          var2 = gm.a("desc_daemonette", false);
           if (var2 == null) {
             break L299;
           } else {
-            vk.field_b = dj.a(var2, false);
+            int discarded$1099 = 0;
+            vk.field_b = dj.a(var2);
             break L299;
           }
         }
         L300: {
-          var2 = gm.a("desc_dryad", param1);
+          var2 = gm.a("desc_dryad", false);
           if (var2 != null) {
-            jd.field_n = dj.a(var2, false);
+            int discarded$1100 = 0;
+            jd.field_n = dj.a(var2);
             break L300;
           } else {
             break L300;
@@ -4206,14 +4512,16 @@ class ec extends ne {
           if (var2 == null) {
             break L301;
           } else {
-            nh.field_a = dj.a(var2, param1);
+            int discarded$1101 = 0;
+            nh.field_a = dj.a(var2);
             break L301;
           }
         }
         L302: {
           var2 = gm.a("desc_unknown", false);
           if (var2 != null) {
-            s.field_c = dj.a(var2, false);
+            int discarded$1102 = 0;
+            s.field_c = dj.a(var2);
             break L302;
           } else {
             break L302;
@@ -4222,7 +4530,8 @@ class ec extends ne {
         L303: {
           var2 = gm.a("desc_pit", false);
           if (null != var2) {
-            um.field_e = dj.a(var2, false);
+            int discarded$1103 = 0;
+            um.field_e = dj.a(var2);
             break L303;
           } else {
             break L303;
@@ -4233,7 +4542,8 @@ class ec extends ne {
           if (var2 == null) {
             break L304;
           } else {
-            fj.field_b = dj.a(var2, false);
+            int discarded$1104 = 0;
+            fj.field_b = dj.a(var2);
             break L304;
           }
         }
@@ -4242,14 +4552,16 @@ class ec extends ne {
           if (null == var2) {
             break L305;
           } else {
-            fn.field_j = dj.a(var2, false);
+            int discarded$1105 = 0;
+            fn.field_j = dj.a(var2);
             break L305;
           }
         }
         L306: {
           var2 = gm.a("desc_hidden_pit", false);
           if (var2 != null) {
-            bh.field_L = dj.a(var2, false);
+            int discarded$1106 = 0;
+            bh.field_L = dj.a(var2);
             break L306;
           } else {
             break L306;
@@ -4260,25 +4572,28 @@ class ec extends ne {
           if (var2 == null) {
             break L307;
           } else {
-            to.field_f = dj.a(var2, false);
+            int discarded$1107 = 0;
+            to.field_f = dj.a(var2);
             break L307;
           }
         }
         L308: {
-          var2 = gm.a("desc_hidden_nails", param1);
+          var2 = gm.a("desc_hidden_nails", false);
           if (var2 == null) {
             break L308;
           } else {
-            hl.field_j = dj.a(var2, false);
+            int discarded$1108 = 0;
+            hl.field_j = dj.a(var2);
             break L308;
           }
         }
         L309: {
-          var2 = gm.a("desc_bottomless_pit", param1);
+          var2 = gm.a("desc_bottomless_pit", false);
           if (var2 == null) {
             break L309;
           } else {
-            fa.field_k = dj.a(var2, param1);
+            int discarded$1109 = 0;
+            fa.field_k = dj.a(var2);
             break L309;
           }
         }
@@ -4287,14 +4602,16 @@ class ec extends ne {
           if (var2 == null) {
             break L310;
           } else {
-            dm.field_b = dj.a(var2, false);
+            int discarded$1110 = 0;
+            dm.field_b = dj.a(var2);
             break L310;
           }
         }
         L311: {
           var2 = gm.a("desc_hidden_darts", false);
           if (var2 != null) {
-            e.field_i = dj.a(var2, false);
+            int discarded$1111 = 0;
+            e.field_i = dj.a(var2);
             break L311;
           } else {
             break L311;
@@ -4303,16 +4620,18 @@ class ec extends ne {
         L312: {
           var2 = gm.a("desc_whirling_blades", false);
           if (var2 != null) {
-            nb.field_c = dj.a(var2, false);
+            int discarded$1112 = 0;
+            nb.field_c = dj.a(var2);
             break L312;
           } else {
             break L312;
           }
         }
         L313: {
-          var2 = gm.a("desc_poison_gas", param1);
+          var2 = gm.a("desc_poison_gas", false);
           if (var2 != null) {
-            cp.field_P = dj.a(var2, false);
+            int discarded$1113 = 0;
+            cp.field_P = dj.a(var2);
             break L313;
           } else {
             break L313;
@@ -4321,7 +4640,8 @@ class ec extends ne {
         L314: {
           var2 = gm.a("desc_giant_rats", false);
           if (null != var2) {
-            il.field_b = dj.a(var2, false);
+            int discarded$1114 = 0;
+            il.field_b = dj.a(var2);
             break L314;
           } else {
             break L314;
@@ -4330,7 +4650,8 @@ class ec extends ne {
         L315: {
           var2 = gm.a("desc_rot_worms", false);
           if (null != var2) {
-            ul.field_a = dj.a(var2, false);
+            int discarded$1115 = 0;
+            ul.field_a = dj.a(var2);
             break L315;
           } else {
             break L315;
@@ -4341,14 +4662,16 @@ class ec extends ne {
           if (var2 == null) {
             break L316;
           } else {
-            rn.field_f = dj.a(var2, param1);
+            int discarded$1116 = 0;
+            rn.field_f = dj.a(var2);
             break L316;
           }
         }
         L317: {
           var2 = gm.a("desc_giant_snake", false);
           if (var2 != null) {
-            ke.field_a = dj.a(var2, false);
+            int discarded$1117 = 0;
+            ke.field_a = dj.a(var2);
             break L317;
           } else {
             break L317;
@@ -4357,7 +4680,8 @@ class ec extends ne {
         L318: {
           var2 = gm.a("desc_giant_spider", false);
           if (var2 != null) {
-            li.field_d = dj.a(var2, false);
+            int discarded$1118 = 0;
+            li.field_d = dj.a(var2);
             break L318;
           } else {
             break L318;
@@ -4368,23 +4692,26 @@ class ec extends ne {
           if (null == var2) {
             break L319;
           } else {
-            tn.field_Y = dj.a(var2, false);
+            int discarded$1119 = 0;
+            tn.field_Y = dj.a(var2);
             break L319;
           }
         }
         L320: {
           var2 = gm.a("desc_corrosive_slime", false);
           if (null != var2) {
-            bc.field_c = dj.a(var2, false);
+            int discarded$1120 = 0;
+            bc.field_c = dj.a(var2);
             break L320;
           } else {
             break L320;
           }
         }
         L321: {
-          var2 = gm.a("desc_razor_construct", param1);
+          var2 = gm.a("desc_razor_construct", false);
           if (null != var2) {
-            qh.field_D = dj.a(var2, false);
+            int discarded$1121 = 0;
+            qh.field_D = dj.a(var2);
             break L321;
           } else {
             break L321;
@@ -4395,25 +4722,28 @@ class ec extends ne {
           if (var2 == null) {
             break L322;
           } else {
-            f.field_e = dj.a(var2, param1);
+            int discarded$1122 = 0;
+            f.field_e = dj.a(var2);
             break L322;
           }
         }
         L323: {
           var2 = gm.a("desc_vampire_bats", false);
           if (var2 != null) {
-            ed.field_R = dj.a(var2, false);
+            int discarded$1123 = 0;
+            ed.field_R = dj.a(var2);
             break L323;
           } else {
             break L323;
           }
         }
         L324: {
-          var2 = gm.a("desc_imp", param1);
+          var2 = gm.a("desc_imp", false);
           if (var2 == null) {
             break L324;
           } else {
-            ti.field_n = dj.a(var2, false);
+            int discarded$1124 = 0;
+            ti.field_n = dj.a(var2);
             break L324;
           }
         }
@@ -4422,14 +4752,16 @@ class ec extends ne {
           if (var2 == null) {
             break L325;
           } else {
-            wi.field_lb = dj.a(var2, false);
+            int discarded$1125 = 0;
+            wi.field_lb = dj.a(var2);
             break L325;
           }
         }
         L326: {
-          var2 = gm.a("desc_spectre", param1);
+          var2 = gm.a("desc_spectre", false);
           if (var2 != null) {
-            om.field_e = dj.a(var2, false);
+            int discarded$1126 = 0;
+            om.field_e = dj.a(var2);
             break L326;
           } else {
             break L326;
@@ -4440,25 +4772,28 @@ class ec extends ne {
           if (var2 == null) {
             break L327;
           } else {
-            mj.field_c = dj.a(var2, false);
+            int discarded$1127 = 0;
+            mj.field_c = dj.a(var2);
             break L327;
           }
         }
         L328: {
-          var2 = gm.a("desc_raging_beast", param1);
+          var2 = gm.a("desc_raging_beast", false);
           if (var2 == null) {
             break L328;
           } else {
-            pe.field_k = dj.a(var2, false);
+            int discarded$1128 = 0;
+            pe.field_k = dj.a(var2);
             break L328;
           }
         }
         L329: {
-          var2 = gm.a("desc_basilisk", param1);
+          var2 = gm.a("desc_basilisk", false);
           if (var2 == null) {
             break L329;
           } else {
-            jm.field_d = dj.a(var2, false);
+            int discarded$1129 = 0;
+            jm.field_d = dj.a(var2);
             break L329;
           }
         }
@@ -4467,7 +4802,8 @@ class ec extends ne {
           if (var2 == null) {
             break L330;
           } else {
-            sj.field_eb = dj.a(var2, false);
+            int discarded$1130 = 0;
+            sj.field_eb = dj.a(var2);
             break L330;
           }
         }
@@ -4476,7 +4812,8 @@ class ec extends ne {
           if (null == var2) {
             break L331;
           } else {
-            an.field_x = dj.a(var2, false);
+            int discarded$1131 = 0;
+            an.field_x = dj.a(var2);
             break L331;
           }
         }
@@ -4485,23 +4822,26 @@ class ec extends ne {
           if (null == var2) {
             break L332;
           } else {
-            sm.field_b = dj.a(var2, false);
+            int discarded$1132 = 0;
+            sm.field_b = dj.a(var2);
             break L332;
           }
         }
         L333: {
-          var2 = gm.a("desc_demon_lord", param1);
+          var2 = gm.a("desc_demon_lord", false);
           if (null == var2) {
             break L333;
           } else {
-            fg.field_f = dj.a(var2, param1);
+            int discarded$1133 = 0;
+            fg.field_f = dj.a(var2);
             break L333;
           }
         }
         L334: {
-          var2 = gm.a("desc_tripwire_bell", param1);
+          var2 = gm.a("desc_tripwire_bell", false);
           if (null != var2) {
-            jb.field_Nb = dj.a(var2, false);
+            int discarded$1134 = 0;
+            jb.field_Nb = dj.a(var2);
             break L334;
           } else {
             break L334;
@@ -4512,7 +4852,8 @@ class ec extends ne {
           if (null == var2) {
             break L335;
           } else {
-            tg.field_a = dj.a(var2, param1);
+            int discarded$1135 = 0;
+            tg.field_a = dj.a(var2);
             break L335;
           }
         }
@@ -4521,14 +4862,16 @@ class ec extends ne {
           if (null == var2) {
             break L336;
           } else {
-            ic.field_z = dj.a(var2, param1);
+            int discarded$1136 = 0;
+            ic.field_z = dj.a(var2);
             break L336;
           }
         }
         L337: {
           var2 = gm.a("tip_nails", false);
           if (null != var2) {
-            gm.field_e = dj.a(var2, false);
+            int discarded$1137 = 0;
+            gm.field_e = dj.a(var2);
             break L337;
           } else {
             break L337;
@@ -4539,41 +4882,46 @@ class ec extends ne {
           if (var2 == null) {
             break L338;
           } else {
-            ek.field_a = dj.a(var2, false);
+            int discarded$1138 = 0;
+            ek.field_a = dj.a(var2);
             break L338;
           }
         }
         L339: {
-          var2 = gm.a("tip_hidden_nails", param1);
+          var2 = gm.a("tip_hidden_nails", false);
           if (null == var2) {
             break L339;
           } else {
-            dl.field_c = dj.a(var2, false);
+            int discarded$1139 = 0;
+            dl.field_c = dj.a(var2);
             break L339;
           }
         }
         L340: {
-          var2 = gm.a("tip_bottomless_pit", param1);
+          var2 = gm.a("tip_bottomless_pit", false);
           if (var2 == null) {
             break L340;
           } else {
-            nf.field_w = dj.a(var2, param1);
+            int discarded$1140 = 0;
+            nf.field_w = dj.a(var2);
             break L340;
           }
         }
         L341: {
-          var2 = gm.a("tip_lethal", param1);
+          var2 = gm.a("tip_lethal", false);
           if (var2 == null) {
             break L341;
           } else {
-            String discarded$11 = dj.a(var2, false);
+            int discarded$1141 = 0;
+            String discarded$1142 = dj.a(var2);
             break L341;
           }
         }
         L342: {
           var2 = gm.a("tip_hidden_darts", false);
           if (var2 != null) {
-            fb.field_e = dj.a(var2, false);
+            int discarded$1143 = 0;
+            fb.field_e = dj.a(var2);
             break L342;
           } else {
             break L342;
@@ -4582,7 +4930,8 @@ class ec extends ne {
         L343: {
           var2 = gm.a("tip_whirling_blades", false);
           if (null != var2) {
-            ho.field_e = dj.a(var2, false);
+            int discarded$1144 = 0;
+            ho.field_e = dj.a(var2);
             break L343;
           } else {
             break L343;
@@ -4591,16 +4940,18 @@ class ec extends ne {
         L344: {
           var2 = gm.a("tip_rot_worms", false);
           if (null != var2) {
-            vc.field_a = dj.a(var2, false);
+            int discarded$1145 = 0;
+            vc.field_a = dj.a(var2);
             break L344;
           } else {
             break L344;
           }
         }
         L345: {
-          var2 = gm.a("tip_skeleton_sentinels", param1);
+          var2 = gm.a("tip_skeleton_sentinels", false);
           if (var2 != null) {
-            lb.field_x = dj.a(var2, false);
+            int discarded$1146 = 0;
+            lb.field_x = dj.a(var2);
             break L345;
           } else {
             break L345;
@@ -4611,7 +4962,8 @@ class ec extends ne {
           if (var2 == null) {
             break L346;
           } else {
-            fm.field_l = dj.a(var2, false);
+            int discarded$1147 = 0;
+            fm.field_l = dj.a(var2);
             break L346;
           }
         }
@@ -4620,7 +4972,8 @@ class ec extends ne {
           if (var2 == null) {
             break L347;
           } else {
-            ub.field_m = dj.a(var2, false);
+            int discarded$1148 = 0;
+            ub.field_m = dj.a(var2);
             break L347;
           }
         }
@@ -4629,7 +4982,8 @@ class ec extends ne {
           if (var2 == null) {
             break L348;
           } else {
-            lg.field_e = dj.a(var2, false);
+            int discarded$1149 = 0;
+            lg.field_e = dj.a(var2);
             break L348;
           }
         }
@@ -4638,32 +4992,36 @@ class ec extends ne {
           if (var2 == null) {
             break L349;
           } else {
-            df.field_b = dj.a(var2, param1);
+            int discarded$1150 = 0;
+            df.field_b = dj.a(var2);
             break L349;
           }
         }
         L350: {
           var2 = gm.a("tip_stone_golem", false);
           if (null != var2) {
-            ko.field_w = dj.a(var2, false);
+            int discarded$1151 = 0;
+            ko.field_w = dj.a(var2);
             break L350;
           } else {
             break L350;
           }
         }
         L351: {
-          var2 = gm.a("tip_spectre", param1);
+          var2 = gm.a("tip_spectre", false);
           if (null != var2) {
-            qm.field_p = dj.a(var2, false);
+            int discarded$1152 = 0;
+            qm.field_p = dj.a(var2);
             break L351;
           } else {
             break L351;
           }
         }
         L352: {
-          var2 = gm.a("tip_banshee", param1);
+          var2 = gm.a("tip_banshee", false);
           if (var2 != null) {
-            eb.field_L = dj.a(var2, param1);
+            int discarded$1153 = 0;
+            eb.field_L = dj.a(var2);
             break L352;
           } else {
             break L352;
@@ -4674,16 +5032,18 @@ class ec extends ne {
           if (var2 == null) {
             break L353;
           } else {
-            ai.field_b = dj.a(var2, false);
+            int discarded$1154 = 0;
+            ai.field_b = dj.a(var2);
             break L353;
           }
         }
         L354: {
-          var2 = gm.a("tip_demon_lord", param1);
+          var2 = gm.a("tip_demon_lord", false);
           if (var2 == null) {
             break L354;
           } else {
-            tk.field_b = dj.a(var2, false);
+            int discarded$1155 = 0;
+            tk.field_b = dj.a(var2);
             break L354;
           }
         }
@@ -4692,23 +5052,26 @@ class ec extends ne {
           if (var2 == null) {
             break L355;
           } else {
-            hl.field_d = dj.a(var2, false);
+            int discarded$1156 = 0;
+            hl.field_d = dj.a(var2);
             break L355;
           }
         }
         L356: {
-          var2 = gm.a("tip_hall_of_glass", param1);
+          var2 = gm.a("tip_hall_of_glass", false);
           if (var2 == null) {
             break L356;
           } else {
-            eg.field_g = dj.a(var2, false);
+            int discarded$1157 = 0;
+            eg.field_g = dj.a(var2);
             break L356;
           }
         }
         L357: {
           var2 = gm.a("tip_magical_guardian_room", false);
           if (var2 != null) {
-            ii.field_J = dj.a(var2, param1);
+            int discarded$1158 = 0;
+            ii.field_J = dj.a(var2);
             break L357;
           } else {
             break L357;
@@ -4719,23 +5082,26 @@ class ec extends ne {
           if (var2 == null) {
             break L358;
           } else {
-            ao.field_i[0] = dj.a(var2, param1);
+            int discarded$1159 = 0;
+            ao.field_i[0] = dj.a(var2);
             break L358;
           }
         }
         L359: {
           var2 = gm.a("ability_pitimmunity,1", false);
           if (null != var2) {
-            ao.field_i[1] = dj.a(var2, false);
+            int discarded$1160 = 0;
+            ao.field_i[1] = dj.a(var2);
             break L359;
           } else {
             break L359;
           }
         }
         L360: {
-          var2 = gm.a("ability_boostdef,0", param1);
+          var2 = gm.a("ability_boostdef,0", false);
           if (var2 != null) {
-            bo.field_Gb[0] = dj.a(var2, false);
+            int discarded$1161 = 0;
+            bo.field_Gb[0] = dj.a(var2);
             break L360;
           } else {
             break L360;
@@ -4746,14 +5112,16 @@ class ec extends ne {
           if (var2 == null) {
             break L361;
           } else {
-            bo.field_Gb[1] = dj.a(var2, false);
+            int discarded$1162 = 0;
+            bo.field_Gb[1] = dj.a(var2);
             break L361;
           }
         }
         L362: {
           var2 = gm.a("ability_boostsneak,0", false);
           if (null != var2) {
-            oa.field_g[0] = dj.a(var2, false);
+            int discarded$1163 = 0;
+            oa.field_g[0] = dj.a(var2);
             break L362;
           } else {
             break L362;
@@ -4764,14 +5132,16 @@ class ec extends ne {
           if (null == var2) {
             break L363;
           } else {
-            oa.field_g[1] = dj.a(var2, false);
+            int discarded$1164 = 0;
+            oa.field_g[1] = dj.a(var2);
             break L363;
           }
         }
         L364: {
-          var2 = gm.a("ability_tough,0", param1);
+          var2 = gm.a("ability_tough,0", false);
           if (null != var2) {
-            vc.field_d[0] = dj.a(var2, false);
+            int discarded$1165 = 0;
+            vc.field_d[0] = dj.a(var2);
             break L364;
           } else {
             break L364;
@@ -4782,25 +5152,28 @@ class ec extends ne {
           if (var2 == null) {
             break L365;
           } else {
-            vc.field_d[1] = dj.a(var2, param1);
+            int discarded$1166 = 0;
+            vc.field_d[1] = dj.a(var2);
             break L365;
           }
         }
         L366: {
           var2 = gm.a("ability_retreat,0", false);
           if (var2 != null) {
-            up.field_c[0] = dj.a(var2, false);
+            int discarded$1167 = 0;
+            up.field_c[0] = dj.a(var2);
             break L366;
           } else {
             break L366;
           }
         }
         L367: {
-          var2 = gm.a("ability_retreat,1", param1);
+          var2 = gm.a("ability_retreat,1", false);
           if (var2 == null) {
             break L367;
           } else {
-            up.field_c[1] = dj.a(var2, false);
+            int discarded$1168 = 0;
+            up.field_c[1] = dj.a(var2);
             break L367;
           }
         }
@@ -4809,23 +5182,26 @@ class ec extends ne {
           if (var2 == null) {
             break L368;
           } else {
-            lg.field_d[0] = dj.a(var2, false);
+            int discarded$1169 = 0;
+            lg.field_d[0] = dj.a(var2);
             break L368;
           }
         }
         L369: {
           var2 = gm.a("ability_sacrifice_green,1", false);
           if (null != var2) {
-            lg.field_d[1] = dj.a(var2, false);
+            int discarded$1170 = 0;
+            lg.field_d[1] = dj.a(var2);
             break L369;
           } else {
             break L369;
           }
         }
         L370: {
-          var2 = gm.a("ability_thief,0", param1);
+          var2 = gm.a("ability_thief,0", false);
           if (null != var2) {
-            qj.field_f[0] = dj.a(var2, false);
+            int discarded$1171 = 0;
+            qj.field_f[0] = dj.a(var2);
             break L370;
           } else {
             break L370;
@@ -4834,16 +5210,18 @@ class ec extends ne {
         L371: {
           var2 = gm.a("ability_thief,1", false);
           if (var2 != null) {
-            qj.field_f[1] = dj.a(var2, param1);
+            int discarded$1172 = 0;
+            qj.field_f[1] = dj.a(var2);
             break L371;
           } else {
             break L371;
           }
         }
         L372: {
-          var2 = gm.a("ability_summon,0", param1);
+          var2 = gm.a("ability_summon,0", false);
           if (var2 != null) {
-            jm.field_a[0] = dj.a(var2, false);
+            int discarded$1173 = 0;
+            jm.field_a[0] = dj.a(var2);
             break L372;
           } else {
             break L372;
@@ -4852,16 +5230,18 @@ class ec extends ne {
         L373: {
           var2 = gm.a("ability_summon,1", false);
           if (var2 != null) {
-            jm.field_a[1] = dj.a(var2, false);
+            int discarded$1174 = 0;
+            jm.field_a[1] = dj.a(var2);
             break L373;
           } else {
             break L373;
           }
         }
         L374: {
-          var2 = gm.a("ability_revive,0", param1);
+          var2 = gm.a("ability_revive,0", false);
           if (var2 != null) {
-            hh.field_h[0] = dj.a(var2, false);
+            int discarded$1175 = 0;
+            hh.field_h[0] = dj.a(var2);
             break L374;
           } else {
             break L374;
@@ -4872,14 +5252,16 @@ class ec extends ne {
           if (null == var2) {
             break L375;
           } else {
-            hh.field_h[1] = dj.a(var2, false);
+            int discarded$1176 = 0;
+            hh.field_h[1] = dj.a(var2);
             break L375;
           }
         }
         L376: {
           var2 = gm.a("ability_circumvent,0", false);
           if (var2 != null) {
-            ja.field_d[0] = dj.a(var2, false);
+            int discarded$1177 = 0;
+            ja.field_d[0] = dj.a(var2);
             break L376;
           } else {
             break L376;
@@ -4890,14 +5272,16 @@ class ec extends ne {
           if (null == var2) {
             break L377;
           } else {
-            ja.field_d[1] = dj.a(var2, false);
+            int discarded$1178 = 0;
+            ja.field_d[1] = dj.a(var2);
             break L377;
           }
         }
         L378: {
           var2 = gm.a("ability_scout,0", false);
           if (var2 != null) {
-            li.field_f[0] = dj.a(var2, false);
+            int discarded$1179 = 0;
+            li.field_f[0] = dj.a(var2);
             break L378;
           } else {
             break L378;
@@ -4906,7 +5290,8 @@ class ec extends ne {
         L379: {
           var2 = gm.a("ability_scout,1", false);
           if (null != var2) {
-            li.field_f[1] = dj.a(var2, param1);
+            int discarded$1180 = 0;
+            li.field_f[1] = dj.a(var2);
             break L379;
           } else {
             break L379;
@@ -4917,7 +5302,8 @@ class ec extends ne {
           if (null == var2) {
             break L380;
           } else {
-            sp.field_g[0] = dj.a(var2, false);
+            int discarded$1181 = 0;
+            sp.field_g[0] = dj.a(var2);
             break L380;
           }
         }
@@ -4926,7 +5312,8 @@ class ec extends ne {
           if (var2 == null) {
             break L381;
           } else {
-            sp.field_g[1] = dj.a(var2, param1);
+            int discarded$1182 = 0;
+            sp.field_g[1] = dj.a(var2);
             break L381;
           }
         }
@@ -4935,7 +5322,8 @@ class ec extends ne {
           if (null == var2) {
             break L382;
           } else {
-            hj.field_P[0] = dj.a(var2, param1);
+            int discarded$1183 = 0;
+            hj.field_P[0] = dj.a(var2);
             break L382;
           }
         }
@@ -4944,25 +5332,28 @@ class ec extends ne {
           if (null == var2) {
             break L383;
           } else {
-            hj.field_P[1] = dj.a(var2, false);
+            int discarded$1184 = 0;
+            hj.field_P[1] = dj.a(var2);
             break L383;
           }
         }
         L384: {
-          var2 = gm.a("ability_intimidate,0", param1);
+          var2 = gm.a("ability_intimidate,0", false);
           if (null == var2) {
             break L384;
           } else {
-            rf.field_N[0] = dj.a(var2, false);
+            int discarded$1185 = 0;
+            rf.field_N[0] = dj.a(var2);
             break L384;
           }
         }
         L385: {
-          var2 = gm.a("ability_intimidate,1", param1);
+          var2 = gm.a("ability_intimidate,1", false);
           if (null == var2) {
             break L385;
           } else {
-            rf.field_N[1] = dj.a(var2, false);
+            int discarded$1186 = 0;
+            rf.field_N[1] = dj.a(var2);
             break L385;
           }
         }
@@ -4971,23 +5362,26 @@ class ec extends ne {
           if (var2 == null) {
             break L386;
           } else {
-            ll.field_t[0] = dj.a(var2, false);
+            int discarded$1187 = 0;
+            ll.field_t[0] = dj.a(var2);
             break L386;
           }
         }
         L387: {
           var2 = gm.a("ability_ferocity,1", false);
           if (null != var2) {
-            ll.field_t[1] = dj.a(var2, false);
+            int discarded$1188 = 0;
+            ll.field_t[1] = dj.a(var2);
             break L387;
           } else {
             break L387;
           }
         }
         L388: {
-          var2 = gm.a("ability_firststrike,0", param1);
+          var2 = gm.a("ability_firststrike,0", false);
           if (null != var2) {
-            an.field_F[0] = dj.a(var2, param1);
+            int discarded$1189 = 0;
+            an.field_F[0] = dj.a(var2);
             break L388;
           } else {
             break L388;
@@ -4998,7 +5392,8 @@ class ec extends ne {
           if (null == var2) {
             break L389;
           } else {
-            an.field_F[1] = dj.a(var2, false);
+            int discarded$1190 = 0;
+            an.field_F[1] = dj.a(var2);
             break L389;
           }
         }
@@ -5007,7 +5402,8 @@ class ec extends ne {
           if (var2 == null) {
             break L390;
           } else {
-            ob.field_oc[0] = dj.a(var2, false);
+            int discarded$1191 = 0;
+            ob.field_oc[0] = dj.a(var2);
             break L390;
           }
         }
@@ -5016,23 +5412,26 @@ class ec extends ne {
           if (var2 == null) {
             break L391;
           } else {
-            ob.field_oc[1] = dj.a(var2, false);
+            int discarded$1192 = 0;
+            ob.field_oc[1] = dj.a(var2);
             break L391;
           }
         }
         L392: {
           var2 = gm.a("ability_armoured,0", false);
           if (var2 != null) {
-            np.field_z[0] = dj.a(var2, param1);
+            int discarded$1193 = 0;
+            np.field_z[0] = dj.a(var2);
             break L392;
           } else {
             break L392;
           }
         }
         L393: {
-          var2 = gm.a("ability_armoured,1", param1);
+          var2 = gm.a("ability_armoured,1", false);
           if (var2 != null) {
-            np.field_z[1] = dj.a(var2, false);
+            int discarded$1194 = 0;
+            np.field_z[1] = dj.a(var2);
             break L393;
           } else {
             break L393;
@@ -5043,7 +5442,8 @@ class ec extends ne {
           if (null == var2) {
             break L394;
           } else {
-            qp.field_f[0] = dj.a(var2, false);
+            int discarded$1195 = 0;
+            qp.field_f[0] = dj.a(var2);
             break L394;
           }
         }
@@ -5052,7 +5452,8 @@ class ec extends ne {
           if (var2 == null) {
             break L395;
           } else {
-            qp.field_f[1] = dj.a(var2, false);
+            int discarded$1196 = 0;
+            qp.field_f[1] = dj.a(var2);
             break L395;
           }
         }
@@ -5061,7 +5462,8 @@ class ec extends ne {
           if (var2 == null) {
             break L396;
           } else {
-            vb.field_b[0] = dj.a(var2, false);
+            int discarded$1197 = 0;
+            vb.field_b[0] = dj.a(var2);
             break L396;
           }
         }
@@ -5070,14 +5472,16 @@ class ec extends ne {
           if (null == var2) {
             break L397;
           } else {
-            vb.field_b[1] = dj.a(var2, false);
+            int discarded$1198 = 0;
+            vb.field_b[1] = dj.a(var2);
             break L397;
           }
         }
         L398: {
           var2 = gm.a("ability_chaos_champion,0", false);
           if (null != var2) {
-            ob.field_Rb[0] = dj.a(var2, false);
+            int discarded$1199 = 0;
+            ob.field_Rb[0] = dj.a(var2);
             break L398;
           } else {
             break L398;
@@ -5086,25 +5490,28 @@ class ec extends ne {
         L399: {
           var2 = gm.a("ability_chaos_champion,1", false);
           if (var2 != null) {
-            ob.field_Rb[1] = dj.a(var2, false);
+            int discarded$1200 = 0;
+            ob.field_Rb[1] = dj.a(var2);
             break L399;
           } else {
             break L399;
           }
         }
         L400: {
-          var2 = gm.a("ability_fickle,0", param1);
+          var2 = gm.a("ability_fickle,0", false);
           if (null == var2) {
             break L400;
           } else {
-            pm.field_k[0] = dj.a(var2, param1);
+            int discarded$1201 = 0;
+            pm.field_k[0] = dj.a(var2);
             break L400;
           }
         }
         L401: {
           var2 = gm.a("ability_fickle,1", false);
           if (null != var2) {
-            pm.field_k[1] = dj.a(var2, false);
+            int discarded$1202 = 0;
+            pm.field_k[1] = dj.a(var2);
             break L401;
           } else {
             break L401;
@@ -5113,27 +5520,30 @@ class ec extends ne {
         L402: {
           var2 = gm.a("ability_redistribute,0", false);
           if (var2 != null) {
-            j.field_S[0] = dj.a(var2, false);
+            int discarded$1203 = 0;
+            j.field_S[0] = dj.a(var2);
             break L402;
           } else {
             break L402;
           }
         }
         L403: {
-          var2 = gm.a("ability_redistribute,1", param1);
+          var2 = gm.a("ability_redistribute,1", false);
           if (var2 != null) {
-            j.field_S[1] = dj.a(var2, param1);
+            int discarded$1204 = 0;
+            j.field_S[1] = dj.a(var2);
             break L403;
           } else {
             break L403;
           }
         }
         L404: {
-          var2 = gm.a("ability_pitimmunity_brief,0", param1);
+          var2 = gm.a("ability_pitimmunity_brief,0", false);
           if (null == var2) {
             break L404;
           } else {
-            ne.field_f[0] = dj.a(var2, false);
+            int discarded$1205 = 0;
+            ne.field_f[0] = dj.a(var2);
             break L404;
           }
         }
@@ -5142,14 +5552,16 @@ class ec extends ne {
           if (null == var2) {
             break L405;
           } else {
-            ne.field_f[1] = dj.a(var2, false);
+            int discarded$1206 = 0;
+            ne.field_f[1] = dj.a(var2);
             break L405;
           }
         }
         L406: {
           var2 = gm.a("ability_boostdef_brief,0", false);
           if (var2 != null) {
-            ha.field_l[0] = dj.a(var2, false);
+            int discarded$1207 = 0;
+            ha.field_l[0] = dj.a(var2);
             break L406;
           } else {
             break L406;
@@ -5160,7 +5572,8 @@ class ec extends ne {
           if (var2 == null) {
             break L407;
           } else {
-            ha.field_l[1] = dj.a(var2, param1);
+            int discarded$1208 = 0;
+            ha.field_l[1] = dj.a(var2);
             break L407;
           }
         }
@@ -5169,7 +5582,8 @@ class ec extends ne {
           if (var2 == null) {
             break L408;
           } else {
-            rp.field_b[0] = dj.a(var2, param1);
+            int discarded$1209 = 0;
+            rp.field_b[0] = dj.a(var2);
             break L408;
           }
         }
@@ -5178,7 +5592,8 @@ class ec extends ne {
           if (var2 == null) {
             break L409;
           } else {
-            rp.field_b[1] = dj.a(var2, false);
+            int discarded$1210 = 0;
+            rp.field_b[1] = dj.a(var2);
             break L409;
           }
         }
@@ -5187,7 +5602,8 @@ class ec extends ne {
           if (var2 == null) {
             break L410;
           } else {
-            rk.field_f[0] = dj.a(var2, param1);
+            int discarded$1211 = 0;
+            rk.field_f[0] = dj.a(var2);
             break L410;
           }
         }
@@ -5196,14 +5612,16 @@ class ec extends ne {
           if (null == var2) {
             break L411;
           } else {
-            rk.field_f[1] = dj.a(var2, param1);
+            int discarded$1212 = 0;
+            rk.field_f[1] = dj.a(var2);
             break L411;
           }
         }
         L412: {
           var2 = gm.a("ability_retreat_brief,0", false);
           if (var2 != null) {
-            bj.field_H[0] = dj.a(var2, false);
+            int discarded$1213 = 0;
+            bj.field_H[0] = dj.a(var2);
             break L412;
           } else {
             break L412;
@@ -5212,7 +5630,8 @@ class ec extends ne {
         L413: {
           var2 = gm.a("ability_retreat_brief,1", false);
           if (null != var2) {
-            bj.field_H[1] = dj.a(var2, param1);
+            int discarded$1214 = 0;
+            bj.field_H[1] = dj.a(var2);
             break L413;
           } else {
             break L413;
@@ -5223,7 +5642,8 @@ class ec extends ne {
           if (var2 == null) {
             break L414;
           } else {
-            bb.field_l[0] = dj.a(var2, false);
+            int discarded$1215 = 0;
+            bb.field_l[0] = dj.a(var2);
             break L414;
           }
         }
@@ -5232,14 +5652,16 @@ class ec extends ne {
           if (null == var2) {
             break L415;
           } else {
-            bb.field_l[1] = dj.a(var2, false);
+            int discarded$1216 = 0;
+            bb.field_l[1] = dj.a(var2);
             break L415;
           }
         }
         L416: {
           var2 = gm.a("ability_thief_brief,0", false);
           if (var2 != null) {
-            al.field_i[0] = dj.a(var2, param1);
+            int discarded$1217 = 0;
+            al.field_i[0] = dj.a(var2);
             break L416;
           } else {
             break L416;
@@ -5250,7 +5672,8 @@ class ec extends ne {
           if (null == var2) {
             break L417;
           } else {
-            al.field_i[1] = dj.a(var2, false);
+            int discarded$1218 = 0;
+            al.field_i[1] = dj.a(var2);
             break L417;
           }
         }
@@ -5259,7 +5682,8 @@ class ec extends ne {
           if (var2 == null) {
             break L418;
           } else {
-            hk.field_d[0] = dj.a(var2, false);
+            int discarded$1219 = 0;
+            hk.field_d[0] = dj.a(var2);
             break L418;
           }
         }
@@ -5268,32 +5692,36 @@ class ec extends ne {
           if (var2 == null) {
             break L419;
           } else {
-            hk.field_d[1] = dj.a(var2, false);
+            int discarded$1220 = 0;
+            hk.field_d[1] = dj.a(var2);
             break L419;
           }
         }
         L420: {
-          var2 = gm.a("ability_revive_brief,0", param1);
+          var2 = gm.a("ability_revive_brief,0", false);
           if (null != var2) {
-            rp.field_f[0] = dj.a(var2, false);
+            int discarded$1221 = 0;
+            rp.field_f[0] = dj.a(var2);
             break L420;
           } else {
             break L420;
           }
         }
         L421: {
-          var2 = gm.a("ability_revive_brief,1", param1);
+          var2 = gm.a("ability_revive_brief,1", false);
           if (var2 == null) {
             break L421;
           } else {
-            rp.field_f[1] = dj.a(var2, false);
+            int discarded$1222 = 0;
+            rp.field_f[1] = dj.a(var2);
             break L421;
           }
         }
         L422: {
           var2 = gm.a("ability_circumvent_brief,0", false);
           if (var2 != null) {
-            um.field_b[0] = dj.a(var2, false);
+            int discarded$1223 = 0;
+            um.field_b[0] = dj.a(var2);
             break L422;
           } else {
             break L422;
@@ -5304,14 +5732,16 @@ class ec extends ne {
           if (var2 == null) {
             break L423;
           } else {
-            um.field_b[1] = dj.a(var2, false);
+            int discarded$1224 = 0;
+            um.field_b[1] = dj.a(var2);
             break L423;
           }
         }
         L424: {
           var2 = gm.a("ability_scout_brief,0", false);
           if (var2 != null) {
-            gi.field_K[0] = dj.a(var2, param1);
+            int discarded$1225 = 0;
+            gi.field_K[0] = dj.a(var2);
             break L424;
           } else {
             break L424;
@@ -5320,7 +5750,8 @@ class ec extends ne {
         L425: {
           var2 = gm.a("ability_scout_brief,1", false);
           if (var2 != null) {
-            gi.field_K[1] = dj.a(var2, false);
+            int discarded$1226 = 0;
+            gi.field_K[1] = dj.a(var2);
             break L425;
           } else {
             break L425;
@@ -5331,7 +5762,8 @@ class ec extends ne {
           if (null == var2) {
             break L426;
           } else {
-            fe.field_n[0] = dj.a(var2, param1);
+            int discarded$1227 = 0;
+            fe.field_n[0] = dj.a(var2);
             break L426;
           }
         }
@@ -5340,14 +5772,16 @@ class ec extends ne {
           if (null == var2) {
             break L427;
           } else {
-            fe.field_n[1] = dj.a(var2, false);
+            int discarded$1228 = 0;
+            fe.field_n[1] = dj.a(var2);
             break L427;
           }
         }
         L428: {
           var2 = gm.a("ability_glamour_brief,0", false);
           if (null != var2) {
-            gl.field_Kb[0] = dj.a(var2, false);
+            int discarded$1229 = 0;
+            gl.field_Kb[0] = dj.a(var2);
             break L428;
           } else {
             break L428;
@@ -5356,7 +5790,8 @@ class ec extends ne {
         L429: {
           var2 = gm.a("ability_glamour_brief,1", false);
           if (null != var2) {
-            gl.field_Kb[1] = dj.a(var2, false);
+            int discarded$1230 = 0;
+            gl.field_Kb[1] = dj.a(var2);
             break L429;
           } else {
             break L429;
@@ -5365,25 +5800,28 @@ class ec extends ne {
         L430: {
           var2 = gm.a("ability_intimidate_brief,0", false);
           if (var2 != null) {
-            uf.field_d[0] = dj.a(var2, param1);
+            int discarded$1231 = 0;
+            uf.field_d[0] = dj.a(var2);
             break L430;
           } else {
             break L430;
           }
         }
         L431: {
-          var2 = gm.a("ability_intimidate_brief,1", param1);
+          var2 = gm.a("ability_intimidate_brief,1", false);
           if (null != var2) {
-            uf.field_d[1] = dj.a(var2, false);
+            int discarded$1232 = 0;
+            uf.field_d[1] = dj.a(var2);
             break L431;
           } else {
             break L431;
           }
         }
         L432: {
-          var2 = gm.a("ability_ferocity_brief,0", param1);
+          var2 = gm.a("ability_ferocity_brief,0", false);
           if (null != var2) {
-            mi.field_a[0] = dj.a(var2, false);
+            int discarded$1233 = 0;
+            mi.field_a[0] = dj.a(var2);
             break L432;
           } else {
             break L432;
@@ -5392,7 +5830,8 @@ class ec extends ne {
         L433: {
           var2 = gm.a("ability_ferocity_brief,1", false);
           if (var2 != null) {
-            mi.field_a[1] = dj.a(var2, false);
+            int discarded$1234 = 0;
+            mi.field_a[1] = dj.a(var2);
             break L433;
           } else {
             break L433;
@@ -5403,23 +5842,26 @@ class ec extends ne {
           if (null == var2) {
             break L434;
           } else {
-            dm.field_e[0] = dj.a(var2, false);
+            int discarded$1235 = 0;
+            dm.field_e[0] = dj.a(var2);
             break L434;
           }
         }
         L435: {
-          var2 = gm.a("ability_firststrike_brief,1", param1);
+          var2 = gm.a("ability_firststrike_brief,1", false);
           if (var2 == null) {
             break L435;
           } else {
-            dm.field_e[1] = dj.a(var2, false);
+            int discarded$1236 = 0;
+            dm.field_e[1] = dj.a(var2);
             break L435;
           }
         }
         L436: {
-          var2 = gm.a("ability_fragility_brief,0", param1);
+          var2 = gm.a("ability_fragility_brief,0", false);
           if (var2 != null) {
-            to.field_b[0] = dj.a(var2, false);
+            int discarded$1237 = 0;
+            to.field_b[0] = dj.a(var2);
             break L436;
           } else {
             break L436;
@@ -5428,7 +5870,8 @@ class ec extends ne {
         L437: {
           var2 = gm.a("ability_fragility_brief,1", false);
           if (var2 != null) {
-            to.field_b[1] = dj.a(var2, false);
+            int discarded$1238 = 0;
+            to.field_b[1] = dj.a(var2);
             break L437;
           } else {
             break L437;
@@ -5437,7 +5880,8 @@ class ec extends ne {
         L438: {
           var2 = gm.a("ability_armoured_brief,0", false);
           if (null != var2) {
-            rj.field_j[0] = dj.a(var2, false);
+            int discarded$1239 = 0;
+            rj.field_j[0] = dj.a(var2);
             break L438;
           } else {
             break L438;
@@ -5448,7 +5892,8 @@ class ec extends ne {
           if (null == var2) {
             break L439;
           } else {
-            rj.field_j[1] = dj.a(var2, false);
+            int discarded$1240 = 0;
+            rj.field_j[1] = dj.a(var2);
             break L439;
           }
         }
@@ -5457,14 +5902,16 @@ class ec extends ne {
           if (null == var2) {
             break L440;
           } else {
-            dn.field_N[0] = dj.a(var2, false);
+            int discarded$1241 = 0;
+            dn.field_N[0] = dj.a(var2);
             break L440;
           }
         }
         L441: {
           var2 = gm.a("ability_fireimmunity_brief,1", false);
           if (null != var2) {
-            dn.field_N[1] = dj.a(var2, false);
+            int discarded$1242 = 0;
+            dn.field_N[1] = dj.a(var2);
             break L441;
           } else {
             break L441;
@@ -5473,7 +5920,8 @@ class ec extends ne {
         L442: {
           var2 = gm.a("ability_immortal_brief,0", false);
           if (var2 != null) {
-            jf.field_e[0] = dj.a(var2, false);
+            int discarded$1243 = 0;
+            jf.field_e[0] = dj.a(var2);
             break L442;
           } else {
             break L442;
@@ -5482,16 +5930,18 @@ class ec extends ne {
         L443: {
           var2 = gm.a("ability_immortal_brief,1", false);
           if (null != var2) {
-            jf.field_e[1] = dj.a(var2, false);
+            int discarded$1244 = 0;
+            jf.field_e[1] = dj.a(var2);
             break L443;
           } else {
             break L443;
           }
         }
         L444: {
-          var2 = gm.a("ability_chaos_champion_brief,0", param1);
+          var2 = gm.a("ability_chaos_champion_brief,0", false);
           if (var2 != null) {
-            bh.field_N[0] = dj.a(var2, param1);
+            int discarded$1245 = 0;
+            bh.field_N[0] = dj.a(var2);
             break L444;
           } else {
             break L444;
@@ -5502,14 +5952,16 @@ class ec extends ne {
           if (null == var2) {
             break L445;
           } else {
-            bh.field_N[1] = dj.a(var2, false);
+            int discarded$1246 = 0;
+            bh.field_N[1] = dj.a(var2);
             break L445;
           }
         }
         L446: {
-          var2 = gm.a("ability_fickle_brief,0", param1);
+          var2 = gm.a("ability_fickle_brief,0", false);
           if (null != var2) {
-            ua.field_c[0] = dj.a(var2, false);
+            int discarded$1247 = 0;
+            ua.field_c[0] = dj.a(var2);
             break L446;
           } else {
             break L446;
@@ -5520,7 +5972,8 @@ class ec extends ne {
           if (var2 == null) {
             break L447;
           } else {
-            ua.field_c[1] = dj.a(var2, false);
+            int discarded$1248 = 0;
+            ua.field_c[1] = dj.a(var2);
             break L447;
           }
         }
@@ -5529,16 +5982,18 @@ class ec extends ne {
           if (null == var2) {
             break L448;
           } else {
-            wf.field_z[0] = dj.a(var2, param1);
+            int discarded$1249 = 0;
+            wf.field_z[0] = dj.a(var2);
             break L448;
           }
         }
         L449: {
-          var2 = gm.a("ability_redistribute_brief,1", param1);
+          var2 = gm.a("ability_redistribute_brief,1", false);
           if (var2 == null) {
             break L449;
           } else {
-            wf.field_z[1] = dj.a(var2, false);
+            int discarded$1250 = 0;
+            wf.field_z[1] = dj.a(var2);
             break L449;
           }
         }
@@ -5547,14 +6002,16 @@ class ec extends ne {
           if (var2 == null) {
             break L450;
           } else {
-            ia.field_N = dj.a(var2, false);
+            int discarded$1251 = 0;
+            ia.field_N = dj.a(var2);
             break L450;
           }
         }
         L451: {
           var2 = gm.a("ability_armoured_message", false);
           if (null != var2) {
-            le.field_e = dj.a(var2, false);
+            int discarded$1252 = 0;
+            le.field_e = dj.a(var2);
             break L451;
           } else {
             break L451;
@@ -5563,16 +6020,18 @@ class ec extends ne {
         L452: {
           var2 = gm.a("ability_room_armoured_message", false);
           if (null != var2) {
-            qi.field_h = dj.a(var2, param1);
+            int discarded$1253 = 0;
+            qi.field_h = dj.a(var2);
             break L452;
           } else {
             break L452;
           }
         }
         L453: {
-          var2 = gm.a("fatal_monster", param1);
+          var2 = gm.a("fatal_monster", false);
           if (var2 != null) {
-            rb.field_K = dj.a(var2, false);
+            int discarded$1254 = 0;
+            rb.field_K = dj.a(var2);
             break L453;
           } else {
             break L453;
@@ -5581,18 +6040,20 @@ class ec extends ne {
         L454: {
           var2 = gm.a("fatal_trap", false);
           if (null != var2) {
-            gm.field_a = dj.a(var2, false);
+            int discarded$1255 = 0;
+            gm.field_a = dj.a(var2);
             break L454;
           } else {
             break L454;
           }
         }
         L455: {
-          var2 = gm.a("fatal_guardian", param1);
+          var2 = gm.a("fatal_guardian", false);
           if (var2 == null) {
             break L455;
           } else {
-            lf.field_m = dj.a(var2, false);
+            int discarded$1256 = 0;
+            lf.field_m = dj.a(var2);
             break L455;
           }
         }
@@ -5601,23 +6062,26 @@ class ec extends ne {
           if (null == var2) {
             break L456;
           } else {
-            lg.field_s = dj.a(var2, param1);
+            int discarded$1257 = 0;
+            lg.field_s = dj.a(var2);
             break L456;
           }
         }
         L457: {
           var2 = gm.a("orb_preservation", false);
           if (null != var2) {
-            ek.field_d = dj.a(var2, param1);
+            int discarded$1258 = 0;
+            ek.field_d = dj.a(var2);
             break L457;
           } else {
             break L457;
           }
         }
         L458: {
-          var2 = gm.a("orb_majesty", param1);
+          var2 = gm.a("orb_majesty", false);
           if (null != var2) {
-            tp.field_z = dj.a(var2, param1);
+            int discarded$1259 = 0;
+            tp.field_z = dj.a(var2);
             break L458;
           } else {
             break L458;
@@ -5628,7 +6092,8 @@ class ec extends ne {
           if (var2 == null) {
             break L459;
           } else {
-            df.field_d = dj.a(var2, param1);
+            int discarded$1260 = 0;
+            df.field_d = dj.a(var2);
             break L459;
           }
         }
@@ -5637,7 +6102,8 @@ class ec extends ne {
           if (null == var2) {
             break L460;
           } else {
-            tg.field_n = dj.a(var2, param1);
+            int discarded$1261 = 0;
+            tg.field_n = dj.a(var2);
             break L460;
           }
         }
@@ -5646,14 +6112,16 @@ class ec extends ne {
           if (var2 == null) {
             break L461;
           } else {
-            da.field_E = dj.a(var2, false);
+            int discarded$1262 = 0;
+            da.field_E = dj.a(var2);
             break L461;
           }
         }
         L462: {
           var2 = gm.a("orb_majesty_desc", false);
           if (var2 != null) {
-            lj.field_j = dj.a(var2, false);
+            int discarded$1263 = 0;
+            lj.field_j = dj.a(var2);
             break L462;
           } else {
             break L462;
@@ -5662,7 +6130,8 @@ class ec extends ne {
         L463: {
           var2 = gm.a("orb_brilliance_desc", false);
           if (null != var2) {
-            an.field_C = dj.a(var2, param1);
+            int discarded$1264 = 0;
+            an.field_C = dj.a(var2);
             break L463;
           } else {
             break L463;
@@ -5671,7 +6140,8 @@ class ec extends ne {
         L464: {
           var2 = gm.a("orb_war_desc", false);
           if (null != var2) {
-            bj.field_J = dj.a(var2, false);
+            int discarded$1265 = 0;
+            bj.field_J = dj.a(var2);
             break L464;
           } else {
             break L464;
@@ -5680,7 +6150,8 @@ class ec extends ne {
         L465: {
           var2 = gm.a("titles_age_male,0", false);
           if (null != var2) {
-            od.field_b[0] = dj.a(var2, false);
+            int discarded$1266 = 0;
+            od.field_b[0] = dj.a(var2);
             break L465;
           } else {
             break L465;
@@ -5689,7 +6160,8 @@ class ec extends ne {
         L466: {
           var2 = gm.a("titles_age_male,1", false);
           if (null != var2) {
-            od.field_b[1] = dj.a(var2, false);
+            int discarded$1267 = 0;
+            od.field_b[1] = dj.a(var2);
             break L466;
           } else {
             break L466;
@@ -5700,7 +6172,8 @@ class ec extends ne {
           if (null == var2) {
             break L467;
           } else {
-            od.field_b[2] = dj.a(var2, param1);
+            int discarded$1268 = 0;
+            od.field_b[2] = dj.a(var2);
             break L467;
           }
         }
@@ -5709,14 +6182,16 @@ class ec extends ne {
           if (null == var2) {
             break L468;
           } else {
-            od.field_b[3] = dj.a(var2, false);
+            int discarded$1269 = 0;
+            od.field_b[3] = dj.a(var2);
             break L468;
           }
         }
         L469: {
-          var2 = gm.a("titles_age_male,4", param1);
+          var2 = gm.a("titles_age_male,4", false);
           if (var2 != null) {
-            od.field_b[4] = dj.a(var2, false);
+            int discarded$1270 = 0;
+            od.field_b[4] = dj.a(var2);
             break L469;
           } else {
             break L469;
@@ -5725,7 +6200,8 @@ class ec extends ne {
         L470: {
           var2 = gm.a("titles_age_male,5", false);
           if (null != var2) {
-            od.field_b[5] = dj.a(var2, false);
+            int discarded$1271 = 0;
+            od.field_b[5] = dj.a(var2);
             break L470;
           } else {
             break L470;
@@ -5736,23 +6212,26 @@ class ec extends ne {
           if (null == var2) {
             break L471;
           } else {
-            ek.field_h[0] = dj.a(var2, false);
+            int discarded$1272 = 0;
+            ek.field_h[0] = dj.a(var2);
             break L471;
           }
         }
         L472: {
-          var2 = gm.a("titles_age_female,1", param1);
+          var2 = gm.a("titles_age_female,1", false);
           if (var2 == null) {
             break L472;
           } else {
-            ek.field_h[1] = dj.a(var2, false);
+            int discarded$1273 = 0;
+            ek.field_h[1] = dj.a(var2);
             break L472;
           }
         }
         L473: {
           var2 = gm.a("titles_age_female,2", false);
           if (null != var2) {
-            ek.field_h[2] = dj.a(var2, param1);
+            int discarded$1274 = 0;
+            ek.field_h[2] = dj.a(var2);
             break L473;
           } else {
             break L473;
@@ -5761,7 +6240,8 @@ class ec extends ne {
         L474: {
           var2 = gm.a("titles_age_female,3", false);
           if (var2 != null) {
-            ek.field_h[3] = dj.a(var2, false);
+            int discarded$1275 = 0;
+            ek.field_h[3] = dj.a(var2);
             break L474;
           } else {
             break L474;
@@ -5772,43 +6252,48 @@ class ec extends ne {
           if (var2 == null) {
             break L475;
           } else {
-            ek.field_h[4] = dj.a(var2, false);
+            int discarded$1276 = 0;
+            ek.field_h[4] = dj.a(var2);
             break L475;
           }
         }
         L476: {
           var2 = gm.a("titles_age_female,5", false);
           if (null != var2) {
-            ek.field_h[5] = dj.a(var2, false);
+            int discarded$1277 = 0;
+            ek.field_h[5] = dj.a(var2);
             break L476;
           } else {
             break L476;
           }
         }
         L477: {
-          var2 = gm.a("titles_mastery_male,0", param1);
+          var2 = gm.a("titles_mastery_male,0", false);
           if (null == var2) {
             break L477;
           } else {
-            j.field_O[0] = dj.a(var2, false);
+            int discarded$1278 = 0;
+            j.field_O[0] = dj.a(var2);
             break L477;
           }
         }
         L478: {
           var2 = gm.a("titles_mastery_male,1", false);
           if (var2 != null) {
-            j.field_O[1] = dj.a(var2, false);
+            int discarded$1279 = 0;
+            j.field_O[1] = dj.a(var2);
             break L478;
           } else {
             break L478;
           }
         }
         L479: {
-          var2 = gm.a("titles_mastery_male,2", param1);
+          var2 = gm.a("titles_mastery_male,2", false);
           if (null == var2) {
             break L479;
           } else {
-            j.field_O[2] = dj.a(var2, false);
+            int discarded$1280 = 0;
+            j.field_O[2] = dj.a(var2);
             break L479;
           }
         }
@@ -5817,14 +6302,16 @@ class ec extends ne {
           if (var2 == null) {
             break L480;
           } else {
-            j.field_O[3] = dj.a(var2, param1);
+            int discarded$1281 = 0;
+            j.field_O[3] = dj.a(var2);
             break L480;
           }
         }
         L481: {
-          var2 = gm.a("titles_mastery_male,4", param1);
+          var2 = gm.a("titles_mastery_male,4", false);
           if (var2 != null) {
-            j.field_O[4] = dj.a(var2, false);
+            int discarded$1282 = 0;
+            j.field_O[4] = dj.a(var2);
             break L481;
           } else {
             break L481;
@@ -5835,14 +6322,16 @@ class ec extends ne {
           if (var2 == null) {
             break L482;
           } else {
-            j.field_O[5] = dj.a(var2, false);
+            int discarded$1283 = 0;
+            j.field_O[5] = dj.a(var2);
             break L482;
           }
         }
         L483: {
           var2 = gm.a("titles_mastery_male,6", false);
           if (null != var2) {
-            j.field_O[6] = dj.a(var2, false);
+            int discarded$1284 = 0;
+            j.field_O[6] = dj.a(var2);
             break L483;
           } else {
             break L483;
@@ -5851,7 +6340,8 @@ class ec extends ne {
         L484: {
           var2 = gm.a("titles_mastery_male,7", false);
           if (var2 != null) {
-            j.field_O[7] = dj.a(var2, false);
+            int discarded$1285 = 0;
+            j.field_O[7] = dj.a(var2);
             break L484;
           } else {
             break L484;
@@ -5862,7 +6352,8 @@ class ec extends ne {
           if (null == var2) {
             break L485;
           } else {
-            ff.field_f[0] = dj.a(var2, false);
+            int discarded$1286 = 0;
+            ff.field_f[0] = dj.a(var2);
             break L485;
           }
         }
@@ -5871,32 +6362,36 @@ class ec extends ne {
           if (var2 == null) {
             break L486;
           } else {
-            ff.field_f[1] = dj.a(var2, false);
+            int discarded$1287 = 0;
+            ff.field_f[1] = dj.a(var2);
             break L486;
           }
         }
         L487: {
-          var2 = gm.a("titles_mastery_female,2", param1);
+          var2 = gm.a("titles_mastery_female,2", false);
           if (var2 != null) {
-            ff.field_f[2] = dj.a(var2, false);
+            int discarded$1288 = 0;
+            ff.field_f[2] = dj.a(var2);
             break L487;
           } else {
             break L487;
           }
         }
         L488: {
-          var2 = gm.a("titles_mastery_female,3", param1);
+          var2 = gm.a("titles_mastery_female,3", false);
           if (null != var2) {
-            ff.field_f[3] = dj.a(var2, false);
+            int discarded$1289 = 0;
+            ff.field_f[3] = dj.a(var2);
             break L488;
           } else {
             break L488;
           }
         }
         L489: {
-          var2 = gm.a("titles_mastery_female,4", param1);
+          var2 = gm.a("titles_mastery_female,4", false);
           if (var2 != null) {
-            ff.field_f[4] = dj.a(var2, false);
+            int discarded$1290 = 0;
+            ff.field_f[4] = dj.a(var2);
             break L489;
           } else {
             break L489;
@@ -5907,7 +6402,8 @@ class ec extends ne {
           if (null == var2) {
             break L490;
           } else {
-            ff.field_f[5] = dj.a(var2, false);
+            int discarded$1291 = 0;
+            ff.field_f[5] = dj.a(var2);
             break L490;
           }
         }
@@ -5916,23 +6412,26 @@ class ec extends ne {
           if (var2 == null) {
             break L491;
           } else {
-            ff.field_f[6] = dj.a(var2, param1);
+            int discarded$1292 = 0;
+            ff.field_f[6] = dj.a(var2);
             break L491;
           }
         }
         L492: {
           var2 = gm.a("titles_mastery_female,7", false);
           if (var2 != null) {
-            ff.field_f[7] = dj.a(var2, false);
+            int discarded$1293 = 0;
+            ff.field_f[7] = dj.a(var2);
             break L492;
           } else {
             break L492;
           }
         }
         L493: {
-          var2 = gm.a("titles_aggression_male,0", param1);
+          var2 = gm.a("titles_aggression_male,0", false);
           if (var2 != null) {
-            hd.field_m[0] = dj.a(var2, param1);
+            int discarded$1294 = 0;
+            hd.field_m[0] = dj.a(var2);
             break L493;
           } else {
             break L493;
@@ -5941,7 +6440,8 @@ class ec extends ne {
         L494: {
           var2 = gm.a("titles_aggression_male,1", false);
           if (null != var2) {
-            hd.field_m[1] = dj.a(var2, false);
+            int discarded$1295 = 0;
+            hd.field_m[1] = dj.a(var2);
             break L494;
           } else {
             break L494;
@@ -5950,7 +6450,8 @@ class ec extends ne {
         L495: {
           var2 = gm.a("titles_aggression_male,2", false);
           if (null != var2) {
-            hd.field_m[2] = dj.a(var2, param1);
+            int discarded$1296 = 0;
+            hd.field_m[2] = dj.a(var2);
             break L495;
           } else {
             break L495;
@@ -5959,18 +6460,20 @@ class ec extends ne {
         L496: {
           var2 = gm.a("titles_aggression_male,3", false);
           if (var2 != null) {
-            hd.field_m[3] = dj.a(var2, false);
+            int discarded$1297 = 0;
+            hd.field_m[3] = dj.a(var2);
             break L496;
           } else {
             break L496;
           }
         }
         L497: {
-          var2 = gm.a("titles_aggression_male,4", param1);
+          var2 = gm.a("titles_aggression_male,4", false);
           if (var2 == null) {
             break L497;
           } else {
-            hd.field_m[4] = dj.a(var2, false);
+            int discarded$1298 = 0;
+            hd.field_m[4] = dj.a(var2);
             break L497;
           }
         }
@@ -5979,7 +6482,8 @@ class ec extends ne {
           if (var2 == null) {
             break L498;
           } else {
-            hd.field_m[5] = dj.a(var2, false);
+            int discarded$1299 = 0;
+            hd.field_m[5] = dj.a(var2);
             break L498;
           }
         }
@@ -5988,7 +6492,8 @@ class ec extends ne {
           if (var2 == null) {
             break L499;
           } else {
-            hd.field_m[6] = dj.a(var2, param1);
+            int discarded$1300 = 0;
+            hd.field_m[6] = dj.a(var2);
             break L499;
           }
         }
@@ -5997,7 +6502,8 @@ class ec extends ne {
           if (null == var2) {
             break L500;
           } else {
-            hd.field_m[7] = dj.a(var2, false);
+            int discarded$1301 = 0;
+            hd.field_m[7] = dj.a(var2);
             break L500;
           }
         }
@@ -6006,14 +6512,16 @@ class ec extends ne {
           if (null == var2) {
             break L501;
           } else {
-            hd.field_m[8] = dj.a(var2, param1);
+            int discarded$1302 = 0;
+            hd.field_m[8] = dj.a(var2);
             break L501;
           }
         }
         L502: {
           var2 = gm.a("titles_aggression_female,0", false);
           if (var2 != null) {
-            ki.field_h[0] = dj.a(var2, param1);
+            int discarded$1303 = 0;
+            ki.field_h[0] = dj.a(var2);
             break L502;
           } else {
             break L502;
@@ -6022,7 +6530,8 @@ class ec extends ne {
         L503: {
           var2 = gm.a("titles_aggression_female,1", false);
           if (null != var2) {
-            ki.field_h[1] = dj.a(var2, false);
+            int discarded$1304 = 0;
+            ki.field_h[1] = dj.a(var2);
             break L503;
           } else {
             break L503;
@@ -6033,7 +6542,8 @@ class ec extends ne {
           if (var2 == null) {
             break L504;
           } else {
-            ki.field_h[2] = dj.a(var2, false);
+            int discarded$1305 = 0;
+            ki.field_h[2] = dj.a(var2);
             break L504;
           }
         }
@@ -6042,16 +6552,18 @@ class ec extends ne {
           if (var2 == null) {
             break L505;
           } else {
-            ki.field_h[3] = dj.a(var2, false);
+            int discarded$1306 = 0;
+            ki.field_h[3] = dj.a(var2);
             break L505;
           }
         }
         L506: {
-          var2 = gm.a("titles_aggression_female,4", param1);
+          var2 = gm.a("titles_aggression_female,4", false);
           if (var2 == null) {
             break L506;
           } else {
-            ki.field_h[4] = dj.a(var2, param1);
+            int discarded$1307 = 0;
+            ki.field_h[4] = dj.a(var2);
             break L506;
           }
         }
@@ -6060,25 +6572,28 @@ class ec extends ne {
           if (var2 == null) {
             break L507;
           } else {
-            ki.field_h[5] = dj.a(var2, false);
+            int discarded$1308 = 0;
+            ki.field_h[5] = dj.a(var2);
             break L507;
           }
         }
         L508: {
           var2 = gm.a("titles_aggression_female,6", false);
           if (null != var2) {
-            ki.field_h[6] = dj.a(var2, false);
+            int discarded$1309 = 0;
+            ki.field_h[6] = dj.a(var2);
             break L508;
           } else {
             break L508;
           }
         }
         L509: {
-          var2 = gm.a("titles_aggression_female,7", param1);
+          var2 = gm.a("titles_aggression_female,7", false);
           if (var2 == null) {
             break L509;
           } else {
-            ki.field_h[7] = dj.a(var2, false);
+            int discarded$1310 = 0;
+            ki.field_h[7] = dj.a(var2);
             break L509;
           }
         }
@@ -6087,7 +6602,8 @@ class ec extends ne {
           if (null == var2) {
             break L510;
           } else {
-            ki.field_h[8] = dj.a(var2, false);
+            int discarded$1311 = 0;
+            ki.field_h[8] = dj.a(var2);
             break L510;
           }
         }
@@ -6096,7 +6612,8 @@ class ec extends ne {
           if (null == var2) {
             break L511;
           } else {
-            nj.field_c[0] = dj.a(var2, false);
+            int discarded$1312 = 0;
+            nj.field_c[0] = dj.a(var2);
             break L511;
           }
         }
@@ -6105,7 +6622,8 @@ class ec extends ne {
           if (null == var2) {
             break L512;
           } else {
-            nj.field_c[1] = dj.a(var2, false);
+            int discarded$1313 = 0;
+            nj.field_c[1] = dj.a(var2);
             break L512;
           }
         }
@@ -6114,7 +6632,8 @@ class ec extends ne {
           if (null == var2) {
             break L513;
           } else {
-            nj.field_c[2] = dj.a(var2, false);
+            int discarded$1314 = 0;
+            nj.field_c[2] = dj.a(var2);
             break L513;
           }
         }
@@ -6123,7 +6642,8 @@ class ec extends ne {
           if (null == var2) {
             break L514;
           } else {
-            nj.field_c[3] = dj.a(var2, false);
+            int discarded$1315 = 0;
+            nj.field_c[3] = dj.a(var2);
             break L514;
           }
         }
@@ -6132,7 +6652,8 @@ class ec extends ne {
           if (null == var2) {
             break L515;
           } else {
-            nj.field_c[4] = dj.a(var2, false);
+            int discarded$1316 = 0;
+            nj.field_c[4] = dj.a(var2);
             break L515;
           }
         }
@@ -6141,7 +6662,8 @@ class ec extends ne {
           if (var2 == null) {
             break L516;
           } else {
-            lh.field_n[0] = dj.a(var2, false);
+            int discarded$1317 = 0;
+            lh.field_n[0] = dj.a(var2);
             break L516;
           }
         }
@@ -6150,7 +6672,8 @@ class ec extends ne {
           if (var2 == null) {
             break L517;
           } else {
-            lh.field_n[1] = dj.a(var2, param1);
+            int discarded$1318 = 0;
+            lh.field_n[1] = dj.a(var2);
             break L517;
           }
         }
@@ -6159,7 +6682,8 @@ class ec extends ne {
           if (var2 == null) {
             break L518;
           } else {
-            lh.field_n[2] = dj.a(var2, false);
+            int discarded$1319 = 0;
+            lh.field_n[2] = dj.a(var2);
             break L518;
           }
         }
@@ -6168,7 +6692,8 @@ class ec extends ne {
           if (null == var2) {
             break L519;
           } else {
-            lh.field_n[3] = dj.a(var2, param1);
+            int discarded$1320 = 0;
+            lh.field_n[3] = dj.a(var2);
             break L519;
           }
         }
@@ -6177,32 +6702,36 @@ class ec extends ne {
           if (null == var2) {
             break L520;
           } else {
-            lh.field_n[4] = dj.a(var2, param1);
+            int discarded$1321 = 0;
+            lh.field_n[4] = dj.a(var2);
             break L520;
           }
         }
         L521: {
-          var2 = gm.a("titles_external_male,0", param1);
+          var2 = gm.a("titles_external_male,0", false);
           if (var2 == null) {
             break L521;
           } else {
-            wm.field_i[0] = dj.a(var2, false);
+            int discarded$1322 = 0;
+            wm.field_i[0] = dj.a(var2);
             break L521;
           }
         }
         L522: {
           var2 = gm.a("titles_external_male,1", false);
           if (var2 != null) {
-            wm.field_i[1] = dj.a(var2, false);
+            int discarded$1323 = 0;
+            wm.field_i[1] = dj.a(var2);
             break L522;
           } else {
             break L522;
           }
         }
         L523: {
-          var2 = gm.a("titles_external_male,2", param1);
+          var2 = gm.a("titles_external_male,2", false);
           if (var2 != null) {
-            wm.field_i[2] = dj.a(var2, false);
+            int discarded$1324 = 0;
+            wm.field_i[2] = dj.a(var2);
             break L523;
           } else {
             break L523;
@@ -6211,7 +6740,8 @@ class ec extends ne {
         L524: {
           var2 = gm.a("titles_external_male,3", false);
           if (var2 != null) {
-            wm.field_i[3] = dj.a(var2, false);
+            int discarded$1325 = 0;
+            wm.field_i[3] = dj.a(var2);
             break L524;
           } else {
             break L524;
@@ -6220,16 +6750,18 @@ class ec extends ne {
         L525: {
           var2 = gm.a("titles_external_male,4", false);
           if (null != var2) {
-            wm.field_i[4] = dj.a(var2, false);
+            int discarded$1326 = 0;
+            wm.field_i[4] = dj.a(var2);
             break L525;
           } else {
             break L525;
           }
         }
         L526: {
-          var2 = gm.a("titles_external_male,5", param1);
+          var2 = gm.a("titles_external_male,5", false);
           if (var2 != null) {
-            wm.field_i[5] = dj.a(var2, false);
+            int discarded$1327 = 0;
+            wm.field_i[5] = dj.a(var2);
             break L526;
           } else {
             break L526;
@@ -6238,7 +6770,8 @@ class ec extends ne {
         L527: {
           var2 = gm.a("titles_external_male,6", false);
           if (null != var2) {
-            wm.field_i[6] = dj.a(var2, param1);
+            int discarded$1328 = 0;
+            wm.field_i[6] = dj.a(var2);
             break L527;
           } else {
             break L527;
@@ -6247,7 +6780,8 @@ class ec extends ne {
         L528: {
           var2 = gm.a("titles_external_male,7", false);
           if (var2 != null) {
-            wm.field_i[7] = dj.a(var2, param1);
+            int discarded$1329 = 0;
+            wm.field_i[7] = dj.a(var2);
             break L528;
           } else {
             break L528;
@@ -6256,7 +6790,8 @@ class ec extends ne {
         L529: {
           var2 = gm.a("titles_external_male,8", false);
           if (null != var2) {
-            wm.field_i[8] = dj.a(var2, false);
+            int discarded$1330 = 0;
+            wm.field_i[8] = dj.a(var2);
             break L529;
           } else {
             break L529;
@@ -6267,16 +6802,18 @@ class ec extends ne {
           if (var2 == null) {
             break L530;
           } else {
-            wm.field_i[9] = dj.a(var2, false);
+            int discarded$1331 = 0;
+            wm.field_i[9] = dj.a(var2);
             break L530;
           }
         }
         L531: {
-          var2 = gm.a("titles_external_female,0", param1);
+          var2 = gm.a("titles_external_female,0", false);
           if (var2 == null) {
             break L531;
           } else {
-            wm.field_d[0] = dj.a(var2, false);
+            int discarded$1332 = 0;
+            wm.field_d[0] = dj.a(var2);
             break L531;
           }
         }
@@ -6285,14 +6822,16 @@ class ec extends ne {
           if (null == var2) {
             break L532;
           } else {
-            wm.field_d[1] = dj.a(var2, false);
+            int discarded$1333 = 0;
+            wm.field_d[1] = dj.a(var2);
             break L532;
           }
         }
         L533: {
           var2 = gm.a("titles_external_female,2", false);
           if (var2 != null) {
-            wm.field_d[2] = dj.a(var2, param1);
+            int discarded$1334 = 0;
+            wm.field_d[2] = dj.a(var2);
             break L533;
           } else {
             break L533;
@@ -6301,7 +6840,8 @@ class ec extends ne {
         L534: {
           var2 = gm.a("titles_external_female,3", false);
           if (null != var2) {
-            wm.field_d[3] = dj.a(var2, false);
+            int discarded$1335 = 0;
+            wm.field_d[3] = dj.a(var2);
             break L534;
           } else {
             break L534;
@@ -6310,7 +6850,8 @@ class ec extends ne {
         L535: {
           var2 = gm.a("titles_external_female,4", false);
           if (var2 != null) {
-            wm.field_d[4] = dj.a(var2, false);
+            int discarded$1336 = 0;
+            wm.field_d[4] = dj.a(var2);
             break L535;
           } else {
             break L535;
@@ -6319,7 +6860,8 @@ class ec extends ne {
         L536: {
           var2 = gm.a("titles_external_female,5", false);
           if (null != var2) {
-            wm.field_d[5] = dj.a(var2, false);
+            int discarded$1337 = 0;
+            wm.field_d[5] = dj.a(var2);
             break L536;
           } else {
             break L536;
@@ -6330,14 +6872,16 @@ class ec extends ne {
           if (var2 == null) {
             break L537;
           } else {
-            wm.field_d[6] = dj.a(var2, param1);
+            int discarded$1338 = 0;
+            wm.field_d[6] = dj.a(var2);
             break L537;
           }
         }
         L538: {
           var2 = gm.a("titles_external_female,7", false);
           if (null != var2) {
-            wm.field_d[7] = dj.a(var2, false);
+            int discarded$1339 = 0;
+            wm.field_d[7] = dj.a(var2);
             break L538;
           } else {
             break L538;
@@ -6348,14 +6892,16 @@ class ec extends ne {
           if (null == var2) {
             break L539;
           } else {
-            wm.field_d[8] = dj.a(var2, false);
+            int discarded$1340 = 0;
+            wm.field_d[8] = dj.a(var2);
             break L539;
           }
         }
         L540: {
           var2 = gm.a("titles_external_female,9", false);
           if (null != var2) {
-            wm.field_d[9] = dj.a(var2, false);
+            int discarded$1341 = 0;
+            wm.field_d[9] = dj.a(var2);
             break L540;
           } else {
             break L540;
@@ -6364,7 +6910,8 @@ class ec extends ne {
         L541: {
           var2 = gm.a("titles_external_game,0", false);
           if (var2 != null) {
-            ab.field_d[0] = dj.a(var2, param1);
+            int discarded$1342 = 0;
+            ab.field_d[0] = dj.a(var2);
             break L541;
           } else {
             break L541;
@@ -6375,16 +6922,18 @@ class ec extends ne {
           if (null == var2) {
             break L542;
           } else {
-            ab.field_d[1] = dj.a(var2, false);
+            int discarded$1343 = 0;
+            ab.field_d[1] = dj.a(var2);
             break L542;
           }
         }
         L543: {
-          var2 = gm.a("titles_external_game,2", param1);
+          var2 = gm.a("titles_external_game,2", false);
           if (null == var2) {
             break L543;
           } else {
-            ab.field_d[2] = dj.a(var2, false);
+            int discarded$1344 = 0;
+            ab.field_d[2] = dj.a(var2);
             break L543;
           }
         }
@@ -6393,14 +6942,16 @@ class ec extends ne {
           if (var2 == null) {
             break L544;
           } else {
-            ab.field_d[3] = dj.a(var2, false);
+            int discarded$1345 = 0;
+            ab.field_d[3] = dj.a(var2);
             break L544;
           }
         }
         L545: {
           var2 = gm.a("titles_external_game,4", false);
           if (null != var2) {
-            ab.field_d[4] = dj.a(var2, false);
+            int discarded$1346 = 0;
+            ab.field_d[4] = dj.a(var2);
             break L545;
           } else {
             break L545;
@@ -6411,7 +6962,8 @@ class ec extends ne {
           if (var2 == null) {
             break L546;
           } else {
-            ab.field_d[5] = dj.a(var2, false);
+            int discarded$1347 = 0;
+            ab.field_d[5] = dj.a(var2);
             break L546;
           }
         }
@@ -6420,23 +6972,26 @@ class ec extends ne {
           if (var2 == null) {
             break L547;
           } else {
-            ab.field_d[6] = dj.a(var2, false);
+            int discarded$1348 = 0;
+            ab.field_d[6] = dj.a(var2);
             break L547;
           }
         }
         L548: {
-          var2 = gm.a("titles_external_game,7", param1);
+          var2 = gm.a("titles_external_game,7", false);
           if (var2 == null) {
             break L548;
           } else {
-            ab.field_d[7] = dj.a(var2, param1);
+            int discarded$1349 = 0;
+            ab.field_d[7] = dj.a(var2);
             break L548;
           }
         }
         L549: {
           var2 = gm.a("titles_external_game,8", false);
           if (var2 != null) {
-            ab.field_d[8] = dj.a(var2, false);
+            int discarded$1350 = 0;
+            ab.field_d[8] = dj.a(var2);
             break L549;
           } else {
             break L549;
@@ -6445,7 +7000,8 @@ class ec extends ne {
         L550: {
           var2 = gm.a("titles_external_game,9", false);
           if (null != var2) {
-            ab.field_d[9] = dj.a(var2, false);
+            int discarded$1351 = 0;
+            ab.field_d[9] = dj.a(var2);
             break L550;
           } else {
             break L550;
@@ -6456,7 +7012,8 @@ class ec extends ne {
           if (null == var2) {
             break L551;
           } else {
-            ka.field_b[0] = dj.a(var2, false);
+            int discarded$1352 = 0;
+            ka.field_b[0] = dj.a(var2);
             break L551;
           }
         }
@@ -6465,23 +7022,26 @@ class ec extends ne {
           if (var2 == null) {
             break L552;
           } else {
-            ka.field_b[1] = dj.a(var2, false);
+            int discarded$1353 = 0;
+            ka.field_b[1] = dj.a(var2);
             break L552;
           }
         }
         L553: {
           var2 = gm.a("titles_external_achievement,2", false);
           if (var2 != null) {
-            ka.field_b[2] = dj.a(var2, false);
+            int discarded$1354 = 0;
+            ka.field_b[2] = dj.a(var2);
             break L553;
           } else {
             break L553;
           }
         }
         L554: {
-          var2 = gm.a("titles_external_achievement,3", param1);
+          var2 = gm.a("titles_external_achievement,3", false);
           if (var2 != null) {
-            ka.field_b[3] = dj.a(var2, param1);
+            int discarded$1355 = 0;
+            ka.field_b[3] = dj.a(var2);
             break L554;
           } else {
             break L554;
@@ -6492,7 +7052,8 @@ class ec extends ne {
           if (null == var2) {
             break L555;
           } else {
-            ka.field_b[4] = dj.a(var2, false);
+            int discarded$1356 = 0;
+            ka.field_b[4] = dj.a(var2);
             break L555;
           }
         }
@@ -6501,32 +7062,36 @@ class ec extends ne {
           if (null == var2) {
             break L556;
           } else {
-            ka.field_b[5] = dj.a(var2, false);
+            int discarded$1357 = 0;
+            ka.field_b[5] = dj.a(var2);
             break L556;
           }
         }
         L557: {
           var2 = gm.a("titles_external_achievement,6", false);
           if (null != var2) {
-            ka.field_b[6] = dj.a(var2, false);
+            int discarded$1358 = 0;
+            ka.field_b[6] = dj.a(var2);
             break L557;
           } else {
             break L557;
           }
         }
         L558: {
-          var2 = gm.a("titles_external_achievement,7", param1);
+          var2 = gm.a("titles_external_achievement,7", false);
           if (var2 == null) {
             break L558;
           } else {
-            ka.field_b[7] = dj.a(var2, false);
+            int discarded$1359 = 0;
+            ka.field_b[7] = dj.a(var2);
             break L558;
           }
         }
         L559: {
           var2 = gm.a("titles_external_achievement,8", false);
           if (var2 != null) {
-            ka.field_b[8] = dj.a(var2, false);
+            int discarded$1360 = 0;
+            ka.field_b[8] = dj.a(var2);
             break L559;
           } else {
             break L559;
@@ -6537,34 +7102,38 @@ class ec extends ne {
           if (var2 == null) {
             break L560;
           } else {
-            ka.field_b[9] = dj.a(var2, param1);
+            int discarded$1361 = 0;
+            ka.field_b[9] = dj.a(var2);
             break L560;
           }
         }
         L561: {
-          var2 = gm.a("titles_purchased,0", param1);
+          var2 = gm.a("titles_purchased,0", false);
           if (null != var2) {
-            ce.field_q[0] = dj.a(var2, false);
+            int discarded$1362 = 0;
+            ce.field_q[0] = dj.a(var2);
             break L561;
           } else {
             break L561;
           }
         }
         L562: {
-          var2 = gm.a("titles_purchased,1", param1);
+          var2 = gm.a("titles_purchased,1", false);
           if (var2 != null) {
-            ce.field_q[1] = dj.a(var2, false);
+            int discarded$1363 = 0;
+            ce.field_q[1] = dj.a(var2);
             break L562;
           } else {
             break L562;
           }
         }
         L563: {
-          var2 = gm.a("titles_purchased,2", param1);
+          var2 = gm.a("titles_purchased,2", false);
           if (var2 == null) {
             break L563;
           } else {
-            ce.field_q[2] = dj.a(var2, false);
+            int discarded$1364 = 0;
+            ce.field_q[2] = dj.a(var2);
             break L563;
           }
         }
@@ -6573,25 +7142,28 @@ class ec extends ne {
           if (null == var2) {
             break L564;
           } else {
-            ce.field_q[3] = dj.a(var2, false);
+            int discarded$1365 = 0;
+            ce.field_q[3] = dj.a(var2);
             break L564;
           }
         }
         L565: {
           var2 = gm.a("titles_purchased,4", false);
           if (null != var2) {
-            ce.field_q[4] = dj.a(var2, false);
+            int discarded$1366 = 0;
+            ce.field_q[4] = dj.a(var2);
             break L565;
           } else {
             break L565;
           }
         }
         L566: {
-          var2 = gm.a("titles_purchased,5", param1);
+          var2 = gm.a("titles_purchased,5", false);
           if (var2 == null) {
             break L566;
           } else {
-            ce.field_q[5] = dj.a(var2, false);
+            int discarded$1367 = 0;
+            ce.field_q[5] = dj.a(var2);
             break L566;
           }
         }
@@ -6600,7 +7172,8 @@ class ec extends ne {
           if (var2 == null) {
             break L567;
           } else {
-            ce.field_q[6] = dj.a(var2, false);
+            int discarded$1368 = 0;
+            ce.field_q[6] = dj.a(var2);
             break L567;
           }
         }
@@ -6609,7 +7182,8 @@ class ec extends ne {
           if (var2 == null) {
             break L568;
           } else {
-            ce.field_q[7] = dj.a(var2, false);
+            int discarded$1369 = 0;
+            ce.field_q[7] = dj.a(var2);
             break L568;
           }
         }
@@ -6618,14 +7192,16 @@ class ec extends ne {
           if (var2 == null) {
             break L569;
           } else {
-            ce.field_q[8] = dj.a(var2, false);
+            int discarded$1370 = 0;
+            ce.field_q[8] = dj.a(var2);
             break L569;
           }
         }
         L570: {
           var2 = gm.a("titles_purchased,9", false);
           if (var2 != null) {
-            ce.field_q[9] = dj.a(var2, param1);
+            int discarded$1371 = 0;
+            ce.field_q[9] = dj.a(var2);
             break L570;
           } else {
             break L570;
@@ -6634,16 +7210,18 @@ class ec extends ne {
         L571: {
           var2 = gm.a("titles_purchased,10", false);
           if (null != var2) {
-            ce.field_q[10] = dj.a(var2, false);
+            int discarded$1372 = 0;
+            ce.field_q[10] = dj.a(var2);
             break L571;
           } else {
             break L571;
           }
         }
         L572: {
-          var2 = gm.a("titles_purchased,11", param1);
+          var2 = gm.a("titles_purchased,11", false);
           if (var2 != null) {
-            ce.field_q[11] = dj.a(var2, false);
+            int discarded$1373 = 0;
+            ce.field_q[11] = dj.a(var2);
             break L572;
           } else {
             break L572;
@@ -6652,7 +7230,8 @@ class ec extends ne {
         L573: {
           var2 = gm.a("titles_purchased,12", false);
           if (null != var2) {
-            ce.field_q[12] = dj.a(var2, false);
+            int discarded$1374 = 0;
+            ce.field_q[12] = dj.a(var2);
             break L573;
           } else {
             break L573;
@@ -6663,14 +7242,16 @@ class ec extends ne {
           if (var2 == null) {
             break L574;
           } else {
-            ce.field_q[13] = dj.a(var2, false);
+            int discarded$1375 = 0;
+            ce.field_q[13] = dj.a(var2);
             break L574;
           }
         }
         L575: {
           var2 = gm.a("titles_purchased,14", false);
           if (var2 != null) {
-            ce.field_q[14] = dj.a(var2, false);
+            int discarded$1376 = 0;
+            ce.field_q[14] = dj.a(var2);
             break L575;
           } else {
             break L575;
@@ -6679,16 +7260,18 @@ class ec extends ne {
         L576: {
           var2 = gm.a("titles_purchased,15", false);
           if (var2 != null) {
-            ce.field_q[15] = dj.a(var2, false);
+            int discarded$1377 = 0;
+            ce.field_q[15] = dj.a(var2);
             break L576;
           } else {
             break L576;
           }
         }
         L577: {
-          var2 = gm.a("text_initiate_raid", param1);
+          var2 = gm.a("text_initiate_raid", false);
           if (var2 != null) {
-            t.field_b = dj.a(var2, false);
+            int discarded$1378 = 0;
+            t.field_b = dj.a(var2);
             break L577;
           } else {
             break L577;
@@ -6699,7 +7282,8 @@ class ec extends ne {
           if (null == var2) {
             break L578;
           } else {
-            c.field_e = dj.a(var2, param1);
+            int discarded$1379 = 0;
+            c.field_e = dj.a(var2);
             break L578;
           }
         }
@@ -6708,7 +7292,8 @@ class ec extends ne {
           if (null == var2) {
             break L579;
           } else {
-            sj.field_W = dj.a(var2, false);
+            int discarded$1380 = 0;
+            sj.field_W = dj.a(var2);
             break L579;
           }
         }
@@ -6717,7 +7302,8 @@ class ec extends ne {
           if (null == var2) {
             break L580;
           } else {
-            uc.field_C = dj.a(var2, false);
+            int discarded$1381 = 0;
+            uc.field_C = dj.a(var2);
             break L580;
           }
         }
@@ -6726,7 +7312,8 @@ class ec extends ne {
           if (null == var2) {
             break L581;
           } else {
-            rl.field_a = dj.a(var2, false);
+            int discarded$1382 = 0;
+            rl.field_a = dj.a(var2);
             break L581;
           }
         }
@@ -6735,7 +7322,8 @@ class ec extends ne {
           if (null == var2) {
             break L582;
           } else {
-            bb.field_q = dj.a(var2, false);
+            int discarded$1383 = 0;
+            bb.field_q = dj.a(var2);
             break L582;
           }
         }
@@ -6744,23 +7332,26 @@ class ec extends ne {
           if (var2 == null) {
             break L583;
           } else {
-            hj.field_X = dj.a(var2, param1);
+            int discarded$1384 = 0;
+            hj.field_X = dj.a(var2);
             break L583;
           }
         }
         L584: {
           var2 = gm.a("text_dungeon_assault", false);
           if (var2 != null) {
-            tp.field_u = dj.a(var2, false);
+            int discarded$1385 = 0;
+            tp.field_u = dj.a(var2);
             break L584;
           } else {
             break L584;
           }
         }
         L585: {
-          var2 = gm.a("text_instructions", param1);
+          var2 = gm.a("text_instructions", false);
           if (var2 != null) {
-            bn.field_q = dj.a(var2, false);
+            int discarded$1386 = 0;
+            bn.field_q = dj.a(var2);
             break L585;
           } else {
             break L585;
@@ -6771,23 +7362,26 @@ class ec extends ne {
           if (null == var2) {
             break L586;
           } else {
-            vd.field_c = dj.a(var2, false);
+            int discarded$1387 = 0;
+            vd.field_c = dj.a(var2);
             break L586;
           }
         }
         L587: {
-          var2 = gm.a("text_profile", param1);
+          var2 = gm.a("text_profile", false);
           if (var2 != null) {
-            gk.field_K = dj.a(var2, false);
+            int discarded$1388 = 0;
+            gk.field_K = dj.a(var2);
             break L587;
           } else {
             break L587;
           }
         }
         L588: {
-          var2 = gm.a("text_dungeon_builder", param1);
+          var2 = gm.a("text_dungeon_builder", false);
           if (var2 != null) {
-            f.field_c = dj.a(var2, false);
+            int discarded$1389 = 0;
+            f.field_c = dj.a(var2);
             break L588;
           } else {
             break L588;
@@ -6796,45 +7390,50 @@ class ec extends ne {
         L589: {
           var2 = gm.a("text_cost_colon", false);
           if (var2 != null) {
-            ef.field_f = dj.a(var2, false);
+            int discarded$1390 = 0;
+            ef.field_f = dj.a(var2);
             break L589;
           } else {
             break L589;
           }
         }
         L590: {
-          var2 = gm.a("text_treasure_colon", param1);
+          var2 = gm.a("text_treasure_colon", false);
           if (var2 != null) {
-            pb.field_I = dj.a(var2, false);
+            int discarded$1391 = 0;
+            pb.field_I = dj.a(var2);
             break L590;
           } else {
             break L590;
           }
         }
         L591: {
-          var2 = gm.a("text_menu", param1);
+          var2 = gm.a("text_menu", false);
           if (null == var2) {
             break L591;
           } else {
-            l.field_d = dj.a(var2, false);
+            int discarded$1392 = 0;
+            l.field_d = dj.a(var2);
             break L591;
           }
         }
         L592: {
           var2 = gm.a("text_rooms", false);
           if (var2 != null) {
-            String discarded$12 = dj.a(var2, false);
+            int discarded$1393 = 0;
+            String discarded$1394 = dj.a(var2);
             break L592;
           } else {
             break L592;
           }
         }
         L593: {
-          var2 = gm.a("text_commit", param1);
+          var2 = gm.a("text_commit", false);
           if (null == var2) {
             break L593;
           } else {
-            lk.field_P = dj.a(var2, false);
+            int discarded$1395 = 0;
+            lk.field_P = dj.a(var2);
             break L593;
           }
         }
@@ -6843,14 +7442,16 @@ class ec extends ne {
           if (var2 == null) {
             break L594;
           } else {
-            be.field_r = dj.a(var2, param1);
+            int discarded$1396 = 0;
+            be.field_r = dj.a(var2);
             break L594;
           }
         }
         L595: {
           var2 = gm.a("text_members_only", false);
           if (var2 != null) {
-            dn.field_T = dj.a(var2, false);
+            int discarded$1397 = 0;
+            dn.field_T = dj.a(var2);
             break L595;
           } else {
             break L595;
@@ -6861,7 +7462,8 @@ class ec extends ne {
           if (var2 == null) {
             break L596;
           } else {
-            be.field_q = dj.a(var2, false);
+            int discarded$1398 = 0;
+            be.field_q = dj.a(var2);
             break L596;
           }
         }
@@ -6870,7 +7472,8 @@ class ec extends ne {
           if (null == var2) {
             break L597;
           } else {
-            n.field_a = dj.a(var2, param1);
+            int discarded$1399 = 0;
+            n.field_a = dj.a(var2);
             break L597;
           }
         }
@@ -6879,23 +7482,26 @@ class ec extends ne {
           if (null == var2) {
             break L598;
           } else {
-            r.field_a = dj.a(var2, param1);
+            int discarded$1400 = 0;
+            r.field_a = dj.a(var2);
             break L598;
           }
         }
         L599: {
-          var2 = gm.a("text_raid", param1);
+          var2 = gm.a("text_raid", false);
           if (var2 != null) {
-            ia.field_Y = dj.a(var2, false);
+            int discarded$1401 = 0;
+            ia.field_Y = dj.a(var2);
             break L599;
           } else {
             break L599;
           }
         }
         L600: {
-          var2 = gm.a("text_search", param1);
+          var2 = gm.a("text_search", false);
           if (var2 != null) {
-            hb.field_l = dj.a(var2, false);
+            int discarded$1402 = 0;
+            hb.field_l = dj.a(var2);
             break L600;
           } else {
             break L600;
@@ -6904,7 +7510,8 @@ class ec extends ne {
         L601: {
           var2 = gm.a("text_search_tip", false);
           if (var2 != null) {
-            hl.field_k = dj.a(var2, param1);
+            int discarded$1403 = 0;
+            hl.field_k = dj.a(var2);
             break L601;
           } else {
             break L601;
@@ -6915,23 +7522,26 @@ class ec extends ne {
           if (null == var2) {
             break L602;
           } else {
-            no.field_e = dj.a(var2, param1);
+            int discarded$1404 = 0;
+            no.field_e = dj.a(var2);
             break L602;
           }
         }
         L603: {
           var2 = gm.a("text_dismiss", false);
           if (null != var2) {
-            String discarded$13 = dj.a(var2, false);
+            int discarded$1405 = 0;
+            String discarded$1406 = dj.a(var2);
             break L603;
           } else {
             break L603;
           }
         }
         L604: {
-          var2 = gm.a("text_revive", param1);
+          var2 = gm.a("text_revive", false);
           if (null != var2) {
-            sa.field_e = dj.a(var2, param1);
+            int discarded$1407 = 0;
+            sa.field_e = dj.a(var2);
             break L604;
           } else {
             break L604;
@@ -6942,7 +7552,8 @@ class ec extends ne {
           if (var2 == null) {
             break L605;
           } else {
-            ae.field_e = dj.a(var2, false);
+            int discarded$1408 = 0;
+            ae.field_e = dj.a(var2);
             break L605;
           }
         }
@@ -6951,7 +7562,8 @@ class ec extends ne {
           if (null == var2) {
             break L606;
           } else {
-            kc.field_P = dj.a(var2, param1);
+            int discarded$1409 = 0;
+            kc.field_P = dj.a(var2);
             break L606;
           }
         }
@@ -6960,32 +7572,36 @@ class ec extends ne {
           if (null == var2) {
             break L607;
           } else {
-            String discarded$14 = dj.a(var2, false);
+            int discarded$1410 = 0;
+            String discarded$1411 = dj.a(var2);
             break L607;
           }
         }
         L608: {
           var2 = gm.a("text_raider_recruitment", false);
           if (var2 != null) {
-            lg.field_h = dj.a(var2, param1);
+            int discarded$1412 = 0;
+            lg.field_h = dj.a(var2);
             break L608;
           } else {
             break L608;
           }
         }
         L609: {
-          var2 = gm.a("text_raider_selection", param1);
+          var2 = gm.a("text_raider_selection", false);
           if (null == var2) {
             break L609;
           } else {
-            pi.field_i = dj.a(var2, false);
+            int discarded$1413 = 0;
+            pi.field_i = dj.a(var2);
             break L609;
           }
         }
         L610: {
-          var2 = gm.a("text_inst_trap", param1);
+          var2 = gm.a("text_inst_trap", false);
           if (var2 != null) {
-            an.field_y = dj.a(var2, false);
+            int discarded$1414 = 0;
+            an.field_y = dj.a(var2);
             break L610;
           } else {
             break L610;
@@ -6996,14 +7612,16 @@ class ec extends ne {
           if (null == var2) {
             break L611;
           } else {
-            id.field_k = dj.a(var2, false);
+            int discarded$1415 = 0;
+            id.field_k = dj.a(var2);
             break L611;
           }
         }
         L612: {
           var2 = gm.a("text_inst_guardian", false);
           if (null != var2) {
-            og.field_d = dj.a(var2, param1);
+            int discarded$1416 = 0;
+            og.field_d = dj.a(var2);
             break L612;
           } else {
             break L612;
@@ -7014,14 +7632,16 @@ class ec extends ne {
           if (var2 == null) {
             break L613;
           } else {
-            ai.field_e = dj.a(var2, false);
+            int discarded$1417 = 0;
+            ai.field_e = dj.a(var2);
             break L613;
           }
         }
         L614: {
-          var2 = gm.a("text_stake", param1);
+          var2 = gm.a("text_stake", false);
           if (null != var2) {
-            le.field_a = dj.a(var2, false);
+            int discarded$1418 = 0;
+            le.field_a = dj.a(var2);
             break L614;
           } else {
             break L614;
@@ -7032,14 +7652,16 @@ class ec extends ne {
           if (null == var2) {
             break L615;
           } else {
-            vl.field_l = dj.a(var2, false);
+            int discarded$1419 = 0;
+            vl.field_l = dj.a(var2);
             break L615;
           }
         }
         L616: {
-          var2 = gm.a("text_bounty", param1);
+          var2 = gm.a("text_bounty", false);
           if (null != var2) {
-            mi.field_c = dj.a(var2, false);
+            int discarded$1420 = 0;
+            mi.field_c = dj.a(var2);
             break L616;
           } else {
             break L616;
@@ -7050,16 +7672,18 @@ class ec extends ne {
           if (null == var2) {
             break L617;
           } else {
-            ra.field_a = dj.a(var2, param1);
+            int discarded$1421 = 0;
+            ra.field_a = dj.a(var2);
             break L617;
           }
         }
         L618: {
-          var2 = gm.a("text_bounty_claimed", param1);
+          var2 = gm.a("text_bounty_claimed", false);
           if (var2 == null) {
             break L618;
           } else {
-            wm.field_e = dj.a(var2, false);
+            int discarded$1422 = 0;
+            wm.field_e = dj.a(var2);
             break L618;
           }
         }
@@ -7068,16 +7692,18 @@ class ec extends ne {
           if (null == var2) {
             break L619;
           } else {
-            nl.field_c = dj.a(var2, false);
+            int discarded$1423 = 0;
+            nl.field_c = dj.a(var2);
             break L619;
           }
         }
         L620: {
-          var2 = gm.a("text_gold_stolen", param1);
+          var2 = gm.a("text_gold_stolen", false);
           if (null == var2) {
             break L620;
           } else {
-            eh.field_a = dj.a(var2, param1);
+            int discarded$1424 = 0;
+            eh.field_a = dj.a(var2);
             break L620;
           }
         }
@@ -7086,23 +7712,26 @@ class ec extends ne {
           if (var2 == null) {
             break L621;
           } else {
-            jc.field_a = dj.a(var2, param1);
+            int discarded$1425 = 0;
+            jc.field_a = dj.a(var2);
             break L621;
           }
         }
         L622: {
-          var2 = gm.a("text_spendable_renown", param1);
+          var2 = gm.a("text_spendable_renown", false);
           if (var2 == null) {
             break L622;
           } else {
-            nm.field_jb = dj.a(var2, false);
+            int discarded$1426 = 0;
+            nm.field_jb = dj.a(var2);
             break L622;
           }
         }
         L623: {
           var2 = gm.a("text_renown_gained", false);
           if (var2 != null) {
-            kl.field_e = dj.a(var2, false);
+            int discarded$1427 = 0;
+            kl.field_e = dj.a(var2);
             break L623;
           } else {
             break L623;
@@ -7111,7 +7740,8 @@ class ec extends ne {
         L624: {
           var2 = gm.a("text_risk_of_waking", false);
           if (null != var2) {
-            li.field_e = dj.a(var2, false);
+            int discarded$1428 = 0;
+            li.field_e = dj.a(var2);
             break L624;
           } else {
             break L624;
@@ -7122,41 +7752,46 @@ class ec extends ne {
           if (null == var2) {
             break L625;
           } else {
-            oo.field_b = dj.a(var2, false);
+            int discarded$1429 = 0;
+            oo.field_b = dj.a(var2);
             break L625;
           }
         }
         L626: {
           var2 = gm.a("text_steal_gold", false);
           if (var2 != null) {
-            ab.field_b = dj.a(var2, param1);
+            int discarded$1430 = 0;
+            ab.field_b = dj.a(var2);
             break L626;
           } else {
             break L626;
           }
         }
         L627: {
-          var2 = gm.a("text_claim_bounty", param1);
+          var2 = gm.a("text_claim_bounty", false);
           if (null == var2) {
             break L627;
           } else {
-            String discarded$15 = dj.a(var2, param1);
+            int discarded$1431 = 0;
+            String discarded$1432 = dj.a(var2);
             break L627;
           }
         }
         L628: {
-          var2 = gm.a("text_hoard_room", param1);
+          var2 = gm.a("text_hoard_room", false);
           if (null != var2) {
-            ak.field_p = dj.a(var2, false);
+            int discarded$1433 = 0;
+            ak.field_p = dj.a(var2);
             break L628;
           } else {
             break L628;
           }
         }
         L629: {
-          var2 = gm.a("text_accept", param1);
+          var2 = gm.a("text_accept", false);
           if (var2 != null) {
-            pe.field_n = dj.a(var2, false);
+            int discarded$1434 = 0;
+            pe.field_n = dj.a(var2);
             break L629;
           } else {
             break L629;
@@ -7165,7 +7800,8 @@ class ec extends ne {
         L630: {
           var2 = gm.a("text_close", false);
           if (null != var2) {
-            tf.field_g = dj.a(var2, param1);
+            int discarded$1435 = 0;
+            tf.field_g = dj.a(var2);
             break L630;
           } else {
             break L630;
@@ -7176,7 +7812,8 @@ class ec extends ne {
           if (var2 == null) {
             break L631;
           } else {
-            ag.field_b = dj.a(var2, false);
+            int discarded$1436 = 0;
+            ag.field_b = dj.a(var2);
             break L631;
           }
         }
@@ -7185,7 +7822,8 @@ class ec extends ne {
           if (null == var2) {
             break L632;
           } else {
-            uj.field_e = dj.a(var2, param1);
+            int discarded$1437 = 0;
+            uj.field_e = dj.a(var2);
             break L632;
           }
         }
@@ -7194,7 +7832,8 @@ class ec extends ne {
           if (null == var2) {
             break L633;
           } else {
-            ho.field_c = dj.a(var2, false);
+            int discarded$1438 = 0;
+            ho.field_c = dj.a(var2);
             break L633;
           }
         }
@@ -7203,32 +7842,36 @@ class ec extends ne {
           if (var2 == null) {
             break L634;
           } else {
-            mm.field_s = dj.a(var2, false);
+            int discarded$1439 = 0;
+            mm.field_s = dj.a(var2);
             break L634;
           }
         }
         L635: {
           var2 = gm.a("text_3dview", false);
           if (null != var2) {
-            cf.field_d = dj.a(var2, false);
+            int discarded$1440 = 0;
+            cf.field_d = dj.a(var2);
             break L635;
           } else {
             break L635;
           }
         }
         L636: {
-          var2 = gm.a("text_viewstyle", param1);
+          var2 = gm.a("text_viewstyle", false);
           if (var2 == null) {
             break L636;
           } else {
-            uf.field_b = dj.a(var2, param1);
+            int discarded$1441 = 0;
+            uf.field_b = dj.a(var2);
             break L636;
           }
         }
         L637: {
           var2 = gm.a("text_isometric", false);
           if (var2 != null) {
-            ql.field_g = dj.a(var2, param1);
+            int discarded$1442 = 0;
+            ql.field_g = dj.a(var2);
             break L637;
           } else {
             break L637;
@@ -7237,7 +7880,8 @@ class ec extends ne {
         L638: {
           var2 = gm.a("text_topdown", false);
           if (var2 != null) {
-            go.field_V = dj.a(var2, false);
+            int discarded$1443 = 0;
+            go.field_V = dj.a(var2);
             break L638;
           } else {
             break L638;
@@ -7248,14 +7892,16 @@ class ec extends ne {
           if (null == var2) {
             break L639;
           } else {
-            bg.field_x = dj.a(var2, false);
+            int discarded$1444 = 0;
+            bg.field_x = dj.a(var2);
             break L639;
           }
         }
         L640: {
           var2 = gm.a("text_orb_warning", false);
           if (var2 != null) {
-            oj.field_c = dj.a(var2, param1);
+            int discarded$1445 = 0;
+            oj.field_c = dj.a(var2);
             break L640;
           } else {
             break L640;
@@ -7264,7 +7910,8 @@ class ec extends ne {
         L641: {
           var2 = gm.a("text_charging_hint_none", false);
           if (var2 != null) {
-            ng.field_L = dj.a(var2, false);
+            int discarded$1446 = 0;
+            ng.field_L = dj.a(var2);
             break L641;
           } else {
             break L641;
@@ -7273,7 +7920,8 @@ class ec extends ne {
         L642: {
           var2 = gm.a("text_charging_hint_x", false);
           if (var2 != null) {
-            dg.field_G = dj.a(var2, false);
+            int discarded$1447 = 0;
+            dg.field_G = dj.a(var2);
             break L642;
           } else {
             break L642;
@@ -7284,7 +7932,8 @@ class ec extends ne {
           if (null == var2) {
             break L643;
           } else {
-            oc.field_v = dj.a(var2, param1);
+            int discarded$1448 = 0;
+            oc.field_v = dj.a(var2);
             break L643;
           }
         }
@@ -7293,14 +7942,16 @@ class ec extends ne {
           if (null == var2) {
             break L644;
           } else {
-            fl.field_n = dj.a(var2, false);
+            int discarded$1449 = 0;
+            fl.field_n = dj.a(var2);
             break L644;
           }
         }
         L645: {
-          var2 = gm.a("text_orbs_active_x", param1);
+          var2 = gm.a("text_orbs_active_x", false);
           if (null != var2) {
-            nh.field_i = dj.a(var2, param1);
+            int discarded$1450 = 0;
+            nh.field_i = dj.a(var2);
             break L645;
           } else {
             break L645;
@@ -7309,7 +7960,8 @@ class ec extends ne {
         L646: {
           var2 = gm.a("text_orbs_charging_x", false);
           if (null != var2) {
-            to.field_a = dj.a(var2, false);
+            int discarded$1451 = 0;
+            to.field_a = dj.a(var2);
             break L646;
           } else {
             break L646;
@@ -7320,32 +7972,36 @@ class ec extends ne {
           if (null == var2) {
             break L647;
           } else {
-            qh.field_j = dj.a(var2, false);
+            int discarded$1452 = 0;
+            qh.field_j = dj.a(var2);
             break L647;
           }
         }
         L648: {
           var2 = gm.a("text_limit_reached_long", false);
           if (var2 != null) {
-            bl.field_b = dj.a(var2, param1);
+            int discarded$1453 = 0;
+            bl.field_b = dj.a(var2);
             break L648;
           } else {
             break L648;
           }
         }
         L649: {
-          var2 = gm.a("text_stole_gold", param1);
+          var2 = gm.a("text_stole_gold", false);
           if (var2 == null) {
             break L649;
           } else {
-            wi.field_qb = dj.a(var2, false);
+            int discarded$1454 = 0;
+            wi.field_qb = dj.a(var2);
             break L649;
           }
         }
         L650: {
           var2 = gm.a("text_woke_dragon", false);
           if (var2 != null) {
-            sm.field_e = dj.a(var2, false);
+            int discarded$1455 = 0;
+            sm.field_e = dj.a(var2);
             break L650;
           } else {
             break L650;
@@ -7356,14 +8012,16 @@ class ec extends ne {
           if (null == var2) {
             break L651;
           } else {
-            l.field_f = dj.a(var2, false);
+            int discarded$1456 = 0;
+            l.field_f = dj.a(var2);
             break L651;
           }
         }
         L652: {
-          var2 = gm.a("text_raiders_died_one", param1);
+          var2 = gm.a("text_raiders_died_one", false);
           if (var2 != null) {
-            rp.field_a = dj.a(var2, false);
+            int discarded$1457 = 0;
+            rp.field_a = dj.a(var2);
             break L652;
           } else {
             break L652;
@@ -7374,16 +8032,18 @@ class ec extends ne {
           if (var2 == null) {
             break L653;
           } else {
-            od.field_c = dj.a(var2, param1);
+            int discarded$1458 = 0;
+            od.field_c = dj.a(var2);
             break L653;
           }
         }
         L654: {
-          var2 = gm.a("text_status_postcombat", param1);
+          var2 = gm.a("text_status_postcombat", false);
           if (null == var2) {
             break L654;
           } else {
-            co.field_E = dj.a(var2, param1);
+            int discarded$1459 = 0;
+            co.field_E = dj.a(var2);
             break L654;
           }
         }
@@ -7392,14 +8052,16 @@ class ec extends ne {
           if (null == var2) {
             break L655;
           } else {
-            bj.field_I = dj.a(var2, false);
+            int discarded$1460 = 0;
+            bj.field_I = dj.a(var2);
             break L655;
           }
         }
         L656: {
           var2 = gm.a("text_flee_tooltip", false);
           if (var2 != null) {
-            eb.field_I = dj.a(var2, false);
+            int discarded$1461 = 0;
+            eb.field_I = dj.a(var2);
             break L656;
           } else {
             break L656;
@@ -7408,7 +8070,8 @@ class ec extends ne {
         L657: {
           var2 = gm.a("text_advance_tooltip", false);
           if (var2 != null) {
-            hm.field_l = dj.a(var2, param1);
+            int discarded$1462 = 0;
+            hm.field_l = dj.a(var2);
             break L657;
           } else {
             break L657;
@@ -7417,7 +8080,8 @@ class ec extends ne {
         L658: {
           var2 = gm.a("text_charge_tooltip", false);
           if (null != var2) {
-            mo.field_f = dj.a(var2, false);
+            int discarded$1463 = 0;
+            mo.field_f = dj.a(var2);
             break L658;
           } else {
             break L658;
@@ -7426,7 +8090,8 @@ class ec extends ne {
         L659: {
           var2 = gm.a("text_disarm_trap_tooltip", false);
           if (var2 != null) {
-            ai.field_d = dj.a(var2, false);
+            int discarded$1464 = 0;
+            ai.field_d = dj.a(var2);
             break L659;
           } else {
             break L659;
@@ -7435,7 +8100,8 @@ class ec extends ne {
         L660: {
           var2 = gm.a("text_disarm_guardian_tooltip", false);
           if (var2 != null) {
-            kg.field_k = dj.a(var2, param1);
+            int discarded$1465 = 0;
+            kg.field_k = dj.a(var2);
             break L660;
           } else {
             break L660;
@@ -7444,7 +8110,8 @@ class ec extends ne {
         L661: {
           var2 = gm.a("text_sneak_past_tooltip", false);
           if (null != var2) {
-            a.field_k = dj.a(var2, false);
+            int discarded$1466 = 0;
+            a.field_k = dj.a(var2);
             break L661;
           } else {
             break L661;
@@ -7455,14 +8122,16 @@ class ec extends ne {
           if (var2 == null) {
             break L662;
           } else {
-            pb.field_H = dj.a(var2, false);
+            int discarded$1467 = 0;
+            pb.field_H = dj.a(var2);
             break L662;
           }
         }
         L663: {
           var2 = gm.a("text_flee_coloured", false);
           if (null != var2) {
-            qa.field_d = dj.a(var2, false);
+            int discarded$1468 = 0;
+            qa.field_d = dj.a(var2);
             break L663;
           } else {
             break L663;
@@ -7473,14 +8142,16 @@ class ec extends ne {
           if (var2 == null) {
             break L664;
           } else {
-            dn.field_L = dj.a(var2, false);
+            int discarded$1469 = 0;
+            dn.field_L = dj.a(var2);
             break L664;
           }
         }
         L665: {
-          var2 = gm.a("text_charge_coloured", param1);
+          var2 = gm.a("text_charge_coloured", false);
           if (null != var2) {
-            lh.field_b = dj.a(var2, false);
+            int discarded$1470 = 0;
+            lh.field_b = dj.a(var2);
             break L665;
           } else {
             break L665;
@@ -7489,7 +8160,8 @@ class ec extends ne {
         L666: {
           var2 = gm.a("text_disarm_trap_coloured", false);
           if (null != var2) {
-            vd.field_b = dj.a(var2, param1);
+            int discarded$1471 = 0;
+            vd.field_b = dj.a(var2);
             break L666;
           } else {
             break L666;
@@ -7498,7 +8170,8 @@ class ec extends ne {
         L667: {
           var2 = gm.a("text_disarm_guardian_coloured", false);
           if (null != var2) {
-            u.field_S = dj.a(var2, false);
+            int discarded$1472 = 0;
+            u.field_S = dj.a(var2);
             break L667;
           } else {
             break L667;
@@ -7507,7 +8180,8 @@ class ec extends ne {
         L668: {
           var2 = gm.a("text_useskill_coloured", false);
           if (var2 != null) {
-            String discarded$16 = dj.a(var2, false);
+            int discarded$1473 = 0;
+            String discarded$1474 = dj.a(var2);
             break L668;
           } else {
             break L668;
@@ -7516,43 +8190,48 @@ class ec extends ne {
         L669: {
           var2 = gm.a("text_flee_minitip", false);
           if (null != var2) {
-            jc.field_b = dj.a(var2, false);
+            int discarded$1475 = 0;
+            jc.field_b = dj.a(var2);
             break L669;
           } else {
             break L669;
           }
         }
         L670: {
-          var2 = gm.a("text_advance_minitip", param1);
+          var2 = gm.a("text_advance_minitip", false);
           if (null == var2) {
             break L670;
           } else {
-            gi.field_Q = dj.a(var2, false);
+            int discarded$1476 = 0;
+            gi.field_Q = dj.a(var2);
             break L670;
           }
         }
         L671: {
           var2 = gm.a("text_charge_minitip", false);
           if (var2 != null) {
-            fp.field_e = dj.a(var2, param1);
+            int discarded$1477 = 0;
+            fp.field_e = dj.a(var2);
             break L671;
           } else {
             break L671;
           }
         }
         L672: {
-          var2 = gm.a("text_disarm_trap_minitip", param1);
+          var2 = gm.a("text_disarm_trap_minitip", false);
           if (null != var2) {
-            vo.field_o = dj.a(var2, false);
+            int discarded$1478 = 0;
+            vo.field_o = dj.a(var2);
             break L672;
           } else {
             break L672;
           }
         }
         L673: {
-          var2 = gm.a("text_disarm_guardian_minitip", param1);
+          var2 = gm.a("text_disarm_guardian_minitip", false);
           if (var2 != null) {
-            rb.field_I = dj.a(var2, false);
+            int discarded$1479 = 0;
+            rb.field_I = dj.a(var2);
             break L673;
           } else {
             break L673;
@@ -7561,7 +8240,8 @@ class ec extends ne {
         L674: {
           var2 = gm.a("text_useskill_minitip", false);
           if (null != var2) {
-            String discarded$17 = dj.a(var2, param1);
+            int discarded$1480 = 0;
+            String discarded$1481 = dj.a(var2);
             break L674;
           } else {
             break L674;
@@ -7570,45 +8250,50 @@ class ec extends ne {
         L675: {
           var2 = gm.a("text_guardian_detected_alerted", false);
           if (var2 != null) {
-            nh.field_b = dj.a(var2, false);
+            int discarded$1482 = 0;
+            nh.field_b = dj.a(var2);
             break L675;
           } else {
             break L675;
           }
         }
         L676: {
-          var2 = gm.a("text_raider_snuck_past_guardian", param1);
+          var2 = gm.a("text_raider_snuck_past_guardian", false);
           if (null == var2) {
             break L676;
           } else {
-            c.field_c = dj.a(var2, false);
+            int discarded$1483 = 0;
+            c.field_c = dj.a(var2);
             break L676;
           }
         }
         L677: {
-          var2 = gm.a("text_guardian_trapped_alerted", param1);
+          var2 = gm.a("text_guardian_trapped_alerted", false);
           if (var2 == null) {
             break L677;
           } else {
-            ah.field_a = dj.a(var2, param1);
+            int discarded$1484 = 0;
+            ah.field_a = dj.a(var2);
             break L677;
           }
         }
         L678: {
           var2 = gm.a("text_raider_avoided_guardian", false);
           if (null != var2) {
-            np.field_G = dj.a(var2, param1);
+            int discarded$1485 = 0;
+            np.field_G = dj.a(var2);
             break L678;
           } else {
             break L678;
           }
         }
         L679: {
-          var2 = gm.a("text_monster_wins", param1);
+          var2 = gm.a("text_monster_wins", false);
           if (var2 == null) {
             break L679;
           } else {
-            h.field_i = dj.a(var2, false);
+            int discarded$1486 = 0;
+            h.field_i = dj.a(var2);
             break L679;
           }
         }
@@ -7617,23 +8302,26 @@ class ec extends ne {
           if (var2 == null) {
             break L680;
           } else {
-            u.field_R = dj.a(var2, false);
+            int discarded$1487 = 0;
+            u.field_R = dj.a(var2);
             break L680;
           }
         }
         L681: {
-          var2 = gm.a("text_raider_wins", param1);
+          var2 = gm.a("text_raider_wins", false);
           if (null != var2) {
-            lj.field_p = dj.a(var2, false);
+            int discarded$1488 = 0;
+            lj.field_p = dj.a(var2);
             break L681;
           } else {
             break L681;
           }
         }
         L682: {
-          var2 = gm.a("text_raider_escapes", param1);
+          var2 = gm.a("text_raider_escapes", false);
           if (null != var2) {
-            cm.field_K = dj.a(var2, param1);
+            int discarded$1489 = 0;
+            cm.field_K = dj.a(var2);
             break L682;
           } else {
             break L682;
@@ -7642,7 +8330,8 @@ class ec extends ne {
         L683: {
           var2 = gm.a("text_raider_attacks", false);
           if (var2 != null) {
-            ri.field_c = dj.a(var2, param1);
+            int discarded$1490 = 0;
+            ri.field_c = dj.a(var2);
             break L683;
           } else {
             break L683;
@@ -7651,7 +8340,8 @@ class ec extends ne {
         L684: {
           var2 = gm.a("text_raider_dodges", false);
           if (var2 != null) {
-            al.field_m = dj.a(var2, false);
+            int discarded$1491 = 0;
+            al.field_m = dj.a(var2);
             break L684;
           } else {
             break L684;
@@ -7662,14 +8352,16 @@ class ec extends ne {
           if (var2 == null) {
             break L685;
           } else {
-            ac.field_h = dj.a(var2, false);
+            int discarded$1492 = 0;
+            ac.field_h = dj.a(var2);
             break L685;
           }
         }
         L686: {
-          var2 = gm.a("text_failure", param1);
+          var2 = gm.a("text_failure", false);
           if (var2 != null) {
-            lp.field_n = dj.a(var2, param1);
+            int discarded$1493 = 0;
+            lp.field_n = dj.a(var2);
             break L686;
           } else {
             break L686;
@@ -7678,7 +8370,8 @@ class ec extends ne {
         L687: {
           var2 = gm.a("text_party_sneaks_past", false);
           if (var2 != null) {
-            qj.field_d = dj.a(var2, false);
+            int discarded$1494 = 0;
+            qj.field_d = dj.a(var2);
             break L687;
           } else {
             break L687;
@@ -7689,25 +8382,28 @@ class ec extends ne {
           if (null == var2) {
             break L688;
           } else {
-            fc.field_e = dj.a(var2, param1);
+            int discarded$1495 = 0;
+            fc.field_e = dj.a(var2);
             break L688;
           }
         }
         L689: {
-          var2 = gm.a("text_raider_detected", param1);
+          var2 = gm.a("text_raider_detected", false);
           if (var2 != null) {
-            uo.field_d = dj.a(var2, param1);
+            int discarded$1496 = 0;
+            uo.field_d = dj.a(var2);
             break L689;
           } else {
             break L689;
           }
         }
         L690: {
-          var2 = gm.a("text_raider_avoided_detection", param1);
+          var2 = gm.a("text_raider_avoided_detection", false);
           if (var2 == null) {
             break L690;
           } else {
-            mo.field_h = dj.a(var2, false);
+            int discarded$1497 = 0;
+            mo.field_h = dj.a(var2);
             break L690;
           }
         }
@@ -7716,50 +8412,56 @@ class ec extends ne {
           if (var2 == null) {
             break L691;
           } else {
-            ep.field_i = dj.a(var2, false);
+            int discarded$1498 = 0;
+            ep.field_i = dj.a(var2);
             break L691;
           }
         }
         L692: {
           var2 = gm.a("text_raider_trapped_incap", false);
           if (null != var2) {
-            bp.field_c = dj.a(var2, false);
+            int discarded$1499 = 0;
+            bp.field_c = dj.a(var2);
             break L692;
           } else {
             break L692;
           }
         }
         L693: {
-          var2 = gm.a("text_raider_trapped_killed", param1);
+          var2 = gm.a("text_raider_trapped_killed", false);
           if (null == var2) {
             break L693;
           } else {
-            vb.field_a = dj.a(var2, false);
+            int discarded$1500 = 0;
+            vb.field_a = dj.a(var2);
             break L693;
           }
         }
         L694: {
           var2 = gm.a("text_raider_avoided_trap", false);
           if (null != var2) {
-            ba.field_d = dj.a(var2, false);
+            int discarded$1501 = 0;
+            ba.field_d = dj.a(var2);
             break L694;
           } else {
             break L694;
           }
         }
         L695: {
-          var2 = gm.a("text_raider_disarmed_trap", param1);
+          var2 = gm.a("text_raider_disarmed_trap", false);
           if (null != var2) {
-            ch.field_l = dj.a(var2, param1);
+            int discarded$1502 = 0;
+            ch.field_l = dj.a(var2);
             break L695;
           } else {
             break L695;
           }
         }
         L696: {
-          var2 = gm.a("text_status_precombat", param1);
+          var2 = gm.a("text_status_precombat", false);
           if (var2 != null) {
-            rn.field_d = dj.a(var2, false);
+            int discarded$1503 = 0;
+            rn.field_d = dj.a(var2);
             break L696;
           } else {
             break L696;
@@ -7770,14 +8472,16 @@ class ec extends ne {
           if (null == var2) {
             break L697;
           } else {
-            pi.field_g = dj.a(var2, false);
+            int discarded$1504 = 0;
+            pi.field_g = dj.a(var2);
             break L697;
           }
         }
         L698: {
-          var2 = gm.a("text_hint_select_raider", param1);
+          var2 = gm.a("text_hint_select_raider", false);
           if (var2 != null) {
-            ho.field_b = dj.a(var2, false);
+            int discarded$1505 = 0;
+            ho.field_b = dj.a(var2);
             break L698;
           } else {
             break L698;
@@ -7786,7 +8490,8 @@ class ec extends ne {
         L699: {
           var2 = gm.a("text_party_defeated", false);
           if (null != var2) {
-            al.field_n = dj.a(var2, false);
+            int discarded$1506 = 0;
+            al.field_n = dj.a(var2);
             break L699;
           } else {
             break L699;
@@ -7795,7 +8500,8 @@ class ec extends ne {
         L700: {
           var2 = gm.a("text_hoardroom_hint", false);
           if (null != var2) {
-            um.field_c = dj.a(var2, false);
+            int discarded$1507 = 0;
+            um.field_c = dj.a(var2);
             break L700;
           } else {
             break L700;
@@ -7806,14 +8512,16 @@ class ec extends ne {
           if (var2 == null) {
             break L701;
           } else {
-            tn.field_U = dj.a(var2, false);
+            int discarded$1508 = 0;
+            tn.field_U = dj.a(var2);
             break L701;
           }
         }
         L702: {
           var2 = gm.a("text_attack", false);
           if (null != var2) {
-            qk.field_d = dj.a(var2, false);
+            int discarded$1509 = 0;
+            qk.field_d = dj.a(var2);
             break L702;
           } else {
             break L702;
@@ -7822,7 +8530,8 @@ class ec extends ne {
         L703: {
           var2 = gm.a("text_defence", false);
           if (null != var2) {
-            dj.field_c = dj.a(var2, false);
+            int discarded$1510 = 0;
+            dj.field_c = dj.a(var2);
             break L703;
           } else {
             break L703;
@@ -7833,16 +8542,18 @@ class ec extends ne {
           if (var2 == null) {
             break L704;
           } else {
-            pm.field_n = dj.a(var2, false);
+            int discarded$1511 = 0;
+            pm.field_n = dj.a(var2);
             break L704;
           }
         }
         L705: {
-          var2 = gm.a("text_sneak", param1);
+          var2 = gm.a("text_sneak", false);
           if (var2 == null) {
             break L705;
           } else {
-            nf.field_x = dj.a(var2, false);
+            int discarded$1512 = 0;
+            nf.field_x = dj.a(var2);
             break L705;
           }
         }
@@ -7851,23 +8562,26 @@ class ec extends ne {
           if (null == var2) {
             break L706;
           } else {
-            rk.field_a = dj.a(var2, false);
+            int discarded$1513 = 0;
+            rk.field_a = dj.a(var2);
             break L706;
           }
         }
         L707: {
-          var2 = gm.a("text_detect", param1);
+          var2 = gm.a("text_detect", false);
           if (null == var2) {
             break L707;
           } else {
-            eg.field_f = dj.a(var2, false);
+            int discarded$1514 = 0;
+            eg.field_f = dj.a(var2);
             break L707;
           }
         }
         L708: {
           var2 = gm.a("text_sort_raiders_by", false);
           if (var2 != null) {
-            ib.field_c = dj.a(var2, false);
+            int discarded$1515 = 0;
+            ib.field_c = dj.a(var2);
             break L708;
           } else {
             break L708;
@@ -7878,23 +8592,26 @@ class ec extends ne {
           if (null == var2) {
             break L709;
           } else {
-            tp.field_w = dj.a(var2, false);
+            int discarded$1516 = 0;
+            tp.field_w = dj.a(var2);
             break L709;
           }
         }
         L710: {
           var2 = gm.a("text_modifier_stat_increased", false);
           if (var2 != null) {
-            so.field_a = dj.a(var2, false);
+            int discarded$1517 = 0;
+            so.field_a = dj.a(var2);
             break L710;
           } else {
             break L710;
           }
         }
         L711: {
-          var2 = gm.a("text_modifier_stat_decreased", param1);
+          var2 = gm.a("text_modifier_stat_decreased", false);
           if (null != var2) {
-            vc.field_b = dj.a(var2, false);
+            int discarded$1518 = 0;
+            vc.field_b = dj.a(var2);
             break L711;
           } else {
             break L711;
@@ -7903,7 +8620,8 @@ class ec extends ne {
         L712: {
           var2 = gm.a("text_modifier_glamour", false);
           if (var2 != null) {
-            kl.field_b = dj.a(var2, param1);
+            int discarded$1519 = 0;
+            kl.field_b = dj.a(var2);
             break L712;
           } else {
             break L712;
@@ -7912,7 +8630,8 @@ class ec extends ne {
         L713: {
           var2 = gm.a("text_dead", false);
           if (null != var2) {
-            kg.field_m = dj.a(var2, param1);
+            int discarded$1520 = 0;
+            kg.field_m = dj.a(var2);
             break L713;
           } else {
             break L713;
@@ -7921,7 +8640,8 @@ class ec extends ne {
         L714: {
           var2 = gm.a("text_incapacitated", false);
           if (var2 != null) {
-            gl.field_Hb = dj.a(var2, false);
+            int discarded$1521 = 0;
+            gl.field_Hb = dj.a(var2);
             break L714;
           } else {
             break L714;
@@ -7930,7 +8650,8 @@ class ec extends ne {
         L715: {
           var2 = gm.a("text_ability_used", false);
           if (null != var2) {
-            wi.field_nb = dj.a(var2, param1);
+            int discarded$1522 = 0;
+            wi.field_nb = dj.a(var2);
             break L715;
           } else {
             break L715;
@@ -7939,16 +8660,18 @@ class ec extends ne {
         L716: {
           var2 = gm.a("text_disarmed", false);
           if (var2 != null) {
-            fi.field_t = dj.a(var2, false);
+            int discarded$1523 = 0;
+            fi.field_t = dj.a(var2);
             break L716;
           } else {
             break L716;
           }
         }
         L717: {
-          var2 = gm.a("text_defeated", param1);
+          var2 = gm.a("text_defeated", false);
           if (var2 != null) {
-            ii.field_C = dj.a(var2, param1);
+            int discarded$1524 = 0;
+            ii.field_C = dj.a(var2);
             break L717;
           } else {
             break L717;
@@ -7957,43 +8680,48 @@ class ec extends ne {
         L718: {
           var2 = gm.a("text_modifier_blinded", false);
           if (null != var2) {
-            dm.field_c = dj.a(var2, param1);
+            int discarded$1525 = 0;
+            dm.field_c = dj.a(var2);
             break L718;
           } else {
             break L718;
           }
         }
         L719: {
-          var2 = gm.a("text_passive_ability", param1);
+          var2 = gm.a("text_passive_ability", false);
           if (null == var2) {
             break L719;
           } else {
-            rm.field_J = dj.a(var2, false);
+            int discarded$1526 = 0;
+            rm.field_J = dj.a(var2);
             break L719;
           }
         }
         L720: {
-          var2 = gm.a("text_ability_ready", param1);
+          var2 = gm.a("text_ability_ready", false);
           if (null != var2) {
-            g.field_Jb = dj.a(var2, param1);
+            int discarded$1527 = 0;
+            g.field_Jb = dj.a(var2);
             break L720;
           } else {
             break L720;
           }
         }
         L721: {
-          var2 = gm.a("text_active_ability", param1);
+          var2 = gm.a("text_active_ability", false);
           if (null == var2) {
             break L721;
           } else {
-            lc.field_g = dj.a(var2, param1);
+            int discarded$1528 = 0;
+            lc.field_g = dj.a(var2);
             break L721;
           }
         }
         L722: {
-          var2 = gm.a("text_activeraider", param1);
+          var2 = gm.a("text_activeraider", false);
           if (var2 != null) {
-            od.field_a = dj.a(var2, param1);
+            int discarded$1529 = 0;
+            od.field_a = dj.a(var2);
             break L722;
           } else {
             break L722;
@@ -8004,23 +8732,26 @@ class ec extends ne {
           if (var2 == null) {
             break L723;
           } else {
-            vo.field_m = dj.a(var2, false);
+            int discarded$1530 = 0;
+            vo.field_m = dj.a(var2);
             break L723;
           }
         }
         L724: {
-          var2 = gm.a("text_raider", param1);
+          var2 = gm.a("text_raider", false);
           if (null == var2) {
             break L724;
           } else {
-            gg.field_e = dj.a(var2, false);
+            int discarded$1531 = 0;
+            gg.field_e = dj.a(var2);
             break L724;
           }
         }
         L725: {
           var2 = gm.a("text_monster", false);
           if (var2 != null) {
-            af.field_a = dj.a(var2, param1);
+            int discarded$1532 = 0;
+            af.field_a = dj.a(var2);
             break L725;
           } else {
             break L725;
@@ -8029,7 +8760,8 @@ class ec extends ne {
         L726: {
           var2 = gm.a("text_trap", false);
           if (var2 != null) {
-            DungeonAssault.field_H = dj.a(var2, false);
+            int discarded$1533 = 0;
+            DungeonAssault.field_H = dj.a(var2);
             break L726;
           } else {
             break L726;
@@ -8040,7 +8772,8 @@ class ec extends ne {
           if (var2 == null) {
             break L727;
           } else {
-            ki.field_e = dj.a(var2, false);
+            int discarded$1534 = 0;
+            ki.field_e = dj.a(var2);
             break L727;
           }
         }
@@ -8049,23 +8782,26 @@ class ec extends ne {
           if (null == var2) {
             break L728;
           } else {
-            ak.field_m = dj.a(var2, param1);
+            int discarded$1535 = 0;
+            ak.field_m = dj.a(var2);
             break L728;
           }
         }
         L729: {
-          var2 = gm.a("text_monsters", param1);
+          var2 = gm.a("text_monsters", false);
           if (null == var2) {
             break L729;
           } else {
-            wo.field_f = dj.a(var2, false);
+            int discarded$1536 = 0;
+            wo.field_f = dj.a(var2);
             break L729;
           }
         }
         L730: {
           var2 = gm.a("text_traps", false);
           if (var2 != null) {
-            dh.field_e = dj.a(var2, param1);
+            int discarded$1537 = 0;
+            dh.field_e = dj.a(var2);
             break L730;
           } else {
             break L730;
@@ -8076,7 +8812,8 @@ class ec extends ne {
           if (var2 == null) {
             break L731;
           } else {
-            wm.field_j = dj.a(var2, false);
+            int discarded$1538 = 0;
+            wm.field_j = dj.a(var2);
             break L731;
           }
         }
@@ -8085,14 +8822,16 @@ class ec extends ne {
           if (var2 == null) {
             break L732;
           } else {
-            uh.field_V = dj.a(var2, param1);
+            int discarded$1539 = 0;
+            uh.field_V = dj.a(var2);
             break L732;
           }
         }
         L733: {
           var2 = gm.a("text_defences", false);
           if (null != var2) {
-            rb.field_M = dj.a(var2, param1);
+            int discarded$1540 = 0;
+            rb.field_M = dj.a(var2);
             break L733;
           } else {
             break L733;
@@ -8103,7 +8842,8 @@ class ec extends ne {
           if (var2 == null) {
             break L734;
           } else {
-            wa.field_f = dj.a(var2, false);
+            int discarded$1541 = 0;
+            wa.field_f = dj.a(var2);
             break L734;
           }
         }
@@ -8112,14 +8852,16 @@ class ec extends ne {
           if (null == var2) {
             break L735;
           } else {
-            ip.field_k = dj.a(var2, param1);
+            int discarded$1542 = 0;
+            ip.field_k = dj.a(var2);
             break L735;
           }
         }
         L736: {
           var2 = gm.a("text_raids", false);
           if (null != var2) {
-            p.field_r = dj.a(var2, false);
+            int discarded$1543 = 0;
+            p.field_r = dj.a(var2);
             break L736;
           } else {
             break L736;
@@ -8128,7 +8870,8 @@ class ec extends ne {
         L737: {
           var2 = gm.a("text_income_rate", false);
           if (var2 != null) {
-            la.field_j = dj.a(var2, false);
+            int discarded$1544 = 0;
+            la.field_j = dj.a(var2);
             break L737;
           } else {
             break L737;
@@ -8139,14 +8882,16 @@ class ec extends ne {
           if (null == var2) {
             break L738;
           } else {
-            bp.field_h = dj.a(var2, param1);
+            int discarded$1545 = 0;
+            bp.field_h = dj.a(var2);
             break L738;
           }
         }
         L739: {
           var2 = gm.a("text_highest_x", false);
           if (var2 != null) {
-            mm.field_j = dj.a(var2, param1);
+            int discarded$1546 = 0;
+            mm.field_j = dj.a(var2);
             break L739;
           } else {
             break L739;
@@ -8157,14 +8902,16 @@ class ec extends ne {
           if (null == var2) {
             break L740;
           } else {
-            kk.field_s = dj.a(var2, param1);
+            int discarded$1547 = 0;
+            kk.field_s = dj.a(var2);
             break L740;
           }
         }
         L741: {
           var2 = gm.a("text_confirm_changes", false);
           if (null != var2) {
-            oa.field_h = dj.a(var2, false);
+            int discarded$1548 = 0;
+            oa.field_h = dj.a(var2);
             break L741;
           } else {
             break L741;
@@ -8173,7 +8920,8 @@ class ec extends ne {
         L742: {
           var2 = gm.a("text_confirm_changes_dungeon", false);
           if (var2 != null) {
-            wj.field_x = dj.a(var2, false);
+            int discarded$1549 = 0;
+            wj.field_x = dj.a(var2);
             break L742;
           } else {
             break L742;
@@ -8184,14 +8932,16 @@ class ec extends ne {
           if (var2 == null) {
             break L743;
           } else {
-            pb.field_F = dj.a(var2, false);
+            int discarded$1550 = 0;
+            pb.field_F = dj.a(var2);
             break L743;
           }
         }
         L744: {
-          var2 = gm.a("text_save_and_exit", param1);
+          var2 = gm.a("text_save_and_exit", false);
           if (null != var2) {
-            ud.field_u = dj.a(var2, param1);
+            int discarded$1551 = 0;
+            ud.field_u = dj.a(var2);
             break L744;
           } else {
             break L744;
@@ -8202,14 +8952,16 @@ class ec extends ne {
           if (var2 == null) {
             break L745;
           } else {
-            pm.field_o = dj.a(var2, false);
+            int discarded$1552 = 0;
+            pm.field_o = dj.a(var2);
             break L745;
           }
         }
         L746: {
           var2 = gm.a("text_save_and_exit_brief", false);
           if (var2 != null) {
-            oi.field_M = dj.a(var2, param1);
+            int discarded$1553 = 0;
+            oi.field_M = dj.a(var2);
             break L746;
           } else {
             break L746;
@@ -8218,7 +8970,8 @@ class ec extends ne {
         L747: {
           var2 = gm.a("text_exit_without_saving_brief", false);
           if (var2 != null) {
-            nk.field_Lb = dj.a(var2, false);
+            int discarded$1554 = 0;
+            nk.field_Lb = dj.a(var2);
             break L747;
           } else {
             break L747;
@@ -8227,7 +8980,8 @@ class ec extends ne {
         L748: {
           var2 = gm.a("text_warning_activate_dungeon", false);
           if (var2 != null) {
-            dh.field_c = dj.a(var2, false);
+            int discarded$1555 = 0;
+            dh.field_c = dj.a(var2);
             break L748;
           } else {
             break L748;
@@ -8236,7 +8990,8 @@ class ec extends ne {
         L749: {
           var2 = gm.a("text_dungeon_builder_hint", false);
           if (var2 != null) {
-            wh.field_c = dj.a(var2, false);
+            int discarded$1556 = 0;
+            wh.field_c = dj.a(var2);
             break L749;
           } else {
             break L749;
@@ -8247,41 +9002,46 @@ class ec extends ne {
           if (var2 == null) {
             break L750;
           } else {
-            String discarded$18 = dj.a(var2, false);
+            int discarded$1557 = 0;
+            String discarded$1558 = dj.a(var2);
             break L750;
           }
         }
         L751: {
-          var2 = gm.a("text_activate_dungeon_dialog_body", param1);
+          var2 = gm.a("text_activate_dungeon_dialog_body", false);
           if (null == var2) {
             break L751;
           } else {
-            String discarded$19 = dj.a(var2, false);
+            int discarded$1559 = 0;
+            String discarded$1560 = dj.a(var2);
             break L751;
           }
         }
         L752: {
-          var2 = gm.a("text_raider_recruitment_hint", param1);
+          var2 = gm.a("text_raider_recruitment_hint", false);
           if (var2 == null) {
             break L752;
           } else {
-            a.field_m = dj.a(var2, param1);
+            int discarded$1561 = 0;
+            a.field_m = dj.a(var2);
             break L752;
           }
         }
         L753: {
           var2 = gm.a("text_dismiss_tooltip", false);
           if (null != var2) {
-            String discarded$20 = dj.a(var2, false);
+            int discarded$1562 = 0;
+            String discarded$1563 = dj.a(var2);
             break L753;
           } else {
             break L753;
           }
         }
         L754: {
-          var2 = gm.a("text_revive_tooltip", param1);
+          var2 = gm.a("text_revive_tooltip", false);
           if (null != var2) {
-            e.field_g = dj.a(var2, false);
+            int discarded$1564 = 0;
+            e.field_g = dj.a(var2);
             break L754;
           } else {
             break L754;
@@ -8290,7 +9050,8 @@ class ec extends ne {
         L755: {
           var2 = gm.a("text_heal_tooltip", false);
           if (null != var2) {
-            t.field_c = dj.a(var2, param1);
+            int discarded$1565 = 0;
+            t.field_c = dj.a(var2);
             break L755;
           } else {
             break L755;
@@ -8299,36 +9060,40 @@ class ec extends ne {
         L756: {
           var2 = gm.a("text_recruit_tooltip", false);
           if (null != var2) {
-            String discarded$21 = dj.a(var2, false);
+            int discarded$1566 = 0;
+            String discarded$1567 = dj.a(var2);
             break L756;
           } else {
             break L756;
           }
         }
         L757: {
-          var2 = gm.a("text_title_heading", param1);
+          var2 = gm.a("text_title_heading", false);
           if (null == var2) {
             break L757;
           } else {
-            fd.field_a = dj.a(var2, false);
+            int discarded$1568 = 0;
+            fd.field_a = dj.a(var2);
             break L757;
           }
         }
         L758: {
           var2 = gm.a("text_title_requirements_age_x", false);
           if (null != var2) {
-            vj.field_i = dj.a(var2, false);
+            int discarded$1569 = 0;
+            vj.field_i = dj.a(var2);
             break L758;
           } else {
             break L758;
           }
         }
         L759: {
-          var2 = gm.a("text_title_requirements_age_one", param1);
+          var2 = gm.a("text_title_requirements_age_one", false);
           if (var2 == null) {
             break L759;
           } else {
-            be.field_m = dj.a(var2, false);
+            int discarded$1570 = 0;
+            be.field_m = dj.a(var2);
             break L759;
           }
         }
@@ -8337,7 +9102,8 @@ class ec extends ne {
           if (null == var2) {
             break L760;
           } else {
-            wf.field_y = dj.a(var2, false);
+            int discarded$1571 = 0;
+            wf.field_y = dj.a(var2);
             break L760;
           }
         }
@@ -8346,14 +9112,16 @@ class ec extends ne {
           if (null == var2) {
             break L761;
           } else {
-            tl.field_c = dj.a(var2, false);
+            int discarded$1572 = 0;
+            tl.field_c = dj.a(var2);
             break L761;
           }
         }
         L762: {
           var2 = gm.a("text_title_requirements_aggression", false);
           if (var2 != null) {
-            ac.field_f = dj.a(var2, false);
+            int discarded$1573 = 0;
+            ac.field_f = dj.a(var2);
             break L762;
           } else {
             break L762;
@@ -8364,14 +9132,16 @@ class ec extends ne {
           if (var2 == null) {
             break L763;
           } else {
-            l.field_c = dj.a(var2, param1);
+            int discarded$1574 = 0;
+            l.field_c = dj.a(var2);
             break L763;
           }
         }
         L764: {
           var2 = gm.a("text_title_requirements_external", false);
           if (var2 != null) {
-            uk.field_b = dj.a(var2, false);
+            int discarded$1575 = 0;
+            uk.field_b = dj.a(var2);
             break L764;
           } else {
             break L764;
@@ -8380,16 +9150,18 @@ class ec extends ne {
         L765: {
           var2 = gm.a("text_title_requirements_unknown", false);
           if (var2 != null) {
-            dk.field_e = dj.a(var2, false);
+            int discarded$1576 = 0;
+            dk.field_e = dj.a(var2);
             break L765;
           } else {
             break L765;
           }
         }
         L766: {
-          var2 = gm.a("text_title_hint", param1);
+          var2 = gm.a("text_title_hint", false);
           if (var2 != null) {
-            DungeonAssault.field_G = dj.a(var2, param1);
+            int discarded$1577 = 0;
+            DungeonAssault.field_G = dj.a(var2);
             break L766;
           } else {
             break L766;
@@ -8400,14 +9172,16 @@ class ec extends ne {
           if (null == var2) {
             break L767;
           } else {
-            oh.field_o = dj.a(var2, false);
+            int discarded$1578 = 0;
+            oh.field_o = dj.a(var2);
             break L767;
           }
         }
         L768: {
           var2 = gm.a("text_hint_redistribute", false);
           if (null != var2) {
-            eb.field_P = dj.a(var2, false);
+            int discarded$1579 = 0;
+            eb.field_P = dj.a(var2);
             break L768;
           } else {
             break L768;
@@ -8418,32 +9192,36 @@ class ec extends ne {
           if (var2 == null) {
             break L769;
           } else {
-            li.field_c = dj.a(var2, false);
+            int discarded$1580 = 0;
+            li.field_c = dj.a(var2);
             break L769;
           }
         }
         L770: {
           var2 = gm.a("text_hint_sacrifice_raider", false);
           if (null != var2) {
-            wf.field_D = dj.a(var2, false);
+            int discarded$1581 = 0;
+            wf.field_D = dj.a(var2);
             break L770;
           } else {
             break L770;
           }
         }
         L771: {
-          var2 = gm.a("text_hint_sacrifice_greenskin", param1);
+          var2 = gm.a("text_hint_sacrifice_greenskin", false);
           if (var2 == null) {
             break L771;
           } else {
-            ta.field_g = dj.a(var2, false);
+            int discarded$1582 = 0;
+            ta.field_g = dj.a(var2);
             break L771;
           }
         }
         L772: {
-          var2 = gm.a("text_hint_sacrifice_goblin", param1);
+          var2 = gm.a("text_hint_sacrifice_goblin", false);
           if (var2 != null) {
-            em.field_F = dj.a(var2, false);
+            int discarded$1583 = 0;
+            em.field_F = dj.a(var2);
             break L772;
           } else {
             break L772;
@@ -8454,7 +9232,8 @@ class ec extends ne {
           if (var2 == null) {
             break L773;
           } else {
-            rl.field_c = dj.a(var2, false);
+            int discarded$1584 = 0;
+            rl.field_c = dj.a(var2);
             break L773;
           }
         }
@@ -8463,32 +9242,36 @@ class ec extends ne {
           if (var2 == null) {
             break L774;
           } else {
-            mo.field_b = dj.a(var2, false);
+            int discarded$1585 = 0;
+            mo.field_b = dj.a(var2);
             break L774;
           }
         }
         L775: {
           var2 = gm.a("text_hint_ability_glamour", false);
           if (null != var2) {
-            jd.field_i = dj.a(var2, false);
+            int discarded$1586 = 0;
+            jd.field_i = dj.a(var2);
             break L775;
           } else {
             break L775;
           }
         }
         L776: {
-          var2 = gm.a("text_hint_ability_boostsneak", param1);
+          var2 = gm.a("text_hint_ability_boostsneak", false);
           if (null == var2) {
             break L776;
           } else {
-            bb.field_r = dj.a(var2, param1);
+            int discarded$1587 = 0;
+            bb.field_r = dj.a(var2);
             break L776;
           }
         }
         L777: {
-          var2 = gm.a("text_hint_ability_boostdef", param1);
+          var2 = gm.a("text_hint_ability_boostdef", false);
           if (var2 != null) {
-            pe.field_i = dj.a(var2, false);
+            int discarded$1588 = 0;
+            pe.field_i = dj.a(var2);
             break L777;
           } else {
             break L777;
@@ -8499,14 +9282,16 @@ class ec extends ne {
           if (var2 == null) {
             break L778;
           } else {
-            i.field_y = dj.a(var2, false);
+            int discarded$1589 = 0;
+            i.field_y = dj.a(var2);
             break L778;
           }
         }
         L779: {
           var2 = gm.a("text_acv_hunter", false);
           if (var2 != null) {
-            ji.field_H = dj.a(var2, false);
+            int discarded$1590 = 0;
+            ji.field_H = dj.a(var2);
             break L779;
           } else {
             break L779;
@@ -8515,27 +9300,30 @@ class ec extends ne {
         L780: {
           var2 = gm.a("text_acv_riches", false);
           if (null != var2) {
-            fn.field_q = dj.a(var2, false);
+            int discarded$1591 = 0;
+            fn.field_q = dj.a(var2);
             break L780;
           } else {
             break L780;
           }
         }
         L781: {
-          var2 = gm.a("text_acv_habit", param1);
+          var2 = gm.a("text_acv_habit", false);
           if (var2 != null) {
-            wl.field_b = dj.a(var2, false);
+            int discarded$1592 = 0;
+            wl.field_b = dj.a(var2);
             break L781;
           } else {
             break L781;
           }
         }
         L782: {
-          var2 = gm.a("title_dtdtdt", param1);
+          var2 = gm.a("title_dtdtdt", false);
           if (var2 == null) {
             break L782;
           } else {
-            ng.field_K = dj.a(var2, false);
+            int discarded$1593 = 0;
+            ng.field_K = dj.a(var2);
             break L782;
           }
         }
@@ -8544,7 +9332,8 @@ class ec extends ne {
           if (null == var2) {
             break L783;
           } else {
-            rb.field_J[0] = dj.a(var2, false);
+            int discarded$1594 = 0;
+            rb.field_J[0] = dj.a(var2);
             break L783;
           }
         }
@@ -8553,14 +9342,16 @@ class ec extends ne {
           if (null == var2) {
             break L784;
           } else {
-            rb.field_J[1] = dj.a(var2, false);
+            int discarded$1595 = 0;
+            rb.field_J[1] = dj.a(var2);
             break L784;
           }
         }
         L785: {
-          var2 = gm.a("renowntable_column_text,2", param1);
+          var2 = gm.a("renowntable_column_text,2", false);
           if (var2 != null) {
-            rb.field_J[2] = dj.a(var2, false);
+            int discarded$1596 = 0;
+            rb.field_J[2] = dj.a(var2);
             break L785;
           } else {
             break L785;
@@ -8569,7 +9360,8 @@ class ec extends ne {
         L786: {
           var2 = gm.a("renowntable_column_text,3", false);
           if (null != var2) {
-            rb.field_J[3] = dj.a(var2, false);
+            int discarded$1597 = 0;
+            rb.field_J[3] = dj.a(var2);
             break L786;
           } else {
             break L786;
@@ -8578,7 +9370,8 @@ class ec extends ne {
         L787: {
           var2 = gm.a("renowntable_error", false);
           if (var2 != null) {
-            ac.field_D = dj.a(var2, false);
+            int discarded$1598 = 0;
+            ac.field_D = dj.a(var2);
             break L787;
           } else {
             break L787;
@@ -8587,7 +9380,8 @@ class ec extends ne {
         L788: {
           var2 = gm.a("achievement_title", false);
           if (var2 != null) {
-            f.field_b = dj.a(var2, false);
+            int discarded$1599 = 0;
+            f.field_b = dj.a(var2);
             break L788;
           } else {
             break L788;
@@ -9492,59 +10286,51 @@ class ec extends ne {
                 var2_array[param0] = 0;
                 break L2;
               }
-              L4: {
-                if (param1 == 5) {
-                  break L4;
-                } else {
-                  field_p = -121;
-                  break L4;
-                }
-              }
               var3 = new md();
               var3.a((ne) (Object) new a(param0), false);
-              L5: while (true) {
-                L6: {
+              L4: while (true) {
+                L5: {
                   if (var3.a((byte) -87)) {
-                    break L6;
+                    break L5;
                   } else {
-                    L7: {
+                    L6: {
                       var4 = ((a) (Object) var3.b((byte) -124)).field_j;
                       var5 = 1 + var2_array[var4];
                       if (var4 % ib.field_j <= 0) {
-                        break L7;
+                        break L6;
                       } else {
                         dm.a(var3, var2_array, var5, -32, -1 + var4, var4 + (-1 + -(var4 / ib.field_j)));
+                        break L6;
+                      }
+                    }
+                    L7: {
+                      if (ib.field_j - 1 > var4 % ib.field_j) {
+                        dm.a(var3, var2_array, var5, 120, 1 + var4, var4 + -(var4 / ib.field_j));
+                        break L7;
+                      } else {
                         break L7;
                       }
                     }
                     L8: {
-                      if (ib.field_j - 1 > var4 % ib.field_j) {
-                        dm.a(var3, var2_array, var5, 120, 1 + var4, var4 + -(var4 / ib.field_j));
+                      if (~var4 > ~ib.field_j) {
                         break L8;
                       } else {
+                        dm.a(var3, var2_array, var5, 127, var4 + -ib.field_j, (ib.field_l >> 1) + var4 + -ib.field_j);
                         break L8;
                       }
                     }
                     L9: {
-                      if (~var4 > ~ib.field_j) {
-                        break L9;
-                      } else {
-                        dm.a(var3, var2_array, var5, 127, var4 + -ib.field_j, (ib.field_l >> 1) + var4 + -ib.field_j);
-                        break L9;
-                      }
-                    }
-                    L10: {
                       if (ib.field_k + -ib.field_j <= var4) {
-                        break L10;
+                        break L9;
                       } else {
                         dm.a(var3, var2_array, var5, -105, ib.field_j + var4, var4 - -(ib.field_l >> 1));
-                        break L10;
+                        break L9;
                       }
                     }
                     if (var6 == 0) {
-                      continue L5;
+                      continue L4;
                     } else {
-                      break L6;
+                      break L5;
                     }
                   }
                 }
@@ -9557,7 +10343,7 @@ class ec extends ne {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var2, "ec.LA(" + param0 + 44 + param1 + 41);
+          throw vk.a((Throwable) (Object) var2, "ec.LA(" + param0 + 44 + 5 + 41);
         }
         return stackIn_28_0;
     }

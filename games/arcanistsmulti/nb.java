@@ -11,7 +11,7 @@ final class nb {
     static String field_f;
     static boolean field_d;
 
-    final static void a(boolean param0, int param1) {
+    final static void a(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         L0: {
@@ -36,7 +36,8 @@ final class nb {
               break L0;
             }
           } else {
-            if (lc.a((byte) 112)) {
+            int discarded$26 = 112;
+            if (lc.a()) {
               var2 = 0;
               break L0;
             } else {
@@ -59,7 +60,7 @@ final class nb {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_c = null;
         int var1 = 0;
@@ -186,7 +187,7 @@ final class nb {
         }
     }
 
-    final static void a(String param0, long param1, int param2) {
+    final static void a(String param0, long param1) {
         CharSequence var5 = null;
         try {
             nj.field_c = 2;

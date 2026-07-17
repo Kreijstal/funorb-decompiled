@@ -10,12 +10,9 @@ final class i extends im implements ng {
     static vn field_N;
     static pk field_Q;
 
-    public static void m(int param0) {
+    public static void m() {
         field_Q = null;
         field_P = null;
-        if (param0 != 50) {
-            return;
-        }
         field_N = null;
     }
 
@@ -65,7 +62,8 @@ final class i extends im implements ng {
                 if (bl.field_b == param1) {
                   ((i) this).field_o = ((i) this).field_o + 10;
                   var3 = (Object) (Object) wj.field_j;
-                  if (!nh.a(-116)) {
+                  int discarded$25 = -116;
+                  if (!nh.a()) {
                     break L1;
                   } else {
                     ((i) this).field_o = ((i) this).field_o + 20;
@@ -173,7 +171,8 @@ final class i extends im implements ng {
           L0: {
             L1: {
               if (((i) this).field_O == param1) {
-                this.b(true);
+                int discarded$4 = 1;
+                this.b();
                 break L1;
               } else {
                 break L1;
@@ -184,7 +183,7 @@ final class i extends im implements ng {
                 break L2;
               } else {
                 var7 = null;
-                lg discarded$2 = this.a((ca) null, false, (String) null);
+                lg discarded$5 = this.a((ca) null, false, (String) null);
                 break L2;
               }
             }
@@ -223,8 +222,6 @@ final class i extends im implements ng {
     }
 
     final static byte[] b(int param0, int param1) {
-        byte[] var13 = null;
-        byte[] var12 = null;
         byte[] var11 = null;
         byte[] var10 = null;
         byte[] var3 = null;
@@ -234,14 +231,9 @@ final class i extends im implements ng {
         int var7 = 0;
         int var8 = 0;
         int var9 = Torquing.field_u;
-        if (param0 != 10758) {
-            i.m(-52);
-        }
         n var2 = (n) (Object) rj.field_v.a((long)param1, 4604);
         if (!(var2 != null)) {
-            var13 = new byte[512];
-            var12 = var13;
-            var11 = var12;
+            var11 = new byte[512];
             var10 = var11;
             var3 = var10;
             var4 = new Random((long)param1);
@@ -251,18 +243,18 @@ final class i extends im implements ng {
             for (var5 = 0; var5 < 255; var5++) {
                 var6 = -var5 + 255;
                 var7 = va.a(var6, (byte) 124, var4);
-                var8 = var13[var7];
-                var3[var7] = var13[var6];
+                var8 = var11[var7];
+                var3[var7] = var11[var6];
                 var3[511 + -var5] = (byte) var8;
                 var3[var6] = (byte) var8;
             }
-            var2 = new n(var13);
+            var2 = new n(var11);
             rj.field_v.a((long)param1, (ta) (Object) var2, 0);
         }
         return var2.field_v;
     }
 
-    private final void b(boolean param0) {
+    private final void b() {
         if (!((i) this).field_D) {
             return;
         }

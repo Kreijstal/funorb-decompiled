@@ -10,23 +10,12 @@ final class gd {
     static int[] field_a;
     static tk field_c;
 
-    public static void a(int param0) {
-        if (param0 != -2182) {
-          field_f = null;
-          field_f = null;
-          field_e = null;
-          field_a = null;
-          field_d = null;
-          field_c = null;
-          return;
-        } else {
-          field_f = null;
-          field_e = null;
-          field_a = null;
-          field_d = null;
-          field_c = null;
-          return;
-        }
+    public static void a() {
+        field_f = null;
+        field_e = null;
+        field_a = null;
+        field_d = null;
+        field_c = null;
     }
 
     final static String a(boolean param0) {

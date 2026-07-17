@@ -22,17 +22,11 @@ final class dl extends dg {
         param1 = 252645135 & (param1 >>> 4) + param1;
         param1 = param1 + (param1 >>> 8);
         param1 = param1 + (param1 >>> 16);
-        if (param0 != 1) {
-            field_A = null;
-        }
         return 255 & param1;
     }
 
-    public static void i(int param0) {
+    public static void i() {
         field_A = null;
-        if (param0 < 49) {
-            field_B = null;
-        }
         field_B = null;
         field_C = null;
         field_K = null;
@@ -48,7 +42,7 @@ final class dl extends dg {
         }
     }
 
-    final static pb[] d(byte param0) {
+    final static pb[] d() {
         pb[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -261,7 +255,7 @@ final class dl extends dg {
         }
     }
 
-    final static a[] a(ej param0, boolean param1) {
+    final static a[] a(ej param0) {
         RuntimeException var2 = null;
         re var2_ref = null;
         int var7 = 0;

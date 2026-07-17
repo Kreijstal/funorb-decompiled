@@ -46,7 +46,7 @@ final class ea extends Random {
         ch.a(20, 3974311, var4, 30, 0, -10, 3974311, 30);
         var5[5].e();
         ch.a(20, 3974311, var4, 30, -20, -10, 3974311, 30);
-        int var6 = -123 % ((-36 - param1) / 62);
+        int var6 = 0;
         var5[6].e();
         ch.a(20, 3974311, var4, 30, 0, -21, 3974311, 30);
         var5[7].e();
@@ -69,14 +69,14 @@ final class ea extends Random {
         ((ea) this).field_f = new mh(var4);
     }
 
-    final static o b(int param0) {
+    final static o b() {
         if (!(qq.field_o != null)) {
             qq.field_o = new o(mf.field_x, 20, 0, 0, 0, 11579568, -1, 0, 0, mf.field_x.field_J, -1, 2147483647, true);
         }
         return qq.field_o;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         field_a = null;

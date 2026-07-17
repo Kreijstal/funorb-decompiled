@@ -18,7 +18,8 @@ final class mg {
         int var1 = cf.field_w == -1 ? 0 : cf.field_w;
         ca.field_r = kj.b(2, 10) == 0 ? 6 : 5;
         nm.field_b = ca.field_r == 6 ? tk.field_c[5][var1] : tk.field_c[var1][0];
-        if (!pd.a(nm.field_b, true)) {
+        int discarded$6 = 1;
+        if (!pd.a(nm.field_b)) {
             qn.field_k = false;
             fl.field_j = false;
             on.field_r = -1;
@@ -322,7 +323,7 @@ final class mg {
         return stackIn_19_0;
     }
 
-    final static Object a(byte param0, byte[] param1, boolean param2) {
+    final static Object a(byte param0, byte[] param1) {
         la var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;
@@ -408,7 +409,7 @@ final class mg {
         return (Object) (Object) stackIn_11_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
         field_k = null;
         field_i = null;

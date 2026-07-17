@@ -9,16 +9,13 @@ final class vs {
     static String field_e;
     static String field_a;
 
-    final static gb a(byte param0, int param1) {
-        gb var2 = null;
-        var2 = new gb();
+    final static gb a() {
+        gb var2 = new gb();
         vl.field_o.a((byte) -113, (oh) (Object) var2);
-        bo.a(4, 2);
-        if (param0 != 88) {
-          return null;
-        } else {
-          return var2;
-        }
+        int discarded$0 = 2;
+        int discarded$1 = 4;
+        bo.a();
+        return var2;
     }
 
     public static void a(int param0) {
@@ -47,13 +44,15 @@ final class vs {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    bo.a(param0, 2);
+                    int discarded$8 = 2;
+                    int discarded$9 = 4;
+                    bo.a();
                     var2 = vl.field_o.a((byte) -71);
                     continue L2;
                   }
                 }
               } else {
-                wj.a(320, param0, var4);
+                wj.a(320, 4, var4);
                 var4 = (lq) (Object) rs.field_Bb.a((byte) -71);
                 continue L1;
               }
@@ -62,7 +61,7 @@ final class vs {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var2_ref, "vs.A(" + param0 + 44 + -103 + 41);
+          throw r.a((Throwable) (Object) var2_ref, "vs.A(" + 4 + 44 + -103 + 41);
         }
     }
 

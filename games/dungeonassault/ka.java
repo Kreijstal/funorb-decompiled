@@ -19,10 +19,7 @@ final class ka {
         var2.field_w = true;
     }
 
-    public static void a(byte param0) {
-        if (param0 != -67) {
-            field_c = 97;
-        }
+    public static void a() {
         field_a = null;
         field_d = null;
         field_b = null;

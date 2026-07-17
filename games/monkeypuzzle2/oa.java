@@ -10,21 +10,11 @@ final class oa extends jk {
     static String field_F;
     static boolean field_I;
 
-    public static void a(boolean param0) {
-        if (param0) {
-          oa.a(false);
-          field_J = null;
-          field_E = null;
-          field_D = null;
-          field_F = null;
-          return;
-        } else {
-          field_J = null;
-          field_E = null;
-          field_D = null;
-          field_F = null;
-          return;
-        }
+    public static void a() {
+        field_J = null;
+        field_E = null;
+        field_D = null;
+        field_F = null;
     }
 
     private oa(int param0, int param1, int param2, int param3, ml param4, of param5, we param6) {
@@ -38,9 +28,9 @@ final class oa extends jk {
 
     final static boolean a(byte param0, java.applet.Applet param1) {
         try {
-            String var2 = null;
-            Throwable var2_ref = null;
-            RuntimeException var2_ref2 = null;
+            Throwable var2 = null;
+            RuntimeException var2_ref = null;
+            String var2_ref2 = null;
             String var3 = null;
             String[] var4 = null;
             int var5 = 0;
@@ -118,7 +108,7 @@ final class oa extends jk {
                     }
                     case 5: {
                         try {
-                            var2 = "tuhstatbut";
+                            var2_ref2 = "tuhstatbut";
                             var3 = (String) mf.a(-26159, "getcookies", param1);
                             var4 = ma.a(126, ';', var3);
                             var5 = 0;
@@ -161,7 +151,7 @@ final class oa extends jk {
                     }
                     case 8: {
                         try {
-                            if (var4[var5].substring(0, var6).trim().equals((Object) (Object) var2)) {
+                            if (var4[var5].substring(0, var6).trim().equals((Object) (Object) var2_ref2)) {
                                 statePc = 10;
                             } else {
                                 statePc = 9;
@@ -211,7 +201,7 @@ final class oa extends jk {
                     }
                     case 14: {
                         try {
-                            var2_ref = caughtException;
+                            var2 = caughtException;
                             statePc = 15;
                             continue stateLoop;
                         } catch (Throwable stateCaught_14) {
@@ -222,25 +212,10 @@ final class oa extends jk {
                     }
                     case 15: {
                         try {
-                            if (param0 < -120) {
-                                statePc = 17;
-                            } else {
-                                statePc = 16;
-                            }
+                            statePc = 17;
                             continue stateLoop;
                         } catch (Throwable stateCaught_15) {
                             caughtException = stateCaught_15;
-                            statePc = 21;
-                            continue stateLoop;
-                        }
-                    }
-                    case 16: {
-                        try {
-                            field_D = null;
-                            statePc = 17;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_16) {
-                            caughtException = stateCaught_16;
                             statePc = 21;
                             continue stateLoop;
                         }
@@ -287,9 +262,9 @@ final class oa extends jk {
                         return stackIn_20_0 != 0;
                     }
                     case 21: {
-                        var2_ref2 = (RuntimeException) (Object) caughtException;
-                        stackOut_21_0 = (RuntimeException) var2_ref2;
-                        stackOut_21_1 = new StringBuilder().append("oa.B(").append(param0).append(44);
+                        var2_ref = (RuntimeException) (Object) caughtException;
+                        stackOut_21_0 = (RuntimeException) var2_ref;
+                        stackOut_21_1 = new StringBuilder().append("oa.B(").append(-127).append(44);
                         stackIn_23_0 = stackOut_21_0;
                         stackIn_23_1 = stackOut_21_1;
                         stackIn_22_0 = stackOut_21_0;
@@ -426,7 +401,7 @@ final class oa extends jk {
         }
     }
 
-    final static void j(int param0) {
+    final static void j() {
         RuntimeException var1 = null;
         int var1_int = 0;
         Object var2 = null;

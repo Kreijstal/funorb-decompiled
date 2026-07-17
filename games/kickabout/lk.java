@@ -80,29 +80,26 @@ final class lk extends gn {
             }
             stackIn_3_0.field_n = stackIn_3_1;
             param3.field_j = 0;
-            param3.field_z = -hf.a(param0, param1, 27);
+            int discarded$2 = 27;
+            param3.field_z = -hf.a(param0, param1);
             var7 = param1.field_P[param0][-param3.field_z];
             var5 = var7.field_w;
             var6 = var7.field_M;
-            if (param2 <= -12) {
-              L2: {
-                if (0 > var6) {
-                  var5 = 44040192;
-                  var6 = 29360128;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              param3.field_h = uv.a(true, var5 + -param3.field_w, var6 - param3.field_M);
-              param3.a((byte) -31, 2);
-              param3.field_L = param3.field_L + 25;
-              if (15 > param3.field_o) {
-                param3.field_o = param3.field_o + 1;
-                break L0;
+            L2: {
+              if (0 > var6) {
+                var5 = 44040192;
+                var6 = 29360128;
+                break L2;
               } else {
-                return;
+                break L2;
               }
+            }
+            param3.field_h = uv.a(true, var5 + -param3.field_w, var6 - param3.field_M);
+            param3.a((byte) -31, 2);
+            param3.field_L = param3.field_L + 25;
+            if (15 > param3.field_o) {
+              param3.field_o = param3.field_o + 1;
+              break L0;
             } else {
               return;
             }
@@ -137,7 +134,7 @@ final class lk extends gn {
           }
           L4: {
             stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(param2).append(44);
+            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(-96).append(44);
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class cf extends ca {
-    final static boolean a(char param0, byte param1) {
+    final static boolean a(char param0) {
         int stackIn_7_0 = 0;
         int stackOut_5_0 = 0;
         if (160 != param0) {
@@ -91,10 +91,7 @@ class cf extends ca {
         }
     }
 
-    final static String c(int param0) {
-        if (param0 != 32) {
-            return null;
-        }
+    final static String c() {
         return si.field_q;
     }
 

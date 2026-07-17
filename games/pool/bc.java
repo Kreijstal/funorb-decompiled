@@ -13,7 +13,7 @@ final class bc {
     static boolean[] field_j;
     static String[] field_i;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_h = null;
         field_j = null;
         field_d = null;
@@ -33,7 +33,7 @@ final class bc {
         return param0 - param0 * (param1 * (param1 * param1)) / param2 / param2 / param2;
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         RuntimeException var1 = null;
         int[] var1_array = null;
         int[] var2 = null;

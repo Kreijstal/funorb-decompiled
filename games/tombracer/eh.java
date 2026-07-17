@@ -75,7 +75,7 @@ final class eh implements fo {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = 0;
         field_i = null;
     }

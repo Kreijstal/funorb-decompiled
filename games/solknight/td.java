@@ -369,7 +369,7 @@ final class td implements j {
         return stackIn_3_0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_i = null;
         field_h = null;
         field_n = null;

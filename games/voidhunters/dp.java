@@ -6,7 +6,7 @@ final class dp {
     static llb field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         int var1 = 0;
         field_b = null;

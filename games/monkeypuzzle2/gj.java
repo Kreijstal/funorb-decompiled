@@ -6,7 +6,7 @@ final class gj {
     static li field_a;
     static int[] field_c;
 
-    final static void a(byte param0) {
+    final static void a() {
         ke.field_f = new le[3];
         ke.field_f[0] = new le(410, 67);
         ke.field_f[1] = new le(221, 190);
@@ -112,7 +112,8 @@ final class gj {
             tf.a((byte) 33, param6, param13);
             e.a(param19, param8, param11, param18, -1, param20);
             qa.a((byte) -39, param14, param1, param5);
-            w.a(param7, param4, param2, -21734);
+            int discarded$1 = -21734;
+            w.a(param7, param4, param2);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

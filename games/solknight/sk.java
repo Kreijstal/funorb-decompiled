@@ -48,8 +48,9 @@ abstract class sk extends ec {
         try {
           L0: {
             if (l.a(103, param2, param3, param1)) {
-              var5_int = 50 / ((param0 - 21) / 49);
-              stackOut_3_0 = sb.a(param4.b(param3, 12257, param2), 32223);
+              var5_int = -25;
+              int discarded$2 = 32223;
+              stackOut_3_0 = sb.a(param4.b(param3, 12257, param2));
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -61,7 +62,7 @@ abstract class sk extends ec {
           L1: {
             var5 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var5;
-            stackOut_5_1 = new StringBuilder().append("sk.H(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("sk.H(").append(-105).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -122,20 +123,17 @@ abstract class sk extends ec {
             n.field_a = param3;
             hj.field_x = param5;
             sa.field_o = param7;
-            if (param0 != -11400) {
-                field_o = 5;
-            }
             q.field_a = param6;
             nc.field_a = param1;
             il.field_c = (va) (Object) new ea();
             pf.field_d = new ae(param3);
             d.field_b = new ne(il.field_c, pf.field_d);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "sk.F(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + (param8 != null ? "{...}" : "null") + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "sk.F(" + -11400 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + (param8 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static int g(int param0) {
+    final static int g() {
         return 1;
     }
 

@@ -72,23 +72,10 @@ final class pc {
         return stackIn_4_0;
     }
 
-    final static void a(int param0) {
-        Object var2 = null;
-        L0: {
-          if (null != nk.field_b) {
+    final static void a() {
+        if (!(null == nk.field_b)) {
             nk.field_b.a(true);
             nk.field_b = null;
-            break L0;
-          } else {
-            break L0;
-          }
-        }
-        if (param0 != 1) {
-          var2 = null;
-          ti discarded$2 = pc.a((String) null, (String) null, (ci) null, -89);
-          return;
-        } else {
-          return;
         }
     }
 
@@ -267,7 +254,7 @@ final class pc {
         return stackIn_6_0 != 0;
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_a = null;
     }
 

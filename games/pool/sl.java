@@ -16,7 +16,7 @@ class sl extends fe {
     static String field_W;
     static String field_U;
 
-    private final void j(byte param0) {
+    private final void j() {
         if (!(!(((sl) this).field_t instanceof pe))) {
             ((pe) (Object) ((sl) this).field_t).a((sl) this, false);
         }
@@ -53,11 +53,8 @@ class sl extends fe {
             }
             StringBuilder discarded$0 = var6.append(var9);
         }
-        StringBuilder discarded$5 = var6.reverse();
+        StringBuilder discarded$1 = var6.reverse();
         var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
-        if (param0) {
-            field_U = null;
-        }
         return var6.toString();
     }
 
@@ -309,7 +306,8 @@ class sl extends fe {
           L0: {
             L1: {
               super.a(param0, param1, param2, param3);
-              this.k(-20923);
+              int discarded$2 = -20923;
+              this.k();
               if (((sl) this).field_n != 1) {
                 break L1;
               } else {
@@ -486,22 +484,22 @@ class sl extends fe {
     private final void a(int param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
+        String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
         RuntimeException stackOut_11_0 = null;
         StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
         try {
           L0: {
             L1: {
@@ -526,52 +524,44 @@ class sl extends fe {
                 break L2;
               }
             }
-            L3: {
-              ((sl) this).field_R = ((sl) this).field_R + param1.length();
-              if (param0 > 21) {
-                break L3;
-              } else {
-                this.a(-32, -52);
-                break L3;
-              }
-            }
+            ((sl) this).field_R = ((sl) this).field_R + param1.length();
             ((sl) this).field_N = ((sl) this).field_R;
             ((sl) this).i(118);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var3 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var3;
-            stackOut_11_1 = new StringBuilder().append("sl.J(").append(param0).append(44);
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackOut_9_0 = (RuntimeException) var3;
+            stackOut_9_1 = new StringBuilder().append("sl.J(").append(110).append(44);
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
             if (param1 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
-              break L4;
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L3;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
-              break L4;
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L3;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
+          throw wm.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
         }
     }
 
-    public static void i(byte param0) {
+    public static void i() {
         field_Y = null;
         field_V = null;
         field_U = null;
@@ -579,7 +569,7 @@ class sl extends fe {
         field_P = null;
     }
 
-    private final void g(byte param0) {
+    private final void g() {
         try {
             Exception var2 = null;
             String var2_ref = null;
@@ -605,7 +595,7 @@ class sl extends fe {
         }
     }
 
-    private final void k(int param0) {
+    private final void k() {
         int var8 = Pool.field_O;
         if (!(((sl) this).field_S)) {
             ((sl) this).field_r = 0;
@@ -659,12 +649,14 @@ class sl extends fe {
     }
 
     private final void a(boolean param0) {
-        String var2 = this.h((byte) 63);
+        int discarded$0 = 63;
+        String var2 = this.h();
         if (param0) {
             ((sl) this).field_O = 71;
         }
         if (0 < var2.length()) {
-            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.h((byte) 63)), (java.awt.datatransfer.ClipboardOwner) null);
+            int discarded$1 = 63;
+            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.h()), (java.awt.datatransfer.ClipboardOwner) null);
         }
     }
 
@@ -795,9 +787,9 @@ class sl extends fe {
                         L6: {
                           if (((sl) this).field_R >= ((sl) this).field_m.length()) {
                             ((sl) this).field_m = ((sl) this).field_m + param0;
-                            int dupTemp$1 = ((sl) this).field_m.length();
-                            ((sl) this).field_R = dupTemp$1;
-                            ((sl) this).field_N = dupTemp$1;
+                            int dupTemp$4 = ((sl) this).field_m.length();
+                            ((sl) this).field_R = dupTemp$4;
+                            ((sl) this).field_N = dupTemp$4;
                             break L6;
                           } else {
                             ((sl) this).field_m = ((sl) this).field_m.substring(0, ((sl) this).field_R) + param0 + ((sl) this).field_m.substring(((sl) this).field_R, ((sl) this).field_m.length());
@@ -844,7 +836,8 @@ class sl extends fe {
                                         break L8;
                                       } else {
                                         if (65 == param1) {
-                                          this.l(-98);
+                                          int discarded$5 = -98;
+                                          this.l();
                                           stackOut_66_0 = 1;
                                           stackIn_67_0 = stackOut_66_0;
                                           return stackIn_67_0 != 0;
@@ -873,14 +866,16 @@ class sl extends fe {
                                       if (param1 != 67) {
                                         break L7;
                                       } else {
-                                        this.g((byte) 4);
+                                        int discarded$6 = 4;
+                                        this.g();
                                         stackOut_64_0 = 1;
                                         stackIn_65_0 = stackOut_64_0;
                                         return stackIn_65_0 != 0;
                                       }
                                     }
                                   } else {
-                                    this.j((byte) 3);
+                                    int discarded$7 = 3;
+                                    this.j();
                                     stackOut_53_0 = 1;
                                     stackIn_54_0 = stackOut_53_0;
                                     return stackIn_54_0 != 0;
@@ -1036,7 +1031,7 @@ class sl extends fe {
         return stackIn_76_0 != 0;
     }
 
-    private final void l(int param0) {
+    private final void l() {
         this.a(false);
         int var2 = 0;
         this.g(-14642);
@@ -1068,7 +1063,7 @@ class sl extends fe {
         }
     }
 
-    private final String h(byte param0) {
+    private final String h() {
         int var2 = ((sl) this).field_N >= ((sl) this).field_R ? ((sl) this).field_R : ((sl) this).field_N;
         int var3 = ((sl) this).field_R <= ((sl) this).field_N ? ((sl) this).field_N : ((sl) this).field_R;
         return ((sl) this).field_m.substring(var2, var3);

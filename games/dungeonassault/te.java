@@ -312,19 +312,19 @@ final class te {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        var8 = new cn(param0, param1);
+        var8 = new cn(224, 224);
         var9 = var8.field_B;
         var10 = 0;
         var11 = 0;
         L0: while (true) {
-          if (var11 >= param1) {
+          if (var11 >= 224) {
             return var8;
           } else {
             var12 = 0;
             L1: while (true) {
-              if (var12 < param0) {
+              if (var12 < 224) {
                 L2: {
-                  var13 = param4 + (int)((double)param5 * te.a(var12, var11, param2, param6));
+                  var13 = 32 + (int)((double)24 * te.a(var12, var11, param2, param6));
                   if (var13 >= 0) {
                     break L2;
                   } else {

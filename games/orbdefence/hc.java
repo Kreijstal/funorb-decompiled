@@ -206,7 +206,7 @@ final class hc extends ca {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_k = null;
         field_l = null;
         field_i = null;

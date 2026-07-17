@@ -45,14 +45,14 @@ final class bu {
           L0: {
             L1: {
               var4_int = param1.h((byte) 117);
-              param3.b(param2 + -1, param1.field_A & 31 | param1.field_O << 5);
+              param3.b(1, param1.field_A & 31 | param1.field_O << 5);
               param3.b(true, var4_int);
-              param3.b(1, param0 + param1.field_t);
-              param3.b(1, param1.field_Y + param0);
+              param3.b(1, param1.field_t);
+              param3.b(1, param1.field_Y);
               param3.b(1, param1.field_o << 4 | param1.field_P);
               param3.b(1, param1.field_ab);
               param3.b(1, param1.field_r);
-              param3.b(param2 + -1, param1.field_cb);
+              param3.b(1, param1.field_cb);
               param3.b(1, param1.field_V);
               if ((4 & param1.field_V) == 0) {
                 break L1;
@@ -80,7 +80,7 @@ final class bu {
             }
             L4: {
               param3.b(1, var5);
-              if (0 != (var5 & param2)) {
+              if (0 != (var5 & 2)) {
                 param3.b(1, param1.field_E);
                 break L4;
               } else {
@@ -99,7 +99,7 @@ final class bu {
           L5: {
             var4 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var4;
-            stackOut_14_1 = new StringBuilder().append("bu.B(").append(param0).append(44);
+            stackOut_14_1 = new StringBuilder().append("bu.B(").append(0).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -124,7 +124,7 @@ final class bu {
           }
           L6: {
             stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44).append(param2).append(44);
+            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44).append(2).append(44);
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -151,7 +151,7 @@ final class bu {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
         field_c = null;

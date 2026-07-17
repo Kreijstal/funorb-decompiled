@@ -206,7 +206,7 @@ final class wha extends kna {
         ((wha) this).a((byte) 112, new mka[1]);
     }
 
-    public static void r(byte param0) {
+    public static void r() {
         field_J = null;
         field_H = null;
         field_I = null;

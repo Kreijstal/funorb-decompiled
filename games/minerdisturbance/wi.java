@@ -154,7 +154,7 @@ final class wi extends eg {
         this(2188450, 2591221, 9543);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_x = null;
         field_z = null;
         field_v = null;

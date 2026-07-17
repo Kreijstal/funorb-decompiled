@@ -7,7 +7,7 @@ final class bf {
     static String field_d;
     static String[] field_a;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14) {
         int var17 = 0;
         var17 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param14 < param8) {
@@ -92,7 +92,8 @@ final class bf {
                       var3_int = 1;
                       if (10 == param1) {
                         var3_int = 0;
-                        mm.f(-26049);
+                        int discarded$2 = -26049;
+                        mm.f();
                         break L4;
                       } else {
                         break L4;
@@ -183,9 +184,6 @@ final class bf {
         int var5 = 0;
         try {
             on.field_b = true;
-            if (param0 < 56) {
-                bf.a((byte) -76);
-            }
             io.field_c.field_z = param1;
             var2_int = so.field_q.field_g;
             var3 = so.field_q.field_d;
@@ -196,24 +194,15 @@ final class bf {
             io.field_c.a(-24 + so.field_v.field_K - 24, -24 + so.field_v.field_mb - 20, (byte) 67, 16, 24);
             li.field_d.a(80, 24, (byte) 115, so.field_v.field_mb - 44, 120);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "bf.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw r.a((Throwable) (Object) runtimeException, "bf.B(" + 113 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
-        if (param0 > -40) {
-          field_d = null;
-          field_a = null;
-          field_c = null;
-          field_b = null;
-          return;
-        } else {
-          field_a = null;
-          field_c = null;
-          field_b = null;
-          return;
-        }
+        field_a = null;
+        field_c = null;
+        field_b = null;
     }
 
     static {

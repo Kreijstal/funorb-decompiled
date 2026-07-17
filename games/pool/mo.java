@@ -14,7 +14,7 @@ final class mo {
         return netscape.javascript.JSObject.getWindow(param3).call(param0, param1);
     }
 
-    final static void a(String param0, java.applet.Applet param1, byte param2) throws Throwable {
+    final static void a(String param0, java.applet.Applet param1) throws Throwable {
         Object discarded$0 = netscape.javascript.JSObject.getWindow(param1).eval(param0);
     }
 }

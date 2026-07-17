@@ -34,7 +34,7 @@ final class va {
         }
     }
 
-    private final void d(byte param0) {
+    private final void d() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -320,14 +320,15 @@ final class va {
             }
           }
           if (((va) this).field_r) {
-            int fieldTemp$1 = ((va) this).field_n - 1;
+            int fieldTemp$2 = ((va) this).field_n - 1;
             ((va) this).field_n = ((va) this).field_n - 1;
-            if (fieldTemp$1 > 0) {
+            if (fieldTemp$2 > 0) {
               return;
             } else {
               ((va) this).field_n = ((va) this).field_d;
               if (~((va) this).field_j >= ~kf.field_k) {
-                this.d((byte) -61);
+                int discarded$3 = -61;
+                this.d();
                 var2 = -56 / ((param0 - 24) / 47);
                 return;
               } else {
@@ -405,10 +406,10 @@ final class va {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var10 = -124 % ((param5 - 37) / 55);
-            var9 = new bh(param1, param3, param4, param2, param0, param8, param7);
+            var10 = 0;
+            var9 = new bh(40, 65495, param4, param2, param0, param8, param7);
             wi.field_j.a(false, (lh) (Object) var9);
-            s.a(-4471, param6, var9);
+            s.a(-4471, 3, var9);
             stackOut_0_0 = (bh) var9;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -418,7 +419,7 @@ final class va {
           L1: {
             var9_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var9_ref;
-            stackOut_2_1 = new StringBuilder().append("va.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44);
+            stackOut_2_1 = new StringBuilder().append("va.D(").append(param0).append(44).append(40).append(44).append(param2).append(44).append(65495).append(44).append(param4).append(44).append(-102).append(44).append(3).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -470,7 +471,7 @@ final class va {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_t = null;
         field_k = null;
         field_g = null;

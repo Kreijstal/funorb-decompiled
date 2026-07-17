@@ -31,7 +31,7 @@ final class nd {
               var2 = -25 % ((0 - param0) / 59);
               var8 = new sq();
               var1 = var8;
-              String discarded$3 = sd.field_t.substring(1, sd.field_t.indexOf(']'));
+              String discarded$5 = sd.field_t.substring(1, sd.field_t.indexOf(']'));
               var3 = new StringBuilder();
               tp.b((byte) 56);
               L1: while (true) {
@@ -79,7 +79,8 @@ final class nd {
                                       break L2;
                                     } else {
                                       if (var5.equalsIgnoreCase("action")) {
-                                        eq.a(var6_array, var8, 0);
+                                        int discarded$6 = 0;
+                                        eq.a(var6_array, var8);
                                         break L2;
                                       } else {
                                         if (!var5.equalsIgnoreCase("flag")) {
@@ -100,7 +101,8 @@ final class nd {
                                             break L2;
                                           }
                                         } else {
-                                          pa.a(var6_array, var8, (byte) -127);
+                                          int discarded$7 = -127;
+                                          pa.a(var6_array, var8);
                                           break L2;
                                         }
                                       }
@@ -118,8 +120,8 @@ final class nd {
                           break L2;
                         }
                       } else {
-                        StringBuilder discarded$4 = var3.append(sd.field_t);
-                        StringBuilder discarded$5 = var3.append(32);
+                        StringBuilder discarded$8 = var3.append(sd.field_t);
+                        StringBuilder discarded$9 = var3.append(32);
                         break L2;
                       }
                     }
@@ -144,7 +146,7 @@ final class nd {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_i = null;
         field_d = null;
         field_c = null;

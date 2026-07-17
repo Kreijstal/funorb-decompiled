@@ -10,7 +10,7 @@ final class kn extends hp implements hh {
     private String[] field_H;
     static int field_F;
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_I = null;
         field_J = null;
         field_L = null;
@@ -86,7 +86,8 @@ final class kn extends hp implements hh {
                           }
                         }
                       } else {
-                        ((kn) this).field_H[var4_int] = nh.a((CharSequence) (Object) param0[var4_int], 126).replace(' ', ' ');
+                        int discarded$1 = 126;
+                        ((kn) this).field_H[var4_int] = nh.a((CharSequence) (Object) param0[var4_int]).replace(' ', ' ');
                         var4_int++;
                         continue L2;
                       }

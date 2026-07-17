@@ -132,7 +132,7 @@ final class tm {
         return stackIn_31_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_b = null;
         field_a = null;
@@ -141,7 +141,7 @@ final class tm {
         field_g = null;
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         md.field_U[4] = dn.field_j;
         md.field_U[7] = pa.field_W;
         md.field_U[1] = t.field_ib;

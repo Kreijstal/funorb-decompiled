@@ -47,7 +47,7 @@ final class bb extends ki implements pi, ka {
             }
             L2: {
               if (((bb) this).field_O == param0) {
-                boolean discarded$2 = ((bb) this).field_L.a(-1463, (rc) this);
+                boolean discarded$4 = ((bb) this).field_L.a(-1463, (rc) this);
                 break L2;
               } else {
                 break L2;
@@ -57,7 +57,8 @@ final class bb extends ki implements pi, ka {
               if (param0 != ((bb) this).field_L) {
                 break L3;
               } else {
-                this.k(-1525);
+                int discarded$5 = -1525;
+                this.k();
                 break L3;
               }
             }
@@ -95,7 +96,7 @@ final class bb extends ki implements pi, ka {
         }
     }
 
-    final static String a(String param0, String[] param1, int param2) {
+    final static String a(String param0, String[] param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -108,132 +109,126 @@ final class bb extends ki implements pi, ka {
         String var9 = null;
         int var10 = 0;
         int var11 = 0;
-        String stackIn_28_0 = null;
+        String stackIn_26_0 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
+        String stackIn_30_2 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
-        String stackIn_32_2 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
-        String stackIn_35_2 = null;
+        String stackIn_33_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_27_0 = null;
+        String stackOut_25_0 = null;
+        RuntimeException stackOut_27_0 = null;
+        StringBuilder stackOut_27_1 = null;
         RuntimeException stackOut_29_0 = null;
         StringBuilder stackOut_29_1 = null;
+        String stackOut_29_2 = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
+        String stackOut_28_2 = null;
+        RuntimeException stackOut_30_0 = null;
+        StringBuilder stackOut_30_1 = null;
+        RuntimeException stackOut_32_0 = null;
+        StringBuilder stackOut_32_1 = null;
+        String stackOut_32_2 = null;
         RuntimeException stackOut_31_0 = null;
         StringBuilder stackOut_31_1 = null;
         String stackOut_31_2 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
         var11 = SolKnight.field_L ? 1 : 0;
         try {
           L0: {
-            L1: {
-              if (param2 == -63) {
-                break L1;
-              } else {
-                boolean discarded$4 = bb.h(86);
-                break L1;
-              }
-            }
             var3_int = param0.length();
             var4 = var3_int;
             var5 = 0;
-            L2: while (true) {
+            L1: while (true) {
               var6_int = param0.indexOf("<%", var5);
               if (var6_int < 0) {
                 var6 = new StringBuilder(var4);
                 var5 = 0;
                 var7 = 0;
-                L3: while (true) {
+                L2: while (true) {
                   var8 = param0.indexOf("<%", var5);
                   if (var8 >= 0) {
                     var5 = var8 - -2;
-                    L4: while (true) {
-                      L5: {
+                    L3: while (true) {
+                      L4: {
                         if (var3_int <= var5) {
-                          break L5;
+                          break L4;
                         } else {
                           if (!gh.a(param0.charAt(var5), (byte) -124)) {
-                            break L5;
+                            break L4;
                           } else {
                             var5++;
-                            continue L4;
+                            continue L3;
                           }
                         }
                       }
                       var9 = param0.substring(2 + var8, var5);
                       if (ec.a(30418, (CharSequence) (Object) var9)) {
                         if (var5 >= var3_int) {
-                          continue L3;
+                          continue L2;
                         } else {
                           if (param0.charAt(var5) == 62) {
                             var5++;
-                            var10 = il.a((CharSequence) (Object) var9, 6054);
-                            StringBuilder discarded$5 = var6.append(param0.substring(var7, var8));
+                            int discarded$5 = 6054;
+                            var10 = il.a((CharSequence) (Object) var9);
+                            StringBuilder discarded$6 = var6.append(param0.substring(var7, var8));
                             var7 = var5;
-                            StringBuilder discarded$6 = var6.append(param1[var10]);
-                            continue L3;
+                            StringBuilder discarded$7 = var6.append(param1[var10]);
+                            continue L2;
                           } else {
-                            continue L3;
+                            continue L2;
                           }
                         }
                       } else {
-                        continue L3;
+                        continue L2;
                       }
                     }
                   } else {
-                    StringBuilder discarded$7 = var6.append(param0.substring(var7));
-                    stackOut_27_0 = var6.toString();
-                    stackIn_28_0 = stackOut_27_0;
+                    StringBuilder discarded$8 = var6.append(param0.substring(var7));
+                    stackOut_25_0 = var6.toString();
+                    stackIn_26_0 = stackOut_25_0;
                     break L0;
                   }
                 }
               } else {
                 var5 = var6_int - -2;
-                L6: while (true) {
-                  L7: {
+                L5: while (true) {
+                  L6: {
                     if (var3_int <= var5) {
-                      break L7;
+                      break L6;
                     } else {
                       if (!gh.a(param0.charAt(var5), (byte) -124)) {
-                        break L7;
+                        break L6;
                       } else {
                         var5++;
-                        continue L6;
+                        continue L5;
                       }
                     }
                   }
                   var7_ref_String = param0.substring(var6_int - -2, var5);
                   if (!ec.a(30418, (CharSequence) (Object) var7_ref_String)) {
-                    continue L2;
+                    continue L1;
                   } else {
                     if (var5 >= var3_int) {
-                      continue L2;
+                      continue L1;
                     } else {
                       if (param0.charAt(var5) == 62) {
                         var5++;
-                        var8 = il.a((CharSequence) (Object) var7_ref_String, param2 ^ -6041);
+                        int discarded$9 = 6054;
+                        var8 = il.a((CharSequence) (Object) var7_ref_String);
                         var4 = var4 + (-var5 + var6_int + param1[var8].length());
-                        continue L2;
+                        continue L1;
                       } else {
-                        continue L2;
+                        continue L1;
                       }
                     }
                   }
@@ -243,60 +238,60 @@ final class bb extends ki implements pi, ka {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L7: {
             var3 = decompiledCaughtException;
-            stackOut_29_0 = (RuntimeException) var3;
-            stackOut_29_1 = new StringBuilder().append("bb.K(");
-            stackIn_31_0 = stackOut_29_0;
-            stackIn_31_1 = stackOut_29_1;
-            stackIn_30_0 = stackOut_29_0;
-            stackIn_30_1 = stackOut_29_1;
+            stackOut_27_0 = (RuntimeException) var3;
+            stackOut_27_1 = new StringBuilder().append("bb.K(");
+            stackIn_29_0 = stackOut_27_0;
+            stackIn_29_1 = stackOut_27_1;
+            stackIn_28_0 = stackOut_27_0;
+            stackIn_28_1 = stackOut_27_1;
             if (param0 == null) {
+              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
+              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_2 = "null";
+              stackIn_30_0 = stackOut_29_0;
+              stackIn_30_1 = stackOut_29_1;
+              stackIn_30_2 = stackOut_29_2;
+              break L7;
+            } else {
+              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
+              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_2 = "{...}";
+              stackIn_30_0 = stackOut_28_0;
+              stackIn_30_1 = stackOut_28_1;
+              stackIn_30_2 = stackOut_28_2;
+              break L7;
+            }
+          }
+          L8: {
+            stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
+            stackOut_30_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_30_2).append(44);
+            stackIn_32_0 = stackOut_30_0;
+            stackIn_32_1 = stackOut_30_1;
+            stackIn_31_0 = stackOut_30_0;
+            stackIn_31_1 = stackOut_30_1;
+            if (param1 == null) {
+              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
+              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_2 = "null";
+              stackIn_33_0 = stackOut_32_0;
+              stackIn_33_1 = stackOut_32_1;
+              stackIn_33_2 = stackOut_32_2;
+              break L8;
+            } else {
               stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
               stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
-              stackOut_31_2 = "null";
-              stackIn_32_0 = stackOut_31_0;
-              stackIn_32_1 = stackOut_31_1;
-              stackIn_32_2 = stackOut_31_2;
-              break L8;
-            } else {
-              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
-              stackOut_30_2 = "{...}";
-              stackIn_32_0 = stackOut_30_0;
-              stackIn_32_1 = stackOut_30_1;
-              stackIn_32_2 = stackOut_30_2;
+              stackOut_31_2 = "{...}";
+              stackIn_33_0 = stackOut_31_0;
+              stackIn_33_1 = stackOut_31_1;
+              stackIn_33_2 = stackOut_31_2;
               break L8;
             }
           }
-          L9: {
-            stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-            stackOut_32_1 = ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(44);
-            stackIn_34_0 = stackOut_32_0;
-            stackIn_34_1 = stackOut_32_1;
-            stackIn_33_0 = stackOut_32_0;
-            stackIn_33_1 = stackOut_32_1;
-            if (param1 == null) {
-              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
-              stackOut_34_2 = "null";
-              stackIn_35_0 = stackOut_34_0;
-              stackIn_35_1 = stackOut_34_1;
-              stackIn_35_2 = stackOut_34_2;
-              break L9;
-            } else {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
-              stackOut_33_2 = "{...}";
-              stackIn_35_0 = stackOut_33_0;
-              stackIn_35_1 = stackOut_33_1;
-              stackIn_35_2 = stackOut_33_2;
-              break L9;
-            }
-          }
-          throw fc.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + 44 + param2 + 41);
+          throw fc.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 44 + -63 + 41);
         }
-        return stackIn_28_0;
+        return stackIn_26_0;
     }
 
     bb(String param0, String param1, boolean param2, boolean param3, boolean param4) {
@@ -733,9 +728,6 @@ final class bb extends ki implements pi, ka {
         h.field_g = param1;
         me.field_b = param2;
         je.field_d = 1;
-        if (param0 != -14) {
-            bb.a((byte) -52);
-        }
     }
 
     public final void a(int param0, int param1, int param2, pj param3, boolean param4) {
@@ -770,7 +762,8 @@ final class bb extends ki implements pi, ka {
             }
             L2: {
               if (param3 == ((bb) this).field_N) {
-                this.k(-1525);
+                int discarded$451 = -1525;
+                this.k();
                 break L2;
               } else {
                 if (param3 != ((bb) this).field_M) {
@@ -780,11 +773,13 @@ final class bb extends ki implements pi, ka {
                         ig.a((byte) -82);
                         break L2;
                       } else {
-                        qd.a((byte) -13);
+                        int discarded$452 = -13;
+                        qd.a();
                         break L2;
                       }
                     } else {
-                      rf.h(15);
+                      int discarded$453 = 15;
+                      rf.h();
                       break L2;
                     }
                   } else {
@@ -941,11 +936,8 @@ final class bb extends ki implements pi, ka {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_P = null;
-        if (param0 < 92) {
-            return;
-        }
         field_I = null;
     }
 
@@ -1021,7 +1013,7 @@ final class bb extends ki implements pi, ka {
         return ((bb) this).field_O.field_i;
     }
 
-    private final void k(int param0) {
+    private final void k() {
         L0: {
           L1: {
             if (ji.a(-19688)) {

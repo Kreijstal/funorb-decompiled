@@ -27,15 +27,15 @@ abstract class pk {
         nk var3 = null;
         try {
             var3 = qn.field_U;
-            var3.f(param0, -126);
+            var3.f(3, -126);
             var3.c(5, (byte) -108);
             var3.c(0, (byte) -120);
-            int var4 = -54 / ((-22 - param1) / 58);
+            int var4 = -54;
             var3.b(param2.field_j, 114);
             var3.c(param2.field_k, (byte) -111);
             var3.c(param2.field_m, (byte) -62);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "pk.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "pk.D(" + 3 + 44 + -90 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

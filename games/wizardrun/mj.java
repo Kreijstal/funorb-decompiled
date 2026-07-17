@@ -9,12 +9,12 @@ final class mj {
     static boolean field_c;
     static int[] field_a;
 
-    final static int a(byte param0) {
+    final static int a() {
         int var1 = 36;
         return oc.field_a;
     }
 
-    final static ib a(String param0, int param1, int param2) {
+    final static ib a(String param0, int param1) {
         ea var3 = null;
         RuntimeException var3_ref = null;
         ea stackIn_3_0 = null;
@@ -77,20 +77,17 @@ final class mj {
         return (ib) (Object) stackIn_3_0;
     }
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void a(java.awt.Component param0) {
         try {
             param0.removeKeyListener((java.awt.event.KeyListener) (Object) ff.field_H);
-            if (param1 <= 91) {
-                field_c = true;
-            }
             param0.removeFocusListener((java.awt.event.FocusListener) (Object) ff.field_H);
             wk.field_b = -1;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "mj.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "mj.E(" + (param0 != null ? "{...}" : "null") + 44 + 96 + 41);
         }
     }
 
-    final static String a(Throwable param0, byte param1) throws IOException {
+    final static String a(Throwable param0) throws IOException {
         String var2 = null;
         PrintWriter var4 = null;
         String var5 = null;

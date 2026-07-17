@@ -35,7 +35,7 @@ class ns extends il implements bp {
         }
     }
 
-    public static void j(byte param0) {
+    public static void j() {
         field_nb = null;
         field_rb = null;
         field_qb = null;
@@ -48,7 +48,8 @@ class ns extends il implements bp {
         } else {
           ((ns) this).field_E = false;
           if (((ns) this).field_tb) {
-            nb.a(126);
+            int discarded$9 = 126;
+            nb.a();
             if (param0 != -104) {
               ((ns) this).i((byte) -32);
               return;
@@ -57,7 +58,8 @@ class ns extends il implements bp {
             }
           } else {
             if (((ns) this).field_vb) {
-              ur.j(0);
+              int discarded$10 = 0;
+              ur.j();
               if (param0 == -104) {
                 return;
               } else {

@@ -39,7 +39,7 @@ final class bv {
     int field_l;
     int[][] field_A;
 
-    final static int a(byte param0) {
+    final static int a() {
         return qk.field_l;
     }
 

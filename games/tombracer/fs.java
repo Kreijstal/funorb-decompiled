@@ -9,12 +9,12 @@ final class fs extends ci {
     private short[] field_m;
     private int[][] field_n;
 
-    public static void c(int param0) {
+    public static void c() {
         field_p = null;
     }
 
     private final int[] d(int param0, int param1) {
-        if (param0 > param1) {
+        if (0 > param1) {
             return ((fs) this).field_o;
         }
         if (((fs) this).field_n.length <= param1) {
@@ -33,18 +33,19 @@ final class fs extends ci {
         CharSequence var5 = null;
         try {
             wp.field_a = param2;
-            int var4_int = 93 / ((param0 - -33) / 53);
+            int var4_int = 46;
             bta.field_q = 2;
             var5 = (CharSequence) (Object) param2;
             mn.field_n = jd.a(1, var5);
             ica.field_b = param1;
-            bb.a(-21844);
+            int discarded$0 = -21844;
+            bb.a();
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "fs.G(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "fs.G(" + 123 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
-    private final void d(byte param0) {
+    private final void d() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -232,14 +233,6 @@ final class fs extends ci {
             }
           }
         }
-        L16: {
-          if (param0 >= 104) {
-            break L16;
-          } else {
-            ((fs) this).field_m = null;
-            break L16;
-          }
-        }
     }
 
     final int[] c(int param0, int param1) {
@@ -286,10 +279,12 @@ final class fs extends ci {
             throw new RuntimeException("Curve operation requires at least two markers");
         }
         if (((fs) this).field_r == 2) {
-            this.a(false);
+            int discarded$0 = 0;
+            this.a();
         }
         tka.b((byte) 59);
-        this.d((byte) 119);
+        int discarded$1 = 119;
+        this.d();
     }
 
     final void a(byte param0, uia param1, int param2) {
@@ -405,7 +400,7 @@ final class fs extends ci {
         var3 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
-            if (!ej.a(false, param0, param1)) {
+            if (!ej.a(false, true, param1)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0 != 0;
@@ -434,7 +429,7 @@ final class fs extends ci {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var2;
-            stackOut_13_1 = new StringBuilder().append("fs.E(").append(param0).append(44);
+            stackOut_13_1 = new StringBuilder().append("fs.E(").append(1).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -462,7 +457,7 @@ final class fs extends ci {
         return stackIn_12_0 != 0;
     }
 
-    private final void a(boolean param0) {
+    private final void a() {
         int[] var13 = ((fs) this).field_n[0];
         int[] var11 = var13;
         int[] var9 = var11;

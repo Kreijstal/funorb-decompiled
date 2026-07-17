@@ -60,7 +60,8 @@ final class vg extends rg implements qd {
                 } else {
                   ((vg) this).field_n = ((vg) this).field_n + 10;
                   var3 = (Object) (Object) ib.field_b;
-                  if (!ql.a(false)) {
+                  int discarded$69 = 0;
+                  if (!ql.a()) {
                     break L1;
                   } else {
                     var3 = (Object) (Object) ad.field_c;
@@ -139,71 +140,62 @@ final class vg extends rg implements qd {
 
     final static int a(int param0, boolean param1, CharSequence param2) {
         RuntimeException var3 = null;
-        Object var4 = null;
-        int stackIn_3_0 = 0;
+        int stackIn_1_0 = 0;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
+        int stackOut_0_0 = 0;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              if (param1) {
-                break L1;
-              } else {
-                var4 = null;
-                int discarded$2 = vg.a(-14, true, (CharSequence) null);
-                break L1;
-              }
-            }
-            stackOut_2_0 = il.a(param0, (byte) -22, param2, true);
-            stackIn_3_0 = stackOut_2_0;
+            int discarded$2 = 1;
+            stackOut_0_0 = il.a(16, (byte) -22, param2);
+            stackIn_1_0 = stackOut_0_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
-            stackOut_4_1 = new StringBuilder().append("vg.EA(").append(param0).append(44).append(param1).append(44);
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackOut_2_0 = (RuntimeException) var3;
+            stackOut_2_1 = new StringBuilder().append("vg.EA(").append(16).append(44).append(1).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param2 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L2;
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L2;
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw bd.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
         }
-        return stackIn_3_0;
+        return stackIn_1_0;
     }
 
     final static byte[] a(byte[] param0, int param1) {
@@ -306,12 +298,13 @@ final class vg extends rg implements qd {
                 break L1;
               } else {
                 var7 = null;
-                pl discarded$2 = this.a(-124, (ce) null, (String) null);
+                pl discarded$4 = this.a(-124, (ce) null, (String) null);
                 break L1;
               }
             }
             if (((vg) this).field_V == param1) {
-              this.l(30);
+              int discarded$5 = 30;
+              this.l();
               break L0;
             } else {
               return;
@@ -349,7 +342,7 @@ final class vg extends rg implements qd {
         }
     }
 
-    public static void k(int param0) {
+    public static void k() {
         field_U = null;
         field_W = null;
     }
@@ -413,7 +406,8 @@ final class vg extends rg implements qd {
             if (param0 == 15) {
               var4_int = param2.b(param0 + -16, param3);
               var5 = param2.a(var4_int, param1, -11986);
-              stackOut_3_0 = se.a(var4_int, param2, var5, 104);
+              int discarded$2 = 104;
+              stackOut_3_0 = se.a(var4_int, param2, var5);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -505,7 +499,7 @@ final class vg extends rg implements qd {
         return stackIn_4_0;
     }
 
-    private final void l(int param0) {
+    private final void l() {
         if (!(((vg) this).field_H)) {
             return;
         }

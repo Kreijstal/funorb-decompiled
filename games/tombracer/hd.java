@@ -104,7 +104,7 @@ final class hd {
     }
 
     final static void a(int param0, int param1) {
-        mga.field_i = 1000000000L / (long)param0;
+        mga.field_i = 20000000L;
         if (param1 <= 97) {
             field_a = null;
         }

@@ -8,7 +8,7 @@ final class vd {
     static String field_d;
     static int field_b;
 
-    final static int a(byte param0) {
+    final static int a() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -16,9 +16,9 @@ final class vd {
         long var4 = 0L;
         int var6 = 0;
         int var7 = 0;
-        int stackIn_29_0 = 0;
+        int stackIn_27_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_28_0 = 0;
+        int stackOut_26_0 = 0;
         var7 = stellarshard.field_B;
         try {
           L0: {
@@ -54,7 +54,8 @@ final class vd {
                             }
                           }
                         }
-                        wl.l(-12128);
+                        int discarded$3 = -12128;
+                        wl.l();
                         break L3;
                       } else {
                         break L4;
@@ -67,7 +68,8 @@ final class vd {
                     if (2 == rb.field_s) {
                       break L3;
                     } else {
-                      wl.l(-12128);
+                      int discarded$4 = -12128;
+                      wl.l();
                       break L3;
                     }
                   }
@@ -82,7 +84,8 @@ final class vd {
                       var4 = ih.a((byte) -98) - jj.field_p;
                       var6 = (int)((-var4 + 10999L) / 1000L);
                       if (0 >= var6) {
-                        qc.a(5, true, 0);
+                        int discarded$5 = 0;
+                        qc.a(5, true);
                         var3 = 2;
                         break L6;
                       } else {
@@ -91,25 +94,17 @@ final class vd {
                     }
                   }
                 }
-                L7: {
-                  if (param0 < -59) {
-                    break L7;
-                  } else {
-                    field_b = -43;
-                    break L7;
-                  }
-                }
-                stackOut_28_0 = var3;
-                stackIn_29_0 = stackOut_28_0;
+                stackOut_26_0 = var3;
+                stackIn_27_0 = stackOut_26_0;
                 break L0;
               } else {
-                L8: {
+                L7: {
                   ua.field_i.a(0);
                   if (ua.field_i.c(-107)) {
                     var1_int = 1;
-                    break L8;
+                    break L7;
                   } else {
-                    break L8;
+                    break L7;
                   }
                 }
                 if (gi.field_f != 13) {
@@ -124,16 +119,13 @@ final class vd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1, "vd.A(" + param0 + 41);
+          throw ma.a((Throwable) (Object) var1, "vd.A(" + -61 + 41);
         }
-        return stackIn_29_0;
+        return stackIn_27_0;
     }
 
     final static char a(int param0, byte param1) {
         int var3 = 0;
-        if (param0 != -128) {
-            int discarded$0 = vd.a((byte) 99);
-        }
         int var2 = param1 & 255;
         if (!(var2 != 0)) {
             throw new IllegalArgumentException("" + Integer.toString(var2, 16));
@@ -150,7 +142,7 @@ final class vd {
         return (char)var2;
     }
 
-    final static void a(nj param0, int param1) {
+    final static void a(nj param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

@@ -24,17 +24,14 @@ final class t extends ni {
         }
     }
 
-    final static void a(boolean param0, String param1, int param2) {
+    final static void a(boolean param0, String param1) {
         wc.field_b = true;
         oh.field_F = param0 ? true : false;
         sj.field_h = new rg(mb.field_b, cn.field_g, param1, gd.field_B, oh.field_F);
-        if (param2 != 0) {
-            return;
-        }
         try {
             mb.field_b.b(1, (fe) (Object) sj.field_h);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "t.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "t.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 0 + 41);
         }
     }
 

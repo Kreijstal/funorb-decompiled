@@ -4,7 +4,7 @@
 final class mi extends rqa {
     static phb field_o;
 
-    final static void a(kka param0, boolean param1, int param2, byte param3) {
+    final static void a(kka param0, boolean param1) {
         Object var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
@@ -29,7 +29,7 @@ final class mi extends rqa {
           L0: {
             L1: {
               if (null != ew.field_p) {
-                wo.a(1048576, param1, param2, true, param0);
+                wo.a(1048576, param1, 256, true, param0);
                 break L1;
               } else {
                 break L1;
@@ -40,7 +40,7 @@ final class mi extends rqa {
                 var4 = (Object) (Object) flb.field_o;
                 synchronized (var4) {
                   L3: {
-                    aab.field_o.b(param2, (byte) 18, -1);
+                    aab.field_o.b(256, (byte) 18, -1);
                     if (param0 != dha.field_u) {
                       L4: {
                         aab.field_o.a(true);
@@ -95,7 +95,7 @@ final class mi extends rqa {
               break L5;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param1 + 44 + param2 + 44 + 97 + 41);
+          throw rta.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param1 + 44 + 256 + 44 + 97 + 41);
         }
     }
 

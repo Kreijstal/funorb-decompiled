@@ -32,13 +32,14 @@ final class wp {
             }
             var1 = ma.field_a;
             L2: while (true) {
-              if (!so.c(1)) {
+              int discarded$9 = 1;
+              if (!so.c()) {
                 break L0;
               } else {
                 var1.b((byte) -35, 8);
-                int fieldTemp$5 = var1.field_j + 1;
+                int fieldTemp$10 = var1.field_j + 1;
                 var1.field_j = var1.field_j + 1;
-                var2 = fieldTemp$5;
+                var2 = fieldTemp$10;
                 hd.a(var1, param0 + 10995);
                 ma.field_a.e(param0 + 11021, var1.field_j - var2);
                 continue L2;
@@ -58,7 +59,7 @@ final class wp {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_j = null;
         field_e = null;
         field_h = null;
@@ -71,12 +72,12 @@ final class wp {
         field_c = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void a(int param0, int param1, int param2) {
         em.field_ab[param1][0] = param0;
         em.field_ab[param1][1] = param2;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         we var1 = null;
         RuntimeException var1_ref = null;
         int var1_int = 0;

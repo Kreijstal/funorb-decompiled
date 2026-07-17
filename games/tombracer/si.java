@@ -129,7 +129,7 @@ final class si extends kna {
         return false;
     }
 
-    public static void B(int param0) {
+    public static void B() {
         field_F = null;
     }
 
@@ -202,10 +202,6 @@ final class si extends kna {
     }
 
     final static int a(int param0, int param1, int param2, boolean param3) {
-        if (param2 <= 94) {
-            field_F = null;
-            return rl.r(-95);
-        }
         return rl.r(-95);
     }
 

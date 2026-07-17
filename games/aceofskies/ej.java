@@ -7,7 +7,7 @@ final class ej {
     int field_c;
     int field_d;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }

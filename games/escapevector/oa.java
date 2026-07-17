@@ -10,16 +10,16 @@ abstract class oa extends fl {
     boolean field_r;
     boolean field_s;
 
-    final static void a(int param0, dc param1, int param2) {
+    final static void a(int param0, dc param1) {
         c var3 = null;
         try {
             var3 = om.field_c;
-            var3.a(param0, true);
+            var3.a(5, true);
             var3.f(2, -123);
             var3.f(0, -123);
             var3.f(param1.field_j, -123);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "oa.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + -755 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "oa.E(" + 5 + 44 + (param1 != null ? "{...}" : "null") + 44 + -755 + 41);
         }
     }
 

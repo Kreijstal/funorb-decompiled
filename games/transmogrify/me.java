@@ -139,11 +139,6 @@ abstract class me extends ca implements fb {
 
     final static void a(boolean param0, int param1, int param2) {
         wd.field_j = param1;
-        if (param0) {
-            me.a(false, -47, 24);
-            lb.field_j = param2;
-            return;
-        }
         lb.field_j = param2;
     }
 

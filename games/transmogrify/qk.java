@@ -10,7 +10,7 @@ final class qk {
     static int[] field_e;
     int field_f;
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean a(char param0) {
         int stackIn_25_0 = 0;
         int stackIn_28_0 = 0;
         int stackOut_26_0 = 0;
@@ -90,7 +90,7 @@ final class qk {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         int var1 = -19;
         field_e = null;

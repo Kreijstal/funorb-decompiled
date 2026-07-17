@@ -350,7 +350,7 @@ final class rc {
         return stackIn_66_0;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         RuntimeException var1 = null;
         int var2 = 0;
         uj var3_ref_uj = null;

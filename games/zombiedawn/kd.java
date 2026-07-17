@@ -37,7 +37,7 @@ final class kd extends g {
     private int field_kb;
     static int[] field_nb;
 
-    private final void q(int param0) {
+    private final void q() {
         int var2 = 0;
         L0: {
           L1: {
@@ -88,7 +88,7 @@ final class kd extends g {
         return true;
     }
 
-    private final String n(int param0) {
+    private final String n() {
         return "";
     }
 
@@ -584,7 +584,8 @@ final class kd extends g {
                     break L5;
                   } else {
                     L6: {
-                      bj.field_q.c(this.n(-30), var3_int, var4, 16777215, 0);
+                      int discarded$2 = -30;
+                      bj.field_q.c(this.n(), var3_int, var4, 16777215, 0);
                       if (5 == ((kd) this).field_F) {
                         break L6;
                       } else {
@@ -595,7 +596,8 @@ final class kd extends g {
                         }
                       }
                     }
-                    this.a(param1, -1);
+                    int discarded$3 = -1;
+                    this.a(param1);
                     break L5;
                   }
                 }
@@ -1196,7 +1198,7 @@ final class kd extends g {
         }
     }
 
-    private final void a(wk param0, int param1) {
+    private final void a(wk param0) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -1279,7 +1281,7 @@ final class kd extends g {
         }
     }
 
-    public static void w(int param0) {
+    public static void w() {
         field_Fb = null;
         field_nb = null;
     }
@@ -1646,9 +1648,9 @@ final class kd extends g {
           if (((kd) this).field_bb <= 0) {
             break L0;
           } else {
-            int fieldTemp$8 = ((kd) this).field_bb - 1;
+            int fieldTemp$9 = ((kd) this).field_bb - 1;
             ((kd) this).field_bb = ((kd) this).field_bb - 1;
-            if (fieldTemp$8 > 0) {
+            if (fieldTemp$9 > 0) {
               break L0;
             } else {
               break L0;
@@ -1659,9 +1661,9 @@ final class kd extends g {
           if (0 >= ((kd) this).field_fb) {
             break L1;
           } else {
-            int fieldTemp$9 = ((kd) this).field_gb - 1;
+            int fieldTemp$10 = ((kd) this).field_gb - 1;
             ((kd) this).field_gb = ((kd) this).field_gb - 1;
-            if (fieldTemp$9 >= 0) {
+            if (fieldTemp$10 >= 0) {
               break L1;
             } else {
               ((kd) this).field_gb = ((kd) this).field_sb;
@@ -1683,9 +1685,9 @@ final class kd extends g {
                       if (((kd) this).field_Ab <= 0) {
                         break L5;
                       } else {
-                        int fieldTemp$10 = ((kd) this).field_Gb - 1;
+                        int fieldTemp$11 = ((kd) this).field_Gb - 1;
                         ((kd) this).field_Gb = ((kd) this).field_Gb - 1;
-                        if (fieldTemp$10 <= 0) {
+                        if (fieldTemp$11 <= 0) {
                           ((kd) this).field_Gb = 12;
                           ((kd) this).field_Ab = ((kd) this).field_Ab - 1;
                           break L5;
@@ -1699,7 +1701,7 @@ final class kd extends g {
                     } else {
                       ((kd) this).field_Gb = 0;
                       ((kd) this).field_eb = true;
-                      fn discarded$11 = kh.a(95, false);
+                      fn discarded$12 = kh.a(95, false);
                       ((kd) this).z(0);
                       ck.a(-13, 6836);
                       break L4;
@@ -1736,7 +1738,8 @@ final class kd extends g {
                 }
               }
               L9: {
-                this.q(1);
+                int discarded$13 = 1;
+                this.q();
                 ((kd) this).g((byte) -127);
                 if (var9 != null) {
                   L10: {
@@ -1841,9 +1844,9 @@ final class kd extends g {
               } else {
                 if (((kd) this).field_F == 21) {
                   L18: {
-                    int fieldTemp$12 = ((kd) this).field_zb - 1;
+                    int fieldTemp$14 = ((kd) this).field_zb - 1;
                     ((kd) this).field_zb = ((kd) this).field_zb - 1;
-                    if (fieldTemp$12 <= 0) {
+                    if (fieldTemp$14 <= 0) {
                       ((kd) this).field_zb = 35;
                       ((kd) this).e(4, -6904);
                       ((kd) this).j((byte) 82);
@@ -1888,9 +1891,9 @@ final class kd extends g {
                           if (((kd) this).field_wb.field_F == 20) {
                             break L21;
                           } else {
-                            int fieldTemp$13 = ((kd) this).field_Eb;
+                            int fieldTemp$15 = ((kd) this).field_Eb;
                             ((kd) this).field_Eb = ((kd) this).field_Eb + 1;
-                            if (fieldTemp$13 > 60) {
+                            if (fieldTemp$15 > 60) {
                               break L21;
                             } else {
                               if (!((kd) this).field_wb.field_V) {
@@ -1978,9 +1981,9 @@ final class kd extends g {
                           break L24;
                         }
                       }
-                      int fieldTemp$14 = ((kd) this).field_zb - 1;
+                      int fieldTemp$16 = ((kd) this).field_zb - 1;
                       ((kd) this).field_zb = ((kd) this).field_zb - 1;
-                      if (0 >= fieldTemp$14) {
+                      if (0 >= fieldTemp$16) {
                         L27: {
                           ((kd) this).field_wb.o(-6253);
                           stackOut_115_0 = dj.field_e;
@@ -2128,7 +2131,7 @@ final class kd extends g {
                             if (2 == ((kd) this).field_G) {
                               ((kd) this).field_G = 0;
                               ((kd) this).field_ob = false;
-                              boolean discarded$15 = dj.field_e.b(0, ((kd) this).f(237239984), true, ((kd) this).a(true));
+                              boolean discarded$17 = dj.field_e.b(0, ((kd) this).f(237239984), true, ((kd) this).a(true));
                               ((kd) this).e(4, -6904);
                               break L7;
                             } else {

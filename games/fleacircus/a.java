@@ -11,8 +11,8 @@ final class a {
     static String field_h;
     static String field_c;
 
-    final static int a(int param0, int param1, byte param2) {
-        int var5 = 27 / ((param2 - 22) / 37);
+    final static int a(int param0, int param1) {
+        int var5 = -27;
         int var3 = param1 >> 16;
         int var4 = 65535 & param1;
         int var6 = param0 >> 16;
@@ -20,7 +20,7 @@ final class a {
         return var3 * param0 - -(var6 * var4) - -(var4 * var7 >> 16);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_e = null;
         field_b = null;

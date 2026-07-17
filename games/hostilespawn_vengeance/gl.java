@@ -9,8 +9,8 @@ final class gl {
             param3 = param14;
             param4 = param12;
             for (var19 = param13; var19 < 0; var19++) {
-                if (param3 < param6) {
-                    param0 = param10[(param6 - param3) * param9 / param6];
+                if (param3 < 147456) {
+                    param0 = param10[(147456 - param3) * 128 / 147456];
                     param1 = param8[param7];
                     var18 = 256 - (param0 & 255);
                     param8[param7] = (param1 & 16711935) * var18 >> 8 & 16711935 | (param1 & 65280) * var18 >> 8 & 65280;
@@ -26,12 +26,12 @@ final class gl {
         }
     }
 
-    final static bd[] a(bd param0, int param1, int param2) {
+    final static bd[] a(bd param0) {
         int var10 = 0;
-        bd[] var3 = new bd[param1 * 8];
-        int[][] var4 = new int[param1 * 8][];
+        bd[] var3 = new bd[160];
+        int[][] var4 = new int[160][];
         int var5 = param0.field_z / 8;
-        int var6 = param0.field_A / param1;
+        int var6 = param0.field_A / 20;
         int var7 = 0;
         int var8 = 0;
         int var9 = var4.length;
@@ -44,7 +44,8 @@ final class gl {
                 var7 = 0;
                 var8 = var8 + var6;
             }
-            eh.b(false);
+            int discarded$0 = 0;
+            eh.b();
         }
         return var3;
     }
@@ -70,11 +71,11 @@ final class gl {
         int var22 = 0;
         int var23 = 0;
         L0: {
-          var5 = param2 * param2;
-          var6 = param0 - param2 >> 4;
-          var7 = param0 + param2 + 15 >> 4;
-          var8 = param1 - param2 >> 4;
-          var9 = param1 + param2 + 15 >> 4;
+          var5 = 147456;
+          var6 = param0 - 384 >> 4;
+          var7 = param0 + 399 >> 4;
+          var8 = param1 - 384 >> 4;
+          var9 = param1 + 399 >> 4;
           if (var6 >= si.field_b) {
             break L0;
           } else {
@@ -126,6 +127,6 @@ final class gl {
         var21 = var20 - var19;
         var22 = var6 + var8 * si.field_e;
         var23 = si.field_e + var6 - var7;
-        gl.a(0, 0, 0, 0, 0, var15, var5, var22, si.field_i, param3, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
+        gl.a(0, 0, 0, 0, 0, var15, var5, var22, si.field_i, 128, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
     }
 }

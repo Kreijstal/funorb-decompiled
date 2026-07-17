@@ -232,7 +232,8 @@ final class kl extends pm {
         try {
           L0: {
             L1: {
-              this.c(false);
+              int discarded$1 = 0;
+              this.c();
               if (param2 <= -5) {
                 break L1;
               } else {
@@ -581,14 +582,14 @@ final class kl extends pm {
         int var4 = 0;
         int var5 = Confined.field_J ? 1 : 0;
         int var3 = 0;
-        for (var4 = param0; var4 < 9; var4++) {
+        for (var4 = 0; var4 < 9; var4++) {
             var3 = var3 + ti.field_j[2047 & ((kl) this).field_L[9 * param1 - -var4]] * bh.field_b[var4];
             var3 = var3 + ti.field_m[2047 & ((kl) this).field_L[param1 * 9 - -var4]] * bh.field_b[var4 + 9];
         }
         return (double)var3 * kd.field_r;
     }
 
-    private final void c(boolean param0) {
+    private final void c() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

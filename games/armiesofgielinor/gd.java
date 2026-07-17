@@ -70,8 +70,8 @@ final class gd extends kk {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        int stackIn_5_0 = 0;
-        int stackOut_4_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackOut_5_0 = 0;
         short stackOut_3_0 = 0;
         var4 = 0;
         L0: while (true) {
@@ -80,16 +80,16 @@ final class gd extends kk {
           } else {
             L1: {
               if (((gd) this).field_ab == null) {
-                stackOut_4_0 = -1;
-                stackIn_5_0 = stackOut_4_0;
+                stackOut_5_0 = -1;
+                stackIn_6_0 = stackOut_5_0;
                 break L1;
               } else {
                 stackOut_3_0 = ((gd) this).field_ab[var4];
-                stackIn_5_0 = stackOut_3_0;
+                stackIn_6_0 = stackOut_3_0;
                 break L1;
               }
             }
-            var3 = stackIn_5_0;
+            var3 = stackIn_6_0;
             if (var3 == -1) {
               var1 = ((gd) this).field_r[var4] & 65535;
               if (((gd) this).field_R[var4] != -1) {
@@ -481,53 +481,18 @@ final class gd extends kk {
     }
 
     final kk a(boolean param0, boolean param1, boolean param2) {
-        L0: {
-          if (!param0) {
+        if (!param0) {
             if (field_u.length < ((gd) this).field_Y) {
-              field_u = new byte[((gd) this).field_Y + 100];
-              if (param1) {
-                break L0;
-              } else {
-                if (field_C.length >= ((gd) this).field_Y) {
-                  break L0;
-                } else {
-                  field_gb = new int[((gd) this).field_Y + 100];
-                  field_m = new int[((gd) this).field_Y + 100];
-                  field_K = new int[((gd) this).field_Y + 100];
-                  field_C = new short[((gd) this).field_Y + 100];
-                  break L0;
-                }
-              }
-            } else {
-              if (param1) {
-                break L0;
-              } else {
-                if (field_C.length >= ((gd) this).field_Y) {
-                  break L0;
-                } else {
-                  field_gb = new int[((gd) this).field_Y + 100];
-                  field_m = new int[((gd) this).field_Y + 100];
-                  field_K = new int[((gd) this).field_Y + 100];
-                  field_C = new short[((gd) this).field_Y + 100];
-                  break L0;
-                }
-              }
+                field_u = new byte[((gd) this).field_Y + 100];
             }
-          } else {
-            if (param1) {
-              break L0;
-            } else {
-              if (field_C.length >= ((gd) this).field_Y) {
-                break L0;
-              } else {
+        }
+        if (!param1) {
+            if (field_C.length < ((gd) this).field_Y) {
                 field_gb = new int[((gd) this).field_Y + 100];
                 field_m = new int[((gd) this).field_Y + 100];
                 field_K = new int[((gd) this).field_Y + 100];
                 field_C = new short[((gd) this).field_Y + 100];
-                break L0;
-              }
             }
-          }
         }
         return this.a(param0, param1, field_ib, field_u, field_C, field_gb, field_m, field_K);
     }
@@ -576,12 +541,19 @@ final class gd extends kk {
 
     final void b(int param0, int param1, int param2) {
         int var4 = 0;
-        for (var4 = 0; var4 < ((gd) this).field_I; var4++) {
+        var4 = 0;
+        L0: while (true) {
+          if (var4 >= ((gd) this).field_I) {
+            ((gd) this).field_k = false;
+            return;
+          } else {
             ((gd) this).field_G[var4] = ((gd) this).field_G[var4] * param0 / 128;
             ((gd) this).field_o[var4] = ((gd) this).field_o[var4] * param1 / 128;
             ((gd) this).field_F[var4] = ((gd) this).field_F[var4] * param2 / 128;
+            var4++;
+            continue L0;
+          }
         }
-        ((gd) this).field_k = false;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -1238,17 +1210,17 @@ final class gd extends kk {
         int var25 = 0;
         Object stackIn_14_0 = null;
         int stackIn_14_1 = 0;
-        Object stackIn_15_0 = null;
-        int stackIn_15_1 = 0;
         Object stackIn_16_0 = null;
         int stackIn_16_1 = 0;
-        int stackIn_16_2 = 0;
+        Object stackIn_17_0 = null;
+        int stackIn_17_1 = 0;
+        int stackIn_17_2 = 0;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_13_0 = null;
         int stackOut_13_1 = 0;
-        Object stackOut_15_0 = null;
-        int stackOut_15_1 = 0;
-        int stackOut_15_2 = 0;
+        Object stackOut_16_0 = null;
+        int stackOut_16_1 = 0;
+        int stackOut_16_2 = 0;
         Object stackOut_14_0 = null;
         int stackOut_14_1 = 0;
         int stackOut_14_2 = 0;
@@ -1279,29 +1251,29 @@ final class gd extends kk {
                 L3: {
                   stackOut_13_0 = this;
                   stackOut_13_1 = 0;
-                  stackIn_15_0 = stackOut_13_0;
-                  stackIn_15_1 = stackOut_13_1;
+                  stackIn_16_0 = stackOut_13_0;
+                  stackIn_16_1 = stackOut_13_1;
                   stackIn_14_0 = stackOut_13_0;
                   stackIn_14_1 = stackOut_13_1;
                   if (param7 < 0L) {
-                    stackOut_15_0 = this;
-                    stackOut_15_1 = stackIn_15_1;
-                    stackOut_15_2 = 0;
-                    stackIn_16_0 = stackOut_15_0;
-                    stackIn_16_1 = stackOut_15_1;
-                    stackIn_16_2 = stackOut_15_2;
+                    stackOut_16_0 = this;
+                    stackOut_16_1 = stackIn_16_1;
+                    stackOut_16_2 = 0;
+                    stackIn_17_0 = stackOut_16_0;
+                    stackIn_17_1 = stackOut_16_1;
+                    stackIn_17_2 = stackOut_16_2;
                     break L3;
                   } else {
                     stackOut_14_0 = this;
                     stackOut_14_1 = stackIn_14_1;
                     stackOut_14_2 = 1;
-                    stackIn_16_0 = stackOut_14_0;
-                    stackIn_16_1 = stackOut_14_1;
-                    stackIn_16_2 = stackOut_14_2;
+                    stackIn_17_0 = stackOut_14_0;
+                    stackIn_17_1 = stackOut_14_1;
+                    stackIn_17_2 = stackOut_14_2;
                     break L3;
                   }
                 }
-                this.a(stackIn_16_1 != 0, stackIn_16_2 != 0, param7, (int) ((gd) this).field_A, ((gd) this).field_A << 1);
+                this.a(stackIn_17_1 != 0, stackIn_17_2 != 0, param7, (int) ((gd) this).field_A, ((gd) this).field_A << 1);
                 break L0;
               } else {
                 L4: {
@@ -1350,9 +1322,6 @@ final class gd extends kk {
                   if (((gd) this).field_l <= 0) {
                     break L7;
                   } else {
-                    field_X[var21] = var22;
-                    field_Q[var21] = var23;
-                    field_O[var21] = var24;
                     break L7;
                   }
                 }
@@ -1384,26 +1353,16 @@ final class gd extends kk {
         int[] var15 = null;
         int var16 = 0;
         int var17 = 0;
-        int var18 = 0;
         int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
         int var29 = 0;
         int[] var45 = null;
         int[] var46 = null;
         int[] var47 = null;
         int[] var48 = null;
         int[] var49 = null;
-        int stackIn_76_0 = 0;
-        int stackOut_75_0 = 0;
+        int stackIn_75_0 = 0;
         int stackOut_74_0 = 0;
+        int stackOut_72_0 = 0;
         if (param4 < 1600) {
           L0: {
             var7 = 0;
@@ -1547,16 +1506,16 @@ final class gd extends kk {
                           } else {
                             L13: {
                               if (var9 <= 64) {
-                                stackOut_75_0 = var9;
-                                stackIn_76_0 = stackOut_75_0;
+                                stackOut_74_0 = var9;
+                                stackIn_75_0 = stackOut_74_0;
                                 break L13;
                               } else {
-                                stackOut_74_0 = 64;
-                                stackIn_76_0 = stackOut_74_0;
+                                stackOut_72_0 = 64;
+                                stackIn_75_0 = stackOut_72_0;
                                 break L13;
                               }
                             }
-                            var10 = stackIn_76_0;
+                            var10 = stackIn_75_0;
                             var45 = field_U[var8];
                             var12 = 0;
                             L14: while (true) {
@@ -1726,9 +1685,9 @@ final class gd extends kk {
                       return;
                     } else {
                       L29: {
-                        int incrementValue$7 = var12;
+                        int incrementValue$6 = var12;
                         var12++;
-                        this.b(var14[incrementValue$7]);
+                        this.b(var14[incrementValue$6]);
                         if (var12 != var13) {
                           break L29;
                         } else {
@@ -1762,9 +1721,9 @@ final class gd extends kk {
                           break L31;
                         } else {
                           L32: {
-                            int incrementValue$8 = var12;
+                            int incrementValue$7 = var12;
                             var12++;
-                            this.b(var14[incrementValue$8]);
+                            this.b(var14[incrementValue$7]);
                             if (var12 != var13) {
                               break L32;
                             } else {
@@ -1798,9 +1757,9 @@ final class gd extends kk {
                             break L34;
                           } else {
                             L35: {
-                              int incrementValue$9 = var12;
+                              int incrementValue$8 = var12;
                               var12++;
-                              this.b(var14[incrementValue$9]);
+                              this.b(var14[incrementValue$8]);
                               if (var12 != var13) {
                                 break L35;
                               } else {
@@ -1834,9 +1793,9 @@ final class gd extends kk {
                               break L37;
                             } else {
                               L38: {
-                                int incrementValue$10 = var12;
+                                int incrementValue$9 = var12;
                                 var12++;
-                                this.b(var14[incrementValue$10]);
+                                this.b(var14[incrementValue$9]);
                                 if (var12 != var13) {
                                   break L38;
                                 } else {
@@ -1861,20 +1820,19 @@ final class gd extends kk {
                             }
                           }
                         }
-                        var17 = field_P[var16];
-                        var49 = field_j[var16];
-                        var29 = 0;
-                        var19 = var29;
-                        L39: while (true) {
+                        L39: {
+                          var17 = field_P[var16];
+                          var49 = field_j[var16];
+                          var29 = 0;
+                          var19 = var29;
                           if (var29 >= var17) {
-                            var16++;
-                            continue L27;
+                            break L39;
                           } else {
-                            this.b(var49[var29]);
-                            var29++;
-                            continue L39;
+                            break L39;
                           }
                         }
+                        var16++;
+                        continue L27;
                       }
                     }
                   }
@@ -1882,134 +1840,51 @@ final class gd extends kk {
               }
             } else {
               if (((gd) this).field_R[var8] != -2) {
+                var9 = ((gd) this).field_jb[var8];
+                var10 = ((gd) this).field_bb[var8];
+                var11 = ((gd) this).field_N[var8];
+                var12 = field_B[var9];
+                var13 = field_B[var10];
+                var14_int = field_B[var11];
                 L40: {
-                  var9 = ((gd) this).field_jb[var8];
-                  var10 = ((gd) this).field_bb[var8];
-                  var11 = ((gd) this).field_N[var8];
-                  var12 = field_B[var9];
-                  var13 = field_B[var10];
-                  var14_int = field_B[var11];
-                  if (!param0) {
+                  if (!param1) {
                     break L40;
                   } else {
-                    L41: {
-                      if (var12 == -5000) {
-                        break L41;
-                      } else {
-                        if (var13 == -5000) {
-                          break L41;
-                        } else {
-                          if (var14_int != -5000) {
-                            break L40;
-                          } else {
-                            break L41;
-                          }
-                        }
-                      }
-                    }
-                    var15_int = field_X[var9];
-                    var16 = field_X[var10];
-                    var17 = field_X[var11];
-                    var18 = field_Q[var9];
-                    var19 = field_Q[var10];
-                    var20 = field_Q[var11];
-                    var21 = field_O[var9];
-                    var22 = field_O[var10];
-                    var23 = field_O[var11];
-                    var15_int = var15_int - var16;
-                    var17 = var17 - var16;
-                    var18 = var18 - var19;
-                    var20 = var20 - var19;
-                    var21 = var21 - var22;
-                    var23 = var23 - var22;
-                    var24 = var18 * var23 - var21 * var20;
-                    var25 = var21 * var17 - var15_int * var23;
-                    var26 = var15_int * var20 - var18 * var17;
-                    if (var16 * var24 + var19 * var25 + var22 * var26 > 0) {
-                      field_D[var8] = true;
-                      if (!field_f) {
-                        var27 = (field_J[var9] + field_J[var10] + field_J[var11]) / 3 + param3;
-                        if (field_T[var27] >= 64) {
-                          L42: {
-                            var28 = field_T[var27];
-                            if (var28 != 64) {
-                              break L42;
-                            } else {
-                              if (field_x != 512) {
-                                field_x = field_x + 1;
-                                var28 = 65 + field_x;
-                                field_T[var27] = 65 + field_x;
-                                break L42;
-                              } else {
-                                var8++;
-                                continue L3;
-                              }
-                            }
-                          }
-                          var28 -= 65;
-                          field_L[var28] = field_L[var28] + 1;
-                          field_kb[var28][field_L[var28]] = var8;
-                          var8++;
-                          continue L3;
-                        } else {
-                          field_T[var27] = field_T[var27] + 1;
-                          field_U[var27][field_T[var27]] = var8;
-                          var8++;
-                          continue L3;
-                        }
-                      } else {
-                        field_hb[var7] = (field_J[var9] + field_J[var10] + field_J[var11]) / 3;
-                        int incrementValue$11 = var7;
-                        var7++;
-                        field_W[incrementValue$11] = var8;
-                        var8++;
-                        continue L3;
-                      }
-                    } else {
-                      var8++;
-                      continue L3;
-                    }
-                  }
-                }
-                L43: {
-                  if (!param1) {
-                    break L43;
-                  } else {
                     if (!this.a(ot.field_G + tm.field_c, vl.field_j + tm.field_j, field_V[var9], field_V[var10], field_V[var11], var12, var13, var14_int)) {
-                      break L43;
+                      break L40;
                     } else {
-                      int fieldTemp$12 = ws.field_O;
+                      int fieldTemp$10 = ws.field_O;
                       ws.field_O = ws.field_O + 1;
-                      am.field_I[fieldTemp$12] = param2;
+                      am.field_I[fieldTemp$10] = param2;
                       param1 = false;
-                      break L43;
+                      break L40;
                     }
                   }
                 }
                 if ((var12 - var13) * (field_V[var11] - field_V[var10]) - (field_V[var9] - field_V[var10]) * (var14_int - var13) > 0) {
-                  L44: {
-                    L45: {
+                  L41: {
+                    L42: {
                       field_D[var8] = false;
                       if (var12 < 0) {
-                        break L45;
+                        break L42;
                       } else {
                         if (var13 < 0) {
-                          break L45;
+                          break L42;
                         } else {
                           if (var14_int < 0) {
-                            break L45;
+                            break L42;
                           } else {
                             if (var12 > tm.field_l) {
-                              break L45;
+                              break L42;
                             } else {
                               if (var13 > tm.field_l) {
-                                break L45;
+                                break L42;
                               } else {
                                 if (var14_int <= tm.field_l) {
                                   field_s[var8] = false;
-                                  break L44;
+                                  break L41;
                                 } else {
-                                  break L45;
+                                  break L42;
                                 }
                               }
                             }
@@ -2018,21 +1893,21 @@ final class gd extends kk {
                       }
                     }
                     field_s[var8] = true;
-                    break L44;
+                    break L41;
                   }
                   if (!field_f) {
                     var15_int = (field_J[var9] + field_J[var10] + field_J[var11]) / 3 + param3;
                     if (field_T[var15_int] >= 64) {
-                      L46: {
+                      L43: {
                         var16 = field_T[var15_int];
                         if (var16 != 64) {
-                          break L46;
+                          break L43;
                         } else {
                           if (field_x != 512) {
                             field_x = field_x + 1;
                             var16 = 65 + field_x;
                             field_T[var15_int] = 65 + field_x;
-                            break L46;
+                            break L43;
                           } else {
                             var8++;
                             continue L3;
@@ -2052,9 +1927,9 @@ final class gd extends kk {
                     }
                   } else {
                     field_hb[var7] = (field_J[var9] + field_J[var10] + field_J[var11]) / 3;
-                    int incrementValue$13 = var7;
+                    int incrementValue$11 = var7;
                     var7++;
-                    field_W[incrementValue$13] = var8;
+                    field_W[incrementValue$11] = var8;
                     var8++;
                     continue L3;
                   }
@@ -2328,7 +2203,7 @@ final class gd extends kk {
                     var10 = 0;
                     L12: while (true) {
                       if (var10 >= var9) {
-                        return;
+                        break L0;
                       } else {
                         var11 = param1[var10];
                         if (var11 < ((gd) this).field_S.length) {
@@ -2437,7 +2312,7 @@ final class gd extends kk {
                         var33 = 0;
                         L17: while (true) {
                           if (var33 >= var9) {
-                            break L0;
+                            return;
                           } else {
                             var34 = param1[var33];
                             if (var34 < ((gd) this).field_S.length) {
@@ -2511,7 +2386,7 @@ final class gd extends kk {
                   var10 = 0;
                   L22: while (true) {
                     if (var10 >= var9) {
-                      return;
+                      break L0;
                     } else {
                       var11 = param1[var10];
                       if (var11 < ((gd) this).field_S.length) {
@@ -2667,7 +2542,7 @@ final class gd extends kk {
                           var39 = 0;
                           L31: while (true) {
                             if (var39 >= var9) {
-                              break L0;
+                              return;
                             } else {
                               var40 = param1[var39];
                               if (var40 < ((gd) this).field_S.length) {
@@ -3287,40 +3162,44 @@ final class gd extends kk {
     }
 
     private static void $cfr$clinit() {
-        field_ib = new gd();
-        field_gb = new int[1];
-        field_u = new byte[1];
-        field_C = new short[1];
-        field_K = new int[1];
-        field_m = new int[1];
-        gd discarded$0 = new gd();
-        gd discarded$1 = new gd();
-        field_y = false;
-        field_M = new int[4096];
-        field_eb = new int[10];
-        field_h = new int[12];
-        field_V = new int[4096];
-        field_s = new boolean[4096];
-        field_P = new int[12];
-        field_D = new boolean[4096];
-        field_z = new int[4096];
-        field_n = new int[10];
-        field_X = new int[4096];
-        field_x = 0;
-        field_f = false;
-        field_B = new int[4096];
-        field_J = new int[4096];
-        field_O = new int[4096];
-        field_Q = new int[4096];
-        field_j = new int[12][4096];
-        if (field_f) {
-            field_hb = new int[4096];
-            field_W = new int[4096];
-        } else {
+        L0: {
+          field_ib = new gd();
+          field_gb = new int[1];
+          field_u = new byte[1];
+          field_C = new short[1];
+          field_K = new int[1];
+          field_m = new int[1];
+          gd discarded$4 = new gd();
+          gd discarded$5 = new gd();
+          field_y = false;
+          field_M = new int[4096];
+          field_eb = new int[10];
+          field_h = new int[12];
+          field_V = new int[4096];
+          field_s = new boolean[4096];
+          field_P = new int[12];
+          field_D = new boolean[4096];
+          field_z = new int[4096];
+          field_n = new int[10];
+          field_X = new int[4096];
+          field_x = 0;
+          field_f = false;
+          field_B = new int[4096];
+          field_J = new int[4096];
+          field_O = new int[4096];
+          field_Q = new int[4096];
+          field_j = new int[12][4096];
+          if (!field_f) {
             field_T = new int[1600];
             field_U = new int[1600][64];
             field_L = new int[32];
             field_kb = new int[32][512];
+            break L0;
+          } else {
+            field_hb = new int[4096];
+            field_W = new int[4096];
+            break L0;
+          }
         }
         field_fb = new int[10];
     }

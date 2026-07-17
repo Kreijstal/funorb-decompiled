@@ -193,7 +193,7 @@ final class we extends ie {
         return stackIn_6_0 != 0;
     }
 
-    final static boolean g(int param0) {
+    final static boolean g() {
         if (10 > jv.field_a) {
             return false;
         }
@@ -207,13 +207,16 @@ final class we extends ie {
         field_C = null;
         field_B = null;
         field_z = null;
+        if (param0) {
+            field_C = null;
+        }
     }
 
     final void d(boolean param0) {
         ((we) this).field_y.c(param0);
     }
 
-    final static void e(byte param0) {
+    final static void e() {
         qv.field_o = ig.field_a.d(-1);
         int var1 = 0;
         CharSequence var2 = (CharSequence) (Object) qv.field_o;

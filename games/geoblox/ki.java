@@ -8,7 +8,7 @@ final class ki {
     static String field_a;
     static String field_e;
 
-    final static void a(vd param0, int param1) {
+    final static void a(vd param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -39,44 +39,40 @@ final class ki {
                 var2_int = 0;
                 L2: while (true) {
                   if (var2_int >= oj.field_b) {
-                    if (param1 == 31274) {
-                      int dupTemp$4 = param0.c(125);
-                      p.field_o[dupTemp$4] = p.field_o[dupTemp$4] + 1;
-                      var2_int = 0;
-                      var3 = 0;
-                      L3: while (true) {
-                        if (oj.field_b <= var3) {
-                          oj.field_b = var2_int;
-                          int fieldTemp$5 = oj.field_b;
-                          oj.field_b = oj.field_b + 1;
-                          n.field_k[fieldTemp$5] = param0;
-                          break L0;
-                        } else {
-                          L4: {
-                            L5: {
-                              if (param0.field_f == n.field_k[var3].field_f) {
-                                var4 = n.field_k[var3].c(124);
-                                if (p.field_o[var4] > pc.field_v) {
-                                  p.field_o[var4] = p.field_o[var4] - 1;
-                                  break L4;
-                                } else {
-                                  break L5;
-                                }
+                    int dupTemp$4 = param0.c(125);
+                    p.field_o[dupTemp$4] = p.field_o[dupTemp$4] + 1;
+                    var2_int = 0;
+                    var3 = 0;
+                    L3: while (true) {
+                      if (oj.field_b <= var3) {
+                        oj.field_b = var2_int;
+                        int fieldTemp$5 = oj.field_b;
+                        oj.field_b = oj.field_b + 1;
+                        n.field_k[fieldTemp$5] = param0;
+                        break L0;
+                      } else {
+                        L4: {
+                          L5: {
+                            if (param0.field_f == n.field_k[var3].field_f) {
+                              var4 = n.field_k[var3].c(124);
+                              if (p.field_o[var4] > pc.field_v) {
+                                p.field_o[var4] = p.field_o[var4] - 1;
+                                break L4;
                               } else {
                                 break L5;
                               }
+                            } else {
+                              break L5;
                             }
-                            int incrementValue$6 = var2_int;
-                            var2_int++;
-                            n.field_k[incrementValue$6] = n.field_k[var3];
-                            break L4;
                           }
-                          var3++;
-                          continue L3;
+                          int incrementValue$6 = var2_int;
+                          var2_int++;
+                          n.field_k[incrementValue$6] = n.field_k[var3];
+                          break L4;
                         }
+                        var3++;
+                        continue L3;
                       }
-                    } else {
-                      return;
                     }
                   } else {
                     L6: {
@@ -127,11 +123,11 @@ final class ki {
               break L7;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param1 + 41);
+          throw t.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + 31274 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_c = null;
         field_a = null;

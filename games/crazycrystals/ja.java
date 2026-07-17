@@ -9,7 +9,7 @@ final class ja extends ff {
     static Boolean field_f;
     static dl[] field_h;
 
-    final static void d(byte param0) {
+    final static void d() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int[] var2 = null;
@@ -98,7 +98,8 @@ final class ja extends ff {
                         var18 = 0;
                         L5: while (true) {
                           if (var18 >= 3) {
-                            wl.a(ai.field_j, var17, 9, false, false, kf.field_a, true);
+                            int discarded$1 = 1;
+                            wl.a(ai.field_j, var17, 9, false, false, kf.field_a);
                             tg.a(var9, var7, var12, -9206, var14, var8, var17, var13);
                             var15++;
                             continue L3;
@@ -200,7 +201,7 @@ final class ja extends ff {
         return stackIn_11_0 != 0;
     }
 
-    final static void a(vc param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void a(vc param0, int param1) {
         RuntimeException var6 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -251,7 +252,7 @@ final class ja extends ff {
               break L1;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + -17213 + 41);
+          throw dn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + 240 + 44 + 23 + 44 + 25 + 44 + -17213 + 41);
         }
     }
 
@@ -378,7 +379,7 @@ final class ja extends ff {
         }
     }
 
-    final static void a(int param0, f[][] param1, int param2, boolean param3, int param4) {
+    final static void a(int param0, f[][] param1, int param2, boolean param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -518,7 +519,8 @@ final class ja extends ff {
                       if (vh.field_a) {
                         break L4;
                       } else {
-                        this.e(15);
+                        int discarded$2 = 15;
+                        this.e();
                         break L4;
                       }
                     }
@@ -551,9 +553,9 @@ final class ja extends ff {
                 }
               } else {
                 if (q.field_a[var5].field_b) {
-                  int incrementValue$1 = var4;
+                  int incrementValue$3 = var4;
                   var4++;
-                  ma.field_n[incrementValue$1] = var5;
+                  ma.field_n[incrementValue$3] = var5;
                   var5++;
                   continue L2;
                 } else {
@@ -583,7 +585,7 @@ final class ja extends ff {
         kj.a((byte) 37);
     }
 
-    private final void e(int param0) {
+    private final void e() {
         int var2 = 0;
         int var3 = 0;
         int var4_int = 0;

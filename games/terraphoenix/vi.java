@@ -16,7 +16,7 @@ final class vi extends uf {
     int field_r;
     static int field_o;
 
-    public static void c(byte param0) {
+    public static void c() {
         field_j = null;
         field_t = null;
         field_h = null;

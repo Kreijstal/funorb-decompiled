@@ -11,7 +11,7 @@ final class rn implements Runnable {
     private boolean field_f;
     int field_d;
 
-    final static void b(byte param0) {
+    final static void b() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -33,8 +33,9 @@ final class rn implements Runnable {
             w.field_D.e();
             ne.a(0, gf.field_b, (byte) 24, 0, 0, 128, gf.field_k);
             vm.field_Jb.e();
-            ib.a(0, 0, gf.field_k, 0, gf.field_b, 23962);
-            bi discarded$1 = id.a(2, hp.field_n, "intro", "intro2_glow");
+            int discarded$2 = 23962;
+            ib.a(0, 0, gf.field_k, 0, gf.field_b);
+            bi discarded$3 = id.a(2, hp.field_n, "intro", "intro2_glow");
             ac.field_s = id.a(2, hp.field_n, "intro", "intro2_earth");
             oe.field_c = id.a(2, hp.field_n, "intro", "intro2_clouds");
             ja.a(-174137048, ac.field_s.field_z / 2, ac.field_s, ac.field_s.field_w / 4);
@@ -215,7 +216,7 @@ final class rn implements Runnable {
         return stackIn_15_0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_g = null;
         field_e = null;
@@ -481,8 +482,10 @@ final class rn implements Runnable {
                 break L7;
               } else {
                 rh.a((byte) -120);
-                ec.e((byte) -66);
-                an.a(true);
+                int discarded$2 = -66;
+                ec.e();
+                int discarded$3 = 1;
+                an.a();
                 ak.field_A = false;
                 break L7;
               }
@@ -613,17 +616,16 @@ final class rn implements Runnable {
 
     final static void a(int param0, bc param1, boolean param2, bc param3, bc param4) {
         try {
-            wh.field_a = tf.a("", -12179);
-            if (param0 != 624) {
-                rn.b((byte) -62);
-            }
+            int discarded$0 = -12179;
+            wh.field_a = tf.a("");
             wh.field_a.a(false, 37);
             vl.a((byte) 87, param1, param4, param3);
-            jg.a(0);
+            int discarded$1 = 0;
+            jg.a();
             ee.field_l = oj.field_Fb;
             fj.field_s = oj.field_Fb;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "rn.I(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw r.a((Throwable) (Object) runtimeException, "rn.I(" + 624 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -733,15 +735,18 @@ final class rn implements Runnable {
 
     final static void a(vk param0, int param1, int param2, bc param3) {
         try {
-            aj.field_c = param1 * tj.a(param2 ^ param2) / 1000;
-            jc.a(param2 + -1102, param3);
-            oj.a(param2 ^ 902, param3);
-            qr.a(param3, (byte) 56);
-            eq.d((byte) -47);
-            r.b((byte) -112);
+            aj.field_c = param1 * tj.a(0) / 1000;
+            jc.a(-102, param3);
+            oj.a(110, param3);
+            int discarded$0 = 56;
+            qr.a(param3);
+            int discarded$1 = -47;
+            eq.d();
+            int discarded$2 = -112;
+            r.b();
             js.field_j = -aj.field_c;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "rn.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw r.a((Throwable) (Object) runtimeException, "rn.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 1000 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 

@@ -104,7 +104,8 @@ final class aib implements ntb, ofa, utb {
                   break L1;
                 }
               }
-              var3.field_a = (crb[]) (Object) sqb.a((tv[]) (Object) var3.field_a, (tv[]) (Object) ((aib) this).field_a, 1, tob.field_o, false);
+              int discarded$2 = 0;
+              var3.field_a = (crb[]) (Object) sqb.a((tv[]) (Object) var3.field_a, (tv[]) (Object) ((aib) this).field_a, 1, tob.field_o);
               break L0;
             }
           }
@@ -3556,7 +3557,7 @@ final class aib implements ntb, ofa, utb {
               if (param0 == -37) {
                 break L1;
               } else {
-                int discarded$2 = aib.a((byte) 0, (String) null, -53, 66, 33);
+                int discarded$4 = aib.a((byte) 0, (String) null, -53, 66, 33);
                 break L1;
               }
             }
@@ -3565,7 +3566,8 @@ final class aib implements ntb, ofa, utb {
               stackIn_7_0 = stackOut_6_0;
               break L0;
             } else {
-              stackOut_4_0 = de.a(param3, 300).a(param1, param2, param4, (byte) 112, (aja[]) null);
+              int discarded$5 = 300;
+              stackOut_4_0 = de.a(param3).a(param1, param2, param4, (byte) 112, (aja[]) null);
               stackIn_5_0 = stackOut_4_0;
               return stackIn_5_0;
             }
@@ -3772,7 +3774,8 @@ final class aib implements ntb, ofa, utb {
 
     final void a(boolean param0) {
         try {
-            hua.a((aib) this, (byte) 96);
+            int discarded$4 = 96;
+            hua.a((aib) this);
             if (!param0) {
                 aib.a((byte) 105, (asb) null);
             }

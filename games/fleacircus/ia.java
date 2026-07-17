@@ -15,112 +15,78 @@ final class ia extends lh {
     static int[][] field_p;
     static int[] field_q;
 
-    final static sf a(int param0, int param1, int param2) {
-        sf var3 = null;
-        byte[] var4 = null;
-        double var5 = 0.0;
+    final static sf a() {
         int var7 = 0;
-        int var8 = 0;
-        var8 = fleas.field_A ? 1 : 0;
-        var3 = new sf(22050, param0);
-        if (param2 != 1) {
-          ia.a(-45);
-          var4 = var3.field_l;
-          var5 = 6.283185307179586 * (double)param1 / 22050.0;
-          var7 = param0 + -1;
-          L0: while (true) {
-            if (0 > var7) {
-              return var3;
-            } else {
-              var4[var7] = (byte)(int)(ma.a(var5 * (double)var7, 97) * 127.0);
-              var7--;
-              continue L0;
-            }
-          }
-        } else {
-          var4 = var3.field_l;
-          var5 = 6.283185307179586 * (double)param1 / 22050.0;
-          var7 = param0 + -1;
-          L1: while (true) {
-            if (0 > var7) {
-              return var3;
-            } else {
-              var4[var7] = (byte)(int)(ma.a(var5 * (double)var7, 97) * 127.0);
-              var7--;
-              continue L1;
-            }
-          }
+        int var8 = fleas.field_A ? 1 : 0;
+        sf var3 = new sf(22050, 882);
+        byte[] var4 = var3.field_l;
+        double var5 = 6.283185307179586 * (double)2500 / 22050.0;
+        for (var7 = 881; 0 <= var7; var7--) {
+            var4[var7] = (byte)(int)(ma.a(var5 * (double)var7, 97) * 127.0);
         }
+        return var3;
     }
 
     final static int a(boolean param0, byte[] param1, int param2) {
         RuntimeException var3 = null;
-        int stackIn_2_0 = 0;
-        int stackIn_4_0 = 0;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        int stackOut_2_0 = 0;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
         String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           L0: {
-            if (param0) {
-              stackOut_3_0 = uj.a(false, 0, param2, param1);
-              stackIn_4_0 = stackOut_3_0;
-              break L0;
-            } else {
-              stackOut_1_0 = 40;
-              stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0;
-            }
+            stackOut_2_0 = uj.a(false, 0, param2, param1);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
-            stackOut_5_1 = new StringBuilder().append("ia.F(").append(param0).append(44);
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("ia.F(").append(1).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
-              break L1;
-            } else {
               stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
               stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L1;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
               break L1;
             }
           }
-          throw pf.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param2 + 41);
+          throw pf.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param2 + 41);
         }
-        return stackIn_4_0;
+        return stackIn_3_0;
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_m = null;
         field_l = null;
         field_s = null;
@@ -140,63 +106,55 @@ final class ia extends lh {
         var3 = fleas.field_A ? 1 : 0;
         try {
           L0: {
-            L1: {
-              gf.field_d = param1;
-              if (param0) {
-                break L1;
-              } else {
-                sf discarded$2 = ia.a(17, 35, -72);
-                break L1;
-              }
-            }
+            gf.field_d = param1;
             var2 = (pd) (Object) bk.field_d.c((byte) 47);
-            L2: while (true) {
+            L1: while (true) {
               if (var2 == null) {
                 if (jc.field_c != null) {
                   var2 = (pd) (Object) jc.field_c.c((byte) 47);
-                  L3: while (true) {
+                  L2: while (true) {
                     if (var2 == null) {
                       break L0;
                     } else {
-                      L4: {
+                      L3: {
                         if (var2.field_n.b((byte) -54)) {
                           var2.field_m.h(128 + gf.field_d * var2.field_j >> 8);
-                          break L4;
+                          break L3;
                         } else {
                           var2.c(-1);
-                          break L4;
+                          break L3;
                         }
                       }
                       var2 = (pd) (Object) jc.field_c.b((byte) -105);
-                      continue L3;
+                      continue L2;
                     }
                   }
                 } else {
                   return;
                 }
               } else {
-                L5: {
+                L4: {
                   if (!var2.field_n.b((byte) -54)) {
                     var2.c(-1);
-                    break L5;
+                    break L4;
                   } else {
                     var2.field_m.h(gf.field_d * var2.field_j - -128 >> 8);
-                    break L5;
+                    break L4;
                   }
                 }
                 var2 = (pd) (Object) bk.field_d.b((byte) -105);
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pf.a((Throwable) (Object) var2_ref, "ia.B(" + param0 + 44 + param1 + 41);
+          throw pf.a((Throwable) (Object) var2_ref, "ia.B(" + 1 + 44 + param1 + 41);
         }
     }
 
-    final static void b(boolean param0) {
+    final static void b() {
     }
 
     final static void a(int param0) {

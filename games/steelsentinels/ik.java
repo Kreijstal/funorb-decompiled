@@ -20,13 +20,13 @@ final class ik {
         return ((ik) this).field_f;
     }
 
-    public static void b(int param0) {
-        int var1 = 4 / ((param0 - -28) / 39);
+    public static void b() {
+        int var1 = 2;
         field_g = null;
         field_i = null;
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         ad.field_j = ck.a(125);
         ag.field_p = new ka();
         ok.a(true, true, -73);
@@ -36,7 +36,7 @@ final class ik {
         this(param0, false);
     }
 
-    final static void a(long param0, int param1, boolean param2) {
+    final static void a(long param0, int param1) {
         kj var4 = mm.field_g;
         var4.a(param1, (byte) -117);
         var4.field_p = var4.field_p + 1;

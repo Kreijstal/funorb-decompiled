@@ -7,15 +7,15 @@ final class qn {
     static st field_a;
     static tp field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
-        int var1 = -119 % ((param0 - -44) / 62);
+        int var1 = 0;
         field_d = null;
         field_c = null;
     }
 
-    final static String b(int param0) {
+    final static String b() {
         if (2 > bl.field_c) {
             return ji.field_a;
         }

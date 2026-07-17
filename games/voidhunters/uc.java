@@ -4,11 +4,11 @@
 final class uc {
     static String field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         boolean[] var1 = null;
         int var1_int = 0;
         RuntimeException var1_ref = null;

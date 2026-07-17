@@ -19,7 +19,7 @@ final class is {
         int stackOut_2_0 = 0;
         if (param1 >= 0) {
           if (-1583 <= param1) {
-            if (0 != param1 % param0) {
+            if (0 != param1 % 4) {
               return false;
             } else {
               if (0 != param1 % 100) {
@@ -62,7 +62,7 @@ final class is {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_e = null;
         field_d = null;

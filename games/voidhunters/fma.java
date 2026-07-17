@@ -72,7 +72,7 @@ final class fma extends mfb {
         return 3;
     }
 
-    final static void l(int param0) {
+    final static void l() {
         lw.field_i = new llb(0L, (llb) null);
         if (ll.field_o) {
           lw.field_i.b(-561, nna.field_v);
@@ -81,7 +81,8 @@ final class fma extends mfb {
           tb.field_a = new llb(0L, (llb) null);
           tb.field_a.b(-561, (llb) (Object) lc.field_b.field_a);
           tb.field_a.b(-561, gmb.field_c);
-          bp.a(5);
+          int discarded$2 = 5;
+          bp.a();
           return;
         } else {
           lw.field_i.b(-561, fh.field_f);
@@ -89,7 +90,8 @@ final class fma extends mfb {
           tb.field_a = new llb(0L, (llb) null);
           tb.field_a.b(-561, (llb) (Object) lc.field_b.field_a);
           tb.field_a.b(-561, gmb.field_c);
-          bp.a(5);
+          int discarded$3 = 5;
+          bp.a();
           return;
         }
     }
@@ -110,10 +112,7 @@ final class fma extends mfb {
     fma() {
     }
 
-    public static void i(byte param0) {
-        if (param0 != -22) {
-            return;
-        }
+    public static void i() {
         field_c = null;
         field_b = null;
     }

@@ -17,22 +17,15 @@ final class ad extends qb {
     static int[] field_g;
     int field_l;
 
-    final static void a(int param0) {
+    final static void a() {
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_g = null;
         field_q = null;
         field_i = null;
         field_j = null;
-        if (param0 < 65) {
-          field_g = null;
-          field_t = null;
-          return;
-        } else {
-          field_t = null;
-          return;
-        }
+        field_t = null;
     }
 
     ad(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {

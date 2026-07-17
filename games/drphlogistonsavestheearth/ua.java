@@ -25,52 +25,38 @@ final class ua extends java.awt.Canvas {
                   }
                 }
               }
-              L1: {
-                if (param2 < ch.field_A) {
-                  break L1;
-                } else {
-                  if (param2 >= ch.field_A + uh.field_r.field_y) {
-                    break L1;
-                  } else {
-                    if (param0 < v.field_N) {
-                      break L1;
+              if (param2 >= ch.field_A) {
+                if (param2 < ch.field_A + uh.field_r.field_y) {
+                  if (param0 >= v.field_N) {
+                    if (v.field_N + uh.field_r.field_w <= param0) {
+                      return -1;
                     } else {
-                      if (v.field_N + uh.field_r.field_w <= param0) {
-                        break L1;
-                      } else {
-                        return 1;
-                      }
+                      return 1;
                     }
+                  } else {
+                    return -1;
                   }
+                } else {
+                  return -1;
                 }
-              }
-              if (param1 != -13412) {
-                return 39;
               } else {
                 return -1;
               }
             } else {
-              L2: {
-                if (param2 < ch.field_A) {
-                  break L2;
-                } else {
-                  if (param2 >= ch.field_A + uh.field_r.field_y) {
-                    break L2;
-                  } else {
-                    if (param0 < v.field_N) {
-                      break L2;
+              if (param2 >= ch.field_A) {
+                if (param2 < ch.field_A + uh.field_r.field_y) {
+                  if (param0 >= v.field_N) {
+                    if (v.field_N + uh.field_r.field_w > param0) {
+                      return 1;
                     } else {
-                      if (v.field_N + uh.field_r.field_w <= param0) {
-                        break L2;
-                      } else {
-                        return 1;
-                      }
+                      return -1;
                     }
+                  } else {
+                    return -1;
                   }
+                } else {
+                  return -1;
                 }
-              }
-              if (param1 != -13412) {
-                return 39;
               } else {
                 return -1;
               }
@@ -78,35 +64,20 @@ final class ua extends java.awt.Canvas {
           } else {
             if (param2 >= ch.field_A) {
               if (param2 < ch.field_A + uh.field_r.field_y) {
-                L3: {
-                  if (param0 < v.field_N) {
-                    break L3;
+                if (param0 >= v.field_N) {
+                  if (v.field_N + uh.field_r.field_w > param0) {
+                    return 1;
                   } else {
-                    if (v.field_N + uh.field_r.field_w <= param0) {
-                      break L3;
-                    } else {
-                      return 1;
-                    }
+                    return -1;
                   }
-                }
-                if (param1 != -13412) {
-                  return 39;
                 } else {
                   return -1;
                 }
-              } else {
-                if (param1 != -13412) {
-                  return 39;
-                } else {
-                  return -1;
-                }
-              }
-            } else {
-              if (param1 != -13412) {
-                return 39;
               } else {
                 return -1;
               }
+            } else {
+              return -1;
             }
           }
         }
@@ -120,7 +91,7 @@ final class ua extends java.awt.Canvas {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
     }
@@ -185,13 +156,13 @@ final class ua extends java.awt.Canvas {
             String stackOut_16_2 = null;
             try {
               L0: {
-                dh.field_N = new lh(param7);
-                nj.field_p = new lh(param4);
+                dh.field_N = new lh(5000);
+                nj.field_p = new lh(5000);
                 ci.field_W = param13;
                 ei.field_o = param3;
                 lb.field_v = param1;
                 ia.field_c = param10;
-                var15_int = 42 % ((param2 - -70) / 44);
+                var15_int = 0;
                 if (!param0) {
                   stackOut_2_0 = 0;
                   stackIn_3_0 = stackOut_2_0;
@@ -236,7 +207,7 @@ final class ua extends java.awt.Canvas {
               L3: {
                 var15 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_12_0 = (RuntimeException) var15;
-                stackOut_12_1 = new StringBuilder().append("ua.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+                stackOut_12_1 = new StringBuilder().append("ua.B(").append(param0).append(44).append(param1).append(44).append(34).append(44).append(param3).append(44).append(5000).append(44);
                 stackIn_14_0 = stackOut_12_0;
                 stackIn_14_1 = stackOut_12_1;
                 stackIn_13_0 = stackOut_12_0;
@@ -261,7 +232,7 @@ final class ua extends java.awt.Canvas {
               }
               L4: {
                 stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-                stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(param6).append(44).append(param7).append(44);
+                stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(param6).append(44).append(5000).append(44);
                 stackIn_17_0 = stackOut_15_0;
                 stackIn_17_1 = stackOut_15_1;
                 stackIn_16_0 = stackOut_15_0;

@@ -12,10 +12,7 @@ final class pm {
     static long field_c;
     static int field_d;
 
-    public static void b(byte param0) {
-        if (param0 != -12) {
-            return;
-        }
+    public static void b() {
         field_g = null;
     }
 
@@ -81,13 +78,11 @@ final class pm {
     }
 
     final static bd[] a(int param0, int param1, byte param2, int param3) {
-        if (param2 != -117) {
-            pm.b((byte) -84);
-        }
-        return ei.a(param0, 1, param1, param3, 119);
+        int discarded$0 = 119;
+        return ei.a(param0, 1, param1, param3);
     }
 
-    final static String a(long param0, byte param1) {
+    final static String a(long param0) {
         long var8 = 0L;
         int var10 = 0;
         int var11 = 0;

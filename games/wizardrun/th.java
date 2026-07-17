@@ -12,7 +12,7 @@ final class th {
     static String field_b;
     private rk field_f;
 
-    final static void b(byte param0) {
+    final static void b() {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -97,7 +97,7 @@ final class th {
         }
     }
 
-    final static StringBuilder a(StringBuilder param0, char param1, int param2, int param3) {
+    final static StringBuilder a(StringBuilder param0) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -124,15 +124,15 @@ final class th {
         try {
           L0: {
             var4_int = param0.length();
-            param0.setLength(param2);
+            param0.setLength(0);
             var5 = var4_int;
             L1: while (true) {
-              if (param2 <= var5) {
+              if (var5 >= 0) {
                 stackOut_5_0 = (StringBuilder) param0;
                 stackIn_6_0 = stackOut_5_0;
                 break L0;
               } else {
-                param0.setCharAt(var5, param1);
+                param0.setCharAt(var5, ' ');
                 var5++;
                 continue L1;
               }
@@ -166,15 +166,12 @@ final class th {
               break L2;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 44 + param2 + 44 + 1 + 41);
+          throw bd.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + 32 + 44 + 0 + 44 + 1 + 41);
         }
         return stackIn_6_0;
     }
 
-    public static void a(byte param0) {
-        if (param0 <= 60) {
-            return;
-        }
+    public static void a() {
         field_a = null;
         field_e = null;
         field_g = null;

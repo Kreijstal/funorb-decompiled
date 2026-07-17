@@ -8,7 +8,7 @@ final class vh {
     static co field_c;
     static String field_b;
 
-    final static void a(int param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -20,138 +20,130 @@ final class vh {
         int var8 = 0;
         sb var9 = null;
         int var10 = 0;
+        String stackIn_9_0 = null;
+        int stackIn_9_1 = 0;
+        String stackIn_10_0 = null;
+        int stackIn_10_1 = 0;
         String stackIn_11_0 = null;
         int stackIn_11_1 = 0;
-        String stackIn_12_0 = null;
-        int stackIn_12_1 = 0;
-        String stackIn_13_0 = null;
-        int stackIn_13_1 = 0;
-        int stackIn_13_2 = 0;
-        sb stackIn_18_0 = null;
+        int stackIn_11_2 = 0;
+        sb stackIn_16_0 = null;
         RuntimeException decompiledCaughtException = null;
+        String stackOut_8_0 = null;
+        int stackOut_8_1 = 0;
         String stackOut_10_0 = null;
         int stackOut_10_1 = 0;
-        String stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        int stackOut_12_2 = 0;
-        String stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        int stackOut_11_2 = 0;
-        sb stackOut_17_0 = null;
-        sb stackOut_16_0 = null;
+        int stackOut_10_2 = 0;
+        String stackOut_9_0 = null;
+        int stackOut_9_1 = 0;
+        int stackOut_9_2 = 0;
+        sb stackOut_15_0 = null;
+        sb stackOut_14_0 = null;
         var10 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
-            L1: {
-              var1_int = ia.field_e + -qn.field_o;
-              qn.field_o = -(var1_int >> 1) + bq.field_d;
-              ia.field_e = var1_int + qn.field_o;
-              if (param0 >= 16) {
-                break L1;
-              } else {
-                field_b = null;
-                break L1;
-              }
-            }
+            var1_int = ia.field_e + -qn.field_o;
+            qn.field_o = -(var1_int >> 1) + bq.field_d;
+            ia.field_e = var1_int + qn.field_o;
             ce.field_c = -(nf.field_c >> 1) + qh.field_b;
             var2 = ce.field_c;
             var3 = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (~var3 <= ~pl.field_J.length) {
                 break L0;
               } else {
-                L3: {
+                L2: {
                   var4 = uf.field_e[var3];
                   if (var4 < 0) {
                     var5 = hd.field_n;
-                    break L3;
+                    break L2;
                   } else {
                     if (var4 == vp.field_Gb.field_j) {
                       var5 = mj.field_k;
-                      break L3;
+                      break L2;
                     } else {
                       var5 = mh.field_a;
-                      break L3;
+                      break L2;
                     }
+                  }
+                }
+                L3: {
+                  var6 = pl.field_J[var3];
+                  stackOut_8_0 = (String) var6;
+                  stackOut_8_1 = 8192;
+                  stackIn_10_0 = stackOut_8_0;
+                  stackIn_10_1 = stackOut_8_1;
+                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_1 = stackOut_8_1;
+                  if (var4 < 0) {
+                    stackOut_10_0 = (String) (Object) stackIn_10_0;
+                    stackOut_10_1 = stackIn_10_1;
+                    stackOut_10_2 = 0;
+                    stackIn_11_0 = stackOut_10_0;
+                    stackIn_11_1 = stackOut_10_1;
+                    stackIn_11_2 = stackOut_10_2;
+                    break L3;
+                  } else {
+                    stackOut_9_0 = (String) (Object) stackIn_9_0;
+                    stackOut_9_1 = stackIn_9_1;
+                    stackOut_9_2 = 1;
+                    stackIn_11_0 = stackOut_9_0;
+                    stackIn_11_1 = stackOut_9_1;
+                    stackIn_11_2 = stackOut_9_2;
+                    break L3;
                   }
                 }
                 L4: {
-                  var6 = pl.field_J[var3];
-                  stackOut_10_0 = (String) var6;
-                  stackOut_10_1 = 8192;
-                  stackIn_12_0 = stackOut_10_0;
-                  stackIn_12_1 = stackOut_10_1;
-                  stackIn_11_0 = stackOut_10_0;
-                  stackIn_11_1 = stackOut_10_1;
-                  if (var4 < 0) {
-                    stackOut_12_0 = (String) (Object) stackIn_12_0;
-                    stackOut_12_1 = stackIn_12_1;
-                    stackOut_12_2 = 0;
-                    stackIn_13_0 = stackOut_12_0;
-                    stackIn_13_1 = stackOut_12_1;
-                    stackIn_13_2 = stackOut_12_2;
-                    break L4;
-                  } else {
-                    stackOut_11_0 = (String) (Object) stackIn_11_0;
-                    stackOut_11_1 = stackIn_11_1;
-                    stackOut_11_2 = 1;
-                    stackIn_13_0 = stackOut_11_0;
-                    stackIn_13_1 = stackOut_11_1;
-                    stackIn_13_2 = stackOut_11_2;
-                    break L4;
-                  }
-                }
-                L5: {
-                  var7 = jp.a(stackIn_13_0, stackIn_13_1, stackIn_13_2 != 0);
+                  var7 = jp.a(stackIn_11_0, stackIn_11_1, stackIn_11_2 != 0);
                   var8 = bq.field_d - (var7 >> 1);
                   if (var4 >= 0) {
-                    L6: {
+                    L5: {
                       if (~vp.field_Gb.field_j != ~var4) {
-                        stackOut_17_0 = uo.field_m;
-                        stackIn_18_0 = stackOut_17_0;
-                        break L6;
+                        stackOut_15_0 = uo.field_m;
+                        stackIn_16_0 = stackOut_15_0;
+                        break L5;
                       } else {
-                        stackOut_16_0 = wg.field_d;
-                        stackIn_18_0 = stackOut_16_0;
-                        break L6;
+                        stackOut_14_0 = wg.field_d;
+                        stackIn_16_0 = stackOut_14_0;
+                        break L5;
                       }
                     }
-                    L7: {
-                      var9 = stackIn_18_0;
+                    L6: {
+                      var9 = stackIn_16_0;
                       var2 = var2 + ki.field_e;
                       if (var9 != null) {
                         var9.a(var2, dk.field_d - -(lf.field_b << 1), -1, (uf.field_a << 1) + var7, var8 + -uf.field_a);
-                        break L7;
+                        break L6;
                       } else {
-                        break L7;
+                        break L6;
                       }
                     }
                     var2 = var2 + lf.field_b;
-                    break L5;
+                    break L4;
                   } else {
-                    break L5;
+                    break L4;
                   }
                 }
-                L8: {
+                L7: {
                   if (var4 >= 0) {
                     ie.field_G.a(var6, var8, var2 + w.field_q, var5, -1);
                     var2 = var2 + (dk.field_d + lf.field_b - -ki.field_e);
-                    break L8;
+                    break L7;
                   } else {
                     lm.field_o.a(var6, var8, ab.field_b + var2, var5, -1);
                     var2 = var2 + da.field_m;
-                    break L8;
+                    break L7;
                   }
                 }
                 var3++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1, "vh.B(" + param0 + 41);
+          throw aa.a((Throwable) (Object) var1, "vh.B(" + 88 + 41);
         }
     }
 
@@ -288,7 +280,7 @@ final class vh {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
         field_c = null;
     }

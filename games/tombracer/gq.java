@@ -292,7 +292,8 @@ final class gq extends uta {
               var7 = lp.a((byte) 48, param0);
               var5 = 80 / ((-44 - param1) / 36);
               var8 = new cr(var7);
-              var6 = ed.a(var8, -31733);
+              int discarded$2 = -31733;
+              var6 = ed.a(var8);
               if (var8.a((byte) 85)) {
                 ((gq) this).a((byte) -80, (Object) (Object) var6.a(-1, ((gq) this).field_v));
                 stackOut_2_0 = 1;
@@ -676,12 +677,12 @@ final class gq extends uta {
                           }
                         }
                       }
-                      boolean discarded$6 = ((gq) this).field_o.a(101, -19696, '￿');
+                      boolean discarded$7 = ((gq) this).field_o.a(101, -19696, '￿');
                       break L8;
                     }
                   }
                   L12: {
-                    boolean discarded$7 = super.a((byte) -72, param1, param2);
+                    boolean discarded$8 = super.a((byte) -72, param1, param2);
                     var4 = ((gq) this).field_o.e((byte) -124);
                     var5 = ((gq) this).field_o.j(-1320);
                     if (var6 != 0) {
@@ -692,7 +693,7 @@ final class gq extends uta {
                           if (param1 != 34) {
                             break L12;
                           } else {
-                            boolean discarded$8 = ((gq) this).field_o.a(-1, -19696, '"');
+                            boolean discarded$9 = ((gq) this).field_o.a(-1, -19696, '"');
                             ((gq) this).field_o.a(var5, (byte) 95, var5);
                             break L12;
                           }
@@ -707,7 +708,7 @@ final class gq extends uta {
                             if (param1 != 34) {
                               break L12;
                             } else {
-                              boolean discarded$9 = ((gq) this).field_o.a(-1, -19696, '"');
+                              boolean discarded$10 = ((gq) this).field_o.a(-1, -19696, '"');
                               ((gq) this).field_o.a(var5, (byte) 95, var5);
                               break L12;
                             }
@@ -721,7 +722,7 @@ final class gq extends uta {
                         if (param1 != 34) {
                           break L12;
                         } else {
-                          boolean discarded$10 = ((gq) this).field_o.a(-1, -19696, '"');
+                          boolean discarded$11 = ((gq) this).field_o.a(-1, -19696, '"');
                           ((gq) this).field_o.a(var5, (byte) 95, var5);
                           break L12;
                         }
@@ -737,7 +738,7 @@ final class gq extends uta {
                       if (param1 != 39) {
                         break L3;
                       } else {
-                        boolean discarded$11 = ((gq) this).field_o.a(-1, -19696, '\'');
+                        boolean discarded$12 = ((gq) this).field_o.a(-1, -19696, '\'');
                         ((gq) this).field_o.a(var5, (byte) 72, var5);
                         break L3;
                       }
@@ -747,7 +748,8 @@ final class gq extends uta {
                 ((gq) this).field_o.c(1 + var5, 1);
                 break L3;
               }
-              gsa.field_w = opa.a(((gq) this).field_o.e((byte) -112), (byte) -110);
+              int discarded$13 = -110;
+              gsa.field_w = opa.a(((gq) this).field_o.e((byte) -112));
               if (param0 == -72) {
                 return true;
               } else {

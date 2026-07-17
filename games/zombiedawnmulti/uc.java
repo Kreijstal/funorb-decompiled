@@ -90,10 +90,7 @@ final class uc {
     }
 
     final static void b(int param0, boolean param1) {
-        tg.field_g.a(param0 ^ -1081, param1);
-        if (param0 != 16772) {
-            uc.c(69);
-        }
+        tg.field_g.a(-17853, param1);
     }
 
     uc(String param0) {

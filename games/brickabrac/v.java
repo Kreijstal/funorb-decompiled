@@ -10,10 +10,7 @@ final class v extends RuntimeException {
     static String field_c;
     static int[] field_a;
 
-    final static int b(int param0) {
-        if (param0 != 5395) {
-            return -14;
-        }
+    final static int b() {
         return jj.field_c;
     }
 
@@ -81,7 +78,7 @@ final class v extends RuntimeException {
         var9 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
-            op.a(param0 + 6, t.field_d, 294, 6, param1, 64, 3 + param5);
+            op.a(param0 + 6, t.field_d, 294, 6, 424, 64, 3 + param5);
             var6_int = 0;
             L1: while (true) {
               if (param3.field_k <= var6_int) {
@@ -148,7 +145,7 @@ final class v extends RuntimeException {
           L4: {
             var6 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var6;
-            stackOut_11_1 = new StringBuilder().append("v.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_11_1 = new StringBuilder().append("v.A(").append(param0).append(44).append(424).append(44).append(0).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -175,7 +172,7 @@ final class v extends RuntimeException {
         }
     }
 
-    final static jp[] a(int param0) {
+    final static jp[] a() {
         jp[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -196,20 +193,13 @@ final class v extends RuntimeException {
         byte[] var24 = null;
         int[] var25 = null;
         int[] var26 = null;
-        L0: {
-          var8 = BrickABrac.field_J ? 1 : 0;
-          var1 = new jp[nl.field_c];
-          if (param0 == -835) {
-            break L0;
-          } else {
-            v.a(false);
-            break L0;
-          }
-        }
+        var8 = BrickABrac.field_J ? 1 : 0;
+        var1 = new jp[nl.field_c];
         var2 = 0;
-        L1: while (true) {
+        L0: while (true) {
           if (var2 >= nl.field_c) {
-            ee.d((byte) 96);
+            int discarded$1 = 96;
+            ee.d();
             return var1;
           } else {
             var3 = gg.field_t[var2] * jh.field_b[var2];
@@ -218,15 +208,15 @@ final class v extends RuntimeException {
               var10 = new int[var3];
               var26 = var10;
               var6 = 0;
-              L2: while (true) {
+              L1: while (true) {
                 if (var6 >= var3) {
                   var1[var2] = new jp(cf.field_d, ek.field_db, ag.field_K[var2], dl.field_d[var2], jh.field_b[var2], gg.field_t[var2], var26);
                   var2++;
-                  continue L1;
+                  continue L0;
                 } else {
                   var10[var6] = qp.field_c[ik.a((int) var24[var6], 255)];
                   var6++;
-                  continue L2;
+                  continue L1;
                 }
               }
             } else {
@@ -242,15 +232,15 @@ final class v extends RuntimeException {
               var13 = var17;
               var6_ref_int__ = var13;
               var7 = 0;
-              L3: while (true) {
+              L2: while (true) {
                 if (var3 <= var7) {
                   var1[var2] = (jp) (Object) new fb(cf.field_d, ek.field_db, ag.field_K[var2], dl.field_d[var2], jh.field_b[var2], gg.field_t[var2], var25);
                   var2++;
-                  continue L1;
+                  continue L0;
                 } else {
                   var6_ref_int__[var7] = ud.d(ik.a(255, (int) var23[var7]) << 24, qp.field_c[ik.a(255, (int) var24[var7])]);
                   var7++;
-                  continue L3;
+                  continue L2;
                 }
               }
             }

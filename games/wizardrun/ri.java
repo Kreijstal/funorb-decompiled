@@ -165,16 +165,18 @@ final class ri {
                   break L0;
                 } else {
                   var5 = null;
-                  boolean discarded$2 = ri.a((byte) -90, (String) null);
+                  boolean discarded$12 = ri.a((byte) -90, (String) null);
                   return false;
                 }
               } else {
                 L2: {
                   var3 = param1.charAt(var2_int);
-                  if (f.a((char) var3, true)) {
+                  int discarded$13 = 1;
+                  if (f.a((char) var3)) {
                     break L2;
                   } else {
-                    if (vl.a((char) var3, -5717)) {
+                    int discarded$14 = -5717;
+                    if (vl.a((char) var3)) {
                       break L2;
                     } else {
                       stackOut_5_0 = 1;
@@ -273,7 +275,7 @@ final class ri {
         }
     }
 
-    final static void a(nj param0, int param1, byte param2) {
+    final static void a(nj param0, int param1) {
         mg var3 = null;
         try {
             var3 = n.field_b;

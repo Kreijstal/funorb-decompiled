@@ -13,7 +13,7 @@ final class ho {
     byte field_g;
     int[][] field_f;
 
-    final static void a(int param0) {
+    final static void a() {
         if (!(sq.field_c)) {
             throw new IllegalStateException();
         }
@@ -33,14 +33,11 @@ final class ho {
             un.field_Lb.a(0, false);
             var4 = un.field_Lb;
             var5_ref_String = nf.field_o;
-            var4.field_n.a(var5_ref_String, 5, param0 ^ 24285);
+            var4.field_n.a(var5_ref_String, 5, 0);
             var4 = un.field_Lb;
             var5 = sd.field_N;
             var6 = no.field_e;
             var4.field_n.c(0, var6, -1220, var5, 0);
-        }
-        if (param0 != 24285) {
-            field_i = null;
         }
         ql.a(param1, -127, param2);
     }
@@ -118,9 +115,9 @@ final class ho {
             L2: {
               hq.b(stackIn_4_0, -127);
               el.field_e.a(0, 14017, hk.field_o.field_Fb, 0, -2 + (-40 + hk.field_o.field_db));
-              nb.field_D.a(param0 ^ 108, de.field_g.field_Fb, r.field_f, 0, 0);
+              nb.field_D.a(108, de.field_g.field_Fb, r.field_f, 0, 0);
               stackOut_4_0 = uc.field_a;
-              stackOut_4_1 = param0 + 83;
+              stackOut_4_1 = 83;
               stackIn_6_0 = stackOut_4_0;
               stackIn_6_1 = stackOut_4_1;
               stackIn_5_0 = stackOut_4_0;
@@ -145,9 +142,9 @@ final class ho {
             }
             L3: {
               ((cr) (Object) stackIn_7_0).a(stackIn_7_1, -stackIn_7_2 + de.field_g.field_Fb, 18, 2 + r.field_f, 0);
-              eq.field_z.a(param0 + 95, re.field_k + 42, 18, 2 + r.field_f, -40 + (-re.field_k + (de.field_g.field_Fb - 2)));
+              eq.field_z.a(95, re.field_k + 42, 18, 2 + r.field_f, -40 + (-re.field_k + (de.field_g.field_Fb - 2)));
               vd.field_d.a(2 + r.field_f - -20, 2, re.field_k, -22 + (de.field_g.field_db - r.field_f), 0, de.field_g.field_Fb, 3124);
-              ne.field_G.a(76, hk.field_o.field_Fb, 40, -40 + hk.field_o.field_db, param0);
+              ne.field_G.a(76, hk.field_o.field_Fb, 40, -40 + hk.field_o.field_db, 0);
               ud.field_x.a(76, lb.field_c.field_Fb, 30, 0, 0);
               fd.field_s.a(108, lb.field_c.field_Fb, -2 + (lb.field_c.field_db + -70), 30, 0);
               var2_int = 3 + ol.field_A;
@@ -189,13 +186,14 @@ final class ho {
             var6 = 0;
             L7: while (true) {
               if (~(4 + ol.field_A) >= ~var6) {
-                wc.field_m.a(param0 ^ 81, 360, -20 + (-124 + bi.field_j), 10, bi.field_e + -360 >> 1);
+                wc.field_m.a(81, 360, -20 + (-124 + bi.field_j), 10, bi.field_e + -360 >> 1);
                 he.field_x.a(77, wc.field_m.field_Fb, 24, 0, 0);
                 lr.field_P.a(116, wc.field_m.field_Fb, -24 + wc.field_m.field_db, 24, 0);
                 lr.field_P.field_Bb = vl.a(lr.field_P.field_db, 3, 0, 1, 11579568, 8421504);
                 im.field_j.a(99, lr.field_P.field_Fb + -10, -2 + (lr.field_P.field_db - 34), 5, 5);
                 Vertigo2.field_M.a(74, 80, 24, -5 + (lr.field_P.field_db - 24), (-80 + lr.field_P.field_Fb) / 2);
-                po.b((byte) -52);
+                int discarded$1 = -52;
+                po.b();
                 break L0;
               } else {
                 L8: {
@@ -316,10 +314,10 @@ final class ho {
                     var7_int = stackIn_42_0;
                     if (var7_int == 0) {
                       L20: {
-                        el.field_h[var6].a(param0 ^ 123, 103, var3, var5, 5);
+                        el.field_h[var6].a(123, 103, var3, var5, 5);
                         var8 = 110;
                         if (param1) {
-                          mg.field_S[var6][0].a(var5, 38, r.field_j, var3, 2, param0 + 1, var8);
+                          mg.field_S[var6][0].a(var5, 38, r.field_j, var3, 2, 1, var8);
                           var8 += 40;
                           break L20;
                         } else {
@@ -342,7 +340,7 @@ final class ho {
                           break L19;
                         } else {
                           var12 = var11 * var9_int / var10;
-                          mg.field_S[var6][1 + var11].a(var5, -var12 + ((var11 - -1) * var9_int / var10 - 2), r.field_j, var3, 2, param0 ^ 1, var12 + var8);
+                          mg.field_S[var6][1 + var11].a(var5, -var12 + ((var11 - -1) * var9_int / var10 - 2), r.field_j, var3, 2, 1, var12 + var8);
                           var11++;
                           continue L21;
                         }
@@ -382,7 +380,7 @@ final class ho {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var2, "ho.C(" + param0 + 44 + param1 + 41);
+          throw wn.a((Throwable) (Object) var2, "ho.C(" + 0 + 44 + param1 + 41);
         }
     }
 
@@ -408,7 +406,7 @@ final class ho {
         ((ho) this).field_g = (byte) 0;
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_i = null;
         field_a = null;
         field_e = null;

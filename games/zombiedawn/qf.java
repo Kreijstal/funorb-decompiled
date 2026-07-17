@@ -390,7 +390,7 @@ class qf {
         sp var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_l) {
             break L0;
           } else {
@@ -400,7 +400,7 @@ class qf {
         }
         L1: {
           gp.a(param0, 0, var3);
-          ((qf) this).field_i = ((qf) this).field_i - 256;
+          ((qf) this).field_i = ((qf) this).field_i - param1;
           if (((qf) this).field_f == null) {
             break L1;
           } else {
@@ -567,7 +567,7 @@ class qf {
           if (((qf) this).field_f == null) {
             break L17;
           } else {
-            ((qf) this).field_f.a(param0, 0, 256);
+            ((qf) this).field_f.a(param0, 0, param1);
             break L17;
           }
         }
@@ -575,12 +575,12 @@ class qf {
     }
 
     private final void b(int param0) {
-        ((qf) this).field_i = ((qf) this).field_i - 256;
+        ((qf) this).field_i = ((qf) this).field_i - param0;
         if (((qf) this).field_i < 0) {
             ((qf) this).field_i = 0;
         }
         if (((qf) this).field_f != null) {
-            ((qf) this).field_f.a(256);
+            ((qf) this).field_f.a(param0);
             return;
         }
     }
@@ -650,35 +650,9 @@ class qf {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 < 8000) {
-            break L0;
-          } else {
-            if (param0 <= 48000) {
-              L1: {
-                field_p = param0;
-                if (!param1) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              field_l = stackIn_7_0 != 0;
-              field_q = 10;
-              return;
-            } else {
-              break L0;
-            }
-          }
-        }
-        throw new IllegalArgumentException();
+        field_p = 22050;
+        field_l = true;
+        field_q = 10;
     }
 
     void e() throws Exception {

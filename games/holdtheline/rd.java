@@ -244,7 +244,8 @@ abstract class rd {
               L3: while (true) {
                 if (var3.field_d != 0) {
                   if (1 != var3.field_d) {
-                    qe.a(100L, (byte) 45);
+                    int discarded$14 = 45;
+                    qe.a(100L);
                     continue L2;
                   } else {
                     param2.setVisible(false);
@@ -252,7 +253,8 @@ abstract class rd {
                     break L0;
                   }
                 } else {
-                  qe.a(10L, (byte) 45);
+                  int discarded$15 = 45;
+                  qe.a(10L);
                   continue L3;
                 }
               }
@@ -373,7 +375,7 @@ abstract class rd {
               try {
                 var4 = Class.forName("mb");
                 var5 = (mm) var4.newInstance();
-                var6 = -115 / ((param1 - 2) / 39);
+                var6 = 57;
                 var5.a(param3, param0, param2, 0);
                 stackOut_0_0 = (mm) var5;
                 stackIn_1_0 = stackOut_0_0;
@@ -392,7 +394,7 @@ abstract class rd {
               L0: {
                 var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_4_0 = (RuntimeException) var4_ref2;
-                stackOut_4_1 = new StringBuilder().append("rd.M(").append(param0).append(44).append(param1).append(44);
+                stackOut_4_1 = new StringBuilder().append("rd.M(").append(param0).append(44).append(-89).append(44);
                 stackIn_6_0 = stackOut_4_0;
                 stackIn_6_1 = stackOut_4_1;
                 stackIn_5_0 = stackOut_4_0;

@@ -144,9 +144,9 @@ final class trb extends rqa {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var5 = gn.a(param2 ^ param2, param1);
+            var5 = gn.a(0, param1);
             var6 = gn.a(0, param4);
-            stackOut_0_0 = tja.a(var6, param0, var5, param3, param2 ^ 5542);
+            stackOut_0_0 = tja.a(var6, 1, var5, false, 5547);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -155,7 +155,7 @@ final class trb extends rqa {
           L1: {
             var5_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var5_ref;
-            stackOut_2_1 = new StringBuilder().append("trb.C(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("trb.C(").append(1).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -180,7 +180,7 @@ final class trb extends rqa {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(13).append(44).append(0).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;

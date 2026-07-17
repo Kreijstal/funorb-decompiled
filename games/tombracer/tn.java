@@ -204,7 +204,7 @@ final class tn extends vg {
         return stackIn_13_0 != 0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_n = null;
     }
 

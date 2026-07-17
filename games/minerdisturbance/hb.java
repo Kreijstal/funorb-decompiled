@@ -50,33 +50,20 @@ final class hb {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         int var1 = 48;
     }
 
     final static ea a(int param0, int param1, int param2) {
-        ea var3 = null;
         int var4 = 0;
-        int var5 = 0;
-        ea var6 = null;
-        var5 = MinerDisturbance.field_ab;
-        if (param1 != 32768) {
-          return null;
-        } else {
-          var6 = new ea(param0, param0);
-          var3 = var6;
-          var4 = 0;
-          L0: while (true) {
-            if (var3.field_D.length <= var4) {
-              return var3;
-            } else {
-              var6.field_D[var4] = param2;
-              var4++;
-              continue L0;
-            }
-          }
+        int var5 = MinerDisturbance.field_ab;
+        ea var6 = new ea(param0, param0);
+        ea var3 = var6;
+        for (var4 = 0; var3.field_D.length > var4; var4++) {
+            var6.field_D[var4] = param2;
         }
+        return var3;
     }
 
     private hb() throws Throwable {

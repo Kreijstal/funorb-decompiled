@@ -10,13 +10,10 @@ final class wob extends rqa {
     }
 
     final static int a(int param0, int param1, int param2, int param3, int param4) {
-        if (param2 != 1) {
-            return -53;
-        }
-        return param3 + param0 * (-param3 + param1) / param4;
+        return param3 + param0 * (-param3 + param1) / 128;
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int a(int param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -63,10 +60,11 @@ final class wob extends rqa {
         return stackIn_11_0;
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void a(java.applet.Applet param0) {
         try {
             wva.a(param0, (byte) 56, "");
-            kr.a(param0, 5836);
+            int discarded$0 = 5836;
+            kr.a(param0);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "wob.B(" + (param0 != null ? "{...}" : "null") + 44 + -18209 + 41);
         }

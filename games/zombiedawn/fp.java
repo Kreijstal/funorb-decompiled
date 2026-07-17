@@ -10,7 +10,7 @@ final class fp extends an {
     int field_K;
     int field_G;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, byte param7) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var9 = 0;
         var9 = ZombieDawn.field_J;
         if (param5 < param4) {
@@ -45,15 +45,9 @@ final class fp extends an {
     final static boolean a(int param0, boolean param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
-        int stackIn_20_0 = 0;
-        int stackIn_48_0 = 0;
-        int stackIn_57_0 = 0;
-        int stackOut_56_0 = 0;
-        int stackOut_55_0 = 0;
-        int stackOut_47_0 = 0;
-        int stackOut_46_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_18_0 = 0;
+        int stackIn_37_0 = 0;
+        int stackOut_36_0 = 0;
+        int stackOut_35_0 = 0;
         if (!param1) {
           if (qp.field_b[param3] > qp.field_b[param0]) {
             return true;
@@ -61,53 +55,28 @@ final class fp extends an {
             if (qp.field_b[param0] <= qp.field_b[param3]) {
               if (dj.field_g[param3] <= dj.field_g[param0]) {
                 if (dj.field_g[param3] >= dj.field_g[param0]) {
-                  if (param2 != 0) {
-                    field_H = -122;
-                    var4 = sg.field_kb[param0] + qo.field_r[param0] + jd.field_d[param0];
-                    var5 = sg.field_kb[param3] + qo.field_r[param3] + jd.field_d[param3];
-                    if (var5 <= var4) {
-                      if (var5 < var4) {
-                        return false;
-                      } else {
-                        L0: {
-                          if (param0 >= param3) {
-                            stackOut_56_0 = 0;
-                            stackIn_57_0 = stackOut_56_0;
-                            break L0;
-                          } else {
-                            stackOut_55_0 = 1;
-                            stackIn_57_0 = stackOut_55_0;
-                            break L0;
-                          }
-                        }
-                        return stackIn_57_0 != 0;
-                      }
+                  field_H = -122;
+                  var4 = sg.field_kb[param0] + qo.field_r[param0] + jd.field_d[param0];
+                  var5 = sg.field_kb[param3] + qo.field_r[param3] + jd.field_d[param3];
+                  if (var5 <= var4) {
+                    if (var5 < var4) {
+                      return false;
                     } else {
-                      return true;
+                      L0: {
+                        if (param0 >= param3) {
+                          stackOut_36_0 = 0;
+                          stackIn_37_0 = stackOut_36_0;
+                          break L0;
+                        } else {
+                          stackOut_35_0 = 1;
+                          stackIn_37_0 = stackOut_35_0;
+                          break L0;
+                        }
+                      }
+                      return stackIn_37_0 != 0;
                     }
                   } else {
-                    var4 = sg.field_kb[param0] + qo.field_r[param0] + jd.field_d[param0];
-                    var5 = sg.field_kb[param3] + qo.field_r[param3] + jd.field_d[param3];
-                    if (var5 <= var4) {
-                      if (var5 < var4) {
-                        return false;
-                      } else {
-                        L1: {
-                          if (param0 >= param3) {
-                            stackOut_47_0 = 0;
-                            stackIn_48_0 = stackOut_47_0;
-                            break L1;
-                          } else {
-                            stackOut_46_0 = 1;
-                            stackIn_48_0 = stackOut_46_0;
-                            break L1;
-                          }
-                        }
-                        return stackIn_48_0 != 0;
-                      }
-                    } else {
-                      return true;
-                    }
+                    return true;
                   }
                 } else {
                   return false;
@@ -126,46 +95,21 @@ final class fp extends an {
             } else {
               if (qp.field_b[param3] <= qp.field_b[param0]) {
                 if (qp.field_b[param0] <= qp.field_b[param3]) {
-                  if (param2 != 0) {
-                    field_H = -122;
-                    var4 = sg.field_kb[param0] + qo.field_r[param0] + jd.field_d[param0];
-                    var5 = sg.field_kb[param3] + qo.field_r[param3] + jd.field_d[param3];
-                    if (var5 <= var4) {
-                      if (var5 < var4) {
+                  field_H = -122;
+                  var4 = sg.field_kb[param0] + qo.field_r[param0] + jd.field_d[param0];
+                  var5 = sg.field_kb[param3] + qo.field_r[param3] + jd.field_d[param3];
+                  if (var5 <= var4) {
+                    if (var5 < var4) {
+                      return false;
+                    } else {
+                      if (param0 >= param3) {
                         return false;
                       } else {
-                        if (param0 >= param3) {
-                          return false;
-                        } else {
-                          return true;
-                        }
+                        return true;
                       }
-                    } else {
-                      return true;
                     }
                   } else {
-                    var4 = sg.field_kb[param0] + qo.field_r[param0] + jd.field_d[param0];
-                    var5 = sg.field_kb[param3] + qo.field_r[param3] + jd.field_d[param3];
-                    if (var5 <= var4) {
-                      if (var5 < var4) {
-                        return false;
-                      } else {
-                        L2: {
-                          if (param0 >= param3) {
-                            stackOut_19_0 = 0;
-                            stackIn_20_0 = stackOut_19_0;
-                            break L2;
-                          } else {
-                            stackOut_18_0 = 1;
-                            stackIn_20_0 = stackOut_18_0;
-                            break L2;
-                          }
-                        }
-                        return stackIn_20_0 != 0;
-                      }
-                    } else {
-                      return true;
-                    }
+                    return true;
                   }
                 } else {
                   return false;

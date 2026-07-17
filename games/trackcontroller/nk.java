@@ -8,7 +8,7 @@ final class nk extends fc {
     int field_i;
     static String field_j;
 
-    final static void b(boolean param0) {
+    final static void b() {
         vg var1 = (vg) (Object) gd.field_q.c((byte) -123);
         if (!(var1 != null)) {
             var1 = new vg();
@@ -20,7 +20,7 @@ final class nk extends fc {
     final static void a(int param0, int param1) {
         la var2 = null;
         var2 = ra.field_C;
-        var2.c(param0, 7);
+        var2.c(4, 7);
         var2.a(1, (byte) -70);
         var2.a(2, (byte) -65);
         if (param1 >= -85) {
@@ -31,16 +31,13 @@ final class nk extends fc {
         }
     }
 
-    public static void d(int param0) {
-        if (param0 != 23985) {
-            return;
-        }
+    public static void d() {
         field_j = null;
     }
 
     final static void a(boolean param0, int param1, boolean param2) {
-        Object var4 = null;
-        jb.a((String) null, param0, param2, 0);
+        int discarded$0 = 0;
+        jb.a((String) null, param0, param2);
         int var3 = 88 % ((-51 - param1) / 44);
     }
 

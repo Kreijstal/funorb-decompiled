@@ -8,22 +8,18 @@ final class gh extends af {
     private o[] field_t;
     private int field_p;
 
-    public static void d(int param0) {
+    public static void d() {
         field_r = null;
     }
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        if (param4 == 16777215) {
-          if (param6 <= param2) {
-            if (param2 < param3 + param6) {
-              if (param0 <= param5) {
-                if (param0 + param1 <= param5) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
+        if (param6 <= param2) {
+          if (param2 < param3 + param6) {
+            if (param0 <= param5) {
+              if (param0 + param1 <= param5) {
                 return false;
+              } else {
+                return true;
               }
             } else {
               return false;
@@ -32,7 +28,7 @@ final class gh extends af {
             return false;
           }
         } else {
-          return true;
+          return false;
         }
     }
 
@@ -127,8 +123,9 @@ final class gh extends af {
             }
             var8 = stackIn_17_0;
             if (param0 >= 113) {
-              fg.a(param1 + (param4.field_j + (-((gh) this).field_t[0].field_r + param4.field_x >> 1)), param4.field_m + param3, param4.field_t, var7, ((gh) this).field_t, (byte) 104);
-              int discarded$1 = ((gh) this).field_l.a(param4.field_i, param3 - -param4.field_m, param4.field_j + param1 + -2, param4.field_t, param4.field_x, var8, -1, 1, 1, ((gh) this).field_l.field_F);
+              int discarded$2 = 104;
+              fg.a(param1 + (param4.field_j + (-((gh) this).field_t[0].field_r + param4.field_x >> 1)), param4.field_m + param3, param4.field_t, var7, ((gh) this).field_t);
+              int discarded$3 = ((gh) this).field_l.a(param4.field_i, param3 - -param4.field_m, param4.field_j + param1 + -2, param4.field_t, param4.field_x, var8, -1, 1, 1, ((gh) this).field_l.field_F);
               break L0;
             } else {
               return;
@@ -166,7 +163,7 @@ final class gh extends af {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void a() {
         RuntimeException var2 = null;
         int var3 = 0;
         m var4 = null;
@@ -177,14 +174,9 @@ final class gh extends af {
             var4 = (m) (Object) gg.field_b.a((byte) 51);
             L1: while (true) {
               if (var4 == null) {
-                if (param1 == 9543) {
-                  break L0;
-                } else {
-                  boolean discarded$2 = gh.a('i', (byte) 57);
-                  return;
-                }
+                break L0;
               } else {
-                l.a(param0, param1 ^ -9489, var4);
+                l.a(2, -88, var4);
                 var4 = (m) (Object) gg.field_b.b(-121);
                 continue L1;
               }
@@ -193,85 +185,78 @@ final class gh extends af {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fc.a((Throwable) (Object) var2, "gh.CA(" + param0 + 44 + param1 + 41);
+          throw fc.a((Throwable) (Object) var2, "gh.CA(" + 2 + 44 + 9543 + 41);
         }
     }
 
     final static String a(int param0, CharSequence param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
-        Object stackIn_2_0 = null;
-        String stackIn_7_0 = null;
+        String stackIn_6_0 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
+        String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_6_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        String stackOut_5_0 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
         RuntimeException stackOut_9_0 = null;
         StringBuilder stackOut_9_1 = null;
         String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
         try {
           L0: {
-            if (param0 == -31433) {
-              L1: {
-                var2 = ub.a(-88, ti.a(param1, (byte) 44));
-                if (var2 == null) {
-                  var2 = "";
-                  break L1;
-                } else {
-                  break L1;
-                }
+            L1: {
+              int discarded$2 = 44;
+              var2 = ub.a(-88, ti.a(param1));
+              if (var2 == null) {
+                var2 = "";
+                break L1;
+              } else {
+                break L1;
               }
-              stackOut_6_0 = (String) var2;
-              stackIn_7_0 = stackOut_6_0;
-              break L0;
-            } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
-              return (String) (Object) stackIn_2_0;
             }
+            stackOut_5_0 = (String) var2;
+            stackIn_6_0 = stackOut_5_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var2_ref;
-            stackOut_8_1 = new StringBuilder().append("gh.AA(").append(param0).append(44);
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackOut_7_0 = (RuntimeException) var2_ref;
+            stackOut_7_1 = new StringBuilder().append("gh.AA(").append(-31433).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
-              break L2;
-            } else {
               stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
               stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L2;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
               break L2;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw fc.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
         }
-        return stackIn_7_0;
+        return stackIn_6_0;
     }
 
     final static boolean a(char param0, byte param1) {

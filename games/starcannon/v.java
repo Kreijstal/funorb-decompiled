@@ -7,14 +7,14 @@ final class v {
     static String field_c;
     static volatile boolean field_b;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_d = null;
         field_c = null;
         int var1 = 0;
     }
 
-    final static boolean a(d param0, int param1) {
+    final static boolean a(d param0) {
         RuntimeException var2 = null;
         int var3 = 0;
         int stackIn_4_0 = 0;

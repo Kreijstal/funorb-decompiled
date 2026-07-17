@@ -10,13 +10,10 @@ abstract class kb {
     final static void a(int param0, int param1, int param2, vh param3) {
         try {
             ac.field_a = param2;
-            if (param1 <= 123) {
-                field_b = null;
-            }
             ac.field_g = param0;
             ne.field_j = param3;
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "kb.E(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "kb.E(" + param0 + 44 + 126 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -24,7 +21,7 @@ abstract class kb {
 
     abstract int a(byte param0);
 
-    public static void c(byte param0) {
+    public static void c() {
         field_a = null;
         field_c = null;
         int var1 = 0;
@@ -69,13 +66,13 @@ abstract class kb {
         var8 = HostileSpawn.field_I ? 1 : 0;
         try {
           L0: {
-            var7_int = param3;
+            var7_int = 0;
             L1: while (true) {
               if (param4.length() <= var7_int) {
                 break L0;
               } else {
-                param5.a(param4.charAt(var7_int), param6, param1, param2);
-                param6 = param6 + param0;
+                param5.a(param4.charAt(var7_int), param6, 50, param2);
+                param6 = param6 + 7;
                 var7_int++;
                 continue L1;
               }
@@ -86,7 +83,7 @@ abstract class kb {
           L2: {
             var7 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var7;
-            stackOut_5_1 = new StringBuilder().append("kb.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_5_1 = new StringBuilder().append("kb.B(").append(7).append(44).append(50).append(44).append(param2).append(44).append(0).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -138,7 +135,7 @@ abstract class kb {
         }
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         if (im.field_e != null) {
           L0: {
             im.field_e.l(-115);
@@ -149,7 +146,8 @@ abstract class kb {
               break L0;
             }
           }
-          ch.a((byte) 115);
+          int discarded$4 = 115;
+          ch.a();
           return;
         } else {
           L1: {
@@ -160,12 +158,13 @@ abstract class kb {
               break L1;
             }
           }
-          ch.a((byte) 115);
+          int discarded$5 = 115;
+          ch.a();
           return;
         }
     }
 
-    final static pg a(pg param0, int[] param1, byte param2) {
+    final static pg a(pg param0, int[] param1) {
         pg var3 = null;
         RuntimeException var3_ref = null;
         pg stackIn_1_0 = null;

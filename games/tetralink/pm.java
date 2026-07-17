@@ -10,7 +10,7 @@ final class pm {
     static sj field_f;
     static float field_c;
 
-    final static int a(byte param0) {
+    final static int a() {
         return wk.field_c;
     }
 

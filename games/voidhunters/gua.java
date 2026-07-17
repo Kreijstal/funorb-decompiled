@@ -6,7 +6,7 @@ final class gua extends rqa {
         super(param0, param1, param2);
     }
 
-    final static int e(byte param0) {
+    final static int e() {
         if (!vba.f((byte) -113)) {
             return -1;
         }

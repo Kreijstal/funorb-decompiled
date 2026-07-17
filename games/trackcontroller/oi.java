@@ -12,16 +12,17 @@ final class oi {
         throw new IllegalStateException();
     }
 
-    final static void a(int param0, qj[] param1, int param2, oh param3, oh param4, int param5, int param6, int param7, int param8, qj[] param9, int param10, boolean param11, int param12, int param13, int param14) {
+    final static void a(int param0, qj[] param1, int param2, oh param3, oh param4, int param5, int param6, int param7, int param8, qj[] param9, int param10, boolean param11) {
         try {
-            pi.a(param12, param6, param5, 480, (qj[]) null, param7, 0, sl.field_n, param9, 0, db.field_db, param0, param1, param2, param4, param13, param8, param10 ^ param10, 0, param3, j.field_a);
+            Object var16 = null;
+            pi.a(18, 320, 10, 480, (qj[]) null, 20, 0, sl.field_n, param9, 0, db.field_db, 26, param1, 26, param4, 0, 240, 0, 0, param3, j.field_a);
             wj.a((byte) 116, param11);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "oi.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + (param9 != null ? "{...}" : "null") + 44 + param10 + 44 + param11 + 44 + param12 + 44 + param13 + 44 + 0 + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "oi.A(" + 26 + 44 + (param1 != null ? "{...}" : "null") + 44 + 26 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + 10 + 44 + 320 + 44 + 20 + 44 + 240 + 44 + (param9 != null ? "{...}" : "null") + 44 + -3748 + 44 + param11 + 44 + 18 + 44 + 0 + 44 + 0 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_e = null;
         field_d = null;

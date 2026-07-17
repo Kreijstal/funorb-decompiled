@@ -17,7 +17,7 @@ abstract class rf extends vh {
     static rh field_z;
     static String field_q;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_t = null;
         field_s = null;
         field_z = null;
@@ -38,26 +38,13 @@ abstract class rf extends vh {
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
         if (null == a.field_d) {
-          if (param0 < 81) {
-            field_y = null;
-            return;
-          } else {
-            return;
-          }
+          return;
         } else {
           var1 = (Object) (Object) a.field_d;
           synchronized (var1) {
             L0: {
               a.field_d = null;
               break L0;
-            }
-          }
-          L1: {
-            if (param0 >= 81) {
-              break L1;
-            } else {
-              field_y = null;
-              break L1;
             }
           }
           return;

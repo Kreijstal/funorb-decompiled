@@ -15,14 +15,11 @@ final class lg {
         int var3 = 0;
         int var4 = 0;
         try {
-            if (param0 != 32381) {
-                Object var5 = null;
-                hl discarded$0 = lg.a((String) null, (byte) 32);
-            }
             var2 = new wk(param1.a("", 49, "final_frame.jpg"), (java.awt.Component) (Object) si.field_b);
             var3 = var2.field_y;
             var4 = var2.field_v;
-            rq.a((byte) -56);
+            int discarded$0 = -56;
+            rq.a();
             wd.field_k = new wk(var3, 3 * var4 / 4);
             wd.field_k.b();
             var2.f(0, 0);
@@ -32,7 +29,7 @@ final class lg {
             vt.field_k.field_z = wd.field_k.field_v;
             rf.b(-18862);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "lg.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "lg.A(" + 32381 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -75,7 +72,8 @@ final class lg {
               if (0 != param0.length()) {
                 L0: {
                   var6 = (CharSequence) (Object) param0;
-                  var2 = k.a(var6, false);
+                  int discarded$4 = 0;
+                  var2 = k.a(var6);
                   if (param1 == -34) {
                     break L0;
                   } else {
@@ -88,7 +86,8 @@ final class lg {
                   L1: while (true) {
                     if (var3 != null) {
                       var7 = (CharSequence) (Object) var3.field_Mb;
-                      var4 = k.a(var7, false);
+                      int discarded$5 = 0;
+                      var4 = k.a(var7);
                       if (var4.equals((Object) (Object) var2)) {
                         stackOut_18_0 = (hl) var3;
                         stackIn_19_0 = stackOut_18_0;

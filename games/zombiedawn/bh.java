@@ -7,7 +7,7 @@ final class bh extends le {
     byte[] field_k;
     static String field_h;
 
-    final static void a(int param0) {
+    final static void a() {
         al[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -24,7 +24,7 @@ final class bh extends le {
               qg.field_d = true;
               var5 = qk.field_Jb;
               var1 = var5;
-              var2 = param0;
+              var2 = 0;
               L1: while (true) {
                 if (var2 >= var5.length) {
                   break L0;
@@ -40,11 +40,11 @@ final class bh extends le {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var1_ref, "bh.B(" + param0 + 41);
+          throw sh.a((Throwable) (Object) var1_ref, "bh.B(" + 0 + 41);
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_h = null;
         field_j = null;
         field_i = null;
@@ -58,7 +58,7 @@ final class bh extends le {
         }
     }
 
-    final static boolean a(char param0, boolean param1) {
+    final static boolean a(char param0) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -80,7 +80,8 @@ final class bh extends le {
         try {
           L0: {
             if (!Character.isISOControl(param0)) {
-              if (c.a(param0, 441)) {
+              int discarded$8 = 441;
+              if (c.a(param0)) {
                 stackOut_6_0 = 1;
                 stackIn_7_0 = stackOut_6_0;
                 return stackIn_7_0 != 0;

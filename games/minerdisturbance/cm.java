@@ -84,47 +84,44 @@ final class cm extends pi {
               }
             }
             L5: {
-              if (ag.field_d == null) {
+              if (ag.field_d != null) {
+                var6 = var6 | 16;
+                sn.field_c.c(var6, 25564);
                 break L5;
               } else {
-                var6 = var6 | 16;
+                sn.field_c.c(var6, 25564);
                 break L5;
               }
             }
-            sn.field_c.c(var6, 25564);
-            if (param0 == 6) {
-              L6: {
-                var7 = ag.a(bm.c(-90), true);
-                if (var7 == null) {
-                  var7 = "";
-                  break L6;
-                } else {
-                  break L6;
-                }
+            L6: {
+              var7 = ag.a(bm.c(-90), true);
+              if (var7 == null) {
+                var7 = "";
+                break L6;
+              } else {
+                break L6;
               }
-              L7: {
-                sn.field_c.b(23446, var7);
-                if (null == ag.field_d) {
-                  break L7;
-                } else {
-                  sn.field_c.a(8, ag.field_d);
-                  break L7;
-                }
-              }
-              jg.a(kc.field_b, param0 + -108, rf.field_c, ph.field_g, (sb) (Object) sn.field_c);
-              sn.field_c.b(sn.field_c.field_o - var5_int, param0 + -506270862);
-              bk.a((byte) -64, -1);
-              break L0;
-            } else {
-              return;
             }
+            L7: {
+              sn.field_c.b(23446, var7);
+              if (null == ag.field_d) {
+                break L7;
+              } else {
+                sn.field_c.a(8, ag.field_d);
+                break L7;
+              }
+            }
+            jg.a(kc.field_b, -102, rf.field_c, ph.field_g, (sb) (Object) sn.field_c);
+            sn.field_c.b(sn.field_c.field_o - var5_int, -506270856);
+            bk.a((byte) -64, -1);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L8: {
             var5 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var5;
-            stackOut_22_1 = new StringBuilder().append("cm.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_22_1 = new StringBuilder().append("cm.D(").append(6).append(44).append(param1).append(44).append(param2).append(44);
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -151,7 +148,7 @@ final class cm extends pi {
         }
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean a() {
         return rd.a((byte) 27, bm.c(-118));
     }
 
@@ -171,13 +168,14 @@ final class cm extends pi {
             if (param0 == 24683) {
               var1 = sn.field_c;
               L1: while (true) {
-                if (!ub.a(14921)) {
+                int discarded$9 = 14921;
+                if (!ub.a()) {
                   break L0;
                 } else {
                   var1.d((byte) -51, 8);
-                  int fieldTemp$5 = var1.field_o + 1;
+                  int fieldTemp$10 = var1.field_o + 1;
                   var1.field_o = var1.field_o + 1;
-                  var2 = fieldTemp$5;
+                  var2 = fieldTemp$10;
                   pj.a((byte) 119, var1);
                   sn.field_c.g(-1, var1.field_o + -var2);
                   continue L1;

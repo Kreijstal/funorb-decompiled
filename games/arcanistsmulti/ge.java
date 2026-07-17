@@ -17,7 +17,7 @@ final class ge extends pg {
     static String field_n;
     int field_j;
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = 27;
         field_l = null;
         field_g = null;
@@ -25,7 +25,7 @@ final class ge extends pg {
         field_n = null;
     }
 
-    final static lg a(byte[] param0, int param1) {
+    final static lg a(byte[] param0) {
         lg var2 = null;
         RuntimeException var2_ref = null;
         lg stackIn_4_0 = null;
@@ -50,7 +50,8 @@ final class ge extends pg {
           L0: {
             if (param0 != null) {
               var2 = new lg(param0, hl.field_l, be.field_d, jg.field_p, ho.field_i, ln.field_I);
-              dk.a(-18229);
+              int discarded$2 = -18229;
+              dk.a();
               stackOut_3_0 = (lg) var2;
               stackIn_4_0 = stackOut_3_0;
               break L0;

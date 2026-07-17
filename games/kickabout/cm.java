@@ -37,47 +37,39 @@ abstract class cm extends ub {
           break L0;
         }
         L2: {
-          if (param0) {
+          if (256 > param1) {
             break L2;
           } else {
-            byte discarded$2 = cm.b(122, (byte) 64);
+            param1 = param1 >>> 8;
+            var2 += 8;
             break L2;
           }
         }
         L3: {
-          if (256 > param1) {
+          if (param1 < 16) {
             break L3;
           } else {
-            param1 = param1 >>> 8;
-            var2 += 8;
+            var2 += 4;
+            param1 = param1 >>> 4;
             break L3;
           }
         }
         L4: {
-          if (param1 < 16) {
+          if (param1 >= 4) {
+            param1 = param1 >>> 2;
+            var2 += 2;
             break L4;
           } else {
-            var2 += 4;
-            param1 = param1 >>> 4;
             break L4;
           }
         }
         L5: {
-          if (param1 >= 4) {
-            param1 = param1 >>> 2;
-            var2 += 2;
-            break L5;
-          } else {
-            break L5;
-          }
-        }
-        L6: {
           if (param1 < 1) {
-            break L6;
+            break L5;
           } else {
             var2++;
             param1 = param1 >>> 1;
-            break L6;
+            break L5;
           }
         }
         return var2 + param1;
@@ -95,7 +87,7 @@ abstract class cm extends ub {
         ((cm) this).n(param0 ^ 8096);
     }
 
-    public static void o(int param0) {
+    public static void o() {
         field_M = null;
     }
 
@@ -133,7 +125,7 @@ abstract class cm extends ub {
         }
     }
 
-    final static void l(int param0) {
+    final static void l() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -191,7 +183,7 @@ abstract class cm extends ub {
         var5 = 211;
         var4 = 35;
         var6 = 194;
-        var7 = 77 % ((param1 - -55) / 45);
+        var7 = 0;
         var8 = 0;
         var9 = param2;
         L0: while (true) {

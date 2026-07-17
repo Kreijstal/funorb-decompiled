@@ -10,7 +10,7 @@ final class mf extends qb {
     static int field_i;
     static long field_j;
 
-    final static String a(Throwable param0, byte param1) throws IOException {
+    final static String a(Throwable param0) throws IOException {
         String var2 = null;
         PrintWriter var4 = null;
         String var5 = null;

@@ -12,7 +12,7 @@ abstract class oe extends ch {
     static String field_O;
     static String field_N;
 
-    public static void h(int param0) {
+    public static void h() {
         field_N = null;
         field_O = null;
         field_U = null;
@@ -31,7 +31,8 @@ abstract class oe extends ch {
     final static void a(boolean param0, int param1) {
         ff.a(0, param0);
         if (!(null == kk.field_B)) {
-            pp.a(kk.field_B, 1259627265);
+            int discarded$0 = 1259627265;
+            pp.a(kk.field_B);
         }
     }
 
@@ -122,7 +123,7 @@ abstract class oe extends ch {
         }
     }
 
-    final static int a(bf[] param0, int param1, pq[] param2, int[][] param3, int param4) {
+    final static int a(bf[] param0, int param1, pq[] param2, int[][] param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -185,7 +186,7 @@ abstract class oe extends ch {
         try {
           L0: {
             var5_int = 0;
-            var6 = param4;
+            var6 = 0;
             L1: while (true) {
               if (var6 >= param2.length) {
                 if (var5_int == 0) {
@@ -227,9 +228,10 @@ abstract class oe extends ch {
                             }
                           }
                           var9 = param2[var7.field_i];
-                          ok.a(var7.field_u, var8, var9, (byte) 105);
+                          int discarded$2 = 105;
+                          ok.a(var7.field_u, var8, var9);
                           if (var8.field_q != null) {
-                            var8.field_q.a(param2, (int) var7.field_i, param4 + -5);
+                            var8.field_q.a(param2, (int) var7.field_i, -5);
                             break L3;
                           } else {
                             if (var9.field_q == null) {
@@ -324,7 +326,8 @@ abstract class oe extends ch {
                         if (param2[var7_int].field_s) {
                           if (param2[var6].field_v != 0) {
                             L14: {
-                              var8_int = no.a(param2[var7_int].field_t, param2[var6].field_w, param2[var7_int].field_I, param2[var7_int].field_w, param2[var6].field_I, param2[var7_int].field_k, param2[var6].field_t, param2[var7_int].field_g, 8, param2[var6].field_g, param2[var6].field_k, -1);
+                              int discarded$3 = -1;
+                              var8_int = no.a(param2[var7_int].field_t, param2[var6].field_w, param2[var7_int].field_I, param2[var7_int].field_w, param2[var6].field_I, param2[var7_int].field_k, param2[var6].field_t, param2[var7_int].field_g, 8, param2[var6].field_g, param2[var6].field_k);
                               if (param1 >= var8_int) {
                                 break L14;
                               } else {
@@ -437,7 +440,7 @@ abstract class oe extends ch {
               break L18;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_66_0, stackIn_66_2 + 44 + param4 + 41);
+          throw wm.a((Throwable) (Object) stackIn_66_0, stackIn_66_2 + 44 + 0 + 41);
         }
         return stackIn_56_0;
     }

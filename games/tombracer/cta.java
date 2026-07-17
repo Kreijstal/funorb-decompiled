@@ -1007,10 +1007,6 @@ public final class cta extends eo {
         if (param1 == ue.field_v) {
             return 1;
         }
-        if (!param0) {
-            Object var3 = null;
-            boolean discarded$0 = cta.a(-16, (jagdx.IDirect3D) null, -7, 73, (jagdx.D3DPRESENT_PARAMETERS) null, -9);
-        }
         throw new IllegalArgumentException();
     }
 
@@ -1153,7 +1149,7 @@ public final class cta extends eo {
         return (ha) (Object) stackIn_37_0;
     }
 
-    private final boolean T(int param0) {
+    private final boolean T() {
         int var4 = 0;
         int var2 = ((cta) this).field_jd.TestCooperativeLevel();
         if (var2 != 0) {
@@ -1180,12 +1176,13 @@ public final class cta extends eo {
 
     final void a(int param0, int param1) throws qva {
         L0: {
-          int discarded$23 = ((cta) this).field_jd.EndScene();
+          int discarded$33 = ((cta) this).field_jd.EndScene();
           if (!((cta) this).field_kd.a((byte) 75)) {
-            int fieldTemp$24 = ((cta) this).field_ed + 1;
+            int fieldTemp$34 = ((cta) this).field_ed + 1;
             ((cta) this).field_ed = ((cta) this).field_ed + 1;
-            if (fieldTemp$24 <= 50) {
-              boolean discarded$25 = this.T(-2005530519);
+            if (fieldTemp$34 <= 50) {
+              int discarded$35 = -2005530519;
+              boolean discarded$36 = this.T();
               break L0;
             } else {
               throw new qva();
@@ -1193,14 +1190,15 @@ public final class cta extends eo {
           } else {
             ((cta) this).field_ed = 0;
             if (jagdx.ah.a(((cta) this).field_kd.a(0, 0), 10643)) {
-              boolean discarded$26 = this.T(-2005530519);
+              int discarded$37 = -2005530519;
+              boolean discarded$38 = this.T();
               break L0;
             } else {
               break L0;
             }
           }
         }
-        int discarded$27 = ((cta) this).field_jd.BeginScene();
+        int discarded$39 = ((cta) this).field_jd.BeginScene();
     }
 
     final void f(int param0) {

@@ -28,7 +28,7 @@ final class wi {
         try {
           L0: {
             if (nd.a(param3, param2, -1, param0)) {
-              var4_int = -14 % ((-40 - param1) / 39);
+              var4_int = 0;
               stackOut_3_0 = nl.c(-8791);
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -41,7 +41,7 @@ final class wi {
           L1: {
             var4 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var4;
-            stackOut_5_1 = new StringBuilder().append("wi.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_5_1 = new StringBuilder().append("wi.C(").append(param0).append(44).append(-106).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -108,13 +108,13 @@ final class wi {
           L0: {
             if (param2 != 0) {
               if (param2 != 1) {
-                var4_int = param2 - -param1;
-                var5 = param0;
-                var6_int = param1;
+                var4_int = param2;
+                var5 = 0;
+                var6_int = 0;
                 L1: while (true) {
                   if (var6_int >= var4_int) {
                     var6 = new StringBuilder(var5);
-                    var7 = param1;
+                    var7 = 0;
                     L2: while (true) {
                       if (var4_int <= var7) {
                         stackOut_21_0 = var6.toString();
@@ -151,7 +151,7 @@ final class wi {
                   }
                 }
               } else {
-                var10 = param3[param1];
+                var10 = param3[0];
                 var4 = var10;
                 if (var4 == null) {
                   stackOut_7_0 = "null";
@@ -172,7 +172,7 @@ final class wi {
           L5: {
             var4_ref = decompiledCaughtException;
             stackOut_23_0 = (RuntimeException) var4_ref;
-            stackOut_23_1 = new StringBuilder().append("wi.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_23_1 = new StringBuilder().append("wi.A(").append(0).append(44).append(0).append(44).append(param2).append(44);
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -200,7 +200,7 @@ final class wi {
         return stackIn_22_0;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -254,7 +254,7 @@ final class wi {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
     }
 

@@ -82,9 +82,12 @@ final class vi {
             ((vi) this).field_l = 3;
             ((vi) this).field_n = -1;
             ((vi) this).field_r = 3;
-            nb discarded$10 = var4.a((byte) -123, 0).a(101, 15658734).a(gn.a(7829367, 10066329, 8947848, false), 7392);
-            nb discarded$11 = var4.a((byte) -98, 1).a(gn.a(13421772, 10066329, 11184810, false), 7392);
-            nb discarded$12 = var4.a((byte) -114, 3).a(gn.a(10066329, 7829367, 8947848, false), 7392).b(1, (byte) -93).a(1, (byte) -58);
+            int discarded$15 = 0;
+            nb discarded$16 = var4.a((byte) -123, 0).a(101, 15658734).a(gn.a(7829367, 10066329, 8947848), 7392);
+            int discarded$17 = 0;
+            nb discarded$18 = var4.a((byte) -98, 1).a(gn.a(13421772, 10066329, 11184810), 7392);
+            int discarded$19 = 0;
+            nb discarded$20 = var4.a((byte) -114, 3).a(gn.a(10066329, 7829367, 8947848), 7392).b(1, (byte) -93).a(1, (byte) -58);
             var5 = new ea[9];
             var16 = new og(32, 32);
             var18 = var16;
@@ -92,22 +95,24 @@ final class vi {
             L1: while (true) {
               if (var18.field_D.length <= var7_int) {
                 var5[4] = (ea) (Object) var18;
-                nb discarded$13 = var4.a((byte) -103, 4).a(-13903, true).a(var5, 7392);
-                nb discarded$14 = var4.a((byte) -119, 5).a(r.a((byte) 93, 0, 0, param0, 0), 7392).a(-13903, true).a(116, -1);
+                nb discarded$21 = var4.a((byte) -103, 4).a(-13903, true).a(var5, 7392);
+                int discarded$22 = 0;
+                nb discarded$23 = var4.a((byte) -119, 5).a(r.a((byte) 93, 0, 0, param0), 7392).a(-13903, true).a(116, -1);
                 ((vi) this).field_m = (ad) (Object) var4;
                 var6 = new on(var4, true);
                 var6.field_j = 0;
                 var7 = new on(var4, true);
                 var7.field_j = 0;
                 var7.a(ck.a((byte) 126, 8947848), true);
-                nb discarded$15 = var7.a((byte) -99, 1).a(ck.a((byte) 126, 11184810), 7392).a(param0 ^ 65917, 2236962);
+                nb discarded$24 = var7.a((byte) -99, 1).a(ck.a((byte) 126, 11184810), 7392).a(param0 ^ 65917, 2236962);
                 ((vi) this).field_e = (ad) (Object) new mk(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924);
-                qg discarded$16 = new qg(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
-                fl discarded$17 = new fl(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
+                qg discarded$25 = new qg(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+                fl discarded$26 = new fl(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
                 var8 = new on();
                 var17.a(28, (eg) (Object) var8);
-                nb discarded$18 = var8.a((byte) -120, 0).a(gn.a(10066329, 7829367, 15658734, false), 7392).a(101, 1118481).b(-1, true);
-                nb discarded$19 = var8.a((byte) -112, 4).a(-13903, true).a(var5, 7392);
+                int discarded$27 = 0;
+                nb discarded$28 = var8.a((byte) -120, 0).a(gn.a(10066329, 7829367, 15658734), 7392).a(101, 1118481).b(-1, true);
+                nb discarded$29 = var8.a((byte) -112, 4).a(-13903, true).a(var5, 7392);
                 ((vi) this).field_a = (ad) (Object) var8;
                 var9 = new ea[9];
                 var9[4] = new ea(2, 1);
@@ -297,7 +302,7 @@ final class vi {
               }
             }
             eh.a(var7, var8, 6 + var5_int, var6 - -6, ((vi) this).field_f);
-            eh.e(1 + var7, var8 - -1, param0 + var5_int, var6 - -4, ((vi) this).field_k);
+            eh.e(1 + var7, var8 - -1, 4 + var5_int, var6 - -4, ((vi) this).field_k);
             ((vi) this).field_p.a(param1, var7 - -3, ((vi) this).field_p.field_N + var8 - -3, ((vi) this).field_f, -1);
             break L0;
           }
@@ -306,7 +311,7 @@ final class vi {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var5;
-            stackOut_7_1 = new StringBuilder().append("vi.A(").append(param0).append(44);
+            stackOut_7_1 = new StringBuilder().append("vi.A(").append(4).append(44);
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;

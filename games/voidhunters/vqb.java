@@ -8,7 +8,7 @@ final class vqb extends rqa {
         super(param0, param1, param2);
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_o = null;
     }
 
@@ -79,7 +79,7 @@ final class vqb extends rqa {
         return stackIn_4_0;
     }
 
-    final static void f(byte param0) {
+    final static void f() {
         egb.field_o = new String[fva.field_o];
         egb.field_o[5] = lr.field_q;
         egb.field_o[21] = bda.field_a;
@@ -101,60 +101,30 @@ final class vqb extends rqa {
         int var17 = 0;
         var17 = VoidHunters.field_G;
         if (param15 >= param5) {
-          if (param15 < param11) {
-            emb.a(param7, param6, param14, param11, dma.field_i, param2, param12, param5, param1, param13, param8, param4, param0, param15, param3, -1, param10);
-            if (param9 != -18419) {
-              vqb.a(true, -61);
+          if (param15 >= param11) {
+            if (param11 > param5) {
+              emb.a(param4, param0, param14, param15, dma.field_i, param2, param8, param5, param1, param13, param12, param7, param6, param11, param10, -1, param3);
               return;
             } else {
+              emb.a(param1, param2, param8, param15, dma.field_i, param0, param14, param11, param4, param10, param12, param7, param6, param5, param13, -1, param3);
               return;
             }
           } else {
-            if (param11 <= param5) {
-              emb.a(param1, param2, param8, param15, dma.field_i, param0, param14, param11, param4, param10, param12, param7, param6, param5, param13, param9 ^ 18418, param3);
-              if (param9 != -18419) {
-                vqb.a(true, -61);
-                return;
-              } else {
-                return;
-              }
-            } else {
-              emb.a(param4, param0, param14, param15, dma.field_i, param2, param8, param5, param1, param13, param12, param7, param6, param11, param10, param9 + 18418, param3);
-              if (param9 != -18419) {
-                vqb.a(true, -61);
-                return;
-              } else {
-                return;
-              }
-            }
+            emb.a(param7, param6, param14, param11, dma.field_i, param2, param12, param5, param1, param13, param8, param4, param0, param15, param3, -1, param10);
+            return;
           }
         } else {
-          if (param11 > param5) {
-            emb.a(param1, param2, param12, param11, dma.field_i, param6, param14, param15, param7, param3, param8, param4, param0, param5, param13, param9 + 18418, param10);
-            if (param9 == -18419) {
+          if (param11 <= param5) {
+            if (param15 < param11) {
+              emb.a(param4, param0, param12, param5, dma.field_i, param6, param8, param15, param7, param3, param14, param1, param2, param11, param10, -1, param13);
               return;
             } else {
-              vqb.a(true, -61);
+              emb.a(param7, param6, param8, param5, dma.field_i, param0, param12, param11, param4, param10, param14, param1, param2, param15, param3, -1, param13);
               return;
             }
           } else {
-            if (param15 >= param11) {
-              emb.a(param7, param6, param8, param5, dma.field_i, param0, param12, param11, param4, param10, param14, param1, param2, param15, param3, -1, param13);
-              if (param9 == -18419) {
-                return;
-              } else {
-                vqb.a(true, -61);
-                return;
-              }
-            } else {
-              emb.a(param4, param0, param12, param5, dma.field_i, param6, param8, param15, param7, param3, param14, param1, param2, param11, param10, -1, param13);
-              if (param9 != -18419) {
-                vqb.a(true, -61);
-                return;
-              } else {
-                return;
-              }
-            }
+            emb.a(param1, param2, param12, param11, dma.field_i, param6, param14, param15, param7, param3, param8, param4, param0, param5, param13, -1, param10);
+            return;
           }
         }
     }

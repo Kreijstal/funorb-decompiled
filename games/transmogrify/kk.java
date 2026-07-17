@@ -12,7 +12,7 @@ abstract class kk {
 
     final static int a(int param0, int param1, int param2) {
         if (param1 < 224) {
-            if (param1 < param0) {
+            if (param1 < 336) {
                 return -1;
             }
             if (416 <= param1) {
@@ -27,7 +27,7 @@ abstract class kk {
             return -1;
         }
         if (param1 >= 304) {
-            if (param1 >= param0) {
+            if (param1 >= 336) {
                 if (416 > param1) {
                     if (param2 >= 183) {
                         if (param2 >= 214) {
@@ -44,7 +44,7 @@ abstract class kk {
                 return 0;
             }
         }
-        if (param1 >= param0) {
+        if (param1 >= 336) {
             if (416 > param1) {
                 if (param2 >= 183) {
                     if (param2 >= 214) {
@@ -59,7 +59,7 @@ abstract class kk {
 
     abstract nk a(int param0);
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
         field_e = null;

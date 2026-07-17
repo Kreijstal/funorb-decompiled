@@ -17,54 +17,46 @@ final class cf extends f implements bp {
     final static hh a(bc param0, int param1, bc param2, int param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
-        Object stackIn_5_0 = null;
-        hh stackIn_7_0 = null;
+        hh stackIn_5_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
+        String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        hh stackOut_6_0 = null;
-        Object stackOut_4_0 = null;
+        hh stackOut_4_0 = null;
         Object stackOut_1_0 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
         RuntimeException stackOut_10_0 = null;
         StringBuilder stackOut_10_1 = null;
         String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
         try {
           L0: {
-            if (vd.a(param3, param2, param4, param1 ^ 3)) {
-              if (param1 == 1) {
-                stackOut_6_0 = uc.a(param0.a(param3, -1, param4), 0);
-                stackIn_7_0 = stackOut_6_0;
-                break L0;
-              } else {
-                stackOut_4_0 = null;
-                stackIn_5_0 = stackOut_4_0;
-                return (hh) (Object) stackIn_5_0;
-              }
+            if (vd.a(param3, param2, param4, 2)) {
+              stackOut_4_0 = uc.a(param0.a(param3, -1, param4), 0);
+              stackIn_5_0 = stackOut_4_0;
+              break L0;
             } else {
               stackOut_1_0 = null;
               stackIn_2_0 = stackOut_1_0;
@@ -75,61 +67,61 @@ final class cf extends f implements bp {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var5 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var5;
-            stackOut_8_1 = new StringBuilder().append("cf.C(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackOut_6_0 = (RuntimeException) var5;
+            stackOut_6_1 = new StringBuilder().append("cf.C(");
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
               break L1;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
               break L1;
             }
           }
           L2: {
-            stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(param1).append(44);
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44).append(1).append(44);
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
             if (param2 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
               break L2;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
               break L2;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param3 + 44 + param4 + 41);
+          throw r.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param3 + 44 + param4 + 41);
         }
-        return stackIn_7_0;
+        return stackIn_5_0;
     }
 
-    final static void a(pf param0, byte param1) {
+    final static void a(pf param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -153,7 +145,8 @@ final class cf extends f implements bp {
         try {
           L0: {
             L1: {
-              ds.field_c = rr.a(param0, bb.field_b, pd.field_k, 2);
+              int discarded$2 = 2;
+              ds.field_c = rr.a(param0, bb.field_b, pd.field_k);
               if (je.field_d != 1) {
                 if (rf.field_n != 1) {
                   L2: {
@@ -210,7 +203,8 @@ final class cf extends f implements bp {
                 ba.field_c = td.field_P;
                 ck.field_e = nh.field_p;
                 uq.field_i = 0;
-                vn.field_s = rr.a(param0, td.field_P, nh.field_p, 2);
+                int discarded$3 = 2;
+                vn.field_s = rr.a(param0, td.field_P, nh.field_p);
                 break L1;
               }
             }
@@ -377,7 +371,8 @@ final class cf extends f implements bp {
         int stackOut_12_10 = 0;
         int stackOut_12_11 = 0;
         L0: {
-          mf.d(58);
+          int discarded$6 = 58;
+          mf.d();
           if (np.field_a != null) {
             if (tf.a(true, np.field_a.field_Lb)) {
               stackOut_4_0 = 1;
@@ -417,7 +412,7 @@ final class cf extends f implements bp {
           L3: {
             stackOut_9_0 = stackIn_9_0;
             stackOut_9_1 = stackIn_9_1;
-            stackOut_9_2 = param0 ^ 16777213;
+            stackOut_9_2 = 16777215;
             stackOut_9_3 = param1;
             stackOut_9_4 = 13;
             stackOut_9_5 = 0;
@@ -586,29 +581,21 @@ final class cf extends f implements bp {
           }
         }
         L6: {
-          if (param0 == 2) {
+          if (s.field_d) {
+            js.field_f.h(10, 255);
+            s.field_d = false;
             break L6;
           } else {
-            field_F = null;
             break L6;
           }
         }
         L7: {
-          if (s.field_d) {
-            js.field_f.h(10, param0 + 253);
-            s.field_d = false;
-            break L7;
-          } else {
-            break L7;
-          }
-        }
-        L8: {
           if (!uc.field_B) {
-            break L8;
+            break L7;
           } else {
             uc.a(320, mp.field_b.field_K, mp.field_b.field_q + mp.field_b.field_K, 240, 8, nd.field_i, true, mr.field_i, (byte) -87, 2, mr.field_i, (nq) (Object) mp.field_b, false, 8, 1);
             uc.field_B = false;
-            break L8;
+            break L7;
           }
         }
     }
@@ -728,7 +715,7 @@ final class cf extends f implements bp {
         return stackIn_4_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_H = null;
         field_I = null;
         field_M = null;
@@ -736,11 +723,7 @@ final class cf extends f implements bp {
     }
 
     final static void a(int param0, int param1, int param2, boolean param3) {
-        gs.a(param0, param3, param2, -77, cr.field_c, rc.field_l, tg.field_a);
-        if (param1 != 8) {
-            Object var5 = null;
-            hh discarded$0 = cf.a((bc) null, -64, (bc) null, 13, 77);
-        }
+        gs.a(320, param3, 180, -77, cr.field_c, rc.field_l, tg.field_a);
     }
 
     cf(ns param0, nq param1, String param2) {

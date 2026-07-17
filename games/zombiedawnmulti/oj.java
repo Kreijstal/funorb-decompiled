@@ -99,12 +99,8 @@ final class oj extends pl implements in {
     }
 
     final static ul a(boolean param0, int param1, int param2, int param3, boolean param4) {
-        if (param3 != -24285) {
-          field_O = null;
-          return wm.a(param1, param2, true, false, -127, param0);
-        } else {
-          return wm.a(param1, param2, true, false, -127, param0);
-        }
+        int discarded$0 = 0;
+        return wm.a(param1, 1, true, false, -127);
     }
 
     public static void h(int param0) {

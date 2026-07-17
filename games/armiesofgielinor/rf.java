@@ -9,62 +9,21 @@ final class rf {
     private kl field_c;
     static String field_a;
 
-    final static boolean c(int param0) {
+    final static boolean c() {
         return !se.field_g.a((byte) 125);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_d = null;
         field_a = null;
     }
 
     final static boolean a(int param0) {
-        int stackIn_6_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        if (param0 == 27875) {
-          L0: {
-            if (nw.g(81)) {
-              stackOut_10_0 = 1;
-              stackIn_12_0 = stackOut_10_0;
-              break L0;
-            } else {
-              if (df.field_M > 0) {
-                stackOut_11_0 = 0;
-                stackIn_12_0 = stackOut_11_0;
-                break L0;
-              } else {
-                return true;
-              }
-            }
-          }
-          return stackIn_12_0 != 0;
-        } else {
-          field_d = null;
-          if (!nw.g(81)) {
-            L1: {
-              if (df.field_M > 0) {
-                stackOut_5_0 = 0;
-                stackIn_6_0 = stackOut_5_0;
-                break L1;
-              } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
-                break L1;
-              }
-            }
-            return stackIn_6_0 != 0;
-          } else {
-            return true;
-          }
-        }
+        return nw.g(81) || df.field_M <= 0;
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         kw.field_M[46] = 72;
         kw.field_M[61] = 27;
         kw.field_M[192] = 28;

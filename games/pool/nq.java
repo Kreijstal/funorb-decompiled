@@ -18,7 +18,7 @@ final class nq {
     lr field_i;
     int field_e;
 
-    final static boolean a(byte param0, int param1) {
+    final static boolean a(byte param0) {
         aa var2 = null;
         RuntimeException var2_ref = null;
         ij var3 = null;
@@ -183,93 +183,89 @@ final class nq {
             }
             var8 = qh.field_l >> 2;
             var9 = ((nq) this).field_i.b(param2);
-            if (param1 == 10066329) {
-              L2: {
-                L3: {
-                  var10 = ((nq) this).field_i.field_w + ((nq) this).field_i.field_C;
-                  var11 = 1;
-                  if (var9 > var8) {
+            L2: {
+              L3: {
+                var10 = ((nq) this).field_i.field_w + ((nq) this).field_i.field_C;
+                var11 = 1;
+                if (var9 > var8) {
+                  break L3;
+                } else {
+                  if (-1 != param2.indexOf("<br>")) {
                     break L3;
                   } else {
-                    if (-1 != param2.indexOf("<br>")) {
-                      break L3;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-                L4: {
-                  if (var9 <= var8) {
-                    var12 = var8;
-                    break L4;
-                  } else {
-                    var13 = var9 / var8;
-                    var12 = 2 * ((var13 + (var9 % var8 - 1)) / var13) + var8;
-                    break L4;
-                  }
-                }
-                L5: {
-                  if (null == w.field_k) {
-                    w.field_k = new String[16];
-                    break L5;
-                  } else {
-                    break L5;
-                  }
-                }
-                var11 = ((nq) this).field_i.a(param2, new int[1], w.field_k);
-                var9 = 0;
-                var10 = var10 + var7 * (var11 + -1);
-                var13 = 0;
-                L6: while (true) {
-                  if (var11 <= var13) {
                     break L2;
-                  } else {
-                    L7: {
-                      var14 = ((nq) this).field_i.b(w.field_k[var13]);
-                      if (var14 > var9) {
-                        var9 = var14;
-                        break L7;
-                      } else {
-                        break L7;
-                      }
-                    }
-                    var13++;
-                    continue L6;
                   }
                 }
               }
-              L8: {
-                var12 = param3;
-                if (var5_int + var12 - -var9 > qh.field_l) {
-                  var12 = -var5_int + -var9 + qh.field_l;
-                  break L8;
+              L4: {
+                if (var9 <= var8) {
+                  var12 = var8;
+                  break L4;
                 } else {
-                  break L8;
+                  var13 = var9 / var8;
+                  var12 = 2 * ((var13 + (var9 % var8 - 1)) / var13) + var8;
+                  break L4;
                 }
               }
-              L9: {
-                var13 = -((nq) this).field_i.field_L + (param0 - -32);
-                if (qh.field_f >= var6 + var13 - -var10) {
-                  break L9;
+              L5: {
+                if (null == w.field_k) {
+                  w.field_k = new String[16];
+                  break L5;
                 } else {
-                  var13 = -var6 + -var10 + param0;
-                  break L9;
+                  break L5;
                 }
               }
-              qh.b(var12, var13, var9 - -var5_int, var6 + var10, ((nq) this).field_e);
-              qh.f(var12 - -1, 1 + var13, -2 + (var5_int + var9), -2 + var6 + var10, ((nq) this).field_a);
-              int discarded$1 = ((nq) this).field_i.a(param2, var12 + ((nq) this).field_m, var13 + ((nq) this).field_h, var9, var10, ((nq) this).field_n, -1, 0, 0, var7);
-              break L0;
-            } else {
-              return;
+              var11 = ((nq) this).field_i.a(param2, new int[1], w.field_k);
+              var9 = 0;
+              var10 = var10 + var7 * (var11 + -1);
+              var13 = 0;
+              L6: while (true) {
+                if (var11 <= var13) {
+                  break L2;
+                } else {
+                  L7: {
+                    var14 = ((nq) this).field_i.b(w.field_k[var13]);
+                    if (var14 > var9) {
+                      var9 = var14;
+                      break L7;
+                    } else {
+                      break L7;
+                    }
+                  }
+                  var13++;
+                  continue L6;
+                }
+              }
             }
+            L8: {
+              var12 = param3;
+              if (var5_int + var12 - -var9 > qh.field_l) {
+                var12 = -var5_int + -var9 + qh.field_l;
+                break L8;
+              } else {
+                break L8;
+              }
+            }
+            L9: {
+              var13 = -((nq) this).field_i.field_L + (param0 - -32);
+              if (qh.field_f >= var6 + var13 - -var10) {
+                break L9;
+              } else {
+                var13 = -var6 + -var10 + param0;
+                break L9;
+              }
+            }
+            qh.b(var12, var13, var9 - -var5_int, var6 + var10, ((nq) this).field_e);
+            qh.f(var12 - -1, 1 + var13, -2 + (var5_int + var9), -2 + var6 + var10, ((nq) this).field_a);
+            int discarded$1 = ((nq) this).field_i.a(param2, var12 + ((nq) this).field_m, var13 + ((nq) this).field_h, var9, var10, ((nq) this).field_n, -1, 0, 0, var7);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L10: {
             var5 = decompiledCaughtException;
             stackOut_26_0 = (RuntimeException) var5;
-            stackOut_26_1 = new StringBuilder().append("nq.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_26_1 = new StringBuilder().append("nq.A(").append(param0).append(44).append(10066329).append(44);
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
@@ -362,50 +358,42 @@ final class nq {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
+        String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
         RuntimeException stackOut_9_0 = null;
         StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
               var5_int = ((nq) this).field_i.b(param0);
               var6 = ((nq) this).field_i.field_w + ((nq) this).field_i.field_L;
-              if (param2 <= -62) {
+              var7 = param1;
+              if (6 + var5_int + var7 > qh.field_l) {
+                var7 = -6 + -var5_int + qh.field_l;
                 break L1;
               } else {
-                ((nq) this).field_a = -110;
                 break L1;
               }
             }
             L2: {
-              var7 = param1;
-              if (6 + var5_int + var7 > qh.field_l) {
-                var7 = -6 + -var5_int + qh.field_l;
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            L3: {
               var8 = -((nq) this).field_i.field_L + (param3 - -32);
               if (qh.field_f >= 6 + var8 + var6) {
-                break L3;
+                break L2;
               } else {
                 var8 = qh.field_f + (-var6 - 6);
-                break L3;
+                break L2;
               }
             }
             qh.b(var7, var8, 6 + var5_int, 6 + var6, ((nq) this).field_n);
@@ -415,33 +403,33 @@ final class nq {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var5 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var5;
-            stackOut_9_1 = new StringBuilder().append("nq.I(");
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackOut_7_0 = (RuntimeException) var5;
+            stackOut_7_1 = new StringBuilder().append("nq.I(");
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
             if (param0 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
-              break L4;
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
-              break L4;
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw wm.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 44 + -94 + 44 + param3 + 41);
         }
     }
 
@@ -644,7 +632,8 @@ final class nq {
         try {
           L0: {
             L1: {
-              bp.a(param7, param6, 10);
+              int discarded$4 = 10;
+              bp.a(param7, param6);
               ib.field_s = bp.a(param1, param2, 0, param3);
               kk.field_D = bp.a(param1, param2, 1, param5);
               qf.field_d = new ai();
@@ -656,7 +645,7 @@ final class nq {
               if (!param4) {
                 break L1;
               } else {
-                boolean discarded$2 = nq.a('`', (byte) -1);
+                boolean discarded$5 = nq.a('`', (byte) -1);
                 break L1;
               }
             }

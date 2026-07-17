@@ -13,7 +13,7 @@ abstract class cda extends dg {
     static volatile int field_p;
     private int field_n;
 
-    public static void n(byte param0) {
+    public static void n() {
         field_u = null;
     }
 
@@ -697,7 +697,7 @@ abstract class cda extends dg {
     }
 
     final static void a(int param0, boolean param1) {
-        ira.a(param1, hb.field_t.field_d, (byte) -100);
+        ira.a(false, hb.field_t.field_d, (byte) -100);
         if (param0 != 0) {
             cda.a(50, false);
         }

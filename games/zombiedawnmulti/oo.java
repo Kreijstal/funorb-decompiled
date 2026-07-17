@@ -326,9 +326,11 @@ final class oo {
           var23 = param1 + var7 - var16;
           var24 = param1 + var7 + var15;
           ep.a(var17, var18, var19);
-          ep.a(var21, var22, var23, var17, var18, var19, param4);
+          int discarded$2 = 16711680;
+          ep.a(var21, var22, var23, var17, var18, var19);
           ep.a(var17, var19, var20);
-          ep.a(var21, var23, var24, var17, var19, var20, param4);
+          int discarded$3 = 16711680;
+          ep.a(var21, var23, var24, var17, var19, var20);
           return;
         } else {
           return;
@@ -1467,9 +1469,9 @@ final class oo {
               }
             }
             var6 = 208;
-            var7 = (param4 >> 16 & 255) * 48;
-            var8 = (param4 >> 8 & 255) * 48;
-            var9 = (param4 & 255) * 48;
+            var7 = 0;
+            var8 = 12240;
+            var9 = 0;
             if (param2 <= param3) {
               L1: {
                 param0 = param0 << 16;
@@ -1574,10 +1576,10 @@ final class oo {
           } else {
             L9: {
               if (param3 < 0) {
-                oo.b(param0, param1 + param3, -param3 + 1, param4, 48);
+                oo.b(param0, param1 + param3, -param3 + 1, 65280, 48);
                 break L9;
               } else {
-                oo.b(param0, param1, param3 + 1, param4, 48);
+                oo.b(param0, param1, param3 + 1, 65280, 48);
                 break L9;
               }
             }
@@ -1586,10 +1588,10 @@ final class oo {
         } else {
           L10: {
             if (param2 < 0) {
-              oo.c(param0 + param2, param1, -param2 + 1, param4, 48);
+              oo.c(param0 + param2, param1, -param2 + 1, 65280, 48);
               break L10;
             } else {
-              oo.c(param0, param1, param2 + 1, param4, 48);
+              oo.c(param0, param1, param2 + 1, 65280, 48);
               break L10;
             }
           }
@@ -3644,11 +3646,11 @@ final class oo {
     }
 
     final static void h(int param0, int param1, int param2, int param3, int param4, int param5) {
-        oo.c(param0, param1, param2, param4, 32);
-        oo.c(param0, param1 + param3 - 1, param2, param4, 32);
+        oo.c(param0, param1, param2, 10066431, 32);
+        oo.c(param0, param1 + param3 - 1, param2, 10066431, 32);
         if (param3 >= 3) {
-            oo.b(param0, param1 + 1, param3 - 2, param4, 32);
-            oo.b(param0 + param2 - 1, param1 + 1, param3 - 2, param4, 32);
+            oo.b(param0, param1 + 1, param3 - 2, 10066431, 32);
+            oo.b(param0 + param2 - 1, param1 + 1, param3 - 2, 10066431, 32);
             return;
         }
     }

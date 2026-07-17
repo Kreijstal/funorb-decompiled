@@ -20,7 +20,7 @@ final class in {
         field_d = null;
     }
 
-    final static String a(byte param0) {
+    final static String a() {
         if (un.field_Hb == bf.field_b) {
             return af.field_H;
         }
@@ -52,7 +52,7 @@ final class in {
                 break L0;
               } else {
                 if (null != gd.field_j) {
-                  ho.a(param8 ^ -66, false);
+                  ho.a(0, false);
                   break L0;
                 } else {
                   if (sj.field_d != null) {
@@ -81,58 +81,54 @@ final class in {
           if (rk.field_y <= 0) {
             break L3;
           } else {
-            dg.a(0, param5, param9, param3);
+            dg.a(0, 11, param9, param3);
             break L3;
           }
         }
         L4: {
-          if (param8 == -66) {
+          kk.field_f.field_R = pn.field_N.field_R;
+          kk.field_f.field_O = 1;
+          if (ko.field_P <= 0) {
             break L4;
           } else {
-            in.a((byte) -46, -104);
+            int discarded$4 = 11;
+            an.a(param9, -86, param3);
             break L4;
           }
         }
         L5: {
-          kk.field_f.field_R = pn.field_N.field_R;
-          kk.field_f.field_O = 1;
-          if (ko.field_P <= 0) {
+          if (mp.field_b > 0) {
+            gj.a(param0, 11, param9, 0, param3);
             break L5;
           } else {
-            an.a(param9, -86, param3, param5);
             break L5;
           }
         }
         L6: {
-          if (mp.field_b > 0) {
-            gj.a(param0, param5, param9, param8 ^ -66, param3);
-            break L6;
-          } else {
-            break L6;
-          }
-        }
-        L7: {
-          L8: {
+          L7: {
             if (!im.field_g) {
-              break L8;
+              break L7;
             } else {
               if (~gd.field_j.field_Qb > ~gd.field_j.field_uc) {
-                break L8;
+                break L7;
               } else {
                 im.field_j.field_lb = false;
                 ja.field_f.field_Lb.field_S = fg.field_db;
                 tg.a(0, ja.field_f.field_Nb);
-                break L7;
+                break L6;
               }
             }
           }
           im.field_j.field_lb = true;
           ja.field_f.field_Lb.field_S = null;
-          dg.a((byte) -86, ja.field_f, param1, param6, param5);
-          break L7;
+          int discarded$5 = 11;
+          dg.a((byte) -86, ja.field_f, param1, param6);
+          break L6;
         }
-        uo.a(param7, param2, param5, param1, param4, param6, 0);
-        dg.a((byte) -121, vd.field_d, param1, param6, param5);
+        int discarded$6 = 0;
+        uo.a(16777215, 16777215, 11, param1, true, param6);
+        int discarded$7 = 11;
+        dg.a((byte) -121, vd.field_d, param1, param6);
         lo.field_d = lo.field_d + 1;
     }
 
@@ -149,19 +145,19 @@ final class in {
             var5 = (ub) (Object) ob.field_Q.a((byte) 100);
             L1: while (true) {
               if (var5 == null) {
-                var3 = 52 % ((-5 - param0) / 37);
+                var3 = 0;
                 var6 = (be) (Object) mb.field_v.a((byte) 100);
                 L2: while (true) {
                   if (var6 == null) {
                     break L0;
                   } else {
-                    ec.a(param1, (byte) 122, var6);
+                    ec.a(5, (byte) 122, var6);
                     var6 = (be) (Object) mb.field_v.b(45);
                     continue L2;
                   }
                 }
               } else {
-                he.a(param1, var5, -27011);
+                he.a(5, var5, -27011);
                 var5 = (ub) (Object) ob.field_Q.b(113);
                 continue L1;
               }
@@ -170,11 +166,11 @@ final class in {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var2, "in.C(" + param0 + 44 + param1 + 41);
+          throw wn.a((Throwable) (Object) var2, "in.C(" + -102 + 44 + 5 + 41);
         }
     }
 
-    final static void a(tn param0, int param1) {
+    final static void a(tn param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -371,14 +367,6 @@ final class in {
             var4 = (qn) (Object) te.field_z.a((byte) 100);
             L1: while (true) {
               if (var4 == null) {
-                L2: {
-                  if (param0 < -97) {
-                    break L2;
-                  } else {
-                    field_a = null;
-                    break L2;
-                  }
-                }
                 break L0;
               } else {
                 pn.a(2, (byte) -4, var4);
@@ -390,7 +378,7 @@ final class in {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var2, "in.B(" + param0 + 44 + 2 + 41);
+          throw wn.a((Throwable) (Object) var2, "in.B(" + -124 + 44 + 2 + 41);
         }
     }
 

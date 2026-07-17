@@ -61,7 +61,7 @@ final class et {
             param2 = wm.a((byte) -86, param2, param3);
             var9 = new ut[2];
             var4 = var9;
-            var5 = param0;
+            var5 = 0;
             L1: while (true) {
               if (var5 >= 2) {
                 stackOut_13_0 = (ut[]) var4;
@@ -82,7 +82,7 @@ final class et {
                 }
                 L3: {
                   var6 = stackIn_6_0;
-                  iw.a(param0 ^ 55, var9[var5]);
+                  iw.a(55, var9[var5]);
                   param2.d(0, 0);
                   if (var6 == 0) {
                     on.g(0, 0, on.field_g, on.field_f);
@@ -105,7 +105,8 @@ final class et {
                 var7 = stackIn_12_0;
                 un.field_d.d(param1.toLowerCase(), var7 + (on.field_g >> 1), -13 + (on.field_f + var7), 0, -1);
                 ta.e(123);
-                sd.a(var9[var5], (byte) -51);
+                int discarded$2 = -51;
+                sd.a(var9[var5]);
                 var5++;
                 continue L1;
               }
@@ -116,7 +117,7 @@ final class et {
           L5: {
             var4_ref = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var4_ref;
-            stackOut_15_1 = new StringBuilder().append("et.B(").append(param0).append(44);
+            stackOut_15_1 = new StringBuilder().append("et.B(").append(0).append(44);
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -169,7 +170,7 @@ final class et {
         return stackIn_14_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_a = null;
         field_e = null;

@@ -423,9 +423,6 @@ final class jr extends tm {
     }
 
     final static dd[] a(int param0, byte param1, int param2) {
-        if (param1 != 20) {
-            return null;
-        }
         return cq.a(1, 4578, param0, param2);
     }
 

@@ -294,7 +294,7 @@ final class ab implements Runnable {
                                                 ((ab) this).field_r.a(var16, var8_ref.field_e >> 16, 13486, var8_ref.field_d >>> 16, 65535 & var8_ref.field_d, var8_ref.field_e & 65535);
                                                 break L8;
                                               } else {
-                                                Object discarded$6 = Class.forName("tk").getMethod("enter", new Class[5]).invoke(((ab) this).field_f, new Object[5]);
+                                                Object discarded$7 = Class.forName("tk").getMethod("enter", new Class[5]).invoke(((ab) this).field_f, new Object[5]);
                                                 break L8;
                                               }
                                             } else {
@@ -303,7 +303,7 @@ final class ab implements Runnable {
                                                   ((ab) this).field_r.a((java.awt.Frame) var8_ref.field_c, -20);
                                                   break L8;
                                                 } else {
-                                                  Object discarded$7 = Class.forName("tk").getMethod("exit", new Class[0]).invoke(((ab) this).field_f, new Object[0]);
+                                                  Object discarded$8 = Class.forName("tk").getMethod("exit", new Class[0]).invoke(((ab) this).field_f, new Object[0]);
                                                   break L8;
                                                 }
                                               } else {
@@ -325,7 +325,7 @@ final class ab implements Runnable {
                                                           var3_int = var8_ref.field_d;
                                                           var4 = var8_ref.field_e;
                                                           if (!((ab) this).field_g) {
-                                                            Object discarded$8 = Class.forName("lc").getDeclaredMethod("movemouse", new Class[2]).invoke(((ab) this).field_d, new Object[2]);
+                                                            Object discarded$9 = Class.forName("lc").getDeclaredMethod("movemouse", new Class[2]).invoke(((ab) this).field_d, new Object[2]);
                                                             break L8;
                                                           } else {
                                                             ((ab) this).field_u.a(var3_int, var4, 123);
@@ -358,7 +358,7 @@ final class ab implements Runnable {
                                                             ((ab) this).field_u.a(var15, var3_int != 0, true);
                                                             break L8;
                                                           } else {
-                                                            Object discarded$9 = Class.forName("lc").getDeclaredMethod("showcursor", new Class[2]).invoke(((ab) this).field_d, new Object[2]);
+                                                            Object discarded$10 = Class.forName("lc").getDeclaredMethod("showcursor", new Class[2]).invoke(((ab) this).field_d, new Object[2]);
                                                             break L8;
                                                           }
                                                         } else {
@@ -374,7 +374,7 @@ final class ab implements Runnable {
                                                           break L13;
                                                         } else {
                                                           var13 = (Object[]) var8_ref.field_c;
-                                                          Object discarded$10 = Class.forName("lc").getDeclaredMethod("setcustomcursor", new Class[5]).invoke(((ab) this).field_d, new Object[5]);
+                                                          Object discarded$11 = Class.forName("lc").getDeclaredMethod("setcustomcursor", new Class[5]).invoke(((ab) this).field_d, new Object[5]);
                                                           break L8;
                                                         }
                                                       }
@@ -401,7 +401,7 @@ final class ab implements Runnable {
                                                             var5 = 0;
                                                             L16: while (true) {
                                                               if (~var14.length() >= ~var5) {
-                                                                Process discarded$11 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var14 + "\"");
+                                                                Process discarded$12 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var14 + "\"");
                                                                 var8_ref.field_g = null;
                                                                 break L14;
                                                               } else {
@@ -486,7 +486,8 @@ final class ab implements Runnable {
                         } else {
                           try {
                             L18: {
-                              var8_ref.field_g = (Object) (Object) v.a((String) var8_ref.field_c, var8_ref.field_d, (byte) 127).b(51);
+                              int discarded$13 = 127;
+                              var8_ref.field_g = (Object) (Object) v.a((String) var8_ref.field_c, var8_ref.field_d).b(51);
                               break L18;
                             }
                           } catch (java.lang.Exception decompiledCaughtParameter2) {
@@ -522,10 +523,7 @@ final class ab implements Runnable {
     }
 
     private final ei a(byte param0, boolean param1, String param2, int param3) {
-        if (param0 > -125) {
-            field_n = null;
-        }
-        return this.a(-402166672, 0, param3, !param1 ? 1 : 22, (Object) (Object) param2);
+        return this.a(-402166672, 0, param3, 1, (Object) (Object) param2);
     }
 
     final boolean b(int param0) {

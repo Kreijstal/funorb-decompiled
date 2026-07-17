@@ -10,7 +10,7 @@ final class ll extends hg {
     final static void a(int param0, int param1, boolean param2, int param3) {
         param1 = l.a(-8462, param1);
         hn.field_l = new ig(param1, param3);
-        mj.field_d = param0;
+        mj.field_d = 0;
         od.field_q = param1;
         di.field_d = new wc(hn.field_l.field_p);
         int var4 = h.a(param1, (byte) 121);
@@ -18,7 +18,7 @@ final class ll extends hg {
         gi.a((byte) -70);
     }
 
-    final static void b(boolean param0) {
+    final static void b() {
         ll var1 = null;
         c var2 = null;
         var1 = (ll) (Object) jl.field_n.a(false);
@@ -190,7 +190,7 @@ final class ll extends hg {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_h = null;
     }
 

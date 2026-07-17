@@ -5,7 +5,7 @@ final class oc extends pu {
     static String field_m;
     static po field_l;
 
-    public static void b(int param0) {
+    public static void b() {
         field_m = null;
         field_l = null;
     }

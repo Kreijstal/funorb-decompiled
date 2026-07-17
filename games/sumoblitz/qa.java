@@ -2551,7 +2551,8 @@ final class qa extends ha {
 
     final void d() {
         if (((qa) this).field_J) {
-            pt.a(true, false, -1);
+            int discarded$0 = -1;
+            pt.a(true, false);
             ((qa) this).field_J = false;
         }
         ((qa) this).field_n = null;

@@ -22,15 +22,12 @@ final class hl extends lg implements sv, ft {
                 var5 = (hd) (Object) param1.field_jb.c(33);
                 var5 = var5;
             }
-            if (!param0) {
-                field_e = null;
-            }
             param1.field_J = 0;
             param1.field_mb = 0;
             param1.field_L = 0;
             param1.field_v = 0;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "hl.M(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "hl.M(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

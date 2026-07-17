@@ -7,13 +7,10 @@ final class uj {
     static hr field_a;
 
     final static ah a(int param0, int param1, int param2, byte param3, int param4) {
-        if (param3 != 84) {
-            return null;
-        }
         return (ah) (Object) new dr(param0, param2, param1, param4);
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
         field_a = null;
@@ -44,7 +41,7 @@ final class uj {
           L0: {
             L1: {
               if (qr.field_b != null) {
-                u.a(param3, param1, (byte) -87, 1048576, param2);
+                u.a(param3, 256, (byte) -87, 1048576, param2);
                 break L1;
               } else {
                 break L1;
@@ -55,7 +52,7 @@ final class uj {
                 var4 = (Object) (Object) wd.field_f;
                 synchronized (var4) {
                   L3: {
-                    qc.field_e.a((byte) -91, -1, param1);
+                    qc.field_e.a((byte) -91, -1, 256);
                     if (nd.field_B != param3) {
                       L4: {
                         qc.field_e.e(0);
@@ -79,7 +76,7 @@ final class uj {
                 break L2;
               }
             }
-            var4_int = -69 % ((param0 - -78) / 46);
+            var4_int = 0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -87,7 +84,7 @@ final class uj {
           L5: {
             var4_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var4_ref;
-            stackOut_17_1 = new StringBuilder().append("uj.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_17_1 = new StringBuilder().append("uj.A(").append(-124).append(44).append(256).append(44).append(param2).append(44);
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;

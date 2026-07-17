@@ -340,24 +340,14 @@ final class ph {
     }
 
     final static ed[] a(int param0, int param1, int param2, int param3) {
-        if (param1 != 1) {
-          ph.a((byte) 124);
-          return ob.a(param2, param3, 1, 1, param0);
-        } else {
-          return ob.a(param2, param3, 1, 1, param0);
-        }
+        return ob.a(param2, param3, 1, 1, param0);
     }
 
     private ph() throws Throwable {
         throw new Error();
     }
 
-    public static void a(byte param0) {
-        if (param0 != 106) {
-            field_b = null;
-            field_b = null;
-            return;
-        }
+    public static void a() {
         field_b = null;
     }
 

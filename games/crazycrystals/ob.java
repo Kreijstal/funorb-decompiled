@@ -28,7 +28,7 @@ abstract class ob {
         return ((ob) this).field_k.c(0) + ((ob) this).field_a.c(param0 ^ 20);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
     }
 

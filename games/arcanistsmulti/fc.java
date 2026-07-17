@@ -50,101 +50,97 @@ final class fc {
           L0: {
             var10_int = -(param8 >> 2);
             param8 = -(3 & param8);
-            if (param3 == 6725) {
-              var11 = -param9;
-              L1: while (true) {
-                if (var11 >= 0) {
-                  break L0;
-                } else {
-                  var12 = var10_int;
-                  L2: while (true) {
-                    if (var12 >= 0) {
-                      var12 = param8;
-                      L3: while (true) {
-                        if (var12 >= 0) {
-                          param0 = param0 + param2;
-                          param4 = param4 + param5;
-                          var11++;
-                          continue L1;
-                        } else {
-                          L4: {
-                            int incrementValue$10 = param4;
-                            param4++;
-                            if (param1[incrementValue$10] == 0) {
-                              param0++;
-                              break L4;
-                            } else {
-                              int incrementValue$11 = param0;
-                              param0++;
-                              param7[incrementValue$11] = (byte)param6;
-                              break L4;
-                            }
+            var11 = -param9;
+            L1: while (true) {
+              if (var11 >= 0) {
+                break L0;
+              } else {
+                var12 = var10_int;
+                L2: while (true) {
+                  if (var12 >= 0) {
+                    var12 = param8;
+                    L3: while (true) {
+                      if (var12 >= 0) {
+                        param0 = param0 + param2;
+                        param4 = param4 + param5;
+                        var11++;
+                        continue L1;
+                      } else {
+                        L4: {
+                          int incrementValue$10 = param4;
+                          param4++;
+                          if (param1[incrementValue$10] == 0) {
+                            param0++;
+                            break L4;
+                          } else {
+                            int incrementValue$11 = param0;
+                            param0++;
+                            param7[incrementValue$11] = (byte) 0;
+                            break L4;
                           }
-                          var12++;
-                          continue L3;
                         }
+                        var12++;
+                        continue L3;
                       }
-                    } else {
-                      L5: {
-                        int incrementValue$12 = param4;
-                        param4++;
-                        if (param1[incrementValue$12] != 0) {
-                          int incrementValue$13 = param0;
-                          param0++;
-                          param7[incrementValue$13] = (byte)param6;
-                          break L5;
-                        } else {
-                          param0++;
-                          break L5;
-                        }
-                      }
-                      L6: {
-                        int incrementValue$14 = param4;
-                        param4++;
-                        if (0 != param1[incrementValue$14]) {
-                          int incrementValue$15 = param0;
-                          param0++;
-                          param7[incrementValue$15] = (byte)param6;
-                          break L6;
-                        } else {
-                          param0++;
-                          break L6;
-                        }
-                      }
-                      L7: {
-                        int incrementValue$16 = param4;
-                        param4++;
-                        if (param1[incrementValue$16] == 0) {
-                          param0++;
-                          break L7;
-                        } else {
-                          int incrementValue$17 = param0;
-                          param0++;
-                          param7[incrementValue$17] = (byte)param6;
-                          break L7;
-                        }
-                      }
-                      L8: {
-                        int incrementValue$18 = param4;
-                        param4++;
-                        if (param1[incrementValue$18] == 0) {
-                          param0++;
-                          break L8;
-                        } else {
-                          int incrementValue$19 = param0;
-                          param0++;
-                          param7[incrementValue$19] = (byte)param6;
-                          break L8;
-                        }
-                      }
-                      var12++;
-                      continue L2;
                     }
+                  } else {
+                    L5: {
+                      int incrementValue$12 = param4;
+                      param4++;
+                      if (param1[incrementValue$12] != 0) {
+                        int incrementValue$13 = param0;
+                        param0++;
+                        param7[incrementValue$13] = (byte) 0;
+                        break L5;
+                      } else {
+                        param0++;
+                        break L5;
+                      }
+                    }
+                    L6: {
+                      int incrementValue$14 = param4;
+                      param4++;
+                      if (0 != param1[incrementValue$14]) {
+                        int incrementValue$15 = param0;
+                        param0++;
+                        param7[incrementValue$15] = (byte) 0;
+                        break L6;
+                      } else {
+                        param0++;
+                        break L6;
+                      }
+                    }
+                    L7: {
+                      int incrementValue$16 = param4;
+                      param4++;
+                      if (param1[incrementValue$16] == 0) {
+                        param0++;
+                        break L7;
+                      } else {
+                        int incrementValue$17 = param0;
+                        param0++;
+                        param7[incrementValue$17] = (byte) 0;
+                        break L7;
+                      }
+                    }
+                    L8: {
+                      int incrementValue$18 = param4;
+                      param4++;
+                      if (param1[incrementValue$18] == 0) {
+                        param0++;
+                        break L8;
+                      } else {
+                        int incrementValue$19 = param0;
+                        param0++;
+                        param7[incrementValue$19] = (byte) 0;
+                        break L8;
+                      }
+                    }
+                    var12++;
+                    continue L2;
                   }
                 }
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -177,7 +173,7 @@ final class fc {
           }
           L10: {
             stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-            stackOut_31_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44);
+            stackOut_31_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(44).append(param2).append(44).append(6725).append(44).append(param4).append(44).append(param5).append(44).append(0).append(44);
             stackIn_33_0 = stackOut_31_0;
             stackIn_33_1 = stackOut_31_1;
             stackIn_32_0 = stackOut_31_0;
@@ -227,7 +223,7 @@ final class fc {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_d = null;
         field_c = null;
@@ -269,7 +265,8 @@ final class fc {
               return stackIn_3_0 != 0;
             } else {
               var5 = -27 % ((param0 - -66) / 51);
-              e.a(var6, true);
+              int discarded$2 = 1;
+              e.a(var6);
               stackOut_4_0 = 1;
               stackIn_5_0 = stackOut_4_0;
               break L0;

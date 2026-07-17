@@ -57,9 +57,11 @@ final class dd {
                         try {
                             var9 = param1.getParameter("cookieprefix");
                             var3 = var9 + "settings";
-                            var4 = (String) sh.a("getcookies", param1, (byte) 78);
-                            var5 = qj.a(';', var4, 10287);
-                            var6 = param0;
+                            int discarded$4 = 78;
+                            var4 = (String) sh.a("getcookies", param1);
+                            int discarded$5 = 10287;
+                            var5 = qj.a(';', var4);
+                            var6 = 0;
                             statePc = 2;
                             continue stateLoop;
                         } catch (Throwable stateCaught_1) {
@@ -199,7 +201,7 @@ final class dd {
                     case 15: {
                         var2_ref = (RuntimeException) (Object) caughtException;
                         stackOut_15_0 = (RuntimeException) var2_ref;
-                        stackOut_15_1 = new StringBuilder().append("dd.F(").append(param0).append(44);
+                        stackOut_15_1 = new StringBuilder().append("dd.F(").append(0).append(44);
                         stackIn_17_0 = stackOut_15_0;
                         stackIn_17_1 = stackOut_15_1;
                         stackIn_16_0 = stackOut_15_0;
@@ -370,7 +372,6 @@ final class dd {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var9 = 0;
-        Object var10 = null;
         L0: {
           var9 = stellarshard.field_B;
           if (param6 < param7) {
@@ -389,7 +390,7 @@ final class dd {
           } else {
             if (param5 <= param6) {
               if (param5 <= param7) {
-                mg.a(param6, param4, param2, param1, param5, ti.field_a, param0 + -445802484, param3, param7);
+                mg.a(param6, param4, param2, param1, param5, ti.field_a, -445834032, param3, param7);
                 break L0;
               } else {
                 mg.a(param6, param4, param2, param3, param7, ti.field_a, -445834032, param1, param5);
@@ -401,18 +402,9 @@ final class dd {
             }
           }
         }
-        L1: {
-          if (param0 == -31548) {
-            break L1;
-          } else {
-            var10 = null;
-            String discarded$1 = dd.a(-27, (java.applet.Applet) null);
-            break L1;
-          }
-        }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;

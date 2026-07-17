@@ -78,7 +78,7 @@ final class td extends gh {
           L0: {
             param0 += 8;
             var6_int = param4.field_L.a(param4.field_S, -(param4.field_ub * 2) + param3, param4.field_Ib);
-            param4.a(param1, param0, var6_int, 0, param3);
+            param4.a(0, param0, var6_int, 0, param3);
             param0 = param0 + var6_int;
             param2.a(param4, 125);
             stackOut_0_0 = param0;
@@ -90,7 +90,7 @@ final class td extends gh {
           L1: {
             var6 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var6;
-            stackOut_2_1 = new StringBuilder().append("td.G(").append(param0).append(44).append(param1).append(44);
+            stackOut_2_1 = new StringBuilder().append("td.G(").append(param0).append(44).append(0).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -738,7 +738,7 @@ final class td extends gh {
         return stackIn_6_0 != 0;
     }
 
-    public static void j(int param0) {
+    public static void j() {
         field_Xb = null;
         field_ec = null;
         field_Vb = null;

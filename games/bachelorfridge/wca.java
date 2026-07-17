@@ -409,354 +409,508 @@ final class wca {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        oha var10 = null;
         oha var11 = null;
-        if (param4 < 61) {
-          wca.a((byte) 117);
-          var11 = al.a(-72, param3);
-          var6 = var11.field_h;
-          var7 = var11.field_a;
-          var8 = var11.field_l;
-          if (param0) {
-            L0: {
-              hh.field_b[var6].e(5 + param2, param1 + 5);
-              if (1 == var8) {
-                break L0;
-              } else {
-                if (2 == var8) {
-                  break L0;
-                } else {
-                  if (3 == var8) {
-                    break L0;
-                  } else {
-                    L1: {
-                      L2: {
-                        if (1 == var7) {
-                          break L2;
-                        } else {
-                          if (var7 != 2) {
-                            break L1;
-                          } else {
-                            if (!hl.a((byte) 104, var11.field_j)) {
-                              break L1;
-                            } else {
-                              break L2;
-                            }
-                          }
-                        }
-                      }
-                      L3: {
-                        if (var8 < 1) {
-                          break L3;
-                        } else {
-                          us.field_c.a(param2 + 11, param1);
-                          break L3;
-                        }
-                      }
-                      L4: {
+        oha var12 = null;
+        oha var13 = null;
+        oha var14 = null;
+        if (param4 >= 61) {
+          var14 = al.a(-72, param3);
+          var13 = var14;
+          var6 = var13.field_h;
+          var7 = var13.field_a;
+          var8 = var14.field_l;
+          hh.field_b[var6].e(5 + param2, param1 + 5);
+          if (1 != var8) {
+            if (2 != var8) {
+              if (3 == var8) {
+                L0: {
+                  if (1 == var7) {
+                    if (var8 < 1) {
+                      L1: {
                         if (var8 >= 2) {
                           us.field_c.a(18 + param2, 3 + param1);
-                          break L4;
+                          break L1;
                         } else {
-                          break L4;
+                          break L1;
                         }
                       }
                       if (var8 >= 3) {
                         us.field_c.a(21 + param2, 10 + param1);
-                        break L1;
+                        break L0;
                       } else {
-                        break L1;
+                        return;
+                      }
+                    } else {
+                      L2: {
+                        us.field_c.a(param2 + 11, param1);
+                        if (var8 >= 2) {
+                          us.field_c.a(18 + param2, 3 + param1);
+                          break L2;
+                        } else {
+                          break L2;
+                        }
+                      }
+                      L3: {
+                        if (var8 >= 3) {
+                          us.field_c.a(21 + param2, 10 + param1);
+                          break L3;
+                        } else {
+                          break L3;
+                        }
+                      }
+                      return;
+                    }
+                  } else {
+                    if (var7 != 2) {
+                      break L0;
+                    } else {
+                      if (!hl.a((byte) 104, var13.field_j)) {
+                        break L0;
+                      } else {
+                        if (var8 < 1) {
+                          L4: {
+                            if (var8 >= 2) {
+                              us.field_c.a(18 + param2, 3 + param1);
+                              break L4;
+                            } else {
+                              break L4;
+                            }
+                          }
+                          L5: {
+                            if (var8 >= 3) {
+                              us.field_c.a(21 + param2, 10 + param1);
+                              break L5;
+                            } else {
+                              break L5;
+                            }
+                          }
+                          return;
+                        } else {
+                          L6: {
+                            us.field_c.a(param2 + 11, param1);
+                            if (var8 >= 2) {
+                              us.field_c.a(18 + param2, 3 + param1);
+                              break L6;
+                            } else {
+                              break L6;
+                            }
+                          }
+                          L7: {
+                            if (var8 >= 3) {
+                              us.field_c.a(21 + param2, 10 + param1);
+                              break L7;
+                            } else {
+                              break L7;
+                            }
+                          }
+                          return;
+                        }
+                      }
+                    }
+                  }
+                }
+                return;
+              } else {
+                if (1 == var7) {
+                  if (var8 < 1) {
+                    L8: {
+                      if (var8 >= 2) {
+                        us.field_c.a(18 + param2, 3 + param1);
+                        break L8;
+                      } else {
+                        break L8;
+                      }
+                    }
+                    if (var8 >= 3) {
+                      us.field_c.a(21 + param2, 10 + param1);
+                      return;
+                    } else {
+                      return;
+                    }
+                  } else {
+                    L9: {
+                      us.field_c.a(param2 + 11, param1);
+                      if (var8 >= 2) {
+                        us.field_c.a(18 + param2, 3 + param1);
+                        break L9;
+                      } else {
+                        break L9;
+                      }
+                    }
+                    L10: {
+                      if (var8 >= 3) {
+                        us.field_c.a(21 + param2, 10 + param1);
+                        break L10;
+                      } else {
+                        break L10;
                       }
                     }
                     return;
                   }
-                }
-              }
-            }
-            if (1 == var7) {
-              if (var8 < 1) {
-                L5: {
-                  if (var8 >= 2) {
-                    us.field_c.a(18 + param2, 3 + param1);
-                    break L5;
-                  } else {
-                    break L5;
-                  }
-                }
-                if (var8 >= 3) {
-                  us.field_c.a(21 + param2, 10 + param1);
-                  return;
                 } else {
-                  return;
-                }
-              } else {
-                L6: {
-                  us.field_c.a(param2 + 11, param1);
-                  if (var8 >= 2) {
-                    us.field_c.a(18 + param2, 3 + param1);
-                    break L6;
+                  if (var7 == 2) {
+                    if (hl.a((byte) 104, var13.field_j)) {
+                      L11: {
+                        if (var8 < 1) {
+                          break L11;
+                        } else {
+                          us.field_c.a(param2 + 11, param1);
+                          break L11;
+                        }
+                      }
+                      L12: {
+                        if (var8 >= 2) {
+                          us.field_c.a(18 + param2, 3 + param1);
+                          break L12;
+                        } else {
+                          break L12;
+                        }
+                      }
+                      L13: {
+                        if (var8 >= 3) {
+                          us.field_c.a(21 + param2, 10 + param1);
+                          break L13;
+                        } else {
+                          break L13;
+                        }
+                      }
+                      return;
+                    } else {
+                      return;
+                    }
                   } else {
-                    break L6;
+                    return;
                   }
                 }
-                L7: {
-                  if (var8 >= 3) {
-                    us.field_c.a(21 + param2, 10 + param1);
-                    break L7;
-                  } else {
-                    break L7;
-                  }
-                }
-                return;
               }
             } else {
-              if (var7 == 2) {
-                if (hl.a((byte) 104, var11.field_j)) {
-                  L8: {
-                    if (var8 < 1) {
-                      break L8;
-                    } else {
-                      us.field_c.a(param2 + 11, param1);
-                      break L8;
-                    }
-                  }
-                  L9: {
-                    if (var8 >= 2) {
-                      us.field_c.a(18 + param2, 3 + param1);
-                      break L9;
-                    } else {
-                      break L9;
-                    }
-                  }
-                  L10: {
-                    if (var8 >= 3) {
-                      us.field_c.a(21 + param2, 10 + param1);
-                      break L10;
-                    } else {
-                      break L10;
-                    }
-                  }
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                return;
-              }
-            }
-          } else {
-            hh.field_b[var6].a(5 + param2, param1 + 5, 128);
-            if (1 != var8) {
-              L11: {
-                if (2 == var8) {
-                  break L11;
-                } else {
-                  if (3 == var8) {
-                    break L11;
-                  } else {
-                    break L11;
-                  }
-                }
-              }
-              L12: {
-                L13: {
-                  if (1 == var7) {
-                    break L13;
-                  } else {
-                    if (var7 != 2) {
-                      break L12;
-                    } else {
-                      if (!hl.a((byte) 104, var11.field_j)) {
-                        break L12;
+              L14: {
+                if (1 == var7) {
+                  if (var8 < 1) {
+                    L15: {
+                      if (var8 >= 2) {
+                        us.field_c.a(18 + param2, 3 + param1);
+                        break L15;
                       } else {
-                        break L13;
+                        break L15;
                       }
                     }
-                  }
-                }
-                L14: {
-                  if (var8 < 1) {
-                    break L14;
-                  } else {
-                    us.field_c.a(param2 + 11, param1);
-                    break L14;
-                  }
-                }
-                L15: {
-                  if (var8 >= 2) {
-                    us.field_c.a(18 + param2, 3 + param1);
-                    break L15;
-                  } else {
-                    break L15;
-                  }
-                }
-                if (var8 >= 3) {
-                  us.field_c.a(21 + param2, 10 + param1);
-                  break L12;
-                } else {
-                  break L12;
-                }
-              }
-              return;
-            } else {
-              L16: {
-                L17: {
-                  if (1 == var7) {
-                    break L17;
-                  } else {
-                    if (var7 != 2) {
-                      break L16;
+                    if (var8 >= 3) {
+                      us.field_c.a(21 + param2, 10 + param1);
+                      break L14;
                     } else {
-                      if (!hl.a((byte) 104, var11.field_j)) {
+                      return;
+                    }
+                  } else {
+                    L16: {
+                      us.field_c.a(param2 + 11, param1);
+                      if (var8 >= 2) {
+                        us.field_c.a(18 + param2, 3 + param1);
                         break L16;
+                      } else {
+                        break L16;
+                      }
+                    }
+                    L17: {
+                      if (var8 >= 3) {
+                        us.field_c.a(21 + param2, 10 + param1);
+                        break L17;
                       } else {
                         break L17;
                       }
                     }
+                    return;
                   }
-                }
-                L18: {
-                  if (var8 < 1) {
-                    break L18;
-                  } else {
-                    us.field_c.a(param2 + 11, param1);
-                    break L18;
-                  }
-                }
-                L19: {
-                  if (var8 >= 2) {
-                    us.field_c.a(18 + param2, 3 + param1);
-                    break L19;
-                  } else {
-                    break L19;
-                  }
-                }
-                if (var8 >= 3) {
-                  us.field_c.a(21 + param2, 10 + param1);
-                  break L16;
                 } else {
-                  break L16;
+                  if (var7 != 2) {
+                    break L14;
+                  } else {
+                    if (!hl.a((byte) 104, var13.field_j)) {
+                      break L14;
+                    } else {
+                      if (var8 < 1) {
+                        L18: {
+                          if (var8 >= 2) {
+                            us.field_c.a(18 + param2, 3 + param1);
+                            break L18;
+                          } else {
+                            break L18;
+                          }
+                        }
+                        L19: {
+                          if (var8 >= 3) {
+                            us.field_c.a(21 + param2, 10 + param1);
+                            break L19;
+                          } else {
+                            break L19;
+                          }
+                        }
+                        return;
+                      } else {
+                        L20: {
+                          us.field_c.a(param2 + 11, param1);
+                          if (var8 >= 2) {
+                            us.field_c.a(18 + param2, 3 + param1);
+                            break L20;
+                          } else {
+                            break L20;
+                          }
+                        }
+                        L21: {
+                          if (var8 >= 3) {
+                            us.field_c.a(21 + param2, 10 + param1);
+                            break L21;
+                          } else {
+                            break L21;
+                          }
+                        }
+                        return;
+                      }
+                    }
+                  }
                 }
               }
               return;
             }
-          }
-        } else {
-          var10 = al.a(-72, param3);
-          var6 = var10.field_h;
-          var7 = var10.field_a;
-          var8 = var10.field_l;
-          if (param0) {
-            L20: {
-              hh.field_b[var6].e(5 + param2, param1 + 5);
-              if (1 == var8) {
-                break L20;
-              } else {
-                if (2 == var8) {
-                  break L20;
-                } else {
-                  if (3 == var8) {
-                    break L20;
-                  } else {
-                    break L20;
+          } else {
+            L22: {
+              if (1 == var7) {
+                if (var8 < 1) {
+                  L23: {
+                    if (var8 >= 2) {
+                      us.field_c.a(18 + param2, 3 + param1);
+                      break L23;
+                    } else {
+                      break L23;
+                    }
                   }
+                  if (var8 >= 3) {
+                    us.field_c.a(21 + param2, 10 + param1);
+                    break L22;
+                  } else {
+                    return;
+                  }
+                } else {
+                  L24: {
+                    us.field_c.a(param2 + 11, param1);
+                    if (var8 >= 2) {
+                      us.field_c.a(18 + param2, 3 + param1);
+                      break L24;
+                    } else {
+                      break L24;
+                    }
+                  }
+                  L25: {
+                    if (var8 >= 3) {
+                      us.field_c.a(21 + param2, 10 + param1);
+                      break L25;
+                    } else {
+                      break L25;
+                    }
+                  }
+                  return;
                 }
-              }
-            }
-            L21: {
-              L22: {
-                if (1 == var7) {
+              } else {
+                if (var7 != 2) {
                   break L22;
                 } else {
-                  if (var7 != 2) {
-                    break L21;
+                  if (!hl.a((byte) 104, var13.field_j)) {
+                    break L22;
                   } else {
-                    if (!hl.a((byte) 104, var10.field_j)) {
-                      break L21;
+                    if (var8 < 1) {
+                      L26: {
+                        if (var8 >= 2) {
+                          us.field_c.a(18 + param2, 3 + param1);
+                          break L26;
+                        } else {
+                          break L26;
+                        }
+                      }
+                      L27: {
+                        if (var8 >= 3) {
+                          us.field_c.a(21 + param2, 10 + param1);
+                          break L27;
+                        } else {
+                          break L27;
+                        }
+                      }
+                      return;
                     } else {
-                      break L22;
+                      L28: {
+                        us.field_c.a(param2 + 11, param1);
+                        if (var8 >= 2) {
+                          us.field_c.a(18 + param2, 3 + param1);
+                          break L28;
+                        } else {
+                          break L28;
+                        }
+                      }
+                      L29: {
+                        if (var8 >= 3) {
+                          us.field_c.a(21 + param2, 10 + param1);
+                          break L29;
+                        } else {
+                          break L29;
+                        }
+                      }
+                      return;
                     }
                   }
                 }
-              }
-              L23: {
-                if (var8 < 1) {
-                  break L23;
-                } else {
-                  us.field_c.a(param2 + 11, param1);
-                  break L23;
-                }
-              }
-              L24: {
-                if (var8 >= 2) {
-                  us.field_c.a(18 + param2, 3 + param1);
-                  break L24;
-                } else {
-                  break L24;
-                }
-              }
-              if (var8 >= 3) {
-                us.field_c.a(21 + param2, 10 + param1);
-                break L21;
-              } else {
-                break L21;
               }
             }
             return;
-          } else {
-            L25: {
-              hh.field_b[var6].a(5 + param2, param1 + 5, 128);
-              if (1 == var8) {
-                break L25;
-              } else {
-                if (2 == var8) {
-                  break L25;
+          }
+        } else {
+          wca.a((byte) 117);
+          var12 = al.a(-72, param3);
+          var11 = var12;
+          var6 = var11.field_h;
+          var7 = var11.field_a;
+          var8 = var12.field_l;
+          hh.field_b[var6].e(5 + param2, param1 + 5);
+          if (1 != var8) {
+            if (2 != var8) {
+              L30: {
+                if (3 == var8) {
+                  break L30;
                 } else {
-                  if (3 == var8) {
-                    break L25;
-                  } else {
-                    break L25;
-                  }
+                  break L30;
                 }
               }
+              L31: {
+                L32: {
+                  if (1 == var7) {
+                    break L32;
+                  } else {
+                    if (var7 != 2) {
+                      break L31;
+                    } else {
+                      if (!hl.a((byte) 104, var11.field_j)) {
+                        break L31;
+                      } else {
+                        break L32;
+                      }
+                    }
+                  }
+                }
+                if (var8 < 1) {
+                  L33: {
+                    if (var8 >= 2) {
+                      us.field_c.a(18 + param2, 3 + param1);
+                      break L33;
+                    } else {
+                      break L33;
+                    }
+                  }
+                  if (var8 >= 3) {
+                    us.field_c.a(21 + param2, 10 + param1);
+                    break L31;
+                  } else {
+                    return;
+                  }
+                } else {
+                  L34: {
+                    us.field_c.a(param2 + 11, param1);
+                    if (var8 >= 2) {
+                      us.field_c.a(18 + param2, 3 + param1);
+                      break L34;
+                    } else {
+                      break L34;
+                    }
+                  }
+                  L35: {
+                    if (var8 >= 3) {
+                      us.field_c.a(21 + param2, 10 + param1);
+                      break L35;
+                    } else {
+                      break L35;
+                    }
+                  }
+                  return;
+                }
+              }
+              return;
+            } else {
+              L36: {
+                L37: {
+                  if (1 == var7) {
+                    break L37;
+                  } else {
+                    if (var7 != 2) {
+                      break L36;
+                    } else {
+                      if (!hl.a((byte) 104, var11.field_j)) {
+                        break L36;
+                      } else {
+                        break L37;
+                      }
+                    }
+                  }
+                }
+                L38: {
+                  if (var8 < 1) {
+                    break L38;
+                  } else {
+                    us.field_c.a(param2 + 11, param1);
+                    break L38;
+                  }
+                }
+                L39: {
+                  if (var8 >= 2) {
+                    us.field_c.a(18 + param2, 3 + param1);
+                    break L39;
+                  } else {
+                    break L39;
+                  }
+                }
+                if (var8 >= 3) {
+                  us.field_c.a(21 + param2, 10 + param1);
+                  break L36;
+                } else {
+                  break L36;
+                }
+              }
+              return;
             }
-            L26: {
-              L27: {
+          } else {
+            L40: {
+              L41: {
                 if (1 == var7) {
-                  break L27;
+                  break L41;
                 } else {
                   if (var7 != 2) {
-                    break L26;
+                    break L40;
                   } else {
-                    if (!hl.a((byte) 104, var10.field_j)) {
-                      break L26;
+                    if (!hl.a((byte) 104, var11.field_j)) {
+                      break L40;
                     } else {
-                      break L27;
+                      break L41;
                     }
                   }
                 }
               }
-              L28: {
+              L42: {
                 if (var8 < 1) {
-                  break L28;
+                  break L42;
                 } else {
                   us.field_c.a(param2 + 11, param1);
-                  break L28;
+                  break L42;
                 }
               }
-              L29: {
+              L43: {
                 if (var8 >= 2) {
                   us.field_c.a(18 + param2, 3 + param1);
-                  break L29;
+                  break L43;
                 } else {
-                  break L29;
+                  break L43;
                 }
               }
               if (var8 >= 3) {
                 us.field_c.a(21 + param2, 10 + param1);
-                break L26;
+                break L40;
               } else {
-                break L26;
+                break L40;
               }
             }
             return;

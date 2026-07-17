@@ -12,10 +12,7 @@ abstract class dc implements qi {
 
     final static void a(bl param0, int param1, boolean param2, ug param3, byte param4, java.awt.Component param5) {
         try {
-            if (param4 > -91) {
-                field_b = null;
-            }
-            id.a(param1, param2, 10);
+            id.a(22050, true, 10);
             el.field_sb = id.a(param0, param5, 0, 22050);
             k.field_J = id.a(param0, param5, 1, 1024);
             ej.field_a = new ec();
@@ -24,7 +21,7 @@ abstract class dc implements qi {
             param3.a(oa.field_b * 128 / 80, (byte) -13);
             el.field_sb.a((ic) (Object) param3);
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "dc.Q(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "dc.Q(" + (param0 != null ? "{...}" : "null") + 44 + 22050 + 44 + 1 + 44 + (param3 != null ? "{...}" : "null") + 44 + -92 + 44 + (param5 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -266,7 +263,7 @@ abstract class dc implements qi {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_f = null;
         field_b = null;
         field_g = null;

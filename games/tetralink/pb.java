@@ -18,7 +18,7 @@ final class pb {
         return 0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = 87;
         field_f = null;
         field_d = null;

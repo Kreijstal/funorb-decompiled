@@ -23,7 +23,7 @@ final class dqa extends mna {
             pq.field_g.field_ib = param3;
             pq.field_g.field_r = param0;
             mka.field_b.field_qb = mka.field_b.field_qb + mka.field_b.field_G;
-            mka.field_b.field_G = param1;
+            mka.field_b.field_G = 0;
             if (param4 < 118) {
                 Object var6 = null;
                 dqa.a((cn) null, (cn) null, (byte) 102, (cn) null);
@@ -31,7 +31,7 @@ final class dqa extends mna {
             pq.field_g.field_G = pq.field_g.field_G - mka.field_b.field_G;
             mka.field_b.field_qb = mka.field_b.field_qb - mka.field_b.field_G;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "dqa.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "dqa.E(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -43,7 +43,7 @@ final class dqa extends mna {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
     }
 

@@ -163,11 +163,8 @@ class ed extends li {
         ((ed) this).field_p[fieldTemp$4] = (byte)(int)param1;
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_s = null;
-        if (param0 < 84) {
-            return;
-        }
         field_r = null;
         field_o = null;
     }
@@ -276,7 +273,7 @@ class ed extends li {
         return var2 | var3;
     }
 
-    private final void a(long param0, int param1) {
+    private final void a(long param0) {
         int fieldTemp$0 = ((ed) this).field_u;
         ((ed) this).field_u = ((ed) this).field_u + 1;
         ((ed) this).field_p[fieldTemp$0] = (byte)(int)(param0 >> 48);
@@ -622,7 +619,8 @@ class ed extends li {
     }
 
     final int c(int param0, int param1) {
-        int var3 = om.a(((ed) this).field_u, param0, ((ed) this).field_p, 255);
+        int discarded$0 = 255;
+        int var3 = om.a(((ed) this).field_u, param0, ((ed) this).field_p);
         int var4 = 104 % ((-61 - param1) / 59);
         ((ed) this).e(var3, 0);
         return var3;
@@ -664,7 +662,8 @@ class ed extends li {
             ((ed) this).f(113, 62);
         }
         ((ed) this).field_u = ((ed) this).field_u - 4;
-        int var2 = om.a(((ed) this).field_u, 0, ((ed) this).field_p, 255);
+        int discarded$0 = 255;
+        int var2 = om.a(((ed) this).field_u, 0, ((ed) this).field_p);
         int var3 = ((ed) this).b(true);
         if (var2 == var3) {
             return true;
@@ -730,8 +729,10 @@ class ed extends li {
             var8 = 19;
             L1: while (true) {
               if (var8 < 0) {
-                this.a(var3_long, -8245);
-                this.a(var5, -8245);
+                int discarded$2 = -8245;
+                this.a(var3_long);
+                int discarded$3 = -8245;
+                this.a(var5);
                 break L0;
               } else {
                 L2: {

@@ -9,7 +9,7 @@ abstract class ib {
     static int[] field_f;
     static String field_e;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -57,48 +57,41 @@ abstract class ib {
               }
             }
             L4: {
-              if (param5 == 24074) {
-                break L4;
-              } else {
-                field_d = null;
-                break L4;
-              }
-            }
-            L5: {
+              field_d = null;
               if (param3 + param4 > gf.field_b) {
                 param4 = -param3 + gf.field_b;
-                break L5;
+                break L4;
               } else {
-                break L5;
+                break L4;
               }
             }
-            var6_int = -param1 + 256;
+            var6_int = 256;
             var7 = param0 - -param2;
             var8 = param0;
-            L6: while (true) {
+            L5: while (true) {
               if (var8 >= var7) {
                 break L0;
               } else {
                 var9 = param3 + var8 * gf.field_b;
                 var10 = param4;
-                L7: while (true) {
+                L6: while (true) {
                   if (var10 <= 0) {
                     var8++;
-                    continue L6;
+                    continue L5;
                   } else {
                     var11 = gf.field_h[var9];
                     var12 = (var11 & 16711680) >> 16;
                     var13 = (var11 & 65280) >> 8;
                     var14 = var11 & 255;
                     var15 = 5 * var12 - (-(var13 * 6) + -(5 * var14));
-                    var16 = (param1 * var12 >> 8) - -(var15 * var6_int >> 12);
-                    var17 = (var6_int * var15 >> 12) + (param1 * var13 >> 8);
-                    var18 = (param1 * var14 >> 8) - -(var15 * var6_int >> 12);
+                    var16 = (0 * var12 >> 8) - -(var15 * var6_int >> 12);
+                    var17 = (var6_int * var15 >> 12) + (0 * var13 >> 8);
+                    var18 = (0 * var14 >> 8) - -(var15 * var6_int >> 12);
                     var19 = var16 << 16 | var17 << 8 | var18;
                     gf.field_h[var9] = var19;
                     var9++;
                     var10--;
-                    continue L7;
+                    continue L6;
                   }
                 }
               }
@@ -107,7 +100,7 @@ abstract class ib {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var6, "ib.E(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw r.a((Throwable) (Object) var6, "ib.E(" + param0 + 44 + 0 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + 23962 + 41);
         }
     }
 

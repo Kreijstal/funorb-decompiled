@@ -16,7 +16,7 @@ final class ec {
         return param0 & param1;
     }
 
-    final static byte[] a(int param0, kj param1, byte[] param2, int param3) {
+    final static byte[] a(int param0, kj param1, byte[] param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -61,7 +61,7 @@ final class ec {
         var8 = SteelSentinels.field_G;
         try {
           L0: {
-            var4_int = param1.g(-78, param0);
+            var4_int = param1.g(-78, 16);
             if (var4_int != 0) {
               L1: {
                 L2: {
@@ -119,7 +119,7 @@ final class ec {
           L6: {
             var4 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var4;
-            stackOut_17_1 = new StringBuilder().append("ec.A(").append(param0).append(44);
+            stackOut_17_1 = new StringBuilder().append("ec.A(").append(16).append(44);
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -180,12 +180,9 @@ final class ec {
         var4.a((byte) 127, 7);
         var4.b(-28875, param2);
         var4.b((byte) 105, -var5 + var4.field_p);
-        if (param1) {
-            field_c = null;
-        }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_d = null;
         field_f = null;
         field_b = null;
@@ -195,7 +192,7 @@ final class ec {
         field_e = null;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         String[] stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         String[] stackIn_5_0 = null;
@@ -492,13 +489,15 @@ final class ec {
     }
 
     final static void a(byte param0) {
-        int var1 = rd.a((byte) -78);
+        int discarded$0 = -78;
+        int var1 = rd.a();
         if (param0 >= -60) {
             field_d = null;
         }
         int var2 = al.a(0);
         gl.field_l.a((ok.field_c << 1) + var1, -15203, -ok.field_c + hl.field_q, var2 + (cl.field_b << 1), -cl.field_b + lk.field_W);
-        rg.a(118);
+        int discarded$1 = 118;
+        rg.a();
     }
 
     final static wk[] a(byte param0, String param1, cm param2, String param3) {

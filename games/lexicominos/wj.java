@@ -383,9 +383,9 @@ final class wj extends kd {
                                         L8: {
                                           var15_int = var38.d(true);
                                           if (var15_int == 0) {
-                                            int incrementValue$9 = var12;
+                                            int incrementValue$11 = var12;
                                             var12++;
-                                            var13_int = incrementValue$9;
+                                            var13_int = incrementValue$11;
                                             break L8;
                                           } else {
                                             L9: {
@@ -572,7 +572,8 @@ final class wj extends kd {
                                                                                                         var29 += 2;
                                                                                                         continue L32;
                                                                                                       } else {
-                                                                                                        var34 = rl.b(-var27 + var30, var32, 25668);
+                                                                                                        int discarded$12 = 25668;
+                                                                                                        var34 = rl.b(-var27 + var30, var32);
                                                                                                         ((wj) this).field_n[var33] = (byte)(var34 * ((wj) this).field_n[var33] - -32 >> 6);
                                                                                                         var32 = var32 + (-var28 + var31);
                                                                                                         var33++;
@@ -662,7 +663,8 @@ final class wj extends kd {
                                                                                                         continue L38;
                                                                                                       } else {
                                                                                                         L44: {
-                                                                                                          var34 = rl.b(var30 + -var27, var32, 25668);
+                                                                                                          int discarded$13 = 25668;
+                                                                                                          var34 = rl.b(var30 + -var27, var32);
                                                                                                           var35 = (255 & ((wj) this).field_q[var37]) - -var34;
                                                                                                           if (var35 >= 0) {
                                                                                                             break L44;
@@ -903,9 +905,9 @@ final class wj extends kd {
                                                                                 var20 = -1;
                                                                                 break L67;
                                                                               } else {
-                                                                                int incrementValue$10 = var21;
+                                                                                int incrementValue$14 = var21;
                                                                                 var21++;
-                                                                                var20 = var18[incrementValue$10];
+                                                                                var20 = var18[incrementValue$14];
                                                                                 break L67;
                                                                               }
                                                                             }
@@ -934,9 +936,9 @@ final class wj extends kd {
                                                                           } else {
                                                                             var25 = (Object) (Object) var13[var63[var21]];
                                                                             if (var21 < var67.length) {
-                                                                              int incrementValue$11 = var21;
+                                                                              int incrementValue$15 = var21;
                                                                               var21++;
-                                                                              var20 = var10[incrementValue$11];
+                                                                              var20 = var10[incrementValue$15];
                                                                               break L69;
                                                                             } else {
                                                                               var20 = -1;
@@ -962,16 +964,16 @@ final class wj extends kd {
                                                                       if (var20 != 0) {
                                                                         break L71;
                                                                       } else {
-                                                                        int incrementValue$12 = var8;
+                                                                        int incrementValue$16 = var8;
                                                                         var8++;
-                                                                        var24 = var38.field_j[incrementValue$12] - -16 << 2;
+                                                                        var24 = var38.field_j[incrementValue$16] - -16 << 2;
                                                                         if (~var66.length >= ~var21) {
                                                                           var20 = -1;
                                                                           break L71;
                                                                         } else {
-                                                                          int incrementValue$13 = var21;
+                                                                          int incrementValue$17 = var21;
                                                                           var21++;
-                                                                          var20 = var7[incrementValue$13];
+                                                                          var20 = var7[incrementValue$17];
                                                                           break L71;
                                                                         }
                                                                       }
@@ -994,16 +996,16 @@ final class wj extends kd {
                                                                   if (var20 != 0) {
                                                                     break L73;
                                                                   } else {
-                                                                    int incrementValue$14 = var5;
+                                                                    int incrementValue$18 = var5;
                                                                     var5++;
-                                                                    var23 = -1 + var38.field_j[incrementValue$14];
+                                                                    var23 = -1 + var38.field_j[incrementValue$18];
                                                                     if (var21 >= var65.length) {
                                                                       var20 = -1;
                                                                       break L73;
                                                                     } else {
-                                                                      int incrementValue$15 = var21;
+                                                                      int incrementValue$19 = var21;
                                                                       var21++;
-                                                                      var20 = var4[incrementValue$15];
+                                                                      var20 = var4[incrementValue$19];
                                                                       break L73;
                                                                     }
                                                                   }
@@ -1024,9 +1026,9 @@ final class wj extends kd {
                                                           } else {
                                                             L75: {
                                                               if (var64.length > var21) {
-                                                                int incrementValue$16 = var21;
+                                                                int incrementValue$20 = var21;
                                                                 var21++;
-                                                                var20 = var18[incrementValue$16];
+                                                                var20 = var18[incrementValue$20];
                                                                 break L75;
                                                               } else {
                                                                 var20 = -1;
@@ -1071,9 +1073,9 @@ final class wj extends kd {
                                     }
                                   } else {
                                     L76: {
-                                      rc dupTemp$17 = new rc();
-                                      var13[var14] = dupTemp$17;
-                                      var40 = dupTemp$17;
+                                      rc dupTemp$21 = new rc();
+                                      var13[var14] = dupTemp$21;
+                                      var40 = dupTemp$21;
                                       var15 = var40;
                                       var16_int = var38.d(true);
                                       if (var16_int <= 0) {

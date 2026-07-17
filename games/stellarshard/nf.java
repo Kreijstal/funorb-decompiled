@@ -18,7 +18,7 @@ final class nf extends gg {
         field_o = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var2 = 0;
         mk var3_ref_mk = null;
@@ -35,72 +35,72 @@ final class nf extends gg {
           L0: {
             var9 = ae.field_N;
             var2 = var9.f(4);
-            if (param0 > 61) {
-              if (0 != var2) {
-                if (var2 != 1) {
-                  qe.a(-111, "A1: " + bh.b((byte) -127), (Throwable) null);
-                  oj.c(-2290);
-                  break L0;
-                } else {
-                  var3 = var9.b(false);
-                  var4 = (le) (Object) fg.field_G.b(-90);
-                  L1: while (true) {
-                    L2: {
-                      if (var4 == null) {
+            if (0 != var2) {
+              if (var2 != 1) {
+                qe.a(-111, "A1: " + bh.b((byte) -127), (Throwable) null);
+                int discarded$4 = -2290;
+                oj.c();
+                break L0;
+              } else {
+                var3 = var9.b(false);
+                var4 = (le) (Object) fg.field_G.b(-90);
+                L1: while (true) {
+                  L2: {
+                    if (var4 == null) {
+                      break L2;
+                    } else {
+                      if (var4.field_o == var3) {
                         break L2;
                       } else {
-                        if (var4.field_o == var3) {
-                          break L2;
-                        } else {
-                          var4 = (le) (Object) fg.field_G.b((byte) 81);
-                          continue L1;
-                        }
+                        var4 = (le) (Object) fg.field_G.b((byte) 81);
+                        continue L1;
                       }
                     }
-                    if (var4 != null) {
-                      var4.c(20);
-                      return;
-                    } else {
-                      oj.c(-2290);
-                      return;
-                    }
                   }
-                }
-              } else {
-                var3_ref_mk = (mk) (Object) gg.field_b.b(-96);
-                if (var3_ref_mk == null) {
-                  oj.c(-2290);
-                  return;
-                } else {
-                  L3: {
-                    var4_int = var9.f(4);
-                    if (var4_int == 0) {
-                      var5 = null;
-                      break L3;
-                    } else {
-                      var13 = new byte[var4_int];
-                      var9.a(0, (byte) -126, var4_int, var13);
-                      break L3;
-                    }
-                  }
-                  var9.field_k = var9.field_k + 4;
-                  if (var9.a(true)) {
-                    var3_ref_mk.c(20);
+                  if (var4 != null) {
+                    var4.c(20);
                     return;
                   } else {
-                    oj.c(-2290);
+                    int discarded$5 = -2290;
+                    oj.c();
                     return;
                   }
                 }
               }
             } else {
-              return;
+              var3_ref_mk = (mk) (Object) gg.field_b.b(-96);
+              if (var3_ref_mk == null) {
+                int discarded$6 = -2290;
+                oj.c();
+                return;
+              } else {
+                L3: {
+                  var4_int = var9.f(4);
+                  if (var4_int == 0) {
+                    var5 = null;
+                    break L3;
+                  } else {
+                    var13 = new byte[var4_int];
+                    var9.a(0, (byte) -126, var4_int, var13);
+                    break L3;
+                  }
+                }
+                var9.field_k = var9.field_k + 4;
+                if (var9.a(true)) {
+                  var3_ref_mk.c(20);
+                  return;
+                } else {
+                  int discarded$7 = -2290;
+                  oj.c();
+                  return;
+                }
+              }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1, "nf.B(" + param0 + 41);
+          throw ma.a((Throwable) (Object) var1, "nf.B(" + 84 + 41);
         }
     }
 

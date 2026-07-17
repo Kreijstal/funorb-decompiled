@@ -14,15 +14,10 @@ final class ff {
     static boolean field_c;
 
     final static void a(int param0, boolean param1) {
-        if (param0 != 0) {
-            field_c = false;
-            uq.field_D.a((byte) -79, param1);
-            return;
-        }
         uq.field_D.a((byte) -79, param1);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_h = null;
         field_d = null;
@@ -43,8 +38,8 @@ final class ff {
             var3 = -(em.field_P * em.field_P) + var2;
             param1 = param1 + var3 * (-param1 + cb.field_g) / var2;
         }
-        fl.field_q.b(param1, param0 + -2147483625, tn.field_u, 640, 120);
-        mm.a(ja.field_b, param0 + cb.field_g, 0, 640, 5, 125, kj.field_j);
+        fl.field_q.b(param1, 2147483647, tn.field_u, 640, 120);
+        mm.a(ja.field_b, -24 + cb.field_g, 0, 640, 5, 125, kj.field_j);
     }
 
     static {

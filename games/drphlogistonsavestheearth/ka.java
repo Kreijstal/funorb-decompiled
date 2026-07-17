@@ -309,7 +309,7 @@ final class ka extends hj {
         try {
           L0: {
             if (param1.type() != java.net.Proxy.Type.DIRECT) {
-              var4 = -7 % ((7 - param0) / 35);
+              var4 = 0;
               var3_ref = param1.address();
               if ((Object) var3_ref instanceof java.net.InetSocketAddress) {
                 var5_ref = (java.net.InetSocketAddress) (Object) var3_ref;
@@ -381,7 +381,7 @@ final class ka extends hj {
           L4: {
             var3 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var3;
-            stackOut_20_1 = new StringBuilder().append("ka.K(").append(param0).append(44);
+            stackOut_20_1 = new StringBuilder().append("ka.K(").append(-39).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -409,7 +409,7 @@ final class ka extends hj {
         return stackIn_19_0;
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean a(char param0) {
         char[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -503,13 +503,13 @@ final class ka extends hj {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    mh.a(param0, (byte) 52, var5);
+                    mh.a(3, (byte) 52, var5);
                     var5 = (vb) (Object) je.field_i.e(0);
                     continue L2;
                   }
                 }
               } else {
-                jc.a(param0, var4, -125);
+                jc.a(3, var4, -125);
                 var4 = (bg) (Object) gf.field_h.e(0);
                 continue L1;
               }
@@ -518,7 +518,7 @@ final class ka extends hj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var2, "ka.H(" + param0 + 44 + -40 + 41);
+          throw ie.a((Throwable) (Object) var2, "ka.H(" + 3 + 44 + -40 + 41);
         }
     }
 
@@ -526,7 +526,8 @@ final class ka extends hj {
         if (param0 >= -17) {
             ka.c(-43);
         }
-        sd.a((byte) -124);
+        int discarded$0 = -124;
+        sd.a();
         sf.a(4, 11649);
     }
 
@@ -546,7 +547,6 @@ final class ka extends hj {
         java.net.Socket var13 = null;
         String var14 = null;
         java.net.Socket stackIn_9_0 = null;
-        Object stackIn_25_0 = null;
         Object stackIn_27_0 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
@@ -565,7 +565,6 @@ final class ka extends hj {
         RuntimeException decompiledCaughtException = null;
         java.net.Socket stackOut_8_0 = null;
         Object stackOut_26_0 = null;
-        Object stackOut_24_0 = null;
         RuntimeException stackOut_28_0 = null;
         StringBuilder stackOut_28_1 = null;
         RuntimeException stackOut_30_0 = null;
@@ -602,6 +601,7 @@ final class ka extends hj {
               var7 = new BufferedReader((Reader) (Object) new InputStreamReader(var13.getInputStream()));
               var8 = var7.readLine();
               if (var8 == null) {
+                var6.close();
                 break L2;
               } else {
                 L3: {
@@ -616,6 +616,7 @@ final class ka extends hj {
                           if (var8.startsWith("HTTP/1.1 407")) {
                             break L4;
                           } else {
+                            var6.close();
                             break L2;
                           }
                         }
@@ -666,18 +667,11 @@ final class ka extends hj {
                 return stackIn_9_0;
               }
             }
-            var6.close();
-            if (param2 == 0) {
-              var7.close();
-              var13.close();
-              stackOut_26_0 = null;
-              stackIn_27_0 = stackOut_26_0;
-              break L0;
-            } else {
-              stackOut_24_0 = null;
-              stackIn_25_0 = stackOut_24_0;
-              return (java.net.Socket) (Object) stackIn_25_0;
-            }
+            var7.close();
+            var13.close();
+            stackOut_26_0 = null;
+            stackIn_27_0 = stackOut_26_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -709,7 +703,7 @@ final class ka extends hj {
           }
           L9: {
             stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-            stackOut_31_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(44).append(param2).append(44);
+            stackOut_31_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(44).append(0).append(44);
             stackIn_33_0 = stackOut_31_0;
             stackIn_33_1 = stackOut_31_1;
             stackIn_32_0 = stackOut_31_0;

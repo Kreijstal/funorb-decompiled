@@ -29,13 +29,23 @@ class lh {
           lh.a((byte) -97, (java.awt.Canvas) (Object) rh.field_p);
           rh.field_p.a(fg.field_q, 20401);
           rh.field_p = null;
-          if (aa.field_r != null) {
+          if (aa.field_r == null) {
+            ol.field_e.requestFocus();
+            if (param0) {
+              field_e = null;
+              return;
+            } else {
+              return;
+            }
+          } else {
             aa.field_r.a(-115);
             ol.field_e.requestFocus();
-            return;
-          } else {
-            ol.field_e.requestFocus();
-            return;
+            if (!param0) {
+              return;
+            } else {
+              field_e = null;
+              return;
+            }
           }
         } else {
           return;
@@ -139,7 +149,7 @@ class lh {
         }
     }
 
-    final static boolean a(String param0, String param1, int param2) {
+    final static boolean a(String param0, String param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_6_0 = 0;
@@ -189,7 +199,8 @@ class lh {
         try {
           L0: {
             if (!fm.a(true, param0)) {
-              if (hg.a(param0, 1)) {
+              int discarded$15 = 1;
+              if (hg.a(param0)) {
                 stackOut_5_0 = 0;
                 stackIn_6_0 = stackOut_5_0;
                 return stackIn_6_0 != 0;
@@ -204,7 +215,8 @@ class lh {
                     stackIn_14_0 = stackOut_13_0;
                     return stackIn_14_0 != 0;
                   } else {
-                    if (!hj.a(param0, param1, 0)) {
+                    int discarded$16 = 0;
+                    if (!hj.a(param0, param1)) {
                       if (!hf.a((byte) 98, param0, param1)) {
                         if (gl.a(param1, -1, param0)) {
                           stackOut_23_0 = 0;

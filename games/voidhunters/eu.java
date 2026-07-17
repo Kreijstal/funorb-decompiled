@@ -15,7 +15,7 @@ final class eu extends ev {
         }
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean a() {
         if (qmb.field_q < 10) {
             return false;
         }
@@ -66,7 +66,7 @@ final class eu extends ev {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_i = null;
         field_h = null;
     }
@@ -143,7 +143,7 @@ final class eu extends ev {
               }
             }
           }
-          var3_int = -92 % ((param1 - 67) / 49);
+          var3_int = 0;
           if (!nwa.field_c.field_j) {
             L1: {
               if (fjb.field_a.startsWith("amd64")) {
@@ -218,7 +218,7 @@ final class eu extends ev {
           }
           L4: {
             stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-            stackOut_26_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(44).append(param1).append(44);
+            stackOut_26_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(44).append(127).append(44);
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;

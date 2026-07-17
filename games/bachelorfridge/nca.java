@@ -5,7 +5,7 @@ final class nca {
     static String field_b;
     static ee[] field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }

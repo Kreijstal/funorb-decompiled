@@ -201,14 +201,15 @@ final class ti extends ba implements wc {
                       if (0 != var4.field_f) {
                         if (1 == var4.field_f) {
                           var5 = (DataInputStream) var4.field_e;
-                          int discarded$1 = var5.read();
+                          int discarded$2 = var5.read();
                           var5.close();
                           break L0;
                         } else {
                           return;
                         }
                       } else {
-                        wh.a(1L, 19406);
+                        int discarded$3 = 19406;
+                        wh.a(1L);
                         continue L5;
                       }
                     }
@@ -231,7 +232,7 @@ final class ti extends ba implements wc {
         }
     }
 
-    final static void l(int param0) {
+    final static void l() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -401,7 +402,8 @@ final class ti extends ba implements wc {
                   }
                 }
                 L12: {
-                  var7 = vh.a(stackIn_42_0 != 0, var6, true);
+                  int discarded$1 = 1;
+                  var7 = vh.a(stackIn_42_0 != 0, var6);
                   var8 = bi.field_h + -(var7 >> 1);
                   if (var4 >= 0) {
                     L13: {
@@ -467,10 +469,10 @@ final class ti extends ba implements wc {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, int param1, int param2, byte param3) {
-        bc.field_a = param2;
-        de.field_f = param0;
-        ag.field_c = param1;
+    final static void a() {
+        bc.field_a = 16741888;
+        de.field_f = 16697912;
+        ag.field_c = 16777215;
     }
 
     static {

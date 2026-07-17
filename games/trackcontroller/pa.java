@@ -6,7 +6,7 @@ final class pa {
     static long field_b;
     static volatile int field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
     }
 
@@ -27,13 +27,16 @@ final class pa {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    gj.a(2, var5, param0);
+                    int discarded$8 = 5;
+                    gj.a(2, var5);
                     var5 = (nk) (Object) qh.field_e.a(10);
                     continue L2;
                   }
                 }
               } else {
-                me.a(var4, 0, param0);
+                int discarded$9 = 5;
+                int discarded$10 = 0;
+                me.a(var4);
                 var4 = (dh) (Object) field_c.a(10);
                 continue L1;
               }
@@ -42,14 +45,11 @@ final class pa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) var2, "pa.B(" + param0 + 44 + 40 + 41);
+          throw sl.a((Throwable) (Object) var2, "pa.B(" + 5 + 44 + 40 + 41);
         }
     }
 
-    final static boolean b(byte param0) {
-        if (param0 != 91) {
-            return true;
-        }
+    final static boolean b() {
         return af.a(9819, gd.b((byte) 77));
     }
 

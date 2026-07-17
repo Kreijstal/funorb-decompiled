@@ -138,12 +138,10 @@ final class tf {
             pb.f(pb.field_i, pb.field_l, -pb.field_i + pb.field_b, pb.field_d - pb.field_l);
             qf.field_e.a(param1, (byte) 127);
         }
-        if (param0 != 0) {
-            field_a = null;
-        }
+        field_a = null;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_g = null;
         field_a = null;
@@ -156,9 +154,6 @@ final class tf {
             if (!(param1 > 126)) {
                 return true;
             }
-        }
-        if (param0 != 2459) {
-            return false;
         }
         if (param1 >= 160) {
             if (param1 <= 255) {

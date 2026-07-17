@@ -38,12 +38,9 @@ final class jja extends nh {
 
     private final void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7) {
         try {
-            if (param2 != 0) {
-                this.b(-64, -35);
-            }
-            ((jja) this).field_a.a(param3, param5, param7, param0, param6, param4, (byte) -111, true, param1);
+            ((jja) this).field_a.a(0, param5, param7, param0, param6, param4, (byte) -111, true, param1);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "jja.I(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "jja.I(" + param0 + 44 + param1 + 44 + 0 + 44 + 0 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + param6 + 44 + param7 + 41);
         }
     }
 

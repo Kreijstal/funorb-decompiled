@@ -26,41 +26,29 @@ final class dj {
         throw new IllegalStateException();
     }
 
-    final static void a(int param0, int param1, tf[] param2, int param3) {
+    final static void a(int param0, int param1, tf[] param2) {
         try {
             nl.field_c = new sb(param2);
             ao.field_d = param1;
             v.field_d = param0;
-            dj.a(-1501881951);
+            int discarded$0 = -1501881951;
+            dj.a();
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "dj.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + -1501881951 + 41);
         }
     }
 
-    private final static void a(int param0) {
-        int var1 = 0;
-        int var2 = 0;
-        if (param0 != -1501881951) {
-          dj.b(-112);
-          var1 = ka.m(param0 + 1501881973);
-          var2 = go.c(107);
-          nl.field_c.a(-ao.field_d + ce.field_c, (ao.field_d << 1) + var2, param0 + 1501881950, (v.field_d << 1) + var1, -v.field_d + qn.field_o);
-          vh.a(88);
-          return;
-        } else {
-          var1 = ka.m(param0 + 1501881973);
-          var2 = go.c(107);
-          nl.field_c.a(-ao.field_d + ce.field_c, (ao.field_d << 1) + var2, param0 + 1501881950, (v.field_d << 1) + var1, -v.field_d + qn.field_o);
-          vh.a(88);
-          return;
-        }
+    private final static void a() {
+        int var1 = ka.m(22);
+        int discarded$0 = 107;
+        int var2 = go.c();
+        nl.field_c.a(-ao.field_d + ce.field_c, (ao.field_d << 1) + var2, -1, (v.field_d << 1) + var1, -v.field_d + qn.field_o);
+        int discarded$1 = 88;
+        vh.a();
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
-        if (param0 > -113) {
-            return;
-        }
         field_b = null;
     }
 

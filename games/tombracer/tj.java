@@ -11,14 +11,14 @@ final class tj {
     static int field_a;
     va field_d;
 
-    final static java.awt.Container b(int param0) {
+    final static java.awt.Container b() {
         if (null != rla.field_x) {
             return (java.awt.Container) (Object) rla.field_x;
         }
         return (java.awt.Container) (Object) di.a(29);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_h = null;
     }
 

@@ -18,17 +18,13 @@ final class gj extends java.awt.Canvas {
     final static void a(boolean param0, String param1) {
         try {
             ke.a(-1, param1);
-            if (!param0) {
-                Object var3 = null;
-                gj.a(true, (String) null);
-            }
             ua.a(ec.field_o, false, (byte) 82);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "gj.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "gj.B(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
     }

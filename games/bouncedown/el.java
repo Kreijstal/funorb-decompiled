@@ -51,7 +51,7 @@ final class el extends sg {
         }
     }
 
-    private final long b(int param0) {
+    private final long b() {
         long var2 = 0L;
         long var4 = 0L;
         long var6 = 0L;
@@ -132,15 +132,17 @@ final class el extends sg {
 
     final long a(int param0) {
         if (param0 == -32578) {
-          ((el) this).field_d = ((el) this).field_d + this.b(0);
+          int discarded$6 = 0;
+          ((el) this).field_d = ((el) this).field_d + this.b();
           if (~((el) this).field_d > ~((el) this).field_j) {
             return (-((el) this).field_d + ((el) this).field_j) / 1000000L;
           } else {
             return 0L;
           }
         } else {
-          int discarded$2 = ((el) this).a(20, -52L);
-          ((el) this).field_d = ((el) this).field_d + this.b(0);
+          int discarded$7 = ((el) this).a(20, -52L);
+          int discarded$8 = 0;
+          ((el) this).field_d = ((el) this).field_d + this.b();
           if (~((el) this).field_d > ~((el) this).field_j) {
             return (-((el) this).field_d + ((el) this).field_j) / 1000000L;
           } else {

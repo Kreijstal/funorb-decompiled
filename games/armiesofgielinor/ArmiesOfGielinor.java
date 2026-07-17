@@ -173,8 +173,9 @@ public final class ArmiesOfGielinor extends wf {
         int stackOut_74_1 = 0;
         L0: {
           var11 = field_M ? 1 : 0;
-          int discarded$2 = bs.a((byte) -127);
-          r.field_u = os.g(4);
+          int discarded$28 = bs.a((byte) -127);
+          int discarded$29 = 4;
+          r.field_u = os.g();
           hk.k(128);
           if (wq.field_a == null) {
             break L0;
@@ -183,7 +184,8 @@ public final class ArmiesOfGielinor extends wf {
               break L0;
             } else {
               ck.b(-127);
-              oi.a(false);
+              int discarded$30 = 0;
+              oi.a();
               break L0;
             }
           }
@@ -218,7 +220,8 @@ public final class ArmiesOfGielinor extends wf {
           if (!ts.field_l) {
             break L2;
           } else {
-            this.p(17);
+            int discarded$31 = 17;
+            this.p();
             ts.field_l = false;
             break L2;
           }
@@ -231,7 +234,7 @@ public final class ArmiesOfGielinor extends wf {
               if (ql.h(31337)) {
                 L4: {
                   if (wd.a((byte) 105)) {
-                    boolean discarded$3 = this.c(-100, false);
+                    boolean discarded$32 = this.c(-100, false);
                     break L4;
                   } else {
                     break L4;
@@ -248,7 +251,8 @@ public final class ArmiesOfGielinor extends wf {
           L5: {
             if (qu.field_q) {
               if (!dl.d(95)) {
-                gh.f((byte) -67);
+                int discarded$33 = -67;
+                gh.f();
                 break L5;
               } else {
                 if (ed.a(-83)) {
@@ -318,7 +322,8 @@ public final class ArmiesOfGielinor extends wf {
                   } else {
                     if (~pg.field_f == ~pg.field_e) {
                       L10: {
-                        var2_int = ba.h(-124);
+                        int discarded$34 = -124;
+                        var2_int = ba.h();
                         if (1 != var2_int) {
                           break L10;
                         } else {
@@ -340,7 +345,8 @@ public final class ArmiesOfGielinor extends wf {
               if (!this.c(102, true)) {
                 break L5;
               } else {
-                this.r(-66);
+                int discarded$35 = -66;
+                this.r();
                 qu.field_q = true;
                 break L5;
               }
@@ -392,7 +398,8 @@ public final class ArmiesOfGielinor extends wf {
               }
               L17: {
                 var2_int = stackIn_231_0;
-                if (qv.j(-11)) {
+                int discarded$36 = -11;
+                if (qv.j()) {
                   L18: {
                     L19: {
                       var3 = ((ArmiesOfGielinor) this).h((byte) -116);
@@ -406,12 +413,18 @@ public final class ArmiesOfGielinor extends wf {
                         }
                       }
                     }
-                    ee.a(2, (byte) 37);
+                    int discarded$37 = 37;
+                    int discarded$38 = 2;
+                    ee.a();
                     bw.a(127, 3);
                     ah.a((byte) 33, 4);
-                    op.a(5, true);
+                    int discarded$39 = 1;
+                    int discarded$40 = 5;
+                    op.a();
                     pj.b(6, -32666);
-                    aw.a(7, 1742);
+                    int discarded$41 = 1742;
+                    int discarded$42 = 7;
+                    aw.a();
                     bo.a(true);
                     if (var3 == 1) {
                       dn.field_Qb = true;
@@ -486,7 +499,8 @@ public final class ArmiesOfGielinor extends wf {
                     break L24;
                   }
                   L26: {
-                    if (!qv.j(-11)) {
+                    int discarded$43 = -11;
+                    if (!qv.j()) {
                       var4 = 0;
                       break L26;
                     } else {
@@ -496,7 +510,8 @@ public final class ArmiesOfGielinor extends wf {
                   if (var4 == 0) {
                     break L17;
                   } else {
-                    er.b(-11);
+                    int discarded$44 = -11;
+                    er.b();
                     break L17;
                   }
                 } else {
@@ -512,7 +527,8 @@ public final class ArmiesOfGielinor extends wf {
                       if (kg.field_d) {
                         ut.i((byte) 124);
                         vh.i((byte) 109);
-                        uk.b(22963);
+                        int discarded$45 = 22963;
+                        uk.b();
                         qn.b();
                         bv.a(false, 0, 1, 0);
                         cl.field_t = true;
@@ -539,7 +555,8 @@ public final class ArmiesOfGielinor extends wf {
                         if (!kg.field_d) {
                           break L28;
                         } else {
-                          bl.a((byte) -105);
+                          int discarded$46 = -105;
+                          bl.a();
                           continue L13;
                         }
                       }
@@ -646,7 +663,8 @@ public final class ArmiesOfGielinor extends wf {
                                                             mu.field_a = new cg();
                                                             ((ic) var2).field_Ib.a(((ic) var2).field_xb.field_hb, 0);
                                                             ((ic) var2).field_d = mc.field_d[((ic) var2).field_xb.field_hb].field_n;
-                                                            oo.e(-387);
+                                                            int discarded$47 = -387;
+                                                            oo.e();
                                                             if (((ic) var2).field_xb.field_D == 3) {
                                                               ((ic) var2).f(true);
                                                               break L37;
@@ -734,7 +752,8 @@ public final class ArmiesOfGielinor extends wf {
                                                                       if (null == rd.field_j) {
                                                                         continue L13;
                                                                       } else {
-                                                                        bw.d(7242);
+                                                                        int discarded$48 = 7242;
+                                                                        bw.d();
                                                                         continue L13;
                                                                       }
                                                                     } else {
@@ -745,7 +764,8 @@ public final class ArmiesOfGielinor extends wf {
                                                                         if (null == rd.field_j) {
                                                                           continue L13;
                                                                         } else {
-                                                                          bw.d(7242);
+                                                                          int discarded$49 = 7242;
+                                                                          bw.d();
                                                                           continue L13;
                                                                         }
                                                                       }
@@ -1000,7 +1020,8 @@ public final class ArmiesOfGielinor extends wf {
                                               fj.field_c = true;
                                               rd.field_j = var10;
                                               dv.a(true);
-                                              bw.d(7242);
+                                              int discarded$50 = 7242;
+                                              bw.d();
                                               pc.b((byte) 16);
                                               break L48;
                                             } else {
@@ -1113,12 +1134,17 @@ public final class ArmiesOfGielinor extends wf {
                         }
                       }
                     }
-                    lo.a((mo) var2, -1);
+                    int discarded$51 = -1;
+                    lo.a((mo) var2);
                     continue L13;
                   }
                 } else {
-                  jr.a(rs.a((byte) 76, 8), sp.b((byte) -90), 150, bv.field_A, rs.a((byte) 95, 1000), et.b(-1), 1024, 6, -84, sh.d((byte) 81));
-                  ep.a(lp.b(-126), -72, km.c(0));
+                  int discarded$52 = -1;
+                  int discarded$53 = 81;
+                  jr.a(rs.a((byte) 76, 8), sp.b((byte) -90), 150, bv.field_A, rs.a((byte) 95, 1000), et.b(), 1024, 6, -84, sh.d());
+                  int discarded$54 = -126;
+                  int discarded$55 = 0;
+                  ep.a(lp.b(), -72, km.c());
                   s.field_d = 0;
                   ma.field_Z = true;
                   ua.field_t = false;
@@ -1176,11 +1202,10 @@ public final class ArmiesOfGielinor extends wf {
         }
     }
 
-    private final boolean q(int param0) {
+    private final boolean q() {
         RuntimeException var2 = null;
         int stackIn_7_0 = 0;
         int stackIn_15_0 = 0;
-        int stackIn_18_0 = 0;
         int stackIn_24_0 = 0;
         int stackIn_32_0 = 0;
         int stackIn_38_0 = 0;
@@ -1190,7 +1215,6 @@ public final class ArmiesOfGielinor extends wf {
         int stackOut_37_0 = 0;
         int stackOut_31_0 = 0;
         int stackOut_23_0 = 0;
-        int stackOut_17_0 = 0;
         int stackOut_14_0 = 0;
         int stackOut_6_0 = 0;
         try {
@@ -1209,57 +1233,51 @@ public final class ArmiesOfGielinor extends wf {
                       if (!i.field_Lb.d(-27927)) {
                         break L2;
                       } else {
-                        if (param0 <= -18) {
-                          L3: {
-                            if (!op.field_b.a((byte) 82)) {
-                              break L3;
-                            } else {
-                              if (op.field_b.d(-27927)) {
-                                L4: {
-                                  if (!bi.field_f.a((byte) 82)) {
+                        L3: {
+                          if (!op.field_b.a((byte) 82)) {
+                            break L3;
+                          } else {
+                            if (op.field_b.d(-27927)) {
+                              L4: {
+                                if (!bi.field_f.a((byte) 82)) {
+                                  break L4;
+                                } else {
+                                  if (!bi.field_f.d(-27927)) {
                                     break L4;
                                   } else {
-                                    if (!bi.field_f.d(-27927)) {
-                                      break L4;
-                                    } else {
-                                      L5: {
-                                        if (!nm.field_s.a((byte) 82)) {
-                                          break L5;
+                                    L5: {
+                                      if (!nm.field_s.a((byte) 82)) {
+                                        break L5;
+                                      } else {
+                                        if (nm.field_s.d(-27927)) {
+                                          stackOut_39_0 = 1;
+                                          stackIn_40_0 = stackOut_39_0;
+                                          break L0;
                                         } else {
-                                          if (nm.field_s.d(-27927)) {
-                                            stackOut_39_0 = 1;
-                                            stackIn_40_0 = stackOut_39_0;
-                                            break L0;
-                                          } else {
-                                            break L5;
-                                          }
+                                          break L5;
                                         }
                                       }
-                                      bn.a((byte) -24, 67.0f, ao.a(cr.field_eb, true, en.field_G, nm.field_s));
-                                      stackOut_37_0 = 0;
-                                      stackIn_38_0 = stackOut_37_0;
-                                      return stackIn_38_0 != 0;
                                     }
+                                    bn.a((byte) -24, 67.0f, ao.a(cr.field_eb, true, en.field_G, nm.field_s));
+                                    stackOut_37_0 = 0;
+                                    stackIn_38_0 = stackOut_37_0;
+                                    return stackIn_38_0 != 0;
                                   }
                                 }
-                                bn.a((byte) -24, 67.0f, ao.a(cr.field_eb, true, en.field_G, bi.field_f));
-                                stackOut_31_0 = 0;
-                                stackIn_32_0 = stackOut_31_0;
-                                return stackIn_32_0 != 0;
-                              } else {
-                                break L3;
                               }
+                              bn.a((byte) -24, 67.0f, ao.a(cr.field_eb, true, en.field_G, bi.field_f));
+                              stackOut_31_0 = 0;
+                              stackIn_32_0 = stackOut_31_0;
+                              return stackIn_32_0 != 0;
+                            } else {
+                              break L3;
                             }
                           }
-                          bn.a((byte) -24, 67.0f, vl.a(op.field_b, 0, en.field_G, "", cr.field_eb));
-                          stackOut_23_0 = 0;
-                          stackIn_24_0 = stackOut_23_0;
-                          return stackIn_24_0 != 0;
-                        } else {
-                          stackOut_17_0 = 0;
-                          stackIn_18_0 = stackOut_17_0;
-                          return stackIn_18_0 != 0;
                         }
+                        bn.a((byte) -24, 67.0f, vl.a(op.field_b, 0, en.field_G, "", cr.field_eb));
+                        stackOut_23_0 = 0;
+                        stackIn_24_0 = stackOut_23_0;
+                        return stackIn_24_0 != 0;
                       }
                     }
                   }
@@ -1278,7 +1296,7 @@ public final class ArmiesOfGielinor extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var2, "ArmiesOfGielinor.KA(" + param0 + 41);
+          throw ig.a((Throwable) (Object) var2, "ArmiesOfGielinor.KA(" + -46 + 41);
         }
         return stackIn_40_0 != 0;
     }
@@ -1363,7 +1381,7 @@ public final class ArmiesOfGielinor extends wf {
                           }
                         }
                         L4: {
-                          sk.n(param0 ^ -110);
+                          sk.n(-110);
                           bv.a(false, tg.field_a, 1, 0);
                           if (!ke.field_a) {
                             break L4;
@@ -1401,10 +1419,12 @@ public final class ArmiesOfGielinor extends wf {
                   } else {
                     L5: {
                       if (ke.field_a) {
-                        iq.b(-20267);
+                        int discarded$11 = -20267;
+                        iq.b();
                         break L5;
                       } else {
-                        ed.a(false);
+                        int discarded$12 = 0;
+                        ed.a();
                         break L5;
                       }
                     }
@@ -1434,7 +1454,8 @@ public final class ArmiesOfGielinor extends wf {
                           break L8;
                         } else {
                           if (jt.field_a == -6) {
-                            kl.c(-20193);
+                            int discarded$13 = -20193;
+                            kl.c();
                             break L8;
                           } else {
                             if (-7 != jt.field_a) {
@@ -1445,7 +1466,8 @@ public final class ArmiesOfGielinor extends wf {
                                 break L8;
                               }
                             } else {
-                              dm.c((byte) 61);
+                              int discarded$14 = 61;
+                              dm.c();
                               break L8;
                             }
                           }
@@ -1462,7 +1484,7 @@ public final class ArmiesOfGielinor extends wf {
                               if (!jd.i((byte) -89)) {
                                 break L8;
                               } else {
-                                if (gu.a(param0 + 56)) {
+                                if (gu.a(56)) {
                                   continue L9;
                                 } else {
                                   rd.field_j.g(false);
@@ -1521,8 +1543,9 @@ public final class ArmiesOfGielinor extends wf {
                         }
                         L13: {
                           if (fj.field_c) {
-                            pr.a(320, 180, var4 != 0, 0);
-                            rd.field_j.a(param0 + 119, var4 != 0);
+                            int discarded$15 = 0;
+                            pr.a(320, 180, var4 != 0);
+                            rd.field_j.a(119, var4 != 0);
                             break L13;
                           } else {
                             break L13;
@@ -1532,7 +1555,7 @@ public final class ArmiesOfGielinor extends wf {
                           if (!jd.i((byte) -127)) {
                             break L10;
                           } else {
-                            if (!gu.a(param0 + -126)) {
+                            if (!gu.a(-126)) {
                               L15: {
                                 if (!ma.field_Z) {
                                   break L15;
@@ -1583,13 +1606,14 @@ public final class ArmiesOfGielinor extends wf {
                                         break L17;
                                       }
                                     }
-                                    if (!ja.a((byte) stackIn_100_0, stackIn_100_1, stackIn_100_2, 13)) {
+                                    int discarded$16 = 13;
+                                    if (!ja.a((byte) stackIn_100_0, stackIn_100_1, stackIn_100_2)) {
                                       break L15;
                                     } else {
                                       continue L14;
                                     }
                                   } else {
-                                    boolean discarded$3 = bb.a(12, 15, 13, param0 + 50);
+                                    boolean discarded$17 = bb.a(12, 15, 13, 50);
                                     break L15;
                                   }
                                 }
@@ -1621,7 +1645,8 @@ public final class ArmiesOfGielinor extends wf {
                 }
                 L19: {
                   if (!kg.field_d) {
-                    br.a((byte) -97);
+                    int discarded$18 = -97;
+                    br.a();
                     break L19;
                   } else {
                     break L19;
@@ -1652,13 +1677,13 @@ public final class ArmiesOfGielinor extends wf {
                   if (null == ai.field_P.e((byte) 111)) {
                     break L21;
                   } else {
-                    int fieldTemp$4 = lq.field_b + 1;
+                    int fieldTemp$19 = lq.field_b + 1;
                     lq.field_b = lq.field_b + 1;
-                    if (fieldTemp$4 != 335) {
+                    if (fieldTemp$19 != 335) {
                       break L21;
                     } else {
                       lq.field_b = 0;
-                      tc discarded$5 = ai.field_P.a(0);
+                      tc discarded$20 = ai.field_P.a(0);
                       break L21;
                     }
                   }
@@ -1667,38 +1692,30 @@ public final class ArmiesOfGielinor extends wf {
               }
             }
             L22: {
-              if (param0 == 0) {
-                break L22;
-              } else {
-                ((ArmiesOfGielinor) this).a((byte) -98);
-                break L22;
-              }
-            }
-            L23: {
               if (jt.field_a == -3) {
                 this.a(false, (byte) -62);
                 rd.field_j.h(true);
                 var3_int = r.field_s ? 1 : 0;
                 bv.a(var3_int != 0, -1, 1, 0);
                 du.field_h = true;
-                break L23;
+                break L22;
               } else {
-                break L23;
+                break L22;
               }
             }
-            L24: {
-              L25: {
+            L23: {
+              L24: {
                 if (jt.field_a == -10) {
-                  break L25;
+                  break L24;
                 } else {
                   if (jt.field_a != -11) {
-                    break L24;
+                    break L23;
                   } else {
-                    break L25;
+                    break L24;
                   }
                 }
               }
-              L26: {
+              L25: {
                 stackOut_188_0 = l.field_c;
                 stackOut_188_1 = -1;
                 stackIn_193_0 = stackOut_188_0;
@@ -1712,7 +1729,7 @@ public final class ArmiesOfGielinor extends wf {
                   stackIn_194_0 = stackOut_193_0;
                   stackIn_194_1 = stackOut_193_1;
                   stackIn_194_2 = (sl) (Object) stackOut_193_2;
-                  break L26;
+                  break L25;
                 } else {
                   stackOut_189_0 = (om) (Object) stackIn_189_0;
                   stackOut_189_1 = stackIn_189_1;
@@ -1724,27 +1741,28 @@ public final class ArmiesOfGielinor extends wf {
                   stackIn_194_0 = stackOut_191_0;
                   stackIn_194_1 = stackOut_191_1;
                   stackIn_194_2 = stackOut_191_2;
-                  break L26;
+                  break L25;
                 }
               }
-              L27: {
+              L26: {
                 ts.a(stackIn_194_0, stackIn_194_1, stackIn_194_2);
                 if (jt.field_a != -10) {
-                  break L27;
+                  break L26;
                 } else {
-                  qh.b((byte) 27);
-                  break L27;
+                  int discarded$21 = 27;
+                  qh.b();
+                  break L26;
                 }
               }
               rd.field_j.h(true);
               var3_int = r.field_s ? 1 : 0;
               bv.a(var3_int != 0, -1, 1, 0);
               du.field_h = true;
-              break L24;
+              break L23;
             }
-            L28: {
+            L27: {
               if (jt.field_a != -8) {
-                break L28;
+                break L27;
               } else {
                 this.a(true, (byte) -67);
                 rd.field_j.k((byte) -113);
@@ -1752,10 +1770,10 @@ public final class ArmiesOfGielinor extends wf {
                 var3_int = r.field_s ? 1 : 0;
                 bv.a(var3_int != 0, -1, 1, 0);
                 du.field_h = true;
-                break L28;
+                break L27;
               }
             }
-            L29: {
+            L28: {
               if (jt.field_a == -9) {
                 this.a(true, (byte) -90);
                 rd.field_j.t((byte) 60);
@@ -1763,40 +1781,40 @@ public final class ArmiesOfGielinor extends wf {
                 var3_int = r.field_s ? 1 : 0;
                 bv.a(var3_int != 0, -1, 1, 0);
                 du.field_h = true;
+                break L28;
+              } else {
+                break L28;
+              }
+            }
+            L29: {
+              if (-4 == jt.field_a) {
+                vl.field_n.h(32161, 9);
+                ua.field_t = true;
+                q.field_F = mj.field_c;
                 break L29;
               } else {
                 break L29;
               }
             }
             L30: {
-              if (-4 == jt.field_a) {
-                vl.field_n.h(32161, 9);
-                ua.field_t = true;
-                q.field_F = mj.field_c;
-                break L30;
-              } else {
-                break L30;
-              }
-            }
-            L31: {
               if (jt.field_a == -5) {
-                L32: {
+                L31: {
                   if (!gk.field_H) {
                     if (!fj.field_c) {
-                      break L32;
+                      break L31;
                     } else {
                       pq.a(-81, vu.field_M.d((byte) 117), 11);
-                      break L32;
+                      break L31;
                     }
                   } else {
                     ov.a(11, 3, 0);
-                    break L32;
+                    break L31;
                   }
                 }
                 dn.field_Qb = true;
-                break L31;
+                break L30;
               } else {
-                break L31;
+                break L30;
               }
             }
             break L0;
@@ -1804,7 +1822,7 @@ public final class ArmiesOfGielinor extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var3, "ArmiesOfGielinor.EA(" + param0 + 44 + param1 + 41);
+          throw ig.a((Throwable) (Object) var3, "ArmiesOfGielinor.EA(" + 0 + 44 + param1 + 41);
         }
     }
 
@@ -1822,7 +1840,8 @@ public final class ArmiesOfGielinor extends wf {
         int stackOut_62_0 = 0;
         try {
           L0: {
-            var2 = ll.p(0);
+            int discarded$8 = 0;
+            var2 = ll.p();
             if (!ql.h(param0 ^ 31337)) {
               if (!qu.field_q) {
                 pr.a((byte) 121, var2);
@@ -1893,7 +1912,8 @@ public final class ArmiesOfGielinor extends wf {
                         }
                       }
                     }
-                    tq.a(sq.c((byte) 54), false);
+                    int discarded$9 = 0;
+                    tq.a(sq.c((byte) 54));
                     break L6;
                   }
                   L8: {
@@ -1919,7 +1939,8 @@ public final class ArmiesOfGielinor extends wf {
                     }
                   }
                   L10: {
-                    this.c(false);
+                    int discarded$10 = 0;
+                    this.c();
                     if (null != oa.field_I) {
                       oa.field_I.b(89);
                       break L10;
@@ -1940,14 +1961,16 @@ public final class ArmiesOfGielinor extends wf {
                           break L12;
                         }
                       }
-                      bl.a(stackIn_65_0 != 0, -5);
+                      int discarded$11 = -5;
+                      bl.a(stackIn_65_0 != 0);
                       break L11;
                     } else {
                       if (!an.e((byte) 93)) {
                         break L11;
                       } else {
                         qn.d(0, 0, qn.field_l, qn.field_g);
-                        an.h(1976460609);
+                        int discarded$12 = 1976460609;
+                        an.h();
                         break L11;
                       }
                     }
@@ -1979,8 +2002,10 @@ public final class ArmiesOfGielinor extends wf {
                       }
                     }
                   }
-                  oa.h(2);
-                  pt.a(0, 12, var2, 0);
+                  int discarded$13 = 2;
+                  oa.h();
+                  int discarded$14 = 0;
+                  pt.a(0, 12, var2);
                   break L0;
                 } else {
                   bn.a((byte) -24, 100.0f, en.field_G);
@@ -2029,283 +2054,438 @@ public final class ArmiesOfGielinor extends wf {
 
     final void d(byte param0) {
         ArmiesOfGielinor.s(3);
-        jg.a(-112);
+        int discarded$264 = -112;
+        jg.a();
         at.c(param0 + 322);
         kl.b(param0 + 71);
-        rr.a(-114);
+        int discarded$265 = -114;
+        rr.a();
         et.c(13626);
-        ed.b(15000);
+        int discarded$266 = 15000;
+        ed.b();
         gi.a(180);
         wn.c((byte) 52);
-        nm.e(256);
+        int discarded$267 = 256;
+        nm.e();
         gp.a((byte) 115);
         us.a(param0 ^ 30);
         cv.d((byte) 44);
-        dg.a((byte) -12);
-        ve.a(1);
-        vn.a((byte) -8);
+        int discarded$268 = -12;
+        dg.a();
+        int discarded$269 = 1;
+        ve.a();
+        int discarded$270 = -8;
+        vn.a();
         hc.b(1017);
-        qt.a((byte) 93);
-        s.a(53);
+        int discarded$271 = 93;
+        qt.a();
+        int discarded$272 = 53;
+        s.a();
         ik.b(param0 + -1700635368);
         hg.a(true);
-        t.a(0);
+        int discarded$273 = 0;
+        t.a();
         cd.a(false);
         bt.c(0);
-        gv.b(93);
+        int discarded$274 = 93;
+        gv.b();
         fe.b();
-        vi.a(true);
-        wf.h(71);
-        g.c(1);
+        int discarded$275 = 1;
+        vi.a();
+        int discarded$276 = 71;
+        wf.h();
+        int discarded$277 = 1;
+        g.c();
         iv.d(105);
-        fa.a((byte) 100);
-        pq.a((byte) -79);
-        el.b(-8834);
+        int discarded$278 = 100;
+        fa.a();
+        int discarded$279 = -79;
+        pq.a();
+        int discarded$280 = -8834;
+        el.b();
         qn.d();
-        ah.a((byte) 32);
-        vh.f(115);
-        l.a(true);
-        pv.a(213);
+        int discarded$281 = 32;
+        ah.a();
+        int discarded$282 = 115;
+        vh.f();
+        int discarded$283 = 1;
+        l.a();
+        int discarded$284 = 213;
+        pv.a();
         hb.a(param0 ^ 71);
         dt.a(-1);
-        qk.a(50);
-        ov.a((byte) 50);
-        mo.a(0);
+        int discarded$285 = 50;
+        qk.a();
+        int discarded$286 = 50;
+        ov.a();
+        int discarded$287 = 0;
+        mo.a();
         er.a(-3);
         ds.a(2);
-        qc.a((byte) -108);
-        bi.b(0);
+        int discarded$288 = -108;
+        qc.a();
+        int discarded$289 = 0;
+        bi.b();
         jp.a((byte) -82);
         rd.a(param0 ^ -20000072);
         fj.b((byte) -67);
-        ln.a(false);
-        co.a((byte) -117);
-        ep.a((byte) 11);
-        hm.b(0);
+        int discarded$290 = 0;
+        ln.a();
+        int discarded$291 = -117;
+        co.a();
+        int discarded$292 = 11;
+        ep.a();
+        int discarded$293 = 0;
+        hm.b();
         sl.a(param0 + 157);
-        p.a((byte) -58);
+        int discarded$294 = -58;
+        p.a();
         ci.h(param0 + 71);
         cg.a((byte) -109);
         ic.d(param0 ^ 49);
         vd.a(256);
         lb.a(param0 + 13988);
-        om.f(0);
+        int discarded$295 = 0;
+        om.f();
         ij.c(param0 ^ 3);
-        bp.c((byte) 35);
-        vo.a(true);
+        int discarded$296 = 35;
+        bp.c();
+        int discarded$297 = 1;
+        vo.a();
         dd.b(-56);
         ue.b((byte) 78);
-        hi.b((byte) 99);
-        jd.q(-9480);
-        ha.c(-1);
+        int discarded$298 = 99;
+        hi.b();
+        int discarded$299 = -9480;
+        jd.q();
+        int discarded$300 = -1;
+        ha.c();
         ka.a();
         ke.a(param0 + 156);
         tc.b((byte) 4);
-        wh.b(0);
-        ji.a(0);
-        ih.f(-128);
-        lt.b(-51);
+        int discarded$301 = 0;
+        wh.b();
+        int discarded$302 = 0;
+        ji.a();
+        int discarded$303 = -128;
+        ih.f();
+        int discarded$304 = -51;
+        lt.b();
         ev.a(960112080);
         rc.g();
         bg.a(-83);
         mi.a(9480);
         dw.c();
-        os.f(1048575);
-        dj.b((byte) 116);
+        int discarded$305 = 1048575;
+        os.f();
+        int discarded$306 = 116;
+        dj.b();
         it.a(param0 + 76);
         je.h(-117);
-        au.e((byte) -58);
-        tp.a(-116);
+        int discarded$307 = -58;
+        au.e();
+        int discarded$308 = -116;
+        tp.a();
         of.e((byte) 20);
-        ii.a((byte) -1);
+        int discarded$309 = -1;
+        ii.a();
         jm.a(param0 + 2);
         lg.a((byte) 126);
         ew.a(false);
-        aq.a((byte) -22);
-        hq.a((byte) -73);
-        wl.f((byte) 97);
-        gk.l(17);
-        oe.j((byte) 126);
+        int discarded$310 = -22;
+        aq.a();
+        int discarded$311 = -73;
+        hq.a();
+        int discarded$312 = 97;
+        wl.f();
+        int discarded$313 = 17;
+        gk.l();
+        int discarded$314 = 126;
+        oe.j();
         cr.n(260);
-        lw.j((byte) 49);
+        int discarded$315 = 49;
+        lw.j();
         ro.n(0);
         kd.f((byte) 19);
         ce.k(param0 ^ -11944);
-        df.b(true);
-        na.f((byte) -117);
-        gl.a(true);
+        int discarded$316 = 1;
+        df.b();
+        int discarded$317 = -117;
+        na.f();
+        int discarded$318 = 1;
+        gl.a();
         fl.a((byte) 82);
-        uu.a((byte) 30);
-        ne.g(-107);
-        am.e(-1);
-        eb.a(1);
+        int discarded$319 = 30;
+        uu.a();
+        int discarded$320 = -107;
+        ne.g();
+        int discarded$321 = -1;
+        am.e();
+        int discarded$322 = 1;
+        eb.a();
         da.a(false);
-        fm.a(95);
-        cm.a(false);
+        int discarded$323 = 95;
+        fm.a();
+        int discarded$324 = 0;
+        cm.a();
         lo.a(0);
         db.a(-3);
         pr.a(param0 + 7814);
         tm.b();
         dm.g(256);
-        rk.q(-114);
-        la.b((byte) -111);
-        sg.a((byte) 93);
-        ft.a(-10);
+        int discarded$325 = -114;
+        rk.q();
+        int discarded$326 = -111;
+        la.b();
+        int discarded$327 = 93;
+        sg.a();
+        int discarded$328 = -10;
+        ft.a();
         rg.a(-84);
         bo.a(param0 ^ -4368117);
         oo.b(-8616);
-        dl.c((byte) 110);
-        fs.a(-1);
-        ua.e(-4541);
+        int discarded$329 = 110;
+        dl.c();
+        int discarded$330 = -1;
+        fs.a();
+        int discarded$331 = -4541;
+        ua.e();
         ej.a(-27464);
-        su.a(true);
-        fu.a(126);
+        int discarded$332 = 1;
+        su.a();
+        int discarded$333 = 126;
+        fu.a();
         ag.e((byte) -127);
         vp.g(-829);
         kr.g(param0 ^ -29395);
-        mb.d((byte) 113);
-        st.a(true);
-        jc.a((byte) 44);
-        ee.f(-27538);
+        int discarded$334 = 113;
+        mb.d();
+        int discarded$335 = 1;
+        st.a();
+        int discarded$336 = 44;
+        jc.a();
+        int discarded$337 = -27538;
+        ee.f();
         hw.a((byte) -58);
-        al.a((byte) 103);
-        wa.c(6);
+        int discarded$338 = 103;
+        al.a();
+        int discarded$339 = 6;
+        wa.c();
         hr.b(param0 ^ 298276648);
         uf.a(param0 + 173);
         nn.b(-104);
-        ub.a((byte) -122);
+        int discarded$340 = -122;
+        ub.a();
         eu.a((byte) -55);
-        v.d((byte) 55);
-        eo.a(0);
-        sj.a((byte) -95);
-        iu.b(1);
-        vb.f(-126);
+        int discarded$341 = 55;
+        v.d();
+        int discarded$342 = 0;
+        eo.a();
+        int discarded$343 = -95;
+        sj.a();
+        int discarded$344 = 1;
+        iu.b();
+        int discarded$345 = -126;
+        vb.f();
         oj.a((byte) -103);
         fi.a(param0 ^ 101);
-        ra.a(false);
+        int discarded$346 = 0;
+        ra.a();
         mn.a(100);
         bv.k((byte) -97);
         km.e(param0 + 77);
-        sk.c(-128);
-        vj.b(-106);
+        int discarded$347 = -128;
+        sk.c();
+        int discarded$348 = -106;
+        vj.b();
         gd.c();
         ms.f(param0 ^ 71);
         ac.a((byte) 71);
         ql.d((byte) 109);
         po.a(true);
-        nw.d((byte) -26);
-        qq.d((byte) 35);
-        as.g(-19269);
-        pj.a(true);
+        int discarded$349 = -26;
+        nw.d();
+        int discarded$350 = 35;
+        qq.d();
+        int discarded$351 = -19269;
+        as.g();
+        int discarded$352 = 1;
+        pj.a();
         qj.g(10);
-        cn.f(123);
-        ab.a((byte) 32);
-        vv.b((byte) 82);
-        bu.a(-128);
+        int discarded$353 = 123;
+        cn.f();
+        int discarded$354 = 32;
+        ab.a();
+        int discarded$355 = 82;
+        vv.b();
+        int discarded$356 = -128;
+        bu.a();
         mh.a((byte) -119);
         nf.k(param0 ^ -72);
         dn.k(0);
-        fp.k(21755);
+        int discarded$357 = 21755;
+        fp.k();
         ll.k(-1);
         im.g(31343);
-        np.e((byte) 5);
+        int discarded$358 = 5;
+        np.e();
         mp.l(-8291);
         tg.a(-97);
-        i.m(73);
-        ea.a(-47);
-        bn.a(29022);
-        lm.a(1638);
+        int discarded$359 = 73;
+        i.m();
+        int discarded$360 = -47;
+        ea.a();
+        int discarded$361 = 29022;
+        bn.a();
+        int discarded$362 = 1638;
+        lm.a();
         ki.a((byte) 117);
-        ck.a(14);
-        th.a((byte) 73);
-        h.a(-25764);
-        af.b((byte) -120);
+        int discarded$363 = 14;
+        ck.a();
+        int discarded$364 = 73;
+        th.a();
+        int discarded$365 = -25764;
+        h.a();
+        int discarded$366 = -120;
+        af.b();
         uh.a(param0 + 20115);
-        ui.d(125);
-        dv.c((byte) -109);
+        int discarded$367 = 125;
+        ui.d();
+        int discarded$368 = -109;
+        dv.c();
         rq.a(-22823);
-        cp.a(false);
+        int discarded$369 = 0;
+        cp.a();
         dp.f((byte) -123);
         si.a(18347);
-        hf.a((byte) 19);
-        dq.a(-1);
+        int discarded$370 = 19;
+        hf.a();
+        int discarded$371 = -1;
+        dq.a();
         ou.a(4116);
-        bb.a((byte) -121);
+        int discarded$372 = -121;
+        bb.a();
         vs.a(param0 ^ 21);
-        nr.a((byte) -119);
+        int discarded$373 = -119;
+        nr.a();
         so.b(param0 ^ -328);
         jn.a(param0 + -29);
         op.a(true);
-        ga.b(-119);
-        pg.a(20);
-        ml.k(2);
+        int discarded$374 = -119;
+        ga.b();
+        int discarded$375 = 20;
+        pg.a();
+        int discarded$376 = 2;
+        ml.k();
         oc.k(param0 ^ -72);
-        tt.a(true);
-        gm.e(25931);
+        int discarded$377 = 1;
+        tt.a();
+        int discarded$378 = 25931;
+        gm.e();
         mc.d(param0 + 196);
-        up.d(-12428);
+        int discarded$379 = -12428;
+        up.d();
         ul.b(param0 ^ -90);
-        wp.e((byte) -74);
+        int discarded$380 = -74;
+        wp.e();
         ca.a(23582);
-        fd.a(-30097);
+        int discarded$381 = -30097;
+        fd.a();
         qb.a(param0 ^ 125);
-        qf.a((byte) 31);
-        pn.b((byte) -90);
-        r.d((byte) -11);
-        sh.b((byte) 40);
-        pd.a((byte) 95);
+        int discarded$382 = 31;
+        qf.a();
+        int discarded$383 = -90;
+        pn.b();
+        int discarded$384 = -11;
+        r.d();
+        int discarded$385 = 40;
+        sh.b();
+        int discarded$386 = 95;
+        pd.a();
         hk.l(param0 ^ 55);
         jk.a(param0 ^ -28);
         cl.a(-31116);
-        hp.g(-81);
+        int discarded$387 = -81;
+        hp.g();
         rt.e((byte) 91);
         kn.g(-75);
-        ti.a((byte) 29);
-        lq.a(-31320);
-        hh.b(16);
-        em.a(1);
+        int discarded$388 = 29;
+        ti.a();
+        int discarded$389 = -31320;
+        lq.a();
+        int discarded$390 = 16;
+        hh.b();
+        int discarded$391 = 1;
+        em.a();
         ud.n(12213);
         se.a(0);
-        mg.b(9892);
+        int discarded$392 = 9892;
+        mg.b();
         pb.a();
-        nk.b((byte) 75);
-        dc.a(540);
-        ei.a(-98);
-        tk.a((byte) -100);
-        ao.b((byte) -120);
-        or.a(false);
-        kp.a(2);
-        lk.a((byte) 58);
+        int discarded$393 = 75;
+        nk.b();
+        int discarded$394 = 540;
+        dc.a();
+        int discarded$395 = -98;
+        ei.a();
+        int discarded$396 = -100;
+        tk.a();
+        int discarded$397 = -120;
+        ao.b();
+        int discarded$398 = 0;
+        or.a();
+        int discarded$399 = 2;
+        kp.a();
+        int discarded$400 = 58;
+        lk.a();
         kb.c((byte) -124);
-        nl.i(-98);
+        int discarded$401 = -98;
+        nl.i();
         ju.a(param0 + -51);
-        ut.p(0);
-        ls.a(-121);
-        vq.a((byte) 107);
+        int discarded$402 = 0;
+        ut.p();
+        int discarded$403 = -121;
+        ls.a();
+        int discarded$404 = 107;
+        vq.a();
         sf.h((byte) 58);
         gh.a(param0 + -11763);
-        fw.i(0);
-        ob.e((byte) 68);
+        int discarded$405 = 0;
+        fw.i();
+        int discarded$406 = 68;
+        ob.e();
         tj.d((byte) -89);
-        hs.i(0);
-        vr.a((byte) -37);
-        jj.a((byte) -112);
-        rh.a(-74);
+        int discarded$407 = 0;
+        hs.i();
+        int discarded$408 = -37;
+        vr.a();
+        int discarded$409 = -112;
+        jj.a();
+        int discarded$410 = -74;
+        rh.a();
         sc.a(-91);
-        tf.a(false);
-        lf.c(-1);
-        sr.b((byte) 120);
+        int discarded$411 = 0;
+        tf.a();
+        int discarded$412 = -1;
+        lf.c();
+        int discarded$413 = 120;
+        sr.b();
         br.a(111);
         vt.a(false);
-        ng.w(0);
+        int discarded$414 = 0;
+        ng.w();
         ni.a(-66);
-        kg.a((byte) -101);
+        int discarded$415 = -101;
+        kg.a();
         wi.a(param0 + -14619);
-        ig.e(77);
-        mv.a((byte) -48);
+        int discarded$416 = 77;
+        ig.e();
+        int discarded$417 = -48;
+        mv.a();
         ht.a();
         rv.a(param0 ^ -72);
-        bd.a(28038);
+        int discarded$418 = 28038;
+        bd.a();
         pe.a((byte) 119);
         ld.e(param0 + 4);
         ur.a(false);
@@ -2315,41 +2495,61 @@ public final class ArmiesOfGielinor extends wf {
         nh.h(param0 ^ -61);
         bm.e(param0 + -56);
         ek.a(236611664);
-        ks.e((byte) -126);
-        is.a((byte) -5);
+        int discarded$419 = -126;
+        ks.e();
+        int discarded$420 = -5;
+        is.a();
         qs.b();
         bq.a(30156);
         pu.a((byte) -114);
-        uc.a((byte) -39);
-        gt.a(494);
-        de.a((byte) -116);
+        int discarded$421 = -39;
+        uc.a();
+        int discarded$422 = 494;
+        gt.a();
+        int discarded$423 = -116;
+        de.a();
         le.a(79);
-        bk.a(true);
+        int discarded$424 = 1;
+        bk.a();
         od.a(param0 ^ 71);
-        cw.a((byte) -118);
+        int discarded$425 = -118;
+        cw.a();
         un.a();
-        mj.c((byte) -82);
+        int discarded$426 = -82;
+        mj.c();
         lp.a(param0 ^ -13095008);
-        cu.a((byte) -121);
-        e.b((byte) -13);
+        int discarded$427 = -121;
+        cu.a();
+        int discarded$428 = -13;
+        e.b();
         mq.k(85);
         bl.a(40);
-        rf.a((byte) -110);
+        int discarded$429 = -110;
+        rf.a();
         va.h(-97);
-        ar.e((byte) -74);
-        ri.a((byte) -57);
-        du.b(16);
-        ug.a(16);
+        int discarded$430 = -74;
+        ar.e();
+        int discarded$431 = -57;
+        ri.a();
+        int discarded$432 = 16;
+        du.b();
+        int discarded$433 = 16;
+        ug.a();
         uk.d(0);
-        dh.c(-117);
+        int discarded$434 = -117;
+        dh.c();
         hu.a();
         vc.a(-119);
-        ir.a(61);
+        int discarded$435 = 61;
+        ir.a();
         sm.a(-1);
-        ja.e(-93);
-        j.b((byte) 125);
+        int discarded$436 = -93;
+        ja.e();
+        int discarded$437 = 125;
+        j.b();
         jr.b(76);
-        sq.a(false);
+        int discarded$438 = 0;
+        sq.a();
         pl.a(true);
         c.a(param0 + 157);
         be.a((byte) 113);
@@ -2357,145 +2557,234 @@ public final class ArmiesOfGielinor extends wf {
         bw.a(-28911);
         ss.a((byte) -3);
         il.e(1223);
-        tr.g(-125);
+        int discarded$439 = -125;
+        tr.g();
         dk.a(true);
         kj.a(false);
-        md.d((byte) 46);
-        rl.g(-43);
+        int discarded$440 = 46;
+        md.d();
+        int discarded$441 = -43;
+        rl.g();
         q.g(param0 + -9);
-        kf.g(-74);
-        io.a((byte) 52);
-        fq.a((byte) 99);
-        ta.j(-12819);
-        ma.g((byte) -127);
-        fn.m(32);
+        int discarded$442 = -74;
+        kf.g();
+        int discarded$443 = 52;
+        io.a();
+        int discarded$444 = 99;
+        fq.a();
+        int discarded$445 = -12819;
+        ta.j();
+        int discarded$446 = -127;
+        ma.g();
+        int discarded$447 = 32;
+        fn.m();
         pt.i(param0);
-        rj.a((byte) -85);
-        kv.b(true);
-        hv.b(true);
-        kw.b(true);
-        pk.c(false);
-        vu.a(58);
-        mk.f(-1);
+        int discarded$448 = -85;
+        rj.a();
+        int discarded$449 = 1;
+        kv.b();
+        int discarded$450 = 1;
+        hv.b();
+        int discarded$451 = 1;
+        kw.b();
+        int discarded$452 = 0;
+        pk.c();
+        int discarded$453 = 58;
+        vu.a();
+        int discarded$454 = -1;
+        mk.f();
         qd.k(-15);
         ws.a(param0 + 197);
-        pi.a((byte) -63);
-        ns.a(false);
-        jv.a((byte) 36);
-        aw.c((byte) 110);
+        int discarded$455 = -63;
+        pi.a();
+        int discarded$456 = 0;
+        ns.a();
+        int discarded$457 = 36;
+        jv.a();
+        int discarded$458 = 110;
+        aw.c();
         jb.f(param0 ^ -123);
-        ge.c(-104);
+        int discarded$459 = -104;
+        ge.c();
         vf.c(param0 ^ 18);
-        wq.a((byte) -57);
-        qv.g(67);
+        int discarded$460 = -57;
+        wq.a();
+        int discarded$461 = 67;
+        qv.g();
         tb.c(param0 ^ 40);
-        ph.a((byte) -54);
-        sb.b(false);
-        no.c(false);
-        wb.a(false);
-        bs.a(true);
-        tq.a((byte) -84);
+        int discarded$462 = -54;
+        ph.a();
+        int discarded$463 = 0;
+        sb.b();
+        int discarded$464 = 0;
+        no.c();
+        int discarded$465 = 0;
+        wb.a();
+        int discarded$466 = 1;
+        bs.a();
+        int discarded$467 = -84;
+        tq.a();
         en.n(0);
-        ai.b(false);
-        nb.d((byte) 68);
-        cj.c(1);
-        fh.a((byte) -28);
-        ak.c(true);
-        wc.j(0);
+        int discarded$468 = 0;
+        ai.b();
+        int discarded$469 = 68;
+        nb.d();
+        int discarded$470 = 1;
+        cj.c();
+        int discarded$471 = -28;
+        fh.a();
+        int discarded$472 = 1;
+        ak.c();
+        int discarded$473 = 0;
+        wc.j();
         ku.k(param0 ^ -36);
         cs.b(true);
         tn.n(param0 + 72);
         qm.j(param0 + 150);
         nv.l(-24061);
-        m.a(false);
+        int discarded$474 = 0;
+        m.a();
         wg.a(19345);
         uq.g(param0 ^ 91);
-        me.a((byte) -36);
-        f.c(true);
+        int discarded$475 = -36;
+        me.a();
+        int discarded$476 = 1;
+        f.c();
         pc.d(35);
         lc.a();
-        mu.a(0);
-        tl.a((byte) 100);
-        sp.a((byte) -121);
+        int discarded$477 = 0;
+        mu.a();
+        int discarded$478 = 100;
+        tl.a();
+        int discarded$479 = -121;
+        sp.a();
         wj.a(true);
         aj.a(param0 + 155);
-        ko.a(false);
-        nt.a((byte) 97);
-        vk.a(-4740);
-        te.a((byte) -75);
+        int discarded$480 = 0;
+        ko.a();
+        int discarded$481 = 97;
+        nt.a();
+        int discarded$482 = -4740;
+        vk.a();
+        int discarded$483 = -75;
+        te.a();
         cf.a((byte) 9);
-        sd.a((byte) -95);
+        int discarded$484 = -95;
+        sd.a();
         id.a(param0 ^ -10);
         iq.c(param0 ^ -72);
         cq.a(-101);
         bj.a(param0 ^ -72);
         nu.a(-26601);
-        td.a(-127);
+        int discarded$485 = -127;
+        td.a();
         lu.a(1);
         ol.b((byte) 117);
-        oi.b(true);
-        bh.c(false);
-        ps.c(false);
+        int discarded$486 = 1;
+        oi.b();
+        int discarded$487 = 0;
+        bh.c();
+        int discarded$488 = 0;
+        ps.c();
         hl.k(param0 + -4103);
-        we.a((byte) 120);
-        b.a(true);
-        iw.a(-25771);
-        vg.a((byte) 89);
-        li.a((byte) 74);
-        og.a(true);
-        nd.a((byte) -114);
-        dr.d((byte) 126);
-        ef.a(0);
-        cb.a(125);
+        int discarded$489 = 120;
+        we.a();
+        int discarded$490 = 1;
+        b.a();
+        int discarded$491 = -25771;
+        iw.a();
+        int discarded$492 = 89;
+        vg.a();
+        int discarded$493 = 74;
+        li.a();
+        int discarded$494 = 1;
+        og.a();
+        int discarded$495 = -114;
+        nd.a();
+        int discarded$496 = 126;
+        dr.d();
+        int discarded$497 = 0;
+        ef.a();
+        int discarded$498 = 125;
+        cb.a();
         mt.a(param0 + -51);
         es.b(-119);
-        go.b(-51);
-        fo.a(true);
-        sa.a((byte) 96);
+        int discarded$499 = -51;
+        go.b();
+        int discarded$500 = 1;
+        fo.a();
+        int discarded$501 = 96;
+        sa.a();
         qu.a(param0 + 1);
-        wm.a(-10743);
-        wd.a(200);
+        int discarded$502 = -10743;
+        wm.a();
+        int discarded$503 = 200;
+        wd.a();
         ad.a((byte) 63);
         fg.a(-22856);
-        ho.a((byte) -116);
-        a.a(true);
-        pf.b((byte) -49);
+        int discarded$504 = -116;
+        ho.a();
+        int discarded$505 = 1;
+        a.a();
+        int discarded$506 = -49;
+        pf.b();
         wv.c((byte) -3);
         oq.a(120);
-        eq.a(true);
-        re.g(-90);
-        ba.i(113);
-        jq.g(-5);
-        qa.g(1);
+        int discarded$507 = 1;
+        eq.a();
+        int discarded$508 = -90;
+        re.g();
+        int discarded$509 = 113;
+        ba.i();
+        int discarded$510 = -5;
+        jq.g();
+        int discarded$511 = 1;
+        qa.g();
         oh.g(param0 + 21408);
-        mw.g(12600);
-        wt.e((byte) 120);
+        int discarded$512 = 12600;
+        mw.g();
+        int discarded$513 = 120;
+        wt.e();
         qp.g(123);
         an.g(param0 ^ -1746174247);
         oa.g(-128);
         gg.g(-2260);
-        ot.e((byte) -97);
+        int discarded$514 = -97;
+        ot.e();
         u.a((byte) -127);
         on.a(-7);
-        rs.a((byte) -121);
+        int discarded$515 = -121;
+        rs.a();
         jl.a(-125);
         ip.a(param0 ^ 36);
         ts.b(param0 ^ 26972);
-        gs.a((byte) 86);
+        int discarded$516 = 86;
+        gs.a();
         fc.a(param0 ^ 43);
-        fk.a(true);
+        int discarded$517 = 1;
+        fk.a();
         kq.a(param0 ^ -3);
-        pp.b(false);
-        uj.h(29151);
-        vl.b(true);
+        int discarded$518 = 0;
+        pp.b();
+        int discarded$519 = 29151;
+        uj.h();
+        int discarded$520 = 1;
+        vl.b();
         kt.g(param0 ^ -55);
-        jh.h(-117);
-        di.g(49);
-        tv.a((byte) -126);
-        ct.a(135);
-        gu.b(-16356);
-        rb.d(65280);
-        rn.a(false);
+        int discarded$521 = -117;
+        jh.h();
+        int discarded$522 = 49;
+        di.g();
+        int discarded$523 = -126;
+        tv.a();
+        int discarded$524 = 135;
+        ct.a();
+        int discarded$525 = -16356;
+        gu.b();
+        int discarded$526 = 65280;
+        rb.d();
+        int discarded$527 = 0;
+        rn.a();
         ((ArmiesOfGielinor) this).field_p = null;
     }
 
@@ -2527,7 +2816,8 @@ public final class ArmiesOfGielinor extends wf {
                 var5 = 0;
                 L2: while (true) {
                   if (var5 >= 7) {
-                    mc.field_d = ur.e(-10128);
+                    int discarded$1 = -10128;
+                    mc.field_d = ur.e();
                     ((ArmiesOfGielinor) this).a(true, false, true, true, 55, false, true);
                     jv.field_d = pi.field_M;
                     sh.field_a[65] = -2;
@@ -2598,7 +2888,7 @@ public final class ArmiesOfGielinor extends wf {
         }
     }
 
-    private final void p(int param0) {
+    private final void p() {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -2607,7 +2897,8 @@ public final class ArmiesOfGielinor extends wf {
               if (null == a.field_o) {
                 break L1;
               } else {
-                em.a(a.field_o, 10207);
+                int discarded$2 = 10207;
+                em.a(a.field_o);
                 lr.a(mc.field_d, (byte) 62);
                 a.field_o = null;
                 wl.a(0);
@@ -2625,7 +2916,7 @@ public final class ArmiesOfGielinor extends wf {
             ki.field_b = nu.a(12, true);
             op.field_b = nu.a(15, true);
             bi.field_f = nu.a(14, true);
-            nm.field_s = nu.a(param0, true);
+            nm.field_s = nu.a(17, true);
             i.field_Lb = nu.a(18, true);
             ce.field_M = nu.a(19, true);
             oh.field_M = nu.a(20, true);
@@ -2637,7 +2928,7 @@ public final class ArmiesOfGielinor extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var2, "ArmiesOfGielinor.JA(" + param0 + 41);
+          throw ig.a((Throwable) (Object) var2, "ArmiesOfGielinor.JA(" + 17 + 41);
         }
     }
 
@@ -3162,7 +3453,8 @@ public final class ArmiesOfGielinor extends wf {
               var5 = 0;
               L7: while (true) {
                 if (r.field_B <= var5) {
-                  oo.e(-387);
+                  int discarded$1 = -387;
+                  oo.e();
                   break L0;
                 } else {
                   rd.field_j.field_xb.field_T[var5] = ah.field_a;
@@ -3211,7 +3503,8 @@ public final class ArmiesOfGielinor extends wf {
         var18 = field_M ? 1 : 0;
         if (!qu.field_q) {
           var3_int = -78 / ((param0 - -45) / 46);
-          j.a((byte) 119);
+          int discarded$39 = 119;
+          j.a();
           var4 = "basicfont12";
           if (null == br.field_d) {
             if (null != uf.field_f) {
@@ -3243,15 +3536,15 @@ public final class ArmiesOfGielinor extends wf {
                     fh.field_b[8] = um.a(be.field_w, "", "brain_barrelchest_battle");
                     qf.field_f = um.a(be.field_w, "", "AoG_interface_guthix");
                     var5 = lk.field_e.field_w;
-                    boolean discarded$9 = var5.a(jl.field_d, ep.field_b, 0, mp.field_Ob, (byte) 86);
-                    boolean discarded$10 = var5.a(jl.field_d, ep.field_b, 0, jc.field_B, (byte) 86);
-                    boolean discarded$11 = var5.a(jl.field_d, ep.field_b, 0, oh.field_K, (byte) 86);
-                    boolean discarded$12 = var5.a(jl.field_d, ep.field_b, 0, se.field_h, (byte) 86);
+                    boolean discarded$40 = var5.a(jl.field_d, ep.field_b, 0, mp.field_Ob, (byte) 86);
+                    boolean discarded$41 = var5.a(jl.field_d, ep.field_b, 0, jc.field_B, (byte) 86);
+                    boolean discarded$42 = var5.a(jl.field_d, ep.field_b, 0, oh.field_K, (byte) 86);
+                    boolean discarded$43 = var5.a(jl.field_d, ep.field_b, 0, se.field_h, (byte) 86);
                     var6 = cb.field_a;
                     var7_int = 0;
                     L1: while (true) {
                       if (var7_int >= var6.length) {
-                        boolean discarded$13 = var5.a(jl.field_d, ep.field_b, 0, qf.field_f, (byte) 86);
+                        boolean discarded$44 = var5.a(jl.field_d, ep.field_b, 0, qf.field_f, (byte) 86);
                         var6_array = mc.field_d;
                         var7_int = 0;
                         L2: while (true) {
@@ -3271,7 +3564,7 @@ public final class ArmiesOfGielinor extends wf {
                         }
                       } else {
                         var8 = var6[var7_int];
-                        boolean discarded$14 = var5.a(jl.field_d, ep.field_b, 0, var8, (byte) 86);
+                        boolean discarded$45 = var5.a(jl.field_d, ep.field_b, 0, var8, (byte) 86);
                         var7_int++;
                         continue L1;
                       }
@@ -3290,7 +3583,8 @@ public final class ArmiesOfGielinor extends wf {
                     rs.field_n = gs.a(var4, gg.field_K, ks.field_A, (byte) -53, "");
                     en.field_E = gs.a("basic", iw.field_l, sh.field_j, (byte) -53, "smallfont");
                     hh.field_i = it.a("introfont", iw.field_l, sh.field_j, (byte) -87, "basic");
-                    nr.field_e = st.a("runewarsfont", sh.field_j, iw.field_l, "basic", -2088);
+                    int discarded$46 = -2088;
+                    nr.field_e = st.a("runewarsfont", sh.field_j, iw.field_l, "basic");
                     fe.a(nr.field_e);
                     fe.field_l = fk.a("textshadow", (byte) -127, iw.field_l, "basic");
                     var5_array = lo.a("members_benefits_screenshots", -28106, "basic", iw.field_l);
@@ -3301,31 +3595,40 @@ public final class ArmiesOfGielinor extends wf {
                       break L3;
                     }
                   }
-                  u.field_n = pv.a("basic", "background", iw.field_l, 24914);
+                  int discarded$47 = 24914;
+                  u.field_n = pv.a("basic", "background", iw.field_l);
                   cp.field_e = lo.a("statusicons", -28106, "basic", iw.field_l);
-                  ru[] discarded$15 = lo.a("armouricons", -28106, "basic", iw.field_l);
+                  ru[] discarded$48 = lo.a("armouricons", -28106, "basic", iw.field_l);
                   lb.field_e = lo.a("special_icons", -28106, "basic", iw.field_l);
                   hh.field_d = ic.a("godspark", (byte) 51, "basic", iw.field_l);
-                  gh.field_M = nh.a("mapbutton", "basic", iw.field_l, false);
-                  wk discarded$16 = nh.a("endturnbutton", "basic", iw.field_l, false);
-                  ul.field_g = nh.a("buttonring", "basic", iw.field_l, false);
+                  int discarded$49 = 0;
+                  gh.field_M = nh.a("mapbutton", "basic", iw.field_l);
+                  int discarded$50 = 0;
+                  wk discarded$51 = nh.a("endturnbutton", "basic", iw.field_l);
+                  int discarded$52 = 0;
+                  ul.field_g = nh.a("buttonring", "basic", iw.field_l);
                   e.field_b = ac.a(iw.field_l, "lozenge", (byte) -4, "basic");
                   bu.field_c = fk.a("endturnlozenge", (byte) -127, iw.field_l, "basic");
                   jh.field_l = ac.a(iw.field_l, "summonframe", (byte) -4, "basic");
-                  vb.field_t = nh.a("bubblepoint", "basic", iw.field_l, false);
+                  int discarded$53 = 0;
+                  vb.field_t = nh.a("bubblepoint", "basic", iw.field_l);
                   ii.field_a = ac.a(iw.field_l, "actionbuttons", (byte) -4, "basic");
                   od.field_a = ac.a(iw.field_l, "info_icons", (byte) -4, "basic");
                   ro.field_rb = lo.a("trait_icons", -28106, "basic", iw.field_l);
                   lp.field_b = lo.a("terrain_icons", -28106, "basic", iw.field_l);
                   sg.field_b = lo.a("compare_icons", -28106, "basic", iw.field_l);
-                  fu.field_e = nh.a("mapf", "basic", iw.field_l, false);
-                  io.field_z = nh.a("mapi", "basic", iw.field_l, false);
-                  ig.field_t = pv.a("basic", "turn", iw.field_l, 24914);
+                  int discarded$54 = 0;
+                  fu.field_e = nh.a("mapf", "basic", iw.field_l);
+                  int discarded$55 = 0;
+                  io.field_z = nh.a("mapi", "basic", iw.field_l);
+                  int discarded$56 = 24914;
+                  ig.field_t = pv.a("basic", "turn", iw.field_l);
                   ns.field_y = fk.a("mapsquares", (byte) -127, iw.field_l, "basic");
                   kj.field_s = fk.a("isomapsquares", (byte) -127, iw.field_l, "basic");
                   rg.field_h = fk.a("maprotbutton", (byte) -128, iw.field_l, "basic");
                   ur.field_w = fk.a("placeicons", (byte) -124, iw.field_l, "basic");
-                  mp.field_Jb = nh.a("slider", "basic", iw.field_l, false);
+                  int discarded$57 = 0;
+                  mp.field_Jb = nh.a("slider", "basic", iw.field_l);
                   kr.field_z = ic.a("bcarrow", (byte) 51, "basic", iw.field_l);
                   aw.field_m = ic.a("goldiv", (byte) 51, "basic", iw.field_l);
                   wc.field_Q = fk.a("silverbar", (byte) -125, iw.field_l, "basic");
@@ -3335,27 +3638,36 @@ public final class ArmiesOfGielinor extends wf {
                   qj.a(iw.field_l, 116);
                   hs.field_F = fk.a("fireball", (byte) -128, iw.field_l, "basic");
                   tt.field_d = fk.a("fortcontrols", (byte) -124, iw.field_l, "basic");
-                  lw.field_ob = nh.a("smallorb", "basic", iw.field_l, false);
-                  wc.field_J = nh.a("bigorb", "basic", iw.field_l, false);
-                  pg.field_c = nh.a("bigorbring", "basic", iw.field_l, false);
+                  int discarded$58 = 0;
+                  lw.field_ob = nh.a("smallorb", "basic", iw.field_l);
+                  int discarded$59 = 0;
+                  wc.field_J = nh.a("bigorb", "basic", iw.field_l);
+                  int discarded$60 = 0;
+                  pg.field_c = nh.a("bigorbring", "basic", iw.field_l);
                   hr.field_d = ac.a(iw.field_l, "godorbs", (byte) -4, "basic");
                   gt.field_c = ac.a(iw.field_l, "godframes", (byte) -4, "basic");
                   ce.field_F = ac.a(iw.field_l, "godglows", (byte) -4, "basic");
                   ue.field_k = ac.a(iw.field_l, "godframeglows", (byte) -4, "basic");
                   tn.a((byte) 80, hr.field_d);
-                  hf.a(128, ce.field_F, 0);
+                  int discarded$61 = 0;
+                  hf.a(128, ce.field_F);
                   go.field_e = new wk(71, 71);
                   fn.a(8678, 256, 15, go.field_e);
                   tn.a((byte) 105, ce.field_F);
                   tn.a((byte) 124, ue.field_k);
-                  ol.field_y = nh.a("logo", "basic", iw.field_l, false);
+                  int discarded$62 = 0;
+                  ol.field_y = nh.a("logo", "basic", iw.field_l);
                   km.field_h = ac.a(iw.field_l, "summonrings", (byte) -4, "basic");
                   jv.field_b = fk.a("chatbubbles", (byte) -128, iw.field_l, "basic");
                   ns.field_O = ic.a("results_award_badge", (byte) 51, "basic", iw.field_l);
-                  ih.field_H = (nj) (Object) nh.a("shine", "basic", iw.field_l, false);
-                  cf.field_t = pv.a("basic", "statboxbg", iw.field_l, 24914);
-                  qt.field_e = pv.a("basic", "popupbg", iw.field_l, 24914);
-                  vq.field_b = pv.a("basic", "gameinfobg", iw.field_l, 24914);
+                  int discarded$63 = 0;
+                  ih.field_H = (nj) (Object) nh.a("shine", "basic", iw.field_l);
+                  int discarded$64 = 24914;
+                  cf.field_t = pv.a("basic", "statboxbg", iw.field_l);
+                  int discarded$65 = 24914;
+                  qt.field_e = pv.a("basic", "popupbg", iw.field_l);
+                  int discarded$66 = 24914;
+                  vq.field_b = pv.a("basic", "gameinfobg", iw.field_l);
                   vc.field_k = fk.a("manastars", (byte) -127, iw.field_l, "basic");
                   hh.field_f = ic.a("manaicon", (byte) 51, "basic", iw.field_l);
                   od.field_d = fk.a("overlayicons", (byte) -125, iw.field_l, "basic");
@@ -3364,12 +3676,14 @@ public final class ArmiesOfGielinor extends wf {
                   rq.field_k = fk.a("results_mini_button_silver", (byte) -124, iw.field_l, "basic");
                   ga.field_a = fk.a("results_mini_button_gold", (byte) -127, iw.field_l, "basic");
                   lf.field_h = ac.a(iw.field_l, "trinketicons", (byte) -4, "basic");
-                  ns.field_E = nh.a("eye", "basic", iw.field_l, false);
+                  int discarded$67 = 0;
+                  ns.field_E = nh.a("eye", "basic", iw.field_l);
                   cu.field_d = ac.a(iw.field_l, "trinketbuttons", (byte) -4, "basic");
                   mo.field_s = ic.a("wait_icon", (byte) 51, "basic", iw.field_l);
                   mo.field_s.a();
                   kt.field_o = fk.a("diamondscale", (byte) -128, iw.field_l, "basic");
-                  jg.field_m = new wk(vc.field_m.a("menu_background.jpg", -123, ""), (java.awt.Component) (Object) ll.p(0));
+                  int discarded$68 = 0;
+                  jg.field_m = new wk(vc.field_m.a("menu_background.jpg", -123, ""), (java.awt.Component) (Object) ll.p());
                   var6_array = mc.field_d;
                   var7_int = 0;
                   L4: while (true) {
@@ -3395,15 +3709,18 @@ public final class ArmiesOfGielinor extends wf {
                       var14 = new int[]{13369344};
                       var15 = new int[]{4456448};
                       dh.field_l = jk.a(100, var15, 123, var14);
-                      wk[] discarded$17 = fe.a(0, 0, 640, 480, oh.field_J, nd.field_b);
+                      wk[] discarded$69 = fe.a(0, 0, 640, 480, oh.field_J, nd.field_b);
                       ae.a((byte) 125, ac.a(iw.field_l, "dials", (byte) -4, "basic"), ic.a("hand", (byte) 51, "basic", iw.field_l));
                       ga.field_k = fk.a("arrows", (byte) -124, iw.field_l, "basic");
                       pi.field_T = ic.a("isocrosshair", (byte) 51, "basic", iw.field_l);
                       ng.a(ic.a("glowray", (byte) 51, "basic", iw.field_l), 0, ic.a("glowspark", (byte) 51, "basic", iw.field_l));
                       am.field_C = fk.a("medals", (byte) -127, iw.field_l, "campaign");
-                      ps.field_w[0] = nh.a("campaign_1_glow", "campaign", iw.field_l, false);
-                      ps.field_w[1] = nh.a("campaign_2_glow", "campaign", iw.field_l, false);
-                      ps.field_w[2] = nh.a("campaign_3_glow", "campaign", iw.field_l, false);
+                      int discarded$70 = 0;
+                      ps.field_w[0] = nh.a("campaign_1_glow", "campaign", iw.field_l);
+                      int discarded$71 = 0;
+                      ps.field_w[1] = nh.a("campaign_2_glow", "campaign", iw.field_l);
+                      int discarded$72 = 0;
+                      ps.field_w[2] = nh.a("campaign_3_glow", "campaign", iw.field_l);
                       qu.field_k = lo.a("achievements_large", -28106, "basic", iw.field_l);
                       am.field_A = ic.a("unachieved", (byte) 51, "basic", gg.field_K);
                       hp.field_A = ic.a("locked", (byte) 51, "basic", gg.field_K);
@@ -3442,7 +3759,8 @@ public final class ArmiesOfGielinor extends wf {
                                 if (hi.field_j < 2) {
                                   break L8;
                                 } else {
-                                  oa.field_I = new ij(hg.a(101), (ka) (Object) rs.field_n, ft.field_m);
+                                  int discarded$73 = 101;
+                                  oa.field_I = new ij(hg.a(), (ka) (Object) rs.field_n, ft.field_m);
                                   break L8;
                                 }
                               }
@@ -3490,7 +3808,8 @@ public final class ArmiesOfGielinor extends wf {
                     }
                     if (null == fw.field_F) {
                       if (ir.field_f == null) {
-                        if (!this.o(11672)) {
+                        int discarded$74 = 11672;
+                        if (!this.o()) {
                           return false;
                         } else {
                           wl.a(0);
@@ -3507,7 +3826,8 @@ public final class ArmiesOfGielinor extends wf {
                       return false;
                     }
                   } else {
-                    uc.a(new dq(bt.field_e.a("huffman", -105, "")), 4);
+                    int discarded$75 = 4;
+                    uc.a(new dq(bt.field_e.a("huffman", -105, "")));
                     bt.field_e = null;
                     wl.a(0);
                     return false;
@@ -3629,7 +3949,8 @@ public final class ArmiesOfGielinor extends wf {
                                                                                                                         if (!vc.field_m.d(-27927)) {
                                                                                                                           break L27;
                                                                                                                         } else {
-                                                                                                                          if (!this.q(-46)) {
+                                                                                                                          int discarded$76 = -46;
+                                                                                                                          if (!this.q()) {
                                                                                                                             return false;
                                                                                                                           } else {
                                                                                                                             if (!param1) {
@@ -3666,7 +3987,8 @@ public final class ArmiesOfGielinor extends wf {
                                                                                                                                   L29: while (true) {
                                                                                                                                     if (var5_int >= 8) {
                                                                                                                                       sj.a(126, jl.field_d);
-                                                                                                                                      ml.a(jl.field_d, (byte) 123);
+                                                                                                                                      int discarded$77 = 123;
+                                                                                                                                      ml.a(jl.field_d);
                                                                                                                                       br.field_d = null;
                                                                                                                                       wl.a(0);
                                                                                                                                       return false;
@@ -3798,7 +4120,7 @@ public final class ArmiesOfGielinor extends wf {
         }
     }
 
-    private final void r(int param0) {
+    private final void r() {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -3806,22 +4128,16 @@ public final class ArmiesOfGielinor extends wf {
         var3 = field_M ? 1 : 0;
         try {
           L0: {
-            ul.a(17);
-            qq.g(1);
+            int discarded$2 = 17;
+            ul.a();
+            int discarded$3 = 1;
+            qq.g();
             var2_int = 0;
             L1: while (true) {
               if (var2_int >= 29) {
-                L2: {
-                  if (param0 == -66) {
-                    break L2;
-                  } else {
-                    field_J = null;
-                    break L2;
-                  }
-                }
                 jt.field_a = 16;
                 sa.a(50, true);
-                ar.a(param0 ^ -68, mp.field_Ob);
+                ar.a(2, mp.field_Ob);
                 gh.a(128, 8, rs.field_n.field_z, rs.field_n.field_L + rs.field_n.field_z, (ka) (Object) rs.field_n, io.field_m[0].field_v, 8, 2, 16777215, 240, rs.field_n.field_z, -99, (nr) (Object) new pn(il.field_s, nd.field_b, 0, 128, true), 255, (nr) (Object) new pn(il.field_s, nd.field_b, 0, 128, true), 320, io.field_m[0].field_y, rs.field_n.field_z + rs.field_n.field_L, (nr) (Object) new pn(io.field_m, nd.field_b, 0, 224, false), (ka) (Object) rs.field_n);
                 wm.a(320, 128, 240, 16777215, rs.field_n.field_z - -rs.field_n.field_L, rs.field_n.field_z, (nr) (Object) new pn(il.field_s, nd.field_b, 0, 128, true), 8, (byte) 90, 480, 8, rs.field_n.field_L + rs.field_n.field_z, (nr) (Object) new pn(il.field_s, nd.field_b, 0, 128, true), io.field_m[0].field_v, (ka) (Object) rs.field_n, 2, io.field_m[0].field_y, (ka) (Object) rs.field_n, 255, rs.field_n.field_z, (nr) (Object) new pn(io.field_m, nd.field_b, 0, 224, false));
                 break L0;
@@ -3835,7 +4151,7 @@ public final class ArmiesOfGielinor extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var2, "ArmiesOfGielinor.PA(" + param0 + 41);
+          throw ig.a((Throwable) (Object) var2, "ArmiesOfGielinor.PA(" + -66 + 41);
         }
     }
 
@@ -3872,7 +4188,7 @@ public final class ArmiesOfGielinor extends wf {
         }
     }
 
-    private final boolean o(int param0) {
+    private final boolean o() {
         RuntimeException var2 = null;
         int stackIn_7_0 = 0;
         int stackIn_13_0 = 0;
@@ -3891,7 +4207,7 @@ public final class ArmiesOfGielinor extends wf {
               } else {
                 if (null == i.field_Lb) {
                   bn.a((byte) -24, 97.0f, ej.field_R);
-                  ((ArmiesOfGielinor) this).a(param0 ^ 11672);
+                  ((ArmiesOfGielinor) this).a(0);
                   bl.a(0, ki.field_b);
                   ki.field_b = null;
                   wl.a(0);
@@ -3913,7 +4229,7 @@ public final class ArmiesOfGielinor extends wf {
                   bn.a((byte) -24, 98.0f, ej.field_R);
                   ((ArmiesOfGielinor) this).a(0);
                   i.field_Lb = null;
-                  wl.a(param0 ^ 11672);
+                  wl.a(0);
                   stackOut_12_0 = 0;
                   stackIn_13_0 = stackOut_12_0;
                   return stackIn_13_0 != 0;
@@ -3921,29 +4237,22 @@ public final class ArmiesOfGielinor extends wf {
               }
             }
             L3: {
-              if (param0 == 11672) {
-                break L3;
-              } else {
-                ((ArmiesOfGielinor) this).b((byte) -74);
-                break L3;
-              }
-            }
-            L4: {
               if (op.field_b == null) {
-                break L4;
+                break L3;
               } else {
                 if (null == bi.field_f) {
-                  break L4;
+                  break L3;
                 } else {
                   if (nm.field_s == null) {
-                    break L4;
+                    break L3;
                   } else {
                     if (ki.field_b != null) {
-                      break L4;
+                      break L3;
                     } else {
                       bn.a((byte) -24, 99.0f, ej.field_R);
                       ((ArmiesOfGielinor) this).a(0);
-                      ln.a(nm.field_s, bi.field_f, op.field_b, 0);
+                      int discarded$1 = 0;
+                      ln.a(nm.field_s, bi.field_f, op.field_b);
                       op.field_b = null;
                       bi.field_f = null;
                       nm.field_s = null;
@@ -3963,14 +4272,14 @@ public final class ArmiesOfGielinor extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var2, "ArmiesOfGielinor.CA(" + param0 + 41);
+          throw ig.a((Throwable) (Object) var2, "ArmiesOfGielinor.CA(" + 11672 + 41);
         }
         return stackIn_30_0 != 0;
     }
 
-    private final void c(boolean param0) {
-        jg var2 = null;
-        RuntimeException var2_ref = null;
+    private final void c() {
+        RuntimeException var2 = null;
+        jg var2_ref = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -3979,45 +4288,37 @@ public final class ArmiesOfGielinor extends wf {
         try {
           L0: {
             L1: {
-              if (!param0) {
+              var2_ref = (jg) (Object) ai.field_P.e((byte) 97);
+              if (null == var2_ref) {
                 break L1;
               } else {
-                field_L = null;
-                break L1;
-              }
-            }
-            L2: {
-              var2 = (jg) (Object) ai.field_P.e((byte) 97);
-              if (null == var2) {
-                break L2;
-              } else {
-                L3: {
+                L2: {
                   var4 = lq.field_b;
                   if (var4 >= 80) {
                     if (var4 < 230) {
                       var3 = 8;
-                      break L3;
+                      break L2;
                     } else {
                       var3 = -(var4 / 2) + 123;
-                      break L3;
+                      break L2;
                     }
                   } else {
                     var3 = -32 + var4 / 2;
-                    break L3;
+                    break L2;
                   }
                 }
-                fe.b(-5, var3 + -10, rs.field_n.a(so.field_a[var2.field_l]) + 62, 48, io.field_m, nd.field_b, 0, 128);
-                qu.field_k[var2.field_l].c(8, var3);
-                rs.field_n.b(so.field_a[var2.field_l], 42, var3 - (-5 + -rs.field_n.field_H), 15658734, -1);
-                break L2;
+                fe.b(-5, var3 + -10, rs.field_n.a(so.field_a[var2_ref.field_l]) + 62, 48, io.field_m, nd.field_b, 0, 128);
+                qu.field_k[var2_ref.field_l].c(8, var3);
+                rs.field_n.b(so.field_a[var2_ref.field_l], 42, var3 - (-5 + -rs.field_n.field_H), 15658734, -1);
+                break L1;
               }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var2_ref, "ArmiesOfGielinor.LA(" + param0 + 41);
+          var2 = decompiledCaughtException;
+          throw ig.a((Throwable) (Object) var2, "ArmiesOfGielinor.LA(" + 0 + 41);
         }
     }
 

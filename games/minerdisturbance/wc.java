@@ -7,7 +7,7 @@ final class wc implements uj {
     static int[] field_a;
     static String field_d;
 
-    final static boolean b(byte param0) {
+    final static boolean b() {
         int var1 = 36;
         return !wm.field_f.a(0) ? true : false;
     }
@@ -48,22 +48,22 @@ final class wc implements uj {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_16_2 = null;
+        String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
         RuntimeException stackOut_13_0 = null;
         StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
         var4 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -75,13 +75,19 @@ final class wc implements uj {
                     break L1;
                   } else {
                     g.a(false, -47, param2);
-                    cl.a(param1, 0, 0, 310);
+                    int discarded$14 = 310;
+                    int discarded$15 = 0;
+                    int discarded$16 = 0;
+                    cl.a(param1);
                     break L1;
                   }
                 } else {
                   eh.d();
                   pd.a(10853, 320, 240);
-                  cl.a(param1, 0, 0, 310);
+                  int discarded$17 = 310;
+                  int discarded$18 = 0;
+                  int discarded$19 = 0;
+                  cl.a(param1);
                   break L1;
                 }
               } else {
@@ -95,49 +101,42 @@ final class wc implements uj {
                     break L2;
                   }
                 }
-                MinerDisturbance.a(qm.field_j, (byte) 36, k.g(-22962), var3_int != 0, te.a(-105));
+                int discarded$20 = -105;
+                MinerDisturbance.a(qm.field_j, (byte) 36, k.g(-22962), var3_int != 0, te.a());
                 break L1;
-              }
-            }
-            L3: {
-              if (param0 == 240) {
-                break L3;
-              } else {
-                field_d = null;
-                break L3;
               }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var3 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var3;
-            stackOut_13_1 = new StringBuilder().append("wc.F(").append(param0).append(44);
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackOut_11_0 = (RuntimeException) var3;
+            stackOut_11_1 = new StringBuilder().append("wc.F(").append(240).append(44);
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
-              break L4;
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L3;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
-              break L4;
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L3;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param2 + 41);
         }
     }
 
@@ -146,7 +145,7 @@ final class wc implements uj {
         return "Clear All Fluid";
     }
 
-    final static void c(byte param0) {
+    final static void c() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

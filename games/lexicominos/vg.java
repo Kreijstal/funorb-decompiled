@@ -31,19 +31,15 @@ final class vg {
             String stackOut_7_2 = null;
             try {
               try {
-                if (!param0) {
-                  var4 = param1.getCodeBase();
-                  var3 = gf.a(3, var4, param1).getFile();
-                  Object discarded$6 = oa.a(param1, 22347, "updatelinks", new Object[2]);
-                  Object discarded$7 = oa.a(param1, 22347, "updatelinks", new Object[2]);
-                  Object discarded$8 = oa.a(param1, 22347, "updatelinks", new Object[2]);
-                  Object discarded$9 = oa.a(param1, 22347, "updatelinks", new Object[2]);
-                  Object discarded$10 = oa.a(param1, 22347, "updatelinks", new Object[2]);
-                  Object discarded$11 = oa.a(param1, 22347, "updatelinks", new Object[2]);
-                  return;
-                } else {
-                  return;
-                }
+                var4 = param1.getCodeBase();
+                var3 = gf.a(3, var4, param1).getFile();
+                Object discarded$6 = oa.a(param1, 22347, "updatelinks", new Object[2]);
+                Object discarded$7 = oa.a(param1, 22347, "updatelinks", new Object[2]);
+                Object discarded$8 = oa.a(param1, 22347, "updatelinks", new Object[2]);
+                Object discarded$9 = oa.a(param1, 22347, "updatelinks", new Object[2]);
+                Object discarded$10 = oa.a(param1, 22347, "updatelinks", new Object[2]);
+                Object discarded$11 = oa.a(param1, 22347, "updatelinks", new Object[2]);
+                return;
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2 = decompiledCaughtException;
@@ -54,7 +50,7 @@ final class vg {
               L0: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_6_0 = (RuntimeException) var2_ref;
-                stackOut_6_1 = new StringBuilder().append("vg.D(").append(param0).append(44);
+                stackOut_6_1 = new StringBuilder().append("vg.D(").append(0).append(44);
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
@@ -86,13 +82,13 @@ final class vg {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_c = null;
         field_d = null;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         ug.field_A.h(0);
         if (qj.field_fb == null) {
           qj.field_fb = new uk(ug.field_A, jj.field_d);

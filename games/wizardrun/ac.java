@@ -44,7 +44,7 @@ final class ac extends rk {
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         pk var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -117,10 +117,8 @@ final class ac extends rk {
     }
 
     final static void a(int param0, int param1) {
-        if (param0 != 0) {
-            return;
-        }
-        int discarded$0 = tf.a(-20232);
+        int discarded$0 = -20232;
+        int discarded$1 = tf.a();
     }
 
     private final void a(int param0, va param1, int param2) {
@@ -254,7 +252,7 @@ final class ac extends rk {
         }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_s = null;
         field_q = null;
     }

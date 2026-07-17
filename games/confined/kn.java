@@ -368,7 +368,7 @@ final class kn {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_g = null;
         field_d = null;
@@ -602,7 +602,8 @@ final class kn {
                       var7 = var10;
                       var7 = var10;
                       if (param2 >= 0L) {
-                        var7 = var10 + "; Expires=" + ha.a(ri.a(-3) - -(1000L * param2), 13) + "; Max-Age=" + param2;
+                        int discarded$1 = 13;
+                        var7 = var10 + "; Expires=" + ha.a(ri.a(-3) - -(1000L * param2)) + "; Max-Age=" + param2;
                         break L2;
                       } else {
                         var7 = var10 + "; Discard;";

@@ -40,26 +40,24 @@ abstract class hd {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_41_0 = 0;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
-        RuntimeException stackIn_45_0 = null;
-        StringBuilder stackIn_45_1 = null;
-        String stackIn_45_2 = null;
+        int stackIn_37_0 = 0;
+        RuntimeException stackIn_39_0 = null;
+        StringBuilder stackIn_39_1 = null;
+        RuntimeException stackIn_40_0 = null;
+        StringBuilder stackIn_40_1 = null;
+        RuntimeException stackIn_41_0 = null;
+        StringBuilder stackIn_41_1 = null;
+        String stackIn_41_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_40_0 = 0;
-        int stackOut_6_0 = 0;
-        RuntimeException stackOut_42_0 = null;
-        StringBuilder stackOut_42_1 = null;
-        RuntimeException stackOut_44_0 = null;
-        StringBuilder stackOut_44_1 = null;
-        String stackOut_44_2 = null;
-        RuntimeException stackOut_43_0 = null;
-        StringBuilder stackOut_43_1 = null;
-        String stackOut_43_2 = null;
+        int stackOut_36_0 = 0;
+        RuntimeException stackOut_38_0 = null;
+        StringBuilder stackOut_38_1 = null;
+        RuntimeException stackOut_40_0 = null;
+        StringBuilder stackOut_40_1 = null;
+        String stackOut_40_2 = null;
+        RuntimeException stackOut_39_0 = null;
+        StringBuilder stackOut_39_1 = null;
+        String stackOut_39_2 = null;
         var11 = Chess.field_G;
         try {
           L0: {
@@ -72,112 +70,98 @@ abstract class hd {
                   var5 = 0;
                   var6 = 0;
                   var7 = param3.length();
-                  if (param1 >= 125) {
-                    var8 = 0;
-                    L2: while (true) {
-                      if (var8 >= var7) {
-                        if (var5 == 0) {
-                          throw new NumberFormatException();
-                        } else {
-                          stackOut_40_0 = var6;
-                          stackIn_41_0 = stackOut_40_0;
-                          break L0;
-                        }
+                  var8 = 0;
+                  L2: while (true) {
+                    if (var8 >= var7) {
+                      if (var5 == 0) {
+                        throw new NumberFormatException();
                       } else {
-                        L3: {
-                          L4: {
-                            var9 = param3.charAt(var8);
-                            if (var8 == 0) {
-                              if (45 == var9) {
-                                var4_int = 1;
-                                break L3;
-                              } else {
-                                if (var9 != 43) {
-                                  break L4;
-                                } else {
-                                  L5: {
-                                    if (param2) {
-                                      break L5;
-                                    } else {
-                                      break L5;
-                                    }
-                                  }
-                                  var8++;
-                                  continue L2;
-                                }
-                              }
-                            } else {
-                              break L4;
-                            }
-                          }
-                          L6: {
-                            L7: {
-                              if (var9 < 48) {
-                                break L7;
-                              } else {
-                                if (57 < var9) {
-                                  break L7;
-                                } else {
-                                  var9 -= 48;
-                                  break L6;
-                                }
-                              }
-                            }
-                            L8: {
-                              if (var9 < 65) {
-                                break L8;
-                              } else {
-                                if (var9 > 90) {
-                                  break L8;
-                                } else {
-                                  var9 -= 55;
-                                  break L6;
-                                }
-                              }
-                            }
-                            L9: {
-                              if (var9 < 97) {
-                                break L9;
-                              } else {
-                                if (var9 > 122) {
-                                  break L9;
-                                } else {
-                                  var9 -= 87;
-                                  break L6;
-                                }
-                              }
-                            }
-                            throw new NumberFormatException();
-                          }
-                          if (param0 > var9) {
-                            L10: {
-                              if (var4_int == 0) {
-                                break L10;
-                              } else {
-                                var9 = -var9;
-                                break L10;
-                              }
-                            }
-                            var10 = var9 + var6 * param0;
-                            if (var6 == var10 / param0) {
-                              var6 = var10;
-                              var5 = 1;
+                        stackOut_36_0 = var6;
+                        stackIn_37_0 = stackOut_36_0;
+                        break L0;
+                      }
+                    } else {
+                      L3: {
+                        L4: {
+                          var9 = param3.charAt(var8);
+                          if (var8 == 0) {
+                            if (45 == var9) {
+                              var4_int = 1;
                               break L3;
                             } else {
-                              throw new NumberFormatException();
+                              if (var9 != 43) {
+                                break L4;
+                              } else {
+                                break L4;
+                              }
                             }
+                          } else {
+                            break L4;
+                          }
+                        }
+                        L5: {
+                          L6: {
+                            if (var9 < 48) {
+                              break L6;
+                            } else {
+                              if (57 < var9) {
+                                break L6;
+                              } else {
+                                var9 -= 48;
+                                break L5;
+                              }
+                            }
+                          }
+                          L7: {
+                            if (var9 < 65) {
+                              break L7;
+                            } else {
+                              if (var9 > 90) {
+                                break L7;
+                              } else {
+                                var9 -= 55;
+                                break L5;
+                              }
+                            }
+                          }
+                          L8: {
+                            if (var9 < 97) {
+                              break L8;
+                            } else {
+                              if (var9 > 122) {
+                                break L8;
+                              } else {
+                                var9 -= 87;
+                                break L5;
+                              }
+                            }
+                          }
+                          throw new NumberFormatException();
+                        }
+                        if (param0 > var9) {
+                          L9: {
+                            if (var4_int == 0) {
+                              break L9;
+                            } else {
+                              var9 = -var9;
+                              break L9;
+                            }
+                          }
+                          var10 = var9 + var6 * param0;
+                          if (var6 == var10 / param0) {
+                            var6 = var10;
+                            var5 = 1;
+                            break L3;
                           } else {
                             throw new NumberFormatException();
                           }
+                        } else {
+                          throw new NumberFormatException();
                         }
-                        var8++;
-                        continue L2;
                       }
+                      var8++;
+                      continue L2;
                     }
-                  } else {
-                    stackOut_6_0 = -79;
-                    stackIn_7_0 = stackOut_6_0;
-                    return stackIn_7_0;
                   }
                 } else {
                   break L1;
@@ -188,35 +172,35 @@ abstract class hd {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L11: {
+          L10: {
             var4 = decompiledCaughtException;
-            stackOut_42_0 = (RuntimeException) var4;
-            stackOut_42_1 = new StringBuilder().append("hd.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
-            stackIn_44_0 = stackOut_42_0;
-            stackIn_44_1 = stackOut_42_1;
-            stackIn_43_0 = stackOut_42_0;
-            stackIn_43_1 = stackOut_42_1;
+            stackOut_38_0 = (RuntimeException) var4;
+            stackOut_38_1 = new StringBuilder().append("hd.A(").append(param0).append(44).append(127).append(44).append(1).append(44);
+            stackIn_40_0 = stackOut_38_0;
+            stackIn_40_1 = stackOut_38_1;
+            stackIn_39_0 = stackOut_38_0;
+            stackIn_39_1 = stackOut_38_1;
             if (param3 == null) {
-              stackOut_44_0 = (RuntimeException) (Object) stackIn_44_0;
-              stackOut_44_1 = (StringBuilder) (Object) stackIn_44_1;
-              stackOut_44_2 = "null";
-              stackIn_45_0 = stackOut_44_0;
-              stackIn_45_1 = stackOut_44_1;
-              stackIn_45_2 = stackOut_44_2;
-              break L11;
+              stackOut_40_0 = (RuntimeException) (Object) stackIn_40_0;
+              stackOut_40_1 = (StringBuilder) (Object) stackIn_40_1;
+              stackOut_40_2 = "null";
+              stackIn_41_0 = stackOut_40_0;
+              stackIn_41_1 = stackOut_40_1;
+              stackIn_41_2 = stackOut_40_2;
+              break L10;
             } else {
-              stackOut_43_0 = (RuntimeException) (Object) stackIn_43_0;
-              stackOut_43_1 = (StringBuilder) (Object) stackIn_43_1;
-              stackOut_43_2 = "{...}";
-              stackIn_45_0 = stackOut_43_0;
-              stackIn_45_1 = stackOut_43_1;
-              stackIn_45_2 = stackOut_43_2;
-              break L11;
+              stackOut_39_0 = (RuntimeException) (Object) stackIn_39_0;
+              stackOut_39_1 = (StringBuilder) (Object) stackIn_39_1;
+              stackOut_39_2 = "{...}";
+              stackIn_41_0 = stackOut_39_0;
+              stackIn_41_1 = stackOut_39_1;
+              stackIn_41_2 = stackOut_39_2;
+              break L10;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_45_0, stackIn_45_2 + 41);
+          throw fk.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + 41);
         }
-        return stackIn_41_0;
+        return stackIn_37_0;
     }
 
     abstract void a(int param0, int param1, int param2);

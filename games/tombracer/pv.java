@@ -404,7 +404,7 @@ final class pv extends ci {
         return var3;
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_p = null;
         field_m = null;
         field_q = null;

@@ -13,9 +13,6 @@ final class gh extends qb {
 
     final static void a(byte param0, boolean param1) {
         nf.a(param1, (byte) -2, false);
-        if (param0 != 59) {
-            field_g = true;
-        }
     }
 
     public static void a(int param0) {

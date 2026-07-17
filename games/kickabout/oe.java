@@ -65,7 +65,8 @@ final class oe extends mo {
         }
         L1: {
           L2: {
-            var4 = this.d(0);
+            int discarded$2 = 0;
+            var4 = this.d();
             var5 = ((oe) this).field_i - (var3 - -var4);
             if (((oe) this).field_k[param1] == 1) {
               break L2;
@@ -238,7 +239,7 @@ final class oe extends mo {
         }
     }
 
-    final static void c(int param0) {
+    final static void c() {
     }
 
     final boolean b(byte param0, int param1) {
@@ -259,7 +260,8 @@ final class oe extends mo {
         L1: {
           L2: {
             var3 = this.e(-104);
-            var4 = this.d(0);
+            int discarded$2 = 0;
+            var4 = this.d();
             var5 = -var3 + (((oe) this).field_i + -var4);
             if (0 == ((oe) this).field_k[param1]) {
               break L2;
@@ -302,9 +304,9 @@ final class oe extends mo {
         try {
             param1.field_p = new char[]{'?'};
             param1.field_n = new int[]{-1};
-            int var2_int = -66 % ((35 - param0) / 47);
+            int var2_int = 0;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "oe.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "oe.D(" + -45 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -361,7 +363,7 @@ final class oe extends mo {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_n = null;
         field_l = null;
         field_m = null;
@@ -454,7 +456,7 @@ final class oe extends mo {
         }
     }
 
-    private final int d(int param0) {
+    private final int d() {
         int var2 = 0;
         int[] var3 = null;
         int var4 = 0;

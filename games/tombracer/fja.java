@@ -104,7 +104,8 @@ final class fja extends qra {
               if (var6 >= ((fja) this).field_n.length) {
                 L8: {
                   if (!((fja) this).field_h.field_D) {
-                    this.i(0);
+                    int discarded$1 = 0;
+                    this.i();
                     break L8;
                   } else {
                     break L8;
@@ -282,12 +283,12 @@ final class fja extends qra {
                   var6 = 256;
                   var7_int = 64;
                   qa.a(var7_int, var6, (byte) 109, var4_int, aq.field_a, var5_int);
-                  int discarded$3 = be.a(dpa.field_c, 0, qr.field_v, 11903361, 40, var7_int, 1, var5_int, var4_int, 0, (byte) 60, var6);
-                  int discarded$4 = be.a(voa.field_q + ": " + ((fja) this).field_h.j(var3, 9), 2, eda.field_f, 11903361, 40, var7_int, 1, var5_int, var4_int, 1, (byte) 60, var6);
+                  int discarded$4 = be.a(dpa.field_c, 0, qr.field_v, 11903361, 40, var7_int, 1, var5_int, var4_int, 0, (byte) 60, var6);
+                  int discarded$5 = be.a(voa.field_q + ": " + ((fja) this).field_h.j(var3, 9), 2, eda.field_f, 11903361, 40, var7_int, 1, var5_int, var4_int, 1, (byte) 60, var6);
                   var5_int = var5_int + (var7_int - -16);
                   var7_int = 32;
                   qa.a(var7_int, var6, (byte) 80, var4_int, aq.field_a, var5_int);
-                  int discarded$5 = kn.field_p.a((aa) null, var6, 40, 0, var5_int - -2, fm.a(false, 0), wca.field_l, 1, fm.a(false, 11903361), tp.field_J, (byte) 116, var7_int, 0, id.field_h, var4_int, 1);
+                  int discarded$6 = kn.field_p.a((aa) null, var6, 40, 0, var5_int - -2, fm.a(false, 0), wca.field_l, 1, fm.a(false, 11903361), tp.field_J, (byte) 116, var7_int, 0, id.field_h, var4_int, 1);
                   break L7;
                 } else {
                   break L7;
@@ -370,7 +371,8 @@ final class fja extends qra {
                               }
                             }
                           } else {
-                            var7 = doa.b(var6, 0, pl.a((byte) 64));
+                            int discarded$7 = 64;
+                            var7 = doa.b(var6, 0, pl.a());
                             break L13;
                           }
                         }
@@ -581,7 +583,7 @@ final class fja extends qra {
         }
     }
 
-    private final void f(int param0) {
+    private final void f() {
         ((fja) this).field_o = false;
     }
 
@@ -593,10 +595,7 @@ final class fja extends qra {
     }
 
     private final void a(int param0, int param1) {
-        ((fja) this).field_h.i(param1, param0 ^ 62);
-        if (param0 != 0) {
-            ((fja) this).field_o = true;
-        }
+        ((fja) this).field_h.i(param1, 62);
     }
 
     private final void b(byte param0) {
@@ -619,7 +618,7 @@ final class fja extends qra {
         }
     }
 
-    private final void i(int param0) {
+    private final void i() {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -952,8 +951,9 @@ final class fja extends qra {
                     }
                     if (var9 != 248) {
                       if (99 == var9) {
-                        boolean discarded$1 = ama.a(bha.f(1), -1);
-                        kia.field_b = new Boolean(di.a((uia) (Object) vc.field_q, (byte) 107));
+                        boolean discarded$9 = ama.a(bha.f(1), -1);
+                        int discarded$10 = 107;
+                        kia.field_b = new Boolean(di.a((uia) (Object) vc.field_q));
                         vc.field_q.field_h = 0;
                         break L8;
                       } else {
@@ -963,9 +963,11 @@ final class fja extends qra {
                         break L8;
                       }
                     } else {
-                      pu.a(di.a(21), 255);
+                      int discarded$11 = 255;
+                      pu.a(di.a(21));
                       io.field_b = qda.field_f;
-                      dea.a(60);
+                      int discarded$12 = 60;
+                      dea.a();
                       uc.field_L = false;
                       stackOut_32_0 = var9;
                       stackIn_33_0 = stackOut_32_0;
@@ -991,7 +993,8 @@ final class fja extends qra {
                       var12 = 0;
                       L11: while (true) {
                         if (var11 <= var12) {
-                          dea.a(60);
+                          int discarded$13 = 60;
+                          dea.a();
                           uc.field_L = false;
                           stackOut_45_0 = var11 + 100;
                           stackIn_46_0 = stackOut_45_0;
@@ -1010,12 +1013,14 @@ final class fja extends qra {
               }
               L12: {
                 if (pe.field_m == km.field_p) {
-                  if (cla.g(0)) {
+                  int discarded$14 = 0;
+                  if (cla.g()) {
                     L13: {
                       if (oka.field_z == 255) {
                         var9_ref_String = vc.field_q.c(-28690);
                         if (var9_ref_String != null) {
-                          mp.a(var9_ref_String, di.a(82), -21407);
+                          int discarded$15 = -21407;
+                          mp.a(var9_ref_String, di.a(82));
                           break L13;
                         } else {
                           break L13;
@@ -1025,7 +1030,8 @@ final class fja extends qra {
                         break L13;
                       }
                     }
-                    dea.a(60);
+                    int discarded$16 = 60;
+                    dea.a();
                     uc.field_L = false;
                     stackOut_56_0 = oka.field_z;
                     stackIn_57_0 = stackOut_56_0;
@@ -1047,7 +1053,8 @@ final class fja extends qra {
                     break L14;
                   } else {
                     L15: {
-                      if (rf.b((byte) -121) > 30000L) {
+                      int discarded$17 = -121;
+                      if (rf.b() > 30000L) {
                         io.field_b = hb.field_u;
                         break L15;
                       } else {
@@ -1156,7 +1163,7 @@ final class fja extends qra {
         return stackIn_68_0;
     }
 
-    final static byte[] a(int param0, byte[] param1, int param2, int param3) {
+    final static byte[] a(int param0, byte[] param1, int param2) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         int var5_int = 0;
@@ -1261,7 +1268,8 @@ final class fja extends qra {
             }
             if (!((fja) this).field_h.f((byte) 33)) {
                 if (((fja) this).field_h.c(false)) {
-                    this.f(16);
+                    int discarded$0 = 16;
+                    this.f();
                 }
                 if (((fja) this).field_h.field_D) {
                     ((fja) this).field_h.a((me) (Object) new dua(((fja) this).field_h), 680);

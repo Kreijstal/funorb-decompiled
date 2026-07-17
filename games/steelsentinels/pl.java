@@ -42,7 +42,8 @@ final class pl extends ch implements ae {
             return;
         }
         try {
-            ue.a(((pl) this).field_Z.j(-97), ((pl) this).field_Z.h((byte) 18), ((pl) this).field_Z.k(14879), true);
+            int discarded$0 = 1;
+            ue.a(((pl) this).field_Z.j(-97), ((pl) this).field_Z.h((byte) 18), ((pl) this).field_Z.k(14879));
             int var6_int = 10 / ((param1 - -85) / 36);
         } catch (RuntimeException runtimeException) {
             throw ci.a((Throwable) (Object) runtimeException, "pl.BA(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
@@ -54,10 +55,11 @@ final class pl extends ch implements ae {
             return (java.awt.Container) (Object) vd.field_c;
         }
         int var1 = -117 / ((13 - param0) / 50);
-        return (java.awt.Container) (Object) wl.d((byte) -21);
+        int discarded$0 = -21;
+        return (java.awt.Container) (Object) wl.d();
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_X = null;
         field_ab = null;
         field_V = null;
@@ -68,7 +70,7 @@ final class pl extends ch implements ae {
         field_U = null;
     }
 
-    final static void a(boolean param0, boolean param1, int param2, byte param3) {
+    final static void a(boolean param0, boolean param1) {
         RuntimeException var4 = null;
         gh var5 = null;
         gh var6 = null;
@@ -597,7 +599,9 @@ final class pl extends ch implements ae {
               if (ni.field_a != null) {
                 L28: {
                   if (mn.field_E.field_Eb != 0) {
-                    nm.a(param2, (byte) -80);
+                    int discarded$4 = -80;
+                    int discarded$5 = 11;
+                    nm.a();
                     break L28;
                   } else {
                     break L28;
@@ -606,17 +610,19 @@ final class pl extends ch implements ae {
                 L29: {
                   if (0 != fk.field_q.field_Eb) {
                     if (!ad.field_f) {
-                      b.a(-107, param2);
+                      b.a(-107, 11);
                       break L29;
                     } else {
-                      ml.a((byte) 12, param2);
+                      int discarded$6 = 11;
+                      int discarded$7 = 12;
+                      ml.a();
                       break L29;
                     }
                   } else {
                     break L29;
                   }
                 }
-                cb.a(ni.field_a, (byte) -127, param2, true);
+                cb.a(ni.field_a, (byte) -127, 11, true);
                 break L27;
               } else {
                 break L27;
@@ -627,7 +633,7 @@ final class pl extends ch implements ae {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var4, "pl.M(" + param0 + 44 + param1 + 44 + param2 + 44 + 66 + 41);
+          throw ci.a((Throwable) (Object) var4, "pl.M(" + param0 + 44 + param1 + 44 + 11 + 44 + 66 + 41);
         }
     }
 
@@ -641,7 +647,7 @@ final class pl extends ch implements ae {
         ((pl) this).e((byte) 50);
     }
 
-    final static gh d(boolean param0) {
+    final static gh d() {
         return gl.field_t.field_Ub;
     }
 

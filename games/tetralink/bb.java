@@ -11,9 +11,6 @@ final class bb {
     static String field_g;
 
     final static int a(int param0) {
-        if (param0 != 32032) {
-            return 79;
-        }
         return 1;
     }
 
@@ -204,7 +201,7 @@ final class bb {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_g = null;
         field_b = null;
@@ -213,7 +210,7 @@ final class bb {
         field_f = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         t.a(17, 0);
     }
 

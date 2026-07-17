@@ -86,7 +86,7 @@ final class vk extends bca {
         }
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_r = null;
         field_q = null;
     }

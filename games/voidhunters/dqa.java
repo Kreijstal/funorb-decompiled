@@ -360,7 +360,8 @@ class dqa extends shb implements nea {
 
     void a(int param0, int param1, int param2, int param3, int param4) {
         super.a(param0, param1, param2, param3, param4);
-        this.h((byte) 13);
+        int discarded$0 = 13;
+        this.h();
     }
 
     String d(byte param0) {
@@ -387,22 +388,22 @@ class dqa extends shb implements nea {
         int var5_int = 0;
         int var6 = 0;
         String var7 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_25_2 = null;
+        String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
         RuntimeException stackOut_22_0 = null;
         StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
+        String stackOut_22_2 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
         try {
           L0: {
             L1: {
@@ -475,20 +476,12 @@ class dqa extends shb implements nea {
               }
             }
             L7: {
-              if (param0 < -64) {
-                break L7;
-              } else {
-                field_u = null;
-                break L7;
-              }
-            }
-            L8: {
               dpa.field_p.a(true, var7);
               if (vda.field_o == null) {
-                break L8;
+                break L7;
               } else {
                 dpa.field_p.b((byte) 0, vda.field_o);
-                break L8;
+                break L7;
               }
             }
             ufa.a((ds) (Object) dpa.field_p, (byte) -126, jnb.field_p, bib.field_g, ss.field_p);
@@ -498,33 +491,33 @@ class dqa extends shb implements nea {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L8: {
             var5 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var5;
-            stackOut_22_1 = new StringBuilder().append("dqa.TA(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackOut_20_0 = (RuntimeException) var5;
+            stackOut_20_1 = new StringBuilder().append("dqa.TA(").append(-87).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_22_0 = stackOut_20_0;
+            stackIn_22_1 = stackOut_20_1;
+            stackIn_21_0 = stackOut_20_0;
+            stackIn_21_1 = stackOut_20_1;
             if (param3 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
-              break L9;
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "null";
+              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_1 = stackOut_22_1;
+              stackIn_23_2 = stackOut_22_2;
+              break L8;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
-              break L9;
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "{...}";
+              stackIn_23_0 = stackOut_21_0;
+              stackIn_23_1 = stackOut_21_1;
+              stackIn_23_2 = stackOut_21_2;
+              break L8;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param4 + 41);
+          throw rta.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param4 + 41);
         }
     }
 
@@ -597,7 +590,6 @@ class dqa extends shb implements nea {
         shb var6 = null;
         int var7 = 0;
         int var8 = 0;
-        Object var9 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -636,28 +628,19 @@ class dqa extends shb implements nea {
             var6 = (shb) (Object) var5.c(570);
             L1: while (true) {
               if (var6 == null) {
-                L2: {
-                  if (param1 < -8) {
-                    break L2;
-                  } else {
-                    var9 = null;
-                    boolean discarded$8 = ((dqa) this).a(false, (shb) null);
-                    break L2;
-                  }
-                }
                 break L0;
               } else {
-                StringBuilder discarded$9 = param2.append(10);
+                StringBuilder discarded$6 = param2.append(10);
                 var7 = 0;
-                L3: while (true) {
+                L2: while (true) {
                   if (param3 < var7) {
-                    StringBuilder discarded$10 = var6.a(false, param0, 1 + param3, param2);
+                    StringBuilder discarded$7 = var6.a(false, param0, 1 + param3, param2);
                     var6 = (shb) (Object) var5.a(19072);
                     continue L1;
                   } else {
-                    StringBuilder discarded$11 = param2.append(32);
+                    StringBuilder discarded$8 = param2.append(32);
                     var7++;
-                    continue L3;
+                    continue L2;
                   }
                 }
               }
@@ -665,7 +648,7 @@ class dqa extends shb implements nea {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var5_ref = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var5_ref;
             stackOut_10_1 = new StringBuilder().append("dqa.SA(");
@@ -680,7 +663,7 @@ class dqa extends shb implements nea {
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
-              break L4;
+              break L3;
             } else {
               stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
               stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
@@ -688,12 +671,12 @@ class dqa extends shb implements nea {
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
               stackIn_13_2 = stackOut_11_2;
-              break L4;
+              break L3;
             }
           }
-          L5: {
+          L4: {
             stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(param1).append(44);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(-89).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -705,7 +688,7 @@ class dqa extends shb implements nea {
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
-              break L5;
+              break L4;
             } else {
               stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
               stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
@@ -713,7 +696,7 @@ class dqa extends shb implements nea {
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
               stackIn_16_2 = stackOut_14_2;
-              break L5;
+              break L4;
             }
           }
           throw rta.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param3 + 41);
@@ -926,7 +909,7 @@ class dqa extends shb implements nea {
         return stackIn_17_0;
     }
 
-    private final void h(byte param0) {
+    private final void h() {
         int var4 = VoidHunters.field_G;
         wc var2 = new wc(((dqa) this).field_t);
         shb var3 = (shb) (Object) var2.c(570);

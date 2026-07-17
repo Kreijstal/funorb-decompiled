@@ -8,7 +8,7 @@ final class hf {
     static boolean field_b;
     static String field_c;
 
-    final static fb a(String param0, boolean param1) {
+    final static fb a(String param0) {
         String var2 = null;
         RuntimeException var2_ref = null;
         fb var3 = null;
@@ -42,13 +42,15 @@ final class hf {
             if (param0 != null) {
               if (param0.length() != 0) {
                 var6 = (CharSequence) (Object) param0;
-                var2 = ce.a(var6, 0);
+                int discarded$4 = 0;
+                var2 = ce.a(var6);
                 if (var2 != null) {
                   var3 = (fb) (Object) lf.field_q.a((long)var2.hashCode(), 0);
                   L0: while (true) {
                     if (var3 != null) {
                       var7 = (CharSequence) (Object) var3.field_ob;
-                      var4 = ce.a(var7, 0);
+                      int discarded$5 = 0;
+                      var4 = ce.a(var7);
                       if (var4.equals((Object) (Object) var2)) {
                         stackOut_16_0 = (fb) var3;
                         stackIn_17_0 = stackOut_16_0;
@@ -107,7 +109,7 @@ final class hf {
         }
     }
 
-    final static int b(boolean param0) {
+    final static int b() {
         try {
             IOException var1 = null;
             int var1_int = 0;
@@ -235,120 +237,45 @@ final class hf {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
-        pf stackIn_2_0 = null;
-        int stackIn_2_1 = 0;
-        pf stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        pf stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        int stackIn_4_2 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_21_0 = 0;
-        int stackIn_25_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_8_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        pf stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        pf stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        int stackOut_3_2 = 0;
-        pf stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        int stackOut_2_2 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_5_0 = 0;
         var2 = Bounce.field_N;
         try {
           L0: {
-            L1: {
-              stackOut_1_0 = q.field_N;
-              stackOut_1_1 = dk.field_c;
-              stackIn_3_0 = stackOut_1_0;
-              stackIn_3_1 = stackOut_1_1;
-              stackIn_2_0 = stackOut_1_0;
-              stackIn_2_1 = stackOut_1_1;
-              if (param0) {
-                stackOut_3_0 = (pf) (Object) stackIn_3_0;
-                stackOut_3_1 = stackIn_3_1;
-                stackOut_3_2 = 0;
-                stackIn_4_0 = stackOut_3_0;
-                stackIn_4_1 = stackOut_3_1;
-                stackIn_4_2 = stackOut_3_2;
-                break L1;
-              } else {
-                stackOut_2_0 = (pf) (Object) stackIn_2_0;
-                stackOut_2_1 = stackIn_2_1;
-                stackOut_2_2 = 1;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
-                stackIn_4_2 = stackOut_2_2;
-                break L1;
-              }
-            }
-            boolean discarded$8 = ((pf) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_4_2 != 0, true, ee.field_b);
+            boolean discarded$28 = q.field_N.a(dk.field_c, true, true, ee.field_b);
             q.field_N.d((byte) 111);
-            L2: while (true) {
-              if (!q.g((byte) -15)) {
+            L1: while (true) {
+              int discarded$29 = -15;
+              if (!q.g()) {
                 if (m.field_g == -1) {
-                  if (!param0) {
-                    if (!ng.field_b) {
-                      if (qg.field_g != vc.field_F) {
-                        if (pb.field_k.a(1000)) {
-                          if (qg.field_g == fh.field_B) {
-                            stackOut_24_0 = 2;
-                            stackIn_25_0 = stackOut_24_0;
-                            break L0;
-                          } else {
-                            return -1;
-                          }
-                        } else {
-                          stackOut_20_0 = 1;
-                          stackIn_21_0 = stackOut_20_0;
-                          return stackIn_21_0;
-                        }
-                      } else {
-                        stackOut_17_0 = 1;
-                        stackIn_18_0 = stackOut_17_0;
-                        return stackIn_18_0;
-                      }
-                    } else {
-                      stackOut_14_0 = 3;
-                      stackIn_15_0 = stackOut_14_0;
-                      return stackIn_15_0;
-                    }
-                  } else {
-                    stackOut_11_0 = 81;
-                    stackIn_12_0 = stackOut_11_0;
-                    return stackIn_12_0;
-                  }
+                  stackOut_7_0 = 81;
+                  stackIn_8_0 = stackOut_7_0;
+                  break L0;
                 } else {
                   var1_int = m.field_g;
                   oh.a(-101, -1);
-                  stackOut_8_0 = var1_int;
-                  stackIn_9_0 = stackOut_8_0;
-                  return stackIn_9_0;
+                  stackOut_5_0 = var1_int;
+                  stackIn_6_0 = stackOut_5_0;
+                  return stackIn_6_0;
                 }
               } else {
-                boolean discarded$9 = q.field_N.a((byte) -109, lh.field_f, gk.field_d);
-                continue L2;
+                boolean discarded$30 = q.field_N.a((byte) -109, lh.field_f, gk.field_d);
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ii.a((Throwable) (Object) var1, "hf.A(" + param0 + 41);
+          throw ii.a((Throwable) (Object) var1, "hf.A(" + 0 + 41);
         }
-        return stackIn_25_0;
+        return stackIn_8_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         int var1 = 1;

@@ -14,7 +14,8 @@ final class rg extends RuntimeException {
 
     final static void a(boolean param0) {
         em.field_h = 0;
-        bo.r(0);
+        int discarded$0 = 0;
+        bo.r();
     }
 
     final static void a(byte param0, int param1, int param2, int param3, int param4) {
@@ -75,7 +76,7 @@ final class rg extends RuntimeException {
     final static void b(boolean param0) {
     }
 
-    final static void a(int param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -135,7 +136,8 @@ final class rg extends RuntimeException {
                   }
                 }
                 L4: {
-                  var7 = or.a(stackIn_13_0 != 0, var6, true);
+                  int discarded$1 = 1;
+                  var7 = or.a(stackIn_13_0 != 0, var6);
                   var8 = ol.field_e + -(var7 >> 1);
                   if (var4 < 0) {
                     break L4;
@@ -236,74 +238,70 @@ final class rg extends RuntimeException {
         var13 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
-            if (param1 == -2147483648) {
-              L1: {
-                if (param2 > param0) {
-                  L2: {
-                    var5_int = (param0 + param2) / 2;
-                    var6 = param0;
-                    var7 = param4[var5_int];
-                    param4[var5_int] = param4[param2];
-                    param4[param2] = var7;
-                    var8 = param3[var5_int];
-                    param3[var5_int] = param3[param2];
-                    param3[param2] = var8;
-                    if (var7 != 2147483647) {
-                      stackOut_7_0 = 1;
-                      stackIn_8_0 = stackOut_7_0;
-                      break L2;
-                    } else {
-                      stackOut_6_0 = 0;
-                      stackIn_8_0 = stackOut_6_0;
-                      break L2;
-                    }
+            L1: {
+              if (param2 > param0) {
+                L2: {
+                  var5_int = (param0 + param2) / 2;
+                  var6 = param0;
+                  var7 = param4[var5_int];
+                  param4[var5_int] = param4[param2];
+                  param4[param2] = var7;
+                  var8 = param3[var5_int];
+                  param3[var5_int] = param3[param2];
+                  param3[param2] = var8;
+                  if (var7 != 2147483647) {
+                    stackOut_7_0 = 1;
+                    stackIn_8_0 = stackOut_7_0;
+                    break L2;
+                  } else {
+                    stackOut_6_0 = 0;
+                    stackIn_8_0 = stackOut_6_0;
+                    break L2;
                   }
-                  var9 = stackIn_8_0;
-                  var10 = param0;
-                  L3: while (true) {
-                    if (param2 <= var10) {
-                      param4[param2] = param4[var6];
-                      param4[var6] = var7;
-                      param3[param2] = param3[var6];
-                      param3[var6] = var8;
-                      rg.a(param0, -2147483648, -1 + var6, param3, param4);
-                      rg.a(1 + var6, -2147483648, param2, param3, param4);
-                      break L1;
-                    } else {
-                      L4: {
-                        if (-(var9 & var10) + var7 >= param4[var10]) {
-                          break L4;
-                        } else {
-                          var11 = param4[var10];
-                          param4[var10] = param4[var6];
-                          param4[var6] = var11;
-                          var12 = param3[var10];
-                          param3[var10] = param3[var6];
-                          int incrementValue$1 = var6;
-                          var6++;
-                          param3[incrementValue$1] = var12;
-                          break L4;
-                        }
-                      }
-                      var10++;
-                      continue L3;
-                    }
-                  }
-                } else {
-                  break L1;
                 }
+                var9 = stackIn_8_0;
+                var10 = param0;
+                L3: while (true) {
+                  if (param2 <= var10) {
+                    param4[param2] = param4[var6];
+                    param4[var6] = var7;
+                    param3[param2] = param3[var6];
+                    param3[var6] = var8;
+                    rg.a(param0, -2147483648, -1 + var6, param3, param4);
+                    rg.a(1 + var6, -2147483648, param2, param3, param4);
+                    break L1;
+                  } else {
+                    L4: {
+                      if (-(var9 & var10) + var7 >= param4[var10]) {
+                        break L4;
+                      } else {
+                        var11 = param4[var10];
+                        param4[var10] = param4[var6];
+                        param4[var6] = var11;
+                        var12 = param3[var10];
+                        param3[var10] = param3[var6];
+                        int incrementValue$1 = var6;
+                        var6++;
+                        param3[incrementValue$1] = var12;
+                        break L4;
+                      }
+                    }
+                    var10++;
+                    continue L3;
+                  }
+                }
+              } else {
+                break L1;
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var5 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var5;
-            stackOut_15_1 = new StringBuilder().append("rg.F(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_15_1 = new StringBuilder().append("rg.F(").append(param0).append(44).append(-2147483648).append(44).append(param2).append(44);
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -358,12 +356,14 @@ final class rg extends RuntimeException {
     final static int a(int param0, int param1, byte param2) {
         if (param2 < 81) {
             field_d = -104;
-            return hi.a(param0 + (-param1 + 1), tg.field_b, -11) - -param1;
+            int discarded$0 = -11;
+            return hi.a(param0 + (-param1 + 1), tg.field_b) - -param1;
         }
-        return hi.a(param0 + (-param1 + 1), tg.field_b, -11) - -param1;
+        int discarded$1 = -11;
+        return hi.a(param0 + (-param1 + 1), tg.field_b) - -param1;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_g = null;
         field_c = null;
         field_f = null;

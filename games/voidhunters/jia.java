@@ -8,12 +8,6 @@ final class jia extends rqa {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
         int var14 = 0;
         RuntimeException decompiledCaughtException = null;
         var14 = VoidHunters.field_G;
@@ -35,56 +29,12 @@ final class jia extends rqa {
                 break L1;
               }
             }
-            if (param2 > 91) {
-              var8 = -var6_int + -param3 + hca.field_o.field_hb;
-              var9 = var8 / 2;
-              var10 = param3 + param0 + var9;
-              var11 = 0;
-              var12 = 0;
-              L2: while (true) {
-                if (6 <= var12) {
-                  break L0;
-                } else {
-                  L3: {
-                    L4: {
-                      if (var12 >= 5) {
-                        break L4;
-                      } else {
-                        if (ul.field_b[var12] == null) {
-                          var12++;
-                          break L3;
-                        } else {
-                          break L4;
-                        }
-                      }
-                    }
-                    var13 = var11 * (-4 + hca.field_o.field_G) / (1 + fb.field_o) + 3;
-                    var11++;
-                    var7 = 3 + (var11 * (2 + (hca.field_o.field_G + -6)) / (1 + fb.field_o) - 2) - var13;
-                    if (var12 < 5) {
-                      ul.field_b[var12].a(var6_int, -100, var8, var13, var7);
-                      hpa.field_o[var12].a(param3, -110, -param3 + var9, 0, var7);
-                      vh.field_c[var12].a(var9, -27, param0, param4, -param4 + (var7 - param4));
-                      lob.field_c[var12].a(var10, 127, -var10 + (-param3 + var8), param4, var7 - (param4 + param4));
-                      break L3;
-                    } else {
-                      nlb.field_o.a(var6_int, -120, var8, var13, var7);
-                      var12++;
-                      break L3;
-                    }
-                  }
-                  var12++;
-                  continue L2;
-                }
-              }
-            } else {
-              return;
-            }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var6, "jia.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw rta.a((Throwable) (Object) var6, "jia.C(" + param0 + 44 + param1 + 44 + 96 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
@@ -160,7 +110,7 @@ final class jia extends rqa {
         super(param0, param1, param2);
     }
 
-    final static int a(int param0, byte param1) {
+    final static int a(int param0) {
         int var2 = 0;
         if (param0 == 0) {
             var2 = kib.field_d;

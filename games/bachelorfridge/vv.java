@@ -313,8 +313,9 @@ abstract class vv {
         return -1;
     }
 
-    final static sna a(int param0) {
-        return qca.e(-117485887);
+    final static sna a() {
+        int discarded$0 = -117485887;
+        return qca.e();
     }
 
     static {

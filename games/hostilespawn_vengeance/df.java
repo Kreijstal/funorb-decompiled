@@ -89,27 +89,8 @@ final class df {
     }
 
     private final void a(int param0, int param1, int param2) {
-        L0: {
-          if (param1 <= ((df) this).field_f) {
-            break L0;
-          } else {
+        if (~param1 < ~((df) this).field_f) {
             ((df) this).field_f = param1;
-            break L0;
-          }
-        }
-        if (param0 > -76) {
-          return;
-        } else {
-          L1: {
-            if (((df) this).field_i.length <= param1) {
-              this.a(true, param1);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          ((df) this).field_i[param1] = param2;
-          return;
         }
     }
 
@@ -216,7 +197,7 @@ final class df {
         try {
           L0: {
             L1: {
-              if (param1.field_i == param0) {
+              if (param1.field_i == 3) {
                 param1.field_G = 1;
                 break L1;
               } else {
@@ -309,7 +290,7 @@ final class df {
               } else {
                 param2.a((byte) 46, param3);
                 param2.b(param8, 24161);
-                param1.a(225, param2.a(param0 ^ 25127), 3);
+                param1.a(225, param2.a(25124), 3);
                 break L7;
               }
             }
@@ -325,7 +306,7 @@ final class df {
               if (param1.field_h != 2) {
                 break L9;
               } else {
-                param1.a(param0 + 222, param1.field_c - 10.0, 4);
+                param1.a(225, param1.field_c - 10.0, 4);
                 break L9;
               }
             }
@@ -391,7 +372,7 @@ final class df {
               }
             }
             L13: {
-              li.field_r = param1.a(var14, param0, ln.field_a);
+              li.field_r = param1.a(var14, 3, ln.field_a);
               if (!li.field_r[0]) {
                 break L13;
               } else {
@@ -443,7 +424,7 @@ final class df {
           L16: {
             var12 = decompiledCaughtException;
             stackOut_62_0 = (RuntimeException) var12;
-            stackOut_62_1 = new StringBuilder().append("df.D(").append(param0).append(44);
+            stackOut_62_1 = new StringBuilder().append("df.D(").append(3).append(44);
             stackIn_64_0 = stackOut_62_0;
             stackIn_64_1 = stackOut_62_1;
             stackIn_63_0 = stackOut_62_0;
@@ -574,9 +555,6 @@ final class df {
         int[] var4 = new int[this.b(0, param1)];
         int[] var3 = var4;
         kf.a(((df) this).field_i, 0, var4, 0, ((df) this).field_i.length);
-        if (!param0) {
-            int discarded$0 = this.b(-28, 87);
-        }
         ((df) this).field_i = var4;
     }
 

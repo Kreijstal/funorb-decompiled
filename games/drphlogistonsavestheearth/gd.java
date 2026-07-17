@@ -8,7 +8,7 @@ final class gd {
     static he[] field_b;
     static int field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_d = null;
         field_e = null;
@@ -16,13 +16,10 @@ final class gd {
 
     final static void a(vj param0, int param1, vj param2) {
         try {
-            if (param1 != 255) {
-                field_b = null;
-            }
             ce.field_a = param2;
             sb.field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "gd.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "gd.B(" + (param0 != null ? "{...}" : "null") + 44 + 255 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

@@ -17,7 +17,7 @@ final class jaa extends bca {
         }
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_u = null;
     }
 

@@ -60,7 +60,7 @@ abstract class c extends vg implements fo {
         var7 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
-            var4_int = param3.b((byte) 44, param0);
+            var4_int = param3.b((byte) 44, 8);
             if (var4_int != 0) {
               L1: {
                 L2: {
@@ -101,7 +101,7 @@ abstract class c extends vg implements fo {
           L4: {
             var4 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var4;
-            stackOut_13_1 = new StringBuilder().append("c.GB(").append(param0).append(44);
+            stackOut_13_1 = new StringBuilder().append("c.GB(").append(8).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -156,7 +156,7 @@ abstract class c extends vg implements fo {
 
     abstract void a(uw param0, int param1);
 
-    public static void m(int param0) {
+    public static void m() {
         field_g = null;
         field_f = null;
         field_h = null;

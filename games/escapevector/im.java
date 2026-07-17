@@ -6,7 +6,7 @@ import java.io.*;
 final class im extends IOException {
     static int field_a;
 
-    final static int a(int param0, int param1, int param2) {
+    final static int a(int param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -48,7 +48,7 @@ final class im extends IOException {
         return stackIn_6_0;
     }
 
-    final static void a(byte param0, int param1) {
+    final static void a() {
         RuntimeException var2 = null;
         int var3 = 0;
         cc var4 = null;
@@ -57,38 +57,31 @@ final class im extends IOException {
         var3 = EscapeVector.field_A;
         try {
           L0: {
-            L1: {
-              if (param0 > 48) {
-                break L1;
-              } else {
-                field_a = 28;
-                break L1;
-              }
-            }
             var4 = (cc) (Object) vn.field_e.a(false);
-            L2: while (true) {
+            L1: while (true) {
               if (var4 == null) {
                 var5 = (dc) (Object) en.field_i.a(false);
-                L3: while (true) {
+                L2: while (true) {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    oa.a(5, var5, -755);
+                    int discarded$4 = -755;
+                    oa.a(5, var5);
                     var5 = (dc) (Object) en.field_i.b((byte) 70);
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
                 hg.a(-121, 5, var4);
                 var4 = (cc) (Object) vn.field_e.b((byte) 70);
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2, "im.B(" + param0 + 44 + 5 + 41);
+          throw t.a((Throwable) (Object) var2, "im.B(" + 88 + 44 + 5 + 41);
         }
     }
 

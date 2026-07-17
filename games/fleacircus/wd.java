@@ -12,7 +12,7 @@ final class wd {
         throw new IllegalStateException();
     }
 
-    final static void a(int param0, int param1) {
+    final static void a() {
         lh var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -21,38 +21,31 @@ final class wd {
         var3 = fleas.field_A ? 1 : 0;
         try {
           L0: {
-            L1: {
-              if (param0 == -29250) {
-                break L1;
-              } else {
-                field_c = -7;
-                break L1;
-              }
-            }
             var4 = (hi) (Object) bf.field_e.c((byte) 47);
-            L2: while (true) {
+            L1: while (true) {
               if (var4 == null) {
                 var2 = rj.field_i.c((byte) 47);
-                L3: while (true) {
+                L2: while (true) {
                   if (var2 == null) {
                     break L0;
                   } else {
                     ki.a(4, 1);
                     var2 = rj.field_i.b((byte) -105);
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
-                sc.a(4, var4, param0 + 29251);
+                int discarded$2 = 1;
+                sc.a(4, var4);
                 var4 = (hi) (Object) bf.field_e.b((byte) -105);
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pf.a((Throwable) (Object) var2_ref, "wd.D(" + param0 + 44 + 4 + 41);
+          throw pf.a((Throwable) (Object) var2_ref, "wd.D(" + -29250 + 44 + 4 + 41);
         }
     }
 
@@ -89,9 +82,10 @@ final class wd {
               sd.field_i.a(ue.field_a[0], (byte) -23);
               sd.field_i.a(ue.field_a[1], (byte) -100);
               sd.field_i.a(ue.field_a[2], (byte) -96);
-              var5_int = 27 % ((-65 - param1) / 51);
+              var5_int = 0;
               sd.field_i.a(ue.field_a[3], (byte) -104);
-              lc.a(sd.field_i, (byte) -113);
+              int discarded$1 = -113;
+              lc.a(sd.field_i);
               sd.field_i.b((byte) 99, param3);
               param2.a(sd.field_i, (byte) -100);
               ud.field_b.field_i = 0;
@@ -169,7 +163,7 @@ final class wd {
           L8: {
             var5 = decompiledCaughtException;
             stackOut_19_0 = (RuntimeException) var5;
-            stackOut_19_1 = new StringBuilder().append("wd.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_19_1 = new StringBuilder().append("wd.B(").append(param0).append(44).append(-120).append(44);
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;

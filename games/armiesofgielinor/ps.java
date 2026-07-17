@@ -14,7 +14,7 @@ final class ps extends lk {
     static String field_z;
     static int[] field_C;
 
-    final static va b(byte param0) {
+    final static va b() {
         int var1 = 0;
         int var2_int = 0;
         IllegalArgumentException var2 = null;
@@ -45,7 +45,7 @@ final class ps extends lk {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_y = null;
         field_w = null;
         field_A = null;
@@ -209,39 +209,26 @@ final class ps extends lk {
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void a(int param0) {
         int var2 = 0;
         int var3 = 0;
-        L0: {
-          sh.field_l = param0;
-          if (sj.field_d != mj.field_c) {
+        sh.field_l = param0;
+        if (!(sj.field_d == mj.field_c)) {
             var2 = mj.field_c * mj.field_c;
             var3 = var2 - sj.field_d * sj.field_d;
             param0 = param0 + var3 * (gb.field_y - param0) / var2;
-            break L0;
-          } else {
-            break L0;
-          }
         }
         ag.field_I.a(120, -20500, 640, param0, va.field_u);
-        hm.a(-1, mi.field_l, 0, io.field_n, 5, gb.field_y - 24, 640);
-        if (!param1) {
-          field_z = null;
-          return;
-        } else {
-          return;
-        }
+        int discarded$0 = 640;
+        hm.a(-1, mi.field_l, 0, io.field_n, 5, gb.field_y - 24);
     }
 
     final static void a(int param0, kl param1, kl param2) {
         try {
-            if (param0 < 30) {
-                ps.c(false);
-            }
             iw.field_p = param2;
             bh.field_H = param1;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "ps.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "ps.E(" + 124 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

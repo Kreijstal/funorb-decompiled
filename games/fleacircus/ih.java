@@ -110,7 +110,7 @@ final class ih extends ni {
         }
     }
 
-    final static void l(int param0) {
+    final static void l() {
         af.a(ef.field_j, true, oa.field_o, (byte) 54);
         ud.field_c = true;
     }

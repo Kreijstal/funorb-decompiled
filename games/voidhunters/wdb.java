@@ -30,7 +30,7 @@ final class wdb extends llb {
         }
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_Ab = null;
     }
 

@@ -163,7 +163,7 @@ final class ul extends nf {
         }
     }
 
-    public static void q(int param0) {
+    public static void q() {
         field_O = null;
     }
 

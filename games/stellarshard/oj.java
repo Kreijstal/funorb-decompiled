@@ -19,10 +19,7 @@ final class oj {
         return var2;
     }
 
-    final static void c(int param0) {
-        if (param0 != -2290) {
-            oj.a(false);
-        }
+    final static void c() {
         if (!(ob.field_b == null)) {
             ob.field_b.a(true);
             ob.field_b = null;
@@ -59,7 +56,7 @@ final class oj {
         return ((oj) this).field_d == ((oj) this).field_d.field_g ? true : false;
     }
 
-    final static void a(pb param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final static void a(pb param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         int var10 = 0;
         int var11 = 0;
@@ -175,7 +172,7 @@ final class oj {
                                   break L9;
                                 } else {
                                   if (var15[var13 + -1] == 0) {
-                                    ti.e(var17, var16, param4, param1);
+                                    ti.e(var17, var16, param4, 1);
                                     break L8;
                                   } else {
                                     break L9;
@@ -187,7 +184,7 @@ final class oj {
                                   break L10;
                                 } else {
                                   if (var15[var13 - param0.field_v] == 0) {
-                                    ti.e(var17, var16, param4, param1);
+                                    ti.e(var17, var16, param4, 1);
                                     break L8;
                                   } else {
                                     break L10;
@@ -199,7 +196,7 @@ final class oj {
                                   break L11;
                                 } else {
                                   if (0 == var15[var13 + 1]) {
-                                    ti.e(var17, var16, param4, param1);
+                                    ti.e(var17, var16, param4, 1);
                                     break L8;
                                   } else {
                                     break L11;
@@ -212,7 +209,7 @@ final class oj {
                                 if (var15[var13 - -param0.field_v] != 0) {
                                   break L8;
                                 } else {
-                                  ti.e(var17, var16, param4, param1);
+                                  ti.e(var17, var16, param4, 1);
                                   break L8;
                                 }
                               }
@@ -260,7 +257,7 @@ final class oj {
               break L12;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_44_0, stackIn_44_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + 1 + 41);
+          throw ma.a((Throwable) (Object) stackIn_44_0, stackIn_44_2 + 44 + 1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + 1 + 41);
         }
     }
 
@@ -281,10 +278,7 @@ final class oj {
         }
     }
 
-    public static void a(boolean param0) {
-        if (!param0) {
-            return;
-        }
+    public static void a() {
         field_a = null;
     }
 

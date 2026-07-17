@@ -31,7 +31,7 @@ final class ua {
         return en.b(115, rl.field_d);
     }
 
-    final static void a(ah param0, ah param1, ah param2, int param3) {
+    final static void a(ah param0, ah param1, ah param2) {
         RuntimeException var4 = null;
         kh[] var5 = null;
         kh[][] var6 = null;
@@ -106,12 +106,16 @@ final class ua {
             ac.field_c = ug.a(param0, (byte) -45, "jagex_logo_grey", "commonui");
             mf.field_q = bf.a((byte) -81, param0, "commonui", "button");
             fj.field_q = qa.a("commonui", -1, param0, "validation");
-            dh.field_d = (jb) (Object) od.a(param0, "arezzo12", param1, "commonui", (byte) 95);
-            od.field_S = (jb) (Object) od.a(param0, "arezzo14", param1, "commonui", (byte) 95);
-            ab.field_V = (jb) (Object) od.a(param0, "arezzo14bold", param1, "commonui", (byte) 95);
+            int discarded$5 = 95;
+            dh.field_d = (jb) (Object) od.a(param0, "arezzo12", param1, "commonui");
+            int discarded$6 = 95;
+            od.field_S = (jb) (Object) od.a(param0, "arezzo14", param1, "commonui");
+            int discarded$7 = 95;
+            ab.field_V = (jb) (Object) od.a(param0, "arezzo14bold", param1, "commonui");
             var18 = new oh(param2.a("button.gif", "", true), (java.awt.Component) (Object) uh.field_b);
-            kh discarded$1 = qk.a((byte) 80, param0, "commonui", "dropdown");
-            var5 = el.a(param0, "screen_options", "commonui", -1409);
+            kh discarded$8 = qk.a((byte) 80, param0, "commonui", "dropdown");
+            int discarded$9 = -1409;
+            var5 = el.a(param0, "screen_options", "commonui");
             pj.field_a = new kh[4];
             ul.field_c = new kh[4];
             dh.field_g = new kh[4];
@@ -256,11 +260,16 @@ final class ua {
     }
 
     final static void a(byte param0) {
-        eh.b((byte) 106);
-        bj.a((byte) -119);
+        if (param0 != 123) {
+            boolean discarded$0 = ua.b(93);
+        }
+        int discarded$1 = 106;
+        eh.b();
+        int discarded$2 = -119;
+        bj.a();
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_h = null;
         field_b = null;
         field_a = null;
@@ -269,7 +278,7 @@ final class ua {
         field_d = null;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         cd.field_a = false;
         fn.field_K = kb.field_q.d((byte) -99) == 0 ? true : false;
     }
@@ -287,17 +296,15 @@ final class ua {
             var3 = a.field_a;
             var4 = bk.field_i.field_Ib.c(param1, 500);
             var5 = bk.field_i.field_Ib.b(param1, 500) + 6;
-            if (param0 != 7918) {
-                field_g = 6L;
-            }
             var6 = var4 * qe.field_d + 2;
             var7 = eo.a(var5, (byte) 108, var2_int, 12);
-            var8 = mh.a(20, var3, var6, -8748);
+            int discarded$0 = -8748;
+            var8 = mh.a(20, var3, var6);
             ra.b(var7, var8, var5, var6, 0);
             ra.c(1 + var7, 1 + var8, var5 + -2, var6 + -2, 16777088);
-            int discarded$0 = bk.field_i.field_Ib.a(param1, var7 + 3, -bk.field_i.field_Ib.field_N + ai.field_d + (var8 - -1), 500, 1000, 0, -1, 0, 0, qe.field_d);
+            int discarded$1 = bk.field_i.field_Ib.a(param1, var7 + 3, -bk.field_i.field_Ib.field_N + ai.field_d + (var8 - -1), 500, 1000, 0, -1, 0, 0, qe.field_d);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "ua.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "ua.E(" + 7918 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

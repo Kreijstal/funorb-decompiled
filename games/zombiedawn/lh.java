@@ -6,7 +6,7 @@ import java.io.*;
 final class lh extends pc {
     private gm field_n;
 
-    private final void f(int param0) {
+    private final void f() {
         try {
             Exception var3 = null;
             Throwable decompiledCaughtException = null;
@@ -529,7 +529,8 @@ final class lh extends pc {
                   }
                 }
                 ((lh) this).field_n = (gm) param1;
-                this.f(-87);
+                int discarded$1 = -87;
+                this.f();
                 this.a(67, param0);
                 ((lh) this).field_j.field_j = 0;
                 ((lh) this).field_d = null;

@@ -73,7 +73,7 @@ final class hn {
         }
     }
 
-    private final int b(int param0, int param1) {
+    private final int b(int param0) {
         int var3 = 0;
         int var4 = 0;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -135,18 +135,11 @@ final class hn {
     }
 
     private final void b(byte param0, int param1) {
-        int[] var3 = null;
-        int[] var4 = null;
-        var4 = new int[this.b(param1, 0)];
-        var3 = var4;
+        int discarded$0 = 0;
+        int[] var4 = new int[this.b(param1)];
+        int[] var3 = var4;
         ps.a(((hn) this).field_e, 0, var4, 0, ((hn) this).field_e.length);
         ((hn) this).field_e = var4;
-        if (param0 != 107) {
-          ((hn) this).field_e = null;
-          return;
-        } else {
-          return;
-        }
     }
 
     private hn() throws Throwable {

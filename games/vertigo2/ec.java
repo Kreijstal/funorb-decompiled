@@ -103,7 +103,7 @@ final class ec extends ji {
 
     final static void a(int param0, byte param1, be param2) {
         mi var3 = uh.field_Wb;
-        var3.j(param0, 118);
+        var3.j(5, 118);
         if (param1 < 116) {
             return;
         }
@@ -112,15 +112,15 @@ final class ec extends ji {
             var3.f(0, 79);
             var3.f(param2.field_r, 89);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "ec.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "ec.A(" + 5 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, byte param4) {
         int var5 = 0;
-        ap.field_e = param1;
+        ap.field_e = 0;
         cj.field_D = param0;
-        ua.field_e = param3;
+        ua.field_e = 0;
         ib.field_a = param2;
     }
 

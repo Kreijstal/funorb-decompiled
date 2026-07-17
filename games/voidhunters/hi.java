@@ -277,73 +277,65 @@ final class hi implements dja {
         int var14 = 0;
         int var15 = 0;
         var15 = VoidHunters.field_G;
-        var9 = param1 - (-param5 + -param6);
-        var10 = new phb[]{new phb(var9, var9), new phb(param3, var9), new phb(var9, var9), new phb(var9, param3), new phb(64, 64), new phb(var9, param3), new phb(var9, var9), new phb(param3, var9), new phb(var9, var9)};
+        var9 = 3;
+        var10 = new phb[]{new phb(var9, var9), new phb(3, var9), new phb(var9, var9), new phb(var9, 3), new phb(64, 64), new phb(var9, 3), new phb(var9, var9), new phb(3, var9), new phb(var9, var9)};
         var11_ref_phb__ = var10;
         var12 = 0;
         L0: while (true) {
           if (var11_ref_phb__.length <= var12) {
-            L1: {
-              if (param0 == -972) {
-                break L1;
-              } else {
-                field_a = -15;
-                break L1;
-              }
-            }
             var11 = 0;
-            L2: while (true) {
-              if (param1 <= var11) {
+            L1: while (true) {
+              if (var11 >= 1) {
                 var11 = 0;
-                L3: while (true) {
-                  if (param1 <= var11) {
+                L2: while (true) {
+                  if (var11 >= 1) {
                     var11 = 0;
-                    L4: while (true) {
-                      if (var11 >= param3) {
+                    L3: while (true) {
+                      if (var11 >= 3) {
                         var11 = 0;
-                        L5: while (true) {
-                          if (var11 >= param3 >> 1) {
+                        L4: while (true) {
+                          if (var11 >= 1) {
                             return var10;
                           } else {
                             var12 = 0;
-                            L6: while (true) {
-                              if (var12 < param6) {
-                                var10[1].field_r[var11 + param3 * (-1 + var9 + -var12)] = param4;
+                            L5: while (true) {
+                              if (var12 < 1) {
+                                var10[1].field_r[var11 + 3 * (-1 + var9 + -var12)] = param4;
                                 var10[3].field_r[var11 * var9 + (-var12 + -1 + var9)] = param4;
-                                var10[7].field_r[var11 + param3 * var12] = param4;
+                                var10[7].field_r[var11 + 3 * var12] = param4;
                                 var10[5].field_r[var11 * var9 - -var12] = param4;
                                 var12++;
-                                continue L6;
+                                continue L5;
                               } else {
                                 var11++;
-                                continue L5;
+                                continue L4;
                               }
                             }
                           }
                         }
                       } else {
                         var12 = 0;
-                        L7: while (true) {
-                          if (var12 < param1) {
-                            var10[7].field_r[var11 + (-1 + (var9 - var12)) * param3] = param8;
+                        L6: while (true) {
+                          if (var12 < 1) {
+                            var10[7].field_r[var11 + (-1 + (var9 - var12)) * 3] = param8;
                             var10[5].field_r[-1 - -var9 + (-var12 + var9 * var11)] = param8;
-                            var10[1].field_r[param3 * var12 - -var11] = param7;
+                            var10[1].field_r[3 * var12 - -var11] = param7;
                             var10[3].field_r[var12 + var9 * var11] = param7;
                             var12++;
-                            continue L7;
+                            continue L6;
                           } else {
                             var11++;
-                            continue L4;
+                            continue L3;
                           }
                         }
                       }
                     }
                   } else {
                     var12 = 0;
-                    L8: while (true) {
+                    L7: while (true) {
                       if (var12 >= var9) {
                         var11++;
-                        continue L3;
+                        continue L2;
                       } else {
                         var10[0].field_r[var12 + var11 * var9] = param7;
                         var10[0].field_r[var12 * var9 - -var11] = param7;
@@ -351,10 +343,10 @@ final class hi implements dja {
                           var10[2].field_r[var12 - -(var9 * var11)] = param7;
                           var10[6].field_r[var11 + var9 * var12] = param7;
                           var12++;
-                          continue L8;
+                          continue L7;
                         } else {
                           var12++;
-                          continue L8;
+                          continue L7;
                         }
                       }
                     }
@@ -362,17 +354,17 @@ final class hi implements dja {
                 }
               } else {
                 var12 = 0;
-                L9: while (true) {
+                L8: while (true) {
                   if (var12 >= var9) {
                     var11++;
-                    continue L2;
+                    continue L1;
                   } else {
                     var10[6].field_r[var12 + (-var11 + (var9 - 1)) * var9] = param8;
                     var10[8].field_r[(var9 + (-var11 - 1)) * var9 + var12] = param8;
                     var10[2].field_r[var9 * var12 - var11 - 1 - -var9] = param8;
                     var10[8].field_r[var9 - (1 + var11 - var9 * var12)] = param8;
                     var12++;
-                    continue L9;
+                    continue L8;
                   }
                 }
               }
@@ -380,14 +372,14 @@ final class hi implements dja {
           } else {
             var13 = var11_ref_phb__[var12];
             var14 = 0;
-            L10: while (true) {
+            L9: while (true) {
               if (var14 >= var13.field_r.length) {
                 var12++;
                 continue L0;
               } else {
                 var13.field_r[var14] = param2;
                 var14++;
-                continue L10;
+                continue L9;
               }
             }
           }

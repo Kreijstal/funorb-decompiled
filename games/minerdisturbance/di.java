@@ -49,7 +49,7 @@ final class di extends um {
     private boolean field_A;
     private int field_M;
 
-    private final void b(boolean param0, int param1) {
+    private final void b(boolean param0) {
         int var3 = 0;
         int var4 = MinerDisturbance.field_ab;
         if (param0) {
@@ -109,7 +109,8 @@ final class di extends um {
                     ((di) this).field_fb = ((di) this).field_fb + (long)var4_int * (long)var7;
                     ((di) this).field_z.a(param0, param1, var7);
                     param2 = param2 - var7;
-                    this.f(128);
+                    int discarded$1 = 128;
+                    this.f();
                     param1 = param1 + var7;
                     if (!((di) this).field_eb.e()) {
                       break L1;
@@ -374,10 +375,8 @@ final class di extends um {
     private final synchronized void a(boolean param0, boolean param1) {
         ((di) this).field_eb.f();
         ((di) this).field_L = null;
-        if (!param1) {
-            return;
-        }
-        this.b(param0, -21400);
+        int discarded$0 = -21400;
+        this.b(param0);
     }
 
     final boolean a(int param0, cg param1, int param2, int[] param3, int param4) {
@@ -811,7 +810,7 @@ final class di extends um {
         }
     }
 
-    private final void f(int param0) {
+    private final void f() {
         int var2 = 0;
         int var3 = 0;
         long var4 = 0L;
@@ -827,7 +826,8 @@ final class di extends um {
           } else {
             if (var3 == ((di) this).field_M) {
               this.a(-23, ((di) this).field_L, ((di) this).field_C, ((di) this).field_A);
-              this.f(128);
+              int discarded$3 = 128;
+              this.f();
               return;
             } else {
               break L0;
@@ -893,12 +893,14 @@ final class di extends um {
                             }
                           }
                         }
-                        this.b(true, -21400);
+                        int discarded$4 = -21400;
+                        this.b(true);
                         ((di) this).field_eb.f();
                         return;
                       } else {
                         ((di) this).a(((di) this).field_C, ((di) this).field_L, (byte) 2);
-                        this.f(128);
+                        int discarded$5 = 128;
+                        this.f();
                         return;
                       }
                     }
@@ -1550,7 +1552,7 @@ final class di extends um {
               var7.field_z = var11.field_y[param3];
               var7.field_J = var11.field_s[param3];
               var7.field_F = param3;
-              var8 = 94 % ((-71 - param0) / 41);
+              var8 = 0;
               var7.field_t = var11.field_x[param3] * param2 * param2 * var12.field_q + 1024 >> 11;
               var7.field_E = var11.field_r[param3] & 255;
               var7.field_u = (param3 << 8) + -(32767 & var11.field_t[param3]);
@@ -1887,7 +1889,8 @@ final class di extends um {
                 L1: {
                   var3_ref = "";
                   if (param0 != null) {
-                    var3_ref = w.a(param0, (byte) 78);
+                    int discarded$4 = 78;
+                    var3_ref = w.a(param0);
                     break L1;
                   } else {
                     break L1;
@@ -1909,11 +1912,12 @@ final class di extends um {
                     break L2;
                   }
                 }
-                vj.a(var3_ref, param1);
+                int discarded$5 = 1;
+                vj.a(var3_ref);
                 var3_ref = ld.a("%3a", -1, var3_ref, ":");
                 var3_ref = ld.a("%40", -1, var3_ref, "@");
                 var3_ref = ld.a("%26", -1, var3_ref, "&");
-                var7 = ld.a("%23", param1 ^ -2, var3_ref, "#");
+                var7 = ld.a("%23", -1, var3_ref, "#");
                 if (null != aj.field_d) {
                   L4: {
                     stackOut_10_0 = hd.field_g;
@@ -1976,14 +1980,15 @@ final class di extends um {
                           break L6;
                         } else {
                           var5 = (DataInputStream) var4.field_a;
-                          int discarded$1 = var5.read();
+                          int discarded$6 = var5.read();
                           var5.close();
                           break L6;
                         }
                       }
                       break L0;
                     } else {
-                      gf.a(1L, param1 + -10310);
+                      int discarded$7 = -10309;
+                      gf.a(1L);
                       continue L5;
                     }
                   }
@@ -2151,7 +2156,8 @@ final class di extends um {
                           var4 = -1;
                           return;
                         } else {
-                          this.b(true, -21400);
+                          int discarded$1 = -21400;
+                          this.b(true);
                           return;
                         }
                       }
@@ -2467,7 +2473,8 @@ final class di extends um {
                 ((di) this).field_fb = ((di) this).field_fb + (long)var5 * (long)var2;
                 param0 = param0 - var5;
                 ((di) this).field_z.a(var5);
-                this.f(128);
+                int discarded$1 = 128;
+                this.f();
                 if (!((di) this).field_eb.e()) {
                   break L0;
                 } else {
@@ -2575,9 +2582,6 @@ final class di extends um {
     }
 
     private final void a(int param0, byte param1, int param2, int param3) {
-        if (param1 <= 13) {
-            ((di) this).field_s = null;
-        }
     }
 
     final synchronized void a(boolean param0, wh param1, byte param2) {
@@ -2686,7 +2690,8 @@ final class di extends um {
         ((di) this).field_z = new gd((di) this);
         ((di) this).field_F = new tg(128);
         ((di) this).a(256, true, -1);
-        this.b(true, -21400);
+        int discarded$0 = -21400;
+        this.b(true);
     }
 
     static {

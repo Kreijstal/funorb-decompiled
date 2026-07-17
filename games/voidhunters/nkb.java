@@ -8,9 +8,6 @@ final class nkb extends rqa {
     static String field_o;
 
     final static void a(int param0, boolean param1) {
-        if (param0 != 12) {
-            return;
-        }
         wba.field_p.a(7861, param1);
     }
 
@@ -95,7 +92,7 @@ final class nkb extends rqa {
         return stackIn_3_0;
     }
 
-    final static tpa a(int param0) {
+    final static tpa a() {
         if (dn.field_r == kla.field_d) {
             throw new IllegalStateException();
         }

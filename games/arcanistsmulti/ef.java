@@ -30,75 +30,65 @@ final class ef extends lk {
         try {
             IOException iOException = null;
             Exception var4 = null;
-            Object var5 = null;
+            wk stackIn_4_0 = null;
+            wk stackIn_5_0 = null;
             wk stackIn_6_0 = null;
-            wk stackIn_7_0 = null;
-            wk stackIn_8_0 = null;
-            int stackIn_8_1 = 0;
+            int stackIn_6_1 = 0;
             Throwable decompiledCaughtException = null;
+            wk stackOut_3_0 = null;
             wk stackOut_5_0 = null;
-            wk stackOut_7_0 = null;
-            int stackOut_7_1 = 0;
-            wk stackOut_6_0 = null;
-            int stackOut_6_1 = 0;
+            int stackOut_5_1 = 0;
+            wk stackOut_4_0 = null;
+            int stackOut_4_1 = 0;
             if (((ef) this).field_w == null) {
               return;
             } else {
               try {
                 L0: {
                   L1: {
-                    if (param0 < -41) {
-                      break L1;
-                    } else {
-                      var5 = null;
-                      ((ef) this).a(false, true, (Object) null);
-                      break L1;
-                    }
-                  }
-                  L2: {
                     ((ef) this).field_c.field_g = 0;
-                    stackOut_5_0 = ((ef) this).field_c;
-                    stackIn_7_0 = stackOut_5_0;
-                    stackIn_6_0 = stackOut_5_0;
+                    stackOut_3_0 = ((ef) this).field_c;
+                    stackIn_5_0 = stackOut_3_0;
+                    stackIn_4_0 = stackOut_3_0;
                     if (!param1) {
-                      stackOut_7_0 = (wk) (Object) stackIn_7_0;
-                      stackOut_7_1 = 3;
-                      stackIn_8_0 = stackOut_7_0;
-                      stackIn_8_1 = stackOut_7_1;
-                      break L2;
+                      stackOut_5_0 = (wk) (Object) stackIn_5_0;
+                      stackOut_5_1 = 3;
+                      stackIn_6_0 = stackOut_5_0;
+                      stackIn_6_1 = stackOut_5_1;
+                      break L1;
                     } else {
-                      stackOut_6_0 = (wk) (Object) stackIn_6_0;
-                      stackOut_6_1 = 2;
-                      stackIn_8_0 = stackOut_6_0;
-                      stackIn_8_1 = stackOut_6_1;
-                      break L2;
+                      stackOut_4_0 = (wk) (Object) stackIn_4_0;
+                      stackOut_4_1 = 2;
+                      stackIn_6_0 = stackOut_4_0;
+                      stackIn_6_1 = stackOut_4_1;
+                      break L1;
                     }
                   }
-                  ((wk) (Object) stackIn_8_0).f(stackIn_8_1, (byte) -62);
+                  ((wk) (Object) stackIn_6_0).f(stackIn_6_1, (byte) -62);
                   ((ef) this).field_c.a((byte) -118, 0L);
                   ((ef) this).field_w.a(((ef) this).field_c.field_j.length, 0, (byte) 122, ((ef) this).field_c.field_j);
                   break L0;
                 }
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
-                L3: {
+                L2: {
                   iOException = (IOException) (Object) decompiledCaughtException;
                   try {
-                    L4: {
+                    L3: {
                       ((ef) this).field_w.d(-23482);
-                      break L4;
+                      break L3;
                     }
                   } catch (java.lang.Exception decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
-                    L5: {
+                    L4: {
                       var4 = (Exception) (Object) decompiledCaughtException;
-                      break L5;
+                      break L4;
                     }
                   }
                   ((ef) this).field_o = -2;
                   ((ef) this).field_i = ((ef) this).field_i + 1;
                   ((ef) this).field_w = null;
-                  break L3;
+                  break L2;
                 }
               }
               return;
@@ -167,7 +157,8 @@ final class ef extends lk {
                   }
                 }
                 ((ef) this).field_w = (k) param2;
-                this.d((byte) 113);
+                int discarded$1 = 113;
+                this.d();
                 this.a(-101, param0);
                 ((ef) this).field_n = null;
                 ((ef) this).field_e.field_g = 0;
@@ -292,7 +283,7 @@ final class ef extends lk {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var3_int = 15 / ((param1 - 29) / 49);
+            var3_int = -15;
             var4 = new ll(0, 0, 0);
             var4.field_m = param2.field_m;
             var4.field_j = param2.field_j;
@@ -336,7 +327,7 @@ final class ef extends lk {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(param1).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(-59).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -739,7 +730,7 @@ final class ef extends lk {
     public ef() {
     }
 
-    private final void d(byte param0) {
+    private final void d() {
         try {
             int var2_int = 0;
             Exception var3 = null;

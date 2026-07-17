@@ -28,88 +28,45 @@ abstract class dfa {
         var3 = stackIn_3_0;
         if (fna.field_h != 9) {
           if (fna.field_h != 10) {
-            if (!param1) {
-              if (fna.field_h != 11) {
-                return false;
-              } else {
-                if (ns.field_f) {
-                  L1: {
-                    if (gm.field_n != 2) {
+            field_e = null;
+            if (fna.field_h != 11) {
+              return false;
+            } else {
+              if (ns.field_f) {
+                L1: {
+                  if (gm.field_n != 2) {
+                    break L1;
+                  } else {
+                    if (ota.a(apa.field_a, (byte) 13, cr.field_b)) {
                       break L1;
                     } else {
-                      if (ota.a(apa.field_a, (byte) 13, cr.field_b)) {
-                        break L1;
-                      } else {
-                        return false;
-                      }
+                      return false;
                     }
                   }
-                  L2: {
-                    if (2 == gm.field_n) {
+                }
+                L2: {
+                  if (2 == gm.field_n) {
+                    break L2;
+                  } else {
+                    if (var3 == 0) {
                       break L2;
                     } else {
-                      if (var3 == 0) {
-                        break L2;
-                      } else {
-                        return false;
-                      }
+                      return false;
                     }
                   }
-                  L3: {
-                    if (oj.i(-1)) {
-                      var4 = null;
-                      opa.a(gm.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                  return true;
-                } else {
-                  return false;
                 }
-              }
-            } else {
-              field_e = null;
-              if (fna.field_h != 11) {
-                return false;
+                L3: {
+                  if (oj.i(-1)) {
+                    var4 = null;
+                    opa.a(gm.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
+                    break L3;
+                  } else {
+                    break L3;
+                  }
+                }
+                return true;
               } else {
-                if (ns.field_f) {
-                  L4: {
-                    if (gm.field_n != 2) {
-                      break L4;
-                    } else {
-                      if (ota.a(apa.field_a, (byte) 13, cr.field_b)) {
-                        break L4;
-                      } else {
-                        return false;
-                      }
-                    }
-                  }
-                  L5: {
-                    if (2 == gm.field_n) {
-                      break L5;
-                    } else {
-                      if (var3 == 0) {
-                        break L5;
-                      } else {
-                        return false;
-                      }
-                    }
-                  }
-                  L6: {
-                    if (oj.i(-1)) {
-                      var4 = null;
-                      opa.a(gm.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
-                      break L6;
-                    } else {
-                      break L6;
-                    }
-                  }
-                  return true;
-                } else {
-                  return false;
-                }
+                return false;
               }
             }
           } else {
@@ -122,12 +79,12 @@ abstract class dfa {
           }
         } else {
           if (sqa.a(uba.field_f, 110, fp.field_d, tba.field_g, bla.field_I)) {
-            L7: {
+            L4: {
               if (uba.field_f == 2) {
-                break L7;
+                break L4;
               } else {
                 if (var3 == 0) {
-                  break L7;
+                  break L4;
                 } else {
                   return false;
                 }
@@ -136,112 +93,69 @@ abstract class dfa {
             return eca.a((byte) -121, uba.field_f, bla.field_I, fp.field_d, tba.field_g);
           } else {
             if (fna.field_h != 10) {
-              if (param1) {
-                field_e = null;
-                if (fna.field_h == 11) {
-                  if (ns.field_f) {
-                    L8: {
-                      if (gm.field_n != 2) {
-                        break L8;
-                      } else {
-                        if (ota.a(apa.field_a, (byte) 13, cr.field_b)) {
-                          break L8;
+              field_e = null;
+              if (fna.field_h == 11) {
+                if (ns.field_f) {
+                  if (gm.field_n == 2) {
+                    if (ota.a(apa.field_a, (byte) 13, cr.field_b)) {
+                      L5: {
+                        if (2 == gm.field_n) {
+                          break L5;
                         } else {
-                          return false;
-                        }
-                      }
-                    }
-                    L9: {
-                      if (2 == gm.field_n) {
-                        break L9;
-                      } else {
-                        if (var3 == 0) {
-                          break L9;
-                        } else {
-                          return false;
-                        }
-                      }
-                    }
-                    L10: {
-                      if (oj.i(-1)) {
-                        var4 = null;
-                        opa.a(gm.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
-                        break L10;
-                      } else {
-                        break L10;
-                      }
-                    }
-                    return true;
-                  } else {
-                    return false;
-                  }
-                } else {
-                  return false;
-                }
-              } else {
-                if (fna.field_h == 11) {
-                  if (ns.field_f) {
-                    if (gm.field_n == 2) {
-                      if (!ota.a(apa.field_a, (byte) 13, cr.field_b)) {
-                        return false;
-                      } else {
-                        L11: {
-                          if (2 == gm.field_n) {
-                            break L11;
+                          if (var3 == 0) {
+                            break L5;
                           } else {
-                            if (var3 == 0) {
-                              break L11;
-                            } else {
-                              return false;
-                            }
+                            return false;
                           }
                         }
-                        L12: {
+                      }
+                      L6: {
+                        if (oj.i(-1)) {
+                          var4 = null;
+                          opa.a(gm.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
+                          break L6;
+                        } else {
+                          break L6;
+                        }
+                      }
+                      return true;
+                    } else {
+                      return false;
+                    }
+                  } else {
+                    if (2 != gm.field_n) {
+                      if (var3 != 0) {
+                        return false;
+                      } else {
+                        L7: {
                           if (oj.i(-1)) {
                             var4 = null;
                             opa.a(gm.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
-                            break L12;
+                            break L7;
                           } else {
-                            break L12;
+                            break L7;
                           }
                         }
                         return true;
                       }
                     } else {
-                      if (2 != gm.field_n) {
-                        if (var3 != 0) {
-                          return false;
+                      L8: {
+                        if (oj.i(-1)) {
+                          var4 = null;
+                          opa.a(gm.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
+                          break L8;
                         } else {
-                          L13: {
-                            if (oj.i(-1)) {
-                              var4 = null;
-                              opa.a(gm.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
-                              break L13;
-                            } else {
-                              break L13;
-                            }
-                          }
-                          return true;
+                          break L8;
                         }
-                      } else {
-                        L14: {
-                          if (oj.i(-1)) {
-                            var4 = null;
-                            opa.a(gm.field_n, (String) null, param2, 32371, cr.field_b, uda.field_q);
-                            break L14;
-                          } else {
-                            break L14;
-                          }
-                        }
-                        return true;
                       }
+                      return true;
                     }
-                  } else {
-                    return false;
                   }
                 } else {
                   return false;
                 }
+              } else {
+                return false;
               }
             } else {
               if (var3 != 0) {
@@ -324,19 +238,25 @@ abstract class dfa {
         }
     }
 
-    final static void c(byte param0) {
-        og.b(0);
+    final static void c() {
+        int discarded$4 = 0;
+        og.b();
         if (!(null == nma.field_l)) {
-            pq.a(nma.field_l, false);
+            int discarded$5 = 0;
+            pq.a(nma.field_l);
         }
-        ola.f((byte) 101);
+        int discarded$18 = 101;
+        ola.f();
         pc.a(5);
-        rda.e(0);
-        if (!(!bl.b(0))) {
+        int discarded$39 = 0;
+        rda.e();
+        int discarded$46 = 0;
+        if (!(!bl.b())) {
             ql.field_k.k(1, -2988);
             bl.a(0, -1);
         }
-        dea.a(60);
+        int discarded$47 = 60;
+        dea.a();
     }
 
     abstract boolean b(int param0);
@@ -345,7 +265,7 @@ abstract class dfa {
 
     abstract void a(boolean param0, boolean param1, int param2);
 
-    public static void b(byte param0) {
+    public static void b() {
         field_b = null;
         field_e = null;
         field_a = null;

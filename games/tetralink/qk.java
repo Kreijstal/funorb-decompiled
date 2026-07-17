@@ -160,7 +160,7 @@ final class qk {
         int var16 = 0;
         int var17 = 0;
         var17 = TetraLink.field_J;
-        var16 = 62 / ((param1 - 71) / 49);
+        var16 = -20;
         if (param0 >= param11) {
           if (param14 <= param0) {
             if (param14 > param11) {
@@ -190,7 +190,7 @@ final class qk {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_d = null;
         field_c = null;
@@ -490,7 +490,9 @@ final class qk {
             L6: {
               ((cl) (Object) stackIn_6_0).a(stackIn_6_1 != 0, stackIn_6_2, stackIn_6_3);
               if (param1 != -1) {
-                pn.a(param1, 256, 16769381, false, false);
+                int discarded$4 = 0;
+                int discarded$5 = 0;
+                pn.a(param1, 256, 16769381);
                 break L6;
               } else {
                 break L6;
@@ -508,7 +510,9 @@ final class qk {
               rh.field_M.c();
               kk.field_X[param4].a(false, param2, 1);
               if (-1 != param1) {
-                pn.a(param1, 256, 16769381, false, false);
+                int discarded$6 = 0;
+                int discarded$7 = 0;
+                pn.a(param1, 256, 16769381);
                 fh.a(true);
                 if (param0 == 7230) {
                   return;

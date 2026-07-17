@@ -23,9 +23,6 @@ abstract class gm extends ti {
     final static void f(int param0, int param1) {
         lo.field_f = aq.field_l[param1];
         ud.field_Y = bp.field_v[param1];
-        if (param0 != -7733) {
-            field_ob = null;
-        }
         nh.field_n = kd.field_c[param1];
     }
 
@@ -57,12 +54,12 @@ abstract class gm extends ti {
         return n.field_i;
     }
 
-    public static void o(int param0) {
+    public static void o() {
         field_pb = null;
         field_ob = null;
     }
 
-    private final void p(int param0) {
+    private final void p() {
         int var4 = 0;
         int var5 = ZombieDawnMulti.field_E ? 1 : 0;
         int var2 = ((gm) this).g(-96);
@@ -88,7 +85,8 @@ abstract class gm extends ti {
         ((gm) this).field_ib = hp.a((byte) 89, g.field_a, 200);
         ((gm) this).field_cb = new int[61];
         ((gm) this).field_hb = new int[61];
-        this.p(118);
+        int discarded$0 = 118;
+        this.p();
         ((gm) this).field_lb = hp.a((byte) -122, g.field_a, 5);
         if (((gm) this).m(15684)) {
             ((gm) this).field_mb = hp.a((byte) -119, g.field_a, 4) + 49;
@@ -170,7 +168,8 @@ abstract class gm extends ti {
                     break L1;
                   } else {
                     ((gm) this).field_U.h(sd.b(124, var4, var3_int));
-                    ((gm) this).field_U.f(pb.a(var4, var3_int, false));
+                    int discarded$1 = 0;
+                    ((gm) this).field_U.f(pb.a(var4, var3_int));
                     break L1;
                   }
                 } else {
@@ -433,66 +432,44 @@ abstract class gm extends ti {
         int var10 = 0;
         char[] var11 = null;
         char[] var12 = null;
-        char[] var13 = null;
-        char[] var14 = null;
-        L0: {
-          var10 = ZombieDawnMulti.field_E ? 1 : 0;
-          if (param2 < 2) {
-            break L0;
-          } else {
-            if (param2 <= 36) {
-              L1: {
-                if (!param1) {
-                  break L1;
+        var10 = ZombieDawnMulti.field_E ? 1 : 0;
+        if (0 > param0) {
+          return Integer.toString(param0, 10);
+        } else {
+          var4 = 2;
+          var5 = param0 / 10;
+          L0: while (true) {
+            if (var5 == 0) {
+              var12 = new char[var4];
+              var11 = var12;
+              var6 = var11;
+              var6[0] = '+';
+              var7 = var4 + -1;
+              L1: while (true) {
+                if (var7 <= 0) {
+                  return new String(var12);
                 } else {
-                  if (0 > param0) {
-                    break L1;
+                  var8 = param0;
+                  param0 = param0 / 10;
+                  var9 = var8 + -(param0 * 10);
+                  if (var9 < 10) {
+                    var6[var7] = (char)(48 + var9);
+                    var7--;
+                    continue L1;
                   } else {
-                    var4 = 2;
-                    var5 = param0 / param2;
-                    L2: while (true) {
-                      if (var5 == 0) {
-                        var14 = new char[var4];
-                        var13 = var14;
-                        var12 = var13;
-                        var11 = var12;
-                        var6 = var11;
-                        var6[0] = '+';
-                        var7 = var4 + -1;
-                        L3: while (true) {
-                          if (var7 <= 0) {
-                            return new String(var14);
-                          } else {
-                            var8 = param0;
-                            param0 = param0 / param2;
-                            var9 = var8 + -(param0 * param2);
-                            if (var9 < 10) {
-                              var6[var7] = (char)(48 + var9);
-                              var7--;
-                              continue L3;
-                            } else {
-                              var6[var7] = (char)(var9 + 87);
-                              var7--;
-                              continue L3;
-                            }
-                          }
-                        }
-                      } else {
-                        var4++;
-                        var5 = var5 / param2;
-                        continue L2;
-                      }
-                    }
+                    var6[var7] = (char)(var9 + 87);
+                    var7--;
+                    continue L1;
                   }
                 }
               }
-              return Integer.toString(param0, param2);
             } else {
-              break L0;
+              var4++;
+              var5 = var5 / 10;
+              continue L0;
             }
           }
         }
-        throw new IllegalArgumentException("" + param2);
     }
 
     final void f(byte param0) {
@@ -876,13 +853,14 @@ abstract class gm extends ti {
         ((gm) this).b(0, -27655);
     }
 
-    final static void a(long param0, String param1, int param2) {
+    final static void a(long param0, String param1) {
         CharSequence var5 = null;
         try {
             va.field_a = 2;
             qf.field_g = param1;
             var5 = (CharSequence) (Object) param1;
-            ql.field_a = tg.a(var5, false);
+            int discarded$0 = 0;
+            ql.field_a = tg.a(var5);
             sq.field_N = true;
             jj.field_M = param0;
         } catch (RuntimeException runtimeException) {

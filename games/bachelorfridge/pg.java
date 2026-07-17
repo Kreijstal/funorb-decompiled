@@ -92,9 +92,9 @@ final class pg extends bca {
         return (at) (Object) stackIn_4_0;
     }
 
-    final static void e(int param0) {
+    final static void e() {
         fja.field_a.a(18, 31407, tv.field_o.field_sb - (eaa.field_c ? 2 + (rj.field_j + 42) : 0), 0, 0);
-        oca.field_n.a(18, param0 ^ 31407, rj.field_j + 42, tv.field_o.field_sb - (rj.field_j + 42), param0);
+        oca.field_n.a(18, 31407, rj.field_j + 42, tv.field_o.field_sb - (rj.field_j + 42), 0);
         qba.field_m.a((byte) -58, tv.field_o.field_p + -20, 0, 20, tv.field_o.field_sb, rj.field_j, 2);
     }
 
@@ -116,7 +116,7 @@ final class pg extends bca {
         }
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_q = null;
     }
 

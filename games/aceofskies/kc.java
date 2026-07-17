@@ -6,7 +6,7 @@ final class kc {
     double field_a;
     double field_b;
 
-    final static String a(String param0, String param1, gk param2, int param3) {
+    final static String a(String param0, String param1, gk param2) {
         RuntimeException var4 = null;
         String stackIn_4_0 = null;
         String stackIn_6_0 = null;
@@ -238,7 +238,7 @@ final class kc {
         return stackIn_3_0;
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -549,7 +549,7 @@ final class kc {
         this.d(1);
     }
 
-    final static void a(int param0) {
+    final static void a() {
         Object var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

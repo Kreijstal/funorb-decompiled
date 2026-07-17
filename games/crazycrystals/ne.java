@@ -79,7 +79,7 @@ final class ne {
                         } else {
                           L8: {
                             var9 = kh.field_i[var7];
-                            if ((65280 & var9) >> 8 <= param3) {
+                            if ((65280 & var9) >> 8 <= 64) {
                               break L8;
                             } else {
                               break L8;
@@ -102,11 +102,11 @@ final class ne {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw dn.a((Throwable) (Object) var6, "ne.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw dn.a((Throwable) (Object) var6, "ne.A(" + param0 + 44 + param1 + 44 + param2 + 44 + 64 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_g = null;
         field_i = null;
         field_e = null;

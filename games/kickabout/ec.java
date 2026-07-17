@@ -16,46 +16,36 @@ final class ec {
     }
 
     final static boolean a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6) {
-        Object var8 = null;
-        int stackIn_8_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_7_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_5_0 = 0;
         L0: {
-          if (param3 == -124) {
-            break L0;
-          } else {
-            var8 = null;
-            int discarded$2 = ec.a(true, (String) null, -17);
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
+          L1: {
             if (param2 < param0) {
-              break L2;
+              break L1;
             } else {
               if (param0 - -param5 <= param2) {
-                break L2;
+                break L1;
               } else {
                 if (param1 < param4) {
-                  break L2;
+                  break L1;
                 } else {
                   if (param6 + param4 <= param1) {
-                    break L2;
-                  } else {
-                    stackOut_6_0 = 1;
-                    stackIn_8_0 = stackOut_6_0;
                     break L1;
+                  } else {
+                    stackOut_4_0 = 1;
+                    stackIn_6_0 = stackOut_4_0;
+                    break L0;
                   }
                 }
               }
             }
           }
-          stackOut_7_0 = 0;
-          stackIn_8_0 = stackOut_7_0;
-          break L1;
+          stackOut_5_0 = 0;
+          stackIn_6_0 = stackOut_5_0;
+          break L0;
         }
-        return stackIn_8_0 != 0;
+        return stackIn_6_0 != 0;
     }
 
     final static void a(boolean param0, tv param1) {
@@ -95,15 +85,11 @@ final class ec {
                     var3 = 0;
                     L3: while (true) {
                       if (vb.field_j <= var3) {
-                        if (param0) {
-                          vb.field_j = var2_int;
-                          int fieldTemp$5 = vb.field_j;
-                          vb.field_j = vb.field_j + 1;
-                          fu.field_b[fieldTemp$5] = param1;
-                          break L0;
-                        } else {
-                          return;
-                        }
+                        vb.field_j = var2_int;
+                        int fieldTemp$5 = vb.field_j;
+                        vb.field_j = vb.field_j + 1;
+                        fu.field_b[fieldTemp$5] = param1;
+                        break L0;
                       } else {
                         L4: {
                           L5: {
@@ -154,7 +140,7 @@ final class ec {
           L7: {
             var2 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var2;
-            stackOut_22_1 = new StringBuilder().append("ec.D(").append(param0).append(44);
+            stackOut_22_1 = new StringBuilder().append("ec.D(").append(1).append(44);
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -355,7 +341,7 @@ final class ec {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_a = null;
         field_f = null;

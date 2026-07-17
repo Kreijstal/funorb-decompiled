@@ -10,13 +10,13 @@ final class hn extends se {
 
     final static void a(int param0, int param1, int param2, ng param3, int param4) {
         try {
-            param3.a(true, param2);
+            param3.a(true, 12);
             param3.c(-161478600, 17);
             param3.c(-161478600, param0);
             param3.c(-161478600, param4);
             param3.a(true, param1);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "hn.E(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "hn.E(" + param0 + 44 + param1 + 44 + 12 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
         }
     }
 
@@ -120,7 +120,8 @@ final class hn extends se {
         try {
           L0: {
             L1: {
-              if (ab.a(param0, (byte) -114) != null) {
+              int discarded$8 = -114;
+              if (ab.a(param0) != null) {
                 stackOut_2_0 = 0;
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
@@ -180,7 +181,7 @@ final class hn extends se {
         return stackIn_11_0;
     }
 
-    final static String b(boolean param0) {
+    final static String b() {
         return kd.field_n.i(114);
     }
 

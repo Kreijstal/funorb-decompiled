@@ -28,15 +28,17 @@ final class mc extends ao {
     final void a(int param0, int param1, pk param2, int param3) {
         try {
             super.a(param0, 65, param2, param3);
-            this.g(1);
+            int discarded$0 = 1;
+            this.g();
             int var5_int = -92 % ((-25 - param1) / 45);
-            this.f(1);
+            int discarded$1 = 1;
+            this.f();
         } catch (RuntimeException runtimeException) {
             throw qo.a((Throwable) (Object) runtimeException, "mc.U(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
     }
 
-    private final void f(int param0) {
+    private final void f() {
         if (null == ((mc) this).field_G) {
           if (((mc) this).field_B != null) {
             ((mc) this).field_D.field_y.field_v = -(int)((long)(((mc) this).field_D.field_y.field_p + -((mc) this).field_D.field_p) * (long)((mc) this).field_B.field_D >> 16);
@@ -189,7 +191,8 @@ final class mc extends ao {
               }
             }
             if (super.a(param0, param1, (byte) 74, param3)) {
-              this.f(1);
+              int discarded$2 = 1;
+              this.f();
               stackOut_4_0 = 1;
               stackIn_5_0 = stackOut_4_0;
               break L0;
@@ -360,9 +363,10 @@ final class mc extends ao {
         try {
           L0: {
             var4_int = param1.a(0, param3);
-            var5 = -112 / ((param0 - -84) / 40);
+            var5 = -28;
             var6 = param1.a(var4_int, param2, (byte) 127);
-            stackOut_0_0 = iw.a(var6, var4_int, param1, -21834);
+            int discarded$2 = -21834;
+            stackOut_0_0 = iw.a(var6, var4_int, param1);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -371,7 +375,7 @@ final class mc extends ao {
           L1: {
             var4 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var4;
-            stackOut_2_1 = new StringBuilder().append("mc.TA(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("mc.TA(").append(83).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -461,7 +465,7 @@ final class mc extends ao {
         field_F = null;
     }
 
-    private final void g(int param0) {
+    private final void g() {
         int var3 = 0;
         var3 = Sumoblitz.field_L ? 1 : 0;
         if (null == ((mc) this).field_B) {
@@ -1219,7 +1223,8 @@ final class mc extends ao {
                       break L4;
                     }
                   }
-                  this.g(1);
+                  int discarded$14 = 1;
+                  this.g();
                   return;
                 } else {
                   L6: {
@@ -1321,7 +1326,8 @@ final class mc extends ao {
                       break L10;
                     }
                   }
-                  this.g(1);
+                  int discarded$15 = 1;
+                  this.g();
                   return;
                 }
               } else {
@@ -1426,7 +1432,8 @@ final class mc extends ao {
                     break L16;
                   }
                 }
-                this.g(1);
+                int discarded$16 = 1;
+                this.g();
                 return;
               }
             } else {
@@ -1532,7 +1539,8 @@ final class mc extends ao {
                       break L22;
                     }
                   }
-                  this.g(1);
+                  int discarded$17 = 1;
+                  this.g();
                   return;
                 } else {
                   L24: {
@@ -1634,7 +1642,8 @@ final class mc extends ao {
                       break L28;
                     }
                   }
-                  this.g(1);
+                  int discarded$18 = 1;
+                  this.g();
                   return;
                 }
               } else {
@@ -1739,7 +1748,8 @@ final class mc extends ao {
                     break L34;
                   }
                 }
-                this.g(1);
+                int discarded$19 = 1;
+                this.g();
                 return;
               }
             }
@@ -1846,7 +1856,8 @@ final class mc extends ao {
                     break L40;
                   }
                 }
-                this.g(1);
+                int discarded$20 = 1;
+                this.g();
                 return;
               } else {
                 L42: {
@@ -1948,7 +1959,8 @@ final class mc extends ao {
                     break L46;
                   }
                 }
-                this.g(1);
+                int discarded$21 = 1;
+                this.g();
                 return;
               }
             } else {
@@ -2053,7 +2065,8 @@ final class mc extends ao {
                   break L52;
                 }
               }
-              this.g(1);
+              int discarded$22 = 1;
+              this.g();
               return;
             }
           }
@@ -2163,7 +2176,8 @@ final class mc extends ao {
                       break L58;
                     }
                   }
-                  this.g(1);
+                  int discarded$23 = 1;
+                  this.g();
                   return;
                 } else {
                   L60: {
@@ -2265,7 +2279,8 @@ final class mc extends ao {
                       break L64;
                     }
                   }
-                  this.g(1);
+                  int discarded$24 = 1;
+                  this.g();
                   return;
                 }
               } else {
@@ -2370,7 +2385,8 @@ final class mc extends ao {
                     break L70;
                   }
                 }
-                this.g(1);
+                int discarded$25 = 1;
+                this.g();
                 return;
               }
             } else {
@@ -2492,7 +2508,8 @@ final class mc extends ao {
                   break L78;
                 }
               }
-              this.g(1);
+              int discarded$26 = 1;
+              this.g();
               return;
             }
           } else {
@@ -2614,7 +2631,8 @@ final class mc extends ao {
                 break L86;
               }
             }
-            this.g(1);
+            int discarded$27 = 1;
+            this.g();
             return;
           }
         }

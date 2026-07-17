@@ -6,7 +6,7 @@ final class af {
     static boolean field_a;
     static int field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
     }
 

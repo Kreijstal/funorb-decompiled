@@ -177,7 +177,7 @@ final class lj {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
     }
 
     public final String toString() {

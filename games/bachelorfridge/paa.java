@@ -87,7 +87,7 @@ final class paa {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         lna.field_f = true;
         sja.field_hb = f.b((byte) 73) + 15000L;
         return jv.field_j == 11 ? true : false;

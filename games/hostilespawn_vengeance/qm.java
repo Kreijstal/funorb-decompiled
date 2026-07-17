@@ -158,16 +158,18 @@ final class qm extends oj {
         return stackIn_4_0;
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_P = null;
         field_Q = null;
-        int var1 = -80 % ((param0 - 55) / 38);
+        int var1 = 0;
     }
 
-    final static void a(boolean param0) {
-        gf.field_e = wl.c(11);
+    final static void a() {
+        int discarded$0 = 11;
+        gf.field_e = wl.c();
         im.field_e = new gg();
-        pc.a(true, true, false);
+        int discarded$1 = 0;
+        pc.a(true, true);
     }
 
     qm() {

@@ -69,7 +69,8 @@ final class ig extends w {
                 ce.a(param3, (byte) -85, pk.field_r, ed.field_c, var6, (String) null);
                 rb.a(fm.field_d, ed.field_c, -94, pk.field_r, var6);
                 pf.a(false);
-                h.a((byte) 11);
+                int discarded$25 = 11;
+                h.a();
                 break L0;
               } else {
                 cc.a(8);
@@ -188,9 +189,6 @@ final class ig extends w {
         int var3 = 0;
         int var6 = client.field_A ? 1 : 0;
         ((ig) this).field_ec = param1;
-        if (param0 != 67) {
-            ((ig) this).field_Wb = null;
-        }
         for (var5 = 0; ((ig) this).field_Ob > var5; var5++) {
             var4 = ((ig) this).field_ec * ((ig) this).field_ec;
             var3 = var5 * ((ig) this).field_Vb;
@@ -381,7 +379,7 @@ final class ig extends w {
         this.b((byte) 67, 12);
     }
 
-    final static boolean a(int param0, int param1, int param2, byte param3) {
+    final static boolean a() {
         if (w.field_H != null) {
             if (!(!w.field_H.c(-3))) {
                 tf.i((byte) -125);
@@ -398,13 +396,13 @@ final class ig extends w {
         if (!(!ve.g((byte) 119))) {
             return true;
         }
-        if (!rm.a(param1, param0, (byte) 10, param2)) {
+        if (!rm.a(15, 12, (byte) 10, 13)) {
             return false;
         }
         return true;
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_Xb = null;
         field_cc = null;
         field_ac = null;
@@ -554,7 +552,8 @@ final class ig extends w {
                   if (0 >= ((ig) this).field_Wb[var13]) {
                     break L2;
                   } else {
-                    param6[var13] = var11 + pf.a(((ig) this).field_Wb[var13], (byte) -9).toUpperCase() + ": " + var12 + param6[var13];
+                    int discarded$1 = -9;
+                    param6[var13] = var11 + pf.a(((ig) this).field_Wb[var13]).toUpperCase() + ": " + var12 + param6[var13];
                     break L2;
                   }
                 }
@@ -772,7 +771,7 @@ final class ig extends w {
         }
     }
 
-    final static boolean b(boolean param0) {
+    final static boolean b() {
         return uc.field_g == cd.field_m.field_Xb;
     }
 

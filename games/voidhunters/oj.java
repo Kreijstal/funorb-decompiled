@@ -317,13 +317,10 @@ final class oj extends pw {
     final static void a(File param0, int param1, byte[] param2, int param3) throws IOException {
         FileOutputStream var4 = new FileOutputStream(param0);
         var4.write(param2, 0, param3);
-        if (param1 != 3) {
-            return;
-        }
         try {
             var4.close();
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "oj.J(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "oj.J(" + (param0 != null ? "{...}" : "null") + 44 + 3 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
     }
 
@@ -1073,7 +1070,8 @@ final class oj extends pw {
                   }
                 }
                 crb.field_v = null;
-                lnb.d(0);
+                int discarded$2 = 0;
+                lnb.d();
                 break L0;
               }
             }

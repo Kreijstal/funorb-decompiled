@@ -117,7 +117,7 @@ final class ji {
 
     public static void a(int param0) {
         field_b = null;
-        int var1 = 104 % ((-63 - param0) / 59);
+        int var1 = 0;
         field_f = null;
     }
 
@@ -162,7 +162,7 @@ final class ji {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
     }
 
     final void a(int param0, byte param1) {

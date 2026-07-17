@@ -5,7 +5,7 @@ final class or extends bia {
     static String field_j;
     private static String field_z;
 
-    public static void c(byte param0) {
+    public static void c() {
         int var1 = -2;
         field_j = null;
     }

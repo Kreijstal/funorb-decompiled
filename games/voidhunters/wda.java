@@ -32,7 +32,8 @@ final class wda extends rqa {
         String stackOut_6_2 = null;
         try {
           L0: {
-            hb.a((String) param0[0].field_b, 32);
+            int discarded$9 = 32;
+            hb.a((String) param0[0].field_b);
             if (param1 <= -119) {
               stackOut_3_0 = new nc((Object) (Object) "void");
               stackIn_4_0 = stackOut_3_0;
@@ -135,57 +136,54 @@ final class wda extends rqa {
         var12 = VoidHunters.field_G;
         try {
           L0: {
-            if (param3 <= 0) {
-              L1: {
-                chb.a(0);
-                var13 = param0.field_g.e(0);
-                if (var13 != null) {
-                  var6 = var13.b(1);
-                  if (var6 != null) {
-                    var7 = 0;
-                    L2: while (true) {
-                      if (var7 >= var6.length) {
-                        break L1;
-                      } else {
-                        L3: {
-                          var8 = var6[var7];
-                          var9 = var8.a((byte) -126);
-                          var10 = var8.c((byte) -42);
-                          if (var9 == null) {
+            L1: {
+              int discarded$2 = 0;
+              chb.a();
+              var13 = param0.field_g.e(0);
+              if (var13 != null) {
+                var6 = var13.b(1);
+                if (var6 != null) {
+                  var7 = 0;
+                  L2: while (true) {
+                    if (var7 >= var6.length) {
+                      break L1;
+                    } else {
+                      L3: {
+                        var8 = var6[var7];
+                        var9 = var8.a((byte) -126);
+                        var10 = var8.c((byte) -42);
+                        if (var9 == null) {
+                          break L3;
+                        } else {
+                          if (var10 == null) {
                             break L3;
                           } else {
-                            if (var10 == null) {
+                            var11 = ada.a(param0, param4, false, var10);
+                            if (var11 < 0) {
                               break L3;
                             } else {
-                              var11 = ada.a(param0, param4, false, var10);
-                              if (var11 < 0) {
+                              if (var11 >= glb.field_c.length) {
                                 break L3;
                               } else {
-                                if (var11 >= glb.field_c.length) {
-                                  break L3;
-                                } else {
-                                  aba.a(param4, var9, param2, var11, (byte) 51, param1, param0);
-                                  break L3;
-                                }
+                                aba.a(param4, var9, param2, var11, (byte) 51, param1, param0);
+                                break L3;
                               }
                             }
                           }
                         }
-                        var7++;
-                        continue L2;
                       }
+                      var7++;
+                      continue L2;
                     }
-                  } else {
-                    break L1;
                   }
                 } else {
                   break L1;
                 }
+              } else {
+                break L1;
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -242,7 +240,7 @@ final class wda extends rqa {
           }
           L6: {
             stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(44).append(param3).append(44);
+            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(44).append(-84).append(44);
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -269,7 +267,7 @@ final class wda extends rqa {
         }
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_o = null;
         field_r = null;
     }

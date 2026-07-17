@@ -174,7 +174,7 @@ final class gb {
         }
     }
 
-    final static int a(int param0) {
+    final static int a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -328,12 +328,12 @@ final class gb {
         return stackIn_7_0;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         int var1 = 66;
         field_b = null;
     }
 
-    final static void a(String param0, byte param1) {
+    final static void a(String param0) {
         int var2 = -3;
         System.out.println("Error: " + og.a(param0, "\n", true, "%0a"));
     }

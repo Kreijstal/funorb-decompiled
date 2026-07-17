@@ -51,7 +51,8 @@ final class lr extends bw {
                   break L0;
                 } else {
                   if (null == rv.field_n) {
-                    kf.a((byte) -6);
+                    int discarded$6 = -6;
+                    kf.a();
                     break L0;
                   } else {
                     pv.a(true, true);
@@ -76,15 +77,15 @@ final class lr extends bw {
           if (lfa.field_q <= 0) {
             break L3;
           } else {
-            ada.a(param9, 0, param4, param6);
+            ada.a(param9, 0, 11, param6);
             break L3;
           }
         }
         L4: {
           cw.field_yb.field_L = rea.field_g.field_L;
-          cw.field_yb.field_N = param5;
+          cw.field_yb.field_N = 1;
           if (0 < ld.field_p) {
-            sr.a(true, param6, param4, param9);
+            sr.a(true, param6, 11, param9);
             break L4;
           } else {
             break L4;
@@ -92,7 +93,9 @@ final class lr extends bw {
         }
         L5: {
           if (dja.field_m > 0) {
-            mh.a(param0, param6, param9, param4, (byte) -51);
+            int discarded$7 = -51;
+            int discarded$8 = 11;
+            mh.a(param0, param6, param9);
             break L5;
           } else {
             break L5;
@@ -115,11 +118,14 @@ final class lr extends bw {
           }
           qba.field_m.field_wb.field_Z = null;
           tv.field_o.field_u = true;
-          vt.a(qba.field_m, param4, 0, param8, param1);
+          vt.a(qba.field_m, 11, 0, param8, param1);
           break L6;
         }
-        sma.a(param7, param8, -6, param1, param2, param4, param3);
-        vt.a(ak.field_q, param4, 0, param8, param1);
+        int discarded$9 = 16777215;
+        int discarded$10 = 11;
+        int discarded$11 = 16777215;
+        sma.a(true, param8, -6, param1);
+        vt.a(ak.field_q, 11, 0, param8, param1);
         qf.field_v = qf.field_v + 1;
     }
 

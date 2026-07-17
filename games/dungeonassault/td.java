@@ -114,7 +114,8 @@ final class td {
               }
               var8 = new jb(lg.field_w, param4);
               lg.field_w.a((lm) (Object) var8, -1);
-              if (!rg.i((byte) -125)) {
+              int discarded$16 = -125;
+              if (!rg.i()) {
                 L2: {
                   field_d = param0;
                   mh.field_b = null;

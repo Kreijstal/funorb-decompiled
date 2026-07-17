@@ -17,88 +17,84 @@ final class uj implements Runnable {
     final static void a(byte param0, mg param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
         String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              fd.field_f = param1.j(98203176) << 5;
-              var2_int = param1.b((byte) 90);
-              fd.field_f = fd.field_f + (var2_int >> 3);
-              cc.field_l = (var2_int & 7) << 18;
-              cc.field_l = cc.field_l + (param1.j(98203176) << 2);
-              var2_int = param1.b((byte) 90);
-              oh.field_b = (var2_int & 63) << 15;
-              cc.field_l = cc.field_l + (var2_int >> 6);
-              oh.field_b = oh.field_b + (param1.b((byte) 90) << 7);
-              var2_int = param1.b((byte) 90);
-              oh.field_b = oh.field_b + (var2_int >> 1);
-              h.field_E = (var2_int & 1) << 16;
-              h.field_E = h.field_E + param1.j(param0 + 98203261);
-              if (param0 == -85) {
-                break L1;
-              } else {
-                field_b = null;
-                break L1;
-              }
-            }
+            fd.field_f = param1.j(98203176) << 5;
+            var2_int = param1.b((byte) 90);
+            fd.field_f = fd.field_f + (var2_int >> 3);
+            cc.field_l = (var2_int & 7) << 18;
+            cc.field_l = cc.field_l + (param1.j(98203176) << 2);
+            var2_int = param1.b((byte) 90);
+            oh.field_b = (var2_int & 63) << 15;
+            cc.field_l = cc.field_l + (var2_int >> 6);
+            oh.field_b = oh.field_b + (param1.b((byte) 90) << 7);
+            var2_int = param1.b((byte) 90);
+            oh.field_b = oh.field_b + (var2_int >> 1);
+            h.field_E = (var2_int & 1) << 16;
+            h.field_E = h.field_E + param1.j(98203176);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var2 = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) var2;
-            stackOut_3_1 = new StringBuilder().append("uj.A(").append(param0).append(44);
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_1 = new StringBuilder().append("uj.A(").append(-85).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
-              break L2;
-            } else {
               stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
               stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              break L2;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw dd.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
         }
     }
 
-    final static void c(byte param0) {
+    final static void c() {
         lb.a(true);
         if (!(null == tf.field_f)) {
             hl.a(tf.field_f, 106);
         }
-        fd.b(-82);
-        km.b(-100);
-        af.a(109);
-        if (uj.a((byte) -36)) {
+        int discarded$12 = -82;
+        fd.b();
+        int discarded$28 = -100;
+        km.b();
+        int discarded$39 = 109;
+        af.a();
+        int discarded$45 = -36;
+        if (uj.a()) {
             uk.field_b.i(1, -53);
             bh.a(0, -1);
         }
@@ -179,7 +175,7 @@ final class uj implements Runnable {
         return (java.applet.Applet) (Object) aj.field_b;
     }
 
-    final static boolean a(int[] param0, int param1) {
+    final static boolean a(int[] param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         long var3 = 0L;
@@ -378,7 +374,7 @@ final class uj implements Runnable {
         }
     }
 
-    private final static boolean a(byte param0) {
+    private final static boolean a() {
         return p.field_d != null && dh.field_bb.a((byte) 74);
     }
 

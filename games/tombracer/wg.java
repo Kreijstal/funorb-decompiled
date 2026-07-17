@@ -10,7 +10,8 @@ final class wg extends tu {
 
     final void a(int param0, hca param1, int param2, la param3, int param4, int param5) {
         try {
-            nba.a(((wg) this).field_f, param3, (byte) 108);
+            int discarded$6 = 108;
+            nba.a(((wg) this).field_f, param3);
             if (param0 != 15) {
                 Object var8 = null;
                 ((wg) this).a((hca) null, (la) null, true);
@@ -50,7 +51,7 @@ final class wg extends tu {
           L0: {
             var5 = new StringBuilder("[");
             var2 = var5;
-            var3 = param0;
+            var3 = 0;
             L1: while (true) {
               if (var3 >= param1.length) {
                 stackOut_7_0 = String.valueOf(93);
@@ -76,7 +77,7 @@ final class wg extends tu {
           L3: {
             var2_ref = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var2_ref;
-            stackOut_9_1 = new StringBuilder().append("wg.R(").append(param0).append(44);
+            stackOut_9_1 = new StringBuilder().append("wg.R(").append(0).append(44);
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -130,7 +131,8 @@ final class wg extends tu {
                 Object var5 = null;
                 ((wg) this).a((hca) null, (la) null, false);
             }
-            caa.a(((wg) this).field_f, param1, 108);
+            int discarded$0 = 108;
+            caa.a(((wg) this).field_f, param1);
             super.a(param0, param1, param2);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "wg.H(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
@@ -145,31 +147,23 @@ final class wg extends tu {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_13_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_11_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
-        int stackOut_8_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_6_0 = 0;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
-            L1: {
-              if (param0 == 1541709953) {
-                break L1;
-              } else {
-                wg.a(true);
-                break L1;
-              }
-            }
             var3_int = 0;
             var4 = jua.field_d;
-            L2: while (true) {
+            L1: while (true) {
               if (mba.field_g.length <= var3_int) {
-                stackOut_12_0 = -1;
-                stackIn_13_0 = stackOut_12_0;
+                stackOut_10_0 = -1;
+                stackIn_11_0 = stackOut_10_0;
                 break L0;
               } else {
-                L3: {
+                L2: {
                   var5 = bla.field_H[var3_int];
                   if (var5 >= 0) {
                     var6 = ro.a((byte) -116, mba.field_g[var3_int], true);
@@ -177,28 +171,28 @@ final class wg extends tu {
                     var7 = -(var6 >> 1) + ega.field_c;
                     if (!rea.a(param2, var6 - -(nja.field_L << 1), -nja.field_L + var7, param1, (pqa.field_p << 1) + nt.field_d, false, var4)) {
                       var4 = var4 + ((pqa.field_p << 1) + mha.field_C + nt.field_d);
-                      break L3;
+                      break L2;
                     } else {
-                      stackOut_8_0 = var5;
-                      stackIn_9_0 = stackOut_8_0;
-                      return stackIn_9_0;
+                      stackOut_6_0 = var5;
+                      stackIn_7_0 = stackOut_6_0;
+                      return stackIn_7_0;
                     }
                   } else {
                     var4 = var4 + f.field_b;
-                    break L3;
+                    break L2;
                   }
                 }
                 var3_int++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var3, "wg.T(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw tba.a((Throwable) (Object) var3, "wg.T(" + 1541709953 + 44 + param1 + 44 + param2 + 41);
         }
-        return stackIn_13_0;
+        return stackIn_11_0;
     }
 
     static {

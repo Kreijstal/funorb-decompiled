@@ -16,7 +16,8 @@ final class wm {
         field_g = null;
         field_f = null;
         if (param0 != -7) {
-            wm.a(false);
+            int discarded$0 = 0;
+            wm.a();
         }
         field_d = null;
     }
@@ -176,7 +177,7 @@ final class wm {
         return param0;
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -187,7 +188,8 @@ final class wm {
             var1_int = -1 + ke.field_X.length;
             L1: while (true) {
               if (var1_int < 0) {
-                wm.a(false);
+                int discarded$2 = 0;
+                wm.a();
                 break L0;
               } else {
                 ke.field_X[var1_int] = false;

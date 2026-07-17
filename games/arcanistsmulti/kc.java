@@ -1451,7 +1451,7 @@ class kc extends to {
         }
         L16: {
           de.h(var8, var9, var10, var11);
-          if (~((kc) var13).field_P == param3) {
+          if (((kc) var13).field_P == 0) {
             break L16;
           } else {
             if (((kc) var13).field_H) {

@@ -300,7 +300,7 @@ final class dk extends wc {
         ((dk) this).field_x = ((dk) this).field_x - 2621440;
     }
 
-    public static void p(byte param0) {
+    public static void p() {
         field_Vb = null;
         field_Zb = null;
         field_Tb = null;

@@ -24,7 +24,7 @@ final class ha extends w {
         field_Pb = null;
     }
 
-    final static void e(int param0) {
+    final static void e() {
         da.field_e = new tf();
         de.field_W.c((ce) (Object) da.field_e, (byte) 62);
     }

@@ -43,7 +43,8 @@ final class hk extends gg {
           L0: {
             if (param0 > 86) {
               var3 = (CharSequence) (Object) param1;
-              stackOut_3_0 = wb.field_b.equals((Object) (Object) nh.a(var3, false));
+              int discarded$2 = 0;
+              stackOut_3_0 = wb.field_b.equals((Object) (Object) nh.a(var3));
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -85,7 +86,7 @@ final class hk extends gg {
         return stackIn_4_0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_m = null;
         field_v = null;
         field_l = null;

@@ -71,7 +71,7 @@ final class ta extends me {
             wk.field_h = false;
             tb.field_N = 0;
             ec.a((byte) -123, hk.field_q);
-            boolean discarded$3 = ib.a((byte) -72);
+            boolean discarded$6 = ib.a((byte) -72);
             rl.field_c = param1;
             if (bm.field_c != 0) {
               break L1;
@@ -130,7 +130,8 @@ final class ta extends me {
                 var2_int = 1;
                 L7: while (true) {
                   if (var2_int >= kh.field_Q.length) {
-                    pf.a(kh.field_ib, false);
+                    int discarded$7 = 0;
+                    pf.a(kh.field_ib);
                     kh.field_U[1] = 0;
                     kh.field_U[0] = 0;
                     break L6;
@@ -183,7 +184,8 @@ final class ta extends me {
               var2_int = 0;
               L12: while (true) {
                 if (var2_int >= kh.field_Q.length) {
-                  pf.a(kh.field_ib, false);
+                  int discarded$8 = 0;
+                  pf.a(kh.field_ib);
                   kh.field_ib[0] = 1200;
                   kh.field_U[0] = 1;
                   kh.field_U[1] = 0;
@@ -298,7 +300,8 @@ final class ta extends me {
                   ti.field_f.a(-1, 8360, -1);
                   ln.field_a = null;
                   ln.field_a = new id(oc.field_h[bm.field_c][rl.field_c]);
-                  mm.a(ln.field_a, true);
+                  int discarded$9 = 1;
+                  mm.a(ln.field_a);
                   if (0 <= ti.field_f.field_e) {
                     break L21;
                   } else {
@@ -604,9 +607,9 @@ final class ta extends me {
                               if ((var6 & 1 << var9) == 0) {
                                 break L39;
                               } else {
-                                int incrementValue$4 = var8;
+                                int incrementValue$10 = var8;
                                 var8++;
-                                md.field_g[incrementValue$4] = new lf(var9, 0, 640);
+                                md.field_g[incrementValue$10] = new lf(var9, 0, 640);
                                 break L39;
                               }
                             }
@@ -641,9 +644,9 @@ final class ta extends me {
                         continue L22;
                       } else {
                         L42: {
-                          int incrementValue$5 = var4;
+                          int incrementValue$11 = var4;
                           var4++;
-                          if (!var5[incrementValue$5]) {
+                          if (!var5[incrementValue$11]) {
                             break L42;
                           } else {
                             si.a(var7, var6, 16384);
@@ -672,72 +675,64 @@ final class ta extends me {
 
     final static ii a(boolean param0, String param1) {
         RuntimeException var2 = null;
-        ii stackIn_3_0 = null;
+        ii stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ii stackOut_2_0 = null;
+        ii stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              if (!param0) {
-                break L1;
-              } else {
-                field_lb = null;
-                break L1;
-              }
-            }
-            stackOut_2_0 = new ii(param1);
-            stackIn_3_0 = stackOut_2_0;
+            stackOut_0_0 = new ii(param1);
+            stackIn_1_0 = stackOut_0_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
-            stackOut_4_1 = new StringBuilder().append("ta.N(").append(param0).append(44);
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_1 = new StringBuilder().append("ta.N(").append(0).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L2;
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L2;
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
         }
-        return stackIn_3_0;
+        return stackIn_1_0;
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_jb = null;
         field_mb = null;
         field_kb = null;
@@ -751,9 +746,6 @@ final class ta extends me {
     final static void a(int param0, String param1, java.applet.Applet param2) {
         try {
             java.net.URL var3 = null;
-            if (param0 != -320) {
-                ta.a((byte) 125, -53);
-            }
             try {
                 var3 = new java.net.URL(param2.getCodeBase(), param1);
                 var3 = nj.a(param2, true, var3);

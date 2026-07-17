@@ -10,17 +10,14 @@ final class lp {
     static boolean field_f;
     static int field_b;
 
-    final static java.awt.Container b(int param0) {
+    final static java.awt.Container b() {
         if (!(null == un.field_b)) {
             return (java.awt.Container) (Object) un.field_b;
-        }
-        if (param0 != 20) {
-            field_d = null;
         }
         return (java.awt.Container) (Object) ip.a(9);
     }
 
-    final static String a(CharSequence param0, int param1) {
+    final static String a(CharSequence param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
@@ -161,15 +158,12 @@ final class lp {
         int var6 = ao.b(2048, param2);
         int var7 = (int)((long)var3 * (long)var5 >> 16);
         int var8 = (int)((long)var3 * (long)var6 >> 16);
-        if (param1) {
-            java.awt.Container discarded$0 = lp.b(25);
-        }
         int var9 = (int)((long)var5 * (long)var4 >> 16);
         int var10 = (int)((long)var6 * (long)var4 >> 16);
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_a = null;
         field_g = null;

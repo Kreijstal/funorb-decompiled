@@ -74,7 +74,7 @@ final class se extends ji {
         }
     }
 
-    final static void a(String param0, int param1) {
+    final static void a(String param0) {
         try {
             lr.field_S = param0;
             rh.b(-14, 12);
@@ -160,7 +160,7 @@ final class se extends ji {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_y = null;
         field_C = null;
         field_A = null;

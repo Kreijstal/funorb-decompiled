@@ -6,10 +6,7 @@ final class rga {
     int field_a;
     private int field_c;
 
-    public static void a(byte param0) {
-        if (param0 <= 56) {
-            field_b = null;
-        }
+    public static void a() {
         field_b = null;
     }
 
@@ -118,8 +115,8 @@ final class rga {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        RuntimeException var8 = null;
         int var8_int = 0;
+        RuntimeException var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -135,21 +132,13 @@ final class rga {
             var12 = param4;
             L1: while (true) {
               if (var8_int <= var12) {
-                L2: {
-                  if (param1 > 97) {
-                    break L2;
-                  } else {
-                    rga.a((byte) -93);
-                    break L2;
-                  }
-                }
                 var12 = param7;
-                L3: while (true) {
+                L2: while (true) {
                   if (var12 <= var9) {
                     var11 = param6 - param0;
                     var10 = param3 + param0;
                     var12 = var8_int;
-                    L4: while (true) {
+                    L3: while (true) {
                       if (var9 < var12) {
                         break L0;
                       } else {
@@ -158,13 +147,13 @@ final class rga {
                         nra.a((byte) -55, param2, var11, var18, var10);
                         nra.a((byte) -55, param5, param6, var18, var11);
                         var12++;
-                        continue L4;
+                        continue L3;
                       }
                     }
                   } else {
                     nra.a((byte) -55, param5, param6, vaa.field_a[var12], param3);
                     var12--;
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
@@ -177,7 +166,7 @@ final class rga {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var8, "rga.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw tba.a((Throwable) (Object) var8, "rga.A(" + param0 + 44 + 107 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
         }
     }
 
@@ -255,16 +244,12 @@ final class rga {
     }
 
     final static int b(int param0, int param1) {
-        if (param0 != 26499) {
-            Object var3 = null;
-            String[] discarded$0 = rga.a(121, (String) null, 'J');
-        }
         if (!(cm.field_a != null)) {
             return 0;
         }
-        g[] var4 = cm.field_a[param1].field_c;
-        g[] var2 = var4;
-        return var4.length;
+        g[] var3 = cm.field_a[param1].field_c;
+        g[] var2 = var3;
+        return var3.length;
     }
 
     rga(int param0, int param1) {

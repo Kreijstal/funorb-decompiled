@@ -9,7 +9,7 @@ final class al extends nm {
     static wb field_j;
     static String field_l;
 
-    public static void a(int param0) {
+    public static void a() {
         field_j = null;
         field_n = null;
         field_l = null;

@@ -504,14 +504,14 @@ final class cj extends rb {
         j.field_c = param1;
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void a() {
         la var2 = ra.field_C;
-        var2.c(param0, 7);
+        var2.c(6, 7);
         var2.a(1, (byte) -104);
         var2.a(0, (byte) -88);
     }
 
-    final static void d(int param0) {
+    final static void d() {
         qj var1 = null;
         qj var2 = null;
         int var3 = 0;
@@ -524,9 +524,6 @@ final class cj extends rb {
             fb.field_a = 0;
             be.a((byte) -108);
             var2 = var1.b();
-            if (param0 <= 81) {
-                field_e = null;
-            }
             for (var3 = 0; var3 < 15; var3++) {
                 var2.b(-2, -2, 16777215);
                 ll.a(4, 4, 0, 0, 540, 140);
@@ -535,7 +532,7 @@ final class cj extends rb {
             var1.d(0, 0);
             ch.m(124);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "cj.R(" + param0 + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "cj.R(" + 97 + 41);
         }
     }
 

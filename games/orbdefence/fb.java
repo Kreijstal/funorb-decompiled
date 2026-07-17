@@ -7,15 +7,12 @@ final class fb extends ca {
     int[] field_g;
     static int[] field_f;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
         field_i = null;
     }
 
-    final static String c(int param0) {
-        if (param0 > -44) {
-            field_i = null;
-        }
+    final static String c() {
         return cd.field_t.g(2);
     }
 
@@ -93,7 +90,7 @@ final class fb extends ca {
                 ((ud) var19).field_n = new int[((ud) var19).field_o];
                 ((ud) var19).field_i = new eb[((ud) var19).field_o];
                 ((ud) var19).field_g = new byte[((ud) var19).field_o][][];
-                var5 = 123 % ((param2 - 75) / 46);
+                var5 = 1;
                 ((ud) var19).field_l = new int[((ud) var19).field_o];
                 ((ud) var19).field_h = new eb[((ud) var19).field_o];
                 var6 = 0;
@@ -259,7 +256,7 @@ final class fb extends ca {
               }
               L17: {
                 stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
-                stackOut_36_1 = ((StringBuilder) (Object) stackIn_36_1).append(stackIn_36_2).append(44).append(param1).append(44).append(param2).append(44);
+                stackOut_36_1 = ((StringBuilder) (Object) stackIn_36_1).append(stackIn_36_2).append(44).append(param1).append(44).append(-31).append(44);
                 stackIn_38_0 = stackOut_36_0;
                 stackIn_38_1 = stackOut_36_1;
                 stackIn_37_0 = stackOut_36_0;
@@ -294,18 +291,15 @@ final class fb extends ca {
     final static void a(int param0, ki param1) {
         nj var2 = null;
         try {
-            if (param0 != -2) {
-                String discarded$0 = fb.c(-98);
-            }
             nj.b(param1.a("", 1, "headers.packvorbis"));
             var2 = nj.a(param1, "jagex logo2.packvorbis", "");
-            dl discarded$1 = var2.a();
+            dl discarded$0 = var2.a();
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "fb.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "fb.E(" + -2 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static ee b(byte param0) {
+    final static ee b() {
         String var1 = am.b(114);
         if (var1 != null) {
             if (var1.indexOf('@') >= 0) {

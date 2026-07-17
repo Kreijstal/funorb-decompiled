@@ -5,15 +5,12 @@ final class wc extends qg {
     static ag field_B;
     static bj field_A;
 
-    final static void j(int param0) {
+    final static void j() {
     }
 
     final static void a(int param0, int param1, int param2) {
         ca.field_a = param2;
         ug.field_h = param0;
-        if (param1 != -16923) {
-            field_B = null;
-        }
     }
 
     private wc(int param0, int param1, int param2, int param3, ci param4, pl param5, lk param6) {

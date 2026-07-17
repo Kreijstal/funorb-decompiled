@@ -72,20 +72,16 @@ final class ad extends rqa {
         return stackIn_3_0;
     }
 
-    final static void a(int param0) {
-        hib.a(-105);
+    final static void a() {
+        int discarded$0 = -105;
+        hib.a();
     }
 
     ad(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
     }
 
-    public static void e(byte param0) {
-        if (param0 != -27) {
-            field_o = null;
-            field_o = null;
-            return;
-        }
+    public static void e() {
         field_o = null;
     }
 

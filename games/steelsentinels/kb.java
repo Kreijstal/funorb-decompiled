@@ -7,12 +7,9 @@ final class kb implements om {
     static String field_d;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
-        if (param0 != 5) {
-            return;
-        }
         field_d = null;
     }
 
@@ -22,14 +19,11 @@ final class kb implements om {
             var8_int = param6.c(param5);
             param7 = param7 - (3 + var8_int / 2);
             var8_int += 5;
-            if (!param4) {
-                kb.a(-79);
-            }
             pb.a(param7, -2 + -param6.field_U + param2, var8_int, param6.field_U - -4, param1);
             pb.h(param7, -param6.field_U + (param2 - 2), var8_int, 4 + param6.field_U, param3);
             param6.b(param5, 3 + param7, param2, param0, -1);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "kb.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 44 + param7 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "kb.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + 1 + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 44 + param7 + 41);
         }
     }
 

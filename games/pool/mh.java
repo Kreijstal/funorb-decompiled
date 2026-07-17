@@ -295,7 +295,7 @@ class mh extends fe {
         int var8 = 0;
         int var9 = 0;
         super.a(param0, (byte) 50, param2, param3);
-        int var5 = -21 % ((param1 - -42) / 53);
+        int var5 = -1;
         if (!(param0 == 0)) {
             return;
         }
@@ -306,7 +306,8 @@ class mh extends fe {
             var8 = var6.a(5286, (ei) this, param2);
             var9 = var6.a(param3, (ei) this, (byte) -7);
             do {
-                bj.a(var9 - -var7.field_p - 2, var7.field_q - -2, 2 + var7.field_w, var7.field_n + (var8 - 2), 2187);
+                int discarded$0 = 2187;
+                bj.a(var9 - -var7.field_p - 2, var7.field_q - -2, 2 + var7.field_w, var7.field_n + (var8 - 2));
                 var7 = var7.field_l;
             } while (var7 != null);
         }

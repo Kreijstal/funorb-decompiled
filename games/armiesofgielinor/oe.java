@@ -15,7 +15,8 @@ final class oe extends ro implements he {
         if (param0 == -1) {
           if (((oe) this).field_L) {
             if (!((oe) this).field_Ab) {
-              var2 = ki.a(-61440);
+              int discarded$2 = -61440;
+              var2 = ki.a();
               if (var2 == null) {
                 return super.a((byte) -1);
               } else {
@@ -36,7 +37,8 @@ final class oe extends ro implements he {
               return super.a((byte) -1);
             } else {
               L0: {
-                var2 = ki.a(-61440);
+                int discarded$3 = -61440;
+                var2 = ki.a();
                 if (var2 != null) {
                   this.a(false, (byte) -53, var2);
                   break L0;
@@ -52,7 +54,7 @@ final class oe extends ro implements he {
         }
     }
 
-    public static void j(byte param0) {
+    public static void j() {
         field_Cb = null;
         field_Bb = null;
         field_zb = null;
@@ -69,36 +71,38 @@ final class oe extends ro implements he {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var9 = 0;
         var9 = ArmiesOfGielinor.field_M ? 1 : 0;
-        if (param0 == -6) {
-          if (param6 < param4) {
-            if (param2 <= param4) {
-              if (param6 < param2) {
-                vp.a(param2, param6, param3, param4, param7, param5, qn.field_d, param1, (byte) 20);
-                return;
-              } else {
-                vp.a(param6, param2, param3, param4, param1, param5, qn.field_d, param7, (byte) 20);
-                return;
-              }
+        if (param6 < param4) {
+          if (param2 <= param4) {
+            if (param6 < param2) {
+              int discarded$6 = 20;
+              vp.a(param2, param6, param3, param4, param7, param5, qn.field_d, param1);
+              return;
             } else {
-              vp.a(param4, param6, param7, param2, param3, param5, qn.field_d, param1, (byte) 20);
+              int discarded$7 = 20;
+              vp.a(param6, param2, param3, param4, param1, param5, qn.field_d, param7);
               return;
             }
           } else {
-            if (param2 <= param6) {
-              if (param4 < param2) {
-                vp.a(param2, param4, param1, param6, param7, param5, qn.field_d, param3, (byte) 20);
-                return;
-              } else {
-                vp.a(param4, param2, param1, param6, param3, param5, qn.field_d, param7, (byte) 20);
-                return;
-              }
-            } else {
-              vp.a(param6, param4, param7, param2, param1, param5, qn.field_d, param3, (byte) 20);
-              return;
-            }
+            int discarded$8 = 20;
+            vp.a(param4, param6, param7, param2, param3, param5, qn.field_d, param1);
+            return;
           }
         } else {
-          return;
+          if (param2 <= param6) {
+            if (param4 < param2) {
+              int discarded$9 = 20;
+              vp.a(param2, param4, param1, param6, param7, param5, qn.field_d, param3);
+              return;
+            } else {
+              int discarded$10 = 20;
+              vp.a(param4, param2, param1, param6, param3, param5, qn.field_d, param7);
+              return;
+            }
+          } else {
+            int discarded$11 = 20;
+            vp.a(param6, param4, param7, param2, param1, param5, qn.field_d, param3);
+            return;
+          }
         }
     }
 
@@ -147,7 +151,8 @@ final class oe extends ro implements he {
                   if (param2.field_d == 248) {
                     L2: {
                       if (!param0) {
-                        no.b(false);
+                        int discarded$3 = 0;
+                        no.b();
                         break L2;
                       } else {
                         break L2;
@@ -188,7 +193,7 @@ final class oe extends ro implements he {
                   ((oe) this).a((kb) (Object) new qd((oe) this), (byte) -81);
                   return;
                 } else {
-                  fw discarded$2 = var5.a(ro.field_kb, (qo) this, (byte) -61);
+                  fw discarded$4 = var5.a(ro.field_kb, (qo) this, (byte) -61);
                   break L4;
                 }
               } else {
@@ -203,7 +208,7 @@ final class oe extends ro implements he {
                       break L5;
                     }
                   } else {
-                    fw discarded$3 = var5.a(ro.field_kb, (qo) this, (byte) 110);
+                    fw discarded$5 = var5.a(ro.field_kb, (qo) this, (byte) 110);
                     break L5;
                   }
                 }
@@ -268,7 +273,7 @@ final class oe extends ro implements he {
         return param0 | param1;
     }
 
-    final static void a(byte[] param0, int param1) {
+    final static void a(byte[] param0) {
         if (!(1 <= param0[0])) {
             return;
         }

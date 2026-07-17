@@ -12,7 +12,7 @@ final class fg extends cj implements java.awt.image.ImageProducer, java.awt.imag
     public final void requestTopDownLeftRightResend(java.awt.image.ImageConsumer param0) {
     }
 
-    final static String a(String param0, ci param1, int param2, String param3, int param4) {
+    final static String a(String param0, ci param1, int param2, String param3) {
         RuntimeException var5 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -67,7 +67,7 @@ final class fg extends cj implements java.awt.image.ImageProducer, java.awt.imag
         try {
           L0: {
             if (param1.a((byte) -127)) {
-              stackOut_3_0 = param0 + " - " + param1.a(true, param2) + "%";
+              stackOut_3_0 = param0 + " - " + param1.a(true, 0) + "%";
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -131,7 +131,7 @@ final class fg extends cj implements java.awt.image.ImageProducer, java.awt.imag
           }
           L3: {
             stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(param2).append(44);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(0).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -233,7 +233,7 @@ final class fg extends cj implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    final static void d(byte param0) {
+    final static void d() {
         if (!(ge.field_x)) {
             throw new IllegalStateException();
         }
@@ -242,7 +242,7 @@ final class fg extends cj implements java.awt.image.ImageProducer, java.awt.imag
         gl.field_y = 0;
     }
 
-    private final synchronized void c(byte param0) {
+    private final synchronized void c() {
         if (!(((fg) this).field_k != null)) {
             return;
         }
@@ -252,12 +252,13 @@ final class fg extends cj implements java.awt.image.ImageProducer, java.awt.imag
 
     final void a(int param0, int param1, java.awt.Graphics param2, int param3) {
         try {
-            this.c((byte) 28);
+            int discarded$0 = 28;
+            this.c();
             if (param0 != -32299) {
                 Object var6 = null;
                 ((fg) this).a(8, -89, (java.awt.Component) null, (byte) 114);
             }
-            boolean discarded$0 = param2.drawImage(((fg) this).field_f, param1, param3, (java.awt.image.ImageObserver) this);
+            boolean discarded$1 = param2.drawImage(((fg) this).field_f, param1, param3, (java.awt.image.ImageObserver) this);
         } catch (RuntimeException runtimeException) {
             throw ch.a((Throwable) (Object) runtimeException, "fg.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
@@ -824,12 +825,15 @@ final class fg extends cj implements java.awt.image.ImageProducer, java.awt.imag
             int var5_int = 101 / ((-90 - param3) / 34);
             ((fg) this).field_h = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
             ((fg) this).field_f = param2.createImage((java.awt.image.ImageProducer) this);
-            this.c((byte) 28);
-            boolean discarded$0 = param2.prepareImage(((fg) this).field_f, (java.awt.image.ImageObserver) this);
-            this.c((byte) 28);
+            int discarded$0 = 28;
+            this.c();
             boolean discarded$1 = param2.prepareImage(((fg) this).field_f, (java.awt.image.ImageObserver) this);
-            this.c((byte) 28);
-            boolean discarded$2 = param2.prepareImage(((fg) this).field_f, (java.awt.image.ImageObserver) this);
+            int discarded$2 = 28;
+            this.c();
+            boolean discarded$3 = param2.prepareImage(((fg) this).field_f, (java.awt.image.ImageObserver) this);
+            int discarded$4 = 28;
+            this.c();
+            boolean discarded$5 = param2.prepareImage(((fg) this).field_f, (java.awt.image.ImageObserver) this);
             ((fg) this).a(103);
         } catch (RuntimeException runtimeException) {
             throw ch.a((Throwable) (Object) runtimeException, "fg.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
@@ -845,38 +849,30 @@ final class fg extends cj implements java.awt.image.ImageProducer, java.awt.imag
         var3 = Transmogrify.field_A ? 1 : 0;
         try {
           L0: {
-            L1: {
-              if (param0 <= -56) {
-                break L1;
-              } else {
-                field_j = -24L;
-                break L1;
-              }
-            }
             var4 = (gd) (Object) rh.field_r.a((byte) -95);
-            L2: while (true) {
+            L1: while (true) {
               if (var4 == null) {
                 var2 = oc.field_G.a((byte) -95);
-                L3: while (true) {
+                L2: while (true) {
                   if (var2 == null) {
                     break L0;
                   } else {
                     re.a(2, 4);
                     var2 = oc.field_G.a(true);
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
                 ne.a((byte) 7, var4, 4);
                 var4 = (gd) (Object) rh.field_r.a(true);
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ch.a((Throwable) (Object) var2_ref, "fg.D(" + param0 + 44 + 4 + 41);
+          throw ch.a((Throwable) (Object) var2_ref, "fg.D(" + -98 + 44 + 4 + 41);
         }
     }
 
@@ -888,7 +884,7 @@ final class fg extends cj implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_i = null;
     }
 

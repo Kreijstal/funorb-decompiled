@@ -34,7 +34,7 @@ final class m implements Iterable {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_f = null;
         field_g = null;

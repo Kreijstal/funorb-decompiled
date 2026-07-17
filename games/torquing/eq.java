@@ -68,7 +68,7 @@ abstract class eq implements sk {
         }
     }
 
-    final static void a(t param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void a(t param0, int param1, int param2, int param3, int param4, int param5) {
         int var9_int = 0;
         RuntimeException var9 = null;
         int var10 = 0;
@@ -91,26 +91,26 @@ abstract class eq implements sk {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var9_int = -param1 + (param4 + param0.field_v) + param3;
+            var9_int = param4 + param0.field_v + param3;
             var10 = 30 + param3 + (param4 + param0.field_v);
             var11 = (param0.field_t >> 1) + (param0.field_r + param5);
-            ph.f(var9_int, 0, var10, param7 + var11);
-            param0.a(-1 + param4, param5 + -1, param6);
-            param0.a(param4 - 1, 1 + param5, param6);
+            ph.f(var9_int, 0, var10, var11);
+            param0.a(-1 + param4, param5 + -1, 80);
+            param0.a(param4 - 1, 1 + param5, 80);
             ph.a(mo.field_w);
-            ph.f(1 + var9_int, 0, var10 - -1, var11 + param7);
-            param0.a(1 + param4, param5 - 1, param6);
-            param0.a(1 + param4, 1 + param5, param6);
+            ph.f(1 + var9_int, 0, var10 - -1, var11);
+            param0.a(1 + param4, param5 - 1, 80);
+            param0.a(1 + param4, 1 + param5, 80);
             ph.a(mo.field_w);
             var9_int = -30 + (param0.field_s + param0.field_v) - (-param4 + param3);
-            var10 = param0.field_v + (param0.field_s + (param4 - param3) + -param1);
-            ph.f(var9_int, var11 - param7, var10, 480);
-            param0.a(param4 + -1, -1 + param5, param6);
-            param0.a(param4 - 1, 1 + param5, param6);
+            var10 = param0.field_v + (param0.field_s + (param4 - param3));
+            ph.f(var9_int, var11, var10, 480);
+            param0.a(param4 + -1, -1 + param5, 80);
+            param0.a(param4 - 1, 1 + param5, 80);
             ph.a(mo.field_w);
-            ph.f(var9_int + param2, var11 + -param7, var10 + 1, 480);
-            param0.a(1 + param4, param5 - 1, param6);
-            param0.a(param4 - -1, 1 + param5, param6);
+            ph.f(var9_int + 1, var11, var10 + 1, 480);
+            param0.a(1 + param4, param5 - 1, 80);
+            param0.a(param4 - -1, 1 + param5, 80);
             ph.a(mo.field_w);
             break L0;
           }
@@ -142,7 +142,7 @@ abstract class eq implements sk {
               break L1;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + 30 + 41);
+          throw rb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 0 + 44 + 1 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + 80 + 44 + 0 + 44 + 30 + 41);
         }
     }
 

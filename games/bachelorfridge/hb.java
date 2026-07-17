@@ -10,7 +10,7 @@ final class hb extends aba {
     static String field_i;
     static boolean field_j;
 
-    public static void d(int param0) {
+    public static void d() {
         field_k = null;
         field_g = null;
         field_i = null;
@@ -27,7 +27,8 @@ final class hb extends aba {
             L0: {
               eg.field_p[kaa.field_m].a(param3, 32);
               if (kaa.field_m == 11) {
-                fba.a(param3, (byte) -77);
+                int discarded$1 = -77;
+                fba.a(param3);
                 break L0;
               } else {
                 break L0;
@@ -55,7 +56,7 @@ final class hb extends aba {
                       }
                     }
                   }
-                  if (~iba.field_s != param0) {
+                  if (iba.field_s != -3) {
                     if (iba.field_s == 1) {
                       if (kaa.field_m == 0) {
                         L3: {
@@ -114,7 +115,7 @@ final class hb extends aba {
             }
             if (kaa.field_m == 7) {
               ut.field_o = 0;
-              if (~iba.field_s == param0) {
+              if (iba.field_s == -3) {
                 if (kaa.field_m != 0) {
                   L8: {
                     if (1 == kaa.field_m) {
@@ -177,7 +178,7 @@ final class hb extends aba {
               if (kaa.field_m == 8) {
                 L13: {
                   ut.field_o = 0;
-                  if (~iba.field_s == param0) {
+                  if (iba.field_s == -3) {
                     if (kaa.field_m != 0) {
                       break L13;
                     } else {
@@ -232,7 +233,7 @@ final class hb extends aba {
                 return;
               } else {
                 L18: {
-                  if (~iba.field_s == param0) {
+                  if (iba.field_s == -3) {
                     if (kaa.field_m != 0) {
                       break L18;
                     } else {
@@ -307,7 +308,7 @@ final class hb extends aba {
                   }
                   L25: {
                     L26: {
-                      if (~iba.field_s == param0) {
+                      if (iba.field_s == -3) {
                         break L26;
                       } else {
                         if (iba.field_s != 1) {
@@ -340,7 +341,7 @@ final class hb extends aba {
               L28: {
                 L29: {
                   ut.field_o = 0;
-                  if (~iba.field_s == param0) {
+                  if (iba.field_s == -3) {
                     break L29;
                   } else {
                     if (iba.field_s != 1) {
@@ -371,7 +372,7 @@ final class hb extends aba {
                 L31: {
                   L32: {
                     ut.field_o = 0;
-                    if (~iba.field_s == param0) {
+                    if (iba.field_s == -3) {
                       break L32;
                     } else {
                       if (iba.field_s != 1) {
@@ -400,7 +401,7 @@ final class hb extends aba {
               } else {
                 L34: {
                   L35: {
-                    if (~iba.field_s == param0) {
+                    if (iba.field_s == -3) {
                       break L35;
                     } else {
                       if (iba.field_s != 1) {
@@ -470,26 +471,18 @@ final class hb extends aba {
             var12 = 0;
             L2: while (true) {
               if (6 <= var12) {
-                L3: {
-                  if (param4 < -87) {
-                    break L3;
-                  } else {
-                    field_j = true;
-                    break L3;
-                  }
-                }
                 break L0;
               } else {
-                L4: {
-                  L5: {
+                L3: {
+                  L4: {
                     if (var12 >= 5) {
-                      break L5;
+                      break L4;
                     } else {
                       if (null != r.field_l[var12]) {
-                        break L5;
+                        break L4;
                       } else {
                         var12++;
-                        break L4;
+                        break L3;
                       }
                     }
                   }
@@ -501,10 +494,10 @@ final class hb extends aba {
                     cb.field_o[var12].a(var7, 31407, var9 - param1, param1, 0);
                     wg.field_i[var12].a(-param2 + var7 + -param2, 31407, param0, var9, param2);
                     bda.field_m[var12].a(var7 + (-param2 + -param2), 31407, var8 - param1 + -var10, var10, param2);
-                    break L4;
+                    break L3;
                   } else {
                     kg.field_a.a(var7, 31407, var8, var6_int, var13);
-                    break L4;
+                    break L3;
                   }
                 }
                 var12++;
@@ -515,7 +508,7 @@ final class hb extends aba {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var6, "hb.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw pe.a((Throwable) (Object) var6, "hb.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + -103 + 44 + param5 + 41);
         }
     }
 

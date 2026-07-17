@@ -630,7 +630,7 @@ final class sq extends cg {
         }
     }
 
-    private final void a(l param0, l param1, int param2) {
+    private final void a(l param0, l param1) {
         try {
             ((sq) this).field_l = param0;
             ((sq) this).field_y = param1;
@@ -723,12 +723,9 @@ final class sq extends cg {
         try {
             ((sq) this).field_n = param3;
             param3.a((byte) -105, param2, -1);
-            if (param0 != 1048576) {
-                ((sq) this).field_o = null;
-            }
             param3.a(param1, (byte) 55);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "sq.A(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "sq.A(" + 1048576 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -1506,7 +1503,8 @@ final class sq extends cg {
         ((sq) this).field_p = false;
         ((sq) this).field_j = 0;
         try {
-            this.a(param1, param0, 1048576);
+            int discarded$0 = 1048576;
+            this.a(param1, param0);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "sq.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
         }

@@ -12,67 +12,59 @@ final class qj {
     static he field_f;
 
     final static void a(int param0, java.awt.Component param1) {
-        RuntimeException runtimeException = null;
+        RuntimeException var2 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
         String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              param1.setFocusTraversalKeysEnabled(false);
-              param1.addKeyListener((java.awt.event.KeyListener) (Object) ji.field_c);
-              param1.addFocusListener((java.awt.event.FocusListener) (Object) ji.field_c);
-              if (param0 < -18) {
-                break L1;
-              } else {
-                field_f = null;
-                break L1;
-              }
-            }
+            param1.setFocusTraversalKeysEnabled(false);
+            param1.addKeyListener((java.awt.event.KeyListener) (Object) ji.field_c);
+            param1.addFocusListener((java.awt.event.FocusListener) (Object) ji.field_c);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("qj.F(").append(param0).append(44);
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+          L1: {
+            var2 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_1 = new StringBuilder().append("qj.F(").append(-53).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
-              break L2;
-            } else {
               stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
               stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              break L2;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw ie.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
         }
     }
 
@@ -82,7 +74,7 @@ final class qj {
         return var1;
     }
 
-    final static void a(boolean param0, int param1, int param2, boolean param3) {
+    final static void a(boolean param0, int param1, int param2) {
         int var4 = 0;
         L0: {
           uh.field_r.d(param2, param1);
@@ -135,38 +127,30 @@ final class qj {
                   }
                 }
                 L2: {
-                  if (param1 == 14656) {
+                  if (nj.field_p.field_j != 0) {
                     break L2;
                   } else {
-                    field_b = null;
-                    break L2;
+                    if (la.a(false) > 10000L + ck.field_e) {
+                      nj.field_p.d(param0, -18392);
+                      break L2;
+                    } else {
+                      break L2;
+                    }
                   }
                 }
                 L3: {
-                  if (nj.field_p.field_j != 0) {
-                    break L3;
-                  } else {
-                    if (la.a(false) > 10000L + ck.field_e) {
-                      nj.field_p.d(param0, param1 ^ -32408);
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                }
-                L4: {
                   if (nj.field_p.field_j > 0) {
                     {
-                      L5: {
+                      L4: {
                         uj.field_j.a(nj.field_p.field_j, -30537, nj.field_p.field_h, 0);
                         ck.field_e = la.a(false);
-                        break L5;
+                        break L4;
                       }
                     }
                     nj.field_p.field_j = 0;
-                    break L4;
+                    break L3;
                   } else {
-                    break L4;
+                    break L3;
                   }
                 }
                 return;
@@ -180,7 +164,7 @@ final class qj {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         field_f = null;
@@ -195,7 +179,7 @@ final class qj {
         char[] var6 = new char[param0];
         char[] var3 = var6;
         for (var4 = 0; var4 < param0; var4++) {
-            var6[var4] = param1;
+            var6[var4] = '*';
         }
         return new String(var6);
     }

@@ -42,15 +42,15 @@ final class li {
           try {
             L0: {
               var3_int = param2.a(false);
-              if (var3_int > param0) {
-                var3_int = param0;
+              if (var3_int > 80) {
+                var3_int = 80;
                 break L0;
               } else {
                 break L0;
               }
             }
             var4 = new byte[var3_int];
-            param2.field_n = param2.field_n + me.field_z.a(param2.field_n, (byte) 91, param1, var4, param2.field_r, var3_int);
+            param2.field_n = param2.field_n + me.field_z.a(param2.field_n, (byte) 91, 0, var4, param2.field_r, var3_int);
             var5 = un.a(var4, 0, 0, var3_int);
             stackOut_3_0 = (String) var5;
             stackIn_4_0 = stackOut_3_0;
@@ -67,7 +67,7 @@ final class li {
           L1: {
             var3_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var3_ref;
-            stackOut_7_1 = new StringBuilder().append("li.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_7_1 = new StringBuilder().append("li.A(").append(80).append(44).append(0).append(44);
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -94,7 +94,7 @@ final class li {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_i = null;
         field_f = null;

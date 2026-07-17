@@ -727,7 +727,7 @@ final class ic {
         return wg.a(ba.field_a, 0);
     }
 
-    private final void a(int param0, int param1, int param2, int param3, byte param4) {
+    private final void a(int param0, int param1, int param2, int param3) {
         gk.field_g.g(58, 8);
         gk.field_g.a(((ic) this).field_C.field_u, -70);
         gk.field_g.a(param3, 66);
@@ -740,9 +740,6 @@ final class ic {
     }
 
     private final int b(int param0, int param1) {
-        if (param0 != 200) {
-            return -47;
-        }
         return param1 == 0 ? 30136 : 16777215;
     }
 
@@ -772,7 +769,8 @@ final class ic {
             if (!((ic) this).field_g) {
                 this.a(-13020, var6, var5, var7, var4);
             } else {
-                this.a(var6, var7, var5, var4, (byte) 85);
+                int discarded$0 = 85;
+                this.a(var6, var7, var5, var4);
             }
         }
         if (param1 != -11272) {
@@ -1381,7 +1379,7 @@ final class ic {
         try {
           L0: {
             pj.a(param2, 256);
-            df.b(100, param0, 10, 400, 0);
+            df.b(100, 0, 10, 400, 0);
             df.b(530, 0, 10, 400, 0);
             df.b(110, 0, 420, 400, 191);
             var4_int = 0;
@@ -1460,7 +1458,8 @@ final class ic {
                     }
                     var6 = stackIn_8_0;
                     var8_int = 0;
-                    var9 = this.b(var4_int, var5, -2096, this.e(param0 ^ 6121), var8_int);
+                    int discarded$1 = 6121;
+                    var9 = this.b(var4_int, var5, -2096, this.e(), var8_int);
                     df.c(var6, var7, ((ic) this).field_o, var9);
                     var5++;
                     continue L6;
@@ -1474,7 +1473,7 @@ final class ic {
           L8: {
             var4 = decompiledCaughtException;
             stackOut_26_0 = (RuntimeException) var4;
-            stackOut_26_1 = new StringBuilder().append("ic.H(").append(param0).append(44).append(param1).append(44);
+            stackOut_26_1 = new StringBuilder().append("ic.H(").append(0).append(44).append(param1).append(44);
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
@@ -2068,7 +2067,7 @@ final class ic {
         try {
           L0: {
             L1: {
-              kh.a(param1, param7, param2, 240, param5, (byte) -59, param3, param4, param1, param7, param6, param0, param8, param5, param10);
+              kh.a(param1, param7, param2, param11, param5, (byte) -59, param3, param4, param1, param7, param6, param0, param8, param5, param10);
               if (param9 == -16824) {
                 break L1;
               } else {
@@ -2156,7 +2155,7 @@ final class ic {
               break L4;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 44 + param10 + 44 + 240 + 41);
+          throw kg.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 44 + param10 + 44 + param11 + 41);
         }
     }
 
@@ -2236,7 +2235,7 @@ final class ic {
         oj.b(-9, ((ic) this).field_r);
     }
 
-    private final void a(mg param0, boolean param1, int param2) {
+    private final void a(mg param0, boolean param1) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -2329,7 +2328,8 @@ final class ic {
             df.b(100, 0, 10, 400, 0);
             df.b(530, 0, 10, 400, 0);
             df.b(110, 0, 420, 400, 263172);
-            var4_int = this.e(6121);
+            int discarded$4 = 6121;
+            var4_int = this.e();
             L1: {
               if (var4_int <= 0) {
                 stackOut_5_0 = -var4_int;
@@ -2459,7 +2459,8 @@ final class ic {
                             }
                             var8 = this.a(param1, 4347, ((ic) this).field_x);
                             var9 = this.a(((ic) this).field_h, 5975);
-                            df.f(var8, var9, ((ic) this).field_d, 16776964);
+                            int discarded$5 = 16776964;
+                            df.f(var8, var9, ((ic) this).field_d);
                             break L11;
                           }
                         }
@@ -2484,7 +2485,8 @@ final class ic {
                               if (!ke.field_p.field_k) {
                                 break L16;
                               } else {
-                                wd.b(8);
+                                int discarded$6 = 8;
+                                wd.b();
                                 break L16;
                               }
                             }
@@ -2739,7 +2741,8 @@ final class ic {
                                   if (~((ic) this).field_w <= ~(-150 + sh.field_yb[((ic) this).field_C.field_y])) {
                                     break L29;
                                   } else {
-                                    df.f(var8, var9, ((ic) this).field_d - -1, 16776964);
+                                    int discarded$7 = 16776964;
+                                    df.f(var8, var9, ((ic) this).field_d - -1);
                                     break L29;
                                   }
                                 }
@@ -2961,9 +2964,9 @@ final class ic {
     private final int b(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = 0;
-        int stackIn_35_0 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_33_0 = 0;
+        int stackIn_33_0 = 0;
+        int stackOut_32_0 = 0;
+        int stackOut_31_0 = 0;
         L0: {
           L1: {
             var7 = Virogrid.field_F ? 1 : 0;
@@ -3051,36 +3054,32 @@ final class ic {
             break L0;
           }
         }
-        if (param2 == -2096) {
-          L6: {
-            if (128 >= param4) {
-              if (param4 < -128) {
-                param4 = -128;
-                break L6;
-              } else {
-                break L6;
-              }
+        L6: {
+          if (128 >= param4) {
+            if (param4 < -128) {
+              param4 = -128;
+              break L6;
             } else {
-              param4 = 128;
               break L6;
             }
+          } else {
+            param4 = 128;
+            break L6;
           }
-          L7: {
-            if (param4 > 0) {
-              stackOut_34_0 = -(65793 * (-param4 + 128)) + 16777215;
-              stackIn_35_0 = stackOut_34_0;
-              break L7;
-            } else {
-              stackOut_33_0 = 30136 - (-param4 + 128);
-              stackIn_35_0 = stackOut_33_0;
-              break L7;
-            }
-          }
-          var6 = stackIn_35_0;
-          return var6;
-        } else {
-          return -59;
         }
+        L7: {
+          if (param4 > 0) {
+            stackOut_32_0 = -(65793 * (-param4 + 128)) + 16777215;
+            stackIn_33_0 = stackOut_32_0;
+            break L7;
+          } else {
+            stackOut_31_0 = 30136 - (-param4 + 128);
+            stackIn_33_0 = stackOut_31_0;
+            break L7;
+          }
+        }
+        var6 = stackIn_33_0;
+        return var6;
     }
 
     final void a(int param0, boolean param1) {
@@ -3379,9 +3378,6 @@ final class ic {
     }
 
     private final int a(boolean param0, int param1, int param2) {
-        if (param1 != 4347) {
-            ((ic) this).field_c = -75;
-        }
         return param0 ? ((ic) this).field_B + 140 + ((ic) this).field_r * param2 : -((ic) this).field_B + 500 + -(((ic) this).field_r * param2);
     }
 
@@ -3440,60 +3436,56 @@ final class ic {
         var23 = id.a(var10, 32) * (var19 - -var12) / 65536 + var16;
         var24 = var17 + (2 * var8 + var19 - -var11) * nf.a(21855, var9) / 65536;
         var25 = var18 + id.a(var9, 32) * (var11 + var19 + 2 * var8) / 65536;
-        if (!param2) {
-          var26 = (2 * var8 + (var12 + var19)) * nf.a(21855, var10) / 65536 + var17;
-          var27 = var18 + (2 * var8 + (var19 + var12)) * id.a(var10, 32) / 65536;
-          df.a(param4 + 2, param1, 2 + var13, var14, 263172);
-          df.a(-2 + param4, param1, var13 + -2, var14, 263172);
-          df.a(param4, param1 - -2, var13, 2 + var14, 263172);
-          df.a(param4, -2 + param1, var13, var14 - 2, 263172);
-          df.a(param4 - -3, param1, 3 + var13, var14, 263172);
-          df.a(-3 + param4, param1, var13 + -3, var14, 263172);
-          df.a(param4, 3 + param1, var13, var14 - -3, 263172);
-          df.a(param4, -3 + param1, var13, var14 - 3, 263172);
-          df.c(param4, param1, 4, 0);
-          df.c(param4, param1, 2, param3);
-          var46 = new int[3];
-          var46[0] = var15;
-          var47 = new int[3];
-          var46[1] = var20;
-          var46[2] = var22;
-          var47[0] = var16;
-          var47[1] = var21;
-          var47[2] = var23;
-          fk.a(var18, var25, var27, var17, var24, var26, 263172);
-          fk.a(var47[0], var47[1], var47[2], var46[0], var46[1], var46[2], param3);
-          df.a(param4, param1, var13, var14, param3);
-          df.a(param4 + 1, param1, var13 + 1, var14, param3);
-          df.a(param4 - 1, param1, -1 + var13, var14, param3);
-          df.a(param4, 1 + param1, var13, var14 - -1, param3);
-          df.a(param4, param1 + -1, var13, var14 - 1, param3);
-          var30 = (2 + var19) / 2 * nf.a(21855, var7) / 65536 + param5;
-          var31 = param0 + id.a(var7, 32) * ((2 + var19) / 2) / 65536;
-          var32 = -(3 * nf.a(21855, var7) / 65536) + param4;
-          var33 = -(3 * id.a(var7, 32) / 65536) + param1;
-          var34 = (double)(id.field_r % 100) / 100.0;
-          var36 = 0;
-          L0: while (true) {
-            if (var36 >= 4) {
-              return;
+        var26 = (2 * var8 + (var12 + var19)) * nf.a(21855, var10) / 65536 + var17;
+        var27 = var18 + (2 * var8 + (var19 + var12)) * id.a(var10, 32) / 65536;
+        df.a(param4 + 2, param1, 2 + var13, var14, 263172);
+        df.a(-2 + param4, param1, var13 + -2, var14, 263172);
+        df.a(param4, param1 - -2, var13, 2 + var14, 263172);
+        df.a(param4, -2 + param1, var13, var14 - 2, 263172);
+        df.a(param4 - -3, param1, 3 + var13, var14, 263172);
+        df.a(-3 + param4, param1, var13 + -3, var14, 263172);
+        df.a(param4, 3 + param1, var13, var14 - -3, 263172);
+        df.a(param4, -3 + param1, var13, var14 - 3, 263172);
+        df.c(param4, param1, 4, 0);
+        df.c(param4, param1, 2, param3);
+        var46 = new int[3];
+        var46[0] = var15;
+        var47 = new int[3];
+        var46[1] = var20;
+        var46[2] = var22;
+        var47[0] = var16;
+        var47[1] = var21;
+        var47[2] = var23;
+        fk.a(var18, var25, var27, var17, var24, var26, 263172);
+        fk.a(var47[0], var47[1], var47[2], var46[0], var46[1], var46[2], param3);
+        df.a(param4, param1, var13, var14, param3);
+        df.a(param4 + 1, param1, var13 + 1, var14, param3);
+        df.a(param4 - 1, param1, -1 + var13, var14, param3);
+        df.a(param4, 1 + param1, var13, var14 - -1, param3);
+        df.a(param4, param1 + -1, var13, var14 - 1, param3);
+        var30 = (2 + var19) / 2 * nf.a(21855, var7) / 65536 + param5;
+        var31 = param0 + id.a(var7, 32) * ((2 + var19) / 2) / 65536;
+        var32 = -(3 * nf.a(21855, var7) / 65536) + param4;
+        var33 = -(3 * id.a(var7, 32) / 65536) + param1;
+        var34 = (double)(id.field_r % 100) / 100.0;
+        var36 = 0;
+        L0: while (true) {
+          if (var36 >= 4) {
+            return;
+          } else {
+            var37 = (int)Math.round((double)(-var32 + var30) * var34 + (double)var32);
+            var38 = (int)Math.round((double)var33 + (double)(-var33 + var31) * var34);
+            var34 = var34 + 0.25;
+            df.c(var37, var38, 1, 263172);
+            if (var34 > 1.0) {
+              var34 = var34 - 1.0;
+              var36++;
+              continue L0;
             } else {
-              var37 = (int)Math.round((double)(-var32 + var30) * var34 + (double)var32);
-              var38 = (int)Math.round((double)var33 + (double)(-var33 + var31) * var34);
-              var34 = var34 + 0.25;
-              df.c(var37, var38, 1, 263172);
-              if (var34 > 1.0) {
-                var34 = var34 - 1.0;
-                var36++;
-                continue L0;
-              } else {
-                var36++;
-                continue L0;
-              }
+              var36++;
+              continue L0;
             }
           }
-        } else {
-          return;
         }
     }
 
@@ -3601,7 +3593,8 @@ final class ic {
                         }
                         var7 = stackIn_41_0;
                         var8 = -(((ic) this).field_r * ((ic) this).field_h) + (-((ic) this).field_p + 370);
-                        df.f(var7, var8, ((ic) this).field_o, 16776964);
+                        int discarded$3 = 16776964;
+                        df.f(var7, var8, ((ic) this).field_o);
                         break L4;
                       }
                     }
@@ -3625,8 +3618,10 @@ final class ic {
                           }
                           var7 = stackIn_47_0;
                           var8 = -((ic) this).field_p + (370 + -(((ic) this).field_A.field_k * ((ic) this).field_r));
-                          df.f(var7, var8, ((ic) this).field_o, 16776964);
-                          df.f(var7, var8, 1 + ((ic) this).field_o, 16776964);
+                          int discarded$4 = 16776964;
+                          df.f(var7, var8, ((ic) this).field_o);
+                          int discarded$5 = 16776964;
+                          df.f(var7, var8, 1 + ((ic) this).field_o);
                           break L8;
                         }
                       }
@@ -3771,7 +3766,8 @@ final class ic {
         try {
           L0: {
             L1: {
-              this.a(param2, param0, 9);
+              int discarded$2 = 9;
+              this.a(param2, param0);
               if (param1 > 60) {
                 break L1;
               } else {
@@ -4064,7 +4060,8 @@ final class ic {
                                             if (~((ic) this).field_C.field_A != ~((ic) this).field_e) {
                                               break L14;
                                             } else {
-                                              this.a(((ic) this).field_A.field_c, ((ic) this).field_A.field_k, var13, var12, (byte) 85);
+                                              int discarded$3 = 85;
+                                              this.a(((ic) this).field_A.field_c, ((ic) this).field_A.field_k, var13, var12);
                                               ((ic) this).field_A.field_c = -1;
                                               ((ic) this).field_A.field_k = -1;
                                               ((ic) this).field_D = false;
@@ -4080,7 +4077,7 @@ final class ic {
                                         } else {
                                           L15: {
                                             if (!((ic) this).field_C.a((byte) 127, var13, var12, (byte)((ic) this).field_C.field_A)) {
-                                              pe discarded$2 = vm.a((byte) 30, of.field_b);
+                                              pe discarded$4 = vm.a((byte) 30, of.field_b);
                                               break L15;
                                             } else {
                                               break L15;
@@ -4129,7 +4126,7 @@ final class ic {
                                 } else {
                                   if (param5 == 2) {
                                     if (((ic) this).field_A.field_c != -1) {
-                                      pe discarded$3 = vm.a((byte) 30, of.field_b);
+                                      pe discarded$5 = vm.a((byte) 30, of.field_b);
                                       ((ic) this).field_A.field_c = -1;
                                       ((ic) this).field_A.field_k = -1;
                                       break L9;
@@ -4178,21 +4175,15 @@ final class ic {
     }
 
     private final int a(int param0, int param1) {
-        if (param1 != 5975) {
-            ((ic) this).field_e = 116;
-        }
         return -((ic) this).field_p + 370 - ((ic) this).field_r * param0;
     }
 
-    private final int e(int param0) {
+    private final int e() {
         int var2 = 31 & id.field_r >> 1;
         if (!(var2 < 16)) {
             var2 = 32 + -var2;
         }
         var2 = 16 + (var2 >> 1);
-        if (param0 != 6121) {
-            return -8;
-        }
         if (!(((ic) this).field_C.field_A != 0)) {
             var2 = -var2;
         }

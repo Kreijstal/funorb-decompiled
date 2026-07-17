@@ -16,9 +16,9 @@ final class li extends hi {
     static boolean[] field_r;
     static int field_q;
 
-    final static void a(int param0, int param1) {
-        int var2 = -40 % ((param1 - 55) / 37);
-        ch.field_a = 1000000000L / (long)param0;
+    final static void a() {
+        int var2 = 0;
+        ch.field_a = 20000000L;
     }
 
     li(ig param0, ig param1) {
@@ -122,7 +122,7 @@ final class li extends hi {
         return stackIn_10_0;
     }
 
-    final static nc a(byte[] param0, int param1) {
+    final static nc a(byte[] param0) {
         nc var2 = null;
         RuntimeException var2_ref = null;
         nc stackIn_6_0 = null;

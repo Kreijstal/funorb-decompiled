@@ -10,7 +10,7 @@ final class kd extends jf {
     static String field_s;
     static double field_r;
 
-    private final void e(int param0) {
+    private final void e() {
         try {
             Exception var3 = null;
             Throwable decompiledCaughtException = null;
@@ -110,7 +110,8 @@ final class kd extends jf {
                     break L4;
                   }
                 }
-                this.e(22112);
+                int discarded$1 = 22112;
+                this.e();
                 this.a(param2 + 67, param0);
                 ((kd) this).field_m.field_n = 0;
                 ((kd) this).field_f = null;
@@ -300,13 +301,13 @@ final class kd extends jf {
         hb var3 = null;
         try {
             var3 = vh.field_a;
-            var3.b(true, param1);
+            var3.b(true, 5);
             var3.f(111, 2);
             var3.f(100, 0);
             var3.f(119, param2.field_m);
-            int var4 = 2 % ((-44 - param0) / 35);
+            int var4 = 0;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "kd.E(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "kd.E(" + -115 + 44 + 5 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

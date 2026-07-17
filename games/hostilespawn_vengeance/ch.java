@@ -106,7 +106,7 @@ class ch {
         ((ch) this).field_i = 0.0;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         re.field_k = false;
         qh.field_q = -1;
         eb.field_d = null;

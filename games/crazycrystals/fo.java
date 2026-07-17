@@ -24,26 +24,20 @@ final class fo extends jb {
             var4 = (hp) (Object) cf.field_c.g(32073);
             L1: while (true) {
               if (var4 == null) {
-                L2: {
-                  var5 = (ak) (Object) hd.field_d.g(32073);
-                  if (param1 == -98) {
-                    break L2;
-                  } else {
-                    field_m = null;
-                    break L2;
-                  }
-                }
-                L3: while (true) {
+                var5 = (ak) (Object) hd.field_d.g(32073);
+                L2: while (true) {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    j.a(var5, param0, false);
+                    int discarded$8 = 0;
+                    int discarded$9 = 3;
+                    j.a(var5);
                     var5 = (ak) (Object) hd.field_d.a(false);
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
-                tb.a(param0, var4, (byte) -125);
+                tb.a(3, var4, (byte) -125);
                 var4 = (hp) (Object) cf.field_c.a(false);
                 continue L1;
               }
@@ -52,11 +46,11 @@ final class fo extends jb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dn.a((Throwable) (Object) var2, "fo.A(" + param0 + 44 + param1 + 41);
+          throw dn.a((Throwable) (Object) var2, "fo.A(" + 3 + 44 + -98 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_i = null;
         field_g = null;
         field_m = null;

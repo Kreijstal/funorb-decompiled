@@ -8,12 +8,13 @@ final class cd {
     static int field_e;
     static int field_b;
 
-    final static void a(byte param0) {
+    final static void a() {
         int var1 = 0;
         L0: {
           tq.d((byte) -128);
           if (pa.field_K != null) {
-            he.a(pa.field_K, 0);
+            int discarded$23 = 0;
+            he.a(pa.field_K);
             break L0;
           } else {
             break L0;
@@ -21,9 +22,12 @@ final class cd {
         }
         v.a(-22444);
         var1 = 8;
-        aq.a(0);
-        am.b((byte) 70);
-        if (oc.b((byte) 84)) {
+        int discarded$24 = 0;
+        aq.a();
+        int discarded$25 = 70;
+        am.b();
+        int discarded$26 = 84;
+        if (oc.b()) {
           ej.field_j.b(false, 1);
           de.a(0, 0);
           dn.c(-111);

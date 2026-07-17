@@ -12,40 +12,32 @@ final class hi extends java.awt.Canvas {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_7_0 = 0;
+        int stackIn_5_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
+        int stackOut_4_0 = 0;
         var4 = stellarshard.field_B;
         try {
           L0: {
-            L1: {
-              if (param1 == 109) {
-                break L1;
-              } else {
-                hi.a((byte) -90);
-                break L1;
-              }
-            }
             var3_int = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (param0 <= 0) {
-                stackOut_6_0 = var3_int;
-                stackIn_7_0 = stackOut_6_0;
+                stackOut_4_0 = var3_int;
+                stackIn_5_0 = stackOut_4_0;
                 break L0;
               } else {
                 var3_int = var3_int << 1 | 1 & param2;
                 param2 = param2 >>> 1;
                 param0--;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var3, "hi.A(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw ma.a((Throwable) (Object) var3, "hi.A(" + param0 + 44 + 109 + 44 + param2 + 41);
         }
-        return stackIn_7_0;
+        return stackIn_5_0;
     }
 
     public final void paint(java.awt.Graphics param0) {
@@ -81,7 +73,7 @@ final class hi extends java.awt.Canvas {
         }
     }
 
-    final static bk a(String param0, boolean param1) {
+    final static bk a(String param0) {
         RuntimeException var2 = null;
         bk stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -104,7 +96,7 @@ final class hi extends java.awt.Canvas {
         try {
           L0: {
             L1: {
-              if (!al.field_f.a(param1)) {
+              if (!al.field_f.a(true)) {
                 break L1;
               } else {
                 if (param0.equals((Object) (Object) al.field_f.c(-112))) {
@@ -147,12 +139,12 @@ final class hi extends java.awt.Canvas {
               break L2;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw ma.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 1 + 41);
         }
         return stackIn_4_0;
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         vi.a(true);
     }
 

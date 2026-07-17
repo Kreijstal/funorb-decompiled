@@ -198,48 +198,50 @@ abstract class oo {
         long var10 = 0L;
         int var12 = 0;
         pq var13 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
-        String stackIn_18_2 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        String stackIn_21_2 = null;
+        String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
         RuntimeException stackOut_15_0 = null;
         StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
         RuntimeException stackOut_17_0 = null;
         StringBuilder stackOut_17_1 = null;
         String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
         try {
           L0: {
             var13 = param2.field_I.field_l[param3];
             var6 = (long)(-param0.field_g + var13.field_g);
             var8 = (long)(var13.field_k - param0.field_f);
-            var10 = bm.a(param1 ^ -24621, od.a(var6, var6, false) - -od.a(var8, var8, false));
+            int discarded$2 = 0;
+            int discarded$3 = 0;
+            var10 = bm.a(-126, od.a(var6, var6) - -od.a(var8, var8));
             var13.b(true);
             if (var13.field_j <= 4194304) {
               L1: {
                 if (var13.field_j < 0) {
-                  var12 = 1179648 + -rf.a(4194304 + -(var13.field_j * var13.field_j >> 16), param1 ^ -24622);
+                  var12 = 1179648 + -rf.a(4194304 + -(var13.field_j * var13.field_j >> 16), -125);
                   break L1;
                 } else {
                   var12 = 655360;
@@ -247,23 +249,15 @@ abstract class oo {
                 }
               }
               L2: {
-                if (param1 == 24657) {
+                if (var10 <= (long)var12) {
                   break L2;
                 } else {
-                  field_I = -86;
+                  var8 = (long)var12 * var8 / var10;
+                  var6 = var6 * (long)var12 / var10;
                   break L2;
                 }
               }
               L3: {
-                if (var10 <= (long)var12) {
-                  break L3;
-                } else {
-                  var8 = (long)var12 * var8 / var10;
-                  var6 = var6 * (long)var12 / var10;
-                  break L3;
-                }
-              }
-              L4: {
                 var13.field_k = (int)var8 + param0.field_f;
                 var13.field_p = true;
                 var13.field_I = var13.field_I * 63 >> 6;
@@ -271,9 +265,9 @@ abstract class oo {
                 var13.field_t = 63 * var13.field_t >> 6;
                 if (var13.field_j > 2359296) {
                   var13.field_j = 2359296;
-                  break L4;
+                  break L3;
                 } else {
-                  break L4;
+                  break L3;
                 }
               }
               var13.field_n = 15 * var13.field_n / 16;
@@ -288,58 +282,58 @@ abstract class oo {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var5 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var5;
-            stackOut_15_1 = new StringBuilder().append("oo.FB(");
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackOut_13_0 = (RuntimeException) var5;
+            stackOut_13_1 = new StringBuilder().append("oo.FB(");
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
             if (param0 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L4;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L4;
+            }
+          }
+          L5: {
+            stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(24657).append(44);
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
+            if (param2 == null) {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
+              break L5;
+            } else {
               stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
               stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
-              break L5;
-            } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
               break L5;
             }
           }
-          L6: {
-            stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(44).append(param1).append(44);
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
-            if (param2 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
-              break L6;
-            } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
-              break L6;
-            }
-          }
-          throw wm.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param3 + 41);
+          throw wm.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param3 + 41);
         }
     }
 
@@ -366,9 +360,6 @@ abstract class oo {
         int var28 = 0;
         int var7 = -param0 + param3;
         var7 = var7 * var7;
-        if (param4 > -24) {
-            ((oo) this).field_t = 18;
-        }
         int var8 = -param2 + param1;
         var8 = var8 * var8;
         double var9 = Math.sqrt((double)(var8 + (var7 + 256)));
@@ -388,12 +379,14 @@ abstract class oo {
             var24 = (var22 + var21) / 2;
             var25 = var18.a(var19 + -var23, var21 - var24, 0);
             var26 = var18.a(-var23 + var20, -var24 + var22, 0);
-            var27 = var18.a(var19 - var23, var21 + -var24, sb.a(-16.0f, true));
-            var28 = var18.a(var20 - var23, var22 - var24, sb.a(-16.0f, true));
-            int discarded$0 = var18.a(var25, var27, var26, (byte) 1, hh.a((byte) -123, this.e(31761)), this.c(99));
-            int discarded$1 = var18.a(var28, var26, var27, (byte) 1, hh.a((byte) 94, this.e(31761)), this.c(97));
-            int discarded$2 = var18.a(var25, var26, var27, (byte) 1, hh.a((byte) 93, this.e(31761)), this.c(100));
-            int discarded$3 = var18.a(var28, var27, var26, (byte) 1, hh.a((byte) 42, this.e(31761)), this.c(95));
+            int discarded$0 = 1;
+            var27 = var18.a(var19 - var23, var21 + -var24, sb.a(-16.0f));
+            int discarded$1 = 1;
+            var28 = var18.a(var20 - var23, var22 - var24, sb.a(-16.0f));
+            int discarded$2 = var18.a(var25, var27, var26, (byte) 1, hh.a((byte) -123, this.e(31761)), this.c(99));
+            int discarded$3 = var18.a(var28, var26, var27, (byte) 1, hh.a((byte) 94, this.e(31761)), this.c(97));
+            int discarded$4 = var18.a(var25, var26, var27, (byte) 1, hh.a((byte) 93, this.e(31761)), this.c(100));
+            int discarded$5 = var18.a(var28, var27, var26, (byte) 1, hh.a((byte) 42, this.e(31761)), this.c(95));
             var12[var16] = var18;
             var13[var16] = new p((nc) (Object) var12[var16].a(((oo) this).field_C, ((oo) this).field_x, ((oo) this).field_q, ((oo) this).field_e, ((oo) this).field_u), new int[3]);
         }
@@ -401,7 +394,7 @@ abstract class oo {
         ((oo) this).field_o[param5] = var13;
     }
 
-    private final void k(int param0) {
+    private final void k() {
         hh.field_c = true;
         id.field_c.field_g = true;
         if (null != ba.field_ub) {
@@ -1967,8 +1960,10 @@ abstract class oo {
               this.f(2);
               this.a(param0.field_w, -33);
               this.a((byte) -92, param0.field_c);
-              this.a(param0.field_c, 16);
-              this.k(0);
+              int discarded$6 = 16;
+              this.a(param0.field_c);
+              int discarded$7 = 0;
+              this.k();
               if (param1 != 21894) {
                 var4 = null;
                 this.a((byte) 111, (bf[]) null);
@@ -2663,7 +2658,7 @@ abstract class oo {
         }
     }
 
-    private final void a(bf[] param0, int param1) {
+    private final void a(bf[] param0) {
         long var3_long = 0L;
         RuntimeException var3 = null;
         int[][] var5 = null;
@@ -2721,7 +2716,9 @@ abstract class oo {
                       var9 = param0[var19[var15][1]].a((byte) -127) - param0[var19[var15][0]].a((byte) -127);
                       ((oo) this).field_a[var15][0] = -var9 >> 13;
                       ((oo) this).field_a[var15][1] = var8 >> 13;
-                      var10 = bm.a(-111, od.a((long)var8, (long)var8, false) - -od.a((long)var9, (long)var9, false));
+                      int discarded$5 = 0;
+                      int discarded$6 = 0;
+                      var10 = bm.a(-111, od.a((long)var8, (long)var8) - -od.a((long)var9, (long)var9));
                       if (var10 > 2147483647L) {
                         break L3;
                       } else {
@@ -2749,13 +2746,15 @@ abstract class oo {
                   } else {
                     var9_long = (long)(param0[var7].a(99) + -param0[var8].a(117));
                     var11 = (long)(param0[var7].a((byte) -127) - param0[var8].a((byte) -127));
-                    var13 = od.a(var9_long, var9_long, false) + od.a(var11, var11, false);
+                    int discarded$7 = 0;
+                    int discarded$8 = 0;
+                    var13 = od.a(var9_long, var9_long) + od.a(var11, var11);
                     if (var3_long < var13) {
                       var3_long = var13;
                       var6 = 0;
-                      int incrementValue$1 = var6;
+                      int incrementValue$9 = var6;
                       var6++;
-                      var5[incrementValue$1] = new int[2];
+                      var5[incrementValue$9] = new int[2];
                       var8++;
                       continue L4;
                     } else {
@@ -2931,7 +2930,8 @@ abstract class oo {
             double var17 = var7 * (double)(1 + 2 * var16) / 2.0;
             for (var19 = 0; var3 > var19; var19++) {
                 double var20 = var5 * (double)(1 + var19 * 2) / 2.0;
-                ((oo) this).field_y[var16 * var3 - -var19] = new p(var15, ib.a(new double[3], -30100));
+                int discarded$2 = -30100;
+                ((oo) this).field_y[var16 * var3 - -var19] = new p(var15, ib.a(new double[3]));
             }
         }
     }

@@ -37,7 +37,7 @@ final class re {
             var3_int = 0;
             L1: while (true) {
               if (param2 <= 0) {
-                var4 = -20 / ((-11 - param1) / 61);
+                var4 = -20;
                 stackOut_4_0 = var3_int;
                 stackIn_5_0 = stackOut_4_0;
                 break L0;
@@ -52,12 +52,12 @@ final class re {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qk.a((Throwable) (Object) var3, "re.B(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw qk.a((Throwable) (Object) var3, "re.B(" + param0 + 44 + -109 + 44 + param2 + 41);
         }
         return stackIn_5_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_h = null;
         field_d = null;
     }

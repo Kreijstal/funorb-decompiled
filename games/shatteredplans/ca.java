@@ -6,12 +6,12 @@ final class ca extends oh {
     static a field_h;
     static int field_j;
 
-    public static void a(int param0) {
+    public static void a() {
         field_i = null;
         field_h = null;
     }
 
-    final static void a(int param0, int param1, int param2, String param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void a(int param0, int param1, int param2, String param3, int param4, int param5) {
         RuntimeException var9 = null;
         int var9_int = 0;
         int var10 = 0;
@@ -47,7 +47,7 @@ final class ca extends oh {
             }
             var9_int = 495;
             var10 = 5;
-            sg.field_Ab.a(var9_int + param6, param2, (byte) 88, var10, 5);
+            sg.field_Ab.a(var9_int + -10, param2, (byte) 88, var10, 5);
             uq.field_j.a(-cg.field_C.field_K + sg.field_Ab.field_K, param2, (byte) 66, 0, 0);
             cg.field_C.a(cg.field_C.field_K, param2, (byte) 112, 0, uq.field_j.field_K);
             var10 = var10 + (param2 - -param4);
@@ -55,11 +55,11 @@ final class ca extends oh {
             var11 = cb.field_l.e(false);
             cb.field_l.a(var11, param1, (byte) 39, var10, -var11 + (-5 + var9_int));
             var12 = 5 + (var10 + param1);
-            mb.field_n.a(var9_int, param7, (byte) 70, 0, 0);
-            fe.field_w.a(var9_int, var12, (byte) 48, param7, 0);
+            mb.field_n.a(var9_int, 20, (byte) 70, 0, 0);
+            fe.field_w.a(var9_int, var12, (byte) 48, 20, 0);
             fe.field_w.field_F = cs.a(16, 3, fe.field_w.field_mb, 11579568, 8421504, 2105376);
-            var12 = var12 + param7;
-            fa.field_X.a(var9_int, var12, (byte) 106, -(var12 / 2) + param8, -(var9_int / 2) + param0);
+            var12 = var12 + 20;
+            fa.field_X.a(var9_int, var12, (byte) 106, -(var12 / 2) + 180, -(var9_int / 2) + 320);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -67,7 +67,7 @@ final class ca extends oh {
           L2: {
             var9 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var9;
-            stackOut_5_1 = new StringBuilder().append("ca.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_5_1 = new StringBuilder().append("ca.B(").append(320).append(44).append(param1).append(44).append(param2).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -90,7 +90,7 @@ final class ca extends oh {
               break L2;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
+          throw r.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param4 + 44 + param5 + 44 + -10 + 44 + 20 + 44 + 180 + 41);
         }
     }
 
@@ -188,13 +188,14 @@ final class ca extends oh {
             L1: while (true) {
               if (var7 >= la.field_r.length) {
                 wl.field_b = ah.field_Q;
-                qr.a(hn.field_j, pg.field_C, ga.field_w, ub.field_Db, jd.field_d, 5, w.field_J, param1, param3, 6, param2, var10, -117, param4, var10);
+                qr.a(hn.field_j, pg.field_C, ga.field_w, ub.field_Db, jd.field_d, 5, w.field_J, param1, param3, 6, param2, var10, -117, true, var10);
                 gn.field_y = id.a(2, param5, "", "lobbyicon");
                 hm.field_o = false;
                 pe.field_D = ms.field_c;
                 ra.a(115, 200);
                 rj.a(-94, param2, param1);
-                nh.a(param0, 0, 0, (byte) -3, cg.field_B, 16777215);
+                int discarded$1 = 16777215;
+                nh.a(param0, 0, 0, (byte) -3, cg.field_B);
                 break L0;
               } else {
                 L2: {
@@ -315,7 +316,7 @@ final class ca extends oh {
           }
           L7: {
             stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(param4).append(44);
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(1).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;

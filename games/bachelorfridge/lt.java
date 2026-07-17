@@ -20,7 +20,7 @@ final class lt {
         return param0 ^ param1;
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         if (null == dma.field_b) {
             return false;
         }
@@ -32,25 +32,13 @@ final class lt {
 
     final static boolean b(int param0, int param1) {
         String var2 = null;
-        if (param0 == 28427) {
-          var2 = lka.field_E[param1][17];
-          var2 = var2.trim();
-          var2 = var2.toLowerCase();
-          if (var2.equals((Object) (Object) "yes")) {
-            return true;
-          } else {
-            return false;
-          }
+        var2 = lka.field_E[param1][17];
+        var2 = var2.trim();
+        var2 = var2.toLowerCase();
+        if (var2.equals((Object) (Object) "yes")) {
+          return true;
         } else {
-          lt.b((byte) -113);
-          var2 = lka.field_E[param1][17];
-          var2 = var2.trim();
-          var2 = var2.toLowerCase();
-          if (var2.equals((Object) (Object) "yes")) {
-            return true;
-          } else {
-            return false;
-          }
+          return false;
         }
     }
 

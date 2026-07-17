@@ -37,7 +37,8 @@ final class db extends ms {
               }
             }
             lq.a(0, (java.awt.Component) (Object) param1);
-            gs.a((java.awt.Component) (Object) param1, true);
+            int discarded$8 = 1;
+            gs.a((java.awt.Component) (Object) param1);
             if (null != as.field_w) {
               as.field_w.a(true, (java.awt.Component) (Object) param1);
               break L0;

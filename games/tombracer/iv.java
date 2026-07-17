@@ -7,7 +7,7 @@ final class iv extends jea {
     jea field_vb;
     oj field_wb;
 
-    final static void f(int param0) {
+    final static void f() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -60,7 +60,8 @@ final class iv extends jea {
                     }
                   }
                 } else {
-                  dea.a(60);
+                  int discarded$3 = 60;
+                  dea.a();
                   return;
                 }
               } else {
@@ -91,13 +92,15 @@ final class iv extends jea {
                       var5_ref_toa.p(103);
                       break L1;
                     } else {
-                      dea.a(60);
+                      int discarded$4 = 60;
+                      dea.a();
                       return;
                     }
                   }
                 } else {
                   ssa.a("LR1: " + kk.a(32), (byte) 122, (Throwable) null);
-                  dea.a(60);
+                  int discarded$5 = 60;
+                  dea.a();
                   break L1;
                 }
               }
@@ -111,7 +114,7 @@ final class iv extends jea {
         }
     }
 
-    private final void a(int param0, int param1, byte param2) {
+    private final void a(int param0, int param1) {
         ((iv) this).field_vb.field_G = -param1 + ((iv) this).field_G - param0;
         ((iv) this).field_tb.field_qb = 0;
         ((iv) this).field_vb.field_t = ((iv) this).field_t;
@@ -340,7 +343,7 @@ final class iv extends jea {
         }
     }
 
-    private final boolean a(boolean param0, int param1, int param2, int param3, int param4, boolean param5, boolean param6) {
+    private final boolean a(boolean param0, int param1, int param2, int param3, int param4, boolean param5) {
         int var8 = 0;
         if (!param0) {
           if (((iv) this).field_o) {
@@ -376,14 +379,16 @@ final class iv extends jea {
           ((iv) this).field_t = param5;
           ((iv) this).field_G = param0;
           ((iv) this).field_T = param6;
-          this.a(param4, param1, (byte) 125);
+          int discarded$4 = 125;
+          this.a(param4, param1);
           return;
         } else {
           ((iv) this).field_qb = param3;
           ((iv) this).field_t = param5;
           ((iv) this).field_G = param0;
           ((iv) this).field_T = param6;
-          this.a(param4, param1, (byte) 125);
+          int discarded$5 = 125;
+          this.a(param4, param1);
           return;
         }
     }
@@ -392,13 +397,15 @@ final class iv extends jea {
         if (param2 <= 68) {
             return true;
         }
-        return this.a(param5, param3, param0, ((iv) this).field_vb.field_t, param4, param1, true);
+        int discarded$0 = 1;
+        return this.a(param5, param3, param0, ((iv) this).field_vb.field_t, param4, param1);
     }
 
     final void b(boolean param0, int param1, int param2, int param3) {
         this.a(param2, param0, ((iv) this).field_vb.field_t, param3, (byte) 117);
         if (param1 != 0) {
-            boolean discarded$0 = this.a(false, -87, -125, 47, 100, false, true);
+            int discarded$0 = 1;
+            boolean discarded$1 = this.a(false, -87, -125, 47, 100, false);
         }
     }
 

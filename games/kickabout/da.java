@@ -54,7 +54,7 @@ final class da extends gn {
             if (param1 == 25) {
               return mc.field_k[0];
             } else {
-              if (param0 == param1) {
+              if (2 == param1) {
                 return mc.field_k[1];
               } else {
                 if (3 == param1) {
@@ -143,7 +143,7 @@ final class da extends gn {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_u = null;
         field_h = null;
         field_m = null;
@@ -158,7 +158,7 @@ final class da extends gn {
         int var1 = -41 / ((47 - param0) / 45);
     }
 
-    final static void a(sj param0, boolean param1, sj param2, sj param3, int param4) {
+    final static void a(sj param0, boolean param1, sj param2, sj param3) {
         lc.field_e = su.a(-3505, "");
         try {
             lc.field_e.a(false, (byte) 108);
@@ -179,29 +179,22 @@ final class da extends gn {
         var3 = Kickabout.field_G;
         try {
           L0: {
-            L1: {
-              var4 = (fa) (Object) nl.field_f.g(param0 + 24009);
-              if (param0 == 0) {
-                break L1;
-              } else {
-                da.b(79);
-                break L1;
-              }
-            }
-            L2: while (true) {
+            var4 = (fa) (Object) nl.field_f.g(24009);
+            L1: while (true) {
               if (var4 == null) {
                 break L0;
               } else {
-                sp.a(2, var4, -51265247);
+                int discarded$4 = -51265247;
+                sp.a(2, var4);
                 var4 = (fa) (Object) nl.field_f.c(33);
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var2, "da.D(" + param0 + 44 + 2 + 41);
+          throw nb.a((Throwable) (Object) var2, "da.D(" + 0 + 44 + 2 + 41);
         }
     }
 

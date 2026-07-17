@@ -25,12 +25,12 @@ class dd {
     private int field_c;
 
     private final void a(int param0) {
-        ((dd) this).field_c = ((dd) this).field_c - 256;
+        ((dd) this).field_c = ((dd) this).field_c - param0;
         if (((dd) this).field_c < 0) {
             ((dd) this).field_c = 0;
         }
         if (((dd) this).field_r != null) {
-            ((dd) this).field_r.a(256);
+            ((dd) this).field_r.a(param0);
             return;
         }
     }
@@ -53,7 +53,7 @@ class dd {
         sn var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_h) {
             break L0;
           } else {
@@ -63,7 +63,7 @@ class dd {
         }
         L1: {
           qq.a(param0, 0, var3);
-          ((dd) this).field_c = ((dd) this).field_c - 256;
+          ((dd) this).field_c = ((dd) this).field_c - param1;
           if (((dd) this).field_r == null) {
             break L1;
           } else {
@@ -230,7 +230,7 @@ class dd {
           if (((dd) this).field_r == null) {
             break L17;
           } else {
-            ((dd) this).field_r.b(param0, 0, 256);
+            ((dd) this).field_r.b(param0, 0, param1);
             break L17;
           }
         }
@@ -439,35 +439,9 @@ class dd {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 < 8000) {
-            break L0;
-          } else {
-            if (param0 <= 48000) {
-              L1: {
-                field_u = param0;
-                if (!param1) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              field_h = stackIn_7_0 != 0;
-              field_e = 10;
-              return;
-            } else {
-              break L0;
-            }
-          }
-        }
-        throw new IllegalArgumentException();
+        field_u = 22050;
+        field_h = true;
+        field_e = 10;
     }
 
     final static dd a(jj param0, java.awt.Component param1, int param2, int param3) {

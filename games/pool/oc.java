@@ -49,40 +49,11 @@ final class oc {
         ((oc) this).field_G = false;
     }
 
-    final static boolean b(byte param0) {
-        int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 == 84) {
-            break L0;
-          } else {
-            field_B = 96;
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
-            if (jd.field_c == null) {
-              break L2;
-            } else {
-              if (!tl.field_J.b(719)) {
-                break L2;
-              } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
-                break L1;
-              }
-            }
-          }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
-          break L1;
-        }
-        return stackIn_6_0 != 0;
+    final static boolean b() {
+        return jd.field_c != null && tl.field_J.b(719);
     }
 
-    final static void d(int param0) {
+    final static void d() {
         nn.field_b = new oo[5];
         nn.field_b[0] = (oo) (Object) new ni();
         nn.field_b[1] = (oo) (Object) new fk();
@@ -105,7 +76,7 @@ final class oc {
         cb.field_e.b((byte) -23, (ma) (Object) var1);
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_t = null;
         field_h = null;
     }

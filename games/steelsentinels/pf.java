@@ -21,7 +21,7 @@ final class pf implements qk {
     private int field_h;
     private mi field_c;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_r = null;
         field_b = null;
         field_j = null;

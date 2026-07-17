@@ -11,7 +11,7 @@ final class wi {
     static long[] field_b;
     static String field_h;
 
-    final static int b(int param0) {
+    final static int b() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -34,8 +34,8 @@ final class wi {
             boolean discarded$12 = ng.field_c.a(nl.field_m, ri.field_d, true, 0);
             ng.field_c.b(false);
             L1: while (true) {
-              if (!th.a(param0 + -94)) {
-                if (param0 == pe.field_b) {
+              if (!th.a(-95)) {
+                if (-1 == pe.field_b) {
                   if (!oi.field_c) {
                     if (hg.field_ub != lc.field_h) {
                       if (ib.field_f.a(false)) {
@@ -65,7 +65,7 @@ final class wi {
                   }
                 } else {
                   var1_int = pe.field_b;
-                  sf.a(-1, param0 + 11650);
+                  sf.a(-1, 11649);
                   stackOut_5_0 = var1_int;
                   stackIn_6_0 = stackOut_5_0;
                   return stackIn_6_0;
@@ -79,7 +79,7 @@ final class wi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var1, "wi.C(" + param0 + 41);
+          throw ie.a((Throwable) (Object) var1, "wi.C(" + -1 + 41);
         }
         return stackIn_20_0;
     }
@@ -89,162 +89,130 @@ final class wi {
         RuntimeException var4 = null;
         Object var6 = null;
         CharSequence var7 = null;
-        u stackIn_6_0 = null;
+        u stackIn_4_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_13_2 = null;
+        String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        u stackOut_5_0 = null;
+        u stackOut_3_0 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
         StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
         RuntimeException stackOut_9_0 = null;
         StringBuilder stackOut_9_1 = null;
         String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
         try {
           L0: {
             L1: {
               var4_long = 0L;
-              if (param1 == 7957) {
-                break L1;
-              } else {
-                field_h = null;
-                break L1;
-              }
-            }
-            L2: {
               var6 = null;
               if (param0.indexOf('@') == -1) {
                 var7 = (CharSequence) (Object) param0;
                 var4_long = ub.a(109, var7);
-                break L2;
+                break L1;
               } else {
                 var6 = (Object) (Object) param0;
-                break L2;
+                break L1;
               }
             }
-            stackOut_5_0 = tc.a(var4_long, param3, (String) var6, 0, param2);
-            stackIn_6_0 = stackOut_5_0;
+            int discarded$4 = 0;
+            int discarded$5 = 0;
+            stackOut_3_0 = tc.a(var4_long, param3, (String) var6);
+            stackIn_4_0 = stackOut_3_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var4 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var4;
-            stackOut_7_1 = new StringBuilder().append("wi.A(");
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackOut_5_0 = (RuntimeException) var4;
+            stackOut_5_1 = new StringBuilder().append("wi.A(");
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
+            }
+          }
+          L3: {
+            stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(7957).append(44).append(0).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param3 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
+            } else {
               stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
               stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
-              break L3;
-            } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
               break L3;
             }
           }
-          L4: {
-            stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(param1).append(44).append(param2).append(44);
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
-            if (param3 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
-              break L4;
-            } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
-              break L4;
-            }
-          }
-          throw ie.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
+          throw ie.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
         }
-        return stackIn_6_0;
+        return stackIn_4_0;
     }
 
     final static vk a(int param0, int param1, int param2) {
-        vk var3 = null;
-        byte[] var4 = null;
-        double var5 = 0.0;
         int var7 = 0;
-        int var8 = 0;
-        var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        var3 = new vk(22050, param0);
-        if (param2 != 100) {
-          int discarded$1 = wi.b(-9);
-          var4 = var3.field_i;
-          var5 = (double)param1 * 6.283185307179586 / 22050.0;
-          var7 = -1 + param0;
-          L0: while (true) {
-            if (var7 < 0) {
-              return var3;
-            } else {
-              var4[var7] = (byte)(int)(100.0 * ji.a(65535, var5 * (double)var7) + ji.a(65535, 2.0 * ((double)var7 * var5)) * 27.0);
-              var7--;
-              continue L0;
-            }
-          }
-        } else {
-          var4 = var3.field_i;
-          var5 = (double)param1 * 6.283185307179586 / 22050.0;
-          var7 = -1 + param0;
-          L1: while (true) {
-            if (var7 < 0) {
-              return var3;
-            } else {
-              var4[var7] = (byte)(int)(100.0 * ji.a(65535, var5 * (double)var7) + ji.a(65535, 2.0 * ((double)var7 * var5)) * 27.0);
-              var7--;
-              continue L1;
-            }
-          }
+        int var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
+        vk var3 = new vk(22050, 2205);
+        byte[] var4 = var3.field_i;
+        double var5 = (double)100 * 6.283185307179586 / 22050.0;
+        for (var7 = 2204; var7 >= 0; var7--) {
+            var4[var7] = (byte)(int)(100.0 * ji.a(65535, var5 * (double)var7) + ji.a(65535, 2.0 * ((double)var7 * var5)) * 27.0);
         }
+        return var3;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         field_a = null;
@@ -254,7 +222,7 @@ final class wi {
         field_e = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, String param4, int param5, bl param6, int param7, int param8) {
+    final static void a(int param0, int param1, int param2, int param3, String param4, int param5, bl param6, int param7) {
         try {
             oi.field_e = param6;
             j.field_ib = param0;

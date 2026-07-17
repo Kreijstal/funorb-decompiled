@@ -150,27 +150,14 @@ final class sm extends bca {
     }
 
     final static void a(boolean param0, int param1, int param2, int param3) {
-        if (!param0) {
-          if (!bp.e(-29919)) {
-            sja.field_fb.c(81, (byte) 126);
-            sja.field_fb.d(param1, 0);
-            sja.field_fb.d(param2, 0);
-            sja.field_fb.d(param3, 0);
-            return;
-          } else {
-            return;
-          }
+        if (!bp.e(-29919)) {
+          sja.field_fb.c(81, (byte) 126);
+          sja.field_fb.d(param1, 0);
+          sja.field_fb.d(param2, 0);
+          sja.field_fb.d(param3, 0);
+          return;
         } else {
-          String discarded$5 = sm.e(-51);
-          if (bp.e(-29919)) {
-            return;
-          } else {
-            sja.field_fb.c(81, (byte) 126);
-            sja.field_fb.d(param1, 0);
-            sja.field_fb.d(param2, 0);
-            sja.field_fb.d(param3, 0);
-            return;
-          }
+          return;
         }
     }
 
@@ -178,12 +165,12 @@ final class sm extends bca {
         super(param0, param1);
     }
 
-    final static String e(int param0) {
-        int var1 = -30 / ((19 - param0) / 63);
+    final static String e() {
+        int var1 = -30;
         return ig.field_m.g(-32);
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_s = null;
         field_q = null;
     }

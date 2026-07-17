@@ -1010,7 +1010,7 @@ final class jc extends bf {
               L1: {
                 L2: {
                   ((jc) this).field_Ac = param0;
-                  boolean discarded$3 = ((jc) this).field_Ac.b();
+                  boolean discarded$6 = ((jc) this).field_Ac.b();
                   ((jc) this).field_Ic = jaggl.OpenGL.glGetString(7936).toLowerCase();
                   ((jc) this).field_sc = jaggl.OpenGL.glGetString(7937).toLowerCase();
                   if (((jc) this).field_Ic.indexOf("microsoft") != -1) {
@@ -1027,8 +1027,10 @@ final class jc extends bf {
                         } else {
                           try {
                             L3: {
-                              var10_int = td.a((CharSequence) (Object) var9[0], (byte) 38);
-                              var11_int = td.a((CharSequence) (Object) var9[1], (byte) 38);
+                              int discarded$7 = 38;
+                              var10_int = td.a((CharSequence) (Object) var9[0]);
+                              int discarded$8 = 38;
+                              var11_int = td.a((CharSequence) (Object) var9[1]);
                               ((jc) this).field_Tc = 10 * var10_int - -var11_int;
                               break L3;
                             }
@@ -1047,7 +1049,7 @@ final class jc extends bf {
                                   L4: {
                                     ((jc) this).field_fc = 8;
                                     ((jc) this).field_Cc = ((jc) this).field_Ac.a("GL_ARB_vertex_buffer_object");
-                                    boolean discarded$4 = ((jc) this).field_Ac.a("GL_ARB_multisample");
+                                    boolean discarded$9 = ((jc) this).field_Ac.a("GL_ARB_multisample");
                                     ((jc) this).field_tc = ((jc) this).field_Ac.a("GL_ARB_texture_rectangle");
                                     ((jc) this).field_Pb = ((jc) this).field_Ac.a("GL_ARB_texture_cube_map");
                                     ((jc) this).field_zc = ((jc) this).field_Ac.a("GL_ARB_texture_non_power_of_two");
@@ -1055,7 +1057,7 @@ final class jc extends bf {
                                     ((jc) this).field_rc = ((jc) this).field_Ac.a("GL_ARB_vertex_shader");
                                     ((jc) this).field_Vc = ((jc) this).field_Ac.a("GL_ARB_vertex_program");
                                     ((jc) this).field_Nc = ((jc) this).field_Ac.a("GL_ARB_fragment_shader");
-                                    boolean discarded$5 = ((jc) this).field_Ac.a("GL_ARB_fragment_program");
+                                    boolean discarded$10 = ((jc) this).field_Ac.a("GL_ARB_fragment_program");
                                     ((jc) this).field_Hc = new int[((jc) this).field_h];
                                     stackOut_18_0 = this;
                                     stackIn_20_0 = stackOut_18_0;
@@ -1132,7 +1134,8 @@ final class jc extends bf {
                                                           break L9;
                                                         } else {
                                                           var33 = (CharSequence) (Object) var16_ref.substring(0, 4);
-                                                          var11_int = td.a(var33, (byte) 38);
+                                                          int discarded$11 = 38;
+                                                          var11_int = td.a(var33);
                                                           decompiledRegionSelector0 = 1;
                                                           break L8;
                                                         }
@@ -1842,7 +1845,8 @@ final class jc extends bf {
                 jaggl.OpenGL.glDisable(3170);
                 break L2;
               } else {
-                var3_int = np.a(param0, false);
+                int discarded$3 = 0;
+                var3_int = np.a(param0);
                 jaggl.OpenGL.glTexGeni(8192, 9472, var3_int);
                 jaggl.OpenGL.glEnable(3168);
                 jaggl.OpenGL.glTexGeni(8193, 9472, var3_int);

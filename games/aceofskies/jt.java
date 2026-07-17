@@ -152,7 +152,7 @@ final class jt extends rf {
         }
     }
 
-    private final void a(int param0, hk param1, int param2, int param3) {
+    private final void a(int param0, hk param1, int param2) {
         RuntimeException var5 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -211,15 +211,12 @@ final class jt extends rf {
 
     private final void a(hk param0, int param1, hk param2) {
         try {
-            if (param1 != 9649) {
-                rf discarded$0 = ((jt) this).b();
-            }
             ((jt) this).field_p = param0;
             ((jt) this).field_n = param2;
             ((jt) this).field_s = ((jt) this).field_n;
             ((jt) this).field_l = 1048576;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "jt.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "jt.E(" + (param0 != null ? "{...}" : "null") + 44 + 9649 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -526,7 +523,7 @@ final class jt extends rf {
         }
     }
 
-    final static void a(String param0, String param1, long param2, java.applet.Applet param3, int param4) {
+    final static void a(String param0, String param1, long param2, java.applet.Applet param3) {
         try {
             Throwable var6 = null;
             RuntimeException var6_ref = null;
@@ -776,7 +773,8 @@ final class jt extends rf {
                         break L2;
                       } else {
                         ((jt) this).field_n.a(false, -2029711608, param4);
-                        this.a(param5, ((jt) this).field_n, param3, 30121);
+                        int discarded$6 = 30121;
+                        this.a(param5, ((jt) this).field_n, param3);
                         break L2;
                       }
                     } else {
@@ -793,7 +791,8 @@ final class jt extends rf {
                         break L2;
                       } else {
                         ((jt) this).field_p.a(false, -2029711608, param4);
-                        this.a(param5, ((jt) this).field_p, param3, 30121);
+                        int discarded$7 = 30121;
+                        this.a(param5, ((jt) this).field_p, param3);
                         break L2;
                       }
                     }
@@ -824,12 +823,14 @@ final class jt extends rf {
               ((jt) this).field_m = stackIn_20_1 != 0;
               if (param4 == ((jt) this).field_v) {
                 ((jt) this).field_u = param1;
-                this.a(param5, ((jt) this).field_n, param3, 30121);
+                int discarded$8 = 30121;
+                this.a(param5, ((jt) this).field_n, param3);
                 return;
               } else {
                 if (((jt) this).field_r == param4) {
                   ((jt) this).field_u = -param1;
-                  this.a(param5, ((jt) this).field_p, param3, 30121);
+                  int discarded$9 = 30121;
+                  this.a(param5, ((jt) this).field_p, param3);
                   return;
                 } else {
                   L6: {
@@ -891,7 +892,8 @@ final class jt extends rf {
                             }
                           }
                           ((hk) (Object) stackIn_52_0).a(stackIn_52_1 != 0, -2029711608, param4);
-                          this.a(param5, ((jt) this).field_n, param3, 30121);
+                          int discarded$10 = 30121;
+                          this.a(param5, ((jt) this).field_n, param3);
                           break L10;
                         }
                       }
@@ -930,7 +932,8 @@ final class jt extends rf {
                             }
                           }
                           ((hk) (Object) stackIn_43_0).a(stackIn_43_1 != 0, -2029711608, param4);
-                          this.a(param5, ((jt) this).field_p, param3, 30121);
+                          int discarded$11 = 30121;
+                          this.a(param5, ((jt) this).field_p, param3);
                           break L13;
                         }
                       }

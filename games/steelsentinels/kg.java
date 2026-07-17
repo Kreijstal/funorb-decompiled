@@ -264,28 +264,28 @@ final class kg extends gh {
         java.awt.Graphics var4 = null;
         Exception var4_ref = null;
         RuntimeException var4_ref2 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
+        String stackIn_7_2 = null;
         Throwable decompiledCaughtException = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           L0: {
             try {
               L1: {
                 var4 = param3.getGraphics();
-                sb.field_bb.a((byte) -51, var4, param0, param1);
+                sb.field_bb.a((byte) -51, var4, 0, 0);
                 var4.dispose();
                 break L1;
               }
@@ -297,45 +297,37 @@ final class kg extends gh {
                 break L2;
               }
             }
-            L3: {
-              if (param2 == 28594) {
-                break L3;
-              } else {
-                int discarded$2 = kg.a(35, (byte) -13);
-                break L3;
-              }
-            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L4: {
+          L3: {
             var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var4_ref2;
-            stackOut_6_1 = new StringBuilder().append("kg.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackOut_4_0 = (RuntimeException) var4_ref2;
+            stackOut_4_1 = new StringBuilder().append("kg.D(").append(0).append(44).append(0).append(44).append(28594).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param3 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
-              break L4;
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L3;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
-              break L4;
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L3;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
     }
 
@@ -506,18 +498,15 @@ final class kg extends gh {
         return true;
     }
 
-    final static void a(int param0, mi param1, mi param2, int param3) {
+    final static void a(int param0, mi param1, mi param2) {
         try {
-            ud.field_C = param3;
-            if (param0 != 2048) {
-                field_Vb = -50;
-            }
+            ud.field_C = 480;
             pa.field_k = param2;
             wb.field_a = param1;
             sf.a(74, pb.field_c / 2, pb.field_j / 2);
             he.a(false, param2.field_U, param1.field_U, param2.field_U - -param2.field_F, param1.field_F + param1.field_U);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "kg.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "kg.B(" + 2048 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + 480 + 41);
         }
     }
 
@@ -531,60 +520,28 @@ final class kg extends gh {
 
     private final boolean a(int param0, boolean param1, int param2, int param3, int param4, int param5, boolean param6) {
         int var8 = 0;
-        if (param2 >= 105) {
-          if (param6) {
-            var8 = 1;
-            ((kg) this).field_Ub.a(((kg) this).field_Tb.field_Lb, (byte) -108, param4, var8 != 0);
-            ((kg) this).a((byte) 96, param0, param5, false, param3);
-            return var8 != 0;
-          } else {
-            if (((kg) this).field_kb) {
-              if (!param1) {
-                var8 = 1;
-                ((kg) this).field_Ub.a(((kg) this).field_Tb.field_Lb, (byte) -108, param4, var8 != 0);
-                ((kg) this).a((byte) 96, param0, param5, false, param3);
-                return var8 != 0;
-              } else {
+        if (!param6) {
+            if (!((kg) this).field_kb) {
                 var8 = 0;
                 ((kg) this).field_Ub.a(((kg) this).field_Tb.field_Lb, (byte) -108, param4, var8 != 0);
                 ((kg) this).a((byte) 96, param0, param5, false, param3);
                 return var8 != 0;
-              }
-            } else {
-              var8 = 0;
-              ((kg) this).field_Ub.a(((kg) this).field_Tb.field_Lb, (byte) -108, param4, var8 != 0);
-              ((kg) this).a((byte) 96, param0, param5, false, param3);
-              return var8 != 0;
             }
-          }
-        } else {
-          ((kg) this).field_Sb = null;
-          if (!param6) {
-            if (((kg) this).field_kb) {
-              if (!param1) {
-                var8 = 1;
-                ((kg) this).field_Ub.a(((kg) this).field_Tb.field_Lb, (byte) -108, param4, var8 != 0);
-                ((kg) this).a((byte) 96, param0, param5, false, param3);
-                return var8 != 0;
-              } else {
+            if (param1) {
                 var8 = 0;
                 ((kg) this).field_Ub.a(((kg) this).field_Tb.field_Lb, (byte) -108, param4, var8 != 0);
                 ((kg) this).a((byte) 96, param0, param5, false, param3);
                 return var8 != 0;
-              }
-            } else {
-              var8 = 0;
-              ((kg) this).field_Ub.a(((kg) this).field_Tb.field_Lb, (byte) -108, param4, var8 != 0);
-              ((kg) this).a((byte) 96, param0, param5, false, param3);
-              return var8 != 0;
             }
-          } else {
             var8 = 1;
             ((kg) this).field_Ub.a(((kg) this).field_Tb.field_Lb, (byte) -108, param4, var8 != 0);
             ((kg) this).a((byte) 96, param0, param5, false, param3);
             return var8 != 0;
-          }
         }
+        var8 = 1;
+        ((kg) this).field_Ub.a(((kg) this).field_Tb.field_Lb, (byte) -108, param4, var8 != 0);
+        ((kg) this).a((byte) 96, param0, param5, false, param3);
+        return var8 != 0;
     }
 
     final void a(boolean param0, int param1, int param2, int param3) {

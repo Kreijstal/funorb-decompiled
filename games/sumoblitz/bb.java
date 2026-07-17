@@ -7,7 +7,7 @@ final class bb extends ak {
     private int field_k;
     static int[] field_i;
 
-    public static void b(byte param0) {
+    public static void b() {
         field_i = null;
     }
 
@@ -49,10 +49,12 @@ final class bb extends ak {
             wo.a(up.field_c, 490, -20 + -(ns.field_b.c() / 2) + 290, param0 << 24, 3, param1, ns.field_b.c() - -100, -5, 1, true);
             be.field_t.a(bw.field_c, 5023231 | param0 << 24, -1, 60, 320, 0);
             hc.field_e.a(bw.field_c, -1, -1, 60, 320, 0);
-            int discarded$2 = gt.field_db.a(200, 5023231 | param0 << 24, 0, 300, 170, (int[]) null, (hr[]) null, 75, -1, 0, 0, param2 + -6432, wh.field_r, (aa) null, 1, 0);
-            int discarded$3 = bq.field_c.a(200, -1, 0, 300, 170, (int[]) null, (hr[]) null, 75, -1, 0, 0, param2 ^ 11104, wh.field_r, (aa) null, 1, 0);
-            qv.field_k.a(ic.a(ar.field_M, new String[1], (byte) -128).toUpperCase(), 5023231 | param0 << 24, -1, 180, 320, 0);
-            uq.field_a.a(ic.a(ar.field_M, new String[1], (byte) -128).toUpperCase(), -1, -1, 180, 320, 0);
+            int discarded$4 = gt.field_db.a(200, 5023231 | param0 << 24, 0, 300, 170, (int[]) null, (hr[]) null, 75, -1, 0, 0, param2 + -6432, wh.field_r, (aa) null, 1, 0);
+            int discarded$5 = bq.field_c.a(200, -1, 0, 300, 170, (int[]) null, (hr[]) null, 75, -1, 0, 0, param2 ^ 11104, wh.field_r, (aa) null, 1, 0);
+            int discarded$6 = -128;
+            qv.field_k.a(ic.a(ar.field_M, new String[1]).toUpperCase(), 5023231 | param0 << 24, -1, 180, 320, 0);
+            int discarded$7 = -128;
+            uq.field_a.a(ic.a(ar.field_M, new String[1]).toUpperCase(), -1, -1, 180, 320, 0);
             var4_int = 140;
             var5 = 0;
             L1: while (true) {

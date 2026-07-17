@@ -12,7 +12,7 @@ final class cea {
     static kv field_i;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_d = null;
         field_i = null;
@@ -20,7 +20,7 @@ final class cea {
         field_a = null;
     }
 
-    final static pia a(byte[] param0, int param1) {
+    final static pia a(byte[] param0) {
         pia var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
@@ -47,7 +47,8 @@ final class cea {
           L0: {
             if (param0 != null) {
               var2 = new pia(param0, fl.field_j, fd.field_D, lq.field_A, eha.field_s, hk.field_f, baa.field_P);
-              al.b(-18073);
+              int discarded$2 = -18073;
+              al.b();
               stackOut_4_0 = (pia) var2;
               stackIn_5_0 = stackOut_4_0;
               break L0;

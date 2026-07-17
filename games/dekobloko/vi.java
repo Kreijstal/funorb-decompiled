@@ -6,7 +6,7 @@ abstract class vi extends be {
     static wl field_A;
     static ck[] field_z;
 
-    public static void f(byte param0) {
+    public static void f() {
         field_A = null;
         field_z = null;
     }
@@ -204,15 +204,11 @@ abstract class vi extends be {
         return stackIn_1_0;
     }
 
-    final static int d(int param0) {
-        if (param0 != 1) {
-            field_z = null;
-            return 1;
-        }
+    final static int d() {
         return 1;
     }
 
-    final static boolean a(int[] param0, int param1) {
+    final static boolean a(int[] param0) {
         RuntimeException var2 = null;
         long var2_long = 0L;
         bf var4_ref_bf = null;
@@ -294,7 +290,8 @@ abstract class vi extends be {
                   }
                 }
               }
-              int discarded$1 = vi.d(-63);
+              int discarded$2 = -63;
+              int discarded$3 = vi.d();
               L3: while (true) {
                 L4: {
                   if (0 > dl.field_N) {

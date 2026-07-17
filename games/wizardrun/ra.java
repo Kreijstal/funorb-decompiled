@@ -11,7 +11,7 @@ final class ra extends wl {
     static int field_o;
     static o[] field_m;
 
-    public static void c(int param0) {
+    public static void c() {
         field_j = null;
         int var1 = 7;
         field_i = null;
@@ -20,7 +20,7 @@ final class ra extends wl {
         field_l = null;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

@@ -44,7 +44,8 @@ final class vh extends cj {
                       break L2;
                     } else {
                       ((vh) this).field_Jb = -(185 * var3 / ((vh) this).field_z) + 255;
-                      this.a(((vh) this).field_Kb, 12);
+                      int discarded$2 = 12;
+                      this.a(((vh) this).field_Kb);
                       break L0;
                     }
                   }
@@ -140,13 +141,14 @@ final class vh extends cj {
         ((vh) this).field_Jb = 190;
         try {
             ((vh) this).field_Kb = new ja(param4, param5);
-            this.a(((vh) this).field_Kb, 12);
+            int discarded$0 = 12;
+            this.a(((vh) this).field_Kb);
         } catch (RuntimeException runtimeException) {
             throw fa.a((Throwable) (Object) runtimeException, "vh.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean a(char param0) {
         return param0 >= 48 && 57 >= param0;
     }
 
@@ -169,7 +171,7 @@ final class vh extends cj {
         }
     }
 
-    private final void a(ja param0, int param1) {
+    private final void a(ja param0) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -248,10 +250,7 @@ final class vh extends cj {
         }
     }
 
-    public static void c(byte param0) {
-        if (param0 >= -97) {
-            return;
-        }
+    public static void c() {
         field_Ib = null;
         field_Lb = null;
         field_Fb = null;
@@ -271,7 +270,7 @@ final class vh extends cj {
         }
     }
 
-    final static int h(int param0) {
+    final static int h() {
         return lq.field_d;
     }
 

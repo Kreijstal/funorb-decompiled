@@ -7,13 +7,11 @@ final class te {
     static String field_b;
 
     final static void a(int param0, int param1) {
-        if (param0 != 0) {
-            return;
-        }
-        int discarded$0 = uo.a((byte) -75);
+        int discarded$0 = -75;
+        int discarded$1 = uo.a();
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         bq.a(127);
         hr.a(bh.field_m[0].field_o, cr.field_c, tg.field_a, 113, pe.field_K, rc.field_l);
     }
@@ -31,13 +29,10 @@ final class te {
             cs.field_l = param3;
             sm.field_b = param5;
             ar.field_i = param2;
-            if (param0 != -4440) {
-                field_b = null;
-            }
             kr.field_a = param1;
             tr.field_Lb = param4;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "te.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 41);
+            throw r.a((Throwable) (Object) runtimeException, "te.A(" + -4440 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 41);
         }
     }
 

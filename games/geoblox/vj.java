@@ -7,7 +7,7 @@ final class vj {
     static dm[] field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = 2;
         field_c = null;
         field_a = null;

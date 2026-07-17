@@ -46,7 +46,7 @@ final class hc {
         lp var9 = new lp(param0, param2, 209, rs.field_Cb.field_J);
         int var4 = (-rs.field_Cb.c(ho.field_g) + 189) / 2;
         vc.field_b = new bi(var4, 2);
-        int var5 = 112 / ((param1 - 89) / 37);
+        int var5 = 112;
         ra.a(-107);
         vc.field_b.e();
         gf.d(0, 0, var4, 2, 16777215);
@@ -60,7 +60,7 @@ final class hc {
         return var9;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
     }

@@ -15,7 +15,7 @@ final class dh {
     int field_b;
     byte[] field_g;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_k = null;
         field_d = null;
     }
@@ -49,7 +49,8 @@ final class dh {
               var13 = nm.field_c;
               var2 = var13.g(121);
               if (var2 == 0) {
-                var11 = fu.a(true);
+                int discarded$6 = 1;
+                var11 = fu.a();
                 var19 = var11;
                 var18 = var19;
                 var17 = var18;
@@ -70,7 +71,8 @@ final class dh {
                       var16_ref.c(-124);
                       break L1;
                     } else {
-                      te.b(true);
+                      int discarded$7 = 1;
+                      te.b();
                       return;
                     }
                   } else {
@@ -84,10 +86,12 @@ final class dh {
                   if (var2 == 2) {
                     var14 = (eh) (Object) wu.field_w.d(268435455);
                     if (var14 == null) {
-                      te.b(true);
+                      int discarded$8 = 1;
+                      te.b();
                       return;
                     } else {
-                      var14.field_f = fu.a(true);
+                      int discarded$9 = 1;
+                      var14.field_f = fu.a();
                       var14.field_g = true;
                       var14.field_e = var14.field_f[0];
                       var14.c(-125);
@@ -95,7 +99,8 @@ final class dh {
                     }
                   } else {
                     v.a("A1: " + dl.k((byte) 65), (byte) -52, (Throwable) null);
-                    te.b(true);
+                    int discarded$10 = 1;
+                    te.b();
                     break L1;
                   }
                 } else {
@@ -104,7 +109,8 @@ final class dh {
                     var12.c(-123);
                     break L1;
                   } else {
-                    te.b(true);
+                    int discarded$11 = 1;
+                    te.b();
                     return;
                   }
                 }
@@ -121,9 +127,9 @@ final class dh {
 
     final static void a(int param0, int param1, boolean param2, int param3, ap param4) {
         try {
-            wt.field_e.a((byte) -50, param3, !param2 ? true : false, param1, param4, param0);
+            wt.field_e.a((byte) -50, 1048576, !param2 ? true : false, 256, param4, 1000000);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "dh.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "dh.B(" + 1000000 + 44 + 256 + 44 + param2 + 44 + 1048576 + 44 + (param4 != null ? "{...}" : "null") + 41);
         }
     }
 

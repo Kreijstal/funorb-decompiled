@@ -13,17 +13,11 @@ final class he {
 
     final static void a(int param0, int param1, int param2, int param3) {
         j.field_a = param3;
-        if (param1 != 0) {
-            field_d = -71;
-            sl.field_n = param0;
-            db.field_db = param2;
-            return;
-        }
         sl.field_n = param0;
         db.field_db = param2;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_f = null;
         field_c = null;

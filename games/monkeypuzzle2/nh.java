@@ -18,9 +18,6 @@ final class nh extends ug {
         int var13 = param8 * param5 - param0 * param1;
         int var14 = -param0 + param5;
         int var15 = -param8 + param1;
-        if (param4 != -5425) {
-            field_f = null;
-        }
         ll.field_a = (var10 * var14 + -(var11 * var13)) / var9;
         ok.field_b = (-(var12 * var13) + var10 * var15) / var9;
         return true;
@@ -30,7 +27,7 @@ final class nh extends ug {
         field_f = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -79,7 +76,7 @@ final class nh extends ug {
         }
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;

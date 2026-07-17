@@ -7,13 +7,10 @@ final class la {
     static kg field_c;
 
     final static void a(boolean param0, pc param1) {
-        if (param0) {
-            return;
-        }
         try {
             ll.field_e.a((we) (Object) param1.field_v);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "la.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "la.B(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -201,13 +198,20 @@ final class la {
                     if (!fb.field_h.a("benefits", (byte) 90)) {
                       break L0;
                     } else {
-                      c.field_o = rl.a(ta.field_d, "benefits", "headline", false);
-                      wb.field_i = rl.a(ta.field_d, "benefits", "blurbpane", false);
-                      ba.field_e = rl.a(ta.field_d, "benefits", "button", false);
-                      da.field_f = rl.a(ta.field_d, "benefits", "signup_text", false);
-                      bc.field_pb = rl.a(ta.field_d, "benefits", "menu_text", false);
-                      bc.field_ub = rl.a(ta.field_d, "benefits", "button_frame", false);
-                      jc.field_b = rl.a(ta.field_d, "benefits", "arrow", false);
+                      int discarded$14 = 0;
+                      c.field_o = rl.a(ta.field_d, "benefits", "headline");
+                      int discarded$15 = 0;
+                      wb.field_i = rl.a(ta.field_d, "benefits", "blurbpane");
+                      int discarded$16 = 0;
+                      ba.field_e = rl.a(ta.field_d, "benefits", "button");
+                      int discarded$17 = 0;
+                      da.field_f = rl.a(ta.field_d, "benefits", "signup_text");
+                      int discarded$18 = 0;
+                      bc.field_pb = rl.a(ta.field_d, "benefits", "menu_text");
+                      int discarded$19 = 0;
+                      bc.field_ub = rl.a(ta.field_d, "benefits", "button_frame");
+                      int discarded$20 = 0;
+                      jc.field_b = rl.a(ta.field_d, "benefits", "arrow");
                       nn.field_g = (mi) (Object) vd.a(fb.field_h, "benefits", ta.field_d, -1, "large_font");
                       wn.field_a = (mi) (Object) vd.a(fb.field_h, "benefits", ta.field_d, -1, "small_font");
                       var27 = pb.field_g;
@@ -238,7 +242,8 @@ final class la {
                           ta.field_f = null;
                           tf.field_e = da.field_f.g();
                           tf.field_e.d();
-                          ej.a(pb.field_j * 2 / 3, 0, pb.field_c, 64, 0, 40);
+                          int discarded$21 = 40;
+                          ej.a(pb.field_j * 2 / 3, 0, pb.field_c, 64, 0);
                           pb.a(var27, var2, var3);
                           pb.a(ti.field_n);
                           mc.field_a = (ba.field_e.field_F + -bc.field_ub.field_F) / 2 + 390;
@@ -249,7 +254,7 @@ final class la {
                           break L0;
                         } else {
                           bm.field_R[var7].d();
-                          int discarded$3 = wn.field_a.a(ta.field_f[var7], 3, 3, bm.field_R[var7].field_A + -6, -6 + bm.field_R[var7].field_F, dc.field_h, -1, 1, 1, wn.field_a.field_F + wn.field_a.field_G);
+                          int discarded$22 = wn.field_a.a(ta.field_f[var7], 3, 3, bm.field_R[var7].field_A + -6, -6 + bm.field_R[var7].field_F, dc.field_h, -1, 1, 1, wn.field_a.field_F + wn.field_a.field_G);
                           uj.a(3, 0, 0, (byte) -79, bm.field_R[var7].field_F, 1, bm.field_R[var7], bm.field_R[var7].field_A);
                           var7++;
                           continue L1;
@@ -341,7 +346,7 @@ final class la {
                 hl.field_r.e();
                 var10 = new wk(hl.field_r.field_z, hl.field_r.field_B);
                 var10.d();
-                int discarded$4 = nn.field_g.a(var14, sg.field_e, ij.field_W, pa.field_b, ci.field_g, 16777215, -1, 1, 1, nn.field_g.field_F + nn.field_g.field_G);
+                int discarded$23 = nn.field_g.a(var14, sg.field_e, ij.field_W, pa.field_b, ci.field_g, 16777215, -1, 1, 1, nn.field_g.field_F + nn.field_g.field_G);
                 uj.a(3, 0, 0, (byte) -119, var10.field_B, 1, var10, var10.field_z);
                 hl.field_r.d();
                 var10.a(0, 0);
@@ -371,7 +376,7 @@ final class la {
                 var6_ref_String = db.a(dd.field_l, -109, new String[1]);
                 ij.field_P = null;
                 var16.d();
-                int discarded$5 = wn.field_a.a(var6_ref_String, 3, 3, var16.field_A - 6, var16.field_F - 6, 16777215, -1, 0, 1, wn.field_a.field_G + wn.field_a.field_F);
+                int discarded$24 = wn.field_a.a(var6_ref_String, 3, 3, var16.field_A - 6, var16.field_F - 6, 16777215, -1, 0, 1, wn.field_a.field_G + wn.field_a.field_F);
                 uj.a(3, 0, 0, (byte) -42, var16.field_F, 1, var16, var16.field_A);
                 jf.field_kb.d();
                 var16.a(-jf.field_kb.field_D + 199, -jf.field_kb.field_H + 83);
@@ -545,7 +550,8 @@ final class la {
                   if (jh.field_i.field_e != 1) {
                     break L18;
                   } else {
-                    ej.a(ba.field_e.field_F * 7 / 12, 436, ba.field_e.field_A - 4, 64, 392, 40);
+                    int discarded$25 = 40;
+                    ej.a(ba.field_e.field_F * 7 / 12, 436, ba.field_e.field_A - 4, 64, 392);
                     break L18;
                   }
                 }
@@ -629,11 +635,13 @@ final class la {
                   }
                 }
               }
-              rg.b(30);
+              int discarded$26 = 30;
+              rg.b();
               bm.field_R[lh.field_r].a(269, 340);
               break L20;
             } else {
-              rg.b(30);
+              int discarded$27 = 30;
+              rg.b();
               bm.field_R[lh.field_r].a(269, 340);
               break L20;
             }
@@ -644,7 +652,7 @@ final class la {
         }
     }
 
-    final static void a(byte[] param0, int param1, int[] param2, int param3, int param4) {
+    final static void a(byte[] param0, int param1, int[] param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -765,7 +773,7 @@ final class la {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         int var1 = 124;
     }
@@ -851,7 +859,8 @@ final class la {
         int stackOut_12_7 = 0;
         int stackOut_12_8 = 0;
         L0: {
-          fe.c((byte) 123);
+          int discarded$7 = 123;
+          fe.c();
           if (nf.field_b != null) {
             if (he.a((int) nf.field_b.field_Sb[2], false, nf.field_b.field_wc)) {
               stackOut_4_0 = 1;
@@ -979,7 +988,8 @@ final class la {
           }
         }
         L4: {
-          bl.a(stackIn_14_0, stackIn_14_1, stackIn_14_2 != 0, stackIn_14_3, stackIn_14_4, stackIn_14_5, stackIn_14_6 != 0, stackIn_14_7, stackIn_14_8 != 0, 14, param1, true);
+          int discarded$8 = 1;
+          bl.a(stackIn_14_0, stackIn_14_1, stackIn_14_2 != 0, stackIn_14_3, stackIn_14_4, stackIn_14_5, stackIn_14_6 != 0, stackIn_14_7, stackIn_14_8 != 0, 14, param1);
           if (qb.field_J) {
             mm.field_g.a(57, (byte) -117);
             qb.field_J = false;

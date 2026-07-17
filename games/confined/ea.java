@@ -47,16 +47,8 @@ final class ea {
                 break L2;
               }
             }
-            L3: {
-              if (param0) {
-                break L3;
-              } else {
-                field_a = 105;
-                break L3;
-              }
-            }
             var7 = var5_int;
-            L4: while (true) {
+            L3: while (true) {
               if (var6 <= var7) {
                 break L0;
               } else {
@@ -65,14 +57,14 @@ final class ea {
                 fn.field_h[(var7 + param1) * fn.field_g + param2] = var9;
                 fn.field_h[param4 + param2 + (var7 + param1) * fn.field_g] = var9;
                 var7++;
-                continue L4;
+                continue L3;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var5, "ea.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw sd.a((Throwable) (Object) var5, "ea.A(" + 1 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 

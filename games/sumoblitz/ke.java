@@ -7,7 +7,7 @@ final class ke {
     static byte[][] field_b;
     static int field_d;
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_c = null;
         field_b = null;
     }
@@ -79,7 +79,7 @@ final class ke {
         return stackIn_3_0;
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         if (null == ku.field_J) {
           return;
         } else {

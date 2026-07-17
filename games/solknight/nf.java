@@ -55,7 +55,8 @@ final class nf extends ld implements ka {
                 if (param1 == ne.field_i) {
                   var3 = (Object) (Object) ak.field_c;
                   ((nf) this).field_x = ((nf) this).field_x + 10;
-                  if (!pe.a((byte) -108)) {
+                  int discarded$25 = -108;
+                  if (!pe.a()) {
                     break L1;
                   } else {
                     var3 = (Object) (Object) nc.field_b;
@@ -156,13 +157,10 @@ final class nf extends ld implements ka {
 
     final static void a(da param0, int param1, da param2) {
         kc.field_Q = param2;
-        if (param1 >= -57) {
-            return;
-        }
         try {
             eb.field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "nf.NA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "nf.NA(" + (param0 != null ? "{...}" : "null") + 44 + -111 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -174,7 +172,7 @@ final class nf extends ld implements ka {
         }
     }
 
-    private final void m(int param0) {
+    private final void m() {
         if (!(((nf) this).field_J)) {
             return;
         }
@@ -271,7 +269,8 @@ final class nf extends ld implements ka {
               var8 = new jk(u.field_b, param4);
               var7 = var8;
               u.field_b.b((rc) (Object) var8, -113);
-              if (rb.a(-1)) {
+              int discarded$8 = -1;
+              if (rb.a()) {
                 var8.h((byte) -63);
                 stackOut_11_0 = 1;
                 stackIn_12_0 = stackOut_11_0;
@@ -433,12 +432,13 @@ final class nf extends ld implements ka {
                 break L1;
               } else {
                 var7 = null;
-                boolean discarded$2 = nf.a(120, false, (String) null, (String) null, (rf) null, (String) null, (byte) -93);
+                boolean discarded$4 = nf.a(120, false, (String) null, (String) null, (rf) null, (String) null, (byte) -93);
                 break L1;
               }
             }
             if (param3 == ((nf) this).field_T) {
-              this.m(-124);
+              int discarded$5 = -124;
+              this.m();
               break L0;
             } else {
               return;
@@ -518,7 +518,7 @@ final class nf extends ld implements ka {
             var4 = new pj(param2, param1);
             var4.field_w = (j) (Object) new gh();
             var5 = -6 + ((nf) this).field_x;
-            ((nf) this).field_x = ((nf) this).field_x + param0;
+            ((nf) this).field_x = ((nf) this).field_x + 38;
             var4.b(30, ((nf) this).field_t - 30, 15, 0, var5);
             ((nf) this).a((rc) (Object) var4, 5411);
             ((nf) this).d(1);
@@ -531,7 +531,7 @@ final class nf extends ld implements ka {
           L1: {
             var4_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var4_ref;
-            stackOut_2_1 = new StringBuilder().append("nf.M(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("nf.M(").append(38).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;

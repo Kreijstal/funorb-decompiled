@@ -15,7 +15,7 @@ final class toa extends vg {
         return wua.field_n;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
     }
 

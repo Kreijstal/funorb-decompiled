@@ -22,7 +22,7 @@ final class pk {
     private int field_p;
     private float field_k;
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_m = null;
     }
 
@@ -40,7 +40,9 @@ final class pk {
           ((pk) this).field_r = ad.field_d;
           ((pk) this).field_l.a(param0, ((pk) this).field_o, ((pk) this).field_j);
           n.field_i = false;
-          var2 = al.a(((pk) this).field_j, -16493, g.field_r, ((pk) this).field_o, 0, 0);
+          int discarded$8 = 0;
+          int discarded$9 = 0;
+          var2 = al.a(((pk) this).field_j, -16493, g.field_r, ((pk) this).field_o);
           if (var2 == null) {
             ((pk) this).a(0);
             return var2;
@@ -52,7 +54,9 @@ final class pk {
           ((pk) this).field_r = ad.field_d;
           ((pk) this).field_l.a(param0, ((pk) this).field_o, ((pk) this).field_j);
           n.field_i = false;
-          var2 = al.a(((pk) this).field_j, -16493, g.field_r, ((pk) this).field_o, 0, 0);
+          int discarded$10 = 0;
+          int discarded$11 = 0;
+          var2 = al.a(((pk) this).field_j, -16493, g.field_r, ((pk) this).field_o);
           if (var2 != null) {
             return var2;
           } else {
@@ -76,7 +80,7 @@ final class pk {
         }
     }
 
-    private final void a(byte param0) {
+    private final void a() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -543,9 +547,9 @@ final class pk {
             }
           } else {
             if (param0 == 9477) {
-              int fieldTemp$1 = ((pk) this).field_d - 1;
+              int fieldTemp$2 = ((pk) this).field_d - 1;
               ((pk) this).field_d = ((pk) this).field_d - 1;
-              if (fieldTemp$1 > 0) {
+              if (fieldTemp$2 > 0) {
                 return;
               } else {
                 ((pk) this).field_d = ((pk) this).field_b;
@@ -553,7 +557,8 @@ final class pk {
                   ((pk) this).field_a = false;
                   return;
                 } else {
-                  this.a((byte) 13);
+                  int discarded$3 = 13;
+                  this.a();
                   return;
                 }
               }

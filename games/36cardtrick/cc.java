@@ -31,7 +31,7 @@ final class cc {
         return (char)var2;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -100,11 +100,11 @@ final class cc {
     }
 
     final static boolean a(int param0) {
-        int var1 = 100 % ((param0 - -57) / 42);
+        int var1 = 1;
         return ei.field_e;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
         field_b = null;
     }

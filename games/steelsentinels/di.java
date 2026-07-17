@@ -11,7 +11,7 @@ final class di {
     static boolean field_b;
     static int[] field_c;
 
-    final static void a(byte param0) {
+    final static void a() {
         ln.field_a = 0;
     }
 
@@ -19,9 +19,6 @@ final class di {
         field_c = null;
         field_f = null;
         field_e = null;
-        if (param0 != -1) {
-            field_e = null;
-        }
     }
 
     static {

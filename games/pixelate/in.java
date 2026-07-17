@@ -29,7 +29,7 @@ final class in extends fa {
     int field_I;
     static tf field_s;
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void a(java.awt.Component param0) {
         try {
             param0.setFocusTraversalKeysEnabled(false);
             param0.addKeyListener((java.awt.event.KeyListener) (Object) mc.field_r);
@@ -39,7 +39,7 @@ final class in extends fa {
         }
     }
 
-    final static boolean e(int param0) {
+    final static boolean e() {
         if (-1 == jj.field_b) {
             if (!(rd.a(1, false))) {
                 return false;
@@ -72,7 +72,7 @@ final class in extends fa {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_J = null;
         field_B = null;
         field_s = null;

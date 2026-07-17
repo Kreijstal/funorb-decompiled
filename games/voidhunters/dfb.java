@@ -6,7 +6,7 @@ final class dfb extends rqa {
     static String field_p;
     static long field_q;
 
-    final static void a(int param0) {
+    final static void a() {
         if (null == klb.field_r) {
           if (null != vqa.field_i) {
             vqa.field_i.g(25880);
@@ -100,7 +100,7 @@ final class dfb extends rqa {
         super(param0, param1, param2);
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_o = null;
         field_p = null;
     }

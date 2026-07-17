@@ -17,7 +17,7 @@ final class mf extends ml {
     private String field_t;
     static boolean field_p;
 
-    final static th a(int param0, int param1, bc param2, bc param3, int param4) {
+    final static th a(int param0, int param1, bc param2, bc param3) {
         RuntimeException var5 = null;
         th stackIn_4_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -120,7 +120,7 @@ final class mf extends ml {
         return stackIn_4_0;
     }
 
-    final static lp a(qk[] param0, boolean param1) {
+    final static lp a(qk[] param0) {
         lp var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -370,41 +370,21 @@ final class mf extends ml {
         if (param1) {
           ti.field_e = false;
           if (param1) {
-            if (0 < qa.field_t) {
-              qa.field_t = qa.field_t - 1;
-              if (!param0) {
-                field_q = null;
-                return;
-              } else {
-                return;
-              }
-            } else {
+            if (0 >= qa.field_t) {
               if (bc.field_b <= 0) {
-                if (0 < ee.field_k) {
-                  ee.field_k = ee.field_k - 1;
-                  if (!param0) {
-                    field_q = null;
-                    return;
-                  } else {
-                    return;
-                  }
+                if (0 >= ee.field_k) {
+                  return;
                 } else {
-                  if (!param0) {
-                    field_q = null;
-                    return;
-                  } else {
-                    return;
-                  }
+                  ee.field_k = ee.field_k - 1;
+                  return;
                 }
               } else {
                 bc.field_b = bc.field_b - 1;
-                if (!param0) {
-                  field_q = null;
-                  return;
-                } else {
-                  return;
-                }
+                return;
               }
+            } else {
+              qa.field_t = qa.field_t - 1;
+              return;
             }
           } else {
             if (np.field_a == null) {
@@ -412,45 +392,28 @@ final class mf extends ml {
                 ti.field_e = false;
                 if (bc.field_b <= 0) {
                   if (0 >= ee.field_k) {
-                    if (ed.field_f > qa.field_t) {
-                      in.a((byte) -83);
-                      qa.field_t = qa.field_t + 1;
-                      if (!param0) {
-                        field_q = null;
-                        return;
-                      } else {
-                        return;
-                      }
+                    if (ed.field_f <= qa.field_t) {
+                      return;
                     } else {
-                      if (!param0) {
-                        field_q = null;
-                        return;
-                      } else {
-                        return;
-                      }
+                      int discarded$3 = -83;
+                      in.a();
+                      qa.field_t = qa.field_t + 1;
+                      return;
                     }
                   } else {
                     ee.field_k = ee.field_k - 1;
-                    if (!param0) {
-                      field_q = null;
-                      return;
-                    } else {
-                      return;
-                    }
+                    return;
                   }
                 } else {
                   bc.field_b = bc.field_b - 1;
-                  if (!param0) {
-                    field_q = null;
-                    return;
-                  } else {
-                    return;
-                  }
+                  return;
                 }
               } else {
                 if (qa.field_t <= 0) {
                   if (ee.field_k <= 0) {
-                    if (ed.field_f > bc.field_b) {
+                    if (ed.field_f <= bc.field_b) {
+                      return;
+                    } else {
                       L0: {
                         if (0 == bc.field_b) {
                           tc.a(true, true);
@@ -460,48 +423,21 @@ final class mf extends ml {
                         }
                       }
                       bc.field_b = bc.field_b + 1;
-                      if (!param0) {
-                        field_q = null;
-                        return;
-                      } else {
-                        return;
-                      }
-                    } else {
-                      if (!param0) {
-                        field_q = null;
-                        return;
-                      } else {
-                        return;
-                      }
+                      return;
                     }
                   } else {
                     ee.field_k = ee.field_k - 1;
-                    if (!param0) {
-                      field_q = null;
-                      return;
-                    } else {
-                      return;
-                    }
+                    return;
                   }
                 } else {
                   qa.field_t = qa.field_t - 1;
-                  if (!param0) {
-                    field_q = null;
-                    return;
-                  } else {
-                    return;
-                  }
+                  return;
                 }
               }
             } else {
               if (0 < qa.field_t) {
                 qa.field_t = qa.field_t - 1;
-                if (!param0) {
-                  field_q = null;
-                  return;
-                } else {
-                  return;
-                }
+                return;
               } else {
                 L1: {
                   if (bc.field_b > 0) {
@@ -524,12 +460,7 @@ final class mf extends ml {
                     }
                   }
                 }
-                if (!param0) {
-                  field_q = null;
-                  return;
-                } else {
-                  return;
-                }
+                return;
               }
             }
           }
@@ -539,38 +470,18 @@ final class mf extends ml {
             if (param1) {
               if (0 < qa.field_t) {
                 qa.field_t = qa.field_t - 1;
-                if (!param0) {
-                  field_q = null;
-                  return;
-                } else {
-                  return;
-                }
+                return;
               } else {
                 if (bc.field_b <= 0) {
                   if (0 < ee.field_k) {
                     ee.field_k = ee.field_k - 1;
-                    if (!param0) {
-                      field_q = null;
-                      return;
-                    } else {
-                      return;
-                    }
+                    return;
                   } else {
-                    if (!param0) {
-                      field_q = null;
-                      return;
-                    } else {
-                      return;
-                    }
+                    return;
                   }
                 } else {
                   bc.field_b = bc.field_b - 1;
-                  if (!param0) {
-                    field_q = null;
-                    return;
-                  } else {
-                    return;
-                  }
+                  return;
                 }
               }
             } else {
@@ -580,39 +491,20 @@ final class mf extends ml {
                   if (bc.field_b <= 0) {
                     if (0 >= ee.field_k) {
                       if (ed.field_f > qa.field_t) {
-                        in.a((byte) -83);
+                        int discarded$4 = -83;
+                        in.a();
                         qa.field_t = qa.field_t + 1;
-                        if (!param0) {
-                          field_q = null;
-                          return;
-                        } else {
-                          return;
-                        }
+                        return;
                       } else {
-                        if (!param0) {
-                          field_q = null;
-                          return;
-                        } else {
-                          return;
-                        }
+                        return;
                       }
                     } else {
                       ee.field_k = ee.field_k - 1;
-                      if (!param0) {
-                        field_q = null;
-                        return;
-                      } else {
-                        return;
-                      }
+                      return;
                     }
                   } else {
                     bc.field_b = bc.field_b - 1;
-                    if (!param0) {
-                      field_q = null;
-                      return;
-                    } else {
-                      return;
-                    }
+                    return;
                   }
                 } else {
                   if (qa.field_t <= 0) {
@@ -627,48 +519,23 @@ final class mf extends ml {
                           }
                         }
                         bc.field_b = bc.field_b + 1;
-                        if (!param0) {
-                          field_q = null;
-                          return;
-                        } else {
-                          return;
-                        }
+                        return;
                       } else {
-                        if (!param0) {
-                          field_q = null;
-                          return;
-                        } else {
-                          return;
-                        }
+                        return;
                       }
                     } else {
                       ee.field_k = ee.field_k - 1;
-                      if (!param0) {
-                        field_q = null;
-                        return;
-                      } else {
-                        return;
-                      }
+                      return;
                     }
                   } else {
                     qa.field_t = qa.field_t - 1;
-                    if (!param0) {
-                      field_q = null;
-                      return;
-                    } else {
-                      return;
-                    }
+                    return;
                   }
                 }
               } else {
                 if (0 < qa.field_t) {
                   qa.field_t = qa.field_t - 1;
-                  if (!param0) {
-                    field_q = null;
-                    return;
-                  } else {
-                    return;
-                  }
+                  return;
                 } else {
                   L4: {
                     if (bc.field_b > 0) {
@@ -691,12 +558,7 @@ final class mf extends ml {
                       }
                     }
                   }
-                  if (!param0) {
-                    field_q = null;
-                    return;
-                  } else {
-                    return;
-                  }
+                  return;
                 }
               }
             }
@@ -706,45 +568,28 @@ final class mf extends ml {
                 ti.field_e = false;
                 if (bc.field_b <= 0) {
                   if (0 >= ee.field_k) {
-                    if (ed.field_f > qa.field_t) {
-                      in.a((byte) -83);
-                      qa.field_t = qa.field_t + 1;
-                      if (!param0) {
-                        field_q = null;
-                        return;
-                      } else {
-                        return;
-                      }
+                    if (ed.field_f <= qa.field_t) {
+                      return;
                     } else {
-                      if (param0) {
-                        return;
-                      } else {
-                        field_q = null;
-                        return;
-                      }
+                      int discarded$5 = -83;
+                      in.a();
+                      qa.field_t = qa.field_t + 1;
+                      return;
                     }
                   } else {
                     ee.field_k = ee.field_k - 1;
-                    if (param0) {
-                      return;
-                    } else {
-                      field_q = null;
-                      return;
-                    }
+                    return;
                   }
                 } else {
                   bc.field_b = bc.field_b - 1;
-                  if (param0) {
-                    return;
-                  } else {
-                    field_q = null;
-                    return;
-                  }
+                  return;
                 }
               } else {
                 if (qa.field_t <= 0) {
                   if (ee.field_k <= 0) {
-                    if (ed.field_f > bc.field_b) {
+                    if (ed.field_f <= bc.field_b) {
+                      return;
+                    } else {
                       L6: {
                         if (0 == bc.field_b) {
                           tc.a(true, true);
@@ -754,48 +599,21 @@ final class mf extends ml {
                         }
                       }
                       bc.field_b = bc.field_b + 1;
-                      if (param0) {
-                        return;
-                      } else {
-                        field_q = null;
-                        return;
-                      }
-                    } else {
-                      if (param0) {
-                        return;
-                      } else {
-                        field_q = null;
-                        return;
-                      }
+                      return;
                     }
                   } else {
                     ee.field_k = ee.field_k - 1;
-                    if (param0) {
-                      return;
-                    } else {
-                      field_q = null;
-                      return;
-                    }
+                    return;
                   }
                 } else {
                   qa.field_t = qa.field_t - 1;
-                  if (param0) {
-                    return;
-                  } else {
-                    field_q = null;
-                    return;
-                  }
+                  return;
                 }
               }
             } else {
               if (0 < qa.field_t) {
                 qa.field_t = qa.field_t - 1;
-                if (param0) {
-                  return;
-                } else {
-                  field_q = null;
-                  return;
-                }
+                return;
               } else {
                 L7: {
                   if (bc.field_b > 0) {
@@ -818,19 +636,14 @@ final class mf extends ml {
                     }
                   }
                 }
-                if (!param0) {
-                  field_q = null;
-                  return;
-                } else {
-                  return;
-                }
+                return;
               }
             }
           }
         }
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_u = null;
         field_o = null;
         field_x = null;
@@ -912,7 +725,7 @@ final class mf extends ml {
         }
     }
 
-    final static bi a(bc param0, String param1, String param2, boolean param3) {
+    final static bi a(bc param0, String param1, String param2) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         Object stackIn_3_0 = null;
@@ -1122,7 +935,7 @@ final class mf extends ml {
         return stackIn_8_0;
     }
 
-    final static void d(int param0) {
+    final static void d() {
         RuntimeException var1 = null;
         mj var1_ref = null;
         fb var1_ref2 = null;
@@ -1226,97 +1039,89 @@ final class mf extends ml {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        int[] stackIn_11_0 = null;
+        int[] stackIn_9_0 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
+        String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int[] stackOut_10_0 = null;
+        int[] stackOut_8_0 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
         RuntimeException stackOut_12_0 = null;
         StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
-            L1: {
-              var2_int = param1.length;
-              var3 = new int[var2_int];
-              if (param0 == 74) {
-                break L1;
-              } else {
-                mf.e(40);
-                break L1;
-              }
-            }
+            var2_int = param1.length;
+            var3 = new int[var2_int];
             var4 = 1;
-            L2: while (true) {
+            L1: while (true) {
               if (var2_int <= var4) {
-                stackOut_10_0 = (int[]) var3;
-                stackIn_11_0 = stackOut_10_0;
+                stackOut_8_0 = (int[]) var3;
+                stackIn_9_0 = stackOut_8_0;
                 break L0;
               } else {
                 var5 = var4;
-                L3: while (true) {
-                  L4: {
+                L2: while (true) {
+                  L3: {
                     var5--;
                     if (0 > var5) {
-                      break L4;
+                      break L3;
                     } else {
                       if (param1[var3[var5]] >= param1[var4]) {
-                        break L4;
+                        break L3;
                       } else {
                         var3[var5 + 1] = var3[var5];
-                        continue L3;
+                        continue L2;
                       }
                     }
                   }
                   var3[1 + var5] = var4;
                   var4++;
-                  continue L2;
+                  continue L1;
                 }
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var2 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var2;
-            stackOut_12_1 = new StringBuilder().append("mf.M(").append(param0).append(44);
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackOut_10_0 = (RuntimeException) var2;
+            stackOut_10_1 = new StringBuilder().append("mf.M(").append(74).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
-              break L5;
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
-              break L5;
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L4;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw r.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
         }
-        return stackIn_11_0;
+        return stackIn_9_0;
     }
 
     static {

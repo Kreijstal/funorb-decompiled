@@ -22,7 +22,8 @@ abstract class ug extends jna {
         } else {
           L0: {
             L1: {
-              var2 = this.e((byte) -46);
+              int discarded$4 = -46;
+              var2 = this.e();
               if (var2 == 0) {
                 break L1;
               } else {
@@ -51,7 +52,9 @@ abstract class ug extends jna {
             }
             L4: {
               if (hd.field_a[3]) {
-                ua.b(4, 2);
+                int discarded$5 = 2;
+                int discarded$6 = 4;
+                ua.b();
                 break L4;
               } else {
                 break L4;
@@ -82,7 +85,8 @@ abstract class ug extends jna {
               }
             }
             if (hd.field_a[8]) {
-              nf.a((byte) 5);
+              int discarded$7 = 5;
+              nf.a();
               break L0;
             } else {
               break L0;
@@ -92,7 +96,7 @@ abstract class ug extends jna {
         }
     }
 
-    private final void k(int param0) {
+    private final void k() {
         String var2 = dca.f(12);
         cc.a(55, di.a(78), var2);
     }
@@ -126,9 +130,7 @@ abstract class ug extends jna {
             uia var7 = null;
             String var8 = null;
             int var9 = 0;
-            Object var10 = null;
-            Object var11 = null;
-            Boolean var12 = null;
+            Boolean var10 = null;
             Throwable decompiledCaughtException = null;
             var9 = TombRacer.field_G ? 1 : 0;
             var4 = si.a(bg.field_t, pg.field_y, 103, param2);
@@ -140,19 +142,22 @@ abstract class ug extends jna {
                   break L0;
                 } else {
                   L1: {
-                    var5 = cha.a(pla.a(-1), sua.A(49), 2);
+                    int discarded$13 = -1;
+                    var5 = cha.a(pla.a(), sua.A(49), 2);
                     if (-1 == var5) {
                       break L1;
                     } else {
-                      ifa.a(dja.field_s, var5, io.field_b, (byte) 100);
+                      int discarded$14 = 100;
+                      ifa.a(dja.field_s, var5, io.field_b);
                       io.field_b = null;
                       dja.field_s = null;
                       break L1;
                     }
                   }
-                  var12 = nw.e((byte) 78);
-                  if (var12 != null) {
-                    kb.a(2753, var12.booleanValue());
+                  int discarded$15 = 78;
+                  var10 = nw.e();
+                  if (var10 != null) {
+                    kb.a(2753, var10.booleanValue());
                     break L0;
                   } else {
                     break L0;
@@ -161,7 +166,10 @@ abstract class ug extends jna {
               }
               L2: {
                 if (var4 == 2) {
-                  var5 = pe.a(vk.b(69), toa.a(false), hha.a(false), ((ug) this).field_u, cs.a((byte) 105), cja.a(0), (byte) 53);
+                  int discarded$16 = 69;
+                  int discarded$17 = 0;
+                  int discarded$18 = 53;
+                  var5 = pe.a(vk.b(), toa.a(false), hha.a(), ((ug) this).field_u, cs.a((byte) 105), cja.a(0));
                   if (var5 == -1) {
                     break L2;
                   } else {
@@ -201,7 +209,8 @@ abstract class ug extends jna {
                     } else {
                       if (var5 == 0) {
                         ic.field_b = tr.field_g;
-                        ak.g(0);
+                        int discarded$19 = 0;
+                        ak.g();
                         gda.field_c = 10;
                         qga.field_m = false;
                         break L3;
@@ -268,7 +277,8 @@ abstract class ug extends jna {
                 if (9 != var4) {
                   break L10;
                 } else {
-                  qea.a(di.a(104), -87);
+                  int discarded$20 = -87;
+                  qea.a(di.a(104));
                   break L10;
                 }
               }
@@ -284,7 +294,8 @@ abstract class ug extends jna {
                 if (11 != var4) {
                   break L12;
                 } else {
-                  nt.a(di.a(41), -1978);
+                  int discarded$21 = -1978;
+                  nt.a(di.a(41));
                   break L12;
                 }
               }
@@ -293,7 +304,8 @@ abstract class ug extends jna {
                 if (var4 != 12) {
                   break L13;
                 } else {
-                  jc.a(mn.g(-128), di.a(28), (byte) -74);
+                  int discarded$22 = -128;
+                  jc.a(mn.g(), di.a(28), (byte) -74);
                   break L13;
                 }
               }
@@ -319,11 +331,12 @@ abstract class ug extends jna {
                             var7 = ana.field_o.b((byte) -123);
                             if (var7 != null) {
                               var8 = nia.a(var7.field_g, 0, var7.field_h, 255);
-                              nd.a(var8, -1);
+                              int discarded$23 = -1;
+                              nd.a(var8);
                               break L18;
                             } else {
-                              var10 = null;
-                              nd.a((String) null, -1);
+                              int discarded$24 = -1;
+                              nd.a((String) null);
                               break L18;
                             }
                           }
@@ -338,8 +351,8 @@ abstract class ug extends jna {
                     L19: {
                       var6 = (Exception) (Object) decompiledCaughtException;
                       ssa.a("S1", (byte) 121, (Throwable) (Object) var6);
-                      var11 = null;
-                      nd.a((String) null, -1);
+                      int discarded$25 = -1;
+                      nd.a((String) null);
                       ana.field_o = null;
                       break L19;
                     }
@@ -372,11 +385,9 @@ abstract class ug extends jna {
         }
     }
 
-    private final void a(byte param0, int param1, boolean param2) {
-        this.a(rd.field_r.field_c, wla.field_Eb.field_c, gfa.field_l.field_c, dba.field_d.field_c, 5000, param1, rm.field_d.field_c, false);
-        if (param0 >= -25) {
-            ((ug) this).field_w = 116L;
-        }
+    private final void a(byte param0, int param1) {
+        int discarded$0 = 0;
+        this.a(rd.field_r.field_c, wla.field_Eb.field_c, gfa.field_l.field_c, dba.field_d.field_c, 5000, param1, rm.field_d.field_c);
     }
 
     final void m(int param0) {
@@ -418,7 +429,8 @@ abstract class ug extends jna {
                     break L2;
                   } else {
                     if (var2 == 2) {
-                      voa.d(-95);
+                      int discarded$8 = -95;
+                      voa.d();
                       break L2;
                     } else {
                       if (var2 == 3) {
@@ -426,7 +438,8 @@ abstract class ug extends jna {
                         break L2;
                       } else {
                         if (var2 == 4) {
-                          iv.f(0);
+                          int discarded$9 = 0;
+                          iv.f();
                           break L2;
                         } else {
                           if (var2 != 5) {
@@ -451,16 +464,19 @@ abstract class ug extends jna {
                                               break L2;
                                             } else {
                                               if (var2 == 18) {
-                                                vta.c((byte) 101);
+                                                int discarded$10 = 101;
+                                                vta.c();
                                                 break L2;
                                               } else {
                                                 ssa.a("MGS1: " + kk.a(32), (byte) 123, (Throwable) null);
-                                                dea.a(60);
+                                                int discarded$11 = 60;
+                                                dea.a();
                                                 break L2;
                                               }
                                             }
                                           } else {
-                                            ri.e(14180);
+                                            int discarded$12 = 14180;
+                                            ri.e();
                                             break L2;
                                           }
                                         } else {
@@ -490,12 +506,14 @@ abstract class ug extends jna {
                                     k.a((byte) 113, var3);
                                     break L2;
                                   } else {
-                                    fq.a((byte) -68);
+                                    int discarded$13 = -68;
+                                    fq.a();
                                     break L2;
                                   }
                                 }
                               } else {
-                                this.k(116);
+                                int discarded$14 = 116;
+                                this.k();
                                 break L2;
                               }
                             }
@@ -514,13 +532,15 @@ abstract class ug extends jna {
           }
         }
         ssa.a("MGS2: " + kk.a(32), (byte) 120, (Throwable) null);
-        dea.a(60);
+        int discarded$15 = 60;
+        dea.a();
     }
 
-    private final int e(byte param0) {
+    private final int e() {
         int var2 = 0;
         if (!((ug) this).field_b) {
-          if (uma.b(-1)) {
+          int discarded$6 = -1;
+          if (uma.b()) {
             if (wta.field_G) {
               return -1;
             } else {
@@ -558,7 +578,8 @@ abstract class ug extends jna {
                     if (0 != fsa.field_m) {
                       break L2;
                     } else {
-                      ak.g(0);
+                      int discarded$7 = 0;
+                      ak.g();
                       break L2;
                     }
                   }
@@ -596,7 +617,8 @@ abstract class ug extends jna {
     }
 
     final void a(int param0, int param1) {
-        this.a((byte) -86, param1, false);
+        int discarded$0 = 0;
+        this.a((byte) -86, param1);
         int var3 = 53 % ((param0 - 38) / 36);
     }
 
@@ -607,7 +629,7 @@ abstract class ug extends jna {
         }
     }
 
-    private final void i(int param0) {
+    private final void i() {
         vca.field_c[11] = -1;
         vca.field_c[9] = -1;
         vca.field_c[5] = -1;
@@ -635,25 +657,30 @@ abstract class ug extends jna {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
+    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         java.awt.Frame var10 = new java.awt.Frame("Jagex");
         var10.pack();
         var10.dispose();
         ((ug) this).setBackground(java.awt.Color.black);
         bg.field_t = ((ug) this).field_z;
         pt.b(bg.field_t, (byte) 65);
-        qea.a(((ug) this).field_s, ((ug) this).field_v, dsa.field_c, ((ug) this).field_p, ((ug) this).field_x, ((ug) this).field_t, 5000, param4, -1367135824, param7, ((ug) this).field_A, bg.field_t, param5, ((ug) this).field_w);
+        qea.a(((ug) this).field_s, ((ug) this).field_v, dsa.field_c, ((ug) this).field_p, ((ug) this).field_x, ((ug) this).field_t, 5000, 5000, -1367135824, false, ((ug) this).field_A, bg.field_t, param5, ((ug) this).field_w);
         av.a(bg.field_t, dsa.field_c, 103, ((ug) this).field_x, ((ug) this).field_v, param5, ((ug) this).field_p, ((ug) this).field_s, ((ug) this).field_t);
-        wka.b(520);
-        tja.field_q = dka.a((byte) -86);
-        fpa.a(nma.field_l, (byte) 75);
+        int discarded$0 = 520;
+        wka.b();
+        int discarded$1 = -86;
+        tja.field_q = dka.a();
+        int discarded$2 = 75;
+        fpa.a(nma.field_l);
         bi.field_c = param2;
         nga.field_p = param3;
         tj.field_c = param6;
         fq.field_g = param1;
         fm.field_j = param0;
-        this.i(16);
-        ws.f(29320);
+        int discarded$3 = 16;
+        this.i();
+        int discarded$4 = 29320;
+        ws.f();
     }
 
     final void g(byte param0) {
@@ -850,16 +877,19 @@ abstract class ug extends jna {
         if (param0 <= 89) {
             ug.n(-80);
         }
-        if (wua.c((byte) 49)) {
-            int discarded$1 = this.a((byte) -72, false, null != dq.field_f ? true : false);
+        int discarded$5 = 49;
+        if (wua.c()) {
+            int discarded$7 = this.a((byte) -72, false, null != dq.field_f ? true : false);
         } else {
             if (cga.field_f < 10) {
             } else {
-                if (!qk.i(250)) {
-                    pw.C(-5);
+                int discarded$12 = 250;
+                if (!qk.i()) {
+                    int discarded$14 = -5;
+                    pw.C();
                 } else {
                     if (0 == gda.field_c) {
-                        int discarded$3 = this.a((byte) -111, false, false);
+                        int discarded$16 = this.a((byte) -111, false, false);
                     } else {
                         tc.a(pg.field_y, -2886);
                     }
@@ -897,7 +927,8 @@ abstract class ug extends jna {
           if (null != wba.field_o) {
             L1: {
               if (null == dq.field_f) {
-                var6 = tj.b(25128);
+                int discarded$19 = 25128;
+                var6 = tj.b();
                 var4_ref_java_awt_Dimension = var6.getSize();
                 wba.field_o.a(var4_ref_java_awt_Dimension.width, false, var4_ref_java_awt_Dimension.height);
                 break L1;
@@ -918,7 +949,8 @@ abstract class ug extends jna {
             break L2;
           } else {
             if (gda.field_c != 11) {
-              sw.h(100);
+              int discarded$20 = 100;
+              sw.h();
               break L2;
             } else {
               break L2;
@@ -934,16 +966,20 @@ abstract class ug extends jna {
           }
         }
         L4: {
-          if (o.e(540800)) {
+          int discarded$21 = 540800;
+          if (o.e()) {
             L5: {
-              var3 = aqa.a(1188664449) * 1200;
+              int discarded$22 = 1188664449;
+              var3 = aqa.a() * 1200;
               if (((ug) this).field_y) {
                 break L5;
               } else {
-                if (rg.g((byte) 118) <= var3) {
+                int discarded$23 = 118;
+                if (rg.g() <= var3) {
                   break L4;
                 } else {
-                  if (var3 < ada.b(false)) {
+                  int discarded$24 = 0;
+                  if (var3 < ada.b()) {
                     break L5;
                   } else {
                     break L4;
@@ -952,10 +988,12 @@ abstract class ug extends jna {
               }
             }
             ((ug) this).field_y = false;
-            dea.a(60);
+            int discarded$25 = 60;
+            dea.a();
             dw.b((byte) -84);
             epa.a(2, (byte) -84, th.field_n);
-            bk.c(9033);
+            int discarded$26 = 9033;
+            bk.c();
             wta.field_G = true;
             oga.field_f = 15000L + bva.b((byte) -107);
             break L4;
@@ -998,10 +1036,12 @@ abstract class ug extends jna {
                 if (gda.field_c != 11) {
                   break L9;
                 } else {
-                  if (uma.b(-1)) {
+                  int discarded$27 = -1;
+                  if (uma.b()) {
                     break L9;
                   } else {
-                    ak.g(0);
+                    int discarded$28 = 0;
+                    ak.g();
                     break L9;
                   }
                 }
@@ -1098,7 +1138,8 @@ abstract class ug extends jna {
                 }
               }
             }
-            if (uma.b(-1)) {
+            int discarded$29 = -1;
+            if (uma.b()) {
               break L13;
             } else {
               break L12;
@@ -1125,7 +1166,8 @@ abstract class ug extends jna {
           if (fsa.field_m != 0) {
             break L15;
           } else {
-            if (uma.b(-1)) {
+            int discarded$30 = -1;
+            if (uma.b()) {
               break L15;
             } else {
               rca.field_l = false;
@@ -1137,7 +1179,8 @@ abstract class ug extends jna {
           if (cga.field_f != 0) {
             break L16;
           } else {
-            if (!ula.k((byte) -117)) {
+            int discarded$31 = -117;
+            if (!ula.k()) {
               break L16;
             } else {
               cga.field_f = 1;
@@ -1210,7 +1253,8 @@ abstract class ug extends jna {
                 L22: {
                   L23: {
                     ee.a(-1);
-                    eha.a((byte) -27);
+                    int discarded$32 = -27;
+                    eha.a();
                     ura.field_b = nl.field_c;
                     sra.field_t = false;
                     cra.a(tk.field_b, hm.field_n, 1, ft.field_a, vc.field_p);
@@ -1268,7 +1312,8 @@ abstract class ug extends jna {
                   if (null != sma.field_c) {
                     break L27;
                   } else {
-                    sma.field_c = epa.d((byte) -91);
+                    int discarded$33 = -91;
+                    sma.field_c = epa.d();
                     ci.field_k = fta.c(-93);
                     break L27;
                   }
@@ -1277,7 +1322,8 @@ abstract class ug extends jna {
                 hm.field_n = null;
                 tk.field_b = null;
                 vc.field_p = null;
-                vga.a((java.applet.Applet) this, (byte) -128);
+                int discarded$34 = -128;
+                vga.a((java.applet.Applet) this);
                 ea.a(-33);
                 cga.field_f = 10;
                 break L21;
@@ -1323,7 +1369,8 @@ abstract class ug extends jna {
                     }
                   }
                 }
-                ima.a(0.0f, vca.a(voa.field_s, hra.field_c, oqa.field_v, (byte) 92), -80);
+                int discarded$35 = 92;
+                ima.a(0.0f, vca.a(voa.field_s, hra.field_c, oqa.field_v), -80);
                 break L30;
               }
             }
@@ -1386,9 +1433,11 @@ abstract class ug extends jna {
             if (!wla.field_Cb) {
               break L37;
             } else {
-              pq.a(nma.field_l, false);
+              int discarded$36 = 0;
+              pq.a(nma.field_l);
               ((ug) this).b((byte) 14);
-              fpa.a(nma.field_l, (byte) 75);
+              int discarded$37 = 75;
+              fpa.a(nma.field_l);
               break L37;
             }
           }

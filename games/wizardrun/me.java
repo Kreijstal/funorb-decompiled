@@ -29,8 +29,8 @@ final class me {
     }
 
     final static void a(int param0) {
-        Object var2 = null;
-        rj.a((String) null, we.field_a, true);
+        int discarded$5 = 1;
+        rj.a((String) null, we.field_a);
         if (param0 != 7) {
             me.a((byte) -55);
         }
@@ -39,8 +39,14 @@ final class me {
     final static void a(int param0, boolean param1) {
         jf.field_f = mf.field_g[param0];
         bl.field_c = af.field_c[param0];
-        me.a((byte) -45);
-        td.field_e = wh.field_e[param0];
+        if (!param1) {
+          me.a((byte) -45);
+          td.field_e = wh.field_e[param0];
+          return;
+        } else {
+          td.field_e = wh.field_e[param0];
+          return;
+        }
     }
 
     static {

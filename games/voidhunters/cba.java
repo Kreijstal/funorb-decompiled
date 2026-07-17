@@ -18,7 +18,9 @@ final class cba extends za {
 
     public static void b(boolean param0) {
         field_e = null;
-        cba.b(false);
+        if (!param0) {
+            cba.b(false);
+        }
     }
 
     static {

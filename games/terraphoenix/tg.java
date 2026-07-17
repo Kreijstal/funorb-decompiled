@@ -16,13 +16,9 @@ final class tg {
     private byte[] field_m;
     static int field_l;
 
-    private final void a(int param0) {
+    private final void a() {
         int var2 = 0;
         int var3 = Terraphoenix.field_V;
-        if (param0 != -31201) {
-            Object var4 = null;
-            this.a((byte) 63, 54L, (byte[]) null);
-        }
         for (var2 = 0; var2 < 32; var2++) {
             ((tg) this).field_m[var2] = (byte) 0;
         }
@@ -150,22 +146,22 @@ final class tg {
         int var5 = 0;
         long var6 = 0L;
         int var8 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
+        String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
         RuntimeException stackOut_14_0 = null;
         StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
         var8 = Terraphoenix.field_V;
         try {
           L0: {
@@ -191,19 +187,11 @@ final class tg {
             }
             L3: while (true) {
               if (((tg) this).field_i >= 32) {
-                L4: {
-                  ka.a(((tg) this).field_m, 0, ((tg) this).field_b, 32, 32);
-                  this.a((byte) -67);
-                  if (param1 == 4) {
-                    break L4;
-                  } else {
-                    this.a((byte) -79);
-                    break L4;
-                  }
-                }
+                ka.a(((tg) this).field_m, 0, ((tg) this).field_b, 32, 32);
+                this.a((byte) -67);
                 var4_int = 0;
-                var5 = param0;
-                L5: while (true) {
+                var5 = 0;
+                L4: while (true) {
                   if (var4_int >= 8) {
                     break L0;
                   } else {
@@ -218,7 +206,7 @@ final class tg {
                     param2[7 + var5] = (byte)(int)var6;
                     var5 += 8;
                     var4_int++;
-                    continue L5;
+                    continue L4;
                   }
                 }
               } else {
@@ -231,37 +219,37 @@ final class tg {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L5: {
             var4 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var4;
-            stackOut_14_1 = new StringBuilder().append("tg.A(").append(param0).append(44).append(param1).append(44);
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackOut_12_0 = (RuntimeException) var4;
+            stackOut_12_1 = new StringBuilder().append("tg.A(").append(0).append(44).append(4).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
             if (param2 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
-              break L6;
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L5;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
-              break L6;
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L5;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw qk.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_c = null;
         field_h = null;
         field_e = null;
@@ -301,7 +289,7 @@ final class tg {
             var6 = 7 & -((int)param1 & 7) + 8;
             var7 = 7 & ((tg) this).field_f;
             var9 = param1;
-            var11 = 37 % ((param0 - -35) / 47);
+            var11 = 1;
             var12 = 31;
             var13 = 0;
             L1: while (true) {
@@ -390,7 +378,7 @@ final class tg {
           L8: {
             var5 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var5;
-            stackOut_22_1 = new StringBuilder().append("tg.D(").append(param0).append(44).append(param1).append(44);
+            stackOut_22_1 = new StringBuilder().append("tg.D(").append(104).append(44).append(param1).append(44);
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -417,7 +405,7 @@ final class tg {
         }
     }
 
-    final static byte[] a(byte[] param0, int param1, int param2, int param3) {
+    final static byte[] a(byte[] param0, int param1, int param2) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         int var5_int = 0;
@@ -466,7 +454,8 @@ final class tg {
               }
             }
             var5 = new tg();
-            var5.a(-31201);
+            int discarded$2 = -31201;
+            var5.a();
             var5.a((byte) 104, (long)(8 * param1), var4);
             var6 = new byte[64];
             var5.a(0, 4, var6);

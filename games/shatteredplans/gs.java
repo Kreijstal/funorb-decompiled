@@ -38,9 +38,10 @@ final class gs extends fp {
     }
 
     final long a(int param0) {
-        ((gs) this).field_l = ((gs) this).field_l + this.c(1);
+        int discarded$0 = 1;
+        ((gs) this).field_l = ((gs) this).field_l + this.c();
         if (param0 != 0) {
-            int discarded$10 = ((gs) this).a(-15, -125L);
+            int discarded$11 = ((gs) this).a(-15, -125L);
             if (!(~((gs) this).field_l <= ~((gs) this).field_n)) {
                 return (-((gs) this).field_l + ((gs) this).field_n) / 1000000L;
             }
@@ -52,13 +53,13 @@ final class gs extends fp {
         return 0L;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_m = null;
         field_j = null;
         field_i = null;
     }
 
-    private final long c(int param0) {
+    private final long c() {
         long var2 = 0L;
         long var4 = 0L;
         long var6 = 0L;
@@ -197,33 +198,17 @@ final class gs extends fp {
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
         String var7 = null;
-        Object var8 = null;
-        L0: {
-          if (em.field_h != 2) {
-            var7 = qk.field_z;
-            break L0;
-          } else {
+        if (em.field_h == 2) {
             var7 = ad.field_d;
-            break L0;
-          }
-        }
-        if (param3 > -56) {
-          var8 = null;
-          gs.a((tm) null, false);
-          er.a(param4, param6, var7, param0, (byte) 122, param1, param2, param5);
-          return;
         } else {
-          er.a(param4, param6, var7, param0, (byte) 122, param1, param2, param5);
-          return;
+            var7 = qk.field_z;
         }
+        er.a(param4, param6, var7, 320, (byte) 122, param1, 180, param5);
     }
 
-    final static void a(tm param0, boolean param1) {
+    final static void a(tm param0) {
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         int var2_int = hj.field_l.length + -1;
-        if (!param1) {
-            return;
-        }
         try {
             while (var2_int >= 1) {
                 hj.field_l[var2_int] = hj.field_l[-1 + var2_int];
@@ -232,7 +217,7 @@ final class gs extends fp {
             qd.field_a = 0;
             hj.field_l[0] = param0;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "gs.I(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw r.a((Throwable) (Object) runtimeException, "gs.I(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 41);
         }
     }
 

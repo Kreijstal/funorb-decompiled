@@ -9,7 +9,7 @@ final class rb {
     private int field_f;
     private int[] field_d;
 
-    final static boolean a(String param0, String param1, int param2) {
+    final static boolean a(String param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int stackIn_4_0 = 0;
@@ -52,7 +52,7 @@ final class rb {
           L0: {
             L1: {
               var3 = vj.a(param0, -115);
-              if (param1.indexOf(param0) != param2) {
+              if (param1.indexOf(param0) != -1) {
                 break L1;
               } else {
                 if (-1 != param1.indexOf(var3)) {
@@ -145,7 +145,7 @@ final class rb {
               break L5;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param2 + 41);
+          throw ie.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + -1 + 41);
         }
         return stackIn_12_0 != 0;
     }
@@ -193,7 +193,7 @@ final class rb {
         }
     }
 
-    final static void a(int param0, String[] param1, String param2, int param3) {
+    final static void a(int param0, String[] param1, String param2) {
         String[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -326,7 +326,7 @@ final class rb {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         pi.field_Q = -1;
         em.field_c = false;
         dd.field_l = 0;
@@ -402,42 +402,29 @@ final class rb {
     }
 
     private final void a(int param0, int param1, int param2) {
-        Object var5 = null;
-        if (((rb) this).field_a >= param1) {
+        if (((rb) this).field_a < param1) {
           L0: {
-            if (param1 >= ((rb) this).field_d.length) {
-              this.a(param1, -1);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          ((rb) this).field_d[param1] = param2;
-          if (param0 != 21125) {
-            var5 = null;
-            boolean discarded$4 = rb.a((String) null, (String) null, -54);
-            return;
-          } else {
-            return;
-          }
-        } else {
-          L1: {
             ((rb) this).field_a = param1;
             if (param1 >= ((rb) this).field_d.length) {
               this.a(param1, -1);
+              break L0;
+            } else {
+              break L0;
+            }
+          }
+          ((rb) this).field_d[param1] = param2;
+          return;
+        } else {
+          L1: {
+            if (param1 >= ((rb) this).field_d.length) {
+              this.a(param1, -1);
               break L1;
             } else {
               break L1;
             }
           }
           ((rb) this).field_d[param1] = param2;
-          if (param0 == 21125) {
-            return;
-          } else {
-            var5 = null;
-            boolean discarded$5 = rb.a((String) null, (String) null, -54);
-            return;
-          }
+          return;
         }
     }
 

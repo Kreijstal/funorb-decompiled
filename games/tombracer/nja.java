@@ -96,7 +96,7 @@ final class nja extends fqa {
         return 3;
     }
 
-    public static void f(boolean param0) {
+    public static void f() {
         field_K = null;
         field_J = null;
     }

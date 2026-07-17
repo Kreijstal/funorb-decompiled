@@ -39,15 +39,15 @@ final class eg {
         }
     }
 
-    final static void a(int param0, int param1, int param2, le param3, le param4, int param5) {
+    final static void a(int param0, int param1, int param2, le param3, le param4) {
         ig.field_b = param3;
-        mf.field_z = param1;
+        mf.field_z = 2;
         uc.field_g = param4;
-        fh.field_e = param2;
+        fh.field_e = 8;
         try {
-            gm.field_e = param0;
+            gm.field_e = 8;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "eg.H(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + 4 + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "eg.H(" + 8 + 44 + 2 + 44 + 8 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + 4 + 41);
         }
     }
 
@@ -56,7 +56,7 @@ final class eg {
         return ((eg) this).field_c.length();
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_d = null;
         field_g = null;
         field_j = null;
@@ -325,7 +325,7 @@ final class eg {
             }
             var17 = null;
             var16 = null;
-            ak.a(param5, param8, (int[]) null, param10, param12, param9, (rk[]) null, param13, param1, param11, param0, 22193, param14, param4, param7, param3, param6);
+            ak.a(param5, param8, (int[]) null, param10, param12, param9, (rk[]) null, param13, param1, param11, param0, 22193, param14, param4, param7, true, param6);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -383,7 +383,7 @@ final class eg {
           }
           L4: {
             stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(param2).append(44).append(1).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -612,19 +612,11 @@ final class eg {
 
     final static int a(int param0, int param1, int param2) {
         if (param0 >= 0) {
-          if (param1 == 0) {
-            if (param2 == param0) {
-              return 0;
-            } else {
-              return 1;
-            }
+          eg.a((int[]) null, (String[]) null, -25, true, (um) null, (km[][]) null, (String[][]) null, (um) null, (byte[]) null, 53, (um) null, (String[][]) null, (byte[]) null, -67, (km[][]) null);
+          if (param2 == param0) {
+            return 0;
           } else {
-            eg.a((int[]) null, (String[]) null, -25, true, (um) null, (km[][]) null, (String[][]) null, (um) null, (byte[]) null, 53, (um) null, (String[][]) null, (byte[]) null, -67, (km[][]) null);
-            if (param2 == param0) {
-              return 0;
-            } else {
-              return 1;
-            }
+            return 1;
           }
         } else {
           return param0;

@@ -6,7 +6,7 @@ import java.lang.Class;
 final class beb implements dja {
     static int field_a;
 
-    final static Class a(String param0, byte param1) throws ClassNotFoundException {
+    final static Class a(String param0) throws ClassNotFoundException {
         RuntimeException var2 = null;
         Class stackIn_4_0 = null;
         Class stackIn_7_0 = null;
@@ -174,15 +174,7 @@ final class beb implements dja {
         try {
           L0: {
             if (null != param0) {
-              L1: {
-                var3 = new faa(param0);
-                if (param1 == 6429) {
-                  break L1;
-                } else {
-                  field_a = 26;
-                  break L1;
-                }
-              }
+              var3 = new faa(param0);
               var4 = param2.a((byte) 52);
               var3.p(-23497);
               var4.a(var3, false);
@@ -196,7 +188,7 @@ final class beb implements dja {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var3_ref = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var3_ref;
             stackOut_8_1 = new StringBuilder().append("beb.C(");
@@ -211,7 +203,7 @@ final class beb implements dja {
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
-              break L2;
+              break L1;
             } else {
               stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
               stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
@@ -219,12 +211,12 @@ final class beb implements dja {
               stackIn_12_0 = stackOut_9_0;
               stackIn_12_1 = stackOut_9_1;
               stackIn_12_2 = stackOut_9_2;
-              break L2;
+              break L1;
             }
           }
-          L3: {
+          L2: {
             stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44).append(param1).append(44);
+            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44).append(6429).append(44);
             stackIn_15_0 = stackOut_12_0;
             stackIn_15_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -236,7 +228,7 @@ final class beb implements dja {
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
-              break L3;
+              break L2;
             } else {
               stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
               stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
@@ -244,7 +236,7 @@ final class beb implements dja {
               stackIn_16_0 = stackOut_13_0;
               stackIn_16_1 = stackOut_13_1;
               stackIn_16_2 = stackOut_13_2;
-              break L3;
+              break L2;
             }
           }
           throw rta.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);

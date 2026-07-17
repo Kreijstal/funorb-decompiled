@@ -145,29 +145,16 @@ final class vl implements io {
         try {
             IOException var2 = null;
             Throwable decompiledCaughtException = null;
-            if (param0 == -46) {
-              L0: {
-                if (sn.field_c == null) {
-                  break L0;
-                } else {
-                  L1: {
-                    if (-1 >= param1) {
-                      if (df.field_j != ic.field_T) {
-                        break L0;
-                      } else {
-                        if (dp.field_e.field_j != 0) {
-                          break L1;
-                        } else {
-                          if (~pd.a(-22826) >= ~(10000L + hm.field_N)) {
-                            break L1;
-                          } else {
-                            dp.field_e.j(11, param1);
-                            break L1;
-                          }
-                        }
-                      }
+            L0: {
+              if (sn.field_c == null) {
+                break L0;
+              } else {
+                L1: {
+                  if (-1 >= param1) {
+                    if (df.field_j != ic.field_T) {
+                      break L0;
                     } else {
-                      if (-1 != dp.field_e.field_j) {
+                      if (dp.field_e.field_j != 0) {
                         break L1;
                       } else {
                         if (~pd.a(-22826) >= ~(10000L + hm.field_N)) {
@@ -178,30 +165,38 @@ final class vl implements io {
                         }
                       }
                     }
-                  }
-                  L2: {
-                    if (0 < dp.field_e.field_j) {
-                      {
-                        L3: {
-                          sn.field_c.a(dp.field_e.field_j, true, 0, dp.field_e.field_h);
-                          hm.field_N = pd.a(-22826);
-                          break L3;
-                        }
-                      }
-                      dp.field_e.field_j = 0;
-                      break L2;
+                  } else {
+                    if (-1 != dp.field_e.field_j) {
+                      break L1;
                     } else {
-                      break L2;
+                      if (~pd.a(-22826) >= ~(10000L + hm.field_N)) {
+                        break L1;
+                      } else {
+                        dp.field_e.j(11, param1);
+                        break L1;
+                      }
                     }
                   }
-                  return;
                 }
+                L2: {
+                  if (0 < dp.field_e.field_j) {
+                    {
+                      L3: {
+                        sn.field_c.a(dp.field_e.field_j, true, 0, dp.field_e.field_h);
+                        hm.field_N = pd.a(-22826);
+                        break L3;
+                      }
+                    }
+                    dp.field_e.field_j = 0;
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+                return;
               }
-              dp.field_e.field_j = 0;
-              return;
-            } else {
-              return;
             }
+            dp.field_e.field_j = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -209,7 +204,7 @@ final class vl implements io {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_m = null;
         field_p = null;
         field_b = null;
@@ -217,7 +212,7 @@ final class vl implements io {
         field_f = null;
     }
 
-    final static void a(wk param0, ub param1, int param2) {
+    final static void a(wk param0, ub param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

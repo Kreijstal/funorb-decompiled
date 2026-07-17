@@ -102,11 +102,12 @@ final class fg {
                     break L2;
                   }
                 }
-                ol.a(var3_ref, 26613);
+                int discarded$2 = 26613;
+                ol.a(var3_ref);
                 var7 = kb.a(var3_ref, 0, "%3a", ":");
-                var8 = kb.a(var7, param1 + 77, "%40", "@");
+                var8 = kb.a(var7, 0, "%40", "@");
                 var9 = kb.a(var8, 0, "%26", "&");
-                var10 = kb.a(var9, param1 ^ -77, "%23", "#");
+                var10 = kb.a(var9, 0, "%23", "#");
                 if (null == ba.field_L) {
                   return;
                 } else {
@@ -163,40 +164,32 @@ final class fg {
                       break L4;
                     }
                   }
-                  L5: {
-                    var4 = ((jk) (Object) stackIn_15_0).a((byte) stackIn_15_1, new java.net.URL(stackIn_15_4, stackIn_15_6 + "&v1=" + jk.field_o + "&v2=" + jk.field_i + "&e=" + var10));
-                    if (param1 == -77) {
-                      break L5;
-                    } else {
-                      field_a = null;
-                      break L5;
-                    }
-                  }
-                  L6: while (true) {
+                  var4 = ((jk) (Object) stackIn_15_0).a((byte) stackIn_15_1, new java.net.URL(stackIn_15_4, stackIn_15_6 + "&v1=" + jk.field_o + "&v2=" + jk.field_i + "&e=" + var10));
+                  L5: while (true) {
                     if (var4.field_f != 0) {
-                      L7: {
+                      L6: {
                         if (var4.field_f != 1) {
-                          break L7;
+                          break L6;
                         } else {
                           var5 = (DataInputStream) var4.field_b;
-                          int discarded$1 = var5.read();
+                          int discarded$3 = var5.read();
                           var5.close();
-                          break L7;
+                          break L6;
                         }
                       }
                       break L0;
                     } else {
                       bc.a(1L, (byte) -92);
-                      continue L6;
+                      continue L5;
                     }
                   }
                 }
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              L8: {
+              L7: {
                 var3 = (Exception) (Object) decompiledCaughtException;
-                break L8;
+                break L7;
               }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {

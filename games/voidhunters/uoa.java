@@ -172,21 +172,9 @@ final class uoa extends rna implements ntb {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        if (param3 == 0) {
-          if (li.field_i) {
+        if (li.field_i) {
             mmb.field_d[param0].a(param4, param2, 0, 16777215 | param1 << 24, 1);
             return;
-          } else {
-            return;
-          }
-        } else {
-          boolean discarded$8 = uoa.a(125, 2, 96);
-          if (!li.field_i) {
-            return;
-          } else {
-            mmb.field_d[param0].a(param4, param2, 0, 16777215 | param1 << 24, 1);
-            return;
-          }
         }
     }
 
@@ -420,10 +408,7 @@ final class uoa extends rna implements ntb {
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        if (param0 < 74) {
-            return true;
-        }
-        return (33 & param1) != 0 ? true : false;
+        return (33 & param1) != 0;
     }
 
     uoa() {

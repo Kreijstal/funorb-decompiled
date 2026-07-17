@@ -102,7 +102,7 @@ final class wa extends gd {
         return stackIn_12_0;
     }
 
-    final static ij a(boolean param0, boolean param1) {
+    final static ij a(boolean param0) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -173,21 +173,22 @@ final class wa extends gd {
         }
         L4: {
           if (1 == ch.field_m) {
-            int discarded$4 = var8.k(95);
-            String discarded$5 = var8.j(-1231);
+            int discarded$5 = var8.k(95);
+            String discarded$6 = var8.j(-1231);
             break L4;
           } else {
             if (ch.field_m != 4) {
               break L4;
             } else {
-              int discarded$6 = var8.k(95);
-              String discarded$7 = var8.j(-1231);
+              int discarded$7 = var8.k(95);
+              String discarded$8 = var8.j(-1231);
               break L4;
             }
           }
         }
         if (!param0) {
-          fi.field_kb = ta.a(80, (th) (Object) var8, false);
+          int discarded$9 = 0;
+          fi.field_kb = ta.a(80, (th) (Object) var8);
           lm.field_d = null;
           return new ij(param0);
         } else {
@@ -356,13 +357,15 @@ final class wa extends gd {
                 }
               }
               var5 = var4;
-              if (wc.a(var5, (byte) -27)) {
+              int discarded$26 = -27;
+              if (wc.a(var5)) {
                 stackOut_7_0 = mf.field_b;
                 stackIn_8_0 = stackOut_7_0;
                 return stackIn_8_0;
               } else {
                 if (!t.a(0, var5)) {
-                  if (aa.a(var5, 1)) {
+                  int discarded$27 = 1;
+                  if (aa.a(var5)) {
                     stackOut_14_0 = ak.field_a;
                     stackIn_15_0 = stackOut_14_0;
                     return stackIn_15_0;
@@ -374,7 +377,8 @@ final class wa extends gd {
                     } else {
                       if (0 < var6.length()) {
                         if (!ka.a(var5, (byte) 126, var6)) {
-                          if (jc.a(var5, var6, 95)) {
+                          int discarded$28 = 95;
+                          if (jc.a(var5, var6)) {
                             stackOut_28_0 = mc.field_c;
                             stackIn_29_0 = stackOut_28_0;
                             return stackIn_29_0;
@@ -451,18 +455,18 @@ final class wa extends gd {
         hj[] var6 = null;
         var6 = new hj[9];
         var5 = var6;
-        hj dupTemp$4 = mk.a(param2, 124, param0);
+        hj dupTemp$4 = mk.a(param2, 124, 1);
         var6[6] = dupTemp$4;
         var5[3] = dupTemp$4;
         var5[2] = dupTemp$4;
-        var5[param1] = dupTemp$4;
+        var5[1] = dupTemp$4;
         var5[0] = dupTemp$4;
-        hj dupTemp$5 = mk.a(param4, wb.a(param1, -97), param0);
+        hj dupTemp$5 = mk.a(param4, wb.a(1, -97), 1);
         var5[8] = dupTemp$5;
         var5[7] = dupTemp$5;
         var5[5] = dupTemp$5;
         if (param3 != 0) {
-          var5[4] = mk.a(param3, param1 + -108, 64);
+          var6[4] = mk.a(param3, -107, 64);
           return var5;
         } else {
           return var5;

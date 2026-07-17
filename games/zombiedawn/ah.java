@@ -41,7 +41,8 @@ abstract class ah extends g {
         ((ah) this).field_Y = ((ah) this).field_jb[var3];
         ((ah) this).field_X = ((ah) this).field_gb[var3];
         ho.a(((ah) this).f(237239984), (byte) 54, ((ah) this).a(true));
-        pi.a(((ah) this).field_X, ((ah) this).field_Y, (byte) 101);
+        int discarded$0 = 101;
+        pi.a(((ah) this).field_X, ((ah) this).field_Y);
         ((ah) this).c(0, ((ah) this).field_D);
         ((ah) this).e(1, -6904);
         return true;
@@ -366,7 +367,7 @@ abstract class ah extends g {
         }
     }
 
-    private final String k(byte param0) {
+    private final String k() {
         int var2 = 0;
         int var3 = 0;
         var3 = ZombieDawn.field_J;
@@ -480,7 +481,8 @@ abstract class ah extends g {
             L4: {
               h.field_e[var4] = 0;
               if (0 >= ((ah) this).field_z) {
-                if (mf.a(((ah) this).field_gb[var4], ((ah) this).field_jb[var4], 0)) {
+                int discarded$1 = 0;
+                if (mf.a(((ah) this).field_gb[var4], ((ah) this).field_jb[var4])) {
                   stackOut_6_0 = 1;
                   stackIn_8_0 = stackOut_6_0;
                   break L4;
@@ -709,7 +711,8 @@ abstract class ah extends g {
                   }
                   L3: {
                     if (b.field_h) {
-                      bj.field_q.c(this.k((byte) -34), var3_int, var4, 16777215, 0);
+                      int discarded$2 = -34;
+                      bj.field_q.c(this.k(), var3_int, var4, 16777215, 0);
                       ((ah) this).a(param1, 5060);
                       break L3;
                     } else {
@@ -764,7 +767,7 @@ abstract class ah extends g {
                             }
                             L7: {
                               if (((ah) this).field_z > 0) {
-                                int discarded$1 = Math.abs(ip.field_p[0].field_w * fb.a(1311979239, (int)tp.field_p << 6) >> 16);
+                                int discarded$3 = Math.abs(ip.field_p[0].field_w * fb.a(1311979239, (int)tp.field_p << 6) >> 16);
                                 var5 = 6 * fb.a(1311979239, (int)tp.field_p << 6) >> 16;
                                 var6 = rd.a(true, (int)tp.field_p << 7) * 3 >> 16;
                                 ip.field_p[0].g(var5 + 24 + (var3_int + -7), 2 + (var4 - -var6), bb.field_e[-1 + ((ah) this).field_z]);
@@ -1278,16 +1281,16 @@ abstract class ah extends g {
             break L1;
           }
         }
-        va discarded$8 = ((ah) this).m(-67);
+        va discarded$9 = ((ah) this).m(-67);
         ((ah) this).d(((ah) this).field_F, -26109);
         if (!((ah) this).field_V) {
           L2: {
             L3: {
               if (((ah) this).field_F == 0) {
                 L4: {
-                  int fieldTemp$9 = ((ah) this).field_vb + 1;
+                  int fieldTemp$10 = ((ah) this).field_vb + 1;
                   ((ah) this).field_vb = ((ah) this).field_vb + 1;
-                  if (((ah) this).field_lb >= fieldTemp$9) {
+                  if (((ah) this).field_lb >= fieldTemp$10) {
                     break L4;
                   } else {
                     L5: {
@@ -1345,9 +1348,9 @@ abstract class ah extends g {
                     break L7;
                   }
                 }
-                int fieldTemp$10 = ((ah) this).field_qb;
+                int fieldTemp$11 = ((ah) this).field_qb;
                 ((ah) this).field_qb = ((ah) this).field_qb + 1;
-                if (fieldTemp$10 >= 5) {
+                if (fieldTemp$11 >= 5) {
                   ((ah) this).field_qb = 0;
                   ((ah) this).l((byte) 52);
                   break L3;
@@ -1411,7 +1414,8 @@ abstract class ah extends g {
                     if (((ah) this).field_G != 4) {
                       if (6 == ((ah) this).field_G) {
                         ((ah) this).e(0, -6904);
-                        pi.a(((ah) this).f(237239984), ((ah) this).a(true), (byte) 101);
+                        int discarded$12 = 101;
+                        pi.a(((ah) this).f(237239984), ((ah) this).a(true));
                         break L2;
                       } else {
                         break L2;
@@ -1419,9 +1423,9 @@ abstract class ah extends g {
                     } else {
                       L12: {
                         ((ah) this).field_N = 0;
-                        int fieldTemp$11 = ((ah) this).field_rb;
+                        int fieldTemp$13 = ((ah) this).field_rb;
                         ((ah) this).field_rb = ((ah) this).field_rb + 1;
-                        if (fieldTemp$11 >= 400) {
+                        if (fieldTemp$13 >= 400) {
                           ((ah) this).field_G = ((ah) this).field_G + 1;
                           break L12;
                         } else {
@@ -1447,9 +1451,9 @@ abstract class ah extends g {
                             break L2;
                           }
                         } else {
-                          int fieldTemp$12 = ((ah) this).field_qb;
+                          int fieldTemp$14 = ((ah) this).field_qb;
                           ((ah) this).field_qb = ((ah) this).field_qb + 1;
-                          if (fieldTemp$12 >= 5) {
+                          if (fieldTemp$14 >= 5) {
                             L13: {
                               ((ah) this).field_qb = 0;
                               if (((ah) this).field_cb == null) {
@@ -1471,9 +1475,9 @@ abstract class ah extends g {
                           }
                         }
                       } else {
-                        int fieldTemp$13 = ((ah) this).field_qb;
+                        int fieldTemp$15 = ((ah) this).field_qb;
                         ((ah) this).field_qb = ((ah) this).field_qb + 1;
-                        if (fieldTemp$13 < 5) {
+                        if (fieldTemp$15 < 5) {
                           break L3;
                         } else {
                           ((ah) this).field_qb = 0;
@@ -1483,9 +1487,9 @@ abstract class ah extends g {
                       }
                     } else {
                       L14: {
-                        int fieldTemp$14 = ((ah) this).field_qb;
+                        int fieldTemp$16 = ((ah) this).field_qb;
                         ((ah) this).field_qb = ((ah) this).field_qb + 1;
-                        if (5 <= fieldTemp$14) {
+                        if (5 <= fieldTemp$16) {
                           ((ah) this).field_qb = 0;
                           var2 = 0;
                           var3 = dj.field_e.field_lb.b((byte) 26);
@@ -1557,9 +1561,9 @@ abstract class ah extends g {
                     }
                   } else {
                     L19: {
-                      int fieldTemp$15 = ((ah) this).field_qb;
+                      int fieldTemp$17 = ((ah) this).field_qb;
                       ((ah) this).field_qb = ((ah) this).field_qb + 1;
-                      if (fieldTemp$15 >= 5) {
+                      if (fieldTemp$17 >= 5) {
                         ((ah) this).field_qb = 0;
                         var2 = 0;
                         var3 = dj.field_e.field_lb.b((byte) 26);
@@ -1892,7 +1896,7 @@ abstract class ah extends g {
         }
     }
 
-    public static void u(int param0) {
+    public static void u() {
         field_tb = null;
         field_bb = null;
     }

@@ -18,7 +18,7 @@ final class aj extends ae {
         }
     }
 
-    final static void a(pd param0, int param1, int param2, int param3, int param4, int param5, int param6, fm param7, int param8, int param9, int param10, int param11, pd param12, int param13, pd param14, fm param15, int param16, int param17, int param18, byte param19) {
+    final static void a(pd param0, int param1, int param2, int param3, int param4, int param5, int param6, fm param7, int param8, int param9, int param10, int param11, pd param12, int param13, pd param14, fm param15, int param16, int param17, int param18) {
         RuntimeException var20 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -102,8 +102,10 @@ final class aj extends ae {
             e.field_c = param15;
             ne.c(param13, 20341, param3, param8, param11);
             cb.a(param17, param10, -8388, param0);
-            wq.a(param5, param14, param1, param12, param9, false);
-            ei.a(param4, 25938, param2);
+            int discarded$2 = 0;
+            int discarded$3 = 15;
+            wq.a(5, param14, 10, param12);
+            ei.a(240, 25938, 320);
             p.a(param18, param6, false, param16);
             break L0;
           }
@@ -137,7 +139,7 @@ final class aj extends ae {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(10).append(44).append(320).append(44).append(param3).append(44).append(240).append(44).append(5).append(44).append(param6).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -162,7 +164,7 @@ final class aj extends ae {
           }
           L3: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param8).append(44).append(param9).append(44).append(param10).append(44).append(param11).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param8).append(44).append(15).append(44).append(param10).append(44).append(param11).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -247,60 +249,52 @@ final class aj extends ae {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_15_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_14_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_14_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_2_0 = 0;
+        int stackOut_13_0 = 0;
+        int stackOut_8_0 = 0;
         var8 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
-            if (!param1) {
-              var3_int = 0;
-              var4 = eb.field_M;
-              L1: while (true) {
-                if (var3_int >= eo.field_e.length) {
-                  stackOut_14_0 = -1;
-                  stackIn_15_0 = stackOut_14_0;
-                  break L0;
-                } else {
-                  L2: {
-                    var5 = dn.field_a[var3_int];
-                    if (var5 < 0) {
-                      var4 = var4 + dq.field_l;
-                      break L2;
+            var3_int = 0;
+            var4 = eb.field_M;
+            L1: while (true) {
+              if (var3_int >= eo.field_e.length) {
+                stackOut_13_0 = -1;
+                stackIn_14_0 = stackOut_13_0;
+                break L0;
+              } else {
+                L2: {
+                  var5 = dn.field_a[var3_int];
+                  if (var5 < 0) {
+                    var4 = var4 + dq.field_l;
+                    break L2;
+                  } else {
+                    var6 = vh.a(true, -121, eo.field_e[var3_int]);
+                    var7 = aq.field_x + -(var6 >> 1);
+                    var4 = var4 + pb.field_b;
+                    if (th.a(param0, -wb.field_db + var7, param2, (wb.field_db << 1) + var6, var4, po.field_n - -(ne.field_tb << 1), 93)) {
+                      stackOut_8_0 = var5;
+                      stackIn_9_0 = stackOut_8_0;
+                      return stackIn_9_0;
                     } else {
-                      var6 = vh.a(true, -121, eo.field_e[var3_int]);
-                      var7 = aq.field_x + -(var6 >> 1);
-                      var4 = var4 + pb.field_b;
-                      if (th.a(param0, -wb.field_db + var7, param2, (wb.field_db << 1) + var6, var4, po.field_n - -(ne.field_tb << 1), 93)) {
-                        stackOut_9_0 = var5;
-                        stackIn_10_0 = stackOut_9_0;
-                        return stackIn_10_0;
-                      } else {
-                        var4 = var4 + ((ne.field_tb << 1) + (pb.field_b + po.field_n));
-                        break L2;
-                      }
+                      var4 = var4 + ((ne.field_tb << 1) + (pb.field_b + po.field_n));
+                      break L2;
                     }
                   }
-                  var3_int++;
-                  continue L1;
                 }
+                var3_int++;
+                continue L1;
               }
-            } else {
-              stackOut_2_0 = 122;
-              stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var3, "aj.F(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw fa.a((Throwable) (Object) var3, "aj.F(" + param0 + 44 + 0 + 44 + param2 + 41);
         }
-        return stackIn_15_0;
+        return stackIn_14_0;
     }
 
     final void a(int param0, boolean param1, int param2, int param3) {
@@ -314,7 +308,7 @@ final class aj extends ae {
         ((aj) this).field_k = param1;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_i = null;
         field_l = null;
     }

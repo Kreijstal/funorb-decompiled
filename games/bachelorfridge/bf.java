@@ -208,7 +208,7 @@ abstract class bf extends bw {
         return stackIn_45_0 != 0;
     }
 
-    final static void a(int param0, boolean param1, byte param2) {
+    final static void a(int param0, boolean param1) {
         ik var5 = null;
         String var6_ref_String = null;
         int var6 = 0;
@@ -228,7 +228,7 @@ abstract class bf extends bw {
         wb.a(param1, param0, -115);
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         int var1 = 105;
         field_g = null;
         field_h = null;

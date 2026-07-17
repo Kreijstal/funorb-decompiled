@@ -259,7 +259,7 @@ final class am {
         return stackIn_9_0 != 0;
     }
 
-    final static void a(db param0, db param1, int param2) {
+    final static void a(db param0, db param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -458,18 +458,21 @@ final class am {
     final static void a(tj param0, int param1, db param2, int param3) {
         try {
             lc.field_a = param3 * sm.d((byte) -104) / 1000;
-            nl.a(param2, 640);
-            lk.a(param2, (byte) 65);
+            int discarded$0 = 640;
+            nl.a(param2);
+            int discarded$1 = 65;
+            lk.a(param2);
             de.a((byte) -67, param2);
             fh.a(true);
-            on.a(-85);
-            sn.field_c = param1 - lc.field_a;
+            int discarded$2 = -85;
+            on.a();
+            sn.field_c = 0 - lc.field_a;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "am.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "am.B(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_f = null;
         field_e = null;

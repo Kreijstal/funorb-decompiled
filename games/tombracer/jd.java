@@ -148,7 +148,7 @@ final class jd extends tfa implements lv {
         }
     }
 
-    final static Class a(Object param0, int param1) {
+    final static Class a(Object param0) {
         RuntimeException var2 = null;
         Class stackIn_3_0 = null;
         Class stackIn_6_0 = null;
@@ -293,7 +293,7 @@ final class jd extends tfa implements lv {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_m = null;
     }
 

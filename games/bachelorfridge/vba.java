@@ -170,13 +170,13 @@ final class vba extends bca {
                 }
               }
             }
-            var10_int = -96 / ((-59 - param7) / 57);
+            var10_int = -96;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var10 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var10, "vba.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
+          throw pe.a((Throwable) (Object) var10, "vba.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + -128 + 44 + param8 + 44 + param9 + 41);
         }
     }
 

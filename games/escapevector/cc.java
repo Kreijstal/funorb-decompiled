@@ -12,7 +12,7 @@ final class cc extends hg {
     int field_h;
     static String field_l;
 
-    final static ed[] a(int param0, mf param1, int param2, byte param3) {
+    final static ed[] a(int param0, mf param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
@@ -39,7 +39,8 @@ final class cc extends hg {
           L0: {
             var4_int = 0;
             if (uc.a(param1, 120, param0, param2)) {
-              stackOut_3_0 = hf.b(121);
+              int discarded$2 = 121;
+              stackOut_3_0 = hf.b();
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -81,7 +82,7 @@ final class cc extends hg {
         return stackIn_4_0;
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_k = null;
         field_l = null;
         field_j = null;

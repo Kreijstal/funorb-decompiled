@@ -10,7 +10,7 @@ final class jm extends ck {
     static int field_o;
     int field_s;
 
-    public static void d(int param0) {
+    public static void d() {
         field_p = null;
         field_u = null;
         int var1 = 0;

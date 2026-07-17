@@ -73,11 +73,12 @@ final class gb {
                   break L1;
                 } else {
                   var7 = null;
-                  ba discarded$2 = gb.a((java.applet.Applet) null, 18);
+                  ba discarded$4 = gb.a((java.applet.Applet) null, 18);
                   break L1;
                 }
               }
-              var3 = jg.b((byte) 24);
+              int discarded$5 = 24;
+              var3 = jg.b();
               var4 = 0;
               L2: while (true) {
                 if (var4 >= var3.length) {
@@ -135,7 +136,7 @@ final class gb {
         return stackIn_14_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
     }
 

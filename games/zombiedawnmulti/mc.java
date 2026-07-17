@@ -115,7 +115,7 @@ final class mc {
         }
     }
 
-    final static String a(long param0, byte param1) {
+    final static String a(long param0) {
         int var3 = 0;
         long var4 = 0L;
         StringBuilder var6 = null;

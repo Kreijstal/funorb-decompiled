@@ -12,7 +12,7 @@ final class tm {
     static String field_a;
     static String field_f;
 
-    final static void a(int param0, boolean param1, boolean param2, int param3) {
+    final static void a(int param0, boolean param1, boolean param2) {
         gh stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         gh stackIn_5_0 = null;
@@ -99,7 +99,7 @@ final class tm {
         int stackOut_21_1 = 0;
         int stackOut_21_2 = 0;
         L0: {
-          bh.a(param0 + 2);
+          bh.a(0);
           if (ba.field_b >= 0) {
             jb.field_C.field_S = db.a(qg.field_g, -34, new String[1]);
             break L0;
@@ -327,7 +327,9 @@ final class tm {
                 }
               }
             }
-            ui.a(param3, param0 + 2);
+            int discarded$6 = 0;
+            int discarded$7 = 11;
+            ui.a();
             break L8;
           }
         }
@@ -347,7 +349,11 @@ final class tm {
                 }
               }
             }
-            nl.a(ok.field_a, eh.field_e, true, 0, param3, (byte) 81);
+            int discarded$8 = 81;
+            int discarded$9 = 11;
+            int discarded$10 = 0;
+            int discarded$11 = 1;
+            nl.a(ok.field_a, eh.field_e);
             break L10;
           }
         }
@@ -359,22 +365,15 @@ final class tm {
             break L12;
           }
         }
-        L13: {
-          if (param0 == -2) {
-            break L13;
-          } else {
-            field_c = null;
-            break L13;
-          }
-        }
     }
 
     final static gh a(byte param0) {
-        int var1 = 0;
-        return pl.d(true);
+        int var1 = -54 % ((-38 - param0) / 57);
+        int discarded$0 = 1;
+        return pl.d();
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_e = null;
         field_b = null;

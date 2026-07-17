@@ -90,12 +90,13 @@ final class vu {
                               var6++;
                               break L5;
                             } else {
-                              var8 = rr.a((char) var7, (byte) -70);
+                              int discarded$2 = -70;
+                              var8 = rr.a((char) var7);
                               if (var8 == 0) {
                                 var6++;
                                 break L5;
                               } else {
-                                StringBuilder discarded$1 = var5.append(var8);
+                                StringBuilder discarded$3 = var5.append(var8);
                                 var6++;
                                 break L5;
                               }
@@ -200,7 +201,7 @@ final class vu {
         var7 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {
-            var4 = -83 / ((-59 - param1) / 54);
+            var4 = 27;
             var3_int = 0;
             var5 = param0.length();
             var6 = 0;
@@ -254,12 +255,12 @@ final class vu {
               break L3;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 44 + param2 + 41);
+          throw pn.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + 103 + 44 + param2 + 41);
         }
         return stackIn_11_0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_g = null;
     }
 

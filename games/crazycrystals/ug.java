@@ -49,42 +49,42 @@ final class ug implements Iterable {
                     break L3;
                   }
                 }
-                ug.a((byte) 124);
-                if (li.field_d != null) {
-                  var1_int = 0;
-                  L6: while (true) {
-                    if (var1_int >= li.field_d.length) {
-                      break L0;
-                    } else {
-                      if (var3 == 0) {
-                        L7: {
+                L6: {
+                  if (param0 == -127) {
+                    break L6;
+                  } else {
+                    ug.a((byte) 124);
+                    break L6;
+                  }
+                }
+                L7: {
+                  if (li.field_d != null) {
+                    var1_int = 0;
+                    L8: while (true) {
+                      if (var1_int >= li.field_d.length) {
+                        break L7;
+                      } else {
+                        L9: {
                           if (li.field_d[var1_int] == null) {
-                            break L7;
+                            break L9;
                           } else {
-                            {
-                              L8: {
-                                li.field_d[var1_int].d(-200000001);
-                                break L8;
-                              }
-                            }
-                            break L7;
+                            break L9;
                           }
                         }
                         var1_int++;
-                        continue L6;
-                      } else {
-                        return;
+                        continue L8;
                       }
                     }
+                  } else {
+                    break L7;
                   }
-                } else {
-                  return;
                 }
+                break L0;
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
-              decompiledCaughtException = decompiledCaughtParameter2;
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
               var1 = (RuntimeException) (Object) decompiledCaughtException;
-              throw dn.a((Throwable) (Object) var1, "ug.B(" + 124 + 41);
+              throw dn.a((Throwable) (Object) var1, "ug.B(" + param0 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -97,133 +97,57 @@ final class ug implements Iterable {
         return (Iterator) (Object) new ii((ug) this);
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_d = null;
-        if (param0 != 32) {
-            field_d = null;
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 
-    final static String a(int param0) {
-        String var1 = null;
+    final static String a() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        int var5 = 0;
-        String var6 = null;
-        String var7 = null;
-        String var8 = null;
-        String stackIn_8_0 = null;
-        String stackIn_18_0 = null;
-        String stackOut_7_0 = null;
-        String stackOut_17_0 = null;
-        var5 = CrazyCrystals.field_B;
-        var6 = "(" + fl.field_m + " " + ea.field_n + " " + qn.field_u + ") " + bf.field_b;
-        if (param0 == -1815) {
-          if (rk.field_b > 0) {
-            var1 = var6 + ":";
-            var2 = 0;
-            L0: while (true) {
-              if (rk.field_b > var2) {
-                L1: {
-                  stackOut_7_0 = var1 + 32;
-                  stackIn_18_0 = stackOut_7_0;
-                  stackIn_8_0 = stackOut_7_0;
-                  if (var5 != 0) {
-                    break L1;
-                  } else {
-                    L2: {
-                      L3: {
-                        var7 = stackIn_8_0;
-                        var3 = kd.field_n.field_h[var2] & 255;
-                        var4 = var3 >> 4;
-                        var3 = var3 & 15;
-                        if (var4 >= 10) {
-                          break L3;
-                        } else {
-                          var4 += 48;
-                          if (var5 == 0) {
-                            break L2;
-                          } else {
-                            break L3;
-                          }
-                        }
-                      }
-                      var4 += 55;
-                      break L2;
-                    }
-                    L4: {
-                      L5: {
-                        var8 = var7 + (char)var4;
-                        if (10 <= var3) {
-                          break L5;
-                        } else {
-                          var3 += 48;
-                          if (var5 == 0) {
-                            break L4;
-                          } else {
-                            break L5;
-                          }
-                        }
-                      }
-                      var3 += 55;
-                      break L4;
-                    }
-                    var1 = var8 + (char)var3;
-                    var2++;
-                    if (var5 == 0) {
-                      continue L0;
-                    } else {
-                      stackOut_17_0 = (String) var1;
-                      stackIn_18_0 = stackOut_17_0;
-                      break L1;
-                    }
-                  }
+        int var5 = CrazyCrystals.field_B;
+        String var1 = "(" + fl.field_m + " " + ea.field_n + " " + qn.field_u + ") " + bf.field_b;
+        if (rk.field_b > 0) {
+            var1 = var1 + ":";
+            for (var2 = 0; rk.field_b > var2; var2++) {
+                var1 = var1 + 32;
+                var3 = kd.field_n.field_h[var2] & 255;
+                var4 = var3 >> 4;
+                var3 = var3 & 15;
+                if (var4 < 10) {
+                    var4 += 48;
+                } else {
+                    var4 += 55;
                 }
-                return stackIn_18_0;
-              } else {
-                return var1;
-              }
+                var1 = var1 + (char)var4;
+                if (10 > var3) {
+                    var3 += 48;
+                } else {
+                    var3 += 55;
+                }
+                var1 = var1 + (char)var3;
             }
-          } else {
-            return var6;
-          }
-        } else {
-          return null;
         }
+        return var1;
     }
 
     final jb a(long param0, int param1) {
-        jb var4 = null;
-        int var5 = 0;
         jb var6 = null;
-        int var7 = 0;
-        var7 = CrazyCrystals.field_B;
-        var4 = ((ug) this).field_c[(int)((long)(-1 + ((ug) this).field_e) & param0)];
-        var5 = -65 % ((param1 - -31) / 54);
+        int var7 = CrazyCrystals.field_B;
+        jb var4 = ((ug) this).field_c[(int)((long)(-1 + ((ug) this).field_e) & param0)];
+        int var5 = -65 % ((param1 - -31) / 54);
         ((ug) this).field_b = var4.field_b;
-        L0: while (true) {
-          if (var4 != ((ug) this).field_b) {
-            if (var7 == 0) {
-              if (param0 == ((ug) this).field_b.field_e) {
+        while (var4 != ((ug) this).field_b) {
+            if (!(param0 != ((ug) this).field_b.field_e)) {
                 var6 = ((ug) this).field_b;
                 ((ug) this).field_b = ((ug) this).field_b.field_b;
                 return var6;
-              } else {
-                ((ug) this).field_b = ((ug) this).field_b.field_b;
-                continue L0;
-              }
-            } else {
-              return null;
             }
-          } else {
-            ((ug) this).field_b = null;
-            return null;
-          }
+            ((ug) this).field_b = ((ug) this).field_b.field_b;
         }
+        ((ug) this).field_b = null;
+        return null;
     }
 
     private ug() throws Throwable {

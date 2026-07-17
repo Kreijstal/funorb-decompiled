@@ -38,7 +38,7 @@ abstract class wb {
         field_g = null;
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         int var1 = 0;
         int var2 = 0;
         var2 = Lexicominos.field_L ? 1 : 0;
@@ -51,18 +51,22 @@ abstract class wb {
               jj.field_d = oj.field_d;
               jj.field_d = ef.a(new CharSequence[3], 0);
               jj.field_a.g(true);
-              vg.a(113);
+              int discarded$16 = 113;
+              vg.a();
               return;
             } else {
-              jj.field_d = da.a(new String[1], mc.field_m, false);
+              int discarded$17 = 0;
+              jj.field_d = da.a(new String[1], mc.field_m);
               jj.field_d = ef.a(new CharSequence[3], 0);
               jj.field_a.g(true);
-              vg.a(113);
+              int discarded$18 = 113;
+              vg.a();
               return;
             }
           } else {
             jj.field_a.g(true);
-            vg.a(113);
+            int discarded$19 = 113;
+            vg.a();
             return;
           }
         } else {
@@ -73,16 +77,16 @@ abstract class wb {
 
     abstract void c(int param0);
 
-    final static db[] a(int param0, int param1, int param2, int param3, int param4) {
+    final static db[] a(int param0, int param1, int param2, int param3) {
         db[] var6 = new db[9];
         db[] var5 = var6;
-        db dupTemp$0 = gf.a((byte) -76, param2, param0);
+        db dupTemp$0 = gf.a((byte) -76, 1, param0);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        db dupTemp$1 = gf.a((byte) -76, param2, param3);
+        db dupTemp$1 = gf.a((byte) -76, 1, param3);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;

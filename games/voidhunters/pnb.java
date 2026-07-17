@@ -62,7 +62,7 @@ final class pnb implements Iterator {
         }
     }
 
-    private final void a(int param0) {
+    private final void a() {
         ((pnb) this).field_d = ((pnb) this).field_b.field_h[0].field_c;
         ((pnb) this).field_a = null;
         ((pnb) this).field_c = 1;
@@ -72,7 +72,8 @@ final class pnb implements Iterator {
         ((pnb) this).field_a = null;
         try {
             ((pnb) this).field_b = param0;
-            this.a(1);
+            int discarded$0 = 1;
+            this.a();
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "pnb.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }

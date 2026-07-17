@@ -119,9 +119,9 @@ final class qk {
                                   break L5;
                                 }
                               }
-                              int incrementValue$1 = var8;
+                              int incrementValue$2 = var8;
                               var8++;
-                              im.field_h[incrementValue$1] = var12;
+                              im.field_h[incrementValue$2] = var12;
                               break L4;
                             }
                           }
@@ -148,7 +148,8 @@ final class qk {
                         L8: {
                           var9 = im.field_h[var8];
                           var10 = im.field_h[1 + var8];
-                          if (!mf.a(var10, param3, var9, 13234)) {
+                          int discarded$3 = 13234;
+                          if (!mf.a(var10, param3, var9)) {
                             break L8;
                           } else {
                             im.field_h[var8] = var10;
@@ -496,7 +497,7 @@ final class qk {
         field_I = null;
     }
 
-    final static int b(int param0) {
+    final static int b() {
         try {
             IOException var1 = null;
             int var1_int = 0;

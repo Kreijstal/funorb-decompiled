@@ -9,13 +9,10 @@ final class ae {
     static ih field_a;
 
     final static void a(int param0, String param1) {
-        if (param0 < 107) {
-            return;
-        }
         try {
             wc.field_p = param1;
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "ae.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "ae.C(" + 109 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -28,7 +25,7 @@ final class ae {
         wa.a(param0, false, -96);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         int var1 = 6;

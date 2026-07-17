@@ -389,7 +389,7 @@ final class dl extends me {
         }
     }
 
-    final static String a(uia param0, int param1, int param2) {
+    final static String a(uia param0) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -419,8 +419,8 @@ final class dl extends me {
           try {
             L0: {
               var3_int = param0.d((byte) -46);
-              if (var3_int > param1) {
-                var3_int = param1;
+              if (var3_int > 80) {
+                var3_int = 80;
                 break L0;
               } else {
                 break L0;
@@ -467,7 +467,7 @@ final class dl extends me {
               break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 44 + -117 + 41);
+          throw tba.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + 80 + 44 + -117 + 41);
         }
     }
 

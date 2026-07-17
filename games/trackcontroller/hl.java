@@ -11,7 +11,8 @@ abstract class hl extends td {
     boolean k(int param0) {
         Object var3 = null;
         if (param0 == 0) {
-          ((hl) this).field_G = this.n(127);
+          int discarded$4 = 127;
+          ((hl) this).field_G = this.n();
           if (0 == ((hl) this).field_G) {
             if (((hl) this).field_E) {
               return false;
@@ -24,7 +25,8 @@ abstract class hl extends td {
         } else {
           var3 = null;
           hl.a(47, (be) null, -39, 90, -67);
-          ((hl) this).field_G = this.n(127);
+          int discarded$5 = 127;
+          ((hl) this).field_G = this.n();
           if (0 == ((hl) this).field_G) {
             if (((hl) this).field_E) {
               return false;
@@ -60,7 +62,7 @@ abstract class hl extends td {
         }
     }
 
-    private final int n(int param0) {
+    private final int n() {
         return !((hl) this).field_E ? 0 : this != (Object) (Object) ((hl) this).field_D.j(-6121) ? 0 : 256;
     }
 
@@ -88,12 +90,13 @@ abstract class hl extends td {
         }
     }
 
-    final static void a(int param0, int param1) {
-        if (null != uh.field_b[param0]) {
-          if (!uh.field_b[param0].b(10000536)) {
+    final static void a() {
+        if (null != uh.field_b[10]) {
+          if (!uh.field_b[10].b(10000536)) {
             return;
           } else {
-            fe.a(uh.field_b[param0], 2);
+            int discarded$2 = 2;
+            fe.a(uh.field_b[10]);
             return;
           }
         } else {
@@ -184,7 +187,8 @@ abstract class hl extends td {
         int stackOut_12_0 = 0;
         int stackOut_11_0 = 0;
         L0: {
-          var2 = this.n(127);
+          int discarded$2 = 127;
+          var2 = this.n();
           var3 = var2 - ((hl) this).field_G;
           if (0 < var3) {
             ((hl) this).field_G = ((hl) this).field_G + (var3 + 7) / 8;

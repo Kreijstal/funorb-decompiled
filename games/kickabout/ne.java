@@ -387,7 +387,8 @@ final class ne extends dj {
           var4 = Kickabout.field_G;
           super.a(param0, param1);
           if (((ne) this).field_C == 0) {
-            this.i((byte) 96);
+            int discarded$57 = 96;
+            this.i();
             break L0;
           } else {
             if (((ne) this).field_C != 1) {
@@ -413,7 +414,8 @@ final class ne extends dj {
                 }
               }
             } else {
-              this.l((byte) -128);
+              int discarded$58 = -128;
+              this.l();
               break L0;
             }
           }
@@ -574,7 +576,7 @@ final class ne extends dj {
         }
     }
 
-    private final void l(byte param0) {
+    private final void l() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -777,7 +779,7 @@ final class ne extends dj {
         field_L = null;
     }
 
-    private final void i(byte param0) {
+    private final void i() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

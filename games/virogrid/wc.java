@@ -61,7 +61,7 @@ final class wc {
         try {
           L0: {
             L1: {
-              var3_int = 53 / ((-45 - param0) / 50);
+              var3_int = -53;
               var4 = -param2.field_Nb + param1.field_Nb;
               if (wl.field_a != param1.field_Pb) {
                 if (param1.field_Pb != null) {
@@ -106,7 +106,7 @@ final class wc {
           L4: {
             var3 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var3;
-            stackOut_14_1 = new StringBuilder().append("wc.B(").append(param0).append(44);
+            stackOut_14_1 = new StringBuilder().append("wc.B(").append(23).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -212,13 +212,13 @@ final class wc {
         hg var3 = null;
         try {
             var3 = gk.field_g;
-            int var4 = -35 / ((param1 - 42) / 58);
+            int var4 = -35;
             var3.g(param2, 8);
             var3.a(2, 85);
             var3.a(0, -106);
             var3.a(param0.field_m, 124);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "wc.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "wc.A(" + (param0 != null ? "{...}" : "null") + 44 + 110 + 44 + param2 + 41);
         }
     }
 

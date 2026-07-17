@@ -41,7 +41,7 @@ final class ro {
     static String field_H;
     private static String field_J;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_r = null;
         field_x = null;
         field_v = null;

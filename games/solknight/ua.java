@@ -133,7 +133,7 @@ final class ua extends ki implements ka {
         return stackIn_10_0 != 0;
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_I = null;
         int var1 = 0;
         field_F = null;
@@ -235,7 +235,7 @@ final class ua extends ki implements ka {
             jc.field_c = new byte[nb.field_c][];
             uf.field_s = new byte[nb.field_c][];
             var17.field_m = -(nb.field_c * 8) + param1.length - 7;
-            kl.field_a = var17.i(param0 ^ -8);
+            kl.field_a = var17.i(-8);
             we.field_e = var17.i(28);
             var3 = 1 + (255 & var17.j(255));
             var4 = 0;
@@ -256,7 +256,7 @@ final class ua extends ki implements ka {
                             L5: while (true) {
                               if (var4 >= var3) {
                                 var17.field_m = 0;
-                                var4 = param0;
+                                var4 = 0;
                                 L6: while (true) {
                                   if (var4 >= nb.field_c) {
                                     break L0;
@@ -407,7 +407,7 @@ final class ua extends ki implements ka {
                               }
                             }
                           } else {
-                            uj.field_b[var4] = var17.i(param0 + 40);
+                            uj.field_b[var4] = var17.i(40);
                             var4++;
                             continue L4;
                           }
@@ -436,7 +436,7 @@ final class ua extends ki implements ka {
           L17: {
             var2 = decompiledCaughtException;
             stackOut_49_0 = (RuntimeException) var2;
-            stackOut_49_1 = new StringBuilder().append("ua.J(").append(param0).append(44);
+            stackOut_49_1 = new StringBuilder().append("ua.J(").append(0).append(44);
             stackIn_51_0 = stackOut_49_0;
             stackIn_51_1 = stackOut_49_1;
             stackIn_50_0 = stackOut_49_0;
@@ -466,39 +466,32 @@ final class ua extends ki implements ka {
     final static ol a(boolean param0, byte[] param1) {
         ol var2 = null;
         RuntimeException var2_ref = null;
-        ol stackIn_6_0 = null;
+        ol stackIn_4_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
+        String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ol stackOut_5_0 = null;
+        ol stackOut_3_0 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
         StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
         try {
           L0: {
             if (param1 != null) {
-              L1: {
-                if (param0) {
-                  break L1;
-                } else {
-                  field_H = -117;
-                  break L1;
-                }
-              }
               var2 = new ol(param1, ph.field_h, qf.field_d, sa.field_l, uj.field_b, ig.field_H, jc.field_c);
-              og.a((byte) -97);
-              stackOut_5_0 = (ol) var2;
-              stackIn_6_0 = stackOut_5_0;
+              int discarded$2 = -97;
+              og.a();
+              stackOut_3_0 = (ol) var2;
+              stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
               return null;
@@ -506,35 +499,35 @@ final class ua extends ki implements ka {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var2_ref = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var2_ref;
-            stackOut_7_1 = new StringBuilder().append("ua.E(").append(param0).append(44);
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackOut_5_0 = (RuntimeException) var2_ref;
+            stackOut_5_1 = new StringBuilder().append("ua.E(").append(1).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
-              break L2;
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
-              break L2;
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw fc.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
-        return stackIn_6_0;
+        return stackIn_4_0;
     }
 
     public final void a(int param0, int param1, int param2, pj param3, boolean param4) {
@@ -622,8 +615,10 @@ final class ua extends ki implements ka {
         }
     }
 
-    final static mb h(int param0) {
-        return new mb(sg.b(-1), he.a(71));
+    final static mb h() {
+        int discarded$0 = -1;
+        int discarded$1 = 71;
+        return new mb(sg.b(), he.a());
     }
 
     ua(ge param0) {

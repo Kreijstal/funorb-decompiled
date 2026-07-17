@@ -21,7 +21,7 @@ final class qm {
         int var7 = ZombieDawn.field_J;
         try {
             sh.field_e = param1;
-            if (param0 == sh.field_e) {
+            if (1 == sh.field_e) {
                 ne.field_c = new no(-28 + hp.field_A.a(true), 8 + hp.field_A.f(237239984));
                 og.field_A = false;
                 pl.field_t = new lm[100];
@@ -33,9 +33,9 @@ final class qm {
                     pl.field_t[var2_int] = new lm(var5, var6, -15 + so.c(30));
                 }
             }
-            qd.a(true, param0 + 111);
+            qd.a(true, 112);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "qm.A(" + param0 + 44 + param1 + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "qm.A(" + 1 + 44 + param1 + 41);
         }
     }
 

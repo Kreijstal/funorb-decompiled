@@ -8,7 +8,7 @@ final class ih {
     static String field_c;
     static String field_a;
 
-    final static void a(int param0) {
+    final static void a() {
         int var1_int = 0;
         int var2 = ZombieDawnMulti.field_E ? 1 : 0;
         if (dl.field_h == null) {
@@ -19,24 +19,24 @@ final class ih {
                 ud.field_P = new ja(512, 512);
             }
             ud.field_P.a();
-            for (var1_int = param0; 0 < var1_int; var1_int--) {
+            for (var1_int = 256; 0 < var1_int; var1_int--) {
                 oo.d(256, 256, var1_int, -var1_int + 256);
             }
             dl.field_h.b((byte) 125);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "ih.C(" + param0 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "ih.C(" + 256 + 41);
         }
     }
 
     final static void a(boolean param0, int param1, ug param2) {
         try {
-            nc.a(param0, param1, 92, param2);
+            nc.a(param0, 256, 92, param2);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "ih.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "ih.D(" + param0 + 44 + 256 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
         field_a = null;
         field_c = null;
@@ -47,53 +47,43 @@ final class ih {
     final static boolean a(int param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
         L0: {
           if (cr.a((byte) -115)) {
-            L1: {
-              cn.a(param0, param5, param6, (byte) -120);
-              if (pk.field_b == null) {
-                break L1;
+            cn.a(13, param5, param6, (byte) -120);
+            if (pk.field_b == null) {
+              m.a(param5, 0, 13);
+              cf.a(14, param5, true);
+              param5 = false;
+              return param5;
+            } else {
+              if (pk.field_b.a(11, 0, (byte) -8, param5, 13)) {
+                param5 = false;
+                q.b(89);
+                m.a(param5, 0, 13);
+                cf.a(14, param5, true);
+                param5 = false;
+                break L0;
               } else {
-                if (pk.field_b.a(param3, param4, (byte) -8, param5, param0)) {
-                  param5 = false;
-                  q.b(89);
-                  break L1;
-                } else {
-                  m.a(param5, 0, param0);
-                  cf.a(param2, param5, true);
-                  param5 = false;
-                  if (param1 == 4) {
-                    return param5;
-                  } else {
-                    ih.a(29);
-                    return param5;
-                  }
-                }
+                m.a(param5, 0, 13);
+                cf.a(14, param5, true);
+                param5 = false;
+                return param5;
               }
             }
-            m.a(param5, 0, param0);
-            cf.a(param2, param5, true);
-            param5 = false;
-            break L0;
           } else {
             break L0;
           }
         }
-        if (param1 != 4) {
-          ih.a(29);
-          return param5;
-        } else {
-          return param5;
-        }
+        return param5;
     }
 
-    final static void a(n param0, int param1, int param2) {
+    final static void a(n param0) {
         ga var5 = null;
         int var4 = 0;
         try {
             var5 = ma.field_a;
-            var5.b((byte) -35, param2);
+            var5.b((byte) -35, 6);
             var5.field_j = var5.field_j + 1;
             var4 = var5.field_j;
-            var5.a(param1 ^ 112, param1);
+            var5.a(113, 1);
             if (null == param0.field_f) {
                 var5.a(-92, 0);
             } else {
@@ -105,17 +95,17 @@ final class ih {
             param0.field_h = var5.i(-1478490344);
             var5.e(41, -var4 + var5.field_j);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "ih.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "ih.F(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 44 + 6 + 41);
         }
     }
 
-    final static void a(byte param0, ab param1, int param2) {
+    final static void a(byte param0, ab param1) {
         ga var6 = null;
         int var4 = 0;
         try {
             var6 = ma.field_a;
-            var6.b((byte) -35, param2);
-            int var5 = -62 / ((20 - param0) / 57);
+            var6.b((byte) -35, 4);
+            int var5 = 62;
             var6.field_j = var6.field_j + 1;
             var4 = var6.field_j;
             var6.a(118, 1);
@@ -128,7 +118,7 @@ final class ih {
             int discarded$0 = var6.f(var4, 117);
             var6.e(35, var6.field_j - var4);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "ih.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "ih.B(" + 99 + 44 + (param1 != null ? "{...}" : "null") + 44 + 4 + 41);
         }
     }
 

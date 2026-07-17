@@ -27,9 +27,10 @@ final class pq extends pk {
         field_F = null;
     }
 
-    private final void g(int param0) {
+    private final void g() {
         ((pq) this).field_z = new wb[]{this.a(((pq) this).field_K, (byte) -110, ((pq) this).field_x), this.a(((pq) this).field_D, (byte) -5, ((pq) this).field_B)};
-        ((pq) this).field_M = this.f(-53);
+        int discarded$0 = -53;
+        ((pq) this).field_M = this.f();
         ((pq) this).field_G = ((pq) this).field_M.a();
         ((pq) this).field_E = new wb(((pq) this).field_p >> 1, ((pq) this).field_p);
     }
@@ -42,7 +43,8 @@ final class pq extends pk {
             return;
         }
         ((pq) this).field_x = param0;
-        this.g(880072001);
+        int discarded$0 = 880072001;
+        this.g();
     }
 
     final void a(int param0, int param1, pk param2, int param3) {
@@ -114,7 +116,7 @@ final class pq extends pk {
         }
     }
 
-    private final wb f(int param0) {
+    private final wb f() {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -213,22 +215,22 @@ final class pq extends pk {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        String stackIn_19_2 = null;
+        String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
         RuntimeException stackOut_16_0 = null;
         StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
@@ -238,46 +240,38 @@ final class pq extends pk {
             L1: while (true) {
               if (var6 >= var5_int) {
                 L2: {
-                  if (param2 == 256) {
-                    break L2;
-                  } else {
-                    ((pq) this).field_J = true;
-                    break L2;
-                  }
-                }
-                L3: {
                   su.a((byte) -51);
                   if (param3 + ((pq) this).field_M.field_x >= lk.field_k) {
-                    jq.a(param2 + 6905, ((pq) this).field_E);
+                    jq.a(7161, ((pq) this).field_E);
                     param0.a(-((pq) this).field_A, 0);
                     param0.a(((pq) this).field_H * 2 + -((pq) this).field_A, 0);
                     ((pq) this).field_G.d(0, 0);
                     su.a((byte) -105);
                     ((pq) this).field_E.a(param3, param1);
-                    break L3;
+                    break L2;
                   } else {
-                    break L3;
+                    break L2;
                   }
                 }
-                L4: {
+                L3: {
                   if (lk.field_j >= -((pq) this).field_M.field_x + var5_int) {
                     jq.a(7161, ((pq) this).field_E);
                     var7 = ((pq) this).field_A + ((pq) this).field_q - ((pq) this).field_M.field_x;
-                    L5: while (true) {
+                    L4: while (true) {
                       if (((pq) this).field_H * 2 >= var7) {
                         param0.a(-var7, 0);
                         param0.a(2 * ((pq) this).field_H + -var7, 0);
                         ((pq) this).field_M.d(0, 0);
                         su.a((byte) 106);
                         ((pq) this).field_E.a(var5_int - ((pq) this).field_M.field_x, param1);
-                        break L4;
+                        break L3;
                       } else {
                         var7 = var7 - ((pq) this).field_H * 2;
-                        continue L5;
+                        continue L4;
                       }
                     }
                   } else {
-                    break L4;
+                    break L3;
                   }
                 }
                 break L0;
@@ -290,33 +284,33 @@ final class pq extends pk {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L5: {
             var5 = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var5;
-            stackOut_16_1 = new StringBuilder().append("pq.E(");
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackOut_14_0 = (RuntimeException) var5;
+            stackOut_14_1 = new StringBuilder().append("pq.E(");
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
             if (param0 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
-              break L6;
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L5;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
-              break L6;
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L5;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw qo.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 44 + 256 + 44 + param3 + 41);
         }
     }
 
@@ -325,9 +319,6 @@ final class pq extends pk {
     }
 
     final static int a(int param0, int param1) {
-        if (param0 != 1) {
-            return -1;
-        }
         int var2 = 0;
         if ((param1 & 7) != 0) {
             var2 = -(7 & param1) + 8;
@@ -338,7 +329,8 @@ final class pq extends pk {
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         super.a(-57, param1, param2, param3, param4);
-        this.g(880072001);
+        int discarded$0 = 880072001;
+        this.g();
         int var6 = 85 % ((28 - param0) / 63);
     }
 

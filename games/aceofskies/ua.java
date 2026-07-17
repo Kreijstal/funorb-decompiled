@@ -206,7 +206,7 @@ abstract class ua implements kt {
         int var1 = -51;
     }
 
-    final static short[] a(dl param0, short[] param1, int param2, int param3) {
+    final static short[] a(dl param0, short[] param1) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -251,7 +251,7 @@ abstract class ua implements kt {
         var8 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {
-            var4_int = param0.b((byte) 103, param3);
+            var4_int = param0.b((byte) 103, 16);
             if (var4_int != 0) {
               L1: {
                 L2: {
@@ -271,7 +271,7 @@ abstract class ua implements kt {
               L3: {
                 var5 = param0.b((byte) -95, 4);
                 var6 = (short)param0.b((byte) 89, 16);
-                if (param2 < var5) {
+                if (0 < var5) {
                   var7 = 0;
                   L4: while (true) {
                     if (var7 >= var4_int) {
@@ -357,7 +357,7 @@ abstract class ua implements kt {
               break L7;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param2 + 44 + param3 + 41);
+          throw pn.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + 0 + 44 + 16 + 41);
         }
         return stackIn_16_0;
     }
@@ -500,7 +500,7 @@ abstract class ua implements kt {
         super.finalize();
     }
 
-    final static void e(int param0) {
+    final static void e() {
         Object var2 = null;
         ub.a("", (String) null, -89);
     }

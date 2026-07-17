@@ -16,7 +16,7 @@ final class fi extends qe {
     static String field_x;
     private rh field_D;
 
-    private final int a(int param0, byte param1) {
+    private final int a(int param0) {
         int var3 = 120;
         int var4 = nk.field_Fb[param0];
         if (var4 == 27) {
@@ -31,31 +31,27 @@ final class fi extends qe {
 
     private final int a(boolean param0, int param1) {
         int var3 = 0;
-        if (!param0) {
-          L0: {
-            var3 = nk.field_Fb[param1];
-            if (25 == var3) {
+        L0: {
+          var3 = nk.field_Fb[param1];
+          if (25 == var3) {
+            break L0;
+          } else {
+            if (var3 == 24) {
               break L0;
             } else {
-              if (var3 == 24) {
+              if (var3 == 26) {
                 break L0;
               } else {
-                if (var3 == 26) {
-                  break L0;
+                if (var3 != 27) {
+                  return 439;
                 } else {
-                  if (var3 != 27) {
-                    return 439;
-                  } else {
-                    return 340;
-                  }
+                  return 340;
                 }
               }
             }
           }
-          return 260;
-        } else {
-          return -14;
         }
+        return 260;
     }
 
     private final int a(int param0, byte param1, int param2) {
@@ -66,22 +62,15 @@ final class fi extends qe {
         var4 = 0;
         L0: while (true) {
           if (var4 >= nk.field_Fb.length) {
-            L1: {
-              if (param1 == 116) {
-                break L1;
-              } else {
-                ((fi) this).f();
-                break L1;
-              }
-            }
             return -1;
           } else {
             var5 = this.a(false, var4);
             if (nl.a(var4, (byte) -124)) {
               if (param2 >= this.a((byte) -4, var4)) {
-                if (param2 < this.a(var4, (byte) -93)) {
+                int discarded$1 = -93;
+                if (param2 < this.a(var4)) {
                   if (param0 >= var5) {
-                    if (param0 < this.c(param1 + -86, var4) + var5) {
+                    if (param0 < this.c(30, var4) + var5) {
                       return var4;
                     } else {
                       var4++;
@@ -129,7 +118,8 @@ final class fi extends qe {
           var5 = this.a(-13, var4);
           var6 = ne.field_c.b(var5);
           var7 = this.a((byte) -4, param1);
-          var8 = this.a(param1, (byte) -93);
+          int discarded$1 = -93;
+          var8 = this.a(param1);
           var9 = this.a(false, param1);
           var10 = var8 - (-var7 + var6) >> 1;
           if (!param0) {
@@ -202,14 +192,6 @@ final class fi extends qe {
             break L3;
           }
         }
-        L7: {
-          if (param2 == 0) {
-            break L7;
-          } else {
-            ((fi) this).a(true);
-            break L7;
-          }
-        }
     }
 
     final void c(boolean param0) {
@@ -229,7 +211,8 @@ final class fi extends qe {
             }
           }
           L2: while (true) {
-            if (!ha.b((byte) 47)) {
+            int discarded$7 = 47;
+            if (!ha.b()) {
               nk.field_Jb.a(-7734, this.a(hm.field_k, (byte) 116, lc.field_c), this.a(eh.field_h, (byte) 116, hj.field_S));
               if (-1 == nk.field_Jb.field_b) {
                 break L0;
@@ -291,7 +274,8 @@ final class fi extends qe {
         ((fi) this).field_w = new tf[nk.field_Jb.field_i];
         ((fi) this).field_z = new kl();
         jh.a(((fi) this).field_e);
-        bf.a(false, -128);
+        int discarded$2 = -128;
+        bf.a(false);
         kn.field_e = false;
         c.a(0, 640, 0, (byte) 44);
         c.a(0, 640, 40, (byte) 44);
@@ -299,7 +283,8 @@ final class fi extends qe {
         vf.a(432, true, 599, 117, 48);
         vf.a(32, true, 164, -110, 8);
         vf.a(32, true, 468, -2, 8);
-        un.a(41, (byte) -98, 558, 416, true);
+        int discarded$3 = 1;
+        un.a(41, (byte) -98, 558, 416);
         ad.field_e.h(41, 48);
         ad.field_e.j(-ad.field_e.field_d + 599, 48);
         ad.field_e.f(164 - ad.field_e.field_d, -ad.field_e.field_b + 40);
@@ -310,9 +295,6 @@ final class fi extends qe {
     }
 
     private final int c(int param0, int param1) {
-        if (param0 != 30) {
-            return -57;
-        }
         return 30;
     }
 
@@ -411,8 +393,11 @@ final class fi extends qe {
                 }
                 L5: {
                   ((fi) this).field_A.b(90, 32, 87);
-                  this.a(87, 3740, 200, en.field_a[mo.field_e], 446, 125);
-                  wk.a(552, bj.a(mo.field_e, 77), (se) (Object) ne.field_c, 366, ag.field_c, 31139);
+                  int discarded$4 = 125;
+                  int discarded$5 = 446;
+                  this.a(87, 3740, 200, en.field_a[mo.field_e]);
+                  int discarded$6 = 31139;
+                  wk.a(552, bj.a(mo.field_e, 77), (se) (Object) ne.field_c, 366, ag.field_c);
                   if (!kn.field_e) {
                     break L5;
                   } else {
@@ -480,7 +465,7 @@ final class fi extends qe {
                     }
                     pi.a(0, (String) var4, cm.field_M, 30 + var6, (se) (Object) ne.field_c, var5 + var7);
                     var7 = var7 + (5 + var5);
-                    int discarded$1 = la.field_b.a((String) var3, 30 + var6, var7, var8 - 60, -30 + var9, 16777215, -1, 0, 0, la.field_b.field_H + la.field_b.field_E);
+                    int discarded$7 = la.field_b.a((String) var3, 30 + var6, var7, var8 - 60, -30 + var9, 16777215, -1, 0, 0, la.field_b.field_H + la.field_b.field_E);
                     break L5;
                   }
                 }
@@ -603,12 +588,13 @@ final class fi extends qe {
         int stackOut_1_0 = 0;
         L0: {
           var4 = this.a((byte) -4, param2);
-          var5 = this.a(param2, (byte) -93);
+          int discarded$2 = -93;
+          var5 = this.a(param2);
           var6 = this.a(false, param2);
           var7 = this.c(30, param2);
           gf.e(-4 + var4, -6 + var6, 8 + (var5 + -var4), 8 + var7, 0);
           fi.b(var4, var6 + -2, -var4 + var5, var7, 8421504, 128, 128);
-          var9 = 106 % ((param1 - 71) / 37);
+          var9 = 0;
           var8 = nk.field_Fb[param2];
           if (var8 != -26) {
             if (var8 != 24) {
@@ -679,34 +665,26 @@ final class fi extends qe {
 
     private final int a(byte param0, int param1) {
         int var3 = 0;
-        L0: {
-          if (param0 == -4) {
-            break L0;
-          } else {
-            this.a(true, -67, -118);
-            break L0;
-          }
-        }
         var3 = nk.field_Fb[param1];
         if (var3 != 27) {
-          L1: {
-            L2: {
+          L0: {
+            L1: {
               if (var3 == 25) {
-                break L2;
+                break L1;
               } else {
                 if (24 == var3) {
-                  break L2;
+                  break L1;
                 } else {
                   if (var3 != 26) {
-                    break L1;
+                    break L0;
                   } else {
-                    break L2;
+                    break L1;
                   }
                 }
               }
             }
             param1 -= 3;
-            break L1;
+            break L0;
           }
           return 140 * param1 + 120;
         } else {
@@ -855,7 +833,7 @@ final class fi extends qe {
         field_u = null;
     }
 
-    private final void a(int param0, int param1, int param2, String param3, int param4, int param5) {
+    private final void a(int param0, int param1, int param2, String param3) {
         String[] var7 = null;
         RuntimeException var7_ref = null;
         int var8 = 0;
@@ -882,32 +860,28 @@ final class fi extends qe {
         var12 = DungeonAssault.field_K;
         try {
           L0: {
-            var7 = jn.a(param3, new int[1], param1 + -3847, (se) (Object) la.field_b);
-            if (param1 == 3740) {
-              var8 = la.field_b.field_H + 125;
-              var9 = var7;
-              var10 = 0;
-              L1: while (true) {
-                if (var9.length <= var10) {
-                  break L0;
-                } else {
-                  L2: {
-                    var11 = var9[var10];
-                    if (param4 * 3 >> 2 <= la.field_b.b(var11)) {
-                      la.field_b.b(var11, param0, var8, 16777215, -1);
-                      break L2;
-                    } else {
-                      la.field_b.b(var11, param0, var8, 16777215, -1);
-                      break L2;
-                    }
+            var7 = jn.a(param3, new int[1], -107, (se) (Object) la.field_b);
+            var8 = la.field_b.field_H + 125;
+            var9 = var7;
+            var10 = 0;
+            L1: while (true) {
+              if (var9.length <= var10) {
+                break L0;
+              } else {
+                L2: {
+                  var11 = var9[var10];
+                  if (334 <= la.field_b.b(var11)) {
+                    la.field_b.b(var11, 87, var8, 16777215, -1);
+                    break L2;
+                  } else {
+                    la.field_b.b(var11, 87, var8, 16777215, -1);
+                    break L2;
                   }
-                  var8 = var8 + (la.field_b.field_E + la.field_b.field_H);
-                  var10++;
-                  continue L1;
                 }
+                var8 = var8 + (la.field_b.field_E + la.field_b.field_H);
+                var10++;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -915,7 +889,7 @@ final class fi extends qe {
           L3: {
             var7_ref = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var7_ref;
-            stackOut_10_1 = new StringBuilder().append("fi.Q(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_10_1 = new StringBuilder().append("fi.Q(").append(87).append(44).append(3740).append(44).append(200).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -938,7 +912,7 @@ final class fi extends qe {
               break L3;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param4 + 44 + 125 + 41);
+          throw vk.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + 446 + 44 + 125 + 41);
         }
     }
 
@@ -951,93 +925,88 @@ final class fi extends qe {
         int var9 = 0;
         L0: {
           var9 = DungeonAssault.field_K;
-          if (param1 == 240) {
-            break L0;
-          } else {
-            int discarded$2 = this.a(false, 31);
-            break L0;
-          }
-        }
-        L1: {
           var4 = nk.field_Fb[param2];
-          if (!nk.field_Jb.c(param1 ^ 176)) {
-            break L1;
+          if (!nk.field_Jb.c(64)) {
+            break L0;
           } else {
             if (nl.a(param2, (byte) -124)) {
-              L2: {
+              L1: {
                 if (var4 == 27) {
                   kn.field_e = false;
+                  break L1;
+                } else {
+                  break L1;
+                }
+              }
+              L2: {
+                if (kn.field_e) {
                   break L2;
                 } else {
+                  L3: {
+                    if (var4 == 25) {
+                      break L3;
+                    } else {
+                      if (var4 == 24) {
+                        break L3;
+                      } else {
+                        if (26 == var4) {
+                          break L3;
+                        } else {
+                          hm.a(var4, param2, param0, -45);
+                          break L0;
+                        }
+                      }
+                    }
+                  }
+                  L4: {
+                    if (var4 != 26) {
+                      if (var4 == 25) {
+                        ((fi) this).field_B = 1;
+                        break L4;
+                      } else {
+                        if (24 == var4) {
+                          ((fi) this).field_B = 0;
+                          break L4;
+                        } else {
+                          break L4;
+                        }
+                      }
+                    } else {
+                      ((fi) this).field_B = 2;
+                      break L4;
+                    }
+                  }
+                  L5: {
+                    kn.field_e = true;
+                    if (!param0) {
+                      nk.field_Jb.field_b = 6;
+                      break L5;
+                    } else {
+                      break L5;
+                    }
+                  }
+                  L6: {
+                    if (((fi) this).field_B != 0) {
+                      var5 = 167;
+                      var6 = 154;
+                      var7 = 306;
+                      var8 = 204;
+                      break L6;
+                    } else {
+                      var6 = 104;
+                      var7 = 486;
+                      var8 = 254;
+                      var5 = 77;
+                      break L6;
+                    }
+                  }
+                  ((fi) this).field_z.a(var6, var7, var5, -23241, var8);
                   break L2;
                 }
               }
-              if (kn.field_e) {
-                break L1;
-              } else {
-                L3: {
-                  if (var4 == 25) {
-                    break L3;
-                  } else {
-                    if (var4 == 24) {
-                      break L3;
-                    } else {
-                      if (26 == var4) {
-                        break L3;
-                      } else {
-                        hm.a(var4, param2, param0, param1 ^ -221);
-                        break L1;
-                      }
-                    }
-                  }
-                }
-                L4: {
-                  if (var4 != 26) {
-                    if (var4 == 25) {
-                      ((fi) this).field_B = 1;
-                      break L4;
-                    } else {
-                      if (24 == var4) {
-                        ((fi) this).field_B = 0;
-                        break L4;
-                      } else {
-                        break L4;
-                      }
-                    }
-                  } else {
-                    ((fi) this).field_B = 2;
-                    break L4;
-                  }
-                }
-                L5: {
-                  kn.field_e = true;
-                  if (!param0) {
-                    nk.field_Jb.field_b = 6;
-                    break L5;
-                  } else {
-                    break L5;
-                  }
-                }
-                L6: {
-                  if (((fi) this).field_B != 0) {
-                    var5 = 167;
-                    var6 = 154;
-                    var7 = 306;
-                    var8 = 204;
-                    break L6;
-                  } else {
-                    var6 = 104;
-                    var7 = 486;
-                    var8 = 254;
-                    var5 = 77;
-                    break L6;
-                  }
-                }
-                ((fi) this).field_z.a(var6, var7, var5, -23241, var8);
-                break L1;
-              }
+              break L0;
             } else {
-              break L1;
+              break L0;
             }
           }
         }
@@ -1052,42 +1021,91 @@ final class fi extends qe {
         int var9 = 0;
         int var10 = 0;
         int[] var11 = null;
+        int var12 = 0;
         int[] var13 = null;
         int[] var14 = null;
-        var4 = nk.field_Fb[param1];
-        var5 = this.a(param0 ^ -14, var4);
-        var6 = ne.field_c.b(var5);
-        if (param0 == 1) {
-          L0: {
-            L1: {
-              var7 = this.a((byte) -4, param1);
-              var8 = this.a(param1, (byte) -93);
-              var9 = this.a(false, param1);
-              var10 = -var6 + (var8 - -var7) >> 1;
-              var14 = cm.field_M;
-              var13 = var14;
-              var11 = var13;
-              if (null == ((fi) this).field_w[param1]) {
-                break L1;
+        int[] var15 = null;
+        int[] var16 = null;
+        int[] stackIn_3_0 = null;
+        int[] stackOut_2_0 = null;
+        int[] stackOut_1_0 = null;
+        L0: {
+          var4 = nk.field_Fb[param1];
+          var5 = this.a(-13, var4);
+          var6 = ne.field_c.b(var5);
+          var7 = this.a((byte) -4, param1);
+          int discarded$1 = -93;
+          var8 = this.a(param1);
+          var9 = this.a(false, param1);
+          var10 = -var6 + (var8 - -var7) >> 1;
+          if (param2) {
+            stackOut_2_0 = ml.field_b;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          } else {
+            stackOut_1_0 = cm.field_M;
+            stackIn_3_0 = stackOut_1_0;
+            break L0;
+          }
+        }
+        L1: {
+          L2: {
+            var16 = stackIn_3_0;
+            var15 = var16;
+            var14 = var15;
+            var13 = var14;
+            var11 = var13;
+            if (null == ((fi) this).field_w[param1]) {
+              break L2;
+            } else {
+              if (var5 != ((fi) this).field_w[param1].field_f) {
+                break L2;
               } else {
-                if (var5 != ((fi) this).field_w[param1].field_f) {
-                  break L1;
+                if (((fi) this).field_w[param1].field_h != var11) {
+                  break L2;
                 } else {
-                  if (((fi) this).field_w[param1].field_h != var11) {
-                    break L1;
-                  } else {
-                    break L0;
-                  }
+                  break L1;
                 }
               }
             }
-            ((fi) this).field_w[param1] = new tf((se) (Object) ne.field_c, var5, var14);
-            break L0;
           }
-          ((fi) this).field_w[param1].b(var9, param0 ^ 33, var10);
-          return;
-        } else {
-          return;
+          ((fi) this).field_w[param1] = new tf((se) (Object) ne.field_c, var5, var16);
+          break L1;
+        }
+        L3: {
+          ((fi) this).field_w[param1].b(var9, 32, var10);
+          if (param2) {
+            L4: {
+              if (((fi) this).field_y == param1) {
+                break L4;
+              } else {
+                this.b(param1, -114);
+                break L4;
+              }
+            }
+            L5: {
+              ((fi) this).field_v.b(var10, var9, 64);
+              var12 = (int)(128.0 * (1.0 + te.a(mo.field_a)));
+              if (var12 >= 0) {
+                break L5;
+              } else {
+                var12 = 0;
+                break L5;
+              }
+            }
+            L6: {
+              if (var12 > 256) {
+                var12 = 256;
+                break L6;
+              } else {
+                break L6;
+              }
+            }
+            ((fi) this).field_C.b(var10, var9, var12);
+            break L3;
+          } else {
+            break L3;
+          }
         }
     }
 
@@ -1103,41 +1121,40 @@ final class fi extends qe {
             break L0;
           } else {
             L1: {
-              if (hl.field_f == 0) {
-                break L1;
-              } else {
-                if (0 == dc.field_z) {
-                  break L1;
+              L2: {
+                if (hl.field_f == 0) {
+                  break L2;
                 } else {
-                  if (hl.field_f == 12) {
-                    break L1;
+                  if (0 == dc.field_z) {
+                    break L2;
                   } else {
-                    if (dc.field_z == 12) {
-                      break L1;
+                    if (hl.field_f == 12) {
+                      break L2;
                     } else {
-                      if (hl.field_f == 1) {
-                        break L1;
+                      if (dc.field_z == 12) {
+                        break L2;
                       } else {
-                        if (dc.field_z != 1) {
-                          break L0;
+                        if (hl.field_f == 1) {
+                          break L2;
                         } else {
-                          break L1;
+                          if (dc.field_z != 1) {
+                            break L1;
+                          } else {
+                            break L2;
+                          }
                         }
                       }
                     }
                   }
                 }
               }
+              var3 = ll.field_m[9];
+              break L1;
             }
-            var3 = ll.field_m[9];
             break L0;
           }
         }
-        if (param0 == -13) {
-          return var3;
-        } else {
-          return null;
-        }
+        return var3;
     }
 
     static {

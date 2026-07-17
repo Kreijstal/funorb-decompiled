@@ -23,7 +23,7 @@ final class qc {
         ok.field_e = param1;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -84,7 +84,7 @@ final class qc {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_d = null;
         field_g = null;

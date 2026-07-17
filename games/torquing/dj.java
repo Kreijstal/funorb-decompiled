@@ -67,7 +67,7 @@ final class dj {
             var27 = g.field_c;
             var28 = g.field_a;
             param7 = param3.a(var26[0], var27[0], var28[0]);
-            param0 = param3.a(var26[param9], var27[1], var28[1]);
+            param0 = param3.a(var26[1], var27[1], var28[1]);
             param1 = param3.a(var26[2], var27[2], var28[2]);
             var14 = 0;
             L1: while (true) {
@@ -132,12 +132,12 @@ final class dj {
               break L3;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 44 + param10 + 41);
+          throw rb.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + 1 + 44 + param10 + 41);
         }
         return stackIn_11_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
         field_a = null;

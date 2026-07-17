@@ -9,7 +9,7 @@ final class co extends wf {
     static om field_s;
     static String field_r;
 
-    public static void d(byte param0) {
+    public static void d() {
         field_r = null;
         field_t = null;
         field_q = null;

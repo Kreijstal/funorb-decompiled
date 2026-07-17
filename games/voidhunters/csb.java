@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class csb implements dja {
-    final static void a(boolean param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -17,7 +17,8 @@ final class csb implements dja {
                   if (!psb.field_b.field_a) {
                     break L1;
                   } else {
-                    spb.a((byte) -95);
+                    int discarded$33 = -95;
+                    spb.a();
                     qn.field_h.a(false, (shb) (Object) new mr(qn.field_h, bca.field_a));
                     break L1;
                   }
@@ -25,13 +26,14 @@ final class csb implements dja {
               }
               return;
             } else {
-              boolean discarded$15 = qn.field_h.a((byte) -5, ata.field_H, uo.field_o, true);
+              boolean discarded$34 = qn.field_h.a((byte) -5, ata.field_H, uo.field_o, true);
               qn.field_h.h(19976);
               L2: while (true) {
-                if (!ata.e(127)) {
+                int discarded$35 = 127;
+                if (!ata.e()) {
                   break L0;
                 } else {
-                  boolean discarded$16 = qn.field_h.a(-9445, pma.field_o, jl.field_r);
+                  boolean discarded$36 = qn.field_h.a(-9445, pma.field_o, jl.field_r);
                   continue L2;
                 }
               }
@@ -51,7 +53,8 @@ final class csb implements dja {
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            csb.a(true);
+            int discarded$0 = 1;
+            csb.a();
             return (tv[]) (Object) new kc[param1];
         }
         return (tv[]) (Object) new kc[param1];

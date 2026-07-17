@@ -14,28 +14,19 @@ final class al implements gl {
     static ha field_h;
     private int field_k;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
-        if (param0 != -100) {
-            field_j = null;
-            field_h = null;
-            field_j = null;
-            return;
-        }
         field_h = null;
         field_j = null;
     }
 
     final static void a(int param0, java.awt.Component param1) {
         try {
-            if (param0 != -2204) {
-                al.a((byte) 21);
-            }
             param1.addMouseListener((java.awt.event.MouseListener) (Object) ik.field_f);
             param1.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) ik.field_f);
             param1.addFocusListener((java.awt.event.FocusListener) (Object) ik.field_f);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "al.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "al.D(" + -2204 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -161,7 +152,7 @@ final class al implements gl {
         int var3 = 0;
         var3 = client.field_A ? 1 : 0;
         d.field_f = null;
-        hd.field_n = param0;
+        hd.field_n = 0;
         rk.field_L = null;
         var2 = cb.field_c;
         cb.field_c = gm.field_H;

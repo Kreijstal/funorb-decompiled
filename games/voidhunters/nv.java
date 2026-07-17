@@ -35,22 +35,14 @@ final class nv extends fh implements mda {
         var8 = VoidHunters.field_G;
         try {
           L0: {
-            L1: {
-              int incrementValue$4 = param2;
-              param2++;
-              ww.a(param0, param5, rba.field_b[incrementValue$4], (byte) 75, param4);
-              if (param1 >= 57) {
-                break L1;
-              } else {
-                field_o = 108;
-                break L1;
-              }
-            }
+            int incrementValue$4 = param2;
+            param2++;
+            ww.a(param0, param5, rba.field_b[incrementValue$4], (byte) 75, param4);
             int incrementValue$5 = param3;
             param3--;
             ww.a(param0, param5, rba.field_b[incrementValue$5], (byte) 75, param4);
             var6_int = param2;
-            L2: while (true) {
+            L1: while (true) {
               if (var6_int > param3) {
                 break L0;
               } else {
@@ -58,24 +50,24 @@ final class nv extends fh implements mda {
                 var7[param5] = param0;
                 var7[param4] = param0;
                 var6_int++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var6, "nv.G(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw rta.a((Throwable) (Object) var6, "nv.G(" + param0 + 44 + 102 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
-    final static void a(byte param0, dnb param1, int param2) {
+    final static void a(byte param0, dnb param1) {
         faa var4 = null;
         int var5 = 0;
         try {
             int var3_int = -87 % ((4 - param0) / 54);
             var4 = dpa.field_p;
-            var4.h(24335, param2);
+            var4.h(24335, 6);
             var4.field_e = var4.field_e + 1;
             var5 = var4.field_e;
             var4.c(0, 1);
@@ -90,7 +82,7 @@ final class nv extends fh implements mda {
             param1.field_d = var4.h(35);
             var4.e(var4.field_e - var5, -129);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "nv.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "nv.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 6 + 41);
         }
     }
 
@@ -127,7 +119,7 @@ final class nv extends fh implements mda {
         ((nv) this).field_q = param2;
     }
 
-    final static String a(int param0, int param1, boolean param2) {
+    final static String a(int param0, int param1) {
         int var3 = 0;
         String stackIn_11_0 = null;
         String stackIn_15_0 = null;

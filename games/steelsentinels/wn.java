@@ -27,7 +27,8 @@ final class wn {
                 break L1;
               }
             }
-            stackOut_3_0 = gd.l((byte) 19);
+            int discarded$2 = 19;
+            stackOut_3_0 = gd.l();
             stackIn_4_0 = stackOut_3_0;
             break L0;
           }
@@ -248,7 +249,7 @@ final class wn {
             vd.field_d = new gh(0L, param11);
             vd.field_d.field_L = pl.field_X;
             ee.field_H.a(vd.field_d, 121);
-            var18 = -112 / ((71 - param5) / 40);
+            var18 = 112;
             ee.field_H.h(-87);
             wh.field_e = new gh(0L, (gh) null);
             wh.field_e.field_I = var16;
@@ -471,7 +472,7 @@ final class wn {
           }
           L15: {
             stackOut_52_0 = (RuntimeException) (Object) stackIn_52_0;
-            stackOut_52_1 = ((StringBuilder) (Object) stackIn_52_1).append(stackIn_52_2).append(44).append(param4).append(44).append(param5).append(44);
+            stackOut_52_1 = ((StringBuilder) (Object) stackIn_52_1).append(stackIn_52_2).append(44).append(param4).append(44).append(127).append(44);
             stackIn_55_0 = stackOut_52_0;
             stackIn_55_1 = stackOut_52_1;
             stackIn_53_0 = stackOut_52_0;
@@ -623,20 +624,12 @@ final class wn {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            L1: {
-              field_e = null;
-              if (param0 <= -125) {
-                break L1;
-              } else {
-                field_d = -57;
-                break L1;
-              }
-            }
+            field_e = null;
             field_c = null;
             field_a = null;
             field_b = null;
@@ -645,15 +638,15 @@ final class wn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var1, "wn.D(" + param0 + 41);
+          throw ci.a((Throwable) (Object) var1, "wn.D(" + -126 + 41);
         }
     }
 
     final static void a(int param0, boolean param1) {
         try {
-            ag.field_p.a(param0, 0, (byte) -128);
+            ag.field_p.a(0, 0, (byte) -128);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "wn.A(" + param0 + 44 + param1 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "wn.A(" + 0 + 44 + param1 + 41);
         }
     }
 

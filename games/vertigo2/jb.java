@@ -19,17 +19,10 @@ final class jb extends ji {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         tg.a((byte) -50);
-        if (param3 != -30486) {
-          field_y = 78;
-          bi.c(param2, param0, param1, param4);
-          return;
-        } else {
-          bi.c(param2, param0, param1, param4);
-          return;
-        }
+        bi.c(param2, param0, param1, param4);
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_H = null;
         field_L = null;
         field_A = null;
@@ -62,69 +55,65 @@ final class jb extends ji {
           }
         }
         var5 = stackIn_3_0;
-        if (param1) {
-          if (0 < var5) {
-            param2 = param2 * 6;
-            var6 = -var5 + param3 + param3;
-            var7 = (-var6 + var5 << 12) / var5;
-            var8 = param2 >> 12;
-            var9 = param2 + -(var8 << 12);
-            var10 = var5;
-            var10 = var10 * var7 >> 12;
-            var10 = var9 * var10 >> 12;
-            var11 = var6 - -var10;
-            var12 = var5 + -var10;
-            var13 = var8;
-            if (0 != var13) {
-              if (-2 != var13) {
-                if (var13 != 2) {
-                  if (3 != var13) {
-                    if (var13 != 4) {
-                      if (-6 != var13) {
-                        return;
-                      } else {
-                        ((jb) this).field_z = var6;
-                        ((jb) this).field_F = var5;
-                        ((jb) this).field_B = var12;
-                        return;
-                      }
+        if (0 < var5) {
+          param2 = param2 * 6;
+          var6 = -var5 + param3 + param3;
+          var7 = (-var6 + var5 << 12) / var5;
+          var8 = param2 >> 12;
+          var9 = param2 + -(var8 << 12);
+          var10 = var5;
+          var10 = var10 * var7 >> 12;
+          var10 = var9 * var10 >> 12;
+          var11 = var6 - -var10;
+          var12 = var5 + -var10;
+          var13 = var8;
+          if (0 != var13) {
+            if (-2 != var13) {
+              if (var13 != 2) {
+                if (3 != var13) {
+                  if (var13 != 4) {
+                    if (-6 != var13) {
+                      return;
                     } else {
                       ((jb) this).field_z = var6;
-                      ((jb) this).field_B = var5;
-                      ((jb) this).field_F = var11;
+                      ((jb) this).field_F = var5;
+                      ((jb) this).field_B = var12;
                       return;
                     }
                   } else {
-                    ((jb) this).field_z = var12;
-                    ((jb) this).field_F = var6;
+                    ((jb) this).field_z = var6;
                     ((jb) this).field_B = var5;
+                    ((jb) this).field_F = var11;
                     return;
                   }
                 } else {
-                  ((jb) this).field_z = var5;
+                  ((jb) this).field_z = var12;
                   ((jb) this).field_F = var6;
-                  ((jb) this).field_B = var11;
+                  ((jb) this).field_B = var5;
                   return;
                 }
               } else {
-                ((jb) this).field_F = var12;
                 ((jb) this).field_z = var5;
-                ((jb) this).field_B = var6;
+                ((jb) this).field_F = var6;
+                ((jb) this).field_B = var11;
                 return;
               }
             } else {
-              ((jb) this).field_z = var11;
-              ((jb) this).field_F = var5;
+              ((jb) this).field_F = var12;
+              ((jb) this).field_z = var5;
               ((jb) this).field_B = var6;
               return;
             }
           } else {
-            ((jb) this).field_B = param3;
-            ((jb) this).field_z = param3;
-            ((jb) this).field_F = param3;
+            ((jb) this).field_z = var11;
+            ((jb) this).field_F = var5;
+            ((jb) this).field_B = var6;
             return;
           }
         } else {
+          ((jb) this).field_B = param3;
+          ((jb) this).field_z = param3;
+          ((jb) this).field_F = param3;
           return;
         }
     }

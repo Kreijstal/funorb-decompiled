@@ -79,7 +79,7 @@ final class gh extends rqa {
         return stackIn_3_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
         field_p = null;
     }

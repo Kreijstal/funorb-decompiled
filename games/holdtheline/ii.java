@@ -9,7 +9,7 @@ final class ii extends RuntimeException {
     static int[] field_d;
     static String[] field_b;
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         if (null == r.field_a) {
             return false;
         }
@@ -20,28 +20,13 @@ final class ii extends RuntimeException {
     }
 
     final static boolean a(int param0, char param1) {
-        if (param0 == 48) {
-          if (48 <= param1) {
-            if (57 < param1) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+        if (48 > param1) {
             return false;
-          }
-        } else {
-          field_e = null;
-          if (48 <= param1) {
-            if (57 < param1) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
         }
+        if (57 < param1) {
+            return false;
+        }
+        return true;
     }
 
     ii(Throwable param0, String param1) {

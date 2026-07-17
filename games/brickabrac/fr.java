@@ -46,7 +46,7 @@ final class fr {
     static oe[] field_e;
     short[] field_t;
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         return cg.field_l;
     }
 
@@ -61,7 +61,7 @@ final class fr {
         this.b(-107);
     }
 
-    final static void a(mf param0, byte param1) {
+    final static void a(mf param0) {
         RuntimeException var2 = null;
         mh var3 = null;
         mh var5 = null;
@@ -141,15 +141,16 @@ final class fr {
         }
     }
 
-    final static void a(int param0, dh param1, dh param2, boolean param3) {
+    final static void a(int param0, dh param1, dh param2) {
         try {
-            m.field_b = param0;
+            m.field_b = 480;
             kp.field_b = param1;
             ni.field_Wb = param2;
-            pp.a(lb.field_c / 2, lb.field_d / 2, (byte) 19);
+            int discarded$0 = 19;
+            pp.a(lb.field_c / 2, lb.field_d / 2);
             tn.a(param1.field_B, param1.field_P + param1.field_B, 256, param2.field_B, param2.field_P + param2.field_B);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "fr.K(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + 1 + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "fr.K(" + 480 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + 1 + 41);
         }
     }
 
@@ -167,7 +168,7 @@ final class fr {
         this.b(-122);
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_M = null;
         field_e = null;
         field_l = null;
@@ -336,18 +337,15 @@ final class fr {
             if (null != ej.field_I) {
                 ej.field_I.m(17);
             }
-            eo.field_k = new hk(param2, param1, false, true, param0);
+            eo.field_k = new hk(param2, param1, false, true, true);
             rj.field_c.b((byte) 114, (oc) (Object) eo.field_k);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "fr.H(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "fr.H(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static void d(int param0) {
+    final static void d() {
         o.field_c = new dk();
-        if (param0 != -1) {
-            return;
-        }
         rj.field_c.b((byte) 120, (oc) (Object) o.field_c);
     }
 

@@ -83,7 +83,8 @@ final class jf extends s {
               break L2;
             }
             var12.b(112, 144, var12.field_s << 4, var12.field_t << 4, -((jf) this).field_G << 10, 4096);
-            oc.g((byte) -105);
+            int discarded$1 = -105;
+            oc.g();
             lj.field_N.e(-var12.field_s + var5, var6 - var12.field_t, 256);
             break L0;
           }
@@ -166,7 +167,7 @@ final class jf extends s {
         }
     }
 
-    final static boolean j(int param0) {
+    final static boolean j() {
         return mb.field_c;
     }
 
@@ -280,58 +281,50 @@ final class jf extends s {
                   param4 = -var10;
                   L6: while (true) {
                     if (param4 >= 0) {
-                      L7: {
-                        if (param0 == -20) {
-                          break L7;
-                        } else {
-                          field_H = -96;
-                          break L7;
-                        }
-                      }
                       break L0;
                     } else {
                       var14 = var7;
                       param5 = -var11;
-                      L8: while (true) {
+                      L7: while (true) {
                         if (param5 >= 0) {
                           var8 = var8 + var12;
                           var9 = var9 + var13;
                           param4++;
                           continue L6;
                         } else {
-                          L9: {
+                          L8: {
                             var15 = var14 >> 8;
                             var16 = 256 - var15;
                             var14 = var14 + var6_int;
                             if (var15 >= 0) {
-                              L10: {
+                              L9: {
                                 int incrementValue$1 = var9;
                                 var9++;
                                 var17 = param2.field_v[incrementValue$1];
                                 if (0 == var17) {
-                                  break L10;
+                                  break L9;
                                 } else {
                                   if (var15 <= 255) {
                                     var18 = ul.field_b[var8];
                                     var19 = 16711935 & var15 * (var17 & 16711935) + var16 * (16711935 & var18) >> 8;
                                     ul.field_b[var8] = var19 - -(vi.a(16711715, vi.a(var17, 65280) * var15 + vi.a(var18, 65280) * var16) >> 8);
-                                    break L10;
+                                    break L9;
                                   } else {
                                     ul.field_b[var8] = var17;
-                                    break L10;
+                                    break L9;
                                   }
                                 }
                               }
                               var8++;
-                              break L9;
+                              break L8;
                             } else {
                               var9++;
                               var8++;
-                              break L9;
+                              break L8;
                             }
                           }
                           param5++;
-                          continue L8;
+                          continue L7;
                         }
                       }
                     }
@@ -345,10 +338,10 @@ final class jf extends s {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L11: {
+          L10: {
             var6 = decompiledCaughtException;
             stackOut_31_0 = (RuntimeException) var6;
-            stackOut_31_1 = new StringBuilder().append("jf.KA(").append(param0).append(44).append(param1).append(44);
+            stackOut_31_1 = new StringBuilder().append("jf.KA(").append(-20).append(44).append(param1).append(44);
             stackIn_33_0 = stackOut_31_0;
             stackIn_33_1 = stackOut_31_1;
             stackIn_32_0 = stackOut_31_0;
@@ -360,7 +353,7 @@ final class jf extends s {
               stackIn_34_0 = stackOut_33_0;
               stackIn_34_1 = stackOut_33_1;
               stackIn_34_2 = stackOut_33_2;
-              break L11;
+              break L10;
             } else {
               stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
               stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
@@ -368,7 +361,7 @@ final class jf extends s {
               stackIn_34_0 = stackOut_32_0;
               stackIn_34_1 = stackOut_32_1;
               stackIn_34_2 = stackOut_32_2;
-              break L11;
+              break L10;
             }
           }
           throw dd.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);

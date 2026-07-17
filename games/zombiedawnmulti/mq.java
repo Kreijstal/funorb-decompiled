@@ -399,10 +399,7 @@ final class mq extends nc {
         if (this.h(param1, 29)) {
             return la.field_l[param1];
         }
-        if (param0 != 0) {
-            return null;
-        }
-        return wl.field_l;
+        return null;
     }
 
     private final boolean h(int param0, int param1) {
@@ -421,43 +418,7 @@ final class mq extends nc {
     }
 
     private final boolean e(int param0, int param1) {
-        int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        L0: {
-          if (param0 == -17) {
-            break L0;
-          } else {
-            mq.e(-71);
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
-            if (param1 == 13) {
-              break L2;
-            } else {
-              L3: {
-                if (param1 != 16) {
-                  break L3;
-                } else {
-                  if (le.b(0, (byte) -70)) {
-                    break L3;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
-              break L1;
-            }
-          }
-          stackOut_6_0 = 1;
-          stackIn_8_0 = stackOut_6_0;
-          break L1;
-        }
-        return stackIn_8_0 != 0;
+        return param1 == 13 || param1 == 16;
     }
 
     private final boolean f(int param0, int param1) {

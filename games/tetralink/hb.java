@@ -125,7 +125,7 @@ final class hb {
         this(param0, false);
     }
 
-    final static String c(int param0) {
+    final static String c() {
         String var1 = "";
         if (!(ao.field_c == null)) {
             var1 = ao.field_c.e(false);
@@ -139,14 +139,11 @@ final class hb {
         return var1;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_c = null;
         field_a = null;
         field_e = null;
         field_f = null;
-        if (param0 >= -107) {
-            field_f = null;
-        }
     }
 
     static {

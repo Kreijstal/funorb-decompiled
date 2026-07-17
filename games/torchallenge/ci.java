@@ -279,7 +279,7 @@ final class ci extends ma {
         return (String) (Object) stackIn_6_0;
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_q = null;
         field_p = null;
         field_o = null;

@@ -50,7 +50,7 @@ final class co extends vf {
         }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         int var1 = 99;
         field_I = null;
         field_J = null;

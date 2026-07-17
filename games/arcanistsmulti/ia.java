@@ -8,17 +8,16 @@ final class ia {
 
     public static void a(boolean param0) {
         field_c = null;
+        if (param0) {
+            return;
+        }
         field_b = null;
         field_a = null;
     }
 
     final static void a(int param0, int param1) {
-        if (param0 != -14296) {
-            field_b = null;
-            int discarded$0 = le.h(param0 + 12303);
-            return;
-        }
-        int discarded$1 = le.h(param0 + 12303);
+        int discarded$0 = -1993;
+        int discarded$1 = le.h();
     }
 
     static {

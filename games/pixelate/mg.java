@@ -9,7 +9,7 @@ abstract class mg extends hn implements hi {
     static boolean field_l;
     private c field_j;
 
-    public static void d(int param0) {
+    public static void d() {
         field_g = null;
         field_h = null;
         field_k = null;

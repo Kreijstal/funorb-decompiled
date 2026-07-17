@@ -23,18 +23,10 @@ final class wd extends vh {
         var4 = 0;
         L0: while (true) {
           if (((wd) this).field_Pb.length <= var4) {
-            L1: {
-              ((wd) this).field_Tb.b(param2, 2147483647, 0, ((wd) this).field_gb, ((wd) this).field_Db + -param2);
-              if (param0 <= -99) {
-                break L1;
-              } else {
-                field_Rb = null;
-                break L1;
-              }
-            }
+            ((wd) this).field_Tb.b(param2, 2147483647, 0, ((wd) this).field_gb, ((wd) this).field_Db + -param2);
             var8 = 0;
             var4 = var8;
-            L2: while (true) {
+            L1: while (true) {
               if (((wd) this).field_Nb.length <= var8) {
                 return;
               } else {
@@ -42,10 +34,10 @@ final class wd extends vh {
                 if (var8 != ((wd) this).field_Mb) {
                   ((wd) this).field_Nb[var8].field_qb = ((wd) this).field_Nb[var8].field_qb + 10000;
                   var8++;
-                  continue L2;
+                  continue L1;
                 } else {
                   var8++;
-                  continue L2;
+                  continue L1;
                 }
               }
             }
@@ -62,7 +54,7 @@ final class wd extends vh {
         }
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_Lb = null;
         field_Ob = null;
         field_Rb = null;

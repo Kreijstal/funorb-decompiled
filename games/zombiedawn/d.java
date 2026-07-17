@@ -21,38 +21,30 @@ final class d {
               if (vj.field_o > 0) {
                 L1: {
                   var3 = nh.field_P * 7 / 8 - te.field_bb;
-                  if (!param1) {
-                    break L1;
-                  } else {
-                    field_b = 33;
-                    break L1;
-                  }
-                }
-                L2: {
                   var4 = 100 + (vh.field_b - -(-vj.field_o + 400 >> 1));
                   var5 = vj.field_o + 40;
                   if (var4 >= param2) {
-                    break L2;
+                    break L1;
                   } else {
                     if (param0 <= var3) {
-                      break L2;
+                      break L1;
                     } else {
                       if (var5 + var4 <= param2) {
-                        break L2;
+                        break L1;
                       } else {
                         if (te.field_bb + var3 > param0) {
-                          L3: {
+                          L2: {
                             if (-3 == ma.field_r) {
                               vj.field_q = 500;
-                              break L3;
+                              break L2;
                             } else {
-                              break L3;
+                              break L2;
                             }
                           }
                           ck.a(-2, 6836);
                           return true;
                         } else {
-                          break L2;
+                          break L1;
                         }
                       }
                     }
@@ -68,7 +60,7 @@ final class d {
         return false;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
         field_a = null;

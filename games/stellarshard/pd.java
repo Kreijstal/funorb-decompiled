@@ -657,7 +657,7 @@ final class pd extends vk {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_j = null;
         field_p = null;
         field_f = null;

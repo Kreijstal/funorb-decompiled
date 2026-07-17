@@ -266,7 +266,7 @@ class vn {
         qb var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_g) {
             break L0;
           } else {
@@ -276,7 +276,7 @@ class vn {
         }
         L1: {
           cj.a(param0, 0, var3);
-          ((vn) this).field_r = ((vn) this).field_r - 256;
+          ((vn) this).field_r = ((vn) this).field_r - param1;
           if (((vn) this).field_h == null) {
             break L1;
           } else {
@@ -443,7 +443,7 @@ class vn {
           if (((vn) this).field_h == null) {
             break L17;
           } else {
-            ((vn) this).field_h.b(param0, 0, 256);
+            ((vn) this).field_h.b(param0, 0, param1);
             break L17;
           }
         }
@@ -601,44 +601,18 @@ class vn {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 < 8000) {
-            break L0;
-          } else {
-            if (param0 <= 48000) {
-              L1: {
-                field_t = param0;
-                if (!param1) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              field_g = stackIn_7_0 != 0;
-              field_l = 10;
-              return;
-            } else {
-              break L0;
-            }
-          }
-        }
-        throw new IllegalArgumentException();
+        field_t = 22050;
+        field_g = true;
+        field_l = 10;
     }
 
     private final void a(int param0) {
-        ((vn) this).field_r = ((vn) this).field_r - 256;
+        ((vn) this).field_r = ((vn) this).field_r - param0;
         if (((vn) this).field_r < 0) {
             ((vn) this).field_r = 0;
         }
         if (((vn) this).field_h != null) {
-            ((vn) this).field_h.a(256);
+            ((vn) this).field_h.a(param0);
             return;
         }
     }

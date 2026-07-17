@@ -67,7 +67,8 @@ final class a {
               L2: {
                 param2 = ke.a('_', (byte) 75, param2, "");
                 var4 = 123 % ((param0 - 59) / 55);
-                var3 = re.a(param1, 0);
+                int discarded$2 = 0;
+                var3 = re.a(param1);
                 if (param2.indexOf(param1) != -1) {
                   break L2;
                 } else {
@@ -144,7 +145,7 @@ final class a {
         return stackIn_5_0 != 0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }

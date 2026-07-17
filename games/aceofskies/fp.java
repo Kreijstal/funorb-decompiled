@@ -83,11 +83,13 @@ final class fp extends wf {
     final static void a(byte param0, int param1, int param2, int param3, int param4) {
         if (param0 < 21) {
           field_g = -99;
-          qk.a((byte) -92);
+          int discarded$4 = -92;
+          qk.a();
           vp.a(param4, param1, param3, param2);
           return;
         } else {
-          qk.a((byte) -92);
+          int discarded$5 = -92;
+          qk.a();
           vp.a(param4, param1, param3, param2);
           return;
         }

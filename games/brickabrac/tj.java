@@ -211,7 +211,7 @@ class tj {
         qd var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_g) {
             break L0;
           } else {
@@ -221,7 +221,7 @@ class tj {
         }
         L1: {
           pm.a(param0, 0, var3);
-          ((tj) this).field_i = ((tj) this).field_i - 256;
+          ((tj) this).field_i = ((tj) this).field_i - param1;
           if (((tj) this).field_e == null) {
             break L1;
           } else {
@@ -388,7 +388,7 @@ class tj {
           if (((tj) this).field_e == null) {
             break L17;
           } else {
-            ((tj) this).field_e.b(param0, 0, 256);
+            ((tj) this).field_e.b(param0, 0, param1);
             break L17;
           }
         }
@@ -412,27 +412,13 @@ class tj {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 < 8000) {
             break L0;
           } else {
             if (param0 <= 48000) {
-              L1: {
-                field_q = param0;
-                if (!param1) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              field_g = stackIn_7_0 != 0;
+              field_q = param0;
+              field_g = true;
               field_l = 10;
               return;
             } else {
@@ -654,12 +640,12 @@ class tj {
     }
 
     private final void a(int param0) {
-        ((tj) this).field_i = ((tj) this).field_i - 256;
+        ((tj) this).field_i = ((tj) this).field_i - param0;
         if (((tj) this).field_i < 0) {
             ((tj) this).field_i = 0;
         }
         if (((tj) this).field_e != null) {
-            ((tj) this).field_e.a(256);
+            ((tj) this).field_e.a(param0);
             return;
         }
     }

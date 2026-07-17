@@ -10,7 +10,7 @@ final class cl {
     static int field_d;
     int field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
     }
 
@@ -66,109 +66,105 @@ final class cl {
             var35 = vl.field_e[param3];
             var16 = param1 + -var8;
             ki.a(-90, -param5 + param1, var35, var16, param2);
-            if (param4 == -40) {
-              var17 = var8 + param1;
-              ki.a(param4 + -61, var16, var35, var17, param0);
-              ki.a(param4 + -76, var17, var35, param5 + param1, param2);
-              L2: while (true) {
-                if (var7_int >= var9) {
-                  break L0;
-                } else {
-                  L3: {
-                    var14 += 2;
-                    var13 += 2;
-                    var10 = var10 + var13;
-                    var12 = var12 + var14;
-                    if (var12 < 0) {
+            var17 = var8 + param1;
+            ki.a(-101, var16, var35, var17, param0);
+            ki.a(-116, var17, var35, param5 + param1, param2);
+            L2: while (true) {
+              if (var7_int >= var9) {
+                break L0;
+              } else {
+                L3: {
+                  var14 += 2;
+                  var13 += 2;
+                  var10 = var10 + var13;
+                  var12 = var12 + var14;
+                  if (var12 < 0) {
+                    break L3;
+                  } else {
+                    if (var11 < 1) {
                       break L3;
                     } else {
-                      if (var11 < 1) {
-                        break L3;
-                      } else {
-                        jo.field_h[var11] = var7_int;
-                        var11--;
-                        var12 = var12 - (var11 << 1);
-                        break L3;
-                      }
+                      jo.field_h[var11] = var7_int;
+                      var11--;
+                      var12 = var12 - (var11 << 1);
+                      break L3;
                     }
-                  }
-                  L4: {
-                    var7_int++;
-                    if (var10 >= 0) {
-                      L5: {
-                        var9--;
-                        if (var8 > var9) {
-                          var29 = vl.field_e[var9 + param3];
-                          var30 = vl.field_e[-var9 + param3];
-                          var20 = jo.field_h[var9];
-                          var21 = var7_int + param1;
-                          var22 = param1 + -var7_int;
-                          var23 = var20 + param1;
-                          var24 = param1 + -var20;
-                          ki.a(param4 + -70, var22, var29, var24, param2);
-                          ki.a(param4 ^ 83, var24, var29, var23, param0);
-                          ki.a(param4 ^ 89, var23, var29, var21, param2);
-                          ki.a(-122, var22, var30, var24, param2);
-                          ki.a(-114, var24, var30, var23, param0);
-                          ki.a(-103, var23, var30, var21, param2);
-                          break L5;
-                        } else {
-                          var27 = vl.field_e[var9 + param3];
-                          var28 = vl.field_e[-var9 + param3];
-                          var20 = param1 - -var7_int;
-                          var21 = param1 - var7_int;
-                          ki.a(-81, var21, var27, var20, param2);
-                          ki.a(-93, var21, var28, var20, param2);
-                          break L5;
-                        }
-                      }
-                      var10 = var10 - (var9 << 1);
-                      break L4;
-                    } else {
-                      break L4;
-                    }
-                  }
-                  var31 = vl.field_e[param3 + var7_int];
-                  var32 = vl.field_e[-var7_int + param3];
-                  var20 = param1 - -var9;
-                  var21 = -var9 + param1;
-                  if (var8 > var7_int) {
-                    L6: {
-                      if (var7_int <= var11) {
-                        stackOut_21_0 = var11;
-                        stackIn_22_0 = stackOut_21_0;
-                        break L6;
-                      } else {
-                        stackOut_20_0 = jo.field_h[var7_int];
-                        stackIn_22_0 = stackOut_20_0;
-                        break L6;
-                      }
-                    }
-                    var22 = stackIn_22_0;
-                    var23 = param1 - -var22;
-                    var24 = param1 - var22;
-                    ki.a(-97, var21, var31, var24, param2);
-                    ki.a(-111, var24, var31, var23, param0);
-                    ki.a(-107, var23, var31, var20, param2);
-                    ki.a(param4 + -68, var21, var32, var24, param2);
-                    ki.a(-124, var24, var32, var23, param0);
-                    ki.a(-125, var23, var32, var20, param2);
-                    continue L2;
-                  } else {
-                    ki.a(-86, var21, var31, var20, param2);
-                    ki.a(param4 ^ 75, var21, var32, var20, param2);
-                    continue L2;
                   }
                 }
+                L4: {
+                  var7_int++;
+                  if (var10 >= 0) {
+                    L5: {
+                      var9--;
+                      if (var8 > var9) {
+                        var29 = vl.field_e[var9 + param3];
+                        var30 = vl.field_e[-var9 + param3];
+                        var20 = jo.field_h[var9];
+                        var21 = var7_int + param1;
+                        var22 = param1 + -var7_int;
+                        var23 = var20 + param1;
+                        var24 = param1 + -var20;
+                        ki.a(-110, var22, var29, var24, param2);
+                        ki.a(-117, var24, var29, var23, param0);
+                        ki.a(-127, var23, var29, var21, param2);
+                        ki.a(-122, var22, var30, var24, param2);
+                        ki.a(-114, var24, var30, var23, param0);
+                        ki.a(-103, var23, var30, var21, param2);
+                        break L5;
+                      } else {
+                        var27 = vl.field_e[var9 + param3];
+                        var28 = vl.field_e[-var9 + param3];
+                        var20 = param1 - -var7_int;
+                        var21 = param1 - var7_int;
+                        ki.a(-81, var21, var27, var20, param2);
+                        ki.a(-93, var21, var28, var20, param2);
+                        break L5;
+                      }
+                    }
+                    var10 = var10 - (var9 << 1);
+                    break L4;
+                  } else {
+                    break L4;
+                  }
+                }
+                var31 = vl.field_e[param3 + var7_int];
+                var32 = vl.field_e[-var7_int + param3];
+                var20 = param1 - -var9;
+                var21 = -var9 + param1;
+                if (var8 > var7_int) {
+                  L6: {
+                    if (var7_int <= var11) {
+                      stackOut_21_0 = var11;
+                      stackIn_22_0 = stackOut_21_0;
+                      break L6;
+                    } else {
+                      stackOut_20_0 = jo.field_h[var7_int];
+                      stackIn_22_0 = stackOut_20_0;
+                      break L6;
+                    }
+                  }
+                  var22 = stackIn_22_0;
+                  var23 = param1 - -var22;
+                  var24 = param1 - var22;
+                  ki.a(-97, var21, var31, var24, param2);
+                  ki.a(-111, var24, var31, var23, param0);
+                  ki.a(-107, var23, var31, var20, param2);
+                  ki.a(-108, var21, var32, var24, param2);
+                  ki.a(-124, var24, var32, var23, param0);
+                  ki.a(-125, var23, var32, var20, param2);
+                  continue L2;
+                } else {
+                  ki.a(-86, var21, var31, var20, param2);
+                  ki.a(-109, var21, var32, var20, param2);
+                  continue L2;
+                }
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var7, "cl.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw wn.a((Throwable) (Object) var7, "cl.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + -40 + 44 + param5 + 44 + param6 + 41);
         }
     }
 

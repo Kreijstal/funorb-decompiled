@@ -289,39 +289,35 @@ final class vs {
         var5 = Kickabout.field_G;
         try {
           L0: {
-            if (param2 >= 76) {
-              wk.field_f = cr.field_d;
-              if (param3 == 255) {
-                L1: {
-                  if (tn.field_b >= 13) {
-                    stackOut_11_0 = 0;
-                    stackIn_12_0 = stackOut_11_0;
-                    break L1;
-                  } else {
-                    stackOut_10_0 = 1;
-                    stackIn_12_0 = stackOut_10_0;
-                    break L1;
-                  }
+            wk.field_f = cr.field_d;
+            if (param3 == 255) {
+              L1: {
+                if (tn.field_b >= 13) {
+                  stackOut_11_0 = 0;
+                  stackIn_12_0 = stackOut_11_0;
+                  break L1;
+                } else {
+                  stackOut_10_0 = 1;
+                  stackIn_12_0 = stackOut_10_0;
+                  break L1;
                 }
-                kl.field_a = mf.a(stackIn_12_0 != 0, 124);
-                break L0;
-              } else {
-                L2: {
-                  if (param3 < 100) {
-                    break L2;
-                  } else {
-                    if (105 >= param3) {
-                      kl.field_a = wt.a(-111, param1);
-                      return;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-                kl.field_a = wb.a(-126, param0, param3);
-                return;
               }
+              kl.field_a = mf.a(stackIn_12_0 != 0, 124);
+              break L0;
             } else {
+              L2: {
+                if (param3 < 100) {
+                  break L2;
+                } else {
+                  if (105 >= param3) {
+                    kl.field_a = wt.a(-111, param1);
+                    return;
+                  } else {
+                    break L2;
+                  }
+                }
+              }
+              kl.field_a = wb.a(-126, param0, param3);
               return;
             }
           }
@@ -378,7 +374,7 @@ final class vs {
               break L4;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param2 + 44 + param3 + 41);
+          throw nb.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + 122 + 44 + param3 + 41);
         }
     }
 

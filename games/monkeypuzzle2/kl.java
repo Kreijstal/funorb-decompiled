@@ -3,12 +3,6 @@
  */
 final class kl {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
@@ -19,24 +13,14 @@ final class kl {
         int var19 = 0;
         int var20 = 0;
         int var21 = 0;
-        var6 = param0 + param1 * ge.field_h;
-        var7 = 255 - param5;
-        var8 = param4 >> 16;
-        var9 = param4 >> 8 & 255;
-        var10 = param4 & 255;
-        var11 = ge.field_h - param2;
-        var12 = param3 - 1;
-        L0: while (true) {
-          if (var12 < 0) {
-            return;
-          } else {
-            var13 = param2 - 1;
-            L1: while (true) {
-              if (var13 < 0) {
-                var6 = var6 + var11;
-                var12--;
-                continue L0;
-              } else {
+        int var6 = 0 * ge.field_h;
+        int var7 = 255 - param5;
+        int var8 = 185;
+        int var9 = 153;
+        int var10 = 75;
+        int var11 = ge.field_h - 640;
+        for (var12 = 479; var12 >= 0; var12--) {
+            for (var13 = 639; var13 >= 0; var13--) {
                 var14 = ge.field_i[var6];
                 var15 = var14 >> 16 & 255;
                 var16 = var14 >> 8 & 255;
@@ -45,14 +29,11 @@ final class kl {
                 var19 = var18 * var8 >> 8;
                 var20 = var18 * var9 >> 8;
                 var21 = var18 * var10 >> 8;
-                int incrementValue$1 = var6;
+                int incrementValue$0 = var6;
                 var6++;
-                ge.field_i[incrementValue$1] = (var15 * var7 + var19 * param5 << 8 & 16711680) + (var16 * var7 + var20 * param5 & 65280) + (var17 * var7 + var21 * param5 >> 8);
-                var13--;
-                continue L1;
-              }
+                ge.field_i[incrementValue$0] = (var15 * var7 + var19 * param5 << 8 & 16711680) + (var16 * var7 + var20 * param5 & 65280) + (var17 * var7 + var21 * param5 >> 8);
             }
-          }
+            var6 = var6 + var11;
         }
     }
 
@@ -100,7 +81,7 @@ final class kl {
                   }
                 }
                 param4 = param4 * ge.field_h;
-                var8 = 6.2831854820251465f / (float)param0;
+                var8 = 6.2831854820251465f / (float)100;
                 var9 = param3 + param5;
                 var10 = param4 + (param6 - 1) * ge.field_h;
                 L4: while (true) {
@@ -108,7 +89,7 @@ final class kl {
                     return;
                   } else {
                     L5: {
-                      var11 = (int)((float)param1 * ia.a(true, var8 * (float)(var10 + param2)));
+                      var11 = (int)((float)5 * ia.a(true, var8 * (float)(var10 + param2)));
                       if (var11 <= 0) {
                         if (var11 <= 0) {
                           break L5;

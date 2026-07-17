@@ -27,7 +27,7 @@ final class gj {
         throw new IllegalStateException();
     }
 
-    final static void a(cn param0, boolean param1) {
+    final static void a(cn param0) {
         RuntimeException var2 = null;
         jea var3 = null;
         jea var5 = null;
@@ -122,15 +122,10 @@ final class gj {
                   if (var2 == 5) {
                     return field_k;
                   } else {
-                    if (var2 != 6) {
-                      if (param0 != 41) {
-                        field_d = null;
-                        return null;
-                      } else {
-                        return null;
-                      }
-                    } else {
+                    if (var2 == 6) {
                       return field_j;
+                    } else {
+                      return null;
                     }
                   }
                 } else {
@@ -148,7 +143,7 @@ final class gj {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_m = null;
         field_o = null;
         field_e = null;

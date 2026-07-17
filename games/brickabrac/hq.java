@@ -43,7 +43,9 @@ final class hq extends km {
     final static void a(int param0, int param1, int param2, int param3) {
         pi var4 = null;
         int var5 = 0;
-        if (!og.h(-26090)) {
+        if (og.h(-26090)) {
+          return;
+        } else {
           var4 = k.field_h;
           var4.e(-13413, 16);
           var4.field_l = var4.field_l + 1;
@@ -51,17 +53,8 @@ final class hq extends km {
           var4.a(-126, 0);
           var4.b((byte) 120, param0);
           var4.a(113, param1);
-          if (param2 != 532) {
-            field_s = null;
-            var4.b((byte) 127, param3);
-            var4.d((byte) 121, -var5 + var4.field_l);
-            return;
-          } else {
-            var4.b((byte) 127, param3);
-            var4.d((byte) 121, -var5 + var4.field_l);
-            return;
-          }
-        } else {
+          var4.b((byte) 127, param3);
+          var4.d((byte) 121, -var5 + var4.field_l);
           return;
         }
     }
@@ -378,7 +371,8 @@ final class hq extends km {
         int stackIn_4_0 = 0;
         int stackOut_3_0 = 0;
         int stackOut_2_0 = 0;
-        var4 = ib.a(pl.field_b, -1) ? 1 : 0;
+        int discarded$6 = -1;
+        var4 = ib.a(pl.field_b) ? 1 : 0;
         if (param2 < 96) {
           return;
         } else {
@@ -394,7 +388,9 @@ final class hq extends km {
             }
           }
           var5 = stackIn_4_0;
-          ((hq) this).field_v = oq.field_w + " " + wj.a(-1, rd.a(af.a(var4 != 0, var5 != 0, false, 126), new String[1], (byte) 103), '#', "<br><br>");
+          int discarded$7 = 126;
+          int discarded$8 = 0;
+          ((hq) this).field_v = oq.field_w + " " + wj.a(-1, rd.a(af.a(var4 != 0, var5 != 0), new String[1], (byte) 103), '#', "<br><br>");
           return;
         }
     }
@@ -407,30 +403,22 @@ final class hq extends km {
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
           L0: {
-            L1: {
-              wp.a(param1, (byte) -51);
-              if (param0) {
-                break L1;
-              } else {
-                field_y = null;
-                break L1;
-              }
-            }
+            wp.a(true, (byte) -51);
             var3 = (nj) (Object) ob.field_E.d(-58);
-            L2: while (true) {
+            L1: while (true) {
               if (var3 == null) {
                 break L0;
               } else {
                 var3.a(-1196049244, param2 << 4);
                 var3 = (nj) (Object) ob.field_E.a((byte) 116);
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw qb.a((Throwable) (Object) var3_ref, "hq.E(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw qb.a((Throwable) (Object) var3_ref, "hq.E(" + 1 + 44 + 1 + 44 + param2 + 41);
         }
     }
 
@@ -441,7 +429,7 @@ final class hq extends km {
         }
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_z = null;
         field_u = null;
         field_x = null;

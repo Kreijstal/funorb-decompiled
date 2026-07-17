@@ -13,13 +13,10 @@ final class cf implements bo {
     static String field_e;
     private int[] field_h;
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_f = null;
         field_e = null;
-        if (param0 != 10) {
-            field_c = null;
-        }
     }
 
     public final void a(int param0, kh param1) {
@@ -271,52 +268,44 @@ final class cf implements bo {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        int stackIn_10_0 = 0;
+        int stackIn_8_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_9_0 = 0;
+        int stackOut_7_0 = 0;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
             L1: {
-              if (param1 == -16390) {
-                break L1;
-              } else {
-                cf.a(-31);
-                break L1;
-              }
-            }
-            L2: {
               var4_int = -param2 + param3;
               if (var4_int > 0) {
-                L3: while (true) {
-                  if (var4_int >= -param0 / 2) {
-                    L4: while (true) {
-                      if (var4_int <= param0 / 2) {
-                        break L2;
+                L2: while (true) {
+                  if (var4_int >= -4096) {
+                    L3: while (true) {
+                      if (var4_int <= 4096) {
+                        break L1;
                       } else {
-                        var4_int = var4_int - param0;
-                        continue L4;
+                        var4_int = var4_int - 8192;
+                        continue L3;
                       }
                     }
                   } else {
-                    var4_int = var4_int + param0;
-                    continue L3;
+                    var4_int = var4_int + 8192;
+                    continue L2;
                   }
                 }
               } else {
-                break L2;
+                break L1;
               }
             }
-            stackOut_9_0 = var4_int;
-            stackIn_10_0 = stackOut_9_0;
+            stackOut_7_0 = var4_int;
+            stackIn_8_0 = stackOut_7_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var4, "cf.D(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw tba.a((Throwable) (Object) var4, "cf.D(" + 8192 + 44 + -16390 + 44 + param2 + 44 + param3 + 41);
         }
-        return stackIn_10_0;
+        return stackIn_8_0;
     }
 
     final void a(qh param0, int param1) {

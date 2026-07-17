@@ -24,7 +24,7 @@ class md {
     private int field_p;
     private boolean field_o;
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void a(int param0, boolean param1) {
         int stackIn_7_0 = 0;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
@@ -204,12 +204,12 @@ class md {
     }
 
     private final void a(int param0) {
-        ((md) this).field_p = ((md) this).field_p - 256;
+        ((md) this).field_p = ((md) this).field_p - param0;
         if (((md) this).field_p < 0) {
             ((md) this).field_p = 0;
         }
         if (((md) this).field_c != null) {
-            ((md) this).field_c.a(256);
+            ((md) this).field_c.a(param0);
             return;
         }
     }
@@ -405,7 +405,7 @@ class md {
         nm var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_q) {
             break L0;
           } else {
@@ -415,7 +415,7 @@ class md {
         }
         L1: {
           ne.a(param0, 0, var3);
-          ((md) this).field_p = ((md) this).field_p - 256;
+          ((md) this).field_p = ((md) this).field_p - param1;
           if (((md) this).field_c == null) {
             break L1;
           } else {
@@ -582,7 +582,7 @@ class md {
           if (((md) this).field_c == null) {
             break L17;
           } else {
-            ((md) this).field_c.a(param0, 0, 256);
+            ((md) this).field_c.a(param0, 0, param1);
             break L17;
           }
         }

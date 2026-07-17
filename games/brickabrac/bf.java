@@ -26,7 +26,8 @@ final class bf extends d {
             }
             sj.field_b.a(param2, param0, param3, (byte) 86);
             lb.d();
-            wc.a(true, -1);
+            int discarded$0 = -1;
+            wc.a(true);
         } catch (RuntimeException runtimeException) {
             throw qb.a((Throwable) (Object) runtimeException, "bf.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
@@ -141,7 +142,7 @@ final class bf extends d {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;

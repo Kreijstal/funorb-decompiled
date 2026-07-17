@@ -1,7 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.io.*;
 import java.net.URL;
 import java.lang.String;
 
@@ -11,12 +10,11 @@ final class wp {
     static am field_b;
     static int[] field_d;
 
-    final static void a(Throwable param0, String param1, int param2) {
+    final static void a(Throwable param0, String param1) {
         try {
             Exception var3 = null;
             String var3_ref = null;
             gb var4 = null;
-            DataInputStream var5 = null;
             int var6 = 0;
             String var7 = null;
             String var8 = null;
@@ -90,15 +88,16 @@ final class wp {
                     break L2;
                   }
                 }
-                qf.a(var3_ref, param2 + -21861);
-                var7 = ca.a("%3a", param2 + -21862, var3_ref, ":");
+                int discarded$1 = 1;
+                qf.a(var3_ref);
+                var7 = ca.a("%3a", 0, var3_ref, ":");
                 var8 = ca.a("%40", 0, var7, "@");
                 var9 = ca.a("%26", 0, var8, "&");
                 var10 = ca.a("%23", 0, var9, "#");
                 if (pj.field_w != null) {
                   L4: {
                     stackOut_9_0 = rd.field_g;
-                    stackOut_9_1 = param2 ^ 21859;
+                    stackOut_9_1 = 5;
                     stackOut_9_2 = null;
                     stackOut_9_3 = null;
                     stackOut_9_4 = pj.field_w.getCodeBase();
@@ -152,21 +151,7 @@ final class wp {
                   var4 = ((un) (Object) stackIn_12_0).a(stackIn_12_1, new java.net.URL(stackIn_12_4, stackIn_12_6 + "&v1=" + un.field_e + "&v2=" + un.field_m + "&e=" + var10));
                   L5: while (true) {
                     if (var4.field_a != 0) {
-                      if (param2 == 21862) {
-                        L6: {
-                          if (var4.field_a != 1) {
-                            break L6;
-                          } else {
-                            var5 = (DataInputStream) var4.field_b;
-                            int discarded$1 = var5.read();
-                            var5.close();
-                            break L6;
-                          }
-                        }
-                        break L0;
-                      } else {
-                        return;
-                      }
+                      break L0;
                     } else {
                       fh.a(true, 1L);
                       continue L5;
@@ -178,10 +163,8 @@ final class wp {
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              L7: {
-                var3 = (Exception) (Object) decompiledCaughtException;
-                break L7;
-              }
+              var3 = (Exception) (Object) decompiledCaughtException;
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -472,7 +455,7 @@ final class wp {
         try {
           L0: {
             var3 = pc.a(param2, 0);
-            if (param0.indexOf(param2) != param1) {
+            if (param0.indexOf(param2) != -1) {
               stackOut_3_0 = 1;
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0 != 0;
@@ -540,7 +523,7 @@ final class wp {
           }
           L4: {
             stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(param1).append(44);
+            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(-1).append(44);
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -568,7 +551,7 @@ final class wp {
         return stackIn_12_0 != 0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
         field_b = null;

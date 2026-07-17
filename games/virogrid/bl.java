@@ -33,21 +33,18 @@ final class bl extends nb {
         return ((bl) this).field_C;
     }
 
-    public static void d(boolean param0) {
+    public static void d() {
         field_D = null;
         field_A = null;
         field_G = null;
         field_H = null;
     }
 
-    final static int f(int param0) {
-        if (param0 != 0) {
-            return -60;
-        }
+    final static int f() {
         return 1;
     }
 
-    final static void a(int param0, int param1, java.math.BigInteger param2, jc param3, byte[] param4, java.math.BigInteger param5, int param6) {
+    final static void a(int param0, int param1, java.math.BigInteger param2, jc param3, byte[] param4, java.math.BigInteger param5) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int[] var8 = null;
@@ -157,7 +154,7 @@ final class bl extends nb {
                 L5: {
                   L6: {
                     am.field_e.field_l = 0;
-                    am.field_e.a(param4, param1, param6, (byte) 72);
+                    am.field_e.a(param4, param1, 0, (byte) 72);
                     am.field_e.b(var7_int, (byte) 0);
                     am.field_e.a(32768, var15);
                     if (lc.field_b == null) {
@@ -173,7 +170,7 @@ final class bl extends nb {
                   lc.field_b = new jc(100);
                   break L5;
                 }
-                lc.field_b.field_l = param0;
+                lc.field_b.field_l = 0;
                 lc.field_b.a(10, 120);
                 var11 = 0;
                 var9 = var11;
@@ -202,7 +199,7 @@ final class bl extends nb {
           L8: {
             var7 = decompiledCaughtException;
             stackOut_19_0 = (RuntimeException) var7;
-            stackOut_19_1 = new StringBuilder().append("bl.H(").append(param0).append(44).append(param1).append(44);
+            stackOut_19_1 = new StringBuilder().append("bl.H(").append(0).append(44).append(param1).append(44);
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -300,7 +297,7 @@ final class bl extends nb {
               break L11;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 44 + param6 + 41);
+          throw kg.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 44 + 0 + 41);
         }
     }
 

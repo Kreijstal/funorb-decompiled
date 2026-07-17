@@ -25,9 +25,8 @@ final class vh extends ana {
         }
     }
 
-    final static void a(byte[] param0, int[] param1, byte[] param2, ee[] param3, int param4, int[] param5, boolean param6, vr param7, kv[][] param8, String[][] param9, int param10, String[] param11, int param12, vr param13, String[] param14, kv[][] param15, vr param16, String[][] param17, int param18) {
+    final static void a(byte[] param0, int[] param1, byte[] param2, ee[] param3, int param4, int[] param5, boolean param6, vr param7, kv[][] param8, String[][] param9, int param10, String[] param11, int param12, vr param13, String[] param14, kv[][] param15, vr param16, String[][] param17) {
         RuntimeException var19 = null;
-        Object var20 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
@@ -241,13 +240,9 @@ final class vh extends ana {
         String stackOut_44_2 = null;
         try {
           L0: {
-            if (param18 == 22914) {
-              var20 = null;
-              ei.a(param3, 1, param7, param9, (String[]) null, param17, param6, param15, param14, false, param13, param5, param12, param0, param1, param11, param16, param8, param2, param10);
-              break L0;
-            } else {
-              return;
-            }
+            int discarded$1 = 4;
+            ei.a(param3, 1, param7, param9, (String[]) null, param17, true, param15, param14, false, param13, param5, 5, param0, param1, param11, param16, param8, param2);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -354,7 +349,7 @@ final class vh extends ana {
           }
           L5: {
             stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(param4).append(44);
+            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(1).append(44);
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -379,7 +374,7 @@ final class vh extends ana {
           }
           L6: {
             stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44).append(param6).append(44);
+            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44).append(1).append(44);
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -454,7 +449,7 @@ final class vh extends ana {
           }
           L9: {
             stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-            stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(44).append(param10).append(44);
+            stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(44).append(4).append(44);
             stackIn_30_0 = stackOut_28_0;
             stackIn_30_1 = stackOut_28_1;
             stackIn_29_0 = stackOut_28_0;
@@ -479,7 +474,7 @@ final class vh extends ana {
           }
           L10: {
             stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-            stackOut_31_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(44).append(param12).append(44);
+            stackOut_31_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(44).append(5).append(44);
             stackIn_33_0 = stackOut_31_0;
             stackIn_33_1 = stackOut_31_1;
             stackIn_32_0 = stackOut_31_0;
@@ -602,11 +597,11 @@ final class vh extends ana {
               break L14;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_46_0, stackIn_46_2 + 44 + param18 + 41);
+          throw pe.a((Throwable) (Object) stackIn_46_0, stackIn_46_2 + 44 + 22914 + 41);
         }
     }
 
-    private final void e(int param0) {
+    private final void e() {
         iv var3 = null;
         ad var4 = null;
         ad var5 = null;
@@ -638,14 +633,15 @@ final class vh extends ana {
 
     final boolean c(byte param0) {
         int var2 = 0;
-        int fieldTemp$2 = ((vh) this).field_l - 1;
+        int fieldTemp$4 = ((vh) this).field_l - 1;
         ((vh) this).field_l = ((vh) this).field_l - 1;
-        if (fieldTemp$2 >= 0) {
+        if (fieldTemp$4 >= 0) {
           if (25 != ((vh) this).field_l) {
             return false;
           } else {
             jja.a(192, -1, 5);
-            this.e(0);
+            int discarded$5 = 0;
+            this.e();
             return false;
           }
         } else {
@@ -727,11 +723,11 @@ final class vh extends ana {
                 }
               }
             }
-            bha.field_o = param3;
-            dp.field_q = param2;
-            rl.field_q = param0;
+            bha.field_o = 16777215;
+            dp.field_q = 0;
+            rl.field_q = 0;
             taa.field_m = new kv[param1.length];
-            var7 = param4;
+            var7 = 0;
             L4: while (true) {
               if (param1.length <= var7) {
                 iaa.field_b = param1;
@@ -748,7 +744,7 @@ final class vh extends ana {
           L5: {
             var6_ref = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var6_ref;
-            stackOut_17_1 = new StringBuilder().append("vh.D(").append(param0).append(44);
+            stackOut_17_1 = new StringBuilder().append("vh.D(").append(0).append(44);
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -773,7 +769,7 @@ final class vh extends ana {
           }
           L6: {
             stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(0).append(44).append(16777215).append(44).append(0).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;

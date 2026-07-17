@@ -293,13 +293,20 @@ abstract class mh extends wk {
         String stackOut_15_2 = null;
         try {
           L0: {
-            lb.a(param7, param12, -101, param15);
-            hh.b(param10, param6, param1, param13, 0);
-            l.a(param0, (byte) 127, param4);
-            uk.a(param3, param18, param9, param19, param17, (byte) 82);
-            var21_int = 16 % ((0 - param11) / 41);
-            di.a(param16, 0, param14, param20);
-            ti.a(param2, param8, param5, (byte) 102);
+            lb.a(param7, 320, -101, param15);
+            int discarded$7 = 0;
+            hh.b(20, 14, 20, 20);
+            l.a(240, (byte) 127, 320);
+            int discarded$8 = 82;
+            int discarded$9 = 8;
+            uk.a(param3, 4, 8, param19);
+            var21_int = 0;
+            di.a(0, 0, 0, param20);
+            int discarded$10 = 102;
+            int discarded$11 = 16741888;
+            int discarded$12 = 16777215;
+            int discarded$13 = 16697912;
+            ti.a();
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -307,7 +314,7 @@ abstract class mh extends wk {
           L1: {
             var21 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var21;
-            stackOut_2_1 = new StringBuilder().append("mh.R(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_2_1 = new StringBuilder().append("mh.R(").append(240).append(44).append(20).append(44).append(16697912).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -332,7 +339,7 @@ abstract class mh extends wk {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(320).append(44).append(16741888).append(44).append(14).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -357,7 +364,7 @@ abstract class mh extends wk {
           }
           L3: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param8).append(44).append(param9).append(44).append(param10).append(44).append(param11).append(44).append(param12).append(44).append(param13).append(44).append(param14).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(16777215).append(44).append(8).append(44).append(20).append(44).append(115).append(44).append(320).append(44).append(20).append(44).append(0).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -382,7 +389,7 @@ abstract class mh extends wk {
           }
           L4: {
             stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(param16).append(44).append(param17).append(44).append(param18).append(44);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(0).append(44).append(8).append(44).append(4).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -532,7 +539,8 @@ abstract class mh extends wk {
             if (param1 >= 77) {
               L1: {
                 le.a(-1, (java.awt.Component) (Object) param0);
-                ka.a((java.awt.Component) (Object) param0, (byte) -80);
+                int discarded$2 = -80;
+                ka.a((java.awt.Component) (Object) param0);
                 if (null == hg.field_k) {
                   break L1;
                 } else {

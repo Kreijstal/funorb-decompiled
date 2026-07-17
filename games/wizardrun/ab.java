@@ -104,15 +104,16 @@ final class ab {
         field_b = null;
     }
 
-    final static int c(int param0) {
+    final static int c() {
         wi.field_L.a((byte) -84);
         if (ii.field_f.b((byte) 0)) {
             return 0;
         }
-        return cd.a(-18067);
+        int discarded$0 = -18067;
+        return cd.a();
     }
 
-    final static void a(kl param0, byte param1) {
+    final static void a(kl param0) {
         o var2 = null;
         int var4 = 0;
         int var5 = 0;
@@ -121,7 +122,8 @@ final class ab {
             var2 = new o(param0.a(104, "", "final_frame.jpg"), (java.awt.Component) (Object) wizardrun.field_G);
             var4 = var2.field_z;
             var5 = var2.field_p;
-            ph.d(-31782);
+            int discarded$0 = -31782;
+            ph.d();
             af.field_a = new o(var4, var5 * 3 / 4);
             af.field_a.b();
             var2.c(0, 0);
@@ -129,7 +131,8 @@ final class ab {
             ee.field_q.b();
             var2.c(0, -af.field_a.field_p);
             ee.field_q.field_v = af.field_a.field_p;
-            bb.b(4);
+            int discarded$1 = 4;
+            bb.b();
         } catch (RuntimeException runtimeException) {
             throw bd.a((Throwable) (Object) runtimeException, "ab.B(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 41);
         }

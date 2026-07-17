@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class na {
-    final static Boolean a(int param0) {
+    final static Boolean a() {
         int var1 = 0;
         Boolean var2 = kc.field_b;
         kc.field_b = null;

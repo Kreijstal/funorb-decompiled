@@ -8,7 +8,7 @@ final class vf implements jm {
     static String field_d;
     static String field_e;
 
-    final static void a(boolean param0) {
+    final static void a() {
         RuntimeException runtimeException = null;
         int var2 = 0;
         r var3 = null;
@@ -157,7 +157,7 @@ final class vf implements jm {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_c = null;
         field_d = null;
         field_b = null;

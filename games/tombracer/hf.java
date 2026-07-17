@@ -24,7 +24,7 @@ final class hf implements ac, gs {
         gqa.a(0, -83584144, param3, param4, rl.field_t[6], param2);
     }
 
-    private final boolean b(int param0) {
+    private final boolean b() {
         int stackIn_8_0 = 0;
         int stackOut_7_0 = 0;
         int stackOut_6_0 = 0;
@@ -71,7 +71,8 @@ final class hf implements ac, gs {
             boolean discarded$0 = hf.a(2, 'ﾇ');
         }
         rpa.a(3, true, param2, 192, wga.field_a[((hf) this).field_i], param0);
-        pa.a(3, param0, wga.field_a[((hf) this).field_i], param2, false);
+        int discarded$1 = 0;
+        pa.a(3, param0, wga.field_a[((hf) this).field_i], param2);
     }
 
     public final void f(int param0) {
@@ -142,7 +143,8 @@ final class hf implements ac, gs {
                     if (((hf) this).field_f == 1) {
                       break L1;
                     } else {
-                      if (!this.b(83)) {
+                      int discarded$2 = 83;
+                      if (!this.b()) {
                         stackOut_8_0 = 0;
                         stackIn_9_0 = stackOut_8_0;
                         break L0;
@@ -176,12 +178,12 @@ final class hf implements ac, gs {
         ka var14 = null;
         int var15 = 0;
         int var16 = 0;
-        int stackIn_34_0 = 0;
-        int stackIn_37_0 = 0;
+        int stackIn_32_0 = 0;
+        int stackIn_35_0 = 0;
+        int stackOut_31_0 = 0;
+        int stackOut_30_0 = 0;
+        int stackOut_34_0 = 0;
         int stackOut_33_0 = 0;
-        int stackOut_32_0 = 0;
-        int stackOut_36_0 = 0;
-        int stackOut_35_0 = 0;
         var16 = TombRacer.field_G ? 1 : 0;
         if (null == ((hf) this).field_c) {
           return;
@@ -236,108 +238,104 @@ final class hf implements ac, gs {
                 }
               }
             }
-            var7 = param1;
-            if (param0 > 100) {
-              L1: {
-                var8 = param3;
-                var9 = wma.a(((hf) this).field_i + 10, 12166, 7);
-                gqa.a(var5, -83584144, var8, var7, var9, 131072 + param2);
-                if (0 == var6) {
-                  break L1;
-                } else {
-                  L2: {
-                    var10 = ((hf) this).field_p.E(-25763);
-                    var11 = ((hf) this).field_p.h((byte) 123);
-                    if (var10 == 0) {
+            L1: {
+              var7 = param1;
+              var8 = param3;
+              var9 = wma.a(((hf) this).field_i + 10, 12166, 7);
+              gqa.a(var5, -83584144, var8, var7, var9, 131072 + param2);
+              if (0 == var6) {
+                break L1;
+              } else {
+                L2: {
+                  var10 = ((hf) this).field_p.E(-25763);
+                  var11 = ((hf) this).field_p.h((byte) 123);
+                  if (var10 == 0) {
+                    break L2;
+                  } else {
+                    if (var11 == 0) {
                       break L2;
                     } else {
-                      if (var11 == 0) {
-                        break L2;
-                      } else {
-                        var6 = (var6 >> 8) * 180;
-                        break L2;
-                      }
+                      var6 = (var6 >> 8) * 180;
+                      break L2;
                     }
                   }
-                  var8 = var8 + var11 * var6;
-                  var7 = var7 + var10 * var6;
-                  break L1;
                 }
+                var8 = var8 + var11 * var6;
+                var7 = var7 + var10 * var6;
+                break L1;
               }
-              L3: {
-                if (((hf) this).field_f != 34) {
-                  stackOut_33_0 = 0;
-                  stackIn_34_0 = stackOut_33_0;
-                  break L3;
-                } else {
-                  stackOut_32_0 = 1;
-                  stackIn_34_0 = stackOut_32_0;
-                  break L3;
-                }
+            }
+            L3: {
+              if (((hf) this).field_f != 34) {
+                stackOut_31_0 = 0;
+                stackIn_32_0 = stackOut_31_0;
+                break L3;
+              } else {
+                stackOut_30_0 = 1;
+                stackIn_32_0 = stackOut_30_0;
+                break L3;
               }
-              L4: {
-                var10 = stackIn_34_0;
-                if (((hf) this).field_f != 35) {
-                  stackOut_36_0 = 0;
-                  stackIn_37_0 = stackOut_36_0;
-                  break L4;
-                } else {
-                  stackOut_35_0 = 1;
-                  stackIn_37_0 = stackOut_35_0;
-                  break L4;
-                }
+            }
+            L4: {
+              var10 = stackIn_32_0;
+              if (((hf) this).field_f != 35) {
+                stackOut_34_0 = 0;
+                stackIn_35_0 = stackOut_34_0;
+                break L4;
+              } else {
+                stackOut_33_0 = 1;
+                stackIn_35_0 = stackOut_33_0;
+                break L4;
               }
-              L5: {
-                var11 = stackIn_37_0;
-                var12 = ((hf) this).field_c.a(var11 != 0, -1, var10 != 0, (byte) 1);
-                if (((hf) this).field_f != 10) {
-                  gqa.a(var5, -83584144, var8, var7, var12, param2);
-                  break L5;
-                } else {
-                  break L5;
-                }
+            }
+            L5: {
+              var11 = stackIn_35_0;
+              var12 = ((hf) this).field_c.a(var11 != 0, -1, var10 != 0, (byte) 1);
+              if (((hf) this).field_f != 10) {
+                gqa.a(var5, -83584144, var8, var7, var12, param2);
+                break L5;
+              } else {
+                break L5;
               }
-              L6: {
-                if (((hf) this).field_f == 10) {
-                  var13_ref_ka = ((hf) this).field_n.b((byte) 74);
-                  gqa.a(var5, -83584144, var8, var7, var13_ref_ka, param2);
-                  break L6;
-                } else {
-                  break L6;
-                }
+            }
+            L6: {
+              if (((hf) this).field_f == 10) {
+                var13_ref_ka = ((hf) this).field_n.b((byte) 74);
+                gqa.a(var5, -83584144, var8, var7, var13_ref_ka, param2);
+                break L6;
+              } else {
+                break L6;
               }
-              L7: {
-                var13 = ((hf) this).field_p.u((byte) 126);
-                if (var13 == -1) {
-                  break L7;
-                } else {
-                  L8: {
-                    var15 = var13;
-                    if (var15 != 0) {
-                      if (var15 != 1) {
-                        var14 = qi.field_O;
-                        break L8;
-                      } else {
-                        var14 = null;
-                        break L8;
-                      }
+            }
+            L7: {
+              var13 = ((hf) this).field_p.u((byte) 126);
+              if (var13 == -1) {
+                break L7;
+              } else {
+                L8: {
+                  var15 = var13;
+                  if (var15 != 0) {
+                    if (var15 != 1) {
+                      var14 = qi.field_O;
+                      break L8;
                     } else {
                       var14 = null;
                       break L8;
                     }
-                  }
-                  if (var14 == null) {
-                    break L7;
                   } else {
-                    gqa.a(((hf) this).field_h, -83584144, param3, param1, var14, param2 - -3670016);
-                    break L7;
+                    var14 = null;
+                    break L8;
                   }
                 }
+                if (var14 == null) {
+                  break L7;
+                } else {
+                  gqa.a(((hf) this).field_h, -83584144, param3, param1, var14, param2 - -3670016);
+                  break L7;
+                }
               }
-              return;
-            } else {
-              return;
             }
+            return;
           }
         }
     }
@@ -387,11 +385,12 @@ final class hf implements ac, gs {
                       } else {
                         if (((hf) this).field_g == 0) {
                           L3: {
-                            if (!this.f((byte) 62)) {
-                              fla discarded$7 = var2.a(new fm(70, ((hf) this).b((byte) -122), ((hf) this).c((byte) 93), ((hf) this).e((byte) -87)), param0 ^ -21487);
+                            int discarded$8 = 62;
+                            if (!this.f()) {
+                              fla discarded$9 = var2.a(new fm(70, ((hf) this).b((byte) -122), ((hf) this).c((byte) 93), ((hf) this).e((byte) -87)), param0 ^ -21487);
                               break L3;
                             } else {
-                              fla discarded$8 = var2.a(new fm(69, ((hf) this).b((byte) 116), ((hf) this).c((byte) 121), ((hf) this).e((byte) -105)), param0 ^ -21487);
+                              fla discarded$10 = var2.a(new fm(69, ((hf) this).b((byte) 116), ((hf) this).c((byte) 121), ((hf) this).e((byte) -105)), param0 ^ -21487);
                               break L3;
                             }
                           }
@@ -478,20 +477,20 @@ final class hf implements ac, gs {
                             if (((hf) this).field_k != 3) {
                               break L4;
                             } else {
-                              fla discarded$9 = var2.a(new fm(74, ((hf) this).b((byte) 70), ((hf) this).c((byte) 111), ((hf) this).e((byte) -96)), -58);
+                              fla discarded$11 = var2.a(new fm(74, ((hf) this).b((byte) 70), ((hf) this).c((byte) 111), ((hf) this).e((byte) -96)), -58);
                               break L4;
                             }
                           } else {
-                            fla discarded$10 = var2.a(new fm(71, ((hf) this).b((byte) -98), ((hf) this).c((byte) 98), ((hf) this).e((byte) -127)), -58);
+                            fla discarded$12 = var2.a(new fm(71, ((hf) this).b((byte) -98), ((hf) this).c((byte) 98), ((hf) this).e((byte) -127)), -58);
                             break L4;
                           }
                         } else {
                           L8: {
                             if (((hf) this).field_m) {
-                              fla discarded$11 = var2.a(new fm(72, ((hf) this).b((byte) -119), ((hf) this).c((byte) 120), ((hf) this).e((byte) -116)), -58);
+                              fla discarded$13 = var2.a(new fm(72, ((hf) this).b((byte) -119), ((hf) this).c((byte) 120), ((hf) this).e((byte) -116)), -58);
                               break L8;
                             } else {
-                              fla discarded$12 = var2.a(new fm(73, ((hf) this).b((byte) -102), ((hf) this).c((byte) 96), ((hf) this).e((byte) -114)), -58);
+                              fla discarded$14 = var2.a(new fm(73, ((hf) this).b((byte) -102), ((hf) this).c((byte) 96), ((hf) this).e((byte) -114)), -58);
                               break L8;
                             }
                           }
@@ -548,7 +547,7 @@ final class hf implements ac, gs {
                       break L11;
                     } else {
                       if (((hf) this).field_p.j(-1)) {
-                        fla discarded$13 = var2.a(new fm(79, ((hf) this).b((byte) 77), ((hf) this).c((byte) 114), ((hf) this).e((byte) -123)), -58);
+                        fla discarded$15 = var2.a(new fm(79, ((hf) this).b((byte) 77), ((hf) this).c((byte) 114), ((hf) this).e((byte) -123)), -58);
                         ((hf) this).field_o = true;
                         break L11;
                       } else {
@@ -599,7 +598,7 @@ final class hf implements ac, gs {
         }
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_a = null;
         field_e = null;
         field_d = null;
@@ -867,7 +866,8 @@ final class hf implements ac, gs {
                                         if (10 != var10) {
                                           if (var10 == 12) {
                                             L9: {
-                                              if (this.f((byte) 62)) {
+                                              int discarded$8 = 62;
+                                              if (this.f()) {
                                                 var9.a(-107, new fm(85, ((hf) this).field_p.d(3), ((hf) this).field_p.e(9648), ((hf) this).field_p.g((byte) 115)));
                                                 break L9;
                                               } else {
@@ -882,7 +882,8 @@ final class hf implements ac, gs {
                                               if (14 == var10) {
                                                 L10: {
                                                   var9.a(-128, new fm(78, ((hf) this).field_p.d(3), ((hf) this).field_p.e(param0 + 9622), ((hf) this).field_p.g((byte) 115)));
-                                                  if (!this.f((byte) 62)) {
+                                                  int discarded$9 = 62;
+                                                  if (!this.f()) {
                                                     var9.a(-116, new fm(88, ((hf) this).field_p.d(3), ((hf) this).field_p.e(param0 ^ 9642), ((hf) this).field_p.g((byte) 115)));
                                                     break L10;
                                                   } else {
@@ -896,7 +897,8 @@ final class hf implements ac, gs {
                                                 if (16 == var10) {
                                                   L11: {
                                                     var9.a(-106, new fm(84, ((hf) this).field_p.d(3), ((hf) this).field_p.e(9648), ((hf) this).field_p.g((byte) 115)));
-                                                    if (this.f((byte) 62)) {
+                                                    int discarded$10 = 62;
+                                                    if (this.f()) {
                                                       var9.a(-105, new fm(87, ((hf) this).field_p.d(param0 + -23), ((hf) this).field_p.e(9648), ((hf) this).field_p.g((byte) 115)));
                                                       break L11;
                                                     } else {
@@ -911,7 +913,8 @@ final class hf implements ac, gs {
                                                     if (var10 != 20) {
                                                       if (var10 == 21) {
                                                         L12: {
-                                                          if (!this.f((byte) 62)) {
+                                                          int discarded$11 = 62;
+                                                          if (!this.f()) {
                                                             var9.a(param0 + -148, new fm(88, ((hf) this).field_p.d(3), ((hf) this).field_p.e(param0 + 9622), ((hf) this).field_p.g((byte) 115)));
                                                             break L12;
                                                           } else {
@@ -945,7 +948,8 @@ final class hf implements ac, gs {
                                                         } else {
                                                           var9.a(-124, new fm(82, ((hf) this).field_p.d(3), ((hf) this).field_p.e(9648), ((hf) this).field_p.g((byte) 115)));
                                                           var4 = 35;
-                                                          if (!this.f((byte) 62)) {
+                                                          int discarded$12 = 62;
+                                                          if (!this.f()) {
                                                             var9.a(-115, new fm(88, ((hf) this).field_p.d(param0 + -23), ((hf) this).field_p.e(9648), ((hf) this).field_p.g((byte) 115)));
                                                             break L1;
                                                           } else {
@@ -957,7 +961,8 @@ final class hf implements ac, gs {
                                                     } else {
                                                       L13: {
                                                         var9.a(-98, new fm(78, ((hf) this).field_p.d(3), ((hf) this).field_p.e(9648), ((hf) this).field_p.g((byte) 115)));
-                                                        if (!this.f((byte) 62)) {
+                                                        int discarded$13 = 62;
+                                                        if (!this.f()) {
                                                           var9.a(-91, new fm(88, ((hf) this).field_p.d(3), ((hf) this).field_p.e(9648), ((hf) this).field_p.g((byte) 115)));
                                                           break L13;
                                                         } else {
@@ -971,7 +976,8 @@ final class hf implements ac, gs {
                                                   } else {
                                                     var9.a(-122, new fm(80, ((hf) this).field_p.d(param0 + -23), ((hf) this).field_p.e(param0 ^ 9642), ((hf) this).field_p.g((byte) 115)));
                                                     var4 = 22;
-                                                    if (this.f((byte) 62)) {
+                                                    int discarded$14 = 62;
+                                                    if (this.f()) {
                                                       var9.a(-118, new fm(87, ((hf) this).field_p.d(3), ((hf) this).field_p.e(9648), ((hf) this).field_p.g((byte) 115)));
                                                       break L1;
                                                     } else {
@@ -984,7 +990,8 @@ final class hf implements ac, gs {
                                             } else {
                                               L14: {
                                                 var9.a(-103, new fm(83, ((hf) this).field_p.d(3), ((hf) this).field_p.e(9648), ((hf) this).field_p.g((byte) 115)));
-                                                if (this.f((byte) 62)) {
+                                                int discarded$15 = 62;
+                                                if (this.f()) {
                                                   var9.a(param0 + -143, new fm(87, ((hf) this).field_p.d(3), ((hf) this).field_p.e(9648), ((hf) this).field_p.g((byte) 115)));
                                                   break L14;
                                                 } else {
@@ -1073,7 +1080,7 @@ final class hf implements ac, gs {
         }
     }
 
-    private final boolean f(byte param0) {
+    private final boolean f() {
         int stackIn_12_0 = 0;
         int stackOut_11_0 = 0;
         int stackOut_10_0 = 0;

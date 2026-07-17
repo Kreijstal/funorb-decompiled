@@ -7,7 +7,7 @@ final class vi {
     static int field_c;
     static qe field_a;
 
-    final static String a(int param0) {
+    final static String a() {
         if (2 <= vd.field_a) {
           if (d.field_i != null) {
             if (!d.field_i.c(122)) {
@@ -47,7 +47,7 @@ final class vi {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
         field_a = null;
     }

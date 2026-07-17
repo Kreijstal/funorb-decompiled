@@ -11,7 +11,7 @@ final class sma {
     private int[] field_f;
     private ff field_a;
 
-    private final void a(byte param0) {
+    private final void a() {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
         ((sma) this).field_f = new int[((sma) this).field_a.field_P];
@@ -25,11 +25,11 @@ final class sma {
     public static void a(int param0) {
         field_e = null;
         field_c = null;
-        int var1 = 67 / ((-44 - param0) / 54);
+        int var1 = 67;
         field_d = null;
     }
 
-    final static int a(String param0, int param1) {
+    final static int a(String param0) {
         RuntimeException var2 = null;
         String var3 = null;
         byte[] var4 = null;
@@ -41,9 +41,9 @@ final class sma {
         int var8_int = 0;
         int var9 = 0;
         String var10 = null;
-        File var11 = null;
+        byte[] var11 = null;
         byte[] var12 = null;
-        byte[] var13 = null;
+        File var13 = null;
         byte[] var14 = null;
         byte[] var15 = null;
         byte[] var16 = null;
@@ -101,12 +101,12 @@ final class sma {
                       var19 = af.field_b.a(var3, (byte) 117, "");
                       var17 = var19;
                       var15 = var17;
-                      var13 = var15;
-                      var4 = var13;
+                      var12 = var15;
+                      var4 = var12;
                       var5 = null;
                       try {
                         L1: {
-                          var11 = iba.a(var10, (byte) -94);
+                          var13 = iba.a(var10, (byte) -94);
                           break L1;
                         }
                       } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -120,15 +120,16 @@ final class sma {
                         if (var4 == null) {
                           break L2;
                         } else {
-                          if (var11 != null) {
+                          if (var13 != null) {
                             L3: {
                               L4: {
                                 var6 = 1;
-                                var18 = vj.a(var11, (byte) -86);
+                                int discarded$3 = -86;
+                                var18 = vj.a(var13);
                                 var16 = var18;
                                 var14 = var16;
-                                var12 = var14;
-                                var7 = var12;
+                                var11 = var14;
+                                var7 = var11;
                                 if (var7 == null) {
                                   break L4;
                                 } else {
@@ -161,7 +162,7 @@ final class sma {
                                   if (var6 != 0) {
                                     break L7;
                                   } else {
-                                    boolean discarded$1 = hna.field_a.a(var19, var11, true);
+                                    boolean discarded$4 = hna.field_a.a(var19, var13, true);
                                     break L7;
                                   }
                                 }
@@ -174,7 +175,8 @@ final class sma {
                               stackIn_39_0 = stackOut_38_0;
                               return stackIn_39_0;
                             }
-                            mj.a(param0, var11, 1);
+                            int discarded$5 = 1;
+                            mj.a(param0, var13);
                             stackOut_40_0 = 100;
                             stackIn_41_0 = stackOut_40_0;
                             return stackIn_41_0;
@@ -347,7 +349,8 @@ final class sma {
     sma(ff param0) {
         try {
             ((sma) this).field_a = param0;
-            this.a((byte) -54);
+            int discarded$0 = -54;
+            this.a();
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "sma.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }

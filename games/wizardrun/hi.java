@@ -225,7 +225,7 @@ final class hi implements Runnable {
                 if (param0 == 76) {
                   break L1;
                 } else {
-                  java.awt.Canvas discarded$2 = hi.d((byte) 8);
+                  java.awt.Canvas discarded$4 = hi.d((byte) 8);
                   break L1;
                 }
               }
@@ -266,7 +266,8 @@ final class hi implements Runnable {
                     return;
                   }
                 } else {
-                  tg.a(1L, false);
+                  int discarded$5 = 0;
+                  tg.a(1L);
                   continue L3;
                 }
               }

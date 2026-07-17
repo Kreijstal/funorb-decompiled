@@ -9,16 +9,17 @@ abstract class hr extends or {
         throw new Error();
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_d = null;
         field_e = null;
     }
 
     abstract go a(int param0);
 
-    final static void a(boolean param0, String param1, boolean param2, byte param3) {
+    final static void a(boolean param0, String param1, boolean param2) {
         try {
-            gg.b((byte) -98);
+            int discarded$0 = -98;
+            gg.b();
             vn.field_f.e((byte) 74);
             vr.field_b = new ce(se.field_a, (String) null, nf.field_a, param2, param0);
             ak.field_d = new ad(vn.field_f, (ea) (Object) vr.field_b);
@@ -85,7 +86,7 @@ abstract class hr extends or {
         try {
           L0: {
             L1: {
-              var6_int = 123 % ((param2 - 23) / 53);
+              var6_int = 1;
               var7 = 0;
               var8 = 0;
               if (param4 == null) {
@@ -156,7 +157,7 @@ abstract class hr extends or {
           }
           L4: {
             stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(-106).append(44).append(param3).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -186,10 +187,6 @@ abstract class hr extends or {
 
     final static void a(float param0, int param1, boolean param2, String param3) {
         try {
-            if (param1 != 0) {
-                Object var5 = null;
-                ha discarded$0 = hr.a((gk) null, (d) null, -124, -29, (java.awt.Canvas) null, -9);
-            }
             if (null == fu.field_d) {
                 fu.field_d = new ng(vn.field_f, uf.field_e);
                 vn.field_f.a((ea) (Object) fu.field_d, 0);
@@ -198,7 +195,7 @@ abstract class hr extends or {
             vp.a();
             si.a(true, -32106);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "hr.B(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "hr.B(" + param0 + 44 + 0 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 

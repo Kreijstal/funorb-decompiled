@@ -11,7 +11,7 @@ final class ts {
     int field_b;
     int field_f;
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
     }
 
@@ -73,68 +73,66 @@ final class ts {
               }
             }
             var6_int = stackIn_4_0;
-            if (param2 == -16240) {
-              var7 = 0;
-              L2: while (true) {
-                L3: {
-                  if (var6_int == 0) {
-                    stackOut_9_0 = 20;
-                    stackIn_10_0 = stackOut_9_0;
-                    break L3;
-                  } else {
-                    stackOut_8_0 = 10;
-                    stackIn_10_0 = stackOut_8_0;
-                    break L3;
-                  }
-                }
-                if (stackIn_10_0 <= var7) {
-                  var7 = 0;
-                  L4: while (true) {
-                    L5: {
-                      stackOut_13_0 = ~var7;
-                      stackIn_15_0 = stackOut_13_0;
-                      stackIn_14_0 = stackOut_13_0;
-                      if (var6_int == 0) {
-                        stackOut_15_0 = stackIn_15_0;
-                        stackOut_15_1 = 20;
-                        stackIn_16_0 = stackOut_15_0;
-                        stackIn_16_1 = stackOut_15_1;
-                        break L5;
-                      } else {
-                        stackOut_14_0 = stackIn_14_0;
-                        stackOut_14_1 = 10;
-                        stackIn_16_0 = stackOut_14_0;
-                        stackIn_16_1 = stackOut_14_1;
-                        break L5;
-                      }
-                    }
-                    if (stackIn_16_0 <= ~stackIn_16_1) {
-                      break L0;
-                    } else {
-                      var8 = new float[]{0.0f, (float)(-(fi.a(param3, he.field_o, (byte) -96) + 1))};
-                      float[] dupTemp$1 = kt.a((byte) -10, var8, (float)(0.0 + 0.017453292519943295 * (double)(2048.0f / (float)var7)));
-                      var11 = dupTemp$1;
-                      var8 = dupTemp$1;
-                      param1.a((ms) (Object) new vt(64, param0, param5, param4, (int)var11[0] << 8, (int)var11[1] << 8, 1), (byte) 39);
-                      var7++;
-                      continue L4;
-                    }
-                  }
+            var7 = 0;
+            L2: while (true) {
+              L3: {
+                if (var6_int == 0) {
+                  stackOut_9_0 = 20;
+                  stackIn_10_0 = stackOut_9_0;
+                  break L3;
                 } else {
-                  var8 = new float[]{0.0f, (float)(-(fi.a(param3, he.field_o, (byte) -96) + 1))};
-                  var15 = kt.a((byte) -124, var8, (float)((double)(2048.0f / (float)var7) * 0.017453292519943295 + 0.0));
-                  var14 = var15;
-                  var13 = var14;
-                  var12 = var13;
-                  var10 = var12;
-                  var8 = var10;
-                  param1.a((ms) (Object) new vt(64, param0, param5, param4, (int)var15[0] << 8, (int)var15[1] << 8, 0), (byte) 39);
-                  var7++;
-                  continue L2;
+                  stackOut_8_0 = 10;
+                  stackIn_10_0 = stackOut_8_0;
+                  break L3;
                 }
               }
-            } else {
-              return;
+              if (stackIn_10_0 <= var7) {
+                var7 = 0;
+                L4: while (true) {
+                  L5: {
+                    stackOut_13_0 = ~var7;
+                    stackIn_15_0 = stackOut_13_0;
+                    stackIn_14_0 = stackOut_13_0;
+                    if (var6_int == 0) {
+                      stackOut_15_0 = stackIn_15_0;
+                      stackOut_15_1 = 20;
+                      stackIn_16_0 = stackOut_15_0;
+                      stackIn_16_1 = stackOut_15_1;
+                      break L5;
+                    } else {
+                      stackOut_14_0 = stackIn_14_0;
+                      stackOut_14_1 = 10;
+                      stackIn_16_0 = stackOut_14_0;
+                      stackIn_16_1 = stackOut_14_1;
+                      break L5;
+                    }
+                  }
+                  if (stackIn_16_0 <= ~stackIn_16_1) {
+                    break L0;
+                  } else {
+                    int discarded$3 = -96;
+                    var8 = new float[]{0.0f, (float)(-(fi.a(param3, he.field_o) + 1))};
+                    float[] dupTemp$4 = kt.a((byte) -10, var8, (float)(0.0 + 0.017453292519943295 * (double)(2048.0f / (float)var7)));
+                    var11 = dupTemp$4;
+                    var8 = dupTemp$4;
+                    param1.a((ms) (Object) new vt(64, param0, param5, param4, (int)var11[0] << 8, (int)var11[1] << 8, 1), (byte) 39);
+                    var7++;
+                    continue L4;
+                  }
+                }
+              } else {
+                int discarded$5 = -96;
+                var8 = new float[]{0.0f, (float)(-(fi.a(param3, he.field_o) + 1))};
+                var15 = kt.a((byte) -124, var8, (float)((double)(2048.0f / (float)var7) * 0.017453292519943295 + 0.0));
+                var14 = var15;
+                var13 = var14;
+                var12 = var13;
+                var10 = var12;
+                var8 = var10;
+                param1.a((ms) (Object) new vt(64, param0, param5, param4, (int)var15[0] << 8, (int)var15[1] << 8, 0), (byte) 39);
+                var7++;
+                continue L2;
+              }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -165,7 +163,7 @@ final class ts {
               break L6;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw qo.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + -16240 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 

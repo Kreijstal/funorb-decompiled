@@ -11,9 +11,6 @@ final class jl {
     static ai field_e;
 
     final static boolean a(int param0) {
-        if (param0 != 100) {
-            return false;
-        }
         if (null == ne.field_f) {
             return false;
         }
@@ -23,7 +20,7 @@ final class jl {
         return true;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_b = null;
         field_f = null;
@@ -32,7 +29,7 @@ final class jl {
         field_a = null;
     }
 
-    final static void a(int param0, ng param1, byte[] param2, java.math.BigInteger param3, int param4, java.math.BigInteger param5, int param6) {
+    final static void a(int param0, ng param1, byte[] param2, java.math.BigInteger param3, int param4, java.math.BigInteger param5) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int[] var8 = null;
@@ -142,7 +139,7 @@ final class jl {
                 L5: {
                   L6: {
                     ek.field_e.field_f = 0;
-                    ek.field_e.a(param0, param4, 97, param2);
+                    ek.field_e.a(0, param4, 97, param2);
                     ek.field_e.b((byte) 105, var7_int);
                     ek.field_e.a(-268435456, var15);
                     if (ek.field_g == null) {
@@ -187,7 +184,7 @@ final class jl {
           L8: {
             var7 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var7;
-            stackOut_20_1 = new StringBuilder().append("jl.C(").append(param0).append(44);
+            stackOut_20_1 = new StringBuilder().append("jl.C(").append(0).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -289,7 +286,7 @@ final class jl {
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         try {
             Exception var1 = null;
             int decompiledRegionSelector0 = 0;

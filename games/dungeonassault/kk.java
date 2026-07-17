@@ -15,7 +15,7 @@ final class kk extends ne {
     static String field_t;
     byte[] field_o;
 
-    final static boolean d(int param0) {
+    final static boolean d() {
         return sl.b(15000);
     }
 
@@ -249,7 +249,7 @@ final class kk extends ne {
         field_l = null;
     }
 
-    final static String a(String param0, String param1, String param2, byte param3) {
+    final static String a(String param0, String param1, String param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -507,9 +507,9 @@ final class kk extends ne {
         String stackOut_12_2 = null;
         try {
           L0: {
-            var5_int = param1.a(param4, param3 + 1000);
-            var6 = param1.a(param3, param2, var5_int);
-            stackOut_0_0 = ef.a(param3 + 61, var5_int, param1, var6, param0);
+            var5_int = param1.a(param4, 1000);
+            var6 = param1.a(0, param2, var5_int);
+            stackOut_0_0 = ef.a(61, var5_int, param1, var6, param0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -593,7 +593,7 @@ final class kk extends ne {
           }
           L4: {
             stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(param3).append(44);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(0).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;

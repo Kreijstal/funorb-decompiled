@@ -4,7 +4,7 @@
 abstract class nn {
     static ri[] field_a;
 
-    final static void a(br param0, byte param1) {
+    final static void a(br param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         br var3 = null;
@@ -76,7 +76,8 @@ abstract class nn {
                   break L5;
                 }
               }
-              dl.a(param0, (byte) 76);
+              int discarded$2 = 76;
+              dl.a(param0);
               break L0;
             }
           }
@@ -185,7 +186,7 @@ abstract class nn {
             var2_int = 0;
             var3 = -53;
             L1: while (true) {
-              if (param0 <= var2_int) {
+              if (var2_int >= 25) {
                 stackOut_7_0 = 1;
                 stackIn_8_0 = stackOut_7_0;
                 break L0;
@@ -204,7 +205,7 @@ abstract class nn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qo.a((Throwable) (Object) var2, "nn.C(" + param0 + 44 + 115 + 41);
+          throw qo.a((Throwable) (Object) var2, "nn.C(" + 25 + 44 + 115 + 41);
         }
         return stackIn_8_0 != 0;
     }
@@ -250,7 +251,7 @@ abstract class nn {
                   var7 = param4[2].field_z;
                   var8 = param4[1].field_z;
                   param4[0].b(param5, param2, param0);
-                  var9 = -64 % ((param3 - -25) / 61);
+                  var9 = 0;
                   param4[2].b(-var7 + param1 + param5, param2, param0);
                   lk.b(mo.field_t);
                   lk.e(param5 + var6_int, param2, -var7 + (param1 + param5), param2 - -param4[1].field_w);
@@ -279,7 +280,7 @@ abstract class nn {
           L3: {
             var6 = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var6;
-            stackOut_9_1 = new StringBuilder().append("nn.I(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_9_1 = new StringBuilder().append("nn.I(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(67).append(44);
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -306,7 +307,7 @@ abstract class nn {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = 65;
         field_a = null;
     }

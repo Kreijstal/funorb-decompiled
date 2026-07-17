@@ -5,7 +5,7 @@ final class ji {
     static int[] field_b;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }
@@ -20,15 +20,15 @@ final class ji {
         try {
           L0: {
             L1: {
-              if (ms.field_d != param1) {
-                ct.field_v = new int[param1];
+              if (ms.field_d != 64) {
+                ct.field_v = new int[64];
                 var3_int = 0;
                 L2: while (true) {
-                  if (param1 <= var3_int) {
-                    ms.field_d = param1;
+                  if (64 <= var3_int) {
+                    ms.field_d = 64;
                     break L1;
                   } else {
-                    ct.field_v[var3_int] = (var3_int << 12) / param1;
+                    ct.field_v[var3_int] = (var3_int << 12) / 64;
                     var3_int++;
                     continue L2;
                   }
@@ -38,29 +38,29 @@ final class ji {
               }
             }
             L3: {
-              if (df.field_f == param0) {
+              if (df.field_f == 256) {
                 break L3;
               } else {
                 L4: {
-                  if (ms.field_d == param0) {
+                  if (ms.field_d == 256) {
                     mo.field_c = ct.field_v;
                     break L4;
                   } else {
-                    mo.field_c = new int[param0];
+                    mo.field_c = new int[256];
                     var5 = 0;
                     var3_int = var5;
                     L5: while (true) {
-                      if (param0 <= var5) {
+                      if (var5 >= 256) {
                         break L4;
                       } else {
-                        mo.field_c[var5] = (var5 << 12) / param0;
+                        mo.field_c[var5] = (var5 << 12) / 256;
                         var5++;
                         continue L5;
                       }
                     }
                   }
                 }
-                df.field_f = param0;
+                df.field_f = 256;
                 break L3;
               }
             }
@@ -69,7 +69,7 @@ final class ji {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pn.a((Throwable) (Object) var3, "ji.B(" + param0 + 44 + param1 + 44 + 37 + 41);
+          throw pn.a((Throwable) (Object) var3, "ji.B(" + 256 + 44 + 64 + 44 + 37 + 41);
         }
     }
 

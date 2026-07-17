@@ -8,12 +8,9 @@ final class sn {
 
     final static void a(int param0, String param1) {
         System.out.println("Error: " + eg.a(param1, "%0a", "\n", true));
-        if (param0 != 11580) {
-            field_c = null;
-        }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         field_a = null;

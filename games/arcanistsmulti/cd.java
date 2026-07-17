@@ -7,11 +7,8 @@ final class cd extends jm {
     static String field_q;
     static String field_s;
 
-    final static void d(int param0) {
+    final static void d() {
         mn.e(98);
-        if (param0 != 16777215) {
-            field_q = null;
-        }
     }
 
     final static java.applet.Applet e(int param0) {
@@ -176,7 +173,7 @@ final class cd extends jm {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_q = null;
         field_p = null;
         field_s = null;

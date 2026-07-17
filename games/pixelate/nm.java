@@ -40,110 +40,100 @@ final class nm {
         return var2;
     }
 
-    final static void c(int param0) {
+    final static void c() {
         RuntimeException var1 = null;
         uj var1_ref = null;
         eq var1_ref2 = null;
         int var2 = 0;
-        Object var3 = null;
         RuntimeException decompiledCaughtException = null;
         var2 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
-            L1: {
-              if (param0 == -1) {
-                break L1;
-              } else {
-                var3 = null;
-                boolean discarded$1 = nm.a((String) null, -43);
-                break L1;
-              }
-            }
             var1_ref = (uj) (Object) i.field_n.c(1504642273);
-            L2: while (true) {
+            L1: while (true) {
               if (var1_ref == null) {
-                var1_ref2 = (eq) (Object) nk.field_a.c(param0 ^ -1504642274);
-                L3: while (true) {
+                var1_ref2 = (eq) (Object) nk.field_a.c(1504642273);
+                L2: while (true) {
                   if (var1_ref2 == null) {
                     var1_ref = (uj) (Object) wi.field_a.c(1504642273);
-                    L4: while (true) {
+                    L3: while (true) {
                       if (var1_ref == null) {
                         break L0;
                       } else {
-                        L5: {
+                        L4: {
                           if (var1_ref.field_Tb <= 0) {
-                            break L5;
+                            break L4;
                           } else {
                             var1_ref.field_Tb = var1_ref.field_Tb - 1;
                             if (var1_ref.field_Tb == 0) {
                               var1_ref.field_Eb = 0;
                               if (!var1_ref.b((byte) -116)) {
-                                break L5;
+                                break L4;
                               } else {
                                 var1_ref.c(2779);
-                                break L5;
+                                break L4;
                               }
                             } else {
                               var1_ref = (uj) (Object) wi.field_a.f(1504642273);
-                              continue L4;
+                              continue L3;
                             }
                           }
                         }
                         var1_ref = (uj) (Object) wi.field_a.f(1504642273);
-                        continue L4;
+                        continue L3;
                       }
                     }
                   } else {
-                    L6: {
+                    L5: {
                       if (-1 > var1_ref2.field_Rb) {
                         var1_ref2.field_Rb = var1_ref2.field_Rb - 1;
                         if (-1 == var1_ref2.field_Rb) {
                           var1_ref2.field_Qb = 0;
                           if (!var1_ref2.j(433)) {
-                            break L6;
+                            break L5;
                           } else {
                             var1_ref2.c(2779);
-                            break L6;
+                            break L5;
                           }
                         } else {
-                          break L6;
+                          break L5;
                         }
+                      } else {
+                        break L5;
+                      }
+                    }
+                    var1_ref2 = (eq) (Object) nk.field_a.f(1504642273);
+                    continue L2;
+                  }
+                }
+              } else {
+                L6: {
+                  if (var1_ref.field_Tb <= 0) {
+                    break L6;
+                  } else {
+                    var1_ref.field_Tb = var1_ref.field_Tb - 1;
+                    if (var1_ref.field_Tb != 0) {
+                      break L6;
+                    } else {
+                      var1_ref.field_Eb = 0;
+                      if (var1_ref.b((byte) 109)) {
+                        var1_ref.c(2779);
+                        break L6;
                       } else {
                         break L6;
                       }
                     }
-                    var1_ref2 = (eq) (Object) nk.field_a.f(1504642273);
-                    continue L3;
                   }
                 }
-              } else {
-                L7: {
-                  if (var1_ref.field_Tb <= 0) {
-                    break L7;
-                  } else {
-                    var1_ref.field_Tb = var1_ref.field_Tb - 1;
-                    if (var1_ref.field_Tb != 0) {
-                      break L7;
-                    } else {
-                      var1_ref.field_Eb = 0;
-                      if (var1_ref.b((byte) 109)) {
-                        var1_ref.c(param0 ^ -2780);
-                        break L7;
-                      } else {
-                        break L7;
-                      }
-                    }
-                  }
-                }
-                var1_ref = (uj) (Object) i.field_n.f(param0 ^ -1504642274);
-                continue L2;
+                var1_ref = (uj) (Object) i.field_n.f(1504642273);
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1, "nm.I(" + param0 + 41);
+          throw aa.a((Throwable) (Object) var1, "nm.I(" + -1 + 41);
         }
     }
 
@@ -234,7 +224,7 @@ final class nm {
         return stackIn_10_0;
     }
 
-    final static void b(boolean param0) {
+    final static void b() {
         Object var2 = null;
         al.a("", -110, (String) null);
     }
@@ -449,7 +439,7 @@ final class nm {
         return var2;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         if (fc.field_e == ti.field_t) {
             return;
         }
@@ -471,9 +461,12 @@ final class nm {
             de.field_n = 0;
         }
         if (!(!mi.field_o)) {
-            ak.i(0);
-            kj.a(23949);
-            bd.a((byte) -1);
+            int discarded$0 = 0;
+            ak.i();
+            int discarded$1 = 23949;
+            kj.a();
+            int discarded$2 = -1;
+            bd.a();
             mi.field_o = false;
         }
     }

@@ -10,9 +10,10 @@ final class ql extends ta {
         return 0;
     }
 
-    final static wj d(int param0) {
+    final static wj d() {
         wj var1 = new wj(km.field_c, bo.field_o, uo.field_k[0], jm.field_a[0], uo.field_l[0], je.field_c[0], ui.field_c[0], gh.field_z);
-        ok.a(2188450);
+        int discarded$0 = 2188450;
+        ok.a();
         return var1;
     }
 

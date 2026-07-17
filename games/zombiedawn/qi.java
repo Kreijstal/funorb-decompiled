@@ -14,10 +14,6 @@ final class qi extends eh {
     rg field_D;
 
     private final boolean a(int param0, int param1) {
-        if (param0 >= -19) {
-            Object var4 = null;
-            ((qi) this).a(true, (byte) 20, (em) null);
-        }
         if (null == ((qi) this).field_L) {
             return false;
         }
@@ -30,7 +26,8 @@ final class qi extends eh {
             int var5_int = 81 / ((param1 - 46) / 42);
             super.a(param0, (byte) -38, param2, param3);
             this.f(-98);
-            this.f((byte) 124);
+            int discarded$0 = 124;
+            this.f();
         } catch (RuntimeException runtimeException) {
             throw sh.a((Throwable) (Object) runtimeException, "qi.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
@@ -320,7 +317,7 @@ final class qi extends eh {
         return stackIn_8_0 != 0;
     }
 
-    private final void f(byte param0) {
+    private final void f() {
         if (((qi) this).field_H != null) {
             ((qi) this).field_D.field_z.field_k = -(int)((long)((qi) this).field_H.field_D * (long)(-((qi) this).field_D.field_i + ((qi) this).field_D.field_z.field_i) >> 16);
         }
@@ -372,11 +369,12 @@ final class qi extends eh {
                       if (param2 < -41) {
                         break L2;
                       } else {
-                        String discarded$2 = qi.a(false, 5, 83, 100L, (byte) 62);
+                        String discarded$4 = qi.a(false, 5, 83, 100L, (byte) 62);
                         break L2;
                       }
                     }
-                    wi.a(var3.toString(), param1, true, -20517);
+                    int discarded$5 = -20517;
+                    wi.a(var3.toString(), param1, true);
                     break L1;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -509,7 +507,8 @@ final class qi extends eh {
           L0: {
             var5_int = -78 % ((param0 - -83) / 32);
             if (super.a(-126, param1, param2, param3)) {
-              this.f((byte) 124);
+              int discarded$2 = 124;
+              this.f();
               stackOut_2_0 = 1;
               stackIn_3_0 = stackOut_2_0;
               break L0;

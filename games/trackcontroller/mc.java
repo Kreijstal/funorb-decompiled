@@ -8,7 +8,7 @@ final class mc extends ok {
     static qj field_E;
     static int field_L;
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_J = null;
         field_K = null;
         field_H = null;
@@ -108,17 +108,14 @@ final class mc extends ok {
         la var3 = null;
         try {
             var3 = ra.field_C;
-            if (param0) {
-                field_E = null;
-            }
-            var3.c(param1, 7);
+            var3.c(3, 7);
             var3.a(5, (byte) -123);
             var3.a(0, (byte) -114);
             var3.b(param2.field_i, (byte) -127);
             var3.a(param2.field_l, (byte) -89);
             var3.a(param2.field_k, (byte) -68);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "mc.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "mc.A(" + 0 + 44 + 3 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

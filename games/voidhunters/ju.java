@@ -86,14 +86,14 @@ final class ju extends rqa {
         try {
             RuntimeException var6 = null;
             int var6_int = 0;
+            String var6_ref = null;
             int var7 = 0;
             Throwable var8_ref_Throwable = null;
             int var8 = 0;
             int var9 = 0;
             Object var10 = null;
             Object var11 = null;
-            String var12 = null;
-            CharSequence var13 = null;
+            CharSequence var12 = null;
             int stackIn_4_0 = 0;
             int stackIn_28_0 = 0;
             int stackIn_39_0 = 0;
@@ -158,7 +158,8 @@ final class ju extends rqa {
                   if (ov.field_o != null) {
                     break L1;
                   } else {
-                    if (ne.a(param4, (byte) -11)) {
+                    int discarded$12 = -11;
+                    if (ne.a(param4)) {
                       break L1;
                     } else {
                       stackOut_3_0 = -1;
@@ -173,7 +174,9 @@ final class ju extends rqa {
                   } else {
                     L3: {
                       if (!param4) {
-                        qva.field_j = fe.a(param2, param5, false, (byte) -70);
+                        int discarded$13 = -70;
+                        int discarded$14 = 0;
+                        qva.field_j = fe.a(param2, param5);
                         break L3;
                       } else {
                         var11 = null;
@@ -277,12 +280,13 @@ final class ju extends rqa {
                         go.field_p = qga.field_b.e((byte) -94);
                         nfa.field_d = qga.field_b.e((byte) -106);
                         hcb.field_o = qga.field_b.e(param3 + 1856);
-                        var12 = qga.field_b.m(0);
+                        var6_ref = qga.field_b.m(0);
                         var7 = qga.field_b.e((byte) -106);
                         if ((var7 & 1) == -1) {
                           break L10;
                         } else {
-                          hq.d((byte) 111);
+                          int discarded$15 = 111;
+                          hq.d();
                           break L10;
                         }
                       }
@@ -350,9 +354,9 @@ final class ju extends rqa {
                         if (!js.field_q) {
                           break L16;
                         } else {
-                          int discarded$6 = qga.field_b.e((byte) -117);
-                          int discarded$7 = qga.field_b.e((byte) -91);
-                          int discarded$8 = qga.field_b.h(86);
+                          int discarded$16 = qga.field_b.e((byte) -117);
+                          int discarded$17 = qga.field_b.e((byte) -91);
+                          int discarded$18 = qga.field_b.h(86);
                           om.field_e = qga.field_b.e(1869);
                           ap.field_o = new byte[om.field_e];
                           var8 = 0;
@@ -369,8 +373,8 @@ final class ju extends rqa {
                       }
                       L18: {
                         kca.field_a = qga.field_b.a(param3 ^ -14);
-                        var13 = (CharSequence) (Object) kca.field_a;
-                        ffb.field_e = jwa.a(false, var13);
+                        var12 = (CharSequence) (Object) kca.field_a;
+                        ffb.field_e = jwa.a(false, var12);
                         jl.field_p = qga.field_b.e((byte) -94);
                         tc.field_c = sp.field_o;
                         if (qva.field_j.a((byte) 124) == bta.field_r) {
@@ -387,10 +391,11 @@ final class ju extends rqa {
                       }
                       L19: {
                         hha.field_o = false;
-                        if (var12 == null) {
+                        if (var6_ref == null) {
                           break L19;
                         } else {
-                          pcb.a(vpa.b((byte) -94), var12, -1);
+                          int discarded$19 = -1;
+                          pcb.a(vpa.b((byte) -94), var6_ref);
                           break L19;
                         }
                       }
@@ -404,7 +409,7 @@ final class ju extends rqa {
                             } else {
                               try {
                                 L22: {
-                                  Object discarded$9 = ia.a(vpa.b((byte) -87), "unzap", param3 ^ 12337);
+                                  Object discarded$20 = ia.a(vpa.b((byte) -87), "unzap", param3 ^ 12337);
                                   break L22;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -420,7 +425,7 @@ final class ju extends rqa {
                         }
                         try {
                           L24: {
-                            Object discarded$10 = ia.a(new Object[1], vpa.b((byte) -92), "zap", (byte) 108);
+                            Object discarded$21 = ia.a(new Object[1], vpa.b((byte) -92), "zap", (byte) 108);
                             break L24;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -502,7 +507,7 @@ final class ju extends rqa {
                     break L31;
                   } else {
                     var10 = null;
-                    int discarded$11 = ju.a(true, 44, (String) null, (byte) 29, true, (String) null);
+                    int discarded$22 = ju.a(true, 44, (String) null, (byte) 29, true, (String) null);
                     break L31;
                   }
                 }
@@ -510,7 +515,8 @@ final class ju extends rqa {
                   if (null == ov.field_o) {
                     if (hha.field_o) {
                       L33: {
-                        if (mw.e(0) > 30000L) {
+                        int discarded$23 = 0;
+                        if (mw.e() > 30000L) {
                           dgb.field_b = fd.field_o;
                           break L33;
                         } else {

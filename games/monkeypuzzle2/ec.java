@@ -30,10 +30,11 @@ final class ec {
         var2 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           L0: {
-            boolean discarded$12 = wg.field_j.a(v.field_a, rc.field_g, true, true);
+            boolean discarded$28 = wg.field_j.a(v.field_a, rc.field_g, true, true);
             wg.field_j.l(126);
             L1: while (true) {
-              if (!ba.a(-1)) {
+              int discarded$29 = -1;
+              if (!ba.a()) {
                 if (-1 != gb.field_f) {
                   var1_int = gb.field_f;
                   qh.a(-1, true);
@@ -70,7 +71,7 @@ final class ec {
                   }
                 }
               } else {
-                boolean discarded$13 = wg.field_j.a(oa.field_H, 109, rd.field_p);
+                boolean discarded$30 = wg.field_j.a(oa.field_H, 109, rd.field_p);
                 continue L1;
               }
             }
@@ -83,14 +84,14 @@ final class ec {
         return stackIn_23_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_a = null;
         field_b = null;
         field_c = null;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int[] var2 = null;
@@ -179,7 +180,9 @@ final class ec {
                         var18 = 0;
                         L5: while (true) {
                           if (var18 >= 3) {
-                            b.a(ik.field_i, false, ma.field_c, false, var17, (byte) -91, true);
+                            int discarded$2 = 1;
+                            int discarded$3 = -91;
+                            b.a(ik.field_i, false, ma.field_c, false, var17);
                             ja.a(var14, var9, 46, var13, var8, var17, var12, var7);
                             var15++;
                             continue L3;
@@ -230,7 +233,7 @@ final class ec {
         }
     }
 
-    final static String a(ad param0, String param1, String param2, int param3) {
+    final static String a(ad param0, String param1, String param2) {
         RuntimeException var4 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;

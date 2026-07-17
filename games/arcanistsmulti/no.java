@@ -7,7 +7,7 @@ final class no extends qk {
     static int[] field_tb;
     static String[] field_vb;
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void a(java.awt.Component param0) {
         try {
             param0.addMouseListener((java.awt.event.MouseListener) (Object) ob.field_hb);
             param0.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) ob.field_hb);
@@ -17,11 +17,8 @@ final class no extends qk {
         }
     }
 
-    public static void l(byte param0) {
+    public static void l() {
         field_ub = null;
-        if (param0 != -11) {
-            no.b(-63, (byte) 100, -16);
-        }
         field_wb = null;
         field_vb = null;
         field_tb = null;
@@ -33,7 +30,8 @@ final class no extends qk {
         int var4 = 0;
         aj[] var5 = null;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
-        var5 = so.c(96);
+        int discarded$2 = 96;
+        var5 = so.c();
         var2 = var5;
         var3 = 0;
         L0: while (true) {
@@ -54,7 +52,7 @@ final class no extends qk {
         super(param0, param1, 33, 20, 30);
     }
 
-    final static void h(int param0) {
+    final static void h() {
         RuntimeException var1 = null;
         cg var1_ref = null;
         na var1_ref2 = null;
@@ -156,9 +154,6 @@ final class no extends qk {
         tn.field_Eb = param2;
         co.field_c = param0;
         wh.field_c = param0;
-        if (param1 != -61) {
-            field_ub = null;
-        }
         jm.field_j = true;
     }
 

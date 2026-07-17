@@ -84,7 +84,7 @@ final class fva extends loa {
         }
     }
 
-    private final boolean a(int param0, hj param1, int param2, int param3) {
+    private final boolean a(int param0, hj param1, int param2) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int stackIn_7_0 = 0;
@@ -172,7 +172,7 @@ final class fva extends loa {
         return stackIn_14_0 != 0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = 0;
         field_c = null;
         field_b = null;
@@ -235,7 +235,8 @@ final class fva extends loa {
                   var7 = var16[var6];
                   var8 = param1 + 2 * dma.field_k[var7][0];
                   var9 = dma.field_k[var7][1] * 2 + param2;
-                  if (!this.a(var9, param0, var8, -74)) {
+                  int discarded$1 = -74;
+                  if (!this.a(var9, param0, var8)) {
                     break L3;
                   } else {
                     break L3;

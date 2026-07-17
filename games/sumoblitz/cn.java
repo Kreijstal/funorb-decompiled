@@ -9,7 +9,7 @@ final class cn extends dq {
     int field_kb;
     static String field_hb;
 
-    final static void a(String param0, java.applet.Applet param1, byte param2) {
+    final static void a(String param0, java.applet.Applet param1) {
         try {
             java.net.URL var3 = null;
             Exception var3_ref = null;
@@ -123,13 +123,13 @@ final class cn extends dq {
         }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_ib = null;
         field_hb = null;
         field_P = null;
     }
 
-    final static void a(float param0, ab param1, int param2, byte[] param3, int param4, float param5, float param6, float param7, int param8, float param9, int param10, int param11, int param12) {
+    final static void a(float param0, ab param1, int param2, byte[] param3, int param4, float param5, float param6, float param7, int param8, float param9) {
         int var13_int = 0;
         RuntimeException var13 = null;
         int var14 = 0;
@@ -167,20 +167,16 @@ final class cn extends dq {
         var14 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
-            if (param8 == 24046) {
-              var13_int = 0;
-              L1: while (true) {
-                if (var13_int >= param11) {
-                  break L0;
-                } else {
-                  ls.a(param0, param6, param2, param10, param3, var13_int, param7, param11, -95, param12, param4, param9, param1, param5);
-                  param2 = param2 + param10 * param12;
-                  var13_int++;
-                  continue L1;
-                }
+            var13_int = 0;
+            L1: while (true) {
+              if (var13_int >= 16) {
+                break L0;
+              } else {
+                ls.a(param0, param6, param2, 128, param3, var13_int, param7, 16, -95, 128, 8, param9, param1, param5);
+                param2 = param2 + 16384;
+                var13_int++;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -236,7 +232,7 @@ final class cn extends dq {
               break L3;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 44 + param10 + 44 + param11 + 44 + param12 + 41);
+          throw qo.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + 8 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + 24046 + 44 + param9 + 44 + 128 + 44 + 16 + 44 + 128 + 41);
         }
     }
 
@@ -244,7 +240,7 @@ final class cn extends dq {
         super(0L, (dq) null);
     }
 
-    final static String[] a(char param0, String param1, int param2) {
+    final static String[] a(char param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String[] var4 = null;
@@ -339,14 +335,6 @@ final class cn extends dq {
     }
 
     final static int c(int param0, int param1) {
-        if (param0 != 0) {
-            field_hb = null;
-            param1 = param1 & 8191;
-            if (param1 >= 4096) {
-                return 6144 <= param1 ? ce.field_p[param1 - 6144] : -ce.field_p[-param1 + 6144];
-            }
-            return 2048 > param1 ? ce.field_p[-param1 + 2048] : -ce.field_p[-2048 + param1];
-        }
         param1 = param1 & 8191;
         if (param1 >= 4096) {
             return 6144 <= param1 ? ce.field_p[param1 - 6144] : -ce.field_p[-param1 + 6144];

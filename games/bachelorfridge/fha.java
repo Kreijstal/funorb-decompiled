@@ -27,10 +27,12 @@ final class fha extends at {
             break L0;
           }
         }
-        int fieldTemp$2 = ((fha) this).field_m + 1;
+        int fieldTemp$6 = ((fha) this).field_m + 1;
         ((fha) this).field_m = ((fha) this).field_m + 1;
-        if (fieldTemp$2 >= this.d(-18093)) {
-          this.e(1);
+        int discarded$7 = -18093;
+        if (fieldTemp$6 >= this.d()) {
+          int discarded$8 = 1;
+          this.e();
           return true;
         } else {
           return false;
@@ -63,14 +65,14 @@ final class fha extends at {
             L1: {
               uka.field_i[0] = ia.field_k.nextInt();
               uka.field_i[1] = ia.field_k.nextInt();
-              dm.field_g.field_g = param1;
+              dm.field_g.field_g = 0;
               uka.field_i[3] = (int)bi.field_j;
               uka.field_i[2] = (int)(bi.field_j >> 32);
-              dm.field_g.e(uka.field_i[0], param1 + -1615464796);
-              dm.field_g.e(uka.field_i[1], param1 + -1615464796);
+              dm.field_g.e(uka.field_i[0], -1615464796);
+              dm.field_g.e(uka.field_i[1], -1615464796);
               dm.field_g.e(uka.field_i[2], -1615464796);
               dm.field_g.e(uka.field_i[3], -1615464796);
-              qja.b(param1 ^ 24, dm.field_g);
+              qja.b(24, dm.field_g);
               dm.field_g.b(param0, -125);
               param2.a(dm.field_g, false);
               sja.field_fb.field_g = 0;
@@ -78,15 +80,15 @@ final class fha extends at {
                 sja.field_fb.d(16, 0);
                 break L1;
               } else {
-                sja.field_fb.d(18, param1);
+                sja.field_fb.d(18, 0);
                 break L1;
               }
             }
             L2: {
               sja.field_fb.field_g = sja.field_fb.field_g + 2;
               var5_int = sja.field_fb.field_g;
-              sja.field_fb.e(cp.field_c, param1 + -1615464796);
-              sja.field_fb.b(param1 + 1686281208, vi.field_a);
+              sja.field_fb.e(cp.field_c, -1615464796);
+              sja.field_fb.b(1686281208, vi.field_a);
               var6 = 0;
               if (vs.field_c) {
                 var6 = var6 | 1;
@@ -121,7 +123,7 @@ final class fha extends at {
             }
             L6: {
               sja.field_fb.d(var6, 0);
-              var7 = pi.a(11713, nia.d(param1 + -31768));
+              var7 = pi.a(11713, nia.d(-31768));
               if (var7 != null) {
                 break L6;
               } else {
@@ -148,7 +150,7 @@ final class fha extends at {
           L8: {
             var5 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var5;
-            stackOut_21_1 = new StringBuilder().append("fha.F(").append(param0).append(44).append(param1).append(44);
+            stackOut_21_1 = new StringBuilder().append("fha.F(").append(param0).append(44).append(0).append(44);
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -175,10 +177,10 @@ final class fha extends at {
         }
     }
 
-    private final void e(int param0) {
+    private final void e() {
     }
 
-    private final int d(int param0) {
+    private final int d() {
         return 10;
     }
 
@@ -207,30 +209,22 @@ final class fha extends at {
         var18 = BachelorFridge.field_y;
         try {
           L0: {
-            L1: {
-              var12 = cr.a(an.field_q, param7, ha.field_n, 0);
-              var13 = cr.a(an.field_q, param2, ha.field_n, 0);
-              var14 = cr.a(eo.field_l, param4, pw.field_x, 0);
-              if (param1 >= 43) {
-                break L1;
-              } else {
-                field_j = null;
-                break L1;
-              }
-            }
+            var12 = cr.a(an.field_q, param7, ha.field_n, 0);
+            var13 = cr.a(an.field_q, param2, ha.field_n, 0);
+            var14 = cr.a(eo.field_l, param4, pw.field_x, 0);
             var15 = cr.a(eo.field_l, param0, pw.field_x, 0);
             var8_int = cr.a(an.field_q, param6 + param7, ha.field_n, 0);
             var9 = cr.a(an.field_q, param2 - param6, ha.field_n, 0);
             var16 = var12;
-            L2: while (true) {
+            L1: while (true) {
               if (var8_int <= var16) {
                 var16 = var13;
-                L3: while (true) {
+                L2: while (true) {
                   if (var16 <= var9) {
                     var10 = cr.a(eo.field_l, param6 + param4, pw.field_x, 0);
                     var11 = cr.a(eo.field_l, param0 - param6, pw.field_x, 0);
                     var16 = var8_int;
-                    L4: while (true) {
+                    L3: while (true) {
                       if (var9 < var16) {
                         break L0;
                       } else {
@@ -239,26 +233,26 @@ final class fha extends at {
                         hba.a(param5, var10, var22, 7, var11);
                         hba.a(param3, var11, var22, 7, var15);
                         var16++;
-                        continue L4;
+                        continue L3;
                       }
                     }
                   } else {
                     hba.a(param3, var14, tj.field_b[var16], 7, var15);
                     var16--;
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
                 hba.a(param3, var14, tj.field_b[var16], 7, var15);
                 var16++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var8, "fha.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw pe.a((Throwable) (Object) var8, "fha.C(" + param0 + 44 + 127 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
         }
     }
 

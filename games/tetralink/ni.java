@@ -253,10 +253,11 @@ final class ni {
 
     final static void d(byte param0) {
         int var1 = 78 % ((param0 - 60) / 52);
-        rf.a(0);
+        int discarded$0 = 0;
+        rf.a();
     }
 
-    final static boolean a(CharSequence param0, int param1) {
+    final static boolean a(CharSequence param0) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
@@ -278,7 +279,10 @@ final class ni {
         String stackOut_5_2 = null;
         try {
           L0: {
-            stackOut_2_0 = nl.a(param0, 10, true, true);
+            int discarded$6 = 1;
+            int discarded$7 = 1;
+            int discarded$8 = 10;
+            stackOut_2_0 = nl.a(param0);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -315,14 +319,17 @@ final class ni {
         return stackIn_3_0;
     }
 
-    final static void a(ah param0, fg param1, int param2, byte param3) {
+    final static void a(ah param0, fg param1, int param2) {
         try {
             cn.field_f = va.a(-1) * param2 / 1000;
             ug.a(121, param0);
-            ji.a(param0, 1);
+            int discarded$0 = 1;
+            ji.a(param0);
             kj.a(3, param0);
-            gg.b(120);
-            af.b(18428);
+            int discarded$1 = 120;
+            gg.b();
+            int discarded$2 = 18428;
+            af.b();
             en.field_K = -cn.field_f;
         } catch (RuntimeException runtimeException) {
             throw oi.a((Throwable) (Object) runtimeException, "ni.A(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + -5 + 41);
@@ -337,7 +344,7 @@ final class ni {
         field_h = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int[] var2 = null;

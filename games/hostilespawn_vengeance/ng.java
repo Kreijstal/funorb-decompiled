@@ -106,7 +106,8 @@ final class ng extends am {
             } else {
               var8 = new wg(im.field_e, param0);
               im.field_e.c((ag) (Object) var8, param5 ^ -8686);
-              if (fc.i(-1)) {
+              int discarded$10 = -1;
+              if (fc.i()) {
                 var8.r(-104);
                 stackOut_11_0 = 1;
                 stackIn_12_0 = stackOut_11_0;
@@ -268,7 +269,6 @@ final class ng extends am {
         int var33 = 0;
         int var34 = 0;
         int var48 = 0;
-        Object var49 = null;
         Object var50 = null;
         int stackIn_5_0 = 0;
         int stackIn_23_0 = 0;
@@ -438,7 +438,7 @@ final class ng extends am {
                               }
                             }
                           }
-                          nh.a((oj) var17, param0 ^ -30020);
+                          nh.a((oj) var17, -29966);
                           break L1;
                         }
                       } else {
@@ -488,42 +488,33 @@ final class ng extends am {
               }
             }
             L13: {
-              if (param0 == 78) {
-                break L13;
-              } else {
-                var49 = null;
-                boolean discarded$1 = ng.a((mk) null, -5, true, (String) null, (String) null, 31, (String) null);
-                break L13;
-              }
-            }
-            L14: {
               param1.field_e = param1.field_e + 1;
               if (param1.field_i != 28) {
                 stackOut_47_0 = 32;
                 stackIn_48_0 = stackOut_47_0;
-                break L14;
+                break L13;
               } else {
                 stackOut_46_0 = 64;
                 stackIn_48_0 = stackOut_46_0;
-                break L14;
+                break L13;
               }
             }
-            L15: {
+            L14: {
               if (~stackIn_48_0 <= ~param1.field_e) {
-                break L15;
+                break L14;
               } else {
                 param1.field_i = -1;
-                break L15;
+                break L14;
               }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L16: {
+          L15: {
             var5 = decompiledCaughtException;
             stackOut_51_0 = (RuntimeException) var5;
-            stackOut_51_1 = new StringBuilder().append("ng.B(").append(param0).append(44);
+            stackOut_51_1 = new StringBuilder().append("ng.B(").append(78).append(44);
             stackIn_53_0 = stackOut_51_0;
             stackIn_53_1 = stackOut_51_1;
             stackIn_52_0 = stackOut_51_0;
@@ -535,7 +526,7 @@ final class ng extends am {
               stackIn_54_0 = stackOut_53_0;
               stackIn_54_1 = stackOut_53_1;
               stackIn_54_2 = stackOut_53_2;
-              break L16;
+              break L15;
             } else {
               stackOut_52_0 = (RuntimeException) (Object) stackIn_52_0;
               stackOut_52_1 = (StringBuilder) (Object) stackIn_52_1;
@@ -543,10 +534,10 @@ final class ng extends am {
               stackIn_54_0 = stackOut_52_0;
               stackIn_54_1 = stackOut_52_1;
               stackIn_54_2 = stackOut_52_2;
-              break L16;
+              break L15;
             }
           }
-          L17: {
+          L16: {
             stackOut_54_0 = (RuntimeException) (Object) stackIn_54_0;
             stackOut_54_1 = ((StringBuilder) (Object) stackIn_54_1).append(stackIn_54_2).append(44).append(param2).append(44).append(param3).append(44);
             stackIn_56_0 = stackOut_54_0;
@@ -560,7 +551,7 @@ final class ng extends am {
               stackIn_57_0 = stackOut_56_0;
               stackIn_57_1 = stackOut_56_1;
               stackIn_57_2 = stackOut_56_2;
-              break L17;
+              break L16;
             } else {
               stackOut_55_0 = (RuntimeException) (Object) stackIn_55_0;
               stackOut_55_1 = (StringBuilder) (Object) stackIn_55_1;
@@ -568,7 +559,7 @@ final class ng extends am {
               stackIn_57_0 = stackOut_55_0;
               stackIn_57_1 = stackOut_55_1;
               stackIn_57_2 = stackOut_55_2;
-              break L17;
+              break L16;
             }
           }
           throw wg.a((Throwable) (Object) stackIn_57_0, stackIn_57_2 + 41);

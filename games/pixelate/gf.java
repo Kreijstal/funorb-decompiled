@@ -30,15 +30,12 @@ abstract class gf {
     }
 
     final static void a(String param0, boolean param1, int param2, String param3) {
-        if (param2 != 32) {
-            return;
-        }
         try {
             kd.field_a = param0;
             h.field_U = param3;
             ko.a(param1, rl.field_e, -26027);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "gf.I(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "gf.I(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 32 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -149,7 +146,7 @@ abstract class gf {
                   } else {
                     if (param0.a("commonui", -1)) {
                       L2: {
-                        var4_int = -3 / ((-26 - param1) / 51);
+                        var4_int = -3;
                         if (!param3.b(-3)) {
                           break L2;
                         } else {
@@ -204,7 +201,7 @@ abstract class gf {
           }
           L4: {
             stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(44).append(param1).append(44);
+            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(44).append(-123).append(44);
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;

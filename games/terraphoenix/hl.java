@@ -15,12 +15,9 @@ final class hl {
                 nb.field_b.h((byte) -126);
             }
             mb.field_s = new uh(param2, param1, false, true, true);
-            if (param0 != -93) {
-                field_e = null;
-            }
-            bj.field_f.a((gl) (Object) mb.field_s, param0 + 12);
+            bj.field_f.a((gl) (Object) mb.field_s, -81);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "hl.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "hl.E(" + -93 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -125,8 +122,9 @@ final class hl {
         StringBuilder stackOut_5_1 = null;
         String stackOut_5_2 = null;
         try {
-          var4_int = -49 % ((param2 - 44) / 37);
-          if (vh.a(param3, param1, param0, true)) {
+          var4_int = -1;
+          int discarded$7 = 1;
+          if (vh.a(param3, param1, param0)) {
             return mc.a((byte) 113);
           } else {
             return null;
@@ -159,7 +157,7 @@ final class hl {
               break L0;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw qk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 44 + -90 + 44 + param3 + 41);
         }
     }
 

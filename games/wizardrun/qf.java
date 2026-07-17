@@ -160,7 +160,7 @@ final class qf extends mf {
         field_m = null;
     }
 
-    final static String c(byte param0) {
+    final static String c() {
         String var1 = "";
         if (!(r.field_b == null)) {
             var1 = r.field_b.d(false);

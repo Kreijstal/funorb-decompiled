@@ -15,7 +15,7 @@ final class k {
         throw new IllegalStateException();
     }
 
-    final static int b(int param0) {
+    final static int b() {
         int var1 = 0;
         return po.field_w;
     }
@@ -67,33 +67,25 @@ final class k {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_8_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_13_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_12_0 = 0;
         int stackOut_10_0 = 0;
-        int stackOut_7_0 = 0;
         var4 = Torquing.field_u;
         try {
           L0: {
             var3_int = 1;
             L1: while (true) {
               if (param2 <= 1) {
-                if (param0 == 25518) {
-                  if (param2 != 1) {
-                    stackOut_12_0 = var3_int;
-                    stackIn_13_0 = stackOut_12_0;
-                    break L0;
-                  } else {
-                    stackOut_10_0 = param1 * var3_int;
-                    stackIn_11_0 = stackOut_10_0;
-                    return stackIn_11_0;
-                  }
+                if (param2 != 1) {
+                  stackOut_12_0 = var3_int;
+                  stackIn_13_0 = stackOut_12_0;
+                  break L0;
                 } else {
-                  stackOut_7_0 = 43;
-                  stackIn_8_0 = stackOut_7_0;
-                  return stackIn_8_0;
+                  stackOut_10_0 = param1 * var3_int;
+                  stackIn_11_0 = stackOut_10_0;
+                  return stackIn_11_0;
                 }
               } else {
                 L2: {
@@ -113,7 +105,7 @@ final class k {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var3, "k.B(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw rb.a((Throwable) (Object) var3, "k.B(" + 25518 + 44 + param1 + 44 + param2 + 41);
         }
         return stackIn_13_0;
     }

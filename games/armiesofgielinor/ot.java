@@ -33,7 +33,7 @@ final class ot extends dr {
         }
     }
 
-    final static void g(int param0) {
+    final static void g() {
         if (tn.field_Z != null) {
           if (tn.field_Z.field_g == null) {
             tn.field_Z = null;
@@ -123,10 +123,10 @@ final class ot extends dr {
         return stackIn_4_0;
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_E = null;
         field_H = null;
-        int var1 = -2 % ((param0 - -35) / 35);
+        int var1 = 0;
         field_F = null;
     }
 
@@ -182,7 +182,7 @@ final class ot extends dr {
           L0: {
             jf.field_C = param3;
             bv.field_w = param0;
-            pr.field_g = new vj(param2);
+            pr.field_g = new vj(1);
             pr.field_g.a(-1, ck.field_e[sf.field_P[76]][0]);
             kl.field_a = jf.field_C.field_M;
             wk discarded$2 = new wk(80, 40);
@@ -251,7 +251,7 @@ final class ot extends dr {
           }
           L3: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param2).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(1).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;

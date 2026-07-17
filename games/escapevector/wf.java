@@ -8,7 +8,7 @@ final class wf {
     private cn field_a;
     private hg field_d;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_e = null;
         field_c = null;
         field_b = null;

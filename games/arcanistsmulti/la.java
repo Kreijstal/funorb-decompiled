@@ -9,7 +9,7 @@ final class la implements ok {
     static kc field_c;
     static int field_d;
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = -2;
         field_e = null;
         field_b = null;
@@ -36,7 +36,7 @@ final class la implements ok {
         }
     }
 
-    final static int[] b(byte param0) {
+    final static int[] b() {
         return new int[8];
     }
 

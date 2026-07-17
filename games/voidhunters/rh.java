@@ -5,7 +5,7 @@ final class rh extends rqa {
     static arb field_o;
     static String field_p;
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
         field_p = null;
     }

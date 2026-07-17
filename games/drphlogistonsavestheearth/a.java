@@ -12,7 +12,7 @@ final class a {
     static String field_f;
     static int field_i;
 
-    final static he a(he param0, int[] param1, byte param2) {
+    final static he a(he param0, int[] param1) {
         he var3 = null;
         RuntimeException var3_ref = null;
         he stackIn_1_0 = null;
@@ -139,7 +139,7 @@ final class a {
         int var3 = -90 % ((param2 - 7) / 57);
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_g = null;
         field_b = null;
         field_f = null;
@@ -221,7 +221,7 @@ final class a {
                 L3: while (true) {
                   var8 = param1.indexOf("<%", var5);
                   if (var8 < 0) {
-                    StringBuilder discarded$3 = var6.append(param1.substring(var7));
+                    StringBuilder discarded$5 = var6.append(param1.substring(var7));
                     stackOut_25_0 = var6.toString();
                     stackIn_26_0 = stackOut_25_0;
                     break L0;
@@ -232,7 +232,8 @@ final class a {
                         if (var5 >= var3_int) {
                           break L5;
                         } else {
-                          if (!lb.a(param1.charAt(var5), true)) {
+                          int discarded$6 = 1;
+                          if (!lb.a(param1.charAt(var5))) {
                             break L5;
                           } else {
                             var5++;
@@ -252,8 +253,8 @@ final class a {
                           } else {
                             var5++;
                             var10 = hh.a(param0 + -5034, (CharSequence) (Object) var9);
-                            StringBuilder discarded$4 = var6.append(param1.substring(var7, var8));
-                            StringBuilder discarded$5 = var6.append(param2[var10]);
+                            StringBuilder discarded$7 = var6.append(param1.substring(var7, var8));
+                            StringBuilder discarded$8 = var6.append(param2[var10]);
                             var7 = var5;
                             continue L3;
                           }
@@ -269,7 +270,8 @@ final class a {
                     if (var3_int <= var5) {
                       break L7;
                     } else {
-                      if (!lb.a(param1.charAt(var5), true)) {
+                      int discarded$9 = 1;
+                      if (!lb.a(param1.charAt(var5))) {
                         break L7;
                       } else {
                         var5++;

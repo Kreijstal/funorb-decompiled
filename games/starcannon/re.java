@@ -15,7 +15,7 @@ final class re extends rf {
     int field_j;
     int field_g;
 
-    public static void d(int param0) {
+    public static void d() {
         field_l = null;
         field_q = null;
         field_f = null;
@@ -26,46 +26,40 @@ final class re extends rf {
         RuntimeException var6_ref = null;
         qc var7 = null;
         java.awt.Frame var8 = null;
-        Object stackIn_5_0 = null;
-        qc stackIn_7_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
+        qc stackIn_4_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        qc stackOut_6_0 = null;
-        Object stackOut_4_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        qc stackOut_3_0 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
         try {
           L0: {
-            var8 = oh.a(param5, param1, param2, param4, param0, -100);
+            int discarded$6 = -100;
+            int discarded$7 = 0;
+            var8 = oh.a(param5, param1, 0, param4);
             var6 = var8;
             if (var8 != null) {
-              if (param3) {
-                var7 = new qc();
-                var7.field_f = var8;
-                java.awt.Component discarded$2 = var7.field_f.add((java.awt.Component) (Object) var7);
-                var7.setBounds(0, 0, param4, param5);
-                var7.addFocusListener((java.awt.event.FocusListener) (Object) var7);
-                var7.requestFocus();
-                stackOut_6_0 = (qc) var7;
-                stackIn_7_0 = stackOut_6_0;
-                break L0;
-              } else {
-                stackOut_4_0 = null;
-                stackIn_5_0 = stackOut_4_0;
-                return (qc) (Object) stackIn_5_0;
-              }
+              var7 = new qc();
+              var7.field_f = var8;
+              java.awt.Component discarded$8 = var7.field_f.add((java.awt.Component) (Object) var7);
+              var7.setBounds(0, 0, param4, param5);
+              var7.addFocusListener((java.awt.event.FocusListener) (Object) var7);
+              var7.requestFocus();
+              stackOut_3_0 = (qc) var7;
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
             } else {
               return null;
             }
@@ -74,40 +68,41 @@ final class re extends rf {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var6_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var6_ref;
-            stackOut_8_1 = new StringBuilder().append("re.C(").append(param0).append(44);
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackOut_5_0 = (RuntimeException) var6_ref;
+            stackOut_5_1 = new StringBuilder().append("re.C(").append(0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
               break L1;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
               break L1;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw sd.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 0 + 44 + 1 + 44 + param4 + 44 + param5 + 41);
         }
-        return stackIn_7_0;
+        return stackIn_4_0;
     }
 
     final static void a(int param0) {
         if (null == n.field_a) {
           return;
         } else {
-          wf.a((java.awt.Canvas) (Object) n.field_a, false);
+          int discarded$6 = 0;
+          wf.a((java.awt.Canvas) (Object) n.field_a);
           if (param0 == 0) {
             n.field_a.a(nb.field_e, (byte) -63);
             n.field_a = null;

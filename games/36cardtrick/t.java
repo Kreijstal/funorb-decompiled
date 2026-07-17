@@ -16,7 +16,7 @@ final class t {
     static long field_h;
     static int field_k;
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_j = null;
         field_e = null;

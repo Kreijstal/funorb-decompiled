@@ -165,7 +165,8 @@ final class qa {
                 break L1;
               }
             }
-            stackOut_2_0 = qa.a(param1.length, 0, param1, 0);
+            int discarded$2 = 0;
+            stackOut_2_0 = qa.a(param1.length, 0, param1);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -342,7 +343,7 @@ final class qa {
         this(param0, false);
     }
 
-    private final static String a(int param0, int param1, CharSequence[] param2, int param3) {
+    private final static String a(int param0, int param1, CharSequence[] param2) {
         CharSequence var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
@@ -385,7 +386,7 @@ final class qa {
               return stackIn_4_0;
             } else {
               if (param0 == 1) {
-                var10 = param2[param1];
+                var10 = param2[0];
                 var4 = var10;
                 if (var4 == null) {
                   stackOut_9_0 = "null";
@@ -395,13 +396,13 @@ final class qa {
                   return ((Object) (Object) var10).toString();
                 }
               } else {
-                var4_int = param1 + param0;
+                var4_int = param0;
                 var5 = 0;
-                var6_int = param1;
+                var6_int = 0;
                 L1: while (true) {
                   if (var6_int >= var4_int) {
                     var6 = new StringBuilder(var5);
-                    var7 = param1;
+                    var7 = 0;
                     L2: while (true) {
                       if (var7 >= var4_int) {
                         stackOut_23_0 = var6.toString();
@@ -445,7 +446,7 @@ final class qa {
           L5: {
             var4_ref = decompiledCaughtException;
             stackOut_25_0 = (RuntimeException) var4_ref;
-            stackOut_25_1 = new StringBuilder().append("qa.E(").append(param0).append(44).append(param1).append(44);
+            stackOut_25_1 = new StringBuilder().append("qa.E(").append(param0).append(44).append(0).append(44);
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
@@ -473,7 +474,7 @@ final class qa {
         return stackIn_24_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_g = null;
         field_i = null;
         field_d = null;

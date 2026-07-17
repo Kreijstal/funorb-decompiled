@@ -116,7 +116,7 @@ class ii extends lm implements aa {
         return stackIn_13_0 != 0;
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_I = null;
         field_D = null;
         field_H = null;
@@ -290,19 +290,11 @@ class ii extends lm implements aa {
             var6 = (lm) (Object) var5.a(-479592473);
             L1: while (true) {
               if (var6 == null) {
-                L2: {
-                  if (param2) {
-                    break L2;
-                  } else {
-                    field_C = null;
-                    break L2;
-                  }
-                }
                 break L0;
               } else {
                 StringBuilder discarded$6 = param0.append(10);
                 var7 = 0;
-                L3: while (true) {
+                L2: while (true) {
                   if (param3 < var7) {
                     StringBuilder discarded$7 = var6.a(param3 - -1, param1, param0, (byte) -108);
                     var6 = (lm) (Object) var5.c(17756);
@@ -310,7 +302,7 @@ class ii extends lm implements aa {
                   } else {
                     StringBuilder discarded$8 = param0.append(32);
                     var7++;
-                    continue L3;
+                    continue L2;
                   }
                 }
               }
@@ -318,7 +310,7 @@ class ii extends lm implements aa {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var5_ref = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var5_ref;
             stackOut_10_1 = new StringBuilder().append("ii.VA(");
@@ -333,7 +325,7 @@ class ii extends lm implements aa {
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
-              break L4;
+              break L3;
             } else {
               stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
               stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
@@ -341,10 +333,10 @@ class ii extends lm implements aa {
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
               stackIn_13_2 = stackOut_11_2;
-              break L4;
+              break L3;
             }
           }
-          L5: {
+          L4: {
             stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
             stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44);
             stackIn_15_0 = stackOut_13_0;
@@ -358,7 +350,7 @@ class ii extends lm implements aa {
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
-              break L5;
+              break L4;
             } else {
               stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
               stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
@@ -366,14 +358,14 @@ class ii extends lm implements aa {
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
               stackIn_16_2 = stackOut_14_2;
-              break L5;
+              break L4;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param2 + 44 + param3 + 41);
+          throw vk.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + 1 + 44 + param3 + 41);
         }
     }
 
-    private final void h(int param0) {
+    private final void h() {
         int var4 = DungeonAssault.field_K;
         dj var2 = new dj(((ii) this).field_B);
         lm var3 = (lm) (Object) var2.a(-479592473);
@@ -914,7 +906,8 @@ class ii extends lm implements aa {
 
     final void b(int param0, int param1, int param2, int param3, int param4) {
         super.b(param0 ^ param0, param1, param2, param3, param4);
-        this.h(0);
+        int discarded$0 = 0;
+        this.h();
     }
 
     lm g(int param0) {

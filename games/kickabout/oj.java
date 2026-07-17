@@ -128,7 +128,7 @@ final class oj extends cm {
         ((oj) this).field_X = true;
     }
 
-    public static void j(byte param0) {
+    public static void j() {
         int var1 = -8;
         field_Q = null;
         field_R = null;
@@ -154,9 +154,9 @@ final class oj extends cm {
     final static void a(int param0, vc param1) {
         try {
             np.field_Jb.a((gn) (Object) new hk(param1, 19), 3);
-            int var2_int = -76 / ((49 - param0) / 61);
+            int var2_int = -76;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "oj.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "oj.D(" + -45 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -180,7 +180,7 @@ final class oj extends cm {
     }
 
     final static void b(int param0, int param1) {
-        int var2 = 51 / ((param0 - -28) / 58);
+        int var2 = -51;
         np.field_Jb.a((gn) (Object) new pw(param1), 3);
     }
 

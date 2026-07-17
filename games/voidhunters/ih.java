@@ -7,7 +7,7 @@ final class ih extends wm implements ntb, hd {
     static int field_e;
     private int field_c;
 
-    public static void b(int param0) {
+    public static void b() {
         field_f = null;
     }
 
@@ -581,7 +581,8 @@ final class ih extends wm implements ntb, hd {
                 }
               }
             } else {
-              stackOut_4_0 = qi.a(((ih) this).field_c, true, param2, (byte) -14);
+              int discarded$2 = -14;
+              stackOut_4_0 = qi.a(((ih) this).field_c, true, param2);
               stackIn_5_0 = stackOut_4_0;
               return stackIn_5_0;
             }
@@ -766,7 +767,8 @@ final class ih extends wm implements ntb, hd {
             if (param0 > 99) {
               L1: {
                 if (((ih) this).field_c >= 0) {
-                  param1 = qi.a(((ih) this).field_c, true, param1, (byte) -14);
+                  int discarded$2 = -14;
+                  param1 = qi.a(((ih) this).field_c, true, param1);
                   break L1;
                 } else {
                   break L1;

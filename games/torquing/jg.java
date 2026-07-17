@@ -184,7 +184,7 @@ final class jg extends am {
         return var8;
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_v = null;
         field_w = null;
         field_t = null;

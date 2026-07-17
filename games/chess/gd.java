@@ -697,7 +697,7 @@ final class gd {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
         field_b = null;
         field_d = null;

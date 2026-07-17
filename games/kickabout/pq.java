@@ -125,22 +125,24 @@ final class pq extends i {
                 pb.field_C.d(iw.field_j, 315 + param1, 245 + param2, 16777215, -1);
                 break L0;
               } else {
-                if (cq.e(15137)) {
+                int discarded$33 = 15137;
+                if (cq.e()) {
                   if (np.h((byte) 5)) {
                     if (((pq) this).field_H.field_Fb != -1) {
-                      if (gp.a(tu.field_E.field_i[tu.field_E.field_q[((pq) this).field_H.field_Fb]], -576054046) != 0) {
-                        int discarded$22 = pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
+                      int discarded$34 = -576054046;
+                      if (gp.a(tu.field_E.field_i[tu.field_E.field_q[((pq) this).field_H.field_Fb]]) != 0) {
+                        int discarded$35 = pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
                         return;
                       } else {
-                        int discarded$23 = pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
+                        int discarded$36 = pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
                         return;
                       }
                     } else {
-                      int discarded$24 = pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
+                      int discarded$37 = pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
                       return;
                     }
                   } else {
-                    int discarded$25 = pb.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
+                    int discarded$38 = pb.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
                     return;
                   }
                 } else {
@@ -149,15 +151,16 @@ final class pq extends i {
                       if (((pq) this).field_H.field_Fb == -1) {
                         break L2;
                       } else {
-                        if (gp.a(tu.field_E.field_i[tu.field_E.field_q[((pq) this).field_H.field_Fb]], -576054046) == 0) {
-                          int discarded$26 = pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
+                        int discarded$39 = -576054046;
+                        if (gp.a(tu.field_E.field_i[tu.field_E.field_q[((pq) this).field_H.field_Fb]]) == 0) {
+                          int discarded$40 = pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
                           break L1;
                         } else {
                           break L2;
                         }
                       }
                     }
-                    int discarded$27 = pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
+                    int discarded$41 = pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
                     break L1;
                   }
                   return;
@@ -165,35 +168,38 @@ final class pq extends i {
               }
             }
           }
-          if (!cq.e(15137)) {
+          int discarded$42 = 15137;
+          if (!cq.e()) {
             if (((pq) this).field_H.field_Fb != -1) {
-              if (gp.a(tu.field_E.field_i[tu.field_E.field_q[((pq) this).field_H.field_Fb]], -576054046) == 0) {
-                int discarded$28 = pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
+              int discarded$43 = -576054046;
+              if (gp.a(tu.field_E.field_i[tu.field_E.field_q[((pq) this).field_H.field_Fb]]) == 0) {
+                int discarded$44 = pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
                 return;
               } else {
-                int discarded$29 = pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
+                int discarded$45 = pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
                 return;
               }
             } else {
-              int discarded$30 = pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
+              int discarded$46 = pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
               return;
             }
           } else {
             if (np.h((byte) 5)) {
               if (((pq) this).field_H.field_Fb != -1) {
-                if (gp.a(tu.field_E.field_i[tu.field_E.field_q[((pq) this).field_H.field_Fb]], -576054046) != 0) {
-                  int discarded$31 = pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
+                int discarded$47 = -576054046;
+                if (gp.a(tu.field_E.field_i[tu.field_E.field_q[((pq) this).field_H.field_Fb]]) != 0) {
+                  int discarded$48 = pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
                   return;
                 } else {
-                  int discarded$32 = pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
+                  int discarded$49 = pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
                   return;
                 }
               } else {
-                int discarded$33 = pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
+                int discarded$50 = pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
                 return;
               }
             } else {
-              int discarded$34 = pb.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
+              int discarded$51 = pb.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
               return;
             }
           }
@@ -214,11 +220,12 @@ final class pq extends i {
               } else {
                 L4: {
                   L5: {
-                    if (!cq.e(15137)) {
+                    int discarded$52 = 15137;
+                    if (!cq.e()) {
                       break L5;
                     } else {
                       if (!np.h((byte) 5)) {
-                        int discarded$35 = pb.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
+                        int discarded$53 = pb.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
                         break L4;
                       } else {
                         break L5;
@@ -229,32 +236,35 @@ final class pq extends i {
                     if (((pq) this).field_H.field_Fb == -1) {
                       break L6;
                     } else {
-                      if (gp.a(tu.field_E.field_i[tu.field_E.field_q[((pq) this).field_H.field_Fb]], -576054046) == 0) {
-                        int discarded$36 = pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
+                      int discarded$54 = -576054046;
+                      if (gp.a(tu.field_E.field_i[tu.field_E.field_q[((pq) this).field_H.field_Fb]]) == 0) {
+                        int discarded$55 = pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
                         break L4;
                       } else {
                         break L6;
                       }
                     }
                   }
-                  int discarded$37 = pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
+                  int discarded$56 = pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
                   break L4;
                 }
                 return;
               }
             }
           }
-          if (!cq.e(15137)) {
+          int discarded$57 = 15137;
+          if (!cq.e()) {
             if (((pq) this).field_H.field_Fb != -1) {
-              if (gp.a(tu.field_E.field_i[tu.field_E.field_q[((pq) this).field_H.field_Fb]], -576054046) != 0) {
-                int discarded$38 = pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
+              int discarded$58 = -576054046;
+              if (gp.a(tu.field_E.field_i[tu.field_E.field_q[((pq) this).field_H.field_Fb]]) != 0) {
+                int discarded$59 = pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
                 return;
               } else {
-                int discarded$39 = pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
+                int discarded$60 = pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
                 return;
               }
             } else {
-              int discarded$40 = pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
+              int discarded$61 = pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
               return;
             }
           } else {
@@ -264,20 +274,21 @@ final class pq extends i {
                   if (((pq) this).field_H.field_Fb == -1) {
                     break L8;
                   } else {
-                    if (gp.a(tu.field_E.field_i[tu.field_E.field_q[((pq) this).field_H.field_Fb]], -576054046) == 0) {
-                      int discarded$41 = pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
+                    int discarded$62 = -576054046;
+                    if (gp.a(tu.field_E.field_i[tu.field_E.field_q[((pq) this).field_H.field_Fb]]) == 0) {
+                      int discarded$63 = pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
                       break L7;
                     } else {
                       break L8;
                     }
                   }
                 }
-                int discarded$42 = pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
+                int discarded$64 = pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
                 break L7;
               }
               return;
             } else {
-              int discarded$43 = pb.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
+              int discarded$65 = pb.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
               return;
             }
           }
@@ -289,7 +300,7 @@ final class pq extends i {
         ((pq) this).field_H = new mf(tu.field_E);
     }
 
-    final static void g(byte param0) {
+    final static void g() {
         if (!(nb.field_f)) {
             throw new IllegalStateException();
         }
@@ -324,9 +335,11 @@ final class pq extends i {
           ((pq) this).field_H.a(param0 + 45);
           if (((pq) this).field_H.field_Fb != -1) {
             if (!tu.field_E.a((byte) 90, tu.field_E.field_q[((pq) this).field_H.field_Fb])) {
-              if (gp.a(tu.field_E.field_i[tu.field_E.field_q[((pq) this).field_H.field_Fb]], -576054046) != 0) {
+              int discarded$5 = -576054046;
+              if (gp.a(tu.field_E.field_i[tu.field_E.field_q[((pq) this).field_H.field_Fb]]) != 0) {
                 ((pq) this).field_i[0].field_lb = true;
-                if (cq.e(15137)) {
+                int discarded$6 = 15137;
+                if (cq.e()) {
                   if (!np.h((byte) -128)) {
                     ((pq) this).field_i[0].field_lb = false;
                     return;
@@ -338,7 +351,8 @@ final class pq extends i {
                 }
               } else {
                 ((pq) this).field_i[0].field_lb = false;
-                if (cq.e(15137)) {
+                int discarded$7 = 15137;
+                if (cq.e()) {
                   if (!np.h((byte) -128)) {
                     ((pq) this).field_i[0].field_lb = false;
                     return;
@@ -351,7 +365,8 @@ final class pq extends i {
               }
             } else {
               ((pq) this).field_i[0].field_lb = false;
-              if (cq.e(15137)) {
+              int discarded$8 = 15137;
+              if (cq.e()) {
                 if (!np.h((byte) -128)) {
                   ((pq) this).field_i[0].field_lb = false;
                   return;
@@ -364,7 +379,8 @@ final class pq extends i {
             }
           } else {
             ((pq) this).field_i[0].field_lb = false;
-            if (cq.e(15137)) {
+            int discarded$9 = 15137;
+            if (cq.e()) {
               if (np.h((byte) -128)) {
                 return;
               } else {

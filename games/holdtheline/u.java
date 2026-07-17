@@ -231,14 +231,14 @@ abstract class u extends rl {
         ((u) this).field_T = ((u) this).field_x;
     }
 
-    public static void l(int param0) {
+    public static void l() {
         field_S = null;
         field_U = null;
         field_O = null;
         field_Q = null;
     }
 
-    final static String j(int param0) {
+    final static String j() {
         if (!(ng.field_e != null)) {
             return "";
         }

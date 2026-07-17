@@ -83,7 +83,7 @@ final class lh {
         return stackIn_1_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = 0;
         field_n = null;
     }
@@ -271,7 +271,7 @@ final class lh {
                       }
                     }
                   }
-                  var10 = param0;
+                  var10 = 0;
                   L15: while (true) {
                     if (var10 >= ((lh) this).field_a) {
                       L16: {
@@ -396,7 +396,7 @@ final class lh {
                                     }
                                   }
                                 } else {
-                                  ((lh) this).field_p[((lh) this).field_k[var10]] = var17.h(ih.a(param0, 26491));
+                                  ((lh) this).field_p[((lh) this).field_k[var10]] = var17.h(ih.a(0, 26491));
                                   var10++;
                                   continue L25;
                                 }
@@ -474,7 +474,7 @@ final class lh {
           L35: {
             var3 = decompiledCaughtException;
             stackOut_95_0 = (RuntimeException) var3;
-            stackOut_95_1 = new StringBuilder().append("lh.C(").append(param0).append(44);
+            stackOut_95_1 = new StringBuilder().append("lh.C(").append(0).append(44);
             stackIn_97_0 = stackOut_95_0;
             stackIn_97_1 = stackOut_95_1;
             stackIn_96_0 = stackOut_95_0;

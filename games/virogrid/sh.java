@@ -24,10 +24,12 @@ class sh extends mb implements ta {
         }
         ((sh) this).field_G = false;
         if (((sh) this).field_vb) {
-            ch.a((byte) -127);
+            int discarded$1 = -127;
+            ch.a();
         } else {
             if (((sh) this).field_zb) {
-                hm.c(0);
+                int discarded$2 = 0;
+                hm.c();
             }
         }
         if (!param0) {
@@ -125,7 +127,7 @@ class sh extends mb implements ta {
         return stackIn_12_0;
     }
 
-    public static void g(boolean param0) {
+    public static void g() {
         field_yb = null;
         field_sb = null;
         field_tb = null;
@@ -137,7 +139,7 @@ class sh extends mb implements ta {
         if (!(param2 + param3 > df.field_e)) {
             return param2;
         }
-        if (param2 + (param1 + -param3) >= param0) {
+        if (param2 + (param1 + -param3) >= 0) {
             return param1 + param2 + -param3;
         }
         return df.field_e - param3;
@@ -472,12 +474,9 @@ class sh extends mb implements ta {
             qg.field_l = param2;
             oh.field_d = param1;
             ul.field_g = param3;
-            if (param0 != -40) {
-                sh.g(true);
-            }
             eh.field_d = param5;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "sh.WB(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "sh.WB(" + -40 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 41);
         }
     }
 
@@ -561,7 +560,7 @@ class sh extends mb implements ta {
         }
     }
 
-    final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
+    final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         int var17_int = 0;
         int var18 = 0;
         int var19 = 0;
@@ -1182,11 +1181,9 @@ class sh extends mb implements ta {
         hg var2 = gk.field_g;
         var2.g(param1, 8);
         var2.a(2, -66);
-        if (param0 != -112) {
-            return;
-        }
         var2.a(4, -95);
-        var2.a(nl.b(4), -75);
+        int discarded$0 = 4;
+        var2.a(nl.b(), -75);
     }
 
     final void k(int param0) {

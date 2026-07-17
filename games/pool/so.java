@@ -977,7 +977,8 @@ final class so {
             var13 = new int[]{var9, var9, var10, var10, var9, var9, var10, var10, var9, var9, var10, var10, var9, var9, var10, var10, var9, var10, var9, var10, var9, var10, var9, var10};
             var14 = new int[]{6697779, 6710886, 6710886, 6710886, 3368499, 6710886, 6710886, 6710886, 3355494, 6710886, 6710886, 6710886};
             hd.a(24, 0, true, var11, var13, var12, param2);
-            qg.a(var13, 0, param0, var12, 24, var11, (byte) 56);
+            int discarded$2 = 56;
+            qg.a(var13, 0, param0, var12, 24, var11);
             var15 = 0;
             L2: while (true) {
               if (var15 >= 24) {
@@ -993,7 +994,7 @@ final class so {
                       } else {
                         L4: {
                           var18 = null;
-                          byte discarded$1 = ic.a(var12, var15, var11, (int[]) null, var13, 4);
+                          byte discarded$3 = ic.a(var12, var15, var11, (int[]) null, var13, 4);
                           if (var13[var15] != 0) {
                             break L4;
                           } else {
@@ -1637,7 +1638,7 @@ final class so {
             }
             var7 = fb.field_d + var10 / var8;
             var6_int = var9 / var8 + fb.field_q;
-            sa.field_h.b(param1, var6_int, var7, 16764142, param0);
+            sa.field_h.b(param1, var6_int, var7, 16764142, 1);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1645,7 +1646,7 @@ final class so {
           L2: {
             var6 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var6;
-            stackOut_4_1 = new StringBuilder().append("so.D(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("so.D(").append(1).append(44);
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;

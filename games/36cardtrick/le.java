@@ -59,10 +59,10 @@ final class le implements Runnable {
             String var7 = null;
             Exception var8 = null;
             wk var8_ref = null;
-            wk stackIn_14_0 = null;
+            wk stackIn_12_0 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            wk stackOut_13_0 = null;
+            wk stackOut_11_0 = null;
             L0: {
               if (param1 == 33) {
                 var4 = "jagex_" + param3 + "_preferences" + param2 + "_rc.dat";
@@ -78,51 +78,47 @@ final class le implements Runnable {
               }
             }
             var5_array = new String[]{"c:/rscache/", "/rscache/", field_s, "c:/windows/", "c:/winnt/", "c:/", "/tmp/", ""};
-            if (param0 <= -61) {
-              var6 = 0;
-              L1: while (true) {
-                if (var5_array.length > var6) {
-                  L2: {
-                    var7 = var5_array[var6];
-                    if (var7.length() <= 0) {
+            var6 = 0;
+            L1: while (true) {
+              if (var5_array.length > var6) {
+                L2: {
+                  var7 = var5_array[var6];
+                  if (var7.length() <= 0) {
+                    break L2;
+                  } else {
+                    if (new File(var7).exists()) {
                       break L2;
                     } else {
-                      if (new File(var7).exists()) {
-                        break L2;
-                      } else {
-                        var6++;
-                        continue L1;
-                      }
-                    }
-                  }
-                  try {
-                    L3: {
-                      var8_ref = new wk(new File(var7, var4), "rw", 10000L);
-                      stackOut_13_0 = (wk) var8_ref;
-                      stackIn_14_0 = stackOut_13_0;
-                      decompiledRegionSelector0 = 0;
-                      break L3;
-                    }
-                  } catch (java.lang.Exception decompiledCaughtParameter0) {
-                    decompiledCaughtException = decompiledCaughtParameter0;
-                    L4: {
-                      var8 = (Exception) (Object) decompiledCaughtException;
                       var6++;
-                      decompiledRegionSelector0 = 1;
-                      break L4;
+                      continue L1;
                     }
                   }
-                  if (decompiledRegionSelector0 == 0) {
-                    return stackIn_14_0;
-                  } else {
-                    continue L1;
-                  }
-                } else {
-                  return null;
                 }
+                try {
+                  L3: {
+                    var8_ref = new wk(new File(var7, var4), "rw", 10000L);
+                    stackOut_11_0 = (wk) var8_ref;
+                    stackIn_12_0 = stackOut_11_0;
+                    decompiledRegionSelector0 = 0;
+                    break L3;
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L4: {
+                    var8 = (Exception) (Object) decompiledCaughtException;
+                    var6++;
+                    decompiledRegionSelector0 = 1;
+                    break L4;
+                  }
+                }
+                if (decompiledRegionSelector0 == 0) {
+                  return stackIn_12_0;
+                } else {
+                  continue L1;
+                }
+              } else {
+                return null;
               }
-            } else {
-              return null;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -136,14 +132,6 @@ final class le implements Runnable {
         Object var7 = null;
         Throwable var8 = null;
         Throwable decompiledCaughtException = null;
-        L0: {
-          if (param3 == 13003) {
-            break L0;
-          } else {
-            ((le) this).field_o = null;
-            break L0;
-          }
-        }
         var6 = new vi();
         var6.field_c = param0;
         var6.field_g = param4;
@@ -151,20 +139,20 @@ final class le implements Runnable {
         var6.field_b = param1;
         var7 = this;
         synchronized (var7) {
-          L1: {
-            L2: {
+          L0: {
+            L1: {
               if (null == ((le) this).field_c) {
                 ((le) this).field_p = var6;
                 ((le) this).field_c = var6;
-                break L2;
+                break L1;
               } else {
                 ((le) this).field_c.field_f = var6;
                 ((le) this).field_c = var6;
-                break L2;
+                break L1;
               }
             }
             this.notify();
-            break L1;
+            break L0;
           }
         }
         return var6;
@@ -688,11 +676,12 @@ final class le implements Runnable {
         if (param1 >= -19) {
             vi discarded$0 = ((le) this).a((byte) -67);
         }
-        return this.a(param0, false, param2, (byte) 127);
+        int discarded$1 = 127;
+        return this.a(param0, false, param2);
     }
 
-    private final vi a(String param0, boolean param1, int param2, byte param3) {
-        return this.a(param1 ? 22 : 1, 0, param2, 13003, (Object) (Object) param0);
+    private final vi a(String param0, boolean param1, int param2) {
+        return this.a(1, 0, param2, 13003, (Object) (Object) param0);
     }
 
     le(int param0, String param1, int param2, boolean param3) throws Exception {

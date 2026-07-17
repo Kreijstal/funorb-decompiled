@@ -15,25 +15,22 @@ final class wo {
         int var8 = 0;
         int var9 = 0;
         int var10 = DungeonAssault.field_K;
-        int var5 = -1 + 2 * param3;
-        int var6 = param3 - -param2;
+        int var5 = 9;
+        int var6 = 11;
         cn var7 = new cn(var5, var6);
         jh.a(var7);
-        for (var8 = 0; var8 < param3; var8++) {
-            gf.b(-1 + (param3 + -var8), var8, 1 + 2 * var8, 16744448);
+        for (var8 = 0; var8 < 5; var8++) {
+            gf.b(-1 + (5 + -var8), var8, 1 + 2 * var8, 16744448);
         }
-        var8 = -param0 + var5 >> 1;
-        if (param1 != 1) {
-            return null;
-        }
-        for (var9 = 0; param2 > var9; var9++) {
-            gf.b(var8, param3 + var9, param0, 16744448);
+        var8 = -5 + var5 >> 1;
+        for (var9 = 0; var9 < 6; var9++) {
+            gf.b(var8, 5 + var9, 5, 16744448);
         }
         jh.b();
         return var7;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_h = null;
         field_f = null;
         field_d = null;

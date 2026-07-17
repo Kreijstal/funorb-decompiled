@@ -177,7 +177,7 @@ final class rdb extends ksa implements ntb {
         return ((rdb) this).field_d;
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_f = null;
     }
 

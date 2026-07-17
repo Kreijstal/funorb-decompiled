@@ -933,7 +933,7 @@ final class og {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_e = null;
         field_b = null;

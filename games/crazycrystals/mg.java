@@ -15,47 +15,35 @@ abstract class mg {
 
     abstract wh a(int param0);
 
-    public static void b(int param0) {
-        if (param0 >= -86) {
-          field_a = -24;
-          field_d = null;
-          field_g = null;
-          field_b = null;
-          field_h = null;
-          field_c = null;
-          field_f = null;
-          return;
-        } else {
-          field_d = null;
-          field_g = null;
-          field_b = null;
-          field_h = null;
-          field_c = null;
-          field_f = null;
-          return;
-        }
+    public static void b() {
+        field_d = null;
+        field_g = null;
+        field_b = null;
+        field_h = null;
+        field_c = null;
+        field_f = null;
     }
 
     final static void a(int param0, db param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_18_2 = null;
+        String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
         RuntimeException stackOut_15_0 = null;
         StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
         var3 = CrazyCrystals.field_B;
         try {
           L0: {
@@ -74,64 +62,56 @@ abstract class mg {
                 break L1;
               }
             }
-            L2: {
-              if (param0 < -99) {
-                break L2;
-              } else {
-                mg.b(-23);
-                break L2;
-              }
-            }
             var2_int = 0;
-            L3: while (true) {
+            L2: while (true) {
               if (var2_int >= 4) {
                 break L0;
               } else {
-                L4: {
+                L3: {
                   if (null != le.field_g[var2_int]) {
                     var2_int++;
                     var2_int++;
-                    break L4;
+                    break L3;
                   } else {
                     le.field_g[var2_int] = bf.a(-1, oe.field_d[var2_int], "", param1);
                     var2_int++;
-                    break L4;
+                    break L3;
                   }
                 }
                 var2_int++;
-                continue L3;
+                continue L2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var2 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var2;
-            stackOut_15_1 = new StringBuilder().append("mg.B(").append(param0).append(44);
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackOut_13_0 = (RuntimeException) var2;
+            stackOut_13_1 = new StringBuilder().append("mg.B(").append(-104).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
             if (param1 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
-              break L5;
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L4;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
-              break L5;
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L4;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+          throw dn.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
         }
     }
 

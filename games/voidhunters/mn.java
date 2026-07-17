@@ -4,14 +4,14 @@
 final class mn {
     static String field_a;
 
-    final static void a(boolean param0, int param1, int param2, int param3) {
+    final static void a(boolean param0, int param1) {
         RuntimeException var4 = null;
         int var4_int = 0;
+        pgb var4_ref = null;
         llb var5 = null;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
-        pgb var9 = null;
         RuntimeException decompiledCaughtException = null;
         var7 = VoidHunters.field_G;
         try {
@@ -41,7 +41,7 @@ final class mn {
                   break L3;
                 } else {
                   if (erb.field_p) {
-                    boolean discarded$1 = ada.field_b.a((byte) -5, hca.field_o.field_M, hca.field_o.field_u, param0);
+                    boolean discarded$4 = ada.field_b.a((byte) -5, hca.field_o.field_M, hca.field_o.field_u, param0);
                     break L3;
                   } else {
                     ada.field_b = null;
@@ -54,23 +54,26 @@ final class mn {
                 if (5 <= var4_int) {
                   L5: {
                     if (nlb.field_o.field_o != 0) {
-                      crb.field_v = new bwa(nlb.field_o.field_M, nlb.field_o.field_u, nlb.field_o.field_hb, nlb.field_o.field_G, param2, fh.field_g, lo.field_b, kn.field_p, qc.field_q, urb.field_o, iga.field_o, (String) null, 0L);
+                      crb.field_v = new bwa(nlb.field_o.field_M, nlb.field_o.field_u, nlb.field_o.field_hb, nlb.field_o.field_G, 0, fh.field_g, lo.field_b, kn.field_p, qc.field_q, urb.field_o, iga.field_o, (String) null, 0L);
                       break L5;
                     } else {
                       break L5;
                     }
                   }
                   L6: {
-                    var9 = aq.b(nna.field_w, qs.field_c, param1, -123);
-                    if (var9 != null) {
-                      aka.a(var9, 22859);
+                    int discarded$5 = -123;
+                    var4_ref = aq.b(nna.field_w, qs.field_c, param1);
+                    if (var4_ref != null) {
+                      int discarded$6 = 22859;
+                      aka.a(var4_ref);
                       break L6;
                     } else {
                       break L6;
                     }
                   }
                   L7: {
-                    var8 = sdb.a(-8037);
+                    int discarded$7 = -8037;
+                    var8 = sdb.a();
                     var6 = 50;
                     if (var8 != null) {
                       lob.field_a = var8;
@@ -100,11 +103,11 @@ final class mn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var4, "mn.C(" + param0 + 44 + param1 + 44 + param2 + 44 + 97 + 41);
+          throw rta.a((Throwable) (Object) var4, "mn.C(" + param0 + 44 + param1 + 44 + 0 + 44 + 97 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = 19;
         field_a = null;
     }

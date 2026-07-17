@@ -7,7 +7,7 @@ final class de extends f implements Cloneable {
     ea field_j;
     private int field_i;
 
-    public static void f(int param0) {
+    public static void f() {
         field_k = null;
         field_l = null;
     }
@@ -189,9 +189,9 @@ final class de extends f implements Cloneable {
     final static db a(boolean param0, boolean param1, int param2, int param3, int param4) {
         if (param4 != 12) {
           field_l = null;
-          return qk.a(param2, param4 + 86, param0, param1, false, param3);
+          return qk.a(param2, param4 + 86, false, true, false, 1);
         } else {
-          return qk.a(param2, param4 + 86, param0, param1, false, param3);
+          return qk.a(param2, param4 + 86, false, true, false, 1);
         }
     }
 
@@ -311,9 +311,6 @@ final class de extends f implements Cloneable {
             var3 = var2.field_l;
             var4 = var2.field_u;
             hd.a(false);
-            if (param0 >= -58) {
-                field_l = null;
-            }
             kn.field_p = new dl(var3, var4 * 3 / 4);
             kn.field_p.a();
             var2.c(0, 0);
@@ -323,7 +320,7 @@ final class de extends f implements Cloneable {
             ne.field_e.field_t = kn.field_p.field_u;
             lg.a(1);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "de.I(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "de.I(" + -67 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

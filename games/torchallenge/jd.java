@@ -24,7 +24,7 @@ final class jd extends RuntimeException {
         ((jd) this).field_a = param0;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -83,7 +83,8 @@ final class jd extends RuntimeException {
             }
             L4: {
               if (5 > rf.field_ib) {
-                bh.d((byte) -128);
+                int discarded$3 = -128;
+                bh.d();
                 break L4;
               } else {
                 var1_int = 4;
@@ -127,10 +128,10 @@ final class jd extends RuntimeException {
                               L10: {
                                 var7 = lc.a(var10, 1);
                                 if (0 > var7) {
-                                  int discarded$2 = tf.field_x.a(dg.field_bb[rf.field_ib][var10], 0, 420, 640, 60, 0, -1, 1, 1, 0);
+                                  int discarded$4 = tf.field_x.a(dg.field_bb[rf.field_ib][var10], 0, 420, 640, 60, 0, -1, 1, 1, 0);
                                   break L10;
                                 } else {
-                                  int discarded$3 = tf.field_x.a(dg.field_bb[rf.field_ib][var10], 0, 420, 640, 60, 0, -1, var7, 1, 1, 0);
+                                  int discarded$5 = tf.field_x.a(dg.field_bb[rf.field_ib][var10], 0, 420, 640, 60, 0, -1, var7, 1, 1, 0);
                                   break L10;
                                 }
                               }

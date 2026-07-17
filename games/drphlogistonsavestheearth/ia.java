@@ -6,7 +6,7 @@ final class ia {
     static gk field_a;
     static String field_b;
 
-    final static void a(byte param0) {
+    final static void a() {
         ml var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -18,33 +18,25 @@ final class ia {
               el.field_sb.a();
               k.field_J.a();
               vb.field_k = vb.field_k - 1;
-              if (param0 >= 4) {
-                break L1;
-              } else {
-                field_c = -62;
-                break L1;
-              }
-            }
-            L2: {
               if (vb.field_k != 0) {
-                break L2;
+                break L1;
               } else {
                 vb.field_k = 200;
                 var1 = (ml) (Object) ff.field_O.h(-11151);
-                L3: while (true) {
+                L2: while (true) {
                   if (var1 == null) {
-                    break L2;
+                    break L1;
                   } else {
-                    L4: {
+                    L3: {
                       if (var1.field_o.c(-1387)) {
-                        break L4;
+                        break L3;
                       } else {
                         var1.a(-16175);
-                        break L4;
+                        break L3;
                       }
                     }
                     var1 = (ml) (Object) ff.field_O.e(0);
-                    continue L3;
+                    continue L2;
                   }
                 }
               }
@@ -54,7 +46,7 @@ final class ia {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ie.a((Throwable) (Object) var1_ref, "ia.D(" + param0 + 41);
+          throw ie.a((Throwable) (Object) var1_ref, "ia.D(" + 9 + 41);
         }
     }
 
@@ -62,7 +54,7 @@ final class ia {
         throw new IllegalStateException();
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
         field_a = null;
     }
@@ -94,13 +86,10 @@ final class ia {
     final static void a(gk param0, int param1, int param2, int param3) {
         df.field_h = param2;
         cb.field_a = param0;
-        if (param1 != 0) {
-            return;
-        }
         try {
             di.field_d = param3;
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "ia.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "ia.C(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 44 + param2 + 44 + param3 + 41);
         }
     }
 

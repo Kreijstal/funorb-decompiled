@@ -223,20 +223,12 @@ abstract class cv {
                 break L1;
               }
             }
-            L8: {
-              if (param0 == 11383) {
-                break L8;
-              } else {
-                field_e = true;
-                break L8;
-              }
-            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "cv.J(" + param0 + 41);
+          throw nb.a((Throwable) (Object) var1, "cv.J(" + 11383 + 41);
         }
     }
 
@@ -276,7 +268,8 @@ abstract class cv {
                 cq.field_h = ra.field_G;
                 ra.field_G = null;
                 ce.field_I = 0;
-                wr.field_f = po.a(cq.field_h, -4);
+                int discarded$4 = -4;
+                wr.field_f = po.a(cq.field_h);
                 if (wi.field_B) {
                   sr.field_l = null;
                   wi.field_B = false;
@@ -291,7 +284,8 @@ abstract class cv {
                 } else {
                   um.field_e = null;
                   al.field_Db = false;
-                  oa.b(-23217);
+                  int discarded$5 = -23217;
+                  oa.b();
                   mv.a((byte) 119);
                   el.g(0);
                   break L3;
@@ -342,9 +336,11 @@ abstract class cv {
                 if (!k.field_k) {
                   break L7;
                 } else {
-                  vc.f((byte) 119);
+                  int discarded$6 = 119;
+                  vc.f();
                   vr.a(-2);
-                  qg.a(0);
+                  int discarded$7 = 0;
+                  qg.a();
                   k.field_k = false;
                   break L7;
                 }

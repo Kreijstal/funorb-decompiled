@@ -87,34 +87,35 @@ final class pb {
 
     final void a(int param0) {
         if (param0 != -18577) {
-          boolean discarded$2 = ((pb) this).a((byte) -44);
-          ((pb) this).field_e = this.b((byte) -37);
+          boolean discarded$6 = ((pb) this).a((byte) -44);
+          int discarded$7 = -37;
+          ((pb) this).field_e = this.b();
           return;
         } else {
-          ((pb) this).field_e = this.b((byte) -37);
+          int discarded$8 = -37;
+          ((pb) this).field_e = this.b();
           return;
         }
     }
 
     final static void a(int param0, tf[] param1) {
         RuntimeException var2 = null;
-        Object var3 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
+        String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_7_0 = null;
         StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
         try {
           L0: {
             L1: {
@@ -129,46 +130,37 @@ final class pb {
                 }
               }
             }
-            L2: {
-              if (param0 == -25960) {
-                break L2;
-              } else {
-                var3 = null;
-                pb.a(-62, (sb) null, 98, 74);
-                break L2;
-              }
-            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var2 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var2;
-            stackOut_7_1 = new StringBuilder().append("pb.J(").append(param0).append(44);
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+            stackOut_5_0 = (RuntimeException) var2;
+            stackOut_5_1 = new StringBuilder().append("pb.J(").append(-25960).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
-              break L3;
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
             } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
-              break L3;
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
     }
 
@@ -203,7 +195,7 @@ final class pb {
         return 0 == ((pb) this).field_c ? true : false;
     }
 
-    private final int b(byte param0) {
+    private final int b() {
         int var2 = ((pb) this).field_m.field_d;
         if (!(((pb) this).field_m.field_d < ((pb) this).field_m.field_l.length)) {
             return ((pb) this).field_o - (100 * var2 + 100);
@@ -216,14 +208,6 @@ final class pb {
             param1 = 2 * ((pb) this).field_o - param1;
         }
         int var3 = 512 * (param1 + -((pb) this).field_o - -100) / 100;
-        if (param0) {
-            Object var4 = null;
-            pb.a(31, (tf[]) null);
-            if (!(var3 <= 256)) {
-                return 256;
-            }
-            return var3;
-        }
         if (!(var3 <= 256)) {
             return 256;
         }
@@ -479,7 +463,8 @@ final class pb {
     final void d(int param0) {
         int var2 = 0;
         if (param0 == -16888) {
-          var2 = this.b((byte) -37);
+          int discarded$2 = -37;
+          var2 = this.b();
           if (((pb) this).field_c <= 0) {
             L0: {
               if (((pb) this).field_e > var2) {
@@ -505,7 +490,8 @@ final class pb {
           }
         } else {
           pb.c(-121);
-          var2 = this.b((byte) -37);
+          int discarded$3 = -37;
+          var2 = this.b();
           if (((pb) this).field_c <= 0) {
             L1: {
               if (((pb) this).field_e > var2) {

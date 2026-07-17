@@ -48,7 +48,7 @@ final class qi {
         var10 = stellarshard.field_B;
         try {
           L0: {
-            var6_int = param5 + -param3;
+            var6_int = param5;
             var8 = 0 % ((71 - param1) / 48);
             var7 = 0;
             L1: while (true) {
@@ -60,7 +60,7 @@ final class qi {
                 L2: {
                   L3: {
                     L4: {
-                      var9 = param4.charAt(var7 + param3);
+                      var9 = param4.charAt(var7);
                       if (var9 <= 0) {
                         break L4;
                       } else {
@@ -258,7 +258,7 @@ final class qi {
           }
           L7: {
             stackOut_71_0 = (RuntimeException) (Object) stackIn_71_0;
-            stackOut_71_1 = ((StringBuilder) (Object) stackIn_71_1).append(stackIn_71_2).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_71_1 = ((StringBuilder) (Object) stackIn_71_1).append(stackIn_71_2).append(44).append(param1).append(44).append(param2).append(44).append(0).append(44);
             stackIn_73_0 = stackOut_71_0;
             stackIn_73_1 = stackOut_71_1;
             stackIn_72_0 = stackOut_71_0;

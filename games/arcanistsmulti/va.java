@@ -162,7 +162,7 @@ final class va implements pf {
           L0: {
             if (wj.a(param3, param2, param4, 2, param0)) {
               L1: {
-                if (param4 != param1) {
+                if (param4 != 1) {
                   break L1;
                 } else {
                   param4 = 0;
@@ -172,10 +172,11 @@ final class va implements pf {
               nj.field_c = param4;
               so.field_p = param3;
               var7 = (CharSequence) (Object) param3;
-              ua.field_S = gk.a(var7, param1 ^ -14);
+              ua.field_S = gk.a(var7, -13);
               gg.field_e = param0;
               var6 = ff.a(param2, 49, gl.field_c, mj.field_z, ab.field_p);
-              ag.a(var6, (byte) -104);
+              int discarded$2 = -104;
+              ag.a(var6);
               stackOut_5_0 = 1;
               stackIn_6_0 = stackOut_5_0;
               break L0;
@@ -190,7 +191,7 @@ final class va implements pf {
           L2: {
             var6_ref = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var6_ref;
-            stackOut_7_1 = new StringBuilder().append("va.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_7_1 = new StringBuilder().append("va.B(").append(param0).append(44).append(1).append(44);
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -243,7 +244,7 @@ final class va implements pf {
         return stackIn_6_0 != 0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_e = null;
         field_a = null;

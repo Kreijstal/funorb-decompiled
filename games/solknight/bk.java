@@ -166,8 +166,8 @@ final class bk {
         return stackIn_10_0;
     }
 
-    public static void a(byte param0) {
-        int var1 = 82 % ((2 - param0) / 55);
+    public static void a() {
+        int var1 = 0;
         field_a = null;
     }
 
@@ -259,66 +259,58 @@ final class bk {
             L2: while (true) {
               if (var8 <= var9) {
                 L3: {
-                  if (param0 == 3) {
-                    break L3;
-                  } else {
-                    bk.a((byte) -51);
-                    break L3;
-                  }
-                }
-                L4: {
                   if (var7 >= var8) {
-                    break L4;
+                    break L3;
                   } else {
                     int incrementValue$3 = var6;
                     var6++;
                     param4[incrementValue$3] = param1.substring(var7, var8).trim();
-                    break L4;
+                    break L3;
                   }
                 }
                 stackOut_25_0 = var6;
                 stackIn_26_0 = stackOut_25_0;
                 break L0;
               } else {
-                L5: {
-                  L6: {
+                L4: {
+                  L5: {
                     var10 = param1.charAt(var9);
                     if (var10 == 32) {
-                      break L6;
+                      break L5;
                     } else {
                       if (45 != var10) {
-                        break L5;
+                        break L4;
                       } else {
-                        break L6;
+                        break L5;
                       }
                     }
                   }
                   var11 = param1.substring(var7, 1 + var9).trim();
                   var12 = param2.b(var11);
                   if (var12 < param3) {
-                    break L5;
+                    break L4;
                   } else {
                     int incrementValue$4 = var6;
                     var6++;
                     param4[incrementValue$4] = var11;
                     var7 = 1 + var9;
-                    break L5;
+                    break L4;
                   }
                 }
-                L7: {
+                L6: {
                   if (62 != var10) {
                     var9++;
-                    break L7;
+                    break L6;
                   } else {
                     if (param1.regionMatches(var9 - 3, "<br>", 0, 4)) {
                       int incrementValue$5 = var6;
                       var6++;
                       param4[incrementValue$5] = param1.substring(var7, var9 - 3).trim();
                       var7 = var9 + 1;
-                      break L7;
+                      break L6;
                     } else {
                       var9++;
-                      break L7;
+                      break L6;
                     }
                   }
                 }
@@ -329,10 +321,10 @@ final class bk {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L7: {
             var5 = decompiledCaughtException;
             stackOut_27_0 = (RuntimeException) var5;
-            stackOut_27_1 = new StringBuilder().append("bk.C(").append(param0).append(44);
+            stackOut_27_1 = new StringBuilder().append("bk.C(").append(3).append(44);
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
@@ -344,7 +336,7 @@ final class bk {
               stackIn_30_0 = stackOut_29_0;
               stackIn_30_1 = stackOut_29_1;
               stackIn_30_2 = stackOut_29_2;
-              break L8;
+              break L7;
             } else {
               stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
               stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
@@ -352,10 +344,10 @@ final class bk {
               stackIn_30_0 = stackOut_28_0;
               stackIn_30_1 = stackOut_28_1;
               stackIn_30_2 = stackOut_28_2;
-              break L8;
+              break L7;
             }
           }
-          L9: {
+          L8: {
             stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
             stackOut_30_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_30_2).append(44);
             stackIn_32_0 = stackOut_30_0;
@@ -369,7 +361,7 @@ final class bk {
               stackIn_33_0 = stackOut_32_0;
               stackIn_33_1 = stackOut_32_1;
               stackIn_33_2 = stackOut_32_2;
-              break L9;
+              break L8;
             } else {
               stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
               stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
@@ -377,10 +369,10 @@ final class bk {
               stackIn_33_0 = stackOut_31_0;
               stackIn_33_1 = stackOut_31_1;
               stackIn_33_2 = stackOut_31_2;
-              break L9;
+              break L8;
             }
           }
-          L10: {
+          L9: {
             stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
             stackOut_33_1 = ((StringBuilder) (Object) stackIn_33_1).append(stackIn_33_2).append(44).append(param3).append(44);
             stackIn_35_0 = stackOut_33_0;
@@ -394,7 +386,7 @@ final class bk {
               stackIn_36_0 = stackOut_35_0;
               stackIn_36_1 = stackOut_35_1;
               stackIn_36_2 = stackOut_35_2;
-              break L10;
+              break L9;
             } else {
               stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
               stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
@@ -402,7 +394,7 @@ final class bk {
               stackIn_36_0 = stackOut_34_0;
               stackIn_36_1 = stackOut_34_1;
               stackIn_36_2 = stackOut_34_2;
-              break L10;
+              break L9;
             }
           }
           throw fc.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + 41);

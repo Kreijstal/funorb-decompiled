@@ -24,69 +24,35 @@ final class ck extends fk {
         RuntimeException var2_ref = null;
         int var3 = 0;
         eh var4 = null;
-        je stackIn_7_0 = null;
-        je stackIn_8_0 = null;
-        je stackIn_9_0 = null;
-        int stackIn_9_1 = 0;
         RuntimeException decompiledCaughtException = null;
-        je stackOut_6_0 = null;
-        je stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
-        je stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
         var3 = TetraLink.field_J;
         try {
           L0: {
-            L1: {
-              if (param0) {
-                break L1;
-              } else {
-                field_Z = null;
-                break L1;
-              }
-            }
             var4 = (eh) (Object) qn.field_t.c(false);
-            L2: while (true) {
+            L1: while (true) {
               if (var4 == null) {
-                L3: {
-                  stackOut_6_0 = sf.field_a;
-                  stackIn_8_0 = stackOut_6_0;
-                  stackIn_7_0 = stackOut_6_0;
-                  if (param0) {
-                    stackOut_8_0 = (je) (Object) stackIn_8_0;
-                    stackOut_8_1 = 0;
-                    stackIn_9_0 = stackOut_8_0;
-                    stackIn_9_1 = stackOut_8_1;
-                    break L3;
-                  } else {
-                    stackOut_7_0 = (je) (Object) stackIn_7_0;
-                    stackOut_7_1 = 1;
-                    stackIn_9_0 = stackOut_7_0;
-                    stackIn_9_1 = stackOut_7_1;
-                    break L3;
-                  }
-                }
-                var2 = ((je) (Object) stackIn_9_0).c(stackIn_9_1 != 0);
-                L4: while (true) {
+                var2 = sf.field_a.c(false);
+                L2: while (true) {
                   if (var2 == null) {
                     break L0;
                   } else {
                     ei.a((byte) 102, 4);
                     var2 = sf.field_a.a((byte) -70);
-                    continue L4;
+                    continue L2;
                   }
                 }
               } else {
-                i.a(4, var4, 0);
+                int discarded$2 = 0;
+                i.a(4, var4);
                 var4 = (eh) (Object) qn.field_t.a((byte) -70);
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw oi.a((Throwable) (Object) var2_ref, "ck.C(" + param0 + 44 + 4 + 41);
+          throw oi.a((Throwable) (Object) var2_ref, "ck.C(" + 1 + 44 + 4 + 41);
         }
     }
 
@@ -386,9 +352,6 @@ final class ck extends fk {
     }
 
     final static void a(byte param0, boolean param1) {
-        if (param0 != 126) {
-            return;
-        }
         jd.a((byte) -55, param1, false);
     }
 

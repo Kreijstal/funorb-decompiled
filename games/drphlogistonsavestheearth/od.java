@@ -752,7 +752,8 @@ class od extends gi {
 
     final int d(int param0, byte param1) {
         int var4 = -46 / ((83 - param1) / 33);
-        int var3 = ml.a(((od) this).field_h, param0, ((od) this).field_j, false);
+        int discarded$0 = 0;
+        int var3 = ml.a(((od) this).field_h, param0, ((od) this).field_j);
         ((od) this).a(var3, (byte) -125);
         return var3;
     }
@@ -884,7 +885,8 @@ class od extends gi {
 
     final boolean m(int param0) {
         ((od) this).field_j = ((od) this).field_j - 4;
-        int var2 = ml.a(((od) this).field_h, param0, ((od) this).field_j, false);
+        int discarded$0 = 0;
+        int var2 = ml.a(((od) this).field_h, param0, ((od) this).field_j);
         int var3 = ((od) this).h(param0 + -120);
         if (var2 == var3) {
             return true;

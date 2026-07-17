@@ -220,7 +220,8 @@ final class gh {
                     break L5;
                   } else {
                     L6: {
-                      this.d(0);
+                      int discarded$2 = 0;
+                      this.d();
                       var9_int = param1;
                       if (var9_int > ((gh) this).field_a) {
                         var9_int = ((gh) this).field_a;
@@ -279,9 +280,9 @@ final class gh {
                             break L9;
                           } else {
                             param1--;
-                            int incrementValue$1 = param3;
+                            int incrementValue$3 = param3;
                             param3++;
-                            param2[incrementValue$1] = (byte) 0;
+                            param2[incrementValue$3] = (byte) 0;
                             ((gh) this).field_k = ((gh) this).field_k + 1L;
                             continue L11;
                           }
@@ -405,10 +406,7 @@ final class gh {
     }
 
     final static boolean a(int param0, boolean param1, int param2) {
-        if (param1) {
-            return true;
-        }
-        return 0 != (65536 & param2) ? true : false;
+        return 0 != (65536 & param2);
     }
 
     final void a(int param0, byte[] param1, int param2, int param3) throws IOException {
@@ -642,7 +640,7 @@ final class gh {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_o = null;
         field_i = null;
         field_j = null;
@@ -733,7 +731,7 @@ final class gh {
         return ((gh) this).field_b;
     }
 
-    private final void d(int param0) throws IOException {
+    private final void d() throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = AceOfSkies.field_G ? 1 : 0;

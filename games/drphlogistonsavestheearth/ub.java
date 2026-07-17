@@ -5,7 +5,7 @@ final class ub {
     static int field_b;
     static he[] field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
     }
 

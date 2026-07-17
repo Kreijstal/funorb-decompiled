@@ -1070,40 +1070,42 @@ final class ej implements Runnable {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        int stackIn_25_0 = 0;
-        RuntimeException stackIn_53_0 = null;
-        StringBuilder stackIn_53_1 = null;
+        int stackIn_24_0 = 0;
+        RuntimeException stackIn_52_0 = null;
+        StringBuilder stackIn_52_1 = null;
+        RuntimeException stackIn_54_0 = null;
+        StringBuilder stackIn_54_1 = null;
         RuntimeException stackIn_55_0 = null;
         StringBuilder stackIn_55_1 = null;
-        RuntimeException stackIn_56_0 = null;
-        StringBuilder stackIn_56_1 = null;
-        String stackIn_56_2 = null;
+        String stackIn_55_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_24_0 = 0;
-        int stackOut_22_0 = 0;
+        int stackOut_23_0 = 0;
+        int stackOut_21_0 = 0;
+        RuntimeException stackOut_51_0 = null;
+        StringBuilder stackOut_51_1 = null;
+        RuntimeException stackOut_54_0 = null;
+        StringBuilder stackOut_54_1 = null;
+        String stackOut_54_2 = null;
         RuntimeException stackOut_52_0 = null;
         StringBuilder stackOut_52_1 = null;
-        RuntimeException stackOut_55_0 = null;
-        StringBuilder stackOut_55_1 = null;
-        String stackOut_55_2 = null;
-        RuntimeException stackOut_53_0 = null;
-        StringBuilder stackOut_53_1 = null;
-        String stackOut_53_2 = null;
+        String stackOut_52_2 = null;
         try {
           L0: {
             L1: {
-              var7 = 101 / ((-47 - param3) / 46);
+              var7 = -50;
               var5_int = gi.a(3 * (-param2 + param1), 0);
               var6 = param2 * 3;
               var8 = -10 + var5_int;
-              ar.a((byte) 48);
+              int discarded$2 = 48;
+              ar.a();
               if (0 >= param4.field_I) {
                 break L1;
               } else {
                 if (param4.field_K == null) {
                   break L1;
                 } else {
-                  ka.h(0);
+                  int discarded$3 = 0;
+                  ka.h();
                   break L1;
                 }
               }
@@ -1137,27 +1139,10 @@ final class ej implements Runnable {
                 }
                 break L0;
               } else {
+                var10 = param4.field_y[var9];
+                var11 = param4.field_r[var9];
+                var12 = param4.field_u[var9];
                 L5: {
-                  L6: {
-                    var10 = param4.field_y[var9];
-                    var11 = param4.field_r[var9];
-                    var12 = param4.field_u[var9];
-                    if (param0) {
-                      var13 = ch.field_M[var10];
-                      var14 = li.field_h[var10];
-                      var15 = ch.field_M[var11] - var13;
-                      var16 = -var13 + ch.field_M[var12];
-                      var17 = -var14 + li.field_h[var11];
-                      var18 = li.field_h[var12] - var14;
-                      if (var15 * var18 + -(var16 * var17) < 0) {
-                        break L6;
-                      } else {
-                        break L5;
-                      }
-                    } else {
-                      break L6;
-                    }
-                  }
                   var13 = fe.field_L[var10];
                   if (-2147483648 != var13) {
                     var14 = fe.field_L[var11];
@@ -1166,34 +1151,34 @@ final class ej implements Runnable {
                     } else {
                       var15 = fe.field_L[var12];
                       if (var15 != -2147483648) {
-                        L7: {
+                        L6: {
                           var16 = -var6 + (var14 + var13 + var15);
                           if (0 > var8) {
-                            stackOut_24_0 = var16 << -var8;
-                            stackIn_25_0 = stackOut_24_0;
-                            break L7;
+                            stackOut_23_0 = var16 << -var8;
+                            stackIn_24_0 = stackOut_23_0;
+                            break L6;
                           } else {
-                            stackOut_22_0 = var16 >> var8;
-                            stackIn_25_0 = stackOut_22_0;
-                            break L7;
+                            stackOut_21_0 = var16 >> var8;
+                            stackIn_24_0 = stackOut_21_0;
+                            break L6;
                           }
                         }
-                        var17 = -stackIn_25_0 + (lq.field_T.length - 1);
+                        var17 = -stackIn_24_0 + (lq.field_T.length - 1);
                         var18 = lq.field_T[var17];
-                        L8: while (true) {
+                        L7: while (true) {
                           if (var18 >> 4 == 0) {
-                            L9: {
+                            L8: {
                               var19 = var18 + (var17 << 4);
                               tl.field_I[var19] = var9;
                               lq.field_T[var17] = 1 + var18;
                               if (param4.field_I <= 0) {
-                                break L9;
+                                break L8;
                               } else {
                                 if (null == param4.field_K) {
-                                  break L9;
+                                  break L8;
                                 } else {
                                   wa.field_ib[param4.field_K[var9]] = wa.field_ib[param4.field_K[var9]] + 1;
-                                  break L9;
+                                  break L8;
                                 }
                               }
                             }
@@ -1206,7 +1191,7 @@ final class ej implements Runnable {
                               break L5;
                             } else {
                               var18 = lq.field_T[var17];
-                              continue L8;
+                              continue L7;
                             }
                           }
                         }
@@ -1225,33 +1210,33 @@ final class ej implements Runnable {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L10: {
+          L9: {
             var5 = decompiledCaughtException;
-            stackOut_52_0 = (RuntimeException) var5;
-            stackOut_52_1 = new StringBuilder().append("ej.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
-            stackIn_55_0 = stackOut_52_0;
-            stackIn_55_1 = stackOut_52_1;
-            stackIn_53_0 = stackOut_52_0;
-            stackIn_53_1 = stackOut_52_1;
+            stackOut_51_0 = (RuntimeException) var5;
+            stackOut_51_1 = new StringBuilder().append("ej.A(").append(0).append(44).append(param1).append(44).append(param2).append(44).append(48).append(44);
+            stackIn_54_0 = stackOut_51_0;
+            stackIn_54_1 = stackOut_51_1;
+            stackIn_52_0 = stackOut_51_0;
+            stackIn_52_1 = stackOut_51_1;
             if (param4 == null) {
-              stackOut_55_0 = (RuntimeException) (Object) stackIn_55_0;
-              stackOut_55_1 = (StringBuilder) (Object) stackIn_55_1;
-              stackOut_55_2 = "null";
-              stackIn_56_0 = stackOut_55_0;
-              stackIn_56_1 = stackOut_55_1;
-              stackIn_56_2 = stackOut_55_2;
-              break L10;
+              stackOut_54_0 = (RuntimeException) (Object) stackIn_54_0;
+              stackOut_54_1 = (StringBuilder) (Object) stackIn_54_1;
+              stackOut_54_2 = "null";
+              stackIn_55_0 = stackOut_54_0;
+              stackIn_55_1 = stackOut_54_1;
+              stackIn_55_2 = stackOut_54_2;
+              break L9;
             } else {
-              stackOut_53_0 = (RuntimeException) (Object) stackIn_53_0;
-              stackOut_53_1 = (StringBuilder) (Object) stackIn_53_1;
-              stackOut_53_2 = "{...}";
-              stackIn_56_0 = stackOut_53_0;
-              stackIn_56_1 = stackOut_53_1;
-              stackIn_56_2 = stackOut_53_2;
-              break L10;
+              stackOut_52_0 = (RuntimeException) (Object) stackIn_52_0;
+              stackOut_52_1 = (StringBuilder) (Object) stackIn_52_1;
+              stackOut_52_2 = "{...}";
+              stackIn_55_0 = stackOut_52_0;
+              stackIn_55_1 = stackOut_52_1;
+              stackIn_55_2 = stackOut_52_2;
+              break L9;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_56_0, stackIn_56_2 + 41);
+          throw wm.a((Throwable) (Object) stackIn_55_0, stackIn_55_2 + 41);
         }
     }
 
@@ -1442,15 +1427,19 @@ final class ej implements Runnable {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
+        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
+          L0: {
             field_c = null;
             field_j = null;
-            if (!param0) {
-                field_l = false;
-            }
-        } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "ej.B(" + param0 + 41);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw wm.a((Throwable) (Object) var1, "ej.B(" + 1 + 41);
         }
     }
 

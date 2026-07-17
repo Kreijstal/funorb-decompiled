@@ -67,7 +67,8 @@ final class eg {
         try {
           L0: {
             if (param1 >= 69) {
-              stackOut_3_0 = fj.a(param0, param2, 84, true);
+              int discarded$2 = 1;
+              stackOut_3_0 = fj.a(16, param2, 84);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -81,7 +82,7 @@ final class eg {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var3;
-            stackOut_5_1 = new StringBuilder().append("eg.E(").append(param0).append(44).append(param1).append(44);
+            stackOut_5_1 = new StringBuilder().append("eg.E(").append(16).append(44).append(param1).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -119,7 +120,7 @@ final class eg {
         field_g = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         if (!(uj.field_j == null)) {
             uj.field_j.b(50);
             uj.field_j = null;

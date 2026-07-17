@@ -76,7 +76,7 @@ final class ob extends pib {
         }
     }
 
-    final static ufb a(int param0, eab param1, int param2, int param3, int param4, int param5) {
+    final static ufb a(int param0, eab param1, int param2, int param3) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         ufb var7 = null;
@@ -103,7 +103,7 @@ final class ob extends pib {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var8 = jqb.a(11168, param4, param1, param3, param0, param2);
+            var8 = jqb.a(11168, 0, param1, param3, 0, param2);
             var6 = var8;
             if (var8 != null) {
               var7 = new ufb();
@@ -126,7 +126,7 @@ final class ob extends pib {
           L1: {
             var6_ref = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var6_ref;
-            stackOut_5_1 = new StringBuilder().append("ob.N(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("ob.N(").append(0).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -149,7 +149,7 @@ final class ob extends pib {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + 0 + 41);
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param2 + 44 + param3 + 44 + 0 + 44 + 0 + 41);
         }
         return stackIn_4_0;
     }

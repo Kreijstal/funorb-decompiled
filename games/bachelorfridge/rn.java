@@ -154,11 +154,11 @@ final class rn extends bca {
     final static int c(int param0, int param1) {
         int var2 = param1 * (param1 * param1 >> 12) >> 12;
         int var3 = -61440 + 6 * param1;
-        int var4 = param0 - -(param1 * var3 >> 12);
+        int var4 = 40960 - -(param1 * var3 >> 12);
         return var2 * var4 >> 12;
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_v = null;
         field_t = null;
         field_s = null;

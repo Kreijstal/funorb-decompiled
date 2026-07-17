@@ -6,7 +6,7 @@ final class ds extends wf {
     int field_g;
     static eo field_e;
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
     }
 
@@ -66,7 +66,7 @@ final class ds extends wf {
               return stackIn_8_0;
             } else {
               if (param1.charAt(0) != 34) {
-                var3 = param0 ? 1 : 0;
+                var3 = 0;
                 var4 = 0;
                 L0: while (true) {
                   if (var4 < var2_int) {
@@ -168,7 +168,7 @@ final class ds extends wf {
           L7: {
             var2 = decompiledCaughtException;
             stackOut_47_0 = (RuntimeException) var2;
-            stackOut_47_1 = new StringBuilder().append("ds.B(").append(param0).append(44);
+            stackOut_47_1 = new StringBuilder().append("ds.B(").append(0).append(44);
             stackIn_49_0 = stackOut_47_0;
             stackIn_49_1 = stackOut_47_1;
             stackIn_48_0 = stackOut_47_0;

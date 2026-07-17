@@ -374,83 +374,79 @@ final class wh extends ona {
         try {
             IOException iOException = null;
             Exception var4 = null;
+            ds stackIn_3_0 = null;
+            int stackIn_3_1 = 0;
+            ds stackIn_4_0 = null;
+            int stackIn_4_1 = 0;
             ds stackIn_5_0 = null;
             int stackIn_5_1 = 0;
-            ds stackIn_6_0 = null;
-            int stackIn_6_1 = 0;
-            ds stackIn_7_0 = null;
-            int stackIn_7_1 = 0;
-            int stackIn_7_2 = 0;
+            int stackIn_5_2 = 0;
             Throwable decompiledCaughtException = null;
+            ds stackOut_2_0 = null;
+            int stackOut_2_1 = 0;
             ds stackOut_4_0 = null;
             int stackOut_4_1 = 0;
-            ds stackOut_6_0 = null;
-            int stackOut_6_1 = 0;
-            int stackOut_6_2 = 0;
-            ds stackOut_5_0 = null;
-            int stackOut_5_1 = 0;
-            int stackOut_5_2 = 0;
-            if (param0 == -65) {
-              if (((wh) this).field_p != null) {
-                try {
-                  L0: {
-                    L1: {
-                      ((wh) this).field_e.field_e = 0;
-                      stackOut_4_0 = ((wh) this).field_e;
-                      stackOut_4_1 = 0;
-                      stackIn_6_0 = stackOut_4_0;
-                      stackIn_6_1 = stackOut_4_1;
+            int stackOut_4_2 = 0;
+            ds stackOut_3_0 = null;
+            int stackOut_3_1 = 0;
+            int stackOut_3_2 = 0;
+            if (((wh) this).field_p != null) {
+              try {
+                L0: {
+                  L1: {
+                    ((wh) this).field_e.field_e = 0;
+                    stackOut_2_0 = ((wh) this).field_e;
+                    stackOut_2_1 = 0;
+                    stackIn_4_0 = stackOut_2_0;
+                    stackIn_4_1 = stackOut_2_1;
+                    stackIn_3_0 = stackOut_2_0;
+                    stackIn_3_1 = stackOut_2_1;
+                    if (param1) {
+                      stackOut_4_0 = (ds) (Object) stackIn_4_0;
+                      stackOut_4_1 = stackIn_4_1;
+                      stackOut_4_2 = 2;
                       stackIn_5_0 = stackOut_4_0;
                       stackIn_5_1 = stackOut_4_1;
-                      if (param1) {
-                        stackOut_6_0 = (ds) (Object) stackIn_6_0;
-                        stackOut_6_1 = stackIn_6_1;
-                        stackOut_6_2 = 2;
-                        stackIn_7_0 = stackOut_6_0;
-                        stackIn_7_1 = stackOut_6_1;
-                        stackIn_7_2 = stackOut_6_2;
-                        break L1;
-                      } else {
-                        stackOut_5_0 = (ds) (Object) stackIn_5_0;
-                        stackOut_5_1 = stackIn_5_1;
-                        stackOut_5_2 = 3;
-                        stackIn_7_0 = stackOut_5_0;
-                        stackIn_7_1 = stackOut_5_1;
-                        stackIn_7_2 = stackOut_5_2;
-                        break L1;
-                      }
+                      stackIn_5_2 = stackOut_4_2;
+                      break L1;
+                    } else {
+                      stackOut_3_0 = (ds) (Object) stackIn_3_0;
+                      stackOut_3_1 = stackIn_3_1;
+                      stackOut_3_2 = 3;
+                      stackIn_5_0 = stackOut_3_0;
+                      stackIn_5_1 = stackOut_3_1;
+                      stackIn_5_2 = stackOut_3_2;
+                      break L1;
                     }
-                    ((ds) (Object) stackIn_7_0).c(stackIn_7_1, stackIn_7_2);
-                    ((wh) this).field_e.a(param0 ^ -50, 0L);
-                    ((wh) this).field_p.a(0, ((wh) this).field_e.field_h, ((wh) this).field_e.field_h.length, 0);
-                    break L0;
                   }
-                } catch (java.io.IOException decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  L2: {
-                    iOException = (IOException) (Object) decompiledCaughtException;
-                    try {
-                      L3: {
-                        ((wh) this).field_p.b(1);
-                        break L3;
-                      }
-                    } catch (java.lang.Exception decompiledCaughtParameter1) {
-                      decompiledCaughtException = decompiledCaughtParameter1;
-                      L4: {
-                        var4 = (Exception) (Object) decompiledCaughtException;
-                        break L4;
-                      }
-                    }
-                    ((wh) this).field_k = -2;
-                    ((wh) this).field_g = ((wh) this).field_g + 1;
-                    ((wh) this).field_p = null;
-                    break L2;
-                  }
+                  ((ds) (Object) stackIn_5_0).c(stackIn_5_1, stackIn_5_2);
+                  ((wh) this).field_e.a(113, 0L);
+                  ((wh) this).field_p.a(0, ((wh) this).field_e.field_h, ((wh) this).field_e.field_h.length, 0);
+                  break L0;
                 }
-                return;
-              } else {
-                return;
+              } catch (java.io.IOException decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                L2: {
+                  iOException = (IOException) (Object) decompiledCaughtException;
+                  try {
+                    L3: {
+                      ((wh) this).field_p.b(1);
+                      break L3;
+                    }
+                  } catch (java.lang.Exception decompiledCaughtParameter1) {
+                    decompiledCaughtException = decompiledCaughtParameter1;
+                    L4: {
+                      var4 = (Exception) (Object) decompiledCaughtException;
+                      break L4;
+                    }
+                  }
+                  ((wh) this).field_k = -2;
+                  ((wh) this).field_g = ((wh) this).field_g + 1;
+                  ((wh) this).field_p = null;
+                  break L2;
+                }
               }
+              return;
             } else {
               return;
             }
@@ -468,7 +464,7 @@ final class wh extends ona {
         }
     }
 
-    private final void i(int param0) {
+    private final void i() {
         try {
             Exception var3 = null;
             Throwable decompiledCaughtException = null;
@@ -634,7 +630,8 @@ final class wh extends ona {
                   }
                 }
                 ((wh) this).field_p = (lpb) param0;
-                this.i(7571);
+                int discarded$1 = 7571;
+                this.i();
                 this.a((byte) -65, param1);
                 ((wh) this).field_b = null;
                 ((wh) this).field_i.field_e = 0;

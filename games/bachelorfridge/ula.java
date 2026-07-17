@@ -13,7 +13,7 @@ final class ula {
     jfa field_c;
     private int field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_h = null;
         field_j = null;
     }
@@ -107,17 +107,14 @@ final class ula {
         try {
             sja.field_fb.c(param0, (byte) 110);
             sja.field_fb.field_g = sja.field_fb.field_g + 1;
-            if (param1 != 75) {
-                field_j = null;
-            }
             var7_int = sja.field_fb.field_g;
             sja.field_fb.b(1686281208, param5);
             sja.field_fb.a((byte) -50, param2);
             sja.field_fb.d(param3, 0);
-            sja.field_fb.d(!param4 ? 0 : 1, param1 + -75);
+            sja.field_fb.d(!param4 ? 0 : 1, 0);
             sja.field_fb.b((byte) -127, sja.field_fb.field_g + -var7_int);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ula.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "ula.D(" + param0 + 44 + 75 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
@@ -136,7 +133,7 @@ final class ula {
         }
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean a(char param0) {
         if (48 > param0) {
             return false;
         }

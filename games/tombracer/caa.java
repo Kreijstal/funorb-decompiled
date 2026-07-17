@@ -14,7 +14,7 @@ final class caa implements Runnable {
     private java.net.URL field_b;
     private fia field_g;
 
-    final static void a(ff param0, la param1, int param2) {
+    final static void a(ff param0, la param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -323,7 +323,8 @@ final class caa implements Runnable {
 
     final static void a(byte param0) {
         bh.field_p = true;
-        bja.a(pl.a((byte) 64), (byte) 126, 3);
+        int discarded$0 = 64;
+        bja.a(pl.a(), (byte) 126, 3);
         int var1 = 72 / ((param0 - 55) / 46);
         rba.field_a.e((byte) 106);
     }
@@ -357,7 +358,7 @@ final class caa implements Runnable {
         ((caa) this).field_d = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -365,29 +366,21 @@ final class caa implements Runnable {
         var7 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
-            L1: {
-              if (param5 == 0) {
-                break L1;
-              } else {
-                field_i = 59;
-                break L1;
-              }
-            }
             var6_int = param3;
-            L2: while (true) {
+            L1: while (true) {
               if (param4 < var6_int) {
                 break L0;
               } else {
                 nra.a((byte) -55, param0, param1, vaa.field_a[var6_int], param2);
                 var6_int++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var6, "caa.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw tba.a((Throwable) (Object) var6, "caa.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + 0 + 41);
         }
     }
 

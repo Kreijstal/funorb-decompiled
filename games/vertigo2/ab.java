@@ -10,9 +10,6 @@ abstract class ab {
     abstract int b(int param0, int param1);
 
     final static boolean a(boolean param0, char param1) {
-        if (param0) {
-            return true;
-        }
         if (param1 < 48) {
             return false;
         }
@@ -26,7 +23,7 @@ abstract class ab {
 
     final static int a(int param0, int param1) {
         int var2 = 0;
-        if (!(param1 != param0)) {
+        if (!(param1 != 0)) {
             var2 = rm.field_B;
         }
         if (!(param1 != 1)) {
@@ -38,7 +35,7 @@ abstract class ab {
         return var2;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         field_d = null;

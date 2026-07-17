@@ -9,9 +9,9 @@ final class na {
     private int field_d;
     private kd field_e;
 
-    final static void a(int param0, boolean param1) {
+    final static void a() {
         cc var2 = null;
-        var2 = th.field_o[param0];
+        var2 = th.field_o[2];
         if (!var2.a(false)) {
           var2.e(-1);
           var2.c(0);
@@ -251,7 +251,7 @@ final class na {
         }
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         try {
             int var1_int = 0;
             Exception var1 = null;
@@ -325,13 +325,10 @@ final class na {
         }
     }
 
-    final static void a(byte param0, wa param1, int param2) {
+    final static void a(byte param0, wa param1) {
         int var4 = 0;
         th var5 = ed.field_q;
-        var5.h(param2, 0);
-        if (param0 > -77) {
-            return;
-        }
+        var5.h(5, 0);
         try {
             var5.field_h = var5.field_h + 1;
             var4 = var5.field_h;
@@ -345,7 +342,7 @@ final class na {
             int discarded$0 = var5.a(var4, (byte) 71);
             var5.d(-var4 + var5.field_h, (byte) -124);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "na.I(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "na.I(" + -126 + 44 + (param1 != null ? "{...}" : "null") + 44 + 5 + 41);
         }
     }
 

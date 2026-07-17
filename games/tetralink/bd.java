@@ -10,48 +10,26 @@ final class bd {
     static int[] field_a;
     static hl field_g;
 
-    final static oh[] a(int param0, int param1, int param2, int param3, byte param4) {
+    final static oh[] a(int param0, int param1, int param2, int param3) {
         oh[] var5 = null;
         oh[] var6 = null;
-        if (param4 == 126) {
-          var6 = new oh[9];
-          var5 = var6;
-          oh dupTemp$4 = ce.a(param2, param1, param4 + -126);
-          var5[6] = dupTemp$4;
-          var5[3] = dupTemp$4;
-          var5[2] = dupTemp$4;
-          var5[1] = dupTemp$4;
-          var5[0] = dupTemp$4;
-          oh dupTemp$5 = ce.a(param0, param1, 0);
-          var6[8] = dupTemp$5;
-          var5[7] = dupTemp$5;
-          var5[5] = dupTemp$5;
-          if (param3 != 0) {
-            var5[4] = ce.a(param3, 64, param4 + -126);
-            return var5;
-          } else {
-            return var5;
-          }
+        var6 = new oh[9];
+        var5 = var6;
+        oh dupTemp$4 = ce.a(param2, 1, 0);
+        var6[6] = dupTemp$4;
+        var5[3] = dupTemp$4;
+        var5[2] = dupTemp$4;
+        var5[1] = dupTemp$4;
+        var5[0] = dupTemp$4;
+        oh dupTemp$5 = ce.a(param0, 1, 0);
+        var6[8] = dupTemp$5;
+        var5[7] = dupTemp$5;
+        var5[5] = dupTemp$5;
+        if (param3 != 0) {
+          var6[4] = ce.a(param3, 64, 0);
+          return var5;
         } else {
-          bd.a((byte) -37);
-          var6 = new oh[9];
-          var5 = var6;
-          oh dupTemp$6 = ce.a(param2, param1, param4 + -126);
-          var5[6] = dupTemp$6;
-          var5[3] = dupTemp$6;
-          var5[2] = dupTemp$6;
-          var5[1] = dupTemp$6;
-          var5[0] = dupTemp$6;
-          oh dupTemp$7 = ce.a(param0, param1, 0);
-          var6[8] = dupTemp$7;
-          var5[7] = dupTemp$7;
-          var5[5] = dupTemp$7;
-          if (param3 == 0) {
-            return var5;
-          } else {
-            var5[4] = ce.a(param3, 64, param4 + -126);
-            return var5;
-          }
+          return var5;
         }
     }
 
@@ -75,17 +53,13 @@ final class bd {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
         field_d = null;
         field_c = null;
         field_b = null;
         field_a = null;
         field_g = null;
-        if (param0 < 111) {
-            Object var2 = null;
-            bd.a((oh) null, 71);
-        }
     }
 
     static {

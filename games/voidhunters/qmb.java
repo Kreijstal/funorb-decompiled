@@ -6,7 +6,7 @@ final class qmb extends rqa {
     static int field_p;
     static int field_q;
 
-    public static void e(byte param0) {
+    public static void e() {
         field_o = null;
     }
 
@@ -83,14 +83,11 @@ final class qmb extends rqa {
         super(param0, param1, param2);
     }
 
-    final static boolean a(int param0) {
-        if (!(nna.field_C == null)) {
-            return nna.field_C.a(pma.field_o, jl.field_r, -40);
-        }
-        if (param0 != -22029) {
+    final static boolean a() {
+        if (nna.field_C == null) {
             return false;
         }
-        return false;
+        return nna.field_C.a(pma.field_o, jl.field_r, -40);
     }
 
     static {

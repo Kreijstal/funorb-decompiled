@@ -110,10 +110,8 @@ final class te {
     }
 
     final static boolean a(boolean param0, int param1, int param2) {
-        if (param0) {
-            field_h = null;
-        }
-        return (is.a(!param0 ? true : false, param1, param2) | oj.b(param1, param2, -126) | pk.a(param1, param2, 52)) & jf.a(param1, (byte) -91, param2);
+        int discarded$0 = -126;
+        return (is.a(true, param1, param2) | oj.b(param1, param2) | pk.a(param1, param2, 52)) & jf.a(param1, (byte) -91, param2);
     }
 
     final void a(ms param0, int param1, long param2) {

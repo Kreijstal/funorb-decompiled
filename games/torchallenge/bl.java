@@ -157,42 +157,34 @@ final class bl extends ng {
         return stackIn_25_0 != 0;
     }
 
-    final static ka[] a(int param0, int param1, lj param2, int param3) {
+    final static ka[] a(int param0, int param1, lj param2) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        Object stackIn_5_0 = null;
-        ka[] stackIn_7_0 = null;
+        ka[] stackIn_5_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
+        String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ka[] stackOut_6_0 = null;
-        Object stackOut_4_0 = null;
+        ka[] stackOut_4_0 = null;
         Object stackOut_1_0 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
         try {
           L0: {
             if (lk.a(160, param2, param1, param0)) {
-              if (param3 == 2147483647) {
-                stackOut_6_0 = de.a(true);
-                stackIn_7_0 = stackOut_6_0;
-                break L0;
-              } else {
-                stackOut_4_0 = null;
-                stackIn_5_0 = stackOut_4_0;
-                return (ka[]) (Object) stackIn_5_0;
-              }
+              stackOut_4_0 = de.a(true);
+              stackIn_5_0 = stackOut_4_0;
+              break L0;
             } else {
               stackOut_1_0 = null;
               stackIn_2_0 = stackOut_1_0;
@@ -203,33 +195,33 @@ final class bl extends ng {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var4 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var4;
-            stackOut_8_1 = new StringBuilder().append("bl.C(").append(param0).append(44).append(param1).append(44);
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackOut_6_0 = (RuntimeException) var4;
+            stackOut_6_1 = new StringBuilder().append("bl.C(").append(param0).append(44).append(param1).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
             if (param2 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
               break L1;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
               break L1;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param3 + 41);
+          throw oj.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 2147483647 + 41);
         }
-        return stackIn_7_0;
+        return stackIn_5_0;
     }
 
     final int a(int param0, int param1) {
@@ -261,55 +253,47 @@ final class bl extends ng {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
+        int stackIn_9_0 = 0;
         int stackIn_11_0 = 0;
-        int stackIn_13_0 = 0;
         RuntimeException decompiledCaughtException = null;
+        int stackOut_8_0 = 0;
         int stackOut_10_0 = 0;
-        int stackOut_12_0 = 0;
         var4 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
-            L1: {
-              if (param1 <= -47) {
-                break L1;
-              } else {
-                field_X = 3;
-                break L1;
-              }
-            }
             var3_int = 1;
-            L2: while (true) {
+            L1: while (true) {
               if (param0 <= 1) {
                 if (1 == param0) {
-                  stackOut_10_0 = var3_int * param2;
-                  stackIn_11_0 = stackOut_10_0;
-                  return stackIn_11_0;
+                  stackOut_8_0 = var3_int * param2;
+                  stackIn_9_0 = stackOut_8_0;
+                  return stackIn_9_0;
                 } else {
-                  stackOut_12_0 = var3_int;
-                  stackIn_13_0 = stackOut_12_0;
+                  stackOut_10_0 = var3_int;
+                  stackIn_11_0 = stackOut_10_0;
                   break L0;
                 }
               } else {
-                L3: {
+                L2: {
                   if ((1 & param0) == 0) {
-                    break L3;
+                    break L2;
                   } else {
                     var3_int = var3_int * param2;
-                    break L3;
+                    break L2;
                   }
                 }
                 param0 = param0 >> 1;
                 param2 = param2 * param2;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var3, "bl.F(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw oj.a((Throwable) (Object) var3, "bl.F(" + param0 + 44 + -86 + 44 + param2 + 41);
         }
-        return stackIn_13_0;
+        return stackIn_11_0;
     }
 
     final int a(int param0) {
@@ -320,7 +304,7 @@ final class bl extends ng {
         return ((bl) this).field_Z;
     }
 
-    public static void e(boolean param0) {
+    public static void e() {
         field_T = null;
         field_O = null;
         field_V = null;

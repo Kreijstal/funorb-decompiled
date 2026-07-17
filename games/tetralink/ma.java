@@ -16,7 +16,7 @@ final class ma {
     private int field_h;
     private tb field_c;
 
-    final static String a(ah param0, String param1, int param2, String param3, byte param4) {
+    final static String a(ah param0, String param1, int param2, String param3) {
         RuntimeException var5 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -71,7 +71,7 @@ final class ma {
         try {
           L0: {
             if (param0.c(120)) {
-              stackOut_3_0 = param3 + " - " + param0.e(-11337, param2) + "%";
+              stackOut_3_0 = param3 + " - " + param0.e(-11337, 0) + "%";
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -135,7 +135,7 @@ final class ma {
           }
           L3: {
             stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(param2).append(44);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(0).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -331,7 +331,7 @@ final class ma {
         }
     }
 
-    private final boolean b(int param0) {
+    private final boolean b() {
         ((ma) this).field_j = ((ma) this).field_j + 1;
         if (((ma) this).field_j >= ((ma) this).field_c.field_f.length) {
           ((ma) this).field_e = ((ma) this).field_e + 1;
@@ -385,11 +385,8 @@ final class ma {
         }
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_d = null;
-        if (param0 != -3) {
-            field_f = 127;
-        }
     }
 
     final static String a(boolean param0, String param1, int param2) {
@@ -428,7 +425,7 @@ final class ma {
         try {
           L0: {
             var10 = (CharSequence) (Object) param1;
-            if (!gi.a(param0, var10)) {
+            if (!gi.a(false, var10)) {
               stackOut_3_0 = uk.field_u;
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
@@ -450,7 +447,7 @@ final class ma {
                       var9.f(param2, (byte) -92);
                       var9.field_t = var9.field_t + 1;
                       var5 = var9.field_t;
-                      var9.a(1, param0);
+                      var9.a(1, false);
                       var9.a(param1, 0);
                       var9.b(-var5 + var9.field_t, -2);
                       stackOut_15_0 = null;
@@ -475,7 +472,7 @@ final class ma {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var3;
-            stackOut_17_1 = new StringBuilder().append("ma.C(").append(param0).append(44);
+            stackOut_17_1 = new StringBuilder().append("ma.C(").append(0).append(44);
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -505,7 +502,8 @@ final class ma {
 
     final void a(byte param0, tb param1) {
         try {
-            this.a(109);
+            int discarded$0 = 109;
+            this.a();
             ((ma) this).field_c = param1;
             ((ma) this).field_i = ((ma) this).field_c.field_f[((ma) this).field_j];
             ((ma) this).field_h = ((ma) this).field_c.field_l[((ma) this).field_j];
@@ -518,7 +516,7 @@ final class ma {
         }
     }
 
-    private final void a(int param0) {
+    private final void a() {
         ((ma) this).field_j = 0;
         ((ma) this).field_e = 0;
         ((ma) this).field_h = 0;
@@ -735,7 +733,8 @@ final class ma {
                   } else {
                     ((ma) this).field_h = ((ma) this).field_h - 1;
                     if (((ma) this).field_h <= 0) {
-                      return this.b(0);
+                      int discarded$6 = 0;
+                      return this.b();
                     } else {
                       var2 = -92 % ((param0 - -67) / 50);
                       return false;
@@ -747,7 +746,8 @@ final class ma {
                   } else {
                     ((ma) this).field_h = ((ma) this).field_h - 1;
                     if (((ma) this).field_h <= 0) {
-                      return this.b(0);
+                      int discarded$7 = 0;
+                      return this.b();
                     } else {
                       var2 = -92 % ((param0 - -67) / 50);
                       return false;
@@ -769,7 +769,8 @@ final class ma {
                 } else {
                   ((ma) this).field_h = ((ma) this).field_h - 1;
                   if (((ma) this).field_h <= 0) {
-                    return this.b(0);
+                    int discarded$8 = 0;
+                    return this.b();
                   } else {
                     var2 = -92 % ((param0 - -67) / 50);
                     return false;
@@ -782,7 +783,8 @@ final class ma {
               } else {
                 ((ma) this).field_h = ((ma) this).field_h - 1;
                 if (((ma) this).field_h <= 0) {
-                  return this.b(0);
+                  int discarded$9 = 0;
+                  return this.b();
                 } else {
                   var2 = -92 % ((param0 - -67) / 50);
                   return false;
@@ -795,7 +797,8 @@ final class ma {
             } else {
               ((ma) this).field_h = ((ma) this).field_h - 1;
               if (((ma) this).field_h <= 0) {
-                return this.b(0);
+                int discarded$10 = 0;
+                return this.b();
               } else {
                 var2 = -92 % ((param0 - -67) / 50);
                 return false;
@@ -808,7 +811,8 @@ final class ma {
           } else {
             ((ma) this).field_h = ((ma) this).field_h - 1;
             if (((ma) this).field_h <= 0) {
-              return this.b(0);
+              int discarded$11 = 0;
+              return this.b();
             } else {
               var2 = -92 % ((param0 - -67) / 50);
               return false;
@@ -817,7 +821,7 @@ final class ma {
         }
     }
 
-    final static void c(int param0) {
+    final static void c() {
         bb.field_d = new String[co.field_q];
         bb.field_d[19] = uk.field_v;
         bb.field_d[20] = ok.field_e;
@@ -826,18 +830,13 @@ final class ma {
         bb.field_d[15] = wd.field_a;
         bb.field_d[21] = em.field_a;
         bb.field_d[11] = gh.field_b;
-        if (param0 != 24657) {
-          return;
-        } else {
-          bb.field_d[9] = ha.field_f;
-          bb.field_d[17] = pg.field_e;
-          bb.field_d[6] = qf.field_e;
-          bb.field_d[18] = gm.field_c;
-          bb.field_d[13] = nm.field_p;
-          bb.field_d[7] = rj.field_a;
-          bb.field_d[5] = dj.field_d;
-          return;
-        }
+        bb.field_d[9] = ha.field_f;
+        bb.field_d[17] = pg.field_e;
+        bb.field_d[6] = qf.field_e;
+        bb.field_d[18] = gm.field_c;
+        bb.field_d[13] = nm.field_p;
+        bb.field_d[7] = rj.field_a;
+        bb.field_d[5] = dj.field_d;
     }
 
     static {

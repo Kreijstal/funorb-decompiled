@@ -77,7 +77,8 @@ final class gj implements Runnable {
                   }
                 }
               } else {
-                k.a((Throwable) null, (byte) 41, "A1: " + aj.a((byte) 92));
+                int discarded$2 = 92;
+                k.a((Throwable) null, (byte) 41, "A1: " + aj.a());
                 mc.a((byte) -126);
                 return;
               }
@@ -402,9 +403,6 @@ final class gj implements Runnable {
     private final void a(int param0, ab param1) {
         synchronized (((gj) this).field_e) {
             ((gj) this).field_e.a((byte) -108, (he) (Object) param1);
-            if (param0 != 0) {
-                ((gj) this).field_d = null;
-            }
             ((gj) this).field_b = ((gj) this).field_b + 1;
             ((Object) (Object) ((gj) this).field_e).notifyAll();
         }
@@ -515,7 +513,7 @@ final class gj implements Runnable {
         return stackIn_15_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
     }
 

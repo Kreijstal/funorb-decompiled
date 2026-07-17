@@ -69,7 +69,8 @@ final class bqa implements bo {
                     }
                   }
                 }
-                this.a(param2.field_k, (byte) -98);
+                int discarded$2 = -98;
+                this.a(param2.field_k);
                 var7 = param2.field_k.field_H[((bqa) this).field_h];
                 var4 = var7;
                 var5 = 0;
@@ -206,13 +207,10 @@ final class bqa implements bo {
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        if (param0 != 540800) {
-            return false;
-        }
-        return 0 != (param1 & 540800) ? true : false;
+        return 0 != (param1 & 540800);
     }
 
-    private final void a(ff param0, byte param1) {
+    private final void a(ff param0) {
         try {
             param0.a(((bqa) this).field_c, ((bqa) this).field_h, 1, ((bqa) this).field_b, ((bqa) this).field_a);
         } catch (RuntimeException runtimeException) {
@@ -220,7 +218,7 @@ final class bqa implements bo {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
     }
 

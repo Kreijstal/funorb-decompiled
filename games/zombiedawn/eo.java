@@ -13,7 +13,7 @@ final class eo {
     static int[] field_h;
     boolean field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_h = null;
         field_j = null;
@@ -139,7 +139,7 @@ final class eo {
         }
     }
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         return nm.field_c;
     }
 

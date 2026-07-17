@@ -215,7 +215,8 @@ final class uaa extends kj {
             return "";
         }
         if (param0 >= -24) {
-            uaa.a(false);
+            int discarded$0 = 0;
+            uaa.a();
             return cha.field_l;
         }
         return cha.field_l;
@@ -227,7 +228,7 @@ final class uaa extends kj {
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_i = null;
         field_f = null;
     }
@@ -265,7 +266,7 @@ final class uaa extends kj {
         return ((uaa) this).field_h.e(12917);
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         sna var3 = mka.a(5222712, 9883516, 5222712, (byte) -121, (po) (Object) jha.field_g, 9883516, 16777215, 9883516);
         sna var4 = var3;
         var4.field_Y = 1;

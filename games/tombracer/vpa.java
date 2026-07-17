@@ -293,65 +293,57 @@ class vpa implements isa, oaa {
     }
 
     private final void a(boolean param0, ae param1, int param2, int param3) {
-        RuntimeException runtimeException = null;
+        RuntimeException var5 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
         String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              this.a(((vpa) this).field_m, 0, param1, 0, param3, 12589, param2, ((vpa) this).field_j);
-              if (!param0) {
-                break L1;
-              } else {
-                ((vpa) this).field_d = 6;
-                break L1;
-              }
-            }
+            this.a(((vpa) this).field_m, 0, param1, 0, param3, 12589, param2, ((vpa) this).field_j);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("vpa.I(").append(param0).append(44);
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+          L1: {
+            var5 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var5;
+            stackOut_2_1 = new StringBuilder().append("vpa.I(").append(0).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
-              break L2;
-            } else {
               stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
               stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              break L2;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param2 + 44 + param3 + 41);
+          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -388,79 +380,75 @@ class vpa implements isa, oaa {
         var13 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
-            tga.a(param5 + -34542, param4 + param2.field_i, param2.field_i + (param4 - -param2.field_m), param6 - -param2.field_n, param6 + param2.field_n - -param2.field_p);
-            if (param5 == 12589) {
-              L1: {
-                var9_int = ((vpa) this).a((byte) 116, param2);
-                var10 = this.b(param5 ^ 2147471058, param2);
-                if (!((vpa) this).field_b) {
-                  L2: {
-                    var12 = ((vpa) this).field_a;
-                    if (var12 != 0) {
-                      if (2 == var12) {
-                        var11 = -((vpa) this).field_e.field_k + var10;
-                        break L2;
-                      } else {
-                        L3: {
-                          if (3 == var12) {
+            tga.a(-21953, param4 + param2.field_i, param2.field_i + (param4 - -param2.field_m), param6 - -param2.field_n, param6 + param2.field_n - -param2.field_p);
+            L1: {
+              var9_int = ((vpa) this).a((byte) 116, param2);
+              var10 = this.b(2147483647, param2);
+              if (!((vpa) this).field_b) {
+                L2: {
+                  var12 = ((vpa) this).field_a;
+                  if (var12 != 0) {
+                    if (2 == var12) {
+                      var11 = -((vpa) this).field_e.field_k + var10;
+                      break L2;
+                    } else {
+                      L3: {
+                        if (3 == var12) {
+                          break L3;
+                        } else {
+                          if (var12 != 1) {
                             break L3;
                           } else {
-                            if (var12 != 1) {
-                              break L3;
-                            } else {
-                              break L3;
-                            }
+                            break L3;
                           }
                         }
-                        var11 = (var10 + -((vpa) this).field_e.field_w - ((vpa) this).field_e.field_k >> 1) + ((vpa) this).field_e.field_w;
-                        break L2;
                       }
-                    } else {
-                      var11 = ((vpa) this).field_e.field_w;
+                      var11 = (var10 + -((vpa) this).field_e.field_w - ((vpa) this).field_e.field_k >> 1) + ((vpa) this).field_e.field_w;
                       break L2;
                     }
+                  } else {
+                    var11 = ((vpa) this).field_e.field_w;
+                    break L2;
                   }
-                  L4: {
-                    var12 = ((vpa) this).field_l;
-                    if (var12 != 0) {
-                      if (var12 != 3) {
-                        if (1 == var12) {
-                          ((vpa) this).field_e.a(((vpa) this).d(-4, param2), this.a(param2, param3, param4, -3) - -(var9_int >> 1), var11 + this.a(param6, param1, param2, (byte) -128), param7, param0);
+                }
+                L4: {
+                  var12 = ((vpa) this).field_l;
+                  if (var12 != 0) {
+                    if (var12 != 3) {
+                      if (1 == var12) {
+                        ((vpa) this).field_e.a(((vpa) this).d(-4, param2), this.a(param2, 0, param4, -3) - -(var9_int >> 1), var11 + this.a(param6, 0, param2, (byte) -128), param7, param0);
+                        break L1;
+                      } else {
+                        if (var12 != 2) {
                           break L1;
                         } else {
-                          if (var12 != 2) {
-                            break L1;
-                          } else {
-                            ((vpa) this).field_e.b(((vpa) this).d(-4, param2), var9_int + this.a(param2, param3, param4, -3), this.a(param6, param1, param2, (byte) -128) - -var11, param7, param0);
-                            break L1;
-                          }
+                          ((vpa) this).field_e.b(((vpa) this).d(-4, param2), var9_int + this.a(param2, 0, param4, -3), this.a(param6, 0, param2, (byte) -128) - -var11, param7, param0);
+                          break L1;
                         }
-                      } else {
-                        break L4;
                       }
                     } else {
                       break L4;
                     }
+                  } else {
+                    break L4;
                   }
-                  ((vpa) this).field_e.c(((vpa) this).d(-4, param2), this.a(param2, param3, param4, -3), this.a(param6, param1, param2, (byte) -128) - -var11, param7, param0);
-                  break L1;
-                } else {
-                  int discarded$1 = ((vpa) this).field_e.a(((vpa) this).d(param5 ^ -12591, param2), this.a(param2, param3, param4, -3), this.a(param6, param1, param2, (byte) -128), var9_int, var10, param7, param0, ((vpa) this).field_l, ((vpa) this).field_a, ((vpa) this).field_f);
-                  break L1;
                 }
+                ((vpa) this).field_e.c(((vpa) this).d(-4, param2), this.a(param2, 0, param4, -3), this.a(param6, 0, param2, (byte) -128) - -var11, param7, param0);
+                break L1;
+              } else {
+                int discarded$1 = ((vpa) this).field_e.a(((vpa) this).d(-4, param2), this.a(param2, 0, param4, -3), this.a(param6, 0, param2, (byte) -128), var9_int, var10, param7, param0, ((vpa) this).field_l, ((vpa) this).field_a, ((vpa) this).field_f);
+                break L1;
               }
-              pfa.a(1);
-              break L0;
-            } else {
-              return;
             }
+            pfa.a(1);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var9 = decompiledCaughtException;
             stackOut_26_0 = (RuntimeException) var9;
-            stackOut_26_1 = new StringBuilder().append("vpa.O(").append(param0).append(44).append(param1).append(44);
+            stackOut_26_1 = new StringBuilder().append("vpa.O(").append(param0).append(44).append(0).append(44);
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
@@ -483,7 +471,7 @@ class vpa implements isa, oaa {
               break L5;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw tba.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 44 + 0 + 44 + param4 + 44 + 12589 + 44 + param6 + 44 + param7 + 41);
         }
     }
 

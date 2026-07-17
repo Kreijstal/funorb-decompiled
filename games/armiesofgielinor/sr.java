@@ -206,7 +206,8 @@ final class sr {
               L0: {
                 ((sr) this).field_b[1] = so.field_b.field_g >> 1;
                 ((sr) this).field_b[0] = so.field_b.field_a >> 1;
-                this.a(-120);
+                int discarded$2 = -120;
+                this.a();
                 ((sr) this).field_n = this.a(param0 + -1959107776, ((sr) this).field_j, ((sr) this).field_e, ((sr) this).field_o, ((sr) this).field_m);
                 var2 = ((sr) this).field_i[0] - ((sr) this).field_g[0];
                 var3 = this.a((byte) -71, var2);
@@ -236,7 +237,8 @@ final class sr {
               L2: {
                 ((sr) this).field_a[0] = so.field_b.field_a >> 1;
                 ((sr) this).field_a[1] = so.field_b.field_g >> 1;
-                this.a(-120);
+                int discarded$3 = -120;
+                this.a();
                 ((sr) this).field_n = this.a(param0 + -1959107776, ((sr) this).field_j, ((sr) this).field_e, ((sr) this).field_o, ((sr) this).field_m);
                 var2 = ((sr) this).field_i[0] - ((sr) this).field_g[0];
                 var3 = this.a((byte) -71, var2);
@@ -269,47 +271,14 @@ final class sr {
         }
     }
 
-    private final void a(int param0) {
+    private final void a() {
         int var2 = 77;
         ((sr) this).field_d[0] = (((sr) this).field_i[0] * ((sr) this).field_j + (-((sr) this).field_j + ((sr) this).field_o) * ((sr) this).field_g[0]) / ((sr) this).field_o;
         ((sr) this).field_d[1] = (((sr) this).field_i[1] * ((sr) this).field_j + ((sr) this).field_g[1] * (-((sr) this).field_j + ((sr) this).field_o)) / ((sr) this).field_o;
     }
 
     private final int a(byte param0, int param1) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        if (param0 != -71) {
-          L0: {
-            ((sr) this).a(-4, 101);
-            if (param1 < 0) {
-              stackOut_7_0 = -1;
-              stackIn_8_0 = stackOut_7_0;
-              break L0;
-            } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
-              break L0;
-            }
-          }
-          return stackIn_8_0;
-        } else {
-          L1: {
-            if (param1 < 0) {
-              stackOut_3_0 = -1;
-              stackIn_4_0 = stackOut_3_0;
-              break L1;
-            } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              break L1;
-            }
-          }
-          return stackIn_4_0;
-        }
+        return param1 >= 0 ? 1 : -1;
     }
 
     final void b(int param0, int param1) {
@@ -344,7 +313,7 @@ final class sr {
         return tm.field_n[param0 & 2047];
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_p = null;
     }
 

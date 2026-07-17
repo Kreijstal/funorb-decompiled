@@ -637,82 +637,74 @@ final class h extends tn {
             RuntimeException var2_ref = null;
             String var3 = null;
             java.net.URL var4 = null;
+            RuntimeException stackIn_5_0 = null;
+            StringBuilder stackIn_5_1 = null;
+            RuntimeException stackIn_6_0 = null;
+            StringBuilder stackIn_6_1 = null;
             RuntimeException stackIn_7_0 = null;
             StringBuilder stackIn_7_1 = null;
-            RuntimeException stackIn_8_0 = null;
-            StringBuilder stackIn_8_1 = null;
-            RuntimeException stackIn_9_0 = null;
-            StringBuilder stackIn_9_1 = null;
-            String stackIn_9_2 = null;
+            String stackIn_7_2 = null;
             Throwable decompiledCaughtException = null;
+            RuntimeException stackOut_4_0 = null;
+            StringBuilder stackOut_4_1 = null;
             RuntimeException stackOut_6_0 = null;
             StringBuilder stackOut_6_1 = null;
-            RuntimeException stackOut_8_0 = null;
-            StringBuilder stackOut_8_1 = null;
-            String stackOut_8_2 = null;
-            RuntimeException stackOut_7_0 = null;
-            StringBuilder stackOut_7_1 = null;
-            String stackOut_7_2 = null;
+            String stackOut_6_2 = null;
+            RuntimeException stackOut_5_0 = null;
+            StringBuilder stackOut_5_1 = null;
+            String stackOut_5_2 = null;
             try {
               L0: {
                 try {
                   L1: {
-                    L2: {
-                      var4 = param1.getCodeBase();
-                      var3 = jg.a(param1, false, var4).getFile();
-                      Object discarded$6 = ll.a(param1, "updatelinks", new Object[2], -95);
-                      Object discarded$7 = ll.a(param1, "updatelinks", new Object[2], -65);
-                      Object discarded$8 = ll.a(param1, "updatelinks", new Object[2], -88);
-                      Object discarded$9 = ll.a(param1, "updatelinks", new Object[2], -118);
-                      Object discarded$10 = ll.a(param1, "updatelinks", new Object[2], param0 ^ 81);
-                      if (param0 == -1) {
-                        break L2;
-                      } else {
-                        field_w = null;
-                        break L2;
-                      }
-                    }
+                    var4 = param1.getCodeBase();
+                    var3 = jg.a(param1, false, var4).getFile();
+                    Object discarded$6 = ll.a(param1, "updatelinks", new Object[2], -95);
+                    Object discarded$7 = ll.a(param1, "updatelinks", new Object[2], -65);
+                    Object discarded$8 = ll.a(param1, "updatelinks", new Object[2], -88);
+                    Object discarded$9 = ll.a(param1, "updatelinks", new Object[2], -118);
+                    Object discarded$10 = ll.a(param1, "updatelinks", new Object[2], -82);
                     Object discarded$11 = ll.a(param1, "updatelinks", new Object[2], -104);
                     break L1;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
-                  L3: {
+                  L2: {
                     var2 = decompiledCaughtException;
-                    break L3;
+                    break L2;
                   }
                 }
                 break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L4: {
+              L3: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) var2_ref;
-                stackOut_6_1 = new StringBuilder().append("h.C(").append(param0).append(44);
-                stackIn_8_0 = stackOut_6_0;
-                stackIn_8_1 = stackOut_6_1;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
+                stackOut_4_0 = (RuntimeException) var2_ref;
+                stackOut_4_1 = new StringBuilder().append("h.C(").append(-1).append(44);
+                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_1 = stackOut_4_1;
+                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_1 = stackOut_4_1;
                 if (param1 == null) {
-                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-                  stackOut_8_2 = "null";
-                  stackIn_9_0 = stackOut_8_0;
-                  stackIn_9_1 = stackOut_8_1;
-                  stackIn_9_2 = stackOut_8_2;
-                  break L4;
+                  stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+                  stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+                  stackOut_6_2 = "null";
+                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_1 = stackOut_6_1;
+                  stackIn_7_2 = stackOut_6_2;
+                  break L3;
                 } else {
-                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-                  stackOut_7_2 = "{...}";
-                  stackIn_9_0 = stackOut_7_0;
-                  stackIn_9_1 = stackOut_7_1;
-                  stackIn_9_2 = stackOut_7_2;
-                  break L4;
+                  stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+                  stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+                  stackOut_5_2 = "{...}";
+                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_1 = stackOut_5_1;
+                  stackIn_7_2 = stackOut_5_2;
+                  break L3;
                 }
               }
-              throw r.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+              throw r.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

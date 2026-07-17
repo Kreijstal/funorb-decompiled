@@ -209,7 +209,7 @@ final class bf {
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_v = null;
         field_S = null;
         field_h = null;
@@ -580,7 +580,8 @@ final class bf {
                   } else {
                     L6: {
                       if (0 == (1 & ((bf) this).field_e)) {
-                        ((bf) this).field_f = gm.a(((bf) this).field_f, fb.field_c[((bf) this).field_Q], g.field_s[((bf) this).field_Q], ff.field_Q[((bf) this).field_Q][((bf) this).field_E], fk.field_t[((bf) this).field_Q], true);
+                        int discarded$1 = 1;
+                        ((bf) this).field_f = gm.a(((bf) this).field_f, fb.field_c[((bf) this).field_Q], g.field_s[((bf) this).field_Q], ff.field_Q[((bf) this).field_Q][((bf) this).field_E], fk.field_t[((bf) this).field_Q]);
                         break L6;
                       } else {
                         break L6;
@@ -723,6 +724,9 @@ final class bf {
                 }
             }
         }
+        if (param0 != -39) {
+            ((bf) this).field_i = null;
+        }
     }
 
     private final int f(byte param0) {
@@ -857,7 +861,7 @@ final class bf {
                                   if (var4 == 5) {
                                     L5: {
                                       if (0 == ((bf) this).field_V % 150) {
-                                        this.d(0);
+                                        this.d(param0 + 46);
                                         break L5;
                                       } else {
                                         break L5;
@@ -908,7 +912,7 @@ final class bf {
                                             if (((bf) this).field_V % this.b((byte) -119, ((bf) this).field_Q) != 0) {
                                               break L8;
                                             } else {
-                                              this.e(63);
+                                              this.e(param0 ^ -19);
                                               break L8;
                                             }
                                           }
@@ -918,11 +922,11 @@ final class bf {
                                               L10: {
                                                 if (3 != ((bf) this).field_J) {
                                                   this.d(0);
-                                                  this.g(-77);
+                                                  this.g(param0 + -31);
                                                   break L10;
                                                 } else {
                                                   if (0.5 <= Math.random()) {
-                                                    this.g(-91);
+                                                    this.g(param0 ^ 119);
                                                     break L10;
                                                   } else {
                                                     this.d(0);
@@ -969,7 +973,7 @@ final class bf {
                                                                 if (((bf) this).field_o >= 635.0) {
                                                                   break L0;
                                                                 } else {
-                                                                  this.e(63);
+                                                                  this.e(param0 ^ -19);
                                                                   break L0;
                                                                 }
                                                               }
@@ -982,7 +986,7 @@ final class bf {
                                                                     L13: {
                                                                       if (((bf) this).field_V % 300 == 0) {
                                                                         if (Math.random() >= 0.5) {
-                                                                          this.g(-33);
+                                                                          this.g(param0 ^ 13);
                                                                           break L13;
                                                                         } else {
                                                                           this.d(0);
@@ -994,7 +998,7 @@ final class bf {
                                                                     }
                                                                     L14: {
                                                                       if (((bf) this).field_V % this.b((byte) -123, ((bf) this).field_Q) <= 100) {
-                                                                        this.e(63);
+                                                                        this.e(param0 ^ -19);
                                                                         break L14;
                                                                       } else {
                                                                         break L14;
@@ -1029,7 +1033,7 @@ final class bf {
                                                                         if (0 != (1 & ((bf) this).field_V)) {
                                                                           break L0;
                                                                         } else {
-                                                                          this.e(63);
+                                                                          this.e(param0 + 109);
                                                                           break L0;
                                                                         }
                                                                       }
@@ -1064,7 +1068,7 @@ final class bf {
                                                             }
                                                             L17: {
                                                               if (0 == ((bf) this).field_V % this.b((byte) -127, ((bf) this).field_Q)) {
-                                                                this.e(63);
+                                                                this.e(param0 + 109);
                                                                 break L17;
                                                               } else {
                                                                 break L17;
@@ -1123,7 +1127,7 @@ final class bf {
                                       if (((bf) this).field_u != 0) {
                                         break L0;
                                       } else {
-                                        this.d(0);
+                                        this.d(param0 ^ -46);
                                         ((bf) this).field_u = -1;
                                         break L0;
                                       }
@@ -1222,7 +1226,7 @@ final class bf {
                     break L22;
                   } else {
                     ((bf) this).field_U = ((bf) this).field_U - 1;
-                    this.e(63);
+                    this.e(param0 ^ -19);
                     break L22;
                   }
                 }
@@ -1238,6 +1242,14 @@ final class bf {
             }
             ((bf) this).field_l = -oi.field_b[((bf) this).field_Q];
             break L0;
+          }
+          L24: {
+            if (param0 == -46) {
+              break L24;
+            } else {
+              ((bf) this).field_J = 51;
+              break L24;
+            }
           }
           return;
         } else {
@@ -1633,7 +1645,7 @@ final class bf {
                   L1: {
                     L2: {
                       var2 = param1.getDocumentBase().getFile();
-                      var3 = var2.indexOf((int) (char)param0);
+                      var3 = var2.indexOf('?');
                       var4 = "reload.ws";
                       if (var3 >= 0) {
                         var4 = var4 + var2.substring(var3);
@@ -1643,7 +1655,8 @@ final class bf {
                       }
                     }
                     var5 = new java.net.URL(param1.getCodeBase(), var4);
-                    param1.getAppletContext().showDocument(kk.a(var5, param1, param0 + 4767936), "_self");
+                    int discarded$2 = 4767999;
+                    param1.getAppletContext().showDocument(kk.a(var5, param1), "_self");
                     break L1;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -1661,7 +1674,7 @@ final class bf {
               L4: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_7_0 = (RuntimeException) var2_ref2;
-                stackOut_7_1 = new StringBuilder().append("bf.K(").append(param0).append(44);
+                stackOut_7_1 = new StringBuilder().append("bf.K(").append(63).append(44);
                 stackIn_9_0 = stackOut_7_0;
                 stackIn_9_1 = stackOut_7_1;
                 stackIn_8_0 = stackOut_7_0;
@@ -1983,9 +1996,6 @@ final class bf {
     }
 
     private final int a(byte param0, int param1) {
-        if (param0 != 79) {
-            return -10;
-        }
         return (int)(100.0 / cd.a((byte) 72));
     }
 
@@ -2418,7 +2428,7 @@ final class bf {
         }
     }
 
-    final static String a(long param0, byte param1) {
+    final static String a(long param0) {
         ae.field_ib.setTime(new Date(param0));
         int var3 = ae.field_ib.get(7);
         int var4 = ae.field_ib.get(5);
@@ -2622,7 +2632,7 @@ final class bf {
         int var12 = 0;
         L0: {
           var12 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-          var2 = 0;
+          var2 = 15 % ((param0 - -90) / 33);
           if (!((bf) this).field_C) {
             var7 = oi.field_b[((bf) this).field_Q];
             var5 = ff.field_N[((bf) this).field_Q];

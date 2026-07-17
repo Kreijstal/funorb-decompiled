@@ -65,7 +65,7 @@ final class ko {
             return;
         }
         sja.field_fb.c(94, (byte) 115);
-        int var2 = -5 / ((param1 - -18) / 51);
+        int var2 = 5;
         sja.field_fb.d(param0, 0);
     }
 
@@ -253,10 +253,7 @@ final class ko {
         return ((ko) this).field_b[fieldTemp$0];
     }
 
-    public static void a(byte param0) {
-        if (param0 >= -41) {
-            ko.a(35, (byte) -68);
-        }
+    public static void a() {
         field_h = null;
         field_g = null;
         field_f = null;

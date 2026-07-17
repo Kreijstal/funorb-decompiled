@@ -7,7 +7,7 @@ final class ja extends td {
     static eaa field_s;
     static boolean field_p;
 
-    public static void b(int param0) {
+    public static void b() {
         field_s = null;
         field_q = null;
         field_r = null;
@@ -19,56 +19,10 @@ final class ja extends td {
 
     final static String a(byte param0, boolean param1, boolean param2, boolean param3) {
         int var4 = 0;
-        if (param0 < -4) {
-          L0: {
-            var4 = 0;
-            if (param3) {
-              var4 += 4;
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          L1: {
-            if (param2) {
-              var4 += 2;
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          if (param1) {
-            var4++;
-            return ql.field_r[var4];
-          } else {
-            return ql.field_r[var4];
-          }
-        } else {
-          L2: {
-            field_q = null;
-            var4 = 0;
-            if (param3) {
-              var4 += 4;
-              break L2;
-            } else {
-              break L2;
-            }
-          }
-          L3: {
-            if (param2) {
-              var4 += 2;
-              break L3;
-            } else {
-              break L3;
-            }
-          }
-          if (!param1) {
-            return ql.field_r[var4];
-          } else {
-            var4++;
-            return ql.field_r[var4];
-          }
+        if (!(!param3)) {
+            var4 += 4;
         }
+        return ql.field_r[var4];
     }
 
     final ii a(op param0, int param1) {

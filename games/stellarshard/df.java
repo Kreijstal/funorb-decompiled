@@ -135,7 +135,7 @@ final class df implements uk {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_k = null;
         field_d = null;
         field_j = null;
@@ -225,7 +225,7 @@ final class df implements uk {
         }
     }
 
-    final static void c(int param0) {
+    final static void c() {
         RuntimeException var1 = null;
         int var2 = 0;
         ta var3 = null;
@@ -265,7 +265,8 @@ final class df implements uk {
                 }
               }
               if (var3 == null) {
-                oj.c(-2290);
+                int discarded$2 = -2290;
+                oj.c();
                 return;
               } else {
                 L3: {
@@ -348,7 +349,8 @@ final class df implements uk {
                             }
                           } else {
                             L10: {
-                              fe.a((ka) (Object) var16, 12726);
+                              int discarded$3 = 12726;
+                              fe.a((ka) (Object) var16);
                               if (var6_int != 0) {
                                 bg.a((byte) 79, rb.field_w, b.field_t, rc.field_h, ci.field_b, var6_int);
                                 break L10;

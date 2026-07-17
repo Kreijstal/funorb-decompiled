@@ -170,7 +170,7 @@ final class si {
         int var23 = 0;
         L0: {
           var8 = 16384 / (2 * param3 + 1);
-          var9 = 1 + param3 - param5 - param4;
+          var9 = 1 + param3 - param5;
           if (0 >= var9) {
             break L0;
           } else {
@@ -179,7 +179,7 @@ final class si {
           }
         }
         L1: {
-          var10 = field_e - param4 - param5 - param3;
+          var10 = field_e - param5 - param3;
           if (0 >= var10) {
             break L1;
           } else {
@@ -189,7 +189,7 @@ final class si {
         }
         L2: {
           var11 = 0;
-          var12 = param4 + param3 + 1;
+          var12 = param3 + 1;
           if (field_e >= var12) {
             break L2;
           } else {
@@ -209,7 +209,7 @@ final class si {
               var16 = 0;
               var17 = param2 - param3;
               var18 = var17 - (param3 << 1) - 1;
-              var19 = param4 - param3;
+              var19 = 0 - param3;
               if (var19 >= 0) {
                 break L4;
               } else {
@@ -366,7 +366,7 @@ final class si {
                   } else {
                     L18: {
                       var18++;
-                      if (param4 + param5 + var19 + param3 >= field_l) {
+                      if (param5 + var19 + param3 >= field_l) {
                         break L18;
                       } else {
                         param1 = param0[var17];
@@ -432,8 +432,8 @@ final class si {
           }
           L1: {
             var6 = param0 + param4;
-            var7 = param1 + param4;
-            var8 = param1;
+            var7 = 325 + param4;
+            var8 = 325;
             if (var8 >= field_j) {
               break L1;
             } else {
@@ -442,7 +442,7 @@ final class si {
             }
           }
           L2: {
-            var9 = param1 + param3;
+            var9 = 346;
             if (var9 <= field_a) {
               break L2;
             } else {
@@ -451,7 +451,7 @@ final class si {
             }
           }
           L3: {
-            var10 = param2 - param4 - param4 - 1;
+            var10 = 11 - param4 - param4 - 1;
             var11 = var8;
             var12 = param4 * param4;
             var13 = 0;
@@ -478,7 +478,7 @@ final class si {
                 }
               }
               L6: {
-                var18 = param0 + param2;
+                var18 = param0 + 11;
                 if (var18 <= field_l) {
                   break L6;
                 } else {
@@ -489,7 +489,7 @@ final class si {
               L7: {
                 var19 = var17 + var11 * field_e;
                 var20 = field_e + var17 - var18;
-                var21 = param1 + param3 - param4 - 1;
+                var21 = 346 - param4 - 1;
                 if (var21 <= field_a) {
                   break L7;
                 } else {
@@ -637,7 +637,7 @@ final class si {
             }
           }
         } else {
-          si.c(param0, param1, param2, param3, param5);
+          si.c(param0, 325, 11, 21, param5);
           return;
         }
     }
@@ -1711,8 +1711,8 @@ final class si {
     }
 
     final static void d(int param0, int param1, int param2, int param3, int param4, int param5) {
-        si.a(field_i, 0, param2 + param3 * field_e, param0, param2, param4, field_e - param4, param5);
-        si.a(field_i, 0, param2 + param3 * field_e, param1, param3, param5, field_e - param4, param2, param4);
+        si.a(field_i, 0, 0 * field_e, param0, 0, param4, field_e - param4, param5);
+        si.a(field_i, 0, 0 * field_e, param1, 0, param5, field_e - param4, 0, param4);
     }
 
     private final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int[] param8, int param9, int[] param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17) {
@@ -1850,7 +1850,7 @@ final class si {
           kf.a(var34, 0, param8);
           kf.a(var35, 0, param8);
           var12 = 16384 / (2 * param3 + 1);
-          var13 = param4 - param3;
+          var13 = 0 - param3;
           if (var13 >= 0) {
             break L2;
           } else {
@@ -1859,8 +1859,8 @@ final class si {
           }
         }
         L3: {
-          var14 = param7 + var13 * field_e;
-          var15 = param4 + param3;
+          var14 = var13 * field_e;
+          var15 = param3;
           var16 = 0;
           if (var15 < field_k) {
             break L3;
@@ -1880,7 +1880,7 @@ final class si {
                 L6: {
                   param2 = param2 + param6;
                   var13 = 1 - param5;
-                  var18 = 1 + param3 - param5 - param4;
+                  var18 = 1 + param3 - param5;
                   if (0 >= var18) {
                     break L6;
                   } else {
@@ -1889,7 +1889,7 @@ final class si {
                   }
                 }
                 L7: {
-                  var19 = param7 + (param4 - param3) * field_e;
+                  var19 = (0 - param3) * field_e;
                   if (var13 >= var18) {
                     break L7;
                   } else {
@@ -1900,7 +1900,7 @@ final class si {
                 L8: while (true) {
                   if (var13 >= var18) {
                     L9: {
-                      var18 = field_k - param4 - param5 - param3;
+                      var18 = field_k - param5 - param3;
                       if (0 >= var18) {
                         break L9;
                       } else {
@@ -2142,7 +2142,7 @@ final class si {
                     }
                   } else {
                     L26: {
-                      if (var13 + param4 + param5 + param3 >= field_a) {
+                      if (var13 + param5 + param3 >= field_a) {
                         var14 = var14 + field_e;
                         break L26;
                       } else {

@@ -92,7 +92,7 @@ final class hc extends ch implements om, vo {
         return "</col></u>";
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_M = null;
         field_L = null;
     }
@@ -252,7 +252,7 @@ final class hc extends ch implements om, vo {
         }
     }
 
-    private final String e(byte param0) {
+    private final String e() {
         return "<u=2164A2><col=2164A2>";
     }
 
@@ -698,6 +698,7 @@ final class hc extends ch implements om, vo {
             ((hc) this).field_O = param0;
             ((hc) this).field_K = new qm(vi.field_J, (fn) null);
             ((hc) this).field_K.field_y = (eb) (Object) new ad();
+            int discarded$1 = 62;
             var7 = sd.a(sl.field_e, 102, new String[2]);
             var3 = 20;
             var4 = new uc(he.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, he.field_d.field_w, -1, 2147483647, true);

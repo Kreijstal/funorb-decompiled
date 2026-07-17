@@ -8,16 +8,13 @@ final class oa extends IOException {
     static mk field_a;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
         field_a = null;
     }
 
-    final static void b(int param0) {
-        if (param0 != -16586) {
-            return;
-        }
+    final static void b() {
         uk.a(false, 17);
     }
 

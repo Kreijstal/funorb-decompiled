@@ -24,11 +24,9 @@ final class ae extends bp {
         bv var2 = vl.field_n;
         var2.h(32161, param1);
         var2.b(1, 2);
-        var2.b(param0 + -895, 4);
-        var2.b(1, gm.f(3));
-        if (param0 != 896) {
-            field_s = null;
-        }
+        var2.b(1, 4);
+        int discarded$0 = 3;
+        var2.b(1, gm.f());
     }
 
     final void a(Object param0, boolean param1, int param2) {
@@ -707,12 +705,9 @@ final class ae extends bp {
             vg.field_q[1].i();
             tr.field_z = param2;
             ac.field_m = vg.field_q[0].field_v;
-            if (param0 < 118) {
-                field_x = null;
-            }
             cm.field_b = vg.field_q[0].field_y;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "ae.N(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "ae.N(" + 125 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

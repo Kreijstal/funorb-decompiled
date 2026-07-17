@@ -36,7 +36,7 @@ final class tqa implements fo {
         ej.field_a.b(-42, 0, 0);
     }
 
-    private final void a(int param0, la param1, int param2, int param3, int param4) {
+    private final void a(int param0, la param1, int param2, int param3) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -82,7 +82,8 @@ final class tqa implements fo {
                     var6_int++;
                     continue L1;
                   } else {
-                    this.a(var6_int, new pca(), var7, 10);
+                    int discarded$6 = 10;
+                    this.a(var6_int, new pca(), var7);
                     var7++;
                     continue L2;
                   }
@@ -312,7 +313,8 @@ final class tqa implements fo {
         for (var3 = ((tqa) this).field_c; ((tqa) this).field_d > var3; var3++) {
             for (var4 = ((tqa) this).field_l; ((tqa) this).field_n > var4; var4++) {
                 var5 = var2[this.a((byte) 93, var4, -1 + -var3 + ((tqa) this).field_h)];
-                this.a(var3, var5, var4, 10);
+                int discarded$0 = 10;
+                this.a(var3, var5, var4);
                 var5.e(param0 + -64);
             }
         }
@@ -360,7 +362,7 @@ final class tqa implements fo {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_k = null;
         field_e = null;
     }
@@ -469,7 +471,7 @@ final class tqa implements fo {
         return 0;
     }
 
-    private final void a(int param0, pca param1, int param2, int param3) {
+    private final void a(int param0, pca param1, int param2) {
         int var5_int = 0;
         try {
             var5_int = this.a((byte) 113, param2, param0);
@@ -763,7 +765,8 @@ final class tqa implements fo {
 
     final void a(int param0, la param1, int param2) {
         try {
-            this.a(param0, param1, param1.m((byte) -86), param1.s(-125), 0);
+            int discarded$0 = 0;
+            this.a(param0, param1, param1.m((byte) -86), param1.s(-125));
             int var4_int = 17 / ((-78 - param2) / 43);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "tqa.U(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);

@@ -233,7 +233,8 @@ final class kd extends qe {
             }
             var1[var2] = new mg(oj.field_Kb, se.field_d, el.field_w[var2], mb.field_bb[var2], db.field_k[var2], gb.field_F[var2], var5);
         }
-        pe.b((byte) -28);
+        int discarded$0 = -28;
+        pe.b();
         return var1;
     }
 

@@ -106,7 +106,8 @@ final class of extends je {
               ((of) this).field_Yb = param1;
               ((of) this).field_cc = param2;
               var5 = (CharSequence) (Object) ((of) this).field_cc;
-              String discarded$3 = k.a(var5, false);
+              int discarded$6 = 0;
+              String discarded$7 = k.a(var5);
               if (param0 == 53) {
                 break L1;
               } else {
@@ -181,7 +182,8 @@ final class of extends je {
             ((of) this).field_cc = param0;
             ((of) this).field_Yb = param1;
             var6 = (CharSequence) (Object) ((of) this).field_cc;
-            String discarded$0 = k.a(var6, false);
+            int discarded$0 = 0;
+            String discarded$1 = k.a(var6);
         } catch (RuntimeException runtimeException) {
             throw ig.a((Throwable) (Object) runtimeException, "of.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }

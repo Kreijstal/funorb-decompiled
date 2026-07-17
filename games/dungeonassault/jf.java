@@ -11,8 +11,10 @@ final class jf extends en {
         field_f = null;
         field_e = null;
         field_g = null;
-        Object var2 = null;
-        cn discarded$0 = jf.a(18, (nh) null, -123, (byte) -39);
+        if (!param0) {
+            Object var2 = null;
+            cn discarded$0 = jf.a(18, (nh) null, -123, (byte) -39);
+        }
     }
 
     private final cn c(byte param0) {
@@ -64,7 +66,8 @@ final class jf extends en {
           L0: {
             if (param3 == 41) {
               if (kk.a(param1, 1, param2, param0)) {
-                stackOut_6_0 = ff.a((byte) 86);
+                int discarded$2 = 86;
+                stackOut_6_0 = ff.a();
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {

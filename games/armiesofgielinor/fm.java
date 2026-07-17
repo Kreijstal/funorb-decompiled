@@ -7,7 +7,7 @@ final class fm {
     static int[] field_d;
     static int field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         field_c = null;
@@ -80,34 +80,15 @@ final class fm {
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        Object var10 = null;
-        var3 = param0 >>> 24 & 255;
-        var4 = (-16777216 & param1) >>> 24;
-        if (param2 != 789485328) {
-          var10 = null;
-          fm.a((wk[]) null, 127, 84, -117, 90);
-          var5 = var3 + var4;
-          var6 = (((255 & param1 >> 16) * var4 + var3 * ((16711680 & param0) >> 16)) / var5 & 1697972479) << 16;
-          var7 = (-1660944129 & (((65280 & param1) >> 8) * var4 + var3 * ((65280 & param0) >> 8)) / var5) << 8;
-          var8 = (var4 * (param1 & 255) + (param0 & 255) * var3) / var5 & 255;
-          var9 = (-(var4 * var3 >> 8) + (var4 + var3) & 255) << 24;
-          return var7 | (var9 | var6) | var8;
-        } else {
-          var5 = var3 + var4;
-          var6 = (((255 & param1 >> 16) * var4 + var3 * ((16711680 & param0) >> 16)) / var5 & 1697972479) << 16;
-          var7 = (-1660944129 & (((65280 & param1) >> 8) * var4 + var3 * ((65280 & param0) >> 8)) / var5) << 8;
-          var8 = (var4 * (param1 & 255) + (param0 & 255) * var3) / var5 & 255;
-          var9 = (-(var4 * var3 >> 8) + (var4 + var3) & 255) << 24;
-          return var7 | (var9 | var6) | var8;
-        }
+    final static int a(int param0, int param1) {
+        int var3 = param0 >>> 24 & 255;
+        int var4 = (-16777216 & param1) >>> 24;
+        int var5 = var3 + var4;
+        int var6 = (((255 & param1 >> 16) * var4 + var3 * ((16711680 & param0) >> 16)) / var5 & 1697972479) << 16;
+        int var7 = (-1660944129 & (((65280 & param1) >> 8) * var4 + var3 * ((65280 & param0) >> 8)) / var5) << 8;
+        int var8 = (var4 * (param1 & 255) + (param0 & 255) * var3) / var5 & 255;
+        int var9 = (-(var4 * var3 >> 8) + (var4 + var3) & 255) << 24;
+        return var7 | (var9 | var6) | var8;
     }
 
     static {

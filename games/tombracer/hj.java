@@ -50,19 +50,14 @@ final class hj {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_e = null;
         field_d = null;
         field_b = null;
     }
 
     private final int a(byte param0, int param1, int param2) {
-        if (param0 != -37) {
-          field_d = null;
-          return param2 + ((hj) this).field_f * param1;
-        } else {
-          return param2 + ((hj) this).field_f * param1;
-        }
+        return param2 + ((hj) this).field_f * param1;
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -91,7 +86,7 @@ final class hj {
         }
     }
 
-    final static void a(eua param0, byte param1) {
+    final static void a(eua param0) {
         try {
             rua.field_gb.b(-127, (jea) (Object) param0);
         } catch (RuntimeException runtimeException) {

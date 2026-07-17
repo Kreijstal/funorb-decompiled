@@ -308,7 +308,8 @@ final class vh extends t {
           L0: {
             L1: {
               var2_int = -111 / ((-67 - param1) / 48);
-              ni.a((java.awt.Component) (Object) param0, (byte) -124);
+              int discarded$6 = -124;
+              ni.a((java.awt.Component) (Object) param0);
               ac.a(-117, (java.awt.Component) (Object) param0);
               if (null == eb.field_A) {
                 break L1;
@@ -377,7 +378,7 @@ final class vh extends t {
         }
     }
 
-    final static boolean c(byte param0) {
+    final static boolean c() {
         return si.field_o != null && null != si.field_o.j(-50);
     }
 

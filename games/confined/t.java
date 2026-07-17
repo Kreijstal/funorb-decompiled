@@ -362,8 +362,8 @@ final class t {
         int var14 = 0;
         int var15 = 0;
         Throwable decompiledCaughtException = null;
-        field_j = param0;
-        field_i = param1;
+        field_j = 0;
+        field_i = 2;
         field_e = param2;
         field_k = param6;
         field_t = param7;
@@ -376,7 +376,9 @@ final class t {
           if (var12_int >= 3) {
             try {
               L1: {
-                t.a(var11 != 0, false, 0);
+                int discarded$2 = 0;
+                int discarded$3 = 0;
+                t.a(var11 != 0);
                 break L1;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -411,7 +413,7 @@ final class t {
         }
     }
 
-    private final static void a(boolean param0, boolean param1, int param2) {
+    private final static void a(boolean param0) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;

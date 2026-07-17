@@ -282,7 +282,7 @@ final class fc {
                 }
               }
               var4 = param2.getGraphics();
-              hl.field_b.a(var4, -29402, param1, 0);
+              hl.field_b.a(var4, -29402, param1, param3);
               var4.dispose();
               break L0;
             }
@@ -321,7 +321,7 @@ final class fc {
               break L2;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 0 + 41);
+          throw bd.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param3 + 41);
         }
     }
 

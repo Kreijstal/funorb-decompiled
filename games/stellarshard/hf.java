@@ -40,13 +40,14 @@ final class hf extends sk {
         }
     }
 
-    final static void a(fk param0, int param1, int param2) {
+    final static void a(fk param0, int param1) {
         if (param1 <= 1) {
             return;
         }
         try {
             ib.field_c.b(-45, (gg) (Object) param0);
-            th.a(5, param0, 1);
+            int discarded$0 = 1;
+            th.a(5, param0);
         } catch (RuntimeException runtimeException) {
             throw ma.a((Throwable) (Object) runtimeException, "hf.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 5 + 41);
         }
@@ -127,21 +128,11 @@ final class hf extends sk {
         return (java.applet.Applet) (Object) bc.field_j;
     }
 
-    public static void b(int param0) {
-        if (param0 != -27159) {
-          hf.c(-14);
-          field_j = null;
-          field_e = null;
-          field_i = null;
-          field_g = null;
-          return;
-        } else {
-          field_j = null;
-          field_e = null;
-          field_i = null;
-          field_g = null;
-          return;
-        }
+    public static void b() {
+        field_j = null;
+        field_e = null;
+        field_i = null;
+        field_g = null;
     }
 
     final ua a(int param0) {
@@ -161,7 +152,7 @@ final class hf extends sk {
         }
     }
 
-    final static boolean a(int param0, boolean param1, int param2, byte param3) {
+    final static boolean a(int param0, boolean param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         int stackIn_33_0 = 0;

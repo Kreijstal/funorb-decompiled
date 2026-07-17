@@ -9,7 +9,7 @@ final class l {
     static String field_a;
     static long[] field_d;
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_e = null;
         field_f = null;
@@ -54,7 +54,7 @@ final class l {
                 var2_int = 0;
                 L2: while (true) {
                   if (var2_int >= oh.field_c) {
-                    var3 = 98 / ((param0 - 45) / 34);
+                    var3 = -49;
                     int dupTemp$5 = param1.a((byte) -94);
                     ef.field_i[dupTemp$5] = ef.field_i[dupTemp$5] + 1;
                     var2_int = 0;
@@ -118,7 +118,7 @@ final class l {
           L7: {
             var2 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var2;
-            stackOut_20_1 = new StringBuilder().append("l.C(").append(param0).append(44);
+            stackOut_20_1 = new StringBuilder().append("l.C(").append(-54).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -146,9 +146,6 @@ final class l {
     }
 
     final static void a(int param0, byte param1, int param2) {
-        if (param1 < 126) {
-            field_d = null;
-        }
         bi.field_h = param2;
         uf.field_a = param0;
     }
@@ -175,7 +172,8 @@ final class l {
         try {
           L0: {
             L1: {
-              eb.a((java.awt.Component) (Object) param1, (byte) -105);
+              int discarded$8 = -105;
+              eb.a((java.awt.Component) (Object) param1);
               fb.a((java.awt.Component) (Object) param1, (byte) -42);
               if (null != hg.field_k) {
                 hg.field_k.a((java.awt.Component) (Object) param1, false);

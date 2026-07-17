@@ -174,9 +174,6 @@ final class h extends ee {
     final static void a(byte param0, boolean param1) {
         ac.a(false);
         lc.field_J = null;
-        if (param0 != -6) {
-            h.l(95);
-        }
         oj.field_B = 0;
         hc.field_u = hk.field_f;
         bg.field_f = 0;
@@ -422,7 +419,7 @@ final class h extends ee {
         return ((h) this).field_ab.a(param0 ^ 14170, false, param1, param2);
     }
 
-    final static void m(int param0) {
+    final static void m() {
         int var1 = 0;
         int var2 = 0;
         L0: {
@@ -436,20 +433,23 @@ final class h extends ee {
             var1 = oi.field_q;
             if (var1 <= 0) {
               ki.field_c.n(10);
-              bn.c(0);
+              int discarded$57 = 0;
+              bn.c();
               break L0;
             } else {
               if (var1 == 1) {
                 cb.field_b = jc.field_b;
                 cb.field_b = pf.a(11739, new CharSequence[3]);
                 ki.field_c.n(10);
-                bn.c(0);
+                int discarded$58 = 0;
+                bn.c();
                 break L0;
               } else {
                 cb.field_b = b.a(new String[1], gj.field_g, 1177);
                 cb.field_b = pf.a(11739, new CharSequence[3]);
                 ki.field_c.n(10);
-                bn.c(0);
+                int discarded$59 = 0;
+                bn.c();
                 break L0;
               }
             }
@@ -468,10 +468,7 @@ final class h extends ee {
         kc.a(db.field_u, (pm) this, param0 + -26281, false);
     }
 
-    public static void l(int param0) {
-        if (param0 != 0) {
-            return;
-        }
+    public static void l() {
         field_Y = null;
         field_V = null;
         field_R = null;

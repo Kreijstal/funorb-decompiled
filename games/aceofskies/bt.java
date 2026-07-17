@@ -8,7 +8,7 @@ final class bt {
     static String field_b;
     static String field_c;
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_c = null;
         int var1 = 0;
@@ -16,29 +16,18 @@ final class bt {
     }
 
     final static String a(boolean param0, long param1) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         qs.field_a.setTime(new Date(param1));
-        var3 = qs.field_a.get(7);
-        var4 = qs.field_a.get(5);
-        var5 = qs.field_a.get(2);
-        if (param0) {
-          return null;
-        } else {
-          var6 = qs.field_a.get(1);
-          var7 = qs.field_a.get(11);
-          var8 = qs.field_a.get(12);
-          var9 = qs.field_a.get(13);
-          return jc.field_Rc[var3 + -1] + ", " + var4 / 10 + var4 % 10 + "-" + fk.field_b[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
-        }
+        int var3 = qs.field_a.get(7);
+        int var4 = qs.field_a.get(5);
+        int var5 = qs.field_a.get(2);
+        int var6 = qs.field_a.get(1);
+        int var7 = qs.field_a.get(11);
+        int var8 = qs.field_a.get(12);
+        int var9 = qs.field_a.get(13);
+        return jc.field_Rc[var3 + -1] + ", " + var4 / 10 + var4 % 10 + "-" + fk.field_b[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
-    final static void a(int param0) {
+    final static void a() {
         if (null != ml.field_m) {
           ml.field_m.h((byte) -23);
           fd.field_f = new ep();

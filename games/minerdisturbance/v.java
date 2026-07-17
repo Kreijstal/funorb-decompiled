@@ -23,7 +23,7 @@ final class v implements uj {
         return "Add Bones";
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_d = null;
         field_b = null;
         field_a = null;

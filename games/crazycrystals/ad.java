@@ -15,7 +15,7 @@ final class ad extends um {
         ((ad) this).field_g = 0;
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_k = null;
         field_j = null;
         field_h = null;

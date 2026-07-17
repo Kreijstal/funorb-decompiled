@@ -58,7 +58,8 @@ final class npa {
                   } else {
                     var5.p(100);
                     var5.c(-7975);
-                    ft.a(var5, -201);
+                    int discarded$4 = -201;
+                    ft.a(var5);
                     break L3;
                   }
                 }
@@ -173,7 +174,7 @@ final class npa {
         return stackIn_4_0;
     }
 
-    private final ffa[] a(int param0, int param1, int param2, int param3, int param4) {
+    private final ffa[] a(int param0, int param1, int param2, int param3) {
         int var6 = 0;
         int var7 = 0;
         q var8 = null;
@@ -186,7 +187,8 @@ final class npa {
         ((npa) this).field_d = 0;
         L0: while (true) {
           if (((npa) this).field_b.field_d) {
-            return this.b(0);
+            int discarded$3 = 0;
+            return this.b();
           } else {
             var6 = ((npa) this).field_b.b((byte) 75);
             var7 = ((npa) this).field_b.b(2);
@@ -218,13 +220,14 @@ final class npa {
                         }
                       }
                       if (var9 != 0) {
-                        int fieldTemp$1 = ((npa) this).field_d;
+                        int fieldTemp$4 = ((npa) this).field_d;
                         ((npa) this).field_d = ((npa) this).field_d + 1;
-                        ((npa) this).field_a[fieldTemp$1] = var8.a((byte) -96);
+                        ((npa) this).field_a[fieldTemp$4] = var8.a((byte) -96);
                         if (((npa) this).field_a.length > ((npa) this).field_d) {
                           break L2;
                         } else {
-                          return this.b(0);
+                          int discarded$5 = 0;
+                          return this.b();
                         }
                       } else {
                         break L2;
@@ -262,75 +265,69 @@ final class npa {
         ffa var14 = null;
         int var15 = 0;
         int var16 = 0;
-        L0: {
-          var16 = TombRacer.field_G ? 1 : 0;
-          var6 = this.a(2, param1);
-          if (param3 < -46) {
-            break L0;
-          } else {
-            ((npa) this).field_i = -110;
-            break L0;
-          }
-        }
+        var16 = TombRacer.field_G ? 1 : 0;
+        var6 = this.a(2, param1);
         var7 = this.a(2, param4);
         var8 = this.a(2, param0);
         var9 = this.a(2, param2);
         ((npa) this).field_d = 0;
         var10 = var6;
-        L1: while (true) {
+        L0: while (true) {
           if (var8 < var10) {
-            return this.b(0);
+            int discarded$3 = 0;
+            return this.b();
           } else {
             var11 = var7;
-            L2: while (true) {
+            L1: while (true) {
               if (var11 > var9) {
                 var10++;
-                continue L1;
+                continue L0;
               } else {
                 var12 = (q) (Object) ((npa) this).field_h.a((byte) -80, (long)ira.a(var10, var11, (byte) -124));
-                L3: while (true) {
+                L2: while (true) {
                   if (var12 != null) {
-                    L4: {
+                    L3: {
                       if (var12.a(var10, var11, true)) {
                         var13 = 1;
                         var14 = var12.a((byte) -75);
                         var15 = 0;
-                        L5: while (true) {
-                          L6: {
+                        L4: while (true) {
+                          L5: {
                             if (var15 >= ((npa) this).field_d) {
-                              break L6;
+                              break L5;
                             } else {
                               if (((npa) this).field_a[var15] == var14) {
                                 var13 = 0;
-                                break L6;
+                                break L5;
                               } else {
                                 var15++;
-                                continue L5;
+                                continue L4;
                               }
                             }
                           }
                           if (var13 != 0) {
-                            int fieldTemp$1 = ((npa) this).field_d;
+                            int fieldTemp$4 = ((npa) this).field_d;
                             ((npa) this).field_d = ((npa) this).field_d + 1;
-                            ((npa) this).field_a[fieldTemp$1] = var12.a((byte) -71);
+                            ((npa) this).field_a[fieldTemp$4] = var12.a((byte) -71);
                             if (((npa) this).field_d < ((npa) this).field_a.length) {
-                              break L4;
+                              break L3;
                             } else {
-                              return this.b(0);
+                              int discarded$5 = 0;
+                              return this.b();
                             }
                           } else {
-                            break L4;
+                            break L3;
                           }
                         }
                       } else {
-                        break L4;
+                        break L3;
                       }
                     }
                     var12 = (q) (Object) ((npa) this).field_h.b(-106);
-                    continue L3;
+                    continue L2;
                   } else {
                     var11++;
-                    continue L2;
+                    continue L1;
                   }
                 }
               }
@@ -339,14 +336,11 @@ final class npa {
         }
     }
 
-    public static void c(int param0) {
-        if (param0 != -2147483648) {
-            return;
-        }
+    public static void c() {
         field_f = null;
     }
 
-    private final ffa[] b(int param0) {
+    private final ffa[] b() {
         ffa[] var2 = new ffa[((npa) this).field_d];
         lua.a((Object[]) (Object) ((npa) this).field_a, 0, (Object[]) (Object) var2, 0, ((npa) this).field_d);
         return var2;
@@ -401,7 +395,8 @@ final class npa {
                       if (!((npa) this).field_g) {
                         var9 = (q) (Object) ((npa) this).field_e.a(-121, (long)param0.a(true));
                         if (var9 == null) {
-                          var10 = vw.a(var7, param0, var8, true);
+                          int discarded$1 = 1;
+                          var10 = vw.a(var7, param0, var8);
                           ((npa) this).field_e.a(param1 ^ -7074, (od) (Object) var10, (long)param0.a(true));
                           ((npa) this).field_h.a((long)var10.hashCode(), 115, (vg) (Object) var10);
                           var8++;
@@ -498,7 +493,8 @@ final class npa {
                 break L1;
               }
             }
-            stackOut_2_0 = this.a(param0.field_e, param0.field_d, param0.field_k, param0.field_a, 0);
+            int discarded$2 = 0;
+            stackOut_2_0 = this.a(param0.field_e, param0.field_d, param0.field_k, param0.field_a);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -580,7 +576,8 @@ final class npa {
                     if (!var8.a(var7, var6, var4, var3_int, -98)) {
                       var8.p(104);
                       var8.c(-7975);
-                      ft.a(var8, -201);
+                      int discarded$1 = -201;
+                      ft.a(var8);
                       break L2;
                     } else {
                       break L2;
@@ -624,7 +621,7 @@ final class npa {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         return wt.field_d == gsa.field_y;
     }
 

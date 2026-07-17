@@ -12,79 +12,71 @@ final class sc extends wl {
     static jk field_m;
     static String field_l;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_l = null;
         field_i = null;
         field_o = null;
         field_m = null;
     }
 
-    final static kl a(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5) {
+    final static kl a(int param0, int param1, int param2, boolean param3, boolean param4) {
         try {
             Object var6 = null;
             Object var7 = null;
             fh var8 = null;
-            kl stackIn_14_0 = null;
+            kl stackIn_12_0 = null;
             Throwable decompiledCaughtException = null;
-            kl stackOut_13_0 = null;
+            kl stackOut_11_0 = null;
             try {
               L0: {
                 L1: {
-                  if (param1 == 12000) {
-                    break L1;
-                  } else {
-                    String discarded$2 = sc.a((byte) -101, 's');
-                    break L1;
-                  }
-                }
-                L2: {
                   var6 = null;
                   var7 = null;
                   if (vk.field_p.field_m == null) {
-                    break L2;
+                    break L1;
                   } else {
                     ld.field_e = new si(vk.field_p.field_m, 5200, 0);
                     vk.field_p.field_m = null;
                     var6 = (Object) (Object) new sg(255, ld.field_e, new si(vk.field_p.field_i, 12000, 0), 2097152);
-                    break L2;
+                    break L1;
                   }
                 }
-                L3: {
+                L2: {
                   if (ld.field_e == null) {
-                    break L3;
+                    break L2;
                   } else {
-                    L4: {
+                    L3: {
                       if (null != sl.field_o) {
-                        break L4;
+                        break L3;
                       } else {
                         sl.field_o = new si[vk.field_p.field_f.length];
-                        break L4;
+                        break L3;
                       }
                     }
-                    L5: {
+                    L4: {
                       if (sl.field_o[param0] == null) {
                         sl.field_o[param0] = new si(vk.field_p.field_f[param0], 12000, 0);
                         vk.field_p.field_f[param0] = null;
-                        break L5;
+                        break L4;
                       } else {
-                        break L5;
+                        break L4;
                       }
                     }
                     var7 = (Object) (Object) new sg(param0, ld.field_e, sl.field_o[param0], 2097152);
-                    break L3;
+                    break L2;
                   }
                 }
-                L6: {
-                  var8 = wi.field_L.a(param3, param1 + -11928, (sg) var7, param0, (sg) var6);
+                L5: {
+                  var8 = wi.field_L.a(false, 72, (sg) var7, param0, (sg) var6);
                   if (!param4) {
-                    break L6;
+                    break L5;
                   } else {
                     var8.a((byte) -98);
-                    break L6;
+                    break L5;
                   }
                 }
-                stackOut_13_0 = new kl((hl) (Object) var8, param5, param2);
-                stackIn_14_0 = stackOut_13_0;
+                stackOut_11_0 = new kl((hl) (Object) var8, true, param2);
+                stackIn_12_0 = stackOut_11_0;
                 break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -92,7 +84,7 @@ final class sc extends wl {
               var6 = (Object) (Object) decompiledCaughtException;
               throw new RuntimeException(((IOException) var6).toString());
             }
-            return stackIn_14_0;
+            return stackIn_12_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -132,54 +124,58 @@ final class sc extends wl {
         var4 = wizardrun.field_H;
         try {
           L0: {
-            if (null != param0.field_h) {
-              L1: {
-                L2: {
-                  if (param0.field_c != 0) {
-                    break L2;
-                  } else {
-                    if (param0.field_d != 0) {
+            if (!param1) {
+              if (null != param0.field_h) {
+                L1: {
+                  L2: {
+                    if (param0.field_c != 0) {
                       break L2;
                     } else {
-                      break L1;
+                      if (param0.field_d != 0) {
+                        break L2;
+                      } else {
+                        break L1;
+                      }
                     }
                   }
-                }
-                var2_int = 0;
-                L3: while (true) {
-                  if (ca.field_e <= var2_int) {
-                    break L1;
-                  } else {
-                    L4: {
-                      var3 = mi.field_B[var2_int];
-                      if (var3.field_i != 2) {
-                        break L4;
-                      } else {
-                        if (param0.field_c != var3.field_c) {
+                  var2_int = 0;
+                  L3: while (true) {
+                    if (ca.field_e <= var2_int) {
+                      break L1;
+                    } else {
+                      L4: {
+                        var3 = mi.field_B[var2_int];
+                        if (var3.field_i != 2) {
                           break L4;
                         } else {
-                          if (var3.field_d != param0.field_d) {
+                          if (param0.field_c != var3.field_c) {
                             break L4;
                           } else {
-                            return;
+                            if (var3.field_d != param0.field_d) {
+                              break L4;
+                            } else {
+                              return;
+                            }
                           }
                         }
                       }
+                      var2_int++;
+                      continue L3;
                     }
-                    var2_int++;
-                    continue L3;
                   }
                 }
-              }
-              L5: {
-                if (param0.field_l != null) {
-                  break L5;
-                } else {
-                  break L5;
+                L5: {
+                  if (param0.field_l != null) {
+                    break L5;
+                  } else {
+                    break L5;
+                  }
                 }
+                ia.a(0, param0);
+                break L0;
+              } else {
+                return;
               }
-              ia.a(0, param0);
-              break L0;
             } else {
               return;
             }
@@ -212,7 +208,7 @@ final class sc extends wl {
               break L6;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + 0 + 41);
+          throw bd.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param1 + 41);
         }
     }
 

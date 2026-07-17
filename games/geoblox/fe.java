@@ -16,7 +16,7 @@ final class fe {
     static int field_g;
     static float field_c;
 
-    public static void c(int param0) {
+    public static void c() {
         field_h = null;
         int var1 = 0;
         field_j = null;
@@ -165,7 +165,7 @@ final class fe {
         }
     }
 
-    final static int b(int param0) {
+    final static int b() {
         return qe.field_a;
     }
 
@@ -182,7 +182,7 @@ final class fe {
         this(-1, 1000000, 1000000);
     }
 
-    final static nd a(String param0, boolean param1) {
+    final static nd a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;
@@ -233,7 +233,8 @@ final class fe {
                   var5 = 0;
                   L1: while (true) {
                     if (var4.length <= var5) {
-                      stackOut_20_0 = mj.a(var3[-1 + var3.length], (byte) -97);
+                      int discarded$2 = -97;
+                      stackOut_20_0 = mj.a(var3[-1 + var3.length]);
                       stackIn_21_0 = stackOut_20_0;
                       break L0;
                     } else {

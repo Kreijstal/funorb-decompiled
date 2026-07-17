@@ -13,7 +13,7 @@ final class gd {
         field_a = null;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         if (!(null != va.field_d)) {
             va.field_d = new bi[]{lg.a(0, qq.field_w[0]), lg.a(0, qq.field_w[1])};
         }
@@ -22,7 +22,8 @@ final class gd {
         wc.a(-27030, di.field_m << 1, -va.field_d[0].field_z + 640 >> 1, va.field_d[0], var1, 256);
         wc.a(-27030, -128 + (di.field_m << 1), -va.field_d[1].field_z + 640 >> 1, va.field_d[1], var1 - -va.field_d[1].field_w, 256);
         int var2 = hp.field_n.a("intro", (byte) 53);
-        kl.a((byte) 73, 455, 15, 16711680, 10, var2, 100);
+        int discarded$0 = 100;
+        kl.a((byte) 73, 455, 15, 16711680, 10, var2);
     }
 
     final static void a(int param0, int param1) {
@@ -32,15 +33,12 @@ final class gd {
         var2.c(0, (byte) -78);
     }
 
-    final static void a(lq param0, int param1, int param2) {
+    final static void a(lq param0) {
         try {
             rs.field_Bb.a((byte) -113, (oh) (Object) param0);
-            if (param1 != 1500005281) {
-                gd.b(66);
-            }
             wj.a(320, 4, param0);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "gd.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 4 + 41);
+            throw r.a((Throwable) (Object) runtimeException, "gd.D(" + (param0 != null ? "{...}" : "null") + 44 + 1500005281 + 44 + 4 + 41);
         }
     }
 

@@ -174,46 +174,38 @@ final class wb extends w {
                 break L5;
               } else {
                 if (param2 > 0) {
-                  L6: {
-                    var6_int = param3 * hk.field_j + param1;
-                    if (param0 == 31) {
-                      break L6;
-                    } else {
-                      field_Qb = null;
-                      break L6;
-                    }
-                  }
+                  var6_int = param3 * hk.field_j + param1;
                   var7 = -param5 + hk.field_j;
                   param3 = -param2;
-                  L7: while (true) {
+                  L6: while (true) {
                     if (param3 >= 0) {
                       break L0;
                     } else {
                       param1 = -param5;
-                      L8: while (true) {
+                      L7: while (true) {
                         if (param1 >= 0) {
                           var6_int = var6_int + var7;
                           param3++;
-                          continue L7;
+                          continue L6;
                         } else {
                           var8 = hk.field_l[var6_int];
-                          if ((65280 & var8) >> 8 <= param4) {
+                          if ((65280 & var8) >> 8 <= 64) {
                             var6_int++;
                             param1++;
-                            continue L8;
+                            continue L7;
                           } else {
                             if (~(255 & var8 >> 16) < ~(var8 >> 8 & 255)) {
                               var6_int++;
                               param1++;
-                              continue L8;
+                              continue L7;
                             } else {
-                              L9: {
+                              L8: {
                                 var9 = ((16711680 & var8) >> 15) - 60;
                                 if (var9 > 255) {
                                   var9 = 255;
-                                  break L9;
+                                  break L8;
                                 } else {
-                                  break L9;
+                                  break L8;
                                 }
                               }
                               var10 = var8 & 65280;
@@ -222,7 +214,7 @@ final class wb extends w {
                               hk.field_l[var6_int] = de.b(var11, de.b(var9 << 16, var10));
                               var6_int++;
                               param1++;
-                              continue L8;
+                              continue L7;
                             }
                           }
                         }
@@ -239,11 +231,11 @@ final class wb extends w {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var6, "wb.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw dh.a((Throwable) (Object) var6, "wb.A(" + 31 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + 64 + 44 + param5 + 41);
         }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_Qb = null;
         field_Zb = null;
         field_Nb = null;

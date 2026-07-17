@@ -13,7 +13,7 @@ final class dq extends av {
     static boolean field_e;
     static String field_h;
 
-    final static void a(int param0, int param1) {
+    final static void a() {
         gn var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -22,34 +22,30 @@ final class dq extends av {
         var3 = Kickabout.field_G;
         try {
           L0: {
-            if (param0 == -1) {
-              var4 = (mp) (Object) le.field_d.g(24009);
-              L1: while (true) {
-                if (var4 == null) {
-                  var2 = ci.field_f.g(24009);
-                  L2: while (true) {
-                    if (var2 == null) {
-                      break L0;
-                    } else {
-                      pt.a(true, 6);
-                      var2 = ci.field_f.c(33);
-                      continue L2;
-                    }
+            var4 = (mp) (Object) le.field_d.g(24009);
+            L1: while (true) {
+              if (var4 == null) {
+                var2 = ci.field_f.g(24009);
+                L2: while (true) {
+                  if (var2 == null) {
+                    break L0;
+                  } else {
+                    pt.a(true, 6);
+                    var2 = ci.field_f.c(33);
+                    continue L2;
                   }
-                } else {
-                  aa.a((byte) 20, 6, var4);
-                  var4 = (mp) (Object) le.field_d.c(33);
-                  continue L1;
                 }
+              } else {
+                aa.a((byte) 20, 6, var4);
+                var4 = (mp) (Object) le.field_d.c(33);
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var2_ref, "dq.J(" + param0 + 44 + 6 + 41);
+          throw nb.a((Throwable) (Object) var2_ref, "dq.J(" + -1 + 44 + 6 + 41);
         }
     }
 
@@ -145,7 +141,7 @@ final class dq extends av {
         return stackIn_9_0;
     }
 
-    final static void a(bu param0, java.awt.Frame param1, int param2) {
+    final static void a(bu param0, java.awt.Frame param1) {
         wu var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -530,93 +526,85 @@ final class dq extends av {
         Class var14 = null;
         java.net.Socket stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        Object stackIn_8_0 = null;
-        java.net.Socket stackIn_18_0 = null;
-        Object stackIn_22_0 = null;
+        java.net.Socket stackIn_16_0 = null;
+        Object stackIn_20_0 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        String stackIn_27_2 = null;
+        String stackIn_25_2 = null;
         Throwable decompiledCaughtException = null;
-        Object stackOut_21_0 = null;
-        java.net.Socket stackOut_17_0 = null;
-        Object stackOut_7_0 = null;
+        Object stackOut_19_0 = null;
+        java.net.Socket stackOut_15_0 = null;
         Object stackOut_4_0 = null;
         java.net.Socket stackOut_1_0 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
         RuntimeException stackOut_24_0 = null;
         StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
+        String stackOut_24_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
         try {
           L0: {
             if (param1.type() != java.net.Proxy.Type.DIRECT) {
               var3_ref = param1.address();
               if ((Object) var3_ref instanceof java.net.InetSocketAddress) {
-                if (param0) {
-                  var4_ref = (java.net.InetSocketAddress) (Object) var3_ref;
-                  if (param1.type() != java.net.Proxy.Type.HTTP) {
-                    if (param1.type() == java.net.Proxy.Type.SOCKS) {
-                      var5 = (Object) (Object) new java.net.Socket(param1);
-                      ((java.net.Socket) var5).connect((java.net.SocketAddress) (Object) new java.net.InetSocketAddress(((dq) this).field_c, ((dq) this).field_a));
-                      stackOut_21_0 = var5;
-                      stackIn_22_0 = stackOut_21_0;
-                      break L0;
-                    } else {
-                      return null;
-                    }
+                var4_ref = (java.net.InetSocketAddress) (Object) var3_ref;
+                if (param1.type() != java.net.Proxy.Type.HTTP) {
+                  if (param1.type() == java.net.Proxy.Type.SOCKS) {
+                    var5 = (Object) (Object) new java.net.Socket(param1);
+                    ((java.net.Socket) var5).connect((java.net.SocketAddress) (Object) new java.net.InetSocketAddress(((dq) this).field_c, ((dq) this).field_a));
+                    stackOut_19_0 = var5;
+                    stackIn_20_0 = stackOut_19_0;
+                    break L0;
                   } else {
-                    var5 = null;
-                    try {
-                      L1: {
-                        L2: {
-                          var14 = Class.forName("sun.net.www.protocol.http.AuthenticationInfo");
-                          var6_ref = var14;
-                          var7 = var14.getDeclaredMethod("getProxyAuth", new Class[2]);
-                          var7.setAccessible(true);
-                          var8 = var7.invoke((Object) null, new Object[2]);
-                          if (var8 == null) {
-                            break L2;
-                          } else {
-                            var9 = var6_ref.getDeclaredMethod("supportsPreemptiveAuthorization", new Class[0]);
-                            var9.setAccessible(true);
-                            if (((Boolean) var9.invoke(var8, new Object[0])).booleanValue()) {
-                              var10 = var6_ref.getDeclaredMethod("getHeaderName", new Class[0]);
-                              var10.setAccessible(true);
-                              var11 = var14.getDeclaredMethod("getHeaderValue", new Class[2]);
-                              var11.setAccessible(true);
-                              var12 = (String) var10.invoke(var8, new Object[0]);
-                              var13 = (String) var11.invoke(var8, new Object[2]);
-                              var5 = (Object) (Object) (var12 + ": " + var13);
-                              break L2;
-                            } else {
-                              break L2;
-                            }
-                          }
-                        }
-                        break L1;
-                      }
-                    } catch (java.lang.Exception decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      L3: {
-                        var6 = (Exception) (Object) decompiledCaughtException;
-                        break L3;
-                      }
-                    }
-                    stackOut_17_0 = this.a((byte) 125, var4_ref.getPort(), (String) var5, var4_ref.getHostName());
-                    stackIn_18_0 = stackOut_17_0;
-                    return stackIn_18_0;
+                    return null;
                   }
                 } else {
-                  stackOut_7_0 = null;
-                  stackIn_8_0 = stackOut_7_0;
-                  return (java.net.Socket) (Object) stackIn_8_0;
+                  var5 = null;
+                  try {
+                    L1: {
+                      L2: {
+                        var14 = Class.forName("sun.net.www.protocol.http.AuthenticationInfo");
+                        var6_ref = var14;
+                        var7 = var14.getDeclaredMethod("getProxyAuth", new Class[2]);
+                        var7.setAccessible(true);
+                        var8 = var7.invoke((Object) null, new Object[2]);
+                        if (var8 == null) {
+                          break L2;
+                        } else {
+                          var9 = var6_ref.getDeclaredMethod("supportsPreemptiveAuthorization", new Class[0]);
+                          var9.setAccessible(true);
+                          if (((Boolean) var9.invoke(var8, new Object[0])).booleanValue()) {
+                            var10 = var6_ref.getDeclaredMethod("getHeaderName", new Class[0]);
+                            var10.setAccessible(true);
+                            var11 = var14.getDeclaredMethod("getHeaderValue", new Class[2]);
+                            var11.setAccessible(true);
+                            var12 = (String) var10.invoke(var8, new Object[0]);
+                            var13 = (String) var11.invoke(var8, new Object[2]);
+                            var5 = (Object) (Object) (var12 + ": " + var13);
+                            break L2;
+                          } else {
+                            break L2;
+                          }
+                        }
+                      }
+                      break L1;
+                    }
+                  } catch (java.lang.Exception decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    L3: {
+                      var6 = (Exception) (Object) decompiledCaughtException;
+                      break L3;
+                    }
+                  }
+                  stackOut_15_0 = this.a((byte) 125, var4_ref.getPort(), (String) var5, var4_ref.getHostName());
+                  stackIn_16_0 = stackOut_15_0;
+                  return stackIn_16_0;
                 }
               } else {
                 stackOut_4_0 = null;
@@ -633,33 +621,33 @@ final class dq extends av {
           decompiledCaughtException = decompiledCaughtParameter1;
           L4: {
             var3 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) var3;
-            stackOut_24_1 = new StringBuilder().append("dq.E(").append(param0).append(44);
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+            stackOut_22_0 = (RuntimeException) var3;
+            stackOut_22_1 = new StringBuilder().append("dq.E(").append(1).append(44);
+            stackIn_24_0 = stackOut_22_0;
+            stackIn_24_1 = stackOut_22_1;
+            stackIn_23_0 = stackOut_22_0;
+            stackIn_23_1 = stackOut_22_1;
             if (param1 == null) {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "null";
+              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_1 = stackOut_24_1;
+              stackIn_25_2 = stackOut_24_2;
               break L4;
             } else {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "{...}";
+              stackIn_25_0 = stackOut_23_0;
+              stackIn_25_1 = stackOut_23_1;
+              stackIn_25_2 = stackOut_23_2;
               break L4;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
         }
-        return (java.net.Socket) (Object) stackIn_22_0;
+        return (java.net.Socket) (Object) stackIn_20_0;
     }
 
     private final java.net.Socket a(byte param0, int param1, String param2, String param3) throws IOException {
@@ -674,40 +662,40 @@ final class dq extends av {
         java.net.Socket var13 = null;
         String var14 = null;
         java.net.Socket stackIn_10_0 = null;
-        Object stackIn_26_0 = null;
+        Object stackIn_24_0 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
+        String stackIn_28_2 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
-        String stackIn_30_2 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        String stackIn_33_2 = null;
+        String stackIn_31_2 = null;
         RuntimeException decompiledCaughtException = null;
         java.net.Socket stackOut_9_0 = null;
-        Object stackOut_25_0 = null;
+        Object stackOut_23_0 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
         RuntimeException stackOut_27_0 = null;
         StringBuilder stackOut_27_1 = null;
+        String stackOut_27_2 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
+        String stackOut_26_2 = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
+        RuntimeException stackOut_30_0 = null;
+        StringBuilder stackOut_30_1 = null;
+        String stackOut_30_2 = null;
         RuntimeException stackOut_29_0 = null;
         StringBuilder stackOut_29_1 = null;
         String stackOut_29_2 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
         var12 = Kickabout.field_G;
         try {
           L0: {
@@ -793,77 +781,69 @@ final class dq extends av {
                 break L2;
               }
             }
-            L8: {
-              if (param0 >= 88) {
-                break L8;
-              } else {
-                field_h = null;
-                break L8;
-              }
-            }
             var6.close();
             var7.close();
             var13.close();
-            stackOut_25_0 = null;
-            stackIn_26_0 = stackOut_25_0;
+            stackOut_23_0 = null;
+            stackIn_24_0 = stackOut_23_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L8: {
             var5 = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) var5;
-            stackOut_27_1 = new StringBuilder().append("dq.F(").append(param0).append(44).append(param1).append(44);
-            stackIn_29_0 = stackOut_27_0;
-            stackIn_29_1 = stackOut_27_1;
-            stackIn_28_0 = stackOut_27_0;
-            stackIn_28_1 = stackOut_27_1;
+            stackOut_25_0 = (RuntimeException) var5;
+            stackOut_25_1 = new StringBuilder().append("dq.F(").append(125).append(44).append(param1).append(44);
+            stackIn_27_0 = stackOut_25_0;
+            stackIn_27_1 = stackOut_25_1;
+            stackIn_26_0 = stackOut_25_0;
+            stackIn_26_1 = stackOut_25_1;
             if (param2 == null) {
+              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
+              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_2 = "null";
+              stackIn_28_0 = stackOut_27_0;
+              stackIn_28_1 = stackOut_27_1;
+              stackIn_28_2 = stackOut_27_2;
+              break L8;
+            } else {
+              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
+              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_2 = "{...}";
+              stackIn_28_0 = stackOut_26_0;
+              stackIn_28_1 = stackOut_26_1;
+              stackIn_28_2 = stackOut_26_2;
+              break L8;
+            }
+          }
+          L9: {
+            stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
+            stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(44);
+            stackIn_30_0 = stackOut_28_0;
+            stackIn_30_1 = stackOut_28_1;
+            stackIn_29_0 = stackOut_28_0;
+            stackIn_29_1 = stackOut_28_1;
+            if (param3 == null) {
+              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
+              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_2 = "null";
+              stackIn_31_0 = stackOut_30_0;
+              stackIn_31_1 = stackOut_30_1;
+              stackIn_31_2 = stackOut_30_2;
+              break L9;
+            } else {
               stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
               stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
-              stackOut_29_2 = "null";
-              stackIn_30_0 = stackOut_29_0;
-              stackIn_30_1 = stackOut_29_1;
-              stackIn_30_2 = stackOut_29_2;
-              break L9;
-            } else {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
-              stackOut_28_2 = "{...}";
-              stackIn_30_0 = stackOut_28_0;
-              stackIn_30_1 = stackOut_28_1;
-              stackIn_30_2 = stackOut_28_2;
+              stackOut_29_2 = "{...}";
+              stackIn_31_0 = stackOut_29_0;
+              stackIn_31_1 = stackOut_29_1;
+              stackIn_31_2 = stackOut_29_2;
               break L9;
             }
           }
-          L10: {
-            stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-            stackOut_30_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_30_2).append(44);
-            stackIn_32_0 = stackOut_30_0;
-            stackIn_32_1 = stackOut_30_1;
-            stackIn_31_0 = stackOut_30_0;
-            stackIn_31_1 = stackOut_30_1;
-            if (param3 == null) {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
-              stackOut_32_2 = "null";
-              stackIn_33_0 = stackOut_32_0;
-              stackIn_33_1 = stackOut_32_1;
-              stackIn_33_2 = stackOut_32_2;
-              break L10;
-            } else {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
-              stackOut_31_2 = "{...}";
-              stackIn_33_0 = stackOut_31_0;
-              stackIn_33_1 = stackOut_31_1;
-              stackIn_33_2 = stackOut_31_2;
-              break L10;
-            }
-          }
-          throw nb.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 41);
         }
-        return (java.net.Socket) (Object) stackIn_26_0;
+        return (java.net.Socket) (Object) stackIn_24_0;
     }
 
     dq() {

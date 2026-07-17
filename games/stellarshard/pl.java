@@ -59,9 +59,6 @@ final class pl extends ae implements je {
     }
 
     final static void b(byte param0, int param1) {
-        if (param0 != 105) {
-            int discarded$0 = pl.e((byte) -67);
-        }
         lk.field_h = (param1 & 54) >> 4;
         if (!(lk.field_h <= 2)) {
             lk.field_h = 2;
@@ -76,7 +73,7 @@ final class pl extends ae implements je {
         }
     }
 
-    public static void q(int param0) {
+    public static void q() {
         field_S = null;
         field_V = null;
         field_Q = null;
@@ -95,40 +92,32 @@ final class pl extends ae implements je {
         }
     }
 
-    final static int e(byte param0) {
+    final static int e() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_9_0 = 0;
+        int stackIn_5_0 = 0;
+        int stackIn_8_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_8_0 = 0;
-        int stackOut_5_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_4_0 = 0;
         var2 = stellarshard.field_B;
         try {
           L0: {
-            L1: {
-              var1_int = 0;
-              if (param0 == 63) {
-                break L1;
-              } else {
-                field_T = null;
-                break L1;
-              }
-            }
-            L2: while (true) {
+            var1_int = 0;
+            L1: while (true) {
               if (var1_int >= 1000) {
-                stackOut_8_0 = -1;
-                stackIn_9_0 = stackOut_8_0;
+                stackOut_7_0 = -1;
+                stackIn_8_0 = stackOut_7_0;
                 break L0;
               } else {
                 if (null != a.field_h[var1_int]) {
                   var1_int++;
-                  continue L2;
+                  continue L1;
                 } else {
-                  stackOut_5_0 = var1_int;
-                  stackIn_6_0 = stackOut_5_0;
-                  return stackIn_6_0;
+                  stackOut_4_0 = var1_int;
+                  stackIn_5_0 = stackOut_4_0;
+                  return stackIn_5_0;
                 }
               }
             }
@@ -136,9 +125,9 @@ final class pl extends ae implements je {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var1, "pl.A(" + param0 + 41);
+          throw ma.a((Throwable) (Object) var1, "pl.A(" + 63 + 41);
         }
-        return stackIn_9_0;
+        return stackIn_8_0;
     }
 
     static {

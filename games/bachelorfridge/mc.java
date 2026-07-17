@@ -10,12 +10,12 @@ final class mc extends bw {
     static int field_h;
     int field_f;
 
-    public static void a(int param0) {
+    public static void a() {
         field_i = null;
         field_g = null;
     }
 
-    final static String a(boolean param0, CharSequence param1, int param2) {
+    final static String a(boolean param0, CharSequence param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -42,13 +42,13 @@ final class mc extends bw {
         String stackOut_14_2 = null;
         var5 = BachelorFridge.field_y;
         try {
-          var3 = lk.a(param1, param0, (byte) -53);
+          var3 = lk.a(param1, false, (byte) -53);
           if (var3 != null) {
             stackOut_3_0 = (String) var3;
             stackIn_4_0 = stackOut_3_0;
             return stackIn_4_0;
           } else {
-            var4 = param2;
+            var4 = 0;
             L0: while (true) {
               if (param1.length() > var4) {
                 if (vu.a((byte) 118, param1.charAt(var4))) {
@@ -69,7 +69,7 @@ final class mc extends bw {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var3_ref;
-            stackOut_13_1 = new StringBuilder().append("mc.B(").append(param0).append(44);
+            stackOut_13_1 = new StringBuilder().append("mc.B(").append(0).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -92,7 +92,7 @@ final class mc extends bw {
               break L1;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + 0 + 41);
         }
     }
 

@@ -276,7 +276,7 @@ final class it extends ara implements ntb {
         }
     }
 
-    final static boolean a(boolean[] param0, boolean[] param1, int param2) {
+    final static boolean a(boolean[] param0, boolean[] param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -627,7 +627,7 @@ final class it extends ara implements ntb {
         ((it) this).field_i = 3 * oq.field_l;
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_m = null;
     }
 

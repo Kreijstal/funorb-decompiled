@@ -13,26 +13,20 @@ final class of extends ms {
     int field_l;
     int field_s;
 
-    final static of a(int param0, int param1, int param2, int param3, int param4) {
+    final static of a(int param0, int param1, int param2) {
         of var5 = null;
         int var6 = 0;
         var6 = Sumoblitz.field_L ? 1 : 0;
-        var5 = (of) (Object) oi.field_b.b(param1 + -107);
+        var5 = (of) (Object) oi.field_b.b(-106);
         L0: while (true) {
           if (var5 == null) {
             var5 = new of();
-            var5.field_s = param0;
+            var5.field_s = 2;
             var5.field_l = 10;
             var5.field_p = param2;
             oi.field_b.a((ms) (Object) var5, (byte) 39);
-            if (param1 != 1) {
-              boolean discarded$2 = of.c((byte) 50);
-              pd.a((byte) -65, param3, var5);
-              return var5;
-            } else {
-              pd.a((byte) -65, param3, var5);
-              return var5;
-            }
+            pd.a((byte) -65, 3, var5);
+            return var5;
           } else {
             if (param2 == var5.field_p) {
               return var5;
@@ -131,11 +125,11 @@ final class of extends ms {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         po.field_a = true;
     }
 
-    final static boolean a(fs param0, int param1) {
+    final static boolean a(fs param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

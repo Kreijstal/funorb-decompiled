@@ -85,12 +85,9 @@ final class wg extends pk {
             var5 = (CharSequence) (Object) param0;
             ec.field_f = ad.a(var5, -2);
             re.field_p = param2;
-            if (param1 > -74) {
-                wg.b(88);
-            }
             kn.field_L = true;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "wg.G(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "wg.G(" + (param0 != null ? "{...}" : "null") + 44 + -118 + 44 + param2 + 41);
         }
     }
 
@@ -710,13 +707,10 @@ final class wg extends pk {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_p = null;
         field_r = null;
         field_q = null;
-        if (param0 <= 60) {
-            field_w = 21;
-        }
     }
 
     wg(int param0, int param1, int param2, rk param3, rk param4, rk param5, km param6, km param7) {

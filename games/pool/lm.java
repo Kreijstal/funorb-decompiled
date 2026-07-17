@@ -5,7 +5,7 @@ final class lm extends tm {
     lm() {
     }
 
-    final static void i(int param0) {
+    final static void i() {
         dd var1 = null;
         dd var3 = null;
         int var4 = 0;
@@ -16,11 +16,18 @@ final class lm extends tm {
             fb.a();
             qh.d();
             im.field_fc = 0;
-            gi.a(-21818);
+            int discarded$0 = -21818;
+            gi.a();
             var3 = var1.d();
             for (var4 = 0; 15 > var4; var4++) {
                 var3.f(-2, -2, 16777215);
-                qh.e(4, 4, 0, 0, 540, 140);
+                int discarded$1 = 140;
+                int discarded$2 = 540;
+                int discarded$3 = 0;
+                int discarded$4 = 0;
+                int discarded$5 = 4;
+                int discarded$6 = 4;
+                qh.e();
             }
             ci.field_h.e();
             var1.b(0, 0);
@@ -41,12 +48,12 @@ final class lm extends tm {
         }
     }
 
-    final static void c(int param0, int param1) {
+    final static void c() {
         oq var2 = ej.field_j;
-        var2.b(false, param1);
+        var2.b(false, 11);
         var2.field_v = var2.field_v + 1;
         int var3 = var2.field_v;
-        var2.a(param0, false);
+        var2.a(5, false);
         var2.a(em.field_L.field_Nb, false);
         int var4 = em.field_L.field_ac + (em.field_L.field_Yb << 6);
         var2.a(var4, false);
@@ -235,7 +242,7 @@ final class lm extends tm {
         }
     }
 
-    final static hj[] a(byte param0) {
+    final static hj[] a() {
         return new hj[]{gr.field_G, lb.field_N, nk.field_g, kk.field_A, en.field_c, jk.field_i, no.field_g, of.field_Tb, mj.field_d, pf.field_e, pq.field_J, ch.field_K, bq.field_r, pn.field_k};
     }
 

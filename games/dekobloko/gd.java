@@ -13,18 +13,36 @@ final class gd {
     static boolean field_f;
 
     final static boolean a(int param0, int param1, int param2, byte param3) {
-        int var4 = -42 / ((-5 - param3) / 35);
-        return vm.a(-89, param2, param1, param0);
+        int var4 = -21;
+        return vm.a(-89, 15, 12, 13);
     }
 
     final static String a(boolean param0, int param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
         if (param3 > 0) {
-          if (!param0) {
-            if (param1 == 0) {
-              var4 = param3 % 100;
-              if (var4 < 11) {
+          String discarded$1 = gd.a(false, 12, -120, -73);
+          if (param1 == 0) {
+            var4 = param3 % 100;
+            if (var4 < 11) {
+              var5 = param3 % 10;
+              if (var5 == 1) {
+                return param3 + "st";
+              } else {
+                if (var5 == 2) {
+                  return param3 + "nd";
+                } else {
+                  if (var5 == 3) {
+                    return param3 + "rd";
+                  } else {
+                    return param3 + "th";
+                  }
+                }
+              }
+            } else {
+              if (var4 <= 13) {
+                return param3 + "th";
+              } else {
                 var5 = param3 % 10;
                 if (var5 == 1) {
                   return param3 + "st";
@@ -36,127 +54,30 @@ final class gd {
                       return param3 + "rd";
                     } else {
                       return param3 + "th";
-                    }
-                  }
-                }
-              } else {
-                if (var4 <= 13) {
-                  return param3 + "th";
-                } else {
-                  var5 = param3 % 10;
-                  if (var5 == 1) {
-                    return param3 + "st";
-                  } else {
-                    if (var5 == 2) {
-                      return param3 + "nd";
-                    } else {
-                      if (var5 == 3) {
-                        return param3 + "rd";
-                      } else {
-                        return param3 + "th";
-                      }
-                    }
-                  }
-                }
-              }
-            } else {
-              if (param1 == 1) {
-                return param3 + ".";
-              } else {
-                if (2 != param1) {
-                  if (param1 != 3) {
-                    if (param1 != 4) {
-                      throw new IllegalArgumentException("Unsupported language " + param1);
-                    } else {
-                      return param3 + "e";
-                    }
-                  } else {
-                    if (param2 == 2) {
-                      return param3 + "ª";
-                    } else {
-                      return param3 + "º";
-                    }
-                  }
-                } else {
-                  if (param3 != 1) {
-                    return param3 + "ème";
-                  } else {
-                    if (2 == param2) {
-                      return param3 + "ère";
-                    } else {
-                      return param3 + "er";
                     }
                   }
                 }
               }
             }
           } else {
-            String discarded$1 = gd.a(false, 12, -120, -73);
-            if (param1 == 0) {
-              var4 = param3 % 100;
-              if (var4 >= 11) {
-                if (var4 <= 13) {
-                  return param3 + "th";
-                } else {
-                  var5 = param3 % 10;
-                  if (var5 == 1) {
-                    return param3 + "st";
-                  } else {
-                    if (var5 == 2) {
-                      return param3 + "nd";
-                    } else {
-                      if (var5 == 3) {
-                        return param3 + "rd";
-                      } else {
-                        return param3 + "th";
-                      }
-                    }
-                  }
-                }
-              } else {
-                var5 = param3 % 10;
-                if (var5 == 1) {
-                  return param3 + "st";
-                } else {
-                  if (var5 == 2) {
-                    return param3 + "nd";
-                  } else {
-                    if (var5 == 3) {
-                      return param3 + "rd";
-                    } else {
-                      return param3 + "th";
-                    }
-                  }
-                }
-              }
+            if (param1 == 1) {
+              return param3 + ".";
             } else {
-              if (param1 == 1) {
-                return param3 + ".";
-              } else {
-                if (2 != param1) {
-                  if (param1 != 3) {
-                    if (param1 != 4) {
-                      throw new IllegalArgumentException("Unsupported language " + param1);
-                    } else {
-                      return param3 + "e";
-                    }
+              if (2 != param1) {
+                if (param1 != 3) {
+                  if (param1 != 4) {
+                    throw new IllegalArgumentException("Unsupported language " + param1);
                   } else {
-                    if (param2 == 2) {
-                      return param3 + "ª";
-                    } else {
-                      return param3 + "º";
-                    }
+                    return param3 + "e";
                   }
                 } else {
-                  if (param3 != 1) {
-                    return param3 + "ème";
-                  } else {
-                    if (2 == param2) {
-                      return param3 + "ère";
-                    } else {
-                      return param3 + "er";
-                    }
-                  }
+                  return param3 + "º";
+                }
+              } else {
+                if (param3 != 1) {
+                  return param3 + "ème";
+                } else {
+                  return param3 + "er";
                 }
               }
             }
@@ -166,7 +87,7 @@ final class gd {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_i = null;
         field_g = null;

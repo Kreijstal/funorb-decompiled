@@ -10,7 +10,7 @@ final class pd {
         throw new IllegalStateException();
     }
 
-    final static ii[] a(byte param0) {
+    final static ii[] a() {
         int var2 = 0;
         int var3 = Transmogrify.field_A ? 1 : 0;
         ii[] var1 = new ii[ih.field_b];
@@ -21,7 +21,7 @@ final class pd {
         return var1;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_a = null;
         field_c = null;
     }

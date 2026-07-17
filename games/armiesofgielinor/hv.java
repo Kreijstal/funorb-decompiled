@@ -190,31 +190,46 @@ class hv extends fw {
     }
 
     private final ct a(int param0, byte param1, int param2) {
+        ct var4 = null;
         ct var5 = null;
-        int var6 = ArmiesOfGielinor.field_M ? 1 : 0;
-        ct var4 = (ct) (Object) ((hv) this).field_P.e((byte) 107);
-        while (var4 != null) {
+        int var6 = 0;
+        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = (ct) (Object) ((hv) this).field_P.e((byte) 107);
+        L0: while (true) {
+          if (var4 == null) {
+            return null;
+          } else {
             var5 = var4;
-            while (var5 != null) {
-                if (param2 >= var5.field_r) {
-                    if (param0 >= var5.field_l) {
-                        if (var5.field_r - -var5.field_p > param2) {
-                            if (!(var5.field_q + var5.field_l < param0)) {
-                                return var4;
-                            }
+            L1: while (true) {
+              if (var5 == null) {
+                var4 = (ct) (Object) ((hv) this).field_P.a((byte) 123);
+                continue L0;
+              } else {
+                L2: {
+                  if (param2 < var5.field_r) {
+                    break L2;
+                  } else {
+                    if (param0 < var5.field_l) {
+                      break L2;
+                    } else {
+                      if (var5.field_r - -var5.field_p <= param2) {
+                        break L2;
+                      } else {
+                        if (var5.field_q + var5.field_l >= param0) {
+                          return var4;
+                        } else {
+                          break L2;
                         }
+                      }
                     }
+                  }
                 }
                 var5 = var5.field_k;
+                continue L1;
+              }
             }
-            var4 = (ct) (Object) ((hv) this).field_P.a((byte) 123);
+          }
         }
-        if (param1 == -61) {
-            return null;
-        }
-        Object var7 = null;
-        ((hv) this).a(-11, -2, 46, (kb) null);
-        return null;
     }
 
     void a(int param0, int param1, int param2, kb param3) {
@@ -303,7 +318,7 @@ class hv extends fw {
         ((hv) this).a(-128);
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_N = null;
         field_O = null;
         field_R = null;
@@ -444,15 +459,11 @@ class hv extends fw {
         if (param3 != 0) {
             return;
         }
-        pm var10 = (pm) (Object) ((hv) this).field_k;
-        if (param2 > -82) {
-            Object var9 = null;
-            boolean discarded$0 = ((hv) this).a(-37, (kb) null);
-        }
+        pm var5 = (pm) (Object) ((hv) this).field_k;
         ct var6 = ((hv) this).field_M;
         if (var6 != null) {
-            var7 = var10.a((kb) this, param0, (byte) -123);
-            var8 = var10.a(-18033, param1, (kb) this);
+            var7 = var5.a((kb) this, param0, (byte) -123);
+            var8 = var5.a(-18033, param1, (kb) this);
             do {
                 na.c(2 + var6.field_p, var7 - (-var6.field_r - -2), 116, 2 + var6.field_q, -2 + (var6.field_l + var8));
                 var6 = var6.field_k;

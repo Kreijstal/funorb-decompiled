@@ -8,7 +8,7 @@ final class fh {
     static ab field_c;
     static String field_d;
 
-    final static void b(byte param0) {
+    final static void b() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -52,7 +52,7 @@ final class fh {
         } else {
           L0: {
             var3 = 185;
-            var4 = param0 - 35;
+            var4 = 205;
             var5 = 256;
             if (kf.field_e >= 75) {
               break L0;
@@ -70,10 +70,12 @@ final class fh {
             }
           }
           L2: {
-            kb.a(ag.field_g, 16865);
+            int discarded$2 = 16865;
+            kb.a(ag.field_g);
             fk.a();
             df.c();
-            cm.a(11);
+            int discarded$3 = 11;
+            cm.a();
             if (var5 >= 256) {
               break L2;
             } else {
@@ -118,7 +120,7 @@ final class fh {
           }
           L5: {
             var6 = kf.field_e + -140;
-            if (var6 > param1) {
+            if (var6 > 0) {
               L6: {
                 var7 = 256;
                 if (var6 < 20) {
@@ -138,7 +140,7 @@ final class fh {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         ao.field_Hb = 52.5f;
         mj.field_D = 262144;
         sg.field_i = 128.0f;
@@ -162,9 +164,6 @@ final class fh {
         field_a = null;
         field_d = null;
         field_c = null;
-        if (param0 != 10061) {
-            field_e = true;
-        }
         field_b = null;
     }
 

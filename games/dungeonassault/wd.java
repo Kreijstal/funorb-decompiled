@@ -38,7 +38,8 @@ final class wd {
               ((wd) this).field_c = ((wd) this).field_c - param1;
               L1: while (true) {
                 if (((wd) this).field_c < 0) {
-                  if (!this.b(0)) {
+                  int discarded$2 = 0;
+                  if (!this.b()) {
                     return;
                   } else {
                     continue L1;
@@ -105,7 +106,7 @@ final class wd {
         }
     }
 
-    private final void a(byte param0) {
+    private final void a() {
         if (((wd) this).field_n == null) {
           ((wd) this).field_g = null;
           return;
@@ -190,7 +191,8 @@ final class wd {
                 ((wd) this).field_b = ((wd) this).field_n.field_j[0] * ji.a(320, false, 192) >>> 8;
                 ((wd) this).field_c = ((wd) this).field_b;
                 ((wd) this).field_k = rl.field_f;
-                this.a((byte) 28);
+                int discarded$2 = 28;
+                this.a();
                 break L1;
               } else {
                 ((wd) this).field_k = ga.field_n;
@@ -236,7 +238,7 @@ final class wd {
         }
     }
 
-    private final boolean b(int param0) {
+    private final boolean b() {
         ((wd) this).field_m = ((wd) this).field_m + 1;
         if (((wd) this).field_n.field_c <= ((wd) this).field_m) {
           if (((wd) this).field_a != rl.field_b) {
@@ -254,14 +256,16 @@ final class wd {
             wd.a(-49);
             ((wd) this).field_b = ((wd) this).field_n.field_j[((wd) this).field_m] * ji.a(320, false, 192) >>> 8;
             ((wd) this).field_c = ((wd) this).field_c + ((wd) this).field_b;
-            this.a((byte) 28);
+            int discarded$2 = 28;
+            this.a();
             return true;
           }
         } else {
           wd.a(-49);
           ((wd) this).field_b = ((wd) this).field_n.field_j[((wd) this).field_m] * ji.a(320, false, 192) >>> 8;
           ((wd) this).field_c = ((wd) this).field_c + ((wd) this).field_b;
-          this.a((byte) 28);
+          int discarded$3 = 28;
+          this.a();
           return true;
         }
     }
@@ -414,10 +418,6 @@ final class wd {
         field_f = null;
         field_d = null;
         field_l = null;
-        if (param0 < 5) {
-            Object var2 = null;
-            wd.a((byte) -55, -32, (ue) null);
-        }
     }
 
     wd(eh param0, eh param1, int param2) {

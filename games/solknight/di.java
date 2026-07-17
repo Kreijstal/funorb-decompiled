@@ -17,22 +17,18 @@ final class di extends gg {
 
     final static wg a(boolean param0, boolean param1) {
         wg var2 = new wg(true);
-        var2.field_f = false;
-        if (param0) {
-            Object var3 = null;
-            di.a((java.applet.Applet) null, 18);
-        }
+        var2.field_f = param1 ? true : false;
         return var2;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_i = null;
         field_l = null;
         field_n = null;
         field_j = null;
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void a(java.applet.Applet param0) {
         try {
             String var2 = null;
             Exception var2_ref = null;
@@ -64,7 +60,7 @@ final class di extends gg {
                       var2 = param0.getDocumentBase().getFile();
                       var4 = var2;
                       var4 = var2;
-                      var3 = var2.indexOf((int) (char)param1);
+                      var3 = var2.indexOf('?');
                       var4 = "reload.ws";
                       if (var3 < 0) {
                         break L2;
@@ -115,7 +111,7 @@ final class di extends gg {
                   break L4;
                 }
               }
-              throw fc.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 41);
+              throw fc.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 63 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

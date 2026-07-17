@@ -79,7 +79,8 @@ final class jr extends im {
           var5 = Kickabout.field_G;
           if (!((jr) this).field_Lb) {
             L1: {
-              if (cq.e(15137)) {
+              int discarded$12 = 15137;
+              if (cq.e()) {
                 if (!np.h((byte) 19)) {
                   stackOut_6_0 = 1;
                   stackIn_8_0 = stackOut_6_0;
@@ -272,23 +273,23 @@ final class jr extends im {
               if (((jr) this).field_Jb.field_sb == 1) {
                 if (tu.field_E.a(param0 ^ 1, ((jr) this).field_Hb.field_a)) {
                   tb.a((byte) 126, 31);
-                  wh discarded$11 = sp.c(53, param0 + -9);
+                  wh discarded$13 = sp.c(53, param0 + -9);
                   break L8;
                 } else {
                   if (tu.field_E.a(((jr) this).field_Hb.field_a, (byte) -79)) {
                     tb.a((byte) 126, 3);
-                    wh discarded$12 = sp.c(53, -3);
+                    wh discarded$14 = sp.c(53, -3);
                     break L8;
                   } else {
                     if (tu.field_E.c(-3)) {
                       if (tu.field_E.d(-1) == -1) {
                         tb.a((byte) 126, 2);
-                        wh discarded$13 = sp.c(53, 112);
+                        wh discarded$15 = sp.c(53, 112);
                         break L8;
                       } else {
                         if (((jr) this).field_Hb.field_i > tu.field_E.field_x) {
                           tb.a((byte) 126, 4);
-                          wh discarded$14 = sp.c(53, 9);
+                          wh discarded$16 = sp.c(53, 9);
                           break L8;
                         } else {
                           oj.a(-45, ((jr) this).field_Hb);
@@ -297,7 +298,7 @@ final class jr extends im {
                       }
                     } else {
                       tb.a((byte) 126, 6);
-                      wh discarded$15 = sp.c(53, 34);
+                      wh discarded$17 = sp.c(53, 34);
                       break L8;
                     }
                   }
@@ -312,7 +313,7 @@ final class jr extends im {
               if (tu.field_E.a(((jr) this).field_Hb.field_a, (byte) -79)) {
                 if (((jr) this).field_Hb.field_t > tu.field_E.field_x) {
                   tb.a((byte) 126, 4);
-                  wh discarded$16 = sp.c(53, -113);
+                  wh discarded$18 = sp.c(53, -113);
                   break L0;
                 } else {
                   ca.a(((jr) this).field_Hb, 255);
@@ -322,13 +323,13 @@ final class jr extends im {
                 if (!tu.field_E.a(param0 + 1, ((jr) this).field_Hb.field_a)) {
                   if (((jr) this).field_Hb.field_t > tu.field_E.field_x) {
                     tb.a((byte) 126, 4);
-                    wh discarded$17 = sp.c(53, -12);
+                    wh discarded$19 = sp.c(53, -12);
                     break L0;
                   } else {
                     if (tu.field_E.c(-3)) {
                       if (tu.field_E.d(-1) == -1) {
                         tb.a((byte) 126, 2);
-                        wh discarded$18 = sp.c(53, 40);
+                        wh discarded$20 = sp.c(53, 40);
                         break L0;
                       } else {
                         is.a((byte) -123, ((jr) this).field_Hb);
@@ -336,13 +337,13 @@ final class jr extends im {
                       }
                     } else {
                       tb.a((byte) 126, 6);
-                      wh discarded$19 = sp.c(53, 111);
+                      wh discarded$21 = sp.c(53, 111);
                       break L0;
                     }
                   }
                 } else {
                   tb.a((byte) 126, 31);
-                  wh discarded$20 = sp.c(53, 54);
+                  wh discarded$22 = sp.c(53, 54);
                   break L0;
                 }
               }
@@ -356,7 +357,7 @@ final class jr extends im {
             break L9;
           } else {
             var6 = null;
-            jk discarded$21 = jr.a((sj) null, 41, 84);
+            jk discarded$23 = jr.a((sj) null, 41, 84);
             break L9;
           }
         }
@@ -941,7 +942,7 @@ final class jr extends im {
         return stackIn_7_0;
     }
 
-    public static void i(int param0) {
+    public static void i() {
         field_Fb = null;
     }
 

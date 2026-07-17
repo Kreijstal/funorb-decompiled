@@ -13,7 +13,7 @@ final class vb extends ca {
     static boolean field_j;
     private java.net.ProxySelector field_k;
 
-    private final java.net.Socket a(java.net.Proxy param0, int param1) throws IOException {
+    private final java.net.Socket a(java.net.Proxy param0) throws IOException {
         RuntimeException var3 = null;
         java.net.SocketAddress var3_ref = null;
         int var4 = 0;
@@ -235,7 +235,7 @@ final class vb extends ca {
           if (Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
             break L0;
           } else {
-            String discarded$2 = System.setProperty("java.net.useSystemProxies", "true");
+            String discarded$3 = System.setProperty("java.net.useSystemProxies", "true");
             break L0;
           }
         }
@@ -341,7 +341,7 @@ final class vb extends ca {
           return ((vb) this).a(-1);
         }
         L5: {
-          boolean discarded$3 = var3.addAll((Collection) (Object) var4);
+          boolean discarded$4 = var3.addAll((Collection) (Object) var4);
           var6_array = var3.toArray();
           var7 = null;
           if (param0 < -45) {
@@ -365,7 +365,8 @@ final class vb extends ca {
             var11 = (java.net.Proxy) var10;
             try {
               L7: {
-                var12_ref2 = this.a(var11, 111);
+                int discarded$5 = 111;
+                var12_ref2 = this.a(var11);
                 if (var12_ref2 != null) {
                   stackOut_22_0 = (java.net.Socket) var12_ref2;
                   stackIn_23_0 = stackOut_22_0;
@@ -415,51 +416,50 @@ final class vb extends ca {
         String var10 = null;
         int var11 = 0;
         int var12 = 0;
-        Object var13 = null;
-        java.net.Socket var14 = null;
-        String var15 = null;
-        java.net.Socket stackIn_12_0 = null;
-        Object stackIn_27_0 = null;
+        java.net.Socket var13 = null;
+        String var14 = null;
+        java.net.Socket stackIn_10_0 = null;
+        Object stackIn_25_0 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
+        String stackIn_29_2 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
-        String stackIn_31_2 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
-        String stackIn_34_2 = null;
+        String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
-        java.net.Socket stackOut_11_0 = null;
-        Object stackOut_26_0 = null;
+        java.net.Socket stackOut_9_0 = null;
+        Object stackOut_24_0 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
         RuntimeException stackOut_28_0 = null;
         StringBuilder stackOut_28_1 = null;
+        String stackOut_28_2 = null;
+        RuntimeException stackOut_27_0 = null;
+        StringBuilder stackOut_27_1 = null;
+        String stackOut_27_2 = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        RuntimeException stackOut_31_0 = null;
+        StringBuilder stackOut_31_1 = null;
+        String stackOut_31_2 = null;
         RuntimeException stackOut_30_0 = null;
         StringBuilder stackOut_30_1 = null;
         String stackOut_30_2 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
         var12 = TetraLink.field_J;
         try {
           L0: {
             L1: {
-              var14 = new java.net.Socket(param1, param3);
-              var14.setSoTimeout(10000);
-              var6 = var14.getOutputStream();
+              var13 = new java.net.Socket(param1, param3);
+              var13.setSoTimeout(10000);
+              var6 = var13.getOutputStream();
               if (param0 == null) {
                 var6.write(("CONNECT " + ((vb) this).field_a + ":" + ((vb) this).field_e + " HTTP/1.0\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
                 break L1;
@@ -470,31 +470,22 @@ final class vb extends ca {
             }
             L2: {
               var6.flush();
-              var7 = new BufferedReader((Reader) (Object) new InputStreamReader(var14.getInputStream()));
+              var7 = new BufferedReader((Reader) (Object) new InputStreamReader(var13.getInputStream()));
               var8 = var7.readLine();
-              if (param2 < -58) {
-                break L2;
-              } else {
-                var13 = null;
-                vb.a(18, (java.awt.Component) null);
-                break L2;
-              }
-            }
-            L3: {
               if (var8 != null) {
-                L4: {
+                L3: {
                   if (var8.startsWith("HTTP/1.0 200")) {
-                    break L4;
+                    break L3;
                   } else {
                     if (!var8.startsWith("HTTP/1.1 200")) {
-                      L5: {
+                      L4: {
                         if (var8.startsWith("HTTP/1.0 407")) {
-                          break L5;
+                          break L4;
                         } else {
                           if (!var8.startsWith("HTTP/1.1 407")) {
-                            break L3;
+                            break L2;
                           } else {
-                            break L5;
+                            break L4;
                           }
                         }
                       }
@@ -503,32 +494,32 @@ final class vb extends ca {
                       var8 = var10;
                       var8 = var10;
                       var8 = var7.readLine();
-                      L6: while (true) {
-                        L7: {
+                      L5: while (true) {
+                        L6: {
                           if (var8 == null) {
-                            break L7;
+                            break L6;
                           } else {
                             if (var9 >= 50) {
-                              break L7;
+                              break L6;
                             } else {
                               if (var8.toLowerCase().startsWith(var10)) {
-                                L8: {
-                                  var15 = var8.substring(var10.length()).trim();
-                                  var8 = var15;
-                                  var8 = var15;
-                                  var11 = var15.indexOf(' ');
+                                L7: {
+                                  var14 = var8.substring(var10.length()).trim();
+                                  var8 = var14;
+                                  var8 = var14;
+                                  var11 = var14.indexOf(' ');
                                   if (var11 == -1) {
-                                    break L8;
+                                    break L7;
                                   } else {
-                                    var8 = var15.substring(0, var11);
-                                    break L8;
+                                    var8 = var14.substring(0, var11);
+                                    break L7;
                                   }
                                 }
                                 throw new bn(var8);
                               } else {
                                 var9++;
                                 var8 = var7.readLine();
-                                continue L6;
+                                continue L5;
                               }
                             }
                           }
@@ -536,83 +527,83 @@ final class vb extends ca {
                         throw new bn("");
                       }
                     } else {
-                      break L4;
+                      break L3;
                     }
                   }
                 }
-                stackOut_11_0 = (java.net.Socket) var14;
-                stackIn_12_0 = stackOut_11_0;
-                return stackIn_12_0;
+                stackOut_9_0 = (java.net.Socket) var13;
+                stackIn_10_0 = stackOut_9_0;
+                return stackIn_10_0;
               } else {
-                break L3;
+                break L2;
               }
             }
             var6.close();
             var7.close();
-            var14.close();
-            stackOut_26_0 = null;
-            stackIn_27_0 = stackOut_26_0;
+            var13.close();
+            stackOut_24_0 = null;
+            stackIn_25_0 = stackOut_24_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L8: {
             var5 = decompiledCaughtException;
-            stackOut_28_0 = (RuntimeException) var5;
-            stackOut_28_1 = new StringBuilder().append("vb.E(");
-            stackIn_30_0 = stackOut_28_0;
-            stackIn_30_1 = stackOut_28_1;
-            stackIn_29_0 = stackOut_28_0;
-            stackIn_29_1 = stackOut_28_1;
+            stackOut_26_0 = (RuntimeException) var5;
+            stackOut_26_1 = new StringBuilder().append("vb.E(");
+            stackIn_28_0 = stackOut_26_0;
+            stackIn_28_1 = stackOut_26_1;
+            stackIn_27_0 = stackOut_26_0;
+            stackIn_27_1 = stackOut_26_1;
             if (param0 == null) {
+              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
+              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_2 = "null";
+              stackIn_29_0 = stackOut_28_0;
+              stackIn_29_1 = stackOut_28_1;
+              stackIn_29_2 = stackOut_28_2;
+              break L8;
+            } else {
+              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
+              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_2 = "{...}";
+              stackIn_29_0 = stackOut_27_0;
+              stackIn_29_1 = stackOut_27_1;
+              stackIn_29_2 = stackOut_27_2;
+              break L8;
+            }
+          }
+          L9: {
+            stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
+            stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(44);
+            stackIn_31_0 = stackOut_29_0;
+            stackIn_31_1 = stackOut_29_1;
+            stackIn_30_0 = stackOut_29_0;
+            stackIn_30_1 = stackOut_29_1;
+            if (param1 == null) {
+              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
+              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_2 = "null";
+              stackIn_32_0 = stackOut_31_0;
+              stackIn_32_1 = stackOut_31_1;
+              stackIn_32_2 = stackOut_31_2;
+              break L9;
+            } else {
               stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
               stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
-              stackOut_30_2 = "null";
-              stackIn_31_0 = stackOut_30_0;
-              stackIn_31_1 = stackOut_30_1;
-              stackIn_31_2 = stackOut_30_2;
-              break L9;
-            } else {
-              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
-              stackOut_29_2 = "{...}";
-              stackIn_31_0 = stackOut_29_0;
-              stackIn_31_1 = stackOut_29_1;
-              stackIn_31_2 = stackOut_29_2;
+              stackOut_30_2 = "{...}";
+              stackIn_32_0 = stackOut_30_0;
+              stackIn_32_1 = stackOut_30_1;
+              stackIn_32_2 = stackOut_30_2;
               break L9;
             }
           }
-          L10: {
-            stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-            stackOut_31_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(44);
-            stackIn_33_0 = stackOut_31_0;
-            stackIn_33_1 = stackOut_31_1;
-            stackIn_32_0 = stackOut_31_0;
-            stackIn_32_1 = stackOut_31_1;
-            if (param1 == null) {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
-              stackOut_33_2 = "null";
-              stackIn_34_0 = stackOut_33_0;
-              stackIn_34_1 = stackOut_33_1;
-              stackIn_34_2 = stackOut_33_2;
-              break L10;
-            } else {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
-              stackOut_32_2 = "{...}";
-              stackIn_34_0 = stackOut_32_0;
-              stackIn_34_1 = stackOut_32_1;
-              stackIn_34_2 = stackOut_32_2;
-              break L10;
-            }
-          }
-          throw oi.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 44 + param2 + 44 + param3 + 41);
+          throw oi.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 44 + -124 + 44 + param3 + 41);
         }
-        return (java.net.Socket) (Object) stackIn_27_0;
+        return (java.net.Socket) (Object) stackIn_25_0;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_l = null;
         field_m = null;
     }
@@ -620,14 +611,11 @@ final class vb extends ca {
     final static void a(int param0, java.awt.Component param1) {
         param1.removeMouseListener((java.awt.event.MouseListener) (Object) kd.field_g);
         param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) kd.field_g);
-        if (param0 != -51) {
-            return;
-        }
         try {
             param1.removeFocusListener((java.awt.event.FocusListener) (Object) kd.field_g);
             kf.field_c = 0;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "vb.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "vb.F(" + -51 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

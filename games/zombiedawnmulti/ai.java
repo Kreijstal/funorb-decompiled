@@ -90,7 +90,8 @@ final class ai implements Runnable {
 
     final static void a(String param0, byte param1) {
         try {
-            wk.a(param0, (byte) 48);
+            int discarded$0 = 48;
+            wk.a(param0);
             qj.a(jl.field_v, false, 102);
             int var2_int = -102 % ((52 - param1) / 40);
         } catch (RuntimeException runtimeException) {
@@ -104,8 +105,7 @@ final class ai implements Runnable {
             Exception var2_ref = null;
             Throwable var4 = null;
             int var5 = 0;
-            Object var6 = null;
-            li var7 = null;
+            li var6 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             var5 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -114,8 +114,8 @@ final class ai implements Runnable {
                 var2 = (Object) (Object) ((ai) this).field_e;
                 synchronized (var2) {
                   L1: {
-                    var7 = (li) (Object) ((ai) this).field_e.a(11356);
-                    if (var7 != null) {
+                    var6 = (li) (Object) ((ai) this).field_e.a(11356);
+                    if (var6 != null) {
                       ((ai) this).field_h = ((ai) this).field_h - 1;
                       decompiledRegionSelector0 = 1;
                       break L1;
@@ -137,14 +137,14 @@ final class ai implements Runnable {
                   try {
                     L4: {
                       L5: {
-                        if (var7.field_y == 2) {
-                          boolean discarded$1 = var7.field_B.a((byte) 118, var7.field_D, var7.field_D.length, (int)var7.field_l);
+                        if (var6.field_y == 2) {
+                          boolean discarded$2 = var6.field_B.a((byte) 118, var6.field_D, var6.field_D.length, (int)var6.field_l);
                           break L5;
                         } else {
-                          if (var7.field_y != 3) {
+                          if (var6.field_y != 3) {
                             break L5;
                           } else {
-                            var7.field_D = var7.field_B.a(1, (int)var7.field_l);
+                            var6.field_D = var6.field_B.a(1, (int)var6.field_l);
                             break L5;
                           }
                         }
@@ -155,12 +155,12 @@ final class ai implements Runnable {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     L6: {
                       var2_ref = (Exception) (Object) decompiledCaughtException;
-                      var6 = null;
-                      bd.a((String) null, (Throwable) (Object) var2_ref, false);
+                      int discarded$3 = 0;
+                      bd.a((String) null, (Throwable) (Object) var2_ref);
                       break L6;
                     }
                   }
-                  var7.field_t = false;
+                  var6.field_t = false;
                   continue L0;
                 }
               } else {
@@ -289,169 +289,164 @@ final class ai implements Runnable {
         return stackIn_4_0;
     }
 
-    final static int a(boolean param0, byte param1) {
+    final static int a(boolean param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        int stackIn_63_0 = 0;
-        int stackIn_66_0 = 0;
+        int stackIn_62_0 = 0;
+        int stackIn_65_0 = 0;
+        int stackIn_68_0 = 0;
         int stackIn_72_0 = 0;
         int stackIn_76_0 = 0;
         int stackIn_79_0 = 0;
         int stackIn_81_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_62_0 = 0;
-        int stackOut_65_0 = 0;
+        int stackOut_61_0 = 0;
+        int stackOut_64_0 = 0;
+        int stackOut_66_0 = 0;
         int stackOut_80_0 = 0;
         int stackOut_75_0 = 0;
         int stackOut_71_0 = 0;
+        int stackOut_67_0 = 0;
         int stackOut_78_0 = 0;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
-            L1: {
-              lq.field_b = lq.field_b + 65536;
-              if (param1 == 110) {
-                break L1;
-              } else {
-                field_d = null;
-                break L1;
-              }
-            }
-            L2: while (true) {
+            lq.field_b = lq.field_b + 65536;
+            L1: while (true) {
               if (65536 > sd.a((byte) 120, lq.field_b, nf.field_b)) {
-                L3: {
+                L2: {
                   var2_int = -1;
                   if (null == ld.field_Ub) {
                     if (null != ao.field_h) {
                       var2_int = ao.field_h.length;
-                      break L3;
+                      break L2;
                     } else {
-                      break L3;
+                      break L2;
                     }
                   } else {
                     var2_int = ld.field_Ub.length;
-                    break L3;
+                    break L2;
                   }
                 }
-                L4: {
+                L3: {
                   if (var2_int != -1) {
-                    L5: {
+                    L4: {
                       if (~lb.field_a <= ~nf.field_c) {
-                        break L5;
+                        break L4;
                       } else {
-                        L6: {
+                        L5: {
                           lb.field_a = lb.field_a + 1;
                           if (~lb.field_a >= ~nf.field_a) {
-                            break L6;
+                            break L5;
                           } else {
-                            L7: {
+                            L6: {
                               if (null == ld.field_Ub) {
-                                break L7;
+                                break L6;
                               } else {
                                 if (null != ld.field_Ub[gf.field_g]) {
-                                  break L6;
+                                  break L5;
                                 } else {
-                                  break L7;
+                                  break L6;
                                 }
                               }
                             }
                             lb.field_a = lb.field_a - 1;
-                            break L5;
+                            break L4;
                           }
                         }
                         if (lb.field_a < nf.field_c) {
-                          break L5;
+                          break L4;
                         } else {
                           if (ld.field_Ub[(gf.field_g + 1) % var2_int] == null) {
                             lb.field_a = lb.field_a - 1;
-                            break L5;
+                            break L4;
                           } else {
-                            break L5;
+                            break L4;
                           }
                         }
                       }
                     }
-                    L8: {
+                    L7: {
                       if (~nf.field_c >= ~lb.field_a) {
-                        L9: {
+                        L8: {
                           gf.field_j = gf.field_g;
                           if (qh.field_a) {
                             gf.field_g = gf.field_g + 1;
                             if (gf.field_g >= var2_int) {
                               gf.field_g = gf.field_g - var2_int;
-                              break L9;
+                              break L8;
                             } else {
-                              break L9;
+                              break L8;
                             }
                           } else {
                             gf.field_g = gf.field_g - 1;
                             if (gf.field_g >= 0) {
-                              break L9;
+                              break L8;
                             } else {
                               gf.field_g = gf.field_g + var2_int;
-                              break L9;
+                              break L8;
                             }
                           }
                         }
                         lb.field_a = lb.field_a - nf.field_c;
-                        break L8;
+                        break L7;
                       } else {
-                        break L8;
+                        break L7;
                       }
                     }
                     if (nf.field_a >= lb.field_a) {
-                      break L4;
+                      break L3;
                     } else {
                       qh.field_a = true;
-                      break L4;
+                      break L3;
                     }
                   } else {
-                    break L4;
+                    break L3;
                   }
                 }
-                L10: {
+                L9: {
                   if (fa.field_Tb == null) {
-                    break L10;
+                    break L9;
                   } else {
-                    L11: {
+                    L10: {
                       var3 = -(fa.field_Tb.field_u / 2) + 357;
                       var4 = 0;
                       if (kd.field_b == 0) {
-                        break L11;
+                        break L10;
                       } else {
                         if (ka.field_t <= var3) {
-                          break L11;
+                          break L10;
                         } else {
                           if (~(fa.field_Tb.field_w + var3) >= ~ka.field_t) {
-                            break L11;
+                            break L10;
                           } else {
-                            L12: {
+                            L11: {
                               if (269 + -fa.field_Tb.field_x >= vb.field_f) {
-                                break L12;
+                                break L11;
                               } else {
                                 if (vb.field_f >= 269) {
-                                  break L12;
+                                  break L11;
                                 } else {
                                   var4 = 1;
                                   lb.field_a = nf.field_c;
                                   qh.field_a = false;
-                                  break L12;
+                                  break L11;
                                 }
                               }
                             }
                             if (vb.field_f <= 586) {
-                              break L11;
+                              break L10;
                             } else {
                               if (~vb.field_f > ~(fa.field_Tb.field_x + 586)) {
                                 var4 = 1;
                                 qh.field_a = true;
                                 lb.field_a = nf.field_c;
-                                break L11;
+                                break L10;
                               } else {
-                                break L11;
+                                break L10;
                               }
                             }
                           }
@@ -459,39 +454,39 @@ final class ai implements Runnable {
                       }
                     }
                     if (var4 != 0) {
-                      break L10;
+                      break L9;
                     } else {
                       if (~nf.field_a <= ~lb.field_a) {
-                        break L10;
+                        break L9;
                       } else {
                         if (bo.field_d <= var3) {
-                          break L10;
+                          break L9;
                         } else {
                           if (~(fa.field_Tb.field_w + var3) < ~bo.field_d) {
-                            L13: {
+                            L12: {
                               if (~(-fa.field_Tb.field_x + 269) <= ~bd.field_g) {
-                                break L13;
+                                break L12;
                               } else {
                                 if (269 > bd.field_g) {
                                   lb.field_a = nf.field_a;
-                                  break L13;
+                                  break L12;
                                 } else {
-                                  break L13;
+                                  break L12;
                                 }
                               }
                             }
                             if (bd.field_g <= 586) {
-                              break L10;
+                              break L9;
                             } else {
                               if (bd.field_g < 586 - -fa.field_Tb.field_x) {
                                 lb.field_a = nf.field_a;
-                                break L10;
+                                break L9;
                               } else {
-                                break L10;
+                                break L9;
                               }
                             }
                           } else {
-                            break L10;
+                            break L9;
                           }
                         }
                       }
@@ -499,36 +494,38 @@ final class ai implements Runnable {
                   }
                 }
                 if (param0) {
-                  L14: {
-                    gl.field_H.a(al.c(bo.field_d, -1, bd.field_g), 104, al.c(ka.field_t, param1 + -111, vb.field_f));
+                  L13: {
+                    gl.field_H.a(al.c(bo.field_d, -1, bd.field_g), 104, al.c(ka.field_t, -1, vb.field_f));
                     if (!gl.field_H.c(-85)) {
-                      break L14;
+                      break L13;
                     } else {
                       if (gl.field_H.field_d == 0) {
-                        stackOut_62_0 = 3;
-                        stackIn_63_0 = stackOut_62_0;
-                        return stackIn_63_0;
+                        stackOut_61_0 = 3;
+                        stackIn_62_0 = stackOut_61_0;
+                        return stackIn_62_0;
                       } else {
                         if (gl.field_H.field_d != 1) {
-                          break L14;
+                          break L13;
                         } else {
-                          stackOut_65_0 = 2;
-                          stackIn_66_0 = stackOut_65_0;
-                          return stackIn_66_0;
+                          stackOut_64_0 = 2;
+                          stackIn_65_0 = stackOut_64_0;
+                          return stackIn_65_0;
                         }
                       }
                     }
                   }
-                  L15: while (true) {
-                    if (!ba.c(param1 ^ -111)) {
+                  stackOut_66_0 = -1;
+                  stackIn_68_0 = stackOut_66_0;
+                  L14: while (true) {
+                    if (!ba.c(stackIn_68_0)) {
                       stackOut_80_0 = 0;
                       stackIn_81_0 = stackOut_80_0;
                       break L0;
                     } else {
-                      L16: {
+                      L15: {
                         gl.field_H.a(0, false);
                         if (!gl.field_H.c(-85)) {
-                          break L16;
+                          break L15;
                         } else {
                           if (gl.field_H.field_d != 0) {
                             if (gl.field_H.field_d == 1) {
@@ -536,7 +533,7 @@ final class ai implements Runnable {
                               stackIn_76_0 = stackOut_75_0;
                               return stackIn_76_0;
                             } else {
-                              break L16;
+                              break L15;
                             }
                           } else {
                             stackOut_71_0 = 3;
@@ -546,7 +543,9 @@ final class ai implements Runnable {
                         }
                       }
                       if (13 != sj.field_p) {
-                        continue L15;
+                        stackOut_67_0 = -1;
+                        stackIn_68_0 = stackOut_67_0;
+                        continue L14;
                       } else {
                         stackOut_78_0 = 1;
                         stackIn_79_0 = stackOut_78_0;
@@ -560,19 +559,19 @@ final class ai implements Runnable {
               } else {
                 fn.field_c = fn.field_c + 1;
                 lq.field_b = lq.field_b - nf.field_b;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var2, "ai.E(" + param0 + 44 + param1 + 41);
+          throw fa.a((Throwable) (Object) var2, "ai.E(" + param0 + 44 + 110 + 41);
         }
         return stackIn_81_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
         field_g = null;
@@ -695,40 +694,32 @@ final class ai implements Runnable {
         bk var3 = null;
         RuntimeException var3_ref = null;
         bk stackIn_5_0 = null;
-        byte[] stackIn_8_0 = null;
-        byte[] stackIn_10_0 = null;
+        byte[] stackIn_7_0 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
+        String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_9_0 = null;
-        byte[] stackOut_7_0 = null;
+        byte[] stackOut_6_0 = null;
         bk stackOut_4_0 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
         RuntimeException stackOut_11_0 = null;
         StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
         try {
           L0: {
             if (param2 != null) {
-              if (param0 <= ~param2.length) {
-                if (param1) {
-                  stackOut_9_0 = re.a(255, param2);
-                  stackIn_10_0 = stackOut_9_0;
-                  break L0;
-                } else {
-                  stackOut_7_0 = (byte[]) param2;
-                  stackIn_8_0 = stackOut_7_0;
-                  return (Object) (Object) stackIn_8_0;
-                }
+              if (param2.length <= 136) {
+                stackOut_6_0 = (byte[]) param2;
+                stackIn_7_0 = stackOut_6_0;
+                break L0;
               } else {
                 var3 = new bk();
                 ((t) (Object) var3).a(param2, (byte) -72);
@@ -744,41 +735,38 @@ final class ai implements Runnable {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3_ref = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var3_ref;
-            stackOut_11_1 = new StringBuilder().append("ai.A(").append(param0).append(44).append(param1).append(44);
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackOut_9_0 = (RuntimeException) var3_ref;
+            stackOut_9_1 = new StringBuilder().append("ai.A(").append(-137).append(44).append(0).append(44);
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
             if (param2 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
               break L1;
             } else {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
               break L1;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
         }
-        return (Object) (Object) stackIn_10_0;
+        return (Object) (Object) stackIn_7_0;
     }
 
     private final void a(boolean param0, li param1) {
         synchronized (((ai) this).field_e) {
             ((ai) this).field_e.a(29664, (qa) (Object) param1);
-            if (param0) {
-                ((ai) this).field_i = null;
-            }
             ((ai) this).field_h = ((ai) this).field_h + 1;
             ((Object) (Object) ((ai) this).field_e).notifyAll();
         }
@@ -828,31 +816,21 @@ final class ai implements Runnable {
             mj.field_Ib.c((byte) 113);
             return true;
           } else {
-            if (!param0) {
-              if (null != mj.field_Ib) {
-                if (!mj.field_Ib.a(96, param2, param1)) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
+            int discarded$14 = 112;
+            int discarded$15 = ai.a(true);
+            if (null != mj.field_Ib) {
+              if (!mj.field_Ib.a(96, 15, 13)) {
                 return false;
+              } else {
+                return true;
               }
             } else {
-              int discarded$6 = ai.a(true, (byte) 112);
-              if (null != mj.field_Ib) {
-                if (!mj.field_Ib.a(96, param2, param1)) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
+              return false;
             }
           }
         } else {
-          ub.n(33423425);
+          int discarded$16 = 33423425;
+          ub.n();
           return true;
         }
     }

@@ -14,7 +14,7 @@ final class ck extends k {
     static String field_r;
     static long field_q;
 
-    final static void a(int param0, byte param1) {
+    final static void a() {
         RuntimeException var2 = null;
         int var3 = 0;
         ik var4 = null;
@@ -31,13 +31,13 @@ final class ck extends k {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    aj.a(42, param0, var5);
+                    aj.a(42, 3, var5);
                     var5 = (ij) (Object) qd.field_n.b((byte) 70);
                     continue L2;
                   }
                 }
               } else {
-                ig.a(-104, param0, var4);
+                ig.a(-104, 3, var4);
                 var4 = (ik) (Object) vj.field_d.b((byte) 70);
                 continue L1;
               }
@@ -46,7 +46,7 @@ final class ck extends k {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2, "ck.K(" + param0 + 44 + 105 + 41);
+          throw t.a((Throwable) (Object) var2, "ck.K(" + 3 + 44 + 105 + 41);
         }
     }
 

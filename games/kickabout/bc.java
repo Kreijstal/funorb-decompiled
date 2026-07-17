@@ -127,45 +127,41 @@ final class bc {
         String stackOut_5_2 = null;
         try {
           L0: {
-            if (param0 == -8) {
-              param1[76] = -2;
-              param1[90] = 0;
-              param1[75] = -1;
-              param1[68] = -1;
-              param1[86] = 1;
-              param1[85] = 0;
-              param1[78] = -2;
-              param1[84] = 0;
-              param1[82] = 0;
-              param1[77] = 1;
-              param1[65] = -2;
-              param1[66] = 0;
-              param1[80] = -2;
-              param1[83] = -2;
-              param1[72] = -2;
-              param1[67] = 12;
-              param1[71] = -2;
-              param1[73] = -2;
-              param1[81] = 27;
-              param1[89] = -2;
-              param1[69] = -2;
-              param1[74] = -1;
-              param1[88] = -2;
-              param1[91] = -2;
-              param1[87] = -2;
-              param1[70] = -2;
-              param1[64] = -2;
-              break L0;
-            } else {
-              return;
-            }
+            param1[76] = -2;
+            param1[90] = 0;
+            param1[75] = -1;
+            param1[68] = -1;
+            param1[86] = 1;
+            param1[85] = 0;
+            param1[78] = -2;
+            param1[84] = 0;
+            param1[82] = 0;
+            param1[77] = 1;
+            param1[65] = -2;
+            param1[66] = 0;
+            param1[80] = -2;
+            param1[83] = -2;
+            param1[72] = -2;
+            param1[67] = 12;
+            param1[71] = -2;
+            param1[73] = -2;
+            param1[81] = 27;
+            param1[89] = -2;
+            param1[69] = -2;
+            param1[74] = -1;
+            param1[88] = -2;
+            param1[91] = -2;
+            param1[87] = -2;
+            param1[70] = -2;
+            param1[64] = -2;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var2;
-            stackOut_4_1 = new StringBuilder().append("bc.B(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("bc.B(").append(-8).append(44);
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;

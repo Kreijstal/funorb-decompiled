@@ -14,7 +14,7 @@ final class fc {
         ee.field_b = param0;
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         return null != m.field_b && r.field_c == pb.field_a;
     }
 
@@ -102,8 +102,10 @@ final class fc {
             nb.field_c = (qe) (Object) ai.a(param3, "commonui", true, "arezzo14", param1);
             tk.field_a = (qe) (Object) ai.a(param3, "commonui", true, "arezzo14bold", param1);
             var18 = new hl(param0.a("button.gif", (byte) -95, ""), (java.awt.Component) (Object) kj.field_E);
-            id discarded$1 = o.a(param3, "commonui", "dropdown", false);
-            var5 = fg.a(param3, "screen_options", "commonui", false);
+            int discarded$4 = 0;
+            id discarded$5 = o.a(param3, "commonui", "dropdown");
+            int discarded$6 = 0;
+            var5 = fg.a(param3, "screen_options", "commonui");
             il.field_e = new id[4];
             w.field_u = new id[4];
             rj.field_i = new id[4];
@@ -125,7 +127,8 @@ final class fc {
                 L2: while (true) {
                   if (var9 >= 3) {
                     var9 = var18.field_v;
-                    wj.b(true);
+                    int discarded$7 = 1;
+                    wj.b();
                     var18.e();
                     ki.a(0, 0, ki.field_j, ki.field_f);
                     var16 = new hl(var9, var9);
@@ -135,7 +138,7 @@ final class fc {
                     var11 = new hl(var9, var9);
                     var11.e();
                     var18.d(-var18.field_u + var9, 0);
-                    var13 = 50 % ((15 - param2) / 52);
+                    var13 = 0;
                     var12 = new hl(var18.field_u + -(var9 * 2), var9);
                     var12.e();
                     var18.d(-var9, 0);
@@ -220,7 +223,7 @@ final class fc {
           }
           L6: {
             stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(44).append(param2).append(44);
+            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(44).append(95).append(44);
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -247,7 +250,7 @@ final class fc {
         }
     }
 
-    final static void a(rb param0, rb param1, java.math.BigInteger param2, java.math.BigInteger param3, int param4) {
+    final static void a(rb param0, rb param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         try {
             vj.a(param0.field_f, 0, param2, param1, param0.field_g, (byte) 99, param3);
         } catch (RuntimeException runtimeException) {

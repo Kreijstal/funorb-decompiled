@@ -30,9 +30,6 @@ final class bh implements Runnable {
 
     final static void b(int param0) {
         fh.field_g = false;
-        if (param0 >= -22) {
-            return;
-        }
         int discarded$0 = mk.field_j.a(-16384);
     }
 
@@ -295,7 +292,7 @@ final class bh implements Runnable {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_d = null;
         field_e = null;
         field_b = null;

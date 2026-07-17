@@ -10,7 +10,7 @@ final class qj {
     int field_b;
     boolean field_f;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_g = null;
     }
@@ -32,13 +32,13 @@ final class qj {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    se.a(var5, param0, -49);
+                    se.a(var5, 3, -49);
                     var5 = (gj) (Object) cb.field_b.d(853);
                     continue L2;
                   }
                 }
               } else {
-                bk.a(true, param0, var4);
+                bk.a(true, 3, var4);
                 var4 = (vg) (Object) kk.field_X.d(853);
                 continue L1;
               }
@@ -47,7 +47,7 @@ final class qj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw dd.a((Throwable) (Object) var2, "qj.A(" + param0 + 44 + 7287 + 41);
+          throw dd.a((Throwable) (Object) var2, "qj.A(" + 3 + 44 + 7287 + 41);
         }
     }
 

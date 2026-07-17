@@ -86,7 +86,7 @@ final class ac extends nf {
         return (f) (Object) stackIn_6_0;
     }
 
-    final static byte[] a(byte[] param0, int param1, int param2, byte param3) {
+    final static byte[] a(byte[] param0, int param1, int param2) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         int var5_int = 0;
@@ -183,7 +183,7 @@ final class ac extends nf {
         return (pb) (Object) new fg();
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_j = null;
         field_k = null;
     }

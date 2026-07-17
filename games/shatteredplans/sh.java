@@ -186,12 +186,12 @@ final class sh implements fo {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         bg.field_g = false;
         ae.field_b = sa.field_a.j(-99) == 0 ? true : false;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_c = null;
     }
 
@@ -218,136 +218,129 @@ final class sh implements fo {
         String var11 = null;
         int var12 = 0;
         int var13 = 0;
-        int stackIn_41_0 = 0;
-        int stackOut_40_0 = 0;
-        int stackOut_39_0 = 0;
-        L0: {
-          var13 = ShatteredPlansClient.field_F ? 1 : 0;
-          var4 = null;
-          ji.field_I.field_xb.field_M.a(0);
-          var5 = 0;
-          var6 = 0;
-          if (!param0) {
-            break L0;
-          } else {
-            field_b = -115;
-            break L0;
-          }
-        }
+        int stackIn_39_0 = 0;
+        int stackOut_38_0 = 0;
+        int stackOut_37_0 = 0;
+        var13 = ShatteredPlansClient.field_F ? 1 : 0;
+        var4 = null;
+        ji.field_I.field_xb.field_M.a(0);
+        var5 = 0;
+        var6 = 0;
         var7 = da.field_g - 1;
-        L1: while (true) {
+        L0: while (true) {
           if (0 > var7) {
             var7 = 0;
             var8 = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (da.field_g <= var8) {
-                L3: {
+                L2: {
                   var8 = -var7 - -var6 + (ji.field_I.field_xb.field_mb + ji.field_I.field_xb.field_gb);
                   ji.field_I.field_xb.field_mb = ji.field_I.field_xb.field_mb - var8;
                   ji.field_I.field_xb.field_db = ji.field_I.field_xb.field_db + var8;
                   if (!qh.field_v) {
-                    break L3;
+                    break L2;
                   } else {
                     ji.field_I.field_xb.field_mb = var7;
-                    break L3;
+                    break L2;
                   }
                 }
-                L4: {
+                L3: {
                   ji.field_I.field_xb.field_gb = -ji.field_I.field_xb.field_mb + var7;
                   if (qh.field_v) {
                     qh.field_v = false;
                     ji.field_I.field_xb.field_w = 0;
                     ShatteredPlansClient.field_K = true;
                     ji.field_I.field_xb.field_db = -ji.field_I.field_xb.field_mb + ji.field_I.field_zb.field_mb;
-                    break L4;
+                    break L3;
                   } else {
-                    break L4;
+                    break L3;
                   }
                 }
-                L5: {
+                L4: {
                   if (!sr.field_h) {
-                    break L5;
+                    break L4;
                   } else {
                     if (null != fa.field_X) {
                       ShatteredPlansClient.field_K = true;
-                      break L5;
+                      break L4;
                     } else {
-                      break L5;
+                      break L4;
                     }
                   }
                 }
-                L6: {
+                L5: {
                   var9 = ji.field_I.field_zb.field_mb + -ji.field_I.field_xb.field_mb - ji.field_I.field_xb.field_gb;
                   if (ShatteredPlansClient.field_K) {
                     ji.field_I.field_xb.field_w = var9 + -ji.field_I.field_xb.field_db;
-                    break L6;
+                    break L5;
                   } else {
-                    break L6;
+                    break L5;
                   }
                 }
-                L7: {
+                L6: {
                   ji.field_I.a(param1 * 2 * param3, true, (byte) -114, param3);
                   if (var9 != ji.field_I.field_xb.field_w + ji.field_I.field_xb.field_db) {
-                    stackOut_40_0 = 0;
-                    stackIn_41_0 = stackOut_40_0;
-                    break L7;
+                    stackOut_38_0 = 0;
+                    stackIn_39_0 = stackOut_38_0;
+                    break L6;
                   } else {
-                    stackOut_39_0 = 1;
-                    stackIn_41_0 = stackOut_39_0;
-                    break L7;
+                    stackOut_37_0 = 1;
+                    stackIn_39_0 = stackOut_37_0;
+                    break L6;
                   }
                 }
-                ShatteredPlansClient.field_K = stackIn_41_0 != 0;
+                ShatteredPlansClient.field_K = stackIn_39_0 != 0;
                 return (nf) var4;
               } else {
                 var9_ref_nf = wm.field_d[var8];
                 if (null != var9_ref_nf.field_j) {
-                  L8: {
+                  L7: {
                     ji.field_I.field_xb.a(4, var9_ref_nf.field_j);
                     var9_ref_nf.field_j.a(var9_ref_nf.field_j.e(false), param3, (byte) 111, var7, param2);
                     if (0 == var9_ref_nf.field_j.field_rb) {
-                      break L8;
+                      break L7;
                     } else {
                       var4 = (Object) (Object) var9_ref_nf;
-                      break L8;
+                      break L7;
                     }
                   }
                   var7 = var7 + param3;
                   var8++;
-                  continue L2;
+                  continue L1;
                 } else {
                   var8++;
-                  continue L2;
+                  continue L1;
                 }
               }
             }
           } else {
-            L9: {
+            L8: {
               var8_ref_nf = wm.field_d[var7];
               var9 = 0;
               if (bg.field_g) {
-                break L9;
+                break L8;
               } else {
                 if (kp.field_i <= var5) {
-                  break L9;
+                  break L8;
                 } else {
                   var10_int = id.a(-7019, var8_ref_nf.field_n);
                   if (var10_int > var8_ref_nf.a((byte) 116)) {
-                    break L9;
+                    break L8;
                   } else {
-                    L10: {
+                    L9: {
                       if (var8_ref_nf.field_h) {
-                        break L10;
+                        break L9;
                       } else {
-                        if (!ti.a(var8_ref_nf.field_b, true)) {
-                          break L10;
-                        } else {
+                        int discarded$2 = 1;
+                        if (!ti.a(var8_ref_nf.field_b)) {
                           break L9;
+                        } else {
+                          break L8;
                         }
                       }
                     }
                     var9 = 1;
-                    break L9;
+                    break L8;
                   }
                 }
               }
@@ -355,31 +348,32 @@ final class sh implements fo {
             if (var9 == 0) {
               var8_ref_nf.field_j = null;
               var7--;
-              continue L1;
+              continue L0;
             } else {
-              L11: {
+              L10: {
                 if (null == var8_ref_nf.field_j) {
-                  break L11;
+                  break L10;
                 } else {
                   if (qh.field_v) {
-                    break L11;
+                    break L10;
                   } else {
                     var5++;
                     var7--;
-                    continue L1;
+                    continue L0;
                   }
                 }
               }
-              L12: {
+              L11: {
                 if (null != var8_ref_nf.field_j) {
-                  break L12;
+                  break L11;
                 } else {
-                  break L12;
+                  break L11;
                 }
               }
-              var10 = hg.a(param0, var8_ref_nf);
+              var10 = hg.a(false, var8_ref_nf);
               var11 = var10 + nq.a(var8_ref_nf.field_k);
-              var12 = jl.a(var8_ref_nf, (byte) -73);
+              int discarded$3 = -73;
+              var12 = jl.a(var8_ref_nf);
               var8_ref_nf.field_j = new qr(0L, bh.field_k, var11);
               var8_ref_nf.field_j.field_nb = ho.field_f;
               var8_ref_nf.field_j.field_jb = -(var12 >> 1 & 8355711) + var12 + (8355711 & bh.field_k.field_jb >> 1);
@@ -388,7 +382,7 @@ final class sh implements fo {
               var8_ref_nf.field_j.field_qb = -(8355711 & var12 >> 1) + (var12 + (8355711 & bh.field_k.field_qb >> 1));
               var5++;
               var7--;
-              continue L1;
+              continue L0;
             }
           }
         }

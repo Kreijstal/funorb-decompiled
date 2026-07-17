@@ -80,7 +80,8 @@ abstract class vc extends oo {
                     continue L1;
                   } else {
                     ln.a(param2[var8][var9], 0, param1[var8][var9]);
-                    nd.a(param1[var8][var9], (byte) -37);
+                    int discarded$2 = -37;
+                    nd.a(param1[var8][var9]);
                     var9++;
                     continue L3;
                   }
@@ -301,15 +302,13 @@ abstract class vc extends oo {
     final static void a(boolean param0, java.awt.Canvas param1) {
         try {
             if (fk.field_ab == 11) {
-                bi.b(-125);
+                int discarded$0 = -125;
+                bi.b();
             }
-            a.a(am.field_n, param0, uh.field_o, kk.field_w);
-            if (!param0) {
-                field_N = null;
-            }
+            a.a(am.field_n, true, uh.field_o, kk.field_w);
             fe.a(0, 0, (byte) -118, param1);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "vc.I(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "vc.I(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -600,7 +599,7 @@ abstract class vc extends oo {
                     var10 = wf.field_c.getGraphics();
                     var10.setColor(param3);
                     var10.drawRect(0, 0, 303, 33);
-                    var10.fillRect(2, 2, param4 * 3, param1);
+                    var10.fillRect(2, 2, param4 * 3, 30);
                     var10.setColor(java.awt.Color.black);
                     var10.drawRect(1, 1, 301, 31);
                     var10.fillRect(param4 * 3 + 2, 2, -(3 * param4) + 300, 30);
@@ -655,7 +654,7 @@ abstract class vc extends oo {
           L10: {
             var5_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_19_0 = (RuntimeException) var5_ref;
-            stackOut_19_1 = new StringBuilder().append("vc.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_19_1 = new StringBuilder().append("vc.C(").append(param0).append(44).append(30).append(44);
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -707,7 +706,7 @@ abstract class vc extends oo {
         }
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_J = null;
         field_P = null;
         field_N = null;

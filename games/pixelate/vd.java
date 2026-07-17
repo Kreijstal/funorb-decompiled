@@ -80,22 +80,22 @@ final class vd {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        String stackIn_24_2 = null;
+        String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
         RuntimeException stackOut_22_0 = null;
         StringBuilder stackOut_22_1 = null;
         String stackOut_22_2 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
         var5 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
@@ -105,21 +105,14 @@ final class vd {
                 var2_int = 0;
                 L2: while (true) {
                   if (var2_int >= sd.field_L) {
-                    int dupTemp$4 = param1.a((byte) -87);
-                    tm.field_O[dupTemp$4] = tm.field_O[dupTemp$4] + 1;
+                    int dupTemp$3 = param1.a((byte) -87);
+                    tm.field_O[dupTemp$3] = tm.field_O[dupTemp$3] + 1;
                     var2_int = 0;
                     var3 = 0;
                     L3: while (true) {
                       if (var3 >= sd.field_L) {
                         sd.field_L = var2_int;
-                        if (!param0) {
-                          int fieldTemp$5 = sd.field_L;
-                          sd.field_L = sd.field_L + 1;
-                          de.field_e[fieldTemp$5] = param1;
-                          break L0;
-                        } else {
-                          return;
-                        }
+                        break L0;
                       } else {
                         L4: {
                           L5: {
@@ -135,9 +128,9 @@ final class vd {
                               }
                             }
                           }
-                          int incrementValue$6 = var2_int;
+                          int incrementValue$4 = var2_int;
                           var2_int++;
-                          de.field_e[incrementValue$6] = de.field_e[var3];
+                          de.field_e[incrementValue$4] = de.field_e[var3];
                           break L4;
                         }
                         var3++;
@@ -149,8 +142,8 @@ final class vd {
                       if (param1.field_j != de.field_e[var2_int].field_j) {
                         break L6;
                       } else {
-                        int dupTemp$7 = de.field_e[var2_int].a((byte) 123);
-                        tm.field_O[dupTemp$7] = tm.field_O[dupTemp$7] + 1;
+                        int dupTemp$5 = de.field_e[var2_int].a((byte) 123);
+                        tm.field_O[dupTemp$5] = tm.field_O[dupTemp$5] + 1;
                         break L6;
                       }
                     }
@@ -169,35 +162,35 @@ final class vd {
           decompiledCaughtException = decompiledCaughtParameter0;
           L7: {
             var2 = decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var2;
-            stackOut_21_1 = new StringBuilder().append("vd.D(").append(param0).append(44);
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackOut_20_0 = (RuntimeException) var2;
+            stackOut_20_1 = new StringBuilder().append("vd.D(").append(0).append(44);
+            stackIn_22_0 = stackOut_20_0;
+            stackIn_22_1 = stackOut_20_1;
+            stackIn_21_0 = stackOut_20_0;
+            stackIn_21_1 = stackOut_20_1;
             if (param1 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
-              break L7;
-            } else {
               stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
               stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
+              stackOut_22_2 = "null";
+              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_1 = stackOut_22_1;
+              stackIn_23_2 = stackOut_22_2;
+              break L7;
+            } else {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "{...}";
+              stackIn_23_0 = stackOut_21_0;
+              stackIn_23_1 = stackOut_21_1;
+              stackIn_23_2 = stackOut_21_2;
               break L7;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
         int var1 = 0;
@@ -207,7 +200,8 @@ final class vd {
 
     final static void a(boolean param0, int param1, int param2, byte param3) {
         a.a(param0, 99);
-        ra.a(param2, param1, param0, -32268);
+        int discarded$0 = -32268;
+        ra.a(13, 15, param0);
     }
 
     final static void a(boolean param0) {

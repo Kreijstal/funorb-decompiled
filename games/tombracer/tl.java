@@ -16,34 +16,29 @@ final class tl extends nv implements ut {
         int var7 = 0;
         int var8 = 0;
         int[] var9 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
             L1: while (true) {
               param1--;
               if (param1 < 0) {
-                if (param3 == 1535993377) {
-                  break L0;
-                } else {
-                  tl.a((byte) 72, -101, -90, -85, 66, 71, -106, -32);
-                  return;
-                }
+                break L0;
               } else {
                 var9 = param4;
                 var5 = var9;
@@ -59,31 +54,31 @@ final class tl extends nv implements ut {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5_ref = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var5_ref;
-            stackOut_6_1 = new StringBuilder().append("tl.H(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackOut_4_0 = (RuntimeException) var5_ref;
+            stackOut_4_1 = new StringBuilder().append("tl.H(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(1535993377).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param4 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
               break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
               break L2;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
     }
 
@@ -131,19 +126,14 @@ final class tl extends nv implements ut {
     }
 
     final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        if (param0 < -32) {
-          if (param1 >= pka.field_b) {
-            if (ss.field_c >= param3) {
-              if (gca.field_d <= param2) {
-                if (param4 > hc.field_h) {
-                  pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
-                  return;
-                } else {
-                  rga.a(param5, 107, param6, param1, param2, param7, param3, param4);
-                  return;
-                }
-              } else {
+        if (param1 >= pka.field_b) {
+          if (ss.field_c >= param3) {
+            if (gca.field_d <= param2) {
+              if (param4 > hc.field_h) {
                 pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
+                return;
+              } else {
+                rga.a(param5, 107, param6, param1, param2, param7, param3, param4);
                 return;
               }
             } else {
@@ -155,29 +145,8 @@ final class tl extends nv implements ut {
             return;
           }
         } else {
-          field_q = null;
-          if (param1 >= pka.field_b) {
-            if (ss.field_c >= param3) {
-              if (gca.field_d <= param2) {
-                if (param4 > hc.field_h) {
-                  pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
-                  return;
-                } else {
-                  rga.a(param5, 107, param6, param1, param2, param7, param3, param4);
-                  return;
-                }
-              } else {
-                pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
-                return;
-              }
-            } else {
-              pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
-              return;
-            }
-          } else {
-            pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
-            return;
-          }
+          pra.a(param1, param7, param5, 99, param3, param4, param2, param6);
+          return;
         }
     }
 
@@ -211,7 +180,7 @@ final class tl extends nv implements ut {
         return 21;
     }
 
-    public static void l(int param0) {
+    public static void l() {
         field_n = null;
         field_p = null;
         field_q = null;

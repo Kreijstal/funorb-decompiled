@@ -38,7 +38,7 @@ final class h extends wn {
         }
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_K = null;
         field_E = null;
         field_G = null;
@@ -83,9 +83,6 @@ final class h extends wn {
     final static void a(long param0, int param1, String param2) {
         CharSequence var5 = null;
         so.field_p = param2;
-        if (param1 != -30687) {
-            return;
-        }
         try {
             nj.field_c = 2;
             var5 = (CharSequence) (Object) param2;
@@ -93,7 +90,7 @@ final class h extends wn {
             gg.field_e = param0;
             uc.a(3);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "h.T(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "h.T(" + param0 + 44 + -30687 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -145,18 +142,21 @@ final class h extends wn {
         }
     }
 
-    final static hc g(byte param0) {
+    final static hc g() {
         int var1 = 0;
-        String var2 = ed.k(-952);
+        int discarded$0 = -952;
+        String var2 = ed.k();
         if (var2 != null) {
             if (!(var2.indexOf('@') < 0)) {
                 var2 = "";
             }
         }
-        return new hc(ed.k(-952), hc.a(-1));
+        int discarded$1 = -952;
+        int discarded$2 = -1;
+        return new hc(ed.k(), hc.a());
     }
 
-    final static void j(int param0) {
+    final static void j() {
         qb var1 = null;
         qb var2 = null;
         int var3 = 0;
@@ -167,7 +167,8 @@ final class h extends wn {
             id.a();
             de.b();
             gi.field_a = 0;
-            cg.f(252566882);
+            int discarded$0 = 252566882;
+            cg.f();
             var2 = var1.g();
             for (var3 = 0; var3 < 15; var3++) {
                 var2.a(-2, -2, 16777215);

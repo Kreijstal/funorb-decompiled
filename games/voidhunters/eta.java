@@ -5,7 +5,7 @@ final class eta implements dja {
     static java.awt.Dimension field_a;
     static int field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 
@@ -99,10 +99,7 @@ final class eta implements dja {
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        if (param1 != -1104) {
-            return false;
-        }
-        return (param2 & 2048) != 0 ? true : false;
+        return (param2 & 2048) != 0;
     }
 
     public final tv a(byte param0) {

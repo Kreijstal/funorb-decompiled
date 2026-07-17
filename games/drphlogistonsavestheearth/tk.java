@@ -1036,8 +1036,8 @@ final class tk extends gi {
                                       }
                                     }
                                     stackIn_40_0[stackIn_40_1] = stackIn_40_2 != 0;
-                                    int discarded$3 = tk.d(16);
                                     int discarded$4 = tk.d(16);
+                                    int discarded$5 = tk.d(16);
                                     field_G[var6] = tk.d(8);
                                     var6++;
                                     continue L6;
@@ -1062,7 +1062,7 @@ final class tk extends gi {
                       }
                     }
                   } else {
-                    int discarded$5 = tk.d(16);
+                    int discarded$6 = tk.d(16);
                     var3++;
                     continue L2;
                   }
@@ -1122,7 +1122,8 @@ final class tk extends gi {
                               continue L0;
                             }
                           } else {
-                            var9[var11] = hg.a(var10, var11, (byte) -82);
+                            int discarded$7 = -82;
+                            var9[var11] = hg.a(var10, var11);
                             var11++;
                             continue L12;
                           }

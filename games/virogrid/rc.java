@@ -289,7 +289,7 @@ final class rc extends l {
         return var2;
     }
 
-    final static void c(int param0) {
+    final static void c() {
         hg var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

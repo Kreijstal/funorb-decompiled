@@ -15,7 +15,7 @@ class rg extends jk implements sh {
     static int field_sb;
     private boolean field_nb;
 
-    final static gj a(String param0, boolean param1) {
+    final static gj a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -500,13 +500,15 @@ class rg extends jk implements sh {
           L1: {
             ((rg) this).field_K = false;
             if (((rg) this).field_nb) {
-              fd.a(true);
+              int discarded$4 = 1;
+              fd.a();
               break L1;
             } else {
               if (!((rg) this).field_rb) {
                 break L1;
               } else {
-                r.a((byte) -127);
+                int discarded$5 = -127;
+                r.a();
                 break L1;
               }
             }

@@ -45,7 +45,8 @@ final class io {
               if (((io) this).field_m == 0) {
                 if (tu.field_E.d((byte) 91)) {
                   if (tu.field_E.field_J[0]) {
-                    vr.b((byte) -124);
+                    int discarded$4 = -124;
+                    vr.b();
                     break L0;
                   } else {
                     wf.b(10, true);
@@ -153,7 +154,8 @@ final class io {
                                                                               break L0;
                                                                             } else {
                                                                               if (((io) this).field_m == 55) {
-                                                                                vi.c((byte) -59);
+                                                                                int discarded$5 = -59;
+                                                                                vi.c();
                                                                                 break L0;
                                                                               } else {
                                                                                 if (((io) this).field_m == 13) {
@@ -165,7 +167,9 @@ final class io {
                                                                                       if (((io) this).field_m != 32) {
                                                                                         if (49 == ((io) this).field_m) {
                                                                                           if (!qo.c((byte) -42)) {
-                                                                                            ea.a(39, (byte) 99);
+                                                                                            int discarded$6 = 99;
+                                                                                            int discarded$7 = 39;
+                                                                                            ea.a();
                                                                                             break L0;
                                                                                           } else {
                                                                                             L1: {
@@ -338,84 +342,274 @@ final class io {
     }
 
     final void a(boolean param0, int param1) {
-        if (param1 != -27) {
-            return;
-        }
-        int var3 = cj.k(256);
-        int var4 = var3 >> 3;
-        int var5 = 17 != ((io) this).field_m ? gn.b((byte) -99) : sk.a((byte) 97);
-        var5 = var5 + (param0 ? -var4 : var4);
-        if (!(var5 >= 0)) {
-            var5 = 0;
-        }
-        if (var5 > var3) {
-            var5 = var3;
-        }
-        if (!(((io) this).field_m != 17)) {
-            li.a(var5, (byte) 20);
-        }
-        if (!(((io) this).field_m != 16)) {
-            pe.a(var5, (byte) -121);
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int stackIn_5_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_8_1 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_5_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_7_1 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_6_1 = 0;
+        if (param1 == -27) {
+          L0: {
+            var3 = cj.k(256);
+            var4 = var3 >> 3;
+            if (17 == ((io) this).field_m) {
+              int discarded$3 = 97;
+              stackOut_4_0 = sk.a();
+              stackIn_5_0 = stackOut_4_0;
+              break L0;
+            } else {
+              stackOut_3_0 = gn.b((byte) -99);
+              stackIn_5_0 = stackOut_3_0;
+              break L0;
+            }
+          }
+          L1: {
+            var5 = stackIn_5_0;
+            stackOut_5_0 = var5;
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_6_0 = stackOut_5_0;
+            if (!param0) {
+              stackOut_7_0 = stackIn_7_0;
+              stackOut_7_1 = var4;
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              break L1;
+            } else {
+              stackOut_6_0 = stackIn_6_0;
+              stackOut_6_1 = -var4;
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              break L1;
+            }
+          }
+          L2: {
+            var5 = stackIn_8_0 + stackIn_8_1;
+            if (var5 < 0) {
+              var5 = 0;
+              break L2;
+            } else {
+              break L2;
+            }
+          }
+          L3: {
+            if (var5 <= var3) {
+              break L3;
+            } else {
+              var5 = var3;
+              break L3;
+            }
+          }
+          L4: {
+            if (((io) this).field_m == 17) {
+              li.a(var5, (byte) 20);
+              break L4;
+            } else {
+              break L4;
+            }
+          }
+          L5: {
+            if (((io) this).field_m == 16) {
+              pe.a(var5, (byte) -121);
+              break L5;
+            } else {
+              break L5;
+            }
+          }
+          return;
+        } else {
+          return;
         }
     }
 
     final void a(boolean param0, boolean param1, boolean param2, int param3, int param4) {
         int var6 = 0;
         int var7 = 0;
-        ((io) this).field_g = param0 ? true : false;
-        if (param3 != 16) {
+        Object stackIn_1_0 = null;
+        Object stackIn_2_0 = null;
+        Object stackIn_3_0 = null;
+        int stackIn_3_1 = 0;
+        j stackIn_11_0 = null;
+        j stackIn_12_0 = null;
+        j stackIn_13_0 = null;
+        int stackIn_13_1 = 0;
+        Object stackIn_29_0 = null;
+        Object stackIn_30_0 = null;
+        Object stackIn_31_0 = null;
+        int stackIn_31_1 = 0;
+        Object stackOut_0_0 = null;
+        Object stackOut_2_0 = null;
+        int stackOut_2_1 = 0;
+        Object stackOut_1_0 = null;
+        int stackOut_1_1 = 0;
+        j stackOut_10_0 = null;
+        j stackOut_12_0 = null;
+        int stackOut_12_1 = 0;
+        j stackOut_11_0 = null;
+        int stackOut_11_1 = 0;
+        Object stackOut_28_0 = null;
+        Object stackOut_30_0 = null;
+        int stackOut_30_1 = 0;
+        Object stackOut_29_0 = null;
+        int stackOut_29_1 = 0;
+        L0: {
+          stackOut_0_0 = this;
+          stackIn_2_0 = stackOut_0_0;
+          stackIn_1_0 = stackOut_0_0;
+          if (!param0) {
+            stackOut_2_0 = this;
+            stackOut_2_1 = 0;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            break L0;
+          } else {
+            stackOut_1_0 = this;
+            stackOut_1_1 = 1;
+            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_1 = stackOut_1_1;
+            break L0;
+          }
+        }
+        L1: {
+          ((io) this).field_g = stackIn_3_1 != 0;
+          if (param3 == 16) {
+            break L1;
+          } else {
             io.a((byte) 108);
+            break L1;
+          }
         }
-        if (param1) {
-            if (!(((io) this).field_r)) {
-                ((io) this).a(-1, true);
+        L2: {
+          if (!param1) {
+            break L2;
+          } else {
+            if (!((io) this).field_r) {
+              ((io) this).a(-1, true);
+              break L2;
+            } else {
+              break L2;
             }
+          }
         }
-        if (null != ((io) this).field_b) {
-            ((io) this).field_b.a(17 == ((io) this).field_m ? sk.a((byte) 97) : gn.b((byte) -124), 1);
+        L3: {
+          if (null == ((io) this).field_b) {
+            break L3;
+          } else {
+            L4: {
+              stackOut_10_0 = ((io) this).field_b;
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_11_0 = stackOut_10_0;
+              if (17 != ((io) this).field_m) {
+                stackOut_12_0 = (j) (Object) stackIn_12_0;
+                stackOut_12_1 = gn.b((byte) -124);
+                stackIn_13_0 = stackOut_12_0;
+                stackIn_13_1 = stackOut_12_1;
+                break L4;
+              } else {
+                int discarded$3 = 97;
+                stackOut_11_0 = (j) (Object) stackIn_11_0;
+                stackOut_11_1 = sk.a();
+                stackIn_13_0 = stackOut_11_0;
+                stackIn_13_1 = stackOut_11_1;
+                break L4;
+              }
+            }
+            ((j) (Object) stackIn_13_0).a(stackIn_13_1, 1);
+            break L3;
+          }
         }
-        if (((io) this).field_r) {
-            if (param2) {
-                if (param4 != ((io) this).field_f) {
-                    param4 = param4 + (wo.field_m + -aw.field_J);
-                    var6 = cj.k(param3 + 240);
-                    var7 = param4 * var6 / wo.field_m;
-                    if (!(var7 >= 0)) {
-                        var7 = 0;
-                    }
-                    if (!(var7 <= var6)) {
-                        var7 = var6;
-                    }
-                    if (((io) this).field_m == 17) {
-                        li.a(var7, (byte) 46);
-                    }
-                    if (!(16 != ((io) this).field_m)) {
-                        pe.a(var7, (byte) -121);
-                    }
+        L5: {
+          if (!((io) this).field_r) {
+            break L5;
+          } else {
+            if (!param2) {
+              break L5;
+            } else {
+              if (param4 == ((io) this).field_f) {
+                break L5;
+              } else {
+                L6: {
+                  param4 = param4 + (wo.field_m + -aw.field_J);
+                  var6 = cj.k(param3 + 240);
+                  var7 = param4 * var6 / wo.field_m;
+                  if (var7 < 0) {
+                    var7 = 0;
+                    break L6;
+                  } else {
+                    break L6;
+                  }
                 }
+                L7: {
+                  if (var7 > var6) {
+                    var7 = var6;
+                    break L7;
+                  } else {
+                    break L7;
+                  }
+                }
+                L8: {
+                  if (((io) this).field_m != 17) {
+                    break L8;
+                  } else {
+                    li.a(var7, (byte) 46);
+                    break L8;
+                  }
+                }
+                if (16 == ((io) this).field_m) {
+                  pe.a(var7, (byte) -121);
+                  break L5;
+                } else {
+                  break L5;
+                }
+              }
             }
+          }
         }
-        ((io) this).field_f = !param2 ? -1 : param4;
+        L9: {
+          stackOut_28_0 = this;
+          stackIn_30_0 = stackOut_28_0;
+          stackIn_29_0 = stackOut_28_0;
+          if (param2) {
+            stackOut_30_0 = this;
+            stackOut_30_1 = param4;
+            stackIn_31_0 = stackOut_30_0;
+            stackIn_31_1 = stackOut_30_1;
+            break L9;
+          } else {
+            stackOut_29_0 = this;
+            stackOut_29_1 = -1;
+            stackIn_31_0 = stackOut_29_0;
+            stackIn_31_1 = stackOut_29_1;
+            break L9;
+          }
+        }
+        ((io) this).field_f = stackIn_31_1;
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, up param4, boolean param5, int param6) {
         et.field_b = true;
-        if (!(!vl.a(false))) {
+        int discarded$4 = 0;
+        if (!(!vl.a())) {
             return;
         }
         ok.field_c = param5;
         iu.field_j = param2 ? true : false;
         na.field_Ib = param3;
-        if (param1 != 0) {
-            return;
-        }
         try {
             ai.field_G = param4;
             fp.field_e = 3;
             i.field_x = param0;
             cr.field_c = param6;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "io.E(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + param6 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "io.E(" + param0 + 44 + 0 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + param6 + 41);
         }
     }
 
@@ -430,7 +624,7 @@ final class io {
         field_e = null;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         RuntimeException var1 = null;
         ut[] var3 = null;
         ut[] var4 = null;
@@ -730,7 +924,8 @@ final class io {
                 stackIn_46_0 = stackOut_45_0;
                 break L11;
               } else {
-                stackOut_44_0 = sk.a((byte) 97);
+                int discarded$1 = 97;
+                stackOut_44_0 = sk.a();
                 stackIn_46_0 = stackOut_44_0;
                 break L11;
               }

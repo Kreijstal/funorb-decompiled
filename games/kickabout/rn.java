@@ -88,7 +88,8 @@ final class rn {
         try {
           L0: {
             var8 = (CharSequence) (Object) param3;
-            if (!ef.a(var8, -9907)) {
+            int discarded$11 = -9907;
+            if (!ef.a(var8)) {
               stackOut_2_0 = kq.field_Ib;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0;
@@ -98,7 +99,8 @@ final class rn {
                 stackIn_7_0 = stackOut_6_0;
                 return stackIn_7_0;
               } else {
-                var7 = fm.a(param0, 145);
+                int discarded$12 = 145;
+                var7 = fm.a(param0);
                 if (var7 != null) {
                   var7.c((byte) -109);
                   var7.f(66);
@@ -179,11 +181,11 @@ final class rn {
         return (String) (Object) stackIn_12_0;
     }
 
-    final static int b(int param0, int param1) {
+    final static int b(int param0) {
         return t.field_f[param0 & 2047];
     }
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = -98;
         field_e = null;
         field_d = null;

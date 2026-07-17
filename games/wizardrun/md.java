@@ -16,7 +16,8 @@ abstract class md {
           L0: {
             var4 = ((md) this).b((byte) 66);
             if (var4 > 0L) {
-              tg.a(var4, false);
+              int discarded$2 = 0;
+              tg.a(var4);
               break L0;
             } else {
               break L0;
@@ -33,7 +34,7 @@ abstract class md {
         field_b = null;
     }
 
-    final static db c(byte param0) {
+    final static db c() {
         db var1 = new db(hk.field_bb, eg.field_v, ph.field_q[0], ne.field_h[0], cg.field_k[0], tf.field_b[0], mf.field_j[0], ic.field_b);
         eb.a(0);
         return var1;

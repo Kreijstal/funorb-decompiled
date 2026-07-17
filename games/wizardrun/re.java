@@ -35,7 +35,8 @@ final class re extends pe implements ng, qd {
           L0: {
             L1: {
               if (((re) this).field_H == param1) {
-                hc.f(92682);
+                int discarded$2 = 92682;
+                hc.f();
                 ((re) this).field_F.l(param0 + -8792);
                 break L1;
               } else {
@@ -81,7 +82,7 @@ final class re extends pe implements ng, qd {
         }
     }
 
-    private final String h(byte param0) {
+    private final String h() {
         return "</col></u>";
     }
 
@@ -201,6 +202,7 @@ final class re extends pe implements ng, qd {
             ((re) this).field_F = param0;
             ((re) this).field_H = new pl(e.field_e, (ce) null);
             ((re) this).field_H.field_w = (bf) (Object) new jl();
+            int discarded$1 = -85;
             var7 = di.a(new String[2], (byte) 79, t.field_b);
             var3 = 20;
             var4 = new ll(gh.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, gh.field_b.field_M, -1, 2147483647, true);
@@ -253,13 +255,13 @@ final class re extends pe implements ng, qd {
         }
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_E = null;
         field_G = null;
         field_I = null;
     }
 
-    final static db[] a(kl param0, String param1, String param2, int param3) {
+    final static db[] a(kl param0, String param1, String param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -314,7 +316,7 @@ final class re extends pe implements ng, qd {
         String stackOut_9_2 = null;
         try {
           L0: {
-            var6 = -86 / ((18 - param3) / 59);
+            var6 = 86;
             var4_int = param0.b(-1, param1);
             var5 = param0.a(var4_int, param2, -11986);
             stackOut_0_0 = ml.a(param0, var5, -26955, var4_int);
@@ -399,7 +401,7 @@ final class re extends pe implements ng, qd {
               break L3;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param3 + 41);
+          throw bd.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + 112 + 41);
         }
         return stackIn_1_0;
     }
@@ -408,13 +410,16 @@ final class re extends pe implements ng, qd {
         int var6 = wizardrun.field_H;
         try {
             if (param0 == 0) {
-                fa.a("terms.ws", 12);
+                int discarded$1 = 12;
+                fa.a("terms.ws");
             } else {
                 if (1 == param0) {
-                    fa.a("privacy.ws", 12);
+                    int discarded$3 = 12;
+                    fa.a("privacy.ws");
                 } else {
                     if (!(param0 != 2)) {
-                        fa.a("conduct.ws", 12);
+                        int discarded$4 = 12;
+                        fa.a("conduct.ws");
                     }
                 }
             }

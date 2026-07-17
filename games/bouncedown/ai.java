@@ -36,7 +36,8 @@ class ai {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        wa.a(true);
+        int discarded$0 = 1;
+        wa.a();
         na.c(param3, param2, param0, param1);
     }
 
@@ -96,7 +97,7 @@ class ai {
               L1: {
                 L2: {
                   var10 = ch.field_h.getGraphics();
-                  var6 = -107 / ((param2 - 63) / 50);
+                  var6 = 107;
                   if (pa.field_a != null) {
                     break L2;
                   } else {
@@ -209,7 +210,7 @@ class ai {
           }
           L9: {
             stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(44).append(param2).append(44);
+            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(44).append(-24).append(44);
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;

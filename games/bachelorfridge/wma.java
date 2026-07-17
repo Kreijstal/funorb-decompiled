@@ -67,7 +67,7 @@ final class wma {
         return ((wma) this).a(-25177);
     }
 
-    final static void c(byte param0) {
+    final static void c() {
         ru.field_d[44] = 71;
         ru.field_d[93] = 43;
         ru.field_d[92] = 74;

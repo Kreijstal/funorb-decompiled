@@ -19,7 +19,7 @@ final class gm extends kja {
         }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_M = null;
         field_I = null;
         field_H = null;
@@ -447,7 +447,7 @@ final class gm extends kja {
         return null;
     }
 
-    final static int a(uja param0, int param1) {
+    final static int a(uja param0) {
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_7_0 = 0;
@@ -524,7 +524,8 @@ final class gm extends kja {
     }
 
     gm(eeb param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (wwa) (Object) cfa.b((byte) -111));
+        super(param1, (wwa) (Object) cfa.b());
+        int discarded$0 = -111;
         try {
             ((gm) this).field_J = param1;
             ((gm) this).field_L = param0;

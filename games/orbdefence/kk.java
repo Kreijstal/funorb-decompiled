@@ -14,7 +14,8 @@ final class kk extends te {
     static int field_S;
 
     kk(ga param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (td) (Object) kd.a(false));
+        super(param1, (td) (Object) kd.a());
+        int discarded$0 = 0;
         try {
             ((kk) this).field_R = param1;
             ((kk) this).field_T = param0;
@@ -93,9 +94,6 @@ final class kk extends te {
         cf.field_a = null;
         dd.field_A = null;
         mc.field_j = 0;
-        if (param0 != -30179) {
-            return 72;
-        }
         int var2 = ta.field_z;
         ta.field_z = hf.field_k;
         hf.field_k = var2;
@@ -125,7 +123,7 @@ final class kk extends te {
         return -1;
     }
 
-    public static void l(int param0) {
+    public static void l() {
         field_Y = null;
         field_U = null;
         field_X = null;
@@ -246,13 +244,14 @@ final class kk extends te {
             break L6;
           }
           var16.b(112, 144, var16.field_s << 4, var16.field_t << 4, -((kk) this).field_Q << 10, 4096);
-          oc.g((byte) -105);
+          int discarded$1 = -105;
+          oc.g();
           ((kk) this).field_W.e(-(var16.field_s >> 1) + var9, -var16.field_t + var10, 256);
           break L4;
         }
     }
 
-    final static hj[] a(int param0, int param1, int param2, int param3, byte param4, int param5, int param6, int param7, int param8) {
+    final static hj[] a() {
         int var9 = 0;
         hj[] var10 = null;
         hj[] var11_ref_hj__ = null;
@@ -262,45 +261,37 @@ final class kk extends te {
         int var14 = 0;
         int var15 = 0;
         var15 = OrbDefence.field_D ? 1 : 0;
-        var9 = param3 + (param1 - -param6);
-        var10 = new hj[]{new hj(var9, var9), new hj(param0, var9), new hj(var9, var9), new hj(var9, param0), new hj(64, 64), new hj(var9, param0), new hj(var9, var9), new hj(param0, var9), new hj(var9, var9)};
+        var9 = 3;
+        var10 = new hj[]{new hj(var9, var9), new hj(3, var9), new hj(var9, var9), new hj(var9, 3), new hj(64, 64), new hj(var9, 3), new hj(var9, var9), new hj(3, var9), new hj(var9, var9)};
         var11_ref_hj__ = var10;
         var12 = 0;
         L0: while (true) {
-          if (var12 >= var11_ref_hj__.length) {
-            L1: {
-              var11 = 0;
-              if (param4 >= 28) {
-                break L1;
-              } else {
-                int discarded$1 = kk.a(-33, 100);
-                break L1;
-              }
-            }
-            L2: while (true) {
-              if (param1 <= var11) {
+          if (~var12 <= ~var11_ref_hj__.length) {
+            var11 = 0;
+            L1: while (true) {
+              if (var11 >= 1) {
                 var11 = 0;
-                L3: while (true) {
-                  if (var11 >= param1) {
+                L2: while (true) {
+                  if (var11 >= 1) {
                     var11 = 0;
-                    L4: while (true) {
-                      if (param0 <= var11) {
+                    L3: while (true) {
+                      if (var11 >= 3) {
                         var11 = 0;
-                        L5: while (true) {
-                          if (var11 >= param0 >> 1) {
+                        L4: while (true) {
+                          if (var11 >= 1) {
                             return var10;
                           } else {
                             var12 = 0;
-                            L6: while (true) {
-                              if (var12 < param3) {
-                                var10[1].field_v[param0 * (-1 + var9 + -var12) - -var11] = param8;
-                                var10[3].field_v[var11 * var9 + (-var12 + -1) + var9] = param8;
-                                var10[7].field_v[var11 + var12 * param0] = param8;
-                                var10[5].field_v[var9 * var11 - -var12] = param8;
-                                var12++;
-                                continue L6;
-                              } else {
+                            L5: while (true) {
+                              if (var12 >= 1) {
                                 var11++;
+                                continue L4;
+                              } else {
+                                var10[1].field_v[3 * (-1 + var9 + -var12) - -var11] = 65793;
+                                var10[3].field_v[var11 * var9 + (-var12 + -1) + var9] = 65793;
+                                var10[7].field_v[var11 + var12 * 3] = 65793;
+                                var10[5].field_v[var9 * var11 - -var12] = 65793;
+                                var12++;
                                 continue L5;
                               }
                             }
@@ -308,39 +299,41 @@ final class kk extends te {
                         }
                       } else {
                         var12 = 0;
-                        L7: while (true) {
-                          if (param1 <= var12) {
+                        L6: while (true) {
+                          if (var12 >= 1) {
                             var11++;
-                            continue L4;
+                            continue L3;
                           } else {
-                            var10[7].field_v[param0 * (-1 + (var9 + -var12)) - -var11] = param7;
-                            var10[5].field_v[var9 - (1 - (-var12 + var11 * var9))] = param7;
-                            var10[1].field_v[var11 + var12 * param0] = param2;
-                            var10[3].field_v[var9 * var11 + var12] = param2;
+                            var10[7].field_v[3 * (-1 + (var9 + -var12)) - -var11] = 0;
+                            var10[5].field_v[var9 - (1 - (-var12 + var11 * var9))] = 0;
+                            var10[1].field_v[var11 + var12 * 3] = 0;
+                            var10[3].field_v[var9 * var11 + var12] = 0;
                             var12++;
-                            continue L7;
+                            continue L6;
                           }
                         }
                       }
                     }
                   } else {
                     var12 = 0;
-                    L8: while (true) {
-                      if (var9 > var12) {
-                        var10[0].field_v[var12 - -(var11 * var9)] = param2;
-                        var10[0].field_v[var12 * var9 + var11] = param2;
-                        if (var9 + -var11 > var12) {
-                          var10[2].field_v[var11 * var9 + var12] = param2;
-                          var10[6].field_v[var11 + var9 * var12] = param2;
-                          var12++;
-                          continue L8;
-                        } else {
-                          var12++;
-                          continue L8;
-                        }
-                      } else {
+                    L7: while (true) {
+                      if (var9 <= var12) {
                         var11++;
-                        continue L3;
+                        continue L2;
+                      } else {
+                        L8: {
+                          var10[0].field_v[var12 - -(var11 * var9)] = 0;
+                          var10[0].field_v[var12 * var9 + var11] = 0;
+                          if (var9 + -var11 > var12) {
+                            var10[2].field_v[var11 * var9 + var12] = 0;
+                            var10[6].field_v[var11 + var9 * var12] = 0;
+                            break L8;
+                          } else {
+                            break L8;
+                          }
+                        }
+                        var12++;
+                        continue L7;
                       }
                     }
                   }
@@ -350,12 +343,12 @@ final class kk extends te {
                 L9: while (true) {
                   if (var9 <= var12) {
                     var11++;
-                    continue L2;
+                    continue L1;
                   } else {
-                    var10[6].field_v[var9 * (-var11 + (var9 + -1)) - -var12] = param7;
-                    var10[8].field_v[var9 * (-1 + (var9 - var11)) - -var12] = param7;
-                    var10[2].field_v[-var11 + (-1 + var9) + var12 * var9] = param7;
-                    var10[8].field_v[var12 * var9 - var11 - 1 - -var9] = param7;
+                    var10[6].field_v[var9 * (-var11 + (var9 + -1)) - -var12] = 0;
+                    var10[8].field_v[var9 * (-1 + (var9 - var11)) - -var12] = 0;
+                    var10[2].field_v[-var11 + (-1 + var9) + var12 * var9] = 0;
+                    var10[8].field_v[var12 * var9 - var11 - 1 - -var9] = 0;
                     var12++;
                     continue L9;
                   }
@@ -370,7 +363,7 @@ final class kk extends te {
                 var12++;
                 continue L0;
               } else {
-                var13.field_v[var14] = param5;
+                var13.field_v[var14] = 0;
                 var14++;
                 continue L10;
               }
@@ -379,7 +372,7 @@ final class kk extends te {
         }
     }
 
-    final static boolean a(String param0, String param1, int param2) {
+    final static boolean a(String param0, String param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
@@ -440,7 +433,8 @@ final class kk extends te {
                 stackIn_7_0 = stackOut_6_0;
                 return stackIn_7_0 != 0;
               } else {
-                if (!mm.a(param1, (byte) 51)) {
+                int discarded$6 = 51;
+                if (!mm.a(param1)) {
                   if (param0.length() == 0) {
                     stackOut_13_0 = 1;
                     stackIn_14_0 = stackOut_13_0;

@@ -123,12 +123,13 @@ final class bi {
               if (param3 < -19) {
                 break L1;
               } else {
-                tg discarded$2 = bi.b(25);
+                tg discarded$4 = bi.b(25);
                 break L1;
               }
             }
             var5 = param2.a((byte) -105, param1, var4_int);
-            stackOut_2_0 = dk.a(var5, param2, var4_int, -1);
+            int discarded$5 = -1;
+            stackOut_2_0 = dk.a(var5, param2, var4_int);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

@@ -45,7 +45,7 @@ class ie {
         wg var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_o) {
             break L0;
           } else {
@@ -55,7 +55,7 @@ class ie {
         }
         L1: {
           qg.a(param0, 0, var3);
-          ((ie) this).field_b = ((ie) this).field_b - 256;
+          ((ie) this).field_b = ((ie) this).field_b - param1;
           if (((ie) this).field_u == null) {
             break L1;
           } else {
@@ -222,7 +222,7 @@ class ie {
           if (((ie) this).field_u == null) {
             break L17;
           } else {
-            ((ie) this).field_u.b(param0, 0, 256);
+            ((ie) this).field_u.b(param0, 0, param1);
             break L17;
           }
         }
@@ -230,35 +230,9 @@ class ie {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 < 8000) {
-            break L0;
-          } else {
-            if (param0 <= 48000) {
-              L1: {
-                field_q = param0;
-                if (!param1) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              field_o = stackIn_7_0 != 0;
-              field_g = 10;
-              return;
-            } else {
-              break L0;
-            }
-          }
-        }
-        throw new IllegalArgumentException();
+        field_q = 22050;
+        field_o = true;
+        field_g = 10;
     }
 
     final synchronized void d() {
@@ -476,12 +450,12 @@ class ie {
     }
 
     private final void a(int param0) {
-        ((ie) this).field_b = ((ie) this).field_b - 256;
+        ((ie) this).field_b = ((ie) this).field_b - param0;
         if (((ie) this).field_b < 0) {
             ((ie) this).field_b = 0;
         }
         if (((ie) this).field_u != null) {
-            ((ie) this).field_u.d(256);
+            ((ie) this).field_u.d(param0);
             return;
         }
     }

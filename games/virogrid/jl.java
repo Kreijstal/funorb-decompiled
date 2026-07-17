@@ -22,9 +22,6 @@ final class jl extends fd implements ta {
         hg var6 = var8;
         var8.g(param3, 8);
         var8.field_l = var8.field_l + 1;
-        if (param4 != 39) {
-            return;
-        }
         try {
             var7 = var8.field_l;
             var8.a(param1, -69);
@@ -38,11 +35,11 @@ final class jl extends fd implements ta {
             }
             var8.b(var8.field_l + -var7, -1);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "jl.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "jl.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + 39 + 44 + (param5 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static byte[] a(String param0, boolean param1) {
+    final static byte[] a(String param0) {
         RuntimeException var2 = null;
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -144,7 +141,8 @@ final class jl extends fd implements ta {
                 }
               }
             } else {
-              pj.a(256);
+              int discarded$2 = 256;
+              pj.a();
               return;
             }
           }
@@ -290,11 +288,11 @@ final class jl extends fd implements ta {
         ((jl) this).a((fi) (Object) ((jl) this).field_I, (byte) -78);
     }
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         return ab.field_J;
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_D = null;
         field_F = null;
     }

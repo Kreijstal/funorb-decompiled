@@ -5,66 +5,23 @@ final class vr {
     static String field_b;
     static String field_a;
 
-    final static void c(int param0) {
+    final static void c() {
         Object var2 = null;
         ui.a(ld.field_a, (byte) 111, (String) null);
     }
 
     final static int a(int param0, int param1) {
-        int[] var2 = null;
-        int[] var3 = null;
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        if (param0 != -2) {
-          L0: {
-            field_b = null;
-            var3 = na.field_zb[rm.field_C];
-            var2 = var3;
-            if (param1 >= var3.length) {
-              stackOut_7_0 = 100;
-              stackIn_8_0 = stackOut_7_0;
-              break L0;
-            } else {
-              stackOut_6_0 = var3[param1];
-              stackIn_8_0 = stackOut_6_0;
-              break L0;
-            }
-          }
-          return stackIn_8_0;
-        } else {
-          L1: {
-            var3 = na.field_zb[rm.field_C];
-            var2 = var3;
-            if (param1 >= var3.length) {
-              stackOut_3_0 = 100;
-              stackIn_4_0 = stackOut_3_0;
-              break L1;
-            } else {
-              stackOut_2_0 = var3[param1];
-              stackIn_4_0 = stackOut_2_0;
-              break L1;
-            }
-          }
-          return stackIn_4_0;
-        }
+        int[] var3 = na.field_zb[rm.field_C];
+        int[] var2 = var3;
+        return param1 < var3.length ? var3[param1] : 100;
     }
 
-    public static void a(byte param0) {
-        if (param0 >= -117) {
-            field_b = null;
-            field_b = null;
-            field_a = null;
-            return;
-        }
+    public static void a() {
         field_b = null;
         field_a = null;
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void a(java.applet.Applet param0) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -88,7 +45,8 @@ final class vr {
             try {
               try {
                 var2 = new java.net.URL(param0.getCodeBase(), "toserverlist.ws");
-                param0.getAppletContext().showDocument(qr.a(param0, var2, 3), "_top");
+                int discarded$2 = 3;
+                param0.getAppletContext().showDocument(qr.a(param0, var2), "_top");
                 return;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -136,7 +94,6 @@ final class vr {
     final static void a(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
-        he var3 = null;
         RuntimeException decompiledCaughtException = null;
         var2 = Kickabout.field_G;
         try {
@@ -148,136 +105,56 @@ final class vr {
               if (rp.field_B == null) {
                 break L1;
               } else {
-                rp.field_B.b(param0 + 22999);
+                rp.field_B.b(22997);
                 rp.field_B = null;
                 break L1;
               }
             }
-            if (param0 == -2) {
-              L2: {
-                pq.field_N = null;
-                if (kq.field_yb == null) {
-                  break L2;
-                } else {
-                  kq.field_yb.b(param0 ^ -22997);
-                  kq.field_yb = null;
-                  break L2;
-                }
-              }
-              L3: {
-                sr.field_f = null;
-                if (null != lw.field_d) {
-                  lw.field_d.b(param0 ^ -22997);
-                  lw.field_d = null;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              pu.field_Eb = null;
-              if (null != pq.field_N) {
-                var3 = (he) (Object) pq.field_N.b((byte) 72);
-                L4: while (true) {
-                  if (var3 == null) {
-                    pq.field_N = null;
-                    break L0;
-                  } else {
-                    var3.f(57);
-                    var3 = (he) (Object) pq.field_N.a(0);
-                    continue L4;
-                  }
-                }
-              } else {
-                return;
-              }
-            } else {
-              return;
-            }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "vr.B(" + param0 + 41);
+          throw nb.a((Throwable) (Object) var1, "vr.B(" + -2 + 41);
         }
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         np.field_Jb.a((gn) (Object) new aw(), 3);
     }
 
-    final static boolean d(int param0) {
+    final static boolean d() {
         return true;
     }
 
     final static int a(int param0, int param1, byte param2) {
-        Object var3 = null;
-        String var5 = null;
-        String var6 = null;
-        if (null != cv.field_b[param1][param0]) {
-          return -1;
-        } else {
-          L0: {
-            var3 = null;
-            if (0 != param1) {
-              break L0;
-            } else {
-              var3 = (Object) (Object) "park";
-              break L0;
-            }
-          }
-          L1: {
-            if (1 == param1) {
-              var3 = (Object) (Object) "beach";
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          L2: {
-            if (param1 != 2) {
-              break L2;
-            } else {
-              var3 = (Object) (Object) "street";
-              break L2;
-            }
-          }
-          var5 = var3 + "_surface" + param0;
-          var6 = var5;
-          if (param2 <= -48) {
-            if (bo.field_Cb.a(false, var6)) {
-              cv.field_b[param1][param0] = wa.a((byte) 113, var6, bo.field_Cb, "");
-              if (param1 == 1) {
-                if (param0 == 3) {
-                  nh.a(cv.field_b[param1][param0], 0.0, 1.6, 1.0);
-                  return -1;
-                } else {
-                  return -1;
-                }
-              } else {
-                return -1;
-              }
-            } else {
-              return bo.field_Cb.a(var6, -16248);
-            }
-          } else {
-            vr.a(22);
-            if (bo.field_Cb.a(false, var6)) {
-              cv.field_b[param1][param0] = wa.a((byte) 113, var6, bo.field_Cb, "");
-              if (param1 == 1) {
-                if (param0 == 3) {
-                  nh.a(cv.field_b[param1][param0], 0.0, 1.6, 1.0);
-                  return -1;
-                } else {
-                  return -1;
-                }
-              } else {
-                return -1;
-              }
-            } else {
-              return bo.field_Cb.a(var6, -16248);
-            }
-          }
+        if (!(null == cv.field_b[param1][param0])) {
+            return -1;
         }
+        Object var3 = null;
+        if (0 == param1) {
+            var3 = (Object) (Object) "park";
+        }
+        if (!(1 != param1)) {
+            var3 = (Object) (Object) "beach";
+        }
+        if (param1 == 2) {
+            var3 = (Object) (Object) "street";
+        }
+        String var5 = var3 + "_surface" + param0;
+        String var6 = var5;
+        if (!bo.field_Cb.a(false, var6)) {
+            return bo.field_Cb.a(var6, -16248);
+        }
+        cv.field_b[param1][param0] = wa.a((byte) 113, var6, bo.field_Cb, "");
+        if (param1 != 1) {
+            return -1;
+        }
+        if (param0 != 3) {
+            return -1;
+        }
+        nh.a(cv.field_b[param1][param0], 0.0, 1.6, 1.0);
+        return -1;
     }
 
     final static void b(int param0) {

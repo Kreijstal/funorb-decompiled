@@ -11,7 +11,7 @@ final class hr extends ji {
     static int field_D;
     private int[] field_A;
 
-    private final void b(byte param0) {
+    private final void b() {
         int[] var14 = ((hr) this).field_B[0];
         int[] var12 = var14;
         int[] var10 = var12;
@@ -26,7 +26,7 @@ final class hr extends ji {
         ((hr) this).field_A = new int[]{var14[0] + (var14[0] + -var15[0]), var14[1] - var15[1] + var14[1]};
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void a() {
         RuntimeException var2 = null;
         int var3 = 0;
         vi var4 = null;
@@ -43,13 +43,14 @@ final class hr extends ji {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    mm.a(param0, var5, (byte) 108);
+                    int discarded$4 = 108;
+                    mm.a(3, var5);
                     var5 = (s) (Object) wg.field_i.b(125);
                     continue L2;
                   }
                 }
               } else {
-                aj.a(param0, 126, var4);
+                aj.a(3, 126, var4);
                 var4 = (vi) (Object) mc.field_i.b(40);
                 continue L1;
               }
@@ -58,7 +59,7 @@ final class hr extends ji {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var2, "hr.J(" + param0 + 44 + 1 + 41);
+          throw wn.a((Throwable) (Object) var2, "hr.J(" + 3 + 44 + 1 + 41);
         }
     }
 
@@ -124,7 +125,7 @@ final class hr extends ji {
         return ((hr) this).field_B[param0];
     }
 
-    public static void j(int param0) {
+    public static void j() {
         field_z = null;
         field_C = null;
     }
@@ -210,7 +211,8 @@ final class hr extends ji {
     }
 
     final static void a(boolean param0, boolean param1) {
-        td.a(param0, true, (byte) -77);
+        int discarded$0 = -77;
+        td.a(param0, true);
     }
 
     public hr() {
@@ -219,7 +221,7 @@ final class hr extends ji {
         ((hr) this).field_E = 0;
     }
 
-    private final void g(int param0) {
+    private final void g() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -417,12 +419,14 @@ final class hr extends ji {
             throw new RuntimeException("Curve operation requires at least two markers");
         }
         if (((hr) this).field_E == 2) {
-            this.b((byte) 125);
+            int discarded$0 = 125;
+            this.b();
         }
         uk.d((byte) 66);
-        this.g(1);
+        int discarded$1 = 1;
+        this.g();
         if (param0 > -98) {
-            String discarded$0 = hr.h(104);
+            String discarded$2 = hr.h(104);
         }
     }
 

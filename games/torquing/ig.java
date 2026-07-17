@@ -9,7 +9,7 @@ class ig extends pc {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_x, -1, 2147483647, false);
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_q = null;
         int var1 = 0;
         field_r = null;

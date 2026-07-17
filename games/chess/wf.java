@@ -554,7 +554,10 @@ final class wf extends ma implements ha, mj {
             return;
         }
         try {
-            bj.a(na.a(param0, 100, 96), true);
+            int discarded$0 = 96;
+            int discarded$1 = 100;
+            int discarded$2 = 1;
+            bj.a(na.a(param0));
             int var2_int = -101 % ((param1 - -24) / 39);
         } catch (RuntimeException runtimeException) {
             throw fk.a((Throwable) (Object) runtimeException, "wf.P(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
@@ -614,11 +617,13 @@ final class wf extends ma implements ha, mj {
                     break L1;
                   } else {
                     if (((wf) this).field_T) {
-                      oa.b(-16586);
+                      int discarded$242 = -16586;
+                      oa.b();
                       break L1;
                     } else {
                       if (!((wf) this).field_K) {
-                        el.h(-117);
+                        int discarded$243 = -117;
+                        el.h();
                         break L1;
                       } else {
                         qf.a(108);
@@ -887,7 +892,7 @@ final class wf extends ma implements ha, mj {
         return ((wf) this).field_N.field_v;
     }
 
-    final static int c(boolean param0) {
+    final static int c() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -904,7 +909,8 @@ final class wf extends ma implements ha, mj {
             var1_int = 0;
             var2 = 0;
             L1: while (true) {
-              if (!kf.d(18954)) {
+              int discarded$1 = 18954;
+              if (!kf.d()) {
                 L2: {
                   ol.field_R.a(fe.a(re.field_m, 1, ag.field_f), 99, fe.a(hn.field_k, 1, rf.field_b));
                   if (ol.field_R.d((byte) 124)) {

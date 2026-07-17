@@ -27,7 +27,8 @@ final class hd extends vg {
         }
         ((hd) this).field_N = param1;
         ((hd) this).field_A = param2;
-        this.f(2);
+        int discarded$0 = 2;
+        this.f();
     }
 
     private final nh a(int param0, byte param1, int param2) {
@@ -41,74 +42,67 @@ final class hd extends vg {
         int var12 = 0;
         int var13 = 0;
         nh var14 = null;
-        int stackIn_7_0 = 0;
-        int stackIn_10_0 = 0;
+        int stackIn_5_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_7_0 = 0;
         int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        L0: {
-          var13 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-          var14 = new nh(((hd) this).field_J * 2, ((hd) this).field_k);
-          aj.a(var14, (byte) 54);
-          var5 = ((hd) this).field_k >> 1;
-          if (param1 == 43) {
-            break L0;
-          } else {
-            ((hd) this).field_I = 26;
-            break L0;
-          }
-        }
+        var13 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
+        var14 = new nh(((hd) this).field_J * 2, ((hd) this).field_k);
+        aj.a(var14, (byte) 54);
+        var5 = ((hd) this).field_k >> 1;
         var6 = 0;
-        L1: while (true) {
+        L0: while (true) {
           if (var6 >= ((hd) this).field_k) {
             cl.d((byte) -115);
             return var14;
           } else {
-            L2: {
+            L1: {
               var7 = (var6 >> 1) * (-1 + 2 * ((hd) this).field_J) % (2 * ((hd) this).field_J);
               var8 = 16711935 & param2;
               var9 = param2 & 65280;
               var10 = -var5 + var6;
               var11 = (int)(128.0 * (Math.sqrt((double)(var5 * var5 + -(var10 * var10))) / (double)var5)) + 128;
               if (256 > var11) {
-                stackOut_6_0 = (16711680 & var9 * var11 | -16711936 & var8 * var11) >>> 8;
-                stackIn_7_0 = stackOut_6_0;
-                break L2;
+                stackOut_4_0 = (16711680 & var9 * var11 | -16711936 & var8 * var11) >>> 8;
+                stackIn_5_0 = stackOut_4_0;
+                break L1;
               } else {
-                stackOut_5_0 = var8 | var9;
-                stackIn_7_0 = stackOut_5_0;
-                break L2;
+                stackOut_3_0 = var8 | var9;
+                stackIn_5_0 = stackOut_3_0;
+                break L1;
               }
             }
-            L3: {
-              var12 = stackIn_7_0;
+            L2: {
+              var12 = stackIn_5_0;
               wj.g(var7, var6, ((hd) this).field_J, var12);
               var9 = 65280 & param0;
               wj.g(-(2 * ((hd) this).field_J) + var7, var6, ((hd) this).field_J, var12);
               var8 = param0 & 16711935;
               if (var11 < 256) {
-                stackOut_9_0 = (16711680 & var9 * var11 | -16711936 & var8 * var11) >>> 8;
-                stackIn_10_0 = stackOut_9_0;
-                break L3;
+                stackOut_7_0 = (16711680 & var9 * var11 | -16711936 & var8 * var11) >>> 8;
+                stackIn_8_0 = stackOut_7_0;
+                break L2;
               } else {
-                stackOut_8_0 = var8 | var9;
-                stackIn_10_0 = stackOut_8_0;
-                break L3;
+                stackOut_6_0 = var8 | var9;
+                stackIn_8_0 = stackOut_6_0;
+                break L2;
               }
             }
-            var12 = stackIn_10_0;
+            var12 = stackIn_8_0;
             wj.g(var7 - -((hd) this).field_J, var6, ((hd) this).field_J, var12);
             wj.g(var7 + -((hd) this).field_J, var6, ((hd) this).field_J, var12);
             var6++;
-            continue L1;
+            continue L0;
           }
         }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         super.a(param0, param1, param2, param3, param4);
-        this.f(2);
+        int discarded$0 = 2;
+        this.f();
     }
 
     hd(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -484,7 +478,7 @@ final class hd extends vg {
         }
     }
 
-    private final nh a(byte param0) {
+    private final nh a() {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -508,7 +502,7 @@ final class hd extends vg {
         return var3;
     }
 
-    final static nh[] c(boolean param0) {
+    final static nh[] c() {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
@@ -525,13 +519,15 @@ final class hd extends vg {
             }
             var1[var2] = new nh(oe.field_b, ih.field_K, kh.field_i[var2], vi.field_b[var2], gf.field_o[var2], qa.field_J[var2], var5);
         }
-        oc.a((byte) -21);
+        int discarded$0 = -21;
+        oc.a();
         return var1;
     }
 
-    private final void f(int param0) {
+    private final void f() {
         ((hd) this).field_D = new nh[]{this.a(((hd) this).field_A, (byte) 43, ((hd) this).field_N), this.a(((hd) this).field_K, (byte) 43, ((hd) this).field_G)};
-        ((hd) this).field_C = this.a((byte) 101);
+        int discarded$0 = 101;
+        ((hd) this).field_C = this.a();
         ((hd) this).field_H = ((hd) this).field_C.e();
         ((hd) this).field_F = new nh(((hd) this).field_k >> 1, ((hd) this).field_k);
     }

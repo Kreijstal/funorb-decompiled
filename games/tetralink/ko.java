@@ -28,7 +28,7 @@ final class ko extends mc {
         ((ko) this).field_p = param1;
     }
 
-    final static void a(int param0, boolean param1, byte param2) {
+    final static void a(int param0, boolean param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         je var4 = null;
@@ -152,7 +152,8 @@ final class ko extends mc {
                   } else {
                     fl.field_n.field_S = false;
                     fl.field_n.field_Rb.field_Ob.field_jb = kl.field_f;
-                    hd.a(fl.field_n.field_Kb, (byte) -104);
+                    int discarded$1 = -104;
+                    hd.a(fl.field_n.field_Kb);
                     break L2;
                   }
                 }

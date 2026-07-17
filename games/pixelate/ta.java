@@ -89,9 +89,9 @@ final class ta {
             }
           }
         }
-        param2 = param2 + param1;
+        param2 = param2;
         var4 = param2 - 2;
-        var8 = param1;
+        var8 = 0;
         var5 = var8;
         L3: while (true) {
           if (var8 >= param2) {
@@ -282,7 +282,7 @@ final class ta {
 
     private final static void a(int[] param0, int param1, int param2, int param3) {
         ta.c();
-        ta.a(param0, param1, param2);
+        ta.a(param0, 0, param2);
         ta.a(param3);
     }
 

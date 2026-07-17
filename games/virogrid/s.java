@@ -13,7 +13,7 @@ final class s {
     int field_i;
     static km field_f;
 
-    final static boolean b(byte param0) {
+    final static boolean b() {
         int var1 = 51;
         if (he.field_Xb == null) {
             return false;
@@ -46,7 +46,7 @@ final class s {
         }
     }
 
-    final static cb a(byte param0) {
+    final static cb a() {
         try {
             Throwable var1 = null;
             cb stackIn_3_0 = null;

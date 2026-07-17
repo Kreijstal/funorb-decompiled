@@ -8,7 +8,7 @@ final class ffb {
     static String field_b;
     static String field_c;
 
-    final static byte[] a(boolean param0, Object param1, boolean param2) {
+    final static byte[] a(boolean param0, Object param1) {
         RuntimeException var3 = null;
         byte[] var3_array = null;
         ps var4 = null;
@@ -43,7 +43,8 @@ final class ffb {
                 stackIn_11_0 = stackOut_10_0;
                 return stackIn_11_0;
               } else {
-                stackOut_8_0 = nia.a(var3_array, (byte) -116);
+                int discarded$1 = -116;
+                stackOut_8_0 = nia.a(var3_array);
                 stackIn_9_0 = stackOut_8_0;
                 return stackIn_9_0;
               }
@@ -92,7 +93,7 @@ final class ffb {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
         field_e = null;
@@ -118,14 +119,6 @@ final class ffb {
         var15 = VoidHunters.field_G;
         try {
           L0: {
-            L1: {
-              if (param1 < -72) {
-                break L1;
-              } else {
-                field_d = null;
-                break L1;
-              }
-            }
             var5_int = 0;
             var6 = param0;
             var7 = -param0;
@@ -133,42 +126,42 @@ final class ffb {
             var9 = ksa.a(31123, ob.field_j, mt.field_o, param4 + param0);
             var10 = ksa.a(31123, ob.field_j, mt.field_o, param4 + -param0);
             ww.a(param3, var9, rba.field_b[param2], (byte) 75, var10);
-            L2: while (true) {
+            L1: while (true) {
               if (var6 <= var5_int) {
                 break L0;
               } else {
-                L3: {
+                L2: {
                   var8 += 2;
                   var7 = var7 + var8;
                   if (var7 <= 0) {
-                    break L3;
+                    break L2;
                   } else {
                     var6--;
                     var7 = var7 - (var6 << 1);
                     var11 = -var6 + param2;
                     var12 = param2 - -var6;
                     if (lua.field_c > var12) {
-                      break L3;
+                      break L2;
                     } else {
                       if (hab.field_i >= var11) {
-                        L4: {
+                        L3: {
                           var13 = ksa.a(31123, ob.field_j, mt.field_o, var5_int + param4);
                           var14 = ksa.a(31123, ob.field_j, mt.field_o, param4 + -var5_int);
                           if (var12 <= hab.field_i) {
                             ww.a(param3, var13, rba.field_b[var12], (byte) 75, var14);
-                            break L4;
+                            break L3;
                           } else {
-                            break L4;
+                            break L3;
                           }
                         }
                         if (var11 >= lua.field_c) {
                           ww.a(param3, var13, rba.field_b[var11], (byte) 75, var14);
-                          break L3;
+                          break L2;
                         } else {
-                          break L3;
+                          break L2;
                         }
                       } else {
-                        break L3;
+                        break L2;
                       }
                     }
                   }
@@ -177,26 +170,26 @@ final class ffb {
                 var11 = -var5_int + param2;
                 var12 = var5_int + param2;
                 if (lua.field_c > var12) {
-                  continue L2;
+                  continue L1;
                 } else {
                   if (var11 > hab.field_i) {
-                    continue L2;
+                    continue L1;
                   } else {
-                    L5: {
+                    L4: {
                       var13 = ksa.a(31123, ob.field_j, mt.field_o, param4 + var6);
                       var14 = ksa.a(31123, ob.field_j, mt.field_o, param4 - var6);
                       if (hab.field_i >= var12) {
                         ww.a(param3, var13, rba.field_b[var12], (byte) 75, var14);
-                        break L5;
+                        break L4;
                       } else {
-                        break L5;
+                        break L4;
                       }
                     }
                     if (lua.field_c > var11) {
-                      continue L2;
+                      continue L1;
                     } else {
                       ww.a(param3, var13, rba.field_b[var11], (byte) 75, var14);
-                      continue L2;
+                      continue L1;
                     }
                   }
                 }
@@ -206,7 +199,7 @@ final class ffb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var5, "ffb.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw rta.a((Throwable) (Object) var5, "ffb.C(" + param0 + 44 + -89 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 

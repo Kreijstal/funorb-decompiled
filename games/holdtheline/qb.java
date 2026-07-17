@@ -214,7 +214,8 @@ final class qb implements Runnable {
     }
 
     final static void a(int param0, byte param1) {
-        int discarded$3 = em.a(true);
+        int discarded$4 = 1;
+        int discarded$7 = em.a();
         if (param1 > -63) {
             field_i = 124;
         }
@@ -411,7 +412,7 @@ final class qb implements Runnable {
         return stackIn_1_0;
     }
 
-    final static String a(int param0) {
+    final static String a() {
         if (!sk.field_h) {
           if (g.field_h <= dm.field_a) {
             if (we.field_l + g.field_h <= dm.field_a) {
@@ -560,7 +561,8 @@ final class qb implements Runnable {
         try {
             var2 = param0.a((byte) -28, 5, (Runnable) this);
             while (var2.field_d == 0) {
-                qe.a(10L, (byte) 45);
+                int discarded$0 = 45;
+                qe.a(10L);
             }
             if (2 == var2.field_d) {
                 throw new RuntimeException();

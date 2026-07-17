@@ -10,7 +10,7 @@ final class th extends lf {
         super(param0, param1);
     }
 
-    final static od a(java.applet.Applet param0, int param1) {
+    final static od a(java.applet.Applet param0) {
         String var2 = null;
         RuntimeException var2_ref = null;
         od[] var3 = null;
@@ -42,9 +42,11 @@ final class th extends lf {
         var6 = Geoblox.field_C;
         try {
           L0: {
-            var2 = qi.a("jagex-last-login-method", param0, -114);
+            int discarded$4 = -114;
+            var2 = qi.a("jagex-last-login-method", param0);
             if (var2 != null) {
-              var3 = ak.a(false);
+              int discarded$5 = 0;
+              var3 = ak.a();
               var4 = 0;
               L1: while (true) {
                 if (var3.length <= var4) {
@@ -102,13 +104,10 @@ final class th extends lf {
         return stackIn_12_0;
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_h = null;
         field_f = null;
         field_g = null;
-        if (param0 != -109) {
-            field_f = null;
-        }
     }
 
     final qg a(byte param0) {

@@ -5,7 +5,7 @@ final class icb extends rqa {
     static int field_o;
     static pr field_p;
 
-    public static void a(int param0) {
+    public static void a() {
         field_p = null;
     }
 

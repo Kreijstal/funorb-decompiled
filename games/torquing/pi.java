@@ -61,7 +61,7 @@ class pi {
         lf var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_r) {
             break L0;
           } else {
@@ -71,7 +71,7 @@ class pi {
         }
         L1: {
           dk.a(param0, 0, var3);
-          ((pi) this).field_p = ((pi) this).field_p - 256;
+          ((pi) this).field_p = ((pi) this).field_p - param1;
           if (((pi) this).field_t == null) {
             break L1;
           } else {
@@ -238,7 +238,7 @@ class pi {
           if (((pi) this).field_t == null) {
             break L17;
           } else {
-            ((pi) this).field_t.b(param0, 0, 256);
+            ((pi) this).field_t.b(param0, 0, param1);
             break L17;
           }
         }
@@ -410,35 +410,9 @@ class pi {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 < 8000) {
-            break L0;
-          } else {
-            if (param0 <= 48000) {
-              L1: {
-                field_c = param0;
-                if (!param1) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              field_r = stackIn_7_0 != 0;
-              field_o = 10;
-              return;
-            } else {
-              break L0;
-            }
-          }
-        }
-        throw new IllegalArgumentException();
+        field_c = 22050;
+        field_r = true;
+        field_o = 10;
     }
 
     private final static void b(lf param0) {
@@ -620,12 +594,12 @@ class pi {
     }
 
     private final void b(int param0) {
-        ((pi) this).field_p = ((pi) this).field_p - 256;
+        ((pi) this).field_p = ((pi) this).field_p - param0;
         if (((pi) this).field_p < 0) {
             ((pi) this).field_p = 0;
         }
         if (((pi) this).field_t != null) {
-            ((pi) this).field_t.a(256);
+            ((pi) this).field_t.a(param0);
             return;
         }
     }

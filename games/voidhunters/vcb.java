@@ -183,7 +183,8 @@ final class vcb extends oda implements oo {
                 L3: {
                   if (((vcb) this).field_w) {
                     var5_int = ((vcb) this).field_M;
-                    this.h((byte) 79);
+                    int discarded$2 = 79;
+                    this.h();
                     if (var5_int == ((vcb) this).field_M) {
                       break L3;
                     } else {
@@ -195,7 +196,8 @@ final class vcb extends oda implements oo {
                       }
                     }
                   } else {
-                    this.i((byte) -8);
+                    int discarded$3 = -8;
+                    this.i();
                     break L3;
                   }
                 }
@@ -324,7 +326,8 @@ final class vcb extends oda implements oo {
             ((vcb) this).field_P.a(((vcb) this).field_P.field_g, ((vcb) this).field_N.field_h, ((vcb) this).field_P.field_f, param1 ^ 21945, ((vcb) this).field_P.field_r);
             this.a((byte) -110, false);
         }
-        this.i((byte) -8);
+        int discarded$1 = -8;
+        this.i();
     }
 
     final void c(int param0, int param1) {
@@ -373,177 +376,169 @@ final class vcb extends oda implements oo {
     }
 
     private final void a(int param0, boolean param1) {
+        htb stackIn_1_0 = null;
+        htb stackIn_2_0 = null;
         htb stackIn_3_0 = null;
         htb stackIn_4_0 = null;
         htb stackIn_5_0 = null;
-        htb stackIn_6_0 = null;
-        htb stackIn_7_0 = null;
-        int stackIn_7_1 = 0;
+        int stackIn_5_1 = 0;
+        htb stackIn_8_0 = null;
+        htb stackIn_9_0 = null;
         htb stackIn_10_0 = null;
         htb stackIn_11_0 = null;
         htb stackIn_12_0 = null;
-        htb stackIn_13_0 = null;
-        htb stackIn_14_0 = null;
-        int stackIn_14_1 = 0;
+        int stackIn_12_1 = 0;
+        htb stackIn_15_0 = null;
+        htb stackIn_16_0 = null;
         htb stackIn_17_0 = null;
-        htb stackIn_18_0 = null;
-        htb stackIn_19_0 = null;
-        int stackIn_19_1 = 0;
+        int stackIn_17_1 = 0;
+        htb stackIn_20_0 = null;
+        htb stackIn_21_0 = null;
         htb stackIn_22_0 = null;
-        htb stackIn_23_0 = null;
-        htb stackIn_24_0 = null;
-        int stackIn_24_1 = 0;
+        int stackIn_22_1 = 0;
+        htb stackOut_0_0 = null;
+        htb stackOut_1_0 = null;
+        htb stackOut_4_0 = null;
+        int stackOut_4_1 = 0;
         htb stackOut_2_0 = null;
         htb stackOut_3_0 = null;
-        htb stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        htb stackOut_4_0 = null;
-        htb stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
+        int stackOut_3_1 = 0;
+        htb stackOut_7_0 = null;
+        htb stackOut_8_0 = null;
+        htb stackOut_11_0 = null;
+        int stackOut_11_1 = 0;
         htb stackOut_9_0 = null;
         htb stackOut_10_0 = null;
-        htb stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        htb stackOut_11_0 = null;
-        htb stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
+        int stackOut_10_1 = 0;
+        htb stackOut_14_0 = null;
         htb stackOut_16_0 = null;
-        htb stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        htb stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
+        int stackOut_16_1 = 0;
+        htb stackOut_15_0 = null;
+        int stackOut_15_1 = 0;
+        htb stackOut_19_0 = null;
         htb stackOut_21_0 = null;
-        htb stackOut_23_0 = null;
-        int stackOut_23_1 = 0;
-        htb stackOut_22_0 = null;
-        int stackOut_22_1 = 0;
+        int stackOut_21_1 = 0;
+        htb stackOut_20_0 = null;
+        int stackOut_20_1 = 0;
         L0: {
-          if (param0 == 0) {
-            break L0;
-          } else {
-            this.h((byte) -20);
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
-            stackOut_2_0 = ((vcb) this).field_N;
-            stackIn_5_0 = stackOut_2_0;
-            stackIn_3_0 = stackOut_2_0;
+          L1: {
+            stackOut_0_0 = ((vcb) this).field_N;
+            stackIn_3_0 = stackOut_0_0;
+            stackIn_1_0 = stackOut_0_0;
             if (param1) {
-              break L2;
+              break L1;
             } else {
-              stackOut_3_0 = (htb) (Object) stackIn_3_0;
-              stackIn_6_0 = stackOut_3_0;
-              stackIn_4_0 = stackOut_3_0;
+              stackOut_1_0 = (htb) (Object) stackIn_1_0;
+              stackIn_4_0 = stackOut_1_0;
+              stackIn_2_0 = stackOut_1_0;
               if (!((vcb) this).field_w) {
-                stackOut_6_0 = (htb) (Object) stackIn_6_0;
-                stackOut_6_1 = 0;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
-                break L1;
-              } else {
                 stackOut_4_0 = (htb) (Object) stackIn_4_0;
+                stackOut_4_1 = 0;
                 stackIn_5_0 = stackOut_4_0;
-                break L2;
+                stackIn_5_1 = stackOut_4_1;
+                break L0;
+              } else {
+                stackOut_2_0 = (htb) (Object) stackIn_2_0;
+                stackIn_3_0 = stackOut_2_0;
+                break L1;
               }
             }
           }
-          stackOut_5_0 = (htb) (Object) stackIn_5_0;
-          stackOut_5_1 = 1;
-          stackIn_7_0 = stackOut_5_0;
-          stackIn_7_1 = stackOut_5_1;
-          break L1;
+          stackOut_3_0 = (htb) (Object) stackIn_3_0;
+          stackOut_3_1 = 1;
+          stackIn_5_0 = stackOut_3_0;
+          stackIn_5_1 = stackOut_3_1;
+          break L0;
         }
-        L3: {
-          stackIn_7_0.field_x = stackIn_7_1 != 0;
+        L2: {
+          stackIn_5_0.field_x = stackIn_5_1 != 0;
           if (((vcb) this).field_P.field_t instanceof htb) {
-            L4: {
-              L5: {
-                stackOut_9_0 = (htb) (Object) ((vcb) this).field_P.field_t;
-                stackIn_12_0 = stackOut_9_0;
-                stackIn_10_0 = stackOut_9_0;
+            L3: {
+              L4: {
+                stackOut_7_0 = (htb) (Object) ((vcb) this).field_P.field_t;
+                stackIn_10_0 = stackOut_7_0;
+                stackIn_8_0 = stackOut_7_0;
                 if (param1) {
-                  break L5;
+                  break L4;
                 } else {
-                  stackOut_10_0 = (htb) (Object) stackIn_10_0;
-                  stackIn_13_0 = stackOut_10_0;
-                  stackIn_11_0 = stackOut_10_0;
+                  stackOut_8_0 = (htb) (Object) stackIn_8_0;
+                  stackIn_11_0 = stackOut_8_0;
+                  stackIn_9_0 = stackOut_8_0;
                   if (!((vcb) this).field_w) {
-                    stackOut_13_0 = (htb) (Object) stackIn_13_0;
-                    stackOut_13_1 = 0;
-                    stackIn_14_0 = stackOut_13_0;
-                    stackIn_14_1 = stackOut_13_1;
-                    break L4;
-                  } else {
                     stackOut_11_0 = (htb) (Object) stackIn_11_0;
+                    stackOut_11_1 = 0;
                     stackIn_12_0 = stackOut_11_0;
-                    break L5;
+                    stackIn_12_1 = stackOut_11_1;
+                    break L3;
+                  } else {
+                    stackOut_9_0 = (htb) (Object) stackIn_9_0;
+                    stackIn_10_0 = stackOut_9_0;
+                    break L4;
                   }
                 }
               }
-              stackOut_12_0 = (htb) (Object) stackIn_12_0;
-              stackOut_12_1 = 1;
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              break L4;
+              stackOut_10_0 = (htb) (Object) stackIn_10_0;
+              stackOut_10_1 = 1;
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              break L3;
             }
-            stackIn_14_0.field_x = stackIn_14_1 != 0;
-            break L3;
+            stackIn_12_0.field_x = stackIn_12_1 != 0;
+            break L2;
           } else {
-            break L3;
+            break L2;
           }
         }
-        L6: {
+        L5: {
           if (((vcb) this).field_A == null) {
-            break L6;
+            break L5;
           } else {
-            L7: {
-              stackOut_16_0 = ((vcb) this).field_A;
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_17_0 = stackOut_16_0;
+            L6: {
+              stackOut_14_0 = ((vcb) this).field_A;
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_15_0 = stackOut_14_0;
               if (!param1) {
-                stackOut_18_0 = (htb) (Object) stackIn_18_0;
-                stackOut_18_1 = 0;
-                stackIn_19_0 = stackOut_18_0;
-                stackIn_19_1 = stackOut_18_1;
-                break L7;
+                stackOut_16_0 = (htb) (Object) stackIn_16_0;
+                stackOut_16_1 = 0;
+                stackIn_17_0 = stackOut_16_0;
+                stackIn_17_1 = stackOut_16_1;
+                break L6;
               } else {
-                stackOut_17_0 = (htb) (Object) stackIn_17_0;
-                stackOut_17_1 = 1;
-                stackIn_19_0 = stackOut_17_0;
-                stackIn_19_1 = stackOut_17_1;
-                break L7;
+                stackOut_15_0 = (htb) (Object) stackIn_15_0;
+                stackOut_15_1 = 1;
+                stackIn_17_0 = stackOut_15_0;
+                stackIn_17_1 = stackOut_15_1;
+                break L6;
               }
             }
-            stackIn_19_0.field_x = stackIn_19_1 != 0;
-            break L6;
+            stackIn_17_0.field_x = stackIn_17_1 != 0;
+            break L5;
           }
         }
-        L8: {
+        L7: {
           if (null == ((vcb) this).field_v) {
-            break L8;
+            break L7;
           } else {
-            L9: {
-              stackOut_21_0 = ((vcb) this).field_v;
-              stackIn_23_0 = stackOut_21_0;
-              stackIn_22_0 = stackOut_21_0;
+            L8: {
+              stackOut_19_0 = ((vcb) this).field_v;
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_20_0 = stackOut_19_0;
               if (!param1) {
-                stackOut_23_0 = (htb) (Object) stackIn_23_0;
-                stackOut_23_1 = 0;
-                stackIn_24_0 = stackOut_23_0;
-                stackIn_24_1 = stackOut_23_1;
-                break L9;
+                stackOut_21_0 = (htb) (Object) stackIn_21_0;
+                stackOut_21_1 = 0;
+                stackIn_22_0 = stackOut_21_0;
+                stackIn_22_1 = stackOut_21_1;
+                break L8;
               } else {
-                stackOut_22_0 = (htb) (Object) stackIn_22_0;
-                stackOut_22_1 = 1;
-                stackIn_24_0 = stackOut_22_0;
-                stackIn_24_1 = stackOut_22_1;
-                break L9;
+                stackOut_20_0 = (htb) (Object) stackIn_20_0;
+                stackOut_20_1 = 1;
+                stackIn_22_0 = stackOut_20_0;
+                stackIn_22_1 = stackOut_20_1;
+                break L8;
               }
             }
-            stackIn_24_0.field_x = stackIn_24_1 != 0;
-            break L8;
+            stackIn_22_0.field_x = stackIn_22_1 != 0;
+            break L7;
           }
         }
     }
@@ -568,10 +563,7 @@ final class vcb extends oda implements oo {
         }
     }
 
-    private final void h(byte param0) {
-        if (param0 <= 49) {
-            ((vcb) this).c(17, -59, -81);
-        }
+    private final void h() {
         int var2 = null != ((vcb) this).field_D ? ((vcb) this).field_D.field_g - -((vcb) this).field_D.field_h : ((vcb) this).field_N.field_g;
         int var3 = ((vcb) this).field_C != null ? ((vcb) this).field_C.field_g - ((vcb) this).field_P.field_h : ((vcb) this).field_N.field_h + ((vcb) this).field_N.field_g + -((vcb) this).field_P.field_h;
         this.b(var3 <= var2 ? 0 : (((vcb) this).field_P.field_g + -var2 << 16) / (var3 - var2), 65536);
@@ -797,7 +789,7 @@ final class vcb extends oda implements oo {
         field_z = null;
     }
 
-    private final int k(byte param0) {
+    private final int k() {
         return (((vcb) this).field_P.field_f << 16) / ((vcb) this).field_N.field_f;
     }
 
@@ -983,10 +975,7 @@ final class vcb extends oda implements oo {
         }
     }
 
-    private final void i(byte param0) {
-        if (param0 != -8) {
-            ((vcb) this).d(116);
-        }
+    private final void i() {
         int var2 = null == ((vcb) this).field_D ? ((vcb) this).field_N.field_g : ((vcb) this).field_D.field_h + ((vcb) this).field_D.field_g;
         int var3 = null != ((vcb) this).field_C ? -((vcb) this).field_P.field_h + ((vcb) this).field_C.field_g : ((vcb) this).field_N.field_h + (((vcb) this).field_N.field_g + -((vcb) this).field_P.field_h);
         ((vcb) this).field_P.field_g = ((var3 + -var2) * ((vcb) this).field_M >> 16) + var2;
@@ -1339,7 +1328,8 @@ final class vcb extends oda implements oo {
           }
         }
         L2: {
-          this.i((byte) -8);
+          int discarded$1 = -8;
+          this.i();
           if (((vcb) this).field_A == null) {
             ((vcb) this).field_N.field_r = 0;
             break L2;
@@ -1502,10 +1492,7 @@ final class vcb extends oda implements oo {
     private final void a(byte param0, int param1) {
         ((vcb) this).c(-3393, param1);
         if (((vcb) this).field_l instanceof lt) {
-            ((lt) (Object) ((vcb) this).field_l).a(((vcb) this).field_L, ((vcb) this).field_L, (vcb) this, param0 ^ 106);
-        }
-        if (param0 != -17) {
-            this.i((byte) 62);
+            ((lt) (Object) ((vcb) this).field_l).a(((vcb) this).field_L, ((vcb) this).field_L, (vcb) this, -123);
         }
     }
 
@@ -1624,13 +1611,15 @@ final class vcb extends oda implements oo {
                                   }
                                 }
                               } else {
-                                this.a((byte) -17, ((vcb) this).field_L + this.k((byte) 110));
+                                int discarded$2 = 110;
+                                this.a((byte) -17, ((vcb) this).field_L + this.k());
                                 stackOut_19_0 = 1;
                                 stackIn_20_0 = stackOut_19_0;
                                 return stackIn_20_0 != 0;
                               }
                             } else {
-                              this.a((byte) -17, ((vcb) this).field_L - this.k((byte) 110));
+                              int discarded$3 = 110;
+                              this.a((byte) -17, ((vcb) this).field_L - this.k());
                               stackOut_16_0 = 1;
                               stackIn_17_0 = stackOut_16_0;
                               return stackIn_17_0 != 0;

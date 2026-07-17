@@ -133,63 +133,33 @@ abstract class aa extends im {
             if (ql.field_s == ((aa) this).field_S) {
               int fieldTemp$2 = ((aa) this).field_P + 1;
               ((aa) this).field_P = ((aa) this).field_P + 1;
-              if (((aa) this).field_R == fieldTemp$2) {
+              if (((aa) this).field_R != fieldTemp$2) {
+                ((aa) this).field_T.field_D = (((aa) this).field_P << 8) / ((aa) this).field_R;
+                return super.h(-7);
+              } else {
                 ((aa) this).field_T.field_D = 256;
                 ((aa) this).field_S = null;
-                if (param0 != -7) {
-                  ((aa) this).g((byte) 13);
-                  return super.h(param0);
-                } else {
-                  return super.h(param0);
-                }
-              } else {
-                ((aa) this).field_T.field_D = (((aa) this).field_P << 8) / ((aa) this).field_R;
-                if (param0 != -7) {
-                  ((aa) this).g((byte) 13);
-                  return super.h(param0);
-                } else {
-                  return super.h(param0);
-                }
+                return super.h(-7);
               }
             } else {
-              if (param0 != -7) {
-                ((aa) this).g((byte) 13);
-                return super.h(param0);
-              } else {
-                return super.h(param0);
-              }
+              return super.h(-7);
             }
           } else {
             int fieldTemp$3 = ((aa) this).field_P + 1;
             ((aa) this).field_P = ((aa) this).field_P + 1;
-            if (((aa) this).field_W == fieldTemp$3) {
+            if (((aa) this).field_W != fieldTemp$3) {
+              ((aa) this).field_T.field_D = 256 - (((aa) this).field_P << 8) / ((aa) this).field_W;
+              return super.h(-7);
+            } else {
               ((aa) this).field_S = gn.field_b;
               ((aa) this).b(((aa) this).field_V.field_o + (12 + ((aa) this).field_N), (byte) -15, ((aa) this).field_O, 12 - -((aa) this).field_V.field_p);
               ((aa) this).field_T.field_D = 0;
               ((aa) this).field_P = 0;
-              if (param0 == -7) {
-                return super.h(param0);
-              } else {
-                ((aa) this).g((byte) 13);
-                return super.h(param0);
-              }
-            } else {
-              ((aa) this).field_T.field_D = 256 - (((aa) this).field_P << 8) / ((aa) this).field_W;
-              if (param0 == -7) {
-                return super.h(param0);
-              } else {
-                ((aa) this).g((byte) 13);
-                return super.h(param0);
-              }
+              return super.h(-7);
             }
           }
         } else {
-          if (param0 != -7) {
-            ((aa) this).g((byte) 13);
-            return super.h(param0);
-          } else {
-            return super.h(param0);
-          }
+          return super.h(-7);
         }
     }
 

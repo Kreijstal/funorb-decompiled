@@ -37,7 +37,7 @@ final class mo extends ub implements ntb {
         }
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_j = null;
     }
 

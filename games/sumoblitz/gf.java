@@ -9,13 +9,8 @@ final class gf {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
-        if (param0 != 1431655765) {
-            field_a = null;
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 
@@ -93,7 +88,7 @@ final class gf {
                 if (var7 != 0) {
                   var8_int = 0;
                   L2: while (true) {
-                    var8_int = param1.indexOf((int) param0, var8_int);
+                    var8_int = param1.indexOf('_', var8_int);
                     if (var8_int < 0) {
                       break L1;
                     } else {
@@ -109,7 +104,7 @@ final class gf {
               var8 = new StringBuilder(var6);
               var9 = 0;
               L3: while (true) {
-                var10 = param1.indexOf((int) param0, var9);
+                var10 = param1.indexOf('_', var9);
                 if (var10 >= 0) {
                   StringBuilder discarded$7 = var8.append(param1.substring(var9, var10));
                   StringBuilder discarded$8 = var8.append(param3);
@@ -133,7 +128,7 @@ final class gf {
           L4: {
             var4 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var4;
-            stackOut_15_1 = new StringBuilder().append("gf.A(").append(param0).append(44);
+            stackOut_15_1 = new StringBuilder().append("gf.A(").append(95).append(44);
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;

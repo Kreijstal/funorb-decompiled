@@ -1562,7 +1562,7 @@ final class rc extends um {
           if (param0.field_r.length == 0) {
             return null;
           } else {
-            return new rc(param0, (int)((long)param0.field_s * 256L * (long)param1 / (long)(100 * fj.field_r)), param2 << 6);
+            return new rc(param0, (int)((long)param0.field_s * 256L * 100L / (long)(100 * fj.field_r)), param2 << 6);
           }
         } else {
           return null;
@@ -1829,7 +1829,7 @@ final class rc extends um {
           if (param0.field_r.length == 0) {
             return null;
           } else {
-            return new rc(param0, (int)((long)param0.field_s * 256L * (long)param1 / (long)(100 * fj.field_r)), param2 << 6, param3 << 6);
+            return new rc(param0, (int)((long)param0.field_s * 256L * 100L / (long)(100 * fj.field_r)), param2 << 6, param3 << 6);
           }
         } else {
           return null;

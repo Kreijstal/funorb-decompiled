@@ -235,7 +235,7 @@ final class dl extends jla {
         return true;
     }
 
-    private final void o(int param0) {
+    private final void o() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -337,14 +337,17 @@ final class dl extends jla {
                 var2 = kw.field_n;
             }
         }
-        j.a(var2, 40, 16760896, true, 320, false);
+        int discarded$1 = 0;
+        j.a(var2, 40, 16760896, true, 320);
         this.p(1);
         if (!(null == rga.field_a)) {
-            this.o(0);
+            int discarded$2 = 0;
+            this.o();
         }
         ((dl) this).c(true);
         if (!um.a(true)) {
-            kla.b(true);
+            int discarded$3 = 1;
+            kla.b();
         }
     }
 
@@ -368,31 +371,27 @@ final class dl extends jla {
         var3 = 0;
         var4 = -1;
         var5 = pu.field_j.field_h.field_d;
-        if (param0 > 35) {
-          var6 = 0;
-          L0: while (true) {
-            if (var6 >= var5) {
-              return var4;
+        var6 = 0;
+        L0: while (true) {
+          if (var6 >= var5) {
+            return var4;
+          } else {
+            if (var3 < pu.field_j.field_h.field_H[var6].a(param1, (byte) 68)) {
+              var4 = var6;
+              var3 = pu.field_j.field_h.field_H[var6].a(param1, (byte) 68);
+              var6++;
+              continue L0;
             } else {
-              if (var3 < pu.field_j.field_h.field_H[var6].a(param1, (byte) 68)) {
-                var4 = var6;
-                var3 = pu.field_j.field_h.field_H[var6].a(param1, (byte) 68);
+              if (var3 == pu.field_j.field_h.field_H[var6].a(param1, (byte) 68)) {
+                var4 = -2;
                 var6++;
                 continue L0;
               } else {
-                if (var3 == pu.field_j.field_h.field_H[var6].a(param1, (byte) 68)) {
-                  var4 = -2;
-                  var6++;
-                  continue L0;
-                } else {
-                  var6++;
-                  continue L0;
-                }
+                var6++;
+                continue L0;
               }
             }
           }
-        } else {
-          return -83;
         }
     }
 

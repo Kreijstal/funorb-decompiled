@@ -93,9 +93,10 @@ final class md extends vg {
         }
     }
 
-    private final void a(int param0) {
+    private final void a() {
         ((md) this).field_z = new bi[]{this.a(((md) this).field_E, (byte) 98, ((md) this).field_F), this.a(((md) this).field_A, (byte) 124, ((md) this).field_O)};
-        ((md) this).field_R = this.h(61);
+        int discarded$0 = 61;
+        ((md) this).field_R = this.h();
         ((md) this).field_N = ((md) this).field_R.c();
         ((md) this).field_S = new bi(((md) this).field_n >> 1, ((md) this).field_n);
     }
@@ -250,14 +251,15 @@ final class md extends vg {
         if (param2 <= 99) {
             return;
         }
-        this.a(-907398527);
+        int discarded$0 = -907398527;
+        this.a();
     }
 
     md(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1 & 8355711, 8355711 & param6 >> 1);
     }
 
-    private final void a(bi param0, int param1, int param2, int param3) {
+    private final void a(bi param0, int param1, int param2) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -447,15 +449,17 @@ final class md extends vg {
         }
         int var5 = param3 - -((md) this).field_m;
         int var6 = ((md) this).field_q + param2;
-        this.a(((md) this).field_z[0], var6, var5, -1);
+        int discarded$0 = -1;
+        this.a(((md) this).field_z[0], var6, var5);
         if (!(((md) this).field_y >= 65536)) {
             ke.a(-6187, var5 + ((md) this).field_x, var6 - -((md) this).field_n, var6, var5 + (((md) this).field_y * ((md) this).field_x >> 16));
-            this.a(((md) this).field_z[1], var6, var5, -1);
+            int discarded$1 = -1;
+            this.a(((md) this).field_z[1], var6, var5);
             ln.f((byte) -78);
         }
     }
 
-    final static bi i(int param0) {
+    final static bi i() {
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -494,7 +498,7 @@ final class md extends vg {
         }
     }
 
-    private final bi h(int param0) {
+    private final bi h() {
         int var5 = 0;
         int var6 = 0;
         double var7 = 0.0;
@@ -525,8 +529,8 @@ final class md extends vg {
         int var8 = ShatteredPlansClient.field_F ? 1 : 0;
         int[] var10 = new int[param2];
         int[] var3 = var10;
-        int var4 = 16711935 & param1;
-        int var5 = param1 & 65280;
+        int var4 = 16711935;
+        int var5 = 65280;
         if (param0 <= 23) {
             Object var9 = null;
             md.a(27, (String) null, 25, (String) null, (String) null, 0);
@@ -546,7 +550,8 @@ final class md extends vg {
         ((md) this).field_O = (16711422 & param0) >> 1;
         ((md) this).field_A = param1 >> 1 & 8355711;
         ((md) this).field_E = param1;
-        this.a(-907398527);
+        int discarded$0 = -907398527;
+        this.a();
     }
 
     public static void j(int param0) {

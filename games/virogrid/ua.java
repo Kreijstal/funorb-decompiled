@@ -253,7 +253,7 @@ class ua {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void a(int param0, boolean param1) {
         int stackIn_7_0 = 0;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
@@ -296,12 +296,12 @@ class ua {
     }
 
     private final void a(int param0) {
-        ((ua) this).field_j = ((ua) this).field_j - 256;
+        ((ua) this).field_j = ((ua) this).field_j - param0;
         if (((ua) this).field_j < 0) {
             ((ua) this).field_j = 0;
         }
         if (((ua) this).field_d != null) {
-            ((ua) this).field_d.a(256);
+            ((ua) this).field_d.a(param0);
             return;
         }
     }
@@ -500,7 +500,7 @@ class ua {
         in var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_q) {
             break L0;
           } else {
@@ -510,7 +510,7 @@ class ua {
         }
         L1: {
           ek.a(param0, 0, var3);
-          ((ua) this).field_j = ((ua) this).field_j - 256;
+          ((ua) this).field_j = ((ua) this).field_j - param1;
           if (((ua) this).field_d == null) {
             break L1;
           } else {
@@ -677,7 +677,7 @@ class ua {
           if (((ua) this).field_d == null) {
             break L17;
           } else {
-            ((ua) this).field_d.b(param0, 0, 256);
+            ((ua) this).field_d.b(param0, 0, param1);
             break L17;
           }
         }

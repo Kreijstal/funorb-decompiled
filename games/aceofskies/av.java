@@ -37,7 +37,7 @@ final class av {
         }
     }
 
-    final static String a(byte param0, boolean param1, boolean param2, boolean param3) {
+    final static String a(byte param0, boolean param1, boolean param2) {
         int var4 = 0;
         if (param1) {
             var4 += 4;
@@ -46,22 +46,19 @@ final class av {
             var4 += 2;
         }
         var4++;
-        int var5 = -111 / ((-32 - param0) / 57);
+        int var5 = -111;
         return qh.field_a[var4];
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        if (param0 != 22847) {
-            field_b = null;
-        }
         return mi.b(param1, param2, 22547) & ta.a(param2, param1, (byte) 82);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         field_a = null;
-        int var1 = -17 % ((param0 - 59) / 41);
+        int var1 = -1;
     }
 
     static {

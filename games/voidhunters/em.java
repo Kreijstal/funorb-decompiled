@@ -77,17 +77,13 @@ final class em extends rqa {
     }
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        if (param0 == 5220) {
-          if (param4 >= param5) {
-            if (param1 >= param4) {
-              if (param2 >= param6) {
-                if (param2 > param3) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
+        if (param4 >= param5) {
+          if (param1 >= param4) {
+            if (param2 >= param6) {
+              if (param2 > param3) {
                 return false;
+              } else {
+                return true;
               }
             } else {
               return false;

@@ -68,13 +68,9 @@ final class sj implements Runnable {
             var6 = 0;
             L1: while (true) {
               if (var6 >= var5_array.length) {
-                if (param2) {
-                  var9 = null;
-                  v discarded$1 = sj.a((String) null, -124, false, (String) null);
-                  return null;
-                } else {
-                  return null;
-                }
+                var9 = null;
+                v discarded$1 = sj.a((String) null, -124, false, (String) null);
+                return null;
               } else {
                 L2: {
                   var7 = var5_array[var6];
@@ -524,15 +520,7 @@ final class sj implements Runnable {
                 break L1;
               }
             }
-            L2: {
-              this.notify();
-              if (!param2) {
-                break L2;
-              } else {
-                le discarded$2 = ((sj) this).a(-56, -20, -46, 113, (byte) -46);
-                break L2;
-              }
-            }
+            this.notify();
             break L0;
           }
         }
@@ -585,11 +573,13 @@ final class sj implements Runnable {
             Object var5 = null;
             le discarded$0 = ((sj) this).a(true, (byte) -21, (java.awt.Component) null);
         }
-        return this.a(param1, param0, false, (byte) -123);
+        int discarded$1 = -123;
+        int discarded$2 = 0;
+        return this.a(param1, param0);
     }
 
-    private final le a(int param0, String param1, boolean param2, byte param3) {
-        return this.a(param2 ? 22 : 1, param0, false, (Object) (Object) param1, 0);
+    private final le a(int param0, String param1) {
+        return this.a(1, param0, false, (Object) (Object) param1, 0);
     }
 
     final void a(boolean param0) {

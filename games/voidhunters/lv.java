@@ -108,16 +108,16 @@ final class lv extends rqa {
                       if (param8 > 26) {
                         if (var9 > param4 * param4 - -(param1 * param1)) {
                           if (param2 * param2 + param6 * param6 < var9) {
-                            return (1 << param5) - -1;
+                            return 257;
                           } else {
                             param2 = param2 - param1;
                             param6 = param6 - param4;
-                            return vu.b(-var9 + param1 * param1 + param4 * param4, 0, param6 * param4 - -(param2 * param1) << 1, param5, param6 * param6 + param2 * param2 << 1);
+                            return vu.b(-var9 + param1 * param1 + param4 * param4, 0, param6 * param4 - -(param2 * param1) << 1, 8, param6 * param6 + param2 * param2 << 1);
                           }
                         } else {
                           param2 = param2 - param1;
                           param6 = param6 - param4;
-                          return vu.b(-var9 + param1 * param1 + param4 * param4, 0, param6 * param4 - -(param2 * param1) << 1, param5, param6 * param6 + param2 * param2 << 1);
+                          return vu.b(-var9 + param1 * param1 + param4 * param4, 0, param6 * param4 - -(param2 * param1) << 1, 8, param6 * param6 + param2 * param2 << 1);
                         }
                       } else {
                         return -122;
@@ -152,16 +152,16 @@ final class lv extends rqa {
                       if (param8 > 26) {
                         if (var9 > param4 * param4 - -(param1 * param1)) {
                           if (param2 * param2 + param6 * param6 < var9) {
-                            return (1 << param5) - -1;
+                            return 257;
                           } else {
                             param2 = param2 - param1;
                             param6 = param6 - param4;
-                            return vu.b(-var9 + param1 * param1 + param4 * param4, 0, param6 * param4 - -(param2 * param1) << 1, param5, param6 * param6 + param2 * param2 << 1);
+                            return vu.b(-var9 + param1 * param1 + param4 * param4, 0, param6 * param4 - -(param2 * param1) << 1, 8, param6 * param6 + param2 * param2 << 1);
                           }
                         } else {
                           param2 = param2 - param1;
                           param6 = param6 - param4;
-                          return vu.b(-var9 + param1 * param1 + param4 * param4, 0, param6 * param4 - -(param2 * param1) << 1, param5, param6 * param6 + param2 * param2 << 1);
+                          return vu.b(-var9 + param1 * param1 + param4 * param4, 0, param6 * param4 - -(param2 * param1) << 1, 8, param6 * param6 + param2 * param2 << 1);
                         }
                       } else {
                         return -122;
@@ -206,16 +206,16 @@ final class lv extends rqa {
                       if (param8 > 26) {
                         if (var9 > param4 * param4 - -(param1 * param1)) {
                           if (param2 * param2 + param6 * param6 < var9) {
-                            return (1 << param5) - -1;
+                            return 257;
                           } else {
                             param2 = param2 - param1;
                             param6 = param6 - param4;
-                            return vu.b(-var9 + param1 * param1 + param4 * param4, 0, param6 * param4 - -(param2 * param1) << 1, param5, param6 * param6 + param2 * param2 << 1);
+                            return vu.b(-var9 + param1 * param1 + param4 * param4, 0, param6 * param4 - -(param2 * param1) << 1, 8, param6 * param6 + param2 * param2 << 1);
                           }
                         } else {
                           param2 = param2 - param1;
                           param6 = param6 - param4;
-                          return vu.b(-var9 + param1 * param1 + param4 * param4, 0, param6 * param4 - -(param2 * param1) << 1, param5, param6 * param6 + param2 * param2 << 1);
+                          return vu.b(-var9 + param1 * param1 + param4 * param4, 0, param6 * param4 - -(param2 * param1) << 1, 8, param6 * param6 + param2 * param2 << 1);
                         }
                       } else {
                         return -122;
@@ -252,14 +252,14 @@ final class lv extends rqa {
                           if (param2 * param2 + param6 * param6 >= var9) {
                             param2 = param2 - param1;
                             param6 = param6 - param4;
-                            return vu.b(-var9 + param1 * param1 + param4 * param4, 0, param6 * param4 - -(param2 * param1) << 1, param5, param6 * param6 + param2 * param2 << 1);
+                            return vu.b(-var9 + param1 * param1 + param4 * param4, 0, param6 * param4 - -(param2 * param1) << 1, 8, param6 * param6 + param2 * param2 << 1);
                           } else {
-                            return (1 << param5) - -1;
+                            return 257;
                           }
                         } else {
                           param2 = param2 - param1;
                           param6 = param6 - param4;
-                          return vu.b(-var9 + param1 * param1 + param4 * param4, 0, param6 * param4 - -(param2 * param1) << 1, param5, param6 * param6 + param2 * param2 << 1);
+                          return vu.b(-var9 + param1 * param1 + param4 * param4, 0, param6 * param4 - -(param2 * param1) << 1, 8, param6 * param6 + param2 * param2 << 1);
                         }
                       } else {
                         return -122;
@@ -283,7 +283,7 @@ final class lv extends rqa {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
         int var1 = 0;
     }

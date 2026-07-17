@@ -18,7 +18,7 @@ final class i extends ug {
     int[] field_o;
     static int[] field_r;
 
-    final static int a(int param0, boolean param1) {
+    final static int a(int param0) {
         param0--;
         param0 = param0 | param0 >>> 1;
         param0 = param0 | param0 >>> 2;
@@ -28,7 +28,7 @@ final class i extends ug {
         return 1 + param0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_h = null;
         field_r = null;
         field_j = null;

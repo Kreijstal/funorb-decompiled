@@ -196,24 +196,21 @@ final class lr extends d {
         String stackOut_5_2 = null;
         try {
           L0: {
-            if (param0 <= -18) {
-              ui.field_g = 2;
-              ea.field_b = param1;
-              var5 = (CharSequence) (Object) param1;
-              sm.field_Kb = rc.a(var5, 320);
-              ie.field_Nb = param2;
-              nb.h(-14829);
-              break L0;
-            } else {
-              return;
-            }
+            ui.field_g = 2;
+            ea.field_b = param1;
+            var5 = (CharSequence) (Object) param1;
+            sm.field_Kb = rc.a(var5, 320);
+            ie.field_Nb = param2;
+            int discarded$3 = -14829;
+            nb.h();
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             runtimeException = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) runtimeException;
-            stackOut_4_1 = new StringBuilder().append("lr.C(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("lr.C(").append(-57).append(44);
             stackIn_7_0 = stackOut_4_0;
             stackIn_7_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -316,7 +313,7 @@ final class lr extends d {
         }
     }
 
-    final static String a(int param0, int param1, CharSequence[] param2, int param3) {
+    final static String a(int param0, int param1, CharSequence[] param2) {
         RuntimeException var4 = null;
         CharSequence var4_ref = null;
         int var4_int = 0;
@@ -361,7 +358,7 @@ final class lr extends d {
               return stackIn_5_0;
             } else {
               if (param0 == 1) {
-                var10 = param2[param1];
+                var10 = param2[0];
                 var4_ref = var10;
                 if (var4_ref != null) {
                   stackOut_12_0 = ((Object) (Object) var10).toString();
@@ -373,13 +370,13 @@ final class lr extends d {
                   return stackIn_11_0;
                 }
               } else {
-                var4_int = param1 + param0;
+                var4_int = param0;
                 var5 = 0;
-                var6_int = param1;
+                var6_int = 0;
                 L1: while (true) {
                   if (var4_int <= var6_int) {
                     var6 = new StringBuilder(var5);
-                    var7 = param1;
+                    var7 = 0;
                     L2: while (true) {
                       if (var4_int <= var7) {
                         stackOut_28_0 = var6.toString();
@@ -423,7 +420,7 @@ final class lr extends d {
           L5: {
             var4 = decompiledCaughtException;
             stackOut_30_0 = (RuntimeException) var4;
-            stackOut_30_1 = new StringBuilder().append("lr.D(").append(param0).append(44).append(param1).append(44);
+            stackOut_30_1 = new StringBuilder().append("lr.D(").append(param0).append(44).append(0).append(44);
             stackIn_33_0 = stackOut_30_0;
             stackIn_33_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;
@@ -541,24 +538,16 @@ final class lr extends d {
                 }
               }
             }
-            L4: {
-              if (param2 > 13) {
-                break L4;
-              } else {
-                field_O = null;
-                break L4;
-              }
-            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var10 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var10, "lr.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
+          throw wn.a((Throwable) (Object) var10, "lr.A(" + param0 + 44 + param1 + 44 + 67 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
         }
     }
 
-    final static int e(byte param0) {
+    final static int e() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -575,7 +564,8 @@ final class lr extends d {
             var1_int = 0;
             var2 = 0;
             L1: while (true) {
-              if (!gf.a(false)) {
+              int discarded$3 = 0;
+              if (!gf.a()) {
                 L2: {
                   ve.field_d.a((byte) -29, fk.b(gb.field_d, 1282642017, ed.field_n), fk.b(no.field_e, 1282642017, sd.field_N));
                   if (ve.field_d.a(84)) {
@@ -606,7 +596,8 @@ final class lr extends d {
                             }
                           }
                         }
-                        hd.a((byte) 47);
+                        int discarded$4 = 47;
+                        hd.a();
                         break L3;
                       }
                     }
@@ -617,7 +608,8 @@ final class lr extends d {
                     if (da.field_j == 2) {
                       break L3;
                     } else {
-                      hd.a((byte) 47);
+                      int discarded$5 = 47;
+                      hd.a();
                       break L3;
                     }
                   }

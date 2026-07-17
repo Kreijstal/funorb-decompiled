@@ -247,12 +247,8 @@ abstract class hs extends kb implements gw {
         int[] stackIn_54_1 = null;
         int stackIn_54_2 = 0;
         int stackIn_69_0 = 0;
-        jd stackIn_79_0 = null;
-        jd stackIn_80_0 = null;
-        jd stackIn_81_0 = null;
-        int stackIn_81_1 = 0;
-        int stackIn_93_0 = 0;
-        int stackIn_108_0 = 0;
+        int stackIn_90_0 = 0;
+        int stackIn_105_0 = 0;
         int stackOut_33_0 = 0;
         int stackOut_32_0 = 0;
         int stackOut_42_0 = 0;
@@ -269,15 +265,10 @@ abstract class hs extends kb implements gw {
         int stackOut_67_0 = 0;
         int stackOut_65_0 = 0;
         int stackOut_63_0 = 0;
-        jd stackOut_78_0 = null;
-        jd stackOut_80_0 = null;
-        int stackOut_80_1 = 0;
-        jd stackOut_79_0 = null;
-        int stackOut_79_1 = 0;
-        int stackOut_92_0 = 0;
-        int stackOut_91_0 = 0;
-        int stackOut_107_0 = 0;
-        int stackOut_106_0 = 0;
+        int stackOut_89_0 = 0;
+        int stackOut_88_0 = 0;
+        int stackOut_104_0 = 0;
+        int stackOut_103_0 = 0;
         L0: {
           var20 = ArmiesOfGielinor.field_M ? 1 : 0;
           cf.field_t.b(param4 + 2, param7 + param6 + -73);
@@ -289,7 +280,8 @@ abstract class hs extends kb implements gw {
           qn.f(param4 + 37, param7 + -70 + param6, 245 - -param4, param6 + (param7 - 45));
           fe.a(var8, -param3 + (param4 + 42), param6 - 43 + param7, 16777215, true);
           qn.a();
-          fe.c(param2.field_Y - -param2.field_A + "/" + param2.field_t, param4 + 272, param6 - (42 - param7), 16777215, param1);
+          int discarded$3 = 1;
+          fe.c(param2.field_Y - -param2.field_A + "/" + param2.field_t, param4 + 272, param6 - (42 - param7), 16777215);
           ro.field_rb[param2.g(0)].a(param4 + 9, param7 + -66 + param6);
           var9 = param2.l(-27014);
           qn.b(59 + param4, param7 + -41 + param6, 30, 30, 0, 128);
@@ -376,11 +368,13 @@ abstract class hs extends kb implements gw {
         L6: {
           if (var11 != var12) {
             qn.b(param4 + 92, param7 - 41 - -param6, 39, 30, 0, 128);
-            fe.c(fo.a(4800, td.field_a, new String[2]), param4 + 111, param7 + -41 + (param6 - -30), 16777215, true);
+            int discarded$4 = 1;
+            fe.c(fo.a(4800, td.field_a, new String[2]), param4 + 111, param7 + -41 + (param6 - -30), 16777215);
             break L6;
           } else {
             qn.b(96 + param4, -41 - (-param6 - param7), 30, 30, 0, 128);
-            fe.c(Integer.toString(var11), param4 + 111, -41 - (-param6 - (param7 - -30)), 16777215, true);
+            int discarded$5 = 1;
+            fe.c(Integer.toString(var11), param4 + 111, -41 - (-param6 - (param7 - -30)), 16777215);
             break L6;
           }
         }
@@ -585,30 +579,12 @@ abstract class hs extends kb implements gw {
                       if (-18 != param2.field_N) {
                         break L24;
                       } else {
-                        L25: {
-                          stackOut_78_0 = (jd) param2;
-                          stackIn_80_0 = stackOut_78_0;
-                          stackIn_79_0 = stackOut_78_0;
-                          if (param1) {
-                            stackOut_80_0 = (jd) (Object) stackIn_80_0;
-                            stackOut_80_1 = 0;
-                            stackIn_81_0 = stackOut_80_0;
-                            stackIn_81_1 = stackOut_80_1;
-                            break L25;
-                          } else {
-                            stackOut_79_0 = (jd) (Object) stackIn_79_0;
-                            stackOut_79_1 = 1;
-                            stackIn_81_0 = stackOut_79_0;
-                            stackIn_81_1 = stackOut_79_1;
-                            break L25;
-                          }
-                        }
-                        if (((jd) (Object) stackIn_81_0).c(stackIn_81_1 != 0)) {
+                        if (param2.c(false)) {
                           break L24;
                         } else {
-                          L26: {
+                          L25: {
                             if (param2.field_s) {
-                              break L26;
+                              break L25;
                             } else {
                               if (-1 != param2.field_B) {
                                 lw.field_ob.g(11 - -param4, param7 - 36 - -param6);
@@ -620,7 +596,7 @@ abstract class hs extends kb implements gw {
                                   break L22;
                                 }
                               } else {
-                                break L26;
+                                break L25;
                               }
                             }
                           }
@@ -630,32 +606,32 @@ abstract class hs extends kb implements gw {
                         }
                       }
                     }
-                    L27: {
+                    L26: {
                       if (param2.field_N != 7) {
-                        break L27;
+                        break L26;
                       } else {
                         if (param2.field_W) {
-                          break L27;
+                          break L26;
                         } else {
-                          L28: {
+                          L27: {
                             var18_int = param2.field_l.field_Eb[param2.field_J - -(param2.field_w * param2.field_l.field_v)].field_h;
                             if (0 == var18_int) {
-                              stackOut_92_0 = 0;
-                              stackIn_93_0 = stackOut_92_0;
-                              break L28;
+                              stackOut_89_0 = 0;
+                              stackIn_90_0 = stackOut_89_0;
+                              break L27;
                             } else {
-                              stackOut_91_0 = 1;
-                              stackIn_93_0 = stackOut_91_0;
-                              break L28;
+                              stackOut_88_0 = 1;
+                              stackIn_90_0 = stackOut_88_0;
+                              break L27;
                             }
                           }
-                          L29: {
-                            var19 = stackIn_93_0;
+                          L28: {
+                            var19 = stackIn_90_0;
                             if (param2.field_s) {
-                              break L29;
+                              break L28;
                             } else {
                               if (param2.field_B == 0) {
-                                break L29;
+                                break L28;
                               } else {
                                 if (var19 == 0) {
                                   lw.field_ob.g(param4 + 11, param7 + (param6 + -36));
@@ -667,7 +643,7 @@ abstract class hs extends kb implements gw {
                                     break L22;
                                   }
                                 } else {
-                                  break L29;
+                                  break L28;
                                 }
                               }
                             }
@@ -678,33 +654,33 @@ abstract class hs extends kb implements gw {
                         }
                       }
                     }
-                    L30: {
+                    L29: {
                       if (param2.field_N != 34) {
-                        break L30;
+                        break L29;
                       } else {
                         if (!param2.field_W) {
-                          L31: {
+                          L30: {
                             var18 = param2.field_l.field_Eb[param2.field_w * param2.field_l.field_v + param2.field_J];
                             if (var18.f(19725)) {
-                              stackOut_107_0 = 0;
-                              stackIn_108_0 = stackOut_107_0;
-                              break L31;
+                              stackOut_104_0 = 0;
+                              stackIn_105_0 = stackOut_104_0;
+                              break L30;
                             } else {
-                              stackOut_106_0 = 1;
-                              stackIn_108_0 = stackOut_106_0;
-                              break L31;
+                              stackOut_103_0 = 1;
+                              stackIn_105_0 = stackOut_103_0;
+                              break L30;
                             }
                           }
-                          L32: {
-                            var19 = stackIn_108_0;
+                          L31: {
+                            var19 = stackIn_105_0;
                             if (param2.field_s) {
-                              break L32;
+                              break L31;
                             } else {
                               if (param2.field_B == 0) {
-                                break L32;
+                                break L31;
                               } else {
                                 if (var19 != 0) {
-                                  break L32;
+                                  break L31;
                                 } else {
                                   lw.field_ob.g(param4 + 11, -36 + (param6 + param7));
                                   ii.field_a[0].g(11 + param4, -36 + param6 + param7);
@@ -723,19 +699,19 @@ abstract class hs extends kb implements gw {
                           ii.field_a[0].g(11 + param4, param7 - 36 - -param6, 128);
                           break L22;
                         } else {
-                          break L30;
+                          break L29;
                         }
                       }
                     }
                     lw.field_ob.g(11 + param4, -36 - (-param6 - param7), 128);
                     break L22;
                   } else {
-                    L33: {
+                    L32: {
                       if (param2.field_s) {
-                        break L33;
+                        break L32;
                       } else {
                         if (0 == param2.field_B) {
-                          break L33;
+                          break L32;
                         } else {
                           lw.field_ob.g(11 + param4, param7 - (-param6 + 36));
                           ii.field_a[3].g(param4 + 11, param6 - (36 - param7));
@@ -759,13 +735,13 @@ abstract class hs extends kb implements gw {
             }
             return;
           } else {
-            L34: {
+            L33: {
               if ((var9 & 1 << var17) == 0) {
-                break L34;
+                break L33;
               } else {
                 cp.field_e[var17 - -1].a(-(30 * (3 & var13)) + 235 - -param4, (var13 >> 2) * 30 + (param7 - 41 - -param6));
                 var13++;
-                break L34;
+                break L33;
               }
             }
             var17--;
@@ -947,33 +923,25 @@ abstract class hs extends kb implements gw {
           }
         }
         L1: {
-          if (param2 < -82) {
-            break L1;
-          } else {
-            ((hs) this).f(-101);
-            break L1;
-          }
-        }
-        L2: {
           if (null != ((hs) this).field_C) {
             var5 = -1 + ((hs) this).field_C.length;
-            L3: while (true) {
+            L2: while (true) {
               if (var5 < 0) {
-                break L2;
+                break L1;
               } else {
                 var6 = ((hs) this).field_C[var5];
                 if (var6 != null) {
                   var6.a(((hs) this).field_B + param0, param1 - -((hs) this).field_p, (byte) -124, param3);
                   var5--;
-                  continue L3;
+                  continue L2;
                 } else {
                   var5--;
-                  continue L3;
+                  continue L2;
                 }
               }
             }
           } else {
-            break L2;
+            break L1;
           }
         }
     }
@@ -1520,38 +1488,34 @@ abstract class hs extends kb implements gw {
           L0: {
             if (((hs) this).field_C != null) {
               var10 = ((hs) this).field_C;
-              if (param1 < -95) {
-                var6 = 0;
-                L1: while (true) {
-                  if (var6 >= var10.length) {
-                    break L0;
-                  } else {
-                    var7 = var10[var6];
-                    StringBuilder discarded$29 = param2.append(10);
-                    var8 = 0;
-                    L2: while (true) {
-                      if (param3 < var8) {
-                        L3: {
-                          if (var7 != null) {
-                            StringBuilder discarded$30 = var7.a(param3 + 1, param2, 26477, param0);
-                            break L3;
-                          } else {
-                            StringBuilder discarded$31 = param2.append("null");
-                            break L3;
-                          }
+              var6 = 0;
+              L1: while (true) {
+                if (var6 >= var10.length) {
+                  break L0;
+                } else {
+                  var7 = var10[var6];
+                  StringBuilder discarded$29 = param2.append(10);
+                  var8 = 0;
+                  L2: while (true) {
+                    if (param3 < var8) {
+                      L3: {
+                        if (var7 != null) {
+                          StringBuilder discarded$30 = var7.a(param3 + 1, param2, 26477, param0);
+                          break L3;
+                        } else {
+                          StringBuilder discarded$31 = param2.append("null");
+                          break L3;
                         }
-                        var6++;
-                        continue L1;
-                      } else {
-                        StringBuilder discarded$32 = param2.append(32);
-                        var8++;
-                        continue L2;
                       }
+                      var6++;
+                      continue L1;
+                    } else {
+                      StringBuilder discarded$32 = param2.append(32);
+                      var8++;
+                      continue L2;
                     }
                   }
                 }
-              } else {
-                return;
               }
             } else {
               return;
@@ -1587,7 +1551,7 @@ abstract class hs extends kb implements gw {
           }
           L5: {
             stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(44).append(param1).append(44);
+            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(44).append(-121).append(44);
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -1673,7 +1637,8 @@ abstract class hs extends kb implements gw {
         if (param0) {
             return true;
         }
-        return null != this.a((byte) -86) ? true : false;
+        int discarded$0 = -86;
+        return null != this.a() ? true : false;
     }
 
     boolean a(int param0, int param1, int param2, int param3, kb param4, int param5, int param6) {
@@ -1783,7 +1748,7 @@ abstract class hs extends kb implements gw {
         return stackIn_15_0 != 0;
     }
 
-    public static void i(int param0) {
+    public static void i() {
         field_E = null;
         field_G = null;
         field_F = null;
@@ -1899,7 +1864,7 @@ abstract class hs extends kb implements gw {
         ((hs) this).d((byte) 121);
     }
 
-    private final kb a(byte param0) {
+    private final kb a() {
         kb[] var2 = null;
         int var3 = 0;
         kb var4 = null;

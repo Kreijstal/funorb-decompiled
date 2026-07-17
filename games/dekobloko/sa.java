@@ -31,7 +31,7 @@ final class sa extends bh {
         }
     }
 
-    final static void a(String param0, int param1) {
+    final static void a(String param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

@@ -22,16 +22,8 @@ final class qca extends llb {
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4) {
-        if (!param3) {
-          field_yb = 104;
-          vbb.e(3);
-          dma.g(param2, param4, param0, param1);
-          return;
-        } else {
-          vbb.e(3);
-          dma.g(param2, param4, param0, param1);
-          return;
-        }
+        vbb.e(3);
+        dma.g(param2, param4, param0, param1);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {

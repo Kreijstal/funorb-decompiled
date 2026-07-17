@@ -10,7 +10,7 @@ final class he extends gg {
     boolean field_n;
     int[] field_m;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_k = null;
         field_o = null;
         int var1 = 33;

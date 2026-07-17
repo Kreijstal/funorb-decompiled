@@ -1750,12 +1750,12 @@ final class ni extends qb {
         }
     }
 
-    final static ni a(va param0, int param1, int param2) {
+    final static ni a(va param0) {
         if (param0.field_k != null) {
           if (param0.field_k.length == 0) {
             return null;
           } else {
-            return new ni(param0, param1, 0);
+            return new ni(param0, 256, 0);
           }
         } else {
           return null;
@@ -2041,7 +2041,7 @@ final class ni extends qb {
           if (param0.field_k.length == 0) {
             return null;
           } else {
-            return new ni(param0, (int)((long)param0.field_n * 256L * (long)param1 / (long)(100 * vn.field_t)), param2 << 6);
+            return new ni(param0, (int)((long)param0.field_n * 256L * 100L / (long)(100 * vn.field_t)), param2 << 6);
           }
         } else {
           return null;

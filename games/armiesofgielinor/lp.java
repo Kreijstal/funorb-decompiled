@@ -6,7 +6,7 @@ final class lp {
     static int[][] field_a;
     static ru[] field_b;
 
-    final static int a(String param0, boolean param1, boolean param2) {
+    final static int a(String param0, boolean param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -82,7 +82,7 @@ final class lp {
         field_a = null;
     }
 
-    final static je b(int param0) {
+    final static je b() {
         return sc.field_g.field_Nb;
     }
 

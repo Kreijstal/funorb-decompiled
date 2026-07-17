@@ -34,14 +34,14 @@ final class rd {
           L0: {
             var6 = new int[param2.length];
             var3 = var6;
-            var4 = param1 + param2.length;
+            var4 = -1 + param2.length;
             L1: while (true) {
               if (var4 < 0) {
                 stackOut_4_0 = (int[]) var3;
                 stackIn_5_0 = stackOut_4_0;
                 break L0;
               } else {
-                var6[var4] = (int)(0.5 + (double)(1 << param0) * param2[var4]);
+                var6[var4] = (int)(0.5 + (double)65536 * param2[var4]);
                 var4--;
                 continue L1;
               }
@@ -52,7 +52,7 @@ final class rd {
           L2: {
             var3_ref = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var3_ref;
-            stackOut_6_1 = new StringBuilder().append("rd.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_6_1 = new StringBuilder().append("rd.A(").append(16).append(44).append(-1).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -80,7 +80,7 @@ final class rd {
         return stackIn_5_0;
     }
 
-    final static km a(int param0, int param1, int param2) {
+    final static km a(int param0, int param1) {
         int var4 = 0;
         int var5 = Chess.field_G;
         km var6 = new km(param0, param0);
@@ -91,7 +91,7 @@ final class rd {
         return var3;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
     }

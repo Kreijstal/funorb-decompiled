@@ -23,67 +23,59 @@ final class ni extends pv {
         ai var6_ref_ai = null;
         int var6 = 0;
         int var7 = 0;
-        Object stackIn_6_0 = null;
-        ai[] stackIn_14_0 = null;
+        ai[] stackIn_13_0 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_18_2 = null;
+        String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ai[] stackOut_13_0 = null;
-        Object stackOut_5_0 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
+        ai[] stackOut_12_0 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
         RuntimeException stackOut_16_0 = null;
         StringBuilder stackOut_16_1 = null;
         String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
         var7 = BachelorFridge.field_y;
         try {
           L0: {
             var2_int = param1.d(8, (byte) -65);
             if (var2_int <= 0) {
               var3 = param1.d(12, (byte) 45);
-              if (param0 == 41) {
-                var4 = new ai[var3];
-                var5 = 0;
-                L1: while (true) {
-                  if (var5 >= var3) {
-                    stackOut_13_0 = (ai[]) var4;
-                    stackIn_14_0 = stackOut_13_0;
-                    break L0;
-                  } else {
-                    L2: {
-                      if (!fa.a((byte) -75, param1)) {
-                        var6 = param1.d(nia.a(-1 + var5, false), (byte) 64);
-                        var4[var5] = var4[var6];
-                        break L2;
-                      } else {
-                        var6_ref_ai = new ai();
-                        int discarded$12 = param1.d(24, (byte) -105);
-                        int discarded$13 = param1.d(24, (byte) 50);
-                        var6_ref_ai.field_b = param1.d(24, (byte) -123);
-                        int discarded$14 = param1.d(9, (byte) 69);
-                        int discarded$15 = param1.d(12, (byte) -64);
-                        int discarded$16 = param1.d(12, (byte) 58);
-                        int discarded$17 = param1.d(12, (byte) -116);
-                        var4[var5] = var6_ref_ai;
-                        break L2;
-                      }
+              var4 = new ai[var3];
+              var5 = 0;
+              L1: while (true) {
+                if (var5 >= var3) {
+                  stackOut_12_0 = (ai[]) var4;
+                  stackIn_13_0 = stackOut_12_0;
+                  break L0;
+                } else {
+                  L2: {
+                    if (!fa.a((byte) -75, param1)) {
+                      var6 = param1.d(nia.a(-1 + var5, false), (byte) 64);
+                      var4[var5] = var4[var6];
+                      break L2;
+                    } else {
+                      var6_ref_ai = new ai();
+                      int discarded$12 = param1.d(24, (byte) -105);
+                      int discarded$13 = param1.d(24, (byte) 50);
+                      var6_ref_ai.field_b = param1.d(24, (byte) -123);
+                      int discarded$14 = param1.d(9, (byte) 69);
+                      int discarded$15 = param1.d(12, (byte) -64);
+                      int discarded$16 = param1.d(12, (byte) 58);
+                      int discarded$17 = param1.d(12, (byte) -116);
+                      var4[var5] = var6_ref_ai;
+                      break L2;
                     }
-                    var5++;
-                    continue L1;
                   }
+                  var5++;
+                  continue L1;
                 }
-              } else {
-                stackOut_5_0 = null;
-                stackIn_6_0 = stackOut_5_0;
-                return (ai[]) (Object) stackIn_6_0;
               }
             } else {
               return null;
@@ -93,33 +85,33 @@ final class ni extends pv {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var2 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var2;
-            stackOut_15_1 = new StringBuilder().append("ni.E(").append(param0).append(44);
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackOut_14_0 = (RuntimeException) var2;
+            stackOut_14_1 = new StringBuilder().append("ni.E(").append(41).append(44);
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
             if (param1 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
-              break L3;
-            } else {
               stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
               stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L3;
+            } else {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
         }
-        return stackIn_14_0;
+        return stackIn_13_0;
     }
 
     private final int c(boolean param0) {

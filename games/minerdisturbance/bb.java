@@ -5,7 +5,7 @@ final class bb {
     static String field_b;
     static ta field_a;
 
-    final static void a(String param0, int param1, we param2, int param3, int param4) {
+    final static void a(String param0, int param1, we param2) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -64,9 +64,9 @@ final class bb {
                 break L2;
               }
             }
-            eh.a(var7, var8, 6 + var5_int, var6 + 6, param1);
-            eh.e(var7 - -1, 1 + var8, var5_int + 4, var6 - -4, param3);
-            param2.a(param0, 3 + var7, var8 + 3 + param2.field_N, param1, -1);
+            eh.a(var7, var8, 6 + var5_int, var6 + 6, 0);
+            eh.e(var7 - -1, 1 + var8, var5_int + 4, var6 - -4, 16513123);
+            param2.a(param0, 3 + var7, var8 + 3 + param2.field_N, 0, -1);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -99,7 +99,7 @@ final class bb {
           }
           L4: {
             stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(param1).append(44);
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(0).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -122,11 +122,11 @@ final class bb {
               break L4;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param3 + 44 + -6 + 41);
+          throw lj.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + 16513123 + 44 + -6 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
     }

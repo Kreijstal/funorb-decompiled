@@ -165,36 +165,44 @@ final class kda {
         lla var14 = null;
         int var16 = 0;
         byte[] var20 = null;
-        mib stackIn_18_0 = null;
-        mib stackIn_19_0 = null;
-        mib stackIn_20_0 = null;
-        int stackIn_20_1 = 0;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        String stackIn_33_2 = null;
+        mib stackIn_21_0 = null;
+        mib stackIn_22_0 = null;
+        mib stackIn_23_0 = null;
+        int stackIn_23_1 = 0;
+        RuntimeException stackIn_34_0 = null;
+        StringBuilder stackIn_34_1 = null;
+        RuntimeException stackIn_35_0 = null;
+        StringBuilder stackIn_35_1 = null;
+        RuntimeException stackIn_36_0 = null;
+        StringBuilder stackIn_36_1 = null;
+        String stackIn_36_2 = null;
         RuntimeException decompiledCaughtException = null;
-        mib stackOut_17_0 = null;
-        mib stackOut_19_0 = null;
-        int stackOut_19_1 = 0;
-        mib stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
+        mib stackOut_20_0 = null;
+        mib stackOut_22_0 = null;
+        int stackOut_22_1 = 0;
+        mib stackOut_21_0 = null;
+        int stackOut_21_1 = 0;
+        RuntimeException stackOut_33_0 = null;
+        StringBuilder stackOut_33_1 = null;
+        RuntimeException stackOut_35_0 = null;
+        StringBuilder stackOut_35_1 = null;
+        String stackOut_35_2 = null;
+        RuntimeException stackOut_34_0 = null;
+        StringBuilder stackOut_34_1 = null;
+        String stackOut_34_2 = null;
         var16 = VoidHunters.field_G;
         try {
           L0: {
+            L1: {
+              if (param4) {
+                param3 = param3 - lla.field_e;
+                break L1;
+              } else {
+                break L1;
+              }
+            }
             if (((kda) this).field_h < param3) {
-              L1: {
+              L2: {
                 var6_int = -param0.field_g + param3;
                 var7 = ((kda) this).c(param2 + -1000) / 2;
                 var8 = ela.field_p * var7 / param2;
@@ -206,48 +214,48 @@ final class kda {
                     return;
                   } else {
                     var11 = (uqb) (Object) param0.field_f.d(0);
-                    L2: while (true) {
+                    L3: while (true) {
                       if (var11 == null) {
-                        L3: {
+                        L4: {
                           var11_ref = param0.a(var10, param2 ^ -949);
                           var12 = tmb.a((tv) (Object) var11_ref, (byte) -70);
-                          stackOut_17_0 = (mib) param0;
-                          stackIn_19_0 = stackOut_17_0;
-                          stackIn_18_0 = stackOut_17_0;
+                          stackOut_20_0 = (mib) param0;
+                          stackIn_22_0 = stackOut_20_0;
+                          stackIn_21_0 = stackOut_20_0;
                           if (var12 == param1) {
-                            stackOut_19_0 = (mib) (Object) stackIn_19_0;
-                            stackOut_19_1 = 0;
-                            stackIn_20_0 = stackOut_19_0;
-                            stackIn_20_1 = stackOut_19_1;
-                            break L3;
+                            stackOut_22_0 = (mib) (Object) stackIn_22_0;
+                            stackOut_22_1 = 0;
+                            stackIn_23_0 = stackOut_22_0;
+                            stackIn_23_1 = stackOut_22_1;
+                            break L4;
                           } else {
-                            stackOut_18_0 = (mib) (Object) stackIn_18_0;
-                            stackOut_18_1 = 1;
-                            stackIn_20_0 = stackOut_18_0;
-                            stackIn_20_1 = stackOut_18_1;
-                            break L3;
+                            stackOut_21_0 = (mib) (Object) stackIn_21_0;
+                            stackOut_21_1 = 1;
+                            stackIn_23_0 = stackOut_21_0;
+                            stackIn_23_1 = stackOut_21_1;
+                            break L4;
                           }
                         }
-                        stackIn_20_0.field_k = stackIn_20_1 != 0;
+                        stackIn_23_0.field_k = stackIn_23_1 != 0;
                         if (!param0.field_k) {
-                          break L1;
+                          break L2;
                         } else {
                           if (((kda) this).field_e) {
-                            break L1;
+                            break L2;
                           } else {
                             if (lw.field_f) {
-                              L4: {
+                              L5: {
                                 ((kda) this).field_e = true;
                                 iva.a(-6940, "Carousel_clientgame: Now out of sync for server tick " + param3 + ", which is " + -var6_int + " ticks back, so dumping state");
                                 if (null == ((kda) this).field_j) {
                                   ((kda) this).field_j = new ova(kha.field_v);
-                                  break L4;
+                                  break L5;
                                 } else {
-                                  break L4;
+                                  break L5;
                                 }
                               }
                               if (!((kda) this).field_j.a(param2 + -1000)) {
-                                break L1;
+                                break L2;
                               } else {
                                 iva.a(-6940, "Carousel_clientgame: Sending the state dump to the server");
                                 var13 = new bhb(-var10 + param0.field_g, bk.field_w);
@@ -255,33 +263,33 @@ final class kda {
                                 var14.a(84, 0, var13.field_d, var13.field_d.length);
                                 var20 = wi.a((byte) 10, var14.field_f);
                                 ((kda) this).field_j.a(var20, 0);
-                                break L1;
+                                break L2;
                               }
                             } else {
-                              break L1;
+                              break L2;
                             }
                           }
                         }
                       } else {
-                        L5: {
+                        L6: {
                           if (var11.a(115)) {
-                            break L5;
+                            break L6;
                           } else {
                             if (-var10 + param0.field_g >= var11.field_e) {
                               iva.a(-6940, "Carousel_clientgame_Info.check_servercrc_against_clientcrc was going to look " + var10 + " steps back when unconfirmed event was back by " + (-var11.field_e + param0.field_g));
                               return;
                             } else {
-                              break L5;
+                              break L6;
                             }
                           }
                         }
                         var11 = (uqb) (Object) param0.field_f.a((byte) 36);
-                        continue L2;
+                        continue L3;
                       }
                     }
                   }
                 } else {
-                  break L1;
+                  break L2;
                 }
               }
               break L0;
@@ -291,33 +299,33 @@ final class kda {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L7: {
             var6 = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) var6;
-            stackOut_30_1 = new StringBuilder().append("kda.U(");
-            stackIn_32_0 = stackOut_30_0;
-            stackIn_32_1 = stackOut_30_1;
-            stackIn_31_0 = stackOut_30_0;
-            stackIn_31_1 = stackOut_30_1;
+            stackOut_33_0 = (RuntimeException) var6;
+            stackOut_33_1 = new StringBuilder().append("kda.U(");
+            stackIn_35_0 = stackOut_33_0;
+            stackIn_35_1 = stackOut_33_1;
+            stackIn_34_0 = stackOut_33_0;
+            stackIn_34_1 = stackOut_33_1;
             if (param0 == null) {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
-              stackOut_32_2 = "null";
-              stackIn_33_0 = stackOut_32_0;
-              stackIn_33_1 = stackOut_32_1;
-              stackIn_33_2 = stackOut_32_2;
-              break L6;
+              stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
+              stackOut_35_1 = (StringBuilder) (Object) stackIn_35_1;
+              stackOut_35_2 = "null";
+              stackIn_36_0 = stackOut_35_0;
+              stackIn_36_1 = stackOut_35_1;
+              stackIn_36_2 = stackOut_35_2;
+              break L7;
             } else {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
-              stackOut_31_2 = "{...}";
-              stackIn_33_0 = stackOut_31_0;
-              stackIn_33_1 = stackOut_31_1;
-              stackIn_33_2 = stackOut_31_2;
-              break L6;
+              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
+              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
+              stackOut_34_2 = "{...}";
+              stackIn_36_0 = stackOut_34_0;
+              stackIn_36_1 = stackOut_34_1;
+              stackIn_36_2 = stackOut_34_2;
+              break L7;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + 0 + 41);
+          throw rta.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -444,7 +452,8 @@ final class kda {
                     var5 = (uqb) (Object) wc.field_a.a((byte) 77);
                     var5.field_e = param1.field_g;
                     var5.a(param2, -125);
-                    this.a(var5, param3, 1000);
+                    int discarded$2 = 1000;
+                    this.a(var5, param3);
                     ((kda) this).field_p = true;
                     break L1;
                   } else {
@@ -661,7 +670,8 @@ final class kda {
                         ((kda) this).field_i.b(-10258, (ksa) (Object) var8_ref);
                         break L6;
                       } else {
-                        this.a(param1, param6, 1000);
+                        int discarded$1 = 1000;
+                        this.a(param1, param6);
                         break L6;
                       }
                     } else {
@@ -766,7 +776,7 @@ final class kda {
         }
     }
 
-    private final void a(uqb param0, faa param1, int param2) {
+    private final void a(uqb param0, faa param1) {
         try {
             em.field_o = false;
             rkb.a(0, (tv) (Object) param0, param1, pra.field_o);
@@ -1507,34 +1517,27 @@ final class kda {
         var6 = VoidHunters.field_G;
         if (param2 >= 0) {
           L0: {
-            if (!param1) {
-              break L0;
-            } else {
-              ((kda) this).field_d = 52;
-              break L0;
-            }
-          }
-          L1: {
+            ((kda) this).field_d = 52;
             if (null == ((kda) this).field_k) {
               ((kda) this).field_k = new int[1 + param2];
-              break L1;
+              break L0;
             } else {
               if (((kda) this).field_k.length <= param2) {
                 var7 = new int[param2 - -1];
                 var4 = var7;
                 var5 = 0;
-                L2: while (true) {
+                L1: while (true) {
                   if (((kda) this).field_k.length <= var5) {
                     ((kda) this).field_k = var4;
-                    break L1;
+                    break L0;
                   } else {
                     var7[var5] = ((kda) this).field_k[var5];
                     var5++;
-                    continue L2;
+                    continue L1;
                   }
                 }
               } else {
-                break L1;
+                break L0;
               }
             }
           }
@@ -1560,8 +1563,8 @@ final class kda {
     }
 
     final void a(faa param0, int param1) {
-        int var3_int = 0;
         RuntimeException var3 = null;
+        int var3_int = 0;
         uqb var4 = null;
         int var5 = 0;
         RuntimeException stackIn_25_0 = null;
@@ -1639,7 +1642,8 @@ final class kda {
                     if (var4 == null) {
                       break L6;
                     } else {
-                      this.a(var4, param0, 1000);
+                      int discarded$1 = 1000;
+                      this.a(var4, param0);
                       var4.b(-3846);
                       var4 = (uqb) (Object) ((kda) this).field_i.a((byte) 100);
                       continue L7;

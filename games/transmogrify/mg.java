@@ -9,28 +9,18 @@ final class mg {
     static String field_e;
     private int[] field_b;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
     }
 
     final static String a(String param0, boolean param1, String param2, String param3) {
-        int var4 = 0;
-        int var5 = 0;
-        var5 = Transmogrify.field_A ? 1 : 0;
-        if (param1) {
-          return null;
-        } else {
-          var4 = param3.indexOf(param0);
-          L0: while (true) {
-            if (-1 == var4) {
-              return param3;
-            } else {
-              param3 = param3.substring(0, var4) + param2 + param3.substring(param0.length() + var4);
-              var4 = param3.indexOf(param0, param2.length() + var4);
-              continue L0;
-            }
-          }
+        int var5 = Transmogrify.field_A ? 1 : 0;
+        int var4 = param3.indexOf(param0);
+        while (-1 != var4) {
+            param3 = param3.substring(0, var4) + param2 + param3.substring(param0.length() + var4);
+            var4 = param3.indexOf(param0, param2.length() + var4);
         }
+        return param3;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -150,7 +140,7 @@ final class mg {
         }
     }
 
-    final static int a(int param0, boolean param1, int param2, boolean param3) {
+    final static int a(int param0, boolean param1, int param2) {
         return wf.a(-1);
     }
 

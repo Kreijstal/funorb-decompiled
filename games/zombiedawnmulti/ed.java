@@ -100,7 +100,7 @@ final class ed {
         return (gh) (Object) stackIn_10_0;
     }
 
-    final static void a(String param0, long param1, int param2, int param3, boolean param4, int param5) {
+    final static void a(String param0, long param1, int param2, int param3, boolean param4) {
         int var7_int = 0;
         RuntimeException var7 = null;
         ga stackIn_1_0 = null;
@@ -137,7 +137,7 @@ final class ed {
         try {
           L0: {
             L1: {
-              ma.field_a.b((byte) -35, param2);
+              ma.field_a.b((byte) -35, 14);
               ma.field_a.field_j = ma.field_a.field_j + 1;
               var7_int = ma.field_a.field_j;
               ma.field_a.a(param1, true);
@@ -199,109 +199,101 @@ final class ed {
               break L2;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + 21965 + 41);
+          throw fa.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + 14 + 44 + param3 + 44 + param4 + 44 + 21965 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_d = null;
         field_a = null;
     }
 
-    final static ci a(ul param0, int param1) {
+    final static ci a(ul param0) {
         RuntimeException var2 = null;
         ci var2_ref = null;
-        Object stackIn_2_0 = null;
-        ci stackIn_4_0 = null;
+        ci stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ci stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        ci stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
         String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           L0: {
-            if (param1 == -2852) {
-              var2_ref = new ci();
-              var2_ref.a((byte) 97, param0.a("", "sandbox.zdl", false));
-              var2_ref.a((byte) 84, param0.a("", "tutorial.zdl", false));
-              var2_ref.a((byte) 111, param0.a("", "n2/ma_1.zdl", false));
-              var2_ref.a((byte) 115, param0.a("", "n2/wh_1.zdl", false));
-              var2_ref.a((byte) 126, param0.a("", "n2/pp_1.zdl", false));
-              var2_ref.a((byte) 94, param0.a("", "n2/pr_1.zdl", false));
-              var2_ref.a((byte) 85, param0.a("", "n4/ma_1.zdl", false));
-              var2_ref.a((byte) 115, param0.a("", "n4/wh_1.zdl", false));
-              var2_ref.a((byte) 125, param0.a("", "n4/pp_1.zdl", false));
-              var2_ref.a((byte) 83, param0.a("", "n4/pr_1.zdl", false));
-              var2_ref.a((byte) 107, param0.a("", "Badgirls_2.zdl", false));
-              var2_ref.a((byte) 110, param0.a("", "Carpark_4.zdl", false));
-              var2_ref.a((byte) 103, param0.a("", "Cineplex_2.zdl", false));
-              var2_ref.a((byte) 76, param0.a("", "Claustrophobia_2.zdl", false));
-              var2_ref.a((byte) 79, param0.a("", "Core_2.zdl", false));
-              var2_ref.a((byte) 120, param0.a("", "Hotel_4.zdl", false));
-              var2_ref.a((byte) 72, param0.a("", "Megamall_4.zdl", false));
-              var2_ref.a((byte) 126, param0.a("", "Prisonbreak_4.zdl", false));
-              var2_ref.a((byte) 95, param0.a("", "AnyonesConference.zdl", false));
-              var2_ref.a((byte) 80, param0.a("", "impound.zdl", false));
-              var2_ref.a((byte) 72, param0.a("", "mini_mart.zdl", false));
-              var2_ref.a((byte) 114, param0.a("", "Birdmaster1.zdl", false));
-              var2_ref.a((byte) 94, param0.a("", "Sken58_2.zdl", false));
-              var2_ref.a((byte) 126, param0.a("", "precinct42.zdl", false));
-              var2_ref.a((byte) 125, param0.a("", "sustained_alpha.zdl", false));
-              var2_ref.a((byte) 121, param0.a("", "Media_2.zdl", false));
-              stackOut_3_0 = (ci) var2_ref;
-              stackIn_4_0 = stackOut_3_0;
-              break L0;
-            } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
-              return (ci) (Object) stackIn_2_0;
-            }
+            var2_ref = new ci();
+            var2_ref.a((byte) 97, param0.a("", "sandbox.zdl", false));
+            var2_ref.a((byte) 84, param0.a("", "tutorial.zdl", false));
+            var2_ref.a((byte) 111, param0.a("", "n2/ma_1.zdl", false));
+            var2_ref.a((byte) 115, param0.a("", "n2/wh_1.zdl", false));
+            var2_ref.a((byte) 126, param0.a("", "n2/pp_1.zdl", false));
+            var2_ref.a((byte) 94, param0.a("", "n2/pr_1.zdl", false));
+            var2_ref.a((byte) 85, param0.a("", "n4/ma_1.zdl", false));
+            var2_ref.a((byte) 115, param0.a("", "n4/wh_1.zdl", false));
+            var2_ref.a((byte) 125, param0.a("", "n4/pp_1.zdl", false));
+            var2_ref.a((byte) 83, param0.a("", "n4/pr_1.zdl", false));
+            var2_ref.a((byte) 107, param0.a("", "Badgirls_2.zdl", false));
+            var2_ref.a((byte) 110, param0.a("", "Carpark_4.zdl", false));
+            var2_ref.a((byte) 103, param0.a("", "Cineplex_2.zdl", false));
+            var2_ref.a((byte) 76, param0.a("", "Claustrophobia_2.zdl", false));
+            var2_ref.a((byte) 79, param0.a("", "Core_2.zdl", false));
+            var2_ref.a((byte) 120, param0.a("", "Hotel_4.zdl", false));
+            var2_ref.a((byte) 72, param0.a("", "Megamall_4.zdl", false));
+            var2_ref.a((byte) 126, param0.a("", "Prisonbreak_4.zdl", false));
+            var2_ref.a((byte) 95, param0.a("", "AnyonesConference.zdl", false));
+            var2_ref.a((byte) 80, param0.a("", "impound.zdl", false));
+            var2_ref.a((byte) 72, param0.a("", "mini_mart.zdl", false));
+            var2_ref.a((byte) 114, param0.a("", "Birdmaster1.zdl", false));
+            var2_ref.a((byte) 94, param0.a("", "Sken58_2.zdl", false));
+            var2_ref.a((byte) 126, param0.a("", "precinct42.zdl", false));
+            var2_ref.a((byte) 125, param0.a("", "sustained_alpha.zdl", false));
+            var2_ref.a((byte) 121, param0.a("", "Media_2.zdl", false));
+            stackOut_2_0 = (ci) var2_ref;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var2;
-            stackOut_5_1 = new StringBuilder().append("ed.B(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("ed.B(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
-              break L1;
-            } else {
               stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
               stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L1;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
               break L1;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw fa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + -2852 + 41);
         }
-        return stackIn_4_0;
+        return stackIn_3_0;
     }
 
     static {

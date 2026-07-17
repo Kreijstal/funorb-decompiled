@@ -11,7 +11,7 @@ final class ji {
     private int field_a;
     static String field_d;
 
-    public static void f(int param0) {
+    public static void f() {
         field_g = null;
         field_d = null;
     }
@@ -225,7 +225,7 @@ final class ji {
         return null;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         int var1 = (-640 + ob.field_i) / 2;
         int var2 = pna.field_q * pna.field_q;
         int var3 = -(mla.field_a * mla.field_a) + var2;

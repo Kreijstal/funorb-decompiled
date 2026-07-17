@@ -34,7 +34,7 @@ abstract class mi implements le {
         }
     }
 
-    final static void a(String param0, boolean param1, boolean param2, boolean param3) {
+    final static void a(String param0, boolean param1, boolean param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -126,7 +126,7 @@ abstract class mi implements le {
         }
     }
 
-    final static void d(int param0) {
+    final static void d() {
         if (!(null == tm.field_l)) {
             tm.field_l.g(-115);
         }
@@ -134,7 +134,8 @@ abstract class mi implements le {
             md.field_i.k(18);
         }
         int var1 = -7;
-        qd.a(-44);
+        int discarded$0 = -44;
+        qd.a();
     }
 
     public static void e(int param0) {
@@ -165,7 +166,8 @@ abstract class mi implements le {
                   return;
                 }
               } else {
-                oa.a(param0, var4, 97);
+                int discarded$2 = 97;
+                oa.a(param0, var4);
                 var4 = (la) (Object) vi.field_h.a(16213);
                 continue L1;
               }

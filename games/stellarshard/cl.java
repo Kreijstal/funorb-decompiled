@@ -16,11 +16,11 @@ final class cl {
         return var3;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         int var1 = 0;
     }
 
-    final static void a(String param0, byte param1) {
+    final static void a(String param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -231,7 +231,7 @@ final class cl {
           L0: {
             var2_int = param1.length;
             var3 = new byte[var2_int];
-            ri.a(param1, param0, var3, 0, var2_int);
+            ri.a(param1, 0, var3, 0, var2_int);
             stackOut_0_0 = (byte[]) var3;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -241,7 +241,7 @@ final class cl {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("cl.B(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("cl.B(").append(0).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;

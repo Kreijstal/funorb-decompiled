@@ -12,7 +12,7 @@ class ara extends ksa implements ntb {
         field_g = null;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         try {
             java.lang.reflect.Method var1 = null;
             Exception var1_ref = null;
@@ -60,7 +60,8 @@ class ara extends ksa implements ntb {
                 ((ara) this).field_e = 34;
             }
             param0.a(-632, ((ara) this).field_e, 32);
-            this.b(param0, false);
+            int discarded$0 = 0;
+            this.b(param0);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "ara.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
@@ -267,7 +268,7 @@ class ara extends ksa implements ntb {
         }
     }
 
-    private final void b(faa param0, boolean param1) {
+    private final void b(faa param0) {
         RuntimeException var3 = null;
         faa stackIn_3_0 = null;
         int stackIn_3_1 = 0;
@@ -395,7 +396,7 @@ class ara extends ksa implements ntb {
     ara() {
     }
 
-    private final void c(faa param0, int param1) {
+    private final void c(faa param0) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -462,7 +463,8 @@ class ara extends ksa implements ntb {
                 field_g = null;
             }
             ((ara) this).field_e = param0.i(0, 32);
-            this.c(param0, 32);
+            int discarded$0 = 32;
+            this.c(param0);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "ara.H(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }

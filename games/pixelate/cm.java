@@ -113,7 +113,7 @@ final class cm extends fa {
         return (param2 - -var3) / param0 + -var3;
     }
 
-    final static char a(byte param0, int param1) {
+    final static char a(byte param0) {
         int var2 = 0;
         int var3 = 0;
         var2 = 255 & param0;
@@ -146,16 +146,16 @@ final class cm extends fa {
         return param0 & param1;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_l = null;
         field_o = null;
     }
 
-    final static void a(int param0, boolean param1, long param2, String param3, int param4, int param5) {
+    final static void a(int param0, boolean param1, long param2, String param3, int param4) {
         int var8 = 0;
         try {
-            int var7_int = -86 % ((-33 - param0) / 49);
-            aa.field_f.g(param5, 15514);
+            int var7_int = 0;
+            aa.field_f.g(14, 15514);
             aa.field_f.field_m = aa.field_f.field_m + 1;
             var8 = aa.field_f.field_m;
             aa.field_f.a(false, param2);
@@ -164,27 +164,17 @@ final class cm extends fa {
             aa.field_f.e(160, param1 ? 1 : 0);
             aa.field_f.f(aa.field_f.field_m + -var8, -1);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "cm.G(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "cm.G(" + 89 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + 14 + 41);
         }
     }
 
-    final static void e(int param0) {
+    final static void e() {
         Object var1 = null;
         Throwable var2 = null;
-        Object var3 = null;
         Throwable decompiledCaughtException = null;
-        L0: {
-          if (param0 < -84) {
-            break L0;
-          } else {
-            var3 = null;
-            cm.a(-64, true, 36L, (String) null, -110, -88);
-            break L0;
-          }
-        }
         var1 = (Object) (Object) fj.field_c;
         synchronized (var1) {
-          L1: {
+          L0: {
             oi.field_c = oi.field_c + 1;
             ef.field_b = jm.field_o;
             uf.field_d = u.field_b;
@@ -195,7 +185,7 @@ final class cm extends fa {
             uo.field_a = c.field_X;
             ji.field_c = fa.field_j;
             tl.field_a = 0;
-            break L1;
+            break L0;
           }
         }
     }

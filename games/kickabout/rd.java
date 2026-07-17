@@ -17,107 +17,54 @@ final class rd {
     static String[] field_e;
 
     final static boolean a(int param0, int param1) {
-        int stackIn_5_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_25_0 = 0;
-        int stackIn_30_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_24_0 = 0;
-        int stackOut_23_0 = 0;
-        int stackOut_9_0 = 0;
+        int stackIn_4_0 = 0;
+        int stackIn_9_0 = 0;
         int stackOut_8_0 = 0;
-        int stackOut_4_0 = 0;
+        int stackOut_7_0 = 0;
         int stackOut_3_0 = 0;
-        if (param0 == -16143) {
-          if (param1 >= 0) {
-            if (1582 <= param1) {
-              if (param1 % 4 != 0) {
-                return false;
-              } else {
-                if (0 != param1 % 100) {
-                  return true;
-                } else {
-                  if (param1 % 400 != 0) {
-                    return false;
-                  } else {
-                    return true;
-                  }
-                }
-              }
+        int stackOut_2_0 = 0;
+        if (param1 >= 0) {
+          if (1582 <= param1) {
+            if (param1 % 4 != 0) {
+              return false;
             } else {
-              L0: {
-                if (param1 % 4 != 0) {
-                  stackOut_29_0 = 0;
-                  stackIn_30_0 = stackOut_29_0;
-                  break L0;
+              if (0 != param1 % 100) {
+                return true;
+              } else {
+                if (param1 % 400 != 0) {
+                  return false;
                 } else {
-                  stackOut_28_0 = 1;
-                  stackIn_30_0 = stackOut_28_0;
-                  break L0;
+                  return true;
                 }
               }
-              return stackIn_30_0 != 0;
             }
           } else {
-            L1: {
-              if (0 != (param1 + 1) % 4) {
-                stackOut_24_0 = 0;
-                stackIn_25_0 = stackOut_24_0;
-                break L1;
+            L0: {
+              if (param1 % 4 != 0) {
+                stackOut_8_0 = 0;
+                stackIn_9_0 = stackOut_8_0;
+                break L0;
               } else {
-                stackOut_23_0 = 1;
-                stackIn_25_0 = stackOut_23_0;
-                break L1;
+                stackOut_7_0 = 1;
+                stackIn_9_0 = stackOut_7_0;
+                break L0;
               }
             }
-            return stackIn_25_0 != 0;
+            return stackIn_9_0 != 0;
           }
         } else {
-          field_h = null;
-          if (param1 >= 0) {
-            if (1582 <= param1) {
-              if (param1 % 4 != 0) {
-                return false;
-              } else {
-                if (0 != param1 % 100) {
-                  return true;
-                } else {
-                  if (param1 % 400 != 0) {
-                    return false;
-                  } else {
-                    return true;
-                  }
-                }
-              }
+          L1: {
+            if (0 != (param1 + 1) % 4) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              break L1;
             } else {
-              L2: {
-                if (param1 % 4 != 0) {
-                  stackOut_9_0 = 0;
-                  stackIn_10_0 = stackOut_9_0;
-                  break L2;
-                } else {
-                  stackOut_8_0 = 1;
-                  stackIn_10_0 = stackOut_8_0;
-                  break L2;
-                }
-              }
-              return stackIn_10_0 != 0;
+              stackOut_2_0 = 1;
+              stackIn_4_0 = stackOut_2_0;
+              break L1;
             }
-          } else {
-            L3: {
-              if (0 != (param1 + 1) % 4) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
-                break L3;
-              } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
-                break L3;
-              }
-            }
-            return stackIn_5_0 != 0;
           }
+          return stackIn_4_0 != 0;
         }
     }
 
@@ -151,7 +98,7 @@ final class rd {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
         field_e = null;
@@ -214,7 +161,8 @@ final class rd {
                 return stackIn_6_0 != 0;
               } else {
                 L1: {
-                  if (gf.a(param1, ((rd) this).field_g, param0, 3231)) {
+                  int discarded$14 = 3231;
+                  if (gf.a(param1, ((rd) this).field_g, param0)) {
                     stackOut_9_0 = 0;
                     stackIn_10_0 = stackOut_9_0;
                     break L1;

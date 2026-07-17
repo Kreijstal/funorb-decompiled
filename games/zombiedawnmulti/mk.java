@@ -34,7 +34,7 @@ final class mk {
         return (mk) this;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         field_l = null;
@@ -150,21 +150,13 @@ final class mk {
             var7 = 0;
             L1: while (true) {
               if (var3_int <= var7) {
-                L2: {
-                  if (!param1) {
-                    break L2;
-                  } else {
-                    field_b = null;
-                    break L2;
-                  }
-                }
                 var4[var3_int] = param2.substring(var6);
                 stackOut_9_0 = (String[]) var4;
                 stackIn_10_0 = stackOut_9_0;
                 break L0;
               } else {
                 var8 = var6;
-                L3: while (true) {
+                L2: while (true) {
                   if (param2.charAt(var8) == param0) {
                     int incrementValue$2 = var5;
                     var5++;
@@ -174,7 +166,7 @@ final class mk {
                     continue L1;
                   } else {
                     var8++;
-                    continue L3;
+                    continue L2;
                   }
                 }
               }
@@ -182,10 +174,10 @@ final class mk {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var3 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var3;
-            stackOut_11_1 = new StringBuilder().append("mk.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_11_1 = new StringBuilder().append("mk.C(").append(param0).append(44).append(0).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -197,7 +189,7 @@ final class mk {
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
-              break L4;
+              break L3;
             } else {
               stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
               stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
@@ -205,7 +197,7 @@ final class mk {
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
               stackIn_14_2 = stackOut_12_2;
-              break L4;
+              break L3;
             }
           }
           throw fa.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);

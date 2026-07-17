@@ -12,10 +12,10 @@ final class wk extends gi {
 
     final static void a(int param0, int param1) {
         oa.field_b = param1;
-        s.field_a.a(param1 * 128 / param0, (byte) -13);
+        s.field_a.a(param1 * 128 / 80, (byte) -13);
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_m = null;
         field_h = null;
         field_l = null;

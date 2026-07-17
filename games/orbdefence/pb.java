@@ -4,7 +4,7 @@
 final class pb {
     private static String field_z;
 
-    final static int a(int param0) {
+    final static int a() {
         return nl.field_d;
     }
 

@@ -6,19 +6,16 @@ abstract class bc {
 
     abstract void a(fj param0, byte param1);
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
     }
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void a(java.applet.Applet param0) {
         try {
-            if (param1 != 108) {
-                field_a = null;
-            }
             ol.a("", true, param0);
             gq.a(25530, param0);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "bc.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "bc.E(" + (param0 != null ? "{...}" : "null") + 44 + 108 + 41);
         }
     }
 

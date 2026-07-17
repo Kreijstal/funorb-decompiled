@@ -200,23 +200,13 @@ class ne extends ie implements in {
     }
 
     final static void c(int param0, int param1, int param2, int param3, int param4) {
-        if (param1 != 20341) {
-          field_Ab = null;
-          mg.field_H = param0;
-          dq.field_l = param2;
-          tk.field_n = param4;
-          po.field_n = param3;
-          return;
-        } else {
-          mg.field_H = param0;
-          dq.field_l = param2;
-          tk.field_n = param4;
-          po.field_n = param3;
-          return;
-        }
+        mg.field_H = param0;
+        dq.field_l = param2;
+        tk.field_n = param4;
+        po.field_n = param3;
     }
 
-    public static void n(int param0) {
+    public static void n() {
         field_Ab = null;
         field_vb = null;
     }

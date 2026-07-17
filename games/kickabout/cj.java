@@ -15,23 +15,12 @@ abstract class cj extends wj implements cw {
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, boolean param6) {
         String var7 = null;
-        L0: {
-          if (ov.field_b != 2) {
-            var7 = vo.field_db;
-            break L0;
-          } else {
+        if (ov.field_b == 2) {
             var7 = ds.field_e;
-            break L0;
-          }
-        }
-        if (param4) {
-          cj.a(-38);
-          wb.a(param0, var7, param6, param3, param2, 73, param5, param1);
-          return;
         } else {
-          wb.a(param0, var7, param6, param3, param2, 73, param5, param1);
-          return;
+            var7 = vo.field_db;
         }
+        wb.a(param0, var7, param6, param3, param2, 73, param5, param1);
     }
 
     void a(hl param0, int param1) {

@@ -13,7 +13,7 @@ final class fwa {
     private km field_d;
     private ds field_c;
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_g = null;
     }
@@ -347,7 +347,7 @@ final class fwa {
                     stackIn_15_0 = stackOut_14_0;
                     return stackIn_15_0 != 0;
                   } else {
-                    var6 = var3_int + param1;
+                    var6 = var3_int + 1;
                     var4 = var6;
                     L3: while (true) {
                       if (param2.length <= var6) {
@@ -373,7 +373,7 @@ final class fwa {
           L4: {
             var3 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var3;
-            stackOut_21_1 = new StringBuilder().append("fwa.E(").append(param0).append(44).append(param1).append(44);
+            stackOut_21_1 = new StringBuilder().append("fwa.E(").append(param0).append(44).append(1).append(44);
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;

@@ -28,7 +28,7 @@ final class vb extends vo {
         gb.a(0, var6, ((vb) this).field_a, var7, var5, var8);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_h = null;
         field_n = null;
         field_g = null;

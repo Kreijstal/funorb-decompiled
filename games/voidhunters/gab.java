@@ -43,7 +43,7 @@ final class gab {
         ((gab) this).field_i = null;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_j = null;
         field_b = null;
     }

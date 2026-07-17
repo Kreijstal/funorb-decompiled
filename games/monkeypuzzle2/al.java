@@ -7,7 +7,7 @@ abstract class al {
     int field_a;
     String field_b;
 
-    final static boolean a(ad param0, byte param1) {
+    final static boolean a(ad param0) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
@@ -74,7 +74,7 @@ abstract class al {
         int var4 = 0;
         int var5 = 0;
         var5 = MonkeyPuzzle2.field_F ? 1 : 0;
-        var2 = -50 / ((param1 - -40) / 48);
+        var2 = 50;
         var4 = aa.field_a;
         if (var4 != 1) {
           if (var4 != 2) {
@@ -190,7 +190,7 @@ abstract class al {
         }
     }
 
-    final static int a(byte param0) {
+    final static int a() {
         return fd.field_s;
     }
 
@@ -211,7 +211,7 @@ abstract class al {
         }
     }
 
-    final static int a(int param0, int param1, boolean param2) {
+    final static int a(int param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

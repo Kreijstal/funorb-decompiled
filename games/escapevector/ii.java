@@ -11,16 +11,6 @@ final class ii {
             ng.field_pb = 2;
             lh.field_d = 3 & param1 >> 2;
             vi.field_f = 3 & param1;
-            if (param0 == 16) {
-                if (!(lh.field_d <= 2)) {
-                    lh.field_d = 2;
-                }
-                if (!(vi.field_f <= 2)) {
-                    vi.field_f = 2;
-                }
-                return;
-            }
-            ii.a(17);
             if (!(lh.field_d <= 2)) {
                 lh.field_d = 2;
             }
@@ -31,16 +21,6 @@ final class ii {
         }
         lh.field_d = 3 & param1 >> 2;
         vi.field_f = 3 & param1;
-        if (param0 != 16) {
-            ii.a(17);
-            if (!(lh.field_d <= 2)) {
-                lh.field_d = 2;
-            }
-            if (!(vi.field_f <= 2)) {
-                vi.field_f = 2;
-            }
-            return;
-        }
         if (!(lh.field_d <= 2)) {
             lh.field_d = 2;
         }
@@ -49,18 +29,12 @@ final class ii {
         }
     }
 
-    public static void a(int param0) {
-        if (param0 != 20) {
-            field_a = null;
-            field_a = null;
-            field_b = null;
-            return;
-        }
+    public static void a() {
         field_a = null;
         field_b = null;
     }
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         if (20 <= fc.field_a) {
           if (aa.a((byte) -84)) {
             if (am.field_g > 0) {

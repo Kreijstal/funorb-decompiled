@@ -537,8 +537,8 @@ final class df implements Runnable {
     }
 
     private final bc a(byte param0, boolean param1, int param2, String param3) {
-        int var5 = -5 % ((-38 - param0) / 54);
-        return this.a(param1 ? 22 : 1, (byte) -102, (Object) (Object) param3, 0, param2);
+        int var5 = 0;
+        return this.a(1, (byte) -102, (Object) (Object) param3, 0, param2);
     }
 
     private final bc a(int param0, byte param1, Object param2, int param3, int param4) {
@@ -628,7 +628,7 @@ final class df implements Runnable {
               }
             }
             var5_array = new String[]{"c:/rscache/", "/rscache/", field_u, "c:/windows/", "c:/winnt/", "c:/", "/tmp/", ""};
-            var6 = param2;
+            var6 = 0;
             L1: while (true) {
               if (var5_array.length > var6) {
                 L2: {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gj {
-    final static boolean a(int param0, int param1) {
+    final static boolean a(int param0) {
         return false;
     }
 

@@ -11,10 +11,10 @@ abstract class pj extends nb {
 
     final static void a(wj param0, byte param1, int param2, int param3, boolean param4) {
         try {
-            nc.field_p.a(param3, !param4 ? true : false, param2, 1000000, -93, param0);
-            int var5_int = 2 % ((param1 - -11) / 36);
+            nc.field_p.a(1048576, !param4 ? true : false, 256, 1000000, -93, param0);
+            int var5_int = 2;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "pj.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "pj.A(" + (param0 != null ? "{...}" : "null") + 44 + 113 + 44 + 256 + 44 + 1048576 + 44 + param4 + 41);
         }
     }
 
@@ -156,7 +156,7 @@ abstract class pj extends nb {
         ((pj) this).field_q = true;
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_p = null;
         field_u = null;
         field_s = null;

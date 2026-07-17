@@ -8,7 +8,7 @@ final class nt extends ana {
     static String field_w;
     private lk field_v;
 
-    public static void e(int param0) {
+    public static void e() {
         field_x = null;
         field_y = null;
         field_z = null;
@@ -96,7 +96,8 @@ final class nt extends ana {
         if (param0 <= 77) {
             return;
         }
-        bi.o(2);
+        int discarded$0 = 2;
+        bi.o();
         ep.a(4, 8192);
     }
 

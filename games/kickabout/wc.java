@@ -69,7 +69,7 @@ final class wc {
               }
             }
             on.e(var7, var8, 6 + var5_int, 6 + var6, ((wc) this).field_b);
-            var9 = -76 / ((param2 - 58) / 54);
+            var9 = -76;
             on.a(1 + var7, 1 + var8, 4 + var5_int, var6 + 4, ((wc) this).field_t);
             ((wc) this).field_a.a(param3, var7 + 3, 3 + var8 - -((wc) this).field_a.field_L, ((wc) this).field_b, -1);
             break L0;
@@ -79,7 +79,7 @@ final class wc {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var5;
-            stackOut_7_1 = new StringBuilder().append("wc.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_7_1 = new StringBuilder().append("wc.A(").append(param0).append(44).append(param1).append(44).append(121).append(44);
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;

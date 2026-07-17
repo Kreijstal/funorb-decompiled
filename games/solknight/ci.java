@@ -206,7 +206,7 @@ class ci extends gf implements ka {
         ((ci) this).c(-3399, (rc) (Object) var2);
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_qb = null;
         field_pb = null;
         field_gb = null;
@@ -220,7 +220,8 @@ class ci extends gf implements ka {
           L0: {
             ((ci) this).field_J = false;
             if (((ci) this).field_ob) {
-              fj.a((byte) 85);
+              int discarded$2 = 85;
+              fj.a();
               break L0;
             } else {
               if (!((ci) this).field_rb) {
@@ -444,7 +445,7 @@ class ci extends gf implements ka {
                 L5: {
                   L6: {
                     lc.field_k.field_m = 0;
-                    lc.field_k.a(param2, param1, param0, param4);
+                    lc.field_k.a(8, param1, param0, 0);
                     lc.field_k.b((byte) -65, var7_int);
                     lc.field_k.a((byte) 97, var15);
                     if (null == ee.field_h) {
@@ -469,7 +470,7 @@ class ci extends gf implements ka {
                     ee.field_h.a(true, param1);
                     ee.field_h.a(param5, 59769888, param3);
                     param6.a(8, ee.field_h.field_m, ee.field_h.field_l, 0);
-                    param6.a(param2, lc.field_k.field_m, lc.field_k.field_l, 0);
+                    param6.a(8, lc.field_k.field_m, lc.field_k.field_l, 0);
                     break L0;
                   } else {
                     ee.field_h.b(var15[var11], false);
@@ -514,7 +515,7 @@ class ci extends gf implements ka {
           }
           L9: {
             stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(44).append(param1).append(44).append(8).append(44);
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -539,7 +540,7 @@ class ci extends gf implements ka {
           }
           L10: {
             stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-            stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(44).append(param4).append(44);
+            stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(44).append(0).append(44);
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;
@@ -603,7 +604,6 @@ class ci extends gf implements ka {
         o var11 = null;
         o var12 = null;
         int var13 = 0;
-        Object var14 = null;
         od[] var15 = null;
         o var16 = null;
         int[][] var17 = null;
@@ -612,20 +612,20 @@ class ci extends gf implements ka {
         int[][] var20 = null;
         int[][] var21 = null;
         int[][] var22 = null;
-        da stackIn_2_0 = null;
-        String stackIn_2_1 = null;
-        da stackIn_3_0 = null;
-        String stackIn_3_1 = null;
-        da stackIn_4_0 = null;
-        String stackIn_4_1 = null;
-        int stackIn_4_2 = 0;
-        da stackIn_5_0 = null;
-        String stackIn_5_1 = null;
-        da stackIn_6_0 = null;
-        String stackIn_6_1 = null;
-        da stackIn_7_0 = null;
-        String stackIn_7_1 = null;
-        int stackIn_7_2 = 0;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_20_2 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         RuntimeException stackIn_22_0 = null;
@@ -633,37 +633,23 @@ class ci extends gf implements ka {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        String stackIn_26_2 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        String stackIn_29_2 = null;
         RuntimeException decompiledCaughtException = null;
-        da stackOut_1_0 = null;
-        String stackOut_1_1 = null;
-        da stackOut_3_0 = null;
-        String stackOut_3_1 = null;
-        int stackOut_3_2 = 0;
-        da stackOut_2_0 = null;
-        String stackOut_2_1 = null;
-        int stackOut_2_2 = 0;
-        da stackOut_4_0 = null;
-        String stackOut_4_1 = null;
-        da stackOut_6_0 = null;
-        String stackOut_6_1 = null;
-        int stackOut_6_2 = 0;
-        da stackOut_5_0 = null;
-        String stackOut_5_1 = null;
-        int stackOut_5_2 = 0;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
         RuntimeException stackOut_20_0 = null;
         StringBuilder stackOut_20_1 = null;
         RuntimeException stackOut_22_0 = null;
@@ -672,85 +658,19 @@ class ci extends gf implements ka {
         RuntimeException stackOut_21_0 = null;
         StringBuilder stackOut_21_1 = null;
         String stackOut_21_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
         var13 = SolKnight.field_L ? 1 : 0;
         try {
           L0: {
-            L1: {
-              fi.field_a = ik.a(param3, -18362, "frame_top", "commonui");
-              qk.field_l = ik.a(param3, -18362, "frame_bottom", "commonui");
-              fa.field_b = rb.a("jagex_logo_grey", "commonui", param3, (byte) -125);
-              vk.field_i = ik.a(param3, -18362, "button", "commonui");
-              gb.field_k = nh.a(param3, "validation", 0, "commonui");
-              stackOut_1_0 = (da) param0;
-              stackOut_1_1 = "commonui";
-              stackIn_3_0 = stackOut_1_0;
-              stackIn_3_1 = stackOut_1_1;
-              stackIn_2_0 = stackOut_1_0;
-              stackIn_2_1 = stackOut_1_1;
-              if (param1) {
-                stackOut_3_0 = (da) (Object) stackIn_3_0;
-                stackOut_3_1 = (String) (Object) stackIn_3_1;
-                stackOut_3_2 = 0;
-                stackIn_4_0 = stackOut_3_0;
-                stackIn_4_1 = stackOut_3_1;
-                stackIn_4_2 = stackOut_3_2;
-                break L1;
-              } else {
-                stackOut_2_0 = (da) (Object) stackIn_2_0;
-                stackOut_2_1 = (String) (Object) stackIn_2_1;
-                stackOut_2_2 = 1;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
-                stackIn_4_2 = stackOut_2_2;
-                break L1;
-              }
-            }
-            L2: {
-              jh.field_g = (mg) (Object) si.a(stackIn_4_0, stackIn_4_1, stackIn_4_2 != 0, "arezzo12", param3);
-              stackOut_4_0 = (da) param0;
-              stackOut_4_1 = "commonui";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_5_0 = stackOut_4_0;
-              stackIn_5_1 = stackOut_4_1;
-              if (param1) {
-                stackOut_6_0 = (da) (Object) stackIn_6_0;
-                stackOut_6_1 = (String) (Object) stackIn_6_1;
-                stackOut_6_2 = 0;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
-                stackIn_7_2 = stackOut_6_2;
-                break L2;
-              } else {
-                stackOut_5_0 = (da) (Object) stackIn_5_0;
-                stackOut_5_1 = (String) (Object) stackIn_5_1;
-                stackOut_5_2 = 1;
-                stackIn_7_0 = stackOut_5_0;
-                stackIn_7_1 = stackOut_5_1;
-                stackIn_7_2 = stackOut_5_2;
-                break L2;
-              }
-            }
-            ua.field_G = (mg) (Object) si.a(stackIn_7_0, stackIn_7_1, stackIn_7_2 != 0, "arezzo14", param3);
+            fi.field_a = ik.a(param3, -18362, "frame_top", "commonui");
+            qk.field_l = ik.a(param3, -18362, "frame_bottom", "commonui");
+            fa.field_b = rb.a("jagex_logo_grey", "commonui", param3, (byte) -125);
+            vk.field_i = ik.a(param3, -18362, "button", "commonui");
+            gb.field_k = nh.a(param3, "validation", 0, "commonui");
+            jh.field_g = (mg) (Object) si.a(param0, "commonui", true, "arezzo12", param3);
+            ua.field_G = (mg) (Object) si.a(param0, "commonui", true, "arezzo14", param3);
             uc.field_g = (mg) (Object) si.a(param0, "commonui", true, "arezzo14bold", param3);
             var18 = new o(param2.a(4, "button.gif", ""), (java.awt.Component) (Object) dc.field_q);
-            od discarded$1 = ve.a(param3, -97, "dropdown", "commonui");
+            od discarded$2 = ve.a(param3, -97, "dropdown", "commonui");
             var5 = dj.a(8108, "screen_options", param3, "commonui");
             md.field_s = new od[4];
             r.field_i = new od[4];
@@ -763,26 +683,18 @@ class ci extends gf implements ka {
             var7 = var17;
             var7[0] = var5[0].field_m;
             var8 = 1;
-            L3: while (true) {
+            L1: while (true) {
               if (var8 >= var22.length) {
                 var8 = var5[0].field_n[0];
                 var22[2][var8] = 16777215;
                 var22[1][var8] = 2394342;
                 var22[3][var8] = 4767999;
                 var9 = 0;
-                L4: while (true) {
+                L2: while (true) {
                   if (3 <= var9) {
-                    L5: {
-                      if (!param1) {
-                        break L5;
-                      } else {
-                        var14 = null;
-                        ci.a((da) null, false, (da) null, (da) null);
-                        break L5;
-                      }
-                    }
                     var9 = var18.field_t;
-                    fl.b((byte) 91);
+                    int discarded$3 = 91;
+                    fl.b();
                     var18.a();
                     mi.c(0, 0, mi.field_a, mi.field_d);
                     var16 = new o(var9, var9);
@@ -802,14 +714,14 @@ class ci extends gf implements ka {
                     var15 = var6[var9];
                     var10 = var15;
                     var11_int = 0;
-                    L6: while (true) {
+                    L3: while (true) {
                       if (var15.length <= var11_int) {
                         var9++;
-                        continue L4;
+                        continue L2;
                       } else {
                         var15[var11_int] = bl.a(var5[var9], var22[var11_int], (byte) 100);
                         var11_int++;
-                        continue L6;
+                        continue L3;
                       }
                     }
                   }
@@ -817,28 +729,78 @@ class ci extends gf implements ka {
               } else {
                 var7[var8] = (int[]) var22[0].clone();
                 var8++;
-                continue L3;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L4: {
             var4 = decompiledCaughtException;
-            stackOut_20_0 = (RuntimeException) var4;
-            stackOut_20_1 = new StringBuilder().append("ci.TB(");
+            stackOut_14_0 = (RuntimeException) var4;
+            stackOut_14_1 = new StringBuilder().append("ci.TB(");
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
+            if (param0 == null) {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L4;
+            } else {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L4;
+            }
+          }
+          L5: {
+            stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44).append(0).append(44);
+            stackIn_19_0 = stackOut_17_0;
+            stackIn_19_1 = stackOut_17_1;
+            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_1 = stackOut_17_1;
+            if (param2 == null) {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "null";
+              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_1 = stackOut_19_1;
+              stackIn_20_2 = stackOut_19_2;
+              break L5;
+            } else {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "{...}";
+              stackIn_20_0 = stackOut_18_0;
+              stackIn_20_1 = stackOut_18_1;
+              stackIn_20_2 = stackOut_18_2;
+              break L5;
+            }
+          }
+          L6: {
+            stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
             stackIn_21_1 = stackOut_20_1;
-            if (param0 == null) {
+            if (param3 == null) {
               stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
               stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
               stackOut_22_2 = "null";
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
-              break L7;
+              break L6;
             } else {
               stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
               stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
@@ -846,60 +808,10 @@ class ci extends gf implements ka {
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
               stackIn_23_2 = stackOut_21_2;
-              break L7;
+              break L6;
             }
           }
-          L8: {
-            stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(44).append(param1).append(44);
-            stackIn_25_0 = stackOut_23_0;
-            stackIn_25_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
-            if (param2 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
-              stackOut_25_2 = "null";
-              stackIn_26_0 = stackOut_25_0;
-              stackIn_26_1 = stackOut_25_1;
-              stackIn_26_2 = stackOut_25_2;
-              break L8;
-            } else {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
-              stackOut_24_2 = "{...}";
-              stackIn_26_0 = stackOut_24_0;
-              stackIn_26_1 = stackOut_24_1;
-              stackIn_26_2 = stackOut_24_2;
-              break L8;
-            }
-          }
-          L9: {
-            stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-            stackOut_26_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(44);
-            stackIn_28_0 = stackOut_26_0;
-            stackIn_28_1 = stackOut_26_1;
-            stackIn_27_0 = stackOut_26_0;
-            stackIn_27_1 = stackOut_26_1;
-            if (param3 == null) {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
-              stackOut_28_2 = "null";
-              stackIn_29_0 = stackOut_28_0;
-              stackIn_29_1 = stackOut_28_1;
-              stackIn_29_2 = stackOut_28_2;
-              break L9;
-            } else {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
-              stackOut_27_2 = "{...}";
-              stackIn_29_0 = stackOut_27_0;
-              stackIn_29_1 = stackOut_27_1;
-              stackIn_29_2 = stackOut_27_2;
-              break L9;
-            }
-          }
-          throw fc.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 41);
+          throw fc.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 41);
         }
     }
 
@@ -973,7 +885,7 @@ class ci extends gf implements ka {
         return stackIn_4_0;
     }
 
-    final static void a(byte param0, int param1) {
+    final static void a() {
         gg var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -982,38 +894,37 @@ class ci extends gf implements ka {
         var3 = SolKnight.field_L ? 1 : 0;
         try {
           L0: {
-            if (param0 < -26) {
-              var4 = (ob) (Object) he.field_d.a((byte) 51);
-              L1: while (true) {
-                if (var4 == null) {
-                  var2 = bc.field_J.a((byte) 51);
-                  L2: while (true) {
-                    if (var2 == null) {
-                      break L0;
-                    } else {
-                      wi.c(1, 6);
-                      var2 = bc.field_J.b(-104);
-                      continue L2;
-                    }
+            var4 = (ob) (Object) he.field_d.a((byte) 51);
+            L1: while (true) {
+              if (var4 == null) {
+                var2 = bc.field_J.a((byte) 51);
+                L2: while (true) {
+                  if (var2 == null) {
+                    break L0;
+                  } else {
+                    int discarded$10 = 6;
+                    int discarded$11 = 1;
+                    wi.c();
+                    var2 = bc.field_J.b(-104);
+                    continue L2;
                   }
-                } else {
-                  vg.a(6, var4, 118);
-                  var4 = (ob) (Object) he.field_d.b(-84);
-                  continue L1;
                 }
+              } else {
+                int discarded$12 = 118;
+                vg.a(6, var4);
+                var4 = (ob) (Object) he.field_d.b(-84);
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw fc.a((Throwable) (Object) var2_ref, "ci.GB(" + param0 + 44 + 6 + 41);
+          throw fc.a((Throwable) (Object) var2_ref, "ci.GB(" + -77 + 44 + 6 + 41);
         }
     }
 
-    final static String a(CharSequence[] param0, byte param1) {
+    final static String a(CharSequence[] param0) {
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -1105,7 +1016,8 @@ class ci extends gf implements ka {
               ic.field_z.b(ed.field_a[1], false);
               ic.field_z.b(ed.field_a[2], false);
               ic.field_z.b(ed.field_a[3], false);
-              vh.a(ic.field_z, 107);
+              int discarded$1 = 107;
+              vh.a(ic.field_z);
               ic.field_z.a(true, param2);
               param3.a(-12518, ic.field_z);
               id.field_c.field_m = 0;

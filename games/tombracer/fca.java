@@ -7,9 +7,10 @@ final class fca {
     static int[] field_b;
     long field_a;
 
-    final static void a(boolean param0, int param1) {
+    final static void a(boolean param0) {
         nd.a(-1, param0);
-        tc.a(param0, 0);
+        int discarded$0 = 0;
+        tc.a(param0);
     }
 
     protected final void finalize() throws Throwable {
@@ -17,9 +18,9 @@ final class fca {
         super.finalize();
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
-        int var1 = 24 % ((-47 - param0) / 44);
+        int var1 = 0;
         field_b = null;
     }
 

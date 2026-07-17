@@ -12,7 +12,7 @@ final class dsa {
         return it.a(255, var1);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = 40;
         field_c = null;
         field_a = null;

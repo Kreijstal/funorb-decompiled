@@ -72,7 +72,8 @@ final class up {
             ((up) this).a(false, 110);
         }
         if (null == ((up) this).field_l) {
-            this.b(16);
+            int discarded$0 = 16;
+            this.b();
         }
         int var2 = (-((up) this).field_b + 255) / 10;
         ((up) this).field_l.a(-var2 + 80, 180, ((up) this).field_b);
@@ -85,7 +86,7 @@ final class up {
         }
     }
 
-    private final void b(int param0) {
+    private final void b() {
         int var7 = 0;
         int var8 = 0;
         int var9 = Pixelate.field_H ? 1 : 0;

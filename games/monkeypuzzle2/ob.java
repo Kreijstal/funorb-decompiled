@@ -8,21 +8,28 @@ final class ob extends fb {
     byte field_q;
     static int field_r;
 
-    public static void f(int param0) {
-        if (param0 != 8364) {
-            field_s = null;
-        }
+    public static void f() {
         field_s = null;
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         if (null != tj.field_d) {
-            if (!tj.field_d.h()) {
-                return;
-            }
+          if (!tj.field_d.h()) {
+            return;
+          } else {
+            int discarded$8 = 96;
+            int discarded$9 = 100;
+            tj.field_d = li.a(ke.field_h[7]);
+            na.a((byte) 85, tj.field_d);
+            return;
+          }
+        } else {
+          int discarded$10 = 96;
+          int discarded$11 = 100;
+          tj.field_d = li.a(ke.field_h[7]);
+          na.a((byte) 85, tj.field_d);
+          return;
         }
-        tj.field_d = li.a(ke.field_h[7], 100, 96);
-        na.a((byte) 85, tj.field_d);
     }
 
     final int a(boolean param0) {

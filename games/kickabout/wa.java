@@ -70,7 +70,8 @@ final class wa {
                 break L1;
               }
             }
-            stackOut_2_0 = ju.a(var4_int, var5, param2, (byte) -9);
+            int discarded$2 = -9;
+            stackOut_2_0 = ju.a(var4_int, var5, param2);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -157,7 +158,7 @@ final class wa {
         return stackIn_3_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         int var1 = -64;
@@ -166,56 +167,23 @@ final class wa {
 
     final static ot a(int param0, int param1) {
         int var4 = 0;
-        int var5 = 0;
-        ut var6 = null;
-        ot var7 = null;
-        ut var8 = null;
-        ot var9 = null;
-        var5 = Kickabout.field_G;
-        if (param0 >= -89) {
-          wa.b((byte) 1);
-          var6 = new ut(108, 108);
-          iw.a(-118, var6);
-          on.d(54, 54, 51, 255);
-          on.d(54, 54, 43, 0);
-          ts.a(param1, 0, 124);
-          ta.e(117);
-          var7 = new ot(54, 54);
-          iw.a(-92, (ut) (Object) var7);
-          var6.f(0, 0);
-          ta.e(119);
-          var4 = 0;
-          L0: while (true) {
-            if (var7.field_y.length <= var4) {
-              return var7;
-            } else {
-              var7.field_y[var4] = hf.a(var7.field_y[var4] << 24, 1118668);
-              var4++;
-              continue L0;
-            }
-          }
-        } else {
-          var8 = new ut(108, 108);
-          iw.a(-118, var8);
-          on.d(54, 54, 51, 255);
-          on.d(54, 54, 43, 0);
-          ts.a(param1, 0, 124);
-          ta.e(117);
-          var9 = new ot(54, 54);
-          iw.a(-92, (ut) (Object) var9);
-          var8.f(0, 0);
-          ta.e(119);
-          var4 = 0;
-          L1: while (true) {
-            if (var9.field_y.length <= var4) {
-              return var9;
-            } else {
-              var9.field_y[var4] = hf.a(var9.field_y[var4] << 24, 1118668);
-              var4++;
-              continue L1;
-            }
-          }
+        int var5 = Kickabout.field_G;
+        ut var2 = new ut(108, 108);
+        iw.a(-118, var2);
+        on.d(54, 54, 51, 255);
+        on.d(54, 54, 43, 0);
+        int discarded$0 = 124;
+        int discarded$1 = 0;
+        ts.a(param1);
+        ta.e(117);
+        ot var3 = new ot(54, 54);
+        iw.a(-92, (ut) (Object) var3);
+        var2.f(0, 0);
+        ta.e(119);
+        for (var4 = 0; var3.field_y.length > var4; var4++) {
+            var3.field_y[var4] = hf.a(var3.field_y[var4] << 24, 1118668);
         }
+        return var3;
     }
 
     final static void b(byte param0) {
@@ -284,12 +252,9 @@ final class wa {
         try {
             wp.field_h = param1;
             fp.field_e = 1;
-            if (param0 != 52) {
-                ot discarded$0 = wa.a(34, 19);
-            }
             et.field_b = true;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "wa.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "wa.C(" + 52 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

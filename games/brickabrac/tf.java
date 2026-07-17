@@ -157,7 +157,7 @@ final class tf {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
         field_f = null;
@@ -213,7 +213,7 @@ final class tf {
         try {
           L0: {
             L1: {
-              var4_int = 47 / ((param2 - -13) / 51);
+              var4_int = -47;
               mn.a(-1, (mh) (Object) param0, rl.field_e, (int[]) null, (String) null, param0.e((byte) -14), (byte) -58, 0L, (String) null);
               if (!param0.field_Rb) {
                 break L1;
@@ -289,7 +289,7 @@ final class tf {
           }
           L5: {
             stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(param1).append(44).append(-71).append(44);
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;

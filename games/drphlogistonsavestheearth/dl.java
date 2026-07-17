@@ -20,9 +20,9 @@ final class dl extends si {
         }
     }
 
-    final static nh[] a(byte param0, int param1, int param2, int param3, int param4) {
-        int var5 = -126 % ((-80 - param0) / 37);
-        return n.a(123, 3, 0, param3, param1, 1, param2, 1, 1);
+    final static nh[] a() {
+        int var5 = 0;
+        return n.a(123, 3, 0, 0, 0, 1, 65793, 1, 1);
     }
 
     final static void a(String param0, int param1, int param2) {
@@ -317,11 +317,7 @@ final class dl extends si {
     }
 
     final static double a(boolean param0, double param1, double param2) {
-        if (!param0) {
-          return Math.sqrt(param2 * param2 + param1 * param1);
-        } else {
-          return Math.sqrt(param2 * param2 + param1 * param1);
-        }
+        return Math.sqrt(param2 * param2 + param1 * param1);
     }
 
     final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
@@ -333,13 +329,13 @@ final class dl extends si {
             ul.field_b[param3] = param2;
             ul.field_i[param3] = param4;
             ul.field_e[param3] = param1;
-            ul.field_f[param3] = param5;
+            ul.field_f[param3] = 30;
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "dl.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "dl.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + 30 + 44 + param6 + 41);
         }
     }
 
-    public static void j(int param0) {
+    public static void j() {
         field_M = null;
         field_I = null;
         field_H = null;

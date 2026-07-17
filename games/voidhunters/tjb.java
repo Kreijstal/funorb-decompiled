@@ -73,7 +73,8 @@ final class tjb extends llb {
                 if (var4 == 0) {
                   break L3;
                 } else {
-                  fea.a(-1);
+                  int discarded$2 = -1;
+                  fea.a();
                   return true;
                 }
               }
@@ -117,116 +118,63 @@ final class tjb extends llb {
         int var6 = 0;
         int var7 = 0;
         Object var8 = null;
-        int stackIn_14_0 = 0;
-        int stackIn_14_1 = 0;
-        long stackIn_14_2 = 0L;
-        int stackIn_15_0 = 0;
-        int stackIn_15_1 = 0;
-        long stackIn_15_2 = 0L;
-        int stackIn_16_0 = 0;
-        int stackIn_16_1 = 0;
-        long stackIn_16_2 = 0L;
-        int stackIn_16_3 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_13_1 = 0;
-        long stackOut_13_2 = 0L;
-        int stackOut_15_0 = 0;
-        int stackOut_15_1 = 0;
-        long stackOut_15_2 = 0L;
-        int stackOut_15_3 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_14_1 = 0;
-        long stackOut_14_2 = 0L;
-        int stackOut_14_3 = 0;
-        var7 = VoidHunters.field_G;
-        if (param1) {
-          L0: {
-            if (((tjb) this).field_vb != param0) {
-              if (((tjb) this).field_Db[param0] != null) {
-                ((tjb) this).j(16384);
-                this.a((byte) 116, 0);
-                ((tjb) this).field_vb = param0;
-                ((tjb) this).field_xb = ((tjb) this).field_Db[((tjb) this).field_vb];
-                wkb.a(((tjb) this).field_xb, 6);
-                ((tjb) this).field_xb.a((byte) 121, 12);
-                break L0;
-              } else {
-                if (((tjb) this).field_Ab[param0] != -1) {
-                  L1: {
-                    var5 = 32768 | ((tjb) this).field_Ab[param0];
-                    var6 = ow.field_b;
-                    if (var6 != 0) {
+        L0: {
+          var7 = VoidHunters.field_G;
+          if (((tjb) this).field_vb != param0) {
+            if (((tjb) this).field_Db[param0] != null) {
+              ((tjb) this).j(16384);
+              this.a((byte) 116, 0);
+              ((tjb) this).field_vb = param0;
+              ((tjb) this).field_xb = ((tjb) this).field_Db[((tjb) this).field_vb];
+              int discarded$757 = 6;
+              wkb.a(((tjb) this).field_xb);
+              ((tjb) this).field_xb.a((byte) 121, 12);
+              break L0;
+            } else {
+              if (((tjb) this).field_Ab[param0] != -1) {
+                L1: {
+                  var5 = 32768 | ((tjb) this).field_Ab[param0];
+                  var6 = ow.field_b;
+                  if (var6 != 0) {
+                    break L1;
+                  } else {
+                    if (null == lqa.field_o) {
                       break L1;
                     } else {
-                      if (null == lqa.field_o) {
-                        break L1;
-                      } else {
-                        var6 = 1;
-                        break L1;
-                      }
+                      var6 = 1;
+                      break L1;
                     }
                   }
-                  L2: {
-                    if (jia.a(var6, (byte) 19) == 2) {
-                      mea.a(1, (byte) -119, param2, var6);
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  }
-                  L3: {
-                    var8 = null;
-                    va.a((String) null, -25719, var5, param3, ow.field_b, waa.field_x);
-                    stackOut_13_0 = ow.field_b;
-                    stackOut_13_1 = var5;
-                    stackOut_13_2 = lsa.field_f;
-                    stackIn_15_0 = stackOut_13_0;
-                    stackIn_15_1 = stackOut_13_1;
-                    stackIn_15_2 = stackOut_13_2;
-                    stackIn_14_0 = stackOut_13_0;
-                    stackIn_14_1 = stackOut_13_1;
-                    stackIn_14_2 = stackOut_13_2;
-                    if (param1) {
-                      stackOut_15_0 = stackIn_15_0;
-                      stackOut_15_1 = stackIn_15_1;
-                      stackOut_15_2 = stackIn_15_2;
-                      stackOut_15_3 = 0;
-                      stackIn_16_0 = stackOut_15_0;
-                      stackIn_16_1 = stackOut_15_1;
-                      stackIn_16_2 = stackOut_15_2;
-                      stackIn_16_3 = stackOut_15_3;
-                      break L3;
-                    } else {
-                      stackOut_14_0 = stackIn_14_0;
-                      stackOut_14_1 = stackIn_14_1;
-                      stackOut_14_2 = stackIn_14_2;
-                      stackOut_14_3 = 1;
-                      stackIn_16_0 = stackOut_14_0;
-                      stackIn_16_1 = stackOut_14_1;
-                      stackIn_16_2 = stackOut_14_2;
-                      stackIn_16_3 = stackOut_14_3;
-                      break L3;
-                    }
-                  }
-                  jtb.a(stackIn_16_0, stackIn_16_1, stackIn_16_2, stackIn_16_3 != 0, waa.field_x);
-                  fea.a(-1);
-                  fd.a(4907);
-                  break L0;
-                } else {
-                  wha.a(29012);
-                  fea.a(-1);
-                  break L0;
                 }
+                L2: {
+                  int discarded$758 = 19;
+                  if (jia.a(var6) == 2) {
+                    mea.a(1, (byte) -119, param2, var6);
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+                var8 = null;
+                va.a((String) null, -25719, var5, param3, ow.field_b, waa.field_x);
+                jtb.a(ow.field_b, var5, lsa.field_f, false, waa.field_x);
+                int discarded$759 = -1;
+                fea.a();
+                fd.a(4907);
+                break L0;
+              } else {
+                int discarded$760 = 29012;
+                wha.a();
+                int discarded$761 = -1;
+                fea.a();
+                break L0;
               }
-            } else {
-              ((tjb) this).j(16384);
-              this.a((byte) 121, 0);
-              break L0;
             }
+          } else {
+            ((tjb) this).j(16384);
+            this.a((byte) 121, 0);
+            break L0;
           }
-          return;
-        } else {
-          return;
         }
     }
 
@@ -372,7 +320,8 @@ final class tjb extends llb {
                   if (((tjb) this).field_yb[var13] <= 0) {
                     break L2;
                   } else {
-                    param6[var13] = var11 + av.a(((tjb) this).field_yb[var13], 6).toUpperCase() + ": " + var12 + param6[var13];
+                    int discarded$1 = 6;
+                    param6[var13] = var11 + av.a(((tjb) this).field_yb[var13]).toUpperCase() + ": " + var12 + param6[var13];
                     break L2;
                   }
                 }
@@ -613,7 +562,7 @@ final class tjb extends llb {
         return ((tjb) this).field_Eb - -(null != ((tjb) this).field_xb ? ((tjb) this).field_xb.k(-4109) : 0);
     }
 
-    public static void i(int param0) {
+    public static void i() {
         field_Cb = null;
     }
 
@@ -802,7 +751,7 @@ final class tjb extends llb {
         }
     }
 
-    final static Object a(Object[] param0, int param1) {
+    final static Object a(Object[] param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

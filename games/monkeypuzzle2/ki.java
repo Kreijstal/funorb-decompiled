@@ -232,9 +232,9 @@ final class ki extends bf {
         L0: {
           ((ki) this).field_q = ((ki) this).field_q + ((ki) this).field_D;
           ((ki) this).field_B = ((ki) this).field_B + ((ki) this).field_v;
-          int fieldTemp$1 = ((ki) this).field_u;
+          int fieldTemp$2 = ((ki) this).field_u;
           ((ki) this).field_u = ((ki) this).field_u + 1;
-          if (fieldTemp$1 <= 250) {
+          if (fieldTemp$2 <= 250) {
             break L0;
           } else {
             ((ki) this).field_D = ((ki) this).field_D + 1.0f;
@@ -308,7 +308,8 @@ final class ki extends bf {
                 }
               }
             }
-            ib.c(100);
+            int discarded$3 = 100;
+            ib.c();
             ((ki) this).field_v = ((ki) this).field_v * -1.0f;
             break L1;
           }
@@ -339,8 +340,10 @@ final class ki extends bf {
         try {
           L0: {
             L1: {
-              this.a(param1, true);
-              this.a(false);
+              int discarded$4 = 1;
+              this.a(param1);
+              int discarded$5 = 0;
+              this.a();
               ((ki) this).field_x = true;
               if (param0 >= 112) {
                 break L1;
@@ -423,83 +426,81 @@ final class ki extends bf {
             uc.field_a.a(-803539344, e.field_b[1]);
             uc.field_a.a(-803539344, e.field_b[2]);
             uc.field_a.a(-803539344, e.field_b[3]);
-            df.a(uc.field_a, false);
+            int discarded$2 = 0;
+            df.a(uc.field_a);
             uc.field_a.c(param0, 80);
-            if (param2) {
-              L1: {
-                param1.a(121, uc.field_a);
-                gf.field_c.field_h = 0;
-                if (param3) {
-                  gf.field_c.b(18, -49152);
-                  break L1;
-                } else {
-                  gf.field_c.b(16, -49152);
-                  break L1;
-                }
+            L1: {
+              param1.a(121, uc.field_a);
+              gf.field_c.field_h = 0;
+              if (param3) {
+                gf.field_c.b(18, -49152);
+                break L1;
+              } else {
+                gf.field_c.b(16, -49152);
+                break L1;
               }
-              L2: {
-                gf.field_c.field_h = gf.field_c.field_h + 2;
-                var5_int = gf.field_c.field_h;
-                gf.field_c.a(-803539344, mk.field_h);
-                gf.field_c.a(od.field_l, (byte) -102);
-                var6 = 0;
-                if (!mb.field_c) {
-                  break L2;
-                } else {
-                  var6 = var6 | 1;
-                  break L2;
-                }
-              }
-              L3: {
-                if (me.field_e) {
-                  var6 = var6 | 4;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              L4: {
-                if (param4) {
-                  var6 = var6 | 8;
-                  break L4;
-                } else {
-                  break L4;
-                }
-              }
-              L5: {
-                if (null == df.field_o) {
-                  break L5;
-                } else {
-                  var6 = var6 | 16;
-                  break L5;
-                }
-              }
-              L6: {
-                gf.field_c.b(var6, -49152);
-                var7 = lc.a(ii.a(false), (byte) -89);
-                if (var7 == null) {
-                  var7 = "";
-                  break L6;
-                } else {
-                  break L6;
-                }
-              }
-              L7: {
-                gf.field_c.a(-119, var7);
-                if (df.field_o != null) {
-                  gf.field_c.a(df.field_o, -57);
-                  break L7;
-                } else {
-                  break L7;
-                }
-              }
-              e.a(sd.field_a, fj.field_F, (byte) 92, (gk) (Object) gf.field_c, uc.field_a);
-              gf.field_c.d(6903, gf.field_c.field_h - var5_int);
-              al.a((byte) -71, -1);
-              break L0;
-            } else {
-              return;
             }
+            L2: {
+              gf.field_c.field_h = gf.field_c.field_h + 2;
+              var5_int = gf.field_c.field_h;
+              gf.field_c.a(-803539344, mk.field_h);
+              gf.field_c.a(od.field_l, (byte) -102);
+              var6 = 0;
+              if (!mb.field_c) {
+                break L2;
+              } else {
+                var6 = var6 | 1;
+                break L2;
+              }
+            }
+            L3: {
+              if (me.field_e) {
+                var6 = var6 | 4;
+                break L3;
+              } else {
+                break L3;
+              }
+            }
+            L4: {
+              if (param4) {
+                var6 = var6 | 8;
+                break L4;
+              } else {
+                break L4;
+              }
+            }
+            L5: {
+              if (null == df.field_o) {
+                break L5;
+              } else {
+                var6 = var6 | 16;
+                break L5;
+              }
+            }
+            L6: {
+              gf.field_c.b(var6, -49152);
+              int discarded$3 = 0;
+              var7 = lc.a(ii.a(), (byte) -89);
+              if (var7 == null) {
+                var7 = "";
+                break L6;
+              } else {
+                break L6;
+              }
+            }
+            L7: {
+              gf.field_c.a(-119, var7);
+              if (df.field_o != null) {
+                gf.field_c.a(df.field_o, -57);
+                break L7;
+              } else {
+                break L7;
+              }
+            }
+            e.a(sd.field_a, fj.field_F, (byte) 92, (gk) (Object) gf.field_c, uc.field_a);
+            gf.field_c.d(6903, gf.field_c.field_h - var5_int);
+            al.a((byte) -71, -1);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -529,7 +530,7 @@ final class ki extends bf {
               break L8;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw la.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + 1 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -584,8 +585,11 @@ final class ki extends bf {
                   }
                 }
               }
-              ge.c((int)((ki) this).field_B, (int)((ki) this).field_q, 16, 16777215, 100);
-              ge.e((int)((ki) this).field_B, (int)((ki) this).field_q, 16, 1);
+              int discarded$6 = 100;
+              int discarded$7 = 16777215;
+              ge.c((int)((ki) this).field_B, (int)((ki) this).field_q, 16);
+              int discarded$8 = 1;
+              ge.e((int)((ki) this).field_B, (int)((ki) this).field_q, 16);
               break L1;
             }
             if (((ki) this).field_I != null) {
@@ -615,10 +619,11 @@ final class ki extends bf {
             ((ki) this).field_t = null;
         }
         ((ki) this).field_w = param0;
-        this.a(false);
+        int discarded$0 = 0;
+        this.a();
     }
 
-    private final void a(gk param0, boolean param1) {
+    private final void a(gk param0) {
         try {
             ((ki) this).field_B = (float)param0.e(-46);
             ((ki) this).field_q = (float)param0.e(127);
@@ -638,7 +643,7 @@ final class ki extends bf {
         ac.field_a.a((byte) 124);
     }
 
-    private final void a(boolean param0) {
+    private final void a() {
         Object stackIn_1_0 = null;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
@@ -717,10 +722,11 @@ final class ki extends bf {
           ((ki) this).field_l = -((ki) this).field_k;
           break L2;
         }
-        this.e(123);
+        int discarded$1 = 123;
+        this.e();
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_H = null;
         field_r = null;
     }
@@ -947,7 +953,7 @@ final class ki extends bf {
         }
     }
 
-    private final void e(int param0) {
+    private final void e() {
         int var2 = 0;
         int var3 = 0;
         L0: {
@@ -1011,7 +1017,8 @@ final class ki extends bf {
         ((ki) this).field_k = param2;
         ((ki) this).field_l = param1;
         ((ki) this).field_w = param0;
-        this.a(false);
+        int discarded$0 = 0;
+        this.a();
     }
 
     static {

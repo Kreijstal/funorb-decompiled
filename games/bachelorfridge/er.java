@@ -7,13 +7,14 @@ final class er extends ana {
     private oga field_w;
     static boolean field_y;
 
-    final static void e(int param0) {
+    final static void e() {
         String var1 = null;
         String var2 = null;
         if (ur.field_b != null) {
           var2 = ur.field_b;
           var1 = var2;
-          rg.a(lga.a(true, new String[1], nn.field_a), 2);
+          int discarded$2 = 2;
+          rg.a(lga.a(true, new String[1], nn.field_a));
           ur.field_b = null;
           return;
         } else {
@@ -39,7 +40,8 @@ final class er extends ana {
             return false;
         }
         int var2 = 100 % ((71 - param0) / 47);
-        this.g((byte) 28);
+        int discarded$1 = 28;
+        this.g();
         return true;
     }
 
@@ -52,7 +54,8 @@ final class er extends ana {
             if (qo.field_c) {
                 return false;
             }
-            return !cia.a(0) ? true : false;
+            int discarded$8 = 0;
+            return !cia.a() ? true : false;
         }
         if (jv.field_j < 10) {
             return false;
@@ -60,7 +63,8 @@ final class er extends ana {
         if (qo.field_c) {
             return false;
         }
-        return !cia.a(0) ? true : false;
+        int discarded$13 = 0;
+        return !cia.a() ? true : false;
     }
 
     final static String f(int param0) {
@@ -76,10 +80,10 @@ final class er extends ana {
         return null;
     }
 
-    private final void g(byte param0) {
+    private final void g() {
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         field_x = null;
     }
 
@@ -96,8 +100,10 @@ final class er extends ana {
         } else {
           ena.a((byte) -44, wha.field_a);
           gs.field_f = new saa(cha.field_l);
-          aq.a(0, -1);
-          jn.b(0);
+          int discarded$4 = -1;
+          aq.a(0);
+          int discarded$5 = 0;
+          jn.b();
           return;
         }
     }

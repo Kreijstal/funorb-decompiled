@@ -95,13 +95,13 @@ final class tb implements uj {
         }
         L4: {
           if (pf.field_i == 1) {
-            int discarded$4 = var8.e(-76);
-            String discarded$5 = var8.a(false);
+            int discarded$6 = var8.e(-76);
+            String discarded$7 = var8.a(false);
             break L4;
           } else {
             if (pf.field_i == 4) {
-              int discarded$6 = var8.e(-76);
-              String discarded$7 = var8.a(false);
+              int discarded$8 = var8.e(-76);
+              String discarded$9 = var8.a(false);
               break L4;
             } else {
               break L4;
@@ -109,7 +109,9 @@ final class tb implements uj {
           }
         }
         if (!param0) {
-          bf.field_c = dl.a((sb) (Object) var8, 80, -27898);
+          int discarded$10 = -27898;
+          int discarded$11 = 80;
+          bf.field_c = dl.a((sb) (Object) var8);
           pi.field_l = null;
           return new id(param0);
         } else {
@@ -144,7 +146,7 @@ final class tb implements uj {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_d = null;
         field_g = null;
@@ -155,7 +157,7 @@ final class tb implements uj {
         return "Make Ore Gold";
     }
 
-    final static ln[] a(String param0, String param1, bj param2, int param3) {
+    final static ln[] a(String param0, String param1, bj param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

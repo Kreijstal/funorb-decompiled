@@ -6,8 +6,9 @@ final class hf {
     static int field_a;
     static String[] field_b;
 
-    final static void a(int param0) {
-        rf.a(3);
+    final static void a() {
+        int discarded$0 = 3;
+        rf.a();
         rc.a(-25537, 4);
     }
 

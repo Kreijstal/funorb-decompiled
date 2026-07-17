@@ -16,18 +16,15 @@ final class je {
             om.field_v = param7;
             fe.field_M = param0;
             wn.field_h = param3;
-            if (param5 >= -61) {
-                field_b = null;
-            }
             sq.field_c = (no) (Object) new ug();
             ri.field_U = new rn(param0);
             nk.field_m = new qd(sq.field_c, ri.field_U);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "je.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "je.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + -96 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
         }
     }
 
-    final static boolean b(byte param0) {
+    final static boolean b() {
         if (fk.field_gb == null) {
             return false;
         }
@@ -37,35 +34,30 @@ final class je {
         return true;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         field_b = null;
-        if (param0 > -122) {
-            field_c = null;
-        }
     }
 
-    final static void a(int param0, int param1, boolean param2, byte[] param3, int param4, boolean param5) {
+    final static void a(int param0, int param1, boolean param2, byte[] param3) {
         oq var6 = null;
         int var7 = 0;
         int var8 = 0;
         try {
             var6 = ej.field_j;
-            var6.b(false, param0);
+            var6.b(false, 11);
             var6.field_v = var6.field_v + 1;
             var7 = var6.field_v;
             var6.a(4, false);
             var6.a(param1, false);
-            var8 = param4;
-            if (param2) {
-                var8 += 128;
-            }
+            var8 = 0;
+            var8 += 128;
             var6.a(var8, false);
             var6.a(param3, (byte) 0, 0, param3.length);
             var6.b(var6.field_v - var7, true);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "je.D(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + 0 + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "je.D(" + 11 + 44 + param1 + 44 + 1 + 44 + (param3 != null ? "{...}" : "null") + 44 + 0 + 44 + 0 + 41);
         }
     }
 

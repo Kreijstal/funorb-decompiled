@@ -29,86 +29,78 @@ class ga extends wi {
     final static String a(boolean param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        String stackIn_8_0 = null;
+        String stackIn_6_0 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
+        String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_7_0 = null;
+        String stackOut_5_0 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
         RuntimeException stackOut_9_0 = null;
         StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
         try {
           L0: {
             L1: {
-              if (!param0) {
+              var2_int = ki.a(bl.field_c, (byte) -105, tk.field_Ib);
+              if (1 != var2_int) {
                 break L1;
               } else {
-                field_E = null;
+                param1 = "<img=0>" + param1;
                 break L1;
               }
             }
             L2: {
-              var2_int = ki.a(bl.field_c, (byte) -105, tk.field_Ib);
-              if (1 != var2_int) {
-                break L2;
-              } else {
-                param1 = "<img=0>" + param1;
-                break L2;
-              }
-            }
-            L3: {
               if (var2_int == 2) {
                 param1 = "<img=1>" + param1;
-                break L3;
+                break L2;
               } else {
-                break L3;
+                break L2;
               }
             }
-            stackOut_7_0 = (String) param1;
-            stackIn_8_0 = stackOut_7_0;
+            stackOut_5_0 = (String) param1;
+            stackIn_6_0 = stackOut_5_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var2 = decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var2;
-            stackOut_9_1 = new StringBuilder().append("ga.UA(").append(param0).append(44);
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
+            stackOut_7_0 = (RuntimeException) var2;
+            stackOut_7_1 = new StringBuilder().append("ga.UA(").append(0).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
             if (param1 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
-              break L4;
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
             } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
-              break L4;
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
         }
-        return stackIn_8_0;
+        return stackIn_6_0;
     }
 
     private final void m(int param0) {
@@ -132,7 +124,7 @@ class ga extends wi {
         field_M = null;
     }
 
-    private final String k(int param0) {
+    private final String k() {
         int var2 = ((ga) this).field_Q < ((ga) this).field_I ? ((ga) this).field_Q : ((ga) this).field_I;
         int var3 = ((ga) this).field_I > ((ga) this).field_Q ? ((ga) this).field_I : ((ga) this).field_Q;
         return ((ga) this).field_q.substring(var2, var3);
@@ -142,13 +134,15 @@ class ga extends wi {
         if (param0 < 99) {
             ((ga) this).i((byte) 116);
         }
-        String var2 = this.k(82);
+        int discarded$0 = 82;
+        String var2 = this.k();
         if (0 < var2.length()) {
-            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.k(82)), (java.awt.datatransfer.ClipboardOwner) null);
+            int discarded$1 = 82;
+            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.k()), (java.awt.datatransfer.ClipboardOwner) null);
         }
     }
 
-    private final void a(boolean param0) {
+    private final void a() {
         try {
             Exception var2 = null;
             String var2_ref = null;
@@ -157,7 +151,8 @@ class ga extends wi {
               L0: {
                 var2_ref = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
                 this.i(-126);
-                this.a(var2_ref, false);
+                int discarded$1 = 0;
+                this.a(var2_ref);
                 break L0;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -440,7 +435,8 @@ class ga extends wi {
           L0: {
             L1: {
               super.a(param0, param1, param2, param3);
-              this.j((byte) 110);
+              int discarded$2 = 110;
+              this.j();
               if (((ga) this).field_p != 1) {
                 break L1;
               } else {
@@ -605,7 +601,8 @@ class ga extends wi {
                   ((ga) this).field_G = stackIn_9_1 != 0;
                   if (((ga) this).field_G) {
                     L4: {
-                      ((ga) this).field_Q = this.l((byte) -55);
+                      int discarded$1 = -55;
+                      ((ga) this).field_Q = this.l();
                       ((ga) this).field_I = this.h((byte) 104);
                       if (((ga) this).field_I <= 0) {
                         break L4;
@@ -784,9 +781,9 @@ class ga extends wi {
                             break L6;
                           } else {
                             ((ga) this).field_q = ((ga) this).field_q + param0;
-                            int dupTemp$1 = ((ga) this).field_q.length();
-                            ((ga) this).field_I = dupTemp$1;
-                            ((ga) this).field_Q = dupTemp$1;
+                            int dupTemp$3 = ((ga) this).field_q.length();
+                            ((ga) this).field_I = dupTemp$3;
+                            ((ga) this).field_Q = dupTemp$3;
                             break L6;
                           }
                         }
@@ -844,7 +841,8 @@ class ga extends wi {
                                     if (param3 != 67) {
                                       break L7;
                                     } else {
-                                      this.a(true);
+                                      int discarded$4 = 1;
+                                      this.a();
                                       stackOut_59_0 = 1;
                                       stackIn_60_0 = stackOut_59_0;
                                       return stackIn_60_0 != 0;
@@ -911,8 +909,9 @@ class ga extends wi {
                                 stackIn_33_1 = stackOut_32_1;
                                 break L11;
                               } else {
+                                int discarded$5 = -55;
                                 stackOut_31_0 = this;
-                                stackOut_31_1 = this.l((byte) -55);
+                                stackOut_31_1 = this.l();
                                 stackIn_33_0 = stackOut_31_0;
                                 stackIn_33_1 = stackOut_31_1;
                                 break L11;
@@ -1008,7 +1007,7 @@ class ga extends wi {
         return stackIn_77_0 != 0;
     }
 
-    private final int l(byte param0) {
+    private final int l() {
         int var2 = 0;
         int var3 = 0;
         var3 = Kickabout.field_G;
@@ -1071,7 +1070,7 @@ class ga extends wi {
         }
     }
 
-    private final void a(String param0, boolean param1) {
+    private final void a(String param0) {
         int var3_int = 0;
         RuntimeException var3 = null;
         Object var4 = null;
@@ -1154,7 +1153,7 @@ class ga extends wi {
         }
     }
 
-    private final void j(byte param0) {
+    private final void j() {
         int var3 = 0;
         iq var4 = null;
         int var5 = 0;

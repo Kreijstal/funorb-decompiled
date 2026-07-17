@@ -73,7 +73,7 @@ class w extends km {
         int var4 = 0;
         try {
             var6 = we.field_b;
-            var6.f(param1, -4);
+            var6.f(6, -4);
             var6.field_n = var6.field_n + 1;
             var4 = var6.field_n;
             var6.a(true, 1);
@@ -83,13 +83,13 @@ class w extends km {
             } else {
                 var6.a(true, 0);
             }
-            int var5 = 120 % ((param0 - 60) / 53);
+            int var5 = 0;
             int discarded$0 = var6.a((byte) -15, var4);
             var6.field_n = var6.field_n - 4;
             param2.field_s = var6.i(7553);
             var6.b(var6.field_n + -var4, true);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "w.NA(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "w.NA(" + 124 + 44 + 6 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -119,7 +119,7 @@ class w extends km {
         return ((w) this).a((byte) 84, 2147483647);
     }
 
-    private final void a(boolean param0, int param1, boolean param2, boolean param3, int param4, int param5, boolean param6, int param7, boolean param8, boolean param9, int param10) {
+    private final void a(boolean param0, int param1, boolean param2, boolean param3, int param4, int param5, boolean param6, int param7, boolean param8, boolean param9) {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
@@ -442,7 +442,7 @@ class w extends km {
                           ((w) this).field_J.a(var27, -(((w) this).field_ub * 2) + (((w) this).field_mb + ((w) this).field_E - -((w) this).field_ub) - -var21, ((w) this).field_pb + (var22 - -((w) this).field_J.field_R), var18, -1, ((w) this).field_wb);
                           break L26;
                         } else {
-                          int discarded$2 = ((w) this).field_J.a(var27, var21 + ((w) this).field_ub + ((w) this).field_E, var22 + ((w) this).field_pb, -(2 * ((w) this).field_ub) + ((w) this).field_mb, ((w) this).field_N, var18, -1, ((w) this).field_wb, ((w) this).field_X, ((w) this).field_W, ((w) this).field_Db);
+                          int discarded$3 = ((w) this).field_J.a(var27, var21 + ((w) this).field_ub + ((w) this).field_E, var22 + ((w) this).field_pb, -(2 * ((w) this).field_ub) + ((w) this).field_mb, ((w) this).field_N, var18, -1, ((w) this).field_wb, ((w) this).field_X, ((w) this).field_W, ((w) this).field_Db);
                           break L26;
                         }
                       }
@@ -455,7 +455,7 @@ class w extends km {
                   }
                 }
               }
-              int discarded$3 = ((w) this).field_J.a(var27, var21 + ((w) this).field_ub + ((w) this).field_E, ((w) this).field_pb - -var22, -(((w) this).field_ub * 2) + ((w) this).field_mb, ((w) this).field_N, var18, -1, ((w) this).field_wb, ((w) this).field_X, ((w) this).field_W, ((w) this).field_Db);
+              int discarded$4 = ((w) this).field_J.a(var27, var21 + ((w) this).field_ub + ((w) this).field_E, ((w) this).field_pb - -var22, -(((w) this).field_ub * 2) + ((w) this).field_mb, ((w) this).field_N, var18, -1, ((w) this).field_wb, ((w) this).field_X, ((w) this).field_W, ((w) this).field_Db);
               break L26;
             } else {
               break L26;
@@ -469,7 +469,8 @@ class w extends km {
               if (var23_ref == null) {
                 break L30;
               } else {
-                var23_ref.a(param0, var23_ref.field_mb, param2, param3, var19 + var23_ref.field_E, var23_ref.field_N, param6, var23_ref.field_pb - -var20, var23_ref.field_O, param9, -29696);
+                int discarded$5 = -29696;
+                var23_ref.a(param0, var23_ref.field_mb, param2, param3, var19 + var23_ref.field_E, var23_ref.field_N, param6, var23_ref.field_pb - -var20, var23_ref.field_O, param9);
                 var23_ref = (w) (Object) var23_ref.field_M.d(true);
                 continue L31;
               }
@@ -972,7 +973,8 @@ class w extends km {
     }
 
     final void a(int param0, boolean param1) {
-        this.a(param1, hk.field_j, false, true, 0, hk.field_i, false, 0, false, false, -29696);
+        int discarded$0 = -29696;
+        this.a(param1, hk.field_j, false, true, 0, hk.field_i, false, 0, false, false);
         if (param0 != 1141039778) {
             ((w) this).field_sb = null;
         }

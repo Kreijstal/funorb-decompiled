@@ -11,7 +11,7 @@ final class ug {
     static wd field_e;
     static boolean[] field_f;
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_f = null;
         field_d = null;
@@ -36,14 +36,11 @@ final class ug {
         }
         param2.field_b = param0.field_b;
         param2.field_d = param0;
-        if (param1 != 16737894) {
-            return;
-        }
         try {
             param2.field_b.field_d = param2;
             param2.field_d.field_b = param2;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "ug.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "ug.B(" + (param0 != null ? "{...}" : "null") + 44 + 16737894 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -122,7 +119,7 @@ final class ug {
             }
             L2: {
               L3: {
-                var3_int = ((np) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_4_2 != 0, param2, param1, false, 2 + sh.field_c) ? 1 : 0;
+                var3_int = ((np) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_4_2 != 0, param2, 2, false, 2 + sh.field_c) ? 1 : 0;
                 var4 = nq.field_F.field_yb.field_jb;
                 if (ts.field_d == 2) {
                   break L3;
@@ -301,7 +298,7 @@ final class ug {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var3, "ug.A(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw nb.a((Throwable) (Object) var3, "ug.A(" + param0 + 44 + 2 + 44 + param2 + 41);
         }
     }
 

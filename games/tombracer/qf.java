@@ -37,24 +37,13 @@ final class qf extends uia {
     }
 
     final static String a(int param0, String param1, String param2, String param3) {
-        int var4 = 0;
-        int var5 = 0;
-        var5 = TombRacer.field_G ? 1 : 0;
-        var4 = param3.indexOf(param2);
-        L0: while (true) {
-          if (var4 == -1) {
-            if (param0 != 966747152) {
-              field_k = null;
-              return param3;
-            } else {
-              return param3;
-            }
-          } else {
+        int var5 = TombRacer.field_G ? 1 : 0;
+        int var4 = param3.indexOf(param2);
+        while (var4 != -1) {
             param3 = param3.substring(0, var4) + param1 + param3.substring(var4 + param2.length());
             var4 = param3.indexOf(param2, param1.length() + var4);
-            continue L0;
-          }
         }
+        return param3;
     }
 
     public static void g(byte param0) {

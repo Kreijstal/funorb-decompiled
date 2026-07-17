@@ -12,12 +12,9 @@ final class ef implements Iterator {
 
     final static void a(String param0, byte param1, String param2) {
         try {
-            if (param1 != 66) {
-                field_c = null;
-            }
             r.a(param2, (byte) 87, false, param0);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "ef.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "ef.C(" + (param0 != null ? "{...}" : "null") + 44 + 66 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -33,7 +30,7 @@ final class ef implements Iterator {
         ((ef) this).field_b = null;
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         float var1_float = 0.0f;
         RuntimeException var1 = null;
         ja var2 = null;
@@ -88,11 +85,8 @@ final class ef implements Iterator {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
-        if (param0 != 101) {
-            field_e = false;
-        }
     }
 
     final static dm a(int param0, int param1, int param2) {
@@ -100,7 +94,7 @@ final class ef implements Iterator {
         int var5 = Geoblox.field_C;
         dm var6 = new dm(param2, param2);
         dm var3 = var6;
-        for (var4 = param0; var3.field_v.length > var4; var4++) {
+        for (var4 = 0; var3.field_v.length > var4; var4++) {
             var6.field_v[var4] = param1;
         }
         return var3;

@@ -241,7 +241,8 @@ final class pi extends bf {
         try {
           L0: {
             L1: while (true) {
-              if (!ba.a(-1)) {
+              int discarded$1 = -1;
+              if (!ba.a()) {
                 if (kc.field_d != 0) {
                   stackOut_10_0 = 1;
                   stackIn_11_0 = stackOut_10_0;

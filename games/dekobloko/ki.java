@@ -14,7 +14,6 @@ final class ki extends bh {
     int field_o;
 
     final static hl a(int param0, boolean param1) {
-        uf var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -22,86 +21,89 @@ final class ki extends bh {
         int var7 = 0;
         uf var8 = null;
         me var9 = null;
-        int stackIn_5_0 = 0;
-        int stackIn_11_0 = 0;
-        int[] stackIn_24_0 = null;
+        int stackIn_3_0 = 0;
+        int stackIn_9_0 = 0;
+        int[] stackIn_23_0 = null;
         Throwable decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        Object stackOut_23_0 = null;
-        int[] stackOut_22_0 = null;
-        var7 = client.field_A ? 1 : 0;
-        if (param0 == 0) {
-          L0: {
-            var8 = de.field_V;
-            var2 = var8;
-            var3 = var8.d((byte) -99);
-            mf.field_R = 127 & var3;
-            if ((var3 & 128) == 0) {
-              stackOut_4_0 = 0;
-              stackIn_5_0 = stackOut_4_0;
-              break L0;
-            } else {
-              stackOut_3_0 = 1;
-              stackIn_5_0 = stackOut_3_0;
-              break L0;
-            }
+        int stackOut_2_0 = 0;
+        int stackOut_1_0 = 0;
+        int stackOut_8_0 = 0;
+        int stackOut_7_0 = 0;
+        Object stackOut_22_0 = null;
+        int[] stackOut_21_0 = null;
+        L0: {
+          var7 = client.field_A ? 1 : 0;
+          var8 = de.field_V;
+          var3 = var8.d((byte) -99);
+          mf.field_R = 127 & var3;
+          if ((var3 & 128) == 0) {
+            stackOut_2_0 = 0;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          } else {
+            stackOut_1_0 = 1;
+            stackIn_3_0 = stackOut_1_0;
+            break L0;
           }
-          L1: {
-            fm.field_f = stackIn_5_0 != 0;
-            tg.field_c = var8.d((byte) -71);
-            fc.field_h = var8.f((byte) -108);
-            if (mf.field_R != 2) {
-              vl.field_k = 0;
-              ic.field_a = 0;
-              break L1;
-            } else {
-              vl.field_k = var8.e(param0 + 3);
-              ic.field_a = var8.h(param0 + 65280);
-              break L1;
-            }
+        }
+        L1: {
+          fm.field_f = stackIn_3_0 != 0;
+          tg.field_c = var8.d((byte) -71);
+          fc.field_h = var8.f((byte) -108);
+          if (mf.field_R != 2) {
+            vl.field_k = 0;
+            ic.field_a = 0;
+            break L1;
+          } else {
+            vl.field_k = var8.e(3);
+            ic.field_a = var8.h(65280);
+            break L1;
           }
-          L2: {
-            if (1 != var8.d((byte) -32)) {
-              stackOut_10_0 = 0;
-              stackIn_11_0 = stackOut_10_0;
-              break L2;
-            } else {
-              stackOut_9_0 = 1;
-              stackIn_11_0 = stackOut_9_0;
-              break L2;
-            }
+        }
+        L2: {
+          if (1 != var8.d((byte) -32)) {
+            stackOut_8_0 = 0;
+            stackIn_9_0 = stackOut_8_0;
+            break L2;
+          } else {
+            stackOut_7_0 = 1;
+            stackIn_9_0 = stackOut_7_0;
+            break L2;
           }
-          L3: {
-            var4 = stackIn_11_0;
-            ad.field_x = var8.c((byte) -38);
-            if (var4 == 0) {
-              sa.field_B = ad.field_x;
-              break L3;
-            } else {
-              sa.field_B = var8.c((byte) -38);
-              break L3;
-            }
+        }
+        L3: {
+          var4 = stackIn_9_0;
+          ad.field_x = var8.c((byte) -38);
+          if (var4 == 0) {
+            sa.field_B = ad.field_x;
+            break L3;
+          } else {
+            sa.field_B = var8.c((byte) -38);
+            break L3;
           }
-          L4: {
-            if (mf.field_R == 1) {
+        }
+        L4: {
+          if (mf.field_R == 1) {
+            dh.field_d = var8.e(3);
+            qm.field_e = var8.c((byte) -38);
+            break L4;
+          } else {
+            if (mf.field_R != 4) {
+              qm.field_e = null;
+              dh.field_d = 0;
+              break L4;
+            } else {
               dh.field_d = var8.e(3);
               qm.field_e = var8.c((byte) -38);
               break L4;
-            } else {
-              if (mf.field_R != 4) {
-                qm.field_e = null;
-                dh.field_d = 0;
-                break L4;
-              } else {
-                dh.field_d = var8.e(3);
-                qm.field_e = var8.c((byte) -38);
-                break L4;
-              }
             }
           }
+        }
+        if (!param1) {
+          ib.field_pb = li.a(80, 0, (wl) (Object) var8);
+          fa.field_q = null;
+          return new hl(param1);
+        } else {
           var5 = var8.e(3);
           try {
             L5: {
@@ -109,31 +111,27 @@ final class ki extends bh {
                 var9 = wj.field_Qb.a(127, var5);
                 ib.field_pb = var9.f((byte) -61);
                 if (sa.field_B.equals((Object) (Object) oa.field_f)) {
-                  stackOut_23_0 = null;
-                  stackIn_24_0 = (int[]) (Object) stackOut_23_0;
+                  stackOut_22_0 = null;
+                  stackIn_23_0 = (int[]) (Object) stackOut_22_0;
                   break L6;
                 } else {
-                  stackOut_22_0 = var9.field_F;
-                  stackIn_24_0 = stackOut_22_0;
+                  stackOut_21_0 = var9.field_F;
+                  stackIn_23_0 = stackOut_21_0;
                   break L6;
                 }
               }
-              fa.field_q = stackIn_24_0;
+              fa.field_q = stackIn_23_0;
               break L5;
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
-            L7: {
-              var6 = (Exception) (Object) decompiledCaughtException;
-              qb.a((Throwable) (Object) var6, 16408, "CC1");
-              ib.field_pb = null;
-              fa.field_q = null;
-              break L7;
-            }
+            var6 = (Exception) (Object) decompiledCaughtException;
+            qb.a((Throwable) (Object) var6, 16408, "CC1");
+            ib.field_pb = null;
+            fa.field_q = null;
+            return new hl(param1);
           }
-          return new hl(false);
-        } else {
-          return null;
+          return new hl(param1);
         }
     }
 

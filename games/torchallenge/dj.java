@@ -18,7 +18,7 @@ class dj extends ng {
     static int field_Q;
     static boolean field_Z;
 
-    private final void d(byte param0) {
+    private final void d() {
         lg var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -125,110 +125,103 @@ class dj extends ng {
     }
 
     void a(ee param0, int param1, byte param2, int param3) {
-        RuntimeException var5 = null;
+        gd var5 = null;
+        RuntimeException var5_ref = null;
         int var6 = 0;
-        gd var7 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
+        String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
         RuntimeException stackOut_14_0 = null;
         StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
         try {
           L0: {
             L1: {
-              if (param2 <= -97) {
-                break L1;
-              } else {
-                og discarded$3 = dj.c((byte) -78);
-                break L1;
-              }
-            }
-            L2: {
               super.a(param0, param1, (byte) -99, param3);
-              this.d((byte) 5);
+              int discarded$3 = 5;
+              this.d();
               if (((dj) this).field_z == 1) {
-                L3: {
+                L2: {
                   if (!(((dj) this).field_q instanceof gd)) {
-                    break L3;
+                    break L2;
                   } else {
-                    var7 = (gd) (Object) ((dj) this).field_q;
-                    var6 = var7.a(ph.field_d, kc.field_u, (ee) this, (byte) -41, param3, param1);
+                    var5 = (gd) (Object) ((dj) this).field_q;
+                    var6 = var5.a(ph.field_d, kc.field_u, (ee) this, (byte) -41, param3, param1);
                     if (var6 != -1) {
-                      L4: {
+                      L3: {
                         if (!((dj) this).field_Y) {
-                          break L4;
+                          break L3;
                         } else {
                           if (var6 >= ((dj) this).field_S) {
-                            break L4;
+                            break L3;
                           } else {
                             if (((dj) this).field_U >= var6) {
-                              break L4;
+                              break L3;
                             } else {
                               var6 = ((dj) this).field_S;
-                              break L4;
+                              break L3;
                             }
                           }
                         }
                       }
                       ((dj) this).field_R = var6;
-                      break L3;
+                      break L2;
                     } else {
-                      break L3;
+                      break L2;
                     }
                   }
                 }
                 ((dj) this).field_X = ol.a(256);
-                break L2;
+                break L1;
               } else {
-                break L2;
+                break L1;
               }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var5 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var5;
-            stackOut_14_1 = new StringBuilder().append("dj.U(");
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+          L4: {
+            var5_ref = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var5_ref;
+            stackOut_12_1 = new StringBuilder().append("dj.U(");
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
             if (param0 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
-              break L5;
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L4;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
-              break L5;
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L4;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw oj.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 44 + -114 + 44 + param3 + 41);
         }
     }
 
-    public static void l(int param0) {
+    public static void l() {
         field_W = null;
         field_O = null;
         field_P = null;
@@ -236,7 +229,7 @@ class dj extends ng {
         field_cb = null;
     }
 
-    private final void e(byte param0) {
+    private final void e() {
         try {
             Exception var2 = null;
             String var2_ref = null;
@@ -245,7 +238,8 @@ class dj extends ng {
               L0: {
                 var2_ref = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
                 this.d(true);
-                this.a(var2_ref, 1);
+                int discarded$1 = 1;
+                this.a(var2_ref);
                 break L0;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -291,16 +285,13 @@ class dj extends ng {
         }
     }
 
-    private final String j(int param0) {
-        if (param0 != -12349) {
-            ((dj) this).k(-78);
-        }
+    private final String j() {
         int var2 = ((dj) this).field_R > ((dj) this).field_U ? ((dj) this).field_U : ((dj) this).field_R;
         int var3 = ((dj) this).field_U >= ((dj) this).field_R ? ((dj) this).field_U : ((dj) this).field_R;
         return ((dj) this).field_v.substring(var2, var3);
     }
 
-    private final void a(String param0, int param1) {
+    private final void a(String param0) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -382,12 +373,12 @@ class dj extends ng {
         }
     }
 
-    private final void g(byte param0) {
+    private final void g() {
         this.g(0);
         this.d(true);
     }
 
-    final static void f(byte param0) {
+    final static void f() {
         if (!(lj.field_q)) {
             throw new IllegalStateException();
         }
@@ -563,7 +554,7 @@ class dj extends ng {
               if (param2 >= 9) {
                 break L1;
               } else {
-                int discarded$2 = this.h(110);
+                int discarded$5 = this.h(110);
                 break L1;
               }
             }
@@ -603,9 +594,9 @@ class dj extends ng {
                         L6: {
                           if (((dj) this).field_R >= ((dj) this).field_v.length()) {
                             ((dj) this).field_v = ((dj) this).field_v + param1;
-                            int dupTemp$3 = ((dj) this).field_v.length();
-                            ((dj) this).field_R = dupTemp$3;
-                            ((dj) this).field_U = dupTemp$3;
+                            int dupTemp$6 = ((dj) this).field_v.length();
+                            ((dj) this).field_R = dupTemp$6;
+                            ((dj) this).field_U = dupTemp$6;
                             break L6;
                           } else {
                             ((dj) this).field_v = ((dj) this).field_v.substring(0, ((dj) this).field_R) + param1 + ((dj) this).field_v.substring(((dj) this).field_R, ((dj) this).field_v.length());
@@ -644,7 +635,8 @@ class dj extends ng {
                                       if (65 != param0) {
                                         break L8;
                                       } else {
-                                        this.g((byte) 79);
+                                        int discarded$7 = 79;
+                                        this.g();
                                         stackOut_63_0 = 1;
                                         stackIn_64_0 = stackOut_63_0;
                                         return stackIn_64_0 != 0;
@@ -671,14 +663,16 @@ class dj extends ng {
                                     if (param0 != 67) {
                                       break L7;
                                     } else {
-                                      this.e((byte) 65);
+                                      int discarded$8 = 65;
+                                      this.e();
                                       stackOut_70_0 = 1;
                                       stackIn_71_0 = stackOut_70_0;
                                       return stackIn_71_0 != 0;
                                     }
                                   }
                                 } else {
-                                  this.h((byte) -108);
+                                  int discarded$9 = -108;
+                                  this.h();
                                   stackOut_59_0 = 1;
                                   stackIn_60_0 = stackOut_59_0;
                                   return stackIn_60_0 != 0;
@@ -830,24 +824,16 @@ class dj extends ng {
         return stackIn_77_0 != 0;
     }
 
-    final static og c(byte param0) {
+    final static og c() {
         try {
             Throwable var1 = null;
-            og stackIn_3_0 = null;
+            og stackIn_1_0 = null;
             Throwable decompiledCaughtException = null;
-            og stackOut_2_0 = null;
+            og stackOut_0_0 = null;
             try {
               L0: {
-                L1: {
-                  if (param0 > 66) {
-                    break L1;
-                  } else {
-                    field_P = null;
-                    break L1;
-                  }
-                }
-                stackOut_2_0 = (og) Class.forName("sc").newInstance();
-                stackIn_3_0 = stackOut_2_0;
+                stackOut_0_0 = (og) Class.forName("sc").newInstance();
+                stackIn_1_0 = stackOut_0_0;
                 break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -855,7 +841,7 @@ class dj extends ng {
               var1 = decompiledCaughtException;
               return null;
             }
-            return stackIn_3_0;
+            return stackIn_1_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -928,13 +914,15 @@ class dj extends ng {
     }
 
     private final void g(int param0) {
-        String var2 = this.j(-12349);
+        int discarded$0 = -12349;
+        String var2 = this.j();
         if (!(0 >= var2.length())) {
-            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.j(-12349)), (java.awt.datatransfer.ClipboardOwner) null);
+            int discarded$1 = -12349;
+            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.j()), (java.awt.datatransfer.ClipboardOwner) null);
         }
     }
 
-    private final void h(byte param0) {
+    private final void h() {
         int var2 = 76;
         if (((dj) this).field_k instanceof cc) {
             ((cc) (Object) ((dj) this).field_k).a((dj) this, 5);

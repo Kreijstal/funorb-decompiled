@@ -8,7 +8,7 @@ final class r extends f implements pl {
     private boolean field_wb;
     static int field_ub;
 
-    public static void r(int param0) {
+    public static void r() {
         int var1 = 70;
         field_sb = null;
     }
@@ -68,7 +68,8 @@ final class r extends f implements pl {
                       if (param0) {
                         break L3;
                       } else {
-                        cf.h(-65);
+                        int discarded$3 = -65;
+                        cf.h();
                         break L3;
                       }
                     }
@@ -97,7 +98,7 @@ final class r extends f implements pl {
                   ((r) this).b((el) (Object) new s((r) this), -111);
                   return;
                 } else {
-                  hk discarded$2 = var5.a(-2, cl.field_d, (bb) this);
+                  hk discarded$4 = var5.a(-2, cl.field_d, (bb) this);
                   break L4;
                 }
               } else {
@@ -112,7 +113,7 @@ final class r extends f implements pl {
                       break L5;
                     }
                   } else {
-                    hk discarded$3 = var5.a(-2, cl.field_d, (bb) this);
+                    hk discarded$5 = var5.a(-2, cl.field_d, (bb) this);
                     break L5;
                   }
                 }
@@ -173,7 +174,7 @@ final class r extends f implements pl {
         }
     }
 
-    final static nd a(String param0, boolean param1) {
+    final static nd a(String param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -355,7 +356,8 @@ final class r extends f implements pl {
     }
 
     final void q(int param0) {
-        this.a(true, ig.a(hi.field_I, 248, false), (byte) -57);
+        int discarded$0 = 0;
+        this.a(true, ig.a(hi.field_I, 248), (byte) -57);
         if (param0 != 12086) {
             ((r) this).field_wb = false;
         }
@@ -384,7 +386,8 @@ final class r extends f implements pl {
         }
         if (((r) this).field_I) {
             if (!(((r) this).field_wb)) {
-                var2 = n.d((byte) 93);
+                int discarded$0 = 93;
+                var2 = n.d();
                 if (!(var2 == null)) {
                     this.a(false, var2, (byte) -69);
                 }

@@ -41,13 +41,12 @@ final class np extends je {
         this((je) (Object) param0, param0.field_Ub, param0.field_Nb, param0.field_Tb, param0.field_Rb, param0.field_Pb, param0.field_Yb, param0.field_Xb, param0.field_Ib);
     }
 
-    final static void a(boolean param0, byte param1) {
-        if (!cd.c(9501)) {
+    final static void a() {
+        int discarded$2 = 9501;
+        if (!cd.c()) {
             return;
         }
-        if (param0) {
-            qn.b(0, 0, qn.field_l, qn.field_g, 0, 192);
-        }
+        qn.b(0, 0, qn.field_l, qn.field_g, 0, 192);
         ee.field_v.a(0, -118, 0);
     }
 
@@ -100,7 +99,8 @@ final class np extends je {
             if (var7 >= ((np) this).field_Lb) {
               var6 = var6 + 2 * ((np) this).field_Rb;
               var7 = ((np) this).field_Xb + ((np) this).field_Lb * ((np) this).field_Ib + ((np) this).field_Xb;
-              var8 = jp.a(param4, param2, var6, -1);
+              int discarded$1 = -1;
+              var8 = jp.a(param4, param2, var6);
               var9 = pd.a(var7, 0, param1, param0);
               ((np) this).a(var7, -20500, var6, var9, var8);
               var10 = 0;
@@ -149,11 +149,8 @@ final class np extends je {
         }
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_Qb = null;
-        if (param0 != 5) {
-            np.k(-69);
-        }
         field_Jb = null;
         field_Vb = null;
         field_Ob = null;
@@ -180,9 +177,6 @@ final class np extends je {
         int var2_int = 0;
         int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-            if (param0) {
-                np.e((byte) 102);
-            }
             for (var2_int = 0; var2_int < param1.field_I; var2_int++) {
                 param1.field_o[var2_int] = 0;
             }
@@ -190,7 +184,7 @@ final class np extends je {
             param1.field_Z = ih.field_E;
             param1.field_t = ih.field_E;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "np.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "np.G(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

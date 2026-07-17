@@ -18,7 +18,8 @@ final class ol {
         field_j = null;
         field_a = null;
         if (param0 >= -51) {
-            ol.a(false);
+            int discarded$0 = 0;
+            ol.a();
             field_i = null;
             return;
         }
@@ -27,32 +28,24 @@ final class ol {
 
     private final void a(int param0, wh param1) {
         RuntimeException var3 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           L0: {
-            L1: {
-              if (param0 == -1) {
-                break L1;
-              } else {
-                field_h = -6;
-                break L1;
-              }
-            }
             if (param1 != null) {
               param1.a(-16175);
               param1.f(64);
@@ -64,33 +57,33 @@ final class ol {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var3;
-            stackOut_6_1 = new StringBuilder().append("ol.G(").append(param0).append(44);
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("ol.G(").append(-1).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
-              break L2;
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L1;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
-              break L2;
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L1;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw ie.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
     }
 
@@ -159,7 +152,7 @@ final class ol {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         int var2 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         ff.field_Q = new he[][]{ph.field_a, ib.field_u, dh.field_S, fa.field_n, t.field_c, cm.field_Q, od.field_i, jd.field_M, we.field_b, ee.field_b, ae.field_lb, ad.field_s, ub.field_a, jj.field_a, nc.field_I, pf.field_c, wd.field_a, sd.field_c, ff.field_R, dm.field_y, wh.field_u, ng.field_b, g.field_q, pj.field_z, tl.field_Q, ld.field_d, eb.field_c, ri.field_h, el.field_vb, bk.field_j, ik.field_f, vc.field_b, ij.field_d, db.field_b, kf.field_e, af.field_e, uk.field_b, uf.field_j, bg.field_t, wd.field_f, ng.field_f, nj.field_d, wi.field_c, oi.field_g, jk.field_H, u.field_a, eh.field_b, oi.field_a, pj.field_B[0], pj.field_B[1], pj.field_B[2], nl.field_n[0], nl.field_n[1], nl.field_n[2], m.field_a, ki.field_a, ph.field_c[0], ph.field_c[1], ph.field_c[2], lf.field_e[0], lf.field_e[1], ca.field_bb, sf.field_m, sj.field_f, le.field_b, eb.field_a, wh.field_u, cm.field_L, ca.field_Y, pj.field_z, tl.field_Q, cf.field_g, eb.field_c, ri.field_h, el.field_vb, ei.field_k, ij.field_e};
         sh.field_c = new he[][]{ph.field_a, ib.field_u, dh.field_S, fa.field_n, t.field_c, cm.field_Q, od.field_i, jd.field_M, we.field_b, ee.field_b, ae.field_lb, ad.field_s, fa.field_k, j.field_db, mk.field_e, pf.field_c, wd.field_a, sd.field_c, ff.field_R, df.field_f, ah.field_L, mk.field_f, qg.field_U, bf.field_v, vg.field_h, rg.field_a, fi.field_e, jd.field_Q, r.field_e, nf.field_s, pc.field_c, vc.field_b, ij.field_d, db.field_b, kf.field_e, af.field_e, wk.field_m, uf.field_j, bg.field_t, wd.field_f, ng.field_f, nj.field_d, wi.field_c, oi.field_g, jk.field_H, wa.field_O, eh.field_b, mj.field_w, pj.field_B[0], pj.field_B[1], pj.field_B[2], nl.field_n[0], nl.field_n[1], nl.field_n[2], kc.field_l, ta.field_d, hc.field_M[0], hc.field_M[1], hc.field_M[2], kk.field_b[0], kk.field_b[1], ca.field_bb, sf.field_m, sj.field_f, le.field_b, fa.field_m, we.field_c, d.field_c, ek.field_l, oj.field_g, mh.field_g, u.field_c, ai.field_y, bk.field_d, ek.field_t, hh.field_c, lk.field_m};
@@ -233,8 +226,8 @@ final class ol {
     }
 
     private final void a(int param0, long param1) {
-        wh var4 = (wh) (Object) ((ol) this).field_e.a(param1, param0);
-        this.a(param0, var4);
+        wh var4 = (wh) (Object) ((ol) this).field_e.a(param1, -1);
+        this.a(-1, var4);
     }
 
     private ol() throws Throwable {

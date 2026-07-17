@@ -7,7 +7,7 @@ final class vk {
     static String[] field_b;
     static int field_a;
 
-    final static ma a(dj param0, int param1, int param2) {
+    final static ma a(dj param0, int param1) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -79,7 +79,7 @@ final class vk {
         return stackIn_4_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = 22;
         field_d = null;
         field_b = null;

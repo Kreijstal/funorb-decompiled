@@ -30,47 +30,12 @@ final class mj extends qr {
     static io field_Sb;
 
     final static void a(int param0, boolean param1) {
-        L0: {
-          if (dn.field_k != null) {
+        if (!(dn.field_k == null)) {
             dk.a((byte) 54, dn.field_k);
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        if (hp.field_m == null) {
-          if (param0 != 0) {
+        if (hp.field_m != null) {
+            hp.field_m.a(13505, param1);
             return;
-          } else {
-            L1: {
-              r.a((byte) -82, param1);
-              if (null != tc.field_G) {
-                tc.field_G.b(param1, -68);
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            ho.a(param1, param0 + 8323199);
-            return;
-          }
-        } else {
-          hp.field_m.a(13505, param1);
-          if (param0 != 0) {
-            return;
-          } else {
-            L2: {
-              r.a((byte) -82, param1);
-              if (null != tc.field_G) {
-                tc.field_G.b(param1, -68);
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            ho.a(param1, param0 + 8323199);
-            return;
-          }
         }
     }
 
@@ -230,7 +195,8 @@ final class mj extends qr {
         try {
             ((mj) this).field_Cb = param0;
             var5 = (CharSequence) (Object) ((mj) this).field_Db;
-            String discarded$0 = ji.a(var5, true);
+            int discarded$0 = 1;
+            String discarded$1 = ji.a(var5);
         } catch (RuntimeException runtimeException) {
             throw r.a((Throwable) (Object) runtimeException, "mj.A(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
@@ -286,7 +252,7 @@ final class mj extends qr {
                   break L1;
                 } else {
                   var6_int = param5[0].field_o;
-                  var7 = param5[param1].field_o;
+                  var7 = param5[2].field_o;
                   var8 = param5[1].field_o;
                   param5[0].d(param4, param3, param2);
                   param5[2].d(-var7 + (param4 - -param0), param3, param2);
@@ -315,7 +281,7 @@ final class mj extends qr {
           L3: {
             var6 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var6;
-            stackOut_10_1 = new StringBuilder().append("mj.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_10_1 = new StringBuilder().append("mj.C(").append(param0).append(44).append(2).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -387,7 +353,8 @@ final class mj extends qr {
             ((mj) this).field_Cb = param1;
             ((mj) this).field_Ib = param2;
             var6 = (CharSequence) (Object) ((mj) this).field_Db;
-            String discarded$0 = ji.a(var6, true);
+            int discarded$0 = 1;
+            String discarded$1 = ji.a(var6);
         } catch (RuntimeException runtimeException) {
             throw r.a((Throwable) (Object) runtimeException, "mj.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }

@@ -423,7 +423,7 @@ final class gf {
         return ((gf) this).a(16510, ((gf) this).field_F, ((gf) this).field_d);
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         L0: {
           kj.field_b[2] = 240;
           ih.field_O[2] = 180;
@@ -446,7 +446,8 @@ final class gf {
           if (0 >= hb.field_g) {
             break L0;
           } else {
-            if (ea.a(sb.field_d, 0)) {
+            int discarded$1 = 0;
+            if (ea.a(sb.field_d)) {
               dl.a(new int[7], 200, 200, 1, 540, 30, (byte) 122);
               th.field_a[1] = new ld(1);
               break L0;

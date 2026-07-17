@@ -12,28 +12,28 @@ abstract class pf {
 
     abstract void a(byte[] param0, int param1);
 
-    final static void a(int param0, dl param1, byte param2) {
+    final static void a(int param0, dl param1) {
         ml var4 = null;
         try {
             int var3_int = 84;
             var4 = or.field_d;
-            var4.b(param0, (byte) -80);
+            var4.b(5, (byte) -80);
             var4.a(125, 2);
             var4.a(119, 0);
             var4.a(108, param1.field_e);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "pf.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + -114 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "pf.A(" + 5 + 44 + (param1 != null ? "{...}" : "null") + 44 + -114 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_e = null;
         field_d = null;
         field_b = null;
     }
 
-    final static void a(iw param0, int param1) {
+    final static void a(iw param0) {
         int var2_int = 0;
         try {
             pl.field_d = param0.a((byte) 81) << 5;

@@ -100,7 +100,7 @@ final class ps {
         qn.field_d = null;
     }
 
-    private final void a(byte[] param0, int param1) {
+    private final void a(byte[] param0) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -143,7 +143,8 @@ final class ps {
         try {
           L0: {
             L1: {
-              var17 = new rb(pn.a(param0, 0));
+              int discarded$5 = 0;
+              var17 = new rb(pn.a(param0));
               var4 = var17.g(-112);
               if (var4 < 5) {
                 break L1;
@@ -203,9 +204,9 @@ final class ps {
                           break L6;
                         } else {
                           L8: {
-                            int dupTemp$4 = var8 + var17.c((byte) 127);
-                            var8 = dupTemp$4;
-                            ((ps) this).field_o[var10] = dupTemp$4;
+                            int dupTemp$6 = var8 + var17.c((byte) 127);
+                            var8 = dupTemp$6;
+                            ((ps) this).field_o[var10] = dupTemp$6;
                             if (((ps) this).field_o[var10] <= var9) {
                               break L8;
                             } else {
@@ -223,9 +224,9 @@ final class ps {
                           break L6;
                         } else {
                           L10: {
-                            int dupTemp$5 = var8 + var17.i((byte) 0);
-                            var8 = dupTemp$5;
-                            ((ps) this).field_o[var10] = dupTemp$5;
+                            int dupTemp$7 = var8 + var17.i((byte) 0);
+                            var8 = dupTemp$7;
+                            ((ps) this).field_o[var10] = dupTemp$7;
                             if (((ps) this).field_o[var10] > var9) {
                               var9 = ((ps) this).field_o[var10];
                               break L10;
@@ -335,10 +336,10 @@ final class ps {
                                           continue L21;
                                         } else {
                                           L24: {
-                                            int dupTemp$6 = var8 + var17.i((byte) 0);
-                                            var8 = dupTemp$6;
-                                            ((ps) this).field_q[var11][var14] = dupTemp$6;
-                                            var15 = dupTemp$6;
+                                            int dupTemp$8 = var8 + var17.i((byte) 0);
+                                            var8 = dupTemp$8;
+                                            ((ps) this).field_q[var11][var14] = dupTemp$8;
+                                            var15 = dupTemp$8;
                                             if (var15 > var13) {
                                               var13 = var15;
                                               break L24;
@@ -388,10 +389,10 @@ final class ps {
                                           continue L26;
                                         } else {
                                           L29: {
-                                            int dupTemp$7 = var8 + var17.c((byte) 124);
-                                            var8 = dupTemp$7;
-                                            ((ps) this).field_q[var11][var14] = dupTemp$7;
-                                            var15 = dupTemp$7;
+                                            int dupTemp$9 = var8 + var17.c((byte) 124);
+                                            var8 = dupTemp$9;
+                                            ((ps) this).field_q[var11][var14] = dupTemp$9;
+                                            var15 = dupTemp$9;
                                             if (var13 >= var15) {
                                               break L29;
                                             } else {
@@ -512,11 +513,11 @@ final class ps {
         }
     }
 
-    final static void b(int param0) {
-        oi.a(param0, 20665);
+    final static void b() {
+        oi.a(17, 20665);
     }
 
-    final static void a(int param0, boolean param1, java.awt.Canvas param2, int param3) {
+    final static void a(int param0, boolean param1, java.awt.Canvas param2) {
         java.awt.Graphics var4 = null;
         Exception var4_ref = null;
         RuntimeException var4_ref2 = null;
@@ -540,13 +541,9 @@ final class ps {
           try {
             L0: {
               var4 = param2.getGraphics();
-              cl.field_fb.a(118, var4, 0, param0);
-              if (!param1) {
-                var4.dispose();
-                break L0;
-              } else {
-                return;
-              }
+              cl.field_fb.a(118, var4, 0, 0);
+              var4.dispose();
+              break L0;
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -561,7 +558,7 @@ final class ps {
           L2: {
             var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var4_ref2;
-            stackOut_6_1 = new StringBuilder().append("ps.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_6_1 = new StringBuilder().append("ps.C(").append(0).append(44).append(0).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -588,7 +585,7 @@ final class ps {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_e = null;
         field_f = null;
@@ -612,7 +609,8 @@ final class ps {
                     }
                 }
             }
-            this.a(param0, 100);
+            int discarded$0 = 100;
+            this.a(param0);
         } catch (RuntimeException runtimeException) {
             throw pn.a((Throwable) (Object) runtimeException, "ps.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }

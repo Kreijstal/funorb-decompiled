@@ -9,7 +9,7 @@ final class kr extends Exception {
     static v field_a;
     static String[] field_f;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
         field_e = null;
         field_d = null;
@@ -157,32 +157,24 @@ final class kr extends Exception {
           } else {
             if (param3 <= var9) {
               L2: {
-                if (param0 >= 24) {
+                var10 = (long)(-param3 + param2);
+                if (param2 > var9) {
+                  var7 = (int)((long)(param2 - var9) * 65536L / var10);
                   break L2;
                 } else {
-                  field_c = null;
                   break L2;
                 }
               }
               L3: {
-                var10 = (long)(-param3 + param2);
-                if (param2 > var9) {
-                  var7 = (int)((long)(param2 - var9) * 65536L / var10);
+                var12 = (long)(param5 + -param1);
+                if (param3 >= var8) {
                   break L3;
                 } else {
+                  var6 = (int)((long)(-param3 + var8) * 65536L / var10);
                   break L3;
                 }
               }
               L4: {
-                var12 = (long)(param5 + -param1);
-                if (param3 >= var8) {
-                  break L4;
-                } else {
-                  var6 = (int)((long)(-param3 + var8) * 65536L / var10);
-                  break L4;
-                }
-              }
-              L5: {
                 var9 = gf.field_f << 4;
                 param5 = param5 - (int)((long)var7 * var12 >> 16);
                 param2 = param2 - (int)(var10 * (long)var7 >> 16);
@@ -190,7 +182,7 @@ final class kr extends Exception {
                 var8 = gf.field_a << 4;
                 param3 = param3 + (int)(var10 * (long)var6 >> 16);
                 if (param5 >= param1) {
-                  break L5;
+                  break L4;
                 } else {
                   var14 = param3;
                   param3 = param2;
@@ -198,31 +190,31 @@ final class kr extends Exception {
                   var14 = param1;
                   param1 = param5;
                   param5 = var14;
-                  break L5;
+                  break L4;
                 }
               }
-              L6: {
+              L5: {
                 if (param5 < var8) {
-                  break L6;
+                  break L5;
                 } else {
                   if (param1 <= var9) {
-                    L7: {
+                    L6: {
                       var7 = 0;
                       var6 = 0;
                       var12 = (long)(param5 + -param1);
                       if (var9 >= param5) {
-                        break L7;
+                        break L6;
                       } else {
                         var7 = (int)((long)(-var9 + param5) * 65536L / (long)(param5 + -param1));
-                        break L7;
+                        break L6;
                       }
                     }
-                    L8: {
+                    L7: {
                       if (param1 >= var8) {
-                        break L8;
+                        break L7;
                       } else {
                         var6 = (int)(65536L * (long)(-param1 + var8) / (long)(param5 - param1));
-                        break L8;
+                        break L7;
                       }
                     }
                     var10 = (long)(-param3 + param2);
@@ -233,7 +225,7 @@ final class kr extends Exception {
                     ar.a(param2, param3, param5, (byte) -1, param1, param4);
                     return;
                   } else {
-                    break L6;
+                    break L5;
                   }
                 }
               }
@@ -434,21 +426,13 @@ final class kr extends Exception {
               break L4;
             }
           }
-          L5: {
-            if (param1 == -55) {
-              break L5;
-            } else {
-              ik discarded$1 = kr.b((byte) 124);
-              break L5;
-            }
-          }
           var8 = var8 << 4;
           var12++;
-          L6: while (true) {
+          L5: while (true) {
             if (var15 <= var12) {
               return;
             } else {
-              L7: {
+              L6: {
                 var17 = var12;
                 var18 = var14 >> 16;
                 var19 = param4;
@@ -456,7 +440,7 @@ final class kr extends Exception {
                 if (gf.field_i <= var17) {
                   if (var17 < gf.field_l) {
                     if (var18 < gf.field_a) {
-                      break L7;
+                      break L6;
                     } else {
                       if (gf.field_f > var18) {
                         var20 = (int)(Math.pow((double)var20 / 256.0, 0.55) * 256.0);
@@ -471,25 +455,25 @@ final class kr extends Exception {
                         var19 = var19 + (-16711936 & (-var20 + 256) * (16711935 & var23));
                         var21 = var21 + (16711680 & (256 - var20) * (var23 & 65280));
                         gf.field_h[var22] = ee.a(var21, var19) >>> 8;
-                        break L7;
+                        break L6;
                       } else {
-                        break L7;
+                        break L6;
                       }
                     }
                   } else {
-                    break L7;
+                    break L6;
                   }
                 } else {
-                  break L7;
+                  break L6;
                 }
               }
-              L8: {
+              L7: {
                 var17 = var12;
                 var18 = (var14 >> 16) - -1;
                 var19 = param4;
                 var20 = (var14 & 65489) >> 8;
                 if (var17 < gf.field_i) {
-                  break L8;
+                  break L7;
                 } else {
                   if (gf.field_l > var17) {
                     if (var18 >= gf.field_a) {
@@ -506,27 +490,27 @@ final class kr extends Exception {
                         var21 = var21 + ((256 - var20) * (65280 & var23) & 16711680);
                         var19 = var19 + (-16711936 & (16711935 & var23) * (256 + -var20));
                         gf.field_h[var22] = ee.a(var19, var21) >>> 8;
-                        break L8;
+                        break L7;
                       } else {
-                        break L8;
+                        break L7;
                       }
                     } else {
-                      break L8;
+                      break L7;
                     }
                   } else {
-                    break L8;
+                    break L7;
                   }
                 }
               }
               var14 = var14 + var8;
               var12++;
-              continue L6;
+              continue L5;
             }
           }
         } else {
-          L9: {
+          L8: {
             if (16 <= var7) {
-              L10: {
+              L9: {
                 var8 = param2 >> 4;
                 var9 = param5 >> 4;
                 var10 = param4;
@@ -535,7 +519,7 @@ final class kr extends Exception {
                   if (var8 < gf.field_l) {
                     if (var9 >= gf.field_a) {
                       if (var9 >= gf.field_f) {
-                        break L10;
+                        break L9;
                       } else {
                         var11 = (int)(256.0 * Math.pow((double)var11 / 256.0, 0.55));
                         var12 = 65280 & var10;
@@ -549,31 +533,31 @@ final class kr extends Exception {
                         var12 = var12 + ((-var11 + 256) * (65280 & var14) & 16711680);
                         var10 = var10 + (-16711936 & (var14 & 16711935) * (256 - var11));
                         gf.field_h[var13] = ee.a(var10, var12) >>> 8;
-                        break L10;
+                        break L9;
                       }
                     } else {
-                      break L10;
+                      break L9;
                     }
                   } else {
-                    break L10;
+                    break L9;
                   }
                 } else {
-                  break L10;
+                  break L9;
                 }
               }
-              L11: {
+              L10: {
                 var8 = param2 >> 4;
                 var9 = param0 >> 4;
                 var10 = param4;
                 var11 = (15 & param0) * (16 + -(15 & param2));
                 if (gf.field_i > var8) {
-                  break L11;
+                  break L10;
                 } else {
                   if (gf.field_l <= var8) {
-                    break L11;
+                    break L10;
                   } else {
                     if (gf.field_a > var9) {
-                      break L11;
+                      break L10;
                     } else {
                       if (gf.field_f > var9) {
                         var11 = (int)(Math.pow((double)var11 / 256.0, 0.55) * 256.0);
@@ -588,15 +572,15 @@ final class kr extends Exception {
                         var12 = var12 + ((-var11 + 256) * (var14 & 65280) & 16711680);
                         var10 = var10 + (-16711936 & (-var11 + 256) * (var14 & 16711935));
                         gf.field_h[var13] = ee.a(var10, var12) >>> 8;
-                        break L11;
+                        break L10;
                       } else {
-                        break L11;
+                        break L10;
                       }
                     }
                   }
                 }
               }
-              L12: {
+              L11: {
                 gf.e(param2 >> 4, 1 + (param5 >> 4), (var7 >> 4) - 2, param4, 256 - 16 * (15 & param2));
                 var8 = (param2 >> 4) - -1;
                 var9 = param5 >> 4;
@@ -605,7 +589,7 @@ final class kr extends Exception {
                 if (var8 >= gf.field_i) {
                   if (gf.field_l > var8) {
                     if (var9 < gf.field_a) {
-                      break L12;
+                      break L11;
                     } else {
                       if (var9 < gf.field_f) {
                         var11 = (int)(Math.pow((double)var11 / 256.0, 0.55) * 256.0);
@@ -620,32 +604,32 @@ final class kr extends Exception {
                         var12 = var12 + ((65280 & var14) * (256 - var11) & 16711680);
                         var10 = var10 + ((16711935 & var14) * (-var11 + 256) & -16711936);
                         gf.field_h[var13] = ee.a(var10, var12) >>> 8;
-                        break L12;
+                        break L11;
                       } else {
-                        break L12;
+                        break L11;
                       }
                     }
                   } else {
-                    break L12;
+                    break L11;
                   }
                 } else {
-                  break L12;
+                  break L11;
                 }
               }
-              L13: {
+              L12: {
                 var8 = (param2 >> 4) - -1;
                 var9 = param0 >> 4;
                 var10 = param4;
                 var11 = (15 & param2) * (15 & param0);
                 if (gf.field_i > var8) {
-                  break L13;
+                  break L12;
                 } else {
                   if (var8 < gf.field_l) {
                     if (gf.field_a > var9) {
-                      break L13;
+                      break L12;
                     } else {
                       if (gf.field_f <= var9) {
-                        break L13;
+                        break L12;
                       } else {
                         var11 = (int)(Math.pow((double)var11 / 256.0, 0.55) * 256.0);
                         var12 = var10 & 65280;
@@ -659,31 +643,31 @@ final class kr extends Exception {
                         var10 = var10 + ((var14 & 16711935) * (-var11 + 256) & -16711936);
                         var12 = var12 + (16711680 & (var14 & 65280) * (256 - var11));
                         gf.field_h[var13] = ee.a(var12, var10) >>> 8;
-                        break L13;
+                        break L12;
                       }
                     }
                   } else {
-                    break L13;
+                    break L12;
                   }
                 }
               }
               gf.e(1 + (param2 >> 4), 1 + (param5 >> 4), -2 + (var7 >> 4), param4, (15 & param2) * 16);
-              break L9;
+              break L8;
             } else {
-              L14: {
+              L13: {
                 var8 = param2 >> 4;
                 var9 = param5 >> 4;
                 var10 = param4;
                 var11 = (16 + -(15 & param2)) * var7;
                 if (gf.field_i > var8) {
-                  break L14;
+                  break L13;
                 } else {
                   if (gf.field_l <= var8) {
-                    break L14;
+                    break L13;
                   } else {
                     if (var9 >= gf.field_a) {
                       if (var9 >= gf.field_f) {
-                        break L14;
+                        break L13;
                       } else {
                         var11 = (int)(256.0 * Math.pow((double)var11 / 256.0, 0.55));
                         var12 = var10 & 65280;
@@ -697,10 +681,10 @@ final class kr extends Exception {
                         var10 = var10 + (-16711936 & (var14 & 16711935) * (256 + -var11));
                         var12 = var12 + (16711680 & (-var11 + 256) * (65280 & var14));
                         gf.field_h[var13] = ee.a(var12, var10) >>> 8;
-                        break L14;
+                        break L13;
                       }
                     } else {
-                      break L14;
+                      break L13;
                     }
                   }
                 }
@@ -711,13 +695,13 @@ final class kr extends Exception {
               var11 = (15 & param2) * var7;
               if (gf.field_i <= var8) {
                 if (gf.field_l <= var8) {
-                  break L9;
+                  break L8;
                 } else {
                   if (gf.field_a > var9) {
-                    break L9;
+                    break L8;
                   } else {
                     if (gf.field_f <= var9) {
-                      break L9;
+                      break L8;
                     } else {
                       var11 = (int)(Math.pow((double)var11 / 256.0, 0.55) * 256.0);
                       var12 = 65280 & var10;
@@ -731,12 +715,12 @@ final class kr extends Exception {
                       var12 = var12 + (16711680 & (-var11 + 256) * (var14 & 65280));
                       var10 = var10 + (-16711936 & (16711935 & var14) * (-var11 + 256));
                       gf.field_h[var13] = ee.a(var12, var10) >>> 8;
-                      break L9;
+                      break L8;
                     }
                   }
                 }
               } else {
-                break L9;
+                break L8;
               }
             }
           }

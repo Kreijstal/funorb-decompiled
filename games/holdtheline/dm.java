@@ -8,11 +8,8 @@ final class dm {
     static String field_c;
     static int[] field_e;
 
-    final static void b(byte param0) {
+    final static void b() {
         we var1 = (we) (Object) ug.field_g.a((byte) 74);
-        if (param0 != -10) {
-            return;
-        }
         if (!(var1 != null)) {
             throw new IllegalStateException();
         }
@@ -22,7 +19,7 @@ final class dm {
         fl.field_i.a((byte) -101, (hl) (Object) var1);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_d = null;
         field_e = null;
@@ -71,7 +68,7 @@ final class dm {
         }
     }
 
-    final static void a(da param0, int param1, int param2) {
+    final static void a(da param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

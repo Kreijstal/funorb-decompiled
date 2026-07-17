@@ -13,88 +13,78 @@ final class qi extends jd {
         kg var5 = null;
         kg var6 = null;
         int var7 = 0;
-        Object var8 = null;
+        kg stackIn_6_0 = null;
+        kg stackIn_7_0 = null;
         kg stackIn_8_0 = null;
-        kg stackIn_9_0 = null;
-        kg stackIn_10_0 = null;
-        kg stackIn_10_1 = null;
+        kg stackIn_8_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_18_2 = null;
+        String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
+        kg stackOut_5_0 = null;
         kg stackOut_7_0 = null;
-        kg stackOut_9_0 = null;
-        kg stackOut_9_1 = null;
-        kg stackOut_8_0 = null;
-        kg stackOut_8_1 = null;
+        kg stackOut_7_1 = null;
+        kg stackOut_6_0 = null;
+        kg stackOut_6_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
         RuntimeException stackOut_15_0 = null;
         StringBuilder stackOut_15_1 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
         var7 = Bounce.field_N;
         try {
           L0: {
             L1: {
               super.a((jd) (Object) param2, (byte) -122);
-              if (param1 == -19463) {
-                break L1;
-              } else {
-                var8 = null;
-                ((qi) this).a(10, 115, (tg[]) null);
-                break L1;
-              }
-            }
-            L2: {
               if (!param0) {
                 cb.a((Object[]) (Object) ((qi) this).field_q, 0, (Object[]) (Object) param2.field_q, 0, 6);
-                break L2;
+                break L1;
               } else {
                 var4_int = 0;
-                L3: while (true) {
+                L2: while (true) {
                   if (var4_int >= 6) {
-                    break L2;
+                    break L1;
                   } else {
-                    L4: {
+                    L3: {
                       var5 = ((qi) this).field_q[var4_int];
                       if (var5 == null) {
                         param2.field_q[var4_int] = null;
-                        break L4;
+                        break L3;
                       } else {
-                        L5: {
+                        L4: {
                           var6 = param2.field_q[var4_int];
-                          stackOut_7_0 = (kg) var5;
-                          stackIn_9_0 = stackOut_7_0;
-                          stackIn_8_0 = stackOut_7_0;
+                          stackOut_5_0 = (kg) var5;
+                          stackIn_7_0 = stackOut_5_0;
+                          stackIn_6_0 = stackOut_5_0;
                           if (var6 == null) {
                             kg dupTemp$13 = new kg();
                             param2.field_q[var4_int] = dupTemp$13;
-                            stackOut_9_0 = (kg) (Object) stackIn_9_0;
-                            stackOut_9_1 = (kg) dupTemp$13;
-                            stackIn_10_0 = stackOut_9_0;
-                            stackIn_10_1 = stackOut_9_1;
-                            break L5;
+                            stackOut_7_0 = (kg) (Object) stackIn_7_0;
+                            stackOut_7_1 = (kg) dupTemp$13;
+                            stackIn_8_0 = stackOut_7_0;
+                            stackIn_8_1 = stackOut_7_1;
+                            break L4;
                           } else {
-                            stackOut_8_0 = (kg) (Object) stackIn_8_0;
-                            stackOut_8_1 = (kg) var6;
-                            stackIn_10_0 = stackOut_8_0;
-                            stackIn_10_1 = stackOut_8_1;
-                            break L5;
+                            stackOut_6_0 = (kg) (Object) stackIn_6_0;
+                            stackOut_6_1 = (kg) var6;
+                            stackIn_8_0 = stackOut_6_0;
+                            stackIn_8_1 = stackOut_6_1;
+                            break L4;
                           }
                         }
-                        ((kg) (Object) stackIn_10_0).a(stackIn_10_1, (byte) 55);
-                        break L4;
+                        ((kg) (Object) stackIn_8_0).a(stackIn_8_1, (byte) 55);
+                        break L3;
                       }
                     }
                     var4_int++;
-                    continue L3;
+                    continue L2;
                   }
                 }
               }
@@ -103,33 +93,33 @@ final class qi extends jd {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L5: {
             var4 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var4;
-            stackOut_15_1 = new StringBuilder().append("qi.HA(").append(param0).append(44).append(param1).append(44);
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackOut_13_0 = (RuntimeException) var4;
+            stackOut_13_1 = new StringBuilder().append("qi.HA(").append(param0).append(44).append(-19463).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
             if (param2 == null) {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
-              break L6;
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L5;
             } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
-              break L6;
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L5;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
+          throw ii.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
         }
     }
 
@@ -698,7 +688,7 @@ final class qi extends jd {
         }
     }
 
-    final static boolean a(CharSequence param0, int param1) {
+    final static boolean a(CharSequence param0) {
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
         RuntimeException stackIn_3_0 = null;
@@ -720,7 +710,8 @@ final class qi extends jd {
         String stackOut_3_2 = null;
         try {
           L0: {
-            stackOut_0_0 = pc.a(8272, true, param0, 10);
+            int discarded$2 = 10;
+            stackOut_0_0 = pc.a(8272, true, param0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -844,7 +835,7 @@ final class qi extends jd {
         }
     }
 
-    final static void a(byte[] param0, int param1) {
+    final static void a(byte[] param0) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;

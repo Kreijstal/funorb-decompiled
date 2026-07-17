@@ -74,7 +74,8 @@ final class ou extends fd {
             var10 = var8;
             var3 = var10.h((byte) -109);
             var10.p(-111);
-            sq.field_H = ds.a(var10, (byte) -4);
+            int discarded$1 = -4;
+            sq.field_H = ds.a(var10);
             sm.field_l = new int[var3][];
             ba.field_n = new kk[var3];
             var4 = 0;
@@ -169,56 +170,52 @@ final class ou extends fd {
         var8 = Kickabout.field_G;
         try {
           L0: {
-            if (param2 == 124) {
-              var5_int = ((ou) this).field_n + param1;
-              pt.a(var5_int + -((ou) this).field_v.field_q, -22914, param1 - -((ou) this).field_v.field_q, ((ou) this).field_i + param3, param3);
-              var6 = param1 + -((ou) this).field_H;
-              L1: while (true) {
-                if (var5_int <= var6) {
-                  L2: {
-                    ta.e(param2 + -1);
-                    if (on.field_b > ((ou) this).field_v.field_q + param1) {
-                      break L2;
-                    } else {
-                      iw.a(param2 ^ -84, ((ou) this).field_I);
-                      param0.c(-((ou) this).field_H, 0);
-                      param0.c(((ou) this).field_G * 2 - ((ou) this).field_H, 0);
-                      ((ou) this).field_D.e(0, 0);
-                      ta.e(117);
-                      ((ou) this).field_I.c(param1, param3);
-                      break L2;
-                    }
+            var5_int = ((ou) this).field_n + param1;
+            pt.a(var5_int + -((ou) this).field_v.field_q, -22914, param1 - -((ou) this).field_v.field_q, ((ou) this).field_i + param3, param3);
+            var6 = param1 + -((ou) this).field_H;
+            L1: while (true) {
+              if (var5_int <= var6) {
+                L2: {
+                  ta.e(123);
+                  if (on.field_b > ((ou) this).field_v.field_q + param1) {
+                    break L2;
+                  } else {
+                    iw.a(-48, ((ou) this).field_I);
+                    param0.c(-((ou) this).field_H, 0);
+                    param0.c(((ou) this).field_G * 2 - ((ou) this).field_H, 0);
+                    ((ou) this).field_D.e(0, 0);
+                    ta.e(117);
+                    ((ou) this).field_I.c(param1, param3);
+                    break L2;
                   }
-                  L3: {
-                    if (on.field_c < var5_int + -((ou) this).field_v.field_q) {
-                      break L3;
-                    } else {
-                      iw.a(-107, ((ou) this).field_I);
-                      var7 = ((ou) this).field_n + -((ou) this).field_v.field_q + ((ou) this).field_H;
-                      L4: while (true) {
-                        if (var7 <= ((ou) this).field_G * 2) {
-                          param0.c(-var7, 0);
-                          param0.c(-var7 + 2 * ((ou) this).field_G, 0);
-                          ((ou) this).field_v.e(0, 0);
-                          ta.e(120);
-                          ((ou) this).field_I.c(-((ou) this).field_v.field_q + var5_int, param3);
-                          break L3;
-                        } else {
-                          var7 = var7 - ((ou) this).field_G * 2;
-                          continue L4;
-                        }
+                }
+                L3: {
+                  if (on.field_c < var5_int + -((ou) this).field_v.field_q) {
+                    break L3;
+                  } else {
+                    iw.a(-107, ((ou) this).field_I);
+                    var7 = ((ou) this).field_n + -((ou) this).field_v.field_q + ((ou) this).field_H;
+                    L4: while (true) {
+                      if (var7 <= ((ou) this).field_G * 2) {
+                        param0.c(-var7, 0);
+                        param0.c(-var7 + 2 * ((ou) this).field_G, 0);
+                        ((ou) this).field_v.e(0, 0);
+                        ta.e(120);
+                        ((ou) this).field_I.c(-((ou) this).field_v.field_q + var5_int, param3);
+                        break L3;
+                      } else {
+                        var7 = var7 - ((ou) this).field_G * 2;
+                        continue L4;
                       }
                     }
                   }
-                  break L0;
-                } else {
-                  param0.c(var6, param3);
-                  var6 = var6 + param0.field_q;
-                  continue L1;
                 }
+                break L0;
+              } else {
+                param0.c(var6, param3);
+                var6 = var6 + param0.field_q;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -249,7 +246,7 @@ final class ou extends fd {
               break L5;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw nb.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 44 + 124 + 44 + param3 + 41);
         }
     }
 
@@ -273,12 +270,14 @@ final class ou extends fd {
         }
         ((ou) this).field_E = param2;
         ((ou) this).field_x = (16711422 & param1) >> 1;
-        this.a((byte) 121);
+        int discarded$0 = 121;
+        this.a();
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         super.a(param0, param1, param2, param3, param4);
-        this.a((byte) 121);
+        int discarded$0 = 121;
+        this.a();
     }
 
     private final ut a(int param0, int param1, int param2) {
@@ -292,64 +291,60 @@ final class ou extends fd {
         int var12 = 0;
         int var13 = 0;
         ut var14 = null;
-        int stackIn_7_0 = 0;
-        int stackIn_10_0 = 0;
+        int stackIn_5_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_7_0 = 0;
         int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
         var13 = Kickabout.field_G;
         var14 = new ut(((ou) this).field_G * 2, ((ou) this).field_i);
         iw.a(-66, var14);
-        if (param0 == -257) {
-          var5 = ((ou) this).field_i >> 1;
-          var6 = 0;
-          L0: while (true) {
-            if (((ou) this).field_i <= var6) {
-              ta.e(122);
-              return var14;
-            } else {
-              L1: {
-                var7 = (2 * ((ou) this).field_G + -1) * (var6 >> 1) % (((ou) this).field_G * 2);
-                var8 = param2 & 16711935;
-                var9 = param2 & 65280;
-                var10 = var6 - var5;
-                var11 = (int)(Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5 * 128.0) + 128;
-                if (var11 < 256) {
-                  stackOut_6_0 = (var11 * var8 & -16711936 | 16711680 & var9 * var11) >>> 8;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = var8 | var9;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
+        var5 = ((ou) this).field_i >> 1;
+        var6 = 0;
+        L0: while (true) {
+          if (((ou) this).field_i <= var6) {
+            ta.e(122);
+            return var14;
+          } else {
+            L1: {
+              var7 = (2 * ((ou) this).field_G + -1) * (var6 >> 1) % (((ou) this).field_G * 2);
+              var8 = param2 & 16711935;
+              var9 = param2 & 65280;
+              var10 = var6 - var5;
+              var11 = (int)(Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5 * 128.0) + 128;
+              if (var11 < 256) {
+                stackOut_4_0 = (var11 * var8 & -16711936 | 16711680 & var9 * var11) >>> 8;
+                stackIn_5_0 = stackOut_4_0;
+                break L1;
+              } else {
+                stackOut_3_0 = var8 | var9;
+                stackIn_5_0 = stackOut_3_0;
+                break L1;
               }
-              L2: {
-                var12 = stackIn_7_0;
-                on.f(var7, var6, ((ou) this).field_G, var12);
-                var9 = 65280 & param1;
-                on.f(-(((ou) this).field_G * 2) + var7, var6, ((ou) this).field_G, var12);
-                var8 = param1 & 16711935;
-                if (256 <= var11) {
-                  stackOut_9_0 = var8 | var9;
-                  stackIn_10_0 = stackOut_9_0;
-                  break L2;
-                } else {
-                  stackOut_8_0 = (-16711936 & var11 * var8 | var11 * var9 & 16711680) >>> 8;
-                  stackIn_10_0 = stackOut_8_0;
-                  break L2;
-                }
-              }
-              var12 = stackIn_10_0;
-              on.f(var7 - -((ou) this).field_G, var6, ((ou) this).field_G, var12);
-              on.f(-((ou) this).field_G + var7, var6, ((ou) this).field_G, var12);
-              var6++;
-              continue L0;
             }
+            L2: {
+              var12 = stackIn_5_0;
+              on.f(var7, var6, ((ou) this).field_G, var12);
+              var9 = 65280 & param1;
+              on.f(-(((ou) this).field_G * 2) + var7, var6, ((ou) this).field_G, var12);
+              var8 = param1 & 16711935;
+              if (256 <= var11) {
+                stackOut_7_0 = var8 | var9;
+                stackIn_8_0 = stackOut_7_0;
+                break L2;
+              } else {
+                stackOut_6_0 = (-16711936 & var11 * var8 | var11 * var9 & 16711680) >>> 8;
+                stackIn_8_0 = stackOut_6_0;
+                break L2;
+              }
+            }
+            var12 = stackIn_8_0;
+            on.f(var7 - -((ou) this).field_G, var6, ((ou) this).field_G, var12);
+            on.f(-((ou) this).field_G + var7, var6, ((ou) this).field_G, var12);
+            var6++;
+            continue L0;
           }
-        } else {
-          return null;
         }
     }
 
@@ -462,7 +457,7 @@ final class ou extends fd {
         }
     }
 
-    private final void a(byte param0) {
+    private final void a() {
         ((ou) this).field_z = new ut[]{this.a(-257, ((ou) this).field_A, ((ou) this).field_E), this.a(-257, ((ou) this).field_x, ((ou) this).field_F)};
         ((ou) this).field_v = this.a(false);
         ((ou) this).field_D = ((ou) this).field_v.f();
@@ -470,9 +465,6 @@ final class ou extends fd {
     }
 
     final static int b(int param0, int param1, int param2, boolean param3) {
-        if (param1 != -1951459327) {
-            return 80;
-        }
         return hg.g(100);
     }
 

@@ -15,7 +15,7 @@ final class bo {
     static int[] field_c;
     static long field_e;
 
-    final static void a(int param0, int param1) {
+    final static void a() {
         fa var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -32,13 +32,13 @@ final class bo {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    sd.a(true, param0);
+                    sd.a(true, 6);
                     var2 = bq.field_a.f(1504642273);
                     continue L2;
                   }
                 }
               } else {
-                dq.a(param0, -18989, var4);
+                dq.a(6, -18989, var4);
                 var4 = (og) (Object) wk.field_g.f(1504642273);
                 continue L1;
               }
@@ -47,7 +47,7 @@ final class bo {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var2_ref, "bo.D(" + param0 + 44 + 7 + 41);
+          throw aa.a((Throwable) (Object) var2_ref, "bo.D(" + 6 + 44 + 7 + 41);
         }
     }
 
@@ -79,13 +79,13 @@ final class bo {
         int var3 = 0;
         if (param2 == 1) {
           if (!sh.a(false, param1)) {
-            var3 = 54 / ((43 - param0) / 45);
+            var3 = 27;
             return gb.field_e[param2];
           } else {
             return 29;
           }
         } else {
-          var3 = 54 / ((43 - param0) / 45);
+          var3 = 27;
           return gb.field_e[param2];
         }
     }

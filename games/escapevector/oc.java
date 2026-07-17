@@ -219,7 +219,7 @@ final class oc extends fl {
         return true;
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_z = null;
         field_D = null;
         field_r = null;
@@ -232,62 +232,55 @@ final class oc extends fl {
         te var9 = null;
         Exception var9_ref = null;
         int var10 = 0;
-        te stackIn_8_0 = null;
+        te stackIn_6_0 = null;
         Throwable decompiledCaughtException = null;
-        te stackOut_7_0 = null;
-        te stackOut_6_0 = null;
+        te stackOut_5_0 = null;
+        te stackOut_4_0 = null;
         var10 = EscapeVector.field_A;
         var7 = -param5 + param4;
         L0: while (true) {
           if (-param2 >= var7) {
             L1: {
-              if (param1 == -641) {
-                break L1;
-              } else {
-                this.e(-1, -98);
-                break L1;
-              }
-            }
-            L2: {
               var7 = var7 + ma.field_a.field_n;
               if (((oc) this).field_q) {
-                stackOut_7_0 = gi.field_c;
-                stackIn_8_0 = stackOut_7_0;
-                break L2;
+                stackOut_5_0 = gi.field_c;
+                stackIn_6_0 = stackOut_5_0;
+                break L1;
               } else {
-                stackOut_6_0 = rl.field_k;
-                stackIn_8_0 = stackOut_6_0;
-                break L2;
+                stackOut_4_0 = rl.field_k;
+                stackIn_6_0 = stackOut_4_0;
+                break L1;
               }
             }
-            var8 = stackIn_8_0;
+            var8 = stackIn_6_0;
             try {
-              L3: {
-                var9 = this.e((byte) 96);
-                L4: while (true) {
+              L2: {
+                int discarded$2 = 96;
+                var9 = this.e();
+                L3: while (true) {
                   if (var7 >= 640) {
-                    break L3;
+                    break L2;
                   } else {
-                    L5: {
+                    L4: {
                       var8.a(var7, param0 + -param3);
                       if (var9 != null) {
                         var9.a(var7, -param3 + param0);
-                        break L5;
+                        break L4;
                       } else {
-                        break L5;
+                        break L4;
                       }
                     }
                     var7 = var7 + ma.field_a.field_n;
-                    continue L4;
+                    continue L3;
                   }
                 }
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              L6: {
+              L5: {
                 var9_ref = (Exception) (Object) decompiledCaughtException;
                 System.out.println("Error");
-                break L6;
+                break L5;
               }
             }
             return;
@@ -306,31 +299,21 @@ final class oc extends fl {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        Object var12 = null;
-        L0: {
-          var11 = EscapeVector.field_A;
-          if (param2 > 8) {
-            break L0;
-          } else {
-            var12 = null;
-            this.a(-110, (te) null, (te) null);
-            break L0;
-          }
-        }
+        var11 = EscapeVector.field_A;
         var5 = 0;
-        L1: while (true) {
+        L0: while (true) {
           if (var5 >= ((oc) this).field_F) {
             return;
           } else {
-            L2: {
+            L1: {
               if (null == ((oc) this).field_E) {
-                break L2;
+                break L1;
               } else {
                 if (((oc) this).field_E[var5]) {
-                  break L2;
+                  break L1;
                 } else {
                   var5++;
-                  continue L1;
+                  continue L0;
                 }
               }
             }
@@ -366,7 +349,7 @@ final class oc extends fl {
             kh.a((byte) -114, var10, -1 + 2 * param3 + var8);
             kh.a((byte) 119, var10, 1 + var8 - -(2 * param3));
             var5++;
-            continue L1;
+            continue L0;
           }
         }
     }
@@ -383,7 +366,7 @@ final class oc extends fl {
         }
     }
 
-    private final void g(byte param0) {
+    private final void g() {
         int var2 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -472,13 +455,10 @@ final class oc extends fl {
     final static void a(byte param0, java.awt.Component param1) {
         param1.setFocusTraversalKeysEnabled(false);
         param1.addKeyListener((java.awt.event.KeyListener) (Object) ck.field_v);
-        if (param0 != -38) {
-            return;
-        }
         try {
             param1.addFocusListener((java.awt.event.FocusListener) (Object) ck.field_v);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "oc.Q(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "oc.Q(" + -38 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -828,7 +808,8 @@ final class oc extends fl {
         int var7 = -100 % ((-7 - param2) / 38);
         if (rl.field_k == null) {
             rl.field_k = new te(param3 + -param5, param4 - param1, 256);
-            this.g((byte) -82);
+            int discarded$0 = -82;
+            this.g();
         } else {
             rl.field_k.field_g = param0;
             rl.field_k.field_a = param0;
@@ -1091,7 +1072,7 @@ final class oc extends fl {
         }
     }
 
-    private final te e(byte param0) {
+    private final te e() {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;

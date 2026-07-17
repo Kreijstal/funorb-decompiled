@@ -16,7 +16,7 @@ final class wf extends uf {
     byte[][][] field_o;
     static int field_t;
 
-    final static int a(String param0, boolean param1) {
+    final static int a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -94,7 +94,7 @@ final class wf extends uf {
         return stackIn_11_0;
     }
 
-    final static void c(int param0) {
+    final static void c() {
         dg.field_d = false;
         ia.field_r = null;
         kj.field_c = null;
@@ -166,7 +166,7 @@ final class wf extends uf {
         try {
           L0: {
             var2_int = param1.length();
-            var3 = param0;
+            var3 = 0;
             L1: while (true) {
               if (var3 >= var2_int) {
                 stackOut_9_0 = ge.field_a;
@@ -192,7 +192,7 @@ final class wf extends uf {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var2;
-            stackOut_11_1 = new StringBuilder().append("wf.A(").append(param0).append(44);
+            stackOut_11_1 = new StringBuilder().append("wf.A(").append(0).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;

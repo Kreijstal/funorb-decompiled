@@ -123,56 +123,29 @@ final class db extends rqa {
         }
     }
 
-    final static boolean a(int param0) {
-        int stackIn_7_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_6_0 = 0;
+    final static boolean a() {
+        int stackIn_6_0 = 0;
         int stackOut_5_0 = 0;
-        if (param0 == 70) {
-          if (vq.field_x != null) {
-            if (vq.field_x.field_e == null) {
-              return false;
-            } else {
-              L0: {
-                if (vq.field_x.field_e.field_b.field_a != 1) {
-                  stackOut_15_0 = 0;
-                  stackIn_16_0 = stackOut_15_0;
-                  break L0;
-                } else {
-                  stackOut_14_0 = 1;
-                  stackIn_16_0 = stackOut_14_0;
-                  break L0;
-                }
-              }
-              return stackIn_16_0 != 0;
-            }
-          } else {
+        int stackOut_4_0 = 0;
+        if (vq.field_x != null) {
+          if (vq.field_x.field_e == null) {
             return false;
+          } else {
+            L0: {
+              if (vq.field_x.field_e.field_b.field_a != 1) {
+                stackOut_5_0 = 0;
+                stackIn_6_0 = stackOut_5_0;
+                break L0;
+              } else {
+                stackOut_4_0 = 1;
+                stackIn_6_0 = stackOut_4_0;
+                break L0;
+              }
+            }
+            return stackIn_6_0 != 0;
           }
         } else {
-          field_p = null;
-          if (vq.field_x != null) {
-            if (vq.field_x.field_e == null) {
-              return false;
-            } else {
-              L1: {
-                if (vq.field_x.field_e.field_b.field_a != 1) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              return stackIn_7_0 != 0;
-            }
-          } else {
-            return false;
-          }
+          return false;
         }
     }
 
@@ -466,7 +439,7 @@ final class db extends rqa {
         try {
           L0: {
             var20 = null;
-            mk.a((byte) 25, param15, param3, param4, param18, param13, param8, param2, param16, param1, param9, args, param17, param14, param5, param10, (String[]) null, param12, param7, param6);
+            mk.a((byte) 25, param15, param3, param4, param18, param13, param8, param2, param16, param1, param9, args, param17, 1, param5, 8, (String[]) null, true, 1, param6);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -649,7 +622,7 @@ final class db extends rqa {
           }
           L8: {
             stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(44).append(param7).append(44);
+            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(44).append(1).append(44);
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -699,7 +672,7 @@ final class db extends rqa {
           }
           L10: {
             stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-            stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(44).append(param10).append(44).append(param11).append(44).append(param12).append(44);
+            stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(44).append(8).append(44).append(1).append(44).append(1).append(44);
             stackIn_31_0 = stackOut_29_0;
             stackIn_31_1 = stackOut_29_1;
             stackIn_30_0 = stackOut_29_0;
@@ -724,7 +697,7 @@ final class db extends rqa {
           }
           L11: {
             stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-            stackOut_32_1 = ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(44).append(param14).append(44);
+            stackOut_32_1 = ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(44).append(1).append(44);
             stackIn_34_0 = stackOut_32_0;
             stackIn_34_1 = stackOut_32_1;
             stackIn_33_0 = stackOut_32_0;
@@ -826,7 +799,7 @@ final class db extends rqa {
         }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_p = null;
         field_r = null;
         field_o = null;

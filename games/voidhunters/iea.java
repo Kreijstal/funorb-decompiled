@@ -8,7 +8,7 @@ final class iea extends ksa {
         throw new Error();
     }
 
-    final static boolean a(int param0, int param1, byte param2) {
+    final static boolean a(int param0, int param1) {
         int var3 = 0;
         return plb.a(param0, false, param1) & eta.a(param1, -1104, param0);
     }

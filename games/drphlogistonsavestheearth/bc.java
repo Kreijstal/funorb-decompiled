@@ -10,7 +10,7 @@ final class bc {
     static int field_f;
     static String[] field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
         field_e = null;
@@ -19,7 +19,7 @@ final class bc {
         field_a = null;
     }
 
-    final static vi a(String param0, int param1) {
+    final static vi a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
@@ -62,7 +62,8 @@ final class bc {
                     var4 = param0.substring(var2_int - -1);
                     var5 = qg.b((byte) 71, var3);
                     if (var5 == null) {
-                      stackOut_13_0 = pd.a(var4, -1);
+                      int discarded$2 = -1;
+                      stackOut_13_0 = pd.a(var4);
                       stackIn_14_0 = stackOut_13_0;
                       break L0;
                     } else {

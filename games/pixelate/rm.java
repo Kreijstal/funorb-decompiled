@@ -12,7 +12,7 @@ final class rm {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         int var1 = 0;
         field_b = null;

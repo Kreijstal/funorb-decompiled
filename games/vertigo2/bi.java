@@ -132,7 +132,7 @@ final class bi {
           qq.a(var34, 0, param8);
           qq.a(var35, 0, param8);
           var12 = 16384 / (2 * param3 + 1);
-          var13 = param4 - param3;
+          var13 = 0 - param3;
           if (var13 >= 0) {
             break L2;
           } else {
@@ -141,8 +141,8 @@ final class bi {
           }
         }
         L3: {
-          var14 = param7 + var13 * field_e;
-          var15 = param4 + param3;
+          var14 = var13 * field_e;
+          var15 = param3;
           var16 = 0;
           if (var15 < field_j) {
             break L3;
@@ -162,7 +162,7 @@ final class bi {
                 L6: {
                   param2 = param2 + param6;
                   var13 = 1 - param5;
-                  var18 = 1 + param3 - param5 - param4;
+                  var18 = 1 + param3 - param5;
                   if (0 >= var18) {
                     break L6;
                   } else {
@@ -171,7 +171,7 @@ final class bi {
                   }
                 }
                 L7: {
-                  var19 = param7 + (param4 - param3) * field_e;
+                  var19 = (0 - param3) * field_e;
                   if (var13 >= var18) {
                     break L7;
                   } else {
@@ -182,7 +182,7 @@ final class bi {
                 L8: while (true) {
                   if (var13 >= var18) {
                     L9: {
-                      var18 = field_j - param4 - param5 - param3;
+                      var18 = field_j - param5 - param3;
                       if (0 >= var18) {
                         break L9;
                       } else {
@@ -424,7 +424,7 @@ final class bi {
                     }
                   } else {
                     L26: {
-                      if (var13 + param4 + param5 + param3 >= field_c) {
+                      if (var13 + param5 + param3 >= field_c) {
                         var14 = var14 + field_e;
                         break L26;
                       } else {
@@ -586,7 +586,7 @@ final class bi {
           } else {
             var11 = 65536 - var6 >> 8;
             var12 = var6 >> 8;
-            var13 = ((param4 & 16711935) * var11 + (param5 & 16711935) * var12 & -16711936) + ((param4 & 65280) * var11 + (param5 & 65280) * var12 & 16711680) >>> 8;
+            var13 = (16711935 * var11 + 3342387 * var12 & -16711936) + (65280 * var11 + 13056 * var12 & 16711680) >>> 8;
             var14 = -param2;
             L5: while (true) {
               if (var14 >= 0) {
@@ -661,7 +661,7 @@ final class bi {
         int var23 = 0;
         L0: {
           var8 = 16384 / (2 * param3 + 1);
-          var9 = 1 + param3 - param5 - param4;
+          var9 = 1 + param3 - param5;
           if (0 >= var9) {
             break L0;
           } else {
@@ -670,7 +670,7 @@ final class bi {
           }
         }
         L1: {
-          var10 = field_e - param4 - param5 - param3;
+          var10 = field_e - param5 - param3;
           if (0 >= var10) {
             break L1;
           } else {
@@ -680,7 +680,7 @@ final class bi {
         }
         L2: {
           var11 = 0;
-          var12 = param4 + param3 + 1;
+          var12 = param3 + 1;
           if (field_e >= var12) {
             break L2;
           } else {
@@ -700,7 +700,7 @@ final class bi {
               var16 = 0;
               var17 = param2 - param3;
               var18 = var17 - (param3 << 1) - 1;
-              var19 = param4 - param3;
+              var19 = 0 - param3;
               if (var19 >= 0) {
                 break L4;
               } else {
@@ -857,7 +857,7 @@ final class bi {
                   } else {
                     L18: {
                       var18++;
-                      if (param4 + param5 + var19 + param3 >= field_i) {
+                      if (param5 + var19 + param3 >= field_i) {
                         break L18;
                       } else {
                         param1 = param0[var17];
@@ -1236,10 +1236,10 @@ final class bi {
         }
     }
 
-    final static void d(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void d(int param0, int param1) {
         int var6 = 0;
-        for (var6 = 0; var6 < param4; var6++) {
-            bi.e(param0 + var6, param1 + var6, param2 - (var6 << 1), param3 - (var6 << 1), 1);
+        for (var6 = 0; var6 < 2; var6++) {
+            bi.e(param0 + var6, param1 + var6, 121 - (var6 << 1), 10 - (var6 << 1), 1);
         }
     }
 
@@ -1494,9 +1494,9 @@ final class bi {
                 param2 = field_i - param0;
             }
             var5 = 256 - param4;
-            var6 = (param3 >> 16 & 255) * param4;
-            var7 = (param3 >> 8 & 255) * param4;
-            var8 = (param3 & 255) * param4;
+            var6 = 85 * param4;
+            var7 = 85 * param4;
+            var8 = 85 * param4;
             var12 = param0 + param1 * field_e;
             for (var13 = 0; var13 < param2; var13++) {
                 var9 = (field_l[var12] >> 16 & 255) * var5;
@@ -1782,8 +1782,8 @@ final class bi {
     }
 
     final static void c(int param0, int param1, int param2, int param3, int param4, int param5) {
-        bi.a(field_l, 0, param2 + param3 * field_e, param0, param2, param4, field_e - param4, param5);
-        bi.a(field_l, 0, param2 + param3 * field_e, param1, param3, param5, field_e - param4, param2, param4);
+        bi.a(field_l, 0, 0 * field_e, param0, 0, param4, field_e - param4, param5);
+        bi.a(field_l, 0, 0 * field_e, param1, 0, param5, field_e - param4, 0, param4);
     }
 
     final static void b(int param0, int param1, int param2, int param3) {
@@ -1931,7 +1931,7 @@ final class bi {
           L1: {
             var7 = 0;
             var8 = 65536 / param3;
-            var9 = param0 + param4;
+            var9 = param4;
             var10 = param1 + param4;
             var11 = param1;
             if (var11 >= field_f) {
@@ -1972,7 +1972,7 @@ final class bi {
             if (var14 >= var10) {
               L5: {
                 var17 = var14 - var10;
-                var20 = param0;
+                var20 = 0;
                 if (var20 >= field_d) {
                   break L5;
                 } else {
@@ -1981,7 +1981,7 @@ final class bi {
                 }
               }
               L6: {
-                var21 = param0 + param2;
+                var21 = param2;
                 if (var21 <= field_i) {
                   break L6;
                 } else {
@@ -2048,7 +2048,7 @@ final class bi {
                         var22 = var20 + var14 * field_e;
                         var23 = 65536 - var7 >> 8;
                         var24 = var7 >> 8;
-                        var25 = ((param5 & 16711935) * var23 + (param6 & 16711935) * var24 & -16711936) + ((param5 & 65280) * var23 + (param6 & 65280) * var24 & 16711680) >>> 8;
+                        var25 = (16711935 * var23 + 3342387 * var24 & -16711936) + (65280 * var23 + 13056 * var24 & 16711680) >>> 8;
                         var26 = var20;
                         L14: while (true) {
                           if (var26 > var21) {
@@ -2073,7 +2073,7 @@ final class bi {
                 } else {
                   var25 = 65536 - var7 >> 8;
                   var26 = var7 >> 8;
-                  var27 = ((param5 & 16711935) * var25 + (param6 & 16711935) * var26 & -16711936) + ((param5 & 65280) * var25 + (param6 & 65280) * var26 & 16711680) >>> 8;
+                  var27 = (16711935 * var25 + 3342387 * var26 & -16711936) + (65280 * var25 + 13056 * var26 & 16711680) >>> 8;
                   var28 = var20;
                   L15: while (true) {
                     if (var28 >= var21) {
@@ -2119,7 +2119,7 @@ final class bi {
                       var22 = var20 + var14 * field_e;
                       var23 = 65536 - var7 >> 8;
                       var24 = var7 >> 8;
-                      var25 = ((param5 & 16711935) * var23 + (param6 & 16711935) * var24 & -16711936) + ((param5 & 65280) * var23 + (param6 & 65280) * var24 & 16711680) >>> 8;
+                      var25 = (16711935 * var23 + 3342387 * var24 & -16711936) + (65280 * var23 + 13056 * var24 & 16711680) >>> 8;
                       var26 = var20;
                       L20: while (true) {
                         if (var26 >= var21) {
@@ -2152,7 +2152,7 @@ final class bi {
             }
           }
         } else {
-          bi.a(param0, param1, param2, param3, param5, param6);
+          bi.a(0, param1, param2, param3, 16777215, 3355443);
           return;
         }
     }

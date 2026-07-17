@@ -417,14 +417,11 @@ final class ud extends hj {
 
     private final void a(bs param0, int param1, bs param2) {
         try {
-            if (param1 > -55) {
-                int discarded$0 = ((ud) this).d();
-            }
             ((ud) this).field_o = 1048576;
             ((ud) this).field_r = param0;
             ((ud) this).field_x = param2;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "ud.H(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "ud.H(" + (param0 != null ? "{...}" : "null") + 44 + -79 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

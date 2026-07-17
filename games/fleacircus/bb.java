@@ -497,7 +497,7 @@ class bb extends qa {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_H = null;
         field_I = null;
         field_A = null;

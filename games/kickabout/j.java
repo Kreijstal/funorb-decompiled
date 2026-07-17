@@ -5,7 +5,7 @@ final class j {
     static String[] field_a;
     private gm field_b;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
     }
 

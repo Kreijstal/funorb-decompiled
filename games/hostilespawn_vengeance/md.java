@@ -322,12 +322,8 @@ final class md extends nj {
     }
 
     final static void c(int param0) {
-        if (param0 >= -70) {
-            field_l = null;
-            cj.a(bn.c(-1), 0);
-            return;
-        }
-        cj.a(bn.c(-1), 0);
+        int discarded$0 = 0;
+        cj.a(bn.c(-1));
     }
 
     final byte[] a(byte param0) {
@@ -344,7 +340,7 @@ final class md extends nj {
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_n = null;
         field_f = null;
         field_l = null;

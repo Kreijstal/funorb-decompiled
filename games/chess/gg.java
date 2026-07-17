@@ -30,7 +30,7 @@ final class gg {
     private int field_b;
     private int field_m;
 
-    public static void c(int param0) {
+    public static void c() {
         field_e = null;
         field_q = null;
         field_z = null;

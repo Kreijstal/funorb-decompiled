@@ -12,11 +12,6 @@ class gg {
 
     final static void a(int param0, int param1) {
         td.field_l = param0;
-        if (param1 != 10) {
-            boolean discarded$0 = gg.b((byte) -29);
-            ed.a((byte) -120);
-            return;
-        }
         ed.a((byte) -120);
     }
 
@@ -62,11 +57,8 @@ class gg {
     }
 
     final static boolean b(byte param0) {
-        if (param0 != 89) {
-            field_f = null;
-            return lb.g((byte) -94);
-        }
-        return lb.g((byte) -94);
+        int discarded$0 = -94;
+        return lb.g();
     }
 
     static {

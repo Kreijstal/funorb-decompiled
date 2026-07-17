@@ -469,7 +469,7 @@ final class ep {
         return stackIn_9_0 != 0;
     }
 
-    final static void c(int param0) {
+    final static void c() {
         RuntimeException var1 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -504,7 +504,7 @@ final class ep {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         return wp.a(-8798) && (8 & pa.field_b) == 0;
     }
 

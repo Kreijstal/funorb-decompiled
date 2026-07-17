@@ -138,11 +138,12 @@ final class tr {
         field_a = null;
     }
 
-    final static void a(gk param0, byte param1) {
+    final static void a(gk param0) {
         ll var2 = new ll(param0.a("final_frame.jpg", (byte) -71, ""), (java.awt.Component) (Object) ci.field_f);
         int var3 = var2.field_r;
         int var4 = var2.field_n;
-        qk.a((byte) -92);
+        int discarded$0 = -92;
+        qk.a();
         gl.field_d = new ll(var3, 3 * var4 / 4);
         gl.field_d.b();
         var2.c(0, 0);
@@ -151,7 +152,8 @@ final class tr {
         var2.c(0, -gl.field_d.field_n);
         gt.field_o.field_p = gl.field_d.field_n;
         try {
-            sl.c(2765);
+            int discarded$1 = 2765;
+            sl.c();
         } catch (RuntimeException runtimeException) {
             throw pn.a((Throwable) (Object) runtimeException, "tr.C(" + (param0 != null ? "{...}" : "null") + 44 + -88 + 41);
         }

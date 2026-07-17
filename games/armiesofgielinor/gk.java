@@ -105,7 +105,8 @@ final class gk extends nl {
             rs.field_t = 2;
             qd.field_G = param1;
             var5 = (CharSequence) (Object) param1;
-            wm.field_b = k.a(var5, false);
+            int discarded$0 = 0;
+            wm.field_b = k.a(var5);
             hf.field_c = true;
             if (param0 != -23503) {
                 gk.a(120, (String) null, 75L);
@@ -116,7 +117,7 @@ final class gk extends nl {
         }
     }
 
-    public static void l(int param0) {
+    public static void l() {
         field_O = null;
         field_P = null;
         field_L = null;

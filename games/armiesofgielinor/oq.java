@@ -32,20 +32,17 @@ final class oq extends wv {
         return qv.field_l;
     }
 
-    final static int a(boolean param0) {
+    final static int a() {
         return ii.field_b;
     }
 
     final static void a(int param0, java.awt.Component param1) {
         param1.setFocusTraversalKeysEnabled(false);
-        if (param0 != 27080) {
-            return;
-        }
         try {
             param1.addKeyListener((java.awt.event.KeyListener) (Object) va.field_w);
             param1.addFocusListener((java.awt.event.FocusListener) (Object) va.field_w);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "oq.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "oq.F(" + 27080 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

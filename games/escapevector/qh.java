@@ -42,7 +42,8 @@ final class qh {
                   return ((qh) this).field_c;
                 }
               } else {
-                ((qh) this).field_c = fe.a(((qh) this).field_a, ((qh) this).field_d, ((qh) this).field_h, true);
+                int discarded$2 = 1;
+                ((qh) this).field_c = fe.a(((qh) this).field_a, ((qh) this).field_d, ((qh) this).field_h);
                 return ((qh) this).field_c;
               }
             } else {
@@ -68,7 +69,8 @@ final class qh {
                 return ((qh) this).field_c;
               }
             } else {
-              ((qh) this).field_c = fe.a(((qh) this).field_a, ((qh) this).field_d, ((qh) this).field_h, true);
+              int discarded$3 = 1;
+              ((qh) this).field_c = fe.a(((qh) this).field_a, ((qh) this).field_d, ((qh) this).field_h);
               return ((qh) this).field_c;
             }
           }
@@ -77,7 +79,7 @@ final class qh {
         }
     }
 
-    final static void a(mf param0, byte param1) {
+    final static void a(mf param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
@@ -178,18 +180,15 @@ final class qh {
         c var3 = null;
         try {
             var3 = om.field_c;
-            var3.a(param2, param1);
+            var3.a(param2, true);
             var3.f(param0.field_i, -123);
             var3.f(param0.field_g, -123);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "qh.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "qh.D(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 44 + param2 + 41);
         }
     }
 
-    public static void a(int param0) {
-        if (param0 != 7) {
-            return;
-        }
+    public static void a() {
         field_j = null;
         field_i = null;
         field_k = null;

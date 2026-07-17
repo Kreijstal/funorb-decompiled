@@ -14,7 +14,7 @@ final class sc implements uo {
     int field_a;
     static String field_h;
 
-    final static void a(int param0, int param1, int param2) {
+    final static void a() {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -24,8 +24,8 @@ final class sc implements uo {
         var8 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (ib.field_j >= 0) {
           L0: {
-            var3 = -135 + param1;
-            var4 = param0 - 35;
+            var3 = 185;
+            var4 = 205;
             var5 = 256;
             if (ib.field_j < 75) {
               var5 = (ib.field_j << 8) / 75;
@@ -42,10 +42,12 @@ final class sc implements uo {
               break L1;
             }
           }
-          vn.a(dc.field_n, 3);
+          int discarded$2 = 3;
+          vn.a(dc.field_n);
           tm.a();
           qn.b();
-          rb.e(9);
+          int discarded$3 = 9;
+          rb.e();
           if (var5 >= 256) {
             L2: {
               rf.b(-18862);
@@ -497,16 +499,18 @@ final class sc implements uo {
                     } else {
                       if (param2.equals((Object) (Object) "map")) {
                         if (param0 > 0) {
-                          var5_int = ai.a(param1, true);
+                          int discarded$3 = 1;
+                          var5_int = ai.a(param1);
                           ((sc) this).field_c = new ne[var5_int];
                           var6 = 0;
                           L3: while (true) {
                             if (var5_int <= var6) {
                               break L2;
                             } else {
-                              String discarded$1 = mt.a(param1, true);
+                              String discarded$4 = mt.a(param1, true);
                               var7 = param1.a(false);
-                              var8 = ej.a(param1, true);
+                              int discarded$5 = 1;
+                              var8 = ej.a(param1);
                               var9 = -var7 + param1.a(false);
                               kq.a(var7, -24232, var9, var8, param1);
                               ((sc) this).field_c[var6] = rb.a(var8, (byte) 70, param1);

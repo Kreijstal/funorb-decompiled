@@ -84,7 +84,7 @@ final class bla extends lea {
         }
     }
 
-    public static void e(boolean param0) {
+    public static void e() {
         field_H = null;
         field_G = null;
     }
@@ -169,12 +169,7 @@ final class bla extends lea {
     }
 
     final static int a(boolean param0, int param1, int param2) {
-        if (!param0) {
-          field_G = null;
-          return param2 - (1 << param1 - 1);
-        } else {
-          return param2 - (1 << param1 - 1);
-        }
+        return param2 - (1 << param1 - 1);
     }
 
     bla(la param0, int param1, kh param2, csa param3) {

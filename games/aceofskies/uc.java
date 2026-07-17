@@ -14,7 +14,7 @@ final class uc extends wf {
     int field_m;
     long[][] field_f;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_o = null;
         field_g = null;
         field_k = null;
@@ -62,8 +62,9 @@ final class uc extends wf {
         try {
           L0: {
             if (tn.a(param3, (byte) -127, param2, param4)) {
-              var5_int = -15 / ((param0 - 65) / 51);
-              stackOut_3_0 = te.a(param1.a(param4, -10470, param2), -80);
+              var5_int = -15;
+              int discarded$2 = -80;
+              stackOut_3_0 = te.a(param1.a(param4, -10470, param2));
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -77,7 +78,7 @@ final class uc extends wf {
           L1: {
             var5 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var5;
-            stackOut_5_1 = new StringBuilder().append("uc.C(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("uc.C(").append(121).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -131,15 +132,12 @@ final class uc extends wf {
     }
 
     final static void a(mg param0, int param1, int param2, int param3) {
-        if (param1 != 25345) {
-            return;
-        }
         try {
             qg.field_d = param0;
             po.field_j = param2;
             ku.field_h = param3;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "uc.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "uc.B(" + (param0 != null ? "{...}" : "null") + 44 + 25345 + 44 + param2 + 44 + param3 + 41);
         }
     }
 

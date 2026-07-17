@@ -222,7 +222,7 @@ final class ml extends dk {
         return var3;
     }
 
-    final static void d(byte param0) {
+    final static void d() {
         if (!(ci.field_f)) {
             throw new IllegalStateException();
         }
@@ -244,7 +244,9 @@ final class ml extends dk {
               if (var4 == null) {
                 break L0;
               } else {
-                ec.a(var4, (byte) 30, param0);
+                int discarded$4 = 7;
+                int discarded$5 = 30;
+                ec.a(var4);
                 var4 = (hg) (Object) ak.field_d.b((byte) -105);
                 continue L1;
               }
@@ -253,11 +255,11 @@ final class ml extends dk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pf.a((Throwable) (Object) var2, "ml.AA(" + param0 + 44 + 960240129 + 41);
+          throw pf.a((Throwable) (Object) var2, "ml.AA(" + 7 + 44 + 960240129 + 41);
         }
     }
 
-    public static void j(int param0) {
+    public static void j() {
         field_K = null;
         field_N = null;
         field_I = null;
@@ -285,7 +287,8 @@ final class ml extends dk {
               if (var3 == null) {
                 break L0;
               } else {
-                rd.a(var3, 115, 5);
+                int discarded$4 = 5;
+                rd.a(var3, 115);
                 var3 = (ql) (Object) mi.field_r.b((byte) -105);
                 continue L2;
               }
@@ -349,7 +352,7 @@ final class ml extends dk {
                   param2[0].e(param0, param3, param5);
                   param2[2].e(-var7 + param0 + param4, param3, param5);
                   gb.a(ng.field_a);
-                  gb.g(param0 + var6_int, param3, param0 - (-param4 - -var7), param3 + param2[param1].field_r);
+                  gb.g(param0 + var6_int, param3, param0 - (-param4 - -var7), param3 + param2[1].field_r);
                   var9 = var6_int + param0;
                   var10 = param0 + param4 - var7;
                   param0 = var9;
@@ -373,7 +376,7 @@ final class ml extends dk {
           L3: {
             var6 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var6;
-            stackOut_10_1 = new StringBuilder().append("ml.CA(").append(param0).append(44).append(param1).append(44);
+            stackOut_10_1 = new StringBuilder().append("ml.CA(").append(param0).append(44).append(1).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;

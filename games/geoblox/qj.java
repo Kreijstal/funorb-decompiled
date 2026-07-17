@@ -6,7 +6,7 @@ final class qj {
     static dm field_c;
     static ck field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
     }
@@ -84,7 +84,7 @@ final class qj {
               } else {
                 var8_int = 0;
                 L3: while (true) {
-                  var8_int = param0.indexOf((int) param2, var8_int);
+                  var8_int = param0.indexOf('_', var8_int);
                   if (var8_int >= 0) {
                     var6 = var6 + var7;
                     var8_int++;
@@ -98,7 +98,7 @@ final class qj {
             var8 = new StringBuilder(var6);
             var9 = 0;
             L4: while (true) {
-              var10 = param0.indexOf((int) param2, var9);
+              var10 = param0.indexOf('_', var9);
               if (var10 >= 0) {
                 StringBuilder discarded$3 = var8.append(param0.substring(var9, var10));
                 var9 = 1 + var10;
@@ -165,7 +165,7 @@ final class qj {
               break L6;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param2 + 44 + param3 + 41);
+          throw t.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + 95 + 44 + param3 + 41);
         }
         return stackIn_13_0;
     }

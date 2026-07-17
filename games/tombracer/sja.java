@@ -5,12 +5,12 @@ final class sja extends qma {
     static int[] field_h;
     static g[] field_i;
 
-    public static void b(byte param0) {
+    public static void b() {
         field_i = null;
         field_h = null;
     }
 
-    final static int b(int param0, int param1) {
+    final static int b(int param0) {
         if (param0 != 6407) {
           if (34843 != param0) {
             if (34837 == param0) {

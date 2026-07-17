@@ -76,7 +76,7 @@ final class ao extends rqa {
         return stackIn_3_0;
     }
 
-    final static kua a(cbb param0, int[] param1, int param2, int param3) {
+    final static kua a(cbb param0, int[] param1, int param2) {
         Object var4 = null;
         Object var5 = null;
         Object var6 = null;
@@ -387,11 +387,13 @@ final class ao extends rqa {
     }
 
     final static void a(byte param0, boolean param1) {
-        if (wq.e((byte) 105)) {
+        int discarded$3 = 105;
+        if (wq.e()) {
             param1 = false;
         }
         mc.a(-119, param1);
-        ria.e((byte) 89);
+        int discarded$4 = 89;
+        ria.e();
         int var2 = 103 / ((param0 - -19) / 55);
     }
 

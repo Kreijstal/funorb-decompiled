@@ -44,7 +44,8 @@ final class n extends hi {
         try {
           L0: {
             var4 = (CharSequence) (Object) param0;
-            if (!oc.a(var4, 1)) {
+            int discarded$9 = 1;
+            if (!oc.a(var4)) {
               stackOut_2_0 = bi.field_d;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0;
@@ -245,7 +246,8 @@ final class n extends hi {
         if (param1 < -86) {
           mb.field_s.a(500, 8000);
           if (jh.field_ab == 1) {
-            jn.l(0);
+            int discarded$7 = 0;
+            jn.l();
             if (!param0) {
               db.a(false, 256, dg.field_tb);
               return;

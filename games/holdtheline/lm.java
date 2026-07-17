@@ -4878,12 +4878,12 @@ abstract class lm {
             var3 = 20 + var2_int * 20;
             var4 = 0 != (qj.field_I & 2) ? nc.field_g : -200 + nc.field_g;
             var5 = (1 & qj.field_I) == 0 ? -var3 + rf.field_X : rf.field_X;
-            int var6 = -2 % ((param0 - 12) / 60);
+            int var6 = 0;
             tc.c(var4, var5, 200, var3, 0, 192);
             tc.a(var4, var5, 200, var3, 16777215);
             int discarded$0 = HoldTheLine.field_F.a(param1, 10 + var4, var5, 180, var3, 0, -1, 1, 1, 20);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "lm.P(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "lm.P(" + -107 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

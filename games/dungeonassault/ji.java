@@ -50,7 +50,7 @@ final class ji extends da {
         return uj.a(ld.field_f, 37, 1 + -param2 + param0) + param2;
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean a(String param0) {
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;

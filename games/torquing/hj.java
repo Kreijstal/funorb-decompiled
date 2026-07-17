@@ -17,9 +17,6 @@ final class hj {
     final static void a(boolean param0, int param1) {
         df var2 = wa.field_d;
         var2.f(-40, param1);
-        if (param0) {
-            field_c = null;
-        }
         var2.b(90, 1);
         var2.b(90, 2);
     }
@@ -178,7 +175,7 @@ final class hj {
                 L3: {
                   bf.field_b[2] = re.field_d[2] + param8[2];
                   bf.field_b[1] = re.field_d[1] + param8[1];
-                  bf.field_b[0] = re.field_d[0] + param8[param2];
+                  bf.field_b[0] = re.field_d[0] + param8[0];
                   var15 = 0.4 * param5 * param5;
                   var17 = -ap.a(bf.field_b, 0, param6, 6);
                   var19 = param6[5] * var17;
@@ -357,7 +354,7 @@ final class hj {
           }
           L12: {
             stackOut_48_0 = (RuntimeException) (Object) stackIn_48_0;
-            stackOut_48_1 = ((StringBuilder) (Object) stackIn_48_1).append(stackIn_48_2).append(44).append(param2).append(44);
+            stackOut_48_1 = ((StringBuilder) (Object) stackIn_48_1).append(stackIn_48_2).append(44).append(0).append(44);
             stackIn_50_0 = stackOut_48_0;
             stackIn_50_1 = stackOut_48_1;
             stackIn_49_0 = stackOut_48_0;

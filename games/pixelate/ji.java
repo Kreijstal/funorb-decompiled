@@ -9,7 +9,7 @@ final class ji {
     static String field_e;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         field_e = null;

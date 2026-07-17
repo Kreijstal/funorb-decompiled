@@ -13,7 +13,7 @@ final class dc extends o {
     int field_l;
     int field_p;
 
-    public static void d(int param0) {
+    public static void d() {
         field_s = null;
         field_q = null;
         field_n = null;

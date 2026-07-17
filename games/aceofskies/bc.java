@@ -74,7 +74,8 @@ final class bc extends to {
           L0: {
             if (bm.field_I.field_q) {
               if (!vg.field_j.containsKey((Object) (Object) param0)) {
-                var11 = ob.a(param0, (byte) -18);
+                int discarded$2 = -18;
+                var11 = ob.a(param0);
                 if (var11 == null) {
                   stackOut_9_0 = -1;
                   stackIn_10_0 = stackOut_9_0;
@@ -145,7 +146,7 @@ final class bc extends to {
                               L6: {
                                 L7: {
                                   if (var7 == 0) {
-                                    boolean discarded$1 = bm.field_I.a(var12, var19, true);
+                                    boolean discarded$3 = bm.field_I.a(var12, var19, true);
                                     break L7;
                                   } else {
                                     break L7;
@@ -227,7 +228,7 @@ final class bc extends to {
         return stackIn_42_0;
     }
 
-    public static void j(int param0) {
+    public static void j() {
         field_v = null;
     }
 

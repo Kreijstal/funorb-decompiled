@@ -138,7 +138,7 @@ final class jp {
         }
     }
 
-    final static void a(int param0, int param1, int param2, wk[] param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, wk[] param3, int param4) {
         try {
             param3[0].g(param0, param1, param4);
             param3[1].b(param3[1].field_y + param0, param1, -(param3[2].field_y << 1) + param2, param3[2].field_v, param4);
@@ -148,7 +148,7 @@ final class jp {
         }
     }
 
-    final static void a(vh param0, int param1) {
+    final static void a(vh param0) {
         int var2_int = 0;
         try {
             la.field_d = param0.e((byte) -104) << 5;
@@ -188,7 +188,7 @@ final class jp {
         }
     }
 
-    final static int a(int param0, int param1, int param2, int param3) {
+    final static int a(int param0, int param1, int param2) {
         if (qn.field_l >= param2 + param0) {
             return param0;
         }

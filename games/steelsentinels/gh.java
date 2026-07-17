@@ -489,7 +489,7 @@ class gh extends dh {
         return ((gh) this).b(param0 + 2147483550, 2147483647);
     }
 
-    private final gh a(long param0, int param1) {
+    private final gh a(long param0) {
         gh var5 = null;
         int var6 = 0;
         gh var7 = null;
@@ -501,7 +501,8 @@ class gh extends dh {
             var7 = (gh) (Object) ((gh) this).field_M.e(13058);
             L0: while (true) {
               if (var7 != null) {
-                var5 = var7.a(param0, 3318);
+                int discarded$2 = 3318;
+                var5 = var7.a(param0);
                 if (var5 != null) {
                   return var5;
                 } else {
@@ -1189,12 +1190,13 @@ class gh extends dh {
                 break L1;
               } else {
                 var4 = null;
-                String discarded$2 = gh.a(25, (java.applet.Applet) null);
+                String discarded$4 = gh.a(25, (java.applet.Applet) null);
                 break L1;
               }
             }
             var5 = (CharSequence) (Object) param0;
-            stackOut_2_0 = this.a(ke.a(var5, (byte) -48), 3318);
+            int discarded$5 = 3318;
+            stackOut_2_0 = this.a(ke.a(var5, (byte) -48));
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

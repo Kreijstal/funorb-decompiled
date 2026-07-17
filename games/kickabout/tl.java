@@ -6,7 +6,7 @@ final class tl {
     static r field_c;
     static String[] field_a;
 
-    public static void c(int param0) {
+    public static void c() {
         field_b = null;
         field_c = null;
         field_a = null;
@@ -19,7 +19,7 @@ final class tl {
         return lb.field_M;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -76,7 +76,8 @@ final class tl {
                     }
                   }
                   if (var4 == null) {
-                    lr.b((byte) -116);
+                    int discarded$7 = -116;
+                    lr.b();
                     return;
                   } else {
                     var5 = var29.h((byte) -128);
@@ -119,9 +120,9 @@ final class tl {
                                       if (var25 >= var7) {
                                         break L6;
                                       } else {
-                                        int incrementValue$3 = var15;
+                                        int incrementValue$8 = var15;
                                         var15++;
-                                        var38[0][incrementValue$3] = var29.k(4);
+                                        var38[0][incrementValue$8] = var29.k(4);
                                         var25++;
                                         continue L7;
                                       }
@@ -147,9 +148,9 @@ final class tl {
                                         if (var25 >= var7) {
                                           break L8;
                                         } else {
-                                          int incrementValue$4 = var16;
+                                          int incrementValue$9 = var16;
                                           var16++;
-                                          var38[1][incrementValue$4] = var29.k(4);
+                                          var38[1][incrementValue$9] = var29.k(4);
                                           var25++;
                                           continue L9;
                                         }
@@ -175,9 +176,9 @@ final class tl {
                                         if (var25 >= var7) {
                                           break L10;
                                         } else {
-                                          int incrementValue$5 = var17;
+                                          int incrementValue$10 = var17;
                                           var17++;
-                                          var38[2][incrementValue$5] = var29.k(4);
+                                          var38[2][incrementValue$10] = var29.k(4);
                                           var25++;
                                           continue L11;
                                         }
@@ -236,7 +237,8 @@ final class tl {
                       }
                     }
                     if (var28 == null) {
-                      lr.b((byte) -116);
+                      int discarded$11 = -116;
+                      lr.b();
                       return;
                     } else {
                       ((sm) var28).c((byte) -109);
@@ -244,8 +246,10 @@ final class tl {
                     }
                   }
                 } else {
-                  bd.a("HS1: " + tr.b(0), (Throwable) null, 1);
-                  lr.b((byte) -116);
+                  int discarded$12 = 0;
+                  bd.a("HS1: " + tr.b(), (Throwable) null, 1);
+                  int discarded$13 = -116;
+                  lr.b();
                   break L1;
                 }
               }
@@ -259,7 +263,7 @@ final class tl {
         }
     }
 
-    final static lk a(sb param0, boolean param1) {
+    final static lk a(sb param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         StringBuilder var3 = null;

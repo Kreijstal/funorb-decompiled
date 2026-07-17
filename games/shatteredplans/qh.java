@@ -58,7 +58,7 @@ final class qh extends vd {
             }
             L2: {
               var7 = 0;
-              if (param4 < param1) {
+              if (param1 < 0) {
                 param5 = param5 + param1;
                 var7 = var7 - param1;
                 param1 = 0;
@@ -68,7 +68,7 @@ final class qh extends vd {
               }
             }
             L3: {
-              if (-641 < param3 - -param2) {
+              if (param3 - -param2 > 640) {
                 param2 = -param3 + 640;
                 break L3;
               } else {
@@ -76,24 +76,24 @@ final class qh extends vd {
               }
             }
             L4: {
-              if (-481 > param1 - -param5) {
+              if (param1 - -param5 > 480) {
                 param5 = -param1 + 480;
                 break L4;
               } else {
                 break L4;
               }
             }
-            if (-1 <= param2) {
+            if (param2 >= 0) {
               if (param5 >= 0) {
                 L5: {
                   L6: {
                     if (param0 == null) {
                       break L6;
                     } else {
-                      if (param0.field_z < param2) {
+                      if (~param0.field_z > ~param2) {
                         break L6;
                       } else {
-                        if (param5 > param0.field_w) {
+                        if (~param5 < ~param0.field_w) {
                           break L6;
                         } else {
                           break L5;
@@ -169,7 +169,7 @@ final class qh extends vd {
               break L9;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw r.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + -1 + 44 + param5 + 41);
         }
         return stackIn_30_0;
     }
@@ -327,7 +327,7 @@ final class qh extends vd {
         return var4;
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_u = null;
         field_C = null;
         field_D = null;
@@ -335,11 +335,11 @@ final class qh extends vd {
         field_w = null;
     }
 
-    final static boolean f(int param0) {
+    final static boolean f() {
         return null != bj.field_K ? true : br.field_i;
     }
 
-    final static void g(int param0) {
+    final static void g() {
         if (!(pg.field_J <= 0)) {
             pg.field_J = pg.field_J - 1;
         }

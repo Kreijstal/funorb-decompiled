@@ -20,17 +20,14 @@ final class qa implements Runnable {
     final static void a(byte param0, gg param1, int param2, int param3) {
         hh.field_u = param1;
         wg.field_h = param2;
-        if (param0 != -39) {
-            return;
-        }
         try {
             rb.field_cb = param3;
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "qa.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw la.a((Throwable) (Object) runtimeException, "qa.D(" + -39 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_i = null;
         field_b = null;
@@ -240,7 +237,7 @@ final class qa implements Runnable {
         ((qa) this).field_c = null;
     }
 
-    final static int b(int param0) {
+    final static int b() {
         return je.field_c;
     }
 

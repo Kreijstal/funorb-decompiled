@@ -430,13 +430,14 @@ final class ob extends ok {
             lb.field_C.e();
             var2.c(0, -dm.field_g.field_v);
             lb.field_C.field_A = dm.field_g.field_v;
-            ti.c(true);
+            int discarded$0 = 1;
+            ti.c();
         } catch (RuntimeException runtimeException) {
             throw vk.a((Throwable) (Object) runtimeException, "ob.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static void a(int param0, int param1, java.awt.Canvas param2, int param3) {
+    final static void a(int param0, int param1, java.awt.Canvas param2) {
         java.awt.Graphics var4 = null;
         Exception var4_ref = null;
         RuntimeException var4_ref2 = null;
@@ -462,7 +463,7 @@ final class ob extends ok {
             try {
               L1: {
                 var4 = param2.getGraphics();
-                k.field_h.a(param0, true, var4, 0);
+                k.field_h.a(0, true, var4, 0);
                 var4.dispose();
                 break L1;
               }
@@ -490,7 +491,7 @@ final class ob extends ok {
           L4: {
             var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var4_ref2;
-            stackOut_6_1 = new StringBuilder().append("ob.D(").append(param0).append(44).append(param1).append(44);
+            stackOut_6_1 = new StringBuilder().append("ob.D(").append(0).append(44).append(param1).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -536,29 +537,21 @@ final class ob extends ok {
         var6 = DungeonAssault.field_K;
         try {
           L0: {
-            L1: {
-              if (param2 == -102) {
-                break L1;
-              } else {
-                field_hc = -92;
-                break L1;
-              }
-            }
             var5_int = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (var5_int >= param3) {
                 break L0;
               } else {
                 te.a(param0, var5_int + param1, param4, ji.field_F);
                 var5_int++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var5, "ob.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw vk.a((Throwable) (Object) var5, "ob.A(" + param0 + 44 + param1 + 44 + -102 + 44 + param3 + 44 + param4 + 41);
         }
     }
 

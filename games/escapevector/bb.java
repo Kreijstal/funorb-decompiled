@@ -22,7 +22,8 @@ abstract class bb extends bj {
         int stackOut_11_0 = 0;
         if (param0 == -13907) {
           L0: {
-            var2 = this.k(-1);
+            int discarded$2 = -1;
+            var2 = this.k();
             var3 = var2 - ((bb) this).field_N;
             if (0 < var3) {
               ((bb) this).field_N = ((bb) this).field_N + (8 + var3 + -1) / 8;
@@ -143,36 +144,26 @@ abstract class bb extends bj {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        Object var21 = null;
+        RuntimeException stackIn_32_0 = null;
+        StringBuilder stackIn_32_1 = null;
+        RuntimeException stackIn_33_0 = null;
+        StringBuilder stackIn_33_1 = null;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
-        RuntimeException stackIn_36_0 = null;
-        StringBuilder stackIn_36_1 = null;
-        String stackIn_36_2 = null;
+        String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_31_0 = null;
+        StringBuilder stackOut_31_1 = null;
         RuntimeException stackOut_33_0 = null;
         StringBuilder stackOut_33_1 = null;
-        RuntimeException stackOut_35_0 = null;
-        StringBuilder stackOut_35_1 = null;
-        String stackOut_35_2 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
+        String stackOut_33_2 = null;
+        RuntimeException stackOut_32_0 = null;
+        StringBuilder stackOut_32_1 = null;
+        String stackOut_32_2 = null;
         var20 = EscapeVector.field_A;
         try {
           L0: {
             L1: {
-              if (param2 == 4163) {
-                break L1;
-              } else {
-                var21 = null;
-                String[] discarded$2 = bb.a(-7, (String) null, 'ﾱ');
-                break L1;
-              }
-            }
-            L2: {
               var6_int = (param5 - param1 << 8) / param3.field_a;
               param0 = param0 + param3.field_f;
               param4 = param4 + param3.field_i;
@@ -184,25 +175,25 @@ abstract class bb extends bj {
               var12 = -var11 + em.field_l;
               var13 = 0;
               if (em.field_k <= param4) {
-                break L2;
+                break L1;
               } else {
                 var14 = em.field_k - param4;
                 var10 = var10 - var14;
                 var8 = var8 + em.field_l * var14;
                 param4 = em.field_k;
                 var9 = var9 + var14 * var11;
+                break L1;
+              }
+            }
+            L2: {
+              if (param4 + var10 > em.field_j) {
+                var10 = var10 - (var10 + param4 + -em.field_j);
+                break L2;
+              } else {
                 break L2;
               }
             }
             L3: {
-              if (param4 + var10 > em.field_j) {
-                var10 = var10 - (var10 + param4 + -em.field_j);
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            L4: {
               if (~param0 > ~em.field_a) {
                 var14 = -param0 + em.field_a;
                 var8 = var8 + var14;
@@ -212,80 +203,80 @@ abstract class bb extends bj {
                 var9 = var9 + var14;
                 var12 = var12 + var14;
                 var13 = var13 + var14;
+                break L3;
+              } else {
+                break L3;
+              }
+            }
+            L4: {
+              if (~(var11 + param0) < ~em.field_b) {
+                var14 = -em.field_b + var11 + param0;
+                var13 = var13 + var14;
+                var11 = var11 - var14;
+                var12 = var12 + var14;
                 break L4;
               } else {
                 break L4;
               }
             }
             L5: {
-              if (~(var11 + param0) < ~em.field_b) {
-                var14 = -em.field_b + var11 + param0;
-                var13 = var13 + var14;
-                var11 = var11 - var14;
-                var12 = var12 + var14;
-                break L5;
-              } else {
-                break L5;
-              }
-            }
-            L6: {
               if (var11 <= 0) {
-                break L6;
+                break L5;
               } else {
                 if (var10 > 0) {
                   param4 = -var10;
-                  L7: while (true) {
+                  L6: while (true) {
                     if (0 <= param4) {
                       break L0;
                     } else {
                       var14 = var7;
                       param0 = -var11;
-                      L8: while (true) {
+                      L7: while (true) {
                         if (0 <= param0) {
                           var9 = var9 + var13;
                           var8 = var8 + var12;
                           param4++;
-                          continue L7;
+                          continue L6;
                         } else {
-                          L9: {
+                          L8: {
                             var15 = var14 >> 8;
                             var16 = 256 - var15;
                             var14 = var14 + var6_int;
                             if (var15 < 0) {
                               var8++;
                               var9++;
-                              break L9;
+                              break L8;
                             } else {
-                              L10: {
-                                int incrementValue$3 = var9;
+                              L9: {
+                                int incrementValue$1 = var9;
                                 var9++;
-                                var17 = param3.field_l[param3.field_k[incrementValue$3] & 255];
+                                var17 = param3.field_l[param3.field_k[incrementValue$1] & 255];
                                 if (var17 == 0) {
-                                  break L10;
+                                  break L9;
                                 } else {
                                   if (255 >= var15) {
                                     var18 = em.field_i[var8];
                                     var19 = 16711935 & var15 * (16711935 & var17) + var16 * (var18 & 16711935) >> 8;
                                     em.field_i[var8] = (ae.a(ae.a(var17, 65280) * var15 + var16 * ae.a(var18, 65280), 16711906) >> 8) + var19;
-                                    break L10;
+                                    break L9;
                                   } else {
                                     em.field_i[var8] = var17;
-                                    break L10;
+                                    break L9;
                                   }
                                 }
                               }
                               var8++;
-                              break L9;
+                              break L8;
                             }
                           }
                           param0++;
-                          continue L8;
+                          continue L7;
                         }
                       }
                     }
                   }
                 } else {
-                  break L6;
+                  break L5;
                 }
               }
             }
@@ -293,33 +284,33 @@ abstract class bb extends bj {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L11: {
+          L10: {
             var6 = decompiledCaughtException;
-            stackOut_33_0 = (RuntimeException) var6;
-            stackOut_33_1 = new StringBuilder().append("bb.DA(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
-            stackIn_35_0 = stackOut_33_0;
-            stackIn_35_1 = stackOut_33_1;
-            stackIn_34_0 = stackOut_33_0;
-            stackIn_34_1 = stackOut_33_1;
+            stackOut_31_0 = (RuntimeException) var6;
+            stackOut_31_1 = new StringBuilder().append("bb.DA(").append(param0).append(44).append(param1).append(44).append(4163).append(44);
+            stackIn_33_0 = stackOut_31_0;
+            stackIn_33_1 = stackOut_31_1;
+            stackIn_32_0 = stackOut_31_0;
+            stackIn_32_1 = stackOut_31_1;
             if (param3 == null) {
-              stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
-              stackOut_35_1 = (StringBuilder) (Object) stackIn_35_1;
-              stackOut_35_2 = "null";
-              stackIn_36_0 = stackOut_35_0;
-              stackIn_36_1 = stackOut_35_1;
-              stackIn_36_2 = stackOut_35_2;
-              break L11;
+              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
+              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_2 = "null";
+              stackIn_34_0 = stackOut_33_0;
+              stackIn_34_1 = stackOut_33_1;
+              stackIn_34_2 = stackOut_33_2;
+              break L10;
             } else {
-              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
-              stackOut_34_2 = "{...}";
-              stackIn_36_0 = stackOut_34_0;
-              stackIn_36_1 = stackOut_34_1;
-              stackIn_36_2 = stackOut_34_2;
-              break L11;
+              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
+              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_2 = "{...}";
+              stackIn_34_0 = stackOut_32_0;
+              stackIn_34_1 = stackOut_32_1;
+              stackIn_34_2 = stackOut_32_2;
+              break L10;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + 44 + param4 + 44 + param5 + 41);
+          throw t.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
@@ -349,23 +340,19 @@ abstract class bb extends bj {
         var8 = EscapeVector.field_A;
         try {
           L0: {
-            if (param0 == -23466) {
-              L1: while (true) {
-                param3--;
-                if (0 > param3) {
-                  break L0;
-                } else {
-                  var9 = param4;
-                  var5 = var9;
-                  var6 = param1;
-                  var7 = param2;
-                  var9[var6] = ae.a(var9[var6] >> 1, 8355711) + var7;
-                  param1++;
-                  continue L1;
-                }
+            L1: while (true) {
+              param3--;
+              if (0 > param3) {
+                break L0;
+              } else {
+                var9 = param4;
+                var5 = var9;
+                var6 = param1;
+                var7 = param2;
+                var9[var6] = ae.a(var9[var6] >> 1, 8355711) + var7;
+                param1++;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -373,7 +360,7 @@ abstract class bb extends bj {
           L2: {
             var5_ref = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var5_ref;
-            stackOut_6_1 = new StringBuilder().append("bb.L(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_6_1 = new StringBuilder().append("bb.L(").append(-23466).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -400,7 +387,7 @@ abstract class bb extends bj {
         }
     }
 
-    public static void h(byte param0) {
+    public static void h() {
         field_P = null;
         field_L = null;
         field_R = null;
@@ -423,7 +410,7 @@ abstract class bb extends bj {
 
     abstract void b(int param0, int param1, byte param2);
 
-    private final int k(int param0) {
+    private final int k() {
         int stackIn_5_0 = 0;
         int stackOut_4_0 = 0;
         int stackOut_3_0 = 0;
@@ -560,7 +547,8 @@ abstract class bb extends bj {
         L0: {
           L1: {
             var2 = -106 / ((param0 - 7) / 55);
-            ((bb) this).field_N = this.k(-1);
+            int discarded$2 = -1;
+            ((bb) this).field_N = this.k();
             if (((bb) this).field_N != 0) {
               break L1;
             } else {

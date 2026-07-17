@@ -45,7 +45,8 @@ final class dd {
                     } else {
                       ((dd) this).field_h = ((dd) this).field_h - 1;
                       if (((dd) this).field_h <= 0) {
-                        return this.c(0);
+                        int discarded$4 = 0;
+                        return this.c();
                       } else {
                         return false;
                       }
@@ -62,7 +63,8 @@ final class dd {
               } else {
                 ((dd) this).field_h = ((dd) this).field_h - 1;
                 if (((dd) this).field_h <= 0) {
-                  return this.c(0);
+                  int discarded$5 = 0;
+                  return this.c();
                 } else {
                   return false;
                 }
@@ -77,7 +79,8 @@ final class dd {
               } else {
                 ((dd) this).field_h = ((dd) this).field_h - 1;
                 if (((dd) this).field_h <= 0) {
-                  return this.c(0);
+                  int discarded$6 = 0;
+                  return this.c();
                 } else {
                   return false;
                 }
@@ -95,7 +98,8 @@ final class dd {
               if (((dd) this).field_h > 0) {
                 return false;
               } else {
-                return this.c(0);
+                int discarded$7 = 0;
+                return this.c();
               }
             }
           } else {
@@ -111,10 +115,7 @@ final class dd {
         ((dd) this).field_b = 0;
     }
 
-    final static hd b(int param0) {
-        if (param0 > -108) {
-            return null;
-        }
+    final static hd b() {
         return bs.field_c.field_Ab;
     }
 
@@ -145,7 +146,7 @@ final class dd {
         return ((dd) this).field_e.field_e.length;
     }
 
-    private final boolean c(int param0) {
+    private final boolean c() {
         ((dd) this).field_b = ((dd) this).field_b + 1;
         if (((dd) this).field_e.field_e.length <= ((dd) this).field_b) {
           ((dd) this).field_a = ((dd) this).field_a + 1;

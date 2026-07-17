@@ -20,7 +20,7 @@ final class rl {
         return 0 != ((rl) this).field_i ? true : false;
     }
 
-    final static ka[] a(int param0, int param1, lj param2, byte param3) {
+    final static ka[] a(int param0, int param1, lj param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -106,7 +106,8 @@ final class rl {
             var3[var4_int] = td.field_m[jh.a((int) var2[var4_int], 255)];
         }
         ka var4 = new ka(ij.field_B, le.field_g, ug.field_e[0], dd.field_t[0], pg.field_r[0], lg.field_e[0], var3);
-        p.a(0);
+        int discarded$0 = 0;
+        p.a();
         return var4;
     }
 
@@ -365,7 +366,7 @@ final class rl {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_h = null;
     }
 
@@ -921,17 +922,21 @@ final class rl {
         }
     }
 
-    final static void c(int param0) {
+    final static void c() {
         int var1 = 0;
         ij.c((byte) -98);
         if (null != bg.field_P) {
           L0: {
             rk.a((byte) -100, bg.field_P);
             var1 = 0;
-            cg.a((byte) -102);
-            tc.c(-119);
-            pa.f((byte) 109);
-            if (td.a(20422)) {
+            int discarded$8 = -102;
+            cg.a();
+            int discarded$9 = -119;
+            tc.c();
+            int discarded$10 = 109;
+            pa.f();
+            int discarded$11 = 20422;
+            if (td.a()) {
               dk.field_s.d(25, 1);
               nb.a(0, -1);
               break L0;
@@ -944,10 +949,14 @@ final class rl {
         } else {
           L1: {
             var1 = 0;
-            cg.a((byte) -102);
-            tc.c(-119);
-            pa.f((byte) 109);
-            if (td.a(20422)) {
+            int discarded$12 = -102;
+            cg.a();
+            int discarded$13 = -119;
+            tc.c();
+            int discarded$14 = 109;
+            pa.f();
+            int discarded$15 = 20422;
+            if (td.a()) {
               dk.field_s.d(25, 1);
               nb.a(0, -1);
               break L1;

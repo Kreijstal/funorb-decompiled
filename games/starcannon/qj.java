@@ -119,7 +119,7 @@ abstract class qj extends kc {
         String stackOut_13_2 = null;
         try {
           L0: {
-            if (!super.a(param0, param1, param2, param3)) {
+            if (!super.a(param0, param1, (byte) -90, param3)) {
               if (null != ((qj) this).field_Y) {
                 L1: {
                   if (param3 != 98) {
@@ -177,7 +177,7 @@ abstract class qj extends kc {
               break L3;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw sd.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 44 + -90 + 44 + param3 + 41);
         }
         return stackIn_11_0 != 0;
     }
@@ -227,13 +227,10 @@ abstract class qj extends kc {
                 param1.a(6, param1.field_i, (byte) 125, param1.field_f, ((qj) this).field_db + 6);
                 ((qj) this).field_Y = new ie(param1);
             }
-            if (param0 != 6) {
-                ((qj) this).j(-25);
-            }
             ((qj) this).a(true, (uj) (Object) ((qj) this).field_Y);
             ((qj) this).field_X = null;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "qj.FA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "qj.FA(" + 6 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -242,66 +239,36 @@ abstract class qj extends kc {
         var3 = StarCannon.field_A;
         if (null != ((qj) this).field_Z) {
           if (na.field_e != ((qj) this).field_Z) {
-            if (((qj) this).field_Z != w.field_w) {
-              if (param0 != -124) {
-                qj.l(-17);
+            if (((qj) this).field_Z == w.field_w) {
+              int fieldTemp$2 = ((qj) this).field_ab + 1;
+              ((qj) this).field_ab = ((qj) this).field_ab + 1;
+              if (fieldTemp$2 != ((qj) this).field_bb) {
+                ((qj) this).field_Y.field_w = (((qj) this).field_ab << 8) / ((qj) this).field_bb;
                 return super.g((byte) -124);
               } else {
+                ((qj) this).field_Z = null;
+                ((qj) this).field_Y.field_w = 256;
                 return super.g((byte) -124);
               }
             } else {
-              int fieldTemp$2 = ((qj) this).field_ab + 1;
-              ((qj) this).field_ab = ((qj) this).field_ab + 1;
-              if (fieldTemp$2 == ((qj) this).field_bb) {
-                ((qj) this).field_Z = null;
-                ((qj) this).field_Y.field_w = 256;
-                if (param0 != -124) {
-                  qj.l(-17);
-                  return super.g((byte) -124);
-                } else {
-                  return super.g((byte) -124);
-                }
-              } else {
-                ((qj) this).field_Y.field_w = (((qj) this).field_ab << 8) / ((qj) this).field_bb;
-                if (param0 != -124) {
-                  qj.l(-17);
-                  return super.g((byte) -124);
-                } else {
-                  return super.g((byte) -124);
-                }
-              }
+              return super.g((byte) -124);
             }
           } else {
             int fieldTemp$3 = ((qj) this).field_ab + 1;
             ((qj) this).field_ab = ((qj) this).field_ab + 1;
-            if (fieldTemp$3 == ((qj) this).field_W) {
+            if (fieldTemp$3 != ((qj) this).field_W) {
+              ((qj) this).field_Y.field_w = -((((qj) this).field_ab << 8) / ((qj) this).field_W) + 256;
+              return super.g((byte) -124);
+            } else {
               ((qj) this).field_Z = sk.field_c;
               ((qj) this).b(((qj) this).field_X.field_i + 12, ((qj) this).field_X.field_f + ((qj) this).field_db + 12, (byte) 120, ((qj) this).field_cb);
               ((qj) this).field_Y.field_w = 0;
               ((qj) this).field_ab = 0;
-              if (param0 != -124) {
-                qj.l(-17);
-                return super.g((byte) -124);
-              } else {
-                return super.g((byte) -124);
-              }
-            } else {
-              ((qj) this).field_Y.field_w = -((((qj) this).field_ab << 8) / ((qj) this).field_W) + 256;
-              if (param0 == -124) {
-                return super.g((byte) -124);
-              } else {
-                qj.l(-17);
-                return super.g((byte) -124);
-              }
+              return super.g((byte) -124);
             }
           }
         } else {
-          if (param0 != -124) {
-            qj.l(-17);
-            return super.g((byte) -124);
-          } else {
-            return super.g((byte) -124);
-          }
+          return super.g((byte) -124);
         }
     }
 
@@ -341,13 +308,8 @@ abstract class qj extends kc {
         }
     }
 
-    public static void l(int param0) {
+    public static void l() {
         field_V = null;
-        if (param0 > -77) {
-            field_V = null;
-            field_eb = null;
-            return;
-        }
         field_eb = null;
     }
 

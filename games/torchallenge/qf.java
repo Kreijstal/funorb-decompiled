@@ -41,14 +41,6 @@ final class qf {
             var3 = 1;
             L1: while (true) {
               if (var3 >= param1.length()) {
-                L2: {
-                  if (param0 == -8503) {
-                    break L2;
-                  } else {
-                    qf.a((byte) 86);
-                    break L2;
-                  }
-                }
                 stackOut_10_0 = 1;
                 stackIn_11_0 = stackOut_10_0;
                 break L0;
@@ -66,10 +58,10 @@ final class qf {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var2 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var2;
-            stackOut_12_1 = new StringBuilder().append("qf.A(").append(param0).append(44);
+            stackOut_12_1 = new StringBuilder().append("qf.A(").append(-8503).append(44);
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -81,7 +73,7 @@ final class qf {
               stackIn_15_0 = stackOut_14_0;
               stackIn_15_1 = stackOut_14_1;
               stackIn_15_2 = stackOut_14_2;
-              break L3;
+              break L2;
             } else {
               stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
               stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
@@ -89,7 +81,7 @@ final class qf {
               stackIn_15_0 = stackOut_13_0;
               stackIn_15_1 = stackOut_13_1;
               stackIn_15_2 = stackOut_13_2;
-              break L3;
+              break L2;
             }
           }
           throw oj.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
@@ -97,18 +89,15 @@ final class qf {
         return stackIn_11_0 != 0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
-        if (param0 != 75) {
-            return;
-        }
         field_e = null;
         field_a = null;
         field_b = null;
     }
 
-    final static String a(byte param0, boolean param1, boolean param2, boolean param3) {
+    final static String a(byte param0, boolean param1, boolean param2) {
         int var4 = 126 % ((40 - param0) / 33);
         int var5 = 0;
         if (param1) {

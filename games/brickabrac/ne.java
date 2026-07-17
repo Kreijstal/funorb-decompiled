@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ne {
-    final static void a(java.applet.Applet param0, String param1, int param2) throws Throwable {
+    final static void a(java.applet.Applet param0, String param1) throws Throwable {
         Object discarded$0 = netscape.javascript.JSObject.getWindow(param0).eval(param1);
     }
 

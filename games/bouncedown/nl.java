@@ -7,14 +7,14 @@ final class nl {
     static String[] field_b;
     static int field_c;
 
-    public static void b(byte param0) {
+    public static void b() {
         int var1 = -1;
         field_b = null;
         field_d = null;
         field_a = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         if (!pg.field_c) {
             throw new IllegalStateException();
         }

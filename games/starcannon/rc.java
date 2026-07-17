@@ -7,7 +7,7 @@ final class rc {
     static String field_c;
     static int[] field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         int var1 = 125;

@@ -44,38 +44,34 @@ class uqb extends ksa implements ntb {
         try {
           L0: {
             param0.a(-632, ((uqb) this).field_e, bnb.field_p);
-            if (param1 < -109) {
-              L1: {
-                stackOut_2_0 = (faa) param0;
-                stackOut_2_1 = 59;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
-                stackIn_3_0 = stackOut_2_0;
-                stackIn_3_1 = stackOut_2_1;
-                if (((uqb) this).field_d == null) {
-                  stackOut_4_0 = (faa) (Object) stackIn_4_0;
-                  stackOut_4_1 = stackIn_4_1;
-                  stackOut_4_2 = 0;
-                  stackIn_5_0 = stackOut_4_0;
-                  stackIn_5_1 = stackOut_4_1;
-                  stackIn_5_2 = stackOut_4_2;
-                  break L1;
-                } else {
-                  stackOut_3_0 = (faa) (Object) stackIn_3_0;
-                  stackOut_3_1 = stackIn_3_1;
-                  stackOut_3_2 = 1;
-                  stackIn_5_0 = stackOut_3_0;
-                  stackIn_5_1 = stackOut_3_1;
-                  stackIn_5_2 = stackOut_3_2;
-                  break L1;
-                }
-              }
-              if (vq.a(stackIn_5_0, stackIn_5_1, stackIn_5_2 != 0)) {
-                ((uqb) this).field_d.b(param0, -113);
-                break L0;
+            L1: {
+              stackOut_2_0 = (faa) param0;
+              stackOut_2_1 = 59;
+              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_1 = stackOut_2_1;
+              stackIn_3_0 = stackOut_2_0;
+              stackIn_3_1 = stackOut_2_1;
+              if (((uqb) this).field_d == null) {
+                stackOut_4_0 = (faa) (Object) stackIn_4_0;
+                stackOut_4_1 = stackIn_4_1;
+                stackOut_4_2 = 0;
+                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_1 = stackOut_4_1;
+                stackIn_5_2 = stackOut_4_2;
+                break L1;
               } else {
-                return;
+                stackOut_3_0 = (faa) (Object) stackIn_3_0;
+                stackOut_3_1 = stackIn_3_1;
+                stackOut_3_2 = 1;
+                stackIn_5_0 = stackOut_3_0;
+                stackIn_5_1 = stackOut_3_1;
+                stackIn_5_2 = stackOut_3_2;
+                break L1;
               }
+            }
+            if (vq.a(stackIn_5_0, stackIn_5_1, stackIn_5_2 != 0)) {
+              ((uqb) this).field_d.b(param0, -113);
+              break L0;
             } else {
               return;
             }
@@ -108,7 +104,7 @@ class uqb extends ksa implements ntb {
               break L2;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + -121 + 41);
         }
     }
 

@@ -15,7 +15,7 @@ class kl {
     int field_i;
     ph field_l;
 
-    private final void c(boolean param0) {
+    private final void c() {
         int var3 = 0;
         rj var4 = null;
         var3 = DungeonAssault.field_K;
@@ -76,8 +76,10 @@ class kl {
               jh.a(((kl) this).field_l);
               ke.a(-101, 0, ((kl) this).field_i, 0);
               ke.a(21, ((kl) this).field_a + -8, ((kl) this).field_i, 0);
-              un.a(8, (byte) -127, ((kl) this).field_a - 16, 0, true);
-              un.a(8, (byte) 50, ((kl) this).field_a - 16, ((kl) this).field_i - 8, true);
+              int discarded$2 = 1;
+              un.a(8, (byte) -127, ((kl) this).field_a - 16, 0);
+              int discarded$3 = 1;
+              un.a(8, (byte) 50, ((kl) this).field_a - 16, ((kl) this).field_i - 8);
               qe.a(8, 8, -16 + ((kl) this).field_a, ((kl) this).field_i + -16, 224, 32, 7, 128);
               jh.b();
               return;
@@ -93,14 +95,15 @@ class kl {
     }
 
     void a(boolean param0) {
-        eg.a(((kl) this).field_f, true);
+        int discarded$4 = 1;
+        eg.a(((kl) this).field_f);
         if (!param0) {
             return;
         }
         field_c = null;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         field_e = null;
@@ -177,7 +180,8 @@ class kl {
 
     void b(int param0) {
         int var2 = -91 / ((param0 - 41) / 63);
-        this.c(false);
+        int discarded$0 = 0;
+        this.c();
     }
 
     void b(boolean param0) {
@@ -187,7 +191,7 @@ class kl {
         ((kl) this).field_g = null;
     }
 
-    final static String a(CharSequence param0, byte param1) {
+    final static String a(CharSequence param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
@@ -212,8 +216,10 @@ class kl {
         try {
           L0: {
             L1: {
-              var2_int = -121 % ((param1 - 36) / 62);
-              var3 = uj.a(ci.a(param0, 2), -1);
+              var2_int = 0;
+              int discarded$4 = 2;
+              int discarded$5 = -1;
+              var3 = uj.a(ci.a(param0));
               if (var3 != null) {
                 break L1;
               } else {
@@ -253,7 +259,7 @@ class kl {
               break L2;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
+          throw vk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + -49 + 41);
         }
         return stackIn_3_0;
     }

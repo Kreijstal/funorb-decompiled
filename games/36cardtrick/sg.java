@@ -14,11 +14,11 @@ final class sg {
         throw new IllegalStateException();
     }
 
-    final static String b(int param0) {
+    final static String b() {
         if (null == ri.field_c) {
             return "";
         }
-        int var1 = 38 / ((param0 - 55) / 46);
+        int var1 = 38;
         return ri.field_c;
     }
 
@@ -31,7 +31,7 @@ final class sg {
         field_a = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         ua.field_F = null;
         hk.field_a = null;
     }

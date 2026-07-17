@@ -45,7 +45,8 @@ final class dw {
             return;
           }
         } else {
-          if (!dg.b(-1)) {
+          int discarded$3 = -1;
+          if (!dg.b()) {
             et.a(true);
             gda.field_c = 11;
             if (param0 > -5) {

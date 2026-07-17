@@ -17,7 +17,7 @@ final class hl implements uj {
         tb.field_a = 2;
     }
 
-    final static int a(String param0, boolean param1, int param2) {
+    final static int a(String param0, boolean param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -88,7 +88,8 @@ final class hl implements uj {
         int var1 = 0;
         var1 = -4 / ((58 - param0) / 61);
         if (20 <= af.field_u) {
-          if (bi.a(-11)) {
+          int discarded$4 = -11;
+          if (bi.a()) {
             if (a.field_d > 0) {
               if (wc.b(false)) {
                 return false;
@@ -111,12 +112,12 @@ final class hl implements uj {
         return "Make Boulders";
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_a = null;
         field_c = null;
     }
 
-    final static int a(int param0) {
+    final static int a() {
         return 1;
     }
 

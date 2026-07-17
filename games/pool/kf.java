@@ -7,7 +7,7 @@ final class kf extends ma {
     int field_n;
     ma field_m;
 
-    public static void a(int param0) {
+    public static void a() {
         field_l = null;
     }
 
@@ -56,73 +56,69 @@ final class kf extends ma {
         var8 = Pool.field_O;
         try {
           L0: {
-            if (param1 == -104) {
-              param4++;
-              L1: while (true) {
-                param0--;
-                var7 = 1;
-                var5_int = param4;
-                L2: while (true) {
-                  if (param0 < var5_int) {
-                    if (var7 == 0) {
-                      L3: {
-                        var5_int = param0;
-                        if (param4 > var5_int) {
-                          break L3;
-                        } else {
-                          L4: {
-                            if (param2[var5_int - 1] > param2[var5_int]) {
-                              var6 = param2[var5_int + -1];
-                              param2[var5_int - 1] = param2[var5_int];
-                              param2[var5_int] = var6;
-                              var6 = param3[-1 + var5_int];
-                              param3[var5_int + -1] = param3[var5_int];
-                              param3[var5_int] = var6;
-                              var7 = 0;
-                              break L4;
-                            } else {
-                              var5_int--;
-                              break L4;
-                            }
-                          }
-                          var5_int--;
-                          var5_int--;
-                          break L3;
-                        }
-                      }
-                      if (var7 == 0) {
-                        param4++;
-                        continue L1;
+            param4++;
+            L1: while (true) {
+              param0--;
+              var7 = 1;
+              var5_int = param4;
+              L2: while (true) {
+                if (param0 < var5_int) {
+                  if (var7 == 0) {
+                    L3: {
+                      var5_int = param0;
+                      if (param4 > var5_int) {
+                        break L3;
                       } else {
-                        break L0;
+                        L4: {
+                          if (param2[var5_int - 1] > param2[var5_int]) {
+                            var6 = param2[var5_int + -1];
+                            param2[var5_int - 1] = param2[var5_int];
+                            param2[var5_int] = var6;
+                            var6 = param3[-1 + var5_int];
+                            param3[var5_int + -1] = param3[var5_int];
+                            param3[var5_int] = var6;
+                            var7 = 0;
+                            break L4;
+                          } else {
+                            var5_int--;
+                            break L4;
+                          }
+                        }
+                        var5_int--;
+                        var5_int--;
+                        break L3;
                       }
+                    }
+                    if (var7 == 0) {
+                      param4++;
+                      continue L1;
                     } else {
-                      return;
+                      break L0;
                     }
                   } else {
-                    L5: {
-                      if (param2[var5_int - 1] > param2[var5_int]) {
-                        var6 = param2[-1 + var5_int];
-                        param2[var5_int + -1] = param2[var5_int];
-                        param2[var5_int] = var6;
-                        var6 = param3[-1 + var5_int];
-                        param3[var5_int + -1] = param3[var5_int];
-                        var7 = 0;
-                        param3[var5_int] = var6;
-                        var5_int++;
-                        break L5;
-                      } else {
-                        var5_int++;
-                        break L5;
-                      }
-                    }
-                    var5_int++;
-                    continue L2;
+                    return;
                   }
+                } else {
+                  L5: {
+                    if (param2[var5_int - 1] > param2[var5_int]) {
+                      var6 = param2[-1 + var5_int];
+                      param2[var5_int + -1] = param2[var5_int];
+                      param2[var5_int] = var6;
+                      var6 = param3[-1 + var5_int];
+                      param3[var5_int + -1] = param3[var5_int];
+                      var7 = 0;
+                      param3[var5_int] = var6;
+                      var5_int++;
+                      break L5;
+                    } else {
+                      var5_int++;
+                      break L5;
+                    }
+                  }
+                  var5_int++;
+                  continue L2;
                 }
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -130,7 +126,7 @@ final class kf extends ma {
           L6: {
             var5 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var5;
-            stackOut_24_1 = new StringBuilder().append("kf.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_24_1 = new StringBuilder().append("kf.A(").append(param0).append(44).append(-104).append(44);
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;

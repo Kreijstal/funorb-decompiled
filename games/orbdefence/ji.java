@@ -27,7 +27,7 @@ final class ji {
         field_d = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         if (!(d.field_k)) {
             throw new IllegalStateException();
         }

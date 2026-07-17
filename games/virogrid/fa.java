@@ -12,6 +12,9 @@ final class fa extends l {
     static String field_m;
 
     final static km c(int param0) {
+        if (param0 != 16777215) {
+            fa.d(64);
+        }
         return rl.d(true);
     }
 

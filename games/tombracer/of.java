@@ -5,22 +5,19 @@ class of {
     static String field_a;
 
     final static cn a(boolean param0, int param1) {
-        cn stackIn_5_0 = null;
-        cn stackOut_3_0 = null;
-        if (!param0) {
-          if (ck.field_a == null) {
-            if (param1 == -1) {
-              return ck.field_a;
-            } else {
-              return nt.a(param1, 1, 5200, false, true, true);
-            }
+        cn stackIn_3_0 = null;
+        cn stackOut_1_0 = null;
+        if (ck.field_a == null) {
+          if (param1 == -1) {
+            return ck.field_a;
           } else {
-            stackOut_3_0 = ck.field_a;
-            stackIn_5_0 = stackOut_3_0;
-            return stackIn_5_0;
+            int discarded$2 = 1;
+            return nt.a(param1, 1, 5200, false, true);
           }
         } else {
-          return null;
+          stackOut_1_0 = ck.field_a;
+          stackIn_3_0 = stackOut_1_0;
+          return stackIn_3_0;
         }
     }
 

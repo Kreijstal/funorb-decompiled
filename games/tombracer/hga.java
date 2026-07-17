@@ -15,7 +15,8 @@ class hga extends vpa {
         }
         try {
             if (!(!param4)) {
-                bl.a(param0.field_m, param3 + param0.field_n, param0.field_p, param1 - -param0.field_i, 1);
+                int discarded$0 = 1;
+                bl.a(param0.field_m, param3 + param0.field_n, param0.field_p, param1 - -param0.field_i);
             }
             super.a(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
@@ -23,7 +24,7 @@ class hga extends vpa {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_o = null;
         field_n = null;
         int var1 = 1;
@@ -98,57 +99,53 @@ class hga extends vpa {
                   if (var27.length <= var13) {
                     cm.field_a = new qg[var12];
                     rda.field_n = new int[var12];
-                    if (param0) {
-                      var13 = 0;
-                      L3: while (true) {
-                        if (var13 >= var12) {
-                          break L0;
-                        } else {
-                          var14 = 0;
-                          var15_int = 1;
-                          L4: while (true) {
-                            if (var31.length <= var15_int) {
-                              var15 = new g[var14];
-                              rda.field_n[var13] = var14;
-                              var16 = 0;
-                              var17 = 0;
-                              var18 = 1;
-                              L5: while (true) {
-                                if (var31.length <= var18) {
-                                  cm.field_a[var13] = new qg(var15, var16 != 0);
-                                  var13++;
-                                  continue L3;
-                                } else {
-                                  L6: {
-                                    var19 = -1 + Integer.parseInt(var31[var18][var3]);
-                                    if (var19 != var13) {
-                                      break L6;
-                                    } else {
-                                      break L6;
-                                    }
+                    var13 = 0;
+                    L3: while (true) {
+                      if (var13 >= var12) {
+                        break L0;
+                      } else {
+                        var14 = 0;
+                        var15_int = 1;
+                        L4: while (true) {
+                          if (var31.length <= var15_int) {
+                            var15 = new g[var14];
+                            rda.field_n[var13] = var14;
+                            var16 = 0;
+                            var17 = 0;
+                            var18 = 1;
+                            L5: while (true) {
+                              if (var31.length <= var18) {
+                                cm.field_a[var13] = new qg(var15, var16 != 0);
+                                var13++;
+                                continue L3;
+                              } else {
+                                L6: {
+                                  var19 = -1 + Integer.parseInt(var31[var18][var3]);
+                                  if (var19 != var13) {
+                                    break L6;
+                                  } else {
+                                    break L6;
                                   }
-                                  var18++;
-                                  continue L5;
                                 }
+                                var18++;
+                                continue L5;
                               }
-                            } else {
-                              L7: {
-                                var16 = Integer.parseInt(var31[var15_int][var3]) + -1;
-                                if (var16 == var13) {
-                                  var14++;
-                                  break L7;
-                                } else {
-                                  break L7;
-                                }
-                              }
-                              var15_int++;
-                              continue L4;
                             }
+                          } else {
+                            L7: {
+                              var16 = Integer.parseInt(var31[var15_int][var3]) + -1;
+                              if (var16 == var13) {
+                                var14++;
+                                break L7;
+                              } else {
+                                break L7;
+                              }
+                            }
+                            var15_int++;
+                            continue L4;
                           }
                         }
                       }
-                    } else {
-                      return;
                     }
                   } else {
                     L8: {
@@ -221,7 +218,7 @@ class hga extends vpa {
           L10: {
             var2 = decompiledCaughtException;
             stackOut_43_0 = (RuntimeException) var2;
-            stackOut_43_1 = new StringBuilder().append("hga.A(").append(param0).append(44);
+            stackOut_43_1 = new StringBuilder().append("hga.A(").append(1).append(44);
             stackIn_45_0 = stackOut_43_0;
             stackIn_45_1 = stackOut_43_1;
             stackIn_44_0 = stackOut_43_0;

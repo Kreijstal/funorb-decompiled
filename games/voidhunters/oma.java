@@ -499,81 +499,78 @@ final class oma implements ntb, mfa {
         float var16 = 0.0f;
         float var17 = 0.0f;
         int var18 = 0;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
+        String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
         RuntimeException stackOut_12_0 = null;
         StringBuilder stackOut_12_1 = null;
         String stackOut_12_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
         RuntimeException stackOut_15_0 = null;
         StringBuilder stackOut_15_1 = null;
         String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
         var18 = VoidHunters.field_G;
         try {
           L0: {
             L1: {
-              param1 = param1 - param4;
-              param8 = param8 - param7;
-              param5 = param5 - param10;
-              var11_float = param0[1] * (float)param8 + (float)param5 * param0[0] + (float)param1 * param0[2];
-              var12 = param0[3] * (float)param5 + param0[4] * (float)param8 + (float)param1 * param0[5];
-              var13 = (float)param1 * param0[8] + (param0[7] * (float)param8 + (float)param5 * param0[6]);
-              var14 = (float)Math.sqrt((double)(var11_float * var11_float + var12 * var12 + var13 * var13));
-              var15 = 0.5f + (float)Math.atan2((double)var11_float, (double)var13) / 6.2831854820251465f;
-              var16 = (float)Math.asin((double)(var12 / var14)) / 3.1415927410125732f + 0.5f + param2;
-              if (1 != param9) {
-                if (param9 == 2) {
-                  var15 = -var15;
-                  var16 = -var16;
-                  break L1;
-                } else {
-                  if (3 == param9) {
-                    var17 = var15;
-                    var15 = var16;
-                    var16 = -var17;
-                    break L1;
+              L2: {
+                param1 = param1 - param4;
+                param8 = param8 - param7;
+                param5 = param5 - param10;
+                var11_float = param0[1] * (float)param8 + (float)param5 * param0[0] + (float)param1 * param0[2];
+                var12 = param0[3] * (float)param5 + param0[4] * (float)param8 + (float)param1 * param0[5];
+                var13 = (float)param1 * param0[8] + (param0[7] * (float)param8 + (float)param5 * param0[6]);
+                var14 = (float)Math.sqrt((double)(var11_float * var11_float + var12 * var12 + var13 * var13));
+                var15 = 0.5f + (float)Math.atan2((double)var11_float, (double)var13) / 6.2831854820251465f;
+                var16 = (float)Math.asin((double)(var12 / var14)) / 3.1415927410125732f + 0.5f + param2;
+                if (1 != param9) {
+                  if (param9 == 2) {
+                    var15 = -var15;
+                    var16 = -var16;
+                    break L2;
                   } else {
-                    break L1;
+                    if (3 == param9) {
+                      var17 = var15;
+                      var15 = var16;
+                      var16 = -var17;
+                      break L2;
+                    } else {
+                      param3[1] = var16;
+                      param3[0] = var15;
+                      break L1;
+                    }
                   }
+                } else {
+                  var17 = var15;
+                  var15 = -var16;
+                  var16 = var17;
+                  break L2;
                 }
-              } else {
-                var17 = var15;
-                var15 = -var16;
-                var16 = var17;
-                break L1;
               }
-            }
-            L2: {
               param3[1] = var16;
               param3[0] = var15;
-              if (param6 == -82) {
-                break L2;
-              } else {
-                field_c = null;
-                break L2;
-              }
+              break L1;
             }
             break L0;
           }
@@ -581,56 +578,56 @@ final class oma implements ntb, mfa {
           decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
             var11 = decompiledCaughtException;
-            stackOut_11_0 = (RuntimeException) var11;
-            stackOut_11_1 = new StringBuilder().append("oma.J(");
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_13_1 = stackOut_11_1;
-            stackIn_12_0 = stackOut_11_0;
-            stackIn_12_1 = stackOut_11_1;
+            stackOut_10_0 = (RuntimeException) var11;
+            stackOut_10_1 = new StringBuilder().append("oma.J(");
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
             if (param0 == null) {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "null";
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              stackIn_14_2 = stackOut_13_2;
-              break L3;
-            } else {
               stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
               stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-              stackOut_12_2 = "{...}";
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              stackIn_14_2 = stackOut_12_2;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L3;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
               break L3;
             }
           }
           L4: {
-            stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(param1).append(44).append(param2).append(44);
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
             if (param3 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
-              break L4;
-            } else {
               stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
               stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L4;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
               break L4;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 44 + param10 + 41);
+          throw rta.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param4 + 44 + param5 + 44 + -82 + 44 + param7 + 44 + param8 + 44 + param9 + 44 + param10 + 41);
         }
     }
 
@@ -865,11 +862,13 @@ final class oma implements ntb, mfa {
                 }
               }
               if (!unb.field_o) {
-                var13 = bkb.a(0);
+                int discarded$2 = 0;
+                var13 = bkb.a();
                 var13.a(false, var12, -48);
                 break L1;
               } else {
-                var11 = pba.b(false).a(3, false);
+                int discarded$3 = 0;
+                var11 = pba.b().a(3, false);
                 var11.a(false, var12, 126);
                 break L1;
               }

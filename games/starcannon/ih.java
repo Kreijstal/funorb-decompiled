@@ -94,7 +94,7 @@ final class ih {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_c = null;
         field_f = null;
         field_d = null;

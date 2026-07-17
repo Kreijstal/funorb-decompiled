@@ -28,14 +28,15 @@ final class pc extends hf {
     static int field_v;
     t field_x;
 
-    final static void a(byte param0) {
+    final static void a() {
         int var1 = 0;
         var1 = -125;
         jk.a((byte) -90);
         if (null == f.field_kb) {
           kj.c(-11099);
           hc.b(true);
-          dk.a((byte) -121);
+          int discarded$23 = -121;
+          dk.a();
           if (vh.g(-88)) {
             fj.field_q.a(1, (byte) -27);
             cm.a(-1, 0);
@@ -49,7 +50,8 @@ final class pc extends hf {
           nb.a(-2, f.field_kb);
           kj.c(-11099);
           hc.b(true);
-          dk.a((byte) -121);
+          int discarded$24 = -121;
+          dk.a();
           if (!vh.g(-88)) {
             jl.a((byte) -126);
             return;
@@ -63,11 +65,6 @@ final class pc extends hf {
     }
 
     final static void a(int param0, boolean param1) {
-        if (param1) {
-            field_C = 99;
-            fe.field_d = param0;
-            return;
-        }
         fe.field_d = param0;
     }
 

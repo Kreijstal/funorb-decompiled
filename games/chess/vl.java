@@ -180,10 +180,6 @@ final class vl extends nm {
                 ((vl) this).field_U[param2][var4] = null;
             }
         }
-        if (!param1) {
-            Object var6 = null;
-            ((vl) this).a((int[]) null, 120, 45);
-        }
     }
 
     final synchronized boolean d(byte param0) {
@@ -1114,7 +1110,7 @@ final class vl extends nm {
         return stackIn_6_0;
     }
 
-    private final void a(boolean param0, byte param1) {
+    private final void a(boolean param0) {
         int var3 = 0;
         int var4 = Chess.field_G;
         if (param0) {
@@ -1436,7 +1432,7 @@ final class vl extends nm {
         int var6 = 0;
         int var7 = Chess.field_G;
         try {
-            this.b(param1 + 85, param0);
+            this.b(87, param0);
             ((vl) this).field_v.a(param2.field_j);
             ((vl) this).field_K = param3 ? true : false;
             ((vl) this).field_N = 0L;
@@ -1446,14 +1442,11 @@ final class vl extends nm {
                 ((vl) this).field_v.c(var6);
                 ((vl) this).field_v.b(var6);
             }
-            if (param1 != 2) {
-                ((vl) this).field_O = null;
-            }
             ((vl) this).field_G = ((vl) this).field_v.f();
             ((vl) this).field_T = ((vl) this).field_v.field_d[((vl) this).field_G];
             ((vl) this).field_J = ((vl) this).field_v.f(((vl) this).field_T);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "vl.E(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "vl.E(" + param0 + 44 + 2 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
     }
 
@@ -1608,13 +1601,14 @@ final class vl extends nm {
     private final synchronized void b(int param0, boolean param1) {
         ((vl) this).field_v.g();
         ((vl) this).field_W = null;
-        this.a(param1, (byte) -38);
+        int discarded$0 = -38;
+        this.a(param1);
         if (param0 < 20) {
             ((vl) this).field_S = null;
         }
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_I = null;
         field_A = null;
         field_M = null;
@@ -1790,7 +1784,8 @@ final class vl extends nm {
                             }
                           }
                         }
-                        this.a(true, (byte) -38);
+                        int discarded$1 = -38;
+                        this.a(true);
                         ((vl) this).field_v.g();
                         return;
                       }
@@ -1822,39 +1817,18 @@ final class vl extends nm {
     }
 
     private final void c(int param0, int param1, int param2) {
-        if (param0 != 0) {
-            ((vl) this).field_p = null;
-        }
     }
 
     private final synchronized void a(int param0, int param1, byte param2) {
         int var4 = 0;
-        int var5 = 0;
-        L0: {
-          var5 = Chess.field_G;
-          if (param1 >= 0) {
-            ((vl) this).field_z[param1] = param0;
-            break L0;
-          } else {
-            var4 = 0;
-            L1: while (true) {
-              if (16 <= var4) {
-                break L0;
-              } else {
-                ((vl) this).field_z[var4] = param0;
-                var4++;
-                continue L1;
-              }
-            }
-          }
+        int var5 = Chess.field_G;
+        for (var4 = 0; 16 > var4; var4++) {
+            ((vl) this).field_z[var4] = 256;
         }
         var4 = 0;
     }
 
     private final void b(int param0, int param1, int param2, int param3) {
-        if (param2 != -43) {
-            ((vl) this).field_F = null;
-        }
     }
 
     final synchronized void c(byte param0) {
@@ -2172,7 +2146,8 @@ final class vl extends nm {
                       if (var3 != 255) {
                         return;
                       } else {
-                        this.a(true, (byte) -38);
+                        int discarded$1 = -38;
+                        this.a(true);
                         return;
                       }
                     } else {
@@ -2313,9 +2288,6 @@ final class vl extends nm {
     }
 
     private final void a(int param0, byte param1, int param2) {
-        if (param1 < 69) {
-            this.b(127, false);
-        }
         ((vl) this).field_t[param2] = param0;
     }
 
@@ -2712,7 +2684,8 @@ final class vl extends nm {
         ((vl) this).field_B = new mi((vl) this);
         ((vl) this).field_s = new kl(128);
         this.a(256, -1, (byte) -101);
-        this.a(true, (byte) -38);
+        int discarded$0 = -38;
+        this.a(true);
     }
 
     static {

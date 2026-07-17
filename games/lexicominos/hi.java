@@ -54,7 +54,7 @@ final class hi {
         var8 = Lexicominos.field_L ? 1 : 0;
         try {
           L0: {
-            var4_int = param0.g(param2, 26527);
+            var4_int = param0.g(16, 26527);
             if (0 != var4_int) {
               L1: {
                 L2: {
@@ -143,7 +143,7 @@ final class hi {
           }
           L7: {
             stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(44).append(param1).append(44).append(16).append(44);
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -171,7 +171,7 @@ final class hi {
         return stackIn_19_0;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -354,7 +354,8 @@ final class hi {
                   }
                 }
                 L12: {
-                  var7 = ii.a(stackIn_38_0, stackIn_38_1 != 0, 0);
+                  int discarded$1 = 0;
+                  var7 = ii.a(stackIn_38_0, stackIn_38_1 != 0);
                   var8 = -(var7 >> 1) + uh.field_D;
                   if (var4 >= 0) {
                     L13: {
@@ -407,7 +408,7 @@ final class hi {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         field_a = null;
@@ -415,50 +416,42 @@ final class hi {
     }
 
     final static boolean a(int param0, char param1) {
-        int stackIn_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
         L0: {
-          if (param0 == 18670) {
-            break L0;
-          } else {
-            field_d = null;
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
-            L3: {
+          L1: {
+            L2: {
               if (param1 < 65) {
-                break L3;
+                break L2;
               } else {
                 if (90 >= param1) {
-                  break L2;
+                  break L1;
                 } else {
-                  break L3;
+                  break L2;
                 }
               }
             }
-            L4: {
+            L3: {
               if (param1 < 97) {
-                break L4;
+                break L3;
               } else {
                 if (param1 > 122) {
-                  break L4;
+                  break L3;
                 } else {
-                  break L2;
+                  break L1;
                 }
               }
             }
-            stackOut_9_0 = 0;
-            stackIn_10_0 = stackOut_9_0;
-            break L1;
+            stackOut_7_0 = 0;
+            stackIn_8_0 = stackOut_7_0;
+            break L0;
           }
-          stackOut_8_0 = 1;
-          stackIn_10_0 = stackOut_8_0;
-          break L1;
+          stackOut_6_0 = 1;
+          stackIn_8_0 = stackOut_6_0;
+          break L0;
         }
-        return stackIn_10_0 != 0;
+        return stackIn_8_0 != 0;
     }
 
     static {

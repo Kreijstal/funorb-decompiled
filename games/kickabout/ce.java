@@ -50,11 +50,8 @@ final class ce extends i {
         int var5 = Kickabout.field_G;
         char[] var6 = new char[param2];
         char[] var3 = var6;
-        if (param1 != 48) {
-            return null;
-        }
         for (var4 = 0; var4 < param2; var4++) {
-            var6[var4] = param0;
+            var6[var4] = '*';
         }
         return new String(var6);
     }

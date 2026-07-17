@@ -5,21 +5,13 @@ final class fa {
     static nh[] field_a;
     static int field_b;
 
-    final static jea b(byte param0) {
+    final static jea b() {
         RuntimeException var1 = null;
         jea stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         jea stackOut_3_0 = null;
         try {
           L0: {
-            L1: {
-              if (param0 > 113) {
-                break L1;
-              } else {
-                field_a = null;
-                break L1;
-              }
-            }
             stackOut_3_0 = jja.field_j.field_tb;
             stackIn_4_0 = stackOut_3_0;
             break L0;
@@ -27,7 +19,7 @@ final class fa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var1, "fa.C(" + param0 + 41);
+          throw tba.a((Throwable) (Object) var1, "fa.C(" + 123 + 41);
         }
         return stackIn_4_0;
     }
@@ -56,7 +48,7 @@ final class fa {
               if (param0 <= -110) {
                 break L1;
               } else {
-                int[] discarded$1 = fa.a(119, (kh) null, -102, (int[]) null);
+                int[] discarded$4 = fa.a(119, (kh) null, -102, (int[]) null);
                 break L1;
               }
             }
@@ -78,7 +70,8 @@ final class fa {
               if (bta.field_q != 2) {
                 break L3;
               } else {
-                if (!at.f(24316)) {
+                int discarded$5 = 24316;
+                if (!at.f()) {
                   L4: {
                     L5: {
                       if (!dda.a(false, mn.field_n)) {
@@ -98,7 +91,8 @@ final class fa {
                   if (!vo.field_b) {
                     break L3;
                   } else {
-                    gu.a(0, true, (String) null, (String) var2, (String) null, 2);
+                    int discarded$6 = 2;
+                    gu.a(0, true, (String) null, (String) var2, (String) null);
                     la.l(2097152);
                     break L3;
                   }
@@ -139,7 +133,8 @@ final class fa {
               L9: {
                 L10: {
                   var3 = fna.field_k;
-                  var3 = ima.a(var3, (byte) 8);
+                  int discarded$7 = 8;
+                  var3 = ima.a(var3);
                   var4 = "";
                   var5 = "|";
                   var6 = bta.field_q;
@@ -312,26 +307,18 @@ final class fa {
         return (String) (Object) stackIn_102_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            L1: {
-              if (param0 == -23172) {
-                break L1;
-              } else {
-                boolean discarded$2 = fa.a(67, -121, true, -29);
-                break L1;
-              }
-            }
             field_a = null;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var1, "fa.E(" + param0 + 41);
+          throw tba.a((Throwable) (Object) var1, "fa.E(" + -23172 + 41);
         }
     }
 
@@ -528,13 +515,11 @@ final class fa {
     final static boolean a(int param0, int param1, boolean param2, int param3) {
         RuntimeException var4 = null;
         int stackIn_5_0 = 0;
-        int stackIn_8_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_16_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_15_0 = 0;
         int stackOut_13_0 = 0;
-        int stackOut_7_0 = 0;
         int stackOut_4_0 = 0;
         try {
           L0: {
@@ -543,28 +528,22 @@ final class fa {
                 break L1;
               } else {
                 if (11 >= param0) {
-                  if (param2) {
-                    L2: {
-                      if (param1 < 1) {
-                        break L2;
+                  L2: {
+                    if (param1 < 1) {
+                      break L2;
+                    } else {
+                      if (param1 <= um.a(param3, -2, param0)) {
+                        stackOut_15_0 = 1;
+                        stackIn_16_0 = stackOut_15_0;
+                        break L0;
                       } else {
-                        if (param1 <= um.a(param3, -2, param0)) {
-                          stackOut_15_0 = 1;
-                          stackIn_16_0 = stackOut_15_0;
-                          break L0;
-                        } else {
-                          break L2;
-                        }
+                        break L2;
                       }
                     }
-                    stackOut_13_0 = 0;
-                    stackIn_14_0 = stackOut_13_0;
-                    return stackIn_14_0 != 0;
-                  } else {
-                    stackOut_7_0 = 0;
-                    stackIn_8_0 = stackOut_7_0;
-                    return stackIn_8_0 != 0;
                   }
+                  stackOut_13_0 = 0;
+                  stackIn_14_0 = stackOut_13_0;
+                  return stackIn_14_0 != 0;
                 } else {
                   break L1;
                 }
@@ -577,7 +556,7 @@ final class fa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var4, "fa.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw tba.a((Throwable) (Object) var4, "fa.A(" + param0 + 44 + param1 + 44 + 1 + 44 + param3 + 41);
         }
         return stackIn_16_0 != 0;
     }

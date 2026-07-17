@@ -5,7 +5,7 @@ final class vi {
     static String[] field_b;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }
@@ -56,7 +56,8 @@ final class vi {
                 break L1;
               }
             }
-            stackOut_2_0 = wk.a(90, 10, param1, true);
+            int discarded$2 = 1;
+            stackOut_2_0 = wk.a(90, 10, param1);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

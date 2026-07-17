@@ -13,7 +13,7 @@ final class wf extends ana {
         field_v = null;
     }
 
-    private final void e(byte param0) {
+    private final void e() {
         aga var2 = null;
         iv var3 = null;
         int var5 = 0;
@@ -51,7 +51,7 @@ final class wf extends ana {
 
     final static void a(int param0, int param1, int param2, jfa param3, int param4) {
         int var5_int = 0;
-        if (bp.e(param0 + -33828)) {
+        if (bp.e(-29919)) {
             return;
         }
         try {
@@ -59,32 +59,31 @@ final class wf extends ana {
             sja.field_fb.field_g = sja.field_fb.field_g + 2;
             var5_int = sja.field_fb.field_g;
             rha.a(param3.field_g, (lu) (Object) sja.field_fb, (byte) -93);
-            if (param0 != 3909) {
-                field_x = true;
-            }
             sja.field_fb.d(param2, 0);
             sja.field_fb.d(param1, 0);
             sja.field_fb.d(param4, 0);
             sja.field_fb.a((byte) -88, -var5_int + sja.field_fb.field_g);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "wf.B(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "wf.B(" + 3909 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
         }
     }
 
     final static void a(int param0, byte param1) {
-        cq discarded$0 = ol.a(rt.field_a[param0], true);
+        int discarded$0 = 1;
+        cq discarded$1 = ol.a(rt.field_a[param0]);
         int var2 = 49 / ((83 - param1) / 43);
     }
 
     final boolean c(byte param0) {
         int var2 = 0;
         var2 = -56 % ((71 - param0) / 47);
-        int fieldTemp$2 = ((wf) this).field_l - 1;
+        int fieldTemp$4 = ((wf) this).field_l - 1;
         ((wf) this).field_l = ((wf) this).field_l - 1;
-        if (fieldTemp$2 >= 0) {
+        if (fieldTemp$4 >= 0) {
           if (((wf) this).field_l == 25) {
             wf.a(34, (byte) -101);
-            this.e((byte) 120);
+            int discarded$5 = 120;
+            this.e();
             return false;
           } else {
             return false;

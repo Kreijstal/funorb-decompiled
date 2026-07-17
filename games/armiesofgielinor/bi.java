@@ -78,41 +78,33 @@ abstract class bi {
                 }
               }
               L4: {
-                if (param0 < -106) {
-                  break L4;
-                } else {
-                  field_c = null;
-                  break L4;
-                }
-              }
-              L5: {
-                L6: {
+                L5: {
                   var5 = var3.toString();
                   if (var5.equals((Object) (Object) "true")) {
-                    break L6;
+                    break L5;
                   } else {
                     if (var5.equals((Object) (Object) "false")) {
-                      break L6;
+                      break L5;
                     } else {
-                      L7: {
+                      L6: {
                         if (var5.charAt(0) == 45) {
-                          break L7;
+                          break L6;
                         } else {
                           if (!Character.isDigit(var5.charAt(0))) {
                             var4 = rn.field_c;
-                            break L5;
+                            break L4;
                           } else {
-                            break L7;
+                            break L6;
                           }
                         }
                       }
                       var4 = gg.field_G;
-                      break L5;
+                      break L4;
                     }
                   }
                 }
                 var4 = gb.field_z;
-                break L5;
+                break L4;
               }
               stackOut_20_0 = new og(var4, var2_int, var5);
               stackIn_21_0 = stackOut_20_0;
@@ -121,10 +113,10 @@ abstract class bi {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
+          L7: {
             var2 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var2;
-            stackOut_22_1 = new StringBuilder().append("bi.J(").append(param0).append(44);
+            stackOut_22_1 = new StringBuilder().append("bi.J(").append(-118).append(44);
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -136,7 +128,7 @@ abstract class bi {
               stackIn_25_0 = stackOut_24_0;
               stackIn_25_1 = stackOut_24_1;
               stackIn_25_2 = stackOut_24_2;
-              break L8;
+              break L7;
             } else {
               stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
               stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
@@ -144,7 +136,7 @@ abstract class bi {
               stackIn_25_0 = stackOut_23_0;
               stackIn_25_1 = stackOut_23_1;
               stackIn_25_2 = stackOut_23_2;
-              break L8;
+              break L7;
             }
           }
           throw ig.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
@@ -163,14 +155,14 @@ abstract class bi {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_e = null;
         field_d = null;
         field_c = null;
         field_f = null;
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean a(char param0) {
         int stackIn_25_0 = 0;
         int stackIn_28_0 = 0;
         int stackOut_26_0 = 0;

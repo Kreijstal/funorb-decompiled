@@ -59,7 +59,7 @@ final class ac {
         return false;
     }
 
-    final static void a(String param0, int param1) {
+    final static void a(String param0) {
         int var2_int = 0;
         try {
             if (!(!ed.c(true))) {
@@ -88,7 +88,7 @@ final class ac {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_D = null;
         field_n = null;
         field_f = null;
@@ -99,15 +99,12 @@ final class ac {
 
     final static void a(byte param0, nh param1) {
         jp var2 = null;
-        if (param0 != -125) {
-            return;
-        }
         try {
             jp.a(param1.a("headers.packvorbis", "", (byte) -119));
             var2 = jp.a(param1, "jagex logo2.packvorbis", "");
             va discarded$0 = var2.c();
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "ac.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "ac.E(" + -125 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

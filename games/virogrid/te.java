@@ -14,7 +14,7 @@ final class te extends IOException {
     static String field_a;
     static int field_h;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
         field_b = null;
         field_a = null;
@@ -28,12 +28,12 @@ final class te extends IOException {
         super(param0);
     }
 
-    final static void a(int param0, sa param1, int param2) {
+    final static void a(int param0, sa param1) {
         hg var5 = null;
         int var4 = 0;
         try {
             var5 = gk.field_g;
-            var5.g(param2, 8);
+            var5.g(4, 8);
             var5.field_l = var5.field_l + 1;
             var4 = var5.field_l;
             var5.a(param0, 98);
@@ -46,44 +46,31 @@ final class te extends IOException {
             int discarded$0 = var5.b((byte) -111, var4);
             var5.b(-var4 + var5.field_l, -1);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "te.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "te.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 4 + 41);
         }
     }
 
-    final static void a(boolean param0, int param1, int param2) {
+    final static void a(boolean param0) {
         int var3 = 0;
         int var4 = 0;
-        L0: {
-          if (null == km.field_yb) {
-            break L0;
+        if (null != km.field_yb) {
+          var3 = km.field_yb.a(2105376, param0);
+          if (var3 == -2) {
+            return;
           } else {
-            var3 = km.field_yb.a(2105376, param0);
-            if (var3 != -2) {
-              L1: {
-                if (var3 != -1) {
-                  var4 = km.field_yb.h(140) ? 1 : 0;
-                  kf.a(param2, var3, km.field_yb.field_Mb, 125, km.field_yb.e((byte) -72), var4 != 0);
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              km.field_yb = null;
-              ch.a(true);
-              break L0;
-            } else {
-              if (param1 < -118) {
-                return;
+            L0: {
+              if (var3 != -1) {
+                var4 = km.field_yb.h(140) ? 1 : 0;
+                kf.a(14, var3, km.field_yb.field_Mb, 125, km.field_yb.e((byte) -72), var4 != 0);
+                break L0;
               } else {
-                field_f = null;
-                return;
+                break L0;
               }
             }
+            km.field_yb = null;
+            ch.a(true);
+            return;
           }
-        }
-        if (param1 >= -118) {
-          field_f = null;
-          return;
         } else {
           return;
         }

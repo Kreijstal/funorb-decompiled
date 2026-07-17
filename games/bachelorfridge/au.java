@@ -14,18 +14,13 @@ final class au {
         L0: while (true) {
           if (var4 == null) {
             var4 = new ne();
-            var4.field_o = param2;
+            var4.field_o = 0;
             var4.field_i = 10;
             rg.field_f.a((bw) (Object) var4, true);
-            kja.a(param0, (byte) 21, var4);
-            if (param1 != 16757) {
-              field_b = true;
-              return var4;
-            } else {
-              return var4;
-            }
+            kja.a(7, (byte) 21, var4);
+            return var4;
           } else {
-            if (param2 == var4.field_o) {
+            if (var4.field_o == 0) {
               return var4;
             } else {
               var4 = (ne) (Object) rg.field_f.c(0);
@@ -35,11 +30,11 @@ final class au {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 
-    final static void a(int param0, String param1, boolean param2) {
+    final static void a(int param0, String param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

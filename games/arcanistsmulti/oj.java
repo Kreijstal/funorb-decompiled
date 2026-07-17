@@ -112,7 +112,7 @@ final class oj {
         return stackIn_14_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_a = null;
         field_g = null;
@@ -122,12 +122,41 @@ final class oj {
     }
 
     final static ho a(int param0, boolean param1) {
+        ho var2 = null;
+        ho stackIn_2_0 = null;
+        ho stackIn_3_0 = null;
+        ho stackIn_4_0 = null;
+        int stackIn_4_1 = 0;
+        ho stackOut_1_0 = null;
+        ho stackOut_3_0 = null;
+        int stackOut_3_1 = 0;
+        ho stackOut_2_0 = null;
+        int stackOut_2_1 = 0;
         if (param0 != 32517) {
-            return null;
+          return null;
+        } else {
+          L0: {
+            var2 = new ho(true);
+            stackOut_1_0 = (ho) var2;
+            stackIn_3_0 = stackOut_1_0;
+            stackIn_2_0 = stackOut_1_0;
+            if (!param1) {
+              stackOut_3_0 = (ho) (Object) stackIn_3_0;
+              stackOut_3_1 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              stackIn_4_1 = stackOut_3_1;
+              break L0;
+            } else {
+              stackOut_2_0 = (ho) (Object) stackIn_2_0;
+              stackOut_2_1 = 1;
+              stackIn_4_0 = stackOut_2_0;
+              stackIn_4_1 = stackOut_2_1;
+              break L0;
+            }
+          }
+          stackIn_4_0.field_h = stackIn_4_1 != 0;
+          return var2;
         }
-        ho var2 = new ho(true);
-        var2.field_h = false;
-        return var2;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {

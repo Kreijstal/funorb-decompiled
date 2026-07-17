@@ -16,12 +16,9 @@ final class bm extends q {
     final static void a(int param0, byte param1, int param2) {
         nd.field_a = param2;
         ad.field_n = param0;
-        if (param1 <= 53) {
-            field_r = null;
-        }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = -82;
         field_l = null;
         field_j = null;

@@ -17,12 +17,12 @@ final class ne implements uo {
     static boolean[] field_e;
     static int field_i;
 
-    public static void g(int param0) {
+    public static void g() {
         field_f = null;
         field_e = null;
     }
 
-    final static void a(hd param0, Object param1, boolean param2) {
+    final static void a(hd param0, Object param1) {
         Exception var3 = null;
         RuntimeException var3_ref = null;
         int var3_int = 0;
@@ -282,7 +282,8 @@ final class ne implements uo {
                       if (param0 <= 0) {
                         break L1;
                       } else {
-                        ((ne) this).field_n = ui.a(param1, param0, 80);
+                        int discarded$1 = 80;
+                        ((ne) this).field_n = ui.a(param1, param0);
                         break L1;
                       }
                     }

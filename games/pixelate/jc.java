@@ -12,15 +12,12 @@ final class jc implements eb {
     final static void a(byte param0, int param1, m param2) {
         pc var3 = null;
         try {
-            if (param0 != -31) {
-                jc.a(-63);
-            }
             var3 = aa.field_f;
-            var3.g(param1, 15514);
+            var3.g(2, 15514);
             var3.e(160, param2.field_m);
-            var3.b(param0 + 1276387975, param2.field_k);
+            var3.b(1276387944, param2.field_k);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "jc.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "jc.C(" + -31 + 44 + 2 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -68,7 +65,8 @@ final class jc implements eb {
             L2: {
               var6_int = param0.field_z + param3;
               var7 = param2 - -param0.field_p;
-              kk.a(var6_int, param0.field_C, var7, param0.field_E, (byte) -51);
+              int discarded$1 = -51;
+              kk.a(var6_int, param0.field_C, var7, param0.field_E);
               var8 = ha.field_g[1];
               if (!(param0 instanceof qm)) {
                 break L2;
@@ -120,11 +118,8 @@ final class jc implements eb {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
-        if (param0 != 14518) {
-            return;
-        }
         field_e = null;
         field_a = null;
     }

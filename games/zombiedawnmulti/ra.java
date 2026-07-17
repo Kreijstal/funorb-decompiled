@@ -22,7 +22,8 @@ final class ra extends br {
                 fg.a(-29956);
             }
             c.a(eb.field_p, (byte) -100, lh.field_i, od.field_Bb);
-            t.a(false, 0, param0, 0);
+            int discarded$0 = 0;
+            t.a(false, 0, param0);
         } catch (RuntimeException runtimeException) {
             throw fa.a((Throwable) (Object) runtimeException, "ra.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
@@ -63,7 +64,7 @@ final class ra extends br {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_g = null;
         field_f = null;
         field_n = null;

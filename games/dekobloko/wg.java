@@ -109,26 +109,18 @@ final class wg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             var5 = 0;
             L1: while (true) {
               if (var4 <= var5) {
-                L2: {
-                  if (param0) {
-                    break L2;
-                  } else {
-                    field_e = 126;
-                    break L2;
-                  }
-                }
                 stackOut_11_0 = var3_int;
                 stackIn_12_0 = stackOut_11_0;
                 break L0;
               } else {
-                L3: {
+                L2: {
                   if (param1.charAt(var5) != param2) {
                     var5++;
-                    break L3;
+                    break L2;
                   } else {
                     var3_int++;
                     var5++;
-                    break L3;
+                    break L2;
                   }
                 }
                 var5++;
@@ -138,10 +130,10 @@ final class wg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var3 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var3;
-            stackOut_13_1 = new StringBuilder().append("wg.A(").append(param0).append(44);
+            stackOut_13_1 = new StringBuilder().append("wg.A(").append(1).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -153,7 +145,7 @@ final class wg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               stackIn_16_2 = stackOut_15_2;
-              break L4;
+              break L3;
             } else {
               stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
               stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
@@ -161,7 +153,7 @@ final class wg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               stackIn_16_0 = stackOut_14_0;
               stackIn_16_1 = stackOut_14_1;
               stackIn_16_2 = stackOut_14_2;
-              break L4;
+              break L3;
             }
           }
           throw dh.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param2 + 41);
@@ -169,7 +161,7 @@ final class wg implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         return stackIn_12_0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_g = null;
         field_c = null;
         field_a = null;

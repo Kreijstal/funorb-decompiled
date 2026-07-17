@@ -4,16 +4,18 @@
 final class mf {
     static na field_a;
 
-    final static void b(boolean param0) {
+    final static void b() {
         if (!el.field_o.field_Y) {
             fj.field_m = fj.field_m + 1;
-            mf.a(false);
+            int discarded$0 = 0;
+            mf.a();
             return;
         }
-        mf.a(false);
+        int discarded$1 = 0;
+        mf.a();
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
     }
 

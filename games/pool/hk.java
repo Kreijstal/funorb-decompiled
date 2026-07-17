@@ -378,12 +378,13 @@ final class hk extends kb {
     }
 
     final long a(int param0) {
-        ((hk) this).field_m = ((hk) this).field_m + this.a(false);
+        int discarded$0 = 0;
+        ((hk) this).field_m = ((hk) this).field_m + this.a();
         if (((hk) this).field_m < ((hk) this).field_p) {
             return (((hk) this).field_p - ((hk) this).field_m) / 1000000L;
         }
         if (param0 != 31) {
-            java.applet.Applet discarded$0 = hk.d(-46);
+            java.applet.Applet discarded$1 = hk.d(-46);
         }
         return 0L;
     }
@@ -394,7 +395,8 @@ final class hk extends kb {
         field_q = null;
         field_r = null;
         if (param0 != 122) {
-            hk.c(-66);
+            int discarded$0 = -66;
+            hk.c();
         }
         field_t = null;
     }
@@ -420,83 +422,76 @@ final class hk extends kb {
         return (java.applet.Applet) (Object) ni.field_ib;
     }
 
-    final static void c(int param0) {
-        int var1 = ml.b(27);
+    final static void c() {
+        int discarded$0 = 27;
+        int var1 = ml.b();
     }
 
     final static g a(di param0, byte param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
-        Object stackIn_2_0 = null;
-        g stackIn_7_0 = null;
+        g stackIn_6_0 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
+        String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        g stackOut_6_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
+        g stackOut_5_0 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
         RuntimeException stackOut_9_0 = null;
         StringBuilder stackOut_9_1 = null;
         String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
         try {
           L0: {
             var4 = param0.b(param2, -31413);
             var3 = var4;
-            if (param1 >= 85) {
-              if (var4 != null) {
-                stackOut_6_0 = new g(var4);
-                stackIn_7_0 = stackOut_6_0;
-                break L0;
-              } else {
-                return null;
-              }
+            if (var4 != null) {
+              stackOut_5_0 = new g(var4);
+              stackIn_6_0 = stackOut_5_0;
+              break L0;
             } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
-              return (g) (Object) stackIn_2_0;
+              return null;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3_ref = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var3_ref;
-            stackOut_8_1 = new StringBuilder().append("hk.L(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackOut_7_0 = (RuntimeException) var3_ref;
+            stackOut_7_1 = new StringBuilder().append("hk.L(");
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
-              break L1;
-            } else {
               stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
               stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L1;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
               break L1;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 44 + param2 + 41);
+          throw wm.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + 127 + 44 + param2 + 41);
         }
-        return stackIn_7_0;
+        return stackIn_6_0;
     }
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -534,7 +529,7 @@ final class hk extends kb {
         return false;
     }
 
-    private final long a(boolean param0) {
+    private final long a() {
         int var8 = 0;
         int var9 = Pool.field_O;
         long var2 = System.nanoTime();

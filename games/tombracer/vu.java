@@ -38,8 +38,8 @@ final class vu extends vw {
         return false;
     }
 
-    public static void d(int param0) {
-        int var1 = -45 % ((-36 - param0) / 51);
+    public static void d() {
+        int var1 = 0;
         field_d = null;
         field_e = null;
     }
@@ -184,7 +184,7 @@ final class vu extends vw {
                     wf.field_g.field_r = dka.field_a.toUpperCase();
                     var7 = (dka.field_b.field_G + 2) / 2;
                     dl.field_t.a(-2 + var7, 40, -23776, -40 + dka.field_b.field_t, 0);
-                    hw.field_a.a(dka.field_b.field_G + -var7, 40, param0 + -23777, -40 + dka.field_b.field_t, var7);
+                    hw.field_a.a(dka.field_b.field_G + -var7, 40, -23776, -40 + dka.field_b.field_t, var7);
                     if (sg.field_u.length != 1) {
                       break L3;
                     } else {
@@ -315,7 +315,7 @@ final class vu extends vw {
                       var9_int = var13;
                       L13: while (true) {
                         if (fk.field_b <= var13) {
-                          cja.a(param0 + 108, fk.field_b, ifa.field_n, 0, -1, -1, -1, true);
+                          cja.a(109, fk.field_b, ifa.field_n, 0, -1, -1, -1, true);
                           if (ld.field_e < 2) {
                             break L11;
                           } else {
@@ -438,7 +438,7 @@ final class vu extends vw {
             L21: {
               L22: {
                 stackOut_63_0 = nra.field_c;
-                stackOut_63_1 = param0 ^ -102;
+                stackOut_63_1 = -101;
                 stackIn_67_0 = stackOut_63_0;
                 stackIn_67_1 = stackOut_63_1;
                 stackIn_64_0 = stackOut_63_0;
@@ -581,43 +581,36 @@ final class vu extends vw {
               stackIn_78_2 = stackOut_77_2;
               break L25;
             }
+            ((jea) (Object) stackIn_78_0).c(stackIn_78_1, stackIn_78_2 != 0);
+            rm.field_e.field_a.e((byte) -99);
             L27: {
-              ((jea) (Object) stackIn_78_0).c(stackIn_78_1, stackIn_78_2 != 0);
-              rm.field_e.field_a.e((byte) -99);
-              if (param0 == 1) {
-                break L27;
-              } else {
-                vu.d(-121);
-                break L27;
-              }
-            }
-            L28: {
               if (null == ifa.field_n) {
-                break L28;
+                break L27;
               } else {
-                L29: {
+                L28: {
                   if (bc.field_b.field_y == 0) {
-                    break L29;
+                    break L28;
                   } else {
-                    gk.a(param3, (byte) 28);
-                    break L29;
+                    int discarded$1 = 28;
+                    gk.a(param3);
+                    break L28;
                   }
                 }
-                L30: {
+                L29: {
                   if (hw.field_a.field_y == 0) {
-                    break L30;
+                    break L29;
                   } else {
                     if (qa.field_o) {
                       pd.a((byte) 34, param3);
-                      break L30;
+                      break L29;
                     } else {
                       jq.a(param3, (byte) -128);
-                      break L30;
+                      break L29;
                     }
                   }
                 }
                 cm.a(param3, ifa.field_n, -21290, true);
-                break L28;
+                break L27;
               }
             }
             break L0;
@@ -625,7 +618,7 @@ final class vu extends vw {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var4, "vu.F(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw tba.a((Throwable) (Object) var4, "vu.F(" + 1 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 

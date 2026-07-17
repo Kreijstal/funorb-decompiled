@@ -22,69 +22,108 @@ public final class Confined extends i {
         try {
           L0: {
             Confined.o(3000);
-            bg.a((byte) -108);
-            jc.a((byte) -92);
+            int discarded$144 = -108;
+            bg.a();
+            int discarded$145 = -92;
+            jc.a();
             bh.a(param0 ^ 4891);
-            mi.a((byte) -63);
-            dn.a(-89);
-            ua.a(7526);
+            int discarded$146 = -63;
+            mi.a();
+            int discarded$147 = -89;
+            dn.a();
+            int discarded$148 = 7526;
+            ua.a();
             i.b((byte) 82);
-            ec.a(3);
+            int discarded$149 = 3;
+            ec.a();
             te.b(32575);
             pk.c(param0 + -13733);
-            ck.a((byte) 81);
+            int discarded$150 = 81;
+            ck.a();
             fn.a();
-            mg.a((byte) -121);
+            int discarded$151 = -121;
+            mg.a();
             kg.d(param0 + -196);
-            ri.a((byte) 28);
-            ih.a(-172274096);
-            f.a(-12435);
-            ac.a((byte) -54);
+            int discarded$152 = 28;
+            ri.a();
+            int discarded$153 = -172274096;
+            ih.a();
+            int discarded$154 = -12435;
+            f.a();
+            int discarded$155 = -54;
+            ac.a();
             km.a(11645);
-            ng.a((byte) -87);
-            hh.a((byte) -99);
+            int discarded$156 = -87;
+            ng.a();
+            int discarded$157 = -99;
+            hh.a();
             aj.a(-10619);
-            d.a((byte) 46);
-            oc.c(-113);
-            ta.a(27616);
-            ab.a((byte) -117);
-            gb.a((byte) 90);
-            jg.b((byte) 1);
-            rb.b((byte) -90);
+            int discarded$158 = 46;
+            d.a();
+            int discarded$159 = -113;
+            oc.c();
+            int discarded$160 = 27616;
+            ta.a();
+            int discarded$161 = -117;
+            ab.a();
+            int discarded$162 = 90;
+            gb.a();
+            int discarded$163 = 1;
+            jg.b();
+            int discarded$164 = -90;
+            rb.b();
             ad.a((byte) -120);
-            gj.a((byte) -86);
-            wi.b((byte) 12);
+            int discarded$165 = -86;
+            gj.a();
+            int discarded$166 = 12;
+            wi.b();
             jb.l(320);
             hl.b(0);
             dk.f();
-            vk.a((byte) -111);
+            int discarded$167 = -111;
+            vk.a();
             dd.c();
-            hn.e(0);
+            int discarded$168 = 0;
+            hn.e();
             mn.b(103);
             eg.b((byte) 80);
-            sg.e((byte) 109);
-            pm.e((byte) 45);
+            int discarded$169 = 109;
+            sg.e();
+            int discarded$170 = 45;
+            pm.e();
             rd.n(-122);
-            ee.k(2);
+            int discarded$171 = 2;
+            ee.k();
             jl.b(9898);
             rk.a(14);
             oi.b(false);
-            ka.l(0);
+            int discarded$172 = 0;
+            ka.l();
             od.c();
-            vg.l(78);
+            int discarded$173 = 78;
+            vg.l();
             sk.c();
-            da.b(-12961);
-            kh.g((byte) 100);
-            hm.d(true);
+            int discarded$174 = -12961;
+            da.b();
+            int discarded$175 = 100;
+            kh.g();
+            int discarded$176 = 1;
+            hm.d();
             hf.m(-126);
-            il.n(109);
-            ah.h((byte) -128);
+            int discarded$177 = 109;
+            il.n();
+            int discarded$178 = -128;
+            ah.h();
             sa.h((byte) -28);
-            cl.c(false);
-            mb.m(1072);
+            int discarded$179 = 0;
+            cl.c();
+            int discarded$180 = 1072;
+            mb.m();
             mm.m(-27552);
-            dj.n(-1);
-            h.l(0);
+            int discarded$181 = -1;
+            dj.n();
+            int discarded$182 = 0;
+            h.l();
             ek.a((byte) -93);
             tf.d(58);
             gk.c(14714);
@@ -92,180 +131,262 @@ public final class Confined extends i {
             pl.c(-1444);
             ti.c();
             k.a();
-            wc.n(0);
-            lc.a((byte) 83);
-            vb.d(8);
+            int discarded$183 = 0;
+            wc.n();
+            int discarded$184 = 83;
+            lc.a();
+            int discarded$185 = 8;
+            vb.d();
             kl.k(-16420);
             un.d(param0 + -191);
-            ql.b(14293);
+            int discarded$186 = 14293;
+            ql.b();
             wd.b(param0 + -17957);
             ok.a();
             ld.a(0);
-            nl.a(false);
+            int discarded$187 = 0;
+            nl.a();
             sb.a(param0 + -135);
             t.b();
-            uh.a((byte) -56);
-            p.a(101);
-            jf.b((byte) -88);
-            pc.b((byte) -119);
-            ja.a((byte) -35);
+            int discarded$188 = -56;
+            uh.a();
+            int discarded$189 = 101;
+            p.a();
+            int discarded$190 = -88;
+            jf.b();
+            int discarded$191 = -119;
+            pc.b();
+            int discarded$192 = -35;
+            ja.a();
             pf.b(param0 ^ -172);
-            vd.c(116);
-            tb.a((byte) 116);
-            di.a(0);
-            ui.a((byte) 110);
+            int discarded$193 = 116;
+            vd.c();
+            int discarded$194 = 116;
+            tb.a();
+            int discarded$195 = 0;
+            di.a();
+            int discarded$196 = 110;
+            ui.a();
             v.j((byte) -39);
-            jj.h((byte) -87);
+            int discarded$197 = -87;
+            jj.h();
             ef.n(111);
-            dh.c(false);
-            ke.j(-14508);
+            int discarded$198 = 0;
+            dh.c();
+            int discarded$199 = -14508;
+            ke.j();
             tg.g((byte) 126);
             w.k(param0 + -191);
-            bf.b(false);
-            bn.a((byte) 127);
-            kc.b((byte) 110);
-            hd.a(true);
-            ij.b(-94);
+            int discarded$200 = 0;
+            bf.b();
+            int discarded$201 = 127;
+            bn.a();
+            int discarded$202 = 110;
+            kc.b();
+            int discarded$203 = 1;
+            hd.a();
+            int discarded$204 = -94;
+            ij.b();
             on.a(param0 ^ -14138);
             ea.a((byte) 75);
             oh.a(-32313);
             th.m(param0 + 64);
             gm.m(15);
-            ik.c(true);
-            gi.m(-11008);
-            af.i((byte) -91);
+            int discarded$205 = 1;
+            ik.c();
+            int discarded$206 = -11008;
+            gi.m();
+            int discarded$207 = -91;
+            af.i();
             uc.l(-127);
             cm.a();
             we.a((byte) -21);
             ln.a(-121);
             tk.a(15866);
-            ne.a((byte) 39);
+            int discarded$208 = 39;
+            ne.a();
             cf.n(119);
-            vm.c(true);
+            int discarded$209 = 1;
+            vm.c();
             wm.n(param0 ^ -30194);
             ue.c(param0 + -152);
-            bd.a(true);
+            int discarded$210 = 1;
+            bd.a();
             qi.a((byte) 46);
-            qj.b(0);
+            int discarded$211 = 0;
+            qj.b();
             lg.a();
             ph.c();
             sl.b();
             m.a(27244);
-            vh.b(false);
-            ji.a((byte) 102);
-            ic.a((byte) 19);
+            int discarded$212 = 0;
+            vh.b();
+            int discarded$213 = 102;
+            ji.a();
+            int discarded$214 = 19;
+            ic.a();
             hb.g(-1);
             aa.a(param0 ^ 198);
-            an.b(-22861);
+            int discarded$215 = -22861;
+            an.b();
             ch.a(param0 + -120);
-            ll.a(false);
-            qd.a((byte) -115);
-            cg.a(0);
+            int discarded$216 = 0;
+            ll.a();
+            int discarded$217 = -115;
+            qd.a();
+            int discarded$218 = 0;
+            cg.a();
             si.a(false);
             em.a((byte) -64);
             mh.a(param0 + -16993);
             a.a(false);
-            wb.b(-8854);
-            kn.a(-126);
+            int discarded$219 = -8854;
+            wb.b();
+            int discarded$220 = -126;
+            kn.a();
             lh.a(0);
             kd.d((byte) 104);
-            tn.c(false);
+            int discarded$221 = 0;
+            tn.c();
             ae.a(param0 ^ 128);
-            sm.g((byte) 81);
-            tj.c(-125);
+            int discarded$222 = 81;
+            sm.g();
+            int discarded$223 = -125;
+            tj.c();
             fm.a(param0 + -191);
-            im.a(false);
+            int discarded$224 = 0;
+            im.a();
             rl.c(-114);
-            fc.a(-1);
-            ni.a(false);
+            int discarded$225 = -1;
+            fc.a();
+            int discarded$226 = 0;
+            ni.a();
             qf.b(param0 ^ param0);
             oa.a();
-            eb.a(79);
-            jd.a((byte) -38);
-            ei.i((byte) 122);
+            int discarded$227 = 79;
+            eb.a();
+            int discarded$228 = -38;
+            jd.a();
+            int discarded$229 = 122;
+            ei.i();
             ml.a(param0 ^ -193);
             vf.b(param0 + -193);
-            ki.a(false);
+            int discarded$230 = 0;
+            ki.a();
             he.a((byte) 105);
             rm.a(param0 + -192);
             kj.a(-30357);
             cb.a((byte) 26);
             fl.a(-20562);
-            md.b((byte) -81);
+            int discarded$231 = -81;
+            md.b();
             rj.a(123);
             eh.c(true);
-            pb.a((byte) 70);
-            ie.a(-75);
-            nh.a(false);
-            dg.b(false);
-            dl.a((byte) 101);
-            pa.a((byte) -90);
-            b.a(-110);
+            int discarded$232 = 70;
+            pb.a();
+            int discarded$233 = -75;
+            ie.a();
+            int discarded$234 = 0;
+            nh.a();
+            int discarded$235 = 0;
+            dg.b();
+            int discarded$236 = 101;
+            dl.a();
+            int discarded$237 = -90;
+            pa.a();
+            int discarded$238 = -110;
+            b.a();
             qh.d(109);
             li.a(1);
             rc.a(param0 ^ -30147);
             sc.a(-30048);
-            fj.e(296);
+            int discarded$239 = 296;
+            fj.e();
             rg.g((byte) 17);
-            am.b(true);
+            int discarded$240 = 1;
+            am.b();
             ug.a((byte) -117);
             oe.k(-1);
             ga.h(52);
-            se.a((byte) -122);
-            rn.a((byte) 123);
+            int discarded$241 = -122;
+            se.a();
+            int discarded$242 = 123;
+            rn.a();
             lb.e(122);
-            wg.a((byte) -48);
+            int discarded$243 = -48;
+            wg.a();
             jk.a(-108);
             ag.a(param0 + -182);
-            of.a((byte) 99);
-            fh.a(true);
-            mc.a((byte) 58);
+            int discarded$244 = 99;
+            of.a();
+            int discarded$245 = 1;
+            fh.a();
+            int discarded$246 = 58;
+            mc.a();
             qa.a(param0 ^ -234);
-            n.a((byte) 122);
-            kk.a((byte) -95);
+            int discarded$247 = 122;
+            n.a();
+            int discarded$248 = -95;
+            kk.a();
             q.c(-93);
             cd.a(-45);
-            vl.a(-14578);
-            tl.a((byte) 123);
+            int discarded$249 = -14578;
+            vl.a();
+            int discarded$250 = 123;
+            tl.a();
             dc.e(12259);
-            nm.h(3981);
+            int discarded$251 = 3981;
+            nm.h();
             r.a(107);
             lk.a(false);
             fd.a((byte) -122);
             la.i(param0 ^ 179);
-            wh.l(-9466);
-            ul.b(false);
+            int discarded$252 = -9466;
+            wh.l();
+            int discarded$253 = 0;
+            ul.b();
             sj.h((byte) 70);
-            ib.h((byte) -20);
-            ak.j(-125);
+            int discarded$254 = -20;
+            ib.h();
+            int discarded$255 = -125;
+            ak.j();
             na.a((byte) -127);
             ba.a((byte) -94);
             rh.g(8692);
             fa.f(91);
-            mf.d(96);
+            int discarded$256 = 96;
+            mf.d();
             ol.a(0);
             pi.a((byte) -81);
             jh.b(true);
             nj.a((byte) -93);
             uf.a();
-            fb.a(false);
+            int discarded$257 = 0;
+            fb.a();
             ig.c(-6348);
-            c.a((byte) 87);
+            int discarded$258 = 87;
+            c.a();
             wl.a(false);
-            qe.h(44);
+            int discarded$259 = 44;
+            qe.h();
             s.g((byte) 92);
             e.a(64);
             gh.a(param0 + -245);
             lm.a((byte) 108);
-            nd.c(30661);
+            int discarded$260 = 30661;
+            nd.c();
             oj.e(20);
             og.d(param0 ^ -211);
             qk.a(param0 + -81);
             o.a((byte) -91);
-            tm.a(-125);
-            qn.b(-1362);
-            bj.a((byte) 113);
-            ha.a(11);
+            int discarded$261 = -125;
+            tm.a();
+            int discarded$262 = -1362;
+            qn.b();
+            int discarded$263 = 113;
+            bj.a();
+            int discarded$264 = 11;
+            ha.a();
             je.c(param0 + -286);
             hk.a((byte) -128);
             db.a((byte) 118);
@@ -274,37 +395,60 @@ public final class Confined extends i {
             me.g((byte) -86);
             fg.f(param0 ^ 11084);
             cc.b(true);
-            wa.a((byte) -114);
-            gd.a((byte) -3);
+            int discarded$265 = -114;
+            wa.a();
+            int discarded$266 = -3;
+            gd.a();
             sf.b(92);
-            ve.a(-340);
-            in.a(-116);
+            int discarded$267 = -340;
+            ve.a();
+            int discarded$268 = -116;
+            in.a();
             vj.a((byte) 125);
-            ej.a(true);
-            hc.b(true);
-            jn.j(97);
-            al.b((byte) 73);
-            ai.a(-12875);
-            mk.c(89);
-            ii.a(false);
-            ca.b(-1635);
-            om.a((byte) -50);
-            ci.b((byte) -102);
+            int discarded$269 = 1;
+            ej.a();
+            int discarded$270 = 1;
+            hc.b();
+            int discarded$271 = 97;
+            jn.j();
+            int discarded$272 = 73;
+            al.b();
+            int discarded$273 = -12875;
+            ai.a();
+            int discarded$274 = 89;
+            mk.c();
+            int discarded$275 = 0;
+            ii.a();
+            int discarded$276 = -1635;
+            ca.b();
+            int discarded$277 = -50;
+            om.a();
+            int discarded$278 = -102;
+            ci.b();
             ud.b(98);
             pe.b(param0 + -147);
-            gg.b(116);
+            int discarded$279 = 116;
+            gg.b();
             pn.a(param0 + -274);
-            sd.a(-15138);
-            qg.f(-119);
-            gl.c((byte) -11);
-            bk.e(62);
+            int discarded$280 = -15138;
+            sd.a();
+            int discarded$281 = -119;
+            qg.f();
+            int discarded$282 = -11;
+            gl.c();
+            int discarded$283 = 62;
+            bk.e();
             qc.e(param0 + -193);
             hj.e(-109);
             lf.e(127);
-            rf.a((byte) 112);
-            nn.c(-11650);
-            fi.a((byte) -125);
-            ra.b(true);
+            int discarded$284 = 112;
+            rf.a();
+            int discarded$285 = -11650;
+            nn.c();
+            int discarded$286 = -125;
+            fi.a();
+            int discarded$287 = 1;
+            ra.b();
             va.a(param0 + -312);
             ((Confined) this).field_y = null;
             break L0;
@@ -381,7 +525,8 @@ public final class Confined extends i {
               } else {
                 if (dn.field_d.field_f) {
                   qh.c(param0 ^ -5);
-                  gm.i((byte) -29);
+                  int discarded$14 = -29;
+                  gm.i();
                   break L1;
                 } else {
                   break L1;
@@ -426,10 +571,12 @@ public final class Confined extends i {
               }
             }
             L4: {
-              if (!ga.g(15214)) {
+              int discarded$15 = 15214;
+              if (!ga.g()) {
                 L5: {
                   if (!qa.field_a) {
-                    this.f((byte) -95);
+                    int discarded$16 = -95;
+                    this.f();
                     break L5;
                   } else {
                     break L5;
@@ -438,17 +585,20 @@ public final class Confined extends i {
                 L6: {
                   if (qa.field_a) {
                     L7: {
-                      if (pc.a(false)) {
+                      int discarded$17 = 0;
+                      if (pc.a()) {
                         break L7;
                       } else {
                         a.a(0);
                         break L7;
                       }
                     }
-                    if (!pc.a(false)) {
+                    int discarded$18 = 0;
+                    if (!pc.a()) {
                       break L6;
                     } else {
-                      this.c(false);
+                      int discarded$19 = 0;
+                      this.c();
                       break L6;
                     }
                   } else {
@@ -456,11 +606,14 @@ public final class Confined extends i {
                   }
                 }
                 L8: {
-                  if (!tj.a(true)) {
+                  int discarded$20 = 1;
+                  if (!tj.a()) {
                     L9: while (true) {
                       var2_ref = (sf) (Object) ra.field_c.c(param0 ^ -2);
                       if (var2_ref != null) {
-                        ua.a(var2_ref, 4, 8795);
+                        int discarded$21 = 8795;
+                        int discarded$22 = 4;
+                        ua.a(var2_ref);
                         continue L9;
                       } else {
                         break L8;
@@ -471,7 +624,8 @@ public final class Confined extends i {
                   }
                 }
                 L10: while (true) {
-                  if (!pe.a(ib.field_M, -69)) {
+                  int discarded$23 = -69;
+                  if (!pe.a(ib.field_M)) {
                     tb.a(0, 116);
                     if (!rj.b(param0 + 28405)) {
                       break L4;
@@ -488,9 +642,13 @@ public final class Confined extends i {
                           }
                         }
                       }
-                      id.c(-1, 3);
+                      int discarded$24 = 3;
+                      int discarded$25 = -1;
+                      id.c();
                       wi.a(4, -127);
-                      ud.a(5, 118);
+                      int discarded$26 = 118;
+                      int discarded$27 = 5;
+                      ud.a();
                       break L4;
                     }
                   } else {
@@ -622,15 +780,19 @@ public final class Confined extends i {
           }
         }
         var3 = stackIn_6_0;
-        if (!ga.g(15214)) {
+        int discarded$13 = 15214;
+        if (!ga.g()) {
           if (qa.field_a) {
-            if (!pc.a(false)) {
+            int discarded$14 = 0;
+            if (!pc.a()) {
               jc.a(bd.field_c, 10265, 100.0f);
-              wb.a((java.awt.Canvas) var2, 0);
+              int discarded$15 = 0;
+              wb.a((java.awt.Canvas) var2);
               return;
             } else {
               L2: {
-                ca.c(511);
+                int discarded$16 = 511;
+                ca.c();
                 fn.d();
                 fn.field_l = 376;
                 fn.c();
@@ -954,7 +1116,8 @@ public final class Confined extends i {
                   }
                   L27: {
                     if (qn.field_v.field_B.field_cb) {
-                      ul.a(8, ek.field_k, 10, param0 ^ -55445, 432);
+                      int discarded$17 = 432;
+                      ul.a(8, ek.field_k, 10, param0 ^ -55445);
                       break L27;
                     } else {
                       break L27;
@@ -964,13 +1127,15 @@ public final class Confined extends i {
                     if (!qn.field_v.field_B.field_eb) {
                       break L28;
                     } else {
-                      ul.a(48, kc.field_r, 11, -4245, 432);
+                      int discarded$18 = 432;
+                      ul.a(48, kc.field_r, 11, -4245);
                       break L28;
                     }
                   }
                   L29: {
                     if (qn.field_v.field_B.field_Sb) {
-                      ul.a(88, r.field_b, 12, param0 + -55445, 432);
+                      int discarded$19 = 432;
+                      ul.a(88, r.field_b, 12, param0 + -55445);
                       break L29;
                     } else {
                       break L29;
@@ -978,7 +1143,8 @@ public final class Confined extends i {
                   }
                   L30: {
                     if (qn.field_v.field_B.field_rb) {
-                      ul.a(128, rb.field_g, 13, -4245, 432);
+                      int discarded$20 = 432;
+                      ul.a(128, rb.field_g, 13, -4245);
                       break L30;
                     } else {
                       break L30;
@@ -1176,7 +1342,8 @@ public final class Confined extends i {
                 }
               }
               L50: {
-                if (!ka.k(-58)) {
+                int discarded$21 = -58;
+                if (!ka.k()) {
                   if (!ka.h((byte) 92)) {
                     break L50;
                   } else {
@@ -1185,8 +1352,11 @@ public final class Confined extends i {
                   }
                 } else {
                   fn.a(0, 0, 640, 480);
-                  fn.b(-30 + -(hn.d(param0 ^ 43292) / 2) + 320, 240 - gh.a(true) / 2 + -20, 60 + hn.d(24860), gh.a(true) + 40, 0, 150);
-                  pi.j(-1101556575);
+                  int discarded$22 = 1;
+                  int discarded$23 = 1;
+                  fn.b(-30 + -(hn.d(param0 ^ 43292) / 2) + 320, 240 - gh.a() / 2 + -20, 60 + hn.d(24860), gh.a() + 40, 0, 150);
+                  int discarded$24 = -1101556575;
+                  pi.j();
                   break L50;
                 }
               }
@@ -1210,7 +1380,8 @@ public final class Confined extends i {
               return;
             }
           } else {
-            wb.a((java.awt.Canvas) var2, 0);
+            int discarded$25 = 0;
+            wb.a((java.awt.Canvas) var2);
             return;
           }
         } else {
@@ -1219,7 +1390,7 @@ public final class Confined extends i {
         }
     }
 
-    private final void f(byte param0) {
+    private final void f() {
         double var2_double = 0.0;
         nf var2 = null;
         int var2_int = 0;
@@ -1235,8 +1406,8 @@ public final class Confined extends i {
         if (fc.field_d == null) {
           ca.a(il.field_cb, -1856653215);
           eb.a((byte) -102);
-          jc.a(ij.field_o, param0 ^ -10312, 50.0f);
-          ((Confined) this).h(param0 ^ -51295);
+          jc.a(ij.field_o, 10265, 50.0f);
+          ((Confined) this).h(51200);
           fc.field_d = od.a(ka.field_N, "", "player/ship");
           var2_double = 0.3 / (double)fc.field_d.b(153);
           jb.a((byte) -100, var2_double, me.field_J);
@@ -1252,11 +1423,13 @@ public final class Confined extends i {
           var4 = 0;
           L0: while (true) {
             if (var4 >= 4) {
-              nd.e((byte) 18);
-              am.g(param0 ^ 4351);
+              int discarded$34 = 18;
+              nd.e();
+              int discarded$35 = -4258;
+              am.g();
               return;
             } else {
-              int discarded$12 = bf.field_R[0][var4].b(51);
+              int discarded$36 = bf.field_R[0][var4].b(51);
               var4++;
               continue L0;
             }
@@ -1266,19 +1439,19 @@ public final class Confined extends i {
             jc.a(ij.field_o, 10265, 53.0f);
             ((Confined) this).h(51200);
             e.field_a = od.a(ka.field_N, "", "missiles/concussion");
-            int discarded$13 = e.field_a.b(204);
+            int discarded$37 = e.field_a.b(204);
             h.field_Y = od.a(ka.field_N, "", "missiles/homing");
-            int discarded$14 = h.field_Y.b(204);
+            int discarded$38 = h.field_Y.b(204);
             hn.field_f = od.a(ka.field_N, "", "missiles/cluster");
-            int discarded$15 = hn.field_f.b(204);
+            int discarded$39 = hn.field_f.b(204);
             tk.field_a = od.a(ka.field_N, "", "missiles/cluster-shell");
-            int discarded$16 = tk.field_a.b(102);
+            int discarded$40 = tk.field_a.b(102);
             u.field_T = od.a(ka.field_N, "", "missiles/nuclear");
-            int discarded$17 = u.field_T.b(256);
+            int discarded$41 = u.field_T.b(256);
             ri.field_c = od.a(ka.field_N, "", "mines/basic");
-            int discarded$18 = ri.field_c.b(25);
+            int discarded$42 = ri.field_c.b(25);
             sm.field_A = od.a(ka.field_N, "", "mines/cluster");
-            int discarded$19 = sm.field_A.b(25);
+            int discarded$43 = sm.field_A.b(25);
             jk.field_c[0] = od.a(ka.field_N, "", "aliens/flying-saucer");
             jk.field_c[1] = od.a(ka.field_N, "", "aliens/flying-saucer-2");
             jk.field_c[2] = od.a(ka.field_N, "", "aliens/flying-saucer-3");
@@ -1294,9 +1467,9 @@ public final class Confined extends i {
             jk.field_c[12] = od.a(ka.field_N, "", "aliens/swarmer-4");
             var2_double = 0.5 / (double)jk.field_c[0].b(256);
             jb.a((byte) -97, var2_double, mc.field_b);
-            int discarded$20 = jk.field_c[1].b(256);
-            int discarded$21 = jk.field_c[2].b(256);
-            int discarded$22 = jk.field_c[3].b(256);
+            int discarded$44 = jk.field_c[1].b(256);
+            int discarded$45 = jk.field_c[2].b(256);
+            int discarded$46 = jk.field_c[3].b(256);
             var2_double = 0.5 / (double)jk.field_c[4].b(256);
             jb.a((byte) -90, var2_double, tl.field_a[4]);
             var2_double = 0.5 / (double)jk.field_c[5].b(256);
@@ -1305,7 +1478,7 @@ public final class Confined extends i {
             jb.a((byte) -82, var2_double, tl.field_a[6]);
             var2_double = 0.5 / (double)jk.field_c[7].b(256);
             jb.a((byte) -82, var2_double, tl.field_a[7]);
-            int discarded$23 = jk.field_c[8].b(204);
+            int discarded$47 = jk.field_c[8].b(204);
             var2_double = 0.3 / (double)jk.field_c[9].b(153);
             jb.a((byte) -92, var2_double, tl.field_a[9]);
             var2_double = 0.3 / (double)jk.field_c[10].b(153);
@@ -1321,7 +1494,8 @@ public final class Confined extends i {
                 L2: while (true) {
                   if (var4 >= 4) {
                     ka.field_N = null;
-                    am.g(-4258);
+                    int discarded$48 = -4258;
+                    am.g();
                     return;
                   } else {
                     gg.field_n[var4] = od.a(ka.field_N, "", gg.field_p[var4]);
@@ -1372,7 +1546,7 @@ public final class Confined extends i {
                   if (pn.field_a == null) {
                     jc.a(wl.field_a, 10265, 60.0f);
                     ((Confined) this).h(51200);
-                    db.field_w = nm.a(ih.field_d, "achievements", param0 + 96, "");
+                    db.field_w = nm.a(ih.field_d, "achievements", 1, "");
                     kn.field_g = dh.a(false, "unachieved", "basic", pb.field_e);
                     var2 = dh.a(false, "orbcoin", "basic", pb.field_e);
                     sb.field_h = new nf(20, 20);
@@ -1380,20 +1554,25 @@ public final class Confined extends i {
                     var2.a(0, 0, 20, 20);
                     pi.field_S.a((byte) 111);
                     var2 = null;
-                    pn.field_a = bj.a("", ih.field_d, ul.field_U, "fonts_bottomheavy16", (byte) 38);
-                    vg.field_I = bj.a("", ih.field_d, ul.field_U, "fonts_bottomheavy32", (byte) 38);
-                    ei.field_mb = nm.a(ih.field_d, "shields_friend_small", param0 + 96, "");
-                    gh.field_h = f.a(8364, ei.field_mb, 96);
+                    int discarded$49 = 38;
+                    pn.field_a = bj.a("", ih.field_d, ul.field_U, "fonts_bottomheavy16");
+                    int discarded$50 = 38;
+                    vg.field_I = bj.a("", ih.field_d, ul.field_U, "fonts_bottomheavy32");
+                    ei.field_mb = nm.a(ih.field_d, "shields_friend_small", 1, "");
+                    int discarded$51 = 96;
+                    gh.field_h = f.a(8364, ei.field_mb);
                     uc.field_U = nm.a(ih.field_d, "shields_enemy_small", 1, "");
-                    pc.field_e = nm.a(ih.field_d, "shields_enemy_large", param0 + 96, "");
+                    pc.field_e = nm.a(ih.field_d, "shields_enemy_large", 1, "");
                     jc.a(wl.field_a, 10265, 63.0f);
                     ((Confined) this).h(51200);
                     pn.field_l = nm.a(ih.field_d, "shields_invincible_state", 1, "");
-                    dl.field_d = f.a(8364, pn.field_l, 96);
+                    int discarded$52 = 96;
+                    dl.field_d = f.a(8364, pn.field_l);
                     jc.a(wl.field_a, 10265, 66.0f);
                     ((Confined) this).h(51200);
                     s.field_M = nm.a(ih.field_d, "shields_invincible_flash_small", 1, "");
-                    ue.field_u = f.a(8364, s.field_M, 96);
+                    int discarded$53 = 96;
+                    ue.field_u = f.a(8364, s.field_M);
                     qd.field_c = nm.a(ih.field_d, "shields_invincible_flash_large", 1, "");
                     jc.a(wl.field_a, 10265, 70.0f);
                     ((Confined) this).h(51200);
@@ -1413,12 +1592,12 @@ public final class Confined extends i {
                         cd.field_o = nm.a(ih.field_d, "charge_cannon_blast", 1, "");
                         wb.field_a = dh.a(false, "missile_flame", "", ih.field_d);
                         lm.field_c = dh.a(false, "interface", "", ih.field_d);
-                        nn.field_t = nm.a(ih.field_d, "interface_icons", param0 + 96, "");
+                        nn.field_t = nm.a(ih.field_d, "interface_icons", 1, "");
                         dn.field_c = nm.a(ih.field_d, "interface_bars", 1, "");
                         gd.field_t = nm.a(ih.field_d, "interface_confined_decoration", 1, "");
                         cj.field_a = va.a(126, nm.a(ih.field_d, "menu_frame", 1, ""));
                         ah.field_T = va.a(123, nm.a(ih.field_d, "menu_button_frame", 1, ""));
-                        lh.field_c = va.a(param0 ^ -44, nm.a(ih.field_d, "menu_button_frame_raised", 1, ""));
+                        lh.field_c = va.a(117, nm.a(ih.field_d, "menu_button_frame_raised", 1, ""));
                         ui.field_a = dh.a(false, "normal_key", "", ih.field_d);
                         qe.field_J = dh.a(false, "wide_key", "", ih.field_d);
                         lf.field_j = dh.a(false, "arrow_keys", "", ih.field_d);
@@ -1433,7 +1612,8 @@ public final class Confined extends i {
                             ih.field_d = null;
                             oj.field_C = null;
                             ti.a((de) (Object) cl.field_W);
-                            am.g(-4258);
+                            int discarded$54 = -4258;
+                            am.g();
                             return;
                           } else {
                             rc.field_b[var3] = oj.field_C.a(0, Integer.toString(var3), -126);
@@ -1452,16 +1632,10 @@ public final class Confined extends i {
                       if (null != rd.field_Hb) {
                         if (ol.field_c != null) {
                           if (te.field_c != null) {
-                            L7: {
-                              qn.a(param0 + 183, 50);
-                              if (param0 == -95) {
-                                break L7;
-                              } else {
-                                field_K = null;
-                                break L7;
-                              }
-                            }
-                            sa.a((byte) -35, 50);
+                            qn.a(88, 50);
+                            int discarded$55 = 50;
+                            int discarded$56 = -35;
+                            sa.a();
                             ti.a(0, 0, 640, 376);
                             ti.b(ua.a(true));
                             ni.field_a = vc.b(rj.field_b, 100, 0);
@@ -1474,8 +1648,14 @@ public final class Confined extends i {
                             da.field_j.c(-1);
                             cb.field_a.a((gf) (Object) da.field_j);
                             qn.field_v = new hn();
-                            md.d(param0 ^ 39);
-                            mm.a(480, 320, lh.field_c, cj.field_a, ah.field_T, 4243584, (byte) -126, 240, 9805732, 30, 5, 16777215, (ok) (Object) pn.field_a, 20, (ok) (Object) pn.field_a, 16, 50, 20, 0, 20, 16);
+                            md.d(-122);
+                            int discarded$57 = 16;
+                            int discarded$58 = 20;
+                            int discarded$59 = 0;
+                            int discarded$60 = 20;
+                            int discarded$61 = 50;
+                            int discarded$62 = 16;
+                            mm.a(480, 320, lh.field_c, cj.field_a, ah.field_T, 4243584, (byte) -126, 240, 9805732, 30, 5, 16777215, (ok) (Object) pn.field_a, 20, (ok) (Object) pn.field_a);
                             he.field_d.a((bl) (Object) h.field_R);
                             da.field_e = og.a(false, (byte) 55);
                             qa.field_a = true;
@@ -1491,7 +1671,8 @@ public final class Confined extends i {
                             h.field_R = new dd(te.field_c);
                             h.field_R.b(64 * hd.field_f >> 7);
                             h.field_R.b(ig.field_j[0], 32);
-                            am.g(-4258);
+                            int discarded$63 = -4258;
+                            am.g();
                             return;
                           }
                         } else {
@@ -1517,7 +1698,8 @@ public final class Confined extends i {
                           sc.field_h[0] = ph.a(v.field_Bb, "", "boss-sphere-armed-ambient").b();
                           ol.field_c = fk.a(jd.field_b, "", "boss-bird-flap").a();
                           gk.field_q = fk.a(jd.field_b, "", "boss-bird-antiflap").a();
-                          am.g(param0 + -4163);
+                          int discarded$64 = -4258;
+                          am.g();
                           return;
                         }
                       } else {
@@ -1559,12 +1741,13 @@ public final class Confined extends i {
                         jn.field_U = fk.a(jd.field_b, "", "rock-explode").a();
                         aj.field_a = fk.a(jd.field_b, "", "shield-lost-siren").a();
                         rj.field_b = fk.a(jd.field_b, "", "interface-ambient").a();
-                        am.g(-4258);
+                        int discarded$65 = -4258;
+                        am.g();
                         return;
                       }
                     } else {
-                      jc.a(jb.field_r, param0 + 10360, 83.0f);
-                      ((Confined) this).h(param0 ^ -51295);
+                      jc.a(jb.field_r, 10265, 83.0f);
+                      ((Confined) this).h(51200);
                       tk.field_c[0] = fk.a(jd.field_b, "", "saucer-ambient").a();
                       tk.field_c[1] = fk.a(jd.field_b, "", "saucer-ambient-2").a();
                       tk.field_c[2] = fk.a(jd.field_b, "", "saucer-ambient-3").a();
@@ -1606,7 +1789,8 @@ public final class Confined extends i {
                       kh.field_fb = fk.a(jd.field_b, "", "enemy-shot-ambient").a();
                       jg.field_e = fk.a(jd.field_b, "", "enemy-shot-hit").a();
                       we.field_b = fk.a(jd.field_b, "", "enemy-laser-ambient").a();
-                      am.g(-4258);
+                      int discarded$66 = -4258;
+                      am.g();
                       return;
                     }
                   }
@@ -1614,41 +1798,42 @@ public final class Confined extends i {
                   jc.a(ch.field_b, 10265, 56.0f);
                   ((Confined) this).h(51200);
                   var2_int = 0;
-                  L8: while (true) {
+                  L7: while (true) {
                     if (var2_int >= 4) {
                       gl.field_j = null;
                       gj.field_a = null;
                       i.field_u = null;
-                      am.g(-4258);
+                      int discarded$67 = -4258;
+                      am.g();
                       return;
                     } else {
                       var3_ref_od = gg.field_n[var2_int];
                       var4 = var3_ref_od.b(192);
                       var5 = 0;
-                      L9: while (true) {
+                      L8: while (true) {
                         if (tf.field_b[var2_int] <= var5) {
                           var5 = 0;
-                          L10: while (true) {
+                          L9: while (true) {
                             if (ee.field_I[var2_int] <= var5) {
                               jb.a((byte) -109, 1.5 / (double)var4, vl.field_c[var2_int]);
                               var2_int++;
-                              continue L8;
+                              continue L7;
                             } else {
                               var6 = gj.field_a.a(0, si.field_e[var2_int] + "ready" + (var5 + 1), -114);
                               ee.field_H[var2_int][var5] = var6;
                               ee.field_O[var2_int][var5] = va.a((int) i.field_u.a((byte) -2, 0, var6)[0], 255);
                               li.field_m.a(var4, 61, var6, 192);
                               var5++;
-                              continue L10;
+                              continue L9;
                             }
                           }
                         } else {
-                          var6 = gj.field_a.a(0, si.field_e[var2_int] + "attack" + (var5 + 1), param0 ^ 19);
+                          var6 = gj.field_a.a(0, si.field_e[var2_int] + "attack" + (var5 + 1), -78);
                           tf.field_n[var2_int][var5] = var6;
                           tf.field_c[var2_int][var5] = va.a((int) i.field_u.a((byte) -2, 0, var6)[0], 255);
                           li.field_m.a(var4, 61, var6, 192);
                           var5++;
-                          continue L9;
+                          continue L8;
                         }
                       }
                     }
@@ -1756,7 +1941,8 @@ public final class Confined extends i {
                 break L3;
               }
             }
-            ri.b(121);
+            int discarded$2 = 121;
+            ri.b();
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1824,7 +2010,7 @@ public final class Confined extends i {
         }
     }
 
-    private final void c(boolean param0) {
+    private final void c() {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -1846,12 +2032,15 @@ public final class Confined extends i {
             if (!cj.field_d) {
               L1: {
                 if (ci.field_e == 20) {
-                  if (tj.a(true)) {
+                  int discarded$7 = 1;
+                  if (tj.a()) {
                     break L1;
                   } else {
                     L2: {
                       if (null != lc.field_J) {
-                        r.a(lc.field_J, -1, 3);
+                        int discarded$8 = 3;
+                        int discarded$9 = -1;
+                        r.a(lc.field_J);
                         break L2;
                       } else {
                         break L2;
@@ -1896,7 +2085,8 @@ public final class Confined extends i {
                   break L3;
                 }
               }
-              if (ka.k(-58)) {
+              int discarded$10 = -58;
+              if (ka.k()) {
                 L4: {
                   var2_int = of.a(5);
                   if (var2_int == 2) {
@@ -1977,7 +2167,8 @@ public final class Confined extends i {
                             if (da.field_e != null) {
                               break L9;
                             } else {
-                              if (!cc.a((byte) 91)) {
+                              int discarded$11 = 91;
+                              if (!cc.a()) {
                                 da.field_e = og.a(true, (byte) 55);
                                 break L9;
                               } else {
@@ -2135,7 +2326,7 @@ public final class Confined extends i {
                     }
                   }
                   L19: {
-                    if (!param0) {
+                    if (0 == 0) {
                       break L19;
                     } else {
                       Confined.o(117);
@@ -2207,7 +2398,8 @@ public final class Confined extends i {
                     }
                   }
                   L26: {
-                    ii.c((byte) 74);
+                    int discarded$12 = 74;
+                    ii.c();
                     qn.field_v.f(0);
                     wg.field_b = true;
                     id.field_rb = 63 & id.field_rb - -1;
@@ -2360,7 +2552,7 @@ public final class Confined extends i {
                       break L36;
                     } else {
                       qh.c(4);
-                      jn.a(param0, ii.b(param0));
+                      jn.a(false, ii.b(false));
                       break L36;
                     }
                   }
@@ -2385,7 +2577,8 @@ public final class Confined extends i {
                       vb.b((byte) 119);
                       break L39;
                     } else {
-                      ol.a((byte) 8);
+                      int discarded$13 = 8;
+                      ol.a();
                       break L39;
                     }
                   }
@@ -2399,7 +2592,7 @@ public final class Confined extends i {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var2, "Confined.Q(" + param0 + 41);
+          throw sd.a((Throwable) (Object) var2, "Confined.Q(" + 0 + 41);
         }
     }
 

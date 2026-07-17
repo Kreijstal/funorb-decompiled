@@ -130,7 +130,7 @@ final class vj extends rqa {
         return stackIn_3_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
         field_q = null;
         int var1 = 29;

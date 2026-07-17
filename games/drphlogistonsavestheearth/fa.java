@@ -13,7 +13,7 @@ final class fa extends na implements java.awt.image.ImageProducer, java.awt.imag
     private java.awt.image.ColorModel field_i;
     static he[] field_k;
 
-    private final synchronized void c(int param0) {
+    private final synchronized void c() {
         if (null == ((fa) this).field_p) {
           return;
         } else {
@@ -34,19 +34,22 @@ final class fa extends na implements java.awt.image.ImageProducer, java.awt.imag
             ((fa) this).field_g = param1;
             ((fa) this).field_i = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
             ((fa) this).field_h = param3.createImage((java.awt.image.ImageProducer) this);
-            this.c(0);
-            boolean discarded$1 = param3.prepareImage(((fa) this).field_h, (java.awt.image.ImageObserver) this);
-            this.c(0);
+            int discarded$1 = 0;
+            this.c();
             boolean discarded$2 = param3.prepareImage(((fa) this).field_h, (java.awt.image.ImageObserver) this);
-            this.c(0);
-            boolean discarded$3 = param3.prepareImage(((fa) this).field_h, (java.awt.image.ImageObserver) this);
+            int discarded$3 = 0;
+            this.c();
+            boolean discarded$4 = param3.prepareImage(((fa) this).field_h, (java.awt.image.ImageObserver) this);
+            int discarded$5 = 0;
+            this.c();
+            boolean discarded$6 = param3.prepareImage(((fa) this).field_h, (java.awt.image.ImageObserver) this);
             ((fa) this).a(119);
         } catch (RuntimeException runtimeException) {
             throw ie.a((Throwable) (Object) runtimeException, "fa.A(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static boolean d(int param0) {
+    final static boolean d() {
         return null != hg.field_S && hg.field_S.k(110) != null;
     }
 
@@ -124,7 +127,7 @@ final class fa extends na implements java.awt.image.ImageProducer, java.awt.imag
         return ((fa) this).field_p == param0;
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_m = null;
         field_n = null;
         field_l = null;
@@ -133,10 +136,7 @@ final class fa extends na implements java.awt.image.ImageProducer, java.awt.imag
         field_j = null;
     }
 
-    final static boolean a(boolean param0) {
-        if (!param0) {
-            return false;
-        }
+    final static boolean a() {
         return rh.field_i;
     }
 
@@ -214,9 +214,6 @@ final class fa extends na implements java.awt.image.ImageProducer, java.awt.imag
     final static void a(boolean param0, int param1, int param2, int param3, int param4) {
         hi.field_g = param2;
         s.field_g = param1;
-        if (param0) {
-            boolean discarded$0 = fa.a(false);
-        }
         ha.field_a = param4;
         ni.field_p = param3;
     }
@@ -246,13 +243,14 @@ final class fa extends na implements java.awt.image.ImageProducer, java.awt.imag
         try {
           L0: {
             L1: {
-              this.c(0);
-              boolean discarded$5 = param0.drawImage(((fa) this).field_h, param1, param2, (java.awt.image.ImageObserver) this);
+              int discarded$7 = 0;
+              this.c();
+              boolean discarded$8 = param0.drawImage(((fa) this).field_h, param1, param2, (java.awt.image.ImageObserver) this);
               if (param3 == 255) {
                 break L1;
               } else {
                 var6 = null;
-                boolean discarded$6 = ((fa) this).isConsumer((java.awt.image.ImageConsumer) null);
+                boolean discarded$9 = ((fa) this).isConsumer((java.awt.image.ImageConsumer) null);
                 break L1;
               }
             }
@@ -303,22 +301,22 @@ final class fa extends na implements java.awt.image.ImageProducer, java.awt.imag
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
+        RuntimeException stackIn_74_0 = null;
+        StringBuilder stackIn_74_1 = null;
+        RuntimeException stackIn_75_0 = null;
+        StringBuilder stackIn_75_1 = null;
         RuntimeException stackIn_76_0 = null;
         StringBuilder stackIn_76_1 = null;
-        RuntimeException stackIn_77_0 = null;
-        StringBuilder stackIn_77_1 = null;
-        RuntimeException stackIn_78_0 = null;
-        StringBuilder stackIn_78_1 = null;
-        String stackIn_78_2 = null;
+        String stackIn_76_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_73_0 = null;
+        StringBuilder stackOut_73_1 = null;
         RuntimeException stackOut_75_0 = null;
         StringBuilder stackOut_75_1 = null;
-        RuntimeException stackOut_77_0 = null;
-        StringBuilder stackOut_77_1 = null;
-        String stackOut_77_2 = null;
-        RuntimeException stackOut_76_0 = null;
-        StringBuilder stackOut_76_1 = null;
-        String stackOut_76_2 = null;
+        String stackOut_75_2 = null;
+        RuntimeException stackOut_74_0 = null;
+        StringBuilder stackOut_74_1 = null;
+        String stackOut_74_2 = null;
         var19 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           L0: {
@@ -415,7 +413,8 @@ final class fa extends na implements java.awt.image.ImageProducer, java.awt.imag
                                     break L9;
                                   } else {
                                     if (~uc.field_f < ~var17) {
-                                      qa.a(var17 - -var16, param8, param4, var18, -2141888031);
+                                      int discarded$6 = -2141888031;
+                                      qa.a(var17 - -var16, param8, param4, var18);
                                       break L9;
                                     } else {
                                       break L9;
@@ -431,10 +430,12 @@ final class fa extends na implements java.awt.image.ImageProducer, java.awt.imag
                                     }
                                   }
                                   if (var17 < 0) {
-                                    qa.a(var16, param8, param4, var17 + var18, param1 ^ 2141888101);
+                                    int discarded$7 = -2141888031;
+                                    qa.a(var16, param8, param4, var17 + var18);
                                     break L9;
                                   } else {
-                                    qa.a(var17 - -var16, param8, param4, var18, -2141888031);
+                                    int discarded$8 = -2141888031;
+                                    qa.a(var17 - -var16, param8, param4, var18);
                                     break L9;
                                   }
                                 }
@@ -523,51 +524,46 @@ final class fa extends na implements java.awt.image.ImageProducer, java.awt.imag
                       break L14;
                     }
                   }
-                  L15: {
-                    if (param1 == -124) {
-                      break L15;
-                    } else {
-                      field_k = null;
-                      break L15;
-                    }
-                  }
                   var15 = uc.field_g[param0];
-                  L16: while (true) {
+                  L15: while (true) {
                     if (~param3 >= ~param0) {
                       break L0;
                     } else {
-                      L17: {
+                      L16: {
                         var16 = var9_int >> 16;
                         if (~var16 <= ~uc.field_f) {
-                          break L17;
+                          break L16;
                         } else {
                           var17 = (var10 >> 16) - (var9_int >> 16);
                           if (var17 == 0) {
                             if (var16 < 0) {
-                              break L17;
+                              break L16;
                             } else {
                               if (uc.field_f > var16) {
-                                qa.a(var15 + var16, param8, param4, var17, -2141888031);
-                                break L17;
+                                int discarded$9 = -2141888031;
+                                qa.a(var15 + var16, param8, param4, var17);
+                                break L16;
                               } else {
-                                break L17;
+                                break L16;
                               }
                             }
                           } else {
-                            L18: {
+                            L17: {
                               if (~uc.field_f < ~(var17 + var16)) {
-                                break L18;
+                                break L17;
                               } else {
                                 var17 = -1 + -var16 + uc.field_f;
-                                break L18;
+                                break L17;
                               }
                             }
                             if (var16 < 0) {
-                              qa.a(var15, param8, param4, var16 + var17, param1 ^ 2141888101);
-                              break L17;
+                              int discarded$10 = -2141888031;
+                              qa.a(var15, param8, param4, var16 + var17);
+                              break L16;
                             } else {
-                              qa.a(var15 + var16, param8, param4, var17, -2141888031);
-                              break L17;
+                              int discarded$11 = -2141888031;
+                              qa.a(var15 + var16, param8, param4, var17);
+                              break L16;
                             }
                           }
                         }
@@ -577,7 +573,7 @@ final class fa extends na implements java.awt.image.ImageProducer, java.awt.imag
                         var15 = var15 + wj.field_k;
                         var10 = var10 + var12;
                         var9_int = var9_int + var11;
-                        continue L16;
+                        continue L15;
                       } else {
                         return;
                       }
@@ -590,33 +586,33 @@ final class fa extends na implements java.awt.image.ImageProducer, java.awt.imag
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L19: {
+          L18: {
             var9 = decompiledCaughtException;
-            stackOut_75_0 = (RuntimeException) var9;
-            stackOut_75_1 = new StringBuilder().append("fa.K(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44);
-            stackIn_77_0 = stackOut_75_0;
-            stackIn_77_1 = stackOut_75_1;
-            stackIn_76_0 = stackOut_75_0;
-            stackIn_76_1 = stackOut_75_1;
+            stackOut_73_0 = (RuntimeException) var9;
+            stackOut_73_1 = new StringBuilder().append("fa.K(").append(param0).append(44).append(-124).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44);
+            stackIn_75_0 = stackOut_73_0;
+            stackIn_75_1 = stackOut_73_1;
+            stackIn_74_0 = stackOut_73_0;
+            stackIn_74_1 = stackOut_73_1;
             if (param8 == null) {
-              stackOut_77_0 = (RuntimeException) (Object) stackIn_77_0;
-              stackOut_77_1 = (StringBuilder) (Object) stackIn_77_1;
-              stackOut_77_2 = "null";
-              stackIn_78_0 = stackOut_77_0;
-              stackIn_78_1 = stackOut_77_1;
-              stackIn_78_2 = stackOut_77_2;
-              break L19;
+              stackOut_75_0 = (RuntimeException) (Object) stackIn_75_0;
+              stackOut_75_1 = (StringBuilder) (Object) stackIn_75_1;
+              stackOut_75_2 = "null";
+              stackIn_76_0 = stackOut_75_0;
+              stackIn_76_1 = stackOut_75_1;
+              stackIn_76_2 = stackOut_75_2;
+              break L18;
             } else {
-              stackOut_76_0 = (RuntimeException) (Object) stackIn_76_0;
-              stackOut_76_1 = (StringBuilder) (Object) stackIn_76_1;
-              stackOut_76_2 = "{...}";
-              stackIn_78_0 = stackOut_76_0;
-              stackIn_78_1 = stackOut_76_1;
-              stackIn_78_2 = stackOut_76_2;
-              break L19;
+              stackOut_74_0 = (RuntimeException) (Object) stackIn_74_0;
+              stackOut_74_1 = (StringBuilder) (Object) stackIn_74_1;
+              stackOut_74_2 = "{...}";
+              stackIn_76_0 = stackOut_74_0;
+              stackIn_76_1 = stackOut_74_1;
+              stackIn_76_2 = stackOut_74_2;
+              break L18;
             }
           }
-          throw ie.a((Throwable) (Object) stackIn_78_0, stackIn_78_2 + 41);
+          throw ie.a((Throwable) (Object) stackIn_76_0, stackIn_76_2 + 41);
         }
     }
 

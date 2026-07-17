@@ -9,7 +9,7 @@ final class as {
     static sa field_b;
     static s field_e;
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_e = null;
         field_f = null;
@@ -18,7 +18,7 @@ final class as {
         field_a = null;
     }
 
-    final static Boolean b(int param0) {
+    final static Boolean b() {
         Boolean var1 = mr.field_a;
         mr.field_a = null;
         return var1;

@@ -22,53 +22,45 @@ final class wm extends ee {
 
     final static void a(boolean param0, boolean param1, int param2) {
         int var4 = 0;
-        L0: {
-          var4 = HoldTheLine.field_D;
-          if (!param1) {
-            break L0;
-          } else {
-            field_U = null;
-            break L0;
-          }
-        }
+        var4 = HoldTheLine.field_D;
         lm.field_a = ej.field_b;
         if (param2 != dg.field_c) {
-          L1: {
+          L0: {
             ej.field_b = param2;
             if (13 == dg.field_c) {
               ((ec) (Object) l.field_a[dg.field_c]).d((byte) -116);
-              break L1;
+              break L0;
             } else {
               if (dg.field_c == -1) {
-                break L1;
+                break L0;
               } else {
                 ((ti) (Object) l.field_a[dg.field_c]).i(123);
-                break L1;
+                break L0;
               }
             }
           }
-          L2: {
+          L1: {
             if (ej.field_b == 13) {
               ((ec) (Object) l.field_a[ej.field_b]).a((byte) 69, param0);
-              break L2;
+              break L1;
             } else {
               if (ej.field_b == -1) {
-                break L2;
+                break L1;
               } else {
                 ((ti) (Object) l.field_a[ej.field_b]).b(param0, -110);
-                break L2;
+                break L1;
               }
             }
           }
           return;
         } else {
-          L3: {
+          L2: {
             if (ej.field_b != 1) {
-              break L3;
+              break L2;
             } else {
               dg.field_c = 1;
               ((ti) (Object) l.field_a[1]).f(0);
-              break L3;
+              break L2;
             }
           }
           ej.field_b = param2;
@@ -189,13 +181,13 @@ final class wm extends ee {
         int stackOut_21_1 = 0;
         L0: {
           if (((wm) this).field_S != null) {
-            int fieldTemp$3 = ((wm) this).field_R - 1;
+            int fieldTemp$4 = ((wm) this).field_R - 1;
             ((wm) this).field_R = ((wm) this).field_R - 1;
-            if (fieldTemp$3 <= 0) {
+            if (fieldTemp$4 <= 0) {
               L1: {
-                int fieldTemp$4 = ((wm) this).field_I + 1;
+                int fieldTemp$5 = ((wm) this).field_I + 1;
                 ((wm) this).field_I = ((wm) this).field_I + 1;
-                if (((wm) this).field_K <= fieldTemp$4) {
+                if (((wm) this).field_K <= fieldTemp$5) {
                   ((wm) this).field_I = 0;
                   break L1;
                 } else {
@@ -239,7 +231,8 @@ final class wm extends ee {
         }
         L3: {
           if ((8192 & ((wm) this).field_J) != 0) {
-            this.a(false);
+            int discarded$6 = 0;
+            this.a();
             break L3;
           } else {
             break L3;
@@ -250,9 +243,9 @@ final class wm extends ee {
             break L4;
           } else {
             L5: {
-              int fieldTemp$5 = ((wm) this).field_C - 1;
+              int fieldTemp$7 = ((wm) this).field_C - 1;
               ((wm) this).field_C = ((wm) this).field_C - 1;
-              if (0 == fieldTemp$5) {
+              if (0 == fieldTemp$7) {
                 L6: {
                   ((wm) this).field_J = ((wm) this).field_J & -131073;
                   ((wm) this).field_q = ((wm) this).field_T;
@@ -300,7 +293,7 @@ final class wm extends ee {
         return ((wm) this).field_H;
     }
 
-    private final void a(boolean param0) {
+    private final void a() {
         float var2 = 0.0f;
         float var3 = 0.0f;
         int var3_int = 0;
@@ -326,9 +319,9 @@ final class wm extends ee {
         L0: {
           var16 = HoldTheLine.field_D;
           if (((wm) this).field_M > 0) {
-            int fieldTemp$4 = ((wm) this).field_M - 1;
+            int fieldTemp$5 = ((wm) this).field_M - 1;
             ((wm) this).field_M = ((wm) this).field_M - 1;
-            if (fieldTemp$4 != 0) {
+            if (fieldTemp$5 != 0) {
               break L0;
             } else {
               ((wm) this).field_J = ((wm) this).field_J | 2048;
@@ -405,7 +398,8 @@ final class wm extends ee {
             break L5;
           } else {
             L6: {
-              var2 = ha.a(((wm) this).field_A, ((wm) this).field_G.field_A, false);
+              int discarded$6 = 0;
+              var2 = ha.a(((wm) this).field_A, ((wm) this).field_G.field_A);
               var3 = var2 - ((wm) this).field_r;
               if ((double)var3 <= 3.141592653589793) {
                 break L6;
@@ -456,7 +450,7 @@ final class wm extends ee {
               if (bl.field_r.field_ab % 2 != 0) {
                 break L11;
               } else {
-                jk discarded$5 = kn.a((int)(-((wm) this).field_w.field_j * 2048.0f), var5, 1, 64, 1, -2, var4, ((wm) this).field_q, bl.field_r.field_O, 12632256, (int)(-((wm) this).field_w.field_g * 2048.0f), 32, 4);
+                jk discarded$7 = kn.a((int)(-((wm) this).field_w.field_j * 2048.0f), var5, 1, 64, 1, -2, var4, ((wm) this).field_q, bl.field_r.field_O, 12632256, (int)(-((wm) this).field_w.field_g * 2048.0f), 32, 4);
                 break L11;
               }
             }
@@ -465,7 +459,7 @@ final class wm extends ee {
             var6 = var6 + (-256 + kj.b(2, 512));
             var7 = var7 + (kj.b(2, 512) + -256);
             var8 = (kj.b(2, 128) | 520159104) << 8;
-            jk discarded$6 = kn.a(var6, var5, 0, 16, 1, -16, var4, ((wm) this).field_q, bl.field_r.field_O, var8, var7, 128, 1);
+            jk discarded$8 = kn.a(var6, var5, 0, 16, 1, -16, var4, ((wm) this).field_q, bl.field_r.field_O, var8, var7, 128, 1);
             break L10;
           } else {
             var6 = bl.field_r.field_C[((wm) this).field_J & 3].field_Eb;
@@ -492,7 +486,7 @@ final class wm extends ee {
                 var13 = dg.a(-2, -1, 2) + var5;
                 var14 = var7 + dg.a(-512, -1, 512);
                 var15 = dg.a(-512, -1, 512) + var8;
-                jk discarded$7 = kn.a(var14, var13, 0, 16, 1, -16, var12, ((wm) this).field_q, bl.field_r.field_O, var10, var15, 128, 2);
+                jk discarded$9 = kn.a(var14, var13, 0, 16, 1, -16, var12, ((wm) this).field_q, bl.field_r.field_O, var10, var15, 128, 2);
                 var9++;
                 continue L12;
               }
@@ -609,7 +603,7 @@ final class wm extends ee {
         }
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_U = null;
     }
 

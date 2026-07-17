@@ -8,32 +8,17 @@ final class bl {
     static is field_a;
     static int[] field_c;
 
-    final static boolean b(int param0) {
-        if (param0 == 0) {
-          if (null != oba.field_e) {
-            if (!km.field_p.a(param0)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+    final static boolean b() {
+        if (null == oba.field_e) {
             return false;
-          }
-        } else {
-          bl.a(-92, 118);
-          if (null != oba.field_e) {
-            if (!km.field_p.a(param0)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
         }
+        if (!km.field_p.a(0)) {
+            return false;
+        }
+        return true;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void a(int param0, int param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -86,7 +71,7 @@ final class bl {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         field_b = null;
@@ -111,7 +96,7 @@ final class bl {
                   }
                 }
                 L2: {
-                  if (param1 != ~ql.field_k.field_h) {
+                  if (ql.field_k.field_h != 0) {
                     break L2;
                   } else {
                     if (mha.field_D - -10000L < bva.b((byte) -107)) {
@@ -126,7 +111,7 @@ final class bl {
                   if (ql.field_k.field_h > 0) {
                     {
                       L4: {
-                        oba.field_e.a(ql.field_k.field_g, 0, ql.field_k.field_h, param1 + 119);
+                        oba.field_e.a(ql.field_k.field_g, 0, ql.field_k.field_h, 118);
                         mha.field_D = bva.b((byte) -107);
                         break L4;
                       }

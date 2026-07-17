@@ -185,7 +185,7 @@ final class j implements Iterator {
         }
     }
 
-    private final void a(boolean param0) {
+    private final void a() {
         ((j) this).field_d = ((j) this).field_j.field_h[0].field_f;
         ((j) this).field_c = 1;
         ((j) this).field_f = null;
@@ -199,7 +199,7 @@ final class j implements Iterator {
         j.a(true, 95);
     }
 
-    final static hh a(String param0, int param1) {
+    final static hh a(String param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -385,6 +385,22 @@ final class j implements Iterator {
     }
 
     final static boolean a(int param0) {
+        if (param0 != -1) {
+            j.a(true, -78);
+            if (dj.field_n < 20) {
+                return true;
+            }
+            if (!me.b(9)) {
+                return true;
+            }
+            if (mf.field_h <= 0) {
+                return false;
+            }
+            if (md.a(11265)) {
+                return false;
+            }
+            return true;
+        }
         if (dj.field_n < 20) {
             return true;
         }
@@ -404,7 +420,8 @@ final class j implements Iterator {
         ((j) this).field_f = null;
         try {
             ((j) this).field_j = param0;
-            this.a(false);
+            int discarded$0 = 0;
+            this.a();
         } catch (RuntimeException runtimeException) {
             throw kg.a((Throwable) (Object) runtimeException, "j.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }

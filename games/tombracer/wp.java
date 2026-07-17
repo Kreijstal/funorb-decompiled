@@ -6,7 +6,7 @@ final class wp {
     static int field_b;
     static int[] field_c;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
     }
@@ -119,35 +119,19 @@ final class wp {
     }
 
     final static void a(int param0) {
-        Object var2 = null;
-        L0: {
-          if (null == hka.field_b) {
-            break L0;
+        if (null != hka.field_b) {
+          if (null == hka.field_b.field_h) {
+            lu.field_b = null;
+            hka.field_b = null;
+            return;
           } else {
-            if (null != hka.field_b.field_h) {
-              hka.field_b.field_h.field_cb = false;
-              break L0;
-            } else {
-              lu.field_b = null;
-              if (param0 == -1) {
-                hka.field_b = null;
-                return;
-              } else {
-                var2 = null;
-                mu discarded$4 = wp.a(-23, (String) null);
-                hka.field_b = null;
-                return;
-              }
-            }
+            hka.field_b.field_h.field_cb = false;
+            lu.field_b = null;
+            hka.field_b = null;
+            return;
           }
-        }
-        lu.field_b = null;
-        if (param0 != -1) {
-          var2 = null;
-          mu discarded$5 = wp.a(-23, (String) null);
-          hka.field_b = null;
-          return;
         } else {
+          lu.field_b = null;
           hka.field_b = null;
           return;
         }

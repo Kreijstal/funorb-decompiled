@@ -168,7 +168,8 @@ final class dj {
                   }
                 }
               } else {
-                ha.a(param1, var4, (byte) -38);
+                int discarded$2 = -38;
+                ha.a(param1, var4);
                 var4 = (da) (Object) aj.field_m.a(param0 + 16211);
                 continue L1;
               }
@@ -230,7 +231,8 @@ final class dj {
                 }
                 if (oa.field_q == 2) {
                   L4: {
-                    var7 = this.a(1);
+                    int discarded$2 = 1;
+                    var7 = this.a();
                     var4_ref = var7;
                     var5 = j.a(param0 ^ 4, ((dj) this).field_g);
                     var6 = fm.a(((dj) this).field_g, -1369854352) ? 1 : 0;
@@ -265,7 +267,8 @@ final class dj {
                       break L5;
                     } else {
                       L6: {
-                        if (dd.a(((dj) this).field_g, false)) {
+                        int discarded$3 = 0;
+                        if (dd.a(((dj) this).field_g)) {
                           break L6;
                         } else {
                           if (wg.field_f) {
@@ -649,11 +652,10 @@ final class dj {
         }
     }
 
-    final static void a(int param0, int param1, byte param2, int param3, int param4, boolean param5, boolean param6, boolean param7, boolean param8, boolean param9, int param10, int param11) {
-        nl.a(param5, 14, param10, param0, param1, param7, param6, 16777215, param4, param3, param9, param8, param2 + 83, 16777215);
-        if (param2 != -83) {
-            dj.a(63, true, -5, 52, -122);
-        }
+    final static void a(int param0, int param1, byte param2, int param3, int param4, boolean param5, boolean param6, boolean param7, boolean param8, boolean param9) {
+        int discarded$0 = 16777215;
+        int discarded$1 = 0;
+        nl.a(param5, 14, 11, 0, 13, param7, true, 16777215, param4, 15, param9, param8);
     }
 
     final void a(boolean param0, byte param1) {
@@ -666,10 +668,13 @@ final class dj {
           if (null != ((dj) this).field_g) {
             if (~((dj) this).field_i != ~hh.field_d) {
               if (wl.field_d != null) {
-                if (k.b(1000)) {
-                  var7 = db.a(((dj) this).field_i, false);
+                int discarded$3 = 1000;
+                if (k.b()) {
+                  int discarded$4 = 0;
+                  var7 = db.a(((dj) this).field_i);
                   var4 = ic.a(((dj) this).field_i, (byte) -127);
-                  var5 = this.a(1);
+                  int discarded$5 = 1;
+                  var5 = this.a();
                   if (var4 != null) {
                     if (wl.field_d.field_kc) {
                       if (wl.field_d.field_mc < 0) {
@@ -842,7 +847,8 @@ final class dj {
             if (((dj) this).field_i == hh.field_d) {
               break L0;
             } else {
-              var3 = this.a(1);
+              int discarded$2 = 1;
+              var3 = this.a();
               var2 = var3;
               ((dj) this).field_a.a(1, oi.a(new String[1], db.field_f, 2), 17);
               break L0;
@@ -857,7 +863,7 @@ final class dj {
         }
     }
 
-    private final String a(int param0) {
+    private final String a() {
         String var2 = null;
         if (((dj) this).field_m != null) {
             var2 = ((dj) this).field_m;

@@ -15,7 +15,7 @@ final class ed {
     private int field_l;
     static long field_j;
 
-    private final void b(int param0) {
+    private final void b() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -44,7 +44,8 @@ final class ed {
                 var2 = 0;
                 L2: while (true) {
                   if (var2 >= 256) {
-                    this.c(-26);
+                    int discarded$1 = -26;
+                    this.c();
                     ((ed) this).field_l = 256;
                     return;
                   } else {
@@ -171,20 +172,18 @@ final class ed {
     final int d(int param0) {
         int var2 = -24 % ((param0 - 75) / 51);
         if (((ed) this).field_l == 0) {
-            this.c(-26);
+            int discarded$0 = -26;
+            this.c();
             ((ed) this).field_l = 256;
         }
-        int fieldTemp$0 = ((ed) this).field_l - 1;
+        int fieldTemp$1 = ((ed) this).field_l - 1;
         ((ed) this).field_l = ((ed) this).field_l - 1;
-        return ((ed) this).field_g[fieldTemp$0];
+        return ((ed) this).field_g[fieldTemp$1];
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_h = null;
         field_i = null;
-        if (param0 <= 16) {
-            field_d = false;
-        }
     }
 
     final static void a(byte param0, int param1) {
@@ -201,7 +200,8 @@ final class ed {
                   if (pg.field_p != null) {
                     break L2;
                   } else {
-                    fd.a((byte) -86);
+                    int discarded$2 = -86;
+                    fd.a();
                     break L2;
                   }
                 }
@@ -238,7 +238,8 @@ final class ed {
                 if (ok.field_a == null) {
                   break L4;
                 } else {
-                  ri.f(127);
+                  int discarded$3 = 127;
+                  ri.f();
                   break L4;
                 }
               }
@@ -251,161 +252,153 @@ final class ed {
                 break L5;
               }
             }
-            L6: {
-              if (param0 > 67) {
-                break L6;
-              } else {
-                ed.a(-124);
-                break L6;
-              }
-            }
             var2_int = 0;
-            L7: while (true) {
+            L6: while (true) {
               if (6 <= var2_int) {
                 var2_int = 0;
-                L8: while (true) {
+                L7: while (true) {
                   if (var2_int >= 5) {
                     if (null != ea.field_g) {
                       var2_int = 0;
-                      L9: while (true) {
+                      L8: while (true) {
                         if (~var2_int <= ~ea.field_g.length) {
-                          L10: {
+                          L9: {
                             if (!hc.field_Q) {
-                              break L10;
+                              break L9;
                             } else {
                               if (ub.field_n >= 0) {
                                 ub.field_n = ub.field_n - 1;
                                 cb.a(25, wb.field_p.field_H, (byte) 93, wb.field_p.field_o);
-                                break L10;
+                                break L9;
                               } else {
-                                break L10;
+                                break L9;
                               }
                             }
                           }
-                          L11: {
+                          L10: {
                             t.b(true);
                             hk.a(126);
                             if (we.field_f <= 0) {
-                              break L11;
+                              break L10;
                             } else {
                               we.field_f = we.field_f - 1;
-                              break L11;
+                              break L10;
                             }
                           }
-                          L12: {
+                          L11: {
                             if (ii.field_i <= 0) {
-                              break L12;
+                              break L11;
                             } else {
                               ii.field_i = ii.field_i - 1;
                               if (ii.field_i != 0) {
-                                break L12;
+                                break L11;
                               } else {
                                 be.field_d = 0;
-                                break L12;
+                                break L11;
                               }
                             }
                           }
-                          L13: {
+                          L12: {
                             if (we.field_f < 0) {
                               we.field_f = 0;
+                              break L12;
+                            } else {
+                              break L12;
+                            }
+                          }
+                          L13: {
+                            if (ql.field_n > 25) {
+                              ql.field_n = 25;
                               break L13;
                             } else {
                               break L13;
                             }
                           }
                           L14: {
-                            if (ql.field_n > 25) {
-                              ql.field_n = 25;
+                            if (we.field_f == 0) {
+                              ec.field_e = false;
                               break L14;
                             } else {
                               break L14;
                             }
                           }
                           L15: {
-                            if (we.field_f == 0) {
-                              ec.field_e = false;
+                            if (ql.field_n > 0) {
+                              ql.field_n = ql.field_n - 1;
                               break L15;
                             } else {
                               break L15;
                             }
                           }
                           L16: {
-                            if (ql.field_n > 0) {
-                              ql.field_n = ql.field_n - 1;
-                              break L16;
-                            } else {
-                              break L16;
-                            }
-                          }
-                          L17: {
                             if (ql.field_n < 0) {
                               ql.field_n = 0;
-                              break L17;
+                              break L16;
                             } else {
-                              break L17;
+                              break L16;
                             }
                           }
                           break L0;
                         } else {
-                          L18: {
+                          L17: {
                             if (ea.field_g[var2_int] == null) {
-                              break L18;
+                              break L17;
                             } else {
                               if (0 != ea.field_g[var2_int].field_F) {
                                 ea.field_g[var2_int] = ea.field_g[var2_int].c((byte) 29, param1);
                                 if (ea.field_g[var2_int] == null) {
-                                  break L18;
+                                  break L17;
                                 } else {
                                   if (vg.a(ea.field_g[var2_int].field_F, -1)) {
                                     ea.field_g[var2_int].l(0);
-                                    break L18;
+                                    break L17;
                                   } else {
-                                    break L18;
+                                    break L17;
                                   }
                                 }
                               } else {
-                                break L18;
+                                break L17;
                               }
                             }
                           }
                           var2_int++;
-                          continue L9;
+                          continue L8;
                         }
                       }
                     } else {
                       return;
                     }
                   } else {
-                    L19: {
+                    L18: {
                       if (0 <= kd.field_k[var2_int]) {
                         kd.field_k[var2_int] = kd.field_k[var2_int] - 1;
-                        break L19;
+                        break L18;
                       } else {
-                        break L19;
+                        break L18;
                       }
                     }
                     var2_int++;
-                    continue L8;
+                    continue L7;
                   }
                 }
               } else {
-                L20: {
+                L19: {
                   if (0 <= wa.field_sb[var2_int]) {
                     wa.field_sb[var2_int] = wa.field_sb[var2_int] - 1;
-                    break L20;
+                    break L19;
                   } else {
-                    break L20;
+                    break L19;
                   }
                 }
                 var2_int++;
-                continue L7;
+                continue L6;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var2, "ed.E(" + param0 + 44 + param1 + 41);
+          throw oj.a((Throwable) (Object) var2, "ed.E(" + 89 + 44 + param1 + 41);
         }
     }
 
@@ -417,51 +410,44 @@ final class ed {
             for (var2_int = 0; param0.length > var2_int; var2_int++) {
                 ((ed) this).field_g[var2_int] = param0[var2_int];
             }
-            this.b(-82);
+            int discarded$0 = -82;
+            this.b();
         } catch (RuntimeException runtimeException) {
             throw oj.a((Throwable) (Object) runtimeException, "ed.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }
     }
 
-    private final void c(int param0) {
+    private final void c() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        L0: {
-          var5 = TorChallenge.field_F ? 1 : 0;
-          if (param0 == -26) {
-            break L0;
-          } else {
-            field_e = true;
-            break L0;
-          }
-        }
+        var5 = TorChallenge.field_F ? 1 : 0;
         int fieldTemp$3 = ((ed) this).field_k + 1;
         ((ed) this).field_k = ((ed) this).field_k + 1;
         ((ed) this).field_f = ((ed) this).field_f + fieldTemp$3;
         var2 = 0;
-        L1: while (true) {
+        L0: while (true) {
           if (var2 >= 256) {
             return;
           } else {
-            L2: {
+            L1: {
               var3 = ((ed) this).field_b[var2];
               if ((2 & var2) == -1) {
                 if (0 == (1 & var2)) {
                   ((ed) this).field_a = ((ed) this).field_a ^ ((ed) this).field_a << 13;
-                  break L2;
+                  break L1;
                 } else {
                   ((ed) this).field_a = ((ed) this).field_a ^ ((ed) this).field_a >>> 6;
-                  break L2;
+                  break L1;
                 }
               } else {
                 if (-1 != (var2 & 1)) {
                   ((ed) this).field_a = ((ed) this).field_a ^ ((ed) this).field_a >>> 16;
-                  break L2;
+                  break L1;
                 } else {
                   ((ed) this).field_a = ((ed) this).field_a ^ ((ed) this).field_a << 2;
-                  break L2;
+                  break L1;
                 }
               }
             }
@@ -473,7 +459,7 @@ final class ed {
             ((ed) this).field_f = dupTemp$5;
             ((ed) this).field_g[var2] = dupTemp$5;
             var2++;
-            continue L1;
+            continue L0;
           }
         }
     }

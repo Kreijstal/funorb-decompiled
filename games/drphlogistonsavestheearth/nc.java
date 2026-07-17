@@ -111,7 +111,7 @@ final class nc extends hf {
                 var14 = (lc) (Object) g.field_t.h(-11151);
                 var17 = var14;
                 if (var17 != null) {
-                  var4 = 108 / ((11 - param0) / 33);
+                  var4 = 36;
                   var3 = 0;
                   var5 = 0;
                   L1: while (true) {
@@ -327,7 +327,7 @@ final class nc extends hf {
               L25: {
                 var2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_62_0 = (RuntimeException) var2;
-                stackOut_62_1 = new StringBuilder().append("nc.B(").append(param0).append(44);
+                stackOut_62_1 = new StringBuilder().append("nc.B(").append(-95).append(44);
                 stackIn_64_0 = stackOut_62_0;
                 stackIn_64_1 = stackOut_62_1;
                 stackIn_63_0 = stackOut_62_0;
@@ -359,7 +359,7 @@ final class nc extends hf {
         }
     }
 
-    final static vi a(String param0, byte param1) {
+    final static vi a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -486,7 +486,7 @@ final class nc extends hf {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_J = null;
         field_N = null;
         field_K = null;

@@ -20,12 +20,9 @@ final class cc extends ca {
 
     final static void a(boolean param0, int param1) {
         vc.field_j = 20000000L;
-        if (param0) {
-            field_j = null;
-        }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_r = null;
         field_f = null;
         field_t = null;

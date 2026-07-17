@@ -43,7 +43,8 @@ final class ji {
           L0: {
             L1: {
               L2: {
-                param2 = ci.a(param2, (char)param1, "", param1 + 2524);
+                int discarded$2 = 2619;
+                param2 = ci.a(param2, '_', "");
                 var3 = la.a(param0, (byte) -36);
                 if (param2.indexOf(param0) != -1) {
                   break L2;
@@ -93,7 +94,7 @@ final class ji {
           }
           L4: {
             stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44).append(param1).append(44);
+            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44).append(95).append(44);
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;

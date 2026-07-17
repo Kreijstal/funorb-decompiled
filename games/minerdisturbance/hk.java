@@ -80,7 +80,7 @@ final class hk {
         }
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_c = null;
         int var1 = -41;
         field_d = null;
@@ -88,10 +88,7 @@ final class hk {
         field_i = null;
     }
 
-    final static int[] b(int param0) {
-        if (param0 != 0) {
-            return null;
-        }
+    final static int[] b() {
         return new int[8];
     }
 
@@ -111,7 +108,7 @@ final class hk {
               L1: {
                 var4 = (tm) (Object) ok.field_b.b(120);
                 if (var4.a(8)) {
-                  pi discarded$2 = ok.field_b.e(63854);
+                  pi discarded$6 = ok.field_b.e(63854);
                   var2 = 1;
                   vc.a(109, cm.field_o, var4.field_s);
                   break L1;
@@ -131,7 +128,8 @@ final class hk {
                 ((tm) var1).a(false);
                 break L2;
               } else {
-                if (fm.a((byte) 95)) {
+                int discarded$7 = 95;
+                if (fm.a()) {
                   fn.a(27, 228, 3);
                   return ak.a(-92);
                 } else {
@@ -140,7 +138,8 @@ final class hk {
               }
             }
           }
-          if (fm.a((byte) 95)) {
+          int discarded$8 = 95;
+          if (fm.a()) {
             fn.a(27, 228, 3);
             return ak.a(-92);
           } else {
@@ -150,7 +149,7 @@ final class hk {
           L3: {
             var3 = (tm) (Object) ec.field_c.b(81);
             if (var3.a(8)) {
-              pi discarded$3 = ec.field_c.e(63854);
+              pi discarded$9 = ec.field_c.e(63854);
               vc.a(-8, cm.field_o, var3.field_s);
               var2 = 1;
               break L3;
@@ -168,14 +167,16 @@ final class hk {
                 break L4;
               }
             }
-            if (!fm.a((byte) 95)) {
+            int discarded$10 = 95;
+            if (!fm.a()) {
               return ak.a(-92);
             } else {
               fn.a(27, 228, 3);
               return ak.a(-92);
             }
           } else {
-            if (fm.a((byte) 95)) {
+            int discarded$11 = 95;
+            if (fm.a()) {
               fn.a(27, 228, 3);
               return ak.a(-92);
             } else {
@@ -185,7 +186,7 @@ final class hk {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         nb.field_i[oj.field_J].c(-1, mc.field_w);
     }
 
@@ -252,38 +253,27 @@ final class hk {
         oh var6_ref = null;
         int var7 = MinerDisturbance.field_ab;
         try {
-            if (((hk) this).field_f < param1) {
+            if (((hk) this).field_f < 1) {
                 throw new IllegalStateException();
             }
             this.a(-4924, param3);
-            ((hk) this).field_b = ((hk) this).field_b - param1;
+            ((hk) this).field_b = ((hk) this).field_b - 1;
             while (((hk) this).field_b < 0) {
                 var6 = (bl) (Object) ((hk) this).field_h.a(609);
                 this.a(-127, var6);
             }
-            var6_ref = new oh(param0, param1);
+            var6_ref = new oh(param0, 1);
             ((hk) this).field_g.a(param3, true, (pi) (Object) var6_ref);
             ((hk) this).field_h.a((byte) -37, (al) (Object) var6_ref);
-            ((bl) (Object) var6_ref).field_p = (long)param2;
+            ((bl) (Object) var6_ref).field_p = 0L;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "hk.G(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "hk.G(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 44 + 0 + 44 + param3 + 41);
         }
     }
 
     private final void a(int param0, long param1) {
-        Object var4 = null;
-        bl var5 = null;
-        var4 = null;
-        if (param0 != -4924) {
-          int[] discarded$2 = hk.b(34);
-          var5 = (bl) (Object) ((hk) this).field_g.a(param0 + 4856, param1);
-          this.a(param0 + 4846, var5);
-          return;
-        } else {
-          var5 = (bl) (Object) ((hk) this).field_g.a(param0 + 4856, param1);
-          this.a(param0 + 4846, var5);
-          return;
-        }
+        bl var4 = (bl) (Object) ((hk) this).field_g.a(-68, param1);
+        this.a(-78, var4);
     }
 
     final static void c(int param0) {

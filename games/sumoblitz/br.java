@@ -41,7 +41,7 @@ final class br {
         }
     }
 
-    final static int b(int param0) {
+    final static int b() {
         return 1;
     }
 
@@ -93,10 +93,7 @@ final class br {
         }
     }
 
-    public static void a(int param0) {
-        if (param0 != 23050) {
-            return;
-        }
+    public static void a() {
         field_i = null;
     }
 

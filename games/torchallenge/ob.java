@@ -6,28 +6,16 @@ final class ob {
     static int[][] field_c;
     static int[] field_b;
 
-    final static void a(int param0, int param1, int param2) {
-        int var3 = 0;
-        L0: {
-          var3 = param1;
-          pa.field_x = pa.field_x + var3;
-          if (!bh.field_p) {
+    final static void a(int param0, int param1) {
+        int var3 = param1;
+        pa.field_x = pa.field_x + var3;
+        if (!(bh.field_p)) {
             kj.field_B.a((da) (Object) new bk(param0, var3, ac.field_d, ae.field_z, pa.field_x, pd.field_c - -tf.field_o), -66);
-            break L0;
-          } else {
-            break L0;
-          }
         }
         pd.field_c = pd.field_c + var3;
-        if (param2 != -7756) {
-          field_b = null;
-          return;
-        } else {
-          return;
-        }
     }
 
-    final static void a(String param0, java.applet.Applet param1, byte param2) {
+    final static void a(String param0, java.applet.Applet param1) {
         try {
             java.net.URL var3 = null;
             Exception var3_ref = null;
@@ -140,7 +128,7 @@ final class ob {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         field_c = null;
@@ -162,9 +150,6 @@ final class ob {
             ia.field_j = param1.c(false) << 5;
             var2_int = param1.j(-109);
             ti.field_e = 1835008 & var2_int << 18;
-            if (param0 >= -30) {
-                ob.a(127, -50, -88);
-            }
             ia.field_j = ia.field_j + (var2_int >> 3);
             ti.field_e = ti.field_e + (param1.c(false) << 2);
             var2_int = param1.j(-86);
@@ -176,7 +161,7 @@ final class ob {
             uc.field_U = uc.field_U + (var2_int >> 1);
             jf.field_sb = jf.field_sb + param1.c(false);
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "ob.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "ob.B(" + -33 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

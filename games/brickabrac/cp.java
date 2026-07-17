@@ -59,7 +59,8 @@ final class cp extends h {
             if (!gh.field_c) {
               break L3;
             } else {
-              bq.a(param0, var2, (byte) 104);
+              int discarded$1 = 104;
+              bq.a(param0, var2);
               break L3;
             }
           }
@@ -145,7 +146,7 @@ final class cp extends h {
         ((cp) this).field_J = new vl();
     }
 
-    final static lo a(String param0, byte param1) {
+    final static lo a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
@@ -188,7 +189,8 @@ final class cp extends h {
                     var4 = param0.substring(var2_int - -1);
                     var5 = h.a(var3, false);
                     if (var5 == null) {
-                      stackOut_13_0 = ji.a(var4, 0);
+                      int discarded$2 = 0;
+                      stackOut_13_0 = ji.a(var4);
                       stackIn_14_0 = stackOut_13_0;
                       break L0;
                     } else {
@@ -452,7 +454,8 @@ final class cp extends h {
                   }
                 }
                 L13: {
-                  var7 = hm.a(stackIn_39_0 != 0, var6, 0);
+                  int discarded$1 = 0;
+                  var7 = hm.a(stackIn_39_0 != 0, var6);
                   var8 = wi.field_k + -(var7 >> 1);
                   if (var4 >= 0) {
                     L14: {
@@ -666,7 +669,7 @@ final class cp extends h {
         }
     }
 
-    final static eg b(int param0, int param1, int param2, int param3, int param4) {
+    final static eg b(int param0, int param1) {
         int var6 = BrickABrac.field_J ? 1 : 0;
         eg var5 = (eg) (Object) qc.field_n.d(-91);
         while (var5 != null) {
@@ -677,14 +680,12 @@ final class cp extends h {
         }
         eg var7 = new eg();
         var5 = var7;
-        var7.field_q = param3;
-        var7.field_p = param2;
-        if (param0 != -2) {
-            return null;
-        }
+        var7.field_q = 10;
+        var7.field_p = 2;
         var5.field_l = param1;
         qc.field_n.a((nm) (Object) var5, (byte) 3);
-        uo.a(var5, 3, (byte) 68);
+        int discarded$0 = 68;
+        uo.a(var5, 3);
         return var5;
     }
 

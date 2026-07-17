@@ -22,19 +22,13 @@ final class sd {
         if (param3 != 30775) {
             String discarded$0 = sd.a(false, false, false, -6);
         }
-        if (!(!param0)) {
-            var4++;
-        }
         return s.field_E[var4];
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_a = null;
         field_b = null;
-        if (param0 != -30) {
-            field_c = 11;
-        }
         field_f = null;
         field_d = null;
     }
@@ -46,7 +40,7 @@ final class sd {
         wj.a(-118, true, true);
     }
 
-    final static int a(int param0, byte[] param1, int param2, int param3) {
+    final static int a(int param0, byte[] param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -120,7 +114,7 @@ final class sd {
         return stackIn_7_0;
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void a(boolean param0) {
         bd.field_u.a(param0, (byte) -89);
     }
 

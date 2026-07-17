@@ -7,7 +7,7 @@ final class hb {
     String field_a;
     static String field_b;
 
-    final static void a(boolean param0, byte param1) {
+    final static void a(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         L0: {
@@ -55,7 +55,7 @@ final class hb {
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -182,26 +182,26 @@ final class hb {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var9_int = -param0 + (param5 + param8.field_p + param1);
-            var10 = param1 + (param8.field_p - (-param5 + -param6));
+            var9_int = param5 + param8.field_p + param1;
+            var10 = param1 + (param8.field_p - (-param5 + -30));
             var11 = param8.field_u - (-param7 - (param8.field_k >> 1));
-            ul.i(var9_int, 0, var10, param2 + var11);
-            param8.e(param5 + param4, param7 + -1, param3);
-            param8.e(-1 + param5, param7 - -1, param3);
+            ul.i(var9_int, 0, var10, var11);
+            param8.e(param5 + -1, param7 + -1, 80);
+            param8.e(-1 + param5, param7 - -1, 80);
             ul.b(rh.field_e);
-            ul.i(1 + var9_int, 0, var10 + 1, param2 + var11);
-            param8.e(param5 - -1, -1 + param7, param3);
-            param8.e(param5 - -1, 1 + param7, param3);
+            ul.i(1 + var9_int, 0, var10 + 1, var11);
+            param8.e(param5 - -1, -1 + param7, 80);
+            param8.e(param5 - -1, 1 + param7, 80);
             ul.b(rh.field_e);
-            var9_int = -param6 + param8.field_o + param8.field_p + (param5 + -param1);
-            var10 = -param0 + (-param1 + (param5 + param8.field_o + param8.field_p));
-            ul.i(var9_int, var11 + -param2, var10, 480);
-            param8.e(-1 + param5, -1 + param7, param3);
-            param8.e(-1 + param5, param7 - -1, param3);
+            var9_int = -30 + param8.field_o + param8.field_p + (param5 + -param1);
+            var10 = -param1 + (param5 + param8.field_o + param8.field_p);
+            ul.i(var9_int, var11, var10, 480);
+            param8.e(-1 + param5, -1 + param7, 80);
+            param8.e(-1 + param5, param7 - -1, 80);
             ul.b(rh.field_e);
-            ul.i(var9_int + 1, var11 + -param2, var10 - -1, 480);
-            param8.e(1 + param5, param7 - 1, param3);
-            param8.e(1 + param5, param7 + 1, param3);
+            ul.i(var9_int + 1, var11, var10 - -1, 480);
+            param8.e(1 + param5, param7 - 1, 80);
+            param8.e(1 + param5, param7 + 1, 80);
             ul.b(rh.field_e);
             break L0;
           }
@@ -210,7 +210,7 @@ final class hb {
           L1: {
             var9 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var9;
-            stackOut_2_1 = new StringBuilder().append("hb.E(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44);
+            stackOut_2_1 = new StringBuilder().append("hb.E(").append(0).append(44).append(param1).append(44).append(0).append(44).append(80).append(44).append(-1).append(44).append(param5).append(44).append(30).append(44).append(param7).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -245,17 +245,17 @@ final class hb {
             return;
         }
         if (0L == param0 % 10L) {
-            km.a(param0 + -1L, -25680);
-            km.a(1L, -25680);
+            int discarded$1 = -25680;
+            km.a(param0 + -1L);
+            int discarded$2 = -25680;
+            km.a(1L);
         } else {
-            km.a(param0, -25680);
+            int discarded$3 = -25680;
+            km.a(param0);
         }
     }
 
-    public static void a(int param0) {
-        if (param0 < 98) {
-            field_b = null;
-        }
+    public static void a() {
         field_b = null;
     }
 

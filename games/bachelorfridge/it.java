@@ -32,7 +32,7 @@ final class it {
         ((it) this).field_q = kla.a(100, m.field_a, -2147483648);
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_l = null;
         field_c = null;
         field_s = null;

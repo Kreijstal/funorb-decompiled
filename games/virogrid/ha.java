@@ -26,7 +26,7 @@ final class ha {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    final static void a(int param0, boolean param1, boolean param2, int param3, boolean param4, int param5, int param6, boolean param7, boolean param8, int param9) {
+    final static void a(int param0, boolean param1, boolean param2, int param3, boolean param4, int param5, int param6, boolean param7, boolean param8) {
         int var10 = 0;
         int var11 = 0;
         L0: {
@@ -79,7 +79,7 @@ final class ha {
         L3: {
           ca.b(param2, -116);
           if (0 < kh.field_d) {
-            of.a(param0, false, param2, param8);
+            of.a(11, false, param2, param8);
             break L3;
           } else {
             break L3;
@@ -91,7 +91,7 @@ final class ha {
           if (hn.field_h <= 0) {
             break L4;
           } else {
-            eb.a(false, param2, param0, param8);
+            eb.a(false, param2, 11, param8);
             break L4;
           }
         }
@@ -99,7 +99,7 @@ final class ha {
           if (th.field_z <= 0) {
             break L5;
           } else {
-            qk.a(param2, param0, (byte) 80, param8, param7);
+            qk.a(param2, 11, (byte) 80, param8, param7);
             break L5;
           }
         }
@@ -120,12 +120,14 @@ final class ha {
           }
           uf.field_j.field_Eb.field_V = null;
           ij.field_m.field_Y = true;
-          lb.a(param6, param0, uf.field_j, param1, 21547);
+          int discarded$2 = 21547;
+          lb.a(param6, 11, uf.field_j, param1);
           break L6;
         }
-        pi.a(param4, param6, param9, (byte) -106, param5, param0, param1);
-        lb.a(param6, param0, wm.field_r, param1, 21547);
-        var10 = 92 / ((24 - param3) / 45);
+        pi.a(true, param6, 16777215, (byte) -106, 16777215, 11, param1);
+        int discarded$3 = 21547;
+        lb.a(param6, 11, wm.field_r, param1);
+        var10 = -92;
         rl.field_y = rl.field_y + 1;
     }
 
@@ -263,7 +265,7 @@ final class ha {
     }
 
     final static int a(int param0, int param1, int param2) {
-        int var3 = 86 % ((param1 - 19) / 49);
+        int var3 = 0;
         if (param2 == 0) {
             if (param0 == 0) {
                 return 0;
@@ -278,25 +280,26 @@ final class ha {
                 return 4096;
             }
             if (0 > param0) {
-                return -4096 + ph.a(-param2, -param0, -1550172208);
+                int discarded$0 = -1550172208;
+                return -4096 + ph.a(-param2, -param0);
             }
-            return 4096 + -ph.a(-param2, param0, -1550172208);
+            int discarded$1 = -1550172208;
+            return 4096 + -ph.a(-param2, param0);
         }
         if (0 == param0) {
             return 0;
         }
         if (param0 >= 0) {
-            return ph.a(param2, param0, -1550172208);
+            int discarded$2 = -1550172208;
+            return ph.a(param2, param0);
         }
-        return -ph.a(param2, -param0, -1550172208);
+        int discarded$3 = -1550172208;
+        return -ph.a(param2, -param0);
     }
 
     final static void a(byte param0, java.applet.Applet param1) {
         try {
             java.net.URL var2 = null;
-            if (param0 != 39) {
-                field_d = null;
-            }
             try {
                 var2 = new java.net.URL(param1.getCodeBase(), "quit.ws");
                 param1.getAppletContext().showDocument(og.a(-1, param1, var2), "_top");
@@ -359,7 +362,7 @@ final class ha {
         }
     }
 
-    final static void a(int param0, da param1, byte param2) {
+    final static void a(int param0, da param1) {
         hg var5 = null;
         int var4 = 0;
         try {
@@ -449,7 +452,8 @@ final class ha {
             if (var5.length != 65) {
               throw new RuntimeException();
             } else {
-              var17 = ug.a(var10.field_g, var10.field_l - (var16.length - -5), 5, false);
+              int discarded$1 = 0;
+              var17 = ug.a(var10.field_g, var10.field_l - (var16.length - -5), 5);
               var7 = 0;
               L4: while (true) {
                 if (64 <= var7) {

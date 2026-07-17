@@ -6,7 +6,7 @@ final class ql extends jj {
     static int field_o;
     static ak field_n;
 
-    final static int g(int param0) {
+    final static int g() {
         return oi.field_c;
     }
 
@@ -16,16 +16,11 @@ final class ql extends jj {
         rd.a(true, -17130, true);
     }
 
-    public static void f(int param0) {
-        if (param0 != 0) {
-            field_n = null;
-            field_n = null;
-            return;
-        }
+    public static void f() {
         field_n = null;
     }
 
-    final static boolean e(int param0) {
+    final static boolean e() {
         if (null == lb.field_x) {
             return false;
         }
@@ -42,7 +37,7 @@ final class ql extends jj {
         jk.field_a.f(0, 0);
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void a(java.applet.Applet param0) {
         String var2 = null;
         String var3 = null;
         long var4 = 0L;

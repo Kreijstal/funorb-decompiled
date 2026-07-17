@@ -11,7 +11,7 @@ final class qc {
     private int field_b;
     static int field_a;
 
-    final static String a(CharSequence param0, int param1, boolean param2) {
+    final static String a(CharSequence param0) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -39,7 +39,7 @@ final class qc {
         String stackOut_15_2 = null;
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
-          var4 = -114 % ((-29 - param1) / 39);
+          var4 = 0;
           var3 = qv.a(false, 97, param0);
           if (var3 != null) {
             stackOut_3_0 = (String) var3;
@@ -90,7 +90,7 @@ final class qc {
               break L1;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 44 + 0 + 41);
+          throw qo.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + 38 + 44 + 0 + 41);
         }
     }
 
@@ -264,9 +264,10 @@ final class qc {
         ((qc) this).field_d = param0;
     }
 
-    final static void a(boolean param0, boolean param1, boolean param2) {
+    final static void a(boolean param0) {
         int var4 = Sumoblitz.field_L ? 1 : 0;
-        if (!vs.b((byte) 9)) {
+        int discarded$4 = 9;
+        if (!vs.b()) {
             ph.field_b.e(-113);
             mr.field_f = null;
         } else {
@@ -278,9 +279,6 @@ final class qc {
         }
         dr.o(250);
         ph.field_b.a(66);
-        if (!param1) {
-            return;
-        }
         ld.field_N.b((byte) -128);
         ut.field_j = 0;
     }

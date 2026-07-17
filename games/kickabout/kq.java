@@ -206,7 +206,7 @@ final class kq extends hd {
         }
     }
 
-    public static void i(byte param0) {
+    public static void i() {
         field_Ib = null;
         field_yb = null;
         field_Bb = null;

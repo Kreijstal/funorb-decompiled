@@ -37,21 +37,11 @@ final class vd implements fp {
             break L1;
           }
         }
-        if (2 >= di.field_e) {
-          if (param0 != 78) {
-            int discarded$4 = vd.a(111, (byte) -79, -26);
-            return;
-          } else {
-            return;
-          }
-        } else {
+        if (2 < di.field_e) {
           di.field_e = 2;
-          if (param0 == 78) {
-            return;
-          } else {
-            int discarded$5 = vd.a(111, (byte) -79, -26);
-            return;
-          }
+          return;
+        } else {
+          return;
         }
     }
 
@@ -178,7 +168,7 @@ final class vd implements fp {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_l = null;
         field_f = null;
         field_m = null;

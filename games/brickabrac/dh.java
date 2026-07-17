@@ -105,7 +105,8 @@ abstract class dh extends tk {
                     }
                   } else {
                     var4 = (CharSequence) (Object) param0.substring(6);
-                    field_J = fl.a(var4, -28734);
+                    int discarded$1 = -28734;
+                    field_J = fl.a(var4);
                     break L1;
                   }
                 } else {
@@ -588,7 +589,8 @@ abstract class dh extends tk {
                                         L2: {
                                           L3: {
                                             var13 = (CharSequence) (Object) var9_ref_String.substring(4);
-                                            var10 = fl.a(var13, -28734);
+                                            int discarded$1 = -28734;
+                                            var10 = fl.a(var13);
                                             var11_ref_fc = ((dh) this).field_K[var10];
                                             if (((dh) this).field_A == null) {
                                               stackOut_25_0 = var11_ref_fc.field_h;
@@ -852,7 +854,7 @@ abstract class dh extends tk {
         int stackOut_66_2 = 0;
         var17 = null;
         if (param0 != null) {
-          StringBuilder discarded$5 = uk.a(' ', field_y, 0, false);
+          StringBuilder discarded$6 = uk.a(' ', field_y, 0, false);
           var4 = 0;
           var5 = 0;
           var6 = -1;
@@ -888,9 +890,9 @@ abstract class dh extends tk {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$6 = field_y.append(60);
-                        StringBuilder discarded$7 = field_y.append(var15);
-                        StringBuilder discarded$8 = field_y.append(62);
+                        StringBuilder discarded$7 = field_y.append(60);
+                        StringBuilder discarded$8 = field_y.append(var15);
+                        StringBuilder discarded$9 = field_y.append(62);
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -906,7 +908,8 @@ abstract class dh extends tk {
                                             try {
                                               L4: {
                                                 var18 = (CharSequence) (Object) var15.substring(4);
-                                                var16_int = fl.a(var18, -28734);
+                                                int discarded$10 = -28734;
+                                                var16_int = fl.a(var18);
                                                 var4 = var4 + ((dh) this).field_K[var16_int].field_f;
                                                 var10 = 0;
                                                 break L4;
@@ -1077,7 +1080,7 @@ abstract class dh extends tk {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$9 = field_y.append(var14);
+                        StringBuilder discarded$11 = field_y.append(var14);
                         var14 = (char)(na.a(-8250, (char) var14) & 255);
                         var4 = var4 + ((dh) this).field_T[var14];
                         if (((dh) this).field_G == null) {
@@ -1222,7 +1225,8 @@ abstract class dh extends tk {
                                         try {
                                           L2: {
                                             var10 = (CharSequence) (Object) var8.substring(4);
-                                            var9_int = fl.a(var10, -28734);
+                                            int discarded$1 = -28734;
+                                            var9_int = fl.a(var10);
                                             var4 = var4 + ((dh) this).field_K[var9_int].field_f;
                                             var3 = 0;
                                             var6++;

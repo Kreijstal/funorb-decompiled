@@ -11,17 +11,13 @@ final class mu {
     static ue[] field_b;
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        if (param4 == 5138823) {
-          if (param3 <= param0) {
-            if (param3 - -param5 > param0) {
-              if (param2 >= param6) {
-                if (param2 >= param1 + param6) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
+        if (param3 <= param0) {
+          if (param3 - -param5 > param0) {
+            if (param2 >= param6) {
+              if (param2 >= param1 + param6) {
                 return false;
+              } else {
+                return true;
               }
             } else {
               return false;
@@ -30,7 +26,7 @@ final class mu {
             return false;
           }
         } else {
-          return true;
+          return false;
         }
     }
 
@@ -87,7 +83,8 @@ final class mu {
               param2.field_e = 0;
               mp.field_Sb = new bl(var3_int, param2, param2);
               ce.field_K = new rf(var3_int, param2, param2, (gj) (Object) new cu());
-              var4 = ps.b((byte) -83);
+              int discarded$1 = -83;
+              var4 = ps.b();
               if (var4 == null) {
                 var11 = null;
                 af.a((Throwable) null, 124, "QC2");
@@ -180,7 +177,7 @@ final class mu {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_g = null;
         field_c = null;
         field_b = null;

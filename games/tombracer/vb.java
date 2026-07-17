@@ -20,22 +20,22 @@ final class vb extends vg {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
+        RuntimeException stackIn_76_0 = null;
+        StringBuilder stackIn_76_1 = null;
+        RuntimeException stackIn_77_0 = null;
+        StringBuilder stackIn_77_1 = null;
         RuntimeException stackIn_78_0 = null;
         StringBuilder stackIn_78_1 = null;
-        RuntimeException stackIn_79_0 = null;
-        StringBuilder stackIn_79_1 = null;
-        RuntimeException stackIn_80_0 = null;
-        StringBuilder stackIn_80_1 = null;
-        String stackIn_80_2 = null;
+        String stackIn_78_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_75_0 = null;
+        StringBuilder stackOut_75_1 = null;
         RuntimeException stackOut_77_0 = null;
         StringBuilder stackOut_77_1 = null;
-        RuntimeException stackOut_79_0 = null;
-        StringBuilder stackOut_79_1 = null;
-        String stackOut_79_2 = null;
-        RuntimeException stackOut_78_0 = null;
-        StringBuilder stackOut_78_1 = null;
-        String stackOut_78_2 = null;
+        String stackOut_77_2 = null;
+        RuntimeException stackOut_76_0 = null;
+        StringBuilder stackOut_76_1 = null;
+        String stackOut_76_2 = null;
         var19 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -75,17 +75,9 @@ final class vb extends vg {
                     }
                   }
                   L4: {
-                    if (param0 == -922437200) {
-                      break L4;
-                    } else {
-                      field_i = -119;
-                      break L4;
-                    }
-                  }
-                  L5: {
                     var14 = param7 - param3;
                     if (param3 != param6) {
-                      L6: {
+                      L5: {
                         var10 = param5 << 16;
                         var9_int = param5 << 16;
                         var15 = param6 + -param3;
@@ -93,74 +85,74 @@ final class vb extends vg {
                         var12 = (param4 + -param5 << 16) / var14;
                         if (var11 < var12) {
                           var13 = 0;
-                          break L6;
+                          break L5;
                         } else {
                           var16 = var11;
                           var11 = var12;
                           var12 = var16;
                           var13 = 1;
-                          break L6;
+                          break L5;
                         }
                       }
-                      L7: {
-                        L8: {
+                      L6: {
+                        L7: {
                           if (param3 < 0) {
                             if (param6 >= 0) {
                               param3 = -param3;
                               var10 = var10 + var12 * param3;
                               var9_int = var9_int + var11 * param3;
                               param3 = 0;
-                              break L8;
+                              break L7;
                             } else {
                               param3 = param6 + -param3;
                               var10 = var10 + var12 * param3;
                               var9_int = var9_int + param3 * var11;
                               param3 = param6;
-                              break L7;
+                              break L6;
                             }
                           } else {
-                            break L8;
+                            break L7;
                           }
                         }
                         var16 = uoa.field_d[param3];
-                        L9: while (true) {
+                        L8: while (true) {
                           if (param6 <= param3) {
-                            break L7;
+                            break L6;
                           } else {
-                            L10: {
+                            L9: {
                               var17 = var9_int >> 16;
                               if (uoa.field_e > var17) {
                                 var18 = -(var9_int >> 16) + (var10 >> 16);
                                 if (0 == var18) {
                                   if (var17 < 0) {
-                                    break L10;
+                                    break L9;
                                   } else {
                                     if (var17 < uoa.field_e) {
                                       tl.a(var16 + var17, var18, param2, 1535993377, param8);
-                                      break L10;
+                                      break L9;
                                     } else {
-                                      break L10;
+                                      break L9;
                                     }
                                   }
                                 } else {
-                                  L11: {
+                                  L10: {
                                     if (uoa.field_e > var17 - -var18) {
-                                      break L11;
+                                      break L10;
                                     } else {
                                       var18 = -var17 + (uoa.field_e + -1);
-                                      break L11;
+                                      break L10;
                                     }
                                   }
                                   if (var17 >= 0) {
                                     tl.a(var16 + var17, var18, param2, 1535993377, param8);
-                                    break L10;
+                                    break L9;
                                   } else {
                                     tl.a(var16, var18 + var17, param2, 1535993377, param8);
-                                    break L10;
+                                    break L9;
                                   }
                                 }
                               } else {
-                                break L10;
+                                break L9;
                               }
                             }
                             param3++;
@@ -170,7 +162,7 @@ final class vb extends vg {
                               var9_int = var9_int + var11;
                               var10 = var10 + var12;
                               var16 = var16 + bea.field_g;
-                              continue L9;
+                              continue L8;
                             }
                           }
                         }
@@ -179,30 +171,30 @@ final class vb extends vg {
                       if (0 == var16) {
                         var11 = 0;
                         var12 = 0;
-                        break L5;
+                        break L4;
                       } else {
-                        L12: {
+                        L11: {
                           if (var13 != 0) {
                             var10 = param1 << 16;
-                            break L12;
+                            break L11;
                           } else {
                             var9_int = param1 << 16;
-                            break L12;
+                            break L11;
                           }
                         }
                         var17 = param4 << 16;
                         var11 = (-var9_int + var17) / var16;
                         var12 = (-var10 + var17) / var16;
-                        break L5;
+                        break L4;
                       }
                     } else {
-                      L13: {
+                      L12: {
                         if (param7 == param3) {
                           var11 = 0;
                           var12 = 0;
                           var9_int = param5 << 16;
                           var10 = param1 << 16;
-                          break L13;
+                          break L12;
                         } else {
                           var15 = param7 + -param6;
                           if (param1 <= param5) {
@@ -210,79 +202,79 @@ final class vb extends vg {
                             var12 = (-param5 + param4 << 16) / var14;
                             var9_int = param1 << 16;
                             var10 = param5 << 16;
-                            break L13;
+                            break L12;
                           } else {
                             var11 = (-param5 + param4 << 16) / var14;
                             var12 = (-param1 + param4 << 16) / var15;
                             var9_int = param5 << 16;
                             var10 = param1 << 16;
-                            break L13;
+                            break L12;
                           }
                         }
                       }
-                      L14: {
+                      L13: {
                         if (param3 >= 0) {
-                          break L14;
+                          break L13;
                         } else {
                           param3 = Math.min(-param3, param6 + -param3);
                           var9_int = var9_int + param3 * var11;
                           var10 = var10 + param3 * var12;
                           param3 = 0;
-                          break L14;
+                          break L13;
                         }
                       }
                       var13 = 0;
-                      break L5;
+                      break L4;
                     }
                   }
-                  L15: {
+                  L14: {
                     if (param3 >= 0) {
-                      break L15;
+                      break L14;
                     } else {
                       param3 = -param3;
                       var9_int = var9_int + param3 * var11;
                       var10 = var10 + param3 * var12;
                       param3 = 0;
-                      break L15;
+                      break L14;
                     }
                   }
                   var15 = uoa.field_d[param3];
-                  L16: while (true) {
+                  L15: while (true) {
                     if (param7 <= param3) {
                       break L0;
                     } else {
-                      L17: {
+                      L16: {
                         var16 = var9_int >> 16;
                         if (uoa.field_e <= var16) {
-                          break L17;
+                          break L16;
                         } else {
                           var17 = (var10 >> 16) + -(var9_int >> 16);
                           if (var17 == 0) {
                             if (var16 < 0) {
-                              break L17;
+                              break L16;
                             } else {
                               if (var16 >= uoa.field_e) {
-                                break L17;
+                                break L16;
                               } else {
                                 tl.a(var15 + var16, var17, param2, 1535993377, param8);
-                                break L17;
+                                break L16;
                               }
                             }
                           } else {
-                            L18: {
+                            L17: {
                               if (uoa.field_e <= var16 + var17) {
                                 var17 = -1 + (-var16 + uoa.field_e);
-                                break L18;
+                                break L17;
                               } else {
-                                break L18;
+                                break L17;
                               }
                             }
                             if (var16 < 0) {
                               tl.a(var15, var17 + var16, param2, 1535993377, param8);
-                              break L17;
+                              break L16;
                             } else {
                               tl.a(var15 + var16, var17, param2, 1535993377, param8);
-                              break L17;
+                              break L16;
                             }
                           }
                         }
@@ -294,7 +286,7 @@ final class vb extends vg {
                         var10 = var10 + var12;
                         var9_int = var9_int + var11;
                         var15 = var15 + bea.field_g;
-                        continue L16;
+                        continue L15;
                       }
                     }
                   }
@@ -307,33 +299,33 @@ final class vb extends vg {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L19: {
+          L18: {
             var9 = decompiledCaughtException;
-            stackOut_77_0 = (RuntimeException) var9;
-            stackOut_77_1 = new StringBuilder().append("vb.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44);
-            stackIn_79_0 = stackOut_77_0;
-            stackIn_79_1 = stackOut_77_1;
-            stackIn_78_0 = stackOut_77_0;
-            stackIn_78_1 = stackOut_77_1;
+            stackOut_75_0 = (RuntimeException) var9;
+            stackOut_75_1 = new StringBuilder().append("vb.A(").append(-922437200).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44);
+            stackIn_77_0 = stackOut_75_0;
+            stackIn_77_1 = stackOut_75_1;
+            stackIn_76_0 = stackOut_75_0;
+            stackIn_76_1 = stackOut_75_1;
             if (param8 == null) {
-              stackOut_79_0 = (RuntimeException) (Object) stackIn_79_0;
-              stackOut_79_1 = (StringBuilder) (Object) stackIn_79_1;
-              stackOut_79_2 = "null";
-              stackIn_80_0 = stackOut_79_0;
-              stackIn_80_1 = stackOut_79_1;
-              stackIn_80_2 = stackOut_79_2;
-              break L19;
+              stackOut_77_0 = (RuntimeException) (Object) stackIn_77_0;
+              stackOut_77_1 = (StringBuilder) (Object) stackIn_77_1;
+              stackOut_77_2 = "null";
+              stackIn_78_0 = stackOut_77_0;
+              stackIn_78_1 = stackOut_77_1;
+              stackIn_78_2 = stackOut_77_2;
+              break L18;
             } else {
-              stackOut_78_0 = (RuntimeException) (Object) stackIn_78_0;
-              stackOut_78_1 = (StringBuilder) (Object) stackIn_78_1;
-              stackOut_78_2 = "{...}";
-              stackIn_80_0 = stackOut_78_0;
-              stackIn_80_1 = stackOut_78_1;
-              stackIn_80_2 = stackOut_78_2;
-              break L19;
+              stackOut_76_0 = (RuntimeException) (Object) stackIn_76_0;
+              stackOut_76_1 = (StringBuilder) (Object) stackIn_76_1;
+              stackOut_76_2 = "{...}";
+              stackIn_78_0 = stackOut_76_0;
+              stackIn_78_1 = stackOut_76_1;
+              stackIn_78_2 = stackOut_76_2;
+              break L18;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_80_0, stackIn_80_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_78_0, stackIn_78_2 + 41);
         }
     }
 

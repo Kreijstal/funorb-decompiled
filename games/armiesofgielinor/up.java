@@ -10,7 +10,7 @@ final class up implements lv {
     static String field_f;
     private ha field_d;
 
-    public static void d(int param0) {
+    public static void d() {
         field_f = null;
         field_g = null;
         field_b = null;
@@ -56,7 +56,7 @@ final class up implements lv {
                   stackIn_8_0 = stackOut_7_0;
                   break L0;
                 } else {
-                  param2.setCharAt(var5, param0);
+                  param2.setCharAt(var5, ' ');
                   var5++;
                   continue L1;
                 }
@@ -72,7 +72,7 @@ final class up implements lv {
           L2: {
             var4 = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var4;
-            stackOut_9_1 = new StringBuilder().append("up.E(").append(param0).append(44).append(param1).append(44);
+            stackOut_9_1 = new StringBuilder().append("up.E(").append(32).append(44).append(param1).append(44);
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;

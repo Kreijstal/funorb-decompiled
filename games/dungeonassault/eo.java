@@ -5,7 +5,7 @@ final class eo {
     private java.awt.GraphicsDevice field_a;
     private java.awt.DisplayMode field_b;
 
-    private final void a(java.awt.Frame param0, int param1) {
+    private final void a(java.awt.Frame param0) {
         ((eo) this).field_a.setFullScreenWindow((java.awt.Window) (Object) param0);
     }
 
@@ -22,7 +22,8 @@ final class eo {
           L0: {
             param0.setUndecorated(true);
             param0.enableInputMethods(false);
-            this.a(param0, 0);
+            int discarded$2 = 0;
+            this.a(param0);
             if (param4 != 0) {
               break L0;
             } else {
@@ -102,7 +103,8 @@ final class eo {
             }
             ((eo) this).field_b = null;
         }
-        this.a((java.awt.Frame) null, 0);
+        int discarded$0 = 0;
+        this.a((java.awt.Frame) null);
     }
 
     public eo() throws Exception {

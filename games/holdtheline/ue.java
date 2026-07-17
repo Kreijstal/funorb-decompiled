@@ -16,16 +16,8 @@ final class ue {
         var5 = HoldTheLine.field_D;
         try {
           L0: {
-            L1: {
-              if (param0 == 8911) {
-                break L1;
-              } else {
-                ue.a(16);
-                break L1;
-              }
-            }
             var2_int = tc.field_j * tc.field_c - 1;
-            L2: while (true) {
+            L1: while (true) {
               if (var2_int < 0) {
                 break L0;
               } else {
@@ -39,18 +31,18 @@ final class ue {
                 var3 = var3 | var4;
                 tc.field_b[var2_int] = var3 >>> 8;
                 var2_int--;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var2, "ue.A(" + param0 + 44 + param1 + 41);
+          throw kk.a((Throwable) (Object) var2, "ue.A(" + 8911 + 44 + param1 + 41);
         }
     }
 
-    final static hj a(boolean param0) {
+    final static hj a() {
         int var4_int = 0;
         int var5 = HoldTheLine.field_D;
         int var1 = ad.field_d[0] * nk.field_K[0];

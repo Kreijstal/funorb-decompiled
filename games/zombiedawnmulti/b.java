@@ -9,7 +9,7 @@ final class b {
     static int field_b;
     static int field_d;
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_a = null;
         int var1 = -5;

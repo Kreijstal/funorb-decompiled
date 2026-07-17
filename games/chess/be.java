@@ -11,13 +11,10 @@ final class be {
     static String field_c;
 
     final static km[] a(int param0, boolean param1, int param2, int param3, int param4) {
-        if (param1) {
-            return null;
-        }
-        return jc.a(3, 1, param3, param2, 1, 0, 1, param0, 0);
+        return jc.a(3, 1, 0, 0, 1, 0, 1, 65793, 0);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         field_c = null;

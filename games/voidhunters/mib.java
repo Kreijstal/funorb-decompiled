@@ -17,7 +17,7 @@ final class mib implements ntb {
     private tja[] field_a;
     private boolean field_e;
 
-    private final void b(faa param0, byte param1) {
+    private final void b(faa param0) {
         uqb var5 = null;
         tja var3 = null;
         int var4 = VoidHunters.field_G;
@@ -43,96 +43,89 @@ final class mib implements ntb {
             return ((mib) this).b(28120);
         }
         if (((mib) this).field_b) {
-            return this.a(0);
+            int discarded$0 = 0;
+            return this.a();
         }
         return ((mib) this).field_a[(-param0 + ((mib) this).field_a.length + ((mib) this).field_i) % ((mib) this).field_a.length];
     }
 
     final static String a(byte param0, String param1) {
         RuntimeException var2 = null;
-        Object stackIn_2_0 = null;
-        String stackIn_5_0 = null;
-        String stackIn_10_0 = null;
-        String stackIn_12_0 = null;
+        String stackIn_4_0 = null;
+        String stackIn_9_0 = null;
+        String stackIn_11_0 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_16_2 = null;
+        String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_11_0 = null;
-        String stackOut_9_0 = null;
-        String stackOut_4_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        String stackOut_10_0 = null;
+        String stackOut_8_0 = null;
+        String stackOut_3_0 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
         RuntimeException stackOut_14_0 = null;
         StringBuilder stackOut_14_1 = null;
         String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
         try {
           L0: {
-            if (param0 == -33) {
-              if (!fjb.field_b.startsWith("win")) {
-                if (fjb.field_b.startsWith("linux")) {
-                  stackOut_11_0 = "lib" + param1 + ".so";
-                  stackIn_12_0 = stackOut_11_0;
-                  break L0;
-                } else {
-                  if (fjb.field_b.startsWith("mac")) {
-                    stackOut_9_0 = "lib" + param1 + ".dylib";
-                    stackIn_10_0 = stackOut_9_0;
-                    return stackIn_10_0;
-                  } else {
-                    return null;
-                  }
-                }
+            if (!fjb.field_b.startsWith("win")) {
+              if (fjb.field_b.startsWith("linux")) {
+                stackOut_10_0 = "lib" + param1 + ".so";
+                stackIn_11_0 = stackOut_10_0;
+                break L0;
               } else {
-                stackOut_4_0 = param1 + ".dll";
-                stackIn_5_0 = stackOut_4_0;
-                return stackIn_5_0;
+                if (fjb.field_b.startsWith("mac")) {
+                  stackOut_8_0 = "lib" + param1 + ".dylib";
+                  stackIn_9_0 = stackOut_8_0;
+                  return stackIn_9_0;
+                } else {
+                  return null;
+                }
               }
             } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
-              return (String) (Object) stackIn_2_0;
+              stackOut_3_0 = param1 + ".dll";
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var2;
-            stackOut_13_1 = new StringBuilder().append("mib.HA(").append(param0).append(44);
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackOut_12_0 = (RuntimeException) var2;
+            stackOut_12_1 = new StringBuilder().append("mib.HA(").append(-33).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
-              break L1;
-            } else {
               stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
               stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L1;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
         }
-        return stackIn_12_0;
+        return stackIn_11_0;
     }
 
     private final void a(mfa param0, boolean param1, byte param2) {
@@ -168,8 +161,10 @@ final class mib implements ntb {
                 ((mib) this).field_j = null;
             }
             var3.field_i = var3.field_i;
-            var3.field_a = (tja[]) (Object) sqb.a((tv[]) (Object) var3.field_a, (tv[]) (Object) var3.field_a, 1, gva.field_a, false);
-            this.b(param1, -128);
+            int discarded$0 = 0;
+            var3.field_a = (tja[]) (Object) sqb.a((tv[]) (Object) var3.field_a, (tv[]) (Object) var3.field_a, 1, gva.field_a);
+            int discarded$1 = -128;
+            this.b(param1);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "mib.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
@@ -241,7 +236,7 @@ final class mib implements ntb {
         return ((mib) this).field_j;
     }
 
-    private final void b(tv param0, int param1) {
+    private final void b(tv param0) {
         mib var3 = null;
         try {
             var3 = (mib) (Object) param0;
@@ -263,7 +258,7 @@ final class mib implements ntb {
         }
     }
 
-    private final void b(byte param0) {
+    private final void b() {
         int var2 = 0;
         wc var3_ref_wc = null;
         int var3 = 0;
@@ -486,13 +481,15 @@ final class mib implements ntb {
     private final void a(byte param0, faa param1) {
         try {
             if (!osa.field_e) {
-                this.a(param1, (byte) -19);
+                int discarded$1 = -19;
+                this.a(param1);
             } else {
-                this.b(param1, (byte) 42);
+                int discarded$2 = 42;
+                this.b(param1);
             }
-            int var3_int = 64 % ((-35 - param0) / 33);
+            int var3_int = 0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "mib.I(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "mib.I(" + 5 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -604,8 +601,8 @@ final class mib implements ntb {
               }
             }
             L2: {
-              boolean discarded$37 = tja.a((ntb[]) (Object) var6.field_a, 1, (ntb[]) (Object) var6.field_a, false, 5547);
-              boolean discarded$38 = trb.a(1, var6.field_f, 13, false, var6.field_f);
+              boolean discarded$4 = tja.a((ntb[]) (Object) var6.field_a, 1, (ntb[]) (Object) var6.field_a, false, 5547);
+              boolean discarded$5 = trb.a(1, var6.field_f, 13, false, var6.field_f);
               if (!dn.a((tv[]) (Object) var6.field_a, false, 1, (tv[]) (Object) var6.field_a, -66)) {
                 break L2;
               } else {
@@ -624,7 +621,9 @@ final class mib implements ntb {
               }
             }
             L4: {
-              if (!dn.a(hob.a(var6.field_f, 210377952), false, 1, hob.a(var6.field_f, 210377952), 121)) {
+              int discarded$6 = 210377952;
+              int discarded$7 = 210377952;
+              if (!dn.a(hob.a(var6.field_f), false, 1, hob.a(var6.field_f), 121)) {
                 break L4;
               } else {
                 var4 = 1;
@@ -689,7 +688,7 @@ final class mib implements ntb {
         }
     }
 
-    private final void a(faa param0, byte param1) {
+    private final void a(faa param0) {
         RuntimeException var3 = null;
         uqb[] var3_array = null;
         int var4 = 0;
@@ -835,7 +834,9 @@ final class mib implements ntb {
               L2: {
                 var4 = 1 / ((param0 - 22) / 59);
                 var3 = (mib) (Object) param1;
-                if (dn.a(hob.a(var3.field_f, 210377952), false, 1, hob.a(var3.field_f, 210377952), 122)) {
+                int discarded$21 = 210377952;
+                int discarded$22 = 210377952;
+                if (dn.a(hob.a(var3.field_f), false, 1, hob.a(var3.field_f), 122)) {
                   break L2;
                 } else {
                   if (var3.field_g == var3.field_g) {
@@ -908,7 +909,8 @@ final class mib implements ntb {
           L0: {
             L1: {
               if (!osa.field_e) {
-                this.c(param0, (byte) 43);
+                int discarded$2 = 43;
+                this.c(param0);
                 break L1;
               } else {
                 this.a(-1, param0);
@@ -972,7 +974,8 @@ final class mib implements ntb {
             ((mib) this).field_d = null;
         }
         if (((mib) this).field_b) {
-            return this.a(0);
+            int discarded$0 = 0;
+            return this.a();
         }
         return ((mib) this).field_a[((mib) this).field_i];
     }
@@ -987,7 +990,7 @@ final class mib implements ntb {
         }
     }
 
-    private final void c(faa param0, byte param1) {
+    private final void c(faa param0) {
         faa var11 = null;
         faa var3 = null;
         tv[] var10 = null;
@@ -1002,7 +1005,8 @@ final class mib implements ntb {
         try {
             var11 = param0;
             var3 = var11;
-            var10 = hob.a(((mib) this).field_f, 210377952);
+            int discarded$0 = 210377952;
+            var10 = hob.a(((mib) this).field_f);
             var4 = var10;
             var5 = var4 == null ? 0 : var10.length;
             var11.a(-632, var5, 12);
@@ -1027,7 +1031,7 @@ final class mib implements ntb {
         }
     }
 
-    private final tja a(int param0) {
+    private final tja a() {
         if (null != ((mib) this).field_d) {
             if (((mib) this).field_d.c(116) != null) {
                 return ((mib) this).field_d.c(116).d(0);
@@ -1294,7 +1298,8 @@ final class mib implements ntb {
               L1: {
                 var6 = (var5 - -1) % ((mib) this).field_a.length;
                 if (tga.field_N) {
-                  nc.a((byte) 68);
+                  int discarded$6 = 68;
+                  nc.a();
                   break L1;
                 } else {
                   break L1;
@@ -1322,7 +1327,8 @@ final class mib implements ntb {
               L4: {
                 ((mib) this).field_a[var6].a(false, var4);
                 if (ndb.field_c == 1) {
-                  this.b((byte) 71);
+                  int discarded$7 = 71;
+                  this.b();
                   break L4;
                 } else {
                   break L4;
@@ -1373,17 +1379,21 @@ final class mib implements ntb {
                   L7: {
                     ((tja) (Object) stackIn_24_0).a(stackIn_24_1, stackIn_24_2, stackIn_24_3, stackIn_24_4 != 0);
                     if (poa.field_o) {
-                      uea.c(9487);
+                      int discarded$8 = 9487;
+                      uea.c();
                       var8 = tmb.a((tv) (Object) ((mib) this).field_a[var5], (byte) -117);
                       if (var8 == var7) {
                         ((mib) this).field_e = false;
                         break L7;
                       } else {
                         L8: {
-                          var9 = dnb.c((byte) -39);
-                          uea.c(9487);
+                          int discarded$9 = -39;
+                          var9 = dnb.c();
+                          int discarded$10 = 9487;
+                          uea.c();
                           this.a(var5, var6, 42);
-                          ((mib) this).field_a[var5] = dnb.c((byte) -39);
+                          int discarded$11 = -39;
+                          ((mib) this).field_a[var5] = dnb.c();
                           if (!((mib) this).field_e) {
                             iva.a(-6940, "Carousel_commongame shallow copy check: A field was changed before it was prepared");
                             iva.a(-6940, "******************************************");

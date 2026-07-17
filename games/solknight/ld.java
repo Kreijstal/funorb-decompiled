@@ -63,7 +63,7 @@ abstract class ld extends kf {
         }
     }
 
-    public static void k(int param0) {
+    public static void k() {
         field_O = null;
         field_M = null;
         int var1 = -1;
@@ -87,7 +87,7 @@ abstract class ld extends kf {
         var17 = SolKnight.field_L ? 1 : 0;
         mi.e(param0 + 6, 35 + param2, -12 + ((ld) this).field_t, ((ld) this).field_x + -40, 2105376, 0);
         var5 = 211;
-        var6 = -45 % ((param1 - -55) / 39);
+        var6 = -1;
         var4 = 35;
         var7 = 194;
         var8 = 0;
@@ -228,9 +228,6 @@ abstract class ld extends kf {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        if (param0 != 1784) {
-            ((ld) this).field_K = 81;
-        }
         if (((ld) this).field_L <= 0) {
         } else {
             var2 = ((ld) this).field_R;
@@ -248,7 +245,7 @@ abstract class ld extends kf {
             }
             ((ld) this).b(var2, -2038584927, var3);
         }
-        return super.h(param0);
+        return super.h(1784);
     }
 
     final static void c(int param0, int param1, int param2) {

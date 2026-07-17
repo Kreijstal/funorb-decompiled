@@ -26,25 +26,22 @@ final class nva extends dqa implements oo {
         if (null == ((nva) this).field_w.field_L) {
             return;
         }
-        int var3_int = this.a(param1.toLowerCase(), param0 + -108);
+        int var3_int = this.a(param1.toLowerCase(), -68);
         if (!(var3_int != -1)) {
             return;
         }
         try {
-            if (param0 != 40) {
-                ((nva) this).f((byte) 41);
-            }
             ((nva) this).field_w.field_H = var3_int;
             this.e(125);
             ((nva) this).field_E = param1;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "nva.P(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "nva.P(" + 40 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
     private final void b(int param0, int param1, int param2, int param3, int param4) {
         super.a(param3, param0, param4, 1, param1);
-        ((nva) this).field_A.a(0, param2 + param0, ((nva) this).field_B, param2 + 21, 0);
+        ((nva) this).field_A.a(0, -20 + param0, ((nva) this).field_B, 1, 0);
         ((nva) this).field_x.a(-20 + param0, 20, ((nva) this).field_B, 1, 0);
         if (!(!((nva) this).field_H)) {
             ((nva) this).field_G.a(0, param0, -((nva) this).field_B + param4, 1, ((nva) this).field_B);
@@ -127,7 +124,7 @@ final class nva extends dqa implements oo {
         }
     }
 
-    private final void d(int param0) {
+    private final void d() {
         int var2 = ((nva) this).field_w.e(4);
         int var3 = var2;
         int var4 = 0;
@@ -139,7 +136,8 @@ final class nva extends dqa implements oo {
         ((nva) this).field_w.a(0, ((nva) this).field_h, var2, 1, 0);
         ((nva) this).field_G = new sha(0, 0, 0, 0, (wwa) (Object) new nrb(), (shb) (Object) ((nva) this).field_w, (wwa) null);
         if (var4 != 0) {
-            ((nva) this).field_G.a(true, qe.a(0), (byte) -99);
+            int discarded$0 = 0;
+            ((nva) this).field_G.a(true, qe.a(), (byte) -99);
         }
         ((nva) this).field_G.a(0, ((nva) this).field_h, ((nva) this).field_f - ((nva) this).field_B, 1, ((nva) this).field_B);
         ((nva) this).field_H = true;
@@ -199,10 +197,12 @@ final class nva extends dqa implements oo {
             if (param0 == 11) {
               L1: {
                 if (!((nva) this).h(0)) {
-                  this.d(20589);
+                  int discarded$5 = 20589;
+                  this.d();
                   break L1;
                 } else {
-                  this.g(5647);
+                  int discarded$6 = 5647;
+                  this.g();
                   break L1;
                 }
               }
@@ -243,10 +243,7 @@ final class nva extends dqa implements oo {
         }
     }
 
-    public static void f(int param0) {
-        if (param0 > -77) {
-            return;
-        }
+    public static void f() {
         field_D = null;
         field_I = null;
     }
@@ -286,7 +283,7 @@ final class nva extends dqa implements oo {
         return stackIn_7_0 != 0;
     }
 
-    private final void g(int param0) {
+    private final void g() {
         if (!((nva) this).h(0)) {
             return;
         }
@@ -543,10 +540,12 @@ final class nva extends dqa implements oo {
                                 if (84 == param1) {
                                   L4: {
                                     if (((nva) this).field_H) {
-                                      this.g(5647);
+                                      int discarded$5 = 5647;
+                                      this.g();
                                       break L4;
                                     } else {
-                                      this.d(20589);
+                                      int discarded$6 = 20589;
+                                      this.d();
                                       break L4;
                                     }
                                   }
@@ -589,7 +588,8 @@ final class nva extends dqa implements oo {
                             if (((nva) this).h(0)) {
                               break L5;
                             } else {
-                              this.d(20589);
+                              int discarded$7 = 20589;
+                              this.d();
                               break L5;
                             }
                           }
@@ -630,7 +630,8 @@ final class nva extends dqa implements oo {
                       if (((nva) this).h(0)) {
                         break L9;
                       } else {
-                        this.d(20589);
+                        int discarded$8 = 20589;
+                        this.d();
                         break L9;
                       }
                     }
@@ -670,7 +671,8 @@ final class nva extends dqa implements oo {
                   stackIn_61_0 = stackOut_60_0;
                   break L0;
                 } else {
-                  this.g(5647);
+                  int discarded$9 = 5647;
+                  this.g();
                   stackOut_58_0 = 0;
                   stackIn_59_0 = stackOut_58_0;
                   return stackIn_59_0 != 0;
@@ -822,11 +824,8 @@ final class nva extends dqa implements oo {
         int var5 = VoidHunters.field_G;
         char[] var6 = new char[param2];
         char[] var3 = var6;
-        if (!param1) {
-            nva.f(-90);
-        }
         for (var4 = 0; var4 < param2; var4++) {
-            var6[var4] = param0;
+            var6[var4] = '*';
         }
         return new String(var6);
     }
@@ -834,9 +833,6 @@ final class nva extends dqa implements oo {
     final static void a(int param0, boolean param1, int param2, int param3) {
         fda.field_o = param2;
         mb.field_j = param0;
-        if (!param1) {
-            String discarded$0 = nva.a('W', true, -7);
-        }
         eqa.field_o = param3;
     }
 

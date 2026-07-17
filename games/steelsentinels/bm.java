@@ -16,13 +16,13 @@ final class bm extends dl implements ae {
     static long[] field_T;
     private mi field_ab;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_Z = null;
         field_Y = null;
         field_S = null;
         field_W = null;
         field_R = null;
-        int var1 = 24 / ((77 - param0) / 37);
+        int var1 = 6;
         field_T = null;
     }
 
@@ -54,10 +54,7 @@ final class bm extends dl implements ae {
         int var6 = SteelSentinels.field_G;
         wk[] var7 = new wk[9];
         wk[] var4 = var7;
-        if (param1 != -2) {
-            bm.a((byte) 112);
-        }
-        var7[0] = bd.a(param0, param2, 248);
+        var7[0] = bd.a(param0, 1, 248);
         for (var5 = 1; var5 < 9; var5++) {
             var7[var5] = var7[0];
         }

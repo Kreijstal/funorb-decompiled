@@ -162,7 +162,8 @@ public final class ZombieDawnMulti extends aq {
                     break L9;
                   } else {
                     oo.f(0, 0, oo.field_b, oo.field_l);
-                    sc.a(0);
+                    int discarded$3 = 0;
+                    sc.a();
                     var3 = iq.a(45);
                     var4 = 0;
                     var5 = 0;
@@ -257,7 +258,8 @@ public final class ZombieDawnMulti extends aq {
                   } else {
                     if (!n.a((byte) -39)) {
                       oo.f(0, 0, oo.field_b, oo.field_l);
-                      oe.a(oi.field_h[0].field_x, oi.field_h[0].field_w, oi.field_h, (byte) -21);
+                      int discarded$4 = -21;
+                      oe.a(oi.field_h[0].field_x, oi.field_h[0].field_w, oi.field_h);
                       break L13;
                     } else {
                       break L13;
@@ -316,7 +318,8 @@ public final class ZombieDawnMulti extends aq {
                     }
                   }
                 }
-                t.a(false, 0, (java.awt.Canvas) var2_ref, 0);
+                int discarded$5 = 0;
+                t.a(false, 0, (java.awt.Canvas) var2_ref);
                 break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -344,7 +347,9 @@ public final class ZombieDawnMulti extends aq {
             df.field_H = true;
             var2 = new gd();
             var2.f(128, 15, 9);
-            db.a(pl.field_J, 22050, (java.awt.Component) (Object) dk.field_Ib, var2, 1024, true);
+            int discarded$2 = 1;
+            int discarded$3 = 1024;
+            db.a(pl.field_J, 22050, (java.awt.Component) (Object) dk.field_Ib, var2);
             ((ZombieDawnMulti) this).a(true, (byte) -27, false, true, true, false, true);
             sq.field_U[64] = 1;
             sq.field_U[79] = 14;
@@ -426,10 +431,12 @@ public final class ZombieDawnMulti extends aq {
                   } else {
                     L2: {
                       if (bd.field_f) {
-                        km.h(0);
+                        int discarded$13 = 0;
+                        km.h();
                         break L2;
                       } else {
-                        jg.a(0);
+                        int discarded$14 = 0;
+                        jg.a();
                         break L2;
                       }
                     }
@@ -452,7 +459,8 @@ public final class ZombieDawnMulti extends aq {
                           }
                         }
                         if (lb.a((byte) 53, sp.field_g)) {
-                          bl.a(-9);
+                          int discarded$15 = -9;
+                          bl.a();
                           break L3;
                         } else {
                           break L3;
@@ -484,7 +492,8 @@ public final class ZombieDawnMulti extends aq {
                           if (cf.field_s == null) {
                             break L6;
                           } else {
-                            this.s(-50);
+                            int discarded$16 = -50;
+                            this.s();
                             break L6;
                           }
                         }
@@ -513,7 +522,8 @@ public final class ZombieDawnMulti extends aq {
                     } else {
                       gk.field_b = gk.field_b + 1;
                       if (gk.field_b == 32) {
-                        bl.a(-9);
+                        int discarded$17 = -9;
+                        bl.a();
                         break L5;
                       } else {
                         break L5;
@@ -527,13 +537,13 @@ public final class ZombieDawnMulti extends aq {
                   if (bh.field_d.c(61) == null) {
                     break L7;
                   } else {
-                    int fieldTemp$3 = er.field_k + 1;
+                    int fieldTemp$18 = er.field_k + 1;
                     er.field_k = er.field_k + 1;
-                    if (fieldTemp$3 < 335) {
+                    if (fieldTemp$18 < 335) {
                       break L7;
                     } else {
                       er.field_k = 0;
-                      br discarded$4 = bh.field_d.g(49);
+                      br discarded$19 = bh.field_d.g(49);
                       break L7;
                     }
                   }
@@ -583,7 +593,8 @@ public final class ZombieDawnMulti extends aq {
                           if (hh.field_b) {
                             L13: {
                               if (re.field_b) {
-                                ia.a(320, 180, var4 != 0, 0);
+                                int discarded$20 = 0;
+                                ia.a(320, 180, var4 != 0);
                                 break L13;
                               } else {
                                 break L13;
@@ -610,7 +621,11 @@ public final class ZombieDawnMulti extends aq {
                                     if (!hh.field_b) {
                                       break L16;
                                     } else {
-                                      if (jm.a(13, -23936, 15, 12)) {
+                                      int discarded$21 = 12;
+                                      int discarded$22 = 15;
+                                      int discarded$23 = -23936;
+                                      int discarded$24 = 13;
+                                      if (jm.a()) {
                                         continue L14;
                                       } else {
                                         break L15;
@@ -618,7 +633,7 @@ public final class ZombieDawnMulti extends aq {
                                     }
                                   }
                                 }
-                                boolean discarded$5 = w.a(13, 15, 12, 18663);
+                                boolean discarded$25 = w.a(13, 15, 12, 18663);
                                 break L15;
                               }
                             }
@@ -780,32 +795,28 @@ public final class ZombieDawnMulti extends aq {
                 break L26;
               }
             }
-            if (param0) {
-              L27: {
-                if (sp.field_g == -5) {
-                  if (mh.field_c == null) {
-                    var3_int = vd.field_d;
-                    bm.a(false, var3_int, 127, sp.field_g);
-                    break L27;
-                  } else {
-                    ml.a(mh.field_c.i(6), 11, -76);
-                    vo.field_q = true;
-                    sp.field_g = pl.field_I;
-                    break L27;
-                  }
+            L27: {
+              if (sp.field_g == -5) {
+                if (mh.field_c == null) {
+                  var3_int = vd.field_d;
+                  bm.a(false, var3_int, 127, sp.field_g);
+                  break L27;
                 } else {
+                  ml.a(mh.field_c.i(6), 11, -76);
+                  vo.field_q = true;
+                  sp.field_g = pl.field_I;
                   break L27;
                 }
+              } else {
+                break L27;
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var3, "ZombieDawnMulti.BA(" + param0 + 44 + param1 + 41);
+          throw fa.a((Throwable) (Object) var3, "ZombieDawnMulti.BA(" + 1 + 44 + param1 + 41);
         }
     }
 
@@ -889,7 +900,8 @@ public final class ZombieDawnMulti extends aq {
         }
         if (param0 < -3) {
           L2: {
-            id.d((byte) 20);
+            int discarded$39 = 20;
+            id.d();
             if (null == rn.field_f) {
               break L2;
             } else {
@@ -897,7 +909,8 @@ public final class ZombieDawnMulti extends aq {
                 break L2;
               } else {
                 rn.a(-110);
-                vn.a(-29507);
+                int discarded$40 = -29507;
+                vn.a();
                 break L2;
               }
             }
@@ -930,7 +943,8 @@ public final class ZombieDawnMulti extends aq {
           L4: {
             ((ZombieDawnMulti) this).b((byte) stackIn_22_1, stackIn_22_2 != 0);
             if (kn.field_f) {
-              this.u(-126);
+              int discarded$41 = -126;
+              this.u();
               kn.field_f = false;
               break L4;
             } else {
@@ -946,7 +960,7 @@ public final class ZombieDawnMulti extends aq {
               } else {
                 L6: {
                   if (ge.p(-88)) {
-                    boolean discarded$7 = this.c(false, 123);
+                    boolean discarded$42 = this.c(false, 123);
                     break L6;
                   } else {
                     break L6;
@@ -960,14 +974,16 @@ public final class ZombieDawnMulti extends aq {
           }
           L7: {
             if (uk.field_O) {
-              if (n.c((byte) 107)) {
+              int discarded$43 = 107;
+              if (n.c()) {
                 if (n.a((byte) -68)) {
                   if (er.field_i != er.field_h) {
                     this.a(true, false);
                     break L7;
                   } else {
                     L8: {
-                      var2_int = u.a((byte) -58);
+                      int discarded$44 = -58;
+                      var2_int = u.a();
                       if (2 != var2_int) {
                         if (var2_int != 3) {
                           if (var2_int == 4) {
@@ -998,7 +1014,8 @@ public final class ZombieDawnMulti extends aq {
                     } else {
                       if (~er.field_i == ~er.field_h) {
                         L9: {
-                          var2_int = wg.c((byte) -85);
+                          int discarded$45 = -85;
+                          var2_int = wg.c();
                           if (var2_int == 1) {
                             rj.a(b.field_b, (byte) -72, mb.field_g);
                             break L9;
@@ -1056,7 +1073,8 @@ public final class ZombieDawnMulti extends aq {
                         }
                       }
                       if (var2_int == 2) {
-                        cq.a((java.applet.Applet) this, false);
+                        int discarded$46 = 0;
+                        cq.a((java.applet.Applet) this);
                         break L11;
                       } else {
                         break L11;
@@ -1067,7 +1085,8 @@ public final class ZombieDawnMulti extends aq {
                   }
                 }
               } else {
-                this.r(-123);
+                int discarded$47 = -123;
+                this.r();
                 break L7;
               }
             } else {
@@ -1081,7 +1100,8 @@ public final class ZombieDawnMulti extends aq {
             }
           }
           L14: while (true) {
-            if (!dd.a(sq.field_U, (byte) -126)) {
+            int discarded$48 = -126;
+            if (!dd.a(sq.field_U)) {
               L15: {
                 cb.a(0, false);
                 if (iq.field_f) {
@@ -1127,7 +1147,8 @@ public final class ZombieDawnMulti extends aq {
                             }
                           }
                           L21: {
-                            bl.a(-9);
+                            int discarded$49 = -9;
+                            bl.a();
                             var3_ref_nc = gk.a(2, pl.field_I);
                             if (var3_ref_nc != null) {
                               var3_ref_nc.a(0, false, 0);
@@ -1142,7 +1163,8 @@ public final class ZombieDawnMulti extends aq {
                           if (!re.field_b) {
                             break L19;
                           } else {
-                            gk.a((byte) 16);
+                            int discarded$50 = 16;
+                            gk.a();
                             re.field_b = false;
                             break L19;
                           }
@@ -1204,7 +1226,8 @@ public final class ZombieDawnMulti extends aq {
               return;
             } else {
               if (9 == op.field_i) {
-                bl.a(-9);
+                int discarded$51 = -9;
+                bl.a();
                 sp.field_g = 13;
                 gh.field_g = false;
                 vh.field_Fb = s.field_e.f((byte) -48);
@@ -1216,8 +1239,10 @@ public final class ZombieDawnMulti extends aq {
                       if (!ji.field_c) {
                         break L26;
                       } else {
-                        bl.a(-9);
-                        ld.j(1481707568);
+                        int discarded$52 = -9;
+                        bl.a();
+                        int discarded$53 = 1481707568;
+                        ld.j();
                         w.c(0);
                         hh.field_b = false;
                         ji.field_c = false;
@@ -1228,7 +1253,8 @@ public final class ZombieDawnMulti extends aq {
                         if (!re.field_b) {
                           break L26;
                         } else {
-                          gk.a((byte) 16);
+                          int discarded$54 = 16;
+                          gk.a();
                           break L26;
                         }
                       }
@@ -1242,7 +1268,8 @@ public final class ZombieDawnMulti extends aq {
                         break L27;
                       } else {
                         if (ji.field_c) {
-                          ck.a(-2061);
+                          int discarded$55 = -2061;
+                          ck.a();
                           continue L14;
                         } else {
                           break L27;
@@ -1271,7 +1298,8 @@ public final class ZombieDawnMulti extends aq {
                               }
                               if (op.field_m.field_t != 1) {
                                 L31: {
-                                  bl.a(-9);
+                                  int discarded$56 = -9;
+                                  bl.a();
                                   if (hh.field_b) {
                                     np.field_m.a(false, 24295, false);
                                     break L31;
@@ -1288,7 +1316,8 @@ public final class ZombieDawnMulti extends aq {
                                   if (!re.field_b) {
                                     break L32;
                                   } else {
-                                    gk.a((byte) 16);
+                                    int discarded$57 = 16;
+                                    gk.a();
                                     break L32;
                                   }
                                 }
@@ -1309,7 +1338,8 @@ public final class ZombieDawnMulti extends aq {
                                   if (wp.field_h != null) {
                                     break L33;
                                   } else {
-                                    bd.a("got MOVE without a game", (Throwable) null, false);
+                                    int discarded$58 = 0;
+                                    bd.a("got MOVE without a game", (Throwable) null);
                                     continue L14;
                                   }
                                 }
@@ -1328,7 +1358,8 @@ public final class ZombieDawnMulti extends aq {
                                             if (!re.field_b) {
                                               break L36;
                                             } else {
-                                              gk.a((byte) 16);
+                                              int discarded$59 = 16;
+                                              gk.a();
                                               re.field_b = false;
                                               break L36;
                                             }
@@ -1373,7 +1404,7 @@ public final class ZombieDawnMulti extends aq {
                                                                 continue L14;
                                                               } else {
                                                                 if (op.field_i == 66) {
-                                                                  int discarded$8 = s.field_e.g(31365);
+                                                                  int discarded$60 = s.field_e.g(31365);
                                                                   continue L14;
                                                                 } else {
                                                                   break L34;
@@ -1390,7 +1421,8 @@ public final class ZombieDawnMulti extends aq {
                                                             }
                                                           }
                                                         } else {
-                                                          var2_ref4 = wq.a(s.field_e, -128);
+                                                          int discarded$61 = -128;
+                                                          var2_ref4 = wq.a(s.field_e);
                                                           if (var2_ref4.field_q == 255) {
                                                             continue L14;
                                                           } else {
@@ -1403,15 +1435,18 @@ public final class ZombieDawnMulti extends aq {
                                                         continue L14;
                                                       }
                                                     } else {
-                                                      wp.field_h.a(false, qk.a(s.field_e, (byte) -114));
+                                                      int discarded$62 = -114;
+                                                      wp.field_h.a(false, qk.a(s.field_e));
                                                       continue L14;
                                                     }
                                                   } else {
-                                                    wp.field_h.a(false, qm.a(s.field_e, true));
+                                                    int discarded$63 = 1;
+                                                    wp.field_h.a(false, qm.a(s.field_e));
                                                     continue L14;
                                                   }
                                                 } else {
-                                                  wp.field_h.a(false, (ae) (Object) oa.a(s.field_e, 14));
+                                                  int discarded$64 = 14;
+                                                  wp.field_h.a(false, (ae) (Object) oa.a(s.field_e));
                                                   continue L14;
                                                 }
                                               }
@@ -1494,8 +1529,9 @@ public final class ZombieDawnMulti extends aq {
                         }
                       }
                     }
-                    bl.a(-9);
-                    int discarded$9 = s.field_e.g(31365);
+                    int discarded$65 = -9;
+                    bl.a();
+                    int discarded$66 = s.field_e.g(31365);
                     var2 = new String[s.field_e.g(31365)];
                     var3 = -2;
                     var3 = s.field_e.g(31365);
@@ -1539,7 +1575,7 @@ public final class ZombieDawnMulti extends aq {
                           var8 = new hk();
                           var7.a(2, (k) (Object) s.field_e);
                           var7.field_r = var4;
-                          int discarded$10 = s.field_e.g(31365);
+                          int discarded$67 = s.field_e.g(31365);
                           if (op.field_i != 57) {
                             break L45;
                           } else {
@@ -1555,25 +1591,25 @@ public final class ZombieDawnMulti extends aq {
                                         var8.a(7054, (k) (Object) s.field_e);
                                         break L45;
                                       } else {
-                                        int dupTemp$11 = s.field_e.g(31365);
-                                        ll.field_k.field_s[var9_int] = dupTemp$11;
-                                        var8.field_c[var9_int] = dupTemp$11;
+                                        int dupTemp$68 = s.field_e.g(31365);
+                                        ll.field_k.field_s[var9_int] = dupTemp$68;
+                                        var8.field_c[var9_int] = dupTemp$68;
                                         var9_int++;
                                         continue L48;
                                       }
                                     }
                                   } else {
-                                    int dupTemp$12 = s.field_e.g(31365);
-                                    ll.field_k.field_g[var9_int] = dupTemp$12;
-                                    var8.field_f[var9_int] = dupTemp$12;
+                                    int dupTemp$69 = s.field_e.g(31365);
+                                    ll.field_k.field_g[var9_int] = dupTemp$69;
+                                    var8.field_f[var9_int] = dupTemp$69;
                                     var9_int++;
                                     continue L47;
                                   }
                                 }
                               } else {
-                                int dupTemp$13 = s.field_e.g(31365);
-                                ll.field_k.field_m[var9_int] = dupTemp$13;
-                                var8.field_d[var9_int] = dupTemp$13;
+                                int dupTemp$70 = s.field_e.g(31365);
+                                ll.field_k.field_m[var9_int] = dupTemp$70;
+                                var8.field_d[var9_int] = dupTemp$70;
                                 var9_int++;
                                 continue L46;
                               }
@@ -1586,7 +1622,8 @@ public final class ZombieDawnMulti extends aq {
                             hh.field_b = true;
                             wp.field_h = var9;
                             np.field_m = var9;
-                            wg.b((byte) 68);
+                            int discarded$71 = 68;
+                            wg.b();
                             re.field_b = true;
                             break L49;
                           } else {
@@ -1607,10 +1644,16 @@ public final class ZombieDawnMulti extends aq {
                     }
                   }
                 } else {
-                  bl.a(-9);
-                  hl.a(eg.field_E, (byte) 75, k.f(23000), 150, pk.b(-11834), cb.field_j.length, cb.b(-122, 4), en.a((byte) -110), cb.b(-123, 500), 1024);
+                  int discarded$72 = -9;
+                  bl.a();
+                  int discarded$73 = -11834;
+                  int discarded$74 = 1024;
+                  hl.a(eg.field_E, (byte) 75, k.f(23000), 150, pk.b(), cb.field_j.length, cb.b(-122, 4), en.a((byte) -110), cb.b(-123, 500));
                   tg.field_a[0] = (byte) 16;
-                  ma.a(aq.k(-55), rn.b(28579), true);
+                  int discarded$75 = -55;
+                  int discarded$76 = 28579;
+                  int discarded$77 = 1;
+                  ma.a(aq.k(), rn.b());
                   gh.field_g = false;
                   sp.field_g = -2;
                   ji.field_c = true;
@@ -1637,31 +1680,26 @@ public final class ZombieDawnMulti extends aq {
         }
     }
 
-    private final void u(int param0) {
+    private final void u() {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
             L1: {
               if (qc.field_s != null) {
-                h.a(qc.field_s, -65);
-                so.d(-6445);
+                int discarded$3 = -65;
+                h.a(qc.field_s);
+                int discarded$4 = -6445;
+                so.d();
                 qc.field_s = null;
-                o.d(26673);
+                int discarded$5 = 26673;
+                o.d();
                 break L1;
               } else {
                 break L1;
               }
             }
-            L2: {
-              ii.field_a = u.a(5, 2);
-              if (param0 <= -117) {
-                break L2;
-              } else {
-                ca discarded$2 = ZombieDawnMulti.a(-2, (byte) -9, (ul) null, (ul) null, -109);
-                break L2;
-              }
-            }
+            ii.field_a = u.a(5, 2);
             cg.field_n = u.a(5, 3);
             ki.field_m = u.a(5, 8);
             pf.field_b = u.a(5, 4);
@@ -1675,11 +1713,11 @@ public final class ZombieDawnMulti extends aq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var2, "ZombieDawnMulti.LA(" + param0 + 41);
+          throw fa.a((Throwable) (Object) var2, "ZombieDawnMulti.LA(" + -126 + 41);
         }
     }
 
-    private final void s(int param0) {
+    private final void s() {
         ae var2 = null;
         RuntimeException var2_ref = null;
         ae var3 = null;
@@ -1692,7 +1730,7 @@ public final class ZombieDawnMulti extends aq {
             if (bi.field_e) {
               return;
             } else {
-              op.field_m.field_H = param0 + cf.field_s.field_m.field_H;
+              op.field_m.field_H = -50 + cf.field_s.field_m.field_H;
               var2 = (ae) (Object) cf.field_s.field_q.c(71);
               L1: while (true) {
                 if (var2 == null) {
@@ -1711,7 +1749,7 @@ public final class ZombieDawnMulti extends aq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var2_ref, "ZombieDawnMulti.GA(" + param0 + 41);
+          throw fa.a((Throwable) (Object) var2_ref, "ZombieDawnMulti.GA(" + -50 + 41);
         }
     }
 
@@ -1756,7 +1794,8 @@ public final class ZombieDawnMulti extends aq {
         String stackOut_13_2 = null;
         try {
           L0: {
-            if (ud.a(param0, param3, param4, (byte) -42)) {
+            int discarded$7 = -42;
+            if (ud.a(param0, param3, param4)) {
               if (param1 == -19) {
                 stackOut_6_0 = hc.a(true, param2.a(param0, true, param4));
                 stackIn_7_0 = stackOut_6_0;
@@ -1867,7 +1906,8 @@ public final class ZombieDawnMulti extends aq {
         int stackOut_101_2 = 0;
         double stackOut_101_3 = 0.0;
         var6 = field_E ? 1 : 0;
-        so.d(-6445);
+        int discarded$40 = -6445;
+        so.d();
         if (pf.field_b != null) {
           L0: {
             if (!al.field_eb.a((byte) -110)) {
@@ -1998,7 +2038,8 @@ public final class ZombieDawnMulti extends aq {
                                                                                                 ei.field_a[90] = jc.a(pf.field_b, "", "zd_multi_select_ability").a();
                                                                                                 ei.field_a[91] = jc.a(pf.field_b, "", "zd_multi_select_tree").a();
                                                                                                 pf.field_b = null;
-                                                                                                o.d(26673);
+                                                                                                int discarded$41 = 26673;
+                                                                                                o.d();
                                                                                                 return false;
                                                                                               } else {
                                                                                                 return false;
@@ -2104,7 +2145,8 @@ public final class ZombieDawnMulti extends aq {
               hl.field_d[4] = ug.a(df.field_M, "", "zombie dawn white house");
               hl.field_d[9] = ug.a(df.field_M, "", "zombie dawn instructions loop");
               df.field_M = null;
-              o.d(26673);
+              int discarded$42 = 26673;
+              o.d();
               return false;
             } else {
               if (param1 > 75) {
@@ -2117,7 +2159,8 @@ public final class ZombieDawnMulti extends aq {
                       wd.field_L.d(125);
                       de.field_e = null;
                       gd.field_Q = null;
-                      o.d(26673);
+                      int discarded$43 = 26673;
+                      o.d();
                       return false;
                     } else {
                       L15: {
@@ -2127,7 +2170,8 @@ public final class ZombieDawnMulti extends aq {
                           if (wd.field_L.a(-10783, gd.field_Q, 176400, hl.field_d[var3_int], de.field_e)) {
                             break L15;
                           } else {
-                            o.d(26673);
+                            int discarded$44 = 26673;
+                            o.d();
                             return false;
                           }
                         }
@@ -2150,7 +2194,7 @@ public final class ZombieDawnMulti extends aq {
                             ((ZombieDawnMulti) this).g(-30169);
                             qp.field_w = pj.a(al.field_eb, 4, he.field_f, "", "arialish12");
                             if (!he.field_a) {
-                              ri[] discarded$15 = da.a("locked", al.field_eb, (byte) 19, "basic");
+                              ri[] discarded$45 = da.a("locked", al.field_eb, (byte) 19, "basic");
                               wl.field_l = da.a("unachieved", al.field_eb, (byte) 19, "basic")[0];
                               of.field_k = fl.a("basic", "orbcoin", al.field_eb, 11091);
                               fj.a(100, of.field_k);
@@ -2163,7 +2207,8 @@ public final class ZombieDawnMulti extends aq {
                               ub.a(var5, he.field_f, true, (String[][]) null, field_K, al.field_eb, 4, da.field_b, il.field_n, 1, cb.field_j, eg.field_E, true, var3, var4_ref_ja____);
                               bo.field_e = true;
                               lp.a(200, -82);
-                              ua.a(he.field_f, al.field_eb, (byte) 23);
+                              int discarded$46 = 23;
+                              ua.a(he.field_f, al.field_eb);
                               bo.a(16777215, 0, 0, uc.field_b, 0, (java.applet.Applet) this);
                               break L17;
                             } else {
@@ -2172,13 +2217,15 @@ public final class ZombieDawnMulti extends aq {
                           }
                           he.field_f = null;
                           al.field_eb = null;
-                          o.d(26673);
+                          int discarded$47 = 26673;
+                          o.d();
                           qm.a(90.0f, 80, bn.field_c);
                           ((ZombieDawnMulti) this).g(-30169);
                           ah.field_e = ap.a(ii.field_a, cg.field_n, "", 4, "font");
                           ff.field_r = vo.a((byte) -46, "", "font_title", cg.field_n, ii.field_a);
                           pb.field_e = pj.a(ii.field_a, 4, cg.field_n, "font_medium", "");
-                          lf.a(pb.field_e, 0);
+                          int discarded$48 = 0;
+                          lf.a(pb.field_e);
                           vc.a(true);
                           a.field_a = new ri[7][];
                           a.field_a[0] = da.a("cursor_grab", ii.field_a, (byte) 19, "");
@@ -2194,7 +2241,7 @@ public final class ZombieDawnMulti extends aq {
                           vh.field_Lb = wq.a(47, "", ii.field_a, "menu_pipe1");
                           dm.field_Wb = wq.a(-122, "", ii.field_a, "menu_pipe2");
                           cc.field_c = wq.a(-126, "", ii.field_a, "menu_pipebox");
-                          ri discarded$16 = wq.a(-121, "", ii.field_a, "menu_pipebox2");
+                          ri discarded$49 = wq.a(-121, "", ii.field_a, "menu_pipebox2");
                           no.field_Jb = wq.a(97, "", ii.field_a, "menu_title");
                           dd.field_g = wq.a(-118, "", ii.field_a, "menu_title_blank");
                           ao.field_b = new ja[sm.field_g.length];
@@ -2213,20 +2260,20 @@ public final class ZombieDawnMulti extends aq {
                                 uo.field_n.b();
                                 jq.field_c = wq.a(-116, "", ii.field_a, "battery_small_empty");
                                 dj.field_p = wq.a(-117, "", ii.field_a, "battery_big_empty");
-                                ri discarded$17 = wq.a(-121, "", ii.field_a, "battery_big_full");
+                                ri discarded$50 = wq.a(-121, "", ii.field_a, "battery_big_full");
                                 ol.field_n = fl.a("", "vat", ii.field_a, 11091);
-                                ri discarded$18 = wq.a(70, "", ii.field_a, "vat_outline");
+                                ri discarded$51 = wq.a(70, "", ii.field_a, "vat_outline");
                                 em.field_X = wq.a(47, "", ii.field_a, "lab_pipe");
                                 nm.field_w = fl.a("", "lab_box_1", ii.field_a, 11091);
-                                ri discarded$19 = wq.a(-122, "", ii.field_a, "lab_box_2");
-                                ri discarded$20 = wq.a(-125, "", ii.field_a, "lab_box_3");
-                                ri discarded$21 = wq.a(-123, "", ii.field_a, "lab_box_1_outline");
-                                ri discarded$22 = wq.a(15, "", ii.field_a, "lab_box_2_outline");
-                                ri discarded$23 = wq.a(-118, "", ii.field_a, "lab_box_3_outline");
+                                ri discarded$52 = wq.a(-122, "", ii.field_a, "lab_box_2");
+                                ri discarded$53 = wq.a(-125, "", ii.field_a, "lab_box_3");
+                                ri discarded$54 = wq.a(-123, "", ii.field_a, "lab_box_1_outline");
+                                ri discarded$55 = wq.a(15, "", ii.field_a, "lab_box_2_outline");
+                                ri discarded$56 = wq.a(-118, "", ii.field_a, "lab_box_3_outline");
                                 fg.field_m = fl.a("", "lab_tree_frame_bw", ii.field_a, 11091);
                                 v.field_e = wq.a(15, "", ii.field_a, "lab_menu_bg_center");
                                 pi.field_f = wq.a(95, "", ii.field_a, "lab_menu_bg_bottom");
-                                ri discarded$24 = wq.a(4, "", ii.field_a, "lab_tree_bg");
+                                ri discarded$57 = wq.a(4, "", ii.field_a, "lab_tree_bg");
                                 lm.field_eb = fl.a("", "slider", ii.field_a, 11091);
                                 s.field_c = wq.a(14, "", ii.field_a, "research_trait_slot");
                                 pf.field_a = wq.a(-119, "", ii.field_a, "research_powerup_modifier_slot");
@@ -2236,8 +2283,8 @@ public final class ZombieDawnMulti extends aq {
                                 df.field_Q = pb.a("", ii.field_a, -256, "scrollbar_block");
                                 wc.field_M = pb.a("", ii.field_a, -256, "scrollbar_background");
                                 kj.field_m = wq.a(102, "", ii.field_a, "scrollbar_bg");
-                                ri discarded$25 = wq.a(-127, "", ii.field_a, "scrollbar_bar_h");
-                                ri discarded$26 = wq.a(79, "", ii.field_a, "scrollbar_bar_v");
+                                ri discarded$58 = wq.a(-127, "", ii.field_a, "scrollbar_bar_h");
+                                ri discarded$59 = wq.a(79, "", ii.field_a, "scrollbar_bar_v");
                                 vl.field_f = nj.field_d.d();
                                 ek.field_J = fq.field_k.c();
                                 hp.field_t = kj.field_m.d();
@@ -2256,7 +2303,7 @@ public final class ZombieDawnMulti extends aq {
                                 tm.field_f = wq.a(109, "", ii.field_a, "vert_tube_empty");
                                 pm.field_N = wq.a(31, "", ii.field_a, "curve_tube_mask");
                                 w.field_z = wq.a(116, "", ii.field_a, "vert_tube_mask");
-                                ri discarded$27 = wq.a(27, "", ii.field_a, "stars");
+                                ri discarded$60 = wq.a(27, "", ii.field_a, "stars");
                                 pp.field_q = da.a("engine_icons", ii.field_a, (byte) 19, "");
                                 jq.field_e = wq.a(-126, "", ii.field_a, "pipe_frame");
                                 jq.field_e.e();
@@ -2290,7 +2337,9 @@ public final class ZombieDawnMulti extends aq {
                                 wq.field_c[18] = pb.a("", ii.field_a, -256, "character_human18");
                                 wq.field_c[19] = pb.a("", ii.field_a, -256, "character_human19");
                                 wq.field_c[20] = pb.a("", ii.field_a, -256, "character_human20");
-                                if (le.b(0, (byte) -70)) {
+                                int discarded$61 = -70;
+                                int discarded$62 = 0;
+                                if (le.b()) {
                                   wq.field_c[21] = pb.a("halloween", ii.field_a, -256, "halloween_human1");
                                   wq.field_c[22] = pb.a("halloween", ii.field_a, -256, "halloween_human2");
                                   break L19;
@@ -2304,16 +2353,22 @@ public final class ZombieDawnMulti extends aq {
                                 aa.field_h = da.a("character_stunned", ii.field_a, (byte) 19, "");
                                 ig.field_d = pb.a("", ii.field_a, -256, "character_common");
                                 ej.a(fl.a("", "zombie_counter_instructions", ii.field_a, 11091), (byte) -100, fl.a("", "hud", ii.field_a, 11091));
-                                rq.a(pb.a("", ii.field_a, -256, "popup"), 16777215);
-                                sq.a(4, pb.a("", ii.field_a, -256, "carpark_floor"), false);
+                                int discarded$63 = 16777215;
+                                rq.a(pb.a("", ii.field_a, -256, "popup"));
+                                int discarded$64 = 0;
+                                sq.a(4, pb.a("", ii.field_a, -256, "carpark_floor"));
                                 gd.a(false, 4, pb.a("", ii.field_a, -256, "carpark_tiles"));
-                                sq.a(0, pb.a("", ii.field_a, -256, "mall_floor"), false);
+                                int discarded$65 = 0;
+                                sq.a(0, pb.a("", ii.field_a, -256, "mall_floor"));
                                 gd.a(false, 0, pb.a("", ii.field_a, -256, "mall_tiles"));
-                                sq.a(1, pb.a("", ii.field_a, -256, "powerplant_floor"), false);
+                                int discarded$66 = 0;
+                                sq.a(1, pb.a("", ii.field_a, -256, "powerplant_floor"));
                                 gd.a(false, 1, pb.a("", ii.field_a, -256, "powerplant_tiles"));
-                                sq.a(2, pb.a("", ii.field_a, -256, "precinct_floor"), false);
+                                int discarded$67 = 0;
+                                sq.a(2, pb.a("", ii.field_a, -256, "precinct_floor"));
                                 gd.a(false, 2, pb.a("", ii.field_a, -256, "precinct_tiles"));
-                                sq.a(3, pb.a("", ii.field_a, -256, "whitehouse_floor"), false);
+                                int discarded$68 = 0;
+                                sq.a(3, pb.a("", ii.field_a, -256, "whitehouse_floor"));
                                 gd.a(false, 3, pb.a("", ii.field_a, -256, "whitehouse_tiles"));
                                 pf.field_e[0] = pb.a("", ii.field_a, -256, "dimming0");
                                 pf.field_e[1] = pb.a("", ii.field_a, -256, "dimming1");
@@ -2334,7 +2389,7 @@ public final class ZombieDawnMulti extends aq {
                                 cc.field_b = fj.a("frame", "", 3, ii.field_a);
                                 field_I = fj.a("button_frame", "", 3, ii.field_a);
                                 lf.field_c = fj.a("button_raised", "", 3, ii.field_a);
-                                ja[] discarded$28 = fj.a("button_depressed", "", 3, ii.field_a);
+                                ja[] discarded$69 = fj.a("button_depressed", "", 3, ii.field_a);
                                 oi.field_h = fj.a("frame_comp", "", 3, ii.field_a);
                                 rl.field_a = fj.a("frame_comp_filled", "", 3, ii.field_a);
                                 if (he.field_a) {
@@ -2359,7 +2414,8 @@ public final class ZombieDawnMulti extends aq {
                               dl.field_h.b((byte) 104);
                               ii.field_a = null;
                               cg.field_n = null;
-                              o.d(26673);
+                              int discarded$70 = 26673;
+                              o.d();
                               return false;
                             } else {
                               L22: {
@@ -2420,31 +2476,38 @@ public final class ZombieDawnMulti extends aq {
                       bc.a((byte) 15);
                       pl.field_I = 11;
                       sp.field_g = 12;
-                      ip.a(-127, 50);
+                      int discarded$71 = 50;
+                      int discarded$72 = -127;
+                      ip.a();
                       tj.a(3273, 224);
                       ff.a(200, 123);
                       cj.d(false, 0);
-                      o.d(26673);
-                      di discarded$29 = pl.field_J.a(true, (java.awt.Component) (Object) dk.field_Ib, -14697);
+                      int discarded$73 = 26673;
+                      o.d();
+                      di discarded$74 = pl.field_J.a(true, (java.awt.Component) (Object) dk.field_Ib, -14697);
                       tk.field_q = dk.field_Ib;
                       kb.a(16777215, 5, field_I, 15, lf.field_c, (fm) (Object) pb.field_e, 65280, 240, 16711680, 320, oi.field_h, (byte) -128, 15, 20, 20);
                       kk.field_w = new h(10, 10, true);
                       e.field_e = new nm(100, 100);
                       return true;
                     } else {
-                      dg.a(new eh(ha.field_g.a("", "huffman", false)), -40);
+                      int discarded$75 = -40;
+                      dg.a(new eh(ha.field_g.a("", "huffman", false)));
                       ha.field_g = null;
-                      o.d(26673);
+                      int discarded$76 = 26673;
+                      o.d();
                       return false;
                     }
                   } else {
                     qm.a(80.0f, 80, bl.field_b);
                     ((ZombieDawnMulti) this).g(-30169);
-                    bn.field_d = ed.a(ki.field_m, -2852);
+                    int discarded$77 = -2852;
+                    bn.field_d = ed.a(ki.field_m);
                     of.field_e[0] = new ja(ki.field_m.a("", "background1.jpg", false), (java.awt.Component) (Object) dk.field_Ib);
                     jo.field_d = new ja(ki.field_m.a("", "panorama.jpg", false), (java.awt.Component) (Object) dk.field_Ib);
                     ki.field_m = null;
-                    o.d(26673);
+                    int discarded$78 = 26673;
+                    o.d();
                     return false;
                   }
                 }
@@ -2489,7 +2552,8 @@ public final class ZombieDawnMulti extends aq {
             ei.field_a[79] = ac.a(rn.field_e, "", "zd_multi_into_portal_opponent").c();
             ei.field_a[80] = ac.a(rn.field_e, "", "zd_multi_shackles").c();
             rn.field_e = null;
-            o.d(26673);
+            int discarded$79 = 26673;
+            o.d();
             return false;
           }
         }
@@ -2510,7 +2574,8 @@ public final class ZombieDawnMulti extends aq {
               }
             }
             L2: {
-              n.b(false);
+              int discarded$3 = 0;
+              n.b();
               if (param0 == -18941) {
                 break L2;
               } else {
@@ -2535,7 +2600,7 @@ public final class ZombieDawnMulti extends aq {
         }
     }
 
-    private final void r(int param0) {
+    private final void r() {
         RuntimeException var2 = null;
         int[] var2_array = null;
         int[] var3 = null;
@@ -2551,7 +2616,9 @@ public final class ZombieDawnMulti extends aq {
               } else {
                 L2: {
                   if (ke.field_g == null) {
-                    ke.field_g = aa.b(-19300, 4);
+                    int discarded$6 = 4;
+                    int discarded$7 = -19300;
+                    ke.field_g = aa.b();
                     break L2;
                   } else {
                     break L2;
@@ -2589,73 +2656,69 @@ public final class ZombieDawnMulti extends aq {
               }
             }
             L5: {
-              if (param0 <= -117) {
-                break L5;
-              } else {
-                boolean discarded$1 = this.c(true, 49);
-                break L5;
-              }
-            }
-            L6: {
               if (qd.field_bb) {
-                break L6;
+                break L5;
               } else {
-                L7: {
+                L6: {
                   if (null == ub.field_vb) {
-                    ub.field_vb = ej.a((byte) -57, 6);
-                    break L7;
+                    int discarded$8 = 6;
+                    int discarded$9 = -57;
+                    ub.field_vb = ej.a();
+                    break L6;
                   } else {
-                    break L7;
+                    break L6;
                   }
                 }
                 if (ub.field_vb.field_h) {
-                  L8: {
+                  L7: {
                     ll.field_k.a(0, ub.field_vb.field_f);
                     oq.c((byte) 120);
                     if ((ll.field_k.field_i & 2) != 0) {
-                      break L8;
+                      break L7;
                     } else {
                       oq.c((byte) 119);
-                      break L8;
+                      break L7;
                     }
                   }
-                  L9: {
+                  L8: {
                     we.field_g[47] = vn.field_d[ll.field_k.b((byte) -1)];
                     if (fn.field_b) {
-                      th.b((byte) -61);
-                      break L9;
+                      int discarded$10 = -61;
+                      th.b();
+                      break L8;
                     } else {
-                      break L9;
+                      break L8;
                     }
                   }
                   ub.field_vb = null;
                   qd.field_bb = true;
-                  break L6;
+                  break L5;
                 } else {
-                  break L6;
+                  break L5;
                 }
               }
             }
-            L10: {
+            L9: {
               if (!ia.field_r) {
-                break L10;
+                break L9;
               } else {
                 if (qd.field_bb) {
                   ub.m(116);
-                  ii.a(103);
+                  int discarded$11 = 103;
+                  ii.a();
                   if (pl.field_I != 6) {
-                    break L10;
+                    break L9;
                   } else {
                     if (!oa.a(-9, fc.field_m)) {
                       pl.field_I = 3;
                       bm.a(false, 3, 127, sp.field_g);
-                      break L10;
+                      break L9;
                     } else {
-                      break L10;
+                      break L9;
                     }
                   }
                 } else {
-                  break L10;
+                  break L9;
                 }
               }
             }
@@ -2664,7 +2727,7 @@ public final class ZombieDawnMulti extends aq {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var2, "ZombieDawnMulti.FA(" + param0 + 41);
+          throw fa.a((Throwable) (Object) var2, "ZombieDawnMulti.FA(" + -123 + 41);
         }
     }
 
@@ -2675,89 +2738,143 @@ public final class ZombieDawnMulti extends aq {
           L0: {
             L1: {
               ZombieDawnMulti.t(-121);
-              gb.b(103);
+              int discarded$221 = 103;
+              gb.b();
               vc.b(10066329);
-              oe.b(-9162);
-              rb.a((byte) -116);
-              er.c(4);
-              th.d(92);
+              int discarded$222 = -9162;
+              oe.b();
+              int discarded$223 = -116;
+              rb.a();
+              int discarded$224 = 4;
+              er.c();
+              int discarded$225 = 92;
+              th.d();
               ul.b((byte) -35);
-              vd.a(1);
+              int discarded$226 = 1;
+              vd.a();
               pn.a(31);
-              jq.a(8);
-              p.a(5);
-              cm.a((byte) 127);
-              oa.b(3732);
-              kn.a(false);
+              int discarded$227 = 8;
+              jq.a();
+              int discarded$228 = 5;
+              p.a();
+              int discarded$229 = 127;
+              cm.a();
+              int discarded$230 = 3732;
+              oa.b();
+              int discarded$231 = 0;
+              kn.a();
               cj.c(false);
-              ti.g((byte) 119);
-              pb.a((byte) -116);
+              int discarded$232 = 119;
+              ti.g();
+              int discarded$233 = -116;
+              pb.a();
               qb.c((byte) -7);
-              ai.a(127);
+              int discarded$234 = 127;
+              ai.a();
               eq.a(0);
               of.a(-1);
               ej.b((byte) 16);
-              ih.b(108);
+              int discarded$235 = 108;
+              ih.b();
               aq.o(10);
-              fn.a(26677);
+              int discarded$236 = 26677;
+              fn.a();
               ag.b(true);
-              mh.a(17);
-              bd.a(-1);
-              mf.a(54);
+              int discarded$237 = 17;
+              mh.a();
+              int discarded$238 = -1;
+              bd.a();
+              int discarded$239 = 54;
+              mf.a();
               oo.a();
-              k.b(false);
-              bl.b(0);
-              v.a(true);
+              int discarded$240 = 0;
+              k.b();
+              int discarded$241 = 0;
+              bl.b();
+              int discarded$242 = 1;
+              v.a();
               gj.a((byte) 91);
               va.a(127);
-              lb.a((byte) 43);
-              jf.a((byte) -98);
-              ka.a((byte) 118);
-              pf.b(6345);
-              i.a(false);
-              ii.c(-26028);
+              int discarded$243 = 43;
+              lb.a();
+              int discarded$244 = -98;
+              jf.a();
+              int discarded$245 = 118;
+              ka.a();
+              int discarded$246 = 6345;
+              pf.b();
+              int discarded$247 = 0;
+              i.a();
+              int discarded$248 = -26028;
+              ii.c();
               l.a(64);
-              lh.a((byte) -50);
-              ll.a((byte) -46);
+              int discarded$249 = -50;
+              lh.a();
+              int discarded$250 = -46;
+              ll.a();
               ok.e(12);
-              qd.h(256);
+              int discarded$251 = 256;
+              qd.h();
               nn.b(112);
-              ci.b(1475);
+              int discarded$252 = 1475;
+              ci.b();
               s.a(-96);
               h.b(false);
-              nm.a(6);
-              rp.a(5);
-              rl.c(78);
+              int discarded$253 = 6;
+              nm.a();
+              int discarded$254 = 5;
+              rp.a();
+              int discarded$255 = 78;
+              rl.c();
               br.b((byte) 48);
               nq.e(-119);
               qa.a((byte) 43);
               ep.c();
               pk.a(619119521);
-              qf.a(241);
-              jk.a(2);
-              ei.a(-5794);
-              vn.b(96);
-              qo.b(false);
-              lj.a((byte) 55);
-              gm.o(24461);
+              int discarded$256 = 241;
+              qf.a();
+              int discarded$257 = 2;
+              jk.a();
+              int discarded$258 = -5794;
+              ei.a();
+              int discarded$259 = 96;
+              vn.b();
+              int discarded$260 = 0;
+              qo.b();
+              int discarded$261 = 55;
+              lj.a();
+              int discarded$262 = 24461;
+              gm.o();
               cg.c((byte) -87);
               pq.a((byte) 44);
               lc.a((byte) 87);
               id.e((byte) 107);
               ce.a(24);
-              wb.o((byte) -45);
-              jj.i(1);
-              ae.b(false);
-              fq.c(true);
-              nc.b(false);
-              tk.c((byte) -88);
-              si.d(true);
+              int discarded$263 = -45;
+              wb.o();
+              int discarded$264 = 1;
+              jj.i();
+              int discarded$265 = 0;
+              ae.b();
+              int discarded$266 = 1;
+              fq.c();
+              int discarded$267 = 0;
+              nc.b();
+              int discarded$268 = -88;
+              tk.c();
+              int discarded$269 = 1;
+              si.d();
               hk.a((byte) 39);
-              kb.b(-6);
-              fh.a(true);
-              qe.a((byte) 7);
-              ko.d(-66);
-              uf.b(16737894);
+              int discarded$270 = -6;
+              kb.b();
+              int discarded$271 = 1;
+              fh.a();
+              int discarded$272 = 7;
+              qe.a();
+              int discarded$273 = -66;
+              ko.d();
+              int discarded$274 = 16737894;
+              uf.b();
               lq.c(110);
               if (param0 < -43) {
                 break L1;
@@ -2767,274 +2884,441 @@ public final class ZombieDawnMulti extends aq {
               }
             }
             fc.b(-1);
-            qk.b(false);
-            qi.b((byte) -17);
+            int discarded$275 = 0;
+            qk.b();
+            int discarded$276 = -17;
+            qi.b();
             me.a((byte) 119);
             gd.e(0);
             f.a((byte) -44);
-            mb.b(false);
+            int discarded$277 = 0;
+            mb.b();
             mm.d();
             ba.d(16652);
             gp.b();
             w.a((byte) -83);
             de.a(19091);
-            jh.h(-36);
+            int discarded$278 = -36;
+            jh.h();
             sc.a(true);
-            dm.h(0);
-            so.a(-123);
-            ga.j(-125);
-            sj.c(true);
+            int discarded$279 = 0;
+            dm.h();
+            int discarded$280 = -123;
+            so.a();
+            int discarded$281 = -125;
+            ga.j();
+            int discarded$282 = 1;
+            sj.c();
             fg.c(-125);
-            uo.c((byte) 121);
+            int discarded$283 = 121;
+            uo.c();
             jm.c((byte) 59);
-            op.c((byte) -9);
-            wf.c(17);
-            np.c(true);
-            aj.a(-110);
+            int discarded$284 = -9;
+            op.c();
+            int discarded$285 = 17;
+            wf.c();
+            int discarded$286 = 1;
+            np.c();
+            int discarded$287 = -110;
+            aj.a();
             hb.a(false);
-            be.a(0);
-            da.a((byte) -95);
+            int discarded$288 = 0;
+            be.a();
+            int discarded$289 = -95;
+            da.a();
             ng.a(816);
-            bc.c(22382);
+            int discarded$290 = 22382;
+            bc.c();
             ql.a(4);
-            vk.k((byte) 95);
-            tf.o(101);
+            int discarded$291 = 95;
+            vk.k();
+            int discarded$292 = 101;
+            tf.o();
             ta.k((byte) -66);
-            ub.o(61);
-            ne.n(10);
+            int discarded$293 = 61;
+            ub.o();
+            int discarded$294 = 10;
+            ne.n();
             fe.c(false);
-            dg.a((byte) 84);
-            qm.a(64);
-            cp.c(true);
+            int discarded$295 = 84;
+            dg.a();
+            int discarded$296 = 64;
+            qm.a();
+            int discarded$297 = 1;
+            cp.c();
             hf.b((byte) 45);
             sk.a(-1020346174);
-            wp.a((byte) 26);
+            int discarded$298 = 26;
+            wp.a();
             rh.a();
             ac.a();
             kl.a();
-            jp.b((byte) -80);
-            hh.a(true);
-            vo.f(-14680);
-            ck.b(-120);
+            int discarded$299 = -80;
+            jp.b();
+            int discarded$300 = 1;
+            hh.a();
+            int discarded$301 = -14680;
+            vo.f();
+            int discarded$302 = -120;
+            ck.b();
             mq.e(22324);
-            ah.a((byte) -79);
-            dn.a(16130);
-            mi.d(false);
-            hi.c((byte) -81);
+            int discarded$303 = -79;
+            ah.a();
+            int discarded$304 = 16130;
+            dn.a();
+            int discarded$305 = 0;
+            mi.d();
+            int discarded$306 = -81;
+            hi.c();
             sn.c((byte) 117);
-            cd.d(false);
-            jb.a(-2);
+            int discarded$307 = 0;
+            cd.d();
+            int discarded$308 = -2;
+            jb.a();
             tq.h(0);
-            fa.j(57);
-            wq.b((byte) 121);
+            int discarded$309 = 57;
+            fa.j();
+            int discarded$310 = 121;
+            wq.b();
             lo.a(0);
             fm.a();
-            uq.a(3);
-            vi.a(119);
-            cq.a((byte) -110);
+            int discarded$311 = 3;
+            uq.a();
+            int discarded$312 = 119;
+            vi.a();
+            int discarded$313 = -110;
+            cq.a();
             bn.a(23376);
-            mo.h(2);
+            int discarded$314 = 2;
+            mo.h();
             qh.a(-22);
             sb.a(76);
             g.a();
-            ff.e(-1130232991);
+            int discarded$315 = -1130232991;
+            ff.e();
             rj.j(8784);
             lk.i(11041);
             ve.a((byte) 104);
             gk.a(125);
             ol.c((byte) -56);
-            vf.a((byte) 9);
-            eh.a((byte) 87);
+            int discarded$316 = 9;
+            vf.a();
+            int discarded$317 = 87;
+            eh.a();
             mc.a((byte) 124);
-            wg.a((byte) -123);
-            pd.a((byte) 91);
+            int discarded$318 = -123;
+            wg.a();
+            int discarded$319 = 91;
+            pd.a();
             vb.a(false);
-            pg.b(true);
+            int discarded$320 = 1;
+            pg.b();
             hc.a(0);
-            ed.a(12814);
-            ke.a(false);
-            jo.a(false);
-            pi.a(-19162);
-            ic.a(70);
-            kp.e(-29690);
+            int discarded$321 = 12814;
+            ed.a();
+            int discarded$322 = 0;
+            ke.a();
+            int discarded$323 = 0;
+            jo.a();
+            int discarded$324 = -19162;
+            pi.a();
+            int discarded$325 = 70;
+            ic.a();
+            int discarded$326 = -29690;
+            kp.e();
             o.b(-13532);
-            ec.a((byte) -12);
-            dc.c((byte) 82);
-            dk.c((byte) 92);
+            int discarded$327 = -12;
+            ec.a();
+            int discarded$328 = 82;
+            dc.c();
+            int discarded$329 = 92;
+            dk.c();
             dp.a(0);
-            no.h(15);
+            int discarded$330 = 15;
+            no.h();
             oj.h(16777215);
             tm.a(-125);
             cb.a(0);
-            jg.b(7);
-            eo.a((byte) 125);
-            lm.n(0);
+            int discarded$331 = 7;
+            jg.b();
+            int discarded$332 = 125;
+            eo.a();
+            int discarded$333 = 0;
+            lm.n();
             sh.b(true);
-            ek.f((byte) -83);
-            ge.r(-121);
+            int discarded$334 = -83;
+            ek.f();
+            int discarded$335 = -121;
+            ge.r();
             ro.b((byte) 71);
             pa.i((byte) -86);
-            bf.d(29919);
-            og.g((byte) -119);
+            int discarded$336 = 29919;
+            bf.d();
+            int discarded$337 = -119;
+            og.g();
             c.a(-6);
-            ap.h(16682);
-            tn.g(0);
-            bq.a((byte) 77);
-            li.g(66);
+            int discarded$338 = 16682;
+            ap.h();
+            int discarded$339 = 0;
+            tn.g();
+            int discarded$340 = 77;
+            bq.a();
+            int discarded$341 = 66;
+            li.g();
             cn.d(-124);
-            hl.a(16777215);
+            int discarded$342 = 16777215;
+            hl.a();
             qc.c((byte) 109);
-            qq.a((byte) 21);
-            t.a((byte) 4);
+            int discarded$343 = 21;
+            qq.a();
+            int discarded$344 = 4;
+            t.a();
             wo.a();
             eb.a(true);
-            lp.a(-97);
-            hj.a(27964);
+            int discarded$345 = -97;
+            lp.a();
+            int discarded$346 = 27964;
+            hj.a();
             a.a(false);
-            tg.a((byte) -72);
-            dl.a((byte) -109);
+            int discarded$347 = -72;
+            tg.a();
+            int discarded$348 = -109;
+            dl.a();
             en.a(20964);
-            wl.a(true);
+            int discarded$349 = 1;
+            wl.a();
             iq.a(true);
             dd.a(false);
-            r.a(true);
-            ld.h(-113);
-            ig.a(false);
+            int discarded$350 = 1;
+            r.a();
+            int discarded$351 = -113;
+            ld.h();
+            int discarded$352 = 0;
+            ig.a();
             ob.c((byte) -52);
-            ik.b(49);
+            int discarded$353 = 49;
+            ik.b();
             vm.k((byte) -29);
             hq.a((byte) 82);
             af.a(-128);
-            md.b((byte) 119);
+            int discarded$354 = 119;
+            md.b();
             kc.a(-111);
-            am.b(-7);
-            rm.a(80);
-            kd.a(2791);
-            kq.a((byte) 60);
-            sf.a(4);
-            fl.a((byte) 109);
-            ij.a(true);
-            jl.a(false);
+            int discarded$355 = -7;
+            am.b();
+            int discarded$356 = 80;
+            rm.a();
+            int discarded$357 = 2791;
+            kd.a();
+            int discarded$358 = 60;
+            kq.a();
+            int discarded$359 = 4;
+            sf.a();
+            int discarded$360 = 109;
+            fl.a();
+            int discarded$361 = 1;
+            ij.a();
+            int discarded$362 = 0;
+            jl.a();
             bg.a((byte) -104);
             wa.a(2);
             mp.a(12);
-            cf.e((byte) -90);
+            int discarded$363 = -90;
+            cf.e();
             gn.a(-118);
             rg.a((byte) -39);
-            al.i((byte) -92);
+            int discarded$364 = -92;
+            al.i();
             df.g((byte) 84);
             se.b(false);
             ch.d(-1);
             bh.a((byte) -8);
-            ji.a(13377);
-            tl.f(32768);
-            io.a((byte) 8);
-            aa.f(0);
-            dq.b(-2);
+            int discarded$365 = 13377;
+            ji.a();
+            int discarded$366 = 32768;
+            tl.f();
+            int discarded$367 = 8;
+            io.a();
+            int discarded$368 = 0;
+            aa.f();
+            int discarded$369 = -2;
+            dq.b();
             sm.a(-12970);
-            fd.g((byte) 97);
+            int discarded$370 = 97;
+            fd.g();
             hn.a(0);
-            cc.a((byte) -52);
-            wc.g((byte) -66);
-            mj.i(22767);
+            int discarded$371 = -52;
+            cc.a();
+            int discarded$372 = -66;
+            wc.g();
+            int discarded$373 = 22767;
+            mj.i();
             tj.a(false);
-            sa.a(-119);
+            int discarded$374 = -119;
+            sa.a();
             nk.a((byte) -26);
-            dj.g(-3);
+            int discarded$375 = -3;
+            dj.g();
             em.k(4);
-            pl.f(114);
-            rn.a((byte) 88);
+            int discarded$376 = 114;
+            pl.f();
+            int discarded$377 = 88;
+            rn.a();
             hg.c(true);
             ho.e(30833);
-            fk.e(225);
+            int discarded$378 = 225;
+            fk.e();
             vj.e(31592);
-            vh.c((byte) -113);
-            kg.a(360);
-            po.f(-60);
-            nj.a((byte) 78);
-            el.h(3);
+            int discarded$379 = -113;
+            vh.c();
+            int discarded$380 = 360;
+            kg.a();
+            int discarded$381 = -60;
+            po.f();
+            int discarded$382 = 78;
+            nj.a();
+            int discarded$383 = 3;
+            el.h();
             on.l(29829);
             pm.d(false);
-            ie.l(7181);
-            le.a(0);
-            gl.c(true);
-            sq.f(2);
-            uk.f(-1562977759);
+            int discarded$384 = 7181;
+            ie.l();
+            int discarded$385 = 0;
+            le.a();
+            int discarded$386 = 1;
+            gl.c();
+            int discarded$387 = 2;
+            sq.f();
+            int discarded$388 = -1562977759;
+            uk.f();
             km.i(0);
             un.g(-1317848592);
-            q.a((byte) -109);
-            pj.c(true);
+            int discarded$389 = -109;
+            q.a();
+            int discarded$390 = 1;
+            pj.c();
             ud.f(38);
-            wm.h((byte) 107);
+            int discarded$391 = 107;
+            wm.h();
             uh.a();
             bi.a(4302);
             nb.a((byte) 119);
-            wk.h(-127);
-            od.o((byte) -50);
-            bk.c(4912);
+            int discarded$392 = -127;
+            wk.h();
+            int discarded$393 = -50;
+            od.o();
+            int discarded$394 = 4912;
+            bk.c();
             kf.c(3);
-            wh.a(false);
-            e.a(118);
-            kk.b(true);
-            la.a(-113);
-            ua.g((byte) -33);
-            sd.g((byte) -81);
-            ao.a(-23);
-            eg.c((byte) 5);
-            b.a(94);
-            up.a((byte) -30);
+            int discarded$395 = 0;
+            wh.a();
+            int discarded$396 = 118;
+            e.a();
+            int discarded$397 = 1;
+            kk.b();
+            int discarded$398 = -113;
+            la.a();
+            int discarded$399 = -33;
+            ua.g();
+            int discarded$400 = -81;
+            sd.g();
+            int discarded$401 = -23;
+            ao.a();
+            int discarded$402 = 5;
+            eg.c();
+            int discarded$403 = 94;
+            b.a();
+            int discarded$404 = -30;
+            up.a();
             ln.a(18358);
-            vl.a(0);
-            vg.a(8220);
-            we.a((byte) 103);
-            oq.d((byte) -39);
+            int discarded$405 = 0;
+            vl.a();
+            int discarded$406 = 8220;
+            vg.a();
+            int discarded$407 = 103;
+            we.a();
+            int discarded$408 = -39;
+            oq.d();
             he.a((byte) -122);
             tb.c((byte) 109);
-            m.a(false);
-            na.g((byte) -108);
-            nh.a((byte) 48);
-            kj.a(-2);
-            oi.b(5378);
-            ml.c((byte) -102);
-            gg.a((byte) -126);
-            ra.b(true);
-            ab.a(0);
-            gi.a(-1569388056);
-            cr.b(true);
-            qj.b(false);
+            int discarded$409 = 0;
+            m.a();
+            int discarded$410 = -108;
+            na.g();
+            int discarded$411 = 48;
+            nh.a();
+            int discarded$412 = -2;
+            kj.a();
+            int discarded$413 = 5378;
+            oi.b();
+            int discarded$414 = -102;
+            ml.c();
+            int discarded$415 = -126;
+            gg.a();
+            int discarded$416 = 1;
+            ra.b();
+            int discarded$417 = 0;
+            ab.a();
+            int discarded$418 = -1569388056;
+            gi.a();
+            int discarded$419 = 1;
+            cr.b();
+            int discarded$420 = 0;
+            qj.b();
             uc.c(118);
-            ip.c((byte) 124);
-            bb.a(-18535);
-            um.a(-98);
-            rq.b(false);
+            int discarded$421 = 124;
+            ip.c();
+            int discarded$422 = -18535;
+            bb.a();
+            int discarded$423 = -98;
+            um.a();
+            int discarded$424 = 0;
+            rq.b();
             ki.b(-23636);
             fb.d(-90);
-            wj.a(-6298);
-            ak.a(-5937);
-            gh.a((byte) 106);
+            int discarded$425 = -6298;
+            wj.a();
+            int discarded$426 = -5937;
+            ak.a();
+            int discarded$427 = 106;
+            gh.a();
             wd.a((byte) -84);
-            il.a(27467);
+            int discarded$428 = 27467;
+            il.a();
             bo.a(6);
             pp.a(false);
-            wn.b(true);
+            int discarded$429 = 1;
+            wn.b();
             mn.c(3);
-            ui.a((byte) -48);
-            db.a(26);
+            int discarded$430 = -48;
+            ui.a();
+            int discarded$431 = 26;
+            db.a();
             u.a(-7406);
             hp.a(120);
-            mk.a(53);
-            td.a((byte) 94);
+            int discarded$432 = 53;
+            mk.a();
+            int discarded$433 = 94;
+            td.a();
             ha.a(21342);
-            re.a(89);
-            gf.a(true);
+            int discarded$434 = 89;
+            re.a();
+            int discarded$435 = 1;
+            gf.a();
             tp.h(66);
-            ia.h(0);
+            int discarded$436 = 0;
+            ia.h();
             hm.b(false);
-            hd.h(11702);
-            bp.h(-3);
-            qp.h(1);
-            lf.a(0);
-            wi.a(0);
+            int discarded$437 = 11702;
+            hd.h();
+            int discarded$438 = -3;
+            bp.h();
+            int discarded$439 = 1;
+            qp.h();
+            int discarded$440 = 0;
+            lf.a();
+            int discarded$441 = 0;
+            wi.a();
             ma.a(64);
             ((ZombieDawnMulti) this).field_v = null;
             ((ZombieDawnMulti) this).field_J = null;

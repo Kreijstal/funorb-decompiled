@@ -8,7 +8,7 @@ final class sd {
     static r field_d;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_d = null;
         field_a = null;
@@ -19,7 +19,7 @@ final class sd {
         return param0 ^ param1;
     }
 
-    final static void a(ut param0, byte param1) {
+    final static void a(ut param0) {
         int var2_int = 0;
         int var3 = Kickabout.field_G;
         for (var2_int = 0; param0.field_y.length > var2_int; var2_int++) {

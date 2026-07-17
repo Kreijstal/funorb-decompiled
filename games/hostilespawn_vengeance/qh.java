@@ -805,7 +805,7 @@ final class qh {
         return var2;
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void a(int param0, int param1) {
         int var3 = 0;
         L0: {
           L1: {
@@ -824,7 +824,7 @@ final class qh {
         }
         L2: {
           L3: {
-            var3 = -43 % ((54 - param2) / 39);
+            var3 = 0;
             if (qa.field_d == null) {
               break L3;
             } else {
@@ -964,7 +964,7 @@ final class qh {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_x = null;
         field_l = null;
         field_g = null;
@@ -1134,10 +1134,6 @@ final class qh {
             byte[] var13 = null;
             byte[] var14 = null;
             byte[] var15 = null;
-            byte[] var16 = null;
-            byte[] var17 = null;
-            byte[] var18 = null;
-            byte[] var19 = null;
             Object stackIn_33_0 = null;
             Object stackIn_34_0 = null;
             Object stackIn_35_0 = null;
@@ -1791,14 +1787,11 @@ final class qh {
                     L70: while (true) {
                       if (5 <= var7_int) {
                         o.field_n.b((byte) 113);
-                        var18 = new byte[60000];
-                        var16 = var18;
-                        var14 = var16;
-                        var12 = var14;
-                        var7 = var12;
+                        var7 = new byte[60000];
                         var8_int = 60000;
-                        d.a((byte) -115, var7, new File(uk.a(param0 + 9362, ((qh) this).field_v)), var8_int);
-                        this.a(var18, (byte) -80);
+                        d.a((byte) -115, var7, new File(uk.a(param0 + 9362, ((qh) this).field_v)));
+                        int discarded$1 = -80;
+                        this.a(var7);
                         break L67;
                       } else {
                         var8_int = 0;
@@ -1820,14 +1813,14 @@ final class qh {
                   }
                 }
                 if (var5 != 0) {
-                  var19 = this.c(param0 ^ 32);
-                  var17 = var19;
-                  var15 = var17;
-                  var13 = var15;
-                  var10 = var13;
+                  var15 = this.c(param0 ^ 32);
+                  var14 = var15;
+                  var13 = var14;
+                  var12 = var13;
+                  var10 = var12;
                   var6_array = var10;
-                  oc.field_h[0][((qh) this).field_v] = var19;
-                  fj.a(var6_array, 15445, var19.length, new File(uk.a(9394, ((qh) this).field_v)));
+                  oc.field_h[0][((qh) this).field_v] = var15;
+                  fj.a(var6_array, 15445, var15.length, new File(uk.a(9394, ((qh) this).field_v)));
                   continue L51;
                 } else {
                   continue L51;
@@ -1841,7 +1834,7 @@ final class qh {
         }
     }
 
-    private final void a(byte[] param0, byte param1) {
+    private final void a(byte[] param0) {
         RuntimeException var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;

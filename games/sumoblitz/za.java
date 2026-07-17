@@ -44,7 +44,7 @@ abstract class za extends ms {
         var7 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
-            var5_int = param3;
+            var5_int = 0;
             L1: while (true) {
               if (rg.field_C.length <= var5_int) {
                 break L0;
@@ -123,11 +123,11 @@ abstract class za extends ms {
               break L4;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw qo.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param2 + 44 + 0 + 44 + param4 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_l = null;
     }
 

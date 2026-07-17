@@ -13,7 +13,7 @@ final class hf {
     static int field_b;
     static sf field_g;
 
-    public static void a(int param0) {
+    public static void a() {
         field_g = null;
         field_d = null;
         field_f = null;

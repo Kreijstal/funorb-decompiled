@@ -76,8 +76,8 @@ final class ea extends se {
         }
     }
 
-    public static void g(byte param0) {
-        int var1 = 101 / ((param0 - 37) / 53);
+    public static void g() {
+        int var1 = -101;
         field_bb = null;
         field_P = null;
         field_cb = null;
@@ -86,177 +86,79 @@ final class ea extends se {
     final void a(int param0, int param1, int param2, int param3) {
         String var5 = null;
         mk var6 = null;
-        mg var8 = null;
+        Object var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
         km var14 = null;
+        km var15 = null;
         km var16 = null;
-        km var17 = null;
-        km var18 = null;
-        km var19 = null;
-        km var20 = null;
-        km var21 = null;
-        km var22 = null;
+        mg var17 = null;
+        var8 = null;
         var13 = Chess.field_G;
         if (param2 < -80) {
-          L0: {
-            L1: {
-              L2: {
-                L3: {
-                  var6 = ((ea) this).field_fb.a(21314);
-                  if (in.field_g == var6) {
-                    break L3;
-                  } else {
-                    if (var6 == ek.field_d) {
-                      break L3;
-                    } else {
-                      var5 = ((ea) this).field_fb.a(false);
-                      if (var5 == null) {
-                        var5 = ((ea) this).field_eb;
-                        if (var13 == 0) {
-                          break L2;
-                        } else {
-                          break L3;
-                        }
-                      } else {
-                        if (!var5.equals((Object) (Object) ((ea) this).field_v)) {
-                          break L1;
-                        } else {
-                          break L0;
-                        }
-                      }
-                    }
-                  }
-                }
-                var5 = cc.field_v;
-                break L2;
-              }
-              if (!var5.equals((Object) (Object) ((ea) this).field_v)) {
-                break L1;
-              } else {
-                break L0;
-              }
-            }
-            ((ea) this).field_v = var5;
-            ((ea) this).f((byte) 105);
-            break L0;
-          }
-          super.a(param0, param1, -109, param3);
           var6 = ((ea) this).field_fb.a(21314);
-          var8 = (mg) (Object) ((ea) this).field_n;
-          var9 = param3 - -((ea) this).field_u;
-          var10 = var8.a(0, param0, (mf) this) + (var8.a((mf) this, -23159).a((byte) 34) >> 1);
           if (in.field_g != var6) {
             if (var6 != ek.field_d) {
-              if (var6 == qk.field_b) {
-                var14 = uh.field_p[2];
-                var14.d(var9, -(var14.field_t >> 1) + var10, 256);
-                if (var13 != 0) {
-                  if (oa.field_a == var6) {
-                    var21 = uh.field_p[1];
-                    var21.d(var9, -(var21.field_t >> 1) + var10, 256);
-                    if (var13 != 0) {
-                      L4: {
-                        var22 = uh.field_p[0];
-                        var11 = var22.field_v << 1;
-                        var12 = var22.field_u << 1;
-                        if (null == ((ea) this).field_T) {
-                          break L4;
-                        } else {
-                          if (var11 > ((ea) this).field_T.field_w) {
-                            break L4;
-                          } else {
-                            if (var12 > ((ea) this).field_T.field_t) {
-                              ((ea) this).field_T = new km(var11, var12);
-                              tl.a((byte) -67, ((ea) this).field_T);
-                              if (var13 != 0) {
-                                tl.a((byte) -67, ((ea) this).field_T);
-                                wb.b();
-                                var22.b(112, 144, var22.field_v << 4, var22.field_u << 4, -((ea) this).field_db << 10, 4096);
-                                fd.a(28773);
-                                ((ea) this).field_T.d(-(var22.field_v >> 1) + var9, -var22.field_u + var10, 256);
-                                return;
-                              } else {
-                                var22.b(112, 144, var22.field_v << 4, var22.field_u << 4, -((ea) this).field_db << 10, 4096);
-                                fd.a(28773);
-                                ((ea) this).field_T.d(-(var22.field_v >> 1) + var9, -var22.field_u + var10, 256);
-                                return;
-                              }
-                            } else {
-                              tl.a((byte) -67, ((ea) this).field_T);
-                              wb.b();
-                              var22.b(112, 144, var22.field_v << 4, var22.field_u << 4, -((ea) this).field_db << 10, 4096);
-                              fd.a(28773);
-                              ((ea) this).field_T.d(-(var22.field_v >> 1) + var9, -var22.field_u + var10, 256);
-                              return;
-                            }
-                          }
-                        }
-                      }
-                      ((ea) this).field_T = new km(var11, var12);
-                      tl.a((byte) -67, ((ea) this).field_T);
-                      if (var13 != 0) {
-                        tl.a((byte) -67, ((ea) this).field_T);
-                        wb.b();
-                        var22.b(112, 144, var22.field_v << 4, var22.field_u << 4, -((ea) this).field_db << 10, 4096);
-                        fd.a(28773);
-                        ((ea) this).field_T.d(-(var22.field_v >> 1) + var9, -var22.field_u + var10, 256);
+              var5 = ((ea) this).field_fb.a(false);
+              if (var5 != null) {
+                L0: {
+                  if (!var5.equals((Object) (Object) ((ea) this).field_v)) {
+                    ((ea) this).field_v = var5;
+                    ((ea) this).f((byte) 105);
+                    break L0;
+                  } else {
+                    break L0;
+                  }
+                }
+                super.a(param0, param1, -109, param3);
+                var6 = ((ea) this).field_fb.a(21314);
+                var17 = (mg) (Object) ((ea) this).field_n;
+                var9 = param3 - -((ea) this).field_u;
+                var10 = var17.a(0, param0, (mf) this) + (var17.a((mf) this, -23159).a((byte) 34) >> 1);
+                if (in.field_g != var6) {
+                  if (var6 != ek.field_d) {
+                    if (var6 != qk.field_b) {
+                      if (oa.field_a == var6) {
+                        var15 = uh.field_p[1];
+                        var15.d(var9, -(var15.field_t >> 1) + var10, 256);
                         return;
                       } else {
-                        var22.b(112, 144, var22.field_v << 4, var22.field_u << 4, -((ea) this).field_db << 10, 4096);
-                        fd.a(28773);
-                        ((ea) this).field_T.d(-(var22.field_v >> 1) + var9, -var22.field_u + var10, 256);
                         return;
                       }
                     } else {
+                      var14 = uh.field_p[2];
+                      var14.d(var9, -(var14.field_t >> 1) + var10, 256);
                       return;
                     }
                   } else {
-                    return;
-                  }
-                } else {
-                  return;
-                }
-              } else {
-                if (oa.field_a == var6) {
-                  var19 = uh.field_p[1];
-                  var19.d(var9, -(var19.field_t >> 1) + var10, 256);
-                  if (var13 != 0) {
-                    L5: {
-                      var20 = uh.field_p[0];
-                      var11 = var20.field_v << 1;
-                      var12 = var20.field_u << 1;
+                    L1: {
+                      var16 = uh.field_p[0];
+                      var11 = var16.field_v << 1;
+                      var12 = var16.field_u << 1;
                       if (null == ((ea) this).field_T) {
-                        break L5;
+                        break L1;
                       } else {
                         if (var11 > ((ea) this).field_T.field_w) {
-                          break L5;
+                          break L1;
                         } else {
-                          if (var12 > ((ea) this).field_T.field_t) {
-                            ((ea) this).field_T = new km(var11, var12);
-                            tl.a((byte) -67, ((ea) this).field_T);
-                            if (var13 != 0) {
-                              tl.a((byte) -67, ((ea) this).field_T);
-                              wb.b();
-                              var20.b(112, 144, var20.field_v << 4, var20.field_u << 4, -((ea) this).field_db << 10, 4096);
-                              fd.a(28773);
-                              ((ea) this).field_T.d(-(var20.field_v >> 1) + var9, -var20.field_u + var10, 256);
-                              return;
-                            } else {
-                              var20.b(112, 144, var20.field_v << 4, var20.field_u << 4, -((ea) this).field_db << 10, 4096);
-                              fd.a(28773);
-                              ((ea) this).field_T.d(-(var20.field_v >> 1) + var9, -var20.field_u + var10, 256);
-                              return;
-                            }
-                          } else {
+                          if (var12 <= ((ea) this).field_T.field_t) {
                             tl.a((byte) -67, ((ea) this).field_T);
                             wb.b();
-                            var20.b(112, 144, var20.field_v << 4, var20.field_u << 4, -((ea) this).field_db << 10, 4096);
-                            fd.a(28773);
-                            ((ea) this).field_T.d(-(var20.field_v >> 1) + var9, -var20.field_u + var10, 256);
+                            var16.b(112, 144, var16.field_v << 4, var16.field_u << 4, -((ea) this).field_db << 10, 4096);
+                            int discarded$22 = 28773;
+                            fd.a();
+                            ((ea) this).field_T.d(-(var16.field_v >> 1) + var9, -var16.field_u + var10, 256);
+                            return;
+                          } else {
+                            ((ea) this).field_T = new km(var11, var12);
+                            tl.a((byte) -67, ((ea) this).field_T);
+                            var16.b(112, 144, var16.field_v << 4, var16.field_u << 4, -((ea) this).field_db << 10, 4096);
+                            int discarded$23 = 28773;
+                            fd.a();
+                            ((ea) this).field_T.d(-(var16.field_v >> 1) + var9, -var16.field_u + var10, 256);
                             return;
                           }
                         }
@@ -264,132 +166,324 @@ final class ea extends se {
                     }
                     ((ea) this).field_T = new km(var11, var12);
                     tl.a((byte) -67, ((ea) this).field_T);
-                    if (var13 != 0) {
-                      tl.a((byte) -67, ((ea) this).field_T);
-                      wb.b();
-                      var20.b(112, 144, var20.field_v << 4, var20.field_u << 4, -((ea) this).field_db << 10, 4096);
-                      fd.a(28773);
-                      ((ea) this).field_T.d(-(var20.field_v >> 1) + var9, -var20.field_u + var10, 256);
-                      return;
-                    } else {
-                      var20.b(112, 144, var20.field_v << 4, var20.field_u << 4, -((ea) this).field_db << 10, 4096);
-                      fd.a(28773);
-                      ((ea) this).field_T.d(-(var20.field_v >> 1) + var9, -var20.field_u + var10, 256);
-                      return;
-                    }
-                  } else {
+                    var16.b(112, 144, var16.field_v << 4, var16.field_u << 4, -((ea) this).field_db << 10, 4096);
+                    int discarded$24 = 28773;
+                    fd.a();
+                    ((ea) this).field_T.d(-(var16.field_v >> 1) + var9, -var16.field_u + var10, 256);
                     return;
                   }
                 } else {
+                  L2: {
+                    var16 = uh.field_p[0];
+                    var11 = var16.field_v << 1;
+                    var12 = var16.field_u << 1;
+                    if (null == ((ea) this).field_T) {
+                      break L2;
+                    } else {
+                      if (var11 > ((ea) this).field_T.field_w) {
+                        break L2;
+                      } else {
+                        if (var12 <= ((ea) this).field_T.field_t) {
+                          tl.a((byte) -67, ((ea) this).field_T);
+                          wb.b();
+                          var16.b(112, 144, var16.field_v << 4, var16.field_u << 4, -((ea) this).field_db << 10, 4096);
+                          int discarded$25 = 28773;
+                          fd.a();
+                          ((ea) this).field_T.d(-(var16.field_v >> 1) + var9, -var16.field_u + var10, 256);
+                          return;
+                        } else {
+                          ((ea) this).field_T = new km(var11, var12);
+                          tl.a((byte) -67, ((ea) this).field_T);
+                          var16.b(112, 144, var16.field_v << 4, var16.field_u << 4, -((ea) this).field_db << 10, 4096);
+                          int discarded$26 = 28773;
+                          fd.a();
+                          ((ea) this).field_T.d(-(var16.field_v >> 1) + var9, -var16.field_u + var10, 256);
+                          return;
+                        }
+                      }
+                    }
+                  }
+                  ((ea) this).field_T = new km(var11, var12);
+                  tl.a((byte) -67, ((ea) this).field_T);
+                  var16.b(112, 144, var16.field_v << 4, var16.field_u << 4, -((ea) this).field_db << 10, 4096);
+                  int discarded$27 = 28773;
+                  fd.a();
+                  ((ea) this).field_T.d(-(var16.field_v >> 1) + var9, -var16.field_u + var10, 256);
                   return;
                 }
-              }
-            } else {
-              L6: {
-                var18 = uh.field_p[0];
-                var16 = var18;
-                var11 = var18.field_v << 1;
-                var12 = var18.field_u << 1;
-                if (null == ((ea) this).field_T) {
-                  break L6;
-                } else {
-                  if (var11 > ((ea) this).field_T.field_w) {
-                    break L6;
+              } else {
+                L3: {
+                  var5 = ((ea) this).field_eb;
+                  if (!var5.equals((Object) (Object) ((ea) this).field_v)) {
+                    ((ea) this).field_v = var5;
+                    ((ea) this).f((byte) 105);
+                    break L3;
                   } else {
-                    if (var12 > ((ea) this).field_T.field_t) {
-                      ((ea) this).field_T = new km(var11, var12);
-                      tl.a((byte) -67, ((ea) this).field_T);
-                      if (var13 != 0) {
-                        tl.a((byte) -67, ((ea) this).field_T);
-                        wb.b();
-                        var18.b(112, 144, var18.field_v << 4, var18.field_u << 4, -((ea) this).field_db << 10, 4096);
-                        fd.a(28773);
-                        ((ea) this).field_T.d(-(var18.field_v >> 1) + var9, -var18.field_u + var10, 256);
+                    break L3;
+                  }
+                }
+                super.a(param0, param1, -109, param3);
+                var6 = ((ea) this).field_fb.a(21314);
+                var17 = (mg) (Object) ((ea) this).field_n;
+                var9 = param3 - -((ea) this).field_u;
+                var10 = var17.a(0, param0, (mf) this) + (var17.a((mf) this, -23159).a((byte) 34) >> 1);
+                if (in.field_g != var6) {
+                  if (var6 != ek.field_d) {
+                    if (var6 != qk.field_b) {
+                      if (oa.field_a != var6) {
                         return;
                       } else {
-                        var18.b(112, 144, var18.field_v << 4, var18.field_u << 4, -((ea) this).field_db << 10, 4096);
-                        fd.a(28773);
-                        ((ea) this).field_T.d(-(var18.field_v >> 1) + var9, -var18.field_u + var10, 256);
+                        var15 = uh.field_p[1];
+                        var15.d(var9, -(var15.field_t >> 1) + var10, 256);
                         return;
                       }
                     } else {
+                      var14 = uh.field_p[2];
+                      var14.d(var9, -(var14.field_t >> 1) + var10, 256);
+                      return;
+                    }
+                  } else {
+                    var16 = uh.field_p[0];
+                    var11 = var16.field_v << 1;
+                    var12 = var16.field_u << 1;
+                    if (null != ((ea) this).field_T) {
+                      if (var11 <= ((ea) this).field_T.field_w) {
+                        if (var12 > ((ea) this).field_T.field_t) {
+                          ((ea) this).field_T = new km(var11, var12);
+                          tl.a((byte) -67, ((ea) this).field_T);
+                          var16.b(112, 144, var16.field_v << 4, var16.field_u << 4, -((ea) this).field_db << 10, 4096);
+                          int discarded$28 = 28773;
+                          fd.a();
+                          ((ea) this).field_T.d(-(var16.field_v >> 1) + var9, -var16.field_u + var10, 256);
+                          return;
+                        } else {
+                          tl.a((byte) -67, ((ea) this).field_T);
+                          wb.b();
+                          var16.b(112, 144, var16.field_v << 4, var16.field_u << 4, -((ea) this).field_db << 10, 4096);
+                          int discarded$29 = 28773;
+                          fd.a();
+                          ((ea) this).field_T.d(-(var16.field_v >> 1) + var9, -var16.field_u + var10, 256);
+                          return;
+                        }
+                      } else {
+                        ((ea) this).field_T = new km(var11, var12);
+                        tl.a((byte) -67, ((ea) this).field_T);
+                        var16.b(112, 144, var16.field_v << 4, var16.field_u << 4, -((ea) this).field_db << 10, 4096);
+                        int discarded$30 = 28773;
+                        fd.a();
+                        ((ea) this).field_T.d(-(var16.field_v >> 1) + var9, -var16.field_u + var10, 256);
+                        return;
+                      }
+                    } else {
+                      ((ea) this).field_T = new km(var11, var12);
                       tl.a((byte) -67, ((ea) this).field_T);
-                      wb.b();
-                      var18.b(112, 144, var18.field_v << 4, var18.field_u << 4, -((ea) this).field_db << 10, 4096);
-                      fd.a(28773);
-                      ((ea) this).field_T.d(-(var18.field_v >> 1) + var9, -var18.field_u + var10, 256);
+                      var16.b(112, 144, var16.field_v << 4, var16.field_u << 4, -((ea) this).field_db << 10, 4096);
+                      int discarded$31 = 28773;
+                      fd.a();
+                      ((ea) this).field_T.d(-(var16.field_v >> 1) + var9, -var16.field_u + var10, 256);
+                      return;
+                    }
+                  }
+                } else {
+                  var16 = uh.field_p[0];
+                  var11 = var16.field_v << 1;
+                  var12 = var16.field_u << 1;
+                  if (null != ((ea) this).field_T) {
+                    if (var11 <= ((ea) this).field_T.field_w) {
+                      if (var12 <= ((ea) this).field_T.field_t) {
+                        tl.a((byte) -67, ((ea) this).field_T);
+                        wb.b();
+                        var16.b(112, 144, var16.field_v << 4, var16.field_u << 4, -((ea) this).field_db << 10, 4096);
+                        int discarded$32 = 28773;
+                        fd.a();
+                        ((ea) this).field_T.d(-(var16.field_v >> 1) + var9, -var16.field_u + var10, 256);
+                        return;
+                      } else {
+                        ((ea) this).field_T = new km(var11, var12);
+                        tl.a((byte) -67, ((ea) this).field_T);
+                        var16.b(112, 144, var16.field_v << 4, var16.field_u << 4, -((ea) this).field_db << 10, 4096);
+                        int discarded$33 = 28773;
+                        fd.a();
+                        ((ea) this).field_T.d(-(var16.field_v >> 1) + var9, -var16.field_u + var10, 256);
+                        return;
+                      }
+                    } else {
+                      ((ea) this).field_T = new km(var11, var12);
+                      tl.a((byte) -67, ((ea) this).field_T);
+                      var16.b(112, 144, var16.field_v << 4, var16.field_u << 4, -((ea) this).field_db << 10, 4096);
+                      int discarded$34 = 28773;
+                      fd.a();
+                      ((ea) this).field_T.d(-(var16.field_v >> 1) + var9, -var16.field_u + var10, 256);
+                      return;
+                    }
+                  } else {
+                    ((ea) this).field_T = new km(var11, var12);
+                    tl.a((byte) -67, ((ea) this).field_T);
+                    var16.b(112, 144, var16.field_v << 4, var16.field_u << 4, -((ea) this).field_db << 10, 4096);
+                    int discarded$35 = 28773;
+                    fd.a();
+                    ((ea) this).field_T.d(-(var16.field_v >> 1) + var9, -var16.field_u + var10, 256);
+                    return;
+                  }
+                }
+              }
+            } else {
+              L4: {
+                var5 = cc.field_v;
+                if (!var5.equals((Object) (Object) ((ea) this).field_v)) {
+                  ((ea) this).field_v = var5;
+                  ((ea) this).f((byte) 105);
+                  break L4;
+                } else {
+                  break L4;
+                }
+              }
+              L5: {
+                super.a(param0, param1, -109, param3);
+                var6 = ((ea) this).field_fb.a(21314);
+                var17 = (mg) (Object) ((ea) this).field_n;
+                var9 = param3 - -((ea) this).field_u;
+                var10 = var17.a(0, param0, (mf) this) + (var17.a((mf) this, -23159).a((byte) 34) >> 1);
+                if (in.field_g == var6) {
+                  break L5;
+                } else {
+                  if (var6 == ek.field_d) {
+                    break L5;
+                  } else {
+                    if (var6 != qk.field_b) {
+                      if (oa.field_a != var6) {
+                        return;
+                      } else {
+                        var15 = uh.field_p[1];
+                        var15.d(var9, -(var15.field_t >> 1) + var10, 256);
+                        return;
+                      }
+                    } else {
+                      var14 = uh.field_p[2];
+                      var14.d(var9, -(var14.field_t >> 1) + var10, 256);
                       return;
                     }
                   }
                 }
               }
-              ((ea) this).field_T = new km(var11, var12);
-              tl.a((byte) -67, ((ea) this).field_T);
-              if (var13 != 0) {
-                tl.a((byte) -67, ((ea) this).field_T);
-                wb.b();
-                var18.b(112, 144, var18.field_v << 4, var18.field_u << 4, -((ea) this).field_db << 10, 4096);
-                fd.a(28773);
-                ((ea) this).field_T.d(-(var18.field_v >> 1) + var9, -var18.field_u + var10, 256);
-                return;
-              } else {
-                var18.b(112, 144, var18.field_v << 4, var18.field_u << 4, -((ea) this).field_db << 10, 4096);
-                fd.a(28773);
-                ((ea) this).field_T.d(-(var18.field_v >> 1) + var9, -var18.field_u + var10, 256);
-                return;
-              }
-            }
-          } else {
-            L7: {
-              var17 = uh.field_p[0];
-              var11 = var17.field_v << 1;
-              var12 = var17.field_u << 1;
-              if (null == ((ea) this).field_T) {
-                break L7;
-              } else {
-                if (var11 > ((ea) this).field_T.field_w) {
-                  break L7;
-                } else {
+              var16 = uh.field_p[0];
+              var11 = var16.field_v << 1;
+              var12 = var16.field_u << 1;
+              if (null != ((ea) this).field_T) {
+                if (var11 <= ((ea) this).field_T.field_w) {
                   if (var12 > ((ea) this).field_T.field_t) {
-                    L8: {
-                      ((ea) this).field_T = new km(var11, var12);
-                      tl.a((byte) -67, ((ea) this).field_T);
-                      if (var13 == 0) {
-                        break L8;
-                      } else {
-                        tl.a((byte) -67, ((ea) this).field_T);
-                        wb.b();
-                        break L8;
-                      }
-                    }
-                    var17.b(112, 144, var17.field_v << 4, var17.field_u << 4, -((ea) this).field_db << 10, 4096);
-                    fd.a(28773);
-                    ((ea) this).field_T.d(-(var17.field_v >> 1) + var9, -var17.field_u + var10, 256);
+                    ((ea) this).field_T = new km(var11, var12);
+                    tl.a((byte) -67, ((ea) this).field_T);
+                    var16.b(112, 144, var16.field_v << 4, var16.field_u << 4, -((ea) this).field_db << 10, 4096);
+                    int discarded$36 = 28773;
+                    fd.a();
+                    ((ea) this).field_T.d(-(var16.field_v >> 1) + var9, -var16.field_u + var10, 256);
                     return;
                   } else {
                     tl.a((byte) -67, ((ea) this).field_T);
                     wb.b();
-                    var17.b(112, 144, var17.field_v << 4, var17.field_u << 4, -((ea) this).field_db << 10, 4096);
-                    fd.a(28773);
-                    ((ea) this).field_T.d(-(var17.field_v >> 1) + var9, -var17.field_u + var10, 256);
+                    var16.b(112, 144, var16.field_v << 4, var16.field_u << 4, -((ea) this).field_db << 10, 4096);
+                    int discarded$37 = 28773;
+                    fd.a();
+                    ((ea) this).field_T.d(-(var16.field_v >> 1) + var9, -var16.field_u + var10, 256);
+                    return;
+                  }
+                } else {
+                  ((ea) this).field_T = new km(var11, var12);
+                  tl.a((byte) -67, ((ea) this).field_T);
+                  var16.b(112, 144, var16.field_v << 4, var16.field_u << 4, -((ea) this).field_db << 10, 4096);
+                  int discarded$38 = 28773;
+                  fd.a();
+                  ((ea) this).field_T.d(-(var16.field_v >> 1) + var9, -var16.field_u + var10, 256);
+                  return;
+                }
+              } else {
+                ((ea) this).field_T = new km(var11, var12);
+                tl.a((byte) -67, ((ea) this).field_T);
+                var16.b(112, 144, var16.field_v << 4, var16.field_u << 4, -((ea) this).field_db << 10, 4096);
+                int discarded$39 = 28773;
+                fd.a();
+                ((ea) this).field_T.d(-(var16.field_v >> 1) + var9, -var16.field_u + var10, 256);
+                return;
+              }
+            }
+          } else {
+            L6: {
+              var5 = cc.field_v;
+              if (!var5.equals((Object) (Object) ((ea) this).field_v)) {
+                ((ea) this).field_v = var5;
+                ((ea) this).f((byte) 105);
+                break L6;
+              } else {
+                break L6;
+              }
+            }
+            L7: {
+              super.a(param0, param1, -109, param3);
+              var6 = ((ea) this).field_fb.a(21314);
+              var17 = (mg) (Object) ((ea) this).field_n;
+              var9 = param3 - -((ea) this).field_u;
+              var10 = var17.a(0, param0, (mf) this) + (var17.a((mf) this, -23159).a((byte) 34) >> 1);
+              if (in.field_g == var6) {
+                break L7;
+              } else {
+                if (var6 == ek.field_d) {
+                  break L7;
+                } else {
+                  if (var6 != qk.field_b) {
+                    if (oa.field_a != var6) {
+                      return;
+                    } else {
+                      var15 = uh.field_p[1];
+                      var15.d(var9, -(var15.field_t >> 1) + var10, 256);
+                      return;
+                    }
+                  } else {
+                    var14 = uh.field_p[2];
+                    var14.d(var9, -(var14.field_t >> 1) + var10, 256);
                     return;
                   }
                 }
               }
             }
-            ((ea) this).field_T = new km(var11, var12);
-            tl.a((byte) -67, ((ea) this).field_T);
-            if (var13 != 0) {
-              tl.a((byte) -67, ((ea) this).field_T);
-              wb.b();
-              var17.b(112, 144, var17.field_v << 4, var17.field_u << 4, -((ea) this).field_db << 10, 4096);
-              fd.a(28773);
-              ((ea) this).field_T.d(-(var17.field_v >> 1) + var9, -var17.field_u + var10, 256);
-              return;
+            var16 = uh.field_p[0];
+            var11 = var16.field_v << 1;
+            var12 = var16.field_u << 1;
+            if (null != ((ea) this).field_T) {
+              if (var11 <= ((ea) this).field_T.field_w) {
+                if (var12 > ((ea) this).field_T.field_t) {
+                  ((ea) this).field_T = new km(var11, var12);
+                  tl.a((byte) -67, ((ea) this).field_T);
+                  var16.b(112, 144, var16.field_v << 4, var16.field_u << 4, -((ea) this).field_db << 10, 4096);
+                  int discarded$40 = 28773;
+                  fd.a();
+                  ((ea) this).field_T.d(-(var16.field_v >> 1) + var9, -var16.field_u + var10, 256);
+                  return;
+                } else {
+                  tl.a((byte) -67, ((ea) this).field_T);
+                  wb.b();
+                  var16.b(112, 144, var16.field_v << 4, var16.field_u << 4, -((ea) this).field_db << 10, 4096);
+                  int discarded$41 = 28773;
+                  fd.a();
+                  ((ea) this).field_T.d(-(var16.field_v >> 1) + var9, -var16.field_u + var10, 256);
+                  return;
+                }
+              } else {
+                ((ea) this).field_T = new km(var11, var12);
+                tl.a((byte) -67, ((ea) this).field_T);
+                var16.b(112, 144, var16.field_v << 4, var16.field_u << 4, -((ea) this).field_db << 10, 4096);
+                int discarded$42 = 28773;
+                fd.a();
+                ((ea) this).field_T.d(-(var16.field_v >> 1) + var9, -var16.field_u + var10, 256);
+                return;
+              }
             } else {
-              var17.b(112, 144, var17.field_v << 4, var17.field_u << 4, -((ea) this).field_db << 10, 4096);
-              fd.a(28773);
-              ((ea) this).field_T.d(-(var17.field_v >> 1) + var9, -var17.field_u + var10, 256);
+              ((ea) this).field_T = new km(var11, var12);
+              tl.a((byte) -67, ((ea) this).field_T);
+              var16.b(112, 144, var16.field_v << 4, var16.field_u << 4, -((ea) this).field_db << 10, 4096);
+              int discarded$43 = 28773;
+              fd.a();
+              ((ea) this).field_T.d(-(var16.field_v >> 1) + var9, -var16.field_u + var10, 256);
               return;
             }
           }
@@ -473,16 +567,13 @@ final class ea extends se {
         return stackIn_4_0 != 0;
     }
 
-    final static int h(byte param0) {
-        if (param0 != -16) {
-            field_bb = null;
-            return si.field_o;
-        }
+    final static int h() {
         return si.field_o;
     }
 
     ea(vb param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (jm) (Object) je.d(false));
+        super(param1, (jm) (Object) je.d());
+        int discarded$0 = 0;
         try {
             ((ea) this).field_fb = param0;
             ((ea) this).field_eb = param1;

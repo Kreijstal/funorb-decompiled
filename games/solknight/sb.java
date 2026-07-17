@@ -16,7 +16,6 @@ final class sb implements Runnable {
         Throwable var3 = null;
         int var4 = 0;
         Object var5 = null;
-        Object var6 = null;
         Throwable decompiledCaughtException = null;
         var4 = SolKnight.field_L ? 1 : 0;
         ((sb) this).field_f = true;
@@ -55,8 +54,8 @@ final class sb implements Runnable {
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = (Exception) (Object) decompiledCaughtException;
-          var6 = null;
-          hi.a((Throwable) (Object) var1, (String) null, 1);
+          int discarded$1 = 1;
+          hi.a((Throwable) (Object) var1, (String) null);
           ((sb) this).field_f = false;
           return;
         } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -67,7 +66,7 @@ final class sb implements Runnable {
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int a(int param0, int param1) {
         int var3 = param0 >> 16;
         int var4 = 65535 & param0;
         int var5 = param1 >> 16;
@@ -75,7 +74,7 @@ final class sb implements Runnable {
         return (var4 * var6 >> 16) + (param1 * var3 - -(var4 * var5));
     }
 
-    final static hd a(byte[] param0, int param1) {
+    final static hd a(byte[] param0) {
         hd var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
@@ -102,7 +101,8 @@ final class sb implements Runnable {
           L0: {
             if (param0 != null) {
               var2 = new hd(param0, ph.field_h, qf.field_d, sa.field_l, uj.field_b, jc.field_c);
-              og.a((byte) -97);
+              int discarded$2 = -97;
+              og.a();
               stackOut_3_0 = (hd) var2;
               stackIn_4_0 = stackOut_3_0;
               break L0;

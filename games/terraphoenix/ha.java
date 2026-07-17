@@ -187,15 +187,12 @@ final class ha extends di {
         return stackIn_8_0;
     }
 
-    final static void a(eg param0, int param1, byte param2) {
-        if (param2 <= 50) {
-            return;
-        }
+    final static void a(eg param0) {
         try {
             ic.field_s.a((uf) (Object) param0, -16611);
-            qc.a(param1, param0, (byte) 118);
+            qc.a(4, param0, (byte) 118);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "ha.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "ha.D(" + (param0 != null ? "{...}" : "null") + 44 + 4 + 44 + 80 + 41);
         }
     }
 
@@ -227,7 +224,7 @@ final class ha extends di {
         }
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_n = null;
         field_m = null;
         field_s = null;

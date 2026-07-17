@@ -72,11 +72,11 @@ final class lva extends rqa {
         return stackIn_3_0;
     }
 
-    final static void b(boolean param0) {
+    final static void b() {
         al.field_a = kda.field_g + " <b>" + amb.field_b + "</b> " + vda.field_p + " <b>" + fja.field_r + "</b> " + inb.field_p + "<br>" + "<br>" + msa.field_r;
     }
 
-    final static int b(int param0, int param1, int param2) {
+    final static int b(int param0, int param1) {
         int var3 = param1 + -1 & param0 >> 31;
         int var4 = 1;
         return var3 + (param0 - -(param0 >>> 31)) % param1;
@@ -90,12 +90,12 @@ final class lva extends rqa {
     }
 
     final static void a(int param0, int param1, int param2) {
-        int var3 = 8 / ((-49 - param1) / 47);
+        int var3 = -8;
         dmb.field_c = param2;
         wua.field_k = param0;
     }
 
-    final static void e(byte param0) {
+    final static void e() {
         qn.field_h.g((byte) -17);
         qn.field_h.a(false, (shb) (Object) new hnb(qn.field_h));
     }

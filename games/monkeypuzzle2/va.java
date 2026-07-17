@@ -35,35 +35,9 @@ class va {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 < 8000) {
-            break L0;
-          } else {
-            if (param0 <= 48000) {
-              L1: {
-                field_i = param0;
-                if (!param1) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              field_n = stackIn_7_0 != 0;
-              field_a = 10;
-              return;
-            } else {
-              break L0;
-            }
-          }
-        }
-        throw new IllegalArgumentException();
+        field_i = 22050;
+        field_n = true;
+        field_a = 10;
     }
 
     int a() throws Exception {
@@ -71,12 +45,12 @@ class va {
     }
 
     private final void b(int param0) {
-        ((va) this).field_j = ((va) this).field_j - 256;
+        ((va) this).field_j = ((va) this).field_j - param0;
         if (((va) this).field_j < 0) {
             ((va) this).field_j = 0;
         }
         if (((va) this).field_b != null) {
-            ((va) this).field_b.a(256);
+            ((va) this).field_b.a(param0);
             return;
         }
     }
@@ -101,7 +75,8 @@ class va {
                       field_g = null;
                       break L0;
                     } else {
-                      em.a(50L, false);
+                      int discarded$1 = 0;
+                      em.a(50L);
                       continue L2;
                     }
                   }
@@ -315,7 +290,7 @@ class va {
         fh var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_n) {
             break L0;
           } else {
@@ -325,7 +300,7 @@ class va {
         }
         L1: {
           gl.a(param0, 0, var3);
-          ((va) this).field_j = ((va) this).field_j - 256;
+          ((va) this).field_j = ((va) this).field_j - param1;
           if (((va) this).field_b == null) {
             break L1;
           } else {
@@ -492,7 +467,7 @@ class va {
           if (((va) this).field_b == null) {
             break L17;
           } else {
-            ((va) this).field_b.b(param0, 0, 256);
+            ((va) this).field_b.b(param0, 0, param1);
             break L17;
           }
         }

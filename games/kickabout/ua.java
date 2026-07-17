@@ -13,7 +13,8 @@ final class ua extends mo {
     static int field_l;
 
     final void a(ml param0, byte param1) {
-        if (!(mu.a(param0, (byte) -39))) {
+        int discarded$7 = -39;
+        if (!(mu.a(param0))) {
             return;
         }
         try {
@@ -138,7 +139,7 @@ final class ua extends mo {
         return "AgentGoalState\tscore=[" + ((ua) this).field_j[0] + "," + ((ua) this).field_j[1] + "]\tgoal_count=" + ((ua) this).field_m + "\tgoal_scorer=" + ((ua) this).field_n;
     }
 
-    final static kg[] a(int param0, int param1, sj param2, boolean param3) {
+    final static kg[] a(int param0, int param1, sj param2) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         kg[] stackIn_4_0 = null;
@@ -164,7 +165,8 @@ final class ua extends mo {
           L0: {
             if (cu.a(param1, param2, param0, 114)) {
               field_h = null;
-              stackOut_3_0 = fb.i((byte) 83);
+              int discarded$2 = 83;
+              stackOut_3_0 = fb.i();
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

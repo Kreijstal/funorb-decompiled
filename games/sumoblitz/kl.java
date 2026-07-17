@@ -10,7 +10,7 @@ final class kl extends jt {
         return ((kl) this).field_B.get();
     }
 
-    final static ha a(int param0, java.awt.Canvas param1, d param2, int param3, int param4) {
+    final static ha a(int param0, java.awt.Canvas param1, d param2, int param3) {
         RuntimeException var5 = null;
         qa stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;

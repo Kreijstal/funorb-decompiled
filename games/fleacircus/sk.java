@@ -195,12 +195,15 @@ final class sk implements Runnable {
 
     final static void a(int param0, String param1) {
         if (param0 != 0) {
-            return;
+          return;
+        } else {
+          int discarded$2 = -66;
+          System.out.println("Error: " + tj.a("%0a", param1, "\n"));
+          return;
         }
-        System.out.println("Error: " + tj.a("%0a", param1, "\n", (byte) -66));
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -314,7 +317,7 @@ final class sk implements Runnable {
         }
     }
 
-    final static java.awt.Container a(byte param0) {
+    final static java.awt.Container a() {
         if (!(cb.field_t == null)) {
             return (java.awt.Container) (Object) cb.field_t;
         }
@@ -331,18 +334,15 @@ final class sk implements Runnable {
         }
     }
 
-    final static void a(int param0, qc param1, int param2, int param3, qc param4, int param5) {
-        id.field_c = param5;
-        if (param3 != 443) {
-            return;
-        }
+    final static void a(int param0, qc param1, int param2, int param3, qc param4) {
+        id.field_c = 2;
         try {
-            ae.field_c = param2;
-            ge.field_h = param0;
+            ae.field_c = 8;
+            ge.field_h = 8;
             qg.field_b = param1;
             ub.field_a = param4;
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "sk.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "sk.F(" + 8 + 44 + (param1 != null ? "{...}" : "null") + 44 + 8 + 44 + 443 + 44 + (param4 != null ? "{...}" : "null") + 44 + 2 + 41);
         }
     }
 

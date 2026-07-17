@@ -297,9 +297,6 @@ final class pi {
         lc.field_r = 1;
         dm.field_a = param2;
         da.field_B = param0;
-        if (param1 != 19741) {
-            field_g = null;
-        }
     }
 
     private pi(ge param0, vl param1, java.math.BigInteger param2, java.math.BigInteger param3) {

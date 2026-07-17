@@ -6,7 +6,7 @@ final class to extends rqa {
     static String[] field_p;
     static String field_q;
 
-    public static void a(int param0) {
+    public static void a() {
         field_p = null;
         field_o = null;
         field_q = null;

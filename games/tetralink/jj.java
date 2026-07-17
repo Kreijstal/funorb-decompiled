@@ -7,14 +7,14 @@ final class jj {
     static String field_c;
     static String[] field_d;
 
-    final static void a(int param0, int param1, oh[] param2, byte param3) {
+    final static void a(int param0, int param1, oh[] param2) {
         try {
             qm.field_b = new ve(param2);
-            nc.field_d = param1;
-            fa.field_d = param0;
+            nc.field_d = 12;
+            fa.field_d = 14;
             em.c(54);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "jj.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + -88 + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "jj.A(" + 14 + 44 + 12 + 44 + (param2 != null ? "{...}" : "null") + 44 + -88 + 41);
         }
     }
 
@@ -26,15 +26,15 @@ final class jj {
         }
     }
 
-    final static void a(int param0, jb param1, jb param2, int param3) {
+    final static void a(int param0, jb param1, jb param2) {
         try {
-            uf.field_f = param0;
+            uf.field_f = 480;
             dk.field_d = param1;
             cf.field_o = param2;
             rk.a(ra.field_e / 2, -33, ra.field_f / 2);
             gd.a(param2.field_u + param2.field_K, false, param1.field_K + param1.field_u, param1.field_u, param2.field_u);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "jj.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + 2 + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "jj.B(" + 480 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + 2 + 41);
         }
     }
 

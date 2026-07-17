@@ -82,7 +82,7 @@ final class a extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    final static String a(int param0, String param1, byte param2) {
+    final static String a(int param0, String param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         nk var5 = null;
@@ -94,64 +94,58 @@ final class a extends java.awt.Canvas implements java.awt.event.FocusListener {
         String stackIn_16_0 = null;
         String stackIn_19_0 = null;
         Object stackIn_22_0 = null;
-        Object stackIn_24_0 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        String stackIn_28_2 = null;
+        String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         String stackOut_2_0 = null;
         String stackOut_12_0 = null;
-        Object stackOut_23_0 = null;
         Object stackOut_21_0 = null;
         String stackOut_18_0 = null;
         String stackOut_15_0 = null;
         String stackOut_8_0 = null;
         String stackOut_5_0 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
         RuntimeException stackOut_25_0 = null;
         StringBuilder stackOut_25_1 = null;
-        RuntimeException stackOut_27_0 = null;
-        StringBuilder stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
+        String stackOut_25_2 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
         try {
           L0: {
             var6 = (CharSequence) (Object) param1;
-            if (!ed.a(var6, 21257)) {
+            int discarded$17 = 21257;
+            if (!ed.a(var6)) {
               stackOut_2_0 = qj.field_a;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0;
             } else {
               if (!qd.a((byte) 13, param1)) {
                 if (ld.field_g == 2) {
-                  if (va.a(param1, -19554)) {
+                  int discarded$18 = -19554;
+                  if (va.a(param1)) {
                     stackOut_12_0 = oc.a(dh.field_g, new String[1], (byte) -94);
                     stackIn_13_0 = stackOut_12_0;
                     return stackIn_13_0;
                   } else {
                     if (wc.field_v < 100) {
                       if (!ah.a(param1, -52)) {
-                        if (param2 == 64) {
-                          var5 = qn.field_U;
-                          var5.f(param0, param2 + -165);
-                          var5.field_l = var5.field_l + 1;
-                          var4 = var5.field_l;
-                          var5.c(2, (byte) 68);
-                          var5.a(-121, param1);
-                          var5.a(-var4 + var5.field_l, -1);
-                          stackOut_23_0 = null;
-                          stackIn_24_0 = stackOut_23_0;
-                          break L0;
-                        } else {
-                          stackOut_21_0 = null;
-                          stackIn_22_0 = stackOut_21_0;
-                          return (String) (Object) stackIn_22_0;
-                        }
+                        var5 = qn.field_U;
+                        var5.f(param0, -101);
+                        var5.field_l = var5.field_l + 1;
+                        var4 = var5.field_l;
+                        var5.c(2, (byte) 68);
+                        var5.a(-121, param1);
+                        var5.a(-var4 + var5.field_l, -1);
+                        stackOut_21_0 = null;
+                        stackIn_22_0 = stackOut_21_0;
+                        break L0;
                       } else {
                         stackOut_18_0 = oc.a(mf.field_B, new String[1], (byte) -85);
                         stackIn_19_0 = stackOut_18_0;
@@ -179,33 +173,33 @@ final class a extends java.awt.Canvas implements java.awt.event.FocusListener {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_25_0 = (RuntimeException) var3;
-            stackOut_25_1 = new StringBuilder().append("a.E(").append(param0).append(44);
-            stackIn_27_0 = stackOut_25_0;
-            stackIn_27_1 = stackOut_25_1;
-            stackIn_26_0 = stackOut_25_0;
-            stackIn_26_1 = stackOut_25_1;
+            stackOut_23_0 = (RuntimeException) var3;
+            stackOut_23_1 = new StringBuilder().append("a.E(").append(param0).append(44);
+            stackIn_25_0 = stackOut_23_0;
+            stackIn_25_1 = stackOut_23_1;
+            stackIn_24_0 = stackOut_23_0;
+            stackIn_24_1 = stackOut_23_1;
             if (param1 == null) {
-              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
-              stackOut_27_2 = "null";
-              stackIn_28_0 = stackOut_27_0;
-              stackIn_28_1 = stackOut_27_1;
-              stackIn_28_2 = stackOut_27_2;
+              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_2 = "null";
+              stackIn_26_0 = stackOut_25_0;
+              stackIn_26_1 = stackOut_25_1;
+              stackIn_26_2 = stackOut_25_2;
               break L1;
             } else {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
-              stackOut_26_2 = "{...}";
-              stackIn_28_0 = stackOut_26_0;
-              stackIn_28_1 = stackOut_26_1;
-              stackIn_28_2 = stackOut_26_2;
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "{...}";
+              stackIn_26_0 = stackOut_24_0;
+              stackIn_26_1 = stackOut_24_1;
+              stackIn_26_2 = stackOut_24_2;
               break L1;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 44 + param2 + 41);
+          throw fk.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + 64 + 41);
         }
-        return (String) (Object) stackIn_24_0;
+        return (String) (Object) stackIn_22_0;
     }
 
     final static aj a(String[] args, int param1) {
@@ -281,7 +275,7 @@ final class a extends java.awt.Canvas implements java.awt.event.FocusListener {
         field_a = null;
     }
 
-    final static java.awt.Container a(byte param0) {
+    final static java.awt.Container a() {
         if (lk.field_a != null) {
             return (java.awt.Container) (Object) lk.field_a;
         }
@@ -410,11 +404,11 @@ final class a extends java.awt.Canvas implements java.awt.event.FocusListener {
     final static void a(int param0, java.awt.Component param1) {
         try {
             param1.setFocusTraversalKeysEnabled(false);
-            int var2_int = 15 / ((param0 - 36) / 59);
+            int var2_int = 15;
             param1.addKeyListener((java.awt.event.KeyListener) (Object) lg.field_d);
             param1.addFocusListener((java.awt.event.FocusListener) (Object) lg.field_d);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "a.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "a.A(" + 102 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

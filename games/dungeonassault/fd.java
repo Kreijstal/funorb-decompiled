@@ -6,7 +6,7 @@ final class fd {
     static String field_a;
     int field_c;
 
-    final static gj b(byte param0) {
+    final static gj b() {
         return (gj) (Object) new fg();
     }
 
@@ -26,29 +26,13 @@ final class fd {
               break L0;
             }
           }
-          L1: {
-            if (param0 >= 24) {
-              break L1;
-            } else {
-              field_a = null;
-              break L1;
-            }
-          }
           return;
         } else {
-          L2: {
-            if (param0 >= 24) {
-              break L2;
-            } else {
-              field_a = null;
-              break L2;
-            }
-          }
           return;
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
     }

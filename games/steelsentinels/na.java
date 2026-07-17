@@ -84,7 +84,8 @@ final class na {
                 }
               } else {
                 if (var2 != 1) {
-                  sj.a("LR1: " + ci.a((byte) 94), -102, (Throwable) null);
+                  int discarded$1 = 94;
+                  sj.a("LR1: " + ci.a(), -102, (Throwable) null);
                   pm.m(83);
                   break L1;
                 } else {
@@ -247,7 +248,7 @@ final class na {
         var3.d(param2, 47);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_v = null;
         field_q = null;
         field_h = null;
@@ -257,7 +258,7 @@ final class na {
         field_u = null;
     }
 
-    final static boolean a(java.applet.Applet param0, int param1) {
+    final static boolean a(java.applet.Applet param0) {
         try {
             String var2 = null;
             Throwable var2_ref = null;
@@ -332,7 +333,7 @@ final class na {
                             var2 = "tuhstatbut";
                             var3 = (String) hn.a(param0, (byte) -96, "getcookies");
                             var4 = ka.a(';', false, var3);
-                            var5 = param1;
+                            var5 = 0;
                             statePc = 5;
                             continue stateLoop;
                         } catch (Throwable stateCaught_4) {
@@ -498,7 +499,7 @@ final class na {
                         continue stateLoop;
                     }
                     case 20: {
-                        throw ci.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param1 + 41);
+                        throw ci.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + 0 + 41);
                     }
                     default: throw new IllegalStateException("invalid CFG state " + statePc);
                 }

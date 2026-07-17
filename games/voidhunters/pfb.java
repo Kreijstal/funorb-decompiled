@@ -28,7 +28,7 @@ final class pfb {
         int var1 = 77 / ((62 - param0) / 56);
     }
 
-    private final void a(int param0, Object param1, long param2, int param3) {
+    private final void a(int param0, Object param1, long param2) {
         is var6 = null;
         ska var6_ref = null;
         int var7 = VoidHunters.field_G;
@@ -39,7 +39,8 @@ final class pfb {
         ((pfb) this).field_d = ((pfb) this).field_d - 1;
         while (0 > ((pfb) this).field_d) {
             var6 = (is) (Object) ((pfb) this).field_b.a(-7481);
-            this.a(var6, -17173);
+            int discarded$0 = -17173;
+            this.a(var6);
         }
         if (param0 > -43) {
             return;
@@ -63,7 +64,8 @@ final class pfb {
             if (param2 != -117) {
                 pfb.a(-73);
             }
-            this.a(param2 ^ 20, param0, param1, 1);
+            int discarded$0 = 1;
+            this.a(param2 ^ 20, param0, param1);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "pfb.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
@@ -114,12 +116,13 @@ final class pfb {
             } else {
               L1: {
                 if (!var3_ref.e((byte) 74)) {
-                  long fieldTemp$2 = var3_ref.field_i + 1L;
+                  long fieldTemp$4 = var3_ref.field_i + 1L;
                   var3_ref.field_i = var3_ref.field_i + 1L;
-                  if ((long)param1 < fieldTemp$2) {
+                  if ((long)param1 < fieldTemp$4) {
                     var4 = new bna(var3_ref.a(122), var3_ref.field_k);
                     ((pfb) this).field_c.a((ksa) (Object) var4, 0, var3_ref.field_b);
-                    gbb.a((fh) (Object) var4, (fh) (Object) var3_ref, (byte) -68);
+                    int discarded$5 = -68;
+                    gbb.a((fh) (Object) var4, (fh) (Object) var3_ref);
                     var3_ref.b(-3846);
                     var3_ref.d((byte) -35);
                     break L1;
@@ -150,12 +153,13 @@ final class pfb {
             } else {
               L3: {
                 if (!var3_ref.e((byte) 74)) {
-                  long fieldTemp$3 = var3_ref.field_i + 1L;
+                  long fieldTemp$6 = var3_ref.field_i + 1L;
                   var3_ref.field_i = var3_ref.field_i + 1L;
-                  if ((long)param1 < fieldTemp$3) {
+                  if ((long)param1 < fieldTemp$6) {
                     var4 = new bna(var3_ref.a(122), var3_ref.field_k);
                     ((pfb) this).field_c.a((ksa) (Object) var4, 0, var3_ref.field_b);
-                    gbb.a((fh) (Object) var4, (fh) (Object) var3_ref, (byte) -68);
+                    int discarded$7 = -68;
+                    gbb.a((fh) (Object) var4, (fh) (Object) var3_ref);
                     var3_ref.b(-3846);
                     var3_ref.d((byte) -35);
                     break L3;
@@ -271,7 +275,7 @@ final class pfb {
         }
     }
 
-    private final void a(is param0, int param1) {
+    private final void a(is param0) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -333,17 +337,9 @@ final class pfb {
     }
 
     private final void a(int param0, long param1) {
-        is var4 = null;
-        if (param0 >= -66) {
-          ((pfb) this).a((Object) null, 32L, (byte) 24);
-          var4 = (is) (Object) ((pfb) this).field_c.a((byte) -112, param1);
-          this.a(var4, -17173);
-          return;
-        } else {
-          var4 = (is) (Object) ((pfb) this).field_c.a((byte) -112, param1);
-          this.a(var4, -17173);
-          return;
-        }
+        is var4 = (is) (Object) ((pfb) this).field_c.a((byte) -112, param1);
+        int discarded$0 = -17173;
+        this.a(var4);
     }
 
     private pfb(int param0, int param1) {

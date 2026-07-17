@@ -72,169 +72,128 @@ final class fj extends ok {
     }
 
     final static int b(int param0, int param1) {
-        int stackIn_7_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_21_0 = 0;
-        int stackIn_33_0 = 0;
-        int stackIn_47_0 = 0;
-        int stackOut_46_0 = 0;
-        int stackOut_45_0 = 0;
-        int stackOut_32_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_19_0 = 0;
-        int stackOut_11_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_18_0 = 0;
+        int stackIn_24_0 = 0;
+        int stackIn_37_0 = 0;
+        int stackOut_36_0 = 0;
+        int stackOut_35_0 = 0;
+        int stackOut_23_0 = 0;
+        int stackOut_22_0 = 0;
+        int stackOut_17_0 = 0;
+        int stackOut_16_0 = 0;
         int stackOut_10_0 = 0;
-        int stackOut_6_0 = 0;
+        int stackOut_9_0 = 0;
         int stackOut_5_0 = 0;
-        if (param0 == -48) {
-          L0: {
-            if (param1 < 48) {
-              break L0;
-            } else {
-              if (57 < param1) {
+        int stackOut_4_0 = 0;
+        if (param1 >= 48) {
+          if (57 >= param1) {
+            return -48 + param1;
+          } else {
+            L0: {
+              if (param1 < 97) {
                 break L0;
               } else {
-                return -48 + param1;
+                if (param1 > 122) {
+                  break L0;
+                } else {
+                  return -87 - -param1;
+                }
               }
             }
-          }
-          L1: {
-            if (param1 < 97) {
-              break L1;
-            } else {
-              if (param1 > 122) {
+            L1: {
+              if (65 > param1) {
                 break L1;
               } else {
-                return -87 - -param1;
+                if (param1 > 90) {
+                  break L1;
+                } else {
+                  return 36 - (65 + -param1);
+                }
               }
             }
-          }
-          L2: {
-            if (65 > param1) {
-              break L2;
-            } else {
-              if (param1 > 90) {
+            L2: {
+              if (param1 != 43) {
+                stackOut_36_0 = 63;
+                stackIn_37_0 = stackOut_36_0;
                 break L2;
               } else {
-                return 36 - (65 + -param1);
+                stackOut_35_0 = 62;
+                stackIn_37_0 = stackOut_35_0;
+                break L2;
               }
             }
+            return stackIn_37_0;
           }
-          L3: {
-            if (param1 != 43) {
-              stackOut_46_0 = 63;
-              stackIn_47_0 = stackOut_46_0;
-              break L3;
-            } else {
-              stackOut_45_0 = 62;
-              stackIn_47_0 = stackOut_45_0;
-              break L3;
-            }
-          }
-          return stackIn_47_0;
         } else {
-          fj.e((byte) -76);
-          if (param1 >= 48) {
-            if (57 >= param1) {
-              return -48 + param1;
-            } else {
-              L4: {
-                if (param1 < 97) {
-                  break L4;
-                } else {
-                  if (param1 > 122) {
-                    break L4;
-                  } else {
-                    return -87 - -param1;
-                  }
-                }
-              }
-              L5: {
-                if (65 > param1) {
-                  break L5;
-                } else {
-                  if (param1 > 90) {
-                    break L5;
-                  } else {
-                    return 36 - (65 + -param1);
-                  }
-                }
-              }
-              L6: {
-                if (param1 != 43) {
-                  stackOut_32_0 = 63;
-                  stackIn_33_0 = stackOut_32_0;
-                  break L6;
-                } else {
-                  stackOut_31_0 = 62;
-                  stackIn_33_0 = stackOut_31_0;
-                  break L6;
-                }
-              }
-              return stackIn_33_0;
-            }
-          } else {
-            if (param1 >= 97) {
-              if (param1 <= 122) {
-                return -87 - -param1;
-              } else {
-                L7: {
-                  if (65 > param1) {
-                    break L7;
-                  } else {
-                    if (param1 > 90) {
-                      break L7;
-                    } else {
-                      return 36 - (65 + -param1);
-                    }
-                  }
-                }
-                L8: {
-                  if (param1 != 43) {
-                    stackOut_20_0 = 63;
-                    stackIn_21_0 = stackOut_20_0;
-                    break L8;
-                  } else {
-                    stackOut_19_0 = 62;
-                    stackIn_21_0 = stackOut_19_0;
-                    break L8;
-                  }
-                }
-                return stackIn_21_0;
-              }
+          if (param1 >= 97) {
+            if (param1 <= 122) {
+              return -87 - -param1;
             } else {
               if (65 <= param1) {
                 if (param1 <= 90) {
                   return 36 - (65 + -param1);
                 } else {
-                  L9: {
+                  L3: {
                     if (param1 != 43) {
-                      stackOut_11_0 = 63;
-                      stackIn_12_0 = stackOut_11_0;
-                      break L9;
+                      stackOut_23_0 = 63;
+                      stackIn_24_0 = stackOut_23_0;
+                      break L3;
                     } else {
-                      stackOut_10_0 = 62;
-                      stackIn_12_0 = stackOut_10_0;
-                      break L9;
+                      stackOut_22_0 = 62;
+                      stackIn_24_0 = stackOut_22_0;
+                      break L3;
                     }
                   }
-                  return stackIn_12_0;
+                  return stackIn_24_0;
                 }
               } else {
-                L10: {
+                L4: {
                   if (param1 != 43) {
-                    stackOut_6_0 = 63;
-                    stackIn_7_0 = stackOut_6_0;
-                    break L10;
+                    stackOut_17_0 = 63;
+                    stackIn_18_0 = stackOut_17_0;
+                    break L4;
                   } else {
-                    stackOut_5_0 = 62;
-                    stackIn_7_0 = stackOut_5_0;
-                    break L10;
+                    stackOut_16_0 = 62;
+                    stackIn_18_0 = stackOut_16_0;
+                    break L4;
                   }
                 }
-                return stackIn_7_0;
+                return stackIn_18_0;
               }
+            }
+          } else {
+            if (65 <= param1) {
+              if (param1 <= 90) {
+                return 36 - (65 + -param1);
+              } else {
+                L5: {
+                  if (param1 != 43) {
+                    stackOut_10_0 = 63;
+                    stackIn_11_0 = stackOut_10_0;
+                    break L5;
+                  } else {
+                    stackOut_9_0 = 62;
+                    stackIn_11_0 = stackOut_9_0;
+                    break L5;
+                  }
+                }
+                return stackIn_11_0;
+              }
+            } else {
+              L6: {
+                if (param1 != 43) {
+                  stackOut_5_0 = 63;
+                  stackIn_6_0 = stackOut_5_0;
+                  break L6;
+                } else {
+                  stackOut_4_0 = 62;
+                  stackIn_6_0 = stackOut_4_0;
+                  break L6;
+                }
+              }
+              return stackIn_6_0;
             }
           }
         }
@@ -713,40 +672,32 @@ final class fj extends ok {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_8_0 = 0;
+        int stackIn_7_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_7_0 = 0;
-        int stackOut_2_0 = 0;
+        int stackOut_6_0 = 0;
         var4 = TrackController.field_F ? 1 : 0;
         try {
           L0: {
-            if (param1 == 1) {
-              var3_int = 0;
-              L1: while (true) {
-                if (param0 <= 0) {
-                  stackOut_7_0 = var3_int;
-                  stackIn_8_0 = stackOut_7_0;
-                  break L0;
-                } else {
-                  var3_int = var3_int << 1 | param2 & 1;
-                  param2 = param2 >>> 1;
-                  param0--;
-                  continue L1;
-                }
+            var3_int = 0;
+            L1: while (true) {
+              if (param0 <= 0) {
+                stackOut_6_0 = var3_int;
+                stackIn_7_0 = stackOut_6_0;
+                break L0;
+              } else {
+                var3_int = var3_int << 1 | param2 & 1;
+                param2 = param2 >>> 1;
+                param0--;
+                continue L1;
               }
-            } else {
-              stackOut_2_0 = -24;
-              stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) var3, "fj.C(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw sl.a((Throwable) (Object) var3, "fj.C(" + param0 + 44 + 1 + 44 + param2 + 41);
         }
-        return stackIn_8_0;
+        return stackIn_7_0;
     }
 
     static {

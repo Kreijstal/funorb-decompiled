@@ -22,7 +22,8 @@ final class no extends td {
             if (param3 == null) {
                 var9.b(param0, -127);
             } else {
-                int discarded$0 = nu.a(param3, (lu) (Object) var9, -21840);
+                int discarded$0 = -21840;
+                int discarded$1 = nu.a(param3, (lu) (Object) var9);
             }
             var9.b((byte) -38, -var7 + var9.field_g);
         } catch (RuntimeException runtimeException) {

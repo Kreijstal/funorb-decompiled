@@ -12,7 +12,7 @@ final class ve extends ej {
     static int[] field_V;
     private boolean field_U;
 
-    public static void f(boolean param0) {
+    public static void f() {
         field_N = null;
         field_V = null;
         field_O = null;

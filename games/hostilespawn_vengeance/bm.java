@@ -18,7 +18,7 @@ final class bm {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_g = null;
         field_b = null;
@@ -58,7 +58,7 @@ final class bm {
               } else {
                 var4 = (CharSequence) (Object) var2;
                 if (l.a(var4, (byte) 93) != 0L) {
-                  var3 = 82 / ((-27 - param0) / 48);
+                  var3 = 82;
                   break L0;
                 } else {
                   break L1;
@@ -72,7 +72,7 @@ final class bm {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) runtimeException;
-            stackOut_6_1 = new StringBuilder().append("bm.B(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("bm.B(").append(-113).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;

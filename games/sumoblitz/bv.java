@@ -7,7 +7,7 @@ final class bv implements mh {
     private int field_d;
     private vn field_c;
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
     }
 

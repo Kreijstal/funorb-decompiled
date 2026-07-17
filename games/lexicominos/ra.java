@@ -7,7 +7,7 @@ final class ra extends java.awt.Canvas implements java.awt.event.FocusListener {
     static byte[] field_a;
     java.awt.Frame field_b;
 
-    final static void a(int param0, int param1, int param2) {
+    final static void a() {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -19,7 +19,7 @@ final class ra extends java.awt.Canvas implements java.awt.event.FocusListener {
           return;
         } else {
           L0: {
-            var3 = -135 + param0;
+            var3 = 185;
             var4 = 205;
             var5 = 256;
             if (mc.field_k < 75) {
@@ -37,13 +37,14 @@ final class ra extends java.awt.Canvas implements java.awt.event.FocusListener {
               break L1;
             }
           }
-          de.a(be.field_d, param1 ^ 144);
+          de.a(be.field_d, 6);
           k.b();
           lf.a();
-          rg.b(0);
+          int discarded$1 = 0;
+          rg.b();
           if (var5 >= 256) {
-            pd.a(param1 ^ -22835);
-            if (param1 <= mc.field_k) {
+            pd.a(-22949);
+            if (150 <= mc.field_k) {
               nc.field_n.b(var3 + 15, var4 + 10, var5);
               var6 = mc.field_k - 125;
               if (var6 > 0) {
@@ -247,8 +248,8 @@ final class ra extends java.awt.Canvas implements java.awt.event.FocusListener {
           } else {
             L20: {
               lf.c(0, 0, lf.field_f, lf.field_a, 0, -var5 + 256);
-              pd.a(param1 ^ -22835);
-              if (param1 <= mc.field_k) {
+              pd.a(-22949);
+              if (150 <= mc.field_k) {
                 nc.field_n.b(var3 + 15, var4 + 10, var5);
                 break L20;
               } else {
@@ -325,7 +326,7 @@ final class ra extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_c = null;
     }
@@ -425,7 +426,7 @@ final class ra extends java.awt.Canvas implements java.awt.event.FocusListener {
             oc.field_a[pf.field_o] = param0;
             hl.field_N[pf.field_o] = param3;
             var6 = param3 + (param0 + param5);
-            if (param1 == var6) {
+            if (0 == var6) {
               stackOut_22_0 = 0;
               stackIn_23_0 = stackOut_22_0;
               break L1;
@@ -476,7 +477,7 @@ final class ra extends java.awt.Canvas implements java.awt.event.FocusListener {
             oc.field_a[pf.field_o] = param0;
             hl.field_N[pf.field_o] = param3;
             var6 = param3 + (param0 + param5);
-            if (param1 == var6) {
+            if (0 == var6) {
               stackOut_6_0 = 0;
               stackIn_7_0 = stackOut_6_0;
               break L5;

@@ -7,33 +7,33 @@ final class oa {
     static Calendar field_a;
     static hd field_b;
 
-    final static void b(int param0) {
-        ee.b((byte) -25);
-        aq.c((byte) -125);
-        if (param0 != -23217) {
-            field_a = null;
-        }
+    final static void b() {
+        int discarded$0 = -25;
+        ee.b();
+        int discarded$1 = -125;
+        aq.c();
     }
 
-    final static ut a(boolean param0, int param1, byte param2) {
+    final static ut a(boolean param0) {
         int var8 = 0;
         int var9 = Kickabout.field_G;
         kg[] var10 = ph.field_e[!param0 ? 3 : 1];
         kg[] var11 = var10;
         int var4 = var10[0].field_a;
         int[] var5 = new int[]{var10[0].field_i, var10[1].field_i, var10[2].field_i};
-        ut var6 = new ut(var5[1] * param1 + var5[0] + var5[2], var4);
+        ut var6 = new ut(var5[1] * 11 + var5[0] + var5[2], var4);
         iw.a(-122, var6);
         int var7 = 0;
         var10[0].a(var7, 0);
         var7 = var7 + var5[0];
-        for (var8 = 0; param1 > var8; var8++) {
+        for (var8 = 0; var8 < 11; var8++) {
             var10[1].a(var7, 0);
             var7 = var7 + var5[1];
         }
         var11[2].a(var7, 0);
         ta.e(122);
-        pd.a(var6, 20684);
+        int discarded$0 = 20684;
+        pd.a(var6);
         return var6;
     }
 
@@ -66,12 +66,9 @@ final class oa {
 
     final static void a(boolean param0, hc param1) {
         try {
-            if (param0) {
-                field_a = null;
-            }
             sn.field_g.insertElementAt((Object) (Object) param1, 0);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "oa.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "oa.F(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

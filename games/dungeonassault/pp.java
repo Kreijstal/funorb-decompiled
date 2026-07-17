@@ -185,16 +185,13 @@ final class pp extends rj {
         try {
             ((pp) this).field_z = param1;
             ((pp) this).field_B = param1;
-            if (param0 != -66) {
-                ((pp) this).field_D = true;
-            }
             super.a(false, ((pp) this).field_B.field_y, ((pp) this).field_B.field_v);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "pp.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "pp.B(" + -66 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_F = null;
         field_E = null;
         field_K = null;

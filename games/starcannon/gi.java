@@ -11,20 +11,10 @@ final class gi {
     static boolean field_g;
 
     final static hl[] a(int param0, int param1) {
-        hl[] var2 = null;
-        hl[] var3 = null;
-        if (param0 != 4477) {
-          field_g = false;
-          var3 = new hl[9];
-          var2 = var3;
-          var3[4] = oj.a(0, param1, 64);
-          return var2;
-        } else {
-          var3 = new hl[9];
-          var2 = var3;
-          var3[4] = oj.a(0, param1, 64);
-          return var2;
-        }
+        hl[] var3 = new hl[9];
+        hl[] var2 = var3;
+        var3[4] = oj.a(0, param1, 64);
+        return var2;
     }
 
     final static void a(int param0) {
@@ -49,7 +39,9 @@ final class gi {
             bi.field_a.field_B[var3] = var5 << 1;
         }
         jj.field_A.e();
-        sc.a(3, bi.field_a.field_B, 3, 30603);
+        int discarded$20 = 30603;
+        int discarded$22 = 3;
+        sc.a(3, bi.field_a.field_B);
         hg.field_y.b(33);
         if (param0 != 4) {
             return;
@@ -61,7 +53,7 @@ final class gi {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_f = null;
         field_c = null;
         field_b = null;

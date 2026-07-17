@@ -5,7 +5,7 @@ final class qk extends wh {
     static String field_H;
     static String field_G;
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_H = null;
         field_G = null;
     }
@@ -80,7 +80,7 @@ final class qk extends wh {
         }
     }
 
-    final static void d(int param0, int param1, int param2) {
+    final static void d(int param0, int param1) {
         mi var3 = uh.field_Wb;
         var3.j(param1, 122);
         var3.f(3, 122);

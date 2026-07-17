@@ -8,7 +8,7 @@ final class qq extends dh implements op {
     static String field_Q;
     static vn field_R;
 
-    public static void l(int param0) {
+    public static void l() {
         field_R = null;
         field_Q = null;
     }
@@ -23,10 +23,8 @@ final class qq extends dh implements op {
     }
 
     final static boolean b(int param0, int param1, int param2) {
-        if (param2 >= -6) {
-            return true;
-        }
-        return wn.a(param0, param1, -107) & tf.a(param1, -2626, param0);
+        int discarded$0 = -107;
+        return wn.a(param0, param1) & tf.a(param1, -2626, param0);
     }
 
     public final v a(int param0) {
@@ -57,72 +55,64 @@ final class qq extends dh implements op {
     final static dj a(int param0, mf param1) {
         dj var2 = null;
         RuntimeException var2_ref = null;
-        dj stackIn_3_0 = null;
+        dj stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        dj stackOut_2_0 = null;
+        dj stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              if (param0 == 18416) {
-                break L1;
-              } else {
-                boolean discarded$2 = qq.b(-31, 81, 66);
-                break L1;
-              }
-            }
             var2 = new dj(param1, (ms) (Object) param1);
             jf.field_c.a((ms) (Object) var2, (byte) 39);
             sj.field_c.b((hj) (Object) param1);
-            stackOut_2_0 = (dj) var2;
-            stackIn_3_0 = stackOut_2_0;
+            stackOut_0_0 = (dj) var2;
+            stackIn_1_0 = stackOut_0_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var2_ref = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2_ref;
-            stackOut_4_1 = new StringBuilder().append("qq.C(").append(param0).append(44);
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackOut_2_0 = (RuntimeException) var2_ref;
+            stackOut_2_1 = new StringBuilder().append("qq.C(").append(18416).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L2;
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L2;
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw qo.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
         }
-        return stackIn_3_0;
+        return stackIn_1_0;
     }
 
     qq(String param0, qm param1, int param2) {
@@ -134,10 +124,12 @@ final class qq extends dh implements op {
           if (((qq) this).field_t != null) {
             if (param0 != -6696) {
               ((qq) this).field_S = null;
-              gi.a(pi.field_e, ((qq) this).field_q - (((qq) this).field_T - ko.field_p), -95);
+              int discarded$4 = -95;
+              gi.a(pi.field_e, ((qq) this).field_q - (((qq) this).field_T - ko.field_p));
               return ((qq) this).field_t;
             } else {
-              gi.a(pi.field_e, ((qq) this).field_q - (((qq) this).field_T - ko.field_p), -95);
+              int discarded$5 = -95;
+              gi.a(pi.field_e, ((qq) this).field_q - (((qq) this).field_T - ko.field_p));
               return ((qq) this).field_t;
             }
           } else {

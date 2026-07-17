@@ -37,7 +37,7 @@ final class oc {
     byte[][] field_v;
     private static String field_H;
 
-    final static void a(byte param0) {
+    final static void a() {
         qa.field_J = null;
         kh.field_i = null;
         gf.field_o = null;

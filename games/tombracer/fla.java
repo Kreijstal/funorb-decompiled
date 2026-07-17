@@ -133,7 +133,7 @@ final class fla extends vg {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
     }
 

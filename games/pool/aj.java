@@ -225,7 +225,7 @@ final class aj extends vh {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_Ob = null;
         field_Sb = null;
         field_Mb = null;
@@ -234,9 +234,6 @@ final class aj extends vh {
     }
 
     final static int a(boolean param0, int param1, int param2) {
-        if (!param0) {
-            return -93;
-        }
         int var3 = param2 >> 31 & -1 + param1;
         return (param2 - -(param2 >>> 31)) % param1 - -var3;
     }
@@ -392,9 +389,6 @@ final class aj extends vh {
             try {
                 om.field_y = param2;
                 try {
-                    if (param1 != -18788) {
-                        field_Sb = null;
-                    }
                     var3 = param0.getParameter("cookieprefix");
                     var5 = var3;
                     var5 = var3;
@@ -405,12 +399,13 @@ final class aj extends vh {
                     if (param2.length() == 0) {
                         var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
                     }
-                    mo.a("document.cookie=\"" + var5 + "\"", param0, (byte) 35);
+                    int discarded$0 = 35;
+                    mo.a("document.cookie=\"" + var5 + "\"", param0);
                 } catch (Throwable throwable) {
                 }
                 uk.a(558370049, param0);
             } catch (RuntimeException runtimeException) {
-                throw wm.a((Throwable) (Object) runtimeException, "aj.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+                throw wm.a((Throwable) (Object) runtimeException, "aj.D(" + (param0 != null ? "{...}" : "null") + 44 + -18788 + 44 + (param2 != null ? "{...}" : "null") + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -430,7 +425,7 @@ final class aj extends vh {
               break L0;
             } else {
               var3 = null;
-              ml discarded$8 = aj.a((java.applet.Applet) null, 1);
+              ml discarded$13 = aj.a((java.applet.Applet) null, 1);
               break L0;
             }
           }
@@ -439,7 +434,7 @@ final class aj extends vh {
               break L1;
             } else {
               if (((aj) this).field_Nb.length() > 0) {
-                StringBuilder discarded$9 = cj.a(' ', ((aj) this).field_Nb.length() + -1, -2790, ((aj) this).field_Nb);
+                StringBuilder discarded$14 = cj.a(' ', ((aj) this).field_Nb.length() + -1, -2790, ((aj) this).field_Nb);
                 break L1;
               } else {
                 break L1;
@@ -464,7 +459,7 @@ final class aj extends vh {
                   break L4;
                 } else {
                   if (((aj) this).field_Nb.length() > 0) {
-                    StringBuilder discarded$10 = ((aj) this).field_Nb.append(var2);
+                    StringBuilder discarded$15 = ((aj) this).field_Nb.append(var2);
                     break L4;
                   } else {
                     break L4;
@@ -472,7 +467,8 @@ final class aj extends vh {
                 }
               }
               L5: {
-                if (vq.a((char) var2, 22987)) {
+                int discarded$16 = 22987;
+                if (vq.a((char) var2)) {
                   break L5;
                 } else {
                   if (!kh.a((char) var2, (byte) 85)) {
@@ -482,7 +478,7 @@ final class aj extends vh {
                   }
                 }
               }
-              StringBuilder discarded$11 = ((aj) this).field_Nb.append(var2);
+              StringBuilder discarded$17 = ((aj) this).field_Nb.append(var2);
               break L2;
             }
           }
@@ -544,12 +540,13 @@ final class aj extends vh {
               if (param1 == 5137) {
                 break L1;
               } else {
-                int discarded$2 = aj.a(-103, false, 80);
+                int discarded$4 = aj.a(-103, false, 80);
                 break L1;
               }
             }
             if (var2 != null) {
-              var3 = to.a((byte) -66);
+              int discarded$5 = -66;
+              var3 = to.a();
               var4 = 0;
               L2: while (true) {
                 if (var3.length <= var4) {
@@ -716,7 +713,7 @@ final class aj extends vh {
                       break L2;
                     } else {
                       if (((aj) this).field_Nb.length() > 0) {
-                        StringBuilder discarded$4 = cj.a(' ', -1 + ((aj) this).field_Nb.length(), -2790, ((aj) this).field_Nb);
+                        StringBuilder discarded$11 = cj.a(' ', -1 + ((aj) this).field_Nb.length(), -2790, ((aj) this).field_Nb);
                         break L2;
                       } else {
                         break L2;
@@ -725,7 +722,8 @@ final class aj extends vh {
                   }
                   L3: {
                     L4: {
-                      if (he.a(ml.field_b, (CharSequence) (Object) ((aj) this).field_Nb, 15692)) {
+                      int discarded$12 = 15692;
+                      if (he.a(ml.field_b, (CharSequence) (Object) ((aj) this).field_Nb)) {
                         break L4;
                       } else {
                         L5: {
@@ -757,7 +755,7 @@ final class aj extends vh {
                         }
                       }
                     }
-                    StringBuilder discarded$5 = ((aj) this).field_Nb.append(ml.field_b);
+                    StringBuilder discarded$13 = ((aj) this).field_Nb.append(ml.field_b);
                     break L3;
                   }
                   if (qi.field_a == 84) {

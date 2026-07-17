@@ -74,7 +74,7 @@ final class cg extends vn implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    private final synchronized void b(int param0) {
+    private final synchronized void b() {
         if (!(((cg) this).field_k != null)) {
             return;
         }
@@ -141,7 +141,7 @@ final class cg extends vn implements java.awt.image.ImageProducer, java.awt.imag
         return stackIn_1_0 != 0;
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_l = null;
     }
 
@@ -152,16 +152,19 @@ final class cg extends vn implements java.awt.image.ImageProducer, java.awt.imag
             ((cg) this).field_d = param1;
             ((cg) this).field_j = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
             ((cg) this).field_f = param2.createImage((java.awt.image.ImageProducer) this);
-            this.b(2);
-            boolean discarded$0 = param2.prepareImage(((cg) this).field_f, (java.awt.image.ImageObserver) this);
-            this.b(2);
-            boolean discarded$8 = param2.prepareImage(((cg) this).field_f, (java.awt.image.ImageObserver) this);
+            int discarded$0 = 2;
+            this.b();
+            boolean discarded$1 = param2.prepareImage(((cg) this).field_f, (java.awt.image.ImageObserver) this);
+            int discarded$2 = 2;
+            this.b();
+            boolean discarded$10 = param2.prepareImage(((cg) this).field_f, (java.awt.image.ImageObserver) this);
             if (param0 != 1018) {
                 Object var6 = null;
-                boolean discarded$9 = ((cg) this).imageUpdate((java.awt.Image) null, 84, -46, -64, -30, -50);
+                boolean discarded$11 = ((cg) this).imageUpdate((java.awt.Image) null, 84, -46, -64, -30, -50);
             }
-            this.b(2);
-            boolean discarded$10 = param2.prepareImage(((cg) this).field_f, (java.awt.image.ImageObserver) this);
+            int discarded$12 = 2;
+            this.b();
+            boolean discarded$13 = param2.prepareImage(((cg) this).field_f, (java.awt.image.ImageObserver) this);
             ((cg) this).a(param0 + -895);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) (Object) runtimeException, "cg.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
@@ -208,42 +211,31 @@ final class cg extends vn implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     final void a(int param0, int param1, int param2, java.awt.Graphics param3) {
-        this.b(2);
+        int discarded$0 = 2;
+        this.b();
         if (param1 != 0) {
             return;
         }
         try {
-            boolean discarded$0 = param3.drawImage(((cg) this).field_f, param0, param2, (java.awt.image.ImageObserver) this);
+            boolean discarded$1 = param3.drawImage(((cg) this).field_f, param0, param2, (java.awt.image.ImageObserver) this);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) (Object) runtimeException, "cg.B(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static void d(int param0) {
+    final static void d() {
         bo.field_F.l(17415);
-        if (jb.field_r != null) {
-          if (param0 != 32) {
-            field_l = null;
-            bo.field_F.b((hm) (Object) jb.field_r, 61);
-            return;
-          } else {
-            bo.field_F.b((hm) (Object) jb.field_r, 61);
-            return;
-          }
-        } else {
+        if (jb.field_r == null) {
           jb.field_r = new w(bo.field_F, dj.field_b);
-          if (param0 == 32) {
-            bo.field_F.b((hm) (Object) jb.field_r, 61);
-            return;
-          } else {
-            field_l = null;
-            bo.field_F.b((hm) (Object) jb.field_r, 61);
-            return;
-          }
+          bo.field_F.b((hm) (Object) jb.field_r, 61);
+          return;
+        } else {
+          bo.field_F.b((hm) (Object) jb.field_r, 61);
+          return;
         }
     }
 
-    final static void c(int param0) {
+    final static void c() {
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;

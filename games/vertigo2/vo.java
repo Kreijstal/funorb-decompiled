@@ -14,15 +14,15 @@ final class vo extends va {
     static String field_v;
     private er[] field_w;
 
-    final static r a(boolean param0, int param1, int param2, int param3, boolean param4, boolean param5) {
+    final static r a(boolean param0, int param1, int param2, int param3) {
         try {
             Object var6 = null;
             Object var7 = null;
             uk var8 = null;
             Object var9 = null;
-            r stackIn_17_0 = null;
+            r stackIn_15_0 = null;
             Throwable decompiledCaughtException = null;
-            r stackOut_16_0 = null;
+            r stackOut_14_0 = null;
             try {
               L0: {
                 L1: {
@@ -63,25 +63,17 @@ final class vo extends va {
                   }
                 }
                 L5: {
-                  var8 = pd.field_c.a(18162, (qh) var6, param0, param3, (qh) var7);
-                  if (!param4) {
-                    break L5;
-                  } else {
-                    var8.a((byte) 81);
-                    break L5;
-                  }
-                }
-                L6: {
+                  var8 = pd.field_c.a(18162, (qh) var6, false, param3, (qh) var7);
                   if (param1 >= 116) {
-                    break L6;
+                    break L5;
                   } else {
                     var9 = null;
                     tp discarded$2 = vo.a((String) null, 52);
-                    break L6;
+                    break L5;
                   }
                 }
-                stackOut_16_0 = new r((ab) (Object) var8, param5, param2);
-                stackIn_17_0 = stackOut_16_0;
+                stackOut_14_0 = new r((ab) (Object) var8, true, 1);
+                stackIn_15_0 = stackOut_14_0;
                 break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -89,7 +81,7 @@ final class vo extends va {
               var6 = (Object) (Object) decompiledCaughtException;
               throw new RuntimeException(((IOException) var6).toString());
             }
-            return stackIn_17_0;
+            return stackIn_15_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -101,7 +93,7 @@ final class vo extends va {
         this(2188450, 2591221, 9543);
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_v = null;
         field_u = null;
         field_C = null;
@@ -144,7 +136,8 @@ final class vo extends va {
                   if (param1 == 0) {
                     break L0;
                   } else {
-                    vo.a(true);
+                    int discarded$2 = 1;
+                    vo.a();
                     break L0;
                   }
                 }
@@ -222,7 +215,7 @@ final class vo extends va {
         ((vo) this).field_t = param0;
     }
 
-    final static void c(byte param0) {
+    final static void c() {
         int var1 = 0;
         int var2 = 0;
         var2 = Vertigo2.field_L ? 1 : 0;
@@ -233,13 +226,15 @@ final class vo extends va {
           if (0 < var1) {
             if (1 != var1) {
               eg.field_t = Vertigo2.a(new String[1], kn.field_a, 6);
-              eg.field_t = oq.a(new CharSequence[3], 86);
+              int discarded$2 = 86;
+              eg.field_t = oq.a(new CharSequence[3]);
               df.field_l.h((byte) 63);
               p.a(-33);
               return;
             } else {
               eg.field_t = ll.field_c;
-              eg.field_t = oq.a(new CharSequence[3], 86);
+              int discarded$3 = 86;
+              eg.field_t = oq.a(new CharSequence[3]);
               df.field_l.h((byte) 63);
               p.a(-33);
               return;

@@ -9,7 +9,7 @@ final class vob extends rqa {
     static boolean[] field_o;
     static int field_p;
 
-    final static int a(Random param0, byte param1) {
+    final static int a(Random param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -150,7 +150,7 @@ final class vob extends rqa {
         return stackIn_4_0;
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_q = null;
         field_o = null;
         int var1 = 0;

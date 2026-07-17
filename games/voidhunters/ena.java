@@ -7,7 +7,7 @@ final class ena extends rqa {
     static String[] field_o;
     static String field_r;
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
         field_r = null;
         field_p = null;

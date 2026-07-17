@@ -6,7 +6,7 @@ final class lb extends ana {
     static int field_v;
     private wga field_x;
 
-    private final void e(byte param0) {
+    private final void e() {
         int var2 = -120;
     }
 
@@ -22,7 +22,8 @@ final class lb extends ana {
             this.d(15084);
             return false;
         }
-        this.e((byte) -61);
+        int discarded$1 = -61;
+        this.e();
         return true;
     }
 
@@ -50,9 +51,11 @@ final class lb extends ana {
         int stackOut_5_0 = 0;
         var1 = -88 % ((0 - param0) / 39);
         if (ms.field_u == null) {
-          if (!em.d((byte) -104)) {
+          int discarded$9 = -104;
+          if (!em.d()) {
             if (wt.field_n == null) {
-              if (ng.b(92)) {
+              int discarded$10 = 92;
+              if (ng.b()) {
                 return true;
               } else {
                 return false;
@@ -79,7 +82,7 @@ final class lb extends ana {
         }
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         field_w = null;
     }
 

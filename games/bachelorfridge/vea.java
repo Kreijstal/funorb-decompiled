@@ -6,7 +6,7 @@ final class vea extends ana {
     private hla field_w;
     private taa field_v;
 
-    private final void b(boolean param0) {
+    private final void b() {
         ad var4 = null;
         int var5 = BachelorFridge.field_y;
         aga var2 = ((vea) this).field_w.field_l.a(23, ((vea) this).field_q.field_h);
@@ -43,22 +43,24 @@ final class vea extends ana {
         }
         if (!(((vea) this).field_l != 100)) {
             jja.a(256, -1, 46);
-            this.b(true);
+            int discarded$0 = 1;
+            this.b();
         }
-        int fieldTemp$0 = ((vea) this).field_l - 1;
+        int fieldTemp$1 = ((vea) this).field_l - 1;
         ((vea) this).field_l = ((vea) this).field_l - 1;
-        if (!(fieldTemp$0 < 0)) {
+        if (!(fieldTemp$1 < 0)) {
             return false;
         }
-        this.f((byte) -91);
+        int discarded$2 = -91;
+        this.f();
         return true;
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_x = null;
     }
 
-    private final void f(byte param0) {
+    private final void f() {
     }
 
     vea(gj param0, hla param1) {

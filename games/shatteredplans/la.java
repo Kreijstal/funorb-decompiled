@@ -38,7 +38,8 @@ final class la extends qo {
             ((la) this).field_p = 1;
             ((la) this).field_f = true;
             ((la) this).field_j = param3;
-            var8 = this.a(param0, param3, param1, (byte) 15);
+            int discarded$0 = 15;
+            var8 = this.a(param0, param3, param1);
             var7 = param3.c(param1);
             var8.field_b[param2] = -(var7 >> 1) + param4;
             var8.field_b[param1.length()] = param4 + (var7 >> 1);
@@ -397,7 +398,7 @@ final class la extends qo {
         }
     }
 
-    private final ha a(int param0, nq param1, String param2, byte param3) {
+    private final ha a(int param0, nq param1, String param2) {
         ha var5 = null;
         RuntimeException var5_ref = null;
         ha var6 = null;
@@ -531,7 +532,8 @@ final class la extends qo {
             if (param2 != -4) {
                 ((la) this).field_p = -108;
             }
-            var7 = this.a(param1, param0, param3, (byte) 15);
+            int discarded$0 = 15;
+            var7 = this.a(param1, param0, param3);
             var8 = var7;
             var7.field_b[0] = param4;
             var8.field_b[param3.length()] = param0.c(param3) + param4;
@@ -565,7 +567,8 @@ final class la extends qo {
             ((la) this).field_p = 2;
             ((la) this).field_g = param3;
             int var7 = 79 / ((59 - param0) / 47);
-            var9 = this.a(param1, param2, param3, (byte) 15);
+            int discarded$0 = 15;
+            var9 = this.a(param1, param2, param3);
             var10 = var9;
             var10.field_b[0] = -param2.c(param3) + param4;
             var10.field_b[param3.length()] = param4;
@@ -578,9 +581,9 @@ final class la extends qo {
     public la() {
     }
 
-    final static void a(boolean param0) {
-        Object var2 = null;
-        ce.a("", (String) null, (byte) 3);
+    final static void a() {
+        int discarded$0 = 3;
+        ce.a("", (String) null);
     }
 
     static {

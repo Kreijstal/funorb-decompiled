@@ -10,7 +10,7 @@ final class en extends IOException {
         super(param0);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 
@@ -38,7 +38,7 @@ final class en extends IOException {
         try {
           L0: {
             var3_int = 21 / ((param2 - 41) / 37);
-            stackOut_0_0 = kna.a(param0, param1, true, 24808);
+            stackOut_0_0 = kna.a(16, param1, true, 24808);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -47,7 +47,7 @@ final class en extends IOException {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("en.B(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("en.B(").append(16).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;

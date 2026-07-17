@@ -8,12 +8,12 @@ final class wkb implements dja {
     static int field_a;
     static String[] field_d;
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_d = null;
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         if (nd.field_r != -tha.field_p) {
             if (nd.field_r == -tha.field_p + 250) {
             }
@@ -26,7 +26,7 @@ final class wkb implements dja {
         return (tv) (Object) new pob();
     }
 
-    final static void a(tjb param0, int param1) {
+    final static void a(tjb param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

@@ -161,17 +161,9 @@ final class kp extends nc {
         int discarded$0 = ((fm) (Object) var2).a(vh.field_Fb, var5, var6, var3, var4, ((kp) this).field_m, ((kp) this).field_p, 1, 1, 0);
     }
 
-    public static void e(int param0) {
-        if (param0 != -29690) {
-          kp.a(69, 103, 7, true);
-          field_o = null;
-          field_n = null;
-          return;
-        } else {
-          field_o = null;
-          field_n = null;
-          return;
-        }
+    public static void e() {
+        field_o = null;
+        field_n = null;
     }
 
     static {

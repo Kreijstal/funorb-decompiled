@@ -211,7 +211,7 @@ public final class stellarshard extends rb implements cf {
         }
     }
 
-    private final void q(int param0) {
+    private final void q() {
         RuntimeException var2 = null;
         int var2_int = 0;
         RuntimeException decompiledCaughtException = null;
@@ -234,20 +234,12 @@ public final class stellarshard extends rb implements cf {
                 break L1;
               }
             }
-            L2: {
-              if (param0 == 50) {
-                break L2;
-              } else {
-                field_E = null;
-                break L2;
-              }
-            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var2, "stellarshard.VA(" + param0 + 41);
+          throw ma.a((Throwable) (Object) var2, "stellarshard.VA(" + 50 + 41);
         }
     }
 
@@ -395,12 +387,18 @@ public final class stellarshard extends rb implements cf {
                             var31 = var28 * 5 + (var27 - -1);
                             var32 = 1 + var27 + 5 * (1 + var28);
                             qa.a(uf.field_c, fd.field_qb, uc.field_a, var32, var30, var31, var21, var22, var26, var23, var24);
-                            qa.a(0, 2, var29, uf.field_c, fd.field_qb, uc.field_a, var32, var30, var31, 128, 128, 128);
+                            int discarded$6 = 128;
+                            int discarded$7 = 128;
+                            int discarded$8 = 128;
+                            qa.a(0, 2, var29, uf.field_c, fd.field_qb, uc.field_a, var32, var30, var31);
                             var30 = var27 - -(5 * var28);
                             var32 = (1 + var28) * 5 + var27;
                             var31 = (1 + var28) * 5 + (var27 + 1);
                             qa.a(uf.field_c, fd.field_qb, uc.field_a, var32, var30, var31, var21, var22, var25, var23, var26);
-                            qa.a(0, 2, var29, uf.field_c, fd.field_qb, uc.field_a, var32, var30, var31, 128, 128, 128);
+                            int discarded$9 = 128;
+                            int discarded$10 = 128;
+                            int discarded$11 = 128;
+                            qa.a(0, 2, var29, uf.field_c, fd.field_qb, uc.field_a, var32, var30, var31);
                             var28++;
                             continue L5;
                           }
@@ -506,7 +504,8 @@ public final class stellarshard extends rb implements cf {
               L2: {
                 ((stellarshard) this).b(stackIn_7_1, stackIn_7_2 != 0);
                 if (qd.field_h) {
-                  this.o(122);
+                  int discarded$10 = 122;
+                  this.o();
                   qd.field_h = false;
                   break L2;
                 } else {
@@ -520,7 +519,8 @@ public final class stellarshard extends rb implements cf {
                   if (!s.field_e.field_c) {
                     break L3;
                   } else {
-                    ke.a(4);
+                    int discarded$11 = 4;
+                    ke.a();
                     nd.a(-26621, (java.awt.Canvas) (Object) s.field_e);
                     s.field_e.a(ic.field_d, -57);
                     qd.field_j.requestFocus();
@@ -556,7 +556,8 @@ public final class stellarshard extends rb implements cf {
                         if (null == gg.field_f) {
                           if (fd.d((byte) -21)) {
                             L8: {
-                              var2_int = vd.a((byte) -61);
+                              int discarded$12 = -61;
+                              var2_int = vd.a();
                               if (var2_int == 2) {
                                 if (s.field_e != null) {
                                   nd.a(-26621, (java.awt.Canvas) (Object) s.field_e);
@@ -583,7 +584,8 @@ public final class stellarshard extends rb implements cf {
                               if (4 != var2_int) {
                                 break L10;
                               } else {
-                                wj.h(-128);
+                                int discarded$13 = -128;
+                                wj.h();
                                 fd.field_mb = true;
                                 break L10;
                               }
@@ -591,7 +593,8 @@ public final class stellarshard extends rb implements cf {
                             break L7;
                           } else {
                             if (!wk.a(113)) {
-                              this.d(true);
+                              int discarded$14 = 1;
+                              this.d();
                               break L7;
                             } else {
                               L11: {
@@ -642,7 +645,8 @@ public final class stellarshard extends rb implements cf {
                                     break L12;
                                   } else {
                                     if (var2_int == 2364824) {
-                                      cj.b(-5);
+                                      int discarded$15 = -5;
+                                      cj.b();
                                       break L12;
                                     } else {
                                       break L12;
@@ -696,13 +700,16 @@ public final class stellarshard extends rb implements cf {
                               }
                             }
                           }
-                          hi.b((byte) 109);
+                          int discarded$16 = 109;
+                          hi.b();
                           var2_ref = (kl) (Object) ue.field_c.b(-91);
                           L16: while (true) {
                             if (var2_ref == null) {
                               break L7;
                             } else {
-                              tc.a(var2_ref, 4, false);
+                              int discarded$17 = 0;
+                              int discarded$18 = 4;
+                              tc.a(var2_ref);
                               var2_ref = (kl) (Object) ue.field_c.b((byte) -128);
                               continue L16;
                             }
@@ -716,7 +723,8 @@ public final class stellarshard extends rb implements cf {
                   L17: while (true) {
                     if (!fh.a((byte) 73, i.field_e)) {
                       ue.a((byte) 85, 0);
-                      if (!il.e(32525)) {
+                      int discarded$19 = 32525;
+                      if (!il.e()) {
                         break L4;
                       } else {
                         var2_int = ((stellarshard) this).f(-16028);
@@ -1004,7 +1012,8 @@ public final class stellarshard extends rb implements cf {
         try {
           L0: {
             L1: {
-              a.field_h[pl.e((byte) 63)] = new qe(-1);
+              int discarded$2 = 63;
+              a.field_h[pl.e()] = new qe(-1);
               ue.field_a = 0;
               bi.field_u = null;
               cl.field_a = cl.field_a + te.field_c;
@@ -1076,7 +1085,7 @@ public final class stellarshard extends rb implements cf {
         }
     }
 
-    private final void d(boolean param0) {
+    private final void d() {
         int var2_int = 0;
         pi var2 = null;
         vl var2_ref = null;
@@ -1172,8 +1181,8 @@ public final class stellarshard extends rb implements cf {
         qe stackIn_721_0 = null;
         int stackIn_726_0 = 0;
         vl stackIn_778_0 = null;
-        Object stackIn_810_0 = null;
-        vl stackIn_810_1 = null;
+        Object stackIn_809_0 = null;
+        vl stackIn_809_1 = null;
         int stackOut_175_0 = 0;
         int stackOut_175_1 = 0;
         int stackOut_242_0 = 0;
@@ -1259,8 +1268,8 @@ public final class stellarshard extends rb implements cf {
         qe stackOut_720_0 = null;
         int stackOut_724_0 = 0;
         int stackOut_725_0 = 0;
-        Object stackOut_809_0 = null;
-        vl stackOut_809_1 = null;
+        Object stackOut_808_0 = null;
+        vl stackOut_808_1 = null;
         vl stackOut_777_0 = null;
         L0: {
           L1: {
@@ -1351,13 +1360,13 @@ public final class stellarshard extends rb implements cf {
           if (null == hf.field_i.b(-97)) {
             break L8;
           } else {
-            int fieldTemp$9 = ((stellarshard) this).field_I + 1;
+            int fieldTemp$14 = ((stellarshard) this).field_I + 1;
             ((stellarshard) this).field_I = ((stellarshard) this).field_I + 1;
-            if (fieldTemp$9 != 335) {
+            if (fieldTemp$14 != 335) {
               break L8;
             } else {
               ((stellarshard) this).field_I = 0;
-              gg discarded$10 = hf.field_i.d((byte) -35);
+              gg discarded$15 = hf.field_i.d((byte) -35);
               break L8;
             }
           }
@@ -1379,9 +1388,9 @@ public final class stellarshard extends rb implements cf {
           }
         }
         L11: {
-          int fieldTemp$11 = bf.field_c;
+          int fieldTemp$16 = bf.field_c;
           bf.field_c = bf.field_c + 1;
-          if (~fieldTemp$11 >= ~qj.field_a.b(sj.field_C)) {
+          if (~fieldTemp$16 >= ~qj.field_a.b(sj.field_C)) {
             break L11;
           } else {
             bf.field_c = bf.field_c - qj.field_a.b(sj.field_C) * 2;
@@ -1435,7 +1444,9 @@ public final class stellarshard extends rb implements cf {
             L17: {
               if (tl.field_c == 8) {
                 L18: {
-                  var2_int = qc.a((byte) -115, true);
+                  int discarded$17 = 1;
+                  int discarded$18 = -115;
+                  var2_int = qc.a();
                   if (3 != var2_int) {
                     break L18;
                   } else {
@@ -2755,9 +2766,9 @@ public final class stellarshard extends rb implements cf {
                 if (var4 != -1) {
                   if (var4 == 0) {
                     L104: {
-                      int fieldTemp$12 = mj.field_F + 1;
+                      int fieldTemp$19 = mj.field_F + 1;
                       mj.field_F = mj.field_F + 1;
-                      if (fieldTemp$12 <= 1) {
+                      if (fieldTemp$19 <= 1) {
                         break L104;
                       } else {
                         mj.field_F = 0;
@@ -2814,9 +2825,9 @@ public final class stellarshard extends rb implements cf {
                   } else {
                     if (var4 == 1) {
                       L109: {
-                        int fieldTemp$13 = mj.field_F + 1;
+                        int fieldTemp$20 = mj.field_F + 1;
                         mj.field_F = mj.field_F + 1;
-                        if (fieldTemp$13 > 1) {
+                        if (fieldTemp$20 > 1) {
                           mj.field_F = 0;
                           break L109;
                         } else {
@@ -3248,9 +3259,9 @@ public final class stellarshard extends rb implements cf {
                       } else {
                         L139: {
                           a.field_h[0].field_i = 6;
-                          int fieldTemp$14 = mj.field_F + 1;
+                          int fieldTemp$21 = mj.field_F + 1;
                           mj.field_F = mj.field_F + 1;
-                          if (fieldTemp$14 <= 3) {
+                          if (fieldTemp$21 <= 3) {
                             break L139;
                           } else {
                             mj.field_F = 0;
@@ -3324,9 +3335,9 @@ public final class stellarshard extends rb implements cf {
                   }
                 } else {
                   L146: {
-                    int fieldTemp$15 = mj.field_F + 1;
+                    int fieldTemp$22 = mj.field_F + 1;
                     mj.field_F = mj.field_F + 1;
-                    if (fieldTemp$15 > 4) {
+                    if (fieldTemp$22 > 4) {
                       mj.field_F = 0;
                       break L146;
                     } else {
@@ -3442,7 +3453,8 @@ public final class stellarshard extends rb implements cf {
                       break L155;
                     } else {
                       if (ph.field_D >= 2) {
-                        hj.a(255, 0, 1);
+                        int discarded$23 = 1;
+                        hj.a(255, 0);
                         break L155;
                       } else {
                         break L155;
@@ -3463,7 +3475,8 @@ public final class stellarshard extends rb implements cf {
             }
           }
         }
-        this.q(50);
+        int discarded$24 = 50;
+        this.q();
         var2_int = 0;
         var3 = 0;
         var4 = 0;
@@ -3636,196 +3649,195 @@ public final class stellarshard extends rb implements cf {
                             var5 = 0;
                             L171: while (true) {
                               if (var5 >= 1000) {
-                                if (param0) {
-                                  var5 = 0;
-                                  L172: while (true) {
-                                    if (var5 >= 3000) {
-                                      L173: {
-                                        if (qi.field_a < 10) {
+                                var5 = 0;
+                                L172: while (true) {
+                                  if (var5 >= 3000) {
+                                    L173: {
+                                      if (qi.field_a < 10) {
+                                        break L173;
+                                      } else {
+                                        if (mk.field_k > 0) {
                                           break L173;
                                         } else {
-                                          if (mk.field_k > 0) {
+                                          if (!s.field_i) {
                                             break L173;
                                           } else {
-                                            if (!s.field_i) {
+                                            nc.field_A = nc.field_A - 1;
+                                            if (nc.field_A <= 0) {
+                                              a.field_h[0] = null;
+                                              this.k((byte) 97);
                                               break L173;
                                             } else {
-                                              nc.field_A = nc.field_A - 1;
-                                              if (nc.field_A <= 0) {
-                                                a.field_h[0] = null;
-                                                this.k((byte) 97);
-                                                break L173;
-                                              } else {
-                                                break L173;
-                                              }
+                                              break L173;
                                             }
                                           }
                                         }
                                       }
-                                      L174: {
-                                        if (50 != qi.field_a) {
-                                          break L174;
-                                        } else {
+                                    }
+                                    L174: {
+                                      if (50 != qi.field_a) {
+                                        break L174;
+                                      } else {
+                                        if (nc.field_A > 0) {
+                                          nc.field_A = nc.field_A - 1;
                                           if (nc.field_A > 0) {
-                                            nc.field_A = nc.field_A - 1;
-                                            if (nc.field_A > 0) {
-                                              break L174;
-                                            } else {
-                                              a.field_h[0] = null;
-                                              this.k((byte) 121);
-                                              break L174;
-                                            }
+                                            break L174;
                                           } else {
+                                            a.field_h[0] = null;
+                                            this.k((byte) 121);
                                             break L174;
                                           }
+                                        } else {
+                                          break L174;
                                         }
                                       }
-                                      L175: {
-                                        if (qi.field_a < var4) {
-                                          break L175;
-                                        } else {
-                                          L176: {
-                                            if (qi.field_a < 10) {
-                                              break L176;
+                                    }
+                                    L175: {
+                                      if (qi.field_a < var4) {
+                                        break L175;
+                                      } else {
+                                        L176: {
+                                          if (qi.field_a < 10) {
+                                            break L176;
+                                          } else {
+                                            if (mk.field_k <= 0) {
+                                              break L175;
                                             } else {
-                                              if (mk.field_k <= 0) {
-                                                break L175;
-                                              } else {
-                                                break L176;
-                                              }
+                                              break L176;
                                             }
                                           }
-                                          if (na.field_j == null) {
-                                            this.n(3);
-                                            break L175;
-                                          } else {
-                                            break L175;
-                                          }
+                                        }
+                                        if (na.field_j == null) {
+                                          int discarded$25 = 3;
+                                          this.n();
+                                          break L175;
+                                        } else {
+                                          break L175;
                                         }
                                       }
-                                      L177: {
-                                        if (null == na.field_j) {
-                                          break L177;
-                                        } else {
-                                          if (!s.field_i) {
-                                            L178: while (true) {
-                                              if (!qh.c(79)) {
-                                                L179: {
-                                                  if (null == na.field_j) {
-                                                    break L179;
-                                                  } else {
-                                                    L180: {
-                                                      if (tl.field_c == 1) {
-                                                        if (((stellarshard) this).field_Q < 612) {
+                                    }
+                                    L177: {
+                                      if (null == na.field_j) {
+                                        break L177;
+                                      } else {
+                                        if (!s.field_i) {
+                                          L178: while (true) {
+                                            if (!qh.c(79)) {
+                                              L179: {
+                                                if (null == na.field_j) {
+                                                  break L179;
+                                                } else {
+                                                  L180: {
+                                                    if (tl.field_c == 1) {
+                                                      if (((stellarshard) this).field_Q < 612) {
+                                                        break L180;
+                                                      } else {
+                                                        if (628 <= ((stellarshard) this).field_Q) {
                                                           break L180;
                                                         } else {
-                                                          if (628 <= ((stellarshard) this).field_Q) {
+                                                          if (((stellarshard) this).field_O < 176) {
                                                             break L180;
                                                           } else {
-                                                            if (((stellarshard) this).field_O < 176) {
+                                                            if (((stellarshard) this).field_O >= 192) {
                                                               break L180;
                                                             } else {
-                                                              if (((stellarshard) this).field_O >= 192) {
+                                                              if (gh.field_c == 1) {
+                                                                n.field_L = 256;
+                                                                tl.field_c = 0;
                                                                 break L180;
                                                               } else {
-                                                                if (gh.field_c == 1) {
-                                                                  n.field_L = 256;
-                                                                  tl.field_c = 0;
-                                                                  break L180;
-                                                                } else {
-                                                                  break L180;
-                                                                }
+                                                                break L180;
                                                               }
                                                             }
                                                           }
                                                         }
-                                                      } else {
-                                                        break L180;
                                                       }
+                                                    } else {
+                                                      break L180;
                                                     }
-                                                    L181: {
-                                                      if (tl.field_c != 2) {
-                                                        break L181;
-                                                      } else {
-                                                        L182: {
-                                                          if (((stellarshard) this).field_Q < 496) {
+                                                  }
+                                                  L181: {
+                                                    if (tl.field_c != 2) {
+                                                      break L181;
+                                                    } else {
+                                                      L182: {
+                                                        if (((stellarshard) this).field_Q < 496) {
+                                                          break L182;
+                                                        } else {
+                                                          if (512 <= ((stellarshard) this).field_Q) {
                                                             break L182;
                                                           } else {
-                                                            if (512 <= ((stellarshard) this).field_Q) {
+                                                            if (208 > ((stellarshard) this).field_O) {
                                                               break L182;
                                                             } else {
-                                                              if (208 > ((stellarshard) this).field_O) {
+                                                              if (((stellarshard) this).field_O >= 224) {
                                                                 break L182;
                                                               } else {
-                                                                if (((stellarshard) this).field_O >= 224) {
+                                                                if (gh.field_c != 1) {
                                                                   break L182;
                                                                 } else {
-                                                                  if (gh.field_c != 1) {
-                                                                    break L182;
-                                                                  } else {
-                                                                    tl.field_c = 0;
-                                                                    gh.field_d = null;
-                                                                    n.field_L = 256;
-                                                                    break L182;
-                                                                  }
+                                                                  tl.field_c = 0;
+                                                                  gh.field_d = null;
+                                                                  n.field_L = 256;
+                                                                  break L182;
                                                                 }
                                                               }
                                                             }
                                                           }
                                                         }
-                                                        L183: {
-                                                          if (((stellarshard) this).field_Q < 248) {
+                                                      }
+                                                      L183: {
+                                                        if (((stellarshard) this).field_Q < 248) {
+                                                          break L183;
+                                                        } else {
+                                                          if (((stellarshard) this).field_Q > 264) {
                                                             break L183;
                                                           } else {
-                                                            if (((stellarshard) this).field_Q > 264) {
+                                                            if (460 > ((stellarshard) this).field_O) {
                                                               break L183;
                                                             } else {
-                                                              if (460 > ((stellarshard) this).field_O) {
+                                                              if (((stellarshard) this).field_O > 484) {
                                                                 break L183;
                                                               } else {
-                                                                if (((stellarshard) this).field_O > 484) {
-                                                                  break L183;
-                                                                } else {
-                                                                  if (1 == gh.field_c) {
-                                                                    int fieldTemp$16 = si.field_X - 1;
-                                                                    si.field_X = si.field_X - 1;
-                                                                    if (fieldTemp$16 < 0) {
-                                                                      si.field_X = si.field_X + 3;
-                                                                      break L183;
-                                                                    } else {
-                                                                      break L183;
-                                                                    }
+                                                                if (1 == gh.field_c) {
+                                                                  int fieldTemp$26 = si.field_X - 1;
+                                                                  si.field_X = si.field_X - 1;
+                                                                  if (fieldTemp$26 < 0) {
+                                                                    si.field_X = si.field_X + 3;
+                                                                    break L183;
                                                                   } else {
                                                                     break L183;
                                                                   }
+                                                                } else {
+                                                                  break L183;
                                                                 }
                                                               }
                                                             }
                                                           }
                                                         }
-                                                        if (((stellarshard) this).field_Q < 376) {
+                                                      }
+                                                      if (((stellarshard) this).field_Q < 376) {
+                                                        break L181;
+                                                      } else {
+                                                        if (((stellarshard) this).field_Q > 392) {
                                                           break L181;
                                                         } else {
-                                                          if (((stellarshard) this).field_Q > 392) {
+                                                          if (460 > ((stellarshard) this).field_O) {
                                                             break L181;
                                                           } else {
-                                                            if (460 > ((stellarshard) this).field_O) {
+                                                            if (((stellarshard) this).field_O > 484) {
                                                               break L181;
                                                             } else {
-                                                              if (((stellarshard) this).field_O > 484) {
+                                                              if (gh.field_c != 1) {
                                                                 break L181;
                                                               } else {
-                                                                if (gh.field_c != 1) {
+                                                                int fieldTemp$27 = si.field_X + 1;
+                                                                si.field_X = si.field_X + 1;
+                                                                if (fieldTemp$27 >= 3) {
+                                                                  si.field_X = si.field_X - 3;
                                                                   break L181;
                                                                 } else {
-                                                                  int fieldTemp$17 = si.field_X + 1;
-                                                                  si.field_X = si.field_X + 1;
-                                                                  if (fieldTemp$17 >= 3) {
-                                                                    si.field_X = si.field_X - 3;
-                                                                    break L181;
-                                                                  } else {
-                                                                    break L181;
-                                                                  }
+                                                                  break L181;
                                                                 }
                                                               }
                                                             }
@@ -3833,137 +3845,135 @@ public final class stellarshard extends rb implements cf {
                                                         }
                                                       }
                                                     }
-                                                    L184: {
-                                                      if (3 != tl.field_c) {
+                                                  }
+                                                  L184: {
+                                                    if (3 != tl.field_c) {
+                                                      break L184;
+                                                    } else {
+                                                      if (((stellarshard) this).field_Q < 496) {
                                                         break L184;
                                                       } else {
-                                                        if (((stellarshard) this).field_Q < 496) {
+                                                        if (((stellarshard) this).field_Q >= 512) {
                                                           break L184;
                                                         } else {
-                                                          if (((stellarshard) this).field_Q >= 512) {
+                                                          if (208 > ((stellarshard) this).field_O) {
                                                             break L184;
                                                           } else {
-                                                            if (208 > ((stellarshard) this).field_O) {
+                                                            if (((stellarshard) this).field_O >= 224) {
                                                               break L184;
                                                             } else {
-                                                              if (((stellarshard) this).field_O >= 224) {
-                                                                break L184;
-                                                              } else {
-                                                                if (gh.field_c == 1) {
-                                                                  tl.field_c = 0;
-                                                                  n.field_L = 256;
-                                                                  if (!oc.field_d) {
-                                                                    break L184;
-                                                                  } else {
-                                                                    tl.field_c = 2;
-                                                                    oc.field_d = false;
-                                                                    break L184;
-                                                                  }
+                                                              if (gh.field_c == 1) {
+                                                                tl.field_c = 0;
+                                                                n.field_L = 256;
+                                                                if (!oc.field_d) {
+                                                                  break L184;
                                                                 } else {
+                                                                  tl.field_c = 2;
+                                                                  oc.field_d = false;
                                                                   break L184;
                                                                 }
+                                                              } else {
+                                                                break L184;
                                                               }
                                                             }
                                                           }
                                                         }
                                                       }
                                                     }
-                                                    na.field_j.a(true);
-                                                    break L179;
                                                   }
+                                                  na.field_j.a(true);
+                                                  break L179;
                                                 }
-                                                return;
-                                              } else {
-                                                L185: {
-                                                  if (null == na.field_j) {
+                                              }
+                                              return;
+                                            } else {
+                                              L185: {
+                                                if (null == na.field_j) {
+                                                  break L185;
+                                                } else {
+                                                  if (gi.field_f != 13) {
                                                     break L185;
                                                   } else {
-                                                    if (gi.field_f != 13) {
-                                                      break L185;
-                                                    } else {
-                                                      L186: {
-                                                        if (tl.field_c == 2) {
+                                                    L186: {
+                                                      if (tl.field_c == 2) {
+                                                        break L186;
+                                                      } else {
+                                                        if (tl.field_c == 1) {
                                                           break L186;
                                                         } else {
-                                                          if (tl.field_c == 1) {
-                                                            break L186;
+                                                          if (tl.field_c != 3) {
+                                                            break L185;
                                                           } else {
-                                                            if (tl.field_c != 3) {
-                                                              break L185;
-                                                            } else {
-                                                              break L186;
-                                                            }
+                                                            break L186;
                                                           }
                                                         }
                                                       }
-                                                      n.field_L = 256;
-                                                      tl.field_c = 0;
-                                                      continue L178;
                                                     }
+                                                    n.field_L = 256;
+                                                    tl.field_c = 0;
+                                                    continue L178;
                                                   }
                                                 }
-                                                if (na.field_j != null) {
-                                                  na.field_j.b(8);
-                                                  continue L178;
-                                                } else {
-                                                  continue L178;
-                                                }
                                               }
-                                            }
-                                          } else {
-                                            break L177;
-                                          }
-                                        }
-                                      }
-                                      L187: {
-                                        if (s.field_i) {
-                                          break L187;
-                                        } else {
-                                          L188: {
-                                            if (wh.field_c > 1) {
-                                              break L188;
-                                            } else {
-                                              if (ni.field_a) {
-                                                break L187;
+                                              if (na.field_j != null) {
+                                                na.field_j.b(8);
+                                                continue L178;
                                               } else {
-                                                break L188;
+                                                continue L178;
                                               }
                                             }
                                           }
-                                          L189: {
-                                            na.field_j = new ij((stellarshard) this);
-                                            if (!ni.field_a) {
-                                              tl.field_c = 4;
-                                              na.field_j.field_l = 8;
-                                              break L189;
+                                        } else {
+                                          break L177;
+                                        }
+                                      }
+                                    }
+                                    L187: {
+                                      if (s.field_i) {
+                                        break L187;
+                                      } else {
+                                        L188: {
+                                          if (wh.field_c > 1) {
+                                            break L188;
+                                          } else {
+                                            if (ni.field_a) {
+                                              break L187;
                                             } else {
-                                              break L189;
+                                              break L188;
                                             }
                                           }
-                                          ni.field_a = false;
-                                          break L187;
                                         }
-                                      }
-                                      return;
-                                    } else {
-                                      stackOut_809_0 = null;
-                                      stackOut_809_1 = wk.field_b[var5];
-                                      stackIn_810_0 = stackOut_809_0;
-                                      stackIn_810_1 = stackOut_809_1;
-                                      L190: {
-                                        if (stackIn_810_0 != (Object) (Object) stackIn_810_1) {
-                                          wk.field_b[var5].a(var3, var2_int, param0);
-                                          break L190;
-                                        } else {
-                                          break L190;
+                                        L189: {
+                                          na.field_j = new ij((stellarshard) this);
+                                          if (!ni.field_a) {
+                                            tl.field_c = 4;
+                                            na.field_j.field_l = 8;
+                                            break L189;
+                                          } else {
+                                            break L189;
+                                          }
                                         }
+                                        ni.field_a = false;
+                                        break L187;
                                       }
-                                      var5++;
-                                      continue L172;
                                     }
+                                    return;
+                                  } else {
+                                    stackOut_808_0 = null;
+                                    stackOut_808_1 = wk.field_b[var5];
+                                    stackIn_809_0 = stackOut_808_0;
+                                    stackIn_809_1 = stackOut_808_1;
+                                    L190: {
+                                      if (stackIn_809_0 != (Object) (Object) stackIn_809_1) {
+                                        wk.field_b[var5].a(var3, var2_int, true);
+                                        break L190;
+                                      } else {
+                                        break L190;
+                                      }
+                                    }
+                                    var5++;
+                                    continue L172;
                                   }
-                                } else {
-                                  return;
                                 }
                               } else {
                                 L191: {
@@ -4253,7 +4263,8 @@ public final class stellarshard extends rb implements cf {
                   break L3;
                 }
               }
-              t.a(false);
+              int discarded$2 = 0;
+              t.a();
               break L0;
             } else {
               return;
@@ -4275,78 +4286,117 @@ public final class stellarshard extends rb implements cf {
           L0: {
             L1: {
               stellarshard.r(50);
-              ni.a(-78);
-              eb.a(-1);
-              ob.a(30063);
-              rl.a((byte) -84);
-              rb.m(-12);
-              wg.a((byte) -107);
+              int discarded$125 = -78;
+              ni.a();
+              int discarded$126 = -1;
+              eb.a();
+              int discarded$127 = 30063;
+              ob.a();
+              int discarded$128 = -84;
+              rl.a();
+              int discarded$129 = -12;
+              rb.m();
+              int discarded$130 = -107;
+              wg.a();
               ac.b(-53);
-              be.a((byte) -20);
-              fe.a(31147);
+              int discarded$131 = -20;
+              be.a();
+              int discarded$132 = 31147;
+              fe.a();
               ti.a();
               pf.a(30300);
               t.a(param0 ^ 6079);
-              wi.a((byte) -93);
-              ka.a((byte) -14);
+              int discarded$133 = -93;
+              wi.a();
+              int discarded$134 = -14;
+              ka.a();
               ih.a(38858);
               te.a((byte) -84);
-              hj.a(121);
-              ak.a(true);
-              wd.a((byte) 104);
-              ca.a(false);
-              qj.a((byte) -69);
-              hd.a((byte) -41);
+              int discarded$135 = 121;
+              hj.a();
+              int discarded$136 = 1;
+              ak.a();
+              int discarded$137 = 104;
+              wd.a();
+              int discarded$138 = 0;
+              ca.a();
+              int discarded$139 = -69;
+              qj.a();
+              int discarded$140 = -41;
+              hd.a();
               nj.a(param0 ^ 49);
-              cj.a(0);
+              int discarded$141 = 0;
+              cj.a();
               ed.a(param0 + 30);
               bl.a(false);
-              sf.a(false);
-              ci.c(-1);
+              int discarded$142 = 0;
+              sf.a();
+              int discarded$143 = -1;
+              ci.c();
               vi.b((byte) 82);
               fj.a((byte) 59);
-              va.a((byte) 88);
+              int discarded$144 = 88;
+              va.a();
               jb.a(0);
-              vl.a(-118);
-              mb.a(false);
-              oj.a(true);
+              int discarded$145 = -118;
+              vl.a();
+              int discarded$146 = 0;
+              mb.a();
+              int discarded$147 = 1;
+              oj.a();
               jj.a(param0 + 19045);
               d.e();
               ba.d();
-              ag.a((byte) 126);
+              int discarded$148 = 126;
+              ag.a();
               gg.b((byte) -127);
-              fb.c(-2918);
+              int discarded$149 = -2918;
+              fb.c();
               rk.a(true);
-              vh.b((byte) 48);
+              int discarded$150 = 48;
+              vh.b();
               fh.a((byte) 89);
-              jf.a(-15917);
+              int discarded$151 = -15917;
+              jf.a();
               ha.i(param0 + 244);
-              pk.a((byte) 96);
+              int discarded$152 = 96;
+              pk.a();
               cc.b();
               ie.e(-28692);
               ah.a((byte) -31);
-              ra.b(-14755);
-              qf.a(-15967);
-              gf.a(-118);
+              int discarded$153 = -14755;
+              ra.b();
+              int discarded$154 = -15967;
+              qf.a();
+              int discarded$155 = -118;
+              gf.a();
               bd.a();
               de.a(4);
-              bf.a(2);
-              qd.b(54);
-              eh.a((byte) 5);
-              k.a((byte) 98);
-              h.a((byte) 45);
+              int discarded$156 = 2;
+              bf.a();
+              int discarded$157 = 54;
+              qd.b();
+              int discarded$158 = 5;
+              eh.a();
+              int discarded$159 = 98;
+              k.a();
+              int discarded$160 = 45;
+              h.a();
               ei.g((byte) 77);
-              jg.e(true);
+              int discarded$161 = 1;
+              jg.e();
               pg.m(7694);
               ck.m(-121);
               mj.l(120);
               se.e((byte) 9);
               la.a(param0 ^ -16);
-              lj.h(120);
+              int discarded$162 = 120;
+              lj.h();
               am.b(param0 ^ 36);
               hc.a(param0 ^ -21153);
               lg.a(param0 ^ 69);
-              lh.a((byte) -16);
+              int discarded$163 = -16;
+              lh.a();
               sl.a(-127);
               wf.b(param0 + 227);
               qh.a(param0 + -15392);
@@ -4354,17 +4404,25 @@ public final class stellarshard extends rb implements cf {
               ad.c();
               mi.a();
               gk.a(param0 + 129);
-              fc.a((byte) 86);
+              int discarded$164 = 86;
+              fc.a();
               tf.b(param0 + 22);
               l.a(0);
-              nk.a((byte) 52);
-              o.a(1);
-              ve.a(-9746);
-              bi.e(0);
+              int discarded$165 = 52;
+              nk.a();
+              int discarded$166 = 1;
+              o.a();
+              int discarded$167 = -9746;
+              ve.a();
+              int discarded$168 = 0;
+              bi.e();
               tk.a((byte) -86);
-              jd.a(-126);
-              ib.a(0);
-              ok.b((byte) -30);
+              int discarded$169 = -126;
+              jd.a();
+              int discarded$170 = 0;
+              ib.a();
+              int discarded$171 = -30;
+              ok.b();
               if (param0 == -128) {
                 break L1;
               } else {
@@ -4372,12 +4430,17 @@ public final class stellarshard extends rb implements cf {
                 break L1;
               }
             }
-            mf.a(119);
-            ue.b((byte) -99);
-            oe.a(0);
-            ua.a((byte) -50);
+            int discarded$172 = 119;
+            mf.a();
+            int discarded$173 = -99;
+            ue.b();
+            int discarded$174 = 0;
+            oe.a();
+            int discarded$175 = -50;
+            ua.a();
             sk.a(true);
-            a.a(-3323);
+            int discarded$176 = -3323;
+            a.a();
             qa.c();
             vd.a(94);
             kc.a(true);
@@ -4386,128 +4449,201 @@ public final class stellarshard extends rb implements cf {
             ph.h(param0 ^ -15);
             el.h(param0 + 186);
             wc.a(true);
-            kb.a((byte) 37);
+            int discarded$177 = 37;
+            kb.a();
             rh.a(param0 + 26);
             ki.e(param0 + 16512);
-            na.b(124);
-            tg.b((byte) 0);
-            dj.a(4);
+            int discarded$178 = 124;
+            na.b();
+            int discarded$179 = 0;
+            tg.b();
+            int discarded$180 = 4;
+            dj.a();
             id.a(param0 + 1392322593);
-            wh.b(-1);
-            n.c((byte) -11);
-            fl.a(43);
+            int discarded$181 = -1;
+            wh.b();
+            int discarded$182 = -11;
+            n.c();
+            int discarded$183 = 43;
+            fl.a();
             ke.a(false);
-            ng.a((byte) -60);
+            int discarded$184 = -60;
+            ng.a();
             eg.b(-89);
-            aa.a((byte) 77);
+            int discarded$185 = 77;
+            aa.a();
             si.f(-16412);
-            sb.a((byte) 105);
+            int discarded$186 = 105;
+            sb.a();
             hi.a((byte) -92);
-            e.a(186);
-            vj.a((byte) 104);
-            i.b(64);
+            int discarded$187 = 186;
+            e.a();
+            int discarded$188 = 104;
+            vj.a();
+            int discarded$189 = 64;
+            i.b();
             j.a();
-            mg.a(true);
-            lb.a((byte) 122);
-            og.a((byte) 78);
+            int discarded$190 = 1;
+            mg.a();
+            int discarded$191 = 122;
+            lb.a();
+            int discarded$192 = 78;
+            og.a();
             bb.a(false);
-            tc.e(-64);
-            hh.a(25434);
-            df.b(11324);
+            int discarded$193 = -64;
+            tc.e();
+            int discarded$194 = 25434;
+            hh.a();
+            int discarded$195 = 11324;
+            df.b();
             vk.a((byte) 112);
             rj.b(true);
             ig.a(-8278);
-            dg.h(32);
+            int discarded$196 = 32;
+            dg.h();
             ui.e((byte) -29);
             g.d((byte) 109);
             ug.c(param0 ^ -72);
-            q.a((byte) 84);
-            oc.a(0);
-            ch.a((byte) -56);
+            int discarded$197 = 84;
+            q.a();
+            int discarded$198 = 0;
+            oc.a();
+            int discarded$199 = -56;
+            ch.a();
             od.d((byte) 11);
             cm.a(-118);
-            wk.a((byte) 31);
-            wa.b(0);
+            int discarded$200 = 31;
+            wk.a();
+            int discarded$201 = 0;
+            wa.b();
             mc.a(17913);
             dd.b(-26269);
             pe.a(param0 ^ -126);
-            ce.a((byte) 125);
-            nl.a((byte) 64);
-            rc.d(23805);
-            mh.a(2188);
+            int discarded$202 = 125;
+            ce.a();
+            int discarded$203 = 64;
+            nl.a();
+            int discarded$204 = 23805;
+            rc.d();
+            int discarded$205 = 2188;
+            mh.a();
             sc.b();
             gh.a((byte) 125);
-            we.b((byte) 116);
-            pl.q(0);
-            ae.m(122);
-            wl.k(115);
-            nc.e(true);
+            int discarded$206 = 116;
+            we.b();
+            int discarded$207 = 0;
+            pl.q();
+            int discarded$208 = 122;
+            ae.m();
+            int discarded$209 = 115;
+            wl.k();
+            int discarded$210 = 1;
+            nc.e();
             ul.a(160);
             rg.d(true);
-            ii.a((byte) 25);
-            cd.d((byte) 122);
-            nd.h(-94);
+            int discarded$211 = 25;
+            ii.a();
+            int discarded$212 = 122;
+            cd.d();
+            int discarded$213 = -94;
+            nd.h();
             lk.d(67);
-            aj.a((byte) 101);
+            int discarded$214 = 101;
+            aj.a();
             sj.e((byte) 23);
             fg.g(param0 ^ -128);
             nb.a((byte) 105);
             dh.a();
             sg.a(-29297);
-            pd.b((byte) 117);
-            sa.c(-17002);
+            int discarded$215 = 117;
+            pd.b();
+            int discarded$216 = -17002;
+            sa.c();
             ol.a(true);
-            dl.i(80);
+            int discarded$217 = 80;
+            dl.i();
             of.d((byte) -120);
-            li.a((byte) 89);
-            ai.a(-1);
-            bg.a((byte) -117);
-            gj.d((byte) -66);
+            int discarded$218 = 89;
+            li.a();
+            int discarded$219 = -1;
+            ai.a();
+            int discarded$220 = -117;
+            bg.a();
+            int discarded$221 = -66;
+            gj.d();
             ld.g(param0 + 13566);
-            bc.b((byte) 55);
-            td.b((byte) -17);
-            ga.a((byte) 3);
-            s.a(false);
-            u.a(540);
-            b.b(true);
-            ll.b(512);
+            int discarded$222 = 55;
+            bc.b();
+            int discarded$223 = -17;
+            td.b();
+            int discarded$224 = 3;
+            ga.a();
+            int discarded$225 = 0;
+            s.a();
+            int discarded$226 = 540;
+            u.a();
+            int discarded$227 = 1;
+            b.b();
+            int discarded$228 = 512;
+            ll.b();
             vg.c(-7392);
             il.d(param0 ^ 5634);
-            kf.a((byte) 63);
+            int discarded$229 = 63;
+            kf.a();
             oa.i(-80);
-            hk.a(false);
+            int discarded$230 = 0;
+            hk.a();
             nf.a(65535);
-            uf.a((byte) 43);
-            fd.g(-30900);
+            int discarded$231 = 43;
+            uf.a();
+            int discarded$232 = -30900;
+            fd.g();
             ta.a(true);
-            vc.a(-1);
-            he.a((byte) -82);
-            kl.c((byte) -106);
-            af.a(54);
+            int discarded$233 = -1;
+            vc.a();
+            int discarded$234 = -82;
+            he.a();
+            int discarded$235 = -106;
+            kl.c();
+            int discarded$236 = 54;
+            af.a();
             fk.a(param0 ^ -24024);
-            uc.a(-8749);
-            ml.a((byte) -102);
-            bk.a(-127);
+            int discarded$237 = -8749;
+            uc.a();
+            int discarded$238 = -102;
+            ml.a();
+            int discarded$239 = -127;
+            bk.a();
             th.a(-116);
-            fa.a(false);
-            vf.d(false);
-            bh.a((byte) -120);
-            nh.b(245);
-            hf.b(-27159);
-            ma.a((byte) 6);
+            int discarded$240 = 0;
+            fa.a();
+            int discarded$241 = 0;
+            vf.d();
+            int discarded$242 = -120;
+            bh.a();
+            int discarded$243 = 245;
+            nh.b();
+            int discarded$244 = -27159;
+            hf.b();
+            int discarded$245 = 6;
+            ma.a();
             mk.a((byte) -64);
             le.a(param0 ^ 63);
             uj.b(0);
-            ge.b(false);
+            int discarded$246 = 0;
+            ge.b();
             lc.f(3988);
-            qb.g(21403);
+            int discarded$247 = 21403;
+            qb.g();
             ef.a(false);
             kk.e((byte) -61);
             ea.g((byte) 117);
             rd.a((byte) -83);
-            ja.a((byte) -121);
+            int discarded$248 = -121;
+            ja.a();
             cg.a(param0 + -26686);
-            ic.d((byte) 37);
+            int discarded$249 = 37;
+            ic.d();
             wb.a(param0 ^ 61);
             ((stellarshard) this).field_G = null;
             ((stellarshard) this).field_H = null;
@@ -4548,7 +4684,8 @@ public final class stellarshard extends rb implements cf {
         int stackOut_181_0 = 0;
         L0: {
           var11 = field_B;
-          cl.a((byte) -70);
+          int discarded$23 = -70;
+          cl.a();
           if (!param0) {
             break L0;
           } else {
@@ -4561,8 +4698,8 @@ public final class stellarshard extends rb implements cf {
             if (null == cm.field_d[0]) {
               rd.a((byte) -127, 75.0f, ea.field_k);
               ((stellarshard) this).d(-20880);
-              pb discarded$5 = qd.a(bh.field_a, "space", "", (byte) 42);
-              pb discarded$6 = qd.a(bh.field_a, "nebula", "", (byte) 73);
+              pb discarded$24 = qd.a(bh.field_a, "space", "", (byte) 42);
+              pb discarded$25 = qd.a(bh.field_a, "nebula", "", (byte) 73);
               wh.field_e = ml.a("", (byte) 83, bh.field_a, "achievements_lrg");
               pg.field_hb = ml.a("", (byte) -88, bh.field_a, "explosion");
               hk.field_l = ml.a("", (byte) 107, bh.field_a, "titlepics");
@@ -4579,7 +4716,8 @@ public final class stellarshard extends rb implements cf {
                     if (64 <= var5) {
                       pd.field_h.a((byte) -107);
                       cg.field_c = 0;
-                      rg.g(-33);
+                      int discarded$26 = -33;
+                      rg.g();
                       return;
                     } else {
                       cm.field_d[var5] = new pb(96, 96);
@@ -4771,7 +4909,8 @@ public final class stellarshard extends rb implements cf {
                       }
                     }
                     cg.field_c = cg.field_c + 1;
-                    rg.g(-33);
+                    int discarded$27 = -33;
+                    rg.g();
                     return;
                   } else {
                     L21: {
@@ -4870,7 +5009,7 @@ public final class stellarshard extends rb implements cf {
                   wc.field_s = qd.a(bh.field_a, "stel", "", (byte) 107);
                   pl.field_R = qd.a(bh.field_a, "lar", "", (byte) 93);
                   aa.field_b = qd.a(bh.field_a, "central_iceblock", "", (byte) 81);
-                  pb[] discarded$7 = ml.a("", (byte) -32, bh.field_a, "menu");
+                  pb[] discarded$28 = ml.a("", (byte) -32, bh.field_a, "menu");
                   rh.field_a = new pb[12];
                   var3 = null;
                   var4_int = 0;
@@ -4880,7 +5019,7 @@ public final class stellarshard extends rb implements cf {
                       var4_int = 0;
                       L29: while (true) {
                         if (var4_int >= 15) {
-                          pb discarded$8 = qd.a(bh.field_a, "title", "", (byte) 119);
+                          pb discarded$29 = qd.a(bh.field_a, "title", "", (byte) 119);
                           qj.field_a = ae.a("", "b12", bh.field_a, -115, be.field_d);
                           var4_array = new ek[7];
                           var5_ref_int__ = new int[7];
@@ -4896,7 +5035,8 @@ public final class stellarshard extends rb implements cf {
                               var4_array[6] = el.a("keyboard_down", bh.field_a, (byte) 126, "");
                               qj.field_a.a((o[]) (Object) var4_array, var5_ref_int__);
                               l.field_f = ae.a("", "b122", bh.field_a, -117, be.field_d);
-                              rg.g(-33);
+                              int discarded$30 = -33;
+                              rg.g();
                               return;
                             } else {
                               var5_ref_int__[var6_int] = 12;
@@ -5004,10 +5144,16 @@ public final class stellarshard extends rb implements cf {
                   var3 = (Object) (Object) ml.a("", (byte) 80, bh.field_a, "screenshots");
                   sd.a(qd.a(bh.field_a, "mbfg", "", (byte) 104), (byte) 60, "Stellar Shard");
                   ga.a(-8039, qd.a(bh.field_a, "smalllogo", "", (byte) 124));
-                  te.a(8, 129, 1500, 0, qd.a(bh.field_a, "mbpb", "", (byte) 124), 40, 134, 97, 0);
+                  int discarded$31 = 0;
+                  int discarded$32 = 97;
+                  int discarded$33 = 134;
+                  int discarded$34 = 40;
+                  te.a(8, 129, 1500, 0, qd.a(bh.field_a, "mbpb", "", (byte) 124));
                   q.a(118, (pb[]) var3);
                   ie.field_u = null;
-                  fb.a(192, sg.field_c, 0, (java.applet.Applet) this, -1, 16777215);
+                  int discarded$35 = 16777215;
+                  int discarded$36 = -1;
+                  fb.a(192, sg.field_c, 0, (java.applet.Applet) this);
                   var4_ref = new pb(128, 128);
                   mf.field_a = new pb[64];
                   var5 = 0;
@@ -5015,7 +5161,8 @@ public final class stellarshard extends rb implements cf {
                     if (var5 >= 4) {
                       be.field_d = null;
                       bh.field_a = null;
-                      rg.g(-33);
+                      int discarded$37 = -33;
+                      rg.g();
                       return;
                     } else {
                       L41: {
@@ -5051,7 +5198,9 @@ public final class stellarshard extends rb implements cf {
                           break L44;
                         }
                       }
-                      var7 = n.a(qd.a(bh.field_a, (String) var6, "", (byte) 42), (byte) -42, true);
+                      int discarded$38 = 1;
+                      int discarded$39 = -42;
+                      var7 = n.a(qd.a(bh.field_a, (String) var6, "", (byte) 42));
                       var7.e();
                       ti.d(1, 1, 0, 0, 496, 496);
                       var8 = ti.field_a;
@@ -5126,7 +5275,7 @@ public final class stellarshard extends rb implements cf {
               if (param1 < -60) {
                 break L49;
               } else {
-                int discarded$9 = ((stellarshard) this).a(70, -17);
+                int discarded$40 = ((stellarshard) this).a(70, -17);
                 break L49;
               }
             }
@@ -5134,7 +5283,9 @@ public final class stellarshard extends rb implements cf {
               vf.field_L = fe.field_c;
               lg.field_b = 5883647;
               aj.a(50, 11236);
-              ef.a(50, (byte) 63);
+              int discarded$41 = 63;
+              int discarded$42 = 50;
+              ef.a();
               fe.field_c = new d(oe.field_a);
               if (vf.field_L != null) {
                 nj.field_o.b((p) (Object) vf.field_L);
@@ -5158,7 +5309,8 @@ public final class stellarshard extends rb implements cf {
               }
             }
             hf.field_f = true;
-            rg.g(-33);
+            int discarded$43 = -33;
+            rg.g();
             return;
           }
         } else {
@@ -5206,7 +5358,8 @@ public final class stellarshard extends rb implements cf {
                                                     rd.a((byte) -72, 70.0f, ve.field_b);
                                                     if (param0) {
                                                       L59: {
-                                                        hi.b((byte) 109);
+                                                        int discarded$44 = 109;
+                                                        hi.b();
                                                         ((stellarshard) this).d(-20880);
                                                         var3 = (Object) (Object) new qh(22050, ba.field_m);
                                                         if (pk.a(-12663, 0)) {
@@ -5298,7 +5451,8 @@ public final class stellarshard extends rb implements cf {
                                                         }
                                                       }
                                                       ka.field_n = null;
-                                                      rg.g(-33);
+                                                      int discarded$45 = -33;
+                                                      rg.g();
                                                       return;
                                                     } else {
                                                       return;
@@ -5349,7 +5503,7 @@ public final class stellarshard extends rb implements cf {
         }
     }
 
-    private final void n(int param0) {
+    private final void n() {
         RuntimeException var2 = null;
         int var2_int = 0;
         int[] var2_array = null;
@@ -5378,12 +5532,13 @@ public final class stellarshard extends rb implements cf {
               if (7 != e.field_e) {
                 break L2;
               } else {
-                int fieldTemp$4 = vh.field_e;
+                int fieldTemp$12 = vh.field_e;
                 vh.field_e = vh.field_e + 1;
-                if (fieldTemp$4 != 5) {
+                if (fieldTemp$12 != 5) {
                   break L2;
                 } else {
-                  hj.a(255, 0, 1);
+                  int discarded$13 = 1;
+                  hj.a(255, 0);
                   break L2;
                 }
               }
@@ -5392,22 +5547,24 @@ public final class stellarshard extends rb implements cf {
               if (e.field_e != 8) {
                 break L3;
               } else {
-                int fieldTemp$5 = sf.field_b;
+                int fieldTemp$14 = sf.field_b;
                 sf.field_b = sf.field_b + 1;
-                if (fieldTemp$5 != 5) {
+                if (fieldTemp$14 != 5) {
                   break L3;
                 } else {
-                  hj.a(253, 2, 1);
+                  int discarded$15 = 1;
+                  hj.a(253, 2);
                   break L3;
                 }
               }
             }
             L4: {
               if (e.field_e == 9) {
-                int fieldTemp$6 = sj.field_K;
+                int fieldTemp$16 = sj.field_K;
                 sj.field_K = sj.field_K + 1;
-                if (fieldTemp$6 == 5) {
-                  hj.a(252, 3, 1);
+                if (fieldTemp$16 == 5) {
+                  int discarded$17 = 1;
+                  hj.a(252, 3);
                   break L4;
                 } else {
                   break L4;
@@ -5418,10 +5575,11 @@ public final class stellarshard extends rb implements cf {
             }
             L5: {
               if (e.field_e == 10) {
-                int fieldTemp$7 = ua.field_d;
+                int fieldTemp$18 = ua.field_d;
                 ua.field_d = ua.field_d + 1;
-                if (fieldTemp$7 == 5) {
-                  hj.a(251, 4, 1);
+                if (fieldTemp$18 == 5) {
+                  int discarded$19 = 1;
+                  hj.a(251, 4);
                   break L5;
                 } else {
                   break L5;
@@ -5457,7 +5615,8 @@ public final class stellarshard extends rb implements cf {
                   of.field_A = var2_int;
                   break L7;
                 } else {
-                  hf.a(var3_ref_fk, 89, 5);
+                  int discarded$20 = 5;
+                  hf.a(var3_ref_fk, 89);
                   break L7;
                 }
               } else {
@@ -5520,7 +5679,8 @@ public final class stellarshard extends rb implements cf {
                 if (!nf.field_r) {
                   break L13;
                 } else {
-                  hj.a(249, 6, 1);
+                  int discarded$21 = 1;
+                  hj.a(249, 6);
                   break L13;
                 }
               }
@@ -5530,7 +5690,8 @@ public final class stellarshard extends rb implements cf {
                 break L14;
               } else {
                 if (nf.field_r) {
-                  hj.a(248, 7, 1);
+                  int discarded$22 = 1;
+                  hj.a(248, 7);
                   break L14;
                 } else {
                   break L14;
@@ -5576,7 +5737,7 @@ public final class stellarshard extends rb implements cf {
               }
             }
             L20: {
-              if (qi.field_a != param0) {
+              if (qi.field_a != 3) {
                 break L20;
               } else {
                 var2_array[1] = 4;
@@ -5793,7 +5954,8 @@ public final class stellarshard extends rb implements cf {
                     var3++;
                     continue L42;
                   } else {
-                    a.field_h[pl.e((byte) 63)] = new qe(var3);
+                    int discarded$23 = 63;
+                    a.field_h[pl.e()] = new qe(var3);
                     var4++;
                     continue L43;
                   }
@@ -5804,7 +5966,7 @@ public final class stellarshard extends rb implements cf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var2, "stellarshard.FB(" + param0 + 41);
+          throw ma.a((Throwable) (Object) var2, "stellarshard.FB(" + 3 + 41);
         }
     }
 
@@ -5887,7 +6049,9 @@ public final class stellarshard extends rb implements cf {
                 if (!lh.a(ic.field_d, (byte) 115)) {
                   break L2;
                 } else {
-                  s.field_e = wb.a(0, -107, 480, ic.field_d, 640, 0);
+                  int discarded$4 = 0;
+                  int discarded$5 = 640;
+                  s.field_e = wb.a(0, -107, 480, ic.field_d);
                   if (null != s.field_e) {
                     nc.a((java.awt.Canvas) (Object) s.field_e, (byte) 121);
                     break L2;
@@ -7312,7 +7476,7 @@ public final class stellarshard extends rb implements cf {
         ((stellarshard) this).field_I = 0;
     }
 
-    private final void o(int param0) {
+    private final void o() {
         int var2_int = 0;
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
@@ -7320,9 +7484,11 @@ public final class stellarshard extends rb implements cf {
           L0: {
             L1: {
               if (null != ld.field_G) {
-                le.a(ld.field_G, 26949);
+                int discarded$4 = 26949;
+                le.a(ld.field_G);
                 ld.field_G = null;
-                rg.g(-33);
+                int discarded$5 = -33;
+                rg.g();
                 break L1;
               } else {
                 break L1;
@@ -7330,18 +7496,19 @@ public final class stellarshard extends rb implements cf {
             }
             bh.field_a = wl.a(1, 1);
             wk.field_a = wl.a(1, 2);
-            var2_int = 122 / ((-3 - param0) / 34);
+            var2_int = -40;
             mf.field_b = wl.a(1, 3);
             ka.field_n = wl.a(1, 4);
             be.field_d = wl.a(1, 5);
             jf.field_m = wl.a(1, 7);
-            jg.a(ie.field_u, fc.field_a, (byte) 118);
+            int discarded$6 = 118;
+            jg.a(ie.field_u, fc.field_a);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var2, "stellarshard.GB(" + param0 + 41);
+          throw ma.a((Throwable) (Object) var2, "stellarshard.GB(" + 122 + 41);
         }
     }
 

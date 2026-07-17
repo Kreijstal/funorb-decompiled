@@ -8,7 +8,7 @@ final class hh {
     static th field_b;
     static bi[] field_a;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         field_a = null;
@@ -26,8 +26,10 @@ final class hh {
         }
         if (param0 == 1) {
           fm.a(0);
-          gm.e((byte) -82);
-          pj.d((byte) 60);
+          int discarded$36 = -82;
+          gm.e();
+          int discarded$37 = 60;
+          pj.d();
           if (el.b((byte) 127)) {
             ud.field_b.e(8, 1);
             dk.b((byte) 41, 0);
@@ -40,8 +42,10 @@ final class hh {
         } else {
           field_c = null;
           fm.a(0);
-          gm.e((byte) -82);
-          pj.d((byte) 60);
+          int discarded$38 = -82;
+          gm.e();
+          int discarded$39 = 60;
+          pj.d();
           if (!el.b((byte) 127)) {
             k.c(-28354);
             return;

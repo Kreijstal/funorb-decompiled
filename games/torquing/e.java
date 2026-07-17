@@ -8,7 +8,7 @@ class e extends bc {
     static la field_b;
     static int field_f;
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_d = null;
         field_b = null;
     }
@@ -39,7 +39,8 @@ class e extends bc {
               if (param1 == -71) {
                 break L1;
               } else {
-                e.b(true);
+                int discarded$2 = 1;
+                e.b();
                 break L1;
               }
             }

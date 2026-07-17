@@ -41,30 +41,30 @@ final class ip extends kj {
         String stackIn_12_0 = null;
         String stackIn_15_0 = null;
         String stackIn_18_0 = null;
-        Object stackIn_22_0 = null;
+        Object stackIn_20_0 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        String stackIn_26_2 = null;
+        String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         String stackOut_2_0 = null;
-        Object stackOut_21_0 = null;
+        Object stackOut_19_0 = null;
         String stackOut_17_0 = null;
         String stackOut_14_0 = null;
         String stackOut_11_0 = null;
         String stackOut_8_0 = null;
         String stackOut_5_0 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
         RuntimeException stackOut_23_0 = null;
         StringBuilder stackOut_23_1 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
+        String stackOut_23_2 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
         try {
           L0: {
             var6 = (CharSequence) (Object) param0;
@@ -78,14 +78,6 @@ final class ip extends kj {
                   if (!bna.a((byte) 5, param0)) {
                     if (100 > bda.field_l) {
                       if (!gl.a(3, param0)) {
-                        L1: {
-                          if (param1 == -80) {
-                            break L1;
-                          } else {
-                            ip.c((byte) 108);
-                            break L1;
-                          }
-                        }
                         var5 = sja.field_fb;
                         var5.c(param2, (byte) 107);
                         var5.field_g = var5.field_g + 1;
@@ -93,8 +85,8 @@ final class ip extends kj {
                         var5.d(2, 0);
                         var5.a((byte) -50, param0);
                         var5.b((byte) 105, var5.field_g - var4);
-                        stackOut_21_0 = null;
-                        stackIn_22_0 = stackOut_21_0;
+                        stackOut_19_0 = null;
+                        stackIn_20_0 = stackOut_19_0;
                         break L0;
                       } else {
                         stackOut_17_0 = lga.a(true, new String[1], fja.field_b);
@@ -125,42 +117,39 @@ final class ip extends kj {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var3 = decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) var3;
-            stackOut_23_1 = new StringBuilder().append("ip.D(");
-            stackIn_25_0 = stackOut_23_0;
-            stackIn_25_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
+            stackOut_21_0 = (RuntimeException) var3;
+            stackOut_21_1 = new StringBuilder().append("ip.D(");
+            stackIn_23_0 = stackOut_21_0;
+            stackIn_23_1 = stackOut_21_1;
+            stackIn_22_0 = stackOut_21_0;
+            stackIn_22_1 = stackOut_21_1;
             if (param0 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
-              stackOut_25_2 = "null";
-              stackIn_26_0 = stackOut_25_0;
-              stackIn_26_1 = stackOut_25_1;
-              stackIn_26_2 = stackOut_25_2;
-              break L2;
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "null";
+              stackIn_24_0 = stackOut_23_0;
+              stackIn_24_1 = stackOut_23_1;
+              stackIn_24_2 = stackOut_23_2;
+              break L1;
             } else {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
-              stackOut_24_2 = "{...}";
-              stackIn_26_0 = stackOut_24_0;
-              stackIn_26_1 = stackOut_24_1;
-              stackIn_26_2 = stackOut_24_2;
-              break L2;
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "{...}";
+              stackIn_24_0 = stackOut_22_0;
+              stackIn_24_1 = stackOut_22_1;
+              stackIn_24_2 = stackOut_22_2;
+              break L1;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + param1 + 44 + param2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + -80 + 44 + param2 + 41);
         }
-        return (String) (Object) stackIn_22_0;
+        return (String) (Object) stackIn_20_0;
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_f = null;
-        if (param0 != -36) {
-            field_f = null;
-        }
     }
 
     final boolean b(int param0) {

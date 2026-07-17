@@ -225,7 +225,7 @@ final class ssa {
         ((ssa) this).field_f = var3;
     }
 
-    final static byte[] a(uia param0, int param1, boolean param2) throws Exception {
+    final static byte[] a(uia param0) throws Exception {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -281,7 +281,7 @@ final class ssa {
         var17 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
-            var4 = -82 % ((41 - param1) / 37);
+            var4 = 0;
             var3_int = param0.d(121);
             if (var3_int != 0) {
               var5 = param0.field_h;
@@ -290,7 +290,8 @@ final class ssa {
               if (2 < var7) {
                 throw ssa.<RuntimeException>$cfr$sneakyThrow(new Exception("Local: header error: version=" + var7));
               } else {
-                var36 = fqa.e(true);
+                int discarded$1 = 1;
+                var36 = fqa.e();
                 var32 = var36;
                 var28 = var32;
                 var25 = var28;
@@ -462,7 +463,7 @@ final class ssa {
               break L12;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_46_0, stackIn_46_2 + 44 + param1 + 44 + 1 + 41);
+          throw tba.a((Throwable) (Object) stackIn_46_0, stackIn_46_2 + 44 + -26 + 44 + 1 + 41);
         }
         return (byte[]) (Object) stackIn_42_0;
     }
@@ -477,7 +478,7 @@ final class ssa {
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

@@ -346,83 +346,75 @@ abstract class ca implements wa {
         }
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean a(String param0) {
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;
         int var3 = 0;
         int var4 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_17_0 = 0;
+        int stackIn_4_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_15_0 = 0;
+        int stackIn_18_0 = 0;
         int stackIn_20_0 = 0;
-        int stackIn_22_0 = 0;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        String stackIn_26_2 = null;
+        String stackIn_24_2 = null;
         Throwable decompiledCaughtException = null;
-        int stackOut_5_0 = 0;
-        int stackOut_10_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_8_0 = 0;
+        int stackOut_17_0 = 0;
+        int stackOut_14_0 = 0;
         int stackOut_19_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_21_0 = 0;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
         RuntimeException stackOut_23_0 = null;
         StringBuilder stackOut_23_1 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
+        String stackOut_23_2 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
         var4 = Transmogrify.field_A ? 1 : 0;
         try {
           try {
-            L0: {
-              if (param1 == 2117267440) {
-                break L0;
-              } else {
-                field_g = null;
-                break L0;
-              }
-            }
             if (!fe.field_k.startsWith("win")) {
-              stackOut_5_0 = 0;
-              stackIn_6_0 = stackOut_5_0;
-              return stackIn_6_0 != 0;
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0 != 0;
             } else {
-              L1: {
+              L0: {
                 if (param0.startsWith("http://")) {
-                  break L1;
+                  break L0;
                 } else {
                   if (!param0.startsWith("https://")) {
-                    stackOut_10_0 = 0;
-                    stackIn_11_0 = stackOut_10_0;
-                    return stackIn_11_0 != 0;
+                    stackOut_8_0 = 0;
+                    stackIn_9_0 = stackOut_8_0;
+                    return stackIn_9_0 != 0;
                   } else {
-                    break L1;
+                    break L0;
                   }
                 }
               }
               var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
               var3 = 0;
-              L2: while (true) {
+              L1: while (true) {
                 if (~param0.length() >= ~var3) {
                   Process discarded$2 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param0 + "\"");
-                  stackOut_19_0 = 1;
-                  stackIn_20_0 = stackOut_19_0;
-                  return stackIn_20_0 != 0;
+                  stackOut_17_0 = 1;
+                  stackIn_18_0 = stackOut_17_0;
+                  return stackIn_18_0 != 0;
                 } else {
                   if (-1 == var2.indexOf((int) param0.charAt(var3))) {
-                    stackOut_16_0 = 0;
-                    stackIn_17_0 = stackOut_16_0;
-                    return stackIn_17_0 != 0;
+                    stackOut_14_0 = 0;
+                    stackIn_15_0 = stackOut_14_0;
+                    return stackIn_15_0 != 0;
                   } else {
                     var3++;
-                    continue L2;
+                    continue L1;
                   }
                 }
               }
@@ -430,39 +422,39 @@ abstract class ca implements wa {
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2_ref = (Exception) (Object) decompiledCaughtException;
-            stackOut_21_0 = 0;
-            stackIn_22_0 = stackOut_21_0;
-            return stackIn_22_0 != 0;
+            stackOut_19_0 = 0;
+            stackIn_20_0 = stackOut_19_0;
+            return stackIn_20_0 != 0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L3: {
+          L2: {
             var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) var2_ref2;
-            stackOut_23_1 = new StringBuilder().append("ca.J(");
-            stackIn_25_0 = stackOut_23_0;
-            stackIn_25_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
+            stackOut_21_0 = (RuntimeException) var2_ref2;
+            stackOut_21_1 = new StringBuilder().append("ca.J(");
+            stackIn_23_0 = stackOut_21_0;
+            stackIn_23_1 = stackOut_21_1;
+            stackIn_22_0 = stackOut_21_0;
+            stackIn_22_1 = stackOut_21_1;
             if (param0 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
-              stackOut_25_2 = "null";
-              stackIn_26_0 = stackOut_25_0;
-              stackIn_26_1 = stackOut_25_1;
-              stackIn_26_2 = stackOut_25_2;
-              break L3;
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "null";
+              stackIn_24_0 = stackOut_23_0;
+              stackIn_24_1 = stackOut_23_1;
+              stackIn_24_2 = stackOut_23_2;
+              break L2;
             } else {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
-              stackOut_24_2 = "{...}";
-              stackIn_26_0 = stackOut_24_0;
-              stackIn_26_1 = stackOut_24_1;
-              stackIn_26_2 = stackOut_24_2;
-              break L3;
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "{...}";
+              stackIn_24_0 = stackOut_22_0;
+              stackIn_24_1 = stackOut_22_1;
+              stackIn_24_2 = stackOut_22_2;
+              break L2;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + param1 + 41);
+          throw ch.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + 2117267440 + 41);
         }
     }
 

@@ -32,7 +32,7 @@ final class qn extends fa {
         field_l = null;
     }
 
-    final static String a(java.applet.Applet param0, String param1, byte param2) {
+    final static String a(java.applet.Applet param0, String param1) {
         try {
             String var3 = null;
             Throwable var3_ref = null;

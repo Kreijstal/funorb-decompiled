@@ -11,7 +11,7 @@ abstract class cha {
     static mla field_d;
     int[] field_g;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         field_d = null;

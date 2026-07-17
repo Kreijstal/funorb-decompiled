@@ -60,10 +60,11 @@ final class g implements j {
             var8 = TorChallenge.field_F ? 1 : 0;
             try {
               L0: {
-                var3_int = -68 % ((param1 - -48) / 58);
+                var3_int = 0;
                 try {
                   L1: {
-                    var4 = (String) ff.a("getcookies", param2, 20511);
+                    int discarded$2 = 20511;
+                    var4 = (String) ff.a("getcookies", param2);
                     var5 = dl.a(var4, ';', -75);
                     var6 = 0;
                     L2: while (true) {
@@ -130,7 +131,7 @@ final class g implements j {
               }
               L6: {
                 stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-                stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(param1).append(44);
+                stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(75).append(44);
                 stackIn_18_0 = stackOut_16_0;
                 stackIn_18_1 = stackOut_16_1;
                 stackIn_17_0 = stackOut_16_0;
@@ -163,34 +164,15 @@ final class g implements j {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_i = null;
     }
 
     final static boolean a(int param0, int param1) {
-        int stackIn_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        if (param0 > 76) {
-          if (-1 == param1) {
+        if (param0 <= 76) {
             return true;
-          } else {
-            L0: {
-              if (0 == (1 << param1 & lb.field_s)) {
-                stackOut_5_0 = 0;
-                stackIn_6_0 = stackOut_5_0;
-                break L0;
-              } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
-                break L0;
-              }
-            }
-            return stackIn_6_0 != 0;
-          }
-        } else {
-          return true;
         }
+        return 0 != (1 & lb.field_s) ? true : false;
     }
 
     public final void a(ee param0, int param1, int param2, byte param3, boolean param4) {

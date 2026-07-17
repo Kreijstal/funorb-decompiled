@@ -31,7 +31,7 @@ final class dg extends al {
         }
     }
 
-    private final qj b(boolean param0) {
+    private final qj b() {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -55,7 +55,7 @@ final class dg extends al {
         return var3;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = -59;
         field_H = null;
         field_E = null;
@@ -218,63 +218,59 @@ final class dg extends al {
         int var12 = 0;
         int var13 = 0;
         qj var14 = null;
-        int stackIn_6_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackOut_5_0 = 0;
+        int stackIn_5_0 = 0;
+        int stackIn_8_0 = 0;
         int stackOut_4_0 = 0;
-        int stackOut_8_0 = 0;
+        int stackOut_3_0 = 0;
         int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
         var13 = TrackController.field_F ? 1 : 0;
         var14 = new qj(2 * ((dg) this).field_K, ((dg) this).field_u);
-        if (!param1) {
-          return null;
-        } else {
-          mb.a((byte) -72, var14);
-          var5 = ((dg) this).field_u >> 1;
-          var6 = 0;
-          L0: while (true) {
-            if (((dg) this).field_u <= var6) {
-              ch.m(-88);
-              return var14;
-            } else {
-              L1: {
-                var7 = (var6 >> 1) * (-1 + 2 * ((dg) this).field_K) % (((dg) this).field_K * 2);
-                var8 = param2 & 16711935;
-                var9 = 65280 & param2;
-                var10 = var6 + -var5;
-                var11 = 128 - -(int)(128.0 * (Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5));
-                if (var11 >= 256) {
-                  stackOut_5_0 = var8 | var9;
-                  stackIn_6_0 = stackOut_5_0;
-                  break L1;
-                } else {
-                  stackOut_4_0 = (16711680 & var11 * var9 | var11 * var8 & -16711936) >>> 8;
-                  stackIn_6_0 = stackOut_4_0;
-                  break L1;
-                }
+        mb.a((byte) -72, var14);
+        var5 = ((dg) this).field_u >> 1;
+        var6 = 0;
+        L0: while (true) {
+          if (((dg) this).field_u <= var6) {
+            ch.m(-88);
+            return var14;
+          } else {
+            L1: {
+              var7 = (var6 >> 1) * (-1 + 2 * ((dg) this).field_K) % (((dg) this).field_K * 2);
+              var8 = param2 & 16711935;
+              var9 = 65280 & param2;
+              var10 = var6 + -var5;
+              var11 = 128 - -(int)(128.0 * (Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5));
+              if (var11 >= 256) {
+                stackOut_4_0 = var8 | var9;
+                stackIn_5_0 = stackOut_4_0;
+                break L1;
+              } else {
+                stackOut_3_0 = (16711680 & var11 * var9 | var11 * var8 & -16711936) >>> 8;
+                stackIn_5_0 = stackOut_3_0;
+                break L1;
               }
-              L2: {
-                var12 = stackIn_6_0;
-                ll.a(var7, var6, ((dg) this).field_K, var12);
-                var8 = 16711935 & param0;
-                ll.a(var7 - ((dg) this).field_K * 2, var6, ((dg) this).field_K, var12);
-                var9 = param0 & 65280;
-                if (var11 < 256) {
-                  stackOut_8_0 = (16711680 & var9 * var11 | var11 * var8 & -16711936) >>> 8;
-                  stackIn_9_0 = stackOut_8_0;
-                  break L2;
-                } else {
-                  stackOut_7_0 = var9 | var8;
-                  stackIn_9_0 = stackOut_7_0;
-                  break L2;
-                }
-              }
-              var12 = stackIn_9_0;
-              ll.a(var7 + ((dg) this).field_K, var6, ((dg) this).field_K, var12);
-              ll.a(-((dg) this).field_K + var7, var6, ((dg) this).field_K, var12);
-              var6++;
-              continue L0;
             }
+            L2: {
+              var12 = stackIn_5_0;
+              ll.a(var7, var6, ((dg) this).field_K, var12);
+              var8 = 16711935 & param0;
+              ll.a(var7 - ((dg) this).field_K * 2, var6, ((dg) this).field_K, var12);
+              var9 = param0 & 65280;
+              if (var11 < 256) {
+                stackOut_7_0 = (16711680 & var9 * var11 | var11 * var8 & -16711936) >>> 8;
+                stackIn_8_0 = stackOut_7_0;
+                break L2;
+              } else {
+                stackOut_6_0 = var9 | var8;
+                stackIn_8_0 = stackOut_6_0;
+                break L2;
+              }
+            }
+            var12 = stackIn_8_0;
+            ll.a(var7 + ((dg) this).field_K, var6, ((dg) this).field_K, var12);
+            ll.a(-((dg) this).field_K + var7, var6, ((dg) this).field_K, var12);
+            var6++;
+            continue L0;
           }
         }
     }
@@ -356,7 +352,8 @@ final class dg extends al {
           return;
         } else {
           ((dg) this).field_Q = new qj[]{this.a(((dg) this).field_D, true, ((dg) this).field_I), this.a(((dg) this).field_F, true, ((dg) this).field_P)};
-          ((dg) this).field_O = this.b(true);
+          int discarded$1 = 1;
+          ((dg) this).field_O = this.b();
           ((dg) this).field_R = ((dg) this).field_O.c();
           ((dg) this).field_G = new qj(((dg) this).field_u >> 1, ((dg) this).field_u);
           return;

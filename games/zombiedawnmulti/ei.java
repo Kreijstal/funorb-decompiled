@@ -10,7 +10,7 @@ final class ei {
     static String[][] field_g;
     static String field_e;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_d = null;
         field_g = null;
@@ -19,11 +19,8 @@ final class ei {
     }
 
     final static void a(int param0, int param1, int param2) {
-        aq.field_x = param2;
-        pm.field_Q = param0;
-        if (param1 != 25938) {
-            field_d = null;
-        }
+        aq.field_x = 320;
+        pm.field_Q = 240;
     }
 
     static {

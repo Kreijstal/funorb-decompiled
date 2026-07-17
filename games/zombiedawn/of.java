@@ -91,7 +91,8 @@ final class of {
                     var5 = 0;
                     L1: while (true) {
                       if (var4.length <= var5) {
-                        stackOut_20_0 = wh.a(var3[-1 + var3.length], false);
+                        int discarded$2 = 0;
+                        stackOut_20_0 = wh.a(var3[-1 + var3.length]);
                         stackIn_21_0 = stackOut_20_0;
                         break L0;
                       } else {
@@ -178,30 +179,34 @@ final class of {
                   vo.field_a[2].e(0, nh.field_P - var1_int);
                   vo.field_a[3].e(-var1_int + bd.field_e, -var1_int + nh.field_P);
                   g.a(0, (byte) 99, -var1_int + bd.field_e, nh.field_P, var1_int);
-                  var3 = nh.field_P + -var1_int;
-                  var2 = var1_int;
-                  L2: while (true) {
-                    if (var2 >= bi.field_b) {
-                      bi.f(0, var1_int, bd.field_e, nh.field_P - var1_int);
-                      var2 = -var1_int + bd.field_e;
-                      var3 = var1_int;
-                      L3: while (true) {
-                        if (bi.field_d <= var3) {
-                          pa.a(-21189);
-                          break L0;
-                        } else {
-                          hi.field_x.e(0, var3);
-                          hi.field_x.c(var2, var3);
-                          var3 = var3 + hi.field_x.field_t;
-                          continue L3;
+                  if (param0 == 11690) {
+                    var3 = nh.field_P + -var1_int;
+                    var2 = var1_int;
+                    L2: while (true) {
+                      if (var2 >= bi.field_b) {
+                        bi.f(0, var1_int, bd.field_e, nh.field_P - var1_int);
+                        var2 = -var1_int + bd.field_e;
+                        var3 = var1_int;
+                        L3: while (true) {
+                          if (bi.field_d <= var3) {
+                            pa.a(-21189);
+                            break L0;
+                          } else {
+                            hi.field_x.e(0, var3);
+                            hi.field_x.c(var2, var3);
+                            var3 = var3 + hi.field_x.field_t;
+                            continue L3;
+                          }
                         }
+                      } else {
+                        ch.field_a.e(var2, 0);
+                        ch.field_a.f(var2, var3);
+                        var2 = var2 + ch.field_a.field_w;
+                        continue L2;
                       }
-                    } else {
-                      ch.field_a.e(var2, 0);
-                      ch.field_a.f(var2, var3);
-                      var2 = var2 + ch.field_a.field_w;
-                      continue L2;
                     }
+                  } else {
+                    return;
                   }
                 } else {
                   break L1;
@@ -213,7 +218,7 @@ final class of {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var1, "of.F(" + 11690 + 41);
+          throw sh.a((Throwable) (Object) var1, "of.F(" + param0 + 41);
         }
     }
 
@@ -240,10 +245,12 @@ final class of {
             if (param3 < -100) {
               L1: {
                 if (((of) this).field_l) {
-                  this.a(param1, param2, param0, 0);
+                  int discarded$5 = 0;
+                  this.a(param1, param2, param0);
                   break L1;
                 } else {
-                  this.a(param2, param1, param0, (byte) 53);
+                  int discarded$6 = 53;
+                  this.a(param2, param1, param0);
                   break L1;
                 }
               }
@@ -284,7 +291,7 @@ final class of {
         }
     }
 
-    private final void a(String param0, int param1, int param2, byte param3) {
+    private final void a(String param0, int param1, int param2) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -519,7 +526,7 @@ final class of {
         pa.a(-21189);
     }
 
-    private final void a(int param0, String param1, int param2, int param3) {
+    private final void a(int param0, String param1, int param2) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;

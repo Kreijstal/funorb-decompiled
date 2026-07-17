@@ -12,13 +12,16 @@ final class hb extends am {
     private int field_v;
 
     final static da a(boolean param0) {
-        String var1 = ki.i(20);
+        int discarded$0 = 20;
+        String var1 = ki.i();
         if (var1 != null) {
             if (0 <= var1.indexOf('@')) {
                 var1 = "";
             }
         }
-        return new da(ki.i(20), dc.b(true));
+        int discarded$1 = 20;
+        int discarded$2 = 1;
+        return new da(ki.i(), dc.b());
     }
 
     final static void a(int param0, boolean param1, t param2, int param3, int param4, int param5, int param6, int param7) {
@@ -39,22 +42,22 @@ final class hb extends am {
         int[] var30 = null;
         int[] var31 = null;
         int[] var32 = null;
+        RuntimeException stackIn_38_0 = null;
+        StringBuilder stackIn_38_1 = null;
+        RuntimeException stackIn_39_0 = null;
+        StringBuilder stackIn_39_1 = null;
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
-        RuntimeException stackIn_41_0 = null;
-        StringBuilder stackIn_41_1 = null;
-        RuntimeException stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
-        String stackIn_42_2 = null;
+        String stackIn_40_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_37_0 = null;
+        StringBuilder stackOut_37_1 = null;
         RuntimeException stackOut_39_0 = null;
         StringBuilder stackOut_39_1 = null;
-        RuntimeException stackOut_41_0 = null;
-        StringBuilder stackOut_41_1 = null;
-        String stackOut_41_2 = null;
-        RuntimeException stackOut_40_0 = null;
-        StringBuilder stackOut_40_1 = null;
-        String stackOut_40_2 = null;
+        String stackOut_39_2 = null;
+        RuntimeException stackOut_38_0 = null;
+        StringBuilder stackOut_38_1 = null;
+        String stackOut_38_2 = null;
         var19 = Torquing.field_u;
         try {
           L0: {
@@ -99,21 +102,13 @@ final class hb extends am {
                 if (param3 <= 0) {
                   break L5;
                 } else {
-                  L6: {
-                    var21 = param2.c();
-                    var32 = ph.field_e;
-                    var10 = ph.field_j;
-                    var11 = ph.field_d;
-                    var30 = new int[4];
-                    ph.b(var30);
-                    param2.e();
-                    if (!param1) {
-                      break L6;
-                    } else {
-                      hb.b(-75);
-                      break L6;
-                    }
-                  }
+                  var21 = param2.c();
+                  var32 = ph.field_e;
+                  var10 = ph.field_j;
+                  var11 = ph.field_d;
+                  var30 = new int[4];
+                  ph.b(var30);
+                  param2.e();
                   ph.f(var30[0], var30[1], var30[2], var30[3]);
                   var13 = param2.field_s * param6 + param0;
                   var14 = param2.field_s - param4;
@@ -123,7 +118,7 @@ final class hb extends am {
                   var22 = var25;
                   var15 = var22;
                   var16 = param6;
-                  L7: while (true) {
+                  L6: while (true) {
                     if (~var16 <= ~(param6 + param3)) {
                       var21.d(-param2.field_v, -param2.field_r);
                       ph.a(var32, var10, var11);
@@ -131,68 +126,68 @@ final class hb extends am {
                       break L0;
                     } else {
                       var17 = param0;
-                      L8: while (true) {
+                      L7: while (true) {
                         if (param0 + param4 <= var17) {
                           var13 = var13 + var14;
                           var16++;
-                          continue L7;
+                          continue L6;
                         } else {
-                          L9: {
+                          L8: {
                             var18 = var31[var13];
                             if (var18 != 0) {
-                              L10: {
-                                L11: {
+                              L9: {
+                                L10: {
                                   if (var17 <= 0) {
-                                    break L11;
+                                    break L10;
                                   } else {
                                     if (var15[-1 + var13] == 0) {
+                                      break L9;
+                                    } else {
                                       break L10;
+                                    }
+                                  }
+                                }
+                                L11: {
+                                  if (var16 <= 0) {
+                                    break L11;
+                                  } else {
+                                    if (var15[-param2.field_s + var13] == 0) {
+                                      break L9;
                                     } else {
                                       break L11;
                                     }
                                   }
                                 }
                                 L12: {
-                                  if (var16 <= 0) {
+                                  if (var17 >= -1 + param2.field_s) {
                                     break L12;
                                   } else {
-                                    if (var15[-param2.field_s + var13] == 0) {
-                                      break L10;
+                                    if (var15[1 + var13] == 0) {
+                                      break L9;
                                     } else {
                                       break L12;
                                     }
                                   }
                                 }
-                                L13: {
-                                  if (var17 >= -1 + param2.field_s) {
-                                    break L13;
-                                  } else {
-                                    if (var15[1 + var13] == 0) {
-                                      break L10;
-                                    } else {
-                                      break L13;
-                                    }
-                                  }
-                                }
                                 if (-1 + param2.field_t <= var16) {
-                                  break L9;
+                                  break L8;
                                 } else {
                                   if (0 == var15[var13 - -param2.field_s]) {
-                                    break L10;
-                                  } else {
                                     break L9;
+                                  } else {
+                                    break L8;
                                   }
                                 }
                               }
-                              ph.d(var17, var16, param7, param5);
-                              break L9;
+                              ph.d(var17, var16, param7, 1);
+                              break L8;
                             } else {
-                              break L9;
+                              break L8;
                             }
                           }
                           var13++;
                           var17++;
-                          continue L8;
+                          continue L7;
                         }
                       }
                     }
@@ -204,33 +199,33 @@ final class hb extends am {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L14: {
+          L13: {
             var8 = decompiledCaughtException;
-            stackOut_39_0 = (RuntimeException) var8;
-            stackOut_39_1 = new StringBuilder().append("hb.A(").append(param0).append(44).append(param1).append(44);
-            stackIn_41_0 = stackOut_39_0;
-            stackIn_41_1 = stackOut_39_1;
-            stackIn_40_0 = stackOut_39_0;
-            stackIn_40_1 = stackOut_39_1;
+            stackOut_37_0 = (RuntimeException) var8;
+            stackOut_37_1 = new StringBuilder().append("hb.A(").append(param0).append(44).append(0).append(44);
+            stackIn_39_0 = stackOut_37_0;
+            stackIn_39_1 = stackOut_37_1;
+            stackIn_38_0 = stackOut_37_0;
+            stackIn_38_1 = stackOut_37_1;
             if (param2 == null) {
-              stackOut_41_0 = (RuntimeException) (Object) stackIn_41_0;
-              stackOut_41_1 = (StringBuilder) (Object) stackIn_41_1;
-              stackOut_41_2 = "null";
-              stackIn_42_0 = stackOut_41_0;
-              stackIn_42_1 = stackOut_41_1;
-              stackIn_42_2 = stackOut_41_2;
-              break L14;
+              stackOut_39_0 = (RuntimeException) (Object) stackIn_39_0;
+              stackOut_39_1 = (StringBuilder) (Object) stackIn_39_1;
+              stackOut_39_2 = "null";
+              stackIn_40_0 = stackOut_39_0;
+              stackIn_40_1 = stackOut_39_1;
+              stackIn_40_2 = stackOut_39_2;
+              break L13;
             } else {
-              stackOut_40_0 = (RuntimeException) (Object) stackIn_40_0;
-              stackOut_40_1 = (StringBuilder) (Object) stackIn_40_1;
-              stackOut_40_2 = "{...}";
-              stackIn_42_0 = stackOut_40_0;
-              stackIn_42_1 = stackOut_40_1;
-              stackIn_42_2 = stackOut_40_2;
-              break L14;
+              stackOut_38_0 = (RuntimeException) (Object) stackIn_38_0;
+              stackOut_38_1 = (StringBuilder) (Object) stackIn_38_1;
+              stackOut_38_2 = "{...}";
+              stackIn_40_0 = stackOut_38_0;
+              stackIn_40_1 = stackOut_38_1;
+              stackIn_40_2 = stackOut_38_2;
+              break L13;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw rb.a((Throwable) (Object) stackIn_40_0, stackIn_40_2 + 44 + param3 + 44 + param4 + 44 + 1 + 44 + param6 + 44 + param7 + 41);
         }
     }
 
@@ -258,9 +253,6 @@ final class hb extends am {
         int var6 = param1 + param4 + param3;
         int var7 = var6 != 0 ? 1000 * param1 / var6 : 0;
         ji.field_a[vg.field_o] = var7;
-        if (param2) {
-            field_s = 26;
-        }
         if (!(var7 <= qd.field_g)) {
             qd.field_g = var7;
         }
@@ -270,10 +262,7 @@ final class hb extends am {
         vg.field_o = vg.field_o + 1;
     }
 
-    public static void b(int param0) {
-        if (param0 != -799778388) {
-            return;
-        }
+    public static void b() {
         field_x = null;
         field_u = null;
     }

@@ -328,8 +328,10 @@ abstract class ee implements pd {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var2_int = 88 / ((-13 - param0) / 38);
-            stackOut_0_0 = hd.a(param1, (byte) 59, false);
+            var2_int = -29;
+            int discarded$4 = 0;
+            int discarded$5 = 59;
+            stackOut_0_0 = hd.a(param1);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -338,7 +340,7 @@ abstract class ee implements pd {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("ee.J(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("ee.J(").append(127).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;

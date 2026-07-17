@@ -7,7 +7,7 @@ final class lg {
     static o[] field_a;
     static String field_b;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
         field_c = null;

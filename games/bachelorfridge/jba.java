@@ -17,21 +17,23 @@ final class jba extends ana {
           return false;
         } else {
           if (!((jba) this).field_y.a((byte) -106)) {
-            int fieldTemp$2 = ((jba) this).field_l - 1;
+            int fieldTemp$6 = ((jba) this).field_l - 1;
             ((jba) this).field_l = ((jba) this).field_l - 1;
-            if (fieldTemp$2 > 0) {
+            if (fieldTemp$6 > 0) {
               L0: {
                 if (((jba) this).field_v) {
                   break L0;
                 } else {
-                  this.e((byte) 47);
+                  int discarded$7 = 47;
+                  this.e();
                   break L0;
                 }
               }
               return false;
             } else {
               var2 = 92 % ((param0 - 71) / 47);
-              this.b(true);
+              int discarded$8 = 1;
+              this.b();
               return true;
             }
           } else {
@@ -40,11 +42,12 @@ final class jba extends ana {
         }
     }
 
-    private final void b(boolean param0) {
-        this.f((byte) -125);
+    private final void b() {
+        int discarded$0 = -125;
+        this.f();
     }
 
-    private final void e(byte param0) {
+    private final void e() {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -134,30 +137,27 @@ final class jba extends ana {
 
     public static void d(int param0) {
         field_w = null;
-        if (param0 != -128) {
-            return;
-        }
         field_A = null;
     }
 
-    final static void a(it param0, jfa param1, int param2) {
+    final static void a(it param0, jfa param1) {
         int var3_int = 0;
         if (bp.e(-29919)) {
             return;
         }
         try {
-            sja.field_fb.c(param2, (byte) 109);
+            sja.field_fb.c(89, (byte) 109);
             sja.field_fb.field_g = sja.field_fb.field_g + 2;
             var3_int = sja.field_fb.field_g;
             rha.a(param1.field_g, (lu) (Object) sja.field_fb, (byte) -93);
             oe.a(-21332, (lu) (Object) sja.field_fb, param0);
             sja.field_fb.a((byte) -88, sja.field_fb.field_g + -var3_int);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "jba.E(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "jba.E(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 89 + 41);
         }
     }
 
-    private final void f(byte param0) {
+    private final void f() {
         ad var4 = null;
         int var5 = BachelorFridge.field_y;
         aga var2 = ((jba) this).field_z.field_l.a(53, ((jba) this).field_q.field_h);
@@ -177,14 +177,10 @@ final class jba extends ana {
     final static void a(int param0, java.awt.Component param1) {
         try {
             param1.addMouseListener((java.awt.event.MouseListener) (Object) uc.field_m);
-            if (param0 != -30229) {
-                Object var3 = null;
-                jba.a((it) null, (jfa) null, -106);
-            }
             param1.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) uc.field_m);
             param1.addFocusListener((java.awt.event.FocusListener) (Object) uc.field_m);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "jba.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "jba.G(" + -30229 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

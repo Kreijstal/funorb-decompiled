@@ -6,33 +6,44 @@ final class vl {
     static String field_a;
     static vd field_c;
 
-    final static void a(int param0) {
-        tt.b(-32546);
+    final static void a() {
+        int discarded$90 = -32546;
+        tt.b();
         if (ci.field_f == null) {
           ic.a(0);
-          to.h(1);
-          bl.c(-18535);
-          if (je.a(false)) {
+          int discarded$91 = 1;
+          to.h();
+          int discarded$92 = -18535;
+          bl.c();
+          int discarded$93 = 0;
+          if (je.a()) {
             q.field_p.g(54, 1);
             fr.a(-47, 0);
-            te.b(true);
+            int discarded$94 = 1;
+            te.b();
             return;
           } else {
-            te.b(true);
+            int discarded$95 = 1;
+            te.b();
             return;
           }
         } else {
           pg.a(ci.field_f, 116);
           ic.a(0);
-          to.h(1);
-          bl.c(-18535);
-          if (!je.a(false)) {
-            te.b(true);
+          int discarded$96 = 1;
+          to.h();
+          int discarded$97 = -18535;
+          bl.c();
+          int discarded$98 = 0;
+          if (!je.a()) {
+            int discarded$99 = 1;
+            te.b();
             return;
           } else {
             q.field_p.g(54, 1);
             fr.a(-47, 0);
-            te.b(true);
+            int discarded$100 = 1;
+            te.b();
             return;
           }
         }
@@ -63,7 +74,8 @@ final class vl {
         try {
           L0: {
             if (param0 == 10) {
-              stackOut_3_0 = aa.a(true, 10, param1, (byte) -43);
+              int discarded$2 = -43;
+              stackOut_3_0 = aa.a(true, 10, param1);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -105,7 +117,7 @@ final class vl {
         return stackIn_4_0;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
         field_a = null;
         field_c = null;

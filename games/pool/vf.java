@@ -260,8 +260,10 @@ final class vf extends vc {
               }
             }
             L2: {
-              oh.field_d[0] = var64[0] - sb.a(288.0f, true) >> 2;
-              oh.field_d[1] = var64[1] - sb.a(144.0f, true) >> 2;
+              int discarded$2 = 1;
+              oh.field_d[0] = var64[0] - sb.a(288.0f) >> 2;
+              int discarded$3 = 1;
+              oh.field_d[1] = var64[1] - sb.a(144.0f) >> 2;
               oh.field_d[2] = var64[2] >> 2;
               if (var6_ref_int__ != oh.field_d) {
                 oh.field_d[6] = var64[6];
@@ -612,9 +614,9 @@ final class vf extends vc {
         }
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_Q = null;
-        int var1 = 104 / ((param0 - -10) / 36);
+        int var1 = 52;
         field_gb = null;
         field_nb = null;
     }
@@ -1694,81 +1696,73 @@ final class vf extends vc {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
+        String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
         try {
           L0: {
             L1: {
               var3_int = param1.field_eb.b(-128);
-              if (param0) {
-                break L1;
-              } else {
-                vf.e((byte) -126);
-                break L1;
-              }
-            }
-            L2: {
               var4 = ((vf) this).field_B.field_z << 1;
               var5 = ((vf) this).field_B.field_A << 1;
               if (var3_int > 0) {
-                var6 = (int)((double)var4 * -param1.field_eb.a(param0) / 2.0 / 3.141592653589793);
+                var6 = (int)((double)var4 * -param1.field_eb.a(true) / 2.0 / 3.141592653589793);
                 var7 = -var5 + var3_int;
                 ((vf) this).field_B.c(var6 + -var4, var7, var4, var5);
                 if (-640 + var4 > var6) {
                   ((vf) this).field_B.c(var6, var7, var4, var5);
-                  break L2;
+                  break L1;
                 } else {
-                  break L2;
+                  break L1;
                 }
               } else {
-                break L2;
+                break L1;
               }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var3 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var3;
-            stackOut_8_1 = new StringBuilder().append("vf.NA(").append(param0).append(44);
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackOut_6_0 = (RuntimeException) var3;
+            stackOut_6_1 = new StringBuilder().append("vf.NA(").append(1).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
-              break L3;
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
-              break L3;
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
             }
           }
-          throw wm.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
+          throw wm.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
     }
 
@@ -1783,7 +1777,9 @@ final class vf extends vc {
             for (var4 = 0; var4 < 256; var4++) {
                 int incrementValue$0 = var3;
                 var3++;
-                vb.field_p[incrementValue$0] = pi.a(var4 << 6, var2_int << 6, qa.field_r << 7, oo.field_w, 128, 6);
+                int discarded$1 = 6;
+                int discarded$2 = 128;
+                vb.field_p[incrementValue$0] = pi.a(var4 << 6, var2_int << 6, qa.field_r << 7, oo.field_w);
             }
         }
         if (var1 >= 256) {

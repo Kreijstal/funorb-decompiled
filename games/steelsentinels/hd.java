@@ -49,7 +49,7 @@ final class hd {
               if (param0 == -3) {
                 break L1;
               } else {
-                boolean discarded$1 = hd.c(-107);
+                boolean discarded$2 = hd.c(-107);
                 break L1;
               }
             }
@@ -69,7 +69,8 @@ final class hd {
               if (ei.field_q != 9) {
                 break L3;
               } else {
-                if (!vk.a(se.field_b, pa.field_h, f.field_x, dh.field_B, -21)) {
+                int discarded$3 = -21;
+                if (!vk.a(se.field_b, pa.field_h, f.field_x, dh.field_B)) {
                   break L3;
                 } else {
                   L4: {
@@ -2578,7 +2579,8 @@ final class hd {
         try {
           L0: {
             L1: {
-              vi.i(126);
+              int discarded$2 = 126;
+              vi.i();
               var1_int = -85 / ((37 - param0) / 58);
               if (jd.field_rb == null) {
                 stackOut_3_0 = 0;
@@ -2664,7 +2666,7 @@ final class hd {
         return stackIn_12_0;
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         nk var1 = null;
         int var2_int = 0;
         int[] var2 = null;
@@ -3632,17 +3634,21 @@ final class hd {
         return stackIn_10_0;
     }
 
-    public static void b(boolean param0) {
-        if (param0) {
-            return;
-        }
+    public static void b() {
+        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
+          L0: {
             field_g = null;
             field_d = null;
             field_q = null;
             field_k = null;
-        } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "hd.D(" + param0 + 41);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw ci.a((Throwable) (Object) var1, "hd.D(" + 0 + 41);
         }
     }
 

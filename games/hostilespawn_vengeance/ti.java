@@ -19,16 +19,8 @@ final class ti implements nn {
         field_d = null;
         field_c = null;
         field_j = null;
-        if (param0 != 70) {
-          int discarded$2 = ti.a((byte) -81);
-          field_a = null;
-          field_i = null;
-          return;
-        } else {
-          field_a = null;
-          field_i = null;
-          return;
-        }
+        field_a = null;
+        field_i = null;
     }
 
     public ti() {
@@ -37,10 +29,7 @@ final class ti implements nn {
         ((ti) this).field_h = jd.field_s;
     }
 
-    final static int a(byte param0) {
-        if (param0 != -1) {
-            return -63;
-        }
+    final static int a() {
         return wc.field_m;
     }
 
@@ -220,7 +209,7 @@ final class ti implements nn {
         }
     }
 
-    final static kb b(byte param0) {
+    final static kb b() {
         try {
             Throwable var1 = null;
             kb stackIn_2_0 = null;

@@ -34,18 +34,14 @@ final class qc extends ar {
           L0: {
             c.c();
             c.a(param2, 0, param2.length);
-            if (param1 == 18117) {
-              c.d();
-              L1: while (true) {
-                if (!c.a()) {
-                  break L0;
-                } else {
-                  gf.f(c.field_e, c.field_h, -c.field_e + c.field_a, param0, param3);
-                  continue L1;
-                }
+            c.d();
+            L1: while (true) {
+              if (!c.a()) {
+                break L0;
+              } else {
+                gf.f(c.field_e, c.field_h, -c.field_e + c.field_a, param0, param3);
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -53,7 +49,7 @@ final class qc extends ar {
           L2: {
             var4 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var4;
-            stackOut_7_1 = new StringBuilder().append("qc.L(").append(param0).append(44).append(param1).append(44);
+            stackOut_7_1 = new StringBuilder().append("qc.L(").append(param0).append(44).append(18117).append(44);
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -448,12 +444,9 @@ final class qc extends ar {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        ua.field_f.a(param4, param0, (byte) 46, param1, param5);
+        ua.field_f.a(640, param0, (byte) 46, 0, 5);
         if (!(mr.field_h == null)) {
             mr.field_h.a(-1, param2, param0, -jj.field_m + param2, param6, param0);
-        }
-        if (param3 != 3) {
-            field_t = null;
         }
     }
 
@@ -506,8 +499,10 @@ final class qc extends ar {
                   }
                 }
                 ((qc) this).field_v = (ke) param2;
-                this.g(-20189);
-                this.a(param1, 3);
+                int discarded$2 = -20189;
+                this.g();
+                int discarded$3 = 3;
+                this.a(param1);
                 ((qc) this).field_l = null;
                 ((qc) this).field_q.field_j = 0;
                 L4: while (true) {
@@ -608,15 +603,15 @@ final class qc extends ar {
         }
     }
 
-    public static void f(int param0) {
-        int var1 = 67 % ((35 - param0) / 48);
+    public static void f() {
+        int var1 = 1;
         field_t = null;
         field_u = null;
         field_s = null;
         field_w = null;
     }
 
-    private final void a(boolean param0, int param1) {
+    private final void a(boolean param0) {
         try {
             IOException iOException = null;
             Exception var4 = null;
@@ -777,7 +772,7 @@ final class qc extends ar {
         return stackIn_12_0 != 0;
     }
 
-    private final void g(int param0) {
+    private final void g() {
         try {
             Exception var3 = null;
             Throwable decompiledCaughtException = null;
@@ -803,7 +798,7 @@ final class qc extends ar {
         }
     }
 
-    final static void h(int param0) {
+    final static void h() {
         qj.a((byte) -127, 4);
     }
 

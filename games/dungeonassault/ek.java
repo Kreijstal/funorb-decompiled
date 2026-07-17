@@ -15,7 +15,7 @@ final class ek extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     final static double a(int param0, byte param1, int param2, int param3) {
         double var4 = -((double)param3 / (double)param2) + 0.75;
-        int var6 = 81 / ((param1 - -86) / 40);
+        int var6 = -81;
         if (!(0.0 <= var4)) {
             var4 = 0.0;
         }
@@ -23,7 +23,7 @@ final class ek extends java.awt.Canvas implements java.awt.event.FocusListener {
         return var4;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_j = null;
         field_h = null;
         field_d = null;

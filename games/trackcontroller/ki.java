@@ -37,7 +37,7 @@ final class ki {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_e = null;
         field_f = null;

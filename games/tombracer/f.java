@@ -28,13 +28,14 @@ final class f {
                 ((f) this).field_f[var3_int] = param0.a(var4.field_d, var4.field_a, 20);
             }
             ((f) this).field_d = null;
-            this.a(0);
+            int discarded$0 = 0;
+            this.a();
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "f.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
-    private final void a(int param0) {
+    private final void a() {
         int var2 = 0;
         int var3_int = 0;
         csa[] var3 = null;
@@ -127,7 +128,7 @@ final class f {
         return var3;
     }
 
-    final static String a(int param0, boolean param1, int param2, long param3, int param4) {
+    final static String a(int param0, boolean param1, int param2, long param3) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -166,41 +167,26 @@ final class f {
           }
         }
         var9 = new StringBuilder(26);
-        L3: {
-          if (param0 == 2843) {
-            break L3;
-          } else {
-            int discarded$4 = f.a(true);
-            break L3;
-          }
-        }
         var10 = 0;
-        L4: while (true) {
+        L3: while (true) {
           var11 = (int)param3;
           param3 = param3 / 10L;
-          StringBuilder discarded$5 = var9.append((char)(-(10 * (int)param3) + (var11 + 48)));
+          StringBuilder discarded$30 = var9.append((char)(-(10 * (int)param3) + (var11 + 48)));
           if (param3 != 0L) {
-            L5: {
-              if (!param1) {
-                break L5;
-              } else {
-                var10++;
-                if (0 == var10 % 3) {
-                  StringBuilder discarded$6 = var9.append(var7);
-                  break L5;
-                } else {
-                  continue L4;
-                }
-              }
+            var10++;
+            if (0 == var10 % 3) {
+              StringBuilder discarded$31 = var9.append(var7);
+              continue L3;
+            } else {
+              continue L3;
             }
-            continue L4;
           } else {
-            L6: {
+            L4: {
               if (var8 != 0) {
-                StringBuilder discarded$7 = var9.append(45);
-                break L6;
+                StringBuilder discarded$32 = var9.append(45);
+                break L4;
               } else {
-                break L6;
+                break L4;
               }
             }
             return var9.reverse().toString();
@@ -215,7 +201,8 @@ final class f {
         }
         int var1 = -18 % ((-10 - param0) / 43);
         if (!(bta.field_q == 0)) {
-            ufa.a(true);
+            int discarded$0 = 1;
+            ufa.a();
         }
         wv.field_j = 0;
     }
@@ -356,28 +343,20 @@ final class f {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_e = null;
         field_c = null;
     }
 
     final static int a(boolean param0) {
         L0: {
-          if (!param0) {
+          if (!lca.a(false)) {
             break L0;
-          } else {
-            f.b((byte) -68);
-            break L0;
-          }
-        }
-        L1: {
-          if (!lca.a(param0)) {
-            break L1;
           } else {
             if (null != wu.field_a.a((byte) 127)) {
               return wu.field_a.a((byte) -73).field_i;
             } else {
-              break L1;
+              break L0;
             }
           }
         }
@@ -439,7 +418,8 @@ final class f {
         try {
           L0: {
             ((f) this).field_a = param0;
-            var5_int = param3.b((byte) 44, iia.d(param0, 22972));
+            int discarded$2 = 22972;
+            var5_int = param3.b((byte) 44, iia.d(param0));
             ((f) this).field_f = new csa[var5_int];
             ((f) this).field_d = new cva[var5_int];
             var6 = 0;
@@ -570,8 +550,10 @@ final class f {
                 break L1;
               }
             }
-            this.a(0);
-            param0.a((byte) 44, ((f) this).field_f.length, iia.d(((f) this).field_a, 22972));
+            int discarded$4 = 0;
+            this.a();
+            int discarded$5 = 22972;
+            param0.a((byte) 44, ((f) this).field_f.length, iia.d(((f) this).field_a));
             var4_int = 0;
             L2: while (true) {
               if (((f) this).field_f.length <= var4_int) {

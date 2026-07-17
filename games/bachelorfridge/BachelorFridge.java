@@ -24,10 +24,12 @@ public final class BachelorFridge extends ms {
                   if (nm.field_A == 16) {
                     L2: {
                       if (!ge.field_L) {
-                        wg.a(false);
+                        int discarded$9 = 0;
+                        wg.a();
                         break L2;
                       } else {
-                        ft.c((byte) -41);
+                        int discarded$10 = -41;
+                        ft.c();
                         break L2;
                       }
                     }
@@ -48,7 +50,8 @@ public final class BachelorFridge extends ms {
                           nh.b(-122);
                           kaa.field_m = taa.field_l;
                           if (ge.field_L) {
-                            oq.a(false, false);
+                            int discarded$11 = 0;
+                            oq.a(false);
                             break L4;
                           } else {
                             break L4;
@@ -94,7 +97,8 @@ public final class BachelorFridge extends ms {
                     } else {
                       if (mg.field_m == null) {
                         if (bp.e(-29919)) {
-                          uq.g((byte) 67);
+                          int discarded$12 = 67;
+                          uq.g();
                           break L6;
                         } else {
                           me.d((byte) -123);
@@ -111,7 +115,8 @@ public final class BachelorFridge extends ms {
                   var4 = 0;
                   if (!param0) {
                     if (kaa.field_m != iba.field_s) {
-                      if (this.k((byte) -55)) {
+                      int discarded$13 = -55;
+                      if (this.k()) {
                         rs.a(true);
                         break L7;
                       } else {
@@ -217,7 +222,7 @@ public final class BachelorFridge extends ms {
                                 break L15;
                               } else {
                                 if (!vs.field_d) {
-                                  boolean discarded$3 = wb.a(13, 15, false, 12);
+                                  boolean discarded$14 = wb.a(13, 15, false, 12);
                                   break L15;
                                 } else {
                                   if (aka.a(12, 13, 15, (byte) -125)) {
@@ -260,7 +265,8 @@ public final class BachelorFridge extends ms {
                   if (hm.field_b) {
                     break L17;
                   } else {
-                    eia.b((byte) -116);
+                    int discarded$15 = -116;
+                    eia.b();
                     break L17;
                   }
                 }
@@ -289,13 +295,13 @@ public final class BachelorFridge extends ms {
                   if (mka.field_f.b((byte) 90) == null) {
                     break L19;
                   } else {
-                    int fieldTemp$4 = t.field_v + 1;
+                    int fieldTemp$16 = t.field_v + 1;
                     t.field_v = t.field_v + 1;
-                    if (fieldTemp$4 != 335) {
+                    if (fieldTemp$16 != 335) {
                       break L19;
                     } else {
                       t.field_v = 0;
-                      bw discarded$5 = mka.field_f.a(false);
+                      bw discarded$17 = mka.field_f.a(false);
                       break L19;
                     }
                   }
@@ -345,9 +351,9 @@ public final class BachelorFridge extends ms {
         }
     }
 
-    private final boolean k(byte param0) {
-        int var2_int = 0;
+    private final boolean k() {
         RuntimeException var2 = null;
+        int var2_int = 0;
         int stackIn_25_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_24_0 = 0;
@@ -355,62 +361,54 @@ public final class BachelorFridge extends ms {
         try {
           L0: {
             L1: {
-              if (param0 == -55) {
-                break L1;
-              } else {
-                ((BachelorFridge) this).field_x = false;
-                break L1;
-              }
-            }
-            L2: {
               var2_int = 32;
               if (iba.field_s != 0) {
-                break L2;
+                break L1;
               } else {
                 if (-3 != kaa.field_m) {
-                  break L2;
+                  break L1;
                 } else {
                   var2_int = 64;
                   gs.field_f.a(false, false);
-                  break L2;
+                  break L1;
                 }
               }
             }
-            L3: {
+            L2: {
               if (null == gs.field_f) {
-                break L3;
+                break L2;
               } else {
-                L4: {
+                L3: {
                   if (-3 == iba.field_s) {
-                    break L4;
+                    break L3;
                   } else {
                     if (1 != iba.field_s) {
-                      break L3;
+                      break L2;
                     } else {
-                      break L4;
+                      break L3;
                     }
                   }
                 }
                 if (kaa.field_m == 0) {
                   var2_int = 64;
                   gs.field_f.a(false, false);
-                  break L3;
+                  break L2;
                 } else {
-                  break L3;
+                  break L2;
                 }
               }
             }
-            L5: {
-              int fieldTemp$2 = tma.field_v + 1;
+            L4: {
+              int fieldTemp$1 = tma.field_v + 1;
               tma.field_v = tma.field_v + 1;
-              if (var2_int >= fieldTemp$2) {
+              if (var2_int >= fieldTemp$1) {
                 stackOut_24_0 = 0;
                 stackIn_25_0 = stackOut_24_0;
-                break L5;
+                break L4;
               } else {
                 stackOut_22_0 = 1;
                 stackIn_25_0 = stackOut_22_0;
-                break L5;
+                break L4;
               }
             }
             break L0;
@@ -418,19 +416,23 @@ public final class BachelorFridge extends ms {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var2, "BachelorFridge.G(" + param0 + 41);
+          throw pe.a((Throwable) (Object) var2, "BachelorFridge.G(" + -55 + 41);
         }
         return stackIn_25_0 != 0;
     }
 
-    private final void a(float param0, boolean param1) {
+    private final void a(float param0) {
+        RuntimeException var3 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
+          L0: {
             fla.field_r = param0;
-            if (!param1) {
-                ((BachelorFridge) this).a((byte) 111);
-            }
-        } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "BachelorFridge.I(" + param0 + 44 + param1 + 41);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw pe.a((Throwable) (Object) var3, "BachelorFridge.I(" + param0 + 44 + 1 + 41);
         }
     }
 
@@ -456,15 +458,18 @@ public final class BachelorFridge extends ms {
         var6 = field_y;
         try {
           L0: {
-            var2_ref = pha.a(109);
+            int discarded$9 = 109;
+            var2_ref = pha.a();
             if (sn.c(83)) {
               bn.a(0, var2_ref, gja.b(-16103));
               return;
             } else {
               if (sg.field_r) {
-                if (!cj.b(true)) {
+                int discarded$10 = 1;
+                if (!cj.b()) {
                   dea.a(rla.field_i, 100.0f, 116);
-                  jq.a(var2_ref, -128);
+                  int discarded$11 = -128;
+                  jq.a(var2_ref);
                   return;
                 } else {
                   L1: {
@@ -474,7 +479,8 @@ public final class BachelorFridge extends ms {
                           cf.a(true, iba.field_s, vla.field_w, (byte) 46);
                           break L2;
                         } else {
-                          this.h((byte) 103);
+                          int discarded$12 = 103;
+                          this.h();
                           break L2;
                         }
                       }
@@ -490,7 +496,8 @@ public final class BachelorFridge extends ms {
                             }
                           }
                         }
-                        ji.a(aja.e(11), 62);
+                        int discarded$13 = 11;
+                        ji.a(aja.e(), 62);
                         break L3;
                       }
                       L5: {
@@ -534,7 +541,8 @@ public final class BachelorFridge extends ms {
                         if (vs.a(23864)) {
                           break L1;
                         } else {
-                          if (paa.a(15000)) {
+                          int discarded$14 = 15000;
+                          if (paa.a()) {
                             break L1;
                           } else {
                             dg.g(0, 0, dg.field_i, dg.field_c);
@@ -560,7 +568,8 @@ public final class BachelorFridge extends ms {
                     if (vs.a(23864)) {
                       break L9;
                     } else {
-                      if (paa.a(15000)) {
+                      int discarded$15 = 15000;
+                      if (paa.a()) {
                         L10: {
                           stackOut_66_0 = -1;
                           stackIn_69_0 = stackOut_66_0;
@@ -629,11 +638,13 @@ public final class BachelorFridge extends ms {
                       }
                     }
                   }
-                  av.a(0, -106, var2_ref, 0);
+                  int discarded$16 = 0;
+                  av.a(0, -106, var2_ref);
                   break L0;
                 }
               } else {
-                jq.a(var2_ref, -128);
+                int discarded$17 = -128;
+                jq.a(var2_ref);
                 return;
               }
             }
@@ -645,7 +656,7 @@ public final class BachelorFridge extends ms {
         }
     }
 
-    private final void r(int param0) {
+    private final void r() {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -660,17 +671,19 @@ public final class BachelorFridge extends ms {
                 break L1;
               }
             }
-            fga.field_h = daa.c(param0 + 98, 3);
-            vb.field_j = ifa.a(5, false, false, -78, false);
+            fga.field_h = daa.c(109, 3);
+            int discarded$4 = 0;
+            vb.field_j = ifa.a(5, false, false, -78);
             wia.field_b = daa.c(-94, 6);
-            aka.field_w = daa.c(param0 + 103, 7);
-            uga.field_B = daa.c(param0 + 96, 8);
-            fda.field_l = daa.c(param0 ^ 73, 9);
-            tca.field_m = daa.c(param0 ^ 52, 10);
-            fda.field_k = daa.c(83, param0);
+            aka.field_w = daa.c(114, 7);
+            uga.field_B = daa.c(107, 8);
+            fda.field_l = daa.c(66, 9);
+            tca.field_m = daa.c(63, 10);
+            fda.field_k = daa.c(83, 11);
             ria.field_i = daa.c(103, 12);
             pr.field_j = daa.c(-60, 13);
-            iga.field_d = ifa.a(14, false, false, 114, false);
+            int discarded$5 = 0;
+            iga.field_d = ifa.a(14, false, false, 114);
             wba.field_f = daa.c(107, 15);
             wb.field_l = daa.c(-127, 16);
             vd.field_y = daa.c(80, 17);
@@ -682,7 +695,7 @@ public final class BachelorFridge extends ms {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var2, "BachelorFridge.N(" + param0 + 41);
+          throw pe.a((Throwable) (Object) var2, "BachelorFridge.N(" + 11 + 41);
         }
     }
 
@@ -695,12 +708,13 @@ public final class BachelorFridge extends ms {
               if (param0 == 76) {
                 break L1;
               } else {
-                boolean discarded$2 = this.i((byte) 56);
+                boolean discarded$4 = this.i((byte) 56);
                 break L1;
               }
             }
             L2: {
-              eia.a((byte) -15);
+              int discarded$5 = -15;
+              eia.a();
               if (kga.field_c == null) {
                 break L2;
               } else {
@@ -890,7 +904,7 @@ public final class BachelorFridge extends ms {
         }
     }
 
-    private final boolean j(byte param0) {
+    private final boolean j() {
         RuntimeException var2 = null;
         byte[] var2_array = null;
         ee[] var3 = null;
@@ -911,7 +925,7 @@ public final class BachelorFridge extends ms {
                 break L1;
               } else {
                 L2: {
-                  if (!vb.field_j.a(param0 + -7)) {
+                  if (!vb.field_j.a(0)) {
                     break L2;
                   } else {
                     if (!vb.field_j.a("minimal", 20637)) {
@@ -925,7 +939,7 @@ public final class BachelorFridge extends ms {
                             break L3;
                           } else {
                             L4: {
-                              if (!ria.field_i.a(param0 ^ 7)) {
+                              if (!ria.field_i.a(0)) {
                                 break L4;
                               } else {
                                 if (ria.field_i.b((byte) 95)) {
@@ -942,7 +956,7 @@ public final class BachelorFridge extends ms {
                           }
                         }
                       }
-                      dea.a(ej.a(vb.field_j, kj.field_a, (byte) -12, "minimal", iea.field_b), 75.0f, param0 + 111);
+                      dea.a(ej.a(vb.field_j, kj.field_a, (byte) -12, "minimal", iea.field_b), 75.0f, 118);
                       stackOut_17_0 = 0;
                       stackIn_18_0 = stackOut_17_0;
                       return stackIn_18_0 != 0;
@@ -955,25 +969,20 @@ public final class BachelorFridge extends ms {
                 return stackIn_10_0 != 0;
               }
             }
-            L5: {
-              ((BachelorFridge) this).field_x = true;
-              var2_array = wia.field_b.a((byte) 123, "smallfont", "minimal");
-              var3 = bla.a(param0 ^ 29612, "minimal", "smallfont", vb.field_j);
-              fea dupTemp$1 = qm.a(var3, var2_array, 0);
-              aha.field_D = dupTemp$1;
-              jha.field_g = dupTemp$1;
-              hfa.field_z = ll.a(var2_array, -8659, var3);
-              fn.field_n = qca.a(var2_array, 1, false, var3, 0, 0);
-              fn.field_n.field_M = bfa.field_c;
-              iu.a(-1638641311, ria.field_i);
-              qha.a(124, vb.field_j);
-              if (param0 == 7) {
-                break L5;
-              } else {
-                ((BachelorFridge) this).field_x = true;
-                break L5;
-              }
-            }
+            ((BachelorFridge) this).field_x = true;
+            var2_array = wia.field_b.a((byte) 123, "smallfont", "minimal");
+            var3 = bla.a(29611, "minimal", "smallfont", vb.field_j);
+            int discarded$4 = 0;
+            fea dupTemp$5 = qm.a(var3, var2_array);
+            aha.field_D = dupTemp$5;
+            jha.field_g = dupTemp$5;
+            hfa.field_z = ll.a(var2_array, -8659, var3);
+            int discarded$6 = 0;
+            int discarded$7 = 0;
+            fn.field_n = qca.a(var2_array, 1, false, var3);
+            fn.field_n.field_M = bfa.field_c;
+            iu.a(-1638641311, ria.field_i);
+            qha.a(124, vb.field_j);
             stackOut_28_0 = 1;
             stackIn_29_0 = stackOut_28_0;
             break L0;
@@ -981,706 +990,1154 @@ public final class BachelorFridge extends ms {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var2, "BachelorFridge.H(" + param0 + 41);
+          throw pe.a((Throwable) (Object) var2, "BachelorFridge.H(" + 7 + 41);
         }
         return stackIn_29_0 != 0;
     }
 
     final void b(int param0) {
-        mfa.b(0);
-        jr.a(86);
-        fo.a(-15135);
-        ri.a(false);
-        vc.a(-96);
+        int discarded$448 = 0;
+        mfa.b();
+        int discarded$449 = 86;
+        jr.a();
+        int discarded$450 = -15135;
+        fo.a();
+        int discarded$451 = 0;
+        ri.a();
+        int discarded$452 = -96;
+        vc.a();
         sv.a(24173);
         jb.b();
-        wi.b(true);
+        int discarded$453 = 1;
+        wi.b();
         ji.a(125);
-        eaa.b(7);
-        ga.a((byte) -123);
+        int discarded$454 = 7;
+        eaa.b();
+        int discarded$455 = -123;
+        ga.a();
         og.a((byte) 16);
-        gj.p(-1);
-        saa.d((byte) -128);
-        us.b(12745);
-        iw.a(-119);
-        db.a(0);
-        ml.a((byte) 63);
-        vm.a((byte) -87);
+        int discarded$456 = -1;
+        gj.p();
+        int discarded$457 = -128;
+        saa.d();
+        int discarded$458 = 12745;
+        us.b();
+        int discarded$459 = -119;
+        iw.a();
+        int discarded$460 = 0;
+        db.a();
+        int discarded$461 = 63;
+        ml.a();
+        int discarded$462 = -87;
+        vm.a();
         kb.a(92);
         v.a(-203);
-        pj.a(96);
-        vr.b(-19779);
-        oja.a(-32341);
+        int discarded$463 = 96;
+        pj.a();
+        int discarded$464 = -19779;
+        vr.b();
+        int discarded$465 = -32341;
+        oja.a();
         dj.a((byte) -75);
-        cba.a((byte) -44);
+        int discarded$466 = -44;
+        cba.a();
         ck.e(-12132);
         dl.d((byte) -39);
         pn.a((byte) -60);
         dg.a();
-        gr.b(12653);
+        int discarded$467 = 12653;
+        gr.b();
         pb.d();
-        i.a((byte) -122);
-        au.a(-31824);
-        ms.g((byte) 109);
-        gi.a(101);
+        int discarded$468 = -122;
+        i.a();
+        int discarded$469 = -31824;
+        au.a();
+        int discarded$470 = 109;
+        ms.g();
+        int discarded$471 = 101;
+        gi.a();
         tca.a((byte) -84);
         nn.a(0);
-        sca.b((byte) -33);
+        int discarded$472 = -33;
+        sca.b();
         po.a();
-        vda.a((byte) -62);
+        int discarded$473 = -62;
+        vda.a();
         lu.d((byte) -19);
         f.a(true);
-        um.a((byte) 106);
-        vw.b(7130);
-        rt.a((byte) -91);
+        int discarded$474 = 106;
+        um.a();
+        int discarded$475 = 7130;
+        vw.b();
+        int discarded$476 = -91;
+        rt.a();
         ka.a((byte) 40);
-        dt.a((byte) -125);
-        im.a((byte) -66);
-        gs.a(0);
-        jn.a(-22089);
-        oma.a((byte) 51);
-        tn.a(0);
-        qm.a(0);
-        qha.a(124);
-        kg.a((byte) 36);
-        qe.a((byte) 93);
+        int discarded$477 = -125;
+        dt.a();
+        int discarded$478 = -66;
+        im.a();
+        int discarded$479 = 0;
+        gs.a();
+        int discarded$480 = -22089;
+        jn.a();
+        int discarded$481 = 51;
+        oma.a();
+        int discarded$482 = 0;
+        tn.a();
+        int discarded$483 = 0;
+        qm.a();
+        int discarded$484 = 124;
+        qha.a();
+        int discarded$485 = 36;
+        kg.a();
+        int discarded$486 = 93;
+        qe.a();
         jla.b(true);
-        da.a(-47);
-        mu.a(9072);
+        int discarded$487 = -47;
+        da.a();
+        int discarded$488 = 9072;
+        mu.a();
         bw.b((byte) 127);
         dga.a((byte) -97);
-        jd.a((byte) 89);
-        lda.a((byte) -127);
-        oaa.a(-3681);
-        tb.a(-7778);
-        fba.a(2);
+        int discarded$489 = 89;
+        jd.a();
+        int discarded$490 = -127;
+        lda.a();
+        int discarded$491 = -3681;
+        oaa.a();
+        int discarded$492 = -7778;
+        tb.a();
+        int discarded$493 = 2;
+        fba.a();
         hi.a((byte) 97);
         sna.e((byte) -110);
         uha.g((byte) 110);
         ema.f(0);
         eu.a(false);
         rf.b(-67);
-        vaa.a(-1);
-        tja.a(8192);
+        int discarded$494 = -1;
+        vaa.a();
+        int discarded$495 = 8192;
+        tja.a();
         mba.a(-90);
         eo.c((byte) 114);
-        st.a((byte) 120);
+        int discarded$496 = 120;
+        st.a();
         rp.e((byte) 104);
-        tea.q(10462);
-        hga.o(8405024);
+        int discarded$497 = 10462;
+        tea.q();
+        int discarded$498 = 8405024;
+        hga.o();
         sja.o(33);
         dka.a(26727);
         ph.j(31826);
-        hh.b(-1);
+        int discarded$499 = -1;
+        hh.b();
         qh.a(23312);
-        ed.a(69);
+        int discarded$500 = 69;
+        ed.a();
         lr.a(34);
         jca.a(-8270);
-        ie.a(0);
-        tw.a(97);
-        to.a(53);
-        is.a(12836);
-        hs.a((byte) -127);
-        pf.l(-6199);
+        int discarded$501 = 0;
+        ie.a();
+        int discarded$502 = 97;
+        tw.a();
+        int discarded$503 = 53;
+        to.a();
+        int discarded$504 = 12836;
+        is.a();
+        int discarded$505 = -127;
+        hs.a();
+        int discarded$506 = -6199;
+        pf.l();
         rk.c((byte) 114);
-        tj.a((byte) -114);
-        nha.a(-18307);
-        it.d(119);
+        int discarded$507 = -114;
+        tj.a();
+        int discarded$508 = -18307;
+        nha.a();
+        int discarded$509 = 119;
+        it.d();
         jfa.c(false);
-        m.a((byte) 113);
-        w.a(66);
-        vi.a(-117);
-        gma.a(-5377);
+        int discarded$510 = 113;
+        m.a();
+        int discarded$511 = 66;
+        w.a();
+        int discarded$512 = -117;
+        vi.a();
+        int discarded$513 = -5377;
+        gma.a();
         on.e(-29639);
         go.e(98);
         lt.b((byte) -104);
-        ae.a(30317);
+        int discarded$514 = 30317;
+        ae.a();
         ala.a(-84);
-        cw.h(-41);
-        pna.f(1);
+        int discarded$515 = -41;
+        cw.h();
+        int discarded$516 = 1;
+        pna.f();
         ok.f(7576);
-        ik.a((byte) 38);
-        uq.f(87);
-        oda.b(14124);
+        int discarded$517 = 38;
+        ik.a();
+        int discarded$518 = 87;
+        uq.f();
+        int discarded$519 = 14124;
+        oda.b();
         kca.a((byte) 32);
-        lm.a((byte) -52);
-        fja.a(6220);
+        int discarded$520 = -52;
+        lm.a();
+        int discarded$521 = 6220;
+        fja.a();
         pga.a(470);
-        rfa.a((byte) -101);
+        int discarded$522 = -101;
+        rfa.a();
         ss.a();
-        rba.a(-52);
+        int discarded$523 = -52;
+        rba.a();
         il.a(4);
         lf.b(123);
-        ina.f((byte) -101);
-        lna.a((byte) 126);
+        int discarded$524 = -101;
+        ina.f();
+        int discarded$525 = 126;
+        lna.a();
         qaa.b(false);
         ec.a(-29584);
-        dma.a(false);
-        mda.a(15);
-        dq.a(-19100);
-        wba.a(-96);
-        iga.a(false);
-        dn.a(-114);
-        ko.a((byte) -73);
-        we.a((byte) -124);
-        ola.d((byte) -120);
+        int discarded$526 = 0;
+        dma.a();
+        int discarded$527 = 15;
+        mda.a();
+        int discarded$528 = -19100;
+        dq.a();
+        int discarded$529 = -96;
+        wba.a();
+        int discarded$530 = 0;
+        iga.a();
+        int discarded$531 = -114;
+        dn.a();
+        int discarded$532 = -73;
+        ko.a();
+        int discarded$533 = -124;
+        we.a();
+        int discarded$534 = -120;
+        ola.d();
         jna.a(30862);
-        uf.a((byte) 24);
-        d.d((byte) 7);
+        int discarded$535 = 24;
+        uf.a();
+        int discarded$536 = 7;
+        d.d();
         op.e((byte) 53);
-        bia.a(56);
-        pja.a((byte) -120);
+        int discarded$537 = 56;
+        bia.a();
+        int discarded$538 = -120;
+        pja.a();
         dba.a((byte) 62);
-        dfa.a(false);
+        int discarded$539 = 0;
+        dfa.a();
         wia.b(788454);
-        as.a((byte) 121);
-        wo.c((byte) 96);
+        int discarded$540 = 121;
+        as.a();
+        int discarded$541 = 96;
+        wo.c();
         pu.c((byte) 123);
-        or.c((byte) -77);
+        int discarded$542 = -77;
+        or.c();
         kj.a((byte) -110);
         vs.b(10530);
         aj.a(76);
         ng.c(-621);
-        pfa.b(false);
+        int discarded$543 = 0;
+        pfa.b();
         fs.c((byte) -59);
         ad.c(false);
         mk.a(1);
-        ua.a(-9);
-        cl.b(false);
-        in.b(-1);
-        qfa.g(97);
-        ta.a(255);
-        se.f(103);
-        fp.d(12);
-        fg.a((byte) 127);
-        gg.a((byte) -106);
-        cga.b(true);
+        int discarded$544 = -9;
+        ua.a();
+        int discarded$545 = 0;
+        cl.b();
+        int discarded$546 = -1;
+        in.b();
+        int discarded$547 = 97;
+        qfa.g();
+        int discarded$548 = 255;
+        ta.a();
+        int discarded$549 = 103;
+        se.f();
+        int discarded$550 = 12;
+        fp.d();
+        int discarded$551 = 127;
+        fg.a();
+        int discarded$552 = -106;
+        gg.a();
+        int discarded$553 = 1;
+        cga.b();
         kn.b(50);
         id.b(35);
-        fh.c((byte) 73);
+        int discarded$554 = 73;
+        fh.c();
         vga.b();
         jja.c((byte) -90);
-        kc.a((byte) 94);
+        int discarded$555 = 94;
+        kc.a();
         rm.a(-101);
-        ti.b(3);
-        lc.c(false);
-        jm.c((byte) 107);
+        int discarded$556 = 3;
+        ti.b();
+        int discarded$557 = 0;
+        lc.c();
+        int discarded$558 = 107;
+        jm.c();
         pp.c((byte) -75);
-        bf.c((byte) -79);
+        int discarded$559 = -79;
+        bf.c();
         vg.c((byte) 97);
         rv.b(-4);
-        ib.a(-102);
+        int discarded$560 = -102;
+        ib.a();
         paa.b(2);
         ve.d((byte) -45);
-        rha.c(-62);
-        lw.a(true);
-        cia.c((byte) -96);
-        vca.a(488250252);
+        int discarded$561 = -62;
+        rha.c();
+        int discarded$562 = 1;
+        lw.a();
+        int discarded$563 = -96;
+        cia.c();
+        int discarded$564 = 488250252;
+        vca.a();
         ii.b(-225);
-        md.b(28075);
+        int discarded$565 = 28075;
+        md.b();
         sq.c();
-        qi.a(10);
-        jt.b(true);
-        ula.a(0);
-        nl.a(-85);
+        int discarded$566 = 10;
+        qi.a();
+        int discarded$567 = 1;
+        jt.b();
+        int discarded$568 = 0;
+        ula.a();
+        int discarded$569 = -85;
+        nl.a();
         pv.a(-15565);
         gba.i(2);
-        wl.f(0);
+        int discarded$570 = 0;
+        wl.f();
         lha.a(1);
-        mq.a(213);
-        rma.c(1);
-        en.a(-10132);
-        ur.a(107);
-        cr.a(21592);
+        int discarded$571 = 213;
+        mq.a();
+        int discarded$572 = 1;
+        rma.c();
+        int discarded$573 = -10132;
+        en.a();
+        int discarded$574 = 107;
+        ur.a();
+        int discarded$575 = 21592;
+        cr.a();
         nu.a(76);
         pca.a();
         bv.a(98);
-        rh.a(0);
-        oe.a(false);
+        int discarded$576 = 0;
+        rh.a();
+        int discarded$577 = 0;
+        oe.a();
         nv.f(20038);
-        cc.a((byte) -122);
-        wk.a(-24);
+        int discarded$578 = -122;
+        cc.a();
+        int discarded$579 = -24;
+        wk.a();
         jc.e(127);
-        hr.a(true);
-        rda.a(true);
-        g.c((byte) -124);
+        int discarded$580 = 1;
+        hr.a();
+        int discarded$581 = 1;
+        rda.a();
+        int discarded$582 = -124;
+        g.c();
         eka.a(123);
-        un.a(2);
+        int discarded$583 = 2;
+        un.a();
         sda.a();
         dv.c();
         mga.b();
         hm.a(-123);
         em.o(-22799);
-        gha.a((byte) -124);
+        int discarded$584 = -124;
+        gha.a();
         ai.a(22309);
-        ma.a(0);
-        iea.a(24166);
-        cla.a(-60);
-        eea.a((byte) -79);
+        int discarded$585 = 0;
+        ma.a();
+        int discarded$586 = 24166;
+        iea.a();
+        int discarded$587 = -60;
+        cla.a();
+        int discarded$588 = -79;
+        eea.a();
         ls.a(-118);
-        vl.a((byte) 91);
-        fka.a(-2779);
-        sd.a(0);
-        nca.a((byte) 87);
+        int discarded$589 = 91;
+        vl.a();
+        int discarded$590 = -2779;
+        fka.a();
+        int discarded$591 = 0;
+        sd.a();
+        int discarded$592 = 87;
+        nca.a();
         sea.a((byte) -78);
         wd.c(1);
-        via.a(1);
+        int discarded$593 = 1;
+        via.a();
         vv.b(0);
         wj.c(1023);
-        hfa.g(-81);
-        am.c(true);
-        vf.j(-99);
+        int discarded$594 = -81;
+        hfa.g();
+        int discarded$595 = 1;
+        am.c();
+        int discarded$596 = -99;
+        vf.j();
         vd.i(20742);
-        rna.a(7);
-        gk.a(false);
-        qw.a((byte) -119);
-        pda.e(-3);
+        int discarded$597 = 7;
+        rna.a();
+        int discarded$598 = 0;
+        gk.a();
+        int discarded$599 = -119;
+        qw.a();
+        int discarded$600 = -3;
+        pda.e();
         pha.a(true);
-        ru.b(42);
-        uka.b((byte) 81);
+        int discarded$601 = 42;
+        ru.b();
+        int discarded$602 = 81;
+        uka.b();
         lba.a((byte) -68);
-        bi.d((byte) -97);
+        int discarded$603 = -97;
+        bi.d();
         ge.e((byte) -111);
         vn.k(-9063);
-        lka.g((byte) -127);
+        int discarded$604 = -127;
+        lka.g();
         uda.n(114);
-        de.a(1);
-        dd.a(0);
-        aha.b(true);
+        int discarded$605 = 1;
+        de.a();
+        int discarded$606 = 0;
+        dd.a();
+        int discarded$607 = 1;
+        aha.b();
         nf.d((byte) -127);
         dia.a(14213);
-        bfa.a(true);
+        int discarded$608 = 1;
+        bfa.a();
         iaa.a((byte) 93);
-        jea.a(1);
-        sr.b((byte) 127);
+        int discarded$609 = 1;
+        jea.a();
+        int discarded$610 = 127;
+        sr.b();
         eia.a(124);
         pr.a(-96);
-        qb.d(124);
-        kma.e(-1);
-        qo.a(3);
-        oa.f(116);
+        int discarded$611 = 124;
+        qb.d();
+        int discarded$612 = -1;
+        kma.e();
+        int discarded$613 = 3;
+        qo.a();
+        int discarded$614 = 116;
+        oa.f();
         qg.a(4096);
         co.a(true);
-        faa.a((byte) -113);
+        int discarded$615 = -113;
+        faa.a();
         gl.d(-44);
-        uma.m(-30829);
-        lq.a(71);
-        sh.e((byte) -92);
+        int discarded$616 = -30829;
+        uma.m();
+        int discarded$617 = 71;
+        lq.a();
+        int discarded$618 = -92;
+        sh.e();
         lla.d((byte) 0);
-        sha.b(3);
-        sa.b(0);
-        ena.b(false);
-        qt.b(-29205);
+        int discarded$619 = 3;
+        sha.b();
+        int discarded$620 = 0;
+        sa.b();
+        int discarded$621 = 0;
+        ena.b();
+        int discarded$622 = -29205;
+        qt.b();
         gca.c((byte) 113);
-        oq.a((byte) -47);
-        aa.b(-124);
-        ld.b(true);
-        qs.b(-5232);
-        wm.b(false);
-        ds.b(-1182);
+        int discarded$623 = -47;
+        oq.a();
+        int discarded$624 = -124;
+        aa.b();
+        int discarded$625 = 1;
+        ld.b();
+        int discarded$626 = -5232;
+        qs.b();
+        int discarded$627 = 0;
+        wm.b();
+        int discarded$628 = -1182;
+        ds.b();
         qba.b(2753);
-        ll.d((byte) 63);
-        gd.d((byte) -49);
+        int discarded$629 = 63;
+        ll.d();
+        int discarded$630 = -49;
+        gd.d();
         wv.b(-91);
         gn.d((byte) -66);
-        ep.b(1);
-        jf.b(0);
-        di.d((byte) -53);
-        vj.b(106);
-        dja.b(-14190);
-        hp.a(-107);
-        oc.b(32586);
-        sb.b(2630);
+        int discarded$631 = 1;
+        ep.b();
+        int discarded$632 = 0;
+        jf.b();
+        int discarded$633 = -53;
+        di.d();
+        int discarded$634 = 106;
+        vj.b();
+        int discarded$635 = -14190;
+        dja.b();
+        int discarded$636 = -107;
+        hp.a();
+        int discarded$637 = 32586;
+        oc.b();
+        int discarded$638 = 2630;
+        sb.b();
         sla.a((byte) 52);
-        aq.a((byte) -125);
-        kaa.d((byte) 114);
+        int discarded$639 = -125;
+        aq.a();
+        int discarded$640 = 114;
+        kaa.d();
         he.d((byte) 119);
-        rw.a((byte) -121);
+        int discarded$641 = -121;
+        rw.a();
         hv.a(false);
-        bha.d((byte) 60);
-        r.b(-1);
-        mn.b(102);
-        ij.d((byte) 123);
+        int discarded$642 = 60;
+        bha.d();
+        int discarded$643 = -1;
+        r.b();
+        int discarded$644 = 102;
+        mn.b();
+        int discarded$645 = 123;
+        ij.d();
         fr.d((byte) 3);
-        sn.b(-103);
+        int discarded$646 = -103;
+        sn.b();
         wja.d((byte) -106);
         jka.b(11178);
-        nda.b(-110);
-        ol.d((byte) -123);
+        int discarded$647 = -110;
+        nda.b();
+        int discarded$648 = -123;
+        ol.d();
         p.b(0);
-        cp.a(64);
-        uv.e((byte) -12);
-        pe.d(-33);
-        ig.d(0);
-        jia.b(false);
+        int discarded$649 = 64;
+        cp.a();
+        int discarded$650 = -12;
+        uv.e();
+        int discarded$651 = -33;
+        pe.d();
+        int discarded$652 = 0;
+        ig.d();
+        int discarded$653 = 0;
+        jia.b();
         cd.d(0);
-        ska.e((byte) 20);
-        afa.d(103);
-        ada.d(-15840);
-        wq.d(110);
+        int discarded$654 = 20;
+        ska.e();
+        int discarded$655 = 103;
+        afa.d();
+        int discarded$656 = -15840;
+        ada.d();
+        int discarded$657 = 110;
+        wq.d();
         et.d(-61);
-        qa.b(false);
+        int discarded$658 = 0;
+        qa.b();
         jh.d(4096);
-        bh.e((byte) -93);
-        sk.d(-124);
-        wt.d(19564);
-        an.f((byte) 86);
-        ag.d(108);
-        jq.b(true);
-        rc.d(-2);
-        aea.d(106);
+        int discarded$659 = -93;
+        bh.e();
+        int discarded$660 = -124;
+        sk.d();
+        int discarded$661 = 19564;
+        wt.d();
+        int discarded$662 = 86;
+        an.f();
+        int discarded$663 = 108;
+        ag.d();
+        int discarded$664 = 1;
+        jq.b();
+        int discarded$665 = -2;
+        rc.d();
+        int discarded$666 = 106;
+        aea.d();
         sj.d(0);
         wla.d(1);
         hda.e(122);
-        gt.d(-118);
+        int discarded$667 = -118;
+        gt.d();
         ama.e((byte) -118);
         ef.b(false);
         oj.e((byte) -116);
-        fn.f((byte) 121);
-        qna.e((byte) -106);
-        dc.b(true);
-        qea.a(-454605656);
-        qk.d(89);
-        lfa.e((byte) -128);
-        qca.d(-98);
+        int discarded$668 = 121;
+        fn.f();
+        int discarded$669 = -106;
+        qna.e();
+        int discarded$670 = 1;
+        dc.b();
+        int discarded$671 = -454605656;
+        qea.a();
+        int discarded$672 = 89;
+        qk.d();
+        int discarded$673 = -128;
+        lfa.e();
+        int discarded$674 = -98;
+        qca.d();
         dm.b((byte) -100);
-        gla.a((byte) -62);
+        int discarded$675 = -62;
+        gla.a();
         wha.a(-1);
         ou.b(-124);
-        ul.b(false);
+        int discarded$676 = 0;
+        ul.b();
         bc.a();
-        tq.c(-15298);
-        raa.h(2);
-        re.h(-124);
-        du.a(8192);
+        int discarded$677 = -15298;
+        tq.c();
+        int discarded$678 = 2;
+        raa.h();
+        int discarded$679 = -124;
+        re.h();
+        int discarded$680 = 8192;
+        du.a();
         oea.g(-8333);
-        uca.a(false);
+        int discarded$681 = 0;
+        uca.a();
         kda.a(-1);
-        ao.a((byte) -44);
-        ca.c(-64);
+        int discarded$682 = -44;
+        ao.a();
+        int discarded$683 = -64;
+        ca.c();
         if (param0 > 49) {
-          ov.c(-5);
-          gb.b(-22615);
-          ne.a(18072);
-          cq.c((byte) 67);
+          int discarded$684 = -5;
+          ov.c();
+          int discarded$685 = -22615;
+          gb.b();
+          int discarded$686 = 18072;
+          ne.a();
+          int discarded$687 = 67;
+          cq.c();
           ff.c(16777215);
-          pka.a(-8155);
+          int discarded$688 = -8155;
+          pka.a();
           oka.b((byte) 115);
           cm.c(-75);
           pt.a(65);
-          hl.h(2);
-          gu.a(true);
+          int discarded$689 = 2;
+          hl.h();
+          int discarded$690 = 1;
+          gu.a();
           nea.f(18178);
-          ap.a(54);
-          kka.a(-1);
+          int discarded$691 = 54;
+          ap.a();
+          int discarded$692 = -1;
+          kka.a();
           n.a((byte) 103);
-          qia.b(-127);
+          int discarded$693 = -127;
+          qia.b();
           bs.a(122);
-          af.a(9680);
-          eq.a(0);
-          ft.d((byte) -73);
-          ika.a(true);
+          int discarded$694 = 9680;
+          af.a();
+          int discarded$695 = 0;
+          eq.a();
+          int discarded$696 = -73;
+          ft.d();
+          int discarded$697 = 1;
+          ika.a();
           si.a(-28415);
-          kga.a(15238);
+          int discarded$698 = 15238;
+          kga.a();
           hja.a((byte) 124);
-          rs.a(2);
-          qc.a((byte) 80);
-          oha.b(-256);
+          int discarded$699 = 2;
+          rs.a();
+          int discarded$700 = 80;
+          qc.a();
+          int discarded$701 = -256;
+          oha.b();
           t.c((byte) -107);
-          tv.a(true);
-          hd.d(1);
+          int discarded$702 = 1;
+          tv.a();
+          int discarded$703 = 1;
+          hd.d();
           a.c(16763049);
-          gfa.a(17733);
-          nla.a(false);
-          dha.a(true);
+          int discarded$704 = 17733;
+          gfa.a();
+          int discarded$705 = 0;
+          nla.a();
+          int discarded$706 = 1;
+          dha.a();
           gw.a(25354);
-          cea.a(65536);
+          int discarded$707 = 65536;
+          cea.a();
           su.a(true);
-          ho.a(82);
+          int discarded$708 = 82;
+          ho.a();
           mka.b(false);
-          mc.a(-57);
-          lga.b(-4);
+          int discarded$709 = -57;
+          mc.a();
+          int discarded$710 = -4;
+          lga.b();
           kha.a(-118);
-          kr.f(-127);
-          uu.f((byte) 20);
-          fj.c((byte) 22);
-          kja.b(1900);
-          hk.a(true);
-          ot.b((byte) -91);
+          int discarded$711 = -127;
+          kr.f();
+          int discarded$712 = 20;
+          uu.f();
+          int discarded$713 = 22;
+          fj.c();
+          int discarded$714 = 1900;
+          kja.b();
+          int discarded$715 = 1;
+          hk.a();
+          int discarded$716 = -91;
+          ot.b();
           bd.c((byte) -124);
           jda.a(0);
-          es.b(true);
+          int discarded$717 = 1;
+          es.b();
           nq.c((byte) -115);
-          at.a(5849);
-          iha.d(111);
+          int discarded$718 = 5849;
+          at.a();
+          int discarded$719 = 111;
+          iha.d();
           cj.a(-51);
-          ida.b(true);
-          qf.d(28766);
+          int discarded$720 = 1;
+          ida.b();
+          int discarded$721 = 28766;
+          qf.d();
           taa.d((byte) -41);
-          fu.d((byte) 70);
+          int discarded$722 = 70;
+          fu.d();
           fha.d((byte) 9);
-          wn.d(10);
-          cb.d((byte) 106);
-          iu.e(-15434);
-          gm.b(false);
-          df.c(15);
+          int discarded$723 = 10;
+          wn.d();
+          int discarded$724 = 106;
+          cb.d();
+          int discarded$725 = -15434;
+          iu.e();
+          int discarded$726 = 0;
+          gm.b();
+          int discarded$727 = 15;
+          df.c();
           td.b(false);
-          bca.c(15);
-          ew.d(16776);
-          ana.d((byte) 127);
-          ra.d(11919);
+          int discarded$728 = 15;
+          bca.c();
+          int discarded$729 = 16776;
+          ew.d();
+          int discarded$730 = 127;
+          ana.d();
+          int discarded$731 = 11919;
+          ra.d();
           hia.d((byte) -74);
           fl.b(false);
           ek.d(8);
           vla.f((byte) -103);
-          mv.e((byte) 126);
-          rea.c((byte) -108);
+          int discarded$732 = 126;
+          mv.e();
+          int discarded$733 = -108;
+          rea.c();
           fga.a(false);
           sia.c(10371);
-          uea.c((byte) -113);
-          bu.c(123);
-          jha.c((byte) 126);
+          int discarded$734 = -113;
+          uea.c();
+          int discarded$735 = 123;
+          bu.c();
+          int discarded$736 = 126;
+          jha.c();
           eda.c(60);
-          fa.c(117);
-          ip.c((byte) -36);
-          nd.a(false);
+          int discarded$737 = 117;
+          fa.c();
+          int discarded$738 = -36;
+          ip.c();
+          int discarded$739 = 0;
+          nd.a();
           nj.c(256);
-          qla.c(-24);
-          dw.a(false);
-          bma.d((byte) -102);
+          int discarded$740 = -24;
+          qla.c();
+          int discarded$741 = 0;
+          dw.a();
+          int discarded$742 = -102;
+          bma.d();
           aca.c(-111);
-          bn.c(109);
-          pi.a(false);
+          int discarded$743 = 109;
+          bn.c();
+          int discarded$744 = 0;
+          pi.a();
           oia.c(126);
-          mw.c(16);
+          int discarded$745 = 16;
+          mw.c();
           jj.b(false);
-          hw.b(false);
-          mj.b((byte) 87);
-          gaa.d(350);
-          ub.d(1);
-          iia.a(1314859432);
-          ej.b(0);
+          int discarded$746 = 0;
+          hw.b();
+          int discarded$747 = 87;
+          mj.b();
+          int discarded$748 = 350;
+          gaa.d();
+          int discarded$749 = 1;
+          ub.d();
+          int discarded$750 = 1314859432;
+          iia.a();
+          int discarded$751 = 0;
+          ej.b();
           oca.d((byte) -122);
           tga.a(-111);
           ow.a(-1);
           lv.d((byte) -47);
           wp.b(80);
-          fi.d((byte) -80);
+          int discarded$752 = -80;
+          fi.d();
           bg.b(5);
-          bja.a(-10744);
+          int discarded$753 = -10744;
+          bja.a();
           ns.a(-11);
-          iv.a(-124);
-          lia.d((byte) 42);
-          qq.a(5);
-          cn.e((byte) 85);
-          bj.d((byte) -13);
-          rla.d((byte) 29);
+          int discarded$754 = -124;
+          iv.a();
+          int discarded$755 = 42;
+          lia.d();
+          int discarded$756 = 5;
+          qq.a();
+          int discarded$757 = 85;
+          cn.e();
+          int discarded$758 = -13;
+          bj.d();
+          int discarded$759 = 29;
+          rla.d();
           ela.d((byte) 80);
-          sl.d((byte) 116);
-          bm.d((byte) 3);
-          ro.a(101);
+          int discarded$760 = 116;
+          sl.d();
+          int discarded$761 = 3;
+          bm.d();
+          int discarded$762 = 101;
+          ro.a();
           o.e((byte) -7);
-          dh.d((byte) -78);
-          fda.d((byte) 25);
+          int discarded$763 = -78;
+          dh.d();
+          int discarded$764 = 25;
+          fda.d();
           ic.b(false);
           kq.d((byte) -91);
           kt.a(-23401);
-          mh.a(-15947);
+          int discarded$765 = -15947;
+          mh.a();
           pea.e((byte) 116);
-          jk.d((byte) -115);
-          dla.a(1097);
-          jma.d(24831);
+          int discarded$766 = -115;
+          jk.d();
+          int discarded$767 = 1097;
+          dla.a();
+          int discarded$768 = 24831;
+          jma.d();
           eg.c((byte) -72);
           fia.c(false);
           jw.d(32);
-          c.a(-20330);
+          int discarded$769 = -20330;
+          c.a();
           wa.d((byte) -74);
-          wb.d(10046);
-          li.d(-46);
-          dp.d(-114);
-          nia.b(false);
+          int discarded$770 = 10046;
+          wb.d();
+          int discarded$771 = -46;
+          li.d();
+          int discarded$772 = -114;
+          dp.d();
+          int discarded$773 = 0;
+          nia.b();
           cha.d(-30518);
-          bda.d(-18);
+          int discarded$774 = -18;
+          bda.d();
           dea.d(-35);
           iq.d((byte) -106);
           sc.d(-31258);
           lh.b(-12847);
-          ha.c(true);
-          jv.c((byte) 79);
-          ut.b(-8696);
-          gja.c(4177);
+          int discarded$775 = 1;
+          ha.c();
+          int discarded$776 = 79;
+          jv.c();
+          int discarded$777 = -8696;
+          ut.b();
+          int discarded$778 = 4177;
+          gja.c();
           hba.e((byte) 92);
-          ba.f((byte) -45);
-          ql.c((byte) -74);
+          int discarded$779 = -45;
+          ba.f();
+          int discarded$780 = -74;
+          ql.c();
           uj.d((byte) 20);
           jba.d(-128);
-          kw.c((byte) 80);
-          uaa.c((byte) -126);
+          int discarded$781 = 80;
+          kw.c();
+          int discarded$782 = -126;
+          uaa.c();
           wda.a(4);
-          kna.a(36);
+          int discarded$783 = 36;
+          kna.a();
           ona.f(1);
-          aja.b(-50);
-          ug.c((byte) 10);
-          qd.c((byte) 81);
-          laa.d(false);
+          int discarded$784 = -50;
+          aja.b();
+          int discarded$785 = 10;
+          ug.c();
+          int discarded$786 = 81;
+          qd.c();
+          int discarded$787 = 0;
+          laa.d();
           ni.b(-83);
           ia.c(300);
           uc.c((byte) -102);
-          vma.b(-93);
+          int discarded$788 = -93;
+          vma.b();
           vu.c((byte) 106);
-          lo.a((byte) -93);
-          rg.a(0);
-          gea.b(4096);
-          fm.a(101);
-          bga.b(false);
+          int discarded$789 = -93;
+          lo.a();
+          int discarded$790 = 0;
+          rg.a();
+          int discarded$791 = 4096;
+          gea.b();
+          int discarded$792 = 101;
+          fm.a();
+          int discarded$793 = 0;
+          bga.b();
           mla.a((byte) 93);
-          tt.e((byte) 84);
-          wg.d(22753);
-          el.f((byte) -24);
-          hna.d(99);
-          hka.d(-111);
-          hb.d(-98);
-          kf.b((byte) 110);
-          aia.c((byte) -127);
-          pk.c(-106);
-          fw.a(-8668);
-          uw.f(6144);
+          int discarded$794 = 84;
+          tt.e();
+          int discarded$795 = 22753;
+          wg.d();
+          int discarded$796 = -24;
+          el.f();
+          int discarded$797 = 99;
+          hna.d();
+          int discarded$798 = -111;
+          hka.d();
+          int discarded$799 = -98;
+          hb.d();
+          int discarded$800 = 110;
+          kf.b();
+          int discarded$801 = -127;
+          aia.c();
+          int discarded$802 = -106;
+          pk.c();
+          int discarded$803 = -8668;
+          fw.a();
+          int discarded$804 = 6144;
+          uw.f();
           tl.d((byte) -89);
-          fv.e((byte) -35);
-          gka.e(-3);
-          mr.c(0);
+          int discarded$805 = -35;
+          fv.e();
+          int discarded$806 = -3;
+          gka.e();
+          int discarded$807 = 0;
+          mr.c();
           cu.d(32);
-          mi.d((byte) -119);
-          ak.d((byte) 52);
+          int discarded$808 = -119;
+          mi.d();
+          int discarded$809 = 52;
+          ak.d();
           pw.d(-124);
-          tg.b(1);
-          jl.d(-17509);
+          int discarded$810 = 1;
+          tg.b();
+          int discarded$811 = -17509;
+          jl.d();
           maa.e((byte) 72);
-          sw.c(true);
-          mna.d((byte) 125);
-          hha.g(0);
-          ria.a(127);
-          fla.c(-36);
-          pba.d(-1);
-          nna.f((byte) 121);
+          int discarded$812 = 1;
+          sw.c();
+          int discarded$813 = 125;
+          mna.d();
+          int discarded$814 = 0;
+          hha.g();
+          int discarded$815 = 127;
+          ria.a();
+          int discarded$816 = -36;
+          fla.c();
+          int discarded$817 = -1;
+          pba.d();
+          int discarded$818 = 121;
+          nna.f();
           io.b(-125);
-          hla.d(-72);
-          vea.e((byte) 65);
-          ifa.b(80);
+          int discarded$819 = -72;
+          hla.d();
+          int discarded$820 = 65;
+          vea.e();
+          int discarded$821 = 80;
+          ifa.b();
           ju.e((byte) -67);
           kla.d(119);
-          vk.d((byte) 110);
+          int discarded$822 = 110;
+          vk.d();
           wf.e(2);
-          dk.b(-19353);
-          pm.e(-38);
+          int discarded$823 = -19353;
+          dk.b();
+          int discarded$824 = -38;
+          pm.e();
           qn.c((byte) 108);
-          h.d((byte) 45);
-          bk.e(25);
-          bt.d(-17811);
+          int discarded$825 = 45;
+          h.d();
+          int discarded$826 = 25;
+          bk.e();
+          int discarded$827 = -17811;
+          bt.d();
           gp.d(-13837);
-          sm.d(-1);
+          int discarded$828 = -1;
+          sm.d();
           vq.e((byte) 123);
-          eha.b(-1452);
-          cma.b(false);
+          int discarded$829 = -1452;
+          eha.b();
+          int discarded$830 = 0;
+          cma.b();
           nh.c((byte) 98);
-          nt.e(4);
-          fb.c((byte) -91);
+          int discarded$831 = 4;
+          nt.e();
+          int discarded$832 = -91;
+          fb.c();
           fna.c(false);
-          ui.c(true);
+          int discarded$833 = 1;
+          ui.c();
           wfa.c(false);
-          uga.f((byte) 21);
+          int discarded$834 = 21;
+          uga.f();
           dr.c(true);
-          wga.d((byte) -69);
-          lb.f((byte) 39);
+          int discarded$835 = -69;
+          wga.d();
+          int discarded$836 = 39;
+          lb.f();
           vfa.b(-14431);
           bea.d(true);
-          lma.g(-1111);
-          ts.c(true);
-          lca.d((byte) -113);
+          int discarded$837 = -1111;
+          lma.g();
+          int discarded$838 = 1;
+          ts.c();
+          int discarded$839 = -113;
+          lca.d();
           bna.d(-61);
-          eb.c((byte) -48);
-          tba.d(9);
-          gf.a(false);
-          mp.b(95);
+          int discarded$840 = -48;
+          eb.c();
+          int discarded$841 = 9;
+          tba.d();
+          int discarded$842 = 0;
+          gf.a();
+          int discarded$843 = 95;
+          mp.b();
           uk.d(-36);
-          sg.c((byte) 113);
+          int discarded$844 = 113;
+          sg.c();
           ps.d((byte) -102);
           cka.d(-26);
-          nw.c(false);
-          cja.d(-23353);
+          int discarded$845 = 0;
+          nw.c();
+          int discarded$846 = -23353;
+          cja.d();
           la.d(2);
-          dca.e((byte) -87);
+          int discarded$847 = -87;
+          dca.e();
           te.c(35);
           tp.e((byte) -75);
-          oga.d(-98);
-          er.f((byte) -120);
-          fq.c((byte) 127);
-          fk.e((byte) 49);
+          int discarded$848 = -98;
+          oga.d();
+          int discarded$849 = -120;
+          er.f();
+          int discarded$850 = 127;
+          fq.c();
+          int discarded$851 = 49;
+          fk.e();
           cf.a(0);
-          aka.e((byte) -95);
-          dda.a(false);
-          hea.c(-116);
-          rn.d(119);
-          baa.g(-122);
-          mja.b(78);
-          oo.d((byte) -85);
-          nm.e(25280);
-          mg.e(-62);
-          mt.b(1687);
+          int discarded$852 = -95;
+          aka.e();
+          int discarded$853 = 0;
+          dda.a();
+          int discarded$854 = -116;
+          hea.c();
+          int discarded$855 = 119;
+          rn.d();
+          int discarded$856 = -122;
+          baa.g();
+          int discarded$857 = 78;
+          mja.b();
+          int discarded$858 = -85;
+          oo.d();
+          int discarded$859 = 25280;
+          nm.e();
+          int discarded$860 = -62;
+          mg.e();
+          int discarded$861 = 1687;
+          mt.b();
           nb.d(-103);
           eja.e(101);
           kk.d(19691);
-          bp.e((byte) 119);
-          ud.c(false);
-          ica.d((byte) -113);
-          aw.e((byte) 26);
-          hj.c((byte) -96);
+          int discarded$862 = 119;
+          bp.e();
+          int discarded$863 = 0;
+          ud.c();
+          int discarded$864 = -113;
+          ica.d();
+          int discarded$865 = 26;
+          aw.e();
+          int discarded$866 = -96;
+          hj.c();
           l.d((byte) -119);
-          tma.c(false);
-          ija.b(-4);
+          int discarded$867 = 0;
+          tma.c();
+          int discarded$868 = -4;
+          ija.b();
           rb.d((byte) -36);
-          mea.f(121);
-          ffa.c(22533);
+          int discarded$869 = 121;
+          mea.f();
+          int discarded$870 = 22533;
+          ffa.c();
           rl.b(0);
           me.d(100);
-          od.b(false);
+          int discarded$871 = 0;
+          od.b();
           wc.c((byte) 126);
-          jaa.d(-100);
+          int discarded$872 = -100;
+          jaa.d();
           cca.d(75);
-          ch.c(14);
+          int discarded$873 = 14;
+          ch.c();
           vh.e((byte) -3);
           vt.b(0);
-          b.b(5910);
-          ja.b(0);
-          oi.f(-6887);
+          int discarded$874 = 5910;
+          b.b();
+          int discarded$875 = 0;
+          ja.b();
+          int discarded$876 = -6887;
+          oi.f();
           uba.b(0);
           ln.d(4);
-          kea.b(-26857);
+          int discarded$877 = -26857;
+          kea.b();
           tla.c(false);
           fd.d(0);
-          rr.f(-13421);
-          ci.b(-115);
+          int discarded$878 = -13421;
+          rr.f();
+          int discarded$879 = -115;
+          ci.b();
           jga.d(0);
-          ki.e(-1);
+          int discarded$880 = -1;
+          ki.e();
           wh.b(0);
           nma.d(-1);
-          bla.b(42);
-          pg.d(0);
-          nr.e(1);
+          int discarded$881 = 42;
+          bla.b();
+          int discarded$882 = 0;
+          pg.d();
+          int discarded$883 = 1;
+          nr.e();
           vka.d((byte) -107);
-          lp.d((byte) 84);
-          sma.e((byte) -40);
-          ob.c(0);
-          qga.c((byte) -87);
-          ct.d((byte) -118);
-          gq.b(false);
-          ce.e((byte) 120);
+          int discarded$884 = 84;
+          lp.d();
+          int discarded$885 = -40;
+          sma.e();
+          int discarded$886 = 0;
+          ob.c();
+          int discarded$887 = -87;
+          qga.c();
+          int discarded$888 = -118;
+          ct.d();
+          int discarded$889 = 0;
+          gq.b();
+          int discarded$890 = 120;
+          ce.e();
           vo.a((byte) -128);
-          nga.a(-20804);
-          rj.b((byte) -122);
-          vb.a(-126);
-          fe.a(-127);
-          rga.a((byte) -84);
+          int discarded$891 = -20804;
+          nga.a();
+          int discarded$892 = -122;
+          rj.b();
+          int discarded$893 = -126;
+          vb.a();
+          int discarded$894 = -127;
+          fe.a();
+          int discarded$895 = -84;
+          rga.a();
           ((BachelorFridge) this).field_r = null;
           return;
         } else {
@@ -1688,7 +2145,7 @@ public final class BachelorFridge extends ms {
         }
     }
 
-    private final void h(byte param0) {
+    private final void h() {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -1728,27 +2185,23 @@ public final class BachelorFridge extends ms {
                 }
               }
             }
-            if (param0 >= 26) {
-              L4: {
-                if (16 > tma.field_v) {
-                  cf.a(false, iba.field_s, vla.field_w, (byte) 61);
-                  kp.b(3959817, tma.field_v);
-                  break L4;
-                } else {
-                  cf.a(false, kaa.field_m, sia.field_h, (byte) 47);
-                  kp.a(3959817, -tma.field_v + 32);
-                  break L4;
-                }
+            L4: {
+              if (16 > tma.field_v) {
+                cf.a(false, iba.field_s, vla.field_w, (byte) 61);
+                kp.b(3959817, tma.field_v);
+                break L4;
+              } else {
+                cf.a(false, kaa.field_m, sia.field_h, (byte) 47);
+                kp.a(3959817, -tma.field_v + 32);
+                break L4;
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var2, "BachelorFridge.M(" + param0 + 41);
+          throw pe.a((Throwable) (Object) var2, "BachelorFridge.M(" + 103 + 41);
         }
     }
 
@@ -1762,7 +2215,8 @@ public final class BachelorFridge extends ms {
         String[][] var6 = null;
         int var7 = 0;
         var7 = field_y;
-        iha.e(5);
+        int discarded$31 = 5;
+        iha.e();
         th.a(25);
         if (aka.field_w != null) {
           L0: {
@@ -1908,14 +2362,17 @@ public final class BachelorFridge extends ms {
                                                                                                                                 if (fda.field_k.b((byte) 101)) {
                                                                                                                                   waa.a(0, 19);
                                                                                                                                   of.b(108);
-                                                                                                                                  this.a(78.5999984741211f, true);
+                                                                                                                                  int discarded$32 = 1;
+                                                                                                                                  this.a(78.5999984741211f);
                                                                                                                                   ((BachelorFridge) this).a((byte) 50);
                                                                                                                                   waa.a(0, 20);
                                                                                                                                   pu.a(tca.field_m, fda.field_l, -21201, aka.field_w, uga.field_B);
-                                                                                                                                  oe.a(230, (byte) 108);
+                                                                                                                                  int discarded$33 = 108;
+                                                                                                                                  oe.a(230);
                                                                                                                                   ke.b(34);
                                                                                                                                   aka.field_w = null;
-                                                                                                                                  this.a(81.0999984741211f, true);
+                                                                                                                                  int discarded$34 = 1;
+                                                                                                                                  this.a(81.0999984741211f);
                                                                                                                                   waa.a(0, 21);
                                                                                                                                   return false;
                                                                                                                                 } else {
@@ -2037,23 +2494,28 @@ public final class BachelorFridge extends ms {
           this.a(0.0f, mt.field_p, 0.20000000298023224f, -116, "basic");
           return false;
         } else {
-          this.a(84.5999984741211f, true);
+          int discarded$35 = 1;
+          this.a(84.5999984741211f);
           waa.a(0, 22);
           if (null == wba.field_f) {
             L20: {
-              this.a(84.9000015258789f, true);
+              int discarded$36 = 1;
+              this.a(84.9000015258789f);
               waa.a(0, 23);
               if (wb.field_l == null) {
                 break L20;
               } else {
-                qla.d(-64);
-                nw.a(wb.field_l, (byte) 2);
+                int discarded$37 = -64;
+                qla.d();
+                int discarded$38 = 2;
+                nw.a(wb.field_l);
                 mea.e(0);
                 wb.field_l = null;
                 break L20;
               }
             }
-            this.a(85.30000305175781f, true);
+            int discarded$39 = 1;
+            this.a(85.30000305175781f);
             waa.a(0, 24);
             if (null != uga.field_B) {
               ((BachelorFridge) this).a((byte) 100);
@@ -2061,7 +2523,8 @@ public final class BachelorFridge extends ms {
               mia.b(32);
               return false;
             } else {
-              this.a(85.9000015258789f, true);
+              int discarded$40 = 1;
+              this.a(85.9000015258789f);
               waa.a(0, 25);
               if (null != tca.field_m) {
                 L21: {
@@ -2076,41 +2539,52 @@ public final class BachelorFridge extends ms {
                 mia.b(32);
                 return false;
               } else {
-                this.a(94.0999984741211f, true);
+                int discarded$41 = 1;
+                this.a(94.0999984741211f);
                 waa.a(0, 26);
                 if (iga.field_d == null) {
-                  this.a(94.30000305175781f, true);
+                  int discarded$42 = 1;
+                  this.a(94.30000305175781f);
                   waa.a(0, 27);
                   if (null == wia.field_b) {
-                    this.a(99.0f, true);
+                    int discarded$43 = 1;
+                    this.a(99.0f);
                     waa.a(0, 30);
                     if (null != ria.field_i) {
-                      bka.a(ria.field_i, true);
+                      int discarded$44 = 1;
+                      bka.a(ria.field_i);
                       ria.field_i = null;
                       return false;
                     } else {
-                      this.a(99.30000305175781f, true);
+                      int discarded$45 = 1;
+                      this.a(99.30000305175781f);
                       waa.a(0, 31);
                       if (pr.field_j != null) {
                         iia.a(-167571320, pr.field_j);
                         pr.field_j = null;
                         return false;
                       } else {
-                        this.a(99.5999984741211f, true);
+                        int discarded$46 = 1;
+                        this.a(99.5999984741211f);
                         waa.a(0, 32);
                         if (fga.field_h == null) {
-                          this.a(99.69999694824219f, true);
+                          int discarded$47 = 1;
+                          this.a(99.69999694824219f);
                           waa.a(0, 33);
-                          ek.d((byte) -19);
-                          uw.g(-128);
-                          eh discarded$3 = ju.field_r.a((java.awt.Component) (Object) dca.field_y, false, 123);
+                          int discarded$48 = -19;
+                          ek.d();
+                          int discarded$49 = -128;
+                          uw.g();
+                          eh discarded$50 = ju.field_r.a((java.awt.Component) (Object) dca.field_y, false, 123);
                           var2_int = 0;
                           if (param0 < -117) {
                             L22: while (true) {
                               if (var2_int >= 16) {
                                 iba.field_s = 0;
                                 kaa.field_m = 0;
-                                jca.a(50, -14350);
+                                int discarded$51 = -14350;
+                                int discarded$52 = 50;
+                                jca.a();
                                 ala.a(26219, wc.field_p);
                                 mia.b(32);
                                 waa.a(0, 34);
@@ -2137,17 +2611,21 @@ public final class BachelorFridge extends ms {
                     ((BachelorFridge) this).a((byte) 3);
                     var2 = wia.field_b.a((byte) 123, "menufont", "basic");
                     var3 = bla.a(29611, "basic", "menufont", vb.field_j);
-                    p.a(2, var2, 256);
+                    int discarded$53 = 256;
+                    p.a(2, var2);
                     taa.field_u = hla.a(4676, var3, var2);
-                    kca.field_c = qca.a(var2, 2, false, var3, 0, 0);
+                    int discarded$54 = 0;
+                    int discarded$55 = 0;
+                    kca.field_c = qca.a(var2, 2, false, var3);
                     kca.field_c.field_M = bfa.field_c;
                     dja.field_l = jr.a("basic", (byte) 110, vb.field_j, "fridgefont", wia.field_b);
                     la.a(3, dja.field_l);
                     kla.field_w = jr.a("basic", (byte) 124, vb.field_j, "smallfridgefont", wia.field_b);
-                    iia.a(kla.field_w, 1);
+                    int discarded$56 = 1;
+                    iia.a(kla.field_w);
                     fha.field_j = new String[2][2];
-                    int discarded$4 = kla.field_w.a(fu.field_l[0], new int[1], fha.field_j[0]);
-                    int discarded$5 = kla.field_w.a(fu.field_l[1], new int[1], fha.field_j[1]);
+                    int discarded$57 = kla.field_w.a(fu.field_l[0], new int[1], fha.field_j[0]);
+                    int discarded$58 = kla.field_w.a(fu.field_l[1], new int[1], fha.field_j[1]);
                     var2 = wia.field_b.a((byte) 123, "tinyfont", "basic");
                     var3 = bla.a(29611, "basic", "tinyfont", vb.field_j);
                     ad.field_h = hl.a(16777215, (byte) 107, var3, 65793, var2);
@@ -2158,7 +2636,8 @@ public final class BachelorFridge extends ms {
                     var3 = bla.a(29611, "basic", "arenafont", vb.field_j);
                     b.field_t = hl.a(16777215, (byte) 107, var3, 65793, var2);
                     b.field_t.field_M = ce.field_w;
-                    fu.a(vb.field_j, false);
+                    int discarded$59 = 0;
+                    fu.a(vb.field_j);
                     uq.field_zb = an.a((byte) -127, vb.field_j, "basic", "generic_frame");
                     uma.field_J = an.a((byte) -123, vb.field_j, "basic", "generic_frame");
                     og.field_a = pi.a(vb.field_j, -8845, "basic", "achievements_large");
@@ -2178,7 +2657,8 @@ public final class BachelorFridge extends ms {
                     L23: while (true) {
                       if (~ena.field_o.length >= ~var6_int) {
                         var6 = lna.field_y;
-                        r.a(cma.field_y, -1, mt.field_p, lna.field_y, tj.field_c, jha.field_j, pt.field_b, 4, fda.field_k, vfa.field_p, var6, var4, true, var5, 5);
+                        int discarded$60 = 5;
+                        r.a(cma.field_y, -1, mt.field_p, lna.field_y, tj.field_c, jha.field_j, pt.field_b, 4, fda.field_k, vfa.field_p, var6, var4, true, var5);
                         nda.field_l = hca.a("basic", vb.field_j, -99, "lobby_game_logo");
                         iw.a(200, (byte) -89);
                         bca.a(-114, mt.field_p, vfa.field_p);
@@ -2213,7 +2693,8 @@ public final class BachelorFridge extends ms {
               }
             }
           } else {
-            ce.a(wba.field_f, 15);
+            int discarded$61 = 15;
+            ce.a(wba.field_f);
             wba.field_f = null;
             return false;
           }
@@ -2266,14 +2747,15 @@ public final class BachelorFridge extends ms {
         try {
           L0: {
             L1: {
-              int discarded$5 = sma.e(30);
+              int discarded$23 = sma.e(30);
               md.field_l = jfa.e(-93);
               if (null == kga.field_c) {
                 break L1;
               } else {
                 if (kga.field_c.field_f) {
                   lga.c((byte) 108);
-                  hea.b(4);
+                  int discarded$24 = 4;
+                  hea.b();
                   break L1;
                 } else {
                   break L1;
@@ -2310,7 +2792,8 @@ public final class BachelorFridge extends ms {
               if (!ed.field_a) {
                 break L3;
               } else {
-                this.r(11);
+                int discarded$25 = 11;
+                this.r();
                 ed.field_a = false;
                 break L3;
               }
@@ -2323,7 +2806,7 @@ public final class BachelorFridge extends ms {
               } else {
                 L5: {
                   if (!pw.field_z) {
-                    eh discarded$6 = ju.field_r.a((java.awt.Component) (Object) dca.field_y, true, 124);
+                    eh discarded$26 = ju.field_r.a((java.awt.Component) (Object) dca.field_y, true, 124);
                     pw.field_z = true;
                     break L5;
                   } else {
@@ -2353,7 +2836,7 @@ public final class BachelorFridge extends ms {
                     }
                   }
                 }
-                eh discarded$7 = ju.field_r.a((java.awt.Component) (Object) dca.field_y, false, 124);
+                eh discarded$27 = ju.field_r.a((java.awt.Component) (Object) dca.field_y, false, 124);
                 sia.field_i = dca.field_y;
                 pw.field_z = false;
                 break L6;
@@ -2362,16 +2845,19 @@ public final class BachelorFridge extends ms {
             L8: {
               if (!sg.field_r) {
                 aca.a((byte) -118, vc.field_a);
-                if (this.j((byte) 7)) {
+                int discarded$28 = 7;
+                if (this.j()) {
                   sg.field_r = true;
                   break L8;
                 } else {
                   break L8;
                 }
               } else {
-                if (cj.b(true)) {
+                int discarded$29 = 1;
+                if (cj.b()) {
                   if (!vs.a(23864)) {
-                    if (!paa.a(15000)) {
+                    int discarded$30 = 15000;
+                    if (!paa.a()) {
                       if (!nba.b((byte) -99)) {
                         this.a(false, (byte) 125);
                         break L8;
@@ -2386,7 +2872,8 @@ public final class BachelorFridge extends ms {
                               break L9;
                             } else {
                               jl.field_r = true;
-                              au.a(0, gba.field_Ib, false);
+                              int discarded$31 = 0;
+                              au.a(0, gba.field_Ib);
                               break L9;
                             }
                           }
@@ -2455,14 +2942,16 @@ public final class BachelorFridge extends ms {
                         var3 = ib.a(true);
                         if (var3 != 2) {
                           if (3 == var3) {
-                            oq.a(true, false);
+                            int discarded$32 = 0;
+                            oq.a(true);
                             break L14;
                           } else {
                             if (var3 != 4) {
                               break L14;
                             } else {
                               ge.field_L = true;
-                              au.a(0, im.field_a, false);
+                              int discarded$33 = 0;
+                              au.a(0, im.field_a);
                               break L14;
                             }
                           }
@@ -2476,7 +2965,8 @@ public final class BachelorFridge extends ms {
                     }
                   }
                 } else {
-                  bs.c((byte) -117);
+                  int discarded$34 = -117;
+                  bs.c();
                   break L8;
                 }
               }
@@ -2552,7 +3042,8 @@ public final class BachelorFridge extends ms {
                                   hm.field_b = false;
                                   gja.field_n = false;
                                   vs.field_d = false;
-                                  rf.a(-128);
+                                  int discarded$35 = -128;
+                                  rf.a();
                                   break L22;
                                 } else {
                                   break L22;
@@ -2633,8 +3124,10 @@ public final class BachelorFridge extends ms {
                 } else {
                   if (ri.field_a == 14) {
                     rs.a(true);
-                    dfa.a(150, ul.a(-58, 4), ul.a(-51, 2000), 0, jha.field_j, cma.field_y.length, mia.d((byte) -104), efa.c(true), 1024, ms.n(96));
-                    eka.a(vv.a(31185), -83, jha.c(-31068));
+                    int discarded$36 = 96;
+                    dfa.a(150, ul.a(-58, 4), ul.a(-51, 2000), 0, jha.field_j, cma.field_y.length, mia.d((byte) -104), efa.c(true), 1024, ms.n());
+                    int discarded$37 = 31185;
+                    eka.a(vv.a(), -83, jha.c(-31068));
                     wj.field_g = true;
                     hm.field_b = true;
                     bka.field_h = false;
@@ -2651,7 +3144,8 @@ public final class BachelorFridge extends ms {
                           if (!hm.field_b) {
                             break L29;
                           } else {
-                            sa.d(-7);
+                            int discarded$38 = -7;
+                            sa.d();
                             continue L17;
                           }
                         }
@@ -2739,8 +3233,8 @@ public final class BachelorFridge extends ms {
                           }
                         } else {
                           if (ri.field_a == 76) {
-                            int discarded$8 = ig.field_m.a(3);
-                            int discarded$9 = ig.field_m.a(3);
+                            int discarded$39 = ig.field_m.a(3);
+                            int discarded$40 = ig.field_m.a(3);
                             var3 = ig.field_m.b(16711935);
                             var4_ref_jna__ = new jna[var3];
                             var5 = 0;
@@ -2748,7 +3242,8 @@ public final class BachelorFridge extends ms {
                               if (var5 >= var3) {
                                 continue L17;
                               } else {
-                                var4_ref_jna__[var5] = ima.a((lu) (Object) ig.field_m, true);
+                                int discarded$41 = 1;
+                                var4_ref_jna__[var5] = ima.a((lu) (Object) ig.field_m);
                                 var5++;
                                 continue L37;
                               }
@@ -2775,14 +3270,17 @@ public final class BachelorFridge extends ms {
                                 wj.field_g = true;
                                 sia.field_h = false;
                                 nu.field_b = true;
-                                rf.a(-128);
+                                int discarded$42 = -128;
+                                rf.a();
                                 break L38;
                               }
                               pha.field_a = false;
                               continue L17;
                             } else {
-                              if (!lo.b((byte) -102)) {
-                                if (!lfa.d(-124)) {
+                              int discarded$43 = -102;
+                              if (!lo.b()) {
+                                int discarded$44 = -124;
+                                if (!lfa.d()) {
                                   ((BachelorFridge) this).a(true);
                                   continue L17;
                                 } else {
@@ -2819,7 +3317,8 @@ public final class BachelorFridge extends ms {
                             }
                           }
                           hm.field_b = false;
-                          rf.a(-128);
+                          int discarded$45 = -128;
+                          rf.a();
                           break L40;
                         }
                       }

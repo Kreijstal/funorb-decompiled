@@ -20,65 +20,13 @@ final class ld extends sb {
     }
 
     final static String a(String param0, int param1, String param2, String param3) {
-        int var4 = 0;
-        int var5 = 0;
-        String stackIn_5_0 = null;
-        String stackIn_7_0 = null;
-        String stackIn_11_0 = null;
-        String stackIn_13_0 = null;
-        String stackOut_6_0 = null;
-        String stackOut_4_0 = null;
-        String stackOut_12_0 = null;
-        String stackOut_10_0 = null;
-        var5 = MinerDisturbance.field_ab;
-        if (param1 == -1) {
-          var4 = param2.indexOf(param3);
-          L0: while (true) {
-            L1: {
-              if (var4 == -1) {
-                stackOut_6_0 = (String) param2;
-                stackIn_7_0 = stackOut_6_0;
-                break L1;
-              } else {
-                param2 = param2.substring(0, var4) + param0 + param2.substring(param3.length() + var4);
-                stackOut_4_0 = (String) param2;
-                stackIn_7_0 = stackOut_4_0;
-                stackIn_5_0 = stackOut_4_0;
-                if (var5 != 0) {
-                  break L1;
-                } else {
-                  var4 = ((String) (Object) stackIn_5_0).indexOf(param3, var4 + param0.length());
-                  continue L0;
-                }
-              }
-            }
-            return stackIn_7_0;
-          }
-        } else {
-          field_B = -32;
-          var4 = param2.indexOf(param3);
-          L2: while (true) {
-            L3: {
-              if (var4 == -1) {
-                stackOut_12_0 = (String) param2;
-                stackIn_13_0 = stackOut_12_0;
-                break L3;
-              } else {
-                param2 = param2.substring(0, var4) + param0 + param2.substring(param3.length() + var4);
-                stackOut_10_0 = (String) param2;
-                stackIn_13_0 = stackOut_10_0;
-                stackIn_11_0 = stackOut_10_0;
-                if (var5 != 0) {
-                  break L3;
-                } else {
-                  var4 = ((String) (Object) stackIn_11_0).indexOf(param3, var4 + param0.length());
-                  continue L2;
-                }
-              }
-            }
-            return stackIn_13_0;
-          }
+        int var5 = MinerDisturbance.field_ab;
+        int var4 = param2.indexOf(param3);
+        while (var4 != -1) {
+            param2 = param2.substring(0, var4) + param0 + param2.substring(param3.length() + var4);
+            var4 = param2.indexOf(param3, var4 + param0.length());
         }
+        return param2;
     }
 
     final void c(boolean param0) {
@@ -127,36 +75,24 @@ final class ld extends sb {
           ((ld) this).field_y = ((ld) this).field_y + param1;
           var5 = 0;
           L0: while (true) {
-            if (param1 > var4) {
+            if (param1 <= var4) {
+              L1: {
+                if (param1 != var4) {
+                  var5 = var5 + (((ld) this).field_u[var3] >> -param1 + var4 & pl.field_b[param1]);
+                  break L1;
+                } else {
+                  var5 = var5 + (pl.field_b[var4] & ((ld) this).field_u[var3]);
+                  break L1;
+                }
+              }
+              return var5;
+            } else {
               int incrementValue$2 = var3;
               var3++;
               var5 = var5 + ((((ld) this).field_u[incrementValue$2] & pl.field_b[var4]) << -var4 + param1);
               param1 = param1 - var4;
               var4 = 8;
-              if (var6 == 0) {
-                continue L0;
-              } else {
-                var5 = var5 + (((ld) this).field_u[var3] >> -param1 + var4 & pl.field_b[param1]);
-                return var5;
-              }
-            } else {
-              L1: {
-                L2: {
-                  if (param1 != var4) {
-                    break L2;
-                  } else {
-                    var5 = var5 + (pl.field_b[var4] & ((ld) this).field_u[var3]);
-                    if (var6 == 0) {
-                      break L1;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-                var5 = var5 + (((ld) this).field_u[var3] >> -param1 + var4 & pl.field_b[param1]);
-                break L1;
-              }
-              return var5;
+              continue L0;
             }
           }
         } else {
@@ -165,37 +101,25 @@ final class ld extends sb {
           var4 = -(7 & ((ld) this).field_y) + 8;
           ((ld) this).field_y = ((ld) this).field_y + param1;
           var5 = 0;
-          L3: while (true) {
-            if (param1 > var4) {
+          L2: while (true) {
+            if (param1 <= var4) {
+              L3: {
+                if (param1 != var4) {
+                  var5 = var5 + (((ld) this).field_u[var3] >> -param1 + var4 & pl.field_b[param1]);
+                  break L3;
+                } else {
+                  var5 = var5 + (pl.field_b[var4] & ((ld) this).field_u[var3]);
+                  break L3;
+                }
+              }
+              return var5;
+            } else {
               int incrementValue$3 = var3;
               var3++;
               var5 = var5 + ((((ld) this).field_u[incrementValue$3] & pl.field_b[var4]) << -var4 + param1);
               param1 = param1 - var4;
               var4 = 8;
-              if (var6 == 0) {
-                continue L3;
-              } else {
-                var5 = var5 + (((ld) this).field_u[var3] >> -param1 + var4 & pl.field_b[param1]);
-                return var5;
-              }
-            } else {
-              L4: {
-                L5: {
-                  if (param1 != var4) {
-                    break L5;
-                  } else {
-                    var5 = var5 + (pl.field_b[var4] & ((ld) this).field_u[var3]);
-                    if (var6 == 0) {
-                      break L4;
-                    } else {
-                      break L5;
-                    }
-                  }
-                }
-                var5 = var5 + (((ld) this).field_u[var3] >> -param1 + var4 & pl.field_b[param1]);
-                break L4;
-              }
-              return var5;
+              continue L2;
             }
           }
         }
@@ -237,22 +161,22 @@ final class ld extends sb {
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
         var7 = MinerDisturbance.field_ab;
         try {
           L0: {
@@ -266,11 +190,7 @@ final class ld extends sb {
                 ((ld) this).field_o = ((ld) this).field_o + 1;
                 param0[var5_int + param3] = (byte)(((ld) this).field_u[fieldTemp$5] + -((ld) this).field_v.b(4));
                 var5_int++;
-                if (var7 == 0) {
-                  continue L1;
-                } else {
-                  return;
-                }
+                continue L1;
               }
             }
           }
@@ -278,31 +198,31 @@ final class ld extends sb {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var5;
-            stackOut_8_1 = new StringBuilder().append("ld.K(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackOut_5_0 = (RuntimeException) var5;
+            stackOut_5_1 = new StringBuilder().append("ld.K(");
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
               break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
               break L2;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw lj.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -310,10 +230,7 @@ final class ld extends sb {
         super(param0);
     }
 
-    public static void d(boolean param0) {
-        if (param0) {
-            return;
-        }
+    public static void d() {
         field_A = null;
         field_x = null;
     }
@@ -321,85 +238,63 @@ final class ld extends sb {
     final void a(int param0, byte param1, int param2) {
         int var5 = 0;
         var5 = MinerDisturbance.field_ab;
-        if (param1 == 14) {
+        if (param1 != 14) {
+          field_x = null;
           param0 = param0 & pl.field_b[param2];
           L0: while (true) {
             if (((ld) this).field_z >= param2) {
-              if (param2 == ((ld) this).field_z) {
-                int fieldTemp$6 = ((ld) this).field_o;
-                ((ld) this).field_o = ((ld) this).field_o + 1;
-                ((ld) this).field_u[fieldTemp$6] = (byte)(((ld) this).field_u[fieldTemp$6] + param0);
-                ((ld) this).field_u[((ld) this).field_o] = (byte) 0;
-                ((ld) this).field_z = 8;
-                return;
-              } else {
-                ((ld) this).field_z = ((ld) this).field_z - param2;
-                ((ld) this).field_u[((ld) this).field_o] = (byte)(((ld) this).field_u[((ld) this).field_o] + (param0 << ((ld) this).field_z));
-                if (var5 == 0) {
-                  return;
-                } else {
-                  int fieldTemp$7 = ((ld) this).field_o;
+              L1: {
+                if (param2 == ((ld) this).field_z) {
+                  int fieldTemp$4 = ((ld) this).field_o;
                   ((ld) this).field_o = ((ld) this).field_o + 1;
-                  ((ld) this).field_u[fieldTemp$7] = (byte)(((ld) this).field_u[fieldTemp$7] + param0);
+                  ((ld) this).field_u[fieldTemp$4] = (byte)(((ld) this).field_u[fieldTemp$4] + param0);
                   ((ld) this).field_u[((ld) this).field_o] = (byte) 0;
                   ((ld) this).field_z = 8;
-                  return;
+                  break L1;
+                } else {
+                  ((ld) this).field_z = ((ld) this).field_z - param2;
+                  ((ld) this).field_u[((ld) this).field_o] = (byte)(((ld) this).field_u[((ld) this).field_o] + (param0 << ((ld) this).field_z));
+                  break L1;
                 }
               }
+              return;
             } else {
               param2 = param2 - ((ld) this).field_z;
-              int fieldTemp$8 = ((ld) this).field_o;
+              int fieldTemp$5 = ((ld) this).field_o;
               ((ld) this).field_o = ((ld) this).field_o + 1;
-              ((ld) this).field_u[fieldTemp$8] = (byte)(((ld) this).field_u[fieldTemp$8] + (param0 >>> param2));
+              ((ld) this).field_u[fieldTemp$5] = (byte)(((ld) this).field_u[fieldTemp$5] + (param0 >>> param2));
               ((ld) this).field_u[((ld) this).field_o] = (byte) 0;
               ((ld) this).field_z = 8;
-              if (var5 != 0) {
-                ((ld) this).field_z = 8;
-                return;
-              } else {
-                continue L0;
-              }
+              continue L0;
             }
           }
         } else {
-          field_x = null;
           param0 = param0 & pl.field_b[param2];
-          L1: while (true) {
-            if (((ld) this).field_z < param2) {
-              param2 = param2 - ((ld) this).field_z;
-              int fieldTemp$9 = ((ld) this).field_o;
-              ((ld) this).field_o = ((ld) this).field_o + 1;
-              ((ld) this).field_u[fieldTemp$9] = (byte)(((ld) this).field_u[fieldTemp$9] + (param0 >>> param2));
-              ((ld) this).field_u[((ld) this).field_o] = (byte) 0;
-              ((ld) this).field_z = 8;
-              if (var5 == 0) {
-                continue L1;
-              } else {
-                ((ld) this).field_z = 8;
-                return;
-              }
-            } else {
-              if (param2 != ((ld) this).field_z) {
-                ((ld) this).field_z = ((ld) this).field_z - param2;
-                ((ld) this).field_u[((ld) this).field_o] = (byte)(((ld) this).field_u[((ld) this).field_o] + (param0 << ((ld) this).field_z));
-                if (var5 != 0) {
-                  int fieldTemp$10 = ((ld) this).field_o;
+          L2: while (true) {
+            if (((ld) this).field_z >= param2) {
+              L3: {
+                if (param2 == ((ld) this).field_z) {
+                  int fieldTemp$6 = ((ld) this).field_o;
                   ((ld) this).field_o = ((ld) this).field_o + 1;
-                  ((ld) this).field_u[fieldTemp$10] = (byte)(((ld) this).field_u[fieldTemp$10] + param0);
+                  ((ld) this).field_u[fieldTemp$6] = (byte)(((ld) this).field_u[fieldTemp$6] + param0);
                   ((ld) this).field_u[((ld) this).field_o] = (byte) 0;
                   ((ld) this).field_z = 8;
-                  return;
+                  break L3;
                 } else {
-                  return;
+                  ((ld) this).field_z = ((ld) this).field_z - param2;
+                  ((ld) this).field_u[((ld) this).field_o] = (byte)(((ld) this).field_u[((ld) this).field_o] + (param0 << ((ld) this).field_z));
+                  break L3;
                 }
-              } else {
-                int fieldTemp$11 = ((ld) this).field_o;
-                ((ld) this).field_o = ((ld) this).field_o + 1;
-                ((ld) this).field_u[fieldTemp$11] = (byte)(((ld) this).field_u[fieldTemp$11] + param0);
-                ((ld) this).field_u[((ld) this).field_o] = (byte) 0;
-                ((ld) this).field_z = 8;
-                return;
               }
+              return;
+            } else {
+              param2 = param2 - ((ld) this).field_z;
+              int fieldTemp$7 = ((ld) this).field_o;
+              ((ld) this).field_o = ((ld) this).field_o + 1;
+              ((ld) this).field_u[fieldTemp$7] = (byte)(((ld) this).field_u[fieldTemp$7] + (param0 >>> param2));
+              ((ld) this).field_u[((ld) this).field_o] = (byte) 0;
+              ((ld) this).field_z = 8;
+              continue L2;
             }
           }
         }

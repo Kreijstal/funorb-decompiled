@@ -7,7 +7,7 @@ final class nl {
     static qr field_b;
     static qr field_d;
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         field_c = null;
@@ -95,15 +95,16 @@ final class nl {
                 }
               }
               var6 = new kb(3 * pf.field_a[param3.field_x].field_z / 4, -(rs.field_Cb.field_J / 2) + var11.field_i / 2, -(3 * pf.field_a[param3.field_x].field_z / 4) + 182, param3.field_k, param3.field_t, 16777215, true);
-              var11.a((vd) (Object) var6, param2 ^ 10);
+              var11.a((vd) (Object) var6, 8);
               bg.a(-2612, param1.length);
-              var7 = new ff(3 * pf.field_a[param3.field_x].field_z / 4, var11.field_i / 2 + rs.field_Cb.field_J / 2 - -3, ne.a(-1, false));
+              int discarded$1 = 0;
+              var7 = new ff(3 * pf.field_a[param3.field_x].field_z / 4, var11.field_i / 2 + rs.field_Cb.field_J / 2 - -3, ne.a(-1));
               var11.a((vd) (Object) var7, 8);
               param0.field_f[var5][0] = var7;
               var8_int = 1;
               L3: while (true) {
                 if (param1.length - 1 <= var8_int) {
-                  var8 = new ff(0, (-pf.field_a[param3.field_x].field_w + var11.field_i) / param2, pf.field_a[param3.field_x]);
+                  var8 = new ff(0, (-pf.field_a[param3.field_x].field_w + var11.field_i) / 2, pf.field_a[param3.field_x]);
                   var11.a((vd) (Object) var8, 8);
                   stackOut_9_0 = (lp) var11;
                   stackIn_10_0 = stackOut_9_0;
@@ -173,7 +174,7 @@ final class nl {
           }
           L6: {
             stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44).append(param2).append(44);
+            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44).append(2).append(44);
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;

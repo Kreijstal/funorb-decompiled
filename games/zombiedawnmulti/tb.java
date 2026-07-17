@@ -96,7 +96,7 @@ class tb extends hq {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_C, -1, 2147483647, false);
     }
 
-    final static void b(int param0) {
+    final static void b() {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;

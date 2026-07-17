@@ -46,7 +46,7 @@ final class li implements Iterable {
         }
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void a(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         var3 = fleas.field_A ? 1 : 0;

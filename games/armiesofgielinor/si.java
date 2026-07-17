@@ -12,16 +12,11 @@ abstract class si {
     static long field_c;
     static java.awt.Canvas field_b;
 
-    final static void b(int param0) {
-        if (param0 != 13829) {
-            field_c = 27L;
-            ro.field_lb = null;
-            return;
-        }
+    final static void b() {
         ro.field_lb = null;
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean a(String param0) {
         return null != db.a(param0, -87);
     }
 

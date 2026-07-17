@@ -14,14 +14,11 @@ final class we {
     private long[] field_i;
     private long[] field_j;
 
-    final static void a(byte param0) {
-        if (param0 != 15) {
-            field_a = -116L;
-        }
+    final static void a() {
         oc.field_c = new oj();
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_e = null;
     }
 
@@ -295,12 +292,9 @@ final class we {
             ck.field_db = true;
             ak.field_a = param0 ? true : false;
             ei.field_G = new ck(na.field_d, s.field_c, param2, gk.field_a, ak.field_a);
-            if (param1 != 12757) {
-                field_e = null;
-            }
             na.field_d.a((byte) -108, (rj) (Object) ei.field_G);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "we.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "we.A(" + param0 + 44 + 12757 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -438,7 +432,7 @@ final class we {
         }
     }
 
-    final static ub a(byte[] param0, int param1) {
+    final static ub a(byte[] param0) {
         ub var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;

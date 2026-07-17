@@ -220,7 +220,7 @@ final class br extends kp implements ik {
         return param0;
     }
 
-    final static String a(String param0, int param1, int param2) {
+    final static String a(String param0, int param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         mi var5 = null;
@@ -351,7 +351,7 @@ final class br extends kp implements ik {
         }
     }
 
-    public static void n(int param0) {
+    public static void n() {
         field_W = null;
         field_Y = null;
         field_S = null;

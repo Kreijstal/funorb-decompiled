@@ -10,9 +10,10 @@ final class ql extends pm {
     static float field_j;
     static vn field_g;
 
-    final static void d(int param0) {
+    final static void d() {
         int var1 = rf.a(false);
-        int var2 = co.b(-13043);
+        int discarded$0 = -13043;
+        int var2 = co.b();
         cj.field_i.a(var1 + (af.field_b << 1), wm.field_d + -ia.field_c, wh.field_c + -af.field_b, (byte) -80, var2 - -(ia.field_c << 1));
         d.a(false);
     }
@@ -152,7 +153,9 @@ final class ql extends pm {
     public static void b(boolean param0) {
         field_g = null;
         field_f = null;
-        field_f = null;
+        if (!param0) {
+            field_f = null;
+        }
     }
 
     ql(tb param0) {

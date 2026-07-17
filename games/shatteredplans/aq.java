@@ -15,20 +15,9 @@ final class aq extends oh {
     final static boolean a(int param0, boolean param1, int param2, boolean param3) {
         int var4 = 0;
         int var5 = 0;
-        int stackIn_30_0 = 0;
-        int stackIn_41_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_40_0 = 0;
-        int stackOut_39_0 = 0;
-        L0: {
-          if (param1) {
-            break L0;
-          } else {
-            boolean discarded$1 = aq.a(-82);
-            break L0;
-          }
-        }
+        int stackIn_37_0 = 0;
+        int stackOut_36_0 = 0;
+        int stackOut_35_0 = 0;
         if (!param3) {
           if (dc.field_c[param0] <= dc.field_c[param2]) {
             if (dc.field_c[param0] < dc.field_c[param2]) {
@@ -44,18 +33,18 @@ final class aq extends oh {
                     if (var5 < var4) {
                       return false;
                     } else {
-                      L1: {
+                      L0: {
                         if (param0 <= param2) {
-                          stackOut_29_0 = 0;
-                          stackIn_30_0 = stackOut_29_0;
-                          break L1;
+                          stackOut_36_0 = 0;
+                          stackIn_37_0 = stackOut_36_0;
+                          break L0;
                         } else {
-                          stackOut_28_0 = 1;
-                          stackIn_30_0 = stackOut_28_0;
-                          break L1;
+                          stackOut_35_0 = 1;
+                          stackIn_37_0 = stackOut_35_0;
+                          break L0;
                         }
                       }
-                      return stackIn_30_0 != 0;
+                      return stackIn_37_0 != 0;
                     }
                   }
                 } else {
@@ -72,9 +61,7 @@ final class aq extends oh {
           if (kf.field_f[param0] <= kf.field_f[param2]) {
             if (kf.field_f[param2] <= kf.field_f[param0]) {
               if (dc.field_c[param2] >= dc.field_c[param0]) {
-                if (dc.field_c[param2] > dc.field_c[param0]) {
-                  return false;
-                } else {
+                if (dc.field_c[param2] <= dc.field_c[param0]) {
                   var4 = aj.field_d[param2] + fb.field_zb[param2] + f.field_y[param2];
                   var5 = f.field_y[param0] + fb.field_zb[param0] - -aj.field_d[param0];
                   if (var4 < var5) {
@@ -83,20 +70,15 @@ final class aq extends oh {
                     if (var5 < var4) {
                       return false;
                     } else {
-                      L2: {
-                        if (param0 <= param2) {
-                          stackOut_40_0 = 0;
-                          stackIn_41_0 = stackOut_40_0;
-                          break L2;
-                        } else {
-                          stackOut_39_0 = 1;
-                          stackIn_41_0 = stackOut_39_0;
-                          break L2;
-                        }
+                      if (param0 <= param2) {
+                        return false;
+                      } else {
+                        return true;
                       }
-                      return stackIn_41_0 != 0;
                     }
                   }
+                } else {
+                  return false;
                 }
               } else {
                 return true;
@@ -110,7 +92,7 @@ final class aq extends oh {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_j = null;
         field_i = null;
         field_o = null;
@@ -120,9 +102,6 @@ final class aq extends oh {
     }
 
     final static boolean a(int param0) {
-        if (param0 < 2) {
-            return false;
-        }
         return np.field_m;
     }
 
@@ -142,7 +121,8 @@ final class aq extends oh {
         int var4 = 0;
         gq[] var5 = null;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
-        var5 = dn.a(4);
+        int discarded$2 = 4;
+        var5 = dn.a();
         var2 = var5;
         var3 = 0;
         L0: while (true) {

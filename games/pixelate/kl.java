@@ -70,7 +70,7 @@ final class kl implements Iterable {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_d = null;
         field_c = null;
     }
@@ -93,8 +93,10 @@ final class kl implements Iterable {
         }
     }
 
-    final static void a(byte param0) {
-        if (7500 <= jd.field_r) {
+    final static void a() {
+        if (7500 > jd.field_r) {
+          return;
+        } else {
           L0: {
             int fieldTemp$2 = ko.field_hb + 1;
             ko.field_hb = ko.field_hb + 1;
@@ -107,13 +109,6 @@ final class kl implements Iterable {
           }
           wh.e(-89, jm.field_g[ko.field_hb]);
           jd.field_r = 0;
-          if (param0 > -73) {
-            field_d = null;
-            return;
-          } else {
-            return;
-          }
-        } else {
           return;
         }
     }

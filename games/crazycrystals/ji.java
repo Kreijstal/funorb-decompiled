@@ -451,13 +451,13 @@ final class ji extends pn {
 
     final static void a(int param0, java.awt.Component param1) {
         try {
-            int var2_int = -94 / ((param0 - 43) / 35);
+            int var2_int = 23;
             param1.removeMouseListener((java.awt.event.MouseListener) (Object) tm.field_b);
             param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) tm.field_b);
             param1.removeFocusListener((java.awt.event.FocusListener) (Object) tm.field_b);
             uc.field_b = 0;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "ji.P(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "ji.P(" + -110 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -672,7 +672,7 @@ final class ji extends pn {
         }
     }
 
-    final static boolean f(int param0) {
+    final static boolean f() {
         return 250 < sn.field_c;
     }
 

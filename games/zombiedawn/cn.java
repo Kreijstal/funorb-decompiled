@@ -13,11 +13,11 @@ final class cn {
     static String[] field_e;
     static la field_b;
 
-    final static sn[] b(int param0) {
+    final static sn[] b() {
         return new sn[]{em.field_J, wn.field_a, u.field_e};
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void a(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         var3 = ZombieDawn.field_J;
@@ -49,7 +49,8 @@ final class cn {
           }
         } else {
           if (null == rn.field_b) {
-            field_b = nf.a(480, 640, vh.field_a, 0, false, 0);
+            int discarded$1 = 0;
+            field_b = nf.a(480, 640, vh.field_a, 0, false);
             if (null != field_b) {
               se.a(20922, (java.awt.Canvas) (Object) field_b);
               var2 = 2;
@@ -121,7 +122,7 @@ final class cn {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
         field_e = null;

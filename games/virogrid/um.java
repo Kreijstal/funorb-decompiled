@@ -134,7 +134,7 @@ final class um extends km {
         }
         var8 = stackIn_8_0;
         ((um) this).field_Jb.a(var8 != 0, param6, 0, ((um) this).field_Eb.field_ub);
-        var9 = 72 % ((param1 - -3) / 59);
+        var9 = 0;
         this.a(false, param0, -102, param5, param3);
         return var8 != 0;
     }
@@ -190,7 +190,8 @@ final class um extends km {
         for (var3 = 0; var3 < rj.field_h; var3++) {
             var1[var3] = new rm(oj.field_Kb, se.field_d, el.field_w[var3], mb.field_bb[var3], db.field_k[var3], gb.field_F[var3], lj.field_j[var3], k.field_c);
         }
-        pe.b((byte) -28);
+        int discarded$0 = -28;
+        pe.b();
         return var1;
     }
 
@@ -201,7 +202,7 @@ final class um extends km {
         return this.a(param4, 110, param5, param0, param1, ((um) this).field_Eb.field_ub, param3);
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_Ib = null;
         field_Kb = null;
     }

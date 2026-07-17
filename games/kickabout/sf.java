@@ -16,7 +16,7 @@ final class sf extends qt {
         }
     }
 
-    final static void a(int param0, int param1, nu param2, boolean param3) {
+    final static void a(int param0, int param1, nu param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -415,7 +415,7 @@ final class sf extends qt {
         }
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_F = null;
         field_C = null;
         field_G = null;
@@ -533,40 +533,32 @@ final class sf extends qt {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_7_0 = 0;
+        int stackIn_5_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
+        int stackOut_4_0 = 0;
         var4 = Kickabout.field_G;
         try {
           L0: {
-            L1: {
-              if (param0 == -5974) {
-                break L1;
-              } else {
-                field_D = null;
-                break L1;
-              }
-            }
             var3_int = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (0 >= param2) {
-                stackOut_6_0 = var3_int;
-                stackIn_7_0 = stackOut_6_0;
+                stackOut_4_0 = var3_int;
+                stackIn_5_0 = stackOut_4_0;
                 break L0;
               } else {
                 var3_int = var3_int << 1 | 1 & param1;
                 param1 = param1 >>> 1;
                 param2--;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var3, "sf.H(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw nb.a((Throwable) (Object) var3, "sf.H(" + -5974 + 44 + param1 + 44 + param2 + 41);
         }
-        return stackIn_7_0;
+        return stackIn_5_0;
     }
 
     sf() {

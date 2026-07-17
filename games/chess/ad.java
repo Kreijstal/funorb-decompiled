@@ -131,7 +131,7 @@ final class ad {
         return stackIn_3_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_c = null;
         int var1 = 0;
@@ -170,7 +170,7 @@ final class ad {
               try {
                 var4 = Class.forName("mb");
                 var5 = (vj) var4.newInstance();
-                var6 = 99 % ((param1 - 68) / 40);
+                var6 = 0;
                 var5.a(param0, 84, param2, param3);
                 stackOut_0_0 = (vj) var5;
                 stackIn_1_0 = stackOut_0_0;
@@ -212,7 +212,7 @@ final class ad {
                   break L0;
                 }
               }
-              throw fk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+              throw fk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + -80 + 44 + param2 + 44 + param3 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

@@ -36,22 +36,20 @@ final class eo {
             }
           } else {
             if (11 != sj.field_p) {
-              if (param1) {
-                return false;
-              } else {
-                return false;
-              }
+              return false;
             } else {
               if (vh.field_Hb) {
                 if (fh.field_n == 2) {
-                  if (!pd.a(da.field_c, v.field_a, 2)) {
+                  int discarded$10 = 2;
+                  if (!pd.a(da.field_c, v.field_a)) {
                     return false;
                   } else {
                     if (fh.field_n == 2) {
                       L1: {
-                        if (ob.d((byte) 88)) {
+                        int discarded$11 = 88;
+                        if (ob.d()) {
                           var4 = null;
-                          kb.a(mi.field_Gb, v.field_a, param0, (String) null, fh.field_n, 29602);
+                          kb.a(mi.field_Gb, v.field_a, 15, (String) null, fh.field_n, 29602);
                           break L1;
                         } else {
                           break L1;
@@ -63,9 +61,10 @@ final class eo {
                         return false;
                       } else {
                         L2: {
-                          if (ob.d((byte) 88)) {
+                          int discarded$12 = 88;
+                          if (ob.d()) {
                             var4 = null;
-                            kb.a(mi.field_Gb, v.field_a, param0, (String) null, fh.field_n, 29602);
+                            kb.a(mi.field_Gb, v.field_a, 15, (String) null, fh.field_n, 29602);
                             break L2;
                           } else {
                             break L2;
@@ -78,9 +77,10 @@ final class eo {
                 } else {
                   if (fh.field_n == 2) {
                     L3: {
-                      if (ob.d((byte) 88)) {
+                      int discarded$13 = 88;
+                      if (ob.d()) {
                         var4 = null;
-                        kb.a(mi.field_Gb, v.field_a, param0, (String) null, fh.field_n, 29602);
+                        kb.a(mi.field_Gb, v.field_a, 15, (String) null, fh.field_n, 29602);
                         break L3;
                       } else {
                         break L3;
@@ -92,9 +92,10 @@ final class eo {
                       return false;
                     } else {
                       L4: {
-                        if (ob.d((byte) 88)) {
+                        int discarded$14 = 88;
+                        if (ob.d()) {
                           var4 = null;
-                          kb.a(mi.field_Gb, v.field_a, param0, (String) null, fh.field_n, 29602);
+                          kb.a(mi.field_Gb, v.field_a, 15, (String) null, fh.field_n, 29602);
                           break L4;
                         } else {
                           break L4;
@@ -105,11 +106,7 @@ final class eo {
                   }
                 }
               } else {
-                if (param1) {
-                  return false;
-                } else {
-                  return false;
-                }
+                return false;
               }
             }
           }
@@ -136,12 +133,14 @@ final class eo {
               if (11 == sj.field_p) {
                 if (vh.field_Hb) {
                   if (fh.field_n == 2) {
-                    if (pd.a(da.field_c, v.field_a, 2)) {
+                    int discarded$15 = 2;
+                    if (pd.a(da.field_c, v.field_a)) {
                       if (fh.field_n == 2) {
                         L5: {
-                          if (ob.d((byte) 88)) {
+                          int discarded$16 = 88;
+                          if (ob.d()) {
                             var4 = null;
-                            kb.a(mi.field_Gb, v.field_a, param0, (String) null, fh.field_n, 29602);
+                            kb.a(mi.field_Gb, v.field_a, 15, (String) null, fh.field_n, 29602);
                             break L5;
                           } else {
                             break L5;
@@ -153,9 +152,10 @@ final class eo {
                           return false;
                         } else {
                           L6: {
-                            if (ob.d((byte) 88)) {
+                            int discarded$17 = 88;
+                            if (ob.d()) {
                               var4 = null;
-                              kb.a(mi.field_Gb, v.field_a, param0, (String) null, fh.field_n, 29602);
+                              kb.a(mi.field_Gb, v.field_a, 15, (String) null, fh.field_n, 29602);
                               break L6;
                             } else {
                               break L6;
@@ -170,9 +170,10 @@ final class eo {
                   } else {
                     if (fh.field_n == 2) {
                       L7: {
-                        if (ob.d((byte) 88)) {
+                        int discarded$18 = 88;
+                        if (ob.d()) {
                           var4 = null;
-                          kb.a(mi.field_Gb, v.field_a, param0, (String) null, fh.field_n, 29602);
+                          kb.a(mi.field_Gb, v.field_a, 15, (String) null, fh.field_n, 29602);
                           break L7;
                         } else {
                           break L7;
@@ -184,9 +185,10 @@ final class eo {
                         return false;
                       } else {
                         L8: {
-                          if (ob.d((byte) 88)) {
+                          int discarded$19 = 88;
+                          if (ob.d()) {
                             var4 = null;
-                            kb.a(mi.field_Gb, v.field_a, param0, (String) null, fh.field_n, 29602);
+                            kb.a(mi.field_Gb, v.field_a, 15, (String) null, fh.field_n, 29602);
                             break L8;
                           } else {
                             break L8;
@@ -197,25 +199,17 @@ final class eo {
                     }
                   }
                 } else {
-                  if (param1) {
-                    return false;
-                  } else {
-                    return false;
-                  }
+                  return false;
                 }
               } else {
-                if (param1) {
-                  return false;
-                } else {
-                  return false;
-                }
+                return false;
               }
             }
           }
         }
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void a(java.awt.Component param0) {
         try {
             param0.setFocusTraversalKeysEnabled(false);
             param0.addKeyListener((java.awt.event.KeyListener) (Object) um.field_c);
@@ -245,7 +239,7 @@ final class eo {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_c = null;
         field_b = null;

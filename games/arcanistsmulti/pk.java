@@ -12,7 +12,7 @@ final class pk implements Iterable {
     static ll[] field_a;
     static String field_g;
 
-    final static qb[] a(byte param0) {
+    final static qb[] a() {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
@@ -29,7 +29,8 @@ final class pk implements Iterable {
             }
             var1[var2] = new qb(pb.field_g, gn.field_a, hl.field_l[var2], be.field_d[var2], jg.field_p[var2], ho.field_i[var2], var5);
         }
-        dk.a(-18229);
+        int discarded$0 = -18229;
+        dk.a();
         return var1;
     }
 

@@ -24,13 +24,10 @@ final class sf implements Iterator {
         ((sf) this).field_f = null;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         field_a = null;
-        if (param0 > -97) {
-            field_b = null;
-        }
     }
 
     public final Object next() {
@@ -57,12 +54,7 @@ final class sf implements Iterator {
     }
 
     final static gd a(int param0, long param1) {
-        if (param0 != -18701) {
-          sf.a((byte) -94);
-          return (gd) (Object) dg.field_g.a(param1, param0 ^ -18702);
-        } else {
-          return (gd) (Object) dg.field_g.a(param1, param0 ^ -18702);
-        }
+        return (gd) (Object) dg.field_g.a(param1, 1);
     }
 
     static {

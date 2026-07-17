@@ -10,7 +10,7 @@ final class ce {
     static int field_d;
     static bi field_e;
 
-    final static void a(int param0) {
+    final static void a() {
         if (mf.field_f != null) {
           L0: {
             mf.field_f.i((byte) -36);
@@ -48,7 +48,8 @@ final class ce {
               break L0;
             } else {
               if (var4 == 0) {
-                th.b(1);
+                int discarded$1 = 1;
+                th.b();
                 param0 = false;
                 break L0;
               } else {
@@ -62,80 +63,43 @@ final class ce {
                       break L1;
                     }
                   }
-                  if (param2 < 89) {
-                    L2: {
-                      field_e = null;
-                      var5 = hd.field_a.e((byte) -92) - -hd.field_a.field_Eb;
-                      if (var5 <= 640) {
-                        if (635 > var5) {
-                          if (ah.field_v > 0) {
-                            ah.field_v = ah.field_v - 5;
-                            break L2;
-                          } else {
-                            return;
-                          }
-                        } else {
-                          return;
-                        }
+                  var5 = hd.field_a.e((byte) -92) - -hd.field_a.field_Eb;
+                  if (var5 <= 640) {
+                    if (635 > var5) {
+                      if (ah.field_v <= 0) {
+                        return;
                       } else {
-                        ah.field_v = ah.field_v + 5;
-                        break L2;
+                        ah.field_v = ah.field_v - 5;
+                        return;
                       }
-                    }
-                    return;
-                  } else {
-                    var5 = hd.field_a.e((byte) -92) - -hd.field_a.field_Eb;
-                    if (var5 <= 640) {
-                      L3: {
-                        if (635 <= var5) {
-                          break L3;
-                        } else {
-                          if (ah.field_v > 0) {
-                            ah.field_v = ah.field_v - 5;
-                            break L3;
-                          } else {
-                            return;
-                          }
-                        }
-                      }
-                      return;
                     } else {
-                      ah.field_v = ah.field_v + 5;
                       return;
                     }
+                  } else {
+                    ah.field_v = ah.field_v + 5;
+                    return;
                   }
                 } else {
-                  L4: {
+                  L2: {
                     if (var4 != 0) {
                       wd.field_w.a(param0, -15211);
-                      break L4;
+                      break L2;
                     } else {
-                      break L4;
-                    }
-                  }
-                  L5: {
-                    if (param2 >= 89) {
-                      break L5;
-                    } else {
-                      field_e = null;
-                      break L5;
+                      break L2;
                     }
                   }
                   var5 = hd.field_a.e((byte) -92) - -hd.field_a.field_Eb;
                   if (var5 <= 640) {
-                    L6: {
-                      if (635 <= var5) {
-                        break L6;
+                    if (635 > var5) {
+                      if (ah.field_v <= 0) {
+                        return;
                       } else {
-                        if (ah.field_v > 0) {
-                          ah.field_v = ah.field_v - 5;
-                          break L6;
-                        } else {
-                          return;
-                        }
+                        ah.field_v = ah.field_v - 5;
+                        return;
                       }
+                    } else {
+                      return;
                     }
-                    return;
                   } else {
                     ah.field_v = ah.field_v + 5;
                     return;
@@ -145,107 +109,55 @@ final class ce {
             }
           }
           if (!param0) {
-            L7: {
+            L3: {
               if (var4 != 0) {
                 wd.field_w.a(param0, -15211);
-                break L7;
+                break L3;
               } else {
-                break L7;
+                break L3;
               }
             }
-            if (param2 >= 89) {
-              var5 = hd.field_a.e((byte) -92) - -hd.field_a.field_Eb;
-              if (var5 <= 640) {
-                L8: {
-                  if (635 <= var5) {
-                    break L8;
-                  } else {
-                    if (ah.field_v > 0) {
-                      ah.field_v = ah.field_v - 5;
-                      break L8;
-                    } else {
-                      return;
-                    }
-                  }
+            var5 = hd.field_a.e((byte) -92) - -hd.field_a.field_Eb;
+            if (var5 <= 640) {
+              if (635 > var5) {
+                if (ah.field_v <= 0) {
+                  return;
+                } else {
+                  ah.field_v = ah.field_v - 5;
+                  return;
                 }
-                return;
               } else {
-                ah.field_v = ah.field_v + 5;
                 return;
               }
             } else {
-              field_e = null;
-              var5 = hd.field_a.e((byte) -92) - -hd.field_a.field_Eb;
-              if (var5 <= 640) {
-                L9: {
-                  if (635 <= var5) {
-                    break L9;
-                  } else {
-                    if (ah.field_v > 0) {
-                      ah.field_v = ah.field_v - 5;
-                      break L9;
-                    } else {
-                      return;
-                    }
-                  }
-                }
-                return;
-              } else {
-                ah.field_v = ah.field_v + 5;
-                return;
-              }
+              ah.field_v = ah.field_v + 5;
+              return;
             }
           } else {
-            L10: {
+            L4: {
               hd.field_a.a(38, param3, param1);
               if (var4 != 0) {
                 wd.field_w.a(param0, -15211);
-                break L10;
+                break L4;
               } else {
-                break L10;
+                break L4;
               }
             }
-            if (param2 >= 89) {
-              var5 = hd.field_a.e((byte) -92) - -hd.field_a.field_Eb;
-              if (var5 <= 640) {
-                L11: {
-                  if (635 <= var5) {
-                    break L11;
-                  } else {
-                    if (ah.field_v > 0) {
-                      ah.field_v = ah.field_v - 5;
-                      break L11;
-                    } else {
-                      return;
-                    }
-                  }
+            var5 = hd.field_a.e((byte) -92) - -hd.field_a.field_Eb;
+            if (var5 <= 640) {
+              if (635 > var5) {
+                if (ah.field_v <= 0) {
+                  return;
+                } else {
+                  ah.field_v = ah.field_v - 5;
+                  return;
                 }
-                return;
               } else {
-                ah.field_v = ah.field_v + 5;
                 return;
               }
             } else {
-              field_e = null;
-              var5 = hd.field_a.e((byte) -92) - -hd.field_a.field_Eb;
-              if (var5 <= 640) {
-                L12: {
-                  if (635 <= var5) {
-                    break L12;
-                  } else {
-                    if (ah.field_v > 0) {
-                      ah.field_v = ah.field_v - 5;
-                      break L12;
-                    } else {
-                      return;
-                    }
-                  }
-                }
-                return;
-              } else {
-                ah.field_v = ah.field_v + 5;
-                return;
-              }
+              ah.field_v = ah.field_v + 5;
+              return;
             }
           }
         } else {
@@ -253,7 +165,7 @@ final class ce {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_e = null;
         field_f = null;
         field_b = null;

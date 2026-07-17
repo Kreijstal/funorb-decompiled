@@ -13,7 +13,7 @@ abstract class rt implements ws {
     int field_f;
     static String field_g;
 
-    public static void c(byte param0) {
+    public static void c() {
         field_e = null;
         field_h = null;
         field_g = null;
@@ -43,7 +43,8 @@ abstract class rt implements ws {
           ((rt) this).field_j.a((rt) this, 1);
           jaggl.OpenGL.glGenerateMipmapEXT(((rt) this).field_f);
           ((rt) this).field_c = true;
-          this.b(9987);
+          int discarded$2 = 9987;
+          this.b();
           this.a(var2, (byte) 1);
           return true;
         } else {
@@ -115,7 +116,8 @@ abstract class rt implements ws {
           if (stackIn_6_0 != stackIn_6_1) {
             var3 = this.c(4);
             ((rt) this).field_c = true;
-            this.b(9987);
+            int discarded$2 = 9987;
+            this.b();
             this.a(var3, (byte) 1);
             break L2;
           } else {
@@ -242,7 +244,8 @@ abstract class rt implements ws {
             }
           }
           ((rt) this).field_a = stackIn_7_1 != 0;
-          this.b(9987);
+          int discarded$2 = 9987;
+          this.b();
           if (param1 == -128) {
             return;
           } else {
@@ -252,7 +255,7 @@ abstract class rt implements ws {
         }
     }
 
-    private final void b(int param0) {
+    private final void b() {
         ((rt) this).field_j.a((rt) this, 1);
         if (!((rt) this).field_a) {
             jaggl.OpenGL.glTexParameteri(((rt) this).field_f, 10241, ((rt) this).field_c ? 9984 : 9728);

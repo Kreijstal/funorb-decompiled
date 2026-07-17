@@ -232,14 +232,14 @@ final class sb {
         var11 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
-            var2_int = param1.a(param0 + 9937, "waves/");
+            var2_int = param1.a(0, "waves/");
             var23 = param1.a(var2_int, -25915);
             cb.field_a = new wc[41];
             var4 = new wc[41];
             var5_int = 0;
             L1: while (true) {
               if (var23.length <= var5_int) {
-                var2_int = param1.a(param0 ^ param0, "levels/");
+                var2_int = param1.a(0, "levels/");
                 var24 = param1.a(var2_int, -25915);
                 var5 = new vl[var24.length];
                 dr.field_S = new vl[25];
@@ -286,7 +286,9 @@ final class sb {
                     L7: {
                       var14 = new fs(param1.a((byte) 98, var24[var6], var2_int));
                       var14.field_p = var14.field_p + 1;
-                      var5[var6] = pi.a(var14, true, 102);
+                      int discarded$3 = 102;
+                      int discarded$4 = 1;
+                      var5[var6] = pi.a(var14);
                       if (25 <= var5[var6].field_e) {
                         break L7;
                       } else {
@@ -301,7 +303,8 @@ final class sb {
               } else {
                 var6_ref_fs = new fs(param1.a((byte) 94, var23[var5_int], var2_int));
                 var6_ref_fs.field_p = var6_ref_fs.field_p + 1;
-                var4[var5_int] = wr.a(true, var6_ref_fs, false);
+                int discarded$5 = 0;
+                var4[var5_int] = wr.a(true, var6_ref_fs);
                 cb.field_a[var4[var5_int].field_a] = var4[var5_int];
                 var5_int++;
                 continue L1;
@@ -313,7 +316,7 @@ final class sb {
           L8: {
             var2 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_19_0 = (RuntimeException) var2;
-            stackOut_19_1 = new StringBuilder().append("sb.E(").append(param0).append(44);
+            stackOut_19_1 = new StringBuilder().append("sb.E(").append(-9937).append(44);
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -340,8 +343,9 @@ final class sb {
         }
     }
 
-    final static int a(boolean param0, int param1, int param2, byte param3) {
-        return se.a(19886);
+    final static int a(boolean param0, int param1, int param2) {
+        int discarded$0 = 19886;
+        return se.a();
     }
 
     static {

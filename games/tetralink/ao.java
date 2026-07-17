@@ -6,7 +6,7 @@ final class ao {
     static tl field_c;
     static int field_a;
 
-    final static void a(fj param0, int param1) {
+    final static void a(fj param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         fj var3 = null;
@@ -119,7 +119,7 @@ final class ao {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
     }
 

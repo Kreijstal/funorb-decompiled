@@ -184,7 +184,7 @@ final class waa extends dqa implements jpb, oo {
                 break L1;
               } else {
                 var7 = null;
-                boolean discarded$2 = this.a((lca) null, (byte) 100);
+                boolean discarded$4 = this.a((lca) null, (byte) 100);
                 break L1;
               }
             }
@@ -195,7 +195,8 @@ final class waa extends dqa implements jpb, oo {
               if (((waa) this).field_z != param3) {
                 break L0;
               } else {
-                this.e(25);
+                int discarded$5 = 25;
+                this.e();
                 return;
               }
             }
@@ -354,13 +355,14 @@ final class waa extends dqa implements jpb, oo {
     final void a(int param0, int param1, int param2, shb param3) {
         try {
             super.a(param0, param1, param2, param3);
-            ((waa) this).field_z.field_x = this.d(-31927);
+            int discarded$0 = -31927;
+            ((waa) this).field_z.field_x = this.d();
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "waa.B(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
-    private final boolean d(int param0) {
+    private final boolean d() {
         if (this.a((lca) (Object) ((waa) this).field_A, (byte) -92)) {
             return true;
         }
@@ -632,7 +634,7 @@ final class waa extends dqa implements jpb, oo {
             var5 = param0.c((byte) 9, param2);
             var3 = var5;
             if (var5 != null) {
-              var4 = -102 % ((param1 - 24) / 60);
+              var4 = 0;
               stackOut_3_0 = new sd(var5);
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -668,12 +670,12 @@ final class waa extends dqa implements jpb, oo {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + param2 + 41);
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 115 + 44 + param2 + 41);
         }
         return stackIn_4_0;
     }
 
-    public static void i(byte param0) {
+    public static void i() {
         field_D = null;
         int var1 = 0;
         field_x = null;
@@ -681,7 +683,7 @@ final class waa extends dqa implements jpb, oo {
         field_y = null;
     }
 
-    final static void a(ml param0, int param1) {
+    final static void a(ml param0) {
         RuntimeException var2 = null;
         ml var3 = null;
         ml var4 = null;
@@ -761,12 +763,14 @@ final class waa extends dqa implements jpb, oo {
         }
     }
 
-    private final void e(int param0) {
+    private final void e() {
         int var2 = 71;
-        if (!this.d(-31927)) {
+        int discarded$0 = -31927;
+        if (!this.d()) {
             return;
         }
-        lr.a(((waa) this).field_A.field_j, -127);
+        int discarded$1 = -127;
+        lr.a(((waa) this).field_A.field_j);
     }
 
     public final void a(byte param0, String param1) {

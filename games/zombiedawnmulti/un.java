@@ -20,24 +20,16 @@ abstract class un extends gf implements fi {
     final static boolean a(int param0, boolean param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
-        int stackIn_28_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_26_0 = 0;
+        int stackIn_26_0 = 0;
+        int stackOut_25_0 = 0;
+        int stackOut_24_0 = 0;
         L0: {
-          if (param0 >= 74) {
-            break L0;
-          } else {
-            un.a((int[]) null, 70, 11, -98, -57, -82, -73, -16, 0, -9, 113, -26, 31, 38, 49, 83, -9);
-            break L0;
-          }
-        }
-        L1: {
           if (param1) {
             if (lb.field_c[param2] >= lb.field_c[param3]) {
               if (lb.field_c[param2] <= lb.field_c[param3]) {
                 if (hn.field_f[param3] <= hn.field_f[param2]) {
                   if (hn.field_f[param3] >= hn.field_f[param2]) {
-                    break L1;
+                    break L0;
                   } else {
                     return false;
                   }
@@ -61,7 +53,7 @@ abstract class un extends gf implements fi {
                   if (lb.field_c[param3] < lb.field_c[param2]) {
                     return false;
                   } else {
-                    break L1;
+                    break L0;
                   }
                 }
               } else {
@@ -76,18 +68,18 @@ abstract class un extends gf implements fi {
           if (var4 > var5) {
             return false;
           } else {
-            L2: {
+            L1: {
               if (param2 >= param3) {
-                stackOut_27_0 = 0;
-                stackIn_28_0 = stackOut_27_0;
-                break L2;
+                stackOut_25_0 = 0;
+                stackIn_26_0 = stackOut_25_0;
+                break L1;
               } else {
-                stackOut_26_0 = 1;
-                stackIn_28_0 = stackOut_26_0;
-                break L2;
+                stackOut_24_0 = 1;
+                stackIn_26_0 = stackOut_24_0;
+                break L1;
               }
             }
-            return stackIn_28_0 != 0;
+            return stackIn_26_0 != 0;
           }
         } else {
           return true;

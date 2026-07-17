@@ -9,7 +9,7 @@ final class mn {
         return param0 ^ param1;
     }
 
-    final static void a(int param0, qk param1, int param2, int param3) {
+    final static void a(int param0, qk param1, int param2) {
         try {
             int var4_int = 0;
         } catch (RuntimeException runtimeException) {
@@ -17,7 +17,7 @@ final class mn {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_a = null;
     }
 

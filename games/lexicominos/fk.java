@@ -23,7 +23,7 @@ class fk extends kb {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_c = null;
         field_d = null;
         field_i = null;
@@ -42,21 +42,21 @@ class fk extends kb {
         try {
             qa.field_c = mb.a((byte) -63, "");
             qa.field_c.a((byte) 121, false);
-            ul.a(param1, param4, param3, (byte) 109);
-            if (param2 != 40) {
-                fk.b(false);
-            }
-            kf.f(1);
+            int discarded$0 = 109;
+            ul.a(param1, param4, param3);
+            int discarded$1 = 1;
+            kf.f();
             bk.field_c = c.field_m;
             ee.field_c = c.field_m;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "fk.H(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "fk.H(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 40 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static gb a(int param0) {
+    final static gb a() {
         int var1 = 0;
-        return new gb(ve.b(25594), ja.a(-2116060060));
+        int discarded$0 = 25594;
+        return new gb(ve.b(), ja.a(-2116060060));
     }
 
     fk(long param0, String param1) {

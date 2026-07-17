@@ -327,7 +327,7 @@ final class qc extends mf {
         field_l = null;
     }
 
-    final static void a(String param0, java.applet.Applet param1, int param2) {
+    final static void a(String param0, java.applet.Applet param1) {
         try {
             String var6 = null;
             String var5 = null;
@@ -346,7 +346,8 @@ final class qc extends mf {
                     var5 = var7;
                     var5 = var7;
                     if (param0.length() != 0) {
-                        var5 = var7 + "; Expires=" + ha.a(ri.a(-3) + 94608000000L, 13) + "; Max-Age=" + 94608000L;
+                        int discarded$1 = 13;
+                        var5 = var7 + "; Expires=" + ha.a(ri.a(-3) + 94608000000L) + "; Max-Age=" + 94608000L;
                     } else {
                         var5 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
                     }

@@ -6,12 +6,12 @@ final class bs {
     static int field_b;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
     }
 
-    final static void a(int param0, int param1, int param2, byte param3) {
+    final static void a(int param0, int param1, int param2) {
         wo.field_a = param2;
         em.field_j = param1;
         ih.field_b = param0;
@@ -81,10 +81,7 @@ final class bs {
         }
     }
 
-    final static void a(boolean param0, byte param1) {
-        if (param1 != 72) {
-            field_c = null;
-        }
+    final static void a(boolean param0) {
         wh.field_a.a(param0, 88);
     }
 

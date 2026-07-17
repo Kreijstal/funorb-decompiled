@@ -2117,14 +2117,6 @@ final class nn {
           L28: while (true) {
             if (var2_int >= param1.field_db * param1.field_v) {
               L29: {
-                if (param0 > 40) {
-                  break L29;
-                } else {
-                  nn.b(69);
-                  break L29;
-                }
-              }
-              L30: {
                 var13 = new Random((long)param1.field_jb);
                 var3 = 3;
                 var4 = 4 - -ns.a(false, 4, var13);
@@ -2132,23 +2124,23 @@ final class nn {
                 if (param1.field_hb == 0) {
                   if (10 > var5) {
                     var3 = 5;
-                    break L30;
+                    break L29;
                   } else {
                     if (30 <= var5) {
                       if (var5 < 60) {
                         var3 = 1;
-                        break L30;
+                        break L29;
                       } else {
                         if (var5 >= 70) {
-                          break L30;
+                          break L29;
                         } else {
                           var3 = 6;
-                          break L30;
+                          break L29;
                         }
                       }
                     } else {
                       var3 = 4;
-                      break L30;
+                      break L29;
                     }
                   }
                 } else {
@@ -2157,62 +2149,62 @@ final class nn {
                       if (var5 >= 60) {
                         if (var5 < 80) {
                           var3 = 6;
-                          break L30;
+                          break L29;
                         } else {
-                          break L30;
+                          break L29;
                         }
                       } else {
                         var3 = 4;
-                        break L30;
+                        break L29;
                       }
                     } else {
                       var3 = 0;
-                      break L30;
+                      break L29;
                     }
                   } else {
                     if (var5 >= 30) {
                       if (60 > var5) {
                         var3 = 4;
-                        break L30;
+                        break L29;
                       } else {
                         if (var5 < 80) {
                           var3 = 2;
-                          break L30;
+                          break L29;
                         } else {
-                          break L30;
+                          break L29;
                         }
                       }
                     } else {
                       var3 = 5;
-                      break L30;
+                      break L29;
                     }
                   }
                 }
               }
               var6 = -1;
-              L31: while (true) {
+              L30: while (true) {
                 if (var6 >= 2) {
                   var6 = 0;
-                  L32: while (true) {
+                  L31: while (true) {
                     if (var6 >= param1.field_db * param1.field_v) {
-                      L33: {
+                      L32: {
                         var6 = -1;
                         if (var3 != 5) {
-                          break L33;
+                          break L32;
                         } else {
                           var6 = 3;
-                          break L33;
+                          break L32;
                         }
                       }
                       var7 = -1;
-                      L34: while (true) {
+                      L33: while (true) {
                         if (var7 >= 2) {
-                          L35: {
+                          L34: {
                             if (var3 == 2) {
                               var6 = 5;
-                              break L35;
+                              break L34;
                             } else {
-                              break L35;
+                              break L34;
                             }
                           }
                           on.a(param1, var6, false, var13);
@@ -2220,238 +2212,238 @@ final class nn {
                           return;
                         } else {
                           var8 = -1;
-                          L36: while (true) {
+                          L35: while (true) {
                             if (2 <= var8) {
                               var7++;
-                              continue L34;
+                              continue L33;
                             } else {
-                              L37: {
-                                L38: {
+                              L36: {
+                                L37: {
                                   var9 = 0;
                                   if (0 == var7) {
-                                    break L38;
+                                    break L37;
                                   } else {
                                     if (var8 != 0) {
-                                      L39: {
+                                      L38: {
                                         if (var7 == var8) {
-                                          break L39;
+                                          break L38;
                                         } else {
                                           var9 += 2;
-                                          break L39;
+                                          break L38;
                                         }
                                       }
                                       if (var8 != 1) {
-                                        break L37;
+                                        break L36;
                                       } else {
                                         var9++;
-                                        break L37;
+                                        break L36;
                                       }
                                     } else {
-                                      break L38;
+                                      break L37;
                                     }
                                   }
                                 }
-                                L40: {
-                                  L41: {
+                                L39: {
+                                  L40: {
                                     var9 += 4;
                                     if (1 == var8) {
-                                      break L41;
+                                      break L40;
                                     } else {
                                       if (var7 == 1) {
-                                        break L41;
-                                      } else {
                                         break L40;
+                                      } else {
+                                        break L39;
                                       }
                                     }
                                   }
                                   var9++;
-                                  break L40;
+                                  break L39;
                                 }
                                 if (var8 == 0) {
                                   var9 += 2;
-                                  break L37;
+                                  break L36;
                                 } else {
-                                  break L37;
+                                  break L36;
                                 }
                               }
-                              L42: {
-                                L43: {
+                              L41: {
+                                L42: {
                                   if (var7 != 0) {
-                                    break L43;
+                                    break L42;
                                   } else {
                                     if (var8 != 0) {
-                                      break L43;
-                                    } else {
                                       break L42;
+                                    } else {
+                                      break L41;
                                     }
                                   }
                                 }
                                 if (var9 >= param1.field_W) {
-                                  break L42;
+                                  break L41;
                                 } else {
-                                  L44: {
-                                    L45: {
+                                  L43: {
+                                    L44: {
                                       var10 = 20 * (1 + var7) - -10;
                                       var11 = 10 + 20 * (1 + var8);
                                       if (var7 == 0) {
-                                        break L45;
+                                        break L44;
                                       } else {
                                         if (var8 != 0) {
                                           var10 = var10 + (-1 + ns.a(false, 2, var13));
                                           var11 = var11 + (-1 + ns.a(false, 2, var13));
-                                          break L44;
+                                          break L43;
                                         } else {
-                                          break L45;
+                                          break L44;
                                         }
                                       }
                                     }
                                     var10 = 10 + (ns.a(false, 4, var13) + 5) * var7 + (20 + 20 * var7);
                                     var11 = 10 + var8 * (ns.a(false, 4, var13) + 5) + (20 + 20 * var8);
-                                    break L44;
+                                    break L43;
                                   }
-                                  L46: while (true) {
-                                    L47: {
+                                  L45: while (true) {
+                                    L46: {
                                       if (param1.field_Eb[param1.field_v * var11 + var10].field_h == 0) {
-                                        break L47;
+                                        break L46;
                                       } else {
                                         if (1 == param1.field_Eb[var10 + param1.field_v * var11].field_h) {
-                                          break L47;
+                                          break L46;
                                         } else {
-                                          L48: {
+                                          L47: {
                                             var11 = 20 + (var8 * 20 - -10);
                                             var10 = (1 + var7) * 20 + 10;
                                             if (var7 == 0) {
-                                              break L48;
+                                              break L47;
                                             } else {
                                               if (0 != var8) {
                                                 var10 = var10 + (ns.a(false, 4, var13) + -2);
                                                 var11 = var11 + (ns.a(false, 4, var13) - 2);
-                                                continue L46;
+                                                continue L45;
                                               } else {
-                                                break L48;
+                                                break L47;
                                               }
                                             }
                                           }
                                           var10 = var7 * (ns.a(false, 4, var13) + 5) - -10 - (-20 + -(var7 * 20));
                                           var11 = (ns.a(false, 4, var13) + 5) * var8 - -10 - (-20 + -(20 * var8));
-                                          continue L46;
+                                          continue L45;
                                         }
                                       }
                                     }
                                     param1.field_t[var9].a((byte) -119, (tc) (Object) new jd(var10, var11, 0, var9, 10, 10, 9, 0, 0, param1, 0, 0, -1, false, 0));
-                                    break L42;
+                                    break L41;
                                   }
                                 }
                               }
                               var8++;
-                              continue L36;
+                              continue L35;
                             }
                           }
                         }
                       }
                     } else {
-                      L49: {
+                      L48: {
                         if (param1.field_Eb[var6] == null) {
                           param1.field_Eb[var6] = new ne(0, param1);
-                          break L49;
+                          break L48;
                         } else {
-                          break L49;
+                          break L48;
                         }
                       }
                       var6++;
-                      continue L32;
+                      continue L31;
                     }
                   }
                 } else {
                   var7 = -1;
-                  L50: while (true) {
+                  L49: while (true) {
                     if (var7 >= 2) {
                       var6++;
-                      continue L31;
+                      continue L30;
                     } else {
-                      L51: {
-                        L52: {
+                      L50: {
+                        L51: {
                           if (var6 != 0) {
-                            break L52;
+                            break L51;
                           } else {
                             if (var7 != 0) {
-                              break L52;
+                              break L51;
                             } else {
                               ul.a(var13, param1, (byte) 85, var3);
-                              break L51;
+                              break L50;
                             }
                           }
                         }
-                        L53: {
-                          L54: {
+                        L52: {
+                          L53: {
                             var8 = var6 * 20 + 30;
                             var9 = 20 * (var7 + 1) + 10;
                             param1.field_Eb[param1.field_v * var9 + var8] = new ne(1, param1);
                             if (var6 == 0) {
-                              break L54;
+                              break L53;
                             } else {
                               if (var7 == 0) {
-                                break L54;
+                                break L53;
                               } else {
                                 var8 = var8 + (-1 + ns.a(false, 2, var13));
                                 var9 = var9 + (-1 + ns.a(false, 2, var13));
-                                break L53;
+                                break L52;
                               }
                             }
                           }
                           var8 = var6 * (ns.a(false, 4, var13) + 5) - (-10 - (1 + var6) * 20);
                           var9 = (5 + ns.a(false, 4, var13)) * var7 + 10 + 20 * (var7 - -1);
-                          break L53;
+                          break L52;
                         }
-                        L55: {
+                        L54: {
                           param1.field_Eb[param1.field_v * var9 + var8] = new ne(7, param1);
                           if (0 != var3) {
                             fi.a(var8, (byte) 101, 1, var9, 20 * (var6 + 1) + 10, false, (var7 + 1) * 20 + 10, param1, var13);
-                            break L55;
+                            break L54;
                           } else {
-                            break L55;
+                            break L54;
                           }
                         }
                         var10 = 0;
-                        L56: while (true) {
+                        L55: while (true) {
                           if (~var10 <= ~var4) {
-                            break L51;
+                            break L50;
                           } else {
-                            L57: while (true) {
-                              L58: {
+                            L56: while (true) {
+                              L57: {
                                 if (null == param1.field_Eb[var9 * param1.field_v + var8]) {
-                                  break L58;
+                                  break L57;
                                 } else {
                                   if (param1.field_Eb[var8 - -(param1.field_v * var9)].field_h == 0) {
-                                    break L58;
+                                    break L57;
                                   } else {
                                     if (param1.field_Eb[var9 * param1.field_v + var8].field_h == 1) {
-                                      break L58;
+                                      break L57;
                                     } else {
                                       var8 = ns.a(false, 7, var13) * 2 + (20 * (var6 + 1) + 3);
                                       var9 = (1 + var7) * 20 - (-(2 * ns.a(false, 7, var13)) - 3);
-                                      continue L57;
+                                      continue L56;
                                     }
                                   }
                                 }
                               }
-                              L59: {
+                              L58: {
                                 param1.field_Eb[var8 + var9 * param1.field_v] = new ne(8, param1);
                                 if (var3 == 0) {
-                                  break L59;
+                                  break L58;
                                 } else {
                                   qp.a(var9, 20 * (1 + var6) + 10, -1, var7 * 20 - -30, var8, 0, param1, 1, var13);
-                                  break L59;
+                                  break L58;
                                 }
                               }
                               var10++;
-                              continue L56;
+                              continue L55;
                             }
                           }
                         }
                       }
                       var7++;
-                      continue L50;
+                      continue L49;
                     }
                   }
                 }

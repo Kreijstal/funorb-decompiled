@@ -280,7 +280,7 @@ final class id extends ma {
         }
     }
 
-    final static w g(int param0) {
+    final static w g() {
         return jg.b(false);
     }
 

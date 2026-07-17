@@ -13,7 +13,7 @@ final class ke {
         int var4 = 14 / ((-45 - param0) / 48);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = 2;
         field_a = null;
         field_c = null;

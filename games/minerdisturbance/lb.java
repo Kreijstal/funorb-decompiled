@@ -16,22 +16,12 @@ final class lb extends pi {
     int field_u;
 
     final static bj a(int param0, int param1) {
-        if (param0 != 1) {
-            return null;
-        }
         return eg.a(74, param1, false, false, true, 1);
     }
 
     final static int a(boolean param0, int param1, int param2) {
-        int var3 = 0;
-        if (param0) {
-          lb.a(-94);
-          var3 = param1 >>> 31;
-          return -var3 + (var3 + param1) / param2;
-        } else {
-          var3 = param1 >>> 31;
-          return -var3 + (var3 + param1) / param2;
-        }
+        int var3 = param1 >>> 31;
+        return -var3 + (var3 + param1) / param2;
     }
 
     public static void a(int param0) {

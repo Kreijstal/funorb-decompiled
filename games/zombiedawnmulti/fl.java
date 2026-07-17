@@ -6,90 +6,54 @@ final class fl {
     static String[] field_b;
     static int field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
     }
 
     final synchronized static byte[] a(int param0, int param1) {
         byte[] var2_ref_byte__ = null;
-        int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
-        L0: {
-          if (param1 != 100) {
-            break L0;
-          } else {
-            if (pn.field_h <= 0) {
-              break L0;
-            } else {
-              int fieldTemp$3 = pn.field_h - 1;
-              pn.field_h = pn.field_h - 1;
-              var2_ref_byte__ = lp.field_f[fieldTemp$3];
-              lp.field_f[pn.field_h] = null;
-              return var2_ref_byte__;
+        if (param1 == 100) {
+            if (pn.field_h > 0) {
+                int fieldTemp$0 = pn.field_h - 1;
+                pn.field_h = pn.field_h - 1;
+                var2_ref_byte__ = lp.field_f[fieldTemp$0];
+                lp.field_f[pn.field_h] = null;
+                return var2_ref_byte__;
             }
-          }
         }
-        L1: {
-          if (param1 != 5000) {
-            break L1;
-          } else {
-            if (ej.field_e <= 0) {
-              break L1;
-            } else {
-              int fieldTemp$4 = ej.field_e - 1;
-              ej.field_e = ej.field_e - 1;
-              var2_ref_byte__ = vb.field_a[fieldTemp$4];
-              vb.field_a[ej.field_e] = null;
-              return var2_ref_byte__;
+        if (param1 == 5000) {
+            if (ej.field_e > 0) {
+                int fieldTemp$1 = ej.field_e - 1;
+                ej.field_e = ej.field_e - 1;
+                var2_ref_byte__ = vb.field_a[fieldTemp$1];
+                vb.field_a[ej.field_e] = null;
+                return var2_ref_byte__;
             }
-          }
         }
-        L2: {
-          if (30000 != param1) {
-            break L2;
-          } else {
-            if (0 < ci.field_a) {
-              int fieldTemp$5 = ci.field_a - 1;
-              ci.field_a = ci.field_a - 1;
-              var2_ref_byte__ = oj.field_N[fieldTemp$5];
-              oj.field_N[ci.field_a] = null;
-              return var2_ref_byte__;
-            } else {
-              break L2;
+        if (30000 == param1) {
+            if (!(0 >= ci.field_a)) {
+                int fieldTemp$2 = ci.field_a - 1;
+                ci.field_a = ci.field_a - 1;
+                var2_ref_byte__ = oj.field_N[fieldTemp$2];
+                oj.field_N[ci.field_a] = null;
+                return var2_ref_byte__;
             }
-          }
         }
-        L3: {
-          var2 = -104 / ((param0 - 39) / 61);
-          if (null != gb.field_b) {
-            var3 = 0;
-            L4: while (true) {
-              if (~var3 <= ~lk.field_P.length) {
-                break L3;
-              } else {
-                L5: {
-                  if (~param1 != ~lk.field_P[var3]) {
-                    break L5;
-                  } else {
-                    if (ta.field_ib[var3] <= 0) {
-                      break L5;
-                    } else {
-                      ta.field_ib[var3] = ta.field_ib[var3] - 1;
-                      var4 = gb.field_b[var3][ta.field_ib[var3] - 1];
-                      gb.field_b[var3][ta.field_ib[var3]] = null;
-                      return var4;
+        int var2 = 52;
+        if (!(null == gb.field_b)) {
+            for (var3 = 0; ~var3 > ~lk.field_P.length; var3++) {
+                if (~param1 == ~lk.field_P[var3]) {
+                    if (ta.field_ib[var3] > 0) {
+                        ta.field_ib[var3] = ta.field_ib[var3] - 1;
+                        var4 = gb.field_b[var3][ta.field_ib[var3] - 1];
+                        gb.field_b[var3][ta.field_ib[var3]] = null;
+                        return var4;
                     }
-                  }
                 }
-                var3++;
-                continue L4;
-              }
             }
-          } else {
-            break L3;
-          }
         }
         return new byte[param1];
     }

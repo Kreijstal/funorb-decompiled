@@ -6,7 +6,7 @@ final class nm {
     static ql field_c;
     static String field_a;
 
-    final static void a(hj param0, int param1) {
+    final static void a(hj param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -59,12 +59,12 @@ final class nm {
         }
     }
 
-    final static gn a(boolean param0, int param1, int param2, boolean param3, int param4) {
+    final static gn a(boolean param0, int param1, int param2) {
         if (param2 > -81) {
           nm.a(86);
-          return kh.a(param1, param3, param0, false, 10600, 1);
+          return kh.a(param1, false, true, false, 10600, 1);
         } else {
-          return kh.a(param1, param3, param0, false, 10600, 1);
+          return kh.a(param1, false, true, false, 10600, 1);
         }
     }
 

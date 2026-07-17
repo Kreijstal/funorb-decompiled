@@ -22,19 +22,16 @@ final class fa {
         }
     }
 
-    final static Boolean b(int param0) {
+    final static Boolean b() {
         Boolean var1 = lk.field_p;
         lk.field_p = null;
         return var1;
     }
 
     final static gk a(byte param0, int param1) {
-        if (param0 != -76) {
-          field_b = 107;
-          return j.a(false, (byte) -95, false, param1, true, 1);
-        } else {
-          return j.a(false, (byte) -95, false, param1, true, 1);
-        }
+        int discarded$0 = 1;
+        int discarded$1 = 1;
+        return j.a(false, (byte) -95, false, param1);
     }
 
     static {

@@ -3,10 +3,7 @@
  */
 final class nc {
     final static void a(byte param0, java.applet.Applet param1, String param2) throws Throwable {
-        Object discarded$6 = netscape.javascript.JSObject.getWindow(param1).eval(param2);
-        if (param0 != -51) {
-            return;
-        }
+        Object discarded$0 = netscape.javascript.JSObject.getWindow(param1).eval(param2);
     }
 
     final static Object a(String param0, int param1, java.applet.Applet param2, Object[] param3) throws Throwable {

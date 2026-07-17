@@ -5,7 +5,7 @@ final class s implements qk {
     static int field_a;
     static String field_b;
 
-    final static void b(int param0) {
+    final static void b() {
         int var1 = 0;
         if (32 < ll.field_q) {
             var1 = ll.field_q % 32;
@@ -16,20 +16,17 @@ final class s implements qk {
         } else {
             ef.a(1, 0);
         }
-        if (param0 < 124) {
-            field_b = null;
-        }
     }
 
     final static void a(gi param0, int param1, int param2, int param3, int param4) {
         try {
-            param0.a((byte) 112, param1);
+            param0.a((byte) 112, 12);
             param0.d(17, 77);
             param0.d(param3, 107);
-            param0.d(param2, param1 + 108);
+            param0.d(param2, 120);
             param0.a((byte) 109, param4);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "s.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "s.E(" + (param0 != null ? "{...}" : "null") + 44 + 12 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -162,28 +159,28 @@ final class s implements qk {
                   }
                 }
               }
-              L11: {
-                if (param1) {
-                  break L11;
-                } else {
-                  s.b(-92);
-                  break L11;
-                }
-              }
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var6, "s.H(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw ci.a((Throwable) (Object) var6, "s.H(" + param0 + 44 + 1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
     final static int a(int param0, boolean param1) {
         int var2 = 0;
         int var3 = 0;
-        var3 = SteelSentinels.field_G;
+        L0: {
+          var3 = SteelSentinels.field_G;
+          if (!param1) {
+            break L0;
+          } else {
+            field_a = 125;
+            break L0;
+          }
+        }
         var2 = param0;
         if (var2 != 0) {
           if (1 == var2) {
@@ -252,14 +249,15 @@ final class s implements qk {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         if (ag.field_p != null) {
             ag.field_p.g((byte) 103);
         }
         if (!(r.field_r == null)) {
             r.field_r.m(-13521);
         }
-        ca.d(-30603);
+        int discarded$0 = -30603;
+        ca.d();
     }
 
     public static void a(byte param0) {
@@ -356,7 +354,7 @@ final class s implements qk {
         }
     }
 
-    final static short[] a(short[] param0, int param1, kj param2, boolean param3) {
+    final static short[] a(short[] param0, int param1, kj param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -401,7 +399,7 @@ final class s implements qk {
         var8 = SteelSentinels.field_G;
         try {
           L0: {
-            var4_int = param2.g(-118, param1);
+            var4_int = param2.g(-118, 16);
             if (var4_int != 0) {
               L1: {
                 L2: {
@@ -484,7 +482,7 @@ final class s implements qk {
           }
           L7: {
             stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(param1).append(44);
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(16).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;

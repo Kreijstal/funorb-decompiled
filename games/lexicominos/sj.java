@@ -39,7 +39,7 @@ final class sj extends kd {
           L0: {
             L1: {
               ug.field_m = ug.field_m + 1;
-              if (~ch.field_e != param0) {
+              if (ch.field_e != -1) {
                 break L1;
               } else {
                 if (fk.field_e != -1) {
@@ -167,7 +167,7 @@ final class sj extends kd {
           L10: {
             var2 = decompiledCaughtException;
             stackOut_38_0 = (RuntimeException) var2;
-            stackOut_38_1 = new StringBuilder().append("sj.A(").append(param0).append(44);
+            stackOut_38_1 = new StringBuilder().append("sj.A(").append(0).append(44);
             stackIn_40_0 = stackOut_38_0;
             stackIn_40_1 = stackOut_38_1;
             stackIn_39_0 = stackOut_38_0;
@@ -202,17 +202,13 @@ final class sj extends kd {
     }
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
-        if (param5) {
-          if (param4 >= param6) {
-            if (param6 - -param3 > param4) {
-              if (param0 >= param2) {
-                if (param1 + param2 <= param0) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
+        if (param4 >= param6) {
+          if (param6 - -param3 > param4) {
+            if (param0 >= param2) {
+              if (param1 + param2 <= param0) {
                 return false;
+              } else {
+                return true;
               }
             } else {
               return false;

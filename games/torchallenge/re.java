@@ -10,7 +10,7 @@ final class re extends lb {
     static ka[][] field_x;
     static int field_A;
 
-    public static void e(byte param0) {
+    public static void e() {
         field_B = null;
         field_v = null;
         field_z = null;

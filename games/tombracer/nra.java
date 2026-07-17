@@ -59,7 +59,7 @@ final class nra implements bo {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_g = null;
         field_c = null;
@@ -91,40 +91,36 @@ final class nra implements bo {
             param4--;
             param2--;
             var5_int = param2 + -7;
-            if (param0 == -55) {
-              L1: while (true) {
-                if (param4 >= var5_int) {
-                  L2: while (true) {
-                    if (param4 >= param2) {
-                      break L0;
-                    } else {
-                      param4++;
-                      param3[param4] = param1;
-                      continue L2;
-                    }
+            L1: while (true) {
+              if (param4 >= var5_int) {
+                L2: while (true) {
+                  if (param4 >= param2) {
+                    break L0;
+                  } else {
+                    param4++;
+                    param3[param4] = param1;
+                    continue L2;
                   }
-                } else {
-                  param4++;
-                  param3[param4] = param1;
-                  param4++;
-                  param3[param4] = param1;
-                  param4++;
-                  param3[param4] = param1;
-                  param4++;
-                  param3[param4] = param1;
-                  param4++;
-                  param3[param4] = param1;
-                  param4++;
-                  param3[param4] = param1;
-                  param4++;
-                  param3[param4] = param1;
-                  param4++;
-                  param3[param4] = param1;
-                  continue L1;
                 }
+              } else {
+                param4++;
+                param3[param4] = param1;
+                param4++;
+                param3[param4] = param1;
+                param4++;
+                param3[param4] = param1;
+                param4++;
+                param3[param4] = param1;
+                param4++;
+                param3[param4] = param1;
+                param4++;
+                param3[param4] = param1;
+                param4++;
+                param3[param4] = param1;
+                param4++;
+                param3[param4] = param1;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -132,7 +128,7 @@ final class nra implements bo {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var5;
-            stackOut_8_1 = new StringBuilder().append("nra.F(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_8_1 = new StringBuilder().append("nra.F(").append(-55).append(44).append(param1).append(44).append(param2).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;

@@ -40,7 +40,7 @@ final class gb {
     int field_u;
     static String field_J;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_J = null;
         field_x = null;
@@ -49,7 +49,7 @@ final class gb {
     }
 
     final static void a(int param0, boolean param1) {
-        ka.field_b.a(-81, param0, 0);
+        ka.field_b.a(-81, 0, 0);
     }
 
     gb() {

@@ -14,13 +14,13 @@ final class wk {
         return id.b(-4);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_g = null;
         field_b = null;
     }
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         lb var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

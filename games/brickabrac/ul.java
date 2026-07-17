@@ -57,7 +57,7 @@ final class ul extends nm {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_l = null;
         field_k = null;
         field_m = null;
@@ -72,20 +72,19 @@ final class ul extends nm {
         return hj.a(1, (byte) -110, param1, param3, param0);
     }
 
-    final static void a(int param0, vm param1, int param2, boolean param3, int param4) {
+    final static void a(int param0, vm param1) {
         try {
-            dc.field_e.a(param2, !param3 ? true : false, param0, (byte) 22, 1000000, param1);
+            dc.field_e.a(256, false, 1048576, (byte) 22, 1000000, param1);
             int var5_int = 44;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "ul.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + -104 + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "ul.F(" + 1048576 + 44 + (param1 != null ? "{...}" : "null") + 44 + 256 + 44 + 1 + 44 + -104 + 41);
         }
     }
 
     final static int a(int param0, int param1) {
-        if (param0 != 255) {
-            field_k = null;
-        }
-        return la.a(param1, 255, 255);
+        int discarded$0 = 255;
+        int discarded$1 = 255;
+        return la.a(param1);
     }
 
     final boolean b(boolean param0) {

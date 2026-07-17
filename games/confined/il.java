@@ -335,7 +335,7 @@ final class il extends hf {
         }
     }
 
-    public static void n(int param0) {
+    public static void n() {
         field_db = null;
         field_gb = null;
         field_fb = null;

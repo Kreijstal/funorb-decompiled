@@ -221,7 +221,8 @@ final class oo extends id {
                     break L2;
                   }
                   ki.a((byte) -114, hn.field_p);
-                  this.a(param1, 47);
+                  int discarded$2 = 47;
+                  this.a(param1);
                   pa.a(-21189);
                   break L1;
                 } else {
@@ -285,73 +286,65 @@ final class oo extends id {
         int var17 = 0;
         int var18 = 0;
         int[][][] var19 = null;
-        int stackIn_7_0 = 0;
+        int stackIn_5_0 = 0;
+        int[] stackIn_10_0 = null;
+        int stackIn_10_1 = 0;
+        int[] stackIn_10_2 = null;
+        int[] stackIn_11_0 = null;
+        int stackIn_11_1 = 0;
+        int[] stackIn_11_2 = null;
         int[] stackIn_12_0 = null;
         int stackIn_12_1 = 0;
         int[] stackIn_12_2 = null;
-        int[] stackIn_13_0 = null;
-        int stackIn_13_1 = 0;
-        int[] stackIn_13_2 = null;
-        int[] stackIn_14_0 = null;
-        int stackIn_14_1 = 0;
-        int[] stackIn_14_2 = null;
-        int stackIn_14_3 = 0;
-        int stackIn_21_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_19_0 = 0;
+        int stackIn_12_3 = 0;
+        int stackIn_19_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_18_0 = 0;
+        int stackOut_17_0 = 0;
+        int[] stackOut_9_0 = null;
+        int stackOut_9_1 = 0;
+        int[] stackOut_9_2 = null;
         int[] stackOut_11_0 = null;
         int stackOut_11_1 = 0;
         int[] stackOut_11_2 = null;
-        int[] stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
-        int[] stackOut_13_2 = null;
-        int stackOut_13_3 = 0;
-        int[] stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        int[] stackOut_12_2 = null;
-        int stackOut_12_3 = 0;
+        int stackOut_11_3 = 0;
+        int[] stackOut_10_0 = null;
+        int stackOut_10_1 = 0;
+        int[] stackOut_10_2 = null;
+        int stackOut_10_3 = 0;
         L0: {
           var18 = ZombieDawn.field_J;
-          if (param0 >= 21) {
-            break L0;
-          } else {
-            ((oo) this).field_X = null;
-            break L0;
-          }
-        }
-        L1: {
           var19 = new int[][][]{new int[5][], new int[4][], new int[4][], new int[3][], new int[3][]};
           var3 = var19;
           ((oo) this).field_H = 0;
           var4 = new int[]{0, 0, 0, 0, 0, 1, 1, 2, 2, 3, 4};
           ((oo) this).field_H = so.a(var4);
           if (((oo) this).field_H != 0) {
-            break L1;
+            break L0;
           } else {
             ((oo) this).field_Q = ((oo) this).field_Q + 2;
             param1 += 2;
-            break L1;
+            break L0;
           }
         }
-        L2: {
+        L1: {
           ((oo) this).field_X = new int[param1][6];
           ((oo) this).field_V = new boolean[param1][6];
           var5 = var19[((oo) this).field_H].length;
           if (0 != so.c(2)) {
-            stackOut_6_0 = 0;
-            stackIn_7_0 = stackOut_6_0;
-            break L2;
+            stackOut_4_0 = 0;
+            stackIn_5_0 = stackOut_4_0;
+            break L1;
           } else {
-            stackOut_5_0 = 1;
-            stackIn_7_0 = stackOut_5_0;
-            break L2;
+            stackOut_3_0 = 1;
+            stackIn_5_0 = stackOut_3_0;
+            break L1;
           }
         }
-        var6 = stackIn_7_0;
+        var6 = stackIn_5_0;
         var7_int = 0;
-        L3: while (true) {
+        L2: while (true) {
           if (var7_int >= var5) {
             var5--;
             var7 = new int[]{126, 104, 88, 96, 118};
@@ -369,38 +362,38 @@ final class oo extends id {
             var15 = new int[]{83, 83, 99, 99, 103, 111, 103, 111, 103, 111, 79, 95};
             var16 = new int[]{89, 89, 89, 89, 105, 113, 121, 121, 81, 81};
             var17 = var5 - -1;
-            L4: while (true) {
+            L3: while (true) {
               if (param1 - 1 <= var17) {
                 return ((oo) this).field_X;
               } else {
-                L5: {
+                L4: {
                   if (so.c(2) != 0) {
-                    stackOut_20_0 = 0;
-                    stackIn_21_0 = stackOut_20_0;
-                    break L5;
+                    stackOut_18_0 = 0;
+                    stackIn_19_0 = stackOut_18_0;
+                    break L4;
                   } else {
-                    stackOut_19_0 = 1;
-                    stackIn_21_0 = stackOut_19_0;
-                    break L5;
+                    stackOut_17_0 = 1;
+                    stackIn_19_0 = stackOut_17_0;
+                    break L4;
                   }
                 }
-                L6: {
-                  var13 = stackIn_21_0;
+                L5: {
+                  var13 = stackIn_19_0;
                   if (var13 != 0) {
                     var11 = 2;
                     var12 = 1;
                     var10 = 3;
                     var9 = 4;
-                    break L6;
+                    break L5;
                   } else {
                     var12 = 4;
                     var10 = 2;
                     var9 = 1;
                     var11 = 3;
-                    break L6;
+                    break L5;
                   }
                 }
-                L7: {
+                L6: {
                   ((oo) this).field_V[var17][var11] = var13 != 0;
                   ((oo) this).field_V[var17][var10] = var13 != 0;
                   ((oo) this).field_X[var17][var10] = so.a(var14);
@@ -408,97 +401,97 @@ final class oo extends id {
                   if (79 == ((oo) this).field_X[var17][var11]) {
                     ((oo) this).field_X[var17][var12] = 80;
                     ((oo) this).field_V[var17][var12] = var13 != 0;
-                    break L7;
+                    break L6;
                   } else {
-                    break L7;
+                    break L6;
                   }
                 }
                 if (((oo) this).field_X[var17][var10] == 90) {
-                  L8: {
-                    L9: {
+                  L7: {
+                    L8: {
                       if (-3 + param1 < var17) {
-                        break L9;
+                        break L8;
                       } else {
                         if (((oo) this).field_X[var17][var9] != -1) {
-                          break L9;
+                          break L8;
                         } else {
                           if (-1 == ((oo) this).field_X[var17][var12]) {
                             if (var17 < -2 + param1) {
                               ((oo) this).field_X[var17][var9] = so.a(var16);
-                              break L8;
+                              break L7;
                             } else {
-                              break L8;
+                              break L7;
                             }
                           } else {
-                            break L9;
+                            break L8;
                           }
                         }
                       }
                     }
                     ((oo) this).field_X[var17][var10] = 106;
-                    break L8;
+                    break L7;
                   }
-                  L10: {
+                  L9: {
                     if (((oo) this).field_X[var17][var9] != 105) {
-                      break L10;
+                      break L9;
                     } else {
                       ((oo) this).field_X[var17 + 1][var9] = 97;
                       ((oo) this).field_V[var17 - -1][var9] = var13 != 0;
-                      break L10;
+                      break L9;
                     }
                   }
                   ((oo) this).field_V[var17][var9] = var13 != 0;
                   var17++;
-                  continue L4;
+                  continue L3;
                 } else {
                   var17++;
-                  continue L4;
+                  continue L3;
                 }
               }
             }
           } else {
             var8_int = 0;
-            L11: while (true) {
+            L10: while (true) {
               if (var8_int >= 6) {
                 var7_int++;
-                continue L3;
+                continue L2;
               } else {
-                L12: {
-                  stackOut_11_0 = ((oo) this).field_X[var7_int];
-                  stackOut_11_1 = var8_int;
-                  stackOut_11_2 = var19[((oo) this).field_H][var7_int];
-                  stackIn_13_0 = stackOut_11_0;
-                  stackIn_13_1 = stackOut_11_1;
-                  stackIn_13_2 = stackOut_11_2;
-                  stackIn_12_0 = stackOut_11_0;
-                  stackIn_12_1 = stackOut_11_1;
-                  stackIn_12_2 = stackOut_11_2;
+                L11: {
+                  stackOut_9_0 = ((oo) this).field_X[var7_int];
+                  stackOut_9_1 = var8_int;
+                  stackOut_9_2 = var19[((oo) this).field_H][var7_int];
+                  stackIn_11_0 = stackOut_9_0;
+                  stackIn_11_1 = stackOut_9_1;
+                  stackIn_11_2 = stackOut_9_2;
+                  stackIn_10_0 = stackOut_9_0;
+                  stackIn_10_1 = stackOut_9_1;
+                  stackIn_10_2 = stackOut_9_2;
                   if (var6 == 0) {
-                    stackOut_13_0 = (int[]) (Object) stackIn_13_0;
-                    stackOut_13_1 = stackIn_13_1;
-                    stackOut_13_2 = (int[]) (Object) stackIn_13_2;
-                    stackOut_13_3 = var8_int;
-                    stackIn_14_0 = stackOut_13_0;
-                    stackIn_14_1 = stackOut_13_1;
-                    stackIn_14_2 = stackOut_13_2;
-                    stackIn_14_3 = stackOut_13_3;
-                    break L12;
+                    stackOut_11_0 = (int[]) (Object) stackIn_11_0;
+                    stackOut_11_1 = stackIn_11_1;
+                    stackOut_11_2 = (int[]) (Object) stackIn_11_2;
+                    stackOut_11_3 = var8_int;
+                    stackIn_12_0 = stackOut_11_0;
+                    stackIn_12_1 = stackOut_11_1;
+                    stackIn_12_2 = stackOut_11_2;
+                    stackIn_12_3 = stackOut_11_3;
+                    break L11;
                   } else {
-                    stackOut_12_0 = (int[]) (Object) stackIn_12_0;
-                    stackOut_12_1 = stackIn_12_1;
-                    stackOut_12_2 = (int[]) (Object) stackIn_12_2;
-                    stackOut_12_3 = -1 + (-var8_int + 6);
-                    stackIn_14_0 = stackOut_12_0;
-                    stackIn_14_1 = stackOut_12_1;
-                    stackIn_14_2 = stackOut_12_2;
-                    stackIn_14_3 = stackOut_12_3;
-                    break L12;
+                    stackOut_10_0 = (int[]) (Object) stackIn_10_0;
+                    stackOut_10_1 = stackIn_10_1;
+                    stackOut_10_2 = (int[]) (Object) stackIn_10_2;
+                    stackOut_10_3 = -1 + (-var8_int + 6);
+                    stackIn_12_0 = stackOut_10_0;
+                    stackIn_12_1 = stackOut_10_1;
+                    stackIn_12_2 = stackOut_10_2;
+                    stackIn_12_3 = stackOut_10_3;
+                    break L11;
                   }
                 }
-                stackIn_14_0[stackIn_14_1] = stackIn_14_2[stackIn_14_3];
+                stackIn_12_0[stackIn_12_1] = stackIn_12_2[stackIn_12_3];
                 ((oo) this).field_V[var7_int][var8_int] = var6 != 0;
                 var8_int++;
-                continue L11;
+                continue L10;
               }
             }
           }
@@ -614,7 +607,7 @@ final class oo extends id {
         field_U = null;
     }
 
-    private final void a(wk param0, int param1) {
+    private final void a(wk param0) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;

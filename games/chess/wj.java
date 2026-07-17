@@ -10,7 +10,7 @@ final class wj implements jm {
     private int field_f;
     static ci field_g;
 
-    final static void a(le param0, int param1, int param2, le param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, lh param11, int param12, le param13, int param14, int param15, int param16, int param17, lh param18, int param19, int param20) {
+    final static void a(le param0, int param1, int param2, le param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, lh param11, int param12, le param13, int param14, int param15, int param16, int param17, lh param18) {
         int var21_int = 0;
         RuntimeException var21 = null;
         RuntimeException stackIn_3_0 = null;
@@ -91,12 +91,16 @@ final class wj implements jm {
         String stackOut_15_2 = null;
         try {
           L0: {
-            cg.a(0, param17, param11, param18);
+            cg.a(0, 480, param11, param18);
             g.a((byte) -81, param2, param10, param4, param9);
-            di.a(param12, -121, param6);
-            gi.a(param15, param0, param19, false, param13, param8);
-            var21_int = -109 % ((param14 - -27) / 45);
-            td.a(param3, param1, param20, 200);
+            di.a(320, -121, 240);
+            int discarded$4 = 2;
+            gi.a(8, param0, 8, false, param13);
+            var21_int = 0;
+            int discarded$5 = 200;
+            int discarded$6 = 0;
+            int discarded$7 = 0;
+            td.a(param3);
             fd.a(param7, 7, param5, param16);
             break L0;
           }
@@ -130,7 +134,7 @@ final class wj implements jm {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(0).append(44).append(param2).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -155,7 +159,7 @@ final class wj implements jm {
           }
           L3: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44).append(param8).append(44).append(param9).append(44).append(param10).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param4).append(44).append(param5).append(44).append(240).append(44).append(param7).append(44).append(2).append(44).append(param9).append(44).append(param10).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -180,7 +184,7 @@ final class wj implements jm {
           }
           L4: {
             stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(param12).append(44);
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44).append(320).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -205,7 +209,7 @@ final class wj implements jm {
           }
           L5: {
             stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(param14).append(44).append(param15).append(44).append(param16).append(44).append(param17).append(44);
+            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(-95).append(44).append(8).append(44).append(param16).append(44).append(480).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -228,7 +232,7 @@ final class wj implements jm {
               break L5;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param19 + 44 + param20 + 41);
+          throw fk.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + 8 + 44 + 0 + 41);
         }
     }
 
@@ -355,7 +359,7 @@ final class wj implements jm {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_d = null;
         field_c = null;

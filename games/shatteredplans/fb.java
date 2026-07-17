@@ -52,7 +52,7 @@ final class fb extends qr {
         ((fb) this).field_dc = new byte[param0];
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_Vb = null;
         field_kc = null;
         field_bc = null;
@@ -131,7 +131,7 @@ final class fb extends qr {
         var16 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
-            var9 = -18 % ((param2 - -43) / 35);
+            var9 = 0;
             var17 = new lp(0, 0, 182, cc.field_n);
             var10 = 0;
             var11_ref_fs__ = param6;
@@ -253,7 +253,7 @@ final class fb extends qr {
           L10: {
             var8 = decompiledCaughtException;
             stackOut_33_0 = (RuntimeException) var8;
-            stackOut_33_1 = new StringBuilder().append("fb.F(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_33_1 = new StringBuilder().append("fb.F(").append(param0).append(44).append(param1).append(44).append(28).append(44).append(param3).append(44);
             stackIn_35_0 = stackOut_33_0;
             stackIn_35_1 = stackOut_33_1;
             stackIn_34_0 = stackOut_33_0;
@@ -338,7 +338,7 @@ final class fb extends qr {
         return !((fb) this).a((byte) 98) ? true : false;
     }
 
-    final static void a(boolean param0, boolean param1, int param2, int param3, int param4, boolean param5, int param6, boolean param7, boolean param8, int param9) {
+    final static void a(boolean param0, boolean param1, int param2, int param3, int param4, boolean param5, int param6, boolean param7) {
         int var11 = 0;
         L0: {
           var11 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -364,10 +364,10 @@ final class fb extends qr {
               } else {
                 if (null == np.field_a) {
                   if (null == he.field_p) {
-                    tc.j(param9 ^ 97);
+                    tc.j(97);
                     break L0;
                   } else {
-                    en.a(param9 + 15471, true);
+                    en.a(15471, true);
                     break L0;
                   }
                 } else {
@@ -389,8 +389,8 @@ final class fb extends qr {
         }
         L3: {
           mf.a(true, param5);
-          if (qa.field_t > param9) {
-            hi.a(param0, param9 ^ -26671, param5, param2);
+          if (qa.field_t > 0) {
+            hi.a(param0, -26671, param5, param2);
             break L3;
           } else {
             break L3;
@@ -434,7 +434,8 @@ final class fb extends qr {
           dm.a(param4, 0, ls.field_a, param1, param2);
           break L6;
         }
-        ga.a(param1, (byte) 116, param3, param6, param2, param4, param8);
+        int discarded$1 = 1;
+        ga.a(param1, (byte) 116, 16777215, param6, param2, param4);
         dm.a(param4, 0, ro.field_a, param1, param2);
         ln.field_w = ln.field_w + 1;
     }

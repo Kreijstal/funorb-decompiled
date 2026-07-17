@@ -121,11 +121,11 @@ final class sj implements j {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void a(java.awt.Component param0) {
         try {
             param0.removeMouseListener((java.awt.event.MouseListener) (Object) ee.field_j);
             param0.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) ee.field_j);
@@ -136,16 +136,16 @@ final class sj implements j {
         }
     }
 
-    final static void a(int param0, bl param1, int param2) {
+    final static void a(int param0, bl param1) {
         try {
             m.field_h.a((gg) (Object) param1, -7044);
-            la.a(0, param0, param1);
+            la.a(0, 4, param1);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "sj.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + -7471 + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "sj.A(" + 4 + 44 + (param1 != null ? "{...}" : "null") + 44 + -7471 + 41);
         }
     }
 
-    final static String a(CharSequence param0, int param1) {
+    final static String a(CharSequence param0) {
         RuntimeException var2 = null;
         String stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -254,7 +254,7 @@ final class sj implements j {
                   }
                 }
               }
-              var3 = 33 % ((35 - param0) / 35);
+              var3 = 0;
               var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
               var4 = 0;
               L1: while (true) {
@@ -291,7 +291,7 @@ final class sj implements j {
           L2: {
             var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_19_0 = (RuntimeException) var2_ref2;
-            stackOut_19_1 = new StringBuilder().append("sj.E(").append(param0).append(44);
+            stackOut_19_1 = new StringBuilder().append("sj.E(").append(97).append(44);
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;

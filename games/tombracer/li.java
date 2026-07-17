@@ -44,7 +44,8 @@ final class li {
         int var4 = 0;
         su[] var5 = null;
         var4 = TombRacer.field_G ? 1 : 0;
-        var5 = cma.c(126);
+        int discarded$2 = 126;
+        var5 = cma.c();
         var2 = var5;
         var3 = 0;
         L0: while (true) {
@@ -61,7 +62,7 @@ final class li {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 

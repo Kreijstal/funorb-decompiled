@@ -83,44 +83,36 @@ final class g extends ei {
     }
 
     final static boolean a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6) {
-        int stackIn_8_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_7_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_5_0 = 0;
         L0: {
-          if (param1 <= -32) {
-            break L0;
-          } else {
-            field_t = null;
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
+          L1: {
             if (param4 > param6) {
-              break L2;
+              break L1;
             } else {
               if (param0 + param4 <= param6) {
-                break L2;
+                break L1;
               } else {
                 if (param5 < param3) {
-                  break L2;
+                  break L1;
                 } else {
                   if (param3 - -param2 <= param5) {
-                    break L2;
-                  } else {
-                    stackOut_6_0 = 1;
-                    stackIn_8_0 = stackOut_6_0;
                     break L1;
+                  } else {
+                    stackOut_4_0 = 1;
+                    stackIn_6_0 = stackOut_4_0;
+                    break L0;
                   }
                 }
               }
             }
           }
-          stackOut_7_0 = 0;
-          stackIn_8_0 = stackOut_7_0;
-          break L1;
+          stackOut_5_0 = 0;
+          stackIn_6_0 = stackOut_5_0;
+          break L0;
         }
-        return stackIn_8_0 != 0;
+        return stackIn_6_0 != 0;
     }
 
     final static void a(String param0, int param1) {
@@ -492,7 +484,7 @@ final class g extends ei {
         return stackIn_9_0;
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_p = null;
         field_q = null;
         field_s = null;

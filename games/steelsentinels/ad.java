@@ -264,7 +264,7 @@ final class ad {
         var2.a((byte) 114, nf.field_b.field_Ub);
         int var4 = nf.field_b.field_Nc + (nf.field_b.field_sc << 6);
         var2.a((byte) 127, var4);
-        var2.a(nf.field_b.field_Sb.length, (byte) -122, param0, nf.field_b.field_Sb);
+        var2.a(nf.field_b.field_Sb.length, (byte) -122, 0, nf.field_b.field_Sb);
         var2.b((byte) -113, var2.field_p - var3);
     }
 

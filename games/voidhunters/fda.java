@@ -72,7 +72,7 @@ final class fda extends rqa {
         return stackIn_3_0;
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         field_p = null;
     }
 

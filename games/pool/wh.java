@@ -442,7 +442,7 @@ final class wh {
         qh.d(param0, param1, param2, param4);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         field_i = null;

@@ -22,7 +22,7 @@ final class hn implements Runnable {
     static int field_p;
     static String field_e;
 
-    public static void a(int param0) {
+    public static void a() {
         field_k = null;
         field_l = null;
         field_i = null;
@@ -123,7 +123,8 @@ final class hn implements Runnable {
                       var3 = var4.getOutputStream();
                       var3.write(17);
                       var5 = (CharSequence) (Object) ("JAGGRAB " + ((hn) this).field_m.getFile() + "\n\n");
-                      var3.write(go.a(var5, (byte) -82));
+                      int discarded$1 = -82;
+                      var3.write(go.a(var5));
                       ((hn) this).field_f = new DataInputStream(var4.getInputStream());
                       break L7;
                     } else {
@@ -461,7 +462,8 @@ final class hn implements Runnable {
         if (jf.field_e) {
           if (pe.field_Jb) {
             if (!be.field_g) {
-              if (lc.a((byte) 112)) {
+              int discarded$19 = 112;
+              if (lc.a()) {
                 return true;
               } else {
                 return false;
@@ -469,7 +471,8 @@ final class hn implements Runnable {
             } else {
               if (!kg.field_a) {
                 L0: {
-                  if (!lc.a((byte) 112)) {
+                  int discarded$20 = 112;
+                  if (!lc.a()) {
                     stackOut_17_0 = 0;
                     stackIn_18_0 = stackOut_17_0;
                     break L0;
@@ -487,14 +490,16 @@ final class hn implements Runnable {
               }
             }
           } else {
-            if (lc.a((byte) 112)) {
+            int discarded$21 = 112;
+            if (lc.a()) {
               return true;
             } else {
               return false;
             }
           }
         } else {
-          if (lc.a((byte) 112)) {
+          int discarded$22 = 112;
+          if (lc.a()) {
             return true;
           } else {
             return false;

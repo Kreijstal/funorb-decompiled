@@ -7,20 +7,21 @@ final class bn {
     static ed[] field_d;
     static int field_b;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_d = null;
     }
 
     final static void a(int param0, n param1, n param2, java.math.BigInteger param3, java.math.BigInteger param4) {
         try {
-            gb.a(param4, false, param3, param2.field_g, param1, param2.field_m, param0);
+            int discarded$0 = 0;
+            gb.a(param4, false, param3, param2.field_g, param1, param2.field_m);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "bn.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "bn.B(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static void a(ed[] param0, int param1) {
+    final static void a(ed[] param0) {
         ci[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

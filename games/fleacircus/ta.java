@@ -20,12 +20,7 @@ abstract class ta extends pa {
     }
 
     final static dd[] a(int param0, int param1, int param2, int param3, int param4) {
-        if (param2 != -2843) {
-          field_y = -101;
-          return ud.a(param3, 3, param2 + 7558, 1, 1, param4, param1, 1, param0);
-        } else {
-          return ud.a(param3, 3, param2 + 7558, 1, 1, param4, param1, 1, param0);
-        }
+        return ud.a(0, 3, 4715, 1, 1, 0, 65793, 1, 0);
     }
 
     final static String f(int param0) {

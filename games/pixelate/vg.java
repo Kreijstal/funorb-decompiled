@@ -80,10 +80,7 @@ final class vg {
         }
     }
 
-    final static void a(long param0, byte param1) {
-        if (param1 != 23) {
-            return;
-        }
+    final static void a(long param0) {
         if (!(param0 > 0L)) {
             return;
         }
@@ -99,62 +96,58 @@ final class vg {
     final static ib a(byte param0, int param1) {
         int var2 = 0;
         int var3 = 0;
-        int stackIn_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        if (param0 >= 84) {
-          L0: {
-            if (param1 < 10) {
-              stackOut_4_0 = 0;
-              stackIn_5_0 = stackOut_4_0;
-              break L0;
-            } else {
-              stackOut_3_0 = ue.a(param1, (byte) 118);
-              stackIn_5_0 = stackOut_3_0;
-              break L0;
-            }
-          }
-          var2 = stackIn_5_0;
-          if (var2 == 0) {
-            if (ok.a(tg.field_f, -128, 2) != 1) {
-              return new ib(4, 3);
-            } else {
-              return new ib(3, 4);
-            }
+        int stackIn_3_0 = 0;
+        int stackOut_2_0 = 0;
+        int stackOut_1_0 = 0;
+        L0: {
+          if (param1 < 10) {
+            stackOut_2_0 = 0;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
           } else {
-            if (var2 == 1) {
-              var3 = ok.a(tg.field_f, -121, 3);
-              if (var3 == 0) {
-                return new ib(3, 5);
-              } else {
-                if (var3 == 1) {
-                  return new ib(4, 4);
-                } else {
-                  if (var3 == 2) {
-                    return new ib(5, 3);
-                  } else {
-                    return new ib(4, 4);
-                  }
-                }
-              }
-            } else {
-              if (2 == var2) {
-                if (ok.a(tg.field_f, -103, 2) == 1) {
-                  return new ib(4, 5);
-                } else {
-                  return new ib(5, 4);
-                }
-              } else {
-                if (3 != var2) {
-                  return new ib(4, 4);
-                } else {
-                  return new ib(5, 5);
-                }
-              }
-            }
+            stackOut_1_0 = ue.a(param1, (byte) 118);
+            stackIn_3_0 = stackOut_1_0;
+            break L0;
+          }
+        }
+        var2 = stackIn_3_0;
+        if (var2 == 0) {
+          if (ok.a(tg.field_f, -128, 2) != 1) {
+            return new ib(4, 3);
+          } else {
+            return new ib(3, 4);
           }
         } else {
-          return null;
+          if (var2 == 1) {
+            var3 = ok.a(tg.field_f, -121, 3);
+            if (var3 == 0) {
+              return new ib(3, 5);
+            } else {
+              if (var3 == 1) {
+                return new ib(4, 4);
+              } else {
+                if (var3 == 2) {
+                  return new ib(5, 3);
+                } else {
+                  return new ib(4, 4);
+                }
+              }
+            }
+          } else {
+            if (2 == var2) {
+              if (ok.a(tg.field_f, -103, 2) == 1) {
+                return new ib(4, 5);
+              } else {
+                return new ib(5, 4);
+              }
+            } else {
+              if (3 != var2) {
+                return new ib(4, 4);
+              } else {
+                return new ib(5, 5);
+              }
+            }
+          }
         }
     }
 
@@ -473,7 +466,8 @@ final class vg {
               if (param1 == 10000) {
                 return;
               } else {
-                vg.a(true);
+                int discarded$1 = 1;
+                vg.a();
                 return;
               }
             }
@@ -506,7 +500,7 @@ final class vg {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_e = null;
         field_f = null;
     }

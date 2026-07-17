@@ -35,12 +35,12 @@ final class dp {
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
-            if (!vd.a(param1, param2, (byte) 109)) {
+            if (!vd.a(false, param2, (byte) 109)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0 != 0;
             } else {
-              var3_int = param0;
+              var3_int = 0;
               L1: while (true) {
                 if (var3_int >= param2.length()) {
                   stackOut_12_0 = 1;
@@ -64,7 +64,7 @@ final class dp {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var3;
-            stackOut_14_1 = new StringBuilder().append("dp.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_14_1 = new StringBuilder().append("dp.B(").append(0).append(44).append(0).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -98,7 +98,7 @@ final class dp {
         field_b = null;
     }
 
-    final static void a(byte param0, int param1) {
+    final static void a() {
         RuntimeException var2 = null;
         int var3 = 0;
         vl var4 = null;
@@ -106,25 +106,22 @@ final class dp {
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
-            if (param0 == 80) {
-              var4 = (vl) (Object) lf.field_e.c(param0 + -18);
-              L1: while (true) {
-                if (var4 == null) {
-                  break L0;
-                } else {
-                  uk.a((byte) 127, var4, 2);
-                  var4 = (vl) (Object) lf.field_e.b(param0 ^ 86);
-                  continue L1;
-                }
+            var4 = (vl) (Object) lf.field_e.c(62);
+            L1: while (true) {
+              if (var4 == null) {
+                break L0;
+              } else {
+                int discarded$4 = 2;
+                uk.a((byte) 127, var4);
+                var4 = (vl) (Object) lf.field_e.b(6);
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var2, "dp.A(" + param0 + 44 + 2 + 41);
+          throw fa.a((Throwable) (Object) var2, "dp.A(" + 80 + 44 + 2 + 41);
         }
     }
 

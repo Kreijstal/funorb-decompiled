@@ -15,26 +15,24 @@ abstract class ne {
     static String field_a;
     static long field_j;
 
-    final static void a(boolean param0, String param1, String param2, int param3) {
+    final static void a(boolean param0, String param1, String param2) {
         try {
-            if (param3 != 150) {
-                ne.a(-9, -29);
-            }
             lc.field_hb = param2;
             sd.field_b = param1;
             sc.a(param0, (byte) 93, bl.field_c);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "ne.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "ne.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + 150 + 41);
         }
     }
 
     abstract void c(int param0, int param1);
 
-    final static void b(int param0, int param1) {
-        int discarded$0 = mg.a((byte) -78);
+    final static void b(int param0) {
+        int discarded$0 = -78;
+        int discarded$1 = mg.a();
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_l = null;
         field_c = null;
         field_i = null;
@@ -44,14 +42,14 @@ abstract class ne {
     final static void a(int param0, int param1) {
         if (param1 < 6) {
           field_l = null;
-          kk.field_a = param0 * 100 / 150;
-          kk.field_c = param0 * 400 / 150;
-          kk.field_e = (param0 << 16) / 150;
+          kk.field_a = 33;
+          kk.field_c = 133;
+          kk.field_e = 21845;
           return;
         } else {
-          kk.field_a = param0 * 100 / 150;
-          kk.field_c = param0 * 400 / 150;
-          kk.field_e = (param0 << 16) / 150;
+          kk.field_a = 33;
+          kk.field_c = 133;
+          kk.field_e = 21845;
           return;
         }
     }

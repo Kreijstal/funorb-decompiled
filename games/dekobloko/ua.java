@@ -10,7 +10,7 @@ final class ua extends vi {
     static String field_G;
     private Object field_F;
 
-    final static String a(CharSequence param0, boolean param1) {
+    final static String a(CharSequence param0) {
         String var2 = null;
         RuntimeException var2_ref = null;
         String stackIn_6_0 = null;
@@ -87,7 +87,7 @@ final class ua extends vi {
         return ((ua) this).field_F;
     }
 
-    final static void h(byte param0) {
+    final static void h() {
         if (gd.field_e != 0 - sh.field_i) {
           if (gd.field_e != -sh.field_i + 250) {
             gd.field_e = gd.field_e + 1;
@@ -104,15 +104,15 @@ final class ua extends vi {
 
     final static void a(int param0, ji param1, boolean param2, ji param3) {
         try {
-            re.a(fc.field_c, df.field_ab, field_H, rd.field_a, sg.field_e, param2, wa.field_a, db.field_c, (mm) (Object) nf.field_d, oh.field_i, (byte) 103, tm.field_b);
+            re.a(fc.field_c, df.field_ab, field_H, rd.field_a, sg.field_e, true, wa.field_a, db.field_c, (mm) (Object) nf.field_d, oh.field_i, (byte) 103, tm.field_b);
             ef.field_O = bj.a(112, param1, "lobby", "chatfilter");
             sg.field_a[2] = mc.field_d;
             sg.field_a[0] = qj.field_g;
             sg.field_a[1] = al.field_a;
             jh.a((byte) 116, (mm) (Object) tg.field_a, param3);
-            int var4_int = 74 / ((-31 - param0) / 46);
+            int var4_int = -74;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "ua.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "ua.D(" + 46 + 44 + (param1 != null ? "{...}" : "null") + 44 + 1 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -147,7 +147,7 @@ final class ua extends vi {
         }
     }
 
-    final static void i(byte param0) {
+    final static void i() {
         ug dupTemp$0 = (ug) (Object) qi.field_Q.c((byte) -121);
         ug var4 = dupTemp$0;
         ug var1 = dupTemp$0;
@@ -181,7 +181,7 @@ final class ua extends vi {
         }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_G = null;
         field_H = null;
         field_D = null;

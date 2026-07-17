@@ -7,7 +7,7 @@ final class ug {
     static String[] field_d;
     static ed[] field_a;
 
-    final static boolean a(int param0, int param1) {
+    final static boolean a(int param0) {
         int[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -22,7 +22,7 @@ final class ug {
           L0: {
             var5 = jb.field_z;
             var2 = var5;
-            var3 = param1;
+            var3 = 0;
             L1: while (true) {
               if (var5.length <= var3) {
                 stackOut_6_0 = 0;
@@ -44,12 +44,12 @@ final class ug {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw t.a((Throwable) (Object) var2_ref, "ug.C(" + param0 + 44 + param1 + 41);
+          throw t.a((Throwable) (Object) var2_ref, "ug.C(" + param0 + 44 + 0 + 41);
         }
         return stackIn_7_0 != 0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         field_b = null;
@@ -71,9 +71,6 @@ final class ug {
         for (var10 = 0; var10 < 256; var10++) {
             var11 = 256 - var10;
             var13[var10] = (var6 * var10 >> 8) - (-(var9 * var11 >> 8) - ((var4 * var10 >> 8) + (var7 * var11 >> 8) << 16) - ((var5 * var10 >> 8) - -(var11 * var8 >> 8) << 8));
-        }
-        if (param0 != 1746055568) {
-            boolean discarded$0 = ug.a(-56, -75);
         }
         return var3;
     }

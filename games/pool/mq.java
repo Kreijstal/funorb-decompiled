@@ -12,7 +12,7 @@ final class mq implements Runnable {
     static String field_g;
     volatile boolean field_d;
 
-    final static void a(vh param0, byte param1) {
+    final static void a(vh param0) {
         vh var3 = null;
         vh var4 = null;
         try {
@@ -37,15 +37,13 @@ final class mq implements Runnable {
 
     final static void a(int param0, boolean param1) {
         if (null != kk.field_B) {
-            pp.a(kk.field_B, 1259627265);
+            int discarded$0 = 1259627265;
+            pp.a(kk.field_B);
         }
         if (vl.field_m != null) {
             vl.field_m.a(param1, 12887);
         }
         re.a(-113, param1);
-        if (param0 != 0) {
-            field_f = 63;
-        }
         if (!(fc.field_b == null)) {
             fc.field_b.a((byte) -79, param1);
         }
@@ -82,7 +80,7 @@ final class mq implements Runnable {
         ((mq) this).field_h = false;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_g = null;
         field_b = null;
         field_a = null;

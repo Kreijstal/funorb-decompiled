@@ -5,7 +5,7 @@ final class rd extends wv {
     private dea field_q;
     static ur field_r;
 
-    public static void d(int param0) {
+    public static void d() {
         field_r = null;
     }
 
@@ -32,13 +32,49 @@ final class rd extends wv {
     }
 
     final static boolean b(boolean param0) {
-        return vpa.a(47) || wla.field_ub <= 0;
+        int stackIn_5_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackOut_9_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_3_0 = 0;
+        if (!param0) {
+          if (!vpa.a(47)) {
+            if (wla.field_ub <= 0) {
+              return true;
+            } else {
+              return false;
+            }
+          } else {
+            stackOut_9_0 = 1;
+            stackIn_11_0 = stackOut_9_0;
+            return stackIn_11_0 != 0;
+          }
+        } else {
+          field_r = null;
+          if (vpa.a(47)) {
+            return true;
+          } else {
+            L0: {
+              if (wla.field_ub > 0) {
+                stackOut_4_0 = 0;
+                stackIn_5_0 = stackOut_4_0;
+                break L0;
+              } else {
+                stackOut_3_0 = 1;
+                stackIn_5_0 = stackOut_3_0;
+                break L0;
+              }
+            }
+            return stackIn_5_0 != 0;
+          }
+        }
     }
 
     final void a(byte param0, boolean param1) {
         int var3 = ((rd) this).field_q.e(param0 + 111);
         gg.field_f.a(aaa.a(false) - gg.field_f.a() >> 1, var3 - -(gg.field_f.c() / 2));
-        this.h(var3, 3);
+        int discarded$0 = 3;
+        this.h(var3);
         super.a(param0, param1);
     }
 
@@ -51,7 +87,7 @@ final class rd extends wv {
         }
     }
 
-    private final void h(int param0, int param1) {
+    private final void h(int param0) {
         int var3 = 500;
         int var4 = aaa.a(false) / 2 - var3 / 2;
         int var5 = param0 + 100;

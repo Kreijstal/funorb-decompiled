@@ -32,7 +32,7 @@ final class ip extends ml {
         return ((ip) this).field_x;
     }
 
-    final static void d(int param0) {
+    final static void d() {
         RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;

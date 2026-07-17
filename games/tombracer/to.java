@@ -37,7 +37,7 @@ final class to extends za {
         field_j = null;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         qga.c(-10794);
     }
 

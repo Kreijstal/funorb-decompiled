@@ -167,7 +167,9 @@ final class pe extends v {
     }
 
     final static lj b(int param0, int param1) {
-        return bb.a(param0, true, 1, (byte) 95, false, false);
+        int discarded$0 = 0;
+        int discarded$1 = 0;
+        return bb.a(param0, true, 1, (byte) 95);
     }
 
     final static boolean a(byte param0, int param1) {

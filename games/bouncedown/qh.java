@@ -39,12 +39,12 @@ final class qh {
         return ((qh) this).field_h;
     }
 
-    final static void a(ke param0, int param1, int param2) {
+    final static void a(ke param0) {
         ii var5 = null;
         int var4 = 0;
         try {
             var5 = hh.field_p;
-            var5.a(true, param1);
+            var5.a(true, 4);
             var5.field_h = var5.field_h + 1;
             var4 = var5.field_h;
             var5.a(1, (byte) 107);
@@ -57,7 +57,7 @@ final class qh {
             int discarded$0 = var5.b(var4, -1);
             var5.b(-var4 + var5.field_h, true);
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "qh.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + -22762 + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "qh.F(" + (param0 != null ? "{...}" : "null") + 44 + 4 + 44 + -22762 + 41);
         }
     }
 

@@ -339,7 +339,7 @@ final class b {
         return stackIn_66_0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         field_e = null;
@@ -347,17 +347,16 @@ final class b {
     }
 
     final static ue a(boolean param0, int param1) {
-        if (param0) {
-            b.a(true);
-        }
-        return ri.a(true, false, 1, param1, false, true);
+        int discarded$0 = 1;
+        int discarded$1 = 0;
+        return ri.a(true, false, 1, param1);
     }
 
     private b() throws Throwable {
         throw new Error();
     }
 
-    final static sk a(String param0, int param1) {
+    final static sk a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;
@@ -408,7 +407,8 @@ final class b {
                   var5 = 0;
                   L1: while (true) {
                     if (var5 >= var4.length) {
-                      stackOut_17_0 = vf.a(var3[-1 + var3.length], (byte) -18);
+                      int discarded$2 = -18;
+                      stackOut_17_0 = vf.a(var3[-1 + var3.length]);
                       stackIn_18_0 = stackOut_17_0;
                       break L0;
                     } else {

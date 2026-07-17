@@ -11,14 +11,10 @@ final class gd {
         param1 = param1 + (param1 >>> 4) & 252645135;
         param1 = param1 + (param1 >>> 8);
         param1 = param1 + (param1 >>> 16);
-        if (param0) {
-          return 13;
-        } else {
-          return 255 & param1;
-        }
+        return 255 & param1;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
     }
 

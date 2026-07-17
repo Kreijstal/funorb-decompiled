@@ -6,7 +6,7 @@ final class ii extends RuntimeException {
     Throwable field_a;
     String field_b;
 
-    final static ig a(byte param0) {
+    final static ig a() {
         if (cl.field_k == uh.field_k) {
             throw new IllegalStateException();
         }
@@ -17,7 +17,7 @@ final class ii extends RuntimeException {
         return null;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_c = null;
     }
 

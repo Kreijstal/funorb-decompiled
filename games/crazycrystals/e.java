@@ -21,26 +21,30 @@ final class e {
         ((e) this).field_c = param1 ? true : false;
     }
 
-    final static void b(byte param0) {
-        vl.field_f = new am(kg.a(hk.field_e, 100, 0));
-        be.field_d = new am(kg.a(rh.field_g, 100, 0));
-        tl.field_a = new am(kg.a(mo.field_i, 100, 0));
-        jo.field_p = new am(kg.a(pl.field_h, 100, 0));
-        sa.field_mb = new am(kg.a(sj.field_d, 100, 0));
-        io.field_M = new am(kg.a(jn.field_m, 100, 0));
-        ec.field_k = new am(kg.a(bb.field_x, 100, 0));
+    final static void b() {
+        int discarded$0 = 0;
+        vl.field_f = new am(kg.a(hk.field_e, 100));
+        int discarded$1 = 0;
+        be.field_d = new am(kg.a(rh.field_g, 100));
+        int discarded$2 = 0;
+        tl.field_a = new am(kg.a(mo.field_i, 100));
+        int discarded$3 = 0;
+        jo.field_p = new am(kg.a(pl.field_h, 100));
+        int discarded$4 = 0;
+        sa.field_mb = new am(kg.a(sj.field_d, 100));
+        int discarded$5 = 0;
+        io.field_M = new am(kg.a(jn.field_m, 100));
+        int discarded$6 = 0;
+        ec.field_k = new am(kg.a(bb.field_x, 100));
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }
 
     final static void a(int param0, db param1, db param2) {
         hk.field_e = bl.a(param2, "initialset", "crushed").a();
-        if (param0 != 0) {
-            return;
-        }
         try {
             rh.field_g = ha.a(param1, "initialset", "fall-into-hole").b();
             mo.field_i = bl.a(param2, "initialset", "got-by-spider").a();
@@ -49,7 +53,7 @@ final class e {
             jn.field_m = ha.a(param1, "initialset", "electrocuted-end").b();
             bb.field_x = bl.a(param2, "initialset", "explode-into-sparks").a();
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "e.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "e.A(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -129,18 +133,22 @@ final class e {
         var13 = CrazyCrystals.field_B;
         try {
           L0: {
-            gk.field_d = bf.a(param0 + -5, "frame_top", "commonui", param2);
+            gk.field_d = bf.a(-1, "frame_top", "commonui", param2);
             lm.field_g = bf.a(-1, "frame_bottom", "commonui", param2);
             p.field_f = wl.a("jagex_logo_grey", param2, 10, "commonui");
             sb.field_B = bf.a(-1, "button", "commonui", param2);
             ao.field_b = we.a("validation", "commonui", param2, false);
-            ba.field_i = (vc) (Object) lj.a(param2, "commonui", param3, "arezzo12", 17153);
-            ai.field_h = (vc) (Object) lj.a(param2, "commonui", param3, "arezzo14", 17153);
-            mo.field_m = (vc) (Object) lj.a(param2, "commonui", param3, "arezzo14bold", 17153);
+            int discarded$5 = 17153;
+            ba.field_i = (vc) (Object) lj.a(param2, "commonui", param3, "arezzo12");
+            int discarded$6 = 17153;
+            ai.field_h = (vc) (Object) lj.a(param2, "commonui", param3, "arezzo14");
+            int discarded$7 = 17153;
+            mo.field_m = (vc) (Object) lj.a(param2, "commonui", param3, "arezzo14bold");
             var17 = new dl(param1.a(7693, "", "button.gif"), (java.awt.Component) (Object) jd.field_D);
-            wj discarded$1 = ee.a(param2, "commonui", (byte) -92, "dropdown");
-            var5 = ep.a(param2, "screen_options", "commonui", false);
-            ik.field_g = new wj[param0];
+            wj discarded$8 = ee.a(param2, "commonui", (byte) -92, "dropdown");
+            int discarded$9 = 0;
+            var5 = ep.a(param2, "screen_options", "commonui");
+            ik.field_g = new wj[4];
             pn.field_i = new wj[4];
             db.field_a = new wj[4];
             var6 = new wj[][]{db.field_a, ik.field_g, pn.field_i};
@@ -205,7 +213,7 @@ final class e {
           L4: {
             var4 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var4;
-            stackOut_12_1 = new StringBuilder().append("e.H(").append(param0).append(44);
+            stackOut_12_1 = new StringBuilder().append("e.H(").append(4).append(44);
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;

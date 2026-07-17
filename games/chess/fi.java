@@ -7,50 +7,31 @@ final class fi {
     static long[] field_d;
     static boolean field_a;
 
-    final static void a(byte param0) {
+    final static void a() {
         int var1 = qd.a(false);
-        int var2 = nj.b(3);
+        int discarded$0 = 3;
+        int var2 = nj.b();
         de.field_c.a(vh.field_g + -o.field_f, (o.field_f << 1) + var1, var2 + (bb.field_b << 1), true, -bb.field_b + id.field_c);
-        le.a((byte) -115);
+        int discarded$1 = -115;
+        le.a();
     }
 
     final static void a(int param0) {
-        if (param0 == -393711775) {
-          if (pi.field_d != null) {
-            if (null == pi.field_d.field_k) {
-              ud.field_d = null;
-              pi.field_d = null;
-              return;
-            } else {
-              pi.field_d.field_k.field_gb = false;
-              ud.field_d = null;
-              pi.field_d = null;
-              return;
-            }
+        if (pi.field_d != null) {
+          if (null == pi.field_d.field_k) {
+            ud.field_d = null;
+            pi.field_d = null;
+            return;
           } else {
+            pi.field_d.field_k.field_gb = false;
             ud.field_d = null;
             pi.field_d = null;
             return;
           }
         } else {
-          field_b = null;
-          if (pi.field_d == null) {
-            ud.field_d = null;
-            pi.field_d = null;
-            return;
-          } else {
-            L0: {
-              if (null != pi.field_d.field_k) {
-                pi.field_d.field_k.field_gb = false;
-                break L0;
-              } else {
-                break L0;
-              }
-            }
-            ud.field_d = null;
-            pi.field_d = null;
-            return;
-          }
+          ud.field_d = null;
+          pi.field_d = null;
+          return;
         }
     }
 
@@ -83,7 +64,7 @@ final class fi {
           L0: {
             L1: {
               var2_int = param1.i(-111);
-              if (~var2_int != param0) {
+              if (var2_int != 1) {
                 stackOut_2_0 = 0;
                 stackIn_3_0 = stackOut_2_0;
                 break L1;
@@ -103,7 +84,7 @@ final class fi {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var2;
-            stackOut_5_1 = new StringBuilder().append("fi.D(").append(param0).append(44);
+            stackOut_5_1 = new StringBuilder().append("fi.D(").append(-2).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -131,7 +112,7 @@ final class fi {
         return stackIn_4_0 != 0;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
         field_c = null;
         field_d = null;

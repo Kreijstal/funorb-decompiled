@@ -10,28 +10,22 @@ final class eb {
     static String field_c;
     static int field_e;
 
-    final static bj a(boolean param0, int param1, boolean param2, int param3, boolean param4) {
-        return eg.a(-104, param1, false, param2, param0, param3);
+    final static bj a(boolean param0, int param1) {
+        return eg.a(-104, param1, false, false, true, 1);
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_f = null;
         field_d = null;
         field_a = null;
         field_g = null;
-        if (param0 < 125) {
-          field_d = null;
-          field_c = null;
-          return;
-        } else {
-          field_c = null;
-          return;
-        }
+        field_c = null;
     }
 
     final static void a(byte param0) {
         if (fh.field_b == 10) {
-          dg.a((byte) 117);
+          int discarded$4 = 117;
+          dg.a();
           fh.field_b = 11;
           if (param0 <= -2) {
             ul.field_a = true;
@@ -43,7 +37,8 @@ final class eb {
           }
         } else {
           if (!wc.b(false)) {
-            dg.a((byte) 117);
+            int discarded$5 = 117;
+            dg.a();
             fh.field_b = 11;
             if (param0 > -2) {
               field_d = null;
@@ -66,7 +61,7 @@ final class eb {
         }
     }
 
-    final static boolean a(bj param0, byte param1) {
+    final static boolean a(bj param0) {
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
         RuntimeException stackIn_3_0 = null;

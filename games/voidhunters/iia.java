@@ -353,7 +353,8 @@ final class iia extends wm implements ntb, hd {
                   }
                 }
               } else {
-                stackOut_8_0 = qi.a(((iia) this).field_d, true, param2, (byte) -14);
+                int discarded$2 = -14;
+                stackOut_8_0 = qi.a(((iia) this).field_d, true, param2);
                 stackIn_9_0 = stackOut_8_0;
                 return stackIn_9_0;
               }
@@ -446,7 +447,8 @@ final class iia extends wm implements ntb, hd {
                 if (((iia) this).field_d < 0) {
                   break L1;
                 } else {
-                  param1 = qi.a(((iia) this).field_d, true, param1, (byte) -14);
+                  int discarded$2 = -14;
+                  param1 = qi.a(((iia) this).field_d, true, param1);
                   break L1;
                 }
               }
@@ -510,18 +512,14 @@ final class iia extends wm implements ntb, hd {
             if (param0 > 11) {
               break L0;
             } else {
-              if (param2) {
-                if (param1 < 1) {
-                  return false;
-                } else {
-                  if (param1 <= tp.a(param3, false, param0)) {
-                    return true;
-                  } else {
-                    return false;
-                  }
-                }
+              if (param1 < 1) {
+                return false;
               } else {
-                return true;
+                if (param1 <= tp.a(param3, false, param0)) {
+                  return true;
+                } else {
+                  return false;
+                }
               }
             }
           }
@@ -668,9 +666,9 @@ final class iia extends wm implements ntb, hd {
     }
 
     public final void a(tv param0, int param1) {
-        iia var3 = null;
-        RuntimeException var3_ref = null;
+        RuntimeException var3 = null;
         int var4 = 0;
+        iia var5 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         RuntimeException stackIn_12_0 = null;
@@ -698,22 +696,22 @@ final class iia extends wm implements ntb, hd {
               }
             }
             L2: {
-              var3 = (iia) (Object) param0;
+              var5 = (iia) (Object) param0;
               super.a(param0, -37);
               var4 = 0;
-              if (var3.field_d != var3.field_d) {
+              if (var5.field_d != var5.field_d) {
                 var4 = 1;
-                System.out.println("int body_id has changed. before=" + var3.field_d + ", now=" + var3.field_d);
+                System.out.println("int body_id has changed. before=" + var5.field_d + ", now=" + var5.field_d);
                 break L2;
               } else {
                 break L2;
               }
             }
             L3: {
-              if (var3.field_e == var3.field_e) {
+              if (var5.field_e == var5.field_e) {
                 break L3;
               } else {
-                System.out.println("int zone_id has changed. before=" + var3.field_e + ", now=" + var3.field_e);
+                System.out.println("int zone_id has changed. before=" + var5.field_e + ", now=" + var5.field_e);
                 var4 = 1;
                 break L3;
               }
@@ -731,8 +729,8 @@ final class iia extends wm implements ntb, hd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
-            var3_ref = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var3_ref;
+            var3 = decompiledCaughtException;
+            stackOut_10_0 = (RuntimeException) var3;
             stackOut_10_1 = new StringBuilder().append("iia.F(");
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
@@ -947,7 +945,7 @@ final class iia extends wm implements ntb, hd {
     iia() {
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_c = null;
     }
 

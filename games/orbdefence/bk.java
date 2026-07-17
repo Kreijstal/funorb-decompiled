@@ -32,29 +32,25 @@ final class bk extends IOException {
         try {
           L0: {
             dm.field_b = param1;
-            if (param0 == 90) {
-              L1: {
-                if (dm.field_b == null) {
-                  break L1;
+            L1: {
+              if (dm.field_b == null) {
+                break L1;
+              } else {
+                if (param1.length < 3) {
+                  throw new IllegalArgumentException("");
                 } else {
-                  if (param1.length < 3) {
-                    throw new IllegalArgumentException("");
-                  } else {
-                    break L1;
-                  }
+                  break L1;
                 }
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var2 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var2;
-            stackOut_7_1 = new StringBuilder().append("bk.F(").append(param0).append(44);
+            stackOut_7_1 = new StringBuilder().append("bk.F(").append(90).append(44);
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -85,7 +81,7 @@ final class bk extends IOException {
         super(param0);
     }
 
-    final static fh a(int param0, java.awt.Component param1, int param2, boolean param3) {
+    final static fh a(int param0, java.awt.Component param1, int param2) {
         try {
             Class var4 = null;
             Throwable var4_ref = null;
@@ -197,30 +193,26 @@ final class bk extends IOException {
             var8.i(param1, -41);
             var8.field_i = var8.field_i + 1;
             var4 = var8.field_i;
-            if (param0) {
-              var8.a(1, -62);
-              var8.b((byte) -60, param2.field_t);
-              var8.b((byte) -60, param2.field_g);
-              var8.b((byte) -60, param2.field_k);
-              var8.b(param2.field_n, -1);
-              var8.b(param2.field_m, -1);
-              var8.b(param2.field_f, -1);
-              var8.b(param2.field_r, -1);
-              var8.a(param2.field_o.length, -118);
-              var5 = 0;
-              L1: while (true) {
-                if (var5 >= param2.field_o.length) {
-                  int discarded$1 = var8.e(-18951, var4);
-                  var8.c((byte) -15, var8.field_i - var4);
-                  break L0;
-                } else {
-                  var7.b(param2.field_o[var5], -1);
-                  var5++;
-                  continue L1;
-                }
+            var8.a(1, -62);
+            var8.b((byte) -60, param2.field_t);
+            var8.b((byte) -60, param2.field_g);
+            var8.b((byte) -60, param2.field_k);
+            var8.b(param2.field_n, -1);
+            var8.b(param2.field_m, -1);
+            var8.b(param2.field_f, -1);
+            var8.b(param2.field_r, -1);
+            var8.a(param2.field_o.length, -118);
+            var5 = 0;
+            L1: while (true) {
+              if (var5 >= param2.field_o.length) {
+                int discarded$1 = var8.e(-18951, var4);
+                var8.c((byte) -15, var8.field_i - var4);
+                break L0;
+              } else {
+                var7.b(param2.field_o[var5], -1);
+                var5++;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -228,7 +220,7 @@ final class bk extends IOException {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var3;
-            stackOut_8_1 = new StringBuilder().append("bk.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_8_1 = new StringBuilder().append("bk.C(").append(1).append(44).append(param1).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -399,7 +391,7 @@ final class bk extends IOException {
         return stackIn_23_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_f = null;
         field_c = null;

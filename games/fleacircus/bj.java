@@ -17,14 +17,15 @@ final class bj extends uc implements java.awt.image.ImageProducer, java.awt.imag
                 Object var6 = null;
                 ((bj) this).a((java.awt.Component) null, 87, -48, 10);
             }
-            this.d((byte) -112);
-            boolean discarded$0 = param0.drawImage(((bj) this).field_b, param2, param1, (java.awt.image.ImageObserver) this);
+            int discarded$0 = -112;
+            this.d();
+            boolean discarded$1 = param0.drawImage(((bj) this).field_b, param2, param1, (java.awt.image.ImageObserver) this);
         } catch (RuntimeException runtimeException) {
             throw pf.a((Throwable) (Object) runtimeException, "bj.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_i = null;
         field_n = null;
     }
@@ -35,16 +36,19 @@ final class bj extends uc implements java.awt.image.ImageProducer, java.awt.imag
         ((bj) this).field_f = param2;
         ((bj) this).field_j = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
         ((bj) this).field_b = param0.createImage((java.awt.image.ImageProducer) this);
-        this.d((byte) -112);
-        boolean discarded$6 = param0.prepareImage(((bj) this).field_b, (java.awt.image.ImageObserver) this);
+        int discarded$0 = -112;
+        this.d();
+        boolean discarded$7 = param0.prepareImage(((bj) this).field_b, (java.awt.image.ImageObserver) this);
         if (param3 > -72) {
             return;
         }
         try {
-            this.d((byte) -112);
-            boolean discarded$7 = param0.prepareImage(((bj) this).field_b, (java.awt.image.ImageObserver) this);
-            this.d((byte) -112);
-            boolean discarded$8 = param0.prepareImage(((bj) this).field_b, (java.awt.image.ImageObserver) this);
+            int discarded$8 = -112;
+            this.d();
+            boolean discarded$9 = param0.prepareImage(((bj) this).field_b, (java.awt.image.ImageObserver) this);
+            int discarded$10 = -112;
+            this.d();
+            boolean discarded$11 = param0.prepareImage(((bj) this).field_b, (java.awt.image.ImageObserver) this);
             ((bj) this).a((byte) 74);
         } catch (RuntimeException runtimeException) {
             throw pf.a((Throwable) (Object) runtimeException, "bj.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
@@ -71,10 +75,11 @@ final class bj extends uc implements java.awt.image.ImageProducer, java.awt.imag
                 }
               } else {
                 var1.e(8, 8);
-                int fieldTemp$2 = var1.field_i + 1;
+                int fieldTemp$4 = var1.field_i + 1;
                 var1.field_i = var1.field_i + 1;
-                var2 = fieldTemp$2;
-                ec.a(var1, false);
+                var2 = fieldTemp$4;
+                int discarded$5 = 0;
+                ec.a(var1);
                 ud.field_b.c((byte) -80, var1.field_i - var2);
                 continue L1;
               }
@@ -124,7 +129,7 @@ final class bj extends uc implements java.awt.image.ImageProducer, java.awt.imag
         try {
           var2_int = param1.length();
           if (var2_int != 0) {
-            if (~var2_int >= param0) {
+            if (var2_int <= 63) {
               var3 = 0;
               L0: while (true) {
                 if (var2_int > var3) {
@@ -176,7 +181,7 @@ final class bj extends uc implements java.awt.image.ImageProducer, java.awt.imag
           L3: {
             var2 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var2;
-            stackOut_22_1 = new StringBuilder().append("bj.I(").append(param0).append(44);
+            stackOut_22_1 = new StringBuilder().append("bj.I(").append(-64).append(44);
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -276,9 +281,6 @@ final class bj extends uc implements java.awt.image.ImageProducer, java.awt.imag
         String var2 = null;
         String var3 = null;
         long var4 = 0L;
-        if (param0 != 14) {
-            return;
-        }
         try {
             qj.field_G = true;
             var2 = "tuhstatbut";
@@ -286,11 +288,11 @@ final class bj extends uc implements java.awt.image.ImageProducer, java.awt.imag
             var4 = -1L;
             uk.a(var3, var4, 0, param1, var2);
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "bj.J(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "bj.J(" + 14 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    private final synchronized void d(byte param0) {
+    private final synchronized void d() {
         if (!(((bj) this).field_k != null)) {
             return;
         }

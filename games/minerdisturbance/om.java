@@ -69,7 +69,7 @@ final class om {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         tm var2 = (tm) (Object) ok.field_b.b(94);
         if (!(var2 == null)) {
             var2.b((byte) 94);

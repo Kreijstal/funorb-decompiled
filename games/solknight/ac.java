@@ -8,7 +8,7 @@ final class ac {
         field_a = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var2_int = 0;
         Object var2 = null;
@@ -27,7 +27,7 @@ final class ac {
             if (null == jb.field_d) {
               L1: {
                 if (sk.field_n != null) {
-                  int discarded$4 = sk.field_n.a(te.field_J, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+                  int discarded$3 = sk.field_n.a(te.field_J, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
                   break L1;
                 } else {
                   break L1;
@@ -43,7 +43,7 @@ final class ac {
                   if (null == sk.field_n) {
                     break L2;
                   } else {
-                    int discarded$5 = sk.field_n.a(te.field_J, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+                    int discarded$4 = sk.field_n.a(te.field_J, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
                     break L2;
                   }
                 } else {
@@ -81,7 +81,7 @@ final class ac {
                       if (var2 == null) {
                         break L4;
                       } else {
-                        int discarded$6 = sk.field_n.a("Screenshot(s) " + var2 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+                        int discarded$5 = sk.field_n.a("Screenshot(s) " + var2 + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
                         break L4;
                       }
                     } else {
@@ -101,28 +101,17 @@ final class ac {
                   break L4;
                 }
               }
-              L7: {
-                if (param0 < -110) {
-                  break L7;
-                } else {
-                  int discarded$7 = ac.a(61, false);
-                  break L7;
-                }
-              }
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fc.a((Throwable) (Object) var1, "ac.D(" + param0 + 41);
+          throw fc.a((Throwable) (Object) var1, "ac.D(" + -125 + 41);
         }
     }
 
     final static int a(int param0, boolean param1) {
-        if (!param1) {
-            return -57;
-        }
         param0--;
         param0 = param0 | param0 >>> 1;
         param0 = param0 | param0 >>> 2;

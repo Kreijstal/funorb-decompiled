@@ -18,7 +18,7 @@ final class nc extends oh {
     float field_s;
     static String field_n;
 
-    final static int a(int param0) {
+    final static int a() {
         return 1;
     }
 

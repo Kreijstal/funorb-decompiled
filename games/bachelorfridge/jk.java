@@ -15,11 +15,6 @@ final class jk extends at {
         un.field_i = param0;
         mha.field_g = param2;
         jo.field_t = param1;
-        if (param3 != -64) {
-            field_j = null;
-            ah.field_l = param4;
-            return;
-        }
         ah.field_l = param4;
     }
 
@@ -28,9 +23,9 @@ final class jk extends at {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        int stackIn_17_0 = 0;
+        int stackIn_15_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_16_0 = 0;
+        int stackOut_14_0 = 0;
         var3 = BachelorFridge.field_y;
         try {
           L0: {
@@ -54,7 +49,7 @@ final class jk extends at {
                     if (fw.field_i.field_g >= 0) {
                       var2 = st.field_a[fw.field_i.field_g];
                       if (2 == var2) {
-                        nh.b(param0 + -16);
+                        nh.b(-14);
                         break L3;
                       } else {
                         break L3;
@@ -64,16 +59,8 @@ final class jk extends at {
                     }
                   }
                 }
-                L4: {
-                  if (param0 == 2) {
-                    break L4;
-                  } else {
-                    jk.a(-119, 95, 106, (byte) -117, -51);
-                    break L4;
-                  }
-                }
-                stackOut_16_0 = var2;
-                stackIn_17_0 = stackOut_16_0;
+                stackOut_14_0 = var2;
+                stackIn_15_0 = stackOut_14_0;
                 break L0;
               } else {
                 fw.field_i.b(true);
@@ -89,12 +76,12 @@ final class jk extends at {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var1, "jk.C(" + param0 + 41);
+          throw pe.a((Throwable) (Object) var1, "jk.C(" + 2 + 41);
         }
-        return stackIn_17_0;
+        return stackIn_15_0;
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_p = null;
         field_k = null;
         field_j = null;

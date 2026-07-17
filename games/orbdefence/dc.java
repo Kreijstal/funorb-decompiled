@@ -9,14 +9,17 @@ final class dc extends ca {
     static qg[] field_h;
 
     public static void c(boolean param0) {
+        if (param0) {
+            return;
+        }
         field_h = null;
     }
 
-    final static int c(int param0) {
+    final static int c() {
         return rf.field_C;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         int var1 = 0;
         var1 = 0;
         if (null != oj.field_q) {

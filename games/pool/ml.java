@@ -15,10 +15,7 @@ final class ml {
     static String field_a;
     static int[][] field_h;
 
-    final static int b(int param0) {
-        if (param0 < 6) {
-            field_a = null;
-        }
+    final static int b() {
         return -kk.field_z + gp.field_c;
     }
 
@@ -100,7 +97,7 @@ final class ml {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         field_k = null;
@@ -316,15 +313,12 @@ final class ml {
         }
     }
 
-    final static void a(int param0, oj param1, int param2) {
+    final static void a(int param0, oj param1) {
         ta.field_i.b((byte) -31, (ma) (Object) param1);
-        if (param0 != 25756) {
-            return;
-        }
         try {
             ch.a(false, param1, 3);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "ml.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 3 + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "ml.C(" + 25756 + 44 + (param1 != null ? "{...}" : "null") + 44 + 3 + 41);
         }
     }
 

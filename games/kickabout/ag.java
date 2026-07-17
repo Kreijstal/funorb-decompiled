@@ -13,7 +13,7 @@ final class ag extends gn {
 
     final static hd a(int param0, int param1) {
         hd var2 = new hd((long)param1, (hd) null);
-        var2.field_R = sp.a((byte) 26, param0);
+        var2.field_R = sp.a((byte) 26, 16006912);
         return var2;
     }
 

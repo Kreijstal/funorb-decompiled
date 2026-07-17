@@ -6,7 +6,7 @@ final class uu implements dja {
     static java.awt.Canvas field_b;
     static int field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
     }
@@ -23,9 +23,6 @@ final class uu implements dja {
         param1[58] = -2;
         param1[62] = 1;
         param1[73] = -1;
-        if (param0 != 90) {
-            return;
-        }
         try {
             param1[63] = 1;
             param1[69] = -1;
@@ -40,7 +37,7 @@ final class uu implements dja {
             param1[64] = 1;
             param1[5] = -1;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "uu.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "uu.D(" + 90 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

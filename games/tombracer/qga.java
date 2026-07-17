@@ -19,29 +19,27 @@ final class qga extends ci {
         String stackIn_4_0 = null;
         String stackIn_9_0 = null;
         String stackIn_11_0 = null;
-        Object stackIn_14_0 = null;
-        String stackIn_28_0 = null;
+        String stackIn_27_0 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
-        String stackIn_32_2 = null;
+        String stackIn_31_2 = null;
         RuntimeException decompiledCaughtException = null;
         String stackOut_3_0 = null;
         String stackOut_10_0 = null;
         String stackOut_8_0 = null;
-        String stackOut_27_0 = null;
-        Object stackOut_13_0 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
+        String stackOut_26_0 = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
         RuntimeException stackOut_30_0 = null;
         StringBuilder stackOut_30_1 = null;
         String stackOut_30_2 = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        String stackOut_29_2 = null;
         var9 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -51,7 +49,7 @@ final class qga extends ci {
               return stackIn_4_0;
             } else {
               if (param3 == 1) {
-                var10 = param1[param2];
+                var10 = param1[0];
                 var4 = var10;
                 if (var4 != null) {
                   stackOut_10_0 = ((Object) (Object) var10).toString();
@@ -63,53 +61,47 @@ final class qga extends ci {
                   return stackIn_9_0;
                 }
               } else {
-                var4_int = param3 + param2;
+                var4_int = param3;
                 var5 = 0;
-                if (param0 > 121) {
-                  var6_int = param2;
-                  L1: while (true) {
-                    if (var6_int >= var4_int) {
-                      var6 = new StringBuilder(var5);
-                      var7 = param2;
-                      L2: while (true) {
-                        if (var4_int <= var7) {
-                          stackOut_27_0 = var6.toString();
-                          stackIn_28_0 = stackOut_27_0;
-                          break L0;
-                        } else {
-                          L3: {
-                            var8 = param1[var7];
-                            if (var8 != null) {
-                              StringBuilder discarded$5 = var6.append(var8);
-                              break L3;
-                            } else {
-                              StringBuilder discarded$6 = var6.append("null");
-                              break L3;
-                            }
+                var6_int = 0;
+                L1: while (true) {
+                  if (var6_int >= var4_int) {
+                    var6 = new StringBuilder(var5);
+                    var7 = 0;
+                    L2: while (true) {
+                      if (var4_int <= var7) {
+                        stackOut_26_0 = var6.toString();
+                        stackIn_27_0 = stackOut_26_0;
+                        break L0;
+                      } else {
+                        L3: {
+                          var8 = param1[var7];
+                          if (var8 != null) {
+                            StringBuilder discarded$5 = var6.append(var8);
+                            break L3;
+                          } else {
+                            StringBuilder discarded$6 = var6.append("null");
+                            break L3;
                           }
-                          var7++;
-                          continue L2;
                         }
+                        var7++;
+                        continue L2;
                       }
-                    } else {
-                      L4: {
-                        var7_ref_CharSequence = param1[var6_int];
-                        if (var7_ref_CharSequence == null) {
-                          var5 += 4;
-                          break L4;
-                        } else {
-                          var5 = var5 + var7_ref_CharSequence.length();
-                          break L4;
-                        }
-                      }
-                      var6_int++;
-                      continue L1;
                     }
+                  } else {
+                    L4: {
+                      var7_ref_CharSequence = param1[var6_int];
+                      if (var7_ref_CharSequence == null) {
+                        var5 += 4;
+                        break L4;
+                      } else {
+                        var5 = var5 + var7_ref_CharSequence.length();
+                        break L4;
+                      }
+                    }
+                    var6_int++;
+                    continue L1;
                   }
-                } else {
-                  stackOut_13_0 = null;
-                  stackIn_14_0 = stackOut_13_0;
-                  return (String) (Object) stackIn_14_0;
                 }
               }
             }
@@ -118,33 +110,33 @@ final class qga extends ci {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4_ref = decompiledCaughtException;
-            stackOut_29_0 = (RuntimeException) var4_ref;
-            stackOut_29_1 = new StringBuilder().append("qga.B(").append(param0).append(44);
-            stackIn_31_0 = stackOut_29_0;
-            stackIn_31_1 = stackOut_29_1;
-            stackIn_30_0 = stackOut_29_0;
-            stackIn_30_1 = stackOut_29_1;
+            stackOut_28_0 = (RuntimeException) var4_ref;
+            stackOut_28_1 = new StringBuilder().append("qga.B(").append(125).append(44);
+            stackIn_30_0 = stackOut_28_0;
+            stackIn_30_1 = stackOut_28_1;
+            stackIn_29_0 = stackOut_28_0;
+            stackIn_29_1 = stackOut_28_1;
             if (param1 == null) {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
-              stackOut_31_2 = "null";
-              stackIn_32_0 = stackOut_31_0;
-              stackIn_32_1 = stackOut_31_1;
-              stackIn_32_2 = stackOut_31_2;
-              break L5;
-            } else {
               stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
               stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
-              stackOut_30_2 = "{...}";
-              stackIn_32_0 = stackOut_30_0;
-              stackIn_32_1 = stackOut_30_1;
-              stackIn_32_2 = stackOut_30_2;
+              stackOut_30_2 = "null";
+              stackIn_31_0 = stackOut_30_0;
+              stackIn_31_1 = stackOut_30_1;
+              stackIn_31_2 = stackOut_30_2;
+              break L5;
+            } else {
+              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
+              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_2 = "{...}";
+              stackIn_31_0 = stackOut_29_0;
+              stackIn_31_1 = stackOut_29_1;
+              stackIn_31_2 = stackOut_29_2;
               break L5;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 44 + param2 + 44 + param3 + 41);
+          throw tba.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 44 + 0 + 44 + param3 + 41);
         }
-        return stackIn_28_0;
+        return stackIn_27_0;
     }
 
     final int[] c(int param0, int param1) {

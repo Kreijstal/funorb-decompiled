@@ -32,13 +32,14 @@ final class ag implements iq {
 
     final static void a(boolean param0, boolean param1, boolean param2, String param3) {
         try {
-            oga.a(param2);
+            int discarded$0 = 0;
+            oga.a();
             ej.field_a.e(true);
             vn.field_b = new jw(jo.field_E, (String) null, jf.field_r, param1, param0);
             um.field_l = new mpa(ej.field_a, (ae) (Object) vn.field_b);
             ej.field_a.c((ae) (Object) um.field_l, 114);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "ag.N(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "ag.N(" + param0 + 44 + param1 + 44 + 0 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -115,7 +116,8 @@ final class ag implements iq {
         int var8 = 0;
         var8 = TombRacer.field_G ? 1 : 0;
         if (((ag) this).field_g == null) {
-          this.b(12052);
+          int discarded$4 = 12052;
+          this.b();
           return;
         } else {
           L0: {
@@ -135,14 +137,20 @@ final class ag implements iq {
               if (50.0f < (float)((ag) this).field_a) {
                 if (4.0f >= var4) {
                   ((ag) this).field_a = 0;
+                  int discarded$5 = 12052;
+                  this.b();
                   break L1;
                 } else {
                   var5 = 2.0f / (float)Math.sqrt((double)(var3 * var3 + var2 * var2));
                   ((ag) this).field_h = ((ag) this).field_h + (int)(var5 * var3);
                   ((ag) this).field_d = ((ag) this).field_d + (int)(var5 * var2);
+                  int discarded$6 = 12052;
+                  this.b();
                   break L1;
                 }
               } else {
+                int discarded$7 = 12052;
+                this.b();
                 break L1;
               }
             } else {
@@ -155,7 +163,6 @@ final class ag implements iq {
               break L1;
             }
           }
-          this.b(12052);
           return;
         }
     }
@@ -164,7 +171,8 @@ final class ag implements iq {
         if (param0) {
             ((ag) this).field_m = 75;
         }
-        this.b(12052);
+        int discarded$0 = 12052;
+        this.b();
     }
 
     public final void a(int param0, byte param1, int param2, int param3, int param4) {
@@ -178,10 +186,7 @@ final class ag implements iq {
     }
 
     final static boolean b(int param0, int param1, int param2) {
-        if (param0 != -1) {
-            return true;
-        }
-        return (2048 & param1) != 0 ? true : false;
+        return (2048 & param1) != 0;
     }
 
     final void a(int param0, int param1, int param2) {
@@ -321,7 +326,7 @@ final class ag implements iq {
         }
     }
 
-    private final void b(int param0) {
+    private final void b() {
         int var2 = ((ag) this).field_b + -((ag) this).field_c;
         int var3 = ((ag) this).field_j + -((ag) this).field_k;
         ((ag) this).field_d = this.b(((ag) this).field_i, ((ag) this).field_f, var2, ((ag) this).field_d, 0);
@@ -382,7 +387,6 @@ final class ag implements iq {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException stackOut_10_0 = null;
         StringBuilder stackOut_10_1 = null;
@@ -399,13 +403,7 @@ final class ag implements iq {
             var3 = 1;
             L1: while (true) {
               if (var3 >= var2_int) {
-                if (param0 < -77) {
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                } else {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                }
+                break L0;
               } else {
                 var4 = param1[var3];
                 var5 = var3 + -1;
@@ -435,7 +433,7 @@ final class ag implements iq {
           L4: {
             var2 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var2;
-            stackOut_10_1 = new StringBuilder().append("ag.R(").append(param0).append(44);
+            stackOut_10_1 = new StringBuilder().append("ag.R(").append(-95).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -459,11 +457,6 @@ final class ag implements iq {
             }
           }
           throw tba.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 

@@ -10,10 +10,7 @@ final class lr extends rqa {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
-        if (param0 != 125) {
-            return;
-        }
+    public static void a() {
         field_q = null;
         field_o = null;
     }
@@ -85,7 +82,7 @@ final class lr extends rqa {
         return stackIn_4_0;
     }
 
-    final static void a(String param0, int param1) {
+    final static void a(String param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

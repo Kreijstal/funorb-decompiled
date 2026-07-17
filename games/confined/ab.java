@@ -21,7 +21,7 @@ final class ab {
         var8 = Confined.field_J ? 1 : 0;
         try {
           L0: {
-            var3_int = param0;
+            var3_int = 0;
             var4 = uh.field_c;
             L1: while (true) {
               if (var3_int >= dl.field_c.length) {
@@ -35,7 +35,7 @@ final class ab {
                     var4 = var4 + wm.field_bb;
                     break L2;
                   } else {
-                    var6 = cl.a(param0 ^ -3, dl.field_c[var3_int], true);
+                    var6 = cl.a(-3, dl.field_c[var3_int], true);
                     var4 = var4 + kb.field_b;
                     var7 = ef.field_vb - (var6 >> 1);
                     if (qd.a(param1, var4, (jd.field_g << 1) + var6, param2, true, -jd.field_g + var7, (n.field_d << 1) + af.field_Z)) {
@@ -56,12 +56,12 @@ final class ab {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var3, "ab.B(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw sd.a((Throwable) (Object) var3, "ab.B(" + 0 + 44 + param1 + 44 + param2 + 41);
         }
         return stackIn_12_0;
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -122,11 +122,8 @@ final class ab {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
-        if (param0 > -26) {
-            field_a = -36;
-        }
     }
 
     static {

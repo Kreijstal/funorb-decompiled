@@ -181,7 +181,7 @@ final class mh extends qf {
         super(param0);
     }
 
-    final static StringBuilder a(int param0, char param1, StringBuilder param2, int param3) {
+    final static StringBuilder a(int param0, char param1, StringBuilder param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -206,15 +206,15 @@ final class mh extends qf {
         try {
           L0: {
             var4_int = param2.length();
-            param2.setLength(param0);
+            param2.setLength(0);
             var5 = var4_int;
             L1: while (true) {
-              if (param0 <= var5) {
+              if (0 <= var5) {
                 stackOut_3_0 = (StringBuilder) param2;
                 stackIn_4_0 = stackOut_3_0;
                 break L0;
               } else {
-                param2.setCharAt(var5, param1);
+                param2.setCharAt(var5, ' ');
                 var5++;
                 continue L1;
               }
@@ -225,7 +225,7 @@ final class mh extends qf {
           L2: {
             var4 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var4;
-            stackOut_5_1 = new StringBuilder().append("mh.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_5_1 = new StringBuilder().append("mh.C(").append(0).append(44).append(32).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;

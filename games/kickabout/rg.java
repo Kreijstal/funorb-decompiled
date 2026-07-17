@@ -9,7 +9,7 @@ abstract class rg {
     static long[] field_c;
     static boolean field_f;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_d = null;
         field_e = null;
@@ -26,7 +26,8 @@ abstract class rg {
           }
         }
         ji.a((byte) 123, param1);
-        ma.k(1);
+        int discarded$7 = 1;
+        ma.k();
         if (param0 >= -115) {
           rg.a((byte) 9, true);
           return;
@@ -52,7 +53,7 @@ abstract class rg {
             if (var3 < 105) {
               L1: {
                 var2 = (-40960 + 16384 * var3) / 220;
-                var4 = param1;
+                var4 = 1;
                 var5 = 0;
                 if (param0 == 3) {
                   var4 = -1;
@@ -165,7 +166,7 @@ abstract class rg {
                 L13: {
                   var3 = 120 - var3;
                   var2 = -(var3 * var3 * 8192 / 3300) + 8192;
-                  var4 = param1;
+                  var4 = 1;
                   var5 = 0;
                   if (param0 == 3) {
                     var4 = -1;
@@ -362,7 +363,7 @@ abstract class rg {
           }
         }
         L33: {
-          var4 = param1;
+          var4 = 1;
           var5 = 0;
           if (param0 == 3) {
             var4 = -1;

@@ -31,7 +31,7 @@ final class cc {
         ((cc) this).field_e = 0;
     }
 
-    final static void d(int param0) {
+    final static void d() {
         if (!(i.field_Y)) {
             throw new IllegalStateException();
         }
@@ -40,7 +40,7 @@ final class cc {
         fl.field_a = 0;
     }
 
-    final static void a(de param0, int param1) {
+    final static void a(de param0) {
         try {
             byte[] var2 = null;
             RuntimeException var2_ref = null;
@@ -194,9 +194,6 @@ final class cc {
 
     private final int a(int param0, boolean param1, int param2) {
         int var4 = Math.abs(((cc) this).field_l - (-20 - -param0));
-        if (param1) {
-            return -34;
-        }
         int var5 = -param2 + nh.field_P;
         int var6 = 60;
         float var7 = (float)(-(var4 * var4) - var5 * var5) + 8100.0f;
@@ -216,7 +213,7 @@ final class cc {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_k = null;
         field_c = null;

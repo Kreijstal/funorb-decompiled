@@ -143,17 +143,17 @@ abstract class sm implements el {
 
     abstract rf d(int param0);
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_a = null;
         field_d = null;
     }
 
-    final static void a(qd param0, int param1, boolean param2) {
+    final static void a(qd param0) {
         c var3 = null;
         int var4 = 0;
         try {
             var3 = om.field_c;
-            var3.a(param1, true);
+            var3.a(4, true);
             var3.field_m = var3.field_m + 1;
             var4 = var3.field_m;
             var3.f(1, -123);
@@ -166,226 +166,98 @@ abstract class sm implements el {
             int discarded$0 = var3.c(var4, -76);
             var3.e(86, var3.field_m - var4);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "sm.O(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 1 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "sm.O(" + (param0 != null ? "{...}" : "null") + 44 + 4 + 44 + 1 + 41);
         }
     }
 
     final static void a(boolean param0, boolean param1) {
         int var2 = 0;
         int var3 = 0;
-        pk stackIn_17_0 = null;
-        pk stackIn_18_0 = null;
-        pk stackIn_19_0 = null;
-        int stackIn_19_1 = 0;
-        pk stackIn_50_0 = null;
-        pk stackIn_51_0 = null;
-        pk stackIn_52_0 = null;
-        int stackIn_52_1 = 0;
-        pk stackOut_49_0 = null;
-        pk stackOut_51_0 = null;
-        int stackOut_51_1 = 0;
-        pk stackOut_50_0 = null;
-        int stackOut_50_1 = 0;
-        pk stackOut_16_0 = null;
-        pk stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
-        pk stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
         var3 = EscapeVector.field_A;
-        if (!param0) {
-          if (s.field_x > 0) {
-            if (km.field_n == null) {
-              L0: {
-                df.field_d = al.a(640, -16493, g.field_r, 480, 0, 0);
-                if (null != df.field_d) {
-                  var2 = 2;
-                  rc.a((java.awt.Canvas) (Object) df.field_d, true);
-                  break L0;
-                } else {
-                  var2 = 3;
-                  break L0;
-                }
+        if (s.field_x > 0) {
+          if (km.field_n == null) {
+            L0: {
+              int discarded$4 = 0;
+              int discarded$5 = 0;
+              df.field_d = al.a(640, -16493, g.field_r, 480);
+              if (null != df.field_d) {
+                var2 = 2;
+                int discarded$6 = 1;
+                rc.a((java.awt.Canvas) (Object) df.field_d);
+                break L0;
+              } else {
+                var2 = 3;
+                break L0;
               }
-              L1: {
-                if (null != km.field_n) {
+            }
+            L1: {
+              if (null != km.field_n) {
+                break L1;
+              } else {
+                if (!e.field_d) {
                   break L1;
                 } else {
-                  if (!e.field_d) {
-                    break L1;
-                  } else {
-                    sn.a(var2, 0, param1);
-                    return;
-                  }
-                }
-              }
-              return;
-            } else {
-              L2: {
-                stackOut_49_0 = km.field_n;
-                stackIn_51_0 = stackOut_49_0;
-                stackIn_50_0 = stackOut_49_0;
-                if (param0) {
-                  stackOut_51_0 = (pk) (Object) stackIn_51_0;
-                  stackOut_51_1 = 0;
-                  stackIn_52_0 = stackOut_51_0;
-                  stackIn_52_1 = stackOut_51_1;
-                  break L2;
-                } else {
-                  stackOut_50_0 = (pk) (Object) stackIn_50_0;
-                  stackOut_50_1 = 1;
-                  stackIn_52_0 = stackOut_50_0;
-                  stackIn_52_1 = stackOut_50_1;
-                  break L2;
-                }
-              }
-              L3: {
-                df.field_d = ((pk) (Object) stackIn_52_0).a(stackIn_52_1 != 0);
-                ue.b(2, (byte) 101);
-                if (null != df.field_d) {
-                  var2 = 2;
-                  rc.a((java.awt.Canvas) (Object) df.field_d, true);
-                  break L3;
-                } else {
-                  var2 = 3;
-                  break L3;
-                }
-              }
-              L4: {
-                if (null != km.field_n) {
-                  break L4;
-                } else {
-                  if (!e.field_d) {
-                    break L4;
-                  } else {
-                    sn.a(var2, 0, param1);
-                    return;
-                  }
-                }
-              }
-              return;
-            }
-          } else {
-            if (aj.b(-104)) {
-              var2 = 0;
-              if (null == km.field_n) {
-                if (e.field_d) {
                   sn.a(var2, 0, param1);
                   return;
+                }
+              }
+            }
+            return;
+          } else {
+            L2: {
+              df.field_d = km.field_n.a(true);
+              ue.b(2, (byte) 101);
+              if (null != df.field_d) {
+                var2 = 2;
+                int discarded$7 = 1;
+                rc.a((java.awt.Canvas) (Object) df.field_d);
+                break L2;
+              } else {
+                var2 = 3;
+                break L2;
+              }
+            }
+            L3: {
+              if (null != km.field_n) {
+                break L3;
+              } else {
+                if (!e.field_d) {
+                  break L3;
                 } else {
+                  sn.a(var2, 0, param1);
                   return;
                 }
-              } else {
-                return;
               }
-            } else {
-              L5: {
-                var2 = 1;
-                if (null != km.field_n) {
-                  break L5;
-                } else {
-                  if (!e.field_d) {
-                    break L5;
-                  } else {
-                    sn.a(var2, 0, param1);
-                    return;
-                  }
-                }
-              }
-              return;
             }
+            return;
           }
         } else {
-          field_a = null;
-          if (s.field_x > 0) {
-            if (km.field_n == null) {
-              L6: {
-                df.field_d = al.a(640, -16493, g.field_r, 480, 0, 0);
-                if (null != df.field_d) {
-                  var2 = 2;
-                  rc.a((java.awt.Canvas) (Object) df.field_d, true);
-                  break L6;
+          if (aj.b(-104)) {
+            L4: {
+              var2 = 0;
+              if (null != km.field_n) {
+                break L4;
+              } else {
+                if (!e.field_d) {
+                  break L4;
                 } else {
-                  var2 = 3;
-                  break L6;
-                }
-              }
-              if (null == km.field_n) {
-                if (e.field_d) {
                   sn.a(var2, 0, param1);
                   return;
-                } else {
-                  return;
                 }
-              } else {
-                return;
-              }
-            } else {
-              L7: {
-                stackOut_16_0 = km.field_n;
-                stackIn_18_0 = stackOut_16_0;
-                stackIn_17_0 = stackOut_16_0;
-                if (param0) {
-                  stackOut_18_0 = (pk) (Object) stackIn_18_0;
-                  stackOut_18_1 = 0;
-                  stackIn_19_0 = stackOut_18_0;
-                  stackIn_19_1 = stackOut_18_1;
-                  break L7;
-                } else {
-                  stackOut_17_0 = (pk) (Object) stackIn_17_0;
-                  stackOut_17_1 = 1;
-                  stackIn_19_0 = stackOut_17_0;
-                  stackIn_19_1 = stackOut_17_1;
-                  break L7;
-                }
-              }
-              L8: {
-                df.field_d = ((pk) (Object) stackIn_19_0).a(stackIn_19_1 != 0);
-                ue.b(2, (byte) 101);
-                if (null != df.field_d) {
-                  var2 = 2;
-                  rc.a((java.awt.Canvas) (Object) df.field_d, true);
-                  break L8;
-                } else {
-                  var2 = 3;
-                  break L8;
-                }
-              }
-              if (null == km.field_n) {
-                if (e.field_d) {
-                  sn.a(var2, 0, param1);
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                return;
               }
             }
+            return;
           } else {
-            if (aj.b(-104)) {
-              var2 = 0;
-              if (null == km.field_n) {
-                if (e.field_d) {
-                  sn.a(var2, 0, param1);
-                  return;
-                } else {
-                  return;
-                }
+            var2 = 1;
+            if (null == km.field_n) {
+              if (e.field_d) {
+                sn.a(var2, 0, param1);
+                return;
               } else {
                 return;
               }
             } else {
-              var2 = 1;
-              if (null == km.field_n) {
-                if (e.field_d) {
-                  sn.a(var2, 0, param1);
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                return;
-              }
+              return;
             }
           }
         }

@@ -265,7 +265,7 @@ final class me implements ch {
         }
     }
 
-    final static dd[] b(int param0) {
+    final static dd[] b() {
         int var3 = 0;
         int var4 = 0;
         byte[] var5 = null;
@@ -283,11 +283,12 @@ final class me implements ch {
             }
             var2[var3] = new dd(e.field_e, uf.field_k, vg.field_I[var3], b.field_b[var3], ij.field_H[var3], ob.field_a[var3], var6);
         }
-        c.o(-28210);
+        int discarded$0 = -28210;
+        c.o();
         return var2;
     }
 
-    final static void a(int param0, int param1, boolean param2) {
+    final static void a(int param0, int param1) {
         w.field_l = param0;
         mf.field_c = param1;
         vk.field_L = 1;

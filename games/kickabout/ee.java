@@ -8,32 +8,18 @@ final class ee {
     static boolean field_e;
     static int field_d;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
     }
 
-    final static void b(byte param0) {
-        L0: {
-          if (rq.field_D != null) {
+    final static void b() {
+        if (!(rq.field_D == null)) {
             pi.field_b.b((lq) (Object) rq.field_D);
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        if (param0 != -25) {
-          field_e = false;
-          qd.field_c = null;
-          vg.field_Bb = null;
-          rq.field_D = null;
-          return;
-        } else {
-          qd.field_c = null;
-          vg.field_Bb = null;
-          rq.field_D = null;
-          return;
-        }
+        qd.field_c = null;
+        vg.field_Bb = null;
+        rq.field_D = null;
     }
 
     final static void a(int param0, int param1, int param2) {
@@ -41,24 +27,20 @@ final class ee {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        if (param0 == 653278209) {
-          var3 = hw.field_i * iw.field_g.field_o >> 8;
-          var4 = iw.field_g.field_o * hw.field_i >> 8;
-          var5 = hw.field_i * sa.field_e >> 8;
-          var6 = lr.field_m * hw.field_i >> 8;
-          if (rg.field_f) {
-            iw.field_g.e(param1 - var5 + -(var3 >> 1), -var6 + (param2 + -(var4 >> 1)), var3, var4, 256);
-            return;
-          } else {
-            eo.a(iw.field_g, -(var3 >> 1) + (-var5 + param1), -var6 + param2 + -(var4 >> 1), var3, var4);
-            return;
-          }
+        var3 = hw.field_i * iw.field_g.field_o >> 8;
+        var4 = iw.field_g.field_o * hw.field_i >> 8;
+        var5 = hw.field_i * sa.field_e >> 8;
+        var6 = lr.field_m * hw.field_i >> 8;
+        if (rg.field_f) {
+          iw.field_g.e(param1 - var5 + -(var3 >> 1), -var6 + (param2 + -(var4 >> 1)), var3, var4, 256);
+          return;
         } else {
+          eo.a(iw.field_g, -(var3 >> 1) + (-var5 + param1), -var6 + param2 + -(var4 >> 1), var3, var4);
           return;
         }
     }
 
-    final static void a(ks param0, boolean param1) {
+    final static void a(ks param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

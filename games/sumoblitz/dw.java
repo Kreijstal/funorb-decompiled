@@ -16,7 +16,7 @@ abstract class dw implements v {
 
     abstract gf b(byte param0);
 
-    final static void a(ki param0, int param1) {
+    final static void a(ki param0) {
         qp[] var2 = null;
         qp[] var3 = null;
         qp[] var4 = null;

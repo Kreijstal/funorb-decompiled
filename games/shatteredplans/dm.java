@@ -12,7 +12,7 @@ final class dm {
     private int field_e;
     static int field_i;
 
-    private final void a(int param0) {
+    private final void a() {
         int var3 = 0;
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         ((dm) this).field_e = ((dm) this).field_e + 10;
@@ -931,10 +931,6 @@ final class dm {
     final static void a(int param0, int param1) {
         de.field_h = ff.field_v[param1];
         i.field_a = h.field_w[param1];
-        if (param0 != 0) {
-            Object var3 = null;
-            dm.a(-32, 115, (ub) null, false, 125);
-        }
         ns.field_xb = ae.field_c[param1];
     }
 
@@ -1007,14 +1003,15 @@ final class dm {
     final void a(boolean param0, Object param1) {
         try {
             if (((dm) this).field_e == ((dm) this).field_g) {
-                this.a(-11470);
+                int discarded$0 = -11470;
+                this.a();
             }
             if (param0) {
                 dm.a(((boolean[]) ((Object[]) ((Object[]) ((dm) this).field_b[7])[2])[1])[4]);
             }
-            int fieldTemp$0 = ((dm) this).field_g;
+            int fieldTemp$1 = ((dm) this).field_g;
             ((dm) this).field_g = ((dm) this).field_g + 1;
-            ((dm) this).field_b[fieldTemp$0] = param1;
+            ((dm) this).field_b[fieldTemp$1] = param1;
         } catch (RuntimeException runtimeException) {
             throw r.a((Throwable) (Object) runtimeException, "dm.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }

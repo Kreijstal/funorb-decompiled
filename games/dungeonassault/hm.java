@@ -35,7 +35,8 @@ final class hm extends ne {
           if (var4 == 2) {
             L1: {
               var4 = param2 ? 1 : 0;
-              if (ve.a(false)) {
+              int discarded$5 = 0;
+              if (ve.a()) {
                 stackOut_33_0 = 12;
                 stackIn_34_0 = stackOut_33_0;
                 break L1;
@@ -101,11 +102,12 @@ final class hm extends ne {
                                       if (null == cm.field_R) {
                                         break L0;
                                       } else {
-                                        pn discarded$1 = i.field_A.a((java.awt.Component) (Object) cm.field_R, (byte) 101, false);
+                                        pn discarded$6 = i.field_A.a((java.awt.Component) (Object) cm.field_R, (byte) 101, false);
                                         break L0;
                                       }
                                     } else {
-                                      ib.a(930);
+                                      int discarded$7 = 930;
+                                      ib.a();
                                       break L0;
                                     }
                                   } else {
@@ -174,7 +176,8 @@ final class hm extends ne {
                                                         break L0;
                                                       }
                                                     } else {
-                                                      mh.b(-1);
+                                                      int discarded$8 = -1;
+                                                      mh.b();
                                                       break L0;
                                                     }
                                                   }
@@ -182,7 +185,8 @@ final class hm extends ne {
                                               } else {
                                                 if (!ed.c(true)) {
                                                   L3: {
-                                                    if (!ve.a(false)) {
+                                                    int discarded$9 = 0;
+                                                    if (!ve.a()) {
                                                       stackOut_66_0 = 0;
                                                       stackIn_67_0 = stackOut_66_0;
                                                       break L3;
@@ -257,7 +261,7 @@ final class hm extends ne {
         }
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_m = null;
         field_n = null;
         field_j = null;
@@ -266,7 +270,7 @@ final class hm extends ne {
         field_t = null;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         int var1_int = 0;
         int var2 = DungeonAssault.field_K;
         try {
@@ -275,8 +279,8 @@ final class hm extends ne {
                     fb.field_d[var1_int] = null;
                 }
             }
-            Object var3 = null;
-            hm.a((sa) null, 35);
+            int discarded$0 = 35;
+            hm.a((sa) null);
             bj.field_G = true;
         } catch (RuntimeException runtimeException) {
             throw vk.a((Throwable) (Object) runtimeException, "hm.A(" + 0 + 41);
@@ -488,7 +492,9 @@ final class hm extends ne {
                 }
                 if (param0) {
                   L12: {
-                    o.field_i.a(-7734, f.a(lc.field_c, field_k, 1), f.a(hj.field_S, eh.field_h, 1));
+                    int discarded$3 = 1;
+                    int discarded$4 = 1;
+                    o.field_i.a(-7734, f.a(lc.field_c, field_k), f.a(hj.field_S, eh.field_h));
                     if (!o.field_i.c(50)) {
                       break L12;
                     } else {
@@ -508,7 +514,8 @@ final class hm extends ne {
                     }
                   }
                   L13: while (true) {
-                    if (!ha.b((byte) 47)) {
+                    int discarded$5 = 47;
+                    if (!ha.b()) {
                       stackOut_81_0 = 0;
                       stackIn_82_0 = stackOut_81_0;
                       break L0;
@@ -560,19 +567,20 @@ final class hm extends ne {
         return stackIn_82_0;
     }
 
-    final static void a(sa param0, int param1) {
+    final static void a(sa param0) {
         rj var2 = null;
         try {
             var2 = wi.field_ob;
             if (var2 != null) {
                 if (!(var2.field_n == null)) {
-                    uj.a(var2.field_n, 95);
+                    int discarded$0 = 95;
+                    uj.a(var2.field_n);
                 }
             }
             if (m.field_e != null) {
                 if (gn.field_h == 20) {
                     if (param0 != null) {
-                        m.field_e.a(param1 + 21, param0);
+                        m.field_e.a(0, param0);
                     }
                 }
             }
@@ -586,12 +594,9 @@ final class hm extends ne {
                 }
                 gn.field_h = gn.field_h + 1;
             }
-            if (param1 != -21) {
-                field_m = null;
-            }
             rb.field_O = null;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "hm.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "hm.B(" + (param0 != null ? "{...}" : "null") + 44 + -21 + 41);
         }
     }
 

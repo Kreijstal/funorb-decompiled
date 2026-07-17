@@ -5,7 +5,7 @@ final class nh {
     static int field_b;
     static String field_a;
 
-    final static void b(boolean param0) {
+    final static void b() {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -104,11 +104,11 @@ final class nh {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
     }
 
-    final static fg a(String param0, int param1) {
+    final static fg a(String param0) {
         Object var2 = null;
         fg var3 = null;
         String var4 = null;
@@ -140,7 +140,7 @@ final class nh {
           if (null != ij.field_t) {
             L0: {
               var6 = (CharSequence) (Object) param0;
-              var2 = (Object) (Object) hh.a(param1 + param1, var6);
+              var2 = (Object) (Object) hh.a(0, var6);
               if (var2 != null) {
                 break L0;
               } else {
@@ -153,7 +153,7 @@ final class nh {
               if (var3 != null) {
                 L2: {
                   var7 = (CharSequence) (Object) var3.field_ob;
-                  var4 = hh.a(param1, var7);
+                  var4 = hh.a(0, var7);
                   if (var4 == null) {
                     var4 = var3.field_ob;
                     break L2;
@@ -166,7 +166,7 @@ final class nh {
                   stackIn_15_0 = stackOut_14_0;
                   return stackIn_15_0;
                 } else {
-                  var3 = (fg) (Object) ij.field_t.a(param1 ^ 114);
+                  var3 = (fg) (Object) ij.field_t.a(114);
                   continue L1;
                 }
               } else {
@@ -206,7 +206,7 @@ final class nh {
               break L3;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param1 + 41);
+          throw sd.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + 0 + 41);
         }
     }
 

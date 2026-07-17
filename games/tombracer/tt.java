@@ -164,7 +164,8 @@ final class tt extends vg implements bo {
         }
         var2 = param1;
         if (4 == var2) {
-          return eo.D((byte) -110);
+          int discarded$2 = -110;
+          return eo.D();
         } else {
           if (var2 != 0) {
             if (var2 != 1) {
@@ -174,7 +175,8 @@ final class tt extends vg implements bo {
                 throw new IllegalStateException("Unknown/unimplemented weapon preset: " + param1);
               }
             } else {
-              return ik.b(-17698);
+              int discarded$3 = -17698;
+              return ik.b();
             }
           } else {
             return gda.a(true);

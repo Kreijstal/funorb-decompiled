@@ -26,43 +26,33 @@ final class nd {
           if (((nd) this).field_f.length <= param2) {
             this.b((byte) -50, param2);
             ((nd) this).field_f[param2] = param1;
-            var4 = -90 / ((param0 - -39) / 56);
+            var4 = 90;
             return;
           } else {
             ((nd) this).field_f[param2] = param1;
-            var4 = -90 / ((param0 - -39) / 56);
+            var4 = 90;
             return;
           }
         } else {
           ((nd) this).field_i = param2;
           if (((nd) this).field_f.length > param2) {
             ((nd) this).field_f[param2] = param1;
-            var4 = -90 / ((param0 - -39) / 56);
+            var4 = 90;
             return;
           } else {
             this.b((byte) -50, param2);
             ((nd) this).field_f[param2] = param1;
-            var4 = -90 / ((param0 - -39) / 56);
+            var4 = 90;
             return;
           }
         }
     }
 
     private final void b(byte param0, int param1) {
-        int[] var3 = null;
-        int[] var4 = null;
-        var4 = new int[this.a(0, param1)];
-        var3 = var4;
-        if (param0 != -50) {
-          field_a = null;
-          ek.a(((nd) this).field_f, 0, var4, 0, ((nd) this).field_f.length);
-          ((nd) this).field_f = var4;
-          return;
-        } else {
-          ek.a(((nd) this).field_f, 0, var4, 0, ((nd) this).field_f.length);
-          ((nd) this).field_f = var4;
-          return;
-        }
+        int[] var4 = new int[this.a(0, param1)];
+        int[] var3 = var4;
+        ek.a(((nd) this).field_f, 0, var4, 0, ((nd) this).field_f.length);
+        ((nd) this).field_f = var4;
     }
 
     final static void a(byte param0, String param1, String param2) {
@@ -172,11 +162,7 @@ final class nd {
         var3 = ((nd) this).field_f.length;
         L0: while (true) {
           if (var3 > param1) {
-            if (param0 != 0) {
-              return 14;
-            } else {
-              return var3;
-            }
+            return var3;
           } else {
             if (!((nd) this).field_e) {
               var3 = var3 + ((nd) this).field_g;

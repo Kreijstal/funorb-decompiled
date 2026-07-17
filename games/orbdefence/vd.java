@@ -322,7 +322,7 @@ final class vd {
         String stackOut_19_2 = null;
         try {
           L0: {
-            var5_int = (param0 & param3 << 4 | param3 >>> 12) ^ param2;
+            var5_int = (65527 & param3 << 4 | param3 >>> 12) ^ param2;
             var5_int = var5_int | param3 << 16;
             var6 = 4294967296L ^ (long)var5_int;
             var8 = (dl) (Object) ((vd) this).field_g.a(var6, -1);
@@ -343,7 +343,7 @@ final class vd {
                 }
               }
               L2: {
-                var9 = (nj) (Object) ((vd) this).field_d.a(var6, param0 + -65528);
+                var9 = (nj) (Object) ((vd) this).field_d.a(var6, -1);
                 if (var9 != null) {
                   break L2;
                 } else {
@@ -375,7 +375,7 @@ final class vd {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_18_0 = (RuntimeException) var5;
-            stackOut_18_1 = new StringBuilder().append("vd.F(").append(param0).append(44);
+            stackOut_18_1 = new StringBuilder().append("vd.F(").append(65527).append(44);
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -403,7 +403,7 @@ final class vd {
         return stackIn_17_0;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_f = null;
         field_e = null;

@@ -450,9 +450,9 @@ final class gb {
             }
             L1: {
               var5 = 256 - param4;
-              var6 = (param3 >> 16 & 255) * param4;
-              var7 = (param3 >> 8 & 255) * param4;
-              var8 = (param3 & 255) * param4;
+              var6 = 255 * param4;
+              var7 = 255 * param4;
+              var8 = 255 * param4;
               var12 = param1 - param2;
               if (var12 >= field_b) {
                 break L1;
@@ -616,7 +616,7 @@ final class gb {
               }
             }
           } else {
-            gb.f(param0, param1, param2, param3);
+            gb.f(param0, param1, param2, 16777215);
             return;
           }
         } else {
@@ -661,20 +661,20 @@ final class gb {
           L1: {
             var6 = param0 + param4;
             var7 = param1 + param4;
-            var8 = param0 + param2 - param4 - 1;
-            var9 = param1 + param3 - param4 - 1;
+            var8 = param0 + 37 - param4 - 1;
+            var9 = param1 + 37 - param4 - 1;
             if (field_h <= field_l) {
               break L1;
             } else {
               if (field_i > field_b) {
-                if (param0 + param2 <= field_l) {
+                if (param0 + 37 <= field_l) {
                   break L1;
                 } else {
                   L2: {
                     if (param0 >= field_h) {
                       break L2;
                     } else {
-                      if (param1 + param3 < field_b) {
+                      if (param1 + 37 < field_b) {
                         break L2;
                       } else {
                         if (param1 < field_i) {
@@ -695,13 +695,13 @@ final class gb {
                               if (param0 < field_l) {
                                 break L4;
                               } else {
-                                if (param0 + param2 >= field_h) {
+                                if (param0 + 37 >= field_h) {
                                   break L4;
                                 } else {
                                   if (param1 < field_b) {
                                     break L4;
                                   } else {
-                                    if (param1 + param3 < field_i) {
+                                    if (param1 + 37 < field_i) {
                                       var22 = var12;
                                       L5: while (true) {
                                         if (var22 > var14) {
@@ -780,10 +780,10 @@ final class gb {
                                 }
                               }
                             }
-                            gb.c(param0, param1 + var18, param3 - var18 - var18, param5);
-                            gb.c(param0 + param2 - 1, param1 + var18, param3 - var18 - var18, param5);
-                            gb.b(param0 + var18, param1, param2 - var18 - var18, param5);
-                            gb.b(param0 + var18, param1 + param3 - 1, param2 - var18 - var18, param5);
+                            gb.c(param0, param1 + var18, 37 - var18 - var18, param5);
+                            gb.c(param0 + 36, param1 + var18, 37 - var18 - var18, param5);
+                            gb.b(param0 + var18, param1, 37 - var18 - var18, param5);
+                            gb.b(param0 + var18, param1 + 36, 37 - var18 - var18, param5);
                             L11: while (true) {
                               L12: {
                                 int incrementValue$3 = var19;
@@ -953,7 +953,7 @@ final class gb {
           }
           return;
         } else {
-          gb.b(param0, param1, param2, param3, param5);
+          gb.b(param0, param1, 37, 37, param5);
           return;
         }
     }
@@ -1605,7 +1605,7 @@ final class gb {
         int var23 = 0;
         L0: {
           var8 = 16384 / (2 * param3 + 1);
-          var9 = 1 + param3 - param5 - param4;
+          var9 = 1 + param3 - param5;
           if (0 >= var9) {
             break L0;
           } else {
@@ -1614,7 +1614,7 @@ final class gb {
           }
         }
         L1: {
-          var10 = field_d - param4 - param5 - param3;
+          var10 = field_d - param5 - param3;
           if (0 >= var10) {
             break L1;
           } else {
@@ -1624,7 +1624,7 @@ final class gb {
         }
         L2: {
           var11 = 0;
-          var12 = param4 + param3 + 1;
+          var12 = param3 + 1;
           if (field_d >= var12) {
             break L2;
           } else {
@@ -1644,7 +1644,7 @@ final class gb {
               var16 = 0;
               var17 = param2 - param3;
               var18 = var17 - (param3 << 1) - 1;
-              var19 = param4 - param3;
+              var19 = 0 - param3;
               if (var19 >= 0) {
                 break L4;
               } else {
@@ -1801,7 +1801,7 @@ final class gb {
                   } else {
                     L18: {
                       var18++;
-                      if (param4 + param5 + var19 + param3 >= field_h) {
+                      if (param5 + var19 + param3 >= field_h) {
                         break L18;
                       } else {
                         param1 = param0[var17];
@@ -1843,7 +1843,7 @@ final class gb {
         field_g = null;
     }
 
-    final static void h(int param0, int param1, int param2, int param3) {
+    final static void h(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -2359,7 +2359,7 @@ final class gb {
           dm.a(var34, 0, param8);
           dm.a(var35, 0, param8);
           var12 = 16384 / (2 * param3 + 1);
-          var13 = param4 - param3;
+          var13 = 0 - param3;
           if (var13 >= 0) {
             break L2;
           } else {
@@ -2368,8 +2368,8 @@ final class gb {
           }
         }
         L3: {
-          var14 = param7 + var13 * field_d;
-          var15 = param4 + param3;
+          var14 = var13 * field_d;
+          var15 = param3;
           var16 = 0;
           if (var15 < field_k) {
             break L3;
@@ -2389,7 +2389,7 @@ final class gb {
                 L6: {
                   param2 = param2 + param6;
                   var13 = 1 - param5;
-                  var18 = 1 + param3 - param5 - param4;
+                  var18 = 1 + param3 - param5;
                   if (0 >= var18) {
                     break L6;
                   } else {
@@ -2398,7 +2398,7 @@ final class gb {
                   }
                 }
                 L7: {
-                  var19 = param7 + (param4 - param3) * field_d;
+                  var19 = (0 - param3) * field_d;
                   if (var13 >= var18) {
                     break L7;
                   } else {
@@ -2409,7 +2409,7 @@ final class gb {
                 L8: while (true) {
                   if (var13 >= var18) {
                     L9: {
-                      var18 = field_k - param4 - param5 - param3;
+                      var18 = field_k - param5 - param3;
                       if (0 >= var18) {
                         break L9;
                       } else {
@@ -2651,7 +2651,7 @@ final class gb {
                     }
                   } else {
                     L26: {
-                      if (var13 + param4 + param5 + param3 >= field_i) {
+                      if (var13 + param5 + param3 >= field_i) {
                         var14 = var14 + field_d;
                         break L26;
                       } else {
@@ -2983,78 +2983,41 @@ final class gb {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        L0: {
-          var6 = 0;
-          var7 = 65536 / param3;
-          if (param0 >= field_l) {
-            break L0;
-          } else {
+        int var6 = 0;
+        int var7 = 65536 / param3;
+        if (param0 < field_l) {
             param2 = param2 - (field_l - param0);
             param0 = field_l;
-            break L0;
-          }
         }
-        L1: {
-          if (param1 >= field_b) {
-            break L1;
-          } else {
+        if (param1 < field_b) {
             var6 = var6 + (field_b - param1) * var7;
             param3 = param3 - (field_b - param1);
             param1 = field_b;
-            break L1;
-          }
         }
-        L2: {
-          if (param0 + param2 <= field_h) {
-            break L2;
-          } else {
+        if (param0 + param2 > field_h) {
             param2 = field_h - param0;
-            break L2;
-          }
         }
-        L3: {
-          if (param1 + param3 <= field_i) {
-            break L3;
-          } else {
+        if (param1 + param3 > field_i) {
             param3 = field_i - param1;
-            break L3;
-          }
         }
-        var8 = field_d - param2;
-        var9 = param0 + param1 * field_d;
-        var10 = -param3;
-        L4: while (true) {
-          if (var10 >= 0) {
-            return;
-          } else {
+        int var8 = field_d - param2;
+        int var9 = param0 + param1 * field_d;
+        for (var10 = -param3; var10 < 0; var10++) {
             var11 = 65536 - var6 >> 8;
             var12 = var6 >> 8;
-            var13 = ((param4 & 16711935) * var11 + 0 * var12 & -16711936) + ((param4 & 65280) * var11 + 0 * var12 & 16711680) >>> 8;
-            var14 = -param2;
-            L5: while (true) {
-              if (var14 >= 0) {
-                var9 = var9 + var8;
-                var6 = var6 + var7;
-                var10++;
-                continue L4;
-              } else {
-                int incrementValue$1 = var9;
+            var13 = (2097184 * var11 + 0 * var12 & -16711936) + (8192 * var11 + 0 * var12 & 16711680) >>> 8;
+            for (var14 = -param2; var14 < 0; var14++) {
+                int incrementValue$0 = var9;
                 var9++;
-                field_a[incrementValue$1] = var13;
-                var14++;
-                continue L5;
-              }
+                field_a[incrementValue$0] = var13;
             }
-          }
+            var9 = var9 + var8;
+            var6 = var6 + var7;
         }
     }
 
@@ -3239,8 +3202,8 @@ final class gb {
     }
 
     final static void h(int param0, int param1, int param2, int param3, int param4, int param5) {
-        gb.a(field_a, 0, param2 + param3 * field_d, param0, param2, param4, field_d - param4, param5);
-        gb.a(field_a, 0, param2 + param3 * field_d, param1, param3, param5, field_d - param4, param2, param4);
+        gb.a(field_a, 0, 0 * field_d, param0, 0, param4, field_d - param4, param5);
+        gb.a(field_a, 0, 0 * field_d, param1, 0, param5, field_d - param4, 0, param4);
     }
 
     final static void e(int param0, int param1, int param2, int param3) {

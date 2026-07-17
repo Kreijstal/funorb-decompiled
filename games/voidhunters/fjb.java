@@ -13,7 +13,7 @@ final class fjb implements dja {
         return (tv) (Object) new rha();
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         field_b = null;
@@ -27,7 +27,7 @@ final class fjb implements dja {
         return (tv[]) (Object) new rha[param1];
     }
 
-    final static nc a(String param0, nc[] param1, rqa[] param2, byte param3) throws gva {
+    final static nc a(String param0, nc[] param1, rqa[] param2) throws gva {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;

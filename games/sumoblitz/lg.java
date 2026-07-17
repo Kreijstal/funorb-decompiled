@@ -193,7 +193,7 @@ final class lg extends qt {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_d = null;
     }
 
@@ -214,7 +214,8 @@ final class lg extends qt {
                     ((lg) this).b((byte) -128);
                     return;
                   } else {
-                    ll.c(89);
+                    int discarded$8 = 89;
+                    ll.c();
                     pk.d((byte) -83);
                     ((lg) this).b((byte) -127);
                     return;
@@ -233,7 +234,8 @@ final class lg extends qt {
                     ((lg) this).b((byte) -128);
                     return;
                   } else {
-                    ll.c(89);
+                    int discarded$9 = 89;
+                    ll.c();
                     pk.d((byte) -83);
                     ((lg) this).b((byte) -127);
                     return;
@@ -254,7 +256,8 @@ final class lg extends qt {
                     ((lg) this).b((byte) -128);
                     return;
                   } else {
-                    ll.c(89);
+                    int discarded$10 = 89;
+                    ll.c();
                     pk.d((byte) -83);
                     ((lg) this).b((byte) -127);
                     return;
@@ -273,7 +276,8 @@ final class lg extends qt {
                     ((lg) this).b((byte) -128);
                     return;
                   } else {
-                    ll.c(89);
+                    int discarded$11 = 89;
+                    ll.c();
                     pk.d((byte) -83);
                     ((lg) this).b((byte) -127);
                     return;
@@ -300,7 +304,8 @@ final class lg extends qt {
                     ((lg) this).b((byte) -128);
                     return;
                   } else {
-                    ll.c(89);
+                    int discarded$12 = 89;
+                    ll.c();
                     pk.d((byte) -83);
                     ((lg) this).b((byte) -127);
                     return;
@@ -316,7 +321,8 @@ final class lg extends qt {
                     ((lg) this).b((byte) -128);
                     return;
                   } else {
-                    ll.c(89);
+                    int discarded$13 = 89;
+                    ll.c();
                     pk.d((byte) -83);
                     ((lg) this).b((byte) -127);
                     return;
@@ -336,7 +342,8 @@ final class lg extends qt {
                     ((lg) this).b((byte) -128);
                     return;
                   } else {
-                    ll.c(89);
+                    int discarded$14 = 89;
+                    ll.c();
                     pk.d((byte) -83);
                     ((lg) this).b((byte) -127);
                     return;
@@ -358,7 +365,8 @@ final class lg extends qt {
                       ((lg) this).b((byte) -128);
                       break L0;
                     } else {
-                      ll.c(89);
+                      int discarded$15 = 89;
+                      ll.c();
                       pk.d((byte) -83);
                       ((lg) this).b((byte) -127);
                       break L0;

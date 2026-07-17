@@ -16,7 +16,7 @@ final class jd extends ub {
     private int field_N;
     private int field_H;
 
-    final static hj[] h(int param0) {
+    final static hj[] h() {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
@@ -58,7 +58,7 @@ final class jd extends ub {
         }
     }
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void a(java.applet.Applet param0) {
         String var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -508,71 +508,63 @@ final class jd extends ub {
         }
     }
 
-    final static uf a(String param0, int param1) {
+    final static uf a(String param0) {
         RuntimeException var2 = null;
-        Object stackIn_2_0 = null;
-        uf stackIn_4_0 = null;
+        uf stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        uf stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        uf stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
         String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           L0: {
-            if (param1 == 1) {
-              stackOut_3_0 = new uf(param0);
-              stackIn_4_0 = stackOut_3_0;
-              break L0;
-            } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
-              return (uf) (Object) stackIn_2_0;
-            }
+            stackOut_2_0 = new uf(param0);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var2;
-            stackOut_5_1 = new StringBuilder().append("jd.TA(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("jd.TA(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
-              break L1;
-            } else {
               stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
               stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L1;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
               break L1;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw kk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 1 + 41);
         }
-        return stackIn_4_0;
+        return stackIn_3_0;
     }
 
     final void a(int param0, n param1, int param2, int param3, byte param4, int param5) {
@@ -611,7 +603,8 @@ final class jd extends ub {
             }
             wj.field_o.f();
             var1.c(0, param0);
-            dm.b((byte) -10);
+            int discarded$0 = -10;
+            dm.b();
         } catch (RuntimeException runtimeException) {
             throw kk.a((Throwable) (Object) runtimeException, "jd.NA(" + param0 + 41);
         }
@@ -797,7 +790,7 @@ final class jd extends ub {
                     var10.fillRect(2, 2, param2 * 3, 30);
                     var10.setColor(java.awt.Color.black);
                     var10.drawRect(1, 1, 301, 31);
-                    var10.fillRect(2 + 3 * param2, 2, -(3 * param2) + param3, 30);
+                    var10.fillRect(2 + 3 * param2, 2, -(3 * param2) + 300, 30);
                     var10.setFont(kc.field_e);
                     var10.setColor(java.awt.Color.white);
                     var10.drawString(param0, (304 + -(6 * param0.length())) / 2, 22);
@@ -897,7 +890,7 @@ final class jd extends ub {
               break L11;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw kk.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param2 + 44 + 300 + 44 + param4 + 41);
         }
     }
 

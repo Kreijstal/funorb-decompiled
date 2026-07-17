@@ -13,7 +13,7 @@ final class uj implements rd {
     private le field_d;
     private int field_e;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         field_f = null;
@@ -23,10 +23,14 @@ final class uj implements rd {
         try {
             int var2_int = 25 % ((param0 - 3) / 42);
             if (!(11 != ta.field_g)) {
-                ee.b(95);
+                int discarded$0 = 95;
+                ee.b();
             }
-            de.a(fh.field_i, tl.field_g, pb.field_j, true);
-            lj.a(0, param1, 0, (byte) -128);
+            int discarded$1 = 1;
+            de.a(fh.field_i, tl.field_g, pb.field_j);
+            int discarded$2 = -128;
+            int discarded$3 = 0;
+            lj.a(0, param1);
         } catch (RuntimeException runtimeException) {
             throw ld.a((Throwable) (Object) runtimeException, "uj.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
@@ -111,7 +115,8 @@ final class uj implements rd {
                     break L2;
                   }
                 }
-                oe.a(var3_ref, true);
+                int discarded$2 = 1;
+                oe.a(var3_ref);
                 var7 = tb.a(":", var3_ref, true, "%3a");
                 var8 = tb.a("@", var7, true, "%40");
                 var9 = tb.a("&", var8, true, "%26");
@@ -180,7 +185,7 @@ final class uj implements rd {
                           break L6;
                         } else {
                           var5 = (DataInputStream) var4.field_g;
-                          int discarded$1 = var5.read();
+                          int discarded$3 = var5.read();
                           var5.close();
                           break L6;
                         }

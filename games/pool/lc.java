@@ -14,10 +14,10 @@ final class lc extends fe {
     static String field_R;
     static lr field_O;
 
-    final static void a(boolean param0, String param1, int param2, int param3, long param4, int param5) {
+    final static void a(boolean param0, String param1, int param2, int param3, long param4) {
         int var7_int = 0;
         try {
-            ej.field_j.b(false, param3);
+            ej.field_j.b(false, 14);
             ej.field_j.field_v = ej.field_j.field_v + 1;
             int var8 = 0;
             var7_int = ej.field_j.field_v;
@@ -27,7 +27,7 @@ final class lc extends fe {
             ej.field_j.a(!param0 ? 0 : 1, false);
             ej.field_j.b(ej.field_j.field_v - var7_int, true);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "lc.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + -121 + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "lc.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + 14 + 44 + param4 + 44 + -121 + 41);
         }
     }
 
@@ -41,7 +41,7 @@ final class lc extends fe {
         return null;
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_P = null;
         field_Q = null;
         field_T = null;
@@ -267,7 +267,7 @@ final class lc extends fe {
                     if (param2.field_A == param3.field_l) {
                       var4_int = param3.field_z.length;
                       var5 = param2.field_z[param0].length / var4_int;
-                      var6 = param1;
+                      var6 = 0;
                       L2: while (true) {
                         if (var6 >= var5) {
                           stackOut_20_0 = -1;
@@ -319,7 +319,7 @@ final class lc extends fe {
           L5: {
             var4 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var4;
-            stackOut_22_1 = new StringBuilder().append("lc.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_22_1 = new StringBuilder().append("lc.C(").append(param0).append(44).append(0).append(44);
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;

@@ -21,11 +21,12 @@ final class hi extends nv {
           if (param0 == 5418) {
             break L0;
           } else {
-            boolean discarded$3 = ((hi) this).p((byte) 4);
+            boolean discarded$5 = ((hi) this).p((byte) 4);
             break L0;
           }
         }
-        this.b(0);
+        int discarded$6 = 0;
+        this.b();
         var8 = ((hi) this).b(true).field_u;
         var3 = var8.a((byte) -26, (ffa) (Object) ((hi) this).field_g);
         var4 = ((hi) this).e(6);
@@ -38,7 +39,7 @@ final class hi extends nv {
             if (var6.a(-77)) {
               if ((Object) (Object) var6 != (Object) (Object) var4) {
                 if (io.a(var6.c(param0 + -5435), ((hi) this).field_g.e(9648), (byte) -55, var6.a((byte) 55), ((hi) this).field_g.d(param0 + -5415), var6.e(9648), ((hi) this).field_g.a((byte) 55), ((hi) this).field_g.c(-21), var6.d(3))) {
-                  boolean discarded$4 = var6.a(100, true, 1, ((hi) this).field_o, ((hi) this).field_n, 0);
+                  boolean discarded$7 = var6.a(100, true, 1, ((hi) this).field_o, ((hi) this).field_n, 0);
                   var5++;
                   continue L1;
                 } else {
@@ -57,7 +58,7 @@ final class hi extends nv {
         }
     }
 
-    private final void b(int param0) {
+    private final void b() {
         int var2 = hua.a((byte) 111, ((hi) this).field_g.g(-25787) >> 2);
         int var3 = bua.a(0, ((hi) this).field_g.g(-25787) >> 2);
         ((hi) this).field_n = -gqa.a(((hi) this).field_r, (byte) 24, var2) - -gqa.a(((hi) this).field_s, (byte) 24, var3);
@@ -71,11 +72,8 @@ final class hi extends nv {
         return param0;
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_q = null;
-        if (param0 != 6) {
-            field_p = null;
-        }
         field_p = null;
     }
 
@@ -86,7 +84,7 @@ final class hi extends nv {
         return 1;
     }
 
-    final static iu[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7, int param8) {
+    final static iu[] a() {
         int var9 = 0;
         iu[] var10 = null;
         iu[] var11_ref_iu__ = null;
@@ -95,103 +93,95 @@ final class hi extends nv {
         iu var13 = null;
         int var14 = 0;
         int var15 = 0;
-        L0: {
-          var15 = TombRacer.field_G ? 1 : 0;
-          var9 = param1 + (param5 - -param3);
-          var10 = new iu[]{new iu(var9, var9), new iu(param6, var9), new iu(var9, var9), new iu(var9, param6), new iu(64, 64), new iu(var9, param6), new iu(var9, var9), new iu(param6, var9), new iu(var9, var9)};
-          if (param7) {
-            break L0;
-          } else {
-            hi.c(-100);
-            break L0;
-          }
-        }
+        var15 = TombRacer.field_G ? 1 : 0;
+        var9 = 3;
+        var10 = new iu[]{new iu(var9, var9), new iu(3, var9), new iu(var9, var9), new iu(var9, 3), new iu(64, 64), new iu(var9, 3), new iu(var9, var9), new iu(3, var9), new iu(var9, var9)};
         var11_ref_iu__ = var10;
         var12 = 0;
-        L1: while (true) {
+        L0: while (true) {
           if (var11_ref_iu__.length <= var12) {
             var11 = 0;
-            L2: while (true) {
-              if (var11 >= param5) {
+            L1: while (true) {
+              if (var11 >= 1) {
                 var11 = 0;
-                L3: while (true) {
-                  if (var11 >= param5) {
+                L2: while (true) {
+                  if (var11 >= 1) {
                     var11 = 0;
-                    L4: while (true) {
-                      if (var11 >= param6) {
+                    L3: while (true) {
+                      if (var11 >= 3) {
                         var11 = 0;
-                        L5: while (true) {
-                          if (var11 >= param6 >> 1) {
+                        L4: while (true) {
+                          if (var11 >= 1) {
                             return var10;
                           } else {
                             var12 = 0;
-                            L6: while (true) {
-                              if (param1 <= var12) {
+                            L5: while (true) {
+                              if (1 <= var12) {
                                 var11++;
-                                continue L5;
+                                continue L4;
                               } else {
-                                var10[1].field_r[param6 * (-1 + -var12 + var9) + var11] = param0;
-                                var10[3].field_r[var11 * var9 - (var12 + -var9 - -1)] = param0;
-                                var10[7].field_r[param6 * var12 + var11] = param0;
-                                var10[5].field_r[var9 * var11 - -var12] = param0;
+                                var10[1].field_r[3 * (-1 + -var12 + var9) + var11] = 65793;
+                                var10[3].field_r[var11 * var9 - (var12 + -var9 - -1)] = 65793;
+                                var10[7].field_r[3 * var12 + var11] = 65793;
+                                var10[5].field_r[var9 * var11 - -var12] = 65793;
                                 var12++;
-                                continue L6;
+                                continue L5;
                               }
                             }
                           }
                         }
                       } else {
                         var12 = 0;
-                        L7: while (true) {
-                          if (param5 > var12) {
-                            var10[7].field_r[param6 * (-var12 + (var9 + -1)) - -var11] = param8;
-                            var10[5].field_r[-1 - -var9 - (var12 - var11 * var9)] = param8;
-                            var10[1].field_r[param6 * var12 - -var11] = param4;
-                            var10[3].field_r[var9 * var11 + var12] = param4;
+                        L6: while (true) {
+                          if (1 > var12) {
+                            var10[7].field_r[3 * (-var12 + (var9 + -1)) - -var11] = 0;
+                            var10[5].field_r[-1 - -var9 - (var12 - var11 * var9)] = 0;
+                            var10[1].field_r[3 * var12 - -var11] = 0;
+                            var10[3].field_r[var9 * var11 + var12] = 0;
                             var12++;
-                            continue L7;
+                            continue L6;
                           } else {
                             var11++;
-                            continue L4;
+                            continue L3;
                           }
                         }
                       }
                     }
                   } else {
                     var12 = 0;
-                    L8: while (true) {
+                    L7: while (true) {
                       if (var12 < var9) {
-                        var10[0].field_r[var9 * var11 + var12] = param4;
-                        var10[0].field_r[var12 * var9 - -var11] = param4;
+                        var10[0].field_r[var9 * var11 + var12] = 0;
+                        var10[0].field_r[var12 * var9 - -var11] = 0;
                         if (-var11 + var9 > var12) {
-                          var10[2].field_r[var9 * var11 + var12] = param4;
-                          var10[6].field_r[var9 * var12 - -var11] = param4;
+                          var10[2].field_r[var9 * var11 + var12] = 0;
+                          var10[6].field_r[var9 * var12 - -var11] = 0;
                           var12++;
-                          continue L8;
+                          continue L7;
                         } else {
                           var12++;
-                          continue L8;
+                          continue L7;
                         }
                       } else {
                         var11++;
-                        continue L3;
+                        continue L2;
                       }
                     }
                   }
                 }
               } else {
                 var12 = 0;
-                L9: while (true) {
+                L8: while (true) {
                   if (var9 > var12) {
-                    var10[6].field_r[(-var11 + var9 - 1) * var9 + var12] = param8;
-                    var10[8].field_r[var9 * (-1 + (-var11 + var9)) + var12] = param8;
-                    var10[2].field_r[var12 * var9 + var9 + -1 - var11] = param8;
-                    var10[8].field_r[var12 * var9 - -var9 + (-1 + -var11)] = param8;
+                    var10[6].field_r[(-var11 + var9 - 1) * var9 + var12] = 0;
+                    var10[8].field_r[var9 * (-1 + (-var11 + var9)) + var12] = 0;
+                    var10[2].field_r[var12 * var9 + var9 + -1 - var11] = 0;
+                    var10[8].field_r[var12 * var9 - -var9 + (-1 + -var11)] = 0;
                     var12++;
-                    continue L9;
+                    continue L8;
                   } else {
                     var11++;
-                    continue L2;
+                    continue L1;
                   }
                 }
               }
@@ -199,14 +189,14 @@ final class hi extends nv {
           } else {
             var13 = var11_ref_iu__[var12];
             var14 = 0;
-            L10: while (true) {
+            L9: while (true) {
               if (var14 >= var13.field_r.length) {
                 var12++;
-                continue L1;
+                continue L0;
               } else {
-                var13.field_r[var14] = param2;
+                var13.field_r[var14] = 0;
                 var14++;
-                continue L10;
+                continue L9;
               }
             }
           }
@@ -243,7 +233,8 @@ final class hi extends nv {
         try {
             super.a(param0, param1);
             param1.b((byte) 60, 3);
-            this.b(0);
+            int discarded$0 = 0;
+            this.b();
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "hi.Q(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }

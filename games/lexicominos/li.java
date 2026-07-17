@@ -105,7 +105,8 @@ final class li extends bc {
     }
 
     li(ma param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (rd) (Object) t.b(-11));
+        super(param1, (rd) (Object) t.b());
+        int discarded$0 = -11;
         try {
             ((li) this).field_O = param1;
             ((li) this).field_N = param0;
@@ -122,7 +123,7 @@ final class li extends bc {
         return null;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_T = null;
         field_R = null;
         field_P = null;

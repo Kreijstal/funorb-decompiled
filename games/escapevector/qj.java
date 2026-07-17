@@ -71,13 +71,13 @@ final class qj {
                     }
                   }
                   var10 = var9 * var9;
-                  var11 = param5 - var9;
+                  var11 = 240 - var9;
                   L4: while (true) {
-                    if (param5 + var9 <= var11) {
+                    if (240 + var9 <= var11) {
                       break L1;
                     } else {
                       var12 = param3 + (-var8_int + var11 * 640);
-                      var13 = (-param5 + var11) * (1 + (var11 + -param5));
+                      var13 = (-240 + var11) * (1 + (var11 + -240));
                       var14 = -var9;
                       L5: while (true) {
                         if (var14 >= 0) {
@@ -150,7 +150,7 @@ final class qj {
                             } else {
                               if (var12 < param4.field_v - -param4.field_x) {
                                 var13 = param4.field_s * var12;
-                                var14 = (var11 + -var8_int + param5) * 640 + param7 + param4.field_q;
+                                var14 = (var11 + -var8_int + 240) * 640 + param7 + param4.field_q;
                                 var15_double = 8.0 * Math.sin((double)param1 + (double)((param1 & 7) + 8) * ((double)var12 * 0.001));
                                 var15_double = var15_double + Math.sin((double)(param1 + var12) * 0.002 * (double)((5 * param1 & 31) + 16)) * 4.0;
                                 var14 = var14 + (int)Math.floor(var15_double + 0.5);
@@ -188,22 +188,14 @@ final class qj {
                 break L1;
               }
             }
-            L13: {
-              if (param0 == -1276284702) {
-                break L13;
-              } else {
-                field_a = null;
-                break L13;
-              }
-            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L14: {
+          L13: {
             var8 = decompiledCaughtException;
             stackOut_42_0 = (RuntimeException) var8;
-            stackOut_42_1 = new StringBuilder().append("qj.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_42_1 = new StringBuilder().append("qj.D(").append(-1276284702).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
             stackIn_44_0 = stackOut_42_0;
             stackIn_44_1 = stackOut_42_1;
             stackIn_43_0 = stackOut_42_0;
@@ -215,7 +207,7 @@ final class qj {
               stackIn_45_0 = stackOut_44_0;
               stackIn_45_1 = stackOut_44_1;
               stackIn_45_2 = stackOut_44_2;
-              break L14;
+              break L13;
             } else {
               stackOut_43_0 = (RuntimeException) (Object) stackIn_43_0;
               stackOut_43_1 = (StringBuilder) (Object) stackIn_43_1;
@@ -223,14 +215,14 @@ final class qj {
               stackIn_45_0 = stackOut_43_0;
               stackIn_45_1 = stackOut_43_1;
               stackIn_45_2 = stackOut_43_2;
-              break L14;
+              break L13;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_45_0, stackIn_45_2 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw t.a((Throwable) (Object) stackIn_45_0, stackIn_45_2 + 44 + 240 + 44 + param6 + 44 + param7 + 41);
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         int var1 = 0;
         int var2 = 0;
         L0: {
@@ -298,9 +290,6 @@ final class qj {
     }
 
     final static int a(byte param0, int param1, int param2) {
-        if (param0 != -38) {
-            qj.b(69);
-        }
         return ni.a(param2, param1, false, ka.field_d);
     }
 
@@ -309,13 +298,10 @@ final class qj {
         ((qj) this).field_h = param0;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_i = null;
         field_g = null;
         field_e = null;
-        if (param0 != -10497) {
-            field_c = -87;
-        }
         field_f = null;
         field_d = null;
         field_a = null;

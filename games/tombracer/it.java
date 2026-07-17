@@ -10,13 +10,10 @@ final class it {
     }
 
     final static vb a(int param0, int param1) {
-        if (param0 != 255) {
-            return null;
-        }
         return v.a(100, (byte) -76, 128, param1, 0, 255);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         int var1 = 2;
     }

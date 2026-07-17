@@ -11,7 +11,7 @@ final class vb extends le {
     int field_Gb;
     static bd[] field_Kb;
 
-    public static void f(int param0) {
+    public static void f() {
         field_Hb = null;
         field_Lb = null;
         field_Fb = null;
@@ -23,7 +23,7 @@ final class vb extends le {
     }
 
     final static int a(int param0, int param1, int param2, boolean param3) {
-        int var4 = -25 / ((param1 - 1) / 62);
+        int var4 = -25;
         return jg.a(-84);
     }
 

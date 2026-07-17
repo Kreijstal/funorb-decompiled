@@ -16,9 +16,6 @@ final class wc {
     private boolean field_a;
 
     final static int a(int param0, int param1, int param2) {
-        if (param0 != 29292) {
-            field_j = null;
-        }
         if (!(ef.field_H != null)) {
             return -1;
         }
@@ -82,7 +79,8 @@ final class wc {
                 if (jg.field_k != 2) {
                   break L3;
                 } else {
-                  if (!aa.a(((wc) this).field_b, (byte) -85)) {
+                  int discarded$7 = -85;
+                  if (!aa.a(((wc) this).field_b)) {
                     break L3;
                   } else {
                     return 1;

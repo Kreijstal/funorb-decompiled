@@ -33,7 +33,7 @@ final class dm {
         StringBuilder stackOut_5_1 = null;
         String stackOut_5_2 = null;
         try {
-          var4_float = (float)param2 / (float)param1 + (float)(1 + ((dm) this).field_e);
+          var4_float = (float)param2 / (float)100 + (float)(1 + ((dm) this).field_e);
           ((dm) this).field_c = (float)((dm) this).field_a * var4_float / (float)(1 + ((dm) this).field_i);
           if (param2 != 0) {
             ((dm) this).field_g = param0.field_l + " - " + param2 + "%";
@@ -70,7 +70,7 @@ final class dm {
               break L0;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 44 + param2 + 41);
+          throw lj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 100 + 44 + param2 + 41);
         }
     }
 

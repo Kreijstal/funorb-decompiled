@@ -158,7 +158,7 @@ final class jo extends qk {
         }
     }
 
-    final static void x(int param0) {
+    final static void x() {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -322,7 +322,7 @@ final class jo extends qk {
         }
     }
 
-    final static int w(int param0) {
+    final static int w() {
         try {
             IOException var1 = null;
             int var1_int = 0;

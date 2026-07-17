@@ -400,7 +400,7 @@ final class lma extends dg {
         try {
           L0: {
             L1: {
-              if (~param3.field_a == param2) {
+              if (param3.field_a == 0) {
                 break L1;
               } else {
                 if (1 == param3.field_a) {
@@ -425,7 +425,7 @@ final class lma extends dg {
           L2: {
             var5 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var5;
-            stackOut_7_1 = new StringBuilder().append("lma.P(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_7_1 = new StringBuilder().append("lma.P(").append(param0).append(44).append(param1).append(44).append(-1).append(44);
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -756,7 +756,7 @@ final class lma extends dg {
         return false;
     }
 
-    private final void j(int param0) {
+    private final void j() {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -1913,7 +1913,8 @@ final class lma extends dg {
     final void b(int param0, uw param1) {
         try {
             if (null == ((lma) this).field_x) {
-                this.j(2097152);
+                int discarded$0 = 2097152;
+                this.j();
                 if (hb.d(67)) {
                     this.l(32166);
                 }
@@ -2377,7 +2378,7 @@ final class lma extends dg {
         super(param0, param1, param2);
     }
 
-    public static void n(byte param0) {
+    public static void n() {
         field_r = null;
         int var1 = -1;
     }

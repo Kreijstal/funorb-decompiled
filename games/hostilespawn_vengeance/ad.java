@@ -10,19 +10,22 @@ final class ad {
     final static void a(java.awt.Canvas param0, boolean param1) {
         try {
             if (!(fa.field_c != 11)) {
-                ad.b(95);
+                int discarded$0 = 95;
+                ad.b();
             }
-            km.a(wi.field_c, tf.field_d, bl.field_f, (byte) 125);
+            int discarded$7 = 125;
+            km.a(wi.field_c, tf.field_d, bl.field_f);
             if (param1) {
                 field_c = null;
             }
-            ui.a(0, param0, (byte) 90, 0);
+            int discarded$8 = 0;
+            ui.a(0, param0, (byte) 90);
         } catch (RuntimeException runtimeException) {
             throw wg.a((Throwable) (Object) runtimeException, "ad.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         bd var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -113,13 +116,10 @@ final class ad {
     public static void a(int param0) {
         field_b = null;
         field_d = null;
-        if (param0 != -24221) {
-            field_c = null;
-        }
         field_c = null;
     }
 
-    private final static void b(int param0) {
+    private final static void b() {
     }
 
     static {

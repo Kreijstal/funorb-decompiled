@@ -839,7 +839,7 @@ final class bg extends km {
         }
     }
 
-    final static boolean f(byte param0) {
+    final static boolean f() {
         int var1 = 0;
         int stackIn_4_0 = 0;
         int stackOut_2_0 = 0;

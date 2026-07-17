@@ -19,7 +19,8 @@ final class tf extends ne implements in {
             return;
         }
         try {
-            va.a((byte) 62);
+            int discarded$0 = 62;
+            va.a();
             ((tf) this).m(-7435);
         } catch (RuntimeException runtimeException) {
             throw fa.a((Throwable) (Object) runtimeException, "tf.E(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
@@ -71,94 +72,86 @@ final class tf extends ne implements in {
         String var4_ref = null;
         wd var5 = null;
         int var6 = 0;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
-        String stackIn_34_2 = null;
+        String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
         RuntimeException stackOut_31_0 = null;
         StringBuilder stackOut_31_1 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
+        String stackOut_31_2 = null;
+        RuntimeException stackOut_30_0 = null;
+        StringBuilder stackOut_30_1 = null;
+        String stackOut_30_2 = null;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
             L1: {
               ((tf) this).field_Fb = true;
-              if (param0 == -6) {
-                break L1;
-              } else {
-                field_Eb = 69;
-                break L1;
-              }
-            }
-            L2: {
               if (!param2.field_d) {
                 if (param2.field_b != null) {
                   var4_ref = wg.field_d;
                   if (((tf) this).field_Gb != null) {
                     ((tf) this).field_Gb.a(496);
-                    break L2;
+                    break L1;
                   } else {
-                    break L2;
+                    break L1;
                   }
                 } else {
                   var4_ref = param2.field_h;
                   if (param2.field_c != 248) {
-                    break L2;
+                    break L1;
                   } else {
-                    L3: {
+                    L2: {
                       if (!param1) {
                         nq.f(-42);
-                        break L3;
+                        break L2;
                       } else {
-                        break L3;
+                        break L2;
                       }
                     }
                     var4_ref = ba.field_p;
                     ((tf) this).field_Ib = true;
-                    break L2;
+                    break L1;
                   }
                 }
               } else {
                 var4_ref = qa.field_g;
-                break L2;
+                break L1;
               }
             }
-            L4: {
+            L3: {
               var5 = new wd((ne) this, ci.field_d, var4_ref);
               if (!param2.field_d) {
-                L5: {
+                L4: {
                   if (!((tf) this).field_Ib) {
                     if (param2.field_c != 5) {
                       var5.a(sn.field_Zb, -1, true);
-                      break L5;
+                      break L4;
                     } else {
                       var5.a(lc.field_g, 11, true);
                       var5.a(oe.field_b, 17, true);
-                      break L5;
+                      break L4;
                     }
                   } else {
-                    gn discarded$2 = var5.a(ub.field_xb, param0 ^ 58, (bj) this);
-                    break L5;
+                    gn discarded$2 = var5.a(ub.field_xb, -64, (bj) this);
+                    break L4;
                   }
                 }
                 if (param2.field_c == 3) {
                   var5.a(od.field_zb, 7, true);
-                  break L4;
+                  break L3;
                 } else {
                   if (param2.field_c != 6) {
-                    break L4;
+                    break L3;
                   } else {
                     var5.a(wm.field_S, 9, true);
-                    break L4;
+                    break L3;
                   }
                 }
               } else {
@@ -167,7 +160,7 @@ final class tf extends ne implements in {
                   return;
                 } else {
                   gn discarded$3 = var5.a(ub.field_xb, -112, (bj) this);
-                  break L4;
+                  break L3;
                 }
               }
             }
@@ -176,33 +169,33 @@ final class tf extends ne implements in {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L5: {
             var4 = decompiledCaughtException;
-            stackOut_31_0 = (RuntimeException) var4;
-            stackOut_31_1 = new StringBuilder().append("tf.A(").append(param0).append(44).append(param1).append(44);
-            stackIn_33_0 = stackOut_31_0;
-            stackIn_33_1 = stackOut_31_1;
-            stackIn_32_0 = stackOut_31_0;
-            stackIn_32_1 = stackOut_31_1;
+            stackOut_29_0 = (RuntimeException) var4;
+            stackOut_29_1 = new StringBuilder().append("tf.A(").append(-6).append(44).append(param1).append(44);
+            stackIn_31_0 = stackOut_29_0;
+            stackIn_31_1 = stackOut_29_1;
+            stackIn_30_0 = stackOut_29_0;
+            stackIn_30_1 = stackOut_29_1;
             if (param2 == null) {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
-              stackOut_33_2 = "null";
-              stackIn_34_0 = stackOut_33_0;
-              stackIn_34_1 = stackOut_33_1;
-              stackIn_34_2 = stackOut_33_2;
-              break L6;
+              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
+              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_2 = "null";
+              stackIn_32_0 = stackOut_31_0;
+              stackIn_32_1 = stackOut_31_1;
+              stackIn_32_2 = stackOut_31_2;
+              break L5;
             } else {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
-              stackOut_32_2 = "{...}";
-              stackIn_34_0 = stackOut_32_0;
-              stackIn_34_1 = stackOut_32_1;
-              stackIn_34_2 = stackOut_32_2;
-              break L6;
+              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
+              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_2 = "{...}";
+              stackIn_32_0 = stackOut_30_0;
+              stackIn_32_1 = stackOut_30_1;
+              stackIn_32_2 = stackOut_30_2;
+              break L5;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 41);
+          throw fa.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 41);
         }
     }
 
@@ -292,7 +285,7 @@ final class tf extends ne implements in {
         this.a(-6, true, p.a(-97, ba.field_p, param0));
     }
 
-    public static void o(int param0) {
+    public static void o() {
         field_Cb = null;
         field_Hb = null;
         int var1 = 12;

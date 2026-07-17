@@ -25,35 +25,9 @@ class lb {
     private int field_n;
 
     final static void a(int param0, boolean param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 < 8000) {
-            break L0;
-          } else {
-            if (param0 <= 48000) {
-              L1: {
-                field_r = param0;
-                if (!param1) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              field_i = stackIn_7_0 != 0;
-              field_f = 10;
-              return;
-            } else {
-              break L0;
-            }
-          }
-        }
-        throw new IllegalArgumentException();
+        field_r = 22050;
+        field_i = true;
+        field_f = 10;
     }
 
     void d() throws Exception {
@@ -218,12 +192,12 @@ class lb {
     }
 
     private final void a(int param0) {
-        ((lb) this).field_l = ((lb) this).field_l - 256;
+        ((lb) this).field_l = ((lb) this).field_l - param0;
         if (((lb) this).field_l < 0) {
             ((lb) this).field_l = 0;
         }
         if (((lb) this).field_s != null) {
-            ((lb) this).field_s.a(256);
+            ((lb) this).field_s.a(param0);
             return;
         }
     }
@@ -418,7 +392,8 @@ class lb {
                       field_o = null;
                       break L0;
                     } else {
-                      ao.a(50L, 1);
+                      int discarded$1 = 1;
+                      ao.a(50L);
                       continue L2;
                     }
                   }
@@ -477,7 +452,7 @@ class lb {
         sg var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_i) {
             break L0;
           } else {
@@ -487,7 +462,7 @@ class lb {
         }
         L1: {
           sf.a(param0, 0, var3);
-          ((lb) this).field_l = ((lb) this).field_l - 256;
+          ((lb) this).field_l = ((lb) this).field_l - param1;
           if (((lb) this).field_s == null) {
             break L1;
           } else {
@@ -654,7 +629,7 @@ class lb {
           if (((lb) this).field_s == null) {
             break L17;
           } else {
-            ((lb) this).field_s.a(param0, 0, 256);
+            ((lb) this).field_s.a(param0, 0, param1);
             break L17;
           }
         }

@@ -17,13 +17,10 @@ final class ui extends br {
         ac var2 = null;
         try {
             ac.b(param1.a("headers.packvorbis", "", false));
-            if (param0 != 7478) {
-                field_k = null;
-            }
             var2 = ac.a(param1, "jagex logo2.packvorbis", "");
             jd discarded$0 = var2.c();
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "ui.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "ui.A(" + 7478 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -1407,7 +1404,7 @@ final class ui extends br {
         return 0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
         field_i = null;
         field_j = null;
@@ -1429,20 +1426,20 @@ final class ui extends br {
                         if (da.field_a < b.field_d) {
                           jq.a(false, (byte) -20);
                           da.field_a = da.field_a + 1;
-                          var2 = -72 / ((-39 - param0) / 44);
+                          var2 = -72;
                           return;
                         } else {
-                          var2 = -72 / ((-39 - param0) / 44);
+                          var2 = -72;
                           return;
                         }
                       } else {
                         sq.field_Q = sq.field_Q - 1;
-                        var2 = -72 / ((-39 - param0) / 44);
+                        var2 = -72;
                         return;
                       }
                     } else {
                       mh.field_h = mh.field_h - 1;
-                      var2 = -72 / ((-39 - param0) / 44);
+                      var2 = -72;
                       return;
                     }
                   } else {
@@ -1460,10 +1457,9 @@ final class ui extends br {
                               }
                             }
                             mh.field_h = mh.field_h + 1;
-                            var2 = -72 / ((-39 - param0) / 44);
-                            return;
+                            break L1;
                           } else {
-                            var2 = -72 / ((-39 - param0) / 44);
+                            var2 = -72;
                             return;
                           }
                         } else {
@@ -1472,7 +1468,7 @@ final class ui extends br {
                         }
                       } else {
                         sq.field_Q = sq.field_Q - 1;
-                        var2 = -72 / ((-39 - param0) / 44);
+                        var2 = -72;
                         return;
                       }
                     } else {
@@ -1482,16 +1478,15 @@ final class ui extends br {
                       } else {
                         if (da.field_a <= 0) {
                           if (sq.field_Q < b.field_d) {
-                            L3: {
-                              if (0 != sq.field_Q) {
-                                break L3;
-                              } else {
-                                jq.a(true, (byte) 126);
-                                break L3;
-                              }
+                            if (0 == sq.field_Q) {
+                              jq.a(true, (byte) 126);
+                              sq.field_Q = sq.field_Q + 1;
+                              break L1;
+                            } else {
+                              sq.field_Q = sq.field_Q + 1;
+                              var2 = -72;
+                              return;
                             }
-                            sq.field_Q = sq.field_Q + 1;
-                            break L1;
                           } else {
                             break L1;
                           }
@@ -1512,7 +1507,7 @@ final class ui extends br {
                         da.field_a = da.field_a - 1;
                         break L1;
                       } else {
-                        var2 = -72 / ((-39 - param0) / 44);
+                        var2 = -72;
                         return;
                       }
                     } else {
@@ -1522,7 +1517,7 @@ final class ui extends br {
                   }
                 }
               }
-              var2 = -72 / ((-39 - param0) / 44);
+              var2 = -72;
               return;
             } else {
               io.field_b = false;
@@ -1540,20 +1535,20 @@ final class ui extends br {
                 if (da.field_a < b.field_d) {
                   jq.a(false, (byte) -20);
                   da.field_a = da.field_a + 1;
-                  var2 = -72 / ((-39 - param0) / 44);
+                  var2 = -72;
                   return;
                 } else {
-                  var2 = -72 / ((-39 - param0) / 44);
+                  var2 = -72;
                   return;
                 }
               } else {
                 sq.field_Q = sq.field_Q - 1;
-                var2 = -72 / ((-39 - param0) / 44);
+                var2 = -72;
                 return;
               }
             } else {
               mh.field_h = mh.field_h - 1;
-              var2 = -72 / ((-39 - param0) / 44);
+              var2 = -72;
               return;
             }
           } else {
@@ -1564,77 +1559,79 @@ final class ui extends br {
                   if (mh.field_h < b.field_d) {
                     if (0 != mh.field_h) {
                       mh.field_h = mh.field_h + 1;
-                      var2 = -72 / ((-39 - param0) / 44);
+                      var2 = -72;
                       return;
                     } else {
                       wf.a(6835);
                       mh.field_h = mh.field_h + 1;
-                      var2 = -72 / ((-39 - param0) / 44);
+                      var2 = -72;
                       return;
                     }
                   } else {
-                    var2 = -72 / ((-39 - param0) / 44);
+                    var2 = -72;
                     return;
                   }
                 } else {
                   da.field_a = da.field_a - 1;
-                  var2 = -72 / ((-39 - param0) / 44);
+                  var2 = -72;
                   return;
                 }
               } else {
                 sq.field_Q = sq.field_Q - 1;
-                var2 = -72 / ((-39 - param0) / 44);
+                var2 = -72;
                 return;
               }
             } else {
               if (0 >= mh.field_h) {
                 if (da.field_a <= 0) {
                   if (sq.field_Q < b.field_d) {
-                    if (0 != sq.field_Q) {
-                      sq.field_Q = sq.field_Q + 1;
-                      var2 = -72 / ((-39 - param0) / 44);
-                      return;
-                    } else {
+                    if (0 == sq.field_Q) {
                       jq.a(true, (byte) 126);
                       sq.field_Q = sq.field_Q + 1;
-                      var2 = -72 / ((-39 - param0) / 44);
+                      var2 = -72;
+                      return;
+                    } else {
+                      sq.field_Q = sq.field_Q + 1;
+                      var2 = -72;
                       return;
                     }
                   } else {
-                    var2 = -72 / ((-39 - param0) / 44);
+                    var2 = -72;
                     return;
                   }
                 } else {
                   da.field_a = da.field_a - 1;
-                  var2 = -72 / ((-39 - param0) / 44);
+                  var2 = -72;
                   return;
                 }
               } else {
                 mh.field_h = mh.field_h - 1;
-                var2 = -72 / ((-39 - param0) / 44);
+                var2 = -72;
                 return;
               }
             }
           }
         } else {
           if (mh.field_h <= 0) {
-            if (0 >= sq.field_Q) {
-              if (da.field_a <= 0) {
-                var2 = -72 / ((-39 - param0) / 44);
-                return;
+            L3: {
+              if (0 >= sq.field_Q) {
+                if (da.field_a > 0) {
+                  da.field_a = da.field_a - 1;
+                  break L3;
+                } else {
+                  var2 = -72;
+                  return;
+                }
               } else {
-                da.field_a = da.field_a - 1;
-                var2 = -72 / ((-39 - param0) / 44);
-                return;
+                sq.field_Q = sq.field_Q - 1;
+                break L3;
               }
-            } else {
-              sq.field_Q = sq.field_Q - 1;
-              var2 = -72 / ((-39 - param0) / 44);
-              return;
             }
+            var2 = -72;
+            return;
           } else {
             mh.field_h = mh.field_h - 1;
-            var2 = -72 / ((-39 - param0) / 44);
+            var2 = -72;
             return;
           }
         }

@@ -9,7 +9,7 @@ final class og extends q {
     int field_l;
     int field_j;
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void a(java.awt.Component param0) {
         try {
             param0.removeKeyListener((java.awt.event.KeyListener) (Object) ha.field_b);
             param0.removeFocusListener((java.awt.event.FocusListener) (Object) ha.field_b);
@@ -25,7 +25,7 @@ final class og extends q {
         int var1 = 51 / ((param0 - 47) / 32);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_m = null;
         field_k = null;
     }

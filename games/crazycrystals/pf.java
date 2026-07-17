@@ -524,7 +524,7 @@ final class pf extends pn implements Cloneable {
         return (f) (Object) stackIn_7_0;
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         field_m = null;
     }
 
@@ -901,14 +901,9 @@ final class pf extends pn implements Cloneable {
                     var3 = 0;
                     L2: while (true) {
                       if (var3 >= var2.length) {
-                        if (param0 <= -93) {
-                          stackOut_21_0 = 0;
-                          stackIn_22_0 = stackOut_21_0;
-                          break L0;
-                        } else {
-                          field_n = 11;
-                          return false;
-                        }
+                        stackOut_21_0 = 0;
+                        stackIn_22_0 = stackOut_21_0;
+                        break L0;
                       } else {
                         var4 = var2[var3];
                         if (var4 != param1) {
@@ -947,7 +942,7 @@ final class pf extends pn implements Cloneable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw dn.a((Throwable) (Object) var2_ref, "pf.K(" + param0 + 44 + param1 + 41);
+          throw dn.a((Throwable) (Object) var2_ref, "pf.K(" + -96 + 44 + param1 + 41);
         }
         return stackIn_22_0 != 0;
     }
@@ -1059,7 +1054,7 @@ final class pf extends pn implements Cloneable {
         return stackIn_3_0;
     }
 
-    final static int a(int param0, byte[] param1, int param2, int param3) {
+    final static int a(int param0, byte[] param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -1137,7 +1132,7 @@ final class pf extends pn implements Cloneable {
         return param0 & param1;
     }
 
-    final static void e(byte param0) {
+    final static void e() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -1227,7 +1222,9 @@ final class pf extends pn implements Cloneable {
                     }
                   }
                 } else {
-                  wp.a((Throwable) null, "LR1: " + ug.a(-1815), 21862);
+                  int discarded$2 = -1815;
+                  int discarded$3 = 21862;
+                  wp.a((Throwable) null, "LR1: " + ug.a());
                   jj.a(4);
                   break L1;
                 }

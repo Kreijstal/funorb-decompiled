@@ -23,7 +23,7 @@ final class sj extends wf {
     static long field_m;
     char field_i;
 
-    public static void b(byte param0) {
+    public static void b() {
         field_r = null;
         field_w = null;
         field_u = null;
@@ -231,7 +231,8 @@ final class sj extends wf {
                   if (((sj) this).field_q != ((sj) this).field_p) {
                     return;
                   } else {
-                    od discarded$7 = vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o, false)]);
+                    int discarded$14 = 0;
+                    od discarded$15 = vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o)]);
                     return;
                   }
                 } else {
@@ -242,10 +243,11 @@ final class sj extends wf {
                 ((sj) this).field_j = ((sj) this).field_j + (int)((double)(-((sj) this).field_j + ((sj) this).field_g) * var3);
                 ((sj) this).field_q = ((sj) this).field_q + (int)((double)(-((sj) this).field_q + ((sj) this).field_p) * var3);
                 if (((sj) this).field_j == ((sj) this).field_g) {
-                  if (((sj) this).field_q != ((sj) this).field_p) {
+                  if (((sj) this).field_q == ((sj) this).field_p) {
+                    int discarded$16 = 0;
+                    od discarded$17 = vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o)]);
                     return;
                   } else {
-                    od discarded$8 = vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o, false)]);
                     return;
                   }
                 } else {
@@ -261,10 +263,11 @@ final class sj extends wf {
               ((sj) this).field_j = ((sj) this).field_g;
               ((sj) this).field_q = ((sj) this).field_p;
               if (((sj) this).field_j == ((sj) this).field_g) {
-                if (((sj) this).field_q == ((sj) this).field_p) {
-                  od discarded$9 = vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o, false)]);
+                if (((sj) this).field_q != ((sj) this).field_p) {
                   return;
                 } else {
+                  int discarded$18 = 0;
+                  od discarded$19 = vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o)]);
                   return;
                 }
               } else {
@@ -278,7 +281,8 @@ final class sj extends wf {
                 if (((sj) this).field_q != ((sj) this).field_p) {
                   return;
                 } else {
-                  od discarded$10 = vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o, false)]);
+                  int discarded$20 = 0;
+                  od discarded$21 = vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o)]);
                   return;
                 }
               } else {
@@ -298,7 +302,8 @@ final class sj extends wf {
                   if (((sj) this).field_q != ((sj) this).field_p) {
                     return;
                   } else {
-                    od discarded$11 = vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o, false)]);
+                    int discarded$22 = 0;
+                    od discarded$23 = vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o)]);
                     return;
                   }
                 } else {
@@ -312,7 +317,8 @@ final class sj extends wf {
                   if (((sj) this).field_q != ((sj) this).field_p) {
                     return;
                   } else {
-                    od discarded$12 = vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o, false)]);
+                    int discarded$24 = 0;
+                    od discarded$25 = vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o)]);
                     return;
                   }
                 } else {
@@ -336,16 +342,20 @@ final class sj extends wf {
                 break L0;
               }
             }
-            if (((sj) this).field_j == ((sj) this).field_g) {
-              if (((sj) this).field_q != ((sj) this).field_p) {
-                return;
+            L1: {
+              if (((sj) this).field_j != ((sj) this).field_g) {
+                break L1;
               } else {
-                od discarded$13 = vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o, false)]);
-                return;
+                if (((sj) this).field_q == ((sj) this).field_p) {
+                  int discarded$26 = 0;
+                  od discarded$27 = vk.a((byte) 108, dg.field_d[3 - -li.a(3, o.field_o)]);
+                  break L1;
+                } else {
+                  break L1;
+                }
               }
-            } else {
-              return;
             }
+            return;
           }
         }
     }
@@ -353,32 +363,26 @@ final class sj extends wf {
     final static void a(int param0, int param1, jl param2) {
         hj var5 = null;
         int var4 = 0;
-        if (param0 != -7812) {
-            return;
-        }
         try {
             var5 = ff.field_D;
-            var5.a(false, param1);
+            var5.a(false, 5);
             var5.field_h = var5.field_h + 1;
             var4 = var5.field_h;
             var5.f(6389, 1);
             var5.f(6389, param2.field_m);
             var5.g(-21770, param2.field_i);
-            var5.a(param0 + 7711, param2.field_h);
+            var5.a(-101, param2.field_h);
             var5.a(-108, param2.field_g);
             var5.a(-123, param2.field_n);
             var5.a(-113, param2.field_k);
             int discarded$0 = var5.d(var4, -1323322296);
             var5.a((byte) -42, var5.field_h + -var4);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "sj.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "sj.D(" + -7812 + 44 + 5 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static boolean e(int param0) {
-        if (param0 != 31) {
-            return true;
-        }
+    final static boolean e() {
         return we.field_j.b(false);
     }
 

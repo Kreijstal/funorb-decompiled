@@ -21,7 +21,7 @@ final class kh extends ip {
         ((kh) this).field_o = null;
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_q = null;
         field_m = null;
         int var1 = 14;
@@ -157,7 +157,7 @@ final class kh extends ip {
         return oi.a(-12929, nj.field_b);
     }
 
-    final static boolean d(boolean param0) {
+    final static boolean d() {
         int stackIn_7_0 = 0;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;

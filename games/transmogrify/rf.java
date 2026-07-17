@@ -10,7 +10,7 @@ final class rf extends a {
         super(param0, param1, 33, 20, 30);
     }
 
-    final static int[] c(boolean param0) {
+    final static int[] c() {
         return new int[8];
     }
 
@@ -43,7 +43,7 @@ final class rf extends a {
         int var42 = 0;
         L0: {
           var42 = Transmogrify.field_A ? 1 : 0;
-          if (param5 < param8) {
+          if (param5 < 0) {
             break L0;
           } else {
             if (ka.field_a <= param16) {
@@ -173,10 +173,10 @@ final class rf extends a {
                                 }
                               }
                               if (var37 >= 0) {
-                                dh.a(var40, var39, param8 ^ 99, param7, var21, var36 + var37, var25, var41, var29, var38);
+                                dh.a(var40, var39, 99, param7, var21, var36 + var37, var25, var41, var29, var38);
                                 break L8;
                               } else {
-                                dh.a(var40, var39, param8 + 99, param7, -(var39 * var37) + var21, var36, var25 + -(var37 * var40), var41, -(var41 * var37) + var29, var37 + var38);
+                                dh.a(var40, var39, 99, param7, -(var39 * var37) + var21, var36, var25 + -(var37 * var40), var41, -(var41 * var37) + var29, var37 + var38);
                                 break L8;
                               }
                             } else {
@@ -385,7 +385,7 @@ final class rf extends a {
                           if (~ka.field_i >= ~var36) {
                             break L14;
                           } else {
-                            dh.a(0, 0, param8 ^ 99, param7, var21, var35 + var36, var25, 0, var29, var37);
+                            dh.a(0, 0, 99, param7, var21, var35 + var36, var25, 0, var29, var37);
                             break L14;
                           }
                         }

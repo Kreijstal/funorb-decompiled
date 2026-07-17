@@ -6,7 +6,7 @@ abstract class fa {
     static rb field_c;
     static eh field_b;
 
-    final static bo a(ha param0, boolean param1) {
+    final static bo a(ha param0) {
         mq var2 = null;
         RuntimeException var2_ref = null;
         bo var3 = null;
@@ -108,7 +108,7 @@ abstract class fa {
         field_c = null;
     }
 
-    final static byte[] a(CharSequence param0, int param1) {
+    final static byte[] a(CharSequence param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         byte[] var3 = null;
@@ -349,10 +349,7 @@ abstract class fa {
         return stackIn_67_0;
     }
 
-    final static java.awt.Canvas a(int param0) {
-        if (param0 != -8213) {
-            fa.a(false);
-        }
+    final static java.awt.Canvas a() {
         return jf.field_a == null ? ci.field_f : (java.awt.Canvas) (Object) jf.field_a;
     }
 

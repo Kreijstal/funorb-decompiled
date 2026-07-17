@@ -13,7 +13,7 @@ final class m extends hf {
     private boolean field_S;
     static gj[] field_O;
 
-    final static void a(String param0, String param1, int param2) {
+    final static void a(String param0, String param1) {
         try {
             lr.a(false, param0, (byte) 127, param1);
         } catch (RuntimeException runtimeException) {
@@ -52,7 +52,7 @@ final class m extends hf {
         }
     }
 
-    public static void e(boolean param0) {
+    public static void e() {
         field_T = null;
         field_O = null;
         field_V = null;

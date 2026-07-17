@@ -8,11 +8,11 @@ final class ae {
         int var8 = 0;
         int[] var9 = null;
         if (param5 > 0) {
-          if (param5 < param4) {
+          if (param5 < 32) {
             L0: {
               param0 = param0 - param5;
               param1 = param1 - param5;
-              var6 = param4 - param5;
+              var6 = 32 - param5;
               if (param1 < vj.field_h) {
                 break L0;
               } else {
@@ -34,27 +34,27 @@ final class ae {
                       break L2;
                     }
                   }
-                  if (param1 % param4 < var6) {
+                  if (param1 % 32 < var6) {
                     L3: {
-                      if (param0 % param4 < var6) {
+                      if (param0 % 32 < var6) {
                         break L3;
                       } else {
-                        var7 = param4 - param0 % param4;
+                        var7 = 32 - param0 % 32;
                         param2 = param2 - var7;
                         param0 = param0 + var7;
                         break L3;
                       }
                     }
                     L4: {
-                      if ((param0 + param2 - 1) % param4 < var6) {
+                      if ((param0 + param2 - 1) % 32 < var6) {
                         break L4;
                       } else {
-                        param2 = param2 - (1 + (param0 + param2 - 1) % param4 - var6);
+                        param2 = param2 - (1 + (param0 + param2 - 1) % 32 - var6);
                         break L4;
                       }
                     }
                     var7 = param0 + param1 * vj.field_l;
-                    var8 = param0 % param4;
+                    var8 = param0 % 32;
                     var9 = vj.field_j;
                     param0 = -param2;
                     L5: while (true) {
@@ -101,11 +101,11 @@ final class ae {
         int var8 = 0;
         int[] var13 = null;
         if (param5 > 0) {
-          if (param5 < param4) {
+          if (param5 < 32) {
             L0: {
               param0 = param0 - param5;
               param1 = param1 - param5;
-              var6 = param4 - param5;
+              var6 = 32 - param5;
               if (param0 < vj.field_f) {
                 break L0;
               } else {
@@ -127,27 +127,27 @@ final class ae {
                       break L2;
                     }
                   }
-                  if (param0 % param4 < var6) {
+                  if (param0 % 32 < var6) {
                     L3: {
-                      if (param1 % param4 < var6) {
+                      if (param1 % 32 < var6) {
                         break L3;
                       } else {
-                        var7 = param4 - param1 % param4;
+                        var7 = 32 - param1 % 32;
                         param2 = param2 - var7;
                         param1 = param1 + var7;
                         break L3;
                       }
                     }
                     L4: {
-                      if ((param1 + param2 - 1) % param4 < var6) {
+                      if ((param1 + param2 - 1) % 32 < var6) {
                         break L4;
                       } else {
-                        param2 = param2 - (1 + (param1 + param2 - 1) % param4 - var6);
+                        param2 = param2 - (1 + (param1 + param2 - 1) % 32 - var6);
                         break L4;
                       }
                     }
                     var7 = param0 + param1 * vj.field_l;
-                    var8 = param1 % param4;
+                    var8 = param1 % 32;
                     var13 = vj.field_j;
                     param1 = -param2;
                     L5: while (true) {
@@ -263,11 +263,11 @@ final class ae {
         int var9 = 0;
         int var10 = 0;
         if (param5 > 0) {
-          if (param5 < param4) {
+          if (param5 < 32) {
             L0: {
               param1 = param1 - param5;
               param2 = param2 - param5;
-              var6 = param4 - param5;
+              var6 = 32 - param5;
               param1 = param1 + param0.field_q;
               param2 = param2 + param0.field_n;
               var7 = 0;
@@ -316,10 +316,10 @@ final class ae {
               } else {
                 if (var8 > 0) {
                   L5: {
-                    if (param1 % param4 < var6) {
+                    if (param1 % 32 < var6) {
                       break L5;
                     } else {
-                      var10 = param4 - param1 % param4;
+                      var10 = 32 - param1 % 32;
                       var9 = var9 - var10;
                       param1 = param1 + var10;
                       var7 = var7 + var10;
@@ -327,18 +327,18 @@ final class ae {
                     }
                   }
                   L6: {
-                    if ((param1 + var9 - 1) % param4 < var6) {
+                    if ((param1 + var9 - 1) % 32 < var6) {
                       break L6;
                     } else {
-                      var9 = var9 - (1 + (param1 + var9 - 1) % param4 - var6);
+                      var9 = var9 - (1 + (param1 + var9 - 1) % 32 - var6);
                       break L6;
                     }
                   }
                   L7: {
-                    if (param2 % param4 < var6) {
+                    if (param2 % 32 < var6) {
                       break L7;
                     } else {
-                      var10 = param4 - param2 % param4;
+                      var10 = 32 - param2 % 32;
                       var8 = var8 - var10;
                       param2 = param2 + var10;
                       var7 = var7 + var10 * param0.field_p;
@@ -346,14 +346,14 @@ final class ae {
                     }
                   }
                   L8: {
-                    if ((param2 + var8 - 1) % param4 < var6) {
+                    if ((param2 + var8 - 1) % 32 < var6) {
                       break L8;
                     } else {
-                      var8 = var8 - (1 + (param2 + var8 - 1) % param4 - var6);
+                      var8 = var8 - (1 + (param2 + var8 - 1) % 32 - var6);
                       break L8;
                     }
                   }
-                  ae.a(vj.field_j, param0.field_r, 0, var7, param1 + param2 * vj.field_l, var9, var8, param1 % param4, param2 % param4, var6, param5, vj.field_l - var9, param0.field_p - var9, param3);
+                  ae.a(vj.field_j, param0.field_r, 0, var7, param1 + param2 * vj.field_l, var9, var8, param1 % 32, param2 % 32, var6, param5, vj.field_l - var9, param0.field_p - var9, param3);
                   return;
                 } else {
                   break L4;
@@ -379,11 +379,11 @@ final class ae {
         int var10 = 0;
         int var11 = 0;
         if (param4 > 0) {
-          if (param4 < param3) {
+          if (param4 < 32) {
             L0: {
               param1 = param1 - param4;
               param2 = param2 - param4;
-              var5 = param3 - param4;
+              var5 = 32 - param4;
               param1 = param1 + param0.field_q;
               param2 = param2 + param0.field_n;
               var6 = 0;
@@ -432,10 +432,10 @@ final class ae {
               } else {
                 if (var7 > 0) {
                   L5: {
-                    if (param1 % param3 < var5) {
+                    if (param1 % 32 < var5) {
                       break L5;
                     } else {
-                      var9 = param3 - param1 % param3;
+                      var9 = 32 - param1 % 32;
                       var8 = var8 - var9;
                       param1 = param1 + var9;
                       var6 = var6 + var9;
@@ -443,18 +443,18 @@ final class ae {
                     }
                   }
                   L6: {
-                    if ((param1 + var8 - 1) % param3 < var5) {
+                    if ((param1 + var8 - 1) % 32 < var5) {
                       break L6;
                     } else {
-                      var8 = var8 - (1 + (param1 + var8 - 1) % param3 - var5);
+                      var8 = var8 - (1 + (param1 + var8 - 1) % 32 - var5);
                       break L6;
                     }
                   }
                   L7: {
-                    if (param2 % param3 < var5) {
+                    if (param2 % 32 < var5) {
                       break L7;
                     } else {
-                      var9 = param3 - param2 % param3;
+                      var9 = 32 - param2 % 32;
                       var7 = var7 - var9;
                       param2 = param2 + var9;
                       var6 = var6 + var9 * param0.field_p;
@@ -462,17 +462,17 @@ final class ae {
                     }
                   }
                   L8: {
-                    if ((param2 + var7 - 1) % param3 < var5) {
+                    if ((param2 + var7 - 1) % 32 < var5) {
                       break L8;
                     } else {
-                      var7 = var7 - (1 + (param2 + var7 - 1) % param3 - var5);
+                      var7 = var7 - (1 + (param2 + var7 - 1) % 32 - var5);
                       break L8;
                     }
                   }
                   var9 = param1 + param2 * vj.field_l;
                   var10 = vj.field_l - var8;
                   var11 = param0.field_p - var8;
-                  ae.a(vj.field_j, param0.field_r, 0, var6, var9, var8, var7, param1 % param3, param2 % param3, var5, param4, var10, var11);
+                  ae.a(vj.field_j, param0.field_r, 0, var6, var9, var8, var7, param1 % 32, param2 % 32, var5, param4, var10, var11);
                   return;
                 } else {
                   break L4;
@@ -575,11 +575,11 @@ final class ae {
         int var7 = 0;
         int var8 = 0;
         if (param6 > 0) {
-          if (param6 < param5) {
+          if (param6 < 32) {
             L0: {
               param0 = param0 - param6;
               param1 = param1 - param6;
-              var7 = param5 - param6;
+              var7 = 32 - param6;
               if (param1 >= vj.field_h) {
                 break L0;
               } else {
@@ -619,42 +619,42 @@ final class ae {
               } else {
                 if (param3 > 0) {
                   L5: {
-                    if (param0 % param5 < var7) {
+                    if (param0 % 32 < var7) {
                       break L5;
                     } else {
-                      var8 = param5 - param0 % param5;
+                      var8 = 32 - param0 % 32;
                       param2 = param2 - var8;
                       param0 = param0 + var8;
                       break L5;
                     }
                   }
                   L6: {
-                    if ((param0 + param2 - 1) % param5 < var7) {
+                    if ((param0 + param2 - 1) % 32 < var7) {
                       break L6;
                     } else {
-                      param2 = param2 - (1 + (param0 + param2 - 1) % param5 - var7);
+                      param2 = param2 - (1 + (param0 + param2 - 1) % 32 - var7);
                       break L6;
                     }
                   }
                   L7: {
-                    if (param1 % param5 < var7) {
+                    if (param1 % 32 < var7) {
                       break L7;
                     } else {
-                      var8 = param5 - param1 % param5;
+                      var8 = 32 - param1 % 32;
                       param3 = param3 - var8;
                       param1 = param1 + var8;
                       break L7;
                     }
                   }
                   L8: {
-                    if ((param1 + param3 - 1) % param5 < var7) {
+                    if ((param1 + param3 - 1) % 32 < var7) {
                       break L8;
                     } else {
-                      param3 = param3 - (1 + (param1 + param3 - 1) % param5 - var7);
+                      param3 = param3 - (1 + (param1 + param3 - 1) % 32 - var7);
                       break L8;
                     }
                   }
-                  ae.a(vj.field_j, param4, param0 + param1 * vj.field_l, param2, param3, param0 % param5, param1 % param5, var7, param6, vj.field_l - param2);
+                  ae.a(vj.field_j, param4, param0 + param1 * vj.field_l, param2, param3, param0 % 32, param1 % 32, var7, param6, vj.field_l - param2);
                   return;
                 } else {
                   break L4;

@@ -28,7 +28,7 @@ final class aqa {
         field_c = null;
     }
 
-    final static int a(int param0) {
+    final static int a() {
         return (int)(1000000000L / mga.field_i);
     }
 

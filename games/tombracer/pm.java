@@ -17,7 +17,7 @@ final class pm {
     int field_b;
     static long field_n;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_h = null;
         field_d = null;

@@ -209,7 +209,7 @@ class om extends am {
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_t = null;
         int var1 = -111;
         field_y = null;

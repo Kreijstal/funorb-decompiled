@@ -82,7 +82,8 @@ final class qa extends rqa {
     final static void a(byte param0, java.awt.Canvas param1) {
         try {
             mv.a(10009, (java.awt.Component) (Object) param1);
-            ts.a((java.awt.Component) (Object) param1, 1);
+            int discarded$12 = 1;
+            ts.a((java.awt.Component) (Object) param1);
             if (!(kkb.field_o == null)) {
                 kkb.field_o.a(-16, (java.awt.Component) (Object) param1);
             }
@@ -92,7 +93,7 @@ final class qa extends rqa {
         }
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_o = null;
         field_p = null;
     }

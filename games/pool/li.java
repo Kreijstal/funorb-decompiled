@@ -44,7 +44,7 @@ final class li {
         return aj.a(true, param1, var4);
     }
 
-    private final void a(boolean param0) {
+    private final void a() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -89,7 +89,7 @@ final class li {
         }
     }
 
-    private final void b(int param0) {
+    private final void b() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -99,14 +99,6 @@ final class li {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        L0: {
-          if (param0 == 2) {
-            break L0;
-          } else {
-            ((li) this).field_j = null;
-            break L0;
-          }
-        }
         var4 = -1640531527;
         var10 = -1640531527;
         var5 = -1640531527;
@@ -116,15 +108,16 @@ final class li {
         var7 = -1640531527;
         var8 = -1640531527;
         var2 = 0;
-        L1: while (true) {
+        L0: while (true) {
           if (var2 >= 4) {
             var2 = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (256 <= var2) {
                 var2 = 0;
-                L3: while (true) {
+                L2: while (true) {
                   if (var2 >= 256) {
-                    this.a(true);
+                    int discarded$1 = 1;
+                    this.a();
                     ((li) this).field_c = 256;
                     return;
                   } else {
@@ -169,7 +162,7 @@ final class li {
                     ((li) this).field_a[6 + var2] = var9;
                     ((li) this).field_a[var2 - -7] = var10;
                     var2 += 8;
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
@@ -214,7 +207,7 @@ final class li {
                 ((li) this).field_a[var2 - -6] = var9;
                 ((li) this).field_a[7 + var2] = var10;
                 var2 += 8;
-                continue L2;
+                continue L1;
               }
             }
           } else {
@@ -243,12 +236,12 @@ final class li {
             var5 = var5 + var10;
             var3 = var3 + var4;
             var2++;
-            continue L1;
+            continue L0;
           }
         }
     }
 
-    final static void a(eg param0, int param1) {
+    final static void a(eg param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -354,7 +347,8 @@ final class li {
             for (var2_int = 0; var2_int < param0.length; var2_int++) {
                 ((li) this).field_j[var2_int] = param0[var2_int];
             }
-            this.b(2);
+            int discarded$0 = 2;
+            this.b();
         } catch (RuntimeException runtimeException) {
             throw wm.a((Throwable) (Object) runtimeException, "li.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }
@@ -365,12 +359,13 @@ final class li {
             return -38;
         }
         if (((li) this).field_c == 0) {
-            this.a(true);
+            int discarded$0 = 1;
+            this.a();
             ((li) this).field_c = 256;
         }
-        int fieldTemp$0 = ((li) this).field_c - 1;
+        int fieldTemp$1 = ((li) this).field_c - 1;
         ((li) this).field_c = ((li) this).field_c - 1;
-        return ((li) this).field_j[fieldTemp$0];
+        return ((li) this).field_j[fieldTemp$1];
     }
 
     final static void a(int param0, al param1) {

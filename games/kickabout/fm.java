@@ -430,7 +430,7 @@ final class fm extends qt {
         }
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         int var1 = 1;
         field_A = null;
         field_C = null;
@@ -457,7 +457,8 @@ final class fm extends qt {
           L0: while (true) {
             if (var5 == null) {
               L1: {
-                this.e(-1);
+                int discarded$9 = -1;
+                this.e();
                 if (vu.field_Ib.field_Db.field_J <= var4) {
                   break L1;
                 } else {
@@ -465,13 +466,13 @@ final class fm extends qt {
                     break L1;
                   } else {
                     L2: {
-                      wh discarded$7 = sp.c(59, 66);
+                      wh discarded$10 = sp.c(59, 66);
                       ((fm) this).field_B = 8;
                       if (var4 <= vu.field_Ib.field_Db.field_J) {
                         break L2;
                       } else {
                         if (-1 == ((fm) this).field_B) {
-                          wh discarded$8 = sp.c(60, -100);
+                          wh discarded$11 = sp.c(60, -100);
                           ((fm) this).field_B = 8;
                           break L2;
                         } else {
@@ -488,7 +489,7 @@ final class fm extends qt {
                   break L3;
                 } else {
                   if (((fm) this).field_B == 0) {
-                    wh discarded$9 = sp.c(60, -100);
+                    wh discarded$12 = sp.c(60, -100);
                     ((fm) this).field_B = 8;
                     break L3;
                   } else {
@@ -520,17 +521,18 @@ final class fm extends qt {
           var5 = (hd) (Object) vu.field_Ib.field_Db.field_jb.g(24009);
           L5: while (true) {
             if (var5 == null) {
-              this.e(-1);
+              int discarded$13 = -1;
+              this.e();
               if (vu.field_Ib.field_Db.field_J > var4) {
                 if (-1 == ((fm) this).field_B) {
                   L6: {
-                    wh discarded$10 = sp.c(59, 66);
+                    wh discarded$14 = sp.c(59, 66);
                     ((fm) this).field_B = 8;
                     if (var4 <= vu.field_Ib.field_Db.field_J) {
                       break L6;
                     } else {
                       if (((fm) this).field_B == 0) {
-                        wh discarded$11 = sp.c(60, -100);
+                        wh discarded$15 = sp.c(60, -100);
                         ((fm) this).field_B = 8;
                         break L6;
                       } else {
@@ -545,7 +547,7 @@ final class fm extends qt {
                       break L7;
                     } else {
                       if (((fm) this).field_B == 0) {
-                        wh discarded$12 = sp.c(60, -100);
+                        wh discarded$16 = sp.c(60, -100);
                         ((fm) this).field_B = 8;
                         break L7;
                       } else {
@@ -560,7 +562,7 @@ final class fm extends qt {
                   if (((fm) this).field_B != 0) {
                     return;
                   } else {
-                    wh discarded$13 = sp.c(60, -100);
+                    wh discarded$17 = sp.c(60, -100);
                     ((fm) this).field_B = 8;
                     return;
                   }
@@ -584,7 +586,7 @@ final class fm extends qt {
         }
     }
 
-    private final void e(int param0) {
+    private final void e() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -724,15 +726,10 @@ final class fm extends qt {
     }
 
     final static int a(byte param0, int param1) {
-        if (param0 != -27) {
-          boolean discarded$2 = fm.a(true);
-          return 88080384 - -(100 * param1 + 500 << 16);
-        } else {
-          return 88080384 - -(100 * param1 + 500 << 16);
-        }
+        return 88080384 - -(100 * param1 + 500 << 16);
     }
 
-    final static gg a(String param0, int param1) {
+    final static gg a(String param0) {
         Object var2 = null;
         gg var3 = null;
         String var4 = null;

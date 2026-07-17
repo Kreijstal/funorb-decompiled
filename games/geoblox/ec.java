@@ -33,7 +33,9 @@ final class ec {
                   }
                 }
               } else {
-                bm.a(var5, 3, -127);
+                int discarded$4 = -127;
+                int discarded$5 = 3;
+                bm.a(var5);
                 var5 = (ai) (Object) nf.field_j.d(1);
                 continue L1;
               }
@@ -253,7 +255,7 @@ final class ec {
         return stackIn_49_0 != 0;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         ph var1 = (ph) (Object) el.field_p.g(0);
         if (!(var1 != null)) {
             jl.a((byte) -122);

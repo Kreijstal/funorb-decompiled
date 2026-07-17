@@ -9,7 +9,7 @@ final class oea extends vg {
     static String field_g;
     static jea field_i;
 
-    final static boolean a(int param0, int param1, byte param2) {
+    final static boolean a(int param0, int param1) {
         int var3 = 0;
         int stackIn_3_0 = 0;
         int stackOut_2_0 = 0;
@@ -29,7 +29,8 @@ final class oea extends vg {
           if (!ooa.a(param1, param0, -68)) {
             var3 = 0;
             if (0 == (55 & param1)) {
-              if (!vua.e(param0, param1, 13650)) {
+              int discarded$7 = 13650;
+              if (!vua.e(param0, param1)) {
                 return false;
               } else {
                 return true;
@@ -50,64 +51,34 @@ final class oea extends vg {
         var9 = TombRacer.field_G ? 1 : 0;
         if (param0 > param3) {
           if (param4 <= param0) {
-            if (param3 >= param4) {
-              vb.a(-922437200, param5, param6, param4, param7, param2, param3, param0, bea.field_l);
-              if (param1 != -8543) {
-                field_i = null;
-                return;
-              } else {
-                return;
-              }
-            } else {
+            if (param3 < param4) {
               vb.a(-922437200, param2, param6, param3, param7, param5, param4, param0, bea.field_l);
-              if (param1 != -8543) {
-                field_i = null;
-                return;
-              } else {
-                return;
-              }
+              return;
+            } else {
+              vb.a(-922437200, param5, param6, param4, param7, param2, param3, param0, bea.field_l);
+              return;
             }
           } else {
             vb.a(-922437200, param7, param6, param3, param2, param5, param0, param4, bea.field_l);
-            if (param1 != -8543) {
-              field_i = null;
-              return;
-            } else {
-              return;
-            }
+            return;
           }
         } else {
-          if (param3 < param4) {
-            vb.a(-922437200, param5, param6, param0, param2, param7, param3, param4, bea.field_l);
-            if (param1 == -8543) {
+          if (param3 >= param4) {
+            if (param4 <= param0) {
+              vb.a(-922437200, param7, param6, param4, param5, param2, param0, param3, bea.field_l);
               return;
             } else {
-              field_i = null;
+              vb.a(-922437200, param2, param6, param0, param5, param7, param4, param3, bea.field_l);
               return;
             }
           } else {
-            if (param4 > param0) {
-              vb.a(-922437200, param2, param6, param0, param5, param7, param4, param3, bea.field_l);
-              if (param1 == -8543) {
-                return;
-              } else {
-                field_i = null;
-                return;
-              }
-            } else {
-              vb.a(-922437200, param7, param6, param4, param5, param2, param0, param3, bea.field_l);
-              if (param1 != -8543) {
-                field_i = null;
-                return;
-              } else {
-                return;
-              }
-            }
+            vb.a(-922437200, param5, param6, param0, param2, param7, param3, param4, bea.field_l);
+            return;
           }
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_i = null;
         field_g = null;
         field_j = null;

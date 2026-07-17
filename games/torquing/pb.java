@@ -367,7 +367,7 @@ final class pb {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_g = null;
         field_c = null;
     }
@@ -708,9 +708,10 @@ final class pb {
         String stackOut_9_2 = null;
         try {
           L0: {
-            var4_int = param3.a(param1, param2);
-            var5 = param3.a(param0, param1 + -103, var4_int);
-            stackOut_0_0 = mi.a(var4_int, param3, var5, 482809644);
+            var4_int = param3.a(-1, param2);
+            var5 = param3.a(param0, -104, var4_int);
+            int discarded$2 = 482809644;
+            stackOut_0_0 = mi.a(var4_int, param3, var5);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -744,7 +745,7 @@ final class pb {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(param1).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(-1).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;

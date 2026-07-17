@@ -109,7 +109,7 @@ final class ai extends r {
         field_o = null;
     }
 
-    final static void a(int param0, int param1, qc param2, boolean param3) {
+    final static void a(int param0, int param1, qc param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -129,15 +129,15 @@ final class ai extends r {
         String stackOut_3_2 = null;
         try {
           mk.field_d = param2;
-          bb.field_C = param0;
-          q.field_d = param1;
+          bb.field_C = 0;
+          q.field_d = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L0: {
             var4 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var4;
-            stackOut_2_1 = new StringBuilder().append("ai.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_2_1 = new StringBuilder().append("ai.C(").append(0).append(44).append(0).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -249,56 +249,64 @@ final class ai extends r {
               db.field_J.a();
               tg.field_i.a();
               gg.field_g = gg.field_g - 1;
-              if (gg.field_g == 0) {
-                gg.field_g = 200;
-                var1 = (pd) (Object) bk.field_d.c((byte) 47);
-                L2: while (true) {
-                  if (var1 == null) {
-                    if (jc.field_c != null) {
-                      var1 = (pd) (Object) jc.field_c.c((byte) 47);
-                      L3: while (true) {
-                        if (var1 == null) {
-                          break L1;
-                        } else {
-                          L4: {
-                            if (!var1.field_n.b((byte) -54)) {
-                              var1.c(-1);
-                              break L4;
-                            } else {
-                              break L4;
-                            }
-                          }
-                          var1 = (pd) (Object) jc.field_c.b((byte) -105);
-                          continue L3;
-                        }
-                      }
-                    } else {
-                      break L1;
-                    }
-                  } else {
-                    L5: {
-                      if (var1.field_n.b((byte) -54)) {
-                        break L5;
-                      } else {
-                        var1.c(-1);
-                        break L5;
-                      }
-                    }
-                    var1 = (pd) (Object) bk.field_d.b((byte) -105);
-                    continue L2;
-                  }
-                }
+              if (param0 == -20846) {
+                break L1;
               } else {
+                ai.c((byte) -57);
                 break L1;
               }
             }
-            L6: {
+            L2: {
+              if (gg.field_g == 0) {
+                gg.field_g = 200;
+                var1 = (pd) (Object) bk.field_d.c((byte) 47);
+                L3: while (true) {
+                  if (var1 == null) {
+                    if (jc.field_c != null) {
+                      var1 = (pd) (Object) jc.field_c.c((byte) 47);
+                      L4: while (true) {
+                        if (var1 == null) {
+                          break L2;
+                        } else {
+                          L5: {
+                            if (!var1.field_n.b((byte) -54)) {
+                              var1.c(-1);
+                              break L5;
+                            } else {
+                              break L5;
+                            }
+                          }
+                          var1 = (pd) (Object) jc.field_c.b((byte) -105);
+                          continue L4;
+                        }
+                      }
+                    } else {
+                      break L2;
+                    }
+                  } else {
+                    L6: {
+                      if (var1.field_n.b((byte) -54)) {
+                        break L6;
+                      } else {
+                        var1.c(param0 + 20845);
+                        break L6;
+                      }
+                    }
+                    var1 = (pd) (Object) bk.field_d.b((byte) -105);
+                    continue L3;
+                  }
+                }
+              } else {
+                break L2;
+              }
+            }
+            L7: {
               if (gg.field_h == null) {
-                break L6;
+                break L7;
               } else {
                 if (!gg.field_h.d(31499)) {
                   ae.field_b = null;
-                  break L6;
+                  break L7;
                 } else {
                   return;
                 }
@@ -309,7 +317,7 @@ final class ai extends r {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw pf.a((Throwable) (Object) var1_ref, "ai.B(" + -20846 + 41);
+          throw pf.a((Throwable) (Object) var1_ref, "ai.B(" + param0 + 41);
         }
     }
 

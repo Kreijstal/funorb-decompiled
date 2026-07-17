@@ -6,7 +6,7 @@ final class im {
     static hr field_a;
     static jn field_b;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
         field_c = null;

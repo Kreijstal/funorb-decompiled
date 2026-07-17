@@ -279,7 +279,8 @@ final class td {
                 L4: {
                   if (kk.field_r < 0) {
                     ig.field_a.field_h = 0;
-                    if (!a.b(1, 10343)) {
+                    int discarded$2 = 10343;
+                    if (!a.b(1)) {
                       stackOut_25_0 = 0;
                       stackIn_26_0 = stackOut_25_0;
                       return stackIn_26_0 != 0;
@@ -293,7 +294,8 @@ final class td {
                     break L4;
                   }
                 }
-                if (!dc.d(2)) {
+                int discarded$3 = 2;
+                if (!dc.d()) {
                   stackOut_30_0 = 0;
                   stackIn_31_0 = stackOut_30_0;
                   return stackIn_31_0 != 0;
@@ -415,7 +417,7 @@ final class td {
         var7 = Lexicominos.field_L ? 1 : 0;
         try {
           L0: {
-            var5_int = param0;
+            var5_int = 0;
             L1: while (true) {
               if (qg.field_b.length <= var5_int) {
                 break L0;
@@ -446,7 +448,7 @@ final class td {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var5;
-            stackOut_8_1 = new StringBuilder().append("td.B(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("td.B(").append(0).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -519,29 +521,25 @@ final class td {
         String stackOut_7_2 = null;
         try {
           L0: {
-            if (param0 == 37) {
-              L1: {
-                var4_float = (float)param2 / 100.0f + (float)(1 + ((td) this).field_h);
-                ((td) this).field_c = var4_float * (float)((td) this).field_d / (float)(((td) this).field_e - -1);
-                if (0 == param2) {
-                  ((td) this).field_f = param1.field_b;
-                  break L1;
-                } else {
-                  ((td) this).field_f = param1.field_e + " - " + param2 + "%";
-                  break L1;
-                }
+            L1: {
+              var4_float = (float)param2 / 100.0f + (float)(1 + ((td) this).field_h);
+              ((td) this).field_c = var4_float * (float)((td) this).field_d / (float)(((td) this).field_e - -1);
+              if (0 == param2) {
+                ((td) this).field_f = param1.field_b;
+                break L1;
+              } else {
+                ((td) this).field_f = param1.field_e + " - " + param2 + "%";
+                break L1;
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var4 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var4;
-            stackOut_6_1 = new StringBuilder().append("td.D(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("td.D(").append(37).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -705,7 +703,7 @@ final class td {
         throw new Error();
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
         field_g = null;
     }

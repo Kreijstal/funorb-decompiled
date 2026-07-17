@@ -6,7 +6,7 @@ final class cb {
     static gk field_a;
     static boolean[] field_c;
 
-    final static void a(String param0, boolean param1) {
+    final static void a(String param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -58,7 +58,7 @@ final class cb {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         field_b = null;

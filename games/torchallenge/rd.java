@@ -12,13 +12,13 @@ final class rd extends da {
     static int[] field_p;
     int field_o;
 
-    final static void a(int param0, byte param1) {
+    final static void a(int param0) {
         ta.field_Ab = ob.field_a[param0];
         ol.field_f = ik.field_c[param0];
         sd.field_g = pk.field_c[param0];
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_p = null;
         field_j = null;
         field_i = null;
@@ -47,28 +47,24 @@ final class rd extends da {
         var11 = TorChallenge.field_F ? 1 : 0;
         try {
           L0: {
-            if (param6 == -1012815519) {
-              var10_int = 0;
-              L1: while (true) {
-                if (param9 <= var10_int) {
-                  break L0;
-                } else {
-                  L2: {
-                    if (!param4) {
-                      break L2;
-                    } else {
-                      param0[var10_int][0] = e.b((byte) 57, param3 * param7 >> 2);
-                      param0[var10_int][1] = e.b((byte) 57, param2 * param5 >> 2);
-                      break L2;
-                    }
+            var10_int = 0;
+            L1: while (true) {
+              if (param9 <= var10_int) {
+                break L0;
+              } else {
+                L2: {
+                  if (!param4) {
+                    break L2;
+                  } else {
+                    param0[var10_int][0] = e.b((byte) 57, 4 * param7 >> 2);
+                    param0[var10_int][1] = e.b((byte) 57, param2 * 4 >> 2);
+                    break L2;
                   }
-                  qg.a(param8 - (param7 >> 2) * (param3 - 4 >> 1) - -param0[var10_int][0] << 4, -((param2 >> 2) * (-4 + param5 >> 1)) + (param1 + param0[var10_int][1]) << 4, 64, 128, qe.field_A);
-                  var10_int++;
-                  continue L1;
                 }
+                qg.a(param8 - (param7 >> 2) * 0 - -param0[var10_int][0] << 4, -((param2 >> 2) * 0) + (param1 + param0[var10_int][1]) << 4, 64, 128, qe.field_A);
+                var10_int++;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -99,7 +95,7 @@ final class rd extends da {
               break L3;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
+          throw oj.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 44 + param2 + 44 + 4 + 44 + param4 + 44 + 4 + 44 + -1012815519 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
         }
     }
 

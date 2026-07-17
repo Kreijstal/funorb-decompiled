@@ -178,7 +178,9 @@ class lb implements wo, fi {
         String stackOut_3_2 = null;
         try {
           L0: {
-            this.a(param2, param1, ((lb) this).field_g, ((lb) this).field_c, 0, param0, 2, 0);
+            int discarded$4 = 0;
+            int discarded$5 = 2;
+            this.a(param2, param1, ((lb) this).field_g, ((lb) this).field_c, 0, param0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -351,7 +353,7 @@ class lb implements wo, fi {
         return stackIn_3_0;
     }
 
-    private final void a(int param0, qm param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final void a(int param0, qm param1, int param2, int param3, int param4, int param5) {
         RuntimeException var9 = null;
         int var9_int = 0;
         int var10 = 0;
@@ -378,71 +380,67 @@ class lb implements wo, fi {
         try {
           L0: {
             qp.a(param0 + param1.field_r, param1.field_j + (param5 + param1.field_f), param0 + param1.field_r + param1.field_g, (byte) 73, param5 - -param1.field_j);
-            if (param6 == 2) {
-              L1: {
-                var9_int = ((lb) this).a(param6 ^ -78, param1);
-                var10 = this.b(115, param1);
-                if (((lb) this).field_f) {
-                  int discarded$1 = ((lb) this).field_p.a(((lb) this).d(param1, param6 ^ -3), this.a(param0, param4, param6 ^ 106, param1), this.a(param5, (byte) 126, 0, param1), var9_int, var10, param3, param2, ((lb) this).field_i, ((lb) this).field_a, ((lb) this).field_j);
-                  break L1;
-                } else {
-                  L2: {
-                    var12 = ((lb) this).field_a;
-                    if (0 != var12) {
-                      if (var12 != 2) {
-                        L3: {
-                          if (var12 != 3) {
-                            if (var12 != 1) {
-                              break L3;
-                            } else {
-                              break L3;
-                            }
+            L1: {
+              var9_int = ((lb) this).a(-80, param1);
+              var10 = this.b(115, param1);
+              if (((lb) this).field_f) {
+                int discarded$1 = ((lb) this).field_p.a(((lb) this).d(param1, -1), this.a(param0, 0, 104, param1), this.a(param5, (byte) 126, 0, param1), var9_int, var10, param3, param2, ((lb) this).field_i, ((lb) this).field_a, ((lb) this).field_j);
+                break L1;
+              } else {
+                L2: {
+                  var12 = ((lb) this).field_a;
+                  if (0 != var12) {
+                    if (var12 != 2) {
+                      L3: {
+                        if (var12 != 3) {
+                          if (var12 != 1) {
+                            break L3;
                           } else {
                             break L3;
                           }
+                        } else {
+                          break L3;
                         }
-                        var11 = (-((lb) this).field_p.field_u + var10 + -((lb) this).field_p.field_o >> 1) + ((lb) this).field_p.field_o;
-                        break L2;
-                      } else {
-                        var11 = var10 + -((lb) this).field_p.field_u;
-                        break L2;
                       }
+                      var11 = (-((lb) this).field_p.field_u + var10 + -((lb) this).field_p.field_o >> 1) + ((lb) this).field_p.field_o;
+                      break L2;
                     } else {
-                      var11 = ((lb) this).field_p.field_o;
+                      var11 = var10 + -((lb) this).field_p.field_u;
                       break L2;
                     }
+                  } else {
+                    var11 = ((lb) this).field_p.field_o;
+                    break L2;
                   }
-                  L4: {
-                    var12 = ((lb) this).field_i;
-                    if (var12 != 0) {
-                      if (var12 == 3) {
-                        break L4;
+                }
+                L4: {
+                  var12 = ((lb) this).field_i;
+                  if (var12 != 0) {
+                    if (var12 == 3) {
+                      break L4;
+                    } else {
+                      if (var12 == 1) {
+                        ((lb) this).field_p.c(((lb) this).d(param1, -1), (var9_int >> 1) + this.a(param0, 0, 115, param1), this.a(param5, (byte) 123, 0, param1) + var11, param3, param2);
+                        break L1;
                       } else {
-                        if (var12 == 1) {
-                          ((lb) this).field_p.c(((lb) this).d(param1, param6 ^ -3), (var9_int >> 1) + this.a(param0, param4, 115, param1), this.a(param5, (byte) 123, 0, param1) + var11, param3, param2);
+                        if (var12 == 2) {
+                          ((lb) this).field_p.b(((lb) this).d(param1, -1), var9_int + this.a(param0, 0, 115, param1), var11 + this.a(param5, (byte) 124, 0, param1), param3, param2);
                           break L1;
                         } else {
-                          if (var12 == 2) {
-                            ((lb) this).field_p.b(((lb) this).d(param1, -1), var9_int + this.a(param0, param4, 115, param1), var11 + this.a(param5, (byte) 124, 0, param1), param3, param2);
-                            break L1;
-                          } else {
-                            break L1;
-                          }
+                          break L1;
                         }
                       }
-                    } else {
-                      break L4;
                     }
+                  } else {
+                    break L4;
                   }
-                  ((lb) this).field_p.a(((lb) this).d(param1, -1), this.a(param0, param4, 127, param1), this.a(param5, (byte) 123, 0, param1) - -var11, param3, param2);
-                  break L1;
                 }
+                ((lb) this).field_p.a(((lb) this).d(param1, -1), this.a(param0, 0, 127, param1), this.a(param5, (byte) 123, 0, param1) - -var11, param3, param2);
+                break L1;
               }
-              lg.a(1);
-              break L0;
-            } else {
-              return;
             }
+            lg.a(1);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -472,7 +470,7 @@ class lb implements wo, fi {
               break L5;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + 0 + 41);
+          throw dn.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 44 + param2 + 44 + param3 + 44 + 0 + 44 + param5 + 44 + 2 + 44 + 0 + 41);
         }
     }
 
@@ -867,7 +865,7 @@ class lb implements wo, fi {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         int var1 = 0;
         field_l = null;

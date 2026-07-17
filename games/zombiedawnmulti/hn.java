@@ -198,7 +198,7 @@ final class hn {
         return stackIn_6_0;
     }
 
-    final static ii a(byte param0) {
+    final static ii a() {
         return (ii) (Object) new aa();
     }
 

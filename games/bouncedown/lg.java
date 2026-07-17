@@ -10,18 +10,13 @@ final class lg {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = -25;
         field_c = null;
         field_b = null;
     }
 
     final static void a(boolean param0, boolean param1) {
-        if (param0) {
-            field_a = 117;
-            pb.field_k.a(param1, (byte) -112);
-            return;
-        }
         pb.field_k.a(param1, (byte) -112);
     }
 
@@ -58,7 +53,7 @@ final class lg {
                     var4 = var2;
                     var3 = var2.indexOf('?');
                     var4 = "reload.ws";
-                    if (param0 > var3) {
+                    if (0 > var3) {
                       break L1;
                     } else {
                       var4 = var4 + var2.substring(var3);
@@ -66,7 +61,8 @@ final class lg {
                     }
                   }
                   var5 = new java.net.URL(param1.getCodeBase(), var4);
-                  param1.getAppletContext().showDocument(ag.a(param1, var5, false), "_self");
+                  int discarded$2 = 0;
+                  param1.getAppletContext().showDocument(ag.a(param1, var5), "_self");
                   break L0;
                 }
               } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -81,7 +77,7 @@ final class lg {
               L2: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_6_0 = (RuntimeException) var2_ref2;
-                stackOut_6_1 = new StringBuilder().append("lg.B(").append(param0).append(44);
+                stackOut_6_1 = new StringBuilder().append("lg.B(").append(0).append(44);
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;

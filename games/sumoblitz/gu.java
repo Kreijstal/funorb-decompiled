@@ -154,7 +154,8 @@ final class gu extends ka {
                   }
                 }
               }
-              ((gu) this).field_k = new lr(om.a(((gu) this).field_c, ((gu) this).field_e, (byte) -50));
+              int discarded$1 = -50;
+              ((gu) this).field_k = new lr(om.a(((gu) this).field_c, ((gu) this).field_e));
               break L3;
             }
             L5: {
@@ -233,7 +234,7 @@ final class gu extends ka {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_h = null;
     }
 

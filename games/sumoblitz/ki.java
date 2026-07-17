@@ -573,7 +573,8 @@ final class ki {
             if (ah.field_g == null) {
                 return true;
             }
-            kf.a((byte) 111);
+            int discarded$1 = 111;
+            kf.a();
             return true;
         }
         return false;
@@ -709,7 +710,8 @@ final class ki {
         if (((ki) this).field_a) {
             ((ki) this).field_d[param0] = (Object) (Object) ((ki) this).field_e.a(param0, false);
         } else {
-            ((ki) this).field_d[param0] = aj.a((byte) -121, ((ki) this).field_e.a(param0, false), false);
+            int discarded$0 = 0;
+            ((ki) this).field_d[param0] = aj.a((byte) -121, ((ki) this).field_e.a(param0, false));
         }
     }
 
@@ -722,7 +724,8 @@ final class ki {
         Object var9 = null;
         int var9_int = 0;
         byte[] var9_array = null;
-        int var10 = 0;
+        int var10_int = 0;
+        byte[] var10 = null;
         RuntimeException var11_ref_RuntimeException = null;
         int var11 = 0;
         int var12 = 0;
@@ -742,6 +745,7 @@ final class ki {
         byte[] var25 = null;
         fs var26 = null;
         byte[] var27 = null;
+        byte[] var28 = null;
         fs var29 = null;
         int[] var30 = null;
         byte[][] var31 = null;
@@ -749,11 +753,13 @@ final class ki {
         int[] var34 = null;
         byte[] var35 = null;
         byte[] var36 = null;
+        byte[] var37 = null;
         int[] var38 = null;
         byte[][] var39 = null;
         int[] var41 = null;
         byte[] var42 = null;
         byte[] var43 = null;
+        byte[] var44 = null;
         int[] var45 = null;
         byte[][] var46 = null;
         int[] var48 = null;
@@ -841,14 +847,14 @@ final class ki {
                     } else {
                       L4: {
                         if (var6 == null) {
-                          var10 = var9_int;
+                          var10_int = var9_int;
                           break L4;
                         } else {
-                          var10 = var48[var9_int];
+                          var10_int = var48[var9_int];
                           break L4;
                         }
                       }
-                      if (null != var7[var10]) {
+                      if (null != var7[var10_int]) {
                         var9_int++;
                         continue L2;
                       } else {
@@ -886,7 +892,8 @@ final class ki {
                               }
                             }
                           }
-                          var49 = ab.a(true, ((ki) this).field_d[param3], 0);
+                          int discarded$4 = 0;
+                          var49 = ab.a(true, ((ki) this).field_d[param3]);
                           var42 = var49;
                           var35 = var42;
                           var25 = var35;
@@ -896,7 +903,8 @@ final class ki {
                           break L5;
                         }
                       }
-                      var9_array = ab.a(false, ((ki) this).field_d[param3], 0);
+                      int discarded$5 = 0;
+                      var9_array = ab.a(false, ((ki) this).field_d[param3]);
                       break L5;
                     }
                     try {
@@ -907,6 +915,10 @@ final class ki {
                         var27 = var36;
                         var23 = var27;
                         var51 = var23;
+                        var44 = var51;
+                        var37 = var44;
+                        var28 = var37;
+                        var10 = var28;
                         break L8;
                       }
                     } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1095,7 +1107,8 @@ final class ki {
                                           }
                                           L26: {
                                             if (((ki) this).field_c == 0) {
-                                              var7[var18] = aj.a((byte) -119, var53[var17], false);
+                                              int discarded$6 = 0;
+                                              var7[var18] = aj.a((byte) -119, var53[var17]);
                                               break L26;
                                             } else {
                                               var7[var18] = (Object) (Object) var53[var17];
@@ -1159,7 +1172,8 @@ final class ki {
                           }
                         }
                         if (0 == ((ki) this).field_c) {
-                          var7[var11] = aj.a((byte) -119, var51, false);
+                          int discarded$7 = 0;
+                          var7[var11] = aj.a((byte) -119, var10);
                           break L12;
                         } else {
                           var7[var11] = (Object) (Object) var50;
@@ -1346,7 +1360,7 @@ final class ki {
         String stackOut_29_2 = null;
         try {
           L0: {
-            var5_int = 83 / ((param1 - 45) / 38);
+            var5_int = 83;
             if (this.a(param0, param3, (byte) -79)) {
               L1: {
                 L2: {
@@ -1375,7 +1389,8 @@ final class ki {
               if (((ki) this).field_g[param0] != null) {
                 L3: {
                   if (null != ((ki) this).field_g[param0][param3]) {
-                    var8 = ab.a(false, ((ki) this).field_g[param0][param3], 0);
+                    int discarded$1 = 0;
+                    var8 = ab.a(false, ((ki) this).field_g[param0][param3]);
                     var6 = (Object) (Object) var8;
                     if (var8 == null) {
                       throw new RuntimeException("");
@@ -1425,7 +1440,7 @@ final class ki {
           L5: {
             var5 = decompiledCaughtException;
             stackOut_28_0 = (RuntimeException) var5;
-            stackOut_28_1 = new StringBuilder().append("ki.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_28_1 = new StringBuilder().append("ki.B(").append(param0).append(44).append(104).append(44);
             stackIn_30_0 = stackOut_28_0;
             stackIn_30_1 = stackOut_28_1;
             stackIn_29_0 = stackOut_28_0;
@@ -1673,7 +1688,7 @@ final class ki {
         return stackIn_9_0 != 0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_j = null;
     }

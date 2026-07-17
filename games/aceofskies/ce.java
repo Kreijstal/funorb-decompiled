@@ -157,7 +157,7 @@ final class ce extends ab implements dr, dn {
         return ((ce) this).field_v.field_f;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -224,16 +224,16 @@ final class ce extends ab implements dr, dn {
                         var8_int = 1;
                         L5: while (true) {
                           if (var8_int >= var5) {
-                            String[][] dupTemp$6 = new String[3][var6];
-                            var4.field_e = dupTemp$6;
-                            var8 = dupTemp$6;
+                            String[][] dupTemp$10 = new String[3][var6];
+                            var4.field_e = dupTemp$10;
+                            var8 = dupTemp$10;
                             var9 = new String[3][var6];
-                            long[][] dupTemp$7 = new long[3][var6];
-                            var4.field_f = dupTemp$7;
-                            var10 = dupTemp$7;
-                            int[][] dupTemp$8 = new int[3][var6 * var7];
-                            var4.field_h = dupTemp$8;
-                            var11 = dupTemp$8;
+                            long[][] dupTemp$11 = new long[3][var6];
+                            var4.field_f = dupTemp$11;
+                            var10 = dupTemp$11;
+                            int[][] dupTemp$12 = new int[3][var6 * var7];
+                            var4.field_h = dupTemp$12;
+                            var11 = dupTemp$12;
                             var12 = 0;
                             var13 = 0;
                             var14 = 0;
@@ -266,9 +266,9 @@ final class ce extends ab implements dr, dn {
                                         if (var7 <= var25) {
                                           break L7;
                                         } else {
-                                          int incrementValue$9 = var15;
+                                          int incrementValue$13 = var15;
                                           var15++;
-                                          var11[0][incrementValue$9] = var28.a((byte) 124);
+                                          var11[0][incrementValue$13] = var28.a((byte) 124);
                                           var25++;
                                           continue L8;
                                         }
@@ -279,7 +279,8 @@ final class ce extends ab implements dr, dn {
                                     if (var21 == null) {
                                       break L9;
                                     } else {
-                                      if (!fd.a(var21, (byte) -6)) {
+                                      int discarded$14 = -6;
+                                      if (!fd.a(var21)) {
                                         break L9;
                                       } else {
                                         var8[1][var13] = fj.field_a;
@@ -292,9 +293,9 @@ final class ce extends ab implements dr, dn {
                                           if (var7 <= var25) {
                                             break L9;
                                           } else {
-                                            int incrementValue$10 = var16;
+                                            int incrementValue$15 = var16;
                                             var16++;
-                                            var11[1][incrementValue$10] = var28.a((byte) 114);
+                                            var11[1][incrementValue$15] = var28.a((byte) 114);
                                             var25++;
                                             continue L10;
                                           }
@@ -318,9 +319,9 @@ final class ce extends ab implements dr, dn {
                                           if (var7 <= var25) {
                                             break L11;
                                           } else {
-                                            int incrementValue$11 = var17;
+                                            int incrementValue$16 = var17;
                                             var17++;
-                                            var11[2][incrementValue$11] = var28.a((byte) 113);
+                                            var11[2][incrementValue$16] = var28.a((byte) 113);
                                             var25++;
                                             continue L12;
                                           }
@@ -357,7 +358,8 @@ final class ce extends ab implements dr, dn {
                     var4.c(-124);
                     break L1;
                   } else {
-                    te.b(true);
+                    int discarded$17 = 1;
+                    te.b();
                     return;
                   }
                 }
@@ -384,13 +386,15 @@ final class ce extends ab implements dr, dn {
                       var6_ref_ga.c(-127);
                       break L1;
                     } else {
-                      te.b(true);
+                      int discarded$18 = 1;
+                      te.b();
                       return;
                     }
                   }
                 } else {
                   v.a("HS1: " + dl.k((byte) 65), (byte) -52, (Throwable) null);
-                  te.b(true);
+                  int discarded$19 = 1;
+                  te.b();
                   break L1;
                 }
               }
@@ -482,14 +486,15 @@ final class ce extends ab implements dr, dn {
         }
     }
 
-    final static boolean g(int param0) {
+    final static boolean g() {
         return nl.field_s;
     }
 
     private final void d(byte param0) {
         L0: {
           L1: {
-            if (fh.e(31574)) {
+            int discarded$4 = 31574;
+            if (fh.e()) {
               break L1;
             } else {
               if (((ce) this).field_v.field_f.length() <= 0) {
@@ -549,11 +554,13 @@ final class ce extends ab implements dr, dn {
                           pj.b((byte) -75);
                           break L2;
                         } else {
-                          rb.i(-112);
+                          int discarded$2 = -112;
+                          rb.i();
                           break L2;
                         }
                       } else {
-                        ps.b(17);
+                        int discarded$3 = 17;
+                        ps.b();
                         break L2;
                       }
                     } else {
@@ -1101,13 +1108,10 @@ final class ce extends ab implements dr, dn {
     }
 
     final static ll[] b(int param0, int param1, int param2, int param3, int param4) {
-        if (param2 != -29003) {
-            field_t = null;
-        }
-        return qk.a(3, 1, param3, 0, 1, 1, param1, -128, param0);
+        return qk.a(3, 1, 0, 0, 1, 1, 65793, -128, 0);
     }
 
-    public static void i(int param0) {
+    public static void i() {
         field_t = null;
         int var1 = -76;
     }

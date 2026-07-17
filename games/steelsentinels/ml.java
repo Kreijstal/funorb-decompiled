@@ -24,7 +24,7 @@ final class ml {
                 if (var4 == null) {
                   break L0;
                 } else {
-                  r.a(27153, var4, 7);
+                  r.a(27153, var4, param1);
                   var4 = (ud) (Object) uf.field_f.a((byte) -36);
                   continue L1;
                 }
@@ -36,7 +36,7 @@ final class ml {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var2, "ml.D(" + param0 + 44 + 7 + 41);
+          throw ci.a((Throwable) (Object) var2, "ml.D(" + param0 + 44 + param1 + 41);
         }
     }
 
@@ -74,23 +74,11 @@ final class ml {
         field_d = null;
     }
 
-    final static void a(byte param0, int param1) {
-        kj var2 = null;
-        Object var3 = null;
-        var2 = mm.field_g;
-        if (param0 != 12) {
-          var3 = null;
-          ml.a(-28, (cf) null, 56);
-          var2.a(param1, (byte) -117);
-          var2.a((byte) 118, 1);
-          var2.a((byte) 125, 3);
-          return;
-        } else {
-          var2.a(param1, (byte) -117);
-          var2.a((byte) 118, 1);
-          var2.a((byte) 125, 3);
-          return;
-        }
+    final static void a() {
+        kj var2 = mm.field_g;
+        var2.a(11, (byte) -117);
+        var2.a((byte) 118, 1);
+        var2.a((byte) 125, 3);
     }
 
     static {

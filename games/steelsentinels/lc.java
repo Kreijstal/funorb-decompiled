@@ -94,15 +94,12 @@ final class lc {
         }
     }
 
-    final static void a(int param0) {
-        if (param0 != 0) {
-            field_d = null;
-        }
+    final static void a() {
         ma.a(true, (byte) -99, kf.field_o, bl.field_f);
         nm.field_p = true;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_c = null;
         field_a = null;
         field_b = null;

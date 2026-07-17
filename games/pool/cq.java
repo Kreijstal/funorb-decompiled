@@ -10,7 +10,7 @@ final class cq {
     static int field_c;
     static String field_f;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
         field_d = null;
         field_f = null;
@@ -18,11 +18,8 @@ final class cq {
         field_e = null;
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void a(boolean param0) {
         ig.field_j.a(param0, (byte) 118);
-        if (param1 < 27) {
-            field_a = -63;
-        }
     }
 
     static int a(int param0, int param1) {
@@ -30,19 +27,17 @@ final class cq {
     }
 
     final static dd[] a(int param0, int param1, int param2, int param3) {
+        int var5 = 0;
         int var6 = Pool.field_O;
         dd[] var7 = new dd[9];
         dd[] var4 = var7;
-        var7[0] = ad.a(param2, param0, 7);
-        int var5 = 1;
-        if (param1 != 4578) {
-            cq.a(true, -89);
-        }
-        while (var5 < 9) {
+        int discarded$0 = 7;
+        var7[0] = ad.a(param2, 1);
+        for (var5 = 1; var5 < 9; var5++) {
             var4[var5] = var4[0];
-            var5++;
         }
-        var4[4] = ad.a(param3, 64, param1 + -4571);
+        int discarded$1 = 7;
+        var4[4] = ad.a(param3, 64);
         return var4;
     }
 
@@ -54,8 +49,8 @@ final class cq {
           return -1;
         } else {
           L0: {
-            var11 = lh.a(param8, (byte) -75, (long)(param0 + ((param1 << 16) + -param3)));
-            var12 = lh.a(param8, (byte) -81, (long)(-param3 + (-(param1 << 16) + param0)));
+            var11 = lh.a(param8, (byte) -75, (long)(param0 + (524288 + -param3)));
+            var12 = lh.a(param8, (byte) -81, (long)(-param3 + (-524288 + param0)));
             if (0 >= var11) {
               break L0;
             } else {
@@ -129,16 +124,13 @@ final class cq {
               }
             }
           }
-          if (param2 <= -61) {
-            return -1;
-          } else {
-            return -43;
-          }
+          return -1;
         }
     }
 
     final static void a(int param0) {
-        al.i(-27397);
+        int discarded$0 = -27397;
+        al.i();
         so.field_g = new hq[3];
         so.field_g[0] = new hq(jj.field_Q, -1, 3);
         so.field_g[0].field_d.b((byte) 110, (ma) (Object) new bk(fn.field_Ob, 100, 0));
@@ -154,26 +146,21 @@ final class cq {
         hq dupTemp$1 = new hq(fc.field_e, 2, 0);
         so.field_g[1] = dupTemp$1;
         so.field_g[0].field_j = dupTemp$1;
-        if (param0 == 4313) {
-          so.field_g[1].field_d.b((byte) -59, (ma) (Object) new bk(qq.field_yb, 40, 13, 128));
-          so.field_g[1].field_d.b((byte) -43, (ma) (Object) new bk(dr.field_e, 1, 8, 0));
-          so.field_g[1].field_d.b((byte) 99, (ma) (Object) new bk(ea.field_m, 1, 9, 0));
-          so.field_g[1].field_d.b((byte) 87, (ma) (Object) new bk(gn.field_a, 7, 11, 0));
-          so.field_g[1].field_d.b((byte) 99, (ma) (Object) new bk(lk.field_r, 1, 12, 0));
-          so.field_g[1].field_d.b((byte) -6, (ma) (Object) new bk(g.field_w, 1, -1, 0));
-          so.field_g[1].a(false);
-          so.field_g[2] = new hq(ep.field_G, 2, 1);
-          so.field_g[2].field_d.b((byte) -90, (ma) (Object) new bk(ca.field_m, 40, 13, 128));
-          so.field_g[2].field_d.b((byte) -99, (ma) (Object) new bk(cf.field_i, 1, 8, 0));
-          so.field_g[2].field_d.b((byte) -21, (ma) (Object) new bk(eq.field_N, 1, 14, 0));
-          so.field_g[2].field_d.b((byte) -9, (ma) (Object) new bk(pl.field_c, 1, 15, 0));
-          so.field_g[2].field_d.b((byte) -62, (ma) (Object) new bk(ui.field_N, 1, 16, 0));
-          so.field_g[2].field_d.b((byte) 92, (ma) (Object) new bk(rc.field_a, 1, -1, 0));
-          so.field_g[2].a(false);
-          return;
-        } else {
-          return;
-        }
+        so.field_g[1].field_d.b((byte) -59, (ma) (Object) new bk(qq.field_yb, 40, 13, 128));
+        so.field_g[1].field_d.b((byte) -43, (ma) (Object) new bk(dr.field_e, 1, 8, 0));
+        so.field_g[1].field_d.b((byte) 99, (ma) (Object) new bk(ea.field_m, 1, 9, 0));
+        so.field_g[1].field_d.b((byte) 87, (ma) (Object) new bk(gn.field_a, 7, 11, 0));
+        so.field_g[1].field_d.b((byte) 99, (ma) (Object) new bk(lk.field_r, 1, 12, 0));
+        so.field_g[1].field_d.b((byte) -6, (ma) (Object) new bk(g.field_w, 1, -1, 0));
+        so.field_g[1].a(false);
+        so.field_g[2] = new hq(ep.field_G, 2, 1);
+        so.field_g[2].field_d.b((byte) -90, (ma) (Object) new bk(ca.field_m, 40, 13, 128));
+        so.field_g[2].field_d.b((byte) -99, (ma) (Object) new bk(cf.field_i, 1, 8, 0));
+        so.field_g[2].field_d.b((byte) -21, (ma) (Object) new bk(eq.field_N, 1, 14, 0));
+        so.field_g[2].field_d.b((byte) -9, (ma) (Object) new bk(pl.field_c, 1, 15, 0));
+        so.field_g[2].field_d.b((byte) -62, (ma) (Object) new bk(ui.field_N, 1, 16, 0));
+        so.field_g[2].field_d.b((byte) 92, (ma) (Object) new bk(rc.field_a, 1, -1, 0));
+        so.field_g[2].a(false);
     }
 
     final static eg a(int param0, int param1, int param2, eg param3, int param4) {

@@ -10,20 +10,16 @@ final class am {
     static cn field_a;
     static ad field_b;
 
-    final static void b(int param0) {
-        if (param0 <= 34) {
-            Object var2 = null;
-            StringBuilder discarded$0 = am.a((StringBuilder) null, 'ﾍ', -124, false);
-        }
+    final static void b() {
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_f = null;
         field_b = null;
     }
 
-    final static StringBuilder a(StringBuilder param0, char param1, int param2, boolean param3) {
+    final static StringBuilder a(StringBuilder param0, char param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -58,7 +54,7 @@ final class am {
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
-                param0.setCharAt(var5, param1);
+                param0.setCharAt(var5, ' ');
                 var5++;
                 continue L1;
               }
@@ -92,7 +88,7 @@ final class am {
               break L2;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 44 + param2 + 44 + 0 + 41);
+          throw vk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + 32 + 44 + param2 + 44 + 0 + 41);
         }
         return stackIn_7_0;
     }

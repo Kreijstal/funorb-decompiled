@@ -19,28 +19,21 @@ final class fga extends kj {
         return ((fga) this).field_g.b(false);
     }
 
-    final static void a(int param0, byte param1) {
+    final static void a() {
         try {
             Throwable var2 = null;
             Throwable decompiledCaughtException = null;
-            L0: {
-              if (param1 == -2) {
-                break L0;
-              } else {
-                field_f = -112;
-                break L0;
-              }
-            }
             try {
-              L1: {
-                Object discarded$1 = ac.a(nia.d(param1 + -31766), "resizing", new Object[1], (byte) 73);
-                break L1;
+              L0: {
+                int discarded$2 = 73;
+                Object discarded$3 = ac.a(nia.d(-31768), "resizing", new Object[1]);
+                break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              L2: {
+              L1: {
                 var2 = decompiledCaughtException;
-                break L2;
+                break L1;
               }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {

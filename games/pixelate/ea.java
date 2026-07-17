@@ -11,7 +11,7 @@ final class ea {
         throw new IllegalStateException();
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_b = null;
     }
 

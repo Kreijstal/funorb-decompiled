@@ -38,7 +38,7 @@ final class th {
               }
             }
             L2: {
-              if (param0 == var2_int) {
+              if (2 == var2_int) {
                 param1 = "<img=1>" + param1;
                 break L2;
               } else {
@@ -54,7 +54,7 @@ final class th {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var2;
-            stackOut_8_1 = new StringBuilder().append("th.B(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("th.B(").append(2).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -82,7 +82,7 @@ final class th {
         return stackIn_7_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }
@@ -94,7 +94,7 @@ final class th {
         int stackOut_6_0 = 0;
         int stackOut_3_0 = 0;
         int stackOut_2_0 = 0;
-        param0 = param0 & param1;
+        param0 = param0 & 8191;
         if (-4097 < param0) {
           L0: {
             if (-2049 <= param0) {

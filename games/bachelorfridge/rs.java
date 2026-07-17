@@ -58,27 +58,20 @@ final class rs {
                 }
               }
               L3: {
-                if (param0) {
-                  break L3;
-                } else {
-                  field_h = null;
-                  break L3;
-                }
-              }
-              L4: {
                 if (nu.field_b) {
                   nu.field_b = false;
                   gs.field_f = null;
                   dj.field_c = null;
                   sna.field_fb = null;
-                  baa.e(17035);
+                  int discarded$2 = 17035;
+                  baa.e();
                   iba.d(34);
-                  break L4;
+                  break L3;
                 } else {
-                  break L4;
+                  break L3;
                 }
               }
-              L5: {
+              L4: {
                 if (ai.field_c) {
                   tla.field_q = new eaa();
                   var13 = sg.field_q;
@@ -88,7 +81,7 @@ final class rs {
                   var4 = var7;
                   var1_array = var4;
                   var2 = 0;
-                  L6: while (true) {
+                  L5: while (true) {
                     if (var2 >= 8) {
                       var14 = nga.field_i;
                       var12 = var14;
@@ -98,77 +91,78 @@ final class rs {
                       var1_array = var5;
                       var6 = 0;
                       var2 = var6;
-                      L7: while (true) {
+                      L6: while (true) {
                         if (var6 >= 8) {
                           ai.field_c = false;
-                          break L5;
+                          break L4;
                         } else {
                           var14[var6] = 0;
                           var6++;
-                          continue L7;
+                          continue L6;
                         }
                       }
                     } else {
                       var13[var2] = 0;
                       var2++;
-                      continue L6;
+                      continue L5;
                     }
                   }
                 } else {
-                  break L5;
+                  break L4;
+                }
+              }
+              L7: {
+                if (ge.field_D) {
+                  ih.d((byte) -109);
+                  int discarded$3 = 46;
+                  oga.e();
+                  eo.c(106);
+                  ge.field_D = false;
+                  break L7;
+                } else {
+                  break L7;
                 }
               }
               L8: {
-                if (ge.field_D) {
-                  ih.d((byte) -109);
-                  oga.e(46);
-                  eo.c(106);
-                  ge.field_D = false;
-                  break L8;
-                } else {
-                  break L8;
-                }
-              }
-              L9: {
                 if (iba.field_s == 12) {
                   tla.d(-89);
-                  break L9;
+                  break L8;
                 } else {
                   if (iba.field_s == 0) {
                     tla.d(-89);
-                    break L9;
+                    break L8;
                   } else {
                     if (iba.field_s != -2) {
-                      break L9;
+                      break L8;
                     } else {
                       tla.d(-89);
-                      break L9;
+                      break L8;
                     }
                   }
                 }
               }
-              L10: {
-                L11: {
+              L9: {
+                L10: {
                   if (iba.field_s == 0) {
-                    break L11;
+                    break L10;
                   } else {
                     if (kaa.field_m != -3) {
-                      break L11;
+                      break L10;
                     } else {
                       if (iba.field_s == 12) {
-                        break L11;
+                        break L10;
                       } else {
                         ena.a((byte) -44, wha.field_a);
-                        break L10;
+                        break L9;
                       }
                     }
                   }
                 }
                 if (kaa.field_m != -1) {
-                  break L10;
+                  break L9;
                 } else {
                   hba.a(true, wha.field_a);
-                  break L10;
+                  break L9;
                 }
               }
               break L0;
@@ -179,22 +173,19 @@ final class rs {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var1, "rs.D(" + param0 + 41);
+          throw pe.a((Throwable) (Object) var1, "rs.D(" + 1 + 41);
         }
     }
 
-    final static boolean b(boolean param0) {
+    final static boolean b() {
         return null != pja.field_e && null != pja.field_e.h(0);
     }
 
     final static vr a(int param0, boolean param1, int param2, boolean param3, int param4) {
-        if (param2 != 0) {
-            rs.a(false);
-        }
-        return qma.a(param3, 2097152, false, param0, param1, param4);
+        return qma.a(true, 2097152, false, 1, false, param4);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_g = null;
         field_h = null;

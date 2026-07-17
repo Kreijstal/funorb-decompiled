@@ -199,7 +199,7 @@ final class oq extends rg implements dn {
             ((oq) this).field_n = ((oq) this).field_n + 38;
             var4.a(30, 15, var5, -16 + (-14 + ((oq) this).field_q), (byte) 125);
             ((oq) this).a((ea) (Object) var4, 1);
-            var6 = -20 / ((param1 - 1) / 59);
+            var6 = 20;
             ((oq) this).a(false);
             stackOut_0_0 = (mi) var4;
             stackIn_1_0 = stackOut_0_0;
@@ -235,7 +235,7 @@ final class oq extends rg implements dn {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(param1).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(-83).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;

@@ -67,22 +67,22 @@ final class qd extends hg {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_n = null;
     }
 
     final static String a(boolean param0, boolean param1, byte param2, boolean param3) {
         int var4 = 0;
-        var4 = 0;
-        if (param2 == -8) {
-          L0: {
-            if (param0) {
-              var4 += 4;
-              break L0;
-            } else {
-              break L0;
-            }
+        L0: {
+          var4 = 0;
+          if (param0) {
+            var4 += 4;
+            break L0;
+          } else {
+            break L0;
           }
+        }
+        if (!param3) {
           if (param1) {
             var4++;
             return fd.field_f[var4];
@@ -90,15 +90,7 @@ final class qd extends hg {
             return fd.field_f[var4];
           }
         } else {
-          L1: {
-            field_l = false;
-            if (param0) {
-              var4 += 4;
-              break L1;
-            } else {
-              break L1;
-            }
-          }
+          var4 += 2;
           if (!param1) {
             return fd.field_f[var4];
           } else {
@@ -108,7 +100,7 @@ final class qd extends hg {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         int var1 = 0;
         int var2 = 0;
         var2 = EscapeVector.field_A;
@@ -121,18 +113,21 @@ final class qd extends hg {
               dj.field_b = cf.field_a;
               dj.field_b = s.a((byte) -31, new CharSequence[3]);
               be.field_b.o(-18861);
-              cg.d(32);
+              int discarded$5 = 32;
+              cg.d();
               return;
             } else {
               dj.field_b = r.a(mi.field_j, -63, new String[1]);
               dj.field_b = s.a((byte) -31, new CharSequence[3]);
               be.field_b.o(-18861);
-              cg.d(32);
+              int discarded$6 = 32;
+              cg.d();
               return;
             }
           } else {
             be.field_b.o(-18861);
-            cg.d(32);
+            int discarded$7 = 32;
+            cg.d();
             return;
           }
         } else {

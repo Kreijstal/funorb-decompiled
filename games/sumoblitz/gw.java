@@ -96,8 +96,10 @@ final class gw extends nt {
         ((gw) this).field_z = param5;
         ((gw) this).field_s = param9;
         ((gw) this).field_u = param7;
-        ((gw) this).field_y = fi.a(2048, ki.field_b, (byte) -96) + 512;
-        ((gw) this).field_D = fi.a(128, ki.field_b, (byte) -96);
+        int discarded$0 = -96;
+        ((gw) this).field_y = fi.a(2048, ki.field_b) + 512;
+        int discarded$1 = -96;
+        ((gw) this).field_D = fi.a(128, ki.field_b);
     }
 
     final boolean a(int param0) {
@@ -111,7 +113,7 @@ final class gw extends nt {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_C = null;
         field_A = null;
     }

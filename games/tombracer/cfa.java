@@ -31,12 +31,14 @@ final class cfa implements dv {
               ((cfa) this).field_i = null;
               ((cfa) this).field_a = 0;
               ((cfa) this).field_d = ((cfa) this).field_d + 1;
-              this.d(-14447);
+              int discarded$21 = -14447;
+              this.d();
               return;
             } else {
               ((cfa) this).field_a = 0;
               ((cfa) this).field_d = ((cfa) this).field_d + 1;
-              this.d(-14447);
+              int discarded$22 = -14447;
+              this.d();
               return;
             }
           } else {
@@ -67,17 +69,19 @@ final class cfa implements dv {
                           ((cfa) this).field_i = null;
                           ((cfa) this).field_a = 0;
                           ((cfa) this).field_d = ((cfa) this).field_d + 1;
-                          this.d(-14447);
+                          int discarded$23 = -14447;
+                          this.d();
                           return;
                         } else {
                           ((cfa) this).field_a = 0;
                           ((cfa) this).field_d = ((cfa) this).field_d + 1;
-                          this.d(-14447);
+                          int discarded$24 = -14447;
+                          this.d();
                           return;
                         }
                       } else {
                         L3: {
-                          fla discarded$6 = ((cfa) this).field_g.a(new fm(var3, 0, 0, 0), -58);
+                          fla discarded$25 = ((cfa) this).field_g.a(new fm(var3, 0, 0, 0), -58);
                           ((cfa) this).field_j.field_H[((cfa) this).field_h].b(18202625, ((cfa) this).field_i[param0]);
                           ((cfa) this).field_i[param0] = -1;
                           ((cfa) this).field_f = ((cfa) this).field_f + 1;
@@ -97,7 +101,8 @@ final class cfa implements dv {
                         }
                         ((cfa) this).field_a = 0;
                         ((cfa) this).field_d = ((cfa) this).field_d + 1;
-                        this.d(-14447);
+                        int discarded$26 = -14447;
+                        this.d();
                         return;
                       }
                     }
@@ -118,17 +123,19 @@ final class cfa implements dv {
                     ((cfa) this).field_i = null;
                     ((cfa) this).field_a = 0;
                     ((cfa) this).field_d = ((cfa) this).field_d + 1;
-                    this.d(-14447);
+                    int discarded$27 = -14447;
+                    this.d();
                     return;
                   } else {
                     ((cfa) this).field_a = 0;
                     ((cfa) this).field_d = ((cfa) this).field_d + 1;
-                    this.d(-14447);
+                    int discarded$28 = -14447;
+                    this.d();
                     return;
                   }
                 } else {
                   L6: {
-                    fla discarded$7 = ((cfa) this).field_g.a(new fm(var3, 0, 0, 0), -58);
+                    fla discarded$29 = ((cfa) this).field_g.a(new fm(var3, 0, 0, 0), -58);
                     ((cfa) this).field_j.field_H[((cfa) this).field_h].b(18202625, ((cfa) this).field_i[param0]);
                     ((cfa) this).field_i[param0] = -1;
                     ((cfa) this).field_f = ((cfa) this).field_f + 1;
@@ -142,12 +149,14 @@ final class cfa implements dv {
                     ((cfa) this).field_i = null;
                     ((cfa) this).field_a = 0;
                     ((cfa) this).field_d = ((cfa) this).field_d + 1;
-                    this.d(-14447);
+                    int discarded$30 = -14447;
+                    this.d();
                     return;
                   } else {
                     ((cfa) this).field_a = 0;
                     ((cfa) this).field_d = ((cfa) this).field_d + 1;
-                    this.d(-14447);
+                    int discarded$31 = -14447;
+                    this.d();
                     return;
                   }
                 }
@@ -166,7 +175,7 @@ final class cfa implements dv {
                         if (((cfa) this).field_g == null) {
                           break L8;
                         } else {
-                          fla discarded$8 = ((cfa) this).field_g.a(new fm(var3, 0, 0, 0), -58);
+                          fla discarded$32 = ((cfa) this).field_g.a(new fm(var3, 0, 0, 0), -58);
                           break L8;
                         }
                       }
@@ -190,14 +199,15 @@ final class cfa implements dv {
                       }
                       ((cfa) this).field_a = 0;
                       ((cfa) this).field_d = ((cfa) this).field_d + 1;
-                      this.d(-14447);
+                      int discarded$33 = -14447;
+                      this.d();
                       return;
                     }
                   }
                 }
                 if (((cfa) this).field_g != null) {
                   L11: {
-                    fla discarded$9 = ((cfa) this).field_g.a(new fm(var3, 0, 0, 0), -58);
+                    fla discarded$34 = ((cfa) this).field_g.a(new fm(var3, 0, 0, 0), -58);
                     ((cfa) this).field_j.field_H[((cfa) this).field_h].b(18202625, ((cfa) this).field_i[param0]);
                     ((cfa) this).field_i[param0] = -1;
                     ((cfa) this).field_f = ((cfa) this).field_f + 1;
@@ -217,7 +227,8 @@ final class cfa implements dv {
                   }
                   ((cfa) this).field_a = 0;
                   ((cfa) this).field_d = ((cfa) this).field_d + 1;
-                  this.d(-14447);
+                  int discarded$35 = -14447;
+                  this.d();
                   return;
                 } else {
                   L13: {
@@ -240,7 +251,8 @@ final class cfa implements dv {
                   }
                   ((cfa) this).field_a = 0;
                   ((cfa) this).field_d = ((cfa) this).field_d + 1;
-                  this.d(-14447);
+                  int discarded$36 = -14447;
+                  this.d();
                   return;
                 }
               }
@@ -259,7 +271,7 @@ final class cfa implements dv {
                       if (((cfa) this).field_g == null) {
                         break L16;
                       } else {
-                        fla discarded$10 = ((cfa) this).field_g.a(new fm(var3, 0, 0, 0), -58);
+                        fla discarded$37 = ((cfa) this).field_g.a(new fm(var3, 0, 0, 0), -58);
                         break L16;
                       }
                     }
@@ -283,14 +295,15 @@ final class cfa implements dv {
                     }
                     ((cfa) this).field_a = 0;
                     ((cfa) this).field_d = ((cfa) this).field_d + 1;
-                    this.d(-14447);
+                    int discarded$38 = -14447;
+                    this.d();
                     return;
                   }
                 }
               }
               if (((cfa) this).field_g != null) {
                 L19: {
-                  fla discarded$11 = ((cfa) this).field_g.a(new fm(var3, 0, 0, 0), -58);
+                  fla discarded$39 = ((cfa) this).field_g.a(new fm(var3, 0, 0, 0), -58);
                   ((cfa) this).field_j.field_H[((cfa) this).field_h].b(18202625, ((cfa) this).field_i[param0]);
                   ((cfa) this).field_i[param0] = -1;
                   ((cfa) this).field_f = ((cfa) this).field_f + 1;
@@ -310,7 +323,8 @@ final class cfa implements dv {
                 }
                 ((cfa) this).field_a = 0;
                 ((cfa) this).field_d = ((cfa) this).field_d + 1;
-                this.d(-14447);
+                int discarded$40 = -14447;
+                this.d();
                 return;
               } else {
                 L21: {
@@ -333,7 +347,8 @@ final class cfa implements dv {
                 }
                 ((cfa) this).field_a = 0;
                 ((cfa) this).field_d = ((cfa) this).field_d + 1;
-                this.d(-14447);
+                int discarded$41 = -14447;
+                this.d();
                 return;
               }
             }
@@ -349,7 +364,7 @@ final class cfa implements dv {
         return ((cfa) this).field_a;
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_c = null;
     }
 
@@ -361,7 +376,7 @@ final class cfa implements dv {
         return ((cfa) this).field_i[param1];
     }
 
-    private final void d(int param0) {
+    private final void d() {
         int var3 = 0;
         var3 = TombRacer.field_G ? 1 : 0;
         if (((cfa) this).field_f >= ((cfa) this).field_i.length) {
@@ -461,7 +476,8 @@ final class cfa implements dv {
           if (!((cfa) this).field_e) {
             if (((cfa) this).field_g == null) {
               if (-1 == ((cfa) this).field_h) {
-                this.d(-14447);
+                int discarded$4 = -14447;
+                this.d();
                 ((cfa) this).field_a = ((cfa) this).field_a + 1;
                 return;
               } else {
@@ -471,7 +487,8 @@ final class cfa implements dv {
             } else {
               ((cfa) this).field_g.a(108, false);
               if (-1 == ((cfa) this).field_h) {
-                this.d(-14447);
+                int discarded$5 = -14447;
+                this.d();
                 ((cfa) this).field_a = ((cfa) this).field_a + 1;
                 return;
               } else {
@@ -491,13 +508,15 @@ final class cfa implements dv {
                 ((cfa) this).field_a = ((cfa) this).field_a + 1;
                 return;
               } else {
-                this.d(-14447);
+                int discarded$6 = -14447;
+                this.d();
                 ((cfa) this).field_a = ((cfa) this).field_a + 1;
                 return;
               }
             } else {
               if (-1 == ((cfa) this).field_h) {
-                this.d(-14447);
+                int discarded$7 = -14447;
+                this.d();
                 ((cfa) this).field_a = ((cfa) this).field_a + 1;
                 return;
               } else {
@@ -523,10 +542,11 @@ final class cfa implements dv {
         try {
             ((cfa) this).field_i = fa.a(0, param0, 8, ((cfa) this).field_i);
             ((cfa) this).field_d = param0.b((byte) 44, 3);
-            ((cfa) this).field_h = uma.a(4, param0, -26803);
+            int discarded$0 = -26803;
+            ((cfa) this).field_h = uma.a(4, param0);
             ((cfa) this).field_a = param0.b((byte) 44, 16);
             if (param1) {
-                int discarded$0 = ((cfa) this).a(99, -112);
+                int discarded$1 = ((cfa) this).a(99, -112);
             }
             ((cfa) this).field_e = uha.a(5907, param0);
             ((cfa) this).field_f = param0.b((byte) 44, 2);

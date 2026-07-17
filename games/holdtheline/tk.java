@@ -50,57 +50,53 @@ final class tk {
         var9 = HoldTheLine.field_D;
         try {
           L0: {
-            if (param1 == -92) {
-              gf.a();
-              gf.a(param0, 0, param0.length);
-              gf.c();
-              L1: while (true) {
-                if (!gf.d()) {
-                  break L0;
-                } else {
-                  L2: {
-                    var4_int = gf.field_g;
-                    if (0 <= var4_int) {
-                      break L2;
-                    } else {
-                      var4_int = 0;
-                      break L2;
-                    }
-                  }
-                  L3: {
-                    var5 = gf.field_b;
-                    if (param3.field_i <= var5) {
-                      var5 = -1 + param3.field_i;
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                  var6 = gf.field_a;
-                  if (0 <= var6) {
-                    if (var6 >= param3.field_l) {
-                      continue L1;
-                    } else {
-                      var7 = var4_int + var6 * param3.field_i;
-                      var8 = -var4_int + var5;
-                      L4: while (true) {
-                        var8--;
-                        if (var8 < 0) {
-                          continue L1;
-                        } else {
-                          param3.field_m[var7] = (byte)kc.a((int) param3.field_m[var7], (int) param2);
-                          var7++;
-                          continue L4;
-                        }
-                      }
-                    }
+            gf.a();
+            gf.a(param0, 0, param0.length);
+            gf.c();
+            L1: while (true) {
+              if (!gf.d()) {
+                break L0;
+              } else {
+                L2: {
+                  var4_int = gf.field_g;
+                  if (0 <= var4_int) {
+                    break L2;
                   } else {
-                    continue L1;
+                    var4_int = 0;
+                    break L2;
                   }
                 }
+                L3: {
+                  var5 = gf.field_b;
+                  if (param3.field_i <= var5) {
+                    var5 = -1 + param3.field_i;
+                    break L3;
+                  } else {
+                    break L3;
+                  }
+                }
+                var6 = gf.field_a;
+                if (0 <= var6) {
+                  if (var6 >= param3.field_l) {
+                    continue L1;
+                  } else {
+                    var7 = var4_int + var6 * param3.field_i;
+                    var8 = -var4_int + var5;
+                    L4: while (true) {
+                      var8--;
+                      if (var8 < 0) {
+                        continue L1;
+                      } else {
+                        param3.field_m[var7] = (byte)kc.a((int) param3.field_m[var7], (int) param2);
+                        var7++;
+                        continue L4;
+                      }
+                    }
+                  }
+                } else {
+                  continue L1;
+                }
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -133,7 +129,7 @@ final class tk {
           }
           L6: {
             stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(-92).append(44).append(param2).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -162,9 +158,6 @@ final class tk {
 
     final static void a(boolean param0) {
         lk.field_e = null;
-        if (param0) {
-            return;
-        }
         nk.field_K = null;
         ad.field_d = null;
         wb.field_g = null;
@@ -172,7 +165,7 @@ final class tk {
         dd.field_E = null;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         field_b = null;

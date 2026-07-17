@@ -136,8 +136,10 @@ final class we extends iq {
         }
         wj.b(76);
         ea.b((byte) 111);
-        vb.d(65);
-        if (cd.b(-27440)) {
+        int discarded$18 = 65;
+        vb.d();
+        int discarded$24 = -27440;
+        if (cd.b()) {
             uh.field_Wb.j(1, param0 ^ -1733144137);
             lf.d(61, 0);
         }
@@ -162,75 +164,66 @@ final class we extends iq {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_14_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_13_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_13_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_2_0 = 0;
+        int stackOut_12_0 = 0;
+        int stackOut_8_0 = 0;
         var8 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
-            if (param1) {
-              var3_int = 0;
-              var4 = ui.field_d;
-              L1: while (true) {
-                if (var3_int >= al.field_y.length) {
-                  stackOut_13_0 = -1;
-                  stackIn_14_0 = stackOut_13_0;
-                  break L0;
-                } else {
-                  L2: {
-                    var5 = dg.field_f[var3_int];
-                    if (var5 >= 0) {
-                      var6 = ao.a(120, al.field_y[var3_int], true);
-                      var7 = -(var6 >> 1) + ni.field_a;
-                      var4 = var4 + vo.field_y;
-                      if (!pe.a(ml.field_v + (eb.field_h << 1), var4, param0, param2, (byte) 45, -hc.field_a + var7, (hc.field_a << 1) + var6)) {
-                        var4 = var4 + ((eb.field_h << 1) + vo.field_y + ml.field_v);
-                        break L2;
-                      } else {
-                        stackOut_9_0 = var5;
-                        stackIn_10_0 = stackOut_9_0;
-                        return stackIn_10_0;
-                      }
-                    } else {
-                      var4 = var4 + cd.field_a;
+            var3_int = 0;
+            var4 = ui.field_d;
+            L1: while (true) {
+              if (var3_int >= al.field_y.length) {
+                stackOut_12_0 = -1;
+                stackIn_13_0 = stackOut_12_0;
+                break L0;
+              } else {
+                L2: {
+                  var5 = dg.field_f[var3_int];
+                  if (var5 >= 0) {
+                    var6 = ao.a(120, al.field_y[var3_int], true);
+                    var7 = -(var6 >> 1) + ni.field_a;
+                    var4 = var4 + vo.field_y;
+                    if (!pe.a(ml.field_v + (eb.field_h << 1), var4, param0, param2, (byte) 45, -hc.field_a + var7, (hc.field_a << 1) + var6)) {
+                      var4 = var4 + ((eb.field_h << 1) + vo.field_y + ml.field_v);
                       break L2;
+                    } else {
+                      stackOut_8_0 = var5;
+                      stackIn_9_0 = stackOut_8_0;
+                      return stackIn_9_0;
                     }
+                  } else {
+                    var4 = var4 + cd.field_a;
+                    break L2;
                   }
-                  var3_int++;
-                  continue L1;
                 }
+                var3_int++;
+                continue L1;
               }
-            } else {
-              stackOut_2_0 = -5;
-              stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var3, "we.G(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw wn.a((Throwable) (Object) var3, "we.G(" + param0 + 44 + 1 + 44 + param2 + 41);
         }
-        return stackIn_14_0;
+        return stackIn_13_0;
     }
 
     final static void a(r param0, boolean param1, byte param2, r param3, r param4) {
-        cl.field_c = qc.a(param2 + 7, "");
+        cl.field_c = qc.a(0, "");
         cl.field_c.a(0, false);
-        if (param2 != -7) {
-            return;
-        }
         try {
-            we.a(param4, param3, param0, (byte) -57);
-            tq.b((byte) 44);
+            int discarded$0 = -57;
+            we.a(param4, param3, param0);
+            int discarded$1 = 44;
+            tq.b();
             un.field_Hb = l.field_a;
             um.field_F = l.field_a;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "we.H(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "we.H(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + -7 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -450,7 +443,7 @@ final class we extends iq {
         int var2 = 6 % ((-7 - param0) / 48);
     }
 
-    private final static void a(r param0, r param1, r param2, byte param3) {
+    private final static void a(r param0, r param1, r param2) {
         RuntimeException var4 = null;
         u[] var5 = null;
         u[][] var6 = null;
@@ -519,16 +512,19 @@ final class we extends iq {
         var13 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
-            bh.field_a = gk.a(param1, "commonui", "frame_top", true);
-            ki.field_b = gk.a(param1, "commonui", "frame_bottom", true);
+            int discarded$5 = 1;
+            bh.field_a = gk.a(param1, "commonui", "frame_top");
+            int discarded$6 = 1;
+            ki.field_b = gk.a(param1, "commonui", "frame_bottom");
             qo.field_y = tn.a("jagex_logo_grey", param1, -95, "commonui");
-            q.field_z = gk.a(param1, "commonui", "button", true);
+            int discarded$7 = 1;
+            q.field_z = gk.a(param1, "commonui", "button");
             jn.field_b = mi.a("validation", param1, (byte) 34, "commonui");
             bl.field_N = (cc) (Object) rl.a(param1, 12, param0, "commonui", "arezzo12");
             qc.field_x = (cc) (Object) rl.a(param1, 12, param0, "commonui", "arezzo14");
             sg.field_a = (cc) (Object) rl.a(param1, 12, param0, "commonui", "arezzo14bold");
             var17 = new er(param2.a("button.gif", "", 0), (java.awt.Component) (Object) ne.field_F);
-            u discarded$1 = vl.a(0, "commonui", param1, "dropdown");
+            u discarded$8 = vl.a(0, "commonui", param1, "dropdown");
             var5 = oh.a((byte) -39, "screen_options", "commonui", param1);
             rg.field_e = new u[4];
             wh.field_F = new u[4];
@@ -576,7 +572,8 @@ final class we extends iq {
                         var9++;
                         continue L2;
                       } else {
-                        var14[var11_int] = pc.a(var5[var9], var21[var11_int], -35);
+                        int discarded$9 = -35;
+                        var14[var11_int] = pc.a(var5[var9], var21[var11_int]);
                         var11_int++;
                         continue L3;
                       }

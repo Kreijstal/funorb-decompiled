@@ -10,7 +10,7 @@ abstract class sqb extends fh {
     int field_k;
     int field_m;
 
-    final static tv[] a(tv[] param0, tv[] param1, int param2, dja param3, boolean param4) {
+    final static tv[] a(tv[] param0, tv[] param1, int param2, dja param3) {
         RuntimeException var5 = null;
         int var5_int = 0;
         tv var6 = null;
@@ -107,7 +107,7 @@ abstract class sqb extends fh {
                           break L5;
                         }
                       }
-                      var8 = param2;
+                      var8 = 1;
                       var9 = var6;
                       var10 = var7;
                       if (var8 == 1) {
@@ -197,7 +197,7 @@ abstract class sqb extends fh {
           }
           L8: {
             stackOut_36_0 = (RuntimeException) (Object) stackIn_36_0;
-            stackOut_36_1 = ((StringBuilder) (Object) stackIn_36_1).append(stackIn_36_2).append(44).append(param2).append(44);
+            stackOut_36_1 = ((StringBuilder) (Object) stackIn_36_1).append(stackIn_36_2).append(44).append(1).append(44);
             stackIn_38_0 = stackOut_36_0;
             stackIn_38_1 = stackOut_36_1;
             stackIn_37_0 = stackOut_36_0;
@@ -233,9 +233,11 @@ abstract class sqb extends fh {
                 return 0;
               } else {
                 if (0 > param0) {
-                  return -kq.a(-param0, param2, 11105);
+                  int discarded$8 = 11105;
+                  return -kq.a(-param0, param2);
                 } else {
-                  return kq.a(param0, param2, 11105);
+                  int discarded$9 = 11105;
+                  return kq.a(param0, param2);
                 }
               }
             } else {
@@ -243,9 +245,11 @@ abstract class sqb extends fh {
                 return 4096;
               } else {
                 if (param0 >= 0) {
-                  return -kq.a(param0, -param2, 11105) + 4096;
+                  int discarded$10 = 11105;
+                  return -kq.a(param0, -param2) + 4096;
                 } else {
-                  return -4096 + kq.a(-param0, -param2, 11105);
+                  int discarded$11 = 11105;
+                  return -4096 + kq.a(-param0, -param2);
                 }
               }
             }
@@ -268,9 +272,11 @@ abstract class sqb extends fh {
                 return 0;
               } else {
                 if (0 > param0) {
-                  return -kq.a(-param0, param2, 11105);
+                  int discarded$12 = 11105;
+                  return -kq.a(-param0, param2);
                 } else {
-                  return kq.a(param0, param2, 11105);
+                  int discarded$13 = 11105;
+                  return kq.a(param0, param2);
                 }
               }
             } else {
@@ -278,9 +284,11 @@ abstract class sqb extends fh {
                 return 4096;
               } else {
                 if (param0 >= 0) {
-                  return -kq.a(param0, -param2, 11105) + 4096;
+                  int discarded$14 = 11105;
+                  return -kq.a(param0, -param2) + 4096;
                 } else {
-                  return -4096 + kq.a(-param0, -param2, 11105);
+                  int discarded$15 = 11105;
+                  return -4096 + kq.a(-param0, -param2);
                 }
               }
             }
@@ -300,7 +308,9 @@ abstract class sqb extends fh {
 
     public static void a(boolean param0) {
         field_o = null;
-        int discarded$0 = sqb.a(2, -61, -79);
+        if (!param0) {
+            int discarded$0 = sqb.a(2, -61, -79);
+        }
     }
 
     sqb() {

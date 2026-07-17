@@ -24,35 +24,24 @@ abstract class or {
         ll[] var6 = null;
         var6 = new ll[9];
         var5 = var6;
-        ll dupTemp$6 = tn.a(param4, param1, true);
-        var6[6] = dupTemp$6;
-        var5[3] = dupTemp$6;
-        var5[2] = dupTemp$6;
-        var5[1] = dupTemp$6;
-        var5[0] = dupTemp$6;
-        if (param0 < -28) {
-          ll dupTemp$7 = tn.a(param2, param1, true);
-          var6[8] = dupTemp$7;
-          var5[7] = dupTemp$7;
-          var5[5] = dupTemp$7;
-          if (param3 != 0) {
-            var6[4] = tn.a(param3, 64, true);
-            return var5;
-          } else {
-            return var5;
-          }
+        int discarded$10 = 1;
+        ll dupTemp$11 = tn.a(param4, 1);
+        var5[6] = dupTemp$11;
+        var5[3] = dupTemp$11;
+        var5[2] = dupTemp$11;
+        var5[1] = dupTemp$11;
+        var5[0] = dupTemp$11;
+        int discarded$12 = 1;
+        ll dupTemp$13 = tn.a(param2, 1);
+        var5[8] = dupTemp$13;
+        var5[7] = dupTemp$13;
+        var5[5] = dupTemp$13;
+        if (param3 != 0) {
+          int discarded$14 = 1;
+          var6[4] = tn.a(param3, 64);
+          return var5;
         } else {
-          or.a((byte) 107);
-          ll dupTemp$8 = tn.a(param2, param1, true);
-          var6[8] = dupTemp$8;
-          var5[7] = dupTemp$8;
-          var5[5] = dupTemp$8;
-          if (param3 == 0) {
-            return var5;
-          } else {
-            var6[4] = tn.a(param3, 64, true);
-            return var5;
-          }
+          return var5;
         }
     }
 

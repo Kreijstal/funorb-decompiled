@@ -22,7 +22,7 @@ final class am extends jc {
         int discarded$0 = ((am) this).field_O.a(((am) this).field_L, ((am) this).field_K + (var7 + var5), ((am) this).field_K + var6, ((am) this).field_Q - ((am) this).field_K, -(((am) this).field_K * 2) + ((am) this).field_q, ((am) this).field_M, -1, !((am) this).field_P ? 2 : 0, 1, ((am) this).field_O.field_I);
     }
 
-    public static void n(int param0) {
+    public static void n() {
         field_N = null;
     }
 
@@ -324,7 +324,7 @@ final class am extends jc {
         }
     }
 
-    final static void a(bj param0, int param1) {
+    final static void a(bj param0) {
         RuntimeException var2 = null;
         wm var4 = null;
         wm var5 = null;

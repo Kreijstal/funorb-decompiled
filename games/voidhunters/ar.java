@@ -461,7 +461,7 @@ abstract class ar {
         return var2;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
     }
 

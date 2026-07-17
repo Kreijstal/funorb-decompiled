@@ -76,9 +76,11 @@ final class qq extends oh {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var3 = mg.a(param0, param2, 20);
-            var5 = 21 / ((param1 - -64) / 43);
-            var4 = mg.a(param0, param2, 20);
+            int discarded$4 = 20;
+            var3 = mg.a(param0, param2);
+            var5 = 7;
+            int discarded$5 = 20;
+            var4 = mg.a(param0, param2);
             var6 = param2.f(-20976);
             stackOut_0_0 = new mg(var3, var4, var6);
             stackIn_1_0 = stackOut_0_0;
@@ -114,7 +116,7 @@ final class qq extends oh {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(param1).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(65).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -152,7 +154,7 @@ final class qq extends oh {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_w = null;
         field_N = null;
         field_I = null;
@@ -166,10 +168,7 @@ final class qq extends oh {
         field_s = null;
     }
 
-    final static void c(boolean param0) {
-        if (param0) {
-            return;
-        }
+    final static void c() {
         cg.field_E.setLength(0);
         em.field_h = 0;
     }

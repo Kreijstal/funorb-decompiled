@@ -20,17 +20,7 @@ final class hma {
     }
 
     private final void a(int param0, java.awt.Frame param1) {
-        Object var4 = null;
-        L0: {
-          ((hma) this).field_a.setFullScreenWindow((java.awt.Window) (Object) param1);
-          if (param0 == 265425858) {
-            break L0;
-          } else {
-            var4 = null;
-            ((hma) this).enter((java.awt.Frame) null, 70, -42, 21, 21);
-            break L0;
-          }
-        }
+        ((hma) this).field_a.setFullScreenWindow((java.awt.Window) (Object) param1);
     }
 
     public final void enter(java.awt.Frame param0, int param1, int param2, int param3, int param4) {

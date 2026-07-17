@@ -63,7 +63,7 @@ final class mo {
                     L3: {
                       jaggl.OpenGL.glLinkProgramARB(var3_long);
                       jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35714, ee.field_d, 0);
-                      if (ee.field_d[param0] == 0) {
+                      if (ee.field_d[0] == 0) {
                         L4: {
                           if (ee.field_d[0] == 0) {
                             System.out.println("Shader linking failed:");
@@ -133,7 +133,7 @@ final class mo {
           L7: {
             var3 = decompiledCaughtException;
             stackOut_27_0 = (RuntimeException) var3;
-            stackOut_27_1 = new StringBuilder().append("mo.C(").append(param0).append(44);
+            stackOut_27_1 = new StringBuilder().append("mo.C(").append(0).append(44);
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
@@ -186,7 +186,7 @@ final class mo {
         return stackIn_26_0;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         if (!ks.field_b) {
             throw new IllegalStateException();
         }
@@ -195,7 +195,7 @@ final class mo {
         ob.field_d = 0;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_c = null;
         int var1 = -16;

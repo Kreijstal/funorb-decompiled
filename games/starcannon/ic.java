@@ -7,16 +7,13 @@ final class ic {
     static th field_b;
     static boolean field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
     }
 
     final static void a(byte param0, String param1) {
         System.out.println("Error: " + ed.a(-1, param1, "\n", "%0a"));
-        if (param0 >= -95) {
-            field_a = false;
-        }
     }
 
     static {

@@ -7,7 +7,7 @@ final class qcb extends rqa {
     static String field_r;
     static llb field_p;
 
-    final static byte[] a(int param0, byte[] param1, int param2, int param3) {
+    final static byte[] a(int param0, byte[] param1, int param2) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -31,9 +31,9 @@ final class qcb extends rqa {
         String stackOut_5_2 = null;
         try {
           L0: {
-            var5 = new byte[param0];
+            var5 = new byte[32768];
             var4 = var5;
-            cua.a(param1, param2, var5, 0, param0);
+            cua.a(param1, param2, var5, 0, 32768);
             stackOut_2_0 = (byte[]) var5;
             stackIn_3_0 = stackOut_2_0;
             break L0;
@@ -43,7 +43,7 @@ final class qcb extends rqa {
           L1: {
             var4_ref = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var4_ref;
-            stackOut_4_1 = new StringBuilder().append("qcb.C(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("qcb.C(").append(32768).append(44);
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -75,7 +75,7 @@ final class qcb extends rqa {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_r = null;
         field_p = null;
         field_q = null;

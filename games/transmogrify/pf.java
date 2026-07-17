@@ -37,7 +37,7 @@ final class pf implements Iterable {
         return (Iterator) (Object) new wg((pf) this);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_h = null;
         field_f = null;

@@ -50,7 +50,7 @@ final class bi {
                   break L1;
                 } else {
                   var5 = null;
-                  int discarded$1 = bi.a((byte[]) null, -74, -99);
+                  int discarded$2 = bi.a((byte[]) null, -74, -99);
                   break L1;
                 }
               }
@@ -63,7 +63,8 @@ final class bi {
                     if (param0.field_a.peekEvent() == null) {
                       break L3;
                     } else {
-                      tg.a(1L, false);
+                      int discarded$3 = 0;
+                      tg.a(1L);
                       var3_int++;
                       continue L2;
                     }

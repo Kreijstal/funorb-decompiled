@@ -50,65 +50,61 @@ final class fc {
         try {
           L0: {
             var5_int = (int)param2;
-            if (param0 == 2) {
-              var6 = (int)param1;
-              var7 = (float)(-var5_int) + param2;
-              var8 = (float)(-var6) + param1;
-              if (var6 == var5_int) {
-                L1: {
-                  if (var7 != var8) {
-                    param4.a((Object) (Object) fk.a(1, var8, (vj) param3.field_b[var5_int], var7), (byte) 6);
-                    break L1;
+            var6 = (int)param1;
+            var7 = (float)(-var5_int) + param2;
+            var8 = (float)(-var6) + param1;
+            if (var6 == var5_int) {
+              L1: {
+                if (var7 != var8) {
+                  param4.a((Object) (Object) fk.a(1, var8, (vj) param3.field_b[var5_int], var7), (byte) 6);
+                  break L1;
+                } else {
+                  break L1;
+                }
+              }
+              break L0;
+            } else {
+              if (var5_int >= var6) {
+                L2: {
+                  if (0.0f >= var7) {
+                    break L2;
                   } else {
-                    break L1;
+                    param4.a((Object) (Object) td.a(150, var7, (vj) param3.field_b[var5_int]).c(false), (byte) 6);
+                    break L2;
                   }
                 }
-                break L0;
+                var9 = -1 + var5_int;
+                L3: while (true) {
+                  if (var6 >= var9) {
+                    param4.a((Object) (Object) ik.a(119, (vj) param3.field_b[var6], var8).c(false), (byte) 6);
+                    return;
+                  } else {
+                    param4.a((Object) (Object) ((vj) param3.field_b[var9]).c(false), (byte) 6);
+                    var9--;
+                    continue L3;
+                  }
+                }
               } else {
-                if (var5_int >= var6) {
-                  L2: {
-                    if (0.0f >= var7) {
-                      break L2;
-                    } else {
-                      param4.a((Object) (Object) td.a(150, var7, (vj) param3.field_b[var5_int]).c(false), (byte) 6);
-                      break L2;
-                    }
-                  }
-                  var9 = -1 + var5_int;
-                  L3: while (true) {
-                    if (var6 >= var9) {
-                      param4.a((Object) (Object) ik.a(119, (vj) param3.field_b[var6], var8).c(false), (byte) 6);
-                      return;
-                    } else {
-                      param4.a((Object) (Object) ((vj) param3.field_b[var9]).c(false), (byte) 6);
-                      var9--;
-                      continue L3;
-                    }
-                  }
-                } else {
-                  param4.a((Object) (Object) ik.a(92, (vj) param3.field_b[var5_int], var7), (byte) 6);
-                  var9 = var5_int - -1;
-                  L4: while (true) {
-                    if (var6 <= var9) {
-                      L5: {
-                        if (var8 <= 0.0f) {
-                          break L5;
-                        } else {
-                          param4.a((Object) (Object) td.a(param0 + 148, var8, (vj) param3.field_b[var6]), (byte) 6);
-                          break L5;
-                        }
+                param4.a((Object) (Object) ik.a(92, (vj) param3.field_b[var5_int], var7), (byte) 6);
+                var9 = var5_int - -1;
+                L4: while (true) {
+                  if (var6 <= var9) {
+                    L5: {
+                      if (var8 <= 0.0f) {
+                        break L5;
+                      } else {
+                        param4.a((Object) (Object) td.a(150, var8, (vj) param3.field_b[var6]), (byte) 6);
+                        break L5;
                       }
-                      return;
-                    } else {
-                      param4.a(param3.field_b[var9], (byte) 6);
-                      var9++;
-                      continue L4;
                     }
+                    return;
+                  } else {
+                    param4.a(param3.field_b[var9], (byte) 6);
+                    var9++;
+                    continue L4;
                   }
                 }
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -116,7 +112,7 @@ final class fc {
           L6: {
             var5 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var5;
-            stackOut_22_1 = new StringBuilder().append("fc.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_22_1 = new StringBuilder().append("fc.D(").append(2).append(44).append(param1).append(44).append(param2).append(44);
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -192,7 +188,7 @@ final class fc {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = -15;
         field_b = null;
     }

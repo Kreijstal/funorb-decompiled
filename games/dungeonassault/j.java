@@ -261,7 +261,7 @@ final class j extends ck {
         return stackIn_11_0;
     }
 
-    final static boolean a(String param0, byte param1) {
+    final static boolean a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -341,7 +341,7 @@ final class j extends ck {
         return stackIn_10_0 != 0;
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_S = null;
         int var1 = 107;
         field_Q = null;
@@ -349,7 +349,7 @@ final class j extends ck {
         field_L = null;
     }
 
-    final static void f(byte param0) {
+    final static void f() {
         gj.a(new int[0], 0, 0, (byte) 33, 1, 0, 1, 0, 1, 1, 1);
         gj.a(new int[0], 0, 0, (byte) 33, 3, 0, 2, 100, 2, 1, 1);
         gj.a(new int[0], 1, 0, (byte) 33, 4, 0, 2, 150, 1, 2, 1);

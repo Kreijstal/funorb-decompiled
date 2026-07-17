@@ -122,8 +122,10 @@ final class ed {
                       sd.field_c = kl.a(252, ub.field_b, "benefits", "menu_text");
                       df.field_b = kl.a(252, ub.field_b, "benefits", "button_frame");
                       jg.field_f = kl.a(252, ub.field_b, "benefits", "arrow");
-                      ql.field_k = (fa) (Object) ub.a("benefits", ub.field_b, "large_font", wf.field_b, 32);
-                      qj.field_H = (fa) (Object) ub.a("benefits", ub.field_b, "small_font", wf.field_b, 32);
+                      int discarded$8 = 32;
+                      ql.field_k = (fa) (Object) ub.a("benefits", ub.field_b, "large_font", wf.field_b);
+                      int discarded$9 = 32;
+                      qj.field_H = (fa) (Object) ub.a("benefits", ub.field_b, "small_font", wf.field_b);
                       var27 = gb.field_a;
                       var2 = gb.field_d;
                       var3 = gb.field_k;
@@ -152,7 +154,8 @@ final class ed {
                           vg.field_u = null;
                           kf.field_i = sg.field_f.c();
                           kf.field_i.f();
-                          nj.a(0, 64, gb.field_d, 0, gb.field_k * 2 / 3, 1067);
+                          int discarded$10 = 1067;
+                          nj.a(0, 64, gb.field_d, 0, gb.field_k * 2 / 3);
                           gb.a(var27, var2, var3);
                           gb.b(ab.field_c);
                           ub.field_b = null;
@@ -163,7 +166,7 @@ final class ed {
                           break L0;
                         } else {
                           of.field_h[var7].f();
-                          int discarded$3 = qj.field_H.a(vg.field_u[var7], 3, 3, -6 + of.field_h[var7].field_w, -6 + of.field_h[var7].field_t, rc.field_e, -1, 1, 1, qj.field_H.field_H + qj.field_H.field_K);
+                          int discarded$11 = qj.field_H.a(vg.field_u[var7], 3, 3, -6 + of.field_h[var7].field_w, -6 + of.field_h[var7].field_t, rc.field_e, -1, 1, 1, qj.field_H.field_H + qj.field_H.field_K);
                           rg.a(0, of.field_h[var7], of.field_h[var7].field_w, of.field_h[var7].field_t, 1, -121, 3, 0);
                           var7++;
                           continue L1;
@@ -256,7 +259,7 @@ final class ed {
                 pb.field_g.a();
                 var9 = new dd(pb.field_g.field_x, pb.field_g.field_r);
                 var9.f();
-                int discarded$4 = ql.field_k.a(var14, ei.field_V, li.field_i, wa.field_m, bh.field_l, 16777215, -1, 1, 1, ql.field_k.field_H + ql.field_k.field_K);
+                int discarded$12 = ql.field_k.a(var14, ei.field_V, li.field_i, wa.field_m, bh.field_l, 16777215, -1, 1, 1, ql.field_k.field_H + ql.field_k.field_K);
                 rg.a(0, var9, var9.field_x, var9.field_r, 1, -14, 3, 0);
                 pb.field_g.f();
                 var9.d(0, 0);
@@ -288,7 +291,7 @@ final class ed {
                 var5_ref_String = db.a(fk.field_B, new String[1], true);
                 pa.field_k = null;
                 var16.f();
-                int discarded$5 = qj.field_H.a(var5_ref_String, 3, 3, var16.field_w - 6, var16.field_t + -6, 16777215, -1, 0, 1, qj.field_H.field_H - -qj.field_H.field_K);
+                int discarded$13 = qj.field_H.a(var5_ref_String, 3, 3, var16.field_w - 6, var16.field_t + -6, 16777215, -1, 0, 1, qj.field_H.field_H - -qj.field_H.field_K);
                 rg.a(0, var16, var16.field_w, var16.field_t, 1, -27, 3, 0);
                 cd.field_b.f();
                 var16.d(199 - cd.field_b.field_q, 83 - cd.field_b.field_v);
@@ -474,7 +477,8 @@ final class ed {
                   vj.field_c.d(434, 390);
                   sd.field_c.d(0, 0);
                   if (ul.field_G.field_k == 1) {
-                    nj.a(392, 64, vj.field_c.field_w + -4, 436, 7 * vj.field_c.field_t / 12, 1067);
+                    int discarded$14 = 1067;
+                    nj.a(392, 64, vj.field_c.field_w + -4, 436, 7 * vj.field_c.field_t / 12);
                     break L18;
                   } else {
                     break L18;
@@ -567,7 +571,8 @@ final class ed {
               }
             }
           }
-          il.b(198);
+          int discarded$15 = 198;
+          il.b();
           if (param0 <= -110) {
             of.field_h[ql.field_o].d(269, 340);
             return;
@@ -579,11 +584,8 @@ final class ed {
         }
     }
 
-    final static ia a(int param0, int param1) {
+    final static ia a() {
         ia var2 = new ia();
-        if (param0 != 16777215) {
-            ed.c(18);
-        }
         rj.field_i.a(false, (lh) (Object) var2);
         ki.a(4, 1);
         return var2;
@@ -633,7 +635,7 @@ final class ed {
         }
     }
 
-    final static void a(rh param0, byte param1) {
+    final static void a(rh param0) {
         dd var2 = null;
         int var3 = 0;
         int var4 = 0;

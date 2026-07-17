@@ -8,7 +8,7 @@ final class uq {
     int field_e;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         field_b = null;

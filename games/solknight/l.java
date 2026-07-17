@@ -84,23 +84,23 @@ final class l {
     final static void a(int param0, int param1, m param2) {
         jd var3 = null;
         try {
-            int var4 = 89 / ((-22 - param1) / 49);
+            int var4 = 89;
             var3 = id.field_c;
-            var3.e(param0, -2147483648);
+            var3.e(2, -2147483648);
             var3.c(109, param2.field_j);
             var3.a(true, param2.field_i);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "l.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "l.B(" + 2 + 44 + -88 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         field_a = null;
     }
 
-    final static boolean a(String param0, String param1, int param2) {
+    final static boolean a(String param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int stackIn_5_0 = 0;
@@ -232,10 +232,10 @@ final class l {
         }
         if (null != ah.field_a) {
           ah.field_a.b(-15705, param1);
-          var2 = 103 % ((param0 - 50) / 46);
+          var2 = 0;
           return;
         } else {
-          var2 = 103 % ((param0 - 50) / 46);
+          var2 = 0;
           return;
         }
     }

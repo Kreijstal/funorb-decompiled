@@ -4,18 +4,18 @@
 final class fba {
     static float field_a;
 
-    final static int[] a(int param0, float param1, int param2, boolean param3, int param4, int param5, int param6, int param7) {
-        int[] var10 = new int[param6];
+    final static int[] a(int param0, float param1) {
+        int[] var10 = new int[2048];
         int[] var8 = var10;
         lva var9 = new lva();
         var9.field_z = 35;
-        var9.field_u = param2;
-        var9.field_n = param4;
-        var9.field_w = param0;
-        var9.field_s = param3 ? true : false;
+        var9.field_u = 8;
+        var9.field_n = 4;
+        var9.field_w = 8;
+        var9.field_s = true;
         var9.field_x = (int)(4096.0f * param1);
         var9.b((byte) 116);
-        uta.a(0, param5, param6);
+        uta.a(0, 1, 2048);
         var9.a(var10, -1, 0);
         return var10;
     }
@@ -94,7 +94,7 @@ final class fba {
         return stackIn_3_0;
     }
 
-    final synchronized static byte[] a(int param0, int param1) {
+    final synchronized static byte[] a(int param0) {
         byte[] var2 = null;
         if (param0 == 100) {
           if (ika.field_b <= 0) {

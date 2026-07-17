@@ -29,7 +29,7 @@ final class jk extends hl {
         mm.field_e.a((byte) -112, (hl) this);
     }
 
-    final static void a(int param0) {
+    final static void a() {
         try {
             IOException var1 = null;
             RuntimeException var1_ref = null;
@@ -44,7 +44,7 @@ final class jk extends hl {
                   if (ce.field_n == null) {
                     break L1;
                   } else {
-                    ce.field_n.e(param0 ^ 27371);
+                    ce.field_n.e(1);
                     break L1;
                   }
                 }
@@ -60,7 +60,7 @@ final class jk extends hl {
                   if (null != td.field_g) {
                     {
                       L4: {
-                        td.field_g.d(param0 ^ -27371);
+                        td.field_g.d(-1);
                         break L4;
                       }
                     }
@@ -97,20 +97,12 @@ final class jk extends hl {
                     break L6;
                   }
                 }
-                L11: {
-                  if (param0 == 27370) {
-                    break L11;
-                  } else {
-                    jk.a((gn) null, -66);
-                    break L11;
-                  }
-                }
                 break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-              throw kk.a((Throwable) (Object) var1_ref, "jk.C(" + param0 + 41);
+              throw kk.a((Throwable) (Object) var1_ref, "jk.C(" + 27370 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -130,13 +122,13 @@ final class jk extends hl {
         }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_p = null;
         field_r = null;
         field_l = null;
     }
 
-    final static void a(gn param0, int param1) {
+    final static void a(gn param0) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -174,7 +166,7 @@ final class jk extends hl {
             ej.field_c = new qk[var3];
             gd.field_e = new int[var3][];
             var4 = 0;
-            var5_int = -65 / ((58 - param1) / 41);
+            var5_int = -32;
             L1: while (true) {
               if (var3 <= var4) {
                 var10.l(-71);
@@ -229,7 +221,7 @@ final class jk extends hl {
               break L3;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 41);
+          throw kk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + -64 + 41);
         }
     }
 

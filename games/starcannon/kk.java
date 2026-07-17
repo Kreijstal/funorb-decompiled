@@ -51,26 +51,23 @@ abstract class kk {
         return sk.field_b;
     }
 
-    final static Boolean c(byte param0) {
+    final static Boolean c() {
         Boolean var1 = oj.field_g;
         int var2 = 0;
         oj.field_g = null;
         return var1;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
     }
 
     final static void a(hl param0, int param1, String param2) {
         ba.field_c = param0;
-        if (param1 > -54) {
-            return;
-        }
         try {
             ik.field_q = param2;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "kk.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "kk.C(" + (param0 != null ? "{...}" : "null") + 44 + -60 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

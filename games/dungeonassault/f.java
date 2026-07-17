@@ -13,80 +13,48 @@ final class f {
         field_f = null;
         field_e = null;
         field_b = null;
-        field_b = null;
-        field_a = null;
-        field_c = null;
+        if (!param0) {
+          field_b = null;
+          field_a = null;
+          field_c = null;
+          return;
+        } else {
+          field_a = null;
+          field_c = null;
+          return;
+        }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         return !im.field_b.b(36);
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int a(int param0, int param1) {
         if (null == nl.field_g) {
           return -1;
         } else {
-          if (param2 == 1) {
-            L0: {
-              if (wk.field_h > param0) {
-                break L0;
-              } else {
-                if (param0 >= wk.field_h + nl.field_g.field_y) {
-                  break L0;
-                } else {
-                  if (param1 < fo.field_b) {
-                    break L0;
-                  } else {
-                    if (fo.field_b + nl.field_g.field_v <= param1) {
-                      if (param0 >= rm.field_T) {
-                        if (param0 < nl.field_g.field_y + rm.field_T) {
-                          if (param1 >= mi.field_f) {
-                            if (nl.field_g.field_v + mi.field_f <= param1) {
-                              return -1;
-                            } else {
-                              return 1;
-                            }
-                          } else {
-                            return -1;
-                          }
-                        } else {
-                          return -1;
-                        }
-                      } else {
+          if (wk.field_h <= param0) {
+            if (param0 < wk.field_h + nl.field_g.field_y) {
+              if (param1 < fo.field_b) {
+                if (param0 >= rm.field_T) {
+                  if (param0 < nl.field_g.field_y + rm.field_T) {
+                    if (param1 >= mi.field_f) {
+                      if (nl.field_g.field_v + mi.field_f <= param1) {
                         return -1;
+                      } else {
+                        return 1;
                       }
                     } else {
-                      return 0;
+                      return -1;
                     }
-                  }
-                }
-              }
-            }
-            L1: {
-              if (param0 < rm.field_T) {
-                break L1;
-              } else {
-                if (param0 >= nl.field_g.field_y + rm.field_T) {
-                  break L1;
-                } else {
-                  if (param1 < mi.field_f) {
-                    break L1;
                   } else {
-                    if (nl.field_g.field_v + mi.field_f <= param1) {
-                      break L1;
-                    } else {
-                      return 1;
-                    }
+                    return -1;
                   }
+                } else {
+                  return -1;
                 }
-              }
-            }
-            return -1;
-          } else {
-            field_f = null;
-            if (wk.field_h <= param0) {
-              if (param0 < wk.field_h + nl.field_g.field_y) {
-                if (param1 < fo.field_b) {
+              } else {
+                if (fo.field_b + nl.field_g.field_v <= param1) {
                   if (param0 >= rm.field_T) {
                     if (param0 < nl.field_g.field_y + rm.field_T) {
                       if (param1 >= mi.field_f) {
@@ -105,55 +73,17 @@ final class f {
                     return -1;
                   }
                 } else {
-                  if (fo.field_b + nl.field_g.field_v <= param1) {
-                    if (param0 >= rm.field_T) {
-                      if (param0 < nl.field_g.field_y + rm.field_T) {
-                        if (param1 >= mi.field_f) {
-                          if (nl.field_g.field_v + mi.field_f <= param1) {
-                            return -1;
-                          } else {
-                            return 1;
-                          }
-                        } else {
-                          return -1;
-                        }
-                      } else {
-                        return -1;
-                      }
-                    } else {
-                      return -1;
-                    }
-                  } else {
-                    return 0;
-                  }
-                }
-              } else {
-                if (param0 >= rm.field_T) {
-                  if (param0 < nl.field_g.field_y + rm.field_T) {
-                    if (param1 >= mi.field_f) {
-                      if (nl.field_g.field_v + mi.field_f > param1) {
-                        return 1;
-                      } else {
-                        return -1;
-                      }
-                    } else {
-                      return -1;
-                    }
-                  } else {
-                    return -1;
-                  }
-                } else {
-                  return -1;
+                  return 0;
                 }
               }
             } else {
               if (param0 >= rm.field_T) {
                 if (param0 < nl.field_g.field_y + rm.field_T) {
                   if (param1 >= mi.field_f) {
-                    if (nl.field_g.field_v + mi.field_f <= param1) {
-                      return -1;
-                    } else {
+                    if (nl.field_g.field_v + mi.field_f > param1) {
                       return 1;
+                    } else {
+                      return -1;
                     }
                   } else {
                     return -1;
@@ -164,6 +94,24 @@ final class f {
               } else {
                 return -1;
               }
+            }
+          } else {
+            if (param0 >= rm.field_T) {
+              if (param0 < nl.field_g.field_y + rm.field_T) {
+                if (param1 >= mi.field_f) {
+                  if (nl.field_g.field_v + mi.field_f <= param1) {
+                    return -1;
+                  } else {
+                    return 1;
+                  }
+                } else {
+                  return -1;
+                }
+              } else {
+                return -1;
+              }
+            } else {
+              return -1;
             }
           }
         }
@@ -184,7 +132,7 @@ final class f {
               if (var3 == null) {
                 break L0;
               } else {
-                o.a(param0, 62, var3);
+                o.a(2, 62, var3);
                 var3 = (jd) (Object) ta.field_f.a(4);
                 continue L1;
               }
@@ -193,7 +141,7 @@ final class f {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var2, "f.C(" + param0 + 44 + -50 + 41);
+          throw vk.a((Throwable) (Object) var2, "f.C(" + 2 + 44 + -50 + 41);
         }
     }
 

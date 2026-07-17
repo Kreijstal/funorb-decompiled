@@ -24,7 +24,7 @@ final class ec {
         db.field_b = null;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         int var1 = 0;
         field_d = null;

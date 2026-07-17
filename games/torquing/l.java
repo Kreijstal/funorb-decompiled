@@ -31,27 +31,16 @@ final class l {
 
     final static tl a(int param0, int param1, int param2, byte param3, int param4, int param5) {
         int var6 = 0;
-        if (param3 != 83) {
-          return null;
-        } else {
-          L0: {
-            if (param2 != 0) {
-              break L0;
-            } else {
-              var6 = param1;
-              if (1 != var6) {
-                break L0;
-              } else {
+        if (param2 == 0) {
+            var6 = param1;
+            if (1 == var6) {
                 param2 = 1000;
-                break L0;
-              }
             }
-          }
-          return new tl(param0, param5, param4, param1, param2);
         }
+        return new tl(param0, param5, param4, param1, param2);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         int var1 = 0;
         field_a = null;
@@ -103,7 +92,7 @@ final class l {
               var9 = new fj(param1);
               var3 = var9.i((byte) -101);
               var4 = var9.c((byte) -102);
-              if (param0 > var4) {
+              if (0 > var4) {
                 break L1;
               } else {
                 L2: {
@@ -151,7 +140,8 @@ final class l {
                         var10 = var12;
                         var6 = var10;
                         if (var3 == 1) {
-                          int discarded$1 = fc.a(var16, var5_int, param1, var4, 9);
+                          int discarded$2 = 9;
+                          int discarded$3 = fc.a(var6, var5_int, param1, var4);
                           break L5;
                         } else {
                           var7 = (Object) (Object) wo.field_d;
@@ -180,7 +170,7 @@ final class l {
           L7: {
             var2 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var2;
-            stackOut_22_1 = new StringBuilder().append("l.B(").append(param0).append(44);
+            stackOut_22_1 = new StringBuilder().append("l.B(").append(0).append(44);
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -208,13 +198,13 @@ final class l {
         return stackIn_21_0;
     }
 
-    final static void a(ni param0, int param1, int param2) {
+    final static void a(ni param0) {
         df var5 = null;
         int var4 = 0;
         try {
             var5 = wa.field_d;
             df var3 = var5;
-            var5.f(127, param1);
+            var5.f(127, 6);
             var5.field_n = var5.field_n + 1;
             var4 = var5.field_n;
             var5.b(90, 1);
@@ -229,22 +219,18 @@ final class l {
             param0.field_k = var5.c((byte) -88);
             var5.c((byte) 48, -var4 + var5.field_n);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "l.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 1 + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "l.D(" + (param0 != null ? "{...}" : "null") + 44 + 6 + 44 + 1 + 41);
         }
     }
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        if (param2 == 23273) {
-          if (param3 >= param5) {
-            if (param4 + param5 > param3) {
-              if (param6 <= param1) {
-                if (param1 >= param0 + param6) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
+        if (param3 >= param5) {
+          if (param4 + param5 > param3) {
+            if (param6 <= param1) {
+              if (param1 >= param0 + param6) {
                 return false;
+              } else {
+                return true;
               }
             } else {
               return false;
@@ -253,7 +239,7 @@ final class l {
             return false;
           }
         } else {
-          return true;
+          return false;
         }
     }
 

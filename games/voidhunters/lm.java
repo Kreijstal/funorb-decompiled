@@ -5,7 +5,7 @@ final class lm {
     static dja field_b;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = 0;
         field_b = null;
         field_a = null;

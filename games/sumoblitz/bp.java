@@ -201,7 +201,7 @@ abstract class bp implements ed {
         }
     }
 
-    final static int g(int param0) {
+    final static int g() {
         if (2 <= mp.field_a) {
           L0: {
             if (dk.field_c == 0) {
@@ -640,13 +640,15 @@ abstract class bp implements ed {
     }
 
     protected final void finalize() throws Throwable {
-        this.d(22989);
+        int discarded$0 = 22989;
+        this.d();
         super.finalize();
     }
 
-    private final void b(int param0, int param1) {
-        ((bp) this).field_e.field_Cb = ((bp) this).field_e.field_Cb - param0;
-        ((bp) this).field_e.field_Cb = ((bp) this).field_e.field_Cb + this.f(3);
+    private final void b() {
+        ((bp) this).field_e.field_Cb = ((bp) this).field_e.field_Cb;
+        int discarded$0 = 3;
+        ((bp) this).field_e.field_Cb = ((bp) this).field_e.field_Cb + this.f();
     }
 
     public void a(ji param0, int param1) {
@@ -827,9 +829,10 @@ abstract class bp implements ed {
         throw new IllegalStateException();
     }
 
-    private final void d(int param0) {
+    private final void d() {
         if (!(((bp) this).field_f <= 0)) {
-            ((bp) this).field_e.a(this.f(3), ((bp) this).field_f, (byte) 23);
+            int discarded$0 = 3;
+            ((bp) this).field_e.a(this.f(), ((bp) this).field_f, (byte) 23);
             ((bp) this).field_f = 0;
         }
     }
@@ -870,13 +873,15 @@ abstract class bp implements ed {
             jaggl.OpenGL.glGenTextures(1, dq.field_s, 0);
             ((bp) this).field_f = dq.field_s[0];
             this.b((byte) 78);
-            this.b(0, 25109);
+            int discarded$0 = 25109;
+            int discarded$1 = 0;
+            this.b();
         } catch (RuntimeException runtimeException) {
             throw qo.a((Throwable) (Object) runtimeException, "bp.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 41);
         }
     }
 
-    private final int f(int param0) {
+    private final int f() {
         int var2 = ((bp) this).field_g.field_j * ((bp) this).field_c.field_c * ((bp) this).field_b;
         return ((bp) this).field_d ? 4 * var2 / 3 : var2;
     }

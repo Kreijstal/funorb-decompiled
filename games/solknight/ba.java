@@ -46,7 +46,8 @@ final class ba extends ec {
               if (var3_int == 0) {
                 break L0;
               } else {
-                this.a(var3_int, param0, 0);
+                int discarded$4 = 0;
+                this.a(var3_int, param0);
                 continue L2;
               }
             }
@@ -83,7 +84,7 @@ final class ba extends ec {
         }
     }
 
-    private final void a(int param0, gb param1, int param2) {
+    private final void a(int param0, gb param1) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -112,7 +113,8 @@ final class ba extends ec {
           L0: {
             L1: {
               if (1 == param0) {
-                ((ba) this).field_p = b.a(param1.h(72), '<', true);
+                int discarded$1 = 1;
+                ((ba) this).field_p = b.a(param1.h(72), '<');
                 break L1;
               } else {
                 if (param0 != 2) {

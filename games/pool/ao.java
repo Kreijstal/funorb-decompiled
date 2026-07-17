@@ -215,20 +215,17 @@ final class ao extends vh {
 
     final static void a(byte param0, int param1, lr param2, lr param3) {
         try {
-            wj.field_T = param1;
+            wj.field_T = 480;
             gj.field_R = param3;
             dq.field_f = param2;
             nj.a(qh.field_f / 2, qh.field_l / 2, 97);
-            if (param0 != -83) {
-                field_Lb = null;
-            }
             kg.a(param3.field_L, true, param2.field_w + param2.field_L, param3.field_w + param3.field_L, param2.field_L);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "ao.U(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "ao.U(" + -83 + 44 + 480 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static void c(boolean param0) {
+    final static void c() {
         cb.field_d = 0;
     }
 
@@ -263,17 +260,14 @@ final class ao extends vh {
         ((ao) this).field_Qb.field_eb = var6;
     }
 
-    public static void d(boolean param0) {
+    public static void d() {
         field_Pb = null;
         field_Nb = null;
         field_Lb = null;
     }
 
     final static void a(int param0, String param1) {
-        System.out.println("Error: " + dg.a(param0 ^ 76, "\n", param1, "%0a"));
-        if (param0 != 55) {
-            field_Pb = null;
-        }
+        System.out.println("Error: " + dg.a(123, "\n", param1, "%0a"));
     }
 
     static {

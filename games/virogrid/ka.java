@@ -17,7 +17,7 @@ final class ka extends l {
         }
         pg.field_h = true;
         j.a(false, -125);
-        j.field_l = 0;
+        j.field_l = param0;
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
@@ -142,11 +142,14 @@ final class ka extends l {
 
     final static void a(boolean param0, byte param1) {
         gb.field_H = new jf(bc.field_c);
+        if (param1 != 87) {
+            return;
+        }
         ln.field_g = -1;
         gb.field_H.field_d = gb.field_H.field_d | param0;
     }
 
-    public static void c(int param0) {
+    public static void c() {
         int var1 = 9;
         field_n = null;
     }

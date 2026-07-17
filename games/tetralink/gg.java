@@ -21,7 +21,7 @@ final class gg extends hm {
         }
     }
 
-    final static void d(byte param0) {
+    final static void d() {
         bf var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -97,10 +97,7 @@ final class gg extends hm {
         }
     }
 
-    final static void c(byte param0) {
-        if (param0 != 43) {
-            return;
-        }
+    final static void c() {
         if (null != hd.field_s) {
             if (!(null == hd.field_s.field_h)) {
                 hd.field_s.field_h.field_zb = false;
@@ -110,7 +107,7 @@ final class gg extends hm {
         bi.field_d = null;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         int var1_int = 0;
         RuntimeException var1 = null;
         double var2 = 0.0;
@@ -171,17 +168,14 @@ final class gg extends hm {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void a() {
         bc var2 = nd.field_Lb;
-        var2.f(param0, (byte) -92);
+        var2.f(11, (byte) -92);
         var2.a(1, false);
         var2.a(0, false);
     }
 
     public static void a(boolean param0) {
-        if (param0) {
-            field_k = null;
-        }
         field_k = null;
         field_j = null;
         field_i = null;

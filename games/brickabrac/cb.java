@@ -12,7 +12,7 @@ final class cb extends k {
     static String field_p;
     private vb field_m;
 
-    final static void e(byte param0) {
+    final static void e() {
         if (!(cg.field_l)) {
             throw new IllegalStateException();
         }
@@ -115,14 +115,14 @@ final class cb extends k {
         return stackIn_12_0;
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_o = null;
-        int var1 = 55 / ((58 - param0) / 54);
+        int var1 = 27;
         field_p = null;
         field_l = null;
     }
 
-    final static void b(boolean param0) {
+    final static void b() {
         k.field_h.e(-13413, 9);
         vh.field_L = true;
     }
@@ -250,21 +250,18 @@ final class cb extends k {
         }
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void a(java.applet.Applet param0) {
         String var2 = null;
         String var3 = null;
         long var4 = 0L;
         try {
             ni.field_Sb = true;
-            if (param1 != 9) {
-                cb.f(-31);
-            }
             var2 = "tuhstatbut";
             var3 = "rvnadlm";
             var4 = -1L;
             sj.a(param0, (byte) 117, var3, var2, var4);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "cb.G(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "cb.G(" + (param0 != null ? "{...}" : "null") + 44 + 9 + 41);
         }
     }
 

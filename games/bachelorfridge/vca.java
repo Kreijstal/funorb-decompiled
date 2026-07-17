@@ -13,7 +13,7 @@ final class vca extends bw {
     private int field_l;
     private int field_n;
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_i = null;
         field_m = null;
@@ -25,14 +25,14 @@ final class vca extends bw {
         return ((vca) this).field_l < ((vca) this).field_g.field_p + 20 ? true : false;
     }
 
-    final static void c(boolean param0) {
+    final static void c() {
         pla.field_g = f.b((byte) 73);
         qla.field_f = 0;
     }
 
     private final void a(int param0, int param1, int param2, String param3, po param4) {
-        RuntimeException runtimeException = null;
         int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -75,10 +75,11 @@ final class vca extends bw {
               var7 = 8 + (param4.field_B + param4.field_u - -2);
               ((vca) this).field_g = new kv(var6_int, var7);
               bu.a(0, ((vca) this).field_g);
-              ce.a(true, param0, 1 + param4.field_u, param3, 1, true);
+              int discarded$1 = 1;
+              ce.a(true, param0, 1 + param4.field_u, param3, 1);
               db.b(119);
               ((vca) this).field_g.f((param0 & 16579836) >> 2);
-              if (~param1 == param2) {
+              if (param1 == 4096) {
                 break L1;
               } else {
                 var8 = var6_int;
@@ -96,9 +97,9 @@ final class vca extends bw {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
-            runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("vca.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            var6 = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) var6;
+            stackOut_3_1 = new StringBuilder().append("vca.C(").append(param0).append(44).append(param1).append(44).append(-4097).append(44);
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;

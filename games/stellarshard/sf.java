@@ -9,7 +9,7 @@ final class sf {
     static pg field_f;
     static be field_c;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
         field_f = null;
         field_d = null;
@@ -26,7 +26,7 @@ final class sf {
         }
     }
 
-    final static boolean b(boolean param0) {
+    final static boolean b() {
         if (dg.field_z == null) {
             return false;
         }

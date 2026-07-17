@@ -6,7 +6,7 @@ final class fpa {
     static String field_a;
     static boolean field_c;
 
-    final static void a(java.awt.Canvas param0, byte param1) {
+    final static void a(java.awt.Canvas param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -26,8 +26,10 @@ final class fpa {
         String stackOut_5_2 = null;
         try {
           L0: {
-            qma.a((java.awt.Component) (Object) param0, -71);
-            ri.a((java.awt.Component) (Object) param0, true);
+            int discarded$14 = -71;
+            qma.a((java.awt.Component) (Object) param0);
+            int discarded$15 = 1;
+            ri.a((java.awt.Component) (Object) param0);
             if (tja.field_q != null) {
               tja.field_q.a(-114, (java.awt.Component) (Object) param0);
               break L0;
@@ -67,7 +69,7 @@ final class fpa {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
     }

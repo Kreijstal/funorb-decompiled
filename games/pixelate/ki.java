@@ -32,7 +32,7 @@ final class ki {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -386,10 +386,7 @@ final class ki {
         }
     }
 
-    public static void c(int param0) {
-        if (param0 != 25335) {
-            return;
-        }
+    public static void c() {
         field_a = null;
         field_b = null;
         field_k = null;
@@ -398,14 +395,7 @@ final class ki {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        if (param1 != -1) {
-          ki.c(-60);
-          gq.a(param1 + 1, param3, param0, Integer.toString(param2));
-          return;
-        } else {
-          gq.a(param1 + 1, param3, param0, Integer.toString(param2));
-          return;
-        }
+        gq.a(0, param3, param0, Integer.toString(param2));
     }
 
     ki(int param0, int param1, int param2, int param3) {

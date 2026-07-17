@@ -12,7 +12,7 @@ abstract class ov {
     static String field_d;
     int field_b;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_e = null;
         field_d = null;
@@ -40,7 +40,7 @@ abstract class ov {
 
     abstract void a(int param0, int param1, java.awt.Graphics param2, int param3);
 
-    final static void b(int param0) {
+    final static void b() {
         int var1 = 0;
         int var2 = 0;
         var2 = Sumoblitz.field_L ? 1 : 0;
@@ -50,21 +50,25 @@ abstract class ov {
           var1 = jk.field_c;
           if (var1 > 0) {
             if (1 != var1) {
-              t.field_s = ic.a(ph.field_d, new String[1], (byte) -128);
+              int discarded$8 = -128;
+              t.field_s = ic.a(ph.field_d, new String[1]);
               t.field_s = uo.a(false, new CharSequence[3]);
               hc.field_c.n(-7);
-              od.a(5178);
+              int discarded$9 = 5178;
+              od.a();
               return;
             } else {
               t.field_s = kq.field_O;
               t.field_s = uo.a(false, new CharSequence[3]);
               hc.field_c.n(-7);
-              od.a(5178);
+              int discarded$10 = 5178;
+              od.a();
               return;
             }
           } else {
             hc.field_c.n(-7);
-            od.a(5178);
+            int discarded$11 = 5178;
+            od.a();
             return;
           }
         } else {

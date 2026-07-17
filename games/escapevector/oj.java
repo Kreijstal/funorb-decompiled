@@ -24,7 +24,7 @@ final class oj extends hc {
         }
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_K = null;
         field_N = null;
         field_O = null;
@@ -275,25 +275,25 @@ final class oj extends hc {
 
     final static void a(int param0, int param1, byte param2, String param3) {
         try {
-            fh.field_g.a(param3, param1 - 1, -1 + param0, 0, -1, 64);
-            fh.field_g.a(param3, param1 - -1, -1 + param0, 0, -1, 64);
-            fh.field_g.a(param3, -1 + param1, param0 - -1, 0, -1, 64);
-            fh.field_g.a(param3, 1 + param1, param0 - -1, 0, -1, 64);
-            fh.field_g.b(param3, param1, param0, 16777215, -1);
+            fh.field_g.a(param3, 339, -1 + param0, 0, -1, 64);
+            fh.field_g.a(param3, 341, -1 + param0, 0, -1, 64);
+            fh.field_g.a(param3, 339, param0 - -1, 0, -1, 64);
+            fh.field_g.a(param3, 341, param0 - -1, 0, -1, 64);
+            fh.field_g.b(param3, 340, param0, 16777215, -1);
             int var4_int = -103 / ((param2 - 7) / 46);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "oj.D(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "oj.D(" + param0 + 44 + 340 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static int[] k(int param0) {
+    final static int[] k() {
         if (!(null == bk.field_r)) {
             return bk.field_r.d(31304);
         }
         return null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         if (!mj.a((byte) 93)) {
             return;
         }

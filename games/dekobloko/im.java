@@ -43,7 +43,7 @@ final class im implements Runnable {
         ((im) this).field_h = null;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_g = null;
         field_d = null;
         field_c = null;
@@ -52,7 +52,8 @@ final class im implements Runnable {
     }
 
     final static void a(int param0, int param1, boolean param2, int param3) {
-        ff.a(param2, 10891);
+        int discarded$5 = 10891;
+        ff.a(param2);
         if (param0 >= -87) {
           field_j = null;
           gb.a(param3, param2, (byte) -126, param1);

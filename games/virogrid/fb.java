@@ -22,9 +22,9 @@ final class fb extends l {
         int var4 = 0;
         Object var5 = null;
         int var6 = 0;
-        cm var9 = null;
-        hg var10 = null;
-        byte[] var14 = null;
+        cm var8 = null;
+        hg var9 = null;
+        byte[] var13 = null;
         RuntimeException decompiledCaughtException = null;
         var6 = Virogrid.field_F ? 1 : 0;
         try {
@@ -37,28 +37,28 @@ final class fb extends l {
                 break L1;
               }
             }
-            var10 = sh.field_qb;
-            var2 = var10.g(11132);
+            var9 = sh.field_qb;
+            var2 = var9.g(11132);
             if (var2 == 0) {
-              var9 = (cm) (Object) di.field_v.a((byte) -51);
-              if (var9 == null) {
+              var8 = (cm) (Object) di.field_v.a((byte) -51);
+              if (var8 == null) {
                 tn.a(false);
                 return;
               } else {
                 L2: {
-                  var4 = var10.g(11132);
+                  var4 = var9.g(11132);
                   if (var4 != 0) {
-                    var14 = new byte[var4];
-                    var10.a(0, var4, true, var14);
+                    var13 = new byte[var4];
+                    var9.a(0, var4, true, var13);
                     break L2;
                   } else {
                     var5 = null;
                     break L2;
                   }
                 }
-                var10.field_l = var10.field_l + 4;
-                if (var10.e(-29449)) {
-                  var9.a(false);
+                var9.field_l = var9.field_l + 4;
+                if (var9.e(-29449)) {
+                  var8.a(false);
                   break L0;
                 } else {
                   tn.a(false);
@@ -67,11 +67,13 @@ final class fb extends l {
               }
             } else {
               if (var2 != 1) {
-                en.a("A1: " + rg.a(true), (Throwable) null, 1);
+                int discarded$2 = 1;
+                int discarded$3 = 1;
+                en.a("A1: " + rg.a(), (Throwable) null);
                 tn.a(false);
                 return;
               } else {
-                var3 = var10.d((byte) 122);
+                var3 = var9.d((byte) 122);
                 var4_ref_fa = (fa) (Object) oi.field_a.a((byte) -65);
                 L3: while (true) {
                   L4: {

@@ -1194,7 +1194,9 @@ abstract class le extends ca {
                                     }
                                   } else {
                                     var7 = (CharSequence) (Object) param0.substring(5);
-                                    field_z = th.a(var7, 8, 16);
+                                    int discarded$8 = 16;
+                                    int discarded$9 = 8;
+                                    field_z = th.a(var7);
                                     break L1;
                                   }
                                 } else {
@@ -1207,7 +1209,9 @@ abstract class le extends ca {
                               }
                             } else {
                               var6 = (CharSequence) (Object) param0.substring(2);
-                              field_w = th.a(var6, 8, 16);
+                              int discarded$10 = 16;
+                              int discarded$11 = 8;
+                              field_w = th.a(var6);
                               break L1;
                             }
                           } else {
@@ -1220,7 +1224,9 @@ abstract class le extends ca {
                         }
                       } else {
                         var5 = (CharSequence) (Object) param0.substring(4);
-                        field_y = th.a(var5, 8, 16);
+                        int discarded$12 = 16;
+                        int discarded$13 = 8;
+                        field_y = th.a(var5);
                         break L1;
                       }
                     } else {
@@ -1238,7 +1244,9 @@ abstract class le extends ca {
                 }
               } else {
                 var3 = (CharSequence) (Object) param0.substring(4);
-                field_F = th.a(var3, 8, 16);
+                int discarded$14 = 16;
+                int discarded$15 = 8;
+                field_F = th.a(var3);
                 break L1;
               }
             }

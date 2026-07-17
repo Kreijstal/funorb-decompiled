@@ -320,8 +320,8 @@ final class wb {
     }
 
     final static void e(int param0, int param1, int param2, int param3, int param4, int param5) {
-        wb.a(field_d, 0, param2 + param3 * field_h, param0, param2, param4, field_h - param4, param5);
-        wb.a(field_d, 0, param2 + param3 * field_h, param1, param3, param5, field_h - param4, param2, param4);
+        wb.a(field_d, 0, 0 * field_h, param0, 0, param4, field_h - param4, param5);
+        wb.a(field_d, 0, 0 * field_h, param1, 0, param5, field_h - param4, 0, param4);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -578,14 +578,11 @@ final class wb {
         }
     }
 
-    final static void g(int param0, int param1, int param2, int param3, int param4, int param5) {
-        wb.e(param0, param1, param2, param4, 64);
-        wb.e(param0, param1 + param3 - 1, param2, param4, 64);
-        if (param3 >= 3) {
-            wb.a(param0, param1 + 1, param3 - 2, param4, 64);
-            wb.a(param0 + param2 - 1, param1 + 1, param3 - 2, param4, 64);
-            return;
-        }
+    final static void g(int param0) {
+        wb.e(param0, 146, 32, 3100495, 64);
+        wb.e(param0, 177, 32, 3100495, 64);
+        wb.a(param0, 147, 30, 3100495, 64);
+        wb.a(param0 + 31, 147, 30, 3100495, 64);
     }
 
     final static void h(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -855,9 +852,9 @@ final class wb {
               }
             }
             var6 = 256 - param5;
-            var7 = (param4 >> 16 & 255) * param5;
-            var8 = (param4 >> 8 & 255) * param5;
-            var9 = (param4 & 255) * param5;
+            var7 = 255 * param5;
+            var8 = 255 * param5;
+            var9 = 255 * param5;
             if (param2 <= param3) {
               L1: {
                 param0 = param0 << 16;
@@ -962,10 +959,10 @@ final class wb {
           } else {
             L9: {
               if (param3 < 0) {
-                wb.a(param0, param1 + param3, -param3 + 1, param4, param5);
+                wb.a(param0, param1 + param3, -param3 + 1, 16777215, param5);
                 break L9;
               } else {
-                wb.a(param0, param1, param3 + 1, param4, param5);
+                wb.a(param0, param1, param3 + 1, 16777215, param5);
                 break L9;
               }
             }
@@ -974,10 +971,10 @@ final class wb {
         } else {
           L10: {
             if (param2 < 0) {
-              wb.e(param0 + param2, param1, -param2 + 1, param4, param5);
+              wb.e(param0 + param2, param1, -param2 + 1, 16777215, param5);
               break L10;
             } else {
-              wb.e(param0, param1, param2 + 1, param4, param5);
+              wb.e(param0, param1, param2 + 1, 16777215, param5);
               break L10;
             }
           }
@@ -1004,7 +1001,7 @@ final class wb {
         int var23 = 0;
         L0: {
           var8 = 16384 / (2 * param3 + 1);
-          var9 = 1 + param3 - param5 - param4;
+          var9 = 1 + param3 - param5;
           if (0 >= var9) {
             break L0;
           } else {
@@ -1013,7 +1010,7 @@ final class wb {
           }
         }
         L1: {
-          var10 = field_h - param4 - param5 - param3;
+          var10 = field_h - param5 - param3;
           if (0 >= var10) {
             break L1;
           } else {
@@ -1023,7 +1020,7 @@ final class wb {
         }
         L2: {
           var11 = 0;
-          var12 = param4 + param3 + 1;
+          var12 = param3 + 1;
           if (field_h >= var12) {
             break L2;
           } else {
@@ -1043,7 +1040,7 @@ final class wb {
               var16 = 0;
               var17 = param2 - param3;
               var18 = var17 - (param3 << 1) - 1;
-              var19 = param4 - param3;
+              var19 = 0 - param3;
               if (var19 >= 0) {
                 break L4;
               } else {
@@ -1200,7 +1197,7 @@ final class wb {
                   } else {
                     L18: {
                       var18++;
-                      if (param4 + param5 + var19 + param3 >= field_j) {
+                      if (param5 + var19 + param3 >= field_j) {
                         break L18;
                       } else {
                         param1 = param0[var17];
@@ -1255,8 +1252,8 @@ final class wb {
 
     final static void f(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var6 = 0;
-        for (var6 = 0; var6 < param4; var6++) {
-            wb.d(param0 + var6, param1 + var6, param2 - (var6 << 1), param3 - (var6 << 1), 1);
+        for (var6 = 0; var6 < 2; var6++) {
+            wb.d(param0 + var6, 146 + var6, param2 - (var6 << 1), param3 - (var6 << 1), 1);
         }
     }
 
@@ -1480,7 +1477,7 @@ final class wb {
           ne.a(var34, 0, param8);
           ne.a(var35, 0, param8);
           var12 = 16384 / (2 * param3 + 1);
-          var13 = param4 - param3;
+          var13 = 0 - param3;
           if (var13 >= 0) {
             break L2;
           } else {
@@ -1489,8 +1486,8 @@ final class wb {
           }
         }
         L3: {
-          var14 = param7 + var13 * field_h;
-          var15 = param4 + param3;
+          var14 = var13 * field_h;
+          var15 = param3;
           var16 = 0;
           if (var15 < field_c) {
             break L3;
@@ -1510,7 +1507,7 @@ final class wb {
                 L6: {
                   param2 = param2 + param6;
                   var13 = 1 - param5;
-                  var18 = 1 + param3 - param5 - param4;
+                  var18 = 1 + param3 - param5;
                   if (0 >= var18) {
                     break L6;
                   } else {
@@ -1519,7 +1516,7 @@ final class wb {
                   }
                 }
                 L7: {
-                  var19 = param7 + (param4 - param3) * field_h;
+                  var19 = (0 - param3) * field_h;
                   if (var13 >= var18) {
                     break L7;
                   } else {
@@ -1530,7 +1527,7 @@ final class wb {
                 L8: while (true) {
                   if (var13 >= var18) {
                     L9: {
-                      var18 = field_c - param4 - param5 - param3;
+                      var18 = field_c - param5 - param3;
                       if (0 >= var18) {
                         break L9;
                       } else {
@@ -1772,7 +1769,7 @@ final class wb {
                     }
                   } else {
                     L26: {
-                      if (var13 + param4 + param5 + param3 >= field_b) {
+                      if (var13 + param5 + param3 >= field_b) {
                         var14 = var14 + field_h;
                         break L26;
                       } else {

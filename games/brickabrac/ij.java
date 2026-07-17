@@ -9,9 +9,12 @@ final class ij implements wb {
     static String field_f;
     static mh field_a;
 
-    private final boolean d(boolean param0) {
+    private final boolean d() {
         if (rf.field_g == null) {
-            rf.field_g = cp.b(-2, 0, 2, 10, 3);
+            int discarded$0 = 3;
+            int discarded$1 = 10;
+            int discarded$2 = 2;
+            rf.field_g = cp.b(-2, 0);
         }
         if (rf.field_g.field_o) {
             be.field_a = true;
@@ -29,29 +32,49 @@ final class ij implements wb {
     }
 
     public final void a(boolean param0) {
-        vl.a(127, 50);
-        pa var2 = new pa(cd.field_h);
+        pa var2 = null;
         Object var3 = null;
-        ie.a(1, (jp[]) null, vn.field_G, 240, af.field_A, 8, 2, (dh) (Object) nn.field_g, 0, 2, 100, 8, 0, 320, 0);
-        hd.a(93, (ta) (Object) var2, 20, 20);
-        if (param0) {
-            boolean discarded$0 = this.b((byte) -1);
+        L0: {
+          vl.a(127, 50);
+          var2 = new pa(cd.field_h);
+          int discarded$15 = 0;
+          int discarded$16 = 320;
+          int discarded$17 = 0;
+          int discarded$18 = 8;
+          int discarded$19 = 100;
+          int discarded$20 = 2;
+          int discarded$21 = 0;
+          ie.a(1, (jp[]) null, vn.field_G, 240, af.field_A, 8, 2, (dh) (Object) nn.field_g);
+          hd.a(93, (ta) (Object) var2, 20, 20);
+          if (!param0) {
+            break L0;
+          } else {
+            boolean discarded$22 = this.b((byte) -1);
+            break L0;
+          }
         }
-        Object var4 = null;
+        var3 = null;
         nh.a((jp[]) null, 240, 8, 320, 0, (dh) (Object) nn.field_g, 2, 0, 1, af.field_A, 0, vn.field_G, 2, (byte) -110, 8);
         ka.a(20, -97, 20, (ta) (Object) var2);
-        oa.a(jf.field_d, no.field_t, 2, j.field_jb, tk.field_k, wn.field_c, (jp[][]) null, gq.field_Rb, true, 1, jb.field_I, j.field_jb, wd.field_C, qh.field_h, 22287);
+        int discarded$23 = 22287;
+        oa.a(jf.field_d, no.field_t, 2, j.field_jb, tk.field_k, wn.field_c, (jp[][]) null, gq.field_Rb, true, 1, jb.field_I, j.field_jb, wd.field_C, qh.field_h);
         ea.field_g = true;
         c.field_e = er.field_b;
-        pn.b(-9, 200);
-        op.a((vc) (Object) new sb(), 0);
-        td.g(0);
+        int discarded$24 = 200;
+        int discarded$25 = -9;
+        pn.b();
+        int discarded$26 = 0;
+        op.a((vc) (Object) new sb());
+        int discarded$27 = 0;
+        td.g();
         qn.a(240, 0, 640, 0, -6532);
         bm.a(kh.field_i, qb.field_r, 24876, uj.field_o, gf.field_e, ki.field_f, i.field_s);
         oc.a(1, (dh) (Object) ob.field_D);
-        hk.h((byte) 55);
+        int discarded$28 = 55;
+        hk.h();
         hk.a((byte) 115, ki.field_f);
-        lp.field_rb = (gf) (Object) bq.a(21, 28472);
+        int discarded$29 = 28472;
+        lp.field_rb = (gf) (Object) bq.a(21);
         co.a((byte) -79, cd.field_g);
     }
 
@@ -62,7 +85,8 @@ final class ij implements wb {
         if (param0 == -2) {
             return (gf) (Object) ki.field_p;
         }
-        return (gf) (Object) bq.a(param0, 28472);
+        int discarded$0 = 28472;
+        return (gf) (Object) bq.a(param0);
     }
 
     public static void c(boolean param0) {
@@ -84,7 +108,8 @@ final class ij implements wb {
           if (hb.field_y) {
             break L0;
           } else {
-            hb.field_y = gq.d((byte) -126);
+            int discarded$4 = -126;
+            hb.field_y = gq.d();
             break L0;
           }
         }
@@ -106,7 +131,8 @@ final class ij implements wb {
         }
         L3: {
           if (!th.field_b) {
-            th.field_b = this.d(true);
+            int discarded$5 = 1;
+            th.field_b = this.d();
             break L3;
           } else {
             break L3;
@@ -152,7 +178,8 @@ final class ij implements wb {
               if (var2 >= 2) {
                 break L0;
               } else {
-                fp.field_y[var2] = fa.a(1, (byte) -72, var2, 5);
+                int discarded$1 = 5;
+                fp.field_y[var2] = fa.a(1, (byte) -72, var2);
                 var2++;
                 continue L1;
               }
@@ -261,7 +288,8 @@ final class ij implements wb {
           nl.field_a = aj.a(11, true);
           hp.field_i = aj.a(12, true);
           wd.field_C = aj.a(13, true);
-          wn.a(gq.field_Rb, wn.field_c, 0);
+          int discarded$1 = 0;
+          wn.a(gq.field_Rb, wn.field_c);
           bh.field_tb = new s(82);
           bh.field_tb.a(tm.field_e, "basic", 125, ib.field_F, gq.field_Rb);
           bh.field_tb.a(tm.field_e, "lobby", 126, ib.field_F, gq.field_Rb);
@@ -319,13 +347,15 @@ final class ij implements wb {
                   if (4 == var3) {
                     ai.a((byte) 24, 92.0f, vn.field_x);
                     sl.field_C.g(121);
-                    sb.a(nl.field_a, hp.field_i, 2);
+                    int discarded$4 = 2;
+                    sb.a(nl.field_a, hp.field_i);
                     break L0;
                   } else {
                     if (var3 != 5) {
                       return true;
                     } else {
-                      rj.a(new fk(uf.field_a.a(121, "", "huffman")), false);
+                      int discarded$5 = 0;
+                      rj.a(new fk(uf.field_a.a(121, "", "huffman")));
                       uf.field_a = null;
                       break L0;
                     }
@@ -339,7 +369,8 @@ final class ij implements wb {
               } else {
                 ai.a((byte) 24, 88.0f, sf.field_bb);
                 sl.field_C.g(124);
-                var2 = var2 != 0 & wo.a(2) ? 1 : 0;
+                int discarded$6 = 2;
+                var2 = var2 != 0 & wo.a() ? 1 : 0;
                 break L0;
               }
             } else {
@@ -350,7 +381,8 @@ final class ij implements wb {
             }
           } else {
             mc.a((byte) 115);
-            uj.a(-1);
+            int discarded$7 = -1;
+            uj.a();
             lq.a(uj.field_o, kh.field_i, (byte) -38, i.field_s, qb.field_r);
             break L0;
           }

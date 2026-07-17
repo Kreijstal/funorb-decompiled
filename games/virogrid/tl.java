@@ -202,7 +202,7 @@ final class tl extends wh {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         int var1 = 0;
         field_k = null;
         field_j = null;

@@ -74,7 +74,8 @@ final class d {
                   if (param0 == null) {
                     break L1;
                   } else {
-                    var4_ref = rk.a(param0, false);
+                    int discarded$2 = 0;
+                    var4_ref = rk.a(param0);
                     break L1;
                   }
                 }
@@ -161,7 +162,7 @@ final class d {
                           break L6;
                         } else {
                           var6 = (DataInputStream) var5.field_g;
-                          int discarded$1 = var6.read();
+                          int discarded$3 = var6.read();
                           var6.close();
                           break L6;
                         }
@@ -190,7 +191,7 @@ final class d {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_b = null;
         field_c = null;

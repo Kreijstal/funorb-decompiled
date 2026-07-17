@@ -17,7 +17,7 @@ final class es {
     }
 
     final static void a(int param0, int param1, sw param2, int param3, da param4, int param5, ha param6, int param7, int param8, no param9, int param10) {
-        RuntimeException var11 = null;
+        RuntimeException runtimeException = null;
         int var11_int = 0;
         int var12 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -85,7 +85,7 @@ final class es {
         try {
           L0: {
             L1: {
-              var11_int = -47 / ((param8 - -59) / 50);
+              var11_int = 47;
               if (null != pja.field_o) {
                 hg.field_c = 0;
                 rua.field_o = rua.field_o + 1;
@@ -120,8 +120,8 @@ final class es {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
-            var11 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var11;
+            runtimeException = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) runtimeException;
             stackOut_12_1 = new StringBuilder().append("es.B(").append(param0).append(44).append(param1).append(44);
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
@@ -197,7 +197,7 @@ final class es {
           }
           L5: {
             stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(44).append(param7).append(44).append(param8).append(44);
+            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(44).append(param7).append(44).append(-115).append(44);
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;

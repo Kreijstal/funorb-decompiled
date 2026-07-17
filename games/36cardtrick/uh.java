@@ -17,17 +17,12 @@ final class uh extends qb {
     static Random field_l;
 
     final static dh a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        dh var8 = null;
-        var8 = new dh(param5, param3, param0, param6, param4, param7);
+        dh var8 = new dh(param5, param3, param0, param6, param4, param7);
         vb.field_c.a((qb) (Object) var8, 27362);
-        if (param1 <= 49) {
-          field_i = null;
-          ke.a(var8, param2, 21719);
-          return var8;
-        } else {
-          ke.a(var8, param2, 21719);
-          return var8;
-        }
+        int discarded$0 = 21719;
+        int discarded$1 = 4;
+        ke.a(var8);
+        return var8;
     }
 
     final static int a(byte param0, int param1, byte[] param2) {
@@ -97,7 +92,7 @@ final class uh extends qb {
         return stackIn_4_0;
     }
 
-    final static kc[] a(int param0, qk param1, int param2, byte param3) {
+    final static kc[] a(int param0, qk param1, int param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -153,7 +148,7 @@ final class uh extends qb {
         }
     }
 
-    final static boolean a(qk param0, qk param1, qk param2, int param3) {
+    final static boolean a(qk param0, qk param1, qk param2) {
         RuntimeException var4 = null;
         int stackIn_4_0 = 0;
         int stackIn_9_0 = 0;
@@ -333,7 +328,7 @@ final class uh extends qb {
         return stackIn_14_0 != 0;
     }
 
-    final static void b(byte param0) {
+    final static void b() {
     }
 
     public static void a(int param0) {

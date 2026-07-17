@@ -69,7 +69,7 @@ final class ik {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_b = null;
         field_e = null;

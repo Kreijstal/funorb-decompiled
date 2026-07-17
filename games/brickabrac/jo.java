@@ -75,12 +75,9 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_j = null;
         field_k = null;
-        if (param0 != 11) {
-            field_k = null;
-        }
         field_h = null;
     }
 
@@ -106,8 +103,9 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
         try {
           L0: {
             L1: {
-              this.c(0);
-              boolean discarded$3 = param3.drawImage(((jo) this).field_c, param1, param0, (java.awt.image.ImageObserver) this);
+              int discarded$5 = 0;
+              this.c();
+              boolean discarded$6 = param3.drawImage(((jo) this).field_c, param1, param0, (java.awt.image.ImageObserver) this);
               if (param2 == -17260) {
                 break L1;
               } else {
@@ -156,16 +154,19 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
         ((jo) this).field_g = param3;
         ((jo) this).field_i = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
         ((jo) this).field_c = param0.createImage((java.awt.image.ImageProducer) this);
-        this.c(0);
-        boolean discarded$0 = param0.prepareImage(((jo) this).field_c, (java.awt.image.ImageObserver) this);
-        this.c(0);
-        boolean discarded$8 = param0.prepareImage(((jo) this).field_c, (java.awt.image.ImageObserver) this);
+        int discarded$0 = 0;
+        this.c();
+        boolean discarded$1 = param0.prepareImage(((jo) this).field_c, (java.awt.image.ImageObserver) this);
+        int discarded$2 = 0;
+        this.c();
+        boolean discarded$10 = param0.prepareImage(((jo) this).field_c, (java.awt.image.ImageObserver) this);
         if (!param2) {
             return;
         }
         try {
-            this.c(0);
-            boolean discarded$9 = param0.prepareImage(((jo) this).field_c, (java.awt.image.ImageObserver) this);
+            int discarded$11 = 0;
+            this.c();
+            boolean discarded$12 = param0.prepareImage(((jo) this).field_c, (java.awt.image.ImageObserver) this);
             ((jo) this).a((byte) 100);
         } catch (RuntimeException runtimeException) {
             throw qb.a((Throwable) (Object) runtimeException, "jo.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
@@ -247,7 +248,7 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    private final synchronized void c(int param0) {
+    private final synchronized void c() {
         if (!(((jo) this).field_l != null)) {
             return;
         }
@@ -278,50 +279,42 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
         int var19 = 0;
         int var20 = 0;
         int[] var24 = null;
-        int stackIn_5_0 = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_11_0 = 0;
         int stackIn_12_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_14_0 = 0;
-        int stackIn_14_1 = 0;
-        jp stackIn_17_0 = null;
+        int stackIn_12_1 = 0;
+        jp stackIn_15_0 = null;
+        int stackIn_31_0 = 0;
+        int stackIn_31_1 = 0;
+        int stackIn_32_0 = 0;
+        int stackIn_32_1 = 0;
         int stackIn_33_0 = 0;
         int stackIn_33_1 = 0;
-        int stackIn_34_0 = 0;
-        int stackIn_34_1 = 0;
-        int stackIn_35_0 = 0;
-        int stackIn_35_1 = 0;
-        int stackIn_35_2 = 0;
-        int stackIn_70_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
+        int stackIn_33_2 = 0;
+        int stackIn_68_0 = 0;
+        int stackOut_2_0 = 0;
+        int stackOut_1_0 = 0;
+        int stackOut_9_0 = 0;
         int stackOut_11_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_13_1 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_12_1 = 0;
-        jp stackOut_16_0 = null;
-        jp stackOut_15_0 = null;
+        int stackOut_11_1 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_10_1 = 0;
+        jp stackOut_14_0 = null;
+        jp stackOut_13_0 = null;
+        int stackOut_30_0 = 0;
+        int stackOut_30_1 = 0;
         int stackOut_32_0 = 0;
         int stackOut_32_1 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_34_1 = 0;
-        int stackOut_34_2 = 0;
-        int stackOut_33_0 = 0;
-        int stackOut_33_1 = 0;
-        int stackOut_33_2 = 0;
-        int stackOut_69_0 = 0;
-        int stackOut_68_0 = 0;
+        int stackOut_32_2 = 0;
+        int stackOut_31_0 = 0;
+        int stackOut_31_1 = 0;
+        int stackOut_31_2 = 0;
+        int stackOut_67_0 = 0;
+        int stackOut_66_0 = 0;
         L0: {
           var20 = BrickABrac.field_J ? 1 : 0;
           var7_int = 0;
-          if (param5 == 30) {
-            break L0;
-          } else {
-            jo.b(42);
-            break L0;
-          }
-        }
-        L1: {
           var8 = 0;
           var24 = new int[4];
           lb.a(var24);
@@ -331,152 +324,152 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
           kc.field_q.a((byte) 105);
           lb.b(var24);
           if ((1 << param2 & (param3.field_a | (param3.field_i | param3.field_g))) != 0) {
-            stackOut_4_0 = 0;
-            stackIn_5_0 = stackOut_4_0;
-            break L1;
+            stackOut_2_0 = 0;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
           } else {
-            stackOut_3_0 = 1;
-            stackIn_5_0 = stackOut_3_0;
-            break L1;
+            stackOut_1_0 = 1;
+            stackIn_3_0 = stackOut_1_0;
+            break L0;
           }
         }
-        var11 = stackIn_5_0;
+        var11 = stackIn_3_0;
         var12 = 0;
-        L2: while (true) {
+        L1: while (true) {
           if (var12 >= param1.field_z.length) {
             return;
           } else {
             var13 = param1.field_z[var12];
             var14 = (on) (Object) var13.d(-105);
-            L3: while (true) {
+            L2: while (true) {
               if (var14 == null) {
                 var12++;
-                continue L2;
+                continue L1;
               } else {
-                L4: {
+                L3: {
                   if ((1 & var14.field_N) == 0) {
-                    L5: {
+                    L4: {
                       var8 = param6 - -((var14.field_m >> 8) / param0);
                       var7_int = (var14.field_j >> 8) / param0 + param4;
-                      stackOut_11_0 = var14.field_i;
-                      stackIn_13_0 = stackOut_11_0;
-                      stackIn_12_0 = stackOut_11_0;
+                      stackOut_9_0 = var14.field_i;
+                      stackIn_11_0 = stackOut_9_0;
+                      stackIn_10_0 = stackOut_9_0;
                       if ((var14.field_N & 2) != 0) {
-                        stackOut_13_0 = stackIn_13_0;
-                        stackOut_13_1 = 29;
-                        stackIn_14_0 = stackOut_13_0;
-                        stackIn_14_1 = stackOut_13_1;
-                        break L5;
+                        stackOut_11_0 = stackIn_11_0;
+                        stackOut_11_1 = 29;
+                        stackIn_12_0 = stackOut_11_0;
+                        stackIn_12_1 = stackOut_11_1;
+                        break L4;
                       } else {
-                        stackOut_12_0 = stackIn_12_0;
-                        stackOut_12_1 = 0;
-                        stackIn_14_0 = stackOut_12_0;
-                        stackIn_14_1 = stackOut_12_1;
-                        break L5;
+                        stackOut_10_0 = stackIn_10_0;
+                        stackOut_10_1 = 0;
+                        stackIn_12_0 = stackOut_10_0;
+                        stackIn_12_1 = stackOut_10_1;
+                        break L4;
                       }
                     }
-                    L6: {
-                      var15 = stackIn_14_0 + stackIn_14_1;
+                    L5: {
+                      var15 = stackIn_12_0 + stackIn_12_1;
                       if (var15 != 24) {
-                        stackOut_16_0 = nj.field_l[var15];
-                        stackIn_17_0 = stackOut_16_0;
-                        break L6;
+                        stackOut_14_0 = nj.field_l[var15];
+                        stackIn_15_0 = stackOut_14_0;
+                        break L5;
                       } else {
-                        stackOut_15_0 = (jp) var10;
-                        stackIn_17_0 = stackOut_15_0;
-                        break L6;
+                        stackOut_13_0 = (jp) var10;
+                        stackIn_15_0 = stackOut_13_0;
+                        break L5;
                       }
                     }
-                    var16 = stackIn_17_0;
+                    var16 = stackIn_15_0;
                     if (var14.field_R < 0) {
-                      L7: {
+                      L6: {
                         if (param3.field_k == 1) {
-                          break L7;
+                          break L6;
                         } else {
                           if (var11 == 0) {
                             if (param1.field_U >= 50) {
-                              break L4;
+                              break L3;
                             } else {
                               var16.b(var7_int, var8, (-(256 * param1.field_U) + 12800) / 50);
-                              break L4;
+                              break L3;
                             }
                           } else {
-                            break L7;
+                            break L6;
                           }
                         }
                       }
                       var16.c(var7_int, var8);
                       if (!r.field_A) {
-                        break L4;
+                        break L3;
                       } else {
                         if (!ka.a((byte) 89)) {
-                          break L4;
+                          break L3;
                         } else {
                           if (4 == ga.field_i) {
                             if ((2 & var14.field_N) == 0) {
-                              break L4;
+                              break L3;
                             } else {
                               var17 = de.field_x - mn.field_v;
-                              var16.f(var7_int, var8, 64 + (sa.a(200 * var17, param5 ^ -4127) >> 10));
-                              break L4;
+                              var16.f(var7_int, var8, 64 + (sa.a(200 * var17, -4097) >> 10));
+                              break L3;
                             }
                           } else {
-                            break L4;
+                            break L3;
                           }
                         }
                       }
                     } else {
-                      L8: {
+                      L7: {
                         var17 = var14.field_B;
                         var18 = -(var14.field_l * 16) + 256;
                         if (var11 == 0) {
-                          L9: {
+                          L8: {
                             var19 = var14.field_l + param1.field_U;
-                            stackOut_32_0 = 256;
-                            stackOut_32_1 = 16;
-                            stackIn_34_0 = stackOut_32_0;
-                            stackIn_34_1 = stackOut_32_1;
-                            stackIn_33_0 = stackOut_32_0;
-                            stackIn_33_1 = stackOut_32_1;
+                            stackOut_30_0 = 256;
+                            stackOut_30_1 = 16;
+                            stackIn_32_0 = stackOut_30_0;
+                            stackIn_32_1 = stackOut_30_1;
+                            stackIn_31_0 = stackOut_30_0;
+                            stackIn_31_1 = stackOut_30_1;
                             if (16 >= var19) {
-                              stackOut_34_0 = stackIn_34_0;
-                              stackOut_34_1 = stackIn_34_1;
-                              stackOut_34_2 = var19;
-                              stackIn_35_0 = stackOut_34_0;
-                              stackIn_35_1 = stackOut_34_1;
-                              stackIn_35_2 = stackOut_34_2;
-                              break L9;
+                              stackOut_32_0 = stackIn_32_0;
+                              stackOut_32_1 = stackIn_32_1;
+                              stackOut_32_2 = var19;
+                              stackIn_33_0 = stackOut_32_0;
+                              stackIn_33_1 = stackOut_32_1;
+                              stackIn_33_2 = stackOut_32_2;
+                              break L8;
                             } else {
-                              stackOut_33_0 = stackIn_33_0;
-                              stackOut_33_1 = stackIn_33_1;
-                              stackOut_33_2 = 16;
-                              stackIn_35_0 = stackOut_33_0;
-                              stackIn_35_1 = stackOut_33_1;
-                              stackIn_35_2 = stackOut_33_2;
-                              break L9;
+                              stackOut_31_0 = stackIn_31_0;
+                              stackOut_31_1 = stackIn_31_1;
+                              stackOut_31_2 = 16;
+                              stackIn_33_0 = stackOut_31_0;
+                              stackIn_33_1 = stackOut_31_1;
+                              stackIn_33_2 = stackOut_31_2;
+                              break L8;
                             }
                           }
-                          var18 = stackIn_35_0 + -(stackIn_35_1 * stackIn_35_2);
-                          break L8;
+                          var18 = stackIn_33_0 + -(stackIn_33_1 * stackIn_33_2);
+                          break L7;
                         } else {
-                          break L8;
+                          break L7;
                         }
                       }
-                      L10: {
+                      L9: {
                         if (var17 != 12) {
                           if (0 == var17) {
                             var16.b(var7_int, var8, var18);
-                            break L10;
+                            break L9;
                           } else {
                             if (var17 == 5) {
                               var16.b(var7_int, var8, -var18 + 256);
-                              break L10;
+                              break L9;
                             } else {
                               if (var17 != 11) {
                                 if (var17 == 2) {
                                   var19 = -(2 * var14.field_l) + 34;
                                   var16.a(var14.field_l / param0 + var7_int, var8, var19 / param0, var16.field_z);
-                                  break L10;
+                                  break L9;
                                 } else {
                                   if (var17 != 10) {
                                     if (var17 != 6) {
@@ -486,43 +479,43 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
                                             var16.b(var7_int, var8, var16.field_x, var16.field_z, -(var14.field_l * 4) + 64);
                                             lb.e(var7_int, var8, var7_int + (var16.field_x - var14.field_l * 2 / param0), var16.field_z + var8);
                                             var16.c(var7_int, var8);
-                                            break L10;
+                                            break L9;
                                           } else {
                                             if (var17 != 1) {
                                               if (var17 != 3) {
                                                 if (var17 == 4) {
                                                   var19 = 16 + -var14.field_l;
                                                   var16.a(var7_int, var8 - -(var14.field_l / (param0 * 2)), 34 / param0, var19 / param0);
-                                                  break L10;
+                                                  break L9;
                                                 } else {
                                                   if (var17 == 14) {
-                                                    L11: {
+                                                    L10: {
                                                       if (2 * var14.field_l <= 8) {
-                                                        stackOut_69_0 = 2 * var14.field_l;
-                                                        stackIn_70_0 = stackOut_69_0;
-                                                        break L11;
+                                                        stackOut_67_0 = 2 * var14.field_l;
+                                                        stackIn_68_0 = stackOut_67_0;
+                                                        break L10;
                                                       } else {
-                                                        stackOut_68_0 = 8;
-                                                        stackIn_70_0 = stackOut_68_0;
-                                                        break L11;
+                                                        stackOut_66_0 = 8;
+                                                        stackIn_68_0 = stackOut_66_0;
+                                                        break L10;
                                                       }
                                                     }
-                                                    L12: {
-                                                      var19 = stackIn_70_0;
+                                                    L11: {
+                                                      var19 = stackIn_68_0;
                                                       var19 = var14.field_l + -var19;
                                                       if (var19 > 0) {
                                                         var19 = 0;
-                                                        break L12;
+                                                        break L11;
                                                       } else {
-                                                        break L12;
+                                                        break L11;
                                                       }
                                                     }
                                                     var16.a(var7_int - -(var19 / param0), var19 / param0 + var8, var16.field_x - 2 * var19 / param0, -(var19 * 2 / param0) + var16.field_z);
-                                                    break L10;
+                                                    break L9;
                                                   } else {
                                                     lb.b(var24);
                                                     var14 = (on) (Object) var13.a((byte) 116);
-                                                    continue L3;
+                                                    continue L2;
                                                   }
                                                 }
                                               } else {
@@ -534,48 +527,48 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
                                                 var16.b(var7_int - var14.field_l / param0, var14.field_l / param0 + var8, var18);
                                                 lb.e(var16.field_x / 2 + var14.field_l / param0 + var7_int, var14.field_l / param0 + var8 + var16.field_z / 2, var7_int - -(var14.field_l / param0) + var16.field_x, var8 - -(var14.field_l / param0) + var16.field_z);
                                                 var16.b(var7_int + var14.field_l / param0, var8 + var14.field_l / param0, var18);
-                                                break L10;
+                                                break L9;
                                               }
                                             } else {
                                               var19 = var14.field_l - 6;
                                               var16.b(var7_int - -(var19 / param0), var19 / param0 + var8, -(var19 * 2 / param0) + var16.field_x, var16.field_z - var19 * 2 / param0, var18);
-                                              break L10;
+                                              break L9;
                                             }
                                           }
                                         } else {
                                           var16.b(var7_int, var8, var16.field_x, var16.field_z, -(var14.field_l * 4) + 64);
                                           lb.e(var7_int - -(var14.field_l * 2 / param0), var8, var7_int - -var16.field_x, var16.field_z + var8);
                                           var16.c(var7_int, var8);
-                                          break L10;
+                                          break L9;
                                         }
                                       } else {
                                         var16.b(var7_int, var8, var16.field_x, var16.field_z, -(4 * var14.field_l) + 64);
                                         lb.e(var7_int, var8, var7_int - -var16.field_x, var8 + (var16.field_z - var14.field_l / param0));
                                         var16.c(var7_int, var8);
-                                        break L10;
+                                        break L9;
                                       }
                                     } else {
                                       var16.b(var7_int, var8, var16.field_x, var16.field_z, -(4 * var14.field_l) + 64);
                                       lb.e(var7_int, var14.field_l / param0 + var8, var16.field_x + var7_int, var8 + var16.field_z);
                                       var16.c(var7_int, var8);
-                                      break L10;
+                                      break L9;
                                     }
                                   } else {
                                     if (var14.field_l < 8) {
                                       var19 = 34 + -(var14.field_l * 4);
                                       var16.a(var14.field_l * 2 / param0 + var7_int, var8, var19 / param0, var16.field_z);
-                                      break L10;
+                                      break L9;
                                     } else {
                                       var19 = -26 + var14.field_l * 4;
                                       nj.field_l[var14.field_R].a((-(2 * var14.field_l) + 30) / param0 + var7_int, var8, var19 / param0, var16.field_z);
-                                      break L10;
+                                      break L9;
                                     }
                                   }
                                 }
                               } else {
                                 nj.field_l[var14.field_R].c(var7_int, var8);
                                 var16.b(var7_int, var8, var18);
-                                break L10;
+                                break L9;
                               }
                             }
                           }
@@ -583,40 +576,40 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
                           var16.c(var7_int, var8);
                           lb.e(var7_int, var8, var7_int + var16.field_x, var16.field_z + var8);
                           var19 = 0;
-                          L13: while (true) {
+                          L12: while (true) {
                             if (var19 >= 10) {
-                              break L10;
+                              break L9;
                             } else {
-                              L14: {
-                                L15: {
+                              L13: {
+                                L14: {
                                   if (var19 <= 5) {
-                                    break L15;
+                                    break L14;
                                   } else {
                                     if (var19 >= 8) {
-                                      break L15;
-                                    } else {
                                       break L14;
+                                    } else {
+                                      break L13;
                                     }
                                   }
                                 }
                                 lb.f(var7_int + (var19 + var14.field_l * 2), var8 + var16.field_z, 10 + var7_int - -var19 - -(2 * var14.field_l), var8, 16777215, var18);
-                                break L14;
+                                break L13;
                               }
                               var19++;
-                              continue L13;
+                              continue L12;
                             }
                           }
                         }
                       }
                       lb.b(var24);
-                      break L4;
+                      break L3;
                     }
                   } else {
-                    break L4;
+                    break L3;
                   }
                 }
                 var14 = (on) (Object) var13.a((byte) 116);
-                continue L3;
+                continue L2;
               }
             }
           }

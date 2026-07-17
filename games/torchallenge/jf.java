@@ -21,7 +21,7 @@ final class jf extends n {
         super(param0, param1, 33, 20, 30);
     }
 
-    public static void n(int param0) {
+    public static void n() {
         field_pb = null;
         int var1 = 110;
         field_ob = null;

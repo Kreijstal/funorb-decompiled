@@ -9,12 +9,12 @@ final class hp {
 
     final static void a(int param0, byte param1) {
         wj var2 = ac.field_B;
-        var2.d((byte) -88, param0);
+        var2.d((byte) -88, 6);
         var2.a(6, 1);
         var2.a(6, 0);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
         field_a = null;

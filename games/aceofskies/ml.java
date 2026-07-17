@@ -237,12 +237,9 @@ final class ml extends wf {
             param2.field_a = param1;
             param2.field_c = param1.field_c;
             param2.field_c.field_a = param2;
-            if (param0 != -20) {
-                field_m = null;
-            }
             param2.field_a.field_c = param2;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "ml.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "ml.C(" + -20 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

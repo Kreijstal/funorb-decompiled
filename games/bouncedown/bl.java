@@ -60,7 +60,7 @@ final class bl {
         return 2;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = 3;
         field_e = null;
         field_b = null;

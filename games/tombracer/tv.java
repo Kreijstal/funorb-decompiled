@@ -244,7 +244,7 @@ final class tv extends jea {
         }
     }
 
-    private final void a(int param0, int param1, byte param2) {
+    private final void a(int param0, int param1) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -340,7 +340,8 @@ final class tv extends jea {
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         ((tv) this).a(param0, param3, param4 + -23776, param6, param1);
-        this.a(param2, param5, (byte) -112);
+        int discarded$0 = -112;
+        this.a(param2, param5);
         if (param4 != 0) {
             ((tv) this).a(107, -86, 59, 7, 1, 125, 35);
         }

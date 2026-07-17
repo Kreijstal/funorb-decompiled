@@ -174,7 +174,7 @@ final class ma {
         }
     }
 
-    final static oc a(int param0, boolean param1, int param2) {
+    final static oc a(int param0, boolean param1) {
         oc var3 = new oc(param0);
         var3.field_q = param1 ? true : false;
         return var3;
@@ -197,7 +197,7 @@ final class ma {
         }
     }
 
-    final static ee[] a(boolean param0) {
+    final static ee[] a() {
         return new ee[]{kf.field_q, oh.field_n, qj.field_g};
     }
 
@@ -220,7 +220,7 @@ final class ma {
 
     final static void a(int param0, int param1, ll param2) {
         c var3 = om.field_c;
-        var3.a(param1, true);
+        var3.a(2, true);
         var3.f(param2.field_g, -123);
         if (param0 >= -42) {
             return;
@@ -228,7 +228,7 @@ final class ma {
         try {
             var3.h(75, param2.field_i);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "ma.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "ma.C(" + param0 + 44 + 2 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

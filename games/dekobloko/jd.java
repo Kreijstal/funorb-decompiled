@@ -96,7 +96,7 @@ final class jd extends w {
           L0: {
             var2_int = param1.length;
             var3 = new byte[var2_int];
-            an.a(param1, 0, var3, param0, var2_int);
+            an.a(param1, 0, var3, 0, var2_int);
             stackOut_0_0 = (byte[]) var3;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -106,7 +106,7 @@ final class jd extends w {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("jd.C(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("jd.C(").append(0).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -252,7 +252,7 @@ final class jd extends w {
         ((jd) this).a(param6, param3, -91, param5);
     }
 
-    final static void g(int param0) {
+    final static void g() {
         RuntimeException var1 = null;
         int var2 = 0;
         tj var3 = null;
@@ -342,7 +342,7 @@ final class jd extends w {
         return true;
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_Zb = null;
         field_Ub = null;
         field_Ob = null;

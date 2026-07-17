@@ -121,7 +121,7 @@ final class tb implements ci {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void a() {
         qb var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -140,13 +140,17 @@ final class tb implements ci {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    fl.b(1, param0);
+                    int discarded$12 = 4;
+                    int discarded$13 = 1;
+                    fl.b();
                     var2 = ue.field_b.b((byte) -104);
                     continue L2;
                   }
                 }
               } else {
-                ke.a(var5, param0, 21719);
+                int discarded$14 = 21719;
+                int discarded$15 = 4;
+                ke.a(var5);
                 var5 = (dh) (Object) vb.field_c.b((byte) -104);
                 continue L1;
               }
@@ -155,11 +159,11 @@ final class tb implements ci {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var2_ref, "tb.A(" + param0 + 44 + 78 + 41);
+          throw ma.a((Throwable) (Object) var2_ref, "tb.A(" + 4 + 44 + 78 + 41);
         }
     }
 
-    final static ff a(String param0, String param1, byte param2, boolean param3) {
+    final static ff a(String param0, String param1, byte param2) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;
@@ -282,10 +286,9 @@ final class tb implements ci {
     }
 
     public static void a(int param0) {
-        Object var2 = null;
         if (param0 != 128) {
-          var2 = null;
-          ff discarded$2 = tb.a((String) null, (String) null, (byte) -86, false);
+          int discarded$4 = 0;
+          ff discarded$5 = tb.a((String) null, (String) null, (byte) -86);
           field_e = null;
           field_b = null;
           field_h = null;

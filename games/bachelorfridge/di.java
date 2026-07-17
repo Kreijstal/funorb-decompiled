@@ -151,7 +151,9 @@ final class di extends pu {
             f.field_c = hca.a("benefits", vb.field_j, param0 + -167, "members_benefits_logo");
             ik.field_l = gw.a("benefits", "members_benefits_screenshots", vb.field_j, param0 + -143);
             pp.a(qk.field_k, -84, qq.field_l);
-            gd.a(param0, -2400, 40, (byte) -85, st.field_c, 16744576, 80, 2, (po) (Object) aha.field_D, 80, 15);
+            int discarded$2 = 15;
+            int discarded$3 = 80;
+            gd.a(param0, -2400, 40, (byte) -85, st.field_c, 16744576, 80, 2, (po) (Object) aha.field_D);
             oi.a(3, ik.field_l);
             kl.a((byte) 94, f.field_c);
             return true;
@@ -168,61 +170,57 @@ final class di extends pu {
         try {
           L0: {
             b.field_u = param1;
-            if (param0) {
-              var2 = (cq) (Object) rma.field_d.b((byte) 90);
-              L1: while (true) {
-                if (var2 == null) {
-                  L2: {
-                    if (jha.field_i == null) {
-                      break L2;
-                    } else {
-                      var2 = (cq) (Object) jha.field_i.b((byte) 90);
-                      L3: while (true) {
-                        if (var2 == null) {
-                          break L2;
-                        } else {
-                          L4: {
-                            if (var2.field_h.a((byte) -106)) {
-                              var2.field_i.f(var2.field_f * b.field_u - -128 >> 8);
-                              break L4;
-                            } else {
-                              var2.a(false);
-                              break L4;
-                            }
+            var2 = (cq) (Object) rma.field_d.b((byte) 90);
+            L1: while (true) {
+              if (var2 == null) {
+                L2: {
+                  if (jha.field_i == null) {
+                    break L2;
+                  } else {
+                    var2 = (cq) (Object) jha.field_i.b((byte) 90);
+                    L3: while (true) {
+                      if (var2 == null) {
+                        break L2;
+                      } else {
+                        L4: {
+                          if (var2.field_h.a((byte) -106)) {
+                            var2.field_i.f(var2.field_f * b.field_u - -128 >> 8);
+                            break L4;
+                          } else {
+                            var2.a(false);
+                            break L4;
                           }
-                          var2 = (cq) (Object) jha.field_i.c(0);
-                          continue L3;
                         }
+                        var2 = (cq) (Object) jha.field_i.c(0);
+                        continue L3;
                       }
                     }
                   }
-                  break L0;
-                } else {
-                  L5: {
-                    if (!var2.field_h.a((byte) -106)) {
-                      var2.a(false);
-                      break L5;
-                    } else {
-                      var2.field_i.f(var2.field_f * b.field_u - -128 >> 8);
-                      break L5;
-                    }
-                  }
-                  var2 = (cq) (Object) rma.field_d.c(0);
-                  continue L1;
                 }
+                break L0;
+              } else {
+                L5: {
+                  if (!var2.field_h.a((byte) -106)) {
+                    var2.a(false);
+                    break L5;
+                  } else {
+                    var2.field_i.f(var2.field_f * b.field_u - -128 >> 8);
+                    break L5;
+                  }
+                }
+                var2 = (cq) (Object) rma.field_d.c(0);
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var2_ref, "di.D(" + param0 + 44 + param1 + 41);
+          throw pe.a((Throwable) (Object) var2_ref, "di.D(" + 1 + 44 + param1 + 41);
         }
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_l = null;
     }
 

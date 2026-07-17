@@ -35,7 +35,7 @@ final class fl {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         if (ol.field_e < 224) {
             w.a(-1, 32 + ol.field_e);
             return;

@@ -10,13 +10,10 @@ final class bw {
     static int[] field_f;
 
     final static int a(long param0, int param1, long param2) {
-        if (param1 != 249299984) {
-            ak discarded$0 = bw.a(32, -61, false, -3, 30, true);
-        }
         return (int)((param2 << 16) / param0);
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_f = null;
         field_c = null;
         field_d = null;
@@ -28,9 +25,6 @@ final class bw {
     final static ak a(int param0, int param1, boolean param2, int param3, int param4, boolean param5) {
         int var7 = 0;
         int var8 = Kickabout.field_G;
-        if (param4 != 9103) {
-            return null;
-        }
         ak var6 = new ak(4);
         var6.field_e = ((ot) (Object) lu.field_p[param5 ? 1 : 0]).h();
         if (!(!param2)) {

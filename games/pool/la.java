@@ -39,7 +39,7 @@ final class la {
         try {
           L0: {
             var2_int = param1.length();
-            var3 = param0;
+            var3 = 0;
             L1: while (true) {
               if (var2_int <= var3) {
                 stackOut_9_0 = pj.field_K;
@@ -65,7 +65,7 @@ final class la {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var2;
-            stackOut_11_1 = new StringBuilder().append("la.A(").append(param0).append(44);
+            stackOut_11_1 = new StringBuilder().append("la.A(").append(0).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -132,7 +132,7 @@ final class la {
               }
             }
             L2: {
-              var8_int = -106 % ((param0 - -1) / 55);
+              var8_int = 0;
               if (!rg.field_p) {
                 break L2;
               } else {
@@ -166,7 +166,7 @@ final class la {
           L4: {
             runtimeException = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) runtimeException;
-            stackOut_16_1 = new StringBuilder().append("la.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_16_1 = new StringBuilder().append("la.B(").append(-57).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;

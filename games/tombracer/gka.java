@@ -6,7 +6,7 @@ final class gka extends vg {
     static String field_f;
     String field_h;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
     }
 

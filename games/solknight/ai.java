@@ -9,21 +9,18 @@ final class ai {
     static da field_b;
     static String field_c;
 
-    final static void a(int param0, mg param1, int param2, int param3, int param4, int param5, int param6, int param7, o param8, int param9, int param10) {
+    final static void a(int param0, mg param1, int param2, int param3, int param4, int param5, int param6, int param7, o param8) {
         try {
-            jj.field_db = param4;
-            gf.field_T = param2;
+            jj.field_db = 132;
+            gf.field_T = 31;
             ja.field_a = param8;
             aj.field_p = 5500;
-            cl.field_o = param7;
-            ii.field_h = param3;
-            if (param6 >= -115) {
-                field_d = null;
-            }
-            ke.field_N = param9;
-            ji.field_a = param0;
+            cl.field_o = 10;
+            ii.field_h = 132;
+            ke.field_N = 0;
+            ji.field_a = 10;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "ai.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + (param8 != null ? "{...}" : "null") + 44 + param9 + 44 + 5500 + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "ai.C(" + 10 + 44 + (param1 != null ? "{...}" : "null") + 44 + 31 + 44 + 132 + 44 + 132 + 44 + 16776960 + 44 + -122 + 44 + 10 + 44 + (param8 != null ? "{...}" : "null") + 44 + 0 + 44 + 5500 + 41);
         }
     }
 
@@ -120,57 +117,25 @@ final class ai {
             }
           }
           if (param0 != 71) {
-            L1: {
-              String discarded$2 = ai.a((byte) -23, true, false, true);
-              if (param2) {
-                var4++;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
+            String discarded$4 = ai.a((byte) -23, true, false, true);
             return ad.field_c[var4];
           } else {
-            L2: {
-              if (param2) {
-                var4++;
-                break L2;
-              } else {
-                break L2;
-              }
-            }
             return ad.field_c[var4];
           }
         } else {
-          L3: {
+          L1: {
             var4 += 4;
             if (param1) {
               var4 += 2;
-              break L3;
+              break L1;
             } else {
-              break L3;
+              break L1;
             }
           }
           if (param0 == 71) {
-            L4: {
-              if (param2) {
-                var4++;
-                break L4;
-              } else {
-                break L4;
-              }
-            }
             return ad.field_c[var4];
           } else {
-            L5: {
-              String discarded$3 = ai.a((byte) -23, true, false, true);
-              if (param2) {
-                var4++;
-                break L5;
-              } else {
-                break L5;
-              }
-            }
+            String discarded$5 = ai.a((byte) -23, true, false, true);
             return ad.field_c[var4];
           }
         }
@@ -178,17 +143,17 @@ final class ai {
 
     final static void a(o[] param0, byte param1, int param2, int param3) {
         try {
-            int var4_int = 86 % ((param1 - -27) / 54);
+            int var4_int = 0;
             he.field_c = new hi(param0);
             fh.field_b = param2;
             pg.field_b = param3;
             la.a(33);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "ai.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "ai.B(" + (param0 != null ? "{...}" : "null") + 44 + -83 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         field_c = null;

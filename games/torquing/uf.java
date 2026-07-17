@@ -507,10 +507,11 @@ final class uf {
         int var3 = 65 / ((37 - param0) / 44);
     }
 
-    final static void b(int param0) {
+    final static void b() {
         cb var1 = (cb) (Object) ae.field_nb.b(0);
         if (var1 == null) {
-            ih.b(true);
+            int discarded$0 = 1;
+            ih.b();
             return;
         }
         df var2 = kj.field_d;
@@ -885,11 +886,8 @@ final class uf {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_t = null;
-        if (param0 != 3) {
-            return;
-        }
         field_r = null;
         field_n = null;
         field_l = null;

@@ -35,13 +35,13 @@ final class ok {
     private final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
         ((ok) this).field_e = param7;
         ((ok) this).field_k = param6;
-        ((ok) this).field_a = param11;
+        ((ok) this).field_a = 0;
         ((ok) this).field_i = param2;
-        ((ok) this).field_h = param10;
+        ((ok) this).field_h = 0;
         ((ok) this).field_f = param0;
         ((ok) this).field_p = param12;
         ((ok) this).field_n = param8;
-        ((ok) this).field_j = param1;
+        ((ok) this).field_j = 0;
         ((ok) this).field_m = param3;
         ((ok) this).field_l = param4;
         ((ok) this).field_b = param5;

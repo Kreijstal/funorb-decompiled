@@ -13,7 +13,7 @@ final class kh {
     private int field_g;
     static String field_c;
 
-    final static void a(int param0) {
+    final static void a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -45,26 +45,20 @@ final class kh {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        int var4 = 0;
         vi.field_A.field_n = 0;
         vi.field_A.a(true, 12);
         vi.field_A.a(gg.field_A.nextInt(), false);
-        if (param0 >= -17) {
-          return;
-        } else {
-          vi.field_A.a(gg.field_A.nextInt(), false);
-          vi.field_A.a(true, param1);
-          vi.field_A.a(true, param3);
-          vi.field_A.d(-1, param2);
-          vi.field_A.a(ea.field_k, uk.field_p, true);
-          we.field_b.f(18, -4);
-          int fieldTemp$1 = we.field_b.field_n + 1;
-          we.field_b.field_n = we.field_b.field_n + 1;
-          var4 = fieldTemp$1;
-          we.field_b.a(false, vi.field_A.field_n, vi.field_A.field_r, 0);
-          we.field_b.b(we.field_b.field_n - var4, true);
-          return;
-        }
+        vi.field_A.a(gg.field_A.nextInt(), false);
+        vi.field_A.a(true, param1);
+        vi.field_A.a(true, param3);
+        vi.field_A.d(-1, param2);
+        vi.field_A.a(ea.field_k, uk.field_p, true);
+        we.field_b.f(18, -4);
+        int fieldTemp$0 = we.field_b.field_n + 1;
+        we.field_b.field_n = we.field_b.field_n + 1;
+        int var4 = fieldTemp$0;
+        we.field_b.a(false, vi.field_A.field_n, vi.field_A.field_r, 0);
+        we.field_b.b(we.field_b.field_n - var4, true);
     }
 
     public final String toString() {

@@ -47,7 +47,7 @@ final class lb {
     static String field_L;
     int field_k;
 
-    final static String a(ue param0, String param1, String param2, byte param3) {
+    final static String a(ue param0, String param1, String param2) {
         RuntimeException var4 = null;
         String stackIn_3_0 = null;
         String stackIn_5_0 = null;
@@ -479,52 +479,48 @@ final class lb {
           L0: {
             var5_int = 0;
             var6 = -1;
-            if (param2 == 3853) {
-              var7 = 1;
-              L1: while (true) {
-                if (var7 >= param3.length()) {
-                  break L0;
-                } else {
-                  L2: {
-                    var8 = param3.charAt(var7);
-                    if (var8 != 60) {
-                      break L2;
-                    } else {
-                      var6 = param0.field_d[0] + ((var5_int >> 8) - -param1.a(param3.substring(0, var7)));
-                      break L2;
-                    }
+            var7 = 1;
+            L1: while (true) {
+              if (var7 >= param3.length()) {
+                break L0;
+              } else {
+                L2: {
+                  var8 = param3.charAt(var7);
+                  if (var8 != 60) {
+                    break L2;
+                  } else {
+                    var6 = param0.field_d[0] + ((var5_int >> 8) - -param1.a(param3.substring(0, var7)));
+                    break L2;
                   }
-                  L3: {
-                    if (var6 == -1) {
-                      L4: {
-                        if (var8 != 32) {
-                          break L4;
-                        } else {
-                          var5_int = var5_int + param4;
-                          break L4;
-                        }
-                      }
-                      param0.field_d[var7] = param0.field_d[0] + (var5_int >> 8) - (-param1.a(param3.substring(0, 1 + var7)) + param1.a((char) var8));
-                      break L3;
-                    } else {
-                      param0.field_d[var7] = var6;
-                      break L3;
-                    }
-                  }
-                  L5: {
-                    if (62 == var8) {
-                      var6 = -1;
-                      break L5;
-                    } else {
-                      break L5;
-                    }
-                  }
-                  var7++;
-                  continue L1;
                 }
+                L3: {
+                  if (var6 == -1) {
+                    L4: {
+                      if (var8 != 32) {
+                        break L4;
+                      } else {
+                        var5_int = var5_int + param4;
+                        break L4;
+                      }
+                    }
+                    param0.field_d[var7] = param0.field_d[0] + (var5_int >> 8) - (-param1.a(param3.substring(0, 1 + var7)) + param1.a((char) var8));
+                    break L3;
+                  } else {
+                    param0.field_d[var7] = var6;
+                    break L3;
+                  }
+                }
+                L5: {
+                  if (62 == var8) {
+                    var6 = -1;
+                    break L5;
+                  } else {
+                    break L5;
+                  }
+                }
+                var7++;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -582,7 +578,7 @@ final class lb {
           }
           L8: {
             stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(44).append(param2).append(44);
+            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(44).append(3853).append(44);
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -707,7 +703,7 @@ final class lb {
         }
     }
 
-    final static hd b(byte param0) {
+    final static hd b() {
         if (null == d.field_l) {
             d.field_l = new hd(nb.field_b, 20, 0, 0, 0, 11579568, -1, 0, 0, nb.field_b.field_p, -1, 2147483647, true);
         }
@@ -735,7 +731,7 @@ final class lb {
         ((lb) this).field_H = false;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_l = null;
         field_L = null;
@@ -764,7 +760,7 @@ final class lb {
                 }
             }
         }
-        int var1 = 68 % ((-45 - param0) / 62);
+        int var1 = 0;
         return null;
     }
 

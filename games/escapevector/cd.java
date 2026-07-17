@@ -12,7 +12,7 @@ class cd extends fl {
     cd() {
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_r = null;
         field_s = null;
         field_q = null;
@@ -64,7 +64,8 @@ class cd extends fl {
                   } else {
                     var3 = param1.substring(0, var2_int);
                     var4 = param1.substring(1 + var2_int);
-                    var5 = sf.a(var3, (byte) 119);
+                    int discarded$2 = 119;
+                    var5 = sf.a(var3);
                     if (var5 != null) {
                       stackOut_11_0 = (tk) var5;
                       stackIn_12_0 = stackOut_11_0;

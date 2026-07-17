@@ -10,18 +10,15 @@ final class uk extends gn {
     static boolean field_O;
     static boolean field_N;
 
-    final static void a(byte param0, vl param1, int param2) {
+    final static void a(byte param0, vl param1) {
         ga var3 = null;
         try {
-            if (param0 != 127) {
-                field_M = null;
-            }
             var3 = ma.field_a;
-            var3.b((byte) -35, param2);
-            var3.a(param0 ^ -41, param1.field_g);
+            var3.b((byte) -35, 2);
+            var3.a(-88, param1.field_g);
             var3.a(param1.field_i, (byte) -92);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "uk.R(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "uk.R(" + 127 + 44 + (param1 != null ? "{...}" : "null") + 44 + 2 + 41);
         }
     }
 
@@ -67,14 +64,16 @@ final class uk extends gn {
                     r.a(0, bp.field_s);
                     oo.b();
                     var18.a(112, 144, var18.field_z << 4, var18.field_u << 4, -((uk) this).field_Q << 10, 4096);
-                    ql.a(true);
+                    int discarded$8 = 1;
+                    ql.a();
                     bp.field_s.e(var5 + -var18.field_z, var6 - var18.field_u, 256);
                     return;
                   } else {
                     bp.field_s = new ja(var9, var10);
                     r.a(0, bp.field_s);
                     var18.a(112, 144, var18.field_z << 4, var18.field_u << 4, -((uk) this).field_Q << 10, 4096);
-                    ql.a(true);
+                    int discarded$9 = 1;
+                    ql.a();
                     bp.field_s.e(var5 + -var18.field_z, var6 - var18.field_u, 256);
                     return;
                   }
@@ -82,7 +81,8 @@ final class uk extends gn {
                   bp.field_s = new ja(var9, var10);
                   r.a(0, bp.field_s);
                   var18.a(112, 144, var18.field_z << 4, var18.field_u << 4, -((uk) this).field_Q << 10, 4096);
-                  ql.a(true);
+                  int discarded$10 = 1;
+                  ql.a();
                   bp.field_s.e(var5 + -var18.field_z, var6 - var18.field_u, 256);
                   return;
                 }
@@ -90,7 +90,8 @@ final class uk extends gn {
                 bp.field_s = new ja(var9, var10);
                 r.a(0, bp.field_s);
                 var18.a(112, 144, var18.field_z << 4, var18.field_u << 4, -((uk) this).field_Q << 10, 4096);
-                ql.a(true);
+                int discarded$11 = 1;
+                ql.a();
                 bp.field_s.e(var5 + -var18.field_z, var6 - var18.field_u, 256);
                 return;
               }
@@ -105,14 +106,16 @@ final class uk extends gn {
                   r.a(0, bp.field_s);
                   oo.b();
                   var15.a(112, 144, var15.field_z << 4, var15.field_u << 4, -((uk) this).field_Q << 10, 4096);
-                  ql.a(true);
+                  int discarded$12 = 1;
+                  ql.a();
                   bp.field_s.e(var5 + -var15.field_z, var6 - var15.field_u, 256);
                   return;
                 } else {
                   bp.field_s = new ja(var9, var10);
                   r.a(0, bp.field_s);
                   var15.a(112, 144, var15.field_z << 4, var15.field_u << 4, -((uk) this).field_Q << 10, 4096);
-                  ql.a(true);
+                  int discarded$13 = 1;
+                  ql.a();
                   bp.field_s.e(var5 + -var15.field_z, var6 - var15.field_u, 256);
                   return;
                 }
@@ -120,7 +123,8 @@ final class uk extends gn {
                 bp.field_s = new ja(var9, var10);
                 r.a(0, bp.field_s);
                 var15.a(112, 144, var15.field_z << 4, var15.field_u << 4, -((uk) this).field_Q << 10, 4096);
-                ql.a(true);
+                int discarded$14 = 1;
+                ql.a();
                 bp.field_s.e(var5 + -var15.field_z, var6 - var15.field_u, 256);
                 return;
               }
@@ -128,7 +132,8 @@ final class uk extends gn {
               bp.field_s = new ja(var9, var10);
               r.a(0, bp.field_s);
               var15.a(112, 144, var15.field_z << 4, var15.field_u << 4, -((uk) this).field_Q << 10, 4096);
-              ql.a(true);
+              int discarded$15 = 1;
+              ql.a();
               bp.field_s.e(var5 + -var15.field_z, var6 - var15.field_u, 256);
               return;
             }
@@ -230,7 +235,7 @@ final class uk extends gn {
         return stackIn_3_0 != 0;
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_R = null;
         field_M = null;
     }

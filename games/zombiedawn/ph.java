@@ -121,14 +121,15 @@ final class ph {
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0 != 0;
             } else {
-              rn.a(var6, 0);
+              int discarded$8 = 0;
+              rn.a(var6);
               if (param1 == 31043) {
                 stackOut_6_0 = 1;
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
                 var5 = null;
-                boolean discarded$2 = ph.a(-94, 1, -17, (dj) null);
+                boolean discarded$9 = ph.a(-94, 1, -17, (dj) null);
                 return true;
               }
             }

@@ -57,7 +57,7 @@ final class bh extends oh {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_r = null;
         field_n = null;
         field_m = null;
@@ -321,9 +321,9 @@ final class bh extends oh {
     final static void a(byte param0, String param1, String param2) {
         try {
             ai.a(false, -1, param2, param1);
-            int var3_int = 19 % ((param0 - 37) / 41);
+            int var3_int = 0;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "bh.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw r.a((Throwable) (Object) runtimeException, "bh.D(" + 81 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

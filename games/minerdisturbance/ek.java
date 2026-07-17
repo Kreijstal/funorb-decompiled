@@ -22,7 +22,8 @@ abstract class ek {
           L0: {
             var4 = ((ek) this).a(0);
             if (0L < var4) {
-              gf.a(var4, -10309);
+              int discarded$2 = -10309;
+              gf.a(var4);
               break L0;
             } else {
               break L0;

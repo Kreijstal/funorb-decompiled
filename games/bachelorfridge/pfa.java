@@ -10,7 +10,7 @@ final class pfa {
     private sna field_d;
     boolean field_b;
 
-    final static int c(int param0) {
+    final static int c() {
         return rj.field_i - io.field_p;
     }
 
@@ -72,7 +72,8 @@ final class pfa {
                   if (param0 == 1) {
                     break L3;
                   } else {
-                    pfa.b(false);
+                    int discarded$1 = 0;
+                    pfa.b();
                     break L3;
                   }
                 }
@@ -308,7 +309,7 @@ final class pfa {
         }
     }
 
-    private final void a(byte param0) {
+    private final void a() {
         int var2 = 0;
         int var3_int = 0;
         jj var3 = null;
@@ -379,7 +380,7 @@ final class pfa {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_g = null;
     }
 
@@ -491,7 +492,8 @@ final class pfa {
           this.a(in.field_b, var10.field_k[3], -128, 400, 204, 3);
           this.a(fk.field_s, var10.field_k[0], -128, 400, 236, 0);
           this.a(vaa.field_b, var10.field_k[1], -128, 400, 263, 1);
-          ce.a(true, 16776960, 155, var13.field_n, 320, true);
+          int discarded$2 = 1;
+          ce.a(true, 16776960, 155, var13.field_n, 320);
           jha.field_g.a(hr.field_a, 390, 368, 16776960, -1);
           hfa.field_z.a(hr.field_a, 390, 368, 65793, -1);
           var3_int = 0;
@@ -547,7 +549,7 @@ final class pfa {
                         var6 = ad.field_h.a(var16, 200, 0) + (ad.field_h.field_F << 1);
                         dg.a(mk.field_p + 17, 4 + gd.field_m, var5 - -6, var6, 10, 65793, 128);
                         ad.field_h.c(var3, 20 + (mk.field_p - -4), 20 + gd.field_m, 0, -1);
-                        int discarded$1 = ad.field_h.a(var16, 4 + (mk.field_p - -20), gd.field_m - -24, 200, 200, 0, -1, 0, 0, 0);
+                        int discarded$3 = ad.field_h.a(var16, 4 + (mk.field_p - -20), gd.field_m - -24, 200, 200, 0, -1, 0, 0, 0);
                         break L4;
                       }
                     }
@@ -565,7 +567,7 @@ final class pfa {
                           var6 = 480;
                           var7 = 4 + mk.field_p;
                           var8 = gd.field_m + 4;
-                          sd.a(((pfa) this).field_f.field_s.a(var15, -5313), var7, var15, (byte) 74, var8, var5, var6);
+                          sd.a(((pfa) this).field_f.field_s.a(var15, -5313), var7, var15, (byte) 74, var8);
                           break L5;
                         }
                       } else {
@@ -674,7 +676,8 @@ final class pfa {
             ((pfa) this).field_c = param0;
             ((pfa) this).a(0, param2);
             ((pfa) this).field_b = true;
-            this.a((byte) 26);
+            int discarded$0 = 26;
+            this.a();
         } catch (RuntimeException runtimeException) {
             throw pe.a((Throwable) (Object) runtimeException, "pfa.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }

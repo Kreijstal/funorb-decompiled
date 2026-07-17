@@ -13,7 +13,7 @@ final class tk {
         return ot.field_v;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }

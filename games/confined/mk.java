@@ -12,7 +12,7 @@ final class mk extends ai {
         super(param0, param1);
     }
 
-    final static void a(String param0, boolean param1, float param2, int param3) {
+    final static void a(String param0, boolean param1, float param2) {
         try {
             if (ui.field_c == null) {
                 ui.field_c = new jj(vg.field_Z, cb.field_b);
@@ -26,7 +26,7 @@ final class mk extends ai {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_n = null;
         field_m = null;
         field_k = null;
@@ -37,36 +37,13 @@ final class mk extends ai {
         return vd.field_c;
     }
 
-    final static void b(int param0) {
-        ud var1 = null;
-        if (param0 != 128) {
-          L0: {
-            field_m = null;
-            var1 = (ud) (Object) m.field_d.b((byte) 87);
-            if (var1 != null) {
-              break L0;
-            } else {
-              var1 = new ud();
-              break L0;
-            }
-          }
-          var1.a(fn.field_c, fn.field_l, (byte) 90, fn.field_b, fn.field_g, fn.field_i, fn.field_j, fn.field_h);
-          ve.field_b.a((rk) (Object) var1, (byte) 114);
-          return;
-        } else {
-          L1: {
-            var1 = (ud) (Object) m.field_d.b((byte) 87);
-            if (var1 != null) {
-              break L1;
-            } else {
-              var1 = new ud();
-              break L1;
-            }
-          }
-          var1.a(fn.field_c, fn.field_l, (byte) 90, fn.field_b, fn.field_g, fn.field_i, fn.field_j, fn.field_h);
-          ve.field_b.a((rk) (Object) var1, (byte) 114);
-          return;
+    final static void b() {
+        ud var1 = (ud) (Object) m.field_d.b((byte) 87);
+        if (var1 == null) {
+            var1 = new ud();
         }
+        var1.a(fn.field_c, fn.field_l, (byte) 90, fn.field_b, fn.field_g, fn.field_i, fn.field_j, fn.field_h);
+        ve.field_b.a((rk) (Object) var1, (byte) 114);
     }
 
     static {

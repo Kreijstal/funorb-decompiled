@@ -983,7 +983,7 @@ abstract class ah extends ee {
         }
     }
 
-    public static void h(byte param0) {
+    public static void h() {
         field_R = null;
         field_T = null;
         field_W = null;

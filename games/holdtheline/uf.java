@@ -8,7 +8,7 @@ final class uf {
     static String field_d;
     private String field_e;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
     }
@@ -77,7 +77,7 @@ final class uf {
         var3 = HoldTheLine.field_D;
         try {
           L0: {
-            qk.a(param1, param0, true, true, in.field_h, qf.field_j, r.field_c);
+            qk.a(param1, 0, true, true, in.field_h, qf.field_j, r.field_c);
             var2_int = 0;
             L1: while (true) {
               if (in.field_h <= var2_int) {
@@ -98,7 +98,7 @@ final class uf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw kk.a((Throwable) (Object) var2, "uf.E(" + param0 + 44 + param1 + 41);
+          throw kk.a((Throwable) (Object) var2, "uf.E(" + 0 + 44 + param1 + 41);
         }
     }
 

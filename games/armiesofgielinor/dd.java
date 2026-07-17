@@ -148,9 +148,6 @@ final class dd {
     }
 
     final static String a(int param0, int param1) {
-        if (param1 != 82) {
-            return null;
-        }
         if (param0 < 10000) {
             return Integer.toString(param0);
         }
@@ -163,7 +160,7 @@ final class dd {
         return "A Billion";
     }
 
-    final static int a(boolean param0) {
+    final static int a() {
         if (f.field_E >= 2) {
           L0: {
             field_a = false;

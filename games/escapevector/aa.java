@@ -48,7 +48,7 @@ final class aa {
         try {
           L0: {
             var2_int = param1.charAt(0);
-            var3 = param0;
+            var3 = 1;
             L1: while (true) {
               if (param1.length() <= var3) {
                 stackOut_8_0 = 1;
@@ -71,7 +71,7 @@ final class aa {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var2;
-            stackOut_10_1 = new StringBuilder().append("aa.C(").append(param0).append(44);
+            stackOut_10_1 = new StringBuilder().append("aa.C(").append(1).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -99,7 +99,7 @@ final class aa {
         return stackIn_9_0 != 0;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_b = null;
     }
 

@@ -67,7 +67,7 @@ final class gk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static e a(String param0, byte param1) {
+    final static e a(String param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -167,7 +167,7 @@ final class gk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                   }
                 }
               } else {
-                var4 = -41 / ((param1 - -63) / 60);
+                var4 = 41;
                 var3 = 0;
                 var5 = 0;
                 L4: while (true) {
@@ -246,7 +246,7 @@ final class gk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               break L7;
             }
           }
-          throw dd.a((Throwable) (Object) stackIn_50_0, stackIn_50_2 + 44 + param1 + 41);
+          throw dd.a((Throwable) (Object) stackIn_50_0, stackIn_50_2 + 44 + -127 + 41);
         }
     }
 
@@ -318,7 +318,7 @@ final class gk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    final static hf a(dl param0, byte param1) {
+    final static hf a(dl param0) {
         RuntimeException var2 = null;
         hf stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -340,7 +340,8 @@ final class gk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackOut_3_2 = null;
         try {
           L0: {
-            stackOut_0_0 = ik.a(bb.a(param0, 100, 96), -129);
+            int discarded$2 = -129;
+            stackOut_0_0 = ik.a(bb.a(param0, 100, 96));
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -377,21 +378,19 @@ final class gk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         return stackIn_1_0;
     }
 
-    public static void a(int param0) {
-        if (param0 != 8) {
-            Object var2 = null;
-            e discarded$0 = gk.a((String) null, (byte) -107);
-        }
+    public static void a() {
         field_a = null;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         int var1 = 0;
         if (ij.field_g < 224) {
             var1 = ij.field_g % 32;
-            ia.b(32 + ij.field_g + -var1, -23235);
+            int discarded$0 = -23235;
+            ia.b(32 + ij.field_g + -var1);
         } else {
-            ia.b(256, -23235);
+            int discarded$1 = -23235;
+            ia.b(256);
         }
     }
 

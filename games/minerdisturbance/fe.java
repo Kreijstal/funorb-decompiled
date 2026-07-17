@@ -342,7 +342,26 @@ class fe extends pi {
     }
 
     final static pf f(int param0) {
-        return null;
+        String var1 = null;
+        if (param0 != 0) {
+          return null;
+        } else {
+          L0: {
+            var1 = fc.b((byte) 121);
+            if (var1 == null) {
+              break L0;
+            } else {
+              if (var1.indexOf('@') < 0) {
+                break L0;
+              } else {
+                var1 = "";
+                break L0;
+              }
+            }
+          }
+          int discarded$2 = -110;
+          return new pf(fc.b((byte) 126), j.a());
+        }
     }
 
     final static void e(int param0) {
@@ -544,6 +563,9 @@ class fe extends pi {
         field_C = null;
         field_z = null;
         field_r = null;
+        if (param0 > -48) {
+            int discarded$0 = fe.a((byte) -5, '', (CharSequence) null);
+        }
     }
 
     void a(int param0, int param1, int param2, int param3, fe param4, int param5) {
@@ -567,58 +589,94 @@ class fe extends pi {
               break L0;
             } else {
               if (var5 != 0) {
-                boolean discarded$2 = ((fe) this).a(param1, ki.field_n, gb.field_e, nk.field_w, (byte) -123, (fe) this, param2);
+                boolean discarded$1 = ((fe) this).a(param1, ki.field_n, gb.field_e, nk.field_w, (byte) -123, (fe) this, param2);
                 break L0;
               } else {
                 L1: {
                   if (jk.field_ab == 0) {
                     break L1;
                   } else {
-                    L2: {
-                      if (!((fe) this).a(wi.field_w, param1, param3, m.field_e, jk.field_ab, (fe) this, param2)) {
-                        break L2;
+                    if (!((fe) this).a(wi.field_w, param1, param3, m.field_e, jk.field_ab, (fe) this, param2)) {
+                      if (var5 == 0) {
+                        break L1;
                       } else {
-                        param0 = false;
-                        if (var7 == 0) {
-                          break L1;
-                        } else {
-                          break L2;
-                        }
+                        ((fe) this).g(4966);
+                        break L1;
                       }
-                    }
-                    if (var5 == 0) {
-                      break L1;
                     } else {
-                      ((fe) this).g(4966);
+                      param0 = false;
                       break L1;
                     }
                   }
                 }
-                if (ld.field_B == 0) {
-                  if (nb.field_f == 0) {
-                    nb.field_f = ld.field_B;
-                    if (param3 == 0) {
-                      tg.a(-95, ((fe) this).h(-27867));
-                      return param0;
-                    } else {
-                      return true;
-                    }
+                L2: {
+                  if (ld.field_B != 0) {
+                    break L2;
                   } else {
-                    ((fe) this).a(param2, gb.field_e, nk.field_w, param1, (fe) this, 0);
-                    var6 = j.field_d;
-                    if (var6 != null) {
-                      if (!(var6.field_y instanceof cd)) {
-                        j.field_d = null;
-                        nb.field_f = ld.field_B;
-                        if (param3 == 0) {
-                          tg.a(-95, ((fe) this).h(-27867));
-                          return param0;
+                    if (nb.field_f == 0) {
+                      break L2;
+                    } else {
+                      ((fe) this).a(param2, gb.field_e, nk.field_w, param1, (fe) this, 0);
+                      var6 = j.field_d;
+                      if (var6 != null) {
+                        if (!(var6.field_y instanceof cd)) {
+                          j.field_d = null;
+                          break L2;
                         } else {
-                          return true;
+                          ((cd) (Object) var6.field_y).a(27055, (se) null, var6);
+                          j.field_d = null;
+                          break L2;
                         }
                       } else {
-                        ((cd) (Object) var6.field_y).a(27055, (se) null, var6);
-                        j.field_d = null;
+                        break L2;
+                      }
+                    }
+                  }
+                }
+                nb.field_f = ld.field_B;
+                if (param3 == 0) {
+                  tg.a(-95, ((fe) this).h(-27867));
+                  return param0;
+                } else {
+                  return true;
+                }
+              }
+            }
+          }
+          if (jk.field_ab != 0) {
+            if (!((fe) this).a(wi.field_w, param1, param3, m.field_e, jk.field_ab, (fe) this, param2)) {
+              if (var5 == 0) {
+                L3: {
+                  if (ld.field_B != 0) {
+                    break L3;
+                  } else {
+                    if (nb.field_f == 0) {
+                      break L3;
+                    } else {
+                      ((fe) this).a(param2, gb.field_e, nk.field_w, param1, (fe) this, 0);
+                      var6 = j.field_d;
+                      if (var6 != null) {
+                        if (!(var6.field_y instanceof cd)) {
+                          j.field_d = null;
+                          nb.field_f = ld.field_B;
+                          if (param3 == 0) {
+                            tg.a(-95, ((fe) this).h(-27867));
+                            return param0;
+                          } else {
+                            return true;
+                          }
+                        } else {
+                          ((cd) (Object) var6.field_y).a(27055, (se) null, var6);
+                          j.field_d = null;
+                          nb.field_f = ld.field_B;
+                          if (param3 == 0) {
+                            tg.a(-95, ((fe) this).h(-27867));
+                            return param0;
+                          } else {
+                            return true;
+                          }
+                        }
+                      } else {
                         nb.field_f = ld.field_B;
                         if (param3 == 0) {
                           tg.a(-95, ((fe) this).h(-27867));
@@ -627,7 +685,95 @@ class fe extends pi {
                           return true;
                         }
                       }
+                    }
+                  }
+                }
+                nb.field_f = ld.field_B;
+                if (param3 == 0) {
+                  tg.a(-95, ((fe) this).h(-27867));
+                  return param0;
+                } else {
+                  return true;
+                }
+              } else {
+                L4: {
+                  ((fe) this).g(4966);
+                  if (ld.field_B != 0) {
+                    break L4;
+                  } else {
+                    if (nb.field_f == 0) {
+                      break L4;
                     } else {
+                      ((fe) this).a(param2, gb.field_e, nk.field_w, param1, (fe) this, 0);
+                      var6 = j.field_d;
+                      if (var6 != null) {
+                        if (!(var6.field_y instanceof cd)) {
+                          j.field_d = null;
+                          nb.field_f = ld.field_B;
+                          if (param3 == 0) {
+                            tg.a(-95, ((fe) this).h(-27867));
+                            return param0;
+                          } else {
+                            return true;
+                          }
+                        } else {
+                          ((cd) (Object) var6.field_y).a(27055, (se) null, var6);
+                          j.field_d = null;
+                          nb.field_f = ld.field_B;
+                          if (param3 == 0) {
+                            tg.a(-95, ((fe) this).h(-27867));
+                            return param0;
+                          } else {
+                            return true;
+                          }
+                        }
+                      } else {
+                        nb.field_f = ld.field_B;
+                        if (param3 == 0) {
+                          tg.a(-95, ((fe) this).h(-27867));
+                          return param0;
+                        } else {
+                          return true;
+                        }
+                      }
+                    }
+                  }
+                }
+                nb.field_f = ld.field_B;
+                if (param3 == 0) {
+                  tg.a(-95, ((fe) this).h(-27867));
+                  return param0;
+                } else {
+                  return true;
+                }
+              }
+            } else {
+              param0 = false;
+              if (ld.field_B == 0) {
+                if (nb.field_f == 0) {
+                  nb.field_f = ld.field_B;
+                  if (param3 == 0) {
+                    tg.a(-95, ((fe) this).h(-27867));
+                    return param0;
+                  } else {
+                    return true;
+                  }
+                } else {
+                  ((fe) this).a(param2, gb.field_e, nk.field_w, param1, (fe) this, 0);
+                  var6 = j.field_d;
+                  if (var6 != null) {
+                    if (!(var6.field_y instanceof cd)) {
+                      j.field_d = null;
+                      nb.field_f = ld.field_B;
+                      if (param3 == 0) {
+                        tg.a(-95, ((fe) this).h(-27867));
+                        return param0;
+                      } else {
+                        return true;
+                      }
+                    } else {
+                      ((cd) (Object) var6.field_y).a(27055, (se) null, var6);
+                      j.field_d = null;
                       nb.field_f = ld.field_B;
                       if (param3 == 0) {
                         tg.a(-95, ((fe) this).h(-27867));
@@ -636,81 +782,17 @@ class fe extends pi {
                         return true;
                       }
                     }
-                  }
-                } else {
-                  nb.field_f = ld.field_B;
-                  if (param3 == 0) {
-                    tg.a(-95, ((fe) this).h(-27867));
-                    return param0;
                   } else {
-                    return true;
-                  }
-                }
-              }
-            }
-          }
-          L3: {
-            if (jk.field_ab == 0) {
-              break L3;
-            } else {
-              L4: {
-                if (!((fe) this).a(wi.field_w, param1, param3, m.field_e, jk.field_ab, (fe) this, param2)) {
-                  break L4;
-                } else {
-                  param0 = false;
-                  if (var7 == 0) {
-                    break L3;
-                  } else {
-                    break L4;
-                  }
-                }
-              }
-              if (var5 == 0) {
-                break L3;
-              } else {
-                L5: {
-                  ((fe) this).g(4966);
-                  if (ld.field_B != 0) {
-                    break L5;
-                  } else {
-                    if (nb.field_f == 0) {
-                      break L5;
+                    nb.field_f = ld.field_B;
+                    if (param3 == 0) {
+                      tg.a(-95, ((fe) this).h(-27867));
+                      return param0;
                     } else {
-                      ((fe) this).a(param2, gb.field_e, nk.field_w, param1, (fe) this, 0);
-                      var6 = j.field_d;
-                      if (var6 != null) {
-                        if (!(var6.field_y instanceof cd)) {
-                          j.field_d = null;
-                          nb.field_f = ld.field_B;
-                          if (param3 == 0) {
-                            tg.a(-95, ((fe) this).h(-27867));
-                            return param0;
-                          } else {
-                            return true;
-                          }
-                        } else {
-                          ((cd) (Object) var6.field_y).a(27055, (se) null, var6);
-                          j.field_d = null;
-                          nb.field_f = ld.field_B;
-                          if (param3 == 0) {
-                            tg.a(-95, ((fe) this).h(-27867));
-                            return param0;
-                          } else {
-                            return true;
-                          }
-                        }
-                      } else {
-                        nb.field_f = ld.field_B;
-                        if (param3 == 0) {
-                          tg.a(-95, ((fe) this).h(-27867));
-                          return param0;
-                        } else {
-                          return true;
-                        }
-                      }
+                      return true;
                     }
                   }
                 }
+              } else {
                 nb.field_f = ld.field_B;
                 if (param3 == 0) {
                   tg.a(-95, ((fe) this).h(-27867));
@@ -720,136 +802,67 @@ class fe extends pi {
                 }
               }
             }
-          }
-          L6: {
-            if (ld.field_B != 0) {
-              break L6;
-            } else {
-              if (nb.field_f == 0) {
-                break L6;
+          } else {
+            L5: {
+              if (ld.field_B != 0) {
+                break L5;
               } else {
-                ((fe) this).a(param2, gb.field_e, nk.field_w, param1, (fe) this, 0);
-                var6 = j.field_d;
-                if (var6 != null) {
-                  if (!(var6.field_y instanceof cd)) {
-                    j.field_d = null;
-                    nb.field_f = ld.field_B;
-                    if (param3 == 0) {
-                      tg.a(-95, ((fe) this).h(-27867));
-                      return param0;
-                    } else {
-                      return true;
-                    }
-                  } else {
-                    ((cd) (Object) var6.field_y).a(27055, (se) null, var6);
-                    j.field_d = null;
-                    nb.field_f = ld.field_B;
-                    if (param3 == 0) {
-                      tg.a(-95, ((fe) this).h(-27867));
-                      return param0;
-                    } else {
-                      return true;
-                    }
-                  }
+                if (nb.field_f == 0) {
+                  break L5;
                 } else {
-                  nb.field_f = ld.field_B;
-                  if (param3 == 0) {
-                    tg.a(-95, ((fe) this).h(-27867));
-                    return param0;
+                  ((fe) this).a(param2, gb.field_e, nk.field_w, param1, (fe) this, 0);
+                  var6 = j.field_d;
+                  if (var6 != null) {
+                    if (!(var6.field_y instanceof cd)) {
+                      j.field_d = null;
+                      nb.field_f = ld.field_B;
+                      if (param3 == 0) {
+                        tg.a(-95, ((fe) this).h(-27867));
+                        return param0;
+                      } else {
+                        return true;
+                      }
+                    } else {
+                      ((cd) (Object) var6.field_y).a(27055, (se) null, var6);
+                      j.field_d = null;
+                      nb.field_f = ld.field_B;
+                      if (param3 == 0) {
+                        tg.a(-95, ((fe) this).h(-27867));
+                        return param0;
+                      } else {
+                        return true;
+                      }
+                    }
                   } else {
-                    return true;
+                    nb.field_f = ld.field_B;
+                    if (param3 == 0) {
+                      tg.a(-95, ((fe) this).h(-27867));
+                      return param0;
+                    } else {
+                      return true;
+                    }
                   }
                 }
               }
             }
-          }
-          nb.field_f = ld.field_B;
-          if (param3 == 0) {
-            tg.a(-95, ((fe) this).h(-27867));
-            return param0;
-          } else {
-            return true;
+            nb.field_f = ld.field_B;
+            if (param3 == 0) {
+              tg.a(-95, ((fe) this).h(-27867));
+              return param0;
+            } else {
+              return true;
+            }
           }
         } else {
           if (var5 != 0) {
             if (0 != jk.field_ab) {
               ((fe) this).g(4966);
-              if (var7 != 0) {
-                L7: {
-                  if (0 == ki.field_n) {
-                    break L7;
-                  } else {
-                    if (var5 != 0) {
-                      boolean discarded$3 = ((fe) this).a(param1, ki.field_n, gb.field_e, nk.field_w, (byte) -123, (fe) this, param2);
-                      break L7;
-                    } else {
-                      break L7;
-                    }
-                  }
-                }
-                L8: {
-                  if (jk.field_ab == 0) {
-                    break L8;
-                  } else {
-                    L9: {
-                      if (!((fe) this).a(wi.field_w, param1, param3, m.field_e, jk.field_ab, (fe) this, param2)) {
-                        break L9;
-                      } else {
-                        param0 = false;
-                        if (var7 == 0) {
-                          break L8;
-                        } else {
-                          break L9;
-                        }
-                      }
-                    }
-                    if (var5 == 0) {
-                      break L8;
-                    } else {
-                      ((fe) this).g(4966);
-                      break L8;
-                    }
-                  }
-                }
-                L10: {
-                  if (ld.field_B != 0) {
-                    break L10;
-                  } else {
-                    if (nb.field_f == 0) {
-                      break L10;
-                    } else {
-                      ((fe) this).a(param2, gb.field_e, nk.field_w, param1, (fe) this, 0);
-                      var6 = j.field_d;
-                      if (var6 != null) {
-                        if (!(var6.field_y instanceof cd)) {
-                          j.field_d = null;
-                          break L10;
-                        } else {
-                          ((cd) (Object) var6.field_y).a(27055, (se) null, var6);
-                          j.field_d = null;
-                          break L10;
-                        }
-                      } else {
-                        break L10;
-                      }
-                    }
-                  }
-                }
-                nb.field_f = ld.field_B;
-                if (param3 == 0) {
-                  tg.a(-95, ((fe) this).h(-27867));
-                  return param0;
-                } else {
-                  return true;
-                }
+              nb.field_f = ld.field_B;
+              if (param3 == 0) {
+                tg.a(-95, ((fe) this).h(-27867));
+                return param0;
               } else {
-                nb.field_f = ld.field_B;
-                if (param3 == 0) {
-                  tg.a(-95, ((fe) this).h(-27867));
-                  return param0;
-                } else {
-                  return true;
-                }
+                return true;
               }
             } else {
               nb.field_f = ld.field_B;
@@ -937,39 +950,16 @@ class fe extends pi {
     }
 
     final void a(int param0, int param1, int param2) {
-        int var4 = 0;
-        int var5 = 0;
         int var6_int = 0;
-        String var6 = null;
-        int var7 = 0;
-        var7 = MinerDisturbance.field_ab;
-        var4 = ((fe) this).b((byte) -92);
-        var5 = -64 % ((-61 - param2) / 51);
-        var6_int = 0;
-        L0: while (true) {
-          L1: {
-            if (var4 < var6_int) {
-              break L1;
-            } else {
-              ((fe) this).a((byte) 4, param0, param1, var6_int);
-              var6_int++;
-              if (var7 == 0) {
-                continue L0;
-              } else {
-                break L1;
-              }
-            }
-          }
-          L2: {
-            var6 = a.a(true);
-            if (var6 != null) {
-              bd.field_c.a(ng.field_l, lj.field_q, var6, (byte) 49);
-              break L2;
-            } else {
-              break L2;
-            }
-          }
-          return;
+        int var7 = MinerDisturbance.field_ab;
+        int var4 = ((fe) this).b((byte) -92);
+        int var5 = -64 % ((-61 - param2) / 51);
+        for (var6_int = 0; var4 >= var6_int; var6_int++) {
+            ((fe) this).a((byte) 4, param0, param1, var6_int);
+        }
+        String var6 = a.a(true);
+        if (!(var6 == null)) {
+            bd.field_c.a(ng.field_l, lj.field_q, var6, (byte) 49);
         }
     }
 
@@ -1113,7 +1103,7 @@ class fe extends pi {
     }
 
     final static boolean j(int param0) {
-        int var1 = 95 % 0;
+        int var1 = 95 % ((param0 - 10) / 57);
         return 250 < mn.field_x ? true : false;
     }
 
@@ -1123,7 +1113,6 @@ class fe extends pi {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        char stackIn_6_0 = 0;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -1134,7 +1123,6 @@ class fe extends pi {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         int stackOut_9_0 = 0;
-        char stackOut_5_0 = 0;
         RuntimeException stackOut_11_0 = null;
         StringBuilder stackOut_11_1 = null;
         RuntimeException stackOut_13_0 = null;
@@ -1158,37 +1146,28 @@ class fe extends pi {
             var4 = param2.length();
             var5 = 0;
             L2: while (true) {
-              L3: {
-                if (var4 <= var5) {
-                  stackOut_9_0 = var3_int;
-                  stackIn_10_0 = stackOut_9_0;
-                  break L3;
-                } else {
-                  stackOut_5_0 = param1;
-                  stackIn_10_0 = stackOut_5_0;
-                  stackIn_6_0 = stackOut_5_0;
-                  if (var6 != 0) {
+              if (var4 <= var5) {
+                stackOut_9_0 = var3_int;
+                stackIn_10_0 = stackOut_9_0;
+                break L0;
+              } else {
+                L3: {
+                  if (param1 != param2.charAt(var5)) {
+                    var5++;
                     break L3;
                   } else {
-                    L4: {
-                      if (stackIn_6_0 != param2.charAt(var5)) {
-                        break L4;
-                      } else {
-                        var3_int++;
-                        break L4;
-                      }
-                    }
-                    var5++;
-                    continue L2;
+                    var3_int++;
+                    break L3;
                   }
                 }
+                var5++;
+                continue L2;
               }
-              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var3 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var3;
             stackOut_11_1 = new StringBuilder().append("fe.EA(").append(param0).append(44).append(param1).append(44);
@@ -1203,7 +1182,7 @@ class fe extends pi {
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
-              break L5;
+              break L4;
             } else {
               stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
               stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
@@ -1211,7 +1190,7 @@ class fe extends pi {
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
               stackIn_14_2 = stackOut_12_2;
-              break L5;
+              break L4;
             }
           }
           throw lj.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
@@ -1301,51 +1280,37 @@ class fe extends pi {
             }
             L5: {
               if (null != ((fe) this).field_A) {
-                L6: {
-                  StringBuilder discarded$14 = param1.append(" renderer=");
-                  if (!(((fe) this).field_A instanceof fe)) {
-                    break L6;
-                  } else {
-                    param1 = ((fe) this).a((byte) -70, param0, 1 + param3, param1);
-                    if (var6 == 0) {
-                      break L5;
-                    } else {
-                      break L6;
-                    }
-                  }
+                StringBuilder discarded$14 = param1.append(" renderer=");
+                if (!(((fe) this).field_A instanceof fe)) {
+                  StringBuilder discarded$15 = param1.append(((fe) this).field_A);
+                  break L5;
+                } else {
+                  param1 = ((fe) this).a((byte) -70, param0, 1 + param3, param1);
+                  break L5;
                 }
-                StringBuilder discarded$15 = param1.append(((fe) this).field_A);
-                break L5;
               } else {
                 break L5;
               }
             }
-            L7: {
+            L6: {
               if (null != ((fe) this).field_y) {
-                L8: {
-                  StringBuilder discarded$16 = param1.append(" listener=");
-                  if (!(((fe) this).field_y instanceof fe)) {
-                    break L8;
-                  } else {
-                    param1 = ((fe) this).a((byte) -70, param0, param3 + 1, param1);
-                    if (var6 == 0) {
-                      break L7;
-                    } else {
-                      break L8;
-                    }
-                  }
+                StringBuilder discarded$16 = param1.append(" listener=");
+                if (!(((fe) this).field_y instanceof fe)) {
+                  StringBuilder discarded$17 = param1.append(((fe) this).field_y);
+                  break L6;
+                } else {
+                  param1 = ((fe) this).a((byte) -70, param0, param3 + 1, param1);
+                  break L6;
                 }
-                StringBuilder discarded$17 = param1.append(((fe) this).field_y);
-                break L7;
               } else {
-                break L7;
+                break L6;
               }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L7: {
             var5 = decompiledCaughtException;
             stackOut_23_0 = (RuntimeException) var5;
             stackOut_23_1 = new StringBuilder().append("fe.MA(");
@@ -1360,7 +1325,7 @@ class fe extends pi {
               stackIn_26_0 = stackOut_25_0;
               stackIn_26_1 = stackOut_25_1;
               stackIn_26_2 = stackOut_25_2;
-              break L9;
+              break L7;
             } else {
               stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
               stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
@@ -1368,10 +1333,10 @@ class fe extends pi {
               stackIn_26_0 = stackOut_24_0;
               stackIn_26_1 = stackOut_24_1;
               stackIn_26_2 = stackOut_24_2;
-              break L9;
+              break L7;
             }
           }
-          L10: {
+          L8: {
             stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
             stackOut_26_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(44);
             stackIn_28_0 = stackOut_26_0;
@@ -1385,7 +1350,7 @@ class fe extends pi {
               stackIn_29_0 = stackOut_28_0;
               stackIn_29_1 = stackOut_28_1;
               stackIn_29_2 = stackOut_28_2;
-              break L10;
+              break L8;
             } else {
               stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
               stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
@@ -1393,7 +1358,7 @@ class fe extends pi {
               stackIn_29_0 = stackOut_27_0;
               stackIn_29_1 = stackOut_27_1;
               stackIn_29_2 = stackOut_27_2;
-              break L10;
+              break L8;
             }
           }
           throw lj.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 44 + param2 + 44 + param3 + 41);

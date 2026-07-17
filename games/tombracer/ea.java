@@ -165,7 +165,7 @@ final class ea extends vg implements bo {
         return var1;
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void a(boolean param0) {
         era.field_e.b(82, param0);
         ada var2 = apa.field_c;
         if (var2 != null) {

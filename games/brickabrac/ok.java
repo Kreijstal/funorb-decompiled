@@ -10,7 +10,7 @@ final class ok {
     static int field_f;
     static mh field_d;
 
-    final static void a(int param0) {
+    final static void a() {
         if (!(ol.field_s)) {
             throw new IllegalStateException();
         }
@@ -19,7 +19,7 @@ final class ok {
         i.field_j = 0;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_d = null;
         field_g = null;
         field_a = null;
@@ -28,28 +28,13 @@ final class ok {
     }
 
     final static boolean a(boolean param0) {
-        if (param0) {
-          if (null != jj.field_a) {
-            if (!jj.field_a.a((byte) -32)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+        if (null == jj.field_a) {
             return false;
-          }
-        } else {
-          boolean discarded$5 = ok.a(true);
-          if (null != jj.field_a) {
-            if (!jj.field_a.a((byte) -32)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
         }
+        if (!jj.field_a.a((byte) -32)) {
+            return false;
+        }
+        return true;
     }
 
     static {

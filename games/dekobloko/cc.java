@@ -14,24 +14,17 @@ final class cc {
     final static f a(int param0, byte param1) {
         f var2 = new f();
         rc.field_e.a((bh) (Object) var2, 2777);
-        gm.b(param0, 65);
+        gm.b(4, 65);
         return var2;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
         field_d = null;
         field_h = null;
         field_e = null;
         field_b = null;
-        if (param0 != -94) {
-          field_g = null;
-          field_f = null;
-          return;
-        } else {
-          field_f = null;
-          return;
-        }
+        field_f = null;
     }
 
     final static void a(int param0) {

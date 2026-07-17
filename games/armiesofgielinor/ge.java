@@ -49,7 +49,7 @@ final class ge extends sm {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0 != 0;
             } else {
-              if (param0 != bk.field_e.b(false)) {
+              if (0 != bk.field_e.b(false)) {
                 var2 = (fd) (Object) bk.field_e.e((byte) 111);
                 L1: while (true) {
                   if (var2 == null) {
@@ -78,7 +78,7 @@ final class ge extends sm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var2_ref, "ge.C(" + param0 + 44 + param1 + 41);
+          throw ig.a((Throwable) (Object) var2_ref, "ge.C(" + 0 + 44 + param1 + 41);
         }
         return stackIn_16_0 != 0;
     }
@@ -225,7 +225,7 @@ final class ge extends sm {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_h = null;
         field_m = null;
         field_i = null;

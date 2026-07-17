@@ -54,7 +54,8 @@ final class gu extends me {
                 var12 = ((gu) this).field_g.field_H[var10].e(false);
                 var13 = ((gu) this).field_g.field_H[var10].j(false);
                 var14 = var13 + var12;
-                oka.a(rka.a(1 + var9, 114) + "  " + ((gu) this).field_i.a(var10, false) + "  " + rja.field_c + ": " + var14 + " (" + var12 + "+" + var13 + ")", var11, kn.field_p, -1, var8 + var9 * var5, ((gu) this).field_m, 0);
+                int discarded$1 = 114;
+                oka.a(rka.a(1 + var9) + "  " + ((gu) this).field_i.a(var10, false) + "  " + rja.field_c + ": " + var14 + " (" + var12 + "+" + var13 + ")", var11, kn.field_p, -1, var8 + var9 * var5, ((gu) this).field_m, 0);
                 var9++;
                 continue L0;
               } else {
@@ -68,26 +69,15 @@ final class gu extends me {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_k = null;
-        if (param0 != -28) {
-            field_l = null;
-        }
         field_l = null;
     }
 
     final static ci a(byte param0, int param1) {
         int var2 = 0;
         int var3 = 0;
-        L0: {
-          var3 = TombRacer.field_G ? 1 : 0;
-          if (param0 <= 0) {
-            break L0;
-          } else {
-            gu.c(-61);
-            break L0;
-          }
-        }
+        var3 = TombRacer.field_G ? 1 : 0;
         var2 = param1;
         if (var2 != 0) {
           if (var2 != 1) {
@@ -252,17 +242,13 @@ final class gu extends me {
         }
     }
 
-    final static void a(int param0, boolean param1, String param2, String param3, String param4, int param5) {
+    final static void a(int param0, boolean param1, String param2, String param3, String param4) {
         gqa var6 = null;
         try {
-            if (!param1) {
-                Object var7 = null;
-                gu.a(-67, true, (String) null, (String) null, (String) null, 15);
-            }
-            var6 = new gqa(param5, param2, param0, param4, param3);
+            var6 = new gqa(2, param2, 0, param4, param3);
             tna.a(16599, var6);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "gu.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "gu.D(" + 0 + 44 + 1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + 2 + 41);
         }
     }
 

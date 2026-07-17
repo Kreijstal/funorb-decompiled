@@ -10,7 +10,7 @@ final class jf extends iq implements java.awt.image.ImageProducer, java.awt.imag
     private java.awt.image.ImageConsumer field_p;
     private java.awt.image.ColorModel field_m;
 
-    final static void a(eg param0, byte param1) {
+    final static void a(eg param0) {
         int[] var3 = null;
         try {
             var3 = param0.field_v;
@@ -289,7 +289,7 @@ final class jf extends iq implements java.awt.image.ImageProducer, java.awt.imag
     jf() {
     }
 
-    final static eh a(int param0, int param1, int param2, int param3, int param4) {
+    final static eh a(int param0, int param1, int param2) {
         int var7 = Pool.field_O;
         eh var5 = (eh) (Object) wg.field_Lb.c((byte) 118);
         while (var5 != null) {
@@ -300,11 +300,11 @@ final class jf extends iq implements java.awt.image.ImageProducer, java.awt.imag
         }
         var5 = new eh();
         var5.field_A = param2;
-        int var6 = -73 / ((param0 - 60) / 49);
+        int var6 = 24;
         var5.field_r = 10;
-        var5.field_v = param1;
+        var5.field_v = 1;
         wg.field_Lb.b((byte) -24, (ma) (Object) var5);
-        ub.a(var5, param3, (byte) -117);
+        ub.a(var5, 3, (byte) -117);
         return var5;
     }
 

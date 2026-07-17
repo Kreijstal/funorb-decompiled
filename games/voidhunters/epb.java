@@ -301,7 +301,7 @@ final class epb extends pw {
         }
     }
 
-    private final void a(int param0) {
+    private final void a() {
         ((epb) this).field_n = 0.0f;
         ((epb) this).field_d = 0.0f;
         ((epb) this).field_l = 0.0f;
@@ -392,7 +392,8 @@ final class epb extends pw {
     }
 
     epb() {
-        this.a(1);
+        int discarded$0 = 1;
+        this.a();
     }
 
     static {

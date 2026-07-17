@@ -84,12 +84,11 @@ final class wb extends ti {
 
     final static l a(int param0, java.awt.Component param1, int param2, int param3) {
         try {
-            Class var4 = null;
-            Throwable var4_ref = null;
-            RuntimeException var4_ref2 = null;
-            l var5 = null;
-            dq var5_ref = null;
-            Object stackIn_2_0 = null;
+            Throwable var4 = null;
+            RuntimeException var4_ref = null;
+            Class var4_ref2 = null;
+            dq var5 = null;
+            l var5_ref = null;
             l stackIn_4_0 = null;
             dq stackIn_6_0 = null;
             RuntimeException stackIn_8_0 = null;
@@ -101,7 +100,6 @@ final class wb extends ti {
             String stackIn_11_2 = null;
             Throwable decompiledCaughtException = null;
             l stackOut_3_0 = null;
-            Object stackOut_1_0 = null;
             dq stackOut_5_0 = null;
             RuntimeException stackOut_7_0 = null;
             StringBuilder stackOut_7_1 = null;
@@ -113,33 +111,27 @@ final class wb extends ti {
             String stackOut_8_2 = null;
             try {
               try {
-                if (param0 == 1) {
-                  var4 = Class.forName("qn");
-                  var5 = (l) var4.newInstance();
-                  var5.a(-6, param1, param3, param2);
-                  stackOut_3_0 = (l) var5;
-                  stackIn_4_0 = stackOut_3_0;
-                  return stackIn_4_0;
-                } else {
-                  stackOut_1_0 = null;
-                  stackIn_2_0 = stackOut_1_0;
-                  return (l) (Object) stackIn_2_0;
-                }
+                var4_ref2 = Class.forName("qn");
+                var5_ref = (l) var4_ref2.newInstance();
+                var5_ref.a(-6, param1, param3, param2);
+                stackOut_3_0 = (l) var5_ref;
+                stackIn_4_0 = stackOut_3_0;
+                return stackIn_4_0;
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
-                var4_ref = decompiledCaughtException;
-                var5_ref = new dq();
-                ((l) (Object) var5_ref).a(param0 + -7, param1, param3, param2);
-                stackOut_5_0 = (dq) var5_ref;
+                var4 = decompiledCaughtException;
+                var5 = new dq();
+                ((l) (Object) var5).a(-6, param1, param3, param2);
+                stackOut_5_0 = (dq) var5;
                 stackIn_6_0 = stackOut_5_0;
                 return (l) (Object) stackIn_6_0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               L0: {
-                var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_7_0 = (RuntimeException) var4_ref2;
-                stackOut_7_1 = new StringBuilder().append("wb.BB(").append(param0).append(44);
+                var4_ref = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_7_0 = (RuntimeException) var4_ref;
+                stackOut_7_1 = new StringBuilder().append("wb.BB(").append(1).append(44);
                 stackIn_10_0 = stackOut_7_0;
                 stackIn_10_1 = stackOut_7_1;
                 stackIn_8_0 = stackOut_7_0;
@@ -414,12 +406,12 @@ final class wb extends ti {
         }
     }
 
-    public static void o(byte param0) {
+    public static void o() {
         try {
             field_hb = null;
-            int var1_int = -96 % ((param0 - 52) / 58);
+            int var1_int = 0;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "wb.AB(" + param0 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "wb.AB(" + -45 + 41);
         }
     }
 
@@ -646,7 +638,7 @@ final class wb extends ti {
         }
     }
 
-    private final void s(int param0) {
+    private final void s() {
         int var2_int = 0;
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
@@ -668,24 +660,16 @@ final class wb extends ti {
                 }
               }
             }
-            L2: {
-              if (param0 == 2) {
-                break L2;
-              } else {
-                ((wb) this).field_ub = 112;
-                break L2;
-              }
-            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var2, "wb.M(" + param0 + 41);
+          throw fa.a((Throwable) (Object) var2, "wb.M(" + 2 + 41);
         }
     }
 
-    private final boolean n(byte param0) {
+    private final boolean n() {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
@@ -695,7 +679,7 @@ final class wb extends ti {
         int stackOut_5_0 = 0;
         try {
           L0: {
-            var2_int = -64 % ((-15 - param0) / 42);
+            var2_int = 0;
             if (((wb) this).o(106)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
@@ -710,7 +694,7 @@ final class wb extends ti {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var2, "wb.CB(" + param0 + 41);
+          throw fa.a((Throwable) (Object) var2, "wb.CB(" + -119 + 41);
         }
         return stackIn_6_0 != 0;
     }
@@ -1225,7 +1209,8 @@ final class wb extends ti {
                           gd.field_B = op.field_m.field_D[((wb) this).field_Lb][0];
                           mo.field_Ib = op.field_m.field_D[((wb) this).field_Lb][1];
                           this.n(0);
-                          this.s(2);
+                          int discarded$4 = 2;
+                          this.s();
                           var12_ref_ja = nk.a(ig.field_d[var6 + (gg.field_l[var5] + ((wb) this).field_fb)], mo.field_Ib, 255, gd.field_B);
                           var12_ref_ja.g(var7 + ((wb) this).field_mb - 3, var8 + ((wb) this).field_cb - 3);
                           if (var27 == 0) {
@@ -1249,7 +1234,8 @@ final class wb extends ti {
                               break L39;
                             } else {
                               ((wb) this).field_U.h(sd.b(-49, var8, var7));
-                              ((wb) this).field_U.f(pb.a(var8, var7, false));
+                              int discarded$5 = 0;
+                              ((wb) this).field_U.f(pb.a(var8, var7));
                               if (var27 == 0) {
                                 break L38;
                               } else {
@@ -1483,7 +1469,8 @@ final class wb extends ti {
                             gd.field_B = op.field_m.field_D[var16][0];
                             mo.field_Ib = op.field_m.field_D[var16][1];
                             this.n(param0 + 10136);
-                            this.s(2);
+                            int discarded$6 = 2;
+                            this.s();
                             if (var27 == 0) {
                               break L55;
                             } else {
@@ -1669,7 +1656,7 @@ final class wb extends ti {
                               if (var18 != 0) {
                                 break L74;
                               } else {
-                                ja discarded$1 = nk.a(var17[var16][var15], mo.field_Ib, param0 + 10391, gd.field_B);
+                                ja discarded$7 = nk.a(var17[var16][var15], mo.field_Ib, param0 + 10391, gd.field_B);
                                 if (var27 == 0) {
                                   break L73;
                                 } else {
@@ -2041,22 +2028,14 @@ final class wb extends ti {
         try {
           L0: {
             L1: {
-              if (param0 == -2) {
-                break L1;
-              } else {
-                ((wb) this).field_fb = -112;
-                break L1;
-              }
-            }
-            L2: {
               if (0 != ((wb) this).field_C) {
                 stackOut_6_0 = 0;
                 stackIn_7_0 = stackOut_6_0;
-                break L2;
+                break L1;
               } else {
                 stackOut_4_0 = 1;
                 stackIn_7_0 = stackOut_4_0;
-                break L2;
+                break L1;
               }
             }
             break L0;
@@ -2064,7 +2043,7 @@ final class wb extends ti {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var2, "wb.CA(" + param0 + 41);
+          throw fa.a((Throwable) (Object) var2, "wb.CA(" + -2 + 41);
         }
         return stackIn_7_0 != 0;
     }
@@ -2233,21 +2212,13 @@ final class wb extends ti {
         return stackIn_1_0;
     }
 
-    final static int h(byte param0) {
+    final static int h() {
         RuntimeException var1 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
         try {
           L0: {
-            L1: {
-              if (param0 == -80) {
-                break L1;
-              } else {
-                boolean discarded$2 = wb.k((byte) 98);
-                break L1;
-              }
-            }
             stackOut_3_0 = rj.field_J;
             stackIn_4_0 = stackOut_3_0;
             break L0;
@@ -2255,7 +2226,7 @@ final class wb extends ti {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var1, "wb.DB(" + param0 + 41);
+          throw fa.a((Throwable) (Object) var1, "wb.DB(" + -80 + 41);
         }
         return stackIn_4_0;
     }
@@ -2296,25 +2267,17 @@ final class wb extends ti {
         this(param0, param1, param2 ? 0 : 1);
     }
 
-    private final void c(boolean param0) {
+    private final void c() {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            L1: {
-              if (param0) {
-                break L1;
-              } else {
-                ((wb) this).field_Lb = -36;
-                break L1;
-              }
-            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var2, "wb.EA(" + param0 + 41);
+          throw fa.a((Throwable) (Object) var2, "wb.EA(" + 1 + 41);
         }
     }
 
@@ -2492,26 +2455,18 @@ final class wb extends ti {
         }
     }
 
-    private final void m(byte param0) {
+    private final void m() {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            L1: {
-              if (param0 == 6) {
-                break L1;
-              } else {
-                ((wb) this).e(false);
-                break L1;
-              }
-            }
-            ((wb) this).b(4, param0 ^ -27649);
+            ((wb) this).b(4, -27655);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var2, "wb.FB(" + param0 + 41);
+          throw fa.a((Throwable) (Object) var2, "wb.FB(" + 6 + 41);
         }
     }
 
@@ -2541,8 +2496,8 @@ final class wb extends ti {
     }
 
     private final void a(int param0, int param1, int param2, byte param3) {
-        RuntimeException runtimeException = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -2576,22 +2531,10 @@ final class wb extends ti {
                 L3: {
                   var8 = stackIn_6_0;
                   var9 = gg.field_l[var5_int] - -var6;
-                  if (param2 < 256) {
+                  if (((wb) this).field_F == 1) {
                     break L3;
                   } else {
-                    L4: {
-                      if (((wb) this).field_F == 1) {
-                        break L4;
-                      } else {
-                        wq.field_c[var8][var9].g(param0, param1);
-                        if (var10 == 0) {
-                          break L1;
-                        } else {
-                          break L4;
-                        }
-                      }
-                    }
-                    wq.field_c[var8][var9].b(param0, param1);
+                    wq.field_c[var8][var9].g(param0, param1);
                     if (var10 == 0) {
                       break L1;
                     } else {
@@ -2599,24 +2542,21 @@ final class wb extends ti {
                     }
                   }
                 }
-                wq.field_c[var8][var9].c(param0, param1, param2);
-                break L1;
-              }
-            }
-            L5: {
-              if (param3 < -54) {
-                break L5;
-              } else {
-                ((wb) this).a(true, (nm) null);
-                break L5;
+                wq.field_c[var8][var9].b(param0, param1);
+                if (var10 == 0) {
+                  break L1;
+                } else {
+                  wq.field_c[var8][var9].c(param0, param1, 256);
+                  break L1;
+                }
               }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) runtimeException, "wb.AA(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          var5 = decompiledCaughtException;
+          throw fa.a((Throwable) (Object) var5, "wb.AA(" + param0 + 44 + param1 + 44 + 256 + 44 + -91 + 41);
         }
     }
 
@@ -2843,9 +2783,9 @@ final class wb extends ti {
                                   if (20 == ((wb) this).field_Eb.field_K) {
                                     break L16;
                                   } else {
-                                    int fieldTemp$3 = ((wb) this).field_sb;
+                                    int fieldTemp$9 = ((wb) this).field_sb;
                                     ((wb) this).field_sb = ((wb) this).field_sb + 1;
-                                    if (fieldTemp$3 > 60) {
+                                    if (fieldTemp$9 > 60) {
                                       break L16;
                                     } else {
                                       if (((wb) this).field_Eb.field_K == 1) {
@@ -3128,7 +3068,8 @@ final class wb extends ti {
                                                   }
                                                 }
                                               }
-                                              this.m((byte) 6);
+                                              int discarded$10 = 6;
+                                              this.m();
                                               break L34;
                                             }
                                             ((wb) this).field_jb.a(((wb) this).h(92) + -30, ((wb) this).g(71), 0);
@@ -3320,7 +3261,8 @@ final class wb extends ti {
                                 ((wb) this).field_ab = 0;
                                 ((wb) this).field_xb = false;
                                 fb.field_e.b(((wb) this).field_Hb, 0, ((wb) this).h(-71), ((wb) this).g(-88));
-                                this.b(false);
+                                int discarded$11 = 0;
+                                this.b();
                                 if (var3 == 0) {
                                   break L6;
                                 } else {
@@ -3341,9 +3283,9 @@ final class wb extends ti {
                         }
                       }
                       L46: {
-                        int fieldTemp$4 = ((wb) this).field_lb - 1;
+                        int fieldTemp$12 = ((wb) this).field_lb - 1;
                         ((wb) this).field_lb = ((wb) this).field_lb - 1;
-                        if (fieldTemp$4 > 0) {
+                        if (fieldTemp$12 > 0) {
                           break L46;
                         } else {
                           ((wb) this).b(4, -27655);
@@ -3458,7 +3400,8 @@ final class wb extends ti {
                 }
               }
               L53: {
-                this.c(true);
+                int discarded$13 = 1;
+                this.c();
                 ((wb) this).i(5197);
                 if (!((wb) this).field_Bb) {
                   break L53;
@@ -3486,7 +3429,8 @@ final class wb extends ti {
                   }
                 }
               }
-              this.m((byte) 6);
+              int discarded$14 = 6;
+              this.m();
               if (var3 == 0) {
                 break L6;
               } else {
@@ -3554,7 +3498,8 @@ final class wb extends ti {
                     if (((wb) this).field_K == 17) {
                       break L58;
                     } else {
-                      this.b(false);
+                      int discarded$15 = 0;
+                      this.b();
                       if (var3 == 0) {
                         break L58;
                       } else {
@@ -3563,7 +3508,8 @@ final class wb extends ti {
                     }
                   }
                 }
-                boolean discarded$5 = this.n((byte) -119);
+                int discarded$16 = -119;
+                boolean discarded$17 = this.n();
                 break L58;
               }
             }
@@ -3759,7 +3705,7 @@ final class wb extends ti {
         }
     }
 
-    private final void b(boolean param0) {
+    private final void b() {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -3783,14 +3729,6 @@ final class wb extends ti {
                       }
                     }
                   }
-                  L3: {
-                    if (!param0) {
-                      break L3;
-                    } else {
-                      field_hb = null;
-                      break L3;
-                    }
-                  }
                   ((wb) this).b(9, -27655);
                   break L0;
                 } else {
@@ -3803,7 +3741,7 @@ final class wb extends ti {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var2, "wb.J(" + param0 + 41);
+          throw fa.a((Throwable) (Object) var2, "wb.J(" + 0 + 41);
         }
     }
 

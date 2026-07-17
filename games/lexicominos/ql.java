@@ -66,7 +66,7 @@ abstract class ql extends al {
                 var6 = 127;
                 var5 = 169;
                 var4 = -79 + ((ql) this).field_v;
-                var7 = -113 / ((-3 - param1) / 43);
+                var7 = 56;
                 var8 = 0;
                 var9 = 57 + param0;
                 L2: while (true) {
@@ -226,7 +226,7 @@ abstract class ql extends al {
         }
     }
 
-    final static jb e(boolean param0) {
+    final static jb e() {
         jb var1 = new jb(uc.field_fb, eh.field_b, mg.field_x[0], rg.field_c[0], pb.field_h[0], bd.field_m[0], be.field_f[0], ci.field_b);
         gk.a(12428);
         return var1;

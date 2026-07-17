@@ -74,7 +74,7 @@ final class dn extends pa {
         field_G = null;
     }
 
-    final static void a(am param0, int param1) {
+    final static void a(am param0) {
         try {
             RuntimeException var2 = null;
             int var3 = 0;
@@ -382,7 +382,7 @@ final class dn extends pa {
         }
     }
 
-    final static vn[] f(byte param0) {
+    final static vn[] f() {
         vn[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -586,60 +586,52 @@ final class dn extends pa {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_15_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_14_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_14_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_2_0 = 0;
+        int stackOut_13_0 = 0;
+        int stackOut_9_0 = 0;
         var8 = ZombieDawn.field_J;
         try {
           L0: {
-            if (!param1) {
-              var3_int = 0;
-              var4 = el.field_k;
-              L1: while (true) {
-                if (n.field_r.length <= var3_int) {
-                  stackOut_14_0 = -1;
-                  stackIn_15_0 = stackOut_14_0;
-                  break L0;
-                } else {
-                  L2: {
-                    var5 = la.field_b[var3_int];
-                    if (var5 >= 0) {
-                      var6 = sm.a(32564, true, n.field_r[var3_int]);
-                      var7 = im.field_d - (var6 >> 1);
-                      var4 = var4 + qb.field_i;
-                      if (bf.a(var7 + -nb.field_m, 0, param2, var4, var6 + (nb.field_m << 1), (lb.field_Y << 1) + ma.field_k, param0)) {
-                        stackOut_10_0 = var5;
-                        stackIn_11_0 = stackOut_10_0;
-                        return stackIn_11_0;
-                      } else {
-                        var4 = var4 + ((lb.field_Y << 1) + qb.field_i + ma.field_k);
-                        break L2;
-                      }
+            var3_int = 0;
+            var4 = el.field_k;
+            L1: while (true) {
+              if (n.field_r.length <= var3_int) {
+                stackOut_13_0 = -1;
+                stackIn_14_0 = stackOut_13_0;
+                break L0;
+              } else {
+                L2: {
+                  var5 = la.field_b[var3_int];
+                  if (var5 >= 0) {
+                    var6 = sm.a(32564, true, n.field_r[var3_int]);
+                    var7 = im.field_d - (var6 >> 1);
+                    var4 = var4 + qb.field_i;
+                    if (bf.a(var7 + -nb.field_m, 0, param2, var4, var6 + (nb.field_m << 1), (lb.field_Y << 1) + ma.field_k, param0)) {
+                      stackOut_9_0 = var5;
+                      stackIn_10_0 = stackOut_9_0;
+                      return stackIn_10_0;
                     } else {
-                      var4 = var4 + mh.field_G;
+                      var4 = var4 + ((lb.field_Y << 1) + qb.field_i + ma.field_k);
                       break L2;
                     }
+                  } else {
+                    var4 = var4 + mh.field_G;
+                    break L2;
                   }
-                  var3_int++;
-                  continue L1;
                 }
+                var3_int++;
+                continue L1;
               }
-            } else {
-              stackOut_2_0 = 57;
-              stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var3, "dn.Q(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw sh.a((Throwable) (Object) var3, "dn.Q(" + param0 + 44 + 0 + 44 + param2 + 41);
         }
-        return stackIn_15_0;
+        return stackIn_14_0;
     }
 
     final void a(int param0, int param1, int param2, int param3) {

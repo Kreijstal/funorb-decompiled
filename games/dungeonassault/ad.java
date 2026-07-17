@@ -8,7 +8,7 @@ final class ad {
     int field_b;
     static String field_c;
 
-    final static ad[] b(int param0) {
+    final static ad[] b() {
         return new ad[]{hl.field_c, am.field_b, tp.field_y, m.field_d, kj.field_p, u.field_U, og.field_c, ib.field_h, cm.field_T, ve.field_e, pm.field_l, hf.field_wb, sj.field_hb, lg.field_n};
     }
 
@@ -48,7 +48,7 @@ final class ad {
                   break L1;
                 } else {
                   var6_int = param5[0].field_E;
-                  var8 = 96 / ((79 - param3) / 43);
+                  var8 = 96;
                   var7 = param5[2].field_E;
                   var9 = param5[1].field_E;
                   param5[0].a(param2, param1, param4);
@@ -78,7 +78,7 @@ final class ad {
           L3: {
             var6 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var6;
-            stackOut_10_1 = new StringBuilder().append("ad.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_10_1 = new StringBuilder().append("ad.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(-2).append(44).append(param4).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -109,7 +109,7 @@ final class ad {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_d = null;
         field_c = null;
@@ -229,7 +229,8 @@ final class ad {
                   }
                 }
               }
-              sf.d(3);
+              int discarded$1 = 3;
+              sf.d();
               break L1;
             }
             var66 = new int[param7.field_c];
@@ -249,7 +250,7 @@ final class ad {
                 var13 = var44;
                 L4: while (true) {
                   if (ab.field_c <= var44) {
-                    var14 = -34 / ((-24 - param4) / 58);
+                    var14 = -34;
                     break L0;
                   } else {
                     L5: {
@@ -454,7 +455,7 @@ final class ad {
           L17: {
             var8 = decompiledCaughtException;
             stackOut_51_0 = (RuntimeException) var8;
-            stackOut_51_1 = new StringBuilder().append("ad.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44);
+            stackOut_51_1 = new StringBuilder().append("ad.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(-106).append(44).append(param5).append(44).append(param6).append(44);
             stackIn_53_0 = stackOut_51_0;
             stackIn_53_1 = stackOut_51_1;
             stackIn_52_0 = stackOut_51_0;

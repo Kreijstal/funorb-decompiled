@@ -278,7 +278,7 @@ final class ig {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
         field_d = null;
         field_o = null;

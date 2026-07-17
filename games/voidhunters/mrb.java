@@ -118,23 +118,20 @@ final class mrb extends rqa {
             var11 = dp.field_a.e(49);
             dp.field_a.a(-5 + (var9_int + -var11), 29, var11, var10, param5);
             var12 = param5 + (var10 + 5);
-            hp.field_b.a(0, -69, var9_int, 0, param2);
-            me.field_s.a(0, 125, var9_int, param2, var12);
-            me.field_s.field_gb = uwa.a(11579568, me.field_s.field_G, 2105376, 8421504, 92, 3);
-            var12 = var12 + param2;
-            if (!param4) {
-              qw.field_l.a(param3 + -(var9_int / 2), -99, var9_int, -(var12 / 2) + param1, var12);
-              break L0;
-            } else {
-              return;
-            }
+            hp.field_b.a(0, -69, var9_int, 0, 20);
+            me.field_s.a(0, 125, var9_int, 20, var12);
+            int discarded$1 = 3;
+            me.field_s.field_gb = uwa.a(11579568, me.field_s.field_G, 2105376, 8421504, 92);
+            var12 = var12 + 20;
+            qw.field_l.a(param3 + -(var9_int / 2), -99, var9_int, -(var12 / 2) + param1, var12);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var9 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var9;
-            stackOut_7_1 = new StringBuilder().append("mrb.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44);
+            stackOut_7_1 = new StringBuilder().append("mrb.B(").append(param0).append(44).append(param1).append(44).append(20).append(44).append(param3).append(44).append(0).append(44).append(param5).append(44).append(param6).append(44);
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;

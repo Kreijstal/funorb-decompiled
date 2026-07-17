@@ -117,9 +117,6 @@ final class h {
 
     final static void a(boolean param0) {
         ri.a((byte) -112, bm.c(-125));
-        if (param0) {
-            h.b(true);
-        }
     }
 
     final static void a(int param0, int param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8) {
@@ -445,14 +442,14 @@ final class h {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         if (!oc.d(63)) {
             return;
         }
         qd.a(126, false, 4);
     }
 
-    final static void b(int param0) {
+    final static void b() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;

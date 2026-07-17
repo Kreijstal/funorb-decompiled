@@ -600,7 +600,7 @@ final class t {
         }
     }
 
-    final static void h(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void h(int param0, int param1, int param2, int param3) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -628,9 +628,9 @@ final class t {
               }
             }
             var6 = 156;
-            var7 = (param4 >> 16 & 255) * 100;
-            var8 = (param4 >> 8 & 255) * 100;
-            var9 = (param4 & 255) * 100;
+            var7 = 0;
+            var8 = 0;
+            var9 = 0;
             if (param2 <= param3) {
               L1: {
                 param0 = param0 << 16;
@@ -735,10 +735,10 @@ final class t {
           } else {
             L9: {
               if (param3 < 0) {
-                t.f(param0, param1 + param3, -param3 + 1, param4, 100);
+                t.f(param0, param1 + param3, -param3 + 1, 0, 100);
                 break L9;
               } else {
-                t.f(param0, param1, param3 + 1, param4, 100);
+                t.f(param0, param1, param3 + 1, 0, 100);
                 break L9;
               }
             }
@@ -747,10 +747,10 @@ final class t {
         } else {
           L10: {
             if (param2 < 0) {
-              t.e(param0 + param2, param1, -param2 + 1, param4, 100);
+              t.e(param0 + param2, param1, -param2 + 1, 0, 100);
               break L10;
             } else {
-              t.e(param0, param1, param2 + 1, param4, 100);
+              t.e(param0, param1, param2 + 1, 0, 100);
               break L10;
             }
           }
@@ -868,7 +868,7 @@ final class t {
           } else {
             var11 = 65536 - var6 >> 8;
             var12 = var6 >> 8;
-            var13 = ((param4 & 16711935) * var11 + (param5 & 16711935) * var12 & -16711936) + ((param4 & 65280) * var11 + (param5 & 65280) * var12 & 16711680) >>> 8;
+            var13 = (17 * var11 + (param5 & 16711935) * var12 & -16711936) + (0 * var11 + (param5 & 65280) * var12 & 16711680) >>> 8;
             var14 = -param2;
             L5: while (true) {
               if (var14 >= 0) {
@@ -893,11 +893,11 @@ final class t {
     }
 
     final static void b(int param0, int param1, int param2, int param3, int param4, int param5) {
-        t.e(param0, param1, param2, param4, 192);
-        t.e(param0, param1 + param3 - 1, param2, param4, 192);
+        t.e(30, param1, 580, 16777215, 192);
+        t.e(30, param1 + param3 - 1, 580, 16777215, 192);
         if (param3 >= 3) {
-            t.f(param0, param1 + 1, param3 - 2, param4, 192);
-            t.f(param0 + param2 - 1, param1 + 1, param3 - 2, param4, 192);
+            t.f(30, param1 + 1, param3 - 2, 16777215, 192);
+            t.f(609, param1 + 1, param3 - 2, 16777215, 192);
             return;
         }
     }
@@ -1089,7 +1089,7 @@ final class t {
         int var23 = 0;
         L0: {
           var8 = 16384 / (2 * param3 + 1);
-          var9 = 1 + param3 - param5 - param4;
+          var9 = 1 + param3 - param5;
           if (0 >= var9) {
             break L0;
           } else {
@@ -1098,7 +1098,7 @@ final class t {
           }
         }
         L1: {
-          var10 = field_j - param4 - param5 - param3;
+          var10 = field_j - param5 - param3;
           if (0 >= var10) {
             break L1;
           } else {
@@ -1108,7 +1108,7 @@ final class t {
         }
         L2: {
           var11 = 0;
-          var12 = param4 + param3 + 1;
+          var12 = param3 + 1;
           if (field_j >= var12) {
             break L2;
           } else {
@@ -1128,7 +1128,7 @@ final class t {
               var16 = 0;
               var17 = param2 - param3;
               var18 = var17 - (param3 << 1) - 1;
-              var19 = param4 - param3;
+              var19 = 0 - param3;
               if (var19 >= 0) {
                 break L4;
               } else {
@@ -1285,7 +1285,7 @@ final class t {
                   } else {
                     L18: {
                       var18++;
-                      if (param4 + param5 + var19 + param3 >= field_h) {
+                      if (param5 + var19 + param3 >= field_h) {
                         break L18;
                       } else {
                         param1 = param0[var17];
@@ -1717,7 +1717,7 @@ final class t {
           qb.a(var34, 0, param8);
           qb.a(var35, 0, param8);
           var12 = 16384 / (2 * param3 + 1);
-          var13 = param4 - param3;
+          var13 = 0 - param3;
           if (var13 >= 0) {
             break L2;
           } else {
@@ -1726,8 +1726,8 @@ final class t {
           }
         }
         L3: {
-          var14 = param7 + var13 * field_j;
-          var15 = param4 + param3;
+          var14 = var13 * field_j;
+          var15 = param3;
           var16 = 0;
           if (var15 < field_d) {
             break L3;
@@ -1747,7 +1747,7 @@ final class t {
                 L6: {
                   param2 = param2 + param6;
                   var13 = 1 - param5;
-                  var18 = 1 + param3 - param5 - param4;
+                  var18 = 1 + param3 - param5;
                   if (0 >= var18) {
                     break L6;
                   } else {
@@ -1756,7 +1756,7 @@ final class t {
                   }
                 }
                 L7: {
-                  var19 = param7 + (param4 - param3) * field_j;
+                  var19 = (0 - param3) * field_j;
                   if (var13 >= var18) {
                     break L7;
                   } else {
@@ -1767,7 +1767,7 @@ final class t {
                 L8: while (true) {
                   if (var13 >= var18) {
                     L9: {
-                      var18 = field_d - param4 - param5 - param3;
+                      var18 = field_d - param5 - param3;
                       if (0 >= var18) {
                         break L9;
                       } else {
@@ -2009,7 +2009,7 @@ final class t {
                     }
                   } else {
                     L26: {
-                      if (var13 + param4 + param5 + param3 >= field_a) {
+                      if (var13 + param5 + param3 >= field_a) {
                         var14 = var14 + field_j;
                         break L26;
                       } else {
@@ -2726,8 +2726,8 @@ final class t {
     }
 
     final static void c(int param0, int param1, int param2, int param3, int param4, int param5) {
-        t.a(field_k, 0, param2 + param3 * field_j, param0, param2, param4, field_j - param4, param5);
-        t.a(field_k, 0, param2 + param3 * field_j, param1, param3, param5, field_j - param4, param2, param4);
+        t.a(field_k, 0, 0 * field_j, param0, 0, param4, field_j - param4, param5);
+        t.a(field_k, 0, 0 * field_j, param1, 0, param5, field_j - param4, 0, param4);
     }
 
     final static void d() {

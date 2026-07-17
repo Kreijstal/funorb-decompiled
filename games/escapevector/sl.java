@@ -9,13 +9,13 @@ final class sl {
     static long field_a;
     static ed[][] field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
         field_d = null;
     }
 
-    final static byte[][][] a(mf param0, mf param1, int[] param2, byte[][][] param3, int param4, int param5) {
+    final static byte[][][] a(mf param0, mf param1, int[] param2, byte[][][] param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -105,7 +105,7 @@ final class sl {
                 break L1;
               }
             }
-            var7 = param5;
+            var7 = 0;
             L2: while (true) {
               if (var7 >= var6_int) {
                 stackOut_11_0 = (byte[][][]) param3;
@@ -234,7 +234,7 @@ final class sl {
               break L7;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param4 + 44 + param5 + 41);
+          throw t.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param4 + 44 + 0 + 41);
         }
         return stackIn_12_0;
     }
@@ -322,13 +322,15 @@ final class sl {
               }
             }
           }
-          int discarded$2 = var8.f(1952);
-          String discarded$3 = var8.c(false);
+          int discarded$4 = var8.f(1952);
+          String discarded$5 = var8.c(false);
           break L4;
         }
         L6: {
           if (!param0) {
-            od.field_d = fn.a((n) (Object) var8, 10241, 80);
+            int discarded$6 = 80;
+            int discarded$7 = 10241;
+            od.field_d = fn.a((n) (Object) var8);
             bo.field_H = null;
             break L6;
           } else {
@@ -367,7 +369,7 @@ final class sl {
         return new gi(param0);
     }
 
-    final static boolean a(boolean param0, byte param1) {
+    final static boolean a(boolean param0) {
         L0: {
           if (sk.field_d == null) {
             sk.field_d = ca.field_c.a(ej.field_b, 4, cn.field_h);

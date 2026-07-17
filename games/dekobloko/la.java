@@ -143,24 +143,21 @@ final class la {
         ua var6_ref = null;
         int var7 = client.field_A ? 1 : 0;
         try {
-            if (!(param2 <= ((la) this).field_f)) {
+            if (!(1 <= ((la) this).field_f)) {
                 throw new IllegalStateException();
             }
-            this.a(param1 + -77, param0);
-            ((la) this).field_c = ((la) this).field_c - param2;
+            this.a(0, param0);
+            ((la) this).field_c = ((la) this).field_c - 1;
             while (((la) this).field_c < 0) {
                 var6 = (vi) (Object) ((la) this).field_b.a((byte) 67);
                 this.a(-122, var6);
             }
-            var6_ref = new ua(param3, param2);
+            var6_ref = new ua(param3, 1);
             ((la) this).field_e.a(param0, false, (bh) (Object) var6_ref);
             ((la) this).field_b.a((byte) 4, (be) (Object) var6_ref);
-            if (param1 != 77) {
-                la.a((byte) -109);
-            }
             ((vi) (Object) var6_ref).field_r = 0L;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "la.E(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "la.E(" + param0 + 44 + 77 + 44 + 1 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -211,7 +208,8 @@ final class la {
               if (param1 == 32373) {
                 break L1;
               } else {
-                la.a((byte) 92);
+                int discarded$1 = 92;
+                la.a();
                 break L1;
               }
             }
@@ -256,13 +254,9 @@ final class la {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
         field_h = null;
-        if (param0 < 36) {
-            Object var2 = null;
-            la.a((ji) null, 120);
-        }
     }
 
     private final void a(int param0, vi param1) {

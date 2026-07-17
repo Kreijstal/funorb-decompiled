@@ -50,7 +50,7 @@ final class t {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_i = null;
         field_k = null;
     }

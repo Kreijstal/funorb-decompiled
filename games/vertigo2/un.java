@@ -694,7 +694,7 @@ final class un extends cr {
         }
     }
 
-    public static void k(int param0) {
+    public static void k() {
         field_Hb = null;
         field_Mb = null;
         field_Lb = null;
@@ -726,13 +726,14 @@ final class un extends cr {
             }
           } else {
             L1: while (true) {
-              if (gf.a(false)) {
+              int discarded$7 = 0;
+              if (gf.a()) {
                 L2: {
                   if (de.field_f != 85) {
                     break L2;
                   } else {
                     if (((un) this).field_Kb.length() > 0) {
-                      StringBuilder discarded$5 = w.a(true, ' ', ((un) this).field_Kb.length() + -1, ((un) this).field_Kb);
+                      StringBuilder discarded$8 = w.a(true, ' ', ((un) this).field_Kb.length() + -1, ((un) this).field_Kb);
                       break L2;
                     } else {
                       break L2;
@@ -740,8 +741,9 @@ final class un extends cr {
                   }
                 }
                 L3: {
-                  if (gi.a((CharSequence) (Object) ((un) this).field_Kb, ji.field_r, (byte) 31)) {
-                    StringBuilder discarded$6 = ((un) this).field_Kb.append(ji.field_r);
+                  int discarded$9 = 31;
+                  if (gi.a((CharSequence) (Object) ((un) this).field_Kb, ji.field_r)) {
+                    StringBuilder discarded$10 = ((un) this).field_Kb.append(ji.field_r);
                     break L3;
                   } else {
                     L4: {
@@ -749,7 +751,7 @@ final class un extends cr {
                         break L4;
                       } else {
                         if (ji.field_r == 91) {
-                          StringBuilder discarded$7 = ((un) this).field_Kb.append(ji.field_r);
+                          StringBuilder discarded$11 = ((un) this).field_Kb.append(ji.field_r);
                           break L3;
                         } else {
                           break L4;
@@ -761,7 +763,7 @@ final class un extends cr {
                         break L5;
                       } else {
                         if (35 == ji.field_r) {
-                          StringBuilder discarded$8 = ((un) this).field_Kb.append(ji.field_r);
+                          StringBuilder discarded$12 = ((un) this).field_Kb.append(ji.field_r);
                           break L3;
                         } else {
                           break L5;
@@ -769,7 +771,7 @@ final class un extends cr {
                       }
                     }
                     if (93 == ji.field_r) {
-                      StringBuilder discarded$9 = ((un) this).field_Kb.append(ji.field_r);
+                      StringBuilder discarded$13 = ((un) this).field_Kb.append(ji.field_r);
                       break L3;
                     } else {
                       break L3;
@@ -1038,9 +1040,10 @@ final class un extends cr {
         }
     }
 
-    final static cr b(byte param0) {
+    final static cr b() {
         int var1 = 13;
-        return pk.e(2);
+        int discarded$0 = 2;
+        return pk.e();
     }
 
     static {

@@ -4,7 +4,7 @@
 final class hmb extends rqa {
     static String field_o;
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
     }
 

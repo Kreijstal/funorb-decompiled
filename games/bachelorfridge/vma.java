@@ -4,7 +4,7 @@
 final class vma extends pv {
     static kv[] field_j;
 
-    public static void b(int param0) {
+    public static void b() {
         field_j = null;
         int var1 = 0;
     }
@@ -15,7 +15,7 @@ final class vma extends pv {
         L0: {
           var3 = BachelorFridge.field_y;
           jfa.field_q[param1] = new qc(param1);
-          var2 = 27 % ((-30 - param0) / 46);
+          var2 = 0;
           if (param1 == 0) {
             jfa.field_q[param1].a((byte) -128, fw.field_h[0]);
             jfa.field_q[param1].a((byte) -124, fw.field_h[1]);
@@ -156,7 +156,7 @@ final class vma extends pv {
         }
     }
 
-    final static kv[] c(int param0) {
+    final static kv[] c() {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
@@ -174,7 +174,8 @@ final class vma extends pv {
             var1[var2] = new kv(ok.field_Bb, kh.field_r, fl.field_j[var2], fd.field_D[var2], lq.field_A[var2], eha.field_s[var2], var5);
         }
         var3 = -60;
-        al.b(-18073);
+        int discarded$0 = -18073;
+        al.b();
         return var1;
     }
 
@@ -184,7 +185,8 @@ final class vma extends pv {
         }
         int fieldTemp$0 = ((vma) this).field_g + 1;
         ((vma) this).field_g = ((vma) this).field_g + 1;
-        if (!(fieldTemp$0 <= this.d(2))) {
+        int discarded$1 = 2;
+        if (!(fieldTemp$0 <= this.d())) {
             return true;
         }
         if (((vma) this).field_g == 1) {
@@ -193,23 +195,20 @@ final class vma extends pv {
         return false;
     }
 
-    private final int d(int param0) {
+    private final int d() {
         int var2 = 11;
         return 50;
     }
 
     final static void a(byte param0, boolean param1, boolean param2, String param3) {
         try {
-            if (param0 != -6) {
-                field_j = null;
-            }
             eha.c(false);
             gja.field_m.f((byte) -66);
             ola.field_e = new ph(dk.field_p, (String) null, gfa.field_i, param2, param1);
             kka.field_l = new sja(gja.field_m, (wj) (Object) ola.field_e);
             gja.field_m.a((wj) (Object) kka.field_l, (byte) 63);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "vma.F(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "vma.F(" + -6 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 

@@ -162,14 +162,15 @@ abstract class dv implements ap {
 
     abstract void a(byte param0);
 
-    private final je a(byte param0, int param1) {
-        int var4 = -63 % ((param0 - -36) / 61);
+    private final je a() {
+        int var4 = 0;
         je var3 = new je(0L, (je) null);
-        var3.field_G = ak.b(2263074, 5);
+        int discarded$0 = 5;
+        var3.field_G = ak.b(2263074);
         return var3;
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_k = null;
         field_r = null;
         field_m = null;
@@ -178,25 +179,25 @@ abstract class dv implements ap {
         field_i = null;
     }
 
-    private final void a(String param0, int param1) {
+    private final void a(String param0) {
         rq var3 = null;
         RuntimeException var3_ref = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_13_2 = null;
+        String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
         RuntimeException stackOut_10_0 = null;
         StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         try {
           L0: {
             L1: {
@@ -216,52 +217,44 @@ abstract class dv implements ap {
               break L1;
             }
             L3: {
-              if (param1 >= 37) {
-                break L3;
-              } else {
-                ((dv) this).field_d = null;
-                break L3;
-              }
-            }
-            L4: {
               if (((dv) this).field_j.b(false) > 30) {
                 tc discarded$2 = ((dv) this).field_j.c((byte) -123);
-                break L4;
+                break L3;
               } else {
-                break L4;
+                break L3;
               }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var3_ref = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var3_ref;
-            stackOut_10_1 = new StringBuilder().append("dv.H(");
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackOut_8_0 = (RuntimeException) var3_ref;
+            stackOut_8_1 = new StringBuilder().append("dv.H(");
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
             if (param0 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
-              break L5;
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L4;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
-              break L5;
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L4;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param1 + 41);
+          throw ig.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + 96 + 41);
         }
     }
 
@@ -373,14 +366,6 @@ abstract class dv implements ap {
               il.field_t[10] = dm.field_O;
               break L0;
             }
-          }
-        }
-        L1: {
-          if (param0) {
-            break L1;
-          } else {
-            field_i = null;
-            break L1;
           }
         }
     }
@@ -612,9 +597,6 @@ abstract class dv implements ap {
     private final je a(int param0, int param1, int param2) {
         je var4 = new je(0L, (je) null);
         var4.field_G = tn.a(true, param1, param2);
-        if (param0 != 5592405) {
-            ((dv) this).field_d = null;
-        }
         return var4;
     }
 
@@ -763,7 +745,7 @@ abstract class dv implements ap {
 
     abstract String[] b(boolean param0);
 
-    private final void b(byte param0) {
+    private final void b() {
         Object stackIn_1_0 = null;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
@@ -814,40 +796,35 @@ abstract class dv implements ap {
 
     final static void a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         int var17 = 0;
-        var17 = ArmiesOfGielinor.field_M ? 1 : 0;
-        if (param3 == -66) {
-          L0: {
-            if (param15 > param0) {
-              if (param8 > param15) {
-                q.a(qn.field_d, param5, param13, param12, param4, param1, param7, param9, param6, param11, param15, param8, param14, true, param2, param0, param10);
+        L0: {
+          var17 = ArmiesOfGielinor.field_M ? 1 : 0;
+          if (param15 > param0) {
+            if (param8 > param15) {
+              q.a(qn.field_d, param5, param13, param12, param4, param1, param7, param9, param6, param11, param15, param8, param14, true, param2, param0, param10);
+              break L0;
+            } else {
+              if (param8 > param0) {
+                q.a(qn.field_d, param5, param12, param13, param4, param9, param10, param1, param6, param14, param8, param15, param11, true, param2, param0, param7);
                 break L0;
               } else {
-                if (param8 > param0) {
-                  q.a(qn.field_d, param5, param12, param13, param4, param9, param10, param1, param6, param14, param8, param15, param11, true, param2, param0, param7);
-                  break L0;
-                } else {
-                  q.a(qn.field_d, param1, param4, param13, param12, param9, param6, param5, param10, param14, param0, param15, param2, true, param11, param8, param7);
-                  break L0;
-                }
-              }
-            } else {
-              if (param8 <= param0) {
-                if (param8 > param15) {
-                  q.a(qn.field_d, param9, param12, param4, param13, param5, param10, param1, param7, param2, param8, param0, param11, true, param14, param15, param6);
-                  break L0;
-                } else {
-                  q.a(qn.field_d, param1, param13, param4, param12, param5, param7, param9, param10, param2, param15, param0, param14, true, param11, param8, param6);
-                  break L0;
-                }
-              } else {
-                q.a(qn.field_d, param9, param4, param12, param13, param1, param6, param5, param7, param11, param0, param8, param2, true, param14, param15, param10);
+                q.a(qn.field_d, param1, param4, param13, param12, param9, param6, param5, param10, param14, param0, param15, param2, true, param11, param8, param7);
                 break L0;
               }
             }
+          } else {
+            if (param8 <= param0) {
+              if (param8 > param15) {
+                q.a(qn.field_d, param9, param12, param4, param13, param5, param10, param1, param7, param2, param8, param0, param11, true, param14, param15, param6);
+                break L0;
+              } else {
+                q.a(qn.field_d, param1, param13, param4, param12, param5, param7, param9, param10, param2, param15, param0, param14, true, param11, param8, param6);
+                break L0;
+              }
+            } else {
+              q.a(qn.field_d, param9, param4, param12, param13, param1, param6, param5, param7, param11, param0, param8, param2, true, param14, param15, param10);
+              break L0;
+            }
           }
-          return;
-        } else {
-          return;
         }
     }
 
@@ -855,108 +832,102 @@ abstract class dv implements ap {
         je var5 = null;
         int var6 = 0;
         String var7 = null;
+        Object stackIn_21_0 = null;
+        Object stackIn_22_0 = null;
         Object stackIn_23_0 = null;
-        Object stackIn_24_0 = null;
-        Object stackIn_25_0 = null;
-        tc stackIn_25_1 = null;
+        tc stackIn_23_1 = null;
+        Object stackOut_20_0 = null;
         Object stackOut_22_0 = null;
-        Object stackOut_24_0 = null;
-        tc stackOut_24_1 = null;
-        Object stackOut_23_0 = null;
-        tc stackOut_23_1 = null;
-        L0: {
-          var6 = ArmiesOfGielinor.field_M ? 1 : 0;
-          if (param0 == -30847) {
-            break L0;
-          } else {
-            dv.a(false);
-            break L0;
-          }
-        }
+        tc stackOut_22_1 = null;
+        Object stackOut_21_0 = null;
+        tc stackOut_21_1 = null;
+        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (96 == param1) {
-          this.b((byte) -4);
+          int discarded$3 = -4;
+          this.b();
           return true;
         } else {
           if (((dv) this).field_f) {
-            L1: {
+            L0: {
               if (84 != param2) {
                 if (98 == param2) {
-                  L2: {
+                  L1: {
                     if (null == ((dv) this).field_b) {
-                      break L2;
+                      break L1;
                     } else {
                       if (((dv) this).field_b.field_b == ((dv) this).field_j.field_d) {
-                        break L1;
+                        break L0;
                       } else {
-                        break L2;
+                        break L1;
                       }
                     }
                   }
-                  L3: {
-                    stackOut_22_0 = this;
-                    stackIn_24_0 = stackOut_22_0;
-                    stackIn_23_0 = stackOut_22_0;
+                  L2: {
+                    stackOut_20_0 = this;
+                    stackIn_22_0 = stackOut_20_0;
+                    stackIn_21_0 = stackOut_20_0;
                     if (((dv) this).field_b == null) {
-                      stackOut_24_0 = this;
-                      stackOut_24_1 = ((dv) this).field_j.e((byte) 119);
-                      stackIn_25_0 = stackOut_24_0;
-                      stackIn_25_1 = stackOut_24_1;
-                      break L3;
+                      stackOut_22_0 = this;
+                      stackOut_22_1 = ((dv) this).field_j.e((byte) 119);
+                      stackIn_23_0 = stackOut_22_0;
+                      stackIn_23_1 = stackOut_22_1;
+                      break L2;
                     } else {
-                      stackOut_23_0 = this;
-                      stackOut_23_1 = ((dv) this).field_b.field_b;
-                      stackIn_25_0 = stackOut_23_0;
-                      stackIn_25_1 = stackOut_23_1;
-                      break L3;
+                      stackOut_21_0 = this;
+                      stackOut_21_1 = ((dv) this).field_b.field_b;
+                      stackIn_23_0 = stackOut_21_0;
+                      stackIn_23_1 = stackOut_21_1;
+                      break L2;
                     }
                   }
-                  ((dv) this).field_b = (rq) (Object) stackIn_25_1;
+                  ((dv) this).field_b = (rq) (Object) stackIn_23_1;
                   if (((dv) this).field_b != null) {
                     ((dv) this).field_o.a(((dv) this).field_b.field_l, (byte) 45);
-                    break L1;
+                    break L0;
                   } else {
-                    break L1;
+                    break L0;
                   }
                 } else {
                   if (param2 == 99) {
                     if (((dv) this).field_b == null) {
-                      break L1;
+                      break L0;
                     } else {
                       if (((dv) this).field_j.field_d == ((dv) this).field_b.field_j) {
-                        break L1;
+                        break L0;
                       } else {
                         ((dv) this).field_b = (rq) (Object) ((dv) this).field_b.field_j;
                         ((dv) this).field_o.a(((dv) this).field_b.field_l, (byte) 45);
-                        break L1;
+                        break L0;
                       }
                     }
                   } else {
                     if (80 == param2) {
                       ((dv) this).a((byte) 122);
-                      break L1;
+                      break L0;
                     } else {
-                      boolean discarded$1 = ((dv) this).field_o.a(param2, param0 + 4721, param1);
-                      break L1;
+                      boolean discarded$4 = ((dv) this).field_o.a(param2, -26126, param1);
+                      break L0;
                     }
                   }
                 }
               } else {
                 var7 = ((dv) this).field_o.q(0);
                 if (var7.length() > 0) {
-                  L4: {
-                    this.a(((dv) this).field_c + var7, 5635925, param0 + 30734);
+                  L3: {
+                    this.a(((dv) this).field_c + var7, 5635925, -113);
                     var5 = (je) (Object) ((dv) this).field_d.field_Jb.field_fb.d((byte) -81);
                     if (((dv) this).a(var7, true)) {
-                      break L4;
+                      break L3;
                     } else {
                       var5.field_N = 16733525;
-                      break L4;
+                      break L3;
                     }
                   }
                   ((dv) this).field_o.a(true);
-                  this.a(var7, param0 + 30943);
+                  int discarded$5 = 96;
+                  this.a(var7);
                   ((dv) this).field_b = null;
-                  break L1;
+                  break L0;
                 } else {
                   return true;
                 }
@@ -971,7 +942,7 @@ abstract class dv implements ap {
 
     private final je a(boolean param0, int param1) {
         je var3 = new je();
-        var3.field_G = tn.a(param0, 0, 65793);
+        var3.field_G = tn.a(true, 0, 65793);
         return var3;
     }
 
@@ -1039,7 +1010,9 @@ abstract class dv implements ap {
             var8 = this.a(5592405, 7829367, 2236962);
             var9 = this.a(5592405, 65793, 65793);
             var10 = this.a(5592405, 3355443, 65793);
-            var11 = this.a((byte) 71, 2263074);
+            int discarded$2 = 2263074;
+            int discarded$3 = 71;
+            var11 = this.a();
             var12 = this.a(5592405, 2236962, 65793);
             ((dv) this).field_q = new je(0L, var5);
             ((dv) this).field_q.a(200, -20500, bn.field_b, -200, 0);

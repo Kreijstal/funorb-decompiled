@@ -16,15 +16,11 @@ final class bpa implements wwa {
     }
 
     final static void a(int param0, int param1, byte param2, int param3, int param4) {
-        if (param2 == -25) {
-          if (param3 > param4) {
-            ww.a(param0, param3, rba.field_b[param1], (byte) 75, param4);
-            return;
-          } else {
-            ww.a(param0, param4, rba.field_b[param1], (byte) 75, param3);
-            return;
-          }
+        if (param3 > param4) {
+          ww.a(param0, param3, rba.field_b[param1], (byte) 75, param4);
+          return;
         } else {
+          ww.a(param0, param4, rba.field_b[param1], (byte) 75, param3);
           return;
         }
     }

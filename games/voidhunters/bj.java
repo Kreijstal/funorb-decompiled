@@ -69,7 +69,7 @@ final class bj extends rqa {
         return stackIn_4_0;
     }
 
-    final static int e(byte param0) {
+    final static int e() {
         if (2 <= ef.field_z) {
           L0: {
             if (ahb.field_p != 0) {
@@ -208,12 +208,14 @@ final class bj extends rqa {
               param1.field_h = 0;
               lnb.field_i = new jv(var3_int, param1, param1);
               usa.field_o = new voa(var3_int, param1, param1, (rs) (Object) new wk());
-              var4 = cqb.d(10);
+              int discarded$2 = 10;
+              var4 = cqb.d();
               if (var4 != null) {
-                jka.a(var4, (byte) -111);
+                int discarded$3 = -111;
+                jka.a(var4);
                 var12 = null;
                 wdb.field_Ab = ocb.a(65793, 4020342, 10204, (no) null, 1513239, 8947848, 1513239, 5138823, 65793, 1127256, 0, 65793, 2245737);
-                ej.field_a = ocb.a(0, 0, param0 ^ -10239, param2, 0, 0, 0, 0, 0, 0, 16764006, 0, 0);
+                ej.field_a = ocb.a(0, 0, 10204, param2, 0, 0, 0, 0, 0, 0, 16764006, 0, 0);
                 jwa.field_k = ocb.a(0, 0, 10204, param2, 0, 0, 0, 0, 0, 0, 16777215, 0, 0);
                 var5 = dma.field_g;
                 var6 = dma.field_j;
@@ -225,12 +227,8 @@ final class bj extends rqa {
                   if (var8 >= 7) {
                     dma.a(var16, var5, var6);
                     tha.field_o = vcb.a(0, jwa.field_k, wdb.field_Ab, ej.field_a, var4);
-                    if (param0 == -35) {
-                      tra.field_o.field_lb = new ij();
-                      break L0;
-                    } else {
-                      return;
-                    }
+                    tra.field_o.field_lb = new ij();
+                    break L0;
                   } else {
                     dma.d(var8, 1 + var8, 14 + -(var8 << 1), 16777215);
                     var8++;
@@ -253,7 +251,7 @@ final class bj extends rqa {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var3;
-            stackOut_14_1 = new StringBuilder().append("bj.C(").append(param0).append(44);
+            stackOut_14_1 = new StringBuilder().append("bj.C(").append(-35).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;

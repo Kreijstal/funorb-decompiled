@@ -211,7 +211,7 @@ final class lj extends br {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_k = null;
         field_m = null;
         int var1 = 50;
@@ -224,16 +224,16 @@ final class lj extends br {
         field_v = null;
     }
 
-    final static void a(fm param0, int param1, fm param2, int param3) {
+    final static void a(fm param0, int param1, fm param2) {
         try {
             m.field_C = param0;
             int var4_int = -43;
-            ib.field_b = param1;
+            ib.field_b = 480;
             uq.field_f = param2;
             uo.a(oo.field_l / 2, oo.field_b / 2, 1633);
             ek.a(param0.field_J, param2.field_r + param2.field_J, 1829947600, param2.field_J, param0.field_r + param0.field_J);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "lj.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + 61 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "lj.A(" + (param0 != null ? "{...}" : "null") + 44 + 480 + 44 + (param2 != null ? "{...}" : "null") + 44 + 61 + 41);
         }
     }
 

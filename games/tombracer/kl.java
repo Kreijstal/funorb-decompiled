@@ -14,14 +14,8 @@ abstract class kl implements wia {
     cka field_h;
     static fpa field_a;
 
-    public static void c(int param0) {
+    public static void c() {
         field_a = null;
-        if (param0 != 1956) {
-            field_j = null;
-            field_b = null;
-            field_j = null;
-            return;
-        }
         field_b = null;
         field_j = null;
     }
@@ -29,11 +23,13 @@ abstract class kl implements wia {
     final boolean e(int param0) {
         int var2 = 0;
         if (((kl) this).field_h.field_id) {
-          var2 = this.d(9729);
+          int discarded$4 = 9729;
+          var2 = this.d();
           ((kl) this).field_h.a(true, (kl) this);
           jaggl.OpenGL.glGenerateMipmapEXT(((kl) this).field_e);
           ((kl) this).field_d = true;
-          this.a(true);
+          int discarded$5 = 1;
+          this.a();
           this.a((byte) 111, var2);
           return true;
         } else {
@@ -46,7 +42,7 @@ abstract class kl implements wia {
         }
     }
 
-    private final void a(boolean param0) {
+    private final void a() {
         ((kl) this).field_h.a(true, (kl) this);
         if (!((kl) this).field_g) {
             jaggl.OpenGL.glTexParameteri(((kl) this).field_e, 10241, ((kl) this).field_d ? 9984 : 9728);
@@ -118,9 +114,11 @@ abstract class kl implements wia {
             if (stackIn_16_0 == stackIn_16_1) {
               break L2;
             } else {
-              var3 = this.d(9729);
+              int discarded$4 = 9729;
+              var3 = this.d();
               ((kl) this).field_d = true;
-              this.a(true);
+              int discarded$5 = 1;
+              this.a();
               this.a((byte) 127, var3);
               break L2;
             }
@@ -160,9 +158,11 @@ abstract class kl implements wia {
             if (stackIn_7_0 == stackIn_7_1) {
               break L5;
             } else {
-              var3 = this.d(9729);
+              int discarded$6 = 9729;
+              var3 = this.d();
               ((kl) this).field_d = true;
-              this.a(true);
+              int discarded$7 = 1;
+              this.a();
               this.a((byte) 127, var3);
               break L5;
             }
@@ -171,7 +171,7 @@ abstract class kl implements wia {
         }
     }
 
-    private final int d(int param0) {
+    private final int d() {
         int var2 = ((kl) this).field_h.a(((kl) this).field_c, (byte) -65) * ((kl) this).field_f;
         return ((kl) this).field_d ? var2 * 4 / 3 : var2;
     }
@@ -207,7 +207,8 @@ abstract class kl implements wia {
               }
             }
             ((kl) this).field_g = stackIn_5_1 != 0;
-            this.a(true);
+            int discarded$2 = 1;
+            this.a();
             break L0;
           } else {
             break L0;
@@ -231,7 +232,8 @@ abstract class kl implements wia {
 
     private final void a(byte param0, int param1) {
         ((kl) this).field_h.field_jb = ((kl) this).field_h.field_jb - param1;
-        ((kl) this).field_h.field_jb = ((kl) this).field_h.field_jb + this.d(9729);
+        int discarded$0 = 9729;
+        ((kl) this).field_h.field_jb = ((kl) this).field_h.field_jb + this.d();
         if (param0 < 104) {
             ((kl) this).field_c = 73;
         }
@@ -260,7 +262,8 @@ abstract class kl implements wia {
 
     final void b(int param0) {
         if (!(param0 >= ((kl) this).field_i)) {
-            ((kl) this).field_h.a((byte) -16, ((kl) this).field_i, this.d(9729));
+            int discarded$0 = 9729;
+            ((kl) this).field_h.a((byte) -16, ((kl) this).field_i, this.d());
             ((kl) this).field_i = 0;
         }
     }

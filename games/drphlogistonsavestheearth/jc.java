@@ -117,7 +117,7 @@ final class jc extends bh {
               } else {
                 var4 = (CharSequence) (Object) var2;
                 if (ub.a(50, var4) != 0L) {
-                  var3 = 28 / ((-30 - param0) / 57);
+                  var3 = -28;
                   break L0;
                 } else {
                   break L1;
@@ -131,7 +131,7 @@ final class jc extends bh {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) runtimeException;
-            stackOut_6_1 = new StringBuilder().append("jc.A(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("jc.A(").append(79).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -212,7 +212,7 @@ final class jc extends bh {
             L1: {
               var7 = nj.field_p;
               var8 = var7;
-              var8.d(param0, -18392);
+              var8.d(3, -18392);
               var8.field_j = var8.field_j + 1;
               var4 = var8.field_j;
               var8.c(1, (byte) -93);
@@ -249,7 +249,7 @@ final class jc extends bh {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var3;
-            stackOut_8_1 = new StringBuilder().append("jc.B(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("jc.B(").append(3).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;

@@ -6,7 +6,7 @@ final class of {
     static int[] field_b;
     static boolean field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
     }

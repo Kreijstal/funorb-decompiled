@@ -18,7 +18,7 @@ final class nk {
     static volatile int field_l;
     static boolean field_i;
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
         field_j = null;
@@ -170,7 +170,7 @@ final class nk {
         return ((nk) this).b(-81);
     }
 
-    final static void a(w param0, w param1, int param2, int param3, int param4, w param5, byte[] param6, int param7, int param8, int param9) {
+    final static void a(w param0, w param1, int param2, int param3, int param4, w param5, byte[] param6, int param7, int param8) {
         RuntimeException var10 = null;
         int var10_int = 0;
         int var11 = 0;
@@ -241,13 +241,13 @@ final class nk {
           L0: {
             rb.field_k = param6;
             uc.field_g = -1L;
-            hg.field_b = param3;
+            hg.field_b = 5;
             j.field_b = param6.length;
             kk.field_l = new byte[(hg.field_b - -7) / 8];
             fj.field_h = false;
             g.field_N = null;
             cd.field_m = null;
-            var10_int = param2;
+            var10_int = 0;
             var11 = 0;
             L1: while (true) {
               if (var11 >= rb.field_k.length) {
@@ -278,8 +278,8 @@ final class nk {
                 }
                 L4: {
                   h.field_b = param0.field_M;
-                  h.field_b.c(param2 ^ 105);
-                  tg.field_b = new nk(param9);
+                  h.field_b.c(105);
+                  tg.field_b = new nk(1024);
                   if (param5.field_M != null) {
                     break L4;
                   } else {
@@ -290,7 +290,7 @@ final class nk {
                 oc.field_b = param5.field_M;
                 oc.field_b.c(121);
                 hn.field_h = new nk(param8);
-                oa.field_a = param7;
+                oa.field_a = 150;
                 km.field_C = 0L;
                 break L0;
               } else {
@@ -355,7 +355,7 @@ final class nk {
           }
           L7: {
             stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44).append(0).append(44).append(5).append(44).append(param4).append(44);
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -403,7 +403,7 @@ final class nk {
               break L8;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
+          throw dh.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + 150 + 44 + param8 + 44 + 1024 + 41);
         }
     }
 
@@ -490,7 +490,8 @@ final class nk {
               L1: {
                 var8 = new wj(ah.field_c, param2);
                 ah.field_c.a((byte) -123, (ce) (Object) var8);
-                if (!dg.b(-40)) {
+                int discarded$16 = -40;
+                if (!dg.b()) {
                   L2: {
                     ve.field_Gc = param0;
                     ea.field_x = null;

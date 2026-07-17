@@ -7,7 +7,7 @@ final class te extends wl {
     int[] field_l;
     static o[] field_k;
 
-    public static void a(int param0) {
+    public static void a() {
         field_k = null;
     }
 

@@ -9,7 +9,7 @@ final class kl extends fd implements ta {
     private fc field_G;
     static int field_E;
 
-    final static void a(byte param0, int param1) {
+    final static void a(byte param0) {
         RuntimeException var2 = null;
         int var3 = 0;
         dh var4 = null;
@@ -30,7 +30,8 @@ final class kl extends fd implements ta {
               if (var4 == null) {
                 break L0;
               } else {
-                gl.a(var4, (byte) 111, 7);
+                int discarded$4 = 7;
+                gl.a(var4, (byte) 111);
                 var4 = (dh) (Object) bl.field_D.a(16213);
                 continue L2;
               }
@@ -150,7 +151,7 @@ final class kl extends fd implements ta {
         }
     }
 
-    final static void a(jc param0, byte param1) {
+    final static void a(jc param0) {
         try {
             RuntimeException runtimeException = null;
             byte[] var2 = null;
@@ -297,7 +298,8 @@ final class kl extends fd implements ta {
               if (param0 == 12085) {
                 break L1;
               } else {
-                kl.a((byte) 103, 7);
+                int discarded$3 = 7;
+                kl.a((byte) 103);
                 break L1;
               }
             }

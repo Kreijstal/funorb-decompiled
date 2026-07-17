@@ -9,7 +9,7 @@ final class cc {
     static boolean[] field_d;
     static String field_c;
 
-    final static jm b(byte param0) {
+    final static jm b() {
         int var1 = 1;
         if (!(field_f != null)) {
             field_f = new jm(vc.field_e, 20, 0, 0, 0, 11579568, -1, 0, 0, vc.field_e.field_C, -1, 2147483647, true);
@@ -37,7 +37,7 @@ final class cc {
         return eh.field_e != null ? true : false;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         field_f = null;

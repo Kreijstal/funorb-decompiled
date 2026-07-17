@@ -323,7 +323,8 @@ final class wl extends ha {
           }
           ((wl) this).field_db = param0;
           ((wl) this).field_Ob = param1;
-          this.u(3);
+          int discarded$1 = 3;
+          this.u();
           this.k(-107);
           if (((wl) this).field_N == 3) {
             this.d(5888);
@@ -356,7 +357,8 @@ final class wl extends ha {
 
     private final void a(int param0, int param1, boolean param2) {
         L0: {
-          this.a(true, param0, (byte) 125, true);
+          int discarded$2 = 1;
+          this.a(true, param0, (byte) 125);
           if (param1 == 4873) {
             break L0;
           } else {
@@ -462,7 +464,7 @@ final class wl extends ha {
         }
     }
 
-    private final void m(int param0) {
+    private final void m() {
     }
 
     wl(java.awt.Canvas param0, d param1, int param2) {
@@ -546,8 +548,8 @@ final class wl extends ha {
         ((wl) this).field_R = new Hashtable();
         ((wl) this).field_Ab = 128;
         ((wl) this).field_q = new jk();
-        tj discarded$5 = new tj();
-        tj discarded$6 = new tj();
+        tj discarded$12 = new tj();
+        tj discarded$13 = new tj();
         ((wl) this).field_S = false;
         ((wl) this).field_jb = new kp();
         ((wl) this).field_Fc = new up[4];
@@ -565,7 +567,7 @@ final class wl extends ha {
         ((wl) this).field_Gb = new kp();
         ((wl) this).field_dc = new kp();
         ((wl) this).field_f = new kp();
-        tj discarded$7 = new tj();
+        tj discarded$14 = new tj();
         ((wl) this).field_h = new tj();
         ((wl) this).field_H = new tj();
         ((wl) this).field_Lb = 0;
@@ -598,19 +600,21 @@ final class wl extends ha {
         ((wl) this).field_Ob = 3584;
         ((wl) this).field_Zb = 0.0f;
         ((wl) this).field_Q = 0;
-        du discarded$8 = new du(8192);
+        du discarded$15 = new du(8192);
         try {
           L0: {
             ((wl) this).field_Wb = param0;
             ((wl) this).field_Hb = param2;
-            if (ei.a("jaclib", (byte) -16)) {
-              if (ei.a("jaggl", (byte) -16)) {
+            int discarded$16 = -16;
+            if (ei.a("jaclib")) {
+              int discarded$17 = -16;
+              if (ei.a("jaggl")) {
                 try {
                   L1: {
                     ((wl) this).field_kc = new jaggl.OpenGL();
-                    long dupTemp$9 = ((wl) this).field_kc.init(param0, 8, 8, 8, 24, 0, ((wl) this).field_Hb);
-                    ((wl) this).field_Db = dupTemp$9;
-                    ((wl) this).field_gc = dupTemp$9;
+                    long dupTemp$18 = ((wl) this).field_kc.init(param0, 8, 8, 8, 24, 0, ((wl) this).field_Hb);
+                    ((wl) this).field_Db = dupTemp$18;
+                    ((wl) this).field_gc = dupTemp$18;
                     if (0L == ((wl) this).field_Db) {
                       throw new RuntimeException("");
                     } else {
@@ -694,7 +698,8 @@ final class wl extends ha {
                                                 break L7;
                                               } else {
                                                 var23 = (CharSequence) (Object) var10_ref.substring(0, 4);
-                                                var5_int = td.a(var23, (byte) 38);
+                                                int discarded$19 = 38;
+                                                var5_int = td.a(var23);
                                                 decompiledRegionSelector0 = 1;
                                                 break L6;
                                               }
@@ -824,10 +829,13 @@ final class wl extends ha {
                           }
                         }
                         L19: {
-                          fr.a(false, 0, true);
+                          int discarded$20 = 1;
+                          int discarded$21 = 0;
+                          fr.a(false);
                           ((wl) this).field_S = true;
                           ((wl) this).field_X = new eb((wl) this, ((wl) this).field_a);
-                          this.x(-26394);
+                          int discarded$22 = -26394;
+                          this.x();
                           ((wl) this).field_cc = new cs((wl) this);
                           ((wl) this).field_pc = new lu((wl) this);
                           if (!((wl) this).field_pc.b(1)) {
@@ -845,7 +853,8 @@ final class wl extends ha {
                         }
                         ((wl) this).field_vb = new vr((wl) this);
                         this.f((byte) -66);
-                        this.s(-11103);
+                        int discarded$23 = -11103;
+                        this.s();
                         ((wl) this).e();
                         break L1;
                       } else {
@@ -934,19 +943,20 @@ final class wl extends ha {
           if (((wl) this).field_kc.b()) {
             return;
           } else {
-            int incrementValue$6 = var2;
+            int incrementValue$7 = var2;
             var2++;
-            if (incrementValue$6 > 5) {
+            if (incrementValue$7 > 5) {
               throw new RuntimeException("");
             } else {
-              wf.a(1000L, false);
+              int discarded$8 = 0;
+              wf.a(1000L);
               continue L0;
             }
           }
         }
     }
 
-    private final void a(float param0, float param1, float param2, int param3) {
+    private final void a(float param0, float param1, float param2) {
         jaggl.OpenGL.glMatrixMode(5890);
         if (((wl) this).field_Bc) {
             jaggl.OpenGL.glLoadIdentity();
@@ -1020,7 +1030,8 @@ final class wl extends ha {
         float var9 = 0.0f;
         L0: {
           L1: {
-            this.j(1);
+            int discarded$1 = 1;
+            this.j();
             ((wl) this).b((byte) -122, param5);
             var7 = (float)param2 - (float)param0;
             var8 = (float)param3 - (float)param1;
@@ -1092,8 +1103,10 @@ final class wl extends ha {
         ((wl) this).field_d = param2;
         ((wl) this).field_L = param0;
         jaggl.OpenGL.glEnable(3089);
-        this.m(5149);
-        this.v(0);
+        int discarded$2 = 5149;
+        this.m();
+        int discarded$3 = 0;
+        this.v();
     }
 
     final q c(boolean param0) {
@@ -1148,12 +1161,13 @@ final class wl extends ha {
         }
     }
 
-    private final void f(int param0) {
+    private final void f() {
         boolean discarded$0 = ((wl) this).field_kc.a();
     }
 
     final void U(int param0, int param1, int param2, int param3, int param4) {
-        this.j(1);
+        int discarded$0 = 1;
+        this.j();
         ((wl) this).b((byte) 35, param4);
         float var6 = 0.3499999940395355f + (float)param0;
         jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
@@ -1243,7 +1257,7 @@ final class wl extends ha {
         }
     }
 
-    private final void o(int param0) {
+    private final void o() {
         jaggl.OpenGL.glViewport(((wl) this).field_wc, ((wl) this).field_T, ((wl) this).field_ec, ((wl) this).field_bb);
     }
 
@@ -1369,13 +1383,14 @@ final class wl extends ha {
         ((wl) this).field_dc.a(110, var4);
     }
 
-    private final void l(int param0) {
+    private final void l() {
         ((wl) this).field_d = ((wl) this).field_ec;
         ((wl) this).field_Q = ((wl) this).field_bb;
         ((wl) this).field_L = 0;
         ((wl) this).field_e = 0;
         jaggl.OpenGL.glDisable(3089);
-        this.m(5149);
+        int discarded$0 = 5149;
+        this.m();
     }
 
     private final void f(byte param0) {
@@ -1428,7 +1443,8 @@ final class wl extends ha {
                   jaggl.OpenGL.glFogi(2917, 9729);
                   jaggl.OpenGL.glHint(3156, 4353);
                   ((wl) this).field_F = -1;
-                  this.l(24643);
+                  int discarded$1 = 24643;
+                  this.l();
                   return;
                 } else {
                   var4 = var3 + 16384;
@@ -1452,7 +1468,7 @@ final class wl extends ha {
         }
     }
 
-    private final void a(boolean param0, int param1, byte param2, boolean param3) {
+    private final void a(boolean param0, int param1, byte param2) {
         Object var5 = null;
         int var6 = 0;
         int var7 = 0;
@@ -1576,7 +1592,8 @@ final class wl extends ha {
                 }
                 var11 = stackIn_28_0;
                 var12 = 50 * var11;
-                this.a(0.0f, (float)(((wl) this).field_hb % var12 * var10.field_n) / (float)var12, (float)(var10.field_j * (((wl) this).field_hb % var12)) / (float)var12, 5888);
+                int discarded$1 = 5888;
+                this.a(0.0f, (float)(((wl) this).field_hb % var12 * var10.field_n) / (float)var12, (float)(var10.field_j * (((wl) this).field_hb % var12)) / (float)var12);
                 break L7;
               }
               var6 = var10.field_e;
@@ -1594,7 +1611,7 @@ final class wl extends ha {
             }
           }
           L10: {
-            ((wl) this).field_vb.a(var9, param3, 2147483647, var8, param0, var7);
+            ((wl) this).field_vb.a(var9, true, 2147483647, var8, param0, var7);
             if (((wl) this).field_vb.a(var6, -1896, (rt) var5)) {
               break L10;
             } else {
@@ -1872,8 +1889,10 @@ final class wl extends ha {
           }
         }
         jaggl.OpenGL.glEnable(3089);
-        this.m(5149);
-        this.v(0);
+        int discarded$2 = 5149;
+        this.m();
+        int discarded$3 = 0;
+        this.v();
     }
 
     final synchronized void a(long param0, int param1) {
@@ -1885,7 +1904,7 @@ final class wl extends ha {
         ((wl) this).field_f.a(param1 + 98, var4);
     }
 
-    private final void v(int param0) {
+    private final void v() {
         L0: {
           L1: {
             if (((wl) this).field_d < ((wl) this).field_L) {
@@ -1904,7 +1923,7 @@ final class wl extends ha {
         }
     }
 
-    private final void n(int param0) {
+    private final void n() {
         L0: {
           L1: {
             if (!((wl) this).field_tc) {
@@ -2065,11 +2084,11 @@ final class wl extends ha {
         String stackOut_11_2 = null;
         try {
           L0: {
-            if (((wl) this).field_Y <= param0) {
+            if (((wl) this).field_Y >= 3) {
               throw new RuntimeException();
             } else {
               L1: {
-                if (-1 <= ((wl) this).field_Y) {
+                if (((wl) this).field_Y >= 0) {
                   ((wl) this).field_ob[((wl) this).field_Y].b((byte) -40);
                   break L1;
                 } else {
@@ -2089,7 +2108,7 @@ final class wl extends ha {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var3;
-            stackOut_10_1 = new StringBuilder().append("wl.KC(").append(param0).append(44);
+            stackOut_10_1 = new StringBuilder().append("wl.KC(").append(-4).append(44);
             stackIn_13_0 = stackOut_10_0;
             stackIn_13_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -2336,7 +2355,7 @@ final class wl extends ha {
         }
     }
 
-    private final int w(int param0) {
+    private final int w() {
         return ((wl) this).field_ib - (-((wl) this).field_lb + -((wl) this).field_yc);
     }
 
@@ -2495,8 +2514,10 @@ final class wl extends ha {
           ((wl) this).field_ub = param2;
           ((wl) this).field_mc = param3;
           ((wl) this).field_Ib = param0;
-          this.u(3);
-          this.m(5149);
+          int discarded$4 = 3;
+          this.u();
+          int discarded$5 = 5149;
+          this.m();
           if (((wl) this).field_N == 3) {
             this.d(5888);
             break L0;
@@ -2579,7 +2600,8 @@ final class wl extends ha {
                                       if (((wl) this).field_Gc.a(true)) {
                                         L12: {
                                           ((wl) this).field_X.a(64);
-                                          if (this.w(8705) <= 100663296) {
+                                          int discarded$5 = 8705;
+                                          if (this.w() <= 100663296) {
                                             break L12;
                                           } else {
                                             if (60000L + ((wl) this).field_l >= kh.a(-57)) {
@@ -2619,9 +2641,9 @@ final class wl extends ha {
                         }
                       } else {
                         var8 = (iq) (Object) ((wl) this).field_Gb.e(127);
-                        int incrementValue$4 = var2;
+                        int incrementValue$6 = var2;
                         var2++;
-                        in.field_b[incrementValue$4] = (int)var8.field_b;
+                        in.field_b[incrementValue$6] = (int)var8.field_b;
                         ((wl) this).field_yc = ((wl) this).field_yc - var8.field_f;
                         if (var2 == 1000) {
                           jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, in.field_b, 0);
@@ -2634,9 +2656,9 @@ final class wl extends ha {
                     }
                   } else {
                     var7 = (iq) (Object) ((wl) this).field_zb.e(124);
-                    int incrementValue$5 = var2;
+                    int incrementValue$7 = var2;
                     var2++;
-                    in.field_b[incrementValue$5] = var7.field_f;
+                    in.field_b[incrementValue$7] = var7.field_f;
                     if (1000 == var2) {
                       jaggl.OpenGL.glDeleteFramebuffersEXT(var2, in.field_b, 0);
                       var2 = 0;
@@ -2649,9 +2671,9 @@ final class wl extends ha {
               } else {
                 L13: {
                   var6 = (iq) (Object) ((wl) this).field_Ac.e(121);
-                  int incrementValue$6 = var2;
+                  int incrementValue$8 = var2;
                   var2++;
-                  in.field_b[incrementValue$6] = (int)var6.field_b;
+                  in.field_b[incrementValue$8] = (int)var6.field_b;
                   ((wl) this).field_lb = ((wl) this).field_lb - var6.field_f;
                   if (var2 != 1000) {
                     break L13;
@@ -2667,9 +2689,9 @@ final class wl extends ha {
           } else {
             L14: {
               var5 = (iq) (Object) ((wl) this).field_nb.e(123);
-              int incrementValue$7 = var2;
+              int incrementValue$9 = var2;
               var2++;
-              in.field_b[incrementValue$7] = (int)var5.field_b;
+              in.field_b[incrementValue$9] = (int)var5.field_b;
               ((wl) this).field_ib = ((wl) this).field_ib - var5.field_f;
               if (1000 != var2) {
                 break L14;
@@ -2697,7 +2719,7 @@ final class wl extends ha {
         ((wl) this).field_pb[10] = ((wl) this).field_fb;
     }
 
-    private final void j(int param0) {
+    private final void j() {
         L0: {
           if (((wl) this).field_O != 1) {
             this.h(-114);
@@ -2877,7 +2899,8 @@ final class wl extends ha {
             }
             L2: {
               if (((wl) this).field_kc != null) {
-                this.f(8960);
+                int discarded$1 = 8960;
+                this.f();
                 var1_ref = ((wl) this).field_R.keys();
                 L3: while (true) {
                   if (!var1_ref.hasMoreElements()) {
@@ -2931,7 +2954,8 @@ final class wl extends ha {
           var8 = (float)param1 + 0.3499999940395355f;
           var9 = -1.0f + (var7 + (float)param2);
           var10 = -1.0f + (var8 + (float)param3);
-          this.j(1);
+          int discarded$2 = 1;
+          this.j();
           ((wl) this).b((byte) -124, param5);
           jaggl.OpenGL.glColor4ub((byte)(param4 >> 16), (byte)(param4 >> 8), (byte)param4, (byte)(param4 >> 24));
           if (((wl) this).field_I) {
@@ -2965,7 +2989,8 @@ final class wl extends ha {
           if (param0 > 30) {
             break L0;
           } else {
-            this.a(false, -1, (byte) 62, true);
+            int discarded$2 = 1;
+            this.a(false, -1, (byte) 62);
             break L0;
           }
         }
@@ -3000,21 +3025,17 @@ final class wl extends ha {
                   ((wl) this).field_fc = ((wl) this).field_fc - 1;
                   ((wl) this).field_Fc[fieldTemp$2] = null;
                   param1.a((byte) 97);
-                  if (param0 == -94) {
-                    L2: {
-                      if (0 <= ((wl) this).field_fc) {
-                        ((wl) this).field_Rb = ((wl) this).field_Fc[((wl) this).field_fc];
-                        ((wl) this).field_Rb.c((byte) 109);
-                        break L2;
-                      } else {
-                        ((wl) this).field_Rb = null;
-                        break L2;
-                      }
+                  L2: {
+                    if (0 <= ((wl) this).field_fc) {
+                      ((wl) this).field_Rb = ((wl) this).field_Fc[((wl) this).field_fc];
+                      ((wl) this).field_Rb.c((byte) 109);
+                      break L2;
+                    } else {
+                      ((wl) this).field_Rb = null;
+                      break L2;
                     }
-                    break L0;
-                  } else {
-                    return;
                   }
+                  break L0;
                 } else {
                   break L1;
                 }
@@ -3027,7 +3048,7 @@ final class wl extends ha {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var3;
-            stackOut_12_1 = new StringBuilder().append("wl.BD(").append(param0).append(44);
+            stackOut_12_1 = new StringBuilder().append("wl.BD(").append(-94).append(44);
             stackIn_15_0 = stackOut_12_0;
             stackIn_15_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -3156,7 +3177,8 @@ final class wl extends ha {
           var7 = (float)param0 + 0.3499999940395355f;
           var8 = (float)param1 + 0.3499999940395355f;
           var9 = var7 + (float)param2;
-          this.j(1);
+          int discarded$2 = 1;
+          this.j();
           var10 = var8 + (float)param3;
           ((wl) this).b((byte) -118, param5);
           jaggl.OpenGL.glColor4ub((byte)(param4 >> 16), (byte)(param4 >> 8), (byte)param4, (byte)(param4 >> 24));
@@ -3183,7 +3205,7 @@ final class wl extends ha {
         }
     }
 
-    private final void u(int param0) {
+    private final void u() {
         float[] var2 = null;
         float var3 = 0.0f;
         float var4 = 0.0f;
@@ -3418,7 +3440,7 @@ final class wl extends ha {
             }
           }
         }
-        jaggl.OpenGL.glMatrixMode(param0);
+        jaggl.OpenGL.glMatrixMode(5888);
     }
 
     final boolean c(byte param0) {
@@ -3617,7 +3639,7 @@ final class wl extends ha {
         ((wl) this).field_nb.a(96, (wf) (Object) var4);
     }
 
-    final static int t(int param0) {
+    final static int t() {
         try {
             IOException var1 = null;
             int var1_int = 0;
@@ -3929,7 +3951,8 @@ final class wl extends ha {
                 var2 = ((wl) this).field_d;
                 var3 = ((wl) this).field_e;
                 var4 = ((wl) this).field_Q;
-                this.l(24643);
+                int discarded$1 = 24643;
+                this.l();
                 jaggl.OpenGL.glReadBuffer(1028);
                 jaggl.OpenGL.glDrawBuffer(1029);
                 this.p(65);
@@ -4091,8 +4114,10 @@ final class wl extends ha {
             ((wl) this).field_ec = param0.a();
             ((wl) this).field_bb = param0.b();
             this.p(-123);
-            this.o(0);
-            this.l(24643);
+            int discarded$2 = 0;
+            this.o();
+            int discarded$3 = 24643;
+            this.l();
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4143,7 +4168,7 @@ final class wl extends ha {
               throw new RuntimeException("");
             } else {
               ((wl) this).field_j.b(((wl) this).field_ec, 0, 0, 0, 0, -14164, ((wl) this).field_bb);
-              boolean discarded$17 = ((wl) this).field_kc.setSurface(((wl) this).field_gc);
+              boolean discarded$19 = ((wl) this).field_kc.setSurface(((wl) this).field_gc);
               break L0;
             }
           }
@@ -4152,55 +4177,18 @@ final class wl extends ha {
         ((wl) this).field_ec = ((wl) this).field_g;
         ((wl) this).field_j = null;
         this.p(47);
-        this.o(0);
-        this.l(24643);
+        int discarded$20 = 0;
+        this.o();
+        int discarded$21 = 24643;
+        this.l();
     }
 
     private final void a(boolean param0, boolean param1) {
-        Object stackIn_2_0 = null;
-        Object stackIn_3_0 = null;
-        Object stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        Object stackOut_1_0 = null;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        L0: {
-          if (param1 == ((wl) this).field_tc) {
-            break L0;
-          } else {
-            L1: {
-              stackOut_1_0 = this;
-              stackIn_3_0 = stackOut_1_0;
-              stackIn_2_0 = stackOut_1_0;
-              if (!param1) {
-                stackOut_3_0 = this;
-                stackOut_3_1 = 0;
-                stackIn_4_0 = stackOut_3_0;
-                stackIn_4_1 = stackOut_3_1;
-                break L1;
-              } else {
-                stackOut_2_0 = this;
-                stackOut_2_1 = 1;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
-                break L1;
-              }
-            }
-            ((wl) this).field_tc = stackIn_4_1 != 0;
-            this.n(-1);
+        if (param1 != ((wl) this).field_tc) {
+            ((wl) this).field_tc = param1 ? true : false;
+            int discarded$0 = -1;
+            this.n();
             ((wl) this).field_O = ((wl) this).field_O & -32;
-            break L0;
-          }
-        }
-        L2: {
-          if (!param0) {
-            break L2;
-          } else {
-            ((wl) this).c();
-            break L2;
-          }
         }
     }
 
@@ -4244,7 +4232,7 @@ final class wl extends ha {
         }
     }
 
-    private final void s(int param0) {
+    private final void s() {
         java.awt.Dimension var2 = null;
         L0: {
           if (null != ((wl) this).field_Wb) {
@@ -4264,12 +4252,14 @@ final class wl extends ha {
           } else {
             ((wl) this).field_ec = ((wl) this).field_g;
             ((wl) this).field_bb = ((wl) this).field_Yb;
-            this.o(0);
+            int discarded$2 = 0;
+            this.o();
             break L1;
           }
         }
         this.p(-98);
-        this.l(24643);
+        int discarded$3 = 24643;
+        this.l();
     }
 
     final void a(sm param0) {
@@ -4421,8 +4411,10 @@ final class wl extends ha {
           } else {
             try {
               L4: {
-                var5_int = td.a((CharSequence) (Object) var4[0], (byte) 38);
-                var6 = td.a((CharSequence) (Object) var4[1], (byte) 38);
+                int discarded$3 = 38;
+                var5_int = td.a((CharSequence) (Object) var4[0]);
+                int discarded$4 = 38;
+                var6 = td.a((CharSequence) (Object) var4[1]);
                 ((wl) this).field_Z = var6 + 10 * var5_int;
                 break L4;
               }
@@ -4493,7 +4485,7 @@ final class wl extends ha {
           ((wl) this).field_M = ((wl) this).field_kc.a("GL_ARB_vertex_buffer_object");
           ((wl) this).field_I = ((wl) this).field_kc.a("GL_ARB_multisample");
           ((wl) this).field_x = ((wl) this).field_kc.a("GL_ARB_vertex_program");
-          boolean discarded$1 = ((wl) this).field_kc.a("GL_ARB_fragment_program");
+          boolean discarded$5 = ((wl) this).field_kc.a("GL_ARB_fragment_program");
           ((wl) this).field_v = ((wl) this).field_kc.a("GL_ARB_vertex_shader");
           ((wl) this).field_lc = ((wl) this).field_kc.a("GL_ARB_fragment_shader");
           ((wl) this).field_G = ((wl) this).field_kc.a("GL_EXT_texture3D");
@@ -4520,7 +4512,7 @@ final class wl extends ha {
     }
 
     private final void g(int param0, int param1) {
-        this.a(param0, 4873, true);
+        this.a(-2, 4873, true);
         int var3 = -24 % ((param1 - 44) / 50);
     }
 
@@ -4693,7 +4685,7 @@ final class wl extends ha {
         return (za) (Object) var2;
     }
 
-    private final void x(int param0) {
+    private final void x() {
         ((wl) this).field_bc = new rt[((wl) this).field_Xb];
         ((wl) this).field_Vb = new nr((wl) this, 3553, 6408, 1, 1);
         nr discarded$26 = new nr((wl) this, 3553, 6408, 1, 1);

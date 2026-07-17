@@ -58,7 +58,8 @@ final class vla extends dqa implements en, oo {
               L1: {
                 if (((vla) this).field_x != param3) {
                   if (param3 == ((vla) this).field_z) {
-                    kga.a(70);
+                    int discarded$206 = 70;
+                    kga.a();
                     break L1;
                   } else {
                     if (param3 != ((vla) this).field_A) {
@@ -73,7 +74,8 @@ final class vla extends dqa implements en, oo {
                           break L1;
                         }
                       } else {
-                        qj.a((byte) 127);
+                        int discarded$207 = 127;
+                        qj.a();
                         break L1;
                       }
                     }
@@ -155,7 +157,8 @@ final class vla extends dqa implements en, oo {
         }
         L1: {
           L2: {
-            if (tj.f((byte) -21)) {
+            int discarded$6 = -21;
+            if (tj.f()) {
               break L2;
             } else {
               if (((vla) this).field_y.field_j.length() <= 0) {

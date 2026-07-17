@@ -100,9 +100,6 @@ final class ln extends ct {
         if (!(param2.field_jb != null)) {
             param2.field_jb = new tf();
         }
-        if (param0 != 64) {
-            return;
-        }
         try {
             if (null == kw.field_b) {
                 kw.field_b = new em(64);
@@ -112,17 +109,14 @@ final class ln extends ct {
             }
             ne.field_I = param1.field_jb;
             qn.field_b = param2.field_jb;
-            qg.a(0);
+            int discarded$0 = 0;
+            qg.a();
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "ln.R(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "ln.R(" + 64 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static java.awt.Canvas l(int param0) {
-        if (param0 != 64) {
-            field_B = null;
-            return e.field_m == null ? ic.field_d : (java.awt.Canvas) (Object) e.field_m;
-        }
+    final static java.awt.Canvas l() {
         return e.field_m == null ? ic.field_d : (java.awt.Canvas) (Object) e.field_m;
     }
 

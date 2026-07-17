@@ -38,7 +38,7 @@ final class wc extends id {
     private boolean field_dc;
     static mi field_Wb;
 
-    public static void n(int param0) {
+    public static void n() {
         field_Wb = null;
         field_jc = null;
         field_nc = null;
@@ -227,7 +227,7 @@ final class wc extends id {
           stackOut_16_0 = this;
           stackIn_18_0 = stackOut_16_0;
           stackIn_17_0 = stackOut_16_0;
-          if (param0 == (((wc) this).field_Yb & 1 << param1)) {
+          if (-1 == (((wc) this).field_Yb & 1 << param1)) {
             stackOut_18_0 = this;
             stackOut_18_1 = 0;
             stackIn_19_0 = stackOut_18_0;
@@ -338,9 +338,6 @@ final class wc extends id {
     }
 
     private final void a(boolean param0, int param1) {
-        if (!param0) {
-            return;
-        }
         ((wc) this).a((byte) 125, param1);
         this.f(-1, (((wc) this).field_Nb - -1) % ((wc) this).field_Hb);
     }

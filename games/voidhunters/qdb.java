@@ -42,28 +42,21 @@ final class qdb implements ntb {
           L0: {
             var12 = ksa.a(31123, lua.field_c, hab.field_i, param5);
             var13 = ksa.a(31123, lua.field_c, hab.field_i, param7);
-            var14 = ksa.a(param2 ^ 31123, ob.field_j, mt.field_o, param4);
+            var14 = ksa.a(31123, ob.field_j, mt.field_o, param4);
             var15 = ksa.a(31123, ob.field_j, mt.field_o, param0);
             var8_int = ksa.a(31123, lua.field_c, hab.field_i, param5 + param1);
             var9 = ksa.a(31123, lua.field_c, hab.field_i, param7 - param1);
             var16 = var12;
             L1: while (true) {
               if (var16 >= var8_int) {
-                L2: {
-                  if (param2 == 0) {
-                    break L2;
-                  } else {
-                    field_a = null;
-                    break L2;
-                  }
-                }
+                field_a = null;
                 var16 = var13;
-                L3: while (true) {
+                L2: while (true) {
                   if (var16 <= var9) {
                     var10 = ksa.a(31123, ob.field_j, mt.field_o, param1 + param4);
                     var11 = ksa.a(31123, ob.field_j, mt.field_o, -param1 + param0);
                     var16 = var8_int;
-                    L4: while (true) {
+                    L3: while (true) {
                       if (var16 > var9) {
                         break L0;
                       } else {
@@ -72,13 +65,13 @@ final class qdb implements ntb {
                         ww.a(param3, var11, var22, (byte) 75, var10);
                         ww.a(param6, var15, var22, (byte) 75, var11);
                         var16++;
-                        continue L4;
+                        continue L3;
                       }
                     }
                   } else {
                     ww.a(param6, var15, rba.field_b[var16], (byte) 75, var14);
                     var16--;
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
@@ -91,7 +84,7 @@ final class qdb implements ntb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var8, "qdb.G(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw rta.a((Throwable) (Object) var8, "qdb.G(" + param0 + 44 + param1 + 44 + 0 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
         }
     }
 
@@ -110,7 +103,7 @@ final class qdb implements ntb {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_a = null;
     }
@@ -150,7 +143,8 @@ final class qdb implements ntb {
                   if (var3.field_d != var3.field_d) {
                     break L2;
                   } else {
-                    if (wpb.a(var3.field_c, var3.field_c, (byte) 28)) {
+                    int discarded$9 = 28;
+                    if (wpb.a(var3.field_c, var3.field_c)) {
                       break L2;
                     } else {
                       if (var3.field_f == var3.field_f) {
@@ -220,13 +214,13 @@ final class qdb implements ntb {
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, boolean param6, boolean param7, int param8, boolean param9, int param10, int param11, int param12, boolean param13) {
         lob.field_a = null;
         tr.c(6939);
-        if (param8 >= -118) {
-            return;
-        }
-        param4 = oga.a(33, param11, param1, param12, param3, param0, param4);
-        rl.a(param4, -1, param2, param10, param7, param11, param5, param6, param13, param9);
+        param4 = oga.a(33, 11, 15, 0, 13, 14, param4);
+        int discarded$0 = 1;
+        rl.a(param4, -1, 16777215, 16777215, param7, 11, param5, param6, param13);
         chb.a(0, param5, param7);
-        mn.a(param4, param5, param12, 97);
+        int discarded$1 = 97;
+        int discarded$2 = 0;
+        mn.a(param4, param5);
     }
 
     public final void a(tv param0, int param1) {
@@ -273,7 +267,8 @@ final class qdb implements ntb {
               }
             }
             L3: {
-              if (!ikb.a(var6.field_c, var6.field_c, false)) {
+              int discarded$1 = 0;
+              if (!ikb.a(var6.field_c, var6.field_c)) {
                 break L3;
               } else {
                 var4 = 1;

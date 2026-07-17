@@ -276,7 +276,7 @@ final class tm {
         }
     }
 
-    final static void a(byte param0, int param1) {
+    final static void a() {
         RuntimeException var2 = null;
         long var2_long = 0L;
         int var4 = 0;
@@ -365,21 +365,13 @@ final class tm {
                 }
               }
             }
-            L6: {
-              if (param0 == 110) {
-                break L6;
-              } else {
-                field_b = null;
-                break L6;
-              }
-            }
             cr.a(0, 10000);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.a((Throwable) (Object) var2, "tm.D(" + param0 + 44 + 0 + 41);
+          throw qb.a((Throwable) (Object) var2, "tm.D(" + 110 + 44 + 0 + 41);
         }
     }
 

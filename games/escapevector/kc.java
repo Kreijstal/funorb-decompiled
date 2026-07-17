@@ -6,7 +6,7 @@ final class kc {
     static String field_a;
     static qh[] field_c;
 
-    final static void a(byte param0) {
+    final static void a() {
         int var1 = 0;
         t stackIn_6_0 = null;
         int stackIn_6_1 = 0;

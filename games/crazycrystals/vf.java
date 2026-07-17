@@ -360,9 +360,6 @@ final class vf implements java.awt.event.KeyListener, java.awt.event.FocusListen
 
     final static void a(int param0, byte param1, int param2, int param3) {
         mc.field_s = param3;
-        if (param1 <= 113) {
-            return;
-        }
         jn.field_i = param2;
         ao.field_e = param0;
     }

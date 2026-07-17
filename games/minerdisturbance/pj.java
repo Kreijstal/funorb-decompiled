@@ -57,22 +57,22 @@ final class pj implements uj {
             java.lang.reflect.Field var26 = null;
             java.lang.reflect.Method var27 = null;
             java.lang.reflect.Method var28 = null;
+            RuntimeException stackIn_66_0 = null;
+            StringBuilder stackIn_66_1 = null;
+            RuntimeException stackIn_67_0 = null;
+            StringBuilder stackIn_67_1 = null;
             RuntimeException stackIn_68_0 = null;
             StringBuilder stackIn_68_1 = null;
-            RuntimeException stackIn_69_0 = null;
-            StringBuilder stackIn_69_1 = null;
-            RuntimeException stackIn_70_0 = null;
-            StringBuilder stackIn_70_1 = null;
-            String stackIn_70_2 = null;
+            String stackIn_68_2 = null;
             Throwable decompiledCaughtException = null;
+            RuntimeException stackOut_65_0 = null;
+            StringBuilder stackOut_65_1 = null;
             RuntimeException stackOut_67_0 = null;
             StringBuilder stackOut_67_1 = null;
-            RuntimeException stackOut_69_0 = null;
-            StringBuilder stackOut_69_1 = null;
-            String stackOut_69_2 = null;
-            RuntimeException stackOut_68_0 = null;
-            StringBuilder stackOut_68_1 = null;
-            String stackOut_68_2 = null;
+            String stackOut_67_2 = null;
+            RuntimeException stackOut_66_0 = null;
+            StringBuilder stackOut_66_1 = null;
+            String stackOut_66_2 = null;
             var18 = null;
             var16 = null;
             var20 = null;
@@ -80,41 +80,33 @@ final class pj implements uj {
             var12 = MinerDisturbance.field_ab;
             try {
               L0: {
-                L1: {
-                  var13 = (gl) (Object) on.field_t.b(105);
-                  var17 = var13;
-                  if (param0 == 119) {
-                    break L1;
-                  } else {
-                    field_e = null;
-                    break L1;
-                  }
-                }
+                var13 = (gl) (Object) on.field_t.b(105);
+                var17 = var13;
                 if (var17 == null) {
                   return;
                 } else {
                   var3 = 0;
                   var4 = 0;
-                  L2: while (true) {
+                  L1: while (true) {
                     if (var4 >= var17.field_y) {
                       if (var3 == 0) {
                         var4 = param1.field_o;
                         param1.a((byte) 107, var17.field_n);
                         var5 = 0;
-                        L3: while (true) {
+                        L2: while (true) {
                           if (var17.field_y <= var5) {
                             int discarded$1 = param1.e(-84, var4);
-                            var17.b(param0 + -85);
+                            var17.b(34);
                             break L0;
                           } else {
-                            L4: {
+                            L3: {
                               if (0 != var17.field_w[var5]) {
                                 param1.c(var17.field_w[var5], 25564);
-                                break L4;
+                                break L3;
                               } else {
                                 try {
-                                  L5: {
-                                    L6: {
+                                  L4: {
+                                    L5: {
                                       var6_int = var17.field_s[var5];
                                       if (var6_int != 0) {
                                         if (var6_int != 1) {
@@ -123,50 +115,50 @@ final class pj implements uj {
                                             var8 = var15.getModifiers();
                                             param1.c(0, 25564);
                                             param1.a((byte) 95, var8);
-                                            break L6;
+                                            break L5;
                                           } else {
-                                            break L6;
+                                            break L5;
                                           }
                                         } else {
                                           var16_ref = (java.lang.reflect.Field) var17.field_r[var5].field_a;
                                           var19 = var16_ref;
                                           var19.setInt((Object) null, var17.field_p[var5]);
                                           param1.c(0, 25564);
-                                          break L6;
+                                          break L5;
                                         }
                                       } else {
                                         var26 = (java.lang.reflect.Field) var17.field_r[var5].field_a;
                                         var8 = var26.getInt((Object) null);
                                         param1.c(0, 25564);
                                         param1.a((byte) 120, var8);
-                                        break L6;
+                                        break L5;
                                       }
                                     }
-                                    L7: {
+                                    L6: {
                                       if (var6_int == 3) {
                                         var28 = (java.lang.reflect.Method) var17.field_q[var5].field_a;
                                         var25 = var17.field_v[var5];
                                         var9 = new Object[var25.length];
                                         var10_int = 0;
-                                        L8: while (true) {
+                                        L7: while (true) {
                                           if (var10_int >= var25.length) {
                                             var10 = var28.invoke((Object) null, var9);
                                             if (var10 == null) {
                                               param1.c(0, 25564);
-                                              break L7;
+                                              break L6;
                                             } else {
                                               if (var10 instanceof Number) {
                                                 param1.c(1, 25564);
                                                 param1.b(-1, ((Number) var10).longValue());
-                                                break L7;
+                                                break L6;
                                               } else {
                                                 if (!(var10 instanceof String)) {
                                                   param1.c(4, 25564);
-                                                  break L7;
+                                                  break L6;
                                                 } else {
                                                   param1.c(2, 25564);
                                                   param1.b(23446, (String) var10);
-                                                  break L7;
+                                                  break L6;
                                                 }
                                               }
                                             }
@@ -174,7 +166,7 @@ final class pj implements uj {
                                             var11 = new ObjectInputStream((InputStream) (Object) new ByteArrayInputStream(var25[var10_int]));
                                             var9[var10_int] = var11.readObject();
                                             var10_int++;
-                                            continue L8;
+                                            continue L7;
                                           }
                                         }
                                       } else {
@@ -183,116 +175,116 @@ final class pj implements uj {
                                           var8 = var27.getModifiers();
                                           param1.c(0, 25564);
                                           param1.a((byte) 108, var8);
-                                          break L7;
+                                          break L6;
                                         } else {
-                                          break L7;
+                                          break L6;
                                         }
                                       }
                                     }
-                                    break L5;
+                                    break L4;
                                   }
                                 } catch (java.lang.IllegalAccessException decompiledCaughtParameter4) {
                                   decompiledCaughtException = decompiledCaughtParameter4;
-                                  L13: {
+                                  L12: {
                                     var6_ref4 = (IllegalAccessException) (Object) decompiledCaughtException;
                                     param1.c(-14, 25564);
-                                    break L13;
+                                    break L12;
                                   }
                                 } catch (java.lang.IllegalArgumentException decompiledCaughtParameter5) {
                                   decompiledCaughtException = decompiledCaughtParameter5;
-                                  L14: {
+                                  L13: {
                                     var6_ref5 = (IllegalArgumentException) (Object) decompiledCaughtException;
                                     param1.c(-15, 25564);
-                                    break L14;
+                                    break L13;
                                   }
                                 } catch (java.lang.reflect.InvocationTargetException decompiledCaughtParameter6) {
                                   decompiledCaughtException = decompiledCaughtParameter6;
-                                  L15: {
+                                  L14: {
                                     var6_ref6 = (java.lang.reflect.InvocationTargetException) (Object) decompiledCaughtException;
                                     param1.c(-16, 25564);
-                                    break L15;
+                                    break L14;
                                   }
                                 } catch (java.io.IOException decompiledCaughtParameter8) {
                                   decompiledCaughtException = decompiledCaughtParameter8;
-                                  L17: {
+                                  L16: {
                                     var6_ref8 = (IOException) (Object) decompiledCaughtException;
-                                    param1.c(-18, param0 + 25445);
-                                    break L17;
+                                    param1.c(-18, 25564);
+                                    break L16;
                                   }
                                 } catch (java.lang.NullPointerException decompiledCaughtParameter9) {
                                   decompiledCaughtException = decompiledCaughtParameter9;
-                                  L18: {
+                                  L17: {
                                     var6_ref9 = (NullPointerException) (Object) decompiledCaughtException;
                                     param1.c(-19, 25564);
-                                    break L18;
+                                    break L17;
                                   }
                                 } catch (java.lang.Exception decompiledCaughtParameter10) {
                                   decompiledCaughtException = decompiledCaughtParameter10;
-                                  L19: {
+                                  L18: {
                                     var6_ref10 = (Exception) (Object) decompiledCaughtException;
                                     param1.c(-20, 25564);
-                                    break L19;
+                                    break L18;
                                   }
                                 } catch (java.lang.Throwable decompiledCaughtParameter11) {
                                   decompiledCaughtException = decompiledCaughtParameter11;
-                                  L20: {
+                                  L19: {
                                     var6_ref11 = decompiledCaughtException;
                                     param1.c(-21, 25564);
-                                    break L20;
+                                    break L19;
                                   }
                                 }
-                                break L4;
+                                break L3;
                               }
                             }
                             var5++;
-                            continue L3;
+                            continue L2;
                           }
                         }
                       } else {
                         return;
                       }
                     } else {
-                      L21: {
+                      L20: {
                         if (var13.field_r[var4] == null) {
-                          break L21;
+                          break L20;
                         } else {
-                          L22: {
+                          L21: {
                             if (var13.field_r[var4].field_c == 2) {
                               var13.field_w[var4] = -5;
-                              break L22;
+                              break L21;
                             } else {
-                              break L22;
+                              break L21;
                             }
                           }
                           if (var13.field_r[var4].field_c != 0) {
-                            break L21;
+                            break L20;
                           } else {
                             var3 = 1;
-                            break L21;
+                            break L20;
                           }
                         }
                       }
                       if (null != var13.field_q[var4]) {
-                        L23: {
+                        L22: {
                           if (var13.field_q[var4].field_c == 2) {
                             var13.field_w[var4] = -6;
-                            break L23;
+                            break L22;
                           } else {
-                            break L23;
+                            break L22;
                           }
                         }
-                        L24: {
+                        L23: {
                           if (0 != var13.field_q[var4].field_c) {
-                            break L24;
+                            break L23;
                           } else {
-                            break L24;
+                            break L23;
                           }
                         }
                         var4++;
-                        continue L2;
+                        continue L1;
                       } else {
                         var4++;
-                        continue L2;
+                        continue L1;
                       }
                     }
                   }
@@ -300,33 +292,33 @@ final class pj implements uj {
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
               decompiledCaughtException = decompiledCaughtParameter12;
-              L25: {
+              L24: {
                 var2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_67_0 = (RuntimeException) var2;
-                stackOut_67_1 = new StringBuilder().append("pj.C(").append(param0).append(44);
-                stackIn_69_0 = stackOut_67_0;
-                stackIn_69_1 = stackOut_67_1;
-                stackIn_68_0 = stackOut_67_0;
-                stackIn_68_1 = stackOut_67_1;
+                stackOut_65_0 = (RuntimeException) var2;
+                stackOut_65_1 = new StringBuilder().append("pj.C(").append(119).append(44);
+                stackIn_67_0 = stackOut_65_0;
+                stackIn_67_1 = stackOut_65_1;
+                stackIn_66_0 = stackOut_65_0;
+                stackIn_66_1 = stackOut_65_1;
                 if (param1 == null) {
-                  stackOut_69_0 = (RuntimeException) (Object) stackIn_69_0;
-                  stackOut_69_1 = (StringBuilder) (Object) stackIn_69_1;
-                  stackOut_69_2 = "null";
-                  stackIn_70_0 = stackOut_69_0;
-                  stackIn_70_1 = stackOut_69_1;
-                  stackIn_70_2 = stackOut_69_2;
-                  break L25;
+                  stackOut_67_0 = (RuntimeException) (Object) stackIn_67_0;
+                  stackOut_67_1 = (StringBuilder) (Object) stackIn_67_1;
+                  stackOut_67_2 = "null";
+                  stackIn_68_0 = stackOut_67_0;
+                  stackIn_68_1 = stackOut_67_1;
+                  stackIn_68_2 = stackOut_67_2;
+                  break L24;
                 } else {
-                  stackOut_68_0 = (RuntimeException) (Object) stackIn_68_0;
-                  stackOut_68_1 = (StringBuilder) (Object) stackIn_68_1;
-                  stackOut_68_2 = "{...}";
-                  stackIn_70_0 = stackOut_68_0;
-                  stackIn_70_1 = stackOut_68_1;
-                  stackIn_70_2 = stackOut_68_2;
-                  break L25;
+                  stackOut_66_0 = (RuntimeException) (Object) stackIn_66_0;
+                  stackOut_66_1 = (StringBuilder) (Object) stackIn_66_1;
+                  stackOut_66_2 = "{...}";
+                  stackIn_68_0 = stackOut_66_0;
+                  stackIn_68_1 = stackOut_66_1;
+                  stackIn_68_2 = stackOut_66_2;
+                  break L24;
                 }
               }
-              throw lj.a((Throwable) (Object) stackIn_70_0, stackIn_70_2 + 41);
+              throw lj.a((Throwable) (Object) stackIn_68_0, stackIn_68_2 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

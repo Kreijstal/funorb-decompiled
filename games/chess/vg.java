@@ -22,7 +22,7 @@ final class vg {
         this(param0, false);
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
         field_c = null;
     }
@@ -500,7 +500,8 @@ final class vg {
                   if (sc.field_d.field_L == 0) {
                     break L29;
                   } else {
-                    hc.a(param1, (byte) -128);
+                    int discarded$2 = -128;
+                    hc.a(param1);
                     break L29;
                   }
                 }
@@ -517,7 +518,8 @@ final class vg {
                     }
                   }
                 }
-                t.a(ib.field_d, true, param1, true);
+                int discarded$3 = 1;
+                t.a(ib.field_d, true, param1);
                 break L28;
               }
             }

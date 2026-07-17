@@ -6,20 +6,18 @@ final class ld extends java.awt.Canvas {
     private java.awt.Component field_a;
     static String field_c;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
     }
 
     final static int a(int param0) {
         gf.field_e.a(-23608);
-        if (!(td.field_k.b((byte) 66))) {
-            return ij.a(125);
+        if (td.field_k.b((byte) 66)) {
+            return 0;
         }
-        if (param0 <= 37) {
-            return 24;
-        }
-        return 0;
+        int discarded$0 = 125;
+        return ij.a();
     }
 
     final static boolean a(int param0, String param1) {
@@ -58,7 +56,7 @@ final class ld extends java.awt.Canvas {
         var5 = fleas.field_A ? 1 : 0;
         try {
           try {
-            var2_int = -89 % ((73 - param0) / 41);
+            var2_int = 0;
             if (!ce.field_d.startsWith("win")) {
               stackOut_4_0 = 0;
               stackIn_5_0 = stackOut_4_0;
@@ -109,7 +107,7 @@ final class ld extends java.awt.Canvas {
           L2: {
             var2 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var2;
-            stackOut_21_1 = new StringBuilder().append("ld.A(").append(param0).append(44);
+            stackOut_21_1 = new StringBuilder().append("ld.A(").append(122).append(44);
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -136,7 +134,7 @@ final class ld extends java.awt.Canvas {
         }
     }
 
-    final static mk a(boolean param0, byte param1) {
+    final static mk a(boolean param0) {
         mk var2 = new mk(true);
         var2.field_g = param0 ? true : false;
         return var2;

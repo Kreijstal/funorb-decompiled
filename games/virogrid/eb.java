@@ -580,43 +580,41 @@ final class eb implements Iterable {
               stackIn_81_1 = stackOut_80_1;
               break L25;
             }
+            ((km) (Object) stackIn_81_0).a(stackIn_81_1 != 0, (byte) 100);
+            he.field_pc.field_c.g(0);
             L27: {
-              ((km) (Object) stackIn_81_0).a(stackIn_81_1 != 0, (byte) 100);
-              he.field_pc.field_c.g(0);
-              if (!param0) {
-                break L27;
-              } else {
-                field_f = 123;
-                break L27;
-              }
-            }
-            L28: {
               if (null != la.field_h) {
-                L29: {
+                L28: {
                   if (fb.field_o.field_nb != 0) {
-                    ub.b(param2, -12508);
-                    break L29;
+                    int discarded$6 = -12508;
+                    int discarded$7 = 11;
+                    ub.b();
+                    break L28;
                   } else {
-                    break L29;
+                    break L28;
                   }
                 }
-                L30: {
+                L29: {
                   if (0 != ii.field_d.field_nb) {
                     if (!ld.field_c) {
-                      em.a((byte) -55, param2);
-                      break L30;
+                      int discarded$8 = 11;
+                      int discarded$9 = -55;
+                      em.a();
+                      break L29;
                     } else {
-                      qa.a(3, param2);
-                      break L30;
+                      int discarded$10 = 11;
+                      int discarded$11 = 3;
+                      qa.a();
+                      break L29;
                     }
                   } else {
-                    break L30;
+                    break L29;
                   }
                 }
-                co.a(param2, true, -2137400888, la.field_h);
-                break L28;
+                co.a(11, true, -2137400888, la.field_h);
+                break L27;
               } else {
-                break L28;
+                break L27;
               }
             }
             break L0;
@@ -624,7 +622,7 @@ final class eb implements Iterable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var4, "eb.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw kg.a((Throwable) (Object) var4, "eb.B(" + 0 + 44 + param1 + 44 + 11 + 44 + param3 + 41);
         }
     }
 

@@ -104,7 +104,7 @@ final class vkb extends rqa {
         return stackIn_3_0;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         RuntimeException var1 = null;
         double var1_double = 0.0;
         int var3 = 0;
@@ -129,22 +129,14 @@ final class vkb extends rqa {
         try {
           L0: {
             if (klb.field_o == null) {
-              L1: {
-                klb.field_o = new int[65536];
-                if (param0 == -10693) {
-                  break L1;
-                } else {
-                  int discarded$1 = vkb.a(43, 19);
-                  break L1;
-                }
-              }
+              klb.field_o = new int[65536];
               var1_double = 0.7 + (-0.015 + 0.03 * Math.random());
               var3 = 0;
-              L2: while (true) {
+              L1: while (true) {
                 if (var3 >= 65536) {
                   break L0;
                 } else {
-                  L3: {
+                  L2: {
                     var4 = 0.0078125 + (double)((64562 & var3) >> 10) / 64.0;
                     var6 = 0.0625 + (double)(7 & var3 >> 7) / 8.0;
                     var8 = (double)(var3 & 127) / 128.0;
@@ -152,91 +144,91 @@ final class vkb extends rqa {
                     var12 = var8;
                     var14 = var8;
                     if (var6 == 0.0) {
-                      break L3;
+                      break L2;
                     } else {
-                      L4: {
+                      L3: {
                         if (0.5 > var8) {
                           var16_double = var8 * (1.0 + var6);
-                          break L4;
+                          break L3;
                         } else {
                           var16_double = var8 + var6 - var8 * var6;
-                          break L4;
+                          break L3;
                         }
                       }
-                      L5: {
+                      L4: {
                         var18_double = 2.0 * var8 - var16_double;
                         var20 = 0.3333333333333333 + var4;
                         if (1.0 < var20) {
                           var20 = var20 - 1.0;
-                          break L5;
+                          break L4;
                         } else {
-                          break L5;
+                          break L4;
                         }
                       }
-                      L6: {
+                      L5: {
                         var22 = var4;
                         var24 = var4 - 0.3333333333333333;
                         if (6.0 * var22 < 1.0) {
                           var12 = var22 * (6.0 * (-var18_double + var16_double)) + var18_double;
-                          break L6;
+                          break L5;
                         } else {
                           if (var22 * 2.0 >= 1.0) {
                             if (2.0 > 3.0 * var22) {
                               var12 = (var16_double - var18_double) * (-var22 + 0.6666666666666666) * 6.0 + var18_double;
-                              break L6;
+                              break L5;
                             } else {
                               var12 = var18_double;
-                              break L6;
+                              break L5;
                             }
                           } else {
                             var12 = var16_double;
-                            break L6;
+                            break L5;
                           }
                         }
                       }
-                      L7: {
+                      L6: {
                         if (1.0 <= 6.0 * var20) {
                           if (2.0 * var20 >= 1.0) {
                             if (2.0 <= 3.0 * var20) {
                               var10 = var18_double;
-                              break L7;
+                              break L6;
                             } else {
                               var10 = 6.0 * ((-var18_double + var16_double) * (-var20 + 0.6666666666666666)) + var18_double;
-                              break L7;
+                              break L6;
                             }
                           } else {
                             var10 = var16_double;
-                            break L7;
+                            break L6;
                           }
                         } else {
                           var10 = 6.0 * (-var18_double + var16_double) * var20 + var18_double;
-                          break L7;
+                          break L6;
                         }
                       }
-                      L8: {
+                      L7: {
                         if (var24 < 0.0) {
                           var24 = var24 + 1.0;
-                          break L8;
+                          break L7;
                         } else {
-                          break L8;
+                          break L7;
                         }
                       }
                       if (1.0 <= var24 * 6.0) {
                         if (1.0 > var24 * 2.0) {
                           var14 = var16_double;
-                          break L3;
+                          break L2;
                         } else {
                           if (2.0 <= var24 * 3.0) {
                             var14 = var18_double;
-                            break L3;
+                            break L2;
                           } else {
                             var14 = 6.0 * ((-var24 + 0.6666666666666666) * (var16_double - var18_double)) + var18_double;
-                            break L3;
+                            break L2;
                           }
                         }
                       } else {
                         var14 = var18_double + 6.0 * (var16_double - var18_double) * var24;
-                        break L3;
+                        break L2;
                       }
                     }
                   }
@@ -249,7 +241,7 @@ final class vkb extends rqa {
                   var19 = (var17 << 8) + ((var16 << 16) - -var18);
                   klb.field_o[var3] = var19;
                   var3++;
-                  continue L2;
+                  continue L1;
                 }
               }
             } else {
@@ -259,7 +251,7 @@ final class vkb extends rqa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) var1, "vkb.B(" + param0 + 41);
+          throw rta.a((Throwable) (Object) var1, "vkb.B(" + -10693 + 41);
         }
     }
 

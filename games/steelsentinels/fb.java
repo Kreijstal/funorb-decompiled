@@ -51,10 +51,10 @@ class fb extends me {
         try {
           L0: {
             L1: {
-              if (param4 <= oh.field_f) {
-                if (param3 + param4 > oh.field_f) {
+              if (520 <= oh.field_f) {
+                if (620 > oh.field_f) {
                   if (param1 <= pi.field_c) {
-                    if (pi.field_c <= param1 - -param0) {
+                    if (pi.field_c <= param1 - -34) {
                       stackOut_8_0 = 1;
                       stackIn_10_0 = stackOut_8_0;
                       break L1;
@@ -95,9 +95,9 @@ class fb extends me {
             if (param5 == 12490) {
               L3: {
                 var8 = pl.field_T;
-                jm.a(param1, param0, var8, 1, param4, param3);
+                jm.a(param1, 34, var8, 1, 520, 100);
                 if (param2 != null) {
-                  ui.field_U.a(ke.a(param5 + -12448, param2), param4 - -(param3 / 2), param1 + (ui.field_U.field_U + (param0 - -1)) / 2, var7, -1);
+                  ui.field_U.a(ke.a(param5 + -12448, param2), 570, param1 + (ui.field_U.field_U + 35) / 2, var7, -1);
                   break L3;
                 } else {
                   break L3;
@@ -117,7 +117,7 @@ class fb extends me {
           L4: {
             var6 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var6;
-            stackOut_21_1 = new StringBuilder().append("fb.E(").append(param0).append(44).append(param1).append(44);
+            stackOut_21_1 = new StringBuilder().append("fb.E(").append(34).append(44).append(param1).append(44);
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -140,7 +140,7 @@ class fb extends me {
               break L4;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw ci.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + 100 + 44 + 520 + 44 + param5 + 41);
         }
         return stackIn_20_0 != 0;
     }
@@ -193,7 +193,7 @@ class fb extends me {
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

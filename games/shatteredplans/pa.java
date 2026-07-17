@@ -13,7 +13,7 @@ final class pa extends li {
     static String field_i;
     static String field_h;
 
-    final static byte[] a(byte[] param0, int param1) {
+    final static byte[] a(byte[] param0) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -114,7 +114,8 @@ final class pa extends li {
                           }
                           break L5;
                         } else {
-                          int discarded$1 = lb.a(var16, var5_int, param0, var4, 9);
+                          int discarded$2 = 9;
+                          int discarded$3 = lb.a(var6, var5_int, param0, var4);
                           break L5;
                         }
                       }
@@ -162,7 +163,7 @@ final class pa extends li {
         return stackIn_21_0;
     }
 
-    private final java.net.Socket a(int param0, String param1, String param2, int param3) throws IOException {
+    private final java.net.Socket a(int param0, String param1, String param2) throws IOException {
         RuntimeException var5 = null;
         OutputStream var6 = null;
         BufferedReader var7 = null;
@@ -362,25 +363,23 @@ final class pa extends li {
 
     final static void a(int param0, java.awt.Canvas param1) {
         if (!(gm.field_i != 11)) {
-            lg.a(param0 + -9242);
-        }
-        if (param0 != 9242) {
-            return;
+            lg.a(0);
         }
         try {
             jp.a(pc.field_r, il.field_cb, (byte) 121, oi.field_f);
-            mc.a(47, 0, param1, 0);
+            int discarded$0 = 0;
+            mc.a(47, 0, param1);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "pa.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw r.a((Throwable) (Object) runtimeException, "pa.D(" + 9242 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_i = null;
         field_h = null;
     }
 
-    final static void a(String[] args, sq param1, byte param2) {
+    final static void a(String[] args, sq param1) {
         String[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -513,38 +512,30 @@ final class pa extends li {
         String var13 = null;
         Class var14 = null;
         java.net.Socket stackIn_2_0 = null;
-        java.net.Socket stackIn_17_0 = null;
-        Object stackIn_21_0 = null;
+        java.net.Socket stackIn_15_0 = null;
+        Object stackIn_19_0 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        String stackIn_26_2 = null;
+        String stackIn_24_2 = null;
         Throwable decompiledCaughtException = null;
-        Object stackOut_20_0 = null;
-        java.net.Socket stackOut_16_0 = null;
+        Object stackOut_18_0 = null;
+        java.net.Socket stackOut_14_0 = null;
         java.net.Socket stackOut_1_0 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
         RuntimeException stackOut_23_0 = null;
         StringBuilder stackOut_23_1 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
+        String stackOut_23_2 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
         try {
           L0: {
             if (param1.type() != java.net.Proxy.Type.DIRECT) {
-              L1: {
-                if (param0 < -47) {
-                  break L1;
-                } else {
-                  field_j = true;
-                  break L1;
-                }
-              }
               var3_ref = param1.address();
               if ((Object) var3_ref instanceof java.net.InetSocketAddress) {
                 var4_ref = (java.net.InetSocketAddress) (Object) var3_ref;
@@ -552,8 +543,8 @@ final class pa extends li {
                   if (param1.type() == java.net.Proxy.Type.SOCKS) {
                     var5 = (Object) (Object) new java.net.Socket(param1);
                     ((java.net.Socket) var5).connect((java.net.SocketAddress) (Object) new java.net.InetSocketAddress(((pa) this).field_f, ((pa) this).field_a));
-                    stackOut_20_0 = var5;
-                    stackIn_21_0 = stackOut_20_0;
+                    stackOut_18_0 = var5;
+                    stackIn_19_0 = stackOut_18_0;
                     break L0;
                   } else {
                     return null;
@@ -561,15 +552,15 @@ final class pa extends li {
                 } else {
                   var5 = null;
                   try {
-                    L2: {
-                      L3: {
+                    L1: {
+                      L2: {
                         var14 = Class.forName("sun.net.www.protocol.http.AuthenticationInfo");
                         var6_ref = var14;
                         var7 = var14.getDeclaredMethod("getProxyAuth", new Class[2]);
                         var7.setAccessible(true);
                         var8 = var7.invoke((Object) null, new Object[2]);
                         if (var8 == null) {
-                          break L3;
+                          break L2;
                         } else {
                           var9 = var6_ref.getDeclaredMethod("supportsPreemptiveAuthorization", new Class[0]);
                           var9.setAccessible(true);
@@ -581,24 +572,25 @@ final class pa extends li {
                             var12 = (String) var10.invoke(var8, new Object[0]);
                             var13 = (String) var11.invoke(var8, new Object[2]);
                             var5 = (Object) (Object) (var12 + ": " + var13);
-                            break L3;
+                            break L2;
                           } else {
-                            break L3;
+                            break L2;
                           }
                         }
                       }
-                      break L2;
+                      break L1;
                     }
                   } catch (java.lang.Exception decompiledCaughtParameter0) {
                     decompiledCaughtException = decompiledCaughtParameter0;
-                    L4: {
+                    L3: {
                       var6 = (Exception) (Object) decompiledCaughtException;
-                      break L4;
+                      break L3;
                     }
                   }
-                  stackOut_16_0 = this.a(var4_ref.getPort(), (String) var5, var4_ref.getHostName(), 0);
-                  stackIn_17_0 = stackOut_16_0;
-                  return stackIn_17_0;
+                  int discarded$1 = 0;
+                  stackOut_14_0 = this.a(var4_ref.getPort(), (String) var5, var4_ref.getHostName());
+                  stackIn_15_0 = stackOut_14_0;
+                  return stackIn_15_0;
                 }
               } else {
                 return null;
@@ -611,35 +603,35 @@ final class pa extends li {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L5: {
+          L4: {
             var3 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) var3;
-            stackOut_23_1 = new StringBuilder().append("pa.A(").append(param0).append(44);
-            stackIn_25_0 = stackOut_23_0;
-            stackIn_25_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
+            stackOut_21_0 = (RuntimeException) var3;
+            stackOut_21_1 = new StringBuilder().append("pa.A(").append(-73).append(44);
+            stackIn_23_0 = stackOut_21_0;
+            stackIn_23_1 = stackOut_21_1;
+            stackIn_22_0 = stackOut_21_0;
+            stackIn_22_1 = stackOut_21_1;
             if (param1 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
-              stackOut_25_2 = "null";
-              stackIn_26_0 = stackOut_25_0;
-              stackIn_26_1 = stackOut_25_1;
-              stackIn_26_2 = stackOut_25_2;
-              break L5;
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "null";
+              stackIn_24_0 = stackOut_23_0;
+              stackIn_24_1 = stackOut_23_1;
+              stackIn_24_2 = stackOut_23_2;
+              break L4;
             } else {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
-              stackOut_24_2 = "{...}";
-              stackIn_26_0 = stackOut_24_0;
-              stackIn_26_1 = stackOut_24_1;
-              stackIn_26_2 = stackOut_24_2;
-              break L5;
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "{...}";
+              stackIn_24_0 = stackOut_22_0;
+              stackIn_24_1 = stackOut_22_1;
+              stackIn_24_2 = stackOut_22_2;
+              break L4;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 41);
+          throw r.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
         }
-        return (java.net.Socket) (Object) stackIn_21_0;
+        return (java.net.Socket) (Object) stackIn_19_0;
     }
 
     final static String a(ln param0, int param1) {
@@ -976,7 +968,7 @@ final class pa extends li {
         }
     }
 
-    final static void c(int param0) {
+    final static void c() {
         float var3 = (float)di.field_m / 1000.0f + 0.15000000596046448f;
         int var1 = -(int)(Math.sin((double)var3) * 200.0);
         int var2 = -200 + (int)(Math.cos((double)var3) * 200.0);

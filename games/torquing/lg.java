@@ -300,7 +300,8 @@ class lg extends gm {
 
     final static void h(int param0) {
         if (op.field_i == 10) {
-          gq.a(114);
+          int discarded$4 = 114;
+          gq.a();
           op.field_i = 11;
           mh.field_g = true;
           if (param0 < -98) {
@@ -319,7 +320,8 @@ class lg extends gm {
               return;
             }
           } else {
-            gq.a(114);
+            int discarded$5 = 114;
+            gq.a();
             op.field_i = 11;
             mh.field_g = true;
             if (param0 < -98) {
@@ -413,7 +415,7 @@ class lg extends gm {
         }
     }
 
-    public static void i(int param0) {
+    public static void i() {
         field_B = null;
     }
 
@@ -510,7 +512,7 @@ class lg extends gm {
         return stackIn_11_0 != 0;
     }
 
-    final static bp a(String param0, int param1) {
+    final static bp a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
@@ -551,7 +553,8 @@ class lg extends gm {
                     var3 = param0.substring(0, var2_int);
                     var4 = param0.substring(1 + var2_int);
                     var5 = 15;
-                    var6 = ka.a(var3, (byte) -10);
+                    int discarded$2 = -10;
+                    var6 = ka.a(var3);
                     if (var6 != null) {
                       stackOut_10_0 = (bp) var6;
                       stackIn_11_0 = stackOut_10_0;

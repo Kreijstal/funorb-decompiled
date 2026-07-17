@@ -153,14 +153,7 @@ final class qb {
     }
 
     final static void a(boolean param0, int param1) {
-        if (param1 != -1402584374) {
-          field_g = null;
-          l.a(param0, false, param1 + 1402584396);
-          return;
-        } else {
-          l.a(param0, false, param1 + 1402584396);
-          return;
-        }
+        l.a(param0, false, 22);
     }
 
     final static boolean a(int param0, int param1) {
@@ -205,13 +198,15 @@ final class qb {
                       }
                     } else {
                       if (var2_int < 0) {
-                        kc.a((byte) 18);
+                        int discarded$6 = 18;
+                        kc.a();
                         return false;
                       } else {
                         if (ph.a((byte) -111) <= 30000L) {
                           break L0;
                         } else {
-                          kc.a((byte) 18);
+                          int discarded$7 = 18;
+                          kc.a();
                           return false;
                         }
                       }
@@ -220,7 +215,8 @@ final class qb {
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
-                  kc.a((byte) 18);
+                  int discarded$8 = 18;
+                  kc.a();
                   return false;
                 }
                 return false;
@@ -289,7 +285,8 @@ final class qb {
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0 != 0;
             } else {
-              if (ab.a(param1, (byte) -12)) {
+              int discarded$17 = -12;
+              if (ab.a(param1)) {
                 stackOut_6_0 = 0;
                 stackIn_7_0 = stackOut_6_0;
                 return stackIn_7_0 != 0;
@@ -303,7 +300,7 @@ final class qb {
                     if (param0 < -122) {
                       break L1;
                     } else {
-                      boolean discarded$2 = qb.a(-112, 114);
+                      boolean discarded$18 = qb.a(-112, 114);
                       break L1;
                     }
                   }
@@ -318,7 +315,8 @@ final class qb {
                       return stackIn_21_0 != 0;
                     } else {
                       if (!ee.a(-1, param2, param1)) {
-                        if (!ah.a(param1, param2, (byte) 8)) {
+                        int discarded$19 = 8;
+                        if (!ah.a(param1, param2)) {
                           stackOut_28_0 = 1;
                           stackIn_29_0 = stackOut_28_0;
                           break L0;
@@ -443,12 +441,12 @@ final class qb {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_h = null;
         field_g = null;
     }
 
-    private final void b(boolean param0) {
+    private final void b() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -610,7 +608,8 @@ final class qb {
             for (var2_int = 0; param0.length > var2_int; var2_int++) {
                 ((qb) this).field_f[var2_int] = param0[var2_int];
             }
-            this.b(false);
+            int discarded$0 = 0;
+            this.b();
         } catch (RuntimeException runtimeException) {
             throw ii.a((Throwable) (Object) runtimeException, "qb.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }

@@ -236,7 +236,8 @@ final class oa extends sna {
                   break L1;
                 } else {
                   if (((oa) this).field_Ab.length() > 0) {
-                    StringBuilder discarded$5 = sw.a(((oa) this).field_Ab, 4, ((oa) this).field_Ab.length() - 1, ' ');
+                    int discarded$7 = 32;
+                    StringBuilder discarded$8 = sw.a(((oa) this).field_Ab, 4, ((oa) this).field_Ab.length() - 1);
                     break L1;
                   } else {
                     break L1;
@@ -244,8 +245,9 @@ final class oa extends sna {
                 }
               }
               L2: {
-                if (ok.a((CharSequence) (Object) ((oa) this).field_Ab, dla.field_j, (byte) -19)) {
-                  StringBuilder discarded$6 = ((oa) this).field_Ab.append(dla.field_j);
+                int discarded$9 = -19;
+                if (ok.a((CharSequence) (Object) ((oa) this).field_Ab, dla.field_j)) {
+                  StringBuilder discarded$10 = ((oa) this).field_Ab.append(dla.field_j);
                   break L2;
                 } else {
                   L3: {
@@ -253,7 +255,7 @@ final class oa extends sna {
                       break L3;
                     } else {
                       if (dla.field_j == 91) {
-                        StringBuilder discarded$7 = ((oa) this).field_Ab.append(dla.field_j);
+                        StringBuilder discarded$11 = ((oa) this).field_Ab.append(dla.field_j);
                         break L2;
                       } else {
                         break L3;
@@ -265,7 +267,7 @@ final class oa extends sna {
                       break L4;
                     } else {
                       if (dla.field_j == 35) {
-                        StringBuilder discarded$8 = ((oa) this).field_Ab.append(dla.field_j);
+                        StringBuilder discarded$12 = ((oa) this).field_Ab.append(dla.field_j);
                         break L2;
                       } else {
                         break L4;
@@ -275,7 +277,7 @@ final class oa extends sna {
                   if (dla.field_j != 93) {
                     break L2;
                   } else {
-                    StringBuilder discarded$9 = ((oa) this).field_Ab.append(dla.field_j);
+                    StringBuilder discarded$13 = ((oa) this).field_Ab.append(dla.field_j);
                     break L2;
                   }
                 }
@@ -315,24 +317,21 @@ final class oa extends sna {
         }
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_Bb = null;
         field_wb = null;
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3, boolean param4, int param5, int param6, boolean param7, int param8, int param9, boolean param10, int param11, boolean param12, boolean param13) {
+    final static void a(int param0, boolean param1, int param2, int param3, boolean param4, int param5, int param6, boolean param7, int param8, int param9, boolean param10) {
         jja.field_m = null;
-        er.e(9941);
-        param1 = ot.a(param8, param11, param1, param3, param2, param6, (byte) 92);
-        lr.a(param7, param5, param0, param9, param2, 1, param4, param13, param10, param1);
-        bf.a(param5, param10, (byte) -88);
-        rh.a(param5, 67, param1, param8);
-        if (param12) {
-          field_Bb = null;
-          return;
-        } else {
-          return;
-        }
+        int discarded$0 = 9941;
+        er.e();
+        param1 = ot.a(0, 13, param1, 15, 11, 14, (byte) 92);
+        lr.a(param7, param5, 16777215, 16777215, 11, 1, param4, true, param10, param1);
+        int discarded$1 = -88;
+        bf.a(param5, param10);
+        int discarded$2 = 0;
+        rh.a(param5, 67, param1);
     }
 
     final boolean b(boolean param0) {
@@ -341,13 +340,14 @@ final class oa extends sna {
           return false;
         } else {
           if (!param0) {
-            int discarded$20 = ((oa) this).b(true, -4);
+            int discarded$29 = ((oa) this).b(true, -4);
             if (85 == gf.field_k) {
               L0: {
                 if (((oa) this).field_Ab.length() <= 0) {
                   break L0;
                 } else {
-                  StringBuilder discarded$21 = sw.a(((oa) this).field_Ab, 4, ((oa) this).field_Ab.length() - 1, ' ');
+                  int discarded$30 = 32;
+                  StringBuilder discarded$31 = sw.a(((oa) this).field_Ab, 4, ((oa) this).field_Ab.length() - 1);
                   break L0;
                 }
               }
@@ -364,15 +364,16 @@ final class oa extends sna {
                 if (var2 == 95) {
                   if (0 < ((oa) this).field_Ab.length()) {
                     L2: {
-                      StringBuilder discarded$22 = ((oa) this).field_Ab.append(var2);
+                      StringBuilder discarded$32 = ((oa) this).field_Ab.append(var2);
                       if (ml.a(-130697146, (char) var2)) {
-                        StringBuilder discarded$23 = ((oa) this).field_Ab.append(var2);
+                        StringBuilder discarded$33 = ((oa) this).field_Ab.append(var2);
                         break L2;
                       } else {
-                        if (!ula.a((char) var2, 48)) {
+                        int discarded$34 = 48;
+                        if (!ula.a((char) var2)) {
                           break L2;
                         } else {
-                          StringBuilder discarded$24 = ((oa) this).field_Ab.append(var2);
+                          StringBuilder discarded$35 = ((oa) this).field_Ab.append(var2);
                           break L2;
                         }
                       }
@@ -403,7 +404,7 @@ final class oa extends sna {
                   } else {
                     if (ml.a(-130697146, (char) var2)) {
                       L5: {
-                        StringBuilder discarded$25 = ((oa) this).field_Ab.append(var2);
+                        StringBuilder discarded$36 = ((oa) this).field_Ab.append(var2);
                         if (gf.field_k != 84) {
                           break L5;
                         } else {
@@ -424,7 +425,8 @@ final class oa extends sna {
                         return true;
                       }
                     } else {
-                      if (!ula.a((char) var2, 48)) {
+                      int discarded$37 = 48;
+                      if (!ula.a((char) var2)) {
                         if (gf.field_k != 84) {
                           if (13 != gf.field_k) {
                             return true;
@@ -453,7 +455,7 @@ final class oa extends sna {
                           }
                         }
                       } else {
-                        StringBuilder discarded$26 = ((oa) this).field_Ab.append(var2);
+                        StringBuilder discarded$38 = ((oa) this).field_Ab.append(var2);
                         if (gf.field_k != 84) {
                           if (13 != gf.field_k) {
                             return true;
@@ -493,7 +495,7 @@ final class oa extends sna {
                 } else {
                   if (ml.a(-130697146, (char) var2)) {
                     L8: {
-                      StringBuilder discarded$27 = ((oa) this).field_Ab.append(var2);
+                      StringBuilder discarded$39 = ((oa) this).field_Ab.append(var2);
                       if (gf.field_k != 84) {
                         break L8;
                       } else {
@@ -514,7 +516,8 @@ final class oa extends sna {
                       return true;
                     }
                   } else {
-                    if (!ula.a((char) var2, 48)) {
+                    int discarded$40 = 48;
+                    if (!ula.a((char) var2)) {
                       if (gf.field_k != 84) {
                         if (13 != gf.field_k) {
                           return true;
@@ -543,7 +546,7 @@ final class oa extends sna {
                         }
                       }
                     } else {
-                      StringBuilder discarded$28 = ((oa) this).field_Ab.append(var2);
+                      StringBuilder discarded$41 = ((oa) this).field_Ab.append(var2);
                       if (gf.field_k != 84) {
                         if (13 == gf.field_k) {
                           ((oa) this).field_zb = 1;
@@ -629,15 +632,16 @@ final class oa extends sna {
                         break L13;
                       } else {
                         L14: {
-                          StringBuilder discarded$29 = ((oa) this).field_Ab.append(var2);
+                          StringBuilder discarded$42 = ((oa) this).field_Ab.append(var2);
                           if (ml.a(-130697146, (char) var2)) {
-                            StringBuilder discarded$30 = ((oa) this).field_Ab.append(var2);
+                            StringBuilder discarded$43 = ((oa) this).field_Ab.append(var2);
                             break L14;
                           } else {
-                            if (!ula.a((char) var2, 48)) {
+                            int discarded$44 = 48;
+                            if (!ula.a((char) var2)) {
                               break L14;
                             } else {
-                              StringBuilder discarded$31 = ((oa) this).field_Ab.append(var2);
+                              StringBuilder discarded$45 = ((oa) this).field_Ab.append(var2);
                               break L14;
                             }
                           }
@@ -670,7 +674,7 @@ final class oa extends sna {
                   }
                   if (ml.a(-130697146, (char) var2)) {
                     L17: {
-                      StringBuilder discarded$32 = ((oa) this).field_Ab.append(var2);
+                      StringBuilder discarded$46 = ((oa) this).field_Ab.append(var2);
                       if (gf.field_k != 84) {
                         break L17;
                       } else {
@@ -694,11 +698,12 @@ final class oa extends sna {
                     }
                     return true;
                   } else {
-                    if (!ula.a((char) var2, 48)) {
+                    int discarded$47 = 48;
+                    if (!ula.a((char) var2)) {
                       break L11;
                     } else {
                       L19: {
-                        StringBuilder discarded$33 = ((oa) this).field_Ab.append(var2);
+                        StringBuilder discarded$48 = ((oa) this).field_Ab.append(var2);
                         if (gf.field_k != 84) {
                           break L19;
                         } else {
@@ -769,7 +774,8 @@ final class oa extends sna {
                 if (-1 >= ((oa) this).field_Ab.length()) {
                   break L23;
                 } else {
-                  StringBuilder discarded$34 = sw.a(((oa) this).field_Ab, 4, ((oa) this).field_Ab.length() - 1, ' ');
+                  int discarded$49 = 32;
+                  StringBuilder discarded$50 = sw.a(((oa) this).field_Ab, 4, ((oa) this).field_Ab.length() - 1);
                   break L23;
                 }
               }
@@ -793,15 +799,16 @@ final class oa extends sna {
                       break L26;
                     } else {
                       L27: {
-                        StringBuilder discarded$35 = ((oa) this).field_Ab.append(var2);
+                        StringBuilder discarded$51 = ((oa) this).field_Ab.append(var2);
                         if (ml.a(-130697146, (char) var2)) {
-                          StringBuilder discarded$36 = ((oa) this).field_Ab.append(var2);
+                          StringBuilder discarded$52 = ((oa) this).field_Ab.append(var2);
                           break L27;
                         } else {
-                          if (!ula.a((char) var2, 48)) {
+                          int discarded$53 = 48;
+                          if (!ula.a((char) var2)) {
                             break L27;
                           } else {
-                            StringBuilder discarded$37 = ((oa) this).field_Ab.append(var2);
+                            StringBuilder discarded$54 = ((oa) this).field_Ab.append(var2);
                             break L27;
                           }
                         }
@@ -831,7 +838,7 @@ final class oa extends sna {
                 }
                 if (ml.a(-130697146, (char) var2)) {
                   L29: {
-                    StringBuilder discarded$38 = ((oa) this).field_Ab.append(var2);
+                    StringBuilder discarded$55 = ((oa) this).field_Ab.append(var2);
                     if (gf.field_k != 84) {
                       break L29;
                     } else {
@@ -855,11 +862,12 @@ final class oa extends sna {
                   }
                   return true;
                 } else {
-                  if (!ula.a((char) var2, 48)) {
+                  int discarded$56 = 48;
+                  if (!ula.a((char) var2)) {
                     break L24;
                   } else {
                     L31: {
-                      StringBuilder discarded$39 = ((oa) this).field_Ab.append(var2);
+                      StringBuilder discarded$57 = ((oa) this).field_Ab.append(var2);
                       if (gf.field_k != 84) {
                         break L31;
                       } else {

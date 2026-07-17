@@ -49,7 +49,8 @@ final class mg {
                 stackIn_5_0 = stackOut_4_0;
                 break L0;
               } else {
-                var3 = f.a(param0.charAt(var5), -8483) + ((var3 << 5) - var3);
+                int discarded$2 = -8483;
+                var3 = f.a(param0.charAt(var5)) + ((var3 << 5) - var3);
                 var5++;
                 continue L1;
               }
@@ -88,7 +89,7 @@ final class mg {
         return stackIn_5_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_d = null;
         field_c = null;

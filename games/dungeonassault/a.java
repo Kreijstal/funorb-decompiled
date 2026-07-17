@@ -11,7 +11,7 @@ final class a extends ne {
     int field_j;
     static nk field_n;
 
-    public static void a(int param0) {
+    public static void a() {
         field_l = null;
         field_n = null;
         field_m = null;
@@ -21,13 +21,10 @@ final class a extends ne {
     }
 
     final static void a(int param0, int param1, se param2, boolean param3, boolean param4, int param5, int param6, int param7, int param8, int param9, cn[] param10, cn[] param11) {
-        if (!param3) {
-            return;
-        }
         try {
-            he.a(param6, 0, param8, param7, param1, param5, param9, param11, param1, param0, param10, param2, param2, param9, param4);
+            he.a(240, 0, 8, 2, param1, 8, param9, param11, param1, 320, param10, param2, param2, param9, param4);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "a.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 44 + (param10 != null ? "{...}" : "null") + 44 + (param11 != null ? "{...}" : "null") + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "a.A(" + 320 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + 1 + 44 + param4 + 44 + 8 + 44 + 240 + 44 + 2 + 44 + 8 + 44 + param9 + 44 + (param10 != null ? "{...}" : "null") + 44 + (param11 != null ? "{...}" : "null") + 41);
         }
     }
 

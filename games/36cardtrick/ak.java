@@ -450,7 +450,8 @@ final class ak extends g implements pi, qh {
             }
             L13: {
               var8 = ck.field_F;
-              var9 = ma.a(mk.g(-122), -3825);
+              int discarded$3 = -3825;
+              var9 = ma.a(mk.g(-122));
               if (ke.field_c == var9) {
                 var8 = ja.field_d;
                 break L13;
@@ -464,13 +465,13 @@ final class ak extends g implements pi, qh {
               }
             }
             L14: {
-              ck dupTemp$2 = new ck(10, ((ak) this).field_i, ((ak) this).field_h + -20, 25, (lk) (Object) ((ak) this).field_J, false, 80, 3, var7, 16777215, var8);
-              var12 = dupTemp$2;
-              ((ak) this).b((lk) (Object) dupTemp$2, (byte) 118);
+              ck dupTemp$4 = new ck(10, ((ak) this).field_i, ((ak) this).field_h + -20, 25, (lk) (Object) ((ak) this).field_J, false, 80, 3, var7, 16777215, var8);
+              var12 = dupTemp$4;
+              ((ak) this).b((lk) (Object) dupTemp$4, (byte) 118);
               ((ak) this).field_i = ((ak) this).field_i + (5 + ((lk) (Object) var12).field_q);
-              ck dupTemp$3 = new ck(10, ((ak) this).field_i, ((ak) this).field_h + -20, 25, (lk) (Object) ((ak) this).field_K, false, 80, 3, var7, 16777215, fl.field_b);
-              var13 = dupTemp$3;
-              ((ak) this).b((lk) (Object) dupTemp$3, (byte) 118);
+              ck dupTemp$5 = new ck(10, ((ak) this).field_i, ((ak) this).field_h + -20, 25, (lk) (Object) ((ak) this).field_K, false, 80, 3, var7, 16777215, fl.field_b);
+              var13 = dupTemp$5;
+              ((ak) this).b((lk) (Object) dupTemp$5, (byte) 118);
               ((ak) this).field_i = ((ak) this).field_i + (((lk) (Object) var13).field_q - -5);
               ((ak) this).field_I.field_k = (pl) this;
               if (null == ((ak) this).field_M) {
@@ -640,14 +641,16 @@ final class ak extends g implements pi, qh {
                     break L1;
                   } else {
                     if (((ak) this).field_G) {
-                      j.i(92);
+                      int discarded$1274 = 92;
+                      j.i();
                       break L1;
                     } else {
                       if (((ak) this).field_E) {
                         a.d((byte) 74);
                         break L1;
                       } else {
-                        td.a((byte) -11);
+                        int discarded$1275 = -11;
+                        td.a();
                         break L1;
                       }
                     }
@@ -804,7 +807,7 @@ final class ak extends g implements pi, qh {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_P = null;
         field_N = null;
         field_L = null;

@@ -73,7 +73,7 @@ class jb extends se {
         }
     }
 
-    final static String a(fs param0, int param1, int param2) {
+    final static String a(fs param0) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -103,8 +103,8 @@ class jb extends se {
           try {
             L0: {
               var3_int = param0.e(false);
-              if (var3_int > param1) {
-                var3_int = param1;
+              if (var3_int > 80) {
+                var3_int = 80;
                 break L0;
               } else {
                 break L0;
@@ -151,7 +151,7 @@ class jb extends se {
               break L1;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 44 + -14832 + 41);
+          throw qo.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + 80 + 44 + -14832 + 41);
         }
     }
 
@@ -212,7 +212,8 @@ class jb extends se {
                       var6 = var8;
                       var6 = var8;
                       if (param1.length() != 0) {
-                        var6 = var8 + "; Expires=" + fi.a(94608000000L + wq.a(-6), true) + "; Max-Age=" + 94608000L;
+                        int discarded$1 = 1;
+                        var6 = var8 + "; Expires=" + fi.a(94608000000L + wq.a(-6)) + "; Max-Age=" + 94608000L;
                         break L2;
                       } else {
                         var6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
@@ -303,8 +304,7 @@ class jb extends se {
             Throwable var8_ref_Throwable = null;
             int var8 = 0;
             int var9 = 0;
-            Object var10 = null;
-            CharSequence var11 = null;
+            CharSequence var10 = null;
             int stackIn_3_0 = 0;
             int stackIn_8_0 = 0;
             int stackIn_33_0 = 0;
@@ -381,11 +381,12 @@ class jb extends se {
                     } else {
                       L3: {
                         if (param3) {
-                          var10 = null;
-                          kb.field_d = ds.a(lb.field_a, false, (String) null, param5, false);
+                          int discarded$11 = 0;
+                          kb.field_d = ds.a(lb.field_a, false, (String) null, param5);
                           break L3;
                         } else {
-                          kb.field_d = os.a(false, param0, param5, (byte) -94);
+                          int discarded$12 = -94;
+                          kb.field_d = os.a(false, param0, param5);
                           break L3;
                         }
                       }
@@ -478,13 +479,14 @@ class jb extends se {
                     if (kw.field_c != uu.field_l) {
                       break L9;
                     } else {
-                      if (!lt.a((byte) 119)) {
+                      int discarded$13 = 119;
+                      if (!lt.a()) {
                         break L9;
                       } else {
                         L10: {
                           lb.field_a = ig.field_a.a((byte) 114);
                           ku.field_j = ig.field_a.e(-31302);
-                          int discarded$6 = ig.field_a.e(-31302);
+                          int discarded$14 = ig.field_a.e(-31302);
                           ct.field_x = ig.field_a.a(255);
                           var6_ref = ig.field_a.g((byte) 92);
                           var7 = ig.field_a.e(-31302);
@@ -534,9 +536,9 @@ class jb extends se {
                           if (!gn.field_d) {
                             break L14;
                           } else {
-                            int discarded$7 = ig.field_a.e(-31302);
-                            int discarded$8 = ig.field_a.e(-31302);
-                            int discarded$9 = ig.field_a.c(true);
+                            int discarded$15 = ig.field_a.e(-31302);
+                            int discarded$16 = ig.field_a.e(-31302);
+                            int discarded$17 = ig.field_a.c(true);
                             pl.field_y = ig.field_a.a(255);
                             sm.field_b = new byte[pl.field_y];
                             var8 = 0;
@@ -553,8 +555,8 @@ class jb extends se {
                         }
                         L16: {
                           qv.field_o = ig.field_a.d(-1);
-                          var11 = (CharSequence) (Object) qv.field_o;
-                          tc.field_f = uk.a(-1, var11);
+                          var10 = (CharSequence) (Object) qv.field_o;
+                          tc.field_f = uk.a(-1, var10);
                           jk.field_c = ig.field_a.e(-31302);
                           kw.field_c = ga.field_j;
                           if (kb.field_d.a((byte) 113) != pb.field_b) {
@@ -586,7 +588,7 @@ class jb extends se {
                               if (!wo.field_c) {
                                 try {
                                   L20: {
-                                    Object discarded$10 = tw.a(ra.c(2), 93, "unzap");
+                                    Object discarded$18 = tw.a(ra.c(2), 93, "unzap");
                                     break L20;
                                   }
                                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -604,7 +606,7 @@ class jb extends se {
                           }
                           try {
                             L22: {
-                              Object discarded$11 = tw.a(-111, ra.c(2), "zap", new Object[1]);
+                              Object discarded$19 = tw.a(-111, ra.c(2), "zap", new Object[1]);
                               break L22;
                             }
                           } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -643,7 +645,8 @@ class jb extends se {
                   }
                   L26: {
                     if (kw.field_c == sp.field_z) {
-                      if (!lt.a((byte) 119)) {
+                      int discarded$20 = 119;
+                      if (!lt.a()) {
                         break L26;
                       } else {
                         L27: {
@@ -683,7 +686,8 @@ class jb extends se {
                     if (qk.field_O == null) {
                       if (sr.field_g) {
                         L30: {
-                          if (uc.b(26560) <= 30000L) {
+                          int discarded$21 = 26560;
+                          if (uc.b() <= 30000L) {
                             ns.field_c = nd.field_G;
                             break L30;
                           } else {
@@ -843,7 +847,7 @@ class jb extends se {
           L0: {
             var4_int = param3.a(0, param0);
             var5 = param3.a(var4_int, param1, (byte) 127);
-            var6 = -88 % ((-10 - param2) / 46);
+            var6 = 0;
             stackOut_0_0 = na.a(var5, -11481, param3, var4_int);
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -903,7 +907,7 @@ class jb extends se {
           }
           L3: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param2).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(-104).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;

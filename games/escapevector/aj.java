@@ -13,7 +13,7 @@ final class aj {
         c var3 = null;
         try {
             var3 = om.field_c;
-            var3.a(param1, true);
+            var3.a(3, true);
             var3.f(5, -123);
             var3.f(0, -123);
             var3.h(-123, param2.field_n);
@@ -21,11 +21,11 @@ final class aj {
             var3.f(param2.field_j, -123);
             int var4 = 58 % ((param0 - -64) / 39);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "aj.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "aj.B(" + param0 + 44 + 3 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         field_e = null;

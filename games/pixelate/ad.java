@@ -224,7 +224,7 @@ final class ad extends uc {
             var13 = var14;
             var7 = var13;
             var8 = new te[var5_int];
-            var9 = (char)param0;
+            var9 = 49;
             try {
               L1: {
                 var10_int = 0;
@@ -258,7 +258,7 @@ final class ad extends uc {
           L3: {
             var5 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var5;
-            stackOut_10_1 = new StringBuilder().append("ad.D(").append(param0).append(44);
+            stackOut_10_1 = new StringBuilder().append("ad.D(").append(49).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -380,7 +380,8 @@ final class ad extends uc {
             he.field_a = new sb(param0);
             gh.field_t = param3;
             we.field_n = param1;
-            bb.h(-126);
+            int discarded$1 = -126;
+            bb.h();
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "ad.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }

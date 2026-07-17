@@ -107,7 +107,7 @@ final class rg {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         field_b = null;

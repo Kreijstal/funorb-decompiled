@@ -130,7 +130,8 @@ class dh extends wp {
                     break L4;
                   } else {
                     L5: {
-                      ((dh) this).field_E = this.g(14236);
+                      int discarded$1 = 14236;
+                      ((dh) this).field_E = this.g();
                       ((dh) this).field_F = this.d(true);
                       if (((dh) this).field_F <= 0) {
                         break L5;
@@ -199,7 +200,7 @@ class dh extends wp {
         }
     }
 
-    final static int b(int param0, int param1, boolean param2) {
+    final static int b(int param0, int param1) {
         int var3 = param0 >>> 31;
         return (var3 + param0) / param1 + -var3;
     }
@@ -222,7 +223,7 @@ class dh extends wp {
         return ((dh) this).field_m.substring(var2, var3);
     }
 
-    private final void h(int param0) {
+    private final void h() {
         try {
             String var2 = null;
             Exception var2_ref = null;
@@ -251,52 +252,44 @@ class dh extends wp {
     private final void a(boolean param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_16_2 = null;
+        String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
         RuntimeException stackOut_13_0 = null;
         StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
         try {
           L0: {
             L1: {
-              if (param0) {
-                break L1;
-              } else {
-                ((dh) this).field_L = -107L;
-                break L1;
-              }
-            }
-            L2: {
               if (((dh) this).field_I != -1) {
                 var3_int = ((dh) this).field_I + -((dh) this).field_m.length();
                 if (var3_int >= 0) {
                   return;
                 } else {
                   param1 = param1.substring(0, var3_int);
-                  break L2;
+                  break L1;
                 }
               } else {
-                break L2;
+                break L1;
               }
             }
-            L3: {
+            L2: {
               if (((dh) this).field_F == ((dh) this).field_m.length()) {
                 ((dh) this).field_m = ((dh) this).field_m + param1;
-                break L3;
+                break L2;
               } else {
                 ((dh) this).field_m = ((dh) this).field_m.substring(0, ((dh) this).field_F) + param1 + ((dh) this).field_m.substring(((dh) this).field_F, ((dh) this).field_m.length());
-                break L3;
+                break L2;
               }
             }
             ((dh) this).field_F = ((dh) this).field_F + param1.length();
@@ -306,37 +299,37 @@ class dh extends wp {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var3 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var3;
-            stackOut_13_1 = new StringBuilder().append("dh.V(").append(param0).append(44);
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackOut_11_0 = (RuntimeException) var3;
+            stackOut_11_1 = new StringBuilder().append("dh.V(").append(1).append(44);
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
-              break L4;
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L3;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
-              break L4;
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L3;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
+          throw qo.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
         }
     }
 
-    private final int g(int param0) {
+    private final int g() {
         int var2 = 0;
         int var3 = 0;
         var3 = Sumoblitz.field_L ? 1 : 0;
@@ -594,9 +587,9 @@ class dh extends wp {
                           L5: {
                             if (~((dh) this).field_F <= ~((dh) this).field_m.length()) {
                               ((dh) this).field_m = ((dh) this).field_m + param1;
-                              int dupTemp$1 = ((dh) this).field_m.length();
-                              ((dh) this).field_F = dupTemp$1;
-                              ((dh) this).field_E = dupTemp$1;
+                              int dupTemp$5 = ((dh) this).field_m.length();
+                              ((dh) this).field_F = dupTemp$5;
+                              ((dh) this).field_E = dupTemp$5;
                               break L5;
                             } else {
                               ((dh) this).field_m = ((dh) this).field_m.substring(0, ((dh) this).field_F) + param1 + ((dh) this).field_m.substring(((dh) this).field_F, ((dh) this).field_m.length());
@@ -652,9 +645,10 @@ class dh extends wp {
                                 stackIn_55_0 = stackOut_54_0;
                                 stackIn_55_1 = stackOut_54_1;
                                 if (hw.field_b[82]) {
+                                  int discarded$6 = 14236;
                                   stackOut_56_0 = this;
                                   stackOut_56_1 = stackIn_56_1;
-                                  stackOut_56_2 = this.g(14236);
+                                  stackOut_56_2 = this.g();
                                   stackIn_57_0 = stackOut_56_0;
                                   stackIn_57_1 = stackOut_56_1;
                                   stackIn_57_2 = stackOut_56_2;
@@ -691,7 +685,8 @@ class dh extends wp {
                                   return stackIn_49_0 != 0;
                                 } else {
                                   if (param3 == 84) {
-                                    this.e((byte) -106);
+                                    int discarded$7 = -106;
+                                    this.e();
                                     stackOut_46_0 = 1;
                                     stackIn_47_0 = stackOut_46_0;
                                     return stackIn_47_0 != 0;
@@ -703,7 +698,8 @@ class dh extends wp {
                                         if (param3 != 65) {
                                           break L8;
                                         } else {
-                                          this.f(96);
+                                          int discarded$8 = 96;
+                                          this.f();
                                           stackOut_34_0 = 1;
                                           stackIn_35_0 = stackOut_34_0;
                                           return stackIn_35_0 != 0;
@@ -728,7 +724,8 @@ class dh extends wp {
                                       break L6;
                                     } else {
                                       if (param3 == 67) {
-                                        this.h(-1);
+                                        int discarded$9 = -1;
+                                        this.h();
                                         stackOut_42_0 = 1;
                                         stackIn_43_0 = stackOut_42_0;
                                         return stackIn_43_0 != 0;
@@ -856,13 +853,13 @@ class dh extends wp {
         var2 = -67 / ((85 - param0) / 37);
     }
 
-    private final void e(byte param0) {
+    private final void e() {
         if (!(!(((dh) this).field_o instanceof pw))) {
             ((pw) (Object) ((dh) this).field_o).a((dh) this, -66);
         }
     }
 
-    private final void f(int param0) {
+    private final void f() {
         this.e(false);
         this.h((byte) 123);
     }
@@ -977,7 +974,7 @@ class dh extends wp {
           L0: {
             L1: {
               super.a(param0, 62, param2, param3);
-              var5_int = 109 % ((-25 - param1) / 45);
+              var5_int = 0;
               this.f((byte) -44);
               if (((dh) this).field_l == 1) {
                 L2: {
@@ -1023,7 +1020,7 @@ class dh extends wp {
           L4: {
             var5 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var5;
-            stackOut_12_1 = new StringBuilder().append("dh.U(").append(param0).append(44).append(param1).append(44);
+            stackOut_12_1 = new StringBuilder().append("dh.U(").append(param0).append(44).append(-86).append(44);
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;

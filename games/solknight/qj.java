@@ -43,7 +43,7 @@ final class qj {
         var7 = SolKnight.field_L ? 1 : 0;
         try {
           L0: {
-            var5_int = param0;
+            var5_int = 0;
             L1: while (true) {
               if (var5_int >= fb.field_b.length) {
                 break L0;
@@ -73,7 +73,7 @@ final class qj {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var5;
-            stackOut_8_1 = new StringBuilder().append("qj.A(").append(param0).append(44);
+            stackOut_8_1 = new StringBuilder().append("qj.A(").append(0).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -125,7 +125,7 @@ final class qj {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 

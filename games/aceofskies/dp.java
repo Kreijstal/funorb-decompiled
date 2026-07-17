@@ -9,7 +9,7 @@ final class dp extends pj implements java.awt.image.ImageProducer, java.awt.imag
     static vs field_h;
     static String field_i;
 
-    private final synchronized void b(int param0) {
+    private final synchronized void b() {
         if (!(null != ((dp) this).field_j)) {
             return;
         }
@@ -86,16 +86,19 @@ final class dp extends pj implements java.awt.image.ImageProducer, java.awt.imag
             ((dp) this).field_b = param1;
             ((dp) this).field_g = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
             ((dp) this).field_d = param3.createImage((java.awt.image.ImageProducer) this);
-            this.b(0);
-            boolean discarded$0 = param3.prepareImage(((dp) this).field_d, (java.awt.image.ImageObserver) this);
-            this.b(0);
+            int discarded$0 = 0;
+            this.b();
+            boolean discarded$1 = param3.prepareImage(((dp) this).field_d, (java.awt.image.ImageObserver) this);
+            int discarded$2 = 0;
+            this.b();
             if (param0 > -31) {
                 Object var6 = null;
-                boolean discarded$1 = ((dp) this).isConsumer((java.awt.image.ImageConsumer) null);
+                boolean discarded$3 = ((dp) this).isConsumer((java.awt.image.ImageConsumer) null);
             }
-            boolean discarded$2 = param3.prepareImage(((dp) this).field_d, (java.awt.image.ImageObserver) this);
-            this.b(0);
-            boolean discarded$3 = param3.prepareImage(((dp) this).field_d, (java.awt.image.ImageObserver) this);
+            boolean discarded$4 = param3.prepareImage(((dp) this).field_d, (java.awt.image.ImageObserver) this);
+            int discarded$5 = 0;
+            this.b();
+            boolean discarded$6 = param3.prepareImage(((dp) this).field_d, (java.awt.image.ImageObserver) this);
             ((dp) this).a(-12595);
         } catch (RuntimeException runtimeException) {
             throw pn.a((Throwable) (Object) runtimeException, "dp.G(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
@@ -202,8 +205,9 @@ final class dp extends pj implements java.awt.image.ImageProducer, java.awt.imag
     final void a(int param0, java.awt.Graphics param1, int param2, int param3) {
         try {
             int var5_int = 62 % ((param0 - -72) / 48);
-            this.b(0);
-            boolean discarded$0 = param1.drawImage(((dp) this).field_d, param3, param2, (java.awt.image.ImageObserver) this);
+            int discarded$0 = 0;
+            this.b();
+            boolean discarded$1 = param1.drawImage(((dp) this).field_d, param3, param2, (java.awt.image.ImageObserver) this);
         } catch (RuntimeException runtimeException) {
             throw pn.a((Throwable) (Object) runtimeException, "dp.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
         }

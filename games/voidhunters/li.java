@@ -126,7 +126,7 @@ final class li extends pib {
         int var7 = (int)((long)var3 * (long)var5 >> 16);
         int var8 = (int)((long)var6 * (long)var3 >> 16);
         int var9 = (int)((long)var5 * (long)var4 >> 16);
-        int var11 = 18 % ((param0 - -54) / 51);
+        int var11 = 0;
         int var10 = (int)((long)var4 * (long)var6 >> 16);
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }

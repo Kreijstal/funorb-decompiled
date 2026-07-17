@@ -28,35 +28,9 @@ class df {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 < 8000) {
-            break L0;
-          } else {
-            if (param0 <= 48000) {
-              L1: {
-                field_n = param0;
-                if (!param1) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              field_l = stackIn_7_0 != 0;
-              field_d = 10;
-              return;
-            } else {
-              break L0;
-            }
-          }
-        }
-        throw new IllegalArgumentException();
+        field_n = 22050;
+        field_l = false;
+        field_d = 10;
     }
 
     void a(int param0) throws Exception {
@@ -71,12 +45,12 @@ class df {
     }
 
     private final void b(int param0) {
-        ((df) this).field_e = ((df) this).field_e - 256;
+        ((df) this).field_e = ((df) this).field_e - param0;
         if (((df) this).field_e < 0) {
             ((df) this).field_e = 0;
         }
         if (((df) this).field_i != null) {
-            ((df) this).field_i.a(256);
+            ((df) this).field_i.a(param0);
             return;
         }
     }
@@ -165,7 +139,7 @@ class df {
         c var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_l) {
             break L0;
           } else {
@@ -175,7 +149,7 @@ class df {
         }
         L1: {
           ug.a(param0, 0, var3);
-          ((df) this).field_e = ((df) this).field_e - 256;
+          ((df) this).field_e = ((df) this).field_e - param1;
           if (((df) this).field_i == null) {
             break L1;
           } else {
@@ -342,7 +316,7 @@ class df {
           if (((df) this).field_i == null) {
             break L17;
           } else {
-            ((df) this).field_i.a(param0, 0, 256);
+            ((df) this).field_i.a(param0, 0, param1);
             break L17;
           }
         }

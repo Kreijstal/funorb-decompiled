@@ -21,7 +21,7 @@ final class lg {
         int var4 = 16 * param3 + -4;
         int var5 = 16 * param1 - 4;
         gb.a(var4, var5, var4 + 16, var5 + 16);
-        se.field_a[param2].f(param0, -4, 128);
+        se.field_a[param2].f(-4, -4, 128);
         gb.b(si.field_R);
     }
 
@@ -125,7 +125,8 @@ final class lg {
                   break L5;
                 }
               }
-              ef.a(param0, (byte) -101);
+              int discarded$2 = -101;
+              ef.a(param0);
               break L0;
             }
           }

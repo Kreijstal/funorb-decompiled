@@ -126,14 +126,14 @@ final class im implements ca {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_m = null;
         field_b = null;
         field_l = null;
         field_e = null;
     }
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void a(java.awt.Component param0) {
         try {
             param0.addMouseListener((java.awt.event.MouseListener) (Object) ib.field_f);
             param0.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) ib.field_f);

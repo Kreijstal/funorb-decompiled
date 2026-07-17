@@ -127,7 +127,7 @@ final class fl implements ad {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_j = null;
         field_h = null;
@@ -136,11 +136,11 @@ final class fl implements ad {
 
     final static void a(byte param0) {
         int var1 = -104 % ((param0 - -15) / 41);
-        Object var2 = null;
-        ed.a((String) null, "", -1);
+        int discarded$0 = -1;
+        ed.a((String) null, "");
     }
 
-    final static String a(byte param0, CharSequence param1, boolean param2) {
+    final static String a(byte param0, CharSequence param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -170,12 +170,13 @@ final class fl implements ad {
         var5 = MinerDisturbance.field_ab;
         try {
           L0: {
-            var3 = qh.a(false, param1, false);
+            int discarded$2 = 0;
+            var3 = qh.a(false, param1);
             if (var3 == null) {
               var4 = 0;
               L1: while (true) {
                 if (var4 >= param1.length()) {
-                  var4 = -56 % ((param0 - -37) / 55);
+                  var4 = 0;
                   stackOut_11_0 = null;
                   stackIn_12_0 = stackOut_11_0;
                   break L0;
@@ -201,7 +202,7 @@ final class fl implements ad {
           L2: {
             var3_ref = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var3_ref;
-            stackOut_13_1 = new StringBuilder().append("fl.C(").append(param0).append(44);
+            stackOut_13_1 = new StringBuilder().append("fl.C(").append(93).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;

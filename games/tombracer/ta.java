@@ -32,19 +32,9 @@ final class ta extends jea {
     }
 
     private final void b(byte param0, int param1) {
-        int var3 = 0;
-        if (param0 <= 109) {
-          field_ub = null;
-          ((ta) this).field_wb.a(((ta) this).field_wb.b((byte) 69), ((ta) this).field_t, -23776, 0, 0);
-          var3 = param1 + ((ta) this).field_wb.field_G;
-          ((ta) this).field_tb.a(((ta) this).field_G - var3, ((ta) this).field_t, -23776, 0, var3);
-          return;
-        } else {
-          ((ta) this).field_wb.a(((ta) this).field_wb.b((byte) 69), ((ta) this).field_t, -23776, 0, 0);
-          var3 = param1 + ((ta) this).field_wb.field_G;
-          ((ta) this).field_tb.a(((ta) this).field_G - var3, ((ta) this).field_t, -23776, 0, var3);
-          return;
-        }
+        ((ta) this).field_wb.a(((ta) this).field_wb.b((byte) 69), ((ta) this).field_t, -23776, 0, 0);
+        int var3 = param1 + ((ta) this).field_wb.field_G;
+        ((ta) this).field_tb.a(((ta) this).field_G - var3, ((ta) this).field_t, -23776, 0, var3);
     }
 
     private ta(long param0, jea param1, jea param2, String param3) {
@@ -61,7 +51,7 @@ final class ta extends jea {
         }
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_vb = null;
         field_ub = null;
     }
@@ -99,7 +89,7 @@ final class ta extends jea {
         this.b((byte) 123, param3);
     }
 
-    final static void a(iu[][] param0, String[][] param1, int[] param2, int param3, cn param4, int param5, hja[] param6, byte[] param7, byte[] param8, String[][] param9, String[] param10, cn param11, byte param12, int[] param13, iu[][] param14, cn param15, boolean param16) {
+    final static void a(iu[][] param0, String[][] param1, int[] param2, int param3, cn param4, int param5, hja[] param6, byte[] param7, byte[] param8, String[][] param9, String[] param10, cn param11, byte param12, int[] param13, iu[][] param14, cn param15) {
         int var17_int = 0;
         RuntimeException var17 = null;
         Object var18 = null;
@@ -302,8 +292,8 @@ final class ta extends jea {
         try {
           L0: {
             var18 = null;
-            lba.a(param5, 1, param4, param16, param0, param13, param1, param11, param2, param10, param6, param9, (String[]) null, param14, param15, param3, 1, param7, param8);
-            var17_int = -112 / ((66 - param12) / 41);
+            lba.a(param5, 1, param4, true, param0, param13, param1, param11, param2, param10, param6, param9, (String[]) null, param14, param15, param3, 1, param7, param8);
+            var17_int = 112;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -561,7 +551,7 @@ final class ta extends jea {
           }
           L11: {
             stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-            stackOut_32_1 = ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(44).append(param12).append(44);
+            stackOut_32_1 = ((StringBuilder) (Object) stackIn_32_1).append(stackIn_32_2).append(44).append(116).append(44);
             stackIn_34_0 = stackOut_32_0;
             stackIn_34_1 = stackOut_32_1;
             stackIn_33_0 = stackOut_32_0;
@@ -634,7 +624,7 @@ final class ta extends jea {
               break L13;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + 44 + param16 + 41);
+          throw tba.a((Throwable) (Object) stackIn_41_0, stackIn_41_2 + 44 + 1 + 41);
         }
     }
 

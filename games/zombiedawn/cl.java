@@ -11,7 +11,7 @@ final class cl implements wa {
         int var4 = 126 % ((param1 - -83) / 35);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
         field_a = null;

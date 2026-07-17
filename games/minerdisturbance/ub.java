@@ -6,10 +6,7 @@ final class ub implements uj {
     static String field_c;
     static String[] field_a;
 
-    public static void b(int param0) {
-        if (param0 < 16) {
-            return;
-        }
+    public static void b() {
         field_b = null;
         field_a = null;
         field_c = null;
@@ -25,12 +22,11 @@ final class ub implements uj {
         vi.field_h = true;
     }
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         gl var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
-        gl var4 = null;
         int stackIn_3_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_16_0 = 0;
@@ -43,8 +39,7 @@ final class ub implements uj {
         var3 = MinerDisturbance.field_ab;
         try {
           L0: {
-            var4 = (gl) (Object) on.field_t.b(123);
-            var1 = var4;
+            var1 = (gl) (Object) on.field_t.b(123);
             if (var1 != null) {
               var2 = 0;
               L1: while (true) {
@@ -54,8 +49,8 @@ final class ub implements uj {
                   break L0;
                 } else {
                   L2: {
-                    if (var4.field_r[var2] != null) {
-                      if (var4.field_r[var2].field_c == 0) {
+                    if (var1.field_r[var2] != null) {
+                      if (var1.field_r[var2].field_c == 0) {
                         stackOut_10_0 = 0;
                         stackIn_11_0 = stackOut_10_0;
                         return stackIn_11_0 != 0;
@@ -67,10 +62,10 @@ final class ub implements uj {
                     }
                   }
                   L3: {
-                    if (null == var4.field_q[var2]) {
+                    if (null == var1.field_q[var2]) {
                       break L3;
                     } else {
-                      if (var4.field_q[var2].field_c == 0) {
+                      if (var1.field_q[var2].field_c == 0) {
                         stackOut_15_0 = 0;
                         stackIn_16_0 = stackOut_15_0;
                         return stackIn_16_0 != 0;
@@ -103,11 +98,7 @@ final class ub implements uj {
             if (param1 >= 0) {
               return kf.field_e[param1] >> 12;
             } else {
-              if (param0 != -1237818874) {
-                return -44;
-              } else {
-                return -1;
-              }
+              return -1;
             }
           } else {
             if (4096L <= (long)param1) {

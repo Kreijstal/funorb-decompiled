@@ -100,22 +100,22 @@ final class cb extends br {
         int var16 = 0;
         int var17 = 0;
         int var20 = 0;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        String stackIn_33_2 = null;
+        String stackIn_31_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
         RuntimeException stackOut_30_0 = null;
         StringBuilder stackOut_30_1 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
-        RuntimeException stackOut_31_0 = null;
-        StringBuilder stackOut_31_1 = null;
-        String stackOut_31_2 = null;
+        String stackOut_30_2 = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        String stackOut_29_2 = null;
         var20 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
@@ -126,14 +126,6 @@ final class cb extends br {
               param0 = param0 + param4.field_y;
               var8 = param3 - -(param0 * oo.field_b);
               var9 = 0;
-              if (!param1) {
-                break L1;
-              } else {
-                field_o = false;
-                break L1;
-              }
-            }
-            L2: {
               var10 = param4.field_w;
               var11 = param4.field_x;
               var12 = oo.field_b + -var11;
@@ -143,15 +135,15 @@ final class cb extends br {
                 var8 = var8 + var14 * oo.field_b;
                 var10 = var10 - var14;
                 param0 = oo.field_e;
-                break L2;
+                break L1;
               } else {
-                break L2;
+                break L1;
               }
             }
-            L3: {
+            L2: {
               var13 = 0;
               if (param3 >= oo.field_f) {
-                break L3;
+                break L2;
               } else {
                 var14 = oo.field_f + -param3;
                 var13 = var13 + var14;
@@ -161,74 +153,74 @@ final class cb extends br {
                 param3 = oo.field_f;
                 var7 = var7 + var6_int * var14;
                 var8 = var8 + var14;
+                break L2;
+              }
+            }
+            L3: {
+              if (var10 + param0 <= oo.field_d) {
+                break L3;
+              } else {
+                var10 = var10 - (-oo.field_d + (var10 + param0));
                 break L3;
               }
             }
             L4: {
-              if (var10 + param0 <= oo.field_d) {
-                break L4;
-              } else {
-                var10 = var10 - (-oo.field_d + (var10 + param0));
-                break L4;
-              }
-            }
-            L5: {
               if (oo.field_g < param3 + var11) {
                 var14 = -oo.field_g + (var11 + param3);
                 var12 = var12 + var14;
                 var13 = var13 + var14;
                 var11 = var11 - var14;
-                break L5;
+                break L4;
               } else {
-                break L5;
+                break L4;
               }
             }
-            L6: {
+            L5: {
               if (var11 <= 0) {
-                break L6;
+                break L5;
               } else {
                 if (var10 <= 0) {
-                  break L6;
+                  break L5;
                 } else {
                   param0 = -var10;
-                  L7: while (true) {
+                  L6: while (true) {
                     if (0 <= param0) {
                       break L0;
                     } else {
                       var14 = var7;
                       param3 = -var11;
-                      L8: while (true) {
+                      L7: while (true) {
                         if (0 <= param3) {
                           var9 = var9 + var13;
                           var8 = var8 + var12;
                           param0++;
-                          continue L7;
+                          continue L6;
                         } else {
-                          L9: {
+                          L8: {
                             var15 = var14 >> 8;
                             var16 = -var15 + 256;
                             var14 = var14 + var6_int;
                             if (var15 < 0) {
                               var9++;
                               var8++;
-                              break L9;
+                              break L8;
                             } else {
-                              L10: {
+                              L9: {
                                 int incrementValue$1 = var9;
                                 var9++;
                                 var17 = param4.field_B[incrementValue$1];
                                 if (var17 == 0) {
-                                  break L10;
+                                  break L9;
                                 } else {
-                                  break L10;
+                                  break L9;
                                 }
                               }
                               var8++;
-                              break L9;
+                              break L8;
                             }
                           }
                           param3++;
-                          continue L8;
+                          continue L7;
                         }
                       }
                     }
@@ -240,33 +232,33 @@ final class cb extends br {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L11: {
+          L10: {
             var6 = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) var6;
-            stackOut_30_1 = new StringBuilder().append("cb.I(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
-            stackIn_32_0 = stackOut_30_0;
-            stackIn_32_1 = stackOut_30_1;
-            stackIn_31_0 = stackOut_30_0;
-            stackIn_31_1 = stackOut_30_1;
+            stackOut_28_0 = (RuntimeException) var6;
+            stackOut_28_1 = new StringBuilder().append("cb.I(").append(param0).append(44).append(0).append(44).append(param2).append(44).append(param3).append(44);
+            stackIn_30_0 = stackOut_28_0;
+            stackIn_30_1 = stackOut_28_1;
+            stackIn_29_0 = stackOut_28_0;
+            stackIn_29_1 = stackOut_28_1;
             if (param4 == null) {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
-              stackOut_32_2 = "null";
-              stackIn_33_0 = stackOut_32_0;
-              stackIn_33_1 = stackOut_32_1;
-              stackIn_33_2 = stackOut_32_2;
-              break L11;
+              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
+              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_2 = "null";
+              stackIn_31_0 = stackOut_30_0;
+              stackIn_31_1 = stackOut_30_1;
+              stackIn_31_2 = stackOut_30_2;
+              break L10;
             } else {
-              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
-              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
-              stackOut_31_2 = "{...}";
-              stackIn_33_0 = stackOut_31_0;
-              stackIn_33_1 = stackOut_31_1;
-              stackIn_33_2 = stackOut_31_2;
-              break L11;
+              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
+              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_2 = "{...}";
+              stackIn_31_0 = stackOut_29_0;
+              stackIn_31_1 = stackOut_29_1;
+              stackIn_31_2 = stackOut_29_2;
+              break L10;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 44 + param5 + 41);
+          throw fa.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 44 + param5 + 41);
         }
     }
 
@@ -309,12 +301,14 @@ final class cb extends br {
             ((cb) this).field_n = ((cb) this).field_s;
             ((cb) this).field_f = 0;
             ((cb) this).field_q = ((cb) this).field_n;
-            this.a((byte) -117);
+            int discarded$11 = -117;
+            this.a();
             return;
           } else {
             ((cb) this).field_f = 0;
             ((cb) this).field_q = ((cb) this).field_n;
-            this.a((byte) -117);
+            int discarded$12 = -117;
+            this.a();
             return;
           }
         } else {
@@ -322,7 +316,8 @@ final class cb extends br {
           ((cb) this).field_n = 0;
           ((cb) this).field_f = 0;
           ((cb) this).field_q = ((cb) this).field_n;
-          this.a((byte) -117);
+          int discarded$13 = -117;
+          this.a();
           return;
         }
     }
@@ -379,9 +374,6 @@ final class cb extends br {
     }
 
     final static void a(String param0, int param1, String param2) {
-        if (param1 != 32) {
-            return;
-        }
         try {
             if (!(h.field_L == null)) {
                 h.field_L.m(-7435);
@@ -389,7 +381,7 @@ final class cb extends br {
             b.field_c = new qm(param2, param0, false, true, true);
             wj.field_i.a((cf) (Object) b.field_c, (byte) -110);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "cb.G(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "cb.G(" + (param0 != null ? "{...}" : "null") + 44 + 32 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -420,7 +412,7 @@ final class cb extends br {
         }
     }
 
-    private final void a(byte param0) {
+    private final void a() {
         int var2 = 0;
         ja var3 = null;
         ja var4 = null;

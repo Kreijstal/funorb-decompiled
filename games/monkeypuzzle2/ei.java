@@ -5,7 +5,7 @@ final class ei {
     static java.awt.Image field_b;
     static int field_a;
 
-    final static cd a(java.applet.Applet param0, byte param1) {
+    final static cd a(java.applet.Applet param0) {
         String var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -99,7 +99,7 @@ final class ei {
         return stackIn_13_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
     }
 
@@ -122,13 +122,14 @@ final class ei {
             }
             var1 = gf.field_c;
             L2: while (true) {
-              if (!kj.m(0)) {
+              int discarded$9 = 0;
+              if (!kj.m()) {
                 break L0;
               } else {
                 var1.b(true, 8);
-                int fieldTemp$5 = var1.field_h + 1;
+                int fieldTemp$10 = var1.field_h + 1;
                 var1.field_h = var1.field_h + 1;
-                var2 = fieldTemp$5;
+                var2 = fieldTemp$10;
                 nf.a(param0 ^ -93, var1);
                 gf.field_c.a(var1.field_h + -var2, (byte) 31);
                 continue L2;
@@ -184,7 +185,7 @@ final class ei {
           L0: {
             var7 = param0.b(255, param3, param4);
             var5 = var7;
-            var6 = 16 / ((param1 - 67) / 42);
+            var6 = 16;
             if (var7 != null) {
               stackOut_3_0 = new lg(new gk(var7), param2);
               stackIn_4_0 = stackOut_3_0;
@@ -223,7 +224,7 @@ final class ei {
           }
           L2: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param1).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(115).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;

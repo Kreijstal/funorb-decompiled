@@ -202,7 +202,7 @@ final class ta {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void a(boolean param0) {
         L0: {
           if (!ol.a(-104)) {
             break L0;
@@ -212,34 +212,24 @@ final class ta {
           }
         }
         di.a(false, param0);
-        if (!f.field_C) {
-          ml.a((byte) 99, param0);
-          if (param1 < 38) {
-            field_c = null;
-            return;
-          } else {
-            return;
-          }
-        } else {
+        if (f.field_C) {
           gf.h(n.field_h.field_d.field_hb, n.field_h.field_d.field_db, n.field_h.field_d.field_K, n.field_h.field_d.field_mb);
           n.field_h.field_d.b(param0, -68);
           ml.a((byte) 99, param0);
-          if (param1 >= 38) {
-            return;
-          } else {
-            field_c = null;
-            return;
-          }
+          return;
+        } else {
+          ml.a((byte) 99, param0);
+          return;
         }
     }
 
-    final static nk c(byte param0) {
+    final static nk c() {
         nk var1 = new nk(tk.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], mc.field_s[0], cm.field_g[0], hd.field_q[0], eo.field_fb);
         pd.a(0);
         return var1;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         field_d = null;
@@ -248,53 +238,33 @@ final class ta {
     }
 
     final static boolean a(int param0) {
-        int var1 = 94 / ((param0 - -29) / 49);
+        int var1 = 94;
         return fj.field_s == ue.field_a ? true : false;
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         byte[] var1 = null;
         byte[] var2 = null;
-        if (param0 == -69) {
-          if (w.d(true)) {
-            return;
-          } else {
-            if (de.field_j != -1) {
-              if (de.field_j == uc.field_A) {
-                return;
-              } else {
-                var2 = new byte[2];
-                var1 = var2;
-                var2[0] = (byte) 0;
-                var2[1] = (byte)de.field_j;
-                fk discarded$2 = r.a(var2, (byte) -78, 6);
-                uc.field_A = de.field_j;
-                return;
-              }
-            } else {
-              return;
-            }
-          }
+        int discarded$12 = 1;
+        if (w.d()) {
+          return;
         } else {
-          ta.a(true, -56);
-          if (w.d(true)) {
-            return;
-          } else {
-            if (de.field_j != -1) {
-              if (de.field_j == uc.field_A) {
-                return;
-              } else {
-                var2 = new byte[2];
-                var1 = var2;
-                var2[0] = (byte) 0;
-                var2[1] = (byte)de.field_j;
-                fk discarded$3 = r.a(var2, (byte) -78, 6);
-                uc.field_A = de.field_j;
-                return;
-              }
+          if (de.field_j != -1) {
+            if (de.field_j == uc.field_A) {
+              return;
             } else {
+              var2 = new byte[2];
+              var1 = var2;
+              var2[0] = (byte) 0;
+              var2[1] = (byte)de.field_j;
+              int discarded$13 = 6;
+              int discarded$14 = -78;
+              fk discarded$15 = r.a(var2);
+              uc.field_A = de.field_j;
               return;
             }
+          } else {
+            return;
           }
         }
     }
@@ -311,8 +281,9 @@ final class ta {
         } else {
           gr.field_o = param1;
           br.field_m = param0;
-          if (!nh.a((byte) -94, vr.field_c)) {
+          if (nh.a((byte) -94, vr.field_c)) {
             L0: {
+              mj.field_Hb[vr.field_c].a(-30492, gr.field_o);
               if (!nh.a((byte) -73, gr.field_o)) {
                 break L0;
               } else {
@@ -330,15 +301,9 @@ final class ta {
               }
             }
             eh.field_Q = 0;
-            if (param2 != 96) {
-              ta.b((byte) 9);
-              return;
-            } else {
-              return;
-            }
+            return;
           } else {
             L2: {
-              mj.field_Hb[vr.field_c].a(-30492, gr.field_o);
               if (!nh.a((byte) -73, gr.field_o)) {
                 break L2;
               } else {
@@ -356,12 +321,7 @@ final class ta {
               }
             }
             eh.field_Q = 0;
-            if (param2 == 96) {
-              return;
-            } else {
-              ta.b((byte) 9);
-              return;
-            }
+            return;
           }
         }
     }

@@ -28,7 +28,7 @@ final class cd extends ea implements Cloneable {
         return ln.field_d;
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_u = null;
         field_v = null;
         field_A = null;
@@ -307,17 +307,9 @@ final class cd extends ea implements Cloneable {
                 }
               }
               L3: {
-                if (param14 == 2) {
-                  break L3;
-                } else {
-                  cd.e((byte) -92);
-                  break L3;
-                }
-              }
-              L4: {
                 var34 = param4 - param2;
                 if (~param2 == ~param8) {
-                  L5: {
+                  L4: {
                     if (param2 == param4) {
                       var24 = 0;
                       var28 = 0;
@@ -335,7 +327,7 @@ final class cd extends ea implements Cloneable {
                       var21 = param10;
                       var32 = 0;
                       var18 = param13 << 16;
-                      break L5;
+                      break L4;
                     } else {
                       var35 = param4 + -param8;
                       if (~param13 < ~param0) {
@@ -355,7 +347,7 @@ final class cd extends ea implements Cloneable {
                         var32 = (-param3 + param1 << 16) / var35;
                         var24 = (param12 + -param5 << 16) / var35;
                         var28 = (param11 - param9 << 16) / var35;
-                        break L5;
+                        break L4;
                       } else {
                         var24 = (-param10 + param12 << 16) / var34;
                         var29 = param3 << 16;
@@ -373,11 +365,11 @@ final class cd extends ea implements Cloneable {
                         var25 = param9 << 16;
                         var28 = (param11 - param16 << 16) / var34;
                         var22 = param10 << 16;
-                        break L5;
+                        break L4;
                       }
                     }
                   }
-                  L6: {
+                  L5: {
                     if (param2 < 0) {
                       param2 = Math.min(-param2, param8 - param2);
                       var25 = var25 + var27 * param2;
@@ -389,15 +381,15 @@ final class cd extends ea implements Cloneable {
                       var17_int = var17_int + var19 * param2;
                       var26 = var26 + param2 * var28;
                       param2 = 0;
-                      break L6;
+                      break L5;
                     } else {
-                      break L6;
+                      break L5;
                     }
                   }
                   var33 = 0;
-                  break L4;
+                  break L3;
                 } else {
-                  L7: {
+                  L6: {
                     var26 = param16 << 16;
                     var25 = param16 << 16;
                     var18 = param0 << 16;
@@ -420,7 +412,7 @@ final class cd extends ea implements Cloneable {
                       var36 = var19;
                       var19 = var20;
                       var20 = var36;
-                      break L7;
+                      break L6;
                     } else {
                       var33 = 0;
                       var27 = (param9 + -param16 << 16) / var35;
@@ -429,13 +421,13 @@ final class cd extends ea implements Cloneable {
                       var23 = (-param10 + param5 << 16) / var35;
                       var24 = (param12 + -param10 << 16) / var34;
                       var28 = (param11 - param16 << 16) / var34;
-                      break L7;
+                      break L6;
                     }
                   }
-                  L8: {
-                    L9: {
+                  L7: {
+                    L8: {
                       if (param2 >= 0) {
-                        break L9;
+                        break L8;
                       } else {
                         if (param8 < 0) {
                           param2 = param8 + -param2;
@@ -448,7 +440,7 @@ final class cd extends ea implements Cloneable {
                           var18 = var18 + var20 * param2;
                           var22 = var22 + param2 * var24;
                           param2 = param8;
-                          break L8;
+                          break L7;
                         } else {
                           param2 = -param2;
                           var25 = var25 + param2 * var27;
@@ -460,49 +452,49 @@ final class cd extends ea implements Cloneable {
                           var29 = var29 + var31 * param2;
                           var26 = var26 + param2 * var28;
                           param2 = 0;
-                          break L9;
+                          break L8;
                         }
                       }
                     }
                     var36 = nb.field_a[param2];
-                    L10: while (true) {
+                    L9: while (true) {
                       if (~param2 <= ~param8) {
-                        break L8;
+                        break L7;
                       } else {
-                        L11: {
+                        L10: {
                           var37 = var17_int >> 16;
                           if (~var37 <= ~nb.field_d) {
-                            break L11;
+                            break L10;
                           } else {
                             var38 = (var18 >> 16) - (var17_int >> 16);
                             if (var38 != 0) {
-                              L12: {
+                              L11: {
                                 var39 = (var22 - var21) / var38;
                                 var40 = (-var25 + var26) / var38;
                                 var41 = (-var29 + var30) / var38;
                                 if (var37 - -var38 < nb.field_d) {
-                                  break L12;
+                                  break L11;
                                 } else {
                                   var38 = -1 + nb.field_d - var37;
-                                  break L12;
+                                  break L11;
                                 }
                               }
                               if (var37 < 0) {
                                 w.a(-(var39 * var37) + var21, (byte) -52, param15, var40, -(var37 * var40) + var25, var41, var39, var29 - var41 * var37, var37 + var38, var36);
-                                break L11;
+                                break L10;
                               } else {
                                 w.a(var21, (byte) -52, param15, var40, var25, var41, var39, var29, var38, var37 + var36);
-                                break L11;
+                                break L10;
                               }
                             } else {
                               if (var37 < 0) {
-                                break L11;
+                                break L10;
                               } else {
                                 if (~var37 > ~nb.field_d) {
                                   w.a(var21, (byte) -52, param15, 0, var25, 0, 0, var29, var38, var37 + var36);
-                                  break L11;
+                                  break L10;
                                 } else {
-                                  break L11;
+                                  break L10;
                                 }
                               }
                             }
@@ -521,7 +513,7 @@ final class cd extends ea implements Cloneable {
                           var36 = var36 + kh.field_l;
                           var26 = var26 + var28;
                           var21 = var21 + var23;
-                          continue L10;
+                          continue L9;
                         }
                       }
                     }
@@ -536,9 +528,9 @@ final class cd extends ea implements Cloneable {
                     var32 = 0;
                     var27 = 0;
                     var23 = 0;
-                    break L4;
+                    break L3;
                   } else {
-                    L13: {
+                    L12: {
                       var37 = param6 << 16;
                       var38 = param12 << 16;
                       var39 = param11 << 16;
@@ -547,13 +539,13 @@ final class cd extends ea implements Cloneable {
                         var21 = param5 << 16;
                         var17_int = param13 << 16;
                         var25 = param9 << 16;
-                        break L13;
+                        break L12;
                       } else {
                         var30 = param3 << 16;
                         var18 = param13 << 16;
                         var26 = param9 << 16;
                         var22 = param5 << 16;
-                        break L13;
+                        break L12;
                       }
                     }
                     var40 = param1 << 16;
@@ -565,13 +557,13 @@ final class cd extends ea implements Cloneable {
                     var20 = (var37 - var18) / var36;
                     var27 = (-var25 + var39) / var36;
                     var23 = (-var21 + var38) / var36;
-                    break L4;
+                    break L3;
                   }
                 }
               }
-              L14: {
+              L13: {
                 if (param2 >= 0) {
-                  break L14;
+                  break L13;
                 } else {
                   param2 = -param2;
                   var30 = var30 + var32 * param2;
@@ -583,49 +575,49 @@ final class cd extends ea implements Cloneable {
                   var22 = var22 + var24 * param2;
                   var26 = var26 + var28 * param2;
                   param2 = 0;
-                  break L14;
+                  break L13;
                 }
               }
               var35 = nb.field_a[param2];
-              L15: while (true) {
+              L14: while (true) {
                 if (~param4 >= ~param2) {
                   return;
                 } else {
-                  L16: {
+                  L15: {
                     var36 = var17_int >> 16;
                     if (var36 >= nb.field_d) {
-                      break L16;
+                      break L15;
                     } else {
                       var37 = (var18 >> 16) + -(var17_int >> 16);
                       if (var37 == 0) {
                         if (var36 < 0) {
-                          break L16;
+                          break L15;
                         } else {
                           if (var36 < nb.field_d) {
                             w.a(var21, (byte) -52, param15, 0, var25, 0, 0, var29, var37, var35 + var36);
-                            break L16;
+                            break L15;
                           } else {
-                            break L16;
+                            break L15;
                           }
                         }
                       } else {
-                        L17: {
+                        L16: {
                           var38 = (-var21 + var22) / var37;
                           var39 = (-var25 + var26) / var37;
                           var40 = (var30 + -var29) / var37;
                           if (var36 - -var37 < nb.field_d) {
-                            break L17;
+                            break L16;
                           } else {
                             var37 = nb.field_d + (-var36 + -1);
-                            break L17;
+                            break L16;
                           }
                         }
                         if (var36 < 0) {
                           w.a(var21 + -(var36 * var38), (byte) -52, param15, var39, -(var39 * var36) + var25, var40, var38, -(var36 * var40) + var29, var37 + var36, var35);
-                          break L16;
+                          break L15;
                         } else {
                           w.a(var21, (byte) -52, param15, var39, var25, var40, var38, var29, var37, var35 + var36);
-                          break L16;
+                          break L15;
                         }
                       }
                     }
@@ -641,7 +633,7 @@ final class cd extends ea implements Cloneable {
                     var26 = var26 + var28;
                     var17_int = var17_int + var19;
                     var18 = var18 + var20;
-                    continue L15;
+                    continue L14;
                   } else {
                     return;
                   }
@@ -742,11 +734,12 @@ final class cd extends ea implements Cloneable {
                 break L1;
               } else {
                 var3 = null;
-                boolean discarded$2 = cd.a((CharSequence) null, (byte) 47);
+                boolean discarded$4 = cd.a((CharSequence) null, (byte) 47);
                 break L1;
               }
             }
-            stackOut_2_0 = wi.a(48, 10, param0, true);
+            int discarded$5 = 1;
+            stackOut_2_0 = wi.a(48, 10, param0);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

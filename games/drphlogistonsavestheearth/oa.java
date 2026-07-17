@@ -38,9 +38,9 @@ final class oa implements Iterator {
     final static boolean a(byte param0, int param1, int param2, boolean param3) {
         int var4 = 0;
         int var5 = 0;
-        int stackIn_36_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_34_0 = 0;
+        int stackIn_32_0 = 0;
+        int stackOut_31_0 = 0;
+        int stackOut_30_0 = 0;
         if (!param3) {
           if (kf.field_c[param2] >= kf.field_c[param1]) {
             if (kf.field_c[param1] >= kf.field_c[param2]) {
@@ -52,14 +52,10 @@ final class oa implements Iterator {
                   var5 = qj.field_d[param1] + (fi.field_h[param1] - -kk.field_a[param1]);
                   if (var5 <= var4) {
                     if (var4 <= var5) {
-                      if (param0 > 56) {
-                        if (param2 >= param1) {
-                          return false;
-                        } else {
-                          return true;
-                        }
-                      } else {
+                      if (param2 >= param1) {
                         return false;
+                      } else {
+                        return true;
                       }
                     } else {
                       return false;
@@ -85,25 +81,21 @@ final class oa implements Iterator {
                   var4 = qj.field_d[param2] + fi.field_h[param2] + kk.field_a[param2];
                   var5 = qj.field_d[param1] + (fi.field_h[param1] - -kk.field_a[param1]);
                   if (var5 <= var4) {
-                    if (var4 <= var5) {
-                      if (param0 <= 56) {
-                        return false;
-                      } else {
-                        L0: {
-                          if (param2 >= param1) {
-                            stackOut_35_0 = 0;
-                            stackIn_36_0 = stackOut_35_0;
-                            break L0;
-                          } else {
-                            stackOut_34_0 = 1;
-                            stackIn_36_0 = stackOut_34_0;
-                            break L0;
-                          }
-                        }
-                        return stackIn_36_0 != 0;
-                      }
-                    } else {
+                    if (var4 > var5) {
                       return false;
+                    } else {
+                      L0: {
+                        if (param2 >= param1) {
+                          stackOut_31_0 = 0;
+                          stackIn_32_0 = stackOut_31_0;
+                          break L0;
+                        } else {
+                          stackOut_30_0 = 1;
+                          stackIn_32_0 = stackOut_30_0;
+                          break L0;
+                        }
+                      }
+                      return stackIn_32_0 != 0;
                     }
                   } else {
                     return true;
@@ -123,7 +115,7 @@ final class oa implements Iterator {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
     }

@@ -466,12 +466,12 @@ final class cw {
 
     private final void a(boolean param0, oga param1) {
         try {
-            param1.field_h = param0 ? true : false;
+            param1.field_h = false;
             param1.d((byte) -71);
             param1.p(72);
             this.b(64);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "cw.H(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "cw.H(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

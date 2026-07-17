@@ -10,7 +10,7 @@ final class bf {
     private bg field_c;
     static String field_f;
 
-    final static void b(byte param0) {
+    final static void b() {
         Object var1 = null;
         int var2 = 0;
         Throwable var3 = null;
@@ -97,7 +97,7 @@ final class bf {
         }
     }
 
-    final static jb a(int[] param0, jb param1, int param2) {
+    final static jb a(int[] param0, jb param1) {
         jb var3 = null;
         RuntimeException var3_ref = null;
         jb stackIn_1_0 = null;
@@ -135,7 +135,7 @@ final class bf {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var3 = new jb(param2, 0, 0);
+            var3 = new jb(0, 0, 0);
             var3.field_h = param1.field_h;
             var3.field_e = param1.field_e;
             var3.field_c = param1.field_c;
@@ -201,7 +201,7 @@ final class bf {
               break L2;
             }
           }
-          throw ld.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param2 + 41);
+          throw ld.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 0 + 41);
         }
         return stackIn_1_0;
     }
@@ -283,28 +283,26 @@ final class bf {
         gj var6_ref = null;
         int var7 = Lexicominos.field_L ? 1 : 0;
         try {
-            if (((bf) this).field_e < param2) {
+            if (((bf) this).field_e < 1) {
                 throw new IllegalStateException();
             }
-            this.b(param0, 111);
-            ((bf) this).field_d = ((bf) this).field_d - param2;
+            int discarded$0 = 111;
+            this.b(param0);
+            ((bf) this).field_d = ((bf) this).field_d - 1;
             while (((bf) this).field_d < 0) {
                 var6 = (rh) (Object) ((bf) this).field_c.b((byte) 112);
                 this.a(var6, (byte) 9);
             }
-            var6_ref = new gj(param3, param2);
+            var6_ref = new gj(param3, 1);
             ((bf) this).field_b.a((kd) (Object) var6_ref, 1, param0);
             ((bf) this).field_c.a((ca) (Object) var6_ref, (byte) 25);
-            if (param1 != 62) {
-                bf.a((byte) 17);
-            }
             ((rh) (Object) var6_ref).field_j = 0L;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) (Object) runtimeException, "bf.G(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw ld.a((Throwable) (Object) runtimeException, "bf.G(" + param0 + 44 + 62 + 44 + 1 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
-    private final void b(long param0, int param1) {
+    private final void b(long param0) {
         rh var4 = (rh) (Object) ((bf) this).field_b.a((byte) 42, param0);
         this.a(var4, (byte) 9);
     }
@@ -313,13 +311,9 @@ final class bf {
         throw new Error();
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_f = null;
-        if (param0 > -51) {
-            Object var2 = null;
-            jb discarded$0 = bf.a((int[]) null, (jb) null, 69);
-        }
     }
 
     private final void a(rh param0, byte param1) {

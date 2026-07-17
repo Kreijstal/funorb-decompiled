@@ -101,93 +101,54 @@ final class uj {
         return stackIn_12_0;
     }
 
-    final static String a(long param0, int param1) {
+    final static String a(long param0) {
         int var3 = 0;
         long var4 = 0L;
+        StringBuilder var6 = null;
         long var7 = 0L;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        StringBuilder var12 = null;
-        StringBuilder var13 = null;
         var11 = DungeonAssault.field_K;
         if (param0 > 0L) {
           if (6582952005840035281L > param0) {
-            if (param0 % 37L != 0L) {
-              if (param1 != -1) {
-                field_d = -60;
-                var3 = 0;
-                var4 = param0;
-                L0: while (true) {
-                  if (var4 == 0L) {
-                    var12 = new StringBuilder(var3);
-                    L1: while (true) {
-                      if (0L == param0) {
-                        StringBuilder discarded$4 = var12.reverse();
-                        var12.setCharAt(0, Character.toUpperCase(var12.charAt(0)));
-                        return var12.toString();
-                      } else {
-                        L2: {
-                          var7 = param0;
-                          param0 = param0 / 37L;
-                          var9 = ak.field_j[(int)(-(param0 * 37L) + var7)];
-                          if (var9 != 95) {
-                            break L2;
-                          } else {
-                            var10 = -1 + var12.length();
-                            var12.setCharAt(var10, Character.toUpperCase(var12.charAt(var10)));
-                            var9 = 160;
-                            break L2;
-                          }
+            if (param0 % 37L == 0L) {
+              return null;
+            } else {
+              var3 = 0;
+              var4 = param0;
+              L0: while (true) {
+                if (var4 == 0L) {
+                  var6 = new StringBuilder(var3);
+                  L1: while (true) {
+                    if (0L == param0) {
+                      StringBuilder discarded$2 = var6.reverse();
+                      var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
+                      return var6.toString();
+                    } else {
+                      L2: {
+                        var7 = param0;
+                        param0 = param0 / 37L;
+                        var9 = ak.field_j[(int)(-(param0 * 37L) + var7)];
+                        if (var9 != 95) {
+                          break L2;
+                        } else {
+                          var10 = -1 + var6.length();
+                          var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));
+                          var9 = 160;
+                          break L2;
                         }
-                        StringBuilder discarded$5 = var12.append(var9);
-                        continue L1;
                       }
+                      StringBuilder discarded$3 = var6.append(var9);
+                      continue L1;
                     }
-                  } else {
-                    var4 = var4 / 37L;
-                    var3++;
-                    continue L0;
                   }
-                }
-              } else {
-                var3 = 0;
-                var4 = param0;
-                L3: while (true) {
-                  if (var4 == 0L) {
-                    var13 = new StringBuilder(var3);
-                    L4: while (true) {
-                      if (0L == param0) {
-                        StringBuilder discarded$6 = var13.reverse();
-                        var13.setCharAt(0, Character.toUpperCase(var13.charAt(0)));
-                        return var13.toString();
-                      } else {
-                        L5: {
-                          var7 = param0;
-                          param0 = param0 / 37L;
-                          var9 = ak.field_j[(int)(-(param0 * 37L) + var7)];
-                          if (var9 != 95) {
-                            break L5;
-                          } else {
-                            var10 = -1 + var13.length();
-                            var13.setCharAt(var10, Character.toUpperCase(var13.charAt(var10)));
-                            var9 = 160;
-                            break L5;
-                          }
-                        }
-                        StringBuilder discarded$7 = var13.append(var9);
-                        continue L4;
-                      }
-                    }
-                  } else {
-                    var4 = var4 / 37L;
-                    var3++;
-                    continue L3;
-                  }
+                } else {
+                  var4 = var4 / 37L;
+                  var3++;
+                  continue L0;
                 }
               }
-            } else {
-              return null;
             }
           } else {
             return null;
@@ -197,14 +158,14 @@ final class uj {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         field_e = null;
         field_b = null;
     }
 
-    final static void a(en param0, int param1) {
+    final static void a(en param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

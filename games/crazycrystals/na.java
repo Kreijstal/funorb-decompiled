@@ -309,7 +309,8 @@ class na extends ud implements vd {
             ((na) this).i((byte) -65);
             return;
           } else {
-            vo.a(31251, "tochangedisplayname.ws", le.b((byte) -20));
+            int discarded$2 = -20;
+            vo.a(31251, "tochangedisplayname.ws", le.b());
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -454,25 +455,26 @@ class na extends ud implements vd {
               return;
             } else {
               var3 = null;
-              int discarded$6 = na.a((eb) null, false, 44);
+              int discarded$10 = na.a((eb) null, false, 44);
               return;
             }
           } else {
             if (!((na) this).field_db) {
               if (param0 > -9) {
                 var3 = null;
-                int discarded$7 = na.a((eb) null, false, 44);
+                int discarded$11 = na.a((eb) null, false, 44);
                 return;
               } else {
                 return;
               }
             } else {
-              mo.a((byte) -103);
+              int discarded$12 = -103;
+              mo.a();
               if (param0 <= -9) {
                 return;
               } else {
                 var3 = null;
-                int discarded$8 = na.a((eb) null, false, 44);
+                int discarded$13 = na.a((eb) null, false, 44);
                 return;
               }
             }

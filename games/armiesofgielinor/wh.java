@@ -198,7 +198,7 @@ final class wh {
         return stackIn_16_0 != 0;
     }
 
-    final static boolean a(kl param0, int param1) {
+    final static boolean a(kl param0) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
@@ -257,7 +257,7 @@ final class wh {
         return stackIn_3_0;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
         field_g = null;
         field_d = null;
@@ -266,7 +266,7 @@ final class wh {
         field_h = null;
     }
 
-    final static String[][][] a(int param0) {
+    final static String[][][] a() {
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -277,7 +277,6 @@ final class wh {
         int var8 = 0;
         int var9 = 0;
         String var10 = null;
-        String var11 = null;
         var8 = ArmiesOfGielinor.field_M ? 1 : 0;
         var2 = 38;
         var1 = fd.field_n.length;
@@ -298,10 +297,11 @@ final class wh {
                     var5++;
                     continue L0;
                   } else {
+                    var7 = var4[var5][var9][0];
+                    int discarded$1 = 15;
+                    var4[var5][var9][0] = jf.a(var4[var5], var9, var7, var5);
                     var10 = var4[var5][var9][0];
-                    var4[var5][var9][0] = jf.a(var4[var5], var9, var10, var5, (byte) 15);
-                    var11 = var4[var5][var9][0];
-                    var4[var5][var9] = od.a(-16399, var11);
+                    var4[var5][var9] = od.a(-16399, var10);
                     if (null != var4[var5][var9]) {
                       var9++;
                       var9++;
@@ -309,7 +309,7 @@ final class wh {
                       continue L2;
                     } else {
                       var4[var5][var9] = new String[1];
-                      var4[var5][var9][0] = var11;
+                      var4[var5][var9][0] = var10;
                       var9++;
                       var9++;
                       continue L2;

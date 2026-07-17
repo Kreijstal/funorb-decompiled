@@ -13,14 +13,14 @@ final class ec implements Runnable {
     static String field_e;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         field_a = null;
         field_e = null;
     }
 
-    final static void a(ih param0, boolean param1) {
+    final static void a(ih param0) {
         try {
             RuntimeException var2 = null;
             int var3 = 0;
@@ -315,17 +315,14 @@ final class ec implements Runnable {
         }
     }
 
-    final static void a(hg param0, byte param1, int param2) {
+    final static void a(hg param0) {
         ih var3 = ud.field_b;
-        var3.e(8, param2);
-        if (param1 != 30) {
-            return;
-        }
+        var3.e(8, 7);
         try {
             var3.a(-11, param0.field_m);
             var3.a(-11, param0.field_j);
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "ec.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "ec.B(" + (param0 != null ? "{...}" : "null") + 44 + 30 + 44 + 7 + 41);
         }
     }
 

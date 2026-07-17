@@ -291,7 +291,7 @@ final class j extends nm {
         }
     }
 
-    private final lj g(int param0) {
+    private final lj g() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -805,7 +805,7 @@ final class j extends nm {
         return stackIn_97_0;
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_jb = null;
     }
 
@@ -830,7 +830,8 @@ final class j extends nm {
         try {
           L0: {
             L1: {
-              ((j) this).field_lb = param0[aa.a(param0.length, ((j) this).field_B, true)];
+              int discarded$2 = 1;
+              ((j) this).field_lb = param0[aa.a(param0.length, ((j) this).field_B)];
               if (param1 == 75) {
                 break L1;
               } else {
@@ -997,7 +998,8 @@ final class j extends nm {
                                               break L8;
                                             }
                                           }
-                                          kj.a(stackIn_30_0, ((j) this).field_z[2], 16);
+                                          int discarded$2 = 16;
+                                          kj.a(stackIn_30_0, ((j) this).field_z[2]);
                                           break L0;
                                         } else {
                                           ((j) this).field_o[var10] = (byte)param1.l(255);
@@ -1060,7 +1062,7 @@ final class j extends nm {
                   }
                 }
               } else {
-                int discarded$1 = ((j) this).e(118);
+                int discarded$3 = ((j) this).e(118);
                 var4_int++;
                 continue L1;
               }
@@ -1248,14 +1250,11 @@ final class j extends nm {
             ((j) this).field_t = 0;
             ((j) this).field_m = 0;
         }
-        ((j) this).field_yb.f(param0 ^ 85);
+        ((j) this).field_yb.f(0);
         ((j) this).field_K.c((byte) -82);
         ((j) this).field_K.a((nm) (Object) new vn(((j) this).field_yb, param2, 1536), (byte) 3);
         ((j) this).field_pb.c((byte) -92);
         ((j) this).field_gb.c((byte) -88);
-        if (param0 != 85) {
-            ((j) this).field_j = 84;
-        }
     }
 
     final void a(int param0, boolean param1) {
@@ -1280,9 +1279,9 @@ final class j extends nm {
               if (((j) this).field_w == null) {
                 break L1;
               } else {
-                int fieldTemp$3 = ((j) this).field_w.field_m + 1;
+                int fieldTemp$5 = ((j) this).field_w.field_m + 1;
                 ((j) this).field_w.field_m = ((j) this).field_w.field_m + 1;
-                if (fieldTemp$3 >= 100) {
+                if (fieldTemp$5 >= 100) {
                   break L1;
                 } else {
                   break L0;
@@ -1295,7 +1294,8 @@ final class j extends nm {
           }
           L2: {
             if (((j) this).field_D == null) {
-              ((j) this).field_D = this.g(-99);
+              int discarded$6 = -99;
+              ((j) this).field_D = this.g();
               break L2;
             } else {
               ((j) this).field_D.field_m = ((j) this).field_D.field_m + 1;

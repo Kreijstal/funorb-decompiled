@@ -610,7 +610,7 @@ final class re {
         }
     }
 
-    final static void f(byte param0) {
+    final static void f() {
         RuntimeException runtimeException = null;
         int var2 = 0;
         wj var3_ref_wj = null;

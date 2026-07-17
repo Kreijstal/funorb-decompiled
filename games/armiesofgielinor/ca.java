@@ -176,22 +176,19 @@ final class ca implements uo {
         }
     }
 
-    final static void a(java.awt.Component param0, int param1, hd param2, boolean param3, int param4, nm param5, int param6, int param7) {
+    final static void a(java.awt.Component param0, int param1, hd param2, boolean param3, int param4, nm param5) {
         try {
-            rc.a(param7, param3, 10);
-            l.field_a = rc.a(param2, param0, 0, param6);
-            mt.field_e = rc.a(param2, param0, 1, param1);
+            rc.a(22050, true, 10);
+            l.field_a = rc.a(param2, param0, 0, 22050);
+            mt.field_e = rc.a(param2, param0, 1, 1024);
             ig.field_n = new uv();
-            ku.field_K = param1;
-            if (param4 >= -38) {
-                field_a = null;
-            }
+            ku.field_K = 1024;
             mt.field_e.b((hn) (Object) ig.field_n);
             lk.field_e = param5;
             lk.field_e.b(te.field_n, -120);
             l.field_a.b((hn) (Object) lk.field_e);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "ca.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 44 + param7 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "ca.F(" + (param0 != null ? "{...}" : "null") + 44 + 1024 + 44 + (param2 != null ? "{...}" : "null") + 44 + 1 + 44 + -115 + 44 + (param5 != null ? "{...}" : "null") + 44 + 22050 + 44 + 22050 + 41);
         }
     }
 

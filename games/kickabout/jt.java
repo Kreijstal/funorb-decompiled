@@ -20,33 +20,26 @@ final class jt extends hd implements lv {
         return 120;
     }
 
-    public static void h(byte param0) {
+    public static void h() {
         field_Bb = null;
     }
 
-    final static wd a(int param0, byte param1, int param2, int param3) {
+    final static wd a() {
         wd var4 = null;
         int var5 = 0;
-        Object var6 = null;
         var5 = Kickabout.field_G;
-        var4 = (wd) (Object) ak.field_i.g(param1 + 23909);
+        var4 = (wd) (Object) ak.field_i.g(24009);
         L0: while (true) {
           if (var4 == null) {
             var4 = new wd();
-            var4.field_p = param0;
-            var4.field_k = param2;
+            var4.field_p = 10;
+            var4.field_k = 0;
             ak.field_i.a((gn) (Object) var4, 3);
-            if (param1 != 100) {
-              var6 = null;
-              boolean discarded$2 = jt.a((nu) null, (byte) 12, -47, -89);
-              vg.a(true, var4, 7);
-              return var4;
-            } else {
-              vg.a(true, var4, 7);
-              return var4;
-            }
+            int discarded$2 = 7;
+            vg.a(true, var4);
+            return var4;
           } else {
-            if (var4.field_k != param2) {
+            if (var4.field_k != 0) {
               var4 = (wd) (Object) ak.field_i.c(33);
               continue L0;
             } else {

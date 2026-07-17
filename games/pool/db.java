@@ -375,23 +375,13 @@ final class db extends vh {
         }
     }
 
-    public static void h(byte param0) {
-        Object var2 = null;
+    public static void h() {
         field_Wb = null;
         field_Sb = null;
         field_Nb = null;
         field_Ub = null;
-        if (param0 < 12) {
-          var2 = null;
-          db.a(-122, (eg) null);
-          field_Qb = null;
-          field_Vb = null;
-          return;
-        } else {
-          field_Qb = null;
-          field_Vb = null;
-          return;
-        }
+        field_Qb = null;
+        field_Vb = null;
     }
 
     final int a(boolean param0, int param1, int param2, int param3) {
@@ -489,11 +479,7 @@ final class db extends vh {
         }
     }
 
-    final static vh f(byte param0) {
-        if (param0 != 13) {
-            db.h((byte) -72);
-            return cp.field_c.field_Mb;
-        }
+    final static vh f() {
         return cp.field_c.field_Mb;
     }
 
@@ -754,62 +740,17 @@ final class db extends vh {
     }
 
     final static void a(int param0, boolean param1) {
-        vn stackIn_4_0 = null;
-        vn stackIn_8_0 = null;
-        vn stackOut_7_0 = null;
-        vn stackOut_6_0 = null;
-        vn stackOut_3_0 = null;
-        vn stackOut_2_0 = null;
-        if (param0 != 27194) {
-          L0: {
-            vh discarded$1 = db.f((byte) 19);
-            if (param1) {
-              stackOut_7_0 = new vn(je.field_b, v.field_j);
-              stackIn_8_0 = stackOut_7_0;
-              break L0;
-            } else {
-              stackOut_6_0 = new vn(mm.field_l, cl.field_d);
-              stackIn_8_0 = stackOut_6_0;
-              break L0;
-            }
-          }
-          na.field_e = stackIn_8_0;
-          so.field_k = new vh(0L, (vh) null);
-          so.field_k.a(64, (vh) (Object) na.field_e.field_i);
-          so.field_k.a(-96, ok.field_ob);
-          de.field_b = new vh(0L, tq.field_m);
-          aa.field_b = new vh(0L, (vh) null);
-          de.field_b.a(param0 ^ -27208, Pool.field_P);
-          de.field_b.a(68, aa.field_b);
-          aa.field_b.a(-96, c.field_e);
-          aa.field_b.a(90, ba.field_vb);
-          al.a(param1, 0);
-          return;
-        } else {
-          L1: {
-            if (param1) {
-              stackOut_3_0 = new vn(je.field_b, v.field_j);
-              stackIn_4_0 = stackOut_3_0;
-              break L1;
-            } else {
-              stackOut_2_0 = new vn(mm.field_l, cl.field_d);
-              stackIn_4_0 = stackOut_2_0;
-              break L1;
-            }
-          }
-          na.field_e = stackIn_4_0;
-          so.field_k = new vh(0L, (vh) null);
-          so.field_k.a(64, (vh) (Object) na.field_e.field_i);
-          so.field_k.a(-96, ok.field_ob);
-          de.field_b = new vh(0L, tq.field_m);
-          aa.field_b = new vh(0L, (vh) null);
-          de.field_b.a(param0 ^ -27208, Pool.field_P);
-          de.field_b.a(68, aa.field_b);
-          aa.field_b.a(-96, c.field_e);
-          aa.field_b.a(90, ba.field_vb);
-          al.a(param1, 0);
-          return;
-        }
+        na.field_e = !param1 ? new vn(mm.field_l, cl.field_d) : new vn(je.field_b, v.field_j);
+        so.field_k = new vh(0L, (vh) null);
+        so.field_k.a(64, (vh) (Object) na.field_e.field_i);
+        so.field_k.a(-96, ok.field_ob);
+        de.field_b = new vh(0L, tq.field_m);
+        aa.field_b = new vh(0L, (vh) null);
+        de.field_b.a(-126, Pool.field_P);
+        de.field_b.a(68, aa.field_b);
+        aa.field_b.a(-96, c.field_e);
+        aa.field_b.a(90, ba.field_vb);
+        al.a(param1, 0);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -829,7 +770,7 @@ final class db extends vh {
         }
     }
 
-    final static void a(byte param0, int param1) {
+    final static void a() {
         ma var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -844,14 +785,9 @@ final class db extends vh {
                 var2 = hb.field_j.c((byte) 87);
                 L2: while (true) {
                   if (var2 == null) {
-                    if (param0 == 58) {
-                      break L0;
-                    } else {
-                      field_Qb = null;
-                      return;
-                    }
+                    break L0;
                   } else {
-                    kp.a(param0 ^ 59, 4);
+                    kp.a(1, 4);
                     var2 = hb.field_j.f((byte) -5);
                     continue L2;
                   }
@@ -866,7 +802,7 @@ final class db extends vh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) var2_ref, "db.AA(" + param0 + 44 + 4 + 41);
+          throw wm.a((Throwable) (Object) var2_ref, "db.AA(" + 58 + 44 + 4 + 41);
         }
     }
 
@@ -990,14 +926,12 @@ final class db extends vh {
             var3 = param1.field_Y;
             int[] var2 = var3;
             param1.field_Y = param1.field_q;
-            if (param0 != 0) {
-                field_Vb = null;
-            }
             param1.field_q = var3;
-            jf.a(param1, (byte) 38);
+            int discarded$0 = 38;
+            jf.a(param1);
             param1.a();
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "db.DA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "db.DA(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

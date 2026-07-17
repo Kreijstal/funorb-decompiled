@@ -227,11 +227,8 @@ final class hc {
 
     final static void a(byte param0, gk param1) {
         int var2_int = 0;
-        if (param0 != 82) {
-            return;
-        }
         try {
-            qd.field_a = param1.j(param0 + 17195) << 5;
+            qd.field_a = param1.j(17277) << 5;
             var2_int = param1.a((byte) 114);
             qd.field_a = qd.field_a + (var2_int >> 3);
             de.field_m = (7 & var2_int) << 18;
@@ -245,7 +242,7 @@ final class hc {
             lk.field_a = lk.field_a + (var2_int >> 1);
             mk.field_i = mk.field_i + param1.j(17277);
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "hc.J(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw la.a((Throwable) (Object) runtimeException, "hc.J(" + 82 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -259,7 +256,7 @@ final class hc {
         return (hc) this;
     }
 
-    final static void a(long param0, byte param1) {
+    final static void a(long param0) {
         try {
             InterruptedException var3 = null;
             Throwable decompiledCaughtException = null;

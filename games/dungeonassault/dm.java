@@ -38,7 +38,7 @@ final class dm {
         }
     }
 
-    final static String a(int param0) {
+    final static String a() {
         String var1 = "";
         if (null != wo.field_e) {
             var1 = wo.field_e.a(-16);
@@ -46,7 +46,7 @@ final class dm {
         if (!(0 != var1.length())) {
             var1 = dc.a(-118);
         }
-        int var2 = 28 % ((-38 - param0) / 38);
+        int var2 = 0;
         if (!(0 != var1.length())) {
             var1 = fb.field_a;
         }
@@ -184,7 +184,7 @@ final class dm {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_g = null;
         field_b = null;
         field_d = null;

@@ -228,7 +228,7 @@ final class hg {
         }
     }
 
-    final static lb a(String param0, byte param1) {
+    final static lb a(String param0) {
         RuntimeException var2 = null;
         lb stackIn_7_0 = null;
         RuntimeException stackIn_9_0 = null;

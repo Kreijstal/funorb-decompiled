@@ -31,17 +31,9 @@ class go extends kg {
         var2 = 75 % ((-61 - param0) / 54);
     }
 
-    private final void h(byte param0) {
-        if (param0 > -33) {
-          field_E = null;
-          this.h(-1);
-          this.k((byte) 120);
-          return;
-        } else {
-          this.h(-1);
-          this.k((byte) 120);
-          return;
-        }
+    private final void h() {
+        this.h(-1);
+        this.k((byte) 120);
     }
 
     private final void a(byte param0, String param1) {
@@ -186,7 +178,8 @@ class go extends kg {
                     if (((go) this).field_P) {
                       L5: {
                         ((go) this).field_N = this.g((byte) 96);
-                        ((go) this).field_H = this.a(-1);
+                        int discarded$1 = -1;
+                        ((go) this).field_H = this.a();
                         if (((go) this).field_H <= 0) {
                           break L5;
                         } else {
@@ -255,7 +248,7 @@ class go extends kg {
         return stackIn_21_0 != 0;
     }
 
-    private final void j(byte param0) {
+    private final void j() {
         qo var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -509,9 +502,9 @@ class go extends kg {
                               break L7;
                             } else {
                               ((go) this).field_s = ((go) this).field_s + param1;
-                              int dupTemp$1 = ((go) this).field_s.length();
-                              ((go) this).field_H = dupTemp$1;
-                              ((go) this).field_N = dupTemp$1;
+                              int dupTemp$5 = ((go) this).field_s.length();
+                              ((go) this).field_H = dupTemp$5;
+                              ((go) this).field_N = dupTemp$5;
                               break L7;
                             }
                           }
@@ -605,9 +598,10 @@ class go extends kg {
                                     stackIn_50_2 = stackOut_49_2;
                                     break L10;
                                   } else {
+                                    int discarded$6 = -1;
                                     stackOut_48_0 = this;
                                     stackOut_48_1 = stackIn_48_1;
-                                    stackOut_48_2 = this.a(-1);
+                                    stackOut_48_2 = this.a();
                                     stackIn_50_0 = stackOut_48_0;
                                     stackIn_50_1 = stackOut_48_1;
                                     stackIn_50_2 = stackOut_48_2;
@@ -625,7 +619,8 @@ class go extends kg {
                               if (102 != param0) {
                                 if (param0 != 103) {
                                   if (param0 == 84) {
-                                    this.i((byte) 2);
+                                    int discarded$7 = 2;
+                                    this.i();
                                     stackOut_43_0 = 1;
                                     stackIn_44_0 = stackOut_43_0;
                                     return stackIn_44_0 != 0;
@@ -637,7 +632,8 @@ class go extends kg {
                                         if (param0 != 65) {
                                           break L11;
                                         } else {
-                                          this.h((byte) -95);
+                                          int discarded$8 = -95;
+                                          this.h();
                                           stackOut_31_0 = 1;
                                           stackIn_32_0 = stackOut_31_0;
                                           return stackIn_32_0 != 0;
@@ -662,7 +658,8 @@ class go extends kg {
                                       break L8;
                                     } else {
                                       if (67 == param0) {
-                                        this.m((byte) -7);
+                                        int discarded$9 = -7;
+                                        this.m();
                                         stackOut_39_0 = 1;
                                         stackIn_40_0 = stackOut_39_0;
                                         return stackIn_40_0 != 0;
@@ -753,7 +750,7 @@ class go extends kg {
         return js.a(-83, kq.f((byte) 127));
     }
 
-    private final int a(int param0) {
+    private final int a() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -818,7 +815,8 @@ class go extends kg {
           L0: {
             L1: {
               super.a(param0, param1, param2, param3);
-              this.j((byte) -59);
+              int discarded$2 = -59;
+              this.j();
               if (1 != ((go) this).field_o) {
                 break L1;
               } else {
@@ -1039,72 +1037,66 @@ class go extends kg {
 
     final static boolean a(int param0, CharSequence param1) {
         RuntimeException var2 = null;
-        boolean stackIn_3_0 = false;
+        boolean stackIn_1_0 = false;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_2_0 = false;
+        boolean stackOut_0_0 = false;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              if (param0 == 0) {
-                break L1;
-              } else {
-                field_E = null;
-                break L1;
-              }
-            }
-            stackOut_2_0 = wk.a(10, param1, param0 ^ 126, true);
-            stackIn_3_0 = stackOut_2_0;
+            int discarded$4 = 1;
+            int discarded$5 = 126;
+            stackOut_0_0 = wk.a(10, param1);
+            stackIn_1_0 = stackOut_0_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
-            stackOut_4_1 = new StringBuilder().append("go.N(").append(param0).append(44);
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_1 = new StringBuilder().append("go.N(").append(0).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L2;
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L2;
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw r.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
         }
-        return stackIn_3_0;
+        return stackIn_1_0;
     }
 
-    private final void m(byte param0) {
+    private final void m() {
         try {
             String var2 = null;
             Exception var2_ref = null;
@@ -1334,7 +1326,7 @@ class go extends kg {
         }
     }
 
-    public static void k(int param0) {
+    public static void k() {
         field_G = null;
         field_I = null;
         field_E = null;
@@ -1369,7 +1361,7 @@ class go extends kg {
         }
     }
 
-    private final void i(byte param0) {
+    private final void i() {
         if (!(((go) this).field_u instanceof od)) {
             return;
         }

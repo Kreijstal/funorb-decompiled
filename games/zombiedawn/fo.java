@@ -6,7 +6,7 @@ final class fo {
     static String field_b;
     static String field_c;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         field_a = null;
@@ -14,9 +14,6 @@ final class fo {
 
     final static void a(int param0, boolean param1) {
         gl.field_E.a(param1, -127);
-        if (param0 > -49) {
-            field_a = null;
-        }
     }
 
     final static void a(int param0, java.applet.Applet param1) {

@@ -10,43 +10,26 @@ final class wa {
 
     final static String a(boolean param0, boolean param1, int param2, boolean param3) {
         int var4 = 0;
-        if (param2 == 22890) {
-          L0: {
-            var4 = 0;
-            if (param0) {
-              var4 += 4;
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          if (param1) {
-            var4++;
-            return qk.field_b[var4];
+        L0: {
+          var4 = 0;
+          if (param0) {
+            var4 += 4;
+            break L0;
           } else {
-            return qk.field_b[var4];
+            break L0;
           }
+        }
+        if (param3) {
+          var4 += 2;
+          var4++;
+          return qk.field_b[var4];
         } else {
-          L1: {
-            field_c = null;
-            var4 = 0;
-            if (param0) {
-              var4 += 4;
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          if (!param1) {
-            return qk.field_b[var4];
-          } else {
-            var4++;
-            return qk.field_b[var4];
-          }
+          var4++;
+          return qk.field_b[var4];
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         field_c = null;

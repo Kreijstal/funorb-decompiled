@@ -13,9 +13,9 @@ final class nr extends tb implements ef {
 
     final static void a(boolean param0, db param1, int param2, jj param3, int param4, java.awt.Component param5) {
         try {
-            jn.a(param2, param4, param5, param2, param0, param4 + 17222, param1, param3);
+            jn.a(22050, 1024, param5, 22050, true, 18246, param1, param3);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "nr.K(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "nr.K(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 44 + 22050 + 44 + (param3 != null ? "{...}" : "null") + 44 + 1024 + 44 + (param5 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -67,13 +67,10 @@ final class nr extends tb implements ef {
 
     final static void a(int param0, int param1, vi param2) {
         mc.field_i.a((li) (Object) param2, false);
-        if (param1 != -22754) {
-            return;
-        }
         try {
-            aj.a(param0, param1 + 22795, param2);
+            aj.a(3, 41, param2);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "nr.N(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "nr.N(" + 3 + 44 + -22754 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -344,7 +341,7 @@ final class nr extends tb implements ef {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_o = null;
         field_q = null;
         field_p = null;
@@ -407,7 +404,7 @@ final class nr extends tb implements ef {
         }
     }
 
-    final static boolean a(ed param0, int param1) {
+    final static boolean a(ed param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -491,35 +488,23 @@ final class nr extends tb implements ef {
         return ((nr) this).e(param0, -1).field_f & 65535;
     }
 
-    final static er[] a(int param0, int param1, int param2, int param3, int param4) {
-        er[] var5 = null;
-        er[] var6 = null;
-        L0: {
-          var6 = new er[9];
-          var5 = var6;
-          er dupTemp$4 = ed.a(param3, param1, false);
-          var6[6] = dupTemp$4;
-          var5[3] = dupTemp$4;
-          var5[2] = dupTemp$4;
-          var5[1] = dupTemp$4;
-          var5[0] = dupTemp$4;
-          er dupTemp$5 = ed.a(param2, param1, false);
-          var6[8] = dupTemp$5;
-          var5[7] = dupTemp$5;
-          var5[5] = dupTemp$5;
-          if (param0 != 0) {
+    final static er[] a(int param0, int param1, int param2, int param3) {
+        er[] var6 = new er[9];
+        er[] var5 = var6;
+        er dupTemp$0 = ed.a(param3, 1, false);
+        var6[6] = dupTemp$0;
+        var5[3] = dupTemp$0;
+        var5[2] = dupTemp$0;
+        var5[1] = dupTemp$0;
+        var5[0] = dupTemp$0;
+        er dupTemp$1 = ed.a(param2, 1, false);
+        var6[8] = dupTemp$1;
+        var5[7] = dupTemp$1;
+        var5[5] = dupTemp$1;
+        if (!(param0 == 0)) {
             var6[4] = ed.a(param0, 64, false);
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        if (param4 > -24) {
-          field_p = null;
-          return var5;
-        } else {
-          return var5;
-        }
+        return var5;
     }
 
     nr(r param0, r param1, r param2, int param3, boolean param4) {
@@ -538,37 +523,20 @@ final class nr extends tb implements ef {
     }
 
     final static void a(byte param0, int param1, int param2, int param3) {
-        int var4 = 0;
         iq.field_x.field_u = 0;
         iq.field_x.f(12, 105);
-        iq.field_x.e(j.field_r.nextInt(), param0 + -115);
         iq.field_x.e(j.field_r.nextInt(), 0);
-        if (param0 != 115) {
-          er[] discarded$3 = nr.a(-111, -84, -8, -110, 72);
-          iq.field_x.f(param2, 101);
-          iq.field_x.f(param3, -67);
-          iq.field_x.d(param1, param0 ^ -1670);
-          iq.field_x.a(lp.field_E, jm.field_H, 9157);
-          uh.field_Wb.j(18, param0 + 5);
-          int fieldTemp$4 = uh.field_Wb.field_u + 1;
-          uh.field_Wb.field_u = uh.field_Wb.field_u + 1;
-          var4 = fieldTemp$4;
-          uh.field_Wb.a(0, -10140, iq.field_x.field_p, iq.field_x.field_u);
-          uh.field_Wb.b((byte) -95, -var4 + uh.field_Wb.field_u);
-          return;
-        } else {
-          iq.field_x.f(param2, 101);
-          iq.field_x.f(param3, -67);
-          iq.field_x.d(param1, param0 ^ -1670);
-          iq.field_x.a(lp.field_E, jm.field_H, 9157);
-          uh.field_Wb.j(18, param0 + 5);
-          int fieldTemp$5 = uh.field_Wb.field_u + 1;
-          uh.field_Wb.field_u = uh.field_Wb.field_u + 1;
-          var4 = fieldTemp$5;
-          uh.field_Wb.a(0, -10140, iq.field_x.field_p, iq.field_x.field_u);
-          uh.field_Wb.b((byte) -95, -var4 + uh.field_Wb.field_u);
-          return;
-        }
+        iq.field_x.e(j.field_r.nextInt(), 0);
+        iq.field_x.f(param2, 101);
+        iq.field_x.f(param3, -67);
+        iq.field_x.d(param1, -1783);
+        iq.field_x.a(lp.field_E, jm.field_H, 9157);
+        uh.field_Wb.j(18, 120);
+        int fieldTemp$0 = uh.field_Wb.field_u + 1;
+        uh.field_Wb.field_u = uh.field_Wb.field_u + 1;
+        int var4 = fieldTemp$0;
+        uh.field_Wb.a(0, -10140, iq.field_x.field_p, iq.field_x.field_u);
+        uh.field_Wb.b((byte) -95, -var4 + uh.field_Wb.field_u);
     }
 
     static {

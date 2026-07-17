@@ -100,7 +100,8 @@ final class dh {
             }
             aj.field_d = param8;
             fl.b(param14, param17, param19, 0, param10);
-            vm.a(param4, param11, param1, -11);
+            int discarded$1 = -11;
+            vm.a(param4, param11, param1);
             mk.a(param9, param15, (byte) -118, param5, param2, param3);
             tb.a(param7, -25073, param18);
             qm.a(param16, -115, param6, param12);
@@ -238,7 +239,7 @@ final class dh {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
     }

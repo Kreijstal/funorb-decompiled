@@ -11,7 +11,7 @@ abstract class bl extends al {
     static int[] field_z;
     static ud[] field_v;
 
-    final static void a(boolean param0) {
+    final static void a() {
         try {
             IOException var1 = null;
             RuntimeException var1_ref = null;
@@ -97,8 +97,8 @@ abstract class bl extends al {
 
     abstract Object f(int param0);
 
-    final static boolean g(int param0) {
-        if (mf.field_i >= param0) {
+    final static boolean g() {
+        if (mf.field_i >= 0) {
           if (bd.field_k >= 0) {
             if (mh.field_e[ca.field_k][hf.field_t + 1].g()) {
               return true;
@@ -424,9 +424,10 @@ abstract class bl extends al {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var4_int = -121 / ((-15 - param2) / 55);
+            var4_int = -121;
             if (cn.a(param0, 258, param3, param1)) {
-              stackOut_3_0 = qc.c(255);
+              int discarded$2 = 255;
+              stackOut_3_0 = qc.c();
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -463,13 +464,13 @@ abstract class bl extends al {
               break L1;
             }
           }
-          throw lj.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param2 + 44 + param3 + 41);
+          throw lj.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + -79 + 44 + param3 + 41);
         }
         return stackIn_4_0;
     }
 
-    public static void b(byte param0) {
-        int var1 = 35 % ((24 - param0) / 34);
+    public static void b() {
+        int var1 = 0;
         field_w = null;
         field_z = null;
         field_u = null;

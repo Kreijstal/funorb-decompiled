@@ -40,7 +40,7 @@ final class da {
     static long field_F;
     static int field_B;
 
-    public static void b(int param0) {
+    public static void b() {
         field_m = null;
         field_r = null;
     }

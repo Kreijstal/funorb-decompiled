@@ -19,7 +19,7 @@ final class jk extends fb {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_g = null;
         field_h = null;
     }

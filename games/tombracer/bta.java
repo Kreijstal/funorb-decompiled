@@ -40,7 +40,8 @@ final class bta extends vw {
         ((bta) this).field_c.a(0, false, lja.field_j);
         int var3 = -29 % ((param0 - 41) / 62);
         ((bta) this).field_c.e(0, false);
-        this.d(-124);
+        int discarded$0 = -124;
+        this.d();
     }
 
     public static void d(boolean param0) {
@@ -132,10 +133,14 @@ final class bta extends vw {
               return;
             } else {
               L0: {
-                ((bta) this).field_e = wd.a((byte) -70, param0, param1.a("gl", (byte) 122, "uw_ground_unlit"), 34336);
-                ((bta) this).field_l = wd.a((byte) -70, param0, param1.a("gl", (byte) 126, "uw_ground_lit"), 34336);
-                ((bta) this).field_r = wd.a((byte) -70, param0, param1.a("gl", (byte) 121, "uw_model_unlit"), 34336);
-                ((bta) this).field_o = wd.a((byte) -70, param0, param1.a("gl", (byte) 115, "uw_model_lit"), 34336);
+                int discarded$4 = 34336;
+                ((bta) this).field_e = wd.a((byte) -70, param0, param1.a("gl", (byte) 122, "uw_ground_unlit"));
+                int discarded$5 = 34336;
+                ((bta) this).field_l = wd.a((byte) -70, param0, param1.a("gl", (byte) 126, "uw_ground_lit"));
+                int discarded$6 = 34336;
+                ((bta) this).field_r = wd.a((byte) -70, param0, param1.a("gl", (byte) 121, "uw_model_unlit"));
+                int discarded$7 = 34336;
+                ((bta) this).field_o = wd.a((byte) -70, param0, param1.a("gl", (byte) 115, "uw_model_lit"));
                 if (((bta) this).field_r == null) {
                   stackOut_5_0 = 0;
                   stackIn_6_0 = stackOut_5_0;
@@ -476,7 +481,7 @@ final class bta extends vw {
         return ((bta) this).field_m;
     }
 
-    private final void d(int param0) {
+    private final void d() {
         int var2 = ((bta) this).field_c.d(false);
         asa var3 = ((bta) this).field_c.E(43);
         if (!((bta) this).field_k) {

@@ -9,24 +9,28 @@ final class e extends ei {
     private boolean field_s;
     private String field_p;
 
-    final static void e(int param0) {
+    final static void e() {
         if (null == ng.field_c) {
           if (null != af.field_g) {
             af.field_g.h((byte) 23);
-            rb.a((byte) -102);
+            int discarded$8 = -102;
+            rb.a();
             return;
           } else {
-            rb.a((byte) -102);
+            int discarded$9 = -102;
+            rb.a();
             return;
           }
         } else {
           ng.field_c.a((byte) -20);
           if (null == af.field_g) {
-            rb.a((byte) -102);
+            int discarded$10 = -102;
+            rb.a();
             return;
           } else {
             af.field_g.h((byte) 23);
-            rb.a((byte) -102);
+            int discarded$11 = -102;
+            rb.a();
             return;
           }
         }
@@ -228,9 +232,6 @@ final class e extends ei {
     }
 
     final static void a(int param0, boolean param1) {
-        if (param0 != -1) {
-            return;
-        }
         ib.field_f.a(param1, -87);
     }
 

@@ -10,33 +10,14 @@ final class da {
     static dm field_b;
     static String field_e;
 
-    final static void b(int param0, int param1) {
-        lj.field_a = 20 * param0 / 50;
-        fj.field_o = param0 * 4 / 50;
+    final static void b() {
+        lj.field_a = 60;
+        fj.field_o = 12;
     }
 
     final static boolean a(int param0, int param1) {
-        int var2 = 0;
-        int stackIn_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        if (param0 == -1) {
-          return true;
-        } else {
-          L0: {
-            var2 = 43 / ((24 - param1) / 50);
-            if ((field_a & 1 << param0) == 0) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              break L0;
-            } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              break L0;
-            }
-          }
-          return stackIn_4_0 != 0;
-        }
+        int var2 = 43 / ((24 - param1) / 50);
+        return (field_a & 1) != 0 ? true : false;
     }
 
     final static int a(byte param0, int param1) {
@@ -57,12 +38,9 @@ final class da {
         j.field_lb = t.field_k[param1];
         ri.field_c = tf.field_e[param1];
         vc.field_g = le.field_b[param1];
-        if (!param0) {
-            field_d = null;
-        }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_e = null;
         field_d = null;

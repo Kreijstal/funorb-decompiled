@@ -38,40 +38,34 @@ final class rj implements uj {
         int var2 = 0;
         int var3 = 0;
         var3 = MinerDisturbance.field_ab;
-        if (param0 == -38) {
-          if (!il.e(-31391)) {
-            if (ke.field_V) {
-              pl.field_h = param1;
-              var2 = param1;
-              if (4 == var2) {
-                ne.a(3, param0 ^ 70);
-                cm.field_r = 0;
-                return;
-              } else {
-                if (var2 != 2) {
-                  if (var2 != 1) {
-                    if (var2 != 11) {
-                      if (var2 != 7) {
-                        if (var2 != 10) {
-                          if (3 == var2) {
+        int discarded$5 = -31391;
+        if (!il.e()) {
+          if (ke.field_V) {
+            pl.field_h = param1;
+            var2 = param1;
+            if (4 == var2) {
+              ne.a(3, -100);
+              cm.field_r = 0;
+              return;
+            } else {
+              if (var2 != 2) {
+                if (var2 != 1) {
+                  if (var2 != 11) {
+                    if (var2 != 7) {
+                      if (var2 != 10) {
+                        if (3 == var2) {
+                          ne.a(4, -90);
+                          cm.field_r = 0;
+                          return;
+                        } else {
+                          if (12 == var2) {
                             ne.a(4, -90);
                             cm.field_r = 0;
                             return;
                           } else {
-                            if (12 == var2) {
-                              ne.a(4, -90);
-                              cm.field_r = 0;
-                              return;
-                            } else {
-                              cm.field_r = 0;
-                              return;
-                            }
+                            cm.field_r = 0;
+                            return;
                           }
-                        } else {
-                          ke.field_V = false;
-                          ne.a(4, -90);
-                          cm.field_r = 0;
-                          return;
                         }
                       } else {
                         ke.field_V = false;
@@ -80,26 +74,29 @@ final class rj implements uj {
                         return;
                       }
                     } else {
-                      ne.a(6, param0 + -63);
+                      ke.field_V = false;
+                      ne.a(4, -90);
                       cm.field_r = 0;
                       return;
                     }
                   } else {
-                    ne.a(6, param0 + -63);
+                    ne.a(6, -101);
                     cm.field_r = 0;
                     return;
                   }
                 } else {
-                  ne.a(7, -96);
+                  ne.a(6, -101);
                   cm.field_r = 0;
                   return;
                 }
+              } else {
+                ne.a(7, -96);
+                cm.field_r = 0;
+                return;
               }
-            } else {
-              gm.field_a = true;
-              return;
             }
           } else {
+            gm.field_a = true;
             return;
           }
         } else {

@@ -128,7 +128,7 @@ final class jc {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_a = null;
         field_c = null;

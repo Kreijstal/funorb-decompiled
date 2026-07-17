@@ -10,7 +10,7 @@ final class jj {
     static int field_g;
     private int field_b;
 
-    private final void a(long param0, int param1) {
+    private final void a(long param0) {
         fj var4 = (fj) (Object) ((jj) this).field_f.a(param0, (byte) -72);
         this.a(-117, var4);
     }
@@ -20,24 +20,22 @@ final class jj {
         gj var6_ref = null;
         int var7 = Geoblox.field_C;
         try {
-            if (!(param1 <= ((jj) this).field_b)) {
+            if (!(((jj) this).field_b >= 1)) {
                 throw new IllegalStateException();
             }
-            this.a(param0, 0);
-            ((jj) this).field_d = ((jj) this).field_d - param1;
+            int discarded$0 = 0;
+            this.a(param0);
+            ((jj) this).field_d = ((jj) this).field_d - 1;
             while (0 > ((jj) this).field_d) {
                 var6 = (fj) (Object) ((jj) this).field_e.a((byte) -41);
                 this.a(114, var6);
             }
-            var6_ref = new gj(param3, param1);
+            var6_ref = new gj(param3, 1);
             ((jj) this).field_f.a(param0, -99, (hf) (Object) var6_ref);
-            if (param2) {
-                jj.b(-85);
-            }
             ((jj) this).field_e.a(-1, (rc) (Object) var6_ref);
             ((fj) (Object) var6_ref).field_i = 0L;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "jj.F(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "jj.F(" + param0 + 44 + 1 + 44 + 0 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -86,12 +84,7 @@ final class jj {
         }
     }
 
-    final static void b(int param0) {
-        if (param0 > -96) {
-            field_c = null;
-            jk.field_d = 0;
-            return;
-        }
+    final static void b() {
         jk.field_d = 0;
     }
 
@@ -158,7 +151,7 @@ final class jj {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         int var1 = 3;
         field_c = null;

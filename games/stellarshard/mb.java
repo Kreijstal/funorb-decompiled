@@ -100,7 +100,7 @@ final class mb {
                             var4 = 1;
                             L5: while (true) {
                               if (var3 <= var4) {
-                                var17.field_k = param0;
+                                var17.field_k = 0;
                                 var4 = 0;
                                 L6: while (true) {
                                   if (sb.field_b <= var4) {
@@ -186,7 +186,7 @@ final class mb {
                                                       continue L12;
                                                     } else {
                                                       L14: {
-                                                        byte dupTemp$3 = var17.g(ih.a(param0, 102));
+                                                        byte dupTemp$3 = var17.g(ih.a(0, 102));
                                                         var9[var12 + var13 * var5] = dupTemp$3;
                                                         var14 = dupTemp$3;
                                                         stackOut_33_0 = var10;
@@ -281,7 +281,7 @@ final class mb {
           L17: {
             var2 = decompiledCaughtException;
             stackOut_51_0 = (RuntimeException) var2;
-            stackOut_51_1 = new StringBuilder().append("mb.A(").append(param0).append(44);
+            stackOut_51_1 = new StringBuilder().append("mb.A(").append(0).append(44);
             stackIn_53_0 = stackOut_51_0;
             stackIn_53_1 = stackOut_51_1;
             stackIn_52_0 = stackOut_51_0;
@@ -308,7 +308,7 @@ final class mb {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         field_c = null;
@@ -363,7 +363,8 @@ final class mb {
             }
             L2: {
               L3: {
-                param2 = ci.a(param2, '_', "", 2619);
+                int discarded$2 = 2619;
+                param2 = ci.a(param2, '_', "");
                 var3 = la.a(param2, (byte) 79);
                 if (param0.indexOf(param2) != -1) {
                   break L3;

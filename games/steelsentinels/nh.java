@@ -43,7 +43,7 @@ final class nh {
     static fh field_d;
     static String[] field_o;
 
-    public static void a(int param0) {
+    public static void a() {
         field_u = null;
         field_n = null;
         field_d = null;
@@ -57,22 +57,22 @@ final class nh {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
+        RuntimeException stackIn_50_0 = null;
+        StringBuilder stackIn_50_1 = null;
+        RuntimeException stackIn_51_0 = null;
+        StringBuilder stackIn_51_1 = null;
         RuntimeException stackIn_52_0 = null;
         StringBuilder stackIn_52_1 = null;
-        RuntimeException stackIn_53_0 = null;
-        StringBuilder stackIn_53_1 = null;
-        RuntimeException stackIn_54_0 = null;
-        StringBuilder stackIn_54_1 = null;
-        String stackIn_54_2 = null;
+        String stackIn_52_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_49_0 = null;
+        StringBuilder stackOut_49_1 = null;
         RuntimeException stackOut_51_0 = null;
         StringBuilder stackOut_51_1 = null;
-        RuntimeException stackOut_53_0 = null;
-        StringBuilder stackOut_53_1 = null;
-        String stackOut_53_2 = null;
-        RuntimeException stackOut_52_0 = null;
-        StringBuilder stackOut_52_1 = null;
-        String stackOut_52_2 = null;
+        String stackOut_51_2 = null;
+        RuntimeException stackOut_50_0 = null;
+        StringBuilder stackOut_50_1 = null;
+        String stackOut_50_2 = null;
         var3 = SteelSentinels.field_G;
         try {
           L0: {
@@ -171,27 +171,19 @@ final class nh {
               }
             }
             L3: {
-              if (param0) {
+              if (~param1.field_S < ~param1.field_Q) {
+                param1.field_S = param1.field_Q;
                 break L3;
               } else {
-                field_F = null;
                 break L3;
               }
             }
             L4: {
-              if (~param1.field_S < ~param1.field_Q) {
-                param1.field_S = param1.field_Q;
-                break L4;
-              } else {
-                break L4;
-              }
-            }
-            L5: {
               if (~param1.field_Tb >= ~param1.field_x) {
-                break L5;
+                break L4;
               } else {
                 param1.g(5);
-                break L5;
+                break L4;
               }
             }
             param1.field_rc = -1;
@@ -199,33 +191,33 @@ final class nh {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L5: {
             var2 = decompiledCaughtException;
-            stackOut_51_0 = (RuntimeException) var2;
-            stackOut_51_1 = new StringBuilder().append("nh.B(").append(param0).append(44);
-            stackIn_53_0 = stackOut_51_0;
-            stackIn_53_1 = stackOut_51_1;
-            stackIn_52_0 = stackOut_51_0;
-            stackIn_52_1 = stackOut_51_1;
+            stackOut_49_0 = (RuntimeException) var2;
+            stackOut_49_1 = new StringBuilder().append("nh.B(").append(1).append(44);
+            stackIn_51_0 = stackOut_49_0;
+            stackIn_51_1 = stackOut_49_1;
+            stackIn_50_0 = stackOut_49_0;
+            stackIn_50_1 = stackOut_49_1;
             if (param1 == null) {
-              stackOut_53_0 = (RuntimeException) (Object) stackIn_53_0;
-              stackOut_53_1 = (StringBuilder) (Object) stackIn_53_1;
-              stackOut_53_2 = "null";
-              stackIn_54_0 = stackOut_53_0;
-              stackIn_54_1 = stackOut_53_1;
-              stackIn_54_2 = stackOut_53_2;
-              break L6;
+              stackOut_51_0 = (RuntimeException) (Object) stackIn_51_0;
+              stackOut_51_1 = (StringBuilder) (Object) stackIn_51_1;
+              stackOut_51_2 = "null";
+              stackIn_52_0 = stackOut_51_0;
+              stackIn_52_1 = stackOut_51_1;
+              stackIn_52_2 = stackOut_51_2;
+              break L5;
             } else {
-              stackOut_52_0 = (RuntimeException) (Object) stackIn_52_0;
-              stackOut_52_1 = (StringBuilder) (Object) stackIn_52_1;
-              stackOut_52_2 = "{...}";
-              stackIn_54_0 = stackOut_52_0;
-              stackIn_54_1 = stackOut_52_1;
-              stackIn_54_2 = stackOut_52_2;
-              break L6;
+              stackOut_50_0 = (RuntimeException) (Object) stackIn_50_0;
+              stackOut_50_1 = (StringBuilder) (Object) stackIn_50_1;
+              stackOut_50_2 = "{...}";
+              stackIn_52_0 = stackOut_50_0;
+              stackIn_52_1 = stackOut_50_1;
+              stackIn_52_2 = stackOut_50_2;
+              break L5;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_54_0, stackIn_54_2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_52_0, stackIn_52_2 + 41);
         }
     }
 
@@ -248,7 +240,8 @@ final class nh {
                 field_o = null;
             }
             am.field_c = param2.field_M;
-            ub.a(true);
+            int discarded$0 = 1;
+            ub.a();
         } catch (RuntimeException runtimeException) {
             throw ci.a((Throwable) (Object) runtimeException, "nh.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }

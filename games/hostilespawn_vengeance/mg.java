@@ -9,7 +9,7 @@ final class mg {
     static int[] field_e;
     static int field_c;
 
-    final static bd[] a(gb param0, int param1, int param2, boolean param3) {
+    final static bd[] a(gb param0, int param1, int param2) {
         RuntimeException var4 = null;
         Object stackIn_4_0 = null;
         bd[] stackIn_6_0 = null;
@@ -34,7 +34,8 @@ final class mg {
         try {
           L0: {
             if (rl.a(2884, param0, param1, param2)) {
-              stackOut_5_0 = pa.h(14);
+              int discarded$2 = 14;
+              stackOut_5_0 = pa.h();
               stackIn_6_0 = stackOut_5_0;
               break L0;
             } else {
@@ -76,7 +77,7 @@ final class mg {
         return stackIn_6_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_d = null;
         field_e = null;
@@ -84,7 +85,7 @@ final class mg {
         field_f = null;
     }
 
-    final static void a(p param0, int param1, int param2, int param3) {
+    final static void a(p param0, int param1, int param2) {
         try {
             si.f(param1, param2, param0.field_e * 2 - -3, 65280, 128 - param0.field_e * 4);
             si.f(param1, param2, param0.field_e + 2, 16776960, 128 + -(4 * param0.field_e));

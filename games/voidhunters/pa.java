@@ -28,7 +28,7 @@ final class pa {
         }
     }
 
-    final static void a(String param0, int param1) {
+    final static void a(String param0) {
         System.out.println("Error: " + sh.a("\n", "%0a", param0, 0));
     }
 

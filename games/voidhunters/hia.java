@@ -87,7 +87,7 @@ final class hia extends rqa {
         return stackIn_3_0;
     }
 
-    final static llb a(int param0) {
+    final static llb a() {
         return vra.field_b.field_yb;
     }
 

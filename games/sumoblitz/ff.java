@@ -141,17 +141,19 @@ class ff extends en {
                   if (~stackIn_15_0 >= ~var7) {
                     break L0;
                   } else {
-                    var8 = new float[]{0.0f, (float)(-(fi.a(param1, he.field_o, (byte) -96) - -1))};
-                    float[] dupTemp$1 = kt.a((byte) -126, var8, (float)(0.017453292519943295 * (double)(2048.0f / (float)var7) + 0.0));
-                    var12 = dupTemp$1;
-                    var8 = dupTemp$1;
+                    int discarded$3 = -96;
+                    var8 = new float[]{0.0f, (float)(-(fi.a(param1, he.field_o) - -1))};
+                    float[] dupTemp$4 = kt.a((byte) -126, var8, (float)(0.017453292519943295 * (double)(2048.0f / (float)var7) + 0.0));
+                    var12 = dupTemp$4;
+                    var8 = dupTemp$4;
                     param3.a((ms) (Object) new vi(128, param0, param2, param4, (int)var12[0] << 8, (int)var12[1] << 8, 1), (byte) 39);
                     var7++;
                     continue L5;
                   }
                 }
               } else {
-                var8 = new float[]{0.0f, (float)(-(1 + fi.a(param1, he.field_o, (byte) -96)))};
+                int discarded$5 = -96;
+                var8 = new float[]{0.0f, (float)(-(1 + fi.a(param1, he.field_o)))};
                 var16 = kt.a((byte) -27, var8, (float)(0.0 + (double)(2048.0f / (float)var7) * 0.017453292519943295));
                 var15 = var16;
                 var14 = var15;
@@ -245,94 +247,90 @@ class ff extends en {
 
     final static void a(byte param0, ki param1) {
         RuntimeException var2 = null;
-        Object var3 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
         String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              rc.field_l[0] = eb.field_b.b(0, "fence_hum_bg_loop");
-              rc.field_l[2] = eb.field_b.b(0, "landmine_red_flash");
-              rc.field_l[3] = eb.field_b.b(0, "landmine_blow");
-              rc.field_l[4] = eb.field_b.b(0, "spike_trap_hum_bg_loop");
-              rc.field_l[5] = eb.field_b.b(0, "teleport_short");
-              rc.field_l[6] = eb.field_b.b(0, "accelerator_pad_1");
-              rc.field_l[7] = eb.field_b.b(0, "accelerator_pad_2");
-              rc.field_l[8] = eb.field_b.b(0, "accelerator_pad_3");
-              rc.field_l[9] = eb.field_b.b(0, "accelerator_pad_4");
-              rc.field_l[11] = eb.field_b.b(0, "attractor_pulse_loop");
-              rc.field_l[12] = eb.field_b.b(0, "repeller_pulse_loop");
-              fh.field_n[0] = mf.a(rc.field_l[4], 100, 96);
-              fh.field_n[1] = mf.a(rc.field_l[11], 100, 96);
-              fh.field_n[2] = mf.a(rc.field_l[12], 100, 96);
-              rc.field_l[17] = eb.field_b.b(0, "menu_mouseover");
-              rc.field_l[18] = eb.field_b.b(0, "multiplier_upgrade");
-              rc.field_l[19] = eb.field_b.b(0, "npc_bomb_charge_and_explode1");
-              rc.field_l[20] = eb.field_b.b(0, "npc_bomb_charge_and_explode2");
-              rc.field_l[21] = eb.field_b.b(0, "npc_bomb_charge_and_explode3");
-              rc.field_l[27] = eb.field_b.b(0, "player_pick_up");
-              rc.field_l[28] = eb.field_b.b(0, "player_release_super_charge_attack");
-              rc.field_l[29] = eb.field_b.b(0, "player_super_charge_attack");
-              rc.field_l[30] = eb.field_b.b(0, "player_death_pulse");
-              rc.field_l[33] = eb.field_b.b(0, "player_super_charge_deny");
-              rc.field_l[32] = eb.field_b.b(0, "big_targeting_laser");
-              rc.field_l[34] = eb.field_b.b(0, "firework_particles1");
-              rc.field_l[35] = eb.field_b.b(0, "firework_particles2");
-              rc.field_l[36] = eb.field_b.b(0, "firework_particles3");
-              rc.field_l[37] = eb.field_b.b(0, "firework_particles4");
-              if (param0 <= -42) {
-                break L1;
-              } else {
-                var3 = null;
-                ff.a(98, 120, 16, (jn) null, 107, (byte) 5);
-                break L1;
-              }
-            }
+            rc.field_l[0] = eb.field_b.b(0, "fence_hum_bg_loop");
+            rc.field_l[2] = eb.field_b.b(0, "landmine_red_flash");
+            rc.field_l[3] = eb.field_b.b(0, "landmine_blow");
+            rc.field_l[4] = eb.field_b.b(0, "spike_trap_hum_bg_loop");
+            rc.field_l[5] = eb.field_b.b(0, "teleport_short");
+            rc.field_l[6] = eb.field_b.b(0, "accelerator_pad_1");
+            rc.field_l[7] = eb.field_b.b(0, "accelerator_pad_2");
+            rc.field_l[8] = eb.field_b.b(0, "accelerator_pad_3");
+            rc.field_l[9] = eb.field_b.b(0, "accelerator_pad_4");
+            rc.field_l[11] = eb.field_b.b(0, "attractor_pulse_loop");
+            rc.field_l[12] = eb.field_b.b(0, "repeller_pulse_loop");
+            int discarded$6 = 96;
+            int discarded$7 = 100;
+            fh.field_n[0] = mf.a(rc.field_l[4]);
+            int discarded$8 = 96;
+            int discarded$9 = 100;
+            fh.field_n[1] = mf.a(rc.field_l[11]);
+            int discarded$10 = 96;
+            int discarded$11 = 100;
+            fh.field_n[2] = mf.a(rc.field_l[12]);
+            rc.field_l[17] = eb.field_b.b(0, "menu_mouseover");
+            rc.field_l[18] = eb.field_b.b(0, "multiplier_upgrade");
+            rc.field_l[19] = eb.field_b.b(0, "npc_bomb_charge_and_explode1");
+            rc.field_l[20] = eb.field_b.b(0, "npc_bomb_charge_and_explode2");
+            rc.field_l[21] = eb.field_b.b(0, "npc_bomb_charge_and_explode3");
+            rc.field_l[27] = eb.field_b.b(0, "player_pick_up");
+            rc.field_l[28] = eb.field_b.b(0, "player_release_super_charge_attack");
+            rc.field_l[29] = eb.field_b.b(0, "player_super_charge_attack");
+            rc.field_l[30] = eb.field_b.b(0, "player_death_pulse");
+            rc.field_l[33] = eb.field_b.b(0, "player_super_charge_deny");
+            rc.field_l[32] = eb.field_b.b(0, "big_targeting_laser");
+            rc.field_l[34] = eb.field_b.b(0, "firework_particles1");
+            rc.field_l[35] = eb.field_b.b(0, "firework_particles2");
+            rc.field_l[36] = eb.field_b.b(0, "firework_particles3");
+            rc.field_l[37] = eb.field_b.b(0, "firework_particles4");
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var2 = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) var2;
-            stackOut_3_1 = new StringBuilder().append("ff.R(").append(param0).append(44);
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_1 = new StringBuilder().append("ff.R(").append(-62).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
-              break L2;
-            } else {
               stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
               stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              break L2;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw qo.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
         }
     }
 

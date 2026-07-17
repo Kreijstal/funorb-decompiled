@@ -161,20 +161,13 @@ final class ul implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     }
 
     final static t[] a(int param0, int param1, int param2, int param3, byte param4) {
-        Object var6 = null;
-        if (param4 != 82) {
-          var6 = null;
-          ul.a(-53, (String) null, (java.applet.Applet) null);
-          return wa.a((byte) -63, 1, 1, 1, param3, 3, param1, param2, param0);
-        } else {
-          return wa.a((byte) -63, 1, 1, 1, param3, 3, param1, param2, param0);
-        }
+        return wa.a((byte) -63, 1, 1, 1, 0, 3, 0, 0, 65793);
     }
 
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_c = null;
         field_b = null;
@@ -382,13 +375,9 @@ final class ul implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             try {
               try {
                 var3 = new java.net.URL(param2.getCodeBase(), param1);
-                if (param0 == 0) {
-                  var3 = og.a(var3, param2, (byte) -75);
-                  a.a(true, var3.toString(), param2, 3);
-                  return;
-                } else {
-                  return;
-                }
+                var3 = og.a(var3, param2, (byte) -75);
+                a.a(true, var3.toString(), param2, 3);
+                return;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var3_ref = (Exception) (Object) decompiledCaughtException;
@@ -400,7 +389,7 @@ final class ul implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               L0: {
                 var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_6_0 = (RuntimeException) var3_ref2;
-                stackOut_6_1 = new StringBuilder().append("ul.A(").append(param0).append(44);
+                stackOut_6_1 = new StringBuilder().append("ul.A(").append(0).append(44);
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;

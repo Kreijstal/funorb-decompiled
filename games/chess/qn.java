@@ -31,7 +31,7 @@ class qn extends fb {
         }
     }
 
-    private final void c(boolean param0) {
+    private final void c() {
         if (!(!(((qn) this).field_p instanceof ha))) {
             ((ha) (Object) ((qn) this).field_p).b((qn) this, 3);
         }
@@ -193,9 +193,11 @@ class qn extends fb {
 
     private final void e(byte param0) {
         int var3 = 71 % ((param0 - 31) / 51);
-        String var2 = this.b(false);
+        int discarded$0 = 0;
+        String var2 = this.b();
         if (var2.length() > 0) {
-            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.b(false)), (java.awt.datatransfer.ClipboardOwner) null);
+            int discarded$1 = 0;
+            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.b()), (java.awt.datatransfer.ClipboardOwner) null);
         }
     }
 
@@ -295,7 +297,7 @@ class qn extends fb {
         }
     }
 
-    private final String b(boolean param0) {
+    private final String b() {
         int var2 = ((qn) this).field_Q <= ((qn) this).field_X ? ((qn) this).field_Q : ((qn) this).field_X;
         int var3 = ((qn) this).field_X < ((qn) this).field_Q ? ((qn) this).field_Q : ((qn) this).field_X;
         return ((qn) this).field_v.substring(var2, var3);
@@ -318,7 +320,8 @@ class qn extends fb {
                 }
                 var2_ref = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
                 this.j(1);
-                this.a(var2_ref, 99);
+                int discarded$1 = 99;
+                this.a(var2_ref);
                 break L0;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -392,7 +395,7 @@ class qn extends fb {
         }
     }
 
-    private final void a(String param0, int param1) {
+    private final void a(String param0) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_11_0 = null;
@@ -482,11 +485,8 @@ class qn extends fb {
         }
     }
 
-    public static void m(int param0) {
+    public static void m() {
         field_R = null;
-        if (param0 != -14) {
-            field_R = null;
-        }
         field_U = null;
         field_P = null;
     }
@@ -610,7 +610,7 @@ class qn extends fb {
         }
     }
 
-    private final void f(byte param0) {
+    private final void f() {
         this.e((byte) -98);
         this.j(1);
     }
@@ -728,9 +728,9 @@ class qn extends fb {
                               break L5;
                             } else {
                               ((qn) this).field_v = ((qn) this).field_v + param0;
-                              int dupTemp$1 = ((qn) this).field_v.length();
-                              ((qn) this).field_Q = dupTemp$1;
-                              ((qn) this).field_X = dupTemp$1;
+                              int dupTemp$3 = ((qn) this).field_v.length();
+                              ((qn) this).field_Q = dupTemp$3;
+                              ((qn) this).field_X = dupTemp$3;
                               break L5;
                             }
                           }
@@ -825,7 +825,8 @@ class qn extends fb {
                               if (102 != param1) {
                                 if (param1 != 103) {
                                   if (param1 == 84) {
-                                    this.c(true);
+                                    int discarded$4 = 1;
+                                    this.c();
                                     stackOut_44_0 = 1;
                                     stackIn_45_0 = stackOut_44_0;
                                     return stackIn_45_0 != 0;
@@ -837,7 +838,8 @@ class qn extends fb {
                                         if (param1 != 65) {
                                           break L9;
                                         } else {
-                                          this.f((byte) 79);
+                                          int discarded$5 = 79;
+                                          this.f();
                                           stackOut_33_0 = 1;
                                           stackIn_34_0 = stackOut_33_0;
                                           return stackIn_34_0 != 0;
@@ -1007,7 +1009,7 @@ class qn extends fb {
         }
     }
 
-    private final void d(boolean param0) {
+    private final void d() {
         ub var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -1090,57 +1092,54 @@ class qn extends fb {
         try {
           L0: {
             super.a(param0, -51, param2, param3);
-            if (param1 < -6) {
-              L1: {
-                this.d(true);
-                if (1 != ((qn) this).field_q) {
-                  break L1;
-                } else {
-                  L2: {
-                    if (((qn) this).field_n instanceof mg) {
-                      var5 = (mg) (Object) ((qn) this).field_n;
-                      var6 = var5.a(rf.field_b, param3, -4, param0, (mf) this, hn.field_k);
-                      if (var6 != -1) {
-                        L3: {
-                          if (!((qn) this).field_S) {
+            L1: {
+              int discarded$2 = 1;
+              this.d();
+              if (1 != ((qn) this).field_q) {
+                break L1;
+              } else {
+                L2: {
+                  if (((qn) this).field_n instanceof mg) {
+                    var5 = (mg) (Object) ((qn) this).field_n;
+                    var6 = var5.a(rf.field_b, param3, -4, param0, (mf) this, hn.field_k);
+                    if (var6 != -1) {
+                      L3: {
+                        if (!((qn) this).field_S) {
+                          break L3;
+                        } else {
+                          if (((qn) this).field_N <= var6) {
                             break L3;
                           } else {
-                            if (((qn) this).field_N <= var6) {
+                            if (((qn) this).field_X >= var6) {
                               break L3;
                             } else {
-                              if (((qn) this).field_X >= var6) {
-                                break L3;
-                              } else {
-                                var6 = ((qn) this).field_N;
-                                break L3;
-                              }
+                              var6 = ((qn) this).field_N;
+                              break L3;
                             }
                           }
                         }
-                        ((qn) this).field_Q = var6;
-                        break L2;
-                      } else {
-                        break L2;
                       }
+                      ((qn) this).field_Q = var6;
+                      break L2;
                     } else {
                       break L2;
                     }
+                  } else {
+                    break L2;
                   }
-                  ((qn) this).field_V = ud.a(2);
-                  break L1;
                 }
+                ((qn) this).field_V = ud.a(2);
+                break L1;
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L4: {
             runtimeException = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) runtimeException;
-            stackOut_14_1 = new StringBuilder().append("qn.G(").append(param0).append(44).append(param1).append(44);
+            stackOut_14_1 = new StringBuilder().append("qn.G(").append(param0).append(44).append(-30).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;

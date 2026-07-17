@@ -168,7 +168,7 @@ final class uk extends wj {
         return stackIn_9_0;
     }
 
-    final static boolean f(int param0) {
+    final static boolean f() {
         return cf.field_b == ed.field_c;
     }
 
@@ -176,7 +176,7 @@ final class uk extends wj {
         super(param0);
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_o = null;
         int var1 = 0;
         field_n = null;

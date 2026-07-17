@@ -9,7 +9,7 @@ final class id {
     static int field_b;
     static qk field_a;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
         field_e = null;
         field_a = null;

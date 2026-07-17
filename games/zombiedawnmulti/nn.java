@@ -10,10 +10,10 @@ final class nn {
         fq.field_n = param2;
         qh.field_e = param3;
         hp.field_k = param1;
-        int var4 = -111 % ((param0 - -71) / 49);
+        int var4 = -1;
     }
 
-    final static void a(ga param0, int param1, int param2, byte param3) {
+    final static void a(ga param0, int param1, int param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -171,7 +171,7 @@ final class nn {
         }
     }
 
-    final static java.awt.Container a(int param0) {
+    final static java.awt.Container a() {
         if (null != cg.field_m) {
             return (java.awt.Container) (Object) cg.field_m;
         }

@@ -6,11 +6,11 @@ final class oh {
     static int field_c;
     static volatile boolean field_b;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void a(int param0, int param1) {
         gk.field_e = param1;
         oi.field_f = param0;
     }
@@ -47,7 +47,7 @@ final class oh {
                 }
               }
               var4 = param3.getGraphics();
-              ac.field_a.a(param2, 7, var4, param0);
+              ac.field_a.a(0, 7, var4, 0);
               var4.dispose();
               break L0;
             }
@@ -63,7 +63,7 @@ final class oh {
           L2: {
             var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var4_ref2;
-            stackOut_6_1 = new StringBuilder().append("oh.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_6_1 = new StringBuilder().append("oh.C(").append(0).append(44).append(param1).append(44).append(0).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;

@@ -33,10 +33,7 @@ final class ph extends rn {
         return od.field_l;
     }
 
-    final static int a(int param0, int param1, int param2) {
-        if (param2 != -1550172208) {
-            field_k = null;
-        }
+    final static int a(int param0, int param1) {
         if (param1 > param0) {
             return -wd.a((byte) -53, (param0 << 16) / param1) + 2048;
         }
@@ -125,7 +122,7 @@ final class ph extends rn {
           if (Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
             break L0;
           } else {
-            String discarded$2 = System.setProperty("java.net.useSystemProxies", "true");
+            String discarded$3 = System.setProperty("java.net.useSystemProxies", "true");
             break L0;
           }
         }
@@ -231,7 +228,7 @@ final class ph extends rn {
           return ((ph) this).a(false);
         }
         L5: {
-          boolean discarded$3 = var3.addAll((Collection) (Object) var4);
+          boolean discarded$4 = var3.addAll((Collection) (Object) var4);
           var6_array = var3.toArray();
           var7 = null;
           var8_array = var6_array;
@@ -255,7 +252,8 @@ final class ph extends rn {
             var11 = (java.net.Proxy) var10;
             try {
               L7: {
-                var12_ref2 = this.a(var11, -128);
+                int discarded$5 = -128;
+                var12_ref2 = this.a(var11);
                 if (var12_ref2 != null) {
                   stackOut_22_0 = (java.net.Socket) var12_ref2;
                   stackIn_23_0 = stackOut_22_0;
@@ -294,7 +292,7 @@ final class ph extends rn {
         }
     }
 
-    private final java.net.Socket a(String param0, int param1, String param2, int param3) throws IOException {
+    private final java.net.Socket a(String param0, int param1, String param2) throws IOException {
         RuntimeException var5 = null;
         OutputStream var6 = null;
         BufferedReader var7 = null;
@@ -493,7 +491,7 @@ final class ph extends rn {
         return (java.net.Socket) (Object) stackIn_26_0;
     }
 
-    private final java.net.Socket a(java.net.Proxy param0, int param1) throws IOException {
+    private final java.net.Socket a(java.net.Proxy param0) throws IOException {
         RuntimeException var3 = null;
         java.net.SocketAddress var3_ref = null;
         Object var4 = null;
@@ -587,7 +585,8 @@ final class ph extends rn {
                       break L3;
                     }
                   }
-                  stackOut_14_0 = this.a((String) var5, var4_ref.getPort(), var4_ref.getHostName(), 32);
+                  int discarded$1 = 32;
+                  stackOut_14_0 = this.a((String) var5, var4_ref.getPort(), var4_ref.getHostName());
                   stackIn_15_0 = stackOut_14_0;
                   return stackIn_15_0;
                 }

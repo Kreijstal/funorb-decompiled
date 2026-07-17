@@ -225,47 +225,39 @@ final class jl extends rm {
     private final int a(int param0, int param1, int param2, int param3, boolean param4, int param5) {
         int var7 = 0;
         int var8 = 0;
-        L0: {
-          var8 = Torquing.field_u;
-          var7 = 0;
-          if (!param4) {
-            break L0;
-          } else {
-            int discarded$2 = this.a(-98, 102, 31, -9, false, 113);
-            break L0;
-          }
-        }
-        L1: while (true) {
+        var8 = Torquing.field_u;
+        var7 = 0;
+        L0: while (true) {
           if (var7 >= ((jl) this).field_g) {
-            return super.a(param3, param0, param1, (byte)param2, (byte) -1, (short)param5, (short) -1);
+            return super.a(param3, param0, param1, (byte) 0, (byte) -1, (short) 127, (short) -1);
           } else {
-            L2: {
-              L3: {
+            L1: {
+              L2: {
                 if (param3 != ((jl) this).field_o[var7]) {
-                  break L3;
+                  break L2;
                 } else {
                   if (param0 != ((jl) this).field_y[var7]) {
-                    break L3;
+                    break L2;
                   } else {
                     if (param1 == ((jl) this).field_q[var7]) {
-                      break L2;
+                      break L1;
                     } else {
-                      break L3;
+                      break L2;
                     }
                   }
                 }
               }
-              L4: {
+              L3: {
                 if (param3 != ((jl) this).field_y[var7]) {
-                  break L4;
+                  break L3;
                 } else {
                   if (param0 != ((jl) this).field_q[var7]) {
-                    break L4;
+                    break L3;
                   } else {
                     if (((jl) this).field_o[var7] == param1) {
-                      break L2;
+                      break L1;
                     } else {
-                      break L4;
+                      break L3;
                     }
                   }
                 }
@@ -273,18 +265,18 @@ final class jl extends rm {
               if (param3 == ((jl) this).field_q[var7]) {
                 if (((jl) this).field_o[var7] == param0) {
                   if (((jl) this).field_y[var7] == param1) {
-                    break L2;
+                    break L1;
                   } else {
                     var7++;
-                    continue L1;
+                    continue L0;
                   }
                 } else {
                   var7++;
-                  continue L1;
+                  continue L0;
                 }
               } else {
                 var7++;
-                continue L1;
+                continue L0;
               }
             }
             return var7;

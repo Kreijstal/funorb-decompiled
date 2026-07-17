@@ -38,7 +38,7 @@ final class sh extends fh {
         }
     }
 
-    final static void a(boolean param0, boolean param1, int param2, int[] param3, lb param4, int[] param5, boolean param6) {
+    final static void a(boolean param0, boolean param1, int param2, int[] param3, lb param4, int[] param5) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
@@ -138,7 +138,7 @@ final class sh extends fh {
             var15 = param3[6] * var21 + (param3[7] * var22 + param3[8] * var23) >> 14;
             var16 = param3[8] * var26 + var25 * param3[7] + var24 * param3[6] >> 14;
             var17 = param3[8] * var29 + var27 * param3[6] + param3[7] * var28 >> 14;
-            var30 = -71 / ((-53 - param2) / 35);
+            var30 = 17;
             var21 = param3[0] + -param5[0];
             var22 = param3[1] + -param5[1];
             var23 = param3[2] + -param5[2];
@@ -215,46 +215,42 @@ final class sh extends fh {
                     }
                   }
                 }
-                L4: {
-                  if (param6) {
-                    var9 = param3[3];
-                    var10 = param3[4];
-                    var11 = param3[5];
-                    var12 = param3[6];
-                    var13 = param3[7];
-                    var14 = param3[8];
-                    var15 = param3[9];
-                    var16 = param3[10];
-                    var17 = param3[11];
-                    var18 = 0;
-                    L5: while (true) {
-                      if (~param4.field_s >= ~var18) {
-                        break L4;
+                var9 = param3[3];
+                var10 = param3[4];
+                var11 = param3[5];
+                var12 = param3[6];
+                var13 = param3[7];
+                var14 = param3[8];
+                var15 = param3[9];
+                var16 = param3[10];
+                var17 = param3[11];
+                var18 = 0;
+                L4: while (true) {
+                  L5: {
+                    if (~param4.field_s >= ~var18) {
+                      break L5;
+                    } else {
+                      stackOut_57_0 = var18;
+                      stackOut_57_1 = rc.field_a.length;
+                      stackIn_59_0 = stackOut_57_0;
+                      stackIn_59_1 = stackOut_57_1;
+                      if (stackIn_59_0 >= stackIn_59_1) {
+                        break L5;
                       } else {
-                        stackOut_57_0 = var18;
-                        stackOut_57_1 = rc.field_a.length;
-                        stackIn_59_0 = stackOut_57_0;
-                        stackIn_59_1 = stackOut_57_1;
-                        if (stackIn_59_0 >= stackIn_59_1) {
-                          break L4;
-                        } else {
-                          var19 = param4.field_N[var18];
-                          var20 = param4.field_a[var18];
-                          var21 = param4.field_o[var18];
-                          rc.field_a[var18] = var21 * var15 + var20 * var12 + var9 * var19 >> 16;
-                          fb.field_m[var18] = var20 * var13 + (var10 * var19 + var21 * var16) >> 16;
-                          p.field_f[var18] = var17 * var21 + var19 * var11 + var20 * var14 >> 16;
-                          var18++;
-                          continue L5;
-                        }
+                        var19 = param4.field_N[var18];
+                        var20 = param4.field_a[var18];
+                        var21 = param4.field_o[var18];
+                        rc.field_a[var18] = var21 * var15 + var20 * var12 + var9 * var19 >> 16;
+                        fb.field_m[var18] = var20 * var13 + (var10 * var19 + var21 * var16) >> 16;
+                        p.field_f[var18] = var17 * var21 + var19 * var11 + var20 * var14 >> 16;
+                        var18++;
+                        continue L4;
                       }
                     }
-                  } else {
-                    break L4;
                   }
+                  vh.a(var7_int, false, param4, -6787, var8);
+                  break L0;
                 }
-                vh.a(var7_int, param1, param4, -6787, var8);
-                break L0;
               } else {
                 L6: {
                   var24 = param4.field_J[var23];
@@ -286,16 +282,6 @@ final class sh extends fh {
                     }
                   }
                 }
-                L8: {
-                  if (!param0) {
-                    break L8;
-                  } else {
-                    bj.field_a[var23] = var27 >> fb.field_r;
-                    lj.field_g[var23] = var28 >> fb.field_r;
-                    ej.field_s[var23] = var29;
-                    break L8;
-                  }
-                }
                 var23++;
                 continue L1;
               }
@@ -303,10 +289,10 @@ final class sh extends fh {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L8: {
             var7 = decompiledCaughtException;
             stackOut_65_0 = (RuntimeException) var7;
-            stackOut_65_1 = new StringBuilder().append("sh.BA(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_65_1 = new StringBuilder().append("sh.BA(").append(0).append(44).append(0).append(44).append(88).append(44);
             stackIn_68_0 = stackOut_65_0;
             stackIn_68_1 = stackOut_65_1;
             stackIn_66_0 = stackOut_65_0;
@@ -318,7 +304,7 @@ final class sh extends fh {
               stackIn_69_0 = stackOut_68_0;
               stackIn_69_1 = stackOut_68_1;
               stackIn_69_2 = stackOut_68_2;
-              break L9;
+              break L8;
             } else {
               stackOut_66_0 = (RuntimeException) (Object) stackIn_66_0;
               stackOut_66_1 = (StringBuilder) (Object) stackIn_66_1;
@@ -326,10 +312,10 @@ final class sh extends fh {
               stackIn_69_0 = stackOut_66_0;
               stackIn_69_1 = stackOut_66_1;
               stackIn_69_2 = stackOut_66_2;
-              break L9;
+              break L8;
             }
           }
-          L10: {
+          L9: {
             stackOut_69_0 = (RuntimeException) (Object) stackIn_69_0;
             stackOut_69_1 = ((StringBuilder) (Object) stackIn_69_1).append(stackIn_69_2).append(44);
             stackIn_72_0 = stackOut_69_0;
@@ -343,7 +329,7 @@ final class sh extends fh {
               stackIn_73_0 = stackOut_72_0;
               stackIn_73_1 = stackOut_72_1;
               stackIn_73_2 = stackOut_72_2;
-              break L10;
+              break L9;
             } else {
               stackOut_70_0 = (RuntimeException) (Object) stackIn_70_0;
               stackOut_70_1 = (StringBuilder) (Object) stackIn_70_1;
@@ -351,10 +337,10 @@ final class sh extends fh {
               stackIn_73_0 = stackOut_70_0;
               stackIn_73_1 = stackOut_70_1;
               stackIn_73_2 = stackOut_70_2;
-              break L10;
+              break L9;
             }
           }
-          L11: {
+          L10: {
             stackOut_73_0 = (RuntimeException) (Object) stackIn_73_0;
             stackOut_73_1 = ((StringBuilder) (Object) stackIn_73_1).append(stackIn_73_2).append(44);
             stackIn_76_0 = stackOut_73_0;
@@ -368,7 +354,7 @@ final class sh extends fh {
               stackIn_77_0 = stackOut_76_0;
               stackIn_77_1 = stackOut_76_1;
               stackIn_77_2 = stackOut_76_2;
-              break L11;
+              break L10;
             } else {
               stackOut_74_0 = (RuntimeException) (Object) stackIn_74_0;
               stackOut_74_1 = (StringBuilder) (Object) stackIn_74_1;
@@ -376,10 +362,10 @@ final class sh extends fh {
               stackIn_77_0 = stackOut_74_0;
               stackIn_77_1 = stackOut_74_1;
               stackIn_77_2 = stackOut_74_2;
-              break L11;
+              break L10;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_77_0, stackIn_77_2 + 44 + param6 + 41);
+          throw sd.a((Throwable) (Object) stackIn_77_0, stackIn_77_2 + 44 + 1 + 41);
         }
     }
 

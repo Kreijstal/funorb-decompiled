@@ -4,7 +4,7 @@
 class rr extends o {
     static int field_t;
 
-    final static a a(pf param0, int param1, int param2, int param3) {
+    final static a a(pf param0, int param1, int param2) {
         RuntimeException var4 = null;
         a var5 = null;
         int var6 = 0;
@@ -30,7 +30,7 @@ class rr extends o {
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param0 != null) {
-            var7 = (a) (Object) param0.d(param3 ^ param3);
+            var7 = (a) (Object) param0.d(0);
             L0: while (true) {
               if (var7 != null) {
                 a dupTemp$2 = var7.b(-125, param2, param1);
@@ -78,7 +78,7 @@ class rr extends o {
               break L1;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw r.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 44 + param2 + 44 + 2 + 41);
         }
     }
 
@@ -97,7 +97,7 @@ class rr extends o {
         }
     }
 
-    final static boolean a(vd param0, pf param1, byte param2) {
+    final static boolean a(vd param0, pf param1) {
         oh var3 = null;
         RuntimeException var3_ref = null;
         vd var4 = null;

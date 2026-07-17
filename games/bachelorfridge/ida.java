@@ -13,7 +13,7 @@ abstract class ida extends at {
     int field_m;
     nq field_p;
 
-    final static String a(int param0, byte[] param1, int param2, int param3) {
+    final static String a(int param0, byte[] param1, int param2) {
         RuntimeException var4 = null;
         char[] var4_array = null;
         int var5 = 0;
@@ -223,7 +223,7 @@ abstract class ida extends at {
         return stackIn_37_0;
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_o = null;
     }
 
@@ -236,69 +236,61 @@ abstract class ida extends at {
 
     final static pn a(int param0, vr param1, int param2) {
         RuntimeException var3 = null;
-        pn stackIn_3_0 = null;
+        pn stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        pn stackOut_2_0 = null;
+        pn stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              if (param0 == 0) {
-                break L1;
-              } else {
-                field_o = null;
-                break L1;
-              }
-            }
-            stackOut_2_0 = vw.field_a[param2];
-            stackIn_3_0 = stackOut_2_0;
+            stackOut_0_0 = vw.field_a[param2];
+            stackIn_1_0 = stackOut_0_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
-            stackOut_4_1 = new StringBuilder().append("ida.F(").append(param0).append(44);
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackOut_2_0 = (RuntimeException) var3;
+            stackOut_2_1 = new StringBuilder().append("ida.F(").append(0).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L2;
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L2;
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param2 + 41);
         }
-        return stackIn_3_0;
+        return stackIn_1_0;
     }
 
     final boolean d(byte param0) {
@@ -341,7 +333,30 @@ abstract class ida extends at {
     final void a(int param0, int param1, int param2) {
         int var5 = BachelorFridge.field_y;
         aga var4 = ((ida) this).field_p.a(64, ((ida) this).field_s.field_h);
-        ad discarded$0 = ((ida) this).field_s.b(var4, -23990);
+        ad discarded$7 = ((ida) this).field_s.b(var4, -23990);
+        if (param2 != 27230) {
+            ((ida) this).field_n = -76;
+            ((ida) this).field_l = 0;
+            ((ida) this).field_j = 0;
+            ((ida) this).field_n = 0;
+            if (param0 == 2) {
+                ((ida) this).field_l = -param1;
+                return;
+            }
+            if (param0 != 1) {
+                if (4 == param0) {
+                    ((ida) this).field_l = param1;
+                    return;
+                }
+                if (param0 != 3) {
+                    return;
+                }
+                ((ida) this).field_j = param1;
+                return;
+            }
+            ((ida) this).field_j = -param1;
+            return;
+        }
         ((ida) this).field_l = 0;
         ((ida) this).field_j = 0;
         ((ida) this).field_n = 0;

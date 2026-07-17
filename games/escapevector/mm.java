@@ -6,7 +6,7 @@ final class mm {
     static String field_c;
     static String field_a;
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -54,8 +54,11 @@ final class mm {
             }
             L5: while (true) {
               if (!pn.p(-126)) {
-                di.field_d.a(gb.a(sf.field_c, ng.field_ob, 8158), (byte) 126, gb.a(dh.field_d, bj.field_y, 8158));
-                if (fn.a(true, 0)) {
+                int discarded$48 = 8158;
+                int discarded$49 = 8158;
+                di.field_d.a(gb.a(sf.field_c, ng.field_ob), (byte) 126, gb.a(dh.field_d, bj.field_y));
+                int discarded$50 = 0;
+                if (fn.a(true)) {
                   var1_int = 1;
                   stackOut_18_0 = var1_int;
                   stackIn_19_0 = stackOut_18_0;
@@ -65,7 +68,8 @@ final class mm {
                 }
               } else {
                 di.field_d.c((byte) 6);
-                if (!fn.a(false, 0)) {
+                int discarded$51 = 0;
+                if (!fn.a(false)) {
                   continue L5;
                 } else {
                   var1_int = 1;
@@ -104,44 +108,44 @@ final class mm {
         int var3 = 0;
         mf var4 = null;
         var3 = EscapeVector.field_A;
-        if (param0 == 4) {
-          if (!fa.field_c[param1]) {
-            var4 = fi.field_j;
-            if (5 != param1) {
-              if (param1 == 4) {
-                if (se.field_b == null) {
-                  fn.a((byte) 53);
-                  return true;
-                } else {
-                  sl.field_b[param1] = se.field_b.field_g;
-                  pf.field_g[param1] = se.field_b.field_d;
-                  fa.field_c[param1] = true;
-                  fn.a((byte) 53);
-                  return true;
-                }
+        if (!fa.field_c[param1]) {
+          var4 = fi.field_j;
+          if (5 != param1) {
+            if (param1 == 4) {
+              if (se.field_b == null) {
+                fn.a((byte) 53);
+                return true;
               } else {
-                if (!var4.a(param0 + -4, da.field_d[param1])) {
-                  return false;
-                } else {
-                  tk.field_a[param1] = fe.a(da.field_d[param1], var4, "texture", true);
-                  dd.field_a[param1] = fe.a(da.field_d[param1], var4, "frosting", true);
-                  dd.field_a[param1].c();
-                  dm.a(var4, param1, false);
-                  fa.field_c[param1] = true;
-                  fn.a((byte) 53);
-                  return true;
-                }
+                sl.field_b[param1] = se.field_b.field_g;
+                pf.field_g[param1] = se.field_b.field_d;
+                fa.field_c[param1] = true;
+                fn.a((byte) 53);
+                return true;
               }
             } else {
-              en.a(var4, 5);
-              fn.a((byte) 53);
-              return true;
+              if (!var4.a(0, da.field_d[param1])) {
+                return false;
+              } else {
+                int discarded$4 = 1;
+                tk.field_a[param1] = fe.a(da.field_d[param1], var4, "texture");
+                int discarded$5 = 1;
+                dd.field_a[param1] = fe.a(da.field_d[param1], var4, "frosting");
+                dd.field_a[param1].c();
+                int discarded$6 = 0;
+                dm.a(var4, param1);
+                fa.field_c[param1] = true;
+                fn.a((byte) 53);
+                return true;
+              }
             }
           } else {
+            int discarded$7 = 5;
+            en.a(var4);
+            fn.a((byte) 53);
             return true;
           }
         } else {
-          return false;
+          return true;
         }
     }
 
@@ -191,7 +195,7 @@ final class mm {
             var8 = var9;
             var7 = var8;
             var3 = var7;
-            var4 = param0;
+            var4 = 0;
             L2: while (true) {
               if (var2_int <= var4) {
                 stackOut_21_0 = new String(var10);
@@ -254,7 +258,7 @@ final class mm {
           L8: {
             var2 = decompiledCaughtException;
             stackOut_23_0 = (RuntimeException) var2;
-            stackOut_23_1 = new StringBuilder().append("mm.B(").append(param0).append(44);
+            stackOut_23_1 = new StringBuilder().append("mm.B(").append(0).append(44);
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -282,7 +286,7 @@ final class mm {
         return stackIn_22_0;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         int var1 = 0;
         field_c = null;
         field_b = null;

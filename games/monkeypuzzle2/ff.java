@@ -19,7 +19,7 @@ final class ff implements Runnable {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_a = null;
     }
@@ -193,9 +193,6 @@ final class ff implements Runnable {
     }
 
     final static void a(boolean param0, ta param1, ta param2, int param3) {
-        if (param0) {
-            return;
-        }
         try {
             sl.field_o = param2;
             fe.field_a = param1;
@@ -203,7 +200,7 @@ final class ff implements Runnable {
             tf.a((byte) 56, ge.field_g / 2, ge.field_h / 2);
             wf.a(param2.field_D + param2.field_j, param1.field_j, param2.field_j, 8192, param1.field_j + param1.field_D);
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "ff.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw la.a((Throwable) (Object) runtimeException, "ff.C(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
     }
 
@@ -326,7 +323,8 @@ final class ff implements Runnable {
                         var2.c();
                     }
                 }
-                em.a(10L, false);
+                int discarded$0 = 0;
+                em.a(10L);
                 em.a((Object) null, (byte) -101, ((ff) this).field_b);
             }
         } catch (Exception exception) {

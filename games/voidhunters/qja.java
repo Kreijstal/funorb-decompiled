@@ -147,7 +147,7 @@ final class qja extends rqa {
         return stackIn_3_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = 72;
         field_o = null;
     }

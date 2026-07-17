@@ -6,7 +6,7 @@ final class q {
     static String field_a;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
     }
@@ -315,10 +315,16 @@ final class q {
     }
 
     final static hj[] a(boolean param0, int param1, int param2, int param3, int param4) {
-        if (param0) {
-            return null;
-        }
-        return kk.a(3, 1, param1, 1, (byte) 123, param3, 1, param2, param4);
+        int discarded$0 = 65793;
+        int discarded$1 = 0;
+        int discarded$2 = 1;
+        int discarded$3 = 0;
+        int discarded$4 = 123;
+        int discarded$5 = 1;
+        int discarded$6 = 0;
+        int discarded$7 = 1;
+        int discarded$8 = 3;
+        return kk.a();
     }
 
     static {

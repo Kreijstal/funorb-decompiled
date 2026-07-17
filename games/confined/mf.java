@@ -112,9 +112,6 @@ abstract class mf extends ra implements uj {
     }
 
     final static boolean c(int param0) {
-        if (param0 < 101) {
-            return true;
-        }
         return sg.a((byte) -111, ii.b(false));
     }
 
@@ -209,7 +206,7 @@ abstract class mf extends ra implements uj {
         }
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_f = null;
         field_g = null;
     }

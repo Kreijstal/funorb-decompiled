@@ -16,20 +16,11 @@ final class md extends r {
     final static int a(byte param0, int param1) {
         param1--;
         param1 = param1 | param1 >>> 1;
-        if (param0 != 127) {
-          md.l(60);
-          param1 = param1 | param1 >>> 2;
-          param1 = param1 | param1 >>> 4;
-          param1 = param1 | param1 >>> 8;
-          param1 = param1 | param1 >>> 16;
-          return 1 + param1;
-        } else {
-          param1 = param1 | param1 >>> 2;
-          param1 = param1 | param1 >>> 4;
-          param1 = param1 | param1 >>> 8;
-          param1 = param1 | param1 >>> 16;
-          return 1 + param1;
-        }
+        param1 = param1 | param1 >>> 2;
+        param1 = param1 | param1 >>> 4;
+        param1 = param1 | param1 >>> 8;
+        param1 = param1 | param1 >>> 16;
+        return 1 + param1;
     }
 
     final static void a(java.applet.Applet param0, byte param1, String param2) {
@@ -165,8 +156,8 @@ final class md extends r {
         }
     }
 
-    public static void l(int param0) {
-        int var1 = -26 / ((param0 - -6) / 58);
+    public static void l() {
+        int var1 = -13;
         field_D = null;
         field_E = null;
         field_H = null;

@@ -193,7 +193,7 @@ final class qd {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_e = null;
         field_j = null;
         int var1 = 38;
@@ -265,7 +265,8 @@ final class qd {
               }
             }
             var5 = param0.a(var4_int, param1, (byte) -11);
-            stackOut_2_0 = vc.a(param0, var5, var4_int, -2);
+            int discarded$2 = -2;
+            stackOut_2_0 = vc.a(param0, var5, var4_int);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -428,7 +429,7 @@ final class qd {
         return stackIn_8_0 != 0;
     }
 
-    final static pb[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static pb[] a() {
         int var9 = 0;
         pb[] var10 = null;
         pb[] var11_ref_pb__ = null;
@@ -437,87 +438,77 @@ final class qd {
         pb var13 = null;
         int var14 = 0;
         int var15 = 0;
-        Object var16 = null;
         var15 = stellarshard.field_B;
-        var9 = param1 + param5 - -param7;
+        var9 = 3;
         var10 = new pb[]{new pb(var9, var9), new pb(3, var9), new pb(var9, var9), new pb(var9, 3), new pb(64, 64), new pb(var9, 3), new pb(var9, var9), new pb(3, var9), new pb(var9, var9)};
         var11_ref_pb__ = var10;
         var12 = 0;
         L0: while (true) {
           if (var12 >= var11_ref_pb__.length) {
-            L1: {
-              var11 = 0;
-              if (param6 == -1) {
-                break L1;
-              } else {
-                var16 = null;
-                pb discarded$1 = qd.a((pf) null, (String) null, (String) null, (byte) 11);
-                break L1;
-              }
-            }
-            L2: while (true) {
-              if (var11 >= param5) {
+            var11 = 0;
+            L1: while (true) {
+              if (var11 >= 1) {
                 var11 = 0;
-                L3: while (true) {
-                  if (param5 <= var11) {
+                L2: while (true) {
+                  if (var11 >= 1) {
                     var11 = 0;
-                    L4: while (true) {
+                    L3: while (true) {
                       if (var11 >= 3) {
                         var11 = 0;
-                        L5: while (true) {
+                        L4: while (true) {
                           if (var11 >= 1) {
                             return var10;
                           } else {
                             var12 = 0;
-                            L6: while (true) {
-                              if (var12 < param7) {
-                                var10[1].field_z[var11 + (var9 + (-var12 + -1)) * 3] = param3;
-                                var10[3].field_z[var11 * var9 + (-var12 + -1) + var9] = param3;
-                                var10[7].field_z[var12 * 3 + var11] = param3;
-                                var10[5].field_z[var12 + var9 * var11] = param3;
+                            L5: while (true) {
+                              if (var12 < 1) {
+                                var10[1].field_z[var11 + (var9 + (-var12 + -1)) * 3] = 65793;
+                                var10[3].field_z[var11 * var9 + (-var12 + -1) + var9] = 65793;
+                                var10[7].field_z[var12 * 3 + var11] = 65793;
+                                var10[5].field_z[var12 + var9 * var11] = 65793;
                                 var12++;
-                                continue L6;
+                                continue L5;
                               } else {
                                 var11++;
-                                continue L5;
+                                continue L4;
                               }
                             }
                           }
                         }
                       } else {
                         var12 = 0;
-                        L7: while (true) {
-                          if (param5 > var12) {
-                            var10[7].field_z[(-1 + (-var12 + var9)) * 3 - -var11] = param2;
-                            var10[5].field_z[var11 * var9 - -var9 - (1 + var12)] = param2;
-                            var10[1].field_z[3 * var12 - -var11] = param0;
-                            var10[3].field_z[var12 + var11 * var9] = param0;
+                        L6: while (true) {
+                          if (1 > var12) {
+                            var10[7].field_z[(-1 + (-var12 + var9)) * 3 - -var11] = 0;
+                            var10[5].field_z[var11 * var9 - -var9 - (1 + var12)] = 0;
+                            var10[1].field_z[3 * var12 - -var11] = 0;
+                            var10[3].field_z[var12 + var11 * var9] = 0;
                             var12++;
-                            continue L7;
+                            continue L6;
                           } else {
                             var11++;
-                            continue L4;
+                            continue L3;
                           }
                         }
                       }
                     }
                   } else {
                     var12 = 0;
-                    L8: while (true) {
+                    L7: while (true) {
                       if (var9 <= var12) {
                         var11++;
-                        continue L3;
+                        continue L2;
                       } else {
-                        var10[0].field_z[var12 + var11 * var9] = param0;
-                        var10[0].field_z[var9 * var12 + var11] = param0;
+                        var10[0].field_z[var12 + var11 * var9] = 0;
+                        var10[0].field_z[var9 * var12 + var11] = 0;
                         if (-var11 + var9 > var12) {
-                          var10[2].field_z[var12 - -(var9 * var11)] = param0;
-                          var10[6].field_z[var11 + var9 * var12] = param0;
+                          var10[2].field_z[var12 - -(var9 * var11)] = 0;
+                          var10[6].field_z[var11 + var9 * var12] = 0;
                           var12++;
-                          continue L8;
+                          continue L7;
                         } else {
                           var12++;
-                          continue L8;
+                          continue L7;
                         }
                       }
                     }
@@ -525,17 +516,17 @@ final class qd {
                 }
               } else {
                 var12 = 0;
-                L9: while (true) {
+                L8: while (true) {
                   if (var9 > var12) {
-                    var10[6].field_z[var12 + var9 * (-1 + -var11 + var9)] = param2;
-                    var10[8].field_z[var12 + (-1 + (var9 + -var11)) * var9] = param2;
-                    var10[2].field_z[var9 * var12 + var9 - (1 - -var11)] = param2;
-                    var10[8].field_z[-1 - -var9 + (-var11 + var12 * var9)] = param2;
+                    var10[6].field_z[var12 + var9 * (-1 + -var11 + var9)] = 0;
+                    var10[8].field_z[var12 + (-1 + (var9 + -var11)) * var9] = 0;
+                    var10[2].field_z[var9 * var12 + var9 - (1 - -var11)] = 0;
+                    var10[8].field_z[-1 - -var9 + (-var11 + var12 * var9)] = 0;
                     var12++;
-                    continue L9;
+                    continue L8;
                   } else {
                     var11++;
-                    continue L2;
+                    continue L1;
                   }
                 }
               }
@@ -543,14 +534,14 @@ final class qd {
           } else {
             var13 = var11_ref_pb__[var12];
             var14 = 0;
-            L10: while (true) {
+            L9: while (true) {
               if (var13.field_z.length <= var14) {
                 var12++;
                 continue L0;
               } else {
-                var13.field_z[var14] = param4;
+                var13.field_z[var14] = 0;
                 var14++;
-                continue L10;
+                continue L9;
               }
             }
           }

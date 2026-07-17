@@ -13,23 +13,16 @@ final class qd {
         int var3 = 0;
         int var4 = 0;
         ad[] var5 = null;
-        L0: {
-          var4 = DungeonAssault.field_K;
-          if (param0 > 75) {
-            break L0;
-          } else {
-            int discarded$2 = qd.a(12, 55, 102);
-            break L0;
-          }
-        }
-        var5 = ad.b(65280);
+        var4 = DungeonAssault.field_K;
+        int discarded$2 = 65280;
+        var5 = ad.b();
         var2 = var5;
         var3 = 0;
-        L1: while (true) {
+        L0: while (true) {
           if (var3 < var5.length) {
             if (param1 != var5[var3].field_b) {
               var3++;
-              continue L1;
+              continue L0;
             } else {
               return var5[var3];
             }
@@ -39,14 +32,11 @@ final class qd {
         }
     }
 
-    final static nh a(boolean param0, boolean param1, int param2, byte param3, int param4) {
-        if (param3 != -31) {
-            field_e = null;
-        }
-        return uo.a(param0, param4, param1, param2, 27847, false);
+    final static nh a(boolean param0, boolean param1, int param2) {
+        return uo.a(false, 1, true, param2, 27847, false);
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_e = null;
         field_c = null;
@@ -56,10 +46,7 @@ final class qd {
 
     final static int a(int param0, int param1, int param2) {
         int var3 = tg.field_f[param2][param0];
-        if (param1 != 380) {
-            nh discarded$0 = qd.a(false, false, 41, (byte) -8, 52);
-        }
-        if (!(!ke.a(param1 ^ 280, var3))) {
+        if (!(!ke.a(100, var3))) {
             return 380;
         }
         return tg.field_j[param2];

@@ -85,7 +85,7 @@ final class ef implements Runnable {
         return stackIn_4_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
         field_e = null;
     }
@@ -124,17 +124,18 @@ final class ef implements Runnable {
         }
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         rh var1 = (rh) (Object) a.field_f.c(-3905);
         if (!(var1 != null)) {
-            ec.a((byte) 27);
+            int discarded$0 = 27;
+            ec.a();
             return;
         }
         ia var2 = se.field_p;
-        int discarded$0 = var2.f((byte) -118);
-        int discarded$1 = var2.f((byte) -93);
-        int discarded$2 = var2.f((byte) -104);
-        int discarded$3 = var2.f((byte) -110);
+        int discarded$1 = var2.f((byte) -118);
+        int discarded$2 = var2.f((byte) -93);
+        int discarded$3 = var2.f((byte) -104);
+        int discarded$4 = var2.f((byte) -110);
         var1.b(4);
     }
 

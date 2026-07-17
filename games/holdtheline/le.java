@@ -26,7 +26,7 @@ final class le extends rd {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_n = null;
         field_s = null;
         field_u = null;

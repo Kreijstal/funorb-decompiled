@@ -9,74 +9,39 @@ final class sk {
 
     final static void a(int param0, int param1) {
         ea.a(vt.field_c.field_v, 5, true, 636, param1, -51);
-        if (param0 != 1) {
-            field_d = null;
-        }
     }
 
-    final static int a(byte param0) {
-        if (param0 != 97) {
-            field_a = null;
-            return wd.field_n[0];
-        }
+    final static int a() {
         return wd.field_n[0];
     }
 
     final static void a(boolean param0) {
-        fa var1 = null;
-        ml var2 = null;
-        if (!param0) {
-            sk.a(-17, -97, 99);
-            var1 = (fa) (Object) nl.field_f.g(24009);
-            if (!(var1 != null)) {
-                lr.b((byte) -116);
-                return;
-            }
-            var2 = un.field_e;
-            int discarded$0 = var2.k(4);
-            int discarded$1 = var2.k(4);
-            int discarded$2 = var2.k(4);
-            int discarded$3 = var2.k(4);
-            var1.c((byte) -109);
-            return;
-        }
-        var1 = (fa) (Object) nl.field_f.g(24009);
+        fa var1 = (fa) (Object) nl.field_f.g(24009);
         if (!(var1 != null)) {
-            lr.b((byte) -116);
+            int discarded$0 = -116;
+            lr.b();
             return;
         }
-        var2 = un.field_e;
+        ml var2 = un.field_e;
+        int discarded$1 = var2.k(4);
+        int discarded$2 = var2.k(4);
+        int discarded$3 = var2.k(4);
         int discarded$4 = var2.k(4);
-        int discarded$5 = var2.k(4);
-        int discarded$6 = var2.k(4);
-        int discarded$7 = var2.k(4);
         var1.c((byte) -109);
     }
 
     final static void a(int param0, int param1, lv param2) {
-        if (param1 != 16586) {
-            return;
-        }
         try {
-            np.field_Jb.a((gn) (Object) new i(param0, param2), 3);
+            np.field_Jb.a((gn) (Object) new i(7, param2), 3);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "sk.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "sk.D(" + 7 + 44 + 16586 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
     public static void a(int param0) {
-        if (param0 != -5514) {
-          field_a = null;
-          field_d = null;
-          field_b = null;
-          field_a = null;
-          return;
-        } else {
-          field_d = null;
-          field_b = null;
-          field_a = null;
-          return;
-        }
+        field_d = null;
+        field_b = null;
+        field_a = null;
     }
 
     final static void a(int param0, int param1, int param2) {
@@ -116,7 +81,7 @@ final class sk {
         }
     }
 
-    final static int a(int param0, int param1, int param2, int param3, ml param4, int param5) {
+    final static int a(int param0, int param1, int param2, int param3, ml param4) {
         RuntimeException var6 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
@@ -146,7 +111,12 @@ final class sk {
                 break L1;
               }
             }
-            stackOut_2_0 = gl.a(1 << param3, (byte) 123, param2, param5, param4, param3, 1 << param5, 1 << param1, 1 << param2, param1);
+            int discarded$10 = 8;
+            int discarded$11 = 1;
+            int discarded$12 = 256;
+            int discarded$13 = 65536;
+            int discarded$14 = 4;
+            stackOut_2_0 = gl.a(16, (byte) 123, 0, 16, param4);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -155,7 +125,7 @@ final class sk {
           L2: {
             var6 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var6;
-            stackOut_4_1 = new StringBuilder().append("sk.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_4_1 = new StringBuilder().append("sk.A(").append(param0).append(44).append(8).append(44).append(0).append(44).append(4).append(44);
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -178,7 +148,7 @@ final class sk {
               break L2;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param5 + 41);
+          throw nb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 16 + 41);
         }
         return stackIn_3_0;
     }

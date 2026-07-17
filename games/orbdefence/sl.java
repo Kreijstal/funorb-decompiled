@@ -114,7 +114,7 @@ final class sl extends sf {
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_Z = null;
     }
 

@@ -121,7 +121,7 @@ abstract class dg extends vg implements fo, noa {
         ((dg) this).field_f = param0;
     }
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         return true;
     }
 
@@ -1402,7 +1402,8 @@ abstract class dg extends vg implements fo, noa {
         if (param0 != 48) {
             return true;
         }
-        return this.g((byte) -105);
+        int discarded$0 = -105;
+        return this.g();
     }
 
     void a(gr param0, gma param1, byte param2) {
@@ -1433,7 +1434,7 @@ abstract class dg extends vg implements fo, noa {
 
     abstract void a(iq param0, int param1, int param2, int param3, byte param4);
 
-    private final boolean g(byte param0) {
+    private final boolean g() {
         int var2 = 0;
         var2 = 0;
         if (((dg) this).a((byte) 74)) {
@@ -1776,10 +1777,20 @@ abstract class dg extends vg implements fo, noa {
     }
 
     public int e(byte param0) {
-        if (null == ((dg) this).field_h) {
+        if (param0 <= -86) {
+          if (null == ((dg) this).field_h) {
             return 0;
+          } else {
+            return ((dg) this).field_h.g((byte) 115) - -(((dg) this).field_f << 16);
+          }
+        } else {
+          int discarded$7 = ((dg) this).k((byte) -84);
+          if (null == ((dg) this).field_h) {
+            return 0;
+          } else {
+            return ((dg) this).field_h.g((byte) 115) - -(((dg) this).field_f << 16);
+          }
         }
-        return ((dg) this).field_h.g((byte) 115) - -(((dg) this).field_f << 16);
     }
 
     final void a(int param0, byte param1) {

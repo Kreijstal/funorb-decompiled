@@ -155,14 +155,14 @@ final class sk {
         float var4_float = 0.0f;
         try {
             var4_float = (float)(1 + ((sk) this).field_f) + (float)param1 / 100.0f;
-            if (param0 != ~param1) {
+            if (param1 != 0) {
                 ((sk) this).field_a = param2.field_b + " - " + param1 + "%";
             } else {
                 ((sk) this).field_a = param2.field_g;
             }
             ((sk) this).field_i = var4_float * (float)((sk) this).field_e / (float)(1 + ((sk) this).field_c);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "sk.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "sk.D(" + -1 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

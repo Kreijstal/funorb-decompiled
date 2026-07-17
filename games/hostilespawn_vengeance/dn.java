@@ -14,29 +14,25 @@ final class dn {
     private ui field_d;
 
     private final void a(int param0, int param1, Object param2, long param3) {
-        lj var9 = null;
-        hb var6 = null;
+        lj var6 = null;
+        hb var6_ref = null;
         int var7 = HostileSpawn.field_I ? 1 : 0;
         try {
-            if (!(param1 <= ((dn) this).field_c)) {
+            if (!(((dn) this).field_c >= 1)) {
                 throw new IllegalStateException();
             }
             this.a((byte) 122, param3);
-            if (param0 >= -3) {
-                Object var8 = null;
-                int discarded$0 = dn.a((CharSequence) null, 56, -67);
-            }
-            ((dn) this).field_f = ((dn) this).field_f - param1;
+            ((dn) this).field_f = ((dn) this).field_f - 1;
             while (((dn) this).field_f < 0) {
-                var9 = (lj) (Object) ((dn) this).field_d.a(true);
-                this.a(var9, (byte) -111);
+                var6 = (lj) (Object) ((dn) this).field_d.a(true);
+                this.a(var6, (byte) -111);
             }
-            var6 = new hb(param2, param1);
-            ((dn) this).field_e.a((byte) 91, param3, (am) (Object) var6);
-            ((dn) this).field_d.a(24, (dk) (Object) var6);
-            ((lj) (Object) var6).field_h = 0L;
+            var6_ref = new hb(param2, 1);
+            ((dn) this).field_e.a((byte) 91, param3, (am) (Object) var6_ref);
+            ((dn) this).field_d.a(24, (dk) (Object) var6_ref);
+            ((lj) (Object) var6_ref).field_h = 0L;
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "dn.G(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "dn.G(" + -101 + 44 + 1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
     }
 
@@ -45,13 +41,13 @@ final class dn {
             if (!(10 <= param0)) {
                 si.a(param3 << 4, param5 << 4, 5 + param0 * 8 << 4, (-1 + param2.length) * (-param0 + 10) / 10, param2);
             }
-            si.a(param3 << 4, param5 << 4, -param0 + 20 << 4, param1.length + param4, param1);
+            si.a(param3 << 4, param5 << 4, -param0 + 20 << 4, param1.length + -1, param1);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "dn.I(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "dn.I(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + -1 + 44 + param5 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_h = null;
         field_g = null;
         field_i = null;
@@ -130,9 +126,6 @@ final class dn {
     }
 
     private final void a(byte param0, long param1) {
-        if (param0 < 110) {
-            return;
-        }
         lj var4 = (lj) (Object) ((dn) this).field_e.a(param1, -1);
         this.a(var4, (byte) -107);
     }

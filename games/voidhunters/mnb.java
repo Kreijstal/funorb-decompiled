@@ -40,11 +40,11 @@ abstract class mnb {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_g = null;
     }
 
-    final static void a(jk param0, boolean param1) {
+    final static void a(jk param0) {
         jk var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

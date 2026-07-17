@@ -5,15 +5,10 @@ final class aob extends rqa {
     static volatile boolean field_o;
 
     final static int a(int param0, int param1) {
-        if (param0 == 29554) {
-          if (btb.field_a) {
+        if (btb.field_a) {
             return hab.field_g[param1].a(14951);
-          } else {
-            return 16742263 - -(2243266 * param1);
-          }
-        } else {
-          return -94;
         }
+        return 16742263 - -(2243266 * param1);
     }
 
     final nc a(nc[] param0, int param1) {

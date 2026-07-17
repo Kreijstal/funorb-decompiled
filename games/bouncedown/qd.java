@@ -31,7 +31,7 @@ final class qd {
         try {
           L0: {
             L1: {
-              var8 = ed.a(4147, param2, param4, param0, param1, param5);
+              var8 = ed.a(4147, param2, 0, 0, param1, param5);
               var6 = var8;
               if (param3 >= 121) {
                 break L1;
@@ -59,7 +59,7 @@ final class qd {
           L2: {
             var6_ref = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var6_ref;
-            stackOut_7_1 = new StringBuilder().append("qd.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_7_1 = new StringBuilder().append("qd.B(").append(0).append(44).append(param1).append(44);
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -82,12 +82,12 @@ final class qd {
               break L2;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw ii.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param3 + 44 + 0 + 44 + param5 + 41);
         }
         return stackIn_6_0;
     }
 
-    final static lj a(String param0, int param1) {
+    final static lj a(String param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -192,7 +192,7 @@ final class qd {
                 }
               } else {
                 var3 = 0;
-                var4 = 53 / ((param1 - -7) / 38);
+                var4 = 26;
                 var5 = 0;
                 L4: while (true) {
                   if (var2_int > var5) {
@@ -266,7 +266,7 @@ final class qd {
               break L7;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_52_0, stackIn_52_2 + 44 + param1 + 41);
+          throw ii.a((Throwable) (Object) stackIn_52_0, stackIn_52_2 + 44 + 96 + 41);
         }
     }
 

@@ -4,7 +4,7 @@
 class vb extends bf {
     static String field_i;
 
-    final static void f(int param0) {
+    final static void f() {
         RuntimeException var1 = null;
         double var1_double = 0.0;
         int var1_int = 0;
@@ -216,7 +216,7 @@ class vb extends bf {
         }
     }
 
-    final static void g(int param0) {
+    final static void g() {
         oa.field_G = -1;
         pf.field_b = null;
         ka.field_a = 0;
@@ -224,16 +224,16 @@ class vb extends bf {
         ac.field_b = false;
     }
 
-    final static void a(int param0, bk param1, boolean param2) {
+    final static void a(int param0, bk param1) {
         hb var3 = null;
         try {
             var3 = gf.field_c;
-            var3.b(true, param0);
+            var3.b(true, 5);
             var3.b(2, -49152);
             var3.b(0, -49152);
             var3.b(param1.field_e, -49152);
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "vb.H(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 1 + 41);
+            throw la.a((Throwable) (Object) runtimeException, "vb.H(" + 5 + 44 + (param1 != null ? "{...}" : "null") + 44 + 1 + 41);
         }
     }
 
@@ -242,9 +242,6 @@ class vb extends bf {
 
     final static int a(int param0, int param1) {
         int var2 = 0;
-        if (param0 <= 62) {
-            return 28;
-        }
         if (!(0 == (7 & param1))) {
             var2 = -(param1 & 7) + 8;
         }
@@ -252,7 +249,7 @@ class vb extends bf {
         return var3;
     }
 
-    public static void e(int param0) {
+    public static void e() {
         int var1 = -1;
         field_i = null;
     }
@@ -264,14 +261,16 @@ class vb extends bf {
         }
         if (null != me.field_f) {
             me.field_f.g((byte) -75);
-            var1 = hf.b(0);
+            int discarded$0 = 0;
+            var1 = hf.b();
             j.field_e = new qi(var1, (String) null, true, false, false);
             wg.field_j.b((byte) -54, (we) (Object) jh.field_C);
             jh.field_C.c((byte) 119, (we) (Object) j.field_e);
             jh.field_C.p(-21);
             return;
         }
-        var1 = hf.b(0);
+        int discarded$1 = 0;
+        var1 = hf.b();
         j.field_e = new qi(var1, (String) null, true, false, false);
         wg.field_j.b((byte) -54, (we) (Object) jh.field_C);
         jh.field_C.c((byte) 119, (we) (Object) j.field_e);

@@ -12,17 +12,8 @@ final class nm implements Runnable {
     static int field_e;
     private boolean field_i;
 
-    final static void a(int param0) {
-        Object var2 = null;
-        if (param0 != -6145) {
-          var2 = null;
-          boolean discarded$2 = nm.a(-93, (int[]) null, 25);
-          oj.a(4, param0 ^ -6148);
-          return;
-        } else {
-          oj.a(4, param0 ^ -6148);
-          return;
-        }
+    final static void a() {
+        oj.a(4, 3);
     }
 
     final void a(byte param0) {
@@ -60,81 +51,8 @@ final class nm implements Runnable {
         }
     }
 
-    final static boolean a(int param0, int[] param1, int param2) {
-        RuntimeException var3 = null;
-        int stackIn_5_0 = 0;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
-        try {
-          L0: {
-            L1: {
-              if (param2 == -827843803) {
-                break L1;
-              } else {
-                field_a = 88;
-                break L1;
-              }
-            }
-            L2: {
-              if ((param1[param0 >> 5] & 1 << (param0 & 31)) == 0) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
-                break L2;
-              } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
-                break L2;
-              }
-            }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var3;
-            stackOut_6_1 = new StringBuilder().append("nm.D(").append(param0).append(44);
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
-            if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
-              break L3;
-            } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
-              break L3;
-            }
-          }
-          throw lj.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param2 + 41);
-        }
-        return stackIn_5_0 != 0;
+    final static boolean a(int param0, int[] param1) {
+        return (param1[param0 >> 5] & 1 << (param0 & 31)) != 0;
     }
 
     public final void run() {
@@ -619,7 +537,8 @@ final class nm implements Runnable {
         try {
             var2 = param0.a((Runnable) this, (byte) 58, 5);
             while (0 == var2.field_c) {
-                gf.a(10L, -10309);
+                int discarded$0 = -10309;
+                gf.a(10L);
             }
             if (var2.field_c == 2) {
                 throw new RuntimeException();

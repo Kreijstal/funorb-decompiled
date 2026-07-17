@@ -22,7 +22,8 @@ final class ik extends cq implements qi {
             ((ik) this).field_j = param3;
             ((ik) this).field_i = param4;
             ((ik) this).field_g.a((jj) this, -9135);
-            jaggl.OpenGL.glTexImage2Dub(((ik) this).field_e, 0, ((ik) this).a(false), param3, param4, 0, gq.a(((ik) this).field_h, -29824), kk.a(((ik) this).field_c, (byte) -117), (byte[]) null, 0);
+            int discarded$0 = -29824;
+            jaggl.OpenGL.glTexImage2Dub(((ik) this).field_e, 0, ((ik) this).a(false), param3, param4, 0, gq.a(((ik) this).field_h), kk.a(((ik) this).field_c, (byte) -117), (byte[]) null, 0);
         } catch (RuntimeException runtimeException) {
             throw pn.a((Throwable) (Object) runtimeException, "ik.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
         }
@@ -35,7 +36,8 @@ final class ik extends cq implements qi {
             ((ik) this).field_i = param3;
             ((ik) this).field_g.a((jj) this, -9135);
             jaggl.OpenGL.glPixelStorei(3314, param6);
-            jaggl.OpenGL.glTexImage2Df(((ik) this).field_e, 0, ((ik) this).a(false), param2, param3, 0, gq.a(((ik) this).field_h, -29824), 5126, param4, param5 * 4);
+            int discarded$0 = -29824;
+            jaggl.OpenGL.glTexImage2Df(((ik) this).field_e, 0, ((ik) this).a(false), param2, param3, 0, gq.a(((ik) this).field_h), 5126, param4, param5 * 4);
             jaggl.OpenGL.glPixelStorei(3314, 0);
         } catch (RuntimeException runtimeException) {
             throw pn.a((Throwable) (Object) runtimeException, "ik.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + param6 + 41);
@@ -64,7 +66,8 @@ final class ik extends cq implements qi {
             ((ik) this).field_g.a((jj) this, -9135);
             jaggl.OpenGL.glPixelStorei(3317, 1);
             jaggl.OpenGL.glPixelStorei(3314, param6);
-            jaggl.OpenGL.glTexImage2Dub(((ik) this).field_e, 0, ((ik) this).a(false), param2, param3, 0, gq.a(((ik) this).field_h, -29824), 5121, param4, param5);
+            int discarded$0 = -29824;
+            jaggl.OpenGL.glTexImage2Dub(((ik) this).field_e, 0, ((ik) this).a(false), param2, param3, 0, gq.a(((ik) this).field_h), 5121, param4, param5);
             jaggl.OpenGL.glPixelStorei(3314, 0);
             jaggl.OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeException) {

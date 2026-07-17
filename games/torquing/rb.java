@@ -354,45 +354,37 @@ class rb extends lg {
         tb var4 = null;
         tb var5 = null;
         int var6 = 0;
-        L0: {
-          var6 = Torquing.field_u;
-          if (!param1) {
-            break L0;
-          } else {
-            ((rb) this).field_F = null;
-            break L0;
-          }
-        }
+        var6 = Torquing.field_u;
         var4 = (tb) (Object) ((rb) this).field_D.b(0);
-        L1: while (true) {
+        L0: while (true) {
           if (var4 != null) {
             var5 = var4;
-            L2: while (true) {
+            L1: while (true) {
               if (var5 == null) {
                 var4 = (tb) (Object) ((rb) this).field_D.f(-24059);
-                continue L1;
+                continue L0;
               } else {
-                L3: {
+                L2: {
                   if (var5.field_m > param0) {
-                    break L3;
+                    break L2;
                   } else {
                     if (param2 < var5.field_p) {
-                      break L3;
+                      break L2;
                     } else {
                       if (var5.field_m + var5.field_q <= param0) {
-                        break L3;
+                        break L2;
                       } else {
                         if (param2 <= var5.field_n + var5.field_p) {
                           return var4;
                         } else {
-                          break L3;
+                          break L2;
                         }
                       }
                     }
                   }
                 }
                 var5 = var5.field_k;
-                continue L2;
+                continue L1;
               }
             }
           } else {
@@ -426,7 +418,7 @@ class rb extends lg {
           L0: {
             L1: {
               super.a(71, param1, param2, param3);
-              var5_int = -86 % ((param0 - -28) / 43);
+              var5_int = 0;
               ((rb) this).field_F = null;
               if (!((rb) this).field_s) {
                 break L1;
@@ -444,7 +436,7 @@ class rb extends lg {
           L2: {
             runtimeException = decompiledCaughtException;
             stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("rb.P(").append(param0).append(44);
+            stackOut_3_1 = new StringBuilder().append("rb.P(").append(-88).append(44);
             stackIn_5_0 = stackOut_3_0;
             stackIn_5_1 = stackOut_3_1;
             stackIn_4_0 = stackOut_3_0;
@@ -478,19 +470,15 @@ class rb extends lg {
         if (!(0 == param0)) {
             return;
         }
-        fe var10 = (fe) (Object) ((rb) this).field_q;
+        fe var5 = (fe) (Object) ((rb) this).field_q;
         tb var6 = ((rb) this).field_F;
         if (var6 != null) {
-            var7 = var10.a(2, param3, (gm) this);
-            var8 = var10.a((gm) this, param2, -59);
+            var7 = var5.a(2, param3, (gm) this);
+            var8 = var5.a((gm) this, param2, -59);
             do {
                 he.a(-2 + var7 + var6.field_m, 2 + var6.field_n, -2 + (var6.field_p + var8), 2, var6.field_q + 2);
                 var6 = var6.field_k;
             } while (var6 != null);
-        }
-        if (param1 >= -7) {
-            Object var9 = null;
-            ((rb) this).a(107, (gm) null, -97, 84);
         }
     }
 

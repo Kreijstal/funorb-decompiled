@@ -12,7 +12,7 @@ final class jf extends bj implements sg, qb {
     static String[] field_I;
     private ue field_L;
 
-    public static void j(int param0) {
+    public static void j() {
         field_K = null;
         field_H = null;
         field_I = null;
@@ -20,7 +20,7 @@ final class jf extends bj implements sg, qb {
         field_M = null;
     }
 
-    private final String a(byte param0) {
+    private final String a() {
         return "</col></u>";
     }
 
@@ -53,6 +53,8 @@ final class jf extends bj implements sg, qb {
             ((jf) this).field_G = param0;
             ((jf) this).field_N = new hc(bm.field_d, (wn) null);
             ((jf) this).field_N.field_s = (db) (Object) new ck();
+            int discarded$2 = -102;
+            int discarded$3 = 126;
             var7 = r.a(mh.field_c, -63, new String[2]);
             var3 = 20;
             var4 = new k(sb.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, sb.field_a.field_r, -1, 2147483647, true);
@@ -105,41 +107,8 @@ final class jf extends bj implements sg, qb {
         }
     }
 
-    final static boolean l(int param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        if (param0 != 3) {
-          L0: {
-            field_M = null;
-            if (kb.field_d <= 250) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
-              break L0;
-            } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (kb.field_d <= 250) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              break L1;
-            } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
-        }
+    final static boolean l() {
+        return kb.field_d > 250;
     }
 
     public final void a(int param0, ue param1, int param2, int param3) {
@@ -308,7 +277,7 @@ final class jf extends bj implements sg, qb {
         return stackIn_13_0;
     }
 
-    private final String k(int param0) {
+    private final String k() {
         return "<u=2164A2><col=2164A2>";
     }
 

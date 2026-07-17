@@ -33,11 +33,9 @@ abstract class hd extends nb {
             Object var6 = null;
             Object var7 = null;
             om var8 = null;
-            Object stackIn_11_0 = null;
-            dj stackIn_15_0 = null;
+            dj stackIn_14_0 = null;
             Throwable decompiledCaughtException = null;
-            dj stackOut_14_0 = null;
-            Object stackOut_10_0 = null;
+            dj stackOut_13_0 = null;
             try {
               L0: {
                 L1: {
@@ -77,31 +75,25 @@ abstract class hd extends nb {
                     break L2;
                   }
                 }
-                var8 = ep.field_l.a((na) var7, (byte) -106, param0, param2, (na) var6);
-                if (param1) {
-                  L5: {
-                    if (!param5) {
-                      break L5;
-                    } else {
-                      var8.a(false);
-                      break L5;
-                    }
+                var8 = ep.field_l.a((na) var7, (byte) -106, false, param2, (na) var6);
+                L5: {
+                  if (!param5) {
+                    break L5;
+                  } else {
+                    var8.a(false);
+                    break L5;
                   }
-                  stackOut_14_0 = new dj((w) (Object) var8, param4, param3);
-                  stackIn_15_0 = stackOut_14_0;
-                  break L0;
-                } else {
-                  stackOut_10_0 = null;
-                  stackIn_11_0 = stackOut_10_0;
-                  return (dj) (Object) stackIn_11_0;
                 }
+                stackOut_13_0 = new dj((w) (Object) var8, true, param3);
+                stackIn_14_0 = stackOut_13_0;
+                break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Object) (Object) decompiledCaughtException;
               throw new RuntimeException(((IOException) var6).toString());
             }
-            return stackIn_15_0;
+            return stackIn_14_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

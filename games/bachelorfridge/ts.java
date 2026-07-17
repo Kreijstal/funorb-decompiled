@@ -91,12 +91,12 @@ final class ts extends td {
                   }
                 }
               }
-              var11 = param1.a(param5, param2, param4 ^ 124, param0, param3);
+              var11 = param1.a(param5, param2, 126, param0, 0);
               L4: while (true) {
                 if (var11.field_f != 0) {
                   var7 = (java.awt.Frame) var11.field_e;
                   if (var7 != null) {
-                    if (param4 == var11.field_f) {
+                    if (2 == var11.field_f) {
                       gv.a(-111, param1, var7);
                       stackOut_24_0 = null;
                       stackIn_25_0 = stackOut_24_0;
@@ -146,12 +146,12 @@ final class ts extends td {
               break L5;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw pe.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 44 + param2 + 44 + 0 + 44 + 2 + 44 + param5 + 41);
         }
         return (java.awt.Frame) (Object) stackIn_25_0;
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_p = null;
         field_q = null;
         field_r = null;

@@ -11,14 +11,11 @@ final class jj extends fb {
     static vo field_D;
     private int field_I;
 
-    public static void j(int param0) {
+    public static void j() {
         field_G = null;
         field_H = null;
         field_D = null;
         field_J = null;
-        if (param0 != 2021978896) {
-            field_G = null;
-        }
     }
 
     final void g(int param0) {
@@ -66,45 +63,24 @@ final class jj extends fb {
         ((jj) this).field_E = hp.field_A.f(237239984) + 40;
     }
 
-    final static String i(int param0) {
+    final static String i() {
         return fj.field_g.a(true);
     }
 
-    final static void b(boolean param0) {
+    final static void b() {
         int var1_int = 0;
-        RuntimeException var1 = null;
-        int var2 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var2 = ZombieDawn.field_J;
+        int var2 = ZombieDawn.field_J;
         try {
-          L0: {
             wk.field_o = new vn(512, 512);
             wk.field_o.a();
-            var1_int = 256;
-            L1: while (true) {
-              if (var1_int <= 0) {
-                L2: {
-                  if (param0) {
-                    jj.j(115);
-                    cn.field_f.b(109);
-                    break L2;
-                  } else {
-                    cn.field_f.b(109);
-                    break L2;
-                  }
-                }
-                break L0;
-              } else {
+            for (var1_int = 256; var1_int > 0; var1_int--) {
                 bi.g(256, 256, var1_int, -var1_int + 256);
-                var1_int--;
-                continue L1;
-              }
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw sh.a((Throwable) (Object) var1, "jj.G(" + param0 + 41);
+            int discarded$0 = 115;
+            jj.j();
+            cn.field_f.b(109);
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) (Object) runtimeException, "jj.G(" + 0 + 41);
         }
     }
 

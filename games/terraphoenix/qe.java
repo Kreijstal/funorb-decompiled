@@ -23,7 +23,7 @@ final class qe {
         field_j = null;
     }
 
-    private final void a(byte param0) {
+    private final void a() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -70,7 +70,7 @@ final class qe {
         }
     }
 
-    private final void b(int param0) {
+    private final void b() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -99,7 +99,8 @@ final class qe {
                 var2 = 0;
                 L2: while (true) {
                   if (var2 >= 256) {
-                    this.a((byte) -38);
+                    int discarded$1 = -38;
+                    this.a();
                     ((qe) this).field_d = 256;
                     return;
                   } else {
@@ -228,12 +229,13 @@ final class qe {
             ((qe) this).field_e = -7;
         }
         if (((qe) this).field_d == 0) {
-            this.a((byte) -38);
+            int discarded$0 = -38;
+            this.a();
             ((qe) this).field_d = 256;
         }
-        int fieldTemp$0 = ((qe) this).field_d - 1;
+        int fieldTemp$1 = ((qe) this).field_d - 1;
         ((qe) this).field_d = ((qe) this).field_d - 1;
-        return ((qe) this).field_i[fieldTemp$0];
+        return ((qe) this).field_i[fieldTemp$1];
     }
 
     final static void a(int param0, fa param1) {
@@ -272,35 +274,31 @@ final class qe {
             qk.field_l = ig.a(-25831, var10);
             cm.field_b = new ee[var3];
             vh.field_j = new int[var3][];
-            if (param0 == -28664) {
-              var4 = 0;
-              L1: while (true) {
-                if (var3 <= var4) {
-                  var10.n(8);
-                  var9 = 0;
-                  var4 = var9;
-                  L2: while (true) {
-                    if (var9 >= var3) {
-                      break L0;
-                    } else {
-                      var5 = cm.field_b[var9];
-                      var5.a(true, 6, 6, 1, 6);
-                      var5.c((byte) 41);
-                      var6 = new int[]{var5.field_K + var5.field_r >> 1, var5.field_a + var5.field_M >> 1, var5.field_t + var5.field_v >> 1};
-                      vh.field_j[var9] = var6;
-                      var5.a(true, -var6[2], -var6[0], -var6[1]);
-                      var9++;
-                      continue L2;
-                    }
+            var4 = 0;
+            L1: while (true) {
+              if (var3 <= var4) {
+                var10.n(8);
+                var9 = 0;
+                var4 = var9;
+                L2: while (true) {
+                  if (var9 >= var3) {
+                    break L0;
+                  } else {
+                    var5 = cm.field_b[var9];
+                    var5.a(true, 6, 6, 1, 6);
+                    var5.c((byte) 41);
+                    var6 = new int[]{var5.field_K + var5.field_r >> 1, var5.field_a + var5.field_M >> 1, var5.field_t + var5.field_v >> 1};
+                    vh.field_j[var9] = var6;
+                    var5.a(true, -var6[2], -var6[0], -var6[1]);
+                    var9++;
+                    continue L2;
                   }
-                } else {
-                  cm.field_b[var4] = fc.a(11043, var8);
-                  var4++;
-                  continue L1;
                 }
+              } else {
+                cm.field_b[var4] = fc.a(11043, var8);
+                var4++;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -308,7 +306,7 @@ final class qe {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var2;
-            stackOut_10_1 = new StringBuilder().append("qe.B(").append(param0).append(44);
+            stackOut_10_1 = new StringBuilder().append("qe.B(").append(-28664).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -343,7 +341,8 @@ final class qe {
             for (var2_int = 0; param0.length > var2_int; var2_int++) {
                 ((qe) this).field_i[var2_int] = param0[var2_int];
             }
-            this.b(-1);
+            int discarded$0 = -1;
+            this.b();
         } catch (RuntimeException runtimeException) {
             throw qk.a((Throwable) (Object) runtimeException, "qe.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }

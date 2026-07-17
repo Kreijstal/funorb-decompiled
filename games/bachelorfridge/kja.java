@@ -12,21 +12,14 @@ final class kja {
 
     final static void a(int param0, int param1, byte param2, boolean param3) {
         wg.a(param3, -90);
-        if (param2 > -9) {
-          field_e = null;
-          vla.a(5, param1, param0, param3);
-          return;
-        } else {
-          vla.a(5, param1, param0, param3);
-          return;
-        }
+        vla.a(5, param1, param0, param3);
     }
 
-    final static sna a(byte param0) {
+    final static sna a() {
         return ak.field_q.field_vb;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_e = null;
     }
 

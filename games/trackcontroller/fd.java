@@ -15,7 +15,7 @@ abstract class fd {
     int field_a;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_h = null;
         int var1 = 32;
         field_d = null;

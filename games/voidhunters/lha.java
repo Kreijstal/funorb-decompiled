@@ -7,34 +7,30 @@ final class lha extends rqa {
         he.field_o = param0;
         pob.field_b = 0;
         wgb.field_f = param3;
-        if (param2 == -85) {
-          if (wqa.a(false, wgb.field_f)) {
-            L0: {
-              ana discarded$2 = lha.a(-103, fa.field_d[75]);
-              var4 = 0;
-              if (wgb.field_f != 7) {
-                break L0;
-              } else {
-                var4 = -1;
-                break L0;
-              }
-            }
-            L1: {
-              if (5 == wgb.field_f) {
-                var4 = 1;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            lo.field_a[wgb.field_f].a(param1, 320, var4);
+        if (wqa.a(false, wgb.field_f)) {
+          L0: {
+            ana discarded$2 = lha.a(-103, fa.field_d[75]);
+            var4 = 0;
             if (wgb.field_f != 7) {
-              return;
+              break L0;
             } else {
-              mna.a(param1, (byte) 90);
-              return;
+              var4 = -1;
+              break L0;
             }
+          }
+          L1: {
+            if (5 == wgb.field_f) {
+              var4 = 1;
+              break L1;
+            } else {
+              break L1;
+            }
+          }
+          lo.field_a[wgb.field_f].a(param1, 320, var4);
+          if (wgb.field_f != 7) {
+            return;
           } else {
+            mna.a(param1, (byte) 90);
             return;
           }
         } else {
@@ -71,7 +67,9 @@ final class lha extends rqa {
         try {
           L0: {
             if (param0 <= -85) {
-              stackOut_3_0 = ka.a(61, fga.a(param1, 100, 96));
+              int discarded$4 = 96;
+              int discarded$5 = 100;
+              stackOut_3_0 = ka.a(61, fga.a(param1));
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

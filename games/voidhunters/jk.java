@@ -205,8 +205,9 @@ final class jk extends llb {
         }
     }
 
-    final static void h(int param0) {
-        sp.field_p = ik.a(-21049);
+    final static void h() {
+        int discarded$0 = -21049;
+        sp.field_p = ik.a();
     }
 
     static {

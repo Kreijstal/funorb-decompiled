@@ -40,7 +40,8 @@ final class oa extends mc {
         try {
           L0: {
             if (param0 <= -95) {
-              mn.a((java.awt.Component) (Object) param1, true);
+              int discarded$5 = 1;
+              mn.a((java.awt.Component) (Object) param1);
               vb.a(-51, (java.awt.Component) (Object) param1);
               if (null != qf.field_k) {
                 qf.field_k.a(0, (java.awt.Component) (Object) param1);
@@ -84,7 +85,7 @@ final class oa extends mc {
         }
     }
 
-    final static int a(int param0, double param1, byte param2) {
+    final static int a(int param0, double param1) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -101,7 +102,7 @@ final class oa extends mc {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_q = null;
         field_v = null;
         field_x = null;
@@ -109,22 +110,17 @@ final class oa extends mc {
         field_n = null;
         field_p = null;
         field_A = null;
-        if (param0 != -25731) {
-          return;
-        } else {
-          field_y = null;
-          field_B = null;
-          field_o = null;
-          field_t = null;
-          return;
-        }
+        field_y = null;
+        field_B = null;
+        field_o = null;
+        field_t = null;
     }
 
     private oa() throws Throwable {
         throw new Error();
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean a(String param0) {
         RuntimeException var2 = null;
         int stackIn_5_0 = 0;
         int stackIn_9_0 = 0;
@@ -202,13 +198,8 @@ final class oa extends mc {
     }
 
     final static int a(int param0, int param1, int param2) {
-        int var3 = 0;
-        if (param1 != 13309) {
-          return 105;
-        } else {
-          var3 = -1 + param2 & param0 >> 31;
-          return var3 + ((param0 >>> 31) + param0) % param2;
-        }
+        int var3 = -1 + param2 & param0 >> 31;
+        return var3 + ((param0 >>> 31) + param0) % param2;
     }
 
     static {

@@ -32,7 +32,7 @@ final class ju extends ua implements cr {
         field_p = null;
     }
 
-    final static void g(int param0) {
+    final static void g() {
         wt.field_h[1] = iv.field_i;
         wt.field_h[0] = ki.field_f;
         wt.field_h[2] = hc.field_f;
@@ -54,7 +54,7 @@ final class ju extends ua implements cr {
               } else {
                 try {
                   L0: {
-                    var2_int = qk.field_O.c(param0 ^ 36);
+                    var2_int = qk.field_O.c(-37);
                     if (0 < var2_int) {
                       L1: {
                         if (-ig.field_a.field_p + param1 < var2_int) {
@@ -64,7 +64,7 @@ final class ju extends ua implements cr {
                           break L1;
                         }
                       }
-                      qk.field_O.a(param0 ^ 99, ig.field_a.field_p, var2_int, ig.field_a.field_n);
+                      qk.field_O.a(-100, ig.field_a.field_p, var2_int, ig.field_a.field_n);
                       jt.field_x = wq.a(-47);
                       ig.field_a.field_p = ig.field_a.field_p + var2_int;
                       if (ig.field_a.field_p < param1) {
@@ -78,11 +78,12 @@ final class ju extends ua implements cr {
                         return stackIn_15_0 != 0;
                       }
                     } else {
-                      if (~var2_int > param0) {
+                      if (var2_int < 0) {
                         kk.a((byte) -118);
                         return false;
                       } else {
-                        if (uc.b(26560) <= 30000L) {
+                        int discarded$3 = 26560;
+                        if (uc.b() <= 30000L) {
                           break L0;
                         } else {
                           kk.a((byte) -118);

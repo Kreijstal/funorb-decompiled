@@ -5,7 +5,7 @@ final class hj {
     static dl[] field_b;
     private dl[] field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
     }
 
@@ -30,41 +30,25 @@ final class hj {
 
     final static String a(boolean param0, int param1, boolean param2, boolean param3) {
         int var4 = 0;
-        var4 = param1;
+        var4 = 0;
         if (!param0) {
-          if (!param3) {
-            if (param2) {
-              var4++;
-              return f.field_h[var4];
-            } else {
-              return f.field_h[var4];
-            }
-          } else {
+          if (param3) {
             var4 += 2;
-            if (param2) {
-              var4++;
-              return f.field_h[var4];
-            } else {
-              return f.field_h[var4];
-            }
+            var4++;
+            return f.field_h[var4];
+          } else {
+            var4++;
+            return f.field_h[var4];
           }
         } else {
           var4 += 4;
-          if (param3) {
-            var4 += 2;
-            if (!param2) {
-              return f.field_h[var4];
-            } else {
-              var4++;
-              return f.field_h[var4];
-            }
+          if (!param3) {
+            var4++;
+            return f.field_h[var4];
           } else {
-            if (param2) {
-              var4++;
-              return f.field_h[var4];
-            } else {
-              return f.field_h[var4];
-            }
+            var4 += 2;
+            var4++;
+            return f.field_h[var4];
           }
         }
     }

@@ -94,31 +94,16 @@ final class jk {
     }
 
     final static void a(int param0, int param1) {
-        if (jo.field_h == null) {
-          jo.field_h = new int[param1];
-          if (param0 == 2) {
+        if (jo.field_h != null) {
+          if (jo.field_h.length < param1) {
+            jo.field_h = new int[param1];
             return;
           } else {
-            field_b = null;
             return;
           }
         } else {
-          if (jo.field_h.length >= param1) {
-            if (param0 != 2) {
-              field_b = null;
-              return;
-            } else {
-              return;
-            }
-          } else {
-            jo.field_h = new int[param1];
-            if (param0 == 2) {
-              return;
-            } else {
-              field_b = null;
-              return;
-            }
-          }
+          jo.field_h = new int[param1];
+          return;
         }
     }
 
@@ -135,7 +120,7 @@ final class jk {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         field_b = null;

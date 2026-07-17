@@ -33,44 +33,30 @@ final class pe extends ne {
         }
     }
 
-    final static cn[] a(int param0, int param1, int param2, int param3, int param4) {
+    final static cn[] a(int param0, int param1, int param2, int param3) {
         cn[] var5 = null;
         cn[] var6 = null;
         var6 = new cn[9];
         var5 = var6;
-        cn dupTemp$3 = bl.a(false, param0, 1);
-        var6[6] = dupTemp$3;
-        var5[3] = dupTemp$3;
-        var5[2] = dupTemp$3;
-        var5[1] = dupTemp$3;
-        var5[0] = dupTemp$3;
-        if (param2 > 3) {
-          cn dupTemp$4 = bl.a(false, param3, 1);
-          var6[8] = dupTemp$4;
-          var5[7] = dupTemp$4;
-          var5[5] = dupTemp$4;
-          if (param1 != 0) {
-            var6[4] = bl.a(false, param1, 64);
-            return var5;
-          } else {
-            return var5;
-          }
+        cn dupTemp$4 = bl.a(false, param0, 1);
+        var6[6] = dupTemp$4;
+        var5[3] = dupTemp$4;
+        var5[2] = dupTemp$4;
+        var5[1] = dupTemp$4;
+        var5[0] = dupTemp$4;
+        cn dupTemp$5 = bl.a(false, param3, 1);
+        var6[8] = dupTemp$5;
+        var5[7] = dupTemp$5;
+        var5[5] = dupTemp$5;
+        if (param1 != 0) {
+          var6[4] = bl.a(false, param1, 64);
+          return var5;
         } else {
-          field_l = null;
-          cn dupTemp$5 = bl.a(false, param3, 1);
-          var6[8] = dupTemp$5;
-          var5[7] = dupTemp$5;
-          var5[5] = dupTemp$5;
-          if (param1 == 0) {
-            return var5;
-          } else {
-            var6[4] = bl.a(false, param1, 64);
-            return var5;
-          }
+          return var5;
         }
     }
 
-    final static boolean a(CharSequence param0, char param1, byte param2) {
+    final static boolean a(CharSequence param0, char param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

@@ -6,19 +6,10 @@ final class uab {
     static int field_b;
 
     public static void a(int param0) {
-        if (param0 != 0) {
-            field_b = 112;
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 
-    final static boolean a(byte param0) {
-        if (param0 != 44) {
-            uab.a(54);
-            return knb.field_o;
-        }
+    final static boolean a() {
         return knb.field_o;
     }
 
@@ -26,13 +17,10 @@ final class uab {
         try {
             param1.removeMouseListener((java.awt.event.MouseListener) (Object) wj.field_q);
             param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) wj.field_q);
-            if (param0 != 1) {
-                boolean discarded$0 = uab.a((byte) 73);
-            }
             param1.removeFocusListener((java.awt.event.FocusListener) (Object) wj.field_q);
             am.field_q = 0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "uab.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "uab.A(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

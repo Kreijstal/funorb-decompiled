@@ -8,7 +8,7 @@ final class ue {
     static int field_e;
     static ci field_d;
 
-    final static void a(int param0, hh param1, byte param2) {
+    final static void a(int param0, hh param1) {
         nk var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_3_0 = null;
@@ -29,7 +29,7 @@ final class ue {
         String stackOut_3_2 = null;
         try {
           var3 = qn.field_U;
-          var3.f(param0, -94);
+          var3.f(2, -94);
           var3.c(param1.field_l, (byte) -88);
           var3.b(param1.field_n, 109);
           return;
@@ -38,7 +38,7 @@ final class ue {
           L0: {
             var3_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3_ref;
-            stackOut_2_1 = new StringBuilder().append("ue.C(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("ue.C(").append(2).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -66,26 +66,16 @@ final class ue {
     }
 
     final static void a(long param0, int param1, int param2) {
-        nk var4 = null;
-        int var5 = 0;
-        var4 = qn.field_U;
+        nk var4 = qn.field_U;
         var4.f(param2, -75);
         var4.field_l = var4.field_l + 1;
-        var5 = var4.field_l;
+        int var5 = var4.field_l;
         var4.c(6, (byte) 92);
-        if (param1 != 16581) {
-          field_c = true;
-          var4.a(-99, param0);
-          var4.a(var4.field_l - var5, -1);
-          return;
-        } else {
-          var4.a(-99, param0);
-          var4.a(var4.field_l - var5, -1);
-          return;
-        }
+        var4.a(-99, param0);
+        var4.a(var4.field_l - var5, -1);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         field_d = null;

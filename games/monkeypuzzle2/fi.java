@@ -7,7 +7,7 @@ final class fi {
     static ad field_b;
     static le[] field_a;
 
-    final static void b(int param0) {
+    final static void b() {
         L0: {
           wl.e((byte) 102);
           if (ie.field_e != null) {
@@ -17,10 +17,14 @@ final class fi {
             break L0;
           }
         }
-        cb.b(true);
-        rd.c(false);
-        sc.b(0);
-        if (bd.a(25951)) {
+        int discarded$34 = 1;
+        cb.b();
+        int discarded$35 = 0;
+        rd.c();
+        int discarded$36 = 0;
+        sc.b();
+        int discarded$37 = 25951;
+        if (bd.a()) {
           gf.field_c.b(true, 1);
           al.a((byte) -71, 0);
           gk.a(-1);
@@ -31,7 +35,7 @@ final class fi {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
         field_a = null;

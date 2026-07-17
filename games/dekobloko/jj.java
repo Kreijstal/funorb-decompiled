@@ -20,7 +20,7 @@ final class jj {
         return new Date().getYear() + 1900;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
         field_e = null;
         field_f = null;

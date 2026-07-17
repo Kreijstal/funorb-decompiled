@@ -24,7 +24,7 @@ abstract class nb {
         lb.a(((nb) this).field_d, ((nb) this).field_g, ((nb) this).field_f);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_e = null;
         int var1 = 0;

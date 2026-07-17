@@ -3,17 +3,11 @@
  */
 final class lb {
     final static Object b(java.applet.Applet param0, int param1, String param2) throws Throwable {
-        if (param1 != 2864) {
-            return null;
-        }
         return netscape.javascript.JSObject.getWindow(param0).call(param2, (Object[]) null);
     }
 
     final static void a(java.applet.Applet param0, int param1, String param2) throws Throwable {
-        Object discarded$6 = netscape.javascript.JSObject.getWindow(param0).eval(param2);
-        if (param1 != 19467) {
-            return;
-        }
+        Object discarded$0 = netscape.javascript.JSObject.getWindow(param0).eval(param2);
     }
 
     final static Object a(int param0, String param1, java.applet.Applet param2, Object[] param3) throws Throwable {

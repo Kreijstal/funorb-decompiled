@@ -11,10 +11,8 @@ final class ua extends bd {
     static boolean field_s;
 
     final static void b(int param0, int param1) {
-        if (param0 != 8) {
-            return;
-        }
-        ps.a(param1, true);
+        int discarded$0 = 1;
+        ps.a(param1);
     }
 
     final void a(int param0, ha param1) {
@@ -36,39 +34,38 @@ final class ua extends bd {
         bw var5 = null;
         byte[] var6 = null;
         int var7 = 0;
-        Object var8 = null;
-        byte[] var9 = null;
-        byte[] stackIn_9_0 = null;
+        byte[] var8 = null;
+        byte[] stackIn_7_0 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_13_2 = null;
+        String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_8_0 = null;
+        byte[] stackOut_6_0 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
         RuntimeException stackOut_10_0 = null;
         StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         var7 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
             L1: {
               if (param3 > 0) {
-                var9 = new byte[param1];
-                var4 = var9;
+                var8 = new byte[param1];
+                var4 = var8;
                 var5_int = 0;
                 L2: while (true) {
                   if (var5_int >= param1) {
                     break L1;
                   } else {
-                    var9[var5_int] = param2[var5_int + param3];
+                    var8[var5_int] = param2[var5_int + param3];
                     var5_int++;
                     continue L2;
                   }
@@ -78,55 +75,46 @@ final class ua extends bd {
                 break L1;
               }
             }
-            L3: {
-              var5 = new bw();
-              var5.b(200);
-              var5.a((byte) -57, (long)(8 * param1), var4);
-              if (param0 == -18423) {
-                break L3;
-              } else {
-                var8 = null;
-                String discarded$2 = ua.a(44, (byte) 45, (String) null);
-                break L3;
-              }
-            }
+            var5 = new bw();
+            var5.b(200);
+            var5.a((byte) -57, (long)(8 * param1), var4);
             var6 = new byte[64];
             var5.a(var6, 0, true);
-            stackOut_8_0 = (byte[]) var6;
-            stackIn_9_0 = stackOut_8_0;
+            stackOut_6_0 = (byte[]) var6;
+            stackIn_7_0 = stackOut_6_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var4_ref = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var4_ref;
-            stackOut_10_1 = new StringBuilder().append("ua.A(").append(param0).append(44).append(param1).append(44);
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackOut_8_0 = (RuntimeException) var4_ref;
+            stackOut_8_1 = new StringBuilder().append("ua.A(").append(-18423).append(44).append(param1).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
             if (param2 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
-              break L4;
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
-              break L4;
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param3 + 41);
+          throw ig.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param3 + 41);
         }
-        return stackIn_9_0;
+        return stackIn_7_0;
     }
 
     final static String a(int param0, byte param1, String param2) {
@@ -208,7 +196,8 @@ final class ua extends bd {
         try {
             int var4_int = 0;
             if (!(!hd.field_n.startsWith("win"))) {
-                if (br.a(param2, true)) {
+                int discarded$4 = 1;
+                if (br.a(param2)) {
                     return;
                 }
             }
@@ -287,7 +276,7 @@ final class ua extends bd {
         }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_v = null;
         field_u = null;
         field_y = null;

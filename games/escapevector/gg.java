@@ -6,12 +6,7 @@ final class gg {
     private java.awt.DisplayMode field_b;
 
     private final void a(int param0, java.awt.Frame param1) {
-        if (param0 == 265181602) {
-          ((gg) this).field_a.setFullScreenWindow((java.awt.Window) (Object) param1);
-          return;
-        } else {
-          return;
-        }
+        ((gg) this).field_a.setFullScreenWindow((java.awt.Window) (Object) param1);
     }
 
     public final int[] listmodes() {

@@ -731,29 +731,25 @@ class nb extends w implements dh {
         try {
           L0: {
             var5 = new ta(((nb) this).field_A);
-            if (param1 >= 112) {
-              var6 = (w) (Object) var5.a(250);
-              L1: while (true) {
-                if (var6 == null) {
-                  break L0;
-                } else {
-                  StringBuilder discarded$12 = param0.append(10);
-                  var7 = 0;
-                  L2: while (true) {
-                    if (var7 > param3) {
-                      StringBuilder discarded$13 = var6.a(1 + param3, param2, param0, -15992);
-                      var6 = (w) (Object) var5.c(-74);
-                      continue L1;
-                    } else {
-                      StringBuilder discarded$14 = param0.append(32);
-                      var7++;
-                      continue L2;
-                    }
+            var6 = (w) (Object) var5.a(250);
+            L1: while (true) {
+              if (var6 == null) {
+                break L0;
+              } else {
+                StringBuilder discarded$12 = param0.append(10);
+                var7 = 0;
+                L2: while (true) {
+                  if (var7 > param3) {
+                    StringBuilder discarded$13 = var6.a(1 + param3, param2, param0, -15992);
+                    var6 = (w) (Object) var5.c(-74);
+                    continue L1;
+                  } else {
+                    StringBuilder discarded$14 = param0.append(32);
+                    var7++;
+                    continue L2;
                   }
                 }
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -786,7 +782,7 @@ class nb extends w implements dh {
           }
           L4: {
             stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(param1).append(44);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(124).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;

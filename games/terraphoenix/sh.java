@@ -41,9 +41,6 @@ final class sh extends uf {
     final static void a(byte param0, int param1, int param2) {
         ll.field_a = param1;
         tf.field_k = param2;
-        if (param0 > -110) {
-            sh.c(-18);
-        }
     }
 
     final static void a(int param0) {

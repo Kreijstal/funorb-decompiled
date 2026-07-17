@@ -6,7 +6,7 @@ final class dl extends gn {
     int[] field_f;
     int field_e;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
         int var1 = 0;
     }

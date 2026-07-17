@@ -20,7 +20,7 @@ final class cka extends rqa {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
     }
 

@@ -7,28 +7,31 @@ final class of {
     static String field_b;
 
     final static void a(int param0, int param1, int param2) {
-        qg.field_a = param1;
-        vg.field_f = param0;
+        qg.field_a = 240;
+        vg.field_f = 320;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }
 
     final static void a(int param0) {
         if (param0 != uj.field_d) {
-          if (a.a(105)) {
+          int discarded$8 = 105;
+          if (a.a()) {
             rg.field_h = true;
             return;
           } else {
-            va.a(29);
+            int discarded$9 = 29;
+            va.a();
             uj.field_d = 11;
             rg.field_h = true;
             return;
           }
         } else {
-          va.a(29);
+          int discarded$10 = 29;
+          va.a();
           uj.field_d = 11;
           rg.field_h = true;
           return;

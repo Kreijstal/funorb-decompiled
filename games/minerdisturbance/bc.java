@@ -20,9 +20,9 @@ final class bc implements Iterator {
     }
 
     final static void a(int param0, int param1) {
-        tg.field_i = param0 * 400 / 150;
-        tg.field_g = 100 * param0 / 150;
-        tg.field_d = (param0 << 16) / 150;
+        tg.field_i = 133;
+        tg.field_g = 33;
+        tg.field_d = 21845;
     }
 
     public final boolean hasNext() {
@@ -40,8 +40,8 @@ final class bc implements Iterator {
         }
     }
 
-    public static void a(int param0) {
-        int var1 = -31 / ((-15 - param0) / 48);
+    public static void a() {
+        int var1 = 31;
         field_b = null;
     }
 

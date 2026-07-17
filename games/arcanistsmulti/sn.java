@@ -261,7 +261,7 @@ final class sn extends df implements ro, vb {
         return stackIn_12_0 != 0;
     }
 
-    private final int a(int param0, String param1, int param2, qm param3, String param4, int param5) {
+    private final int a(int param0, String param1, int param2, qm param3, String param4) {
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -313,7 +313,7 @@ final class sn extends df implements ro, vb {
         String stackOut_9_2 = null;
         try {
           L0: {
-            stackOut_0_0 = this.a(param4, 35, (byte) -123, param3, param1, param0, param2);
+            stackOut_0_0 = this.a(param4, 35, (byte) -123, param3, param1, 70, 170);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -322,7 +322,7 @@ final class sn extends df implements ro, vb {
           L1: {
             var7 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var7;
-            stackOut_2_1 = new StringBuilder().append("sn.L(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("sn.L(").append(70).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -347,7 +347,7 @@ final class sn extends df implements ro, vb {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(param2).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(170).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -400,7 +400,7 @@ final class sn extends df implements ro, vb {
         return stackIn_1_0;
     }
 
-    private final boolean a(int param0) {
+    private final boolean a() {
         if (!this.a(315, (el) (Object) ((sn) this).field_D)) {
             return false;
         }
@@ -414,7 +414,7 @@ final class sn extends df implements ro, vb {
         ((dg) (Object) ((sn) this).field_D.a(0)).e(127);
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_F = null;
         field_H = null;
         field_N = null;
@@ -531,7 +531,8 @@ final class sn extends df implements ro, vb {
         var2.a(50, var3, 270, 20, -85);
         ((sn) this).c(-85, var2);
         var3 += 50;
-        var3 = var3 + (5 + this.a(var3, bj.field_kb, 170, (qm) (Object) ((sn) this).field_D, ch.field_h, -124));
+        int discarded$0 = -124;
+        var3 = var3 + (5 + this.a(var3, bj.field_kb, 170, (qm) (Object) ((sn) this).field_D, ch.field_h));
         ((sn) this).field_O.a(40, var3, var5, -var5 + 496 >> 1, -67);
         ((sn) this).field_I.a(40, var3 - -15, 60, 3 + var4, -126);
         ((sn) this).field_I.field_o = (wc) this;
@@ -544,8 +545,9 @@ final class sn extends df implements ro, vb {
         ((sn) this).a(55 + var3 + var4, 0, 496, 0, -76);
     }
 
-    private final void e(boolean param0) {
-        if (!(this.a(16777215))) {
+    private final void e() {
+        int discarded$0 = 16777215;
+        if (!(this.a())) {
             return;
         }
         he.a(1, ((sn) this).field_D.field_g);
@@ -576,7 +578,8 @@ final class sn extends df implements ro, vb {
                 if (param4 != ((sn) this).field_O) {
                   break L1;
                 } else {
-                  this.e(true);
+                  int discarded$2 = 1;
+                  this.e();
                   break L1;
                 }
               } else {
@@ -649,7 +652,8 @@ final class sn extends df implements ro, vb {
                 ((sn) this).a(false, -6, 41, -17, (ag) null);
             }
             super.a(param0, param1, param2, param3);
-            ((sn) this).field_O.field_B = this.a(16777215);
+            int discarded$0 = 16777215;
+            ((sn) this).field_O.field_B = this.a();
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "sn.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }

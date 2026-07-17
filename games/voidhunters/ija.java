@@ -39,7 +39,7 @@ abstract class ija {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
     }

@@ -95,7 +95,7 @@ final class sj {
         return stackIn_3_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_h = null;
         field_d = null;
         field_g = null;
@@ -135,7 +135,7 @@ final class sj {
                   if (param1 > 123) {
                     break L2;
                   } else {
-                    int discarded$2 = sj.a(-11, (byte) 112, -37);
+                    int discarded$4 = sj.a(-11, (byte) 112, -37);
                     break L2;
                   }
                 }
@@ -146,7 +146,8 @@ final class sj {
                 L3: {
                   var5 = mf.field_m[var3_int];
                   if (0 <= var5) {
-                    var6 = hl.a(ne.field_K[var3_int], true, -15388);
+                    int discarded$5 = -15388;
+                    var6 = hl.a(ne.field_K[var3_int], true);
                     var7 = -(var6 >> 1) + rj.field_e;
                     var4 = var4 + hi.field_z;
                     if (hc.a(103, var4, nk.field_u - -(sn.field_d << 1), var7 - ka.field_a, param0, (ka.field_a << 1) + var6, param2)) {

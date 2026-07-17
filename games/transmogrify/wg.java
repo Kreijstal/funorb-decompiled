@@ -11,7 +11,7 @@ final class wg implements Iterator {
     static String field_e;
     private ri field_b;
 
-    final static void b(int param0) {
+    final static void b() {
         RuntimeException var1 = null;
         int var2 = 0;
         he var3_ref_he = null;
@@ -45,7 +45,8 @@ final class wg implements Iterator {
                   }
                 }
                 if (var4 == null) {
-                  pc.a(1);
+                  int discarded$5 = 1;
+                  pc.a();
                   return;
                 } else {
                   var4.c(5);
@@ -53,8 +54,10 @@ final class wg implements Iterator {
                 }
               }
             } else {
-              d.a((Throwable) null, 13, "A1: " + ik.q(48));
-              pc.a(1);
+              int discarded$6 = 48;
+              d.a((Throwable) null, 13, "A1: " + ik.q());
+              int discarded$7 = 1;
+              pc.a();
               return;
             }
           } else {
@@ -73,14 +76,16 @@ final class wg implements Iterator {
               }
               var8.field_h = var8.field_h + 4;
               if (!var8.d(5432)) {
-                pc.a(1);
+                int discarded$8 = 1;
+                pc.a();
                 return;
               } else {
                 var3_ref_he.c(5);
                 return;
               }
             } else {
-              pc.a(1);
+              int discarded$9 = 1;
+              pc.a();
               return;
             }
           }
@@ -111,7 +116,7 @@ final class wg implements Iterator {
         return (Object) (Object) var1;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_e = null;
         field_f = null;

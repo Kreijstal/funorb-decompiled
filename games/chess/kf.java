@@ -96,7 +96,7 @@ final class kf extends o {
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_j = null;
         field_m = null;
         field_t = null;
@@ -1220,34 +1220,24 @@ final class kf extends o {
         }
     }
 
-    final static boolean d(int param0) {
+    final static boolean d() {
         Object var1 = null;
         Object var1_ref = null;
         Throwable var2 = null;
-        Object var3 = null;
         int stackIn_3_0 = 0;
-        int stackIn_7_0 = 0;
+        int stackIn_5_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
+        int stackOut_4_0 = 0;
         int stackOut_2_0 = 0;
         var1_ref = (Object) (Object) lg.field_d;
         synchronized (var1_ref) {
           L0: {
             if (ph.field_h != ta.field_y) {
-              L1: {
-                vg.field_a = ag.field_a[ph.field_h];
-                d.field_Ib = hj.field_a[ph.field_h];
-                if (param0 == 18954) {
-                  break L1;
-                } else {
-                  var3 = null;
-                  kf.a(-30, (byte) -26, (java.awt.Canvas) null, 72);
-                  break L1;
-                }
-              }
+              vg.field_a = ag.field_a[ph.field_h];
+              d.field_Ib = hj.field_a[ph.field_h];
               ph.field_h = 127 & 1 + ph.field_h;
-              stackOut_6_0 = 1;
-              stackIn_7_0 = stackOut_6_0;
+              stackOut_4_0 = 1;
+              stackIn_5_0 = stackOut_4_0;
               break L0;
             } else {
               stackOut_2_0 = 0;
@@ -1256,12 +1246,13 @@ final class kf extends o {
             }
           }
         }
-        return stackIn_7_0 != 0;
+        return stackIn_5_0 != 0;
     }
 
     final static void a(int param0) {
         if (an.field_c) {
-            rc.b(0);
+            int discarded$0 = 0;
+            rc.b();
         }
         if (param0 > -70) {
             kf.a(89);

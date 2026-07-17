@@ -187,7 +187,7 @@ final class kk extends rqa {
                   break L0;
                 } else {
                   L6: {
-                    var9 = param2;
+                    var9 = 1;
                     var10 = var8;
                     var11 = var8;
                     if (var9 != 1) {
@@ -275,7 +275,7 @@ final class kk extends rqa {
           }
           L9: {
             stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
-            stackOut_34_1 = ((StringBuilder) (Object) stackIn_34_1).append(stackIn_34_2).append(44).append(param2).append(44);
+            stackOut_34_1 = ((StringBuilder) (Object) stackIn_34_1).append(stackIn_34_2).append(44).append(1).append(44);
             stackIn_36_0 = stackOut_34_0;
             stackIn_36_1 = stackOut_34_1;
             stackIn_35_0 = stackOut_34_0;
@@ -303,7 +303,7 @@ final class kk extends rqa {
         return stackIn_27_0;
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_o = null;
         field_p = null;
     }

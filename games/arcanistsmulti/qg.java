@@ -125,7 +125,7 @@ final class qg extends RuntimeException {
               break L2;
             }
             L7: {
-              var2_int = -49 / ((param0 - -45) / 60);
+              var2_int = -49;
               cb.field_c = param1;
               if (oh.field_i) {
                 break L7;
@@ -166,7 +166,7 @@ final class qg extends RuntimeException {
           L9: {
             var2 = decompiledCaughtException;
             stackOut_41_0 = (RuntimeException) var2;
-            stackOut_41_1 = new StringBuilder().append("qg.C(").append(param0).append(44);
+            stackOut_41_1 = new StringBuilder().append("qg.C(").append(38).append(44);
             stackIn_43_0 = stackOut_41_0;
             stackIn_43_1 = stackOut_41_1;
             stackIn_42_0 = stackOut_41_0;
@@ -193,7 +193,7 @@ final class qg extends RuntimeException {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
         field_a = null;
     }

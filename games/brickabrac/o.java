@@ -79,7 +79,7 @@ final class o {
         ta.field_e[14] = gf.field_e.a((byte) -105, "BaB_get_ready_FX", "");
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_g = null;
         field_b = null;
         field_a = null;
@@ -88,9 +88,11 @@ final class o {
         field_h = null;
     }
 
-    final static void a(int param0) {
-        int var1 = pe.a((byte) -89);
-        int var2 = v.b(5395);
+    final static void a() {
+        int discarded$0 = -89;
+        int var1 = pe.a();
+        int discarded$1 = 5395;
+        int var2 = v.b();
         lm.field_c.a((hn.field_a << 1) + var1, var2 - -(bh.field_vb << 1), -hn.field_a + np.field_b, false, -bh.field_vb + jq.field_r);
         cp.h(-16546);
     }

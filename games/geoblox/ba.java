@@ -124,7 +124,7 @@ final class ba implements Runnable {
         }
     }
 
-    final static cj a(int param0) {
+    final static cj a() {
         return (cj) (Object) new cm();
     }
 
@@ -323,10 +323,7 @@ final class ba implements Runnable {
         return ((ba) this).field_g.read();
     }
 
-    public static void e(int param0) {
-        if (param0 != 21888) {
-            return;
-        }
+    public static void e() {
         field_h = null;
     }
 
@@ -344,7 +341,6 @@ final class ba implements Runnable {
             IOException var3_ref = null;
             InterruptedException var4 = null;
             Throwable var5 = null;
-            Object var6 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             try {
@@ -470,8 +466,8 @@ final class ba implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter4;
               L17: {
                 var1_ref = (Exception) (Object) decompiledCaughtException;
-                var6 = null;
-                gi.a((Throwable) (Object) var1_ref, (String) null, (byte) 125);
+                int discarded$1 = 125;
+                gi.a((Throwable) (Object) var1_ref, (String) null);
                 break L17;
               }
             }

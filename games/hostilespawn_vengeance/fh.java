@@ -14,7 +14,7 @@ final class fh {
     static String field_d;
     static boolean[] field_c;
 
-    public static void b(int param0) {
+    public static void b() {
         field_h = null;
         field_a = null;
         field_f = null;

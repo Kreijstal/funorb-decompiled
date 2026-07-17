@@ -33,7 +33,8 @@ final class ep {
         if (param0 >= -15) {
             ((ep) this).a(29);
         }
-        return new wk(ql.field_j.a("intro" + (param1 - -1) + ".jpg", -125, ""), (java.awt.Component) (Object) ll.p(0));
+        int discarded$0 = 0;
+        return new wk(ql.field_j.a("intro" + (param1 - -1) + ".jpg", -125, ""), (java.awt.Component) (Object) ll.p());
     }
 
     final void a(boolean param0) {
@@ -211,7 +212,7 @@ final class ep {
           if (param0 == 256) {
             break L0;
           } else {
-            int discarded$1 = this.a(53, -105);
+            int discarded$2 = this.a(53, -105);
             break L0;
           }
         }
@@ -381,7 +382,8 @@ final class ep {
                 qn.a((int)(16.0 * (-var3 + (double)this.a(1443, 4592))), this.a((byte) -89, 116) << 4, 480, 32 + (ae.b(2400 + var6, 100) >> 13), fe.field_o[4]);
                 qn.a((int)((-var3 + (double)this.a(1478, 4592)) * 16.0), this.a((byte) -62, 207) << 4, 480, 32 + (ae.b(var6 - -3200, param0 ^ 356) >> 13), fe.field_o[5]);
                 qn.a((int)(16.0 * (-var3 + (double)this.a(1446, 4592))), this.a((byte) -103, 295) << 4, 480, 32 + (ae.b(4000 + var6, 100) >> 13), fe.field_o[6]);
-                qn.b((int)(this.a(1890.0 - ((ep) this).field_k, 16) * 16.0), this.a((byte) -78, 160) << 4, 1600, 32 + (ae.b(150 + (var6 >> 1), 100) >> 14), fe.field_o[0]);
+                int discarded$3 = 16;
+                qn.b((int)(this.a(1890.0 - ((ep) this).field_k) * 16.0), this.a((byte) -78, 160) << 4, 1600, 32 + (ae.b(150 + (var6 >> 1), 100) >> 14), fe.field_o[0]);
                 qn.a((int)(16.0 * (-var3 + (double)this.a(2614, 4592))), this.a((byte) -74, 219) << 4, 80, (ae.b(var6, 100) >> 13) + 32 >> 2, fe.field_o[1]);
                 var7 = 256 + (ae.b(var6 / 4, 100) + -65536);
                 if (var7 > 0) {
@@ -453,9 +455,6 @@ final class ep {
             if (null == nh.field_K) {
                 nh.field_K = new tp(64);
             }
-            if (param1 > -20) {
-                field_o = -46;
-            }
             if (!(bk.field_a != null)) {
                 bk.field_a = new tp(64);
             }
@@ -463,7 +462,7 @@ final class ep {
             wh.field_c = param2.field_fb;
             da.c(-123);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "ep.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "ep.E(" + (param0 != null ? "{...}" : "null") + 44 + -72 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -569,7 +568,7 @@ final class ep {
         }
     }
 
-    final static int b(byte param0) {
+    final static int b() {
         try {
             IOException var1 = null;
             int var1_int = 0;
@@ -689,16 +688,13 @@ final class ep {
     final static void a(boolean param0, String param1, boolean param2) {
         String var4 = null;
         try {
-            if (!param0) {
-                field_p = null;
-            }
             var4 = sb.field_i.field_X;
             String var3 = var4;
             sb.field_i.field_X = param1;
             eu.field_g.b(param2, 20);
             sb.field_i.field_X = var4;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "ep.H(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "ep.H(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
@@ -709,7 +705,7 @@ final class ep {
         return (so.field_b.field_a - ce.field_Q >> 1) - -param0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_h = null;
         field_p = null;
@@ -737,7 +733,7 @@ final class ep {
         }
     }
 
-    private final double a(double param0, int param1) {
+    private final double a(double param0) {
         return (double)(-ce.field_Q + so.field_b.field_a >> 1) + param0;
     }
 

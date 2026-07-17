@@ -17,27 +17,15 @@ final class ad {
     }
 
     final static int[] a(boolean param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        var3 = m.a(param1, (byte) -89);
-        var4 = nb.a(-117, param1);
-        var5 = m.a(param2, (byte) -125);
-        var6 = nb.a(-60, param2);
-        if (param0) {
-          return null;
-        } else {
-          var7 = (int)((long)var5 * (long)var3 >> 16);
-          var8 = (int)((long)var6 * (long)var3 >> 16);
-          var9 = (int)((long)var4 * (long)var5 >> 16);
-          var10 = (int)((long)var4 * (long)var6 >> 16);
-          return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
-        }
+        int var3 = m.a(param1, (byte) -89);
+        int var4 = nb.a(-117, param1);
+        int var5 = m.a(param2, (byte) -125);
+        int var6 = nb.a(-60, param2);
+        int var7 = (int)((long)var5 * (long)var3 >> 16);
+        int var8 = (int)((long)var6 * (long)var3 >> 16);
+        int var9 = (int)((long)var4 * (long)var5 >> 16);
+        int var10 = (int)((long)var4 * (long)var6 >> 16);
+        return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
     static {

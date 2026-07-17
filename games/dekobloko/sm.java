@@ -9,7 +9,7 @@ final class sm {
     static a field_c;
     static int field_e;
 
-    final static int a(jg param0, jg param1, int param2) {
+    final static int a(jg param0, jg param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         Object var4 = null;
@@ -143,7 +143,7 @@ final class sm {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
     }
 
@@ -169,29 +169,25 @@ final class sm {
             StringBuilder stackOut_7_1 = null;
             String stackOut_7_2 = null;
             try {
-              if (param0 == -65) {
-                try {
-                  L0: {
-                    var2 = new java.net.URL(param1.getCodeBase(), "subscribe.ws");
-                    param1.getAppletContext().showDocument(gn.a(var2, -1, param1), "_top");
-                    break L0;
-                  }
-                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  var2_ref = (Exception) (Object) decompiledCaughtException;
-                  var2_ref.printStackTrace();
-                  return;
+              try {
+                L0: {
+                  var2 = new java.net.URL(param1.getCodeBase(), "subscribe.ws");
+                  param1.getAppletContext().showDocument(gn.a(var2, -1, param1), "_top");
+                  break L0;
                 }
-                return;
-              } else {
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var2_ref = (Exception) (Object) decompiledCaughtException;
+                var2_ref.printStackTrace();
                 return;
               }
+              return;
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               L1: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_6_0 = (RuntimeException) var2_ref2;
-                stackOut_6_1 = new StringBuilder().append("sm.G(").append(param0).append(44);
+                stackOut_6_1 = new StringBuilder().append("sm.G(").append(-65).append(44);
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
@@ -231,7 +227,7 @@ final class sm {
         return jk.field_e;
     }
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         return cf.field_i;
     }
 

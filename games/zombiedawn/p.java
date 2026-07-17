@@ -40,11 +40,11 @@ final class p {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void a() {
         am var2 = dp.field_e;
-        var2.j(11, param1);
+        var2.j(11, 6);
         var2.i(1, 101);
-        var2.i(param0, 45);
+        var2.i(0, 45);
     }
 
     public static void a(boolean param0) {

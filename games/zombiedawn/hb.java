@@ -19,7 +19,8 @@ final class hb extends ga {
 
     private final void g(int param0) {
         ((hb) this).field_L = new vn[]{this.b(((hb) this).field_y, ((hb) this).field_A, -69), this.b(((hb) this).field_z, ((hb) this).field_x, -105)};
-        ((hb) this).field_K = this.a(-108);
+        int discarded$0 = -108;
+        ((hb) this).field_K = this.a();
         ((hb) this).field_J = ((hb) this).field_K.d();
         ((hb) this).field_B = new vn(((hb) this).field_n >> 1, ((hb) this).field_n);
         int var2 = -77 / ((param0 - 88) / 33);
@@ -216,12 +217,12 @@ final class hb extends ga {
         this.g(52);
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_G = null;
         field_D = null;
     }
 
-    private final vn a(int param0) {
+    private final vn a() {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;

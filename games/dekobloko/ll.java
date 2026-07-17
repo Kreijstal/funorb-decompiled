@@ -7,88 +7,84 @@ final class ll {
     final static void a(boolean param0, int param1, int param2) {
         int var3 = 0;
         String var4 = null;
-        String var5 = null;
-        Object var6 = null;
-        CharSequence var7 = null;
-        if (param1 == 0) {
-          if (null != vh.field_h) {
-            var3 = vh.field_h.a((byte) -63, param0);
-            if (var3 != 0) {
-              if (var3 != 2) {
-                vh.field_h = null;
-                of.field_d = -1;
-                return;
-              } else {
-                if (null == vh.field_h.field_Y) {
-                  vh.field_h = null;
-                  of.field_d = -1;
-                  return;
-                } else {
-                  if (vh.field_h.field_Y.equals((Object) (Object) "")) {
+        Object var5 = null;
+        CharSequence var6 = null;
+        if (null != vh.field_h) {
+          var3 = vh.field_h.a((byte) -63, param0);
+          if (var3 != 0) {
+            if (var3 == 2) {
+              if (null != vh.field_h.field_Y) {
+                if (!vh.field_h.field_Y.equals((Object) (Object) "")) {
+                  L0: {
+                    if (vh.field_h.field_Y.charAt(0) != 91) {
+                      var6 = (CharSequence) (Object) vh.field_h.field_Y;
+                      int discarded$4 = 2;
+                      var4 = kf.a(var6);
+                      break L0;
+                    } else {
+                      var4 = vh.field_h.field_Y;
+                      break L0;
+                    }
+                  }
+                  L1: {
+                    var5 = null;
+                    if (of.field_d == 0) {
+                      var5 = (Object) (Object) rb.a(param2, 0, var4);
+                      break L1;
+                    } else {
+                      break L1;
+                    }
+                  }
+                  L2: {
+                    if (of.field_d != 1) {
+                      break L2;
+                    } else {
+                      int discarded$5 = 0;
+                      var5 = (Object) (Object) md.a(param2, var4);
+                      break L2;
+                    }
+                  }
+                  L3: {
+                    if (of.field_d == 2) {
+                      var5 = (Object) (Object) dd.b(var4, 127, param2);
+                      break L3;
+                    } else {
+                      break L3;
+                    }
+                  }
+                  L4: {
+                    if (of.field_d != 3) {
+                      break L4;
+                    } else {
+                      var5 = (Object) (Object) sg.a(var4, var4, param2, (byte) 125);
+                      break L4;
+                    }
+                  }
+                  if (var5 != null) {
+                    int discarded$6 = 0;
+                    int discarded$7 = 2;
+                    ca.a(var4, (String) null, (String) var5, (byte) -37);
                     vh.field_h = null;
                     of.field_d = -1;
                     return;
                   } else {
-                    L0: {
-                      if (vh.field_h.field_Y.charAt(0) != 91) {
-                        var7 = (CharSequence) (Object) vh.field_h.field_Y;
-                        var4 = kf.a(var7, (byte) 2);
-                        var5 = var4;
-                        var5 = var4;
-                        break L0;
-                      } else {
-                        var4 = vh.field_h.field_Y;
-                        break L0;
-                      }
-                    }
-                    L1: {
-                      var5 = null;
-                      if (of.field_d == 0) {
-                        var5 = rb.a(param2, param1, var4);
-                        break L1;
-                      } else {
-                        break L1;
-                      }
-                    }
-                    L2: {
-                      if (of.field_d != 1) {
-                        break L2;
-                      } else {
-                        var5 = md.a(param2, var4, false);
-                        break L2;
-                      }
-                    }
-                    L3: {
-                      if (of.field_d == 2) {
-                        var5 = dd.b(var4, 127, param2);
-                        break L3;
-                      } else {
-                        break L3;
-                      }
-                    }
-                    L4: {
-                      if (of.field_d != 3) {
-                        break L4;
-                      } else {
-                        var5 = sg.a(var4, var4, param2, (byte) 125);
-                        break L4;
-                      }
-                    }
-                    if (var5 != null) {
-                      var6 = null;
-                      ca.a(var4, (String) null, var5, (byte) -37, 2, 0);
-                      vh.field_h = null;
-                      of.field_d = -1;
-                      return;
-                    } else {
-                      vh.field_h = null;
-                      of.field_d = -1;
-                      return;
-                    }
+                    vh.field_h = null;
+                    of.field_d = -1;
+                    return;
                   }
+                } else {
+                  vh.field_h = null;
+                  of.field_d = -1;
+                  return;
                 }
+              } else {
+                vh.field_h = null;
+                of.field_d = -1;
+                return;
               }
             } else {
+              vh.field_h = null;
+              of.field_d = -1;
               return;
             }
           } else {
@@ -151,7 +147,7 @@ final class ll {
         }
     }
 
-    final static ig a(w param0, w param1, ac param2, w param3, int param4) {
+    final static ig a(w param0, w param1, ac param2, w param3) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -297,7 +293,8 @@ final class ll {
                       var13_ref_ac = oi.field_a.a(-126, param2.field_C[var12]);
                       var8[var12] = var13_ref_ac.field_H;
                       var9[var12] = param2.field_G[var12];
-                      var11[var12] = ll.a(param0, param1, var13_ref_ac, param3, 0);
+                      int discarded$1 = 0;
+                      var11[var12] = ll.a(param0, param1, var13_ref_ac, param3);
                       var12++;
                       continue L4;
                     }
@@ -467,16 +464,13 @@ final class ll {
         return stackIn_32_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 
     final static void a(int param0, boolean param1) {
-        if (param0 != -1) {
-            return;
-        }
         f.a(2, param1);
-        fc.a(param0 + 6, param1);
+        fc.a(5, param1);
     }
 
     static {

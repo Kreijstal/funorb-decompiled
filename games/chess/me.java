@@ -8,7 +8,7 @@ final class me {
     static hg field_b;
     static rk[] field_c;
 
-    final static void a(String param0, int param1, fj param2, lh param3, byte param4) {
+    final static void a(String param0, int param1, fj param2, lh param3) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -66,51 +66,47 @@ final class me {
           L0: {
             var5_int = 0;
             var6 = -1;
-            if (param4 == 79) {
-              var7 = 1;
-              L1: while (true) {
-                if (var7 >= param0.length()) {
-                  break L0;
-                } else {
-                  L2: {
-                    var8 = param0.charAt(var7);
-                    if (var8 != 60) {
-                      break L2;
-                    } else {
-                      var6 = (var5_int >> 8) + param2.field_i[0] - -param3.b(param0.substring(0, var7));
-                      break L2;
-                    }
+            var7 = 1;
+            L1: while (true) {
+              if (var7 >= param0.length()) {
+                break L0;
+              } else {
+                L2: {
+                  var8 = param0.charAt(var7);
+                  if (var8 != 60) {
+                    break L2;
+                  } else {
+                    var6 = (var5_int >> 8) + param2.field_i[0] - -param3.b(param0.substring(0, var7));
+                    break L2;
                   }
-                  L3: {
-                    if (-1 == var6) {
-                      L4: {
-                        if (var8 != 32) {
-                          break L4;
-                        } else {
-                          var5_int = var5_int + param1;
-                          break L4;
-                        }
-                      }
-                      param2.field_i[var7] = param2.field_i[0] + (var5_int >> 8) + param3.b(param0.substring(0, 1 + var7)) + -param3.a((char) var8);
-                      break L3;
-                    } else {
-                      param2.field_i[var7] = var6;
-                      break L3;
-                    }
-                  }
-                  L5: {
-                    if (var8 != 62) {
-                      break L5;
-                    } else {
-                      break L5;
-                    }
-                  }
-                  var7++;
-                  continue L1;
                 }
+                L3: {
+                  if (-1 == var6) {
+                    L4: {
+                      if (var8 != 32) {
+                        break L4;
+                      } else {
+                        var5_int = var5_int + param1;
+                        break L4;
+                      }
+                    }
+                    param2.field_i[var7] = param2.field_i[0] + (var5_int >> 8) + param3.b(param0.substring(0, 1 + var7)) + -param3.a((char) var8);
+                    break L3;
+                  } else {
+                    param2.field_i[var7] = var6;
+                    break L3;
+                  }
+                }
+                L5: {
+                  if (var8 != 62) {
+                    break L5;
+                  } else {
+                    break L5;
+                  }
+                }
+                var7++;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -191,11 +187,11 @@ final class me {
               break L8;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param4 + 41);
+          throw fk.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + 79 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_a = null;
         field_b = null;

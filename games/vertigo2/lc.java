@@ -104,146 +104,142 @@ final class lc {
                             var4 = 1;
                             L5: while (true) {
                               if (var3 <= var4) {
-                                if (param0 > 52) {
-                                  var17.field_u = 0;
-                                  var4 = 0;
-                                  L6: while (true) {
-                                    if (var4 >= eo.field_m) {
-                                      break L0;
-                                    } else {
-                                      L7: {
-                                        var5 = mh.field_c[var4];
-                                        var6 = vi.field_w[var4];
-                                        var7 = var6 * var5;
-                                        var24 = new byte[var7];
-                                        var22 = var24;
-                                        var20 = var22;
-                                        var18 = var20;
-                                        var8 = var18;
-                                        se.field_y[var4] = var24;
-                                        var25 = new byte[var7];
-                                        var23 = var25;
-                                        var21 = var23;
-                                        var19 = var21;
-                                        var9 = var19;
-                                        ej.field_c[var4] = var25;
-                                        var10 = 0;
-                                        var11 = var17.h(-11);
-                                        if (0 != (var11 & 1)) {
-                                          var12 = 0;
-                                          L8: while (true) {
-                                            if (var5 <= var12) {
-                                              if ((2 & var11) != 0) {
-                                                var12 = 0;
-                                                L9: while (true) {
-                                                  if (var12 >= var5) {
-                                                    break L7;
-                                                  } else {
-                                                    var13 = 0;
-                                                    L10: while (true) {
-                                                      if (var13 >= var6) {
-                                                        var12++;
-                                                        continue L9;
-                                                      } else {
-                                                        L11: {
-                                                          byte dupTemp$2 = var17.g(112);
-                                                          var9[var12 - -(var5 * var13)] = dupTemp$2;
-                                                          var14 = dupTemp$2;
-                                                          stackOut_46_0 = var10;
-                                                          stackIn_48_0 = stackOut_46_0;
-                                                          stackIn_47_0 = stackOut_46_0;
-                                                          if (var14 == -1) {
-                                                            stackOut_48_0 = stackIn_48_0;
-                                                            stackOut_48_1 = 0;
-                                                            stackIn_49_0 = stackOut_48_0;
-                                                            stackIn_49_1 = stackOut_48_1;
-                                                            break L11;
-                                                          } else {
-                                                            stackOut_47_0 = stackIn_47_0;
-                                                            stackOut_47_1 = 1;
-                                                            stackIn_49_0 = stackOut_47_0;
-                                                            stackIn_49_1 = stackOut_47_1;
-                                                            break L11;
-                                                          }
-                                                        }
-                                                        var10 = stackIn_49_0 | stackIn_49_1;
-                                                        var13++;
-                                                        continue L10;
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              } else {
-                                                break L7;
-                                              }
-                                            } else {
-                                              var13 = 0;
-                                              L12: while (true) {
-                                                if (var13 >= var6) {
-                                                  var12++;
-                                                  continue L8;
+                                var17.field_u = 0;
+                                var4 = 0;
+                                L6: while (true) {
+                                  if (var4 >= eo.field_m) {
+                                    break L0;
+                                  } else {
+                                    L7: {
+                                      var5 = mh.field_c[var4];
+                                      var6 = vi.field_w[var4];
+                                      var7 = var6 * var5;
+                                      var24 = new byte[var7];
+                                      var22 = var24;
+                                      var20 = var22;
+                                      var18 = var20;
+                                      var8 = var18;
+                                      se.field_y[var4] = var24;
+                                      var25 = new byte[var7];
+                                      var23 = var25;
+                                      var21 = var23;
+                                      var19 = var21;
+                                      var9 = var19;
+                                      ej.field_c[var4] = var25;
+                                      var10 = 0;
+                                      var11 = var17.h(-11);
+                                      if (0 != (var11 & 1)) {
+                                        var12 = 0;
+                                        L8: while (true) {
+                                          if (var5 <= var12) {
+                                            if ((2 & var11) != 0) {
+                                              var12 = 0;
+                                              L9: while (true) {
+                                                if (var12 >= var5) {
+                                                  break L7;
                                                 } else {
-                                                  var8[var13 * var5 + var12] = var17.g(106);
-                                                  var13++;
-                                                  continue L12;
-                                                }
-                                              }
-                                            }
-                                          }
-                                        } else {
-                                          var12 = 0;
-                                          L13: while (true) {
-                                            if (var7 <= var12) {
-                                              if ((var11 & 2) != 0) {
-                                                var12 = 0;
-                                                L14: while (true) {
-                                                  if (var7 <= var12) {
-                                                    break L7;
-                                                  } else {
-                                                    L15: {
-                                                      byte dupTemp$3 = var17.g(102);
-                                                      var9[var12] = dupTemp$3;
-                                                      var13 = dupTemp$3;
-                                                      stackOut_30_0 = var10;
-                                                      stackIn_32_0 = stackOut_30_0;
-                                                      stackIn_31_0 = stackOut_30_0;
-                                                      if (var13 == -1) {
-                                                        stackOut_32_0 = stackIn_32_0;
-                                                        stackOut_32_1 = 0;
-                                                        stackIn_33_0 = stackOut_32_0;
-                                                        stackIn_33_1 = stackOut_32_1;
-                                                        break L15;
-                                                      } else {
-                                                        stackOut_31_0 = stackIn_31_0;
-                                                        stackOut_31_1 = 1;
-                                                        stackIn_33_0 = stackOut_31_0;
-                                                        stackIn_33_1 = stackOut_31_1;
-                                                        break L15;
+                                                  var13 = 0;
+                                                  L10: while (true) {
+                                                    if (var13 >= var6) {
+                                                      var12++;
+                                                      continue L9;
+                                                    } else {
+                                                      L11: {
+                                                        byte dupTemp$2 = var17.g(112);
+                                                        var9[var12 - -(var5 * var13)] = dupTemp$2;
+                                                        var14 = dupTemp$2;
+                                                        stackOut_46_0 = var10;
+                                                        stackIn_48_0 = stackOut_46_0;
+                                                        stackIn_47_0 = stackOut_46_0;
+                                                        if (var14 == -1) {
+                                                          stackOut_48_0 = stackIn_48_0;
+                                                          stackOut_48_1 = 0;
+                                                          stackIn_49_0 = stackOut_48_0;
+                                                          stackIn_49_1 = stackOut_48_1;
+                                                          break L11;
+                                                        } else {
+                                                          stackOut_47_0 = stackIn_47_0;
+                                                          stackOut_47_1 = 1;
+                                                          stackIn_49_0 = stackOut_47_0;
+                                                          stackIn_49_1 = stackOut_47_1;
+                                                          break L11;
+                                                        }
                                                       }
+                                                      var10 = stackIn_49_0 | stackIn_49_1;
+                                                      var13++;
+                                                      continue L10;
                                                     }
-                                                    var10 = stackIn_33_0 | stackIn_33_1;
-                                                    var12++;
-                                                    continue L14;
                                                   }
                                                 }
-                                              } else {
-                                                break L7;
                                               }
                                             } else {
-                                              var8[var12] = var17.g(97);
-                                              var12++;
-                                              continue L13;
+                                              break L7;
+                                            }
+                                          } else {
+                                            var13 = 0;
+                                            L12: while (true) {
+                                              if (var13 >= var6) {
+                                                var12++;
+                                                continue L8;
+                                              } else {
+                                                var8[var13 * var5 + var12] = var17.g(106);
+                                                var13++;
+                                                continue L12;
+                                              }
                                             }
                                           }
                                         }
+                                      } else {
+                                        var12 = 0;
+                                        L13: while (true) {
+                                          if (var7 <= var12) {
+                                            if ((var11 & 2) != 0) {
+                                              var12 = 0;
+                                              L14: while (true) {
+                                                if (var7 <= var12) {
+                                                  break L7;
+                                                } else {
+                                                  L15: {
+                                                    byte dupTemp$3 = var17.g(102);
+                                                    var9[var12] = dupTemp$3;
+                                                    var13 = dupTemp$3;
+                                                    stackOut_30_0 = var10;
+                                                    stackIn_32_0 = stackOut_30_0;
+                                                    stackIn_31_0 = stackOut_30_0;
+                                                    if (var13 == -1) {
+                                                      stackOut_32_0 = stackIn_32_0;
+                                                      stackOut_32_1 = 0;
+                                                      stackIn_33_0 = stackOut_32_0;
+                                                      stackIn_33_1 = stackOut_32_1;
+                                                      break L15;
+                                                    } else {
+                                                      stackOut_31_0 = stackIn_31_0;
+                                                      stackOut_31_1 = 1;
+                                                      stackIn_33_0 = stackOut_31_0;
+                                                      stackIn_33_1 = stackOut_31_1;
+                                                      break L15;
+                                                    }
+                                                  }
+                                                  var10 = stackIn_33_0 | stackIn_33_1;
+                                                  var12++;
+                                                  continue L14;
+                                                }
+                                              }
+                                            } else {
+                                              break L7;
+                                            }
+                                          } else {
+                                            var8[var12] = var17.g(97);
+                                            var12++;
+                                            continue L13;
+                                          }
+                                        }
                                       }
-                                      vl.field_j[var4] = var10 != 0;
-                                      var4++;
-                                      continue L6;
                                     }
+                                    vl.field_j[var4] = var10 != 0;
+                                    var4++;
+                                    continue L6;
                                   }
-                                } else {
-                                  return;
                                 }
                               } else {
                                 L16: {
@@ -289,7 +285,7 @@ final class lc {
           L17: {
             var2 = decompiledCaughtException;
             stackOut_53_0 = (RuntimeException) var2;
-            stackOut_53_1 = new StringBuilder().append("lc.A(").append(param0).append(44);
+            stackOut_53_1 = new StringBuilder().append("lc.A(").append(59).append(44);
             stackIn_55_0 = stackOut_53_0;
             stackIn_55_1 = stackOut_53_1;
             stackIn_54_0 = stackOut_53_0;
@@ -316,7 +312,7 @@ final class lc {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_e = null;
     }

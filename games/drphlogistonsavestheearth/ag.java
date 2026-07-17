@@ -482,12 +482,12 @@ final class ag extends ic {
         return param1 < 0 ? param0 : (int)((double)param0 * Math.sqrt((double)(16384 - param1) * 0.0001220703125) + 0.5);
     }
 
-    final static ag b(vk param0, int param1, int param2) {
+    final static ag b(vk param0) {
         if (param0.field_i != null) {
           if (param0.field_i.length == 0) {
             return null;
           } else {
-            return new ag(param0, (int)((long)param0.field_j * 256L * (long)param1 / (long)(100 * id.field_d)), 6144);
+            return new ag(param0, (int)((long)param0.field_j * 256L * 100L / (long)(100 * id.field_d)), 6144);
           }
         } else {
           return null;
@@ -735,7 +735,7 @@ final class ag extends ic {
           if (param0.field_i.length == 0) {
             return null;
           } else {
-            return new ag(param0, (int)((long)param0.field_j * 256L * (long)param1 / (long)(100 * id.field_d)), param2 << 6, param3 << 6);
+            return new ag(param0, (int)((long)param0.field_j * 256L * 100L / (long)(100 * id.field_d)), param2 << 6, param3 << 6);
           }
         } else {
           return null;
@@ -2379,7 +2379,7 @@ final class ag extends ic {
           if (param0.field_i.length == 0) {
             return null;
           } else {
-            return new ag(param0, param1, param2 << 6);
+            return new ag(param0, 256, param2 << 6);
           }
         } else {
           return null;

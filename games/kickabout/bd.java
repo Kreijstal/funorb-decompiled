@@ -26,7 +26,8 @@ final class bd extends qt {
         int stackOut_1_0 = 0;
         L0: {
           super.a((byte) 117, param1);
-          if (up.a((byte) -3)) {
+          int discarded$3 = -3;
+          if (up.a()) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
             break L0;
@@ -39,7 +40,8 @@ final class bd extends qt {
         var3 = rp.a(stackIn_3_0 != 0, -587);
         if (var3 == 3) {
           if (null == e.field_m) {
-            cq.a(so.a(-98), (byte) 126);
+            int discarded$4 = 126;
+            cq.a(so.a(-98));
             if (var3 != 1) {
               L1: {
                 if (var3 == 2) {
@@ -66,7 +68,8 @@ final class bd extends qt {
             }
           } else {
             fd.h(0);
-            cq.a(so.a(-98), (byte) 126);
+            int discarded$5 = 126;
+            cq.a(so.a(-98));
             if (var3 == 1) {
               L3: {
                 jm.a(0, false, -2);
@@ -121,19 +124,11 @@ final class bd extends qt {
     }
 
     final static int a(int param0, boolean param1, int param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        var3 = param2 >> 16;
-        var4 = param2 & 65535;
-        if (param1) {
-          return 87;
-        } else {
-          var5 = param0 >> 16;
-          var6 = 65535 & param0;
-          return (var6 * var4 >> 16) + param0 * var3 - -(var5 * var4);
-        }
+        int var3 = param2 >> 16;
+        int var4 = param2 & 65535;
+        int var5 = param0 >> 16;
+        int var6 = 65535 & param0;
+        return (var6 * var4 >> 16) + param0 * var3 - -(var5 * var4);
     }
 
     final void a(int param0, boolean param1) {
@@ -143,7 +138,7 @@ final class bd extends qt {
     bd() {
     }
 
-    final static void e(int param0) {
+    final static void e() {
         int var1 = 0;
         int var2 = 0;
         var2 = Kickabout.field_G;
@@ -157,20 +152,25 @@ final class bd extends qt {
           if (var1 > 0) {
             if (var1 != 1) {
               st.field_m = vo.a((byte) -18, tk.field_Lb, new String[1]);
-              st.field_m = kr.a(new CharSequence[3], false);
+              int discarded$8 = 0;
+              st.field_m = kr.a(new CharSequence[3]);
               rk.field_f.q(-105);
-              fj.a(-45);
+              int discarded$9 = -45;
+              fj.a();
               return;
             } else {
               st.field_m = dq.field_h;
-              st.field_m = kr.a(new CharSequence[3], false);
+              int discarded$10 = 0;
+              st.field_m = kr.a(new CharSequence[3]);
               rk.field_f.q(-105);
-              fj.a(-45);
+              int discarded$11 = -45;
+              fj.a();
               return;
             }
           } else {
             rk.field_f.q(-105);
-            fj.a(-45);
+            int discarded$12 = -45;
+            fj.a();
             return;
           }
         }

@@ -7,7 +7,7 @@ final class cf {
     static kc field_c;
     static String field_a;
 
-    public static void b(int param0) {
+    public static void b() {
         field_d = null;
         field_a = null;
         field_c = null;
@@ -15,7 +15,8 @@ final class cf {
     }
 
     final static void a(int param0) {
-        ej.a((byte) -39);
+        int discarded$0 = -39;
+        ej.a();
         tg.field_g = false;
         if (param0 != -25319) {
             cf.a(-108);

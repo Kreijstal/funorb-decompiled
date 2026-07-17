@@ -27,7 +27,7 @@ final class qb extends ff {
         super(12, 5, 16, 2, 2, 0.44999998807907104f);
     }
 
-    final static void d(int param0) {
+    final static void d() {
         il.field_a = in.field_z;
         oh.field_e = oh.field_e + 1;
         kr.field_e = 3;
@@ -35,7 +35,8 @@ final class qb extends ff {
         if (!(jl.a(-89))) {
             return;
         }
-        ke.a(false);
+        int discarded$0 = 0;
+        ke.a();
         nv.field_a = 0;
         pd.field_p = un.field_a[0];
         in.field_z = 0;

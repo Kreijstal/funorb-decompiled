@@ -75,7 +75,7 @@ final class gba extends rqa {
         return stackIn_3_0;
     }
 
-    final static void e(int param0) {
+    final static void e() {
         cs.b((byte) -29);
         jia.a(pmb.field_o[0].field_m, nna.field_w, 96, qs.field_c, jk.field_Cb, rba.field_a);
         int var1 = -31;

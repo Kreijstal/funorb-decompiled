@@ -40,11 +40,7 @@ final class qg implements qk {
                       if (var2 != 104) {
                         if (var2 != 105) {
                           if (var2 != 106) {
-                            if (param0 != -60) {
-                              return 104;
-                            } else {
-                              return -1;
-                            }
+                            return -1;
                           } else {
                             return 93;
                           }
@@ -77,7 +73,7 @@ final class qg implements qk {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_f = null;
         field_n = null;
         field_o = null;

@@ -405,7 +405,9 @@ final class lf extends gj {
             lf.a((ai) null, (ai) null, 33);
         }
         ne.field_r.a(1, (ai) (Object) var2);
-        ea.a(2, 4);
+        int discarded$0 = 4;
+        int discarded$1 = 2;
+        ea.a();
         return var2;
     }
 

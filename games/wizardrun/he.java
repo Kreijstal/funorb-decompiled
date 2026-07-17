@@ -104,7 +104,7 @@ final class he extends k {
         }
     }
 
-    private final void a(int param0, vk param1, int param2) {
+    private final void a(int param0, vk param1) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -239,9 +239,6 @@ final class he extends k {
     }
 
     public static void c(int param0) {
-        if (param0 != -28471) {
-            return;
-        }
         field_n = null;
         field_u = null;
         field_r = null;
@@ -477,83 +474,75 @@ final class he extends k {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        ae stackIn_6_0 = null;
-        ae stackIn_10_0 = null;
-        ae stackIn_20_0 = null;
-        ae stackIn_24_0 = null;
+        ae stackIn_4_0 = null;
+        ae stackIn_8_0 = null;
+        ae stackIn_18_0 = null;
+        ae stackIn_22_0 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
-        String stackIn_30_2 = null;
+        String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ae stackOut_5_0 = null;
-        ae stackOut_9_0 = null;
-        ae stackOut_19_0 = null;
-        ae stackOut_23_0 = null;
+        ae stackOut_3_0 = null;
+        ae stackOut_7_0 = null;
+        ae stackOut_17_0 = null;
+        ae stackOut_21_0 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
         RuntimeException stackOut_27_0 = null;
         StringBuilder stackOut_27_1 = null;
-        RuntimeException stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
-        RuntimeException stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        String stackOut_28_2 = null;
+        String stackOut_27_2 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
+        String stackOut_26_2 = null;
         var5 = wizardrun.field_H;
         try {
-          L0: {
-            var2_int = param1.length();
-            if (param0 >= 63) {
-              break L0;
-            } else {
-              he.c(8);
-              break L0;
-            }
-          }
+          var2_int = param1.length();
           if (0 == var2_int) {
-            stackOut_5_0 = ok.field_f;
-            stackIn_6_0 = stackOut_5_0;
-            return stackIn_6_0;
+            stackOut_3_0 = ok.field_f;
+            stackIn_4_0 = stackOut_3_0;
+            return stackIn_4_0;
           } else {
             if (var2_int > 63) {
-              stackOut_9_0 = kj.field_c;
-              stackIn_10_0 = stackOut_9_0;
-              return stackIn_10_0;
+              stackOut_7_0 = kj.field_c;
+              stackIn_8_0 = stackOut_7_0;
+              return stackIn_8_0;
             } else {
               var3 = 0;
-              L1: while (true) {
+              L0: while (true) {
                 if (var2_int > var3) {
-                  L2: {
+                  L1: {
                     var4 = param1.charAt(var3);
                     if (45 == var4) {
-                      L3: {
+                      L2: {
                         if (var3 == 0) {
-                          break L3;
+                          break L2;
                         } else {
                           if (-1 + var2_int != var3) {
-                            break L2;
+                            break L1;
                           } else {
-                            break L3;
+                            break L2;
                           }
                         }
                       }
-                      stackOut_19_0 = tl.field_d;
-                      stackIn_20_0 = stackOut_19_0;
-                      return stackIn_20_0;
+                      stackOut_17_0 = tl.field_d;
+                      stackIn_18_0 = stackOut_17_0;
+                      return stackIn_18_0;
                     } else {
                       if (-1 == jg.field_r.indexOf(var4)) {
-                        stackOut_23_0 = tl.field_d;
-                        stackIn_24_0 = stackOut_23_0;
-                        return stackIn_24_0;
+                        stackOut_21_0 = tl.field_d;
+                        stackIn_22_0 = stackOut_21_0;
+                        return stackIn_22_0;
                       } else {
-                        break L2;
+                        break L1;
                       }
                     }
                   }
                   var3++;
-                  continue L1;
+                  continue L0;
                 } else {
                   return null;
                 }
@@ -562,33 +551,33 @@ final class he extends k {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var2 = decompiledCaughtException;
-            stackOut_27_0 = (RuntimeException) var2;
-            stackOut_27_1 = new StringBuilder().append("he.J(").append(param0).append(44);
-            stackIn_29_0 = stackOut_27_0;
-            stackIn_29_1 = stackOut_27_1;
-            stackIn_28_0 = stackOut_27_0;
-            stackIn_28_1 = stackOut_27_1;
+            stackOut_25_0 = (RuntimeException) var2;
+            stackOut_25_1 = new StringBuilder().append("he.J(").append(80).append(44);
+            stackIn_27_0 = stackOut_25_0;
+            stackIn_27_1 = stackOut_25_1;
+            stackIn_26_0 = stackOut_25_0;
+            stackIn_26_1 = stackOut_25_1;
             if (param1 == null) {
-              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
-              stackOut_29_2 = "null";
-              stackIn_30_0 = stackOut_29_0;
-              stackIn_30_1 = stackOut_29_1;
-              stackIn_30_2 = stackOut_29_2;
-              break L4;
+              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
+              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_2 = "null";
+              stackIn_28_0 = stackOut_27_0;
+              stackIn_28_1 = stackOut_27_1;
+              stackIn_28_2 = stackOut_27_2;
+              break L3;
             } else {
-              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
-              stackOut_28_2 = "{...}";
-              stackIn_30_0 = stackOut_28_0;
-              stackIn_30_1 = stackOut_28_1;
-              stackIn_30_2 = stackOut_28_2;
-              break L4;
+              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
+              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_2 = "{...}";
+              stackIn_28_0 = stackOut_26_0;
+              stackIn_28_1 = stackOut_26_1;
+              stackIn_28_2 = stackOut_26_2;
+              break L3;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 41);
+          throw bd.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 41);
         }
     }
 
@@ -631,11 +620,13 @@ final class he extends k {
                 var2 = param0;
                 L2: while (true) {
                   if (var3.field_E >= var2) {
-                    this.a(var2, var3, -1);
+                    int discarded$4 = -1;
+                    this.a(var2, var3);
                     var3.field_E = var3.field_E - var2;
                     break L1;
                   } else {
-                    this.a(var3.field_E, var3, -1);
+                    int discarded$5 = -1;
+                    this.a(var3.field_E, var3);
                     var2 = var2 - var3.field_E;
                     if (((he) this).field_t.a(0, (int[]) null, var3, var2, 0)) {
                       break L1;

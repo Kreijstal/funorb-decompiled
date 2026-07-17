@@ -38,7 +38,7 @@ abstract class oh extends md {
         }
     }
 
-    private final void k(int param0) {
+    private final void k() {
         ae.field_e[3] = -1;
         ae.field_e[11] = -1;
         ae.field_e[7] = -1;
@@ -79,14 +79,17 @@ abstract class oh extends md {
         j.a(((oh) this).field_t, 24, v.field_C, wi.field_b, ((oh) this).field_x, ((oh) this).field_n, param0, ((oh) this).field_y, ((oh) this).field_p);
         ha.a(false);
         lb.field_u = HoldTheLine.f((byte) -87);
-        am.a(kd.field_b, 114);
+        int discarded$0 = 114;
+        am.a(kd.field_b);
         en.field_a = param6;
         wd.field_n = param2;
         wa.field_k = param7;
         qb.field_i = param5;
         ig.field_v = param3;
-        this.k(29385);
-        fj.f(0);
+        int discarded$1 = 29385;
+        this.k();
+        int discarded$2 = 0;
+        fj.f();
     }
 
     private final void h(int param0) {
@@ -113,11 +116,13 @@ abstract class oh extends md {
                 } else {
                   L1: {
                     if (var2 == 1) {
-                      pa.a((byte) 79);
+                      int discarded$10 = 79;
+                      pa.a();
                       break L1;
                     } else {
                       if (var2 == 2) {
-                        wj.b((byte) 68);
+                        int discarded$11 = 68;
+                        wj.b();
                         break L1;
                       } else {
                         if (3 == var2) {
@@ -125,7 +130,8 @@ abstract class oh extends md {
                           break L1;
                         } else {
                           if (4 == var2) {
-                            q.c((byte) -24);
+                            int discarded$12 = -24;
+                            q.c();
                             break L1;
                           } else {
                             if (var2 == 5) {
@@ -133,11 +139,13 @@ abstract class oh extends md {
                               break L1;
                             } else {
                               if (var2 == 6) {
-                                nn.b((byte) -126);
+                                int discarded$13 = -126;
+                                nn.b();
                                 break L1;
                               } else {
                                 if (var2 == 7) {
-                                  this.e((byte) -15);
+                                  int discarded$14 = -15;
+                                  this.e();
                                   break L1;
                                 } else {
                                   if (var2 == 8) {
@@ -145,7 +153,8 @@ abstract class oh extends md {
                                     break L1;
                                   } else {
                                     if (var2 == 16) {
-                                      hb.a((byte) 3);
+                                      int discarded$15 = 3;
+                                      hb.a();
                                       break L1;
                                     } else {
                                       L2: {
@@ -162,12 +171,14 @@ abstract class oh extends md {
                                                   ng.a(param0 ^ 41);
                                                   break L1;
                                                 } else {
-                                                  bl.a((Throwable) null, (byte) -119, "MGS1: " + em.b(false));
+                                                  int discarded$16 = 0;
+                                                  bl.a((Throwable) null, (byte) -119, "MGS1: " + em.b());
                                                   r.a(-28036);
                                                   break L1;
                                                 }
                                               } else {
-                                                this.o(-1);
+                                                int discarded$17 = -1;
+                                                this.o();
                                                 break L1;
                                               }
                                             }
@@ -187,7 +198,8 @@ abstract class oh extends md {
                                           break L3;
                                         }
                                       }
-                                      var3 = wa.a(stackIn_22_0 != 0, false);
+                                      int discarded$18 = 0;
+                                      var3 = wa.a(stackIn_22_0 != 0);
                                       mf.a(var3, false);
                                       break L1;
                                     }
@@ -207,7 +219,8 @@ abstract class oh extends md {
               }
             }
           }
-          bl.a((Throwable) null, (byte) 70, "MGS2: " + em.b(false));
+          int discarded$19 = 0;
+          bl.a((Throwable) null, (byte) 70, "MGS2: " + em.b());
           r.a(-28036);
           return;
         } else {
@@ -237,7 +250,8 @@ abstract class oh extends md {
                   break L0;
                 } else {
                   L1: {
-                    var5_int = sd.a((byte) -124, gi.i(-80), dk.a(8790));
+                    int discarded$11 = 8790;
+                    var5_int = sd.a((byte) -124, gi.i(-80), dk.a());
                     if (var5_int != -1) {
                       nj.a(256, var5_int, wn.field_h, um.field_b);
                       wn.field_h = null;
@@ -247,7 +261,8 @@ abstract class oh extends md {
                       break L1;
                     }
                   }
-                  var11 = pd.b((byte) -29);
+                  int discarded$12 = -29;
+                  var11 = pd.b();
                   if (var11 == null) {
                     break L0;
                   } else {
@@ -260,7 +275,10 @@ abstract class oh extends md {
                 if (var4 != 2) {
                   break L2;
                 } else {
-                  var5_int = uf.a(oi.a((byte) 31), ob.d((byte) -116), (byte) 80, ck.a((byte) -27), ((oh) this).field_q, tn.d(0), ef.c(4));
+                  int discarded$13 = 31;
+                  int discarded$14 = -27;
+                  int discarded$15 = 0;
+                  var5_int = uf.a(oi.a(), ob.d((byte) -116), (byte) 80, ck.a(), ((oh) this).field_q, tn.d(), ef.c(4));
                   if (var5_int == -1) {
                     break L2;
                   } else {
@@ -287,7 +305,8 @@ abstract class oh extends md {
                     }
                   }
                   if (!param0) {
-                    var5_int = v.a(((oh) this).field_w, 1, tn.d(0), ef.c(4), false, ((oh) this).field_q);
+                    int discarded$16 = 0;
+                    var5_int = v.a(((oh) this).field_w, 1, tn.d(), ef.c(4), false, ((oh) this).field_q);
                     if (var5_int != -1) {
                       if (0 != var5_int) {
                         mk.a(var5_int, um.field_b, -2698);
@@ -314,7 +333,8 @@ abstract class oh extends md {
               L5: {
                 if (4 == var4) {
                   if (hc.field_b) {
-                    co.a(en.a(126), 237);
+                    int discarded$17 = 237;
+                    co.a(en.a(126));
                     break L5;
                   } else {
                     mn.field_a = true;
@@ -327,7 +347,8 @@ abstract class oh extends md {
               }
               L6: {
                 if (var4 == 5) {
-                  kd.a(en.a(116), true);
+                  int discarded$18 = 1;
+                  kd.a(en.a(116));
                   break L6;
                 } else {
                   break L6;
@@ -355,7 +376,8 @@ abstract class oh extends md {
               }
               L9: {
                 if (var4 == 8) {
-                  co.a(en.a(120), 237);
+                  int discarded$19 = 237;
+                  co.a(en.a(120));
                   break L9;
                 } else {
                   break L9;
@@ -363,7 +385,8 @@ abstract class oh extends md {
               }
               L10: {
                 if (var4 == 9) {
-                  v.a(en.a(93), 102);
+                  int discarded$20 = 102;
+                  v.a(en.a(93));
                   break L10;
                 } else {
                   break L10;
@@ -385,84 +408,81 @@ abstract class oh extends md {
                   break L12;
                 }
               }
-              if (param2) {
-                L13: {
-                  if (var4 != 12) {
-                    break L13;
-                  } else {
-                    sh.a((byte) -68, en.a(116), wd.j(-14));
-                    break L13;
-                  }
-                }
-                L14: {
-                  if (var4 == 13) {
-                    try {
-                      L15: {
-                        L16: {
-                          if (va.field_a != null) {
-                            break L16;
-                          } else {
-                            va.field_a = new dl(wi.field_b, new java.net.URL(((oh) this).getCodeBase(), "countrylist.ws"), 5000);
-                            break L16;
-                          }
-                        }
-                        L17: {
-                          if (!va.field_a.a((byte) 90)) {
-                            break L17;
-                          } else {
-                            L18: {
-                              var12 = va.field_a.b((byte) 85);
-                              if (var12 != null) {
-                                var7 = sm.a(var12.field_l, 0, -129, var12.field_i);
-                                t.a(var7, (byte) -55);
-                                break L18;
-                              } else {
-                                var9 = null;
-                                t.a((String) null, (byte) -64);
-                                break L18;
-                              }
-                            }
-                            va.field_a = null;
-                            break L17;
-                          }
-                        }
-                        break L15;
-                      }
-                    } catch (java.lang.Exception decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      L19: {
-                        var5 = (Exception) (Object) decompiledCaughtException;
-                        bl.a((Throwable) (Object) var5, (byte) 87, "S1");
-                        var10 = null;
-                        t.a((String) null, (byte) -87);
-                        va.field_a = null;
-                        break L19;
-                      }
-                    }
-                    break L14;
-                  } else {
-                    break L14;
-                  }
-                }
-                L20: {
-                  if (var4 != 15) {
-                    break L20;
-                  } else {
-                    bk.field_w = 10;
-                    break L20;
-                  }
-                }
-                if (16 != var4) {
-                  if (var4 != 17) {
-                    return 0;
-                  } else {
-                    return 2;
-                  }
+              L13: {
+                if (var4 != 12) {
+                  break L13;
                 } else {
-                  return 1;
+                  int discarded$21 = -14;
+                  sh.a((byte) -68, en.a(116), wd.j());
+                  break L13;
+                }
+              }
+              L14: {
+                if (var4 == 13) {
+                  try {
+                    L15: {
+                      L16: {
+                        if (va.field_a != null) {
+                          break L16;
+                        } else {
+                          va.field_a = new dl(wi.field_b, new java.net.URL(((oh) this).getCodeBase(), "countrylist.ws"), 5000);
+                          break L16;
+                        }
+                      }
+                      L17: {
+                        if (!va.field_a.a((byte) 90)) {
+                          break L17;
+                        } else {
+                          L18: {
+                            var12 = va.field_a.b((byte) 85);
+                            if (var12 != null) {
+                              var7 = sm.a(var12.field_l, 0, -129, var12.field_i);
+                              t.a(var7, (byte) -55);
+                              break L18;
+                            } else {
+                              var9 = null;
+                              t.a((String) null, (byte) -64);
+                              break L18;
+                            }
+                          }
+                          va.field_a = null;
+                          break L17;
+                        }
+                      }
+                      break L15;
+                    }
+                  } catch (java.lang.Exception decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    L19: {
+                      var5 = (Exception) (Object) decompiledCaughtException;
+                      bl.a((Throwable) (Object) var5, (byte) 87, "S1");
+                      var10 = null;
+                      t.a((String) null, (byte) -87);
+                      va.field_a = null;
+                      break L19;
+                    }
+                  }
+                  break L14;
+                } else {
+                  break L14;
+                }
+              }
+              L20: {
+                if (var4 != 15) {
+                  break L20;
+                } else {
+                  bk.field_w = 10;
+                  break L20;
+                }
+              }
+              if (16 != var4) {
+                if (var4 != 17) {
+                  return 0;
+                } else {
+                  return 2;
                 }
               } else {
-                return -101;
+                return 1;
               }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -486,13 +506,13 @@ abstract class oh extends md {
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        String stackIn_27_2 = null;
+        String stackIn_25_2 = null;
         Throwable decompiledCaughtException = null;
         Object stackOut_2_0 = null;
         Object stackOut_3_0 = null;
@@ -501,14 +521,14 @@ abstract class oh extends md {
         Object stackOut_4_0 = null;
         Object stackOut_5_0 = null;
         int stackOut_5_1 = 0;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
         RuntimeException stackOut_24_0 = null;
         StringBuilder stackOut_24_1 = null;
-        RuntimeException stackOut_26_0 = null;
-        StringBuilder stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
+        String stackOut_24_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
         try {
           try {
             L0: {
@@ -560,42 +580,34 @@ abstract class oh extends md {
                 L4: {
                   ((oh) this).field_t = Integer.parseInt(((oh) this).getParameter("gamecrc"));
                   ((oh) this).field_l = Long.parseLong(((oh) this).getParameter("instanceid"));
-                  if (param2 >= 125) {
-                    break L4;
-                  } else {
-                    int discarded$1 = this.a(false, true, false);
-                    break L4;
-                  }
-                }
-                L5: {
                   ((oh) this).field_v = ((oh) this).getParameter("member").equals((Object) (Object) "yes");
                   var8 = ((oh) this).getParameter("lang");
                   if (var8 != null) {
                     ((oh) this).field_u = Integer.parseInt(var8);
+                    break L4;
+                  } else {
+                    break L4;
+                  }
+                }
+                L5: {
+                  if (((oh) this).field_u >= 5) {
+                    ((oh) this).field_u = 0;
                     break L5;
                   } else {
                     break L5;
                   }
                 }
                 L6: {
-                  if (((oh) this).field_u >= 5) {
-                    ((oh) this).field_u = 0;
-                    break L6;
-                  } else {
-                    break L6;
-                  }
-                }
-                L7: {
                   var9 = ((oh) this).getParameter("affid");
                   if (var9 != null) {
                     ((oh) this).field_q = Integer.parseInt(var9);
-                    break L7;
+                    break L6;
                   } else {
-                    break L7;
+                    break L6;
                   }
                 }
                 vb.field_b = Boolean.valueOf(((oh) this).getParameter("simplemode")).booleanValue();
-                ((oh) this).a(param0, param1, param4, param3, (byte) -101, ((oh) this).field_t, 32);
+                ((oh) this).a(param0, 640, param4, 480, (byte) -101, ((oh) this).field_t, 32);
                 break L0;
               } else {
                 return;
@@ -603,43 +615,43 @@ abstract class oh extends md {
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
-            L8: {
+            L7: {
               var6 = (Exception) (Object) decompiledCaughtException;
               var10 = null;
               bl.a((Throwable) (Object) var6, (byte) 113, (String) null);
               ((oh) this).a("crash", 221);
-              break L8;
+              break L7;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L9: {
+          L8: {
             var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_24_0 = (RuntimeException) var6_ref;
-            stackOut_24_1 = new StringBuilder().append("oh.N(");
-            stackIn_26_0 = stackOut_24_0;
-            stackIn_26_1 = stackOut_24_1;
-            stackIn_25_0 = stackOut_24_0;
-            stackIn_25_1 = stackOut_24_1;
+            stackOut_22_0 = (RuntimeException) var6_ref;
+            stackOut_22_1 = new StringBuilder().append("oh.N(");
+            stackIn_24_0 = stackOut_22_0;
+            stackIn_24_1 = stackOut_22_1;
+            stackIn_23_0 = stackOut_22_0;
+            stackIn_23_1 = stackOut_22_1;
             if (param0 == null) {
-              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
-              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
-              stackOut_26_2 = "null";
-              stackIn_27_0 = stackOut_26_0;
-              stackIn_27_1 = stackOut_26_1;
-              stackIn_27_2 = stackOut_26_2;
-              break L9;
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "null";
+              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_1 = stackOut_24_1;
+              stackIn_25_2 = stackOut_24_2;
+              break L8;
             } else {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
-              stackOut_25_2 = "{...}";
-              stackIn_27_0 = stackOut_25_0;
-              stackIn_27_1 = stackOut_25_1;
-              stackIn_27_2 = stackOut_25_2;
-              break L9;
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "{...}";
+              stackIn_25_0 = stackOut_23_0;
+              stackIn_25_1 = stackOut_23_1;
+              stackIn_25_2 = stackOut_23_2;
+              break L8;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw kk.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + 640 + 44 + 127 + 44 + 480 + 44 + param4 + 41);
         }
     }
 
@@ -699,7 +711,8 @@ abstract class oh extends md {
         }
         L2: {
           ea.a(false);
-          cg.a(1983);
+          int discarded$20 = 1983;
+          cg.a();
           if (nn.a((byte) -128)) {
             break L2;
           } else {
@@ -726,10 +739,12 @@ abstract class oh extends md {
               if (((oh) this).field_o) {
                 break L5;
               } else {
-                if (~co.a(0) >= ~var3) {
+                int discarded$21 = 0;
+                if (~co.a() >= ~var3) {
                   break L4;
                 } else {
-                  if (dg.b((byte) 65) > var3) {
+                  int discarded$22 = 65;
+                  if (dg.b() > var3) {
                     break L5;
                   } else {
                     break L4;
@@ -739,7 +754,8 @@ abstract class oh extends md {
             }
             ((oh) this).field_o = false;
             r.a(param0 + -29087);
-            kh.b(false);
+            int discarded$23 = 0;
+            kh.b();
             mk.a(2, qn.field_n, -2698);
             jh.b(param0 ^ 1127);
             pj.field_n = true;
@@ -774,7 +790,8 @@ abstract class oh extends md {
           }
           L9: {
             var3 = stackIn_23_0;
-            ao.field_a = wc.e(-17204);
+            int discarded$24 = -17204;
+            ao.field_a = wc.e();
             if (var3 == 0) {
               break L9;
             } else {
@@ -784,7 +801,8 @@ abstract class oh extends md {
                 if (11 != bk.field_w) {
                   break L9;
                 } else {
-                  if (!oa.b((byte) 103)) {
+                  int discarded$25 = 103;
+                  if (!oa.b()) {
                     de.g((byte) 92);
                     break L9;
                   } else {
@@ -838,7 +856,8 @@ abstract class oh extends md {
                   break L10;
                 } else {
                   L11: {
-                    kh.b(false);
+                    int discarded$26 = 0;
+                    kh.b();
                     if (3 != ao.field_a) {
                       if (4 != ao.field_a) {
                         if (ao.field_a == 2) {
@@ -884,7 +903,8 @@ abstract class oh extends md {
                 }
               }
             }
-            if (!oa.b((byte) 103)) {
+            int discarded$27 = 103;
+            if (!oa.b()) {
               break L12;
             } else {
               break L13;
@@ -911,7 +931,8 @@ abstract class oh extends md {
           if (ao.field_a != 0) {
             break L15;
           } else {
-            if (!oa.b((byte) 103)) {
+            int discarded$28 = 103;
+            if (!oa.b()) {
               de.field_K = false;
               break L15;
             } else {
@@ -923,7 +944,8 @@ abstract class oh extends md {
           if (pf.field_d != 0) {
             break L16;
           } else {
-            if (ol.b((byte) 38)) {
+            int discarded$29 = 38;
+            if (ol.b()) {
               pf.field_d = 1;
               break L16;
             } else {
@@ -943,9 +965,15 @@ abstract class oh extends md {
                 break L18;
               }
             }
-            ah.field_d = nm.a(true, ig.field_v, -115, false, 1);
-            am.field_d = nm.a(true, wd.field_n, -84, false, 1);
-            ca.field_p = nm.a(true, en.field_a, -94, false, 1);
+            int discarded$30 = 1;
+            int discarded$31 = 0;
+            ah.field_d = nm.a(true, ig.field_v, -115);
+            int discarded$32 = 1;
+            int discarded$33 = 0;
+            am.field_d = nm.a(true, wd.field_n, -84);
+            int discarded$34 = 1;
+            int discarded$35 = 0;
+            ca.field_p = nm.a(true, en.field_a, -94);
             g.field_p = am.field_d;
             pf.field_d = 2;
             si.field_lb = ah.field_d;
@@ -995,7 +1023,8 @@ abstract class oh extends md {
               if (td.a((byte) -83, ca.field_p)) {
                 L22: {
                   L23: {
-                    ic.b((byte) 10);
+                    int discarded$36 = 10;
+                    ic.b();
                     ml.c(param0 + 25668);
                     bn.field_j = false;
                     aa.field_m = ug.field_f;
@@ -1077,7 +1106,8 @@ abstract class oh extends md {
                 am.field_d = null;
                 ah.field_d = null;
                 ca.field_p = null;
-                jd.a((java.applet.Applet) this, (byte) 92);
+                int discarded$37 = 92;
+                jd.a((java.applet.Applet) this);
                 qd.d(71);
                 pf.field_d = 10;
                 break L21;
@@ -1195,7 +1225,8 @@ abstract class oh extends md {
             } else {
               om.a(param0 + -47393, kd.field_b);
               ((oh) this).c((byte) 91);
-              am.a(kd.field_b, 114);
+              int discarded$38 = 114;
+              am.a(kd.field_b);
               break L38;
             }
           }
@@ -1204,16 +1235,14 @@ abstract class oh extends md {
           if (!eb.field_j[8]) {
             break L39;
           } else {
-            eb.b(-74);
+            int discarded$39 = -74;
+            eb.b();
             break L39;
           }
         }
     }
 
     private final void a(int param0, boolean param1) {
-        if (param0 <= 96) {
-            ((oh) this).field_o = true;
-        }
         eb.field_j[0] = true;
         eb.field_j[17] = true;
         eb.field_j[16] = true;
@@ -1235,9 +1264,11 @@ abstract class oh extends md {
     final int d(byte param0) {
         int var2 = 0;
         if (!((oh) this).field_b) {
-          if (oa.b((byte) 103)) {
+          int discarded$8 = 103;
+          if (oa.b()) {
             if (!pj.field_n) {
-              var2 = v.a(((oh) this).field_w, 1, tn.d(0), ef.c(4), true, ((oh) this).field_q);
+              int discarded$9 = 0;
+              var2 = v.a(((oh) this).field_w, 1, tn.d(), ef.c(4), true, ((oh) this).field_q);
               if (var2 != -1) {
                 L0: {
                   if (0 == var2) {
@@ -1252,7 +1283,8 @@ abstract class oh extends md {
                           break L1;
                         }
                       }
-                      kh.b(false);
+                      int discarded$10 = 0;
+                      kh.b();
                       mk.a(var2, um.field_b, -2698);
                       pj.field_n = true;
                       bn.field_k = 15000L + bb.b(-1);
@@ -1293,7 +1325,7 @@ abstract class oh extends md {
         }
     }
 
-    final static int a(el param0, int param1, int param2) {
+    final static int a(el param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;
@@ -1373,17 +1405,19 @@ abstract class oh extends md {
 
     final void l(int param0) {
         int var3 = HoldTheLine.field_D;
-        if (jn.a((byte) -30)) {
-            int discarded$1 = this.a(false, null != cc.field_w ? true : false, true);
+        int discarded$5 = -30;
+        if (jn.a()) {
+            int discarded$7 = this.a(false, null != cc.field_w ? true : false, true);
         } else {
             if (pf.field_d >= 10) {
                 if (!ge.a(true)) {
-                    co.c(0);
+                    int discarded$9 = 0;
+                    co.c();
                 } else {
                     if (0 != bk.field_w) {
                         qb.a(vg.field_T, (byte) -97);
                     } else {
-                        int discarded$2 = this.a(false, false, true);
+                        int discarded$10 = this.a(false, false, true);
                     }
                 }
             }
@@ -1463,12 +1497,13 @@ abstract class oh extends md {
         return this.a(true, param1, true);
     }
 
-    private final void e(byte param0) {
+    private final void e() {
         String var2 = vd.a(-1);
-        mn.a(var2, en.a(104), -1);
+        int discarded$0 = -1;
+        mn.a(var2, en.a(104));
     }
 
-    final static nl[] a(ib param0, byte param1) {
+    final static nl[] a(ib param0) {
         RuntimeException var2 = null;
         int[] var3 = null;
         nl[] var4 = null;
@@ -1539,7 +1574,8 @@ abstract class oh extends md {
                     return stackIn_9_0;
                   }
                 } else {
-                  qe.a(10L, (byte) 45);
+                  int discarded$2 = 45;
+                  qe.a(10L);
                   continue L1;
                 }
               }
@@ -1582,7 +1618,7 @@ abstract class oh extends md {
         return stackIn_14_0;
     }
 
-    private final void o(int param0) {
+    private final void o() {
         int var2 = rd.field_e.f((byte) -97);
         int var3 = 0 != (1 & var2) ? 1 : 0;
         int var4 = -1 + ad.field_c;

@@ -34,7 +34,7 @@ final class kc implements Runnable {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
     }
 

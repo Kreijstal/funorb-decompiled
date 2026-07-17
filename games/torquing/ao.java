@@ -156,39 +156,35 @@ abstract class ao {
         var3 = Torquing.field_u;
         try {
           L0: {
-            jg.a(param1, param0 ^ -8141, true, mc.field_l, 0, ga.field_c, vg.field_o);
-            if (param0 == 8191) {
-              var2_int = 0;
-              L1: while (true) {
-                if (var2_int >= vg.field_o) {
-                  L2: {
-                    jg.a(param1 + param1, param0 ^ -8153, false, qd.field_g, param1, lj.field_d, param1 + vg.field_o);
-                    if (vg.field_o <= param1) {
-                      break L2;
-                    } else {
-                      vg.field_o = param1;
-                      break L2;
-                    }
+            jg.a(param1, -52, true, mc.field_l, 0, ga.field_c, vg.field_o);
+            var2_int = 0;
+            L1: while (true) {
+              if (var2_int >= vg.field_o) {
+                L2: {
+                  jg.a(param1 + param1, -40, false, qd.field_g, param1, lj.field_d, param1 + vg.field_o);
+                  if (vg.field_o <= param1) {
+                    break L2;
+                  } else {
+                    vg.field_o = param1;
+                    break L2;
                   }
-                  break L0;
-                } else {
-                  lp.field_g[param1 + var2_int] = var2_int;
-                  var2_int++;
-                  continue L1;
                 }
+                break L0;
+              } else {
+                lp.field_g[param1 + var2_int] = var2_int;
+                var2_int++;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var2, "ao.F(" + param0 + 44 + param1 + 41);
+          throw rb.a((Throwable) (Object) var2, "ao.F(" + 8191 + 44 + param1 + 41);
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
     }
 

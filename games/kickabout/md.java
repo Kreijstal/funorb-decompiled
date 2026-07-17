@@ -29,12 +29,9 @@ final class md implements hc {
             ((md) this).field_i[var4].g((byte) 127);
             ((md) this).field_i[var4].field_mb.a(dq.a((byte) 85, ((md) this).field_i[var4].field_mb.a(true), new Random()), 123);
         }
-        if (param0 >= -10) {
-            ((md) this).field_i = null;
-        }
     }
 
-    final static boolean d(int param0) {
+    final static boolean d() {
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -50,16 +47,19 @@ final class md implements hc {
         L0: {
           var3 = Kickabout.field_G;
           var1 = 0;
-          if (n.a(false)) {
+          int discarded$25 = 0;
+          if (n.a()) {
             var1 = 1;
-            gg.a(-32053);
+            int discarded$26 = -32053;
+            gg.a();
             break L0;
           } else {
             if (!ng.a(27304)) {
               if (vi.c(2915)) {
                 on.g(0, 0, on.field_g, on.field_f);
                 var1 = 1;
-                ph.b(true);
+                int discarded$27 = 1;
+                ph.b();
                 break L0;
               } else {
                 break L0;
@@ -72,7 +72,8 @@ final class md implements hc {
           }
         }
         L1: {
-          if (!up.a((byte) -3)) {
+          int discarded$28 = -3;
+          if (!up.a()) {
             break L1;
           } else {
             if (!ng.a(27304)) {
@@ -103,19 +104,23 @@ final class md implements hc {
           }
         }
         L3: {
-          if (nv.i(0)) {
+          int discarded$29 = 0;
+          if (nv.i()) {
             var2 = (-1 + vo.field_bb << 8) / 16;
             if (0 < var2) {
               var1 = 1;
               on.a(0, 0, on.field_g, on.field_f, 0, var2);
-              boolean discarded$3 = md.d(14);
+              int discarded$30 = 14;
+              boolean discarded$31 = md.d();
               break L3;
             } else {
-              boolean discarded$4 = md.d(14);
+              int discarded$32 = 14;
+              boolean discarded$33 = md.d();
               break L3;
             }
           } else {
-            boolean discarded$5 = md.d(14);
+            int discarded$34 = 14;
+            boolean discarded$35 = md.d();
             break L3;
           }
         }
@@ -150,7 +155,8 @@ final class md implements hc {
         }
         if (-1 != var4) {
             if (!((md) this).field_a) {
-                this.b(-98);
+                int discarded$0 = -98;
+                this.b();
             }
             if (var4 != ((md) this).field_c) {
                 this.a(-18, var4);
@@ -297,7 +303,7 @@ final class md implements hc {
         }
     }
 
-    private final void b(int param0) {
+    private final void b() {
         ((md) this).field_i = new gm[4];
         ((md) this).field_b = new ut(100, 200);
         int var2 = 13;

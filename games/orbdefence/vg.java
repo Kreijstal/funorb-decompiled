@@ -19,7 +19,7 @@ final class vg extends ca {
     static dj field_q;
     long field_h;
 
-    final static boolean a(char param0, int param1) {
+    final static boolean a(char param0) {
         if (Character.isISOControl(param0)) {
           return false;
         } else {

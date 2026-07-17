@@ -146,7 +146,8 @@ final class aw extends llb {
             if (param1 == -29060) {
               var7 = ((aw) this).field_yb + (((aw) this).field_yb - -(((aw) this).field_wb * ((aw) this).field_Ib));
               var8 = jv.a((byte) -109, param0, param3, var6);
-              var9 = lma.a(param4, param2, var7, (byte) -16);
+              int discarded$1 = -16;
+              var9 = lma.a(param4, param2, var7);
               ((aw) this).a(var8, 32, var6, var9, var7);
               var10 = 0;
               L2: while (true) {
@@ -175,7 +176,7 @@ final class aw extends llb {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         L0: {
           rma.field_b = 0;
           tkb.field_p = 1;
@@ -223,7 +224,7 @@ final class aw extends llb {
         }
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_Db = null;
         field_Bb = null;
     }

@@ -186,13 +186,13 @@ abstract class ab extends og {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_D = null;
         field_z = null;
         field_A = null;
     }
 
-    final static jp a(String param0, byte param1) {
+    final static jp a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
@@ -237,7 +237,8 @@ abstract class ab extends og {
                   } else {
                     var3 = param0.substring(0, var2_int);
                     var4 = param0.substring(var2_int + 1);
-                    var5 = jm.a(var3, true);
+                    int discarded$2 = 1;
+                    var5 = jm.a(var3);
                     if (var5 == null) {
                       stackOut_12_0 = rd.a(true, var4);
                       stackIn_13_0 = stackOut_12_0;
@@ -480,7 +481,8 @@ abstract class ab extends og {
         int stackOut_3_0 = 0;
         if (param0 >= -100) {
           L0: {
-            ab.c(false);
+            int discarded$1 = 0;
+            ab.c();
             if (!((ab) this).field_C) {
               stackOut_11_0 = 0;
               stackIn_12_0 = stackOut_11_0;
@@ -593,24 +595,28 @@ abstract class ab extends og {
         }
     }
 
-    final static void f(byte param0) {
+    final static void f() {
         if (null == qe.field_g) {
           if (td.field_b != null) {
             td.field_b.i((byte) 32);
-            ck.m(0);
+            int discarded$8 = 0;
+            ck.m();
             return;
           } else {
-            ck.m(0);
+            int discarded$9 = 0;
+            ck.m();
             return;
           }
         } else {
           qe.field_g.h(0);
           if (td.field_b == null) {
-            ck.m(0);
+            int discarded$10 = 0;
+            ck.m();
             return;
           } else {
             td.field_b.i((byte) 32);
-            ck.m(0);
+            int discarded$11 = 0;
+            ck.m();
             return;
           }
         }

@@ -43,7 +43,7 @@ class hc extends of {
     private nh[] field_ib;
     private int field_P;
 
-    private final void a(hc param0, int param1) {
+    private final void a(hc param0) {
         RuntimeException var3 = null;
         RuntimeException stackIn_95_0 = null;
         StringBuilder stackIn_95_1 = null;
@@ -397,20 +397,16 @@ class hc extends of {
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_M = null;
         field_K = null;
     }
 
-    final static boolean a(boolean param0) {
-        if (!param0) {
-            field_M = null;
-            return true;
-        }
+    final static boolean a() {
         return true;
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         int var1 = 0;
         if (!(oh.a(0))) {
             if (!aj.field_e) {
@@ -498,7 +494,8 @@ class hc extends of {
           L0: {
             L1: {
               ((hc) this).field_g = param0;
-              this.a(param1, -103);
+              int discarded$2 = -103;
+              this.a(param1);
               if (param6 == null) {
                 break L1;
               } else {

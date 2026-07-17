@@ -344,7 +344,7 @@ final class lw {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         int var1 = 0;
         field_i = null;
@@ -356,12 +356,14 @@ final class lw {
           ((lw) this).field_b = false;
           ura.a(-10985);
           hp.a(2048, ((lw) this).field_h, 1900, ((lw) this).field_d.b((byte) 74), -1918106173, (((lw) this).field_f >> 16) + param1, param2 - -(((lw) this).field_e >> 16));
-          se.f((byte) -6);
+          int discarded$2 = -6;
+          se.f();
           return;
         } else {
           ura.a(-10985);
           hp.a(2048, ((lw) this).field_h, 1900, ((lw) this).field_d.b((byte) 74), -1918106173, (((lw) this).field_f >> 16) + param1, param2 - -(((lw) this).field_e >> 16));
-          se.f((byte) -6);
+          int discarded$3 = -6;
+          se.f();
           return;
         }
     }

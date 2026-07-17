@@ -7,7 +7,7 @@ final class gh {
     static hk field_d;
     static int field_c;
 
-    final static int a(boolean param0) {
+    final static int a() {
         return ac.field_e;
     }
 

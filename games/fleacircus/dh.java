@@ -9,10 +9,11 @@ final class dh {
 
     final static void a(boolean param0, byte param1) {
         dh.a(true, (byte) 62);
-        pd.a(param0, true, 0);
+        int discarded$0 = 0;
+        pd.a(true, true);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
     }

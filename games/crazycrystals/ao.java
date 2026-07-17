@@ -12,7 +12,7 @@ final class ao {
         return param0 & param1;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         Object var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -73,7 +73,7 @@ final class ao {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_c = null;
         field_b = null;
         field_d = null;

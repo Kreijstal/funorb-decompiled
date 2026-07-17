@@ -156,7 +156,7 @@ final class gd extends wf implements java.awt.image.ImageProducer, java.awt.imag
         return param0 == ((gd) this).field_o;
     }
 
-    private final synchronized void b(int param0) {
+    private final synchronized void b() {
         if (null == ((gd) this).field_o) {
           return;
         } else {
@@ -188,12 +188,15 @@ final class gd extends wf implements java.awt.image.ImageProducer, java.awt.imag
         try {
             ((gd) this).field_s = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
             ((gd) this).field_h = param3.createImage((java.awt.image.ImageProducer) this);
-            this.b(2);
-            boolean discarded$0 = param3.prepareImage(((gd) this).field_h, (java.awt.image.ImageObserver) this);
-            this.b(2);
+            int discarded$0 = 2;
+            this.b();
             boolean discarded$1 = param3.prepareImage(((gd) this).field_h, (java.awt.image.ImageObserver) this);
-            this.b(2);
-            boolean discarded$2 = param3.prepareImage(((gd) this).field_h, (java.awt.image.ImageObserver) this);
+            int discarded$2 = 2;
+            this.b();
+            boolean discarded$3 = param3.prepareImage(((gd) this).field_h, (java.awt.image.ImageObserver) this);
+            int discarded$4 = 2;
+            this.b();
+            boolean discarded$5 = param3.prepareImage(((gd) this).field_h, (java.awt.image.ImageObserver) this);
             ((gd) this).a((byte) 29);
         } catch (RuntimeException runtimeException) {
             throw kg.a((Throwable) (Object) runtimeException, "gd.A(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
@@ -206,8 +209,9 @@ final class gd extends wf implements java.awt.image.ImageProducer, java.awt.imag
                 Object var6 = null;
                 ((gd) this).requestTopDownLeftRightResend((java.awt.image.ImageConsumer) null);
             }
-            this.b(2);
-            boolean discarded$0 = param2.drawImage(((gd) this).field_h, param1, param3, (java.awt.image.ImageObserver) this);
+            int discarded$0 = 2;
+            this.b();
+            boolean discarded$1 = param2.drawImage(((gd) this).field_h, param1, param3, (java.awt.image.ImageObserver) this);
         } catch (RuntimeException runtimeException) {
             throw kg.a((Throwable) (Object) runtimeException, "gd.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }

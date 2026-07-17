@@ -78,9 +78,9 @@ final class vua extends rqa {
         try {
             vba.field_q[param6] = param4;
             vba.field_s[param6] = param3;
-            vba.field_o[param6] = param5;
+            vba.field_o[param6] = 50;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "vua.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "vua.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + 50 + 44 + param6 + 41);
         }
     }
 

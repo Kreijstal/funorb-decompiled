@@ -17,18 +17,18 @@ abstract class cb extends pa {
     final static dd[] a(int param0, int param1, int param2, int param3, int param4) {
         dd[] var6 = new dd[9];
         dd[] var5 = var6;
-        dd dupTemp$0 = oh.c(102, param3, param0);
+        dd dupTemp$0 = oh.c(102, param3, 1);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
-        var5[param2] = dupTemp$0;
-        dd dupTemp$1 = oh.c(107, param1, param0);
+        var5[0] = dupTemp$0;
+        dd dupTemp$1 = oh.c(107, param1, 1);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
         if (!(param4 == 0)) {
-            var5[4] = oh.c(df.a(param2, 122), param4, 64);
+            var5[4] = oh.c(df.a(0, 122), param4, 64);
         }
         return var5;
     }
@@ -70,7 +70,7 @@ abstract class cb extends pa {
         ((cb) this).field_r = param0;
     }
 
-    final static String a(String param0, String param1, rh param2, byte param3) {
+    final static String a(String param0, String param1, rh param2) {
         RuntimeException var4 = null;
         String stackIn_3_0 = null;
         String stackIn_5_0 = null;

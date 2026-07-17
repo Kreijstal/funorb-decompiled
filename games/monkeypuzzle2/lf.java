@@ -9,17 +9,13 @@ final class lf {
     static volatile int field_a;
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        if (param0 == -19864) {
-          if (param5 <= param1) {
-            if (param5 + param4 > param1) {
-              if (param6 <= param2) {
-                if (param6 - -param3 <= param2) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
+        if (param5 <= param1) {
+          if (param5 + param4 > param1) {
+            if (param6 <= param2) {
+              if (param6 - -param3 <= param2) {
                 return false;
+              } else {
+                return true;
               }
             } else {
               return false;
@@ -32,7 +28,7 @@ final class lf {
         }
     }
 
-    final static int a(int param0) {
+    final static int a() {
         try {
             IOException var1 = null;
             int var1_int = 0;
@@ -153,17 +149,10 @@ final class lf {
     }
 
     final static void a(int param0, int param1) {
-        hb var2 = null;
-        var2 = gf.field_c;
-        var2.b(true, param1);
+        hb var2 = gf.field_c;
+        var2.b(true, 6);
         var2.b(1, -49152);
-        var2.b(0, param0 + -74349);
-        if (param0 != 25197) {
-          field_a = -114;
-          return;
-        } else {
-          return;
-        }
+        var2.b(0, -49152);
     }
 
     public static void a(boolean param0) {

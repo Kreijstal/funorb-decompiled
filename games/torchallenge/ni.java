@@ -64,7 +64,7 @@ final class ni {
           L0: {
             var3_int = param2.length();
             var4 = var3_int;
-            var5 = param1;
+            var5 = 0;
             L1: while (true) {
               var6_int = param2.indexOf("<%", var5);
               if (var6_int < 0) {
@@ -181,7 +181,7 @@ final class ni {
           }
           L8: {
             stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
-            stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(44).append(param1).append(44);
+            stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(44).append(0).append(44);
             stackIn_31_0 = stackOut_29_0;
             stackIn_31_1 = stackOut_29_1;
             stackIn_30_0 = stackOut_29_0;
@@ -530,7 +530,7 @@ final class ni {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void a() {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -549,13 +549,13 @@ final class ni {
                   if (var6 == null) {
                     break L0;
                   } else {
-                    bg.a(param0, (byte) 26, var6);
+                    bg.a(3, (byte) 26, var6);
                     var6 = (ae) (Object) bk.field_t.c(-270);
                     continue L2;
                   }
                 }
               } else {
-                ul.a(-18261, var5, param0);
+                ul.a(-18261, var5, 3);
                 var5 = (ji) (Object) wf.field_g.c(-270);
                 continue L1;
               }
@@ -564,7 +564,7 @@ final class ni {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var2, "ni.B(" + param0 + 44 + 103 + 41);
+          throw oj.a((Throwable) (Object) var2, "ni.B(" + 3 + 44 + 103 + 41);
         }
     }
 

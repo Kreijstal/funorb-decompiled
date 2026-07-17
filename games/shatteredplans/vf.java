@@ -92,193 +92,189 @@ final class vf extends hb {
             var27 = var28;
             var24 = var27;
             var8 = var24;
-            if (param3) {
-              var9 = 0;
-              L1: while (true) {
-                if (var9 >= param1) {
-                  var9 = 0;
-                  L2: while (true) {
-                    if (param1 <= var9) {
-                      break L0;
-                    } else {
-                      var10 = 1 + var9;
-                      L3: while (true) {
-                        if (var10 >= param1) {
-                          var9++;
-                          continue L2;
-                        } else {
-                          var11 = qf.a((byte) 76, var29[var9], param5);
-                          var12 = 0;
-                          L4: while (true) {
-                            L5: {
-                              if (var29[var9] <= var12) {
-                                break L5;
-                              } else {
-                                L6: {
-                                  var26 = var25[var9][(var12 + var11) % var29[var9]];
-                                  if (var26.field_x == var9) {
-                                    var14 = var26.field_v;
-                                    var15 = 0;
-                                    L7: while (true) {
-                                      if (var14.length <= var15) {
-                                        break L6;
-                                      } else {
-                                        L8: {
-                                          var16 = var14[var15];
-                                          if (var16.field_k.field_x != var10) {
-                                            break L8;
-                                          } else {
-                                            L9: {
-                                              if (null != var26.field_D) {
-                                                var17_ref_ln__ = var26.field_D;
-                                                var18 = 0;
-                                                L10: while (true) {
-                                                  if (var18 >= var17_ref_ln__.length) {
-                                                    break L9;
+            var9 = 0;
+            L1: while (true) {
+              if (var9 >= param1) {
+                var9 = 0;
+                L2: while (true) {
+                  if (param1 <= var9) {
+                    break L0;
+                  } else {
+                    var10 = 1 + var9;
+                    L3: while (true) {
+                      if (var10 >= param1) {
+                        var9++;
+                        continue L2;
+                      } else {
+                        var11 = qf.a((byte) 76, var29[var9], param5);
+                        var12 = 0;
+                        L4: while (true) {
+                          L5: {
+                            if (var29[var9] <= var12) {
+                              break L5;
+                            } else {
+                              L6: {
+                                var26 = var25[var9][(var12 + var11) % var29[var9]];
+                                if (var26.field_x == var9) {
+                                  var14 = var26.field_v;
+                                  var15 = 0;
+                                  L7: while (true) {
+                                    if (var14.length <= var15) {
+                                      break L6;
+                                    } else {
+                                      L8: {
+                                        var16 = var14[var15];
+                                        if (var16.field_k.field_x != var10) {
+                                          break L8;
+                                        } else {
+                                          L9: {
+                                            if (null != var26.field_D) {
+                                              var17_ref_ln__ = var26.field_D;
+                                              var18 = 0;
+                                              L10: while (true) {
+                                                if (var18 >= var17_ref_ln__.length) {
+                                                  break L9;
+                                                } else {
+                                                  var19_ref_ln = var17_ref_ln__[var18];
+                                                  if (var16.field_k == var19_ref_ln) {
+                                                    break L8;
                                                   } else {
-                                                    var19_ref_ln = var17_ref_ln__[var18];
-                                                    if (var16.field_k == var19_ref_ln) {
-                                                      break L8;
-                                                    } else {
-                                                      var18++;
-                                                      continue L10;
-                                                    }
+                                                    var18++;
+                                                    continue L10;
                                                   }
                                                 }
-                                              } else {
-                                                break L9;
                                               }
+                                            } else {
+                                              break L9;
                                             }
-                                            var17 = 0;
-                                            var18 = 0;
-                                            var19 = 0;
-                                            L11: while (true) {
-                                              if (param6.length <= var19) {
-                                                L12: {
-                                                  if (var17 <= var18) {
-                                                    break L12;
-                                                  } else {
-                                                    var19 = var17;
-                                                    var17 = var18;
-                                                    var18 = var19;
-                                                    break L12;
-                                                  }
+                                          }
+                                          var17 = 0;
+                                          var18 = 0;
+                                          var19 = 0;
+                                          L11: while (true) {
+                                            if (param6.length <= var19) {
+                                              L12: {
+                                                if (var17 <= var18) {
+                                                  break L12;
+                                                } else {
+                                                  var19 = var17;
+                                                  var17 = var18;
+                                                  var18 = var19;
+                                                  break L12;
                                                 }
-                                                L13: {
-                                                  var19 = var18 / param0 + -(var17 / param0);
-                                                  if (var19 == 0) {
+                                              }
+                                              L13: {
+                                                var19 = var18 / param0 + -(var17 / param0);
+                                                if (var19 == 0) {
+                                                  break L13;
+                                                } else {
+                                                  if (var18 < param0 * var19 + var17) {
+                                                    var20 = var18;
+                                                    var18 = var17 + var19 * param0;
+                                                    var17 = -(param0 * var19) + var20;
                                                     break L13;
                                                   } else {
-                                                    if (var18 < param0 * var19 + var17) {
-                                                      var20 = var18;
-                                                      var18 = var17 + var19 * param0;
-                                                      var17 = -(param0 * var19) + var20;
-                                                      break L13;
-                                                    } else {
-                                                      break L13;
-                                                    }
+                                                    break L13;
                                                   }
                                                 }
-                                                var23 = 1 + var17;
-                                                var20 = var23;
-                                                L14: while (true) {
-                                                  if (var18 <= var23) {
-                                                    var26.a((byte) -113, var16.field_k);
-                                                    var16.field_k.a((byte) -111, var26);
-                                                    break L5;
-                                                  } else {
-                                                    L15: {
-                                                      if (null != param6[var23]) {
-                                                        if (param6[var23].field_p == var16.field_k.field_p) {
+                                              }
+                                              var23 = 1 + var17;
+                                              var20 = var23;
+                                              L14: while (true) {
+                                                if (var18 <= var23) {
+                                                  var26.a((byte) -113, var16.field_k);
+                                                  var16.field_k.a((byte) -111, var26);
+                                                  break L5;
+                                                } else {
+                                                  L15: {
+                                                    if (null != param6[var23]) {
+                                                      if (param6[var23].field_p == var16.field_k.field_p) {
+                                                        break L15;
+                                                      } else {
+                                                        if (param6[var23].field_p == var26.field_p) {
                                                           break L15;
                                                         } else {
-                                                          if (param6[var23].field_p == var26.field_p) {
-                                                            break L15;
+                                                          if (!kp.a((byte) 96, param6[var23], var16.field_k, param2, var26)) {
+                                                            break L8;
                                                           } else {
-                                                            if (!kp.a((byte) 96, param6[var23], var16.field_k, param2, var26)) {
-                                                              break L8;
-                                                            } else {
-                                                              break L15;
-                                                            }
+                                                            break L15;
                                                           }
                                                         }
-                                                      } else {
-                                                        break L15;
                                                       }
-                                                    }
-                                                    var23++;
-                                                    continue L14;
-                                                  }
-                                                }
-                                              } else {
-                                                L16: {
-                                                  if (null != param6[var19]) {
-                                                    L17: {
-                                                      if (var26.field_p == param6[var19].field_p) {
-                                                        var17 = var19;
-                                                        break L17;
-                                                      } else {
-                                                        break L17;
-                                                      }
-                                                    }
-                                                    if (var16.field_k.field_p == param6[var19].field_p) {
-                                                      var18 = var19;
-                                                      break L16;
                                                     } else {
-                                                      break L16;
+                                                      break L15;
                                                     }
+                                                  }
+                                                  var23++;
+                                                  continue L14;
+                                                }
+                                              }
+                                            } else {
+                                              L16: {
+                                                if (null != param6[var19]) {
+                                                  L17: {
+                                                    if (var26.field_p == param6[var19].field_p) {
+                                                      var17 = var19;
+                                                      break L17;
+                                                    } else {
+                                                      break L17;
+                                                    }
+                                                  }
+                                                  if (var16.field_k.field_p == param6[var19].field_p) {
+                                                    var18 = var19;
+                                                    break L16;
                                                   } else {
                                                     break L16;
                                                   }
+                                                } else {
+                                                  break L16;
                                                 }
-                                                var19++;
-                                                continue L11;
                                               }
+                                              var19++;
+                                              continue L11;
                                             }
                                           }
                                         }
-                                        var15++;
-                                        continue L7;
                                       }
+                                      var15++;
+                                      continue L7;
                                     }
-                                  } else {
-                                    break L6;
                                   }
+                                } else {
+                                  break L6;
                                 }
-                                var12++;
-                                continue L4;
                               }
+                              var12++;
+                              continue L4;
                             }
-                            var10++;
-                            continue L3;
                           }
+                          var10++;
+                          continue L3;
                         }
                       }
                     }
                   }
-                } else {
-                  var10_ref_pf = new pf();
-                  var11_ref_ln__ = param4;
-                  var12 = 0;
-                  L18: while (true) {
-                    if (var11_ref_ln__.length <= var12) {
-                      var7_array[var9] = new ln[var29[var9]];
-                      int discarded$1 = var10_ref_pf.a((byte) 112, (oh[]) (Object) var25[var9]);
-                      var9++;
-                      continue L1;
-                    } else {
-                      var22 = var11_ref_ln__[var12];
-                      var13 = var22;
-                      var10_ref_pf.a((byte) -113, (oh) (Object) var22);
-                      var8[var9] = var8[var9] + 1;
-                      var12++;
-                      continue L18;
-                    }
+                }
+              } else {
+                var10_ref_pf = new pf();
+                var11_ref_ln__ = param4;
+                var12 = 0;
+                L18: while (true) {
+                  if (var11_ref_ln__.length <= var12) {
+                    var7_array[var9] = new ln[var29[var9]];
+                    int discarded$1 = var10_ref_pf.a((byte) 112, (oh[]) (Object) var25[var9]);
+                    var9++;
+                    continue L1;
+                  } else {
+                    var22 = var11_ref_ln__[var12];
+                    var13 = var22;
+                    var10_ref_pf.a((byte) -113, (oh) (Object) var22);
+                    var8[var9] = var8[var9] + 1;
+                    var12++;
+                    continue L18;
                   }
                 }
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -286,7 +282,7 @@ final class vf extends hb {
           L19: {
             var7 = decompiledCaughtException;
             stackOut_58_0 = (RuntimeException) var7;
-            stackOut_58_1 = new StringBuilder().append("vf.K(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_58_1 = new StringBuilder().append("vf.K(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(1).append(44);
             stackIn_60_0 = stackOut_58_0;
             stackIn_60_1 = stackOut_58_1;
             stackIn_59_0 = stackOut_58_0;
@@ -589,18 +585,15 @@ final class vf extends hb {
         eo.field_cb.c(param1, (byte) -123);
         eo.field_cb.d(param0, 255);
         eo.field_cb.a(jl.field_V, hr.field_a, (byte) -56);
-        js.field_f.h(18, param2 + 251);
+        js.field_f.h(18, 255);
         int fieldTemp$0 = js.field_f.field_j + 1;
         js.field_f.field_j = js.field_f.field_j + 1;
         int var4 = fieldTemp$0;
         js.field_f.a(0, eo.field_cb.field_j, eo.field_cb.field_h, 22186);
-        if (param2 != 4) {
-            return;
-        }
         js.field_f.b(-var4 + js.field_f.field_j, (byte) 118);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
     }
 

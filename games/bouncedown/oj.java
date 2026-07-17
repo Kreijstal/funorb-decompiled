@@ -313,8 +313,8 @@ final class oj {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var3_int = 15 % ((param1 - -69) / 48);
-            stackOut_0_0 = param0.a(-1, false);
+            var3_int = 0;
+            stackOut_0_0 = param0.a(-1, param2);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -346,7 +346,7 @@ final class oj {
               break L1;
             }
           }
-          throw ii.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + 0 + 41);
+          throw ii.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + -119 + 44 + param2 + 41);
         }
         return stackIn_1_0;
     }

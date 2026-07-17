@@ -6,26 +6,24 @@ final class vg {
     static String field_c;
     static String field_a;
 
-    final static void a(int param0) {
+    final static void a() {
         if (!(tc.field_x)) {
             throw new IllegalStateException();
         }
         if (!(null == fa.field_G)) {
             fa.field_G.n(-125);
         }
-        String var1 = ob.c(94);
+        int discarded$0 = 94;
+        String var1 = ob.c();
         wi.field_c = new rg(var1, (String) null, true, false, false);
         ti.field_b.a((byte) 86, (uj) (Object) t.field_h);
         t.field_h.c(20317, (uj) (Object) wi.field_c);
         t.field_h.j(-125);
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_c = null;
         field_a = null;
-        if (param0 > -87) {
-            field_c = null;
-        }
     }
 
     static {

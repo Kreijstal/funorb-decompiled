@@ -80,7 +80,7 @@ final class we {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         field_e = null;
@@ -90,23 +90,12 @@ final class we {
     }
 
     final static void a(boolean param0, boolean param1) {
-        L0: {
-          if (ag.c(-116)) {
+        if (!(!ag.c(-116))) {
             param1 = false;
-            break L0;
-          } else {
-            break L0;
-          }
         }
         vm.a((byte) 32, param1);
-        if (param0) {
-          field_k = -1.6507269144058228f;
-          rn.a(-26808);
-          return;
-        } else {
-          rn.a(-26808);
-          return;
-        }
+        int discarded$0 = -26808;
+        rn.a();
     }
 
     final static boolean a(byte param0, String param1) {
@@ -195,17 +184,14 @@ final class we {
         try {
             di.field_n.field_K = di.field_n.field_K + wa.field_I.field_K;
             di.field_n.field_eb = param4;
-            if (param1 != 21) {
-                we.a(-38);
-            }
             di.field_n.field_V = param2;
             di.field_n.field_E = param0;
             wa.field_I.field_tb = wa.field_I.field_tb + wa.field_I.field_K;
-            wa.field_I.field_K = param3;
+            wa.field_I.field_K = 0;
             di.field_n.field_K = di.field_n.field_K - wa.field_I.field_K;
             wa.field_I.field_tb = wa.field_I.field_tb - wa.field_I.field_K;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "we.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "we.C(" + param0 + 44 + 21 + 44 + (param2 != null ? "{...}" : "null") + 44 + 0 + 44 + (param4 != null ? "{...}" : "null") + 41);
         }
     }
 

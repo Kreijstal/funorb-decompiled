@@ -132,12 +132,14 @@ final class waa {
           ((waa) this).field_c = -128;
           ura.a(param1 ^ -10991);
           hp.a(1024, 4095 & ((waa) this).field_a * ((waa) this).field_c, 1996, ((waa) this).field_d.b((byte) 74), -1918106173, param2 + ((waa) this).field_c, ((waa) this).field_a + param0);
-          se.f((byte) -6);
+          int discarded$2 = -6;
+          se.f();
           return;
         } else {
           ura.a(param1 ^ -10991);
           hp.a(1024, 4095 & ((waa) this).field_a * ((waa) this).field_c, 1996, ((waa) this).field_d.b((byte) 74), -1918106173, param2 + ((waa) this).field_c, ((waa) this).field_a + param0);
-          se.f((byte) -6);
+          int discarded$3 = -6;
+          se.f();
           return;
         }
     }

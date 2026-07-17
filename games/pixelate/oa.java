@@ -18,11 +18,11 @@ final class oa extends hn implements hi, mb {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_h = null;
     }
 
-    final static String a(Throwable param0, byte param1) throws IOException {
+    final static String a(Throwable param0) throws IOException {
         String var2 = null;
         PrintWriter var4 = null;
         String var5 = null;
@@ -128,40 +128,7 @@ final class oa extends hn implements hi, mb {
     }
 
     final static boolean a(int param0, int param1) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        if (param1 != 1890) {
-          L0: {
-            field_i = false;
-            if ((-param0 & param0) != param0) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
-              break L0;
-            } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if ((-param0 & param0) != param0) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              break L1;
-            } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
-        }
+        return (-param0 & param0) == param0;
     }
 
     final dj a(boolean param0) {

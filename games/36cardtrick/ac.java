@@ -6,7 +6,7 @@ final class ac extends RuntimeException {
     Throwable field_b;
     static String field_c;
 
-    final static void a(int param0) {
+    final static void a() {
         try {
             java.lang.reflect.Method var1 = null;
             Exception var1_ref = null;
@@ -156,7 +156,8 @@ final class ac extends RuntimeException {
                           }
                           break L6;
                         } else {
-                          int discarded$1 = dc.a(var16, var5_int, param1, var4, 9);
+                          int discarded$2 = 9;
+                          int discarded$3 = dc.a(var6, var5_int, param1, var4);
                           break L6;
                         }
                       }

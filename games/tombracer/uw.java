@@ -93,7 +93,7 @@ final class uw {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean a(int param0, int param1) {
         int var3 = 0;
         int stackIn_3_0 = 0;
         int stackIn_8_0 = 0;
@@ -118,7 +118,8 @@ final class uw {
             if (stackIn_3_0 != 0 | fua.a(110, param1, param0)) {
               break L2;
             } else {
-              if (!no.a(param0, param1, 36864)) {
+              int discarded$3 = 36864;
+              if (!no.a(param0, param1)) {
                 stackOut_7_0 = 0;
                 stackIn_8_0 = stackOut_7_0;
                 break L1;
@@ -321,7 +322,7 @@ final class uw {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int[] var2 = null;
@@ -410,8 +411,12 @@ final class uw {
                         var18 = 0;
                         L5: while (true) {
                           if (var18 >= 3) {
-                            ft.a(var17, 1251086882, nba.field_a, vs.field_P, true, false, false);
-                            dh.a(var9, var8, var13, var17, var7, var14, var12, (byte) -23);
+                            int discarded$4 = 0;
+                            int discarded$5 = 0;
+                            int discarded$6 = 1;
+                            ft.a(var17, 1251086882, nba.field_a, vs.field_P);
+                            int discarded$7 = -23;
+                            dh.a(var9, var8, var13, var17, var7, var14, var12);
                             var15++;
                             continue L3;
                           } else {

@@ -70,7 +70,7 @@ final class nf implements Runnable {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
         field_f = null;
         field_a = null;

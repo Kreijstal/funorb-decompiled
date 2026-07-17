@@ -358,35 +358,9 @@ class en {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 < 8000) {
-            break L0;
-          } else {
-            if (param0 <= 48000) {
-              L1: {
-                field_o = param0;
-                if (!param1) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              field_u = stackIn_7_0 != 0;
-              field_s = 10;
-              return;
-            } else {
-              break L0;
-            }
-          }
-        }
-        throw new IllegalArgumentException();
+        field_o = 22050;
+        field_u = true;
+        field_s = 10;
     }
 
     private final void a(ol param0, int param1) {
@@ -422,7 +396,7 @@ class en {
         ol var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_u) {
             break L0;
           } else {
@@ -432,7 +406,7 @@ class en {
         }
         L1: {
           an.a(param0, 0, var3);
-          ((en) this).field_l = ((en) this).field_l - 256;
+          ((en) this).field_l = ((en) this).field_l - param1;
           if (((en) this).field_b == null) {
             break L1;
           } else {
@@ -599,7 +573,7 @@ class en {
           if (((en) this).field_b == null) {
             break L17;
           } else {
-            ((en) this).field_b.b(param0, 0, 256);
+            ((en) this).field_b.b(param0, 0, param1);
             break L17;
           }
         }
@@ -607,12 +581,12 @@ class en {
     }
 
     private final void b(int param0) {
-        ((en) this).field_l = ((en) this).field_l - 256;
+        ((en) this).field_l = ((en) this).field_l - param0;
         if (((en) this).field_l < 0) {
             ((en) this).field_l = 0;
         }
         if (((en) this).field_b != null) {
-            ((en) this).field_b.a(256);
+            ((en) this).field_b.a(param0);
             return;
         }
     }

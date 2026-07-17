@@ -83,8 +83,8 @@ abstract class mp {
     final static void a(int param0, int param1, int param2, int param3) {
         int var4_int = 0;
         try {
-            pm.field_R.field_j = param0;
-            pm.field_R.a(param0 ^ -108, 12);
+            pm.field_R.field_j = 0;
+            pm.field_R.a(-108, 12);
             pm.field_R.b(-114, c.field_c.nextInt());
             pm.field_R.b(-118, c.field_c.nextInt());
             pm.field_R.a(123, param2);
@@ -98,7 +98,7 @@ abstract class mp {
             ma.field_a.a(pm.field_R.field_m, pm.field_R.field_j, 0, 126);
             ma.field_a.e(72, -var4_int + ma.field_a.field_j);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "mp.I(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "mp.I(" + 0 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 

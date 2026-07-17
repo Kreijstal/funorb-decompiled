@@ -32,22 +32,22 @@ abstract class uw {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
+        RuntimeException stackIn_74_0 = null;
+        StringBuilder stackIn_74_1 = null;
+        RuntimeException stackIn_75_0 = null;
+        StringBuilder stackIn_75_1 = null;
         RuntimeException stackIn_76_0 = null;
         StringBuilder stackIn_76_1 = null;
-        RuntimeException stackIn_77_0 = null;
-        StringBuilder stackIn_77_1 = null;
-        RuntimeException stackIn_78_0 = null;
-        StringBuilder stackIn_78_1 = null;
-        String stackIn_78_2 = null;
+        String stackIn_76_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_73_0 = null;
+        StringBuilder stackOut_73_1 = null;
         RuntimeException stackOut_75_0 = null;
         StringBuilder stackOut_75_1 = null;
-        RuntimeException stackOut_77_0 = null;
-        StringBuilder stackOut_77_1 = null;
-        String stackOut_77_2 = null;
-        RuntimeException stackOut_76_0 = null;
-        StringBuilder stackOut_76_1 = null;
-        String stackOut_76_2 = null;
+        String stackOut_75_2 = null;
+        RuntimeException stackOut_74_0 = null;
+        StringBuilder stackOut_74_1 = null;
+        String stackOut_74_2 = null;
         var19 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
@@ -87,23 +87,15 @@ abstract class uw {
                     }
                   }
                   L4: {
-                    if (param6 == 1955582416) {
-                      break L4;
-                    } else {
-                      field_a = null;
-                      break L4;
-                    }
-                  }
-                  L5: {
                     var14 = param3 - param2;
                     if (~param8 == ~param2) {
-                      L6: {
+                      L5: {
                         if (~param2 == ~param3) {
                           var12 = 0;
                           var9_int = param7 << 16;
                           var10 = param5 << 16;
                           var11 = 0;
-                          break L6;
+                          break L5;
                         } else {
                           var15 = param3 + -param8;
                           if (param7 >= param5) {
@@ -111,28 +103,28 @@ abstract class uw {
                             var11 = (param1 - param5 << 16) / var15;
                             var10 = param7 << 16;
                             var12 = (param1 + -param7 << 16) / var14;
-                            break L6;
+                            break L5;
                           } else {
                             var9_int = param7 << 16;
                             var10 = param5 << 16;
                             var11 = (param1 - param7 << 16) / var14;
                             var12 = (-param5 + param1 << 16) / var15;
-                            break L6;
+                            break L5;
                           }
                         }
                       }
                       var13 = 0;
                       if (0 <= param2) {
-                        break L5;
+                        break L4;
                       } else {
                         param2 = Math.min(-param2, param8 - param2);
                         var9_int = var9_int + param2 * var11;
                         var10 = var10 + param2 * var12;
                         param2 = 0;
-                        break L5;
+                        break L4;
                       }
                     } else {
-                      L7: {
+                      L6: {
                         var10 = param7 << 16;
                         var9_int = param7 << 16;
                         var15 = param8 - param2;
@@ -140,72 +132,72 @@ abstract class uw {
                         var11 = (-param7 + param5 << 16) / var15;
                         if (var11 < var12) {
                           var13 = 0;
-                          break L7;
+                          break L6;
                         } else {
                           var13 = 1;
                           var16 = var11;
                           var11 = var12;
                           var12 = var16;
-                          break L7;
+                          break L6;
                         }
                       }
-                      L8: {
-                        L9: {
+                      L7: {
+                        L8: {
                           if (param2 < 0) {
                             if (param8 >= 0) {
                               param2 = -param2;
                               var10 = var10 + var12 * param2;
                               var9_int = var9_int + param2 * var11;
                               param2 = 0;
-                              break L9;
+                              break L8;
                             } else {
                               param2 = param8 - param2;
                               var10 = var10 + param2 * var12;
                               var9_int = var9_int + param2 * var11;
                               param2 = param8;
-                              break L8;
+                              break L7;
                             }
                           } else {
-                            break L9;
+                            break L8;
                           }
                         }
                         var16 = nk.field_d[param2];
-                        L10: while (true) {
+                        L9: while (true) {
                           if (~param2 <= ~param8) {
-                            break L8;
+                            break L7;
                           } else {
-                            L11: {
+                            L10: {
                               var17 = var9_int >> 16;
                               if (nk.field_i <= var17) {
-                                break L11;
+                                break L10;
                               } else {
                                 var18 = (var10 >> 16) - (var9_int >> 16);
                                 if (0 == var18) {
                                   if (var17 < 0) {
-                                    break L11;
+                                    break L10;
                                   } else {
                                     if (~nk.field_i < ~var17) {
                                       wm.a(-1, var17 - -var16, param4, var18, param0);
-                                      break L11;
+                                      break L10;
                                     } else {
-                                      break L11;
+                                      break L10;
                                     }
                                   }
                                 } else {
-                                  L12: {
+                                  L11: {
                                     if (var18 + var17 < nk.field_i) {
-                                      break L12;
+                                      break L11;
                                     } else {
                                       var18 = nk.field_i + -var17 - 1;
-                                      break L12;
+                                      break L11;
                                     }
                                   }
                                   if (0 > var17) {
                                     wm.a(-1, var16, param4, var18 - -var17, param0);
-                                    break L11;
+                                    break L10;
                                   } else {
                                     wm.a(-1, var17 - -var16, param4, var18, param0);
-                                    break L11;
+                                    break L10;
                                   }
                                 }
                               }
@@ -217,80 +209,80 @@ abstract class uw {
                               var9_int = var9_int + var11;
                               var10 = var10 + var12;
                               var16 = var16 + lk.field_b;
-                              continue L10;
+                              continue L9;
                             }
                           }
                         }
                       }
                       var16 = -param8 + param3;
                       if (var16 != 0) {
-                        L13: {
+                        L12: {
                           if (var13 == 0) {
                             var9_int = param5 << 16;
-                            break L13;
+                            break L12;
                           } else {
                             var10 = param5 << 16;
-                            break L13;
+                            break L12;
                           }
                         }
                         var17 = param1 << 16;
                         var12 = (-var10 + var17) / var16;
                         var11 = (var17 - var9_int) / var16;
-                        break L5;
+                        break L4;
                       } else {
                         var11 = 0;
                         var12 = 0;
-                        break L5;
+                        break L4;
                       }
                     }
                   }
-                  L14: {
+                  L13: {
                     if (0 > param2) {
                       param2 = -param2;
                       var10 = var10 + param2 * var12;
                       var9_int = var9_int + param2 * var11;
                       param2 = 0;
-                      break L14;
+                      break L13;
                     } else {
-                      break L14;
+                      break L13;
                     }
                   }
                   var15 = nk.field_d[param2];
-                  L15: while (true) {
+                  L14: while (true) {
                     if (~param3 >= ~param2) {
                       break L0;
                     } else {
-                      L16: {
+                      L15: {
                         var16 = var9_int >> 16;
                         if (~var16 <= ~nk.field_i) {
-                          break L16;
+                          break L15;
                         } else {
                           var17 = (var10 >> 16) - (var9_int >> 16);
                           if (var17 != 0) {
-                            L17: {
+                            L16: {
                               if (nk.field_i > var17 + var16) {
-                                break L17;
+                                break L16;
                               } else {
                                 var17 = -1 + (nk.field_i - var16);
-                                break L17;
+                                break L16;
                               }
                             }
                             if (0 <= var16) {
-                              wm.a(param6 ^ -1955582417, var15 + var16, param4, var17, param0);
-                              break L16;
+                              wm.a(-1, var15 + var16, param4, var17, param0);
+                              break L15;
                             } else {
                               wm.a(-1, var15, param4, var17 - -var16, param0);
-                              break L16;
+                              break L15;
                             }
                           } else {
                             if (0 > var16) {
-                              break L16;
+                              break L15;
                             } else {
                               if (nk.field_i <= var16) {
-                                break L16;
+                                break L15;
                               } else {
                                 wm.a(-1, var15 + var16, param4, var17, param0);
-                                break L16;
+                                break L15;
                               }
                             }
                           }
@@ -303,7 +295,7 @@ abstract class uw {
                         var10 = var10 + var12;
                         var15 = var15 + lk.field_b;
                         var9_int = var9_int + var11;
-                        continue L15;
+                        continue L14;
                       }
                     }
                   }
@@ -316,39 +308,39 @@ abstract class uw {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L18: {
+          L17: {
             var9 = decompiledCaughtException;
-            stackOut_75_0 = (RuntimeException) var9;
-            stackOut_75_1 = new StringBuilder().append("uw.D(");
-            stackIn_77_0 = stackOut_75_0;
-            stackIn_77_1 = stackOut_75_1;
-            stackIn_76_0 = stackOut_75_0;
-            stackIn_76_1 = stackOut_75_1;
+            stackOut_73_0 = (RuntimeException) var9;
+            stackOut_73_1 = new StringBuilder().append("uw.D(");
+            stackIn_75_0 = stackOut_73_0;
+            stackIn_75_1 = stackOut_73_1;
+            stackIn_74_0 = stackOut_73_0;
+            stackIn_74_1 = stackOut_73_1;
             if (param0 == null) {
-              stackOut_77_0 = (RuntimeException) (Object) stackIn_77_0;
-              stackOut_77_1 = (StringBuilder) (Object) stackIn_77_1;
-              stackOut_77_2 = "null";
-              stackIn_78_0 = stackOut_77_0;
-              stackIn_78_1 = stackOut_77_1;
-              stackIn_78_2 = stackOut_77_2;
-              break L18;
+              stackOut_75_0 = (RuntimeException) (Object) stackIn_75_0;
+              stackOut_75_1 = (StringBuilder) (Object) stackIn_75_1;
+              stackOut_75_2 = "null";
+              stackIn_76_0 = stackOut_75_0;
+              stackIn_76_1 = stackOut_75_1;
+              stackIn_76_2 = stackOut_75_2;
+              break L17;
             } else {
-              stackOut_76_0 = (RuntimeException) (Object) stackIn_76_0;
-              stackOut_76_1 = (StringBuilder) (Object) stackIn_76_1;
-              stackOut_76_2 = "{...}";
-              stackIn_78_0 = stackOut_76_0;
-              stackIn_78_1 = stackOut_76_1;
-              stackIn_78_2 = stackOut_76_2;
-              break L18;
+              stackOut_74_0 = (RuntimeException) (Object) stackIn_74_0;
+              stackOut_74_1 = (StringBuilder) (Object) stackIn_74_1;
+              stackOut_74_2 = "{...}";
+              stackIn_76_0 = stackOut_74_0;
+              stackIn_76_1 = stackOut_74_1;
+              stackIn_76_2 = stackOut_74_2;
+              break L17;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_78_0, stackIn_78_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
+          throw qo.a((Throwable) (Object) stackIn_76_0, stackIn_76_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + 1955582416 + 44 + param7 + 44 + param8 + 41);
         }
     }
 
     abstract int a(int param0, long param1);
 
-    public static void c(byte param0) {
+    public static void c() {
         field_c = null;
         field_a = null;
         field_b = null;

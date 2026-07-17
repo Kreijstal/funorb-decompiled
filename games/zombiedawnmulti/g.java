@@ -406,7 +406,8 @@ final class g {
                       break L2;
                     } else {
                       var1_ref.a(true);
-                      qc.a(var1_ref, var2, 0);
+                      int discarded$2 = 0;
+                      qc.a(var1_ref, var2);
                       break L2;
                     }
                   }

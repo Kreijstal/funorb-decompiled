@@ -91,7 +91,8 @@ final class kb extends vq {
     }
 
     kb(sp param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, (ir) (Object) pe.a((byte) -63));
+        super(param1, (ir) (Object) pe.a());
+        int discarded$0 = -63;
         try {
             ((kb) this).field_B = param0;
             ((kb) this).field_A = param1;
@@ -247,33 +248,41 @@ final class kb extends vq {
               if (((kb) this).field_F != null) {
                 if (((kb) this).field_F.field_r >= var11) {
                   if (((kb) this).field_F.field_n >= var12) {
-                    cm.a(((kb) this).field_F, -14492);
+                    int discarded$24 = -14492;
+                    cm.a(((kb) this).field_F);
                     vp.a();
                     var27.a(112, 144, var27.field_v << 4, var27.field_q << 4, -((kb) this).field_E << 10, 4096);
-                    sl.c(2765);
+                    int discarded$25 = 2765;
+                    sl.c();
                     ((kb) this).field_F.d(var9 - (var27.field_v >> 1), -var27.field_q + var10, 256);
                     return;
                   } else {
                     ((kb) this).field_F = new ll(var11, var12);
-                    cm.a(((kb) this).field_F, -14492);
+                    int discarded$26 = -14492;
+                    cm.a(((kb) this).field_F);
                     var27.a(112, 144, var27.field_v << 4, var27.field_q << 4, -((kb) this).field_E << 10, 4096);
-                    sl.c(2765);
+                    int discarded$27 = 2765;
+                    sl.c();
                     ((kb) this).field_F.d(var9 - (var27.field_v >> 1), -var27.field_q + var10, 256);
                     return;
                   }
                 } else {
                   ((kb) this).field_F = new ll(var11, var12);
-                  cm.a(((kb) this).field_F, -14492);
+                  int discarded$28 = -14492;
+                  cm.a(((kb) this).field_F);
                   var27.a(112, 144, var27.field_v << 4, var27.field_q << 4, -((kb) this).field_E << 10, 4096);
-                  sl.c(2765);
+                  int discarded$29 = 2765;
+                  sl.c();
                   ((kb) this).field_F.d(var9 - (var27.field_v >> 1), -var27.field_q + var10, 256);
                   return;
                 }
               } else {
                 ((kb) this).field_F = new ll(var11, var12);
-                cm.a(((kb) this).field_F, -14492);
+                int discarded$30 = -14492;
+                cm.a(((kb) this).field_F);
                 var27.a(112, 144, var27.field_v << 4, var27.field_q << 4, -((kb) this).field_E << 10, 4096);
-                sl.c(2765);
+                int discarded$31 = 2765;
+                sl.c();
                 ((kb) this).field_F.d(var9 - (var27.field_v >> 1), -var27.field_q + var10, 256);
                 return;
               }
@@ -317,32 +326,40 @@ final class kb extends vq {
                 if (((kb) this).field_F.field_r >= var11) {
                   if (((kb) this).field_F.field_n < var12) {
                     ((kb) this).field_F = new ll(var11, var12);
-                    cm.a(((kb) this).field_F, -14492);
+                    int discarded$32 = -14492;
+                    cm.a(((kb) this).field_F);
                     var23.a(112, 144, var23.field_v << 4, var23.field_q << 4, -((kb) this).field_E << 10, 4096);
-                    sl.c(2765);
+                    int discarded$33 = 2765;
+                    sl.c();
                     ((kb) this).field_F.d(var9 - (var23.field_v >> 1), -var23.field_q + var10, 256);
                     return;
                   } else {
-                    cm.a(((kb) this).field_F, -14492);
+                    int discarded$34 = -14492;
+                    cm.a(((kb) this).field_F);
                     vp.a();
                     var23.a(112, 144, var23.field_v << 4, var23.field_q << 4, -((kb) this).field_E << 10, 4096);
-                    sl.c(2765);
+                    int discarded$35 = 2765;
+                    sl.c();
                     ((kb) this).field_F.d(var9 - (var23.field_v >> 1), -var23.field_q + var10, 256);
                     return;
                   }
                 } else {
                   ((kb) this).field_F = new ll(var11, var12);
-                  cm.a(((kb) this).field_F, -14492);
+                  int discarded$36 = -14492;
+                  cm.a(((kb) this).field_F);
                   var23.a(112, 144, var23.field_v << 4, var23.field_q << 4, -((kb) this).field_E << 10, 4096);
-                  sl.c(2765);
+                  int discarded$37 = 2765;
+                  sl.c();
                   ((kb) this).field_F.d(var9 - (var23.field_v >> 1), -var23.field_q + var10, 256);
                   return;
                 }
               } else {
                 ((kb) this).field_F = new ll(var11, var12);
-                cm.a(((kb) this).field_F, -14492);
+                int discarded$38 = -14492;
+                cm.a(((kb) this).field_F);
                 var23.a(112, 144, var23.field_v << 4, var23.field_q << 4, -((kb) this).field_E << 10, 4096);
-                sl.c(2765);
+                int discarded$39 = 2765;
+                sl.c();
                 ((kb) this).field_F.d(var9 - (var23.field_v >> 1), -var23.field_q + var10, 256);
                 return;
               }
@@ -397,32 +414,40 @@ final class kb extends vq {
               if (((kb) this).field_F.field_r >= var11) {
                 if (((kb) this).field_F.field_n < var12) {
                   ((kb) this).field_F = new ll(var11, var12);
-                  cm.a(((kb) this).field_F, -14492);
+                  int discarded$40 = -14492;
+                  cm.a(((kb) this).field_F);
                   var19.a(112, 144, var19.field_v << 4, var19.field_q << 4, -((kb) this).field_E << 10, 4096);
-                  sl.c(2765);
+                  int discarded$41 = 2765;
+                  sl.c();
                   ((kb) this).field_F.d(var9 - (var19.field_v >> 1), -var19.field_q + var10, 256);
                   return;
                 } else {
-                  cm.a(((kb) this).field_F, -14492);
+                  int discarded$42 = -14492;
+                  cm.a(((kb) this).field_F);
                   vp.a();
                   var19.a(112, 144, var19.field_v << 4, var19.field_q << 4, -((kb) this).field_E << 10, 4096);
-                  sl.c(2765);
+                  int discarded$43 = 2765;
+                  sl.c();
                   ((kb) this).field_F.d(var9 - (var19.field_v >> 1), -var19.field_q + var10, 256);
                   return;
                 }
               } else {
                 ((kb) this).field_F = new ll(var11, var12);
-                cm.a(((kb) this).field_F, -14492);
+                int discarded$44 = -14492;
+                cm.a(((kb) this).field_F);
                 var19.a(112, 144, var19.field_v << 4, var19.field_q << 4, -((kb) this).field_E << 10, 4096);
-                sl.c(2765);
+                int discarded$45 = 2765;
+                sl.c();
                 ((kb) this).field_F.d(var9 - (var19.field_v >> 1), -var19.field_q + var10, 256);
                 return;
               }
             } else {
               ((kb) this).field_F = new ll(var11, var12);
-              cm.a(((kb) this).field_F, -14492);
+              int discarded$46 = -14492;
+              cm.a(((kb) this).field_F);
               var19.a(112, 144, var19.field_v << 4, var19.field_q << 4, -((kb) this).field_E << 10, 4096);
-              sl.c(2765);
+              int discarded$47 = 2765;
+              sl.c();
               ((kb) this).field_F.d(var9 - (var19.field_v >> 1), -var19.field_q + var10, 256);
               return;
             }

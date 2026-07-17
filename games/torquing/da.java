@@ -76,7 +76,7 @@ final class da {
         return ((da) this).field_c;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_b = null;
         field_d = null;

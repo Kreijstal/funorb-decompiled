@@ -65,14 +65,14 @@ abstract class ib implements dg {
         pk var3 = null;
         try {
             var3 = fj.field_q;
-            var3.a(param0, (byte) -82);
-            var3.d((byte) 124, param1);
+            var3.a(3, (byte) -82);
+            var3.d((byte) 124, 5);
             var3.d((byte) -66, 0);
             var3.e(param2.field_i, 28695);
             var3.d((byte) -84, param2.field_f);
             var3.d((byte) 125, param2.field_l);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "ib.DA(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "ib.DA(" + 3 + 44 + 5 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -102,8 +102,8 @@ abstract class ib implements dg {
     }
 
     final static void d(int param0) {
-        Object var2 = null;
-        f.b("", (String) null, 7697781);
+        int discarded$5 = 7697781;
+        f.b("", (String) null);
         if (param0 != 24107) {
             field_a = false;
         }

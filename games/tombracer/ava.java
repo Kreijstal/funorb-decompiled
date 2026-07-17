@@ -17,7 +17,7 @@ final class ava {
         return new ava(((ava) this).field_g, param3, param1, param2, ((ava) this).field_e);
     }
 
-    final static void a(iv param0, int param1, int param2, boolean param3, int param4) {
+    final static void a(iv param0, int param1, int param2, boolean param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -418,9 +418,9 @@ final class ava {
                   var12.field_Db.field_ib = var23_int;
                   var12.field_Nb.field_ib = var23_int;
                   var12.field_Nb.field_gb = var24_int;
-                  jea fieldTemp$1 = var12.field_Nb;
+                  jea fieldTemp$4 = var12.field_Nb;
                   var12.field_Nb.field_N = var24_int;
-                  fieldTemp$1.field_ab = var24_int;
+                  fieldTemp$4.field_ab = var24_int;
                   var12.field_Db.field_gb = var24_int;
                   var12.field_Db.field_N = var24_int;
                   var12.field_Db.field_ab = var24_int;
@@ -457,7 +457,8 @@ final class ava {
                   if (null == uu.field_a) {
                     break L21;
                   } else {
-                    if (!mka.b(8192)) {
+                    int discarded$5 = 8192;
+                    if (!mka.b()) {
                       break L21;
                     } else {
                       if (var12.field_yb == rb.field_r) {
@@ -755,7 +756,8 @@ final class ava {
                             if (tn.field_n != param0) {
                               break L39;
                             } else {
-                              if (mka.b(8192)) {
+                              int discarded$6 = 8192;
+                              if (mka.b()) {
                                 if (var26 == 0) {
                                   var24 = var34 + "<br>" + gl.a((byte) 114, gd.field_I, new String[1]);
                                   break L38;
@@ -780,7 +782,8 @@ final class ava {
                           if (tn.field_n != param0) {
                             break L40;
                           } else {
-                            if (mka.b(8192)) {
+                            int discarded$7 = 8192;
+                            if (mka.b()) {
                               break L40;
                             } else {
                               var27 = uu.field_a.field_tb;
@@ -920,7 +923,7 @@ final class ava {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
     }
 

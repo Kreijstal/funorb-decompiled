@@ -202,16 +202,13 @@ final class c {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
         field_c = null;
         field_d = null;
     }
 
     final static int a(int param0, int param1, int param2) {
-        if (param1 != 1067751487) {
-            field_b = null;
-        }
         int var3 = param2 >>> 31;
         return -var3 + (param2 + var3) / param0;
     }
@@ -392,7 +389,7 @@ final class c {
         int var3 = 70 % ((param0 - -35) / 61);
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void a(boolean param0) {
         t.field_b.a(0, 0, 0);
     }
 
@@ -404,10 +401,11 @@ final class c {
             }
             oa.field_k.a(param2, param0, param3, false);
             qg.b();
-            int var4_int = -58 / ((-64 - param1) / 51);
-            c.a(true, false);
+            int var4_int = 19;
+            int discarded$0 = 0;
+            c.a(true);
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "c.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "c.A(" + (param0 != null ? "{...}" : "null") + 44 + 127 + 44 + param2 + 44 + param3 + 41);
         }
     }
 

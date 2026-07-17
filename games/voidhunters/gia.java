@@ -217,7 +217,7 @@ final class gia extends le {
         }
     }
 
-    final static int d(int param0) {
+    final static int d() {
         return rpa.field_b;
     }
 

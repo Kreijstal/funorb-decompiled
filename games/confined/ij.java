@@ -16,7 +16,7 @@ final class ij extends rk {
     static qi field_q;
     static long field_u;
 
-    public static void b(int param0) {
+    public static void b() {
         field_q = null;
         field_r = null;
         field_o = null;
@@ -60,7 +60,7 @@ final class ij extends rk {
             var3_int = ga.a((byte) -89, param1, var10);
             var4 = new String[1 + var3_int];
             var5 = 0;
-            var6 = param0;
+            var6 = 0;
             var7 = 0;
             L1: while (true) {
               if (var3_int <= var7) {
@@ -91,7 +91,7 @@ final class ij extends rk {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var3;
-            stackOut_9_1 = new StringBuilder().append("ij.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_9_1 = new StringBuilder().append("ij.B(").append(0).append(44).append(param1).append(44);
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -119,13 +119,10 @@ final class ij extends rk {
         return stackIn_8_0;
     }
 
-    final static gd a(int param0, int param1) {
-        if (param0 >= -34) {
-            return null;
-        }
+    final static gd a() {
         gd var2 = new gd();
         ra.field_d.a((rk) (Object) var2, (byte) 109);
-        fm.a(115, param1);
+        fm.a(115, 4);
         return var2;
     }
 

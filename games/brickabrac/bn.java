@@ -590,7 +590,7 @@ class bn extends vi {
         return stackIn_3_0;
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_p = null;
         field_r = null;
         field_q = null;

@@ -7,7 +7,7 @@ final class kb extends tm {
     static String field_D;
     static eg[] field_B;
 
-    public static void g(int param0) {
+    public static void g() {
         field_D = null;
         field_B = null;
         field_E = null;
@@ -137,7 +137,7 @@ final class kb extends tm {
         return var2;
     }
 
-    final static void h(int param0) {
+    final static void h() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -155,48 +155,44 @@ final class kb extends tm {
               return;
             } else {
               var1_int = cq.field_g;
-              if (param0 < -49) {
-                var2 = 0;
-                L1: while (true) {
-                  if (2 <= var2) {
-                    break L0;
-                  } else {
-                    L2: {
-                      var3 = 102 * var2 + 20;
-                      on.a(var1_int, var3, 160, 92, 12, 65793, 128);
-                      un.field_d.d(ao.field_f[var2].toLowerCase(), 80 + var1_int, var3 - -20, 16777215, -1);
-                      var4 = ae.field_C[var2];
-                      var4[0][1].b(14 + var1_int, 49 + var3, 20, 20);
-                      var4[1][1].b(var1_int + 52, var3 + 49, 20, 20);
-                      var4[2][1].b(19 + (14 + var1_int), 1 + (var3 + 29), 20, 20);
-                      var4[3][1].b(20 + (var1_int - -13), 49 + var3, 20, 20);
-                      pb.field_C.d(tj.field_g, 14 + (var1_int - -20) - -10, 20 + var3 + 65, 16777215, -1);
-                      if (ks.field_e > 1) {
-                        pb.field_C.d(nr.field_k, 115 + var1_int, 20 + (var3 + 65), 16777215, -1);
-                        var5 = kd.field_y[var2][1];
-                        var6 = 180 * var5.field_o >> 8;
-                        var7 = 180 * var5.field_v >> 8;
-                        var5.b(-(var6 >> 1) + (160 + cq.field_g - 46), var3 + 50, var6, var7);
-                        var2++;
-                        break L2;
-                      } else {
-                        var2++;
-                        break L2;
-                      }
+              var2 = 0;
+              L1: while (true) {
+                if (2 <= var2) {
+                  break L0;
+                } else {
+                  L2: {
+                    var3 = 102 * var2 + 20;
+                    on.a(var1_int, var3, 160, 92, 12, 65793, 128);
+                    un.field_d.d(ao.field_f[var2].toLowerCase(), 80 + var1_int, var3 - -20, 16777215, -1);
+                    var4 = ae.field_C[var2];
+                    var4[0][1].b(14 + var1_int, 49 + var3, 20, 20);
+                    var4[1][1].b(var1_int + 52, var3 + 49, 20, 20);
+                    var4[2][1].b(19 + (14 + var1_int), 1 + (var3 + 29), 20, 20);
+                    var4[3][1].b(20 + (var1_int - -13), 49 + var3, 20, 20);
+                    pb.field_C.d(tj.field_g, 14 + (var1_int - -20) - -10, 20 + var3 + 65, 16777215, -1);
+                    if (ks.field_e > 1) {
+                      pb.field_C.d(nr.field_k, 115 + var1_int, 20 + (var3 + 65), 16777215, -1);
+                      var5 = kd.field_y[var2][1];
+                      var6 = 180 * var5.field_o >> 8;
+                      var7 = 180 * var5.field_v >> 8;
+                      var5.b(-(var6 >> 1) + (160 + cq.field_g - 46), var3 + 50, var6, var7);
+                      var2++;
+                      break L2;
+                    } else {
+                      var2++;
+                      break L2;
                     }
-                    var2++;
-                    continue L1;
                   }
+                  var2++;
+                  continue L1;
                 }
-              } else {
-                return;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var1, "kb.A(" + param0 + 41);
+          throw nb.a((Throwable) (Object) var1, "kb.A(" + -92 + 41);
         }
     }
 

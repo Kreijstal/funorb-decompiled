@@ -10,19 +10,16 @@ final class uj {
     final static void a(int param0, int param1, byte param2, de param3, int param4) {
         try {
             param3.i(12, 55);
-            if (param2 != -114) {
-                field_c = null;
-            }
             param3.a(17, (byte) 105);
             param3.a(param4, (byte) 105);
             param3.a(param0, (byte) 105);
-            param3.i(param1, param2 + 218);
+            param3.i(param1, 104);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "uj.B(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "uj.B(" + param0 + 44 + param1 + 44 + -114 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         field_c = null;

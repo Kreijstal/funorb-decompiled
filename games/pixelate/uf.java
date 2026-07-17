@@ -16,14 +16,14 @@ final class uf extends IOException {
         super(param0);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         field_e = null;
         field_f = null;
     }
 
-    final static void a(int param0, int param1, int param2, tf param3, int param4, int param5, int param6, int param7, byte param8) {
+    final static void a(int param0, int param1, int param2, tf param3, int param4, int param5, int param6, int param7) {
         int var9_int = 0;
         RuntimeException var9 = null;
         int var10 = 0;
@@ -46,26 +46,26 @@ final class uf extends IOException {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var9_int = -param5 + (param3.field_D + param4) + param6;
-            var10 = param2 + param6 + param4 + param3.field_D;
+            var9_int = param3.field_D + param4 + param6;
+            var10 = 30 + param6 + param4 + param3.field_D;
             var11 = (param3.field_E >> 1) + param3.field_y + param7;
-            t.d(var9_int, 0, var10, param0 + var11);
-            param3.b(param4 - 1, -1 + param7, param1);
-            param3.b(param4 + -1, 1 + param7, param1);
+            t.d(var9_int, 0, var10, var11);
+            param3.b(param4 - 1, -1 + param7, 80);
+            param3.b(param4 + -1, 1 + param7, 80);
             t.b(wi.field_f);
-            t.d(1 + var9_int, 0, var10 + 1, var11 - -param0);
-            param3.b(1 + param4, param7 - 1, param1);
-            param3.b(1 + param4, param7 + 1, param1);
+            t.d(1 + var9_int, 0, var10 + 1, var11);
+            param3.b(1 + param4, param7 - 1, 80);
+            param3.b(1 + param4, param7 + 1, 80);
             t.b(wi.field_f);
-            var10 = param3.field_D + (param3.field_F + param4 - param6 + -param5);
-            var9_int = -param2 + (param4 + param3.field_D) - -param3.field_F + -param6;
-            t.d(var9_int, -param0 + var11, var10, 480);
-            param3.b(param4 - 1, param7 + -1, param1);
-            param3.b(-1 + param4, 1 + param7, param1);
+            var10 = param3.field_D + (param3.field_F + param4 - param6);
+            var9_int = -30 + (param4 + param3.field_D) - -param3.field_F + -param6;
+            t.d(var9_int, var11, var10, 480);
+            param3.b(param4 - 1, param7 + -1, 80);
+            param3.b(-1 + param4, 1 + param7, 80);
             t.b(wi.field_f);
-            t.d(1 + var9_int, -param0 + var11, 1 + var10, 480);
-            param3.b(1 + param4, -1 + param7, param1);
-            param3.b(param4 - -1, 1 + param7, param1);
+            t.d(1 + var9_int, var11, 1 + var10, 480);
+            param3.b(1 + param4, -1 + param7, 80);
+            param3.b(param4 - -1, 1 + param7, 80);
             t.b(wi.field_f);
             break L0;
           }
@@ -74,7 +74,7 @@ final class uf extends IOException {
           L1: {
             var9 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var9;
-            stackOut_2_1 = new StringBuilder().append("uf.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_2_1 = new StringBuilder().append("uf.B(").append(0).append(44).append(80).append(44).append(30).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -97,7 +97,7 @@ final class uf extends IOException {
               break L1;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + -113 + 41);
+          throw aa.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param4 + 44 + 0 + 44 + param6 + 44 + param7 + 44 + -113 + 41);
         }
     }
 

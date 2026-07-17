@@ -149,7 +149,7 @@ final class vha extends bca {
         super(param0, param1);
     }
 
-    final static pp b(lu param0, int param1) {
+    final static pp b(lu param0) {
         nq var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

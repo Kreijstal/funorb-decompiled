@@ -10,16 +10,13 @@ final class ua {
 
     final static void a(j param0, int param1, int param2, int param3, int param4, int param5, ak param6) {
         try {
-            if (param3 >= -53) {
-                field_e = null;
-            }
-            km.a(param6, param0, 3 + (param4 + (param5 - 75) / 2), (param2 - 75) / 2 + param1, true, 4, 3);
+            km.a(param6, param0, 153, 529, true, 4, 3);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "ua.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "ua.C(" + (param0 != null ? "{...}" : "null") + 44 + 524 + 44 + 85 + 44 + -68 + 44 + 147 + 44 + 81 + 44 + (param6 != null ? "{...}" : "null") + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
         field_a = null;

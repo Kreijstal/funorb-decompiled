@@ -32,7 +32,7 @@ final class eb {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
         field_g = null;
     }
@@ -166,7 +166,7 @@ final class eb {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int a(int param0) {
         int var2 = 0;
         int var3 = 0;
         var3 = Geoblox.field_C;
@@ -192,58 +192,30 @@ final class eb {
                   }
                 }
               }
-              if (param1 == 28625) {
-                if (wg.field_i.field_b >= 4) {
-                  return 1;
-                } else {
-                  return -1;
-                }
+              if (wg.field_i.field_b >= 4) {
+                return 1;
               } else {
-                field_i = -67;
-                if (wg.field_i.field_b >= 4) {
-                  return 1;
-                } else {
-                  return -1;
-                }
+                return -1;
               }
             } else {
               if (param0 == 51) {
                 return 2;
               } else {
-                if (wg.field_i.field_b >= 2) {
-                  if (50 == param0) {
-                    return 5;
+                L1: {
+                  if (wg.field_i.field_b < 2) {
+                    break L1;
                   } else {
-                    if (param1 == 28625) {
-                      if (wg.field_i.field_b >= 4) {
-                        return 1;
-                      } else {
-                        return -1;
-                      }
+                    if (50 != param0) {
+                      break L1;
                     } else {
-                      field_i = -67;
-                      if (wg.field_i.field_b >= 4) {
-                        return 1;
-                      } else {
-                        return -1;
-                      }
+                      return 5;
                     }
                   }
+                }
+                if (wg.field_i.field_b >= 4) {
+                  return 1;
                 } else {
-                  if (param1 == 28625) {
-                    if (wg.field_i.field_b >= 4) {
-                      return 1;
-                    } else {
-                      return -1;
-                    }
-                  } else {
-                    field_i = -67;
-                    if (wg.field_i.field_b >= 4) {
-                      return 1;
-                    } else {
-                      return -1;
-                    }
-                  }
+                  return -1;
                 }
               }
             }
@@ -251,52 +223,35 @@ final class eb {
             wg.field_i.field_q = 1;
             wg.field_i.field_b = wg.field_i.field_b + 1;
             if (wg.field_i.field_b < 2) {
-              L1: {
+              L2: {
                 if (wg.field_i.field_b < 2) {
-                  break L1;
+                  break L2;
                 } else {
                   if (50 != param0) {
-                    break L1;
+                    break L2;
                   } else {
                     return 5;
                   }
                 }
               }
-              if (param1 == 28625) {
-                if (wg.field_i.field_b >= 4) {
-                  return 1;
-                } else {
-                  return -1;
-                }
+              if (wg.field_i.field_b >= 4) {
+                return 1;
               } else {
-                field_i = -67;
-                if (wg.field_i.field_b >= 4) {
-                  return 1;
-                } else {
-                  return -1;
-                }
+                return -1;
               }
             } else {
               if (param0 == 51) {
                 return 2;
               } else {
-                L2: {
+                L3: {
                   if (wg.field_i.field_b < 2) {
-                    break L2;
+                    break L3;
                   } else {
                     if (50 != param0) {
-                      break L2;
+                      break L3;
                     } else {
                       return 5;
                     }
-                  }
-                }
-                L3: {
-                  if (param1 == 28625) {
-                    break L3;
-                  } else {
-                    field_i = -67;
-                    break L3;
                   }
                 }
                 if (wg.field_i.field_b >= 4) {
@@ -316,32 +271,15 @@ final class eb {
             } else {
               if (wg.field_i.field_b >= 2) {
                 if (50 != param0) {
-                  if (param1 == 28625) {
-                    if (wg.field_i.field_b >= 4) {
-                      return 1;
-                    } else {
-                      return -1;
-                    }
+                  if (wg.field_i.field_b >= 4) {
+                    return 1;
                   } else {
-                    field_i = -67;
-                    if (wg.field_i.field_b >= 4) {
-                      return 1;
-                    } else {
-                      return -1;
-                    }
+                    return -1;
                   }
                 } else {
                   return 5;
                 }
               } else {
-                L4: {
-                  if (param1 == 28625) {
-                    break L4;
-                  } else {
-                    field_i = -67;
-                    break L4;
-                  }
-                }
                 if (wg.field_i.field_b >= 4) {
                   return 1;
                 } else {
@@ -350,23 +288,15 @@ final class eb {
               }
             }
           } else {
-            L5: {
+            L4: {
               if (wg.field_i.field_b < 2) {
-                break L5;
+                break L4;
               } else {
                 if (50 != param0) {
-                  break L5;
+                  break L4;
                 } else {
                   return 5;
                 }
-              }
-            }
-            L6: {
-              if (param1 == 28625) {
-                break L6;
-              } else {
-                field_i = -67;
-                break L6;
               }
             }
             if (wg.field_i.field_b >= 4) {

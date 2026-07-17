@@ -185,13 +185,11 @@ final class fl {
         int var3 = 0;
         int var4 = 0;
         try {
-            if (param0 != -2389) {
-                field_a = true;
-            }
             var2 = new qb(param1.a("", "final_frame.jpg", -1), (java.awt.Component) (Object) on.field_c);
             var3 = var2.field_q;
             var4 = var2.field_y;
-            ec.a(65280);
+            int discarded$0 = 65280;
+            ec.a();
             mi.field_E = new qb(var3, 3 * var4 / 4);
             mi.field_E.a();
             var2.h(0, 0);
@@ -201,7 +199,7 @@ final class fl {
             gm.field_l.field_o = mi.field_E.field_y;
             oo.c(-15405);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "fl.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "fl.B(" + -2389 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

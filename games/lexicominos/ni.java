@@ -90,9 +90,10 @@ final class ni {
         if (param0) {
           L1: {
             var2 = null;
-            boolean discarded$6 = ni.a((byte) -127, (String) null, (String) null);
+            boolean discarded$10 = ni.a((byte) -127, (String) null, (String) null);
             if (var1.length() == 0) {
-              var1 = a.a(-1);
+              int discarded$11 = -1;
+              var1 = a.a();
               break L1;
             } else {
               break L1;
@@ -110,7 +111,8 @@ final class ni {
         } else {
           L3: {
             if (var1.length() == 0) {
-              var1 = a.a(-1);
+              int discarded$12 = -1;
+              var1 = a.a();
               break L3;
             } else {
               break L3;
@@ -170,12 +172,13 @@ final class ni {
           L0: {
             L1: {
               param2 = ne.a('_', "", param2, (byte) -127);
-              var3 = ci.a(param2, (byte) -79);
+              int discarded$4 = -79;
+              var3 = ci.a(param2);
               if (param0 == 120) {
                 break L1;
               } else {
                 var4 = null;
-                String discarded$2 = ni.a((byte) -19, (byte[]) null);
+                String discarded$5 = ni.a((byte) -19, (byte[]) null);
                 break L1;
               }
             }
@@ -257,7 +260,7 @@ final class ni {
         return stackIn_7_0 != 0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         field_a = null;

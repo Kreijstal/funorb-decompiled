@@ -8,7 +8,7 @@ final class mf {
     static tg field_b;
     static String field_c;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         field_d = null;
@@ -44,16 +44,16 @@ final class mf {
         try {
           try {
             L0: {
-              var3_int = param2.f(param1 ^ -2706);
-              if (param0 < var3_int) {
-                var3_int = param0;
+              var3_int = param2.f(102);
+              if (var3_int > 80) {
+                var3_int = 80;
                 break L0;
               } else {
                 break L0;
               }
             }
             var4 = new byte[var3_int];
-            param2.field_h = param2.field_h + pa.field_d.a(var4, param2.field_h, 0, param2.field_i, param1 ^ param1, var3_int);
+            param2.field_h = param2.field_h + pa.field_d.a(var4, param2.field_h, 0, param2.field_i, 0, var3_int);
             var5 = lh.a(0, -3789, var3_int, var4);
             stackOut_3_0 = (String) var5;
             stackIn_4_0 = stackOut_3_0;
@@ -70,7 +70,7 @@ final class mf {
           L1: {
             var3_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var3_ref;
-            stackOut_7_1 = new StringBuilder().append("mf.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_7_1 = new StringBuilder().append("mf.A(").append(80).append(44).append(-2808).append(44);
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -98,9 +98,6 @@ final class mf {
     }
 
     final static int a(int param0, int param1, int param2) {
-        if (param0 != 0) {
-            return 12;
-        }
         int var3 = param2 >>> 31;
         return -var3 + (param2 - -var3) / param1;
     }

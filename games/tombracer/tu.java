@@ -12,87 +12,7 @@ class tu extends eha {
     static String field_d;
 
     private final boolean a(la param0, byte param1, int param2) {
-        RuntimeException var4 = null;
-        int stackIn_6_0 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        try {
-          L0: {
-            L1: {
-              if (param1 > 47) {
-                break L1;
-              } else {
-                ((tu) this).field_c = null;
-                break L1;
-              }
-            }
-            L2: {
-              L3: {
-                if (((tu) this).field_f.b(param2, 0)) {
-                  break L3;
-                } else {
-                  if (!kq.a(-44, param0.q((byte) -82)).field_d) {
-                    break L3;
-                  } else {
-                    stackOut_4_0 = 1;
-                    stackIn_6_0 = stackOut_4_0;
-                    break L2;
-                  }
-                }
-              }
-              stackOut_5_0 = 0;
-              stackIn_6_0 = stackOut_5_0;
-              break L2;
-            }
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var4 = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) var4;
-            stackOut_7_1 = new StringBuilder().append("tu.Q(");
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
-            if (param0 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
-              break L4;
-            } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
-              break L4;
-            }
-          }
-          throw tba.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 44 + param2 + 41);
-        }
-        return stackIn_6_0 != 0;
+        return !((tu) this).field_f.b(param2, 0) && kq.a(-44, param0.q((byte) -82)).field_d;
     }
 
     void a(int param0, hca param1, int param2, la param3, int param4, int param5) {
@@ -376,7 +296,7 @@ class tu extends eha {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_e = null;
         field_d = null;
     }
@@ -739,7 +659,8 @@ class tu extends eha {
                     if (this.a(param1, (byte) 74, var8)) {
                       break L3;
                     } else {
-                      var9 = ll.a(param1.q((byte) -82), 0);
+                      int discarded$2 = 0;
+                      var9 = ll.a(param1.q((byte) -82));
                       if (var9 < 0) {
                         break L3;
                       } else {
@@ -769,9 +690,9 @@ class tu extends eha {
                     iqa.field_c.a(0, var9_ref_jha);
                     var10 = param0.F(-7991);
                     if (var10 > 0) {
-                      jha dupTemp$1 = ab.a(-96, gl.a((byte) 82, bca.field_c, new String[1]));
-                      var12 = dupTemp$1;
-                      var9_ref_jha = dupTemp$1;
+                      jha dupTemp$3 = ab.a(-96, gl.a((byte) 82, bca.field_c, new String[1]));
+                      var12 = dupTemp$3;
+                      var9_ref_jha = dupTemp$3;
                       iqa.field_c.a(3, 0, var12);
                       break L6;
                     } else {

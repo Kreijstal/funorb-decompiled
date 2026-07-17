@@ -281,7 +281,7 @@ final class ih {
                     return stackIn_33_0;
                   } else {
                     if (99 == var9) {
-                      boolean discarded$1 = lq.b((byte) 63, ld.a(0));
+                      boolean discarded$2 = lq.b((byte) 63, ld.a(0));
                       bq.field_q = new Boolean(de.a((byte) 104, (ge) (Object) kn.field_e));
                       kn.field_e.field_v = 0;
                       break L8;
@@ -331,7 +331,8 @@ final class ih {
               if (tl.field_J != eh.field_l) {
                 break L12;
               } else {
-                if (wf.a((byte) 39)) {
+                int discarded$3 = 39;
+                if (wf.a()) {
                   L13: {
                     if (uq.field_c != 255) {
                       ke.field_g = kn.field_e.j(-122);
@@ -478,7 +479,7 @@ final class ih {
         return stackIn_65_0;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         hm var1 = new hm();
         var1.a(86, 0, 0, 65536, 64);
         var1.b(true);

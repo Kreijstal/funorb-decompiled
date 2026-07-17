@@ -15,7 +15,7 @@ final class gl {
         ((gl) this).field_a = param0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
     }

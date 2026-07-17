@@ -16,7 +16,7 @@ final class w extends ga implements uj, el {
     private rg field_V;
     private ul field_T;
 
-    private final void a(byte param0) {
+    private final void a() {
         L0: {
           L1: {
             if (hh.a(-13613)) {
@@ -85,7 +85,8 @@ final class w extends ga implements uj, el {
                     break L1;
                   }
                 } else {
-                  this.a((byte) -65);
+                  int discarded$3 = -65;
+                  this.a();
                   break L1;
                 }
               }
@@ -172,13 +173,14 @@ final class w extends ga implements uj, el {
               if (((w) this).field_T != param0) {
                 break L1;
               } else {
-                boolean discarded$2 = ((w) this).field_X.a((fj) this, 418);
+                boolean discarded$4 = ((w) this).field_X.a((fj) this, 418);
                 break L1;
               }
             }
             L2: {
               if (param0 == ((w) this).field_X) {
-                this.a((byte) -65);
+                int discarded$5 = -65;
+                this.a();
                 break L2;
               } else {
                 break L2;
@@ -682,7 +684,8 @@ final class w extends ga implements uj, el {
             }
             L13: {
               var8 = hd.field_a;
-              var9 = tm.a(ii.b(false), -118);
+              int discarded$3 = -118;
+              var9 = tm.a(ii.b(false));
               if (pi.field_T == var9) {
                 var8 = hn.field_p;
                 break L13;
@@ -696,13 +699,13 @@ final class w extends ga implements uj, el {
               }
             }
             L14: {
-              la dupTemp$2 = new la(10, ((w) this).field_m, ((w) this).field_F + -20, 25, (fj) (Object) ((w) this).field_T, false, 80, 3, var7, 16777215, var8);
-              var12 = dupTemp$2;
-              ((w) this).b((fj) (Object) dupTemp$2, 10);
+              la dupTemp$4 = new la(10, ((w) this).field_m, ((w) this).field_F + -20, 25, (fj) (Object) ((w) this).field_T, false, 80, 3, var7, 16777215, var8);
+              var12 = dupTemp$4;
+              ((w) this).b((fj) (Object) dupTemp$4, 10);
               ((w) this).field_m = ((w) this).field_m + (((fj) (Object) var12).field_z + 5);
-              la dupTemp$3 = new la(10, ((w) this).field_m, ((w) this).field_F + -20, 25, (fj) (Object) ((w) this).field_X, false, 80, 3, var7, 16777215, sc.field_b);
-              var13 = dupTemp$3;
-              ((w) this).b((fj) (Object) dupTemp$3, 10);
+              la dupTemp$5 = new la(10, ((w) this).field_m, ((w) this).field_F + -20, 25, (fj) (Object) ((w) this).field_X, false, 80, 3, var7, 16777215, sc.field_b);
+              var13 = dupTemp$5;
+              ((w) this).b((fj) (Object) dupTemp$5, 10);
               ((w) this).field_V.field_t = (uk) this;
               ((w) this).field_m = ((w) this).field_m + (((fj) (Object) var13).field_z + 5);
               if (null == ((w) this).field_P) {

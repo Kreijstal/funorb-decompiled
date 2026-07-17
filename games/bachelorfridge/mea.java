@@ -44,20 +44,20 @@ final class mea extends ana {
         }
     }
 
-    final static void e(byte param0) {
-        cq discarded$6 = ol.a(bi.field_i[1], true);
-        if (param0 < 86) {
-            field_v = null;
-        }
+    final static void e() {
+        int discarded$0 = 1;
+        cq discarded$1 = ol.a(bi.field_i[1]);
     }
 
     final static void e(int param0) {
         kk.e((byte) 113);
-        gha.b(16);
-        og.a(12);
+        int discarded$0 = 16;
+        gha.b();
+        int discarded$1 = 12;
+        og.a();
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_v = null;
     }
 

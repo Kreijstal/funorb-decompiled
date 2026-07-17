@@ -18,11 +18,11 @@ final class bd {
     final static void a(byte param0, boolean param1, int param2, int param3) {
         RuntimeException var4 = null;
         int var4_int = 0;
+        aa var4_ref = null;
         ak var5 = null;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
-        aa var9 = null;
         RuntimeException decompiledCaughtException = null;
         var7 = Pixelate.field_H ? 1 : 0;
         try {
@@ -56,7 +56,7 @@ final class bd {
                       td.field_b = null;
                       break L3;
                     } else {
-                      boolean discarded$1 = td.field_b.a(ui.field_i.field_gb, param1, (byte) 99, ui.field_i.field_tb);
+                      boolean discarded$3 = td.field_b.a(ui.field_i.field_gb, param1, (byte) 99, ui.field_i.field_tb);
                       break L3;
                     }
                   }
@@ -73,15 +73,17 @@ final class bd {
                       }
                     }
                     L6: {
-                      var9 = ah.a((byte) -110, fq.field_q, param2, v.field_c);
-                      if (var9 == null) {
+                      var4_ref = ah.a((byte) -110, fq.field_q, param2, v.field_c);
+                      if (var4_ref == null) {
                         break L6;
                       } else {
-                        fj.a(var9, (byte) 125);
+                        int discarded$4 = 125;
+                        fj.a(var4_ref);
                         break L6;
                       }
                     }
-                    var8 = pk.a((byte) 88);
+                    int discarded$5 = 88;
+                    var8 = pk.a();
                     if (var8 != null) {
                       up.field_o = var8;
                       break L0;
@@ -180,7 +182,7 @@ final class bd {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         lm var1 = null;
         int var2 = Pixelate.field_H ? 1 : 0;
         try {

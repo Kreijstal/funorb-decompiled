@@ -56,19 +56,10 @@ final class ch {
     }
 
     private final void a(int param0, int param1) {
-        int[] var3 = null;
-        int[] var4 = null;
-        var4 = new int[this.b(2667, param1)];
-        var3 = var4;
+        int[] var4 = new int[this.b(2667, param1)];
+        int[] var3 = var4;
         eg.a(((ch) this).field_f, 0, var4, 0, ((ch) this).field_f.length);
-        if (param0 != 25613) {
-          ((ch) this).field_f = null;
-          ((ch) this).field_f = var4;
-          return;
-        } else {
-          ((ch) this).field_f = var4;
-          return;
-        }
+        ((ch) this).field_f = var4;
     }
 
     private final int b(int param0, int param1) {
@@ -120,29 +111,13 @@ final class ch {
     }
 
     private final void a(byte param0, int param1, int param2) {
-        L0: {
-          if (((ch) this).field_e < param2) {
+        if (!(((ch) this).field_e >= param2)) {
             ((ch) this).field_e = param2;
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        L1: {
-          if (param2 >= ((ch) this).field_f.length) {
+        if (!(param2 < ((ch) this).field_f.length)) {
             this.a(25613, param2);
-            break L1;
-          } else {
-            break L1;
-          }
         }
         ((ch) this).field_f[param2] = param1;
-        if (param0 != -2) {
-          int discarded$2 = ((ch) this).d(-98, -14);
-          return;
-        } else {
-          return;
-        }
     }
 
     final void a(int param0, byte param1) {
@@ -152,7 +127,7 @@ final class ch {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
     }

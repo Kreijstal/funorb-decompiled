@@ -18,7 +18,7 @@ final class se extends nm {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_j = null;
         int var1 = 3;
         field_k = null;

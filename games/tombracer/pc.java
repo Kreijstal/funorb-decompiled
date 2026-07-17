@@ -55,7 +55,7 @@ final class pc {
         ((pc) this).field_d = param0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_g = null;
     }
 
@@ -149,19 +149,20 @@ final class pc {
           L0: while (true) {
             if (var4_int >= param0.length) {
               var8 = new StringBuilder("The method " + param2 + "(");
-              var5 = 33 % ((param1 - -53) / 54);
+              var5 = 0;
               var6 = 0;
               L1: while (true) {
                 if (var6 >= param3.length) {
-                  StringBuilder discarded$4 = var8.append(") is undefined.");
+                  StringBuilder discarded$5 = var8.append(") is undefined.");
                   throw new rv(var8.toString());
                 } else {
                   L2: {
                     if (param3[var6].field_a) {
-                      StringBuilder discarded$5 = var8.append(jd.a(param3[var6].field_d, 0).toString());
+                      int discarded$6 = 0;
+                      StringBuilder discarded$7 = var8.append(jd.a(param3[var6].field_d).toString());
                       break L2;
                     } else {
-                      StringBuilder discarded$6 = var8.append(rva.a(param3[var6].field_d.getClass(), (byte) -88));
+                      StringBuilder discarded$8 = var8.append(rva.a(param3[var6].field_d.getClass(), (byte) -88));
                       break L2;
                     }
                   }
@@ -169,7 +170,7 @@ final class pc {
                     if (-1 + param3.length <= var6) {
                       break L3;
                     } else {
-                      StringBuilder discarded$7 = var8.append(44);
+                      StringBuilder discarded$9 = var8.append(44);
                       break L3;
                     }
                   }
@@ -218,7 +219,7 @@ final class pc {
           }
           L5: {
             stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44).append(param1).append(44);
+            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44).append(19).append(44);
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;

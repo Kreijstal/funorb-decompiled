@@ -11,10 +11,7 @@ abstract class fe extends kd {
     static int field_F;
     boolean field_C;
 
-    public static void e(byte param0) {
-        if (param0 < 11) {
-            return;
-        }
+    public static void e() {
         field_D = null;
         field_A = null;
     }
@@ -29,7 +26,7 @@ abstract class fe extends kd {
 
     abstract byte[] d(byte param0);
 
-    final static void c(byte param0) {
+    final static void c() {
         RuntimeException var1 = null;
         cc var1_ref = null;
         hk var1_ref2 = null;

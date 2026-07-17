@@ -9,7 +9,7 @@ final class kp {
     private dd field_b;
     static String field_f;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_f = null;
         field_d = null;
     }

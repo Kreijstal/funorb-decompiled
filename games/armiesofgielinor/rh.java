@@ -10,7 +10,7 @@ final class rh implements Runnable {
     volatile rc[] field_d;
     static String field_g;
 
-    public static void a(int param0) {
+    public static void a() {
         field_g = null;
         int var1 = 0;
     }
@@ -22,7 +22,6 @@ final class rh implements Runnable {
         Throwable var3 = null;
         int var4 = 0;
         Object var5 = null;
-        Object var6 = null;
         Throwable decompiledCaughtException = null;
         var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         ((rh) this).field_a = true;
@@ -36,8 +35,8 @@ final class rh implements Runnable {
               L1: while (true) {
                 if (var1_int >= 2) {
                   nu.a(10L, 0);
-                  var5 = null;
-                  ne.a(((rh) this).field_b, (Object) null, true);
+                  int discarded$1 = 1;
+                  ne.a(((rh) this).field_b, (Object) null);
                   continue L0;
                 } else {
                   L2: {
@@ -61,7 +60,7 @@ final class rh implements Runnable {
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = (Exception) (Object) decompiledCaughtException;
-          var6 = null;
+          var5 = null;
           af.a((Throwable) (Object) var1, 98, (String) null);
           ((rh) this).field_a = false;
           return;

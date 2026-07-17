@@ -582,7 +582,7 @@ final class kn extends bo implements Cloneable {
         return (f) (Object) stackIn_3_0;
     }
 
-    public static void g(int param0) {
+    public static void g() {
         int var1 = 0;
         field_p = null;
     }

@@ -273,7 +273,7 @@ final class qa extends ll {
         try {
           L0: {
             L1: {
-              super.a((ll) (Object) param2, param0);
+              super.a((ll) (Object) param2, 0);
               if (param1) {
                 var4_int = 0;
                 L2: while (true) {
@@ -327,7 +327,7 @@ final class qa extends ll {
           L5: {
             var4 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var4;
-            stackOut_13_1 = new StringBuilder().append("qa.W(").append(param0).append(44).append(param1).append(44);
+            stackOut_13_1 = new StringBuilder().append("qa.W(").append(0).append(44).append(param1).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -526,7 +526,8 @@ final class qa extends ll {
               }
             }
             ((la) (Object) stackIn_34_0).a(stackIn_34_1, stackIn_34_2 != 0, param1, (qa) this, param0);
-            bb.b(4);
+            int discarded$1 = 4;
+            bb.b();
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

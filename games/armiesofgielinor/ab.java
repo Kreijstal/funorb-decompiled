@@ -10,17 +10,14 @@ final class ab {
     static me field_d;
     static String field_e;
 
-    public static void a(byte param0) {
-        if (param0 != 32) {
-            field_d = null;
-        }
+    public static void a() {
         field_b = null;
         field_c = null;
         field_e = null;
         field_d = null;
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -107,7 +104,7 @@ final class ab {
         return stackIn_9_0 != 0;
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3) {
+    final static void a(int param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

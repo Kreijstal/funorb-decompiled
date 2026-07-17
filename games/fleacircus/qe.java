@@ -110,7 +110,7 @@ final class qe extends hd {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_j = null;
     }
 

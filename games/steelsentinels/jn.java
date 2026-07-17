@@ -11,7 +11,7 @@ final class jn {
     static int field_c;
     static ml field_b;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_d = null;
         field_f = null;
@@ -45,7 +45,7 @@ final class jn {
           L0: {
             L1: {
               if (ja.field_g != null) {
-                fn.a(-26907, 1048576, param0, param2, param3);
+                fn.a(-26907, 1048576, true, param2, param3);
                 break L1;
               } else {
                 break L1;
@@ -65,7 +65,7 @@ final class jn {
                         if (null == ml.field_g) {
                           break L4;
                         } else {
-                          q.field_f.a(true, param0, ml.field_g);
+                          q.field_f.a(true, true, ml.field_g);
                           break L4;
                         }
                       }
@@ -93,7 +93,7 @@ final class jn {
           L5: {
             var4_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_18_0 = (RuntimeException) var4_ref;
-            stackOut_18_1 = new StringBuilder().append("jn.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_18_1 = new StringBuilder().append("jn.B(").append(1).append(44).append(param1).append(44).append(param2).append(44);
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;

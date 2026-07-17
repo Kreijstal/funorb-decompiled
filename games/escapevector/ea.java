@@ -25,7 +25,7 @@ final class ea {
         }
     }
 
-    final static ab a(byte[] param0, int param1) {
+    final static ab a(byte[] param0) {
         ab var2 = null;
         RuntimeException var2_ref = null;
         ab stackIn_4_0 = null;
@@ -160,9 +160,12 @@ final class ea {
               break L0;
             }
           }
-          ((ea) this).field_c = dc.a(256, ((ea) this).field_e, 0, ((ea) this).field_b, 64);
-          ((ea) this).field_j.field_a = dc.a(((ea) this).field_h.field_a, ((ea) this).field_e, ((ea) this).field_k.field_a, ((ea) this).field_b, 64);
-          ((ea) this).field_j.field_c = dc.a(((ea) this).field_h.field_c, ((ea) this).field_e, ((ea) this).field_k.field_c, ((ea) this).field_b, 64);
+          int discarded$6 = 64;
+          ((ea) this).field_c = dc.a(256, ((ea) this).field_e, 0, ((ea) this).field_b);
+          int discarded$7 = 64;
+          ((ea) this).field_j.field_a = dc.a(((ea) this).field_h.field_a, ((ea) this).field_e, ((ea) this).field_k.field_a, ((ea) this).field_b);
+          int discarded$8 = 64;
+          ((ea) this).field_j.field_c = dc.a(((ea) this).field_h.field_c, ((ea) this).field_e, ((ea) this).field_k.field_c, ((ea) this).field_b);
           return;
         } else {
           L1: {
@@ -173,9 +176,12 @@ final class ea {
               break L1;
             }
           }
-          ((ea) this).field_c = dc.a(256, ((ea) this).field_e, 0, ((ea) this).field_b, 64);
-          ((ea) this).field_j.field_a = dc.a(((ea) this).field_h.field_a, ((ea) this).field_e, ((ea) this).field_k.field_a, ((ea) this).field_b, 64);
-          ((ea) this).field_j.field_c = dc.a(((ea) this).field_h.field_c, ((ea) this).field_e, ((ea) this).field_k.field_c, ((ea) this).field_b, 64);
+          int discarded$9 = 64;
+          ((ea) this).field_c = dc.a(256, ((ea) this).field_e, 0, ((ea) this).field_b);
+          int discarded$10 = 64;
+          ((ea) this).field_j.field_a = dc.a(((ea) this).field_h.field_a, ((ea) this).field_e, ((ea) this).field_k.field_a, ((ea) this).field_b);
+          int discarded$11 = 64;
+          ((ea) this).field_j.field_c = dc.a(((ea) this).field_h.field_c, ((ea) this).field_e, ((ea) this).field_k.field_c, ((ea) this).field_b);
           return;
         }
     }

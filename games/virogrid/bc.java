@@ -56,21 +56,14 @@ final class bc {
           }
         }
         L3: {
-          if (!param0) {
-            break L3;
-          } else {
-            field_c = 50;
-            break L3;
-          }
-        }
-        L4: {
+          field_c = 50;
           if (gk.field_c == null) {
-            break L4;
+            break L3;
           } else {
             var2 = 0;
-            L5: while (true) {
+            L4: while (true) {
               if (var2 >= a.field_E.length) {
-                break L4;
+                break L3;
               } else {
                 if (param1 == a.field_E[var2]) {
                   if (nh.field_s[var2] > 0) {
@@ -80,11 +73,11 @@ final class bc {
                     return var3;
                   } else {
                     var2++;
-                    continue L5;
+                    continue L4;
                   }
                 } else {
                   var2++;
-                  continue L5;
+                  continue L4;
                 }
               }
             }
@@ -447,7 +440,9 @@ final class bc {
           }
         }
         L4: {
-          dj.a(stackIn_14_0, stackIn_14_1, (byte) stackIn_14_2, stackIn_14_3, stackIn_14_4, stackIn_14_5, stackIn_14_6 != 0, stackIn_14_7 != 0, stackIn_14_8 != 0, stackIn_14_9 != 0, 11, 14);
+          int discarded$2 = 14;
+          int discarded$3 = 11;
+          dj.a(stackIn_14_0, stackIn_14_1, (byte) stackIn_14_2, stackIn_14_3, stackIn_14_4, stackIn_14_5, stackIn_14_6 != 0, stackIn_14_7 != 0, stackIn_14_8 != 0, stackIn_14_9 != 0);
           if (param1 < -101) {
             break L4;
           } else {
@@ -475,7 +470,7 @@ final class bc {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }

@@ -29,7 +29,7 @@ final class uf {
         }
     }
 
-    final static void a(gr param0, int param1, boolean param2) {
+    final static void a(gr param0, int param1) {
         sl var3 = null;
         try {
             var3 = js.field_f;
@@ -41,7 +41,7 @@ final class uf {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = 18;
         field_b = null;
     }

@@ -7,7 +7,7 @@ abstract class wb implements ga {
     static ki field_b;
     private long field_a;
 
-    final static String a(CharSequence param0, int param1) {
+    final static String a(CharSequence param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
@@ -146,7 +146,7 @@ abstract class wb implements ga {
 
     abstract qd a(byte param0);
 
-    final static String a(CharSequence[] param0, byte param1) {
+    final static String a(CharSequence[] param0) {
         RuntimeException var2 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -168,7 +168,8 @@ abstract class wb implements ga {
         String stackOut_5_2 = null;
         try {
           L0: {
-            stackOut_2_0 = vi.a(param0, 0, param0.length, 0);
+            int discarded$2 = 0;
+            stackOut_2_0 = vi.a(param0, 0, param0.length);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -205,7 +206,7 @@ abstract class wb implements ga {
         return stackIn_3_0;
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_c = null;
         field_b = null;
     }

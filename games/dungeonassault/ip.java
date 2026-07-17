@@ -45,7 +45,7 @@ abstract class ip extends m implements jo {
           var2_int = param1.length();
           if (var2_int != 0) {
             if (var2_int <= 63) {
-              var3 = param0;
+              var3 = 0;
               L0: while (true) {
                 if (var2_int > var3) {
                   L1: {
@@ -96,7 +96,7 @@ abstract class ip extends m implements jo {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_23_0 = (RuntimeException) var2;
-            stackOut_23_1 = new StringBuilder().append("ip.M(").append(param0).append(44);
+            stackOut_23_1 = new StringBuilder().append("ip.M(").append(0).append(44);
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -123,7 +123,7 @@ abstract class ip extends m implements jo {
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_i = null;
         field_l = null;
         field_j = null;

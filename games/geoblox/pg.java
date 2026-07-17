@@ -17,7 +17,8 @@ final class pg {
         ji.field_h = 0;
         fa.field_b = 40;
         f.field_qb = 4;
-        qe.b(10);
+        int discarded$0 = 10;
+        qe.b();
         ij.field_ab = 0.75f;
         rc.field_h = 0.01666666753590107f;
         if (param0 != 9408) {
@@ -55,10 +56,9 @@ final class pg {
             int var18 = 0;
             Object var19 = null;
             byte[][] var20 = null;
-            String var21 = null;
+            byte[][] var21 = null;
             byte[][] var22 = null;
             byte[][] var23 = null;
-            byte[][] var24 = null;
             RuntimeException stackIn_38_0 = null;
             StringBuilder stackIn_38_1 = null;
             RuntimeException stackIn_39_0 = null;
@@ -131,7 +131,7 @@ final class pg {
                               } else {
                                 if (var6_int != 2) {
                                   if (var6_int == 3) {
-                                    var21 = param3.e((byte) 103);
+                                    var7 = param3.e((byte) 103);
                                     var8 = param3.e((byte) 98);
                                     var9 = param3.c((byte) 34);
                                     var10 = new String[var9];
@@ -139,10 +139,10 @@ final class pg {
                                     L6: while (true) {
                                       if (var9 <= var11_int) {
                                         L7: {
-                                          var24 = new byte[var9][];
-                                          var23 = var24;
+                                          var23 = new byte[var9][];
                                           var22 = var23;
-                                          var20 = var22;
+                                          var21 = var22;
+                                          var20 = var21;
                                           var11 = var20;
                                           if (var6_int == 3) {
                                             var12_int = 0;
@@ -152,7 +152,7 @@ final class pg {
                                               } else {
                                                 var13 = param3.a((byte) -70);
                                                 var11[var12_int] = new byte[var13];
-                                                param3.b(29915, var13, var24[var12_int], 0);
+                                                param3.b(29915, var13, var23[var12_int], 0);
                                                 var12_int++;
                                                 continue L8;
                                               }
@@ -167,11 +167,13 @@ final class pg {
                                         var13 = var18;
                                         L9: while (true) {
                                           if (var18 >= var9) {
-                                            ((eg) var19).field_i[var5] = param1.a(var8, -126, var12, ag.a(var21, false));
-                                            ((eg) var19).field_o[var5] = var24;
+                                            int discarded$3 = 0;
+                                            ((eg) var19).field_i[var5] = param1.a(var8, -126, var12, ag.a(var7));
+                                            ((eg) var19).field_o[var5] = var23;
                                             break L4;
                                           } else {
-                                            var12[var18] = ag.a(var10[var18], false);
+                                            int discarded$4 = 0;
+                                            var12[var18] = ag.a(var10[var18]);
                                             var18++;
                                             continue L9;
                                           }
@@ -215,7 +217,8 @@ final class pg {
                           }
                           ((eg) var19).field_k[var5] = var6_int;
                           ((eg) var19).field_g[var5] = var9;
-                          ((eg) var19).field_n[var5] = param1.a(ag.a(var16, false), 0, var17);
+                          int discarded$5 = 0;
+                          ((eg) var19).field_n[var5] = param1.a(ag.a(var16), 0, var17);
                           break L4;
                         }
                         decompiledRegionSelector0 = 0;
@@ -317,7 +320,7 @@ final class pg {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_d = null;
         field_c = null;
         field_a = null;

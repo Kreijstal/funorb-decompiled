@@ -35,7 +35,7 @@ final class ii extends q {
         }
     }
 
-    final static void a(java.awt.Canvas param0, boolean param1, byte param2) {
+    final static void a(java.awt.Canvas param0, boolean param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -69,7 +69,8 @@ final class ii extends q {
                   break L1;
                 }
               }
-              sc.a(kg.a((byte) 49), rd.field_A, var3_int != 0, (byte) 21, ro.b(-126));
+              int discarded$2 = 49;
+              sc.a(kg.a(), rd.field_A, var3_int != 0, (byte) 21, ro.b(-126));
               break L0;
             } else {
               if (!pl.b(-109)) {
@@ -238,19 +239,14 @@ final class ii extends q {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        if (param5 == 2124) {
-          if (param4 >= kn.field_e) {
-            if (param1 <= qg.field_z) {
-              if (j.field_q <= param0) {
-                if (param2 > qk.field_p) {
-                  ji.a(param4, param6, param1, param2, param7, 105, param0, param3);
-                  return;
-                } else {
-                  qm.a(param2, (byte) 54, param0, param7, param1, param3, param4, param6);
-                  return;
-                }
-              } else {
+        if (param4 >= kn.field_e) {
+          if (param1 <= qg.field_z) {
+            if (j.field_q <= param0) {
+              if (param2 > qk.field_p) {
                 ji.a(param4, param6, param1, param2, param7, 105, param0, param3);
+                return;
+              } else {
+                qm.a(param2, (byte) 54, param0, param7, param1, param3, param4, param6);
                 return;
               }
             } else {
@@ -262,29 +258,8 @@ final class ii extends q {
             return;
           }
         } else {
-          field_k = -109;
-          if (param4 >= kn.field_e) {
-            if (param1 <= qg.field_z) {
-              if (j.field_q <= param0) {
-                if (param2 > qk.field_p) {
-                  ji.a(param4, param6, param1, param2, param7, 105, param0, param3);
-                  return;
-                } else {
-                  qm.a(param2, (byte) 54, param0, param7, param1, param3, param4, param6);
-                  return;
-                }
-              } else {
-                ji.a(param4, param6, param1, param2, param7, 105, param0, param3);
-                return;
-              }
-            } else {
-              ji.a(param4, param6, param1, param2, param7, 105, param0, param3);
-              return;
-            }
-          } else {
-            ji.a(param4, param6, param1, param2, param7, 105, param0, param3);
-            return;
-          }
+          ji.a(param4, param6, param1, param2, param7, 105, param0, param3);
+          return;
         }
     }
 

@@ -119,7 +119,8 @@ final class nj extends al {
           L0: {
             if (param1 == 54) {
               L1: {
-                if (null != hc.a(param0, 4011)) {
+                int discarded$10 = 4011;
+                if (null != hc.a(param0)) {
                   stackOut_5_0 = 0;
                   stackIn_6_0 = stackOut_5_0;
                   break L1;
@@ -196,14 +197,13 @@ final class nj extends al {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
+        String var6_ref_String = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         String[] var10 = null;
         String[] var11 = null;
-        String var12 = null;
-        String var13 = null;
         int stackIn_56_0 = 0;
         int stackIn_59_0 = 0;
         String[] stackIn_65_0 = null;
@@ -627,8 +627,9 @@ final class nj extends al {
                         break L25;
                       } else {
                         L28: {
-                          var13 = var11[var5];
-                          var7 = vh.a(false, var13, true);
+                          var6_ref_String = var11[var5];
+                          int discarded$4 = 1;
+                          var7 = vh.a(false, var6_ref_String);
                           if (var3_int >= var7) {
                             break L28;
                           } else {
@@ -641,8 +642,9 @@ final class nj extends al {
                     }
                   } else {
                     L29: {
-                      var12 = var10[var5];
-                      var7 = vh.a(false, var12, true);
+                      var6_ref_String = var10[var5];
+                      int discarded$5 = 1;
+                      var7 = vh.a(false, var6_ref_String);
                       if (var3_int >= var7) {
                         break L29;
                       } else {
@@ -683,7 +685,8 @@ final class nj extends al {
                     L33: {
                       var6 = m.field_a[var4];
                       if (var6 >= 0) {
-                        var7 = vh.a(true, se.field_E[var4], true);
+                        int discarded$6 = 1;
+                        var7 = vh.a(true, se.field_E[var4]);
                         var5 = var5 + hj.field_a;
                         var8 = -(var7 >> 1) + bi.field_h;
                         lf.field_r[var4] = new int[4];
@@ -739,7 +742,8 @@ final class nj extends al {
               }
             }
             L36: {
-              var5 = vh.a(stackIn_89_0 != 0, se.field_E[var4], true);
+              int discarded$7 = 1;
+              var5 = vh.a(stackIn_89_0 != 0, se.field_E[var4]);
               if (var5 > var3_int) {
                 var3_int = var5;
                 break L36;

@@ -9,7 +9,7 @@ abstract class on {
     static String[] field_c;
     static int field_a;
 
-    final static rb a(java.awt.Component param0, int param1, int param2, int param3) {
+    final static rb a(java.awt.Component param0, int param1, int param2) {
         try {
             Class var4 = null;
             Throwable var4_ref = null;

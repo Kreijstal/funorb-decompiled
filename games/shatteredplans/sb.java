@@ -21,9 +21,9 @@ final class sb extends oh {
             param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) pd.field_j);
             param1.removeFocusListener((java.awt.event.FocusListener) (Object) pd.field_j);
             v.field_d = 0;
-            int var2_int = -125 % ((param0 - -60) / 36);
+            int var2_int = -1;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "sb.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw r.a((Throwable) (Object) runtimeException, "sb.A(" + 89 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

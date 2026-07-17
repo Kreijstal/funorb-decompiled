@@ -6,7 +6,7 @@ abstract class iq {
     static String[] field_a;
     static String field_b;
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_b = null;
     }

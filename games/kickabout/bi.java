@@ -163,7 +163,8 @@ abstract class bi {
               return stackIn_3_0 != 0;
             } else {
               if (!qe.a(true, param0)) {
-                if (lg.a(param0, (byte) 79)) {
+                int discarded$8 = 79;
+                if (lg.a(param0)) {
                   stackOut_9_0 = 0;
                   stackIn_10_0 = stackOut_9_0;
                   return stackIn_10_0 != 0;

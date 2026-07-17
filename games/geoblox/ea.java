@@ -10,7 +10,7 @@ final class ea extends hf {
         throw new Error();
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_g = null;
     }
 
@@ -222,8 +222,9 @@ final class ea extends hf {
         try {
           L0: {
             if (mf.a(param3, param4, 117, param0)) {
-              var5_int = 8 % ((-50 - param1) / 51);
-              stackOut_3_0 = qa.a(param2.a(param4, -28153, param3), false);
+              var5_int = 0;
+              int discarded$2 = 0;
+              stackOut_3_0 = qa.a(param2.a(param4, -28153, param3));
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -260,7 +261,7 @@ final class ea extends hf {
           }
           L2: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param1).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(-127).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;

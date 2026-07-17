@@ -90,14 +90,14 @@ final class ta extends nl {
         }
     }
 
-    public static void j(int param0) {
+    public static void j() {
         field_O = null;
         field_M = null;
         field_Q = null;
         field_R = null;
     }
 
-    final static void a(String param0, int param1, int param2, String param3, String param4, int param5) {
+    final static void a(String param0, int param1, int param2, String param3, String param4) {
         mo var6 = null;
         RuntimeException var6_ref = null;
         RuntimeException stackIn_4_0 = null;
@@ -148,7 +148,7 @@ final class ta extends nl {
         String stackOut_10_2 = null;
         try {
           L0: {
-            var6 = new mo(param1, param3, 0, param0, param4);
+            var6 = new mo(2, param3, 0, param0, param4);
             bc.a(param2 ^ -19023, var6);
             if (param2 == -18119) {
               break L0;
@@ -187,7 +187,7 @@ final class ta extends nl {
           }
           L2: {
             stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-            stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(44).append(2).append(44).append(param2).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;

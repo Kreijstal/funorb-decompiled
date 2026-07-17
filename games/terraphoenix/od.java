@@ -11,42 +11,11 @@ final class od {
     static o field_g;
     static String field_d;
 
-    final static boolean b(int param0) {
-        Object var2 = null;
-        int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 == 255) {
-            break L0;
-          } else {
-            var2 = null;
-            od.a((dc) null, (byte) -95);
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
-            if (ig.field_e == null) {
-              break L2;
-            } else {
-              if (!mh.field_a.a(true)) {
-                break L2;
-              } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
-                break L1;
-              }
-            }
-          }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
-          break L1;
-        }
-        return stackIn_6_0 != 0;
+    final static boolean b() {
+        return ig.field_e != null && mh.field_a.a(true);
     }
 
-    final static void a(dc param0, byte param1) {
+    final static void a(dc param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         dc var3 = null;
@@ -118,21 +87,14 @@ final class od {
                   break L5;
                 }
               }
-              L6: {
-                if (param1 <= -92) {
-                  break L6;
-                } else {
-                  field_b = null;
-                  break L6;
-                }
-              }
-              jd.a(param0, (byte) -119);
+              int discarded$2 = -119;
+              jd.a(param0);
               break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          L6: {
             var2 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var2;
             stackOut_20_1 = new StringBuilder().append("od.A(");
@@ -147,7 +109,7 @@ final class od {
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
-              break L7;
+              break L6;
             } else {
               stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
               stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
@@ -155,14 +117,14 @@ final class od {
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
               stackIn_23_2 = stackOut_21_2;
-              break L7;
+              break L6;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param1 + 41);
+          throw qk.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + -97 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_b = null;
         field_f = null;

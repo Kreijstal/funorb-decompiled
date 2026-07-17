@@ -10,7 +10,7 @@ abstract class gpb extends ksa {
 
     abstract void a(java.awt.Graphics param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7);
 
-    final static boolean a(String param0, byte param1) {
+    final static boolean a(String param0) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;

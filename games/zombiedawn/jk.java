@@ -133,14 +133,14 @@ final class jk {
             j var7_ref = var10;
             var10.field_i = param2;
             var10.field_k = param5;
-            var10.field_f = param1;
+            var10.field_f = -1;
             var10.field_g = param3;
             var10.field_c = param0;
             int fieldTemp$0 = ((jk) this).field_c;
             ((jk) this).field_c = ((jk) this).field_c + 1;
             ((jk) this).field_e[fieldTemp$0] = var8;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "jk.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "jk.E(" + (param0 != null ? "{...}" : "null") + 44 + -1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -153,7 +153,8 @@ final class jk {
     }
 
     final static void a(boolean param0, boolean param1) {
-        if (!we.o((byte) -80)) {
+        int discarded$7 = -80;
+        if (!we.o()) {
           return;
         } else {
           L0: {
@@ -525,7 +526,7 @@ final class jk {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_g = null;
         field_h = null;
     }

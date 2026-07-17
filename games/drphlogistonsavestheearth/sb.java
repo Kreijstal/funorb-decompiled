@@ -14,29 +14,26 @@ final class sb {
     private static long[] field_c;
 
     final static boolean b(int param0) {
-        int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        if (param0 == -11) {
-          if (af.field_b >= 10) {
-            if (gf.field_G) {
-              return false;
-            } else {
-              L0: {
-                if (n.a(param0 + 75)) {
-                  stackOut_7_0 = 0;
-                  stackIn_8_0 = stackOut_7_0;
-                  break L0;
-                } else {
-                  stackOut_6_0 = 1;
-                  stackIn_8_0 = stackOut_6_0;
-                  break L0;
-                }
-              }
-              return stackIn_8_0 != 0;
-            }
-          } else {
+        int stackIn_6_0 = 0;
+        int stackOut_5_0 = 0;
+        int stackOut_4_0 = 0;
+        if (af.field_b >= 10) {
+          if (gf.field_G) {
             return false;
+          } else {
+            L0: {
+              int discarded$6 = 64;
+              if (n.a()) {
+                stackOut_5_0 = 0;
+                stackIn_6_0 = stackOut_5_0;
+                break L0;
+              } else {
+                stackOut_4_0 = 1;
+                stackIn_6_0 = stackOut_4_0;
+                break L0;
+              }
+            }
+            return stackIn_6_0 != 0;
           }
         } else {
           return false;
@@ -56,7 +53,8 @@ final class sb {
               var4 = var5;
               var2 = var4;
               if (!var5.field_b.a(0)) {
-                this.a(var5, 0, (byte) 52);
+                int discarded$4 = 52;
+                this.a(var2, 0);
                 return false;
               } else {
                 L1: {
@@ -64,7 +62,8 @@ final class sb {
                     break L1;
                   } else {
                     if (!var5.field_b.c(var5.field_l, 29691)) {
-                      this.a(var2, var5.field_b.a(24, var5.field_l), (byte) 52);
+                      int discarded$5 = 52;
+                      this.a(var2, var5.field_b.a(24, var5.field_l));
                       return false;
                     } else {
                       break L1;
@@ -76,7 +75,8 @@ final class sb {
                     break L2;
                   } else {
                     if (!var5.field_b.a(255, var5.field_h)) {
-                      this.a(var2, var5.field_b.b(10461, var5.field_h), (byte) 52);
+                      int discarded$6 = 52;
+                      this.a(var2, var5.field_b.b(10461, var5.field_h));
                       return false;
                     } else {
                       break L2;
@@ -94,7 +94,8 @@ final class sb {
                         break L3;
                       } else {
                         if (!var5.field_b.c((byte) 66)) {
-                          this.a(var2, var5.field_b.d((byte) 95), (byte) 52);
+                          int discarded$7 = 52;
+                          this.a(var2, var5.field_b.d((byte) 95));
                           return false;
                         } else {
                           break L3;
@@ -115,7 +116,7 @@ final class sb {
         }
     }
 
-    private final void a(uf param0, int param1, byte param2) {
+    private final void a(uf param0, int param1) {
         float var4_float = 0.0f;
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -179,7 +180,7 @@ final class sb {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_g = null;
         field_i = null;
@@ -190,14 +191,17 @@ final class sb {
         throw new Error();
     }
 
-    final static void b(byte param0) {
-        af.b(6);
+    final static void b() {
+        int discarded$7 = 6;
+        af.b();
         if (n.field_g != null) {
           L0: {
             hb.a(-5, n.field_g);
-            oe.b(-19495);
+            int discarded$8 = -19495;
+            oe.b();
             de.e(-86);
-            oi.b((byte) -120);
+            int discarded$9 = -120;
+            oi.b();
             if (DrPhlogistonSavesTheEarth.t(18137)) {
               nj.field_p.d(1, -18392);
               qj.a(0, 14656);
@@ -206,13 +210,16 @@ final class sb {
               break L0;
             }
           }
-          eg.a((byte) 126);
+          int discarded$10 = 126;
+          eg.a();
           return;
         } else {
           L1: {
-            oe.b(-19495);
+            int discarded$11 = -19495;
+            oe.b();
             de.e(-86);
-            oi.b((byte) -120);
+            int discarded$12 = -120;
+            oi.b();
             if (DrPhlogistonSavesTheEarth.t(18137)) {
               nj.field_p.d(1, -18392);
               qj.a(0, 14656);
@@ -221,7 +228,8 @@ final class sb {
               break L1;
             }
           }
-          eg.a((byte) 126);
+          int discarded$13 = 126;
+          eg.a();
           return;
         }
     }

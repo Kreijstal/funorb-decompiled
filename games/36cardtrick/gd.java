@@ -194,35 +194,9 @@ class gd {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 < 8000) {
-            break L0;
-          } else {
-            if (param0 <= 48000) {
-              L1: {
-                field_m = param0;
-                if (!param1) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              field_q = stackIn_7_0 != 0;
-              field_n = 10;
-              return;
-            } else {
-              break L0;
-            }
-          }
-        }
-        throw new IllegalArgumentException();
+        field_m = 22050;
+        field_q = true;
+        field_n = 10;
     }
 
     int b() throws Exception {
@@ -325,7 +299,7 @@ class gd {
         je var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_q) {
             break L0;
           } else {
@@ -335,7 +309,7 @@ class gd {
         }
         L1: {
           og.a(param0, 0, var3);
-          ((gd) this).field_u = ((gd) this).field_u - 256;
+          ((gd) this).field_u = ((gd) this).field_u - param1;
           if (((gd) this).field_h == null) {
             break L1;
           } else {
@@ -502,7 +476,7 @@ class gd {
           if (((gd) this).field_h == null) {
             break L17;
           } else {
-            ((gd) this).field_h.a(param0, 0, 256);
+            ((gd) this).field_h.a(param0, 0, param1);
             break L17;
           }
         }
@@ -645,12 +619,12 @@ class gd {
     }
 
     private final void b(int param0) {
-        ((gd) this).field_u = ((gd) this).field_u - 256;
+        ((gd) this).field_u = ((gd) this).field_u - param0;
         if (((gd) this).field_u < 0) {
             ((gd) this).field_u = 0;
         }
         if (((gd) this).field_h != null) {
-            ((gd) this).field_h.a(256);
+            ((gd) this).field_h.a(param0);
             return;
         }
     }

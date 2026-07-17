@@ -42,7 +42,7 @@ final class km extends ms {
           L0: {
             var8 = as.field_v;
             var9 = var8;
-            var9.g(param1, 8);
+            var9.g(3, 8);
             var9.field_p = var9.field_p + 1;
             var4 = var9.field_p;
             var9.b((byte) 55, 1);
@@ -73,7 +73,7 @@ final class km extends ms {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var3;
-            stackOut_6_1 = new StringBuilder().append("km.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_6_1 = new StringBuilder().append("km.C(").append(param0).append(44).append(3).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -100,7 +100,7 @@ final class km extends ms {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var1_int = 0;
         ah var2 = null;
@@ -231,7 +231,7 @@ final class km extends ms {
         }
     }
 
-    final static java.awt.Container c(boolean param0) {
+    final static java.awt.Container c() {
         if (ck.field_c != null) {
             return (java.awt.Container) (Object) ck.field_c;
         }

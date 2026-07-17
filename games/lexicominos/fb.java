@@ -22,7 +22,7 @@ final class fb implements rd {
     static long[][] field_j;
     static boolean field_p;
 
-    public static void a(int param0) {
+    public static void a() {
         field_j = null;
         field_l = null;
         field_f = null;
@@ -249,46 +249,6 @@ final class fb implements rd {
           }
           oj.field_j = new int[2 * param2];
           break L10;
-        }
-        if (param0 == -107) {
-          L12: {
-            L13: {
-              if (null == ff.field_a) {
-                break L13;
-              } else {
-                if (param1 + param2 > ff.field_a.length) {
-                  break L13;
-                } else {
-                  break L12;
-                }
-              }
-            }
-            ff.field_a = new int[(param2 - -param1) * 2];
-            break L12;
-          }
-          L14: {
-            L15: {
-              if (null == f.field_h) {
-                break L15;
-              } else {
-                if (f.field_h.length < param2) {
-                  break L15;
-                } else {
-                  break L14;
-                }
-              }
-            }
-            f.field_h = new boolean[param2 * 2];
-            break L14;
-          }
-          r.field_D = 2147483647;
-          pf.field_o = 0;
-          l.field_G = -2147483648;
-          rb.field_a = -2147483648;
-          ve.field_d = 2147483647;
-          return;
-        } else {
-          return;
         }
     }
 

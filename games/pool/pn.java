@@ -47,7 +47,7 @@ final class pn {
         }
     }
 
-    final static qb[] a(int param0, di param1, int param2, int param3) {
+    final static qb[] a(int param0, di param1, int param2) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         qb[] stackIn_4_0 = null;
@@ -72,7 +72,8 @@ final class pn {
         try {
           L0: {
             if (vj.a(param2, param1, param0, (byte) 121)) {
-              stackOut_3_0 = me.h(0);
+              int discarded$2 = 0;
+              stackOut_3_0 = me.h();
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -121,7 +122,8 @@ final class pn {
               if (~ve.field_m != ~((pn) this).field_b) {
                 if (param0 == 14842) {
                   if (th.field_a == 2) {
-                    if (lq.a(((pn) this).field_q, -1)) {
+                    int discarded$4 = -1;
+                    if (lq.a(((pn) this).field_q)) {
                       return 1;
                     } else {
                       return 0;
@@ -132,7 +134,8 @@ final class pn {
                 } else {
                   ((pn) this).field_o = -18;
                   if (th.field_a == 2) {
-                    if (!lq.a(((pn) this).field_q, -1)) {
+                    int discarded$5 = -1;
+                    if (!lq.a(((pn) this).field_q)) {
                       return 0;
                     } else {
                       return 1;
@@ -151,7 +154,8 @@ final class pn {
             if (~ve.field_m != ~((pn) this).field_b) {
               if (param0 == 14842) {
                 if (th.field_a == 2) {
-                  if (!lq.a(((pn) this).field_q, -1)) {
+                  int discarded$6 = -1;
+                  if (!lq.a(((pn) this).field_q)) {
                     return 0;
                   } else {
                     return 1;
@@ -162,7 +166,8 @@ final class pn {
               } else {
                 ((pn) this).field_o = -18;
                 if (th.field_a == 2) {
-                  if (!lq.a(((pn) this).field_q, -1)) {
+                  int discarded$7 = -1;
+                  if (!lq.a(((pn) this).field_q)) {
                     return 0;
                   } else {
                     return 1;

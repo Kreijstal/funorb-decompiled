@@ -9,7 +9,7 @@ final class hr {
     static String field_f;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_e = null;
         field_b = null;
@@ -149,55 +149,51 @@ final class hr {
             }
             var8 = -var6_int + -param2 + tg.field_c.field_K;
             var9 = var8 / 2;
-            if (param3 > 19) {
-              var10 = param2 + (param0 + var9);
-              var11 = 0;
-              var12 = 0;
-              L2: while (true) {
-                if (var12 >= 6) {
-                  break L0;
-                } else {
-                  L3: {
-                    L4: {
-                      if (var12 >= 5) {
+            var10 = param2 + (param0 + var9);
+            var11 = 0;
+            var12 = 0;
+            L2: while (true) {
+              if (var12 >= 6) {
+                break L0;
+              } else {
+                L3: {
+                  L4: {
+                    if (var12 >= 5) {
+                      break L4;
+                    } else {
+                      if (null != oq.field_b[var12]) {
                         break L4;
                       } else {
-                        if (null != oq.field_b[var12]) {
-                          break L4;
-                        } else {
-                          var12++;
-                          break L3;
-                        }
+                        var12++;
+                        break L3;
                       }
                     }
-                    var13 = (-4 + tg.field_c.field_mb) * var11 / (gq.field_d + 1) + 3;
-                    var11++;
-                    var7 = -var13 + var11 * (-4 + tg.field_c.field_mb) / (1 + gq.field_d) + 1;
-                    if (5 <= var12) {
-                      pr.field_c.a(var8, var7, (byte) 46, var13, var6_int);
-                      var12++;
-                      break L3;
-                    } else {
-                      oq.field_b[var12].a(var8, var7, (byte) 115, var13, var6_int);
-                      tb.field_a[var12].a(var9 - param2, var7, (byte) 118, 0, param2);
-                      mr.field_d[var12].a(param0, -param5 + var7 - param5, (byte) 122, param5, var9);
-                      n.field_n[var12].a(var8 - param2 + -var10, var7 + -param5 - param5, (byte) 52, param5, var10);
-                      var12++;
-                      break L3;
-                    }
                   }
-                  var12++;
-                  continue L2;
+                  var13 = (-4 + tg.field_c.field_mb) * var11 / (gq.field_d + 1) + 3;
+                  var11++;
+                  var7 = -var13 + var11 * (-4 + tg.field_c.field_mb) / (1 + gq.field_d) + 1;
+                  if (5 <= var12) {
+                    pr.field_c.a(var8, var7, (byte) 46, var13, var6_int);
+                    var12++;
+                    break L3;
+                  } else {
+                    oq.field_b[var12].a(var8, var7, (byte) 115, var13, var6_int);
+                    tb.field_a[var12].a(var9 - param2, var7, (byte) 118, 0, param2);
+                    mr.field_d[var12].a(param0, -param5 + var7 - param5, (byte) 122, param5, var9);
+                    n.field_n[var12].a(var8 - param2 + -var10, var7 + -param5 - param5, (byte) 52, param5, var10);
+                    var12++;
+                    break L3;
+                  }
                 }
+                var12++;
+                continue L2;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var6, "hr.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw r.a((Throwable) (Object) var6, "hr.B(" + param0 + 44 + param1 + 44 + param2 + 44 + 113 + 44 + param4 + 44 + param5 + 41);
         }
     }
 

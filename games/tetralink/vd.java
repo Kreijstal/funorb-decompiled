@@ -596,12 +596,7 @@ final class vd {
         var3 = ((vd) this).field_d.length;
         L0: while (true) {
           if (var3 > param1) {
-            if (param0 != 0) {
-              vd.a((byte) -117);
-              return var3;
-            } else {
-              return var3;
-            }
+            return var3;
           } else {
             if (((vd) this).field_f) {
               if (0 != var3) {
@@ -629,43 +624,23 @@ final class vd {
 
     private final void a(boolean param0, int param1, int param2) {
         if (param2 <= ((vd) this).field_j) {
-          if (((vd) this).field_d.length > param2) {
-            ((vd) this).field_d[param2] = param1;
-            if (param0) {
-              int discarded$8 = ((vd) this).a(26, (byte) 120);
-              return;
-            } else {
-              return;
-            }
-          } else {
-            this.a(true, param2);
-            ((vd) this).field_d[param2] = param1;
-            if (param0) {
-              int discarded$9 = ((vd) this).a(26, (byte) 120);
-              return;
-            } else {
-              return;
-            }
-          }
-        } else {
-          ((vd) this).field_j = param2;
           if (((vd) this).field_d.length <= param2) {
             this.a(true, param2);
             ((vd) this).field_d[param2] = param1;
-            if (!param0) {
-              return;
-            } else {
-              int discarded$10 = ((vd) this).a(26, (byte) 120);
-              return;
-            }
+            return;
           } else {
             ((vd) this).field_d[param2] = param1;
-            if (param0) {
-              int discarded$11 = ((vd) this).a(26, (byte) 120);
-              return;
-            } else {
-              return;
-            }
+            return;
+          }
+        } else {
+          ((vd) this).field_j = param2;
+          if (((vd) this).field_d.length > param2) {
+            ((vd) this).field_d[param2] = param1;
+            return;
+          } else {
+            this.a(true, param2);
+            ((vd) this).field_d[param2] = param1;
+            return;
           }
         }
     }

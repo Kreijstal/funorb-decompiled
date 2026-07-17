@@ -8,7 +8,7 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     static k field_c;
     static int[] field_d;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_e = null;
         field_c = null;
@@ -21,7 +21,7 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         ih var3 = null;
         try {
             var3 = ud.field_b;
-            var3.e(8, param0);
+            var3.e(8, 5);
             if (param2 >= -97) {
                 field_e = null;
             }
@@ -29,14 +29,14 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             var3.a(-11, 0);
             var3.a(-11, param1.field_i);
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "rd.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "rd.C(" + 5 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    final static void a(ql param0, int param1, int param2) {
+    final static void a(ql param0, int param1) {
         sd.field_d.a(false, (lh) (Object) param0);
         if (param1 < 57) {
             return;

@@ -67,7 +67,7 @@ final class wh extends de {
             }
             L2: {
               if (-1 != param8) {
-                param7.c(param8 + 1 + ". ", 70, param4, param9, param0);
+                param7.c(param8 + 1 + ". ", 70, param4, param9, 0);
                 break L2;
               } else {
                 break L2;
@@ -75,9 +75,9 @@ final class wh extends de {
             }
             L3: {
               var14 = param5;
-              param7.a(var14, 70, param4, param9, param0);
+              param7.a(var14, 70, param4, param9, 0);
               var15 = Integer.toString(param3);
-              param7.b(var15, aj.field_o[0], param4, param9, param0);
+              param7.b(var15, aj.field_o[0], param4, param9, 0);
               if (param2 == 540) {
                 break L3;
               } else {
@@ -98,13 +98,13 @@ final class wh extends de {
             }
             var16 = stackIn_11_0;
             var13 = var16;
-            param7.b(var16, aj.field_o[1], param4, param9, param0);
+            param7.b(var16, aj.field_o[1], param4, param9, 0);
             var17 = param10 + "%";
-            param7.b(var17, aj.field_o[2], param4, param9, param0);
+            param7.b(var17, aj.field_o[2], param4, param9, 0);
             var18 = param1 + "%";
-            param7.b(var18, aj.field_o[3], param4, param9, param0);
+            param7.b(var18, aj.field_o[3], param4, param9, 0);
             var19 = param6 + "%";
-            param7.b(var19, aj.field_o[4], param4, param9, param0);
+            param7.b(var19, aj.field_o[4], param4, param9, 0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -112,7 +112,7 @@ final class wh extends de {
           L5: {
             var12 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var12;
-            stackOut_13_1 = new StringBuilder().append("wh.J(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_13_1 = new StringBuilder().append("wh.J(").append(0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -210,7 +210,7 @@ final class wh extends de {
         return 20 + rk.field_e.c(var3);
     }
 
-    final static void e(int param0) {
+    final static void e() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -433,7 +433,7 @@ final class wh extends de {
         }
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         field_s = null;
         field_q = null;
         field_r = null;
@@ -474,14 +474,15 @@ final class wh extends de {
         if (param0 >= -13) {
             field_s = null;
         }
-        la.a(((wh) this).field_l, nc.field_a, false, -25528);
+        int discarded$0 = -25528;
+        la.a(((wh) this).field_l, nc.field_a, false);
     }
 
     wh(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    final static void a(java.math.BigInteger param0, we param1, java.math.BigInteger param2, we param3, int param4) {
+    final static void a(java.math.BigInteger param0, we param1, java.math.BigInteger param2, we param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

@@ -21,15 +21,13 @@ final class mj extends dm {
         }
     }
 
-    final static void f(int param0) {
-        sj.a(mb.g((byte) 93), 20298);
+    final static void f() {
+        int discarded$0 = 20298;
+        sj.a(mb.g((byte) 93));
     }
 
     final static void a(int param0, boolean param1) {
         w.field_I.a(param1, 11358);
-        if (param0 != 0) {
-            mj.g(37);
-        }
     }
 
     final Object b(byte param0) {

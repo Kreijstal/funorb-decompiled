@@ -707,7 +707,7 @@ final class ee extends eb {
           if (param0.field_s.length == 0) {
             return null;
           } else {
-            return new ee(param0, (int)((long)param0.field_o * 256L * (long)param1 / (long)(100 * nk.field_k)), param2 << 6);
+            return new ee(param0, (int)((long)param0.field_o * 256L * 100L / (long)(100 * nk.field_k)), param2 << 6);
           }
         } else {
           return null;

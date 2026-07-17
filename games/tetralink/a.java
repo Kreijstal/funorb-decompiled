@@ -30,7 +30,7 @@ final class a {
         }
     }
 
-    final static int a(hb param0, hb param1, byte param2) {
+    final static int a(hb param0, hb param1) {
         RuntimeException var3 = null;
         Object var4 = null;
         int stackIn_3_0 = 0;
@@ -131,7 +131,7 @@ final class a {
         return stackIn_3_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_f = null;
         field_b = null;

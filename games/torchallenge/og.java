@@ -136,7 +136,7 @@ abstract class og {
             var3_int = 0;
             L1: while (true) {
               if (param2 <= 0) {
-                var4 = 75 % ((-57 - param1) / 42);
+                var4 = 0;
                 stackOut_4_0 = var3_int;
                 stackIn_5_0 = stackOut_4_0;
                 break L0;
@@ -151,12 +151,12 @@ abstract class og {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oj.a((Throwable) (Object) var3, "og.F(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw oj.a((Throwable) (Object) var3, "og.F(" + param0 + 44 + -126 + 44 + param2 + 41);
         }
         return stackIn_5_0;
     }
 
-    final static vh a(String param0, boolean param1) {
+    final static vh a(String param0) {
         RuntimeException var2 = null;
         vh stackIn_3_0 = null;
         RuntimeException stackIn_5_0 = null;
@@ -217,11 +217,11 @@ abstract class og {
 
     abstract int a(byte param0);
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void a(int param0, int param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;

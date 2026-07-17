@@ -13,8 +13,8 @@ public final class Stream {
     private final void a(jaclib.memory.Buffer param0, int param1, int param2) {
         ((jaclib.memory.Stream) this).b();
         ((jaclib.memory.Stream) this).a = param0;
-        ((jaclib.memory.Stream) this).b = param2 + param1;
-        ((jaclib.memory.Stream) this).e = param1;
+        ((jaclib.memory.Stream) this).b = param2;
+        ((jaclib.memory.Stream) this).e = 0;
         if (!(((jaclib.memory.Stream) this).b <= param0.getSize())) {
             throw new RuntimeException();
         }

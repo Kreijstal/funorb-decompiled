@@ -54,12 +54,13 @@ final class pk extends ql {
 
     final static void a(int param0, long param1) {
         try {
+            InterruptedException var3 = null;
+            Throwable decompiledCaughtException = null;
             {
+              L0: {
                 Thread.sleep(param1);
-            }
-            if (param0 != 207) {
-                field_l = -120;
-                return;
+                break L0;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -138,15 +139,15 @@ final class pk extends ql {
           try {
             L0: {
               var3_int = param2.f(255);
-              if (param0 < var3_int) {
-                var3_int = param0;
+              if (80 < var3_int) {
+                var3_int = 80;
                 break L0;
               } else {
                 break L0;
               }
             }
             var4 = new byte[var3_int];
-            var5 = 85 % ((71 - param1) / 43);
+            var5 = 0;
             param2.field_i = param2.field_i + fj.field_Tb.a(0, param2.field_n, param2.field_i, 17112, var3_int, var4);
             var6 = db.a(var4, 0, (byte) -120, var3_int);
             stackOut_3_0 = (String) var6;
@@ -164,7 +165,7 @@ final class pk extends ql {
           L1: {
             var3_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var3_ref;
-            stackOut_7_1 = new StringBuilder().append("pk.K(").append(param0).append(44).append(param1).append(44);
+            stackOut_7_1 = new StringBuilder().append("pk.K(").append(80).append(44).append(122).append(44);
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;

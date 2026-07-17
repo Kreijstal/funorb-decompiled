@@ -11,7 +11,7 @@ final class uf {
     static int field_c;
     static rf field_g;
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_b = null;
         field_f = null;

@@ -546,7 +546,7 @@ final class gr {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_i = null;
         field_b = null;
     }

@@ -10,70 +10,44 @@ class ta {
     static String field_d;
     static String field_c;
 
-    final static jp b(int param0) {
-        int var1 = 0;
-        Object var3 = null;
-        int[] var5 = null;
-        int var5_int = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int[] var8 = null;
-        int[] var11 = null;
-        int[] var13 = null;
+    final static jp b() {
         int[] var15 = null;
-        int[] var17 = null;
-        byte[] var18 = null;
-        int[] var19 = null;
+        int[] var8 = null;
+        int var5_int = 0;
+        Object var3 = null;
         byte[] var20 = null;
         int[] var21 = null;
-        L0: {
-          var7 = BrickABrac.field_J ? 1 : 0;
-          if (param0 == 13874) {
-            break L0;
-          } else {
-            ta.a(-46);
-            break L0;
-          }
-        }
-        L1: {
-          var1 = jh.field_b[0] * gg.field_t[0];
-          var18 = cn.field_a[0];
-          if (tm.field_b[0]) {
+        int[] var17 = null;
+        int[] var13 = null;
+        int[] var11 = null;
+        int[] var5 = null;
+        int var6 = 0;
+        int[] var19 = null;
+        int var7 = BrickABrac.field_J ? 1 : 0;
+        int var1 = jh.field_b[0] * gg.field_t[0];
+        byte[] var18 = cn.field_a[0];
+        if (!tm.field_b[0]) {
+            var19 = new int[var1];
+            var15 = var19;
+            var8 = var15;
+            for (var5_int = 0; var5_int < var1; var5_int++) {
+                var8[var5_int] = qp.field_c[ik.a((int) var18[var5_int], 255)];
+            }
+            var3 = (Object) (Object) new jp(cf.field_d, ek.field_db, ag.field_K[0], dl.field_d[0], jh.field_b[0], gg.field_t[0], var19);
+        } else {
             var20 = bj.field_S[0];
             var21 = new int[var1];
             var17 = var21;
             var13 = var17;
             var11 = var13;
             var5 = var11;
-            var6 = 0;
-            L2: while (true) {
-              if (var6 >= var1) {
-                var3 = (Object) (Object) new fb(cf.field_d, ek.field_db, ag.field_K[0], dl.field_d[0], jh.field_b[0], gg.field_t[0], var21);
-                break L1;
-              } else {
+            for (var6 = 0; var6 < var1; var6++) {
                 var5[var6] = ud.d(qp.field_c[ik.a((int) var18[var6], 255)], ik.a(-16777216, var20[var6] << 24));
-                var6++;
-                continue L2;
-              }
             }
-          } else {
-            var19 = new int[var1];
-            var15 = var19;
-            var8 = var15;
-            var5_int = 0;
-            L3: while (true) {
-              if (var5_int >= var1) {
-                var3 = (Object) (Object) new jp(cf.field_d, ek.field_db, ag.field_K[0], dl.field_d[0], jh.field_b[0], gg.field_t[0], var19);
-                break L1;
-              } else {
-                var8[var5_int] = qp.field_c[ik.a((int) var18[var5_int], 255)];
-                var5_int++;
-                continue L3;
-              }
-            }
-          }
+            var3 = (Object) (Object) new fb(cf.field_d, ek.field_db, ag.field_K[0], dl.field_d[0], jh.field_b[0], gg.field_t[0], var21);
         }
-        ee.d((byte) 96);
+        int discarded$0 = 96;
+        ee.d();
         return (jp) var3;
     }
 
@@ -81,9 +55,6 @@ class ta {
         field_d = null;
         field_c = null;
         field_g = null;
-        if (param0 != 0) {
-            return;
-        }
         field_a = null;
         field_e = null;
     }
@@ -96,12 +67,11 @@ class ta {
     }
 
     final static void a(boolean param0, boolean param1) {
-        if (!(m.a(2))) {
+        int discarded$5 = 2;
+        if (!(m.a())) {
             return;
         }
-        if (!(!param0)) {
-            lb.d(0, 0, lb.field_c, lb.field_d, 0, 192);
-        }
+        lb.d(0, 0, lb.field_c, lb.field_d, 0, 192);
         wo.field_b.a(0, 0, 0);
     }
 

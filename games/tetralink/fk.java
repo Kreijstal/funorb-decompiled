@@ -234,9 +234,10 @@ class fk extends ae {
         }
     }
 
-    final static void e(byte param0) {
+    final static void e() {
         if (!(!hi.field_a)) {
-            go.c((byte) 42);
+            int discarded$0 = 42;
+            go.c();
         }
     }
 
@@ -313,7 +314,7 @@ class fk extends ae {
         }
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_R = null;
         field_Q = null;
         field_U = null;
@@ -322,11 +323,8 @@ class fk extends ae {
     }
 
     final static int[] a(int param0, byte param1, int param2) {
-        if (param1 != -67) {
-            return null;
-        }
         int var3 = le.d(param2, -28583);
-        int var4 = ua.a(param1 ^ 61, param2);
+        int var4 = ua.a(-128, param2);
         int var5 = le.d(param0, -28583);
         int var6 = ua.a(109, param0);
         int var7 = (int)((long)var5 * (long)var3 >> 16);

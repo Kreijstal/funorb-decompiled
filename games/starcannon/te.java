@@ -6,7 +6,7 @@ final class te {
     static int field_b;
     static String field_c;
 
-    final static void a(byte param0) {
+    final static void a() {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -102,7 +102,7 @@ final class te {
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int a(int param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

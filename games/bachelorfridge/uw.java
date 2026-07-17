@@ -5,7 +5,7 @@ final class uw extends eo {
     static kia field_o;
     byte[] field_n;
 
-    final static void e(int param0) {
+    final static void e() {
         kv var1 = null;
         kv var2 = null;
         int var3 = 0;
@@ -16,7 +16,8 @@ final class uw extends eo {
             jb.d();
             dg.d();
             ur.field_d = 0;
-            tc.b(-8144);
+            int discarded$0 = -8144;
+            tc.b();
             var2 = var1.a();
             for (var3 = 0; 15 > var3; var3++) {
                 var2.c(-2, -2, 16777215);
@@ -30,11 +31,11 @@ final class uw extends eo {
         }
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_o = null;
     }
 
-    final static void g(int param0) {
+    final static void g() {
         jb.field_d = false;
         jb.b(1.0f);
         jb.d();

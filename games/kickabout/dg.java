@@ -153,9 +153,9 @@ class dg {
         var10 = new StringBuilder(0);
         var11 = 0;
         L5: while (true) {
-          if (param1 <= var11) {
+          if (0 <= var11) {
             L6: {
-              var12_int = 40 / ((param0 - -70) / 34);
+              var12_int = -40;
               var11 = 0;
               if (param2 == 0L) {
                 var9 = "0";
@@ -168,18 +168,14 @@ class dg {
                     break L6;
                   } else {
                     L8: {
-                      if (!param3) {
+                      if (0 == var11) {
                         break L8;
                       } else {
-                        if (0 == var11) {
+                        if (var11 % 3 != 0) {
                           break L8;
                         } else {
-                          if (var11 % 3 != 0) {
-                            break L8;
-                          } else {
-                            StringBuilder discarded$6 = var12.append(var8);
-                            break L8;
-                          }
+                          StringBuilder discarded$6 = var12.append(var8);
+                          break L8;
                         }
                       }
                     }
@@ -206,7 +202,7 @@ class dg {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         int var1 = 0;

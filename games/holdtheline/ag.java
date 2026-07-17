@@ -8,7 +8,7 @@ final class ag extends wj {
     static String field_p;
     private nn field_q;
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_p = null;
         field_r = null;
     }
@@ -295,10 +295,10 @@ final class ag extends wj {
             if (!(sb.field_c == null)) {
                 sb.field_c.h((byte) -98);
             }
-            lh.field_a = new vg(param2, param0, param1, true, true);
+            lh.field_a = new vg(param2, param0, false, true, true);
             sm.field_c.a((n) (Object) lh.field_a, (byte) -99);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "ag.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "ag.D(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -669,40 +669,36 @@ final class ag extends wj {
     }
 
     final static boolean a(int param0, char param1) {
-        int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
+        int stackIn_7_0 = 0;
         int stackOut_6_0 = 0;
-        if (param0 != -2821) {
-          return false;
-        } else {
-          L0: {
-            L1: {
-              if (160 == param1) {
+        int stackOut_5_0 = 0;
+        L0: {
+          L1: {
+            if (160 == param1) {
+              break L1;
+            } else {
+              if (param1 == 32) {
                 break L1;
               } else {
-                if (param1 == 32) {
+                if (95 == param1) {
                   break L1;
                 } else {
-                  if (95 == param1) {
-                    break L1;
+                  if (45 != param1) {
+                    stackOut_6_0 = 0;
+                    stackIn_7_0 = stackOut_6_0;
+                    break L0;
                   } else {
-                    if (45 != param1) {
-                      stackOut_7_0 = 0;
-                      stackIn_8_0 = stackOut_7_0;
-                      break L0;
-                    } else {
-                      break L1;
-                    }
+                    break L1;
                   }
                 }
               }
             }
-            stackOut_6_0 = 1;
-            stackIn_8_0 = stackOut_6_0;
-            break L0;
           }
-          return stackIn_8_0 != 0;
+          stackOut_5_0 = 1;
+          stackIn_7_0 = stackOut_5_0;
+          break L0;
         }
+        return stackIn_7_0 != 0;
     }
 
     final void e(int param0) {

@@ -34,7 +34,7 @@ final class nd extends ig {
         try {
           L0: {
             L1: {
-              var6_int = 1024;
+              var6_int = param5 * param5;
               if (param4 <= -17) {
                 break L1;
               } else {
@@ -43,10 +43,10 @@ final class nd extends ig {
               }
             }
             L2: {
-              var7 = -32 + param1;
-              var8 = 32 + param1;
-              var9 = -32 + param3;
-              var10 = 32 + param3;
+              var7 = -param5 + param1;
+              var8 = param5 + param1;
+              var9 = -param5 + param3;
+              var10 = param5 + param3;
               if (~ti.field_e >= ~var9) {
                 break L2;
               } else {
@@ -204,7 +204,7 @@ final class nd extends ig {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var6, "nd.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + 32 + 41);
+          throw ma.a((Throwable) (Object) var6, "nd.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
@@ -217,7 +217,7 @@ final class nd extends ig {
         }
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_F = null;
         int var1 = -67;
     }
@@ -277,78 +277,71 @@ final class nd extends ig {
 
     final static void a(int param0, java.awt.Canvas param1) {
         RuntimeException var2 = null;
-        Object var3 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           L0: {
             L1: {
-              ah.a((java.awt.Component) (Object) param1, false);
-              sl.a((java.awt.Component) (Object) param1, (byte) 103);
-              if (param0 == -26621) {
-                break L1;
-              } else {
-                var3 = null;
-                break L1;
-              }
-            }
-            L2: {
+              int discarded$36 = 0;
+              ah.a((java.awt.Component) (Object) param1);
+              int discarded$37 = 103;
+              sl.a((java.awt.Component) (Object) param1);
               if (og.field_c != null) {
                 og.field_c.a(24186, (java.awt.Component) (Object) param1);
-                break L2;
+                break L1;
               } else {
-                break L2;
+                break L1;
               }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var2 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var2;
-            stackOut_6_1 = new StringBuilder().append("nd.E(").append(param0).append(44);
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("nd.E(").append(-26621).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
-              break L3;
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
-              break L3;
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
     }
 
-    final static void g(int param0) {
+    final static void g() {
         try {
             Exception var1 = null;
             Throwable decompiledCaughtException = null;

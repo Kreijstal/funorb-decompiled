@@ -75,20 +75,14 @@ final class rr extends at {
         }
     }
 
-    private final void e(int param0) {
+    private final void e() {
         if (((rr) this).field_l != null) {
             id.a(97, ((rr) this).field_l);
             return;
         }
     }
 
-    public static void f(int param0) {
-        if (param0 != -13421) {
-            field_r = null;
-            field_x = null;
-            field_r = null;
-            return;
-        }
+    public static void f() {
         field_x = null;
         field_r = null;
     }
@@ -140,12 +134,7 @@ final class rr extends at {
             var4 = (lh) (Object) param1.b((byte) 90);
             L1: while (true) {
               if (var4 == null) {
-                if (param0 >= 120) {
-                  break L0;
-                } else {
-                  rr.f(63);
-                  return;
-                }
+                break L0;
               } else {
                 L2: {
                   if (!var4.b(true)) {
@@ -167,7 +156,7 @@ final class rr extends at {
           L3: {
             var4_ref = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var4_ref;
-            stackOut_10_1 = new StringBuilder().append("rr.F(").append(param0).append(44);
+            stackOut_10_1 = new StringBuilder().append("rr.F(").append(121).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -251,13 +240,14 @@ final class rr extends at {
           } else {
             var3 = je.a(rt.field_a[20], 256, 128);
             var3.d(-1);
-            ((rr) this).field_l = tw.a(var3, (byte) -36);
+            int discarded$8 = -36;
+            ((rr) this).field_l = tw.a(var3);
             break L0;
           }
         }
-        int fieldTemp$2 = ((rr) this).field_w + 1;
+        int fieldTemp$9 = ((rr) this).field_w + 1;
         ((rr) this).field_w = ((rr) this).field_w + 1;
-        if (((rr) this).field_s > fieldTemp$2) {
+        if (((rr) this).field_s > fieldTemp$9) {
           L1: {
             if (((rr) this).field_w == -15) {
               jja.a(192, -1, 1);
@@ -269,16 +259,18 @@ final class rr extends at {
           if (((rr) this).field_w != 0) {
             return false;
           } else {
-            this.d((byte) 95);
+            int discarded$10 = 95;
+            this.d();
             return false;
           }
         } else {
-          this.e(-119);
+          int discarded$11 = -119;
+          this.e();
           return true;
         }
     }
 
-    private final void d(byte param0) {
+    private final void d() {
         ((rr) this).field_o.a(((rr) this).field_v, ((rr) this).field_n, ((rr) this).field_o.field_B.field_l.a(-27449, ((rr) this).field_j), 0);
         oia var2 = new oia(((rr) this).field_j, ((rr) this).field_v, ((rr) this).field_n);
         ((kj) (Object) var2).a(0);

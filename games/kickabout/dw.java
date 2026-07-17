@@ -77,10 +77,12 @@ final class dw extends Exception {
             }
           } else {
             if (kl.field_h == null) {
-              e.field_m = gf.a(oo.field_c, param1, 480, 0, 640, 0);
+              int discarded$6 = 0;
+              e.field_m = gf.a(oo.field_c, param1, 480, 0, 640);
               if (null != e.field_m) {
                 var2 = 2;
-                lp.a((java.awt.Canvas) (Object) e.field_m, (byte) -64);
+                int discarded$7 = -64;
+                lp.a((java.awt.Canvas) (Object) e.field_m);
                 if (kl.field_h == null) {
                   if (!cv.field_e) {
                     return;
@@ -109,7 +111,8 @@ final class dw extends Exception {
               ar.a(500, 2);
               if (null != e.field_m) {
                 var2 = 2;
-                lp.a((java.awt.Canvas) (Object) e.field_m, (byte) -64);
+                int discarded$8 = -64;
+                lp.a((java.awt.Canvas) (Object) e.field_m);
                 if (kl.field_h == null) {
                   if (!cv.field_e) {
                     return;
@@ -164,7 +167,8 @@ final class dw extends Exception {
             }
           } else {
             if (kl.field_h == null) {
-              e.field_m = gf.a(oo.field_c, param1, 480, 0, 640, 0);
+              int discarded$9 = 0;
+              e.field_m = gf.a(oo.field_c, param1, 480, 0, 640);
               if (null == e.field_m) {
                 L2: {
                   var2 = 3;
@@ -183,7 +187,8 @@ final class dw extends Exception {
               } else {
                 L3: {
                   var2 = 2;
-                  lp.a((java.awt.Canvas) (Object) e.field_m, (byte) -64);
+                  int discarded$10 = -64;
+                  lp.a((java.awt.Canvas) (Object) e.field_m);
                   if (kl.field_h != null) {
                     break L3;
                   } else {
@@ -203,7 +208,8 @@ final class dw extends Exception {
               if (null != e.field_m) {
                 L4: {
                   var2 = 2;
-                  lp.a((java.awt.Canvas) (Object) e.field_m, (byte) -64);
+                  int discarded$11 = -64;
+                  lp.a((java.awt.Canvas) (Object) e.field_m);
                   if (kl.field_h != null) {
                     break L4;
                   } else {

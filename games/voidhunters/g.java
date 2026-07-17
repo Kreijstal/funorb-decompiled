@@ -5,9 +5,6 @@ final class g extends rqa {
     final static void e(int param0) {
         erb.field_p = false;
         hb.field_c = qga.field_b.e((byte) -90) == 0 ? true : false;
-        if (param0 >= -65) {
-            return;
-        }
     }
 
     final nc a(nc[] param0, int param1) {
@@ -77,9 +74,10 @@ final class g extends rqa {
         return stackIn_3_0;
     }
 
-    final static void e(byte param0) {
+    final static void e() {
         System.out.println("load_settings(\"");
-        ug.e((byte) 106);
+        int discarded$0 = 106;
+        ug.e();
         System.out.println("\")");
     }
 

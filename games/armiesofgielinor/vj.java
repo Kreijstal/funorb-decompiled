@@ -17,7 +17,7 @@ final class vj {
     private qb field_f;
     static byte[][] field_j;
 
-    public static void b(int param0) {
+    public static void b() {
         field_n = null;
         field_b = null;
         field_j = null;
@@ -45,14 +45,16 @@ final class vj {
                     ((vj) this).field_e = ((vj) this).field_e - 1;
                     if (param0 < -72) {
                       if (((vj) this).field_e <= 0) {
-                        return this.a((byte) -33);
+                        int discarded$12 = -33;
+                        return this.a();
                       } else {
                         return false;
                       }
                     } else {
                       ((vj) this).field_f = null;
                       if (((vj) this).field_e <= 0) {
-                        return this.a((byte) -33);
+                        int discarded$13 = -33;
+                        return this.a();
                       } else {
                         return false;
                       }
@@ -65,14 +67,16 @@ final class vj {
                     ((vj) this).field_e = ((vj) this).field_e - 1;
                     if (param0 < -72) {
                       if (((vj) this).field_e <= 0) {
-                        return this.a((byte) -33);
+                        int discarded$14 = -33;
+                        return this.a();
                       } else {
                         return false;
                       }
                     } else {
                       ((vj) this).field_f = null;
                       if (((vj) this).field_e <= 0) {
-                        return this.a((byte) -33);
+                        int discarded$15 = -33;
+                        return this.a();
                       } else {
                         return false;
                       }
@@ -95,14 +99,16 @@ final class vj {
                   ((vj) this).field_e = ((vj) this).field_e - 1;
                   if (param0 < -72) {
                     if (((vj) this).field_e <= 0) {
-                      return this.a((byte) -33);
+                      int discarded$16 = -33;
+                      return this.a();
                     } else {
                       return false;
                     }
                   } else {
                     ((vj) this).field_f = null;
                     if (((vj) this).field_e <= 0) {
-                      return this.a((byte) -33);
+                      int discarded$17 = -33;
+                      return this.a();
                     } else {
                       return false;
                     }
@@ -116,14 +122,16 @@ final class vj {
                 ((vj) this).field_e = ((vj) this).field_e - 1;
                 if (param0 < -72) {
                   if (((vj) this).field_e <= 0) {
-                    return this.a((byte) -33);
+                    int discarded$18 = -33;
+                    return this.a();
                   } else {
                     return false;
                   }
                 } else {
                   ((vj) this).field_f = null;
                   if (((vj) this).field_e <= 0) {
-                    return this.a((byte) -33);
+                    int discarded$19 = -33;
+                    return this.a();
                   } else {
                     return false;
                   }
@@ -137,14 +145,16 @@ final class vj {
               ((vj) this).field_e = ((vj) this).field_e - 1;
               if (param0 < -72) {
                 if (((vj) this).field_e <= 0) {
-                  return this.a((byte) -33);
+                  int discarded$20 = -33;
+                  return this.a();
                 } else {
                   return false;
                 }
               } else {
                 ((vj) this).field_f = null;
                 if (((vj) this).field_e <= 0) {
-                  return this.a((byte) -33);
+                  int discarded$21 = -33;
+                  return this.a();
                 } else {
                   return false;
                 }
@@ -158,7 +168,8 @@ final class vj {
             ((vj) this).field_e = ((vj) this).field_e - 1;
             if (param0 < -72) {
               if (((vj) this).field_e <= 0) {
-                return this.a((byte) -33);
+                int discarded$22 = -33;
+                return this.a();
               } else {
                 return false;
               }
@@ -167,7 +178,8 @@ final class vj {
               if (((vj) this).field_e > 0) {
                 return false;
               } else {
-                return this.a((byte) -33);
+                int discarded$23 = -33;
+                return this.a();
               }
             }
           }
@@ -305,7 +317,7 @@ final class vj {
         return stackIn_7_0;
     }
 
-    private final boolean a(byte param0) {
+    private final boolean a() {
         ((vj) this).field_m = ((vj) this).field_m + 1;
         ((vj) this).field_c = true;
         if (((vj) this).field_f.field_a.length <= ((vj) this).field_m) {

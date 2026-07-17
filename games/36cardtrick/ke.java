@@ -36,7 +36,7 @@ final class ke {
             param11 = (16711935 & param3 * (param11 & 16711935) >> 8) - -((16711925 & (param11 & 65280) * param3) >> 8);
             param3 = -param3 + 256;
             var13_int = param2;
-            var14 = 37 % ((param4 - -19) / 61);
+            var14 = 0;
             var15 = -param0;
             L1: while (true) {
               if (var15 >= 0) {
@@ -99,7 +99,7 @@ final class ke {
           L5: {
             var13 = decompiledCaughtException;
             stackOut_18_0 = (RuntimeException) var13;
-            stackOut_18_1 = new StringBuilder().append("ke.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44);
+            stackOut_18_1 = new StringBuilder().append("ke.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(-84).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44);
             stackIn_20_0 = stackOut_18_0;
             stackIn_20_1 = stackOut_18_1;
             stackIn_19_0 = stackOut_18_0;
@@ -153,17 +153,17 @@ final class ke {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
     }
 
-    final static void a(dh param0, int param1, int param2) {
+    final static void a(dh param0) {
         w var5 = null;
         int var4 = 0;
         try {
             var5 = na.field_r;
-            var5.h(param1, 0);
+            var5.h(4, 0);
             var5.field_i = var5.field_i + 1;
             var4 = var5.field_i;
             var5.b(-9469, 1);
@@ -176,7 +176,7 @@ final class ke {
             int discarded$0 = var5.b(var4, (byte) 5);
             var5.f(-var4 + var5.field_i, 8049);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "ke.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 21719 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "ke.D(" + (param0 != null ? "{...}" : "null") + 44 + 4 + 44 + 21719 + 41);
         }
     }
 

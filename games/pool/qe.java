@@ -62,7 +62,10 @@ final class qe extends ma {
     }
 
     final static tc b(boolean param0) {
-        field_K = null;
+        if (!param0) {
+            field_K = null;
+            return w.a(false, 1);
+        }
         return w.a(false, 1);
     }
 
@@ -199,20 +202,15 @@ final class qe extends ma {
         }
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_K = null;
         field_B = null;
         field_r = null;
         field_F = null;
         field_G = null;
-        if (param0 < 100) {
-          return;
-        } else {
-          field_p = null;
-          field_O = null;
-          field_S = null;
-          return;
-        }
+        field_p = null;
+        field_O = null;
+        field_S = null;
     }
 
     final void a(int param0, int param1, int[] param2) {
@@ -287,11 +285,11 @@ final class qe extends ma {
     }
 
     final static void a(int param0, int param1, int param2, boolean param3) {
-        p.a(param3, param2 ^ 40844);
-        hp.a(param1, param3, param0, 30);
-        if (param2 != -40960) {
-            tc discarded$0 = qe.b(false);
-        }
+        int discarded$0 = -116;
+        p.a(param3);
+        int discarded$1 = 30;
+        int discarded$2 = 15;
+        hp.a(13, param3);
     }
 
     final void b(byte param0, ge param1) {
@@ -484,7 +482,7 @@ final class qe extends ma {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        var2 = param0;
+        var2 = 0;
         var3 = im.field_fc;
         if (var3 >= 5) {
           if (var3 >= 105) {
@@ -1576,65 +1574,88 @@ final class qe extends ma {
                       if ((96 & param0) == 0) {
                         break L2;
                       } else {
-                        L3: {
-                          var3 = ((qe) this).field_l & 96;
-                          if (var3 != 0) {
-                            break L3;
+                        var3 = ((qe) this).field_l & 96;
+                        if (var3 != 0) {
+                          if (~var3 != ~param0) {
+                            throw new IllegalStateException("Already made another opponent play/pass choice!");
                           } else {
-                            var3 = param0;
-                            ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
-                            if (var4 == 0) {
-                              break L2;
-                            } else {
-                              break L3;
-                            }
+                            break L2;
                           }
-                        }
-                        if (~var3 != ~param0) {
-                          throw new IllegalStateException("Already made another opponent play/pass choice!");
                         } else {
+                          var3 = param0;
+                          ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
                           break L2;
                         }
                       }
                     }
                   }
-                  L4: {
-                    if (!this.a(-28872, param0)) {
-                      break L4;
+                  if (!this.a(-28872, param0)) {
+                    throw new IllegalStateException("Can't make a choice now!");
+                  } else {
+                    ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
+                    if (param1) {
+                      return;
                     } else {
-                      ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
-                      if (var4 == 0) {
-                        if (param1) {
-                          return;
-                        } else {
-                          ((qe) this).b((byte) 32, (ge) null);
-                          return;
-                        }
-                      } else {
-                        break L4;
-                      }
+                      ((qe) this).b((byte) 32, (ge) null);
+                      return;
                     }
                   }
-                  throw new IllegalStateException("Can't make a choice now!");
                 }
               }
             } else {
               if ((ab.field_g & ((qe) this).field_s) != 0) {
                 if ((param0 & 24) != 0) {
-                  L5: {
+                  L3: {
                     var3 = ((qe) this).field_l & 24;
                     if (var3 == 0) {
                       var3 = param0;
                       ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
-                      break L5;
+                      break L3;
                     } else {
                       if (param0 != var3) {
                         throw new IllegalStateException("Already made another play/pass choice!");
                       } else {
-                        break L5;
+                        break L3;
                       }
                     }
                   }
+                  L4: {
+                    if ((a.field_d & ((qe) this).field_s) == 0) {
+                      break L4;
+                    } else {
+                      if ((96 & param0) == 0) {
+                        break L4;
+                      } else {
+                        var3 = ((qe) this).field_l & 96;
+                        if (var3 != 0) {
+                          if (~var3 != ~param0) {
+                            throw new IllegalStateException("Already made another opponent play/pass choice!");
+                          } else {
+                            break L4;
+                          }
+                        } else {
+                          var3 = param0;
+                          ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
+                          break L4;
+                        }
+                      }
+                    }
+                  }
+                  if (!this.a(-28872, param0)) {
+                    throw new IllegalStateException("Can't make a choice now!");
+                  } else {
+                    ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
+                    L5: {
+                      if (param1) {
+                        break L5;
+                      } else {
+                        ((qe) this).b((byte) 32, (ge) null);
+                        break L5;
+                      }
+                    }
+                    return;
+                  }
+                } else {
                   L6: {
                     if ((a.field_d & ((qe) this).field_s) == 0) {
                       break L6;
@@ -1642,152 +1663,73 @@ final class qe extends ma {
                       if ((96 & param0) == 0) {
                         break L6;
                       } else {
-                        L7: {
-                          var3 = ((qe) this).field_l & 96;
-                          if (var3 != 0) {
-                            break L7;
+                        var3 = ((qe) this).field_l & 96;
+                        if (var3 != 0) {
+                          if (~var3 != ~param0) {
+                            throw new IllegalStateException("Already made another opponent play/pass choice!");
                           } else {
-                            var3 = param0;
-                            ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
-                            if (var4 == 0) {
-                              break L6;
-                            } else {
-                              break L7;
-                            }
+                            break L6;
                           }
-                        }
-                        if (~var3 != ~param0) {
-                          throw new IllegalStateException("Already made another opponent play/pass choice!");
                         } else {
+                          var3 = param0;
+                          ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
                           break L6;
                         }
                       }
                     }
                   }
-                  L8: {
-                    if (!this.a(-28872, param0)) {
+                  if (!this.a(-28872, param0)) {
+                    throw new IllegalStateException("Can't make a choice now!");
+                  } else {
+                    ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
+                    L7: {
+                      if (param1) {
+                        break L7;
+                      } else {
+                        ((qe) this).b((byte) 32, (ge) null);
+                        break L7;
+                      }
+                    }
+                    return;
+                  }
+                }
+              } else {
+                L8: {
+                  if ((a.field_d & ((qe) this).field_s) == 0) {
+                    break L8;
+                  } else {
+                    if ((96 & param0) == 0) {
                       break L8;
                     } else {
-                      ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
-                      if (var4 == 0) {
-                        L9: {
-                          if (param1) {
-                            break L9;
-                          } else {
-                            ((qe) this).b((byte) 32, (ge) null);
-                            break L9;
-                          }
+                      var3 = ((qe) this).field_l & 96;
+                      if (var3 != 0) {
+                        if (~var3 != ~param0) {
+                          throw new IllegalStateException("Already made another opponent play/pass choice!");
+                        } else {
+                          break L8;
                         }
-                        return;
                       } else {
+                        var3 = param0;
+                        ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
                         break L8;
                       }
                     }
                   }
+                }
+                if (!this.a(-28872, param0)) {
                   throw new IllegalStateException("Can't make a choice now!");
                 } else {
-                  L10: {
-                    if ((a.field_d & ((qe) this).field_s) == 0) {
-                      break L10;
+                  ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
+                  L9: {
+                    if (param1) {
+                      break L9;
                     } else {
-                      if ((96 & param0) == 0) {
-                        break L10;
-                      } else {
-                        L11: {
-                          var3 = ((qe) this).field_l & 96;
-                          if (var3 != 0) {
-                            break L11;
-                          } else {
-                            var3 = param0;
-                            ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
-                            if (var4 == 0) {
-                              break L10;
-                            } else {
-                              break L11;
-                            }
-                          }
-                        }
-                        if (~var3 != ~param0) {
-                          throw new IllegalStateException("Already made another opponent play/pass choice!");
-                        } else {
-                          break L10;
-                        }
-                      }
+                      ((qe) this).b((byte) 32, (ge) null);
+                      break L9;
                     }
                   }
-                  L12: {
-                    if (!this.a(-28872, param0)) {
-                      break L12;
-                    } else {
-                      ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
-                      if (var4 == 0) {
-                        L13: {
-                          if (param1) {
-                            break L13;
-                          } else {
-                            ((qe) this).b((byte) 32, (ge) null);
-                            break L13;
-                          }
-                        }
-                        return;
-                      } else {
-                        break L12;
-                      }
-                    }
-                  }
-                  throw new IllegalStateException("Can't make a choice now!");
+                  return;
                 }
-              } else {
-                L14: {
-                  if ((a.field_d & ((qe) this).field_s) == 0) {
-                    break L14;
-                  } else {
-                    if ((96 & param0) == 0) {
-                      break L14;
-                    } else {
-                      L15: {
-                        var3 = ((qe) this).field_l & 96;
-                        if (var3 != 0) {
-                          break L15;
-                        } else {
-                          var3 = param0;
-                          ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
-                          if (var4 == 0) {
-                            break L14;
-                          } else {
-                            break L15;
-                          }
-                        }
-                      }
-                      if (~var3 != ~param0) {
-                        throw new IllegalStateException("Already made another opponent play/pass choice!");
-                      } else {
-                        break L14;
-                      }
-                    }
-                  }
-                }
-                L16: {
-                  if (!this.a(-28872, param0)) {
-                    break L16;
-                  } else {
-                    ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
-                    if (var4 == 0) {
-                      L17: {
-                        if (param1) {
-                          break L17;
-                        } else {
-                          ((qe) this).b((byte) 32, (ge) null);
-                          break L17;
-                        }
-                      }
-                      return;
-                    } else {
-                      break L16;
-                    }
-                  }
-                }
-                throw new IllegalStateException("Can't make a choice now!");
               }
             }
           }
@@ -1796,45 +1738,44 @@ final class qe extends ma {
           if ((param0 & 24) != 0) {
             var3 = ((qe) this).field_l & 24;
             if (var3 == 0) {
-              L18: {
+              L10: {
                 var3 = param0;
                 ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
                 if ((a.field_d & ((qe) this).field_s) == 0) {
-                  break L18;
+                  break L10;
                 } else {
                   if ((96 & param0) == 0) {
-                    break L18;
+                    break L10;
                   } else {
-                    L19: {
-                      var3 = ((qe) this).field_l & 96;
-                      if (var3 != 0) {
-                        break L19;
+                    var3 = ((qe) this).field_l & 96;
+                    if (var3 != 0) {
+                      if (~var3 != ~param0) {
+                        throw new IllegalStateException("Already made another opponent play/pass choice!");
                       } else {
-                        var3 = param0;
-                        ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
-                        if (var4 == 0) {
-                          break L18;
+                        if (!this.a(-28872, param0)) {
+                          throw new IllegalStateException("Can't make a choice now!");
                         } else {
-                          break L19;
-                        }
-                      }
-                    }
-                    if (~var3 != ~param0) {
-                      throw new IllegalStateException("Already made another opponent play/pass choice!");
-                    } else {
-                      if (!this.a(-28872, param0)) {
-                        throw new IllegalStateException("Can't make a choice now!");
-                      } else {
-                        ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
-                        if (var4 == 0) {
+                          ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
                           if (param1) {
                             return;
                           } else {
                             ((qe) this).b((byte) 32, (ge) null);
                             return;
                           }
+                        }
+                      }
+                    } else {
+                      var3 = param0;
+                      ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
+                      if (!this.a(-28872, param0)) {
+                        throw new IllegalStateException("Can't make a choice now!");
+                      } else {
+                        ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
+                        if (param1) {
+                          return;
                         } else {
-                          throw new IllegalStateException("Can't make a choice now!");
+                          ((qe) this).b((byte) 32, (ge) null);
+                          return;
                         }
                       }
                     }
@@ -1845,66 +1786,58 @@ final class qe extends ma {
                 throw new IllegalStateException("Can't make a choice now!");
               } else {
                 ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
-                if (var4 == 0) {
-                  if (param1) {
-                    return;
-                  } else {
-                    ((qe) this).b((byte) 32, (ge) null);
-                    return;
-                  }
+                if (param1) {
+                  return;
                 } else {
-                  throw new IllegalStateException("Can't make a choice now!");
+                  ((qe) this).b((byte) 32, (ge) null);
+                  return;
                 }
               }
             } else {
               if (param0 != var3) {
                 throw new IllegalStateException("Already made another play/pass choice!");
               } else {
-                L20: {
+                L11: {
                   if ((a.field_d & ((qe) this).field_s) == 0) {
-                    break L20;
+                    break L11;
                   } else {
                     if ((96 & param0) == 0) {
-                      break L20;
+                      break L11;
                     } else {
-                      L21: {
-                        var3 = ((qe) this).field_l & 96;
-                        if (var3 != 0) {
-                          break L21;
+                      var3 = ((qe) this).field_l & 96;
+                      if (var3 != 0) {
+                        if (~var3 != ~param0) {
+                          throw new IllegalStateException("Already made another opponent play/pass choice!");
                         } else {
-                          var3 = param0;
-                          ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
-                          if (var4 == 0) {
-                            break L20;
-                          } else {
-                            break L21;
-                          }
-                        }
-                      }
-                      if (~var3 != ~param0) {
-                        throw new IllegalStateException("Already made another opponent play/pass choice!");
-                      } else {
-                        L22: {
                           if (!this.a(-28872, param0)) {
-                            break L22;
+                            throw new IllegalStateException("Can't make a choice now!");
                           } else {
                             ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
-                            if (var4 == 0) {
-                              L23: {
-                                if (param1) {
-                                  break L23;
-                                } else {
-                                  ((qe) this).b((byte) 32, (ge) null);
-                                  break L23;
-                                }
-                              }
+                            if (param1) {
                               return;
                             } else {
-                              break L22;
+                              ((qe) this).b((byte) 32, (ge) null);
+                              return;
                             }
                           }
                         }
-                        throw new IllegalStateException("Can't make a choice now!");
+                      } else {
+                        var3 = param0;
+                        ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
+                        if (!this.a(-28872, param0)) {
+                          throw new IllegalStateException("Can't make a choice now!");
+                        } else {
+                          ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
+                          L12: {
+                            if (param1) {
+                              break L12;
+                            } else {
+                              ((qe) this).b((byte) 32, (ge) null);
+                              break L12;
+                            }
+                          }
+                          return;
+                        }
                       }
                     }
                   }
@@ -1913,57 +1846,52 @@ final class qe extends ma {
                   throw new IllegalStateException("Can't make a choice now!");
                 } else {
                   ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
-                  if (var4 == 0) {
-                    if (param1) {
-                      return;
-                    } else {
-                      ((qe) this).b((byte) 32, (ge) null);
-                      return;
-                    }
+                  if (param1) {
+                    return;
                   } else {
-                    throw new IllegalStateException("Can't make a choice now!");
+                    ((qe) this).b((byte) 32, (ge) null);
+                    return;
                   }
                 }
               }
             }
           } else {
-            L24: {
+            L13: {
               if ((a.field_d & ((qe) this).field_s) == 0) {
-                break L24;
+                break L13;
               } else {
                 if ((96 & param0) == 0) {
-                  break L24;
+                  break L13;
                 } else {
-                  L25: {
-                    var3 = ((qe) this).field_l & 96;
-                    if (var3 != 0) {
-                      break L25;
+                  var3 = ((qe) this).field_l & 96;
+                  if (var3 != 0) {
+                    if (~var3 != ~param0) {
+                      throw new IllegalStateException("Already made another opponent play/pass choice!");
                     } else {
-                      var3 = param0;
-                      ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
-                      if (var4 == 0) {
-                        break L24;
+                      if (!this.a(-28872, param0)) {
+                        throw new IllegalStateException("Can't make a choice now!");
                       } else {
-                        break L25;
-                      }
-                    }
-                  }
-                  if (~var3 != ~param0) {
-                    throw new IllegalStateException("Already made another opponent play/pass choice!");
-                  } else {
-                    if (!this.a(-28872, param0)) {
-                      throw new IllegalStateException("Can't make a choice now!");
-                    } else {
-                      ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
-                      if (var4 == 0) {
+                        ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
                         if (param1) {
                           return;
                         } else {
                           ((qe) this).b((byte) 32, (ge) null);
                           return;
                         }
+                      }
+                    }
+                  } else {
+                    var3 = param0;
+                    ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
+                    if (!this.a(-28872, param0)) {
+                      throw new IllegalStateException("Can't make a choice now!");
+                    } else {
+                      ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
+                      if (param1) {
+                        return;
                       } else {
-                        throw new IllegalStateException("Can't make a choice now!");
+                        ((qe) this).b((byte) 32, (ge) null);
+                        return;
                       }
                     }
                   }
@@ -1974,56 +1902,51 @@ final class qe extends ma {
               throw new IllegalStateException("Can't make a choice now!");
             } else {
               ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
-              if (var4 == 0) {
-                if (param1) {
-                  return;
-                } else {
-                  ((qe) this).b((byte) 32, (ge) null);
-                  return;
-                }
+              if (param1) {
+                return;
               } else {
-                throw new IllegalStateException("Can't make a choice now!");
+                ((qe) this).b((byte) 32, (ge) null);
+                return;
               }
             }
           }
         } else {
-          L26: {
+          L14: {
             if ((a.field_d & ((qe) this).field_s) == 0) {
-              break L26;
+              break L14;
             } else {
               if ((96 & param0) == 0) {
-                break L26;
+                break L14;
               } else {
-                L27: {
-                  var3 = ((qe) this).field_l & 96;
-                  if (var3 != 0) {
-                    break L27;
+                var3 = ((qe) this).field_l & 96;
+                if (var3 != 0) {
+                  if (~var3 != ~param0) {
+                    throw new IllegalStateException("Already made another opponent play/pass choice!");
                   } else {
-                    var3 = param0;
-                    ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
-                    if (var4 == 0) {
-                      break L26;
+                    if (!this.a(-28872, param0)) {
+                      throw new IllegalStateException("Can't make a choice now!");
                     } else {
-                      break L27;
-                    }
-                  }
-                }
-                if (~var3 != ~param0) {
-                  throw new IllegalStateException("Already made another opponent play/pass choice!");
-                } else {
-                  if (!this.a(-28872, param0)) {
-                    throw new IllegalStateException("Can't make a choice now!");
-                  } else {
-                    ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
-                    if (var4 == 0) {
+                      ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
                       if (param1) {
                         return;
                       } else {
                         ((qe) this).b((byte) 32, (ge) null);
                         return;
                       }
+                    }
+                  }
+                } else {
+                  var3 = param0;
+                  ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
+                  if (!this.a(-28872, param0)) {
+                    throw new IllegalStateException("Can't make a choice now!");
+                  } else {
+                    ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
+                    if (param1) {
+                      return;
                     } else {
-                      throw new IllegalStateException("Can't make a choice now!");
+                      ((qe) this).b((byte) 32, (ge) null);
+                      return;
                     }
                   }
                 }
@@ -2034,15 +1957,11 @@ final class qe extends ma {
             throw new IllegalStateException("Can't make a choice now!");
           } else {
             ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
-            if (var4 == 0) {
-              if (param1) {
-                return;
-              } else {
-                ((qe) this).b((byte) 32, (ge) null);
-                return;
-              }
+            if (param1) {
+              return;
             } else {
-              throw new IllegalStateException("Can't make a choice now!");
+              ((qe) this).b((byte) 32, (ge) null);
+              return;
             }
           }
         }
@@ -2142,10 +2061,7 @@ final class qe extends ma {
     }
 
     final static String a(boolean param0, char param1) {
-        if (param0) {
-            return null;
-        }
-        return String.valueOf('ﾨ');
+        return String.valueOf(param1);
     }
 
     final void c(int param0, int param1) {

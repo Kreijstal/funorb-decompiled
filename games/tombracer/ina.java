@@ -12,7 +12,7 @@ final class ina {
     float field_i;
     static jpa[] field_c;
 
-    final static void a(ha param0, int param1) {
+    final static void a(ha param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -197,11 +197,12 @@ final class ina {
         try {
           L0: {
             L1: {
-              this.a(param0, -1, param4, param2, param3, (byte) -108);
+              int discarded$4 = -108;
+              this.a(param0, -1, param4, param2, param3);
               if (param1 == -36) {
                 break L1;
               } else {
-                boolean discarded$2 = ((ina) this).a((byte) 90);
+                boolean discarded$5 = ((ina) this).a((byte) 90);
                 break L1;
               }
             }
@@ -314,7 +315,7 @@ final class ina {
         }
     }
 
-    private final void a(String param0, int param1, String param2, String param3, cn param4, byte param5) {
+    private final void a(String param0, int param1, String param2, String param3, cn param4) {
         lt[] var9 = null;
         if (((ina) this).field_h.length <= ((ina) this).field_e) {
             var9 = new lt[((ina) this).field_e * 2];
@@ -328,90 +329,81 @@ final class ina {
         try {
             var10.field_h = param4;
             var10.field_e = param2;
-            var10.field_d = param1;
+            var10.field_d = -1;
             var10.field_g = param3;
             var10.field_c = param0;
             int fieldTemp$0 = ((ina) this).field_e;
             ((ina) this).field_e = ((ina) this).field_e + 1;
             ((ina) this).field_h[fieldTemp$0] = var8;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "ina.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + -108 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "ina.E(" + (param0 != null ? "{...}" : "null") + 44 + -1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + -108 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
-        if (param0 <= 20) {
-            return;
-        }
         field_c = null;
     }
 
     final static String a(byte param0, CharSequence param1) {
         RuntimeException var2 = null;
-        String stackIn_3_0 = null;
+        String stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String stackOut_2_0 = null;
+        String stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              if (param0 == -16) {
-                break L1;
-              } else {
-                ina.a(46);
-                break L1;
-              }
-            }
-            stackOut_2_0 = on.a(param1, (byte) -91, false);
-            stackIn_3_0 = stackOut_2_0;
+            int discarded$4 = 0;
+            int discarded$5 = -91;
+            stackOut_0_0 = on.a(param1);
+            stackIn_1_0 = stackOut_0_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var2 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var2;
-            stackOut_4_1 = new StringBuilder().append("ina.H(").append(param0).append(44);
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_1 = new StringBuilder().append("ina.H(").append(-16).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L2;
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L2;
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
         }
-        return stackIn_3_0;
+        return stackIn_1_0;
     }
 
     private final void a(lt param0, int param1, int param2) {
@@ -530,7 +522,8 @@ final class ina {
         try {
           L0: {
             L1: {
-              this.a(param3, -1, param2, (String) null, param1, (byte) -108);
+              int discarded$2 = -108;
+              this.a(param3, -1, param2, (String) null, param1);
               if (param0 == 256) {
                 break L1;
               } else {

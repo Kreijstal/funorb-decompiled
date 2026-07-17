@@ -126,7 +126,7 @@ final class sj implements fc {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_j = null;
         field_f = null;
         field_c = null;

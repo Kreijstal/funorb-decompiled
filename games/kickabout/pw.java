@@ -706,7 +706,7 @@ final class pw extends i {
           var12 = Kickabout.field_G;
           super.a((byte) -124, param1, param2);
           wk.field_c.a(150 + param2, 23, param1 + 98);
-          int discarded$1 = pb.field_C.a(qa.field_G, 25 + param1, param2 + 270, 150, 40, 16729156, -1, 1, 1, 0);
+          int discarded$2 = pb.field_C.a(qa.field_G, 25 + param1, param2 + 270, 150, 40, 16729156, -1, 1, 1, 0);
           if (param0 <= -11) {
             break L0;
           } else {
@@ -732,7 +732,8 @@ final class pw extends i {
           on.a(var4, var9, 260, 120, 10, 65793, 128);
           un.field_d.d(gl.field_f.toLowerCase(), 130 + var4, 21 + var6, 16777215, -1);
           un.field_d.d(Kickabout.field_F.toLowerCase(), var4 - -130, var9 + 21, 16777215, -1);
-          if (pn.g(2368)) {
+          int discarded$3 = 2368;
+          if (pn.g()) {
             if (nj.a(-51) % 500L < 250L) {
               stackOut_6_0 = 1;
               stackIn_8_0 = stackOut_6_0;
@@ -873,11 +874,14 @@ final class pw extends i {
           ng.field_e = true;
           wk.field_c = tu.field_E.field_i[bi.field_m];
           an.field_c = su.a((byte) -107, wk.field_c);
-          qd.field_g = af.a(wk.field_c, -31);
+          int discarded$3 = -31;
+          qd.field_g = af.a(wk.field_c);
           ad.field_f = an.field_c;
           kt.field_l = 8;
-          if (gp.a(wk.field_c, -576054046) > 0) {
-            stackOut_2_0 = gp.a(wk.field_c, -576054046);
+          int discarded$4 = -576054046;
+          if (gp.a(wk.field_c) > 0) {
+            int discarded$5 = -576054046;
+            stackOut_2_0 = gp.a(wk.field_c);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           } else {
@@ -968,7 +972,7 @@ final class pw extends i {
         }
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_J = null;
         field_G = null;
         field_H = null;

@@ -11,7 +11,7 @@ final class sj {
     static java.util.zip.CRC32 field_b;
     static int field_f;
 
-    final static tl a(int param0, String param1, byte param2) {
+    final static tl a(int param0, String param1) {
         wf var3 = null;
         RuntimeException var3_ref = null;
         wf stackIn_1_0 = null;
@@ -74,22 +74,22 @@ final class sj {
         return (tl) (Object) stackIn_1_0;
     }
 
-    final static void a(dl param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, byte param8) {
+    final static void a(dl param0) {
         try {
-            wn.field_c = param4;
+            wn.field_c = 107;
             a.field_c = param0;
-            o.field_f = param7;
-            field_f = param3;
-            kl.field_U = param1;
-            sc.field_h = param5;
-            fk.field_u = param6;
-            km.field_e = param2;
+            o.field_f = 2500;
+            field_f = 10;
+            kl.field_U = -2;
+            sc.field_h = 71;
+            fk.field_u = 40;
+            km.field_e = 17;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "sj.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + 113 + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "sj.A(" + (param0 != null ? "{...}" : "null") + 44 + -2 + 44 + 17 + 44 + 10 + 44 + 107 + 44 + 71 + 44 + 40 + 44 + 2500 + 44 + 113 + 41);
         }
     }
 
-    final static dl a(int param0, int param1, db param2, int param3) {
+    final static dl a(int param0, int param1, db param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
@@ -114,9 +114,10 @@ final class sj {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var4_int = 13 % ((-38 - param3) / 55);
+            var4_int = 0;
             if (gm.a(param2, param0, true, param1)) {
-              stackOut_3_0 = tn.b(true);
+              int discarded$2 = 1;
+              stackOut_3_0 = tn.b();
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -153,7 +154,7 @@ final class sj {
               break L1;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param3 + 41);
+          throw dn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 28 + 41);
         }
         return stackIn_4_0;
     }
@@ -167,13 +168,9 @@ final class sj {
         ((sj) this).field_e = param0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
-        if (param0 != 21732) {
-            Object var2 = null;
-            dl discarded$0 = sj.a(-71, -36, (db) null, -87);
-        }
     }
 
     static {

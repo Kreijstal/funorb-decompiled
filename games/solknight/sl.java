@@ -206,8 +206,8 @@ final class sl extends gg {
                                       }
                                     }
                                     stackIn_40_0[stackIn_40_1] = stackIn_40_2 != 0;
-                                    int discarded$3 = sl.d(16);
                                     int discarded$4 = sl.d(16);
+                                    int discarded$5 = sl.d(16);
                                     field_j[var6] = sl.d(8);
                                     var6++;
                                     continue L6;
@@ -232,7 +232,7 @@ final class sl extends gg {
                       }
                     }
                   } else {
-                    int discarded$5 = sl.d(16);
+                    int discarded$6 = sl.d(16);
                     var3++;
                     continue L2;
                   }
@@ -292,7 +292,8 @@ final class sl extends gg {
                               continue L0;
                             }
                           } else {
-                            var9[var11] = ef.a(var11, var10, (byte) 69);
+                            int discarded$7 = 69;
+                            var9[var11] = ef.a(var11, var10);
                             var11++;
                             continue L12;
                           }

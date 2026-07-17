@@ -155,17 +155,21 @@ final class qp extends we {
     }
 
     final static int c(int param0, int param1, int param2) {
-        param1 = (127 & param0) * param1 >> 7;
-        if (2 <= param1) {
-          if (param1 <= 126) {
-            return (65408 & param0) - -param1;
+        if (param2 > 116) {
+          param1 = (127 & param0) * param1 >> 7;
+          if (2 <= param1) {
+            if (param1 <= 126) {
+              return (65408 & param0) - -param1;
+            } else {
+              param1 = 126;
+              return (65408 & param0) - -param1;
+            }
           } else {
-            param1 = 126;
+            param1 = 2;
             return (65408 & param0) - -param1;
           }
         } else {
-          param1 = 2;
-          return (65408 & param0) - -param1;
+          return -119;
         }
     }
 
@@ -411,7 +415,7 @@ final class qp extends we {
         }
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_r = null;
         field_v = null;
     }

@@ -186,11 +186,12 @@ final class nl extends aj {
         }
     }
 
-    final static void a(java.math.BigInteger param0, jc param1, jc param2, java.math.BigInteger param3, int param4) {
+    final static void a(java.math.BigInteger param0, jc param1, jc param2, java.math.BigInteger param3) {
         try {
-            bl.a(0, param1.field_l, param0, param2, param1.field_g, param3, param4);
+            int discarded$0 = 0;
+            bl.a(0, param1.field_l, param0, param2, param1.field_g, param3);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "nl.K(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
+            throw kg.a((Throwable) (Object) runtimeException, "nl.K(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + 0 + 41);
         }
     }
 
@@ -547,7 +548,7 @@ final class nl extends aj {
         return dupTemp$0;
     }
 
-    final static int b(int param0) {
+    final static int b() {
         return (qe.field_m << 2) + (ca.field_D << 4) - -el.field_t;
     }
 
@@ -558,16 +559,20 @@ final class nl extends aj {
         }
     }
 
-    final static void a(boolean param0, int param1, int param2, int param3, int param4, boolean param5, boolean param6, int param7, int param8, int param9, boolean param10, boolean param11, int param12, int param13) {
+    final static void a(boolean param0, int param1, int param2, int param3, int param4, boolean param5, boolean param6, int param7, int param8, int param9, boolean param10, boolean param11) {
         wc.field_g = null;
-        qk.b((byte) 59);
-        param0 = mc.a(param4, param0, false, param3, param1, param2, param9);
-        if (param12 != 0) {
-            return;
-        }
-        ha.a(param2, param10, param11, 104, param6, param7, param8, param5, param0, 16777215);
+        int discarded$0 = 59;
+        qk.b();
+        int discarded$1 = 15;
+        int discarded$2 = 11;
+        int discarded$3 = 14;
+        int discarded$4 = 0;
+        int discarded$5 = 0;
+        param0 = mc.a(13, param0);
+        int discarded$6 = 16777215;
+        ha.a(11, param10, param11, 104, true, 16777215, param8, param5, param0);
         eg.a(param8, -98, param10);
-        ac.a(param8, -1, param3, param0);
+        ac.a(param8, -1, 0, param0);
     }
 
     public nl() {
@@ -619,73 +624,69 @@ final class nl extends aj {
         var7 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
-            if (param0 == 3) {
-              L1: {
-                super.a(0, (aj) (Object) param2);
-                if (param1) {
-                  var4_int = 0;
-                  L2: while (true) {
-                    if (var4_int >= 6) {
-                      break L1;
-                    } else {
-                      L3: {
-                        var5 = ((nl) this).field_w[var4_int];
-                        if (var5 != null) {
-                          L4: {
-                            var6 = param2.field_w[var4_int];
-                            stackOut_9_0 = (jj) var5;
-                            stackOut_9_1 = param0 + 13595;
-                            stackIn_11_0 = stackOut_9_0;
-                            stackIn_11_1 = stackOut_9_1;
-                            stackIn_10_0 = stackOut_9_0;
-                            stackIn_10_1 = stackOut_9_1;
-                            if (var6 == null) {
-                              jj dupTemp$25 = new jj();
-                              param2.field_w[var4_int] = dupTemp$25;
-                              stackOut_11_0 = (jj) (Object) stackIn_11_0;
-                              stackOut_11_1 = stackIn_11_1;
-                              stackOut_11_2 = (jj) dupTemp$25;
-                              stackIn_12_0 = stackOut_11_0;
-                              stackIn_12_1 = stackOut_11_1;
-                              stackIn_12_2 = stackOut_11_2;
-                              break L4;
-                            } else {
-                              stackOut_10_0 = (jj) (Object) stackIn_10_0;
-                              stackOut_10_1 = stackIn_10_1;
-                              stackOut_10_2 = (jj) var6;
-                              stackIn_12_0 = stackOut_10_0;
-                              stackIn_12_1 = stackOut_10_1;
-                              stackIn_12_2 = stackOut_10_2;
-                              break L4;
-                            }
+            L1: {
+              super.a(0, (aj) (Object) param2);
+              if (param1) {
+                var4_int = 0;
+                L2: while (true) {
+                  if (var4_int >= 6) {
+                    break L1;
+                  } else {
+                    L3: {
+                      var5 = ((nl) this).field_w[var4_int];
+                      if (var5 != null) {
+                        L4: {
+                          var6 = param2.field_w[var4_int];
+                          stackOut_9_0 = (jj) var5;
+                          stackOut_9_1 = 13598;
+                          stackIn_11_0 = stackOut_9_0;
+                          stackIn_11_1 = stackOut_9_1;
+                          stackIn_10_0 = stackOut_9_0;
+                          stackIn_10_1 = stackOut_9_1;
+                          if (var6 == null) {
+                            jj dupTemp$25 = new jj();
+                            param2.field_w[var4_int] = dupTemp$25;
+                            stackOut_11_0 = (jj) (Object) stackIn_11_0;
+                            stackOut_11_1 = stackIn_11_1;
+                            stackOut_11_2 = (jj) dupTemp$25;
+                            stackIn_12_0 = stackOut_11_0;
+                            stackIn_12_1 = stackOut_11_1;
+                            stackIn_12_2 = stackOut_11_2;
+                            break L4;
+                          } else {
+                            stackOut_10_0 = (jj) (Object) stackIn_10_0;
+                            stackOut_10_1 = stackIn_10_1;
+                            stackOut_10_2 = (jj) var6;
+                            stackIn_12_0 = stackOut_10_0;
+                            stackIn_12_1 = stackOut_10_1;
+                            stackIn_12_2 = stackOut_10_2;
+                            break L4;
                           }
-                          ((jj) (Object) stackIn_12_0).a(stackIn_12_1, stackIn_12_2);
-                          break L3;
-                        } else {
-                          param2.field_w[var4_int] = null;
-                          break L3;
                         }
+                        ((jj) (Object) stackIn_12_0).a(stackIn_12_1, stackIn_12_2);
+                        break L3;
+                      } else {
+                        param2.field_w[var4_int] = null;
+                        break L3;
                       }
-                      var4_int++;
-                      continue L2;
                     }
+                    var4_int++;
+                    continue L2;
                   }
-                } else {
-                  ek.a((Object[]) (Object) ((nl) this).field_w, 0, (Object[]) (Object) param2.field_w, 0, 6);
-                  break L1;
                 }
+              } else {
+                ek.a((Object[]) (Object) ((nl) this).field_w, 0, (Object[]) (Object) param2.field_w, 0, 6);
+                break L1;
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var4;
-            stackOut_15_1 = new StringBuilder().append("nl.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_15_1 = new StringBuilder().append("nl.C(").append(3).append(44).append(param1).append(44);
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;

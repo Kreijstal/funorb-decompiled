@@ -271,59 +271,55 @@ final class fk extends lb {
         var7 = CrazyCrystals.field_B;
         try {
           L0: {
-            if (param1 == 6) {
-              L1: {
-                super.a((byte) 119, (lb) (Object) param0);
-                if (param2) {
-                  var4_int = 0;
-                  L2: while (true) {
-                    if (6 <= var4_int) {
-                      break L1;
-                    } else {
-                      L3: {
-                        var5 = ((fk) this).field_r[var4_int];
-                        if (var5 == null) {
-                          param0.field_r[var4_int] = null;
-                          break L3;
-                        } else {
-                          L4: {
-                            var6 = param0.field_r[var4_int];
-                            stackOut_8_0 = (pm) var5;
-                            stackIn_10_0 = stackOut_8_0;
-                            stackIn_9_0 = stackOut_8_0;
-                            if (var6 == null) {
-                              pm dupTemp$17 = new pm();
-                              param0.field_r[var4_int] = dupTemp$17;
-                              stackOut_10_0 = (pm) (Object) stackIn_10_0;
-                              stackOut_10_1 = (pm) dupTemp$17;
-                              stackIn_11_0 = stackOut_10_0;
-                              stackIn_11_1 = stackOut_10_1;
-                              break L4;
-                            } else {
-                              stackOut_9_0 = (pm) (Object) stackIn_9_0;
-                              stackOut_9_1 = (pm) var6;
-                              stackIn_11_0 = stackOut_9_0;
-                              stackIn_11_1 = stackOut_9_1;
-                              break L4;
-                            }
+            L1: {
+              super.a((byte) 119, (lb) (Object) param0);
+              if (param2) {
+                var4_int = 0;
+                L2: while (true) {
+                  if (6 <= var4_int) {
+                    break L1;
+                  } else {
+                    L3: {
+                      var5 = ((fk) this).field_r[var4_int];
+                      if (var5 == null) {
+                        param0.field_r[var4_int] = null;
+                        break L3;
+                      } else {
+                        L4: {
+                          var6 = param0.field_r[var4_int];
+                          stackOut_8_0 = (pm) var5;
+                          stackIn_10_0 = stackOut_8_0;
+                          stackIn_9_0 = stackOut_8_0;
+                          if (var6 == null) {
+                            pm dupTemp$17 = new pm();
+                            param0.field_r[var4_int] = dupTemp$17;
+                            stackOut_10_0 = (pm) (Object) stackIn_10_0;
+                            stackOut_10_1 = (pm) dupTemp$17;
+                            stackIn_11_0 = stackOut_10_0;
+                            stackIn_11_1 = stackOut_10_1;
+                            break L4;
+                          } else {
+                            stackOut_9_0 = (pm) (Object) stackIn_9_0;
+                            stackOut_9_1 = (pm) var6;
+                            stackIn_11_0 = stackOut_9_0;
+                            stackIn_11_1 = stackOut_9_1;
+                            break L4;
                           }
-                          ((pm) (Object) stackIn_11_0).a(stackIn_11_1, -127);
-                          break L3;
                         }
+                        ((pm) (Object) stackIn_11_0).a(stackIn_11_1, -127);
+                        break L3;
                       }
-                      var4_int++;
-                      continue L2;
                     }
+                    var4_int++;
+                    continue L2;
                   }
-                } else {
-                  eg.a((Object[]) (Object) ((fk) this).field_r, 0, (Object[]) (Object) param0.field_r, 0, 6);
-                  break L1;
                 }
+              } else {
+                eg.a((Object[]) (Object) ((fk) this).field_r, 0, (Object[]) (Object) param0.field_r, 0, 6);
+                break L1;
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -353,7 +349,7 @@ final class fk extends lb {
               break L5;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param1 + 44 + param2 + 41);
+          throw dn.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + 6 + 44 + param2 + 41);
         }
     }
 

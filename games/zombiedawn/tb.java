@@ -14,13 +14,13 @@ class tb extends an {
     private long field_J;
     static dj field_K;
 
-    private final void c(boolean param0) {
+    private final void c() {
         if (!(!(((tb) this).field_v instanceof ok))) {
             ((ok) (Object) ((tb) this).field_v).b((tb) this, -19);
         }
     }
 
-    private final int b(boolean param0) {
+    private final int b() {
         int var2 = 0;
         int var3 = 0;
         var3 = ZombieDawn.field_J;
@@ -46,7 +46,7 @@ class tb extends an {
         }
     }
 
-    private final void g(byte param0) {
+    private final void g() {
         this.k(-127);
         this.h(121);
     }
@@ -195,9 +195,10 @@ class tb extends an {
         try {
           L0: {
             L1: {
-              var5_int = 108 / ((46 - param1) / 42);
+              var5_int = -108;
               super.a(param0, (byte) 119, param2, param3);
-              this.i(-94);
+              int discarded$2 = -94;
+              this.i();
               if (1 != ((tb) this).field_m) {
                 break L1;
               } else {
@@ -265,7 +266,7 @@ class tb extends an {
               break L4;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw sh.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + 121 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -292,7 +293,7 @@ class tb extends an {
         }
     }
 
-    private final int f(byte param0) {
+    private final int f() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -361,7 +362,7 @@ class tb extends an {
         }
     }
 
-    private final void a(String param0, byte param1) {
+    private final void a(String param0) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_10_0 = null;
@@ -447,7 +448,6 @@ class tb extends an {
         int var3 = 0;
         int var4 = 0;
         int stackIn_5_0 = 0;
-        int stackIn_9_0 = 0;
         int stackIn_11_0 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -458,7 +458,6 @@ class tb extends an {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         int stackOut_10_0 = 0;
-        int stackOut_8_0 = 0;
         int stackOut_4_0 = 0;
         RuntimeException stackOut_12_0 = null;
         StringBuilder stackOut_12_1 = null;
@@ -475,15 +474,9 @@ class tb extends an {
             var3 = 1;
             L1: while (true) {
               if (var3 >= param1.length()) {
-                if (param0 == -10723) {
-                  stackOut_10_0 = 1;
-                  stackIn_11_0 = stackOut_10_0;
-                  break L0;
-                } else {
-                  stackOut_8_0 = 0;
-                  stackIn_9_0 = stackOut_8_0;
-                  return stackIn_9_0 != 0;
-                }
+                stackOut_10_0 = 1;
+                stackIn_11_0 = stackOut_10_0;
+                break L0;
               } else {
                 if (param1.charAt(var3) == var2_int) {
                   var3++;
@@ -501,7 +494,7 @@ class tb extends an {
           L2: {
             var2 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var2;
-            stackOut_12_1 = new StringBuilder().append("tb.S(").append(param0).append(44);
+            stackOut_12_1 = new StringBuilder().append("tb.S(").append(-10723).append(44);
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -547,7 +540,8 @@ class tb extends an {
               L0: {
                 var3_ref = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
                 this.h(127);
-                this.a(var3_ref, (byte) -37);
+                int discarded$1 = -37;
+                this.a(var3_ref);
                 break L0;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -665,8 +659,10 @@ class tb extends an {
                     ((tb) this).field_F = stackIn_9_1 != 0;
                     if (((tb) this).field_F) {
                       L5: {
-                        ((tb) this).field_H = this.b(true);
-                        ((tb) this).field_N = this.f((byte) 7);
+                        int discarded$2 = 1;
+                        ((tb) this).field_H = this.b();
+                        int discarded$3 = 7;
+                        ((tb) this).field_N = this.f();
                         if (((tb) this).field_N <= 0) {
                           break L5;
                         } else {
@@ -736,7 +732,7 @@ class tb extends an {
         return stackIn_21_0 != 0;
     }
 
-    private final void i(int param0) {
+    private final void i() {
         vg var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -1084,9 +1080,9 @@ class tb extends an {
                             break L5;
                           } else {
                             ((tb) this).field_o = ((tb) this).field_o + param3;
-                            int dupTemp$1 = ((tb) this).field_o.length();
-                            ((tb) this).field_N = dupTemp$1;
-                            ((tb) this).field_H = dupTemp$1;
+                            int dupTemp$5 = ((tb) this).field_o.length();
+                            ((tb) this).field_N = dupTemp$5;
+                            ((tb) this).field_H = dupTemp$5;
                             break L5;
                           }
                         }
@@ -1118,8 +1114,9 @@ class tb extends an {
                                 stackIn_62_1 = stackOut_61_1;
                                 break L7;
                               } else {
+                                int discarded$6 = 1;
                                 stackOut_60_0 = this;
-                                stackOut_60_1 = this.b(true);
+                                stackOut_60_1 = this.b();
                                 stackIn_62_0 = stackOut_60_0;
                                 stackIn_62_1 = stackOut_60_1;
                                 break L7;
@@ -1147,7 +1144,8 @@ class tb extends an {
                                       break L8;
                                     } else {
                                       if (65 == param1) {
-                                        this.g((byte) -58);
+                                        int discarded$7 = -58;
+                                        this.g();
                                         stackOut_53_0 = 1;
                                         stackIn_54_0 = stackOut_53_0;
                                         return stackIn_54_0 != 0;
@@ -1183,7 +1181,8 @@ class tb extends an {
                                     }
                                   }
                                 } else {
-                                  this.c(false);
+                                  int discarded$8 = 0;
+                                  this.c();
                                   stackOut_40_0 = 1;
                                   stackIn_41_0 = stackOut_40_0;
                                   return stackIn_41_0 != 0;
@@ -1208,8 +1207,9 @@ class tb extends an {
                                   stackIn_33_1 = stackOut_32_1;
                                   break L10;
                                 } else {
+                                  int discarded$9 = 7;
                                   stackOut_31_0 = this;
-                                  stackOut_31_1 = this.f((byte) 7);
+                                  stackOut_31_1 = this.f();
                                   stackIn_33_0 = stackOut_31_0;
                                   stackIn_33_1 = stackOut_31_1;
                                   break L10;

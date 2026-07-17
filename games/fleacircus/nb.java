@@ -13,8 +13,8 @@ final class nb {
     static int field_h;
 
     final static void a(boolean param0) {
-        int var1_int = 0;
         RuntimeException var1 = null;
+        int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -39,7 +39,9 @@ final class nb {
                       if (fg.field_x != null) {
                         break L4;
                       } else {
-                        fg.field_x = ed.a(16777215, 4);
+                        int discarded$5 = 4;
+                        int discarded$6 = 16777215;
+                        fg.field_x = ed.a();
                         break L4;
                       }
                     }
@@ -70,7 +72,10 @@ final class nb {
                         if (mf.field_a[var2] != null) {
                           break L6;
                         } else {
-                          mf.field_a[var2] = pi.a(var2, 1, 5, 124);
+                          int discarded$7 = 124;
+                          int discarded$8 = 5;
+                          int discarded$9 = 1;
+                          mf.field_a[var2] = pi.a(var2);
                           break L6;
                         }
                       }
@@ -117,7 +122,7 @@ final class nb {
         return tg.field_c[65535 & (int)(32768.0 * param0 / 3.141592653589793)];
     }
 
-    final static int a(String param0, int param1, fa param2, String[] param3, int param4) {
+    final static int a(String param0, int param1, fa param2, String[] param3) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;

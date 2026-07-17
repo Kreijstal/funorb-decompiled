@@ -12,34 +12,22 @@ final class td extends o {
     static String[] field_n;
     static String field_m;
 
-    final static void a(le param0, int param1, int param2, int param3) {
+    final static void a(le param0) {
         try {
-            if (param3 != 200) {
-                td.a(40);
-            }
-            tm.field_d = param2;
-            tn.field_m = param1;
+            tm.field_d = 0;
+            tn.field_m = 0;
             bl.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "td.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "td.B(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 44 + 0 + 44 + 200 + 41);
         }
     }
 
     final static km[] a(int param0, int param1) {
-        km[] var2 = null;
-        Object var3 = null;
-        km[] var4 = null;
-        var4 = new km[9];
-        var2 = var4;
-        if (param0 != -31056) {
-          var3 = null;
-          td.a((le) null, -77, -59, -123);
-          var4[4] = rd.a(64, param1, 14727);
-          return var2;
-        } else {
-          var4[4] = rd.a(64, param1, 14727);
-          return var2;
-        }
+        km[] var3 = new km[9];
+        km[] var2 = var3;
+        int discarded$0 = 14727;
+        var3[4] = rd.a(64, param1);
+        return var2;
     }
 
     td(byte[] param0) {
@@ -50,23 +38,13 @@ final class td extends o {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_j = null;
         field_n = null;
-        if (param0 != 5239) {
-          field_p = 73;
-          field_m = null;
-          field_l = null;
-          field_r = null;
-          field_o = null;
-          return;
-        } else {
-          field_m = null;
-          field_l = null;
-          field_r = null;
-          field_o = null;
-          return;
-        }
+        field_m = null;
+        field_l = null;
+        field_r = null;
+        field_o = null;
     }
 
     static {

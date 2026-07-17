@@ -8,7 +8,7 @@ final class ef extends o {
     static jc field_n;
     static String field_m;
 
-    final static void a(pf param0, int param1) {
+    final static void a(pf param0) {
         if (!(wf.field_R != param0)) {
             return;
         }
@@ -19,9 +19,9 @@ final class ef extends o {
             if (wf.field_R != null) {
                 fk.field_q.a(false, wf.field_R, 59);
             }
-            int var2_int = 0 % ((-35 - param1) / 36);
+            int var2_int = 0;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "ef.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "ef.B(" + (param0 != null ? "{...}" : "null") + 44 + -102 + 41);
         }
     }
 
@@ -29,7 +29,7 @@ final class ef extends o {
         ((ef) this).field_k = param0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_n = null;
         field_j = null;
         field_l = null;

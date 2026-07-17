@@ -32,7 +32,7 @@ final class bk extends ug {
           L0: {
             var2_int = param1.length;
             var3 = new byte[var2_int];
-            gl.a(param1, 0, var3, param0, var2_int);
+            gl.a(param1, 0, var3, 0, var2_int);
             stackOut_0_0 = (byte[]) var3;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -42,7 +42,7 @@ final class bk extends ug {
           L1: {
             var2 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var2;
-            stackOut_2_1 = new StringBuilder().append("bk.B(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("bk.B(").append(0).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -70,7 +70,7 @@ final class bk extends ug {
         return stackIn_1_0;
     }
 
-    final static a a(boolean param0) {
+    final static a a() {
         if (jk.field_x == null) {
           jk.field_x = new a(pf.field_c, 20, 0, 0, 0, 11579568, -1, 0, 0, pf.field_c.field_C, -1, 2147483647, true);
           return jk.field_x;

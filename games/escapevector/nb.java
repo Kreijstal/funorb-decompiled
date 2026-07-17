@@ -7,14 +7,14 @@ final class nb {
     static wl field_a;
     static hj field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         field_d = null;
         field_b = null;
     }
 
-    final static void a(java.applet.Applet param0, int param1, byte param2, int param3, String[] param4, int param5) {
+    final static void a(java.applet.Applet param0, int param1, byte param2, int param3, String[] param4) {
         String var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
@@ -63,41 +63,37 @@ final class nb {
               }
             }
             ji.field_a = param0.getParameter("overxachievements");
-            if (param2 < -120) {
-              L2: {
-                if (ji.field_a != null) {
-                  break L2;
-                } else {
-                  ji.field_a = "0";
-                  break L2;
-                }
+            L2: {
+              if (ji.field_a != null) {
+                break L2;
+              } else {
+                ji.field_a = "0";
+                break L2;
               }
-              L3: {
-                var6 = param0.getParameter("currency");
-                if (var6 == null) {
+            }
+            L3: {
+              var6 = param0.getParameter("currency");
+              if (var6 == null) {
+                break L3;
+              } else {
+                if (fk.a(false, (CharSequence) (Object) var6)) {
+                  int discarded$2 = gn.a(16777215, (CharSequence) (Object) var6);
                   break L3;
                 } else {
-                  if (fk.a(false, (CharSequence) (Object) var6)) {
-                    int discarded$2 = gn.a(16777215, (CharSequence) (Object) var6);
-                    break L3;
-                  } else {
-                    break L3;
-                  }
+                  break L3;
                 }
               }
-              sf.field_b = new ed[param4.length];
-              var7 = 0;
-              L4: while (true) {
-                if (var7 >= param4.length) {
-                  break L0;
-                } else {
-                  sf.field_b[var7] = new ed(317, 34);
-                  var7++;
-                  continue L4;
-                }
+            }
+            sf.field_b = new ed[param4.length];
+            var7 = 0;
+            L4: while (true) {
+              if (var7 >= param4.length) {
+                break L0;
+              } else {
+                sf.field_b[var7] = new ed(317, 34);
+                var7++;
+                continue L4;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -130,7 +126,7 @@ final class nb {
           }
           L6: {
             stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44).append(1585176).append(44).append(-125).append(44).append(6340704).append(44);
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;

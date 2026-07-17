@@ -6,7 +6,7 @@ final class ag {
     static int field_c;
     static int[][] field_b;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
     }
 
@@ -43,7 +43,7 @@ final class ag {
         var5 = stellarshard.field_B;
         try {
           var2_int = param1.length();
-          if (param0 != ~var2_int) {
+          if (var2_int != 0) {
             if (var2_int > 63) {
               stackOut_6_0 = bg.field_a;
               stackIn_7_0 = stackOut_6_0;
@@ -96,7 +96,7 @@ final class ag {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var2;
-            stackOut_24_1 = new StringBuilder().append("ag.B(").append(param0).append(44);
+            stackOut_24_1 = new StringBuilder().append("ag.B(").append(-1).append(44);
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;

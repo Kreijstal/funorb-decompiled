@@ -559,14 +559,18 @@ abstract class sm {
     }
 
     public static void a(int param0) {
+        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
+          L0: {
             field_e = null;
             field_g = null;
-            if (param0 != -1) {
-                field_g = null;
-            }
-        } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "sm.O(" + param0 + 41);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw ig.a((Throwable) (Object) var1, "sm.O(" + -1 + 41);
         }
     }
 
@@ -654,7 +658,8 @@ abstract class sm {
                   break L4;
                 }
               }
-              vl.field_k = dc.a(stackIn_18_0 != 0, false);
+              int discarded$4 = 0;
+              vl.field_k = dc.a(stackIn_18_0 != 0);
               fw.a(-1, (String[]) null);
               break L1;
             }
@@ -662,7 +667,7 @@ abstract class sm {
               if (param0 > 28) {
                 break L5;
               } else {
-                hl discarded$2 = sm.a(-35, -5, true);
+                hl discarded$5 = sm.a(-35, -5, true);
                 break L5;
               }
             }

@@ -5,7 +5,7 @@ final class tkb extends rqa {
     static int field_p;
     static String field_o;
 
-    final static void a(ml param0, int param1) {
+    final static void a(ml param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         ml var3 = null;
@@ -43,7 +43,7 @@ final class tkb extends rqa {
             var4.a(1, 3, new ml(13));
             var4.a(1, 0, new ml(15));
             param0.a(1, 7, var4);
-            var2_int = 13 % ((param1 - 61) / 42);
+            var2_int = 1;
             var3 = new ml(31);
             var3.a(1, 0, new ml(13));
             var3.a(1, 2, new ml(13));
@@ -80,11 +80,11 @@ final class tkb extends rqa {
               break L1;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 41);
+          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + -77 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
     }
 

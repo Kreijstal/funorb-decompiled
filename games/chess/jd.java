@@ -88,7 +88,7 @@ final class jd {
         field_i = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         try {
             IOException var1 = null;
             RuntimeException var1_ref = null;
@@ -243,23 +243,20 @@ final class jd {
             try {
               try {
                 var2 = param1.getDocumentBase().getFile();
-                if (param0 == -117) {
-                  L0: {
-                    var3 = var2.indexOf('?');
-                    var4 = "reload.ws";
-                    if (var3 >= 0) {
-                      var4 = var4 + var2.substring(var3);
-                      break L0;
-                    } else {
-                      break L0;
-                    }
+                L0: {
+                  var3 = var2.indexOf('?');
+                  var4 = "reload.ws";
+                  if (var3 >= 0) {
+                    var4 = var4 + var2.substring(var3);
+                    break L0;
+                  } else {
+                    break L0;
                   }
-                  var5 = new java.net.URL(param1.getCodeBase(), var4);
-                  param1.getAppletContext().showDocument(rh.a(var5, param1, (byte) -87), "_self");
-                  return;
-                } else {
-                  return;
                 }
+                var5 = new java.net.URL(param1.getCodeBase(), var4);
+                int discarded$2 = -87;
+                param1.getAppletContext().showDocument(rh.a(var5, param1), "_self");
+                return;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -271,7 +268,7 @@ final class jd {
               L1: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_9_0 = (RuntimeException) var2_ref2;
-                stackOut_9_1 = new StringBuilder().append("jd.B(").append(param0).append(44);
+                stackOut_9_1 = new StringBuilder().append("jd.B(").append(-117).append(44);
                 stackIn_11_0 = stackOut_9_0;
                 stackIn_11_1 = stackOut_9_1;
                 stackIn_10_0 = stackOut_9_0;
@@ -378,8 +375,9 @@ final class jd {
         }
     }
 
-    final static boolean b(byte param0) {
-        return kn.a(ec.field_f, re.field_p, 29712);
+    final static boolean b() {
+        int discarded$0 = 29712;
+        return kn.a(ec.field_f, re.field_p);
     }
 
     static {

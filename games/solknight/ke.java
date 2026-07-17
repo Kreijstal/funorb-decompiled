@@ -15,7 +15,7 @@ final class ke extends si {
     private boolean field_L;
     private int field_R;
 
-    public static void d(byte param0) {
+    public static void d() {
         field_K = null;
         field_O = null;
         field_H = null;
@@ -86,14 +86,15 @@ final class ke extends si {
                     if (param0 < -60) {
                       break L2;
                     } else {
-                      int discarded$2 = ke.a((byte) -80);
+                      int discarded$4 = ke.a((byte) -80);
                       return;
                     }
                   }
                 } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-                  hi.a((Throwable) null, "MGR1: " + param2, 1);
+                  int discarded$5 = 1;
+                  hi.a((Throwable) null, "MGR1: " + param2);
                   return;
                 }
                 break L0;
@@ -188,7 +189,8 @@ final class ke extends si {
           L0: {
             ua.field_L = ua.field_L + 65536;
             L1: while (true) {
-              if (sb.a(ua.field_L, uc.field_b, 1513551664) < 65536) {
+              int discarded$4 = 1513551664;
+              if (sb.a(ua.field_L, uc.field_b) < 65536) {
                 L2: {
                   var2_int = -1;
                   if (null == jb.field_d) {
@@ -367,7 +369,9 @@ final class ke extends si {
                 }
                 if (param0) {
                   L13: {
-                    qh.field_b.a(-117, ad.a(ad.field_m, gb.field_j, 0), ad.a(s.field_gb, db.field_o, 0));
+                    int discarded$5 = 0;
+                    int discarded$6 = 0;
+                    qh.field_b.a(-117, ad.a(ad.field_m, gb.field_j), ad.a(s.field_gb, db.field_o));
                     if (!qh.field_b.d((byte) -8)) {
                       break L13;
                     } else {
@@ -387,7 +391,8 @@ final class ke extends si {
                     }
                   }
                   L14: while (true) {
-                    if (!wk.a((byte) -56)) {
+                    int discarded$7 = -56;
+                    if (!wk.a()) {
                       stackOut_78_0 = 0;
                       stackIn_79_0 = stackOut_78_0;
                       break L0;
@@ -493,9 +498,6 @@ final class ke extends si {
     }
 
     final static int b(int param0, int param1, int param2) {
-        if (param1 != -1697860097) {
-            return 78;
-        }
         int var3 = param0 >>> 31;
         return -var3 + (param0 + var3) / param2;
     }

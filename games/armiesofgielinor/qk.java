@@ -10,15 +10,10 @@ final class qk {
     static int field_c;
 
     final static String a(int param0, int param1, int param2) {
-        if (param1 != -2823) {
-          field_e = null;
-          return 1 + param2 + hs.field_I + param0;
-        } else {
-          return 1 + param2 + hs.field_I + param0;
-        }
+        return 1 + param2 + hs.field_I + param0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_f = null;
         field_b = null;
@@ -30,6 +25,8 @@ final class qk {
 
     private static void $cfr$clinit() {
         field_f = "Single-Player";
-        ut.a(50, (byte) 122);
+        int discarded$0 = 122;
+        int discarded$1 = 50;
+        ut.a();
     }
 }

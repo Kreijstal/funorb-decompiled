@@ -75,15 +75,10 @@ final class aj {
         af.field_a = param4;
         fh.field_a = param3;
         jm.field_b = param2;
-        if (param1 != -19605) {
-            field_a = null;
-            lm.field_d = param0;
-            return;
-        }
         lm.field_d = param0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
         field_a = null;

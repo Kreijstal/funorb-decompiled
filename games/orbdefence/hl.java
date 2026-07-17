@@ -17,9 +17,6 @@ abstract class hl extends ej {
             if (((hl) this).field_Q != null) {
                 ((hl) this).field_Q.b(57);
             }
-            if (param0 != -6142) {
-                ((hl) this).field_R = null;
-            }
             if (param1 == null) {
                 ((hl) this).field_Q = new jj();
             } else {
@@ -29,7 +26,7 @@ abstract class hl extends ej {
             ((hl) this).a((pj) (Object) ((hl) this).field_Q, (byte) 74);
             ((hl) this).field_V = null;
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) (Object) runtimeException, "hl.SA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw dd.a((Throwable) (Object) runtimeException, "hl.SA(" + -6142 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -102,10 +99,7 @@ abstract class hl extends ej {
         }
     }
 
-    public static void p(int param0) {
-        if (param0 != 0) {
-            return;
-        }
+    public static void p() {
         field_N = null;
     }
 
@@ -229,75 +223,57 @@ abstract class hl extends ej {
         var3 = OrbDefence.field_D ? 1 : 0;
         if (null != ((hl) this).field_R) {
           if (((hl) this).field_R == ji.field_d) {
-            int fieldTemp$2 = ((hl) this).field_U + 1;
+            int fieldTemp$8 = ((hl) this).field_U + 1;
             ((hl) this).field_U = ((hl) this).field_U + 1;
-            if (fieldTemp$2 == ((hl) this).field_T) {
+            if (fieldTemp$8 != ((hl) this).field_T) {
+              ((hl) this).field_Q.field_A = -((((hl) this).field_U << 8) / ((hl) this).field_T) + 256;
+              int discarded$9 = -91;
+              hl.p();
+              return super.d(false);
+            } else {
               ((hl) this).field_R = pd.field_w;
               ((hl) this).a(((hl) this).field_P, 12 - -((hl) this).field_V.field_m, ((hl) this).field_V.field_r + (12 - -((hl) this).field_S), (byte) 114);
               ((hl) this).field_U = 0;
               ((hl) this).field_Q.field_A = 0;
-              if (param0) {
-                hl.p(-91);
-                return super.d(false);
-              } else {
-                return super.d(false);
-              }
-            } else {
-              ((hl) this).field_Q.field_A = -((((hl) this).field_U << 8) / ((hl) this).field_T) + 256;
-              if (param0) {
-                hl.p(-91);
-                return super.d(false);
-              } else {
-                return super.d(false);
-              }
+              int discarded$10 = -91;
+              hl.p();
+              return super.d(false);
             }
           } else {
             if (((hl) this).field_R == qd.field_b) {
-              int fieldTemp$3 = ((hl) this).field_U + 1;
+              int fieldTemp$11 = ((hl) this).field_U + 1;
               ((hl) this).field_U = ((hl) this).field_U + 1;
-              if (((hl) this).field_O != fieldTemp$3) {
-                ((hl) this).field_Q.field_A = (((hl) this).field_U << 8) / ((hl) this).field_O;
-                if (param0) {
-                  hl.p(-91);
-                  return super.d(false);
-                } else {
-                  return super.d(false);
-                }
-              } else {
+              if (((hl) this).field_O == fieldTemp$11) {
                 ((hl) this).field_R = null;
                 ((hl) this).field_Q.field_A = 256;
-                if (param0) {
-                  hl.p(-91);
-                  return super.d(false);
-                } else {
-                  return super.d(false);
-                }
-              }
-            } else {
-              if (param0) {
-                hl.p(-91);
+                int discarded$12 = -91;
+                hl.p();
                 return super.d(false);
               } else {
+                ((hl) this).field_Q.field_A = (((hl) this).field_U << 8) / ((hl) this).field_O;
+                int discarded$13 = -91;
+                hl.p();
                 return super.d(false);
               }
+            } else {
+              int discarded$14 = -91;
+              hl.p();
+              return super.d(false);
             }
           }
         } else {
-          if (param0) {
-            hl.p(-91);
-            return super.d(false);
-          } else {
-            return super.d(false);
-          }
+          int discarded$15 = -91;
+          hl.p();
+          return super.d(false);
         }
     }
 
     final static boolean a(boolean param0, int param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
-        int stackIn_43_0 = 0;
-        int stackOut_42_0 = 0;
-        int stackOut_41_0 = 0;
+        int stackIn_38_0 = 0;
+        int stackOut_37_0 = 0;
+        int stackOut_36_0 = 0;
         if (param0) {
           if (tl.field_d[param2] > tl.field_d[param3]) {
             return true;
@@ -305,31 +281,27 @@ abstract class hl extends ej {
             if (tl.field_d[param2] >= tl.field_d[param3]) {
               if (rh.field_c[param3] >= rh.field_c[param2]) {
                 if (rh.field_c[param3] <= rh.field_c[param2]) {
-                  if (param1 < -91) {
-                    var4 = vl.field_g[param3] - -th.field_f[param3] + ld.field_b[param3];
-                    var5 = th.field_f[param2] + (vl.field_g[param2] - -ld.field_b[param2]);
-                    if (var5 > var4) {
-                      return true;
-                    } else {
-                      if (var5 < var4) {
-                        return false;
-                      } else {
-                        L0: {
-                          if (param3 >= param2) {
-                            stackOut_42_0 = 0;
-                            stackIn_43_0 = stackOut_42_0;
-                            break L0;
-                          } else {
-                            stackOut_41_0 = 1;
-                            stackIn_43_0 = stackOut_41_0;
-                            break L0;
-                          }
-                        }
-                        return stackIn_43_0 != 0;
-                      }
-                    }
-                  } else {
+                  var4 = vl.field_g[param3] - -th.field_f[param3] + ld.field_b[param3];
+                  var5 = th.field_f[param2] + (vl.field_g[param2] - -ld.field_b[param2]);
+                  if (var5 > var4) {
                     return true;
+                  } else {
+                    if (var5 < var4) {
+                      return false;
+                    } else {
+                      L0: {
+                        if (param3 >= param2) {
+                          stackOut_37_0 = 0;
+                          stackIn_38_0 = stackOut_37_0;
+                          break L0;
+                        } else {
+                          stackOut_36_0 = 1;
+                          stackIn_38_0 = stackOut_36_0;
+                          break L0;
+                        }
+                      }
+                      return stackIn_38_0 != 0;
+                    }
                   }
                 } else {
                   return false;
@@ -348,24 +320,20 @@ abstract class hl extends ej {
             if (rh.field_c[param3] <= rh.field_c[param2]) {
               if (tl.field_d[param3] >= tl.field_d[param2]) {
                 if (tl.field_d[param2] >= tl.field_d[param3]) {
-                  if (param1 < -91) {
-                    var4 = vl.field_g[param3] - -th.field_f[param3] + ld.field_b[param3];
-                    var5 = th.field_f[param2] + (vl.field_g[param2] - -ld.field_b[param2]);
-                    if (var5 > var4) {
-                      return true;
+                  var4 = vl.field_g[param3] - -th.field_f[param3] + ld.field_b[param3];
+                  var5 = th.field_f[param2] + (vl.field_g[param2] - -ld.field_b[param2]);
+                  if (var5 > var4) {
+                    return true;
+                  } else {
+                    if (var5 < var4) {
+                      return false;
                     } else {
-                      if (var5 < var4) {
+                      if (param3 >= param2) {
                         return false;
                       } else {
-                        if (param3 >= param2) {
-                          return false;
-                        } else {
-                          return true;
-                        }
+                        return true;
                       }
                     }
-                  } else {
-                    return true;
                   }
                 } else {
                   return false;

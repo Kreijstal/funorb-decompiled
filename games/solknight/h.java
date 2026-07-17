@@ -19,23 +19,20 @@ final class h {
         field_d = null;
     }
 
-    final static void a(int param0, fj param1, byte param2) {
+    final static void a(int param0, fj param1) {
         jd var3 = null;
         try {
             var3 = id.field_c;
-            var3.e(param0, -2147483648);
-            if (param2 < 76) {
-                field_g = -128;
-            }
+            var3.e(5, -2147483648);
             var3.c(78, 2);
             var3.c(5, 0);
             var3.c(-125, param1.field_k);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "h.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "h.A(" + 5 + 44 + (param1 != null ? "{...}" : "null") + 44 + 78 + 41);
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         int var1 = 0;
         ab.field_s[3] = new int[1];
         vd.field_d[3] = new ie(3);

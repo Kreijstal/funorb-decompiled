@@ -167,19 +167,26 @@ final class aga extends rk {
         return stackIn_9_0 != 0;
     }
 
-    final static void d(boolean param0) {
-        int[] var1 = dr.c(106);
-        if (param0) {
-            return;
-        }
-        if (null == var1) {
-            return;
-        }
+    final static void d() {
+        int[] var1 = null;
+        RuntimeException var1_ref = null;
+        RuntimeException decompiledCaughtException = null;
         try {
-            mn.field_l = new hca(var1[0], var1[1], kda.b(97));
-            uka.field_h = new hca(320, 400, bf.field_h[wca.field_n].field_j);
-        } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "aga.GA(" + param0 + 41);
+          L0: {
+            int discarded$2 = 106;
+            var1 = dr.c();
+            if (null != var1) {
+              mn.field_l = new hca(var1[0], var1[1], kda.b(97));
+              uka.field_h = new hca(320, 400, bf.field_h[wca.field_n].field_j);
+              break L0;
+            } else {
+              return;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw pe.a((Throwable) (Object) var1_ref, "aga.GA(" + 0 + 41);
         }
     }
 
@@ -256,7 +263,7 @@ final class aga extends rk {
         }
     }
 
-    private final void e(int param0) {
+    private final void e() {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -264,250 +271,246 @@ final class aga extends rk {
         var3 = BachelorFridge.field_y;
         try {
           L0: {
-            if (param0 > 50) {
-              L1: {
-                L2: {
-                  L3: {
-                    if (((aga) this).field_w.field_a[((aga) this).field_x][((aga) this).field_J].field_n != 23) {
+            L1: {
+              L2: {
+                L3: {
+                  if (((aga) this).field_w.field_a[((aga) this).field_x][((aga) this).field_J].field_n != 23) {
+                    break L3;
+                  } else {
+                    if (!((aga) this).field_w.a(((aga) this).field_J, (byte) 124, ((aga) this).field_x)) {
                       break L3;
                     } else {
-                      if (!((aga) this).field_w.a(((aga) this).field_J, (byte) 124, ((aga) this).field_x)) {
+                      if (((aga) this).field_D == 0) {
                         break L3;
                       } else {
-                        if (((aga) this).field_D == 0) {
-                          break L3;
-                        } else {
-                          if (!((aga) this).g((byte) 85)) {
-                            break L2;
-                          } else {
-                            break L3;
-                          }
-                        }
-                      }
-                    }
-                  }
-                  L4: {
-                    if (24 != ((aga) this).field_w.field_a[((aga) this).field_x][((aga) this).field_J].field_n) {
-                      break L4;
-                    } else {
-                      if (!((aga) this).field_w.a(((aga) this).field_J, (byte) 120, ((aga) this).field_x)) {
-                        break L4;
-                      } else {
-                        if (((aga) this).field_D == 1) {
-                          break L4;
-                        } else {
-                          if (((aga) this).g((byte) 85)) {
-                            break L4;
-                          } else {
-                            ((aga) this).b((byte) 125, 25);
-                            ((aga) this).field_w.field_T.field_G[1] = true;
-                            if (var3 == 0) {
-                              break L1;
-                            } else {
-                              break L4;
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                  L5: {
-                    if (25 != ((aga) this).field_w.field_a[((aga) this).field_x][((aga) this).field_J].field_n) {
-                      break L5;
-                    } else {
-                      if (!((aga) this).field_w.a(((aga) this).field_J, (byte) 115, ((aga) this).field_x)) {
-                        break L5;
-                      } else {
-                        if (((aga) this).field_D == 2) {
-                          break L5;
-                        } else {
-                          if (((aga) this).g((byte) 85)) {
-                            break L5;
-                          } else {
-                            ((aga) this).b((byte) 115, 26);
-                            ((aga) this).field_w.field_T.field_G[2] = true;
-                            if (var3 == 0) {
-                              break L1;
-                            } else {
-                              break L5;
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                  if (((aga) this).field_w.field_a[((aga) this).field_x][((aga) this).field_J].field_n != 26) {
-                    break L1;
-                  } else {
-                    if (!((aga) this).field_w.a(((aga) this).field_J, (byte) 121, ((aga) this).field_x)) {
-                      break L1;
-                    } else {
-                      if (((aga) this).field_D == 3) {
-                        break L1;
-                      } else {
                         if (!((aga) this).g((byte) 85)) {
-                          ((aga) this).b((byte) 114, 27);
-                          ((aga) this).field_w.field_T.field_G[3] = true;
-                          if (var3 == 0) {
-                            break L1;
-                          } else {
-                            break L2;
-                          }
+                          break L2;
                         } else {
-                          break L1;
+                          break L3;
                         }
                       }
                     }
                   }
                 }
-                ((aga) this).b((byte) 115, 24);
-                ((aga) this).field_w.field_T.field_G[0] = true;
-                break L1;
+                L4: {
+                  if (24 != ((aga) this).field_w.field_a[((aga) this).field_x][((aga) this).field_J].field_n) {
+                    break L4;
+                  } else {
+                    if (!((aga) this).field_w.a(((aga) this).field_J, (byte) 120, ((aga) this).field_x)) {
+                      break L4;
+                    } else {
+                      if (((aga) this).field_D == 1) {
+                        break L4;
+                      } else {
+                        if (((aga) this).g((byte) 85)) {
+                          break L4;
+                        } else {
+                          ((aga) this).b((byte) 125, 25);
+                          ((aga) this).field_w.field_T.field_G[1] = true;
+                          if (var3 == 0) {
+                            break L1;
+                          } else {
+                            break L4;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                L5: {
+                  if (25 != ((aga) this).field_w.field_a[((aga) this).field_x][((aga) this).field_J].field_n) {
+                    break L5;
+                  } else {
+                    if (!((aga) this).field_w.a(((aga) this).field_J, (byte) 115, ((aga) this).field_x)) {
+                      break L5;
+                    } else {
+                      if (((aga) this).field_D == 2) {
+                        break L5;
+                      } else {
+                        if (((aga) this).g((byte) 85)) {
+                          break L5;
+                        } else {
+                          ((aga) this).b((byte) 115, 26);
+                          ((aga) this).field_w.field_T.field_G[2] = true;
+                          if (var3 == 0) {
+                            break L1;
+                          } else {
+                            break L5;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                if (((aga) this).field_w.field_a[((aga) this).field_x][((aga) this).field_J].field_n != 26) {
+                  break L1;
+                } else {
+                  if (!((aga) this).field_w.a(((aga) this).field_J, (byte) 121, ((aga) this).field_x)) {
+                    break L1;
+                  } else {
+                    if (((aga) this).field_D == 3) {
+                      break L1;
+                    } else {
+                      if (!((aga) this).g((byte) 85)) {
+                        ((aga) this).b((byte) 114, 27);
+                        ((aga) this).field_w.field_T.field_G[3] = true;
+                        if (var3 == 0) {
+                          break L1;
+                        } else {
+                          break L2;
+                        }
+                      } else {
+                        break L1;
+                      }
+                    }
+                  }
+                }
               }
-              L6: {
-                L7: {
-                  if (!((aga) this).i(23, 118)) {
+              ((aga) this).b((byte) 115, 24);
+              ((aga) this).field_w.field_T.field_G[0] = true;
+              break L1;
+            }
+            L6: {
+              L7: {
+                if (!((aga) this).i(23, 118)) {
+                  break L7;
+                } else {
+                  if (!((aga) this).g((byte) 85)) {
                     break L7;
                   } else {
-                    if (!((aga) this).g((byte) 85)) {
+                    if (((aga) this).field_D != 0) {
                       break L7;
                     } else {
-                      if (((aga) this).field_D != 0) {
-                        break L7;
+                      L8: {
+                        ((aga) this).field_w.field_C[((aga) this).field_D] = ((aga) this).field_w.field_C[((aga) this).field_D] + 1;
+                        ((aga) this).field_w.field_T.field_s[((aga) this).field_D] = ((aga) this).field_w.field_T.field_s[((aga) this).field_D] + 1;
+                        var2_int = ((aga) this).field_w.b((byte) 65, (aga) this);
+                        if (var2_int == -1) {
+                          break L8;
+                        } else {
+                          ((aga) this).field_w.a(var2_int, (byte) 82);
+                          ((aga) this).field_y = 0;
+                          break L8;
+                        }
+                      }
+                      if (var3 == 0) {
+                        break L6;
                       } else {
-                        L8: {
+                        break L7;
+                      }
+                    }
+                  }
+                }
+              }
+              L9: {
+                L10: {
+                  if (!((aga) this).i(24, -105)) {
+                    break L10;
+                  } else {
+                    if (!((aga) this).g((byte) 85)) {
+                      break L10;
+                    } else {
+                      if (1 == ((aga) this).field_D) {
+                        break L9;
+                      } else {
+                        break L10;
+                      }
+                    }
+                  }
+                }
+                L11: {
+                  L12: {
+                    if (!((aga) this).i(25, 127)) {
+                      break L12;
+                    } else {
+                      if (!((aga) this).g((byte) 85)) {
+                        break L12;
+                      } else {
+                        if (((aga) this).field_D == 2) {
+                          break L11;
+                        } else {
+                          break L12;
+                        }
+                      }
+                    }
+                  }
+                  if (!((aga) this).i(26, 125)) {
+                    break L6;
+                  } else {
+                    if (!((aga) this).g((byte) 85)) {
+                      break L6;
+                    } else {
+                      if (((aga) this).field_D == 3) {
+                        L13: {
                           ((aga) this).field_w.field_C[((aga) this).field_D] = ((aga) this).field_w.field_C[((aga) this).field_D] + 1;
                           ((aga) this).field_w.field_T.field_s[((aga) this).field_D] = ((aga) this).field_w.field_T.field_s[((aga) this).field_D] + 1;
-                          var2_int = ((aga) this).field_w.b((byte) 65, (aga) this);
-                          if (var2_int == -1) {
-                            break L8;
+                          var2_int = ((aga) this).field_w.b((byte) 63, (aga) this);
+                          if (-1 == var2_int) {
+                            break L13;
                           } else {
-                            ((aga) this).field_w.a(var2_int, (byte) 82);
+                            ((aga) this).field_w.a(var2_int, (byte) 78);
                             ((aga) this).field_y = 0;
-                            break L8;
+                            break L13;
                           }
                         }
                         if (var3 == 0) {
                           break L6;
                         } else {
-                          break L7;
+                          break L11;
                         }
-                      }
-                    }
-                  }
-                }
-                L9: {
-                  L10: {
-                    if (!((aga) this).i(24, -105)) {
-                      break L10;
-                    } else {
-                      if (!((aga) this).g((byte) 85)) {
-                        break L10;
                       } else {
-                        if (1 == ((aga) this).field_D) {
-                          break L9;
-                        } else {
-                          break L10;
-                        }
-                      }
-                    }
-                  }
-                  L11: {
-                    L12: {
-                      if (!((aga) this).i(25, 127)) {
-                        break L12;
-                      } else {
-                        if (!((aga) this).g((byte) 85)) {
-                          break L12;
-                        } else {
-                          if (((aga) this).field_D == 2) {
-                            break L11;
-                          } else {
-                            break L12;
-                          }
-                        }
-                      }
-                    }
-                    if (!((aga) this).i(26, 125)) {
-                      break L6;
-                    } else {
-                      if (!((aga) this).g((byte) 85)) {
                         break L6;
-                      } else {
-                        if (((aga) this).field_D == 3) {
-                          L13: {
-                            ((aga) this).field_w.field_C[((aga) this).field_D] = ((aga) this).field_w.field_C[((aga) this).field_D] + 1;
-                            ((aga) this).field_w.field_T.field_s[((aga) this).field_D] = ((aga) this).field_w.field_T.field_s[((aga) this).field_D] + 1;
-                            var2_int = ((aga) this).field_w.b((byte) 63, (aga) this);
-                            if (-1 == var2_int) {
-                              break L13;
-                            } else {
-                              ((aga) this).field_w.a(var2_int, (byte) 78);
-                              ((aga) this).field_y = 0;
-                              break L13;
-                            }
-                          }
-                          if (var3 == 0) {
-                            break L6;
-                          } else {
-                            break L11;
-                          }
-                        } else {
-                          break L6;
-                        }
                       }
                     }
                   }
-                  L14: {
-                    ((aga) this).field_w.field_C[((aga) this).field_D] = ((aga) this).field_w.field_C[((aga) this).field_D] + 1;
-                    ((aga) this).field_w.field_T.field_s[((aga) this).field_D] = ((aga) this).field_w.field_T.field_s[((aga) this).field_D] + 1;
-                    var2_int = ((aga) this).field_w.b((byte) 116, (aga) this);
-                    if (var2_int != -1) {
-                      ((aga) this).field_w.a(var2_int, (byte) 121);
-                      ((aga) this).field_y = 0;
-                      break L14;
-                    } else {
-                      break L14;
-                    }
-                  }
-                  if (var3 == 0) {
-                    break L6;
+                }
+                L14: {
+                  ((aga) this).field_w.field_C[((aga) this).field_D] = ((aga) this).field_w.field_C[((aga) this).field_D] + 1;
+                  ((aga) this).field_w.field_T.field_s[((aga) this).field_D] = ((aga) this).field_w.field_T.field_s[((aga) this).field_D] + 1;
+                  var2_int = ((aga) this).field_w.b((byte) 116, (aga) this);
+                  if (var2_int != -1) {
+                    ((aga) this).field_w.a(var2_int, (byte) 121);
+                    ((aga) this).field_y = 0;
+                    break L14;
                   } else {
-                    break L9;
+                    break L14;
                   }
                 }
-                ((aga) this).field_w.field_C[((aga) this).field_D] = ((aga) this).field_w.field_C[((aga) this).field_D] + 1;
-                ((aga) this).field_w.field_T.field_s[((aga) this).field_D] = ((aga) this).field_w.field_T.field_s[((aga) this).field_D] + 1;
-                var2_int = ((aga) this).field_w.b((byte) 51, (aga) this);
-                if (var2_int == -1) {
+                if (var3 == 0) {
                   break L6;
                 } else {
-                  ((aga) this).field_w.a(var2_int, (byte) 120);
-                  ((aga) this).field_y = 0;
-                  break L6;
+                  break L9;
                 }
               }
-              L15: {
-                if (!((aga) this).field_w.a(((aga) this).field_D, ((aga) this).field_x, ((aga) this).field_J, (byte) -41)) {
+              ((aga) this).field_w.field_C[((aga) this).field_D] = ((aga) this).field_w.field_C[((aga) this).field_D] + 1;
+              ((aga) this).field_w.field_T.field_s[((aga) this).field_D] = ((aga) this).field_w.field_T.field_s[((aga) this).field_D] + 1;
+              var2_int = ((aga) this).field_w.b((byte) 51, (aga) this);
+              if (var2_int == -1) {
+                break L6;
+              } else {
+                ((aga) this).field_w.a(var2_int, (byte) 120);
+                ((aga) this).field_y = 0;
+                break L6;
+              }
+            }
+            L15: {
+              if (!((aga) this).field_w.a(((aga) this).field_D, ((aga) this).field_x, ((aga) this).field_J, (byte) -41)) {
+                break L15;
+              } else {
+                if (!((aga) this).g((byte) 85)) {
+                  ((aga) this).field_w.a(((aga) this).field_D, (byte) 65);
                   break L15;
                 } else {
-                  if (!((aga) this).g((byte) 85)) {
-                    ((aga) this).field_w.a(((aga) this).field_D, (byte) 65);
-                    break L15;
-                  } else {
-                    break L15;
-                  }
+                  break L15;
                 }
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var2, "aga.K(" + param0 + 41);
+          throw pe.a((Throwable) (Object) var2, "aga.K(" + 77 + 41);
         }
     }
 
@@ -530,7 +533,8 @@ final class aga extends rk {
                   break L1;
                 } else {
                   if (((aga) this).g((byte) 85)) {
-                    this.c(true);
+                    int discarded$1 = 1;
+                    this.c();
                     break L1;
                   } else {
                     break L1;
@@ -691,7 +695,7 @@ final class aga extends rk {
         }
     }
 
-    private final void h(int param0) {
+    private final void h() {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -705,20 +709,12 @@ final class aga extends rk {
                 break L1;
               }
             }
-            L2: {
-              if (param0 == -2) {
-                break L2;
-              } else {
-                boolean discarded$2 = ((aga) this).c((byte) 99, -101);
-                break L2;
-              }
-            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var2, "aga.R(" + param0 + 41);
+          throw pe.a((Throwable) (Object) var2, "aga.R(" + -2 + 41);
         }
     }
 
@@ -2202,7 +2198,8 @@ final class aga extends rk {
                   if (stackIn_21_0 != stackIn_21_1) {
                     break L6;
                   } else {
-                    this.e(77);
+                    int discarded$1 = 77;
+                    this.e();
                     break L6;
                   }
                 }
@@ -2328,8 +2325,8 @@ final class aga extends rk {
     }
 
     final static void a(Random param0, boolean param1, eaa param2, int param3) {
-        RuntimeException runtimeException = null;
         rea var4 = null;
+        RuntimeException var4_ref = null;
         int var5 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -2366,57 +2363,53 @@ final class aga extends rk {
         try {
           L0: {
             var4 = (rea) (Object) param2.b((byte) 90);
-            if (param1) {
-              L1: while (true) {
-                L2: {
-                  L3: {
-                    if (var4 == null) {
-                      break L3;
+            L1: while (true) {
+              L2: {
+                L3: {
+                  if (var4 == null) {
+                    break L3;
+                  } else {
+                    if (var5 != 0) {
+                      break L2;
                     } else {
-                      if (var5 != 0) {
-                        break L2;
-                      } else {
-                        L4: {
-                          L5: {
-                            int fieldTemp$6 = var4.field_n + var4.field_h;
-                            var4.field_n = var4.field_n + var4.field_h;
-                            if (0 <= fieldTemp$6) {
-                              break L5;
+                      L4: {
+                        L5: {
+                          int fieldTemp$2 = var4.field_n + var4.field_h;
+                          var4.field_n = var4.field_n + var4.field_h;
+                          if (0 <= fieldTemp$2) {
+                            break L5;
+                          } else {
+                            var4.a(false);
+                            if (var5 == 0) {
+                              break L4;
                             } else {
-                              var4.a(false);
-                              if (var5 == 0) {
-                                break L4;
-                              } else {
-                                break L5;
-                              }
+                              break L5;
                             }
                           }
-                          var4.field_l = var4.field_l + var4.field_o;
-                          int discarded$7 = kla.a(50, param0, -2147483648);
-                          break L4;
                         }
-                        var4 = (rea) (Object) param2.c(0);
-                        if (var5 == 0) {
-                          continue L1;
-                        } else {
-                          break L3;
-                        }
+                        var4.field_l = var4.field_l + var4.field_o;
+                        int discarded$3 = kla.a(50, param0, -2147483648);
+                        break L4;
+                      }
+                      var4 = (rea) (Object) param2.c(0);
+                      if (var5 == 0) {
+                        continue L1;
+                      } else {
+                        break L3;
                       }
                     }
                   }
-                  break L2;
                 }
-                break L0;
+                break L2;
               }
-            } else {
-              return;
+              break L0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
-            runtimeException = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) runtimeException;
+            var4_ref = decompiledCaughtException;
+            stackOut_15_0 = (RuntimeException) var4_ref;
             stackOut_15_1 = new StringBuilder().append("aga.EA(");
             stackIn_18_0 = stackOut_15_0;
             stackIn_18_1 = stackOut_15_1;
@@ -2442,7 +2435,7 @@ final class aga extends rk {
           }
           L7: {
             stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44).append(param1).append(44);
+            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44).append(1).append(44);
             stackIn_22_0 = stackOut_19_0;
             stackIn_22_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -2576,7 +2569,7 @@ final class aga extends rk {
               if (0 >= ((aga) this).field_x) {
                 break L1;
               } else {
-                if (~param0 == ~((aga) this).field_w.field_a[-1 + ((aga) this).field_x][((aga) this).field_J].field_n) {
+                if (((aga) this).field_w.field_a[-1 + ((aga) this).field_x][((aga) this).field_J].field_n == 36) {
                   stackOut_26_0 = new int[]{((aga) this).field_x + -1, ((aga) this).field_J};
                   stackIn_27_0 = stackOut_26_0;
                   return stackIn_27_0;
@@ -2589,7 +2582,7 @@ final class aga extends rk {
               if (((aga) this).field_x >= -1 + ((aga) this).field_w.field_z) {
                 break L2;
               } else {
-                if (param0 != ((aga) this).field_w.field_a[1 + ((aga) this).field_x][((aga) this).field_J].field_n) {
+                if (36 != ((aga) this).field_w.field_a[1 + ((aga) this).field_x][((aga) this).field_J].field_n) {
                   break L2;
                 } else {
                   stackOut_10_0 = new int[]{1 + ((aga) this).field_x, ((aga) this).field_J};
@@ -2602,7 +2595,7 @@ final class aga extends rk {
               if (((aga) this).field_J <= 0) {
                 break L3;
               } else {
-                if (((aga) this).field_w.field_a[((aga) this).field_x][-1 + ((aga) this).field_J].field_n != param0) {
+                if (((aga) this).field_w.field_a[((aga) this).field_x][-1 + ((aga) this).field_J].field_n != 36) {
                   break L3;
                 } else {
                   stackOut_16_0 = new int[]{((aga) this).field_x, ((aga) this).field_J + -1};
@@ -2615,21 +2608,13 @@ final class aga extends rk {
               if (-1 + ((aga) this).field_w.field_B <= ((aga) this).field_J) {
                 break L4;
               } else {
-                if (~((aga) this).field_w.field_a[((aga) this).field_x][((aga) this).field_J + 1].field_n == ~param0) {
+                if (((aga) this).field_w.field_a[((aga) this).field_x][((aga) this).field_J + 1].field_n == 36) {
                   stackOut_24_0 = new int[]{((aga) this).field_x, ((aga) this).field_J - -1};
                   stackIn_25_0 = stackOut_24_0;
                   return stackIn_25_0;
                 } else {
                   break L4;
                 }
-              }
-            }
-            L5: {
-              if (param1 >= 69) {
-                break L5;
-              } else {
-                ((aga) this).field_K = null;
-                break L5;
               }
             }
             stackOut_31_0 = null;
@@ -2639,7 +2624,7 @@ final class aga extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var3, "aga.G(" + param0 + 44 + param1 + 41);
+          throw pe.a((Throwable) (Object) var3, "aga.G(" + 36 + 44 + 73 + 41);
         }
         return (int[]) (Object) stackIn_32_0;
     }
@@ -2895,9 +2880,9 @@ final class aga extends rk {
         return stackIn_12_0;
     }
 
-    private final void c(boolean param0) {
-        RuntimeException runtimeException = null;
+    private final void c() {
         int var2_int = 0;
+        RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
@@ -2919,20 +2904,12 @@ final class aga extends rk {
                 break L2;
               }
             }
-            L3: {
-              if (param0) {
-                break L3;
-              } else {
-                ((aga) this).field_H = 56;
-                break L3;
-              }
-            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) runtimeException, "aga.J(" + param0 + 41);
+          var2 = decompiledCaughtException;
+          throw pe.a((Throwable) (Object) var2, "aga.J(" + 1 + 41);
         }
     }
 
@@ -3546,7 +3523,8 @@ final class aga extends rk {
                     }
                   }
                 }
-                this.h(-2);
+                int discarded$1 = -2;
+                this.h();
                 stackOut_68_0 = 75;
                 stackOut_68_1 = (param0 - -49) / 38;
                 stackIn_69_0 = stackOut_68_0;
@@ -3600,15 +3578,7 @@ final class aga extends rk {
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            L1: {
-              ((aga) this).field_w.field_a[((aga) this).field_x][((aga) this).field_J].field_l = null;
-              if (param2 == 17) {
-                break L1;
-              } else {
-                ((aga) this).field_K = null;
-                break L1;
-              }
-            }
+            ((aga) this).field_w.field_a[((aga) this).field_x][((aga) this).field_J].field_l = null;
             ((aga) this).field_w.field_T.field_i[((aga) this).field_D] = ((aga) this).field_w.field_T.field_i[((aga) this).field_D] + (Math.abs(-param0 + ((aga) this).field_x) - -Math.abs(((aga) this).field_J - param1));
             ((aga) this).field_x = param0;
             ((aga) this).field_J = param1;
@@ -3618,7 +3588,7 @@ final class aga extends rk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var4, "aga.IA(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw pe.a((Throwable) (Object) var4, "aga.IA(" + param0 + 44 + param1 + 44 + 17 + 41);
         }
     }
 

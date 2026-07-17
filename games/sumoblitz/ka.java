@@ -5,7 +5,7 @@ abstract class ka {
     static String field_a;
     static int field_b;
 
-    final static int a(mp param0, int param1) {
+    final static int a(mp param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_2_0 = 0;
@@ -31,7 +31,7 @@ abstract class ka {
         StringBuilder stackOut_12_1 = null;
         String stackOut_12_2 = null;
         try {
-          var2_int = 8 % ((param1 - -40) / 46);
+          var2_int = 0;
           if (wn.field_b != param0) {
             if (nl.field_n == param0) {
               stackOut_8_0 = 34065;
@@ -79,7 +79,7 @@ abstract class ka {
               break L0;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 41);
+          throw qo.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + -116 + 41);
         }
     }
 

@@ -73,7 +73,7 @@ final class pe extends sp implements ai {
         }
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_E = null;
         field_F = null;
         field_D = null;
@@ -293,21 +293,18 @@ final class pe extends sp implements ai {
     }
 
     final static String a(byte param0, boolean param1, boolean param2, boolean param3) {
-        if (param0 != 26) {
-            return null;
-        }
         int var4 = 0;
         if (param1) {
             var4 += 4;
         }
-        var4 += 2;
-        if (param2) {
-            var4++;
+        if (param3) {
+            var4 += 2;
         }
+        var4++;
         return rt.field_G[var4];
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         return null != qk.field_O && kw.field_c.a(17704);
     }
 
@@ -474,71 +471,67 @@ final class pe extends sp implements ai {
             hc.field_b = ri.a(param3, "", "heart");
             oi.field_d = ri.a(param3, "", "skull");
             tk.field_c = ri.b(param3, "", "slider");
-            if (param2 == 20) {
-              jj.field_c = ri.b(param3, "", "statline_tab");
-              rw.field_r = ri.b(param3, "", "statline_tab_flip");
-              ok.field_d = ri.b(param3, "", "button_off");
-              hh.field_a = ri.b(param3, "", "button_over");
-              sk.field_c = ri.b(param3, "", "button_on");
-              gq.field_o = ri.b(param3, "", "chargebar_vertical");
-              cb.field_e = ri.a(param3, "", "congratulations");
-              ve.field_k = ri.a(param3, "", "mouse");
-              dt.field_n = ri.a(param3, "", "keyboard");
-              rl.field_l = ri.b(param3, "", "player");
-              kk.field_e = ri.b(param3, "", "mook");
-              ks.field_w = ri.b(param3, "", "fast");
-              fl.field_r = ri.b(param3, "", "sleeper");
-              kr.field_b = ri.b(param3, "", "splitter");
-              qk.field_V = ri.b(param3, "", "seeker");
-              ph.field_a = ri.b(param3, "", "shadowdudes");
-              jd.field_h = ri.b(param3, "", "mod_armour");
-              bk.field_b = ri.b(param3, "", "mod_bomb");
-              cd.field_c = ri.b(param3, "", "mod_spikes");
-              lh.field_k = ri.a(param3, "", "zap");
-              eu.field_a = ri.b(param3, "", "chargebar");
-              bl.field_a = ri.a(param3, "", "bounceup");
-              uj.field_c = ri.b(param3, "", "powerups");
-              df.field_d = ri.a(param3, "", "particle");
-              cl.field_v = ri.b(param3, "", "particles");
-              kq.field_T = ri.a(param3, "", "particle_alpha");
-              dq.field_v = ri.b(param3, "", "particles_alpha");
-              kf.field_w = ri.b(param3, "", "particle_ring");
-              bj.field_g = ri.a(param3, "", "particle_sprinkle");
-              ks.field_t = ri.a(param3, "", "particle_star");
-              rq.field_c = ri.a(param3, "", "particle_pixel");
-              ue.field_p = ri.a(param3, "", "particle_pixel_alpha");
-              pc.field_c = ri.a(param3, "", "ghost");
-              no.field_c = ri.a(param3, "", "ghost_cloud");
-              rt.field_E = ri.a(param3, "", "ghost_splatter");
-              mn.field_c = ri.a(param3, "", "shadow");
-              gw.field_C = ri.a(param3, "", "driftinglight");
-              wf.field_a = ri.a(param3, "", "driftinglight_snow");
-              ml.field_p = ri.a(param3, "", "driftinglight_rough");
-              th.field_C = ri.a(param3, "", "shockwave");
-              os.field_b = ri.b(param3, "", "lightningrod");
-              sd.field_a = ri.b(param3, "", "lightningrod_lowgraphics");
-              hp.field_n = ri.b(param3, "", "electricity");
-              ni.field_h = ri.b(param3, "", "electricity_flip");
-              rj.field_f = ri.a(param3, "", "attract");
-              uu.field_o = ri.a(param3, "", "repulse");
-              lr.field_c = ri.a(param3, "", "icepatch");
-              ei.field_b = ri.b(param3, "", "attractor");
-              rs.field_e = ri.a(param3, "", "bouncer");
-              kq.field_S = ri.b(param3, "", "landmine");
-              nn.field_a = ri.b(param3, "", "repeller");
-              we.field_C = ri.b(param3, "", "accelerator");
-              pc.field_b = ri.b(param3, "", "teleporter");
-              mc.field_F = ri.b(param3, "", "ice");
-              om.field_m = ri.b(param3, "", "zaptrap");
-              ke.field_c = ri.a(param3, "reticule");
-              tc.field_i = ri.a(param3, "", "reticule_flat");
-              hc.field_a = ri.b(param3, "", "gravitywell");
-              rl.field_o = ri.a(param3, "", "gravitywell_field");
-              pq.field_F = ri.b(param3, "", "tutorial_images");
-              break L0;
-            } else {
-              return;
-            }
+            jj.field_c = ri.b(param3, "", "statline_tab");
+            rw.field_r = ri.b(param3, "", "statline_tab_flip");
+            ok.field_d = ri.b(param3, "", "button_off");
+            hh.field_a = ri.b(param3, "", "button_over");
+            sk.field_c = ri.b(param3, "", "button_on");
+            gq.field_o = ri.b(param3, "", "chargebar_vertical");
+            cb.field_e = ri.a(param3, "", "congratulations");
+            ve.field_k = ri.a(param3, "", "mouse");
+            dt.field_n = ri.a(param3, "", "keyboard");
+            rl.field_l = ri.b(param3, "", "player");
+            kk.field_e = ri.b(param3, "", "mook");
+            ks.field_w = ri.b(param3, "", "fast");
+            fl.field_r = ri.b(param3, "", "sleeper");
+            kr.field_b = ri.b(param3, "", "splitter");
+            qk.field_V = ri.b(param3, "", "seeker");
+            ph.field_a = ri.b(param3, "", "shadowdudes");
+            jd.field_h = ri.b(param3, "", "mod_armour");
+            bk.field_b = ri.b(param3, "", "mod_bomb");
+            cd.field_c = ri.b(param3, "", "mod_spikes");
+            lh.field_k = ri.a(param3, "", "zap");
+            eu.field_a = ri.b(param3, "", "chargebar");
+            bl.field_a = ri.a(param3, "", "bounceup");
+            uj.field_c = ri.b(param3, "", "powerups");
+            df.field_d = ri.a(param3, "", "particle");
+            cl.field_v = ri.b(param3, "", "particles");
+            kq.field_T = ri.a(param3, "", "particle_alpha");
+            dq.field_v = ri.b(param3, "", "particles_alpha");
+            kf.field_w = ri.b(param3, "", "particle_ring");
+            bj.field_g = ri.a(param3, "", "particle_sprinkle");
+            ks.field_t = ri.a(param3, "", "particle_star");
+            rq.field_c = ri.a(param3, "", "particle_pixel");
+            ue.field_p = ri.a(param3, "", "particle_pixel_alpha");
+            pc.field_c = ri.a(param3, "", "ghost");
+            no.field_c = ri.a(param3, "", "ghost_cloud");
+            rt.field_E = ri.a(param3, "", "ghost_splatter");
+            mn.field_c = ri.a(param3, "", "shadow");
+            gw.field_C = ri.a(param3, "", "driftinglight");
+            wf.field_a = ri.a(param3, "", "driftinglight_snow");
+            ml.field_p = ri.a(param3, "", "driftinglight_rough");
+            th.field_C = ri.a(param3, "", "shockwave");
+            os.field_b = ri.b(param3, "", "lightningrod");
+            sd.field_a = ri.b(param3, "", "lightningrod_lowgraphics");
+            hp.field_n = ri.b(param3, "", "electricity");
+            ni.field_h = ri.b(param3, "", "electricity_flip");
+            rj.field_f = ri.a(param3, "", "attract");
+            uu.field_o = ri.a(param3, "", "repulse");
+            lr.field_c = ri.a(param3, "", "icepatch");
+            ei.field_b = ri.b(param3, "", "attractor");
+            rs.field_e = ri.a(param3, "", "bouncer");
+            kq.field_S = ri.b(param3, "", "landmine");
+            nn.field_a = ri.b(param3, "", "repeller");
+            we.field_C = ri.b(param3, "", "accelerator");
+            pc.field_b = ri.b(param3, "", "teleporter");
+            mc.field_F = ri.b(param3, "", "ice");
+            om.field_m = ri.b(param3, "", "zaptrap");
+            ke.field_c = ri.a(param3, "reticule");
+            tc.field_i = ri.a(param3, "", "reticule_flat");
+            hc.field_a = ri.b(param3, "", "gravitywell");
+            rl.field_o = ri.a(param3, "", "gravitywell_field");
+            pq.field_F = ri.b(param3, "", "tutorial_images");
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -595,7 +588,7 @@ final class pe extends sp implements ai {
           }
           L3: {
             stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(param2).append(44);
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(20).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;

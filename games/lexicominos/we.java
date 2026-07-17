@@ -16,13 +16,10 @@ final class we {
     static sh field_h;
 
     final static void a(byte param0, boolean param1) {
-        if (param0 != -65) {
-            return;
-        }
         ug.field_A.a(26, 0, 0);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_j = null;
         field_c = null;
         field_h = null;

@@ -51,7 +51,8 @@ final class ul extends sl {
               } else {
                 L2: {
                   var3 = param0.charAt(var2_int);
-                  if (df.a((char) var3, 63)) {
+                  int discarded$5 = 63;
+                  if (df.a((char) var3)) {
                     break L2;
                   } else {
                     if (oj.a((char) var3, (byte) -15)) {
@@ -125,7 +126,8 @@ final class ul extends sl {
         try {
           L0: {
             var3_int = -91 / ((3 - param1) / 35);
-            stackOut_0_0 = pt.a((byte) -126, param0.field_f.length(), '*');
+            int discarded$2 = 42;
+            stackOut_0_0 = pt.a((byte) -126, param0.field_f.length());
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -182,7 +184,7 @@ final class ul extends sl {
         this(qo.field_b, param0);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_t = null;
         field_r = null;
         int var1 = -11;

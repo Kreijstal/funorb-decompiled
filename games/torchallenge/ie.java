@@ -10,7 +10,7 @@ final class ie {
     static ka[][] field_f;
     static sf field_a;
 
-    final static void b(byte param0) {
+    final static void b() {
         kd var1 = (kd) (Object) rf.field_db.d((byte) -112);
         if (!(var1 != null)) {
             throw new IllegalStateException();
@@ -21,7 +21,7 @@ final class ie {
         mc.field_k.a((da) (Object) var1, -35);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
         field_e = null;

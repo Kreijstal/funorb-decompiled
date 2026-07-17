@@ -15,7 +15,7 @@ final class vg implements fc {
     static String field_g;
     private int field_h;
 
-    final static bl a(boolean param0, int param1) {
+    final static bl a(boolean param0) {
         ii var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -156,13 +156,14 @@ final class vg implements fc {
               }
             }
             L2: while (true) {
-              if (!fb.e((byte) 102)) {
+              int discarded$9 = 102;
+              if (!fb.e()) {
                 break L0;
               } else {
                 var1.a(true, 8);
-                int fieldTemp$5 = var1.field_h + 1;
+                int fieldTemp$10 = var1.field_h + 1;
                 var1.field_h = var1.field_h + 1;
-                var2 = fieldTemp$5;
+                var2 = fieldTemp$10;
                 sa.a((byte) -97, var1);
                 hh.field_p.b(-var2 + var1.field_h, true);
                 continue L2;
@@ -280,7 +281,7 @@ final class vg implements fc {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_g = null;
         field_l = null;
         field_f = null;

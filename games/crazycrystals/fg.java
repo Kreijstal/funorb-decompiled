@@ -84,7 +84,7 @@ final class fg extends pd {
         return (pb) (Object) new rn();
     }
 
-    final static void c(byte param0) {
+    final static void c() {
     }
 
     final void a(byte param0) {
@@ -98,7 +98,7 @@ final class fg extends pd {
         field_i = null;
         field_l = null;
         field_j = null;
-        int var1 = -114 % ((param0 - -30) / 53);
+        int var1 = 0;
     }
 
     fg() {

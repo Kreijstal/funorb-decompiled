@@ -17,19 +17,10 @@ final class el extends cm {
     }
 
     final static void a(int param0, int param1) {
-        nk var2 = null;
-        var2 = qn.field_U;
-        var2.f(param1, -60);
-        if (param0 != 4) {
-          field_y = null;
-          var2.c(1, (byte) -95);
-          var2.c(2, (byte) -56);
-          return;
-        } else {
-          var2.c(1, (byte) -95);
-          var2.c(2, (byte) -56);
-          return;
-        }
+        nk var2 = qn.field_U;
+        var2.f(4, -60);
+        var2.c(1, (byte) -95);
+        var2.c(2, (byte) -56);
     }
 
     public static void e(byte param0) {
@@ -55,7 +46,7 @@ final class el extends cm {
         return ((el) this).field_A;
     }
 
-    final static void h(int param0) {
+    final static void h() {
         uk.a(false, 4);
         int var1 = 0;
     }

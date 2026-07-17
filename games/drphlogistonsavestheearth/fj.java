@@ -6,11 +6,11 @@ final class fj extends gi {
     static volatile int field_j;
     static String[] field_i;
 
-    public static void d(int param0) {
+    public static void d() {
         field_i = null;
     }
 
-    final static void e(int param0) {
+    final static void e() {
     }
 
     fj(int param0) {
@@ -19,20 +19,17 @@ final class fj extends gi {
 
     final static void a(int param0, rf param1, byte param2, rf param3) {
         try {
-            ol.field_h = param0;
+            ol.field_h = 480;
             uj.field_i = param3;
             cj.field_a = param1;
-            if (param2 <= 104) {
-                field_i = null;
-            }
             a.a(wj.field_c / 2, wj.field_k / 2, (byte) 101);
             fa.a(false, param3.field_L - -param3.field_S, param1.field_L, param1.field_S + param1.field_L, param3.field_L);
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) (Object) runtimeException, "fj.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw ie.a((Throwable) (Object) runtimeException, "fj.D(" + 480 + 44 + (param1 != null ? "{...}" : "null") + 44 + 114 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static int a(int param0, CharSequence param1, int param2, boolean param3) {
+    final static int a(int param0, CharSequence param1, int param2) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -215,8 +212,10 @@ final class fj extends gi {
         return stackIn_42_0;
     }
 
-    final static a f(int param0) {
-        return new a(nf.e((byte) 127), mj.b((byte) 114));
+    final static a f() {
+        int discarded$0 = 127;
+        int discarded$1 = 114;
+        return new a(nf.e(), mj.b());
     }
 
     static {

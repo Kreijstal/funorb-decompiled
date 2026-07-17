@@ -14,11 +14,11 @@ final class nn extends rk {
     static bi field_o;
     static String[] field_p;
 
-    final static al[] b(int param0) {
+    final static al[] b() {
         return new al[]{pi.field_T, tj.field_n, tk.field_f};
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_p = null;
         field_t = null;
         field_q = null;

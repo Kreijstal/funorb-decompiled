@@ -9,7 +9,7 @@ final class uc extends dh {
     private qe field_m;
     static String field_q;
 
-    public static void m(int param0) {
+    public static void m() {
         field_p = null;
         field_q = null;
         field_n = null;
@@ -40,13 +40,10 @@ final class uc extends dh {
     }
 
     final static void l(int param0, int param1) {
-        int discarded$4 = m.a(1);
-        if (param0 != 3795) {
-            field_q = null;
-        }
+        int discarded$0 = m.a(1);
     }
 
-    final static bg[] o(int param0) {
+    final static bg[] o() {
         int var2 = 0;
         int var3 = Terraphoenix.field_V;
         bg[] var1 = new bg[kf.field_b];
@@ -57,7 +54,7 @@ final class uc extends dh {
         return var1;
     }
 
-    final static int j(byte param0) {
+    final static int j() {
         return (int)(1000000000L / dm.field_f);
     }
 
@@ -68,7 +65,7 @@ final class uc extends dh {
         ((uc) this).field_o = ((uc) this).field_k * 8;
     }
 
-    final static ci[] l(int param0) {
+    final static ci[] l() {
         ci[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -146,9 +143,9 @@ final class uc extends dh {
     final static void b(int param0, String param1) {
         try {
             og.field_e = param1;
-            int var2_int = 111 / ((49 - param0) / 53);
+            int var2_int = -111;
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "uc.TA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "uc.TA(" + 121 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

@@ -405,7 +405,7 @@ final class ih extends ej {
         ((ih) this).field_r = (byte)(int)(Math.random() * 255.0 + 1.0);
     }
 
-    private final void g(int param0) {
+    private final void g() {
         try {
             Exception var3 = null;
             Throwable decompiledCaughtException = null;
@@ -479,7 +479,8 @@ final class ih extends ej {
                   }
                 }
                 ((ih) this).field_t = (td) param2;
-                this.g(24);
+                int discarded$1 = 24;
+                this.g();
                 this.a((byte) 47, param0);
                 ((ih) this).field_p = null;
                 ((ih) this).field_i.field_i = 0;
@@ -671,7 +672,7 @@ final class ih extends ej {
                   iOException = (IOException) (Object) decompiledCaughtException;
                   try {
                     L3: {
-                      ((ih) this).field_t.a(param0 ^ 127);
+                      ((ih) this).field_t.a(80);
                       break L3;
                     }
                   } catch (java.lang.Exception decompiledCaughtParameter1) {
@@ -685,14 +686,6 @@ final class ih extends ej {
                   ((ih) this).field_k = ((ih) this).field_k + 1;
                   ((ih) this).field_t = null;
                   break L2;
-                }
-              }
-              L5: {
-                if (param0 == 47) {
-                  break L5;
-                } else {
-                  ((ih) this).a((byte) -29);
-                  break L5;
                 }
               }
               return;

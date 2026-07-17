@@ -71,7 +71,7 @@ class hn extends gm implements cj {
         }
     }
 
-    private final void a(StringBuilder param0, int param1, Hashtable param2, byte param3) {
+    private final void a(StringBuilder param0, int param1, Hashtable param2) {
         re var5 = null;
         RuntimeException var5_ref = null;
         gm var6 = null;
@@ -373,7 +373,7 @@ class hn extends gm implements cj {
         }
     }
 
-    private final void a(boolean param0) {
+    private final void a() {
         int var4 = Torquing.field_u;
         re var2 = new re(((hn) this).field_y);
         gm var3 = (gm) (Object) var2.a((byte) 66);
@@ -509,14 +509,15 @@ class hn extends gm implements cj {
                 break L1;
               } else {
                 var6 = null;
-                boolean discarded$2 = ((hn) this).a(-99, -92, -99, -25, -38, (gm) null, (byte) 51);
+                boolean discarded$4 = ((hn) this).a(-99, -92, -99, -25, -38, (gm) null, (byte) 51);
                 break L1;
               }
             }
             L2: {
               if (((hn) this).a(-31866, param0, param2, param3)) {
                 ((hn) this).a(param0, param3, true, param2);
-                this.a(param0, param3, param2, (byte) 114);
+                int discarded$5 = 114;
+                this.a(param0, param3, param2);
                 break L2;
               } else {
                 break L2;
@@ -959,7 +960,8 @@ class hn extends gm implements cj {
     final void a(byte param0, int param1, int param2, int param3, int param4) {
         super.a((byte) 6, param1, param2, param3, param4);
         int var6 = -94 % ((param0 - 66) / 57);
-        this.a(true);
+        int discarded$0 = 1;
+        this.a();
     }
 
     hn(int param0, int param1, int param2, int param3, el param4) {

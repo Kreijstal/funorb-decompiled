@@ -143,7 +143,7 @@ class pe extends ub implements bg {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_z = null;
         field_y = null;
         field_C = null;
@@ -182,8 +182,8 @@ class pe extends ub implements bg {
     }
 
     final static void a(int param0, byte param1, int param2, int param3, int param4) {
-        RuntimeException var5 = null;
         int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -194,47 +194,43 @@ class pe extends ub implements bg {
         try {
           L0: {
             ed.f(param4, param2, 1 + param3, 10000536);
-            if (param1 == -14) {
-              L1: {
-                ed.f(param4, param0 + param2, 1 + param3, 12105912);
-                var5_int = 1;
-                var6 = param0;
-                if (param2 - -var5_int < ed.field_i) {
-                  var5_int = ed.field_i + -param2;
-                  break L1;
-                } else {
-                  break L1;
-                }
+            L1: {
+              ed.f(param4, param0 + param2, 1 + param3, 12105912);
+              var5_int = 1;
+              var6 = param0;
+              if (param2 - -var5_int < ed.field_i) {
+                var5_int = ed.field_i + -param2;
+                break L1;
+              } else {
+                break L1;
               }
-              L2: {
-                if (var6 + param2 <= ed.field_b) {
-                  break L2;
-                } else {
-                  var6 = -param2 + ed.field_b;
-                  break L2;
-                }
+            }
+            L2: {
+              if (var6 + param2 <= ed.field_b) {
+                break L2;
+              } else {
+                var6 = -param2 + ed.field_b;
+                break L2;
               }
-              var7 = var5_int;
-              L3: while (true) {
-                if (var6 <= var7) {
-                  break L0;
-                } else {
-                  var8 = var7 * 48 / param0 + 152;
-                  var9 = var8 << 16 | var8 << 8 | var8;
-                  ed.field_k[param4 + ed.field_h * (param2 - -var7)] = var9;
-                  ed.field_k[param3 + (param4 + ed.field_h * (var7 + param2))] = var9;
-                  var7++;
-                  continue L3;
-                }
+            }
+            var7 = var5_int;
+            L3: while (true) {
+              if (var6 <= var7) {
+                break L0;
+              } else {
+                var8 = var7 * 48 / param0 + 152;
+                var9 = var8 << 16 | var8 << 8 | var8;
+                ed.field_k[param4 + ed.field_h * (param2 - -var7)] = var9;
+                ed.field_k[param3 + (param4 + ed.field_h * (var7 + param2))] = var9;
+                var7++;
+                continue L3;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw bd.a((Throwable) (Object) var5, "pe.KA(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw bd.a((Throwable) (Object) var5, "pe.KA(" + param0 + 44 + -14 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -1144,7 +1140,7 @@ class pe extends ub implements bg {
         }
     }
 
-    private final void f(int param0) {
+    private final void f() {
         int var4 = wizardrun.field_H;
         pf var2 = new pf(((pe) this).field_A);
         ub var3 = (ub) (Object) var2.a((byte) 31);
@@ -1377,7 +1373,8 @@ class pe extends ub implements bg {
         if (param0 < 108) {
             boolean discarded$0 = ((pe) this).d((byte) 109);
         }
-        this.f(1);
+        int discarded$1 = 1;
+        this.f();
     }
 
     final int e(byte param0) {

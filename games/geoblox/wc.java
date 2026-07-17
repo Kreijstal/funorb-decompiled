@@ -133,7 +133,7 @@ final class wc extends hf {
         return stackIn_7_0 != 0;
     }
 
-    final static void a(float param0, byte param1) {
+    final static void a(float param0) {
         if (!(jf.field_j <= 0)) {
             return;
         }

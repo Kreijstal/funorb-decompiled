@@ -309,45 +309,10 @@ final class lk extends bca {
     }
 
     final static uha c(int param0, int param1) {
-        Object var3 = null;
-        eo stackIn_4_0 = null;
-        eo stackIn_8_0 = null;
-        Object stackOut_7_0 = null;
-        eo stackOut_6_0 = null;
-        Object stackOut_3_0 = null;
-        eo stackOut_2_0 = null;
-        if (param0 != -12411) {
-          L0: {
-            var3 = null;
-            String discarded$10 = lk.a((CharSequence) null, true, (byte) 50);
-            if (null == ola.field_g) {
-              stackOut_7_0 = null;
-              stackIn_8_0 = (eo) (Object) stackOut_7_0;
-              break L0;
-            } else {
-              stackOut_6_0 = ola.field_g.a((long)param1, (byte) -87);
-              stackIn_8_0 = stackOut_6_0;
-              break L0;
-            }
-          }
-          return (uha) (Object) stackIn_8_0;
-        } else {
-          L1: {
-            if (null == ola.field_g) {
-              stackOut_3_0 = null;
-              stackIn_4_0 = (eo) (Object) stackOut_3_0;
-              break L1;
-            } else {
-              stackOut_2_0 = ola.field_g.a((long)param1, (byte) -87);
-              stackIn_4_0 = stackOut_2_0;
-              break L1;
-            }
-          }
-          return (uha) (Object) stackIn_4_0;
-        }
+        return null != ola.field_g ? (uha) (Object) ola.field_g.a((long)param1, (byte) -87) : null;
     }
 
-    final static boolean d(int param0) {
+    final static boolean d() {
         if (null == wh.field_p) {
             return false;
         }

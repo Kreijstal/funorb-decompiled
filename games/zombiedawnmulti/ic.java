@@ -140,7 +140,7 @@ abstract class ic {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_j = null;
         field_f = null;

@@ -61,11 +61,15 @@ final class ha {
           an.field_f = param8;
           rc.field_a = param10;
           fi.field_c = param13;
-          sp.field_O = param0;
-          eg.field_r = gk.a(param14, "lobby", "gameprivacy", true);
-          ne.field_I = gk.a(param14, "lobby", "ratedgame", true);
-          mj.field_c = gk.a(param14, "lobby", "opentome", true);
-          sf.field_a = gk.a(param14, "lobby", "allowspectators", true);
+          sp.field_O = 1;
+          int discarded$4 = 1;
+          eg.field_r = gk.a(param14, "lobby", "gameprivacy");
+          int discarded$5 = 1;
+          ne.field_I = gk.a(param14, "lobby", "ratedgame");
+          int discarded$6 = 1;
+          mj.field_c = gk.a(param14, "lobby", "opentome");
+          int discarded$7 = 1;
+          sf.field_a = gk.a(param14, "lobby", "allowspectators");
           gm.field_c = new String[5];
           gm.field_c[1] = t.field_k;
           gm.field_c[0] = fh.field_x;
@@ -73,7 +77,7 @@ final class ha {
           gm.field_c[4] = pq.field_g;
           gm.field_c[3] = ve.field_b;
           im.field_j = new cr(0L, (cr) null);
-          hr.field_C = new cr((long)param9, db.field_t, kc.field_c);
+          hr.field_C = new cr(0L, db.field_t, kc.field_c);
           rk.field_v = new cr(0L, sa.field_a, f.field_D);
           ja.field_f = new od(0L, new cr(0L, (cr) null), ua.field_c, ol.field_H);
           im.field_j.b(hr.field_C, 118);
@@ -86,7 +90,7 @@ final class ha {
         }
         L1: {
           im.field_j.b((cr) (Object) ja.field_f, 123);
-          ja.field_f.field_Lb.a(ee.field_b, param9 + -27);
+          ja.field_f.field_Lb.a(ee.field_b, -27);
           ja.field_f.field_Lb.field_ab = 1;
           var23 = ja.field_f.field_Lb;
           var24 = var23;
@@ -148,9 +152,9 @@ final class ha {
           ud.field_A = new cr(0L, (cr) null);
           ud.field_A.b(qn.field_s, 123);
           ud.field_A.b(ja.field_b, 125);
-          ja.field_b.b(po.field_a, param9 + 124);
+          ja.field_b.b(po.field_a, 124);
           ja.field_b.b(mn.field_n, 120);
-          ja.field_b.b(ve.field_f, param9 ^ 121);
+          ja.field_b.b(ve.field_f, 121);
           if (!db.field_S) {
             break L2;
           } else {
@@ -170,7 +174,7 @@ final class ha {
           }
         }
         L4: {
-          ud.field_A.b(la.field_f, param9 + 123);
+          ud.field_A.b(la.field_f, 123);
           rh.field_I = new cr(0L, ee.field_b);
           rh.field_I.field_ab = 0;
           rh.field_I.field_O = 1;
@@ -190,7 +194,7 @@ final class ha {
           eq.field_z = new cr(0L, sa.field_a, f.field_D);
           vd.field_d = new od(0L, new cr(0L, (cr) null), ua.field_c, ol.field_H);
           de.field_g.b(nb.field_D, 118);
-          de.field_g.b(uc.field_a, param9 + 125);
+          de.field_g.b(uc.field_a, 125);
           if (db.field_S) {
             de.field_g.b(eq.field_z, 119);
             break L4;
@@ -300,7 +304,7 @@ final class ha {
                               }
                             }
                           }
-                          fd.field_s.b(el.field_h[var18], param9 + 121);
+                          fd.field_s.b(el.field_h[var18], 121);
                           var19 = 0;
                           L16: while (true) {
                             if (mg.field_S[var18].length <= var19) {
@@ -416,7 +420,7 @@ final class ha {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         int var2 = 0;
         L0: {
           var2 = Vertigo2.field_L ? 1 : 0;
@@ -439,7 +443,8 @@ final class ha {
         }
         L1: {
           if (rk.field_y > 0) {
-            km.i(202);
+            int discarded$1 = 202;
+            km.i();
             break L1;
           } else {
             break L1;
@@ -607,7 +612,8 @@ final class ha {
                     bi.b(1 + param2, param4 + var7, 9, 7, 8795773);
                     bi.b(param2 - -4, var7 + param4, 6, 10, 8795773);
                     bi.a();
-                    pp.a(16777215, (byte) 57, param4, param0, param2, 40, param3, 3355443);
+                    int discarded$1 = 3355443;
+                    pp.a(16777215, (byte) 57, param4, param0, param2, 40, param3);
                     db.a(param2, param3, param0, 0, param4);
                     ro.field_g.a(-60);
                     var10 = 0;

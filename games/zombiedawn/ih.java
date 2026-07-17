@@ -365,7 +365,8 @@ final class ih extends hp implements ok, hh {
             }
             L13: {
               var8 = qi.field_C;
-              var9 = ne.a(hc.a(0), 0);
+              int discarded$3 = 0;
+              var9 = ne.a(hc.a(0));
               if (var9 != em.field_J) {
                 if (wn.field_a != var9) {
                   break L13;
@@ -379,13 +380,13 @@ final class ih extends hp implements ok, hh {
               }
             }
             L14: {
-              q dupTemp$2 = new q(10, ((ih) this).field_j, -20 + ((ih) this).field_i, 25, (ga) (Object) ((ih) this).field_N, false, 80, 3, var7, 16777215, var8);
-              var12 = dupTemp$2;
-              ((ih) this).a((ga) (Object) dupTemp$2, 10);
+              q dupTemp$4 = new q(10, ((ih) this).field_j, -20 + ((ih) this).field_i, 25, (ga) (Object) ((ih) this).field_N, false, 80, 3, var7, 16777215, var8);
+              var12 = dupTemp$4;
+              ((ih) this).a((ga) (Object) dupTemp$4, 10);
               ((ih) this).field_j = ((ih) this).field_j + (((ga) (Object) var12).field_n + 5);
-              q dupTemp$3 = new q(10, ((ih) this).field_j, ((ih) this).field_i - 20, 25, (ga) (Object) ((ih) this).field_M, false, 80, 3, var7, 16777215, ui.field_c);
-              var13 = dupTemp$3;
-              ((ih) this).a((ga) (Object) dupTemp$3, 10);
+              q dupTemp$5 = new q(10, ((ih) this).field_j, ((ih) this).field_i - 20, 25, (ga) (Object) ((ih) this).field_M, false, 80, 3, var7, 16777215, ui.field_c);
+              var13 = dupTemp$5;
+              ((ih) this).a((ga) (Object) dupTemp$5, 10);
               ((ih) this).field_R.field_v = (sk) this;
               ((ih) this).field_j = ((ih) this).field_j + (5 + ((ga) (Object) var13).field_n);
               if (null == ((ih) this).field_K) {
@@ -540,23 +541,18 @@ final class ih extends hp implements ok, hh {
         super.a(param0, param1, param2, param3);
     }
 
-    final static void a(int param0, int param1, boolean param2) {
+    final static void a(int param0, int param1) {
         vj.field_q = 0;
         ul.field_f = false;
         ha.field_e = false;
         vj.field_o = 0;
         nm.field_b = false;
-        if (!param2) {
-          return;
-        } else {
-          vf.field_f = param1;
-          ma.field_r = -1;
-          uo.field_d = false;
-          vk.field_c = param0;
-          h.field_d = false;
-          sm.field_a = -1;
-          return;
-        }
+        vf.field_f = param1;
+        ma.field_r = -1;
+        uo.field_d = false;
+        vk.field_c = param0;
+        h.field_d = false;
+        sm.field_a = -1;
     }
 
     final void a(String param0, int param1) {
@@ -681,11 +677,13 @@ final class ih extends hp implements ok, hh {
                         ZombieDawn.q(-10401);
                         break L1;
                       } else {
-                        mk.a((byte) -121);
+                        int discarded$450 = -121;
+                        mk.a();
                         break L1;
                       }
                     } else {
-                      cj.d((byte) 111);
+                      int discarded$451 = 111;
+                      cj.d();
                       break L1;
                     }
                   } else {
@@ -830,7 +828,8 @@ final class ih extends hp implements ok, hh {
         } else {
           L0: {
             L1: {
-              if (eo.b(127)) {
+              int discarded$6 = 127;
+              if (eo.b()) {
                 break L1;
               } else {
                 if (((ih) this).field_N.field_o.length() <= 0) {
@@ -851,7 +850,7 @@ final class ih extends hp implements ok, hh {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_T = null;
     }
 

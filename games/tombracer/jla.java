@@ -23,7 +23,7 @@ final class jla extends rj {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_B = null;
         field_z = null;
     }

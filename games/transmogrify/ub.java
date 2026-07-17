@@ -8,12 +8,9 @@ final class ub {
     static dg field_c;
     static boolean field_d;
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
-        if (param0 != -31455) {
-            return;
-        }
         field_e = null;
     }
 
@@ -29,8 +26,8 @@ final class ub {
           return;
         } else {
           L0: {
-            var3 = -135 + param0;
-            var4 = param1 - 35;
+            var3 = 185;
+            var4 = 205;
             var5 = 256;
             if (75 <= si.field_l) {
               break L0;
@@ -47,20 +44,12 @@ final class ub {
               break L1;
             }
           }
-          L2: {
-            oj.a(ug.field_f, 256);
-            if (param2 == 116) {
-              ka.c();
-              break L2;
-            } else {
-              ub.a(-11);
-              break L2;
-            }
-          }
-          ka.c();
+          int discarded$2 = 256;
+          oj.a(ug.field_f);
           ka.c();
           sb.c();
-          f.a((byte) 16);
+          int discarded$3 = 16;
+          f.a();
           if (256 <= var5) {
             fi.c(true);
             if (150 > si.field_l) {
@@ -70,110 +59,110 @@ final class ub {
                 if (var6 < 50) {
                   if (20 <= var6) {
                     if (var6 < 30) {
-                      L3: {
+                      L2: {
                         ac.field_m.c(var3, var4, 256);
                         var6 = -140 + si.field_l;
                         if (var6 > 0) {
-                          L4: {
+                          L3: {
                             var7 = 256;
                             if (var6 < 20) {
                               var7 = var6 * 256 / 20;
-                              break L4;
+                              break L3;
                             } else {
-                              break L4;
+                              break L3;
                             }
                           }
                           tb.field_e.e(15 + var3, var4 - -10, var7 * var5 >> 8);
-                          break L3;
+                          break L2;
                         } else {
-                          break L3;
+                          break L2;
                         }
                       }
                       return;
                     } else {
-                      L5: {
+                      L4: {
                         var7 = 256 * (50 + -var6) / 20;
                         ac.field_m.c(var3, var4, var7);
                         var6 = -140 + si.field_l;
                         if (var6 > 0) {
-                          L6: {
+                          L5: {
                             var7 = 256;
                             if (var6 < 20) {
                               var7 = var6 * 256 / 20;
-                              break L6;
+                              break L5;
                             } else {
-                              break L6;
+                              break L5;
                             }
                           }
                           tb.field_e.e(15 + var3, var4 - -10, var7 * var5 >> 8);
-                          break L5;
+                          break L4;
                         } else {
-                          break L5;
+                          break L4;
                         }
                       }
                       return;
                     }
                   } else {
-                    L7: {
+                    L6: {
                       var7 = var6 * 256 / 20;
                       ac.field_m.c(var3, var4, var7);
                       var6 = -140 + si.field_l;
                       if (var6 > 0) {
-                        L8: {
+                        L7: {
                           var7 = 256;
                           if (var6 < 20) {
                             var7 = var6 * 256 / 20;
-                            break L8;
+                            break L7;
                           } else {
-                            break L8;
+                            break L7;
                           }
                         }
                         tb.field_e.e(15 + var3, var4 - -10, var7 * var5 >> 8);
-                        break L7;
+                        break L6;
                       } else {
-                        break L7;
+                        break L6;
                       }
                     }
                     return;
                   }
                 } else {
-                  L9: {
+                  L8: {
                     var6 = -140 + si.field_l;
                     if (var6 > 0) {
-                      L10: {
+                      L9: {
                         var7 = 256;
                         if (var6 < 20) {
                           var7 = var6 * 256 / 20;
-                          break L10;
+                          break L9;
                         } else {
-                          break L10;
+                          break L9;
                         }
                       }
                       tb.field_e.e(15 + var3, var4 - -10, var7 * var5 >> 8);
-                      break L9;
+                      break L8;
                     } else {
-                      break L9;
+                      break L8;
                     }
                   }
                   return;
                 }
               } else {
-                L11: {
+                L10: {
                   var6 = -140 + si.field_l;
                   if (var6 > 0) {
-                    L12: {
+                    L11: {
                       var7 = 256;
                       if (var6 < 20) {
                         var7 = var6 * 256 / 20;
-                        break L12;
+                        break L11;
                       } else {
-                        break L12;
+                        break L11;
                       }
                     }
                     tb.field_e.e(15 + var3, var4 - -10, var7 * var5 >> 8);
-                    break L11;
+                    break L10;
                   } else {
-                    break L11;
+                    break L10;
                   }
                 }
                 return;
@@ -185,125 +174,125 @@ final class ub {
                 if (var6 < 50) {
                   if (20 <= var6) {
                     if (var6 < 30) {
-                      L13: {
+                      L12: {
                         ac.field_m.c(var3, var4, 256);
                         var6 = -140 + si.field_l;
                         if (var6 > 0) {
-                          L14: {
+                          L13: {
                             var7 = 256;
                             if (var6 < 20) {
                               var7 = var6 * 256 / 20;
-                              break L14;
+                              break L13;
                             } else {
-                              break L14;
+                              break L13;
                             }
                           }
                           tb.field_e.e(15 + var3, var4 - -10, var7 * var5 >> 8);
-                          break L13;
+                          break L12;
                         } else {
-                          break L13;
+                          break L12;
                         }
                       }
                       return;
                     } else {
-                      L15: {
+                      L14: {
                         var7 = 256 * (50 + -var6) / 20;
                         ac.field_m.c(var3, var4, var7);
                         var6 = -140 + si.field_l;
                         if (var6 > 0) {
-                          L16: {
+                          L15: {
                             var7 = 256;
                             if (var6 < 20) {
                               var7 = var6 * 256 / 20;
-                              break L16;
+                              break L15;
                             } else {
-                              break L16;
+                              break L15;
                             }
                           }
                           tb.field_e.e(15 + var3, var4 - -10, var7 * var5 >> 8);
-                          break L15;
+                          break L14;
                         } else {
-                          break L15;
+                          break L14;
                         }
                       }
                       return;
                     }
                   } else {
-                    L17: {
+                    L16: {
                       var7 = var6 * 256 / 20;
                       ac.field_m.c(var3, var4, var7);
                       var6 = -140 + si.field_l;
                       if (var6 > 0) {
-                        L18: {
+                        L17: {
                           var7 = 256;
                           if (var6 < 20) {
                             var7 = var6 * 256 / 20;
-                            break L18;
+                            break L17;
                           } else {
-                            break L18;
+                            break L17;
                           }
                         }
                         tb.field_e.e(15 + var3, var4 - -10, var7 * var5 >> 8);
-                        break L17;
+                        break L16;
                       } else {
-                        break L17;
+                        break L16;
                       }
                     }
                     return;
                   }
                 } else {
-                  L19: {
+                  L18: {
                     var6 = -140 + si.field_l;
                     if (var6 > 0) {
-                      L20: {
+                      L19: {
                         var7 = 256;
                         if (var6 < 20) {
                           var7 = var6 * 256 / 20;
-                          break L20;
+                          break L19;
                         } else {
-                          break L20;
+                          break L19;
                         }
                       }
                       tb.field_e.e(15 + var3, var4 - -10, var7 * var5 >> 8);
-                      break L19;
+                      break L18;
                     } else {
-                      break L19;
+                      break L18;
                     }
                   }
                   return;
                 }
               } else {
-                L21: {
+                L20: {
                   var6 = -140 + si.field_l;
                   if (var6 > 0) {
-                    L22: {
+                    L21: {
                       var7 = 256;
                       if (var6 < 20) {
                         var7 = var6 * 256 / 20;
-                        break L22;
+                        break L21;
                       } else {
-                        break L22;
+                        break L21;
                       }
                     }
                     tb.field_e.e(15 + var3, var4 - -10, var7 * var5 >> 8);
-                    break L21;
+                    break L20;
                   } else {
-                    break L21;
+                    break L20;
                   }
                 }
                 return;
               }
             }
           } else {
-            L23: {
+            L22: {
               sb.c(0, 0, sb.field_c, sb.field_g, 0, 256 - var5);
               fi.c(true);
               if (150 > si.field_l) {
                 ug.field_f.d(var3, var4);
-                break L23;
+                break L22;
               } else {
                 ch.field_c.e(var3 + 15, var4 - -10, var5);
-                break L23;
+                break L22;
               }
             }
             var6 = si.field_l - 125;
@@ -311,110 +300,110 @@ final class ub {
               if (var6 < 50) {
                 if (20 <= var6) {
                   if (var6 < 30) {
-                    L24: {
+                    L23: {
                       ac.field_m.c(var3, var4, 256);
                       var6 = -140 + si.field_l;
                       if (var6 > 0) {
-                        L25: {
+                        L24: {
                           var7 = 256;
                           if (var6 < 20) {
                             var7 = var6 * 256 / 20;
-                            break L25;
+                            break L24;
                           } else {
-                            break L25;
+                            break L24;
                           }
                         }
                         tb.field_e.e(15 + var3, var4 - -10, var7 * var5 >> 8);
-                        break L24;
+                        break L23;
                       } else {
-                        break L24;
+                        break L23;
                       }
                     }
                     return;
                   } else {
-                    L26: {
+                    L25: {
                       var7 = 256 * (50 + -var6) / 20;
                       ac.field_m.c(var3, var4, var7);
                       var6 = -140 + si.field_l;
                       if (var6 > 0) {
-                        L27: {
+                        L26: {
                           var7 = 256;
                           if (var6 < 20) {
                             var7 = var6 * 256 / 20;
-                            break L27;
+                            break L26;
                           } else {
-                            break L27;
+                            break L26;
                           }
                         }
                         tb.field_e.e(15 + var3, var4 - -10, var7 * var5 >> 8);
-                        break L26;
+                        break L25;
                       } else {
-                        break L26;
+                        break L25;
                       }
                     }
                     return;
                   }
                 } else {
-                  L28: {
+                  L27: {
                     var7 = var6 * 256 / 20;
                     ac.field_m.c(var3, var4, var7);
                     var6 = -140 + si.field_l;
                     if (var6 > 0) {
-                      L29: {
+                      L28: {
                         var7 = 256;
                         if (var6 < 20) {
                           var7 = var6 * 256 / 20;
-                          break L29;
+                          break L28;
                         } else {
-                          break L29;
+                          break L28;
                         }
                       }
                       tb.field_e.e(15 + var3, var4 - -10, var7 * var5 >> 8);
-                      break L28;
+                      break L27;
                     } else {
-                      break L28;
+                      break L27;
                     }
                   }
                   return;
                 }
               } else {
-                L30: {
+                L29: {
                   var6 = -140 + si.field_l;
                   if (var6 > 0) {
-                    L31: {
+                    L30: {
                       var7 = 256;
                       if (var6 < 20) {
                         var7 = var6 * 256 / 20;
-                        break L31;
+                        break L30;
                       } else {
-                        break L31;
+                        break L30;
                       }
                     }
                     tb.field_e.e(15 + var3, var4 - -10, var7 * var5 >> 8);
-                    break L30;
+                    break L29;
                   } else {
-                    break L30;
+                    break L29;
                   }
                 }
                 return;
               }
             } else {
-              L32: {
+              L31: {
                 var6 = -140 + si.field_l;
                 if (var6 > 0) {
-                  L33: {
+                  L32: {
                     var7 = 256;
                     if (var6 < 20) {
                       var7 = var6 * 256 / 20;
-                      break L33;
+                      break L32;
                     } else {
-                      break L33;
+                      break L32;
                     }
                   }
                   tb.field_e.e(15 + var3, var4 - -10, var7 * var5 >> 8);
-                  break L32;
+                  break L31;
                 } else {
-                  break L32;
+                  break L31;
                 }
               }
               return;
@@ -423,86 +412,78 @@ final class ub {
         }
     }
 
-    final static StringBuilder a(StringBuilder param0, int param1, char param2, int param3) {
+    final static StringBuilder a(StringBuilder param0) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        StringBuilder stackIn_7_0 = null;
+        StringBuilder stackIn_5_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
+        String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        StringBuilder stackOut_6_0 = null;
+        StringBuilder stackOut_4_0 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
         var6 = Transmogrify.field_A ? 1 : 0;
         try {
           L0: {
-            L1: {
-              var4_int = param0.length();
-              if (param1 > 114) {
-                break L1;
-              } else {
-                ub.a(-10, 88, (byte) -53);
-                break L1;
-              }
-            }
+            var4_int = param0.length();
             param0.setLength(0);
             var5 = var4_int;
-            L2: while (true) {
+            L1: while (true) {
               if (0 <= var5) {
-                stackOut_6_0 = (StringBuilder) param0;
-                stackIn_7_0 = stackOut_6_0;
+                stackOut_4_0 = (StringBuilder) param0;
+                stackIn_5_0 = stackOut_4_0;
                 break L0;
               } else {
-                param0.setCharAt(var5, param2);
+                param0.setCharAt(var5, ' ');
                 var5++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var4 = decompiledCaughtException;
-            stackOut_8_0 = (RuntimeException) var4;
-            stackOut_8_1 = new StringBuilder().append("ub.A(");
-            stackIn_10_0 = stackOut_8_0;
-            stackIn_10_1 = stackOut_8_1;
-            stackIn_9_0 = stackOut_8_0;
-            stackIn_9_1 = stackOut_8_1;
+            stackOut_6_0 = (RuntimeException) var4;
+            stackOut_6_1 = new StringBuilder().append("ub.A(");
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
             if (param0 == null) {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "null";
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
-              break L3;
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
             } else {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "{...}";
-              stackIn_11_0 = stackOut_9_0;
-              stackIn_11_1 = stackOut_9_1;
-              stackIn_11_2 = stackOut_9_2;
-              break L3;
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
             }
           }
-          throw ch.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 44 + param2 + 44 + 0 + 41);
+          throw ch.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 117 + 44 + 32 + 44 + 0 + 41);
         }
-        return stackIn_7_0;
+        return stackIn_5_0;
     }
 
     static {

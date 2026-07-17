@@ -15,28 +15,27 @@ final class kg extends kn {
     private int field_U;
     private lh field_Q;
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_O = null;
         field_P = null;
         field_T = null;
     }
 
-    final static int b(boolean param0) {
+    final static int b() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_19_0 = 0;
+        int stackIn_17_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_18_0 = 0;
-        int stackOut_10_0 = 0;
+        int stackOut_16_0 = 0;
         var3 = Chess.field_G;
         try {
           L0: {
             var1_int = 0;
             L1: while (true) {
-              if (!kf.d(18954)) {
+              int discarded$8 = 18954;
+              if (!kf.d()) {
                 L2: {
                   nj.field_u.a(qn.a((byte) 107, re.field_m, ag.field_f), 99, qn.a((byte) 107, hn.field_k, rf.field_b));
                   if (nj.field_u.d((byte) 55)) {
@@ -46,33 +45,28 @@ final class kg extends kn {
                     break L2;
                   }
                 }
-                if (param0) {
-                  L3: {
-                    var2 = 0;
-                    if (var1_int == 0) {
-                      break L3;
-                    } else {
-                      if (nj.field_u.field_h >= 0) {
-                        var2 = eh.field_L[nj.field_u.field_h];
-                        if (var2 == 2) {
-                          um.a(5);
-                          break L3;
-                        } else {
-                          break L3;
-                        }
+                L3: {
+                  var2 = 0;
+                  if (var1_int == 0) {
+                    break L3;
+                  } else {
+                    if (nj.field_u.field_h >= 0) {
+                      var2 = eh.field_L[nj.field_u.field_h];
+                      if (var2 == 2) {
+                        int discarded$9 = 5;
+                        um.a();
+                        break L3;
                       } else {
                         break L3;
                       }
+                    } else {
+                      break L3;
                     }
                   }
-                  stackOut_18_0 = var2;
-                  stackIn_19_0 = stackOut_18_0;
-                  break L0;
-                } else {
-                  stackOut_10_0 = -38;
-                  stackIn_11_0 = stackOut_10_0;
-                  return stackIn_11_0;
                 }
+                stackOut_16_0 = var2;
+                stackIn_17_0 = stackOut_16_0;
+                break L0;
               } else {
                 nj.field_u.c((byte) 123);
                 if (nj.field_u.d((byte) 66)) {
@@ -87,9 +81,9 @@ final class kg extends kn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw fk.a((Throwable) (Object) var1, "kg.C(" + param0 + 41);
+          throw fk.a((Throwable) (Object) var1, "kg.C(" + 1 + 41);
         }
-        return stackIn_19_0;
+        return stackIn_17_0;
     }
 
     final void a(int param0, int param1, int param2, int param3) {

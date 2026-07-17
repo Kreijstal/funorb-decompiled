@@ -90,7 +90,8 @@ final class lga {
                     if (var3_int <= var5) {
                       break L4;
                     } else {
-                      if (!ula.a(param2.charAt(var5), 48)) {
+                      int discarded$5 = 48;
+                      if (!ula.a(param2.charAt(var5))) {
                         break L4;
                       } else {
                         var5++;
@@ -123,7 +124,7 @@ final class lga {
                 L5: while (true) {
                   var8 = param2.indexOf("<%", var5);
                   if (var8 < 0) {
-                    StringBuilder discarded$3 = var6.append(param2.substring(var7));
+                    StringBuilder discarded$6 = var6.append(param2.substring(var7));
                     stackOut_25_0 = var6.toString();
                     stackIn_26_0 = stackOut_25_0;
                     break L0;
@@ -134,7 +135,8 @@ final class lga {
                         if (var3_int <= var5) {
                           break L7;
                         } else {
-                          if (!ula.a(param2.charAt(var5), 48)) {
+                          int discarded$7 = 48;
+                          if (!ula.a(param2.charAt(var5))) {
                             break L7;
                           } else {
                             var5++;
@@ -152,8 +154,8 @@ final class lga {
                           } else {
                             var5++;
                             var10 = pd.a((byte) 47, (CharSequence) (Object) var9);
-                            StringBuilder discarded$4 = var6.append(param2.substring(var7, var8));
-                            StringBuilder discarded$5 = var6.append(param1[var10]);
+                            StringBuilder discarded$8 = var6.append(param2.substring(var7, var8));
+                            StringBuilder discarded$9 = var6.append(param1[var10]);
                             var7 = var5;
                             continue L5;
                           }
@@ -225,13 +227,13 @@ final class lga {
         return stackIn_26_0;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_i = null;
         field_n = null;
         field_k = null;
     }
 
-    final static void a(nv param0, boolean param1) {
+    final static void a(nv param0) {
         if (!(param0 != null)) {
             return;
         }
@@ -245,7 +247,7 @@ final class lga {
         }
     }
 
-    private final void a(mka param0, int param1, int param2, int param3) {
+    private final void a(mka param0, int param1, int param2) {
         RuntimeException var5 = null;
         mka var5_ref = null;
         mka var6 = null;
@@ -616,7 +618,8 @@ final class lga {
                 if ((((lga) this).field_f[var4.field_k][var4.field_g].field_d & 2) != 2) {
                   break L1;
                 } else {
-                  this.a(var5, 1 + var5.field_k, var5.field_g, -1);
+                  int discarded$4 = -1;
+                  this.a(var5, 1 + var5.field_k, var5.field_g);
                   break L1;
                 }
               }
@@ -624,7 +627,8 @@ final class lga {
                 if ((((lga) this).field_f[var4.field_k][var4.field_g].field_d & 8) != 8) {
                   break L2;
                 } else {
-                  this.a(var5, var5.field_k - 1, var5.field_g, -1);
+                  int discarded$5 = -1;
+                  this.a(var5, var5.field_k - 1, var5.field_g);
                   break L2;
                 }
               }
@@ -632,12 +636,14 @@ final class lga {
                 if ((4 & ((lga) this).field_f[var4.field_k][var4.field_g].field_d) != 4) {
                   break L3;
                 } else {
-                  this.a(var5, var5.field_k, 2 + var5.field_g, -1);
+                  int discarded$6 = -1;
+                  this.a(var5, var5.field_k, 2 + var5.field_g);
                   break L3;
                 }
               }
               if ((((lga) this).field_f[var4.field_k][var4.field_g].field_d & 1) == 1) {
-                this.a(var5, var5.field_k, -2 + var5.field_g, -1);
+                int discarded$7 = -1;
+                this.a(var5, var5.field_k, -2 + var5.field_g);
                 continue L0;
               } else {
                 continue L0;

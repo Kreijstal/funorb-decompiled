@@ -6,39 +6,22 @@ final class bo {
     static dd[] field_a;
 
     final static int b(int param0, int param1) {
-        if (param0 == -65536) {
-          if (param1 >= 0) {
-            if (65536 < param1) {
-              return -un.field_a[134217728 / param1] + 2048;
-            } else {
-              return un.field_a[param1 >> 5];
-            }
+        if (param1 >= 0) {
+          if (65536 < param1) {
+            return -un.field_a[134217728 / param1] + 2048;
           } else {
-            if (param1 < -65536) {
-              return un.field_a[134217728 / -param1] + -2048;
-            } else {
-              return -un.field_a[-param1 >> 5];
-            }
+            return un.field_a[param1 >> 5];
           }
         } else {
-          bo.a((byte) -16);
-          if (param1 >= 0) {
-            if (65536 < param1) {
-              return -un.field_a[134217728 / param1] + 2048;
-            } else {
-              return un.field_a[param1 >> 5];
-            }
+          if (param1 < -65536) {
+            return un.field_a[134217728 / -param1] + -2048;
           } else {
-            if (param1 < -65536) {
-              return un.field_a[134217728 / -param1] + -2048;
-            } else {
-              return -un.field_a[-param1 >> 5];
-            }
+            return -un.field_a[-param1 >> 5];
           }
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_a = null;
         field_b = null;
     }
@@ -46,7 +29,7 @@ final class bo {
     final static tq a(int param0, int param1) {
         tq var2 = new tq();
         hb.field_j.b((byte) 127, (ma) (Object) var2);
-        kp.a(1, param0);
+        kp.a(1, 4);
         return var2;
     }
 
@@ -268,10 +251,9 @@ final class bo {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         Object var1 = null;
         Throwable var2 = null;
-        Object var3 = null;
         Throwable decompiledCaughtException = null;
         var1 = (Object) (Object) wp.field_g;
         synchronized (var1) {
@@ -289,35 +271,9 @@ final class bo {
             break L0;
           }
         }
-        if (param0 < 86) {
-          var3 = null;
-          bo.a(94, 67, (byte) 67, -120, -99, 36, -121, (byte) 15, 19, (int[]) null, (byte) 9);
-          return;
-        } else {
-          return;
-        }
     }
 
     final static boolean a(int param0, byte param1) {
-        if (param1 != 43) {
-            field_a = null;
-            if (param0 < 0) {
-                return (param0 - -1) % 4 == 0 ? true : false;
-            }
-            if (!(param0 >= 1582)) {
-                return 0 == param0 % 4 ? true : false;
-            }
-            if (param0 % 4 != 0) {
-                return false;
-            }
-            if (param0 % 100 != 0) {
-                return true;
-            }
-            if (param0 % 400 == 0) {
-                return true;
-            }
-            return false;
-        }
         if (param0 < 0) {
             return (param0 - -1) % 4 == 0 ? true : false;
         }
@@ -330,7 +286,10 @@ final class bo {
         if (param0 % 100 != 0) {
             return true;
         }
-        return param0 % 400 == 0 ? true : false;
+        if (param0 % 400 == 0) {
+            return true;
+        }
+        return false;
     }
 
     final static void a(int param0) {

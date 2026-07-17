@@ -9,7 +9,7 @@ final class mba {
         ls.field_q = false;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
     }
 

@@ -26,11 +26,13 @@ class gk extends ca implements vn {
             if (!((gk) this).field_Eb) {
               return;
             } else {
-              ai.h(-73);
+              int discarded$4 = -73;
+              ai.h();
               return;
             }
           } else {
-            qf.a(true);
+            int discarded$5 = 1;
+            qf.a();
             return;
           }
         } else {
@@ -46,7 +48,7 @@ class gk extends ca implements vn {
     }
 
     final static int c(int param0, int param1, int param2) {
-        if (param1 != param2) {
+        if (1 != param2) {
             return fc.field_b[param2];
         }
         if (!ll.a(param0, (byte) -96)) {
@@ -71,7 +73,7 @@ class gk extends ca implements vn {
         }
     }
 
-    final static void a(w param0, boolean param1) {
+    final static void a(w param0) {
         w var4 = null;
         w var5 = null;
         int var3 = client.field_A ? 1 : 0;
@@ -259,9 +261,9 @@ class gk extends ca implements vn {
 
     final static void a(int param0, int param1, byte param2, cc param3) {
         try {
-            int var4_int = -111 % ((param2 - 41) / 38);
+            int var4_int = 0;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) (Object) runtimeException, "gk.JA(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw dh.a((Throwable) (Object) runtimeException, "gk.JA(" + 20 + 44 + 20 + 44 + -75 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -402,7 +404,7 @@ class gk extends ca implements vn {
         }
     }
 
-    public static void p(int param0) {
+    public static void p() {
         field_Gb = null;
         field_yb = null;
         int var1 = 1;

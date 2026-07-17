@@ -264,7 +264,7 @@ final class md {
         }
     }
 
-    final static void a(hb param0, byte param1) {
+    final static void a(hb param0) {
         try {
             RuntimeException var2 = null;
             int var3 = 0;
@@ -577,22 +577,23 @@ final class md {
         }
     }
 
-    public static void b(byte param0) {
-        int var1 = 84 % ((param0 - 33) / 48);
+    public static void b() {
+        int var1 = 0;
         field_b = null;
     }
 
-    final static bn c(int param0) {
+    final static bn c() {
         String var1 = mc.a(16);
         if (var1 != null) {
             if (var1.indexOf('@') >= 0) {
                 var1 = "";
             }
         }
-        return new bn(mc.a(16), hf.l(50));
+        int discarded$0 = 50;
+        return new bn(mc.a(16), hf.l());
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var2 = 0;
         int[] var3 = null;

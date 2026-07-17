@@ -78,14 +78,7 @@ final class jm extends dp {
     }
 
     final static void a(int param0, String param1) {
-        if (param0 != 3) {
-          jm.c(61);
-          System.out.println("Error: " + sp.a(param1, "%0a", "\n", (byte) -82));
-          return;
-        } else {
-          System.out.println("Error: " + sp.a(param1, "%0a", "\n", (byte) -82));
-          return;
-        }
+        System.out.println("Error: " + sp.a(param1, "%0a", "\n", (byte) -82));
     }
 
     jm() {

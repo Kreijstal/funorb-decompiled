@@ -73,7 +73,7 @@ final class dua extends rqa {
         return stackIn_4_0;
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         field_p = null;
     }
 
@@ -81,7 +81,7 @@ final class dua extends rqa {
         super(param0, param1, param2);
     }
 
-    final static String e(byte param0) {
+    final static String e() {
         if (ef.field_z < 2) {
           return tdb.field_p;
         } else {

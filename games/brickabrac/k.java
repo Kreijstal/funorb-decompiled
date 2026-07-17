@@ -20,7 +20,8 @@ abstract class k extends pj implements hf {
         if (param0 < 114) {
             return;
         }
-        ga.d(-105);
+        int discarded$0 = -105;
+        ga.d();
     }
 
     abstract String a(int param0, String param1);
@@ -89,7 +90,7 @@ abstract class k extends pj implements hf {
         }
     }
 
-    final static jp a(jp param0, int param1, int param2) {
+    final static jp a(jp param0, int param1) {
         jp var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -172,7 +173,7 @@ abstract class k extends pj implements hf {
         return stackIn_7_0;
     }
 
-    final static void a(int param0, int param1, int param2, int[] param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void a(int param0, int param1, int param2, int[] param3, int param4, int param5, int param6, int param7) {
         RuntimeException var9 = null;
         int var9_int = 0;
         int var10 = 0;
@@ -326,7 +327,8 @@ abstract class k extends pj implements hf {
                                         break L10;
                                       } else {
                                         if (mg.field_e > var17) {
-                                          wc.a(param3, var18, param6, var16 + var17, -1);
+                                          int discarded$9 = -1;
+                                          wc.a(param3, var18, param6, var16 + var17);
                                           break L10;
                                         } else {
                                           break L10;
@@ -342,10 +344,12 @@ abstract class k extends pj implements hf {
                                         }
                                       }
                                       if (var17 < 0) {
-                                        wc.a(param3, var17 + var18, param6, var16, -1);
+                                        int discarded$10 = -1;
+                                        wc.a(param3, var17 + var18, param6, var16);
                                         break L10;
                                       } else {
-                                        wc.a(param3, var18, param6, var17 + var16, -1);
+                                        int discarded$11 = -1;
+                                        wc.a(param3, var18, param6, var17 + var16);
                                         break L10;
                                       }
                                     }
@@ -380,7 +384,8 @@ abstract class k extends pj implements hf {
                                       break L13;
                                     } else {
                                       if (mg.field_e > var17) {
-                                        wc.a(param3, var18, param6, var16 + var17, -1);
+                                        int discarded$12 = -1;
+                                        wc.a(param3, var18, param6, var16 + var17);
                                         break L13;
                                       } else {
                                         break L13;
@@ -396,10 +401,12 @@ abstract class k extends pj implements hf {
                                       }
                                     }
                                     if (var17 < 0) {
-                                      wc.a(param3, var17 + var18, param6, var16, -1);
+                                      int discarded$13 = -1;
+                                      wc.a(param3, var17 + var18, param6, var16);
                                       break L13;
                                     } else {
-                                      wc.a(param3, var18, param6, var17 + var16, -1);
+                                      int discarded$14 = -1;
+                                      wc.a(param3, var18, param6, var17 + var16);
                                       break L13;
                                     }
                                   }
@@ -469,7 +476,8 @@ abstract class k extends pj implements hf {
                               if (var16 >= mg.field_e) {
                                 break L18;
                               } else {
-                                wc.a(param3, var17, param6, var16 + var15, -1);
+                                int discarded$15 = -1;
+                                wc.a(param3, var17, param6, var16 + var15);
                                 break L18;
                               }
                             }
@@ -483,10 +491,12 @@ abstract class k extends pj implements hf {
                               }
                             }
                             if (var16 >= 0) {
-                              wc.a(param3, var17, param6, var16 - -var15, -1);
+                              int discarded$16 = -1;
+                              wc.a(param3, var17, param6, var16 - -var15);
                               break L18;
                             } else {
-                              wc.a(param3, var17 + var16, param6, var15, -1);
+                              int discarded$17 = -1;
+                              wc.a(param3, var17 + var16, param6, var15);
                               break L18;
                             }
                           }
@@ -542,7 +552,7 @@ abstract class k extends pj implements hf {
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_i = null;
         field_j = null;
         field_h = null;

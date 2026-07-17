@@ -61,7 +61,8 @@ public final class DungeonAssault extends in {
                         } else {
                           ik.field_e.c(true);
                           L4: while (true) {
-                            if (!ha.b((byte) 47)) {
+                            int discarded$10 = 47;
+                            if (!ha.b()) {
                               break L3;
                             } else {
                               ik.field_e.f();
@@ -90,12 +91,12 @@ public final class DungeonAssault extends in {
                   if (null == wl.field_a.e(-24172)) {
                     break L2;
                   } else {
-                    int fieldTemp$5 = ke.field_e + 1;
+                    int fieldTemp$11 = ke.field_e + 1;
                     ke.field_e = ke.field_e + 1;
-                    if (fieldTemp$5 != 335) {
+                    if (fieldTemp$11 != 335) {
                       break L2;
                     } else {
-                      ne discarded$6 = wl.field_a.b((byte) -124);
+                      ne discarded$12 = wl.field_a.b((byte) -124);
                       sl.field_b = null;
                       pa.field_a = null;
                       ri.field_g = null;
@@ -107,12 +108,12 @@ public final class DungeonAssault extends in {
                     if (null == wl.field_a.e(-24172)) {
                       break L5;
                     } else {
-                      int fieldTemp$7 = ke.field_e + 1;
+                      int fieldTemp$13 = ke.field_e + 1;
                       ke.field_e = ke.field_e + 1;
-                      if (fieldTemp$7 != 335) {
+                      if (fieldTemp$13 != 335) {
                         break L5;
                       } else {
-                        ne discarded$8 = wl.field_a.b((byte) -124);
+                        ne discarded$14 = wl.field_a.b((byte) -124);
                         sl.field_b = null;
                         pa.field_a = null;
                         ri.field_g = null;
@@ -202,7 +203,8 @@ public final class DungeonAssault extends in {
                         break L11;
                       } else {
                         L12: {
-                          vk.a((byte) -31);
+                          int discarded$15 = -31;
+                          vk.a();
                           gd.a(g.field_Hb, 0, sa.field_f, false);
                           stackOut_4_0 = ll.field_k;
                           stackIn_6_0 = stackOut_4_0;
@@ -229,7 +231,7 @@ public final class DungeonAssault extends in {
                             tl.field_d = false;
                             a.a(320, ne.field_c.field_N, (se) (Object) ne.field_c, true, false, 8, 240, 2, 8, ne.field_c.field_E + ne.field_c.field_N, (cn[]) null, (cn[]) null);
                             if (cm.field_R != null) {
-                              pn discarded$9 = i.field_A.a((java.awt.Component) (Object) cm.field_R, (byte) 51, false);
+                              pn discarded$16 = i.field_A.a((java.awt.Component) (Object) cm.field_R, (byte) 51, false);
                               break L13;
                             } else {
                               break L13;
@@ -320,7 +322,8 @@ public final class DungeonAssault extends in {
             var3.a(false, 4);
             ik.field_e = new go(false, var3);
             var5 = cm.field_Q ? 1 : 0;
-            if (!ve.a(false)) {
+            int discarded$17 = 0;
+            if (!ve.a()) {
               stackOut_79_0 = 0;
               stackIn_80_0 = stackOut_79_0;
               break L19;
@@ -369,7 +372,8 @@ public final class DungeonAssault extends in {
               var3.field_A[2] = new hb(2, 4);
               var3.field_A[3] = new hb(3, 2);
               var3.a(false, 4);
-              ha.d(1);
+              int discarded$18 = 1;
+              ha.d();
               ik.field_e = new go(false, var3);
               if (!cm.field_Q) {
                 stackOut_91_0 = 0;
@@ -383,7 +387,8 @@ public final class DungeonAssault extends in {
             }
             L24: {
               var4 = stackIn_92_0;
-              if (!ve.a(false)) {
+              int discarded$19 = 0;
+              if (!ve.a()) {
                 stackOut_94_0 = 0;
                 stackIn_95_0 = stackOut_94_0;
                 break L24;
@@ -475,8 +480,9 @@ public final class DungeonAssault extends in {
         L0: {
           var17 = null;
           var7 = field_K;
-          int discarded$6 = ib.b((byte) 31);
-          int discarded$7 = mn.a((byte) -42);
+          int discarded$20 = 31;
+          int discarded$21 = ib.b();
+          int discarded$22 = mn.a((byte) -42);
           if (ef.field_h) {
             L1: {
               if (kj.field_n == 0) {
@@ -493,9 +499,9 @@ public final class DungeonAssault extends in {
                     }
                   }
                 }
-                int fieldTemp$8 = kj.field_n + 1;
+                int fieldTemp$23 = kj.field_n + 1;
                 kj.field_n = kj.field_n + 1;
-                if (fieldTemp$8 >= 5 * kh.field_m.length) {
+                if (fieldTemp$23 >= 5 * kh.field_m.length) {
                   kj.field_n = 0;
                   break L1;
                 } else {
@@ -513,7 +519,7 @@ public final class DungeonAssault extends in {
             }
             if (ao.a((byte) 79)) {
               if (!di.field_e) {
-                pn discarded$9 = i.field_A.a((java.awt.Component) (Object) c.field_h, (byte) 61, true);
+                pn discarded$24 = i.field_A.a((java.awt.Component) (Object) c.field_h, (byte) 61, true);
                 di.field_e = true;
                 break L0;
               } else {
@@ -531,7 +537,7 @@ public final class DungeonAssault extends in {
                   }
                 }
               }
-              pn discarded$10 = i.field_A.a((java.awt.Component) (Object) c.field_h, (byte) 116, false);
+              pn discarded$25 = i.field_A.a((java.awt.Component) (Object) c.field_h, (byte) 116, false);
               di.field_e = false;
               gi.field_R = c.field_h;
               break L0;
@@ -546,8 +552,10 @@ public final class DungeonAssault extends in {
             break L5;
           } else {
             if (cm.field_R.field_g) {
-              ib.a(930);
-              hh.a((byte) -128);
+              int discarded$26 = 930;
+              ib.a();
+              int discarded$27 = -128;
+              hh.a();
               break L5;
             } else {
               break L5;
@@ -575,7 +583,8 @@ public final class DungeonAssault extends in {
         L7: {
           ((DungeonAssault) this).a(stackIn_27_1 != 0, (byte) -74);
           if (ld.field_i) {
-            bo.h(78);
+            int discarded$28 = 78;
+            bo.h();
             ld.field_i = false;
             break L7;
           } else {
@@ -605,7 +614,8 @@ public final class DungeonAssault extends in {
         }
         L10: {
           if (ef.field_h) {
-            if (hc.b(1)) {
+            int discarded$29 = 1;
+            if (hc.b()) {
               if (!ib.a((byte) 84)) {
                 if (!sl.b(15000)) {
                   if (!ue.b((byte) -93)) {
@@ -614,7 +624,8 @@ public final class DungeonAssault extends in {
                   } else {
                     if (~fm.field_a == ~fm.field_e) {
                       L11: {
-                        var2 = l.d(4570);
+                        int discarded$30 = 4570;
+                        var2 = l.d();
                         if (var2 == 1) {
                           ik.a(bh.field_Q, 53, 0);
                           break L11;
@@ -670,7 +681,8 @@ public final class DungeonAssault extends in {
                     }
                     L15: {
                       if (null != cm.field_R) {
-                        ib.a(930);
+                        int discarded$31 = 930;
+                        ib.a();
                         break L15;
                       } else {
                         break L15;
@@ -690,9 +702,11 @@ public final class DungeonAssault extends in {
                 up.c((byte) 126);
                 if (~fm.field_e == ~fm.field_a) {
                   L16: {
-                    var2 = mf.b(12210);
+                    int discarded$32 = 12210;
+                    var2 = mf.b();
                     if (var2 == 2) {
-                      ib.a(930);
+                      int discarded$33 = 930;
+                      ib.a();
                       break L16;
                     } else {
                       if (var2 == 3) {
@@ -701,7 +715,7 @@ public final class DungeonAssault extends in {
                         if (cm.field_R == null) {
                           break L16;
                         } else {
-                          pn discarded$11 = i.field_A.a((java.awt.Component) (Object) cm.field_R, (byte) 86, false);
+                          pn discarded$34 = i.field_A.a((java.awt.Component) (Object) cm.field_R, (byte) 86, false);
                           break L16;
                         }
                       } else {
@@ -729,7 +743,8 @@ public final class DungeonAssault extends in {
             }
           } else {
             td.a(pj.field_r, 121);
-            if (!this.h(0)) {
+            int discarded$35 = 0;
+            if (!this.h()) {
               break L10;
             } else {
               ef.field_h = true;
@@ -923,7 +938,8 @@ public final class DungeonAssault extends in {
                       }
                     }
                   }
-                  jk.j((byte) 59);
+                  int discarded$36 = 59;
+                  jk.j();
                   break L35;
                 }
                 L37: {
@@ -967,7 +983,8 @@ public final class DungeonAssault extends in {
                     }
                   }
                 }
-                hi.b(1);
+                int discarded$37 = 1;
+                hi.b();
                 continue L19;
               } else {
                 L42: {
@@ -1064,7 +1081,8 @@ public final class DungeonAssault extends in {
                           }
                         }
                       } else {
-                        hm.a(0);
+                        int discarded$38 = 0;
+                        hm.a();
                         continue L19;
                       }
                     } else {
@@ -1114,7 +1132,8 @@ public final class DungeonAssault extends in {
                     ja.a(stackIn_129_0, stackIn_129_1, (byte) stackIn_129_2, stackIn_129_3 != 0, var5_ref_di__);
                     continue L19;
                   } else {
-                    var5_ref_di__[var6] = mm.a((ec) (Object) ra.field_c, false);
+                    int discarded$39 = 0;
+                    var5_ref_di__[var6] = mm.a((ec) (Object) ra.field_c);
                     var6++;
                     continue L48;
                   }
@@ -1142,7 +1161,8 @@ public final class DungeonAssault extends in {
         il.field_a = 255;
         om.field_a = 16777215;
         sm.field_c = 16776960;
-        j.f((byte) -4);
+        int discarded$1 = -4;
+        j.f();
         kd.b(0);
         ((DungeonAssault) this).b(true, (byte) -67);
         uo.field_c[70] = 0;
@@ -1202,70 +1222,110 @@ public final class DungeonAssault extends in {
         int stackOut_13_0 = 0;
         L0: {
           DungeonAssault.h((byte) 114);
-          a.a(23779);
+          int discarded$208 = 23779;
+          a.a();
           md.h(-4);
           tc.a((byte) -86);
-          rl.a((byte) 75);
-          vj.a(24243);
-          nb.a((byte) 109);
+          int discarded$209 = 75;
+          rl.a();
+          int discarded$210 = 24243;
+          vj.a();
+          int discarded$211 = 109;
+          nb.a();
           td.a(23);
           qe.a();
           te.a();
-          gh.a(7);
-          og.a(-129);
+          int discarded$212 = 7;
+          gh.a();
+          int discarded$213 = -129;
+          og.a();
           sb.a((byte) -88);
-          fo.a((byte) -73);
-          t.a(-11353);
+          int discarded$214 = -73;
+          fo.a();
+          int discarded$215 = -11353;
+          t.a();
           jh.a();
           in.e(-1);
-          b.b(-30719);
+          int discarded$216 = -30719;
+          b.b();
           kg.a(false);
-          tl.a((byte) 50);
-          mh.a(16);
+          int discarded$217 = 50;
+          tl.a();
+          int discarded$218 = 16;
+          mh.a();
           nl.a((byte) -109);
           gf.c();
           nh.a(param0);
           se.a();
-          ig.a(-2898);
-          dm.b(0);
-          ec.i(25);
-          kd.a((byte) -101);
-          sp.a(true);
-          ml.a((byte) 63);
+          int discarded$219 = -2898;
+          ig.a();
+          int discarded$220 = 0;
+          dm.b();
+          int discarded$221 = 25;
+          ec.i();
+          int discarded$222 = -101;
+          kd.a();
+          int discarded$223 = 1;
+          sp.a();
+          int discarded$224 = 63;
+          ml.a();
           ri.a(105);
-          sn.a(5);
-          ib.d(507);
-          ta.a(-84);
-          to.a(0);
-          kp.b(0);
-          cg.a((byte) -117);
-          la.c((byte) -97);
+          int discarded$225 = 5;
+          sn.a();
+          int discarded$226 = 507;
+          ib.d();
+          int discarded$227 = -84;
+          ta.a();
+          int discarded$228 = 0;
+          to.a();
+          int discarded$229 = 0;
+          kp.b();
+          int discarded$230 = -117;
+          cg.a();
+          int discarded$231 = -97;
+          la.c();
           op.a((byte) -120);
-          mp.a((byte) 112);
-          sl.a(105);
-          gj.a((byte) 80);
-          c.a(-9431);
-          wk.b(false);
-          ek.a((byte) -115);
-          bn.a((byte) -122);
+          int discarded$232 = 112;
+          mp.a();
+          int discarded$233 = 105;
+          sl.a();
+          int discarded$234 = 80;
+          gj.a();
+          int discarded$235 = -9431;
+          c.a();
+          int discarded$236 = 0;
+          wk.b();
+          int discarded$237 = -115;
+          ek.a();
+          int discarded$238 = -122;
+          bn.a();
           go.f(10);
           lb.a((byte) 119);
-          hi.a(-113);
-          ea.a(0);
-          ke.a(-123);
+          int discarded$239 = -113;
+          hi.a();
+          int discarded$240 = 0;
+          ea.a();
+          int discarded$241 = -123;
+          ke.a();
           n.a(3554);
           hb.a((byte) 3);
-          ai.a((byte) 106);
-          jc.a(0);
-          ua.a((byte) 103);
+          int discarded$242 = 106;
+          ai.a();
+          int discarded$243 = 0;
+          jc.a();
+          int discarded$244 = 103;
+          ua.a();
           ne.b(-18880);
           qj.a(-2418);
           bc.a(24740);
-          lc.a(true);
+          int discarded$245 = 1;
+          lc.a();
           ja.a(param0);
           lg.a(true);
-          eh.a(73);
-          sg.a((byte) -88);
+          int discarded$246 = 73;
+          eh.a();
+          int discarded$247 = -88;
+          sg.a();
           if (param0) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -1278,42 +1338,69 @@ public final class DungeonAssault extends in {
         }
         L1: {
           f.a(stackIn_3_0 != 0);
-          fp.a(-4126);
-          pp.e(73);
-          gd.e(0);
+          int discarded$248 = -4126;
+          fp.a();
+          int discarded$249 = 73;
+          pp.e();
+          int discarded$250 = 0;
+          gd.e();
           nn.b((byte) -80);
-          kl.a(117);
-          rj.b(false);
-          sa.b(false);
-          ug.e(0);
-          wa.c(23413);
-          lp.a((byte) 16);
+          int discarded$251 = 117;
+          kl.a();
+          int discarded$252 = 0;
+          rj.b();
+          int discarded$253 = 0;
+          sa.b();
+          int discarded$254 = 0;
+          ug.e();
+          int discarded$255 = 23413;
+          wa.c();
+          int discarded$256 = 16;
+          lp.a();
           vm.d();
           hg.d(26609);
           vn.e();
-          cb.a(27525);
-          ae.a((byte) -4);
-          ko.d(-125);
-          qk.a((byte) 127);
-          uf.b(0);
-          gm.a(-94);
+          int discarded$257 = 27525;
+          cb.a();
+          int discarded$258 = -4;
+          ae.a();
+          int discarded$259 = -125;
+          ko.d();
+          int discarded$260 = 127;
+          qk.a();
+          int discarded$261 = 0;
+          uf.b();
+          int discarded$262 = -94;
+          gm.a();
           pj.e(126);
-          mo.a(2);
-          ul.a(true);
-          jg.a((byte) -126);
-          hd.b((byte) 117);
-          uj.a(37);
+          int discarded$263 = 2;
+          mo.a();
+          int discarded$264 = 1;
+          ul.a();
+          int discarded$265 = -126;
+          jg.a();
+          int discarded$266 = 117;
+          hd.b();
+          int discarded$267 = 37;
+          uj.a();
           cd.a(-1);
-          vc.a(-6058);
-          mi.c(-128);
-          fd.a((byte) 65);
+          int discarded$268 = -6058;
+          vc.a();
+          int discarded$269 = -128;
+          mi.c();
+          int discarded$270 = 65;
+          fd.a();
           hl.a(50);
           rk.a(true);
-          wj.n(7);
+          int discarded$271 = 7;
+          wj.n();
           qc.a(0);
-          dd.c((byte) -40);
-          en.a(0);
-          d.a(0);
+          int discarded$272 = -40;
+          dd.c();
+          int discarded$273 = 0;
+          en.a();
+          int discarded$274 = 0;
+          d.a();
           if (param0) {
             stackOut_5_0 = 0;
             stackIn_6_0 = stackOut_5_0;
@@ -1326,25 +1413,36 @@ public final class DungeonAssault extends in {
         }
         L2: {
           p.d(stackIn_6_0 != 0);
-          ed.f((byte) -89);
+          int discarded$275 = -89;
+          ed.f();
           ih.e(-2431);
           bg.b(41);
-          pd.c((byte) 71);
-          le.a(103);
-          di.a((byte) -78);
+          int discarded$276 = 71;
+          pd.c();
+          int discarded$277 = 103;
+          le.a();
+          int discarded$278 = -78;
+          di.a();
           db.c((byte) 127);
-          wo.a((byte) 100);
-          jm.a((byte) -123);
+          int discarded$279 = 100;
+          wo.a();
+          int discarded$280 = -123;
+          jm.a();
           ud.a((byte) -124);
-          tk.b((byte) 10);
+          int discarded$281 = 10;
+          tk.b();
           ob.g(16);
           fi.a((byte) -106);
-          qp.b((byte) 56);
-          qd.a(true);
+          int discarded$282 = 56;
+          qp.b();
+          int discarded$283 = 1;
+          qd.a();
           ji.f((byte) -98);
-          jb.p(-71);
+          int discarded$284 = -71;
+          jb.p();
           wi.i((byte) -97);
-          jk.n(-18554);
+          int discarded$285 = -18554;
+          jk.n();
           nk.n(2121792);
           rg.h((byte) -53);
           if (param0) {
@@ -1359,60 +1457,96 @@ public final class DungeonAssault extends in {
         }
         L3: {
           ia.b(stackIn_9_0 != 0);
-          dn.f((byte) -108);
+          int discarded$286 = -108;
+          dn.f();
           gk.b(param0);
           lh.a(-107);
           so.a((byte) 95);
           df.a(255);
-          fj.a((byte) -75);
-          ff.c(-103);
-          hj.f(16744448);
+          int discarded$287 = -75;
+          fj.a();
+          int discarded$288 = -103;
+          ff.c();
+          int discarded$289 = 16744448;
+          hj.f();
           lo.a(114);
           ll.a((byte) 92);
           rd.b(true);
           s.a(-55);
-          pa.a(2601);
-          ka.a((byte) -67);
+          int discarded$290 = 2601;
+          pa.a();
+          int discarded$291 = -67;
+          ka.a();
           bk.a(param0);
-          il.a((byte) 111);
-          bb.a((byte) 127);
-          cc.b(-86);
-          je.a(true);
-          tm.a(-107);
-          uk.a(0);
-          qa.b(-2544);
-          ld.a(false);
-          hc.a(32);
-          nm.n(38);
-          vd.a((byte) -96);
-          hh.b(1);
+          int discarded$292 = 111;
+          il.a();
+          int discarded$293 = 127;
+          bb.a();
+          int discarded$294 = -86;
+          cc.b();
+          int discarded$295 = 1;
+          je.a();
+          int discarded$296 = -107;
+          tm.a();
+          int discarded$297 = 0;
+          uk.a();
+          int discarded$298 = -2544;
+          qa.b();
+          int discarded$299 = 0;
+          ld.a();
+          int discarded$300 = 32;
+          hc.a();
+          int discarded$301 = 38;
+          nm.n();
+          int discarded$302 = -96;
+          vd.a();
+          int discarded$303 = 1;
+          hh.b();
           re.c();
           jp.a();
           sm.a((byte) -118);
-          qh.b((byte) 75);
-          jj.a((byte) 80);
-          rn.b(64);
-          om.a(63);
-          mn.b((byte) 94);
-          jl.a((byte) -113);
+          int discarded$304 = 75;
+          qh.b();
+          int discarded$305 = 80;
+          jj.a();
+          int discarded$306 = 64;
+          rn.b();
+          int discarded$307 = 63;
+          om.a();
+          int discarded$308 = 94;
+          mn.b();
+          int discarded$309 = -113;
+          jl.a();
           li.a(false);
           ok.f(-16218);
-          tb.b((byte) -47);
-          ql.b((byte) 20);
+          int discarded$310 = -47;
+          tb.b();
+          int discarded$311 = 20;
+          ql.b();
           ik.a(0);
-          ra.a((byte) -114);
+          int discarded$312 = -114;
+          ra.a();
           un.a((byte) 23);
           ej.a();
           dc.a((byte) 108);
-          oe.a(0);
-          kn.a(0);
-          nj.a((byte) 84);
-          oh.a(37);
-          an.c(-13023);
-          jn.a(1);
-          im.a(-1);
-          l.a((byte) -24);
-          lm.d((byte) -123);
+          int discarded$313 = 0;
+          oe.a();
+          int discarded$314 = 0;
+          kn.a();
+          int discarded$315 = 84;
+          nj.a();
+          int discarded$316 = 37;
+          oh.a();
+          int discarded$317 = -13023;
+          an.c();
+          int discarded$318 = 1;
+          jn.a();
+          int discarded$319 = -1;
+          im.a();
+          int discarded$320 = -24;
+          l.a();
+          int discarded$321 = -123;
+          lm.d();
           if (param0) {
             stackOut_11_0 = 0;
             stackIn_12_0 = stackOut_11_0;
@@ -1426,126 +1560,202 @@ public final class DungeonAssault extends in {
         L4: {
           ck.b(stackIn_12_0 != 0);
           da.a(6);
-          sj.g((byte) -10);
+          int discarded$322 = -10;
+          sj.g();
           rf.b(param0);
-          ii.e((byte) -21);
+          int discarded$323 = -21;
+          ii.e();
           dj.a((byte) 113);
-          am.a(30111);
+          int discarded$324 = 30111;
+          am.a();
           nd.b();
-          vb.a((byte) -69);
-          nf.e((byte) 93);
-          hk.a(-73);
-          gb.a(32767);
+          int discarded$325 = -69;
+          vb.a();
+          int discarded$326 = 93;
+          nf.e();
+          int discarded$327 = -73;
+          hk.a();
+          int discarded$328 = 32767;
+          gb.a();
           eg.d(-23658);
-          hp.a(35);
-          no.a((byte) -126);
+          int discarded$329 = 35;
+          hp.a();
+          int discarded$330 = -126;
+          no.a();
           um.a(false);
           wl.a(98);
           fg.d(-102);
           kf.b(false);
-          ag.a(16760896);
+          int discarded$331 = 16760896;
+          ag.a();
           ki.a((byte) -35);
-          sf.c((byte) 114);
-          lj.d(77);
-          ro.f((byte) -88);
+          int discarded$332 = 114;
+          sf.c();
+          int discarded$333 = 77;
+          lj.d();
+          int discarded$334 = -88;
+          ro.f();
           oj.a((byte) -29);
-          uo.a(-90);
-          gl.c((byte) -105);
+          int discarded$335 = -90;
+          uo.a();
+          int discarded$336 = -105;
+          gl.c();
           oc.e(4296);
-          dl.a(51);
+          int discarded$337 = 51;
+          dl.a();
           tp.h(35);
           up.a(false);
           em.c(true);
-          ln.b(1148357992);
-          co.e(96);
-          ti.a(true);
-          sh.a(false);
-          vf.d(21);
-          dg.b(false);
+          int discarded$338 = 1148357992;
+          ln.b();
+          int discarded$339 = 96;
+          co.e();
+          int discarded$340 = 1;
+          ti.a();
+          int discarded$341 = 0;
+          sh.a();
+          int discarded$342 = 21;
+          vf.d();
+          int discarded$343 = 0;
+          dg.b();
           uh.i((byte) -41);
-          rm.m(4);
-          hf.m(0);
+          int discarded$344 = 4;
+          rm.m();
+          int discarded$345 = 0;
+          hf.m();
           uc.c(false);
-          gi.f((byte) -32);
-          bh.f((byte) -106);
-          ng.f((byte) 124);
-          tn.h((byte) -89);
+          int discarded$346 = -32;
+          gi.f();
+          int discarded$347 = -106;
+          bh.f();
+          int discarded$348 = 124;
+          ng.f();
+          int discarded$349 = -89;
+          tn.h();
           rb.a(4935);
-          ip.c((byte) 19);
-          mf.a(5);
-          cm.j(-119);
-          mk.b(false);
+          int discarded$350 = 19;
+          ip.c();
+          int discarded$351 = 5;
+          mf.a();
+          int discarded$352 = -119;
+          cm.j();
+          int discarded$353 = 0;
+          mk.b();
           wg.a();
           kk.a(0);
-          of.a((byte) 65);
-          ah.a(-37);
-          np.c((byte) -74);
+          int discarded$354 = 65;
+          of.a();
+          int discarded$355 = -37;
+          ah.a();
+          int discarded$356 = -74;
+          np.c();
           fk.d(67);
-          j.g((byte) -7);
+          int discarded$357 = -7;
+          j.g();
           eb.f((byte) 86);
-          ol.a((byte) -96);
+          int discarded$358 = -96;
+          ol.a();
           fe.b((byte) -34);
-          ep.a(124);
-          bp.a(-1);
-          oi.h(119);
+          int discarded$359 = 124;
+          ep.a();
+          int discarded$360 = -1;
+          bp.a();
+          int discarded$361 = 119;
+          oi.h();
           bj.h(31029);
-          ad.a(1);
-          qi.a(true);
+          int discarded$362 = 1;
+          ad.a();
+          int discarded$363 = 1;
+          qi.a();
           dh.a(20);
           wf.d((byte) -28);
-          pb.e((byte) -78);
-          ha.c(64);
-          rc.a((byte) -127);
-          rp.b((byte) -68);
-          g.g(-101);
+          int discarded$364 = -78;
+          pb.e();
+          int discarded$365 = 64;
+          ha.c();
+          int discarded$366 = -127;
+          rc.a();
+          int discarded$367 = -68;
+          rp.b();
+          int discarded$368 = -101;
+          g.g();
           oo.a(13054);
           bi.a();
           ho.a(0);
-          id.a((byte) -90);
-          fa.a(-28822);
-          wm.a((byte) 112);
-          gg.a(0);
-          hm.d(269);
-          tf.a(-1);
-          k.a(true);
+          int discarded$369 = -90;
+          id.a();
+          int discarded$370 = -28822;
+          fa.a();
+          int discarded$371 = 112;
+          wm.a();
+          int discarded$372 = 0;
+          gg.a();
+          int discarded$373 = 269;
+          hm.d();
+          int discarded$374 = -1;
+          tf.a();
+          int discarded$375 = 1;
+          k.a();
           fm.a(param0);
           cf.a(30);
-          o.d(0);
-          wh.b(96);
+          int discarded$376 = 0;
+          o.d();
+          int discarded$377 = 96;
+          wh.b();
           na.c(-91);
           oa.a((byte) 126);
           mc.c(24);
-          ic.d(4741);
-          dk.a((byte) -107);
+          int discarded$378 = 4741;
+          ic.d();
+          int discarded$379 = -107;
+          dk.a();
           sd.b(false);
-          al.a((byte) 17);
+          int discarded$380 = 17;
+          al.a();
           fn.d(1);
-          mj.a(127);
-          bo.c((byte) -36);
+          int discarded$381 = 127;
+          mj.a();
+          int discarded$382 = -36;
+          bo.c();
           pm.a(112);
-          bl.d((byte) -128);
+          int discarded$383 = -128;
+          bl.d();
           jd.a(1);
           h.a((byte) 16);
-          ac.a(19757);
+          int discarded$384 = 19757;
+          ac.a();
           af.a(0);
-          vk.b((byte) 75);
+          int discarded$385 = 75;
+          vk.b();
           wd.a(115);
-          fl.a((byte) 63);
+          int discarded$386 = 63;
+          fl.a();
           gn.a(194);
-          ie.d(-102);
-          lf.d(-121);
-          pk.e(88);
-          ce.d((byte) 58);
-          bf.a((byte) 85);
+          int discarded$387 = -102;
+          ie.d();
+          int discarded$388 = -121;
+          lf.d();
+          int discarded$389 = 88;
+          pk.e();
+          int discarded$390 = 58;
+          ce.d();
+          int discarded$391 = 85;
+          bf.a();
           me.a(36);
-          ef.a((byte) 111);
-          ao.d(10625);
-          ba.a((byte) 117);
-          ch.c(0);
+          int discarded$392 = 111;
+          ef.a();
+          int discarded$393 = 10625;
+          ao.d();
+          int discarded$394 = 117;
+          ba.a();
+          int discarded$395 = 0;
+          ch.c();
           sc.b((byte) -94);
-          vl.a((byte) -115);
+          int discarded$396 = -115;
+          vl.a();
           e.c((byte) 29);
-          qf.b(-21);
+          int discarded$397 = -21;
+          qf.b();
           if (param0) {
             stackOut_14_0 = 0;
             stackIn_15_0 = stackOut_14_0;
@@ -1557,41 +1767,59 @@ public final class DungeonAssault extends in {
           }
         }
         jf.a(stackIn_15_0 != 0);
-        fc.b(18677);
+        int discarded$398 = 18677;
+        fc.b();
         bd.b(76);
-        cp.c((byte) -66);
-        u.c((byte) 96);
-        lk.h(25161);
-        kc.a(0);
+        int discarded$399 = -66;
+        cp.c();
+        int discarded$400 = 96;
+        u.c();
+        int discarded$401 = 25161;
+        lk.h();
+        int discarded$402 = 0;
+        kc.a();
         pe.a(9);
-        ak.a(-120);
+        int discarded$403 = -120;
+        ak.a();
         ve.a(-125);
-        r.a(-113);
-        i.a((byte) 122);
-        kj.a(-109);
-        mm.a(127);
-        ub.a((byte) 123);
+        int discarded$404 = -113;
+        r.a();
+        int discarded$405 = 122;
+        i.a();
+        int discarded$406 = -109;
+        kj.a();
+        int discarded$407 = 127;
+        mm.a();
+        int discarded$408 = 123;
+        ub.a();
         ue.a((byte) 36);
         pi.a(11877);
         tg.a(400);
-        kh.e((byte) 102);
+        int discarded$409 = 102;
+        kh.e();
         vo.e(1);
-        qm.d(false);
-        ga.d((byte) 75);
-        he.d((byte) 117);
-        be.e(-15818);
+        int discarded$410 = 0;
+        qm.d();
+        int discarded$411 = 75;
+        ga.d();
+        int discarded$412 = 117;
+        he.d();
+        int discarded$413 = -15818;
+        be.e();
         fb.a(25);
         ci.a(116);
-        od.b((byte) 106);
+        int discarded$414 = 106;
+        od.b();
         m.d(-1);
-        ab.b(1781937827);
+        int discarded$415 = 1781937827;
+        ab.b();
         ((DungeonAssault) this).field_p = null;
     }
 
     public DungeonAssault() {
     }
 
-    private final boolean h(int param0) {
+    private final boolean h() {
         int var2 = 0;
         int var3 = 0;
         int stackIn_24_0 = 0;
@@ -1678,11 +1906,14 @@ public final class DungeonAssault extends in {
     }
 
     final void c(boolean param0) {
-        wh.a(96);
+        int discarded$4 = 96;
+        wh.a();
         if (!(null == cm.field_R)) {
-            ib.a(930);
+            int discarded$5 = 930;
+            ib.a();
         }
-        kp.a(1);
+        int discarded$9 = 1;
+        kp.a();
         if (!param0) {
             field_G = null;
         }
@@ -1707,7 +1938,8 @@ public final class DungeonAssault extends in {
         var10 = field_K;
         var2 = fi.d(false);
         if (ao.a((byte) 72)) {
-          mf.a((byte) -101, md.f(20), var2);
+          int discarded$8 = 20;
+          mf.a((byte) -101, md.f(), var2);
           return;
         } else {
           if (ef.field_h) {
@@ -1719,15 +1951,17 @@ public final class DungeonAssault extends in {
                 break L0;
               }
             }
-            if (!hc.b(1)) {
+            int discarded$9 = 1;
+            if (!hc.b()) {
               tp.a(10, 100.0f, kj.field_m);
               g.a(var2, param0 + 18093);
               return;
             } else {
               L1: {
                 li.field_k = li.field_k + 1;
-                if (~fm.field_a != ~bn.field_n) {
-                  qp.a((byte) -24, mn.field_b, true);
+                if (fm.field_a != bn.field_n) {
+                  int discarded$10 = 1;
+                  qp.a((byte) -24, mn.field_b);
                   if (co.field_G == null) {
                     break L1;
                   } else {
@@ -1747,10 +1981,14 @@ public final class DungeonAssault extends in {
               L2: {
                 if (ib.a((byte) 35)) {
                   gf.g(0, 0, gf.field_i, gf.field_c);
-                  var3_int = 15 + la.a((byte) -105);
-                  var4_int = 30 + og.b(4);
-                  fm.a(ea.a((byte) 13), var3_int, var4_int, (byte) -127);
-                  ci.a((byte) -119);
+                  int discarded$11 = -105;
+                  var3_int = 15 + la.a();
+                  int discarded$12 = 4;
+                  var4_int = 30 + og.b();
+                  int discarded$13 = -127;
+                  fm.a(ea.a((byte) 13), var3_int, var4_int);
+                  int discarded$14 = -119;
+                  ci.a();
                   break L2;
                 } else {
                   break L2;
@@ -1786,7 +2024,7 @@ public final class DungeonAssault extends in {
                 }
               }
               L5: {
-                if (~fm.field_a != ~fm.field_e) {
+                if (fm.field_a != fm.field_e) {
                   var3_int = pk.field_t * 256 / 16;
                   if (var3_int <= 0) {
                     break L5;
@@ -1905,7 +2143,8 @@ public final class DungeonAssault extends in {
                   break L11;
                 }
               }
-              ob.a(0, param0 + -161, var2, 0);
+              int discarded$15 = 0;
+              ob.a(0, param0 + -161, var2);
               return;
             }
           } else {

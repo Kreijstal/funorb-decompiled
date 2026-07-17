@@ -7,7 +7,7 @@ final class vt {
     static String field_b;
     static nu field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = 1;
         field_c = null;
         field_d = null;
@@ -15,7 +15,7 @@ final class vt {
         field_a = null;
     }
 
-    final static boolean a(char param0, boolean param1) {
+    final static boolean a(char param0) {
         int stackIn_25_0 = 0;
         int stackIn_28_0 = 0;
         int stackOut_26_0 = 0;

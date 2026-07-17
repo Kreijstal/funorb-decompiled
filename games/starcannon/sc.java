@@ -108,7 +108,7 @@ final class sc {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_d = null;
         field_a = null;
@@ -117,15 +117,12 @@ final class sc {
 
     final static void a(int param0, int param1) {
         ia var2 = d.field_b;
-        var2.d((byte) 28, param1);
+        var2.d((byte) 28, 6);
         var2.a(1, -63);
-        if (param0 != 32395) {
-            return;
-        }
-        var2.a(0, param0 ^ -32447);
+        var2.a(0, -54);
     }
 
-    final static void a(int param0, int[] param1, int param2, int param3) {
+    final static void a(int param0, int[] param1) {
         RuntimeException var4 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -145,8 +142,11 @@ final class sc {
         String stackOut_3_2 = null;
         try {
           L0: {
-            kh.a(param1, 120, 0, ki.field_a, 0, 0, 0, param0, 160, 1920, -93, 0);
-            nb.a(0, 0, 0, ki.field_a, 0, 16384, 0, param2, 120, 160);
+            kh.a(param1, 120, 0, ki.field_a, 0, 0, 0, 3, 160, 1920, -93, 0);
+            int discarded$6 = 160;
+            int discarded$7 = 120;
+            int discarded$8 = 3;
+            nb.a(0, 0, 0, ki.field_a, 0, 16384, 0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -154,7 +154,7 @@ final class sc {
           L1: {
             var4 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var4;
-            stackOut_2_1 = new StringBuilder().append("sc.E(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("sc.E(").append(3).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -177,11 +177,11 @@ final class sc {
               break L1;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param2 + 44 + 30603 + 41);
+          throw sd.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 3 + 44 + 30603 + 41);
         }
     }
 
-    final static boolean a(java.applet.Applet param0, boolean param1) {
+    final static boolean a(java.applet.Applet param0) {
         try {
             String var2 = null;
             Throwable var2_ref = null;
@@ -258,7 +258,8 @@ final class sc {
                     case 4: {
                         try {
                             var2 = "tuhstatbut";
-                            var3 = (String) mb.a(param0, "getcookies", true);
+                            int discarded$2 = 1;
+                            var3 = (String) mb.a(param0, "getcookies");
                             var4 = uj.a(-57, ';', var3);
                             var5 = 0;
                             statePc = 5;

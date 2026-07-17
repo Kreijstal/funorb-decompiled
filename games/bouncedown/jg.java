@@ -58,7 +58,8 @@ final class jg extends ak {
                   return;
                 } else {
                   var6 = new tg(((jg) this).field_x.field_k, ((jg) this).field_x.field_m);
-                  kh.a(var6, 1);
+                  int discarded$1 = 1;
+                  kh.a(var6);
                   ((jg) this).field_x.a(param0, 0, 59, 0);
                   ve.a(-121);
                   var6.d(((jg) this).field_r + param3, param1 + ((jg) this).field_i, ((jg) this).field_E);
@@ -76,14 +77,14 @@ final class jg extends ak {
         }
     }
 
-    public static void j(int param0) {
+    public static void j() {
         field_A = null;
         field_B = null;
         field_C = null;
         field_D = null;
     }
 
-    final static void k(int param0) {
+    final static void k() {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

@@ -56,7 +56,7 @@ final class df {
         return 2;
     }
 
-    final static db[] a(byte param0) {
+    final static db[] a() {
         db[] var1 = null;
         int var2 = 0;
         int var3 = 0;

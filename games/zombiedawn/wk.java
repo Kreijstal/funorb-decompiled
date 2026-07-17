@@ -29,7 +29,7 @@ final class wk {
     private int field_a;
     boolean field_d;
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
         field_z = null;
     }
@@ -386,17 +386,19 @@ final class wk {
             break L3;
           }
         }
-        this.b(-28216);
+        int discarded$1 = -28216;
+        this.b();
     }
 
     final void a(byte param0, int param1, int param2) {
         ((wk) this).field_c = ((wk) this).field_c - param2;
         ((wk) this).field_u = ((wk) this).field_u - param1;
         int var4 = 15 % ((-55 - param0) / 43);
-        this.b(-28216);
+        int discarded$0 = -28216;
+        this.b();
     }
 
-    private final void b(int param0) {
+    private final void b() {
         if (!(((wk) this).field_u >= ((wk) this).field_s)) {
             ((wk) this).field_u = ((wk) this).field_s;
         }

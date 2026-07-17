@@ -16,7 +16,7 @@ final class ni {
         }
     }
 
-    final static void a(uia param0, byte param1) {
+    final static void a(uia param0) {
         try {
             byte[] var2 = null;
             RuntimeException var2_ref = null;

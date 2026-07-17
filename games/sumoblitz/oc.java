@@ -17,7 +17,7 @@ final class oc extends rq {
         super(param0);
     }
 
-    final static void a(ah param0, boolean param1) {
+    final static void a(ah param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         nm var3 = null;
@@ -303,51 +303,43 @@ final class oc extends rq {
 
     final boolean b(byte param0) {
         if (param0 > -8) {
-            Object var3 = null;
-            oc.a((ah) null, false);
+            int discarded$0 = 0;
+            oc.a((ah) null);
         }
         return true;
     }
 
     final static boolean a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6) {
-        int stackIn_8_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_7_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_5_0 = 0;
         L0: {
-          if (param1 == 122) {
-            break L0;
-          } else {
-            int discarded$2 = oc.d(-55);
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
+          L1: {
             if (param3 > param2) {
-              break L2;
+              break L1;
             } else {
               if (param2 >= param6 + param3) {
-                break L2;
+                break L1;
               } else {
                 if (param5 < param0) {
-                  break L2;
+                  break L1;
                 } else {
                   if (param4 + param0 <= param5) {
-                    break L2;
-                  } else {
-                    stackOut_6_0 = 1;
-                    stackIn_8_0 = stackOut_6_0;
                     break L1;
+                  } else {
+                    stackOut_4_0 = 1;
+                    stackIn_6_0 = stackOut_4_0;
+                    break L0;
                   }
                 }
               }
             }
           }
-          stackOut_7_0 = 0;
-          stackIn_8_0 = stackOut_7_0;
-          break L1;
+          stackOut_5_0 = 0;
+          stackIn_6_0 = stackOut_5_0;
+          break L0;
         }
-        return stackIn_8_0 != 0;
+        return stackIn_6_0 != 0;
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
@@ -364,10 +356,6 @@ final class oc extends rq {
         ic.field_c[se.field_d] = param4;
         vi.field_z[se.field_d] = param0;
         int var6 = param0 + param4 + param1;
-        if (!param2) {
-            Object var8 = null;
-            oc.a((String) null, false, (byte) 69);
-        }
         int var7 = 0 != var6 ? 1000 * param1 / var6 : 0;
         uc.field_c[se.field_d] = var7;
         se.field_d = se.field_d + 1;
@@ -385,7 +373,7 @@ final class oc extends rq {
         char[] var6 = new char[param0];
         char[] var3 = var6;
         for (var4 = 0; param0 > var4; var4++) {
-            var6[var4] = param1;
+            var6[var4] = '*';
         }
         return new String(var3);
     }

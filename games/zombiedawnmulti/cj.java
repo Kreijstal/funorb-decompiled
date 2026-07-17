@@ -1494,13 +1494,10 @@ class cj extends qo {
             return;
         }
         fk.a(hl.field_d[param1], true);
-        if (param0) {
-            return;
-        }
         td.field_b = null;
     }
 
-    final static String g(int param0) {
+    final static String g() {
         if (2 <= fn.field_i) {
           if (null != cp.field_P) {
             if (!cp.field_P.a((byte) -122)) {
@@ -1518,8 +1515,8 @@ class cj extends qo {
                     if (!wm.field_V.a((byte) -117)) {
                       return pd.field_a;
                     } else {
-                      if (!wm.field_V.a(param0 ^ param0)) {
-                        return s.field_h + " - " + wm.field_V.b(param0 + -18006) + "%";
+                      if (!wm.field_V.a(0)) {
+                        return s.field_h + " - " + wm.field_V.b(0) + "%";
                       } else {
                         return op.field_l;
                       }
@@ -1540,7 +1537,7 @@ class cj extends qo {
         }
     }
 
-    final static int a(ka param0, byte param1) {
+    final static int a(ka param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

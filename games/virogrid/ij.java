@@ -198,7 +198,7 @@ final class ij extends l {
         }
     }
 
-    final static byte a(char param0, int param1) {
+    final static byte a(char param0) {
         int var2 = 0;
         int var3 = 0;
         L0: {
@@ -377,7 +377,7 @@ final class ij extends l {
         ((ij) this).field_o = 0;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         int var1 = id.field_r / 2;
         String var2 = jk.field_e;
         if (db.b((byte) 13, 0)) {

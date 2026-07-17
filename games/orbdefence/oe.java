@@ -42,13 +42,14 @@ final class oe extends o {
                     break L2;
                   } else {
                     var5 = null;
-                    qj discarded$2 = oe.a(-111, (String) null, -88);
+                    qj discarded$4 = oe.a(-111, (String) null, -88);
                     break L2;
                   }
                 }
                 break L0;
               } else {
-                this.a(param1, var3_int, -3);
+                int discarded$5 = -3;
+                this.a(param1, var3_int);
                 continue L1;
               }
             }
@@ -85,7 +86,7 @@ final class oe extends o {
         }
     }
 
-    private final void a(mg param0, int param1, int param2) {
+    private final void a(mg param0, int param1) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -208,12 +209,12 @@ final class oe extends o {
         }
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_m = null;
         field_q = null;
     }
 
-    private final String e(int param0) {
+    private final String e() {
         int var3 = 0;
         int var4 = OrbDefence.field_D ? 1 : 0;
         StringBuilder var5 = new StringBuilder(80);
@@ -310,8 +311,8 @@ final class oe extends o {
               }
             }
           }
-          int discarded$2 = var8.j(98203176);
-          String discarded$3 = var8.g(2);
+          int discarded$3 = var8.j(98203176);
+          String discarded$4 = var8.g(2);
           break L4;
         }
         L6: {
@@ -321,7 +322,8 @@ final class oe extends o {
               L7: {
                 L8: {
                   var9 = aa.field_d.b(-11244, var5);
-                  vj.field_a = var9.e(-50);
+                  int discarded$5 = -50;
+                  vj.field_a = var9.e();
                   if (vk.field_v.equals((Object) (Object) gb.field_h)) {
                     stackOut_21_0 = null;
                     stackIn_22_0 = (int[]) (Object) stackOut_21_0;

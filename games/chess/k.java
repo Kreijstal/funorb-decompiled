@@ -34,7 +34,7 @@ abstract class k extends eh {
         ((k) this).field_Z = 0;
     }
 
-    public static void h(byte param0) {
+    public static void h() {
         field_T = null;
         field_V = null;
         field_ab = null;

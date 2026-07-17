@@ -342,7 +342,7 @@ final class gg {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
     }
 
@@ -360,7 +360,7 @@ final class gg {
         return (int)(1000000000L / ed.field_d);
     }
 
-    final static dk b(int param0) {
+    final static dk b() {
         if (null == ok.field_f) {
             ok.field_f = new dk();
             ok.field_f.a(t.field_z, false);

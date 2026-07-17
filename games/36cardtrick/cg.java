@@ -73,14 +73,6 @@ abstract class cg extends k implements pi {
                 }
               }
             }
-            L5: {
-              if (param0 >= 94) {
-                break L5;
-              } else {
-                field_f = true;
-                break L5;
-              }
-            }
             stackOut_18_0 = 0;
             stackIn_19_0 = stackOut_18_0;
             break L0;
@@ -88,12 +80,12 @@ abstract class cg extends k implements pi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var2_ref, "cg.P(" + param0 + 44 + param1 + 41);
+          throw ma.a((Throwable) (Object) var2_ref, "cg.P(" + 111 + 44 + param1 + 41);
         }
         return stackIn_19_0 != 0;
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_e = null;
         field_i = null;
     }
@@ -148,7 +140,7 @@ abstract class cg extends k implements pi {
 
     abstract sg a(String param0, int param1);
 
-    final static aj b(boolean param0) {
+    final static aj b() {
         if (!(aj.field_a != null)) {
             aj.field_a = new aj();
             aj.field_a.a(-1, j.field_C);

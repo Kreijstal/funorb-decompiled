@@ -56,7 +56,8 @@ final class kv {
             }
             L2: {
               L3: {
-                var3 = hua.a(param1, 0);
+                int discarded$2 = 0;
+                var3 = hua.a(param1);
                 if (-1 != param2.indexOf(param1)) {
                   break L3;
                 } else {
@@ -133,33 +134,27 @@ final class kv {
         return stackIn_7_0 != 0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         field_b = null;
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        int var4 = 0;
-        if (param2 != 95) {
-          return;
-        } else {
-          jg.field_a.field_h = 0;
-          jg.field_a.i(12, 0);
-          jg.field_a.a(lpa.field_p.nextInt(), (byte) -108);
-          jg.field_a.a(lpa.field_p.nextInt(), (byte) 111);
-          jg.field_a.i(param1, 0);
-          jg.field_a.i(param0, 0);
-          jg.field_a.f(-1477662136, param3);
-          jg.field_a.a(126, c.field_f, oca.field_a);
-          ql.field_k.k(18, param2 + -3083);
-          int fieldTemp$1 = ql.field_k.field_h + 1;
-          ql.field_k.field_h = ql.field_k.field_h + 1;
-          var4 = fieldTemp$1;
-          ql.field_k.a(0, jg.field_a.field_g, jg.field_a.field_h, param2 + -42);
-          ql.field_k.d(ql.field_k.field_h + -var4, (byte) -19);
-          return;
-        }
+        jg.field_a.field_h = 0;
+        jg.field_a.i(12, 0);
+        jg.field_a.a(lpa.field_p.nextInt(), (byte) -108);
+        jg.field_a.a(lpa.field_p.nextInt(), (byte) 111);
+        jg.field_a.i(param1, 0);
+        jg.field_a.i(param0, 0);
+        jg.field_a.f(-1477662136, param3);
+        jg.field_a.a(126, c.field_f, oca.field_a);
+        ql.field_k.k(18, -2988);
+        int fieldTemp$0 = ql.field_k.field_h + 1;
+        ql.field_k.field_h = ql.field_k.field_h + 1;
+        int var4 = fieldTemp$0;
+        ql.field_k.a(0, jg.field_a.field_g, jg.field_a.field_h, 53);
+        ql.field_k.d(ql.field_k.field_h + -var4, (byte) -19);
     }
 
     static {

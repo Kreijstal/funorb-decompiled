@@ -88,7 +88,7 @@ final class ck {
         return stackIn_3_0;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_b = null;
         field_e = null;
         field_a = null;
@@ -98,16 +98,18 @@ final class ck {
         field_f = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         int var1 = 0;
         if (ul.field_A < 224) {
           var1 = ul.field_A % 32;
-          eb.a(32 + ul.field_A + -var1, false);
-          var1 = 50 % ((47 - param0) / 38);
+          int discarded$4 = 0;
+          eb.a(32 + ul.field_A + -var1);
+          var1 = 0;
           return;
         } else {
-          eb.a(256, false);
-          var1 = 50 % ((47 - param0) / 38);
+          int discarded$5 = 0;
+          eb.a(256);
+          var1 = 0;
           return;
         }
     }

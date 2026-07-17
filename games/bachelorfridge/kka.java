@@ -25,7 +25,7 @@ final class kka extends bw {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_k = null;
         field_l = null;
         field_h = null;

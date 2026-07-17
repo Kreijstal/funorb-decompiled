@@ -7,7 +7,7 @@ final class fk {
     static String field_a;
     int field_c;
 
-    final static qj a(boolean param0, byte param1) {
+    final static qj a(boolean param0) {
         qj var2 = new qj(true);
         var2.field_d = param0 ? true : false;
         return var2;
@@ -25,9 +25,11 @@ final class fk {
     final static boolean a(int param0) {
         if (param0 != 1113) {
             field_a = null;
-            return tl.a(uj.b((byte) -120), 61);
+            int discarded$0 = 61;
+            return tl.a(uj.b((byte) -120));
         }
-        return tl.a(uj.b((byte) -120), 61);
+        int discarded$1 = 61;
+        return tl.a(uj.b((byte) -120));
     }
 
     final static hj a(ki param0, String param1, int param2, String param3) {
@@ -88,7 +90,8 @@ final class fk {
             var4_int = 122 % ((param2 - -6) / 44);
             var5 = param0.a(param3, 0);
             var6 = param0.a(param1, 5187, var5);
-            stackOut_0_0 = va.a(var5, var6, param0, (byte) -127);
+            int discarded$2 = -127;
+            stackOut_0_0 = va.a(var5, var6, param0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

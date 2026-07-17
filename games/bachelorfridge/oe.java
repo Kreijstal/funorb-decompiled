@@ -13,16 +13,16 @@ final class oe implements so {
         }
         try {
             param1.d(param2.field_e, 0);
-            param1.d(param2.field_h, param0 + 21332);
+            param1.d(param2.field_h, 0);
             param1.d(param2.field_m, 0);
             param1.b(param2.field_b, -114);
-            param1.d(param2.field_a ? 1 : 0, param0 ^ param0);
+            param1.d(param2.field_a ? 1 : 0, 0);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "oe.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "oe.B(" + -21332 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static void a(int param0, byte param1) {
+    final static void a(int param0) {
         if (0 > param0) {
             param0 = 0;
         } else {
@@ -210,7 +210,7 @@ final class oe implements so {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
         field_a = null;

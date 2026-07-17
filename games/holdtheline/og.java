@@ -56,7 +56,7 @@ final class og {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         sm.field_c.a((n) (Object) new pk(), (byte) 87);
     }
 

@@ -22,7 +22,7 @@ final class tm {
     byte[][] field_g;
     int field_f;
 
-    private final void a(byte[] param0, byte param1) {
+    private final void a(byte[] param0) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -65,7 +65,8 @@ final class tm {
         try {
           L0: {
             L1: {
-              var17 = new ec(lc.a(param0, 50166));
+              int discarded$5 = 50166;
+              var17 = new ec(lc.a(param0));
               var4 = var17.c(true);
               if (5 > var4) {
                 break L1;
@@ -125,9 +126,9 @@ final class tm {
                           break L6;
                         } else {
                           L8: {
-                            int dupTemp$4 = var8 + var17.k(0);
-                            var8 = dupTemp$4;
-                            ((tm) this).field_j[var10] = dupTemp$4;
+                            int dupTemp$6 = var8 + var17.k(0);
+                            var8 = dupTemp$6;
+                            ((tm) this).field_j[var10] = dupTemp$6;
                             if (((tm) this).field_j[var10] <= var9) {
                               break L8;
                             } else {
@@ -145,9 +146,9 @@ final class tm {
                           break L6;
                         } else {
                           L10: {
-                            int dupTemp$5 = var8 + var17.j(1);
-                            var8 = dupTemp$5;
-                            ((tm) this).field_j[var10] = dupTemp$5;
+                            int dupTemp$7 = var8 + var17.j(1);
+                            var8 = dupTemp$7;
+                            ((tm) this).field_j[var10] = dupTemp$7;
                             if (var9 >= ((tm) this).field_j[var10]) {
                               break L10;
                             } else {
@@ -256,10 +257,10 @@ final class tm {
                                           continue L21;
                                         } else {
                                           L24: {
-                                            int dupTemp$6 = var8 + var17.j(1);
-                                            var8 = dupTemp$6;
-                                            ((tm) this).field_m[var11][var14] = dupTemp$6;
-                                            var15 = dupTemp$6;
+                                            int dupTemp$8 = var8 + var17.j(1);
+                                            var8 = dupTemp$8;
+                                            ((tm) this).field_m[var11][var14] = dupTemp$8;
+                                            var15 = dupTemp$8;
                                             if (var13 < var15) {
                                               var13 = var15;
                                               break L24;
@@ -309,10 +310,10 @@ final class tm {
                                           continue L26;
                                         } else {
                                           L29: {
-                                            int dupTemp$7 = var8 + var17.k(0);
-                                            var8 = dupTemp$7;
-                                            ((tm) this).field_m[var11][var14] = dupTemp$7;
-                                            var15 = dupTemp$7;
+                                            int dupTemp$9 = var8 + var17.k(0);
+                                            var8 = dupTemp$9;
+                                            ((tm) this).field_m[var11][var14] = dupTemp$9;
+                                            var15 = dupTemp$9;
                                             if (var13 < var15) {
                                               var13 = var15;
                                               break L29;
@@ -434,7 +435,7 @@ final class tm {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_p = null;
         field_b = null;
         int var1 = -16;
@@ -458,7 +459,8 @@ final class tm {
                     }
                 }
             }
-            this.a(param0, (byte) 118);
+            int discarded$0 = 118;
+            this.a(param0);
         } catch (RuntimeException runtimeException) {
             throw vk.a((Throwable) (Object) runtimeException, "tm.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }

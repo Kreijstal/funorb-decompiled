@@ -140,7 +140,7 @@ final class tj extends ara implements ntb {
         ((tj) this).field_l = param0;
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_r = null;
         int var1 = 0;
         field_k = null;
@@ -547,7 +547,7 @@ final class tj extends ara implements ntb {
         ((tj) this).field_p = param1;
     }
 
-    final static boolean f(byte param0) {
+    final static boolean f() {
         return tla.field_c;
     }
 

@@ -76,14 +76,15 @@ final class mr extends iw implements oo {
         }
     }
 
-    final static String m(byte param0) {
+    final static String m() {
         String var1 = "";
         if (!(null == jt.field_o)) {
             var1 = jt.field_o.a(30);
         }
         int var2 = 80;
         if (0 == var1.length()) {
-            var1 = dla.c(120);
+            int discarded$0 = 120;
+            var1 = dla.c();
         }
         if (!(0 != var1.length())) {
             var1 = job.field_o;
@@ -91,7 +92,7 @@ final class mr extends iw implements oo {
         return var1;
     }
 
-    public static void l(byte param0) {
+    public static void l() {
         field_L = null;
         field_M = null;
         field_J = null;
@@ -285,7 +286,7 @@ final class mr extends iw implements oo {
           L0: {
             var4 = new htb(param2, param1);
             var4.field_q = (wwa) (Object) new vva();
-            var5 = -79 / ((6 - param0) / 32);
+            var5 = 26;
             var6 = -6 + ((mr) this).field_f;
             ((mr) this).field_f = ((mr) this).field_f + 38;
             var4.a(15, ((mr) this).field_h - 30, 30, 1, var6);
@@ -300,7 +301,7 @@ final class mr extends iw implements oo {
           L1: {
             var4_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var4_ref;
-            stackOut_2_1 = new StringBuilder().append("mr.D(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("mr.D(").append(113).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;

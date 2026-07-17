@@ -762,12 +762,12 @@ final class vl {
         ((vl) this).field_c = ((vl) this).field_c - (double)param1;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_r = null;
         field_s = null;
         field_o = null;
         field_i = null;
-        int var1 = 118 % ((-40 - param0) / 46);
+        int var1 = 0;
         field_h = null;
     }
 

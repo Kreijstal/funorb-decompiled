@@ -12,9 +12,9 @@ final class nn implements dja {
             for (var6_int = param2; var6_int <= param5; var6_int++) {
                 ww.a(param4, param1, rba.field_b[var6_int], (byte) 75, param0);
             }
-            int var7 = -38 % ((-5 - param3) / 63);
+            int var7 = 0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "nn.D(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "nn.D(" + param0 + 44 + param1 + 44 + param2 + 44 + 112 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
@@ -69,7 +69,7 @@ final class nn implements dja {
             var13 = (var13 << 8) / var14;
             var12 = (var12 << 8) / var14;
             var15 = 64;
-            var16 = param1;
+            var16 = 1;
             L1: while (true) {
               if (var15 + 1 <= var16) {
                 break L0;
@@ -96,7 +96,7 @@ final class nn implements dja {
           L2: {
             var6 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var6;
-            stackOut_5_1 = new StringBuilder().append("nn.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_5_1 = new StringBuilder().append("nn.C(").append(param0).append(44).append(1).append(44).append(param2).append(44).append(param3).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;

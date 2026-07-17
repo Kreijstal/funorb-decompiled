@@ -136,22 +136,16 @@ final class fk extends bca {
             var4 = (bga) (Object) on.field_r.b((byte) 90);
             L1: while (true) {
               if (var4 == null) {
-                L2: {
-                  var2 = us.field_e.b((byte) 90);
-                  if (param0 <= -12) {
-                    break L2;
-                  } else {
-                    fk.d((byte) -20);
-                    break L2;
-                  }
-                }
-                L3: while (true) {
+                var2 = us.field_e.b((byte) 90);
+                L2: while (true) {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    qna.b(6, 0);
+                    int discarded$8 = 0;
+                    int discarded$9 = 6;
+                    qna.b();
                     var2 = us.field_e.c(0);
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
@@ -164,7 +158,7 @@ final class fk extends bca {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var2_ref, "fk.B(" + param0 + 44 + 6 + 41);
+          throw pe.a((Throwable) (Object) var2_ref, "fk.B(" + -60 + 44 + 6 + 41);
         }
     }
 
@@ -181,7 +175,7 @@ final class fk extends bca {
         }
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         int var1 = 52;
         field_t = null;
         field_s = null;

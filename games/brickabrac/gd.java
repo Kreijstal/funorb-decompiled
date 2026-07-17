@@ -12,15 +12,20 @@ final class gd {
         field_b = null;
         field_d = null;
         field_e = null;
+        if (param0) {
+            field_d = null;
+            field_c = null;
+            return;
+        }
         field_c = null;
     }
 
-    final static java.awt.Canvas a(byte param0) {
+    final static java.awt.Canvas a() {
         int var1 = 48;
         return null == ua.field_d ? kj.field_D : (java.awt.Canvas) (Object) ua.field_d;
     }
 
-    final synchronized static byte[] a(int param0, byte param1) {
+    final synchronized static byte[] a(int param0) {
         byte[] var2_ref_byte__ = null;
         int var2 = 0;
         byte[] var3 = null;

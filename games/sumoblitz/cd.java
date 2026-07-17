@@ -19,7 +19,7 @@ final class cd {
         return false;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_f = null;
     }

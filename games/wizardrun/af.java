@@ -153,7 +153,10 @@ abstract class af {
                 break L1;
               }
             }
-            stackOut_2_0 = ga.a(param0, 10, 58, true);
+            int discarded$6 = 1;
+            int discarded$7 = 58;
+            int discarded$8 = 10;
+            stackOut_2_0 = ga.a(param0);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -202,7 +205,8 @@ abstract class af {
           if (param0 <= -109) {
             break L0;
           } else {
-            af.a(false);
+            int discarded$2 = 0;
+            af.a();
             break L0;
           }
         }
@@ -259,7 +263,7 @@ abstract class af {
         return 0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
         field_a = null;

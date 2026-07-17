@@ -17,21 +17,22 @@ final class je {
         la var6_ref = null;
         int var7 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-            if (!(param1 <= ((je) this).field_d)) {
+            if (!(((je) this).field_d >= 1)) {
                 throw new IllegalStateException();
             }
             this.a(0, param3);
-            ((je) this).field_e = ((je) this).field_e - param1;
+            ((je) this).field_e = ((je) this).field_e - 1;
             while (((je) this).field_e < 0) {
                 var6 = (b) (Object) ((je) this).field_g.b((byte) -86);
-                this.a(var6, 4821);
+                int discarded$0 = 4821;
+                this.a(var6);
             }
-            var6_ref = new la(param0, param1);
+            var6_ref = new la(param0, 1);
             ((je) this).field_b.a(param3, true, (ug) (Object) var6_ref);
             ((je) this).field_g.a(12, (bf) (Object) var6_ref);
-            ((b) (Object) var6_ref).field_f = (long)param2;
+            ((b) (Object) var6_ref).field_f = 0L;
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) (Object) runtimeException, "je.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw la.a((Throwable) (Object) runtimeException, "je.E(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 44 + 0 + 44 + param3 + 41);
         }
     }
 
@@ -41,7 +42,7 @@ final class je {
         int var1 = 58 / ((-18 - param0) / 61);
     }
 
-    private final void a(b param0, int param1) {
+    private final void a(b param0) {
         RuntimeException var3 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -146,23 +147,16 @@ final class je {
     }
 
     private final void a(int param0, long param1) {
-        b var4 = null;
-        var4 = (b) (Object) ((je) this).field_b.a((byte) -85, param1);
-        if (param0 != 0) {
-          ((je) this).field_d = 94;
-          this.a(var4, 4821);
-          return;
-        } else {
-          this.a(var4, 4821);
-          return;
-        }
+        b var4 = (b) (Object) ((je) this).field_b.a((byte) -85, param1);
+        int discarded$0 = 4821;
+        this.a(var4);
     }
 
-    final static k a(int param0, int param1) {
+    final static k a() {
         k var2 = new k();
         int var3 = 0;
         cj.field_a.a(-8212, (ug) (Object) var2);
-        f.a(param0, 22492);
+        f.a(4, 22492);
         return var2;
     }
 

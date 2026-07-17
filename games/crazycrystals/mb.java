@@ -10,12 +10,12 @@ final class mb {
     static int field_f;
     static boolean field_d;
 
-    final static void a(ca param0, int param1, int param2) {
+    final static void a(ca param0) {
         try {
             gn.field_Q.b(0, (jb) (Object) param0);
-            nh.a(param1, (byte) -94, param0);
+            nh.a(4, (byte) -94, param0);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "mb.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 0 + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "mb.E(" + (param0 != null ? "{...}" : "null") + 44 + 4 + 44 + 0 + 41);
         }
     }
 
@@ -25,11 +25,11 @@ final class mb {
 
     final static void a(boolean param0, java.awt.Component param1) {
         try {
-            param1.setFocusTraversalKeysEnabled(param0);
+            param1.setFocusTraversalKeysEnabled(false);
             param1.addKeyListener((java.awt.event.KeyListener) (Object) uf.field_c);
             param1.addFocusListener((java.awt.event.FocusListener) (Object) uf.field_c);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "mb.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "mb.A(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -110,7 +110,7 @@ final class mb {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         field_a = null;

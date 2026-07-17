@@ -6,7 +6,7 @@ import java.lang.String;
 final class rm extends eca {
     static int[] field_f;
 
-    final static String d(byte param0) {
+    final static String d() {
         if (jib.field_o) {
             return null;
         }
@@ -98,7 +98,7 @@ final class rm extends eca {
         return stackIn_8_0;
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_f = null;
     }
 
@@ -137,7 +137,8 @@ final class rm extends eca {
               }
             }
             L2: {
-              if (null != lkb.a(param0, (byte) -116)) {
+              int discarded$10 = -116;
+              if (null != lkb.a(param0)) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L2;

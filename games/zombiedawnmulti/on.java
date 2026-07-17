@@ -66,83 +66,27 @@ final class on extends pm implements kh {
         }
     }
 
-    final static String a(boolean param0, boolean param1, boolean param2, boolean param3) {
+    final static String a(boolean param0, boolean param1, boolean param2) {
         int var4 = 0;
         var4 = 0;
         if (!param1) {
-          if (!param2) {
-            if (!param3) {
-              if (!param0) {
-                field_cb = null;
-                return we.field_n[var4];
-              } else {
-                return we.field_n[var4];
-              }
-            } else {
-              var4++;
-              if (!param0) {
-                field_cb = null;
-                return we.field_n[var4];
-              } else {
-                return we.field_n[var4];
-              }
-            }
-          } else {
+          if (param2) {
             var4 += 2;
-            if (!param3) {
-              if (!param0) {
-                field_cb = null;
-                return we.field_n[var4];
-              } else {
-                return we.field_n[var4];
-              }
-            } else {
-              var4++;
-              if (!param0) {
-                field_cb = null;
-                return we.field_n[var4];
-              } else {
-                return we.field_n[var4];
-              }
-            }
+            var4++;
+            return we.field_n[var4];
+          } else {
+            var4++;
+            return we.field_n[var4];
           }
         } else {
           var4 += 4;
-          if (param2) {
-            var4 += 2;
-            if (param3) {
-              var4++;
-              if (!param0) {
-                field_cb = null;
-                return we.field_n[var4];
-              } else {
-                return we.field_n[var4];
-              }
-            } else {
-              if (!param0) {
-                field_cb = null;
-                return we.field_n[var4];
-              } else {
-                return we.field_n[var4];
-              }
-            }
+          if (!param2) {
+            var4++;
+            return we.field_n[var4];
           } else {
-            if (param3) {
-              var4++;
-              if (param0) {
-                return we.field_n[var4];
-              } else {
-                field_cb = null;
-                return we.field_n[var4];
-              }
-            } else {
-              if (!param0) {
-                field_cb = null;
-                return we.field_n[var4];
-              } else {
-                return we.field_n[var4];
-              }
-            }
+            var4 += 2;
+            var4++;
+            return we.field_n[var4];
           }
         }
     }
@@ -278,7 +222,7 @@ final class on extends pm implements kh {
         }
     }
 
-    final static void j(byte param0) {
+    final static void j() {
         ai.field_b = -1;
         se.field_E = 0;
         io.field_g = false;

@@ -13,77 +13,21 @@ final class gj {
     final static void a(boolean param0, boolean param1, int param2, int param3) {
         int var4 = 0;
         th.field_f = param3;
-        if (!param1) {
-          L0: {
-            field_b = null;
-            if (param2 != 0) {
-              break L0;
-            } else {
-              if (!dg.field_s) {
-                break L0;
-              } else {
+        if (param2 == 0) {
+            if (dg.field_s) {
                 jm.field_b = co.field_d;
                 dg.field_s = false;
                 param2 = 9;
-                break L0;
-              }
             }
-          }
-          L1: {
-            mn.field_r = param2;
-            km.field_c = 0;
-            if (!ij.b(mn.field_r, 10)) {
-              break L1;
-            } else {
-              L2: {
-                var4 = 0;
-                if (mn.field_r == 10) {
-                  var4 = -1;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              tl.field_f[mn.field_r].a(param0, var4, (byte) -115);
-              break L1;
+        }
+        mn.field_r = param2;
+        km.field_c = 0;
+        if (ij.b(mn.field_r, 10)) {
+            var4 = 0;
+            if (!(mn.field_r != 10)) {
+                var4 = -1;
             }
-          }
-          return;
-        } else {
-          L3: {
-            if (param2 != 0) {
-              break L3;
-            } else {
-              if (!dg.field_s) {
-                break L3;
-              } else {
-                jm.field_b = co.field_d;
-                dg.field_s = false;
-                param2 = 9;
-                break L3;
-              }
-            }
-          }
-          L4: {
-            mn.field_r = param2;
-            km.field_c = 0;
-            if (!ij.b(mn.field_r, 10)) {
-              break L4;
-            } else {
-              L5: {
-                var4 = 0;
-                if (mn.field_r == 10) {
-                  var4 = -1;
-                  break L5;
-                } else {
-                  break L5;
-                }
-              }
-              tl.field_f[mn.field_r].a(param0, var4, (byte) -115);
-              break L4;
-            }
-          }
-          return;
+            tl.field_f[mn.field_r].a(param0, var4, (byte) -115);
         }
     }
 
@@ -103,7 +47,7 @@ final class gj {
         uc.a(3);
     }
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         if (!hk.c(0)) {
             return false;
         }
@@ -113,32 +57,24 @@ final class gj {
         return true;
     }
 
-    final static oo b(int param0) {
+    final static oo b() {
         int var1_int = 0;
         IllegalArgumentException var1 = null;
         oo var2 = null;
-        oo stackIn_6_0 = null;
+        oo stackIn_4_0 = null;
         Throwable decompiledCaughtException = null;
-        oo stackOut_5_0 = null;
+        oo stackOut_3_0 = null;
         try {
-          L0: {
-            if (param0 == -16635) {
-              break L0;
-            } else {
-              field_e = null;
-              break L0;
-            }
-          }
           var1_int = 0;
-          L1: while (true) {
-            var2 = bg.field_d.a(param0 + 16638, var1_int);
+          L0: while (true) {
+            var2 = bg.field_d.a(3, var1_int);
             if (var2.field_A) {
-              stackOut_5_0 = (oo) var2;
-              stackIn_6_0 = stackOut_5_0;
-              return stackIn_6_0;
+              stackOut_3_0 = (oo) var2;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0;
             } else {
               var1_int++;
-              continue L1;
+              continue L0;
             }
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {

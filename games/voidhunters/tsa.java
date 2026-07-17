@@ -47,13 +47,13 @@ final class tsa extends ksa {
     final nc a(byte param0, rqa[] param1) throws gva, ojb {
         NumberFormatException var3 = null;
         RuntimeException var3_ref = null;
+        nc[] var3_array = null;
         int var3_int = 0;
         int var4 = 0;
         Object var5 = null;
         int var6 = 0;
         nc[] var7 = null;
-        nc[] var8 = null;
-        String var9 = null;
+        String var8 = null;
         Object stackIn_3_0 = null;
         nc stackIn_10_0 = null;
         nc stackIn_16_0 = null;
@@ -94,18 +94,19 @@ final class tsa extends ksa {
           if (param0 > 60) {
             if (((tsa) this).field_e == hpa.field_p) {
               var7 = new nc[((tsa) this).field_f.c(3)];
-              var8 = var7;
+              var3_array = var7;
               var4 = 0;
               var5 = (Object) (Object) (tsa) (Object) ((tsa) this).field_f.d(0);
               L0: while (true) {
                 if (var5 == null) {
-                  stackOut_9_0 = fjb.a(((tsa) var5).field_d, var8, param1, (byte) -124);
+                  int discarded$2 = -124;
+                  stackOut_9_0 = fjb.a(((tsa) var5).field_d, var3_array, param1);
                   stackIn_10_0 = stackOut_9_0;
                   return stackIn_10_0;
                 } else {
-                  int incrementValue$1 = var4;
+                  int incrementValue$3 = var4;
                   var4++;
-                  var7[incrementValue$1] = ((tsa) var5).a((byte) 96, param1);
+                  var7[incrementValue$3] = ((tsa) var5).a((byte) 96, param1);
                   var5 = (Object) (Object) (tsa) (Object) ((tsa) var5).field_f.a((byte) 69);
                   continue L0;
                 }
@@ -149,11 +150,11 @@ final class tsa extends ksa {
                       throw new IllegalArgumentException();
                     }
                   } else {
-                    var9 = ((tsa) var5).field_d.substring(1, ((tsa) var5).field_d.length() + -1);
-                    if (var9.length() != 1) {
-                      throw new gva("Invalid char value: " + var9);
+                    var8 = ((tsa) var5).field_d.substring(1, ((tsa) var5).field_d.length() + -1);
+                    if (var8.length() != 1) {
+                      throw new gva("Invalid char value: " + var8);
                     } else {
-                      stackOut_34_0 = new nc(var9.charAt(0));
+                      stackOut_34_0 = new nc(var8.charAt(0));
                       stackIn_35_0 = stackOut_34_0;
                       return stackIn_35_0;
                     }

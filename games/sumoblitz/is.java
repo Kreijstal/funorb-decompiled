@@ -17,40 +17,7 @@ final class is {
     }
 
     final static boolean a(boolean param0, int param1, int param2) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        if (!param0) {
-          L0: {
-            field_a = true;
-            if (-1 == (param1 & 33)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
-              break L0;
-            } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (-1 == (param1 & 33)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              break L1;
-            } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
-        }
+        return (param1 & 33) != 0;
     }
 
     final oq a(int param0, int param1) {
@@ -91,7 +58,7 @@ final class is {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         pu.field_e.a((byte) 123);
         pu.field_e.a((byte) 112, (pk) (Object) new dd(pu.field_e));
     }

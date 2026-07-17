@@ -99,18 +99,15 @@ final class hc {
     }
 
     final static ke a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, int param7) {
-        ke var8 = null;
-        if (param5 > -125) {
-          return null;
-        } else {
-          var8 = new ke(param0, param2, param3, param1, param7, param6);
-          uk.field_d.a(1, (ai) (Object) var8);
-          qh.a(var8, param4, -22762);
-          return var8;
-        }
+        ke var8 = new ke(param0, param2, param3, param1, param7, param6);
+        uk.field_d.a(1, (ai) (Object) var8);
+        int discarded$0 = -22762;
+        int discarded$1 = 4;
+        qh.a(var8);
+        return var8;
     }
 
-    final static lj a(String param0, int param1) {
+    final static lj a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;
@@ -157,7 +154,8 @@ final class hc {
                   } else {
                     var3 = param0.substring(0, var2_int);
                     var4 = param0.substring(1 + var2_int);
-                    var5 = qd.a(var3, 96);
+                    int discarded$2 = 96;
+                    var5 = qd.a(var3);
                     if (var5 == null) {
                       stackOut_12_0 = qe.a(255, var4);
                       stackIn_13_0 = stackOut_12_0;
@@ -340,7 +338,7 @@ final class hc {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         Object var2 = null;
         pk.a((String) null, "", -116);
     }

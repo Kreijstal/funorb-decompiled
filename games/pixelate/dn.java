@@ -6,7 +6,7 @@ final class dn implements hj {
     static ak field_c;
     static String[][] field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         field_c = null;
@@ -68,7 +68,7 @@ final class dn implements hj {
         String stackOut_9_2 = null;
         try {
           L0: {
-            var8 = 111 / ((75 - param1) / 39);
+            var8 = 111;
             var7 = new sc(param6);
             var9 = new sc(param0);
             stackOut_0_0 = cn.a(param3, param2, -124, param5, var9, param4, var7);
@@ -105,7 +105,7 @@ final class dn implements hj {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(5).append(44).append(param2).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;

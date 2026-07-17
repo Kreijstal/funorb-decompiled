@@ -21,7 +21,7 @@ final class mp {
         field_e = null;
     }
 
-    final static boolean a(boolean param0) {
+    final static boolean a() {
         return lg.field_c.b(107);
     }
 

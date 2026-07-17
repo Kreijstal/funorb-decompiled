@@ -13,7 +13,7 @@ final class ah {
     static so[] field_e;
     int field_j;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_g = null;
         field_e = null;
         field_c = null;

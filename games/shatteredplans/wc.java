@@ -18,9 +18,6 @@ final class wc {
             }
             var6_int = 128 > param1 ? 0 : -128 + param1;
             var7 = param1;
-            if (param0 != -27030) {
-                field_b = null;
-            }
             for (var8 = var6_int; var7 > var8; var8++) {
                 gf.d(param2 - -var8, 0, param2 + (var8 + 1), 480 + param4);
                 var9 = param5 * (-var8 + param1) >> 7;
@@ -28,11 +25,11 @@ final class wc {
             }
             gf.a();
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "wc.B(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 41);
+            throw r.a((Throwable) (Object) runtimeException, "wc.B(" + -27030 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
     }

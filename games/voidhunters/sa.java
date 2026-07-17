@@ -61,7 +61,7 @@ final class sa {
     final static void a(int[] param0, int param1, int param2, int param3, int param4) {
         Object var6 = null;
         Object var5 = null;
-        sa.a(param0, param1, param2, param3, param4, (int[]) null, (int[]) null);
+        sa.a(param0, 0, param2, param3, param4, (int[]) null, (int[]) null);
     }
 
     private final static void a(int param0, int param1, int[] param2, int[] param3) {
@@ -191,7 +191,7 @@ final class sa {
             }
         }
         sa.c();
-        sa.a(param0, param1, param2);
+        sa.a(param0, 0, param2);
         sa.a(param3, param4, param5, param6);
     }
 
@@ -317,9 +317,9 @@ final class sa {
             }
           }
         }
-        param2 = param2 + param1;
+        param2 = param2;
         var4 = param2 - 2;
-        var8 = param1;
+        var8 = 0;
         var5 = var8;
         L3: while (true) {
           if (var8 >= param2) {

@@ -143,7 +143,7 @@ final class si implements Iterable {
         return stackIn_6_0;
     }
 
-    final static void d(int param0) {
+    final static void d() {
         if (cl.field_r != null) {
           cl.field_r.n(22);
           sn.field_k = new cn();
@@ -176,7 +176,7 @@ final class si implements Iterable {
         }
     }
 
-    final static ck[] a(int param0, int param1, ji param2, byte param3) {
+    final static ck[] a(int param0, int param1, ji param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -196,7 +196,8 @@ final class si implements Iterable {
         String stackOut_5_2 = null;
         try {
           if (gb.a(param1, param2, param0, 106)) {
-            return ca.m(0);
+            int discarded$2 = 0;
+            return ca.m();
           } else {
             return null;
           }
@@ -315,7 +316,7 @@ final class si implements Iterable {
         return stackIn_8_0;
     }
 
-    final static boolean c(int param0) {
+    final static boolean c() {
         if (null == qc.field_s) {
             return false;
         }
@@ -329,7 +330,7 @@ final class si implements Iterable {
         return (Iterator) (Object) new cm((si) this);
     }
 
-    final static void b(int param0) {
+    final static void b() {
         try {
             java.lang.reflect.Method var1 = null;
             Exception var1_ref = null;
@@ -389,7 +390,7 @@ final class si implements Iterable {
         }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_b = null;
         field_k = null;
         field_f = null;

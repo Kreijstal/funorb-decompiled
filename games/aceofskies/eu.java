@@ -28,43 +28,35 @@ final class eu extends o {
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         try {
             Exception var1 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             L0: {
-              if (param0 == 0) {
-                break L0;
-              } else {
-                field_g = -18;
-                break L0;
-              }
-            }
-            L1: {
               if (null == vs.field_g) {
-                break L1;
+                break L0;
               } else {
                 try {
-                  L2: {
+                  L1: {
                     vs.field_g.a(true, 0L);
                     vs.field_g.a(24, nm.field_c.field_f, nm.field_c.field_g, -105);
                     decompiledRegionSelector0 = 0;
-                    break L2;
+                    break L1;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
-                  L3: {
+                  L2: {
                     var1 = (Exception) (Object) decompiledCaughtException;
                     decompiledRegionSelector0 = 1;
-                    break L3;
+                    break L2;
                   }
                 }
                 if (decompiledRegionSelector0 == 0) {
                   nm.field_c.field_g = nm.field_c.field_g + 24;
                   return;
                 } else {
-                  break L1;
+                  break L0;
                 }
               }
             }
@@ -121,10 +113,10 @@ final class eu extends o {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var6 = new byte[param1];
+            var6 = new byte[32768];
             var4 = var6;
-            var5 = -115 / ((param2 - -94) / 32);
-            au.a(param0, param3, var6, 0, param1);
+            var5 = -38;
+            au.a(param0, param3, var6, 0, 32768);
             stackOut_0_0 = (byte[]) var6;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -157,7 +149,7 @@ final class eu extends o {
               break L1;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw pn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 32768 + 44 + 20 + 44 + param3 + 41);
         }
         return stackIn_1_0;
     }

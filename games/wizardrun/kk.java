@@ -12,7 +12,8 @@ final class kk extends mh implements qd {
     private boolean field_Ab;
 
     final void p(int param0) {
-        this.a(true, hf.a(param0 + 20320, tk.field_f, 248), 3899);
+        int discarded$0 = 3899;
+        this.a(true, hf.a(param0 + 20320, tk.field_f, 248));
         if (param0 == -20371) {
             return;
         }
@@ -28,7 +29,7 @@ final class kk extends mh implements qd {
         }
     }
 
-    private final void a(boolean param0, wd param1, int param2) {
+    private final void a(boolean param0, wd param1) {
         RuntimeException var4 = null;
         String var4_ref = null;
         vc var5 = null;
@@ -63,7 +64,8 @@ final class kk extends mh implements qd {
                   if (param1.field_b == 248) {
                     L2: {
                       if (!param0) {
-                        kb.j((byte) 63);
+                        int discarded$3 = 63;
+                        kb.j();
                         break L2;
                       } else {
                         break L2;
@@ -100,7 +102,7 @@ final class kk extends mh implements qd {
                       break L4;
                     }
                   } else {
-                    pl discarded$2 = var5.a(0, e.field_e, (ce) this);
+                    pl discarded$4 = var5.a(0, e.field_e, (ce) this);
                     break L4;
                   }
                 }
@@ -121,7 +123,7 @@ final class kk extends mh implements qd {
                   ((kk) this).c((ub) (Object) new re((kk) this), -128);
                   return;
                 } else {
-                  pl discarded$3 = var5.a(0, e.field_e, (ce) this);
+                  pl discarded$5 = var5.a(0, e.field_e, (ce) this);
                   break L3;
                 }
               }
@@ -170,7 +172,7 @@ final class kk extends mh implements qd {
         field_zb = -101;
     }
 
-    final static void o(int param0) {
+    final static void o() {
         RuntimeException var1 = null;
         int var2 = 0;
         of var3 = null;
@@ -223,7 +225,8 @@ final class kk extends mh implements qd {
                         var6_int = 0;
                         L5: while (true) {
                           if (var4 <= var6_int) {
-                            fl.f(var5, 16);
+                            int discarded$1 = 16;
+                            fl.f(var5);
                             var6 = new String[2][var5];
                             var19 = new int[2][4 * var5];
                             var8 = lg.field_d;
@@ -335,7 +338,8 @@ final class kk extends mh implements qd {
             return;
         }
         try {
-            hc.f(92682);
+            int discarded$3 = 92682;
+            hc.f();
             if (param0 != -18905) {
                 ((kk) this).field_Ab = false;
             }
@@ -349,7 +353,8 @@ final class kk extends mh implements qd {
         wd var2 = null;
         if (((kk) this).field_H) {
           if (!((kk) this).field_Cb) {
-            var2 = ti.a((byte) -123);
+            int discarded$2 = -123;
+            var2 = ti.a();
             if (var2 == null) {
               if (param0 != 1) {
                 kk.j((byte) -27);
@@ -358,7 +363,8 @@ final class kk extends mh implements qd {
                 return super.g(1);
               }
             } else {
-              this.a(false, var2, 3899);
+              int discarded$3 = 3899;
+              this.a(false, var2);
               if (param0 != 1) {
                 kk.j((byte) -27);
                 return super.g(1);

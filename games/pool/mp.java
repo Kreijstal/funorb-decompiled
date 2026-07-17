@@ -223,110 +223,111 @@ final class mp extends ch implements tb {
         return stackIn_11_0;
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3, boolean param4, int param5, boolean param6, boolean param7, boolean param8, int param9) {
+    final static void a(int param0, boolean param1, int param2, int param3, boolean param4, int param5, boolean param6, boolean param7, boolean param8) {
         int var11 = 0;
-        var11 = Pool.field_O;
-        if (param5 == 13375) {
-          L0: {
-            if (param4) {
-              break L0;
-            } else {
-              L1: {
-                if (fr.field_s != qh.field_l) {
-                  break L1;
-                } else {
-                  if (qh.field_f == f.field_h) {
-                    break L0;
-                  } else {
-                    break L1;
-                  }
-                }
-              }
-              if (qh.field_f != sh.field_P.field_k) {
-                break L0;
+        L0: {
+          var11 = Pool.field_O;
+          if (param4) {
+            break L0;
+          } else {
+            L1: {
+              if (fr.field_s != qh.field_l) {
+                break L1;
               } else {
-                if (sh.field_P.field_e != qh.field_l) {
+                if (qh.field_f == f.field_h) {
                   break L0;
                 } else {
-                  if (null == em.field_L) {
-                    if (tp.field_e == null) {
-                      f.a(48);
-                      break L0;
-                    } else {
-                      al.a(true, 0);
-                      break L0;
-                    }
+                  break L1;
+                }
+              }
+            }
+            if (qh.field_f != sh.field_P.field_k) {
+              break L0;
+            } else {
+              if (sh.field_P.field_e != qh.field_l) {
+                break L0;
+              } else {
+                if (null == em.field_L) {
+                  if (tp.field_e == null) {
+                    f.a(48);
+                    break L0;
                   } else {
-                    al.a(false, 0);
+                    al.a(true, 0);
                     break L0;
                   }
-                }
-              }
-            }
-          }
-          L2: {
-            if (!param4) {
-              tn.field_u = (fr.field_s - 640) / 2;
-              break L2;
-            } else {
-              tn.field_u = fd.field_I;
-              break L2;
-            }
-          }
-          L3: {
-            pf.a(param4, param5 ^ -13418);
-            if (hb.field_a > 0) {
-              ie.a(param4, param1, param5 + -13502, param9);
-              break L3;
-            } else {
-              break L3;
-            }
-          }
-          L4: {
-            gi.field_o.field_tb = pa.field_M.field_tb;
-            gi.field_o.field_Fb = 1;
-            if (uf.field_z <= 0) {
-              break L4;
-            } else {
-              wk.a(param4, param9, param1, 112);
-              break L4;
-            }
-          }
-          L5: {
-            if (nj.field_b <= 0) {
-              break L5;
-            } else {
-              fe.a(param8, param4, param1, -102, param9);
-              break L5;
-            }
-          }
-          L6: {
-            L7: {
-              if (!nr.field_bb) {
-                break L7;
-              } else {
-                if (em.field_L.field_Nb <= em.field_L.field_mc) {
-                  ci.field_c.field_Sb.field_nb = ro.field_p;
-                  c.field_e.field_pb = false;
-                  mq.a(ci.field_c.field_Rb, (byte) 109);
-                  break L6;
                 } else {
-                  break L7;
+                  al.a(false, 0);
+                  break L0;
                 }
               }
             }
-            c.field_e.field_pb = true;
-            ci.field_c.field_Sb.field_nb = null;
-            rk.a(param7, param0, ci.field_c, param9, (byte) -83);
-            break L6;
           }
-          mk.a(param3, 0, param9, param7, param6, param2, param0);
-          rk.a(param7, param0, wo.field_f, param9, (byte) -83);
-          va.field_V = va.field_V + 1;
-          return;
-        } else {
-          return;
         }
+        L2: {
+          if (!param4) {
+            tn.field_u = (fr.field_s - 640) / 2;
+            break L2;
+          } else {
+            tn.field_u = fd.field_I;
+            break L2;
+          }
+        }
+        L3: {
+          pf.a(param4, -87);
+          if (hb.field_a > 0) {
+            int discarded$6 = 11;
+            int discarded$7 = -127;
+            ie.a(param4, param1);
+            break L3;
+          } else {
+            break L3;
+          }
+        }
+        L4: {
+          gi.field_o.field_tb = pa.field_M.field_tb;
+          gi.field_o.field_Fb = 1;
+          if (uf.field_z <= 0) {
+            break L4;
+          } else {
+            int discarded$8 = 112;
+            wk.a(param4, 11, param1);
+            break L4;
+          }
+        }
+        L5: {
+          if (nj.field_b <= 0) {
+            break L5;
+          } else {
+            int discarded$9 = 11;
+            int discarded$10 = -102;
+            fe.a(param8, param4, param1);
+            break L5;
+          }
+        }
+        L6: {
+          L7: {
+            if (!nr.field_bb) {
+              break L7;
+            } else {
+              if (em.field_L.field_Nb <= em.field_L.field_mc) {
+                ci.field_c.field_Sb.field_nb = ro.field_p;
+                c.field_e.field_pb = false;
+                int discarded$11 = 109;
+                mq.a(ci.field_c.field_Rb);
+                break L6;
+              } else {
+                break L7;
+              }
+            }
+          }
+          c.field_e.field_pb = true;
+          ci.field_c.field_Sb.field_nb = null;
+          rk.a(param7, param0, ci.field_c, 11, (byte) -83);
+          break L6;
+        }
+        mk.a(16777215, 0, 11, param7, true, 16777215, param0);
+        rk.a(param7, param0, wo.field_f, 11, (byte) -83);
+        va.field_V = va.field_V + 1;
     }
 
     public static void a(int param0) {
@@ -426,7 +427,7 @@ final class mp extends ch implements tb {
         }
     }
 
-    final static void a(int param0, int param1, nm param2, int param3) {
+    final static void a(int param0, int param1, nm param2) {
         try {
             kp.field_d = param1;
             qe.field_o = param0;

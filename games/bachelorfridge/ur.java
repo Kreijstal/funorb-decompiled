@@ -295,7 +295,7 @@ final class ur {
         }
     }
 
-    final static pp a(lu param0, byte param1) {
+    final static pp a(lu param0) {
         nq var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -475,7 +475,7 @@ final class ur {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         L0: {
           L1: {
             if (eo.field_l > param1 - param0) {
@@ -502,13 +502,10 @@ final class ur {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_m = null;
         field_b = null;
-        if (param0 < 103) {
-            return;
-        }
         field_p = null;
         field_f = null;
         field_j = null;

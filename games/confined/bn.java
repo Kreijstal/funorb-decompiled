@@ -159,18 +159,18 @@ final class bn {
         return stackIn_16_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = 53;
         field_d = null;
         field_b = null;
     }
 
-    final static void c(int param0) {
+    final static void c() {
         vg.field_Z.g((byte) 127);
         if (ui.field_c == null) {
             ui.field_c = new jj(vg.field_Z, cb.field_b);
         }
-        vg.field_Z.c((fj) (Object) ui.field_c, param0);
+        vg.field_Z.c((fj) (Object) ui.field_c, 0);
     }
 
     final boolean b(int param0) {

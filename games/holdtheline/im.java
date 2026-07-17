@@ -71,7 +71,7 @@ final class im implements Iterable {
         field_h = null;
     }
 
-    final static boolean a(ee param0, ee param1, int param2) {
+    final static boolean a(ee param0, ee param1) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         int stackIn_9_0 = 0;
@@ -251,12 +251,9 @@ final class im implements Iterable {
             var2_int = param1.f((byte) -97);
             ae.field_a = ae.field_a + (var2_int >> 1);
             dk.field_l = (1 & var2_int) << 16;
-            if (param0 <= 70) {
-                field_k = null;
-            }
             dk.field_l = dk.field_l + param1.k(82);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "im.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "im.D(" + 76 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

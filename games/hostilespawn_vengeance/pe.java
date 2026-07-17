@@ -22,7 +22,7 @@ final class pe extends wb {
         }
     }
 
-    final static void b(boolean param0) {
+    final static void b() {
         Object var2 = null;
         ak.a(false, (String) null, fj.field_Sb);
     }
@@ -144,30 +144,15 @@ final class pe extends wb {
         }
     }
 
-    final static fa[] p(int param0) {
-        if (param0 != 274) {
-          pe.b(true);
-          return new fa[]{ub.field_b, wh.field_c, w.field_S};
-        } else {
-          return new fa[]{ub.field_b, wh.field_c, w.field_S};
-        }
+    final static fa[] p() {
+        return new fa[]{ub.field_b, wh.field_c, w.field_S};
     }
 
-    final static void a(byte param0, int param1) {
-        en var2 = null;
-        var2 = s.field_b;
-        if (param0 != 51) {
-          fa[] discarded$2 = pe.p(-61);
-          var2.i(19319, param1);
-          var2.d(96, 1);
-          var2.d(125, 0);
-          return;
-        } else {
-          var2.i(19319, param1);
-          var2.d(96, 1);
-          var2.d(125, 0);
-          return;
-        }
+    final static void a() {
+        en var2 = s.field_b;
+        var2.i(19319, 6);
+        var2.d(96, 1);
+        var2.d(125, 0);
     }
 
     pe(gg param0, String param1) {

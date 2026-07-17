@@ -10,22 +10,10 @@ final class ot {
     static int field_a;
 
     private final void c(int param0, int param1) {
-        int[] var3 = null;
-        int[] var4 = null;
-        if (param0 != -1) {
-          int discarded$2 = ((ot) this).a((byte) -66);
-          var4 = new int[this.b((byte) -82, param1)];
-          var3 = var4;
-          au.a(((ot) this).field_c, 0, var4, 0, ((ot) this).field_c.length);
-          ((ot) this).field_c = var4;
-          return;
-        } else {
-          var4 = new int[this.b((byte) -82, param1)];
-          var3 = var4;
-          au.a(((ot) this).field_c, 0, var4, 0, ((ot) this).field_c.length);
-          ((ot) this).field_c = var4;
-          return;
-        }
+        int[] var4 = new int[this.b((byte) -82, param1)];
+        int[] var3 = var4;
+        au.a(((ot) this).field_c, 0, var4, 0, ((ot) this).field_c.length);
+        ((ot) this).field_c = var4;
     }
 
     final void a(int param0, byte param1) {
@@ -88,11 +76,7 @@ final class ot {
         var3 = ((ot) this).field_c.length;
         L0: while (true) {
           if (param1 < var3) {
-            if (param0 >= -35) {
-              return -27;
-            } else {
-              return var3;
-            }
+            return var3;
           } else {
             if (((ot) this).field_e) {
               if (var3 == 0) {
@@ -110,7 +94,7 @@ final class ot {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_b = null;
     }
 
@@ -125,7 +109,7 @@ final class ot {
         if (!(param1 < ((ot) this).field_c.length)) {
             this.c(-1, param1);
         }
-        int var4 = 117 % ((param0 - -31) / 32);
+        int var4 = 0;
         ((ot) this).field_c[param1] = param2;
     }
 

@@ -109,27 +109,19 @@ final class en extends IOException {
 
     final static dm a(byte param0, long param1) {
         RuntimeException var3 = null;
-        Object stackIn_2_0 = null;
         dm stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         dm stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
         try {
           L0: {
-            if (param0 == 50) {
-              stackOut_3_0 = (dm) (Object) hq.field_c.a(param1, -22877);
-              stackIn_4_0 = stackOut_3_0;
-              break L0;
-            } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
-              return (dm) (Object) stackIn_2_0;
-            }
+            stackOut_3_0 = (dm) (Object) hq.field_c.a(param1, -22877);
+            stackIn_4_0 = stackOut_3_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw fa.a((Throwable) (Object) var3, "en.F(" + param0 + 44 + param1 + 41);
+          throw fa.a((Throwable) (Object) var3, "en.F(" + 50 + 44 + param1 + 41);
         }
         return stackIn_4_0;
     }
@@ -310,10 +302,10 @@ final class en extends IOException {
         var20 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           L0: {
-            pq.field_m[3] = param8;
+            pq.field_m[3] = 16736511;
             pq.field_m[4] = 16711935;
             pq.field_m[1] = 6356832;
-            sn.field_Hb = param6;
+            sn.field_Hb = true;
             pq.field_m[0] = 16764000;
             w.field_A = param2;
             qq.field_f = param0;
@@ -447,7 +439,7 @@ final class en extends IOException {
                 nn.field_b = new cj(0L, param5);
                 nn.field_b.field_wb = ln.field_c;
                 dq.field_k.a((byte) 50, nn.field_b);
-                stackOut_27_0 = param8;
+                stackOut_27_0 = 16736511;
                 stackOut_27_1 = -16736510;
                 stackIn_28_0 = stackOut_27_0;
                 stackIn_28_1 = stackOut_27_1;
@@ -455,7 +447,8 @@ final class en extends IOException {
               }
               L10: {
                 L11: {
-                  if (!vo.e(stackIn_28_0 + stackIn_28_1)) {
+                  int discarded$1 = stackIn_28_0 + stackIn_28_1;
+                  if (!vo.e()) {
                     break L11;
                   } else {
                     if (nh.field_m) {
@@ -626,7 +619,7 @@ final class en extends IOException {
           }
           L18: {
             stackOut_60_0 = (RuntimeException) (Object) stackIn_60_0;
-            stackOut_60_1 = ((StringBuilder) (Object) stackIn_60_1).append(stackIn_60_2).append(44).append(param6).append(44);
+            stackOut_60_1 = ((StringBuilder) (Object) stackIn_60_1).append(stackIn_60_2).append(44).append(1).append(44);
             stackIn_63_0 = stackOut_60_0;
             stackIn_63_1 = stackOut_60_1;
             stackIn_61_0 = stackOut_60_0;
@@ -651,7 +644,7 @@ final class en extends IOException {
           }
           L19: {
             stackOut_64_0 = (RuntimeException) (Object) stackIn_64_0;
-            stackOut_64_1 = ((StringBuilder) (Object) stackIn_64_1).append(stackIn_64_2).append(44).append(param8).append(44);
+            stackOut_64_1 = ((StringBuilder) (Object) stackIn_64_1).append(stackIn_64_2).append(44).append(16736511).append(44);
             stackIn_67_0 = stackOut_64_0;
             stackIn_67_1 = stackOut_64_1;
             stackIn_65_0 = stackOut_64_0;

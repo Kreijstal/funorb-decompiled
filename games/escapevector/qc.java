@@ -2864,7 +2864,8 @@ final class qc extends pn implements qb {
                 if (((qc) this).field_wb) {
                   break L2;
                 } else {
-                  var2 = e.a(-16055);
+                  int discarded$2 = -16055;
+                  var2 = e.a();
                   if (null != var2) {
                     this.a(param0 + 9093, var2, false);
                     break L2;
@@ -3064,14 +3065,14 @@ final class qc extends pn implements qb {
         }
     }
 
-    public static void t(int param0) {
+    public static void t() {
         try {
             field_yb = null;
-            int var1_int = 91 % ((param0 - -21) / 42);
+            int var1_int = 1;
             field_vb = null;
             field_xb = null;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "qc.UB(" + param0 + 41);
+            throw t.a((Throwable) (Object) runtimeException, "qc.UB(" + -106 + 41);
         }
     }
 

@@ -161,7 +161,7 @@ final class oa {
         return stackIn_13_0;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_k = null;
         field_a = null;
         field_e = null;
@@ -220,7 +220,7 @@ final class oa {
             break L2;
           } else {
             var8 = null;
-            int discarded$5 = oa.a((byte) -112, 80, (Random) null);
+            int discarded$7 = oa.a((byte) -112, 80, (Random) null);
             break L2;
           }
         }
@@ -248,13 +248,13 @@ final class oa {
         }
         L5: {
           if (uk.field_L == 1) {
-            int discarded$6 = var9.c(false);
-            String discarded$7 = var9.b(false);
+            int discarded$8 = var9.c(false);
+            String discarded$9 = var9.b(false);
             break L5;
           } else {
             if (uk.field_L == 4) {
-              int discarded$8 = var9.c(false);
-              String discarded$9 = var9.b(false);
+              int discarded$10 = var9.c(false);
+              String discarded$11 = var9.b(false);
               break L5;
             } else {
               break L5;
@@ -262,7 +262,9 @@ final class oa {
           }
         }
         if (!param0) {
-          td.field_q = kk.a((uf) (Object) var9, -77, 80);
+          int discarded$12 = 80;
+          int discarded$13 = -77;
+          td.field_q = kk.a((uf) (Object) var9);
           eb.field_k = null;
           return new bf(param0);
         } else {

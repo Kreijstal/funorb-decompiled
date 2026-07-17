@@ -19,7 +19,7 @@ final class ec {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_g = null;
         field_e = null;
         field_d = null;
@@ -30,7 +30,7 @@ final class ec {
         field_a = null;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         uh var1 = (uh) (Object) km.field_a.d(true);
         if (var1 == null) {
             var1 = new uh();
@@ -39,7 +39,7 @@ final class ec {
         lk.field_j.b((pg) (Object) var1, -1);
     }
 
-    final static void a(byte[] param0, byte param1) {
+    final static void a(byte[] param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

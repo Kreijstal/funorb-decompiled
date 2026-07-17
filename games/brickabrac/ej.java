@@ -32,7 +32,7 @@ final class ej extends sl {
         return false;
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_I = null;
         field_M = null;
         field_L = null;

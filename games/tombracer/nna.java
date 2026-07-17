@@ -81,7 +81,7 @@ final class nna {
                 stackIn_6_0 = stackOut_5_0;
                 return stackIn_6_0;
               } else {
-                if (~ae.field_g == param0) {
+                if (ae.field_g == 2) {
                   if (qaa.a(2180, param1)) {
                     stackOut_12_0 = gl.a((byte) 125, bva.field_a, new String[1]);
                     stackIn_13_0 = stackOut_12_0;
@@ -127,7 +127,7 @@ final class nna {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_23_0 = (RuntimeException) var3;
-            stackOut_23_1 = new StringBuilder().append("nna.A(").append(param0).append(44);
+            stackOut_23_1 = new StringBuilder().append("nna.A(").append(-3).append(44);
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;

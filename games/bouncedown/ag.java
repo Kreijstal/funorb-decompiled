@@ -8,35 +8,23 @@ final class ag {
     static kh field_a;
     static int field_c;
 
-    final static String b(int param0) {
+    final static String b() {
         if (!nh.field_P) {
           if (ge.field_c >= ea.field_b) {
-            if (ge.field_c >= sd.field_lb + ea.field_b) {
-              if (param0 == -1) {
-                return null;
-              } else {
-                return null;
-              }
-            } else {
+            if (ge.field_c < sd.field_lb + ea.field_b) {
               return oc.field_b;
+            } else {
+              return null;
             }
           } else {
-            if (param0 == -1) {
-              return null;
-            } else {
-              return null;
-            }
+            return null;
           }
         } else {
-          if (param0 == -1) {
-            return null;
-          } else {
-            return null;
-          }
+          return null;
         }
     }
 
-    final static java.net.URL a(java.applet.Applet param0, java.net.URL param1, boolean param2) {
+    final static java.net.URL a(java.applet.Applet param0, java.net.URL param1) {
         Object var3 = null;
         Object var4 = null;
         java.net.URL stackIn_8_0 = null;
@@ -164,7 +152,7 @@ final class ag {
         return stackIn_8_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
     }

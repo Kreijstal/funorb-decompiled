@@ -6,7 +6,7 @@ class fd extends ug {
     static tg[] field_n;
     static String field_o;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_o = null;
         field_n = null;
         field_m = null;
@@ -30,63 +30,19 @@ class fd extends ug {
     fd() {
     }
 
-    final static String c(byte param0) {
-        String var1 = null;
-        var1 = "";
-        if (param0 != 61) {
-          L0: {
-            field_o = null;
-            if (null == vk.field_c) {
-              break L0;
-            } else {
-              var1 = vk.field_c.a(0);
-              break L0;
-            }
-          }
-          L1: {
-            if (-1 != var1.length()) {
-              break L1;
-            } else {
-              var1 = bj.j(44);
-              break L1;
-            }
-          }
-          L2: {
-            if (-1 != var1.length()) {
-              break L2;
-            } else {
-              var1 = wk.field_H;
-              break L2;
-            }
-          }
-          return var1;
-        } else {
-          L3: {
-            if (null == vk.field_c) {
-              break L3;
-            } else {
-              var1 = vk.field_c.a(0);
-              break L3;
-            }
-          }
-          L4: {
-            if (-1 != var1.length()) {
-              break L4;
-            } else {
-              var1 = bj.j(44);
-              break L4;
-            }
-          }
-          L5: {
-            if (-1 != var1.length()) {
-              break L5;
-            } else {
-              var1 = wk.field_H;
-              break L5;
-            }
-          }
-          return var1;
+    final static String c() {
+        String var1 = "";
+        if (null != vk.field_c) {
+            var1 = vk.field_c.a(0);
         }
+        if (-1 == var1.length()) {
+            int discarded$0 = 44;
+            var1 = bj.j();
+        }
+        if (-1 == var1.length()) {
+            var1 = wk.field_H;
+        }
+        return var1;
     }
 
     static {

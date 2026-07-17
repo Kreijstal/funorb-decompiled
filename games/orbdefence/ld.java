@@ -76,7 +76,7 @@ final class ld {
                           } else {
                             L8: {
                               var8 = ul.field_b[var6_int];
-                              if ((var8 >> 8 & 255) <= param2) {
+                              if ((var8 >> 8 & 255) <= 64) {
                                 break L8;
                               } else {
                                 break L8;
@@ -100,15 +100,15 @@ final class ld {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw dd.a((Throwable) (Object) var6, "ld.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw dd.a((Throwable) (Object) var6, "ld.C(" + param0 + 44 + param1 + 44 + 64 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         return true;
     }
 
-    final static int a(int param0, int param1, byte param2) {
+    final static int a(int param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

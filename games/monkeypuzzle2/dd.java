@@ -8,7 +8,7 @@ final class dd extends RuntimeException {
     static String field_a;
     static int field_e;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         int var1 = 74;
     }
@@ -18,7 +18,7 @@ final class dd extends RuntimeException {
         ((dd) this).field_b = param0;
     }
 
-    final static am a(String param0, boolean param1) {
+    final static am a(String param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

@@ -6,7 +6,7 @@ final class nl {
     static String[] field_b;
     static dd[][] field_c;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
         field_c = null;
@@ -34,8 +34,9 @@ final class nl {
         gb.a(si.field_R);
         param0 = param0 * 16;
         int var3 = -(ni.field_j * 2 % 16);
-        gb.a(var3 + param2, param1 + param0, var3 + param2 - -16, 16 + param0);
-        gb.h(16 + (param2 + var3), param0 + 4, 8, 13421632);
+        gb.a(var3 + param2, -4 + param0, var3 + param2 - -16, 16 + param0);
+        int discarded$0 = 13421632;
+        gb.h(16 + (param2 + var3), param0 + 4, 8);
         gb.b(si.field_R);
     }
 

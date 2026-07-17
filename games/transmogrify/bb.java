@@ -553,7 +553,7 @@ final class bb extends ag {
           if (param0.field_l.length == 0) {
             return null;
           } else {
-            return new bb(param0, (int)((long)param0.field_h * 256L * (long)param1 / (long)(100 * qh.field_p)), param2 << 6);
+            return new bb(param0, (int)((long)param0.field_h * 256L * 100L / (long)(100 * qh.field_p)), param2 << 6);
           }
         } else {
           return null;
@@ -1507,7 +1507,7 @@ final class bb extends ag {
           if (param0.field_l.length == 0) {
             return null;
           } else {
-            return new bb(param0, (int)((long)param0.field_h * 256L * (long)param1 / (long)(100 * qh.field_p)), param2 << 6, param3 << 6);
+            return new bb(param0, (int)((long)param0.field_h * 256L * 100L / (long)(100 * qh.field_p)), 6144, param3 << 6);
           }
         } else {
           return null;

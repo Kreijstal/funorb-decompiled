@@ -183,25 +183,10 @@ abstract class ib {
                     }
                     case 12: {
                         try {
-                            if (param0 == 46) {
-                                statePc = 16;
-                            } else {
-                                statePc = 13;
-                            }
+                            statePc = 16;
                             continue stateLoop;
                         } catch (Throwable stateCaught_12) {
                             caughtException = stateCaught_12;
-                            statePc = 15;
-                            continue stateLoop;
-                        }
-                    }
-                    case 13: {
-                        try {
-                            field_b = null;
-                            statePc = 16;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_13) {
-                            caughtException = stateCaught_13;
                             statePc = 15;
                             continue stateLoop;
                         }
@@ -261,7 +246,7 @@ abstract class ib {
                     case 20: {
                         var2_ref = (RuntimeException) (Object) caughtException;
                         stackOut_20_0 = (RuntimeException) var2_ref;
-                        stackOut_20_1 = new StringBuilder().append("ib.C(").append(param0).append(44);
+                        stackOut_20_1 = new StringBuilder().append("ib.C(").append(46).append(44);
                         stackIn_22_0 = stackOut_20_0;
                         stackIn_22_1 = stackOut_20_1;
                         stackIn_21_0 = stackOut_20_0;

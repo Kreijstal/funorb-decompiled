@@ -12,7 +12,7 @@ final class jq {
     static uj field_d;
     static ri field_e;
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_e = null;
         field_c = null;
@@ -31,6 +31,7 @@ final class jq {
           var6 = 21 * param3 / param0;
           field_c.a(param5 - 7, -14 + param1, param4);
           if (null != uf.field_h) {
+            uf.field_h.c(param5, param1, param4);
             break L0;
           } else {
             uf.field_h = new ja(8, 21);
@@ -38,43 +39,38 @@ final class jq {
             oo.a(0, 0, 8, 10, 65280, 16776960);
             oo.a(0, 10, 8, 11, 16776960, 16711680);
             g.d();
+            uf.field_h.c(param5, param1, param4);
             break L0;
           }
         }
-        uf.field_h.c(param5, param1, param4);
-        if (param2 == 2) {
-          L1: {
-            oo.f(param5, param1, 8, 21 + -var6, 0, param4);
-            var7 = new Random();
-            if (param3 < param0) {
+        L1: {
+          oo.f(param5, param1, 8, 21 + -var6, 0, param4);
+          var7 = new Random();
+          if (param3 < param0) {
+            break L1;
+          } else {
+            if (hp.a((byte) 11, var7, 7) == 0) {
+              var8 = new ve(3 + param5, param1 - 12, 5, 0.0, 8.0, 1.5, 1, 1.5, 0.99, 1);
+              var8.field_k = param1 * 79 + 13 * param5 + wf.field_m;
+              var9 = 200;
+              var10 = var9 * 128;
+              var11 = var9 * 64;
+              var11 = var11 >> 8;
+              var12 = var9 * 255;
+              var10 = var10 >> 8;
+              var10 = var10 << 16;
+              var12 = var12 >> 8;
+              var11 = var11 << 8;
+              var8.a(var12 | (var10 | var11), 3 + param5, true, -12 + param1, 16777215, -1963);
               break L1;
             } else {
-              if (hp.a((byte) 11, var7, 7) == 0) {
-                var8 = new ve(3 + param5, param1 - 12, 5, 0.0, 8.0, 1.5, 1, 1.5, 0.99, 1);
-                var8.field_k = param1 * 79 + 13 * param5 + wf.field_m;
-                var9 = 200;
-                var10 = var9 * 128;
-                var11 = var9 * 64;
-                var11 = var11 >> 8;
-                var12 = var9 * 255;
-                var10 = var10 >> 8;
-                var10 = var10 << 16;
-                var12 = var12 >> 8;
-                var11 = var11 << 8;
-                var8.a(var12 | (var10 | var11), 3 + param5, true, -12 + param1, 16777215, -1963);
-                break L1;
-              } else {
-                break L1;
-              }
+              break L1;
             }
           }
-          return;
-        } else {
-          return;
         }
     }
 
-    final static void a(k param0, int param1) {
+    final static void a(k param0) {
         try {
             byte[] var2 = null;
             RuntimeException var2_ref = null;

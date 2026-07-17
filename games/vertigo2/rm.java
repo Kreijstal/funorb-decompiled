@@ -167,14 +167,11 @@ final class rm extends ji {
 
     final static void a(byte param0, java.awt.Component param1) {
         param1.removeKeyListener((java.awt.event.KeyListener) (Object) kb.field_a);
-        if (param0 >= -73) {
-            return;
-        }
         try {
             param1.removeFocusListener((java.awt.event.FocusListener) (Object) kb.field_a);
             fh.field_w = -1;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "rm.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "rm.B(" + -89 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

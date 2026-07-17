@@ -19,7 +19,7 @@ final class re {
         return (int)((double)(-param0 + param3) * wm.a(param2, (byte) 114, param1)) + param0;
     }
 
-    final static void a(java.awt.Canvas param0, boolean param1) {
+    final static void a(java.awt.Canvas param0) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -39,7 +39,8 @@ final class re {
         String stackOut_6_2 = null;
         try {
           L0: {
-            pr.a((java.awt.Component) (Object) param0, -9194);
+            int discarded$2 = -9194;
+            pr.a((java.awt.Component) (Object) param0);
             L1: {
               wk.a((byte) -58, (java.awt.Component) (Object) param0);
               if (aj.field_b == null) {

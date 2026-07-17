@@ -132,7 +132,7 @@ final class g {
         }
     }
 
-    final static void a(byte param0, int param1) {
+    final static void a() {
         RuntimeException var2 = null;
         int var3 = 0;
         mj var4 = null;
@@ -140,29 +140,21 @@ final class g {
         var3 = MinerDisturbance.field_ab;
         try {
           L0: {
-            L1: {
-              if (param0 == -69) {
-                break L1;
-              } else {
-                field_o = true;
-                break L1;
-              }
-            }
             var4 = (mj) (Object) nh.field_a.b(75);
-            L2: while (true) {
+            L1: while (true) {
               if (var4 == null) {
                 break L0;
               } else {
                 vd.a(7, -3450, var4);
                 var4 = (mj) (Object) nh.field_a.b((byte) 56);
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var2, "g.H(" + param0 + 44 + 7 + 41);
+          throw lj.a((Throwable) (Object) var2, "g.H(" + -69 + 44 + 7 + 41);
         }
     }
 
@@ -557,7 +549,8 @@ final class g {
         try {
           L0: {
             L1: {
-              var17 = new sb(in.a(param1, param0 + -2));
+              int discarded$5 = 0;
+              var17 = new sb(in.a(param1));
               var4 = var17.d((byte) -54);
               if (var4 < 5) {
                 break L1;
@@ -589,7 +582,7 @@ final class g {
                   L4: {
                     var6 = stackIn_11_0;
                     if (7 > var4) {
-                      ((g) this).field_g = var17.e(param0 ^ -108);
+                      ((g) this).field_g = var17.e(-106);
                       break L4;
                     } else {
                       ((g) this).field_g = var17.a((byte) -120);
@@ -597,7 +590,7 @@ final class g {
                     }
                   }
                   L5: {
-                    if ((var5 & param0) == 0) {
+                    if ((var5 & 2) == 0) {
                       stackOut_16_0 = 0;
                       stackIn_17_0 = stackOut_16_0;
                       break L5;
@@ -619,9 +612,9 @@ final class g {
                           break L6;
                         } else {
                           L8: {
-                            int dupTemp$4 = var8 + var17.a((byte) -117);
-                            var8 = dupTemp$4;
-                            ((g) this).field_t[var10] = dupTemp$4;
+                            int dupTemp$6 = var8 + var17.a((byte) -117);
+                            var8 = dupTemp$6;
+                            ((g) this).field_t[var10] = dupTemp$6;
                             if (~var9 <= ~((g) this).field_t[var10]) {
                               break L8;
                             } else {
@@ -640,9 +633,9 @@ final class g {
                           break L6;
                         } else {
                           L10: {
-                            int dupTemp$5 = var8 + var17.e(-68);
-                            var8 = dupTemp$5;
-                            ((g) this).field_t[var10] = dupTemp$5;
+                            int dupTemp$7 = var8 + var17.e(-68);
+                            var8 = dupTemp$7;
+                            ((g) this).field_t[var10] = dupTemp$7;
                             if (~((g) this).field_t[var10] >= ~var9) {
                               break L10;
                             } else {
@@ -767,10 +760,10 @@ final class g {
                                       continue L22;
                                     } else {
                                       L25: {
-                                        int dupTemp$6 = var8 + var17.a((byte) -119);
-                                        var8 = dupTemp$6;
-                                        ((g) this).field_p[var11][var14] = dupTemp$6;
-                                        var15 = dupTemp$6;
+                                        int dupTemp$8 = var8 + var17.a((byte) -119);
+                                        var8 = dupTemp$8;
+                                        ((g) this).field_p[var11][var14] = dupTemp$8;
+                                        var15 = dupTemp$8;
                                         if (~var13 > ~var15) {
                                           var13 = var15;
                                           break L25;
@@ -820,10 +813,10 @@ final class g {
                                       continue L27;
                                     } else {
                                       L30: {
-                                        int dupTemp$7 = var8 + var17.e(eg.a(param0, -71));
-                                        var8 = dupTemp$7;
-                                        ((g) this).field_p[var11][var14] = dupTemp$7;
-                                        var15 = dupTemp$7;
+                                        int dupTemp$9 = var8 + var17.e(eg.a(2, -71));
+                                        var8 = dupTemp$9;
+                                        ((g) this).field_p[var11][var14] = dupTemp$9;
+                                        var15 = dupTemp$9;
                                         if (~var13 <= ~var15) {
                                           break L30;
                                         } else {
@@ -910,7 +903,7 @@ final class g {
           L36: {
             var3 = decompiledCaughtException;
             stackOut_94_0 = (RuntimeException) var3;
-            stackOut_94_1 = new StringBuilder().append("g.F(").append(param0).append(44);
+            stackOut_94_1 = new StringBuilder().append("g.F(").append(2).append(44);
             stackIn_96_0 = stackOut_94_0;
             stackIn_96_1 = stackOut_94_1;
             stackIn_95_0 = stackOut_94_0;
@@ -937,7 +930,7 @@ final class g {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_e = null;
         field_j = null;
     }
@@ -946,58 +939,48 @@ final class g {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
-        Object var3 = null;
-        int stackIn_9_0 = 0;
-        int stackIn_12_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_10_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_11_0 = 0;
-        int stackOut_8_0 = 0;
+        int stackOut_9_0 = 0;
+        int stackOut_6_0 = 0;
         var2 = MinerDisturbance.field_ab;
         try {
           L0: {
-            L1: {
-              if (param0 == -36) {
-                break L1;
-              } else {
-                var3 = null;
-                g.a(25, -9, -119, -32, (byte) 41, (ea[]) null);
-                break L1;
-              }
-            }
             var1_int = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (var1_int >= 35) {
-                stackOut_11_0 = 1;
-                stackIn_12_0 = stackOut_11_0;
+                stackOut_9_0 = 1;
+                stackIn_10_0 = stackOut_9_0;
                 break L0;
               } else {
-                L3: {
+                L2: {
                   if (th.field_b[var1_int][cm.field_o]) {
                     if (!d.a(var1_int, cm.field_o, (byte) 68)) {
-                      break L3;
+                      break L2;
                     } else {
-                      stackOut_8_0 = 0;
-                      stackIn_9_0 = stackOut_8_0;
-                      return stackIn_9_0 != 0;
+                      stackOut_6_0 = 0;
+                      stackIn_7_0 = stackOut_6_0;
+                      return stackIn_7_0 != 0;
                     }
                   } else {
-                    break L3;
+                    break L2;
                   }
                 }
                 var1_int++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw lj.a((Throwable) (Object) var1, "g.E(" + param0 + 41);
+          throw lj.a((Throwable) (Object) var1, "g.E(" + -36 + 41);
         }
-        return stackIn_12_0 != 0;
+        return stackIn_10_0 != 0;
     }
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean a(char param0) {
         return param0 >= 48 && param0 <= 57;
     }
 
@@ -1013,7 +996,8 @@ final class g {
     g(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-            ((g) this).field_b = gn.a(param0.length, param0, true);
+            int discarded$0 = 1;
+            ((g) this).field_b = gn.a(param0.length, param0);
             if (param1 != ((g) this).field_b) {
                 throw new RuntimeException();
             }
@@ -1021,7 +1005,8 @@ final class g {
                 if (param2.length != 64) {
                     throw new RuntimeException();
                 }
-                ((g) this).field_a = wb.a(param0.length, 0, param0, 18738);
+                int discarded$1 = 18738;
+                ((g) this).field_a = wb.a(param0.length, 0, param0);
                 for (var4_int = 0; var4_int < 64; var4_int++) {
                     if (((g) this).field_a[var4_int] != param2[var4_int]) {
                         throw new RuntimeException();

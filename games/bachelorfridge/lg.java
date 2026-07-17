@@ -10,7 +10,7 @@ class lg {
     int field_d;
     private sna field_e;
 
-    final static void c(int param0) {
+    final static void c() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -18,7 +18,7 @@ class lg {
         var2 = BachelorFridge.field_y;
         try {
           L0: {
-            cw.field_zb = new js(param0);
+            cw.field_zb = new js(8);
             var1_int = 0;
             L1: while (true) {
               if (var1_int >= vca.field_f.length) {
@@ -33,7 +33,7 @@ class lg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var1, "lg.J(" + param0 + 41);
+          throw pe.a((Throwable) (Object) var1, "lg.J(" + 8 + 41);
         }
     }
 

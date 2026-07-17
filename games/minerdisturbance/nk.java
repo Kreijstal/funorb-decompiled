@@ -15,7 +15,7 @@ final class nk extends pi {
     int[] field_y;
     int field_n;
 
-    public static void a(int param0) {
+    public static void a() {
         field_v = null;
     }
 

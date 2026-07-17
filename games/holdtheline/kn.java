@@ -61,7 +61,7 @@ final class kn {
                 break L1;
               }
             }
-            param8[param4 + param7].a((byte) -113, (hl) (Object) var13);
+            param8[1 + param7].a((byte) -113, (hl) (Object) var13);
             stackOut_3_0 = (jk) var13;
             stackIn_4_0 = stackOut_3_0;
             break L0;
@@ -71,7 +71,7 @@ final class kn {
           L2: {
             var13_ref = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var13_ref;
-            stackOut_5_1 = new StringBuilder().append("kn.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44);
+            stackOut_5_1 = new StringBuilder().append("kn.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(1).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -128,26 +128,26 @@ final class kn {
         byte[] var21 = null;
         int stackIn_11_0 = 0;
         int stackIn_14_0 = 0;
+        RuntimeException stackIn_95_0 = null;
+        StringBuilder stackIn_95_1 = null;
+        RuntimeException stackIn_96_0 = null;
+        StringBuilder stackIn_96_1 = null;
         RuntimeException stackIn_97_0 = null;
         StringBuilder stackIn_97_1 = null;
-        RuntimeException stackIn_98_0 = null;
-        StringBuilder stackIn_98_1 = null;
-        RuntimeException stackIn_99_0 = null;
-        StringBuilder stackIn_99_1 = null;
-        String stackIn_99_2 = null;
+        String stackIn_97_2 = null;
         RuntimeException decompiledCaughtException = null;
         int stackOut_10_0 = 0;
         int stackOut_9_0 = 0;
         int stackOut_13_0 = 0;
         int stackOut_12_0 = 0;
+        RuntimeException stackOut_94_0 = null;
+        StringBuilder stackOut_94_1 = null;
         RuntimeException stackOut_96_0 = null;
         StringBuilder stackOut_96_1 = null;
-        RuntimeException stackOut_98_0 = null;
-        StringBuilder stackOut_98_1 = null;
-        String stackOut_98_2 = null;
-        RuntimeException stackOut_97_0 = null;
-        StringBuilder stackOut_97_1 = null;
-        String stackOut_97_2 = null;
+        String stackOut_96_2 = null;
+        RuntimeException stackOut_95_0 = null;
+        StringBuilder stackOut_95_1 = null;
+        String stackOut_95_2 = null;
         var16 = HoldTheLine.field_D;
         try {
           L0: {
@@ -313,26 +313,18 @@ final class kn {
                           }
                         }
                       }
-                      L18: {
-                        if (param0) {
-                          break L18;
-                        } else {
-                          ((kn) this).field_k = null;
-                          break L18;
-                        }
-                      }
                       var10 = 0;
-                      L19: while (true) {
+                      L18: while (true) {
                         if (~((kn) this).field_q >= ~var10) {
-                          L20: {
+                          L19: {
                             if (var4 >= 7) {
                               var10 = 0;
-                              L21: while (true) {
+                              L20: while (true) {
                                 if (~var10 <= ~((kn) this).field_q) {
                                   var10 = 0;
-                                  L22: while (true) {
+                                  L21: while (true) {
                                     if (((kn) this).field_q <= var10) {
-                                      break L20;
+                                      break L19;
                                     } else {
                                       var11 = ((kn) this).field_n[var10];
                                       var12 = ((kn) this).field_u[var11];
@@ -340,34 +332,34 @@ final class kn {
                                       ((kn) this).field_m[var11] = new int[var12];
                                       var13 = -1;
                                       var14 = 0;
-                                      L23: while (true) {
+                                      L22: while (true) {
                                         if (~var14 <= ~var12) {
-                                          L24: {
+                                          L23: {
                                             ((kn) this).field_k[var11] = 1 + var13;
                                             if (1 + var13 == var12) {
                                               ((kn) this).field_m[var11] = null;
-                                              break L24;
+                                              break L23;
                                             } else {
-                                              break L24;
+                                              break L23;
                                             }
                                           }
                                           var10++;
-                                          continue L22;
+                                          continue L21;
                                         } else {
-                                          L25: {
+                                          L24: {
                                             int dupTemp$6 = var8 + var17.g(-54);
                                             var8 = dupTemp$6;
                                             ((kn) this).field_m[var11][var14] = dupTemp$6;
                                             var15 = dupTemp$6;
                                             if (var15 > var13) {
                                               var13 = var15;
-                                              break L25;
+                                              break L24;
                                             } else {
-                                              break L25;
+                                              break L24;
                                             }
                                           }
                                           var14++;
-                                          continue L23;
+                                          continue L22;
                                         }
                                       }
                                     }
@@ -375,17 +367,17 @@ final class kn {
                                 } else {
                                   ((kn) this).field_u[((kn) this).field_n[var10]] = var17.g(-60);
                                   var10++;
-                                  continue L21;
+                                  continue L20;
                                 }
                               }
                             } else {
                               var10 = 0;
-                              L26: while (true) {
+                              L25: while (true) {
                                 if (~var10 <= ~((kn) this).field_q) {
                                   var10 = 0;
-                                  L27: while (true) {
+                                  L26: while (true) {
                                     if (~var10 <= ~((kn) this).field_q) {
-                                      break L20;
+                                      break L19;
                                     } else {
                                       var11 = ((kn) this).field_n[var10];
                                       var12 = ((kn) this).field_u[var11];
@@ -393,34 +385,34 @@ final class kn {
                                       var13 = -1;
                                       ((kn) this).field_m[var11] = new int[var12];
                                       var14 = 0;
-                                      L28: while (true) {
+                                      L27: while (true) {
                                         if (var14 >= var12) {
-                                          L29: {
+                                          L28: {
                                             ((kn) this).field_k[var11] = 1 + var13;
                                             if (~(1 + var13) == ~var12) {
                                               ((kn) this).field_m[var11] = null;
-                                              break L29;
+                                              break L28;
                                             } else {
-                                              break L29;
+                                              break L28;
                                             }
                                           }
                                           var10++;
-                                          continue L27;
+                                          continue L26;
                                         } else {
-                                          L30: {
+                                          L29: {
                                             int dupTemp$7 = var8 + var17.k(-121);
                                             var8 = dupTemp$7;
                                             ((kn) this).field_m[var11][var14] = dupTemp$7;
                                             var15 = dupTemp$7;
                                             if (var15 <= var13) {
-                                              break L30;
+                                              break L29;
                                             } else {
                                               var13 = var15;
-                                              break L30;
+                                              break L29;
                                             }
                                           }
                                           var14++;
-                                          continue L28;
+                                          continue L27;
                                         }
                                       }
                                     }
@@ -428,53 +420,53 @@ final class kn {
                                 } else {
                                   ((kn) this).field_u[((kn) this).field_n[var10]] = var17.k(122);
                                   var10++;
-                                  continue L26;
+                                  continue L25;
                                 }
                               }
                             }
                           }
-                          L31: {
+                          L30: {
                             if (var6 == 0) {
-                              break L31;
+                              break L30;
                             } else {
                               ((kn) this).field_c = new gl[var9 - -1];
                               ((kn) this).field_l = new int[1 + var9][];
                               var10 = 0;
-                              L32: while (true) {
+                              L31: while (true) {
                                 if (~((kn) this).field_q >= ~var10) {
-                                  break L31;
+                                  break L30;
                                 } else {
                                   var11 = ((kn) this).field_n[var10];
                                   var12 = ((kn) this).field_u[var11];
                                   ((kn) this).field_l[var11] = new int[((kn) this).field_k[var11]];
                                   var13 = 0;
-                                  L33: while (true) {
+                                  L32: while (true) {
                                     if (var13 >= ((kn) this).field_k[var11]) {
                                       var13 = 0;
-                                      L34: while (true) {
+                                      L33: while (true) {
                                         if (var13 >= var12) {
                                           ((kn) this).field_c[var11] = new gl(((kn) this).field_l[var11]);
                                           var10++;
-                                          continue L32;
+                                          continue L31;
                                         } else {
-                                          L35: {
+                                          L34: {
                                             if (null != ((kn) this).field_m[var11]) {
                                               var14 = ((kn) this).field_m[var11][var13];
-                                              break L35;
+                                              break L34;
                                             } else {
                                               var14 = var13;
-                                              break L35;
+                                              break L34;
                                             }
                                           }
                                           ((kn) this).field_l[var11][var14] = var17.a(72);
                                           var13++;
-                                          continue L34;
+                                          continue L33;
                                         }
                                       }
                                     } else {
                                       ((kn) this).field_l[var11][var13] = -1;
                                       var13++;
-                                      continue L33;
+                                      continue L32;
                                     }
                                   }
                                 }
@@ -485,7 +477,7 @@ final class kn {
                         } else {
                           ((kn) this).field_p[((kn) this).field_n[var10]] = var17.a(-63);
                           var10++;
-                          continue L19;
+                          continue L18;
                         }
                       }
                     } else {
@@ -501,37 +493,40 @@ final class kn {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L36: {
+          L35: {
             var3 = decompiledCaughtException;
-            stackOut_96_0 = (RuntimeException) var3;
-            stackOut_96_1 = new StringBuilder().append("kn.C(").append(param0).append(44);
-            stackIn_98_0 = stackOut_96_0;
-            stackIn_98_1 = stackOut_96_1;
-            stackIn_97_0 = stackOut_96_0;
-            stackIn_97_1 = stackOut_96_1;
+            stackOut_94_0 = (RuntimeException) var3;
+            stackOut_94_1 = new StringBuilder().append("kn.C(").append(1).append(44);
+            stackIn_96_0 = stackOut_94_0;
+            stackIn_96_1 = stackOut_94_1;
+            stackIn_95_0 = stackOut_94_0;
+            stackIn_95_1 = stackOut_94_1;
             if (param1 == null) {
-              stackOut_98_0 = (RuntimeException) (Object) stackIn_98_0;
-              stackOut_98_1 = (StringBuilder) (Object) stackIn_98_1;
-              stackOut_98_2 = "null";
-              stackIn_99_0 = stackOut_98_0;
-              stackIn_99_1 = stackOut_98_1;
-              stackIn_99_2 = stackOut_98_2;
-              break L36;
+              stackOut_96_0 = (RuntimeException) (Object) stackIn_96_0;
+              stackOut_96_1 = (StringBuilder) (Object) stackIn_96_1;
+              stackOut_96_2 = "null";
+              stackIn_97_0 = stackOut_96_0;
+              stackIn_97_1 = stackOut_96_1;
+              stackIn_97_2 = stackOut_96_2;
+              break L35;
             } else {
-              stackOut_97_0 = (RuntimeException) (Object) stackIn_97_0;
-              stackOut_97_1 = (StringBuilder) (Object) stackIn_97_1;
-              stackOut_97_2 = "{...}";
-              stackIn_99_0 = stackOut_97_0;
-              stackIn_99_1 = stackOut_97_1;
-              stackIn_99_2 = stackOut_97_2;
-              break L36;
+              stackOut_95_0 = (RuntimeException) (Object) stackIn_95_0;
+              stackOut_95_1 = (StringBuilder) (Object) stackIn_95_1;
+              stackOut_95_2 = "{...}";
+              stackIn_97_0 = stackOut_95_0;
+              stackIn_97_1 = stackOut_95_1;
+              stackIn_97_2 = stackOut_95_2;
+              break L35;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_99_0, stackIn_99_2 + 41);
+          throw kk.a((Throwable) (Object) stackIn_97_0, stackIn_97_2 + 41);
         }
     }
 
     final static vk b(byte param0) {
+        if (param0 != -49) {
+            kn.a((byte) -96);
+        }
         if (mi.field_d == 3) {
             return tk.field_c[4][0];
         }

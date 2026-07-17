@@ -9,7 +9,7 @@ abstract class pj {
     int field_c;
     java.awt.Image field_d;
 
-    final static tp c(byte param0) {
+    final static tp c() {
         return qn.field_b;
     }
 
@@ -22,8 +22,8 @@ abstract class pj {
         }
     }
 
-    public static void a(byte param0) {
-        int var1 = 18 % ((param0 - -44) / 47);
+    public static void a() {
+        int var1 = 0;
         field_f = null;
         field_a = null;
     }

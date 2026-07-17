@@ -68,25 +68,17 @@ final class ib {
                       var6 = 0;
                       L2: while (true) {
                         if (var5 <= var6) {
-                          L3: {
-                            if (param1 == 7047) {
-                              break L3;
-                            } else {
-                              ib.a(40, -26, false, 35, 96, 13, -66);
-                              break L3;
-                            }
-                          }
                           stackOut_23_0 = -1;
                           stackIn_24_0 = stackOut_23_0;
                           break L0;
                         } else {
-                          L4: {
+                          L3: {
                             if (~param3.field_D[param2][var6] == ~param0.field_D) {
                               if (!wl.a(-85, param3.field_x[param2][var6])) {
-                                break L4;
+                                break L3;
                               } else {
                                 var7 = 0;
-                                L5: while (true) {
+                                L4: while (true) {
                                   if (var7 >= var4_int) {
                                     stackOut_18_0 = var6;
                                     stackIn_19_0 = stackOut_18_0;
@@ -94,15 +86,15 @@ final class ib {
                                   } else {
                                     if (param0.field_q[var7] == param3.field_z[param2][var7 + var6 * var4_int]) {
                                       var7++;
-                                      continue L5;
+                                      continue L4;
                                     } else {
-                                      break L4;
+                                      break L3;
                                     }
                                   }
                                 }
                               }
                             } else {
-                              break L4;
+                              break L3;
                             }
                           }
                           var6++;
@@ -122,7 +114,7 @@ final class ib {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L5: {
             var4 = decompiledCaughtException;
             stackOut_25_0 = (RuntimeException) var4;
             stackOut_25_1 = new StringBuilder().append("ib.C(");
@@ -137,7 +129,7 @@ final class ib {
               stackIn_28_0 = stackOut_27_0;
               stackIn_28_1 = stackOut_27_1;
               stackIn_28_2 = stackOut_27_2;
-              break L6;
+              break L5;
             } else {
               stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
               stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
@@ -145,12 +137,12 @@ final class ib {
               stackIn_28_0 = stackOut_26_0;
               stackIn_28_1 = stackOut_26_1;
               stackIn_28_2 = stackOut_26_2;
-              break L6;
+              break L5;
             }
           }
-          L7: {
+          L6: {
             stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-            stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(44).append(7047).append(44).append(param2).append(44);
             stackIn_30_0 = stackOut_28_0;
             stackIn_30_1 = stackOut_28_1;
             stackIn_29_0 = stackOut_28_0;
@@ -162,7 +154,7 @@ final class ib {
               stackIn_31_0 = stackOut_30_0;
               stackIn_31_1 = stackOut_30_1;
               stackIn_31_2 = stackOut_30_2;
-              break L7;
+              break L6;
             } else {
               stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
               stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
@@ -170,7 +162,7 @@ final class ib {
               stackIn_31_0 = stackOut_29_0;
               stackIn_31_1 = stackOut_29_1;
               stackIn_31_2 = stackOut_29_2;
-              break L7;
+              break L6;
             }
           }
           throw ci.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 41);
@@ -180,7 +172,7 @@ final class ib {
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
         String var8 = null;
-        int var7 = -28 % ((-18 - param4) / 48);
+        int var7 = -1;
         if (field_b == 2) {
             var8 = ug.field_L;
         } else {
@@ -189,7 +181,7 @@ final class ib {
         ka.a(param2, param1, param6, param0, var8, param5, 127, param3);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         int var1 = 0;
     }

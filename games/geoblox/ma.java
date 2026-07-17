@@ -6,7 +6,7 @@ final class ma extends hf {
     long field_f;
     byte[] field_g;
 
-    final static void a(byte param0) {
+    final static void a() {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -89,24 +89,16 @@ final class ma extends hf {
         String stackOut_5_2 = null;
         try {
           L0: {
-            L1: {
-              if (param0) {
-                break L1;
-              } else {
-                int discarded$2 = ma.b(-91);
-                break L1;
-              }
-            }
             stackOut_2_0 = aa.a(wd.field_b, 0, 0, vf.field_L, -wd.field_a + ng.field_G + -(vf.field_L.field_s >> 1), -wd.field_d + -(vf.field_L.field_o >> 1) + td.field_E);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var3 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var3;
-            stackOut_4_1 = new StringBuilder().append("ma.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_4_1 = new StringBuilder().append("ma.A(").append(1).append(44).append(param1).append(44);
             stackIn_7_0 = stackOut_4_0;
             stackIn_7_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -118,7 +110,7 @@ final class ma extends hf {
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
-              break L2;
+              break L1;
             } else {
               stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
               stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
@@ -126,7 +118,7 @@ final class ma extends hf {
               stackIn_8_0 = stackOut_5_0;
               stackIn_8_1 = stackOut_5_1;
               stackIn_8_2 = stackOut_5_2;
-              break L2;
+              break L1;
             }
           }
           throw t.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
@@ -134,18 +126,16 @@ final class ma extends hf {
         return stackIn_3_0;
     }
 
-    final static int b(int param0) {
+    final static int b() {
         gb.field_b.a((byte) -65);
-        if (param0 != 15869) {
-            return 61;
-        }
         if (!wg.field_i.a((byte) 95)) {
-            return ge.a((byte) -74);
+            int discarded$0 = -74;
+            return ge.a();
         }
         return 0;
     }
 
-    final static boolean c(byte param0) {
+    final static boolean c() {
         int var1 = 0;
         int stackIn_4_0 = 0;
         int stackOut_3_0 = 0;
@@ -507,7 +497,7 @@ final class ma extends hf {
         }
     }
 
-    final static boolean a(rh param0, rh param1, rh param2, int param3) {
+    final static boolean a(rh param0, rh param1, rh param2) {
         RuntimeException var4 = null;
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;

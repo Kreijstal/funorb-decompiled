@@ -5,16 +5,16 @@ final class ul {
     static llb[] field_b;
     static int field_a;
 
-    final static phb[] a(int param0, int param1, int param2, int param3, boolean param4) {
+    final static phb[] a(int param0, int param1, int param2, int param3) {
         phb[] var6 = new phb[9];
         phb[] var5 = var6;
-        phb dupTemp$0 = mra.a(param0, (byte) -119, param2);
+        phb dupTemp$0 = mra.a(param0, (byte) -119, 1);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        phb dupTemp$1 = mra.a(param3, (byte) -125, param2);
+        phb dupTemp$1 = mra.a(param3, (byte) -125, 1);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
@@ -84,7 +84,7 @@ final class ul {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
     }
 

@@ -9,11 +9,6 @@ final class us {
     static int field_b;
 
     final static void a(boolean param0, boolean param1) {
-        if (param0) {
-            field_b = -58;
-            fa.field_X.b(param1, 97);
-            return;
-        }
         fa.field_X.b(param1, 97);
     }
 
@@ -46,45 +41,29 @@ final class us {
           }
         }
         if (stackIn_3_0 != ~stackIn_3_1) {
-          if (!p.field_n) {
-            ne.a(0, gf.field_b, (byte) 24, 0, 256, 5 * param1, gf.field_k);
-            if (param0 != 0) {
+          if (p.field_n) {
+            if (kc.field_i == -1) {
+              i.a(640, 480, 0, -(5 * param1) + 255, -123, 0);
               us.a(false, true);
               return;
             } else {
+              ne.a(0, gf.field_b, (byte) 24, 0, 256, 5 * param1, gf.field_k);
+              us.a(false, true);
               return;
             }
           } else {
-            if (kc.field_i != -1) {
-              ne.a(0, gf.field_b, (byte) 24, 0, 256, 5 * param1, gf.field_k);
-              if (param0 != 0) {
-                us.a(false, true);
-                return;
-              } else {
-                return;
-              }
-            } else {
-              i.a(640, 480, 0, -(5 * param1) + 255, -123, 0);
-              if (param0 != 0) {
-                us.a(false, true);
-                return;
-              } else {
-                return;
-              }
-            }
+            ne.a(0, gf.field_b, (byte) 24, 0, 256, 5 * param1, gf.field_k);
+            us.a(false, true);
+            return;
           }
         } else {
           i.a(640, 480, 0, -(5 * param1) + 255, -123, 0);
-          if (param0 != 0) {
-            us.a(false, true);
-            return;
-          } else {
-            return;
-          }
+          us.a(false, true);
+          return;
         }
     }
 
-    final static fs a(ob param0, fs[] param1, int param2) {
+    final static fs a(ob param0, fs[] param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         fs stackIn_5_0 = null;
@@ -193,7 +172,7 @@ final class us {
         return stackIn_5_0;
     }
 
-    final static va b(int param0) {
+    final static va b() {
         va var1 = new va();
         var1.field_k = true;
         var1.field_h = 2;

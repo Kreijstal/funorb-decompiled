@@ -71,7 +71,6 @@ final class vh {
             int var5 = 0;
             int var6 = 0;
             int var7 = 0;
-            Object var8 = null;
             String var9 = null;
             int stackIn_3_0 = 0;
             int stackIn_9_0 = 0;
@@ -136,8 +135,10 @@ final class vh {
                     case 4: {
                         try {
                             var9 = "tuhstatbut";
-                            var3 = (String) sh.a("getcookies", param1, (byte) 78);
-                            var4 = qj.a(';', var3, 10287);
+                            int discarded$4 = 78;
+                            var3 = (String) sh.a("getcookies", param1);
+                            int discarded$5 = 10287;
+                            var4 = qj.a(';', var3);
                             var5 = 0;
                             statePc = 5;
                             continue stateLoop;
@@ -218,26 +219,10 @@ final class vh {
                     }
                     case 11: {
                         try {
-                            if (param0) {
-                                statePc = 15;
-                            } else {
-                                statePc = 12;
-                            }
+                            statePc = 15;
                             continue stateLoop;
                         } catch (Throwable stateCaught_11) {
                             caughtException = stateCaught_11;
-                            statePc = 14;
-                            continue stateLoop;
-                        }
-                    }
-                    case 12: {
-                        try {
-                            var8 = null;
-                            short[] discarded$2 = vh.a((byte) 94, (short[]) null, -37, (ha) null);
-                            statePc = 15;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_12) {
-                            caughtException = stateCaught_12;
                             statePc = 14;
                             continue stateLoop;
                         }
@@ -297,7 +282,7 @@ final class vh {
                     case 19: {
                         var2 = (RuntimeException) (Object) caughtException;
                         stackOut_19_0 = (RuntimeException) var2;
-                        stackOut_19_1 = new StringBuilder().append("vh.D(").append(param0).append(44);
+                        stackOut_19_1 = new StringBuilder().append("vh.D(").append(1).append(44);
                         stackIn_21_0 = stackOut_19_0;
                         stackIn_21_1 = stackOut_19_1;
                         stackIn_20_0 = stackOut_19_0;
@@ -526,7 +511,7 @@ final class vh {
                 break L1;
               }
             }
-            var4_int = param3.e(param2, 8);
+            var4_int = param3.e(16, 8);
             if (var4_int != 0) {
               L2: {
                 L3: {
@@ -607,7 +592,7 @@ final class vh {
           }
           L8: {
             stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(44).append(param2).append(44);
+            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(44).append(16).append(44);
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -639,7 +624,7 @@ final class vh {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_h = null;
     }
 

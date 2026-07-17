@@ -23,7 +23,7 @@ final class tg {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_d = null;
         field_a = null;

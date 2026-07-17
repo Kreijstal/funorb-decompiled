@@ -29,7 +29,7 @@ final class uj implements Runnable {
     private static int field_h;
     boolean field_g;
 
-    private final mi a(int param0, int param1, int param2, Object param3, int param4) {
+    private final mi a(int param0, int param1, int param2, Object param3) {
         mi var6 = null;
         Object var7 = null;
         Throwable var8 = null;
@@ -60,16 +60,18 @@ final class uj implements Runnable {
         return var6;
     }
 
-    private final mi a(int param0, byte param1, String param2, boolean param3) {
-        int var5 = -33 % ((param1 - -33) / 34);
-        return this.a(1, 0, param0, (Object) (Object) param2, -27024);
+    private final mi a(int param0, byte param1, String param2) {
+        int var5 = -1;
+        int discarded$0 = -27024;
+        return this.a(1, 0, param0, (Object) (Object) param2);
     }
 
     final mi a(byte param0, String param1, Class param2) {
         if (param0 >= -121) {
             return null;
         }
-        return this.a(9, 0, 0, (Object) (Object) new Object[2], -27024);
+        int discarded$0 = -27024;
+        return this.a(9, 0, 0, (Object) (Object) new Object[2]);
     }
 
     final boolean a(byte param0) {
@@ -90,21 +92,24 @@ final class uj implements Runnable {
             Object var4 = null;
             mi discarded$0 = ((uj) this).a((java.net.URL) null, 122);
         }
-        return this.a(7, 0, 0, (Object) (Object) param1, -27024);
+        int discarded$1 = -27024;
+        return this.a(7, 0, 0, (Object) (Object) param1);
     }
 
     final mi a(java.net.URL param0, int param1) {
         if (param1 > -122) {
             field_f = 125L;
         }
-        return this.a(4, 0, 0, (Object) (Object) param0, -27024);
+        int discarded$0 = -27024;
+        return this.a(4, 0, 0, (Object) (Object) param0);
     }
 
     final mi a(Runnable param0, boolean param1, int param2) {
         if (!param1) {
             ((uj) this).field_k = null;
         }
-        return this.a(2, 0, param2, (Object) (Object) param0, -27024);
+        int discarded$0 = -27024;
+        return this.a(2, 0, param2, (Object) (Object) param0);
     }
 
     public final void run() {
@@ -248,7 +253,7 @@ final class uj implements Runnable {
                                                 ((uj) this).field_l.a(65535 & var8_ref.field_b, var8_ref.field_b >> 16, -16, var8_ref.field_a >>> 16, 65535 & var8_ref.field_a, var13);
                                                 break L8;
                                               } else {
-                                                Object discarded$6 = Class.forName("hg").getMethod("enter", new Class[5]).invoke(((uj) this).field_v, new Object[5]);
+                                                Object discarded$7 = Class.forName("hg").getMethod("enter", new Class[5]).invoke(((uj) this).field_v, new Object[5]);
                                                 break L8;
                                               }
                                             } else {
@@ -270,7 +275,7 @@ final class uj implements Runnable {
                                                             ((uj) this).field_b.a(var3_int, -86, var4);
                                                             break L8;
                                                           } else {
-                                                            Object discarded$7 = Class.forName("jg").getDeclaredMethod("movemouse", new Class[2]).invoke(((uj) this).field_u, new Object[2]);
+                                                            Object discarded$8 = Class.forName("jg").getDeclaredMethod("movemouse", new Class[2]).invoke(((uj) this).field_u, new Object[2]);
                                                             break L8;
                                                           }
                                                         } else {
@@ -299,7 +304,7 @@ final class uj implements Runnable {
                                                           var3_int = stackIn_68_0;
                                                           var10 = (java.awt.Component) var8_ref.field_c;
                                                           if (!((uj) this).field_q) {
-                                                            Object discarded$8 = Class.forName("jg").getDeclaredMethod("showcursor", new Class[2]).invoke(((uj) this).field_u, new Object[2]);
+                                                            Object discarded$9 = Class.forName("jg").getDeclaredMethod("showcursor", new Class[2]).invoke(((uj) this).field_u, new Object[2]);
                                                             break L8;
                                                           } else {
                                                             ((uj) this).field_b.a(var10, var3_int != 0, 0);
@@ -314,7 +319,7 @@ final class uj implements Runnable {
                                                       } else {
                                                         if (var2_int == 17) {
                                                           var12 = (Object[]) var8_ref.field_c;
-                                                          Object discarded$9 = Class.forName("jg").getDeclaredMethod("setcustomcursor", new Class[5]).invoke(((uj) this).field_u, new Object[5]);
+                                                          Object discarded$10 = Class.forName("jg").getDeclaredMethod("setcustomcursor", new Class[5]).invoke(((uj) this).field_u, new Object[5]);
                                                           break L8;
                                                         } else {
                                                           break L14;
@@ -341,7 +346,7 @@ final class uj implements Runnable {
                                                             var5 = 0;
                                                             L17: while (true) {
                                                               if (var5 >= var11.length()) {
-                                                                Process discarded$10 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var11 + "\"");
+                                                                Process discarded$11 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var11 + "\"");
                                                                 var8_ref.field_g = null;
                                                                 break L15;
                                                               } else {
@@ -378,7 +383,7 @@ final class uj implements Runnable {
                                                   ((uj) this).field_l.a(false, (java.awt.Frame) var8_ref.field_c);
                                                   break L8;
                                                 } else {
-                                                  Object discarded$11 = Class.forName("hg").getMethod("exit", new Class[0]).invoke(((uj) this).field_v, new Object[0]);
+                                                  Object discarded$12 = Class.forName("hg").getMethod("exit", new Class[0]).invoke(((uj) this).field_v, new Object[0]);
                                                   break L8;
                                                 }
                                               }
@@ -431,7 +436,8 @@ final class uj implements Runnable {
                         } else {
                           try {
                             L18: {
-                              var8_ref.field_g = (Object) (Object) pg.a(var8_ref.field_a, (String) var8_ref.field_c, -111).a((byte) 112);
+                              int discarded$13 = -111;
+                              var8_ref.field_g = (Object) (Object) pg.a(var8_ref.field_a, (String) var8_ref.field_c).a((byte) 112);
                               break L18;
                             }
                           } catch (java.lang.Exception decompiledCaughtParameter2) {
@@ -477,14 +483,16 @@ final class uj implements Runnable {
         if (param1 <= 40) {
             return null;
         }
-        return this.a(8, 0, 0, (Object) (Object) new Object[3], -27024);
+        int discarded$0 = -27024;
+        return this.a(8, 0, 0, (Object) (Object) new Object[3]);
     }
 
     final mi a(int param0, int param1, int param2, int param3, int param4) {
         if (param4 != -2) {
             field_h = 19;
         }
-        return this.a(6, param3 + (param2 << 16), (param0 << 16) - -param1, (Object) null, -27024);
+        int discarded$0 = -27024;
+        return this.a(6, param3 + (param2 << 16), (param0 << 16) - -param1, (Object) null);
     }
 
     private final static nd a(String param0, String param1, int param2, byte param3) {
@@ -698,14 +706,16 @@ final class uj implements Runnable {
         if (param2 != 431890200) {
             return null;
         }
-        return this.a(param0, (byte) 118, param1, false);
+        int discarded$0 = 0;
+        return this.a(param0, (byte) 118, param1);
     }
 
     final mi a(int param0) {
         if (param0 != 5) {
             ((uj) this).field_q = true;
         }
-        return this.a(5, 0, 0, (Object) null, -27024);
+        int discarded$0 = -27024;
+        return this.a(5, 0, 0, (Object) null);
     }
 
     uj(int param0, String param1, int param2, boolean param3) throws Exception {

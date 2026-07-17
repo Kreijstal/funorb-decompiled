@@ -21,7 +21,7 @@ final class rn extends ck {
     static int[] field_o;
     static String field_z;
 
-    final static String a(String param0, int param1, String param2, boolean param3) {
+    final static String a(String param0, int param1, String param2) {
         RuntimeException var4 = null;
         kj var5 = null;
         int var6 = 0;
@@ -75,7 +75,8 @@ final class rn extends ck {
               return stackIn_3_0;
             } else {
               if (2 == qc.field_P) {
-                var7 = da.a(param0, (byte) -41);
+                int discarded$2 = -41;
+                var7 = da.a(param0);
                 if (var7 == null) {
                   stackOut_9_0 = db.a(ui.field_W, -42, new String[1]);
                   stackIn_10_0 = stackOut_9_0;
@@ -182,7 +183,7 @@ final class rn extends ck {
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         if (rb.field_h == null) {
             return false;
         }

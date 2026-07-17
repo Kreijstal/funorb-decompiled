@@ -11,15 +11,12 @@ final class ok extends pd {
         int var7_int = ql.field_k.field_h;
         ql.field_k.a(1736565456, param4);
         ql.field_k.a(param5, false);
-        if (param2 <= 70) {
-            return;
-        }
         try {
             ql.field_k.i(param0, 0);
             ql.field_k.i(param3 ? 1 : 0, 0);
             ql.field_k.d(-var7_int + ql.field_k.field_h, (byte) 35);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "ok.R(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "ok.R(" + param0 + 44 + param1 + 44 + 87 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
         }
     }
 

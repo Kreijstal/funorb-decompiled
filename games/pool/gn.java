@@ -9,7 +9,7 @@ final class gn {
     static int field_c;
     static eg field_e;
 
-    final static dd[] a(dd[] param0, byte param1) {
+    final static dd[] a(dd[] param0) {
         RuntimeException var2 = null;
         dd[] stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -72,7 +72,7 @@ final class gn {
         return stackIn_1_0;
     }
 
-    final static void a(int param0, int param1, boolean param2) {
+    final static void a(int param0, int param1) {
         if (wg.field_Nb != null) {
           if (param0 > wg.field_Nb.length) {
             wg.field_Nb = new int[param0 * 2];
@@ -216,7 +216,7 @@ final class gn {
         }
     }
 
-    final static eg a(eg param0, int param1) {
+    final static eg a(eg param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -244,7 +244,8 @@ final class gn {
             var2_int = 0;
             L1: while (true) {
               if (param0.field_q.length <= var2_int) {
-                jf.a(param0, (byte) 38);
+                int discarded$1 = 38;
+                jf.a(param0);
                 param0.a();
                 stackOut_5_0 = (eg) param0;
                 stackIn_6_0 = stackOut_5_0;
@@ -289,7 +290,7 @@ final class gn {
         return stackIn_6_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_a = null;
     }

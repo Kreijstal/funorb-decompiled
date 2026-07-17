@@ -10,49 +10,30 @@ abstract class cb {
     abstract int a(int param0);
 
     final static boolean a(int param0, int param1, int param2, int param3) {
-        if (param0 == -13079) {
-          if (!wg.field_f) {
-            if (ac.field_e) {
-              return vl.a((byte) 103, param3, param2);
+        if (!wg.field_f) {
+          if (ac.field_e) {
+            return vl.a((byte) 103, param3, param2);
+          } else {
+            int discarded$12 = 1;
+            if (bi.a(param3, param2)) {
+              return true;
             } else {
-              if (bi.a(param3, param2, true)) {
-                return true;
+              if (dh.field_n) {
+                return false;
               } else {
-                if (dh.field_n) {
-                  return false;
-                } else {
-                  return fn.a(param1, param2, (byte) -97);
-                }
+                int discarded$13 = -97;
+                return fn.a(param1, param2);
               }
             }
-          } else {
-            return fh.field_c.a(um.field_Gb, nm.field_d, -99);
           }
         } else {
-          field_c = null;
-          if (!wg.field_f) {
-            if (ac.field_e) {
-              return vl.a((byte) 103, param3, param2);
-            } else {
-              if (bi.a(param3, param2, true)) {
-                return true;
-              } else {
-                if (dh.field_n) {
-                  return false;
-                } else {
-                  return fn.a(param1, param2, (byte) -97);
-                }
-              }
-            }
-          } else {
-            return fh.field_c.a(um.field_Gb, nm.field_d, -99);
-          }
+          return fh.field_c.a(um.field_Gb, nm.field_d, -99);
         }
     }
 
     abstract void b(int param0, java.awt.Component param1);
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_c = null;
         field_b = null;

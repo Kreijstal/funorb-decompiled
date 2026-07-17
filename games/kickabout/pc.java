@@ -13,105 +13,199 @@ final class pc {
         int var3 = 0;
         var3 = Kickabout.field_G;
         if (param0 != 0) {
-          if (0 <= param0) {
-            if (param0 >= 32768) {
-              if (131072 <= param0) {
-                if (param0 >= 33554432) {
-                  if (param0 >= 536870912) {
-                    var2 = 7;
-                    param0 = param0 >> (var2 << 1);
-                    return ko.field_f[param0 + -32768] << var2;
-                  } else {
-                    if (134217728 > param0) {
-                      var2 = 5;
+          if (param1 != -524289) {
+            field_a = null;
+            if (0 <= param0) {
+              if (param0 >= 32768) {
+                if (131072 <= param0) {
+                  if (param0 >= 33554432) {
+                    if (param0 >= 536870912) {
+                      var2 = 7;
                       param0 = param0 >> (var2 << 1);
                       return ko.field_f[param0 + -32768] << var2;
                     } else {
-                      var2 = 6;
-                      param0 = param0 >> (var2 << 1);
-                      return ko.field_f[param0 + -32768] << var2;
+                      if (134217728 > param0) {
+                        var2 = 5;
+                        param0 = param0 >> (var2 << 1);
+                        return ko.field_f[param0 + -32768] << var2;
+                      } else {
+                        var2 = 6;
+                        param0 = param0 >> (var2 << 1);
+                        return ko.field_f[param0 + -32768] << var2;
+                      }
+                    }
+                  } else {
+                    if (param0 < 2097152) {
+                      if (param0 >= 524288) {
+                        var2 = 2;
+                        param0 = param0 >> (var2 << 1);
+                        return ko.field_f[param0 + -32768] << var2;
+                      } else {
+                        var2 = 1;
+                        param0 = param0 >> (var2 << 1);
+                        return ko.field_f[param0 + -32768] << var2;
+                      }
+                    } else {
+                      if (8388608 <= param0) {
+                        var2 = 4;
+                        param0 = param0 >> (var2 << 1);
+                        return ko.field_f[param0 + -32768] << var2;
+                      } else {
+                        var2 = 3;
+                        param0 = param0 >> (var2 << 1);
+                        return ko.field_f[param0 + -32768] << var2;
+                      }
                     }
                   }
                 } else {
-                  if (param0 < 2097152) {
-                    if (param0 >= 524288) {
-                      var2 = 2;
-                      param0 = param0 >> (var2 << 1);
-                      return ko.field_f[param0 + -32768] << var2;
+                  return ko.field_f[-32768 + param0];
+                }
+              } else {
+                if (param0 >= 128) {
+                  if (param0 < 2048) {
+                    if (param0 >= 512) {
+                      var2 = 3;
+                      param0 = param0 << (var2 << 1);
+                      return ko.field_f[param0 - 32768] >> var2;
                     } else {
-                      var2 = 1;
-                      param0 = param0 >> (var2 << 1);
-                      return ko.field_f[param0 + -32768] << var2;
+                      var2 = 4;
+                      param0 = param0 << (var2 << 1);
+                      return ko.field_f[param0 - 32768] >> var2;
                     }
                   } else {
-                    if (8388608 <= param0) {
-                      var2 = 4;
-                      param0 = param0 >> (var2 << 1);
-                      return ko.field_f[param0 + -32768] << var2;
+                    if (param0 >= 8192) {
+                      var2 = 1;
+                      param0 = param0 << (var2 << 1);
+                      return ko.field_f[param0 - 32768] >> var2;
                     } else {
-                      var2 = 3;
-                      param0 = param0 >> (var2 << 1);
-                      return ko.field_f[param0 + -32768] << var2;
+                      var2 = 2;
+                      param0 = param0 << (var2 << 1);
+                      return ko.field_f[param0 - 32768] >> var2;
+                    }
+                  }
+                } else {
+                  if (param0 < 8) {
+                    if (param0 >= 2) {
+                      var2 = 7;
+                      param0 = param0 << (var2 << 1);
+                      return ko.field_f[param0 - 32768] >> var2;
+                    } else {
+                      return 256;
+                    }
+                  } else {
+                    if (32 > param0) {
+                      var2 = 6;
+                      param0 = param0 << (var2 << 1);
+                      return ko.field_f[param0 - 32768] >> var2;
+                    } else {
+                      var2 = 5;
+                      param0 = param0 << (var2 << 1);
+                      return ko.field_f[param0 - 32768] >> var2;
                     }
                   }
                 }
-              } else {
-                return ko.field_f[-32768 + param0];
               }
             } else {
-              if (param0 >= 128) {
-                if (param0 < 2048) {
-                  if (param0 >= 512) {
-                    var2 = 3;
-                    param0 = param0 << (var2 << 1);
-                    return ko.field_f[param0 - 32768] >> var2;
-                  } else {
-                    var2 = 4;
-                    param0 = param0 << (var2 << 1);
-                    return ko.field_f[param0 - 32768] >> var2;
-                  }
-                } else {
-                  if (param0 >= 8192) {
-                    var2 = 1;
-                    param0 = param0 << (var2 << 1);
-                    return ko.field_f[param0 - 32768] >> var2;
-                  } else {
-                    var2 = 2;
-                    param0 = param0 << (var2 << 1);
-                    return ko.field_f[param0 - 32768] >> var2;
-                  }
-                }
-              } else {
-                if (param0 < 8) {
-                  if (param0 >= 2) {
-                    var2 = 7;
-                    param0 = param0 << (var2 << 1);
-                    return ko.field_f[param0 - 32768] >> var2;
-                  } else {
-                    return 256;
-                  }
-                } else {
-                  if (32 > param0) {
-                    var2 = 6;
-                    param0 = param0 << (var2 << 1);
-                    return ko.field_f[param0 - 32768] >> var2;
-                  } else {
-                    var2 = 5;
-                    param0 = param0 << (var2 << 1);
-                    return ko.field_f[param0 - 32768] >> var2;
-                  }
-                }
-              }
+              throw new IllegalArgumentException("");
             }
           } else {
-            throw new IllegalArgumentException("");
+            if (0 <= param0) {
+              if (param0 >= 32768) {
+                if (131072 <= param0) {
+                  if (param0 >= 33554432) {
+                    if (param0 >= 536870912) {
+                      var2 = 7;
+                      param0 = param0 >> (var2 << 1);
+                      return ko.field_f[param0 + -32768] << var2;
+                    } else {
+                      if (134217728 > param0) {
+                        var2 = 5;
+                        param0 = param0 >> (var2 << 1);
+                        return ko.field_f[param0 + -32768] << var2;
+                      } else {
+                        var2 = 6;
+                        param0 = param0 >> (var2 << 1);
+                        return ko.field_f[param0 + -32768] << var2;
+                      }
+                    }
+                  } else {
+                    if (param0 < 2097152) {
+                      if (param0 >= 524288) {
+                        var2 = 2;
+                        param0 = param0 >> (var2 << 1);
+                        return ko.field_f[param0 + -32768] << var2;
+                      } else {
+                        var2 = 1;
+                        param0 = param0 >> (var2 << 1);
+                        return ko.field_f[param0 + -32768] << var2;
+                      }
+                    } else {
+                      if (8388608 <= param0) {
+                        var2 = 4;
+                        param0 = param0 >> (var2 << 1);
+                        return ko.field_f[param0 + -32768] << var2;
+                      } else {
+                        var2 = 3;
+                        param0 = param0 >> (var2 << 1);
+                        return ko.field_f[param0 + -32768] << var2;
+                      }
+                    }
+                  }
+                } else {
+                  return ko.field_f[-32768 + param0];
+                }
+              } else {
+                L0: {
+                  if (param0 >= 128) {
+                    if (param0 < 2048) {
+                      if (param0 >= 512) {
+                        var2 = 3;
+                        break L0;
+                      } else {
+                        var2 = 4;
+                        break L0;
+                      }
+                    } else {
+                      if (param0 >= 8192) {
+                        var2 = 1;
+                        break L0;
+                      } else {
+                        var2 = 2;
+                        break L0;
+                      }
+                    }
+                  } else {
+                    if (param0 < 8) {
+                      if (param0 >= 2) {
+                        var2 = 7;
+                        break L0;
+                      } else {
+                        return 256;
+                      }
+                    } else {
+                      if (32 > param0) {
+                        var2 = 6;
+                        break L0;
+                      } else {
+                        var2 = 5;
+                        break L0;
+                      }
+                    }
+                  }
+                }
+                param0 = param0 << (var2 << 1);
+                return ko.field_f[param0 - 32768] >> var2;
+              }
+            } else {
+              throw new IllegalArgumentException("");
+            }
           }
         } else {
           return 0;
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
         field_d = null;
         field_a = null;

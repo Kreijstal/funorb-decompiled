@@ -7,29 +7,16 @@ final class df {
     static wh field_b;
 
     final static void a(int param0, int param1, int param2) {
-        nb.field_i[param0].c(param1 ^ -5495, param2);
+        nb.field_i[param0].c(-1, param2);
         nb.field_i[param0].b((byte) -81);
         mc.field_w = param2;
-        if (param1 != 5494) {
-          df.a((byte) -76);
-          q.field_c = param0;
-          oj.field_J = param0;
-          return;
-        } else {
-          q.field_c = param0;
-          oj.field_J = param0;
-          return;
-        }
+        q.field_c = param0;
+        oj.field_J = param0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
-        if (param0 < 115) {
-            field_a = null;
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 

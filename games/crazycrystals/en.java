@@ -50,7 +50,7 @@ abstract class en extends ab {
         }
     }
 
-    final static si a(String[] args, int param1) {
+    final static si a(String[] args) {
         si var2 = null;
         RuntimeException var2_ref = null;
         si stackIn_3_0 = null;
@@ -112,7 +112,7 @@ abstract class en extends ab {
         return stackIn_3_0;
     }
 
-    public static void i(int param0) {
+    public static void i() {
         field_K = null;
         field_F = null;
         field_M = null;
@@ -282,9 +282,6 @@ abstract class en extends ab {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        if (param0 != 8) {
-            ((en) this).j(-111);
-        }
         if (0 >= ((en) this).field_P) {
         } else {
             var2 = ((en) this).field_H;
@@ -293,7 +290,7 @@ abstract class en extends ab {
             ((en) this).field_J = ((en) this).field_J + 1;
             if (fieldTemp$0 >= ((en) this).field_P) {
                 ((en) this).field_P = 0;
-                ((en) this).k(param0 ^ 34);
+                ((en) this).k(42);
             } else {
                 var4 = (((en) this).field_P * 2 + -((en) this).field_J) * ((en) this).field_J;
                 var5 = ((en) this).field_P * ((en) this).field_P;

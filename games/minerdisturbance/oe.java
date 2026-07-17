@@ -12,13 +12,13 @@ abstract class oe {
 
     abstract void a(java.awt.Component param0, int param1);
 
-    final static void a(boolean param0) {
+    final static void a() {
         ef.field_a = 0;
     }
 
     abstract void a(int param0, java.awt.Component param1);
 
-    public static void b(byte param0) {
+    public static void b() {
         field_e = null;
         field_c = null;
         field_g = null;

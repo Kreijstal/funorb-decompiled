@@ -116,7 +116,9 @@ final class dn extends rqa {
                               }
                             }
                           }
-                          if (!la.a(param0[var8], param3[var8], param2, (byte) -86)) {
+                          int discarded$6 = -86;
+                          int discarded$7 = 1;
+                          if (!la.a(param0[var8], param3[var8])) {
                             break L4;
                           } else {
                             return true;
@@ -168,7 +170,7 @@ final class dn extends rqa {
           }
           L8: {
             stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
-            stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(44).append(param1).append(44).append(1).append(44);
             stackIn_30_0 = stackOut_28_0;
             stackIn_30_1 = stackOut_28_1;
             stackIn_29_0 = stackOut_28_0;
@@ -264,7 +266,7 @@ final class dn extends rqa {
         return stackIn_4_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = 1;
         field_r = null;
         field_o = null;

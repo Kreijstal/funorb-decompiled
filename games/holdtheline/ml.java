@@ -5,12 +5,9 @@ final class ml {
     static gn field_a;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
-        if (param0 != -21989) {
-            field_a = null;
-        }
     }
 
     final static void c(int param0) {
@@ -19,7 +16,7 @@ final class ml {
         }
     }
 
-    final static int b(int param0) {
+    final static int b() {
         return lb.field_v;
     }
 

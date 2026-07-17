@@ -203,7 +203,7 @@ final class tk {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_k = null;
         field_f = null;
         int var1 = -92;

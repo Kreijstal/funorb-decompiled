@@ -20,7 +20,7 @@ abstract class dm {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = 100;
         field_c = null;
         field_a = null;
@@ -96,8 +96,8 @@ abstract class dm {
         String stackOut_12_2 = null;
         try {
           L0: {
-            var5_int = param1.a(param4, param0 ^ param0);
-            var6 = param1.a(param2, param0 + 7, var5_int);
+            var5_int = param1.a(param4, 0);
+            var6 = param1.a(param2, 7, var5_int);
             stackOut_0_0 = ig.a(var6, param3, -122, var5_int, param1);
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -107,7 +107,7 @@ abstract class dm {
           L1: {
             var5 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var5;
-            stackOut_2_1 = new StringBuilder().append("dm.G(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("dm.G(").append(0).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -212,7 +212,7 @@ abstract class dm {
 
     abstract void a(p param0, byte param1);
 
-    final static void a(lh param0, um param1, int param2) {
+    final static void a(lh param0, um param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         j var4 = null;

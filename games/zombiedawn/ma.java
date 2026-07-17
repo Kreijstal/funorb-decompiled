@@ -279,7 +279,7 @@ final class ma extends le {
         return stackIn_23_0 != 0;
     }
 
-    final static void a(oe param0, int param1, String param2, rb param3, boolean param4) {
+    final static void a(oe param0, int param1, String param2, rb param3) {
         RuntimeException var5 = null;
         int var5_int = 0;
         int var6 = 0;
@@ -462,7 +462,7 @@ final class ma extends le {
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         int var1 = 0;
         field_n = null;
         field_i = null;
@@ -632,9 +632,9 @@ final class ma extends le {
                                             var13_int = var15_int;
                                             break L8;
                                           } else {
-                                            int incrementValue$9 = var12;
+                                            int incrementValue$11 = var12;
                                             var12++;
-                                            var13_int = incrementValue$9;
+                                            var13_int = incrementValue$11;
                                             break L8;
                                           }
                                         }
@@ -819,7 +819,8 @@ final class ma extends le {
                                                                                                         var29 += 2;
                                                                                                         continue L32;
                                                                                                       } else {
-                                                                                                        var34 = rm.a(-var27 + var30, var32, false);
+                                                                                                        int discarded$12 = 0;
+                                                                                                        var34 = rm.a(-var27 + var30, var32);
                                                                                                         ((ma) this).field_m[var33] = (byte)(var34 * ((ma) this).field_m[var33] - -32 >> 6);
                                                                                                         var32 = var32 + (var31 + -var28);
                                                                                                         var33++;
@@ -902,7 +903,8 @@ final class ma extends le {
                                                                                                         continue L38;
                                                                                                       } else {
                                                                                                         L43: {
-                                                                                                          var34 = rm.a(-var27 + var30, var32, false);
+                                                                                                          int discarded$13 = 0;
+                                                                                                          var34 = rm.a(-var27 + var30, var32);
                                                                                                           var35 = var34 + (((ma) this).field_h[var37] & 255);
                                                                                                           if (0 <= var35) {
                                                                                                             break L43;
@@ -1138,9 +1140,9 @@ final class ma extends le {
                                                                           } else {
                                                                             L66: {
                                                                               if (var68.length > var21) {
-                                                                                int incrementValue$10 = var21;
+                                                                                int incrementValue$14 = var21;
                                                                                 var21++;
-                                                                                var20 = var18[incrementValue$10];
+                                                                                var20 = var18[incrementValue$14];
                                                                                 break L66;
                                                                               } else {
                                                                                 var20 = -1;
@@ -1172,9 +1174,9 @@ final class ma extends le {
                                                                           } else {
                                                                             var25 = (Object) (Object) var13[var67[var21]];
                                                                             if (var21 < var71.length) {
-                                                                              int incrementValue$11 = var21;
+                                                                              int incrementValue$15 = var21;
                                                                               var21++;
-                                                                              var20 = var10[incrementValue$11];
+                                                                              var20 = var10[incrementValue$15];
                                                                               break L68;
                                                                             } else {
                                                                               var20 = -1;
@@ -1200,13 +1202,13 @@ final class ma extends le {
                                                                       if (var20 != 0) {
                                                                         break L70;
                                                                       } else {
-                                                                        int incrementValue$12 = var8;
+                                                                        int incrementValue$16 = var8;
                                                                         var8++;
-                                                                        var24 = 16 + var38.field_h[incrementValue$12] << 2;
+                                                                        var24 = 16 + var38.field_h[incrementValue$16] << 2;
                                                                         if (var21 < var70.length) {
-                                                                          int incrementValue$13 = var21;
+                                                                          int incrementValue$17 = var21;
                                                                           var21++;
-                                                                          var20 = var7[incrementValue$13];
+                                                                          var20 = var7[incrementValue$17];
                                                                           break L70;
                                                                         } else {
                                                                           var20 = -1;
@@ -1237,15 +1239,15 @@ final class ma extends le {
                                                                         var20 = -1;
                                                                         break L73;
                                                                       } else {
-                                                                        int incrementValue$14 = var21;
+                                                                        int incrementValue$18 = var21;
                                                                         var21++;
-                                                                        var20 = var4[incrementValue$14];
+                                                                        var20 = var4[incrementValue$18];
                                                                         break L73;
                                                                       }
                                                                     }
-                                                                    int incrementValue$15 = var5;
+                                                                    int incrementValue$19 = var5;
                                                                     var5++;
-                                                                    var23 = var38.field_h[incrementValue$15] + -1;
+                                                                    var23 = var38.field_h[incrementValue$19] + -1;
                                                                     break L72;
                                                                   }
                                                                 }
@@ -1268,9 +1270,9 @@ final class ma extends le {
                                                                 var20 = -1;
                                                                 break L75;
                                                               } else {
-                                                                int incrementValue$16 = var21;
+                                                                int incrementValue$20 = var21;
                                                                 var21++;
-                                                                var20 = var18[incrementValue$16];
+                                                                var20 = var18[incrementValue$20];
                                                                 break L75;
                                                               }
                                                             }
@@ -1312,9 +1314,9 @@ final class ma extends le {
                                     }
                                   } else {
                                     L76: {
-                                      nf dupTemp$17 = new nf();
-                                      var13[var14] = dupTemp$17;
-                                      var40 = dupTemp$17;
+                                      nf dupTemp$21 = new nf();
+                                      var13[var14] = dupTemp$21;
+                                      var40 = dupTemp$21;
                                       var15 = var40;
                                       var16_int = var38.d((byte) -125);
                                       if (var16_int <= 0) {
@@ -1373,8 +1375,8 @@ final class ma extends le {
         }
     }
 
-    final static int d(byte param0) {
-        int var1 = 45 % ((-7 - param0) / 35);
+    final static int d() {
+        int var1 = 1;
         return eb.field_a - eb.field_c;
     }
 

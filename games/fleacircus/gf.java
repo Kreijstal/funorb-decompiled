@@ -59,7 +59,7 @@ final class gf {
                 }
               }
             }
-            var2 = -89 % ((-38 - param0) / 62);
+            var2 = 0;
             return new byte[param1];
           } else {
             if (0 >= field_c) {
@@ -82,7 +82,7 @@ final class gf {
                 var2 = 0;
                 L4: while (true) {
                   if (a.field_g.length <= var2) {
-                    var2 = -89 % ((-38 - param0) / 62);
+                    var2 = 0;
                     return new byte[param1];
                   } else {
                     if (param1 != a.field_g[var2]) {
@@ -103,7 +103,7 @@ final class gf {
                   }
                 }
               } else {
-                var2 = -89 % ((-38 - param0) / 62);
+                var2 = 0;
                 return new byte[param1];
               }
             } else {
@@ -144,12 +144,12 @@ final class gf {
                             }
                           }
                         } else {
-                          var2 = -89 % ((-38 - param0) / 62);
+                          var2 = 0;
                           return new byte[param1];
                         }
                       }
                     } else {
-                      var2 = -89 % ((-38 - param0) / 62);
+                      var2 = 0;
                       return new byte[param1];
                     }
                   } else {
@@ -180,12 +180,12 @@ final class gf {
                           }
                         }
                       } else {
-                        var2 = -89 % ((-38 - param0) / 62);
+                        var2 = 0;
                         return new byte[param1];
                       }
                     }
                   } else {
-                    var2 = -89 % ((-38 - param0) / 62);
+                    var2 = 0;
                     return new byte[param1];
                   }
                 }
@@ -220,7 +220,7 @@ final class gf {
                       var2++;
                       var2++;
                       var2++;
-                      var2 = -89 % ((-38 - param0) / 62);
+                      var2 = 0;
                       return new byte[param1];
                     }
                   } else {
@@ -228,15 +228,15 @@ final class gf {
                     var2++;
                     var2++;
                     var2++;
-                    var2 = -89 % ((-38 - param0) / 62);
+                    var2 = 0;
                     return new byte[param1];
                   }
                 } else {
-                  var2 = -89 % ((-38 - param0) / 62);
+                  var2 = 0;
                   return new byte[param1];
                 }
               } else {
-                var2 = -89 % ((-38 - param0) / 62);
+                var2 = 0;
                 return new byte[param1];
               }
             }
@@ -250,7 +250,7 @@ final class gf {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         vh var1 = (vh) (Object) al.field_e.c((byte) 47);
         if (!(var1 != null)) {
             k.c(-28354);

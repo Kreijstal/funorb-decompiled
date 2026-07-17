@@ -6,11 +6,12 @@ final class fea extends rqa {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0) {
+    final static void a() {
         uga.field_d = false;
         if (null == fkb.field_m) {
           if (ow.field_b != 0) {
-            dr.a(26718);
+            int discarded$4 = 26718;
+            dr.a();
             ejb.field_p = 0;
             return;
           } else {
@@ -23,7 +24,8 @@ final class fea extends rqa {
             ejb.field_p = 0;
             return;
           } else {
-            dr.a(26718);
+            int discarded$5 = 26718;
+            dr.a();
             ejb.field_p = 0;
             return;
           }

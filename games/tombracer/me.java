@@ -87,7 +87,7 @@ abstract class me extends vg {
         var8 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
-            var4_int = param2.b((byte) 44, param1);
+            var4_int = param2.b((byte) 44, 16);
             if (var4_int != 0) {
               L1: {
                 L2: {
@@ -153,7 +153,7 @@ abstract class me extends vg {
           L7: {
             var4 = decompiledCaughtException;
             stackOut_19_0 = (RuntimeException) var4;
-            stackOut_19_1 = new StringBuilder().append("me.N(").append(param0).append(44).append(param1).append(44);
+            stackOut_19_1 = new StringBuilder().append("me.N(").append(param0).append(44).append(16).append(44);
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;

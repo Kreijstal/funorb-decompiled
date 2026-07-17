@@ -23,9 +23,6 @@ final class mf extends tm {
     }
 
     final static int a(int param0, double param1) {
-        if (param0 != 16) {
-            return -57;
-        }
         return ud.a(param1, 16, 1);
     }
 
@@ -60,7 +57,8 @@ final class mf extends tm {
                   break L0;
                 } else {
                   ((mf) this).field_a[var3_int].a(8, 8, 8, 4);
-                  li.a(((mf) this).field_a[var3_int], 0);
+                  int discarded$1 = 0;
+                  li.a(((mf) this).field_a[var3_int]);
                   var3_int++;
                   continue L1;
                 }
@@ -111,17 +109,11 @@ final class mf extends tm {
         }
     }
 
-    public static void i(int param0) {
+    public static void i() {
         field_n = null;
     }
 
-    final static void j(int param0) {
-        if (param0 != 1) {
-            Object var2 = null;
-            mf.a((byte) -32, 29, (nm) null, (nm) null, -126, -60);
-            sa.field_f = new fn(tq.field_m, dg.field_J, qg.field_f, uo.field_Lb, (vh) (Object) e.field_e, ei.field_A);
-            return;
-        }
+    final static void j() {
         sa.field_f = new fn(tq.field_m, dg.field_J, qg.field_f, uo.field_Lb, (vh) (Object) e.field_e, ei.field_A);
     }
 
@@ -136,18 +128,15 @@ final class mf extends tm {
         return 0 == param1 ? me.field_w : vf.field_Q;
     }
 
-    final static void a(byte param0, int param1, nm param2, nm param3, int param4, int param5) {
+    final static void a(byte param0, int param1, nm param2, nm param3) {
         td.field_e = param2;
-        qi.field_e = param1;
-        fj.field_h = param5;
-        if (param0 > -24) {
-            return;
-        }
+        qi.field_e = 2;
+        fj.field_h = 8;
         try {
-            rm.field_b = param4;
+            rm.field_b = 8;
             bk.field_m = param3;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) (Object) runtimeException, "mf.F(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 41);
+            throw wm.a((Throwable) (Object) runtimeException, "mf.F(" + -91 + 44 + 2 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + 8 + 44 + 8 + 41);
         }
     }
 

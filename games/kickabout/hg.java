@@ -18,7 +18,7 @@ final class hg extends i {
         ((hg) this).a(ds.a(((hg) this).field_y, 1), pg.a(false, 10), 1054928844);
     }
 
-    final static void a(int param0, byte param1) {
+    final static void a() {
         RuntimeException var2 = null;
         int var3 = 0;
         hr var4 = null;
@@ -35,13 +35,16 @@ final class hg extends i {
                   if (var5 == null) {
                     break L0;
                   } else {
-                    pf.a(param0, var5, (byte) -114);
+                    int discarded$8 = -114;
+                    pf.a(5, var5);
                     var5 = (dl) (Object) ru.field_M.c(33);
                     continue L2;
                   }
                 }
               } else {
-                rf.a(var4, param0, true);
+                int discarded$9 = 1;
+                int discarded$10 = 5;
+                rf.a(var4);
                 var4 = (hr) (Object) ti.field_c.c(33);
                 continue L1;
               }
@@ -50,7 +53,7 @@ final class hg extends i {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var2, "hg.B(" + param0 + 44 + -122 + 41);
+          throw nb.a((Throwable) (Object) var2, "hg.B(" + 5 + 44 + -122 + 41);
         }
     }
 
@@ -129,21 +132,11 @@ final class hg extends i {
         return stackIn_23_0;
     }
 
-    public static void h(int param0) {
-        if (param0 != 22100) {
-          field_I = null;
-          field_F = null;
-          field_G = null;
-          field_I = null;
-          field_H = null;
-          return;
-        } else {
-          field_F = null;
-          field_G = null;
-          field_I = null;
-          field_H = null;
-          return;
-        }
+    public static void h() {
+        field_F = null;
+        field_G = null;
+        field_I = null;
+        field_H = null;
     }
 
     static {

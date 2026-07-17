@@ -85,7 +85,7 @@ final class ni extends gn {
         return stackIn_3_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_k = null;
         field_l = null;
         field_m = null;
@@ -103,17 +103,20 @@ final class ni extends gn {
           return la.field_a.a(il.field_c, (byte) 127, cc.field_e);
         } else {
           if (!kd.field_s) {
-            if (sq.b(104, param0, param1)) {
+            int discarded$36 = 15;
+            int discarded$37 = 13;
+            int discarded$38 = 104;
+            if (sq.b()) {
               return true;
             } else {
               if (kb.field_C) {
                 return false;
               } else {
-                return hd.a(false, param2, param0);
+                return hd.a(false, 12, 13);
               }
             }
           } else {
-            return ov.a(param1, -14, param0);
+            return ov.a(15, -14, 13);
           }
         }
     }

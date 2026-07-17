@@ -52,7 +52,7 @@ final class ba {
         sc.field_b = param1;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_w = null;
         field_g = null;
         field_e = null;

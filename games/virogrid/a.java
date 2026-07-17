@@ -18,7 +18,7 @@ final class a extends cc {
         this(dj.field_h, param0);
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -26,23 +26,15 @@ final class a extends cc {
             if (de.field_pb != null) {
               return;
             } else {
-              L1: {
-                lc.field_e = new String[12];
-                lc.field_e[2] = sn.field_p;
-                lc.field_e[3] = ql.field_j;
-                lc.field_e[1] = ql.field_j;
-                lc.field_e[7] = pi.field_d;
-                lc.field_e[11] = cm.field_j;
-                lc.field_e[5] = ql.field_j;
-                lc.field_e[8] = uf.field_F;
-                lc.field_e[6] = j.field_a;
-                if (param0 == 69) {
-                  break L1;
-                } else {
-                  field_E = null;
-                  break L1;
-                }
-              }
+              lc.field_e = new String[12];
+              lc.field_e[2] = sn.field_p;
+              lc.field_e[3] = ql.field_j;
+              lc.field_e[1] = ql.field_j;
+              lc.field_e[7] = pi.field_d;
+              lc.field_e[11] = cm.field_j;
+              lc.field_e[5] = ql.field_j;
+              lc.field_e[8] = uf.field_F;
+              lc.field_e[6] = j.field_a;
               lc.field_e[9] = qm.field_Ob;
               de.field_pb = new String[29];
               lc.field_e[4] = ql.field_j;
@@ -82,26 +74,30 @@ final class a extends cc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw kg.a((Throwable) (Object) var1, "a.S(" + param0 + 41);
+          throw kg.a((Throwable) (Object) var1, "a.S(" + 69 + 41);
         }
     }
 
-    public static void c(boolean param0) {
-        field_J = null;
-        field_C = null;
-        field_z = null;
-        field_F = null;
-        field_E = null;
-        field_G = null;
-        field_H = null;
-        if (param0) {
-            return;
-        }
+    public static void c() {
+        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
+          L0: {
+            field_J = null;
+            field_C = null;
+            field_z = null;
+            field_F = null;
+            field_E = null;
+            field_G = null;
+            field_H = null;
             field_A = null;
             field_B = null;
-        } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) (Object) runtimeException, "a.M(" + param0 + 41);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw kg.a((Throwable) (Object) var1, "a.M(" + 0 + 41);
         }
     }
 
@@ -139,7 +135,8 @@ final class a extends cc {
                 break L1;
               }
             }
-            stackOut_3_0 = f.a('*', param0.field_n.length(), (byte) -99);
+            int discarded$2 = -99;
+            stackOut_3_0 = f.a('*', param0.field_n.length());
             stackIn_4_0 = stackOut_3_0;
             break L0;
           }
@@ -367,7 +364,7 @@ final class a extends cc {
         return stackIn_4_0;
     }
 
-    final static void a(String param0, int param1, boolean param2) {
+    final static void a(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_36_0 = null;
@@ -389,7 +386,7 @@ final class a extends cc {
         try {
           L0: {
             L1: {
-              fe.field_Fb = param2;
+              fe.field_Fb = false;
               co.field_d = false;
               if (hf.field_w == null) {
                 break L1;
@@ -426,7 +423,8 @@ final class a extends cc {
                     var3_int = 1;
                     if (10 == param1) {
                       var3_int = 0;
-                      qh.f((byte) 98);
+                      int discarded$1 = 98;
+                      qh.f();
                       break L5;
                     } else {
                       break L5;
@@ -503,7 +501,7 @@ final class a extends cc {
               break L9;
             }
           }
-          throw kg.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + 44 + param1 + 44 + param2 + 41);
+          throw kg.a((Throwable) (Object) stackIn_39_0, stackIn_39_2 + 44 + param1 + 44 + 0 + 41);
         }
     }
 
@@ -585,25 +583,28 @@ final class a extends cc {
         byte[] var2 = null;
         L0: {
           ql.field_m = param1;
-          var2 = jl.a("waitingfor_patches", true);
+          int discarded$111 = 1;
+          var2 = jl.a("waitingfor_patches");
           if (null == var2) {
             break L0;
           } else {
-            String discarded$7 = i.a(-2022, var2);
+            String discarded$112 = i.a(-2022, var2);
             break L0;
           }
         }
         L1: {
-          var2 = jl.a("loading_patches", true);
+          int discarded$113 = 1;
+          var2 = jl.a("loading_patches");
           if (var2 != null) {
-            String discarded$8 = i.a(param0 ^ -2034, var2);
+            String discarded$114 = i.a(-2022, var2);
             break L1;
           } else {
             break L1;
           }
         }
         L2: {
-          var2 = jl.a("TEXT_GAMENAME", true);
+          int discarded$115 = 1;
+          var2 = jl.a("TEXT_GAMENAME");
           if (null == var2) {
             break L2;
           } else {
@@ -612,7 +613,8 @@ final class a extends cc {
           }
         }
         L3: {
-          var2 = jl.a("TEXT_CREATE_ACCOUNT1", true);
+          int discarded$116 = 1;
+          var2 = jl.a("TEXT_CREATE_ACCOUNT1");
           if (var2 == null) {
             break L3;
           } else {
@@ -621,7 +623,8 @@ final class a extends cc {
           }
         }
         L4: {
-          var2 = jl.a("TEXT_CREATE_ACCOUNT2", true);
+          int discarded$117 = 1;
+          var2 = jl.a("TEXT_CREATE_ACCOUNT2");
           if (var2 == null) {
             break L4;
           } else {
@@ -630,25 +633,28 @@ final class a extends cc {
           }
         }
         L5: {
-          var2 = jl.a("TEXT_FULLSCREEN_TOGGLE", true);
+          int discarded$118 = 1;
+          var2 = jl.a("TEXT_FULLSCREEN_TOGGLE");
           if (null == var2) {
             break L5;
           } else {
-            rb.field_d = i.a(param0 + -2042, var2);
+            rb.field_d = i.a(-2022, var2);
             break L5;
           }
         }
         L6: {
-          var2 = jl.a("TEXT_MODE", true);
+          int discarded$119 = 1;
+          var2 = jl.a("TEXT_MODE");
           if (var2 != null) {
-            String discarded$9 = i.a(param0 + -2042, var2);
+            String discarded$120 = i.a(-2022, var2);
             break L6;
           } else {
             break L6;
           }
         }
         L7: {
-          var2 = jl.a("TEXT_DETAIL", true);
+          int discarded$121 = 1;
+          var2 = jl.a("TEXT_DETAIL");
           if (null == var2) {
             break L7;
           } else {
@@ -657,7 +663,8 @@ final class a extends cc {
           }
         }
         L8: {
-          var2 = jl.a("TEXT_OPTIONS", true);
+          int discarded$122 = 1;
+          var2 = jl.a("TEXT_OPTIONS");
           if (var2 != null) {
             pj.field_e = i.a(-2022, var2);
             break L8;
@@ -666,7 +673,8 @@ final class a extends cc {
           }
         }
         L9: {
-          var2 = jl.a("TEXT_RANKINGS_BYWINPERCENTAGE", true);
+          int discarded$123 = 1;
+          var2 = jl.a("TEXT_RANKINGS_BYWINPERCENTAGE");
           if (null == var2) {
             break L9;
           } else {
@@ -675,7 +683,8 @@ final class a extends cc {
           }
         }
         L10: {
-          var2 = jl.a("TEXT_YOURCOLOUR", true);
+          int discarded$124 = 1;
+          var2 = jl.a("TEXT_YOURCOLOUR");
           if (null != var2) {
             rf.field_f = i.a(-2022, var2);
             break L10;
@@ -684,7 +693,8 @@ final class a extends cc {
           }
         }
         L11: {
-          var2 = jl.a("TEXT_OPPONENT", true);
+          int discarded$125 = 1;
+          var2 = jl.a("TEXT_OPPONENT");
           if (var2 == null) {
             break L11;
           } else {
@@ -693,16 +703,18 @@ final class a extends cc {
           }
         }
         L12: {
-          var2 = jl.a("TEXT_PLAYERS", true);
+          int discarded$126 = 1;
+          var2 = jl.a("TEXT_PLAYERS");
           if (var2 == null) {
             break L12;
           } else {
-            lm.field_k = i.a(param0 ^ -2034, var2);
+            lm.field_k = i.a(-2022, var2);
             break L12;
           }
         }
         L13: {
-          var2 = jl.a("TEXT_YOUR_TURN_PLAYING", true);
+          int discarded$127 = 1;
+          var2 = jl.a("TEXT_YOUR_TURN_PLAYING");
           if (var2 == null) {
             break L13;
           } else {
@@ -711,7 +723,8 @@ final class a extends cc {
           }
         }
         L14: {
-          var2 = jl.a("TEXT_X_TURN_PLAYING", true);
+          int discarded$128 = 1;
+          var2 = jl.a("TEXT_X_TURN_PLAYING");
           if (null != var2) {
             ie.field_b = i.a(-2022, var2);
             break L14;
@@ -720,7 +733,8 @@ final class a extends cc {
           }
         }
         L15: {
-          var2 = jl.a("TEXT_X_TURN", true);
+          int discarded$129 = 1;
+          var2 = jl.a("TEXT_X_TURN");
           if (null != var2) {
             hc.field_b = i.a(-2022, var2);
             break L15;
@@ -729,7 +743,8 @@ final class a extends cc {
           }
         }
         L16: {
-          var2 = jl.a("TEXT_COLOUR_WHITE", true);
+          int discarded$130 = 1;
+          var2 = jl.a("TEXT_COLOUR_WHITE");
           if (null != var2) {
             pb.field_k = i.a(-2022, var2);
             break L16;
@@ -738,7 +753,8 @@ final class a extends cc {
           }
         }
         L17: {
-          var2 = jl.a("TEXT_COLOUR_BLUE", true);
+          int discarded$131 = 1;
+          var2 = jl.a("TEXT_COLOUR_BLUE");
           if (null == var2) {
             break L17;
           } else {
@@ -747,34 +763,38 @@ final class a extends cc {
           }
         }
         L18: {
-          var2 = jl.a("TEXT_DRAWN", true);
+          int discarded$132 = 1;
+          var2 = jl.a("TEXT_DRAWN");
           if (var2 == null) {
             break L18;
           } else {
-            String discarded$10 = i.a(-2022, var2);
+            String discarded$133 = i.a(-2022, var2);
             break L18;
           }
         }
         L19: {
-          var2 = jl.a("TEXT_WINS", true);
+          int discarded$134 = 1;
+          var2 = jl.a("TEXT_WINS");
           if (var2 != null) {
-            String discarded$11 = i.a(-2022, var2);
+            String discarded$135 = i.a(-2022, var2);
             break L19;
           } else {
             break L19;
           }
         }
         L20: {
-          var2 = jl.a("TEXT_2D", true);
+          int discarded$136 = 1;
+          var2 = jl.a("TEXT_2D");
           if (var2 == null) {
             break L20;
           } else {
-            sd.field_b = i.a(param0 ^ -2034, var2);
+            sd.field_b = i.a(-2022, var2);
             break L20;
           }
         }
         L21: {
-          var2 = jl.a("TEXT_3D", true);
+          int discarded$137 = 1;
+          var2 = jl.a("TEXT_3D");
           if (null != var2) {
             ld.field_f = i.a(-2022, var2);
             break L21;
@@ -783,7 +803,8 @@ final class a extends cc {
           }
         }
         L22: {
-          var2 = jl.a("TEXT_SWITCH_2D", true);
+          int discarded$138 = 1;
+          var2 = jl.a("TEXT_SWITCH_2D");
           if (var2 != null) {
             sl.field_a = i.a(-2022, var2);
             break L22;
@@ -792,7 +813,8 @@ final class a extends cc {
           }
         }
         L23: {
-          var2 = jl.a("TEXT_SWITCH_3D", true);
+          int discarded$139 = 1;
+          var2 = jl.a("TEXT_SWITCH_3D");
           if (null == var2) {
             break L23;
           } else {
@@ -801,7 +823,8 @@ final class a extends cc {
           }
         }
         L24: {
-          var2 = jl.a("TEXT_BACK", true);
+          int discarded$140 = 1;
+          var2 = jl.a("TEXT_BACK");
           if (null == var2) {
             break L24;
           } else {
@@ -810,7 +833,8 @@ final class a extends cc {
           }
         }
         L25: {
-          var2 = jl.a("TEXT_NOT_AVAILABLE_IN_2D", true);
+          int discarded$141 = 1;
+          var2 = jl.a("TEXT_NOT_AVAILABLE_IN_2D");
           if (null != var2) {
             fn.field_g = i.a(-2022, var2);
             break L25;
@@ -819,16 +843,18 @@ final class a extends cc {
           }
         }
         L26: {
-          var2 = jl.a("TEXT_RESET_VIEW", true);
+          int discarded$142 = 1;
+          var2 = jl.a("TEXT_RESET_VIEW");
           if (var2 != null) {
-            String discarded$12 = i.a(-2022, var2);
+            String discarded$143 = i.a(-2022, var2);
             break L26;
           } else {
             break L26;
           }
         }
         L27: {
-          var2 = jl.a("TEXT_ERROR", true);
+          int discarded$144 = 1;
+          var2 = jl.a("TEXT_ERROR");
           if (null != var2) {
             qm.field_Ob = i.a(-2022, var2);
             break L27;
@@ -837,695 +863,763 @@ final class a extends cc {
           }
         }
         L28: {
-          if (param0 == 20) {
+          int discarded$145 = 1;
+          var2 = jl.a("TEXT_PLAY_AGAIN");
+          if (var2 == null) {
             break L28;
           } else {
-            field_E = null;
+            hg.field_n = i.a(-2022, var2);
             break L28;
           }
         }
         L29: {
-          var2 = jl.a("TEXT_PLAY_AGAIN", true);
-          if (var2 == null) {
+          int discarded$146 = 1;
+          var2 = jl.a("TEXT_RATED_ACHIEVEMENTS");
+          if (var2 != null) {
+            dg.field_G = i.a(-2022, var2);
             break L29;
           } else {
-            hg.field_n = i.a(-2022, var2);
             break L29;
           }
         }
         L30: {
-          var2 = jl.a("TEXT_RATED_ACHIEVEMENTS", true);
+          int discarded$147 = 1;
+          var2 = jl.a("TEXT_ENDGAME_ENTRAPMENT");
           if (var2 != null) {
-            dg.field_G = i.a(param0 + -2042, var2);
+            ee.field_f = i.a(-2022, var2);
             break L30;
           } else {
             break L30;
           }
         }
         L31: {
-          var2 = jl.a("TEXT_ENDGAME_ENTRAPMENT", true);
+          int discarded$148 = 1;
+          var2 = jl.a("TEXT_ENDGAME_ENTRAPMENT_YOU");
           if (var2 != null) {
-            ee.field_f = i.a(-2022, var2);
+            vc.field_db = i.a(-2022, var2);
             break L31;
           } else {
             break L31;
           }
         }
         L32: {
-          var2 = jl.a("TEXT_ENDGAME_ENTRAPMENT_YOU", true);
-          if (var2 != null) {
-            vc.field_db = i.a(-2022, var2);
+          int discarded$149 = 1;
+          var2 = jl.a("TEXT_ENDGAME_BOARDFILLED");
+          if (null == var2) {
             break L32;
           } else {
+            rc.field_i = i.a(-2022, var2);
             break L32;
           }
         }
         L33: {
-          var2 = jl.a("TEXT_ENDGAME_BOARDFILLED", true);
-          if (null == var2) {
+          int discarded$150 = 1;
+          var2 = jl.a("TEXT_ENDGAME_BOARDFILLED_YOU");
+          if (null != var2) {
+            fh.field_a = i.a(-2022, var2);
             break L33;
           } else {
-            rc.field_i = i.a(-2022, var2);
             break L33;
           }
         }
         L34: {
-          var2 = jl.a("TEXT_ENDGAME_BOARDFILLED_YOU", true);
-          if (null != var2) {
-            fh.field_a = i.a(-2022, var2);
+          int discarded$151 = 1;
+          var2 = jl.a("TEXT_ENDGAME_BOARDFILLED_DRAW");
+          if (var2 != null) {
+            vf.field_d = i.a(-2022, var2);
             break L34;
           } else {
             break L34;
           }
         }
         L35: {
-          var2 = jl.a("TEXT_ENDGAME_BOARDFILLED_DRAW", true);
+          int discarded$152 = 1;
+          var2 = jl.a("TEXT_ENDGAME_NOPIECES");
           if (var2 != null) {
-            vf.field_d = i.a(-2022, var2);
+            cg.field_e = i.a(-2022, var2);
             break L35;
           } else {
             break L35;
           }
         }
         L36: {
-          var2 = jl.a("TEXT_ENDGAME_NOPIECES", true);
+          int discarded$153 = 1;
+          var2 = jl.a("TEXT_ENDGAME_NOPIECES_YOU");
           if (var2 != null) {
-            cg.field_e = i.a(-2022, var2);
+            id.field_f = i.a(-2022, var2);
             break L36;
           } else {
             break L36;
           }
         }
         L37: {
-          var2 = jl.a("TEXT_ENDGAME_NOPIECES_YOU", true);
-          if (var2 != null) {
-            id.field_f = i.a(-2022, var2);
+          int discarded$154 = 1;
+          var2 = jl.a("TEXT_ENDGAME_NOTIME");
+          if (null == var2) {
             break L37;
           } else {
+            dd.field_d = i.a(-2022, var2);
             break L37;
           }
         }
         L38: {
-          var2 = jl.a("TEXT_ENDGAME_NOTIME", true);
+          int discarded$155 = 1;
+          var2 = jl.a("TEXT_ENDGAME_NOTIME_YOU");
           if (null == var2) {
             break L38;
           } else {
-            dd.field_d = i.a(param0 ^ -2034, var2);
+            ao.field_Nb = i.a(-2022, var2);
             break L38;
           }
         }
         L39: {
-          var2 = jl.a("TEXT_ENDGAME_NOTIME_YOU", true);
-          if (null == var2) {
+          int discarded$156 = 1;
+          var2 = jl.a("TEXT_ENDGAME_RESIGNED");
+          if (var2 != null) {
+            vm.field_a = i.a(-2022, var2);
             break L39;
           } else {
-            ao.field_Nb = i.a(-2022, var2);
             break L39;
           }
         }
         L40: {
-          var2 = jl.a("TEXT_ENDGAME_RESIGNED", true);
-          if (var2 != null) {
-            vm.field_a = i.a(param0 + -2042, var2);
+          int discarded$157 = 1;
+          var2 = jl.a("TEXT_ENDGAME_RESIGNED_YOU");
+          if (null != var2) {
+            pg.field_a = i.a(-2022, var2);
             break L40;
           } else {
             break L40;
           }
         }
         L41: {
-          var2 = jl.a("TEXT_ENDGAME_RESIGNED_YOU", true);
-          if (null != var2) {
-            pg.field_a = i.a(param0 ^ -2034, var2);
+          int discarded$158 = 1;
+          var2 = jl.a("TEXT_VIEWCONTROLS_LEFT");
+          if (var2 != null) {
+            mc.field_d = i.a(-2022, var2);
             break L41;
           } else {
             break L41;
           }
         }
         L42: {
-          var2 = jl.a("TEXT_VIEWCONTROLS_LEFT", true);
+          int discarded$159 = 1;
+          var2 = jl.a("TEXT_VIEWCONTROLS_RIGHT");
           if (var2 != null) {
-            mc.field_d = i.a(-2022, var2);
+            pn.field_C = i.a(-2022, var2);
             break L42;
           } else {
             break L42;
           }
         }
         L43: {
-          var2 = jl.a("TEXT_VIEWCONTROLS_RIGHT", true);
-          if (var2 != null) {
-            pn.field_C = i.a(-2022, var2);
+          int discarded$160 = 1;
+          var2 = jl.a("TEXT_VIEWCONTROLS_ZOOMOUT");
+          if (null != var2) {
+            vb.field_i = i.a(-2022, var2);
             break L43;
           } else {
             break L43;
           }
         }
         L44: {
-          var2 = jl.a("TEXT_VIEWCONTROLS_ZOOMOUT", true);
+          int discarded$161 = 1;
+          var2 = jl.a("TEXT_VIEWCONTROLS_ZOOMIN");
           if (null != var2) {
-            vb.field_i = i.a(param0 ^ -2034, var2);
+            cb.field_b = i.a(-2022, var2);
             break L44;
           } else {
             break L44;
           }
         }
         L45: {
-          var2 = jl.a("TEXT_VIEWCONTROLS_ZOOMIN", true);
-          if (null != var2) {
-            cb.field_b = i.a(param0 ^ -2034, var2);
+          int discarded$162 = 1;
+          var2 = jl.a("TEXT_VIEWCONTROLS_CENTRE");
+          if (var2 != null) {
+            ia.field_a = i.a(-2022, var2);
             break L45;
           } else {
             break L45;
           }
         }
         L46: {
-          var2 = jl.a("TEXT_VIEWCONTROLS_CENTRE", true);
-          if (var2 != null) {
-            ia.field_a = i.a(-2022, var2);
+          int discarded$163 = 1;
+          var2 = jl.a("TEXT_VIEWCONTROLS_MODE");
+          if (var2 == null) {
             break L46;
           } else {
+            um.field_Kb = i.a(-2022, var2);
             break L46;
           }
         }
         L47: {
-          var2 = jl.a("TEXT_VIEWCONTROLS_MODE", true);
+          int discarded$164 = 1;
+          var2 = jl.a("PLAYERNAME_HOTSEAT_2");
           if (var2 == null) {
             break L47;
           } else {
-            um.field_Kb = i.a(-2022, var2);
+            em.field_e = i.a(-2022, var2);
             break L47;
           }
         }
         L48: {
-          var2 = jl.a("PLAYERNAME_HOTSEAT_2", true);
-          if (var2 == null) {
+          int discarded$165 = 1;
+          var2 = jl.a("PLAYERNAME_HOTSEAT_1");
+          if (var2 != null) {
+            mb.field_eb = i.a(-2022, var2);
             break L48;
           } else {
-            em.field_e = i.a(param0 + -2042, var2);
             break L48;
           }
         }
         L49: {
-          var2 = jl.a("PLAYERNAME_HOTSEAT_1", true);
+          int discarded$166 = 1;
+          var2 = jl.a("TEXT_BOOTSEQUENCE");
           if (var2 != null) {
-            mb.field_eb = i.a(param0 + -2042, var2);
+            jk.field_e = i.a(-2022, var2);
             break L49;
           } else {
             break L49;
           }
         }
         L50: {
-          var2 = jl.a("TEXT_BOOTSEQUENCE", true);
-          if (var2 != null) {
-            jk.field_e = i.a(-2022, var2);
+          int discarded$167 = 1;
+          var2 = jl.a("TEXT_BOOTSEQUENCE_HALLOWEEN");
+          if (null != var2) {
+            ge.field_a = i.a(-2022, var2);
             break L50;
           } else {
             break L50;
           }
         }
         L51: {
-          var2 = jl.a("TEXT_BOOTSEQUENCE_HALLOWEEN", true);
-          if (null != var2) {
-            ge.field_a = i.a(-2022, var2);
+          int discarded$168 = 1;
+          var2 = jl.a("DETAIL_NAMES,0");
+          if (var2 == null) {
             break L51;
           } else {
+            cc.field_v[0] = i.a(-2022, var2);
             break L51;
           }
         }
         L52: {
-          var2 = jl.a("DETAIL_NAMES,0", true);
+          int discarded$169 = 1;
+          var2 = jl.a("DETAIL_NAMES,1");
           if (var2 == null) {
             break L52;
           } else {
-            cc.field_v[0] = i.a(-2022, var2);
+            cc.field_v[1] = i.a(-2022, var2);
             break L52;
           }
         }
         L53: {
-          var2 = jl.a("DETAIL_NAMES,1", true);
-          if (var2 == null) {
+          int discarded$170 = 1;
+          var2 = jl.a("DETAIL_NAMES,2");
+          if (var2 != null) {
+            cc.field_v[2] = i.a(-2022, var2);
             break L53;
           } else {
-            cc.field_v[1] = i.a(-2022, var2);
             break L53;
           }
         }
         L54: {
-          var2 = jl.a("DETAIL_NAMES,2", true);
-          if (var2 != null) {
-            cc.field_v[2] = i.a(-2022, var2);
+          int discarded$171 = 1;
+          var2 = jl.a("DETAIL_NAMES,3");
+          if (null == var2) {
             break L54;
           } else {
+            cc.field_v[3] = i.a(-2022, var2);
             break L54;
           }
         }
         L55: {
-          var2 = jl.a("DETAIL_NAMES,3", true);
+          int discarded$172 = 1;
+          var2 = jl.a("achievement_names,0");
           if (null == var2) {
             break L55;
           } else {
-            cc.field_v[3] = i.a(param0 + -2042, var2);
+            qk.field_d[0] = i.a(-2022, var2);
             break L55;
           }
         }
         L56: {
-          var2 = jl.a("achievement_names,0", true);
-          if (null == var2) {
+          int discarded$173 = 1;
+          var2 = jl.a("achievement_names,1");
+          if (null != var2) {
+            qk.field_d[1] = i.a(-2022, var2);
             break L56;
           } else {
-            qk.field_d[0] = i.a(-2022, var2);
             break L56;
           }
         }
         L57: {
-          var2 = jl.a("achievement_names,1", true);
-          if (null != var2) {
-            qk.field_d[1] = i.a(-2022, var2);
+          int discarded$174 = 1;
+          var2 = jl.a("achievement_names,2");
+          if (null == var2) {
             break L57;
           } else {
+            qk.field_d[2] = i.a(jd.a(20, -2034), var2);
             break L57;
           }
         }
         L58: {
-          var2 = jl.a("achievement_names,2", true);
+          int discarded$175 = 1;
+          var2 = jl.a("achievement_names,3");
           if (null == var2) {
             break L58;
           } else {
-            qk.field_d[2] = i.a(jd.a(param0, -2034), var2);
+            qk.field_d[3] = i.a(-2022, var2);
             break L58;
           }
         }
         L59: {
-          var2 = jl.a("achievement_names,3", true);
-          if (null == var2) {
+          int discarded$176 = 1;
+          var2 = jl.a("achievement_names,4");
+          if (null != var2) {
+            qk.field_d[4] = i.a(-2022, var2);
             break L59;
           } else {
-            qk.field_d[3] = i.a(-2022, var2);
             break L59;
           }
         }
         L60: {
-          var2 = jl.a("achievement_names,4", true);
-          if (null != var2) {
-            qk.field_d[4] = i.a(-2022, var2);
+          int discarded$177 = 1;
+          var2 = jl.a("achievement_names,5");
+          if (var2 != null) {
+            qk.field_d[5] = i.a(-2022, var2);
             break L60;
           } else {
             break L60;
           }
         }
         L61: {
-          var2 = jl.a("achievement_names,5", true);
+          int discarded$178 = 1;
+          var2 = jl.a("achievement_names,6");
           if (var2 != null) {
-            qk.field_d[5] = i.a(-2022, var2);
+            qk.field_d[6] = i.a(jd.a(20, -2034), var2);
             break L61;
           } else {
             break L61;
           }
         }
         L62: {
-          var2 = jl.a("achievement_names,6", true);
-          if (var2 != null) {
-            qk.field_d[6] = i.a(jd.a(param0, -2034), var2);
+          int discarded$179 = 1;
+          var2 = jl.a("achievement_names,7");
+          if (null == var2) {
             break L62;
           } else {
+            qk.field_d[7] = i.a(-2022, var2);
             break L62;
           }
         }
         L63: {
-          var2 = jl.a("achievement_names,7", true);
+          int discarded$180 = 1;
+          var2 = jl.a("achievement_names,8");
           if (null == var2) {
             break L63;
           } else {
-            qk.field_d[7] = i.a(param0 + -2042, var2);
+            qk.field_d[8] = i.a(-2022, var2);
             break L63;
           }
         }
         L64: {
-          var2 = jl.a("achievement_names,8", true);
+          int discarded$181 = 1;
+          var2 = jl.a("achievement_names,9");
           if (null == var2) {
             break L64;
           } else {
-            qk.field_d[8] = i.a(-2022, var2);
+            qk.field_d[9] = i.a(-2022, var2);
             break L64;
           }
         }
         L65: {
-          var2 = jl.a("achievement_names,9", true);
-          if (null == var2) {
+          int discarded$182 = 1;
+          var2 = jl.a("achievement_criteria,0");
+          if (null != var2) {
+            ak.field_b[0] = i.a(jd.a(20, -2034), var2);
             break L65;
           } else {
-            qk.field_d[9] = i.a(-2022, var2);
             break L65;
           }
         }
         L66: {
-          var2 = jl.a("achievement_criteria,0", true);
-          if (null != var2) {
-            ak.field_b[0] = i.a(jd.a(param0, -2034), var2);
+          int discarded$183 = 1;
+          var2 = jl.a("achievement_criteria,1");
+          if (null == var2) {
             break L66;
           } else {
+            ak.field_b[1] = i.a(-2022, var2);
             break L66;
           }
         }
         L67: {
-          var2 = jl.a("achievement_criteria,1", true);
-          if (null == var2) {
+          int discarded$184 = 1;
+          var2 = jl.a("achievement_criteria,2");
+          if (null != var2) {
+            ak.field_b[2] = i.a(-2022, var2);
             break L67;
           } else {
-            ak.field_b[1] = i.a(-2022, var2);
             break L67;
           }
         }
         L68: {
-          var2 = jl.a("achievement_criteria,2", true);
-          if (null != var2) {
-            ak.field_b[2] = i.a(-2022, var2);
+          int discarded$185 = 1;
+          var2 = jl.a("achievement_criteria,3");
+          if (var2 == null) {
             break L68;
           } else {
+            ak.field_b[3] = i.a(-2022, var2);
             break L68;
           }
         }
         L69: {
-          var2 = jl.a("achievement_criteria,3", true);
-          if (var2 == null) {
+          int discarded$186 = 1;
+          var2 = jl.a("achievement_criteria,4");
+          if (null == var2) {
             break L69;
           } else {
-            ak.field_b[3] = i.a(-2022, var2);
+            ak.field_b[4] = i.a(-2022, var2);
             break L69;
           }
         }
         L70: {
-          var2 = jl.a("achievement_criteria,4", true);
-          if (null == var2) {
+          int discarded$187 = 1;
+          var2 = jl.a("achievement_criteria,5");
+          if (var2 == null) {
             break L70;
           } else {
-            ak.field_b[4] = i.a(-2022, var2);
+            ak.field_b[5] = i.a(-2022, var2);
             break L70;
           }
         }
         L71: {
-          var2 = jl.a("achievement_criteria,5", true);
+          int discarded$188 = 1;
+          var2 = jl.a("achievement_criteria,6");
           if (var2 == null) {
             break L71;
           } else {
-            ak.field_b[5] = i.a(-2022, var2);
+            ak.field_b[6] = i.a(-2022, var2);
             break L71;
           }
         }
         L72: {
-          var2 = jl.a("achievement_criteria,6", true);
-          if (var2 == null) {
+          int discarded$189 = 1;
+          var2 = jl.a("achievement_criteria,7");
+          if (null == var2) {
             break L72;
           } else {
-            ak.field_b[6] = i.a(-2022, var2);
+            ak.field_b[7] = i.a(-2022, var2);
             break L72;
           }
         }
         L73: {
-          var2 = jl.a("achievement_criteria,7", true);
-          if (null == var2) {
+          int discarded$190 = 1;
+          var2 = jl.a("achievement_criteria,8");
+          if (null != var2) {
+            ak.field_b[8] = i.a(-2022, var2);
             break L73;
           } else {
-            ak.field_b[7] = i.a(-2022, var2);
             break L73;
           }
         }
         L74: {
-          var2 = jl.a("achievement_criteria,8", true);
-          if (null != var2) {
-            ak.field_b[8] = i.a(-2022, var2);
+          int discarded$191 = 1;
+          var2 = jl.a("achievement_criteria,9");
+          if (var2 != null) {
+            ak.field_b[9] = i.a(-2022, var2);
             break L74;
           } else {
             break L74;
           }
         }
         L75: {
-          var2 = jl.a("achievement_criteria,9", true);
+          int discarded$192 = 1;
+          var2 = jl.a("text_login_or_discard");
           if (var2 != null) {
-            ak.field_b[9] = i.a(-2022, var2);
+            String discarded$193 = i.a(-2022, var2);
             break L75;
           } else {
             break L75;
           }
         }
         L76: {
-          var2 = jl.a("text_login_or_discard", true);
-          if (var2 != null) {
-            String discarded$13 = i.a(-2022, var2);
+          int discarded$194 = 1;
+          var2 = jl.a("gameoptlabels,0");
+          if (null != var2) {
+            wf.field_e[0] = i.a(jd.a(20, -2034), var2);
             break L76;
           } else {
             break L76;
           }
         }
         L77: {
-          var2 = jl.a("gameoptlabels,0", true);
+          int discarded$195 = 1;
+          var2 = jl.a("gameoptlabels,1");
           if (null != var2) {
-            wf.field_e[0] = i.a(jd.a(param0, -2034), var2);
+            wf.field_e[1] = i.a(-2022, var2);
             break L77;
           } else {
             break L77;
           }
         }
         L78: {
-          var2 = jl.a("gameoptlabels,1", true);
-          if (null != var2) {
-            wf.field_e[1] = i.a(-2022, var2);
+          int discarded$196 = 1;
+          var2 = jl.a("gameoptnames,0,0");
+          if (null == var2) {
             break L78;
           } else {
+            wc.field_c[0][0] = i.a(-2022, var2);
             break L78;
           }
         }
         L79: {
-          var2 = jl.a("gameoptnames,0,0", true);
-          if (null == var2) {
+          int discarded$197 = 1;
+          var2 = jl.a("gameoptnames,0,1");
+          if (var2 != null) {
+            wc.field_c[0][1] = i.a(-2022, var2);
             break L79;
           } else {
-            wc.field_c[0][0] = i.a(-2022, var2);
             break L79;
           }
         }
         L80: {
-          var2 = jl.a("gameoptnames,0,1", true);
+          int discarded$198 = 1;
+          var2 = jl.a("gameoptnames,0,2");
           if (var2 != null) {
-            wc.field_c[0][1] = i.a(-2022, var2);
+            wc.field_c[0][2] = i.a(-2022, var2);
             break L80;
           } else {
             break L80;
           }
         }
         L81: {
-          var2 = jl.a("gameoptnames,0,2", true);
-          if (var2 != null) {
-            wc.field_c[0][2] = i.a(-2022, var2);
+          int discarded$199 = 1;
+          var2 = jl.a("gameoptnames,0,3");
+          if (var2 == null) {
             break L81;
           } else {
+            wc.field_c[0][3] = i.a(-2022, var2);
             break L81;
           }
         }
         L82: {
-          var2 = jl.a("gameoptnames,0,3", true);
-          if (var2 == null) {
+          int discarded$200 = 1;
+          var2 = jl.a("gameoptnames,0,4");
+          if (var2 != null) {
+            wc.field_c[0][4] = i.a(-2022, var2);
             break L82;
           } else {
-            wc.field_c[0][3] = i.a(-2022, var2);
             break L82;
           }
         }
         L83: {
-          var2 = jl.a("gameoptnames,0,4", true);
+          int discarded$201 = 1;
+          var2 = jl.a("gameoptnames,0,5");
           if (var2 != null) {
-            wc.field_c[0][4] = i.a(-2022, var2);
+            wc.field_c[0][5] = i.a(-2022, var2);
             break L83;
           } else {
             break L83;
           }
         }
         L84: {
-          var2 = jl.a("gameoptnames,0,5", true);
+          int discarded$202 = 1;
+          var2 = jl.a("gameoptnames,0,6");
           if (var2 != null) {
-            wc.field_c[0][5] = i.a(-2022, var2);
+            wc.field_c[0][6] = i.a(-2022, var2);
             break L84;
           } else {
             break L84;
           }
         }
         L85: {
-          var2 = jl.a("gameoptnames,0,6", true);
-          if (var2 != null) {
-            wc.field_c[0][6] = i.a(-2022, var2);
+          int discarded$203 = 1;
+          var2 = jl.a("gameoptnames,1,0");
+          if (null == var2) {
             break L85;
           } else {
+            wc.field_c[1][0] = i.a(-2022, var2);
             break L85;
           }
         }
         L86: {
-          var2 = jl.a("gameoptnames,1,0", true);
+          int discarded$204 = 1;
+          var2 = jl.a("gameoptnames,1,1");
           if (null == var2) {
             break L86;
           } else {
-            wc.field_c[1][0] = i.a(-2022, var2);
+            wc.field_c[1][1] = i.a(-2022, var2);
             break L86;
           }
         }
         L87: {
-          var2 = jl.a("gameoptnames,1,1", true);
-          if (null == var2) {
+          int discarded$205 = 1;
+          var2 = jl.a("gameoptnames,1,2");
+          if (null != var2) {
+            wc.field_c[1][2] = i.a(-2022, var2);
             break L87;
           } else {
-            wc.field_c[1][1] = i.a(-2022, var2);
             break L87;
           }
         }
         L88: {
-          var2 = jl.a("gameoptnames,1,2", true);
-          if (null != var2) {
-            wc.field_c[1][2] = i.a(-2022, var2);
+          int discarded$206 = 1;
+          var2 = jl.a("hotseatmenulabel");
+          if (var2 != null) {
+            cm.field_j = i.a(-2022, var2);
             break L88;
           } else {
             break L88;
           }
         }
         L89: {
-          var2 = jl.a("hotseatmenulabel", true);
-          if (var2 != null) {
-            cm.field_j = i.a(param0 + -2042, var2);
+          int discarded$207 = 1;
+          var2 = jl.a("hotseatoption_gridwidth_colon");
+          if (var2 == null) {
             break L89;
           } else {
+            pg.field_i = i.a(-2022, var2);
             break L89;
           }
         }
         L90: {
-          var2 = jl.a("hotseatoption_gridwidth_colon", true);
-          if (var2 == null) {
+          int discarded$208 = 1;
+          var2 = jl.a("hotseatoption_turnduration_colon");
+          if (null == var2) {
             break L90;
           } else {
-            pg.field_i = i.a(param0 + -2042, var2);
+            rk.field_b = i.a(-2022, var2);
             break L90;
           }
         }
         L91: {
-          var2 = jl.a("hotseatoption_turnduration_colon", true);
-          if (null == var2) {
+          int discarded$209 = 1;
+          var2 = jl.a("hotseatoption_ailevel_colon");
+          if (var2 == null) {
             break L91;
           } else {
-            rk.field_b = i.a(-2022, var2);
+            gh.field_Lb = i.a(-2022, var2);
             break L91;
           }
         }
         L92: {
-          var2 = jl.a("hotseatoption_ailevel_colon", true);
-          if (var2 == null) {
+          int discarded$210 = 1;
+          var2 = jl.a("ailevelnames,0");
+          if (var2 != null) {
+            mh.field_i[0] = i.a(-2022, var2);
             break L92;
           } else {
-            gh.field_Lb = i.a(-2022, var2);
             break L92;
           }
         }
         L93: {
-          var2 = jl.a("ailevelnames,0", true);
-          if (var2 != null) {
-            mh.field_i[0] = i.a(-2022, var2);
+          int discarded$211 = 1;
+          var2 = jl.a("ailevelnames,1");
+          if (null == var2) {
             break L93;
           } else {
+            mh.field_i[1] = i.a(-2022, var2);
             break L93;
           }
         }
         L94: {
-          var2 = jl.a("ailevelnames,1", true);
-          if (null == var2) {
+          int discarded$212 = 1;
+          var2 = jl.a("ailevelnames,2");
+          if (var2 != null) {
+            mh.field_i[2] = i.a(-2022, var2);
             break L94;
           } else {
-            mh.field_i[1] = i.a(-2022, var2);
             break L94;
           }
         }
         L95: {
-          var2 = jl.a("ailevelnames,2", true);
+          int discarded$213 = 1;
+          var2 = jl.a("ailevelnames,3");
           if (var2 != null) {
-            mh.field_i[2] = i.a(-2022, var2);
+            mh.field_i[3] = i.a(-2022, var2);
             break L95;
           } else {
             break L95;
           }
         }
         L96: {
-          var2 = jl.a("ailevelnames,3", true);
-          if (var2 != null) {
-            mh.field_i[3] = i.a(-2022, var2);
+          int discarded$214 = 1;
+          var2 = jl.a("tutorial1");
+          if (var2 == null) {
             break L96;
           } else {
+            ee.field_b = i.a(-2022, var2);
             break L96;
           }
         }
         L97: {
-          var2 = jl.a("tutorial1", true);
-          if (var2 == null) {
+          int discarded$215 = 1;
+          var2 = jl.a("tutorial2");
+          if (null != var2) {
+            gl.field_h = i.a(-2022, var2);
             break L97;
           } else {
-            ee.field_b = i.a(-2022, var2);
             break L97;
           }
         }
         L98: {
-          var2 = jl.a("tutorial2", true);
-          if (null != var2) {
-            gl.field_h = i.a(-2022, var2);
+          int discarded$216 = 1;
+          var2 = jl.a("tutorial3");
+          if (var2 == null) {
             break L98;
           } else {
+            fa.field_h = i.a(-2022, var2);
             break L98;
           }
         }
         L99: {
-          var2 = jl.a("tutorial3", true);
+          int discarded$217 = 1;
+          var2 = jl.a("tutorial4");
           if (var2 == null) {
             break L99;
           } else {
-            fa.field_h = i.a(-2022, var2);
+            jd.field_a = i.a(-2022, var2);
             break L99;
           }
         }
         L100: {
-          var2 = jl.a("tutorial4", true);
-          if (var2 == null) {
+          int discarded$218 = 1;
+          var2 = jl.a("text_removed_from_game");
+          if (var2 != null) {
+            mi.field_f = i.a(-2022, var2);
             break L100;
           } else {
-            jd.field_a = i.a(param0 ^ -2034, var2);
             break L100;
           }
         }
         L101: {
-          var2 = jl.a("text_removed_from_game", true);
-          if (var2 != null) {
-            mi.field_f = i.a(param0 + -2042, var2);
+          int discarded$219 = 1;
+          var2 = jl.a("text_lobby_pleaselogin");
+          if (null != var2) {
+            he.field_cc = i.a(-2022, var2);
             break L101;
           } else {
             break L101;
           }
         }
         L102: {
-          var2 = jl.a("text_lobby_pleaselogin", true);
+          int discarded$220 = 1;
+          var2 = jl.a("instructions_pages,0");
           if (null != var2) {
-            he.field_cc = i.a(-2022, var2);
+            em.field_b[0] = i.a(-2022, var2);
             break L102;
           } else {
             break L102;
           }
         }
         L103: {
-          var2 = jl.a("instructions_pages,0", true);
-          if (null != var2) {
-            em.field_b[0] = i.a(-2022, var2);
-            break L103;
-          } else {
-            break L103;
-          }
-        }
-        L104: {
-          var2 = jl.a("instructions_pages,1", true);
+          int discarded$221 = 1;
+          var2 = jl.a("instructions_pages,1");
           if (null == var2) {
-            break L104;
+            break L103;
           } else {
             em.field_b[1] = i.a(-2022, var2);
-            break L104;
+            break L103;
           }
         }
         ql.field_m = null;

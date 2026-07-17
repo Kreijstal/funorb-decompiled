@@ -19,7 +19,7 @@ class bb extends uh {
         return ud.field_c;
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_g = null;
         field_j = null;
         field_l = null;
@@ -28,14 +28,11 @@ class bb extends uh {
 
     final static void a(int param0, int param1, byte param2, qj param3) {
         try {
-            ii.field_c = param0;
-            if (param2 != -13) {
-                field_k = 125;
-            }
-            ic.field_c = param1;
+            ii.field_c = 12;
+            ic.field_c = 12;
             tl.field_c = param3;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) (Object) runtimeException, "bb.G(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw bd.a((Throwable) (Object) runtimeException, "bb.G(" + 12 + 44 + 12 + 44 + -13 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -43,13 +40,14 @@ class bb extends uh {
         if (!oa.a(param0 ^ 25325)) {
             return;
         }
-        le.a(false, 4, 15991);
+        int discarded$5 = 15991;
+        le.a(false, 4);
         if (param0 != -100) {
             bb.b((byte) 126);
         }
     }
 
-    final static String a(CharSequence param0, int param1, boolean param2) {
+    final static String a(CharSequence param0) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -76,16 +74,19 @@ class bb extends uh {
         String stackOut_14_2 = null;
         var5 = wizardrun.field_H;
         try {
-          var3 = hg.a(param0, (byte) -118, false);
+          int discarded$12 = 0;
+          int discarded$13 = -118;
+          var3 = hg.a(param0);
           if (var3 != null) {
             stackOut_3_0 = (String) var3;
             stackIn_4_0 = stackOut_3_0;
             return stackIn_4_0;
           } else {
-            var4 = param1;
+            var4 = 0;
             L0: while (true) {
               if (param0.length() > var4) {
-                if (df.a(param0.charAt(var4), true)) {
+                int discarded$14 = 1;
+                if (df.a(param0.charAt(var4))) {
                   var4++;
                   continue L0;
                 } else {
@@ -126,11 +127,11 @@ class bb extends uh {
               break L1;
             }
           }
-          throw bd.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 44 + 0 + 41);
+          throw bd.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + 0 + 44 + 0 + 41);
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         ei var1 = (ei) (Object) lh.field_b.c(8192);
         if (!(var1 != null)) {
             throw new IllegalStateException();

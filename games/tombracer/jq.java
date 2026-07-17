@@ -4,7 +4,7 @@
 final class jq extends ob {
     static jea field_o;
 
-    final static void c(byte param0) {
+    final static void c() {
         int var1 = 0;
         vaa.field_b = bva.b((byte) -107);
         gp.field_h = 0;
@@ -105,7 +105,7 @@ final class jq extends ob {
                   }
                 }
                 if (param4.field_Cc) {
-                  stackOut_9_0 = new qk(param4, 34037, param3, param5, param7, param6, param0, param1);
+                  stackOut_9_0 = new qk(param4, 34037, param3, param5, param7, false, param0, param1);
                   stackIn_10_0 = stackOut_9_0;
                   return stackIn_10_0;
                 } else {
@@ -115,7 +115,7 @@ final class jq extends ob {
                 }
               }
             }
-            stackOut_11_0 = new qk(param4, 3553, param3, param5, param7, param6, param0, param1);
+            stackOut_11_0 = new qk(param4, 3553, param3, param5, param7, false, param0, param1);
             stackIn_12_0 = stackOut_11_0;
             break L0;
           }
@@ -172,7 +172,7 @@ final class jq extends ob {
               break L5;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw tba.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param5 + 44 + 0 + 44 + param7 + 41);
         }
         return stackIn_12_0;
     }
@@ -188,7 +188,7 @@ final class jq extends ob {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_o = null;
     }
 

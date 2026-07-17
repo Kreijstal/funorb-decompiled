@@ -511,7 +511,7 @@ final class qd {
         this(param0, param1, param2, param3, param4, false);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_o = null;
         field_c = null;
         field_h = null;
@@ -524,9 +524,6 @@ final class qd {
             ((qd) this).field_w = param2.field_w;
             ((qd) this).field_p = param2.field_p;
             ((qd) this).field_i = param2.field_i;
-            if (param0 != 121) {
-                ((qd) this).field_u = false;
-            }
             ((qd) this).field_v = param2.field_v;
             ((qd) this).field_q = param2.field_q;
             ((qd) this).field_r = param2.field_r;
@@ -541,7 +538,7 @@ final class qd {
             }
             ((qd) this).field_u = param2.field_u;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "qd.E(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "qd.E(" + 121 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -558,7 +555,7 @@ final class qd {
         String var6_ref_String = null;
         int var6 = 0;
         int var7 = 0;
-        int var4 = 59 / ((param1 - 1) / 57);
+        int var4 = 59;
         ah var3 = ic.a(param0, 18, param2);
         if (!(var3 == null)) {
             an.field_i.a(false, (byte) -87);

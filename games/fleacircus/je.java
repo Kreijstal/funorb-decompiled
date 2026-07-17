@@ -9,17 +9,21 @@ final class je extends bb {
     static dd[] field_O;
     static int[] field_N;
 
-    public static void i(int param0) {
-        if (param0 < 77) {
-            return;
-        }
+    public static void i() {
+        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
+          L0: {
             field_N = null;
             field_O = null;
             field_M = null;
             field_P = null;
-        } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "je.CA(" + param0 + 41);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw pf.a((Throwable) (Object) var1, "je.CA(" + 93 + 41);
         }
     }
 
@@ -87,7 +91,7 @@ final class je extends bb {
         }
     }
 
-    final static void a(rh param0, int param1) {
+    final static void a(rh param0) {
         byte[] var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -6352,7 +6356,7 @@ final class je extends bb {
           }
         }
         L695: {
-          var3 = -82 / ((54 - param1) / 58);
+          var3 = -82;
           var2 = ad.a("createtouse", 0);
           if (var2 != null) {
             sc.field_b = ab.a(0, var2);
@@ -6936,14 +6940,16 @@ final class je extends bb {
                         }
                       }
                       pb.field_c = new dd(var9, var10);
-                      r.a(pb.field_c, 45);
+                      int discarded$2 = 45;
+                      r.a(pb.field_c);
                       if (var11 == 0) {
                         break L4;
                       } else {
                         break L5;
                       }
                     }
-                    r.a(pb.field_c, 45);
+                    int discarded$3 = 45;
+                    r.a(pb.field_c);
                     gb.c();
                     break L4;
                   }

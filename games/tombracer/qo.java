@@ -49,7 +49,7 @@ final class qo extends rra {
         ((qo) this).field_j = param1;
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_i = null;
         field_k = null;
     }

@@ -221,7 +221,9 @@ final class em extends am implements lja {
                     break L14;
                   } else {
                     L15: {
-                      ic.field_i.a(wja.a(jc.field_r, nfa.field_a, false), -121, wja.a(gd.field_m, mk.field_p, false));
+                      int discarded$2 = 0;
+                      int discarded$3 = 0;
+                      ic.field_i.a(wja.a(jc.field_r, nfa.field_a), -121, wja.a(gd.field_m, mk.field_p));
                       if (!ic.field_i.e(0)) {
                         break L15;
                       } else {
@@ -366,7 +368,7 @@ final class em extends am implements lja {
           L0: {
             var4 = new hf(param1, param2);
             var4.field_f = (qda) (Object) new ff();
-            var6 = -85 % ((param0 - -69) / 54);
+            var6 = 0;
             var5 = ((em) this).field_q + -6;
             ((em) this).field_q = ((em) this).field_q + 38;
             var4.a(15, 30, (byte) 59, ((em) this).field_p - 30, var5);
@@ -381,7 +383,7 @@ final class em extends am implements lja {
           L1: {
             var4_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var4_ref;
-            stackOut_2_1 = new StringBuilder().append("em.B(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("em.B(").append(-2).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -565,7 +567,7 @@ final class em extends am implements lja {
         }
     }
 
-    private final void n(int param0) {
+    private final void n() {
         if (!((em) this).field_C) {
             return;
         }
@@ -573,7 +575,7 @@ final class em extends am implements lja {
         ((em) this).field_C = false;
     }
 
-    final static boolean d(byte param0) {
+    final static boolean d() {
         return null != wh.field_p;
     }
 
@@ -601,7 +603,8 @@ final class em extends am implements lja {
               if (((em) this).field_U != param1) {
                 break L1;
               } else {
-                this.n(0);
+                int discarded$2 = 0;
+                this.n();
                 break L1;
               }
             }

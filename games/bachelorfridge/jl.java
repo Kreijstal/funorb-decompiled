@@ -16,8 +16,8 @@ final class jl extends bca {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        RuntimeException var8 = null;
         int var8_int = 0;
+        RuntimeException var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -33,36 +33,28 @@ final class jl extends bca {
             var12 = param5;
             L1: while (true) {
               if (var8_int <= var12) {
-                L2: {
-                  if (param4 == -1) {
-                    break L2;
-                  } else {
-                    jl.d(62);
-                    break L2;
-                  }
-                }
                 var10 = param1 + param0;
                 var12 = param3;
-                L3: while (true) {
+                L2: while (true) {
                   if (var12 <= var9) {
                     var11 = param6 + -param0;
                     var12 = var8_int;
-                    L4: while (true) {
+                    L3: while (true) {
                       if (var9 < var12) {
                         break L0;
                       } else {
                         var18 = tj.field_b[var12];
-                        hba.a(param7, param1, var18, param4 + 8, var10);
+                        hba.a(param7, param1, var18, 7, var10);
                         hba.a(param2, var10, var18, 7, var11);
-                        hba.a(param7, var11, var18, param4 ^ -8, param6);
+                        hba.a(param7, var11, var18, 7, param6);
                         var12++;
-                        continue L4;
+                        continue L3;
                       }
                     }
                   } else {
                     hba.a(param7, param1, tj.field_b[var12], 7, param6);
                     var12--;
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
@@ -75,7 +67,7 @@ final class jl extends bca {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var8, "jl.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw pe.a((Throwable) (Object) var8, "jl.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + -1 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
         }
     }
 
@@ -219,12 +211,7 @@ final class jl extends bca {
         super(param0, param1);
     }
 
-    public static void d(int param0) {
-        if (param0 != -17509) {
-            field_r = false;
-            field_q = null;
-            return;
-        }
+    public static void d() {
         field_q = null;
     }
 

@@ -14,13 +14,9 @@ final class wd extends ji {
 
     private final void a(int param0, boolean param1, vg param2, String param3, int param4) {
         try {
-            if (param1) {
-                Object var7 = null;
-                ((wd) this).a((ja) null, -116);
-            }
             mf.field_x.c(param3, param0 - (-param2.field_m - (param2.field_x >> 1)), param2.field_q + param4 + -5, 16777215, -1);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "wd.M(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
+            throw r.a((Throwable) (Object) runtimeException, "wd.M(" + param0 + 44 + 0 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
         }
     }
 
@@ -211,16 +207,13 @@ final class wd extends ji {
 
     final static int a(int param0, byte param1, int param2) {
         int var3 = 0;
-        var3 = 26 % ((80 - param1) / 43);
         if (param2 < 2) {
-          if (param0 < 5) {
-            return 0;
-          } else {
+            if (param0 < 5) {
+                return 0;
+            }
             return 1;
-          }
-        } else {
-          return 2;
         }
+        return 2;
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -247,7 +240,7 @@ final class wd extends ji {
         }
     }
 
-    public static void e(boolean param0) {
+    public static void e() {
         field_L = null;
         field_K = null;
         field_Q = null;

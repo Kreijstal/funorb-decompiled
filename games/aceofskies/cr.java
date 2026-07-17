@@ -139,7 +139,8 @@ final class cr extends tf {
     }
 
     final long a(boolean param0) {
-        ((cr) this).field_c = ((cr) this).field_c + this.b(-89);
+        int discarded$0 = -89;
+        ((cr) this).field_c = ((cr) this).field_c + this.b();
         if (!(((cr) this).field_e <= ((cr) this).field_c)) {
             return (-((cr) this).field_c + ((cr) this).field_e) / 1000000L;
         }
@@ -198,7 +199,7 @@ final class cr extends tf {
         }
     }
 
-    private final long b(int param0) {
+    private final long b() {
         int var8 = 0;
         int var9 = AceOfSkies.field_G ? 1 : 0;
         long var2 = System.nanoTime();

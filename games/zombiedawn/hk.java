@@ -483,27 +483,21 @@ final class hk extends fb {
             for (var8 = 0; pa.field_x.length > var8; var8++) {
                 var10[var8] = pa.field_x[var8];
             }
-            if (param1 != -23) {
-                hk.b(false);
-            }
             var7[var7.length + -1] = new va(param6, param0, param4, param2, param3, param5);
             pa.field_x = var7;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) (Object) runtimeException, "hk.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+            throw sh.a((Throwable) (Object) runtimeException, "hk.C(" + param0 + 44 + -23 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
         }
     }
 
-    public static void b(boolean param0) {
-        if (!param0) {
-            field_P = null;
-        }
+    public static void b() {
         field_P = null;
         field_J = null;
         field_H = null;
         field_F = null;
     }
 
-    final static void i(int param0) {
+    final static void i() {
         uf var1 = (uf) (Object) ad.field_h.a(0);
         if (!(var1 != null)) {
             var1 = new uf();

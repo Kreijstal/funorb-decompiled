@@ -16,7 +16,7 @@ final class jo {
         }
     }
 
-    final static boolean a(ul param0, int param1) {
+    final static boolean a(ul param0) {
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
         RuntimeException stackIn_3_0 = null;
@@ -75,7 +75,7 @@ final class jo {
         return stackIn_1_0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_e = null;
         field_a = null;
         field_c = null;

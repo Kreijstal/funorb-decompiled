@@ -235,14 +235,15 @@ final class gn {
         }
         ((gn) this).field_h.a((byte) -125, ((gn) this).field_p, ((gn) this).field_s);
         ih.field_s = false;
-        ue var2 = jg.a(((gn) this).field_s, (byte) -61, gf.field_b, 0, ((gn) this).field_p, 0);
+        int discarded$1 = 0;
+        ue var2 = jg.a(((gn) this).field_s, (byte) -61, gf.field_b, 0, ((gn) this).field_p);
         if (var2 == null) {
             ((gn) this).c(115);
         }
         return var2;
     }
 
-    final static ll a(String param0, boolean param1) {
+    final static ll a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -396,7 +397,7 @@ final class gn {
         var13 = HostileSpawn.field_I ? 1 : 0;
         try {
           L0: {
-            var8 = 46 / ((9 - param3) / 50);
+            var8 = -46;
             var14 = new bd(64, 64);
             var9 = 0;
             L1: while (true) {
@@ -430,7 +431,8 @@ final class gn {
                           if (var12 != 0) {
                             if (var12 != 1) {
                               if (var12 == 2) {
-                                pf.a(var14.field_D, false);
+                                int discarded$3 = 0;
+                                pf.a(var14.field_D);
                                 wk.field_b[var10.field_h].a(true, 128, (int)var10.field_c, param1, param4);
                                 var14.a();
                                 wk.field_b[var10.field_h].a(true, 128, (int)var10.field_c, 32, 32);
@@ -482,7 +484,8 @@ final class gn {
                                 break L2;
                               }
                             } else {
-                              pf.a(var14.field_D, false);
+                              int discarded$4 = 0;
+                              pf.a(var14.field_D);
                               hh.field_a[var10.field_h].a(true, 128, (int)var10.field_c, param1, param4);
                               var14.a();
                               hh.field_a[var10.field_h].a(true, 128, (int)var10.field_c, 32, 32);
@@ -532,7 +535,8 @@ final class gn {
                               }
                             }
                           } else {
-                            pf.a(var14.field_D, false);
+                            int discarded$5 = 0;
+                            pf.a(var14.field_D);
                             qa.field_g[var10.field_h - -1].a(true, 128, (int)var10.field_c, param1, param4);
                             var14.a();
                             qa.field_g[1 + var10.field_h].a(true, 128, (int)var10.field_c, 32, 32);
@@ -613,7 +617,7 @@ final class gn {
           L12: {
             var7 = decompiledCaughtException;
             stackOut_59_0 = (RuntimeException) var7;
-            stackOut_59_1 = new StringBuilder().append("gn.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_59_1 = new StringBuilder().append("gn.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(101).append(44).append(param4).append(44);
             stackIn_61_0 = stackOut_59_0;
             stackIn_61_1 = stackOut_59_1;
             stackIn_60_0 = stackOut_59_0;

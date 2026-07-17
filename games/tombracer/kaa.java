@@ -70,58 +70,13 @@ final class kaa implements isa {
         return stackIn_1_0;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         bta.field_q = 0;
         ni.field_c = true;
     }
 
-    final static boolean a(int param0, int param1, boolean param2) {
-        int stackIn_4_0 = 0;
-        int stackIn_5_0 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_7_1 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_6_1 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_5_1 = 0;
-        if (param2) {
-          return false;
-        } else {
-          L0: {
-            if ((24 & param1) == 0) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              break L0;
-            } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              break L0;
-            }
-          }
-          L1: {
-            stackOut_4_0 = stackIn_4_0;
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_5_0 = stackOut_4_0;
-            if ((544 & param1) != -545) {
-              stackOut_6_0 = stackIn_6_0;
-              stackOut_6_1 = 0;
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              break L1;
-            } else {
-              stackOut_5_0 = stackIn_5_0;
-              stackOut_5_1 = 1;
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              break L1;
-            }
-          }
-          return (stackIn_7_0 | stackIn_7_1) != 0;
-        }
+    final static boolean a(int param0, int param1) {
+        return (((24 & param1) != 0 ? 1 : 0) | ((544 & param1) == 544 ? 1 : 0)) != 0;
     }
 
     public final void a(ae param0, int param1, int param2, int param3, boolean param4) {
@@ -179,11 +134,11 @@ final class kaa implements isa {
                 break L3;
               } else {
                 var12 = null;
-                byte[] discarded$2 = kaa.a(91, (byte[]) null, 83);
+                byte[] discarded$3 = kaa.a(91, (byte[]) null, 83);
                 break L3;
               }
             }
-            int discarded$3 = ((kaa) this).field_c.a("<u=" + Integer.toString(var6_int, 16) + ">" + param0.field_o + "</u>", param0.field_i + param1, param0.field_n + param3, param0.field_m, param0.field_p, var6_int, -1, ((kaa) this).field_a, ((kaa) this).field_b, ((kaa) this).field_c.field_k + ((kaa) this).field_c.field_w);
+            int discarded$4 = ((kaa) this).field_c.a("<u=" + Integer.toString(var6_int, 16) + ">" + param0.field_o + "</u>", param0.field_i + param1, param0.field_n + param3, param0.field_m, param0.field_p, var6_int, -1, ((kaa) this).field_a, ((kaa) this).field_b, ((kaa) this).field_c.field_k + ((kaa) this).field_c.field_w);
             if (param0.b((byte) -34)) {
               L4: {
                 var7 = ((kaa) this).field_c.b(param0.field_o);
@@ -215,7 +170,8 @@ final class kaa implements isa {
                   }
                 }
               }
-              nn.a(var9 - 2, 2 + var10, var8, var7 + 4, false);
+              int discarded$5 = 0;
+              nn.a(var9 - 2, 2 + var10, var8, var7 + 4);
               break L0;
             } else {
               return;

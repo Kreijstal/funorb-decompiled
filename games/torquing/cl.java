@@ -8,7 +8,7 @@ final class cl {
     static String field_c;
     static t field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
         field_e = null;
@@ -18,18 +18,18 @@ final class cl {
 
     final static void a(int param0, boolean param1, uh param2, la param3) {
         try {
-            if (param1) {
-                field_c = null;
-            }
-            pf.field_A = n.c((byte) 57) * param0 / 1000;
-            ti.a(param3, 28922);
+            int discarded$0 = 57;
+            pf.field_A = n.c() * param0 / 1000;
+            int discarded$1 = 28922;
+            ti.a(param3);
             le.a(6, param3);
             kl.a((byte) 66, param3);
             nb.g((byte) 96);
-            af.a(true);
+            int discarded$2 = 1;
+            af.a();
             jh.field_z = 0 - pf.field_A;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) (Object) runtimeException, "cl.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw rb.a((Throwable) (Object) runtimeException, "cl.A(" + param0 + 44 + 0 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 

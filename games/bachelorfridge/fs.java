@@ -31,7 +31,8 @@ final class fs {
                 ((fs) this).field_d.b(hla.field_t, (byte) 123);
                 hla.field_t.field_g = 0;
                 dj.field_c.field_h.a(-2, hla.field_t);
-                this.c(15467);
+                int discarded$1 = 15467;
+                this.c();
                 break L0;
               } else {
                 if (var8[var5] != null) {
@@ -74,7 +75,7 @@ final class fs {
         sja.field_fb.c(param0, (byte) 125);
     }
 
-    private final void c(int param0) {
+    private final void c() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -264,9 +265,9 @@ final class fs {
             L1: {
               if (((fs) this).field_a) {
                 sja.field_fb.c(58, (byte) 107);
-                int fieldTemp$2 = sja.field_fb.field_g + 1;
+                int fieldTemp$4 = sja.field_fb.field_g + 1;
                 sja.field_fb.field_g = sja.field_fb.field_g + 1;
-                var4_int = fieldTemp$2;
+                var4_int = fieldTemp$4;
                 sja.field_fb.d(param2, 0);
                 var5 = 0;
                 L2: while (true) {
@@ -282,7 +283,8 @@ final class fs {
                 }
               } else {
                 ((fs) this).field_d.a(param1, 0, (byte) -31);
-                this.c(15467);
+                int discarded$5 = 15467;
+                this.c();
                 hla.field_t.field_g = 0;
                 ((fs) this).field_d.a(hla.field_t, -1);
                 ((fs) this).field_d.h((byte) -111);

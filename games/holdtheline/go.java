@@ -64,7 +64,7 @@ final class go {
         return ((go) this).field_f != null ? true : false;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -125,7 +125,7 @@ final class go {
         v.field_B = param1;
     }
 
-    final static void a(int param0, int param1, String[] param2, java.applet.Applet param3, int param4, int param5) {
+    final static void a(int param0, int param1, String[] param2, java.applet.Applet param3) {
         String var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
@@ -188,7 +188,8 @@ final class go {
                 le.field_r = 2;
                 break L3;
               } else {
-                if (!ik.a((CharSequence) (Object) var6, true)) {
+                int discarded$29 = 1;
+                if (!ik.a((CharSequence) (Object) var6)) {
                   le.field_r = 2;
                   break L3;
                 } else {
@@ -197,9 +198,9 @@ final class go {
                 }
               }
             }
-            ol.field_g = param0;
-            t.field_n = param1;
-            qe.field_b = param4;
+            ol.field_g = 0;
+            t.field_n = 16777215;
+            qe.field_b = 0;
             lf.field_a = new hj[param2.length];
             var7 = 0;
             L4: while (true) {
@@ -218,7 +219,7 @@ final class go {
           L5: {
             var6_ref = decompiledCaughtException;
             stackOut_16_0 = (RuntimeException) var6_ref;
-            stackOut_16_1 = new StringBuilder().append("go.G(").append(param0).append(44).append(param1).append(44);
+            stackOut_16_1 = new StringBuilder().append("go.G(").append(0).append(44).append(16777215).append(44);
             stackIn_18_0 = stackOut_16_0;
             stackIn_18_1 = stackOut_16_1;
             stackIn_17_0 = stackOut_16_0;
@@ -266,7 +267,7 @@ final class go {
               break L6;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param4 + 44 + 0 + 41);
+          throw kk.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + 0 + 44 + 0 + 41);
         }
     }
 
@@ -282,7 +283,7 @@ final class go {
         return ((go) this).field_f;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
         field_l = null;
         field_a = null;

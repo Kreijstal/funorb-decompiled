@@ -279,19 +279,20 @@ final class wd {
         try {
           L0: {
             if (!lc.a(true, param2)) {
-              if (wc.a(param2, param0 ^ -14)) {
+              if (wc.a(param2, -14)) {
                 stackOut_5_0 = 0;
                 stackIn_6_0 = stackOut_5_0;
                 return stackIn_6_0 != 0;
               } else {
                 if (!ef.a(96, param2)) {
-                  if (param1.length() == param0) {
+                  if (param1.length() == 0) {
                     stackOut_12_0 = 1;
                     stackIn_13_0 = stackOut_12_0;
                     return stackIn_13_0 != 0;
                   } else {
                     if (!nm.a(param1, (byte) -89, param2)) {
-                      if (!qd.a(param1, param2, false)) {
+                      int discarded$7 = 0;
+                      if (!qd.a(param1, param2)) {
                         if (!ig.a(param1, 0, param2)) {
                           stackOut_23_0 = 1;
                           stackIn_24_0 = stackOut_23_0;
@@ -329,7 +330,7 @@ final class wd {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_25_0 = (RuntimeException) var3;
-            stackOut_25_1 = new StringBuilder().append("wd.E(").append(param0).append(44);
+            stackOut_25_1 = new StringBuilder().append("wd.E(").append(0).append(44);
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;

@@ -6,7 +6,7 @@ final class ut {
     static pa field_c;
     static String field_b;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
     }
@@ -37,24 +37,20 @@ final class ut {
         var8 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {
-            if (param1 == -96) {
-              param0--;
-              L1: while (true) {
-                if (param0 < 0) {
-                  break L0;
-                } else {
-                  var9 = param2;
-                  var5_array = var9;
-                  var6 = param4;
-                  var7 = param3;
-                  var9[var6] = var7 + (pg.a(var9[var6], 16711422) >> 1);
-                  param4++;
-                  param0--;
-                  continue L1;
-                }
+            param0--;
+            L1: while (true) {
+              if (param0 < 0) {
+                break L0;
+              } else {
+                var9 = param2;
+                var5_array = var9;
+                var6 = param4;
+                var7 = param3;
+                var9[var6] = var7 + (pg.a(var9[var6], 16711422) >> 1);
+                param4++;
+                param0--;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -62,7 +58,7 @@ final class ut {
           L2: {
             var5 = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var5;
-            stackOut_8_1 = new StringBuilder().append("ut.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_8_1 = new StringBuilder().append("ut.A(").append(param0).append(44).append(-96).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;

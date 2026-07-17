@@ -23,7 +23,7 @@ abstract class mg {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_d = null;
         field_c = null;
         field_b = null;
@@ -80,7 +80,7 @@ abstract class mg {
                             var3 = var9 + "settings";
                             var4 = (String) lj.a("getcookies", (byte) 114, param1);
                             var5 = dj.a(-111, ';', var4);
-                            var6 = param0;
+                            var6 = 0;
                             statePc = 2;
                             continue stateLoop;
                         } catch (Throwable stateCaught_1) {
@@ -226,7 +226,7 @@ abstract class mg {
                     case 16: {
                         var2_ref = (RuntimeException) (Object) caughtException;
                         stackOut_16_0 = (RuntimeException) var2_ref;
-                        stackOut_16_1 = new StringBuilder().append("mg.G(").append(param0).append(44);
+                        stackOut_16_1 = new StringBuilder().append("mg.G(").append(0).append(44);
                         stackIn_18_0 = stackOut_16_0;
                         stackIn_18_1 = stackOut_16_1;
                         stackIn_17_0 = stackOut_16_0;

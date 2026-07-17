@@ -52,30 +52,46 @@ class nk extends tg {
     }
 
     private final pb a(int param0, byte param1, int param2) {
+        pb var4 = null;
         pb var5 = null;
-        int var6 = Virogrid.field_F ? 1 : 0;
-        pb var4 = (pb) (Object) ((nk) this).field_G.a((byte) -98);
-        while (var4 != null) {
+        int var6 = 0;
+        var6 = Virogrid.field_F ? 1 : 0;
+        var4 = (pb) (Object) ((nk) this).field_G.a((byte) -98);
+        L0: while (true) {
+          if (var4 == null) {
+            return null;
+          } else {
             var5 = var4;
-            while (var5 != null) {
-                if (var5.field_r <= param2) {
-                    if (param0 >= var5.field_g) {
-                        if (param2 < var5.field_r + var5.field_j) {
-                            if (!(var5.field_s + var5.field_g < param0)) {
-                                return var4;
-                            }
+            L1: while (true) {
+              if (var5 == null) {
+                var4 = (pb) (Object) ((nk) this).field_G.a(16213);
+                continue L0;
+              } else {
+                L2: {
+                  if (var5.field_r > param2) {
+                    break L2;
+                  } else {
+                    if (param0 < var5.field_g) {
+                      break L2;
+                    } else {
+                      if (param2 >= var5.field_r + var5.field_j) {
+                        break L2;
+                      } else {
+                        if (var5.field_s + var5.field_g >= param0) {
+                          return var4;
+                        } else {
+                          break L2;
                         }
+                      }
                     }
+                  }
                 }
                 var5 = var5.field_q;
+                continue L1;
+              }
             }
-            var4 = (pb) (Object) ((nk) this).field_G.a(16213);
+          }
         }
-        if (param1 == -53) {
-            return null;
-        }
-        field_K = null;
-        return null;
     }
 
     final void a(int param0, int param1, int param2, byte param3) {
@@ -217,30 +233,26 @@ class nk extends tg {
         String stackOut_7_2 = null;
         try {
           L0: {
-            if (param1 > 113) {
-              L1: {
-                super.a(param0, 115, param2, param3);
-                ((nk) this).field_L = null;
-                if (((nk) this).field_p) {
-                  var5_int = -((nk) this).field_l + (-param0 + nl.field_u);
-                  var6 = -((nk) this).field_u + -param3 + hk.field_Jb;
-                  ((nk) this).field_L = this.a(var6, (byte) -53, var5_int);
-                  break L1;
-                } else {
-                  break L1;
-                }
+            L1: {
+              super.a(param0, 115, param2, param3);
+              ((nk) this).field_L = null;
+              if (((nk) this).field_p) {
+                var5_int = -((nk) this).field_l + (-param0 + nl.field_u);
+                var6 = -((nk) this).field_u + -param3 + hk.field_Jb;
+                ((nk) this).field_L = this.a(var6, (byte) -53, var5_int);
+                break L1;
+              } else {
+                break L1;
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var5 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var5;
-            stackOut_6_1 = new StringBuilder().append("nk.E(").append(param0).append(44).append(param1).append(44);
+            stackOut_6_1 = new StringBuilder().append("nk.E(").append(param0).append(44).append(114).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;

@@ -42,7 +42,7 @@ class mm {
         sj var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_o) {
             break L0;
           } else {
@@ -52,7 +52,7 @@ class mm {
         }
         L1: {
           qb.a(param0, 0, var3);
-          ((mm) this).field_m = ((mm) this).field_m - 256;
+          ((mm) this).field_m = ((mm) this).field_m - param1;
           if (((mm) this).field_a == null) {
             break L1;
           } else {
@@ -219,7 +219,7 @@ class mm {
           if (((mm) this).field_a == null) {
             break L17;
           } else {
-            ((mm) this).field_a.b(param0, 0, 256);
+            ((mm) this).field_a.b(param0, 0, param1);
             break L17;
           }
         }
@@ -559,7 +559,7 @@ class mm {
         ((mm) this).field_a = param0;
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void a(int param0, boolean param1) {
         int stackIn_7_0 = 0;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
@@ -611,7 +611,8 @@ class mm {
                       field_b = null;
                       break L0;
                     } else {
-                      vg.a(50L, (byte) 23);
+                      int discarded$1 = 23;
+                      vg.a(50L);
                       continue L2;
                     }
                   }
@@ -643,12 +644,12 @@ class mm {
     }
 
     private final void b(int param0) {
-        ((mm) this).field_m = ((mm) this).field_m - 256;
+        ((mm) this).field_m = ((mm) this).field_m - param0;
         if (((mm) this).field_m < 0) {
             ((mm) this).field_m = 0;
         }
         if (((mm) this).field_a != null) {
-            ((mm) this).field_a.a(256);
+            ((mm) this).field_a.a(param0);
             return;
         }
     }

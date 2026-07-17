@@ -6,7 +6,7 @@ final class sb extends bj {
     static int field_rb;
     static int field_tb;
 
-    final static boolean j(byte param0) {
+    final static boolean j() {
         if (!kn.field_L) {
             return false;
         }
@@ -16,7 +16,7 @@ final class sb extends bj {
         return true;
     }
 
-    final static aj b(String param0, boolean param1) {
+    final static aj b(String param0) {
         RuntimeException var2 = null;
         aj stackIn_6_0 = null;
         Object stackIn_8_0 = null;
@@ -98,7 +98,7 @@ final class sb extends bj {
         return (aj) (Object) stackIn_8_0;
     }
 
-    final static void a(String param0, boolean param1) {
+    final static void a(String param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -350,10 +350,6 @@ final class sb extends bj {
     final static void d(int param0, int param1, int param2) {
         ac.field_k = param2;
         kj.field_c = param1;
-        if (param0 != 33) {
-            Object var4 = null;
-            sb.a((String) null, true);
-        }
     }
 
     sb(fm param0, mf param1) {

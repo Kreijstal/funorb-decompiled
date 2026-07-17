@@ -5,12 +5,7 @@ final class bd implements ub {
     static String field_a;
     static al field_b;
 
-    final static void a(int param0, boolean param1) {
-        if (!param1) {
-            bd.a(-34, 70);
-            ch.field_b = param0;
-            return;
-        }
+    final static void a(int param0) {
         ch.field_b = param0;
     }
 
@@ -22,12 +17,9 @@ final class bd implements ub {
     final static void a(int param0, byte param1, sp param2) {
         try {
             tm.field_f.a((nm) (Object) param2, (byte) 3);
-            if (param1 != 25) {
-                bd.a(20, false);
-            }
-            ke.a(param0, param2, param1 + 14964);
+            ke.a(3, param2, 14989);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "bd.F(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "bd.F(" + 3 + 44 + 25 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -94,7 +86,7 @@ final class bd implements ub {
                               break L2;
                             } else {
                               var5 = 0;
-                              var6 = param1;
+                              var6 = 0;
                               L3: while (true) {
                                 if (~param0.length() >= ~var6) {
                                   if (var5 > 0) {
@@ -182,12 +174,12 @@ final class bd implements ub {
               break L6;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + 44 + param1 + 44 + param2 + 41);
+          throw qb.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + 44 + 0 + 44 + param2 + 41);
         }
         return stackIn_32_0 != 0;
     }
 
-    final static jp[] a(String param0, String param1, mf param2, byte param3) {
+    final static jp[] a(String param0, String param1, mf param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -243,7 +235,8 @@ final class bd implements ub {
           L0: {
             var4_int = param2.a(param0, false);
             var5 = param2.a(var4_int, -46, param1);
-            stackOut_2_0 = qa.a(var5, var4_int, param2, true);
+            int discarded$2 = 1;
+            stackOut_2_0 = qa.a(var5, var4_int, param2);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -416,18 +409,11 @@ final class bd implements ub {
         }
     }
 
-    final static void a(int param0, int param1) {
-        pi var2 = null;
-        var2 = k.field_h;
-        var2.e(-13413, param0);
+    final static void a() {
+        pi var2 = k.field_h;
+        var2.e(-13413, 6);
         var2.a(-119, 1);
         var2.a(-127, 0);
-        if (param1 < 63) {
-          field_a = null;
-          return;
-        } else {
-          return;
-        }
     }
 
     static {

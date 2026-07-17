@@ -118,7 +118,7 @@ final class nl extends oa {
         return stackIn_16_0 != 0;
     }
 
-    final static boolean g(int param0) {
+    final static boolean g() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -187,29 +187,27 @@ final class nl extends oa {
         return stackIn_15_0 != 0;
     }
 
-    final static void a(int param0, byte[] param1, boolean param2, int param3, int param4, byte param5) {
+    final static void a(int param0, byte[] param1) {
         int var7 = 0;
         int var8 = 0;
         kj var6 = mm.field_g;
-        var6.a(param4, (byte) -117);
+        var6.a(11, (byte) -117);
         try {
             var6.field_p = var6.field_p + 1;
             var7 = var6.field_p;
             var6.a((byte) 115, 4);
             var6.a((byte) 119, param0);
-            var8 = param3;
-            if (!(!param2)) {
-                var8 += 128;
-            }
+            var8 = 0;
+            var8 += 128;
             var6.a((byte) 112, var8);
             var6.a(param1.length, (byte) -122, 0, param1);
             var6.b((byte) -116, var6.field_p - var7);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "nl.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + 81 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "nl.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 1 + 44 + 0 + 44 + 11 + 44 + 81 + 41);
         }
     }
 
-    public static void f(byte param0) {
+    public static void f() {
         field_db = null;
         field_V = null;
         field_Z = null;
@@ -329,7 +327,7 @@ final class nl extends oa {
                 var4 = var9;
                 L2: while (true) {
                   if (var9 >= var3) {
-                    var5 = -123 % ((49 - param0) / 35);
+                    var5 = 0;
                     break L0;
                   } else {
                     var5_ref_pe = nn.field_h[var9];
@@ -354,7 +352,7 @@ final class nl extends oa {
           L3: {
             var2 = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var2;
-            stackOut_9_1 = new StringBuilder().append("nl.BA(").append(param0).append(44);
+            stackOut_9_1 = new StringBuilder().append("nl.BA(").append(90).append(44);
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -385,47 +383,43 @@ final class nl extends oa {
         int var2 = 0;
         int var3 = 0;
         var3 = SteelSentinels.field_G;
-        if (param1 == 26) {
-          var2 = param0;
-          if (55 != var2) {
-            if (0 != var2) {
-              if (var2 != 57) {
-                if (62 == var2) {
-                  return 13;
+        var2 = param0;
+        if (55 != var2) {
+          if (0 != var2) {
+            if (var2 != 57) {
+              if (62 == var2) {
+                return 13;
+              } else {
+                if (var2 == 65) {
+                  return 16;
                 } else {
-                  if (var2 == 65) {
-                    return 16;
-                  } else {
-                    if (var2 != 69) {
-                      if (var2 != 72) {
-                        if (var2 == 75) {
-                          return 26;
-                        } else {
-                          if (var2 == 79) {
-                            return 28;
-                          } else {
-                            return -1;
-                          }
-                        }
+                  if (var2 != 69) {
+                    if (var2 != 72) {
+                      if (var2 == 75) {
+                        return 26;
                       } else {
-                        return 23;
+                        if (var2 == 79) {
+                          return 28;
+                        } else {
+                          return -1;
+                        }
                       }
                     } else {
-                      return 19;
+                      return 23;
                     }
+                  } else {
+                    return 19;
                   }
                 }
-              } else {
-                return 5;
               }
             } else {
-              return 9;
+              return 5;
             }
           } else {
-            return 2;
+            return 9;
           }
         } else {
-          return 14;
+          return 2;
         }
     }
 
@@ -489,7 +483,7 @@ final class nl extends oa {
         }
     }
 
-    final static String a(String param0, int param1, boolean param2) {
+    final static String a(String param0, int param1) {
         RuntimeException var3 = null;
         int var5 = 0;
         int var6 = 0;

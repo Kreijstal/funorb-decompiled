@@ -33,37 +33,74 @@ final class uv {
     }
 
     final static int b(int param0, int param1, byte param2) {
-        if (0 != param1) {
-          if (param1 >= 0) {
-            if (0 != param0) {
-              if (param0 >= 0) {
-                return vd.a(param0, 11277, param1);
+        if (param2 == 2) {
+          if (0 != param1) {
+            if (param1 >= 0) {
+              if (0 != param0) {
+                if (param0 >= 0) {
+                  return vd.a(param0, 11277, param1);
+                } else {
+                  return -vd.a(-param0, 11277, param1);
+                }
               } else {
-                return -vd.a(-param0, 11277, param1);
+                return 0;
+              }
+            } else {
+              if (param0 == 0) {
+                return 4096;
+              } else {
+                if (param0 < 0) {
+                  return vd.a(-param0, param2 ^ 11279, -param1) + -4096;
+                } else {
+                  return -vd.a(param0, 11277, -param1) + 4096;
+                }
+              }
+            }
+          } else {
+            if (param0 != 0) {
+              if (param0 >= 0) {
+                return 2048;
+              } else {
+                return -2048;
               }
             } else {
               return 0;
             }
-          } else {
-            if (param0 == 0) {
-              return 4096;
-            } else {
-              if (param0 < 0) {
-                return vd.a(-param0, 11277, -param1) + -4096;
-              } else {
-                return -vd.a(param0, 11277, -param1) + 4096;
-              }
-            }
           }
         } else {
-          if (param0 != 0) {
-            if (param0 >= 0) {
-              return 2048;
+          field_i = null;
+          if (0 != param1) {
+            if (param1 >= 0) {
+              if (0 != param0) {
+                if (param0 >= 0) {
+                  return vd.a(param0, 11277, param1);
+                } else {
+                  return -vd.a(-param0, 11277, param1);
+                }
+              } else {
+                return 0;
+              }
             } else {
-              return -2048;
+              if (param0 == 0) {
+                return 4096;
+              } else {
+                if (param0 < 0) {
+                  return vd.a(-param0, param2 ^ 11279, -param1) + -4096;
+                } else {
+                  return -vd.a(param0, 11277, -param1) + 4096;
+                }
+              }
             }
           } else {
-            return 0;
+            if (param0 != 0) {
+              if (param0 >= 0) {
+                return 2048;
+              } else {
+                return -2048;
+              }
+            } else {
+              return 0;
+            }
           }
         }
     }
@@ -107,7 +144,8 @@ final class uv {
           if (((uv) this).field_b != dd.field_c) {
             if (field_i != null) {
               if (np.a(param1 + 123)) {
-                var7 = lo.a(((uv) this).field_b, false);
+                int discarded$1 = 0;
+                var7 = lo.a(((uv) this).field_b);
                 var4 = nk.a(param1 ^ 31253, ((uv) this).field_b);
                 var5 = this.a(-26719);
                 if (var4 == null) {
@@ -291,17 +329,19 @@ final class uv {
                     return true;
                 }
                 if (param0 == 14) {
-                    uq.a((byte) -122);
+                    int discarded$0 = -122;
+                    uq.a();
                     return true;
                 }
                 if (20 == param0) {
-                    hp.b(0);
+                    int discarded$1 = 0;
+                    hp.b();
                     return true;
                 }
                 if (param0 != 19) {
                     return false;
                 }
-                boolean discarded$0 = mi.a(((uv) this).field_b, ((uv) this).field_k, (byte) 127, ((uv) this).field_l, ((uv) this).field_h);
+                boolean discarded$2 = mi.a(((uv) this).field_b, ((uv) this).field_k, (byte) 127, ((uv) this).field_l, ((uv) this).field_h);
                 return true;
             }
             gd.a(11, 1, ((uv) this).field_l, param2);
@@ -473,7 +513,7 @@ final class uv {
         }
     }
 
-    private final boolean a(int param0, int param1, byte param2) {
+    private final boolean a(int param0, int param1) {
         String var5 = null;
         String var6 = null;
         String var7 = null;
@@ -488,7 +528,8 @@ final class uv {
                 return true;
             }
             if (param0 == 6) {
-                var6 = il.a(((uv) this).field_k, param1, (byte) 126);
+                int discarded$0 = 126;
+                var6 = il.a(((uv) this).field_k, param1);
                 if (!(var6 == null)) {
                     wi.a((String) null, ((uv) this).field_k, 0, 2, var6, -128);
                 }
@@ -510,19 +551,17 @@ final class uv {
         return true;
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_d = null;
-        if (param0 <= 103) {
-            return;
-        }
         field_m = null;
         field_i = null;
     }
 
-    private final boolean b(int param0, int param1, int param2) {
+    private final boolean b(int param0, int param1) {
         int var5 = Kickabout.field_G;
         if (0 == param0) {
-            uc.a(((uv) this).field_b, param1, 122);
+            int discarded$0 = 122;
+            uc.a(((uv) this).field_b, param1);
             return true;
         }
         if (1 == param0) {
@@ -704,7 +743,7 @@ final class uv {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         qd.b(38, 17);
     }
 
@@ -753,7 +792,8 @@ final class uv {
                 } else {
                   L3: {
                     var5 = this.a(-26719);
-                    var6 = tr.a(((uv) this).field_k, (byte) 40);
+                    int discarded$1 = 40;
+                    var6 = tr.a(((uv) this).field_k);
                     var7 = hi.a(0, ((uv) this).field_k) ? 1 : 0;
                     if (var6 != null) {
                       break L3;
@@ -977,10 +1017,12 @@ final class uv {
         if (!(param1 != var6)) {
             return false;
         }
-        boolean discarded$0 = this.b(var6, param3, 2);
-        boolean discarded$1 = this.a(var6, param4, (byte) -100);
-        boolean discarded$2 = this.a(var6, param1 + 113, param4);
-        boolean discarded$3 = this.c(param1 + -8983, param2, var6);
+        int discarded$0 = 2;
+        boolean discarded$1 = this.b(var6, param3);
+        int discarded$2 = -100;
+        boolean discarded$3 = this.a(var6, param4);
+        boolean discarded$4 = this.a(var6, param1 + 113, param4);
+        boolean discarded$5 = this.c(param1 + -8983, param2, var6);
         return true;
     }
 

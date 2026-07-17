@@ -17,66 +17,58 @@ final class ic extends am {
     static int field_n;
     int field_j;
 
-    final static void a(int param0, int param1, p param2, byte param3) {
-        RuntimeException runtimeException = null;
+    final static void a(int param0, int param1, p param2) {
+        RuntimeException var4 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
         String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              pe.field_fb[4].a(true, 128, (int)param2.field_c, param0 - -8, 8 + param1);
-              if (param3 == 107) {
-                break L1;
-              } else {
-                field_n = -58;
-                break L1;
-              }
-            }
+            pe.field_fb[4].a(true, 128, (int)param2.field_c, param0 - -8, 8 + param1);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("ic.C(").append(param0).append(44).append(param1).append(44);
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+          L1: {
+            var4 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var4;
+            stackOut_2_1 = new StringBuilder().append("ic.C(").append(param0).append(44).append(param1).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param2 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
-              break L2;
-            } else {
               stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
               stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              break L2;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param3 + 41);
+          throw wg.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 107 + 41);
         }
     }
 
@@ -159,7 +151,8 @@ final class ic extends am {
                     break L2;
                   }
                 }
-                jf.a(var3_ref, (byte) 19);
+                int discarded$2 = 19;
+                jf.a(var3_ref);
                 var7 = re.a(var3_ref, ":", "%3a", -125);
                 var8 = re.a(var7, "@", "%40", -124);
                 var9 = re.a(var8, "&", "%26", -113);
@@ -227,7 +220,7 @@ final class ic extends am {
                             break L6;
                           } else {
                             var5 = (DataInputStream) var4.field_c;
-                            int discarded$1 = var5.read();
+                            int discarded$3 = var5.read();
                             var5.close();
                             break L6;
                           }
@@ -259,7 +252,7 @@ final class ic extends am {
         }
     }
 
-    final static ll b(String param0, byte param1) {
+    final static ll b(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String[] var3 = null;
@@ -310,7 +303,8 @@ final class ic extends am {
                   var5 = 0;
                   L1: while (true) {
                     if (var5 >= var4.length) {
-                      stackOut_18_0 = gn.a(var3[-1 + var3.length], false);
+                      int discarded$2 = 0;
+                      stackOut_18_0 = gn.a(var3[-1 + var3.length]);
                       stackIn_19_0 = stackOut_18_0;
                       break L0;
                     } else {
@@ -371,11 +365,7 @@ final class ic extends am {
         return stackIn_19_0;
     }
 
-    public static void c(int param0) {
-        if (param0 != 128) {
-            Object var2 = null;
-            ic.a(43, 18, (p) null, (byte) -98);
-        }
+    public static void c() {
         field_o = null;
         field_k = null;
     }

@@ -7,7 +7,7 @@ final class dl {
     static nf[] field_d;
     static String[] field_c;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         field_b = null;
@@ -15,30 +15,13 @@ final class dl {
     }
 
     final static void a(boolean param0, boolean param1, boolean param2) {
-        Object var4 = null;
-        if (param2) {
-          fn.b(0, 0, fn.field_g, fn.field_l, 0, 192);
-          if (param1) {
+        if (!param2) {
+            fn.d();
             kh.a((byte) 35, param2);
             return;
-          } else {
-            var4 = null;
-            dl.a((java.awt.Component) null, (byte) 72);
-            kh.a((byte) 35, param2);
-            return;
-          }
-        } else {
-          fn.d();
-          if (param1) {
-            kh.a((byte) 35, param2);
-            return;
-          } else {
-            var4 = null;
-            dl.a((java.awt.Component) null, (byte) 72);
-            kh.a((byte) 35, param2);
-            return;
-          }
         }
+        fn.b(0, 0, fn.field_g, fn.field_l, 0, 192);
+        kh.a((byte) 35, param2);
     }
 
     final synchronized static byte[] a(int param0, int param1) {
@@ -459,14 +442,14 @@ final class dl {
         }
     }
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void a(java.awt.Component param0) {
         try {
             param0.removeKeyListener((java.awt.event.KeyListener) (Object) tf.field_p);
             param0.removeFocusListener((java.awt.event.FocusListener) (Object) tf.field_p);
-            int var2_int = -9 / ((param1 - 20) / 56);
+            int var2_int = 4;
             ab.field_a = -1;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "dl.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "dl.A(" + (param0 != null ? "{...}" : "null") + 44 + -112 + 41);
         }
     }
 

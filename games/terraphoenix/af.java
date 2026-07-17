@@ -7,7 +7,7 @@ abstract class af implements rc {
     static String[] field_d;
     static int field_a;
 
-    final static void d(int param0) {
+    final static void d() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int[] var2 = null;
@@ -56,7 +56,8 @@ abstract class af implements rc {
                   var6 = kf.field_f << 4;
                   var7 = 0;
                   var8 = bk.a((byte) 92, var6) >> 8;
-                  var9 = im.a(var6, true) >> 8;
+                  int discarded$2 = 1;
+                  var9 = im.a(var6) >> 8;
                   if (-1 == ef.field_j) {
                     break L2;
                   } else {
@@ -96,7 +97,8 @@ abstract class af implements rc {
                         var18 = 0;
                         L5: while (true) {
                           if (3 <= var18) {
-                            nd.a(var17, true, ik.field_c, 37, false, ld.field_a, false);
+                            int discarded$3 = 0;
+                            nd.a(var17, true, ik.field_c, 37, false, ld.field_a);
                             lm.a(var17, var13, var7, var12, var9, 0, var8, var14);
                             var15++;
                             continue L3;
@@ -148,9 +150,6 @@ abstract class af implements rc {
     }
 
     final static void a(boolean param0, boolean param1) {
-        if (!param0) {
-            return;
-        }
         vc.field_a.a(param1, -125);
     }
 
@@ -411,7 +410,7 @@ abstract class af implements rc {
         return stackIn_22_0;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
         field_d = null;
     }

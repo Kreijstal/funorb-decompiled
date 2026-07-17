@@ -16,19 +16,11 @@ abstract class ck {
         var11 = Confined.field_J ? 1 : 0;
         try {
           L0: {
-            L1: {
-              if (param0 == -1942300510) {
-                break L1;
-              } else {
-                field_a = null;
-                break L1;
-              }
-            }
             var7_int = (int)(325.94932345220167 * param1);
             var8 = (int)(param2 * 325.94932345220167);
             var9 = (int)(param3 * 325.94932345220167);
             var10 = 1;
-            L2: while (true) {
+            L1: while (true) {
               if (var10 >= 4) {
                 break L0;
               } else {
@@ -39,14 +31,14 @@ abstract class ck {
                 bh.field_b[var10 - -11] = ti.field_j[va.a(2047, var8 * (var10 * 4 + 3))] >> 2;
                 bh.field_b[var10 - -14] = ti.field_j[va.a(var9 * (var10 * 4 + 3), 2047)] >> 2;
                 var10++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var7, "ck.I(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw sd.a((Throwable) (Object) var7, "ck.I(" + -1942300510 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -145,7 +137,7 @@ abstract class ck {
             var29 = param0[11] >> 2;
             var14 = param3[3] * var27 + var28 * param3[4] + var29 * param3[5] >> 14;
             var15 = var23 * param3[8] + param3[7] * var22 + var21 * param3[6] >> 14;
-            var30 = 34 % ((25 - param1) / 62);
+            var30 = 0;
             var20 = var29 * param3[11] + var28 * param3[10] + var27 * param3[9] >> 14;
             var19 = param3[11] * var26 + (param3[10] * var25 + var24 * param3[9]) >> 14;
             var16 = var26 * param3[8] + var24 * param3[6] - -(var25 * param3[7]) >> 14;
@@ -227,46 +219,42 @@ abstract class ck {
                     }
                   }
                 }
-                L4: {
-                  if (param5) {
-                    var9 = param3[3];
-                    var10 = param3[4];
-                    var11 = param3[5];
-                    var12 = param3[6];
-                    var13 = param3[7];
-                    var14 = param3[8];
-                    var15 = param3[9];
-                    var16 = param3[10];
-                    var17 = param3[11];
-                    var18 = 0;
-                    L5: while (true) {
-                      if (~param6.field_g >= ~var18) {
-                        break L4;
+                var9 = param3[3];
+                var10 = param3[4];
+                var11 = param3[5];
+                var12 = param3[6];
+                var13 = param3[7];
+                var14 = param3[8];
+                var15 = param3[9];
+                var16 = param3[10];
+                var17 = param3[11];
+                var18 = 0;
+                L4: while (true) {
+                  L5: {
+                    if (~param6.field_g >= ~var18) {
+                      break L5;
+                    } else {
+                      stackOut_56_0 = ~var18;
+                      stackOut_56_1 = ~tf.field_m.length;
+                      stackIn_58_0 = stackOut_56_0;
+                      stackIn_58_1 = stackOut_56_1;
+                      if (stackIn_58_0 <= stackIn_58_1) {
+                        break L5;
                       } else {
-                        stackOut_56_0 = ~var18;
-                        stackOut_56_1 = ~tf.field_m.length;
-                        stackIn_58_0 = stackOut_56_0;
-                        stackIn_58_1 = stackOut_56_1;
-                        if (stackIn_58_0 <= stackIn_58_1) {
-                          break L4;
-                        } else {
-                          var19 = param6.field_E[var18];
-                          var20 = param6.field_y[var18];
-                          var21 = param6.field_r[var18];
-                          tf.field_m[var18] = var20 * var12 + var9 * var19 - -(var21 * var15) >> 16;
-                          sd.field_c[var18] = var19 * var10 + (var20 * var13 + var16 * var21) >> 16;
-                          w.field_R[var18] = var14 * var20 + (var11 * var19 - -(var17 * var21)) >> 16;
-                          var18++;
-                          continue L5;
-                        }
+                        var19 = param6.field_E[var18];
+                        var20 = param6.field_y[var18];
+                        var21 = param6.field_r[var18];
+                        tf.field_m[var18] = var20 * var12 + var9 * var19 - -(var21 * var15) >> 16;
+                        sd.field_c[var18] = var19 * var10 + (var20 * var13 + var16 * var21) >> 16;
+                        w.field_R[var18] = var14 * var20 + (var11 * var19 - -(var17 * var21)) >> 16;
+                        var18++;
+                        continue L4;
                       }
                     }
-                  } else {
-                    break L4;
                   }
+                  rc.a((byte) -126, var7_int, false, var8, param6);
+                  break L0;
                 }
-                rc.a((byte) -126, var7_int, param4, var8, param6);
-                break L0;
               } else {
                 L6: {
                   var24 = param6.field_x[var23];
@@ -301,16 +289,6 @@ abstract class ck {
                     break L6;
                   }
                 }
-                L9: {
-                  if (!param2) {
-                    break L9;
-                  } else {
-                    tg.field_T[var23] = var27 >> pc.field_h;
-                    wl.field_d[var23] = var28 >> pc.field_h;
-                    nm.field_C[var23] = var29;
-                    break L9;
-                  }
-                }
                 var23++;
                 continue L1;
               }
@@ -318,7 +296,7 @@ abstract class ck {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L10: {
+          L9: {
             var7 = decompiledCaughtException;
             stackOut_64_0 = (RuntimeException) var7;
             stackOut_64_1 = new StringBuilder().append("ck.G(");
@@ -333,7 +311,7 @@ abstract class ck {
               stackIn_68_0 = stackOut_67_0;
               stackIn_68_1 = stackOut_67_1;
               stackIn_68_2 = stackOut_67_2;
-              break L10;
+              break L9;
             } else {
               stackOut_65_0 = (RuntimeException) (Object) stackIn_65_0;
               stackOut_65_1 = (StringBuilder) (Object) stackIn_65_1;
@@ -341,12 +319,12 @@ abstract class ck {
               stackIn_68_0 = stackOut_65_0;
               stackIn_68_1 = stackOut_65_1;
               stackIn_68_2 = stackOut_65_2;
-              break L10;
+              break L9;
             }
           }
-          L11: {
+          L10: {
             stackOut_68_0 = (RuntimeException) (Object) stackIn_68_0;
-            stackOut_68_1 = ((StringBuilder) (Object) stackIn_68_1).append(stackIn_68_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_68_1 = ((StringBuilder) (Object) stackIn_68_1).append(stackIn_68_2).append(44).append(109).append(44).append(0).append(44);
             stackIn_71_0 = stackOut_68_0;
             stackIn_71_1 = stackOut_68_1;
             stackIn_69_0 = stackOut_68_0;
@@ -358,7 +336,7 @@ abstract class ck {
               stackIn_72_0 = stackOut_71_0;
               stackIn_72_1 = stackOut_71_1;
               stackIn_72_2 = stackOut_71_2;
-              break L11;
+              break L10;
             } else {
               stackOut_69_0 = (RuntimeException) (Object) stackIn_69_0;
               stackOut_69_1 = (StringBuilder) (Object) stackIn_69_1;
@@ -366,12 +344,12 @@ abstract class ck {
               stackIn_72_0 = stackOut_69_0;
               stackIn_72_1 = stackOut_69_1;
               stackIn_72_2 = stackOut_69_2;
-              break L11;
+              break L10;
             }
           }
-          L12: {
+          L11: {
             stackOut_72_0 = (RuntimeException) (Object) stackIn_72_0;
-            stackOut_72_1 = ((StringBuilder) (Object) stackIn_72_1).append(stackIn_72_2).append(44).append(param4).append(44).append(param5).append(44);
+            stackOut_72_1 = ((StringBuilder) (Object) stackIn_72_1).append(stackIn_72_2).append(44).append(0).append(44).append(1).append(44);
             stackIn_75_0 = stackOut_72_0;
             stackIn_75_1 = stackOut_72_1;
             stackIn_73_0 = stackOut_72_0;
@@ -383,7 +361,7 @@ abstract class ck {
               stackIn_76_0 = stackOut_75_0;
               stackIn_76_1 = stackOut_75_1;
               stackIn_76_2 = stackOut_75_2;
-              break L12;
+              break L11;
             } else {
               stackOut_73_0 = (RuntimeException) (Object) stackIn_73_0;
               stackOut_73_1 = (StringBuilder) (Object) stackIn_73_1;
@@ -391,7 +369,7 @@ abstract class ck {
               stackIn_76_0 = stackOut_73_0;
               stackIn_76_1 = stackOut_73_1;
               stackIn_76_2 = stackOut_73_2;
-              break L12;
+              break L11;
             }
           }
           throw sd.a((Throwable) (Object) stackIn_76_0, stackIn_76_2 + 41);
@@ -402,7 +380,7 @@ abstract class ck {
 
     abstract void a(java.awt.Component param0, int param1);
 
-    final static boolean a(boolean param0, CharSequence param1, boolean param2) {
+    final static boolean a(boolean param0, CharSequence param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -431,7 +409,7 @@ abstract class ck {
         var4 = Confined.field_J ? 1 : 0;
         try {
           L0: {
-            if (!je.a(0, param0, param1)) {
+            if (!je.a(0, false, param1)) {
               stackOut_4_0 = 0;
               stackIn_5_0 = stackOut_4_0;
               return stackIn_5_0 != 0;
@@ -440,10 +418,11 @@ abstract class ck {
               L1: while (true) {
                 if (~var3_int <= ~param1.length()) {
                   L2: {
-                    if (!param2) {
+                    if (0 == 0) {
                       break L2;
                     } else {
-                      va discarded$1 = ck.a((String) null, (byte) -10);
+                      int discarded$2 = -10;
+                      va discarded$3 = ck.a((String) null);
                       break L2;
                     }
                   }
@@ -468,7 +447,7 @@ abstract class ck {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var3;
-            stackOut_20_1 = new StringBuilder().append("ck.F(").append(param0).append(44);
+            stackOut_20_1 = new StringBuilder().append("ck.F(").append(0).append(44);
             stackIn_23_0 = stackOut_20_0;
             stackIn_23_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -491,12 +470,12 @@ abstract class ck {
               break L3;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param2 + 41);
+          throw sd.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + 0 + 41);
         }
         return stackIn_19_0 != 0;
     }
 
-    final static va a(String param0, byte param1) {
+    final static va a(String param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -530,7 +509,7 @@ abstract class ck {
             L1: while (true) {
               if (~var2_int >= ~var3) {
                 L2: {
-                  if (param1 >= 126) {
+                  if (127 >= 126) {
                     break L2;
                   } else {
                     ck.a(35, (mi) null);
@@ -588,20 +567,20 @@ abstract class ck {
               break L4;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param1 + 41);
+          throw sd.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + 127 + 41);
         }
         return stackIn_16_0;
     }
 
     abstract void a(java.awt.Component param0, byte param1);
 
-    public static void a(byte param0) {
+    public static void a() {
         try {
-            int var1_int = -88 % ((param0 - 34) / 37);
+            int var1_int = 0;
             field_b = null;
             field_a = null;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "ck.H(" + param0 + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "ck.H(" + 81 + 41);
         }
     }
 
@@ -632,26 +611,19 @@ abstract class ck {
         var7 = Confined.field_J ? 1 : 0;
         try {
           L0: {
-            var2_ref = new hb(param1.a(param0 ^ -26592, "logo.fo3d", ""));
-            var3 = var2_ref.c(param0 ^ 26581);
+            var2_ref = new hb(param1.a(-43, "logo.fo3d", ""));
+            var3 = var2_ref.c(32);
             var2_ref.i(8);
-            im.field_a = ul.a(var2_ref, 31662);
+            int discarded$1 = 31662;
+            im.field_a = ul.a(var2_ref);
             Confined.field_K = new rm[var3];
             in.field_b = new int[var3][];
             var4 = 0;
             L1: while (true) {
               if (~var4 <= ~var3) {
-                L2: {
-                  if (param0 == 26613) {
-                    break L2;
-                  } else {
-                    field_b = null;
-                    break L2;
-                  }
-                }
                 var2_ref.j(116);
                 var4 = 0;
-                L3: while (true) {
+                L2: while (true) {
                   if (var3 <= var4) {
                     break L0;
                   } else {
@@ -662,7 +634,7 @@ abstract class ck {
                     in.field_b[var4] = var6;
                     var5.a(-var6[1], -var6[2], 117, -var6[0]);
                     var4++;
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
@@ -674,10 +646,10 @@ abstract class ck {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var2 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var2;
-            stackOut_15_1 = new StringBuilder().append("ck.D(").append(param0).append(44);
+            stackOut_15_1 = new StringBuilder().append("ck.D(").append(26613).append(44);
             stackIn_18_0 = stackOut_15_0;
             stackIn_18_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -689,7 +661,7 @@ abstract class ck {
               stackIn_19_0 = stackOut_18_0;
               stackIn_19_1 = stackOut_18_1;
               stackIn_19_2 = stackOut_18_2;
-              break L4;
+              break L3;
             } else {
               stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
               stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
@@ -697,7 +669,7 @@ abstract class ck {
               stackIn_19_0 = stackOut_16_0;
               stackIn_19_1 = stackOut_16_1;
               stackIn_19_2 = stackOut_16_2;
-              break L4;
+              break L3;
             }
           }
           throw sd.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);

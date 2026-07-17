@@ -28,13 +28,14 @@ final class bo extends le {
           if (var1.length() != 0) {
             break L1;
           } else {
-            var1 = t.a(1);
+            int discarded$11 = 1;
+            var1 = t.a();
             break L1;
           }
         }
         if (param0 < 19) {
           L2: {
-            String discarded$9 = bo.a(57);
+            String discarded$12 = bo.a(57);
             if (var1.length() == 0) {
               var1 = ta.field_a;
               break L2;

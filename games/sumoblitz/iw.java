@@ -6,7 +6,7 @@ final class iw {
     static int field_b;
     int field_c;
 
-    final static ne a(int param0, int param1, ki param2, int param3) {
+    final static ne a(int param0, int param1, ki param2) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         ne stackIn_4_0 = null;
@@ -31,7 +31,8 @@ final class iw {
         try {
           L0: {
             if (k.a(param2, param0, param1, -23046)) {
-              stackOut_3_0 = ad.e(12768);
+              int discarded$2 = 12768;
+              stackOut_3_0 = ad.e();
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

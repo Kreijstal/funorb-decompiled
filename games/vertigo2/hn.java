@@ -13,7 +13,7 @@ final class hn extends li {
     static int field_n;
     static boolean field_t;
 
-    final static void a(boolean param0, int param1, int param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
+    final static void a(boolean param0, int param1, int param2, int[] param3, int param4, int param5, int param6, int param7) {
         double var11_double = 0.0;
         RuntimeException var11 = null;
         double var13 = 0.0;
@@ -42,10 +42,10 @@ final class hn extends li {
         String stackOut_5_2 = null;
         try {
           L0: {
-            param3[0] = param6;
+            param3[0] = -140;
             param3[1] = param4;
             param3[2] = param2;
-            var11_double = (double)(-param6 + param1);
+            var11_double = (double)(140 + param1);
             var13 = (double)(-param4 + param5);
             var15 = (double)(-param2 + param7);
             if (!param0) {
@@ -58,9 +58,9 @@ final class hn extends li {
               var21 = var22;
               var20 = var21;
               var19 = var20;
-              var19[0] = -((double)-1 * var15) + var13 * (double)param9;
-              var19[1] = var15 * (double)param8 - var11_double * (double)param9;
-              var19[2] = var11_double * (double)-1 - (double)param8 * var13;
+              var19[0] = -((double)-1 * var15) + var13 * (double)0;
+              var19[1] = var15 * (double)0 - var11_double * (double)0;
+              var19[2] = var11_double * (double)-1 - (double)0 * var13;
               var17 = Math.sqrt(var23[2] * var23[2] + (var23[1] * var23[1] + var23[0] * var23[0]));
               param3[5] = (int)(var23[2] / var17 * tg.field_f);
               param3[3] = (int)(var23[0] / var17 * tg.field_f);
@@ -105,7 +105,7 @@ final class hn extends li {
               break L1;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 44 + -1 + 41);
+          throw wn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param4 + 44 + param5 + 44 + -140 + 44 + param7 + 44 + 0 + 44 + 0 + 44 + -1 + 41);
         }
     }
 
@@ -113,7 +113,7 @@ final class hn extends li {
         throw new Error();
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_s = null;
         field_u = null;
         field_r = null;

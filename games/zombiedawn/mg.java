@@ -6,7 +6,7 @@ final class mg extends le {
     int field_i;
     int field_h;
 
-    final static void a(int param0) {
+    final static void a() {
         hn var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -85,7 +85,8 @@ final class mg extends le {
     final static void a(boolean param0) {
         se.field_j = oj.b(0);
         wo.field_xb = new dn();
-        ad.c((byte) 122);
+        int discarded$0 = 122;
+        ad.c();
     }
 
     private mg() throws Throwable {

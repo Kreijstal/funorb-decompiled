@@ -10,9 +10,6 @@ final class rc {
         int var3 = pe.a(4096, param0);
         int var4 = ri.a(98, param0);
         int var5 = pe.a(4096, param2);
-        if (param1 > -44) {
-            field_a = null;
-        }
         int var6 = ri.a(-120, param2);
         int var7 = (int)((long)var5 * (long)var3 >> 16);
         int var8 = (int)((long)var6 * (long)var3 >> 16);
@@ -21,7 +18,7 @@ final class rc {
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
     }

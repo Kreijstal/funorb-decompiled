@@ -62,7 +62,8 @@ final class ad {
                         var6_int = 0;
                         L5: while (true) {
                           if (var6_int >= var4) {
-                            fe.a(var5, true);
+                            int discarded$1 = 1;
+                            fe.a(var5);
                             var6 = new String[2][var5];
                             var20 = new int[2][var5 * 4];
                             var8 = rc.field_d;
@@ -168,7 +169,7 @@ final class ad {
         }
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         return pc.field_cb || n.b((byte) -96);
     }
 
@@ -177,7 +178,8 @@ final class ad {
             return;
         }
         try {
-            lh.a(param1, "", false);
+            int discarded$0 = 0;
+            lh.a(param1, "");
             bm.a(12979, param1);
         } catch (RuntimeException runtimeException) {
             throw dd.a((Throwable) (Object) runtimeException, "ad.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);

@@ -21,7 +21,7 @@ abstract class mn extends tk {
         field_w = null;
     }
 
-    final static void a(int param0, int param1, id param2, mm param3, byte param4, int param5, int param6) {
+    final static void a(int param0, int param1, id param2, mm param3, byte param4, int param5) {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -30,18 +30,15 @@ abstract class mn extends tk {
         bm.field_d.a(true, true);
         bm.field_d.a((int[]) null, (byte) -120, 0);
         bm.field_d.a((byte) -93);
-        nn var12 = bm.field_d;
-        if (param4 < 48) {
-            return;
-        }
+        nn var7 = bm.field_d;
         try {
             var8 = param5;
             var9 = param1;
             var10 = 0;
-            var11 = param0;
-            var12.field_d.a(var9, -79, var11, var10, var8);
+            var11 = 0;
+            var7.field_d.a(var9, -79, var11, var10, var8);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "mn.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 44 + 0 + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "mn.D(" + 0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + 58 + 44 + param5 + 44 + 0 + 41);
         }
     }
 
@@ -95,14 +92,10 @@ abstract class mn extends tk {
         String stackOut_11_2 = null;
         try {
           L0: {
-            if (param9 == 1) {
-              param0.d((param1 - param0.field_x) / 2 + (param3 - -(param5 * 5 >> 16)), param2);
-              param8.c(param3 + (-param8.field_x + param1) / 2 - -(10 * param5 >> 16), -param8.field_z + 480 + param10 + (param2 - 35 / param7));
-              param6.c((param5 * 20 >> 16) + (-param6.field_x + param1) / 2 + param3, -param6.field_z + (480 + param2) - -param10);
-              break L0;
-            } else {
-              return;
-            }
+            param0.d((param1 - param0.field_x) / 2 + (param3 - -(param5 * 5 >> 16)), param2);
+            param8.c(param3 + (-param8.field_x + param1) / 2 - -(10 * param5 >> 16), -param8.field_z + 480 + param10 + (param2 - 35 / param7));
+            param6.c((param5 * 20 >> 16) + (-param6.field_x + param1) / 2 + param3, -param6.field_z + (480 + param2) - -param10);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -182,19 +175,16 @@ abstract class mn extends tk {
               break L3;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param9 + 44 + param10 + 41);
+          throw qb.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + 1 + 44 + param10 + 41);
         }
     }
 
     final static void a(int param0, mh param1, mm param2, int[] param3, String param4, int param5, byte param6, long param7, String param8) {
         try {
             o.field_b = param2;
-            if (param6 != -58) {
-                field_u = null;
-            }
             bm.field_d = new nn(param1, param7, param4, param8, param5, param0, param3);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "mn.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + param6 + 44 + param7 + 44 + (param8 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "mn.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + -58 + 44 + param7 + 44 + (param8 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -208,85 +198,79 @@ abstract class mn extends tk {
         int var14 = 0;
         int var15 = 0;
         var15 = BrickABrac.field_J ? 1 : 0;
-        var9 = param5 + (param2 - -param1);
-        var10 = new jp[]{new jp(var9, var9), new jp(param6, var9), new jp(var9, var9), new jp(var9, param6), new jp(64, 64), new jp(var9, param6), new jp(var9, var9), new jp(param6, var9), new jp(var9, var9)};
+        var9 = 3;
+        var10 = new jp[]{new jp(var9, var9), new jp(3, var9), new jp(var9, var9), new jp(var9, 3), new jp(64, 64), new jp(var9, 3), new jp(var9, var9), new jp(3, var9), new jp(var9, var9)};
         var11_ref_jp__ = var10;
         var12 = 0;
         L0: while (true) {
           if (var11_ref_jp__.length <= var12) {
-            L1: {
-              if (param3 == 9361) {
-                break L1;
-              } else {
-                field_w = null;
-                break L1;
-              }
-            }
             var11 = 0;
-            L2: while (true) {
-              if (var11 >= param2) {
+            L1: while (true) {
+              if (var11 >= 1) {
                 var11 = 0;
-                L3: while (true) {
-                  if (param2 <= var11) {
+                L2: while (true) {
+                  if (var11 >= 1) {
                     var11 = 0;
-                    L4: while (true) {
-                      if (param6 <= var11) {
+                    L3: while (true) {
+                      if (var11 >= 3) {
                         var11 = 0;
-                        L5: while (true) {
-                          if (param6 >> 1 <= var11) {
+                        L4: while (true) {
+                          if (var11 >= 1) {
                             return var10;
                           } else {
                             var12 = 0;
-                            L6: while (true) {
-                              if (var12 >= param1) {
+                            L5: while (true) {
+                              if (var12 >= 1) {
                                 var11++;
-                                continue L5;
+                                continue L4;
                               } else {
-                                var10[1].field_G[param6 * (-var12 + (var9 - 1)) - -var11] = param4;
-                                var10[3].field_G[var11 * var9 + (var9 - (1 - -var12))] = param4;
-                                var10[7].field_G[var12 * param6 + var11] = param4;
-                                var10[5].field_G[var12 + var9 * var11] = param4;
+                                var10[1].field_G[3 * (-var12 + (var9 - 1)) - -var11] = 65793;
+                                var10[3].field_G[var11 * var9 + (var9 - (1 - -var12))] = 65793;
+                                var10[7].field_G[var12 * 3 + var11] = 65793;
+                                var10[5].field_G[var12 + var9 * var11] = 65793;
                                 var12++;
-                                continue L6;
+                                continue L5;
                               }
                             }
                           }
                         }
                       } else {
                         var12 = 0;
-                        L7: while (true) {
-                          if (param2 <= var12) {
+                        L6: while (true) {
+                          if (var12 >= 1) {
                             var11++;
-                            continue L4;
+                            continue L3;
                           } else {
-                            var10[7].field_G[var11 + (-1 + (var9 + -var12)) * param6] = param8;
-                            var10[5].field_G[var9 * var11 - -var9 - (1 + var12)] = param8;
-                            var10[1].field_G[var12 * param6 + var11] = param7;
-                            var10[3].field_G[var12 + var11 * var9] = param7;
+                            var10[7].field_G[var11 + (-1 + (var9 + -var12)) * 3] = 0;
+                            var10[5].field_G[var9 * var11 - -var9 - (1 + var12)] = 0;
+                            var10[1].field_G[var12 * 3 + var11] = 0;
+                            var10[3].field_G[var12 + var11 * var9] = 0;
                             var12++;
-                            continue L7;
+                            continue L6;
                           }
                         }
                       }
                     }
                   } else {
                     var12 = 0;
-                    L8: while (true) {
+                    L7: while (true) {
                       if (var12 >= var9) {
                         var11++;
-                        continue L3;
+                        continue L2;
                       } else {
-                        var10[0].field_G[var11 * var9 + var12] = param7;
-                        var10[0].field_G[var11 + var12 * var9] = param7;
-                        if (var12 < var9 + -var11) {
-                          var10[2].field_G[var12 + var9 * var11] = param7;
-                          var10[6].field_G[var9 * var12 + var11] = param7;
-                          var12++;
-                          continue L8;
-                        } else {
-                          var12++;
-                          continue L8;
+                        L8: {
+                          var10[0].field_G[var11 * var9 + var12] = 0;
+                          var10[0].field_G[var11 + var12 * var9] = 0;
+                          if (var12 < var9 + -var11) {
+                            var10[2].field_G[var12 + var9 * var11] = 0;
+                            var10[6].field_G[var9 * var12 + var11] = 0;
+                            break L8;
+                          } else {
+                            break L8;
+                          }
                         }
+                        var12++;
+                        continue L7;
                       }
                     }
                   }
@@ -294,16 +278,16 @@ abstract class mn extends tk {
               } else {
                 var12 = 0;
                 L9: while (true) {
-                  if (var9 > var12) {
-                    var10[6].field_G[var12 + (-1 + var9 - var11) * var9] = param8;
-                    var10[8].field_G[var12 + (-var11 + (var9 + -1)) * var9] = param8;
-                    var10[2].field_G[-var11 - -var9 + -1 + var9 * var12] = param8;
-                    var10[8].field_G[var9 - (1 + var11) + var9 * var12] = param8;
+                  if (~var9 >= ~var12) {
+                    var11++;
+                    continue L1;
+                  } else {
+                    var10[6].field_G[var12 + (-1 + var9 - var11) * var9] = 0;
+                    var10[8].field_G[var12 + (-var11 + (var9 + -1)) * var9] = 0;
+                    var10[2].field_G[-var11 - -var9 + -1 + var9 * var12] = 0;
+                    var10[8].field_G[var9 - (1 + var11) + var9 * var12] = 0;
                     var12++;
                     continue L9;
-                  } else {
-                    var11++;
-                    continue L2;
                   }
                 }
               }
@@ -312,11 +296,11 @@ abstract class mn extends tk {
             var13 = var11_ref_jp__[var12];
             var14 = 0;
             L10: while (true) {
-              if (var13.field_G.length <= var14) {
+              if (~var13.field_G.length >= ~var14) {
                 var12++;
                 continue L0;
               } else {
-                var13.field_G[var14] = param0;
+                var13.field_G[var14] = 0;
                 var14++;
                 continue L10;
               }

@@ -76,7 +76,7 @@ final class rk implements Runnable {
         return stackIn_1_0;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         rh.a(4, (byte) -72);
     }
 

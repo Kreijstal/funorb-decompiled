@@ -19,7 +19,7 @@ class ld extends vj {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_h = null;
         field_g = null;
     }
@@ -286,7 +286,7 @@ class ld extends vj {
                       }
                     }
                     L20: {
-                      if (param1[param2] == null) {
+                      if (param1[4] == null) {
                         break L20;
                       } else {
                         if (0 == param1[4].field_A) {
@@ -358,7 +358,7 @@ class ld extends vj {
               break L23;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_71_0, stackIn_71_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw t.a((Throwable) (Object) stackIn_71_0, stackIn_71_2 + 44 + 4 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
@@ -368,7 +368,7 @@ class ld extends vj {
         }
     }
 
-    final static hj c(byte param0) {
+    final static hj c() {
         return aj.field_f;
     }
 
@@ -450,7 +450,7 @@ class ld extends vj {
                     } else {
                       var4_int = param0.field_q.length;
                       var5 = param3.field_o[param1].length / var4_int;
-                      var6 = param2;
+                      var6 = 0;
                       L2: while (true) {
                         if (var6 >= var5) {
                           stackOut_22_0 = -1;
@@ -525,7 +525,7 @@ class ld extends vj {
           }
           L6: {
             stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
-            stackOut_27_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_27_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(44).append(param1).append(44).append(0).append(44);
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;

@@ -16,7 +16,7 @@ final class m extends am {
     static String[] field_m;
     static String field_p;
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_n = null;
         field_m = null;
         field_k = null;
@@ -201,7 +201,7 @@ final class m extends am {
         }
     }
 
-    final static long a(boolean param0) {
+    final static long a() {
         return -bb.field_c + hn.a((byte) 80);
     }
 

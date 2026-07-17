@@ -27,118 +27,65 @@ final class pf {
                   }
                 }
               }
-              L1: {
-                if (field_e > param2) {
-                  break L1;
-                } else {
-                  if (param2 >= ub.field_e.field_u + field_e) {
-                    break L1;
-                  } else {
-                    if (ii.field_a > param0) {
-                      break L1;
+              if (field_e <= param2) {
+                if (param2 < ub.field_e.field_u + field_e) {
+                  if (ii.field_a <= param0) {
+                    if (ub.field_e.field_x + ii.field_a > param0) {
+                      return 1;
                     } else {
-                      if (ub.field_e.field_x + ii.field_a > param0) {
-                        return 1;
-                      } else {
-                        if (param1 == -19503) {
-                          return -1;
-                        } else {
-                          field_c = null;
-                          return -1;
-                        }
-                      }
+                      return -1;
                     }
+                  } else {
+                    return -1;
                   }
+                } else {
+                  return -1;
                 }
-              }
-              if (param1 == -19503) {
-                return -1;
               } else {
-                field_c = null;
                 return -1;
               }
             } else {
               if (field_e <= param2) {
                 if (param2 < ub.field_e.field_u + field_e) {
-                  if (ii.field_a > param0) {
-                    if (param1 == -19503) {
+                  if (ii.field_a <= param0) {
+                    if (ub.field_e.field_x + ii.field_a <= param0) {
                       return -1;
                     } else {
-                      field_c = null;
-                      return -1;
+                      return 1;
                     }
                   } else {
-                    if (ub.field_e.field_x + ii.field_a > param0) {
-                      return 1;
-                    } else {
-                      if (param1 == -19503) {
-                        return -1;
-                      } else {
-                        field_c = null;
-                        return -1;
-                      }
-                    }
+                    return -1;
                   }
                 } else {
-                  if (param1 == -19503) {
-                    return -1;
-                  } else {
-                    field_c = null;
-                    return -1;
-                  }
+                  return -1;
                 }
               } else {
-                if (param1 != -19503) {
-                  field_c = null;
-                  return -1;
-                } else {
-                  return -1;
-                }
+                return -1;
               }
             }
           } else {
             if (field_e <= param2) {
               if (param2 < ub.field_e.field_u + field_e) {
-                if (ii.field_a > param0) {
-                  if (param1 != -19503) {
-                    field_c = null;
-                    return -1;
-                  } else {
-                    return -1;
-                  }
-                } else {
+                if (ii.field_a <= param0) {
                   if (ub.field_e.field_x + ii.field_a <= param0) {
-                    if (param1 != -19503) {
-                      field_c = null;
-                      return -1;
-                    } else {
-                      return -1;
-                    }
+                    return -1;
                   } else {
                     return 1;
                   }
-                }
-              } else {
-                if (param1 != -19503) {
-                  field_c = null;
-                  return -1;
                 } else {
                   return -1;
                 }
-              }
-            } else {
-              if (param1 != -19503) {
-                field_c = null;
-                return -1;
               } else {
                 return -1;
               }
+            } else {
+              return -1;
             }
           }
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         field_a = null;

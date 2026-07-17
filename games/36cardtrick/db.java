@@ -453,7 +453,7 @@ final class db implements ci {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
         field_f = null;
         field_a = null;

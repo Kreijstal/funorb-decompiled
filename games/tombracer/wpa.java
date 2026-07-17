@@ -5,7 +5,7 @@ final class wpa extends ge {
     static String field_K;
     static String field_J;
 
-    final static void a(ha param0, int param1) {
+    final static void a(ha param0) {
         try {
             kn.field_p = param0.a(kv.field_a, rc.field_b, true);
             eda.field_f = param0.a(ds.field_n, ff.field_j, true);
@@ -203,7 +203,7 @@ final class wpa extends ge {
         return stackIn_6_0;
     }
 
-    public static void D(int param0) {
+    public static void D() {
         field_K = null;
         field_J = null;
     }
@@ -225,33 +225,29 @@ final class wpa extends ge {
     final static char a(byte param0, byte param1) {
         int var2 = 0;
         int var3 = 0;
-        if (param0 == 11) {
-          var2 = 255 & param1;
-          if (var2 != 0) {
-            if (var2 >= 128) {
-              if (160 <= var2) {
-                return (char)var2;
-              } else {
-                L0: {
-                  var3 = gha.field_a[var2 - 128];
-                  if (var3 == 0) {
-                    var3 = 63;
-                    break L0;
-                  } else {
-                    break L0;
-                  }
-                }
-                var2 = var3;
-                return (char)var2;
-              }
+        var2 = 255 & param1;
+        if (var2 != 0) {
+          if (var2 >= 128) {
+            if (160 <= var2) {
+              return (char)var2;
             } else {
+              L0: {
+                var3 = gha.field_a[var2 - 128];
+                if (var3 == 0) {
+                  var3 = 63;
+                  break L0;
+                } else {
+                  break L0;
+                }
+              }
+              var2 = var3;
               return (char)var2;
             }
           } else {
-            throw new IllegalArgumentException("" + Integer.toString(var2, 16));
+            return (char)var2;
           }
         } else {
-          return '';
+          throw new IllegalArgumentException("" + Integer.toString(var2, 16));
         }
     }
 

@@ -73,7 +73,8 @@ final class id implements Runnable {
                     break L1;
                   }
                 } else {
-                  em.a(1L, false);
+                  int discarded$2 = 0;
+                  em.a(1L);
                   continue L2;
                 }
               }
@@ -105,7 +106,7 @@ final class id implements Runnable {
         int var2 = 122 / ((-61 - param0) / 56);
     }
 
-    final static String a(Throwable param0, byte param1) throws IOException {
+    final static String a(Throwable param0) throws IOException {
         String var2 = null;
         PrintWriter var4 = null;
         String var5 = null;
@@ -326,7 +327,7 @@ final class id implements Runnable {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_h = null;
     }
 

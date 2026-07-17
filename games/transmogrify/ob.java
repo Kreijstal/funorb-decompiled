@@ -121,7 +121,8 @@ final class ob extends le {
                   break L7;
                 } else {
                   if (var13 <= ((ob) this).field_H.field_m) {
-                    oj.a(((ob) this).field_H, 256);
+                    int discarded$2 = 256;
+                    oj.a(((ob) this).field_H);
                     sb.c();
                     break L6;
                   } else {
@@ -131,7 +132,8 @@ final class ob extends le {
               }
             }
             ((ob) this).field_H = new ti(var12, var13);
-            oj.a(((ob) this).field_H, 256);
+            int discarded$3 = 256;
+            oj.a(((ob) this).field_H);
             break L6;
           }
           var15.a(112, 144, var15.field_r << 4, var15.field_s << 4, -((ob) this).field_K << 10, 4096);
@@ -342,7 +344,7 @@ final class ob extends le {
         return stackIn_3_0 != 0;
     }
 
-    public static void k(int param0) {
+    public static void k() {
         field_M = null;
         int var1 = 0;
         field_F = null;
@@ -398,7 +400,7 @@ final class ob extends le {
             var4 = 0;
             L2: while (true) {
               if (var4 >= var2_int) {
-                var5 = -67 / ((50 - param0) / 38);
+                var5 = 67;
                 stackOut_19_0 = new String(var10);
                 stackIn_20_0 = stackOut_19_0;
                 break L0;
@@ -456,7 +458,7 @@ final class ob extends le {
           L8: {
             var2 = decompiledCaughtException;
             stackOut_21_0 = (RuntimeException) var2;
-            stackOut_21_1 = new StringBuilder().append("ob.E(").append(param0).append(44);
+            stackOut_21_1 = new StringBuilder().append("ob.E(").append(107).append(44);
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -484,7 +486,7 @@ final class ob extends le {
         return stackIn_20_0;
     }
 
-    final static void l(int param0) {
+    final static void l() {
         int var1 = -27;
         wg.field_f = new qj();
     }

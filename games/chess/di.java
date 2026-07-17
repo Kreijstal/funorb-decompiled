@@ -63,7 +63,7 @@ final class di extends ci {
         }
     }
 
-    final static void f(byte param0) {
+    final static void f() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -369,7 +369,7 @@ final class di extends ci {
         }
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_Qb = null;
         field_Ib = null;
     }
@@ -382,7 +382,7 @@ final class di extends ci {
         L0: {
           var7 = Chess.field_G;
           if (((di) this).field_Jb == param2) {
-            ((di) this).n(param0 ^ 75);
+            ((di) this).n(83);
             this.a(0, (byte) -93);
             break L0;
           } else {
@@ -391,13 +391,16 @@ final class di extends ci {
               this.a(0, (byte) -120);
               ((di) this).field_Jb = param2;
               ((di) this).field_Kb = ((di) this).field_Mb[((di) this).field_Jb];
-              q.a(((di) this).field_Kb, 0);
+              int discarded$499 = 0;
+              q.a(((di) this).field_Kb);
               ((di) this).field_Kb.a(12, (byte) -73);
               break L0;
             } else {
               if (((di) this).field_Gb[param2] == -1) {
-                lc.a(103);
-                rc.b(0);
+                int discarded$500 = 103;
+                lc.a();
+                int discarded$501 = 0;
+                rc.b();
                 break L0;
               } else {
                 L1: {
@@ -425,19 +428,13 @@ final class di extends ci {
                 var8 = null;
                 ke.a(9822, vk.field_g, ij.field_c, param1, var5, (String) null);
                 hn.a(ij.field_c, vk.field_g, (byte) -54, var5, re.field_p);
-                rc.b(param0 ^ 24);
-                e.h((byte) -120);
+                int discarded$502 = 0;
+                rc.b();
+                int discarded$503 = -120;
+                e.h();
                 break L0;
               }
             }
-          }
-        }
-        L3: {
-          if (param0 == 24) {
-            break L3;
-          } else {
-            boolean discarded$1 = di.a(19, '6');
-            break L3;
           }
         }
     }
@@ -905,7 +902,8 @@ final class di extends ci {
         if (((di) this).field_Kb == null) {
             if ((Object) (Object) tl.field_Fb == this) {
                 if (!(var4 == 0)) {
-                    rc.b(0);
+                    int discarded$0 = 0;
+                    rc.b();
                     return true;
                 }
             }
@@ -941,7 +939,7 @@ final class di extends ci {
         cn.a(16384, param1);
     }
 
-    final static void k(int param0) {
+    final static void k() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int[] var2 = null;
@@ -1030,7 +1028,8 @@ final class di extends ci {
                         var18 = 0;
                         L5: while (true) {
                           if (var18 >= 3) {
-                            hb.a(false, th.field_c, (byte) -98, ua.field_b, false, var17, true);
+                            int discarded$1 = 1;
+                            hb.a(false, th.field_c, (byte) -98, ua.field_b, false, var17);
                             lf.a(var8, var17, var14, var9, 29521, var12, var13, var7);
                             var15++;
                             continue L3;

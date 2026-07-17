@@ -15,7 +15,6 @@ abstract class lc extends ofa {
 
     private final void a(boolean param0, ae param1) {
         RuntimeException var3 = null;
-        Object var4 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
@@ -34,40 +33,31 @@ abstract class lc extends ofa {
         String stackOut_10_2 = null;
         try {
           L0: {
-            L1: {
-              if (null != ((lc) this).field_P) {
-                ((lc) this).field_P.p(83);
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            L2: {
-              if (param1 == null) {
-                ((lc) this).field_P = new rg();
-                break L2;
-              } else {
-                param1.a((byte) -31, param1.field_m, param1.field_p, 6, ((lc) this).field_S + 6);
-                ((lc) this).field_P = new rg(param1);
-                break L2;
-              }
-            }
-            ((lc) this).a((ae) (Object) ((lc) this).field_P, -1);
-            ((lc) this).field_T = null;
-            if (!param0) {
+            if (null != ((lc) this).field_P) {
+              ((lc) this).field_P.p(83);
               break L0;
             } else {
-              var4 = null;
-              boolean discarded$2 = ((lc) this).a('￁', (ae) null, 57, true);
-              return;
+              break L0;
             }
+          }
+          if (param1 == null) {
+            ((lc) this).field_P = new rg();
+            ((lc) this).a((ae) (Object) ((lc) this).field_P, -1);
+            ((lc) this).field_T = null;
+            return;
+          } else {
+            param1.a((byte) -31, param1.field_m, param1.field_p, 6, ((lc) this).field_S + 6);
+            ((lc) this).field_P = new rg(param1);
+            ((lc) this).a((ae) (Object) ((lc) this).field_P, -1);
+            ((lc) this).field_T = null;
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L1: {
             var3 = decompiledCaughtException;
             stackOut_9_0 = (RuntimeException) var3;
-            stackOut_9_1 = new StringBuilder().append("lc.E(").append(param0).append(44);
+            stackOut_9_1 = new StringBuilder().append("lc.E(").append(0).append(44);
             stackIn_11_0 = stackOut_9_0;
             stackIn_11_1 = stackOut_9_1;
             stackIn_10_0 = stackOut_9_0;
@@ -79,7 +69,7 @@ abstract class lc extends ofa {
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
               stackIn_12_2 = stackOut_11_2;
-              break L3;
+              break L1;
             } else {
               stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
               stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
@@ -87,7 +77,7 @@ abstract class lc extends ofa {
               stackIn_12_0 = stackOut_10_0;
               stackIn_12_1 = stackOut_10_1;
               stackIn_12_2 = stackOut_10_2;
-              break L3;
+              break L1;
             }
           }
           throw tba.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
@@ -198,63 +188,33 @@ abstract class lc extends ofa {
             if (nr.field_a == ((lc) this).field_M) {
               int fieldTemp$2 = ((lc) this).field_R + 1;
               ((lc) this).field_R = ((lc) this).field_R + 1;
-              if (((lc) this).field_U != fieldTemp$2) {
-                ((lc) this).field_P.field_y = (((lc) this).field_R << 8) / ((lc) this).field_U;
-                if (param0 <= 126) {
-                  ((lc) this).field_T = null;
-                  return super.a(127);
-                } else {
-                  return super.a(127);
-                }
-              } else {
+              if (((lc) this).field_U == fieldTemp$2) {
                 ((lc) this).field_M = null;
                 ((lc) this).field_P.field_y = 256;
-                if (param0 <= 126) {
-                  ((lc) this).field_T = null;
-                  return super.a(127);
-                } else {
-                  return super.a(127);
-                }
-              }
-            } else {
-              if (param0 <= 126) {
-                ((lc) this).field_T = null;
                 return super.a(127);
               } else {
+                ((lc) this).field_P.field_y = (((lc) this).field_R << 8) / ((lc) this).field_U;
                 return super.a(127);
               }
+            } else {
+              return super.a(127);
             }
           } else {
             int fieldTemp$3 = ((lc) this).field_R + 1;
             ((lc) this).field_R = ((lc) this).field_R + 1;
-            if (fieldTemp$3 == ((lc) this).field_O) {
+            if (fieldTemp$3 != ((lc) this).field_O) {
+              ((lc) this).field_P.field_y = 256 + -((((lc) this).field_R << 8) / ((lc) this).field_O);
+              return super.a(127);
+            } else {
               ((lc) this).field_M = us.field_e;
               ((lc) this).a(((lc) this).field_Q, ((lc) this).field_T.field_m + 12, ((lc) this).field_T.field_p + (((lc) this).field_S + 12), (byte) -103);
               ((lc) this).field_R = 0;
               ((lc) this).field_P.field_y = 0;
-              if (param0 > 126) {
-                return super.a(127);
-              } else {
-                ((lc) this).field_T = null;
-                return super.a(127);
-              }
-            } else {
-              ((lc) this).field_P.field_y = 256 + -((((lc) this).field_R << 8) / ((lc) this).field_O);
-              if (param0 > 126) {
-                return super.a(127);
-              } else {
-                ((lc) this).field_T = null;
-                return super.a(127);
-              }
+              return super.a(127);
             }
           }
         } else {
-          if (param0 <= 126) {
-            ((lc) this).field_T = null;
-            return super.a(127);
-          } else {
-            return super.a(127);
-          }
+          return super.a(127);
         }
     }
 
@@ -309,7 +269,7 @@ abstract class lc extends ofa {
         String stackOut_13_2 = null;
         try {
           L0: {
-            if (!super.a(param0, param1, param2, param3)) {
+            if (!super.a(param0, param1, param2, true)) {
               if (null != ((lc) this).field_P) {
                 L1: {
                   if (param2 != 98) {
@@ -367,7 +327,7 @@ abstract class lc extends ofa {
               break L3;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param2 + 44 + param3 + 41);
+          throw tba.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param2 + 44 + 1 + 41);
         }
         return stackIn_11_0 != 0;
     }

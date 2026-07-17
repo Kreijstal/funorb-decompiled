@@ -157,22 +157,20 @@ final class vc extends fp {
     private vc() {
     }
 
-    final static int a(int param0, int param1, byte param2) {
+    final static int a(int param0, int param1) {
         int var3 = param1 >>> 31;
         return -var3 + (var3 + param1) / param0;
     }
 
-    final static void f(byte param0) {
+    final static void f() {
         da.b(67);
-        ra.i((byte) -90);
+        int discarded$0 = -90;
+        ra.i();
         ck.field_b = null;
         fa.b(47);
-        if (param0 != 119) {
-            int discarded$0 = vc.b(104);
-        }
     }
 
-    final static void h(byte param0) {
+    final static void h() {
         RuntimeException var1 = null;
         int var2 = 0;
         nl var2_ref_nl = null;
@@ -287,7 +285,7 @@ final class vc extends fp {
         }
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_A = null;
         field_D = null;
         field_F = null;

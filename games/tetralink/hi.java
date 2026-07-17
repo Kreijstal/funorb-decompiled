@@ -7,7 +7,7 @@ abstract class hi {
     static String field_b;
     static boolean field_a;
 
-    final static sj a(String param0, byte param1) {
+    final static sj a(String param0) {
         RuntimeException var2 = null;
         Object stackIn_9_0 = null;
         sj stackIn_11_0 = null;
@@ -353,7 +353,7 @@ abstract class hi {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
     }

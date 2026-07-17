@@ -21,26 +21,27 @@ final class gb extends bw {
         int[] var12 = null;
         int[] var13 = null;
         int[] var14 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_13_2 = null;
+        String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
         RuntimeException stackOut_10_0 = null;
         StringBuilder stackOut_10_1 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        String stackOut_12_2 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         try {
           L0: {
             L1: {
-              k.c(param3 + 3685);
+              int discarded$2 = 3685;
+              k.c();
               var14 = dg.field_e;
               var13 = var14;
               var12 = var13;
@@ -65,19 +66,11 @@ final class gb extends bw {
                       break L2;
                     }
                   }
-                  L3: {
-                    dg.d();
-                    hl.field_C.c(param5, 5, 3 + hl.field_C.field_u, param3, -1);
-                    dg.a(var14, var7, var8);
-                    fk.d((byte) -121);
-                    if (param4) {
-                      fw.a(param0, cea.field_i, var9, param2, true, oa.field_Bb, param1);
-                      break L3;
-                    } else {
-                      fn.a(param2, (byte) 11, var9, param0, param1, cea.field_i);
-                      break L3;
-                    }
-                  }
+                  dg.d();
+                  hl.field_C.c(param5, 5, 3 + hl.field_C.field_u, 0, -1);
+                  dg.a(var14, var7, var8);
+                  fk.d((byte) -121);
+                  fw.a(param0, cea.field_i, var9, param2, true, oa.field_Bb, param1);
                   break L0;
                 } else {
                   break L1;
@@ -88,33 +81,33 @@ final class gb extends bw {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var6_ref = decompiledCaughtException;
-            stackOut_10_0 = (RuntimeException) var6_ref;
-            stackOut_10_1 = new StringBuilder().append("gb.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
-            stackIn_12_0 = stackOut_10_0;
-            stackIn_12_1 = stackOut_10_1;
-            stackIn_11_0 = stackOut_10_0;
-            stackIn_11_1 = stackOut_10_1;
+            stackOut_8_0 = (RuntimeException) var6_ref;
+            stackOut_8_1 = new StringBuilder().append("gb.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(0).append(44).append(1).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
             if (param5 == null) {
-              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-              stackOut_12_2 = "null";
-              stackIn_13_0 = stackOut_12_0;
-              stackIn_13_1 = stackOut_12_1;
-              stackIn_13_2 = stackOut_12_2;
-              break L4;
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
             } else {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-              stackOut_11_2 = "{...}";
-              stackIn_13_0 = stackOut_11_0;
-              stackIn_13_1 = stackOut_11_1;
-              stackIn_13_2 = stackOut_11_2;
-              break L4;
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
         }
     }
 
@@ -269,7 +262,7 @@ final class gb extends bw {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         int var1 = 0;
         if (b.field_u > 32) {
             var1 = b.field_u % 32;
@@ -286,42 +279,32 @@ final class gb extends bw {
         throw new Error();
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_j = null;
         field_f = null;
         field_i = null;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        Object var7 = null;
         L0: {
-          if (param0 == 0) {
-            break L0;
-          } else {
-            var7 = null;
-            gb.a(-60, 62, -68, 126, true, (String) null);
-            break L0;
-          }
-        }
-        L1: {
           if (eo.field_l > param4) {
             qn.a(param4, param1, param3, param2, 69, param5);
-            break L1;
+            break L0;
           } else {
             if (param1 > pw.field_x) {
               qn.a(param4, param1, param3, param2, 69, param5);
-              break L1;
+              break L0;
             } else {
               if (param3 < an.field_q) {
                 qn.a(param4, param1, param3, param2, 69, param5);
-                break L1;
+                break L0;
               } else {
                 if (param5 > ha.field_n) {
                   qn.a(param4, param1, param3, param2, 69, param5);
-                  break L1;
+                  break L0;
                 } else {
                   hka.a(param4, -1, param5, param3, param1, param2);
-                  break L1;
+                  break L0;
                 }
               }
             }

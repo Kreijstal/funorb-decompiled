@@ -10,7 +10,7 @@ final class fo extends hl {
     static String field_m;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_k = null;
         field_n = null;
         field_m = null;

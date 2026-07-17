@@ -33,7 +33,7 @@ final class bh {
                   if (uk.field_b.field_i != 0) {
                     break L2;
                   } else {
-                    if (~(10000L + p.field_a) > ~ji.b(param1 ^ -123)) {
+                    if (~(10000L + p.field_a) > ~ji.b(122)) {
                       uk.field_b.i(param0, 120);
                       break L2;
                     } else {
@@ -42,7 +42,7 @@ final class bh {
                   }
                 }
                 L3: {
-                  if (param1 > ~uk.field_b.field_i) {
+                  if (uk.field_b.field_i > 0) {
                     {
                       L4: {
                         p.field_d.a((byte) 30, uk.field_b.field_j, 0, uk.field_b.field_i);
@@ -67,13 +67,14 @@ final class bh {
         }
     }
 
-    final static int a(byte param0) {
+    final static int a() {
         ed.field_b.b(0);
         int var1 = -118;
         if (kg.field_h.e(255)) {
             return 0;
         }
-        return d.d((byte) -123);
+        int discarded$0 = -123;
+        return d.d();
     }
 
     public static void a(int param0) {

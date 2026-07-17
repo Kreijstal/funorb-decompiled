@@ -8,7 +8,7 @@ final class eb {
     static String field_d;
     static je field_c;
 
-    final static void a(boolean param0, int param1, boolean param2) {
+    final static void a(boolean param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -74,7 +74,7 @@ final class eb {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_e = null;
         field_a = null;

@@ -8,7 +8,7 @@ final class li {
     int field_e;
     static int field_d;
 
-    final static boolean a(String param0, byte param1) {
+    final static boolean a(String param0) {
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;
@@ -120,7 +120,7 @@ final class li {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         int var1 = 88;

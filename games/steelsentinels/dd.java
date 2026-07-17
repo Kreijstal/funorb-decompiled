@@ -153,16 +153,11 @@ final class dd {
     }
 
     private final boolean a(int param0, int param1, int param2) {
-        if (17 == param0) {
-          n.field_x = new td(((dd) this).field_c.field_Rb, ((dd) this).field_c.field_cb, ((dd) this).field_c.field_zb, ((dd) this).field_c.field_Lb, param2, an.field_a, od.field_g, hg.field_e, bd.field_f, ol.field_Tb, qb.field_K, ((dd) this).field_k, ((dd) this).field_h);
-          return true;
-        } else {
-          if (param1 <= 115) {
-            return true;
-          } else {
+        if (17 != param0) {
             return false;
-          }
         }
+        n.field_x = new td(((dd) this).field_c.field_Rb, ((dd) this).field_c.field_cb, ((dd) this).field_c.field_zb, ((dd) this).field_c.field_Lb, param2, an.field_a, od.field_g, hg.field_e, bd.field_f, ol.field_Tb, qb.field_K, ((dd) this).field_k, ((dd) this).field_h);
+        return true;
     }
 
     final void c(int param0) {
@@ -209,7 +204,8 @@ final class dd {
         int var5 = 0;
         var5 = SteelSentinels.field_G;
         if (0 == param1) {
-          ik.a(((dd) this).field_h, param0, false);
+          int discarded$2 = 0;
+          ik.a(((dd) this).field_h, param0);
           var4 = 14;
           return true;
         } else {
@@ -604,7 +600,8 @@ final class dd {
           if (nb.field_G != ((dd) this).field_h) {
             if (null != nf.field_b) {
               if (kk.a(-28548)) {
-                var7 = ri.a(((dd) this).field_h, false);
+                int discarded$13 = 0;
+                var7 = ri.a(((dd) this).field_h);
                 var4 = kh.a(false, ((dd) this).field_h);
                 var5 = this.b(2);
                 if (var4 == null) {
@@ -621,7 +618,7 @@ final class dd {
                             if (param1 < -73) {
                               return;
                             } else {
-                              String discarded$12 = this.b(96);
+                              String discarded$14 = this.b(96);
                               return;
                             }
                           } else {
@@ -637,7 +634,7 @@ final class dd {
                                   if (param1 < -73) {
                                     return;
                                   } else {
-                                    String discarded$13 = this.b(96);
+                                    String discarded$15 = this.b(96);
                                     return;
                                   }
                                 }
@@ -647,13 +644,13 @@ final class dd {
                             if (param1 < -73) {
                               return;
                             } else {
-                              String discarded$14 = this.b(96);
+                              String discarded$16 = this.b(96);
                               return;
                             }
                           }
                         } else {
                           if (param1 >= -73) {
-                            String discarded$15 = this.b(96);
+                            String discarded$17 = this.b(96);
                             return;
                           } else {
                             return;
@@ -665,14 +662,14 @@ final class dd {
                   if (param1 < -73) {
                     return;
                   } else {
-                    String discarded$16 = this.b(96);
+                    String discarded$18 = this.b(96);
                     return;
                   }
                 } else {
                   if (!nf.field_b.field_rc) {
                     ((dd) this).field_j.a(2, 1, db.a(bg.field_E, -88, new String[1]));
                     if (param1 >= -73) {
-                      String discarded$17 = this.b(96);
+                      String discarded$19 = this.b(96);
                       return;
                     } else {
                       return;
@@ -681,14 +678,14 @@ final class dd {
                     if (nf.field_b.field_Mc >= 0) {
                       ((dd) this).field_j.a(2, 1, db.a(bg.field_E, -88, new String[1]));
                       if (param1 >= -73) {
-                        String discarded$18 = this.b(96);
+                        String discarded$20 = this.b(96);
                         return;
                       } else {
                         return;
                       }
                     } else {
                       if (param1 >= -73) {
-                        String discarded$19 = this.b(96);
+                        String discarded$21 = this.b(96);
                         return;
                       } else {
                         return;
@@ -698,7 +695,7 @@ final class dd {
                 }
               } else {
                 if (param1 >= -73) {
-                  String discarded$20 = this.b(96);
+                  String discarded$22 = this.b(96);
                   return;
                 } else {
                   return;
@@ -706,7 +703,7 @@ final class dd {
               }
             } else {
               if (param1 >= -73) {
-                String discarded$21 = this.b(96);
+                String discarded$23 = this.b(96);
                 return;
               } else {
                 return;
@@ -714,7 +711,7 @@ final class dd {
             }
           } else {
             if (param1 >= -73) {
-              String discarded$22 = this.b(96);
+              String discarded$24 = this.b(96);
               return;
             } else {
               return;
@@ -722,7 +719,7 @@ final class dd {
           }
         } else {
           if (param1 >= -73) {
-            String discarded$23 = this.b(96);
+            String discarded$25 = this.b(96);
             return;
           } else {
             return;
@@ -1085,107 +1082,56 @@ final class dd {
     }
 
     private final boolean a(boolean param0, int param1, int param2) {
-        int var5 = 0;
-        var5 = SteelSentinels.field_G;
-        if (param0) {
-          dd.a(-11);
-          if (param2 != 8) {
-            if (param2 == 18) {
-              ic.a(-23543, ((dd) this).field_h, ((dd) this).field_k);
-              return true;
-            } else {
-              if (param2 == 11) {
-                il.a(0, ((dd) this).field_f, param1, -18853);
-                return true;
-              } else {
-                if (param2 != 12) {
-                  if (param2 != 13) {
-                    if (param2 != 14) {
-                      if (param2 == 20) {
-                        pd.j(13171);
-                        return true;
-                      } else {
-                        if (param2 != 19) {
-                          return false;
-                        } else {
-                          boolean discarded$2 = dl.a(((dd) this).field_h, ((dd) this).field_i, -116, ((dd) this).field_f, ((dd) this).field_k);
-                          return true;
-                        }
-                      }
-                    } else {
-                      lk.g(0);
-                      return true;
-                    }
-                  } else {
-                    il.a(2, ((dd) this).field_f, param1, -18853);
-                    return true;
-                  }
-                } else {
-                  il.a(1, ((dd) this).field_f, param1, -18853);
-                  return true;
-                }
-              }
-            }
-          } else {
-            bc.a(((dd) this).field_h, ((dd) this).field_k, 2);
+        int var5 = SteelSentinels.field_G;
+        if (param2 == 8) {
+            int discarded$0 = 2;
+            bc.a(((dd) this).field_h, ((dd) this).field_k);
             return true;
-          }
-        } else {
-          if (param2 != 8) {
-            if (param2 == 18) {
-              ic.a(-23543, ((dd) this).field_h, ((dd) this).field_k);
-              return true;
-            } else {
-              if (param2 == 11) {
-                il.a(0, ((dd) this).field_f, param1, -18853);
-                return true;
-              } else {
-                if (param2 != 12) {
-                  if (param2 != 13) {
-                    if (param2 != 14) {
-                      if (param2 == 20) {
-                        pd.j(13171);
-                        return true;
-                      } else {
-                        if (param2 != 19) {
-                          return false;
-                        } else {
-                          boolean discarded$3 = dl.a(((dd) this).field_h, ((dd) this).field_i, -116, ((dd) this).field_f, ((dd) this).field_k);
-                          return true;
-                        }
-                      }
-                    } else {
-                      lk.g(0);
-                      return true;
-                    }
-                  } else {
-                    il.a(2, ((dd) this).field_f, param1, -18853);
-                    return true;
-                  }
-                } else {
-                  il.a(1, ((dd) this).field_f, param1, -18853);
-                  return true;
-                }
-              }
-            }
-          } else {
-            bc.a(((dd) this).field_h, ((dd) this).field_k, 2);
-            return true;
-          }
         }
+        if (param2 != 18) {
+            if (param2 != 11) {
+                if (param2 == 12) {
+                    int discarded$1 = -18853;
+                    il.a(1, ((dd) this).field_f, param1);
+                    return true;
+                }
+                if (param2 == 13) {
+                    int discarded$2 = -18853;
+                    il.a(2, ((dd) this).field_f, param1);
+                    return true;
+                }
+                if (param2 == 14) {
+                    int discarded$3 = 0;
+                    lk.g();
+                    return true;
+                }
+                if (param2 != 20) {
+                    if (param2 == 19) {
+                        boolean discarded$4 = dl.a(((dd) this).field_h, ((dd) this).field_i, -116, ((dd) this).field_f, ((dd) this).field_k);
+                        return true;
+                    }
+                    return false;
+                }
+                pd.j(13171);
+                return true;
+            }
+            int discarded$5 = -18853;
+            il.a(0, ((dd) this).field_f, param1);
+            return true;
+        }
+        ic.a(-23543, ((dd) this).field_h, ((dd) this).field_k);
+        return true;
     }
 
     private final boolean b(int param0, int param1, int param2) {
         String var5 = null;
         String var6 = null;
         String var7 = null;
-        if (param1 != -7) {
-            return false;
-        }
         Object var4 = null;
         if (4 != param0) {
             if (param0 == 5) {
-                var5 = nl.a(((dd) this).field_k, param2, true);
+                int discarded$0 = 1;
+                var5 = nl.a(((dd) this).field_k, param2);
                 if (var5 == null) {
                     return true;
                 }
@@ -1194,7 +1140,8 @@ final class dd {
             }
             if (param0 != 6) {
                 if (param0 == 7) {
-                    var6 = rn.a(((dd) this).field_a, param2, ((dd) this).field_k, true);
+                    int discarded$1 = 1;
+                    var6 = rn.a(((dd) this).field_a, param2, ((dd) this).field_k);
                     if (var6 == null) {
                         return true;
                     }

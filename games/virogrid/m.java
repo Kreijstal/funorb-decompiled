@@ -184,13 +184,10 @@ final class m {
         return stackIn_7_0 != 0;
     }
 
-    final static ka a(byte param0, int param1) {
-        if (param0 <= 63) {
-            field_f = null;
-        }
+    final static ka a() {
         ka var2 = new ka();
         tf.field_a.a((l) (Object) var2, (byte) -50);
-        fn.a(param1, true);
+        fn.a(4, true);
         return var2;
     }
 
@@ -202,7 +199,7 @@ final class m {
         return 0;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_i = null;
         field_f = null;
@@ -332,7 +329,8 @@ final class m {
                 }
               }
               L2: {
-                if (this.a(stackIn_6_1, stackIn_6_2, stackIn_6_3 == 0, 16238)) {
+                int discarded$4 = 16238;
+                if (this.a(stackIn_6_1, stackIn_6_2, stackIn_6_3 == 0)) {
                   this.a(((m) this).field_l.field_m, (byte) 99, ((m) this).field_l.field_w);
                   break L2;
                 } else {
@@ -419,7 +417,8 @@ final class m {
                             break L9;
                           }
                         }
-                        if (this.a(stackIn_28_1, stackIn_28_2, stackIn_28_3 == 0, 16238)) {
+                        int discarded$5 = 16238;
+                        if (this.a(stackIn_28_1, stackIn_28_2, stackIn_28_3 == 0)) {
                           this.a(var7, (byte) -119, var8);
                           var8++;
                           continue L8;
@@ -444,7 +443,7 @@ final class m {
           if (param1 == 31626) {
             break L10;
           } else {
-            boolean discarded$1 = this.a(49, 29, 84);
+            boolean discarded$6 = this.a(49, 29, 84);
             break L10;
           }
         }
@@ -508,7 +507,8 @@ final class m {
                           break L14;
                         }
                       }
-                      if (this.a(stackIn_49_1, stackIn_49_2, stackIn_49_3 == 0, 16238)) {
+                      int discarded$7 = 16238;
+                      if (this.a(stackIn_49_1, stackIn_49_2, stackIn_49_3 == 0)) {
                         this.a(var3, (byte) -116, var4);
                         var4++;
                         continue L13;
@@ -531,7 +531,7 @@ final class m {
         }
     }
 
-    private final boolean a(int param0, int param1, boolean param2, int param3) {
+    private final boolean a(int param0, int param1, boolean param2) {
         int var6 = Virogrid.field_F ? 1 : 0;
         fb var5 = (fb) (Object) ((m) this).field_g.a((byte) -68);
         while (var5 != null) {

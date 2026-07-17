@@ -24,9 +24,9 @@ final class ksa extends ci {
 
     final static void a(boolean param0, kia param1) {
         try {
-            kh.a(param0, param1, qla.field_f);
+            kh.a(true, param1, qla.field_f);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "ksa.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "ksa.C(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

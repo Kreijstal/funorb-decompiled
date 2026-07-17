@@ -144,7 +144,7 @@ final class fj extends gg {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         String var1 = null;
         if (!k.field_b) {
           throw new IllegalStateException();
@@ -157,7 +157,8 @@ final class fj extends gg {
               break L0;
             }
           }
-          var1 = s.o(-74);
+          int discarded$2 = -74;
+          var1 = s.o();
           ve.field_a = new bb(var1, (String) null, true, false, false);
           u.field_b.b((rc) (Object) gf.field_cb, 125);
           gf.field_cb.c(-3399, (rc) (Object) ve.field_a);

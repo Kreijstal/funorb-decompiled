@@ -17,7 +17,7 @@ final class vlb implements dja {
         return (tv) (Object) new odb();
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 

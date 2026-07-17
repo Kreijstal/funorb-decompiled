@@ -23,7 +23,7 @@ final class vu extends fw {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_Q = null;
         field_O = null;
         field_P = null;
@@ -32,11 +32,11 @@ final class vu extends fw {
         field_M = null;
     }
 
-    final static boolean b(boolean param0) {
+    final static boolean b() {
         return field_M.field_dc == oh.field_H;
     }
 
-    final static boolean j(int param0) {
+    final static boolean j() {
         return wq.a(dj.field_e, wm.field_b, (byte) -116);
     }
 
@@ -49,7 +49,7 @@ final class vu extends fw {
         }
     }
 
-    final static void a(boolean param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void a(boolean param0, boolean param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
@@ -89,28 +89,20 @@ final class vu extends fw {
                       var10 = 0;
                       L2: while (true) {
                         if (var10 >= 4) {
-                          L3: {
-                            if (param6 == 1) {
-                              break L3;
-                            } else {
-                              field_N = null;
-                              break L3;
-                            }
-                          }
                           break L0;
                         } else {
-                          L4: {
+                          L3: {
                             var8 = 40 + (-44 + (var7_int & 7)) + bm.field_y[var10][0];
                             var9 = 20 + bm.field_y[var10][1] + ((param5 & 3) + -64);
                             if (!param1) {
-                              break L4;
+                              break L3;
                             } else {
                               var9 = var9 >> 1;
                               var8 = var8 >> 1;
-                              break L4;
+                              break L3;
                             }
                           }
-                          L5: {
+                          L4: {
                             stackOut_11_0 = param0;
                             stackIn_13_0 = stackOut_11_0;
                             stackIn_12_0 = stackOut_11_0;
@@ -119,40 +111,40 @@ final class vu extends fw {
                               stackOut_13_1 = 0;
                               stackIn_14_0 = stackOut_13_0;
                               stackIn_14_1 = stackOut_13_1;
-                              break L5;
+                              break L4;
                             } else {
                               stackOut_12_0 = stackIn_12_0;
                               stackOut_12_1 = 1;
                               stackIn_14_0 = stackOut_12_0;
                               stackIn_14_1 = stackOut_12_1;
-                              break L5;
+                              break L4;
                             }
                           }
-                          L6: {
+                          L5: {
                             if (stackIn_14_0 ^ stackIn_14_1 != 0) {
                               var11 = param5 % 6;
                               if (var11 < 0) {
-                                break L6;
+                                break L5;
                               } else {
                                 if (var11 >= nr.field_c.length) {
-                                  break L6;
+                                  break L5;
                                 } else {
                                   if (nr.field_c[var11] != null) {
                                     var12 = nr.field_c[var11];
                                     if (param1) {
                                       var12.d(db.a(true, param2 - -var8), u.a(var9 + param3, (byte) 94));
-                                      break L6;
+                                      break L5;
                                     } else {
                                       var12.a(db.a(true, var8 + param2), u.a(var9 + param3, (byte) 94));
-                                      break L6;
+                                      break L5;
                                     }
                                   } else {
-                                    break L6;
+                                    break L5;
                                   }
                                 }
                               }
                             } else {
-                              break L6;
+                              break L5;
                             }
                           }
                           param5 = param5 >> 1;
@@ -171,7 +163,7 @@ final class vu extends fw {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var7, "vu.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw ig.a((Throwable) (Object) var7, "vu.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + 1 + 41);
         }
     }
 

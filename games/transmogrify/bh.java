@@ -74,15 +74,19 @@ final class bh {
     }
 
     final static ti[] a(int param0, int param1, int param2, int param3, int param4) {
-        if (param1 > -109) {
-          field_b = null;
-          return nj.a(1, 0, param2, 3, 1, param3, 103, 1, param0);
-        } else {
-          return nj.a(1, 0, param2, 3, 1, param3, 103, 1, param0);
-        }
+        int discarded$0 = 65793;
+        int discarded$1 = 1;
+        int discarded$2 = 103;
+        int discarded$3 = 0;
+        int discarded$4 = 1;
+        int discarded$5 = 3;
+        int discarded$6 = 0;
+        int discarded$7 = 0;
+        int discarded$8 = 1;
+        return nj.a();
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }

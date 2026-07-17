@@ -237,72 +237,68 @@ final class nd extends ek {
         try {
           L0: {
             super.a((ek) (Object) param2, (byte) -80);
-            if (!param1) {
-              L1: {
-                if (!param0) {
-                  og.a((Object[]) (Object) ((nd) this).field_q, 0, (Object[]) (Object) param2.field_q, 0, 6);
-                  break L1;
-                } else {
-                  var4_int = 0;
-                  L2: while (true) {
-                    if (var4_int >= 6) {
-                      break L1;
-                    } else {
-                      L3: {
-                        var5 = ((nd) this).field_q[var4_int];
-                        if (var5 == null) {
-                          param2.field_q[var4_int] = null;
-                          break L3;
-                        } else {
-                          L4: {
-                            var6 = param2.field_q[var4_int];
-                            stackOut_7_0 = (oc) var5;
-                            stackOut_7_1 = -59;
-                            stackIn_9_0 = stackOut_7_0;
-                            stackIn_9_1 = stackOut_7_1;
-                            stackIn_8_0 = stackOut_7_0;
-                            stackIn_8_1 = stackOut_7_1;
-                            if (var6 == null) {
-                              oc dupTemp$17 = new oc();
-                              param2.field_q[var4_int] = dupTemp$17;
-                              stackOut_9_0 = (oc) (Object) stackIn_9_0;
-                              stackOut_9_1 = stackIn_9_1;
-                              stackOut_9_2 = (oc) dupTemp$17;
-                              stackIn_10_0 = stackOut_9_0;
-                              stackIn_10_1 = stackOut_9_1;
-                              stackIn_10_2 = stackOut_9_2;
-                              break L4;
-                            } else {
-                              stackOut_8_0 = (oc) (Object) stackIn_8_0;
-                              stackOut_8_1 = stackIn_8_1;
-                              stackOut_8_2 = (oc) var6;
-                              stackIn_10_0 = stackOut_8_0;
-                              stackIn_10_1 = stackOut_8_1;
-                              stackIn_10_2 = stackOut_8_2;
-                              break L4;
-                            }
+            L1: {
+              if (!param0) {
+                og.a((Object[]) (Object) ((nd) this).field_q, 0, (Object[]) (Object) param2.field_q, 0, 6);
+                break L1;
+              } else {
+                var4_int = 0;
+                L2: while (true) {
+                  if (var4_int >= 6) {
+                    break L1;
+                  } else {
+                    L3: {
+                      var5 = ((nd) this).field_q[var4_int];
+                      if (var5 == null) {
+                        param2.field_q[var4_int] = null;
+                        break L3;
+                      } else {
+                        L4: {
+                          var6 = param2.field_q[var4_int];
+                          stackOut_7_0 = (oc) var5;
+                          stackOut_7_1 = -59;
+                          stackIn_9_0 = stackOut_7_0;
+                          stackIn_9_1 = stackOut_7_1;
+                          stackIn_8_0 = stackOut_7_0;
+                          stackIn_8_1 = stackOut_7_1;
+                          if (var6 == null) {
+                            oc dupTemp$17 = new oc();
+                            param2.field_q[var4_int] = dupTemp$17;
+                            stackOut_9_0 = (oc) (Object) stackIn_9_0;
+                            stackOut_9_1 = stackIn_9_1;
+                            stackOut_9_2 = (oc) dupTemp$17;
+                            stackIn_10_0 = stackOut_9_0;
+                            stackIn_10_1 = stackOut_9_1;
+                            stackIn_10_2 = stackOut_9_2;
+                            break L4;
+                          } else {
+                            stackOut_8_0 = (oc) (Object) stackIn_8_0;
+                            stackOut_8_1 = stackIn_8_1;
+                            stackOut_8_2 = (oc) var6;
+                            stackIn_10_0 = stackOut_8_0;
+                            stackIn_10_1 = stackOut_8_1;
+                            stackIn_10_2 = stackOut_8_2;
+                            break L4;
                           }
-                          ((oc) (Object) stackIn_10_0).a(stackIn_10_1, stackIn_10_2);
-                          break L3;
                         }
+                        ((oc) (Object) stackIn_10_0).a(stackIn_10_1, stackIn_10_2);
+                        break L3;
                       }
-                      var4_int++;
-                      continue L2;
                     }
+                    var4_int++;
+                    continue L2;
                   }
                 }
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4 = decompiledCaughtException;
             stackOut_15_0 = (RuntimeException) var4;
-            stackOut_15_1 = new StringBuilder().append("nd.O(").append(param0).append(44).append(param1).append(44);
+            stackOut_15_1 = new StringBuilder().append("nd.O(").append(param0).append(44).append(0).append(44);
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;

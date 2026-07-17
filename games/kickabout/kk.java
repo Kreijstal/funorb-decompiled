@@ -52,16 +52,13 @@ final class kk {
 
     final static void a(byte param0, boolean param1, boolean param2, String param3) {
         try {
-            ou.a(param0 + 101);
-            wd.field_l.k(param0 + 225);
-            if (param0 != -101) {
-                field_R = null;
-            }
+            ou.a(0);
+            wd.field_l.k(124);
             pb.field_E = new pd(ep.field_b, (String) null, hk.field_G, param2, param1);
             we.field_a = new vo(wd.field_l, (fd) (Object) pb.field_E);
             wd.field_l.a((fd) (Object) we.field_a, false);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "kk.A(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "kk.A(" + -101 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -341,7 +338,7 @@ final class kk {
                 break L1;
               }
             }
-            stackOut_3_0 = kj.a(var3_int, 0, param0, var5, var4, false);
+            stackOut_3_0 = kj.a(var3_int, 0, param0, var5, var4, param2);
             stackIn_4_0 = stackOut_3_0;
             break L0;
           }
@@ -373,7 +370,7 @@ final class kk {
               break L2;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + 0 + 41);
+          throw nb.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + param2 + 41);
         }
         return stackIn_4_0;
     }

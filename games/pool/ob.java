@@ -2240,7 +2240,7 @@ class ob extends jh {
         try {
           L0: {
             var9_float = param4[0];
-            var10 = param6[param7];
+            var10 = param6[0];
             var11 = param4[1];
             var12 = param6[1];
             var13 = param4[2];
@@ -2467,7 +2467,7 @@ class ob extends jh {
           }
           L8: {
             stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(44).append(param7).append(44);
+            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(44).append(0).append(44);
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;

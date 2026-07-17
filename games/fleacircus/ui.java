@@ -9,7 +9,7 @@ final class ui extends oh {
     static jg field_pb;
     static uj field_nb;
 
-    public static void e(boolean param0) {
+    public static void e() {
         field_lb = null;
         field_ob = null;
         field_mb = null;

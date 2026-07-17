@@ -10,7 +10,7 @@ final class nf {
     static String field_e;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_d = null;
         field_e = null;

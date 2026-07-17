@@ -378,7 +378,7 @@ final class tf implements Runnable {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_d = null;
     }
 

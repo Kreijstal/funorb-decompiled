@@ -10,7 +10,7 @@ final class g extends RuntimeException {
     static String field_a;
     static String field_d;
 
-    public static void c(int param0) {
+    public static void c() {
         field_f = null;
         field_e = null;
         field_d = null;
@@ -19,18 +19,12 @@ final class g extends RuntimeException {
     }
 
     final static void a(byte param0, int param1, int param2) {
-        if (param0 != -85) {
-            return;
-        }
         lm.field_g = param2;
         bt.field_g = param1;
     }
 
     final static int a(int param0, int param1) {
         param1 = param1 & 8191;
-        if (param0 != -1) {
-            g.a((byte) 1, -105, -40);
-        }
         if (param1 >= 4096) {
             return param1 < 6144 ? -e.field_a[-param1 + 6144] : e.field_a[-6144 + param1];
         }
@@ -127,7 +121,7 @@ final class g extends RuntimeException {
         }
     }
 
-    final static void b(int param0) {
+    final static void b() {
         int var2 = 0;
         L0: {
           var2 = ArmiesOfGielinor.field_M ? 1 : 0;
@@ -150,7 +144,8 @@ final class g extends RuntimeException {
         }
         L1: {
           if (gk.field_J > 0) {
-            bh.d(false);
+            int discarded$1 = 0;
+            bh.d();
             break L1;
           } else {
             break L1;
@@ -179,21 +174,21 @@ final class g extends RuntimeException {
         ((g) this).field_g = param1;
     }
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         dc var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         dc var4 = null;
         int stackIn_4_0 = 0;
-        int stackIn_14_0 = 0;
-        int stackIn_19_0 = 0;
-        int stackIn_22_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_17_0 = 0;
+        int stackIn_20_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_18_0 = 0;
+        int stackOut_19_0 = 0;
+        int stackOut_11_0 = 0;
+        int stackOut_16_0 = 0;
         var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
@@ -204,49 +199,41 @@ final class g extends RuntimeException {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0 != 0;
             } else {
-              L1: {
-                if (param0 == -17211) {
-                  break L1;
-                } else {
-                  field_e = null;
-                  break L1;
-                }
-              }
               var2 = 0;
-              L2: while (true) {
+              L1: while (true) {
                 if (var2 >= var1.field_p) {
-                  stackOut_21_0 = 1;
-                  stackIn_22_0 = stackOut_21_0;
+                  stackOut_19_0 = 1;
+                  stackIn_20_0 = stackOut_19_0;
                   break L0;
                 } else {
-                  L3: {
+                  L2: {
                     if (var4.field_k[var2] != null) {
                       if (var4.field_k[var2].field_g == 0) {
-                        stackOut_13_0 = 0;
-                        stackIn_14_0 = stackOut_13_0;
-                        return stackIn_14_0 != 0;
+                        stackOut_11_0 = 0;
+                        stackIn_12_0 = stackOut_11_0;
+                        return stackIn_12_0 != 0;
                       } else {
-                        break L3;
+                        break L2;
                       }
                     } else {
-                      break L3;
+                      break L2;
                     }
                   }
-                  L4: {
+                  L3: {
                     if (var4.field_r[var2] == null) {
-                      break L4;
+                      break L3;
                     } else {
                       if (0 == var4.field_r[var2].field_g) {
-                        stackOut_18_0 = 0;
-                        stackIn_19_0 = stackOut_18_0;
-                        return stackIn_19_0 != 0;
+                        stackOut_16_0 = 0;
+                        stackIn_17_0 = stackOut_16_0;
+                        return stackIn_17_0 != 0;
                       } else {
-                        break L4;
+                        break L3;
                       }
                     }
                   }
                   var2++;
-                  continue L2;
+                  continue L1;
                 }
               }
             }
@@ -254,9 +241,9 @@ final class g extends RuntimeException {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var1_ref, "g.D(" + param0 + 41);
+          throw ig.a((Throwable) (Object) var1_ref, "g.D(" + -17211 + 41);
         }
-        return stackIn_22_0 != 0;
+        return stackIn_20_0 != 0;
     }
 
     static {

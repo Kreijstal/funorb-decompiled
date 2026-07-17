@@ -388,10 +388,10 @@ abstract class vk {
 
     final static void a(byte param0, boolean param1) {
         al.field_f.a(param1, true);
-        int var2 = 101 % ((param0 - -86) / 33);
+        int var2 = 0;
     }
 
-    final static void a(byte param0, int param1) {
+    final static void a() {
         RuntimeException var2 = null;
         int var3 = 0;
         nf var4 = null;
@@ -403,26 +403,19 @@ abstract class vk {
             var4 = (nf) (Object) wb.field_f.b(-77);
             L1: while (true) {
               if (var4 == null) {
-                L2: {
-                  if (param0 < -104) {
-                    break L2;
-                  } else {
-                    vk.a((byte) -101, false);
-                    break L2;
-                  }
-                }
                 var5 = (hk) (Object) id.field_g.b(-91);
-                L3: while (true) {
+                L2: while (true) {
                   if (var5 == null) {
                     break L0;
                   } else {
                     pd.a(3, var5, 77);
                     var5 = (hk) (Object) id.field_g.b((byte) -121);
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
-                ea.a(3, var4, (byte) 80);
+                int discarded$2 = 80;
+                ea.a(3, var4);
                 var4 = (nf) (Object) wb.field_f.b((byte) 120);
                 continue L1;
               }
@@ -431,7 +424,7 @@ abstract class vk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var2, "vk.G(" + param0 + 44 + 3 + 41);
+          throw ma.a((Throwable) (Object) var2, "vk.G(" + -128 + 44 + 3 + 41);
         }
     }
 

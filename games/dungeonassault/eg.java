@@ -41,48 +41,34 @@ final class eg {
         return var5;
     }
 
-    final static String a(int param0) {
-        if (param0 > -4) {
-            field_d = 71;
-            return ra.field_c.d(-104);
-        }
+    final static String a() {
         return ra.field_c.d(-104);
     }
 
-    final static int c(int param0) {
-        Object var2 = null;
-        if (param0 != 1) {
-          var2 = null;
-          String discarded$2 = eg.a((String) null, (String) null, (String) null, false);
-          return (int)(1000000000L / hk.field_e);
-        } else {
-          return (int)(1000000000L / hk.field_e);
-        }
+    final static int c() {
+        return (int)(1000000000L / hk.field_e);
     }
 
     static long a(long param0, long param1) {
         return param0 & param1;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, cn param5, int param6, int param7, int param8, se param9, int param10) {
-        ig.field_a = param6;
-        e.field_d = param10;
-        wm.field_b = param0;
-        md.field_f = param8;
-        cb.field_b = param3;
-        if (param4 != 5) {
-            return;
-        }
+    final static void a(int param0, int param1, int param2, int param3, int param4, cn param5, int param6, int param7, int param8, se param9) {
+        ig.field_a = 2;
+        e.field_d = 80;
+        wm.field_b = 80;
+        md.field_f = -2400;
+        cb.field_b = 40;
         try {
-            je.field_b = param1;
+            je.field_b = 15;
             qc.field_z = param5;
-            lj.field_m = param7;
+            lj.field_m = 40;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "eg.K(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 44 + param7 + 44 + param8 + 44 + (param9 != null ? "{...}" : "null") + 44 + param10 + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "eg.K(" + 80 + 44 + 15 + 44 + 16744576 + 44 + 40 + 44 + 5 + 44 + (param5 != null ? "{...}" : "null") + 44 + 2 + 44 + 40 + 44 + -2400 + 44 + (param9 != null ? "{...}" : "null") + 44 + 80 + 41);
         }
     }
 
-    private final void a(long param0, byte param1) {
+    private final void a(long param0) {
         wf var4 = (wf) (Object) ((eg) this).field_h.a(1, param0);
         this.a(var4, (byte) 85);
     }
@@ -487,7 +473,7 @@ final class eg {
         }
     }
 
-    final static void a(md param0, boolean param1) {
+    final static void a(md param0) {
         RuntimeException var2 = null;
         rj var2_ref = null;
         int var3 = 0;
@@ -513,7 +499,8 @@ final class eg {
         try {
           L0: {
             L1: {
-              var5 = to.a(hj.field_S, eh.field_h, param0, 0);
+              int discarded$2 = 0;
+              var5 = to.a(hj.field_S, eh.field_h, param0);
               var2_ref = var5;
               if (wi.field_ob != var5) {
                 L2: {
@@ -540,7 +527,8 @@ final class eg {
                 um.field_h = 0;
                 kp.field_c = lc.field_c;
                 rn.field_a = hm.field_k;
-                pa.field_c = to.a(lc.field_c, hm.field_k, param0, 0);
+                int discarded$3 = 0;
+                pa.field_c = to.a(lc.field_c, hm.field_k, param0);
                 break L3;
               } else {
                 if (la.field_g != 1) {
@@ -644,29 +632,26 @@ final class eg {
     }
 
     private final void a(Object param0, int param1, byte param2, long param3) {
-        wf var9 = null;
-        pb var6 = null;
+        wf var6 = null;
+        pb var6_ref = null;
         int var7 = DungeonAssault.field_K;
         try {
-            if (((eg) this).field_a < param1) {
+            if (((eg) this).field_a < 1) {
                 throw new IllegalStateException();
             }
-            this.a(param3, (byte) -110);
-            ((eg) this).field_e = ((eg) this).field_e - param1;
-            if (param2 >= -28) {
-                Object var8 = null;
-                String discarded$0 = eg.a((String) null, (String) null, (String) null, true);
-            }
+            int discarded$0 = -110;
+            this.a(param3);
+            ((eg) this).field_e = ((eg) this).field_e - 1;
             while (0 > ((eg) this).field_e) {
-                var9 = (wf) (Object) ((eg) this).field_c.b(true);
-                this.a(var9, (byte) 120);
+                var6 = (wf) (Object) ((eg) this).field_c.b(true);
+                this.a(var6, (byte) 120);
             }
-            var6 = new pb(param0, param1);
-            ((eg) this).field_h.a(param3, (byte) -128, (ne) (Object) var6);
-            ((eg) this).field_c.a((ll) (Object) var6, false);
-            ((wf) (Object) var6).field_o = 0L;
+            var6_ref = new pb(param0, 1);
+            ((eg) this).field_h.a(param3, (byte) -128, (ne) (Object) var6_ref);
+            ((eg) this).field_c.a((ll) (Object) var6_ref, false);
+            ((wf) (Object) var6_ref).field_o = 0L;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) (Object) runtimeException, "eg.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw vk.a((Throwable) (Object) runtimeException, "eg.E(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 44 + -123 + 44 + param3 + 41);
         }
     }
 

@@ -219,7 +219,7 @@ final class jh extends in {
           if (param0.field_k.length == 0) {
             return null;
           } else {
-            return new jh(param0, (int)((long)param0.field_h * 256L * (long)param1 / (long)(100 * ua.field_p)), param2 << 6, param3 << 6);
+            return new jh(param0, (int)((long)param0.field_h * 256L * 100L / (long)(100 * ua.field_p)), param2 << 6, param3 << 6);
           }
         } else {
           return null;
@@ -311,7 +311,7 @@ final class jh extends in {
           if (param0.field_k.length == 0) {
             return null;
           } else {
-            return new jh(param0, (int)((long)param0.field_h * 256L * (long)param1 / (long)(100 * ua.field_p)), param2 << 6);
+            return new jh(param0, (int)((long)param0.field_h * 256L * 100L / (long)(100 * ua.field_p)), param2 << 6);
           }
         } else {
           return null;

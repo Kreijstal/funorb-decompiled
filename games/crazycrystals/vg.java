@@ -6,7 +6,7 @@ final class vg {
     static int[] field_b;
     static String field_c;
 
-    final static void a(byte param0) {
+    final static void a() {
         if (0 - lc.field_a == sn.field_c) {
             return;
         }
@@ -41,7 +41,7 @@ final class vg {
         return jd.field_G;
     }
 
-    final static String c(byte param0) {
+    final static String c() {
         int var2 = -3;
         String var1 = "";
         if (!(null == mk.field_b)) {

@@ -17,7 +17,7 @@ final class sj extends hg {
         rk.field_e.a((wg) (Object) mb.field_a);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_j = null;
         field_k = null;
         field_l = null;

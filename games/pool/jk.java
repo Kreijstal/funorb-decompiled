@@ -18,7 +18,8 @@ final class jk {
 
     final static void a(boolean param0, boolean param1, di param2, di param3) {
         try {
-            ub.a(md.field_d, (lr) (Object) ol.field_c, cq.field_d, iq.field_f, uo.field_Lb, ei.field_A, pa.field_M, i.field_l, param0, kq.field_a, ag.field_f, (byte) 37);
+            int discarded$14 = 37;
+            ub.a(md.field_d, (lr) (Object) ol.field_c, cq.field_d, iq.field_f, uo.field_Lb, ei.field_A, pa.field_M, i.field_l, param0, kq.field_a, ag.field_f);
             if (param1) {
                 Object var5 = null;
                 jk.a(true, true, (di) null, (di) null);
@@ -66,8 +67,10 @@ final class jk {
         var9 = Pool.field_O;
         try {
           L0: {
-            nn.a(param0, true);
-            eg discarded$1 = gn.a(param0, 5);
+            int discarded$3 = 1;
+            nn.a(param0);
+            int discarded$4 = 5;
+            eg discarded$5 = gn.a(param0);
             param0.e();
             L1: while (true) {
               if (1500 <= -param0.field_V + param0.field_x) {
@@ -185,13 +188,10 @@ final class jk {
         }
     }
 
-    final static void a(long param0, int param1, int param2) {
+    final static void a(long param0, int param1) {
         oq var4 = ej.field_j;
         var4.b(false, param1);
         var4.field_v = var4.field_v + 1;
-        if (param2 != 0) {
-            field_c = null;
-        }
         int var5 = var4.field_v;
         var4.a(7, false);
         var4.a(param0, (byte) -119);
@@ -320,7 +320,7 @@ final class jk {
         }
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void a(boolean param0) {
         vh stackIn_5_0 = null;
         int stackIn_5_1 = 0;
         vh stackIn_6_0 = null;
@@ -594,7 +594,7 @@ final class jk {
         oc.a(114);
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_i = null;
         field_c = null;
         field_k = null;
@@ -643,8 +643,10 @@ final class jk {
         try {
           L0: {
             L1: {
-              this.a(param1, (byte) 95);
-              this.a((byte) 112);
+              int discarded$4 = 95;
+              this.a(param1);
+              int discarded$5 = 112;
+              this.a();
               ((jk) this).field_g = false;
               if (param0 == 0) {
                 break L1;
@@ -688,7 +690,7 @@ final class jk {
         }
     }
 
-    private final void a(uf param0, byte param1) {
+    private final void a(uf param0) {
         RuntimeException var3 = null;
         double var3_double = 0.0;
         double var5 = 0.0;
@@ -767,14 +769,11 @@ final class jk {
         }
     }
 
-    private final void a(byte param0) {
+    private final void a() {
         int var2 = 0;
         int var3 = Pool.field_O;
         for (var2 = 0; ((jk) this).field_b.length > var2; var2++) {
             ((jk) this).field_m[var2] = (nc) (Object) kh.field_gc.a(((jk) this).field_l, ((jk) this).field_b[var2], -72);
-        }
-        if (param0 <= 84) {
-            ((jk) this).field_l = null;
         }
     }
 

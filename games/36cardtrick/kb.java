@@ -19,7 +19,7 @@ final class kb {
         return true;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         field_c = null;

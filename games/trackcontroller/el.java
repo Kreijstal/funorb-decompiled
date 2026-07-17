@@ -18,19 +18,16 @@ class el extends rh {
         ((el) this).b(true);
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_L = null;
         field_O = null;
         field_J = null;
         field_K = null;
     }
 
-    final static Boolean j(int param0) {
+    final static Boolean j() {
         Boolean var1 = qi.field_c;
         qi.field_c = null;
-        if (param0 != 2) {
-            field_J = null;
-        }
         return var1;
     }
 

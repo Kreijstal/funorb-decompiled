@@ -6,7 +6,7 @@ final class nqa {
     static boolean[][] field_b;
     static volatile boolean field_a;
 
-    final static Object a(ij param0, int param1) {
+    final static Object a(ij param0) {
         ksa var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -85,7 +85,7 @@ final class nqa {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
     }
 

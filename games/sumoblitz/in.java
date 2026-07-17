@@ -14,7 +14,8 @@ final class in extends ie {
             if (mp.field_a < 20) {
                 return true;
             }
-            if (!we.g(-1)) {
+            int discarded$2 = -1;
+            if (!we.g()) {
                 return true;
             }
             if (jk.field_c <= 0) {
@@ -28,7 +29,8 @@ final class in extends ie {
         if (mp.field_a < 20) {
             return true;
         }
-        if (!we.g(-1)) {
+        int discarded$5 = -1;
+        if (!we.g()) {
             return true;
         }
         if (jk.field_c <= 0) {

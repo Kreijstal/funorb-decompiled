@@ -62,7 +62,8 @@ final class sd extends da {
         cn var6 = new cn(((sd) this).field_D.field_x, ((sd) this).field_D.field_s);
         lm.a(var6, (byte) -79);
         ((sd) this).field_D.a(param0, 0, param2, param2);
-        ti.c(true);
+        int discarded$0 = 1;
+        ti.c();
         var6.d(param1 + ((sd) this).field_q, ((sd) this).field_v + param3, ((sd) this).field_H);
     }
 

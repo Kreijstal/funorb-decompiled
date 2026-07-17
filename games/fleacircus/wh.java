@@ -12,7 +12,7 @@ final class wh {
         throw new IllegalStateException();
     }
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         return vg.field_z > 250;
     }
 
@@ -108,7 +108,8 @@ final class wh {
     }
 
     final static void a(int param0) {
-        tf.d(true);
+        int discarded$2 = 1;
+        tf.d();
         if (param0 >= -71) {
             wh.a(-58);
         }

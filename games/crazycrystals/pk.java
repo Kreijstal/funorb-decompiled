@@ -12,7 +12,7 @@ final class pk {
     static int field_c;
     private ob field_b;
 
-    public static void b(int param0) {
+    public static void b() {
         int var1 = 69;
         field_f = null;
     }
@@ -197,7 +197,7 @@ final class pk {
         return stackIn_11_0;
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         return ch.field_d.b(true);
     }
 
@@ -205,7 +205,7 @@ final class pk {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    final static void a(int param0, pp param1, byte param2) {
+    final static void a(int param0, pp param1) {
         md var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_3_0 = null;
@@ -227,7 +227,7 @@ final class pk {
         try {
           L0: {
             var3 = tp.field_f;
-            var3.d(8, param0);
+            var3.d(8, 5);
             var3.a(true, 2);
             var3.a(true, 0);
             var3.a(true, param1.field_f);
@@ -238,7 +238,7 @@ final class pk {
           L1: {
             var3_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3_ref;
-            stackOut_2_1 = new StringBuilder().append("pk.B(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("pk.B(").append(5).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -335,7 +335,9 @@ final class pk {
                     }
                   }
                 } else {
-                  wp.a((Throwable) null, "A1: " + ug.a(-1815), 21862);
+                  int discarded$2 = -1815;
+                  int discarded$3 = 21862;
+                  wp.a((Throwable) null, "A1: " + ug.a());
                   jj.a(4);
                   break L1;
                 }
@@ -410,7 +412,8 @@ final class pk {
               break L1;
             }
             if (var5.length == 65) {
-              var17 = ac.a(var10.field_h, 5, -5 + (-var16.length + var10.field_f), (byte) -127);
+              int discarded$1 = -127;
+              var17 = ac.a(var10.field_h, 5, -5 + (-var16.length + var10.field_f));
               var7 = 0;
               L3: while (true) {
                 if (var7 >= 64) {

@@ -106,86 +106,16 @@ final class wh {
                 }
               }
             }
-            if (!param1) {
-              L7: {
-                if (ul.field_d > param4) {
-                  break L7;
-                } else {
-                  if (ul.field_a > var6) {
-                    var11 = var7 + param4 * ul.field_f;
-                    var12 = var9 + 1 + -var7 >> 1;
-                    L8: while (true) {
-                      var12--;
-                      if (var12 < 0) {
-                        break L7;
-                      } else {
-                        ul.field_b[var11] = 16777215;
-                        var11 += 2;
-                        continue L8;
-                      }
-                    }
-                  } else {
-                    break L7;
-                  }
-                }
-              }
-              L9: {
-                if (var5_int < ul.field_i) {
-                  break L9;
-                } else {
-                  if (var5_int >= ul.field_e) {
-                    break L9;
-                  } else {
-                    var11 = ((var5_int - param2 & 1) + var8) * ul.field_f - -var5_int;
-                    var12 = -var8 + var10 + 1 >> 1;
-                    L10: while (true) {
-                      var12--;
-                      if (var12 < 0) {
-                        break L9;
-                      } else {
-                        ul.field_b[var11] = 16777215;
-                        var11 = var11 + ul.field_f * 2;
-                        continue L10;
-                      }
-                    }
-                  }
-                }
-              }
-              L11: {
-                if (ul.field_d > param4) {
-                  break L11;
-                } else {
-                  if (var6 < ul.field_a) {
-                    var11 = ul.field_f * var6 + (var7 - -(1 & var6 - param4));
-                    var12 = -var7 + (1 - -var9) >> 1;
-                    L12: while (true) {
-                      var12--;
-                      if (var12 < 0) {
-                        break L11;
-                      } else {
-                        ul.field_b[var11] = 16777215;
-                        var11 += 2;
-                        continue L12;
-                      }
-                    }
-                  } else {
-                    return;
-                  }
-                }
-              }
-              break L0;
-            } else {
-              return;
-            }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw dd.a((Throwable) (Object) var5, "wh.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw dd.a((Throwable) (Object) var5, "wh.B(" + param0 + 44 + 0 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         field_a = null;

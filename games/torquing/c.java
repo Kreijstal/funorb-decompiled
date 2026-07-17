@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class c {
-    final static void a(Torquing param0, int param1) {
+    final static void a(Torquing param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -22,31 +22,27 @@ final class c {
         String stackOut_6_2 = null;
         try {
           L0: {
-            if (param1 == 9072) {
-              L1: {
-                rf.field_q[6] = new int[1];
-                ok.field_C[6] = 404;
-                vo.field_f[6] = new mh(param0, 6);
-                rf.field_q[9] = new int[4];
-                de.field_c[9] = 40;
-                nn.field_a[9][0] = (af) (Object) new ia(27, 52, 574, 402);
-                vo.field_f[9] = new mh(param0, 9);
-                rf.field_q[3] = new int[3];
-                vo.field_f[3] = new mh(param0, 3);
-                rf.field_q[2] = new int[2];
-                vo.field_f[2] = new mh(param0, 2);
-                if (wp.field_w <= 0) {
-                  break L1;
-                } else {
-                  rf.field_q[1] = new int[7];
-                  vo.field_f[1] = new mh(param0, 1);
-                  break L1;
-                }
+            L1: {
+              rf.field_q[6] = new int[1];
+              ok.field_C[6] = 404;
+              vo.field_f[6] = new mh(param0, 6);
+              rf.field_q[9] = new int[4];
+              de.field_c[9] = 40;
+              nn.field_a[9][0] = (af) (Object) new ia(27, 52, 574, 402);
+              vo.field_f[9] = new mh(param0, 9);
+              rf.field_q[3] = new int[3];
+              vo.field_f[3] = new mh(param0, 3);
+              rf.field_q[2] = new int[2];
+              vo.field_f[2] = new mh(param0, 2);
+              if (wp.field_w <= 0) {
+                break L1;
+              } else {
+                rf.field_q[1] = new int[7];
+                vo.field_f[1] = new mh(param0, 1);
+                break L1;
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -76,7 +72,7 @@ final class c {
               break L2;
             }
           }
-          throw rb.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw rb.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 9072 + 41);
         }
     }
 
@@ -275,7 +271,7 @@ final class c {
         return stackIn_8_0;
     }
 
-    final static int a(int param0) {
+    final static int a() {
         return pa.field_b;
     }
 

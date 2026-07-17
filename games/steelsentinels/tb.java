@@ -43,35 +43,9 @@ class tb {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        L0: {
-          if (param0 < 8000) {
-            break L0;
-          } else {
-            if (param0 <= 48000) {
-              L1: {
-                field_g = param0;
-                if (!param1) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              field_b = stackIn_7_0 != 0;
-              field_k = 10;
-              return;
-            } else {
-              break L0;
-            }
-          }
-        }
-        throw new IllegalArgumentException();
+        field_g = 22050;
+        field_b = true;
+        field_k = 10;
     }
 
     final synchronized void c() {
@@ -468,12 +442,12 @@ class tb {
     }
 
     private final void a(int param0) {
-        ((tb) this).field_n = ((tb) this).field_n - 256;
+        ((tb) this).field_n = ((tb) this).field_n - param0;
         if (((tb) this).field_n < 0) {
             ((tb) this).field_n = 0;
         }
         if (((tb) this).field_c != null) {
-            ((tb) this).field_c.d(256);
+            ((tb) this).field_c.d(param0);
             return;
         }
     }
@@ -500,7 +474,7 @@ class tb {
         we var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_b) {
             break L0;
           } else {
@@ -510,7 +484,7 @@ class tb {
         }
         L1: {
           ii.a(param0, 0, var3);
-          ((tb) this).field_n = ((tb) this).field_n - 256;
+          ((tb) this).field_n = ((tb) this).field_n - param1;
           if (((tb) this).field_c == null) {
             break L1;
           } else {
@@ -677,7 +651,7 @@ class tb {
           if (((tb) this).field_c == null) {
             break L17;
           } else {
-            ((tb) this).field_c.a(param0, 0, 256);
+            ((tb) this).field_c.a(param0, 0, param1);
             break L17;
           }
         }

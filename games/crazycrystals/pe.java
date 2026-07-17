@@ -83,7 +83,7 @@ final class pe extends jb {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var2 = 0;
         hb var3 = null;

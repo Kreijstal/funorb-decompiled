@@ -15,7 +15,7 @@ final class ka extends go {
     static uk field_m;
     static int field_p;
 
-    final static boolean c(byte param0) {
+    final static boolean c() {
         int stackIn_5_0 = 0;
         int stackOut_3_0 = 0;
         int stackOut_4_0 = 0;
@@ -44,75 +44,67 @@ final class ka extends go {
         return stackIn_5_0 != 0;
     }
 
-    final static go a(String param0, int param1, int param2) {
+    final static go a(String param0, int param1) {
         ka var3 = null;
         RuntimeException var3_ref = null;
-        Object stackIn_2_0 = null;
-        ka stackIn_4_0 = null;
+        ka stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ka stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        ka stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
         String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           L0: {
             var3 = new ka();
             ((go) (Object) var3).field_e = param0;
-            if (param2 == 0) {
-              ((go) (Object) var3).field_b = param1;
-              stackOut_3_0 = (ka) var3;
-              stackIn_4_0 = stackOut_3_0;
-              break L0;
-            } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
-              return (go) (Object) stackIn_2_0;
-            }
+            ((go) (Object) var3).field_b = param1;
+            stackOut_2_0 = (ka) var3;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3_ref = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3_ref;
-            stackOut_5_1 = new StringBuilder().append("ka.F(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackOut_4_0 = (RuntimeException) var3_ref;
+            stackOut_4_1 = new StringBuilder().append("ka.F(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
-              break L1;
-            } else {
               stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
               stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L1;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
               break L1;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + param2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 44 + 0 + 41);
         }
-        return (go) (Object) stackIn_4_0;
+        return (go) (Object) stackIn_3_0;
     }
 
     final java.net.Socket b(byte param0) throws IOException {
@@ -362,14 +354,10 @@ final class ka extends go {
         }
     }
 
-    final static void b(boolean param0) {
+    final static void b() {
         if (!(ch.field_c == null)) {
             ch.field_c.d(-23482);
             ch.field_c = null;
-        }
-        if (param0) {
-            Object var2 = null;
-            go discarded$0 = ka.a((String) null, 106, 116);
         }
     }
 
@@ -448,6 +436,8 @@ final class ka extends go {
               var14 = var7.readLine();
               var8 = var14;
               if (var14 == null) {
+                var6.close();
+                var7.close();
                 break L2;
               } else {
                 L3: {
@@ -462,6 +452,8 @@ final class ka extends go {
                           break L4;
                         } else {
                           if (!var14.startsWith("HTTP/1.1 407")) {
+                            var6.close();
+                            var7.close();
                             break L2;
                           } else {
                             break L4;
@@ -512,16 +504,6 @@ final class ka extends go {
                 return stackIn_9_0;
               }
             }
-            L8: {
-              var6.close();
-              var7.close();
-              if (param0 >= 5) {
-                break L8;
-              } else {
-                field_l = null;
-                break L8;
-              }
-            }
             var13.close();
             stackOut_26_0 = null;
             stackIn_27_0 = stackOut_26_0;
@@ -529,10 +511,10 @@ final class ka extends go {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L8: {
             var5 = decompiledCaughtException;
             stackOut_28_0 = (RuntimeException) var5;
-            stackOut_28_1 = new StringBuilder().append("ka.E(").append(param0).append(44);
+            stackOut_28_1 = new StringBuilder().append("ka.E(").append(49).append(44);
             stackIn_30_0 = stackOut_28_0;
             stackIn_30_1 = stackOut_28_1;
             stackIn_29_0 = stackOut_28_0;
@@ -544,7 +526,7 @@ final class ka extends go {
               stackIn_31_0 = stackOut_30_0;
               stackIn_31_1 = stackOut_30_1;
               stackIn_31_2 = stackOut_30_2;
-              break L9;
+              break L8;
             } else {
               stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
               stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
@@ -552,10 +534,10 @@ final class ka extends go {
               stackIn_31_0 = stackOut_29_0;
               stackIn_31_1 = stackOut_29_1;
               stackIn_31_2 = stackOut_29_2;
-              break L9;
+              break L8;
             }
           }
-          L10: {
+          L9: {
             stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
             stackOut_31_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(44).append(param2).append(44);
             stackIn_33_0 = stackOut_31_0;
@@ -569,7 +551,7 @@ final class ka extends go {
               stackIn_34_0 = stackOut_33_0;
               stackIn_34_1 = stackOut_33_1;
               stackIn_34_2 = stackOut_33_2;
-              break L10;
+              break L9;
             } else {
               stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
               stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
@@ -577,7 +559,7 @@ final class ka extends go {
               stackIn_34_0 = stackOut_32_0;
               stackIn_34_1 = stackOut_32_1;
               stackIn_34_2 = stackOut_32_2;
-              break L10;
+              break L9;
             }
           }
           throw aa.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 41);
@@ -601,138 +583,130 @@ final class ka extends go {
         String var12 = null;
         String var13 = null;
         Class var14 = null;
-        Object stackIn_2_0 = null;
-        java.net.Socket stackIn_5_0 = null;
-        Object stackIn_8_0 = null;
-        java.net.Socket stackIn_18_0 = null;
-        Object stackIn_22_0 = null;
+        java.net.Socket stackIn_4_0 = null;
+        Object stackIn_7_0 = null;
+        java.net.Socket stackIn_17_0 = null;
+        Object stackIn_21_0 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
-        String stackIn_26_2 = null;
+        String stackIn_25_2 = null;
         Throwable decompiledCaughtException = null;
-        Object stackOut_21_0 = null;
-        java.net.Socket stackOut_17_0 = null;
-        Object stackOut_7_0 = null;
-        java.net.Socket stackOut_4_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        RuntimeException stackOut_25_0 = null;
-        StringBuilder stackOut_25_1 = null;
-        String stackOut_25_2 = null;
+        Object stackOut_20_0 = null;
+        java.net.Socket stackOut_16_0 = null;
+        Object stackOut_6_0 = null;
+        java.net.Socket stackOut_3_0 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
         RuntimeException stackOut_24_0 = null;
         StringBuilder stackOut_24_1 = null;
         String stackOut_24_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
         try {
           L0: {
-            if (param0 == -8973) {
-              if (param1.type() != java.net.Proxy.Type.DIRECT) {
-                var3_ref = param1.address();
-                if ((Object) var3_ref instanceof java.net.InetSocketAddress) {
-                  var4_ref = (java.net.InetSocketAddress) (Object) var3_ref;
-                  if (param1.type() != java.net.Proxy.Type.HTTP) {
-                    if (param1.type() == java.net.Proxy.Type.SOCKS) {
-                      var5 = (Object) (Object) new java.net.Socket(param1);
-                      ((java.net.Socket) var5).connect((java.net.SocketAddress) (Object) new java.net.InetSocketAddress(((ka) this).field_e, ((ka) this).field_b));
-                      stackOut_21_0 = var5;
-                      stackIn_22_0 = stackOut_21_0;
-                      break L0;
-                    } else {
-                      return null;
-                    }
+            if (param1.type() != java.net.Proxy.Type.DIRECT) {
+              var3_ref = param1.address();
+              if ((Object) var3_ref instanceof java.net.InetSocketAddress) {
+                var4_ref = (java.net.InetSocketAddress) (Object) var3_ref;
+                if (param1.type() != java.net.Proxy.Type.HTTP) {
+                  if (param1.type() == java.net.Proxy.Type.SOCKS) {
+                    var5 = (Object) (Object) new java.net.Socket(param1);
+                    ((java.net.Socket) var5).connect((java.net.SocketAddress) (Object) new java.net.InetSocketAddress(((ka) this).field_e, ((ka) this).field_b));
+                    stackOut_20_0 = var5;
+                    stackIn_21_0 = stackOut_20_0;
+                    break L0;
                   } else {
-                    var5 = null;
-                    try {
-                      L1: {
-                        L2: {
-                          var14 = Class.forName("sun.net.www.protocol.http.AuthenticationInfo");
-                          var6_ref = var14;
-                          var7 = var14.getDeclaredMethod("getProxyAuth", new Class[2]);
-                          var7.setAccessible(true);
-                          var8 = var7.invoke((Object) null, new Object[2]);
-                          if (var8 != null) {
-                            var9 = var6_ref.getDeclaredMethod("supportsPreemptiveAuthorization", new Class[0]);
-                            var9.setAccessible(true);
-                            if (!((Boolean) var9.invoke(var8, new Object[0])).booleanValue()) {
-                              break L2;
-                            } else {
-                              var10 = var6_ref.getDeclaredMethod("getHeaderName", new Class[0]);
-                              var10.setAccessible(true);
-                              var11 = var14.getDeclaredMethod("getHeaderValue", new Class[2]);
-                              var11.setAccessible(true);
-                              var12 = (String) var10.invoke(var8, new Object[0]);
-                              var13 = (String) var11.invoke(var8, new Object[2]);
-                              var5 = (Object) (Object) (var12 + ": " + var13);
-                              break L2;
-                            }
-                          } else {
-                            break L2;
-                          }
-                        }
-                        break L1;
-                      }
-                    } catch (java.lang.Exception decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      L3: {
-                        var6 = (Exception) (Object) decompiledCaughtException;
-                        break L3;
-                      }
-                    }
-                    stackOut_17_0 = this.a((byte) 49, (String) var5, var4_ref.getPort(), var4_ref.getHostName());
-                    stackIn_18_0 = stackOut_17_0;
-                    return stackIn_18_0;
+                    return null;
                   }
                 } else {
-                  stackOut_7_0 = null;
-                  stackIn_8_0 = stackOut_7_0;
-                  return (java.net.Socket) (Object) stackIn_8_0;
+                  var5 = null;
+                  try {
+                    L1: {
+                      L2: {
+                        var14 = Class.forName("sun.net.www.protocol.http.AuthenticationInfo");
+                        var6_ref = var14;
+                        var7 = var14.getDeclaredMethod("getProxyAuth", new Class[2]);
+                        var7.setAccessible(true);
+                        var8 = var7.invoke((Object) null, new Object[2]);
+                        if (var8 != null) {
+                          var9 = var6_ref.getDeclaredMethod("supportsPreemptiveAuthorization", new Class[0]);
+                          var9.setAccessible(true);
+                          if (!((Boolean) var9.invoke(var8, new Object[0])).booleanValue()) {
+                            break L2;
+                          } else {
+                            var10 = var6_ref.getDeclaredMethod("getHeaderName", new Class[0]);
+                            var10.setAccessible(true);
+                            var11 = var14.getDeclaredMethod("getHeaderValue", new Class[2]);
+                            var11.setAccessible(true);
+                            var12 = (String) var10.invoke(var8, new Object[0]);
+                            var13 = (String) var11.invoke(var8, new Object[2]);
+                            var5 = (Object) (Object) (var12 + ": " + var13);
+                            break L2;
+                          }
+                        } else {
+                          break L2;
+                        }
+                      }
+                      break L1;
+                    }
+                  } catch (java.lang.Exception decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    L3: {
+                      var6 = (Exception) (Object) decompiledCaughtException;
+                      break L3;
+                    }
+                  }
+                  stackOut_16_0 = this.a((byte) 49, (String) var5, var4_ref.getPort(), var4_ref.getHostName());
+                  stackIn_17_0 = stackOut_16_0;
+                  return stackIn_17_0;
                 }
               } else {
-                stackOut_4_0 = ((ka) this).a((byte) -44);
-                stackIn_5_0 = stackOut_4_0;
-                return stackIn_5_0;
+                stackOut_6_0 = null;
+                stackIn_7_0 = stackOut_6_0;
+                return (java.net.Socket) (Object) stackIn_7_0;
               }
             } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
-              return (java.net.Socket) (Object) stackIn_2_0;
+              stackOut_3_0 = ((ka) this).a((byte) -44);
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           L4: {
             var3 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_23_0 = (RuntimeException) var3;
-            stackOut_23_1 = new StringBuilder().append("ka.J(").append(param0).append(44);
-            stackIn_25_0 = stackOut_23_0;
-            stackIn_25_1 = stackOut_23_1;
-            stackIn_24_0 = stackOut_23_0;
-            stackIn_24_1 = stackOut_23_1;
+            stackOut_22_0 = (RuntimeException) var3;
+            stackOut_22_1 = new StringBuilder().append("ka.J(").append(-8973).append(44);
+            stackIn_24_0 = stackOut_22_0;
+            stackIn_24_1 = stackOut_22_1;
+            stackIn_23_0 = stackOut_22_0;
+            stackIn_23_1 = stackOut_22_1;
             if (param1 == null) {
-              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
-              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
-              stackOut_25_2 = "null";
-              stackIn_26_0 = stackOut_25_0;
-              stackIn_26_1 = stackOut_25_1;
-              stackIn_26_2 = stackOut_25_2;
-              break L4;
-            } else {
               stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
               stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
-              stackOut_24_2 = "{...}";
-              stackIn_26_0 = stackOut_24_0;
-              stackIn_26_1 = stackOut_24_1;
-              stackIn_26_2 = stackOut_24_2;
+              stackOut_24_2 = "null";
+              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_1 = stackOut_24_1;
+              stackIn_25_2 = stackOut_24_2;
+              break L4;
+            } else {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "{...}";
+              stackIn_25_0 = stackOut_23_0;
+              stackIn_25_1 = stackOut_23_1;
+              stackIn_25_2 = stackOut_23_2;
               break L4;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
         }
-        return (java.net.Socket) (Object) stackIn_22_0;
+        return (java.net.Socket) (Object) stackIn_21_0;
     }
 
     final static int a(boolean param0, byte param1, ud param2) {
@@ -758,7 +732,7 @@ final class ka extends go {
         String stackOut_3_2 = null;
         try {
           L0: {
-            var3_int = -44 / ((-75 - param1) / 49);
+            var3_int = 44;
             stackOut_0_0 = param2.b(param0, true);
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -768,7 +742,7 @@ final class ka extends go {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("ka.I(").append(param0).append(44).append(param1).append(44);
+            stackOut_2_1 = new StringBuilder().append("ka.I(").append(param0).append(44).append(22).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;

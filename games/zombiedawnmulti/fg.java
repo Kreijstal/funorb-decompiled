@@ -103,16 +103,14 @@ final class fg extends ae {
         CharSequence var5 = null;
         try {
             qf.field_g = param2;
-            if (param0 != -16745) {
-                field_k = null;
-            }
             va.field_a = 2;
             var5 = (CharSequence) (Object) param2;
-            ql.field_a = tg.a(var5, false);
+            int discarded$0 = 0;
+            ql.field_a = tg.a(var5);
             jj.field_M = param1;
             lp.a((byte) 69);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "fg.E(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "fg.E(" + -16745 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

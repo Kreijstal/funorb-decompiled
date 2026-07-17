@@ -142,7 +142,7 @@ final class de {
           } else {
             var11 = 65536 - var6 >> 8;
             var12 = var6 >> 8;
-            var13 = ((param4 & 16711935) * var11 + (param5 & 16711935) * var12 & -16711936) + ((param4 & 65280) * var11 + (param5 & 65280) * var12 & 16711680) >>> 8;
+            var13 = ((param4 & 16711935) * var11 + 34 * var12 & -16711936) + ((param4 & 65280) * var11 + 0 * var12 & 16711680) >>> 8;
             var14 = -param2;
             L5: while (true) {
               if (var14 >= 0) {
@@ -264,7 +264,7 @@ final class de {
             }
           }
           L3: {
-            var13 = param2 - param4 - param4 - 1;
+            var13 = 200 - param4 - param4 - 1;
             var14 = var11;
             var15 = param4 * param4;
             var16 = 0;
@@ -291,7 +291,7 @@ final class de {
                 }
               }
               L6: {
-                var21 = param0 + param2;
+                var21 = param0 + 200;
                 if (var21 <= field_h) {
                   break L6;
                 } else {
@@ -358,7 +358,7 @@ final class de {
                         var22 = var20 + var14 * field_e;
                         var23 = 65536 - var7 >> 8;
                         var24 = var7 >> 8;
-                        var25 = ((param5 & 16711935) * var23 + (param6 & 16711935) * var24 & -16711936) + ((param5 & 65280) * var23 + (param6 & 65280) * var24 & 16711680) >>> 8;
+                        var25 = ((param5 & 16711935) * var23 + 34 * var24 & -16711936) + ((param5 & 65280) * var23 + 0 * var24 & 16711680) >>> 8;
                         var26 = var20;
                         L14: while (true) {
                           if (var26 > var21) {
@@ -383,7 +383,7 @@ final class de {
                 } else {
                   var25 = 65536 - var7 >> 8;
                   var26 = var7 >> 8;
-                  var27 = ((param5 & 16711935) * var25 + (param6 & 16711935) * var26 & -16711936) + ((param5 & 65280) * var25 + (param6 & 65280) * var26 & 16711680) >>> 8;
+                  var27 = ((param5 & 16711935) * var25 + 34 * var26 & -16711936) + ((param5 & 65280) * var25 + 0 * var26 & 16711680) >>> 8;
                   var28 = var20;
                   L15: while (true) {
                     if (var28 >= var21) {
@@ -429,7 +429,7 @@ final class de {
                       var22 = var20 + var14 * field_e;
                       var23 = 65536 - var7 >> 8;
                       var24 = var7 >> 8;
-                      var25 = ((param5 & 16711935) * var23 + (param6 & 16711935) * var24 & -16711936) + ((param5 & 65280) * var23 + (param6 & 65280) * var24 & 16711680) >>> 8;
+                      var25 = ((param5 & 16711935) * var23 + 34 * var24 & -16711936) + ((param5 & 65280) * var23 + 0 * var24 & 16711680) >>> 8;
                       var26 = var20;
                       L20: while (true) {
                         if (var26 >= var21) {
@@ -462,7 +462,7 @@ final class de {
             }
           }
         } else {
-          de.h(param0, param1, param2, param3, param5, param6);
+          de.h(param0, param1, 200, param3, param5, 34);
           return;
         }
     }
@@ -1698,11 +1698,11 @@ final class de {
     }
 
     final static void f(int param0, int param1, int param2, int param3, int param4, int param5) {
-        de.e(param0, param1, param2, param4, param5);
-        de.e(param0, param1 + param3 - 1, param2, param4, param5);
+        de.e(param0, param1, param2, 16777215, 128);
+        de.e(param0, param1 + param3 - 1, param2, 16777215, 128);
         if (param3 >= 3) {
-            de.f(param0, param1 + 1, param3 - 2, param4, param5);
-            de.f(param0 + param2 - 1, param1 + 1, param3 - 2, param4, param5);
+            de.f(param0, param1 + 1, param3 - 2, 16777215, 128);
+            de.f(param0 + param2 - 1, param1 + 1, param3 - 2, 16777215, 128);
             return;
         }
     }
@@ -1834,9 +1834,9 @@ final class de {
               }
             }
             var6 = 256 - param5;
-            var7 = (param4 >> 16 & 255) * param5;
-            var8 = (param4 >> 8 & 255) * param5;
-            var9 = (param4 & 255) * param5;
+            var7 = 255 * param5;
+            var8 = 255 * param5;
+            var9 = 255 * param5;
             if (param2 <= param3) {
               L1: {
                 param0 = param0 << 16;
@@ -1941,10 +1941,10 @@ final class de {
           } else {
             L9: {
               if (param3 < 0) {
-                de.f(param0, param1 + param3, -param3 + 1, param4, param5);
+                de.f(param0, param1 + param3, -param3 + 1, 16777215, param5);
                 break L9;
               } else {
-                de.f(param0, param1, param3 + 1, param4, param5);
+                de.f(param0, param1, param3 + 1, 16777215, param5);
                 break L9;
               }
             }
@@ -1953,10 +1953,10 @@ final class de {
         } else {
           L10: {
             if (param2 < 0) {
-              de.e(param0 + param2, param1, -param2 + 1, param4, param5);
+              de.e(param0 + param2, param1, -param2 + 1, 16777215, param5);
               break L10;
             } else {
-              de.e(param0, param1, param2 + 1, param4, param5);
+              de.e(param0, param1, param2 + 1, 16777215, param5);
               break L10;
             }
           }
@@ -3311,10 +3311,10 @@ final class de {
         de.a(0, 0, 0, 0, 0, var15, var5, var22, field_l, param3, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void a(int param0, int param1) {
         int var7 = 0;
-        for (var7 = 0; var7 < param4; var7++) {
-            de.f(param0 + var7, param1 + var7, param2 - (var7 << 1), param3 - (var7 << 1), param5, 128);
+        for (var7 = 0; var7 < 2; var7++) {
+            de.f(param0 + var7, param1 + var7, 17 - (var7 << 1), 17 - (var7 << 1), 16777215, 128);
         }
     }
 

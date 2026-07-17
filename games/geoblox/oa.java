@@ -21,7 +21,7 @@ final class oa {
         return rj.field_b + var1;
     }
 
-    final static int a(int param0, CharSequence param1, int param2) {
+    final static int a(int param0, CharSequence param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_5_0 = null;
@@ -43,7 +43,7 @@ final class oa {
         String stackOut_5_2 = null;
         try {
           L0: {
-            stackOut_2_0 = eg.a(param1, (byte) 49, param0, true);
+            stackOut_2_0 = eg.a(param1, (byte) 49, 16, true);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -52,7 +52,7 @@ final class oa {
           L1: {
             var3 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var3;
-            stackOut_4_1 = new StringBuilder().append("oa.A(").append(param0).append(44);
+            stackOut_4_1 = new StringBuilder().append("oa.A(").append(16).append(44);
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -80,7 +80,7 @@ final class oa {
         return stackIn_3_0;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
         field_d = null;
         field_e = null;

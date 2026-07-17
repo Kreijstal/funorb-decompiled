@@ -23,14 +23,12 @@ final class ll extends lk {
     final static void a(int param0, boolean param1, int param2) {
         ck.field_c = param0;
         sj.field_d = param2;
-        if (!param1) {
-            int discarded$0 = ll.c(62, 103, 114);
-        }
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4) {
         super.b(param0, param1, param2, param3, param4);
-        this.a(true);
+        int discarded$0 = 1;
+        this.a();
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -51,6 +49,7 @@ final class ll extends lk {
     }
 
     private final tg b(int param0, int param1, int param2) {
+        tg var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -60,68 +59,60 @@ final class ll extends lk {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        tg var14 = null;
-        int stackIn_7_0 = 0;
-        int stackIn_10_0 = 0;
+        int stackIn_5_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_7_0 = 0;
         int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        L0: {
-          var13 = Bounce.field_N;
-          var14 = new tg(2 * ((ll) this).field_K, ((ll) this).field_m);
-          if (param1 == -30578) {
-            break L0;
-          } else {
-            ((ll) this).field_w = -85;
-            break L0;
-          }
-        }
-        kh.a(var14, 1);
+        var13 = Bounce.field_N;
+        var4 = new tg(2 * ((ll) this).field_K, ((ll) this).field_m);
+        int discarded$1 = 1;
+        kh.a(var4);
         var5 = ((ll) this).field_m >> 1;
         var6 = 0;
-        L1: while (true) {
+        L0: while (true) {
           if (var6 >= ((ll) this).field_m) {
             ve.a(-124);
-            return var14;
+            return var4;
           } else {
-            L2: {
+            L1: {
               var7 = (var6 >> 1) * (2 * ((ll) this).field_K - 1) % (((ll) this).field_K * 2);
               var8 = param0 & 16711935;
               var9 = 65280 & param0;
               var10 = var6 - var5;
               var11 = (int)(Math.sqrt((double)(var5 * var5 + -(var10 * var10))) / (double)var5 * 128.0) + 128;
               if (256 > var11) {
-                stackOut_6_0 = (var8 * var11 & -16711936 | var9 * var11 & 16711680) >>> 8;
-                stackIn_7_0 = stackOut_6_0;
-                break L2;
+                stackOut_4_0 = (var8 * var11 & -16711936 | var9 * var11 & 16711680) >>> 8;
+                stackIn_5_0 = stackOut_4_0;
+                break L1;
               } else {
-                stackOut_5_0 = var9 | var8;
-                stackIn_7_0 = stackOut_5_0;
-                break L2;
+                stackOut_3_0 = var9 | var8;
+                stackIn_5_0 = stackOut_3_0;
+                break L1;
               }
             }
-            L3: {
-              var12 = stackIn_7_0;
+            L2: {
+              var12 = stackIn_5_0;
               na.a(var7, var6, ((ll) this).field_K, var12);
               var9 = 65280 & param2;
               var8 = 16711935 & param2;
               na.a(var7 + -(((ll) this).field_K * 2), var6, ((ll) this).field_K, var12);
               if (var11 >= 256) {
-                stackOut_9_0 = var8 | var9;
-                stackIn_10_0 = stackOut_9_0;
-                break L3;
+                stackOut_7_0 = var8 | var9;
+                stackIn_8_0 = stackOut_7_0;
+                break L2;
               } else {
-                stackOut_8_0 = (var11 * var8 & -16711936 | 16711680 & var9 * var11) >>> 8;
-                stackIn_10_0 = stackOut_8_0;
-                break L3;
+                stackOut_6_0 = (var11 * var8 & -16711936 | 16711680 & var9 * var11) >>> 8;
+                stackIn_8_0 = stackOut_6_0;
+                break L2;
               }
             }
-            var12 = stackIn_10_0;
+            var12 = stackIn_8_0;
             na.a(((ll) this).field_K + var7, var6, ((ll) this).field_K, var12);
             na.a(var7 - ((ll) this).field_K, var6, ((ll) this).field_K, var12);
             var6++;
-            continue L1;
+            continue L0;
           }
         }
     }
@@ -205,58 +196,50 @@ final class ll extends lk {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_13_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_12_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_2_0 = 0;
+        int stackOut_11_0 = 0;
+        int stackOut_9_0 = 0;
         var4 = Bounce.field_N;
         try {
           L0: {
-            if (param0 == -15083) {
-              var3_int = 1;
-              L1: while (true) {
-                if (param1 <= 1) {
-                  if (1 != param1) {
-                    stackOut_12_0 = var3_int;
-                    stackIn_13_0 = stackOut_12_0;
-                    break L0;
-                  } else {
-                    stackOut_10_0 = param2 * var3_int;
-                    stackIn_11_0 = stackOut_10_0;
-                    return stackIn_11_0;
-                  }
+            var3_int = 1;
+            L1: while (true) {
+              if (param1 <= 1) {
+                if (1 != param1) {
+                  stackOut_11_0 = var3_int;
+                  stackIn_12_0 = stackOut_11_0;
+                  break L0;
                 } else {
-                  L2: {
-                    if ((1 & param1) == 0) {
-                      break L2;
-                    } else {
-                      var3_int = var3_int * param2;
-                      break L2;
-                    }
-                  }
-                  param1 = param1 >> 1;
-                  param2 = param2 * param2;
-                  continue L1;
+                  stackOut_9_0 = param2 * var3_int;
+                  stackIn_10_0 = stackOut_9_0;
+                  return stackIn_10_0;
                 }
+              } else {
+                L2: {
+                  if ((1 & param1) == 0) {
+                    break L2;
+                  } else {
+                    var3_int = var3_int * param2;
+                    break L2;
+                  }
+                }
+                param1 = param1 >> 1;
+                param2 = param2 * param2;
+                continue L1;
               }
-            } else {
-              stackOut_2_0 = 28;
-              stackIn_3_0 = stackOut_2_0;
-              return stackIn_3_0;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ii.a((Throwable) (Object) var3, "ll.B(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw ii.a((Throwable) (Object) var3, "ll.B(" + -15083 + 44 + param1 + 44 + param2 + 41);
         }
-        return stackIn_13_0;
+        return stackIn_12_0;
     }
 
-    private final void a(boolean param0) {
+    private final void a() {
         ((ll) this).field_z = new tg[]{this.b(((ll) this).field_G, -30578, ((ll) this).field_H), this.b(((ll) this).field_L, -30578, ((ll) this).field_x)};
         ((ll) this).field_M = this.d((byte) -21);
         ((ll) this).field_I = ((ll) this).field_M.a();
@@ -296,7 +279,8 @@ final class ll extends lk {
                 L2: {
                   ve.a(-125);
                   if (na.field_g <= param1 - -((ll) this).field_M.field_s) {
-                    kh.a(((ll) this).field_B, 1);
+                    int discarded$2 = 1;
+                    kh.a(((ll) this).field_B);
                     param0.a(-((ll) this).field_w, 0);
                     param0.a(-((ll) this).field_w + 2 * ((ll) this).field_K, 0);
                     ((ll) this).field_I.e(0, 0);
@@ -309,7 +293,8 @@ final class ll extends lk {
                 }
                 L3: {
                   if (na.field_b >= var5_int - ((ll) this).field_M.field_s) {
-                    kh.a(((ll) this).field_B, 1);
+                    int discarded$3 = 1;
+                    kh.a(((ll) this).field_B);
                     var7 = ((ll) this).field_k + -((ll) this).field_M.field_s + ((ll) this).field_w;
                     L4: while (true) {
                       if (var7 <= 2 * ((ll) this).field_K) {
@@ -391,7 +376,8 @@ final class ll extends lk {
         ((ll) this).field_G = param2;
         ((ll) this).field_L = (param2 & 16711422) >> 1;
         ((ll) this).field_H = param0;
-        this.a(true);
+        int discarded$0 = 1;
+        this.a();
     }
 
     private final tg d(byte param0) {
@@ -402,7 +388,8 @@ final class ll extends lk {
         int var9 = Bounce.field_N;
         int var2 = ((ll) this).field_m >> 1;
         tg var3 = new tg(var2, ((ll) this).field_m);
-        kh.a(var3, 1);
+        int discarded$0 = 1;
+        kh.a(var3);
         for (var4 = 0; var4 < ((ll) this).field_m; var4++) {
             for (var5 = 0; var2 > var5; var5++) {
                 var6 = (double)var5 * (double)var5 / (double)((-var4 + ((ll) this).field_m) * var4);

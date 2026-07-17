@@ -361,51 +361,37 @@ class lk extends ai {
             }
             L5: {
               if (((lk) this).field_j != null) {
-                L6: {
-                  StringBuilder discarded$14 = param1.append(" renderer=");
-                  if (!(((lk) this).field_j instanceof lk)) {
-                    break L6;
-                  } else {
-                    param1 = ((lk) this).a(1 + param0, true, param2, param1);
-                    if (var6 == 0) {
-                      break L5;
-                    } else {
-                      break L6;
-                    }
-                  }
+                StringBuilder discarded$14 = param1.append(" renderer=");
+                if (!(((lk) this).field_j instanceof lk)) {
+                  StringBuilder discarded$15 = param1.append(((lk) this).field_j);
+                  break L5;
+                } else {
+                  param1 = ((lk) this).a(1 + param0, true, param2, param1);
+                  break L5;
                 }
-                StringBuilder discarded$15 = param1.append(((lk) this).field_j);
-                break L5;
               } else {
                 break L5;
               }
             }
-            L7: {
+            L6: {
               if (null == ((lk) this).field_n) {
-                break L7;
+                break L6;
               } else {
-                L8: {
-                  StringBuilder discarded$16 = param1.append(" listener=");
-                  if (!(((lk) this).field_n instanceof lk)) {
-                    break L8;
-                  } else {
-                    param1 = ((lk) this).a(1 + param0, true, param2, param1);
-                    if (var6 == 0) {
-                      break L7;
-                    } else {
-                      break L8;
-                    }
-                  }
+                StringBuilder discarded$16 = param1.append(" listener=");
+                if (!(((lk) this).field_n instanceof lk)) {
+                  StringBuilder discarded$17 = param1.append(((lk) this).field_n);
+                  break L6;
+                } else {
+                  param1 = ((lk) this).a(1 + param0, true, param2, param1);
+                  break L6;
                 }
-                StringBuilder discarded$17 = param1.append(((lk) this).field_n);
-                break L7;
               }
             }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
+          L7: {
             var5 = decompiledCaughtException;
             stackOut_20_0 = (RuntimeException) var5;
             stackOut_20_1 = new StringBuilder().append("lk.OB(").append(param0).append(44);
@@ -420,7 +406,7 @@ class lk extends ai {
               stackIn_23_0 = stackOut_22_0;
               stackIn_23_1 = stackOut_22_1;
               stackIn_23_2 = stackOut_22_2;
-              break L9;
+              break L7;
             } else {
               stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
               stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
@@ -428,10 +414,10 @@ class lk extends ai {
               stackIn_23_0 = stackOut_21_0;
               stackIn_23_1 = stackOut_21_1;
               stackIn_23_2 = stackOut_21_2;
-              break L9;
+              break L7;
             }
           }
-          L10: {
+          L8: {
             stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
             stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(44);
             stackIn_25_0 = stackOut_23_0;
@@ -445,7 +431,7 @@ class lk extends ai {
               stackIn_26_0 = stackOut_25_0;
               stackIn_26_1 = stackOut_25_1;
               stackIn_26_2 = stackOut_25_2;
-              break L10;
+              break L8;
             } else {
               stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
               stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
@@ -453,7 +439,7 @@ class lk extends ai {
               stackIn_26_0 = stackOut_24_0;
               stackIn_26_1 = stackOut_24_1;
               stackIn_26_2 = stackOut_24_2;
-              break L10;
+              break L8;
             }
           }
           throw ii.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + param3 + 41);
@@ -597,43 +583,28 @@ class lk extends ai {
               break L0;
             } else {
               if (var5 != 0) {
-                boolean discarded$2 = ((lk) this).a(param0, ll.field_y, va.field_a, uc.field_C, param3, (lk) this, true);
+                boolean discarded$1 = ((lk) this).a(param0, ll.field_y, va.field_a, uc.field_C, param3, (lk) this, true);
                 break L0;
               } else {
                 L1: {
                   if (vh.field_e == 0) {
                     break L1;
                   } else {
-                    L2: {
-                      if (((lk) this).a(vh.field_e, (lk) this, param0, og.field_a, 28455, rk.field_a, param3)) {
-                        break L2;
+                    if (((lk) this).a(vh.field_e, (lk) this, param0, og.field_a, 28455, rk.field_a, param3)) {
+                      param2 = false;
+                      break L1;
+                    } else {
+                      if (var5 == 0) {
+                        break L1;
                       } else {
-                        if (var5 == 0) {
-                          break L1;
-                        } else {
-                          ((lk) this).c((byte) 114);
-                          if (var7 == 0) {
-                            break L1;
-                          } else {
-                            break L2;
-                          }
-                        }
+                        ((lk) this).c((byte) 114);
+                        break L1;
                       }
                     }
-                    param2 = false;
-                    break L1;
                   }
                 }
                 if (0 == n.field_m) {
-                  if (0 == d.field_B) {
-                    d.field_B = n.field_m;
-                    if (param1) {
-                      gk.a(73, ((lk) this).d(0));
-                      return param2;
-                    } else {
-                      return false;
-                    }
-                  } else {
+                  if (0 != d.field_B) {
                     ((lk) this).a(ll.field_y, param0, (lk) this, param3, 34, uc.field_C);
                     var6 = nd.field_A;
                     if (var6 != null) {
@@ -666,6 +637,14 @@ class lk extends ai {
                         return param2;
                       }
                     }
+                  } else {
+                    d.field_B = n.field_m;
+                    if (!param1) {
+                      return false;
+                    } else {
+                      gk.a(73, ((lk) this).d(0));
+                      return param2;
+                    }
                   }
                 } else {
                   d.field_B = n.field_m;
@@ -679,72 +658,70 @@ class lk extends ai {
               }
             }
           }
-          L3: {
+          L2: {
             if (vh.field_e == 0) {
-              break L3;
+              break L2;
             } else {
               if (((lk) this).a(vh.field_e, (lk) this, param0, og.field_a, 28455, rk.field_a, param3)) {
                 param2 = false;
-                break L3;
+                break L2;
               } else {
-                if (var5 == 0) {
-                  break L3;
-                } else {
-                  ((lk) this).c((byte) 114);
-                  if (var7 == 0) {
+                L3: {
+                  if (var5 == 0) {
                     break L3;
                   } else {
-                    L4: {
-                      param2 = false;
-                      if (0 != n.field_m) {
-                        break L4;
-                      } else {
-                        if (0 == d.field_B) {
-                          break L4;
-                        } else {
-                          ((lk) this).a(ll.field_y, param0, (lk) this, param3, 34, uc.field_C);
-                          var6 = nd.field_A;
-                          if (var6 != null) {
-                            if (!(var6.field_n instanceof df)) {
-                              nd.field_A = null;
-                              d.field_B = n.field_m;
-                              if (param1) {
-                                gk.a(73, ((lk) this).d(0));
-                                return param2;
-                              } else {
-                                return false;
-                              }
-                            } else {
-                              ((df) (Object) var6.field_n).a(var6, (byte) 109, (se) null);
-                              nd.field_A = null;
-                              d.field_B = n.field_m;
-                              if (param1) {
-                                gk.a(73, ((lk) this).d(0));
-                                return param2;
-                              } else {
-                                return false;
-                              }
-                            }
+                    ((lk) this).c((byte) 114);
+                    break L3;
+                  }
+                }
+                L4: {
+                  if (0 != n.field_m) {
+                    break L4;
+                  } else {
+                    if (0 == d.field_B) {
+                      break L4;
+                    } else {
+                      ((lk) this).a(ll.field_y, param0, (lk) this, param3, 34, uc.field_C);
+                      var6 = nd.field_A;
+                      if (var6 != null) {
+                        if (!(var6.field_n instanceof df)) {
+                          nd.field_A = null;
+                          d.field_B = n.field_m;
+                          if (param1) {
+                            gk.a(73, ((lk) this).d(0));
+                            return param2;
                           } else {
-                            d.field_B = n.field_m;
-                            if (param1) {
-                              gk.a(73, ((lk) this).d(0));
-                              return param2;
-                            } else {
-                              return false;
-                            }
+                            return false;
                           }
+                        } else {
+                          ((df) (Object) var6.field_n).a(var6, (byte) 109, (se) null);
+                          nd.field_A = null;
+                          d.field_B = n.field_m;
+                          if (param1) {
+                            gk.a(73, ((lk) this).d(0));
+                            return param2;
+                          } else {
+                            return false;
+                          }
+                        }
+                      } else {
+                        d.field_B = n.field_m;
+                        if (param1) {
+                          gk.a(73, ((lk) this).d(0));
+                          return param2;
+                        } else {
+                          return false;
                         }
                       }
                     }
-                    d.field_B = n.field_m;
-                    if (param1) {
-                      gk.a(73, ((lk) this).d(0));
-                      return param2;
-                    } else {
-                      return false;
-                    }
                   }
+                }
+                d.field_B = n.field_m;
+                if (param1) {
+                  gk.a(73, ((lk) this).d(0));
+                  return param2;
+                } else {
+                  return false;
                 }
               }
             }
@@ -802,82 +779,12 @@ class lk extends ai {
           if (var5 != 0) {
             if (vh.field_e != 0) {
               ((lk) this).c((byte) 114);
-              if (var7 != 0) {
-                L6: {
-                  if (0 == va.field_a) {
-                    break L6;
-                  } else {
-                    if (var5 != 0) {
-                      boolean discarded$3 = ((lk) this).a(param0, ll.field_y, va.field_a, uc.field_C, param3, (lk) this, true);
-                      break L6;
-                    } else {
-                      break L6;
-                    }
-                  }
-                }
-                L7: {
-                  if (vh.field_e == 0) {
-                    break L7;
-                  } else {
-                    L8: {
-                      if (((lk) this).a(vh.field_e, (lk) this, param0, og.field_a, 28455, rk.field_a, param3)) {
-                        break L8;
-                      } else {
-                        if (var5 == 0) {
-                          break L7;
-                        } else {
-                          ((lk) this).c((byte) 114);
-                          if (var7 == 0) {
-                            break L7;
-                          } else {
-                            break L8;
-                          }
-                        }
-                      }
-                    }
-                    param2 = false;
-                    break L7;
-                  }
-                }
-                L9: {
-                  if (0 != n.field_m) {
-                    break L9;
-                  } else {
-                    if (0 == d.field_B) {
-                      break L9;
-                    } else {
-                      ((lk) this).a(ll.field_y, param0, (lk) this, param3, 34, uc.field_C);
-                      var6 = nd.field_A;
-                      if (var6 != null) {
-                        if (!(var6.field_n instanceof df)) {
-                          nd.field_A = null;
-                          break L9;
-                        } else {
-                          ((df) (Object) var6.field_n).a(var6, (byte) 109, (se) null);
-                          nd.field_A = null;
-                          break L9;
-                        }
-                      } else {
-                        break L9;
-                      }
-                    }
-                  }
-                }
-                d.field_B = n.field_m;
-                if (!param1) {
-                  return false;
-                } else {
-                  gk.a(73, ((lk) this).d(0));
-                  return param2;
-                }
+              d.field_B = n.field_m;
+              if (!param1) {
+                return false;
               } else {
-                d.field_B = n.field_m;
-                if (!param1) {
-                  return false;
-                } else {
-                  gk.a(73, ((lk) this).d(0));
-                  return param2;
-                }
+                gk.a(73, ((lk) this).d(0));
+                return param2;
               }
             } else {
               d.field_B = n.field_m;
@@ -963,7 +870,8 @@ class lk extends ai {
             if (param2 > -28) {
               L1: {
                 ((lk) this).a(88, (StringBuilder) null, (Hashtable) null, -53);
-                var5 = ag.b(-1);
+                int discarded$4 = -1;
+                var5 = ag.b();
                 if (var5 != null) {
                   ma.field_m.a(ha.field_b, var5, mh.field_Z, true);
                   break L1;
@@ -974,7 +882,8 @@ class lk extends ai {
               return;
             } else {
               L2: {
-                var5 = ag.b(-1);
+                int discarded$5 = -1;
+                var5 = ag.b();
                 if (var5 != null) {
                   ma.field_m.a(ha.field_b, var5, mh.field_Z, true);
                   break L2;
@@ -987,20 +896,7 @@ class lk extends ai {
           } else {
             ((lk) this).a(var5_int, param0, 85, param1);
             var5_int++;
-            if (var6 == 0) {
-              continue L0;
-            } else {
-              L3: {
-                var5 = ag.b(-1);
-                if (var5 != null) {
-                  ma.field_m.a(ha.field_b, var5, mh.field_Z, true);
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              return;
-            }
+            continue L0;
           }
         }
     }
@@ -1132,7 +1028,7 @@ class lk extends ai {
 
     public static void b(byte param0) {
         field_s = null;
-        int var1 = 30 / 0;
+        int var1 = 30 / ((param0 - -5) / 58);
         field_t = null;
         field_p = null;
     }

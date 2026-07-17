@@ -12,13 +12,13 @@ abstract class jt extends pj {
     static long field_x;
     int field_z;
 
-    public static void d(byte param0) {
+    public static void d() {
         field_t = null;
         field_v = null;
         field_y = null;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         int var1 = 0;
         if (tt.field_l >= 224) {
             lf.a(0, 256);
@@ -26,7 +26,7 @@ abstract class jt extends pj {
             var1 = tt.field_l % 32;
             lf.a(0, tt.field_l + (32 - var1));
         }
-        var1 = -44 % ((param0 - 35) / 40);
+        var1 = -2;
     }
 
     abstract Object c(byte param0);

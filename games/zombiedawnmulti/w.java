@@ -23,10 +23,10 @@ final class w extends gq {
 
     private final void a(gd param0, int param1, int param2, int param3) {
         try {
-            param0.a(param2, param1, false);
+            param0.a(param2, -1, false);
             param0.a((byte) -116, param3);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "w.H(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "w.H(" + (param0 != null ? "{...}" : "null") + 44 + -1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -335,7 +335,8 @@ final class w extends gq {
 
     final static void a(int param0, int param1, boolean param2, int param3) {
         int var4 = 0;
-        ia.a(param0, param1, param2, 0);
+        int discarded$0 = 0;
+        ia.a(320, 180, true);
     }
 
     final static boolean a(int param0, int param1, int param2, int param3) {
@@ -346,7 +347,11 @@ final class w extends gq {
                 if (vc.a(4996418)) {
                   return true;
                 } else {
-                  if (sd.a(param2, (byte) 122, param0, param1)) {
+                  int discarded$16 = 15;
+                  int discarded$17 = 13;
+                  int discarded$18 = 122;
+                  int discarded$19 = 12;
+                  if (sd.a()) {
                     return true;
                   } else {
                     return false;
@@ -361,7 +366,11 @@ final class w extends gq {
               if (vc.a(4996418)) {
                 return true;
               } else {
-                if (sd.a(param2, (byte) 122, param0, param1)) {
+                int discarded$20 = 15;
+                int discarded$21 = 13;
+                int discarded$22 = 122;
+                int discarded$23 = 12;
+                if (sd.a()) {
                   return true;
                 } else {
                   return false;
@@ -378,7 +387,11 @@ final class w extends gq {
               if (vc.a(4996418)) {
                 return true;
               } else {
-                if (sd.a(param2, (byte) 122, param0, param1)) {
+                int discarded$24 = 15;
+                int discarded$25 = 13;
+                int discarded$26 = 122;
+                int discarded$27 = 12;
+                if (sd.a()) {
                   return true;
                 } else {
                   return false;
@@ -393,7 +406,11 @@ final class w extends gq {
             if (vc.a(4996418)) {
               return true;
             } else {
-              if (sd.a(param2, (byte) 122, param0, param1)) {
+              int discarded$28 = 15;
+              int discarded$29 = 13;
+              int discarded$30 = 122;
+              int discarded$31 = 12;
+              if (sd.a()) {
                 return true;
               } else {
                 return false;

@@ -14,7 +14,8 @@ abstract class cm {
     int field_c;
 
     final static void a(byte param0) {
-        if (!hi.a((byte) -72)) {
+        int discarded$7 = -72;
+        if (!hi.a()) {
           return;
         } else {
           if (param0 != -28) {

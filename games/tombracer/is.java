@@ -11,7 +11,7 @@ final class is extends jea {
     static float field_Ab;
     static jea field_yb;
 
-    public static void f(int param0) {
+    public static void f() {
         field_xb = null;
         field_wb = null;
         field_yb = null;

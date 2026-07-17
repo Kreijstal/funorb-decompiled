@@ -5,7 +5,7 @@ final class rm {
     static StringBuilder field_a;
     static gp field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }

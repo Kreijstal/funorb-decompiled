@@ -21,25 +21,15 @@ final class hj extends jc {
         param1 = (-715827883 & param1 >>> 1) + (1431655765 & param1);
         param1 = (858993459 & param1) + (1932735283 & param1 >>> 2);
         param1 = 252645135 & (param1 >>> 4) + param1;
-        if (!param0) {
-          hj.g(-63);
-          param1 = param1 + (param1 >>> 8);
-          param1 = param1 + (param1 >>> 16);
-          return param1 & 255;
-        } else {
-          param1 = param1 + (param1 >>> 8);
-          param1 = param1 + (param1 >>> 16);
-          return param1 & 255;
-        }
+        param1 = param1 + (param1 >>> 8);
+        param1 = param1 + (param1 >>> 16);
+        return param1 & 255;
     }
 
     final static void g(int param0) {
-        if (param0 != -7958) {
-            field_A = null;
-        }
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_J = null;
         field_H = null;
         field_K = null;

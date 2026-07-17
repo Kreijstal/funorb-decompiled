@@ -11,7 +11,7 @@ final class lf extends kn {
     static String field_Q;
     static String field_N;
 
-    public static void j(int param0) {
+    public static void j() {
         field_N = null;
         field_P = null;
         field_Q = null;
@@ -154,7 +154,8 @@ final class lf extends kn {
                   }
                 }
               }
-              d.l(465918340);
+              int discarded$2 = 465918340;
+              d.l();
               break L1;
             }
             L3: {
@@ -171,7 +172,7 @@ final class lf extends kn {
               if (param4 == 29521) {
                 break L3;
               } else {
-                int discarded$1 = lf.i(-127);
+                int discarded$3 = lf.i(-127);
                 break L3;
               }
             }
@@ -435,7 +436,8 @@ final class lf extends kn {
         km var7 = new km(((lf) this).field_M.field_y, ((lf) this).field_M.field_C);
         tl.a((byte) -67, var7);
         ((lf) this).field_M.a(0, param1, -110, 0);
-        fd.a(28773);
+        int discarded$12 = 28773;
+        fd.a();
         var7.b(((lf) this).field_u + param3, param0 - -((lf) this).field_r, ((lf) this).field_R);
         if (param2 > -80) {
             Object var6 = null;
@@ -445,44 +447,36 @@ final class lf extends kn {
 
     final static void a(int param0, boolean param1) {
         L0: {
-          if (param0 == -1) {
-            break L0;
-          } else {
-            field_T = -61;
-            break L0;
-          }
-        }
-        L1: {
           if (0 >= an.field_e) {
-            break L1;
+            break L0;
           } else {
             if (fm.field_V) {
               wb.g(0, 0, wb.field_h, uh.field_m.field_wb);
               la.field_c.a(false, param1);
-              break L1;
+              break L0;
             } else {
-              break L1;
+              break L0;
             }
           }
         }
-        L2: {
-          L3: {
+        L1: {
+          L2: {
             if (0 < aj.field_c) {
-              break L3;
+              break L2;
             } else {
               if (ed.field_c <= 0) {
-                break L2;
+                break L1;
               } else {
-                break L3;
+                break L2;
               }
             }
           }
           if (!jh.field_a) {
-            break L2;
+            break L1;
           } else {
             wb.g(0, 0, wb.field_h, uh.field_m.field_wb);
             ah.field_i.a(false, param1);
-            break L2;
+            break L1;
           }
         }
     }

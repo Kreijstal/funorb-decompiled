@@ -10,7 +10,7 @@ final class mp {
     static String field_c;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
         field_a = null;

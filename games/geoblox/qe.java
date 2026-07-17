@@ -8,7 +8,7 @@ final class qe {
     static int[] field_c;
     static int field_a;
 
-    final static java.awt.Frame a(int param0, int param1, int param2, int param3, d param4, int param5) {
+    final static java.awt.Frame a(int param0, int param1, int param2, int param3, d param4) {
         RuntimeException var6 = null;
         rj[] var6_array = null;
         int var7_int = 0;
@@ -44,10 +44,10 @@ final class qe {
           L0: {
             if (param4.b(-26098)) {
               L1: {
-                if (param1 != ~param0) {
+                if (param0 != 0) {
                   break L1;
                 } else {
-                  var10 = vi.a(param1 ^ -112, param4);
+                  var10 = vi.a(111, param4);
                   var6_array = var10;
                   if (var6_array != null) {
                     var7_int = 0;
@@ -61,7 +61,7 @@ final class qe {
                         }
                       } else {
                         L3: {
-                          if (param3 != var10[var8].field_d) {
+                          if (var10[var8].field_d != 640) {
                             break L3;
                           } else {
                             break L3;
@@ -78,7 +78,7 @@ final class qe {
                   }
                 }
               }
-              var11 = param4.a(param2, param1 ^ 1743550127, param5, param0, param3);
+              var11 = param4.a(480, -1743550128, 0, param0, 640);
               L4: while (true) {
                 if (var11.field_a != 0) {
                   var7 = (java.awt.Frame) var11.field_b;
@@ -110,7 +110,7 @@ final class qe {
           L5: {
             var6 = decompiledCaughtException;
             stackOut_27_0 = (RuntimeException) var6;
-            stackOut_27_1 = new StringBuilder().append("qe.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_27_1 = new StringBuilder().append("qe.D(").append(param0).append(44).append(-1).append(44).append(480).append(44).append(640).append(44);
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;
@@ -133,7 +133,7 @@ final class qe {
               break L5;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 44 + param5 + 41);
+          throw t.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 44 + 0 + 41);
         }
         return stackIn_26_0;
     }
@@ -145,7 +145,7 @@ final class qe {
         field_c = null;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -182,7 +182,7 @@ final class qe {
         }
     }
 
-    final static void a(rh param0, rh param1, int param2) {
+    final static void a(rh param0, rh param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;

@@ -69,7 +69,8 @@ final class jh extends java.awt.Canvas {
                         }
                       }
                       L2: {
-                        if (co.a(-20675) <= 2) {
+                        int discarded$14 = -20675;
+                        if (co.a() <= 2) {
                           rm.field_k = 5;
                           break L2;
                         } else {
@@ -81,7 +82,8 @@ final class jh extends java.awt.Canvas {
                     } else {
                       if (rm.field_k == 5) {
                         mo.field_f = oi.field_b;
-                        if (co.a(param0 + -20672) <= 1) {
+                        int discarded$15 = -20675;
+                        if (co.a() <= 1) {
                           rm.field_k = 6;
                           break L0;
                         } else {
@@ -164,7 +166,8 @@ final class jh extends java.awt.Canvas {
                     }
                   } else {
                     mo.field_f = vi.field_D;
-                    if (1 >= co.a(param0 ^ 20672)) {
+                    int discarded$16 = -20675;
+                    if (1 >= co.a()) {
                       rm.field_k = 4;
                       break L4;
                     } else {
@@ -186,7 +189,8 @@ final class jh extends java.awt.Canvas {
                     }
                   }
                   L7: {
-                    if (co.a(param0 + -20672) <= 2) {
+                    int discarded$17 = -20675;
+                    if (co.a() <= 2) {
                       rm.field_k = 3;
                       break L7;
                     } else {
@@ -226,7 +230,8 @@ final class jh extends java.awt.Canvas {
                           break L9;
                         }
                       }
-                      if (co.a(-20675) > 2) {
+                      int discarded$18 = -20675;
+                      if (co.a() > 2) {
                         break L8;
                       } else {
                         rm.field_k = 5;
@@ -235,7 +240,8 @@ final class jh extends java.awt.Canvas {
                     } else {
                       if (rm.field_k == 5) {
                         mo.field_f = ra.field_g;
-                        if (co.a(-20675) > 1) {
+                        int discarded$19 = -20675;
+                        if (co.a() > 1) {
                           break L8;
                         } else {
                           rm.field_k = 6;
@@ -269,7 +275,8 @@ final class jh extends java.awt.Canvas {
                       }
                     }
                     L12: {
-                      if (co.a(-20675) <= 2) {
+                      int discarded$20 = -20675;
+                      if (co.a() <= 2) {
                         rm.field_k = 5;
                         break L12;
                       } else {
@@ -327,7 +334,8 @@ final class jh extends java.awt.Canvas {
                 }
               }
               mo.field_f = nb.field_f;
-              if (co.a(-20675) <= 2) {
+              int discarded$21 = -20675;
+              if (co.a() <= 2) {
                 rm.field_k = 2;
                 break L14;
               } else {
@@ -349,7 +357,8 @@ final class jh extends java.awt.Canvas {
                   }
                 }
                 L17: {
-                  if (co.a(param0 ^ 20672) > 2) {
+                  int discarded$22 = -20675;
+                  if (co.a() > 2) {
                     break L17;
                   } else {
                     rm.field_k = 2;
@@ -361,7 +370,8 @@ final class jh extends java.awt.Canvas {
               } else {
                 if (2 == rm.field_k) {
                   mo.field_f = be.field_h;
-                  if (co.a(-20675) <= 1) {
+                  int discarded$23 = -20675;
+                  if (co.a() <= 1) {
                     rm.field_k = 3;
                     break L14;
                   } else {
@@ -403,7 +413,7 @@ final class jh extends java.awt.Canvas {
                 if (rm.field_k == 1) {
                   mo.field_f = ag.field_x;
                   qn.field_ob.field_B = true;
-                  i.b(param0 + -113);
+                  i.b(-116);
                   kl.field_A = 500;
                   break L20;
                 } else {
@@ -464,7 +474,8 @@ final class jh extends java.awt.Canvas {
                             }
                           }
                           L24: {
-                            if (co.a(-20675) > 1) {
+                            int discarded$24 = -20675;
+                            if (co.a() > 1) {
                               break L24;
                             } else {
                               rm.field_k = 6;
@@ -484,7 +495,8 @@ final class jh extends java.awt.Canvas {
                         }
                       } else {
                         mo.field_f = gh.field_o;
-                        if (co.a(-20675) <= 2) {
+                        int discarded$25 = -20675;
+                        if (co.a() <= 2) {
                           rm.field_k = 5;
                           break L20;
                         } else {
@@ -546,7 +558,7 @@ final class jh extends java.awt.Canvas {
                   break L27;
                 }
               }
-              i.b(param0 + 36);
+              i.b(33);
               kl.field_A = 400;
               break L18;
             }
@@ -599,7 +611,8 @@ final class jh extends java.awt.Canvas {
                           if (rm.field_k != 5) {
                             if (rm.field_k == 6) {
                               mo.field_f = ol.field_e;
-                              if (co.a(param0 + -20672) <= 1) {
+                              int discarded$26 = -20675;
+                              if (co.a() <= 1) {
                                 rm.field_k = 7;
                                 break L30;
                               } else {
@@ -832,8 +845,8 @@ final class jh extends java.awt.Canvas {
                 if (240 <= rk.field_O.a(0, true).field_ib) {
                   break L29;
                 } else {
-                  ml dupTemp$1 = rk.field_O.a(0, true);
-                  dupTemp$1.field_ib = dupTemp$1.field_ib + 1;
+                  ml dupTemp$27 = rk.field_O.a(0, true);
+                  dupTemp$27.field_ib = dupTemp$27.field_ib + 1;
                   break L29;
                 }
               }
@@ -860,7 +873,7 @@ final class jh extends java.awt.Canvas {
                   mo.field_f = bh.field_a;
                   qn.field_ob.field_B = true;
                   qn.field_ob.field_z = 1500;
-                  i.b(param0 + -115);
+                  i.b(-118);
                   qn.field_ob.field_X = false;
                   qn.field_ob.field_H = false;
                   break L49;
@@ -918,78 +931,70 @@ final class jh extends java.awt.Canvas {
           }
         }
         L50: {
-          if (param0 == -3) {
-            break L50;
-          } else {
-            field_c = null;
-            break L50;
-          }
-        }
-        L51: {
           if (7 != mj.field_p) {
-            break L51;
+            break L50;
           } else {
             if (null != rk.field_O.a(0, true)) {
-              L52: {
+              L51: {
                 if (0 == rm.field_k) {
                   mo.field_f = vd.field_j;
                   qn.field_ob.field_B = true;
-                  break L52;
+                  break L51;
                 } else {
                   if (!param1) {
                     mo.field_f = oc.field_h;
-                    break L52;
+                    break L51;
                   } else {
-                    break L52;
+                    break L51;
                   }
                 }
               }
-              L53: {
+              L52: {
                 var5 = rk.field_O.a(qn.field_ob.field_bb, true);
                 if (rm.field_k < 0) {
-                  L54: {
-                    L55: {
-                      L56: {
+                  L53: {
+                    L54: {
+                      L55: {
                         kl.field_A = 400;
                         if (var5 == null) {
-                          break L56;
+                          break L55;
                         } else {
                           if (var5.field_jb != 0) {
-                            break L55;
+                            break L54;
                           } else {
-                            break L56;
+                            break L55;
                           }
                         }
                       }
                       if (ti.field_N != -1) {
-                        break L55;
-                      } else {
                         break L54;
+                      } else {
+                        break L53;
                       }
                     }
                     rm.field_k = -rm.field_k;
-                    break L54;
+                    break L53;
                   }
                   if (var5 == null) {
-                    break L53;
+                    break L52;
                   } else {
                     if (var5.field_ib >= 250) {
-                      break L53;
+                      break L52;
                     } else {
                       mo.field_f = q.field_F;
-                      break L53;
+                      break L52;
                     }
                   }
                 } else {
-                  break L53;
+                  break L52;
                 }
               }
               if (rk.field_O.a(0, true).field_x <= 0) {
-                break L51;
+                break L50;
               } else {
                 rm.field_k = -Math.abs(rm.field_k);
                 qn.field_ob.field_bb = rk.field_O.a(0, true).field_T;
-                break L51;
+                break L50;
               }
             } else {
               gj.a(true, true, 14, mn.field_r);
@@ -1021,117 +1026,110 @@ final class jh extends java.awt.Canvas {
         RuntimeException var3 = null;
         byte[] var4 = null;
         CharSequence var5 = null;
-        int stackIn_3_0 = 0;
+        int stackIn_1_0 = 0;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
+        String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_2_0 = 0;
+        int stackOut_0_0 = 0;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
         String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
         try {
           L0: {
-            L1: {
-              var3_int = param0.field_g;
-              if (param1 == 127) {
-                break L1;
-              } else {
-                field_h = 0.05152737468678133;
-                break L1;
-              }
-            }
+            var3_int = param0.field_g;
             var5 = (CharSequence) (Object) param2;
-            var4 = go.a(var5, (byte) -82);
+            int discarded$2 = -82;
+            var4 = go.a(var5);
             param0.d(var4.length, (byte) -124);
             param0.field_g = param0.field_g + kh.field_g.a(param0.field_j, var4.length, var4, param0.field_g, 1, 0);
-            stackOut_2_0 = -var3_int + param0.field_g;
-            stackIn_3_0 = stackOut_2_0;
+            stackOut_0_0 = -var3_int + param0.field_g;
+            stackIn_1_0 = stackOut_0_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
-            stackOut_4_1 = new StringBuilder().append("jh.A(");
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackOut_2_0 = (RuntimeException) var3;
+            stackOut_2_1 = new StringBuilder().append("jh.A(");
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param0 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          L2: {
+            stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(127).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param2 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
               stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
               stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L2;
-            } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
               break L2;
             }
           }
-          L3: {
-            stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44).append(param1).append(44);
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
-            if (param2 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
-              break L3;
-            } else {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
-              break L3;
-            }
-          }
-          throw aa.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
-        return stackIn_3_0;
+        return stackIn_1_0;
     }
 
-    final static void a(Throwable param0, String param1, byte param2) {
+    final static void a(Throwable param0, String param1) {
         try {
             Exception var3 = null;
             String var3_ref = null;
@@ -1276,14 +1274,15 @@ final class jh extends java.awt.Canvas {
                           break L6;
                         } else {
                           var5 = (DataInputStream) var4.field_g;
-                          int discarded$1 = var5.read();
+                          int discarded$2 = var5.read();
                           var5.close();
                           break L6;
                         }
                       }
                       break L0;
                     } else {
-                      ao.a(1L, 1);
+                      int discarded$3 = 1;
+                      ao.a(1L);
                       continue L5;
                     }
                   }
@@ -1303,7 +1302,7 @@ final class jh extends java.awt.Canvas {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         field_b = null;

@@ -99,7 +99,7 @@ final class se extends ak {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_B = null;
         field_F = null;
         field_E = null;

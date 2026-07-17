@@ -125,7 +125,7 @@ final class tj {
                     break L2;
                   } else {
                     var5 = null;
-                    rk[] discarded$2 = tj.a((byte) -37, (lu) null);
+                    rk[] discarded$4 = tj.a((byte) -37, (lu) null);
                     break L2;
                   }
                 }
@@ -133,7 +133,8 @@ final class tj {
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
-                var6[var3] = gka.a(param1, 255);
+                int discarded$5 = 255;
+                var6[var3] = gka.a(param1);
                 var3++;
                 continue L1;
               }
@@ -172,7 +173,7 @@ final class tj {
         return stackIn_7_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
         field_e = null;

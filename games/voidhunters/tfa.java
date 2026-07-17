@@ -68,10 +68,11 @@ final class tfa extends bha implements ntb {
                             if (var5.field_h != var5.field_h) {
                               break L2;
                             } else {
-                              if (wpb.a(var5.field_i, var5.field_i, (byte) 28)) {
+                              int discarded$3 = 28;
+                              if (wpb.a(var5.field_i, var5.field_i)) {
                                 break L2;
                               } else {
-                                sg discarded$1 = var5.field_g;
+                                sg discarded$4 = var5.field_g;
                                 L3: {
                                   if (null == var5.field_g) {
                                     break L3;
@@ -83,7 +84,8 @@ final class tfa extends bha implements ntb {
                                     }
                                   }
                                 }
-                                if (wpb.a(var5.field_k, var5.field_k, (byte) 28)) {
+                                int discarded$5 = 28;
+                                if (wpb.a(var5.field_k, var5.field_k)) {
                                   break L2;
                                 } else {
                                   if (var5.field_c != var5.field_c) {
@@ -220,7 +222,8 @@ final class tfa extends bha implements ntb {
           if (((tfa) this).a(param3, 11863, param0) == param4) {
             return;
           } else {
-            ((tfa) this).field_i = qi.a(param1, true, ((tfa) this).field_i, (byte) -14);
+            int discarded$3 = -14;
+            ((tfa) this).field_i = qi.a(param1, true, ((tfa) this).field_i);
             return;
           }
         } else {
@@ -256,9 +259,9 @@ final class tfa extends bha implements ntb {
                                 var9++;
                                 break L3;
                               } else {
-                                int incrementValue$2 = var10;
+                                int incrementValue$4 = var10;
                                 var10++;
-                                var8[incrementValue$2] = var12;
+                                var8[incrementValue$4] = var12;
                                 break L3;
                               }
                             } else {
@@ -267,9 +270,9 @@ final class tfa extends bha implements ntb {
                           }
                         }
                       }
-                      int incrementValue$3 = var10;
+                      int incrementValue$5 = var10;
                       var10++;
-                      var8[incrementValue$3] = var12;
+                      var8[incrementValue$5] = var12;
                       break L3;
                     }
                     var17 = var16;
@@ -409,7 +412,8 @@ final class tfa extends bha implements ntb {
               }
             }
             L8: {
-              if (!ikb.a(var5.field_i, var5.field_i, false)) {
+              int discarded$3 = 0;
+              if (!ikb.a(var5.field_i, var5.field_i)) {
                 break L8;
               } else {
                 System.out.println("int[] votes has changed. ");
@@ -417,7 +421,7 @@ final class tfa extends bha implements ntb {
                 break L8;
               }
             }
-            sg discarded$1 = var5.field_g;
+            sg discarded$4 = var5.field_g;
             L9: {
               if (null == var5.field_g) {
                 break L9;
@@ -432,7 +436,8 @@ final class tfa extends bha implements ntb {
               }
             }
             L10: {
-              if (ikb.a(var5.field_k, var5.field_k, false)) {
+              int discarded$5 = 0;
+              if (ikb.a(var5.field_k, var5.field_k)) {
                 var4 = 1;
                 System.out.println("int[] carried_over_components has changed. ");
                 break L10;

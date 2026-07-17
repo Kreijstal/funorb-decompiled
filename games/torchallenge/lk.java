@@ -36,14 +36,15 @@ final class lk {
         String stackOut_7_2 = null;
         try {
           L0: {
-            var5 = param1.c(param2, param3, param0 ^ param0);
+            var5 = param1.c(param2, param3, 0);
             var4 = var5;
             if (var5 == null) {
               stackOut_2_0 = 0;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0 != 0;
             } else {
-              ba.a(var5, 0);
+              int discarded$2 = 0;
+              ba.a(var5);
               stackOut_4_0 = 1;
               stackIn_5_0 = stackOut_4_0;
               break L0;
@@ -54,7 +55,7 @@ final class lk {
           L1: {
             var4_ref = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var4_ref;
-            stackOut_6_1 = new StringBuilder().append("lk.B(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("lk.B(").append(160).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;
@@ -146,7 +147,8 @@ final class lk {
             }
             var4_int = param3.a(param2, 115);
             var5 = param3.a(var4_int, param1, (byte) 82);
-            stackOut_2_0 = rl.a(var5, var4_int, param3, (byte) 17);
+            int discarded$2 = 17;
+            stackOut_2_0 = rl.a(var5, var4_int, param3);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }
@@ -258,7 +260,9 @@ final class lk {
         try {
           L0: {
             if (param0 == -7351) {
-              stackOut_3_0 = df.a(param1, 0, false);
+              int discarded$4 = 0;
+              int discarded$5 = 0;
+              stackOut_3_0 = df.a(param1);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -333,7 +337,8 @@ final class lk {
         try {
           L0: {
             L1: {
-              ad.a((java.awt.Component) (Object) param0, 0);
+              int discarded$8 = 0;
+              ad.a((java.awt.Component) (Object) param0);
               kj.a((byte) 54, (java.awt.Component) (Object) param0);
               if (null != ef.field_l) {
                 ef.field_l.a((java.awt.Component) (Object) param0, (byte) 112);

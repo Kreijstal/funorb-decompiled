@@ -5,7 +5,7 @@ final class wk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     static ae field_b;
     static String field_a;
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void a(java.awt.Component param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -232,7 +232,7 @@ final class wk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
     }
@@ -329,7 +329,7 @@ final class wk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static void a(int param0, rb param1, ka param2, boolean param3) {
+    final static void a(int param0, rb param1, ka param2) {
         try {
             RuntimeException var4 = null;
             int var5 = 0;
@@ -339,6 +339,7 @@ final class wk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             Exception var6_ref3 = null;
             Throwable var6_ref4 = null;
             int var6_int = 0;
+            String var7 = null;
             int var9 = 0;
             String[] var10 = null;
             int var11_int = 0;
@@ -353,10 +354,9 @@ final class wk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             Object var18 = null;
             byte[][] var19 = null;
             String var20 = null;
-            String var21 = null;
+            byte[][] var21 = null;
             byte[][] var22 = null;
             byte[][] var23 = null;
-            byte[][] var24 = null;
             RuntimeException stackIn_37_0 = null;
             StringBuilder stackIn_37_1 = null;
             RuntimeException stackIn_38_0 = null;
@@ -422,18 +422,18 @@ final class wk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                                   break L4;
                                 } else {
                                   if (var6_int == 3) {
-                                    var20 = param1.a(-73);
-                                    var21 = param1.a(-114);
+                                    var7 = param1.a(-73);
+                                    var20 = param1.a(-114);
                                     var9 = param1.j(7909);
                                     var10 = new String[var9];
                                     var11_int = 0;
                                     L5: while (true) {
                                       if (var9 <= var11_int) {
                                         L6: {
-                                          var24 = new byte[var9][];
-                                          var23 = var24;
+                                          var23 = new byte[var9][];
                                           var22 = var23;
-                                          var19 = var22;
+                                          var21 = var22;
+                                          var19 = var21;
                                           var11 = var19;
                                           if (var6_int != 3) {
                                             break L6;
@@ -445,7 +445,7 @@ final class wk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                                               } else {
                                                 var13 = param1.f((byte) -101);
                                                 var11[var12_int] = new byte[var13];
-                                                param1.a(var13, (byte) 88, var24[var12_int], 0);
+                                                param1.a(var13, (byte) 88, var23[var12_int], 0);
                                                 var12_int++;
                                                 continue L7;
                                               }
@@ -458,11 +458,13 @@ final class wk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                                         var13 = var17;
                                         L8: while (true) {
                                           if (var17 >= var9) {
-                                            ((va) var18).field_i[var5] = param2.a(oe.a(var20, false), var21, var12, 29389);
-                                            ((va) var18).field_l[var5] = var24;
+                                            int discarded$4 = 0;
+                                            ((va) var18).field_i[var5] = param2.a(oe.a(var7), var20, var12, 29389);
+                                            ((va) var18).field_l[var5] = var23;
                                             break L3;
                                           } else {
-                                            var12[var17] = oe.a(var10[var17], false);
+                                            int discarded$5 = 0;
+                                            var12[var17] = oe.a(var10[var17]);
                                             var17++;
                                             continue L8;
                                           }
@@ -490,7 +492,9 @@ final class wk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                             }
                           }
                           L10: {
-                            var15 = param1.a(-58);
+                            String dupTemp$6 = param1.a(-58);
+                            var15 = dupTemp$6;
+                            var7 = dupTemp$6;
                             var16 = param1.a(-20);
                             var9 = 0;
                             if (var6_int == 1) {
@@ -502,7 +506,8 @@ final class wk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                           }
                           ((va) var18).field_r[var5] = var6_int;
                           ((va) var18).field_q[var5] = var9;
-                          ((va) var18).field_p[var5] = param2.a(oe.a(var15, false), -92, var16);
+                          int discarded$7 = 0;
+                          ((va) var18).field_p[var5] = param2.a(oe.a(var15), -92, var16);
                           break L3;
                         }
                         decompiledRegionSelector0 = 1;

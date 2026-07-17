@@ -69,7 +69,7 @@ abstract class ec {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_c = null;
         field_d = null;
         field_b = null;
@@ -111,7 +111,7 @@ abstract class ec {
         try {
           L0: {
             var4 = new hb(param3.field_h, -param2 + param0);
-            ji.a(param3.field_l, param2, var4.field_l, param1, var4.field_l.length);
+            ji.a(param3.field_l, param2, var4.field_l, 0, var4.field_l.length);
             stackOut_0_0 = (hb) var4;
             stackIn_1_0 = stackOut_0_0;
             break L0;
@@ -121,7 +121,7 @@ abstract class ec {
           L1: {
             var4_ref = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var4_ref;
-            stackOut_2_1 = new StringBuilder().append("ec.G(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_2_1 = new StringBuilder().append("ec.G(").append(param0).append(44).append(0).append(44).append(param2).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;
@@ -154,9 +154,9 @@ abstract class ec {
     final static ci a(boolean param0, byte param1, int param2, int param3, boolean param4) {
         if (param1 != 77) {
           ci discarded$2 = ec.a(true, (byte) 79, -120, 125, true);
-          return mh.a(-26159, param4, param0, false, param2, param3);
+          return mh.a(-26159, param4, true, false, param2, param3);
         } else {
-          return mh.a(-26159, param4, param0, false, param2, param3);
+          return mh.a(-26159, param4, true, false, param2, param3);
         }
     }
 

@@ -47,7 +47,7 @@ final class an {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
     }
 

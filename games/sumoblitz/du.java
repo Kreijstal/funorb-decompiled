@@ -263,7 +263,7 @@ class du {
         hj var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_o) {
             break L0;
           } else {
@@ -273,7 +273,7 @@ class du {
         }
         L1: {
           la.a(param0, 0, var3);
-          ((du) this).field_c = ((du) this).field_c - 256;
+          ((du) this).field_c = ((du) this).field_c - param1;
           if (((du) this).field_l == null) {
             break L1;
           } else {
@@ -440,7 +440,7 @@ class du {
           if (((du) this).field_l == null) {
             break L17;
           } else {
-            ((du) this).field_l.b(param0, 0, 256);
+            ((du) this).field_l.b(param0, 0, param1);
             break L17;
           }
         }
@@ -448,38 +448,24 @@ class du {
     }
 
     private final void b(int param0) {
-        ((du) this).field_c = ((du) this).field_c - 256;
+        ((du) this).field_c = ((du) this).field_c - param0;
         if (((du) this).field_c < 0) {
             ((du) this).field_c = 0;
         }
         if (((du) this).field_l != null) {
-            ((du) this).field_l.a(256);
+            ((du) this).field_l.a(param0);
             return;
         }
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 < 8000) {
             break L0;
           } else {
             if (param0 <= 48000) {
-              L1: {
-                field_k = param0;
-                if (!param1) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              field_o = stackIn_7_0 != 0;
+              field_k = param0;
+              field_o = true;
               field_m = 10;
               return;
             } else {

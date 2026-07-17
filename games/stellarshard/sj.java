@@ -13,7 +13,7 @@ final class sj extends g implements md, oi {
     private jg field_H;
     static String field_E;
 
-    private final String d(boolean param0) {
+    private final String d() {
         return "<u=2164A2><col=2164A2>";
     }
 
@@ -127,6 +127,8 @@ final class sj extends g implements md, oi {
             ((sj) this).field_H = param0;
             ((sj) this).field_D = new ig(tc.field_q, (lf) null);
             ((sj) this).field_D.field_u = (uk) (Object) new b();
+            int discarded$2 = 0;
+            int discarded$3 = 0;
             var7 = h.a(nj.field_s, 0, new String[2]);
             var3 = 20;
             var4 = new id(si.field_V, 0, 0, 0, 0, 16777215, -1, 3, 0, si.field_V.field_N, -1, 2147483647, true);
@@ -247,7 +249,7 @@ final class sj extends g implements md, oi {
         }
     }
 
-    private final String a(int param0) {
+    private final String a() {
         return "</col></u>";
     }
 

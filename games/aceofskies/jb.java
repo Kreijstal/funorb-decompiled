@@ -8,7 +8,7 @@ final class jb {
         throw new IllegalStateException();
     }
 
-    final static void a(String param0, int param1) {
+    final static void a(String param0) {
         System.out.println("Error: " + eh.a("%0a", -104, "\n", param0));
     }
 

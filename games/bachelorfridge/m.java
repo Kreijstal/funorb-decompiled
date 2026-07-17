@@ -19,7 +19,7 @@ final class m {
         return ((ji) (Object) cw.field_zb.a(true, (long)var3.hashCode())).field_h;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         field_b = null;

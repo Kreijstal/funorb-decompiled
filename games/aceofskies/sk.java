@@ -30,7 +30,7 @@ abstract class sk {
 
     abstract void a(int param0, int param1, jj param2);
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         int var1 = 0;
         field_d = null;
@@ -46,7 +46,7 @@ abstract class sk {
 
     abstract void a(boolean param0, byte param1);
 
-    final static rm[] a(rk param0, int param1) {
+    final static rm[] a(rk param0) {
         RuntimeException var2 = null;
         int[] var3 = null;
         rm[] var4 = null;
@@ -117,7 +117,8 @@ abstract class sk {
                     }
                   }
                 } else {
-                  wf.a(10L, false);
+                  int discarded$1 = 0;
+                  wf.a(10L);
                   continue L1;
                 }
               }

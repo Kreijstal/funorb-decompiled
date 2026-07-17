@@ -41,9 +41,6 @@ final class qm {
             bc.field_d = var7;
         }
         fb.field_c = fb.field_c + 1;
-        if (!param3) {
-            field_f = false;
-        }
     }
 
     final void a(int param0, byte[] param1, int param2) {
@@ -295,7 +292,7 @@ final class qm {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_g = null;
         field_j = null;
         field_h = null;

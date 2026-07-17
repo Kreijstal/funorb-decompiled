@@ -11,18 +11,16 @@ final class r {
     static int field_f;
 
     final static void a(int param0, ja param1) {
-        m.c(540);
-        if (param0 != 0) {
-            return;
-        }
+        int discarded$0 = 540;
+        m.c();
         try {
             oo.a(param1.field_B, param1.field_z, param1.field_u);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) (Object) runtimeException, "r.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fa.a((Throwable) (Object) runtimeException, "r.B(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_d = null;
         field_g = null;
@@ -31,7 +29,7 @@ final class r {
         field_b = null;
     }
 
-    final static po a(ul param0, int param1, byte param2) {
+    final static po a(ul param0, int param1) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -102,7 +100,7 @@ final class r {
         return stackIn_4_0;
     }
 
-    final static ao a(int param0, byte param1) {
+    final static ao a(int param0) {
         ao[] var2 = null;
         int var3 = 0;
         int var4 = 0;

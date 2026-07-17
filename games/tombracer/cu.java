@@ -92,7 +92,8 @@ final class cu extends nv {
                           if (!this.b(-106).m((byte) -99)) {
                             ((cu) this).field_v = ((cu) this).field_v - param1.field_b;
                             if (0 >= ((cu) this).field_v) {
-                              this.d(true);
+                              int discarded$241 = 1;
+                              this.d();
                               break L2;
                             } else {
                               break L2;
@@ -282,7 +283,7 @@ final class cu extends nv {
         ((cu) this).field_t = param3;
     }
 
-    private final void d(boolean param0) {
+    private final void d() {
         ((cu) this).field_v = ((cu) this).field_r;
         this.b(110).n(((cu) this).field_t, -127);
     }
@@ -367,8 +368,9 @@ final class cu extends nv {
         StringBuilder stackOut_5_1 = null;
         String stackOut_5_2 = null;
         try {
-          if (jna.a(param0, param1, param3, param2)) {
-            return sba.d((byte) 120);
+          if (jna.a(false, param1, param3, param2)) {
+            int discarded$2 = 120;
+            return sba.d();
           } else {
             return null;
           }
@@ -377,7 +379,7 @@ final class cu extends nv {
           L0: {
             var4 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var4;
-            stackOut_4_1 = new StringBuilder().append("cu.CA(").append(param0).append(44).append(param1).append(44);
+            stackOut_4_1 = new StringBuilder().append("cu.CA(").append(0).append(44).append(param1).append(44);
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -695,103 +697,52 @@ final class cu extends nv {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_x = null;
         field_o = null;
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        Object var4 = null;
+        boolean stackIn_1_0 = false;
         boolean stackIn_2_0 = false;
         boolean stackIn_3_0 = false;
-        boolean stackIn_4_0 = false;
-        int stackIn_4_1 = 0;
-        int stackIn_8_0 = 0;
-        boolean stackIn_12_0 = false;
-        boolean stackIn_13_0 = false;
-        boolean stackIn_14_0 = false;
-        int stackIn_14_1 = 0;
-        int stackIn_17_0 = 0;
-        boolean stackOut_11_0 = false;
-        boolean stackOut_13_0 = false;
-        int stackOut_13_1 = 0;
-        boolean stackOut_12_0 = false;
-        int stackOut_12_1 = 0;
-        int stackOut_15_0 = 0;
-        boolean stackOut_1_0 = false;
-        boolean stackOut_3_0 = false;
-        int stackOut_3_1 = 0;
+        int stackIn_3_1 = 0;
+        int stackIn_6_0 = 0;
+        boolean stackOut_0_0 = false;
         boolean stackOut_2_0 = false;
         int stackOut_2_1 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        if (param0 < -67) {
-          L0: {
-            stackOut_11_0 = er.c(param1, param2, 52);
-            stackIn_13_0 = stackOut_11_0;
-            stackIn_12_0 = stackOut_11_0;
-            if ((param1 & 458752) == 0) {
-              stackOut_13_0 = stackIn_13_0;
-              stackOut_13_1 = 0;
-              stackIn_14_0 = stackOut_13_0;
-              stackIn_14_1 = stackOut_13_1;
-              break L0;
-            } else {
-              stackOut_12_0 = stackIn_12_0;
-              stackOut_12_1 = 1;
-              stackIn_14_0 = stackOut_12_0;
-              stackIn_14_1 = stackOut_12_1;
-              break L0;
-            }
-          }
-          if (stackIn_14_0 | stackIn_14_1 == 0) {
-            if (uu.a(true, param1, param2)) {
-              return true;
-            } else {
-              return false;
-            }
+        boolean stackOut_1_0 = false;
+        int stackOut_1_1 = 0;
+        int stackOut_4_0 = 0;
+        L0: {
+          int discarded$12 = 52;
+          stackOut_0_0 = er.c(param1, param2);
+          stackIn_2_0 = stackOut_0_0;
+          stackIn_1_0 = stackOut_0_0;
+          if ((param1 & 458752) == 0) {
+            stackOut_2_0 = stackIn_2_0;
+            stackOut_2_1 = 0;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            break L0;
           } else {
-            stackOut_15_0 = 1;
-            stackIn_17_0 = stackOut_15_0;
-            return stackIn_17_0 != 0;
-          }
-        } else {
-          L1: {
-            var4 = null;
-            hja discarded$8 = cu.a(true, -98, (cn) null, 106);
-            stackOut_1_0 = er.c(param1, param2, 52);
+            stackOut_1_0 = stackIn_1_0;
+            stackOut_1_1 = 1;
             stackIn_3_0 = stackOut_1_0;
-            stackIn_2_0 = stackOut_1_0;
-            if ((param1 & 458752) == 0) {
-              stackOut_3_0 = stackIn_3_0;
-              stackOut_3_1 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              stackIn_4_1 = stackOut_3_1;
-              break L1;
-            } else {
-              stackOut_2_0 = stackIn_2_0;
-              stackOut_2_1 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_4_1 = stackOut_2_1;
-              break L1;
-            }
+            stackIn_3_1 = stackOut_1_1;
+            break L0;
           }
-          if (stackIn_4_0 | stackIn_4_1 != 0) {
+        }
+        if (stackIn_3_0 | stackIn_3_1 == 0) {
+          if (uu.a(true, param1, param2)) {
             return true;
           } else {
-            L2: {
-              if (!uu.a(true, param1, param2)) {
-                stackOut_7_0 = 0;
-                stackIn_8_0 = stackOut_7_0;
-                break L2;
-              } else {
-                stackOut_6_0 = 1;
-                stackIn_8_0 = stackOut_6_0;
-                break L2;
-              }
-            }
-            return stackIn_8_0 != 0;
+            return false;
           }
+        } else {
+          stackOut_4_0 = 1;
+          stackIn_6_0 = stackOut_4_0;
+          return stackIn_6_0 != 0;
         }
     }
 
@@ -919,7 +870,7 @@ final class cu extends nv {
     }
 
     private final boolean a(byte param0, int param1) {
-        int var3 = -126 / ((19 - param0) / 56);
+        int var3 = -63;
         return ((cu) this).field_A.a(0, param1);
     }
 

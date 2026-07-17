@@ -40,7 +40,7 @@ final class sg {
           L0: {
             var3_int = 0;
             var4 = param0.length();
-            var6 = -83 / ((75 - param1) / 49);
+            var6 = 83;
             var5 = 0;
             L1: while (true) {
               if (var5 >= var4) {
@@ -89,12 +89,12 @@ final class sg {
               break L3;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 44 + param2 + 41);
+          throw fk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + 124 + 44 + param2 + 41);
         }
         return stackIn_7_0;
     }
 
-    final static int a(int param0, int param1, int param2, int param3) {
+    final static int a(int param0, int param1, int param2) {
         if (!(wb.field_c < param2 + param0 + param1)) {
             return param2 + param0;
         }
@@ -112,7 +112,8 @@ final class sg {
             }
             try {
                 var3 = new java.net.URL(param0.getCodeBase(), param2);
-                var3 = rh.a(var3, param0, (byte) -87);
+                int discarded$1 = -87;
+                var3 = rh.a(var3, param0);
                 fe.a(var3.toString(), true, (byte) 112, param0);
             } catch (Exception exception) {
                 exception.printStackTrace();
@@ -124,7 +125,7 @@ final class sg {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
         field_c = null;

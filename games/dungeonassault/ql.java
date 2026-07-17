@@ -23,7 +23,7 @@ final class ql extends java.awt.Canvas {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_g = null;
         field_a = null;
         field_k = null;
@@ -98,7 +98,7 @@ final class ql extends java.awt.Canvas {
             } else {
               if (param3.a(false, "commonui")) {
                 L1: {
-                  var4_int = 62 / ((-27 - param2) / 59);
+                  var4_int = -62;
                   if (!param0.a(-14354)) {
                     break L1;
                   } else {
@@ -185,7 +185,7 @@ final class ql extends java.awt.Canvas {
           }
           L5: {
             stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
-            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(44).append(param2).append(44);
+            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(44).append(61).append(44);
             stackIn_23_0 = stackOut_21_0;
             stackIn_23_1 = stackOut_21_1;
             stackIn_22_0 = stackOut_21_0;
@@ -213,7 +213,7 @@ final class ql extends java.awt.Canvas {
         return stackIn_14_0 != 0;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
     }
 
     ql(java.awt.Component param0) {

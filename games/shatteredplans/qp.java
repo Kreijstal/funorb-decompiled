@@ -88,14 +88,6 @@ final class qp extends o {
                   var8_int = 0;
                   L4: while (true) {
                     if (var2_int <= var8_int) {
-                      L5: {
-                        if (param0) {
-                          break L5;
-                        } else {
-                          field_w = null;
-                          break L5;
-                        }
-                      }
                       if (sl.field_r != 0) {
                         var7 = en.field_b;
                         en.field_b = ai.field_b;
@@ -105,7 +97,7 @@ final class qp extends o {
                         var5 = en.field_b[var2_int + -2];
                         var6 = en.field_b[var2_int + -1];
                         var8_int = 0;
-                        L6: while (true) {
+                        L5: while (true) {
                           if (var2_int <= var8_int) {
                             if (0 != sl.field_r) {
                               var7 = en.field_b;
@@ -116,7 +108,7 @@ final class qp extends o {
                               var6 = en.field_b[-1 + var2_int];
                               var5 = en.field_b[var2_int - 2];
                               var8_int = 0;
-                              L7: while (true) {
+                              L6: while (true) {
                                 if (var8_int >= var2_int) {
                                   if (sl.field_r != 0) {
                                     var17 = new int[sl.field_r];
@@ -134,7 +126,7 @@ final class qp extends o {
                                     return (int[]) (Object) stackIn_61_0;
                                   }
                                 } else {
-                                  L8: {
+                                  L7: {
                                     var3 = var5;
                                     var4 = var6;
                                     var5 = en.field_b[var8_int];
@@ -151,12 +143,12 @@ final class qp extends o {
                                         int fieldTemp$23 = sl.field_r;
                                         sl.field_r = sl.field_r + 1;
                                         ai.field_b[fieldTemp$23] = gf.field_f;
-                                        break L8;
+                                        break L7;
                                       } else {
-                                        break L8;
+                                        break L7;
                                       }
                                     } else {
-                                      L9: {
+                                      L8: {
                                         if (gf.field_f <= var4) {
                                           var9 = var5;
                                           var10 = var6;
@@ -168,9 +160,9 @@ final class qp extends o {
                                           int fieldTemp$25 = sl.field_r;
                                           sl.field_r = sl.field_r + 1;
                                           ai.field_b[fieldTemp$25] = gf.field_f;
-                                          break L9;
+                                          break L8;
                                         } else {
-                                          break L9;
+                                          break L8;
                                         }
                                       }
                                       int fieldTemp$26 = sl.field_r;
@@ -179,24 +171,24 @@ final class qp extends o {
                                       int fieldTemp$27 = sl.field_r;
                                       sl.field_r = sl.field_r + 1;
                                       ai.field_b[fieldTemp$27] = var6;
-                                      break L8;
+                                      break L7;
                                     }
                                   }
                                   var8_int += 2;
-                                  continue L7;
+                                  continue L6;
                                 }
                               }
                             } else {
                               return null;
                             }
                           } else {
-                            L10: {
+                            L9: {
                               var4 = var6;
                               var3 = var5;
                               var6 = en.field_b[var8_int + 1];
                               var5 = en.field_b[var8_int];
                               if (var6 >= gf.field_a) {
-                                L11: {
+                                L10: {
                                   if (var4 < gf.field_a) {
                                     var9 = var5;
                                     var10 = var6;
@@ -208,9 +200,9 @@ final class qp extends o {
                                     int fieldTemp$29 = sl.field_r;
                                     sl.field_r = sl.field_r + 1;
                                     ai.field_b[fieldTemp$29] = gf.field_a;
-                                    break L11;
+                                    break L10;
                                   } else {
-                                    break L11;
+                                    break L10;
                                   }
                                 }
                                 int fieldTemp$30 = sl.field_r;
@@ -219,7 +211,7 @@ final class qp extends o {
                                 int fieldTemp$31 = sl.field_r;
                                 sl.field_r = sl.field_r + 1;
                                 ai.field_b[fieldTemp$31] = var6;
-                                break L10;
+                                break L9;
                               } else {
                                 if (var4 >= gf.field_a) {
                                   var9 = var3;
@@ -232,27 +224,27 @@ final class qp extends o {
                                   int fieldTemp$33 = sl.field_r;
                                   sl.field_r = sl.field_r + 1;
                                   ai.field_b[fieldTemp$33] = gf.field_a;
-                                  break L10;
+                                  break L9;
                                 } else {
-                                  break L10;
+                                  break L9;
                                 }
                               }
                             }
                             var8_int += 2;
-                            continue L6;
+                            continue L5;
                           }
                         }
                       } else {
                         return null;
                       }
                     } else {
-                      L12: {
+                      L11: {
                         var3 = var5;
                         var4 = var6;
                         var6 = en.field_b[1 + var8_int];
                         var5 = en.field_b[var8_int];
                         if (gf.field_l > var5) {
-                          L13: {
+                          L12: {
                             if (var3 >= gf.field_l) {
                               var9 = var5;
                               var10 = var6;
@@ -264,9 +256,9 @@ final class qp extends o {
                               int fieldTemp$35 = sl.field_r;
                               sl.field_r = sl.field_r + 1;
                               ai.field_b[fieldTemp$35] = (var12 - var10) * (-var9 + gf.field_l) / (var11 + -var9) + var10;
-                              break L13;
+                              break L12;
                             } else {
-                              break L13;
+                              break L12;
                             }
                           }
                           int fieldTemp$36 = sl.field_r;
@@ -275,7 +267,7 @@ final class qp extends o {
                           int fieldTemp$37 = sl.field_r;
                           sl.field_r = sl.field_r + 1;
                           ai.field_b[fieldTemp$37] = var6;
-                          break L12;
+                          break L11;
                         } else {
                           if (var3 < gf.field_l) {
                             var9 = var3;
@@ -288,9 +280,9 @@ final class qp extends o {
                             int fieldTemp$39 = sl.field_r;
                             sl.field_r = sl.field_r + 1;
                             ai.field_b[fieldTemp$39] = var10 - -((-var10 + var12) * (gf.field_l + -var9) / (-var9 + var11));
-                            break L12;
+                            break L11;
                           } else {
-                            break L12;
+                            break L11;
                           }
                         }
                       }
@@ -309,7 +301,7 @@ final class qp extends o {
                 var5 = param1[var7_int];
                 var6 = param1[var7_int + 1];
                 if (gf.field_i <= var5) {
-                  L14: {
+                  L13: {
                     if (gf.field_i > var3) {
                       var8_int = var5;
                       var9 = var6;
@@ -321,9 +313,9 @@ final class qp extends o {
                       int fieldTemp$41 = sl.field_r;
                       sl.field_r = sl.field_r + 1;
                       ai.field_b[fieldTemp$41] = var9 - -((-var8_int + gf.field_i) * (-var9 + var11) / (var10 + -var8_int));
-                      break L14;
+                      break L13;
                     } else {
-                      break L14;
+                      break L13;
                     }
                   }
                   int fieldTemp$42 = sl.field_r;
@@ -335,11 +327,11 @@ final class qp extends o {
                   var7_int += 2;
                   continue L3;
                 } else {
-                  L15: {
+                  L14: {
                     if (gf.field_i > var3) {
-                      break L15;
+                      break L14;
                     } else {
-                      break L15;
+                      break L14;
                     }
                   }
                   var7_int += 2;
@@ -350,10 +342,10 @@ final class qp extends o {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L16: {
+          L15: {
             var2 = decompiledCaughtException;
             stackOut_64_0 = (RuntimeException) var2;
-            stackOut_64_1 = new StringBuilder().append("qp.B(").append(param0).append(44);
+            stackOut_64_1 = new StringBuilder().append("qp.B(").append(1).append(44);
             stackIn_66_0 = stackOut_64_0;
             stackIn_66_1 = stackOut_64_1;
             stackIn_65_0 = stackOut_64_0;
@@ -365,7 +357,7 @@ final class qp extends o {
               stackIn_67_0 = stackOut_66_0;
               stackIn_67_1 = stackOut_66_1;
               stackIn_67_2 = stackOut_66_2;
-              break L16;
+              break L15;
             } else {
               stackOut_65_0 = (RuntimeException) (Object) stackIn_65_0;
               stackOut_65_1 = (StringBuilder) (Object) stackIn_65_1;
@@ -373,7 +365,7 @@ final class qp extends o {
               stackIn_67_0 = stackOut_65_0;
               stackIn_67_1 = stackOut_65_1;
               stackIn_67_2 = stackOut_65_2;
-              break L16;
+              break L15;
             }
           }
           throw r.a((Throwable) (Object) stackIn_67_0, stackIn_67_2 + 41);
@@ -524,7 +516,7 @@ final class qp extends o {
         return cr.a(param0, 1, -10, param2);
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_w = null;
         field_v = null;
     }

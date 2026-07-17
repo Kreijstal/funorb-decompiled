@@ -21,7 +21,7 @@ final class qj {
         super.finalize();
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         int var1 = 0;
     }

@@ -15,7 +15,8 @@ class kb extends ri {
         int var4 = 0;
         tf[] var5 = null;
         var4 = Transmogrify.field_A ? 1 : 0;
-        var5 = rh.d(-26481);
+        int discarded$2 = -26481;
+        var5 = rh.d();
         var2 = var5;
         var3 = 0;
         L0: while (true) {

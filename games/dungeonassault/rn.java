@@ -10,7 +10,7 @@ final class rn {
     static String field_e;
     static volatile boolean field_b;
 
-    public static void b(int param0) {
+    public static void b() {
         field_g = null;
         field_d = null;
         field_c = null;
@@ -67,8 +67,8 @@ final class rn {
               }
             }
             var5 = new ol();
-            var5.b(param2 ^ 116);
-            var5.a((long)(param0 * param2), 17567, var4);
+            var5.b(124);
+            var5.a((long)(param0 * 8), 17567, var4);
             var6 = new byte[64];
             var5.a((byte) -88, var6, 0);
             stackOut_6_0 = (byte[]) var6;
@@ -80,7 +80,7 @@ final class rn {
           L3: {
             var4_ref = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var4_ref;
-            stackOut_8_1 = new StringBuilder().append("rn.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_8_1 = new StringBuilder().append("rn.B(").append(param0).append(44).append(param1).append(44).append(8).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -108,10 +108,7 @@ final class rn {
         return stackIn_7_0;
     }
 
-    final static int a(int param0) {
-        if (param0 > -66) {
-            return -64;
-        }
+    final static int a() {
         return wk.field_g;
     }
 

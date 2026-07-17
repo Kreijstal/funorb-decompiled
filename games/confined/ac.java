@@ -6,14 +6,14 @@ final class ac {
     static volatile boolean field_a;
     static int field_b;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
     }
 
     final static void a(boolean param0) {
         kc.field_o = false;
         bg.field_a = null;
-        bj.field_m = param0 ? true : false;
+        bj.field_m = false;
         da.field_e = null;
         va.field_b = null;
         gh.field_k = false;
@@ -43,7 +43,8 @@ final class ac {
         String stackOut_7_2 = null;
         try {
           L0: {
-            ii.a((java.awt.Component) (Object) param0, 30);
+            int discarded$5 = 30;
+            ii.a((java.awt.Component) (Object) param0);
             if (param1 < -72) {
               fa.a(false, (java.awt.Component) (Object) param0);
               if (null != jc.field_c) {

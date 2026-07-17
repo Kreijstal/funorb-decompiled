@@ -7,7 +7,7 @@ final class wt {
     static fpa field_d;
     static int field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
         field_b = null;

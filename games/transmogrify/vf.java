@@ -17,14 +17,14 @@ final class vf {
 
     final static void a(pg param0, int param1, int param2, int param3) {
         try {
-            dg.field_b = param2;
+            dg.field_b = 10;
             if (param3 <= 96) {
                 vf.a(false);
             }
-            tj.field_y = param1;
+            tj.field_y = 10;
             kf.field_i = param0;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) (Object) runtimeException, "vf.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+            throw ch.a((Throwable) (Object) runtimeException, "vf.D(" + (param0 != null ? "{...}" : "null") + 44 + 10 + 44 + 10 + 44 + param3 + 41);
         }
     }
 

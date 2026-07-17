@@ -74,7 +74,7 @@ final class vk {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = 0;
         field_d = null;
         field_i = null;

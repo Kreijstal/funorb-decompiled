@@ -16,7 +16,7 @@ class vg extends pj {
     static int field_P;
     private long field_V;
 
-    final static void b(int param0, int param1, int param2) {
+    final static void b() {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -26,8 +26,8 @@ class vg extends pj {
         var8 = SolKnight.field_L ? 1 : 0;
         if (ad.field_h >= 0) {
           L0: {
-            var3 = -135 + param1;
-            var4 = param0 + -35;
+            var3 = 185;
+            var4 = 205;
             var5 = 256;
             if (75 > ad.field_h) {
               var5 = (ad.field_h << 8) / 75;
@@ -585,7 +585,7 @@ class vg extends pj {
         }
     }
 
-    private final String q(int param0) {
+    private final String q() {
         int var2 = ((vg) this).field_K > ((vg) this).field_O ? ((vg) this).field_O : ((vg) this).field_K;
         int var3 = ((vg) this).field_K <= ((vg) this).field_O ? ((vg) this).field_O : ((vg) this).field_K;
         return ((vg) this).field_i.substring(var2, var3);
@@ -649,29 +649,19 @@ class vg extends pj {
         }
     }
 
-    private final void c(boolean param0) {
-        if (param0) {
-          if (((vg) this).field_n instanceof pi) {
+    private final void c() {
+        if (((vg) this).field_n instanceof pi) {
             ((pi) (Object) ((vg) this).field_n).a((vg) this, true);
             return;
-          } else {
-            return;
-          }
-        } else {
-          field_N = -95;
-          if (!(((vg) this).field_n instanceof pi)) {
-            return;
-          } else {
-            ((pi) (Object) ((vg) this).field_n).a((vg) this, true);
-            return;
-          }
         }
     }
 
-    private final void o(int param0) {
-        String var2 = this.q(-33);
+    private final void o() {
+        int discarded$0 = -33;
+        String var2 = this.q();
         if (!(var2.length() <= 0)) {
-            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.q(-33)), (java.awt.datatransfer.ClipboardOwner) null);
+            int discarded$1 = -33;
+            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) (Object) new java.awt.datatransfer.StringSelection(this.q()), (java.awt.datatransfer.ClipboardOwner) null);
         }
     }
 
@@ -700,7 +690,8 @@ class vg extends pj {
             super.a(param0, param1, param2, param3);
             if (param1 == 18874) {
               L1: {
-                this.d((byte) -119);
+                int discarded$2 = -119;
+                this.d();
                 if (1 != ((vg) this).field_u) {
                   break L1;
                 } else {
@@ -775,17 +766,14 @@ class vg extends pj {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         if (!sg.b((byte) -107)) {
-            return;
-        }
-        if (param0 <= 1) {
             return;
         }
         hc.a(false, true, 4);
     }
 
-    private final void d(byte param0) {
+    private final void d() {
         jf var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -948,7 +936,8 @@ class vg extends pj {
                         if (((vg) this).field_O == ((vg) this).field_K) {
                           break L2;
                         } else {
-                          this.p(11002);
+                          int discarded$11 = 11002;
+                          this.p();
                           break L2;
                         }
                       }
@@ -967,9 +956,9 @@ class vg extends pj {
                         L5: {
                           if (((vg) this).field_K >= ((vg) this).field_i.length()) {
                             ((vg) this).field_i = ((vg) this).field_i + param0;
-                            int dupTemp$1 = ((vg) this).field_i.length();
-                            ((vg) this).field_K = dupTemp$1;
-                            ((vg) this).field_O = dupTemp$1;
+                            int dupTemp$12 = ((vg) this).field_i.length();
+                            ((vg) this).field_K = dupTemp$12;
+                            ((vg) this).field_O = dupTemp$12;
                             break L5;
                           } else {
                             ((vg) this).field_i = ((vg) this).field_i.substring(0, ((vg) this).field_K) + param0 + ((vg) this).field_i.substring(((vg) this).field_K, ((vg) this).field_i.length());
@@ -1035,7 +1024,8 @@ class vg extends pj {
                                 return stackIn_54_0 != 0;
                               } else {
                                 if (param2 == 84) {
-                                  this.c(true);
+                                  int discarded$13 = 1;
+                                  this.c();
                                   stackOut_51_0 = 1;
                                   stackIn_52_0 = stackOut_51_0;
                                   return stackIn_52_0 != 0;
@@ -1045,7 +1035,8 @@ class vg extends pj {
                                       break L8;
                                     } else {
                                       if (param2 == 65) {
-                                        this.m(108);
+                                        int discarded$14 = 108;
+                                        this.m();
                                         stackOut_49_0 = 1;
                                         stackIn_50_0 = stackOut_49_0;
                                         return stackIn_50_0 != 0;
@@ -1061,7 +1052,8 @@ class vg extends pj {
                                       if (param2 != 66) {
                                         break L9;
                                       } else {
-                                        this.o(-1);
+                                        int discarded$15 = -1;
+                                        this.o();
                                         stackOut_43_0 = 1;
                                         stackIn_44_0 = stackOut_43_0;
                                         return stackIn_44_0 != 0;
@@ -1074,7 +1066,8 @@ class vg extends pj {
                                     if (param2 != 67) {
                                       break L6;
                                     } else {
-                                      this.e((byte) -78);
+                                      int discarded$16 = -78;
+                                      this.e();
                                       stackOut_47_0 = 1;
                                       stackIn_48_0 = stackOut_47_0;
                                       return stackIn_48_0 != 0;
@@ -1098,8 +1091,9 @@ class vg extends pj {
                                   stackIn_33_1 = stackOut_32_1;
                                   break L10;
                                 } else {
+                                  int discarded$17 = 11365;
                                   stackOut_31_0 = this;
-                                  stackOut_31_1 = this.k(11365);
+                                  stackOut_31_1 = this.k();
                                   stackIn_33_0 = stackOut_31_0;
                                   stackIn_33_1 = stackOut_31_1;
                                   break L10;
@@ -1122,7 +1116,8 @@ class vg extends pj {
                       if (((vg) this).field_K == ((vg) this).field_O) {
                         if (((vg) this).field_K < ((vg) this).field_i.length()) {
                           ((vg) this).field_O = ((vg) this).field_K + 1;
-                          this.p(11002);
+                          int discarded$18 = 11002;
+                          this.p();
                           stackOut_22_0 = 1;
                           stackIn_23_0 = stackOut_22_0;
                           return stackIn_23_0 != 0;
@@ -1130,7 +1125,8 @@ class vg extends pj {
                           break L6;
                         }
                       } else {
-                        this.p(11002);
+                        int discarded$19 = 11002;
+                        this.p();
                         stackOut_18_0 = 1;
                         stackIn_19_0 = stackOut_18_0;
                         return stackIn_19_0 != 0;
@@ -1140,7 +1136,8 @@ class vg extends pj {
                     if (~((vg) this).field_O == ~((vg) this).field_K) {
                       if (0 < ((vg) this).field_K) {
                         ((vg) this).field_O = ((vg) this).field_K + -1;
-                        this.p(11002);
+                        int discarded$20 = 11002;
+                        this.p();
                         stackOut_14_0 = 1;
                         stackIn_15_0 = stackOut_14_0;
                         return stackIn_15_0 != 0;
@@ -1148,7 +1145,8 @@ class vg extends pj {
                         break L6;
                       }
                     } else {
-                      this.p(11002);
+                      int discarded$21 = 11002;
+                      this.p();
                       stackOut_10_0 = 1;
                       stackIn_11_0 = stackOut_10_0;
                       return stackIn_11_0 != 0;
@@ -1197,12 +1195,12 @@ class vg extends pj {
         return stackIn_75_0 != 0;
     }
 
-    public static void i(int param0) {
+    public static void i() {
         field_I = null;
         field_J = null;
     }
 
-    private final void p(int param0) {
+    private final void p() {
         int var2 = 0;
         int var3 = 0;
         if (((vg) this).field_O != ((vg) this).field_K) {
@@ -1258,7 +1256,7 @@ class vg extends pj {
                 break L2;
               }
             }
-            var3_int = 81 / ((param0 - -40) / 63);
+            var3_int = -81;
             ((vg) this).field_K = ((vg) this).field_K + param1.length();
             ((vg) this).field_O = ((vg) this).field_K;
             ((vg) this).j(-114);
@@ -1269,7 +1267,7 @@ class vg extends pj {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var3;
-            stackOut_10_1 = new StringBuilder().append("vg.L(").append(param0).append(44);
+            stackOut_10_1 = new StringBuilder().append("vg.L(").append(-107).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -1296,10 +1294,10 @@ class vg extends pj {
         }
     }
 
-    final static void a(int param0, ob param1, int param2) {
+    final static void a(int param0, ob param1) {
         jd var5 = id.field_c;
         jd var3 = var5;
-        var5.e(param0, -2147483648);
+        var5.e(6, -2147483648);
         var5.field_m = var5.field_m + 1;
         int var4 = var5.field_m;
         var5.c(-104, 1);
@@ -1315,7 +1313,7 @@ class vg extends pj {
             param1.field_i = var5.e(true);
             var5.b(1, -var4 + var5.field_m);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "vg.R(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 118 + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "vg.R(" + 6 + 44 + (param1 != null ? "{...}" : "null") + 44 + 118 + 41);
         }
     }
 
@@ -1425,7 +1423,8 @@ class vg extends pj {
                   if (((vg) this).field_U) {
                     L4: {
                       ((vg) this).field_O = this.n(126);
-                      ((vg) this).field_K = this.k(11365);
+                      int discarded$1 = 11365;
+                      ((vg) this).field_K = this.k();
                       if (((vg) this).field_K <= 0) {
                         break L4;
                       } else {
@@ -1489,33 +1488,23 @@ class vg extends pj {
         return stackIn_19_0 != 0;
     }
 
-    private final void m(int param0) {
-        this.o(-1);
+    private final void m() {
+        int discarded$0 = -1;
+        this.o();
         int var2 = 0;
-        this.p(11002);
+        int discarded$1 = 11002;
+        this.p();
     }
 
     private final void b(int param0, int param1) {
         ((vg) this).field_K = param0;
-        if (fh.field_d[81]) {
-          if (param1 != -6331) {
-            this.c(false);
+        if (!fh.field_d[81]) {
+            ((vg) this).field_O = ((vg) this).field_K;
             return;
-          } else {
-            return;
-          }
-        } else {
-          ((vg) this).field_O = ((vg) this).field_K;
-          if (param1 == -6331) {
-            return;
-          } else {
-            this.c(false);
-            return;
-          }
         }
     }
 
-    private final void e(byte param0) {
+    private final void e() {
         try {
             String var2 = null;
             Exception var2_ref = null;
@@ -1523,7 +1512,8 @@ class vg extends pj {
             try {
               L0: {
                 var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
-                this.p(11002);
+                int discarded$1 = 11002;
+                this.p();
                 this.a(-107, var2);
                 break L0;
               }
@@ -1541,7 +1531,7 @@ class vg extends pj {
         }
     }
 
-    private final int k(int param0) {
+    private final int k() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

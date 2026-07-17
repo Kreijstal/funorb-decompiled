@@ -5,11 +5,11 @@ abstract class ka {
     static int field_a;
     static le field_b;
 
-    final static void b(int param0) {
+    final static void b() {
         eg.field_d[aa.field_a].b(0, 0);
     }
 
-    final static String c(int param0) {
+    final static String c() {
         if (!(null != cl.field_e)) {
             return "";
         }
@@ -20,7 +20,7 @@ abstract class ka {
 
     abstract void a(int param0, byte[] param1);
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         int var1 = 0;
     }

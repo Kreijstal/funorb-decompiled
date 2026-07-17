@@ -10,7 +10,7 @@ final class dm extends wn {
     static kc field_E;
     static String field_F;
 
-    final static void g(byte param0) {
+    final static void g() {
         eh.field_e = null;
         int var1 = 115;
     }
@@ -75,7 +75,7 @@ final class dm extends wn {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_E = null;
         field_J = null;
         field_F = null;
@@ -83,7 +83,7 @@ final class dm extends wn {
         field_I = null;
     }
 
-    final static Boolean f(int param0) {
+    final static Boolean f() {
         Boolean var1 = kj.field_e;
         kj.field_e = null;
         return var1;

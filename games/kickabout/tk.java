@@ -182,123 +182,115 @@ final class tk extends hd {
           }
         }
         L6: {
-          if (param4 < -61) {
+          if (!((tk) this).field_Kb.c(true)) {
             break L6;
           } else {
-            ((tk) this).a(84, -119, -123);
+            ((tk) this).field_Db.field_fb = ((tk) this).field_Db.field_fb + param3;
             break L6;
           }
         }
         L7: {
-          if (!((tk) this).field_Kb.c(true)) {
+          if (((tk) this).field_Kb.i(-74)) {
+            ((tk) this).field_Db.field_fb = ((tk) this).field_Db.field_fb - param3;
             break L7;
           } else {
-            ((tk) this).field_Db.field_fb = ((tk) this).field_Db.field_fb + param3;
             break L7;
           }
         }
         L8: {
-          if (((tk) this).field_Kb.i(-74)) {
-            ((tk) this).field_Db.field_fb = ((tk) this).field_Db.field_fb - param3;
-            break L8;
+          if (((tk) this).field_gb) {
+            if (((tk) this).field_Db.field_mb >= ((tk) this).field_Gb.field_mb) {
+              ((tk) this).field_Db.field_v = ((tk) this).field_Db.field_v - param1;
+              break L8;
+            } else {
+              ((tk) this).field_Db.field_fb = ((tk) this).field_Db.field_fb - param1;
+              break L8;
+            }
           } else {
             break L8;
           }
         }
         L9: {
-          if (((tk) this).field_gb) {
-            if (((tk) this).field_Db.field_mb >= ((tk) this).field_Gb.field_mb) {
-              ((tk) this).field_Db.field_v = ((tk) this).field_Db.field_v - param1;
-              break L9;
-            } else {
-              ((tk) this).field_Db.field_fb = ((tk) this).field_Db.field_fb - param1;
-              break L9;
-            }
-          } else {
-            break L9;
-          }
-        }
-        L10: {
           if (param0) {
-            L11: {
+            L10: {
               if (-(((tk) this).field_Db.field_v + ((tk) this).field_Db.field_J) >= 0) {
-                break L11;
+                break L10;
               } else {
                 ((tk) this).field_Db.field_v = -((tk) this).field_Db.field_J;
+                break L10;
+              }
+            }
+            L11: {
+              if (-(((tk) this).field_Db.field_fb + ((tk) this).field_Db.field_s) >= 0) {
+                break L11;
+              } else {
+                ((tk) this).field_Db.field_fb = -((tk) this).field_Db.field_s;
                 break L11;
               }
             }
             L12: {
-              if (-(((tk) this).field_Db.field_fb + ((tk) this).field_Db.field_s) >= 0) {
-                break L12;
-              } else {
-                ((tk) this).field_Db.field_fb = -((tk) this).field_Db.field_s;
-                break L12;
-              }
-            }
-            L13: {
               if (((tk) this).field_Db.field_mb - -((tk) this).field_Db.field_L + -((tk) this).field_Gb.field_mb >= -(((tk) this).field_Db.field_J - -((tk) this).field_Db.field_v)) {
-                break L13;
+                break L12;
               } else {
                 ((tk) this).field_Db.field_v = -((tk) this).field_Db.field_J + -(-((tk) this).field_Gb.field_mb + ((tk) this).field_Db.field_mb - -((tk) this).field_Db.field_L);
-                break L13;
+                break L12;
               }
             }
             if (-((tk) this).field_Gb.field_q + (((tk) this).field_Db.field_G + ((tk) this).field_Db.field_q) >= -(((tk) this).field_Db.field_fb + ((tk) this).field_Db.field_s)) {
-              break L10;
+              break L9;
             } else {
               ((tk) this).field_Db.field_fb = -(((tk) this).field_Db.field_q - (-((tk) this).field_Db.field_G - -((tk) this).field_Gb.field_q)) - ((tk) this).field_Db.field_s;
-              break L10;
+              break L9;
             }
           } else {
-            L14: {
+            L13: {
               if (-(((tk) this).field_Db.field_v + ((tk) this).field_Db.field_J) > ((tk) this).field_Db.field_L + (((tk) this).field_Db.field_mb - ((tk) this).field_Gb.field_mb)) {
                 ((tk) this).field_Db.field_v = -(-((tk) this).field_Gb.field_mb + ((tk) this).field_Db.field_L + ((tk) this).field_Db.field_mb) + -((tk) this).field_Db.field_J;
+                break L13;
+              } else {
+                break L13;
+              }
+            }
+            L14: {
+              if (-(((tk) this).field_Db.field_v + ((tk) this).field_Db.field_J) >= 0) {
                 break L14;
               } else {
+                ((tk) this).field_Db.field_v = -((tk) this).field_Db.field_J;
                 break L14;
               }
             }
             L15: {
-              if (-(((tk) this).field_Db.field_v + ((tk) this).field_Db.field_J) >= 0) {
-                break L15;
-              } else {
-                ((tk) this).field_Db.field_v = -((tk) this).field_Db.field_J;
-                break L15;
-              }
-            }
-            L16: {
               if (-(((tk) this).field_Db.field_fb + ((tk) this).field_Db.field_s) <= -((tk) this).field_Gb.field_q + ((tk) this).field_Db.field_q + ((tk) this).field_Db.field_G) {
-                break L16;
+                break L15;
               } else {
                 ((tk) this).field_Db.field_fb = -(((tk) this).field_Db.field_G + (((tk) this).field_Db.field_q + -((tk) this).field_Gb.field_q)) - ((tk) this).field_Db.field_s;
-                break L16;
+                break L15;
               }
             }
             if (-(((tk) this).field_Db.field_fb + ((tk) this).field_Db.field_s) >= 0) {
-              break L10;
+              break L9;
             } else {
               ((tk) this).field_Db.field_fb = -((tk) this).field_Db.field_s;
-              break L10;
+              break L9;
             }
           }
         }
-        L17: {
+        L16: {
           if (((tk) this).field_Eb.j(0)) {
             ((tk) this).field_Db.field_J = -((tk) this).field_Eb.a(((tk) this).field_Db.field_mb, param0, (byte) -95, ((tk) this).field_Gb.field_mb);
             ((tk) this).field_Db.field_v = 0;
-            break L17;
+            break L16;
           } else {
-            break L17;
+            break L16;
           }
         }
-        L18: {
+        L17: {
           if (((tk) this).field_Kb.j(0)) {
             ((tk) this).field_Db.field_s = -((tk) this).field_Kb.a(((tk) this).field_Db.field_q, 0, param0, ((tk) this).field_Gb.field_q);
             ((tk) this).field_Db.field_fb = 0;
-            break L18;
+            break L17;
           } else {
-            break L18;
+            break L17;
           }
         }
         ((tk) this).field_Eb.b(-((tk) this).field_Db.field_J, ((tk) this).field_Db.field_mb, 126, ((tk) this).field_Gb.field_mb);

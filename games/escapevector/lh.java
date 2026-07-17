@@ -35,7 +35,8 @@ final class lh {
         ed var31 = null;
         ed var32 = null;
         var4 = EscapeVector.field_A;
-        var1 = qa.f((byte) -49);
+        int discarded$1 = -49;
+        var1 = qa.f();
         if (null != ma.field_a) {
           am.field_k = 0;
           return;
@@ -727,21 +728,9 @@ final class lh {
     }
 
     final static void a(byte param0, int param1) {
-        if (bk.field_r == null) {
-          if (param0 != 99) {
-            lh.a((byte) -88);
+        if (bk.field_r != null) {
+            bk.field_r.d(param1, 136);
             return;
-          } else {
-            return;
-          }
-        } else {
-          bk.field_r.d(param1, 136);
-          if (param0 == 99) {
-            return;
-          } else {
-            lh.a((byte) -88);
-            return;
-          }
         }
     }
 
@@ -755,14 +744,9 @@ final class lh {
         return var1 != 0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
-        if (param0 != 26) {
-            boolean discarded$0 = lh.b((byte) 37);
-            field_c = null;
-            return;
-        }
         field_c = null;
     }
 

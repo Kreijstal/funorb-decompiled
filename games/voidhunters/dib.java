@@ -10,7 +10,7 @@ final class dib extends ev {
     static String field_j;
     private int field_h;
 
-    final static void a(File param0, int param1, byte[] param2, byte param3) throws IOException {
+    final static void a(File param0, int param1, byte[] param2) throws IOException {
         DataInputStream var4 = null;
         try {
             var4 = new DataInputStream((InputStream) (Object) new BufferedInputStream((InputStream) (Object) new FileInputStream(param0)));
@@ -169,15 +169,17 @@ final class dib extends ev {
         var4 = param1 * ((dib) this).field_g >> 12;
         var5 = ((dib) this).field_i * param1 >> 12;
         if (param0 != -112) {
-          int discarded$1 = dib.a((byte) 92, -127, 80, 107);
+          int discarded$3 = dib.a((byte) 92, -127, 80, 107);
           var6 = param2 * ((dib) this).field_f >> 12;
           var7 = ((dib) this).field_h * param2 >> 12;
-          fcb.a(((dib) this).field_e, var7, var6, var4, var5, (byte) -117);
+          int discarded$4 = -117;
+          fcb.a(((dib) this).field_e, var7, var6, var4, var5);
           return;
         } else {
           var6 = param2 * ((dib) this).field_f >> 12;
           var7 = ((dib) this).field_h * param2 >> 12;
-          fcb.a(((dib) this).field_e, var7, var6, var4, var5, (byte) -117);
+          int discarded$5 = -117;
+          fcb.a(((dib) this).field_e, var7, var6, var4, var5);
           return;
         }
     }
@@ -205,40 +207,7 @@ final class dib extends ev {
     }
 
     final static boolean a(int param0, int param1) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        if (param0 < 93) {
-          L0: {
-            field_j = null;
-            if (2 > param1) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
-              break L0;
-            } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (2 > param1) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              break L1;
-            } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
-        }
+        return 2 <= param1;
     }
 
     public static void a(byte param0) {

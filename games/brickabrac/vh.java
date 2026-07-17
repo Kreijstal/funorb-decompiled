@@ -19,7 +19,7 @@ final class vh extends d {
     int field_O;
     static String field_M;
 
-    public static void a(int param0) {
+    public static void a() {
         field_V = null;
         field_M = null;
         field_N = null;
@@ -137,7 +137,7 @@ final class vh extends d {
         return stackIn_16_0 != 0;
     }
 
-    final static int h(int param0) {
+    final static int h() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -150,9 +150,10 @@ final class vh extends d {
           L0: {
             var1_int = 0;
             L1: while (true) {
-              if (!jl.a((byte) 5)) {
+              int discarded$7 = 5;
+              if (!jl.a()) {
                 L2: {
-                  fi.field_r.a(aj.a(param0 + param0, po.field_a, pq.field_k), param0 ^ 27479, aj.a(0, qo.field_O, tb.field_fb));
+                  fi.field_r.a(aj.a(0, po.field_a, pq.field_k), 27479, aj.a(0, qo.field_O, tb.field_fb));
                   if (!fi.field_r.a((byte) 113)) {
                     break L2;
                   } else {
@@ -182,7 +183,7 @@ final class vh extends d {
                 stackIn_14_0 = stackOut_13_0;
                 break L0;
               } else {
-                fi.field_r.d(param0 + -1);
+                fi.field_r.d(-1);
                 if (fi.field_r.a((byte) 113)) {
                   var1_int = 1;
                   continue L1;
@@ -195,7 +196,7 @@ final class vh extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.a((Throwable) (Object) var1, "vh.B(" + param0 + 41);
+          throw qb.a((Throwable) (Object) var1, "vh.B(" + 0 + 41);
         }
         return stackIn_14_0;
     }
@@ -246,7 +247,7 @@ final class vh extends d {
         String stackOut_16_2 = null;
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
-          var4_int = 25 % ((param1 - -25) / 49);
+          var4_int = 1;
           ik.field_g = up.field_v;
           if (param0 != 255) {
             if (param0 < 100) {
@@ -288,7 +289,7 @@ final class vh extends d {
           L1: {
             var4 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var4;
-            stackOut_12_1 = new StringBuilder().append("vh.C(").append(param0).append(44).append(param1).append(44);
+            stackOut_12_1 = new StringBuilder().append("vh.C(").append(param0).append(44).append(-123).append(44);
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;

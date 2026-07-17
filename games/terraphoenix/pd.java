@@ -12,7 +12,7 @@ final class pd {
     static String field_e;
     boolean field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
         field_e = null;
         field_g = null;
@@ -243,11 +243,13 @@ final class pd {
                       } else {
                         var3 = pj.field_l[ai.field_i.field_h];
                         if (var3 == 2) {
-                          wf.c(25501);
+                          int discarded$3 = 25501;
+                          wf.c();
                           break L3;
                         } else {
                           if (var3 == 5) {
-                            wf.c(25501);
+                            int discarded$4 = 25501;
+                            wf.c();
                             break L3;
                           } else {
                             L5: {
@@ -279,7 +281,8 @@ final class pd {
                     break L3;
                   } else {
                     if (pe.field_e != 2) {
-                      wf.c(25501);
+                      int discarded$5 = 25501;
+                      wf.c();
                       break L3;
                     } else {
                       break L3;
@@ -341,15 +344,12 @@ final class pd {
 
     final static void a(int param0, java.awt.Component param1) {
         param1.removeMouseListener((java.awt.event.MouseListener) (Object) a.field_d);
-        if (param0 > -2) {
-            return;
-        }
         try {
             param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) a.field_d);
             param1.removeFocusListener((java.awt.event.FocusListener) (Object) a.field_d);
             wa.field_p = 0;
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) (Object) runtimeException, "pd.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw qk.a((Throwable) (Object) runtimeException, "pd.D(" + -26 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

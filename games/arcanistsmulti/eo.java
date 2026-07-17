@@ -6,7 +6,7 @@ final class eo {
     static int[] field_b;
     static ne field_c;
 
-    final static short[] a(ab param0, short[] param1, int param2, int param3) {
+    final static short[] a(ab param0, short[] param1) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -69,8 +69,8 @@ final class eo {
                 break L1;
               }
               L3: {
-                var5 = param0.d(param2 ^ 28073, 4);
-                var6 = (short)param0.d(28089, param2);
+                var5 = param0.d(28089, 4);
+                var6 = (short)param0.d(28089, 16);
                 if (var5 <= 0) {
                   var7 = 0;
                   L4: while (true) {
@@ -157,12 +157,12 @@ final class eo {
               break L7;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param2 + 44 + 16 + 41);
+          throw aa.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + 16 + 44 + 16 + 41);
         }
         return stackIn_16_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         field_c = null;

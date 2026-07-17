@@ -9,7 +9,7 @@ final class fh {
     static int field_d;
     int field_a;
 
-    final static boolean a(CharSequence param0, int param1, boolean param2) {
+    final static boolean a(CharSequence param0) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -47,7 +47,7 @@ final class fh {
               var3_int = 0;
               L1: while (true) {
                 if (param0.length() <= var3_int) {
-                  var4 = 114 / ((param1 - 55) / 36);
+                  var4 = -114;
                   stackOut_12_0 = 1;
                   stackIn_13_0 = stackOut_12_0;
                   break L0;
@@ -92,7 +92,7 @@ final class fh {
               break L2;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 44 + 0 + 41);
+          throw fk.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + 5 + 44 + 0 + 41);
         }
         return stackIn_13_0 != 0;
     }
@@ -145,7 +145,8 @@ final class fh {
               }
             }
             if (var2 != null) {
-              he.a((o) (Object) param1, (o) (Object) var2, true);
+              int discarded$2 = 1;
+              he.a((o) (Object) param1, (o) (Object) var2);
               return;
             } else {
               nk.field_t.a((o) (Object) param1, (byte) 125);

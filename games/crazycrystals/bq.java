@@ -14,7 +14,7 @@ final class bq extends mg {
         return of.field_C;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_i = null;
     }
 
@@ -39,7 +39,7 @@ final class bq extends mg {
         }
     }
 
-    final static void a(java.awt.Canvas param0, int param1, int param2, int param3) {
+    final static void a(java.awt.Canvas param0) {
         java.awt.Graphics var4 = null;
         Exception var4_ref = null;
         RuntimeException var4_ref2 = null;
@@ -63,7 +63,7 @@ final class bq extends mg {
           try {
             L0: {
               var4 = param0.getGraphics();
-              dk.field_o.a(var4, param1, (byte) 126, param2);
+              dk.field_o.a(var4, 0, (byte) 126, 0);
               var4.dispose();
               break L0;
             }
@@ -102,7 +102,7 @@ final class bq extends mg {
               break L1;
             }
           }
-          throw dn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + param2 + 44 + 4 + 41);
+          throw dn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 0 + 44 + 0 + 44 + 4 + 41);
         }
     }
 
@@ -126,7 +126,9 @@ final class bq extends mg {
             L2: while (true) {
               var3 = (ca) (Object) so.field_h.c(0);
               if (var3 != null) {
-                mb.a(var3, 4, 0);
+                int discarded$6 = 0;
+                int discarded$7 = 4;
+                mb.a(var3);
                 continue L2;
               } else {
                 L3: while (true) {

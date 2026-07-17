@@ -206,7 +206,7 @@ final class uj extends gq {
           if (param0.field_h.length == 0) {
             return null;
           } else {
-            return new uj(param0, (int)((long)param0.field_g * 256L * (long)param1 / (long)(100 * gp.field_p)), param2 << 6);
+            return new uj(param0, (int)((long)param0.field_g * 256L * 100L / (long)(100 * gp.field_p)), param2 << 6);
           }
         } else {
           return null;

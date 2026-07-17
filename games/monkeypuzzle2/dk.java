@@ -121,7 +121,7 @@ final class dk {
               }
             }
             L8: {
-              var12 = -40 / ((-24 - param0) / 34);
+              var12 = 13;
               var13 = param3;
               if (ge.field_h < var5_int + (var9 + var13)) {
                 var13 = -var5_int + ge.field_h - var9;
@@ -149,7 +149,7 @@ final class dk {
           L10: {
             var5 = decompiledCaughtException;
             stackOut_24_0 = (RuntimeException) var5;
-            stackOut_24_1 = new StringBuilder().append("dk.E(").append(param0).append(44);
+            stackOut_24_1 = new StringBuilder().append("dk.E(").append(96).append(44);
             stackIn_26_0 = stackOut_24_0;
             stackIn_26_1 = stackOut_24_1;
             stackIn_25_0 = stackOut_24_0;
@@ -232,53 +232,49 @@ final class dk {
         var9 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           L0: {
-            if (param2 == -25006) {
-              var5_int = 0;
-              var6 = -1;
-              var7 = 1;
-              L1: while (true) {
-                if (var7 >= param0.length()) {
-                  break L0;
-                } else {
-                  L2: {
-                    var8 = param0.charAt(var7);
-                    if (var8 == 60) {
-                      var6 = (var5_int >> 8) + (param3.field_c[0] + param4.a(param0.substring(0, var7)));
-                      break L2;
-                    } else {
-                      break L2;
-                    }
+            var5_int = 0;
+            var6 = -1;
+            var7 = 1;
+            L1: while (true) {
+              if (var7 >= param0.length()) {
+                break L0;
+              } else {
+                L2: {
+                  var8 = param0.charAt(var7);
+                  if (var8 == 60) {
+                    var6 = (var5_int >> 8) + (param3.field_c[0] + param4.a(param0.substring(0, var7)));
+                    break L2;
+                  } else {
+                    break L2;
                   }
-                  L3: {
-                    if (var6 != -1) {
-                      param3.field_c[var7] = var6;
-                      break L3;
-                    } else {
-                      L4: {
-                        if (var8 != 32) {
-                          break L4;
-                        } else {
-                          var5_int = var5_int + param1;
-                          break L4;
-                        }
-                      }
-                      param3.field_c[var7] = (var5_int >> 8) + param3.field_c[0] + (param4.a(param0.substring(0, var7 + 1)) + -param4.a((char) var8));
-                      break L3;
-                    }
-                  }
-                  L5: {
-                    if (var8 != 62) {
-                      break L5;
-                    } else {
-                      break L5;
-                    }
-                  }
-                  var7++;
-                  continue L1;
                 }
+                L3: {
+                  if (var6 != -1) {
+                    param3.field_c[var7] = var6;
+                    break L3;
+                  } else {
+                    L4: {
+                      if (var8 != 32) {
+                        break L4;
+                      } else {
+                        var5_int = var5_int + param1;
+                        break L4;
+                      }
+                    }
+                    param3.field_c[var7] = (var5_int >> 8) + param3.field_c[0] + (param4.a(param0.substring(0, var7 + 1)) + -param4.a((char) var8));
+                    break L3;
+                  }
+                }
+                L5: {
+                  if (var8 != 62) {
+                    break L5;
+                  } else {
+                    break L5;
+                  }
+                }
+                var7++;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -311,7 +307,7 @@ final class dk {
           }
           L7: {
             stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(param1).append(44).append(-25006).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -631,34 +627,30 @@ final class dk {
         String stackOut_10_2 = null;
         try {
           L0: {
-            if (param2 == -87) {
-              L1: {
-                var5_int = ((dk) this).field_m.a(param1);
-                var6 = ((dk) this).field_m.field_j - -((dk) this).field_m.field_D;
-                var7 = param3;
-                if (ge.field_h >= var7 - -var5_int + 6) {
-                  break L1;
-                } else {
-                  var7 = -var5_int + ge.field_h + -6;
-                  break L1;
-                }
+            L1: {
+              var5_int = ((dk) this).field_m.a(param1);
+              var6 = ((dk) this).field_m.field_j - -((dk) this).field_m.field_D;
+              var7 = param3;
+              if (ge.field_h >= var7 - -var5_int + 6) {
+                break L1;
+              } else {
+                var7 = -var5_int + ge.field_h + -6;
+                break L1;
               }
-              L2: {
-                var8 = param0 - ((dk) this).field_m.field_j + 32;
-                if (var8 + var6 + 6 > ge.field_g) {
-                  var8 = -var6 + (ge.field_g + -6);
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              ge.f(var7, var8, 6 + var5_int, var6 - -6, ((dk) this).field_c);
-              ge.d(var7 - -1, 1 + var8, var5_int + 4, var6 - -4, ((dk) this).field_s);
-              ((dk) this).field_m.b(param1, var7 - -3, var8 - -3 - -((dk) this).field_m.field_j, ((dk) this).field_c, -1);
-              break L0;
-            } else {
-              return;
             }
+            L2: {
+              var8 = param0 - ((dk) this).field_m.field_j + 32;
+              if (var8 + var6 + 6 > ge.field_g) {
+                var8 = -var6 + (ge.field_g + -6);
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            ge.f(var7, var8, 6 + var5_int, var6 - -6, ((dk) this).field_c);
+            ge.d(var7 - -1, 1 + var8, var5_int + 4, var6 - -4, ((dk) this).field_s);
+            ((dk) this).field_m.b(param1, var7 - -3, var8 - -3 - -((dk) this).field_m.field_j, ((dk) this).field_c, -1);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -688,7 +680,7 @@ final class dk {
               break L3;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param2 + 44 + param3 + 41);
+          throw la.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + -87 + 44 + param3 + 41);
         }
     }
 

@@ -10,7 +10,7 @@ final class pe extends fd {
     int field_tb;
     String field_ob;
 
-    public static void b(byte param0) {
+    public static void b() {
         field_qb = null;
     }
 
@@ -43,13 +43,14 @@ final class pe extends fd {
         String stackOut_9_2 = null;
         try {
           L0: {
-            var8 = pk.a((byte) 72, param4, param1, param3, param5, param2);
+            int discarded$4 = 0;
+            var8 = pk.a((byte) 72, 0, param1, param3, param5);
             var6 = var8;
             if (param0 < -70) {
               if (var8 != null) {
                 var7 = new l();
                 var7.field_d = var8;
-                java.awt.Component discarded$2 = var7.field_d.add((java.awt.Component) (Object) var7);
+                java.awt.Component discarded$5 = var7.field_d.add((java.awt.Component) (Object) var7);
                 var7.setBounds(0, 0, param1, param3);
                 var7.addFocusListener((java.awt.event.FocusListener) (Object) var7);
                 var7.requestFocus();
@@ -72,7 +73,7 @@ final class pe extends fd {
           L1: {
             var6_ref = decompiledCaughtException;
             stackOut_8_0 = (RuntimeException) var6_ref;
-            stackOut_8_1 = new StringBuilder().append("pe.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_8_1 = new StringBuilder().append("pe.C(").append(param0).append(44).append(param1).append(44).append(0).append(44).append(param3).append(44).append(0).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -100,20 +101,20 @@ final class pe extends fd {
         return stackIn_7_0;
     }
 
-    final static void a(vf param0, int param1, int param2, byte param3, boolean param4, java.awt.Component param5, di param6, int param7) {
+    final static void a(vf param0, int param1, int param2, byte param3, boolean param4, java.awt.Component param5, di param6) {
         try {
-            fj.a(22050, param4, 10);
-            mj.field_o = fj.a(param0, param5, 0, param1);
-            im.field_b = fj.a(param0, param5, 1, param2);
+            fj.a(22050, true, 10);
+            mj.field_o = fj.a(param0, param5, 0, 22050);
+            im.field_b = fj.a(param0, param5, 1, 512);
             hj.field_f = new hg();
-            mj.field_p = param2 * 1000 / 22050;
+            mj.field_p = 23;
             im.field_b.b((um) (Object) hj.field_f);
             km.field_a = param6;
             km.field_a.a((byte) -127, ee.field_J);
             mj.field_o.b((um) (Object) km.field_a);
-            int var8_int = -122 % ((param3 - -69) / 50);
+            int var8_int = 0;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) (Object) runtimeException, "pe.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 44 + 22050 + 41);
+            throw lj.a((Throwable) (Object) runtimeException, "pe.A(" + (param0 != null ? "{...}" : "null") + 44 + 22050 + 44 + 512 + 44 + -124 + 44 + 1 + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 44 + 22050 + 41);
         }
     }
 

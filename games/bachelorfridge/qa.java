@@ -4,30 +4,20 @@
 final class qa extends k {
     static kv field_k;
 
-    final static void d(int param0) {
+    final static void d() {
         if (bka.field_h) {
           return;
         } else {
           ln.e(-116);
           hp.field_c = -3;
-          if (af.field_a) {
-            uq.h(-28716);
-            if (param0 < 115) {
-              return;
-            } else {
-              uca.a(18, (byte) 117);
-              return;
-            }
-          } else {
+          if (!af.field_a) {
             rs.a(true);
             sia.field_h = false;
             lg.a(true, -4, true);
-            if (param0 < 115) {
-              return;
-            } else {
-              uca.a(18, (byte) 117);
-              return;
-            }
+            return;
+          } else {
+            uq.h(-28716);
+            return;
           }
         }
     }
@@ -62,19 +52,14 @@ final class qa extends k {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_k = null;
     }
 
     private final int a(boolean param0, int param1, int param2) {
-        int var4 = 0;
-        var4 = param1 + 57 * param2;
-        if (param0) {
-          return -81;
-        } else {
-          var4 = var4 ^ var4 << 1;
-          return -((var4 * (789221 + var4 * (var4 * 15731)) - -1376312589 & 2147483647) / 262144) + 4096;
-        }
+        int var4 = param1 + 57 * param2;
+        var4 = var4 ^ var4 << 1;
+        return -((var4 * (789221 + var4 * (var4 * 15731)) - -1376312589 & 2147483647) / 262144) + 4096;
     }
 
     public qa() {

@@ -6,12 +6,12 @@ final class q {
     static String field_b;
     static int field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
     }
 
-    final static String a(CharSequence param0, int param1) {
+    final static String a(CharSequence param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
@@ -170,7 +170,8 @@ final class q {
         String stackOut_3_2 = null;
         try {
           L0: {
-            stackOut_0_0 = rj.a(false, param0, (byte) 20);
+            int discarded$2 = 20;
+            stackOut_0_0 = rj.a(false, param0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -215,62 +216,54 @@ final class q {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_17_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_15_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_16_0 = 0;
-        int stackOut_9_0 = 0;
+        int stackOut_14_0 = 0;
+        int stackOut_7_0 = 0;
         var8 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           L0: {
-            L1: {
-              var3_int = 0;
-              if (param1 == -36) {
-                break L1;
-              } else {
-                field_c = null;
-                break L1;
-              }
-            }
+            var3_int = 0;
             var4 = fb.field_k;
-            L2: while (true) {
+            L1: while (true) {
               if (pl.field_k.length <= var3_int) {
-                stackOut_16_0 = -1;
-                stackIn_17_0 = stackOut_16_0;
+                stackOut_14_0 = -1;
+                stackIn_15_0 = stackOut_14_0;
                 break L0;
               } else {
-                L3: {
+                L2: {
                   var5 = gh.field_a[var3_int];
                   if (var5 >= 0) {
                     var6 = hh.a((byte) 74, pl.field_k[var3_int], true);
                     var7 = jc.field_b + -(var6 >> 1);
                     var4 = var4 + ud.field_a;
-                    if (lf.a(param1 + -19828, param2, param0, hb.field_n + (vf.field_b << 1), (pl.field_h << 1) + var6, -pl.field_h + var7, var4)) {
-                      stackOut_9_0 = var5;
-                      stackIn_10_0 = stackOut_9_0;
-                      return stackIn_10_0;
+                    if (lf.a(-19864, param2, param0, hb.field_n + (vf.field_b << 1), (pl.field_h << 1) + var6, -pl.field_h + var7, var4)) {
+                      stackOut_7_0 = var5;
+                      stackIn_8_0 = stackOut_7_0;
+                      return stackIn_8_0;
                     } else {
                       var4 = var4 + (hb.field_n + ud.field_a + (vf.field_b << 1));
                       var3_int++;
-                      break L3;
+                      break L2;
                     }
                   } else {
                     var4 = var4 + gi.field_a;
                     var3_int++;
-                    break L3;
+                    break L2;
                   }
                 }
                 var3_int++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw la.a((Throwable) (Object) var3, "q.C(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw la.a((Throwable) (Object) var3, "q.C(" + param0 + 44 + -36 + 44 + param2 + 41);
         }
-        return stackIn_17_0;
+        return stackIn_15_0;
     }
 
     static {

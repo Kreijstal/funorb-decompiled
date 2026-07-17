@@ -29,7 +29,7 @@ final class f {
         }
     }
 
-    final static void a(sj param0, byte param1) {
+    final static void a(sj param0) {
         try {
             ad.field_d[0] = qm.a(param0, "", "KaB_park_menu");
             sk.a(80, 8, 0);
@@ -52,7 +52,7 @@ final class f {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
     }
 

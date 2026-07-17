@@ -8,7 +8,7 @@ final class jl {
     static rb field_e;
     static int field_c;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         field_e = null;

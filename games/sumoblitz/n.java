@@ -8,7 +8,8 @@ final class n extends da implements e {
 
     protected final void finalize() {
         if (((n) this).field_nativeid != 0L) {
-            pa.a((e) this, (byte) -37);
+            int discarded$0 = -37;
+            pa.a((e) this);
         }
     }
 

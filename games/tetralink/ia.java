@@ -9,7 +9,7 @@ final class ia extends gn implements ij, dm {
     static int field_K;
     private fk field_P;
 
-    private final String i(int param0) {
+    private final String i() {
         return "<u=2164A2><col=2164A2>";
     }
 
@@ -98,7 +98,6 @@ final class ia extends gn implements ij, dm {
 
     public final void a(byte param0, ae param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
-        Object var7 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
@@ -129,8 +128,8 @@ final class ia extends gn implements ij, dm {
             if (param0 < 0) {
               break L0;
             } else {
-              var7 = null;
-              ia.a((java.applet.Applet) null, false);
+              int discarded$2 = 0;
+              ia.a((java.applet.Applet) null);
               return;
             }
           }
@@ -166,12 +165,12 @@ final class ia extends gn implements ij, dm {
         }
     }
 
-    final static int h(int param0) {
+    final static int h() {
         int var1 = 0;
         return lg.field_X;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = 3;
         field_O = null;
         field_L = null;
@@ -206,6 +205,8 @@ final class ia extends gn implements ij, dm {
             ((ia) this).field_N = param0;
             ((ia) this).field_M = new ae(al.field_e, (dn) null);
             ((ia) this).field_M.field_H = (kg) (Object) new uj();
+            int discarded$2 = 99;
+            int discarded$3 = -19;
             var7 = sk.a(new String[2], kd.field_e, 123);
             var3 = 20;
             var4 = new al(od.field_S, 0, 0, 0, 0, 16777215, -1, 3, 0, od.field_S.field_N, -1, 2147483647, true);
@@ -258,10 +259,12 @@ final class ia extends gn implements ij, dm {
         }
     }
 
-    final static void a(java.applet.Applet param0, boolean param1) {
+    final static void a(java.applet.Applet param0) {
         try {
-            ld.a("", param0, -1);
-            in.a(param0, 63);
+            int discarded$0 = -1;
+            ld.a("", param0);
+            int discarded$1 = 63;
+            in.a(param0);
         } catch (RuntimeException runtimeException) {
             throw oi.a((Throwable) (Object) runtimeException, "ia.G(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 41);
         }
@@ -347,7 +350,7 @@ final class ia extends gn implements ij, dm {
         return stackIn_7_0 != 0;
     }
 
-    private final String e(byte param0) {
+    private final String e() {
         return "</col></u>";
     }
 
@@ -386,17 +389,20 @@ final class ia extends gn implements ij, dm {
             if (param0 != 0) {
               if (param0 != 1) {
                 if (2 == param0) {
-                  al.a("conduct.ws", (byte) 24);
+                  int discarded$6 = 24;
+                  al.a("conduct.ws");
                   break L0;
                 } else {
                   return;
                 }
               } else {
-                al.a("privacy.ws", (byte) 24);
+                int discarded$7 = 24;
+                al.a("privacy.ws");
                 return;
               }
             } else {
-              al.a("terms.ws", (byte) 24);
+              int discarded$8 = 24;
+              al.a("terms.ws");
               return;
             }
           }

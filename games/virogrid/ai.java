@@ -15,7 +15,8 @@ final class ai {
     final static void a(int param0, um param1, int[] param2, String param3, long param4, String param5, int param6, km param7, int param8) {
         try {
             if (param8 <= 43) {
-                ai.b(false);
+                int discarded$0 = 0;
+                ai.b();
             }
             wf.field_d = param1;
             md.field_e = new dj(param7, param4, param5, param3, param6, param0, param2);
@@ -24,7 +25,7 @@ final class ai {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_a = null;
         field_i = null;
         field_b = null;

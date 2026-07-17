@@ -18,7 +18,7 @@ abstract class mf {
         fc.field_a.a(-120 + (oo.field_l - 4), 0, 438, var2 + (202 + 438 * var4 / var3), -3344);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         field_a = null;

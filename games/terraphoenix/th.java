@@ -42,7 +42,7 @@ final class th {
           oa.field_c[pb.field_b] = param5;
           dd.field_L[pb.field_b] = param2;
           var6 = param5 + param3 - -param2;
-          if (param1 != ~var6) {
+          if (var6 != 0) {
             stackOut_8_0 = 1000 * param3 / var6;
             stackIn_9_0 = stackOut_8_0;
             break L2;
@@ -105,7 +105,7 @@ final class th {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_g = null;
         field_e = null;

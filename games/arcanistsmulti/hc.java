@@ -33,7 +33,7 @@ final class hc {
         }
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void a(java.applet.Applet param0) {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
@@ -201,7 +201,7 @@ final class hc {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         return hb.field_Gb == sk.field_a;
     }
 

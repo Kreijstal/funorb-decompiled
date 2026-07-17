@@ -264,7 +264,8 @@ final class pg extends qd {
                         var10 = var12;
                         var6 = var10;
                         if (var3 == 1) {
-                          int discarded$1 = nl.a(var16, var5_int, param1, var4, 9);
+                          int discarded$2 = 9;
+                          int discarded$3 = nl.a(var6, var5_int, param1, var4);
                           break L6;
                         } else {
                           var7 = (Object) (Object) jd.field_b;
@@ -336,13 +337,13 @@ final class pg extends qd {
         kb stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         int stackIn_8_2 = 0;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        String stackIn_21_2 = null;
+        String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         kb stackOut_5_0 = null;
         int stackOut_5_1 = 0;
@@ -352,14 +353,14 @@ final class pg extends qd {
         kb stackOut_6_0 = null;
         int stackOut_6_1 = 0;
         int stackOut_6_2 = 0;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
         RuntimeException stackOut_19_0 = null;
         StringBuilder stackOut_19_1 = null;
         String stackOut_19_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
         try {
           L0: {
             L1: {
@@ -381,7 +382,7 @@ final class pg extends qd {
                         L3: {
                           param2.field_K = nc.b(param2.field_k, param2.field_K.e(), 0, param2.field_K.i());
                           stackOut_5_0 = ((pg) this).field_t;
-                          stackOut_5_1 = param1 + 301;
+                          stackOut_5_1 = 256;
                           stackIn_7_0 = stackOut_5_0;
                           stackIn_7_1 = stackOut_5_1;
                           stackIn_6_0 = stackOut_5_0;
@@ -424,42 +425,38 @@ final class pg extends qd {
                 }
               }
             }
-            if (param1 == -45) {
-              param2.field_K.a(param0);
-              break L0;
-            } else {
-              return;
-            }
+            param2.field_K.a(param0);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4 = decompiledCaughtException;
-            stackOut_18_0 = (RuntimeException) var4;
-            stackOut_18_1 = new StringBuilder().append("pg.B(").append(param0).append(44).append(param1).append(44);
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
+            stackOut_17_0 = (RuntimeException) var4;
+            stackOut_17_1 = new StringBuilder().append("pg.B(").append(param0).append(44).append(-45).append(44);
+            stackIn_19_0 = stackOut_17_0;
+            stackIn_19_1 = stackOut_17_1;
+            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_1 = stackOut_17_1;
             if (param2 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
-              break L5;
-            } else {
               stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
               stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
+              stackOut_19_2 = "null";
+              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_1 = stackOut_19_1;
+              stackIn_20_2 = stackOut_19_2;
+              break L5;
+            } else {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "{...}";
+              stackIn_20_0 = stackOut_18_0;
+              stackIn_20_1 = stackOut_18_1;
+              stackIn_20_2 = stackOut_18_2;
               break L5;
             }
           }
-          throw oj.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 41);
+          throw oj.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
         }
     }
 
@@ -746,7 +743,7 @@ final class pg extends qd {
         field_p = null;
     }
 
-    final static gl a(int param0, String param1, int param2) {
+    final static gl a(int param0, String param1) {
         fc var3 = null;
         RuntimeException var3_ref = null;
         fc stackIn_1_0 = null;

@@ -31,13 +31,13 @@ final class sg extends k {
             tb.field_fb = l.field_l;
             qo.field_O = va.field_e;
             mi.field_c = 0;
-            var2 = 54 / ((param0 - -49) / 63);
+            var2 = 54;
             break L0;
           }
         }
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_l = null;
         field_m = null;
         field_k = null;
@@ -78,7 +78,8 @@ final class sg extends k {
               }
             }
             L2: {
-              if (null != cp.a(param0, (byte) -24)) {
+              int discarded$10 = -24;
+              if (null != cp.a(param0)) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L2;

@@ -14,9 +14,6 @@ final class dg {
         pc var8 = aa.field_f;
         var8.g(param5, 15514);
         var8.field_m = var8.field_m + 1;
-        if (!param0) {
-            return;
-        }
         try {
             var7 = var8.field_m;
             var8.e(160, param1);
@@ -24,13 +21,13 @@ final class dg {
                 var8.b((byte) -41, param4);
             }
             if (param3 != null) {
-                int discarded$1 = hn.a(!param0 ? true : false, param3, (we) (Object) var8);
+                int discarded$1 = hn.a(false, param3, (we) (Object) var8);
             } else {
                 var8.b(1276387944, param2);
             }
             var8.f(var8.field_m + -var7, -1);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "dg.A(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "dg.A(" + 1 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 41);
         }
     }
 
@@ -55,10 +52,12 @@ final class dg {
     final static void a(int param0, byte param1) {
         if (param1 >= -82) {
           field_e = null;
-          qh.a((byte) -93, 1048576, bj.field_c[param0], true);
+          int discarded$4 = 1;
+          qh.a((byte) -93, 1048576, bj.field_c[param0]);
           return;
         } else {
-          qh.a((byte) -93, 1048576, bj.field_c[param0], true);
+          int discarded$5 = 1;
+          qh.a((byte) -93, 1048576, bj.field_c[param0]);
           return;
         }
     }

@@ -108,13 +108,10 @@ abstract class csa extends vg implements noa, qn, fo, gma, lj, ew {
         return ((csa) this).field_t[param0];
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         hk.field_e = new jea(0L, (jea) null);
         if (!(!rca.field_p)) {
             hk.field_e.b(-127, lva.field_t);
-        }
-        if (param0) {
-            field_n = -21;
         }
         hk.field_e.b(-127, rra.field_e);
         oca.field_b = new lla(cla.field_o, hk.field_e);
@@ -170,7 +167,7 @@ abstract class csa extends vg implements noa, qn, fo, gma, lj, ew {
         }
     }
 
-    private final void m(byte param0) {
+    private final void m() {
         int var3 = 0;
         mka var4 = null;
         int var5 = TombRacer.field_G ? 1 : 0;
@@ -495,7 +492,8 @@ abstract class csa extends vg implements noa, qn, fo, gma, lj, ew {
             ((csa) this).field_r = dfa.a(-((csa) this).field_r, 8192, -85);
             this.d(true);
             ((csa) this).field_v = !((csa) this).field_v ? true : false;
-            this.m((byte) -24);
+            int discarded$0 = -24;
+            this.m();
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "csa.BB(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
@@ -517,7 +515,7 @@ abstract class csa extends vg implements noa, qn, fo, gma, lj, ew {
         return var2;
     }
 
-    public static void j(byte param0) {
+    public static void j() {
         field_i = null;
         field_y = null;
     }
@@ -854,7 +852,8 @@ abstract class csa extends vg implements noa, qn, fo, gma, lj, ew {
               if (((csa) this).field_t.length <= var5_int) {
                 L8: {
                   if (((csa) this).field_v) {
-                    this.m((byte) -24);
+                    int discarded$1 = -24;
+                    this.m();
                     this.d(true);
                     break L8;
                   } else {
@@ -978,9 +977,6 @@ abstract class csa extends vg implements noa, qn, fo, gma, lj, ew {
 
     final static void a(int param0, int param1, int param2, g[] param3) {
         g var5 = null;
-        if (param1 != 2097152) {
-            field_g = -32;
-        }
         if (!(param0 != param2)) {
             return;
         }
@@ -990,7 +986,7 @@ abstract class csa extends vg implements noa, qn, fo, gma, lj, ew {
             param3[param2] = param3[param0];
             param3[param0] = var5;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "csa.TA(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "csa.TA(" + param0 + 44 + 2097152 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -1224,65 +1220,57 @@ abstract class csa extends vg implements noa, qn, fo, gma, lj, ew {
     }
 
     final static void a(int param0, kra param1) {
-        RuntimeException runtimeException = null;
+        RuntimeException var2 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
         String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              nma.field_m = param1;
-              if (param0 == 1048576) {
-                break L1;
-              } else {
-                csa.a(true);
-                break L1;
-              }
-            }
+            nma.field_m = param1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("csa.QA(").append(param0).append(44);
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+          L1: {
+            var2 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_1 = new StringBuilder().append("csa.QA(").append(1048576).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
-              break L2;
-            } else {
               stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
               stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              break L2;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
         }
     }
 

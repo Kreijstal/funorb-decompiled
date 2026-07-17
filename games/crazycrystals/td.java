@@ -8,7 +8,7 @@ final class td {
     static kl field_b;
     static int field_d;
 
-    final static void a(float param0, String param1, boolean param2) {
+    final static void a(float param0, String param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -62,7 +62,7 @@ final class td {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         field_c = null;

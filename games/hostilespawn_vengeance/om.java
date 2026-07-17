@@ -513,7 +513,7 @@ final class om {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
         field_f = null;
@@ -526,9 +526,9 @@ final class om {
             if (param2 > -94) {
                 field_a = false;
             }
-            bl.a(1, param0, param1);
+            bl.a(1, param0, 5);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "om.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+            throw wg.a((Throwable) (Object) runtimeException, "om.A(" + (param0 != null ? "{...}" : "null") + 44 + 5 + 44 + param2 + 41);
         }
     }
 

@@ -266,7 +266,7 @@ final class sta extends rva {
         }
     }
 
-    public static void h(byte param0) {
+    public static void h() {
         field_A = null;
         field_G = null;
         field_H = null;
@@ -274,24 +274,63 @@ final class sta extends rva {
     }
 
     private final void d(int param0, int param1, int param2) {
+        int var4 = 0;
+        int[] var5 = null;
         int var6 = 0;
-        int var7 = TombRacer.field_G ? 1 : 0;
-        int var4 = null != ((sta) this).field_F ? ((sta) this).field_F.length : 0;
-        int[] var5 = new int[param2 * var4];
-        if (null != ((sta) this).field_I) {
-            if (((sta) this).field_I.length < -1) {
-                if (-1 < var5.length) {
-                    if (param0 > 0) {
-                        for (var6 = 0; var4 > var6; var6++) {
-                            lua.a(((sta) this).field_I, var6 * param0, var5, var6 * param2, Math.min(param0, param2));
-                        }
-                    }
-                }
-            }
+        int var7 = 0;
+        int[] var8 = null;
+        int[] var9 = null;
+        int stackIn_3_0 = 0;
+        int stackOut_2_0 = 0;
+        int stackOut_1_0 = 0;
+        L0: {
+          var7 = TombRacer.field_G ? 1 : 0;
+          if (null == ((sta) this).field_F) {
+            stackOut_2_0 = 0;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          } else {
+            stackOut_1_0 = ((sta) this).field_F.length;
+            stackIn_3_0 = stackOut_1_0;
+            break L0;
+          }
         }
-        ((sta) this).field_I = var5;
-        if (param1 >= -100) {
-            field_H = null;
+        L1: {
+          var4 = stackIn_3_0;
+          var9 = new int[param2 * var4];
+          var8 = var9;
+          var5 = var8;
+          if (null == ((sta) this).field_I) {
+            ((sta) this).field_I = var5;
+            break L1;
+          } else {
+            if (((sta) this).field_I.length >= -1) {
+              ((sta) this).field_I = var5;
+              break L1;
+            } else {
+              if (-1 >= var9.length) {
+                ((sta) this).field_I = var5;
+                break L1;
+              } else {
+                if (param0 <= 0) {
+                  ((sta) this).field_I = var5;
+                  break L1;
+                } else {
+                  var6 = 0;
+                  L2: while (true) {
+                    if (var4 <= var6) {
+                      ((sta) this).field_I = var5;
+                      break L1;
+                    } else {
+                      lua.a(((sta) this).field_I, var6 * param0, var5, var6 * param2, Math.min(param0, param2));
+                      var6++;
+                      continue L2;
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
     }
 
@@ -305,10 +344,6 @@ final class sta extends rva {
 
     private final void f(int param0, int param1, int param2) {
         int var4 = ((sta) this).field_C != null ? ((sta) this).field_C.length : 0;
-        if (param0 != 28705) {
-            Object var6 = null;
-            ((sta) this).b(9, (ae) null, 31);
-        }
         int[] var5 = new int[var4 * param2];
         if (((sta) this).field_I != null) {
             if (0 < ((sta) this).field_I.length) {
@@ -322,7 +357,7 @@ final class sta extends rva {
         ((sta) this).field_I = var5;
     }
 
-    private final void c(int param0, int param1, int param2) {
+    private final void c(int param0, int param1) {
         int var4 = null == ((sta) this).field_C ? 0 : ((sta) this).field_C.length;
         ae[] var5 = new ae[var4 * param0];
         if (null != ((sta) this).field_w) {
@@ -527,11 +562,11 @@ final class sta extends rva {
         return stackIn_3_0;
     }
 
-    final static boolean g(byte param0) {
+    final static boolean g() {
         return wba.field_o != null && wba.field_o.a((byte) -127);
     }
 
-    private final void e(int param0, int param1, int param2) {
+    private final void e(int param0, int param1) {
         int var6 = 0;
         int var7 = TombRacer.field_G ? 1 : 0;
         int var4 = ((sta) this).field_F != null ? ((sta) this).field_F.length : 0;
@@ -562,14 +597,15 @@ final class sta extends rva {
             lua.a(var10, 0, param5, 1);
             var9 = new int[param6];
             lua.a(var9, 0, param6, 1);
-            this.a(var10, (byte) -97);
+            int discarded$0 = -97;
+            this.a(var10);
             this.a(var9, 48);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "sta.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + param6 + 41);
         }
     }
 
-    private final void a(int[] param0, byte param1) {
+    private final void a(int[] param0) {
         int var3_int = 0;
         int var4 = 0;
         int[] var5 = null;
@@ -589,7 +625,8 @@ final class sta extends rva {
                 var6++;
             }
             var6 = -21;
-            this.e(var4, var3_int, 192);
+            int discarded$0 = 192;
+            this.e(var4, var3_int);
             this.d(var3_int, -110, var4);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "sta.M(" + (param0 != null ? "{...}" : "null") + 44 + -97 + 41);
@@ -608,9 +645,6 @@ final class sta extends rva {
             var4 = param0.length;
             ((sta) this).field_F = param0;
             var5 = param0;
-            if (param1 != 48) {
-                field_G = null;
-            }
             var6 = 0;
             var7 = 0;
             while (var6 < var5.length) {
@@ -618,10 +652,11 @@ final class sta extends rva {
                 var5[var6] = var7 + var5[var6];
                 var6++;
             }
-            this.c(var4, var3_int, 0);
-            this.f(param1 + 28657, var3_int, var4);
+            int discarded$0 = 0;
+            this.c(var4, var3_int);
+            this.f(28705, var3_int, var4);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "sta.U(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "sta.U(" + (param0 != null ? "{...}" : "null") + 44 + 48 + 41);
         }
     }
 

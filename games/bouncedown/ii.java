@@ -12,7 +12,7 @@ final class ii extends wi {
         ((ii) this).field_m = ((ii) this).field_h * param0;
     }
 
-    public static void l(int param0) {
+    public static void l() {
         field_n = null;
         field_l = null;
     }
@@ -24,13 +24,13 @@ final class ii extends wi {
         }
         try {
             od.field_f.a(param1, param0, -1 + param2, 0, 0);
-            od.field_f.a(param1, param0, param2, param3, -1);
+            od.field_f.a(param1, param0, param2, 16744512, -1);
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) (Object) runtimeException, "ii.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+            throw ii.a((Throwable) (Object) runtimeException, "ii.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + 16744512 + 44 + param4 + 41);
         }
     }
 
-    final static void n(int param0) {
+    final static void n() {
         lg.field_b = new gh();
         ed.field_c.a(10768, (lk) (Object) lg.field_b);
     }

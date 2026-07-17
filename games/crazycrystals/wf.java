@@ -19,7 +19,7 @@ final class wf extends tl {
         field_f = null;
     }
 
-    private final java.net.Socket a(String param0, int param1, String param2, int param3) throws IOException {
+    private final java.net.Socket a(String param0, int param1, String param2) throws IOException {
         RuntimeException var5 = null;
         OutputStream var6 = null;
         BufferedReader var7 = null;
@@ -296,7 +296,7 @@ final class wf extends tl {
         L0: {
           var13 = CrazyCrystals.field_B;
           if (!Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
-            String discarded$2 = System.setProperty("java.net.useSystemProxies", "true");
+            String discarded$3 = System.setProperty("java.net.useSystemProxies", "true");
             break L0;
           } else {
             break L0;
@@ -403,7 +403,7 @@ final class wf extends tl {
           var6 = (java.net.URISyntaxException) (Object) decompiledCaughtException;
           return ((wf) this).a(96);
         }
-        boolean discarded$3 = var3.addAll((Collection) (Object) var4);
+        boolean discarded$4 = var3.addAll((Collection) (Object) var4);
         var6_array = var3.toArray();
         var7 = null;
         var8_array = var6_array;
@@ -428,7 +428,8 @@ final class wf extends tl {
             var11 = (java.net.Proxy) var10;
             try {
               L7: {
-                var12_ref2 = this.a(var11, (byte) -123);
+                int discarded$5 = -123;
+                var12_ref2 = this.a(var11);
                 if (var12_ref2 != null) {
                   stackOut_22_0 = (java.net.Socket) var12_ref2;
                   stackIn_23_0 = stackOut_22_0;
@@ -471,7 +472,7 @@ final class wf extends tl {
         ((wf) this).field_g = java.net.ProxySelector.getDefault();
     }
 
-    private final java.net.Socket a(java.net.Proxy param0, byte param1) throws IOException {
+    private final java.net.Socket a(java.net.Proxy param0) throws IOException {
         RuntimeException var3 = null;
         java.net.SocketAddress var3_ref = null;
         Object var4 = null;
@@ -569,7 +570,8 @@ final class wf extends tl {
                       break L3;
                     }
                   }
-                  stackOut_19_0 = this.a(var4_ref.getHostName(), var4_ref.getPort(), (String) var5, -38);
+                  int discarded$1 = -38;
+                  stackOut_19_0 = this.a(var4_ref.getHostName(), var4_ref.getPort(), (String) var5);
                   stackIn_20_0 = stackOut_19_0;
                   return stackIn_20_0;
                 }

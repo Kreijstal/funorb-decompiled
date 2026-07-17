@@ -12,7 +12,7 @@ final class bf extends al {
     static int[] field_j;
     static tg field_o;
 
-    public static void d(int param0) {
+    public static void d() {
         field_j = null;
         field_o = null;
         field_p = null;
@@ -174,7 +174,8 @@ final class bf extends al {
               if (!hc.b(var5, param1 ^ -114)) {
                 if (!nd.a(var5, param1 + 183)) {
                   if (param1 == -114) {
-                    if (!ab.a(var5, (byte) -12)) {
+                    int discarded$13 = -12;
+                    if (!ab.a(var5)) {
                       if (this.a(param1 ^ 65, param0)) {
                         stackOut_17_0 = bd.field_m;
                         stackIn_18_0 = stackOut_17_0;
@@ -187,7 +188,8 @@ final class bf extends al {
                               stackIn_28_0 = stackOut_27_0;
                               return stackIn_28_0;
                             } else {
-                              if (!ah.a(var5, var6, (byte) 8)) {
+                              int discarded$14 = 8;
+                              if (!ah.a(var5, var6)) {
                                 stackOut_32_0 = ve.field_b;
                                 stackIn_33_0 = stackOut_32_0;
                                 break L0;

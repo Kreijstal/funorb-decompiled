@@ -53,7 +53,7 @@ final class rq extends br {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_q = null;
         field_g = null;
         field_u = null;
@@ -63,7 +63,7 @@ final class rq extends br {
         field_l = null;
     }
 
-    private final int d(int param0) {
+    private final int d() {
         return -9 + hp.a((byte) 112, g.field_a, 18);
     }
 
@@ -88,7 +88,8 @@ final class rq extends br {
         int fieldTemp$1 = ((rq) this).field_p + 1;
         ((rq) this).field_p = ((rq) this).field_p + 1;
         if (fieldTemp$1 >= 8) {
-            this.c(12);
+            int discarded$2 = 12;
+            this.c();
         }
     }
 
@@ -171,7 +172,7 @@ final class rq extends br {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -363,7 +364,7 @@ final class rq extends br {
         }
     }
 
-    final static void a(ja[] param0, int param1) {
+    final static void a(ja[] param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         String var3 = null;
@@ -460,20 +461,25 @@ final class rq extends br {
         }
     }
 
-    private final void c(int param0) {
-        ((rq) this).field_j = 12 + (((rq) this).field_s * 24 - -this.d(-30019));
-        ((rq) this).field_i = ((rq) this).field_m * 24 + 12 + this.d(-30019);
+    private final void c() {
+        int discarded$0 = -30019;
+        ((rq) this).field_j = 12 + (((rq) this).field_s * 24 - -this.d());
+        int discarded$1 = -30019;
+        ((rq) this).field_i = ((rq) this).field_m * 24 + 12 + this.d();
         ((rq) this).field_p = -hp.a((byte) 39, g.field_a, 50);
     }
 
     rq(int param0, int param1, int param2) {
         ((rq) this).field_s = param0;
         ((rq) this).field_m = param1;
-        this.c(12);
+        int discarded$0 = 12;
+        this.c();
         ((rq) this).field_o = 25 + hp.a((byte) 37, g.field_a, 10) >> 2;
         ((rq) this).field_t = 0;
-        ((rq) this).field_k = 12 + 24 * ((rq) this).field_s + this.d(-30019);
-        ((rq) this).field_f = 12 + (((rq) this).field_m * 24 - -this.d(-30019));
+        int discarded$1 = -30019;
+        ((rq) this).field_k = 12 + 24 * ((rq) this).field_s + this.d();
+        int discarded$2 = -30019;
+        ((rq) this).field_f = 12 + (((rq) this).field_m * 24 - -this.d());
         ((rq) this).field_w = param2 + hp.a((byte) 58, g.field_a, 10);
         ((rq) this).field_p = 0;
         ((rq) this).field_h = hp.a((byte) -110, g.field_a, 1);

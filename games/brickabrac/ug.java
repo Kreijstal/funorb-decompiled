@@ -99,7 +99,7 @@ abstract class ug extends ib implements je {
 
     abstract int i(int param0);
 
-    public static void h(int param0) {
+    public static void h() {
         field_J = null;
         field_K = null;
     }

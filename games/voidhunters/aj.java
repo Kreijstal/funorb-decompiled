@@ -138,7 +138,8 @@ final class aj extends rqa {
                     if (param2 != 10) {
                       break L4;
                     } else {
-                      qob.a(92);
+                      int discarded$2 = 92;
+                      qob.a();
                       var3_int = 0;
                       break L4;
                     }

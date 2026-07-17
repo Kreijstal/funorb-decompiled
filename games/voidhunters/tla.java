@@ -87,37 +87,8 @@ final class tla extends aja {
 
     private final void a(boolean param0, int param1) {
         int var4 = 0;
-        qfa stackIn_11_0 = null;
-        float stackIn_11_1 = 0.0f;
-        float stackIn_11_2 = 0.0f;
-        qfa stackIn_12_0 = null;
-        float stackIn_12_1 = 0.0f;
-        float stackIn_12_2 = 0.0f;
-        qfa stackIn_13_0 = null;
-        float stackIn_13_1 = 0.0f;
-        float stackIn_13_2 = 0.0f;
-        int stackIn_13_3 = 0;
-        qfa stackOut_10_0 = null;
-        float stackOut_10_1 = 0.0f;
-        float stackOut_10_2 = 0.0f;
-        qfa stackOut_12_0 = null;
-        float stackOut_12_1 = 0.0f;
-        float stackOut_12_2 = 0.0f;
-        int stackOut_12_3 = 0;
-        qfa stackOut_11_0 = null;
-        float stackOut_11_1 = 0.0f;
-        float stackOut_11_2 = 0.0f;
-        int stackOut_11_3 = 0;
         L0: {
           var4 = VoidHunters.field_G;
-          if (param0) {
-            break L0;
-          } else {
-            ((tla) this).b(10, 76, -118, 126, -96, -43, 86);
-            break L0;
-          }
-        }
-        L1: {
           ((tla) this).field_g.h(33984, 1);
           ((tla) this).field_g.a(55, (pib) (Object) ((tla) this).field_f);
           ((tla) this).field_g.b(((tla) this).field_g.j(param1, 25887), 7681, false);
@@ -128,55 +99,23 @@ final class tla extends aja {
           ((tla) this).field_g.b(34479, 7681, false);
           ((tla) this).field_g.c(1, 34192, 768, 34166);
           if (((tla) this).field_j == 0) {
-            L2: {
-              stackOut_10_0 = ((tla) this).field_g;
-              stackOut_10_1 = 0.0f;
-              stackOut_10_2 = 0.5f;
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
-              stackIn_11_0 = stackOut_10_0;
-              stackIn_11_1 = stackOut_10_1;
-              stackIn_11_2 = stackOut_10_2;
-              if (param0) {
-                stackOut_12_0 = (qfa) (Object) stackIn_12_0;
-                stackOut_12_1 = stackIn_12_1;
-                stackOut_12_2 = stackIn_12_2;
-                stackOut_12_3 = 0;
-                stackIn_13_0 = stackOut_12_0;
-                stackIn_13_1 = stackOut_12_1;
-                stackIn_13_2 = stackOut_12_2;
-                stackIn_13_3 = stackOut_12_3;
-                break L2;
-              } else {
-                stackOut_11_0 = (qfa) (Object) stackIn_11_0;
-                stackOut_11_1 = stackIn_11_1;
-                stackOut_11_2 = stackIn_11_2;
-                stackOut_11_3 = 1;
-                stackIn_13_0 = stackOut_11_0;
-                stackIn_13_1 = stackOut_11_1;
-                stackIn_13_2 = stackOut_11_2;
-                stackIn_13_3 = stackOut_11_3;
-                break L2;
-              }
-            }
-            ((qfa) (Object) stackIn_13_0).a(stackIn_13_1, stackIn_13_2, stackIn_13_3 != 0, 0.5f, 1.0f);
-            break L1;
+            ((tla) this).field_g.a(0.0f, 0.5f, false, 0.5f, 1.0f);
+            break L0;
           } else {
             if (((tla) this).field_j == 1) {
               ((tla) this).field_g.a(0.0f, 1.0f, false, 0.5f, 0.5f);
-              break L1;
+              break L0;
             } else {
               if (((tla) this).field_j != 2) {
                 if (((tla) this).field_j == 3) {
                   ((tla) this).field_g.a(0.0f, 128.5f, false, 128.5f, 128.5f);
-                  break L1;
+                  break L0;
                 } else {
-                  break L1;
+                  break L0;
                 }
               } else {
                 ((tla) this).field_g.a(0.0f, 0.5f, false, 1.0f, 0.5f);
-                break L1;
+                break L0;
               }
             }
           }
@@ -704,7 +643,9 @@ final class tla extends aja {
         ((tla) this).field_l = false;
         try {
             ((tla) this).field_g = param0;
-            ((tla) this).field_f = uw.a(param0, param4, param5, param2, param3, param1, false, (byte) 60);
+            int discarded$0 = 60;
+            int discarded$1 = 0;
+            ((tla) this).field_f = uw.a(param0, param4, param5, param2, param3, param1);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "tla.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 41);
         }

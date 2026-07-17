@@ -219,7 +219,7 @@ class mi extends ea {
         return stackIn_7_0 != 0;
     }
 
-    final static boolean a(int param0, CharSequence param1, boolean param2) {
+    final static boolean a(int param0, CharSequence param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -248,18 +248,14 @@ class mi extends ea {
         var4 = AceOfSkies.field_G ? 1 : 0;
         try {
           L0: {
-            if (ou.a(19069, param1, false)) {
+            int discarded$6 = 0;
+            if (ou.a(19069, param1)) {
               var3_int = 0;
               L1: while (true) {
                 if (var3_int >= param1.length()) {
-                  if (param0 <= -31) {
-                    stackOut_12_0 = 1;
-                    stackIn_13_0 = stackOut_12_0;
-                    break L0;
-                  } else {
-                    field_r = null;
-                    return true;
-                  }
+                  stackOut_12_0 = 1;
+                  stackIn_13_0 = stackOut_12_0;
+                  break L0;
                 } else {
                   if (cg.a(param1.charAt(var3_int), (byte) 117)) {
                     var3_int++;
@@ -282,7 +278,7 @@ class mi extends ea {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var3;
-            stackOut_14_1 = new StringBuilder().append("mi.CA(").append(param0).append(44);
+            stackOut_14_1 = new StringBuilder().append("mi.CA(").append(-120).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -526,7 +522,7 @@ class mi extends ea {
         }
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_r = null;
     }
 

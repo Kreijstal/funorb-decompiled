@@ -6,7 +6,7 @@ final class ua extends hl {
     static bk field_G;
     static java.awt.Image field_F;
 
-    public static void a(int param0) {
+    public static void a() {
         int var1 = 40;
         field_G = null;
         field_F = null;

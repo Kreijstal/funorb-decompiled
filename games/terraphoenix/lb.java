@@ -9,7 +9,7 @@ final class lb {
     static int field_b;
     static String[] field_c;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         field_e = null;
@@ -99,7 +99,7 @@ final class lb {
         return stackIn_8_0;
     }
 
-    final static void a(String param0, java.applet.Applet param1, int param2) {
+    final static void a(String param0, java.applet.Applet param1) {
         try {
             String var3 = null;
             String var4 = null;
@@ -110,15 +110,16 @@ final class lb {
                     var3 = param1.getParameter("cookieprefix");
                     var4 = param1.getParameter("cookiehost");
                     var5 = var3 + "session=" + param0 + "; version=1; path=/; domain=" + var4;
-                    if (!(~param0.length() != param2)) {
+                    if (!(param0.length() != 0)) {
                         var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
                     }
                     cd.a(param1, 13162, "document.cookie=\"" + var5 + "\"");
                 } catch (Throwable throwable) {
                 }
-                dh.a(param1, true);
+                int discarded$0 = 1;
+                dh.a(param1);
             } catch (RuntimeException runtimeException) {
-                throw qk.a((Throwable) (Object) runtimeException, "lb.A(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+                throw qk.a((Throwable) (Object) runtimeException, "lb.A(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + -1 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

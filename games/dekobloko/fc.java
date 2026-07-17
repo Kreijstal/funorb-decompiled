@@ -14,25 +14,15 @@ final class fc {
     static int field_e;
 
     final static void a(int param0, byte param1, boolean param2, int param3) {
-        Object var5 = null;
         L0: {
           fl.a(param0 - -20, 256, 16777215, ug.field_n, param3 - -4, (mm) (Object) w.field_kb);
           param0 += 26;
           fl.a(12 + param0, 256, 16777215, vk.field_b[0], 4 + param3, (mm) (Object) se.field_S);
           ph.field_yb[0].c(122 + param3, param0);
           param0 += 16;
-          fl.a(12 + param0, param1 ^ 261, 16777215, vk.field_b[1], param3 - -4, (mm) (Object) se.field_S);
+          fl.a(12 + param0, 256, 16777215, vk.field_b[1], param3 - -4, (mm) (Object) se.field_S);
           ph.field_yb[1].c(param3 + 122, param0);
           param0 += 23;
-          if (param1 == 5) {
-            break L0;
-          } else {
-            var5 = null;
-            boolean discarded$1 = fc.a((byte) 7, (String) null);
-            break L0;
-          }
-        }
-        L1: {
           fl.a(12 + param0, 256, 16777215, vk.field_b[2], 4 + param3, (mm) (Object) se.field_S);
           ph.field_yb[3].c(122 + param3, param0);
           param0 += 16;
@@ -47,9 +37,9 @@ final class fc {
           if (param2) {
             fl.a(12 + param0, 256, 16777215, vk.field_b[6], 4 + param3, (mm) (Object) se.field_S);
             ph.field_yb[6].c(param3 + 122, param0);
-            break L1;
+            break L0;
           } else {
-            break L1;
+            break L0;
           }
         }
     }
@@ -58,11 +48,10 @@ final class fc {
         if (ea.d((byte) 80)) {
             param1 = false;
         }
-        cg.b(param1, 1);
-        ub.a((byte) 54);
-        if (param0 != 5) {
-            field_g = null;
-        }
+        int discarded$0 = 1;
+        cg.b(param1);
+        int discarded$1 = 54;
+        ub.a();
     }
 
     public static void a(int param0) {
@@ -73,7 +62,7 @@ final class fc {
         field_b = null;
     }
 
-    final static ck[] a(int param0, ck param1, int param2) {
+    final static ck[] a(int param0, ck param1) {
         RuntimeException var3 = null;
         ck[] var3_array = null;
         int[] var4 = null;
@@ -110,13 +99,13 @@ final class fc {
         var16 = client.field_A ? 1 : 0;
         try {
           L0: {
-            var3_array = new ck[param0];
+            var3_array = new ck[31];
             var4 = param1.field_D;
-            var5 = param1.field_K / param0;
+            var5 = param1.field_K / 31;
             var6 = param1.field_I - var5;
             var7 = 0;
             L1: while (true) {
-              if (var7 >= param0) {
+              if (var7 >= 31) {
                 stackOut_12_0 = (ck[]) var3_array;
                 stackIn_13_0 = stackOut_12_0;
                 break L0;
@@ -161,7 +150,7 @@ final class fc {
           L4: {
             var3 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var3;
-            stackOut_14_1 = new StringBuilder().append("fc.B(").append(param0).append(44);
+            stackOut_14_1 = new StringBuilder().append("fc.B(").append(31).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;
@@ -198,7 +187,6 @@ final class fc {
         int stackIn_4_0 = 0;
         int stackIn_8_0 = 0;
         int stackIn_13_0 = 0;
-        int stackIn_17_0 = 0;
         int stackIn_19_0 = 0;
         int stackIn_21_0 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -212,7 +200,6 @@ final class fc {
         int stackOut_3_0 = 0;
         int stackOut_7_0 = 0;
         int stackOut_18_0 = 0;
-        int stackOut_16_0 = 0;
         int stackOut_12_0 = 0;
         int stackOut_20_0 = 0;
         RuntimeException stackOut_22_0 = null;
@@ -248,16 +235,10 @@ final class fc {
               var3 = 0;
               L1: while (true) {
                 if (var3 >= param1.length()) {
-                  Process discarded$11 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param1 + "\"");
-                  if (param0 == -19) {
-                    stackOut_18_0 = 1;
-                    stackIn_19_0 = stackOut_18_0;
-                    return stackIn_19_0 != 0;
-                  } else {
-                    stackOut_16_0 = 0;
-                    stackIn_17_0 = stackOut_16_0;
-                    return stackIn_17_0 != 0;
-                  }
+                  Process discarded$2 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param1 + "\"");
+                  stackOut_18_0 = 1;
+                  stackIn_19_0 = stackOut_18_0;
+                  return stackIn_19_0 != 0;
                 } else {
                   if (var2.indexOf((int) param1.charAt(var3)) != -1) {
                     var3++;
@@ -282,7 +263,7 @@ final class fc {
           L2: {
             var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var2_ref2;
-            stackOut_22_1 = new StringBuilder().append("fc.F(").append(param0).append(44);
+            stackOut_22_1 = new StringBuilder().append("fc.F(").append(-19).append(44);
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -309,7 +290,7 @@ final class fc {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         try {
             int var1_int = 0;
             RuntimeException var1 = null;

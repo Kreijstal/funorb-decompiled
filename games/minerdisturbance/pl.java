@@ -579,7 +579,7 @@ final class pl {
         }
     }
 
-    final static int b(byte param0) {
+    final static int b() {
         return (int)(1000000000L / rj.field_c);
     }
 

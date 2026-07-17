@@ -244,7 +244,8 @@ final class wg {
                         break L2;
                       }
                     }
-                    mb.a("document.cookie=\"" + var7 + "\"", param2, 790);
+                    int discarded$2 = 790;
+                    mb.a("document.cookie=\"" + var7 + "\"", param2);
                     break L1;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -257,7 +258,7 @@ final class wg {
                 if (param0 >= 82) {
                   break L0;
                 } else {
-                  int discarded$1 = wg.a(true, -125);
+                  int discarded$3 = wg.a(true, -125);
                   return;
                 }
               }

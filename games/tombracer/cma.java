@@ -9,7 +9,7 @@ final class cma extends ci {
     static int field_m;
     private int field_n;
 
-    final static su[] c(int param0) {
+    final static su[] c() {
         int var1 = 2;
         return new su[]{uk.field_M, ula.field_v, csa.field_y, ll.field_d, sga.field_n, bi.field_d, dp.field_g, wc.field_e, vna.field_a, wsa.field_v, al.field_f, kea.field_c, lfa.field_o, oc.field_H};
     }

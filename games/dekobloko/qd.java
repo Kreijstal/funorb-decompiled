@@ -14,143 +14,72 @@ final class qd extends w {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        if (param1 == 9328) {
-          L0: {
-            var4 = -param0;
-            if (null == ((qd) this).field_Sb) {
-              break L0;
-            } else {
-              var4 = ((qd) this).field_Sb.a(true);
-              break L0;
-            }
-          }
-          L1: {
-            var5 = -param0;
-            if (null != ((qd) this).field_Tb) {
-              var5 = ((qd) this).field_Tb.a((byte) 84, -var4 + -param2 + ((qd) this).field_mb - (param0 + param2));
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          L2: {
-            var6 = param2 + (var5 + param0) + (param2 - -var4);
-            if (var6 <= ((qd) this).field_mb) {
-              break L2;
-            } else {
-              var5 = var5 + (((qd) this).field_mb + -var6);
-              var6 = ((qd) this).field_mb;
-              break L2;
-            }
-          }
-          L3: {
-            if (((qd) this).field_X == 1) {
-              param2 = param2 + (-var6 + ((qd) this).field_mb) / 2;
-              break L3;
-            } else {
-              break L3;
-            }
-          }
-          L4: {
-            if (((qd) this).field_X != 2) {
-              break L4;
-            } else {
-              param2 = param2 + (-var6 + ((qd) this).field_mb);
-              break L4;
-            }
-          }
-          L5: {
-            if (((qd) this).field_Sb != null) {
-              ((qd) this).field_Sb.a(var4, 0, 0, ((qd) this).field_N, param2);
-              ((qd) this).field_Sb.field_W = ((qd) this).field_W;
-              break L5;
-            } else {
-              break L5;
-            }
-          }
-          if (null != ((qd) this).field_Tb) {
-            ((qd) this).field_Tb.a(var5, 0, 0, ((qd) this).field_N, param2 - (-var4 - param0));
-            if (((qd) this).field_Sb != null) {
-              ((qd) this).field_Tb.field_X = 0;
-              ((qd) this).field_Tb.field_W = ((qd) this).field_W;
-              return;
-            } else {
-              ((qd) this).field_Tb.field_X = ((qd) this).field_X;
-              ((qd) this).field_Tb.field_W = ((qd) this).field_W;
-              return;
-            }
+        L0: {
+          var4 = -param0;
+          if (null == ((qd) this).field_Sb) {
+            break L0;
           } else {
+            var4 = ((qd) this).field_Sb.a(true);
+            break L0;
+          }
+        }
+        L1: {
+          var5 = -param0;
+          if (null != ((qd) this).field_Tb) {
+            var5 = ((qd) this).field_Tb.a((byte) 84, -var4 + -param2 + ((qd) this).field_mb - (param0 + param2));
+            break L1;
+          } else {
+            break L1;
+          }
+        }
+        L2: {
+          var6 = param2 + (var5 + param0) + (param2 - -var4);
+          if (var6 <= ((qd) this).field_mb) {
+            break L2;
+          } else {
+            var5 = var5 + (((qd) this).field_mb + -var6);
+            var6 = ((qd) this).field_mb;
+            break L2;
+          }
+        }
+        L3: {
+          if (((qd) this).field_X == 1) {
+            param2 = param2 + (-var6 + ((qd) this).field_mb) / 2;
+            break L3;
+          } else {
+            break L3;
+          }
+        }
+        L4: {
+          if (((qd) this).field_X != 2) {
+            break L4;
+          } else {
+            param2 = param2 + (-var6 + ((qd) this).field_mb);
+            break L4;
+          }
+        }
+        L5: {
+          if (((qd) this).field_Sb != null) {
+            ((qd) this).field_Sb.a(var4, 0, 0, ((qd) this).field_N, param2);
+            ((qd) this).field_Sb.field_W = ((qd) this).field_W;
+            break L5;
+          } else {
+            break L5;
+          }
+        }
+        if (null != ((qd) this).field_Tb) {
+          ((qd) this).field_Tb.a(var5, 0, 0, ((qd) this).field_N, param2 - (-var4 - param0));
+          if (((qd) this).field_Sb != null) {
+            ((qd) this).field_Tb.field_X = 0;
+            ((qd) this).field_Tb.field_W = ((qd) this).field_W;
+            return;
+          } else {
+            ((qd) this).field_Tb.field_X = ((qd) this).field_X;
+            ((qd) this).field_Tb.field_W = ((qd) this).field_W;
             return;
           }
         } else {
-          L6: {
-            field_Pb = null;
-            var4 = -param0;
-            if (null == ((qd) this).field_Sb) {
-              break L6;
-            } else {
-              var4 = ((qd) this).field_Sb.a(true);
-              break L6;
-            }
-          }
-          L7: {
-            var5 = -param0;
-            if (null != ((qd) this).field_Tb) {
-              var5 = ((qd) this).field_Tb.a((byte) 84, -var4 + -param2 + ((qd) this).field_mb - (param0 + param2));
-              break L7;
-            } else {
-              break L7;
-            }
-          }
-          L8: {
-            var6 = param2 + (var5 + param0) + (param2 - -var4);
-            if (var6 <= ((qd) this).field_mb) {
-              break L8;
-            } else {
-              var5 = var5 + (((qd) this).field_mb + -var6);
-              var6 = ((qd) this).field_mb;
-              break L8;
-            }
-          }
-          L9: {
-            if (((qd) this).field_X == 1) {
-              param2 = param2 + (-var6 + ((qd) this).field_mb) / 2;
-              break L9;
-            } else {
-              break L9;
-            }
-          }
-          L10: {
-            if (((qd) this).field_X != 2) {
-              break L10;
-            } else {
-              param2 = param2 + (-var6 + ((qd) this).field_mb);
-              break L10;
-            }
-          }
-          L11: {
-            if (((qd) this).field_Sb != null) {
-              ((qd) this).field_Sb.a(var4, 0, 0, ((qd) this).field_N, param2);
-              ((qd) this).field_Sb.field_W = ((qd) this).field_W;
-              break L11;
-            } else {
-              break L11;
-            }
-          }
-          if (null != ((qd) this).field_Tb) {
-            ((qd) this).field_Tb.a(var5, 0, 0, ((qd) this).field_N, param2 - (-var4 - param0));
-            if (((qd) this).field_Sb != null) {
-              ((qd) this).field_Tb.field_X = 0;
-              ((qd) this).field_Tb.field_W = ((qd) this).field_W;
-              return;
-            } else {
-              ((qd) this).field_Tb.field_X = ((qd) this).field_X;
-              ((qd) this).field_Tb.field_W = ((qd) this).field_W;
-              return;
-            }
-          } else {
-            return;
-          }
+          return;
         }
     }
 
@@ -210,7 +139,7 @@ final class qd extends w {
         }
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_Pb = null;
     }
 

@@ -272,7 +272,7 @@ final class pob extends rna implements ntb {
         return (ucb) (Object) stackIn_3_0;
     }
 
-    final static int b(int param0) {
+    final static int b() {
         int var1 = 61;
         return iua.field_p;
     }

@@ -26,7 +26,7 @@ final class dd extends ql {
         return dl.field_m;
     }
 
-    final static void g(int param0) {
+    final static void g() {
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
@@ -1678,10 +1678,10 @@ final class dd extends ql {
             break L40;
           }
         }
-        var1_int = -98 / ((param0 - -81) / 35);
+        var1_int = 98;
     }
 
-    final static in c(boolean param0) {
+    final static in c() {
         return (in) (Object) new lg();
     }
 
@@ -1717,7 +1717,7 @@ final class dd extends ql {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_i = null;
         field_o = null;
         field_j = null;

@@ -13,7 +13,7 @@ final class mb {
         int var5 = 0;
         var5 = BachelorFridge.field_y;
         var3 = ((mb) this).field_d.length;
-        var4 = 103 % ((41 - param0) / 45);
+        var4 = 0;
         L0: while (true) {
           if (var3 > param1) {
             return var3;
@@ -120,17 +120,10 @@ final class mb {
     }
 
     private final void a(int param0, int param1) {
-        int[] var3 = null;
-        int[] var4 = null;
-        var4 = new int[this.b(param0 ^ 118, param1)];
-        var3 = var4;
+        int[] var4 = new int[this.b(119, param1)];
+        int[] var3 = var4;
         bl.a(((mb) this).field_d, 0, var4, 0, ((mb) this).field_d.length);
-        if (param0 != 1) {
-          return;
-        } else {
-          ((mb) this).field_d = var4;
-          return;
-        }
+        ((mb) this).field_d = var4;
     }
 
     final int a(byte param0) {

@@ -129,7 +129,7 @@ final class fm implements cg {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var2 = 0;
         b var3 = null;
@@ -240,7 +240,8 @@ final class fm implements cg {
                             }
                           } else {
                             L10: {
-                              qg.a((od) (Object) var15, (byte) 104);
+                              int discarded$2 = 104;
+                              qg.a((od) (Object) var15);
                               if (var6_int != 0) {
                                 ai.a(ah.field_K, (byte) -62, j.field_e, var6_int, d.field_b, oh.field_d);
                                 break L10;
@@ -267,7 +268,8 @@ final class fm implements cg {
                 var3.a(-16175);
                 break L0;
               } else {
-                eg.a((byte) 126);
+                int discarded$3 = 126;
+                eg.a();
                 return;
               }
             }

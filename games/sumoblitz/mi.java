@@ -11,25 +11,17 @@ final class mi {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_7_0 = 0;
+        int stackIn_5_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_6_0 = 0;
+        int stackOut_4_0 = 0;
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
           L0: {
             var3_int = 0;
             L1: while (true) {
               if (0 >= param2) {
-                L2: {
-                  if (param0 == 72) {
-                    break L2;
-                  } else {
-                    field_a = 103;
-                    break L2;
-                  }
-                }
-                stackOut_6_0 = var3_int;
-                stackIn_7_0 = stackOut_6_0;
+                stackOut_4_0 = var3_int;
+                stackIn_5_0 = stackOut_4_0;
                 break L0;
               } else {
                 var3_int = var3_int << 1 | param1 & 1;
@@ -42,16 +34,16 @@ final class mi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qo.a((Throwable) (Object) var3, "mi.B(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw qo.a((Throwable) (Object) var3, "mi.B(" + 72 + 44 + param1 + 44 + param2 + 41);
         }
-        return stackIn_7_0;
+        return stackIn_5_0;
     }
 
     public final String toString() {
         throw new IllegalStateException();
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_b = null;
     }
 

@@ -12,13 +12,13 @@ final class pq {
           return;
         } else {
           L0: {
-            if (field_b <= param0) {
+            if (field_b <= 0) {
               param1.w(false);
               break L0;
             } else {
               var2 = new naa();
               var2.field_d = param1;
-              field_a.b(param0 + -10258, (ksa) (Object) var2);
+              field_a.b(-10258, (ksa) (Object) var2);
               break L0;
             }
           }
@@ -26,7 +26,7 @@ final class pq {
         }
     }
 
-    final synchronized static void b(byte param0) {
+    final synchronized static void b() {
         field_b = field_b + 1;
     }
 
@@ -35,10 +35,11 @@ final class pq {
         if (0 != field_b) {
             return;
         }
-        pq.a((byte) -128);
+        int discarded$0 = -128;
+        pq.a();
     }
 
-    final synchronized static void a(byte param0) {
+    final synchronized static void a() {
         naa var1 = null;
         L0: while (true) {
           var1 = (naa) (Object) field_a.a(true);

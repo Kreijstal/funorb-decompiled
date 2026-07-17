@@ -42,7 +42,7 @@ class ap {
         tn var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_h) {
             break L0;
           } else {
@@ -52,7 +52,7 @@ class ap {
         }
         L1: {
           ps.a(param0, 0, var3);
-          ((ap) this).field_a = ((ap) this).field_a - 256;
+          ((ap) this).field_a = ((ap) this).field_a - param1;
           if (((ap) this).field_k == null) {
             break L1;
           } else {
@@ -219,7 +219,7 @@ class ap {
           if (((ap) this).field_k == null) {
             break L17;
           } else {
-            ((ap) this).field_k.b(param0, 0, 256);
+            ((ap) this).field_k.b(param0, 0, param1);
             break L17;
           }
         }
@@ -227,12 +227,12 @@ class ap {
     }
 
     private final void b(int param0) {
-        ((ap) this).field_a = ((ap) this).field_a - 256;
+        ((ap) this).field_a = ((ap) this).field_a - param0;
         if (((ap) this).field_a < 0) {
             ((ap) this).field_a = 0;
         }
         if (((ap) this).field_k != null) {
-            ((ap) this).field_k.a(256);
+            ((ap) this).field_k.a(param0);
             return;
         }
     }
@@ -628,27 +628,13 @@ class ap {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         L0: {
           if (param0 < 8000) {
             break L0;
           } else {
             if (param0 <= 48000) {
-              L1: {
-                field_j = param0;
-                if (!param1) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              field_h = stackIn_7_0 != 0;
+              field_j = param0;
+              field_h = true;
               field_t = 10;
               return;
             } else {

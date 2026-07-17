@@ -13,8 +13,6 @@ final class usb extends oda {
     private final void a(int param0, byte param1, int param2) {
         int var4 = 0;
         shb[] var5 = null;
-        shb[] var6 = null;
-        shb[] var7 = null;
         int stackIn_3_0 = 0;
         int stackOut_2_0 = 0;
         int stackOut_1_0 = 0;
@@ -30,21 +28,15 @@ final class usb extends oda {
           }
         }
         var4 = stackIn_3_0;
-        if (param1 == -83) {
-          var7 = new shb[var4 * param0];
-          var5 = var7;
-          if (null != ((usb) this).field_u) {
-            if (0 < ((usb) this).field_u.length) {
-              if (var7.length > 0) {
-                if (param2 <= 0) {
-                  ((usb) this).field_u = var5;
-                  return;
-                } else {
-                  cua.a((Object[]) (Object) ((usb) this).field_u, 0, (Object[]) (Object) var5, 0, Math.min(param2, param0) * var4);
-                  ((usb) this).field_u = var5;
-                  return;
-                }
+        var5 = new shb[var4 * param0];
+        if (null != ((usb) this).field_u) {
+          if (0 < ((usb) this).field_u.length) {
+            if (var5.length > 0) {
+              if (param2 <= 0) {
+                ((usb) this).field_u = var5;
+                return;
               } else {
+                cua.a((Object[]) (Object) ((usb) this).field_u, 0, (Object[]) (Object) var5, 0, Math.min(param2, param0) * var4);
                 ((usb) this).field_u = var5;
                 return;
               }
@@ -57,32 +49,8 @@ final class usb extends oda {
             return;
           }
         } else {
-          ((usb) this).field_z = 55;
-          var6 = new shb[var4 * param0];
-          var5 = var6;
-          if (null != ((usb) this).field_u) {
-            if (0 < ((usb) this).field_u.length) {
-              if (var6.length > 0) {
-                if (param2 <= 0) {
-                  ((usb) this).field_u = var5;
-                  return;
-                } else {
-                  cua.a((Object[]) (Object) ((usb) this).field_u, 0, (Object[]) (Object) var5, 0, Math.min(param2, param0) * var4);
-                  ((usb) this).field_u = var5;
-                  return;
-                }
-              } else {
-                ((usb) this).field_u = var5;
-                return;
-              }
-            } else {
-              ((usb) this).field_u = var5;
-              return;
-            }
-          } else {
-            ((usb) this).field_u = var5;
-            return;
-          }
+          ((usb) this).field_u = var5;
+          return;
         }
     }
 
@@ -91,8 +59,6 @@ final class usb extends oda {
         int[] var5 = null;
         int var6 = 0;
         int var7 = 0;
-        int[] var8 = null;
-        int[] var9 = null;
         int stackIn_3_0 = 0;
         int stackOut_2_0 = 0;
         int stackOut_1_0 = 0;
@@ -109,65 +75,37 @@ final class usb extends oda {
           }
         }
         var4 = stackIn_3_0;
-        var9 = new int[var4 * param0];
-        var8 = var9;
-        var5 = var8;
+        var5 = new int[var4 * param0];
         if (null != ((usb) this).field_v) {
           if (((usb) this).field_v.length > 0) {
-            var9 = var8;
-            if (var9.length > 0) {
+            if (var5.length > 0) {
               if (param2 > 0) {
                 var6 = 0;
                 L1: while (true) {
-                  if (var4 <= var6) {
-                    ((usb) this).field_v = var5;
-                    if (param1 >= -49) {
-                      ((usb) this).field_w = -51;
-                      return;
-                    } else {
-                      return;
-                    }
-                  } else {
+                  if (var4 > var6) {
                     cua.a(((usb) this).field_v, param2 * var6, var5, param0 * var6, Math.min(param2, param0));
                     var6++;
                     continue L1;
+                  } else {
+                    ((usb) this).field_v = var5;
+                    return;
                   }
                 }
               } else {
                 ((usb) this).field_v = var5;
-                if (param1 >= -49) {
-                  ((usb) this).field_w = -51;
-                  return;
-                } else {
-                  return;
-                }
+                return;
               }
             } else {
               ((usb) this).field_v = var5;
-              if (param1 >= -49) {
-                ((usb) this).field_w = -51;
-                return;
-              } else {
-                return;
-              }
+              return;
             }
           } else {
             ((usb) this).field_v = var5;
-            if (param1 >= -49) {
-              ((usb) this).field_w = -51;
-              return;
-            } else {
-              return;
-            }
+            return;
           }
         } else {
           ((usb) this).field_v = var5;
-          if (param1 >= -49) {
-            ((usb) this).field_w = -51;
-            return;
-          } else {
-            return;
-          }
+          return;
         }
     }
 
@@ -272,7 +210,7 @@ final class usb extends oda {
         int var8 = 0;
         int var9 = VoidHunters.field_G;
         try {
-            int var3_int = 9 % ((-48 - param0) / 36);
+            int var3_int = 0;
             var4 = ((usb) this).field_A == null ? 0 : ((usb) this).field_A.length;
             var5 = param1.length;
             ((usb) this).field_A = param1;
@@ -287,7 +225,7 @@ final class usb extends oda {
             this.a(var5, (byte) -83, var4);
             this.b(var5, (byte) -100, var4);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "usb.I(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "usb.I(" + -115 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -326,7 +264,7 @@ final class usb extends oda {
         }
         var4 = stackIn_3_0;
         var5 = new int[var4 * param0];
-        var6 = -71 % ((-51 - param1) / 35);
+        var6 = 0;
         if (null != ((usb) this).field_v) {
           if (((usb) this).field_v.length > 0) {
             if (var5.length > 0) {
@@ -432,16 +370,16 @@ final class usb extends oda {
             ((usb) this).field_y = param1;
             var5 = param1;
             var6 = 0;
-            var7 = param0;
+            var7 = 0;
             while (var5.length > var6) {
                 var7 = var7 + var5[var6];
                 var5[var6] = var7 + var5[var6];
                 var6++;
             }
             this.c(var3_int, (byte) -86, var4);
-            this.b(var4, param0 + -70, var3_int);
+            this.b(var4, -70, var3_int);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "usb.M(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "usb.M(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -916,8 +854,8 @@ final class usb extends oda {
         var4 = stackIn_3_0;
         var5 = new shb[param2 * var4];
         if (null != ((usb) this).field_u) {
-          if (((usb) this).field_u.length > 0) {
-            if (var5.length > 0) {
+          if (((usb) this).field_u.length < -1) {
+            if (-1 < var5.length) {
               if (param0 > 0) {
                 var6 = 0;
                 L1: while (true) {
@@ -927,28 +865,28 @@ final class usb extends oda {
                     continue L1;
                   } else {
                     ((usb) this).field_u = var5;
-                    var6 = -67 % ((param1 - 32) / 58);
+                    var6 = -1;
                     return;
                   }
                 }
               } else {
                 ((usb) this).field_u = var5;
-                var6 = -67 % ((param1 - 32) / 58);
+                var6 = -1;
                 return;
               }
             } else {
               ((usb) this).field_u = var5;
-              var6 = -67 % ((param1 - 32) / 58);
+              var6 = -1;
               return;
             }
           } else {
             ((usb) this).field_u = var5;
-            var6 = -67 % ((param1 - 32) / 58);
+            var6 = -1;
             return;
           }
         } else {
           ((usb) this).field_u = var5;
-          var6 = -67 % ((param1 - 32) / 58);
+          var6 = -1;
           return;
         }
     }

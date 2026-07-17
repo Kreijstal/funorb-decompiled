@@ -18,7 +18,7 @@ final class od {
     private int field_g;
     private int[] field_b;
 
-    private final void a(byte param0) {
+    private final void a() {
         int[] var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -279,7 +279,8 @@ final class od {
     }
 
     od() {
-        this.a((byte) -116);
+        int discarded$0 = -116;
+        this.a();
     }
 
     static {

@@ -253,7 +253,7 @@ final class ji extends hl {
         ((ji) this).a(param2, param5, param7, 2);
     }
 
-    final static void a(ah param0, int param1) {
+    final static void a(ah param0) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -355,10 +355,8 @@ final class ji extends hl {
         if (!(null == hd.field_s)) {
             hd.field_s.a(param1, 15163);
         }
-        uf.a(param1, -123);
-        if (param0 != -1002815199) {
-            field_Mb = null;
-        }
+        int discarded$4 = -123;
+        uf.a(param1);
         if (null != mm.field_y) {
             mm.field_y.a(param1, 256);
         }
@@ -381,28 +379,28 @@ final class ji extends hl {
         field_Lb = null;
     }
 
-    final static void h(int param0) {
+    final static void h() {
         gb var1 = null;
         int var2 = TetraLink.field_J;
         try {
             ul.field_e = null;
             qi.field_q = 0;
-            ca.field_c = param0;
+            ca.field_c = 0;
             og.field_j.b(1);
             mm.field_s.b(1);
             var1 = wb.field_f.b(107);
             while (var1 != null) {
-                var1.e(param0);
+                var1.e(0);
                 var1 = wb.field_f.d(-1);
             }
             var1 = sd.field_nb.b(-127);
             while (var1 != null) {
-                var1.e(param0);
+                var1.e(0);
                 var1 = sd.field_nb.d(-1);
             }
             field_Tb = 0;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) (Object) runtimeException, "ji.E(" + param0 + 41);
+            throw oi.a((Throwable) (Object) runtimeException, "ji.E(" + 0 + 41);
         }
     }
 

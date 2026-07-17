@@ -8,13 +8,13 @@ final class kl {
     int field_e;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         field_b = null;
     }
 
-    final static void a(String param0, int param1) {
+    final static void a(String param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -100,18 +100,20 @@ final class kl {
         String stackOut_14_2 = null;
         try {
           L0: {
-            var2 = fh.a("jagex-last-login-method", param0, (byte) 120);
+            int discarded$6 = 120;
+            var2 = fh.a("jagex-last-login-method", param0);
             if (var2 != null) {
               L1: {
                 if (param1 == 84) {
                   break L1;
                 } else {
                   var6 = null;
-                  mj discarded$2 = kl.a((java.applet.Applet) null, (byte) -97);
+                  mj discarded$7 = kl.a((java.applet.Applet) null, (byte) -97);
                   break L1;
                 }
               }
-              var3 = ge.b((byte) 35);
+              int discarded$8 = 35;
+              var3 = ge.b();
               var4 = 0;
               L2: while (true) {
                 if (var4 >= var3.length) {

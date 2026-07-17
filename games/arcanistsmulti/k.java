@@ -50,7 +50,7 @@ final class k implements Runnable {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_q = null;
         field_k = null;
         field_f = null;
@@ -302,7 +302,8 @@ final class k implements Runnable {
                     break L2;
                   }
                 } else {
-                  ao.a(1L, 1);
+                  int discarded$2 = 1;
+                  ao.a(1L);
                   continue L3;
                 }
               }
@@ -321,20 +322,19 @@ final class k implements Runnable {
             Exception var1_ref = null;
             int var1_int = 0;
             int var2 = 0;
-            IOException var3 = null;
-            Object var3_ref = null;
+            Object var3 = null;
+            IOException var3_ref = null;
             InterruptedException var4 = null;
             Throwable var5 = null;
             int var6 = 0;
-            Object var7 = null;
             int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             var6 = ArcanistsMulti.field_G ? 1 : 0;
             try {
               L0: {
                 L1: while (true) {
-                  var3_ref = this;
-                  synchronized (var3_ref) {
+                  var3 = this;
+                  synchronized (var3) {
                     L2: {
                       L3: {
                         if (((k) this).field_j != ((k) this).field_s) {
@@ -416,7 +416,7 @@ final class k implements Runnable {
                       } catch (java.lang.Exception decompiledCaughtParameter2) {
                         decompiledCaughtException = decompiledCaughtParameter2;
                         L13: {
-                          var3 = (IOException) (Object) decompiledCaughtException;
+                          var3_ref = (IOException) (Object) decompiledCaughtException;
                           ((k) this).field_l = true;
                           break L13;
                         }
@@ -437,7 +437,7 @@ final class k implements Runnable {
                       } catch (java.lang.Exception decompiledCaughtParameter3) {
                         decompiledCaughtException = decompiledCaughtParameter3;
                         L16: {
-                          var3 = (IOException) (Object) decompiledCaughtException;
+                          var3_ref = (IOException) (Object) decompiledCaughtException;
                           ((k) this).field_l = true;
                           break L16;
                         }
@@ -453,8 +453,8 @@ final class k implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter4;
               L17: {
                 var1_ref = (Exception) (Object) decompiledCaughtException;
-                var7 = null;
-                jh.a((Throwable) (Object) var1_ref, (String) null, (byte) 20);
+                int discarded$1 = 20;
+                jh.a((Throwable) (Object) var1_ref, (String) null);
                 break L17;
               }
             }
@@ -469,13 +469,11 @@ final class k implements Runnable {
         this(param0, param1, 5000);
     }
 
-    final static String a(int param0) {
+    final static String a() {
         if (!(in.field_Gb != sk.field_a)) {
             return on.field_d;
         }
-        if (param0 != 0) {
-            field_k = null;
-        }
+        field_k = null;
         if (!(wn.field_z.a((byte) -106))) {
             return wn.field_z.a(true);
         }

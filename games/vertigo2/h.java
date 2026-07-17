@@ -141,7 +141,7 @@ final class h extends ji {
         return ((h) this).field_E;
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_D = null;
         field_A = null;
     }
@@ -161,7 +161,7 @@ final class h extends ji {
             L1: {
               bi.b(param0, param2, 1 + param3, 10000536);
               bi.b(param0, param2 + param4, param3 - -1, 12105912);
-              var5_int = param1;
+              var5_int = 1;
               var6 = param4;
               if (bi.field_f > var5_int + param2) {
                 var5_int = -param2 + bi.field_f;
@@ -195,7 +195,7 @@ final class h extends ji {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw wn.a((Throwable) (Object) var5, "h.Q(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw wn.a((Throwable) (Object) var5, "h.Q(" + param0 + 44 + 1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 

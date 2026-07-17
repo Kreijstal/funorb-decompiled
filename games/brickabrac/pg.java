@@ -86,22 +86,22 @@ final class pg extends nm {
                 break L1;
               }
             }
-            var6 = new jp(param1 * 2 + param0.field_D, 2 * param1 + param0.field_C);
+            var6 = new jp(40 + param0.field_D, 40 + param0.field_C);
             var6.g();
             lb.g(0, 0, var6.field_D, var6.field_C, 16777215);
             var4 = 0;
             L2: while (true) {
-              if (param1 <= var4) {
+              if (var4 >= 20) {
                 var6.h();
-                param0.d(-param0.field_E + param1, param1 + -param0.field_F, 0);
+                param0.d(-param0.field_E + 20, 20 + -param0.field_F, 0);
                 kc.field_q.a((byte) 109);
-                var6.field_F = param0.field_F - param1;
-                var6.field_E = -param1 + param0.field_E;
+                var6.field_F = param0.field_F - 20;
+                var6.field_E = -20 + param0.field_E;
                 stackOut_6_0 = (jp) var6;
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
-                param0.d(-param0.field_E + param1, -param0.field_F + param1, 0);
+                param0.d(-param0.field_E + 20, -param0.field_F + 20, 0);
                 lb.e(1, 1, 0, 0, var6.field_D, var6.field_C);
                 var4++;
                 continue L2;
@@ -136,12 +136,12 @@ final class pg extends nm {
               break L3;
             }
           }
-          throw qb.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 44 + param2 + 41);
+          throw qb.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + 20 + 44 + param2 + 41);
         }
         return stackIn_7_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_k = null;
         field_o = null;
         field_i = null;
@@ -150,7 +150,7 @@ final class pg extends nm {
         field_n = null;
     }
 
-    final static void d(int param0) {
+    final static void d() {
         nh.a(642, 482, -40, -1, cd.field_h, -1);
     }
 
@@ -175,10 +175,6 @@ final class pg extends nm {
         try {
             var2_int = pq.field_k;
             var3 = po.field_a;
-            if (param0) {
-                Object var9 = null;
-                pg.a(false, (String) null);
-            }
             var4 = ad.field_l.field_O.a(param1, 500);
             var5 = ad.field_l.field_O.b(param1, 500) + 6;
             var6 = 2 + np.field_a * var4;
@@ -188,7 +184,7 @@ final class pg extends nm {
             lb.g(var7 + 1, 1 + var8, -2 + var5, var6 - 2, 16777088);
             int discarded$0 = ad.field_l.field_O.a(param1, 3 + var7, -ad.field_l.field_O.field_F + (1 + var8) - -ok.field_f, 500, 1000, 0, -1, 0, 0, np.field_a);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) (Object) runtimeException, "pg.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw qb.a((Throwable) (Object) runtimeException, "pg.A(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

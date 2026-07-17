@@ -15,7 +15,7 @@ final class ge {
         jk.field_m = new vc();
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
         field_d = null;
         field_e = null;

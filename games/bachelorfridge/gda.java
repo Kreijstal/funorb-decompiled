@@ -7,7 +7,7 @@ final class gda extends vd implements uja, lja {
     private hf field_F;
     private hf field_C;
 
-    private final void d(byte param0) {
+    private final void d() {
         if (!this.j(-111)) {
             return;
         }
@@ -15,7 +15,8 @@ final class gda extends vd implements uja, lja {
     }
 
     private final boolean j(int param0) {
-        if (!this.a((mca) (Object) ((gda) this).field_G, -1)) {
+        int discarded$2 = -1;
+        if (!this.a((mca) (Object) ((gda) this).field_G)) {
           return false;
         } else {
           if (param0 >= -94) {
@@ -121,7 +122,8 @@ final class gda extends vd implements uja, lja {
         try {
           L0: {
             if (!param5) {
-              stackOut_3_0 = this.a(param2, param4, param3, (byte) 124, param1, param0, 35);
+              int discarded$2 = 35;
+              stackOut_3_0 = this.a(param2, param4, param3, (byte) 124, param1, param0);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {
@@ -351,7 +353,7 @@ final class gda extends vd implements uja, lja {
         return stackIn_10_0 != 0;
     }
 
-    private final int a(String param0, String param1, int param2, byte param3, wj param4, int param5, int param6) {
+    private final int a(String param0, String param1, int param2, byte param3, wj param4, int param5) {
         RuntimeException var8 = null;
         int var9 = 0;
         nf var10 = null;
@@ -408,7 +410,7 @@ final class gda extends vd implements uja, lja {
           L0: {
             var11 = new ge(20, param5, param2 + 120, 25, param4, false, 120, 3, jca.field_a, 16777215, param0);
             ((gda) this).c((wj) (Object) var11, 111);
-            var9 = -90 / ((param3 - 25) / 34);
+            var9 = -45;
             var10 = new nf(((mca) (Object) param4).a(16728128), param1, 126, param5 - -var11.field_q, 25 + param2, 35);
             var10.field_k = (pl) this;
             ((gda) this).c((wj) (Object) var10, 30);
@@ -471,7 +473,7 @@ final class gda extends vd implements uja, lja {
           }
           L3: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param2).append(44).append(124).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -600,7 +602,8 @@ final class gda extends vd implements uja, lja {
                 if (((gda) this).field_F != param1) {
                   break L1;
                 } else {
-                  this.d((byte) 46);
+                  int discarded$4 = 46;
+                  this.d();
                   break L1;
                 }
               }
@@ -609,7 +612,7 @@ final class gda extends vd implements uja, lja {
               break L0;
             } else {
               var7 = null;
-              int discarded$2 = this.a(7, (wj) null, (String) null, 77, (String) null, true);
+              int discarded$5 = this.a(7, (wj) null, (String) null, 77, (String) null, true);
               return;
             }
           }
@@ -645,7 +648,7 @@ final class gda extends vd implements uja, lja {
         }
     }
 
-    private final boolean a(mca param0, int param1) {
+    private final boolean a(mca param0) {
         qu var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;

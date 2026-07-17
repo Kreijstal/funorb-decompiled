@@ -12,19 +12,9 @@ final class cn extends vf {
     static String field_s;
     static int field_o;
 
-    final static String e(int param0) {
+    final static String e() {
         if (!(du.field_d != oh.field_L)) {
             return cd.field_e;
-        }
-        if (param0 != 488997228) {
-            field_s = null;
-            if (!se.field_g.a((byte) 126)) {
-                return se.field_g.b(true);
-            }
-            if (!(du.field_d != mh.field_b)) {
-                return se.field_g.b(true);
-            }
-            return ga.field_d;
         }
         if (!se.field_g.a((byte) 126)) {
             return se.field_g.b(true);
@@ -103,7 +93,7 @@ final class cn extends vf {
         }
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_q = null;
         field_s = null;
     }

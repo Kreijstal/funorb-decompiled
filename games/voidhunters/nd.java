@@ -8,7 +8,7 @@ final class nd extends rqa {
     static int field_p;
     static String field_o;
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_q = null;
         field_s = null;
         field_o = null;

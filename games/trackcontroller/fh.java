@@ -16,9 +16,9 @@ abstract class fh {
             Object var7 = null;
             gd var8 = null;
             int var9 = 0;
-            kk stackIn_14_0 = null;
+            kk stackIn_11_0 = null;
             Throwable decompiledCaughtException = null;
-            kk stackOut_13_0 = null;
+            kk stackOut_10_0 = null;
             try {
               L0: {
                 L1: {
@@ -58,18 +58,10 @@ abstract class fh {
                     break L2;
                   }
                 }
-                L5: {
-                  var8 = ij.field_d.a(103, param1, (hf) var6, param3, (hf) var7);
-                  var9 = 71 % ((param5 - -49) / 56);
-                  if (param2) {
-                    var8.b(6054);
-                    break L5;
-                  } else {
-                    break L5;
-                  }
-                }
-                stackOut_13_0 = new kk((wi) (Object) var8, param0, param4);
-                stackIn_14_0 = stackOut_13_0;
+                var8 = ij.field_d.a(103, param1, (hf) var6, false, (hf) var7);
+                var9 = 71 % ((param5 - -49) / 56);
+                stackOut_10_0 = new kk((wi) (Object) var8, true, 1);
+                stackIn_11_0 = stackOut_10_0;
                 break L0;
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -77,7 +69,7 @@ abstract class fh {
               var6 = (Object) (Object) decompiledCaughtException;
               throw new RuntimeException(((IOException) var6).toString());
             }
-            return stackIn_14_0;
+            return stackIn_11_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -88,11 +80,11 @@ abstract class fh {
     abstract byte[] b(byte param0);
 
     final static int a(int param0, int param1) {
-        param1 = fj.b(param0 ^ -48, param1);
+        param1 = fj.b(-48, param1);
         if (!(param1 != 32)) {
             return 38;
         }
-        if (param0 == param1) {
+        if (0 == param1) {
             return 0;
         }
         if (!(param1 <= 32)) {
@@ -114,7 +106,7 @@ abstract class fh {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         if (!(-1 != hd.field_o)) {
             if (!(hf.a(1, false))) {
                 return false;

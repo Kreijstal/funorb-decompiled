@@ -112,7 +112,7 @@ final class h extends qm {
         }
     }
 
-    final static io[] a(byte param0) {
+    final static io[] a() {
         return new io[]{ig.field_e, vm.field_a, cd.field_c};
     }
 

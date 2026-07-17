@@ -76,35 +76,27 @@ final class ec implements Runnable {
         Object var7 = null;
         Throwable var8 = null;
         Throwable decompiledCaughtException = null;
-        L0: {
-          var6 = new op();
-          if (param0 == 61) {
-            break L0;
-          } else {
-            ((ec) this).field_x = null;
-            break L0;
-          }
-        }
+        var6 = new op();
         var6.field_g = param1;
         var6.field_e = param4;
         var6.field_a = param2;
         var6.field_c = param3;
         var7 = this;
         synchronized (var7) {
-          L1: {
-            L2: {
+          L0: {
+            L1: {
               if (((ec) this).field_a == null) {
                 ((ec) this).field_k = var6;
                 ((ec) this).field_a = var6;
-                break L2;
+                break L1;
               } else {
                 ((ec) this).field_a.field_b = var6;
                 ((ec) this).field_a = var6;
-                break L2;
+                break L1;
               }
             }
             this.notify();
-            break L1;
+            break L0;
           }
         }
         return var6;

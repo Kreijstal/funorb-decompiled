@@ -874,7 +874,7 @@ final class jd extends tc implements uo {
         int var3 = 114 / ((-56 - param0) / 54);
     }
 
-    public static void q(int param0) {
+    public static void q() {
         field_T = null;
         field_n = null;
         field_y = null;
@@ -1262,7 +1262,8 @@ final class jd extends tc implements uo {
           break L1;
         }
         L3: {
-          if (this.v(10)) {
+          int discarded$2 = 10;
+          if (this.v()) {
             break L3;
           } else {
             if (!param0) {
@@ -1307,7 +1308,7 @@ final class jd extends tc implements uo {
             break L7;
           }
         }
-        boolean discarded$1 = ((jd) this).field_l.b(((jd) this).field_O, true);
+        boolean discarded$3 = ((jd) this).field_l.b(((jd) this).field_O, true);
     }
 
     final boolean s(int param0) {
@@ -1602,7 +1603,7 @@ final class jd extends tc implements uo {
         }
     }
 
-    private final boolean v(int param0) {
+    private final boolean v() {
         return (bw.field_m[((jd) this).field_N][10] & 1) > 0;
     }
 
@@ -1728,7 +1729,8 @@ final class jd extends tc implements uo {
                         }
                       } else {
                         L6: {
-                          if (rb.a(var1_int, rq.field_n, 1)) {
+                          int discarded$1 = 1;
+                          if (rb.a(var1_int, rq.field_n)) {
                             ai.field_P.a((byte) -119, (tc) (Object) new jg(var1_int));
                             break L6;
                           } else {

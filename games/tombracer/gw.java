@@ -270,70 +270,66 @@ final class gw extends kna {
               }
             }
             var9 = stackIn_11_0;
-            if (param1 > 81) {
-              var10 = param5 >> 1;
-              var11 = param6 >> 1;
-              var12 = param4;
-              var13 = new float[var11 * var10 * var7_int];
-              L4: while (true) {
-                jaggl.OpenGL.glTexImage2Df(param2, var8, param3, param5, param6, 0, param0, 5126, var12, 0);
-                if (1 < var9) {
-                  var16 = param5 * var7_int;
-                  var17 = 0;
-                  L5: while (true) {
-                    if (var17 >= var7_int) {
-                      var14 = var13;
-                      var13 = var12;
-                      param5 = var10;
-                      var12 = var14;
-                      param6 = var11;
-                      var9 = var9 >> 1;
-                      var8++;
-                      var11 = var11 >> 1;
-                      var10 = var10 >> 1;
-                      continue L4;
-                    } else {
-                      var18 = var17;
-                      var19 = var17;
-                      var20 = var19 - -var16;
-                      var21 = 0;
-                      L6: while (true) {
-                        if (var21 >= var11) {
-                          var17++;
-                          continue L5;
-                        } else {
-                          var22 = 0;
-                          L7: while (true) {
-                            if (var10 <= var22) {
-                              var19 = var19 + var16;
-                              var20 = var20 + var16;
-                              var21++;
-                              continue L6;
-                            } else {
-                              var15 = param4[var19];
-                              var19 = var19 + var7_int;
-                              var15 = var15 + param4[var19];
-                              var15 = var15 + param4[var20];
-                              var19 = var19 + var7_int;
-                              var20 = var20 + var7_int;
-                              var15 = var15 + param4[var20];
-                              var13[var18] = var15 * 0.25f;
-                              var20 = var20 + var7_int;
-                              var18 = var18 + var7_int;
-                              var22++;
-                              continue L7;
-                            }
+            var10 = param5 >> 1;
+            var11 = param6 >> 1;
+            var12 = param4;
+            var13 = new float[var11 * var10 * var7_int];
+            L4: while (true) {
+              jaggl.OpenGL.glTexImage2Df(param2, var8, param3, param5, param6, 0, param0, 5126, var12, 0);
+              if (1 < var9) {
+                var16 = param5 * var7_int;
+                var17 = 0;
+                L5: while (true) {
+                  if (var17 >= var7_int) {
+                    var14 = var13;
+                    var13 = var12;
+                    param5 = var10;
+                    var12 = var14;
+                    param6 = var11;
+                    var9 = var9 >> 1;
+                    var8++;
+                    var11 = var11 >> 1;
+                    var10 = var10 >> 1;
+                    continue L4;
+                  } else {
+                    var18 = var17;
+                    var19 = var17;
+                    var20 = var19 - -var16;
+                    var21 = 0;
+                    L6: while (true) {
+                      if (var21 >= var11) {
+                        var17++;
+                        continue L5;
+                      } else {
+                        var22 = 0;
+                        L7: while (true) {
+                          if (var10 <= var22) {
+                            var19 = var19 + var16;
+                            var20 = var20 + var16;
+                            var21++;
+                            continue L6;
+                          } else {
+                            var15 = param4[var19];
+                            var19 = var19 + var7_int;
+                            var15 = var15 + param4[var19];
+                            var15 = var15 + param4[var20];
+                            var19 = var19 + var7_int;
+                            var20 = var20 + var7_int;
+                            var15 = var15 + param4[var20];
+                            var13[var18] = var15 * 0.25f;
+                            var20 = var20 + var7_int;
+                            var18 = var18 + var7_int;
+                            var22++;
+                            continue L7;
                           }
                         }
                       }
                     }
                   }
-                } else {
-                  break L0;
                 }
+              } else {
+                break L0;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -341,7 +337,7 @@ final class gw extends kna {
           L8: {
             var7 = decompiledCaughtException;
             stackOut_27_0 = (RuntimeException) var7;
-            stackOut_27_1 = new StringBuilder().append("gw.UB(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_27_1 = new StringBuilder().append("gw.UB(").append(param0).append(44).append(92).append(44).append(param2).append(44).append(param3).append(44);
             stackIn_29_0 = stackOut_27_0;
             stackIn_29_1 = stackOut_27_1;
             stackIn_28_0 = stackOut_27_0;

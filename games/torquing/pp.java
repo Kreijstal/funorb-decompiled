@@ -121,23 +121,39 @@ final class pp extends java.awt.Canvas implements java.awt.event.FocusListener {
           }
         }
         if (param2 == 2) {
-          if (param0) {
-            var4 += 2;
-            var4++;
-            return qa.field_m[var4];
+          if (!param0) {
+            if (param3) {
+              var4++;
+              return qa.field_m[var4];
+            } else {
+              return qa.field_m[var4];
+            }
           } else {
-            var4++;
-            return qa.field_m[var4];
+            var4 += 2;
+            if (param3) {
+              var4++;
+              return qa.field_m[var4];
+            } else {
+              return qa.field_m[var4];
+            }
           }
         } else {
           field_a = -28;
-          if (!param0) {
-            var4++;
-            return qa.field_m[var4];
-          } else {
+          if (param0) {
             var4 += 2;
-            var4++;
-            return qa.field_m[var4];
+            if (!param3) {
+              return qa.field_m[var4];
+            } else {
+              var4++;
+              return qa.field_m[var4];
+            }
+          } else {
+            if (param3) {
+              var4++;
+              return qa.field_m[var4];
+            } else {
+              return qa.field_m[var4];
+            }
           }
         }
     }
@@ -145,7 +161,7 @@ final class pp extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void update(java.awt.Graphics param0) {
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_e = null;
     }

@@ -6,7 +6,7 @@ abstract class bt extends pt {
     static hr field_e;
     static volatile long field_f;
 
-    public static void c(byte param0) {
+    public static void c() {
         field_e = null;
     }
 
@@ -14,11 +14,11 @@ abstract class bt extends pt {
         throw new Error();
     }
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         return !ut.field_o.a(true);
     }
 
-    final static uw a(boolean param0) {
+    final static uw a() {
         return (uw) (Object) new fd();
     }
 

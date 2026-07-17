@@ -14,72 +14,62 @@ final class al {
             java.net.URL var2 = null;
             Exception var2_ref = null;
             RuntimeException var2_ref2 = null;
+            RuntimeException stackIn_5_0 = null;
+            StringBuilder stackIn_5_1 = null;
             RuntimeException stackIn_6_0 = null;
             StringBuilder stackIn_6_1 = null;
             RuntimeException stackIn_7_0 = null;
             StringBuilder stackIn_7_1 = null;
-            RuntimeException stackIn_8_0 = null;
-            StringBuilder stackIn_8_1 = null;
-            String stackIn_8_2 = null;
+            String stackIn_7_2 = null;
             Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_5_0 = null;
-            StringBuilder stackOut_5_1 = null;
-            RuntimeException stackOut_7_0 = null;
-            StringBuilder stackOut_7_1 = null;
-            String stackOut_7_2 = null;
+            RuntimeException stackOut_4_0 = null;
+            StringBuilder stackOut_4_1 = null;
             RuntimeException stackOut_6_0 = null;
             StringBuilder stackOut_6_1 = null;
             String stackOut_6_2 = null;
+            RuntimeException stackOut_5_0 = null;
+            StringBuilder stackOut_5_1 = null;
+            String stackOut_5_2 = null;
             try {
-              L0: {
-                try {
-                  L1: {
-                    var2 = new java.net.URL(param1.getCodeBase(), "tosupport.ws");
-                    param1.getAppletContext().showDocument(ib.a(param1, var2, -5441), "_top");
-                    if (param0 < -66) {
-                      break L1;
-                    } else {
-                      field_d = null;
-                      return;
-                    }
-                  }
-                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  var2_ref = (Exception) (Object) decompiledCaughtException;
-                  var2_ref.printStackTrace();
-                  return;
-                }
-                break L0;
+              try {
+                var2 = new java.net.URL(param1.getCodeBase(), "tosupport.ws");
+                param1.getAppletContext().showDocument(ib.a(param1, var2, -5441), "_top");
+                return;
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var2_ref = (Exception) (Object) decompiledCaughtException;
+                var2_ref.printStackTrace();
+                return;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L2: {
+              L0: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_5_0 = (RuntimeException) var2_ref2;
-                stackOut_5_1 = new StringBuilder().append("al.B(").append(param0).append(44);
-                stackIn_7_0 = stackOut_5_0;
-                stackIn_7_1 = stackOut_5_1;
-                stackIn_6_0 = stackOut_5_0;
-                stackIn_6_1 = stackOut_5_1;
+                stackOut_4_0 = (RuntimeException) var2_ref2;
+                stackOut_4_1 = new StringBuilder().append("al.B(").append(-75).append(44);
+                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_1 = stackOut_4_1;
+                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_1 = stackOut_4_1;
                 if (param1 == null) {
-                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-                  stackOut_7_2 = "null";
-                  stackIn_8_0 = stackOut_7_0;
-                  stackIn_8_1 = stackOut_7_1;
-                  stackIn_8_2 = stackOut_7_2;
-                  break L2;
-                } else {
                   stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
                   stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-                  stackOut_6_2 = "{...}";
-                  stackIn_8_0 = stackOut_6_0;
-                  stackIn_8_1 = stackOut_6_1;
-                  stackIn_8_2 = stackOut_6_2;
-                  break L2;
+                  stackOut_6_2 = "null";
+                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_1 = stackOut_6_1;
+                  stackIn_7_2 = stackOut_6_2;
+                  break L0;
+                } else {
+                  stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+                  stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+                  stackOut_5_2 = "{...}";
+                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_1 = stackOut_5_1;
+                  stackIn_7_2 = stackOut_5_2;
+                  break L0;
                 }
               }
-              throw pf.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+              throw pf.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -88,11 +78,11 @@ final class al {
         }
     }
 
-    final static fh[] b(boolean param0) {
+    final static fh[] b() {
         return new fh[]{ne.field_d, ec.field_b, ae.field_d, cg.field_h, lk.field_A, hf.field_h, qi.field_b, hc.field_b, dl.field_t, tg.field_f, kb.field_l, gg.field_b, kc.field_a, ek.field_a};
     }
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         int var1 = 0;
         if (null == aa.field_r) {
             return false;
@@ -111,7 +101,7 @@ final class al {
         field_c = null;
     }
 
-    final static String a(CharSequence param0, byte param1) {
+    final static String a(CharSequence param0) {
         String var2 = null;
         RuntimeException var2_ref = null;
         RuntimeException stackIn_5_0 = null;

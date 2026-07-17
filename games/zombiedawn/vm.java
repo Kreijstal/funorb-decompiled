@@ -154,7 +154,7 @@ final class vm extends vf {
         return stackIn_1_0;
     }
 
-    final static boolean c(int param0) {
+    final static boolean c() {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var3 = 0;
@@ -226,7 +226,9 @@ final class vm extends vf {
 
     public static void a(boolean param0) {
         field_u = null;
-        field_w = -51;
+        if (!param0) {
+            field_w = -51;
+        }
     }
 
     private vm(int param0, int param1, int param2) {

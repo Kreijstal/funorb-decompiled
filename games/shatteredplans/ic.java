@@ -102,16 +102,6 @@ final class ic {
     }
 
     private final void a(boolean param0, java.awt.Frame param1) {
-        Object var4 = null;
-        L0: {
-          if (param0) {
-            break L0;
-          } else {
-            var4 = null;
-            this.a(true, (java.awt.Frame) null);
-            break L0;
-          }
-        }
         ((ic) this).field_a.setFullScreenWindow((java.awt.Window) (Object) param1);
     }
 

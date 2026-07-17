@@ -553,23 +553,23 @@ class km extends ke {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        Object var28 = null;
-        hg var29 = null;
-        Object var30 = null;
-        hn var30_ref = null;
-        long[][] var37 = null;
-        int[][] var38 = null;
+        Object var27 = null;
+        hg var28 = null;
+        Object var29 = null;
+        hn var29_ref = null;
+        long[][] var36 = null;
+        int[][] var37 = null;
         RuntimeException decompiledCaughtException = null;
-        var30 = null;
-        var28 = null;
+        var29 = null;
+        var27 = null;
         var26 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
             L1: {
-              var29 = sh.field_qb;
-              var2 = var29.g(11132);
+              var28 = sh.field_qb;
+              var2 = var28.g(11132);
               if (var2 == 0) {
-                var3 = var29.c((byte) 87);
+                var3 = var28.c((byte) 87);
                 var4 = (oc) (Object) fn.field_a.a((byte) -77);
                 L2: while (true) {
                   L3: {
@@ -589,7 +589,7 @@ class km extends ke {
                     return;
                   } else {
                     L4: {
-                      var5 = var29.g(11132);
+                      var5 = var28.g(11132);
                       if (var5 == 0) {
                         break L4;
                       } else {
@@ -603,15 +603,15 @@ class km extends ke {
                           if (var8_int >= var5) {
                             var8 = new String[3][var6];
                             var9 = new String[3][var6];
-                            var37 = new long[3][var6];
-                            var38 = new int[3][var6 * var7];
+                            var36 = new long[3][var6];
+                            var37 = new int[3][var6 * var7];
                             var12 = 0;
                             var13 = 0;
                             var14 = 0;
                             var15 = 0;
                             var16 = 0;
                             var17 = 0;
-                            var18 = var29.g(11132);
+                            var18 = var28.g(11132);
                             if (var18 <= 0) {
                               break L4;
                             } else {
@@ -621,23 +621,23 @@ class km extends ke {
                                   break L4;
                                 } else {
                                   L7: {
-                                    var20 = var29.g(11132);
+                                    var20 = var28.g(11132);
                                     var21 = qd.field_m[var20].field_g;
-                                    var22 = var29.e((byte) -60);
-                                    var24 = var29.field_l;
+                                    var22 = var28.e((byte) -60);
+                                    var24 = var28.field_l;
                                     if (~var19 > ~var6) {
                                       var8[0][var12] = var21;
                                       var9[0][var12] = qd.field_m[var20].field_d;
-                                      var37[0][var12] = var22;
+                                      var36[0][var12] = var22;
                                       var12++;
                                       var25 = 0;
                                       L8: while (true) {
                                         if (var25 >= var7) {
                                           break L7;
                                         } else {
-                                          int incrementValue$3 = var15;
+                                          int incrementValue$5 = var15;
                                           var15++;
-                                          var38[0][incrementValue$3] = var29.d((byte) 93);
+                                          var37[0][incrementValue$5] = var28.d((byte) 93);
                                           var25++;
                                           continue L8;
                                         }
@@ -653,17 +653,17 @@ class km extends ke {
                                       if (jc.a(var21, true)) {
                                         var8[1][var13] = mi.field_d;
                                         var9[1][var13] = null;
-                                        var37[1][var13] = var22;
+                                        var36[1][var13] = var22;
                                         var13++;
-                                        var29.field_l = var24;
+                                        var28.field_l = var24;
                                         var25 = 0;
                                         L10: while (true) {
                                           if (~var25 <= ~var7) {
                                             break L9;
                                           } else {
-                                            int incrementValue$4 = var16;
+                                            int incrementValue$6 = var16;
                                             var16++;
-                                            var38[1][incrementValue$4] = var29.d((byte) 103);
+                                            var37[1][incrementValue$6] = var28.d((byte) 103);
                                             var25++;
                                             continue L10;
                                           }
@@ -681,17 +681,17 @@ class km extends ke {
                                         qd.field_m[var20].field_e = true;
                                         var8[2][var14] = var21;
                                         var9[2][var14] = qd.field_m[var20].field_d;
-                                        var37[2][var14] = var22;
+                                        var36[2][var14] = var22;
                                         var14++;
-                                        var29.field_l = var24;
+                                        var28.field_l = var24;
                                         var25 = 0;
                                         L12: while (true) {
                                           if (~var7 >= ~var25) {
                                             break L11;
                                           } else {
-                                            int incrementValue$5 = var17;
+                                            int incrementValue$7 = var17;
                                             var17++;
-                                            var38[2][incrementValue$5] = var29.d((byte) 127);
+                                            var37[2][incrementValue$7] = var28.d((byte) 127);
                                             var25++;
                                             continue L12;
                                           }
@@ -708,10 +708,10 @@ class km extends ke {
                             }
                           } else {
                             L13: {
-                              qd.field_m[var8_int].field_g = var29.h(-119);
+                              qd.field_m[var8_int].field_g = var28.h(-119);
                               qd.field_m[var8_int].field_e = false;
-                              if (var29.g(11132) == 1) {
-                                qd.field_m[var8_int].field_d = var29.h(-128);
+                              if (var28.g(11132) == 1) {
+                                qd.field_m[var8_int].field_d = var28.h(-128);
                                 break L13;
                               } else {
                                 qd.field_m[var8_int].field_d = null;
@@ -730,31 +730,33 @@ class km extends ke {
                 }
               } else {
                 if (var2 == 1) {
-                  var3 = var29.c((byte) 83);
-                  var30_ref = (hn) (Object) qn.field_P.a((byte) -44);
+                  var3 = var28.c((byte) 83);
+                  var29_ref = (hn) (Object) qn.field_P.a((byte) -44);
                   L14: while (true) {
                     L15: {
-                      if (var30_ref == null) {
+                      if (var29_ref == null) {
                         break L15;
                       } else {
-                        if (~var3 != ~var30_ref.field_j) {
-                          var28 = (Object) (Object) (hn) (Object) qn.field_P.a(16213);
+                        if (~var3 != ~var29_ref.field_j) {
+                          var27 = (Object) (Object) (hn) (Object) qn.field_P.a(16213);
                           continue L14;
                         } else {
                           break L15;
                         }
                       }
                     }
-                    if (var28 == null) {
+                    if (var27 == null) {
                       tn.a(false);
                       return;
                     } else {
-                      ((hn) var28).a(false);
+                      ((hn) var27).a(false);
                       break L1;
                     }
                   }
                 } else {
-                  en.a("HS1: " + rg.a(true), (Throwable) null, 1);
+                  int discarded$8 = 1;
+                  int discarded$9 = 1;
+                  en.a("HS1: " + rg.a(), (Throwable) null);
                   tn.a(false);
                   break L1;
                 }
@@ -1325,7 +1327,7 @@ class km extends ke {
           var16 = ((km) this).field_vb;
           var17 = ((km) this).field_qb;
           var18 = ((km) this).field_E;
-          var19 = param3;
+          var19 = 0;
           if (param10) {
             break L2;
           } else {

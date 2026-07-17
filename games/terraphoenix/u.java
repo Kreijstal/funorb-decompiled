@@ -10,19 +10,16 @@ final class u {
     static ci field_a;
     static String field_b;
 
-    final static void a(String param0, int param1) {
+    final static void a(String param0) {
         System.out.println("Error: " + qf.a(param0, 0, "%0a", "\n"));
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_e = null;
         field_d = null;
         field_b = null;
         field_a = null;
-        if (param0 >= -71) {
-            return;
-        }
         field_c = null;
     }
 

@@ -10,27 +10,24 @@ final class tc extends da {
     boolean field_i;
     static boolean field_k;
 
-    final static void a(h param0, h param1, byte param2, int param3, int param4, int param5) {
+    final static void a(h param0, h param1) {
         try {
             kk.field_e = param1;
-            if (param2 != 27) {
-                tc.c(-10);
-            }
-            ai.field_a = param3;
+            ai.field_a = 8;
             tf.field_f = param0;
-            uc.field_Y = param5;
-            ni.field_i = param4;
+            uc.field_Y = 2;
+            ni.field_i = 32;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) (Object) runtimeException, "tc.A(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+            throw oj.a((Throwable) (Object) runtimeException, "tc.A(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 27 + 44 + 8 + 44 + 32 + 44 + 2 + 41);
         }
     }
 
-    final static void c(int param0) {
+    final static void c() {
         int var1 = 0;
         Object var2 = null;
         Throwable var3 = null;
         Throwable decompiledCaughtException = null;
-        var1 = 124 % ((param0 - -32) / 63);
+        var1 = 0;
         if (null != te.field_b) {
           var2 = (Object) (Object) te.field_b;
           synchronized (var2) {
@@ -48,7 +45,7 @@ final class tc extends da {
     tc() {
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_m = null;
         field_o = null;
     }

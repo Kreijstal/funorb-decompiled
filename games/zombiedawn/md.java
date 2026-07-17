@@ -65,7 +65,7 @@ final class md extends sg implements hh {
         String stackOut_9_2 = null;
         try {
           L0: {
-            var9 = 49 / ((param4 - 61) / 57);
+            var9 = -49;
             var7 = new ji(param6);
             var8 = new ji(param1);
             stackOut_0_0 = bg.a(105, param3, var7, param2, var8, param5, param0);
@@ -127,7 +127,7 @@ final class md extends sg implements hh {
           }
           L3: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param3).append(44).append(-15).append(44).append(param5).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -456,7 +456,8 @@ final class md extends sg implements hh {
         if (param0 == 2634) {
           if (((md) this).field_H) {
             if (!((md) this).field_rb) {
-              var2 = ij.h(-107);
+              int discarded$9 = -107;
+              var2 = ij.h();
               if (var2 == null) {
                 return super.j(param0);
               } else {
@@ -471,10 +472,11 @@ final class md extends sg implements hh {
           }
         } else {
           var3 = null;
-          int discarded$5 = md.a(-115, (byte[]) null, 111);
+          int discarded$10 = md.a(-115, (byte[]) null, 111);
           if (((md) this).field_H) {
             if (!((md) this).field_rb) {
-              var2 = ij.h(-107);
+              int discarded$11 = -107;
+              var2 = ij.h();
               if (var2 == null) {
                 return super.j(param0);
               } else {

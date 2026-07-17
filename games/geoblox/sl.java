@@ -15,7 +15,7 @@ final class sl {
     static rh field_l;
     static dm field_c;
 
-    final static void a(java.awt.Canvas param0, int param1) {
+    final static void a(java.awt.Canvas param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -36,14 +36,11 @@ final class sl {
         try {
           L0: {
             hj.a((byte) -85, (java.awt.Component) (Object) param0);
-            if (param1 == 57) {
-              fk.a((java.awt.Component) (Object) param0, param1 + -56);
-              if (null != vc.field_f) {
-                vc.field_f.a(124, (java.awt.Component) (Object) param0);
-                break L0;
-              } else {
-                return;
-              }
+            int discarded$5 = 1;
+            fk.a((java.awt.Component) (Object) param0);
+            if (null != vc.field_f) {
+              vc.field_f.a(124, (java.awt.Component) (Object) param0);
+              break L0;
             } else {
               return;
             }
@@ -76,11 +73,11 @@ final class sl {
               break L1;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 41);
+          throw t.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 57 + 41);
         }
     }
 
-    final static String a(CharSequence param0, int param1) {
+    final static String a(CharSequence param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
@@ -215,7 +212,7 @@ final class sl {
         return stackIn_22_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_i = null;
         field_c = null;
         field_l = null;
@@ -230,7 +227,7 @@ final class sl {
         ((sl) this).field_g = param0 ? true : false;
     }
 
-    final static int a(boolean param0, wf param1, boolean param2) {
+    final static int a(boolean param0, wf param1) {
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_3_0 = null;

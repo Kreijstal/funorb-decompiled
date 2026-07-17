@@ -123,7 +123,7 @@ final class vj {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_i = null;
         field_c = null;
         field_d = null;
@@ -193,9 +193,6 @@ final class vj {
 
     final static void a(byte param0, int param1, int param2) {
         vl.field_m = param1;
-        if (param0 <= 5) {
-            field_c = null;
-        }
         mm.field_q = param2;
     }
 

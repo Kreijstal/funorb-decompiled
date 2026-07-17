@@ -27,9 +27,6 @@ abstract class lc {
     }
 
     final static void a(int param0, boolean param1) {
-        if (!param1) {
-            return;
-        }
         ef.field_U = sg.field_j[param0];
         fe.field_a = mn.field_d[param0];
         eb.field_n = qc.field_C[param0];

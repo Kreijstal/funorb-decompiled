@@ -74,7 +74,7 @@ final class cg {
         return stackIn_13_0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_b = null;
         field_h = null;
         field_d = null;
@@ -96,16 +96,9 @@ final class cg {
         param1 = param1 | param1 >>> 1;
         param1 = param1 | param1 >>> 2;
         param1 = param1 | param1 >>> 4;
-        if (param0 != -922314526) {
-          field_c = null;
-          param1 = param1 | param1 >>> 8;
-          param1 = param1 | param1 >>> 16;
-          return param1 - -1;
-        } else {
-          param1 = param1 | param1 >>> 8;
-          param1 = param1 | param1 >>> 16;
-          return param1 - -1;
-        }
+        param1 = param1 | param1 >>> 8;
+        param1 = param1 | param1 >>> 16;
+        return param1 - -1;
     }
 
     static {

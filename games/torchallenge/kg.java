@@ -59,40 +59,36 @@ class kg extends rc {
     }
 
     final static boolean a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        int stackIn_7_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackOut_4_0 = 0;
         int stackOut_5_0 = 0;
-        int stackOut_6_0 = 0;
-        if (param0 >= -86) {
-          return true;
-        } else {
-          L0: {
-            L1: {
-              if (param3 > param4) {
+        L0: {
+          L1: {
+            if (param3 > param4) {
+              break L1;
+            } else {
+              if (param4 >= param3 + param2) {
                 break L1;
               } else {
-                if (param4 >= param3 + param2) {
+                if (param5 < param1) {
                   break L1;
                 } else {
-                  if (param5 < param1) {
+                  if (param6 + param1 <= param5) {
                     break L1;
                   } else {
-                    if (param6 + param1 <= param5) {
-                      break L1;
-                    } else {
-                      stackOut_5_0 = 1;
-                      stackIn_7_0 = stackOut_5_0;
-                      break L0;
-                    }
+                    stackOut_4_0 = 1;
+                    stackIn_6_0 = stackOut_4_0;
+                    break L0;
                   }
                 }
               }
             }
-            stackOut_6_0 = 0;
-            stackIn_7_0 = stackOut_6_0;
-            break L0;
           }
-          return stackIn_7_0 != 0;
+          stackOut_5_0 = 0;
+          stackIn_6_0 = stackOut_5_0;
+          break L0;
         }
+        return stackIn_6_0 != 0;
     }
 
     private final void a(byte param0, kg param1) {
@@ -416,7 +412,7 @@ class kg extends rc {
                 break L1;
               }
             }
-            var3_int = -119 % ((param0 - -75) / 42);
+            var3_int = -3;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -424,7 +420,7 @@ class kg extends rc {
           L38: {
             var3 = decompiledCaughtException;
             stackOut_90_0 = (RuntimeException) var3;
-            stackOut_90_1 = new StringBuilder().append("kg.H(").append(param0).append(44);
+            stackOut_90_1 = new StringBuilder().append("kg.H(").append(122).append(44);
             stackIn_92_0 = stackOut_90_0;
             stackIn_92_1 = stackOut_90_1;
             stackIn_91_0 = stackOut_90_0;

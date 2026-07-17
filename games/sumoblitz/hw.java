@@ -7,7 +7,7 @@ final class hw {
     static boolean[] field_b;
     static ki field_a;
 
-    final static void a(File param0, String param1, int param2) {
+    final static void a(File param0, String param1) {
         try {
             Object discarded$0 = mi.field_b.put((Object) (Object) param1, (Object) (Object) param0);
         } catch (RuntimeException runtimeException) {
@@ -17,7 +17,7 @@ final class hw {
 
     final static void a(java.awt.Component param0, int param1, int param2, byte param3, boolean param4, ud param5, wi param6, int param7) {
         try {
-            du.a(param1, param4, 10);
+            du.a(param1, true, 10);
             wd.field_f = du.a(param6, param0, 0, param2);
             iv.field_a = du.a(param6, param0, 1, param7);
             sj.field_c = new al();
@@ -31,11 +31,11 @@ final class hw {
             qr.field_b.a((byte) -43, tt.field_l);
             wd.field_f.a((hj) (Object) qr.field_b);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "hw.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 44 + param7 + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "hw.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + 1 + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 44 + param7 + 41);
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
     }

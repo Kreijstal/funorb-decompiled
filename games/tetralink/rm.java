@@ -37,7 +37,7 @@ final class rm {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
         field_e = null;
@@ -49,7 +49,7 @@ final class rm {
         int var1 = 58;
     }
 
-    final static void a(int param0, hl param1, int param2) {
+    final static void a(int param0, hl param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -102,7 +102,7 @@ final class rm {
         try {
           L0: {
             L1: {
-              gd.a((String) null, 255, (String) null, param0, (rb) null, (int[]) null, (long)param2, param1, -1);
+              gd.a((String) null, 255, (String) null, param0, (rb) null, (int[]) null, 0L, param1, -1);
               if (param0 != 0) {
                 break L1;
               } else {
@@ -117,7 +117,7 @@ final class rm {
                 var27 = var12;
                 var27 = var12;
                 var13 = uh.field_d;
-                var11.field_j.a(12, var12, param2, var13);
+                var11.field_j.a(12, var12, 0, var13);
                 var14 = hd.field_s;
                 var15 = ec.field_n[2];
                 var27 = var15;
@@ -136,13 +136,13 @@ final class rm {
                 var27 = var18;
                 var27 = var18;
                 var19 = ji.field_Ob;
-                var17.field_j.a(11, var18, param2, var19);
+                var17.field_j.a(11, var18, 0, var19);
                 var20 = hd.field_s;
                 var21 = ec.field_n[1];
                 var27 = var21;
                 var27 = var21;
                 var22 = fj.field_t;
-                var20.field_j.a(12, var21, param2, var22);
+                var20.field_j.a(12, var21, 0, var22);
                 var23 = hd.field_s;
                 var24 = ec.field_n[2];
                 var27 = var24;
@@ -161,11 +161,11 @@ final class rm {
                 var29 = hd.field_s;
                 var30 = ec.field_n[1];
                 var31 = dk.field_a;
-                var29.field_j.a(12, var30, param2, var31);
+                var29.field_j.a(12, var30, 0, var31);
                 var32 = hd.field_s;
                 var33 = ec.field_n[2];
                 var34 = mc.field_a;
-                var32.field_j.a(13, var33, param2, var34);
+                var32.field_j.a(13, var33, 0, var34);
                 break L3;
               } else {
                 break L3;
@@ -207,7 +207,7 @@ final class rm {
               break L4;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + 0 + 41);
         }
     }
 

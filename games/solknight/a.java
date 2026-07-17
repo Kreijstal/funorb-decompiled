@@ -21,14 +21,11 @@ abstract class a extends wf implements pi {
     }
 
     final static void a(byte param0, String param1, float param2) {
-        if (param0 != 102) {
-            return;
-        }
         try {
             pe.field_m = param1;
             jl.field_e = param2;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) (Object) runtimeException, "a.O(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw fc.a((Throwable) (Object) runtimeException, "a.O(" + 102 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
@@ -87,7 +84,7 @@ abstract class a extends wf implements pi {
         return ((a) this).a(((a) this).field_f.field_i, (byte) -112);
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_h = null;
         field_g = null;
         field_e = null;
@@ -102,7 +99,7 @@ abstract class a extends wf implements pi {
         }
     }
 
-    final static String a(gb param0, int param1, boolean param2) {
+    final static String a(gb param0) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -132,16 +129,17 @@ abstract class a extends wf implements pi {
           try {
             L0: {
               var3_int = param0.c(false);
-              if (var3_int <= param1) {
+              if (var3_int <= 80) {
                 break L0;
               } else {
-                var3_int = param1;
+                var3_int = 80;
                 break L0;
               }
             }
             var4 = new byte[var3_int];
             param0.field_m = param0.field_m + v.field_g.a(0, param0.field_m, 4, var4, var3_int, param0.field_l);
-            var5 = vd.a(var4, 0, var3_int, 160);
+            int discarded$2 = 160;
+            var5 = vd.a(var4, 0, var3_int);
             stackOut_2_0 = (String) var5;
             stackIn_3_0 = stackOut_2_0;
             return stackIn_3_0;
@@ -180,7 +178,7 @@ abstract class a extends wf implements pi {
               break L1;
             }
           }
-          throw fc.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 44 + 0 + 41);
+          throw fc.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 80 + 44 + 0 + 41);
         }
     }
 

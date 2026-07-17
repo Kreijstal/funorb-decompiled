@@ -197,7 +197,7 @@ final class kk {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
         field_f = null;
         field_e = null;
@@ -207,7 +207,7 @@ final class kk {
         field_h = null;
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -273,6 +273,7 @@ final class kk {
         int var8 = 0;
         String var9 = null;
         int var10 = 0;
+        Object var11 = null;
         int[] var12 = null;
         int[] var13 = null;
         int[] var14 = null;
@@ -345,35 +346,44 @@ final class kk {
                 var7 = 0;
                 L4: while (true) {
                   if (var3 <= var7) {
+                    L5: {
+                      if (param1 == -4097) {
+                        break L5;
+                      } else {
+                        var11 = null;
+                        kk.a((il) null, -28, -91, (String) null, (mi) null);
+                        break L5;
+                      }
+                    }
                     stackOut_30_0 = var6;
                     stackIn_31_0 = stackOut_30_0;
                     break L0;
                   } else {
                     var8 = 1;
-                    L5: while (true) {
-                      L6: {
+                    L6: while (true) {
+                      L7: {
                         if (var8 + var7 >= var3) {
-                          break L6;
+                          break L7;
                         } else {
                           if (var20[var7] != var2_array[var7 + var8]) {
-                            break L6;
+                            break L7;
                           } else {
                             var8++;
-                            continue L5;
+                            continue L6;
                           }
                         }
                       }
-                      L7: {
+                      L8: {
                         var9 = dc.a(var20[var7], 32);
                         if (var9 == null) {
-                          break L7;
+                          break L8;
                         } else {
                           if (var6 == null) {
-                            var6 = (Object) (Object) db.a(hf.field_a, -126, new String[2]);
-                            break L7;
+                            var6 = (Object) (Object) db.a(hf.field_a, param1 ^ 4221, new String[2]);
+                            break L8;
                           } else {
-                            var6 = (Object) (Object) db.a(q.field_a, -46, new String[3]);
-                            break L7;
+                            var6 = (Object) (Object) db.a(q.field_a, param1 ^ 4141, new String[3]);
+                            break L8;
                           }
                         }
                       }
@@ -385,27 +395,27 @@ final class kk {
               } else {
                 var7 = var6_int;
                 var8 = 1 + var6_int;
-                L8: while (true) {
+                L9: while (true) {
                   if (var3 <= var8) {
-                    L9: {
+                    L10: {
                       if (var7 == var6_int) {
-                        break L9;
+                        break L10;
                       } else {
-                        break L9;
+                        break L10;
                       }
                     }
                     var6_int++;
                     continue L3;
                   } else {
-                    L10: {
+                    L11: {
                       if (var19[var8] >= var19[var7]) {
-                        break L10;
+                        break L11;
                       } else {
-                        break L10;
+                        break L11;
                       }
                     }
                     var8++;
-                    continue L8;
+                    continue L9;
                   }
                 }
               }
@@ -413,7 +423,7 @@ final class kk {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L11: {
+          L12: {
             var2 = decompiledCaughtException;
             stackOut_32_0 = (RuntimeException) var2;
             stackOut_32_1 = new StringBuilder().append("kk.G(");
@@ -428,7 +438,7 @@ final class kk {
               stackIn_35_0 = stackOut_34_0;
               stackIn_35_1 = stackOut_34_1;
               stackIn_35_2 = stackOut_34_2;
-              break L11;
+              break L12;
             } else {
               stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
               stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
@@ -436,22 +446,19 @@ final class kk {
               stackIn_35_0 = stackOut_33_0;
               stackIn_35_1 = stackOut_33_1;
               stackIn_35_2 = stackOut_33_2;
-              break L11;
+              break L12;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + 44 + -4097 + 41);
+          throw ci.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + 44 + param1 + 41);
         }
         return (String) (Object) stackIn_31_0;
     }
 
     final static boolean a(int param0) {
-        if (param0 != -28548) {
-            field_g = null;
-        }
-        return ~nb.field_G == ~nf.field_b.field_fc ? true : false;
+        return ~nb.field_G == ~nf.field_b.field_fc;
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int a(int param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         int stackIn_39_0 = 0;
@@ -626,13 +633,10 @@ final class kk {
 
     final static void a(gh param0, int param1, int param2, int[] param3, String param4, String param5, int param6, long param7, kg param8) {
         try {
-            if (param6 != 1073741824) {
-                field_a = null;
-            }
             la.field_c = param8;
             an.field_i = new dd(param0, param7, param4, param5, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "kk.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 44 + param7 + 44 + (param8 != null ? "{...}" : "null") + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "kk.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 44 + 1073741824 + 44 + param7 + 44 + (param8 != null ? "{...}" : "null") + 41);
         }
     }
 

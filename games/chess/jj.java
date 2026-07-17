@@ -9,7 +9,7 @@ final class jj {
     static um field_e;
     static hn field_a;
 
-    final static void c(int param0) {
+    final static void c() {
         nk var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -40,7 +40,7 @@ final class jj {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_c = null;
         field_a = null;
@@ -49,11 +49,11 @@ final class jj {
         field_d = null;
     }
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         return cd.field_x != null || an.field_c;
     }
 
-    final static boolean d(int param0) {
+    final static boolean d() {
         int var1 = 103;
         if (ch.field_gb == null) {
             return false;

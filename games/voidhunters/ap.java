@@ -10,7 +10,7 @@ final class ap extends rqa {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
         field_p = null;
         field_q = null;
@@ -85,7 +85,7 @@ final class ap extends rqa {
         return stackIn_3_0;
     }
 
-    final static boolean e(int param0) {
+    final static boolean e() {
         if (ov.field_o == null) {
             return false;
         }

@@ -330,13 +330,15 @@ abstract class eh extends ma {
               ((eh) this).b(-14239, 0, 0);
               if (param2 < -80) {
                 super.a(-param0 + -((eh) this).field_r, param1, -105, -((eh) this).field_u + -param3);
-                fd.a(28773);
+                int discarded$12 = 28773;
+                fd.a();
                 ud.field_c.b(param3 - -((eh) this).field_u, ((eh) this).field_r + param0, ((eh) this).field_N);
                 return;
               } else {
-                int discarded$4 = this.h(125);
+                int discarded$13 = this.h(125);
                 super.a(-param0 + -((eh) this).field_r, param1, -105, -((eh) this).field_u + -param3);
-                fd.a(28773);
+                int discarded$14 = 28773;
+                fd.a();
                 ud.field_c.b(param3 - -((eh) this).field_u, ((eh) this).field_r + param0, ((eh) this).field_N);
                 return;
               }
@@ -347,14 +349,16 @@ abstract class eh extends ma {
                 wb.b();
                 ((eh) this).b(-14239, 0, 0);
                 if (param2 >= -80) {
-                  int discarded$5 = this.h(125);
+                  int discarded$15 = this.h(125);
                   super.a(-param0 + -((eh) this).field_r, param1, -105, -((eh) this).field_u + -param3);
-                  fd.a(28773);
+                  int discarded$16 = 28773;
+                  fd.a();
                   ud.field_c.b(param3 - -((eh) this).field_u, ((eh) this).field_r + param0, ((eh) this).field_N);
                   return;
                 } else {
                   super.a(-param0 + -((eh) this).field_r, param1, -105, -((eh) this).field_u + -param3);
-                  fd.a(28773);
+                  int discarded$17 = 28773;
+                  fd.a();
                   ud.field_c.b(param3 - -((eh) this).field_u, ((eh) this).field_r + param0, ((eh) this).field_N);
                   return;
                 }
@@ -365,14 +369,16 @@ abstract class eh extends ma {
                   wb.b();
                   ((eh) this).b(-14239, 0, 0);
                   if (param2 >= -80) {
-                    int discarded$6 = this.h(125);
+                    int discarded$18 = this.h(125);
                     super.a(-param0 + -((eh) this).field_r, param1, -105, -((eh) this).field_u + -param3);
-                    fd.a(28773);
+                    int discarded$19 = 28773;
+                    fd.a();
                     ud.field_c.b(param3 - -((eh) this).field_u, ((eh) this).field_r + param0, ((eh) this).field_N);
                     return;
                   } else {
                     super.a(-param0 + -((eh) this).field_r, param1, -105, -((eh) this).field_u + -param3);
-                    fd.a(28773);
+                    int discarded$20 = 28773;
+                    fd.a();
                     ud.field_c.b(param3 - -((eh) this).field_u, ((eh) this).field_r + param0, ((eh) this).field_N);
                     return;
                   }
@@ -382,13 +388,15 @@ abstract class eh extends ma {
                   ((eh) this).b(-14239, 0, 0);
                   if (param2 < -80) {
                     super.a(-param0 + -((eh) this).field_r, param1, -105, -((eh) this).field_u + -param3);
-                    fd.a(28773);
+                    int discarded$21 = 28773;
+                    fd.a();
                     ud.field_c.b(param3 - -((eh) this).field_u, ((eh) this).field_r + param0, ((eh) this).field_N);
                     return;
                   } else {
-                    int discarded$7 = this.h(125);
+                    int discarded$22 = this.h(125);
                     super.a(-param0 + -((eh) this).field_r, param1, -105, -((eh) this).field_u + -param3);
-                    fd.a(28773);
+                    int discarded$23 = 28773;
+                    fd.a();
                     ud.field_c.b(param3 - -((eh) this).field_u, ((eh) this).field_r + param0, ((eh) this).field_N);
                     return;
                   }
@@ -406,25 +414,25 @@ abstract class eh extends ma {
         RuntimeException var3 = null;
         int var4 = 0;
         int stackIn_5_0 = 0;
-        int stackIn_12_0 = 0;
+        int stackIn_10_0 = 0;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_16_2 = null;
+        String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         int stackOut_4_0 = 0;
-        int stackOut_11_0 = 0;
+        int stackOut_9_0 = 0;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
         RuntimeException stackOut_13_0 = null;
         StringBuilder stackOut_13_1 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
         try {
           L0: {
             if (0 < param2) {
@@ -433,23 +441,16 @@ abstract class eh extends ma {
                 stackIn_5_0 = stackOut_4_0;
                 return stackIn_5_0;
               } else {
-                L1: {
-                  if (param0 == 28207) {
-                    break L1;
-                  } else {
-                    field_R = null;
-                    break L1;
-                  }
-                }
                 var3_int = -(int)(4294967296L % (long)param2) + -2147483648;
-                L2: while (true) {
+                L1: while (true) {
                   var4 = param1.nextInt();
                   if (var3_int > var4) {
-                    stackOut_11_0 = am.a(var4, param2, (byte) -40);
-                    stackIn_12_0 = stackOut_11_0;
+                    int discarded$2 = -40;
+                    stackOut_9_0 = am.a(var4, param2);
+                    stackIn_10_0 = stackOut_9_0;
                     break L0;
                   } else {
-                    continue L2;
+                    continue L1;
                   }
                 }
               }
@@ -459,35 +460,35 @@ abstract class eh extends ma {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var3 = decompiledCaughtException;
-            stackOut_13_0 = (RuntimeException) var3;
-            stackOut_13_1 = new StringBuilder().append("eh.MA(").append(param0).append(44);
-            stackIn_15_0 = stackOut_13_0;
-            stackIn_15_1 = stackOut_13_1;
-            stackIn_14_0 = stackOut_13_0;
-            stackIn_14_1 = stackOut_13_1;
+            stackOut_11_0 = (RuntimeException) var3;
+            stackOut_11_1 = new StringBuilder().append("eh.MA(").append(28207).append(44);
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "null";
-              stackIn_16_0 = stackOut_15_0;
-              stackIn_16_1 = stackOut_15_1;
-              stackIn_16_2 = stackOut_15_2;
-              break L3;
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L2;
             } else {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "{...}";
-              stackIn_16_0 = stackOut_14_0;
-              stackIn_16_1 = stackOut_14_1;
-              stackIn_16_2 = stackOut_14_2;
-              break L3;
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L2;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param2 + 41);
+          throw fk.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param2 + 41);
         }
-        return stackIn_12_0;
+        return stackIn_10_0;
     }
 
     final mf e(byte param0) {

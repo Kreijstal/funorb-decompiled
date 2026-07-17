@@ -75,7 +75,8 @@ final class tf {
                       } else {
                         tp.a(param1 ^ 1041792331, 92.0f, he.field_n);
                         g.a(fi.d(false), param1 ^ 1041775506);
-                        vf.c((byte) 117);
+                        int discarded$4 = 117;
+                        vf.c();
                         kf.field_p = null;
                         nf.d(0);
                         stackOut_17_0 = 0;
@@ -86,7 +87,8 @@ final class tf {
                       tp.a(param1 ^ 1041792331, 84.0f, ib.field_i);
                       g.a(fi.d(false), 18131);
                       sl.a((byte) -97, param0);
-                      bl.c((byte) -101);
+                      int discarded$5 = -101;
+                      bl.c();
                       gh.field_c = null;
                       np.field_A = null;
                       nf.d(param1 + -1041792321);
@@ -97,7 +99,8 @@ final class tf {
                   } else {
                     tp.a(10, 80.0f, ik.field_a);
                     g.a(fi.d(false), 18131);
-                    mi.a(-114);
+                    int discarded$6 = -114;
+                    mi.a();
                     tl.field_k = null;
                     bl.field_t = null;
                     nf.d(0);
@@ -110,7 +113,8 @@ final class tf {
                 ck.h(-116);
                 tp.a(10, 75.0f, i.field_s);
                 g.a(fi.d(false), param1 + -1041774190);
-                ra.b(9);
+                int discarded$7 = 9;
+                ra.b();
                 ia.field_W = null;
                 nf.d(0);
                 stackOut_4_0 = 0;
@@ -157,11 +161,12 @@ final class tf {
     }
 
     final void b(int param0, int param1, int param2) {
-        bp.a(param0, ((tf) this).field_c, param2, (byte) 99);
+        int discarded$7 = 99;
+        bp.a(param0, ((tf) this).field_c, param2);
         ((tf) this).field_b.h(param2, param0);
         if (param1 != 32) {
             Object var5 = null;
-            boolean discarded$0 = tf.a((java.applet.Applet) null, -18);
+            boolean discarded$8 = tf.a((java.applet.Applet) null, -18);
         }
     }
 
@@ -343,7 +348,7 @@ final class tf {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_g = null;
         field_k = null;
         field_j = null;
@@ -355,7 +360,8 @@ final class tf {
     }
 
     private static void $cfr$clinit() {
-        field_k = rb.b(8421504, 4210752, 64);
+        int discarded$0 = 64;
+        field_k = rb.b(8421504, 4210752);
         field_g = "CLOSE";
     }
 }

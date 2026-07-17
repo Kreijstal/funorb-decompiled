@@ -65,7 +65,7 @@ final class sib extends mab implements java.awt.image.ImageProducer, java.awt.im
         }
     }
 
-    final static String a(int param0, ds param1, byte param2) {
+    final static String a(int param0, ds param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4_int = 0;
@@ -98,10 +98,10 @@ final class sib extends mab implements java.awt.image.ImageProducer, java.awt.im
             L0: {
               L1: {
                 var4_int = param1.f(50);
-                if (param0 >= var4_int) {
+                if (80 >= var4_int) {
                   break L1;
                 } else {
-                  var4_int = param0;
+                  var4_int = 80;
                   break L1;
                 }
               }
@@ -125,7 +125,7 @@ final class sib extends mab implements java.awt.image.ImageProducer, java.awt.im
           L2: {
             var3 = (RuntimeException) (Object) decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var3;
-            stackOut_7_1 = new StringBuilder().append("sib.B(").append(param0).append(44);
+            stackOut_7_1 = new StringBuilder().append("sib.B(").append(80).append(44);
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;

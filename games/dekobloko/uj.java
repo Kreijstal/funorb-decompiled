@@ -10,7 +10,7 @@ final class uj {
     static String field_c;
     static ck[][] field_d;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         int var6_int = 0;
         int var7 = 0;
@@ -28,7 +28,7 @@ final class uj {
           L0: {
             L1: {
               var6_int = param1 + (2 + (485 + param4) + 16);
-              var7 = -37 / ((-64 - param5) / 62);
+              var7 = -37;
               re.field_x.a(-6 + var6_int, 0, 3, -6 + ea.field_D.field_N, 3);
               var8 = -5 + re.field_x.field_N;
               sk.field_c.a(2 + (485 + param4) - -param1, 0, -param0 + var8, param0, 5);
@@ -86,11 +86,11 @@ final class uj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw dh.a((Throwable) (Object) var6, "uj.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw dh.a((Throwable) (Object) var6, "uj.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + -128 + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_f = null;
         field_c = null;
@@ -133,53 +133,49 @@ final class uj {
             }
           }
         }
-        if (param0 == 5) {
-          L2: {
-            if (param1 != 30000) {
+        L2: {
+          if (param1 != 30000) {
+            break L2;
+          } else {
+            if (d.field_c <= 0) {
               break L2;
             } else {
-              if (d.field_c <= 0) {
-                break L2;
-              } else {
-                int fieldTemp$8 = d.field_c - 1;
-                d.field_c = d.field_c - 1;
-                var2_ref_byte__ = gk.field_yb[fieldTemp$8];
-                gk.field_yb[d.field_c] = null;
-                return var2_ref_byte__;
-              }
+              int fieldTemp$8 = d.field_c - 1;
+              d.field_c = d.field_c - 1;
+              var2_ref_byte__ = gk.field_yb[fieldTemp$8];
+              gk.field_yb[d.field_c] = null;
+              return var2_ref_byte__;
             }
           }
-          L3: {
-            if (null != jg.field_b) {
-              var2 = 0;
-              L4: while (true) {
-                if (ln.field_d.length <= var2) {
-                  break L3;
-                } else {
-                  if (ln.field_d[var2] == param1) {
-                    if (wa.field_d[var2] > 0) {
-                      wa.field_d[var2] = wa.field_d[var2] - 1;
-                      var3 = jg.field_b[var2][wa.field_d[var2] - 1];
-                      jg.field_b[var2][wa.field_d[var2]] = null;
-                      return var3;
-                    } else {
-                      var2++;
-                      continue L4;
-                    }
+        }
+        L3: {
+          if (null != jg.field_b) {
+            var2 = 0;
+            L4: while (true) {
+              if (ln.field_d.length <= var2) {
+                break L3;
+              } else {
+                if (ln.field_d[var2] == param1) {
+                  if (wa.field_d[var2] > 0) {
+                    wa.field_d[var2] = wa.field_d[var2] - 1;
+                    var3 = jg.field_b[var2][wa.field_d[var2] - 1];
+                    jg.field_b[var2][wa.field_d[var2]] = null;
+                    return var3;
                   } else {
                     var2++;
                     continue L4;
                   }
+                } else {
+                  var2++;
+                  continue L4;
                 }
               }
-            } else {
-              break L3;
             }
+          } else {
+            break L3;
           }
-          return new byte[param1];
-        } else {
-          return null;
         }
+        return new byte[param1];
     }
 
     static {

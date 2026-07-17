@@ -10,20 +10,22 @@ final class ki {
         if (param0 >= -36) {
           field_b = null;
           ql.i(34);
-          al.a((byte) -41);
+          int discarded$4 = -41;
+          al.a();
           up.field_z = null;
           bm.g(0);
           return;
         } else {
           ql.i(34);
-          al.a((byte) -41);
+          int discarded$5 = -41;
+          al.a();
           up.field_z = null;
           bm.g(0);
           return;
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
     }

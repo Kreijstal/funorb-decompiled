@@ -5,7 +5,7 @@ final class gh {
     static String field_b;
     static int[] field_a;
 
-    final static Boolean a(byte param0) {
+    final static Boolean a() {
         Boolean var1 = ui.field_b;
         ui.field_b = null;
         return var1;
@@ -16,7 +16,7 @@ final class gh {
         field_a = null;
     }
 
-    final static void a(int param0, int param1, int param2, oh[] param3, int param4) {
+    final static void a(int param0, int param1, int param2, oh[] param3) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         int var6 = 0;
@@ -113,12 +113,9 @@ final class gh {
                 sj.field_g = null;
             }
         }
-        if (param0 <= 76) {
-            field_a = null;
-        }
     }
 
-    final static String a(CharSequence[] param0, int param1, int param2, int param3) {
+    final static String a(CharSequence[] param0, int param1, int param2) {
         CharSequence var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
@@ -163,7 +160,7 @@ final class gh {
               return stackIn_4_0;
             } else {
               if (param2 == 1) {
-                var10 = param0[param1];
+                var10 = param0[0];
                 var4 = var10;
                 if (var4 != null) {
                   stackOut_10_0 = ((Object) (Object) var10).toString();
@@ -175,13 +172,13 @@ final class gh {
                   return stackIn_9_0;
                 }
               } else {
-                var4_int = param1 + param2;
+                var4_int = param2;
                 var5 = 0;
-                var6_int = param1;
+                var6_int = 0;
                 L1: while (true) {
                   if (~var4_int >= ~var6_int) {
                     var6 = new StringBuilder(var5);
-                    var7 = param1;
+                    var7 = 0;
                     L2: while (true) {
                       if (~var7 <= ~var4_int) {
                         stackOut_24_0 = var6.toString();
@@ -248,7 +245,7 @@ final class gh {
               break L5;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 44 + param1 + 44 + param2 + 44 + -2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 44 + 0 + 44 + param2 + 44 + -2 + 41);
         }
         return stackIn_25_0;
     }

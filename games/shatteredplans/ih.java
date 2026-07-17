@@ -105,7 +105,7 @@ final class ih {
         return stackIn_4_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_a = null;
         field_g = null;
@@ -117,7 +117,7 @@ final class ih {
         throw new IllegalStateException();
     }
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         int var1 = 0;
         return lg.field_e != null ? true : false;
     }

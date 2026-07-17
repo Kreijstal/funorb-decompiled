@@ -64,7 +64,7 @@ final class wo {
         }
     }
 
-    private final void i(byte param0) {
+    private final void i() {
         ((wo) this).field_A = false;
     }
 
@@ -1743,7 +1743,8 @@ final class wo {
                               } else {
                                 ((wo) this).field_J = 8;
                                 if (!((wo) this).field_i) {
-                                  db.a(false, 12, (byte) 36, nq.field_D, false, 12);
+                                  int discarded$2 = 12;
+                                  db.a(false, 12, (byte) 36, nq.field_D, false);
                                   break L1;
                                 } else {
                                   break L1;
@@ -1813,7 +1814,8 @@ final class wo {
           }
         }
         L6: {
-          this.i((byte) -117);
+          int discarded$3 = -117;
+          this.i();
           if (9 == ((wo) this).field_J) {
             break L6;
           } else {

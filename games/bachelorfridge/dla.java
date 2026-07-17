@@ -82,12 +82,12 @@ final class dla extends bf {
         }
     }
 
-    final static void b(int param0) {
-        Object var2 = null;
-        rt.a(sc.field_n, (String) null, 9);
+    final static void b() {
+        int discarded$0 = 9;
+        rt.a(sc.field_n, (String) null);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_i = null;
         field_l = null;
         field_m = null;
@@ -116,9 +116,9 @@ final class dla extends bf {
                 }
                 var5_int++;
             }
-            var6 = -20 / ((8 - param2) / 33);
+            var6 = 20;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "dla.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "dla.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 72 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
         }
     }
 

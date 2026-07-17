@@ -83,7 +83,8 @@ final class ei extends kn implements sh {
                         }
                       }
                     } else {
-                      ((ei) this).field_O[var4_int] = dn.a((CharSequence) (Object) param1[var4_int], false).replace(' ', ' ');
+                      int discarded$1 = 0;
+                      ((ei) this).field_O[var4_int] = dn.a((CharSequence) (Object) param1[var4_int]).replace(' ', ' ');
                       var4_int++;
                       continue L2;
                     }

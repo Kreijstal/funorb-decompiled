@@ -8,7 +8,7 @@ final class ll {
     static String field_c;
     static lg[] field_e;
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_c = null;
         field_a = null;

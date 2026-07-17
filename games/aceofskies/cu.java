@@ -30,12 +30,8 @@ final class cu extends wt implements ws {
     }
 
     final static boolean a(byte param0, int param1, int param2) {
-        if (param0 < 101) {
-          cu.c((byte) 81);
-          return (wc.a((byte) -101, param1, param2) | dk.a(param1, param2, (byte) -84) | qh.a(param1, param2, (byte) -3)) & tt.a(param1, true, param2);
-        } else {
-          return (wc.a((byte) -101, param1, param2) | dk.a(param1, param2, (byte) -84) | qh.a(param1, param2, (byte) -3)) & tt.a(param1, true, param2);
-        }
+        int discarded$0 = -3;
+        return (wc.a((byte) -101, param1, param2) | dk.a(param1, param2, (byte) -84) | qh.a(param1, param2)) & tt.a(param1, true, param2);
     }
 
     public final void a(byte param0) {

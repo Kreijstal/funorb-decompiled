@@ -307,35 +307,27 @@ final class uf {
                       break L0;
                     } else {
                       var16 = var13;
-                      if (var16 <= var14) {
-                        if (((uf) this).field_C[var15][var16] == -param2 + 1) {
-                          var10++;
-                          if (param0) {
-                            L8: while (true) {
-                              ((uf) this).field_C[var15][var16] = (byte)param2;
+                      L8: while (true) {
+                        if (var16 <= var14) {
+                          if (((uf) this).field_C[var15][var16] == -param2 + 1) {
+                            var10++;
+                            if (param0) {
                               L9: while (true) {
-                                L10: {
-                                  if (param5) {
-                                    var10++;
-                                    var16++;
-                                    break L10;
-                                  } else {
-                                    var16++;
-                                    break L10;
-                                  }
-                                }
-                                L11: while (true) {
+                                ((uf) this).field_C[var15][var16] = (byte)param2;
+                                var16++;
+                                L10: while (true) {
                                   if (var16 <= var14) {
                                     if (((uf) this).field_C[var15][var16] == -param2 + 1) {
                                       var10++;
                                       if (param0) {
-                                        continue L8;
-                                      } else {
                                         continue L9;
+                                      } else {
+                                        var16++;
+                                        continue L10;
                                       }
                                     } else {
                                       var16++;
-                                      continue L11;
+                                      continue L10;
                                     }
                                   } else {
                                     var15++;
@@ -343,90 +335,23 @@ final class uf {
                                       break L0;
                                     } else {
                                       var16 = var13;
-                                      continue L11;
+                                      continue L10;
                                     }
                                   }
                                 }
-                              }
-                            }
-                          } else {
-                            L12: while (true) {
-                              L13: {
-                                if (param5) {
-                                  var10++;
-                                  var16++;
-                                  break L13;
-                                } else {
-                                  var16++;
-                                  break L13;
-                                }
-                              }
-                              L14: while (true) {
-                                if (var16 <= var14) {
-                                  if (((uf) this).field_C[var15][var16] == -param2 + 1) {
-                                    var10++;
-                                    if (param0) {
-                                      ((uf) this).field_C[var15][var16] = (byte)param2;
-                                      continue L12;
-                                    } else {
-                                      continue L12;
-                                    }
-                                  } else {
-                                    var16++;
-                                    continue L14;
-                                  }
-                                } else {
-                                  var15++;
-                                  if (var12 < var15) {
-                                    break L0;
-                                  } else {
-                                    var16 = var13;
-                                    continue L14;
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        } else {
-                          var16++;
-                          L15: while (true) {
-                            if (var16 <= var14) {
-                              if (((uf) this).field_C[var15][var16] == -param2 + 1) {
-                                L16: {
-                                  var10++;
-                                  if (param0) {
-                                    ((uf) this).field_C[var15][var16] = (byte)param2;
-                                    break L16;
-                                  } else {
-                                    break L16;
-                                  }
-                                }
-                                if (param5) {
-                                  var10++;
-                                  var16++;
-                                  continue L15;
-                                } else {
-                                  var16++;
-                                  continue L15;
-                                }
-                              } else {
-                                var16++;
-                                continue L15;
                               }
                             } else {
-                              var15++;
-                              if (var12 < var15) {
-                                break L0;
-                              } else {
-                                var16 = var13;
-                                continue L15;
-                              }
+                              var16++;
+                              continue L8;
                             }
+                          } else {
+                            var16++;
+                            continue L8;
                           }
+                        } else {
+                          var15++;
+                          break L1;
                         }
-                      } else {
-                        var15++;
-                        break L1;
                       }
                     }
                   }
@@ -435,85 +360,77 @@ final class uf {
                 }
               }
             }
-            L17: {
+            L11: {
               var11 = -1 + param6;
               if (var11 >= 0) {
-                break L17;
+                break L11;
               } else {
                 var11 = 0;
-                break L17;
+                break L11;
               }
             }
-            L18: {
+            L12: {
               if (param4 > 38) {
-                break L18;
+                break L12;
               } else {
                 ((uf) this).a((byte) 123);
-                break L18;
+                break L12;
               }
             }
-            L19: {
+            L13: {
               var12 = 1 + param6;
               if (var12 < ((uf) this).field_C.length) {
-                break L19;
+                break L13;
               } else {
                 var12 = -1 + ((uf) this).field_C.length;
-                break L19;
+                break L13;
               }
             }
-            L20: {
+            L14: {
               var13 = -1 + param1;
               if (var13 >= 0) {
-                break L20;
+                break L14;
               } else {
                 var13 = 0;
-                break L20;
+                break L14;
               }
             }
-            L21: {
+            L15: {
               var14 = param1 + 1;
               if (var14 >= ((uf) this).field_C[0].length) {
                 var14 = ((uf) this).field_C[0].length + -1;
-                break L21;
+                break L15;
               } else {
-                break L21;
+                break L15;
               }
             }
             var15 = var11;
             break L1;
           }
-          L22: while (true) {
+          L16: while (true) {
             if (var12 < var15) {
               break L0;
             } else {
               var16 = var13;
-              L23: while (true) {
+              L17: while (true) {
                 if (var16 <= var14) {
                   if (((uf) this).field_C[var15][var16] == -param2 + 1) {
-                    L24: {
-                      var10++;
-                      if (param0) {
-                        ((uf) this).field_C[var15][var16] = (byte)param2;
-                        break L24;
-                      } else {
-                        break L24;
-                      }
-                    }
-                    if (param5) {
-                      var10++;
+                    var10++;
+                    if (param0) {
+                      ((uf) this).field_C[var15][var16] = (byte)param2;
                       var16++;
-                      continue L23;
+                      continue L17;
                     } else {
                       var16++;
-                      continue L23;
+                      continue L17;
                     }
                   } else {
                     var16++;
-                    continue L23;
+                    continue L17;
                   }
                 } else {
                   var15++;
-                  continue L22;
+                  continue L16;
                 }
               }
             }

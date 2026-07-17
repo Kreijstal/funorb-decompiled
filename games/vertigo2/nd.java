@@ -16,7 +16,7 @@ final class nd extends c {
         field_j = null;
     }
 
-    final static void a(tn param0, int param1) {
+    final static void a(tn param0) {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -105,7 +105,8 @@ final class nd extends c {
               if (param0.field_s != 0) {
                 break L2;
               } else {
-                if (ja.a(-1)) {
+                int discarded$2 = -1;
+                if (ja.a()) {
                   break L2;
                 } else {
                   if (gd.field_j != null) {
@@ -137,7 +138,8 @@ final class nd extends c {
               if (param0.field_s != 1) {
                 break L4;
               } else {
-                if (ja.a(-1)) {
+                int discarded$3 = -1;
+                if (ja.a()) {
                   break L4;
                 } else {
                   if (null == gd.field_j) {

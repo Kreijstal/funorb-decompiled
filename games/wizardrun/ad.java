@@ -16,7 +16,8 @@ final class ad {
         if (param3 != 72) {
             return -89;
         }
-        return tf.a(-20232);
+        int discarded$0 = -20232;
+        return tf.a();
     }
 
     final void a(byte param0) {
@@ -294,7 +295,7 @@ final class ad {
         return stackIn_10_0;
     }
 
-    final static sf a(String param0, int param1) {
+    final static sf a(String param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -320,7 +321,8 @@ final class ad {
               if (param0.equals((Object) (Object) we.field_c.b((byte) 8))) {
                 break L0;
               } else {
-                we.field_c = ql.a(param0, false);
+                int discarded$2 = 0;
+                we.field_c = ql.a(param0);
                 break L0;
               }
             }
@@ -364,7 +366,7 @@ final class ad {
         field_c = null;
     }
 
-    final static boolean a(CharSequence param0, byte param1) {
+    final static boolean a(CharSequence param0) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_5_0 = null;
@@ -386,7 +388,9 @@ final class ad {
         String stackOut_5_2 = null;
         try {
           L0: {
-            stackOut_2_0 = mi.a(param0, false, 0);
+            int discarded$4 = 0;
+            int discarded$5 = 0;
+            stackOut_2_0 = mi.a(param0);
             stackIn_3_0 = stackOut_2_0;
             break L0;
           }

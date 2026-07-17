@@ -567,13 +567,14 @@ final class kl extends wf {
           if (param0 >= 95) {
             break L0;
           } else {
-            boolean discarded$2 = kl.d((byte) -4);
+            boolean discarded$6 = kl.d((byte) -4);
             break L0;
           }
         }
         L1: {
           L2: {
-            if (w.d(true)) {
+            int discarded$7 = 1;
+            if (w.d()) {
               break L2;
             } else {
               if (0 < es.field_m) {
@@ -592,13 +593,13 @@ final class kl extends wf {
         return stackIn_7_0 != 0;
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_s = null;
         field_q = null;
         field_r = null;
     }
 
-    final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void a(byte param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int var7_int = 0;
         int var8 = 0;
@@ -618,7 +619,7 @@ final class kl extends wf {
         try {
           L0: {
             L1: {
-              var7_int = param3 & 16711935;
+              var7_int = 16711680;
               if (param5 > 100) {
                 param5 = 100;
                 break L1;
@@ -626,105 +627,97 @@ final class kl extends wf {
                 break L1;
               }
             }
-            gf.f(3 + param2, param1, 101, 16777215);
-            var8 = param3 & 65280;
-            gf.a(param2 + 2, 1 + param1, 16777215);
-            gf.f(3 + param2, 1 + param1, 99, 0);
-            gf.a(3 + (100 + param2), 1 + param1, 16777215);
+            gf.f(18, 455, 101, 16777215);
+            var8 = 0;
+            gf.a(17, 456, 16777215);
+            gf.f(18, 456, 99, 0);
+            gf.a(118, 456, 16777215);
             var9 = 2;
             L2: while (true) {
               if (var9 >= 3) {
-                L3: {
-                  if (param0 >= 12) {
-                    break L3;
-                  } else {
-                    field_r = null;
-                    break L3;
-                  }
-                }
                 var9 = 3;
-                L4: while (true) {
-                  if (var9 >= -3 + param4) {
-                    var9 = param4 - 3;
-                    L5: while (true) {
-                      if (var9 >= -2 + param4) {
-                        gf.f(param2, param1 - (-param4 - -1), 101, 16777215);
-                        gf.a(param2, param1 - -param4 - 2, 16777215);
-                        gf.f(param2 - -1, param1 + (param4 + -2), 99, 0);
-                        gf.a(-3 + param2 + 104, param1 + param4 + -2, 16777215);
+                L3: while (true) {
+                  if (var9 >= 7) {
+                    var9 = 7;
+                    L4: while (true) {
+                      if (var9 >= 8) {
+                        gf.f(15, 464, 101, 16777215);
+                        gf.a(15, 463, 16777215);
+                        gf.f(16, 463, 99, 0);
+                        gf.a(116, 463, 16777215);
                         break L0;
                       } else {
-                        L6: {
-                          var10 = (var9 * 256 - 512) / (param4 + -4);
+                        L5: {
+                          var10 = (var9 * 256 - 512) / 6;
                           var11 = (16711680 & var8 * (256 + -var10) + 65280 * (var10 >> 1) | var7_int * (256 - var10) + 16711935 * (var10 >> 1) & -16711936) >>> 8;
                           var12 = ((var10 >> 1) * 16711935 + 1073758208 + -(var10 * 4194368) & -16711936 | (var10 >> 1) * 65280 + 16384 * (-var10 + 256) & 16711680) >>> 8;
                           var13 = 8355711 & var12 >> 1;
-                          var14 = var9 + param1;
-                          var15 = -var9 + (param4 + param2 + (param5 - 1));
+                          var14 = var9 + 455;
+                          var15 = -var9 + (25 + (param5 - 1));
                           var16 = var15 + 5;
-                          var17 = -3 + param4 + (param2 - -100) - (-2 - -var9);
-                          gf.a(param2, var14, 16777215);
+                          var17 = 122 - (-2 - -var9);
+                          gf.a(15, var14, 16777215);
                           if (var17 >= var16) {
-                            break L6;
+                            break L5;
                           } else {
                             var16 = var17;
-                            break L6;
+                            break L5;
                           }
                         }
-                        gf.a(1 + param2, var14, 0);
-                        gf.f(2 + param2, var14, var15 - (param2 + 2), var11);
+                        gf.a(16, var14, 0);
+                        gf.f(17, var14, var15 - 17, var11);
                         gf.f(var15, var14, -var15 + var16, var13);
                         gf.f(var16, var14, -var16 + var17, var12);
                         gf.a(var17, var14, 16777215);
                         gf.a(-1 + var17, var14, 0);
                         var9++;
-                        continue L5;
+                        continue L4;
                       }
                     }
                   } else {
-                    L7: {
-                      var10 = (-2 + var9) * 256 / (param4 - 4);
+                    L6: {
+                      var10 = (-2 + var9) * 256 / 6;
                       var11 = (-16711936 & (var10 >> 1) * 16711935 + (-var10 + 256) * var7_int | (-var10 + 256) * var8 + 65280 * (var10 >> 1) & 16711680) >>> 8;
                       var12 = (16711680 & (-var10 + 256) * 8192 + 49152 * (var10 >> 1) | -16711936 & 2097184 * (256 - var10) + 12583104 * (var10 >> 1)) >>> 8;
                       var13 = (16711422 & var12) >> 1;
-                      var14 = var9 + param1;
-                      var15 = param2 - -param5 + 3;
+                      var14 = var9 + 455;
+                      var15 = 15 - -param5 + 3;
                       var16 = var15 + 5;
-                      var17 = 100 + param2 - -3;
+                      var17 = 118;
                       if (var17 < var16) {
                         var16 = var17;
-                        break L7;
+                        break L6;
                       } else {
-                        break L7;
+                        break L6;
                       }
                     }
-                    gf.a(param2, var14, 16777215);
-                    gf.a(1 + param2, var14, 0);
-                    gf.f(2 + param2, var14, var15 - param2 - 2, var11);
+                    gf.a(15, var14, 16777215);
+                    gf.a(16, var14, 0);
+                    gf.f(17, var14, var15 - 17, var11);
                     gf.f(var15, var14, var16 - var15, var13);
                     gf.f(var16, var14, -var16 + var17, var12);
-                    gf.a(3 + (100 + param2), var14, 16777215);
-                    gf.a(2 + (100 + param2), var14, 0);
+                    gf.a(118, var14, 16777215);
+                    gf.a(117, var14, 0);
                     var9++;
-                    continue L4;
+                    continue L3;
                   }
                 }
               } else {
-                L8: {
-                  var10 = (var9 * 256 + -512) / (param4 - 4);
+                L7: {
+                  var10 = (var9 * 256 + -512) / 6;
                   var11 = (-16711936 & (var10 >> 1) * 16711935 + (-var10 + 256) * var7_int | 16711680 & (256 - var10) * var8 + (var10 >> 1) * 65280) >>> 8;
                   var12 = (-16711936 & 12583104 * (var10 >> 1) + 536879104 - 2097184 * var10 | 16711680 & (var10 >> 1) * 49152 + (2097152 - var10 * 8192)) >>> 8;
                   var13 = 8355711 & var12 >> 1;
-                  var14 = param1 + var9;
-                  var15 = param2 - (-3 + var9);
-                  var16 = 3 + param5 + param2;
+                  var14 = 455 + var9;
+                  var15 = 15 - (-3 + var9);
+                  var16 = 3 + param5 + 15;
                   var17 = var16 - -5;
-                  var18 = 100 + param2 + 3;
+                  var18 = 118;
                   if (var17 > var18) {
                     var17 = var18;
-                    break L8;
+                    break L7;
                   } else {
-                    break L8;
+                    break L7;
                   }
                 }
                 gf.a(var15, var14, 16777215);
@@ -742,7 +735,7 @@ final class kl extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw r.a((Throwable) (Object) var7, "kl.D(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + 100 + 41);
+          throw r.a((Throwable) (Object) var7, "kl.D(" + 73 + 44 + 455 + 44 + 15 + 44 + 16711680 + 44 + 10 + 44 + param5 + 44 + 100 + 41);
         }
     }
 

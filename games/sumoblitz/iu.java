@@ -145,15 +145,12 @@ final class iu implements mh {
     final static void a(int param0, km param1, int param2) {
         pl var3 = null;
         try {
-            if (param0 != -1) {
-                field_e = 23;
-            }
             var3 = as.field_v;
-            var3.g(param2, param0 ^ -9);
+            var3.g(param2, 8);
             var3.b((byte) 85, param1.field_n);
             var3.b((byte) 23, param1.field_l);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "iu.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "iu.B(" + -1 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 

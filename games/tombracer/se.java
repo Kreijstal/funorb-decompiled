@@ -6,16 +6,17 @@ final class se extends wv {
     static String field_r;
     static String field_q;
 
-    final static void f(byte param0) {
+    final static void f() {
         tga.field_a.f(8, 16384);
     }
 
-    final static void d(byte param0) {
+    final static void d() {
         String var2 = null;
         if (!(null == wra.field_b)) {
             var2 = wra.field_b;
             String var1 = var2;
-            wja.a(gl.a((byte) 86, mu.field_Bb, new String[1]), 15165);
+            int discarded$0 = 15165;
+            wja.a(gl.a((byte) 86, mu.field_Bb, new String[1]));
             wra.field_b = null;
         }
     }
@@ -31,7 +32,7 @@ final class se extends wv {
         super.a(param0, param1);
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         int var1 = 0;
         field_q = null;
         field_s = null;

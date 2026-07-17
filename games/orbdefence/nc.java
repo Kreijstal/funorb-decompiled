@@ -42,7 +42,7 @@ final class nc extends sf {
         throw new Error();
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_ab = null;
         field_Z = null;
         field_cb = null;

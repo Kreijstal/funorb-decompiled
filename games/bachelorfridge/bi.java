@@ -232,7 +232,7 @@ abstract class bi extends jla {
               break L7;
             }
             L9: {
-              if (param5 < param2 + var16 + param4) {
+              if (param5 < 20 + var16 + param4) {
                 param4 = param4 + (param5 - 20 - (param4 + var16));
                 break L9;
               } else {
@@ -318,7 +318,7 @@ abstract class bi extends jla {
           L15: {
             var10 = decompiledCaughtException;
             stackOut_54_0 = (RuntimeException) var10;
-            stackOut_54_1 = new StringBuilder().append("bi.S(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_54_1 = new StringBuilder().append("bi.S(").append(param0).append(44).append(param1).append(44).append(20).append(44);
             stackIn_56_0 = stackOut_54_0;
             stackIn_56_1 = stackOut_54_1;
             stackIn_55_0 = stackOut_54_0;
@@ -345,12 +345,12 @@ abstract class bi extends jla {
         }
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_h = null;
         field_i = null;
     }
 
-    final static void o(int param0) {
+    final static void o() {
         gja.field_m.f((byte) -66);
         if (null == hp.field_d) {
             hp.field_d = new hga(gja.field_m, at.field_i);

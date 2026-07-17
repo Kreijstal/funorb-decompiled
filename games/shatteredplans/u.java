@@ -7,16 +7,13 @@ final class u {
     static int[] field_c;
     static int field_a;
 
-    public static void b(int param0) {
+    public static void b() {
         field_b = null;
-        if (param0 > -22) {
-            return;
-        }
         field_d = null;
         field_c = null;
     }
 
-    final static void a(boolean param0, boolean param1) {
+    final static void a(boolean param0) {
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         if (vr.field_c == -3) {
             ts.a(6493);
@@ -40,42 +37,60 @@ final class u {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var6 = 0;
-        param0 = param0 >> 4;
-        param3 = param3 >> 4;
-        param2 = param2 >> 4;
-        param4 = param4 >> 4;
-        if (param3 > param2) {
+        L0: {
+          param0 = param0 >> 4;
+          param3 = param3 >> 4;
+          param2 = param2 >> 4;
+          param4 = param4 >> 4;
+          if (param3 <= param2) {
+            break L0;
+          } else {
             var6 = param3;
             param3 = param2;
             param2 = var6;
             var6 = param0;
             param0 = param4;
             param4 = var6;
+            break L0;
+          }
         }
-        if (param2 < gf.field_i) {
+        if (param2 >= gf.field_i) {
+          if (param3 <= gf.field_l) {
+            if (param4 >= param0) {
+              if (param4 >= gf.field_a) {
+                if (gf.field_f < param0) {
+                  return;
+                } else {
+                  gf.g(param3, param0, param2, param4, param5);
+                  return;
+                }
+              } else {
+                return;
+              }
+            } else {
+              var6 = param3;
+              param3 = param2;
+              param2 = var6;
+              var6 = param0;
+              param0 = param4;
+              param4 = var6;
+              if (param4 >= gf.field_a) {
+                if (gf.field_f < param0) {
+                  return;
+                } else {
+                  gf.g(param3, param0, param2, param4, param5);
+                  return;
+                }
+              } else {
+                return;
+              }
+            }
+          } else {
             return;
+          }
+        } else {
+          return;
         }
-        if (param3 > gf.field_l) {
-            return;
-        }
-        if (param4 < param0) {
-            var6 = param3;
-            param3 = param2;
-            param2 = var6;
-            var6 = param0;
-            param0 = param4;
-            param4 = var6;
-        }
-        if (param1 > -7) {
-            return;
-        }
-        if (param4 < gf.field_a) {
-            return;
-        }
-        if (!(gf.field_f >= param0)) {
-            return;
-        }
-        gf.g(param3, param0, param2, param4, param5);
     }
 
     final static void c(int param0) {
@@ -98,7 +113,7 @@ final class u {
         }
     }
 
-    final static int a(int param0) {
+    final static int a() {
         lg.field_c.c(123);
         if (!vp.field_o.d(0)) {
             return mh.b((byte) 115);

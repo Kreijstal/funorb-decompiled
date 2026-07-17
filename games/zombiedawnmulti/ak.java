@@ -67,10 +67,6 @@ final class ak {
     }
 
     final static int a(int param0, int param1, boolean param2, int param3) {
-        if (param1 != -5) {
-            field_a = null;
-            return lk.b(false);
-        }
         return lk.b(false);
     }
 
@@ -160,7 +156,7 @@ final class ak {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         field_d = null;
@@ -173,7 +169,7 @@ final class ak {
         tb.field_s.a(param0 + param3 + -5, param4, param1);
         rp.field_r[0].c(param3, param4);
         rp.field_r[1].c(param0 + param3 + -5, param4);
-        rp.field_r[2].c(param3, param2 + param4 - -param1);
+        rp.field_r[2].c(param3, -5 + param4 - -param1);
         rp.field_r[3].c(param3 + param0 - 5, -5 + param4 + param1);
     }
 

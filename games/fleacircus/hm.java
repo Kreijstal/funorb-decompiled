@@ -13,7 +13,7 @@ abstract class hm {
     static String field_f;
     static int field_d;
 
-    public static void b(int param0) {
+    public static void b() {
         field_g = null;
         field_f = null;
         field_c = null;
@@ -21,7 +21,7 @@ abstract class hm {
         field_b = null;
     }
 
-    final static boolean a(gm param0, gm param1, boolean param2) {
+    final static boolean a(gm param0, gm param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

@@ -10,7 +10,7 @@ final class he {
     static String field_c;
     static String field_d;
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_b = null;
         field_f = null;
@@ -21,14 +21,12 @@ final class he {
     }
 
     final static void a(int param0, String param1) {
-        if (param0 != 1) {
-            return;
-        }
         try {
             vi.a((byte) 84, param1);
-            jn.a(bj.field_qb, false, param0 + -2);
+            int discarded$0 = -1;
+            jn.a(bj.field_qb, false);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) (Object) runtimeException, "he.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw aa.a((Throwable) (Object) runtimeException, "he.A(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

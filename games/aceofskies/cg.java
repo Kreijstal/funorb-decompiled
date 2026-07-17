@@ -19,7 +19,7 @@ final class cg extends ua implements tl {
         }
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_p = null;
     }
 
@@ -90,13 +90,14 @@ final class cg extends ua implements tl {
     final static void a(boolean param0, gk param1, gk param2, boolean param3, gk param4) {
         try {
             gm.field_x = od.a("", 66);
-            gm.field_x.a(param0, false);
+            gm.field_x.a(false, false);
             kg.a(4, param2, param4, param1);
-            nj.d(-8129);
+            int discarded$0 = -8129;
+            nj.d();
             nb.field_c = dk.field_h;
             ht.field_k = dk.field_h;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "cg.R(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "cg.R(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
         }
     }
 

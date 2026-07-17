@@ -15,7 +15,7 @@ final class na extends hl {
     static String field_o;
     static int[] field_r;
 
-    final static void a(int param0, ih param1, byte param2) {
+    final static void a(int param0, ih param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -35,14 +35,14 @@ final class na extends hl {
         String stackOut_3_2 = null;
         try {
           io.field_c.a((byte) -105, (hl) (Object) param1);
-          mk.a(1, param0, param1);
+          mk.a(1, 4, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L0: {
             var3 = decompiledCaughtException;
             stackOut_2_0 = (RuntimeException) var3;
-            stackOut_2_1 = new StringBuilder().append("na.B(").append(param0).append(44);
+            stackOut_2_1 = new StringBuilder().append("na.B(").append(4).append(44);
             stackIn_4_0 = stackOut_2_0;
             stackIn_4_1 = stackOut_2_1;
             stackIn_3_0 = stackOut_2_0;

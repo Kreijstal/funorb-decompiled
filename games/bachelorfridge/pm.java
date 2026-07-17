@@ -18,12 +18,9 @@ final class pm extends ana {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, String param6, String param7, int param8) {
         try {
             ur.field_e[pe.field_m] = (oha) (Object) new a(param1, param4, param0, param6, param7, param3, param5, param8);
-            if (param2 != 12635) {
-                pm.f(-58);
-            }
             pe.field_m = pe.field_m + 1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "pm.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 44 + (param7 != null ? "{...}" : "null") + 44 + param8 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "pm.B(" + param0 + 44 + param1 + 44 + 12635 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 44 + (param7 != null ? "{...}" : "null") + 44 + param8 + 41);
         }
     }
 
@@ -228,7 +225,7 @@ final class pm extends ana {
         }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_v = null;
         field_z = null;
     }
@@ -382,11 +379,11 @@ final class pm extends ana {
         }
     }
 
-    final static void f(int param0) {
+    final static void f() {
         int var1 = (kg.field_b - 640) / 2;
         int var2 = saa.field_b * saa.field_b;
         int var3 = var2 + -(lfa.field_q * lfa.field_q);
-        ng.field_e.a(-94 + (-120 + dg.field_c), param0 ^ 31336, 199, -(param0 * var3 / var2) + var1, 90);
+        ng.field_e.a(-94 + (-120 + dg.field_c), 31407, 199, -(199 * var3 / var2) + var1, 90);
         ui.field_r.a(-4 + (dg.field_c + -120), 31407, 438, 438 * var3 / var2 + 202 + var1, 0);
     }
 

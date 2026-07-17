@@ -138,7 +138,7 @@ final class ku extends bca {
         return (at) (Object) stackIn_4_0;
     }
 
-    final static void d(int param0) {
+    final static void d() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -197,11 +197,11 @@ final class ku extends bca {
             pj.field_b[param6] = param2;
             pj.field_c[param6] = param4;
             int var7_int = 77 % ((-13 - param0) / 38);
-            pj.field_l[param6] = param1;
+            pj.field_l[param6] = 460;
             pj.field_h[param6] = param3;
-            pj.field_o[param6] = param5;
+            pj.field_o[param6] = 36;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) (Object) runtimeException, "ku.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+            throw pe.a((Throwable) (Object) runtimeException, "ku.C(" + param0 + 44 + 460 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + 36 + 44 + param6 + 41);
         }
     }
 

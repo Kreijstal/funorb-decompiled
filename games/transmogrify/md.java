@@ -176,7 +176,7 @@ final class md extends me {
         super(param0);
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_j = null;
     }
 

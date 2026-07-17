@@ -10,7 +10,7 @@ final class w {
     static int field_d;
     static int[] field_f;
 
-    final static ef a(int param0, java.awt.Component param1, int param2, byte param3) {
+    final static ef a(int param0, java.awt.Component param1, int param2) {
         try {
             Class var4 = null;
             Throwable var4_ref = null;
@@ -91,7 +91,7 @@ final class w {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -124,7 +124,7 @@ final class w {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_f = null;
         field_g = null;
         field_c = null;

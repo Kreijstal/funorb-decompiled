@@ -12,7 +12,7 @@ final class eq {
     private cn[] field_f;
     private java.math.BigInteger field_a;
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void a(java.awt.Component param0) {
         try {
             param0.removeKeyListener((java.awt.event.KeyListener) (Object) um.field_c);
             param0.removeFocusListener((java.awt.event.FocusListener) (Object) um.field_c);

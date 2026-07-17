@@ -13,15 +13,15 @@ final class de extends am {
     static bd field_o;
     int field_l;
 
-    final static void c(int param0) {
+    final static void c() {
         eh.field_e = false;
         li.field_o = false;
-        g.a((byte) 104, param0);
+        g.a((byte) 104, -1);
         od.field_I = e.field_q;
         ki.field_f = e.field_q;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_o = null;
         field_i = null;
         field_k = null;
@@ -278,10 +278,6 @@ final class de extends am {
     }
 
     final static int a(int param0, int param1, int param2) {
-        if (param0 != 19926) {
-            Object var4 = null;
-            String discarded$0 = de.a(-87, (java.applet.Applet) null);
-        }
         int var3 = param1 - 1 & param2 >> 31;
         return var3 + (param2 - -(param2 >>> 31)) % param1;
     }

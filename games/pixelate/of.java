@@ -20,7 +20,7 @@ final class of {
         return (int)(65536.0 * param0);
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_h = null;
         field_i = null;

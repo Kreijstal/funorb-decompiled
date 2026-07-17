@@ -67,45 +67,37 @@ final class lqb extends rqa {
               var5 = 0;
               L2: while (true) {
                 if (var2_int <= var5) {
-                  L3: {
-                    if (param0 == -1) {
-                      break L3;
-                    } else {
-                      field_o = null;
-                      break L3;
-                    }
-                  }
                   stackOut_24_0 = new String(var10);
                   stackIn_25_0 = stackOut_24_0;
                   break L0;
                 } else {
-                  L4: {
+                  L3: {
                     var3[var5] = param1.charAt(var5);
                     if (60 != var10[var5]) {
-                      L5: {
+                      L4: {
                         if (62 != var10[var5]) {
-                          break L5;
+                          break L4;
                         } else {
                           if (var4 <= 0) {
-                            break L5;
+                            break L4;
                           } else {
                             var4--;
                             var5++;
-                            break L4;
+                            break L3;
                           }
                         }
                       }
                       if (var4 != 0) {
                         var5++;
-                        break L4;
+                        break L3;
                       } else {
                         var3[var5] = Character.toUpperCase(var10[var5]);
-                        break L4;
+                        break L3;
                       }
                     } else {
                       var4++;
                       var5++;
-                      break L4;
+                      break L3;
                     }
                   }
                   var5++;
@@ -116,10 +108,10 @@ final class lqb extends rqa {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L5: {
             var2 = decompiledCaughtException;
             stackOut_26_0 = (RuntimeException) var2;
-            stackOut_26_1 = new StringBuilder().append("lqb.C(").append(param0).append(44);
+            stackOut_26_1 = new StringBuilder().append("lqb.C(").append(-1).append(44);
             stackIn_28_0 = stackOut_26_0;
             stackIn_28_1 = stackOut_26_1;
             stackIn_27_0 = stackOut_26_0;
@@ -131,7 +123,7 @@ final class lqb extends rqa {
               stackIn_29_0 = stackOut_28_0;
               stackIn_29_1 = stackOut_28_1;
               stackIn_29_2 = stackOut_28_2;
-              break L6;
+              break L5;
             } else {
               stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
               stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
@@ -139,7 +131,7 @@ final class lqb extends rqa {
               stackIn_29_0 = stackOut_27_0;
               stackIn_29_1 = stackOut_27_1;
               stackIn_29_2 = stackOut_27_2;
-              break L6;
+              break L5;
             }
           }
           throw rta.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 41);

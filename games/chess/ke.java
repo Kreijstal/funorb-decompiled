@@ -18,69 +18,61 @@ final class ke {
 
     final static int a(byte[] param0, int param1, int param2) {
         RuntimeException var3 = null;
-        int stackIn_2_0 = 0;
-        int stackIn_4_0 = 0;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        int stackOut_2_0 = 0;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
         String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           L0: {
-            if (param1 == 21106) {
-              stackOut_3_0 = ci.a(-82, param0, 0, param2);
-              stackIn_4_0 = stackOut_3_0;
-              break L0;
-            } else {
-              stackOut_1_0 = -122;
-              stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0;
-            }
+            stackOut_2_0 = ci.a(-82, param0, 0, param2);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var3 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var3;
-            stackOut_5_1 = new StringBuilder().append("ke.F(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("ke.F(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
-              break L1;
-            } else {
               stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
               stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L1;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
               break L1;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + param2 + 41);
+          throw fk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 21106 + 44 + param2 + 41);
         }
-        return stackIn_4_0;
+        return stackIn_3_0;
     }
 
     final int b(int param0) {
@@ -143,29 +135,28 @@ final class ke {
     final static void a(int param0, int param1, String param2, int param3, int param4, String param5) {
         int var7 = 0;
         nk var8 = qn.field_U;
-        var8.f(param3, param0 ^ -9832);
+        nk var6 = var8;
+        var8.f(param3, -58);
         var8.field_l = var8.field_l + 1;
-        if (param0 != 9822) {
-            return;
-        }
         try {
             var7 = var8.field_l;
             var8.c(param1, (byte) 127);
             if (param1 == 2) {
-                var8.a(param0 + -9921, param2);
+                var8.a(-99, param2);
             }
             if (param5 == null) {
                 var8.b(param4, 119);
             } else {
-                int discarded$0 = rm.a((p) (Object) var8, param5, param0 ^ 16701600);
+                int discarded$0 = 16711422;
+                int discarded$1 = rm.a((p) (Object) var8, param5);
             }
             var8.a(-var7 + var8.field_l, -1);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "ke.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "ke.A(" + 9822 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
         }
     }
 
-    private final void b(byte param0) {
+    private final void b() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -322,7 +313,7 @@ final class ke {
         return rm.field_M;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_i = null;
         int var1 = 0;
         field_b = null;
@@ -340,7 +331,8 @@ final class ke {
             for (var2_int = 0; param0.length > var2_int; var2_int++) {
                 ((ke) this).field_a[var2_int] = param0[var2_int];
             }
-            this.b((byte) 41);
+            int discarded$0 = 41;
+            this.b();
         } catch (RuntimeException runtimeException) {
             throw fk.a((Throwable) (Object) runtimeException, "ke.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }

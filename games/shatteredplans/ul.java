@@ -76,7 +76,7 @@ final class ul extends qr {
           aj.field_d[wm.field_c] = param3;
           f.field_y[wm.field_c] = param5;
           var6 = param5 + param3 + param2;
-          if (param0 == var6) {
+          if (0 == var6) {
             stackOut_8_0 = 0;
             stackIn_9_0 = stackOut_8_0;
             break L2;

@@ -5,12 +5,11 @@ final class op {
     static ej field_b;
     static int field_a;
 
-    final static fn a(String param0, boolean param1, String param2, boolean param3) {
+    final static fn a(String param0, boolean param1, String param2) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;
-        Object var7 = null;
-        CharSequence var8 = null;
+        CharSequence var7 = null;
         fn stackIn_6_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -50,37 +49,31 @@ final class op {
               if (!param1) {
                 break L1;
               } else {
-                var7 = null;
-                fn discarded$2 = op.a((String) null, true, (String) null, false);
+                int discarded$6 = 0;
+                fn discarded$7 = op.a((String) null, true, (String) null);
                 break L1;
               }
             }
             L2: {
-              L3: {
-                var4_long = 0L;
-                var6 = null;
-                if (param2.indexOf('@') != -1) {
-                  break L3;
-                } else {
-                  var8 = (CharSequence) (Object) param2;
-                  var4_long = AceOfSkies.a(var8, -47);
-                  if (!AceOfSkies.field_G) {
-                    break L2;
-                  } else {
-                    break L3;
-                  }
-                }
+              var4_long = 0L;
+              var6 = null;
+              if (param2.indexOf('@') != -1) {
+                var6 = (Object) (Object) param2;
+                break L2;
+              } else {
+                var7 = (CharSequence) (Object) param2;
+                var4_long = AceOfSkies.a(var7, -47);
+                break L2;
               }
-              var6 = (Object) (Object) param2;
-              break L2;
             }
-            stackOut_5_0 = wb.a(false, (String) var6, param0, var4_long, true);
+            int discarded$8 = 1;
+            stackOut_5_0 = wb.a(false, (String) var6, param0, var4_long);
             stackIn_6_0 = stackOut_5_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var4 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var4;
             stackOut_7_1 = new StringBuilder().append("op.B(");
@@ -95,7 +88,7 @@ final class op {
               stackIn_10_0 = stackOut_9_0;
               stackIn_10_1 = stackOut_9_1;
               stackIn_10_2 = stackOut_9_2;
-              break L4;
+              break L3;
             } else {
               stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
               stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
@@ -103,10 +96,10 @@ final class op {
               stackIn_10_0 = stackOut_8_0;
               stackIn_10_1 = stackOut_8_1;
               stackIn_10_2 = stackOut_8_2;
-              break L4;
+              break L3;
             }
           }
-          L5: {
+          L4: {
             stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
             stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(param1).append(44);
             stackIn_12_0 = stackOut_10_0;
@@ -120,7 +113,7 @@ final class op {
               stackIn_13_0 = stackOut_12_0;
               stackIn_13_1 = stackOut_12_1;
               stackIn_13_2 = stackOut_12_2;
-              break L5;
+              break L4;
             } else {
               stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
               stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
@@ -128,7 +121,7 @@ final class op {
               stackIn_13_0 = stackOut_11_0;
               stackIn_13_1 = stackOut_11_1;
               stackIn_13_2 = stackOut_11_2;
-              break L5;
+              break L4;
             }
           }
           throw pn.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + 0 + 41);
@@ -136,30 +129,18 @@ final class op {
         return stackIn_6_0;
     }
 
-    public static void a(int param0) {
-        Object var2 = null;
-        if (param0 != 6337) {
-          var2 = null;
-          fn discarded$2 = op.a((String) null, true, (String) null, false);
-          field_b = null;
-          return;
-        } else {
-          field_b = null;
-          return;
-        }
+    public static void a() {
+        field_b = null;
     }
 
     final static void a(int param0, gk param1) {
         t var2 = null;
         t.a(param1.a("headers.packvorbis", (byte) -71, ""));
-        if (param0 != 20786) {
-            return;
-        }
         try {
             var2 = t.a(param1, "jagex logo2.packvorbis", "");
             al discarded$0 = var2.a();
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) (Object) runtimeException, "op.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pn.a((Throwable) (Object) runtimeException, "op.C(" + 20786 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

@@ -28,26 +28,23 @@ final class mj extends gh {
         this.a(param2, param5, 0);
     }
 
-    final static void a(ak param0, int param1, int param2, int param3) {
+    final static void a(ak param0) {
         try {
-            cl.field_b = param1;
+            cl.field_b = 8;
             int var4_int = 0;
-            ok.field_c = param2;
+            ok.field_c = 8;
             gl.field_l = param0;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "mj.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + -89 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "mj.C(" + (param0 != null ? "{...}" : "null") + 44 + 8 + 44 + 8 + 44 + -89 + 41);
         }
     }
 
-    final static String b(long param0, int param1) {
+    final static String b(long param0) {
         pg.field_x.setTime(new Date(param0));
         int var3 = pg.field_x.get(7);
         int var4 = pg.field_x.get(5);
         int var5 = pg.field_x.get(2);
         int var6 = pg.field_x.get(1);
-        if (param1 != 0) {
-            return null;
-        }
         int var7 = pg.field_x.get(11);
         int var8 = pg.field_x.get(12);
         int var9 = pg.field_x.get(13);
@@ -325,13 +322,9 @@ final class mj extends gh {
             try {
               try {
                 L0: {
-                  if (param0 == 49) {
-                    var2 = new java.net.URL(param1.getCodeBase(), "tosupport.ws");
-                    param1.getAppletContext().showDocument(ge.a(param0 + -49, var2, param1), "_top");
-                    break L0;
-                  } else {
-                    return;
-                  }
+                  var2 = new java.net.URL(param1.getCodeBase(), "tosupport.ws");
+                  param1.getAppletContext().showDocument(ge.a(0, var2, param1), "_top");
+                  break L0;
                 }
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -346,7 +339,7 @@ final class mj extends gh {
               L2: {
                 var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_6_0 = (RuntimeException) var2_ref2;
-                stackOut_6_1 = new StringBuilder().append("mj.D(").append(param0).append(44);
+                stackOut_6_1 = new StringBuilder().append("mj.D(").append(49).append(44);
                 stackIn_8_0 = stackOut_6_0;
                 stackIn_8_1 = stackOut_6_1;
                 stackIn_7_0 = stackOut_6_0;
@@ -378,7 +371,7 @@ final class mj extends gh {
         }
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_Vb = null;
         field_Sb = null;
         field_Yb = null;

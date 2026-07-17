@@ -12,19 +12,21 @@ final class gp extends ana {
 
     final boolean c(byte param0) {
         int var2 = 0;
-        int fieldTemp$2 = ((gp) this).field_l - 1;
+        int fieldTemp$6 = ((gp) this).field_l - 1;
         ((gp) this).field_l = ((gp) this).field_l - 1;
-        if (-1 >= fieldTemp$2) {
+        if (-1 >= fieldTemp$6) {
           if (-26 == ((gp) this).field_l) {
             jja.a(256, -1, 52);
-            this.e(44);
+            int discarded$7 = 44;
+            this.e();
             return false;
           } else {
             return false;
           }
         } else {
           var2 = 89 % ((param0 - 71) / 47);
-          this.f(99);
+          int discarded$8 = 99;
+          this.f();
           return true;
         }
     }
@@ -40,7 +42,7 @@ final class gp extends ana {
         }
     }
 
-    private final void e(int param0) {
+    private final void e() {
         ad var4 = null;
         int var5 = BachelorFridge.field_y;
         aga var2 = ((gp) this).field_w.field_l.a(76, ((gp) this).field_q.field_h);
@@ -94,36 +96,21 @@ final class gp extends ana {
         }
     }
 
-    private final void f(int param0) {
+    private final void f() {
         int var2 = 0;
     }
 
     final static void a(boolean param0, int param1) {
-        if (it.field_l == null) {
-          it.field_l = new int[param1];
-          if (param0) {
+        if (it.field_l != null) {
+          if (it.field_l.length < param1) {
+            it.field_l = new int[param1];
             return;
           } else {
-            field_v = null;
             return;
           }
         } else {
-          if (it.field_l.length >= param1) {
-            if (!param0) {
-              field_v = null;
-              return;
-            } else {
-              return;
-            }
-          } else {
-            it.field_l = new int[param1];
-            if (param0) {
-              return;
-            } else {
-              field_v = null;
-              return;
-            }
-          }
+          it.field_l = new int[param1];
+          return;
         }
     }
 

@@ -15,7 +15,7 @@ class nk extends rm {
     static boolean field_R;
     private int field_Q;
 
-    private final void a(boolean param0) {
+    private final void a() {
         int var2 = 0;
         int var3 = 0;
         if (((nk) this).field_O != ((nk) this).field_L) {
@@ -29,29 +29,17 @@ class nk extends rm {
     }
 
     private final void a(int param0, int param1) {
-        if (param0 == -31523) {
-          ((nk) this).field_O = param1;
-          if (!lk.field_g[81]) {
+        ((nk) this).field_O = param1;
+        if (!lk.field_g[81]) {
             ((nk) this).field_L = ((nk) this).field_O;
             return;
-          } else {
-            return;
-          }
-        } else {
-          ((nk) this).a(-33, -31, 0, 101);
-          ((nk) this).field_O = param1;
-          if (lk.field_g[81]) {
-            return;
-          } else {
-            ((nk) this).field_L = ((nk) this).field_O;
-            return;
-          }
         }
     }
 
-    private final void m(int param0) {
+    private final void m() {
         this.j(-117);
-        this.a(false);
+        int discarded$0 = 0;
+        this.a();
     }
 
     private final void b(boolean param0) {
@@ -62,7 +50,8 @@ class nk extends rm {
             try {
               L0: {
                 var2 = (String) java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor);
-                this.a(false);
+                int discarded$1 = 0;
+                this.a();
                 this.a(-127, var2);
                 break L0;
               }
@@ -183,7 +172,8 @@ class nk extends rm {
                   if (((nk) this).field_G) {
                     L4: {
                       ((nk) this).field_L = this.a((byte) 70);
-                      ((nk) this).field_O = this.e((byte) -88);
+                      int discarded$1 = -88;
+                      ((nk) this).field_O = this.e();
                       if (((nk) this).field_O <= 0) {
                         break L4;
                       } else {
@@ -407,29 +397,25 @@ class nk extends rm {
         return ((nk) this).field_q.substring(var2, var4);
     }
 
-    private final int e(byte param0) {
+    private final int e() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         var4 = HoldTheLine.field_D;
         var2 = ((nk) this).field_q.length();
         if (((nk) this).field_O != var2) {
-          if (param0 == -88) {
-            var3 = 1 + ((nk) this).field_O;
-            L0: while (true) {
-              if (var2 > var3) {
-                if (((nk) this).field_q.charAt(var3 + -1) != 32) {
-                  var3++;
-                  continue L0;
-                } else {
-                  return var3;
-                }
+          var3 = 1 + ((nk) this).field_O;
+          L0: while (true) {
+            if (var2 > var3) {
+              if (((nk) this).field_q.charAt(var3 + -1) != 32) {
+                var3++;
+                continue L0;
               } else {
                 return var3;
               }
+            } else {
+              return var3;
             }
-          } else {
-            return -8;
           }
         } else {
           return ((nk) this).field_O;
@@ -455,22 +441,22 @@ class nk extends rm {
     private final void a(int param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
+        String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
         RuntimeException stackOut_12_0 = null;
         StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
         try {
           L0: {
             L1: {
@@ -487,20 +473,12 @@ class nk extends rm {
               }
             }
             L2: {
-              if (param0 < -117) {
-                break L2;
-              } else {
-                ((nk) this).field_L = -34;
-                break L2;
-              }
-            }
-            L3: {
               if (((nk) this).field_O != ((nk) this).field_q.length()) {
                 ((nk) this).field_q = ((nk) this).field_q.substring(0, ((nk) this).field_O) + param1 + ((nk) this).field_q.substring(((nk) this).field_O, ((nk) this).field_q.length());
-                break L3;
+                break L2;
               } else {
                 ((nk) this).field_q = ((nk) this).field_q + param1;
-                break L3;
+                break L2;
               }
             }
             ((nk) this).field_O = ((nk) this).field_O + param1.length();
@@ -510,33 +488,33 @@ class nk extends rm {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var3 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var3;
-            stackOut_12_1 = new StringBuilder().append("nk.EA(").append(param0).append(44);
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackOut_10_0 = (RuntimeException) var3;
+            stackOut_10_1 = new StringBuilder().append("nk.EA(").append(-127).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
-              break L4;
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L3;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
-              break L4;
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L3;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw kk.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
         }
     }
 
@@ -565,7 +543,7 @@ class nk extends rm {
         }
     }
 
-    private final void l(int param0) {
+    private final void l() {
         if (((nk) this).field_t instanceof ed) {
             ((ed) (Object) ((nk) this).field_t).a((byte) 19, (nk) this);
             return;
@@ -757,7 +735,8 @@ class nk extends rm {
                             if (~((nk) this).field_L == ~((nk) this).field_O) {
                               break L3;
                             } else {
-                              this.a(false);
+                              int discarded$9 = 0;
+                              this.a();
                               break L3;
                             }
                           }
@@ -781,9 +760,9 @@ class nk extends rm {
                                 break L6;
                               } else {
                                 ((nk) this).field_q = ((nk) this).field_q + param3;
-                                int dupTemp$1 = ((nk) this).field_q.length();
-                                ((nk) this).field_O = dupTemp$1;
-                                ((nk) this).field_L = dupTemp$1;
+                                int dupTemp$10 = ((nk) this).field_q.length();
+                                ((nk) this).field_O = dupTemp$10;
+                                ((nk) this).field_L = dupTemp$10;
                                 break L6;
                               }
                             }
@@ -801,7 +780,8 @@ class nk extends rm {
                     L7: {
                       if (param1 == 85) {
                         if (((nk) this).field_L != ((nk) this).field_O) {
-                          this.a(false);
+                          int discarded$11 = 0;
+                          this.a();
                           stackOut_63_0 = 1;
                           stackIn_64_0 = stackOut_63_0;
                           return stackIn_64_0 != 0;
@@ -810,7 +790,8 @@ class nk extends rm {
                             break L7;
                           } else {
                             ((nk) this).field_L = -1 + ((nk) this).field_O;
-                            this.a(false);
+                            int discarded$12 = 0;
+                            this.a();
                             stackOut_61_0 = 1;
                             stackIn_62_0 = stackOut_61_0;
                             return stackIn_62_0 != 0;
@@ -823,13 +804,15 @@ class nk extends rm {
                               break L7;
                             } else {
                               ((nk) this).field_L = 1 + ((nk) this).field_O;
-                              this.a(false);
+                              int discarded$13 = 0;
+                              this.a();
                               stackOut_57_0 = 1;
                               stackIn_58_0 = stackOut_57_0;
                               return stackIn_58_0 != 0;
                             }
                           } else {
-                            this.a(false);
+                            int discarded$14 = 0;
+                            this.a();
                             stackOut_54_0 = 1;
                             stackIn_55_0 = stackOut_54_0;
                             return stackIn_55_0 != 0;
@@ -896,9 +879,10 @@ class nk extends rm {
                                       stackIn_43_2 = stackOut_42_2;
                                       break L9;
                                     } else {
+                                      int discarded$15 = -88;
                                       stackOut_41_0 = this;
                                       stackOut_41_1 = stackIn_41_1;
-                                      stackOut_41_2 = this.e((byte) -88);
+                                      stackOut_41_2 = this.e();
                                       stackIn_43_0 = stackOut_41_0;
                                       stackIn_43_1 = stackOut_41_1;
                                       stackIn_43_2 = stackOut_41_2;
@@ -914,7 +898,8 @@ class nk extends rm {
                                 if (param1 != 102) {
                                   if (103 != param1) {
                                     if (84 == param1) {
-                                      this.l(93);
+                                      int discarded$16 = 93;
+                                      this.l();
                                       stackOut_37_0 = 1;
                                       stackIn_38_0 = stackOut_37_0;
                                       return stackIn_38_0 != 0;
@@ -924,7 +909,8 @@ class nk extends rm {
                                           break L10;
                                         } else {
                                           if (param1 == 65) {
-                                            this.m(103);
+                                            int discarded$17 = 103;
+                                            this.m();
                                             stackOut_35_0 = 1;
                                             stackIn_36_0 = stackOut_35_0;
                                             return stackIn_36_0 != 0;

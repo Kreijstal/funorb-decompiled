@@ -13,7 +13,7 @@ final class ig extends tc {
     int[] field_s;
     int field_o;
 
-    public static void e(int param0) {
+    public static void e() {
         field_m = null;
         field_n = null;
         field_t = null;
@@ -190,7 +190,7 @@ final class ig extends tc {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         return da.a(23660, ag.d((byte) 16));
     }
 

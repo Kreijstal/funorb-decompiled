@@ -10,7 +10,7 @@ final class ke {
     private boolean field_d;
     static String field_b;
 
-    final static void a(String param0, int param1, String[] param2, byte param3) {
+    final static void a(String param0, int param1, String[] param2) {
         RuntimeException var4 = null;
         int var5 = 0;
         int stackIn_5_0 = 0;
@@ -56,7 +56,8 @@ final class ke {
               return;
             } else {
               if (param1 <= 105) {
-                sf.field_B = jo.a(param2, 57);
+                int discarded$4 = 57;
+                sf.field_B = jo.a(param2);
                 return;
               } else {
                 sf.field_B = gg.a(param1, true, param0);
@@ -75,7 +76,8 @@ final class ke {
                 break L0;
               }
             }
-            sf.field_B = ta.a(stackIn_5_0 != 0, -30914);
+            int discarded$5 = -30914;
+            sf.field_B = ta.a(stackIn_5_0 != 0);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -135,14 +137,14 @@ final class ke {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         try {
             Exception var1 = null;
             Throwable decompiledCaughtException = null;
             if (nl.field_c != null) {
               try {
                 L0: {
-                  nl.field_c.a(param0 ^ 100, 0L);
+                  nl.field_c.a(0, 0L);
                   nl.field_c.a(24, kn.field_e.field_t, kn.field_e.field_v, -1);
                   break L0;
                 }
@@ -150,33 +152,12 @@ final class ke {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var1 = (Exception) (Object) decompiledCaughtException;
                 kn.field_e.field_v = kn.field_e.field_v + 24;
-                if (param0 != 100) {
-                  field_f = null;
-                  return;
-                } else {
-                  return;
-                }
+                return;
               }
-              L1: {
-                kn.field_e.field_v = kn.field_e.field_v + 24;
-                if (param0 == 100) {
-                  break L1;
-                } else {
-                  field_f = null;
-                  break L1;
-                }
-              }
+              kn.field_e.field_v = kn.field_e.field_v + 24;
               return;
             } else {
-              L2: {
-                kn.field_e.field_v = kn.field_e.field_v + 24;
-                if (param0 == 100) {
-                  break L2;
-                } else {
-                  field_f = null;
-                  break L2;
-                }
-              }
+              kn.field_e.field_v = kn.field_e.field_v + 24;
               return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {

@@ -18,8 +18,8 @@ final class dd {
     }
 
     final static void a(boolean param0, int param1, int param2, boolean param3, boolean param4, int param5, int param6, int param7, int param8, boolean param9, int param10, boolean param11) {
-        int var12 = -16 % ((param1 - -80) / 43);
-        bj.a(16777215, param4, param2, param0, param5, 16777215, param10, param9, param8, param7, param6, -869, param3, false);
+        int var12 = -1;
+        bj.a(16777215, param4, 15, false, param5, 16777215, 11, param9, 13, 14, 0, -869, param3, param11);
     }
 
     final static void b(int param0) {

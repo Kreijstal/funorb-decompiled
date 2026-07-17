@@ -33,13 +33,10 @@ final class gh extends tj implements he {
         }
         try {
             ((gh) this).field_O.field_T = var3_int;
-            if (!param0) {
-                ((gh) this).field_F = true;
-            }
             this.n(107805154);
             ((gh) this).field_I = param1;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "gh.O(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "gh.O(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -364,7 +361,7 @@ final class gh extends tj implements he {
         return stackIn_3_0;
     }
 
-    final static void f(byte param0) {
+    final static void f() {
         RuntimeException var1 = null;
         int[] var1_array = null;
         int var1_int = 0;
@@ -397,7 +394,9 @@ final class gh extends tj implements he {
               if (!as.field_B) {
                 L2: {
                   if (null == gu.field_b) {
-                    gu.field_b = jc.b(-1, 4);
+                    int discarded$5 = 4;
+                    int discarded$6 = -1;
+                    gu.field_b = jc.b();
                     break L2;
                   } else {
                     break L2;
@@ -429,7 +428,8 @@ final class gh extends tj implements he {
                             gu.field_b = null;
                             as.field_B = true;
                             jd.m(77);
-                            if (rb.a(0, ei.field_e, 1)) {
+                            int discarded$7 = 1;
+                            if (rb.a(0, ei.field_e)) {
                               rt.d((byte) 125);
                               break L3;
                             } else {
@@ -455,7 +455,8 @@ final class gh extends tj implements he {
                   break L1;
                 } else {
                   qj.h(-78);
-                  ws.b(true);
+                  int discarded$8 = 1;
+                  ws.b();
                   if (tg.field_a != 9) {
                     break L1;
                   } else {
@@ -517,7 +518,8 @@ final class gh extends tj implements he {
                     if (null == jr.field_f.field_s) {
                       break L10;
                     } else {
-                      oe.a(jr.field_f.field_s, 1);
+                      int discarded$9 = 1;
+                      oe.a(jr.field_f.field_s);
                       break L10;
                     }
                   }
@@ -1097,21 +1099,19 @@ final class gh extends tj implements he {
             ej.field_G = param19;
             kq.a(param3, param17, (byte) 87, param10, param2);
             cv.a((byte) 123, param18, param5, param16);
-            if (param11 == -99) {
-              op.a(param7, param1, param12, param14, -3, param6);
-              g.a((byte) -85, param15, param9);
-              mi.a(param8, param0, param13, 3815);
-              break L0;
-            } else {
-              return;
-            }
+            int discarded$2 = 8;
+            int discarded$3 = -3;
+            op.a(2, 8, param12, param14);
+            g.a((byte) -85, 320, 240);
+            mi.a(16777215, 128, 255, 3815);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var20 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var20;
-            stackOut_4_1 = new StringBuilder().append("gh.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackOut_4_1 = new StringBuilder().append("gh.A(").append(128).append(44).append(8).append(44).append(param2).append(44).append(param3).append(44);
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -1136,7 +1136,7 @@ final class gh extends tj implements he {
           }
           L2: {
             stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44).append(param8).append(44).append(param9).append(44).append(param10).append(44).append(param11).append(44);
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44).append(param5).append(44).append(8).append(44).append(2).append(44).append(16777215).append(44).append(240).append(44).append(param10).append(44).append(-99).append(44);
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -1161,7 +1161,7 @@ final class gh extends tj implements he {
           }
           L3: {
             stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(param13).append(44);
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(255).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -1186,7 +1186,7 @@ final class gh extends tj implements he {
           }
           L4: {
             stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(param15).append(44).append(param16).append(44).append(param17).append(44);
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(320).append(44).append(param16).append(44).append(param17).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;

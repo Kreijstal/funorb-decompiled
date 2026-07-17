@@ -81,12 +81,12 @@ final class cl extends nt {
         }
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_z = null;
         field_v = null;
     }
 
-    final static void e(int param0) {
+    final static void e() {
         int var1 = 0;
         if (null != fn.field_u) {
           return;
@@ -209,14 +209,11 @@ final class cl extends nt {
 
     final static void a(byte param0, lt param1, int param2) {
         pl var5 = as.field_v;
-        var5.g(param2, param0 ^ -105);
+        var5.g(param2, 8);
         var5.field_p = var5.field_p + 1;
         int var4 = var5.field_p;
         var5.b((byte) 84, 1);
         var5.b((byte) 103, param1.field_k);
-        if (param0 != -97) {
-            return;
-        }
         try {
             var5.a(param1.field_o, (byte) -17);
             var5.e(48, param1.field_n);
@@ -224,9 +221,9 @@ final class cl extends nt {
             var5.e(48, param1.field_q);
             var5.e(48, param1.field_l);
             int discarded$0 = var5.a(var4, false);
-            var5.c(var5.field_p + -var4, param0 + -13648);
+            var5.c(var5.field_p + -var4, -13745);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "cl.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "cl.D(" + -97 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 

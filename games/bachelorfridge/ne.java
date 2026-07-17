@@ -18,7 +18,7 @@ final class ne extends bw {
     ne() {
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_m = null;
         field_n = null;
     }

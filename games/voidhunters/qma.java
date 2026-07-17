@@ -25,11 +25,6 @@ final class qma {
     }
 
     private final int a(int param0, int param1) {
-        if (param0 != 15) {
-            Object var4 = null;
-            qma.a((no) null, 36, 72, 17, 121, -94, -120, 88, (no) null, (bc) null, 76, 114, (bc) null, 55, -78, 123, -51, -27, (bc) null, -111);
-            return 15 & (int)(((qma) this).field_a >> param1 * pb.field_m);
-        }
         return 15 & (int)(((qma) this).field_a >> param1 * pb.field_m);
     }
 

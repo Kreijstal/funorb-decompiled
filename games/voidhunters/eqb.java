@@ -4,7 +4,7 @@
 final class eqb {
     static char[] field_a;
 
-    final static void a(ml param0, int param1) {
+    final static void a(ml param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         ml var3 = null;
@@ -78,7 +78,7 @@ final class eqb {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 

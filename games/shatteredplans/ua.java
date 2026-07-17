@@ -565,7 +565,7 @@ final class ua {
         return "" + ((ua) this).field_i;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_h = null;
         field_g = null;
         field_c = null;
@@ -666,7 +666,7 @@ final class ua {
         }
     }
 
-    final static int a(String param0, String param1, int param2) {
+    final static int a(String param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -707,7 +707,7 @@ final class ua {
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           L0: {
-            var3_int = param0.indexOf(param1, param2);
+            var3_int = param0.indexOf(param1, ' ');
             var4 = var3_int;
             L1: while (true) {
               if (var3_int == -1) {
@@ -774,7 +774,7 @@ final class ua {
               break L3;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param2 + 41);
+          throw r.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + 0 + 41);
         }
         return stackIn_5_0;
     }

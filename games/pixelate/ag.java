@@ -49,7 +49,8 @@ final class ag extends mg {
               if (param1) {
                 L1: {
                   var5 = (CharSequence) (Object) param0;
-                  var3_int = na.a(var5, (byte) -33);
+                  int discarded$2 = -33;
+                  var3_int = na.a(var5);
                   if (var3_int <= 0) {
                     break L1;
                   } else {
@@ -180,13 +181,13 @@ final class ag extends mg {
         return stackIn_6_0;
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_n = null;
         field_m = null;
         field_o = null;
     }
 
-    final static void a(byte param0, int param1) {
+    final static void a() {
         RuntimeException var2 = null;
         int var3 = 0;
         lc var4 = null;
@@ -194,29 +195,21 @@ final class ag extends mg {
         var3 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
-            L1: {
-              var4 = (lc) (Object) rg.field_c.c(1504642273);
-              if (param0 < -112) {
-                break L1;
-              } else {
-                field_p = true;
-                break L1;
-              }
-            }
-            L2: while (true) {
+            var4 = (lc) (Object) rg.field_c.c(1504642273);
+            L1: while (true) {
               if (var4 == null) {
                 break L0;
               } else {
-                em.a((byte) -7, var4, param1);
+                em.a((byte) -7, var4, 7);
                 var4 = (lc) (Object) rg.field_c.f(1504642273);
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var2, "ag.A(" + param0 + 44 + param1 + 41);
+          throw aa.a((Throwable) (Object) var2, "ag.A(" + -116 + 44 + 7 + 41);
         }
     }
 

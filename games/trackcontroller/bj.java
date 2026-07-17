@@ -23,7 +23,7 @@ final class bj {
         try {
           L0: {
             ij.a((byte) 120, fj.field_U, param1, vi.field_d, oe.field_c, true, 0);
-            var2_int = param0;
+            var2_int = 0;
             L1: while (true) {
               if (var2_int >= oe.field_c) {
                 L2: {
@@ -46,11 +46,11 @@ final class bj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sl.a((Throwable) (Object) var2, "bj.A(" + param0 + 44 + param1 + 41);
+          throw sl.a((Throwable) (Object) var2, "bj.A(" + 0 + 44 + param1 + 41);
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
     }
 

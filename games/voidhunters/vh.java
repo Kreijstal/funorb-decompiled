@@ -26,7 +26,7 @@ final class vh implements Iterable {
         }
     }
 
-    private final fh a(fh param0, int param1) {
+    private final fh a(fh param0) {
         fh var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_5_0 = null;
@@ -109,7 +109,8 @@ final class vh implements Iterable {
         if (param0) {
             return null;
         }
-        return this.a((fh) null, -113);
+        int discarded$0 = -113;
+        return this.a((fh) null);
     }
 
     final void a(int param0, fh param1) {

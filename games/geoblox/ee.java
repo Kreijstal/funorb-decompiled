@@ -449,7 +449,7 @@ class ee extends el implements ql {
         }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_x = null;
         field_y = null;
         field_B = null;
@@ -485,7 +485,7 @@ class ee extends el implements ql {
         }
     }
 
-    private final void g(byte param0) {
+    private final void g() {
         gb var2 = new gb(((ee) this).field_z);
         el var3 = (el) (Object) var2.c((byte) 88);
         while (var3 != null) {
@@ -721,7 +721,8 @@ class ee extends el implements ql {
         if (param2 >= -6) {
             String discarded$0 = ((ee) this).c((byte) 85);
         }
-        this.g((byte) 123);
+        int discarded$1 = 123;
+        this.g();
     }
 
     final void a(int param0, int param1, boolean param2, el param3, int param4, int param5) {

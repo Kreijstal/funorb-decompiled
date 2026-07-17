@@ -6,27 +6,15 @@ final class pqa extends rqa {
     static String field_p;
 
     final static int a(boolean param0, int param1) {
-        if (!param0) {
-          if (li.field_i) {
-            if (param1 == 3) {
-              return 11;
-            } else {
-              return de.a(param1, 300).field_a;
-            }
+        if (li.field_i) {
+          if (param1 == 3) {
+            return 11;
           } else {
-            return ita.a(param1, 7988).field_H;
+            int discarded$2 = 300;
+            return de.a(param1).field_a;
           }
         } else {
-          field_o = null;
-          if (li.field_i) {
-            if (param1 == 3) {
-              return 11;
-            } else {
-              return de.a(param1, 300).field_a;
-            }
-          } else {
-            return ita.a(param1, 7988).field_H;
-          }
+          return ita.a(param1, 7988).field_H;
         }
     }
 
@@ -72,32 +60,26 @@ final class pqa extends rqa {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        if (param7 < 59) {
-          field_p = null;
-          if (param2 >= ob.field_j) {
-            if (mt.field_o >= param2) {
-              if (param4 >= ob.field_j) {
-                if (param4 <= mt.field_o) {
-                  if (param6 >= ob.field_j) {
-                    if (param6 <= mt.field_o) {
-                      if (param9 >= ob.field_j) {
-                        if (mt.field_o >= param9) {
-                          if (lua.field_c <= param1) {
-                            if (param1 <= hab.field_i) {
-                              if (param5 >= lua.field_c) {
-                                if (hab.field_i >= param5) {
-                                  if (param0 >= lua.field_c) {
-                                    if (param0 <= hab.field_i) {
-                                      if (param8 >= lua.field_c) {
-                                        if (hab.field_i >= param8) {
-                                          lia.a(param4, param0, param5, param2, param6, param3, param8, param9, param1, (byte) -57);
-                                          return;
-                                        } else {
-                                          ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
-                                          return;
-                                        }
-                                      } else {
+        if (param2 >= ob.field_j) {
+          if (mt.field_o >= param2) {
+            if (param4 >= ob.field_j) {
+              if (param4 <= mt.field_o) {
+                if (param6 >= ob.field_j) {
+                  if (param6 <= mt.field_o) {
+                    if (param9 >= ob.field_j) {
+                      if (mt.field_o >= param9) {
+                        if (lua.field_c <= param1) {
+                          if (param1 <= hab.field_i) {
+                            if (param5 >= lua.field_c) {
+                              if (hab.field_i >= param5) {
+                                if (param0 >= lua.field_c) {
+                                  if (param0 <= hab.field_i) {
+                                    if (param8 >= lua.field_c) {
+                                      if (hab.field_i < param8) {
                                         ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
+                                        return;
+                                      } else {
+                                        lia.a(param4, param0, param5, param2, param6, param3, param8, param9, param1, (byte) -57);
                                         return;
                                       }
                                     } else {
@@ -157,90 +139,7 @@ final class pqa extends rqa {
             return;
           }
         } else {
-          L0: {
-            if (param2 < ob.field_j) {
-              ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
-              break L0;
-            } else {
-              if (mt.field_o < param2) {
-                ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
-                break L0;
-              } else {
-                if (param4 < ob.field_j) {
-                  ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
-                  break L0;
-                } else {
-                  if (param4 > mt.field_o) {
-                    ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
-                    break L0;
-                  } else {
-                    if (param6 < ob.field_j) {
-                      ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
-                      break L0;
-                    } else {
-                      if (param6 > mt.field_o) {
-                        ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
-                        break L0;
-                      } else {
-                        if (param9 < ob.field_j) {
-                          ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
-                          break L0;
-                        } else {
-                          if (mt.field_o < param9) {
-                            ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
-                            break L0;
-                          } else {
-                            if (lua.field_c > param1) {
-                              ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
-                              break L0;
-                            } else {
-                              if (param1 <= hab.field_i) {
-                                if (param5 >= lua.field_c) {
-                                  if (hab.field_i >= param5) {
-                                    if (param0 >= lua.field_c) {
-                                      if (param0 <= hab.field_i) {
-                                        if (param8 >= lua.field_c) {
-                                          if (hab.field_i >= param8) {
-                                            lia.a(param4, param0, param5, param2, param6, param3, param8, param9, param1, (byte) -57);
-                                            break L0;
-                                          } else {
-                                            ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
-                                            return;
-                                          }
-                                        } else {
-                                          ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
-                                          return;
-                                        }
-                                      } else {
-                                        ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
-                                        return;
-                                      }
-                                    } else {
-                                      ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
-                                      return;
-                                    }
-                                  } else {
-                                    ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
-                                    return;
-                                  }
-                                } else {
-                                  ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
-                                  return;
-                                }
-                              } else {
-                                ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
-                                return;
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
+          ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
           return;
         }
     }
@@ -312,7 +211,7 @@ final class pqa extends rqa {
         return stackIn_4_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_p = null;
         field_o = null;
     }

@@ -49,31 +49,24 @@ final class via extends java.awt.Canvas implements java.awt.event.FocusListener 
         try {
           L0: {
             L1: {
-              L2: {
-                var4_long = 0L;
-                var6 = null;
-                if (param3.indexOf((int) (char)param1) != -1) {
-                  break L2;
-                } else {
-                  var7 = (CharSequence) (Object) param3;
-                  var4_long = jm.a(var7, 117);
-                  if (!TombRacer.field_G) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
-                }
+              var4_long = 0L;
+              var6 = null;
+              if (param3.indexOf((int) (char)param1) != -1) {
+                var6 = (Object) (Object) param3;
+                break L1;
+              } else {
+                var7 = (CharSequence) (Object) param3;
+                var4_long = jm.a(var7, 117);
+                break L1;
               }
-              var6 = (Object) (Object) param3;
-              break L1;
             }
-            stackOut_3_0 = b.a(param0, 0, (String) var6, param2, var4_long);
+            stackOut_3_0 = b.a(param0, 0, (String) var6, false, var4_long);
             stackIn_4_0 = stackOut_3_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var4 = decompiledCaughtException;
             stackOut_5_0 = (RuntimeException) var4;
             stackOut_5_1 = new StringBuilder().append("via.A(");
@@ -88,7 +81,7 @@ final class via extends java.awt.Canvas implements java.awt.event.FocusListener 
               stackIn_8_0 = stackOut_7_0;
               stackIn_8_1 = stackOut_7_1;
               stackIn_8_2 = stackOut_7_2;
-              break L3;
+              break L2;
             } else {
               stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
               stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
@@ -96,12 +89,12 @@ final class via extends java.awt.Canvas implements java.awt.event.FocusListener 
               stackIn_8_0 = stackOut_6_0;
               stackIn_8_1 = stackOut_6_1;
               stackIn_8_2 = stackOut_6_2;
-              break L3;
+              break L2;
             }
           }
-          L4: {
+          L3: {
             stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param1).append(44).append(0).append(44);
             stackIn_10_0 = stackOut_8_0;
             stackIn_10_1 = stackOut_8_1;
             stackIn_9_0 = stackOut_8_0;
@@ -113,7 +106,7 @@ final class via extends java.awt.Canvas implements java.awt.event.FocusListener 
               stackIn_11_0 = stackOut_10_0;
               stackIn_11_1 = stackOut_10_1;
               stackIn_11_2 = stackOut_10_2;
-              break L4;
+              break L3;
             } else {
               stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
               stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
@@ -121,7 +114,7 @@ final class via extends java.awt.Canvas implements java.awt.event.FocusListener 
               stackIn_11_0 = stackOut_9_0;
               stackIn_11_1 = stackOut_9_1;
               stackIn_11_2 = stackOut_9_2;
-              break L4;
+              break L3;
             }
           }
           throw tba.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
@@ -129,13 +122,8 @@ final class via extends java.awt.Canvas implements java.awt.event.FocusListener 
         return stackIn_4_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
-        if (param0 != 64) {
-            field_a = null;
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 
@@ -219,27 +207,27 @@ final class via extends java.awt.Canvas implements java.awt.event.FocusListener 
         }
     }
 
-    final static void a(ka param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void a(ka param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         Exception var9 = null;
         Object var10 = null;
         gda var11 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        String stackIn_24_2 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
         Throwable decompiledCaughtException = null;
-        RuntimeException stackOut_21_0 = null;
-        StringBuilder stackOut_21_1 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
-        RuntimeException stackOut_22_0 = null;
-        StringBuilder stackOut_22_1 = null;
-        String stackOut_22_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
         try {
           L0: {
             L1: {
@@ -271,35 +259,20 @@ final class via extends java.awt.Canvas implements java.awt.event.FocusListener 
                   break L3;
                 }
               }
-              L4: {
-                if (param7 != 0) {
-                  var11.b(param7 << 3);
-                  break L4;
-                } else {
-                  break L4;
-                }
-              }
               var11.a(param4 >> 14, -param3 >> 14, -param5 >> 14);
               try {
-                L5: {
-                  L6: {
-                    L7: {
-                      if (ica.field_a) {
-                        break L7;
-                      } else {
-                        param0.a(var11, (el) null, 2048, 0);
-                        if (!TombRacer.field_G) {
-                          break L6;
-                        } else {
-                          break L7;
-                        }
-                      }
+                L4: {
+                  L5: {
+                    if (ica.field_a) {
+                      param0.a(var11, (el) null, 0);
+                      break L5;
+                    } else {
+                      param0.a(var11, (el) null, 2048, 0);
+                      break L5;
                     }
-                    param0.a(var11, (el) null, 0);
-                    break L6;
                   }
                   if (param6 >= 44) {
-                    break L5;
+                    break L4;
                   } else {
                     var10 = null;
                     lu discarded$1 = via.a((String) null, 40, false, (String) null);
@@ -316,33 +289,33 @@ final class via extends java.awt.Canvas implements java.awt.event.FocusListener 
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L8: {
+          L6: {
             var8 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_21_0 = (RuntimeException) var8;
-            stackOut_21_1 = new StringBuilder().append("via.B(");
-            stackIn_23_0 = stackOut_21_0;
-            stackIn_23_1 = stackOut_21_1;
-            stackIn_22_0 = stackOut_21_0;
-            stackIn_22_1 = stackOut_21_1;
+            stackOut_18_0 = (RuntimeException) var8;
+            stackOut_18_1 = new StringBuilder().append("via.B(");
+            stackIn_20_0 = stackOut_18_0;
+            stackIn_20_1 = stackOut_18_1;
+            stackIn_19_0 = stackOut_18_0;
+            stackIn_19_1 = stackOut_18_1;
             if (param0 == null) {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
-              stackOut_23_2 = "null";
-              stackIn_24_0 = stackOut_23_0;
-              stackIn_24_1 = stackOut_23_1;
-              stackIn_24_2 = stackOut_23_2;
-              break L8;
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "null";
+              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_1 = stackOut_20_1;
+              stackIn_21_2 = stackOut_20_2;
+              break L6;
             } else {
-              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
-              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
-              stackOut_22_2 = "{...}";
-              stackIn_24_0 = stackOut_22_0;
-              stackIn_24_1 = stackOut_22_1;
-              stackIn_24_2 = stackOut_22_2;
-              break L8;
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "{...}";
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_21_1 = stackOut_19_1;
+              stackIn_21_2 = stackOut_19_2;
+              break L6;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw tba.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + 0 + 41);
         }
     }
 

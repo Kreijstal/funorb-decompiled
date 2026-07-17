@@ -11,7 +11,7 @@ final class lt {
     cn field_h;
     static jpa field_a;
 
-    final static boolean a(String param0, int param1) {
+    final static boolean a(String param0) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
         int stackIn_12_0 = 0;

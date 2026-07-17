@@ -204,7 +204,7 @@ final class bf extends fa {
         return stackIn_4_0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_t = null;
         field_k = null;
         field_r = null;
@@ -336,9 +336,7 @@ final class bf extends fa {
         if (param2) {
             var4 += 2;
         }
-        if (param1) {
-            var4++;
-        }
+        var4++;
         return v.field_a[var4];
     }
 
@@ -368,7 +366,8 @@ final class bf extends fa {
               break L3;
             } else {
               if (param2 >= 256) {
-                this.a(param3, param1, (byte) 98);
+                int discarded$3 = 98;
+                this.a(param3, param1);
                 break L2;
               } else {
                 break L3;
@@ -378,7 +377,8 @@ final class bf extends fa {
           t.a(a.field_N);
           ((bf) this).field_l.c();
           t.d();
-          this.a(0, 0, (byte) 98);
+          int discarded$4 = 98;
+          this.a(0, 0);
           qa.field_f.a(19692);
           t.b(a.field_N);
           fi.a(((bf) this).field_l, param1, param3, param4, param2);
@@ -386,7 +386,7 @@ final class bf extends fa {
         }
     }
 
-    private final void a(int param0, int param1, byte param2) {
+    private final void a(int param0, int param1) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -558,7 +558,8 @@ final class bf extends fa {
     }
 
     final void b(int param0, int param1, byte param2) {
-        this.a(param1, param0, (byte) 98);
+        int discarded$0 = 98;
+        this.a(param1, param0);
         int var4 = 21 / ((param2 - -66) / 35);
     }
 

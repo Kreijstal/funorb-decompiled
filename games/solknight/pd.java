@@ -15,7 +15,7 @@ abstract class pd {
 
     abstract void a(java.awt.Component param0, int param1, int param2, int param3);
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
         field_f = null;
         field_b = null;

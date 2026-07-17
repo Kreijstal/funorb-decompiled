@@ -241,7 +241,7 @@ final class vj extends ql {
         }
     }
 
-    final static byte[] a(String param0, int param1) {
+    final static byte[] a(String param0) {
         RuntimeException var2 = null;
         byte[] stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;

@@ -193,7 +193,7 @@ final class oh {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_h = null;
         field_d = null;
         field_g = null;

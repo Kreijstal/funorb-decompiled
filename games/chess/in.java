@@ -24,31 +24,29 @@ final class in {
         nl var11 = null;
         Object stackIn_7_0 = null;
         Object stackIn_15_0 = null;
-        Object stackIn_18_0 = null;
-        nl stackIn_21_0 = null;
-        Object stackIn_29_0 = null;
+        nl stackIn_20_0 = null;
+        Object stackIn_28_0 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        String stackIn_33_2 = null;
+        String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
         Object stackOut_14_0 = null;
         Object stackOut_6_0 = null;
+        nl stackOut_18_0 = null;
+        Object stackOut_27_0 = null;
         nl stackOut_19_0 = null;
-        Object stackOut_28_0 = null;
-        nl stackOut_20_0 = null;
-        Object stackOut_17_0 = null;
-        RuntimeException stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        String stackOut_32_2 = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
         RuntimeException stackOut_31_0 = null;
         StringBuilder stackOut_31_1 = null;
         String stackOut_31_2 = null;
+        RuntimeException stackOut_30_0 = null;
+        StringBuilder stackOut_30_1 = null;
+        String stackOut_30_2 = null;
         var9 = Chess.field_G;
         try {
           L0: {
@@ -90,36 +88,30 @@ final class in {
                   }
                 }
               }
-              var11 = param2.a(param1, param5, param4 + -3053, param0, param3);
-              if (param4 == 3160) {
-                stackOut_19_0 = (nl) var11;
-                stackIn_21_0 = stackOut_19_0;
-                L4: while (true) {
-                  if (stackIn_21_0.field_f != 0) {
-                    var7 = (java.awt.Frame) var11.field_b;
-                    if (var7 != null) {
-                      if (var11.field_f == 2) {
-                        wf.a(var7, param2, param4 + -3057);
-                        stackOut_28_0 = null;
-                        stackIn_29_0 = stackOut_28_0;
-                        break L0;
-                      } else {
-                        return var7;
-                      }
+              var11 = param2.a(param1, param5, 107, param0, 0);
+              stackOut_18_0 = (nl) var11;
+              stackIn_20_0 = stackOut_18_0;
+              L4: while (true) {
+                if (stackIn_20_0.field_f != 0) {
+                  var7 = (java.awt.Frame) var11.field_b;
+                  if (var7 != null) {
+                    if (var11.field_f == 2) {
+                      wf.a(var7, param2, 103);
+                      stackOut_27_0 = null;
+                      stackIn_28_0 = stackOut_27_0;
+                      break L0;
                     } else {
-                      return null;
+                      return var7;
                     }
                   } else {
-                    bc.a(10L, (byte) -106);
-                    stackOut_20_0 = (nl) var11;
-                    stackIn_21_0 = stackOut_20_0;
-                    continue L4;
+                    return null;
                   }
+                } else {
+                  bc.a(10L, (byte) -106);
+                  stackOut_19_0 = (nl) var11;
+                  stackIn_20_0 = stackOut_19_0;
+                  continue L4;
                 }
-              } else {
-                stackOut_17_0 = null;
-                stackIn_18_0 = stackOut_17_0;
-                return (java.awt.Frame) (Object) stackIn_18_0;
               }
             } else {
               return null;
@@ -129,36 +121,36 @@ final class in {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var6 = decompiledCaughtException;
-            stackOut_30_0 = (RuntimeException) var6;
-            stackOut_30_1 = new StringBuilder().append("in.B(").append(param0).append(44).append(param1).append(44);
-            stackIn_32_0 = stackOut_30_0;
-            stackIn_32_1 = stackOut_30_1;
-            stackIn_31_0 = stackOut_30_0;
-            stackIn_31_1 = stackOut_30_1;
+            stackOut_29_0 = (RuntimeException) var6;
+            stackOut_29_1 = new StringBuilder().append("in.B(").append(param0).append(44).append(param1).append(44);
+            stackIn_31_0 = stackOut_29_0;
+            stackIn_31_1 = stackOut_29_1;
+            stackIn_30_0 = stackOut_29_0;
+            stackIn_30_1 = stackOut_29_1;
             if (param2 == null) {
-              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
-              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
-              stackOut_32_2 = "null";
-              stackIn_33_0 = stackOut_32_0;
-              stackIn_33_1 = stackOut_32_1;
-              stackIn_33_2 = stackOut_32_2;
-              break L5;
-            } else {
               stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
               stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
-              stackOut_31_2 = "{...}";
-              stackIn_33_0 = stackOut_31_0;
-              stackIn_33_1 = stackOut_31_1;
-              stackIn_33_2 = stackOut_31_2;
+              stackOut_31_2 = "null";
+              stackIn_32_0 = stackOut_31_0;
+              stackIn_32_1 = stackOut_31_1;
+              stackIn_32_2 = stackOut_31_2;
+              break L5;
+            } else {
+              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
+              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_2 = "{...}";
+              stackIn_32_0 = stackOut_30_0;
+              stackIn_32_1 = stackOut_30_1;
+              stackIn_32_2 = stackOut_30_2;
               break L5;
             }
           }
-          throw fk.a((Throwable) (Object) stackIn_33_0, stackIn_33_2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw fk.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 44 + 0 + 44 + 3160 + 44 + param5 + 41);
         }
-        return (java.awt.Frame) (Object) stackIn_29_0;
+        return (java.awt.Frame) (Object) stackIn_28_0;
     }
 
-    final static int[] a(byte param0) {
+    final static int[] a() {
         return new int[8];
     }
 
@@ -170,7 +162,7 @@ final class in {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_b = null;
         field_g = null;
         field_f = null;

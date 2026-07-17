@@ -125,13 +125,13 @@ final class lq extends ud {
         ((lq) this).field_L = null;
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3) {
+    final static void a(int param0, boolean param1) {
         RuntimeException var4 = null;
         int var4_int = 0;
+        pn var4_ref = null;
         vh var5 = null;
         int var7 = 0;
         String var8 = null;
-        pn var9 = null;
         RuntimeException decompiledCaughtException = null;
         var7 = Pool.field_O;
         try {
@@ -157,7 +157,8 @@ final class lq extends ud {
               return;
             } else {
               L3: {
-                wa.l(23323);
+                int discarded$3 = 23323;
+                wa.l();
                 fl.field_q.a(param1, false);
                 if (null == sg.field_J) {
                   break L3;
@@ -166,7 +167,7 @@ final class lq extends ud {
                     sg.field_J = null;
                     break L3;
                   } else {
-                    boolean discarded$1 = sg.field_J.a(-125, fl.field_q.field_sb, param1, fl.field_q.field_ib);
+                    boolean discarded$4 = sg.field_J.a(-125, fl.field_q.field_sb, param1, fl.field_q.field_ib);
                     break L3;
                   }
                 }
@@ -175,17 +176,18 @@ final class lq extends ud {
               L4: while (true) {
                 if (5 <= var4_int) {
                   L5: {
-                    if (param2 == d.field_e.field_R) {
+                    if (0 == d.field_e.field_R) {
                       break L5;
                     } else {
-                      fc.field_b = new wm(d.field_e.field_sb, d.field_e.field_ib, d.field_e.field_gb, d.field_e.field_Db, param3, tq.field_m, dg.field_J, qg.field_f, uo.field_Lb, e.field_e, ei.field_A, (String) null, 0L);
+                      fc.field_b = new wm(d.field_e.field_sb, d.field_e.field_ib, d.field_e.field_gb, d.field_e.field_Db, 0, tq.field_m, dg.field_J, qg.field_f, uo.field_Lb, e.field_e, ei.field_A, (String) null, 0L);
                       break L5;
                     }
                   }
                   L6: {
-                    var9 = uk.a(param0, (byte) -126, ad.field_x, kj.field_j);
-                    if (var9 != null) {
-                      na.a(var9, 122);
+                    var4_ref = uk.a(param0, (byte) -126, ad.field_x, kj.field_j);
+                    if (var4_ref != null) {
+                      int discarded$5 = 122;
+                      na.a(var4_ref);
                       break L6;
                     } else {
                       break L6;
@@ -219,7 +221,7 @@ final class lq extends ud {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw wm.a((Throwable) (Object) var4, "lq.JA(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw wm.a((Throwable) (Object) var4, "lq.JA(" + param0 + 44 + param1 + 44 + 0 + 44 + 0 + 41);
         }
     }
 
@@ -237,7 +239,7 @@ final class lq extends ud {
         }
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean a(String param0) {
         return gf.a(-89, param0) != null;
     }
 
@@ -288,14 +290,16 @@ final class lq extends ud {
         ((lq) this).field_L = (ei) (Object) ((lq) this).j(110);
     }
 
-    final static void a(boolean param0) {
-        wa.m(8421504);
-        nk.b(-31384);
+    final static void a() {
+        int discarded$0 = 8421504;
+        wa.m();
+        int discarded$1 = -31384;
+        nk.b();
         fc.field_b = null;
         lq.i(15975);
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_U = null;
         field_N = null;
         field_T = null;

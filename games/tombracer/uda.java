@@ -104,14 +104,14 @@ final class uda extends qra {
         L1: {
           var5 = stackIn_3_0;
           ik.field_h.a(0, 0);
-          int discarded$3 = be.a(gta.field_a.toUpperCase(), 1, qr.field_v, 2431750, 0, 48, 1, -222 + var4, var3 + -360, -1, (byte) 60, 512);
+          int discarded$4 = be.a(gta.field_a.toUpperCase(), 1, qr.field_v, 2431750, 0, 48, 1, -222 + var4, var3 + -360, -1, (byte) 60, 512);
           if (-1 != ((uda) this).field_u) {
             break L1;
           } else {
             if (var5 == 0) {
               break L1;
             } else {
-              int discarded$4 = be.a(jsa.field_F, 1, eda.field_f, 2431750, 0, 48, 1, koa.b(0) + -48, var3 - 256, -1, (byte) 60, 512);
+              int discarded$5 = be.a(jsa.field_F, 1, eda.field_f, 2431750, 0, 48, 1, koa.b(0) + -48, var3 - 256, -1, (byte) 60, 512);
               break L1;
             }
           }
@@ -133,7 +133,8 @@ final class uda extends qra {
             var7 = var11;
             L4: while (true) {
               if (var6 <= var11) {
-                se.f((byte) -6);
+                int discarded$6 = -6;
+                se.f();
                 ((uda) this).d(-27142);
                 return;
               } else {
@@ -148,7 +149,7 @@ final class uda extends qra {
                     break L5;
                   }
                 }
-                int discarded$5 = be.a(((uda) this).field_h.a(var11, false).toUpperCase(), 1, qf.field_j, wga.field_a[var11], 0, 32, 1, 55 + var9, var8 + -64, -1, (byte) 60, 128);
+                int discarded$7 = be.a(((uda) this).field_h.a(var11, false).toUpperCase(), 1, qf.field_j, wga.field_a[var11], 0, 32, 1, 55 + var9, var8 + -64, -1, (byte) 60, 128);
                 var11++;
                 continue L4;
               }
@@ -206,7 +207,8 @@ final class uda extends qra {
                   if (!this.i(param0 + -81)) {
                     break L3;
                   } else {
-                    this.g(-13);
+                    int discarded$2 = -13;
+                    this.g();
                     break L3;
                   }
                 }
@@ -223,7 +225,7 @@ final class uda extends qra {
                 if (param0 == 80) {
                   break L5;
                 } else {
-                  boolean discarded$1 = ((uda) this).a('H', -116, 32);
+                  boolean discarded$3 = ((uda) this).a('H', -116, 32);
                   break L5;
                 }
               }
@@ -260,9 +262,6 @@ final class uda extends qra {
 
     private final void a(boolean param0, int param1) {
         if (!this.i(-1)) {
-            return;
-        }
-        if (!param0) {
             return;
         }
         if (null != ((uda) this).field_f) {
@@ -483,7 +482,7 @@ final class uda extends qra {
         return stackIn_6_0 != 0;
     }
 
-    private final void g(int param0) {
+    private final void g() {
         int var3 = 0;
         Object stackIn_24_0 = null;
         int stackIn_24_1 = 0;
@@ -682,7 +681,8 @@ final class uda extends qra {
                         break L4;
                       }
                     }
-                    if (!eq.c(0)) {
+                    int discarded$3 = 0;
+                    if (!eq.c()) {
                       stackOut_15_0 = 0;
                       stackIn_16_0 = stackOut_15_0;
                       break L2;

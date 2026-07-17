@@ -11,7 +11,8 @@ final class ij extends kk {
         ck.field_f = 0;
         fk.field_a = param0;
         ea.field_a = new n(2);
-        ea.field_a.a(false, param1, -1, td.a(pe.field_d, la.field_c, true));
+        int discarded$0 = 1;
+        ea.field_a.a(false, param1, -1, td.a(pe.field_d, la.field_c));
     }
 
     final void a(int param0, byte[] param1) {
@@ -27,7 +28,7 @@ final class ij extends kk {
         }
     }
 
-    final static qb a(String param0, byte param1) {
+    final static qb a(String param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -91,7 +92,7 @@ final class ij extends kk {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_f = null;
     }
 
@@ -115,12 +116,10 @@ final class ij extends kk {
     final static void a(int param0, java.applet.Applet param1) {
         try {
             hi.a(0, "", param1);
-            if (param0 != 18065) {
-                field_f = null;
-            }
-            wj.a(param1, 0);
+            int discarded$0 = 0;
+            wj.a(param1);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "ij.K(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "ij.K(" + 18065 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

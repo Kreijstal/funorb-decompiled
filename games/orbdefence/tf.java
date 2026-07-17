@@ -426,7 +426,7 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
                         } else {
                           try {
                             L16: {
-                              Object discarded$1 = var2_ref.invoke(var1, new Object[1]);
+                              Object discarded$5 = var2_ref.invoke(var1, new Object[1]);
                               break L16;
                             }
                           } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -439,9 +439,11 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
                           break L15;
                         }
                       }
-                      ml.a(117);
+                      int discarded$6 = 117;
+                      ml.a();
                       ((tf) this).e(53);
-                      cb.field_a = bk.a(bd.field_k, (java.awt.Component) (Object) field_f, th.field_e, false);
+                      int discarded$7 = 0;
+                      cb.field_a = bk.a(bd.field_k, (java.awt.Component) (Object) field_f, th.field_e);
                       ((tf) this).c((byte) -69);
                       ge.field_g = ql.a(65280);
                       L18: while (true) {
@@ -476,7 +478,8 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
                               if (~m.field_c >= ~var3) {
                                 break L23;
                               } else {
-                                this.a(0);
+                                int discarded$8 = 0;
+                                this.a();
                                 var3++;
                                 if (var5 != 0) {
                                   break L22;
@@ -489,7 +492,8 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
                                 }
                               }
                             }
-                            this.b((byte) -126);
+                            int discarded$9 = -126;
+                            this.b();
                             vf.a((Object) (Object) field_f, 50, wc.field_c);
                             break L22;
                           }
@@ -740,36 +744,32 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
               }
             }
             ((tf) this).a(true);
-            if (param0 == 0) {
-              L11: {
-                if (null != h.field_J) {
-                  try {
-                    L12: {
-                      System.exit(0);
-                      break L12;
-                    }
-                  } catch (java.lang.Throwable decompiledCaughtParameter3) {
-                    decompiledCaughtException = decompiledCaughtParameter3;
-                    L13: {
-                      var3_ref2 = decompiledCaughtException;
-                      break L13;
-                    }
+            L11: {
+              if (null != h.field_J) {
+                try {
+                  L12: {
+                    System.exit(0);
+                    break L12;
                   }
-                  break L11;
-                } else {
-                  break L11;
+                } catch (java.lang.Throwable decompiledCaughtParameter3) {
+                  decompiledCaughtException = decompiledCaughtParameter3;
+                  L13: {
+                    var3_ref2 = decompiledCaughtException;
+                    break L13;
+                  }
                 }
+                break L11;
+              } else {
+                break L11;
               }
-              System.out.println("Shutdown complete - clean:" + param1);
-              break L0;
-            } else {
-              return;
             }
+            System.out.println("Shutdown complete - clean:" + param1);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter4) {
           decompiledCaughtException = decompiledCaughtParameter4;
           var3_ref3 = (RuntimeException) (Object) decompiledCaughtException;
-          throw dd.a((Throwable) (Object) var3_ref3, "tf.S(" + param0 + 44 + param1 + 41);
+          throw dd.a((Throwable) (Object) var3_ref3, "tf.S(" + 0 + 44 + param1 + 41);
         }
     }
 
@@ -1018,7 +1018,7 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
     public final void windowOpened(java.awt.event.WindowEvent param0) {
     }
 
-    private final void a(int param0) {
+    private final void a() {
         RuntimeException runtimeException = null;
         long var2_long = 0L;
         long var4 = 0L;
@@ -1031,7 +1031,7 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
               var2_long = ji.b(-61);
               var4 = qf.field_o[mc.field_i];
               qf.field_o[mc.field_i] = var2_long;
-              if ((long)param0 == var4) {
+              if (0L == var4) {
                 break L1;
               } else {
                 if (~var2_long >= ~var4) {
@@ -1055,7 +1055,7 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-          throw dd.a((Throwable) (Object) runtimeException, "tf.N(" + param0 + 41);
+          throw dd.a((Throwable) (Object) runtimeException, "tf.N(" + 0 + 41);
         }
     }
 
@@ -1214,9 +1214,9 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
     public final void windowIconified(java.awt.event.WindowEvent param0) {
     }
 
-    private final void b(byte param0) {
-        RuntimeException runtimeException = null;
+    private final void b() {
         long var2_long = 0L;
+        RuntimeException var2 = null;
         long var4 = 0L;
         int var6_int = 0;
         java.awt.Insets var6 = null;
@@ -1241,9 +1241,9 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
             }
             L2: {
               ab.field_f = 31 & 1 + ab.field_f;
-              int fieldTemp$2 = ol.field_j;
+              int fieldTemp$3 = ol.field_j;
               ol.field_j = ol.field_j + 1;
-              if (50 >= fieldTemp$2) {
+              if (50 >= fieldTemp$3) {
                 break L2;
               } else {
                 L3: {
@@ -1274,21 +1274,13 @@ public abstract class tf extends java.applet.Applet implements Runnable, java.aw
                 break L2;
               }
             }
-            L5: {
-              ((tf) this).d((byte) -114);
-              if (param0 < -83) {
-                break L5;
-              } else {
-                field_l = -117L;
-                break L5;
-              }
-            }
+            ((tf) this).d((byte) -114);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          throw dd.a((Throwable) (Object) runtimeException, "tf.T(" + param0 + 41);
+          var2 = decompiledCaughtException;
+          throw dd.a((Throwable) (Object) var2, "tf.T(" + -126 + 41);
         }
     }
 

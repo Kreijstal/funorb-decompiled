@@ -96,7 +96,7 @@ final class aa extends hn {
           if (param0.field_o.length == 0) {
             return null;
           } else {
-            return new aa(param0, (int)((long)param0.field_p * 256L * (long)param1 / (long)(100 * rc.field_d)), param2 << 6, param3 << 6);
+            return new aa(param0, (int)((long)param0.field_p * 256L * 100L / (long)(100 * rc.field_d)), param2 << 6, param3 << 6);
           }
         } else {
           return null;
@@ -1108,7 +1108,7 @@ final class aa extends hn {
           if (param0.field_o.length == 0) {
             return null;
           } else {
-            return new aa(param0, (int)((long)param0.field_p * 256L * (long)param1 / (long)(100 * rc.field_d)), param2 << 6);
+            return new aa(param0, (int)((long)param0.field_p * 256L * 100L / (long)(100 * rc.field_d)), param2 << 6);
           }
         } else {
           return null;

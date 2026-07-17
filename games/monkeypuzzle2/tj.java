@@ -57,9 +57,11 @@ final class tj {
         String stackOut_9_2 = null;
         try {
           L0: {
-            if (wg.a(param2, param0, param1, -3)) {
+            int discarded$9 = -3;
+            if (wg.a(param2, param0, param1)) {
               if (param3 < -14) {
-                stackOut_6_0 = cf.c((byte) 16);
+                int discarded$10 = 16;
+                stackOut_6_0 = cf.c();
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
               } else {
@@ -104,7 +106,7 @@ final class tj {
         return stackIn_7_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         field_e = null;

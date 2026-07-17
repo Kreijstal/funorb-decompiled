@@ -80,19 +80,20 @@ abstract class sk {
         var4 = stellarshard.field_B;
         try {
           L0: {
-            if (!mj.a((byte) -27, param0, param2)) {
+            if (!mj.a((byte) -27, false, param2)) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0 != 0;
             } else {
-              var3_int = param1;
+              var3_int = 0;
               L1: while (true) {
                 if (var3_int >= param2.length()) {
                   stackOut_12_0 = 1;
                   stackIn_13_0 = stackOut_12_0;
                   break L0;
                 } else {
-                  if (!b.a(param2.charAt(var3_int), (byte) -123)) {
+                  int discarded$15 = -123;
+                  if (!b.a(param2.charAt(var3_int))) {
                     stackOut_9_0 = 0;
                     stackIn_10_0 = stackOut_9_0;
                     return stackIn_10_0 != 0;
@@ -109,7 +110,7 @@ abstract class sk {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_14_0 = (RuntimeException) var3;
-            stackOut_14_1 = new StringBuilder().append("sk.H(").append(param0).append(44).append(param1).append(44);
+            stackOut_14_1 = new StringBuilder().append("sk.H(").append(0).append(44).append(0).append(44);
             stackIn_16_0 = stackOut_14_0;
             stackIn_16_1 = stackOut_14_1;
             stackIn_15_0 = stackOut_14_0;

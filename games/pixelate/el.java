@@ -14,20 +14,10 @@ final class el {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        if (param3 < 87) {
-          field_b = -89;
-          w.field_q = param1;
-          da.field_m = param4;
-          dk.field_d = param0;
-          ab.field_b = param2;
-          return;
-        } else {
-          w.field_q = param1;
-          da.field_m = param4;
-          dk.field_d = param0;
-          ab.field_b = param2;
-          return;
-        }
+        w.field_q = param1;
+        da.field_m = param4;
+        dk.field_d = param0;
+        ab.field_b = param2;
     }
 
     final static int a(int param0, byte param1, int param2) {
@@ -174,15 +164,15 @@ final class el {
         if (var14 == null) {
           return;
         } else {
-          ta.a(var22, param2);
+          ta.a(var22, 8421504);
           if (param3 > -8) {
             field_b = -46;
-            t.c(param4, param0, (int)(param6 - 0.5f), param2);
-            t.c(param1, param5, (int)(-0.5f + param6), param2);
+            t.c(param4, param0, (int)(param6 - 0.5f), 8421504);
+            t.c(param1, param5, (int)(-0.5f + param6), 8421504);
             return;
           } else {
-            t.c(param4, param0, (int)(param6 - 0.5f), param2);
-            t.c(param1, param5, (int)(-0.5f + param6), param2);
+            t.c(param4, param0, (int)(param6 - 0.5f), 8421504);
+            t.c(param1, param5, (int)(-0.5f + param6), 8421504);
             return;
           }
         }
@@ -252,7 +242,7 @@ final class el {
                     break L6;
                   }
                 }
-                stackOut_15_0 = new fm((jp) (Object) var8, param1, param4);
+                stackOut_15_0 = new fm((jp) (Object) var8, true, param4);
                 stackIn_16_0 = stackOut_15_0;
                 break L1;
               }

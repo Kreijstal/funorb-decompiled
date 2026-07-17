@@ -118,26 +118,26 @@ abstract class um extends iq implements dq {
         int var7 = 0;
         int stackIn_4_0 = 0;
         int stackIn_15_0 = 0;
-        int stackIn_21_0 = 0;
+        int stackIn_19_0 = 0;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_25_2 = null;
+        String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
-        int stackOut_20_0 = 0;
+        int stackOut_18_0 = 0;
         int stackOut_14_0 = 0;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
         RuntimeException stackOut_22_0 = null;
         StringBuilder stackOut_22_1 = null;
-        RuntimeException stackOut_24_0 = null;
-        StringBuilder stackOut_24_1 = null;
-        String stackOut_24_2 = null;
-        RuntimeException stackOut_23_0 = null;
-        StringBuilder stackOut_23_1 = null;
-        String stackOut_23_2 = null;
+        String stackOut_22_2 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
         var7 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
@@ -149,14 +149,9 @@ abstract class um extends iq implements dq {
               var4_int = ((um) this).field_G.length - 1;
               L1: while (true) {
                 if (0 > var4_int) {
-                  if (param0 >= 90) {
-                    stackOut_20_0 = 0;
-                    stackIn_21_0 = stackOut_20_0;
-                    break L0;
-                  } else {
-                    boolean discarded$2 = ((um) this).f(-89);
-                    return false;
-                  }
+                  stackOut_18_0 = 0;
+                  stackIn_19_0 = stackOut_18_0;
+                  break L0;
                 } else {
                   L2: {
                     var5 = ((um) this).field_G[var4_int];
@@ -202,33 +197,33 @@ abstract class um extends iq implements dq {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var4 = decompiledCaughtException;
-            stackOut_22_0 = (RuntimeException) var4;
-            stackOut_22_1 = new StringBuilder().append("um.I(").append(param0).append(44);
-            stackIn_24_0 = stackOut_22_0;
-            stackIn_24_1 = stackOut_22_1;
-            stackIn_23_0 = stackOut_22_0;
-            stackIn_23_1 = stackOut_22_1;
+            stackOut_20_0 = (RuntimeException) var4;
+            stackOut_20_1 = new StringBuilder().append("um.I(").append(110).append(44);
+            stackIn_22_0 = stackOut_20_0;
+            stackIn_22_1 = stackOut_20_1;
+            stackIn_21_0 = stackOut_20_0;
+            stackIn_21_1 = stackOut_20_1;
             if (param1 == null) {
-              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
-              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
-              stackOut_24_2 = "null";
-              stackIn_25_0 = stackOut_24_0;
-              stackIn_25_1 = stackOut_24_1;
-              stackIn_25_2 = stackOut_24_2;
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "null";
+              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_1 = stackOut_22_1;
+              stackIn_23_2 = stackOut_22_2;
               break L5;
             } else {
-              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
-              stackOut_23_2 = "{...}";
-              stackIn_25_0 = stackOut_23_0;
-              stackIn_25_1 = stackOut_23_1;
-              stackIn_25_2 = stackOut_23_2;
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "{...}";
+              stackIn_23_0 = stackOut_21_0;
+              stackIn_23_1 = stackOut_21_1;
+              stackIn_23_2 = stackOut_21_2;
               break L5;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + 1 + 41);
+          throw wn.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + 1 + 41);
         }
-        return stackIn_21_0 != 0;
+        return stackIn_19_0 != 0;
     }
 
     final boolean a(int param0, int param1, int param2, iq param3, int param4, byte param5, int param6) {
@@ -526,7 +521,7 @@ abstract class um extends iq implements dq {
         }
     }
 
-    final static void h(int param0) {
+    final static void h() {
         gg var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -738,75 +733,67 @@ abstract class um extends iq implements dq {
         int var8 = 0;
         int var9 = 0;
         iq[] var10 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
-        String stackIn_18_2 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        String stackIn_21_2 = null;
+        String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
         RuntimeException stackOut_15_0 = null;
         StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
         RuntimeException stackOut_17_0 = null;
         StringBuilder stackOut_17_1 = null;
         String stackOut_17_2 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        RuntimeException stackOut_20_0 = null;
-        StringBuilder stackOut_20_1 = null;
-        String stackOut_20_2 = null;
-        RuntimeException stackOut_19_0 = null;
-        StringBuilder stackOut_19_1 = null;
-        String stackOut_19_2 = null;
         var9 = Vertigo2.field_L ? 1 : 0;
         try {
           L0: {
             if (((um) this).field_G != null) {
-              L1: {
-                if (param1) {
-                  break L1;
-                } else {
-                  field_H = null;
-                  break L1;
-                }
-              }
               var10 = ((um) this).field_G;
               var6 = 0;
-              L2: while (true) {
+              L1: while (true) {
                 if (var6 >= var10.length) {
                   break L0;
                 } else {
                   var7 = var10[var6];
                   StringBuilder discarded$29 = param2.append(10);
                   var8 = 0;
-                  L3: while (true) {
+                  L2: while (true) {
                     if (var8 > param3) {
-                      L4: {
+                      L3: {
                         if (var7 == null) {
                           StringBuilder discarded$30 = param2.append("null");
-                          break L4;
+                          break L3;
                         } else {
                           StringBuilder discarded$31 = var7.a(param0, param3 - -1, (byte) -79, param2);
-                          break L4;
+                          break L3;
                         }
                       }
                       var6++;
-                      continue L2;
+                      continue L1;
                     } else {
                       StringBuilder discarded$32 = param2.append(32);
                       var8++;
-                      continue L3;
+                      continue L2;
                     }
                   }
                 }
@@ -817,62 +804,62 @@ abstract class um extends iq implements dq {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var5 = decompiledCaughtException;
-            stackOut_15_0 = (RuntimeException) var5;
-            stackOut_15_1 = new StringBuilder().append("um.K(");
-            stackIn_17_0 = stackOut_15_0;
-            stackIn_17_1 = stackOut_15_1;
-            stackIn_16_0 = stackOut_15_0;
-            stackIn_16_1 = stackOut_15_1;
+            stackOut_13_0 = (RuntimeException) var5;
+            stackOut_13_1 = new StringBuilder().append("um.K(");
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
             if (param0 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L4;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L4;
+            }
+          }
+          L5: {
+            stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(1).append(44);
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
+            if (param2 == null) {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
+              break L5;
+            } else {
               stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
               stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
-              stackOut_17_2 = "null";
-              stackIn_18_0 = stackOut_17_0;
-              stackIn_18_1 = stackOut_17_1;
-              stackIn_18_2 = stackOut_17_2;
-              break L5;
-            } else {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-              stackOut_16_2 = "{...}";
-              stackIn_18_0 = stackOut_16_0;
-              stackIn_18_1 = stackOut_16_1;
-              stackIn_18_2 = stackOut_16_2;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
               break L5;
             }
           }
-          L6: {
-            stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(44).append(param1).append(44);
-            stackIn_20_0 = stackOut_18_0;
-            stackIn_20_1 = stackOut_18_1;
-            stackIn_19_0 = stackOut_18_0;
-            stackIn_19_1 = stackOut_18_1;
-            if (param2 == null) {
-              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
-              stackOut_20_2 = "null";
-              stackIn_21_0 = stackOut_20_0;
-              stackIn_21_1 = stackOut_20_1;
-              stackIn_21_2 = stackOut_20_2;
-              break L6;
-            } else {
-              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
-              stackOut_19_2 = "{...}";
-              stackIn_21_0 = stackOut_19_0;
-              stackIn_21_1 = stackOut_19_1;
-              stackIn_21_2 = stackOut_19_2;
-              break L6;
-            }
-          }
-          throw wn.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param3 + 41);
+          throw wn.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param3 + 41);
         }
     }
 
-    private final iq a(byte param0) {
+    private final iq a() {
         iq[] var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -912,7 +899,8 @@ abstract class um extends iq implements dq {
         if (param0 <= 3) {
             boolean discarded$0 = ((um) this).f(-7);
         }
-        return null != this.a((byte) -78) ? true : false;
+        int discarded$1 = -78;
+        return null != this.a() ? true : false;
     }
 
     final void d(byte param0) {
@@ -952,7 +940,7 @@ abstract class um extends iq implements dq {
         }
     }
 
-    private final boolean a(iq param0, byte param1) {
+    private final boolean a(iq param0) {
         RuntimeException var3 = null;
         boolean stackIn_1_0 = false;
         RuntimeException stackIn_3_0 = null;
@@ -974,7 +962,8 @@ abstract class um extends iq implements dq {
         String stackOut_3_2 = null;
         try {
           L0: {
-            stackOut_0_0 = this.a(1, param0, (byte) -127);
+            int discarded$2 = -127;
+            stackOut_0_0 = this.a(1, param0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -1038,33 +1027,29 @@ abstract class um extends iq implements dq {
         try {
           L0: {
             super.a((byte) 49, param1, param2, param3);
-            if (param0 > 6) {
-              if (null == ((um) this).field_G) {
-                return;
-              } else {
-                var9 = ((um) this).field_G;
-                var5 = var9;
-                var6 = 0;
-                L1: while (true) {
-                  if (var9.length <= var6) {
-                    break L0;
-                  } else {
-                    L2: {
-                      var7 = var9[var6];
-                      if (var7 != null) {
-                        var7.a((byte) 46, ((um) this).field_o + param1, ((um) this).field_t + param2, param3);
-                        break L2;
-                      } else {
-                        break L2;
-                      }
+            if (null == ((um) this).field_G) {
+              return;
+            } else {
+              var9 = ((um) this).field_G;
+              var5 = var9;
+              var6 = 0;
+              L1: while (true) {
+                if (var9.length <= var6) {
+                  break L0;
+                } else {
+                  L2: {
+                    var7 = var9[var6];
+                    if (var7 != null) {
+                      var7.a((byte) 46, ((um) this).field_o + param1, ((um) this).field_t + param2, param3);
+                      break L2;
+                    } else {
+                      break L2;
                     }
-                    var6++;
-                    continue L1;
                   }
+                  var6++;
+                  continue L1;
                 }
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1072,7 +1057,7 @@ abstract class um extends iq implements dq {
           L3: {
             var5_ref = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var5_ref;
-            stackOut_13_1 = new StringBuilder().append("um.E(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_13_1 = new StringBuilder().append("um.E(").append(102).append(44).append(param1).append(44).append(param2).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;
@@ -1107,78 +1092,73 @@ abstract class um extends iq implements dq {
             field_C = null;
         }
         if (param1 % 10L != 0L) {
-            an.a(param1, false);
+            int discarded$1 = 0;
+            an.a(param1);
         } else {
-            an.a(-1L + param1, false);
-            an.a(1L, false);
+            int discarded$2 = 0;
+            an.a(-1L + param1);
+            int discarded$3 = 0;
+            an.a(1L);
         }
     }
 
     private final boolean b(byte param0, iq param1) {
         RuntimeException var3 = null;
-        boolean stackIn_3_0 = false;
+        boolean stackIn_1_0 = false;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_7_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_2_0 = false;
+        boolean stackOut_0_0 = false;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
-        RuntimeException stackOut_6_0 = null;
-        StringBuilder stackOut_6_1 = null;
-        String stackOut_6_2 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              if (param0 > 1) {
-                break L1;
-              } else {
-                field_D = null;
-                break L1;
-              }
-            }
-            stackOut_2_0 = this.a(110, param1, 1);
-            stackIn_3_0 = stackOut_2_0;
+            stackOut_0_0 = this.a(110, param1, 1);
+            stackIn_1_0 = stackOut_0_0;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
+          L1: {
             var3 = decompiledCaughtException;
-            stackOut_4_0 = (RuntimeException) var3;
-            stackOut_4_1 = new StringBuilder().append("um.O(").append(param0).append(44);
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            stackIn_5_0 = stackOut_4_0;
-            stackIn_5_1 = stackOut_4_1;
+            stackOut_2_0 = (RuntimeException) var3;
+            stackOut_2_1 = new StringBuilder().append("um.O(").append(104).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
-              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "null";
-              stackIn_7_0 = stackOut_6_0;
-              stackIn_7_1 = stackOut_6_1;
-              stackIn_7_2 = stackOut_6_2;
-              break L2;
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
             } else {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "{...}";
-              stackIn_7_0 = stackOut_5_0;
-              stackIn_7_1 = stackOut_5_1;
-              stackIn_7_2 = stackOut_5_2;
-              break L2;
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw wn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+          throw wn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
         }
-        return stackIn_3_0;
+        return stackIn_1_0;
     }
 
     final boolean a(byte param0, iq param1) {
@@ -1284,7 +1264,7 @@ abstract class um extends iq implements dq {
         super(param0, param1, param2, param3, param4, (uf) null);
     }
 
-    private final boolean a(int param0, iq param1, byte param2) {
+    private final boolean a(int param0, iq param1) {
         int var4_int = 0;
         RuntimeException var4 = null;
         iq var5 = null;
@@ -1331,7 +1311,7 @@ abstract class um extends iq implements dq {
                       if (!var5.f(65)) {
                         break L2;
                       } else {
-                        var4_int = var4_int + param0;
+                        var4_int = var4_int + 1;
                         L3: while (true) {
                           if (var4_int >= ((um) this).field_G.length) {
                             break L2;
@@ -1350,7 +1330,7 @@ abstract class um extends iq implements dq {
                                 break L4;
                               }
                             }
-                            var4_int = var4_int + param0;
+                            var4_int = var4_int + 1;
                             continue L3;
                           }
                         }
@@ -1372,7 +1352,7 @@ abstract class um extends iq implements dq {
           L5: {
             var4 = decompiledCaughtException;
             stackOut_19_0 = (RuntimeException) var4;
-            stackOut_19_1 = new StringBuilder().append("um.L(").append(param0).append(44);
+            stackOut_19_1 = new StringBuilder().append("um.L(").append(1).append(44);
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -1452,7 +1432,8 @@ abstract class um extends iq implements dq {
                   if (var5_int == 80) {
                     L3: {
                       if (!cr.field_eb[81]) {
-                        stackOut_18_0 = this.a(param3, (byte) 121);
+                        int discarded$3 = 121;
+                        stackOut_18_0 = this.a(param3);
                         stackIn_19_0 = stackOut_18_0;
                         break L3;
                       } else {

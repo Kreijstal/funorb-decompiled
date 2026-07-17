@@ -81,7 +81,7 @@ final class qj extends br {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_j = null;
         field_m = null;
         field_o = null;

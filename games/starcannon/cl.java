@@ -22,7 +22,8 @@ final class cl extends od {
     }
 
     final static void a(boolean param0, int param1, int param2, int param3, int param4) {
-        wj.b(param0);
+        int discarded$0 = 1;
+        wj.b();
         ki.c(param2, param3, param4, param1);
     }
 
@@ -265,7 +266,7 @@ final class cl extends od {
         return stackIn_34_0;
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_k = null;
     }
 

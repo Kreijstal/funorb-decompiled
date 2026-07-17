@@ -117,7 +117,7 @@ final class ao extends d {
         throw new Error();
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_O = null;
         field_P = null;
         field_R = null;

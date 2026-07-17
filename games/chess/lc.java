@@ -159,7 +159,7 @@ final class lc {
         }
     }
 
-    final static void a(int param0) {
+    final static void a() {
         cd.field_x = new w(ki.field_P, dc.field_s, gd.field_b, qn.field_P, (ci) (Object) kj.field_g, sj.field_k);
         int var1 = 0;
     }
@@ -384,13 +384,13 @@ final class lc {
         }
     }
 
-    final static void a(String param0, String param1, int param2, int param3, String param4, boolean param5) {
+    final static void a(String param0, String param1, int param2, int param3, String param4) {
         ld var6 = null;
         try {
-            var6 = new ld(param2, param0, param3, param1, param4);
+            var6 = new ld(2, param0, 0, param1, param4);
             ml.a((byte) 29, var6);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "lc.K(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + 0 + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "lc.K(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 2 + 44 + 0 + 44 + (param4 != null ? "{...}" : "null") + 44 + 0 + 41);
         }
     }
 
@@ -483,7 +483,8 @@ final class lc {
                       break L4;
                     } else {
                       L5: {
-                        this.c(0);
+                        int discarded$2 = 0;
+                        this.c();
                         var9_int = param3;
                         if (((lc) this).field_j >= var9_int) {
                           break L5;
@@ -542,9 +543,9 @@ final class lc {
                               break L8;
                             } else {
                               param3--;
-                              int incrementValue$1 = param2;
+                              int incrementValue$3 = param2;
                               param2++;
-                              param0[incrementValue$1] = (byte) 0;
+                              param0[incrementValue$3] = (byte) 0;
                               ((lc) this).field_a = ((lc) this).field_a + 1L;
                               continue L10;
                             }
@@ -672,7 +673,7 @@ final class lc {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_n = null;
         field_g = null;
         field_l = null;
@@ -681,7 +682,7 @@ final class lc {
         field_f = null;
     }
 
-    private final void c(int param0) throws IOException {
+    private final void c() throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;

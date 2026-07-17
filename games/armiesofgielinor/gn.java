@@ -6,18 +6,18 @@ final class gn {
     private StringBuilder field_a;
     private boolean field_b;
 
-    final static void a(int param0, wj param1, int param2) {
+    final static void a(int param0, wj param1) {
         bv var3 = null;
         try {
             var3 = vl.field_n;
             var3.h(32161, param0);
             var3.b(1, 5);
-            var3.b(param2 + 1, param2);
+            var3.b(1, 0);
             var3.b(true, param1.field_r);
             var3.b(1, param1.field_k);
             var3.b(1, param1.field_p);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) (Object) runtimeException, "gn.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw ig.a((Throwable) (Object) runtimeException, "gn.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 0 + 41);
         }
     }
 
@@ -52,7 +52,8 @@ final class gn {
         try {
           L0: {
             L1: {
-              this.a(param1, 0);
+              int discarded$2 = 0;
+              this.a(param1);
               this.b(124);
               if (param0 == 19) {
                 break L1;
@@ -103,7 +104,7 @@ final class gn {
         ((gn) this).field_b = true;
     }
 
-    private final void a(String param0, int param1) {
+    private final void a(String param0) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -125,13 +126,14 @@ final class gn {
           L0: {
             L1: {
               if (((gn) this).field_b) {
-                this.a(0);
+                int discarded$4 = 0;
+                this.a();
                 break L1;
               } else {
                 break L1;
               }
             }
-            StringBuilder discarded$2 = ((gn) this).field_a.append(param0);
+            StringBuilder discarded$5 = ((gn) this).field_a.append(param0);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -197,7 +199,7 @@ final class gn {
         return ((gn) this).field_a.toString();
     }
 
-    private final void a(int param0) {
+    private final void a() {
         int var2 = 0;
         int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         for (var2 = 0; var2 < ((gn) this).field_c; var2++) {

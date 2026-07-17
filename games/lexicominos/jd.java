@@ -7,15 +7,12 @@ final class jd {
     static int field_c;
     static int field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_b = null;
-        if (param0 >= -96) {
-            field_c = 109;
-        }
     }
 
-    final static void a(java.awt.Canvas param0, int param1) {
+    final static void a(java.awt.Canvas param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -34,8 +31,10 @@ final class jd {
         StringBuilder stackOut_5_1 = null;
         String stackOut_5_2 = null;
         try {
-          r.a((java.awt.Component) (Object) param0, 20);
-          ph.a((java.awt.Component) (Object) param0, 123);
+          int discarded$14 = 20;
+          r.a((java.awt.Component) (Object) param0);
+          int discarded$15 = 123;
+          ph.a((java.awt.Component) (Object) param0);
           if (null != rk.field_c) {
             rk.field_c.a(3, (java.awt.Component) (Object) param0);
             return;
@@ -74,7 +73,7 @@ final class jd {
         }
     }
 
-    final static void a(boolean param0, boolean param1, int param2) {
+    final static void a(boolean param0, boolean param1) {
         Object var4 = null;
         rb.a((String) null, param1, param0, 14635);
     }
@@ -88,70 +87,56 @@ final class jd {
     }
 
     final static boolean a(byte param0, char param1) {
-        int stackIn_27_0 = 0;
-        int stackIn_30_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_25_0 = 0;
+        int stackIn_25_0 = 0;
+        int stackIn_28_0 = 0;
         int stackOut_26_0 = 0;
-        if (param0 == -16) {
-          if (param1 < 48) {
-            if (param1 < 65) {
-              L0: {
-                if (97 > param1) {
-                  break L0;
-                } else {
-                  if (122 < param1) {
-                    break L0;
-                  } else {
-                    return true;
-                  }
-                }
-              }
-              return false;
-            } else {
-              if (param1 <= 90) {
-                stackOut_28_0 = 1;
-                stackIn_30_0 = stackOut_28_0;
-                return stackIn_30_0 != 0;
+        int stackOut_23_0 = 0;
+        int stackOut_24_0 = 0;
+        if (param1 < 48) {
+          if (param1 < 65) {
+            L0: {
+              if (97 > param1) {
+                break L0;
               } else {
-                L1: {
-                  L2: {
-                    if (97 > param1) {
-                      break L2;
-                    } else {
-                      if (122 < param1) {
-                        break L2;
-                      } else {
-                        stackOut_25_0 = 1;
-                        stackIn_27_0 = stackOut_25_0;
-                        break L1;
-                      }
-                    }
-                  }
-                  stackOut_26_0 = 0;
-                  stackIn_27_0 = stackOut_26_0;
-                  break L1;
-                }
-                return stackIn_27_0 != 0;
-              }
-            }
-          } else {
-            if (param1 > 57) {
-              if (param1 >= 65) {
-                if (param1 > 90) {
-                  if (97 <= param1) {
-                    if (122 < param1) {
-                      return false;
-                    } else {
-                      return true;
-                    }
-                  } else {
-                    return false;
-                  }
+                if (122 < param1) {
+                  break L0;
                 } else {
                   return true;
                 }
-              } else {
+              }
+            }
+            return false;
+          } else {
+            if (param1 <= 90) {
+              stackOut_26_0 = 1;
+              stackIn_28_0 = stackOut_26_0;
+              return stackIn_28_0 != 0;
+            } else {
+              L1: {
+                L2: {
+                  if (97 > param1) {
+                    break L2;
+                  } else {
+                    if (122 < param1) {
+                      break L2;
+                    } else {
+                      stackOut_23_0 = 1;
+                      stackIn_25_0 = stackOut_23_0;
+                      break L1;
+                    }
+                  }
+                }
+                stackOut_24_0 = 0;
+                stackIn_25_0 = stackOut_24_0;
+                break L1;
+              }
+              return stackIn_25_0 != 0;
+            }
+          }
+        } else {
+          if (param1 > 57) {
+            if (param1 >= 65) {
+              if (param1 > 90) {
                 if (97 <= param1) {
                   if (122 < param1) {
                     return false;
@@ -161,17 +146,27 @@ final class jd {
                 } else {
                   return false;
                 }
+              } else {
+                return true;
               }
             } else {
-              return true;
+              if (97 <= param1) {
+                if (122 < param1) {
+                  return false;
+                } else {
+                  return true;
+                }
+              } else {
+                return false;
+              }
             }
+          } else {
+            return true;
           }
-        } else {
-          return false;
         }
     }
 
-    final static String a(long param0, int param1) {
+    final static String a(long param0) {
         int var3 = 0;
         long var4 = 0L;
         StringBuilder var6 = null;
@@ -182,7 +177,7 @@ final class jd {
         var11 = Lexicominos.field_L ? 1 : 0;
         if (param0 > 0L) {
           if (param0 < 6582952005840035281L) {
-            if (param0 % (long)param1 == 0L) {
+            if (param0 % 37L == 0L) {
               return null;
             } else {
               var3 = 0;

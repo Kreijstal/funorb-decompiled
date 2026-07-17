@@ -10,7 +10,7 @@ final class lm {
     static ci field_e;
     static int field_b;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_f = null;
         field_a = null;
         field_g = null;
@@ -142,7 +142,7 @@ final class lm {
             var13 = 0;
             L3: while (true) {
               if (param0.field_o <= var13) {
-                var44 = param5;
+                var44 = 0;
                 var13 = var44;
                 L4: while (true) {
                   if (~ae.field_I >= ~var44) {
@@ -373,11 +373,11 @@ final class lm {
               break L17;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_54_0, stackIn_54_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw qk.a((Throwable) (Object) stackIn_54_0, stackIn_54_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + 0 + 44 + param6 + 44 + param7 + 41);
         }
     }
 
-    final static void a(int param0, int param1, ci param2, int param3, byte param4, int param5, int param6, int param7, int param8) {
+    final static void a(int param0, int param1, ci param2, int param3, byte param4, int param5, int param6) {
         int var9_int = 0;
         RuntimeException var9 = null;
         int var10 = 0;
@@ -400,39 +400,35 @@ final class lm {
         String stackOut_5_2 = null;
         try {
           L0: {
-            var9_int = param6 + param2.field_p + param0 + -param7;
-            var10 = param6 + param0 + (param2.field_p + param1);
+            var9_int = param6 + param2.field_p + param0;
+            var10 = param6 + param0 + (param2.field_p + 30);
             var11 = (param2.field_t >> 1) + param2.field_v + param5;
-            l.i(var9_int, 0, var10, var11 - -param3);
+            l.i(var9_int, 0, var10, var11);
             param2.d(-1 + param0, param5 - 1, 80);
             param2.d(param0 - 1, param5 + 1, 80);
             l.a(rb.field_a);
-            l.i(1 + var9_int, 0, var10 + 1, var11 - -param3);
+            l.i(1 + var9_int, 0, var10 + 1, var11);
             param2.d(param0 + 1, -1 + param5, 80);
             param2.d(param0 - -1, param5 + 1, 80);
             l.a(rb.field_a);
-            var9_int = -param1 + -param6 + (param0 + param2.field_p) + param2.field_r;
-            var10 = -param7 + (-param6 + (param2.field_r + param2.field_p + param0));
-            l.i(var9_int, -param3 + var11, var10, 480);
-            if (param4 >= 122) {
-              param2.d(-1 + param0, param5 + -1, 80);
-              param2.d(param0 - 1, param5 + 1, 80);
-              l.a(rb.field_a);
-              l.i(1 + var9_int, -param3 + var11, var10 + 1, 480);
-              param2.d(param0 - -1, param5 + -1, 80);
-              param2.d(1 + param0, param5 + 1, 80);
-              l.a(rb.field_a);
-              break L0;
-            } else {
-              return;
-            }
+            var9_int = -30 + -param6 + (param0 + param2.field_p) + param2.field_r;
+            var10 = -param6 + (param2.field_r + param2.field_p + param0);
+            l.i(var9_int, var11, var10, 480);
+            param2.d(-1 + param0, param5 + -1, 80);
+            param2.d(param0 - 1, param5 + 1, 80);
+            l.a(rb.field_a);
+            l.i(1 + var9_int, var11, var10 + 1, 480);
+            param2.d(param0 - -1, param5 + -1, 80);
+            param2.d(1 + param0, param5 + 1, 80);
+            l.a(rb.field_a);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var9 = decompiledCaughtException;
             stackOut_4_0 = (RuntimeException) var9;
-            stackOut_4_1 = new StringBuilder().append("lm.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_4_1 = new StringBuilder().append("lm.A(").append(param0).append(44).append(30).append(44);
             stackIn_6_0 = stackOut_4_0;
             stackIn_6_1 = stackOut_4_1;
             stackIn_5_0 = stackOut_4_0;
@@ -455,7 +451,7 @@ final class lm {
               break L1;
             }
           }
-          throw qk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + 80 + 41);
+          throw qk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 0 + 44 + 126 + 44 + param5 + 44 + param6 + 44 + 0 + 44 + 80 + 41);
         }
     }
 

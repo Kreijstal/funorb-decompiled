@@ -347,13 +347,17 @@ final class hm {
 
     final void b(int param0) {
         System.out.print("[");
-        System.out.print(lo.a((long)((hm) this).field_b, 7697781));
+        int discarded$36 = 7697781;
+        System.out.print(lo.a((long)((hm) this).field_b));
         System.out.print(",");
-        System.out.print(lo.a((long)((hm) this).field_f, 7697781));
+        int discarded$70 = 7697781;
+        System.out.print(lo.a((long)((hm) this).field_f));
         System.out.print(",");
-        System.out.print(lo.a((long)((hm) this).field_h, 7697781));
+        int discarded$93 = 7697781;
+        System.out.print(lo.a((long)((hm) this).field_h));
         System.out.print(",");
-        System.out.print(lo.a((long)((hm) this).field_c, 7697781));
+        int discarded$105 = 7697781;
+        System.out.print(lo.a((long)((hm) this).field_c));
         System.out.print("]");
         if (param0 >= -19) {
             field_i = -79;
@@ -419,23 +423,12 @@ final class hm {
     }
 
     final static void a(boolean param0, int param1) {
-        L0: {
-          if (oj.c(-26)) {
+        if (!(!oj.c(-26))) {
             param0 = false;
-            break L0;
-          } else {
-            break L0;
-          }
         }
         wj.a(-114, param0);
-        if (param1 != -19213) {
-          field_j = -59;
-          ka.b((byte) -97);
-          return;
-        } else {
-          ka.b((byte) -97);
-          return;
-        }
+        int discarded$0 = -97;
+        ka.b();
     }
 
     public hm() {

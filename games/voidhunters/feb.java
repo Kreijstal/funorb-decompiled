@@ -5,12 +5,12 @@ final class feb {
     static aba field_a;
     static int[] field_b;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }
 
-    final static kla a(ha param0, boolean param1) {
+    final static kla a(ha param0) {
         qgb var2 = null;
         RuntimeException var2_ref = null;
         kla var3 = null;

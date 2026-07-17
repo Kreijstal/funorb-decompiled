@@ -392,7 +392,8 @@ final class lrb extends rna implements ntb, hd {
               if (((lrb) this).field_d < 0) {
                 break L1;
               } else {
-                param1 = qi.a(((lrb) this).field_d, true, param1, (byte) -14);
+                int discarded$2 = -14;
+                param1 = qi.a(((lrb) this).field_d, true, param1);
                 break L1;
               }
             }
@@ -480,7 +481,8 @@ final class lrb extends rna implements ntb, hd {
                           if (tg.field_o == var5.q((byte) 122)) {
                             break L3;
                           } else {
-                            qha.b(false);
+                            int discarded$2 = 0;
+                            qha.b();
                             break L2;
                           }
                         }

@@ -13,7 +13,7 @@ final class pl extends jq {
     static String field_j;
     private int field_k;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_j = null;
         field_h = null;
         field_p = null;

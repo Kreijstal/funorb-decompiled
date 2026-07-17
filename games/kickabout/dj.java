@@ -28,7 +28,8 @@ abstract class dj extends qt {
             return true;
         }
         if (((dj) this).field_i[param0].field_m == 22) {
-            if (!this.b(false)) {
+            int discarded$0 = 0;
+            if (!this.b()) {
                 return false;
             }
         }
@@ -42,9 +43,6 @@ abstract class dj extends qt {
                 ((dj) this).field_i[((dj) this).field_x.field_e].a(-1, false);
                 return true;
             }
-        }
-        if (param1 >= -5) {
-            field_D = null;
         }
         return super.a(param0, -53, param2);
     }
@@ -63,7 +61,8 @@ abstract class dj extends qt {
             on.a(var5_int - 4, -4 + var6, 8 + var3_int, var4_int + 8, 10, 0, 128);
             eo.field_r[0][3].c(var5_int, var6);
         }
-        if (!(this.b(false))) {
+        int discarded$0 = 0;
+        if (!(this.b())) {
             var3_int = ((dj) this).field_i[2].field_d;
             var4_int = ((dj) this).field_i[2].field_h;
             var5_int = -(var3_int >> 1) + (((dj) this).b(2, param0 ^ 22670) - -((dj) this).field_j);
@@ -72,7 +71,8 @@ abstract class dj extends qt {
             eo.field_c[0][3].c(var5_int, var6);
         }
         on.a(((dj) this).field_j + 15, 60, 610, 355, 10, 0, 128);
-        String[] var7 = this.a(true);
+        int discarded$1 = 1;
+        String[] var7 = this.a();
         String[] var3 = var7;
         String var4 = var7[((dj) this).field_C].toUpperCase();
         on.a(((dj) this).field_j + 40, 76, 560, 36, 10, 65793, 140);
@@ -172,13 +172,14 @@ abstract class dj extends qt {
             }
         }
         if (((dj) this).field_x.field_e == 2) {
-            if (!(this.b(false))) {
+            int discarded$0 = 0;
+            if (!(this.b())) {
                 ((dj) this).field_x.a((byte) 68, 1);
             }
         }
     }
 
-    private final String[] a(boolean param0) {
+    private final String[] a() {
         if (((dj) this).field_c == 19) {
             return iq.field_a;
         }
@@ -196,7 +197,8 @@ abstract class dj extends qt {
 
     final void f(int param0) {
         ((dj) this).field_C = ((dj) this).field_C + 1;
-        int var2 = this.a(true).length;
+        int discarded$0 = 1;
+        int var2 = this.a().length;
         if (!(((dj) this).field_C < var2)) {
             ((dj) this).field_C = var2 + -1;
         }
@@ -211,8 +213,9 @@ abstract class dj extends qt {
         ((dj) this).field_C = 0;
     }
 
-    private final boolean b(boolean param0) {
-        if (!(((dj) this).field_C != -1 + this.a(true).length)) {
+    private final boolean b() {
+        int discarded$0 = 1;
+        if (!(((dj) this).field_C != -1 + this.a().length)) {
             return false;
         }
         ((dj) this).a((byte) -54, true);

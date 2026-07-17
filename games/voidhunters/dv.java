@@ -77,14 +77,7 @@ final class dv implements ntb {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        if (param3 < 97) {
-          dv.a((byte) -23);
-          jt.a(param5, param4, param1, (byte) -122, 31, param2, param0);
-          return;
-        } else {
-          jt.a(param5, param4, param1, (byte) -122, 31, param2, param0);
-          return;
-        }
+        jt.a(param5, 529, param1, (byte) -122, 31, 255, param0);
     }
 
     public final void a(tv param0, int param1) {
@@ -358,14 +351,8 @@ final class dv implements ntb {
         return stackIn_7_0 != 0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
-        if (param0 != -98) {
-            field_c = null;
-            field_b = null;
-            field_c = null;
-            return;
-        }
         field_b = null;
         field_c = null;
     }

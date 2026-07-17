@@ -16,7 +16,7 @@ final class qn extends li {
     static String[] field_t;
     int field_x;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_t = null;
         field_o = null;
         field_v = null;
@@ -27,7 +27,7 @@ final class qn extends li {
         field_s = null;
     }
 
-    final static wp a(String param0, int param1) {
+    final static wp a(String param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;

@@ -72,13 +72,13 @@ final class mh extends vi implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_j = null;
         field_h = null;
         field_i = null;
     }
 
-    private final synchronized void b(boolean param0) {
+    private final synchronized void b() {
         Object var3 = null;
         if (((mh) this).field_l == null) {
           return;
@@ -99,12 +99,15 @@ final class mh extends vi implements java.awt.image.ImageProducer, java.awt.imag
             int var5_int = -68 / ((param3 - -79) / 35);
             ((mh) this).field_k = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
             ((mh) this).field_b = param0.createImage((java.awt.image.ImageProducer) this);
-            this.b(false);
-            boolean discarded$0 = param0.prepareImage(((mh) this).field_b, (java.awt.image.ImageObserver) this);
-            this.b(false);
+            int discarded$0 = 0;
+            this.b();
             boolean discarded$1 = param0.prepareImage(((mh) this).field_b, (java.awt.image.ImageObserver) this);
-            this.b(false);
-            boolean discarded$2 = param0.prepareImage(((mh) this).field_b, (java.awt.image.ImageObserver) this);
+            int discarded$2 = 0;
+            this.b();
+            boolean discarded$3 = param0.prepareImage(((mh) this).field_b, (java.awt.image.ImageObserver) this);
+            int discarded$4 = 0;
+            this.b();
+            boolean discarded$5 = param0.prepareImage(((mh) this).field_b, (java.awt.image.ImageObserver) this);
             ((mh) this).a((byte) -107);
         } catch (RuntimeException runtimeException) {
             throw ma.a((Throwable) (Object) runtimeException, "mh.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
@@ -484,8 +487,9 @@ final class mh extends vi implements java.awt.image.ImageProducer, java.awt.imag
         try {
           L0: {
             L1: {
-              this.b(false);
-              boolean discarded$3 = param1.drawImage(((mh) this).field_b, param0, param3, (java.awt.image.ImageObserver) this);
+              int discarded$5 = 0;
+              this.b();
+              boolean discarded$6 = param1.drawImage(((mh) this).field_b, param0, param3, (java.awt.image.ImageObserver) this);
               if (param2 == -22984) {
                 break L1;
               } else {
@@ -529,69 +533,61 @@ final class mh extends vi implements java.awt.image.ImageProducer, java.awt.imag
 
     final static byte[] a(boolean param0, String param1) {
         RuntimeException var2 = null;
-        Object stackIn_2_0 = null;
-        byte[] stackIn_4_0 = null;
+        byte[] stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        byte[] stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
         String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           L0: {
-            if (!param0) {
-              stackOut_3_0 = b.field_u.a("", param1, (byte) -12);
-              stackIn_4_0 = stackOut_3_0;
-              break L0;
-            } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
-              return (byte[]) (Object) stackIn_2_0;
-            }
+            stackOut_2_0 = b.field_u.a("", param1, (byte) -12);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var2;
-            stackOut_5_1 = new StringBuilder().append("mh.K(").append(param0).append(44);
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("mh.K(").append(0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
-              break L1;
-            } else {
               stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
               stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L1;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
               break L1;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw ma.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
-        return stackIn_4_0;
+        return stackIn_3_0;
     }
 
     static {

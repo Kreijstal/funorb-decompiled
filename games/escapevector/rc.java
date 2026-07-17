@@ -6,7 +6,7 @@ final class rc {
     static oi field_b;
     static String field_c;
 
-    final static void a(java.awt.Canvas param0, boolean param1) {
+    final static void a(java.awt.Canvas param0) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -28,7 +28,8 @@ final class rc {
           L0: {
             oc.a((byte) -38, (java.awt.Component) (Object) param0);
             L1: {
-              rm.a((java.awt.Component) (Object) param0, (byte) 38);
+              int discarded$2 = 38;
+              rm.a((java.awt.Component) (Object) param0);
               if (ji.field_b == null) {
                 break L1;
               } else {
@@ -73,79 +74,39 @@ final class rc {
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6, int param7) {
         int var9 = 0;
         var9 = EscapeVector.field_A;
-        if (!param4) {
-          rc.a(-25);
-          if (param7 <= param5) {
-            if (param5 >= param2) {
-              if (param2 > param7) {
-                ha.a(param0, param2, param7, param6, param1, 120, param3, param5, em.field_i);
-                return;
-              } else {
-                ha.a(param6, param7, param2, param0, param1, 66, param3, param5, em.field_i);
-                return;
-              }
+        if (param7 <= param5) {
+          if (param5 >= param2) {
+            if (param2 > param7) {
+              ha.a(param0, param2, param7, param6, param1, 120, param3, param5, em.field_i);
+              return;
             } else {
-              ha.a(param1, param5, param7, param6, param0, 42, param3, param2, em.field_i);
+              ha.a(param6, param7, param2, param0, param1, 66, param3, param5, em.field_i);
               return;
             }
           } else {
-            if (param2 <= param7) {
-              if (param5 >= param2) {
-                ha.a(param1, param5, param2, param0, param6, 127, param3, param7, em.field_i);
-                return;
-              } else {
-                ha.a(param0, param2, param5, param1, param6, 38, param3, param7, em.field_i);
-                return;
-              }
-            } else {
-              ha.a(param6, param7, param5, param1, param0, 41, param3, param2, em.field_i);
-              return;
-            }
+            ha.a(param1, param5, param7, param6, param0, 42, param3, param2, em.field_i);
+            return;
           }
         } else {
-          if (param7 <= param5) {
+          if (param2 <= param7) {
             if (param5 >= param2) {
-              if (param2 > param7) {
-                ha.a(param0, param2, param7, param6, param1, 120, param3, param5, em.field_i);
-                return;
-              } else {
-                ha.a(param6, param7, param2, param0, param1, 66, param3, param5, em.field_i);
-                return;
-              }
+              ha.a(param1, param5, param2, param0, param6, 127, param3, param7, em.field_i);
+              return;
             } else {
-              ha.a(param1, param5, param7, param6, param0, 42, param3, param2, em.field_i);
+              ha.a(param0, param2, param5, param1, param6, 38, param3, param7, em.field_i);
               return;
             }
           } else {
-            if (param2 <= param7) {
-              if (param5 >= param2) {
-                ha.a(param1, param5, param2, param0, param6, 127, param3, param7, em.field_i);
-                return;
-              } else {
-                ha.a(param0, param2, param5, param1, param6, 38, param3, param7, em.field_i);
-                return;
-              }
-            } else {
-              ha.a(param6, param7, param5, param1, param0, 41, param3, param2, em.field_i);
-              return;
-            }
+            ha.a(param6, param7, param5, param1, param0, 41, param3, param2, em.field_i);
+            return;
           }
         }
     }
 
-    public static void a(int param0) {
-        if (param0 != -49153) {
-          field_b = null;
-          field_a = null;
-          field_c = null;
-          field_b = null;
-          return;
-        } else {
-          field_a = null;
-          field_c = null;
-          field_b = null;
-          return;
-        }
+    public static void a() {
+        field_a = null;
+        field_c = null;
+        field_b = null;
     }
 
     final static fn a(int param0, byte param1, fn param2, fn param3) {

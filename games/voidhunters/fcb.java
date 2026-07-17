@@ -118,7 +118,8 @@ final class fcb implements oob {
         L0: {
           var8 = VoidHunters.field_G;
           fka.a("Inside unpack", (byte) -111);
-          nra.b((byte) -99);
+          int discarded$14 = -99;
+          nra.b();
           var11 = kwa.field_o;
           var12 = jta.field_r;
           if (((fcb) this).field_l == null) {
@@ -128,7 +129,8 @@ final class fcb implements oob {
               break L0;
             } else {
               fka.a("Unpacking sounds", (byte) -104);
-              dfb.a(4410);
+              int discarded$15 = 4410;
+              dfb.a();
               uoa.a(bva.field_e, param0 ^ -69, 82.0f);
               mab.field_a.d(param0 + -187);
               ((fcb) this).field_c = new bmb(((fcb) this).field_l, ((fcb) this).field_k);
@@ -300,10 +302,12 @@ final class fcb implements oob {
                   vfa.field_d = ucb.a("frame_filled", 52, "basic", ((fcb) this).field_i);
                   dra.field_v = ucb.a("button_frame", param0 ^ 21, "basic", ((fcb) this).field_i);
                   ck.field_o = ucb.a("button_raised", -95, "basic", ((fcb) this).field_i);
-                  phb[] discarded$1 = ucb.a("button_depressed", 80, "basic", ((fcb) this).field_i);
+                  phb[] discarded$16 = ucb.a("button_depressed", 80, "basic", ((fcb) this).field_i);
                   lo.field_c = wjb.a(((fcb) this).field_i, true, "basic", "achievements_large");
-                  ubb.field_j = gra.a(var11, "unachieved", "basic", true);
-                  wu.field_h = gra.a(var11, "orbcoin", "basic", true);
+                  int discarded$17 = 1;
+                  ubb.field_j = gra.a(var11, "unachieved", "basic");
+                  int discarded$18 = 1;
+                  wu.field_h = gra.a(var11, "orbcoin", "basic");
                   un.a(ubb.field_j, 121);
                   un.a(wu.field_h, 126);
                   kua.field_a = new phb(32, 32);
@@ -327,15 +331,22 @@ final class fcb implements oob {
                         if (var19.length <= var7) {
                           L5: {
                             cma.a(var12, var14, var19, true, (byte) -127, rba.field_g, ee.field_q, ms.field_A, fha.field_o, 8, bpb.field_p, var11, 1, ((fcb) this).field_b, var15, shb.field_o, ub.field_d);
-                            kl.field_c = gra.a(((fcb) this).field_i, "lobby_game_logo", "basic", true);
-                            hk.b(200, -100);
+                            int discarded$19 = 1;
+                            kl.field_c = gra.a(((fcb) this).field_i, "lobby_game_logo", "basic");
+                            int discarded$20 = -100;
+                            int discarded$21 = 200;
+                            hk.b();
                             eh.a(var11, param0 + -68, var12);
-                            vk.a((java.applet.Applet) (Object) mab.field_a, 2141, cga.field_o, 16777215, 0, 0);
+                            int discarded$22 = 0;
+                            int discarded$23 = 0;
+                            int discarded$24 = 16777215;
+                            vk.a((java.applet.Applet) (Object) mab.field_a, 2141, cga.field_o);
                             var3 = null;
                             ((fcb) this).field_e = null;
                             fkb.a(param0 ^ 2164);
                             if (ssa.b(2)) {
-                              nna.field_C = new djb(clb.a(16), lhb.field_a, bm.field_o);
+                              int discarded$25 = 16;
+                              nna.field_C = new djb(clb.a(), lhb.field_a, bm.field_o);
                               break L5;
                             } else {
                               break L5;
@@ -416,12 +427,12 @@ final class fcb implements oob {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_g = null;
         int var1 = 13;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, byte param5) {
+    final static void a(int param0, int param1, int param2, int param3, int param4) {
         L0: {
           L1: {
             if (param3 < ob.field_j) {

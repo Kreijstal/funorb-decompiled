@@ -30,7 +30,8 @@ final class fkb extends ksa {
 
     final static int a(int param0, byte param1) {
         if (li.field_i) {
-            return de.a(param0, 300).field_e;
+            int discarded$0 = 300;
+            return de.a(param0).field_e;
         }
         return ita.a(param0, 7988).field_A;
     }
@@ -126,20 +127,16 @@ final class fkb extends ksa {
             try {
               var3 = new FileOutputStream(param2);
               var4 = new ObjectOutputStream((OutputStream) (Object) var3);
-              if (param0 > 36) {
-                var4.writeObject(param1);
-                var4.close();
-                var3.close();
-                return;
-              } else {
-                return;
-              }
+              var4.writeObject(param1);
+              var4.close();
+              var3.close();
+              return;
             } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               L1: {
                 var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_9_0 = (RuntimeException) var3_ref2;
-                stackOut_9_1 = new StringBuilder().append("fkb.A(").append(param0).append(44);
+                stackOut_9_1 = new StringBuilder().append("fkb.A(").append(67).append(44);
                 stackIn_11_0 = stackOut_9_0;
                 stackIn_11_1 = stackOut_9_1;
                 stackIn_10_0 = stackOut_9_0;

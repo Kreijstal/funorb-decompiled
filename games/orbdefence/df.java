@@ -91,7 +91,7 @@ final class df {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_e = null;
         field_c = null;

@@ -1863,7 +1863,7 @@ abstract class pa extends ek {
         }
     }
 
-    final static hq g(byte param0) {
+    final static hq g() {
         int var1 = 0;
         if (hj.field_d == null) {
           hj.field_d = new hq(cp.field_H, 20, 0, 0, 0, 11579568, -1, 0, 0, cp.field_H.field_C, -1, 2147483647, true);

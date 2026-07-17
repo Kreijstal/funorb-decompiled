@@ -16,10 +16,10 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
     static String field_k;
     static java.awt.Font field_s;
 
-    final static void a(int param0, int param1, int param2, boolean param3) {
-        wm.field_l = param1;
-        gn.field_a = param0;
-        wa.field_c = param2;
+    final static void a() {
+        wm.field_l = 0;
+        gn.field_a = 1;
+        wa.field_c = 0;
     }
 
     public final synchronized void addConsumer(java.awt.image.ImageConsumer param0) {
@@ -45,7 +45,7 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
         ((wf) this).field_r.imageComplete(2);
     }
 
-    final static w c(int param0) {
+    final static w c() {
         int var1 = 0;
         return k.field_b.field_Sb;
     }
@@ -87,11 +87,11 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_s = null;
         field_o = null;
         field_p = null;
-        int var1 = 4 / ((param0 - 24) / 42);
+        int var1 = -1;
         field_k = null;
         field_m = null;
         field_u = null;
@@ -162,7 +162,7 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    final static void d(int param0) {
+    final static void d() {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -214,14 +214,6 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
             }
           }
         }
-        L1: {
-          if (param12) {
-            break L1;
-          } else {
-            field_p = null;
-            break L1;
-          }
-        }
     }
 
     final static boolean a(boolean param0) {
@@ -234,7 +226,7 @@ final class wf extends eh implements java.awt.image.ImageProducer, java.awt.imag
         return true;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         Object var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

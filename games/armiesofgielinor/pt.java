@@ -45,66 +45,36 @@ abstract class pt extends sf {
         var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (null != ((pt) this).field_bb) {
           if (ur.field_v == ((pt) this).field_bb) {
-            int fieldTemp$8 = ((pt) this).field_hb + 1;
+            int fieldTemp$2 = ((pt) this).field_hb + 1;
             ((pt) this).field_hb = ((pt) this).field_hb + 1;
-            if (((pt) this).field_ib == fieldTemp$8) {
+            if (((pt) this).field_ib != fieldTemp$2) {
+              ((pt) this).field_cb.field_K = 256 + -((((pt) this).field_hb << 8) / ((pt) this).field_ib);
+              return super.a((byte) -1);
+            } else {
               ((pt) this).field_bb = g.field_c;
               ((pt) this).a(((pt) this).field_Z, false, ((pt) this).field_jb.field_w + 12 + ((pt) this).field_ab, ((pt) this).field_jb.field_l + 12);
               ((pt) this).field_hb = 0;
               ((pt) this).field_cb.field_K = 0;
-              if (param0 != -1) {
-                boolean discarded$9 = ((pt) this).k(117);
-                return super.a((byte) -1);
-              } else {
-                return super.a((byte) -1);
-              }
-            } else {
-              ((pt) this).field_cb.field_K = 256 + -((((pt) this).field_hb << 8) / ((pt) this).field_ib);
-              if (param0 != -1) {
-                boolean discarded$10 = ((pt) this).k(117);
-                return super.a((byte) -1);
-              } else {
-                return super.a((byte) -1);
-              }
+              return super.a((byte) -1);
             }
           } else {
-            if (ki.field_e != ((pt) this).field_bb) {
-              if (param0 != -1) {
-                boolean discarded$11 = ((pt) this).k(117);
+            if (ki.field_e == ((pt) this).field_bb) {
+              int fieldTemp$3 = ((pt) this).field_hb + 1;
+              ((pt) this).field_hb = ((pt) this).field_hb + 1;
+              if (((pt) this).field_fb != fieldTemp$3) {
+                ((pt) this).field_cb.field_K = (((pt) this).field_hb << 8) / ((pt) this).field_fb;
                 return super.a((byte) -1);
               } else {
+                ((pt) this).field_bb = null;
+                ((pt) this).field_cb.field_K = 256;
                 return super.a((byte) -1);
               }
             } else {
-              int fieldTemp$12 = ((pt) this).field_hb + 1;
-              ((pt) this).field_hb = ((pt) this).field_hb + 1;
-              if (((pt) this).field_fb == fieldTemp$12) {
-                ((pt) this).field_bb = null;
-                ((pt) this).field_cb.field_K = 256;
-                if (param0 != -1) {
-                  boolean discarded$13 = ((pt) this).k(117);
-                  return super.a((byte) -1);
-                } else {
-                  return super.a((byte) -1);
-                }
-              } else {
-                ((pt) this).field_cb.field_K = (((pt) this).field_hb << 8) / ((pt) this).field_fb;
-                if (param0 == -1) {
-                  return super.a((byte) -1);
-                } else {
-                  boolean discarded$14 = ((pt) this).k(117);
-                  return super.a((byte) -1);
-                }
-              }
+              return super.a((byte) -1);
             }
           }
         } else {
-          if (param0 == -1) {
-            return super.a((byte) -1);
-          } else {
-            boolean discarded$15 = ((pt) this).k(117);
-            return super.a((byte) -1);
-          }
+          return super.a((byte) -1);
         }
     }
 
@@ -166,7 +136,7 @@ abstract class pt extends sf {
         String stackOut_6_2 = null;
         try {
           L0: {
-            var3_int = 0;
+            var3_int = 116 % ((-27 - param1) / 44);
             ((pt) this).field_jb = param0;
             if (((pt) this).field_bb != g.field_c) {
               if (((pt) this).field_bb == ur.field_v) {
@@ -210,7 +180,7 @@ abstract class pt extends sf {
               break L1;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 87 + 41);
+          throw ig.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
         }
     }
 
@@ -307,39 +277,31 @@ abstract class pt extends sf {
         return super.k(92);
     }
 
-    final static void a(int param0, int param1, java.awt.Canvas param2, int param3) {
+    final static void a(int param0, int param1, java.awt.Canvas param2) {
         java.awt.Graphics var4 = null;
         Exception var4_ref = null;
         RuntimeException var4_ref2 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
+        String stackIn_7_2 = null;
         Throwable decompiledCaughtException = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           try {
             L0: {
-              L1: {
-                var4 = param2.getGraphics();
-                if (param1 == 12) {
-                  break L1;
-                } else {
-                  field_Y = null;
-                  break L1;
-                }
-              }
-              so.field_b.a(255, var4, param0, 0);
+              var4 = param2.getGraphics();
+              so.field_b.a(255, var4, 0, 0);
               var4.dispose();
               break L0;
             }
@@ -352,33 +314,33 @@ abstract class pt extends sf {
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L2: {
+          L1: {
             var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var4_ref2;
-            stackOut_6_1 = new StringBuilder().append("pt.E(").append(param0).append(44).append(param1).append(44);
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackOut_4_0 = (RuntimeException) var4_ref2;
+            stackOut_4_1 = new StringBuilder().append("pt.E(").append(0).append(44).append(12).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param2 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
-              break L2;
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L1;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
-              break L2;
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L1;
             }
           }
-          throw ig.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 0 + 41);
+          throw ig.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 0 + 41);
         }
     }
 

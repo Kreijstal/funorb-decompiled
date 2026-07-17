@@ -19,7 +19,7 @@ final class cj {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
     }
 

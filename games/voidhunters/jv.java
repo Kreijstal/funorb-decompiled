@@ -58,25 +58,15 @@ final class jv {
         if (!(dma.field_g < param3 + param1)) {
             return param1;
         }
-        if (param0 != -109) {
-            jv.a((byte) 16);
-            if (!(0 > param2 + param1 - param3)) {
-                return param2 + (param1 - param3);
-            }
-            return -param3 + dma.field_g;
-        }
         if (!(0 > param2 + param1 - param3)) {
             return param2 + (param1 - param3);
         }
         return -param3 + dma.field_g;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
         field_d = null;
-        if (param0 != -33) {
-            field_b = -56;
-        }
     }
 
     jv(int param0, asb param1, asb param2) {

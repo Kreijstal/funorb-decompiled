@@ -19,7 +19,7 @@ final class cl {
         return 256;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_h = null;
         field_d = null;
         field_a = null;

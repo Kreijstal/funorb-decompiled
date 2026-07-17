@@ -71,7 +71,7 @@ final class ikb extends rqa {
         return stackIn_3_0;
     }
 
-    final static boolean a(int[] param0, int[] param1, boolean param2) {
+    final static boolean a(int[] param0, int[] param1) {
         try {
             RuntimeException var3 = null;
             int var3_int = 0;
@@ -282,11 +282,11 @@ final class ikb extends rqa {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
     }
 
-    final static void e(byte param0) {
+    final static void e() {
         if (null != hg.field_b) {
             hg.field_b.b(-85);
         }

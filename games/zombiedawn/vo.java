@@ -186,7 +186,7 @@ class vo {
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_a = null;
         field_d = null;
     }

@@ -39,7 +39,7 @@ final class pl extends ld {
         super(param0, param1);
     }
 
-    final static int[] d(int param0) {
+    final static int[] d() {
         if (!(null == bk.field_r)) {
             return bk.field_r.c(0);
         }

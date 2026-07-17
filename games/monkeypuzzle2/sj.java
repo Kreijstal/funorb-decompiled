@@ -81,7 +81,7 @@ final class sj {
         this.a((byte) -119);
     }
 
-    final static void a(ad param0, ad param1, ad param2, ad param3, int param4) {
+    final static void a(ad param0, ad param1, ad param2, ad param3) {
         int var6_int = 0;
         le[] var6 = null;
         int var7 = 0;
@@ -109,11 +109,13 @@ final class sj {
         pl.field_e = vd.a(true, "kartika13", param2, param1, "");
         ke.field_i = ma.a(param3, "background", 16711680, "");
         fi.field_a = lb.a(false, "", param3, "river_background");
-        var13 = uj.a("", "jungle_background", param3, false);
+        int discarded$3 = 0;
+        var13 = uj.a("", "jungle_background", param3);
         m.field_k = var13[0];
         m.field_k.b();
         ib.field_b = var13[1].a();
-        ne.field_a = uj.a("", "waterfall_background", param3, false);
+        int discarded$4 = 0;
+        ne.field_a = uj.a("", "waterfall_background", param3);
         var6_int = 0;
         L0: while (true) {
           if (var6_int >= ne.field_a.length) {
@@ -128,7 +130,7 @@ final class sj {
               if (var6_int >= eg.field_d.length) {
                 ka.field_b = ma.a(param1, "unachieved", 16711680, "basic");
                 aj.field_e = ma.a(param1, "orbcoin", 16711680, "basic");
-                le discarded$1 = ma.a(param1, "locked", 16711680, "basic");
+                le discarded$5 = ma.a(param1, "locked", 16711680, "basic");
                 lb.field_E = lb.a(false, "", param3, "totems");
                 dj.field_a = lb.a(false, "", param3, "vines");
                 j.field_f = lb.a(false, "", param3, "birds");
@@ -357,16 +359,12 @@ final class sj {
     }
 
     final static le a(int param0, int param1, int param2) {
+        int var4 = 0;
         int var5 = MonkeyPuzzle2.field_F ? 1 : 0;
         le var6 = new le(param0, param0);
         le var3 = var6;
-        int var4 = 0;
-        if (param1 != 74) {
-            return null;
-        }
-        while (var3.field_s.length > var4) {
+        for (var4 = 0; var3.field_s.length > var4; var4++) {
             var6.field_s[var4] = param2;
-            var4++;
         }
         return var3;
     }
@@ -386,7 +384,7 @@ final class sj {
         cb.field_c[45] = 26;
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_g = null;
         field_f = null;
     }

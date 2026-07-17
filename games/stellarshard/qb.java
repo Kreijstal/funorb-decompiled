@@ -11,11 +11,7 @@ final class qb extends lk {
         super(param0);
     }
 
-    final static ci f(int param0) {
-        if (param0 != -17887) {
-            field_l = null;
-            return (ci) (Object) new rc();
-        }
+    final static ci f() {
         return (ci) (Object) new rc();
     }
 
@@ -179,33 +175,18 @@ final class qb extends lk {
         return stackIn_4_0;
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_l = null;
     }
 
-    final static boolean e(byte param0) {
-        if (param0 == 58) {
-          if (null != ob.field_b) {
-            if (!sl.field_d.b(48)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+    final static boolean e() {
+        if (null == ob.field_b) {
             return false;
-          }
-        } else {
-          ci discarded$5 = qb.f(-36);
-          if (null != ob.field_b) {
-            if (!sl.field_d.b(48)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
         }
+        if (!sl.field_d.b(48)) {
+            return false;
+        }
+        return true;
     }
 
     static {

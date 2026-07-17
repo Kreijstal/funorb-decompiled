@@ -145,7 +145,7 @@ final class rj extends vo {
         ((rj) this).field_r = param0;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_q = null;
         int var1 = 0;
         field_o = null;

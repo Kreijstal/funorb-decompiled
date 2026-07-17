@@ -7,14 +7,15 @@ final class jj {
     static int field_c;
     static String field_a;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_d = null;
         field_b = null;
     }
 
-    final static void b(byte param0) {
-        eg.a(rl.field_h, true);
+    final static void b() {
+        int discarded$0 = 1;
+        eg.a(rl.field_h);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -54,57 +55,49 @@ final class jj {
               }
             }
             L4: {
-              if (param1 == -971598481) {
+              if (param4 + param3 > gf.field_e) {
+                param4 = gf.field_e - param3;
                 break L4;
               } else {
-                field_a = null;
                 break L4;
               }
             }
             L5: {
-              if (param4 + param3 > gf.field_e) {
-                param4 = gf.field_e - param3;
-                break L5;
-              } else {
-                break L5;
-              }
-            }
-            L6: {
               if (param5 <= 0) {
-                break L6;
+                break L5;
               } else {
                 if (0 < param4) {
                   var6_int = param2 - -(param3 * gf.field_i);
                   var7 = -param5 + gf.field_i;
                   param3 = -param4;
-                  L7: while (true) {
+                  L6: while (true) {
                     if (param3 >= 0) {
                       break L0;
                     } else {
                       param2 = -param5;
-                      L8: while (true) {
+                      L7: while (true) {
                         if (0 <= param2) {
                           var6_int = var6_int + var7;
                           param3++;
-                          continue L7;
+                          continue L6;
                         } else {
-                          L9: {
+                          L8: {
                             var8 = gf.field_b[var6_int];
-                            if ((65280 & var8) >> 8 <= param0) {
-                              break L9;
+                            if ((65280 & var8) >> 8 <= 64) {
+                              break L8;
                             } else {
-                              break L9;
+                              break L8;
                             }
                           }
                           var6_int++;
                           param2++;
-                          continue L8;
+                          continue L7;
                         }
                       }
                     }
                   }
                 } else {
-                  break L6;
+                  break L5;
                 }
               }
             }
@@ -113,7 +106,7 @@ final class jj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw vk.a((Throwable) (Object) var6, "jj.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw vk.a((Throwable) (Object) var6, "jj.A(" + 64 + 44 + -971598481 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 

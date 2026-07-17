@@ -23,7 +23,7 @@ final class aq {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void a(int param0) {
         int var3 = 0;
         var3 = BachelorFridge.field_y;
         tla.d(-93);
@@ -70,7 +70,7 @@ final class aq {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
     }

@@ -138,22 +138,11 @@ final class ed {
 
     final static int a(byte param0, int param1) {
         int var2 = 0;
-        int var3 = 0;
-        L0: {
-          var2 = 0;
-          if (0 == (param1 & 7)) {
-            break L0;
-          } else {
+        if (0 != (param1 & 7)) {
             var2 = -(7 & param1) + 8;
-            break L0;
-          }
         }
-        var3 = param1 - -var2;
-        if (param0 != 72) {
-          return 76;
-        } else {
-          return var3;
-        }
+        int var3 = param1 - -var2;
+        return var3;
     }
 
     final void a(int[] param0, byte param1) {
@@ -261,12 +250,13 @@ final class ed {
             L1: while (true) {
               if (var2 == null) {
                 L2: while (true) {
-                  int incrementValue$2 = var1_int;
+                  int incrementValue$5 = var1_int;
                   var1_int--;
-                  if (0 >= incrementValue$2) {
+                  if (0 >= incrementValue$5) {
                     break L0;
                   } else {
-                    sn.b((byte) 88);
+                    int discarded$6 = 88;
+                    sn.b();
                     continue L2;
                   }
                 }

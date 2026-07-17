@@ -14,12 +14,12 @@ final class nf implements dja {
         return (tv[]) (Object) new pca[param1];
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -37,7 +37,7 @@ final class nf implements dja {
         }
     }
 
-    final static vu a(String param0, boolean param1) {
+    final static vu a(String param0) {
         Object var2 = null;
         vu var3 = null;
         String var4 = null;

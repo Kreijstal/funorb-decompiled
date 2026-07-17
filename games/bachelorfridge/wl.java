@@ -127,10 +127,11 @@ final class wl extends sna {
         if (param3 <= 104) {
             this.a(-126, -34, 21);
         }
-        this.a(param1, param0, ((wl) this).field_xb.field_sb, param2, ((wl) this).field_xb.field_p, false);
+        int discarded$0 = 0;
+        this.a(param1, param0, ((wl) this).field_xb.field_sb, param2, ((wl) this).field_xb.field_p);
     }
 
-    private final void a(boolean param0, int param1, int param2, int param3, int param4, boolean param5) {
+    private final void a(boolean param0, int param1, int param2, int param3, int param4) {
         int var8 = 0;
         L0: {
           var8 = BachelorFridge.field_y;
@@ -297,7 +298,7 @@ final class wl extends sna {
         ((wl) this).field_zb.b(((wl) this).field_Ab.field_sb, -((wl) this).field_Ab.field_kb, ((wl) this).field_xb.field_sb, (byte) -117);
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_yb = null;
         field_wb = null;
     }

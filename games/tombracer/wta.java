@@ -22,7 +22,7 @@ final class wta extends kna {
         return 7;
     }
 
-    final static void a(String param0, byte param1) {
+    final static void a(String param0) {
         try {
             ji.field_d = param0;
         } catch (RuntimeException runtimeException) {
@@ -35,7 +35,7 @@ final class wta extends kna {
         ((wta) this).b(param0 ^ 1, 4194304, 4194304);
     }
 
-    final static void A(int param0) {
+    final static void A() {
         aca.field_h = new String[rh.field_n];
         aca.field_h[17] = pq.field_d;
         aca.field_h[20] = afa.field_b;
@@ -160,7 +160,7 @@ final class wta extends kna {
         return false;
     }
 
-    public static void r(byte param0) {
+    public static void r() {
         field_H = null;
     }
 

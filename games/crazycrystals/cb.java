@@ -129,14 +129,11 @@ final class cb extends pn implements Cloneable {
         try {
             wg.field_P = true;
             var2 = "tuhstatbut";
-            if (param0 != 1148) {
-                cb.e((byte) -125);
-            }
             var3 = "rvnadlm";
             var4 = -1L;
-            ab.a(param1, var4, var2, param0 + -1026, var3);
+            ab.a(param1, var4, var2, 122, var3);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) (Object) runtimeException, "cb.K(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw dn.a((Throwable) (Object) runtimeException, "cb.K(" + 1148 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -216,11 +213,8 @@ final class cb extends pn implements Cloneable {
         return stackIn_3_0;
     }
 
-    final static void e(byte param0) {
+    final static void e() {
         rc.a(-25537, 17);
-        if (param0 != 125) {
-            field_r = null;
-        }
     }
 
     final boolean b(byte param0) {
@@ -563,7 +557,7 @@ final class cb extends pn implements Cloneable {
         }
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_p = null;
         field_r = null;
         field_n = null;

@@ -14,7 +14,7 @@ final class th {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }
@@ -22,16 +22,11 @@ final class th {
     final static void a(int param0, int param1, boolean param2, int param3, boolean param4, boolean param5, boolean param6, int param7, int param8, int param9, int param10, byte param11, int param12, boolean param13) {
         sl.field_g = null;
         ce.e(116);
-        param13 = lk.a(param8, -121, param1, param10, param13, param9, param3);
-        ph.a(param5, param12, param7, param6, param13, param2, param4, -1, param0, param10);
-        a.a(param12, param5, true);
-        if (param11 <= 42) {
-            field_a = null;
-        } else {
-            tf.b(param8, param13, 0, param12);
-            return;
-        }
-        tf.b(param8, param13, 0, param12);
+        param13 = lk.a(0, -121, 14, 11, param13, 13, 15);
+        ph.a(param5, param12, 16777215, true, param13, param2, param4, -1, 16777215, 11);
+        int discarded$0 = 1;
+        a.a(param12, param5);
+        tf.b(0, param13, 0, param12);
     }
 
     final static void a(int param0, boolean param1) {

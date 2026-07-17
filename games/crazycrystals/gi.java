@@ -32,7 +32,8 @@ final class gi extends pn implements Cloneable {
         try {
           L0: {
             if (param2 == 26009) {
-              stackOut_3_0 = pf.a(0, param1, param0, -1);
+              int discarded$2 = -1;
+              stackOut_3_0 = pf.a(0, param1, param0);
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

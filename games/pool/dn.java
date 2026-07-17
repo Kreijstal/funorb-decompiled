@@ -142,7 +142,7 @@ final class dn extends ma {
         return stackIn_8_0;
     }
 
-    final static void d(int param0) {
+    final static void d() {
         wf.field_c = null;
         cl.field_c = null;
     }
@@ -246,6 +246,9 @@ final class dn extends ma {
     }
 
     final static int a(int param0, boolean param1) {
+        if (param1) {
+            return 77;
+        }
         param0 = param0 >> 5;
         if (param0 < 0) {
             if (-2048 <= param0) {
@@ -260,10 +263,7 @@ final class dn extends ma {
     }
 
     final static boolean a(boolean param0, int param1) {
-        if (!param0) {
-            field_p = null;
-        }
-        return param1 >= 0 ? true : false;
+        return param1 >= 0;
     }
 
     dn(int param0, int[] param1) {

@@ -52,7 +52,7 @@ abstract class fm {
           L0: {
             var7 = we.field_b;
             var8 = var7;
-            var8.f(param1, -4);
+            var8.f(3, -4);
             var8.field_n = var8.field_n + 1;
             var4 = var8.field_n;
             var8.a(true, 1);
@@ -90,7 +90,7 @@ abstract class fm {
           L3: {
             var3 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var3;
-            stackOut_7_1 = new StringBuilder().append("fm.I(").append(param0).append(44).append(param1).append(44);
+            stackOut_7_1 = new StringBuilder().append("fm.I(").append(param0).append(44).append(3).append(44);
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -119,7 +119,7 @@ abstract class fm {
 
     abstract void a(wl param0, byte param1);
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
     }
@@ -158,7 +158,7 @@ abstract class fm {
                 var8 = vl.a(23841, 80, 18 * ve.field_ic[1 + param4 - 80] - -40);
                 break L1;
               } else {
-                hk.a(param1 - 39, param2 + 33, 78, 60, 4, 65280, 100);
+                hk.a(281, param2 + 33, 78, 60, 4, 65280, 100);
                 break L1;
               }
             }
@@ -167,15 +167,15 @@ abstract class fm {
             break L1;
           }
         }
-        cg.a(param0, 2, 5, param1 - -18, param2 + 73, -2, -2);
-        cg.a(param0, 2, 12, 18 + param1, param2 - -55, -2, -1);
-        cg.a(param0, 2, 8, 18 + param1, 36 + (param2 - -1), -2, -1);
-        cg.a(param0, 2, 2, param1, 1 + param2 + 72, -1, -2);
-        fb.field_c[param0][2].c(param1 + -18, 72 + param2, 18, 18);
-        fb.field_c[param0][2].c(-36 + param1, param2 + 72, 18, 18);
-        var9 = 16 / ((59 - param5) / 43);
-        fb.field_c[param0][2].c(param1, param2 - -54, 18, 18);
-        fb.field_c[param0][2].c(param1 + -18, param2 - -var7 + var8, 18, 18 + -var8);
+        cg.a(2, 2, 5, 338, param2 + 73, -2, -2);
+        cg.a(2, 2, 12, 338, param2 - -55, -2, -1);
+        cg.a(2, 2, 8, 338, 36 + (param2 - -1), -2, -1);
+        cg.a(2, 2, 2, 320, 1 + param2 + 72, -1, -2);
+        fb.field_c[2][2].c(302, 72 + param2, 18, 18);
+        fb.field_c[2][2].c(284, param2 + 72, 18, 18);
+        var9 = -16;
+        fb.field_c[2][2].c(320, param2 - -54, 18, 18);
+        fb.field_c[2][2].c(302, param2 - -var7 + var8, 18, 18 + -var8);
     }
 
     static {

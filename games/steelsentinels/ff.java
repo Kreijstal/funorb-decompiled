@@ -88,116 +88,107 @@ final class ff extends ma {
         return stackIn_4_0 != 0;
     }
 
-    final static void a(byte param0, int param1, int param2) {
+    final static void a() {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        Object var9 = null;
         var8 = SteelSentinels.field_G;
         if (vn.field_h < 0) {
           return;
         } else {
           L0: {
-            if (param0 > 1) {
+            var3 = 185;
+            var4 = 205;
+            var5 = 256;
+            if (vn.field_h >= 75) {
               break L0;
             } else {
-              var9 = null;
-              byte[] discarded$1 = ff.a((byte) 92, (byte[]) null);
+              var5 = (vn.field_h << 8) / 75;
               break L0;
             }
           }
           L1: {
-            var3 = 185;
-            var4 = param1 + -35;
-            var5 = 256;
-            if (vn.field_h >= 75) {
+            if (vn.field_h <= 200) {
               break L1;
             } else {
-              var5 = (vn.field_h << 8) / 75;
+              var5 = (250 + -vn.field_h << 8) / 50;
               break L1;
             }
           }
           L2: {
-            if (vn.field_h <= 200) {
+            q.a(ai.field_o, (byte) -106);
+            lf.a();
+            pb.b();
+            int discarded$1 = 1;
+            pm.a();
+            if (var5 >= 256) {
               break L2;
             } else {
-              var5 = (250 + -vn.field_h << 8) / 50;
+              pb.c(0, 0, pb.field_c, pb.field_j, 0, 256 - var5);
               break L2;
             }
           }
           L3: {
-            q.a(ai.field_o, (byte) -106);
-            lf.a();
-            pb.b();
-            pm.a(true);
-            if (var5 >= 256) {
+            tk.f((byte) 103);
+            if (150 > vn.field_h) {
+              ai.field_o.b(var3, var4);
               break L3;
             } else {
-              pb.c(0, 0, pb.field_c, pb.field_j, 0, 256 - var5);
+              dj.field_c.b(var3 + 15, 10 + var4, var5);
               break L3;
             }
           }
           L4: {
-            tk.f((byte) 103);
-            if (150 > vn.field_h) {
-              ai.field_o.b(var3, var4);
-              break L4;
-            } else {
-              dj.field_c.b(var3 + 15, 10 + var4, var5);
-              break L4;
-            }
-          }
-          L5: {
             var6 = -125 + vn.field_h;
             if (0 >= var6) {
-              break L5;
+              break L4;
             } else {
               if (50 <= var6) {
-                break L5;
+                break L4;
               } else {
                 if (var6 >= 20) {
                   if (var6 < 30) {
                     gb.field_d.a(var3, var4, 256);
-                    break L5;
+                    break L4;
                   } else {
                     var7 = 256 * (-var6 + 50) / 20;
                     gb.field_d.a(var3, var4, var7);
-                    break L5;
+                    break L4;
                   }
                 } else {
                   var7 = 256 * var6 / 20;
                   gb.field_d.a(var3, var4, var7);
-                  break L5;
+                  break L4;
                 }
               }
             }
           }
-          L6: {
+          L5: {
             var6 = -140 + vn.field_h;
             if (var6 > 0) {
-              L7: {
+              L6: {
                 var7 = 256;
                 if (var6 < 20) {
                   var7 = var6 * 256 / 20;
-                  break L7;
+                  break L6;
                 } else {
-                  break L7;
+                  break L6;
                 }
               }
               hd.field_k.b(var3 - -15, 10 + var4, var5 * var7 >> 8);
-              break L6;
+              break L5;
             } else {
-              break L6;
+              break L5;
             }
           }
           return;
         }
     }
 
-    final static void g(byte param0) {
+    final static void g() {
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
@@ -3117,72 +3108,64 @@ final class ff extends ma {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
-        Object stackIn_2_0 = null;
-        byte[] stackIn_4_0 = null;
+        byte[] stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        byte[] stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        byte[] stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
         String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           L0: {
             var2_int = param1.length;
-            if (param0 == 89) {
-              var3 = new byte[var2_int];
-              ii.a(param1, 0, var3, 0, var2_int);
-              stackOut_3_0 = (byte[]) var3;
-              stackIn_4_0 = stackOut_3_0;
-              break L0;
-            } else {
-              stackOut_1_0 = null;
-              stackIn_2_0 = stackOut_1_0;
-              return (byte[]) (Object) stackIn_2_0;
-            }
+            var3 = new byte[var2_int];
+            ii.a(param1, 0, var3, 0, var2_int);
+            stackOut_2_0 = (byte[]) var3;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var2;
-            stackOut_5_1 = new StringBuilder().append("ff.WA(").append(param0).append(44);
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("ff.WA(").append(89).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param1 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
-              break L1;
-            } else {
               stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
               stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L1;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
               break L1;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
-        return stackIn_4_0;
+        return stackIn_3_0;
     }
 
     final static gh a(boolean param0, int param1, int[] param2) {
@@ -3214,25 +3197,21 @@ final class ff extends ma {
         int var26 = 0;
         int[] var27 = null;
         int[] var28 = null;
-        int[] var29 = null;
-        wk var30 = null;
-        gh var32 = null;
-        int[] var34 = null;
-        gh var35 = null;
+        wk var29 = null;
+        gh var31 = null;
+        int[] var33 = null;
+        gh var34 = null;
+        int[] var35 = null;
         int[] var36 = null;
-        int[] var37 = null;
-        int[] var38 = null;
+        int[] var39 = null;
+        int[] var40 = null;
         int[] var41 = null;
-        int[] var42 = null;
-        int[] var43 = null;
         int[] var44 = null;
+        int[] var45 = null;
+        int[] var46 = null;
         int[] var47 = null;
         int[] var48 = null;
         int[] var49 = null;
-        int[] var50 = null;
-        int[] var51 = null;
-        int[] var52 = null;
-        int[] var53 = null;
         gh stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
         gh stackIn_36_0 = null;
@@ -3300,19 +3279,16 @@ final class ff extends ma {
             var8.field_Pb = ue.field_g[param1 + -1];
             var7.a(var8, 119);
             var9 = new gh((long)var4, kh.field_s);
-            var49 = new int[param2.length + -8];
-            var43 = var49;
-            var37 = var43;
-            var28 = var37;
-            var10 = var28;
+            var10 = new int[param2.length + -8];
             ii.a(param2, 0, var10, 0, param2.length - 8);
-            var48 = new int[8];
-            var42 = var48;
-            var36 = var42;
-            var27 = var36;
+            var45 = new int[8];
+            var40 = var45;
+            var35 = var40;
+            var27 = var35;
             var11 = var27;
-            ii.a(param2, param2.length - 8, var48, 0, 8);
-            var9.field_S = kc.a(var49, var48, 2);
+            ii.a(param2, param2.length - 8, var45, 0, 8);
+            int discarded$1 = 2;
+            var9.field_S = kc.a(var10, var11);
             var9.field_nb = 1021128;
             var9.a(0, 2, -4 + var5 + -15, -2 + var6, -var6 + var3_int);
             var9.field_Ib = 10;
@@ -3329,37 +3305,37 @@ final class ff extends ma {
             var12.field_I = null;
             var7.a(var12, 124);
             var15 = 0;
-            var50 = var11;
-            var44 = var50;
-            var38 = var44;
-            var29 = var38;
-            var24 = var29;
+            var46 = var11;
+            var41 = var46;
+            var36 = var41;
+            var28 = var36;
+            var24 = var28;
             var16_ref_int__ = var24;
             var17 = 0;
             L2: while (true) {
-              if (var50.length <= var17) {
+              if (var46.length <= var17) {
                 L3: {
                   if (var15 <= 0) {
                     break L3;
                   } else {
-                    var30 = new wk(20 * Math.min(var15, 4), 20 * (1 + var15 / 4));
+                    var29 = new wk(20 * Math.min(var15, 4), 20 * (1 + var15 / 4));
                     var15 = 0;
-                    var30.d();
+                    var29.d();
                     var17 = 0;
                     var18_int = 0;
-                    var51 = var11;
+                    var47 = var11;
                     var20 = 0;
                     L4: while (true) {
-                      if (var20 >= var51.length) {
+                      if (var20 >= var47.length) {
                         sb.field_bb.b((byte) 125);
-                        var32 = new gh((long)var4, (gh) null);
-                        var32.field_Pb = var30;
-                        var32.a(0, 20, var30.field_B, var6, var30.field_z);
-                        var7.a(var32, 120);
+                        var31 = new gh((long)var4, (gh) null);
+                        var31.field_Pb = var29;
+                        var31.a(0, 20, var29.field_B, var6, var29.field_z);
+                        var7.a(var31, 120);
                         break L3;
                       } else {
                         L5: {
-                          var21 = var51[var20];
+                          var21 = var47[var20];
                           if (var21 >= 0) {
                             var15++;
                             ie.field_d[var21].c(var17, var18_int);
@@ -3382,25 +3358,25 @@ final class ff extends ma {
                   }
                 }
                 var16 = 0;
-                var52 = var10;
+                var48 = var10;
                 var18_int = 0;
                 L6: while (true) {
-                  if (var52.length <= var18_int) {
-                    var17 = param0 ? 1 : 0;
-                    var53 = var11;
-                    var47 = var53;
-                    var41 = var47;
-                    var34 = var41;
-                    var25 = var34;
+                  if (var48.length <= var18_int) {
+                    var17 = 0;
+                    var49 = var11;
+                    var44 = var49;
+                    var39 = var44;
+                    var33 = var39;
+                    var25 = var33;
                     var18 = var25;
                     var26 = 0;
                     var19 = var26;
                     L7: while (true) {
                       L8: {
-                        if (var26 >= var53.length) {
+                        if (var26 >= var49.length) {
                           break L8;
                         } else {
-                          var20 = var53[var26];
+                          var20 = var49[var26];
                           if (var20 == 34) {
                             var16 = 6100;
                             var17 = 1;
@@ -3420,11 +3396,11 @@ final class ff extends ma {
                         }
                       }
                       L10: {
-                        var35 = new gh((long)var4, kh.field_s);
-                        var35.a(0, 60, -4 + (var5 + -15), var6 + -6, 6 + -var6 + var12.field_Y);
-                        var35.field_nb = 749462;
-                        var35.field_Ib = 10;
-                        stackOut_34_0 = (gh) var35;
+                        var34 = new gh((long)var4, kh.field_s);
+                        var34.a(0, 60, -4 + (var5 + -15), var6 + -6, 6 + -var6 + var12.field_Y);
+                        var34.field_nb = 749462;
+                        var34.field_Ib = 10;
+                        stackOut_34_0 = (gh) var34;
                         stackOut_34_1 = new StringBuilder().append("<img=1>");
                         stackIn_38_0 = stackOut_34_0;
                         stackIn_38_1 = stackOut_34_1;
@@ -3465,14 +3441,14 @@ final class ff extends ma {
                         }
                       }
                       stackIn_39_0.field_S = stackIn_39_2;
-                      var7.a(var35, 123);
+                      var7.a(var34, 123);
                       stackOut_39_0 = (gh) var7;
                       stackIn_40_0 = stackOut_39_0;
                       break L0;
                     }
                   } else {
                     L11: {
-                      var19 = var52[var18_int];
+                      var19 = var48[var18_int];
                       if (var19 >= 0) {
                         var16 = var16 + tc.field_B[var19];
                         break L11;
@@ -3486,7 +3462,7 @@ final class ff extends ma {
                 }
               } else {
                 L12: {
-                  var18_int = var50[var17];
+                  var18_int = var46[var17];
                   if (0 <= var18_int) {
                     var15++;
                     break L12;
@@ -3504,7 +3480,7 @@ final class ff extends ma {
           L13: {
             var3 = decompiledCaughtException;
             stackOut_41_0 = (RuntimeException) var3;
-            stackOut_41_1 = new StringBuilder().append("ff.AB(").append(param0).append(44).append(param1).append(44);
+            stackOut_41_1 = new StringBuilder().append("ff.AB(").append(0).append(44).append(param1).append(44);
             stackIn_43_0 = stackOut_41_0;
             stackIn_43_1 = stackOut_41_1;
             stackIn_42_0 = stackOut_41_0;
@@ -3634,10 +3610,6 @@ final class ff extends ma {
     final static int a(boolean param0, long param1) {
         param1 = (6148914691236517205L & param1 >>> 1) + (param1 & 6148914691236517205L);
         param1 = (3689348814741910323L & param1 >>> 2) + (3689348814741910323L & param1);
-        if (param0) {
-            Object var4 = null;
-            byte[] discarded$0 = ff.a((byte) 37, (byte[]) null);
-        }
         param1 = 1085102592571150095L & param1 - -(param1 >>> 4);
         param1 = param1 + (param1 >>> 8);
         param1 = param1 + (param1 >>> 16);

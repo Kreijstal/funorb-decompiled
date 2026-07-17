@@ -12,7 +12,7 @@ final class ee extends aj implements df {
     static String field_C;
     static String field_y;
 
-    public static void l(int param0) {
+    public static void l() {
         field_y = null;
         field_C = null;
     }
@@ -45,6 +45,7 @@ final class ee extends aj implements df {
     }
 
     private final void b(byte param0, int param1) {
+        int var5 = 0;
         int var6 = Transmogrify.field_A ? 1 : 0;
         if (!(((ee) this).field_w < param1)) {
             return;
@@ -52,14 +53,9 @@ final class ee extends aj implements df {
         lj[] var7 = new lj[param1];
         lj[] var3 = var7;
         int[] var4 = new int[param1];
-        int var5 = 0;
-        if (param0 > -45) {
-            return;
-        }
-        while (var5 < ((ee) this).field_w) {
+        for (var5 = 0; var5 < ((ee) this).field_w; var5++) {
             var7[var5] = ((ee) this).field_F[var5];
             var4[var5] = ((ee) this).field_E[var5];
-            var5++;
         }
         ((ee) this).field_w = param1;
         ((ee) this).field_F = var3;

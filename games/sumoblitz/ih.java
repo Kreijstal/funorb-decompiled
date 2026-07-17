@@ -6,15 +6,19 @@ final class ih {
     static mn field_a;
     static String field_b;
 
-    public static void a(byte param0) {
+    public static void a() {
+        RuntimeException var1 = null;
+        RuntimeException decompiledCaughtException = null;
         try {
+          L0: {
             field_b = null;
             field_a = null;
-            if (param0 <= 11) {
-                ih.a(-113);
-            }
-        } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "ih.B(" + param0 + 41);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw qo.a((Throwable) (Object) var1, "ih.B(" + 122 + 41);
         }
     }
 
@@ -35,7 +39,7 @@ final class ih {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        boolean stackIn_10_0 = false;
+        int stackIn_10_0 = 0;
         int stackIn_30_0 = 0;
         int stackIn_30_1 = 0;
         int stackIn_32_0 = 0;
@@ -56,7 +60,7 @@ final class ih {
         StringBuilder stackIn_70_1 = null;
         String stackIn_70_2 = null;
         RuntimeException decompiledCaughtException = null;
-        boolean stackOut_9_0 = false;
+        int stackOut_9_0 = 0;
         int stackOut_29_0 = 0;
         int stackOut_29_1 = 0;
         int stackOut_32_0 = 0;
@@ -85,14 +89,16 @@ final class ih {
               var5_int = mr.a((-param4 + param3) * 3, (byte) -115);
               var6 = 3 * param4;
               var7 = -10 + var5_int;
-              aw.C(-114);
+              int discarded$2 = -114;
+              aw.C();
               if (0 >= param1.field_E) {
                 break L1;
               } else {
                 if (null == param1.field_a) {
                   break L1;
                 } else {
-                  ad.c((byte) 71);
+                  int discarded$3 = 71;
+                  ad.c();
                   break L1;
                 }
               }
@@ -108,15 +114,15 @@ final class ih {
                     var9 = param1.field_A[var8];
                     var10 = param1.field_b[var8];
                     var11 = param1.field_l[var8];
-                    stackOut_9_0 = param0;
-                    stackIn_52_0 = stackOut_9_0 ? 1 : 0;
+                    stackOut_9_0 = 0;
+                    stackIn_52_0 = stackOut_9_0;
                     stackIn_10_0 = stackOut_9_0;
                     if (var19 != 0) {
                       break L3;
                     } else {
                       L5: {
                         L6: {
-                          if (!stackIn_10_0) {
+                          if (stackIn_10_0 == 0) {
                             break L6;
                           } else {
                             var12 = we.field_z[var9];
@@ -271,7 +277,7 @@ final class ih {
                     }
                   }
                 }
-                stackOut_51_0 = param2;
+                stackOut_51_0 = -1;
                 stackIn_52_0 = stackOut_51_0;
                 break L3;
               }
@@ -325,7 +331,7 @@ final class ih {
           L20: {
             var5 = decompiledCaughtException;
             stackOut_66_0 = (RuntimeException) var5;
-            stackOut_66_1 = new StringBuilder().append("ih.A(").append(param0).append(44);
+            stackOut_66_1 = new StringBuilder().append("ih.A(").append(0).append(44);
             stackIn_69_0 = stackOut_66_0;
             stackIn_69_1 = stackOut_66_1;
             stackIn_67_0 = stackOut_66_0;
@@ -348,7 +354,7 @@ final class ih {
               break L20;
             }
           }
-          throw qo.a((Throwable) (Object) stackIn_70_0, stackIn_70_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw qo.a((Throwable) (Object) stackIn_70_0, stackIn_70_2 + 44 + -1 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -357,9 +363,9 @@ final class ih {
             hc.field_f = wt.field_h[2];
             iv.field_i = wt.field_h[1];
             ki.field_f = wt.field_h[0];
-            int var1_int = -21 / ((param0 - -59) / 40);
+            int var1_int = 21;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) (Object) runtimeException, "ih.C(" + param0 + 41);
+            throw qo.a((Throwable) (Object) runtimeException, "ih.C(" + -125 + 41);
         }
     }
 

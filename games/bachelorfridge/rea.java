@@ -13,7 +13,7 @@ final class rea extends bw {
     static kv field_k;
     int field_h;
 
-    public static void c(byte param0) {
+    public static void c() {
         field_g = null;
         field_k = null;
         field_f = null;
@@ -44,7 +44,7 @@ final class rea extends bw {
         var9 = BachelorFridge.field_y;
         try {
           L0: {
-            var6_int = -35 % ((param3 - -3) / 43);
+            var6_int = -1;
             var7 = (rea) (Object) param0.b((byte) 90);
             L1: while (true) {
               if (var7 == null) {
@@ -93,7 +93,7 @@ final class rea extends bw {
               break L3;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw pe.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + 65280 + 44 + param2 + 44 + 118 + 44 + 10 + 44 + param5 + 41);
         }
     }
 

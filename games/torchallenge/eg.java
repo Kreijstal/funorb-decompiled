@@ -416,7 +416,8 @@ abstract class eg extends w {
         int stackOut_66_2 = 0;
         var17 = null;
         if (param0 != null) {
-          StringBuilder discarded$5 = hb.a(0, (byte) 30, field_p, ' ');
+          int discarded$6 = 32;
+          StringBuilder discarded$7 = hb.a(0, (byte) 30, field_p);
           var4 = 0;
           var5 = 0;
           var6 = -1;
@@ -452,9 +453,9 @@ abstract class eg extends w {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$6 = field_p.append(60);
-                        StringBuilder discarded$7 = field_p.append(var15);
-                        StringBuilder discarded$8 = field_p.append(62);
+                        StringBuilder discarded$8 = field_p.append(60);
+                        StringBuilder discarded$9 = field_p.append(var15);
+                        StringBuilder discarded$10 = field_p.append(62);
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -641,7 +642,7 @@ abstract class eg extends w {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$9 = field_p.append(var14);
+                        StringBuilder discarded$11 = field_p.append(var14);
                         var14 = (char)(wf.a((byte) -126, (char) var14) & 255);
                         var4 = var4 + ((eg) this).field_M[var14];
                         if (((eg) this).field_s == null) {

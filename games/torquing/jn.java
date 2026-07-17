@@ -54,87 +54,79 @@ final class jn {
           break L4;
         }
         L6: {
-          if (param1 == 3328) {
-            break L6;
-          } else {
-            field_b = null;
-            break L6;
-          }
-        }
-        L7: {
-          L8: {
+          L7: {
             if (vo.field_d == null) {
-              break L8;
+              break L7;
             } else {
               if (vo.field_d.length < param2) {
-                break L8;
-              } else {
                 break L7;
+              } else {
+                break L6;
               }
             }
           }
           vo.field_d = new int[param2 * 2];
-          break L7;
+          break L6;
         }
-        L9: {
-          L10: {
+        L8: {
+          L9: {
             if (null == vp.field_F) {
-              break L10;
+              break L9;
             } else {
               if (vp.field_F.length < param2) {
-                break L10;
-              } else {
                 break L9;
+              } else {
+                break L8;
               }
             }
           }
           vp.field_F = new int[param2 * 2];
-          break L9;
+          break L8;
         }
-        L11: {
-          L12: {
+        L10: {
+          L11: {
             if (ji.field_a == null) {
-              break L12;
+              break L11;
             } else {
               if (param2 > ji.field_a.length) {
-                break L12;
-              } else {
                 break L11;
+              } else {
+                break L10;
               }
             }
           }
           ji.field_a = new int[param2 * 2];
-          break L11;
+          break L10;
         }
-        L13: {
-          L14: {
+        L12: {
+          L13: {
             if (lp.field_g == null) {
-              break L14;
+              break L13;
             } else {
               if (param2 - -param0 <= lp.field_g.length) {
+                break L12;
+              } else {
                 break L13;
+              }
+            }
+          }
+          lp.field_g = new int[2 * (param2 - -param0)];
+          break L12;
+        }
+        L14: {
+          L15: {
+            if (null == go.field_s) {
+              break L15;
+            } else {
+              if (param2 > go.field_s.length) {
+                break L15;
               } else {
                 break L14;
               }
             }
           }
-          lp.field_g = new int[2 * (param2 - -param0)];
-          break L13;
-        }
-        L15: {
-          L16: {
-            if (null == go.field_s) {
-              break L16;
-            } else {
-              if (param2 > go.field_s.length) {
-                break L16;
-              } else {
-                break L15;
-              }
-            }
-          }
           go.field_s = new boolean[2 * param2];
-          break L15;
+          break L14;
         }
         lj.field_d = 2147483647;
         qd.field_g = -2147483648;
@@ -143,7 +135,7 @@ final class jn {
         vg.field_o = 0;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         int var1 = 0;
         field_b = null;
@@ -181,14 +173,15 @@ final class jn {
         var4 = Torquing.field_u;
         try {
           L0: {
-            if (mn.a(param0, param2, (byte) 67)) {
+            int discarded$8 = 67;
+            if (mn.a(param0, param2)) {
               L1: {
                 var3_int = 0;
                 if (param1 >= 97) {
                   break L1;
                 } else {
                   var5 = null;
-                  boolean discarded$2 = jn.a((CharSequence) null, (byte) 7, true);
+                  boolean discarded$9 = jn.a((CharSequence) null, (byte) 7, true);
                   break L1;
                 }
               }
@@ -247,7 +240,7 @@ final class jn {
         return stackIn_12_0 != 0;
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;

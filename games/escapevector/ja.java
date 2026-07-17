@@ -16,7 +16,7 @@ final class ja {
         field_e = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -264,7 +264,7 @@ final class ja {
         }
     }
 
-    final static d a(String param0, boolean param1) {
+    final static d a(String param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

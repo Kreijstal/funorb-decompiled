@@ -41,10 +41,11 @@ final class ci extends ki {
         int stackOut_6_1 = 0;
         int stackOut_6_2 = 0;
         if (!param0) {
-          jp discarded$1 = ((ci) this).c((byte) 70);
+          jp discarded$3 = ((ci) this).c((byte) 70);
           if (((ci) this).b((byte) -102)) {
             L0: {
-              var7 = ge.a(((ci) this).field_m, param3, -20777);
+              int discarded$4 = -20777;
+              var7 = ge.a(((ci) this).field_m, param3);
               if (!var7.a((byte) -84, param3, ((ci) this).field_m)) {
                 L1: {
                   stackOut_15_0 = 1;
@@ -88,7 +89,8 @@ final class ci extends ki {
           L2: {
             if (((ci) this).b((byte) -102)) {
               L3: {
-                var8 = ge.a(((ci) this).field_m, param3, -20777);
+                int discarded$5 = -20777;
+                var8 = ge.a(((ci) this).field_m, param3);
                 if (!var8.a((byte) -84, param3, ((ci) this).field_m)) {
                   L4: {
                     stackOut_5_0 = 1;
@@ -237,7 +239,8 @@ final class ci extends ki {
             jh.field_d = jh.a(0, om.field_fc);
             lk.field_t = jh.a(0, pn.field_m);
             kh.field_b = jh.a(0, ng.field_a);
-            b.field_b = cr.a("space", i.field_m, "space_lever", 2);
+            int discarded$1 = 2;
+            b.field_b = cr.a("space", i.field_m, "space_lever");
             return true;
           }
         }

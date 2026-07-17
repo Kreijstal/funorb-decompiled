@@ -212,10 +212,6 @@ final class ig extends ki implements ka {
     }
 
     final static int a(int param0, int param1, boolean param2, boolean param3) {
-        if (param2) {
-            ig.h(70);
-            return cj.a(-69);
-        }
         return cj.a(-69);
     }
 
@@ -245,7 +241,8 @@ final class ig extends ki implements ka {
               if (param3 != ((ig) this).field_F) {
                 if (param3 != ((ig) this).field_E) {
                   if (((ig) this).field_G == param3) {
-                    qk.f(4);
+                    int discarded$2 = 4;
+                    qk.f();
                     break L1;
                   } else {
                     break L1;

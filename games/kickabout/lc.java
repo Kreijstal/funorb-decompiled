@@ -31,9 +31,24 @@ final class lc implements Iterator {
         if (null != k.field_m) {
           var3 = k.field_m.a((byte) 84, param2);
           if (var3 != 0) {
-            if (var3 == 2) {
-              if (k.field_m.field_E != null) {
-                if (!k.field_m.field_E.equals((Object) (Object) "")) {
+            if (var3 != 2) {
+              k.field_m = null;
+              fs.field_b = -1;
+              var3 = 0;
+              return;
+            } else {
+              if (k.field_m.field_E == null) {
+                k.field_m = null;
+                fs.field_b = -1;
+                var3 = 0;
+                return;
+              } else {
+                if (k.field_m.field_E.equals((Object) (Object) "")) {
+                  k.field_m = null;
+                  fs.field_b = -1;
+                  var3 = 0;
+                  return;
+                } else {
                   L0: {
                     if (k.field_m.field_E.charAt(0) != 91) {
                       var7 = (CharSequence) (Object) k.field_m.field_E;
@@ -51,7 +66,7 @@ final class lc implements Iterator {
                     if (fs.field_b != 0) {
                       break L1;
                     } else {
-                      var5 = lh.a(param1, 100, var4);
+                      var5 = lh.a(13, 100, var4);
                       break L1;
                     }
                   }
@@ -59,13 +74,14 @@ final class lc implements Iterator {
                     if (fs.field_b != 1) {
                       break L2;
                     } else {
-                      var5 = of.a(param1, (byte) 100, var4);
+                      var5 = of.a(13, (byte) 100, var4);
                       break L2;
                     }
                   }
                   L3: {
                     if (fs.field_b == 2) {
-                      var5 = il.a(var4, param1, (byte) 126);
+                      int discarded$1 = 126;
+                      var5 = il.a(var4, 13);
                       break L3;
                     } else {
                       break L3;
@@ -75,47 +91,32 @@ final class lc implements Iterator {
                     if (fs.field_b != 3) {
                       break L4;
                     } else {
-                      var5 = rn.a(var4, 2, param1, var4);
+                      var5 = rn.a(var4, 2, 13, var4);
                       break L4;
                     }
                   }
-                  if (var5 != null) {
+                  if (var5 == null) {
+                    k.field_m = null;
+                    fs.field_b = -1;
+                    var3 = 0;
+                    return;
+                  } else {
                     var6 = null;
                     wi.a((String) null, var4, 0, 2, var5, -115);
                     k.field_m = null;
                     fs.field_b = -1;
-                    var3 = 91 % ((-21 - param0) / 44);
-                    return;
-                  } else {
-                    k.field_m = null;
-                    fs.field_b = -1;
-                    var3 = 91 % ((-21 - param0) / 44);
+                    var3 = 0;
                     return;
                   }
-                } else {
-                  k.field_m = null;
-                  fs.field_b = -1;
-                  var3 = 91 % ((-21 - param0) / 44);
-                  return;
                 }
-              } else {
-                k.field_m = null;
-                fs.field_b = -1;
-                var3 = 91 % ((-21 - param0) / 44);
-                return;
               }
-            } else {
-              k.field_m = null;
-              fs.field_b = -1;
-              var3 = 91 % ((-21 - param0) / 44);
-              return;
             }
           } else {
-            var3 = 91 % ((-21 - param0) / 44);
+            var3 = 0;
             return;
           }
         } else {
-          var3 = 91 % ((-21 - param0) / 44);
+          var3 = 0;
           return;
         }
     }
@@ -124,7 +125,7 @@ final class lc implements Iterator {
         return ((lc) this).field_a != ((lc) this).field_c.field_d;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_e = null;
     }

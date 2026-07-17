@@ -10,13 +10,13 @@ final class fl extends gm {
     private sm[] field_q;
     static ri[] field_r;
 
-    public static void b(int param0) {
+    public static void b() {
         field_r = null;
         field_o = null;
         field_s = null;
     }
 
-    final static String a(boolean param0, boolean param1, boolean param2, byte param3) {
+    final static String a(boolean param0, boolean param1, boolean param2) {
         int var4 = 0;
         if (!(!param2)) {
             var4 += 4;
@@ -24,16 +24,14 @@ final class fl extends gm {
         if (!(!param1)) {
             var4 += 2;
         }
-        if (!(!param0)) {
-            var4++;
-        }
         return pl.field_r[var4];
     }
 
     fl(fl param0, boolean param1) {
         this();
         try {
-            param0.a((fl) this, param1, -26407);
+            int discarded$0 = -26407;
+            param0.a((fl) this, param1);
         } catch (RuntimeException runtimeException) {
             throw qo.a((Throwable) (Object) runtimeException, "fl.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
@@ -208,7 +206,7 @@ final class fl extends gm {
         }
     }
 
-    private final void a(fl param0, boolean param1, int param2) {
+    private final void a(fl param0, boolean param1) {
         int var4_int = 0;
         RuntimeException var4 = null;
         sm var5 = null;

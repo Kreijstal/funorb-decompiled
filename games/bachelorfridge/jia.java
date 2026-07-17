@@ -121,7 +121,7 @@ final class jia extends k {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_l = null;
         field_m = null;
     }

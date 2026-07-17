@@ -87,7 +87,7 @@ final class lg {
         return stackIn_20_0 != 0;
     }
 
-    final static h a(int param0) {
+    final static h a() {
         try {
             Throwable var1 = null;
             h stackIn_2_0 = null;
@@ -112,7 +112,7 @@ final class lg {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_d = null;
         field_b = null;
         field_c = null;

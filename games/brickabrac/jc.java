@@ -10,7 +10,7 @@ abstract class jc extends ib {
     static vl field_M;
     boolean field_N;
 
-    private final int h(byte param0) {
+    private final int h() {
         return !((jc) this).field_N ? 0 : (Object) (Object) ((jc) this).field_I.g(-125) == this ? 256 : 0;
     }
 
@@ -29,7 +29,8 @@ abstract class jc extends ib {
         int stackOut_12_0 = 0;
         int stackOut_5_0 = 0;
         int stackOut_6_0 = 0;
-        var2 = this.h((byte) 90);
+        int discarded$1 = 90;
+        var2 = this.h();
         var3 = var2 - ((jc) this).field_L;
         if (var3 <= 0) {
           if (param0 > var3) {
@@ -231,7 +232,7 @@ abstract class jc extends ib {
 
     abstract void b(int param0, int param1, int param2);
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void a(java.applet.Applet param0) {
         try {
             da.a("", 121, param0);
             mi.a((byte) -111, param0);
@@ -242,7 +243,8 @@ abstract class jc extends ib {
 
     boolean a(int param0) {
         if (param0 <= -22) {
-          ((jc) this).field_L = this.h((byte) 90);
+          int discarded$4 = 90;
+          ((jc) this).field_L = this.h();
           if (((jc) this).field_L == 0) {
             if (((jc) this).field_N) {
               return false;
@@ -254,7 +256,8 @@ abstract class jc extends ib {
           }
         } else {
           ((jc) this).field_L = 90;
-          ((jc) this).field_L = this.h((byte) 90);
+          int discarded$5 = 90;
+          ((jc) this).field_L = this.h();
           if (((jc) this).field_L == 0) {
             if (((jc) this).field_N) {
               return false;

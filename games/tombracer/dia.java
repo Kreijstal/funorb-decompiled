@@ -7,13 +7,13 @@ final class dia extends ela {
     static char field_q;
     static float[] field_r;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_o = null;
         field_p = null;
         field_r = null;
     }
 
-    final static ka a(boolean param0, int param1, boolean param2, byte param3) {
+    final static ka a(boolean param0, int param1, boolean param2) {
         if (param0) {
             return ola.field_Ib[param1];
         }
@@ -48,7 +48,8 @@ final class dia extends ela {
         try {
           L0: {
             if (param1 == 0) {
-              stackOut_3_0 = new bfa((Object) (Object) sj.a((byte) 120));
+              int discarded$2 = 120;
+              stackOut_3_0 = new bfa((Object) (Object) sj.a());
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

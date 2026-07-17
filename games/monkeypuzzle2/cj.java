@@ -32,7 +32,9 @@ final class cj {
 
     final static void a(byte param0, td param1) {
         try {
-            na.a((byte) 46, li.a(param1, 100, 96));
+            int discarded$0 = 96;
+            int discarded$1 = 100;
+            na.a((byte) 46, li.a(param1));
             int var2_int = -91 % ((param0 - 43) / 57);
         } catch (RuntimeException runtimeException) {
             throw la.a((Throwable) (Object) runtimeException, "cj.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);

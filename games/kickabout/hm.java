@@ -18,10 +18,6 @@ final class hm extends tm {
     }
 
     final static int a(byte param0, int param1) {
-        if (param0 <= 104) {
-            field_A = null;
-            return param1 * 3;
-        }
         return param1 * 3;
     }
 
@@ -224,7 +220,7 @@ final class hm extends tm {
         return stackIn_1_0;
     }
 
-    final static void a(int param0, int param1) {
+    final static void a() {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -237,7 +233,7 @@ final class hm extends tm {
             var5 = (sm) (Object) ia.field_d.g(24009);
             L1: while (true) {
               if (var5 == null) {
-                var3 = -93 % ((param0 - 72) / 43);
+                var3 = 0;
                 var6 = (ni) (Object) lw.field_g.g(24009);
                 L2: while (true) {
                   if (var6 == null) {
@@ -258,15 +254,15 @@ final class hm extends tm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var2, "hm.A(" + param0 + 44 + 3 + 41);
+          throw nb.a((Throwable) (Object) var2, "hm.A(" + 115 + 44 + 3 + 41);
         }
     }
 
-    final static mc h(int param0) {
+    final static mc h() {
         return (mc) (Object) new vi();
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_G = null;
         field_H = null;
         field_E = null;

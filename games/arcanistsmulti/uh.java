@@ -658,21 +658,13 @@ final class uh extends pg {
         return stackIn_16_0 != 0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
-            L1: {
-              field_s = null;
-              field_q = null;
-              if (param0 < -44) {
-                break L1;
-              } else {
-                field_q = null;
-                break L1;
-              }
-            }
+            field_s = null;
+            field_q = null;
             field_l = null;
             field_i = null;
             field_n = null;
@@ -681,7 +673,7 @@ final class uh extends pg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw aa.a((Throwable) (Object) var1, "uh.E(" + param0 + 41);
+          throw aa.a((Throwable) (Object) var1, "uh.E(" + -69 + 41);
         }
     }
 
@@ -761,7 +753,8 @@ final class uh extends pg {
             }
             ig.a(0, param0);
             int var2_int = 32 % ((param1 - 18) / 50);
-            cj.a(-127);
+            int discarded$0 = -127;
+            cj.a();
         } catch (RuntimeException runtimeException) {
             throw aa.a((Throwable) (Object) runtimeException, "uh.F(" + param0 + 44 + param1 + 41);
         }

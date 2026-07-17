@@ -54,7 +54,8 @@ final class jg extends ha implements ql {
                   if (param0.field_i == 248) {
                     L2: {
                       if (!param2) {
-                        jg.i((byte) 100);
+                        int discarded$3 = 100;
+                        jg.i();
                         break L2;
                       } else {
                         break L2;
@@ -71,58 +72,54 @@ final class jg extends ha implements ql {
                   if (null == ((jg) this).field_jb) {
                     break L1;
                   } else {
-                    ((jg) this).field_jb.a(param1 ^ 193);
+                    ((jg) this).field_jb.a(200);
                     break L1;
                   }
                 }
               }
             }
             var5 = new sk((ha) this, pj.field_c, var4_ref);
-            if (param1 == 9) {
-              L3: {
-                if (param0.field_b) {
-                  if (param0.field_f) {
-                    ((jg) this).c((byte) 54, (we) (Object) new ja((jg) this));
-                    return;
-                  } else {
-                    t discarded$2 = var5.a(0, (of) this, pi.field_i);
-                    break L3;
-                  }
+            L3: {
+              if (param0.field_b) {
+                if (param0.field_f) {
+                  ((jg) this).c((byte) 54, (we) (Object) new ja((jg) this));
+                  return;
                 } else {
-                  L4: {
-                    if (!((jg) this).field_nb) {
-                      if (5 == param0.field_i) {
-                        var5.a((byte) -9, 11, wc.field_g);
-                        var5.a((byte) 119, 17, vh.field_L);
-                        break L4;
-                      } else {
-                        var5.a((byte) -81, -1, nf.field_E);
-                        break L4;
-                      }
+                  t discarded$4 = var5.a(0, (of) this, pi.field_i);
+                  break L3;
+                }
+              } else {
+                L4: {
+                  if (!((jg) this).field_nb) {
+                    if (5 == param0.field_i) {
+                      var5.a((byte) -9, 11, wc.field_g);
+                      var5.a((byte) 119, 17, vh.field_L);
+                      break L4;
                     } else {
-                      t discarded$3 = var5.a(0, (of) this, pi.field_i);
+                      var5.a((byte) -81, -1, nf.field_E);
                       break L4;
                     }
-                  }
-                  if (3 != param0.field_i) {
-                    if (param0.field_i == 6) {
-                      var5.a((byte) -105, 9, uf.field_k);
-                      break L3;
-                    } else {
-                      ((jg) this).c((byte) 46, (we) (Object) var5);
-                      return;
-                    }
                   } else {
-                    var5.a((byte) 115, 7, fc.field_m);
-                    break L3;
+                    t discarded$5 = var5.a(0, (of) this, pi.field_i);
+                    break L4;
                   }
                 }
+                if (3 != param0.field_i) {
+                  if (param0.field_i == 6) {
+                    var5.a((byte) -105, 9, uf.field_k);
+                    break L3;
+                  } else {
+                    ((jg) this).c((byte) 46, (we) (Object) var5);
+                    return;
+                  }
+                } else {
+                  var5.a((byte) 115, 7, fc.field_m);
+                  break L3;
+                }
               }
-              ((jg) this).c((byte) 46, (we) (Object) var5);
-              break L0;
-            } else {
-              return;
             }
+            ((jg) this).c((byte) 46, (we) (Object) var5);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -152,7 +149,7 @@ final class jg extends ha implements ql {
               break L5;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + 44 + param1 + 44 + param2 + 41);
+          throw la.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + 44 + 9 + 44 + param2 + 41);
         }
     }
 
@@ -167,7 +164,7 @@ final class jg extends ha implements ql {
         }
     }
 
-    public static void r(int param0) {
+    public static void r() {
         field_kb = null;
     }
 
@@ -237,8 +234,9 @@ final class jg extends ha implements ql {
         }
     }
 
-    private final static void i(byte param0) {
-        nh.a((byte) 93, ii.a(false));
+    private final static void i() {
+        int discarded$0 = 0;
+        nh.a((byte) 93, ii.a());
     }
 
     final static int a(byte param0, int param1, Random param2) {
@@ -247,27 +245,25 @@ final class jg extends ha implements ql {
         int var4 = 0;
         int var5 = 0;
         int stackIn_6_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_13_0 = 0;
+        int stackIn_11_0 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_17_2 = null;
+        String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_12_0 = 0;
-        int stackOut_8_0 = 0;
+        int stackOut_10_0 = 0;
         int stackOut_5_0 = 0;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
         RuntimeException stackOut_14_0 = null;
         StringBuilder stackOut_14_1 = null;
-        RuntimeException stackOut_16_0 = null;
-        StringBuilder stackOut_16_1 = null;
-        String stackOut_16_2 = null;
-        RuntimeException stackOut_15_0 = null;
-        StringBuilder stackOut_15_1 = null;
-        String stackOut_15_2 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
         var5 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           L0: {
@@ -275,22 +271,16 @@ final class jg extends ha implements ql {
               throw new IllegalArgumentException();
             } else {
               if (!dk.a(param1, (byte) -15)) {
-                if (param0 > 69) {
-                  var3_int = -(int)(4294967296L % (long)param1) + -2147483648;
-                  L1: while (true) {
-                    var4 = param2.nextInt();
-                    if (var4 >= var3_int) {
-                      continue L1;
-                    } else {
-                      stackOut_12_0 = uf.a(-122, param1, var4);
-                      stackIn_13_0 = stackOut_12_0;
-                      break L0;
-                    }
+                var3_int = -(int)(4294967296L % (long)param1) + -2147483648;
+                L1: while (true) {
+                  var4 = param2.nextInt();
+                  if (var4 >= var3_int) {
+                    continue L1;
+                  } else {
+                    stackOut_10_0 = uf.a(-122, param1, var4);
+                    stackIn_11_0 = stackOut_10_0;
+                    break L0;
                   }
-                } else {
-                  stackOut_8_0 = 83;
-                  stackIn_9_0 = stackOut_8_0;
-                  return stackIn_9_0;
                 }
               } else {
                 stackOut_5_0 = (int)(((long)param2.nextInt() & 4294967295L) * (long)param1 >> 32);
@@ -303,33 +293,33 @@ final class jg extends ha implements ql {
           decompiledCaughtException = decompiledCaughtParameter0;
           L2: {
             var3 = decompiledCaughtException;
-            stackOut_14_0 = (RuntimeException) var3;
-            stackOut_14_1 = new StringBuilder().append("jg.MB(").append(param0).append(44).append(param1).append(44);
-            stackIn_16_0 = stackOut_14_0;
-            stackIn_16_1 = stackOut_14_1;
-            stackIn_15_0 = stackOut_14_0;
-            stackIn_15_1 = stackOut_14_1;
+            stackOut_12_0 = (RuntimeException) var3;
+            stackOut_12_1 = new StringBuilder().append("jg.MB(").append(80).append(44).append(param1).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
             if (param2 == null) {
-              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
-              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
-              stackOut_16_2 = "null";
-              stackIn_17_0 = stackOut_16_0;
-              stackIn_17_1 = stackOut_16_1;
-              stackIn_17_2 = stackOut_16_2;
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
               break L2;
             } else {
-              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-              stackOut_15_2 = "{...}";
-              stackIn_17_0 = stackOut_15_0;
-              stackIn_17_1 = stackOut_15_1;
-              stackIn_17_2 = stackOut_15_2;
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
               break L2;
             }
           }
-          throw la.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
+          throw la.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
         }
-        return stackIn_13_0;
+        return stackIn_11_0;
     }
 
     static {

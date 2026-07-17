@@ -107,7 +107,7 @@ abstract class gea extends iw {
         String stackOut_12_2 = null;
         try {
           L0: {
-            if (!super.a(param0, param1, param2, param3)) {
+            if (!super.a(-15834, param1, param2, param3)) {
               if (null != ((gea) this).field_L) {
                 L1: {
                   if (param1 != 98) {
@@ -142,7 +142,7 @@ abstract class gea extends iw {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var5;
-            stackOut_11_1 = new StringBuilder().append("gea.N(").append(param0).append(44).append(param1).append(44);
+            stackOut_11_1 = new StringBuilder().append("gea.N(").append(-15834).append(44).append(param1).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -190,7 +190,8 @@ abstract class gea extends iw {
             return;
           } else {
             ((gea) this).c(((gea) this).field_K.field_h + 12, -1860440319, ((gea) this).field_K.field_f + (((gea) this).field_O + 12));
-            this.a(((gea) this).field_K, (byte) 71);
+            int discarded$2 = 71;
+            this.a(((gea) this).field_K);
             ((gea) this).field_L.field_v = 256;
             ((gea) this).field_N = null;
             super.e(param0);
@@ -285,7 +286,8 @@ abstract class gea extends iw {
         } else {
           ((gea) this).field_Q = 0;
           ((gea) this).field_N = kk.field_o;
-          this.a(((gea) this).field_K, (byte) 71);
+          int discarded$2 = 71;
+          this.a(((gea) this).field_K);
           ((gea) this).field_K = null;
           if (param0 != 15435) {
             ((gea) this).field_M = 66;
@@ -298,7 +300,7 @@ abstract class gea extends iw {
         }
     }
 
-    private final void a(shb param0, byte param1) {
+    private final void a(shb param0) {
         try {
             if (!(null == ((gea) this).field_L)) {
                 ((gea) this).field_L.b(-3846);
@@ -323,7 +325,8 @@ abstract class gea extends iw {
             ((gea) this).field_J = param3;
             ((gea) this).field_P = param3;
             ((gea) this).field_O = param2;
-            this.a(param1, (byte) 71);
+            int discarded$0 = 71;
+            this.a(param1);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "gea.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }

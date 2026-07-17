@@ -82,7 +82,7 @@ final class jeb extends mfb {
     jeb() {
     }
 
-    public static void i(byte param0) {
+    public static void i() {
         field_c = null;
         int var1 = 1;
         field_b = null;

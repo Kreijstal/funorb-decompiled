@@ -68,22 +68,14 @@ final class bv extends jea {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        L0: {
-          var7 = TombRacer.field_G ? 1 : 0;
-          if (param1 == 32) {
-            break L0;
-          } else {
-            field_xb = null;
-            break L0;
-          }
-        }
+        var7 = TombRacer.field_G ? 1 : 0;
         var4 = 0;
-        L1: while (true) {
+        L0: while (true) {
           if (var4 >= ((bv) this).field_ub.length) {
             ((bv) this).field_tb.a(((bv) this).field_G, ((bv) this).field_t - param2, -23776, param2, 0);
             var8 = 0;
             var4 = var8;
-            L2: while (true) {
+            L1: while (true) {
               if (var8 >= ((bv) this).field_vb.length) {
                 return;
               } else {
@@ -91,10 +83,10 @@ final class bv extends jea {
                 if (((bv) this).field_wb != var8) {
                   ((bv) this).field_vb[var8].field_qb = ((bv) this).field_vb[var8].field_qb + 10000;
                   var8++;
-                  continue L2;
+                  continue L1;
                 } else {
                   var8++;
-                  continue L2;
+                  continue L1;
                 }
               }
             }
@@ -106,7 +98,7 @@ final class bv extends jea {
             ((bv) this).field_ub[var4].field_G = -var5 + var6;
             ((bv) this).field_ub[var4].field_t = param2;
             var4++;
-            continue L1;
+            continue L0;
           }
         }
     }

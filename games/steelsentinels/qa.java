@@ -168,7 +168,7 @@ final class qa extends fe {
         }
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_J = null;
         field_N = null;
         field_L = null;
@@ -224,12 +224,10 @@ final class qa extends fe {
         }
     }
 
-    final static void a(byte param0, boolean param1) {
-        if (param0 >= -54) {
-            qa.a((byte) 43, true);
-            fa.a(true, (byte) 67, true);
-            return;
-        }
+    final static void a() {
+        int discarded$0 = 1;
+        int discarded$1 = 43;
+        qa.a();
         fa.a(true, (byte) 67, true);
     }
 

@@ -18,13 +18,15 @@ abstract class dg extends rg {
           ((dg) this).field_R = ha.field_b;
           ((dg) this).field_K = 0;
           if (param0 >= -28) {
-            boolean discarded$2 = ((dg) this).h(-95);
-            this.c(((dg) this).field_P, -15291);
+            boolean discarded$6 = ((dg) this).h(-95);
+            int discarded$7 = -15291;
+            this.c(((dg) this).field_P);
             ((dg) this).field_P = null;
             ((dg) this).field_M.field_u = 0;
             return;
           } else {
-            this.c(((dg) this).field_P, -15291);
+            int discarded$8 = -15291;
+            this.c(((dg) this).field_P);
             ((dg) this).field_P = null;
             ((dg) this).field_M.field_u = 0;
             return;
@@ -49,7 +51,8 @@ abstract class dg extends rg {
             }
             if (ha.field_b != ((dg) this).field_R) {
                 ((dg) this).a(12 + ((dg) this).field_P.field_q, (byte) 29, ((dg) this).field_P.field_n + ((dg) this).field_N + 12);
-                this.c(((dg) this).field_P, -15291);
+                int discarded$5 = -15291;
+                this.c(((dg) this).field_P);
             } else {
                 ((dg) this).field_R = null;
                 ((dg) this).field_M.field_u = 256;
@@ -67,7 +70,8 @@ abstract class dg extends rg {
         }
         if (ha.field_b != ((dg) this).field_R) {
             ((dg) this).a(12 + ((dg) this).field_P.field_q, (byte) 29, ((dg) this).field_P.field_n + ((dg) this).field_N + 12);
-            this.c(((dg) this).field_P, -15291);
+            int discarded$6 = -15291;
+            this.c(((dg) this).field_P);
         } else {
             ((dg) this).field_R = null;
             ((dg) this).field_M.field_u = 256;
@@ -245,7 +249,7 @@ abstract class dg extends rg {
         String stackOut_13_2 = null;
         try {
           L0: {
-            var5_int = 71 % ((-53 - param0) / 33);
+            var5_int = 1;
             if (!super.a(82, param1, param2, param3)) {
               if (((dg) this).field_M != null) {
                 L1: {
@@ -281,7 +285,7 @@ abstract class dg extends rg {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var5;
-            stackOut_12_1 = new StringBuilder().append("dg.G(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_12_1 = new StringBuilder().append("dg.G(").append(23).append(44).append(param1).append(44).append(param2).append(44);
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;
@@ -309,7 +313,7 @@ abstract class dg extends rg {
         return stackIn_11_0 != 0;
     }
 
-    private final void c(ea param0, int param1) {
+    private final void c(ea param0) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -381,7 +385,7 @@ abstract class dg extends rg {
         }
     }
 
-    public static void k(int param0) {
+    public static void k() {
         field_L = null;
         field_Q = null;
     }
@@ -393,7 +397,8 @@ abstract class dg extends rg {
             ((dg) this).field_J = param3;
             ((dg) this).field_O = param3;
             ((dg) this).field_N = param2;
-            this.c(param1, -15291);
+            int discarded$0 = -15291;
+            this.c(param1);
         } catch (RuntimeException runtimeException) {
             throw pn.a((Throwable) (Object) runtimeException, "dg.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }

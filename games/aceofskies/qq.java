@@ -13,19 +13,15 @@ final class qq {
     gk field_d;
 
     final static int a(int param0, int param1) {
-        if (param0 != 20) {
-            field_e = null;
-            return bs.a(-1, ci.field_i, param1);
-        }
         return bs.a(-1, ci.field_i, param1);
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_g = null;
         field_e = null;
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         if (null != du.field_p) {
           return;
         } else {

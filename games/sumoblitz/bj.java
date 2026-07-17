@@ -18,7 +18,7 @@ final class bj {
         return ((bj) this).field_e;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
         field_g = null;

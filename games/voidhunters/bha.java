@@ -42,7 +42,7 @@ class bha implements ntb {
         try {
           L0: {
             L1: {
-              var3_int = -73 % ((param0 - 22) / 59);
+              var3_int = 0;
               var4 = (bha) (Object) param1;
               if (var4.field_a) {
                 stackOut_2_0 = 0;
@@ -90,7 +90,7 @@ class bha implements ntb {
           L4: {
             var3 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var3;
-            stackOut_10_1 = new StringBuilder().append("bha.C(").append(param0).append(44);
+            stackOut_10_1 = new StringBuilder().append("bha.C(").append(-38).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;
@@ -362,15 +362,12 @@ class bha implements ntb {
     public void b(byte param0, tv param1) {
         bha var5 = null;
         bha var6 = null;
-        if (param0 <= 54) {
-            return;
-        }
         try {
             var5 = (bha) (Object) param1;
             var6 = var5;
             var6.field_a = var5.field_a;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "bha.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw rta.a((Throwable) (Object) runtimeException, "bha.D(" + 93 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

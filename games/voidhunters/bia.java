@@ -42,7 +42,7 @@ class bia extends tb {
         ce.field_p.b(-10258, (ksa) (Object) var1_ref);
     }
 
-    final static qkb a(boolean param0) {
+    final static qkb a() {
         return kpb.field_q;
     }
 

@@ -9,12 +9,11 @@ final class ha {
     private static cc field_a;
     static String field_c;
 
-    final static String a(CharSequence param0, int param1, boolean param2) {
+    final static String a(CharSequence param0, int param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
-        Object var6 = null;
         String stackIn_3_0 = null;
         String stackIn_11_0 = null;
         RuntimeException stackIn_15_0 = null;
@@ -37,14 +36,15 @@ final class ha {
         String stackOut_15_2 = null;
         var5 = Main.field_T;
         try {
-          var3 = jl.a(false, param0, false);
+          int discarded$6 = 0;
+          var3 = jl.a(false, param0);
           if (var3 == null) {
             L0: {
               if (param1 == -30773) {
                 break L0;
               } else {
-                var6 = null;
-                String discarded$2 = ha.a((CharSequence) null, 19, false);
+                int discarded$7 = 0;
+                String discarded$8 = ha.a((CharSequence) null, 19);
                 break L0;
               }
             }
@@ -188,7 +188,8 @@ final class ha {
                         sh.field_k = nk.a(-108, false, cd.field_a, (String) null, param1);
                         break L3;
                       } else {
-                        sh.field_k = tb.a(param1, param5, (byte) -18, false);
+                        int discarded$9 = 0;
+                        sh.field_k = tb.a(param1, param5, (byte) -18);
                         break L3;
                       }
                     }
@@ -283,14 +284,15 @@ final class ha {
                       L10: {
                         cd.field_a = rd.field_j.d(true);
                         ec.field_f = rd.field_j.f(-109);
-                        int discarded$6 = rd.field_j.f(-103);
+                        int discarded$10 = rd.field_j.f(-103);
                         d.field_c = rd.field_j.d((byte) 72);
                         var11 = rd.field_j.f((byte) 29);
                         var7 = rd.field_j.f(113);
                         if (0 == (var7 & 1)) {
                           break L10;
                         } else {
-                          bd.d((byte) -86);
+                          int discarded$11 = -86;
+                          bd.d();
                           break L10;
                         }
                       }
@@ -333,9 +335,9 @@ final class ha {
                         if (!bj.field_m) {
                           break L14;
                         } else {
-                          int discarded$7 = rd.field_j.f(124);
-                          int discarded$8 = rd.field_j.f(101);
-                          int discarded$9 = rd.field_j.e((byte) 125);
+                          int discarded$12 = rd.field_j.f(124);
+                          int discarded$13 = rd.field_j.f(101);
+                          int discarded$14 = rd.field_j.e((byte) 125);
                           pb.field_j = rd.field_j.d((byte) 72);
                           fb.field_d = new byte[pb.field_j];
                           var8 = 0;
@@ -387,7 +389,7 @@ final class ha {
                             } else {
                               try {
                                 L20: {
-                                  Object discarded$10 = vh.a("unzap", -12151, mk.g(-125));
+                                  Object discarded$15 = vh.a("unzap", -12151, mk.g(-125));
                                   break L20;
                                 }
                               } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -403,7 +405,7 @@ final class ha {
                         }
                         try {
                           L22: {
-                            Object discarded$11 = vh.a(new Object[1], "zap", (byte) 111, mk.g(-125));
+                            Object discarded$16 = vh.a(new Object[1], "zap", (byte) 111, mk.g(-125));
                             break L22;
                           }
                         } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -494,7 +496,8 @@ final class ha {
                   if (cb.field_j == null) {
                     if (lk.field_w) {
                       L31: {
-                        if (we.a((byte) 79) > 30000L) {
+                        int discarded$17 = 79;
+                        if (we.a() > 30000L) {
                           e.field_a = jf.field_k;
                           break L31;
                         } else {

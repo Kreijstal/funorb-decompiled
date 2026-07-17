@@ -7,7 +7,7 @@ final class da {
     static int field_d;
     private int[] field_b;
 
-    final static java.awt.Container b(int param0) {
+    final static java.awt.Container b() {
         if (!(null == nd.field_f)) {
             return (java.awt.Container) (Object) nd.field_f;
         }

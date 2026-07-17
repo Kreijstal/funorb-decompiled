@@ -281,11 +281,13 @@ class jj extends db implements m {
               if (!((jj) this).field_kb) {
                 return;
               } else {
-                ja.c(1);
+                int discarded$8 = 1;
+                ja.c();
                 return;
               }
             } else {
-              hh.a((byte) 111);
+              int discarded$9 = 111;
+              hh.a();
               return;
             }
           } else {
@@ -295,11 +297,13 @@ class jj extends db implements m {
               if (!((jj) this).field_kb) {
                 return;
               } else {
-                ja.c(1);
+                int discarded$10 = 1;
+                ja.c();
                 return;
               }
             } else {
-              hh.a((byte) 111);
+              int discarded$11 = 111;
+              hh.a();
               return;
             }
           }

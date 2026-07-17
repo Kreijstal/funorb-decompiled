@@ -9,7 +9,7 @@ final class kj extends ji {
     static boolean field_C;
     static String field_A;
 
-    final static void g(int param0) {
+    final static void g() {
     }
 
     final int[][] b(int param0, int param1) {
@@ -169,7 +169,7 @@ final class kj extends ji {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         int var1 = -1;
         field_A = null;
     }
@@ -469,7 +469,7 @@ final class kj extends ji {
                 } else {
                   var5_int = param3[0].field_x;
                   var6 = param3[2].field_x;
-                  var7 = param3[param0].field_x;
+                  var7 = param3[1].field_x;
                   param3[0].e(param2, param4);
                   param3[2].e(param1 + (param2 + -var6), param4);
                   bi.a(ak.field_d);
@@ -497,7 +497,7 @@ final class kj extends ji {
           L3: {
             var5 = decompiledCaughtException;
             stackOut_10_0 = (RuntimeException) var5;
-            stackOut_10_1 = new StringBuilder().append("kj.E(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_10_1 = new StringBuilder().append("kj.E(").append(1).append(44).append(param1).append(44).append(param2).append(44);
             stackIn_12_0 = stackOut_10_0;
             stackIn_12_1 = stackOut_10_1;
             stackIn_11_0 = stackOut_10_0;

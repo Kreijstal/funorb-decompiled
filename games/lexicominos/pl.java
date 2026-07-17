@@ -6,19 +6,25 @@ final class pl {
     static String field_a;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         field_b = null;
     }
 
     final static void a(byte param0) {
-        if (!(qg.field_d)) {
-            throw new IllegalStateException();
+        if (!qg.field_d) {
+          throw new IllegalStateException();
+        } else {
+          u.field_tb = true;
+          if (param0 > -73) {
+            return;
+          } else {
+            q.a((byte) 110, false);
+            ta.field_g = 0;
+            return;
+          }
         }
-        u.field_tb = true;
-        q.a((byte) 110, false);
-        ta.field_g = 0;
     }
 
     static {

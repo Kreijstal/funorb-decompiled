@@ -42,7 +42,7 @@ final class bf {
         return var2;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_d = null;
         field_e = null;
         field_a = null;
@@ -68,82 +68,74 @@ final class bf {
             RuntimeException var2_ref = null;
             String var3 = null;
             java.net.URL var4 = null;
+            RuntimeException stackIn_5_0 = null;
+            StringBuilder stackIn_5_1 = null;
+            RuntimeException stackIn_6_0 = null;
+            StringBuilder stackIn_6_1 = null;
             RuntimeException stackIn_7_0 = null;
             StringBuilder stackIn_7_1 = null;
-            RuntimeException stackIn_8_0 = null;
-            StringBuilder stackIn_8_1 = null;
-            RuntimeException stackIn_9_0 = null;
-            StringBuilder stackIn_9_1 = null;
-            String stackIn_9_2 = null;
+            String stackIn_7_2 = null;
             Throwable decompiledCaughtException = null;
+            RuntimeException stackOut_4_0 = null;
+            StringBuilder stackOut_4_1 = null;
             RuntimeException stackOut_6_0 = null;
             StringBuilder stackOut_6_1 = null;
-            RuntimeException stackOut_8_0 = null;
-            StringBuilder stackOut_8_1 = null;
-            String stackOut_8_2 = null;
-            RuntimeException stackOut_7_0 = null;
-            StringBuilder stackOut_7_1 = null;
-            String stackOut_7_2 = null;
+            String stackOut_6_2 = null;
+            RuntimeException stackOut_5_0 = null;
+            StringBuilder stackOut_5_1 = null;
+            String stackOut_5_2 = null;
             try {
               L0: {
                 try {
                   L1: {
-                    L2: {
-                      var4 = param1.getCodeBase();
-                      var3 = ib.a(param1, var4, param0 ^ -26699).getFile();
-                      Object discarded$6 = eb.a("updatelinks", new Object[2], -11745, param1);
-                      Object discarded$7 = eb.a("updatelinks", new Object[2], -11745, param1);
-                      Object discarded$8 = eb.a("updatelinks", new Object[2], param0 + -43755, param1);
-                      Object discarded$9 = eb.a("updatelinks", new Object[2], -11745, param1);
-                      Object discarded$10 = eb.a("updatelinks", new Object[2], -11745, param1);
-                      if (param0 == 32010) {
-                        break L2;
-                      } else {
-                        field_d = null;
-                        break L2;
-                      }
-                    }
-                    Object discarded$11 = eb.a("updatelinks", new Object[2], param0 + -43755, param1);
+                    var4 = param1.getCodeBase();
+                    var3 = ib.a(param1, var4, -5441).getFile();
+                    Object discarded$6 = eb.a("updatelinks", new Object[2], -11745, param1);
+                    Object discarded$7 = eb.a("updatelinks", new Object[2], -11745, param1);
+                    Object discarded$8 = eb.a("updatelinks", new Object[2], -11745, param1);
+                    Object discarded$9 = eb.a("updatelinks", new Object[2], -11745, param1);
+                    Object discarded$10 = eb.a("updatelinks", new Object[2], -11745, param1);
+                    Object discarded$11 = eb.a("updatelinks", new Object[2], -11745, param1);
                     break L1;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
-                  L3: {
+                  L2: {
                     var2 = decompiledCaughtException;
-                    break L3;
+                    break L2;
                   }
                 }
                 break L0;
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              L4: {
+              L3: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_6_0 = (RuntimeException) var2_ref;
-                stackOut_6_1 = new StringBuilder().append("bf.D(").append(param0).append(44);
-                stackIn_8_0 = stackOut_6_0;
-                stackIn_8_1 = stackOut_6_1;
-                stackIn_7_0 = stackOut_6_0;
-                stackIn_7_1 = stackOut_6_1;
+                stackOut_4_0 = (RuntimeException) var2_ref;
+                stackOut_4_1 = new StringBuilder().append("bf.D(").append(32010).append(44);
+                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_1 = stackOut_4_1;
+                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_1 = stackOut_4_1;
                 if (param1 == null) {
-                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-                  stackOut_8_2 = "null";
-                  stackIn_9_0 = stackOut_8_0;
-                  stackIn_9_1 = stackOut_8_1;
-                  stackIn_9_2 = stackOut_8_2;
-                  break L4;
+                  stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+                  stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+                  stackOut_6_2 = "null";
+                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_1 = stackOut_6_1;
+                  stackIn_7_2 = stackOut_6_2;
+                  break L3;
                 } else {
-                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-                  stackOut_7_2 = "{...}";
-                  stackIn_9_0 = stackOut_7_0;
-                  stackIn_9_1 = stackOut_7_1;
-                  stackIn_9_2 = stackOut_7_2;
-                  break L4;
+                  stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+                  stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+                  stackOut_5_2 = "{...}";
+                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_1 = stackOut_5_1;
+                  stackIn_7_2 = stackOut_5_2;
+                  break L3;
                 }
               }
-              throw pf.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
+              throw pf.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -156,9 +148,6 @@ final class bf {
         dd[] var3 = new dd[9];
         dd[] var2 = var3;
         var3[4] = oh.c(-81, param1, 64);
-        if (param0 != 2885) {
-            field_b = 93;
-        }
         return var2;
     }
 
@@ -169,9 +158,6 @@ final class bf {
         param1 = param1 | param1 >>> 4;
         param1 = param1 | param1 >>> 8;
         param1 = param1 | param1 >>> 16;
-        if (!param0) {
-            return -122;
-        }
         return param1 + 1;
     }
 
@@ -200,7 +186,7 @@ final class bf {
         return var2;
     }
 
-    final static byte[] a(ih param0, int param1, byte[] param2, int param3) {
+    final static byte[] a(ih param0, int param1, byte[] param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -262,7 +248,7 @@ final class bf {
               }
               L3: {
                 var5 = param0.b(3, (byte) -87);
-                var6 = (byte)param0.b(param1, (byte) -87);
+                var6 = (byte)param0.b(8, (byte) -87);
                 if (var5 > 0) {
                   var7 = 0;
                   L4: while (true) {
@@ -324,7 +310,7 @@ final class bf {
           }
           L7: {
             stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(param1).append(44);
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(8).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;

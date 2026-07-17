@@ -64,7 +64,7 @@ final class ed implements Iterable {
         throw new Error();
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_e = null;
     }
 

@@ -27,10 +27,11 @@ final class vj {
             }
             ((vj) this).field_a = null;
         }
-        this.a((java.awt.Frame) null, (byte) 16);
+        int discarded$0 = 16;
+        this.a((java.awt.Frame) null);
     }
 
-    private final void a(java.awt.Frame param0, byte param1) {
+    private final void a(java.awt.Frame param0) {
         ((vj) this).field_b.setFullScreenWindow((java.awt.Window) (Object) param0);
     }
 
@@ -47,7 +48,8 @@ final class vj {
           L0: {
             param0.setUndecorated(true);
             param0.enableInputMethods(false);
-            this.a(param0, (byte) 16);
+            int discarded$2 = 16;
+            this.a(param0);
             if (param4 != 0) {
               break L0;
             } else {

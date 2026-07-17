@@ -14,7 +14,7 @@ final class ko extends ka {
     static ak field_eb;
     static String field_jb;
 
-    public static void n(int param0) {
+    public static void n() {
         field_ib = null;
         field_eb = null;
         field_jb = null;

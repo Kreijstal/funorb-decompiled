@@ -378,7 +378,7 @@ final class bc extends si {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_K = null;
         field_J = null;
     }

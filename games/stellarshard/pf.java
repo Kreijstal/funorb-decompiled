@@ -11,71 +11,64 @@ final class pf {
     private Object[][] field_d;
     private boolean field_a;
 
-    final static int a(CharSequence param0, byte param1) {
+    final static int a(CharSequence param0) {
         RuntimeException var2 = null;
-        int stackIn_2_0 = 0;
-        int stackIn_4_0 = 0;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_8_2 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int stackOut_3_0 = 0;
-        int stackOut_1_0 = 0;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        int stackOut_2_0 = 0;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
         String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
           L0: {
-            if (param1 == 125) {
-              stackOut_3_0 = uj.a(param0, (byte) 98, 10, true);
-              stackIn_4_0 = stackOut_3_0;
-              break L0;
-            } else {
-              stackOut_1_0 = -69;
-              stackIn_2_0 = stackOut_1_0;
-              return stackIn_2_0;
-            }
+            int discarded$2 = 1;
+            stackOut_2_0 = uj.a(param0, (byte) 98, 10);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L1: {
             var2 = decompiledCaughtException;
-            stackOut_5_0 = (RuntimeException) var2;
-            stackOut_5_1 = new StringBuilder().append("pf.H(");
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_7_1 = stackOut_5_1;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("pf.H(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "null";
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              stackIn_8_2 = stackOut_7_2;
-              break L1;
-            } else {
               stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
               stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
-              stackOut_6_2 = "{...}";
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              stackIn_8_2 = stackOut_6_2;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L1;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
               break L1;
             }
           }
-          throw ma.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
+          throw ma.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 125 + 41);
         }
-        return stackIn_4_0;
+        return stackIn_3_0;
     }
 
     public static void a(int param0) {
@@ -141,7 +134,7 @@ final class pf {
         String stackOut_9_2 = null;
         try {
           L0: {
-            var5 = -50 / ((19 - param1) / 61);
+            var5 = -50;
             var4_int = param3.b(param0, (byte) -118);
             var6 = param3.a(var4_int, param2, (byte) -11);
             stackOut_0_0 = vf.a(param3, (byte) -78, var6, var4_int);
@@ -178,7 +171,7 @@ final class pf {
           }
           L2: {
             stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(param1).append(44);
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44).append(-98).append(44);
             stackIn_7_0 = stackOut_5_0;
             stackIn_7_1 = stackOut_5_1;
             stackIn_6_0 = stackOut_5_0;
@@ -554,7 +547,7 @@ final class pf {
                 var4 = mh.a(param1, (byte) -44) ? 1 : 0;
                 var5 = new n();
                 var5.field_n = (short)param1.e(16, 8);
-                var5.field_f = vh.a((byte) 87, var5.field_f, param0, param1);
+                var5.field_f = vh.a((byte) 87, var5.field_f, 16, param1);
                 var5.field_b = vh.a((byte) 120, var5.field_b, 16, param1);
                 var5.field_a = vh.a((byte) 91, var5.field_a, 16, param1);
                 var5.field_C = (short)param1.e(16, 8);
@@ -576,7 +569,7 @@ final class pf {
               }
               L2: {
                 if (var4 != 0) {
-                  int discarded$1 = param1.e(16, 8);
+                  int discarded$2 = param1.e(16, 8);
                   var5.field_H = vh.a((byte) 23, var5.field_H, 16, param1);
                   var5.field_E = vh.a((byte) 88, var5.field_E, 16, param1);
                   var5.field_P = vh.a((byte) 48, var5.field_P, 16, param1);
@@ -599,7 +592,8 @@ final class pf {
                 if (!mh.a(param1, (byte) -126)) {
                   break L4;
                 } else {
-                  var5.field_g = wh.a(16, param1, var5.field_g, (byte) 50);
+                  int discarded$3 = 50;
+                  var5.field_g = wh.a(16, param1, var5.field_g);
                   var6 = 0;
                   var7 = 0;
                   L5: while (true) {
@@ -637,7 +631,7 @@ final class pf {
           L7: {
             var2 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var2;
-            stackOut_22_1 = new StringBuilder().append("pf.W(").append(param0).append(44);
+            stackOut_22_1 = new StringBuilder().append("pf.W(").append(16).append(44);
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -1446,7 +1440,7 @@ final class pf {
                 }
                 var7 = ((pf) this).field_d[param1];
                 var8 = 1;
-                var9_int = param0;
+                var9_int = 0;
                 L2: while (true) {
                   L3: {
                     if (var9_int >= var5_int) {
@@ -1763,7 +1757,7 @@ final class pf {
                           var7[var11] = (Object) (Object) var51;
                           break L11;
                         } else {
-                          var7[var11] = ch.a(ih.a(param0, 136), false, var50);
+                          var7[var11] = ch.a(ih.a(0, 136), false, var50);
                           return true;
                         }
                       }
@@ -1785,7 +1779,7 @@ final class pf {
           L29: {
             var5 = decompiledCaughtException;
             stackOut_102_0 = (RuntimeException) var5;
-            stackOut_102_1 = new StringBuilder().append("pf.N(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_102_1 = new StringBuilder().append("pf.N(").append(0).append(44).append(param1).append(44).append(param2).append(44);
             stackIn_104_0 = stackOut_102_0;
             stackIn_104_1 = stackOut_102_1;
             stackIn_103_0 = stackOut_102_0;
@@ -1903,7 +1897,7 @@ final class pf {
         return stackIn_9_0;
     }
 
-    final static void a(java.applet.Applet param0, byte param1) {
+    final static void a(java.applet.Applet param0) {
         try {
             be.a(param0, "", (byte) 110);
             wf.a(63, param0);

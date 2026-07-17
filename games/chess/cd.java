@@ -192,7 +192,7 @@ final class cd extends pk {
         return param0 & param1;
     }
 
-    private final void d(byte param0) {
+    private final void d() {
         int var3 = 0;
         Object stackIn_10_0 = null;
         Object stackIn_11_0 = null;
@@ -393,18 +393,15 @@ final class cd extends pk {
             r.k(3029);
             v.field_i = new km(var3, 3 * var4 / 4);
             v.field_i.e();
-            if (param0 < 125) {
-                Object var5 = null;
-                byte[] discarded$0 = cd.a((String) null, -127);
-            }
             var2.d(0, 0);
             re.field_u = new km(var3, -v.field_i.field_t + var4);
             re.field_u.e();
             var2.d(0, -v.field_i.field_t);
             re.field_u.field_r = v.field_i.field_t;
-            fd.a(28773);
+            int discarded$0 = 28773;
+            fd.a();
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "cd.K(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "cd.K(" + 127 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -417,36 +414,64 @@ final class cd extends pk {
         field_x = null;
     }
 
-    final static void a(int param0, byte[] param1, boolean param2, int param3, int param4, int param5) {
+    final static void a(int param0, byte[] param1, boolean param2, int param3, int param4) {
         nk var6 = null;
         int var7 = 0;
         int var9 = 0;
         try {
             var6 = qn.field_U;
-            var6.f(param3, -82);
+            var6.f(11, -82);
             var6.field_l = var6.field_l + 1;
             var7 = var6.field_l;
             var6.c(4, (byte) -75);
-            int var8 = -76 / ((param5 - -3) / 40);
+            int var8 = -25;
             var6.c(param4, (byte) 83);
-            var9 = param0;
-            if (!(!param2)) {
-                var9 += 128;
-            }
+            var9 = 0;
+            var9 += 128;
             var6.c(var9, (byte) 81);
             var6.a(param1, (byte) -45, 0, param1.length);
             var6.a(var6.field_l - var7, -1);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) (Object) runtimeException, "cd.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+            throw fk.a((Throwable) (Object) runtimeException, "cd.F(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 1 + 44 + 11 + 44 + param4 + 44 + 121 + 41);
         }
     }
 
     final void b(int param0) {
-        this.d((byte) 34);
-        ((cd) this).field_u = wh.field_f == 1 ? true : false;
+        Object stackIn_1_0 = null;
+        Object stackIn_2_0 = null;
+        Object stackIn_3_0 = null;
+        int stackIn_3_1 = 0;
+        Object stackOut_0_0 = null;
+        Object stackOut_2_0 = null;
+        int stackOut_2_1 = 0;
+        Object stackOut_1_0 = null;
+        int stackOut_1_1 = 0;
+        L0: {
+          int discarded$2 = 34;
+          this.d();
+          stackOut_0_0 = this;
+          stackIn_2_0 = stackOut_0_0;
+          stackIn_1_0 = stackOut_0_0;
+          if (wh.field_f != 1) {
+            stackOut_2_0 = this;
+            stackOut_2_1 = 0;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            break L0;
+          } else {
+            stackOut_1_0 = this;
+            stackOut_1_1 = 1;
+            stackIn_3_0 = stackOut_1_0;
+            stackIn_3_1 = stackOut_1_1;
+            break L0;
+          }
+        }
+        ((cd) this).field_u = stackIn_3_1 != 0;
         if (param0 > -70) {
-            cd.a(18);
-            return;
+          cd.a(18);
+          return;
+        } else {
+          return;
         }
     }
 

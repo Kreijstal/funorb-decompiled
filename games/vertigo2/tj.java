@@ -51,7 +51,8 @@ final class tj {
           L0: {
             if (param0 == -22697) {
               L1: {
-                var3 = mq.a(param2, false);
+                int discarded$2 = 0;
+                var3 = mq.a(param2);
                 if (param1.indexOf(param2) != -1) {
                   break L1;
                 } else {
@@ -179,7 +180,7 @@ final class tj {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
     }
 

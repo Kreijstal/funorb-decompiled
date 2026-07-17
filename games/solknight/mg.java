@@ -82,7 +82,8 @@ abstract class mg extends ec {
                                         L2: {
                                           L3: {
                                             var13 = (CharSequence) (Object) var9_ref_String.substring(4);
-                                            var10 = il.a(var13, 6054);
+                                            int discarded$1 = 6054;
+                                            var10 = il.a(var13);
                                             var11_ref_ph = ((mg) this).field_v[var10];
                                             if (((mg) this).field_r == null) {
                                               stackOut_25_0 = var11_ref_ph.field_b;
@@ -443,7 +444,8 @@ abstract class mg extends ec {
                                         try {
                                           L2: {
                                             var10 = (CharSequence) (Object) var8.substring(4);
-                                            var9_int = il.a(var10, 6054);
+                                            int discarded$1 = 6054;
+                                            var9_int = il.a(var10);
                                             var4 = var4 + ((mg) this).field_v[var9_int].field_l;
                                             var3 = 0;
                                             var6++;
@@ -983,7 +985,8 @@ abstract class mg extends ec {
                                     }
                                   } else {
                                     var7 = (CharSequence) (Object) param0.substring(5);
-                                    field_w = pb.a(11675, var7, 16);
+                                    int discarded$5 = 16;
+                                    field_w = pb.a(11675, var7);
                                     break L1;
                                   }
                                 } else {
@@ -996,7 +999,8 @@ abstract class mg extends ec {
                               }
                             } else {
                               var6 = (CharSequence) (Object) param0.substring(2);
-                              field_u = pb.a(11675, var6, 16);
+                              int discarded$6 = 16;
+                              field_u = pb.a(11675, var6);
                               break L1;
                             }
                           } else {
@@ -1009,7 +1013,8 @@ abstract class mg extends ec {
                         }
                       } else {
                         var5 = (CharSequence) (Object) param0.substring(4);
-                        field_z = pb.a(11675, var5, 16);
+                        int discarded$7 = 16;
+                        field_z = pb.a(11675, var5);
                         break L1;
                       }
                     } else {
@@ -1018,7 +1023,8 @@ abstract class mg extends ec {
                     }
                   } else {
                     var4 = (CharSequence) (Object) param0.substring(6);
-                    field_K = il.a(var4, 6054);
+                    int discarded$8 = 6054;
+                    field_K = il.a(var4);
                     break L1;
                   }
                 } else {
@@ -1027,7 +1033,8 @@ abstract class mg extends ec {
                 }
               } else {
                 var3 = (CharSequence) (Object) param0.substring(4);
-                field_t = pb.a(11675, var3, 16);
+                int discarded$9 = 16;
+                field_t = pb.a(11675, var3);
                 break L1;
               }
             }
@@ -1081,7 +1088,10 @@ abstract class mg extends ec {
         int stackOut_66_2 = 0;
         var17 = null;
         if (param0 != null) {
-          StringBuilder discarded$5 = k.a(field_G, 0, ' ', 0);
+          int discarded$9 = 0;
+          int discarded$10 = 32;
+          int discarded$11 = 0;
+          StringBuilder discarded$12 = k.a(field_G);
           var4 = 0;
           var5 = 0;
           var6 = -1;
@@ -1117,9 +1127,9 @@ abstract class mg extends ec {
                       L3: {
                         var15 = param0.substring(var9 + 1, var13).toLowerCase();
                         var9 = -1;
-                        StringBuilder discarded$6 = field_G.append(60);
-                        StringBuilder discarded$7 = field_G.append(var15);
-                        StringBuilder discarded$8 = field_G.append(62);
+                        StringBuilder discarded$13 = field_G.append(60);
+                        StringBuilder discarded$14 = field_G.append(var15);
+                        StringBuilder discarded$15 = field_G.append(62);
                         if (!var15.equals((Object) (Object) "br")) {
                           if (!var15.equals((Object) (Object) "lt")) {
                             if (!var15.equals((Object) (Object) "gt")) {
@@ -1135,7 +1145,8 @@ abstract class mg extends ec {
                                             try {
                                               L4: {
                                                 var18 = (CharSequence) (Object) var15.substring(4);
-                                                var16_int = il.a(var18, 6054);
+                                                int discarded$16 = 6054;
+                                                var16_int = il.a(var18);
                                                 var4 = var4 + ((mg) this).field_v[var16_int].field_l;
                                                 var10 = 0;
                                                 break L4;
@@ -1306,7 +1317,7 @@ abstract class mg extends ec {
                       break L14;
                     } else {
                       L15: {
-                        StringBuilder discarded$9 = field_G.append(var14);
+                        StringBuilder discarded$17 = field_G.append(var14);
                         var14 = (char)(el.a((byte) 105, (char) var14) & 255);
                         var4 = var4 + ((mg) this).field_C[var14];
                         if (((mg) this).field_A == null) {

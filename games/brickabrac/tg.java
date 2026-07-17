@@ -29,8 +29,8 @@ final class tg implements Runnable {
     static String field_o;
     private in field_w;
 
-    private final ql a(String param0, int param1, boolean param2, int param3) {
-        return this.a(true, 0, (Object) (Object) param0, param2 ? 22 : 1, param1);
+    private final ql a(String param0, int param1) {
+        return this.a(true, 0, (Object) (Object) param0, 1, param1);
     }
 
     final ql a(int param0, Runnable param1, byte param2) {
@@ -69,7 +69,9 @@ final class tg implements Runnable {
             Object var5 = null;
             ql discarded$0 = this.a(false, -76, (Object) null, 124, 36);
         }
-        return this.a(param0, param2, false, -31592);
+        int discarded$1 = -31592;
+        int discarded$2 = 0;
+        return this.a(param0, param2);
     }
 
     public final void run() {

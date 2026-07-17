@@ -8,10 +8,7 @@ final class aw extends kna {
     static hs field_G;
 
     final static boolean c(int param0, int param1, int param2) {
-        if (param0 != -17275) {
-            field_F = null;
-        }
-        return (55 & param2) != 0 ? true : false;
+        return (55 & param2) != 0;
     }
 
     final boolean v(int param0) {
@@ -35,13 +32,10 @@ final class aw extends kna {
     }
 
     final static boolean d(int param0, int param1, int param2) {
-        if (param0 != -26571) {
-            field_G = null;
-        }
-        return (384 & param1) != 0 ? true : false;
+        return (384 & param1) != 0;
     }
 
-    public static void A(int param0) {
+    public static void A() {
         field_H = null;
         field_F = null;
         field_G = null;

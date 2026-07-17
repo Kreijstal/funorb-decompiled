@@ -92,53 +92,49 @@ final class tf {
             }
             var5 = pn.field_a.b(var4_ref, 171);
             int discarded$1 = pn.field_a.a(var4_ref, 80, -166 + -pn.field_a.field_C + (-(var5 * 10) + 274 - -param2), 171, 1000, 4243584, -1, 0, 0, 20);
-            if (param0 == 59) {
-              L3: {
-                stackOut_9_0 = pn.field_a;
-                stackIn_11_0 = stackOut_9_0;
-                stackIn_10_0 = stackOut_9_0;
-                if (0 == (param3 & 1 << param1)) {
-                  stackOut_11_0 = (ce) (Object) stackIn_11_0;
-                  stackOut_11_1 = an.field_m;
-                  stackIn_12_0 = stackOut_11_0;
-                  stackIn_12_1 = stackOut_11_1;
-                  break L3;
-                } else {
-                  stackOut_10_0 = (ce) (Object) stackIn_10_0;
-                  stackOut_10_1 = fj.field_r;
-                  stackIn_12_0 = stackOut_10_0;
-                  stackIn_12_1 = stackOut_10_1;
-                  break L3;
-                }
-              }
-              ((ce) (Object) stackIn_12_0).c(stackIn_12_1, 80, 10 * var5 + 118 + param2, 16777215, -1);
-              pn.field_a.a(hh.field_a, 500, 103 - -param2, 4243584, -1);
-              pn.field_a.a(ei.field_ib, 500, 123 + param2, 4243584, -1);
-              if (-1 != (32800 & param3 & 1 << param1)) {
-                pn.field_a.c("???", 500, 103 + param2, 16777215, -1);
-                pn.field_a.c("???", 500, param2 + 123, 16777215, -1);
-                return;
+            L3: {
+              stackOut_9_0 = pn.field_a;
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_10_0 = stackOut_9_0;
+              if (0 == (param3 & 1 << param1)) {
+                stackOut_11_0 = (ce) (Object) stackIn_11_0;
+                stackOut_11_1 = an.field_m;
+                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_1 = stackOut_11_1;
+                break L3;
               } else {
-                pn.field_a.c(Integer.toString(sb.field_b[param1]), 500, param2 + 103, 16777215, -1);
-                var6 = 0;
-                L4: while (true) {
-                  if (eg.field_j[param1] <= var6) {
-                    break L0;
-                  } else {
-                    sb.field_h.d(var6 * 5 + 500, param2 + 108);
-                    var6++;
-                    continue L4;
-                  }
+                stackOut_10_0 = (ce) (Object) stackIn_10_0;
+                stackOut_10_1 = fj.field_r;
+                stackIn_12_0 = stackOut_10_0;
+                stackIn_12_1 = stackOut_10_1;
+                break L3;
+              }
+            }
+            ((ce) (Object) stackIn_12_0).c(stackIn_12_1, 80, 10 * var5 + 118 + param2, 16777215, -1);
+            pn.field_a.a(hh.field_a, 500, 103 - -param2, 4243584, -1);
+            pn.field_a.a(ei.field_ib, 500, 123 + param2, 4243584, -1);
+            if (-1 != (32800 & param3 & 1 << param1)) {
+              pn.field_a.c("???", 500, 103 + param2, 16777215, -1);
+              pn.field_a.c("???", 500, param2 + 123, 16777215, -1);
+              return;
+            } else {
+              pn.field_a.c(Integer.toString(sb.field_b[param1]), 500, param2 + 103, 16777215, -1);
+              var6 = 0;
+              L4: while (true) {
+                if (eg.field_j[param1] <= var6) {
+                  break L0;
+                } else {
+                  sb.field_h.d(var6 * 5 + 500, param2 + 108);
+                  var6++;
+                  continue L4;
                 }
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw sd.a((Throwable) (Object) var4, "tf.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw sd.a((Throwable) (Object) var4, "tf.B(" + 59 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 

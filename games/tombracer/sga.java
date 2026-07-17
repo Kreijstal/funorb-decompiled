@@ -30,7 +30,7 @@ final class sga extends hha {
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_n = null;
     }
 

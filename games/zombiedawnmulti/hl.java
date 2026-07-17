@@ -187,7 +187,7 @@ final class hl {
         }
     }
 
-    final static void a(byte[] param0, byte param1, cj param2, int param3, cj param4, int param5, int param6, cj param7, int param8, int param9) {
+    final static void a(byte[] param0, byte param1, cj param2, int param3, cj param4, int param5, int param6, cj param7, int param8) {
         RuntimeException var10 = null;
         int var10_int = 0;
         int var11 = 0;
@@ -282,38 +282,34 @@ final class hl {
                 cg.field_i.e(-30986);
                 hq.field_c = new sc(param8);
                 ao.field_e = 0;
-                if (param1 == 75) {
-                  L3: {
-                    dm.field_Zb = -1;
-                    cb.field_i = 0;
-                    bc.field_e = -1;
-                    if (null != param7.field_Cb) {
-                      break L3;
-                    } else {
-                      param7.field_Cb = new th();
-                      break L3;
-                    }
+                L3: {
+                  dm.field_Zb = -1;
+                  cb.field_i = 0;
+                  bc.field_e = -1;
+                  if (null != param7.field_Cb) {
+                    break L3;
+                  } else {
+                    param7.field_Cb = new th();
+                    break L3;
                   }
-                  L4: {
-                    tn.field_C = param7.field_Cb;
-                    tn.field_C.e(-30986);
-                    af.field_h = new sc(1024);
-                    if (param4.field_Cb != null) {
-                      break L4;
-                    } else {
-                      param4.field_Cb = new th();
-                      break L4;
-                    }
-                  }
-                  nh.field_g = param4.field_Cb;
-                  nh.field_g.e(param1 + -31061);
-                  kp.field_o = new sc(param6);
-                  so.field_r = param3;
-                  qi.field_c = 0L;
-                  break L0;
-                } else {
-                  return;
                 }
+                L4: {
+                  tn.field_C = param7.field_Cb;
+                  tn.field_C.e(-30986);
+                  af.field_h = new sc(1024);
+                  if (param4.field_Cb != null) {
+                    break L4;
+                  } else {
+                    param4.field_Cb = new th();
+                    break L4;
+                  }
+                }
+                nh.field_g = param4.field_Cb;
+                nh.field_g.e(-30986);
+                kp.field_o = new sc(param6);
+                so.field_r = 150;
+                qi.field_c = 0L;
+                break L0;
               } else {
                 var10_int = var10_int + (255 & od.field_Gb[var11]);
                 var11++;
@@ -351,7 +347,7 @@ final class hl {
           }
           L6: {
             stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44).append(param1).append(44);
+            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44).append(75).append(44);
             stackIn_19_0 = stackOut_17_0;
             stackIn_19_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -376,7 +372,7 @@ final class hl {
           }
           L7: {
             stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
-            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(param3).append(44);
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44).append(150).append(44);
             stackIn_22_0 = stackOut_20_0;
             stackIn_22_1 = stackOut_20_1;
             stackIn_21_0 = stackOut_20_0;
@@ -428,7 +424,7 @@ final class hl {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
         field_f = null;

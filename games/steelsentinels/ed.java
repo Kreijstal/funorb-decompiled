@@ -13,7 +13,7 @@ final class ed {
     static String field_g;
     static int field_j;
 
-    final static void b(byte param0) {
+    final static void b() {
         try {
             Exception var1 = null;
             int decompiledRegionSelector0 = 0;
@@ -53,7 +53,7 @@ final class ed {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_c = null;
         field_g = null;

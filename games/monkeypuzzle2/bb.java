@@ -5,7 +5,7 @@ final class bb {
     static long field_b;
     static h field_a;
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         return !field_a.a(0);
     }
 

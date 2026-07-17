@@ -56,8 +56,9 @@ final class v {
         }
     }
 
-    final static kc b(byte param0) {
-        return uc.b(115);
+    final static kc b() {
+        int discarded$0 = 115;
+        return uc.b();
     }
 
     final boolean a(int param0, int param1, int param2) {
@@ -680,10 +681,12 @@ final class v {
 
     final static eg a(byte param0, boolean param1, boolean param2, int param3, int param4) {
         if (param0 != -93) {
-          eg discarded$2 = v.a((byte) -92, false, true, 53, 6);
-          return me.a(param3, param2, param0 + 2097245, param1, param4, false);
+          eg discarded$6 = v.a((byte) -92, false, true, 53, 6);
+          int discarded$7 = 0;
+          return me.a(param3, true, param0 + 2097245, false, param4);
         } else {
-          return me.a(param3, param2, param0 + 2097245, param1, param4, false);
+          int discarded$8 = 0;
+          return me.a(param3, true, param0 + 2097245, false, param4);
         }
     }
 

@@ -17,7 +17,7 @@ final class wn {
     static int field_i;
     static int[] field_d;
 
-    final static void a(oq param0, int param1) {
+    final static void a(oq param0) {
         try {
             RuntimeException var2 = null;
             int var3 = 0;
@@ -314,7 +314,7 @@ final class wn {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_g = null;
         field_f = null;
         field_e = null;
@@ -508,7 +508,7 @@ final class wn {
           L0: {
             L1: {
               L2: {
-                var8_int = -param6[param5] + param6[1];
+                var8_int = -param6[0] + param6[1];
                 var9 = param3[1] - param3[0];
                 if (var8_int != 0) {
                   break L2;
@@ -774,7 +774,7 @@ final class wn {
           }
           L10: {
             stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
-            stackOut_30_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_30_2).append(44).append(param4).append(44).append(param5).append(44);
+            stackOut_30_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_30_2).append(44).append(param4).append(44).append(0).append(44);
             stackIn_32_0 = stackOut_30_0;
             stackIn_32_1 = stackOut_30_1;
             stackIn_31_0 = stackOut_30_0;

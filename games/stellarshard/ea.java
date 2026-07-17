@@ -12,7 +12,7 @@ final class ea extends lk {
     static String field_k;
     static String field_n;
 
-    final static void a(int param0, nf param1, byte param2) {
+    final static void a(int param0, nf param1) {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -40,7 +40,7 @@ final class ea extends lk {
           L0: {
             var7 = pg.field_fb;
             var8 = var7;
-            var8.f(param0, 950);
+            var8.f(3, 950);
             var8.field_k = var8.field_k + 1;
             var4 = var8.field_k;
             var8.a(false, 1);
@@ -70,7 +70,7 @@ final class ea extends lk {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_6_0 = (RuntimeException) var3;
-            stackOut_6_1 = new StringBuilder().append("ea.F(").append(param0).append(44);
+            stackOut_6_1 = new StringBuilder().append("ea.F(").append(3).append(44);
             stackIn_8_0 = stackOut_6_0;
             stackIn_8_1 = stackOut_6_1;
             stackIn_7_0 = stackOut_6_0;

@@ -11,12 +11,9 @@ final class dba implements bo {
     static String field_c;
     static int[] field_b;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_b = null;
         field_d = null;
-        if (param0 >= -38) {
-            return;
-        }
         field_c = null;
         field_g = null;
     }
@@ -40,7 +37,8 @@ final class dba implements bo {
     final static void a(java.awt.Canvas param0, byte param1) {
         try {
             if (gda.field_c == 11) {
-                wja.d((byte) 96);
+                int discarded$0 = 96;
+                wja.d();
             }
             if (param1 < 84) {
                 field_c = null;
@@ -62,70 +60,39 @@ final class dba implements bo {
 
     final static boolean a(int param0, int param1, int param2) {
         int var3 = 0;
-        boolean stackIn_4_0 = false;
-        int stackIn_7_0 = 0;
-        boolean stackIn_11_0 = false;
-        int stackIn_14_0 = 0;
-        boolean stackOut_10_0 = false;
-        boolean stackOut_9_0 = false;
-        int stackOut_13_0 = 0;
-        int stackOut_12_0 = 0;
-        boolean stackOut_3_0 = false;
+        boolean stackIn_3_0 = false;
+        int stackIn_6_0 = 0;
         boolean stackOut_2_0 = false;
-        int stackOut_6_0 = 0;
+        boolean stackOut_1_0 = false;
         int stackOut_5_0 = 0;
-        if (param1 < 83) {
-          L0: {
-            dba.a((byte) -61);
-            if ((55 & param0) != 0) {
-              stackOut_10_0 = oba.c(param2, param0, -19531);
-              stackIn_11_0 = stackOut_10_0;
-              break L0;
-            } else {
-              stackOut_9_0 = no.a(param0, param2, 36864);
-              stackIn_11_0 = stackOut_9_0;
-              break L0;
-            }
+        int stackOut_4_0 = 0;
+        L0: {
+          if ((55 & param0) != 0) {
+            int discarded$7 = -19531;
+            stackOut_2_0 = oba.c(param2, param0);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          } else {
+            int discarded$8 = 36864;
+            stackOut_1_0 = no.a(param0, param2);
+            stackIn_3_0 = stackOut_1_0;
+            break L0;
           }
-          L1: {
-            var3 = stackIn_11_0 ? 1 : 0;
-            if (0 == (65536 & param2)) {
-              stackOut_13_0 = 0;
-              stackIn_14_0 = stackOut_13_0;
-              break L1;
-            } else {
-              stackOut_12_0 = 1;
-              stackIn_14_0 = stackOut_12_0;
-              break L1;
-            }
-          }
-          return stackIn_14_0 != 0 | kaa.a(param0, param2, false) | var3 != 0;
-        } else {
-          L2: {
-            if ((55 & param0) != 0) {
-              stackOut_3_0 = oba.c(param2, param0, -19531);
-              stackIn_4_0 = stackOut_3_0;
-              break L2;
-            } else {
-              stackOut_2_0 = no.a(param0, param2, 36864);
-              stackIn_4_0 = stackOut_2_0;
-              break L2;
-            }
-          }
-          L3: {
-            var3 = stackIn_4_0 ? 1 : 0;
-            if (0 == (65536 & param2)) {
-              stackOut_6_0 = 0;
-              stackIn_7_0 = stackOut_6_0;
-              break L3;
-            } else {
-              stackOut_5_0 = 1;
-              stackIn_7_0 = stackOut_5_0;
-              break L3;
-            }
-          }
-          return stackIn_7_0 != 0 | kaa.a(param0, param2, false) | var3 != 0;
         }
+        L1: {
+          var3 = stackIn_3_0 ? 1 : 0;
+          if (0 == (65536 & param2)) {
+            stackOut_5_0 = 0;
+            stackIn_6_0 = stackOut_5_0;
+            break L1;
+          } else {
+            stackOut_4_0 = 1;
+            stackIn_6_0 = stackOut_4_0;
+            break L1;
+          }
+        }
+        int discarded$9 = 0;
+        return stackIn_6_0 != 0 | kaa.a(param0, param2) | var3 != 0;
     }
 
     public final void a(int param0, kh param1) {

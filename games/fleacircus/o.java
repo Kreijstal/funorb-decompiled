@@ -16,7 +16,8 @@ final class o extends wj {
         if (param0 != -31887) {
             ((o) this).field_k = 83L;
         }
-        ((o) this).field_e = ((o) this).field_e + this.a((byte) -63);
+        int discarded$0 = -63;
+        ((o) this).field_e = ((o) this).field_e + this.a();
         if (!(~((o) this).field_e <= ~((o) this).field_k)) {
             return (-((o) this).field_e + ((o) this).field_k) / 1000000L;
         }
@@ -24,13 +25,10 @@ final class o extends wj {
     }
 
     final static String a(byte param0, int param1, int param2) {
-        if (param0 != 85) {
-            boolean discarded$0 = o.c((byte) -64);
-        }
         return param1 + "/" + param2;
     }
 
-    private final long a(byte param0) {
+    private final long a() {
         int var8 = 0;
         int var9 = fleas.field_A ? 1 : 0;
         long var2 = System.nanoTime();
@@ -52,11 +50,8 @@ final class o extends wj {
         return var6 / (long)((o) this).field_f;
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_g = null;
-        if (param0 < 55) {
-            field_g = null;
-        }
     }
 
     final int a(int param0, long param1) {
@@ -104,10 +99,7 @@ final class o extends wj {
         }
     }
 
-    final static boolean c(byte param0) {
-        if (param0 != 39) {
-            field_m = 21;
-        }
+    final static boolean c() {
         return jg.field_d;
     }
 

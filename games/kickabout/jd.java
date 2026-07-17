@@ -20,14 +20,14 @@ abstract class jd extends lg implements sv {
         bg var9 = null;
         int stackIn_3_0 = 0;
         int stackIn_9_0 = 0;
-        int[] stackIn_21_0 = null;
+        int[] stackIn_22_0 = null;
         Throwable decompiledCaughtException = null;
         int stackOut_2_0 = 0;
         int stackOut_1_0 = 0;
         int stackOut_8_0 = 0;
         int stackOut_7_0 = 0;
-        Object stackOut_20_0 = null;
-        int[] stackOut_19_0 = null;
+        Object stackOut_21_0 = null;
+        int[] stackOut_20_0 = null;
         L0: {
           var7 = Kickabout.field_G;
           var8 = un.field_e;
@@ -97,40 +97,39 @@ abstract class jd extends lg implements sv {
             }
           }
         }
-        var5 = var8.a((byte) 81);
-        try {
-          L5: {
-            L6: {
-              var9 = lm.field_j.a(-39, var5);
-              ee.field_a = var9.g((byte) -98);
-              if (hr.field_f.equals((Object) (Object) ow.field_e)) {
-                stackOut_20_0 = null;
-                stackIn_21_0 = (int[]) (Object) stackOut_20_0;
-                break L6;
-              } else {
-                stackOut_19_0 = var9.field_n;
-                stackIn_21_0 = stackOut_19_0;
-                break L6;
+        if (!param1) {
+          ee.field_a = gw.a(80, (byte) -96, (iw) (Object) var8);
+          gk.field_b = null;
+          return new tv(param1);
+        } else {
+          var5 = var8.a((byte) 81);
+          try {
+            L5: {
+              L6: {
+                var9 = lm.field_j.a(-39, var5);
+                ee.field_a = var9.g((byte) -98);
+                if (hr.field_f.equals((Object) (Object) ow.field_e)) {
+                  stackOut_21_0 = null;
+                  stackIn_22_0 = (int[]) (Object) stackOut_21_0;
+                  break L6;
+                } else {
+                  stackOut_20_0 = var9.field_n;
+                  stackIn_22_0 = stackOut_20_0;
+                  break L6;
+                }
               }
+              gk.field_b = stackIn_22_0;
+              break L5;
             }
-            gk.field_b = stackIn_21_0;
-            break L5;
-          }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
             bd.a("CC1", (Throwable) (Object) var6, 1);
             ee.field_a = null;
             gk.field_b = null;
-            break L7;
+            return new tv(param1);
           }
-        }
-        if (param0 <= 84) {
-          jd.b((byte) 82);
-          return new tv(false);
-        } else {
-          return new tv(false);
+          return new tv(param1);
         }
     }
 
@@ -203,12 +202,10 @@ abstract class jd extends lg implements sv {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3) {
+    final static void a(int param0, boolean param1) {
         po.a(-27, param1);
-        jg.a(param0, (byte) -26, param1, param3);
-        if (param2 != 14686) {
-            field_g = null;
-        }
+        int discarded$0 = 15;
+        jg.a(13, (byte) -26, param1);
     }
 
     final String e(int param0) {
@@ -228,8 +225,8 @@ abstract class jd extends lg implements sv {
 
     abstract String a(byte param0, String param1);
 
-    public static void b(byte param0) {
-        int var1 = 91 % ((-57 - param0) / 62);
+    public static void b() {
+        int var1 = 0;
         field_g = null;
         field_d = null;
         field_e = null;

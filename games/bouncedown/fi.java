@@ -6,36 +6,18 @@ final class fi {
     static String field_a;
     static int field_b;
 
-    public static void a(int param0) {
-        if (param0 != -14935) {
-            return;
-        }
+    public static void a() {
         field_a = null;
     }
 
-    final static boolean b(int param0) {
-        if (param0 == 21856) {
-          if (null != kf.field_b) {
-            if (kf.field_b.a(false) == null) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+    final static boolean b() {
+        if (null == kf.field_b) {
             return false;
-          }
-        } else {
-          fi.a(93);
-          if (null != kf.field_b) {
-            if (kf.field_b.a(false) == null) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
         }
+        if (kf.field_b.a(false) == null) {
+            return false;
+        }
+        return true;
     }
 
     static {

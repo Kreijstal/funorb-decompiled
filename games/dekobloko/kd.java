@@ -355,7 +355,7 @@ final class kd extends wm {
         super(param0);
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_t = null;
         field_q = null;
         field_s = null;

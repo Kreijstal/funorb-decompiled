@@ -109,7 +109,7 @@ final class np extends ae {
         ((np) this).field_j = param2;
     }
 
-    public static void c(boolean param0) {
+    public static void c() {
         field_l = null;
         field_m = null;
     }

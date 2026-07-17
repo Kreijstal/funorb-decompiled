@@ -12,7 +12,7 @@ final class qh extends gh {
     private gh field_Sb;
     static String field_Ub;
 
-    final static int d(byte param0) {
+    final static int d() {
         try {
             IOException var1 = null;
             int var1_int = 0;
@@ -153,14 +153,15 @@ final class qh extends gh {
         try {
           L0: {
             if (!Character.isISOControl(param1)) {
-              if (!dn.a(param1, -91)) {
+              int discarded$8 = -91;
+              if (!dn.a(param1)) {
                 L1: {
                   var2 = cd.field_b;
                   var3 = 0;
                   if (param0 == -30) {
                     break L1;
                   } else {
-                    boolean discarded$2 = qh.a((byte) -42, 'A');
+                    boolean discarded$9 = qh.a((byte) -42, 'A');
                     break L1;
                   }
                 }
@@ -360,7 +361,7 @@ final class qh extends gh {
               L2: {
                 var7 = param4 * param4;
                 var8 = var5_int - param4 >> 4;
-                var9 = param2 + var5_int >> 4;
+                var9 = 15 + var5_int >> 4;
                 var10 = var5_int + param4 + 15 >> 4;
                 var11 = -param4 + var6 >> 4;
                 var12 = var6 - -15 >> 4;
@@ -492,7 +493,7 @@ final class qh extends gh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ci.a((Throwable) (Object) var5, "qh.G(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw ci.a((Throwable) (Object) var5, "qh.G(" + param0 + 44 + param1 + 44 + 15 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -740,16 +741,13 @@ final class qh extends gh {
         }
     }
 
-    final static String k(int param0) {
+    final static String k() {
         return rf.field_d.h(1);
     }
 
-    public static void j(int param0) {
+    public static void j() {
         field_Ub = null;
         field_Vb = null;
-        if (param0 != 15) {
-            boolean discarded$0 = qh.a((byte) -26, 'ﾳ');
-        }
         field_Xb = null;
     }
 

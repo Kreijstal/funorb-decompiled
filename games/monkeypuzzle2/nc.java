@@ -10,7 +10,7 @@ final class nc {
     static int[] field_b;
     static String field_a;
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_c = null;
         field_d = null;
@@ -19,7 +19,7 @@ final class nc {
         int var1 = -36;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         Object var2 = null;
         vh.a(v.field_b, (String) null, (byte) -53);
     }

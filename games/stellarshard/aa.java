@@ -6,7 +6,7 @@ final class aa {
     private static long[] field_a;
     static pb field_b;
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void a(java.applet.Applet param0) {
         String var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -85,7 +85,7 @@ final class aa {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
         field_c = null;

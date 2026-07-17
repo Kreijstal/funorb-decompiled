@@ -19,14 +19,27 @@ final class bva {
 
     final synchronized static long b(byte param0) {
         long var1 = 0L;
-        var1 = System.currentTimeMillis();
-        if (var1 < dca.field_o) {
-          br.field_p = br.field_p + (-var1 + dca.field_o);
-          dca.field_o = var1;
-          return var1 - -br.field_p;
+        if (param0 == -107) {
+          var1 = System.currentTimeMillis();
+          if (var1 < dca.field_o) {
+            br.field_p = br.field_p + (-var1 + dca.field_o);
+            dca.field_o = var1;
+            return var1 - -br.field_p;
+          } else {
+            dca.field_o = var1;
+            return var1 - -br.field_p;
+          }
         } else {
-          dca.field_o = var1;
-          return var1 - -br.field_p;
+          bva.a((byte) 0);
+          var1 = System.currentTimeMillis();
+          if (var1 >= dca.field_o) {
+            dca.field_o = var1;
+            return var1 - -br.field_p;
+          } else {
+            br.field_p = br.field_p + (-var1 + dca.field_o);
+            dca.field_o = var1;
+            return var1 - -br.field_p;
+          }
         }
     }
 

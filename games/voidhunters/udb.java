@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class udb extends rqa {
-    final static tv a(Class[] param0, dja[] param1, Class param2, int param3) {
+    final static tv a(Class[] param0, dja[] param1, Class param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

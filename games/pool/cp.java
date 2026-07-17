@@ -32,7 +32,7 @@ final class cp {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         db.field_Pb = rl.a((byte) -121);
         up.field_j = 0;
     }
@@ -105,7 +105,7 @@ final class cp {
         return stackIn_3_0;
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_a = null;
         field_c = null;
         field_d = null;

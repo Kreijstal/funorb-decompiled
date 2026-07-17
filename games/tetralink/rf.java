@@ -5,14 +5,15 @@ final class rf {
     static int field_b;
     static int[] field_a;
 
-    final static void a(int param0) {
+    final static void a() {
         if (!(mf.field_s == null)) {
             mf.field_s.e((byte) -110);
         }
         if (!(nl.field_a == null)) {
             nl.field_a.e(true);
         }
-        ve.a((byte) -83);
+        int discarded$0 = -83;
+        ve.a();
     }
 
     final static mh a(int param0, String param1) {
@@ -21,54 +22,46 @@ final class rf {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        Object stackIn_8_0 = null;
-        mh stackIn_11_0 = null;
+        Object stackIn_7_0 = null;
+        mh stackIn_10_0 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
+        String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        mh stackOut_10_0 = null;
-        Object stackOut_7_0 = null;
-        RuntimeException stackOut_12_0 = null;
-        StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
+        mh stackOut_9_0 = null;
+        Object stackOut_6_0 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
         RuntimeException stackOut_13_0 = null;
         StringBuilder stackOut_13_1 = null;
         String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
         var5 = TetraLink.field_J;
         try {
           L0: {
-            L1: {
-              var2_int = param1.length();
-              var3 = 0;
-              if (param0 == -1723) {
-                break L1;
-              } else {
-                field_b = -18;
-                break L1;
-              }
-            }
-            L2: while (true) {
+            var2_int = param1.length();
+            var3 = 0;
+            L1: while (true) {
               if (var2_int <= var3) {
-                stackOut_10_0 = jg.field_h;
-                stackIn_11_0 = stackOut_10_0;
+                stackOut_9_0 = jg.field_h;
+                stackIn_10_0 = stackOut_9_0;
                 break L0;
               } else {
                 var4 = param1.charAt(var3);
                 if (var4 >= 48) {
                   if (var4 <= 57) {
                     var3++;
-                    continue L2;
+                    continue L1;
                   } else {
-                    stackOut_7_0 = null;
-                    stackIn_8_0 = stackOut_7_0;
-                    return (mh) (Object) stackIn_8_0;
+                    stackOut_6_0 = null;
+                    stackIn_7_0 = stackOut_6_0;
+                    return (mh) (Object) stackIn_7_0;
                   }
                 } else {
                   return null;
@@ -78,35 +71,35 @@ final class rf {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var2 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var2;
-            stackOut_12_1 = new StringBuilder().append("rf.B(").append(param0).append(44);
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackOut_11_0 = (RuntimeException) var2;
+            stackOut_11_1 = new StringBuilder().append("rf.B(").append(-1723).append(44);
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
-              break L3;
-            } else {
               stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
               stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
-              break L3;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L2;
+            } else {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L2;
             }
           }
-          throw oi.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw oi.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
         }
-        return stackIn_11_0;
+        return stackIn_10_0;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
@@ -463,13 +456,13 @@ final class rf {
                     var27 = var27 - var22;
                     var26 = var26 - var27;
                     var25 -= 640;
-                    rf.b(var28, var26, var14, var16, var23, var4, var24, var5, var6, var7, 10000, var25, param0, param1);
+                    rf.b(var28, var26, var14, var16, var23, var4, var24, var5, var6, var7, param3, var25, param0, param1);
                     var28--;
                     continue L10;
                   }
                 }
               } else {
-                rf.a(var28, var26, var14, var16, var23, var4, var24, var5, var6, var7, 10000, var25, param0, param1);
+                rf.a(var28, var26, var14, var16, var23, var4, var24, var5, var6, var7, param3, var25, param0, param1);
                 var26 = var26 + var27;
                 var27 = var27 + var22;
                 var25 += 640;
@@ -485,7 +478,7 @@ final class rf {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         int var1 = 0;
     }

@@ -9,13 +9,10 @@ final class ke {
             param4.d((byte) 126, 12);
             param4.e(17, 28695);
             param4.e(param2, 28695);
-            if (!param1) {
-                field_a = null;
-            }
             param4.e(param3, 28695);
             param4.d((byte) 124, param0);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "ke.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "ke.B(" + param0 + 44 + 1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -28,7 +25,7 @@ final class ke {
         field_a = null;
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         int var1 = 0;
     }
 

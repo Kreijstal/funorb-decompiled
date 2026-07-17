@@ -12,7 +12,7 @@ final class ck {
     static String field_f;
     static String field_c;
 
-    final static void a(bc param0, java.applet.Applet param1, bc param2, bc param3, bc param4, bc param5, byte param6) {
+    final static void a(bc param0, java.applet.Applet param1, bc param2, bc param3, bc param4, bc param5) {
         int var7_int = 0;
         int var8 = 0;
         int var9_int = 0;
@@ -40,12 +40,12 @@ final class ck {
         bi var27 = null;
         bi var28 = null;
         bi var29 = null;
-        String stackIn_60_0 = null;
-        int stackIn_65_0 = 0;
-        String stackOut_59_0 = null;
+        String stackIn_59_0 = null;
+        int stackIn_64_0 = 0;
         String stackOut_58_0 = null;
-        int stackOut_64_0 = 0;
+        String stackOut_57_0 = null;
         int stackOut_63_0 = 0;
+        int stackOut_62_0 = 0;
         var23 = null;
         var24 = null;
         var25 = null;
@@ -63,17 +63,17 @@ final class ck {
         in.field_f.e(0, 0, 0);
         gf.b(3, 3, 0, 0, var7_int, var8);
         in.field_f.e(0, 0, 255);
-        cg.i(param6 + 8);
+        cg.i(0);
         fm.field_d = ae.a(101, "", param0, "edge_orbs");
         mh.field_b = new bi[4];
-        ra.a(param6 ^ 108);
+        ra.a(-108);
         var9_int = 0;
         L0: while (true) {
           if (4 <= var9_int) {
             cg.i(0);
             hn.field_c = ds.a(true, param0, "", "menu_hex");
             jm.field_r = id.a(2, param0, "", "instr_mainview");
-            hb.field_d = id.a(param6 ^ -6, param0, "", "instr_starframe");
+            hb.field_d = id.a(2, param0, "", "instr_starframe");
             bi[] discarded$1 = ae.a(-100, "", param0, "zoomicons");
             var9 = va.a("hud_icons", 0, "", param0);
             k.field_d = var9[3];
@@ -81,7 +81,7 @@ final class ck {
             fm.field_e = var9[0];
             wl.field_d = var9[4];
             tm.field_r = var9[1];
-            var21 = va.a("hud_icons_red", param6 + 8, "", param0);
+            var21 = va.a("hud_icons_red", 0, "", param0);
             bd.field_D = var21[0];
             cs.field_h = var21[3];
             ak.field_x = var21[2];
@@ -93,7 +93,7 @@ final class ck {
             us.field_a = var22[3];
             jq.field_b = var22[1];
             ci.field_p = var22[2];
-            fs.field_a = va.a("icon_circles", param6 + 8, "", param0);
+            fs.field_a = va.a("icon_circles", 0, "", param0);
             dm.field_d = va.a("production_icons", 0, "", param0);
             aq.field_i = ds.a(true, param0, "", "production_button");
             hq.field_a = ds.a(true, param0, "", "production_button_down");
@@ -134,11 +134,11 @@ final class ck {
             cp.field_t = ds.a(true, param0, "", "alien_base");
             kb.field_y = id.a(2, param0, "", "ship");
             wo.field_b = id.a(2, param0, "", "shield");
-            oo.field_a = id.a(param6 ^ -6, param0, "", "defensegrid");
+            oo.field_a = id.a(2, param0, "", "defensegrid");
             ab.field_e = id.a(2, param0, "", "chevron");
             go.field_L = ds.a(true, param0, "", "warning");
             bd.field_G = id.a(2, param0, "", "hammer");
-            e.field_e = id.a(param6 ^ -6, param0, "", "beaker");
+            e.field_e = id.a(2, param0, "", "beaker");
             vg.field_t = ds.a(true, param0, "", "factionring");
             ii.field_y = ds.a(true, param0, "", "factionringtag");
             ek.field_z = ds.a(true, param0, "", "factionringcentre");
@@ -203,7 +203,7 @@ final class ck {
                             var13_int = 1;
                             L5: while (true) {
                               if (var13_int >= 13) {
-                                ge.field_k = va.a("defnet_anim_large", param6 ^ -8, "", param0);
+                                ge.field_k = va.a("defnet_anim_large", 0, "", param0);
                                 var13_int = 0;
                                 L6: while (true) {
                                   if (~ge.field_k[0].field_B.length >= ~var13_int) {
@@ -231,41 +231,33 @@ final class ck {
                                         var13_int = 0;
                                         L8: while (true) {
                                           if (var13_int >= wa.field_b.field_B.length) {
+                                            fb.field_Vb = new bi(18, 12);
+                                            fb.field_Vb.e();
+                                            bd.field_G.b(1, 1, 8421504);
+                                            cg.i(0);
+                                            pr.field_a.f(16777215);
+                                            fm.field_b.f(16777215);
                                             L9: {
-                                              fb.field_Vb = new bi(18, 12);
-                                              fb.field_Vb.e();
-                                              bd.field_G.b(1, 1, 8421504);
-                                              cg.i(0);
-                                              pr.field_a.f(16777215);
-                                              fm.field_b.f(16777215);
-                                              if (param6 == -8) {
-                                                break L9;
-                                              } else {
-                                                ck.a(-23);
-                                                break L9;
-                                              }
-                                            }
-                                            L10: {
                                               ef.field_f.f(16777215);
                                               mj.field_Kb.f(16777215);
                                               fb.field_Vb.f(16777215);
                                               kj.field_f = hl.a((byte) 111, 80);
                                               hp.field_n = param0;
                                               mr.field_i = ea.a(5592405, (byte) 41, 13882323, 10);
-                                              cm.field_b = id.a(param6 + 10, param2, "basic", "orbcoin");
+                                              cm.field_b = id.a(2, param2, "basic", "orbcoin");
                                               if (es.field_m <= 0) {
-                                                stackOut_59_0 = "locked";
-                                                stackIn_60_0 = stackOut_59_0;
-                                                break L10;
+                                                stackOut_58_0 = "locked";
+                                                stackIn_59_0 = stackOut_58_0;
+                                                break L9;
                                               } else {
-                                                stackOut_58_0 = "unachieved";
-                                                stackIn_60_0 = stackOut_58_0;
-                                                break L10;
+                                                stackOut_57_0 = "unachieved";
+                                                stackIn_59_0 = stackOut_57_0;
+                                                break L9;
                                               }
                                             }
-                                            var13 = stackIn_60_0;
-                                            jc.a(14, id.a(param6 ^ -6, param2, "basic", var13));
-                                            jd.field_j = ae.a(param6 + 70, "", param0, "achievements");
+                                            var13 = stackIn_59_0;
+                                            jc.a(14, id.a(2, param2, "basic", var13));
+                                            jd.field_j = ae.a(62, "", param0, "achievements");
                                             var14 = jd.field_j.length;
                                             ql.field_o = new bi[var14];
                                             tr.field_sb = new bi[var14];
@@ -289,7 +281,7 @@ final class ck {
                                             bg.field_a = new bi(21, 22);
                                             bg.field_a.e();
                                             var16 = 0;
-                                            L11: while (true) {
+                                            L10: while (true) {
                                               if (var16 >= 20) {
                                                 cg.i(0);
                                                 jq.field_e.f(2458760);
@@ -298,31 +290,31 @@ final class ck {
                                                 o.field_k.b();
                                                 return;
                                               } else {
-                                                L12: {
+                                                L11: {
                                                   if (var16 <= 10) {
-                                                    stackOut_64_0 = 3;
-                                                    stackIn_65_0 = stackOut_64_0;
-                                                    break L12;
+                                                    stackOut_63_0 = 3;
+                                                    stackIn_64_0 = stackOut_63_0;
+                                                    break L11;
                                                   } else {
-                                                    stackOut_63_0 = 20 + -var16;
-                                                    stackIn_65_0 = stackOut_63_0;
-                                                    break L12;
+                                                    stackOut_62_0 = 20 + -var16;
+                                                    stackIn_64_0 = stackOut_62_0;
+                                                    break L11;
                                                   }
                                                 }
-                                                var17 = stackIn_65_0;
+                                                var17 = stackIn_64_0;
                                                 gf.f(11 - var17, 1 - -var16, 2 * var17, 65793);
                                                 var16++;
-                                                continue L11;
+                                                continue L10;
                                               }
                                             }
                                           } else {
-                                            L13: {
+                                            L12: {
                                               if (wa.field_b.field_B[var13_int] == 0) {
-                                                break L13;
+                                                break L12;
                                               } else {
                                                 gf.c(var13_int % wa.field_b.field_z, var13_int / wa.field_b.field_z, 16777215, 128);
                                                 wa.field_b.field_B[var13_int] = ee.a(wa.field_b.field_B[var13_int], -16777216);
-                                                break L13;
+                                                break L12;
                                               }
                                             }
                                             var13_int++;
@@ -334,32 +326,32 @@ final class ck {
                                         var15 = var29;
                                         var15 = var29;
                                         var15_int = 0;
-                                        L14: while (true) {
+                                        L13: while (true) {
                                           if (~var29.field_B.length >= ~var15_int) {
                                             var13_int++;
                                             continue L7;
                                           } else {
-                                            L15: {
+                                            L14: {
                                               if (0 == (-16777216 & var29.field_B[var15_int])) {
                                                 var29.field_B[var15_int] = 0;
-                                                break L15;
+                                                break L14;
                                               } else {
-                                                break L15;
+                                                break L14;
                                               }
                                             }
                                             var15_int++;
-                                            continue L14;
+                                            continue L13;
                                           }
                                         }
                                       }
                                     }
                                   } else {
-                                    L16: {
+                                    L15: {
                                       if (ge.field_k[0].field_B[var13_int] != 0) {
                                         ge.field_k[0].field_B[var13_int] = ((ge.field_k[0].field_B[var13_int] >>> 24) / 4 << 24) + 6006988;
-                                        break L16;
+                                        break L15;
                                       } else {
-                                        break L16;
+                                        break L15;
                                       }
                                     }
                                     var13_int++;
@@ -369,32 +361,32 @@ final class ck {
                               } else {
                                 var28 = qa.field_p[var13_int];
                                 var15_int = 0;
-                                L17: while (true) {
+                                L16: while (true) {
                                   if (var15_int >= var28.field_B.length) {
                                     var13_int++;
                                     continue L5;
                                   } else {
-                                    L18: {
+                                    L17: {
                                       if ((-16777216 & var28.field_B[var15_int]) == 0) {
                                         var28.field_B[var15_int] = 0;
-                                        break L18;
+                                        break L17;
                                       } else {
-                                        break L18;
+                                        break L17;
                                       }
                                     }
                                     var15_int++;
-                                    continue L17;
+                                    continue L16;
                                   }
                                 }
                               }
                             }
                           } else {
-                            L19: {
+                            L18: {
                               if (0 != qa.field_p[0].field_B[var13_int]) {
                                 qa.field_p[0].field_B[var13_int] = 6006988 - -((qa.field_p[0].field_B[var13_int] >>> 24) / 4 << 24);
-                                break L19;
+                                break L18;
                               } else {
-                                break L19;
+                                break L18;
                               }
                             }
                             var13_int++;
@@ -404,32 +396,32 @@ final class ck {
                       } else {
                         var27 = qk.field_y[var13_int];
                         var15_int = 0;
-                        L20: while (true) {
+                        L19: while (true) {
                           if (var27.field_B.length <= var15_int) {
                             var13_int++;
                             continue L3;
                           } else {
-                            L21: {
+                            L20: {
                               if ((var27.field_B[var15_int] & -16777216) != 0) {
-                                break L21;
+                                break L20;
                               } else {
                                 var27.field_B[var15_int] = 0;
-                                break L21;
+                                break L20;
                               }
                             }
                             var15_int++;
-                            continue L20;
+                            continue L19;
                           }
                         }
                       }
                     }
                   } else {
-                    L22: {
+                    L21: {
                       if (qk.field_y[0].field_B[var13_int] != 0) {
                         qk.field_y[0].field_B[var13_int] = ((qk.field_y[0].field_B[var13_int] >>> 24) / 4 << 24) + 6006988;
-                        break L22;
+                        break L21;
                       } else {
-                        break L22;
+                        break L21;
                       }
                     }
                     var13_int++;
@@ -768,7 +760,7 @@ final class ck {
         }
     }
 
-    final static byte[] a(byte[] param0, boolean param1) {
+    final static byte[] a(byte[] param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -832,12 +824,9 @@ final class ck {
         return stackIn_1_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
-        if (param0 <= 83) {
-            return;
-        }
         field_f = null;
         field_b = null;
         field_g = null;

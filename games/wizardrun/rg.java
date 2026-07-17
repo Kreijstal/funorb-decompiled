@@ -74,7 +74,8 @@ abstract class rg extends tj {
                 L1: {
                   var3_ref = "";
                   if (param0 != null) {
-                    var3_ref = mj.a(param0, (byte) -91);
+                    int discarded$3 = -91;
+                    var3_ref = mj.a(param0);
                     break L1;
                   } else {
                     break L1;
@@ -166,14 +167,15 @@ abstract class rg extends tj {
                           break L7;
                         } else {
                           var5 = (DataInputStream) var4.field_e;
-                          int discarded$1 = var5.read();
+                          int discarded$4 = var5.read();
                           var5.close();
                           break L7;
                         }
                       }
                       break L0;
                     } else {
-                      tg.a(1L, false);
+                      int discarded$5 = 0;
+                      tg.a(1L);
                       continue L6;
                     }
                   }
@@ -261,34 +263,17 @@ abstract class rg extends tj {
                 var4 = ((rg) this).field_n - 79;
                 var7 = 0;
                 var8 = param2 + 57;
-                if (param1 != -1) {
-                  rg.i(61);
-                  L2: while (true) {
-                    if (~var7 <= ~var4) {
-                      return;
-                    } else {
-                      var9 = var7 * (var6 - var5) / var4 + var5;
-                      var9 = var9 | (var9 << 16 | var9 << 8);
-                      ed.f(param0, var8, 6, var9);
-                      ed.f(-6 + (param0 - -((rg) this).field_r), var8, 6, var9);
-                      var7++;
-                      var8++;
-                      continue L2;
-                    }
-                  }
-                } else {
-                  L3: while (true) {
-                    if (~var7 <= ~var4) {
-                      return;
-                    } else {
-                      var9 = var7 * (var6 - var5) / var4 + var5;
-                      var9 = var9 | (var9 << 16 | var9 << 8);
-                      ed.f(param0, var8, 6, var9);
-                      ed.f(-6 + (param0 - -((rg) this).field_r), var8, 6, var9);
-                      var7++;
-                      var8++;
-                      continue L3;
-                    }
+                L2: while (true) {
+                  if (~var7 <= ~var4) {
+                    return;
+                  } else {
+                    var9 = var7 * (var6 - var5) / var4 + var5;
+                    var9 = var9 | (var9 << 16 | var9 << 8);
+                    ed.f(param0, var8, 6, var9);
+                    ed.f(-6 + (param0 - -((rg) this).field_r), var8, 6, var9);
+                    var7++;
+                    var8++;
+                    continue L2;
                   }
                 }
               } else {
@@ -308,47 +293,47 @@ abstract class rg extends tj {
               continue L0;
             } else {
               if (~ed.field_b < ~var8) {
-                L4: {
+                L3: {
                   var9 = var7 * (var6 + -var5) / var4 + var5;
                   var10 = 0;
                   var11 = ((rg) this).field_r;
                   if (20 >= var7) {
-                    L5: while (true) {
+                    L4: while (true) {
                       if (var10 > 20) {
-                        break L4;
+                        break L3;
                       } else {
-                        L6: {
+                        L5: {
                           var12 = (20 + -var10) * (-var10 + 20) + (-var7 + 20) * (-var7 + 20);
                           if (var12 > 462) {
-                            break L6;
+                            break L5;
                           } else {
                             if (var12 >= 420) {
                               var13 = (462 + -var12) * var9 / 42;
                               var13 = var13 | (var13 << 16 | var13 << 8);
                               ed.field_k[var8 * ed.field_h + param0 - -var10] = var13;
-                              break L6;
+                              break L5;
                             } else {
-                              break L4;
+                              break L3;
                             }
                           }
                         }
                         var10++;
-                        continue L5;
+                        continue L4;
                       }
                     }
                   } else {
-                    break L4;
+                    break L3;
                   }
                 }
-                L7: {
+                L6: {
                   if (var7 <= 20) {
                     var12 = var11;
                     var11 -= 21;
                     var13 = 0;
-                    L8: while (true) {
-                      L9: {
+                    L7: while (true) {
+                      L8: {
                         if (var13 > 20) {
-                          break L9;
+                          break L8;
                         } else {
                           var14 = (20 + -var7) * (-var7 + 20) + var13 * var13;
                           if (var14 <= 462) {
@@ -356,25 +341,25 @@ abstract class rg extends tj {
                               var12 = var11 - -1;
                               var13++;
                               var11++;
-                              continue L8;
+                              continue L7;
                             } else {
                               var15 = (462 - var14) * var9 / 42;
                               var15 = var15 | (var15 << 16 | var15 << 8);
                               ed.field_k[var11 + ed.field_h * var8 - -param0] = var15;
                               var13++;
                               var11++;
-                              continue L8;
+                              continue L7;
                             }
                           } else {
-                            break L9;
+                            break L8;
                           }
                         }
                       }
                       var11 = var12;
-                      break L7;
+                      break L6;
                     }
                   } else {
-                    break L7;
+                    break L6;
                   }
                 }
                 var9 = var9 | (var9 << 8 | var9 << 16);

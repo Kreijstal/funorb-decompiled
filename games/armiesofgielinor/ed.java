@@ -8,7 +8,7 @@ final class ed {
     static je field_e;
     static String field_c;
 
-    public static void b(int param0) {
+    public static void b() {
         field_c = null;
         field_d = null;
         field_e = null;
@@ -40,7 +40,7 @@ final class ed {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         if (!bl.field_b) {
             throw new IllegalStateException();
         }

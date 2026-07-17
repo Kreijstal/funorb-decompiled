@@ -37,7 +37,7 @@ abstract class gb {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_e = null;
     }
 
@@ -172,7 +172,8 @@ abstract class gb {
                     if (param0 == null) {
                       break L1;
                     } else {
-                      var3_ref = ca.a(param0, (byte) -36);
+                      int discarded$2 = -36;
+                      var3_ref = ca.a(param0);
                       break L1;
                     }
                   }
@@ -256,7 +257,7 @@ abstract class gb {
                       if (var4.field_b != 0) {
                         if (var4.field_b == 1) {
                           var5 = (DataInputStream) var4.field_g;
-                          int discarded$1 = var5.read();
+                          int discarded$3 = var5.read();
                           var5.close();
                           break L0;
                         } else {

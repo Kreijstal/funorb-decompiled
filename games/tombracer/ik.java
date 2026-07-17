@@ -110,13 +110,13 @@ final class ik extends vg {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         int var1 = -6;
         field_j = null;
         field_h = null;
     }
 
-    final static roa b(int param0) {
+    final static roa b() {
         roa var1 = new roa();
         var1.field_f = new up(0, 5);
         var1.field_f.b(1, 10);

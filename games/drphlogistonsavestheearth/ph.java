@@ -68,7 +68,7 @@ final class ph {
               if (0 != var7) {
                 var8_int = 0;
                 L2: while (true) {
-                  var8_int = param0.indexOf((int) param2, var8_int);
+                  var8_int = param0.indexOf('_', var8_int);
                   if (var8_int >= 0) {
                     var6 = var6 + var7;
                     var8_int++;
@@ -85,7 +85,7 @@ final class ph {
             var10 = 115 / ((87 - param1) / 34);
             var9 = 0;
             L3: while (true) {
-              var11 = param0.indexOf((int) param2, var9);
+              var11 = param0.indexOf('_', var9);
               if (var11 < 0) {
                 StringBuilder discarded$3 = var8.append(param0.substring(var9));
                 stackOut_10_0 = var8.toString();
@@ -129,7 +129,7 @@ final class ph {
           }
           L5: {
             stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(param1).append(44).append(95).append(44);
             stackIn_17_0 = stackOut_15_0;
             stackIn_17_1 = stackOut_15_1;
             stackIn_16_0 = stackOut_15_0;
@@ -157,7 +157,7 @@ final class ph {
         return stackIn_11_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_a = null;
         field_f = null;

@@ -84,7 +84,7 @@ final class wj extends nm {
               var4_int = param1.length();
               var5 = param3.length();
               var6 = var4_int;
-              var7 = param0 + var5;
+              var7 = -1 + var5;
               if (var7 == 0) {
                 break L1;
               } else {
@@ -123,7 +123,7 @@ final class wj extends nm {
           L4: {
             var4 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var4;
-            stackOut_11_1 = new StringBuilder().append("wj.A(").append(param0).append(44);
+            stackOut_11_1 = new StringBuilder().append("wj.A(").append(-1).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -176,70 +176,13 @@ final class wj extends nm {
         return stackIn_10_0;
     }
 
-    final static void a(int param0, boolean param1, int param2, boolean param3, int param4, vm param5, boolean param6) {
-        Object var7 = null;
-        Object var7_ref = null;
-        RuntimeException var7_ref2 = null;
-        Throwable var8 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_12_2 = null;
-        Throwable decompiledCaughtException = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        RuntimeException stackOut_11_0 = null;
-        StringBuilder stackOut_11_1 = null;
-        String stackOut_11_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        try {
-          var7_ref = (Object) (Object) eo.field_f;
-          synchronized (var7_ref) {
-            L0: {
-              m.field_f.e(param2, -1, 16);
-              if (!param3) {
-                ji.a(25459, true, param5, param4, param0, param1);
-                break L0;
-              } else {
-                return;
-              }
-            }
-          }
-          return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var7_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackOut_9_0 = (RuntimeException) var7_ref2;
-            stackOut_9_1 = new StringBuilder().append("wj.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
-            stackIn_11_0 = stackOut_9_0;
-            stackIn_11_1 = stackOut_9_1;
-            stackIn_10_0 = stackOut_9_0;
-            stackIn_10_1 = stackOut_9_1;
-            if (param5 == null) {
-              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-              stackOut_11_2 = "null";
-              stackIn_12_0 = stackOut_11_0;
-              stackIn_12_1 = stackOut_11_1;
-              stackIn_12_2 = stackOut_11_2;
-              break L1;
-            } else {
-              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-              stackOut_10_2 = "{...}";
-              stackIn_12_0 = stackOut_10_0;
-              stackIn_12_1 = stackOut_10_1;
-              stackIn_12_2 = stackOut_10_2;
-              break L1;
-            }
-          }
-          throw qb.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + 1 + 41);
+    final static void a(int param0, boolean param1, int param2, boolean param3, int param4, vm param5) {
+        synchronized (eo.field_f) {
+            m.field_f.e(param2, -1, 16);
+            int discarded$0 = 1;
+            int discarded$1 = 1;
+            int discarded$2 = 1;
+            ji.a(25459, true, param5);
         }
     }
 

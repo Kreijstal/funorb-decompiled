@@ -20,7 +20,8 @@ final class hm extends tfa implements gf {
             ((hm) this).field_k = param3;
             ((hm) this).field_l = param4;
             ((hm) this).field_j.a(true, (iva) this);
-            jaggl.OpenGL.glTexImage2Dub(((hm) this).field_i, 0, ((hm) this).d(108), param3, param4, 0, waa.a(((hm) this).field_f, 1383), lr.a(((hm) this).field_a, 5126), (byte[]) null, 0);
+            int discarded$0 = 5126;
+            jaggl.OpenGL.glTexImage2Dub(((hm) this).field_i, 0, ((hm) this).d(108), param3, param4, 0, waa.a(((hm) this).field_f, 1383), lr.a(((hm) this).field_a), (byte[]) null, 0);
         } catch (RuntimeException runtimeException) {
             throw tba.a((Throwable) (Object) runtimeException, "hm.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
         }
@@ -232,7 +233,7 @@ final class hm extends tfa implements gf {
         return true;
     }
 
-    final static void h(byte param0) {
+    final static void h() {
         gg.field_f = null;
         uda.field_r = null;
         uua.field_a = null;
@@ -665,9 +666,13 @@ final class hm extends tfa implements gf {
           if (param7 >= param9) {
             if (param8 <= param3) {
               if (param7 <= param4) {
-                if (param8 >= param2) {
-                  if (param8 <= param3) {
-                    L0: {
+                L0: {
+                  if (param8 < param2) {
+                    break L0;
+                  } else {
+                    if (param8 > param3) {
+                      break L0;
+                    } else {
                       if (param9 > param7) {
                         break L0;
                       } else {
@@ -693,7 +698,7 @@ final class hm extends tfa implements gf {
                                     param0 = param0 - param9;
                                     param4 = param4 - param9;
                                     param7 = param7 - param9;
-                                    var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+                                    var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(1, param6)), vd.b(1, param3));
                                     if (0 < var10) {
                                       param8 = param8 >> var10;
                                       param6 = param6 >> var10;
@@ -704,7 +709,7 @@ final class hm extends tfa implements gf {
                                     }
                                   }
                                   L2: {
-                                    var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+                                    var10 = -14 + Math.max(Math.max(vd.b(1, param7), vd.b(1, param0)), vd.b(1, param4));
                                     if (var10 <= 0) {
                                       break L2;
                                     } else {
@@ -719,7 +724,7 @@ final class hm extends tfa implements gf {
                                     var11 = -param8 + param6;
                                     var12 = -1;
                                     if (var11 != 0) {
-                                      var12 = gv.a(0, param5, param8, param0, var12, param1 ^ -15, param7, var10, var11, param4);
+                                      var12 = gv.a(0, param5, param8, param0, var12, 0, param7, var10, var11, param4);
                                       break L3;
                                     } else {
                                       break L3;
@@ -733,49 +738,27 @@ final class hm extends tfa implements gf {
                                       break L4;
                                     }
                                   }
-                                  param0 = param0 - param4;
-                                  param8 = param8 - param3;
-                                  param7 = param7 - param4;
-                                  if (param1 == -15) {
-                                    L5: {
-                                      param6 = param6 - param3;
-                                      if (var11 != 0) {
-                                        var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                                        break L5;
-                                      } else {
-                                        break L5;
-                                      }
+                                  L5: {
+                                    param0 = param0 - param4;
+                                    param8 = param8 - param3;
+                                    param7 = param7 - param4;
+                                    param6 = param6 - param3;
+                                    if (var11 != 0) {
+                                      var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
+                                      break L5;
+                                    } else {
+                                      break L5;
                                     }
-                                    L6: {
-                                      if (0 == var10) {
-                                        break L6;
-                                      } else {
-                                        var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                                        break L6;
-                                      }
-                                    }
-                                    return var12;
-                                  } else {
-                                    L7: {
-                                      hm.g((byte) 96);
-                                      param6 = param6 - param3;
-                                      if (var11 != 0) {
-                                        var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                                        break L7;
-                                      } else {
-                                        break L7;
-                                      }
-                                    }
-                                    L8: {
-                                      if (0 == var10) {
-                                        break L8;
-                                      } else {
-                                        var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                                        break L8;
-                                      }
-                                    }
-                                    return var12;
                                   }
+                                  L6: {
+                                    if (0 == var10) {
+                                      break L6;
+                                    } else {
+                                      var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
+                                      break L6;
+                                    }
+                                  }
+                                  return var12;
                                 }
                               }
                             }
@@ -783,464 +766,378 @@ final class hm extends tfa implements gf {
                         }
                       }
                     }
-                    L9: {
-                      param8 = param8 - param2;
-                      param3 = param3 - param2;
-                      param6 = param6 - param2;
-                      param0 = param0 - param9;
-                      param4 = param4 - param9;
-                      param7 = param7 - param9;
-                      var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
-                      if (0 < var10) {
-                        param8 = param8 >> var10;
-                        param6 = param6 >> var10;
-                        param3 = param3 >> var10;
-                        break L9;
-                      } else {
-                        break L9;
-                      }
-                    }
-                    L10: {
-                      var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                      if (var10 <= 0) {
-                        break L10;
-                      } else {
-                        param7 = param7 >> var10;
-                        param0 = param0 >> var10;
-                        param4 = param4 >> var10;
-                        break L10;
-                      }
-                    }
-                    L11: {
-                      var10 = param0 + -param7;
-                      var11 = -param8 + param6;
-                      var12 = -1;
-                      if (var11 != 0) {
-                        var12 = gv.a(0, param5, param8, param0, var12, param1 ^ -15, param7, var10, var11, param4);
-                        break L11;
-                      } else {
-                        break L11;
-                      }
-                    }
-                    L12: {
-                      if (var10 != 0) {
-                        var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
-                        break L12;
-                      } else {
-                        break L12;
-                      }
-                    }
-                    param0 = param0 - param4;
-                    param8 = param8 - param3;
-                    param7 = param7 - param4;
-                    if (param1 == -15) {
-                      L13: {
-                        param6 = param6 - param3;
-                        if (var11 != 0) {
-                          var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                          break L13;
-                        } else {
-                          break L13;
-                        }
-                      }
-                      L14: {
-                        if (0 == var10) {
-                          break L14;
-                        } else {
-                          var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                          break L14;
-                        }
-                      }
-                      return var12;
-                    } else {
-                      L15: {
-                        hm.g((byte) 96);
-                        param6 = param6 - param3;
-                        if (var11 != 0) {
-                          var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                          break L15;
-                        } else {
-                          break L15;
-                        }
-                      }
-                      L16: {
-                        if (0 == var10) {
-                          break L16;
-                        } else {
-                          var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                          break L16;
-                        }
-                      }
-                      return var12;
-                    }
+                  }
+                }
+                L7: {
+                  param8 = param8 - param2;
+                  param3 = param3 - param2;
+                  param6 = param6 - param2;
+                  param0 = param0 - param9;
+                  param4 = param4 - param9;
+                  param7 = param7 - param9;
+                  var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(1, param6)), vd.b(1, param3));
+                  if (0 < var10) {
+                    param8 = param8 >> var10;
+                    param6 = param6 >> var10;
+                    param3 = param3 >> var10;
+                    break L7;
                   } else {
-                    L17: {
-                      param8 = param8 - param2;
-                      param3 = param3 - param2;
-                      param6 = param6 - param2;
-                      param0 = param0 - param9;
-                      param4 = param4 - param9;
-                      param7 = param7 - param9;
-                      var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
-                      if (0 < var10) {
-                        param8 = param8 >> var10;
-                        param6 = param6 >> var10;
-                        param3 = param3 >> var10;
-                        break L17;
-                      } else {
-                        break L17;
-                      }
-                    }
-                    L18: {
-                      var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                      if (var10 <= 0) {
-                        break L18;
-                      } else {
-                        param7 = param7 >> var10;
-                        param0 = param0 >> var10;
-                        param4 = param4 >> var10;
-                        break L18;
-                      }
-                    }
-                    L19: {
-                      var10 = param0 + -param7;
-                      var11 = -param8 + param6;
-                      var12 = -1;
-                      if (var11 != 0) {
-                        var12 = gv.a(0, param5, param8, param0, var12, param1 ^ -15, param7, var10, var11, param4);
-                        break L19;
-                      } else {
-                        break L19;
-                      }
-                    }
-                    L20: {
-                      if (var10 != 0) {
-                        var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
-                        break L20;
-                      } else {
-                        break L20;
-                      }
-                    }
-                    param0 = param0 - param4;
-                    param8 = param8 - param3;
-                    param7 = param7 - param4;
-                    if (param1 == -15) {
-                      L21: {
-                        param6 = param6 - param3;
-                        if (var11 != 0) {
-                          var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                          break L21;
-                        } else {
-                          break L21;
-                        }
-                      }
-                      L22: {
-                        if (0 == var10) {
-                          break L22;
-                        } else {
-                          var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                          break L22;
-                        }
-                      }
-                      return var12;
-                    } else {
-                      L23: {
-                        hm.g((byte) 96);
-                        param6 = param6 - param3;
-                        if (var11 != 0) {
-                          var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                          break L23;
-                        } else {
-                          break L23;
-                        }
-                      }
-                      L24: {
-                        if (0 == var10) {
-                          break L24;
-                        } else {
-                          var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                          break L24;
-                        }
-                      }
-                      return var12;
-                    }
+                    break L7;
                   }
-                } else {
-                  L25: {
-                    param8 = param8 - param2;
-                    param3 = param3 - param2;
-                    param6 = param6 - param2;
-                    param0 = param0 - param9;
-                    param4 = param4 - param9;
-                    param7 = param7 - param9;
-                    var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
-                    if (0 < var10) {
-                      param8 = param8 >> var10;
-                      param6 = param6 >> var10;
-                      param3 = param3 >> var10;
-                      break L25;
-                    } else {
-                      break L25;
-                    }
+                }
+                L8: {
+                  var10 = -14 + Math.max(Math.max(vd.b(1, param7), vd.b(1, param0)), vd.b(1, param4));
+                  if (var10 <= 0) {
+                    break L8;
+                  } else {
+                    param7 = param7 >> var10;
+                    param0 = param0 >> var10;
+                    param4 = param4 >> var10;
+                    break L8;
                   }
-                  L26: {
-                    var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                    if (var10 <= 0) {
-                      break L26;
-                    } else {
-                      param7 = param7 >> var10;
-                      param0 = param0 >> var10;
-                      param4 = param4 >> var10;
-                      break L26;
-                    }
+                }
+                L9: {
+                  var10 = param0 + -param7;
+                  var11 = -param8 + param6;
+                  var12 = -1;
+                  if (var11 != 0) {
+                    var12 = gv.a(0, param5, param8, param0, var12, 0, param7, var10, var11, param4);
+                    break L9;
+                  } else {
+                    break L9;
                   }
-                  L27: {
-                    var10 = param0 + -param7;
-                    var11 = -param8 + param6;
-                    var12 = -1;
-                    if (var11 != 0) {
-                      var12 = gv.a(0, param5, param8, param0, var12, param1 ^ -15, param7, var10, var11, param4);
-                      break L27;
-                    } else {
-                      break L27;
-                    }
+                }
+                L10: {
+                  if (var10 != 0) {
+                    var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
+                    break L10;
+                  } else {
+                    break L10;
                   }
-                  L28: {
-                    if (var10 != 0) {
-                      var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
-                      break L28;
-                    } else {
-                      break L28;
-                    }
-                  }
+                }
+                L11: {
                   param0 = param0 - param4;
                   param8 = param8 - param3;
                   param7 = param7 - param4;
-                  if (param1 == -15) {
-                    L29: {
-                      param6 = param6 - param3;
-                      if (var11 != 0) {
-                        var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                        break L29;
-                      } else {
-                        break L29;
-                      }
-                    }
-                    L30: {
-                      if (0 == var10) {
-                        break L30;
-                      } else {
-                        var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                        break L30;
-                      }
-                    }
-                    return var12;
+                  param6 = param6 - param3;
+                  if (var11 != 0) {
+                    var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
+                    break L11;
                   } else {
-                    L31: {
-                      hm.g((byte) 96);
-                      param6 = param6 - param3;
-                      if (var11 != 0) {
-                        var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                        break L31;
-                      } else {
-                        break L31;
-                      }
-                    }
-                    L32: {
-                      if (0 == var10) {
-                        break L32;
-                      } else {
-                        var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                        break L32;
-                      }
-                    }
-                    return var12;
+                    break L11;
                   }
                 }
+                L12: {
+                  if (0 == var10) {
+                    break L12;
+                  } else {
+                    var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
+                    break L12;
+                  }
+                }
+                return var12;
               } else {
                 if (param0 <= param4) {
                   if (param8 >= param2) {
-                    L33: {
-                      if (param8 > param3) {
-                        break L33;
-                      } else {
-                        if (param9 > param7) {
-                          break L33;
-                        } else {
+                    if (param8 <= param3) {
+                      if (param9 <= param7) {
+                        L13: {
                           if (param4 < param7) {
-                            break L33;
+                            break L13;
                           } else {
                             if (param6 < param2) {
-                              break L33;
+                              break L13;
                             } else {
                               if (param6 > param3) {
-                                break L33;
+                                break L13;
                               } else {
                                 if (param9 > param0) {
-                                  break L33;
+                                  break L13;
                                 } else {
                                   if (param4 >= param0) {
                                     return 1 + (1 << param5);
                                   } else {
-                                    break L33;
+                                    break L13;
                                   }
                                 }
                               }
                             }
                           }
                         }
+                        L14: {
+                          param8 = param8 - param2;
+                          param3 = param3 - param2;
+                          param6 = param6 - param2;
+                          param0 = param0 - param9;
+                          param4 = param4 - param9;
+                          param7 = param7 - param9;
+                          var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(1, param6)), vd.b(1, param3));
+                          if (0 < var10) {
+                            param8 = param8 >> var10;
+                            param6 = param6 >> var10;
+                            param3 = param3 >> var10;
+                            break L14;
+                          } else {
+                            break L14;
+                          }
+                        }
+                        L15: {
+                          var10 = -14 + Math.max(Math.max(vd.b(1, param7), vd.b(1, param0)), vd.b(1, param4));
+                          if (var10 <= 0) {
+                            break L15;
+                          } else {
+                            param7 = param7 >> var10;
+                            param0 = param0 >> var10;
+                            param4 = param4 >> var10;
+                            break L15;
+                          }
+                        }
+                        L16: {
+                          var10 = param0 + -param7;
+                          var11 = -param8 + param6;
+                          var12 = -1;
+                          if (var11 != 0) {
+                            var12 = gv.a(0, param5, param8, param0, var12, 0, param7, var10, var11, param4);
+                            break L16;
+                          } else {
+                            break L16;
+                          }
+                        }
+                        L17: {
+                          if (var10 != 0) {
+                            var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
+                            break L17;
+                          } else {
+                            break L17;
+                          }
+                        }
+                        L18: {
+                          param0 = param0 - param4;
+                          param8 = param8 - param3;
+                          param7 = param7 - param4;
+                          param6 = param6 - param3;
+                          if (var11 != 0) {
+                            var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
+                            break L18;
+                          } else {
+                            break L18;
+                          }
+                        }
+                        L19: {
+                          if (0 == var10) {
+                            break L19;
+                          } else {
+                            var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
+                            break L19;
+                          }
+                        }
+                        return var12;
+                      } else {
+                        L20: {
+                          param8 = param8 - param2;
+                          param3 = param3 - param2;
+                          param6 = param6 - param2;
+                          param0 = param0 - param9;
+                          param4 = param4 - param9;
+                          param7 = param7 - param9;
+                          var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(1, param6)), vd.b(1, param3));
+                          if (0 < var10) {
+                            param8 = param8 >> var10;
+                            param6 = param6 >> var10;
+                            param3 = param3 >> var10;
+                            break L20;
+                          } else {
+                            break L20;
+                          }
+                        }
+                        L21: {
+                          var10 = -14 + Math.max(Math.max(vd.b(1, param7), vd.b(1, param0)), vd.b(1, param4));
+                          if (var10 <= 0) {
+                            break L21;
+                          } else {
+                            param7 = param7 >> var10;
+                            param0 = param0 >> var10;
+                            param4 = param4 >> var10;
+                            break L21;
+                          }
+                        }
+                        L22: {
+                          var10 = param0 + -param7;
+                          var11 = -param8 + param6;
+                          var12 = -1;
+                          if (var11 != 0) {
+                            var12 = gv.a(0, param5, param8, param0, var12, 0, param7, var10, var11, param4);
+                            break L22;
+                          } else {
+                            break L22;
+                          }
+                        }
+                        L23: {
+                          if (var10 != 0) {
+                            var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
+                            break L23;
+                          } else {
+                            break L23;
+                          }
+                        }
+                        L24: {
+                          param0 = param0 - param4;
+                          param8 = param8 - param3;
+                          param7 = param7 - param4;
+                          param6 = param6 - param3;
+                          if (var11 != 0) {
+                            var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
+                            break L24;
+                          } else {
+                            break L24;
+                          }
+                        }
+                        L25: {
+                          if (0 == var10) {
+                            break L25;
+                          } else {
+                            var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
+                            break L25;
+                          }
+                        }
+                        return var12;
                       }
+                    } else {
+                      L26: {
+                        param8 = param8 - param2;
+                        param3 = param3 - param2;
+                        param6 = param6 - param2;
+                        param0 = param0 - param9;
+                        param4 = param4 - param9;
+                        param7 = param7 - param9;
+                        var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(1, param6)), vd.b(1, param3));
+                        if (0 < var10) {
+                          param8 = param8 >> var10;
+                          param6 = param6 >> var10;
+                          param3 = param3 >> var10;
+                          break L26;
+                        } else {
+                          break L26;
+                        }
+                      }
+                      L27: {
+                        var10 = -14 + Math.max(Math.max(vd.b(1, param7), vd.b(1, param0)), vd.b(1, param4));
+                        if (var10 <= 0) {
+                          break L27;
+                        } else {
+                          param7 = param7 >> var10;
+                          param0 = param0 >> var10;
+                          param4 = param4 >> var10;
+                          break L27;
+                        }
+                      }
+                      L28: {
+                        var10 = param0 + -param7;
+                        var11 = -param8 + param6;
+                        var12 = -1;
+                        if (var11 != 0) {
+                          var12 = gv.a(0, param5, param8, param0, var12, 0, param7, var10, var11, param4);
+                          break L28;
+                        } else {
+                          break L28;
+                        }
+                      }
+                      L29: {
+                        if (var10 != 0) {
+                          var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
+                          break L29;
+                        } else {
+                          break L29;
+                        }
+                      }
+                      L30: {
+                        param0 = param0 - param4;
+                        param8 = param8 - param3;
+                        param7 = param7 - param4;
+                        param6 = param6 - param3;
+                        if (var11 != 0) {
+                          var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
+                          break L30;
+                        } else {
+                          break L30;
+                        }
+                      }
+                      L31: {
+                        if (0 == var10) {
+                          break L31;
+                        } else {
+                          var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
+                          break L31;
+                        }
+                      }
+                      return var12;
                     }
-                    L34: {
+                  } else {
+                    L32: {
                       param8 = param8 - param2;
                       param3 = param3 - param2;
                       param6 = param6 - param2;
                       param0 = param0 - param9;
                       param4 = param4 - param9;
                       param7 = param7 - param9;
-                      var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+                      var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(1, param6)), vd.b(1, param3));
                       if (0 < var10) {
                         param8 = param8 >> var10;
                         param6 = param6 >> var10;
                         param3 = param3 >> var10;
+                        break L32;
+                      } else {
+                        break L32;
+                      }
+                    }
+                    L33: {
+                      var10 = -14 + Math.max(Math.max(vd.b(1, param7), vd.b(1, param0)), vd.b(1, param4));
+                      if (var10 <= 0) {
+                        break L33;
+                      } else {
+                        param7 = param7 >> var10;
+                        param0 = param0 >> var10;
+                        param4 = param4 >> var10;
+                        break L33;
+                      }
+                    }
+                    L34: {
+                      var10 = param0 + -param7;
+                      var11 = -param8 + param6;
+                      var12 = -1;
+                      if (var11 != 0) {
+                        var12 = gv.a(0, param5, param8, param0, var12, 0, param7, var10, var11, param4);
                         break L34;
                       } else {
                         break L34;
                       }
                     }
                     L35: {
-                      var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                      if (var10 <= 0) {
+                      if (var10 != 0) {
+                        var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
                         break L35;
                       } else {
-                        param7 = param7 >> var10;
-                        param0 = param0 >> var10;
-                        param4 = param4 >> var10;
                         break L35;
                       }
                     }
                     L36: {
-                      var10 = param0 + -param7;
-                      var11 = -param8 + param6;
-                      var12 = -1;
+                      param0 = param0 - param4;
+                      param8 = param8 - param3;
+                      param7 = param7 - param4;
+                      param6 = param6 - param3;
                       if (var11 != 0) {
-                        var12 = gv.a(0, param5, param8, param0, var12, param1 ^ -15, param7, var10, var11, param4);
+                        var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                         break L36;
                       } else {
                         break L36;
                       }
                     }
                     L37: {
-                      if (var10 != 0) {
-                        var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
+                      if (0 == var10) {
                         break L37;
                       } else {
+                        var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
                         break L37;
-                      }
-                    }
-                    L38: {
-                      param0 = param0 - param4;
-                      param8 = param8 - param3;
-                      param7 = param7 - param4;
-                      if (param1 == -15) {
-                        break L38;
-                      } else {
-                        hm.g((byte) 96);
-                        break L38;
-                      }
-                    }
-                    L39: {
-                      param6 = param6 - param3;
-                      if (var11 != 0) {
-                        var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                        break L39;
-                      } else {
-                        break L39;
-                      }
-                    }
-                    L40: {
-                      if (0 == var10) {
-                        break L40;
-                      } else {
-                        var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                        break L40;
-                      }
-                    }
-                    return var12;
-                  } else {
-                    L41: {
-                      param8 = param8 - param2;
-                      param3 = param3 - param2;
-                      param6 = param6 - param2;
-                      param0 = param0 - param9;
-                      param4 = param4 - param9;
-                      param7 = param7 - param9;
-                      var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
-                      if (0 < var10) {
-                        param8 = param8 >> var10;
-                        param6 = param6 >> var10;
-                        param3 = param3 >> var10;
-                        break L41;
-                      } else {
-                        break L41;
-                      }
-                    }
-                    L42: {
-                      var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                      if (var10 <= 0) {
-                        break L42;
-                      } else {
-                        param7 = param7 >> var10;
-                        param0 = param0 >> var10;
-                        param4 = param4 >> var10;
-                        break L42;
-                      }
-                    }
-                    L43: {
-                      var10 = param0 + -param7;
-                      var11 = -param8 + param6;
-                      var12 = -1;
-                      if (var11 != 0) {
-                        var12 = gv.a(0, param5, param8, param0, var12, param1 ^ -15, param7, var10, var11, param4);
-                        break L43;
-                      } else {
-                        break L43;
-                      }
-                    }
-                    L44: {
-                      if (var10 != 0) {
-                        var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
-                        break L44;
-                      } else {
-                        break L44;
-                      }
-                    }
-                    L45: {
-                      param0 = param0 - param4;
-                      param8 = param8 - param3;
-                      param7 = param7 - param4;
-                      if (param1 == -15) {
-                        break L45;
-                      } else {
-                        hm.g((byte) 96);
-                        break L45;
-                      }
-                    }
-                    L46: {
-                      param6 = param6 - param3;
-                      if (var11 != 0) {
-                        var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                        break L46;
-                      } else {
-                        break L46;
-                      }
-                    }
-                    L47: {
-                      if (0 == var10) {
-                        break L47;
-                      } else {
-                        var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                        break L47;
                       }
                     }
                     return var12;
@@ -1251,14 +1148,14 @@ final class hm extends tfa implements gf {
               }
             } else {
               if (param3 >= param6) {
-                L48: {
+                L38: {
                   if (param7 <= param4) {
-                    break L48;
+                    break L38;
                   } else {
                     if (param0 > param4) {
                       return -1;
                     } else {
-                      break L48;
+                      break L38;
                     }
                   }
                 }
@@ -1272,625 +1169,561 @@ final class hm extends tfa implements gf {
                               if (param4 >= param0) {
                                 return 1 + (1 << param5);
                               } else {
-                                L49: {
+                                L39: {
                                   param8 = param8 - param2;
                                   param3 = param3 - param2;
                                   param6 = param6 - param2;
                                   param0 = param0 - param9;
                                   param4 = param4 - param9;
                                   param7 = param7 - param9;
-                                  var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+                                  var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(1, param6)), vd.b(1, param3));
                                   if (0 < var10) {
                                     param8 = param8 >> var10;
                                     param6 = param6 >> var10;
                                     param3 = param3 >> var10;
-                                    break L49;
+                                    break L39;
                                   } else {
-                                    break L49;
+                                    break L39;
                                   }
                                 }
-                                L50: {
-                                  var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+                                L40: {
+                                  var10 = -14 + Math.max(Math.max(vd.b(1, param7), vd.b(1, param0)), vd.b(1, param4));
                                   if (var10 <= 0) {
-                                    break L50;
+                                    break L40;
                                   } else {
                                     param7 = param7 >> var10;
                                     param0 = param0 >> var10;
                                     param4 = param4 >> var10;
-                                    break L50;
+                                    break L40;
                                   }
                                 }
-                                L51: {
+                                L41: {
                                   var10 = param0 + -param7;
                                   var11 = -param8 + param6;
                                   var12 = -1;
                                   if (var11 != 0) {
-                                    var12 = gv.a(0, param5, param8, param0, var12, param1 ^ -15, param7, var10, var11, param4);
-                                    break L51;
+                                    var12 = gv.a(0, param5, param8, param0, var12, 0, param7, var10, var11, param4);
+                                    break L41;
                                   } else {
-                                    break L51;
+                                    break L41;
                                   }
                                 }
-                                L52: {
+                                L42: {
                                   if (var10 != 0) {
                                     var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
-                                    break L52;
+                                    break L42;
                                   } else {
-                                    break L52;
+                                    break L42;
                                   }
                                 }
-                                L53: {
+                                L43: {
                                   param0 = param0 - param4;
                                   param8 = param8 - param3;
                                   param7 = param7 - param4;
-                                  if (param1 == -15) {
-                                    break L53;
-                                  } else {
-                                    hm.g((byte) 96);
-                                    break L53;
-                                  }
-                                }
-                                L54: {
                                   param6 = param6 - param3;
                                   if (var11 != 0) {
                                     var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                                    break L54;
+                                    break L43;
                                   } else {
-                                    break L54;
+                                    break L43;
                                   }
                                 }
-                                L55: {
+                                L44: {
                                   if (0 == var10) {
-                                    break L55;
+                                    break L44;
                                   } else {
                                     var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                                    break L55;
+                                    break L44;
                                   }
                                 }
                                 return var12;
                               }
                             } else {
-                              L56: {
+                              L45: {
                                 param8 = param8 - param2;
                                 param3 = param3 - param2;
                                 param6 = param6 - param2;
                                 param0 = param0 - param9;
                                 param4 = param4 - param9;
                                 param7 = param7 - param9;
-                                var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+                                var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(1, param6)), vd.b(1, param3));
                                 if (0 < var10) {
                                   param8 = param8 >> var10;
                                   param6 = param6 >> var10;
                                   param3 = param3 >> var10;
-                                  break L56;
+                                  break L45;
                                 } else {
-                                  break L56;
+                                  break L45;
                                 }
                               }
-                              L57: {
-                                var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+                              L46: {
+                                var10 = -14 + Math.max(Math.max(vd.b(1, param7), vd.b(1, param0)), vd.b(1, param4));
                                 if (var10 <= 0) {
-                                  break L57;
+                                  break L46;
                                 } else {
                                   param7 = param7 >> var10;
                                   param0 = param0 >> var10;
                                   param4 = param4 >> var10;
-                                  break L57;
+                                  break L46;
                                 }
                               }
-                              L58: {
+                              L47: {
                                 var10 = param0 + -param7;
                                 var11 = -param8 + param6;
                                 var12 = -1;
                                 if (var11 != 0) {
-                                  var12 = gv.a(0, param5, param8, param0, var12, param1 ^ -15, param7, var10, var11, param4);
-                                  break L58;
+                                  var12 = gv.a(0, param5, param8, param0, var12, 0, param7, var10, var11, param4);
+                                  break L47;
                                 } else {
-                                  break L58;
+                                  break L47;
                                 }
                               }
-                              L59: {
+                              L48: {
                                 if (var10 != 0) {
                                   var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
-                                  break L59;
+                                  break L48;
                                 } else {
-                                  break L59;
+                                  break L48;
                                 }
                               }
-                              L60: {
+                              L49: {
                                 param0 = param0 - param4;
                                 param8 = param8 - param3;
                                 param7 = param7 - param4;
-                                if (param1 == -15) {
-                                  break L60;
-                                } else {
-                                  hm.g((byte) 96);
-                                  break L60;
-                                }
-                              }
-                              L61: {
                                 param6 = param6 - param3;
                                 if (var11 != 0) {
                                   var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                                  break L61;
+                                  break L49;
                                 } else {
-                                  break L61;
+                                  break L49;
                                 }
                               }
-                              L62: {
+                              L50: {
                                 if (0 == var10) {
-                                  break L62;
+                                  break L50;
                                 } else {
                                   var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                                  break L62;
+                                  break L50;
                                 }
                               }
                               return var12;
                             }
                           } else {
-                            L63: {
+                            L51: {
                               param8 = param8 - param2;
                               param3 = param3 - param2;
                               param6 = param6 - param2;
                               param0 = param0 - param9;
                               param4 = param4 - param9;
                               param7 = param7 - param9;
-                              var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+                              var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(1, param6)), vd.b(1, param3));
                               if (0 < var10) {
                                 param8 = param8 >> var10;
                                 param6 = param6 >> var10;
                                 param3 = param3 >> var10;
-                                break L63;
+                                break L51;
                               } else {
-                                break L63;
+                                break L51;
                               }
                             }
-                            L64: {
-                              var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+                            L52: {
+                              var10 = -14 + Math.max(Math.max(vd.b(1, param7), vd.b(1, param0)), vd.b(1, param4));
                               if (var10 <= 0) {
-                                break L64;
+                                break L52;
                               } else {
                                 param7 = param7 >> var10;
                                 param0 = param0 >> var10;
                                 param4 = param4 >> var10;
-                                break L64;
+                                break L52;
                               }
                             }
-                            L65: {
+                            L53: {
                               var10 = param0 + -param7;
                               var11 = -param8 + param6;
                               var12 = -1;
                               if (var11 != 0) {
-                                var12 = gv.a(0, param5, param8, param0, var12, param1 ^ -15, param7, var10, var11, param4);
-                                break L65;
+                                var12 = gv.a(0, param5, param8, param0, var12, 0, param7, var10, var11, param4);
+                                break L53;
                               } else {
-                                break L65;
+                                break L53;
                               }
                             }
-                            L66: {
+                            L54: {
                               if (var10 != 0) {
                                 var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
-                                break L66;
+                                break L54;
                               } else {
-                                break L66;
+                                break L54;
                               }
                             }
-                            L67: {
+                            L55: {
                               param0 = param0 - param4;
                               param8 = param8 - param3;
                               param7 = param7 - param4;
-                              if (param1 == -15) {
-                                break L67;
-                              } else {
-                                hm.g((byte) 96);
-                                break L67;
-                              }
-                            }
-                            L68: {
                               param6 = param6 - param3;
                               if (var11 != 0) {
                                 var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                                break L68;
+                                break L55;
                               } else {
-                                break L68;
+                                break L55;
                               }
                             }
-                            L69: {
+                            L56: {
                               if (0 == var10) {
-                                break L69;
+                                break L56;
                               } else {
                                 var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                                break L69;
+                                break L56;
                               }
                             }
                             return var12;
                           }
                         } else {
-                          L70: {
+                          L57: {
                             param8 = param8 - param2;
                             param3 = param3 - param2;
                             param6 = param6 - param2;
                             param0 = param0 - param9;
                             param4 = param4 - param9;
                             param7 = param7 - param9;
-                            var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+                            var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(1, param6)), vd.b(1, param3));
                             if (0 < var10) {
                               param8 = param8 >> var10;
                               param6 = param6 >> var10;
                               param3 = param3 >> var10;
-                              break L70;
+                              break L57;
                             } else {
-                              break L70;
+                              break L57;
                             }
                           }
-                          L71: {
-                            var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+                          L58: {
+                            var10 = -14 + Math.max(Math.max(vd.b(1, param7), vd.b(1, param0)), vd.b(1, param4));
                             if (var10 <= 0) {
-                              break L71;
+                              break L58;
                             } else {
                               param7 = param7 >> var10;
                               param0 = param0 >> var10;
                               param4 = param4 >> var10;
-                              break L71;
+                              break L58;
                             }
                           }
-                          L72: {
+                          L59: {
                             var10 = param0 + -param7;
                             var11 = -param8 + param6;
                             var12 = -1;
                             if (var11 != 0) {
-                              var12 = gv.a(0, param5, param8, param0, var12, param1 ^ -15, param7, var10, var11, param4);
-                              break L72;
+                              var12 = gv.a(0, param5, param8, param0, var12, 0, param7, var10, var11, param4);
+                              break L59;
                             } else {
-                              break L72;
+                              break L59;
                             }
                           }
-                          L73: {
+                          L60: {
                             if (var10 != 0) {
                               var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
-                              break L73;
+                              break L60;
                             } else {
-                              break L73;
+                              break L60;
                             }
                           }
-                          L74: {
+                          L61: {
                             param0 = param0 - param4;
                             param8 = param8 - param3;
                             param7 = param7 - param4;
-                            if (param1 == -15) {
-                              break L74;
-                            } else {
-                              hm.g((byte) 96);
-                              break L74;
-                            }
-                          }
-                          L75: {
                             param6 = param6 - param3;
                             if (var11 != 0) {
                               var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                              break L75;
+                              break L61;
                             } else {
-                              break L75;
+                              break L61;
                             }
                           }
-                          L76: {
+                          L62: {
                             if (0 == var10) {
-                              break L76;
+                              break L62;
                             } else {
                               var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                              break L76;
+                              break L62;
                             }
                           }
                           return var12;
                         }
                       } else {
-                        L77: {
+                        L63: {
                           param8 = param8 - param2;
                           param3 = param3 - param2;
                           param6 = param6 - param2;
                           param0 = param0 - param9;
                           param4 = param4 - param9;
                           param7 = param7 - param9;
-                          var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+                          var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(1, param6)), vd.b(1, param3));
                           if (0 < var10) {
                             param8 = param8 >> var10;
                             param6 = param6 >> var10;
                             param3 = param3 >> var10;
-                            break L77;
+                            break L63;
                           } else {
-                            break L77;
+                            break L63;
                           }
                         }
-                        L78: {
-                          var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+                        L64: {
+                          var10 = -14 + Math.max(Math.max(vd.b(1, param7), vd.b(1, param0)), vd.b(1, param4));
                           if (var10 <= 0) {
-                            break L78;
+                            break L64;
                           } else {
                             param7 = param7 >> var10;
                             param0 = param0 >> var10;
                             param4 = param4 >> var10;
-                            break L78;
+                            break L64;
                           }
                         }
-                        L79: {
+                        L65: {
                           var10 = param0 + -param7;
                           var11 = -param8 + param6;
                           var12 = -1;
                           if (var11 != 0) {
-                            var12 = gv.a(0, param5, param8, param0, var12, param1 ^ -15, param7, var10, var11, param4);
-                            break L79;
+                            var12 = gv.a(0, param5, param8, param0, var12, 0, param7, var10, var11, param4);
+                            break L65;
                           } else {
-                            break L79;
+                            break L65;
                           }
                         }
-                        L80: {
+                        L66: {
                           if (var10 != 0) {
                             var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
-                            break L80;
+                            break L66;
                           } else {
-                            break L80;
+                            break L66;
                           }
                         }
-                        L81: {
+                        L67: {
                           param0 = param0 - param4;
                           param8 = param8 - param3;
                           param7 = param7 - param4;
-                          if (param1 == -15) {
-                            break L81;
-                          } else {
-                            hm.g((byte) 96);
-                            break L81;
-                          }
-                        }
-                        L82: {
                           param6 = param6 - param3;
                           if (var11 != 0) {
                             var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                            break L82;
+                            break L67;
                           } else {
-                            break L82;
+                            break L67;
                           }
                         }
-                        L83: {
+                        L68: {
                           if (0 == var10) {
-                            break L83;
+                            break L68;
                           } else {
                             var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                            break L83;
+                            break L68;
                           }
                         }
                         return var12;
                       }
                     } else {
-                      L84: {
+                      L69: {
                         param8 = param8 - param2;
                         param3 = param3 - param2;
                         param6 = param6 - param2;
                         param0 = param0 - param9;
                         param4 = param4 - param9;
                         param7 = param7 - param9;
-                        var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+                        var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(1, param6)), vd.b(1, param3));
                         if (0 < var10) {
                           param8 = param8 >> var10;
                           param6 = param6 >> var10;
                           param3 = param3 >> var10;
-                          break L84;
+                          break L69;
                         } else {
-                          break L84;
+                          break L69;
                         }
                       }
-                      L85: {
-                        var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+                      L70: {
+                        var10 = -14 + Math.max(Math.max(vd.b(1, param7), vd.b(1, param0)), vd.b(1, param4));
                         if (var10 <= 0) {
-                          break L85;
+                          break L70;
                         } else {
                           param7 = param7 >> var10;
                           param0 = param0 >> var10;
                           param4 = param4 >> var10;
-                          break L85;
+                          break L70;
                         }
                       }
-                      L86: {
+                      L71: {
                         var10 = param0 + -param7;
                         var11 = -param8 + param6;
                         var12 = -1;
                         if (var11 != 0) {
-                          var12 = gv.a(0, param5, param8, param0, var12, param1 ^ -15, param7, var10, var11, param4);
-                          break L86;
+                          var12 = gv.a(0, param5, param8, param0, var12, 0, param7, var10, var11, param4);
+                          break L71;
                         } else {
-                          break L86;
+                          break L71;
                         }
                       }
-                      L87: {
+                      L72: {
                         if (var10 != 0) {
                           var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
-                          break L87;
+                          break L72;
                         } else {
-                          break L87;
+                          break L72;
                         }
                       }
-                      L88: {
+                      L73: {
                         param0 = param0 - param4;
                         param8 = param8 - param3;
                         param7 = param7 - param4;
-                        if (param1 == -15) {
-                          break L88;
-                        } else {
-                          hm.g((byte) 96);
-                          break L88;
-                        }
-                      }
-                      L89: {
                         param6 = param6 - param3;
                         if (var11 != 0) {
                           var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                          break L89;
+                          break L73;
                         } else {
-                          break L89;
+                          break L73;
                         }
                       }
-                      L90: {
+                      L74: {
                         if (0 == var10) {
-                          break L90;
+                          break L74;
                         } else {
                           var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                          break L90;
+                          break L74;
                         }
                       }
                       return var12;
                     }
                   } else {
-                    L91: {
+                    L75: {
                       param8 = param8 - param2;
                       param3 = param3 - param2;
                       param6 = param6 - param2;
                       param0 = param0 - param9;
                       param4 = param4 - param9;
                       param7 = param7 - param9;
-                      var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+                      var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(1, param6)), vd.b(1, param3));
                       if (0 < var10) {
                         param8 = param8 >> var10;
                         param6 = param6 >> var10;
                         param3 = param3 >> var10;
-                        break L91;
+                        break L75;
                       } else {
-                        break L91;
+                        break L75;
                       }
                     }
-                    L92: {
-                      var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+                    L76: {
+                      var10 = -14 + Math.max(Math.max(vd.b(1, param7), vd.b(1, param0)), vd.b(1, param4));
                       if (var10 <= 0) {
-                        break L92;
+                        break L76;
                       } else {
                         param7 = param7 >> var10;
                         param0 = param0 >> var10;
                         param4 = param4 >> var10;
-                        break L92;
+                        break L76;
                       }
                     }
-                    L93: {
+                    L77: {
                       var10 = param0 + -param7;
                       var11 = -param8 + param6;
                       var12 = -1;
                       if (var11 != 0) {
-                        var12 = gv.a(0, param5, param8, param0, var12, param1 ^ -15, param7, var10, var11, param4);
-                        break L93;
+                        var12 = gv.a(0, param5, param8, param0, var12, 0, param7, var10, var11, param4);
+                        break L77;
                       } else {
-                        break L93;
+                        break L77;
                       }
                     }
-                    L94: {
+                    L78: {
                       if (var10 != 0) {
                         var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
-                        break L94;
+                        break L78;
                       } else {
-                        break L94;
+                        break L78;
                       }
                     }
-                    L95: {
+                    L79: {
                       param0 = param0 - param4;
                       param8 = param8 - param3;
                       param7 = param7 - param4;
-                      if (param1 == -15) {
-                        break L95;
-                      } else {
-                        hm.g((byte) 96);
-                        break L95;
-                      }
-                    }
-                    L96: {
                       param6 = param6 - param3;
                       if (var11 != 0) {
                         var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                        break L96;
+                        break L79;
                       } else {
-                        break L96;
+                        break L79;
                       }
                     }
-                    L97: {
+                    L80: {
                       if (0 == var10) {
-                        break L97;
+                        break L80;
                       } else {
                         var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                        break L97;
+                        break L80;
                       }
                     }
                     return var12;
                   }
                 } else {
-                  L98: {
+                  L81: {
                     param8 = param8 - param2;
                     param3 = param3 - param2;
                     param6 = param6 - param2;
                     param0 = param0 - param9;
                     param4 = param4 - param9;
                     param7 = param7 - param9;
-                    var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+                    var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(1, param6)), vd.b(1, param3));
                     if (0 < var10) {
                       param8 = param8 >> var10;
                       param6 = param6 >> var10;
                       param3 = param3 >> var10;
-                      break L98;
+                      break L81;
                     } else {
-                      break L98;
+                      break L81;
                     }
                   }
-                  L99: {
-                    var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+                  L82: {
+                    var10 = -14 + Math.max(Math.max(vd.b(1, param7), vd.b(1, param0)), vd.b(1, param4));
                     if (var10 <= 0) {
-                      break L99;
+                      break L82;
                     } else {
                       param7 = param7 >> var10;
                       param0 = param0 >> var10;
                       param4 = param4 >> var10;
-                      break L99;
+                      break L82;
                     }
                   }
-                  L100: {
+                  L83: {
                     var10 = param0 + -param7;
                     var11 = -param8 + param6;
                     var12 = -1;
                     if (var11 != 0) {
-                      var12 = gv.a(0, param5, param8, param0, var12, param1 ^ -15, param7, var10, var11, param4);
-                      break L100;
+                      var12 = gv.a(0, param5, param8, param0, var12, 0, param7, var10, var11, param4);
+                      break L83;
                     } else {
-                      break L100;
+                      break L83;
                     }
                   }
-                  L101: {
+                  L84: {
                     if (var10 != 0) {
                       var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
-                      break L101;
+                      break L84;
                     } else {
-                      break L101;
+                      break L84;
                     }
                   }
-                  L102: {
+                  L85: {
                     param0 = param0 - param4;
                     param8 = param8 - param3;
                     param7 = param7 - param4;
-                    if (param1 == -15) {
-                      break L102;
-                    } else {
-                      hm.g((byte) 96);
-                      break L102;
-                    }
-                  }
-                  L103: {
                     param6 = param6 - param3;
                     if (var11 != 0) {
                       var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                      break L103;
+                      break L85;
                     } else {
-                      break L103;
+                      break L85;
                     }
                   }
-                  L104: {
+                  L86: {
                     if (0 == var10) {
-                      break L104;
+                      break L86;
                     } else {
                       var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                      break L104;
+                      break L86;
                     }
                   }
                   return var12;
@@ -1901,26 +1734,26 @@ final class hm extends tfa implements gf {
             }
           } else {
             if (param0 >= param9) {
-              L105: {
-                L106: {
+              L87: {
+                L88: {
                   if (param8 <= param3) {
-                    break L106;
+                    break L88;
                   } else {
                     if (param3 < param6) {
-                      break L105;
+                      break L87;
                     } else {
-                      break L106;
+                      break L88;
                     }
                   }
                 }
-                L107: {
+                L89: {
                   if (param7 <= param4) {
-                    break L107;
+                    break L89;
                   } else {
                     if (param0 > param4) {
-                      break L105;
+                      break L87;
                     } else {
-                      break L107;
+                      break L89;
                     }
                   }
                 }
@@ -1934,625 +1767,561 @@ final class hm extends tfa implements gf {
                               if (param4 >= param0) {
                                 return 1 + (1 << param5);
                               } else {
-                                L108: {
+                                L90: {
                                   param8 = param8 - param2;
                                   param3 = param3 - param2;
                                   param6 = param6 - param2;
                                   param0 = param0 - param9;
                                   param4 = param4 - param9;
                                   param7 = param7 - param9;
-                                  var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+                                  var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(1, param6)), vd.b(1, param3));
                                   if (0 < var10) {
                                     param8 = param8 >> var10;
                                     param6 = param6 >> var10;
                                     param3 = param3 >> var10;
-                                    break L108;
+                                    break L90;
                                   } else {
-                                    break L108;
+                                    break L90;
                                   }
                                 }
-                                L109: {
-                                  var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+                                L91: {
+                                  var10 = -14 + Math.max(Math.max(vd.b(1, param7), vd.b(1, param0)), vd.b(1, param4));
                                   if (var10 <= 0) {
-                                    break L109;
+                                    break L91;
                                   } else {
                                     param7 = param7 >> var10;
                                     param0 = param0 >> var10;
                                     param4 = param4 >> var10;
-                                    break L109;
+                                    break L91;
                                   }
                                 }
-                                L110: {
+                                L92: {
                                   var10 = param0 + -param7;
                                   var11 = -param8 + param6;
                                   var12 = -1;
                                   if (var11 != 0) {
-                                    var12 = gv.a(0, param5, param8, param0, var12, param1 ^ -15, param7, var10, var11, param4);
-                                    break L110;
+                                    var12 = gv.a(0, param5, param8, param0, var12, 0, param7, var10, var11, param4);
+                                    break L92;
                                   } else {
-                                    break L110;
+                                    break L92;
                                   }
                                 }
-                                L111: {
+                                L93: {
                                   if (var10 != 0) {
                                     var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
-                                    break L111;
+                                    break L93;
                                   } else {
-                                    break L111;
+                                    break L93;
                                   }
                                 }
-                                L112: {
+                                L94: {
                                   param0 = param0 - param4;
                                   param8 = param8 - param3;
                                   param7 = param7 - param4;
-                                  if (param1 == -15) {
-                                    break L112;
-                                  } else {
-                                    hm.g((byte) 96);
-                                    break L112;
-                                  }
-                                }
-                                L113: {
                                   param6 = param6 - param3;
                                   if (var11 != 0) {
                                     var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                                    break L113;
+                                    break L94;
                                   } else {
-                                    break L113;
+                                    break L94;
                                   }
                                 }
-                                L114: {
+                                L95: {
                                   if (0 == var10) {
-                                    break L114;
+                                    break L95;
                                   } else {
                                     var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                                    break L114;
+                                    break L95;
                                   }
                                 }
                                 return var12;
                               }
                             } else {
-                              L115: {
+                              L96: {
                                 param8 = param8 - param2;
                                 param3 = param3 - param2;
                                 param6 = param6 - param2;
                                 param0 = param0 - param9;
                                 param4 = param4 - param9;
                                 param7 = param7 - param9;
-                                var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+                                var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(1, param6)), vd.b(1, param3));
                                 if (0 < var10) {
                                   param8 = param8 >> var10;
                                   param6 = param6 >> var10;
                                   param3 = param3 >> var10;
-                                  break L115;
+                                  break L96;
                                 } else {
-                                  break L115;
+                                  break L96;
                                 }
                               }
-                              L116: {
-                                var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+                              L97: {
+                                var10 = -14 + Math.max(Math.max(vd.b(1, param7), vd.b(1, param0)), vd.b(1, param4));
                                 if (var10 <= 0) {
-                                  break L116;
+                                  break L97;
                                 } else {
                                   param7 = param7 >> var10;
                                   param0 = param0 >> var10;
                                   param4 = param4 >> var10;
-                                  break L116;
+                                  break L97;
                                 }
                               }
-                              L117: {
+                              L98: {
                                 var10 = param0 + -param7;
                                 var11 = -param8 + param6;
                                 var12 = -1;
                                 if (var11 != 0) {
-                                  var12 = gv.a(0, param5, param8, param0, var12, param1 ^ -15, param7, var10, var11, param4);
-                                  break L117;
+                                  var12 = gv.a(0, param5, param8, param0, var12, 0, param7, var10, var11, param4);
+                                  break L98;
                                 } else {
-                                  break L117;
+                                  break L98;
                                 }
                               }
-                              L118: {
+                              L99: {
                                 if (var10 != 0) {
                                   var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
-                                  break L118;
+                                  break L99;
                                 } else {
-                                  break L118;
+                                  break L99;
                                 }
                               }
-                              L119: {
+                              L100: {
                                 param0 = param0 - param4;
                                 param8 = param8 - param3;
                                 param7 = param7 - param4;
-                                if (param1 == -15) {
-                                  break L119;
-                                } else {
-                                  hm.g((byte) 96);
-                                  break L119;
-                                }
-                              }
-                              L120: {
                                 param6 = param6 - param3;
                                 if (var11 != 0) {
                                   var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                                  break L120;
+                                  break L100;
                                 } else {
-                                  break L120;
+                                  break L100;
                                 }
                               }
-                              L121: {
+                              L101: {
                                 if (0 == var10) {
-                                  break L121;
+                                  break L101;
                                 } else {
                                   var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                                  break L121;
+                                  break L101;
                                 }
                               }
                               return var12;
                             }
                           } else {
-                            L122: {
+                            L102: {
                               param8 = param8 - param2;
                               param3 = param3 - param2;
                               param6 = param6 - param2;
                               param0 = param0 - param9;
                               param4 = param4 - param9;
                               param7 = param7 - param9;
-                              var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+                              var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(1, param6)), vd.b(1, param3));
                               if (0 < var10) {
                                 param8 = param8 >> var10;
                                 param6 = param6 >> var10;
                                 param3 = param3 >> var10;
-                                break L122;
+                                break L102;
                               } else {
-                                break L122;
+                                break L102;
                               }
                             }
-                            L123: {
-                              var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+                            L103: {
+                              var10 = -14 + Math.max(Math.max(vd.b(1, param7), vd.b(1, param0)), vd.b(1, param4));
                               if (var10 <= 0) {
-                                break L123;
+                                break L103;
                               } else {
                                 param7 = param7 >> var10;
                                 param0 = param0 >> var10;
                                 param4 = param4 >> var10;
-                                break L123;
+                                break L103;
                               }
                             }
-                            L124: {
+                            L104: {
                               var10 = param0 + -param7;
                               var11 = -param8 + param6;
                               var12 = -1;
                               if (var11 != 0) {
-                                var12 = gv.a(0, param5, param8, param0, var12, param1 ^ -15, param7, var10, var11, param4);
-                                break L124;
+                                var12 = gv.a(0, param5, param8, param0, var12, 0, param7, var10, var11, param4);
+                                break L104;
                               } else {
-                                break L124;
+                                break L104;
                               }
                             }
-                            L125: {
+                            L105: {
                               if (var10 != 0) {
                                 var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
-                                break L125;
+                                break L105;
                               } else {
-                                break L125;
+                                break L105;
                               }
                             }
-                            L126: {
+                            L106: {
                               param0 = param0 - param4;
                               param8 = param8 - param3;
                               param7 = param7 - param4;
-                              if (param1 == -15) {
-                                break L126;
-                              } else {
-                                hm.g((byte) 96);
-                                break L126;
-                              }
-                            }
-                            L127: {
                               param6 = param6 - param3;
                               if (var11 != 0) {
                                 var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                                break L127;
+                                break L106;
                               } else {
-                                break L127;
+                                break L106;
                               }
                             }
-                            L128: {
+                            L107: {
                               if (0 == var10) {
-                                break L128;
+                                break L107;
                               } else {
                                 var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                                break L128;
+                                break L107;
                               }
                             }
                             return var12;
                           }
                         } else {
-                          L129: {
+                          L108: {
                             param8 = param8 - param2;
                             param3 = param3 - param2;
                             param6 = param6 - param2;
                             param0 = param0 - param9;
                             param4 = param4 - param9;
                             param7 = param7 - param9;
-                            var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+                            var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(1, param6)), vd.b(1, param3));
                             if (0 < var10) {
                               param8 = param8 >> var10;
                               param6 = param6 >> var10;
                               param3 = param3 >> var10;
-                              break L129;
+                              break L108;
                             } else {
-                              break L129;
+                              break L108;
                             }
                           }
-                          L130: {
-                            var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+                          L109: {
+                            var10 = -14 + Math.max(Math.max(vd.b(1, param7), vd.b(1, param0)), vd.b(1, param4));
                             if (var10 <= 0) {
-                              break L130;
+                              break L109;
                             } else {
                               param7 = param7 >> var10;
                               param0 = param0 >> var10;
                               param4 = param4 >> var10;
-                              break L130;
+                              break L109;
                             }
                           }
-                          L131: {
+                          L110: {
                             var10 = param0 + -param7;
                             var11 = -param8 + param6;
                             var12 = -1;
                             if (var11 != 0) {
-                              var12 = gv.a(0, param5, param8, param0, var12, param1 ^ -15, param7, var10, var11, param4);
-                              break L131;
+                              var12 = gv.a(0, param5, param8, param0, var12, 0, param7, var10, var11, param4);
+                              break L110;
                             } else {
-                              break L131;
+                              break L110;
                             }
                           }
-                          L132: {
+                          L111: {
                             if (var10 != 0) {
                               var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
-                              break L132;
+                              break L111;
                             } else {
-                              break L132;
+                              break L111;
                             }
                           }
-                          L133: {
+                          L112: {
                             param0 = param0 - param4;
                             param8 = param8 - param3;
                             param7 = param7 - param4;
-                            if (param1 == -15) {
-                              break L133;
-                            } else {
-                              hm.g((byte) 96);
-                              break L133;
-                            }
-                          }
-                          L134: {
                             param6 = param6 - param3;
                             if (var11 != 0) {
                               var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                              break L134;
+                              break L112;
                             } else {
-                              break L134;
+                              break L112;
                             }
                           }
-                          L135: {
+                          L113: {
                             if (0 == var10) {
-                              break L135;
+                              break L113;
                             } else {
                               var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                              break L135;
+                              break L113;
                             }
                           }
                           return var12;
                         }
                       } else {
-                        L136: {
+                        L114: {
                           param8 = param8 - param2;
                           param3 = param3 - param2;
                           param6 = param6 - param2;
                           param0 = param0 - param9;
                           param4 = param4 - param9;
                           param7 = param7 - param9;
-                          var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+                          var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(1, param6)), vd.b(1, param3));
                           if (0 < var10) {
                             param8 = param8 >> var10;
                             param6 = param6 >> var10;
                             param3 = param3 >> var10;
-                            break L136;
+                            break L114;
                           } else {
-                            break L136;
+                            break L114;
                           }
                         }
-                        L137: {
-                          var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+                        L115: {
+                          var10 = -14 + Math.max(Math.max(vd.b(1, param7), vd.b(1, param0)), vd.b(1, param4));
                           if (var10 <= 0) {
-                            break L137;
+                            break L115;
                           } else {
                             param7 = param7 >> var10;
                             param0 = param0 >> var10;
                             param4 = param4 >> var10;
-                            break L137;
+                            break L115;
                           }
                         }
-                        L138: {
+                        L116: {
                           var10 = param0 + -param7;
                           var11 = -param8 + param6;
                           var12 = -1;
                           if (var11 != 0) {
-                            var12 = gv.a(0, param5, param8, param0, var12, param1 ^ -15, param7, var10, var11, param4);
-                            break L138;
+                            var12 = gv.a(0, param5, param8, param0, var12, 0, param7, var10, var11, param4);
+                            break L116;
                           } else {
-                            break L138;
+                            break L116;
                           }
                         }
-                        L139: {
+                        L117: {
                           if (var10 != 0) {
                             var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
-                            break L139;
+                            break L117;
                           } else {
-                            break L139;
+                            break L117;
                           }
                         }
-                        L140: {
+                        L118: {
                           param0 = param0 - param4;
                           param8 = param8 - param3;
                           param7 = param7 - param4;
-                          if (param1 == -15) {
-                            break L140;
-                          } else {
-                            hm.g((byte) 96);
-                            break L140;
-                          }
-                        }
-                        L141: {
                           param6 = param6 - param3;
                           if (var11 != 0) {
                             var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                            break L141;
+                            break L118;
                           } else {
-                            break L141;
+                            break L118;
                           }
                         }
-                        L142: {
+                        L119: {
                           if (0 == var10) {
-                            break L142;
+                            break L119;
                           } else {
                             var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                            break L142;
+                            break L119;
                           }
                         }
                         return var12;
                       }
                     } else {
-                      L143: {
+                      L120: {
                         param8 = param8 - param2;
                         param3 = param3 - param2;
                         param6 = param6 - param2;
                         param0 = param0 - param9;
                         param4 = param4 - param9;
                         param7 = param7 - param9;
-                        var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+                        var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(1, param6)), vd.b(1, param3));
                         if (0 < var10) {
                           param8 = param8 >> var10;
                           param6 = param6 >> var10;
                           param3 = param3 >> var10;
-                          break L143;
+                          break L120;
                         } else {
-                          break L143;
+                          break L120;
                         }
                       }
-                      L144: {
-                        var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+                      L121: {
+                        var10 = -14 + Math.max(Math.max(vd.b(1, param7), vd.b(1, param0)), vd.b(1, param4));
                         if (var10 <= 0) {
-                          break L144;
+                          break L121;
                         } else {
                           param7 = param7 >> var10;
                           param0 = param0 >> var10;
                           param4 = param4 >> var10;
-                          break L144;
+                          break L121;
                         }
                       }
-                      L145: {
+                      L122: {
                         var10 = param0 + -param7;
                         var11 = -param8 + param6;
                         var12 = -1;
                         if (var11 != 0) {
-                          var12 = gv.a(0, param5, param8, param0, var12, param1 ^ -15, param7, var10, var11, param4);
-                          break L145;
+                          var12 = gv.a(0, param5, param8, param0, var12, 0, param7, var10, var11, param4);
+                          break L122;
                         } else {
-                          break L145;
+                          break L122;
                         }
                       }
-                      L146: {
+                      L123: {
                         if (var10 != 0) {
                           var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
-                          break L146;
+                          break L123;
                         } else {
-                          break L146;
+                          break L123;
                         }
                       }
-                      L147: {
+                      L124: {
                         param0 = param0 - param4;
                         param8 = param8 - param3;
                         param7 = param7 - param4;
-                        if (param1 == -15) {
-                          break L147;
-                        } else {
-                          hm.g((byte) 96);
-                          break L147;
-                        }
-                      }
-                      L148: {
                         param6 = param6 - param3;
                         if (var11 != 0) {
                           var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                          break L148;
+                          break L124;
                         } else {
-                          break L148;
+                          break L124;
                         }
                       }
-                      L149: {
+                      L125: {
                         if (0 == var10) {
-                          break L149;
+                          break L125;
                         } else {
                           var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                          break L149;
+                          break L125;
                         }
                       }
                       return var12;
                     }
                   } else {
-                    L150: {
+                    L126: {
                       param8 = param8 - param2;
                       param3 = param3 - param2;
                       param6 = param6 - param2;
                       param0 = param0 - param9;
                       param4 = param4 - param9;
                       param7 = param7 - param9;
-                      var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+                      var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(1, param6)), vd.b(1, param3));
                       if (0 < var10) {
                         param8 = param8 >> var10;
                         param6 = param6 >> var10;
                         param3 = param3 >> var10;
-                        break L150;
+                        break L126;
                       } else {
-                        break L150;
+                        break L126;
                       }
                     }
-                    L151: {
-                      var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+                    L127: {
+                      var10 = -14 + Math.max(Math.max(vd.b(1, param7), vd.b(1, param0)), vd.b(1, param4));
                       if (var10 <= 0) {
-                        break L151;
+                        break L127;
                       } else {
                         param7 = param7 >> var10;
                         param0 = param0 >> var10;
                         param4 = param4 >> var10;
-                        break L151;
+                        break L127;
                       }
                     }
-                    L152: {
+                    L128: {
                       var10 = param0 + -param7;
                       var11 = -param8 + param6;
                       var12 = -1;
                       if (var11 != 0) {
-                        var12 = gv.a(0, param5, param8, param0, var12, param1 ^ -15, param7, var10, var11, param4);
-                        break L152;
+                        var12 = gv.a(0, param5, param8, param0, var12, 0, param7, var10, var11, param4);
+                        break L128;
                       } else {
-                        break L152;
+                        break L128;
                       }
                     }
-                    L153: {
+                    L129: {
                       if (var10 != 0) {
                         var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
-                        break L153;
+                        break L129;
                       } else {
-                        break L153;
+                        break L129;
                       }
                     }
-                    L154: {
+                    L130: {
                       param0 = param0 - param4;
                       param8 = param8 - param3;
                       param7 = param7 - param4;
-                      if (param1 == -15) {
-                        break L154;
-                      } else {
-                        hm.g((byte) 96);
-                        break L154;
-                      }
-                    }
-                    L155: {
                       param6 = param6 - param3;
                       if (var11 != 0) {
                         var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                        break L155;
+                        break L130;
                       } else {
-                        break L155;
+                        break L130;
                       }
                     }
-                    L156: {
+                    L131: {
                       if (0 == var10) {
-                        break L156;
+                        break L131;
                       } else {
                         var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                        break L156;
+                        break L131;
                       }
                     }
                     return var12;
                   }
                 } else {
-                  L157: {
+                  L132: {
                     param8 = param8 - param2;
                     param3 = param3 - param2;
                     param6 = param6 - param2;
                     param0 = param0 - param9;
                     param4 = param4 - param9;
                     param7 = param7 - param9;
-                    var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+                    var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(1, param6)), vd.b(1, param3));
                     if (0 < var10) {
                       param8 = param8 >> var10;
                       param6 = param6 >> var10;
                       param3 = param3 >> var10;
-                      break L157;
+                      break L132;
                     } else {
-                      break L157;
+                      break L132;
                     }
                   }
-                  L158: {
-                    var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+                  L133: {
+                    var10 = -14 + Math.max(Math.max(vd.b(1, param7), vd.b(1, param0)), vd.b(1, param4));
                     if (var10 <= 0) {
-                      break L158;
+                      break L133;
                     } else {
                       param7 = param7 >> var10;
                       param0 = param0 >> var10;
                       param4 = param4 >> var10;
-                      break L158;
+                      break L133;
                     }
                   }
-                  L159: {
+                  L134: {
                     var10 = param0 + -param7;
                     var11 = -param8 + param6;
                     var12 = -1;
                     if (var11 != 0) {
-                      var12 = gv.a(0, param5, param8, param0, var12, param1 ^ -15, param7, var10, var11, param4);
-                      break L159;
+                      var12 = gv.a(0, param5, param8, param0, var12, 0, param7, var10, var11, param4);
+                      break L134;
                     } else {
-                      break L159;
+                      break L134;
                     }
                   }
-                  L160: {
+                  L135: {
                     if (var10 != 0) {
                       var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
-                      break L160;
+                      break L135;
                     } else {
-                      break L160;
+                      break L135;
                     }
                   }
-                  L161: {
+                  L136: {
                     param0 = param0 - param4;
                     param8 = param8 - param3;
                     param7 = param7 - param4;
-                    if (param1 == -15) {
-                      break L161;
-                    } else {
-                      hm.g((byte) 96);
-                      break L161;
-                    }
-                  }
-                  L162: {
                     param6 = param6 - param3;
                     if (var11 != 0) {
                       var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                      break L162;
+                      break L136;
                     } else {
-                      break L162;
+                      break L136;
                     }
                   }
-                  L163: {
+                  L137: {
                     if (0 == var10) {
-                      break L163;
+                      break L137;
                     } else {
                       var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                      break L163;
+                      break L137;
                     }
                   }
                   return var12;
@@ -2565,37 +2334,37 @@ final class hm extends tfa implements gf {
           }
         } else {
           if (param6 >= param2) {
-            L164: {
-              L165: {
+            L138: {
+              L139: {
                 if (param7 >= param9) {
-                  break L165;
+                  break L139;
                 } else {
                   if (param0 < param9) {
-                    break L164;
+                    break L138;
                   } else {
-                    break L165;
+                    break L139;
                   }
                 }
               }
-              L166: {
+              L140: {
                 if (param8 <= param3) {
-                  break L166;
+                  break L140;
                 } else {
                   if (param3 < param6) {
-                    break L164;
+                    break L138;
                   } else {
-                    break L166;
+                    break L140;
                   }
                 }
               }
-              L167: {
+              L141: {
                 if (param7 <= param4) {
-                  break L167;
+                  break L141;
                 } else {
                   if (param0 > param4) {
-                    break L164;
+                    break L138;
                   } else {
-                    break L167;
+                    break L141;
                   }
                 }
               }
@@ -2609,625 +2378,561 @@ final class hm extends tfa implements gf {
                             if (param4 >= param0) {
                               return 1 + (1 << param5);
                             } else {
-                              L168: {
+                              L142: {
                                 param8 = param8 - param2;
                                 param3 = param3 - param2;
                                 param6 = param6 - param2;
                                 param0 = param0 - param9;
                                 param4 = param4 - param9;
                                 param7 = param7 - param9;
-                                var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+                                var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(1, param6)), vd.b(1, param3));
                                 if (0 < var10) {
                                   param8 = param8 >> var10;
                                   param6 = param6 >> var10;
                                   param3 = param3 >> var10;
-                                  break L168;
+                                  break L142;
                                 } else {
-                                  break L168;
+                                  break L142;
                                 }
                               }
-                              L169: {
-                                var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+                              L143: {
+                                var10 = -14 + Math.max(Math.max(vd.b(1, param7), vd.b(1, param0)), vd.b(1, param4));
                                 if (var10 <= 0) {
-                                  break L169;
+                                  break L143;
                                 } else {
                                   param7 = param7 >> var10;
                                   param0 = param0 >> var10;
                                   param4 = param4 >> var10;
-                                  break L169;
+                                  break L143;
                                 }
                               }
-                              L170: {
+                              L144: {
                                 var10 = param0 + -param7;
                                 var11 = -param8 + param6;
                                 var12 = -1;
                                 if (var11 != 0) {
-                                  var12 = gv.a(0, param5, param8, param0, var12, param1 ^ -15, param7, var10, var11, param4);
-                                  break L170;
+                                  var12 = gv.a(0, param5, param8, param0, var12, 0, param7, var10, var11, param4);
+                                  break L144;
                                 } else {
-                                  break L170;
+                                  break L144;
                                 }
                               }
-                              L171: {
+                              L145: {
                                 if (var10 != 0) {
                                   var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
-                                  break L171;
+                                  break L145;
                                 } else {
-                                  break L171;
+                                  break L145;
                                 }
                               }
-                              L172: {
+                              L146: {
                                 param0 = param0 - param4;
                                 param8 = param8 - param3;
                                 param7 = param7 - param4;
-                                if (param1 == -15) {
-                                  break L172;
-                                } else {
-                                  hm.g((byte) 96);
-                                  break L172;
-                                }
-                              }
-                              L173: {
                                 param6 = param6 - param3;
                                 if (var11 != 0) {
                                   var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                                  break L173;
+                                  break L146;
                                 } else {
-                                  break L173;
+                                  break L146;
                                 }
                               }
-                              L174: {
+                              L147: {
                                 if (0 == var10) {
-                                  break L174;
+                                  break L147;
                                 } else {
                                   var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                                  break L174;
+                                  break L147;
                                 }
                               }
                               return var12;
                             }
                           } else {
-                            L175: {
+                            L148: {
                               param8 = param8 - param2;
                               param3 = param3 - param2;
                               param6 = param6 - param2;
                               param0 = param0 - param9;
                               param4 = param4 - param9;
                               param7 = param7 - param9;
-                              var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+                              var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(1, param6)), vd.b(1, param3));
                               if (0 < var10) {
                                 param8 = param8 >> var10;
                                 param6 = param6 >> var10;
                                 param3 = param3 >> var10;
-                                break L175;
+                                break L148;
                               } else {
-                                break L175;
+                                break L148;
                               }
                             }
-                            L176: {
-                              var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+                            L149: {
+                              var10 = -14 + Math.max(Math.max(vd.b(1, param7), vd.b(1, param0)), vd.b(1, param4));
                               if (var10 <= 0) {
-                                break L176;
+                                break L149;
                               } else {
                                 param7 = param7 >> var10;
                                 param0 = param0 >> var10;
                                 param4 = param4 >> var10;
-                                break L176;
+                                break L149;
                               }
                             }
-                            L177: {
+                            L150: {
                               var10 = param0 + -param7;
                               var11 = -param8 + param6;
                               var12 = -1;
                               if (var11 != 0) {
-                                var12 = gv.a(0, param5, param8, param0, var12, param1 ^ -15, param7, var10, var11, param4);
-                                break L177;
+                                var12 = gv.a(0, param5, param8, param0, var12, 0, param7, var10, var11, param4);
+                                break L150;
                               } else {
-                                break L177;
+                                break L150;
                               }
                             }
-                            L178: {
+                            L151: {
                               if (var10 != 0) {
                                 var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
-                                break L178;
+                                break L151;
                               } else {
-                                break L178;
+                                break L151;
                               }
                             }
-                            L179: {
+                            L152: {
                               param0 = param0 - param4;
                               param8 = param8 - param3;
                               param7 = param7 - param4;
-                              if (param1 == -15) {
-                                break L179;
-                              } else {
-                                hm.g((byte) 96);
-                                break L179;
-                              }
-                            }
-                            L180: {
                               param6 = param6 - param3;
                               if (var11 != 0) {
                                 var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                                break L180;
+                                break L152;
                               } else {
-                                break L180;
+                                break L152;
                               }
                             }
-                            L181: {
+                            L153: {
                               if (0 == var10) {
-                                break L181;
+                                break L153;
                               } else {
                                 var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                                break L181;
+                                break L153;
                               }
                             }
                             return var12;
                           }
                         } else {
-                          L182: {
+                          L154: {
                             param8 = param8 - param2;
                             param3 = param3 - param2;
                             param6 = param6 - param2;
                             param0 = param0 - param9;
                             param4 = param4 - param9;
                             param7 = param7 - param9;
-                            var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+                            var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(1, param6)), vd.b(1, param3));
                             if (0 < var10) {
                               param8 = param8 >> var10;
                               param6 = param6 >> var10;
                               param3 = param3 >> var10;
-                              break L182;
+                              break L154;
                             } else {
-                              break L182;
+                              break L154;
                             }
                           }
-                          L183: {
-                            var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+                          L155: {
+                            var10 = -14 + Math.max(Math.max(vd.b(1, param7), vd.b(1, param0)), vd.b(1, param4));
                             if (var10 <= 0) {
-                              break L183;
+                              break L155;
                             } else {
                               param7 = param7 >> var10;
                               param0 = param0 >> var10;
                               param4 = param4 >> var10;
-                              break L183;
+                              break L155;
                             }
                           }
-                          L184: {
+                          L156: {
                             var10 = param0 + -param7;
                             var11 = -param8 + param6;
                             var12 = -1;
                             if (var11 != 0) {
-                              var12 = gv.a(0, param5, param8, param0, var12, param1 ^ -15, param7, var10, var11, param4);
-                              break L184;
+                              var12 = gv.a(0, param5, param8, param0, var12, 0, param7, var10, var11, param4);
+                              break L156;
                             } else {
-                              break L184;
+                              break L156;
                             }
                           }
-                          L185: {
+                          L157: {
                             if (var10 != 0) {
                               var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
-                              break L185;
+                              break L157;
                             } else {
-                              break L185;
+                              break L157;
                             }
                           }
-                          L186: {
+                          L158: {
                             param0 = param0 - param4;
                             param8 = param8 - param3;
                             param7 = param7 - param4;
-                            if (param1 == -15) {
-                              break L186;
-                            } else {
-                              hm.g((byte) 96);
-                              break L186;
-                            }
-                          }
-                          L187: {
                             param6 = param6 - param3;
                             if (var11 != 0) {
                               var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                              break L187;
+                              break L158;
                             } else {
-                              break L187;
+                              break L158;
                             }
                           }
-                          L188: {
+                          L159: {
                             if (0 == var10) {
-                              break L188;
+                              break L159;
                             } else {
                               var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                              break L188;
+                              break L159;
                             }
                           }
                           return var12;
                         }
                       } else {
-                        L189: {
+                        L160: {
                           param8 = param8 - param2;
                           param3 = param3 - param2;
                           param6 = param6 - param2;
                           param0 = param0 - param9;
                           param4 = param4 - param9;
                           param7 = param7 - param9;
-                          var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+                          var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(1, param6)), vd.b(1, param3));
                           if (0 < var10) {
                             param8 = param8 >> var10;
                             param6 = param6 >> var10;
                             param3 = param3 >> var10;
-                            break L189;
+                            break L160;
                           } else {
-                            break L189;
+                            break L160;
                           }
                         }
-                        L190: {
-                          var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+                        L161: {
+                          var10 = -14 + Math.max(Math.max(vd.b(1, param7), vd.b(1, param0)), vd.b(1, param4));
                           if (var10 <= 0) {
-                            break L190;
+                            break L161;
                           } else {
                             param7 = param7 >> var10;
                             param0 = param0 >> var10;
                             param4 = param4 >> var10;
-                            break L190;
+                            break L161;
                           }
                         }
-                        L191: {
+                        L162: {
                           var10 = param0 + -param7;
                           var11 = -param8 + param6;
                           var12 = -1;
                           if (var11 != 0) {
-                            var12 = gv.a(0, param5, param8, param0, var12, param1 ^ -15, param7, var10, var11, param4);
-                            break L191;
+                            var12 = gv.a(0, param5, param8, param0, var12, 0, param7, var10, var11, param4);
+                            break L162;
                           } else {
-                            break L191;
+                            break L162;
                           }
                         }
-                        L192: {
+                        L163: {
                           if (var10 != 0) {
                             var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
-                            break L192;
+                            break L163;
                           } else {
-                            break L192;
+                            break L163;
                           }
                         }
-                        L193: {
+                        L164: {
                           param0 = param0 - param4;
                           param8 = param8 - param3;
                           param7 = param7 - param4;
-                          if (param1 == -15) {
-                            break L193;
-                          } else {
-                            hm.g((byte) 96);
-                            break L193;
-                          }
-                        }
-                        L194: {
                           param6 = param6 - param3;
                           if (var11 != 0) {
                             var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                            break L194;
+                            break L164;
                           } else {
-                            break L194;
+                            break L164;
                           }
                         }
-                        L195: {
+                        L165: {
                           if (0 == var10) {
-                            break L195;
+                            break L165;
                           } else {
                             var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                            break L195;
+                            break L165;
                           }
                         }
                         return var12;
                       }
                     } else {
-                      L196: {
+                      L166: {
                         param8 = param8 - param2;
                         param3 = param3 - param2;
                         param6 = param6 - param2;
                         param0 = param0 - param9;
                         param4 = param4 - param9;
                         param7 = param7 - param9;
-                        var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+                        var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(1, param6)), vd.b(1, param3));
                         if (0 < var10) {
                           param8 = param8 >> var10;
                           param6 = param6 >> var10;
                           param3 = param3 >> var10;
-                          break L196;
+                          break L166;
                         } else {
-                          break L196;
+                          break L166;
                         }
                       }
-                      L197: {
-                        var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+                      L167: {
+                        var10 = -14 + Math.max(Math.max(vd.b(1, param7), vd.b(1, param0)), vd.b(1, param4));
                         if (var10 <= 0) {
-                          break L197;
+                          break L167;
                         } else {
                           param7 = param7 >> var10;
                           param0 = param0 >> var10;
                           param4 = param4 >> var10;
-                          break L197;
+                          break L167;
                         }
                       }
-                      L198: {
+                      L168: {
                         var10 = param0 + -param7;
                         var11 = -param8 + param6;
                         var12 = -1;
                         if (var11 != 0) {
-                          var12 = gv.a(0, param5, param8, param0, var12, param1 ^ -15, param7, var10, var11, param4);
-                          break L198;
+                          var12 = gv.a(0, param5, param8, param0, var12, 0, param7, var10, var11, param4);
+                          break L168;
                         } else {
-                          break L198;
+                          break L168;
                         }
                       }
-                      L199: {
+                      L169: {
                         if (var10 != 0) {
                           var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
-                          break L199;
+                          break L169;
                         } else {
-                          break L199;
+                          break L169;
                         }
                       }
-                      L200: {
+                      L170: {
                         param0 = param0 - param4;
                         param8 = param8 - param3;
                         param7 = param7 - param4;
-                        if (param1 == -15) {
-                          break L200;
-                        } else {
-                          hm.g((byte) 96);
-                          break L200;
-                        }
-                      }
-                      L201: {
                         param6 = param6 - param3;
                         if (var11 != 0) {
                           var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                          break L201;
+                          break L170;
                         } else {
-                          break L201;
+                          break L170;
                         }
                       }
-                      L202: {
+                      L171: {
                         if (0 == var10) {
-                          break L202;
+                          break L171;
                         } else {
                           var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                          break L202;
+                          break L171;
                         }
                       }
                       return var12;
                     }
                   } else {
-                    L203: {
+                    L172: {
                       param8 = param8 - param2;
                       param3 = param3 - param2;
                       param6 = param6 - param2;
                       param0 = param0 - param9;
                       param4 = param4 - param9;
                       param7 = param7 - param9;
-                      var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+                      var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(1, param6)), vd.b(1, param3));
                       if (0 < var10) {
                         param8 = param8 >> var10;
                         param6 = param6 >> var10;
                         param3 = param3 >> var10;
-                        break L203;
+                        break L172;
                       } else {
-                        break L203;
+                        break L172;
                       }
                     }
-                    L204: {
-                      var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+                    L173: {
+                      var10 = -14 + Math.max(Math.max(vd.b(1, param7), vd.b(1, param0)), vd.b(1, param4));
                       if (var10 <= 0) {
-                        break L204;
+                        break L173;
                       } else {
                         param7 = param7 >> var10;
                         param0 = param0 >> var10;
                         param4 = param4 >> var10;
-                        break L204;
+                        break L173;
                       }
                     }
-                    L205: {
+                    L174: {
                       var10 = param0 + -param7;
                       var11 = -param8 + param6;
                       var12 = -1;
                       if (var11 != 0) {
-                        var12 = gv.a(0, param5, param8, param0, var12, param1 ^ -15, param7, var10, var11, param4);
-                        break L205;
+                        var12 = gv.a(0, param5, param8, param0, var12, 0, param7, var10, var11, param4);
+                        break L174;
                       } else {
-                        break L205;
+                        break L174;
                       }
                     }
-                    L206: {
+                    L175: {
                       if (var10 != 0) {
                         var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
-                        break L206;
+                        break L175;
                       } else {
-                        break L206;
+                        break L175;
                       }
                     }
-                    L207: {
+                    L176: {
                       param0 = param0 - param4;
                       param8 = param8 - param3;
                       param7 = param7 - param4;
-                      if (param1 == -15) {
-                        break L207;
-                      } else {
-                        hm.g((byte) 96);
-                        break L207;
-                      }
-                    }
-                    L208: {
                       param6 = param6 - param3;
                       if (var11 != 0) {
                         var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                        break L208;
+                        break L176;
                       } else {
-                        break L208;
+                        break L176;
                       }
                     }
-                    L209: {
+                    L177: {
                       if (0 == var10) {
-                        break L209;
+                        break L177;
                       } else {
                         var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                        break L209;
+                        break L177;
                       }
                     }
                     return var12;
                   }
                 } else {
-                  L210: {
+                  L178: {
                     param8 = param8 - param2;
                     param3 = param3 - param2;
                     param6 = param6 - param2;
                     param0 = param0 - param9;
                     param4 = param4 - param9;
                     param7 = param7 - param9;
-                    var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+                    var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(1, param6)), vd.b(1, param3));
                     if (0 < var10) {
                       param8 = param8 >> var10;
                       param6 = param6 >> var10;
                       param3 = param3 >> var10;
-                      break L210;
+                      break L178;
                     } else {
-                      break L210;
+                      break L178;
                     }
                   }
-                  L211: {
-                    var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+                  L179: {
+                    var10 = -14 + Math.max(Math.max(vd.b(1, param7), vd.b(1, param0)), vd.b(1, param4));
                     if (var10 <= 0) {
-                      break L211;
+                      break L179;
                     } else {
                       param7 = param7 >> var10;
                       param0 = param0 >> var10;
                       param4 = param4 >> var10;
-                      break L211;
+                      break L179;
                     }
                   }
-                  L212: {
+                  L180: {
                     var10 = param0 + -param7;
                     var11 = -param8 + param6;
                     var12 = -1;
                     if (var11 != 0) {
-                      var12 = gv.a(0, param5, param8, param0, var12, param1 ^ -15, param7, var10, var11, param4);
-                      break L212;
+                      var12 = gv.a(0, param5, param8, param0, var12, 0, param7, var10, var11, param4);
+                      break L180;
                     } else {
-                      break L212;
+                      break L180;
                     }
                   }
-                  L213: {
+                  L181: {
                     if (var10 != 0) {
                       var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
-                      break L213;
+                      break L181;
                     } else {
-                      break L213;
+                      break L181;
                     }
                   }
-                  L214: {
+                  L182: {
                     param0 = param0 - param4;
                     param8 = param8 - param3;
                     param7 = param7 - param4;
-                    if (param1 == -15) {
-                      break L214;
-                    } else {
-                      hm.g((byte) 96);
-                      break L214;
-                    }
-                  }
-                  L215: {
                     param6 = param6 - param3;
                     if (var11 != 0) {
                       var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                      break L215;
+                      break L182;
                     } else {
-                      break L215;
+                      break L182;
                     }
                   }
-                  L216: {
+                  L183: {
                     if (0 == var10) {
-                      break L216;
+                      break L183;
                     } else {
                       var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                      break L216;
+                      break L183;
                     }
                   }
                   return var12;
                 }
               } else {
-                L217: {
+                L184: {
                   param8 = param8 - param2;
                   param3 = param3 - param2;
                   param6 = param6 - param2;
                   param0 = param0 - param9;
                   param4 = param4 - param9;
                   param7 = param7 - param9;
-                  var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(param1 + 16, param6)), vd.b(1, param3));
+                  var10 = -14 + Math.max(Math.max(vd.b(1, param8), vd.b(1, param6)), vd.b(1, param3));
                   if (0 < var10) {
                     param8 = param8 >> var10;
                     param6 = param6 >> var10;
                     param3 = param3 >> var10;
-                    break L217;
+                    break L184;
                   } else {
-                    break L217;
+                    break L184;
                   }
                 }
-                L218: {
-                  var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
+                L185: {
+                  var10 = -14 + Math.max(Math.max(vd.b(1, param7), vd.b(1, param0)), vd.b(1, param4));
                   if (var10 <= 0) {
-                    break L218;
+                    break L185;
                   } else {
                     param7 = param7 >> var10;
                     param0 = param0 >> var10;
                     param4 = param4 >> var10;
-                    break L218;
+                    break L185;
                   }
                 }
-                L219: {
+                L186: {
                   var10 = param0 + -param7;
                   var11 = -param8 + param6;
                   var12 = -1;
                   if (var11 != 0) {
-                    var12 = gv.a(0, param5, param8, param0, var12, param1 ^ -15, param7, var10, var11, param4);
-                    break L219;
+                    var12 = gv.a(0, param5, param8, param0, var12, 0, param7, var10, var11, param4);
+                    break L186;
                   } else {
-                    break L219;
+                    break L186;
                   }
                 }
-                L220: {
+                L187: {
                   if (var10 != 0) {
                     var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
-                    break L220;
+                    break L187;
                   } else {
-                    break L220;
+                    break L187;
                   }
                 }
-                L221: {
+                L188: {
                   param0 = param0 - param4;
                   param8 = param8 - param3;
                   param7 = param7 - param4;
-                  if (param1 == -15) {
-                    break L221;
-                  } else {
-                    hm.g((byte) 96);
-                    break L221;
-                  }
-                }
-                L222: {
                   param6 = param6 - param3;
                   if (var11 != 0) {
                     var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
-                    break L222;
+                    break L188;
                   } else {
-                    break L222;
+                    break L188;
                   }
                 }
-                L223: {
+                L189: {
                   if (0 == var10) {
-                    break L223;
+                    break L189;
                   } else {
                     var12 = gv.a(-param3, param5, param7, param6, var12, 0, param8, var11, var10, 0);
-                    break L223;
+                    break L189;
                   }
                 }
                 return var12;

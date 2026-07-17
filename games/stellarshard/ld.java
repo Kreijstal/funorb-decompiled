@@ -52,7 +52,7 @@ final class ld extends gj {
         }
     }
 
-    final static void e(byte param0) {
+    final static void e() {
         wk.field_c = false;
         h.field_c = -1;
         am.field_f = -1;

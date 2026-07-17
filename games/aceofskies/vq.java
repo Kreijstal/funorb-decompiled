@@ -330,38 +330,28 @@ class vq extends mi {
         jo var4 = null;
         jo var5 = null;
         int var6 = 0;
-        Object var7 = null;
-        L0: {
-          var6 = AceOfSkies.field_G ? 1 : 0;
-          if (param1 == 0) {
-            break L0;
-          } else {
-            var7 = null;
-            ((vq) this).a(-112, (String) null, -74);
-            break L0;
-          }
-        }
+        var6 = AceOfSkies.field_G ? 1 : 0;
         var4 = (jo) (Object) ((vq) this).field_x.d(268435455);
-        L1: while (true) {
+        L0: while (true) {
           if (var4 != null) {
             var5 = var4;
-            L2: while (true) {
+            L1: while (true) {
               if (var5 == null) {
                 var4 = (jo) (Object) ((vq) this).field_x.b((byte) 103);
-                continue L1;
+                continue L0;
               } else {
-                L3: {
+                L2: {
                   if (var5.field_i > param2) {
-                    break L3;
+                    break L2;
                   } else {
                     if (var5.field_g > param0) {
-                      break L3;
+                      break L2;
                     } else {
                       if (var5.field_h + var5.field_i <= param2) {
-                        break L3;
+                        break L2;
                       } else {
                         if (var5.field_g + var5.field_e < param0) {
-                          break L3;
+                          break L2;
                         } else {
                           return var4;
                         }
@@ -370,7 +360,7 @@ class vq extends mi {
                   }
                 }
                 var5 = var5.field_f;
-                continue L2;
+                continue L1;
               }
             }
           } else {

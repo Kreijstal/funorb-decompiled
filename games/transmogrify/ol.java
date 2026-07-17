@@ -53,8 +53,8 @@ final class ol {
             try {
               L0: {
                 L1: {
-                  nf.field_l = new hj(param1);
-                  ff.field_D = new hj(param6);
+                  nf.field_l = new hj(5000);
+                  ff.field_D = new hj(5000);
                   dh.field_x = param12;
                   ua.field_c = param8;
                   if (!param10) {
@@ -70,25 +70,21 @@ final class ol {
                 kc.field_D = stackIn_3_0 != 0;
                 cl.field_w = param5;
                 ai.field_d = param9;
-                if (param11 == 64) {
-                  wd.field_g = param7;
-                  pi.field_h = param2;
-                  lf.field_c = param13;
-                  l.field_b = param4;
-                  kf.field_p = param0;
-                  qb.field_k = param3;
-                  if (null == l.field_b.field_v) {
-                    break L0;
-                  } else {
-                    {
-                      L2: {
-                        ah.field_b = new we(l.field_b.field_v, 64, 0);
-                        break L2;
-                      }
-                    }
-                    return;
-                  }
+                wd.field_g = param7;
+                pi.field_h = param2;
+                lf.field_c = param13;
+                l.field_b = param4;
+                kf.field_p = param0;
+                qb.field_k = param3;
+                if (null == l.field_b.field_v) {
+                  break L0;
                 } else {
+                  {
+                    L2: {
+                      ah.field_b = new we(l.field_b.field_v, 64, 0);
+                      break L2;
+                    }
+                  }
                   return;
                 }
               }
@@ -97,7 +93,7 @@ final class ol {
               L3: {
                 var15_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_10_0 = (RuntimeException) var15_ref;
-                stackOut_10_1 = new StringBuilder().append("ol.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+                stackOut_10_1 = new StringBuilder().append("ol.C(").append(param0).append(44).append(5000).append(44).append(param2).append(44).append(param3).append(44);
                 stackIn_12_0 = stackOut_10_0;
                 stackIn_12_1 = stackOut_10_1;
                 stackIn_11_0 = stackOut_10_0;
@@ -122,7 +118,7 @@ final class ol {
               }
               L4: {
                 stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-                stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44).append(param8).append(44);
+                stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(param5).append(44).append(5000).append(44).append(param7).append(44).append(param8).append(44);
                 stackIn_15_0 = stackOut_13_0;
                 stackIn_15_1 = stackOut_13_1;
                 stackIn_14_0 = stackOut_13_0;
@@ -145,7 +141,7 @@ final class ol {
                   break L4;
                 }
               }
-              throw ch.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param10 + 44 + param11 + 44 + param12 + 44 + param13 + 41);
+              throw ch.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param10 + 44 + 64 + 44 + param12 + 44 + param13 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -173,7 +169,8 @@ final class ol {
             return stackIn_11_0;
           }
         } else {
-          ol.a(false);
+          int discarded$5 = 0;
+          ol.a();
           if (null == ((ol) this).field_g) {
             return 0;
           } else {
@@ -193,7 +190,7 @@ final class ol {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_c = null;
         field_d = null;
         field_e = null;
@@ -337,102 +334,98 @@ final class ol {
         if (param1 == 0) {
           return 0;
         } else {
-          if (param1 <= 0) {
+          if (param1 < -1) {
             L0: {
-              var2 = 2;
-              if (-65536 <= param1) {
+              var2 = 1;
+              if (param1 <= 65535) {
                 break L0;
               } else {
-                param1 = param1 >> 16;
                 var2 += 16;
+                param1 = param1 >> 16;
                 break L0;
               }
             }
             L1: {
-              if (param1 >= -256) {
+              if (param1 > 255) {
+                param1 = param1 >> 8;
+                var2 += 8;
                 break L1;
               } else {
-                var2 += 8;
-                param1 = param1 >> 8;
                 break L1;
               }
             }
-            if (param0 != -23755) {
-              return 48;
-            } else {
-              L2: {
-                if (-16 > param1) {
-                  param1 = param1 >> 4;
-                  var2 += 4;
-                  break L2;
-                } else {
-                  break L2;
-                }
+            L2: {
+              if (param1 > 15) {
+                var2 += 4;
+                param1 = param1 >> 4;
+                break L2;
+              } else {
+                break L2;
               }
-              L3: {
-                if (param1 >= -4) {
-                  break L3;
-                } else {
-                  var2 += 2;
-                  param1 = param1 >> 2;
-                  break L3;
-                }
-              }
-              L4: {
-                if (param1 >= -2) {
-                  break L4;
-                } else {
-                  var2++;
-                  param1 = param1 >> 1;
-                  break L4;
-                }
-              }
-              return var2;
             }
+            L3: {
+              if (param1 > 3) {
+                var2 += 2;
+                param1 = param1 >> 2;
+                break L3;
+              } else {
+                break L3;
+              }
+            }
+            L4: {
+              if (param1 > 1) {
+                param1 = param1 >> 1;
+                var2++;
+                break L4;
+              } else {
+                break L4;
+              }
+            }
+            return var2;
           } else {
             L5: {
-              var2 = 1;
-              if (param1 <= 65535) {
+              var2 = 2;
+              if (-65536 <= param1) {
                 break L5;
               } else {
-                var2 += 16;
                 param1 = param1 >> 16;
+                var2 += 16;
                 break L5;
               }
             }
             L6: {
-              if (param1 > 255) {
-                param1 = param1 >> 8;
-                var2 += 8;
+              if (255 <= param1) {
                 break L6;
               } else {
+                var2 += 8;
+                param1 = param1 >> 8;
                 break L6;
               }
             }
             L7: {
-              if (param1 > 15) {
-                var2 += 4;
+              if (-16 > param1) {
                 param1 = param1 >> 4;
+                var2 += 4;
                 break L7;
               } else {
                 break L7;
               }
             }
             L8: {
-              if (param1 > 3) {
-                var2 += 2;
-                param1 = param1 >> 2;
+              if (param1 >= -4) {
                 break L8;
               } else {
+                var2 += 2;
+                param1 = param1 >> 2;
                 break L8;
               }
             }
             L9: {
-              if (param1 > 1) {
-                param1 = param1 >> 1;
-                var2++;
+              if (param1 >= -2) {
                 break L9;
               } else {
+                var2++;
+                param1 = param1 >> 1;
                 break L9;
               }
             }

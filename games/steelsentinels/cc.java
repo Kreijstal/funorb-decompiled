@@ -40,7 +40,8 @@ final class cc extends gh {
                     wc.a(0, var5 != 0, n.field_x.field_hc, var4, n.field_x.b(true), param0);
                 }
                 n.field_x = null;
-                rh.a(false);
+                int discarded$0 = 0;
+                rh.a();
             }
         }
     }
@@ -158,7 +159,7 @@ final class cc extends gh {
         }
     }
 
-    public static void k(int param0) {
+    public static void k() {
         field_Xb = null;
         field_Tb = null;
         field_ic = null;

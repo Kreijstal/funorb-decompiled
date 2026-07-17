@@ -295,13 +295,16 @@ final class ama extends lba {
                     var2_int = oba.field_e.c(~param1);
                     if (var2_int <= 0) {
                       if (~var2_int > param1) {
-                        dea.a(60);
+                        int discarded$9 = 60;
+                        dea.a();
                         return false;
                       } else {
-                        if (rf.b((byte) -121) <= 30000L) {
+                        int discarded$10 = -121;
+                        if (rf.b() <= 30000L) {
                           break L0;
                         } else {
-                          dea.a(60);
+                          int discarded$11 = 60;
+                          dea.a();
                           return false;
                         }
                       }
@@ -332,7 +335,8 @@ final class ama extends lba {
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
-                  dea.a(60);
+                  int discarded$12 = 60;
+                  dea.a();
                   return false;
                 }
                 return false;

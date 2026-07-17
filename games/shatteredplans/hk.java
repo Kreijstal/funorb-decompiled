@@ -28,8 +28,8 @@ final class hk extends il {
         super(param0, param1, 33, 20, 30);
     }
 
-    final static void a(int param0, byte param1) {
-        vg.field_i = 1000000000L / (long)param0;
+    final static void a() {
+        vg.field_i = 20000000L;
     }
 
     static {

@@ -11,7 +11,7 @@ final class p extends ta {
     static fn field_x;
     static int field_u;
 
-    public static void b(int param0) {
+    public static void b() {
         field_x = null;
         field_w = null;
         field_t = null;
@@ -45,7 +45,7 @@ final class p extends ta {
         try {
           L0: {
             L1: {
-              if (param0 == param1) {
+              if (param0 == 1) {
                 ((p) this).field_r = kc.a('<', param2.h((byte) 122), 0);
                 break L1;
               } else {
@@ -113,7 +113,7 @@ final class p extends ta {
           L6: {
             var4 = decompiledCaughtException;
             stackOut_19_0 = (RuntimeException) var4;
-            stackOut_19_1 = new StringBuilder().append("p.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_19_1 = new StringBuilder().append("p.A(").append(param0).append(44).append(1).append(44);
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;

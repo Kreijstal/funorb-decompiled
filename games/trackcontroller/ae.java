@@ -16,7 +16,7 @@ abstract class ae {
     hi field_l;
 
     final static int a(byte param0, int param1) {
-        int var2 = -94 / ((55 - param0) / 54);
+        int var2 = -94;
         int var3 = 0;
         if (!((param1 & 7) == 0)) {
             var3 = 8 + -(7 & param1);

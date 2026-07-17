@@ -14,7 +14,7 @@ abstract class uc {
 
     abstract void a(java.awt.Component param0, byte param1);
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_b = null;
         int var1 = 0;

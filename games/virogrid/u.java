@@ -99,117 +99,113 @@ final class u extends wb {
         var7 = Virogrid.field_F ? 1 : 0;
         try {
           L0: {
-            if (param0 == -4) {
-              L1: {
-                if (param2 != 1) {
-                  if (param2 != 2) {
-                    if (param2 != 3) {
-                      if (param2 != 4) {
-                        break L1;
-                      } else {
-                        ((u) this).field_o = true;
-                        break L1;
-                      }
+            L1: {
+              if (param2 != 1) {
+                if (param2 != 2) {
+                  if (param2 != 3) {
+                    if (param2 != 4) {
+                      break L1;
                     } else {
-                      var4_int = param1.g(11132);
-                      ((u) this).field_w = new int[var4_int];
-                      ((u) this).field_r = new char[var4_int];
-                      var5 = 0;
-                      L2: while (true) {
-                        if (var4_int <= var5) {
-                          break L1;
-                        } else {
-                          L3: {
-                            ((u) this).field_w[var5] = param1.c((byte) -88);
-                            var6 = param1.a((byte) 47);
-                            stackOut_15_0 = ((u) this).field_r;
-                            stackOut_15_1 = var5;
-                            stackIn_17_0 = stackOut_15_0;
-                            stackIn_17_1 = stackOut_15_1;
-                            stackIn_16_0 = stackOut_15_0;
-                            stackIn_16_1 = stackOut_15_1;
-                            if (0 != var6) {
-                              stackOut_17_0 = (char[]) (Object) stackIn_17_0;
-                              stackOut_17_1 = stackIn_17_1;
-                              stackOut_17_2 = mm.a(param0 + 97, (byte) var6);
-                              stackIn_18_0 = stackOut_17_0;
-                              stackIn_18_1 = stackOut_17_1;
-                              stackIn_18_2 = stackOut_17_2;
-                              break L3;
-                            } else {
-                              stackOut_16_0 = (char[]) (Object) stackIn_16_0;
-                              stackOut_16_1 = stackIn_16_1;
-                              stackOut_16_2 = 0;
-                              stackIn_18_0 = stackOut_16_0;
-                              stackIn_18_1 = stackOut_16_1;
-                              stackIn_18_2 = stackOut_16_2;
-                              break L3;
-                            }
-                          }
-                          stackIn_18_0[stackIn_18_1] = (char) stackIn_18_2;
-                          var5++;
-                          continue L2;
-                        }
-                      }
+                      ((u) this).field_o = true;
+                      break L1;
                     }
                   } else {
                     var4_int = param1.g(11132);
-                    ((u) this).field_x = new int[var4_int];
-                    ((u) this).field_p = new char[var4_int];
+                    ((u) this).field_w = new int[var4_int];
+                    ((u) this).field_r = new char[var4_int];
                     var5 = 0;
-                    L4: while (true) {
-                      if (var5 >= var4_int) {
+                    L2: while (true) {
+                      if (var4_int <= var5) {
                         break L1;
                       } else {
-                        L5: {
-                          ((u) this).field_x[var5] = param1.c((byte) 125);
-                          var6 = param1.a((byte) 77);
-                          stackOut_8_0 = ((u) this).field_p;
-                          stackOut_8_1 = var5;
-                          stackIn_10_0 = stackOut_8_0;
-                          stackIn_10_1 = stackOut_8_1;
-                          stackIn_9_0 = stackOut_8_0;
-                          stackIn_9_1 = stackOut_8_1;
-                          if (var6 == 0) {
-                            stackOut_10_0 = (char[]) (Object) stackIn_10_0;
-                            stackOut_10_1 = stackIn_10_1;
-                            stackOut_10_2 = 0;
-                            stackIn_11_0 = stackOut_10_0;
-                            stackIn_11_1 = stackOut_10_1;
-                            stackIn_11_2 = stackOut_10_2;
-                            break L5;
+                        L3: {
+                          ((u) this).field_w[var5] = param1.c((byte) -88);
+                          var6 = param1.a((byte) 47);
+                          stackOut_15_0 = ((u) this).field_r;
+                          stackOut_15_1 = var5;
+                          stackIn_17_0 = stackOut_15_0;
+                          stackIn_17_1 = stackOut_15_1;
+                          stackIn_16_0 = stackOut_15_0;
+                          stackIn_16_1 = stackOut_15_1;
+                          if (0 != var6) {
+                            stackOut_17_0 = (char[]) (Object) stackIn_17_0;
+                            stackOut_17_1 = stackIn_17_1;
+                            stackOut_17_2 = mm.a(93, (byte) var6);
+                            stackIn_18_0 = stackOut_17_0;
+                            stackIn_18_1 = stackOut_17_1;
+                            stackIn_18_2 = stackOut_17_2;
+                            break L3;
                           } else {
-                            stackOut_9_0 = (char[]) (Object) stackIn_9_0;
-                            stackOut_9_1 = stackIn_9_1;
-                            stackOut_9_2 = mm.a(100, (byte) var6);
-                            stackIn_11_0 = stackOut_9_0;
-                            stackIn_11_1 = stackOut_9_1;
-                            stackIn_11_2 = stackOut_9_2;
-                            break L5;
+                            stackOut_16_0 = (char[]) (Object) stackIn_16_0;
+                            stackOut_16_1 = stackIn_16_1;
+                            stackOut_16_2 = 0;
+                            stackIn_18_0 = stackOut_16_0;
+                            stackIn_18_1 = stackOut_16_1;
+                            stackIn_18_2 = stackOut_16_2;
+                            break L3;
                           }
                         }
-                        stackIn_11_0[stackIn_11_1] = (char) stackIn_11_2;
+                        stackIn_18_0[stackIn_18_1] = (char) stackIn_18_2;
                         var5++;
-                        continue L4;
+                        continue L2;
                       }
                     }
                   }
                 } else {
-                  ((u) this).field_v = param1.h(param0 + -121);
-                  break L1;
+                  var4_int = param1.g(11132);
+                  ((u) this).field_x = new int[var4_int];
+                  ((u) this).field_p = new char[var4_int];
+                  var5 = 0;
+                  L4: while (true) {
+                    if (var5 >= var4_int) {
+                      break L1;
+                    } else {
+                      L5: {
+                        ((u) this).field_x[var5] = param1.c((byte) 125);
+                        var6 = param1.a((byte) 77);
+                        stackOut_8_0 = ((u) this).field_p;
+                        stackOut_8_1 = var5;
+                        stackIn_10_0 = stackOut_8_0;
+                        stackIn_10_1 = stackOut_8_1;
+                        stackIn_9_0 = stackOut_8_0;
+                        stackIn_9_1 = stackOut_8_1;
+                        if (var6 == 0) {
+                          stackOut_10_0 = (char[]) (Object) stackIn_10_0;
+                          stackOut_10_1 = stackIn_10_1;
+                          stackOut_10_2 = 0;
+                          stackIn_11_0 = stackOut_10_0;
+                          stackIn_11_1 = stackOut_10_1;
+                          stackIn_11_2 = stackOut_10_2;
+                          break L5;
+                        } else {
+                          stackOut_9_0 = (char[]) (Object) stackIn_9_0;
+                          stackOut_9_1 = stackIn_9_1;
+                          stackOut_9_2 = mm.a(100, (byte) var6);
+                          stackIn_11_0 = stackOut_9_0;
+                          stackIn_11_1 = stackOut_9_1;
+                          stackIn_11_2 = stackOut_9_2;
+                          break L5;
+                        }
+                      }
+                      stackIn_11_0[stackIn_11_1] = (char) stackIn_11_2;
+                      var5++;
+                      continue L4;
+                    }
+                  }
                 }
+              } else {
+                ((u) this).field_v = param1.h(-125);
+                break L1;
               }
-              break L0;
-            } else {
-              return;
             }
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           L6: {
             var4 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var4;
-            stackOut_22_1 = new StringBuilder().append("u.B(").append(param0).append(44);
+            stackOut_22_1 = new StringBuilder().append("u.B(").append(-4).append(44);
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;

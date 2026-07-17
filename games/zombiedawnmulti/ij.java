@@ -19,13 +19,13 @@ final class ij implements nl {
     static cj[] field_k;
     private int field_b;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_k = null;
         field_f = null;
     }
 
-    final static bm a(byte[] param0, int param1) {
+    final static bm a(byte[] param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -60,11 +60,12 @@ final class ij implements nl {
             L1: while (true) {
               if (var5 >= 6) {
                 br.a(6, var4, -93, var2_int);
-                br.a(param1, var4, -123, var3);
+                br.a(7, var4, -123, var3);
                 var5 = 6;
                 L2: while (true) {
                   if (param0.length / 4 <= var5) {
-                    stackOut_7_0 = bo.a(var4, param1 + 17);
+                    int discarded$2 = 24;
+                    stackOut_7_0 = bo.a(var4);
                     stackIn_8_0 = stackOut_7_0;
                     break L0;
                   } else {
@@ -108,7 +109,7 @@ final class ij implements nl {
               break L3;
             }
           }
-          throw fa.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 41);
+          throw fa.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + 7 + 41);
         }
         return stackIn_8_0;
     }
@@ -201,11 +202,7 @@ final class ij implements nl {
 
     final static gh a(boolean param0, boolean param1) {
         gh var2 = new gh(true);
-        if (param0) {
-            Object var3 = null;
-            bm discarded$0 = ij.a((byte[]) null, 33);
-        }
-        var2.field_e = false;
+        var2.field_e = param1 ? true : false;
         return var2;
     }
 

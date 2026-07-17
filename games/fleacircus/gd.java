@@ -7,7 +7,7 @@ final class gd {
     static String field_c;
     static String field_d;
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_d = null;
         field_c = null;

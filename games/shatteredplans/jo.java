@@ -55,7 +55,7 @@ final class jo {
               L0: {
                 L1: {
                   L2: {
-                    var6 = new byte[param0];
+                    var6 = new byte[24];
                     var2 = var6;
                     if (vc.field_a != null) {
                       try {
@@ -121,7 +121,7 @@ final class jo {
               L8: {
                 var2_ref = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_17_0 = (RuntimeException) var2_ref;
-                stackOut_17_1 = new StringBuilder().append("jo.B(").append(param0).append(44);
+                stackOut_17_1 = new StringBuilder().append("jo.B(").append(24).append(44);
                 stackIn_19_0 = stackOut_17_0;
                 stackIn_19_1 = stackOut_17_1;
                 stackIn_18_0 = stackOut_17_0;

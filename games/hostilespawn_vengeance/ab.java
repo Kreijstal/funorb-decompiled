@@ -140,67 +140,59 @@ final class ab extends IOException {
           }
         }
         L10: {
-          if (!param1) {
-            break L10;
-          } else {
-            field_c = 26;
-            break L10;
-          }
-        }
-        L11: {
           if (param7.field_I <= 0) {
-            break L11;
+            break L10;
           } else {
             if (param7.field_i == 5) {
               param7.a(225, (double)(int)(64.0 * Math.random() + (double)var15 - 32.0), 5);
-              break L11;
+              break L10;
             } else {
-              break L11;
+              break L10;
             }
           }
         }
-        L12: {
+        L11: {
           if (param7.field_F <= 1) {
-            break L12;
+            break L11;
           } else {
             param7.field_F = param7.field_F - 1;
-            break L12;
+            break L11;
           }
         }
-        L13: {
-          L14: {
+        L12: {
+          L13: {
             if (param7.field_F <= 200) {
-              break L14;
+              break L13;
             } else {
               if (param7.field_I > 0) {
-                L15: {
+                L14: {
                   if ((sg.field_i & 3) != 0) {
-                    break L15;
+                    break L14;
                   } else {
                     if (20 <= param7.field_I) {
-                      break L15;
+                      break L14;
                     } else {
                       param7.field_I = param7.field_I + 1;
-                      break L15;
+                      break L14;
                     }
                   }
                 }
-                L16: {
+                L15: {
                   param6.a((byte) 46, param2);
                   param6.b(param3, 24161);
                   if (param7.field_e <= 0) {
-                    break L16;
+                    break L15;
                   } else {
                     param7.field_e = param7.field_e - 1;
-                    break L16;
+                    break L15;
                   }
                 }
                 if (param7.field_i != 5) {
                   if (param7.field_i != 22) {
-                    break L14;
+                    break L13;
                   } else {
-                    L17: {
-                      L18: {
+                    L16: {
+                      L17: {
                         var16 = 0;
                         var17 = param3.field_e;
                         var18 = param3.field_e;
@@ -211,69 +203,69 @@ final class ab extends IOException {
                           var18 += 2;
                           var19 -= 4;
                           var17 -= 3;
-                          break L18;
+                          break L17;
                         } else {
                           if (var21 != 64) {
                             if (128 == var21) {
                               var20 += 4;
                               var17 -= 2;
                               var18 += 3;
-                              break L18;
+                              break L17;
                             } else {
                               if (var21 == 192) {
                                 var20 += 3;
                                 var19 -= 2;
                                 var18 += 4;
-                                break L18;
+                                break L17;
                               } else {
                                 var21 = 0;
-                                L19: while (true) {
+                                L18: while (true) {
                                   if (var21 >= rc.field_e) {
-                                    break L17;
+                                    break L16;
                                   } else {
-                                    L20: {
-                                      L21: {
+                                    L19: {
+                                      L20: {
                                         var25 = re.field_n[var21];
                                         if (0 == var25.field_i) {
-                                          break L21;
+                                          break L20;
                                         } else {
                                           if (!var25.field_b) {
-                                            break L20;
+                                            break L19;
                                           } else {
                                             if (var25.field_i != 27) {
-                                              break L21;
+                                              break L20;
                                             } else {
                                               if (var25.field_s) {
-                                                break L21;
-                                              } else {
                                                 break L20;
+                                              } else {
+                                                break L19;
                                               }
                                             }
                                           }
                                         }
                                       }
                                       if (var25.field_j.field_e < var17) {
-                                        break L20;
+                                        break L19;
                                       } else {
                                         if (var18 < var25.field_j.field_e) {
-                                          break L20;
+                                          break L19;
                                         } else {
                                           if (var25.field_j.field_g < var19) {
-                                            break L20;
+                                            break L19;
                                           } else {
                                             if (~var20 > ~var25.field_j.field_g) {
-                                              break L20;
+                                              break L19;
                                             } else {
                                               param6.a((byte) 46, var25.field_j);
                                               var16 = 1;
-                                              break L17;
+                                              break L16;
                                             }
                                           }
                                         }
                                       }
                                     }
                                     var21++;
-                                    continue L19;
+                                    continue L18;
                                   }
                                 }
                               }
@@ -282,149 +274,149 @@ final class ab extends IOException {
                             var20 += 2;
                             var17 -= 4;
                             var19 -= 3;
-                            break L18;
+                            break L17;
                           }
                         }
                       }
                       var21 = 0;
-                      L22: while (true) {
+                      L21: while (true) {
                         if (var21 >= rc.field_e) {
-                          break L17;
+                          break L16;
                         } else {
-                          L23: {
-                            L24: {
+                          L22: {
+                            L23: {
                               var26 = re.field_n[var21];
                               if (0 == var26.field_i) {
-                                break L24;
+                                break L23;
                               } else {
                                 if (!var26.field_b) {
-                                  break L23;
+                                  break L22;
                                 } else {
                                   if (var26.field_i != 27) {
-                                    break L24;
+                                    break L23;
                                   } else {
                                     if (var26.field_s) {
-                                      break L24;
-                                    } else {
                                       break L23;
+                                    } else {
+                                      break L22;
                                     }
                                   }
                                 }
                               }
                             }
                             if (var26.field_j.field_e < var17) {
-                              break L23;
+                              break L22;
                             } else {
                               if (var18 < var26.field_j.field_e) {
-                                break L23;
+                                break L22;
                               } else {
                                 if (var26.field_j.field_g < var19) {
-                                  break L23;
+                                  break L22;
                                 } else {
                                   if (~var20 > ~var26.field_j.field_g) {
-                                    break L23;
+                                    break L22;
                                   } else {
                                     param6.a((byte) 46, var26.field_j);
                                     var16 = 1;
-                                    break L17;
+                                    break L16;
                                   }
                                 }
                               }
                             }
                           }
                           var21++;
-                          continue L22;
+                          continue L21;
                         }
                       }
                     }
-                    L25: {
+                    L24: {
                       if (var16 == 0) {
-                        L26: {
-                          L27: {
+                        L25: {
+                          L26: {
                             var21 = 7 * param3.field_e - (-(3 * param3.field_g) - ng.field_u / 2) & 127;
                             if (var15 == 64) {
-                              break L27;
+                              break L26;
                             } else {
                               if (var15 == 0) {
-                                break L27;
-                              } else {
                                 break L26;
+                              } else {
+                                break L25;
                               }
                             }
                           }
                           var21 = 127 + -var21;
-                          break L26;
+                          break L25;
                         }
-                        L28: {
+                        L27: {
                           if (var21 > 64) {
                             var21 = -var21 + 127;
+                            break L27;
+                          } else {
+                            break L27;
+                          }
+                        }
+                        L28: {
+                          if (16 <= var21) {
                             break L28;
                           } else {
+                            var21 = 16;
                             break L28;
                           }
                         }
                         L29: {
-                          if (16 <= var21) {
-                            break L29;
-                          } else {
-                            var21 = 16;
-                            break L29;
-                          }
-                        }
-                        L30: {
                           if (var21 > 48) {
                             var21 = 48;
-                            break L30;
+                            break L29;
                           } else {
-                            break L30;
+                            break L29;
                           }
                         }
                         param7.a(225, (double)(var21 + (-32 + var15)), 2);
-                        break L25;
+                        break L24;
                       } else {
-                        L31: {
+                        L30: {
                           var21_double = el.a((double)param3.field_e, (double)param6.field_e, 16, (double)param3.field_g, (double)param6.field_g);
                           var23 = -var15 + (int)var21_double;
                           if (128 > var23) {
-                            break L31;
+                            break L30;
                           } else {
                             var23 -= 256;
+                            break L30;
+                          }
+                        }
+                        L31: {
+                          if (var23 > -128) {
+                            break L31;
+                          } else {
+                            var23 += 256;
                             break L31;
                           }
                         }
                         L32: {
-                          if (var23 > -128) {
+                          if (var23 <= -32) {
+                            var23 = -31;
                             break L32;
                           } else {
-                            var23 += 256;
                             break L32;
                           }
                         }
                         L33: {
-                          if (var23 <= -32) {
-                            var23 = -31;
-                            break L33;
-                          } else {
-                            break L33;
-                          }
-                        }
-                        L34: {
                           if (var23 >= 32) {
                             var23 = 31;
-                            break L34;
+                            break L33;
                           } else {
-                            break L34;
+                            break L33;
                           }
                         }
                         param7.a(225, (double)(var15 - -var23), 5);
-                        break L25;
+                        break L24;
                       }
                     }
                     if (param7.field_e <= 0) {
                       if (var16 != 0) {
                         param7.field_e = 32;
                         var21 = -10;
-                        L35: while (true) {
+                        L34: while (true) {
                           if (var21 > 10) {
                             jn.field_F[ib.field_c].field_c = param7.field_c;
                             jn.field_F[ib.field_c].field_j.a((byte) 46, param3);
@@ -445,25 +437,25 @@ final class ab extends IOException {
                             jn.field_F[ib.field_c].field_l.a(60, (byte) 94, jn.field_F[ib.field_c].field_c);
                             ib.field_c = ib.field_c + 1;
                             if (uj.field_l == 1) {
-                              L36: {
+                              L35: {
                                 var13_int = (int)(((double)(-param3.field_e) + (param8 + (double)param10) - param7.field_l.field_f) * 24.0);
                                 var14 = (int)(24.0 * ((double)(-param3.field_g) + (param5 + (double)param9) - param7.field_l.field_a));
                                 var21 = -(int)Math.sqrt((double)(var14 * var14 + var13_int * var13_int)) + 256;
                                 if (var21 <= 128) {
-                                  break L36;
+                                  break L35;
                                 } else {
                                   var21 = 128;
-                                  break L36;
+                                  break L35;
                                 }
                               }
                               if (0 >= var21) {
-                                break L14;
+                                break L13;
                               } else {
                                 jh.a(uh.field_i * var21 / 128, (byte) 120, 41, sf.field_V, 5);
-                                break L13;
+                                break L12;
                               }
                             } else {
-                              break L13;
+                              break L12;
                             }
                           } else {
                             jn.field_F[ib.field_c].field_c = param7.field_c + 1.5 * (double)var21;
@@ -475,43 +467,43 @@ final class ab extends IOException {
                             jn.field_F[ib.field_c].field_l.a(20, (byte) 94, jn.field_F[ib.field_c].field_c);
                             ib.field_c = ib.field_c + 1;
                             var21 += 2;
-                            continue L35;
+                            continue L34;
                           }
                         }
                       } else {
-                        break L13;
+                        break L12;
                       }
                     } else {
                       param7.field_e = param7.field_e - 1;
-                      break L13;
+                      break L12;
                     }
                   }
                 } else {
                   if (param7.field_e % 5 != 0) {
-                    break L14;
+                    break L13;
                   } else {
-                    L37: {
+                    L36: {
                       param7.field_e = 10;
                       if (uj.field_l == 1) {
-                        L38: {
+                        L37: {
                           var13_int = (int)(24.0 * ((double)(-param3.field_e) + (param8 + (double)param10) - param7.field_l.field_f));
                           var14 = (int)((-param7.field_l.field_a + ((double)(-param3.field_g) + (param5 + (double)param9))) * 24.0);
                           var16 = 256 - (int)Math.sqrt((double)(var14 * var14 + var13_int * var13_int));
                           if (var16 > 128) {
                             var16 = 128;
-                            break L38;
+                            break L37;
                           } else {
-                            break L38;
+                            break L37;
                           }
                         }
                         if (var16 <= 0) {
-                          break L37;
+                          break L36;
                         } else {
                           jh.a(var16 * uh.field_i / 256, (byte) 51, 46, sf.field_V, 5);
-                          break L37;
+                          break L36;
                         }
                       } else {
-                        break L37;
+                        break L36;
                       }
                     }
                     var16_double = 1.25;
@@ -550,19 +542,19 @@ final class ab extends IOException {
                     jn.field_F[ib.field_c].field_l.a(6, (byte) 94, jn.field_F[ib.field_c].field_c + 192.0);
                     jn.field_F[ib.field_c].field_l.a(var20, (byte) 94, jn.field_F[ib.field_c].field_c);
                     ib.field_c = ib.field_c + 1;
-                    break L13;
+                    break L12;
                   }
                 }
               } else {
-                break L13;
+                break L12;
               }
             }
           }
-          break L13;
+          break L12;
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_a = null;
     }
@@ -644,8 +636,8 @@ final class ab extends IOException {
             jn.field_G = (vm) (Object) th.a(param3, -107, "arezzo12", param1, "commonui");
             jd.field_s = (vm) (Object) th.a(param3, 25, "arezzo14", param1, "commonui");
             pe.field_eb = (vm) (Object) th.a(param3, 9, "arezzo14bold", param1, "commonui");
-            var17 = new bd(param2.a("", "button.gif", param0), (java.awt.Component) (Object) se.field_h);
-            pg discarded$1 = qm.a("commonui", 0, "dropdown", param3);
+            var17 = new bd(param2.a("", "button.gif", 0), (java.awt.Component) (Object) se.field_h);
+            pg discarded$3 = qm.a("commonui", 0, "dropdown", param3);
             var5 = sg.a(true, "commonui", param3, "screen_options");
             ak.field_h = new pg[4];
             nl.field_e = new pg[4];
@@ -680,8 +672,9 @@ final class ab extends IOException {
                     var17.c(-var17.field_z + var9, 0);
                     var12 = new bd(var17.field_z - var9 * 2, var9);
                     var12.a();
-                    var17.c(-var9, param0);
-                    eh.b(false);
+                    var17.c(-var9, 0);
+                    int discarded$4 = 0;
+                    eh.b();
                     km.field_y = new bd[]{var15, var12, var11};
                     break L0;
                   } else {
@@ -693,7 +686,8 @@ final class ab extends IOException {
                         var9++;
                         continue L2;
                       } else {
-                        var14[var11_int] = kb.a(var5[var9], var21[var11_int], (byte) 115);
+                        int discarded$5 = 115;
+                        var14[var11_int] = kb.a(var5[var9], var21[var11_int]);
                         var11_int++;
                         continue L3;
                       }
@@ -712,7 +706,7 @@ final class ab extends IOException {
           L4: {
             var4 = decompiledCaughtException;
             stackOut_12_0 = (RuntimeException) var4;
-            stackOut_12_1 = new StringBuilder().append("ab.A(").append(param0).append(44);
+            stackOut_12_1 = new StringBuilder().append("ab.A(").append(0).append(44);
             stackIn_14_0 = stackOut_12_0;
             stackIn_14_1 = stackOut_12_1;
             stackIn_13_0 = stackOut_12_0;

@@ -23,21 +23,23 @@ final class ob implements Iterator {
             if (bl.field_a == 10) {
               break L1;
             } else {
-              if (!rb.e((byte) -72)) {
+              int discarded$6 = -72;
+              if (!rb.e()) {
                 break L1;
               } else {
                 break L0;
               }
             }
           }
-          wh.b(81);
+          int discarded$7 = 81;
+          wh.b();
           bl.field_a = 11;
           break L0;
         }
         kb.field_a = true;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         t.field_h.c(20317, (uj) (Object) new db());
     }
 
@@ -198,20 +200,17 @@ final class ob implements Iterator {
         return ((ob) this).field_e.field_f != ((ob) this).field_i;
     }
 
-    public static void d(int param0) {
+    public static void d() {
         field_d = null;
         field_g = null;
         field_c = null;
         field_a = null;
     }
 
-    final static String c(int param0) {
+    final static String c() {
         String var1 = "";
         if (!(null == wi.field_c)) {
             var1 = wi.field_c.j(190);
-        }
-        if (param0 < 93) {
-            field_a = null;
         }
         if (var1.length() == 0) {
             var1 = cb.b(true);

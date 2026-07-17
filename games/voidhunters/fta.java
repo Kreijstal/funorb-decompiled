@@ -295,7 +295,8 @@ final class fta extends uda {
             if (var2 != ((fta) this).field_h) {
               ((fta) this).field_h = var2;
               ((fta) this).field_m.a(0, var2);
-              this.e(127);
+              int discarded$2 = 127;
+              this.e();
               ((fta) this).a(true);
               ((fta) this).d(8);
               ((fta) this).c(5);
@@ -307,7 +308,7 @@ final class fta extends uda {
             }
           }
           var5.a(field_k, -1.0f, (byte) 67, (float)var4, 0.0f, 0.0f);
-          int discarded$1 = var3.a(12, field_k);
+          int discarded$3 = var3.a(12, field_k);
           return;
         }
     }
@@ -397,7 +398,7 @@ final class fta extends uda {
         return ((fta) this).field_n;
     }
 
-    private final void e(int param0) {
+    private final void e() {
         oj var2 = null;
         jagdx.IDirect3DDevice var3 = null;
         oj var4 = null;

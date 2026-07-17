@@ -49,7 +49,8 @@ final class mn extends pd {
         var2 = 0;
         L0: while (true) {
           if (var2 >= mg.field_a) {
-            ok.a(2188450);
+            int discarded$1 = 2188450;
+            ok.a();
             return var1;
           } else {
             var3 = je.field_c[var2] * uo.field_l[var2];
@@ -118,7 +119,7 @@ final class mn extends pd {
         ec.field_k = null;
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_l = null;
         field_i = null;
         field_m = null;

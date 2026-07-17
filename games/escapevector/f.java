@@ -23,7 +23,7 @@ final class f {
     int[][] field_a;
     private byte[] field_f;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_o = null;
         field_m = null;
     }
@@ -176,7 +176,7 @@ final class f {
                     }
                   }
                   L11: {
-                    var10 = 115 % ((60 - param0) / 44);
+                    var10 = 0;
                     ((f) this).field_i = new int[((f) this).field_k];
                     ((f) this).field_a = new int[((f) this).field_k][];
                     ((f) this).field_e = new int[((f) this).field_k];
@@ -423,7 +423,7 @@ final class f {
           L35: {
             var3 = decompiledCaughtException;
             stackOut_101_0 = (RuntimeException) var3;
-            stackOut_101_1 = new StringBuilder().append("f.B(").append(param0).append(44);
+            stackOut_101_1 = new StringBuilder().append("f.B(").append(-23).append(44);
             stackIn_103_0 = stackOut_101_0;
             stackIn_103_1 = stackOut_101_1;
             stackIn_102_0 = stackOut_101_0;

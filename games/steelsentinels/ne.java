@@ -140,7 +140,7 @@ final class ne extends kd {
         return stackIn_36_0;
     }
 
-    private final void a(mb param0, byte param1) {
+    private final void a(mb param0) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -327,7 +327,7 @@ final class ne extends kd {
               }
             }
             L6: {
-              var3_int = 13 / ((param1 - 5) / 63);
+              var3_int = -13;
               if (param0.field_Bb == ed.field_j) {
                 g.field_h = ((ne) this).field_O;
                 pd.field_X = 0;
@@ -366,7 +366,7 @@ final class ne extends kd {
               break L7;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_187_0, stackIn_187_2 + 44 + param1 + 41);
+          throw ci.a((Throwable) (Object) stackIn_187_0, stackIn_187_2 + 44 + -86 + 41);
         }
     }
 
@@ -668,8 +668,9 @@ final class ne extends kd {
                                     if (~(var10.field_Gb + -var12) <= ~((ne) this).field_I) {
                                       break L23;
                                     } else {
-                                      this.a(var10, (byte) -86);
-                                      pc discarded$1 = fc.a((byte) -73, 102, ((ne) this).field_z);
+                                      int discarded$2 = -86;
+                                      this.a(var10);
+                                      pc discarded$3 = fc.a((byte) -73, 102, ((ne) this).field_z);
                                       break L22;
                                     }
                                   }
@@ -717,7 +718,7 @@ final class ne extends kd {
         }
     }
 
-    final static boolean a(byte param0, CharSequence param1, boolean param2) {
+    final static boolean a(byte param0, CharSequence param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -747,12 +748,12 @@ final class ne extends kd {
         var5 = SteelSentinels.field_G;
         try {
           L0: {
-            if (!f.a(param1, 4, param2)) {
+            if (!f.a(param1, 4, false)) {
               stackOut_4_0 = 0;
               stackIn_5_0 = stackOut_4_0;
               return stackIn_5_0 != 0;
             } else {
-              var3_int = 113 / ((5 - param0) / 50);
+              var3_int = 56;
               var4 = 0;
               L1: while (true) {
                 if (var4 >= param1.length()) {
@@ -777,7 +778,7 @@ final class ne extends kd {
           L2: {
             var3 = decompiledCaughtException;
             stackOut_17_0 = (RuntimeException) var3;
-            stackOut_17_1 = new StringBuilder().append("ne.C(").append(param0).append(44);
+            stackOut_17_1 = new StringBuilder().append("ne.C(").append(-118).append(44);
             stackIn_20_0 = stackOut_17_0;
             stackIn_20_1 = stackOut_17_1;
             stackIn_18_0 = stackOut_17_0;
@@ -800,7 +801,7 @@ final class ne extends kd {
               break L2;
             }
           }
-          throw ci.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param2 + 41);
+          throw ci.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + 0 + 41);
         }
         return stackIn_16_0 != 0;
     }

@@ -28,7 +28,7 @@ final class tm extends am {
     static int field_v;
     static String field_s;
 
-    final static void a(int param0, int param1, int param2, boolean param3) {
+    final static void a(int param0, int param1, int param2) {
         ce.field_c = param0;
         hh.field_e = param1;
         nf.field_m = param2;
@@ -87,7 +87,7 @@ final class tm extends am {
                 break L3;
               }
             }
-            var4_int = 117 / ((-79 - param0) / 33);
+            var4_int = -23;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -95,7 +95,7 @@ final class tm extends am {
           L4: {
             runtimeException = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) runtimeException;
-            stackOut_11_1 = new StringBuilder().append("tm.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_11_1 = new StringBuilder().append("tm.C(").append(88).append(44).append(param1).append(44).append(param2).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -138,10 +138,7 @@ final class tm extends am {
         }
     }
 
-    public static void a(boolean param0) {
-        if (!param0) {
-            return;
-        }
+    public static void a() {
         field_s = null;
         field_o = null;
     }

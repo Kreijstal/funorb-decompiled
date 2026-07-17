@@ -60,7 +60,7 @@ final class rg {
         }
     }
 
-    final static boolean a(mf param0, byte param1) {
+    final static boolean a(mf param0) {
         RuntimeException var2 = null;
         boolean stackIn_1_0 = false;
         RuntimeException stackIn_3_0 = null;

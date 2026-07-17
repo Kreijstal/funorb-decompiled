@@ -66,7 +66,8 @@ final class se {
             } else {
               if (!gt.a(param0, (byte) -114)) {
                 if (2 == th.field_a) {
-                  if (!si.a(param0, -3404)) {
+                  int discarded$6 = -3404;
+                  if (!si.a(param0)) {
                     if (vg.field_p < 100) {
                       if (!jj.a(89, param0)) {
                         var5 = vl.field_n;
@@ -148,7 +149,7 @@ final class se {
         field_h = null;
     }
 
-    final static wk[] a(byte param0) {
+    final static wk[] a() {
         wk[] var1 = null;
         int var2 = 0;
         int var3 = 0;

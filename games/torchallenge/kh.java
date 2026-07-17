@@ -66,7 +66,7 @@ class kh {
     void c() throws Exception {
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void a(int param0, boolean param1) {
         int stackIn_7_0 = 0;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
@@ -247,7 +247,7 @@ class kh {
         qd var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = 256;
+          var3 = param1;
           if (!field_g) {
             break L0;
           } else {
@@ -257,7 +257,7 @@ class kh {
         }
         L1: {
           he.a(param0, 0, var3);
-          ((kh) this).field_e = ((kh) this).field_e - 256;
+          ((kh) this).field_e = ((kh) this).field_e - param1;
           if (((kh) this).field_u == null) {
             break L1;
           } else {
@@ -424,7 +424,7 @@ class kh {
           if (((kh) this).field_u == null) {
             break L17;
           } else {
-            ((kh) this).field_u.b(param0, 0, 256);
+            ((kh) this).field_u.b(param0, 0, param1);
             break L17;
           }
         }
@@ -505,12 +505,12 @@ class kh {
     }
 
     private final void a(int param0) {
-        ((kh) this).field_e = ((kh) this).field_e - 256;
+        ((kh) this).field_e = ((kh) this).field_e - param0;
         if (((kh) this).field_e < 0) {
             ((kh) this).field_e = 0;
         }
         if (((kh) this).field_u != null) {
-            ((kh) this).field_u.a(256);
+            ((kh) this).field_u.a(param0);
             return;
         }
     }

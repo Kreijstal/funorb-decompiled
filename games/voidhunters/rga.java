@@ -52,7 +52,8 @@ final class rga {
                 var3 = var19;
                 ti.field_c = gfb.a(false, var29, -12445);
             }
-            var30 = ffb.a(false, ti.field_c, true);
+            int discarded$0 = 1;
+            var30 = ffb.a(false, ti.field_c);
             var27 = var30;
             var24 = var27;
             var21 = var24;
@@ -75,20 +76,20 @@ final class rga {
                         var14 = (float)((255 & var3[var11 + var13]) + -(255 & var3[var13 + var12]));
                         var15 = (float)((255 & var3[(-1 + var13 & 127) + var10]) + -(var3[(127 & var13 + 1) + var10] & 255));
                         var16 = (float)(128.0 / Math.sqrt((double)(16384.0f + var15 * var15 + var14 * var14)));
-                        int incrementValue$0 = var5;
-                        var5++;
-                        var4[incrementValue$0] = (byte)(int)(127.0f + var15 * var16);
                         int incrementValue$1 = var5;
                         var5++;
-                        var4[incrementValue$1] = (byte)(int)(var16 * 128.0f + 127.0f);
+                        var4[incrementValue$1] = (byte)(int)(127.0f + var15 * var16);
                         int incrementValue$2 = var5;
                         var5++;
-                        var4[incrementValue$2] = (byte)(int)(var16 * var14 + 127.0f);
+                        var4[incrementValue$2] = (byte)(int)(var16 * 128.0f + 127.0f);
                         int incrementValue$3 = var5;
                         var5++;
-                        int incrementValue$4 = var7;
+                        var4[incrementValue$3] = (byte)(int)(var16 * var14 + 127.0f);
+                        int incrementValue$4 = var5;
+                        var5++;
+                        int incrementValue$5 = var7;
                         var7++;
-                        var4[incrementValue$3] = var3[incrementValue$4];
+                        var4[incrementValue$4] = var3[incrementValue$5];
                     }
                 }
             }
@@ -97,7 +98,7 @@ final class rga {
         return null != ((rga) this).field_e ? true : false;
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
         field_g = null;
     }
@@ -191,12 +192,15 @@ final class rga {
               }
             }
             L3: {
-              mta.c((byte) 111);
+              int discarded$8 = 111;
+              mta.c();
               if (((rga) this).field_b) {
-                var17 = ffb.a(false, dv.field_b, true);
+                int discarded$9 = 1;
+                var17 = ffb.a(false, dv.field_b);
                 ((rga) this).field_d = ((rga) this).field_h.a(128, 16, var17, wh.field_o, 128, -16539);
-                var18 = ffb.a(false, wpa.field_q, true);
-                gf discarded$1 = ((rga) this).field_h.a(128, 16, var18, wh.field_o, 128, -16539);
+                int discarded$10 = 1;
+                var18 = ffb.a(false, wpa.field_q);
+                gf discarded$11 = ((rga) this).field_h.a(128, 16, var18, wh.field_o, 128, -16539);
                 break L3;
               } else {
                 ((rga) this).field_a = new eb[16];
@@ -209,14 +213,18 @@ final class rga {
                       if (var2_int >= 16) {
                         break L3;
                       } else {
-                        var16 = ppb.a(wpa.field_q, 32768 * var2_int, true, 32768);
+                        int discarded$12 = 32768;
+                        int discarded$13 = 1;
+                        var16 = ppb.a(wpa.field_q, 32768 * var2_int);
                         ((rga) this).field_c[var2_int] = ((rga) this).field_h.a(128, wh.field_o, 0, 128, true, var16);
                         var2_int++;
                         continue L5;
                       }
                     }
                   } else {
-                    var15 = ppb.a(dv.field_b, var2_int * 32768, true, 32768);
+                    int discarded$14 = 32768;
+                    int discarded$15 = 1;
+                    var15 = ppb.a(dv.field_b, var2_int * 32768);
                     ((rga) this).field_a[var2_int] = ((rga) this).field_h.a(128, wh.field_o, 0, 128, true, var15);
                     var2_int++;
                     continue L4;
@@ -258,7 +266,7 @@ final class rga {
         }
     }
 
-    final static void a(boolean param0, boolean param1, boolean param2) {
+    final static void a(boolean param0, boolean param1) {
         Object var4 = null;
         vt.a(param0, -90, param1, (String) null);
     }

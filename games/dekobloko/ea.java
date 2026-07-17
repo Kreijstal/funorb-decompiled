@@ -173,7 +173,8 @@ final class ea extends cf {
               return false;
             } else {
               L0: {
-                if (si.c(-12851)) {
+                int discarded$6 = -12851;
+                if (si.c()) {
                   stackOut_7_0 = 0;
                   stackIn_8_0 = stackOut_7_0;
                   break L0;
@@ -678,7 +679,7 @@ final class ea extends cf {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_y = null;
         field_x = null;
         field_u = null;
@@ -807,7 +808,8 @@ final class ea extends cf {
           if (w.field_H == null) {
             if (!qd.e(-6)) {
               if (pd.field_f == null) {
-                if (ab.c(48)) {
+                int discarded$8 = 48;
+                if (ab.c()) {
                   return true;
                 } else {
                   return false;
@@ -828,7 +830,8 @@ final class ea extends cf {
           if (w.field_H == null) {
             if (!qd.e(-6)) {
               if (pd.field_f == null) {
-                if (ab.c(48)) {
+                int discarded$9 = 48;
+                if (ab.c()) {
                   return true;
                 } else {
                   return false;

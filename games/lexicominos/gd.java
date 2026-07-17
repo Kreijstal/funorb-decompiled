@@ -49,7 +49,7 @@ final class gd extends kd {
         return nh.field_a.b(-79);
     }
 
-    public static void e(byte param0) {
+    public static void e() {
         field_j = null;
         field_m = null;
         field_i = null;

@@ -5,7 +5,7 @@ final class nra implements dja {
     static int field_b;
     static String field_a;
 
-    final static void b(byte param0) {
+    final static void b() {
         int var1_int = 0;
         int var2 = 0;
         var2 = VoidHunters.field_G;
@@ -534,7 +534,7 @@ final class nra implements dja {
         return stackIn_37_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 

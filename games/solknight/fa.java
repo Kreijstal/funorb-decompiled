@@ -10,13 +10,13 @@ final class fa {
     static int[] field_g;
     static int[] field_e;
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_b = null;
         field_e = null;
         field_g = null;
     }
 
-    final static int a(String param0, boolean param1, byte param2) {
+    final static int a(String param0, boolean param1) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;

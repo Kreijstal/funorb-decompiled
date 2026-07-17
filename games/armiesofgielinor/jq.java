@@ -132,19 +132,13 @@ final class jq extends dr {
             break L1;
           }
         }
-        if (param2 != -20600) {
-          field_I = null;
-          qn.a(var18, var7, var8);
-          return new wk[]{null, null, null, (wk) var10, var9, (wk) var11, null, null, null};
-        } else {
-          qn.a(var18, var7, var8);
-          return new wk[]{null, null, null, (wk) var10, var9, (wk) var11, null, null, null};
-        }
+        qn.a(var18, var7, var8);
+        return new wk[]{null, null, null, (wk) var10, var9, (wk) var11, null, null, null};
     }
 
     final static int b(int param0, int param1) {
         int var2 = 0;
-        if ((param0 & param1) != 0) {
+        if ((7 & param1) != 0) {
             var2 = 8 + -(7 & param1);
         }
         int var3 = param1 - -var2;
@@ -155,7 +149,7 @@ final class jq extends dr {
         super(param0, param1, param2);
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_E = null;
         field_G = null;
         field_H = null;

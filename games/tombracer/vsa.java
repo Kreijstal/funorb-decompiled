@@ -59,7 +59,7 @@ final class vsa extends dg {
           L0: {
             L1: {
               ufa.a(-76, param1);
-              var7_int = param2;
+              var7_int = 0;
               var8 = -param5 + param1;
               if (var8 < 0) {
                 var8 = 0;
@@ -173,7 +173,7 @@ final class vsa extends dg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var7, "vsa.H(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw tba.a((Throwable) (Object) var7, "vsa.H(" + param0 + 44 + param1 + 44 + 0 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
         }
     }
 
@@ -304,22 +304,22 @@ final class vsa extends dg {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
+        String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
         RuntimeException stackOut_12_0 = null;
         StringBuilder stackOut_12_1 = null;
-        RuntimeException stackOut_14_0 = null;
-        StringBuilder stackOut_14_1 = null;
-        String stackOut_14_2 = null;
-        RuntimeException stackOut_13_0 = null;
-        StringBuilder stackOut_13_1 = null;
-        String stackOut_13_2 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
@@ -348,45 +348,37 @@ final class vsa extends dg {
                 break L2;
               }
             }
-            L4: {
-              if (param0) {
-                break L4;
-              } else {
-                this.n((byte) -52);
-                break L4;
-              }
-            }
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
+          L4: {
             var3 = decompiledCaughtException;
-            stackOut_12_0 = (RuntimeException) var3;
-            stackOut_12_1 = new StringBuilder().append("vsa.L(").append(param0).append(44);
-            stackIn_14_0 = stackOut_12_0;
-            stackIn_14_1 = stackOut_12_1;
-            stackIn_13_0 = stackOut_12_0;
-            stackIn_13_1 = stackOut_12_1;
+            stackOut_10_0 = (RuntimeException) var3;
+            stackOut_10_1 = new StringBuilder().append("vsa.L(").append(1).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
             if (param1 == null) {
-              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-              stackOut_14_2 = "null";
-              stackIn_15_0 = stackOut_14_0;
-              stackIn_15_1 = stackOut_14_1;
-              stackIn_15_2 = stackOut_14_2;
-              break L5;
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L4;
             } else {
-              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
-              stackOut_13_2 = "{...}";
-              stackIn_15_0 = stackOut_13_0;
-              stackIn_15_1 = stackOut_13_1;
-              stackIn_15_2 = stackOut_13_2;
-              break L5;
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L4;
             }
           }
-          throw tba.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+          throw tba.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
         }
     }
 
@@ -417,7 +409,7 @@ final class vsa extends dg {
         }
     }
 
-    final static void a(cn param0, fia param1, int param2) {
+    final static void a(cn param0, fia param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -738,7 +730,8 @@ final class vsa extends dg {
     final void b(int param0, uw param1) {
         try {
             if (((vsa) this).field_q == null) {
-                this.n((byte) -128);
+                int discarded$0 = -128;
+                this.n();
             }
             super.b(param0 ^ param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -839,7 +832,7 @@ final class vsa extends dg {
         }
     }
 
-    private final void n(byte param0) {
+    private final void n() {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -889,7 +882,7 @@ final class vsa extends dg {
         ((vsa) this).field_p = var5 / 2097152;
         ((vsa) this).field_q = new faa[((vsa) this).field_p][((vsa) this).field_r];
         var7 = -(var6 / 2) + var4 + 1048576;
-        var9 = 123 % ((param0 - -16) / 56);
+        var9 = 1;
         var8 = 0;
         L1: while (true) {
           if (var8 >= ((vsa) this).field_r) {
@@ -1146,7 +1139,7 @@ final class vsa extends dg {
         super(param0);
     }
 
-    final static void c(byte param0, int param1) {
+    final static void c() {
         RuntimeException var2 = null;
         long var2_long = 0L;
         int var4 = 0;
@@ -1166,86 +1159,82 @@ final class vsa extends dg {
         var7 = TombRacer.field_G ? 1 : 0;
         try {
           L0: {
-            if (param0 >= 107) {
-              L1: {
-                if (oh.field_o == 0) {
-                  break L1;
-                } else {
-                  L2: {
-                    var2_long = bva.b((byte) -107);
-                    var4 = oh.field_o;
-                    if (0.0 != sua.field_J) {
-                      var4 = (int)((double)var4 + lpa.field_p.nextGaussian() * sua.field_J);
-                      if (0 <= var4) {
-                        break L2;
-                      } else {
-                        var4 = 0;
-                        break L2;
-                      }
+            L1: {
+              if (oh.field_o == 0) {
+                break L1;
+              } else {
+                L2: {
+                  var2_long = bva.b((byte) -107);
+                  var4 = oh.field_o;
+                  if (0.0 != sua.field_J) {
+                    var4 = (int)((double)var4 + lpa.field_p.nextGaussian() * sua.field_J);
+                    if (0 <= var4) {
+                      break L2;
                     } else {
+                      var4 = 0;
                       break L2;
                     }
-                  }
-                  L3: {
-                    if (ql.field_k.field_h <= 0) {
-                      break L3;
-                    } else {
-                      var18 = new byte[ql.field_k.field_h];
-                      var16 = var18;
-                      var14 = var16;
-                      var11 = var14;
-                      var8 = var11;
-                      var19 = var8;
-                      var6 = 0;
-                      L4: while (true) {
-                        if (var18.length <= var6) {
-                          var6_ref_rha = new rha(var2_long + (long)var4, ql.field_k.field_h, var19);
-                          jla.field_z.b((byte) -71, (vg) (Object) var6_ref_rha);
-                          ql.field_k.field_h = 0;
-                          break L3;
-                        } else {
-                          var8[var6] = ql.field_k.field_g[var6];
-                          var6++;
-                          continue L4;
-                        }
-                      }
-                    }
-                  }
-                  var9 = (rha) (Object) jla.field_z.f(-80);
-                  var13 = var9;
-                  if (var13 == null) {
-                    break L1;
                   } else {
-                    if (var13.field_f < var2_long) {
-                      var13.p(117);
-                      var10 = 0;
-                      var6 = var10;
-                      L5: while (true) {
-                        if (var13.field_i <= var10) {
-                          ql.field_k.field_h = var13.field_i;
-                          break L1;
-                        } else {
-                          ql.field_k.field_g[var10] = var9.field_g[var10];
-                          var10++;
-                          continue L5;
-                        }
+                    break L2;
+                  }
+                }
+                L3: {
+                  if (ql.field_k.field_h <= 0) {
+                    break L3;
+                  } else {
+                    var18 = new byte[ql.field_k.field_h];
+                    var16 = var18;
+                    var14 = var16;
+                    var11 = var14;
+                    var8 = var11;
+                    var19 = var8;
+                    var6 = 0;
+                    L4: while (true) {
+                      if (var18.length <= var6) {
+                        var6_ref_rha = new rha(var2_long + (long)var4, ql.field_k.field_h, var19);
+                        jla.field_z.b((byte) -71, (vg) (Object) var6_ref_rha);
+                        ql.field_k.field_h = 0;
+                        break L3;
+                      } else {
+                        var8[var6] = ql.field_k.field_g[var6];
+                        var6++;
+                        continue L4;
                       }
-                    } else {
-                      break L1;
                     }
                   }
                 }
+                var9 = (rha) (Object) jla.field_z.f(-80);
+                var13 = var9;
+                if (var13 == null) {
+                  break L1;
+                } else {
+                  if (var13.field_f < var2_long) {
+                    var13.p(117);
+                    var10 = 0;
+                    var6 = var10;
+                    L5: while (true) {
+                      if (var13.field_i <= var10) {
+                        ql.field_k.field_h = var13.field_i;
+                        break L1;
+                      } else {
+                        ql.field_k.field_g[var10] = var9.field_g[var10];
+                        var10++;
+                        continue L5;
+                      }
+                    }
+                  } else {
+                    break L1;
+                  }
+                }
               }
-              bl.a(0, -1);
-              break L0;
-            } else {
-              return;
             }
+            bl.a(0, -1);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw tba.a((Throwable) (Object) var2, "vsa.F(" + param0 + 44 + 0 + 41);
+          throw tba.a((Throwable) (Object) var2, "vsa.F(" + 120 + 44 + 0 + 41);
         }
     }
 

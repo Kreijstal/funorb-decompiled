@@ -1271,24 +1271,36 @@ final class mh {
                 var3 = df.a(param1, -47) ? 1 : 0;
                 var4 = df.a(param1, -44) ? 1 : 0;
                 var5 = new of();
-                var5.field_f = (short)param1.e(16, param0 ^ -191);
-                var5.field_B = fh.a(param1, 0, var5.field_B, 16);
-                var5.field_j = fh.a(param1, 0, var5.field_j, 16);
-                var5.field_d = fh.a(param1, 0, var5.field_d, 16);
+                var5.field_f = (short)param1.e(16, -66);
+                int discarded$19 = 16;
+                var5.field_B = fh.a(param1, 0, var5.field_B);
+                int discarded$20 = 16;
+                var5.field_j = fh.a(param1, 0, var5.field_j);
+                int discarded$21 = 16;
+                var5.field_d = fh.a(param1, 0, var5.field_d);
                 var5.field_R = (short)param1.e(16, -85);
-                var5.field_G = fh.a(param1, 0, var5.field_G, 16);
-                var5.field_r = fh.a(param1, param0 ^ param0, var5.field_r, 16);
-                var5.field_I = fh.a(param1, 0, var5.field_I, 16);
+                int discarded$22 = 16;
+                var5.field_G = fh.a(param1, 0, var5.field_G);
+                int discarded$23 = 16;
+                var5.field_r = fh.a(param1, 0, var5.field_r);
+                int discarded$24 = 16;
+                var5.field_I = fh.a(param1, 0, var5.field_I);
                 if (var3 == 0) {
                   break L1;
                 } else {
                   var5.field_C = (short)param1.e(16, -105);
-                  var5.field_q = fh.a(param1, 0, var5.field_q, 16);
-                  var5.field_P = fh.a(param1, 0, var5.field_P, 16);
-                  var5.field_a = fh.a(param1, param0 + -255, var5.field_a, 16);
-                  var5.field_O = fh.a(param1, param0 + -255, var5.field_O, 16);
-                  var5.field_J = fh.a(param1, 0, var5.field_J, 16);
-                  var5.field_F = fh.a(param1, 0, var5.field_F, 16);
+                  int discarded$25 = 16;
+                  var5.field_q = fh.a(param1, 0, var5.field_q);
+                  int discarded$26 = 16;
+                  var5.field_P = fh.a(param1, 0, var5.field_P);
+                  int discarded$27 = 16;
+                  var5.field_a = fh.a(param1, 0, var5.field_a);
+                  int discarded$28 = 16;
+                  var5.field_O = fh.a(param1, 0, var5.field_O);
+                  int discarded$29 = 16;
+                  var5.field_J = fh.a(param1, 0, var5.field_J);
+                  int discarded$30 = 16;
+                  var5.field_F = fh.a(param1, 0, var5.field_F);
                   break L1;
                 }
               }
@@ -1296,18 +1308,24 @@ final class mh {
                 if (var4 == 0) {
                   break L2;
                 } else {
-                  int discarded$1 = param1.e(16, 72);
-                  var5.field_t = fh.a(param1, 0, var5.field_t, 16);
-                  var5.field_s = fh.a(param1, 0, var5.field_s, 16);
-                  var5.field_z = fh.a(param1, 0, var5.field_z, 16);
-                  var5.field_E = fh.a(param1, 0, var5.field_E, 16);
-                  var5.field_b = fh.a(param1, param0 ^ 255, var5.field_b, 16);
+                  int discarded$31 = param1.e(16, 72);
+                  int discarded$32 = 16;
+                  var5.field_t = fh.a(param1, 0, var5.field_t);
+                  int discarded$33 = 16;
+                  var5.field_s = fh.a(param1, 0, var5.field_s);
+                  int discarded$34 = 16;
+                  var5.field_z = fh.a(param1, 0, var5.field_z);
+                  int discarded$35 = 16;
+                  var5.field_E = fh.a(param1, 0, var5.field_E);
+                  int discarded$36 = 16;
+                  var5.field_b = fh.a(param1, 0, var5.field_b);
                   break L2;
                 }
               }
               L3: {
                 if (df.a(param1, -76)) {
-                  var5.field_c = fh.a(param1, 0, var5.field_c, 16);
+                  int discarded$37 = 16;
+                  var5.field_c = fh.a(param1, 0, var5.field_c);
                   break L3;
                 } else {
                   break L3;
@@ -1353,7 +1371,7 @@ final class mh {
           L7: {
             var2 = decompiledCaughtException;
             stackOut_22_0 = (RuntimeException) var2;
-            stackOut_22_1 = new StringBuilder().append("mh.N(").append(param0).append(44);
+            stackOut_22_1 = new StringBuilder().append("mh.N(").append(255).append(44);
             stackIn_24_0 = stackOut_22_0;
             stackIn_24_1 = stackOut_22_1;
             stackIn_23_0 = stackOut_22_0;
@@ -1982,12 +2000,14 @@ final class mh {
           L8: {
             if (((mh) this).field_h != 11) {
               L9: while (true) {
-                if (!np.a((byte) -13)) {
+                int discarded$2 = -13;
+                if (!np.a()) {
                   this.a(60);
                   break L8;
                 } else {
                   if (13 != e.field_f) {
-                    this.a((byte) 79);
+                    int discarded$3 = 79;
+                    this.a();
                     continue L9;
                   } else {
                     if (((mh) this).field_h != 1) {
@@ -2114,7 +2134,7 @@ final class mh {
         }
     }
 
-    private final void a(boolean param0, byte param1) {
+    private final void a(boolean param0) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -2602,111 +2622,107 @@ final class mh {
             var13 = -1;
             var14 = -1;
             var35 = qd.field_a[param4];
-            if (param5 == 15783) {
-              var16 = param1 + -var8;
-              di.a(-param2 + param1, (byte) 77, param3, var35, var16);
-              var17 = var8 + param1;
-              di.a(var16, (byte) 105, param6, var35, var17);
-              di.a(var17, (byte) 107, param3, var35, param2 + param1);
-              L2: while (true) {
-                if (var9 <= var7_int) {
-                  break L0;
-                } else {
-                  L3: {
-                    var14 += 2;
-                    var13 += 2;
-                    var10 = var10 + var13;
-                    var12 = var12 + var14;
-                    if (var12 < 0) {
+            var16 = param1 + -var8;
+            di.a(-param2 + param1, (byte) 77, param3, var35, var16);
+            var17 = var8 + param1;
+            di.a(var16, (byte) 105, param6, var35, var17);
+            di.a(var17, (byte) 107, param3, var35, param2 + param1);
+            L2: while (true) {
+              if (var9 <= var7_int) {
+                break L0;
+              } else {
+                L3: {
+                  var14 += 2;
+                  var13 += 2;
+                  var10 = var10 + var13;
+                  var12 = var12 + var14;
+                  if (var12 < 0) {
+                    break L3;
+                  } else {
+                    if (var11 < 1) {
                       break L3;
                     } else {
-                      if (var11 < 1) {
-                        break L3;
-                      } else {
-                        vc.field_a[var11] = var7_int;
-                        var11--;
-                        var12 = var12 - (var11 << 1);
-                        break L3;
-                      }
+                      vc.field_a[var11] = var7_int;
+                      var11--;
+                      var12 = var12 - (var11 << 1);
+                      break L3;
                     }
-                  }
-                  L4: {
-                    var7_int++;
-                    if (var10 >= 0) {
-                      L5: {
-                        var9--;
-                        if (var8 <= var9) {
-                          var29 = qd.field_a[param4 - -var9];
-                          var30 = qd.field_a[-var9 + param4];
-                          var20 = param1 - -var7_int;
-                          var21 = -var7_int + param1;
-                          di.a(var21, (byte) -97, param3, var29, var20);
-                          di.a(var21, (byte) 14, param3, var30, var20);
-                          break L5;
-                        } else {
-                          var27 = qd.field_a[var9 + param4];
-                          var28 = qd.field_a[param4 - var9];
-                          var20 = vc.field_a[var9];
-                          var21 = param1 + var7_int;
-                          var22 = -var7_int + param1;
-                          var23 = param1 - -var20;
-                          var24 = param1 + -var20;
-                          di.a(var22, (byte) 84, param3, var27, var24);
-                          di.a(var24, (byte) -120, param6, var27, var23);
-                          di.a(var23, (byte) 33, param3, var27, var21);
-                          di.a(var22, (byte) -109, param3, var28, var24);
-                          di.a(var24, (byte) 25, param6, var28, var23);
-                          di.a(var23, (byte) -122, param3, var28, var21);
-                          break L5;
-                        }
-                      }
-                      var10 = var10 - (var9 << 1);
-                      break L4;
-                    } else {
-                      break L4;
-                    }
-                  }
-                  var31 = qd.field_a[param4 + var7_int];
-                  var32 = qd.field_a[-var7_int + param4];
-                  var20 = param1 - -var9;
-                  var21 = -var9 + param1;
-                  if (var8 <= var7_int) {
-                    di.a(var21, (byte) 62, param3, var31, var20);
-                    di.a(var21, (byte) 94, param3, var32, var20);
-                    continue L2;
-                  } else {
-                    L6: {
-                      if (var7_int <= var11) {
-                        stackOut_19_0 = var11;
-                        stackIn_20_0 = stackOut_19_0;
-                        break L6;
-                      } else {
-                        stackOut_18_0 = vc.field_a[var7_int];
-                        stackIn_20_0 = stackOut_18_0;
-                        break L6;
-                      }
-                    }
-                    var22 = stackIn_20_0;
-                    var23 = var22 + param1;
-                    var24 = param1 - var22;
-                    di.a(var21, (byte) 109, param3, var31, var24);
-                    di.a(var24, (byte) -121, param6, var31, var23);
-                    di.a(var23, (byte) 89, param3, var31, var20);
-                    di.a(var21, (byte) 87, param3, var32, var24);
-                    di.a(var24, (byte) -97, param6, var32, var23);
-                    di.a(var23, (byte) 115, param3, var32, var20);
-                    continue L2;
                   }
                 }
+                L4: {
+                  var7_int++;
+                  if (var10 >= 0) {
+                    L5: {
+                      var9--;
+                      if (var8 <= var9) {
+                        var29 = qd.field_a[param4 - -var9];
+                        var30 = qd.field_a[-var9 + param4];
+                        var20 = param1 - -var7_int;
+                        var21 = -var7_int + param1;
+                        di.a(var21, (byte) -97, param3, var29, var20);
+                        di.a(var21, (byte) 14, param3, var30, var20);
+                        break L5;
+                      } else {
+                        var27 = qd.field_a[var9 + param4];
+                        var28 = qd.field_a[param4 - var9];
+                        var20 = vc.field_a[var9];
+                        var21 = param1 + var7_int;
+                        var22 = -var7_int + param1;
+                        var23 = param1 - -var20;
+                        var24 = param1 + -var20;
+                        di.a(var22, (byte) 84, param3, var27, var24);
+                        di.a(var24, (byte) -120, param6, var27, var23);
+                        di.a(var23, (byte) 33, param3, var27, var21);
+                        di.a(var22, (byte) -109, param3, var28, var24);
+                        di.a(var24, (byte) 25, param6, var28, var23);
+                        di.a(var23, (byte) -122, param3, var28, var21);
+                        break L5;
+                      }
+                    }
+                    var10 = var10 - (var9 << 1);
+                    break L4;
+                  } else {
+                    break L4;
+                  }
+                }
+                var31 = qd.field_a[param4 + var7_int];
+                var32 = qd.field_a[-var7_int + param4];
+                var20 = param1 - -var9;
+                var21 = -var9 + param1;
+                if (var8 <= var7_int) {
+                  di.a(var21, (byte) 62, param3, var31, var20);
+                  di.a(var21, (byte) 94, param3, var32, var20);
+                  continue L2;
+                } else {
+                  L6: {
+                    if (var7_int <= var11) {
+                      stackOut_19_0 = var11;
+                      stackIn_20_0 = stackOut_19_0;
+                      break L6;
+                    } else {
+                      stackOut_18_0 = vc.field_a[var7_int];
+                      stackIn_20_0 = stackOut_18_0;
+                      break L6;
+                    }
+                  }
+                  var22 = stackIn_20_0;
+                  var23 = var22 + param1;
+                  var24 = param1 - var22;
+                  di.a(var21, (byte) 109, param3, var31, var24);
+                  di.a(var24, (byte) -121, param6, var31, var23);
+                  di.a(var23, (byte) 89, param3, var31, var20);
+                  di.a(var21, (byte) 87, param3, var32, var24);
+                  di.a(var24, (byte) -97, param6, var32, var23);
+                  di.a(var23, (byte) 115, param3, var32, var20);
+                  continue L2;
+                }
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var7, "mh.H(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+          throw rb.a((Throwable) (Object) var7, "mh.H(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + 15783 + 44 + param6 + 41);
         }
     }
 
@@ -3020,7 +3036,8 @@ final class mh {
                                         break L0;
                                       } else {
                                         var7_int = param1 ? 1 : 0;
-                                        hm.a(var7_int != 0, um.field_m.field_x, (t[]) null, 0, (uc) (Object) i.field_Q, 0, (t[]) null, 3, 320, 0, 3 * um.field_m.field_x / 2, 240);
+                                        int discarded$6 = 240;
+                                        hm.a(var7_int != 0, um.field_m.field_x, (t[]) null, 0, (uc) (Object) i.field_Q, 0, (t[]) null, 3, 320, 0, 3 * um.field_m.field_x / 2);
                                         break L0;
                                       }
                                     } else {
@@ -3054,9 +3071,9 @@ final class mh {
                                                             break L17;
                                                           } else {
                                                             L18: {
-                                                              int fieldTemp$2 = ld.field_k + 1;
+                                                              int fieldTemp$7 = ld.field_k + 1;
                                                               ld.field_k = ld.field_k + 1;
-                                                              if (fieldTemp$2 == 3) {
+                                                              if (fieldTemp$7 == 3) {
                                                                 ld.field_k = 0;
                                                                 break L18;
                                                               } else {
@@ -3072,9 +3089,9 @@ final class mh {
                                                             break L19;
                                                           } else {
                                                             L20: {
-                                                              int fieldTemp$3 = ld.field_k - 1;
+                                                              int fieldTemp$8 = ld.field_k - 1;
                                                               ld.field_k = ld.field_k - 1;
-                                                              if (0 <= fieldTemp$3) {
+                                                              if (0 <= fieldTemp$8) {
                                                                 break L20;
                                                               } else {
                                                                 ld.field_k = 2;
@@ -3160,14 +3177,16 @@ final class mh {
                                                         if (!((mh) this).field_a.c((byte) 41)) {
                                                           break L26;
                                                         } else {
-                                                          bd.b(115);
+                                                          int discarded$9 = 115;
+                                                          bd.b();
                                                           break L26;
                                                         }
                                                       }
                                                       if (!((mh) this).field_a.e(7632)) {
                                                         break L1;
                                                       } else {
-                                                        ia.d(117);
+                                                        int discarded$10 = 117;
+                                                        ia.d();
                                                         break L0;
                                                       }
                                                     }
@@ -3210,7 +3229,8 @@ final class mh {
                                                     }
                                                     L30: {
                                                       if (((mh) this).field_a.c((byte) 123)) {
-                                                        b.b(69);
+                                                        int discarded$11 = 69;
+                                                        b.b();
                                                         break L30;
                                                       } else {
                                                         break L30;
@@ -3653,7 +3673,7 @@ final class mh {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_k = null;
         field_f = null;
         field_d = null;
@@ -3662,9 +3682,6 @@ final class mh {
     private final int a(byte param0, int param1) {
         if (rf.field_x[((mh) this).field_h]) {
             return ok.field_C[((mh) this).field_h] + de.field_c[((mh) this).field_h] * (1 + param1);
-        }
-        if (param0 >= -118) {
-            ((mh) this).field_h = -8;
         }
         return up.field_e[((mh) this).field_h];
     }
@@ -3998,9 +4015,9 @@ final class mh {
                             break L6;
                           }
                         }
-                        uf dupTemp$3 = new uf((uc) (Object) qh.field_c, 0, 359, 166, (sm) null, 0, 0);
-                        ti.field_l[rn.field_j] = dupTemp$3;
-                        var10 = dupTemp$3;
+                        uf dupTemp$7 = new uf((uc) (Object) qh.field_c, 0, 359, 166, (sm) null, 0, 0);
+                        ti.field_l[rn.field_j] = dupTemp$7;
+                        var10 = dupTemp$7;
                         var13 = var10;
                         var13.a((byte) 85, 30);
                         ((mh) this).field_c.a(0, var14, var13);
@@ -4031,7 +4048,8 @@ final class mh {
                                 if (10 != ((mh) this).field_h) {
                                   if (((mh) this).field_h == 11) {
                                     L8: {
-                                      wb.b(-1);
+                                      int discarded$8 = -1;
+                                      wb.b();
                                       gd.field_a[da.field_a].b(245, 199);
                                       if (mf.field_t < vi.field_a.length << 2) {
                                         vi.a(-(mf.field_t >> 2) + vi.field_a.length, gd.field_a[gf.field_h], 245, 199, vi.field_a);
@@ -4046,7 +4064,7 @@ final class mh {
                                     break L5;
                                   }
                                 } else {
-                                  int discarded$4 = i.field_Q.a(vf.field_m, 62, 250 - -um.field_m.field_x, 315, 1000, 0, -1, 0, 0, 3 * um.field_m.field_x / 2);
+                                  int discarded$9 = i.field_Q.a(vf.field_m, 62, 250 - -um.field_m.field_x, 315, 1000, 0, -1, 0, 0, 3 * um.field_m.field_x / 2);
                                   break L5;
                                 }
                               } else {
@@ -4331,7 +4349,8 @@ final class mh {
                           }
                         }
                         var2 = stackIn_86_0;
-                        this.a(var2 != 0, (byte) -128);
+                        int discarded$10 = -128;
+                        this.a(var2 != 0);
                         var3 = 168;
                         ph.b(33, var3, 573, 3355443);
                         ph.b(31, 1 + var3, 577, 15116313);
@@ -4474,7 +4493,7 @@ final class mh {
                             break L24;
                           }
                         }
-                        int discarded$5 = ((pk) (Object) stackIn_36_0).a(ko.a(stackIn_36_1 != 0, (byte) stackIn_36_2, stackIn_36_3 != 0, stackIn_36_4 != 0), 135, 169 - i.field_N.field_x, 370, 1000, 0, -1, 1, 0, i.field_N.field_x);
+                        int discarded$11 = ((pk) (Object) stackIn_36_0).a(ko.a(stackIn_36_1 != 0, (byte) stackIn_36_2, stackIn_36_3 != 0, stackIn_36_4 != 0), 135, 169 - i.field_N.field_x, 370, 1000, 0, -1, 1, 0, i.field_N.field_x);
                         break L5;
                       } else {
                         L25: {
@@ -4585,7 +4604,9 @@ final class mh {
                       }
                     }
                     if (var6 != null) {
-                      ji.a(false, (uc) (Object) nl.field_s, 0, (String) var6, 250, 16777120);
+                      int discarded$12 = 16777120;
+                      int discarded$13 = 250;
+                      ji.a(false, (uc) (Object) nl.field_s, 0, (String) var6);
                       break L27;
                     } else {
                       break L27;
@@ -4633,7 +4654,7 @@ final class mh {
         }
     }
 
-    private final void a(byte param0) {
+    private final void a() {
         int var2 = 0;
         Throwable var3 = null;
         int var4 = 0;
@@ -4935,7 +4956,7 @@ final class mh {
           var3 = 90 + param0;
           qh.field_c.c(rd.field_v, 320, var3 + qh.field_c.field_x, 0, -1);
           var3 = var3 + qh.field_c.field_x * 3;
-          int discarded$2 = qh.field_c.a(ti.field_m, 130, var3, 380, 1000, 0, -1, 1, 0, qh.field_c.field_x * 3 / 2);
+          int discarded$3 = qh.field_c.a(ti.field_m, 130, var3, 380, 1000, 0, -1, 1, 0, qh.field_c.field_x * 3 / 2);
           return;
         } else {
           L0: {
@@ -4993,7 +5014,8 @@ final class mh {
                         if (null != var6[var11]) {
                           L5: {
                             var12 = 0;
-                            if (!bn.a(var6[var11], -17310)) {
+                            int discarded$4 = -17310;
+                            if (!bn.a(var6[var11])) {
                               break L5;
                             } else {
                               if (var9 != 0) {
@@ -5045,7 +5067,7 @@ final class mh {
               break L2;
             }
           }
-          int discarded$3 = qh.field_c.a(n.field_r, 130, 13 + param0 + 220, 380, 1000, 0, -1, 1, 0, qh.field_c.field_x * 3 / 2);
+          int discarded$5 = qh.field_c.a(n.field_r, 130, 13 + param0 + 220, 380, 1000, 0, -1, 1, 0, qh.field_c.field_x * 3 / 2);
           var5 = param0 + 90;
           i.field_Q.c(var4, 320, var5 + um.field_m.field_x, 4, -1);
           return;

@@ -44,18 +44,10 @@ final class c extends rc {
         var6 = 0;
         L0: while (true) {
           if (((c) this).field_x <= var6) {
-            L1: {
-              if (param1 == 16711935) {
-                break L1;
-              } else {
-                ((c) this).field_O = 56;
-                break L1;
-              }
-            }
             mf.e(4096);
             return var14;
           } else {
-            L2: {
+            L1: {
               var7 = (var6 >> 1) * (-1 + 2 * ((c) this).field_N) % (2 * ((c) this).field_N);
               var8 = param0 & 16711935;
               var9 = param0 & 65280;
@@ -64,14 +56,14 @@ final class c extends rc {
               if (var11 < 256) {
                 stackOut_4_0 = (-16711936 & var8 * var11 | 16711680 & var11 * var9) >>> 8;
                 stackIn_5_0 = stackOut_4_0;
-                break L2;
+                break L1;
               } else {
                 stackOut_3_0 = var8 | var9;
                 stackIn_5_0 = stackOut_3_0;
-                break L2;
+                break L1;
               }
             }
-            L3: {
+            L2: {
               var12 = stackIn_5_0;
               mi.b(var7, var6, ((c) this).field_N, var12);
               var9 = param2 & 65280;
@@ -80,11 +72,11 @@ final class c extends rc {
               if (var11 >= 256) {
                 stackOut_7_0 = var9 | var8;
                 stackIn_8_0 = stackOut_7_0;
-                break L3;
+                break L2;
               } else {
                 stackOut_6_0 = (var9 * var11 & 16711680 | var11 * var8 & -16711936) >>> 8;
                 stackIn_8_0 = stackOut_6_0;
-                break L3;
+                break L2;
               }
             }
             var12 = stackIn_8_0;
@@ -102,10 +94,11 @@ final class c extends rc {
 
     final void b(int param0, int param1, int param2, int param3, int param4) {
         super.b(param0, param1, param2, param3, param4);
-        this.a(-277997311);
+        int discarded$0 = -277997311;
+        this.a();
     }
 
-    private final void a(int param0) {
+    private final void a() {
         ((c) this).field_S = new o[]{this.b(((c) this).field_O, 16711935, ((c) this).field_K), this.b(((c) this).field_I, 16711935, ((c) this).field_F)};
         ((c) this).field_P = this.a((byte) -119);
         ((c) this).field_A = ((c) this).field_P.b();
@@ -320,10 +313,11 @@ final class c extends rc {
         ((c) this).field_K = param1;
         int var4 = 99 / ((-54 - param0) / 58);
         ((c) this).field_O = param2;
-        this.a(-277997311);
+        int discarded$0 = -277997311;
+        this.a();
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_E = null;
         field_M = null;
         int var1 = -1;
@@ -355,7 +349,7 @@ final class c extends rc {
               if (!gb.a(param1, 126)) {
                 var6 = hh.field_N;
                 var2 = var6;
-                var3 = param0;
+                var3 = 0;
                 L1: while (true) {
                   if (var6.length <= var3) {
                     var2 = qk.field_k;
@@ -403,7 +397,7 @@ final class c extends rc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw fc.a((Throwable) (Object) var2_ref, "c.H(" + param0 + 44 + param1 + 41);
+          throw fc.a((Throwable) (Object) var2_ref, "c.H(" + 0 + 44 + param1 + 41);
         }
         return stackIn_22_0 != 0;
     }

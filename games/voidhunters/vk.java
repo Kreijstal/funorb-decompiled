@@ -4,11 +4,11 @@
 final class vk extends rqa {
     static String field_o;
 
-    public static void e(byte param0) {
+    public static void e() {
         field_o = null;
     }
 
-    final static void a(java.applet.Applet param0, int param1, String[] param2, int param3, int param4, int param5) {
+    final static void a(java.applet.Applet param0, int param1, String[] param2) {
         String var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
@@ -70,7 +70,7 @@ final class vk extends rqa {
               if (var6 == null) {
                 break L3;
               } else {
-                if (hwa.a((CharSequence) (Object) var6, param1 + -2131)) {
+                if (hwa.a((CharSequence) (Object) var6, 10)) {
                   int discarded$2 = lob.a(-106, (CharSequence) (Object) var6);
                   break L3;
                 } else {
@@ -79,19 +79,15 @@ final class vk extends rqa {
               }
             }
             via.field_a = new phb[param2.length];
-            if (param1 == 2141) {
-              var7 = 0;
-              L4: while (true) {
-                if (var7 >= param2.length) {
-                  break L0;
-                } else {
-                  via.field_a[var7] = new phb(317, 34);
-                  var7++;
-                  continue L4;
-                }
+            var7 = 0;
+            L4: while (true) {
+              if (var7 >= param2.length) {
+                break L0;
+              } else {
+                via.field_a[var7] = new phb(317, 34);
+                var7++;
+                continue L4;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -124,7 +120,7 @@ final class vk extends rqa {
           }
           L6: {
             stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
-            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44).append(param1).append(44);
+            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44).append(2141).append(44);
             stackIn_21_0 = stackOut_19_0;
             stackIn_21_1 = stackOut_19_1;
             stackIn_20_0 = stackOut_19_0;
@@ -147,7 +143,7 @@ final class vk extends rqa {
               break L6;
             }
           }
-          throw rta.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param3 + 44 + param4 + 44 + 0 + 41);
+          throw rta.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + 16777215 + 44 + 0 + 44 + 0 + 41);
         }
     }
 

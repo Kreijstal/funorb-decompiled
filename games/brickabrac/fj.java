@@ -86,7 +86,7 @@ final class fj extends mh {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
-        wd.field_w.a(param2, param5, param1, param3, (byte) 64);
+        wd.field_w.a(param2, 0, 5, 640, (byte) 64);
         if (!(null == hd.field_a)) {
             hd.field_a.a(0, -ah.field_v + param4, param2, param0, param4, param2);
         }
@@ -447,12 +447,7 @@ final class fj extends mh {
     }
 
     final static jp[] a(int param0, int param1, int param2, int param3, int param4) {
-        if (param3 != 1) {
-          field_Ub = null;
-          return mn.a(param0, 1, 1, 9361, param2, 1, 3, 0, param1);
-        } else {
-          return mn.a(param0, 1, 1, 9361, param2, 1, 3, 0, param1);
-        }
+        return mn.a(0, 1, 1, 9361, 65793, 1, 3, 0, 0);
     }
 
     final void a(int param0, int param1, int param2, int param3) {

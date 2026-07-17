@@ -13,7 +13,7 @@ final class qj {
     static String field_f;
     static int field_g;
 
-    final static StringBuilder a(int param0, StringBuilder param1, char param2, boolean param3) {
+    final static StringBuilder a(int param0, StringBuilder param1) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -48,7 +48,7 @@ final class qj {
                 stackIn_6_0 = stackOut_5_0;
                 break L0;
               } else {
-                param1.setCharAt(var5, param2);
+                param1.setCharAt(var5, ' ');
                 var5++;
                 continue L1;
               }
@@ -82,12 +82,12 @@ final class qj {
               break L2;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param2 + 44 + 0 + 41);
+          throw aa.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + 32 + 44 + 0 + 41);
         }
         return stackIn_6_0;
     }
 
-    final static hh a(byte param0) {
+    final static hh a() {
         try {
             int var1_int = 0;
             Throwable var1 = null;
@@ -130,7 +130,7 @@ final class qj {
         return df.field_z.l(-1);
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_h = null;
         field_e = null;
         field_i = null;

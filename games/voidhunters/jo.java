@@ -79,7 +79,7 @@ final class jo implements ntb, ofa, iu {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_g = null;
         field_a = null;
     }
@@ -260,7 +260,8 @@ final class jo implements ntb, ofa, iu {
             L2: {
               var5 = (jo) (Object) param0;
               var4 = 0;
-              if (!ikb.a(var5.field_d, var5.field_d, false)) {
+              int discarded$1 = 0;
+              if (!ikb.a(var5.field_d, var5.field_d)) {
                 break L2;
               } else {
                 var4 = 1;
@@ -395,8 +396,10 @@ final class jo implements ntb, ofa, iu {
                 ((jo) this).field_d = null;
             }
             ((jo) this).field_d = wkb.a((byte) 37, ((jo) this).field_d, param0, 8);
-            ((jo) this).field_h = uwa.a(8, param0, (byte) 20);
-            ((jo) this).field_b = uwa.a(8, param0, (byte) 20);
+            int discarded$0 = 20;
+            ((jo) this).field_h = uwa.a(8, param0);
+            int discarded$1 = 20;
+            ((jo) this).field_b = uwa.a(8, param0);
             ((jo) this).field_f = param0.i(0, 2);
         } catch (RuntimeException runtimeException) {
             throw rta.a((Throwable) (Object) runtimeException, "jo.H(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
@@ -432,7 +435,8 @@ final class jo implements ntb, ofa, iu {
               L2: {
                 var3 = (jo) (Object) param1;
                 var4 = 11 % ((22 - param0) / 59);
-                if (wpb.a(var3.field_d, var3.field_d, (byte) 28)) {
+                int discarded$9 = 28;
+                if (wpb.a(var3.field_d, var3.field_d)) {
                   break L2;
                 } else {
                   if (var3.field_h != var3.field_h) {

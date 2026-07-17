@@ -10,22 +10,19 @@ abstract class v implements tl {
     static String field_c;
     private long field_a;
 
-    final static void a(int param0, boolean param1, int param2, ic param3, pn param4, java.awt.Component param5, int param6, int param7) {
+    final static void a(int param0, boolean param1, int param2, ic param3, pn param4, java.awt.Component param5) {
         try {
-            tb.a(param2, param1, 10);
-            fc.field_a = tb.a(param4, param5, 0, param0);
-            cm.field_j = tb.a(param4, param5, 1, param6);
+            tb.a(22050, true, 10);
+            fc.field_a = tb.a(param4, param5, 0, 22050);
+            cm.field_j = tb.a(param4, param5, 1, 1024);
             ll.field_e = new wg();
-            ej.field_B = param6 * 1000 / param2;
+            ej.field_B = 46;
             cm.field_j.a((we) (Object) ll.field_e);
-            if (param7 > -71) {
-                field_g = 'ﾓ';
-            }
             q.field_f = param3;
             q.field_f.a(ll.field_q, 1000000);
             fc.field_a.a((we) (Object) q.field_f);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) (Object) runtimeException, "v.V(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 44 + param7 + 41);
+            throw ci.a((Throwable) (Object) runtimeException, "v.V(" + 22050 + 44 + 1 + 44 + 22050 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 44 + 1024 + 44 + -98 + 41);
         }
     }
 

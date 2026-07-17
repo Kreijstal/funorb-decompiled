@@ -24,7 +24,8 @@ final class hk extends rg {
         ((hk) this).field_ab = true;
         ((hk) this).field_Z.field_I = false;
         if (param0 < 11) {
-            hk.e(false);
+            int discarded$0 = 0;
+            hk.e();
         }
     }
 
@@ -52,7 +53,7 @@ final class hk extends rg {
         }
     }
 
-    public static void e(boolean param0) {
+    public static void e() {
         field_W = null;
     }
 

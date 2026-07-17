@@ -5,7 +5,7 @@ final class hj {
     static int[] field_a;
     static int[] field_b;
 
-    final static boolean a(String param0, String param1, int param2) {
+    final static boolean a(String param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int stackIn_4_0 = 0;
@@ -146,7 +146,7 @@ final class hj {
         return stackIn_12_0 != 0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }

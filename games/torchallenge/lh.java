@@ -17,7 +17,7 @@ final class lh extends w {
     static ka field_v;
     static String field_y;
 
-    final static int e(int param0) {
+    final static int e() {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -139,7 +139,7 @@ final class lh extends w {
     lh() {
     }
 
-    private final void a(int param0, uf param1, int param2) {
+    private final void a(int param0, uf param1) {
         RuntimeException var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -265,7 +265,7 @@ final class lh extends w {
         }
     }
 
-    final static void f(int param0) {
+    final static void f() {
         o var1 = (o) (Object) ve.field_c.c((byte) 116);
         if (var1 == null) {
             ob.b(-103);
@@ -306,7 +306,8 @@ final class lh extends w {
               L1: while (true) {
                 var3_int = param0.j(-118);
                 if (0 != var3_int) {
-                  this.a(var3_int, param0, -817);
+                  int discarded$4 = -817;
+                  this.a(var3_int, param0);
                   continue L1;
                 } else {
                   break L0;

@@ -164,116 +164,100 @@ final class h implements java.awt.event.MouseListener, java.awt.event.MouseMotio
         var6 = ZombieDawn.field_J;
         try {
           L0: {
-            if (param3 == -17) {
-              L1: {
-                if (param1 == 0) {
+            L1: {
+              if (param1 == 0) {
+                param0[param2].a();
+                param0[param4].e(0, 0);
+                bi.a(0, 0, 24, 24, 0, 128);
+                break L1;
+              } else {
+                if (param1 == 1) {
                   param0[param2].a();
                   param0[param4].e(0, 0);
-                  bi.a(0, 0, 24, 24, 0, 128);
-                  break L1;
+                  var5_int = 0;
+                  L2: while (true) {
+                    if (var5_int >= 24) {
+                      break L1;
+                    } else {
+                      bi.g(var5_int, 0, 24, 0, 5 * var5_int);
+                      var5_int++;
+                      continue L2;
+                    }
+                  }
                 } else {
-                  if (param1 == 1) {
+                  if (param1 == 2) {
                     param0[param2].a();
                     param0[param4].e(0, 0);
                     var5_int = 0;
-                    L2: while (true) {
-                      if (var5_int >= 24) {
+                    L3: while (true) {
+                      if (24 <= var5_int) {
                         break L1;
                       } else {
-                        bi.g(var5_int, 0, 24, 0, 5 * var5_int);
+                        bi.g(var5_int, 0, 24, 0, -(var5_int * 5) + 120);
                         var5_int++;
-                        continue L2;
+                        continue L3;
                       }
                     }
                   } else {
-                    if (param1 == 2) {
+                    if (param1 == 3) {
                       param0[param2].a();
                       param0[param4].e(0, 0);
                       var5_int = 0;
-                      L3: while (true) {
-                        if (24 <= var5_int) {
+                      L4: while (true) {
+                        if (var5_int >= 24) {
                           break L1;
                         } else {
-                          bi.g(var5_int, 0, 24, 0, -(var5_int * 5) + 120);
+                          bi.a(0, var5_int, 24, 0, 5 * var5_int);
                           var5_int++;
-                          continue L3;
+                          continue L4;
                         }
                       }
                     } else {
-                      if (param1 == 3) {
+                      if (param1 == 4) {
                         param0[param2].a();
                         param0[param4].e(0, 0);
                         var5_int = 0;
-                        L4: while (true) {
+                        L5: while (true) {
                           if (var5_int >= 24) {
                             break L1;
                           } else {
-                            bi.a(0, var5_int, 24, 0, 5 * var5_int);
+                            bi.a(0, var5_int, 24, 0, -(var5_int * 5) + 120);
                             var5_int++;
-                            continue L4;
+                            continue L5;
                           }
                         }
                       } else {
-                        if (param1 == 4) {
+                        if (6 == param1) {
                           param0[param2].a();
                           param0[param4].e(0, 0);
                           var5_int = 0;
-                          L5: while (true) {
-                            if (var5_int >= 24) {
+                          L6: while (true) {
+                            if (24 <= var5_int) {
                               break L1;
                             } else {
-                              bi.a(0, var5_int, 24, 0, -(var5_int * 5) + 120);
+                              bi.a(var5_int + 1, var5_int, -var5_int + 24, 0, var5_int * 5);
+                              bi.g(var5_int, var5_int, 24 - var5_int, 0, 5 * var5_int);
                               var5_int++;
-                              continue L5;
+                              continue L6;
                             }
                           }
                         } else {
-                          if (6 == param1) {
-                            param0[param2].a();
-                            param0[param4].e(0, 0);
-                            var5_int = 0;
-                            L6: while (true) {
-                              if (24 <= var5_int) {
+                          if (param1 != 8) {
+                            if (param1 != 7) {
+                              if (param1 != 5) {
                                 break L1;
-                              } else {
-                                bi.a(var5_int + 1, var5_int, -var5_int + 24, 0, var5_int * 5);
-                                bi.g(var5_int, var5_int, 24 - var5_int, 0, 5 * var5_int);
-                                var5_int++;
-                                continue L6;
-                              }
-                            }
-                          } else {
-                            if (param1 != 8) {
-                              if (param1 != 7) {
-                                if (param1 != 5) {
-                                  break L1;
-                                } else {
-                                  param0[param2].a();
-                                  param0[param4].e(0, 0);
-                                  var5_int = 0;
-                                  L7: while (true) {
-                                    if (var5_int >= 24) {
-                                      break L1;
-                                    } else {
-                                      bi.a(24 + -var5_int, var5_int, var5_int, 0, -(var5_int * 5) + 120);
-                                      bi.g(var5_int, 0, 24 - var5_int, 0, 5 * var5_int);
-                                      var5_int++;
-                                      continue L7;
-                                    }
-                                  }
-                                }
                               } else {
                                 param0[param2].a();
                                 param0[param4].e(0, 0);
                                 var5_int = 0;
-                                L8: while (true) {
+                                L7: while (true) {
                                   if (var5_int >= 24) {
                                     break L1;
                                   } else {
-                                    bi.a(0, var5_int, 24 + -var5_int, 0, var5_int * 5);
-                                    bi.g(var5_int, -var5_int + 24, var5_int, 0, 120 - var5_int * 5);
+                                    bi.a(24 + -var5_int, var5_int, var5_int, 0, -(var5_int * 5) + 120);
+                                    bi.g(var5_int, 0, 24 - var5_int, 0, 5 * var5_int);
                                     var5_int++;
-                                    continue L8;
+                                    continue L7;
                                   }
                                 }
                               }
@@ -281,15 +265,29 @@ final class h implements java.awt.event.MouseListener, java.awt.event.MouseMotio
                               param0[param2].a();
                               param0[param4].e(0, 0);
                               var5_int = 0;
-                              L9: while (true) {
+                              L8: while (true) {
                                 if (var5_int >= 24) {
                                   break L1;
                                 } else {
-                                  bi.a(0, var5_int, var5_int + 1, 0, -(5 * var5_int) + 120);
-                                  bi.g(var5_int, 0, var5_int, 0, -(5 * var5_int) + 120);
+                                  bi.a(0, var5_int, 24 + -var5_int, 0, var5_int * 5);
+                                  bi.g(var5_int, -var5_int + 24, var5_int, 0, 120 - var5_int * 5);
                                   var5_int++;
-                                  continue L9;
+                                  continue L8;
                                 }
+                              }
+                            }
+                          } else {
+                            param0[param2].a();
+                            param0[param4].e(0, 0);
+                            var5_int = 0;
+                            L9: while (true) {
+                              if (var5_int >= 24) {
+                                break L1;
+                              } else {
+                                bi.a(0, var5_int, var5_int + 1, 0, -(5 * var5_int) + 120);
+                                bi.g(var5_int, 0, var5_int, 0, -(5 * var5_int) + 120);
+                                var5_int++;
+                                continue L9;
                               }
                             }
                           }
@@ -299,11 +297,9 @@ final class h implements java.awt.event.MouseListener, java.awt.event.MouseMotio
                   }
                 }
               }
-              cn.field_f.b(-124);
-              break L0;
-            } else {
-              return;
             }
+            cn.field_f.b(-124);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -333,7 +329,7 @@ final class h implements java.awt.event.MouseListener, java.awt.event.MouseMotio
               break L10;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw sh.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + 44 + param1 + 44 + param2 + 44 + -17 + 44 + param4 + 41);
         }
     }
 
@@ -401,67 +397,58 @@ final class h implements java.awt.event.MouseListener, java.awt.event.MouseMotio
 
     final static v[] a(dj param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
-        Object var5 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_9_2 = null;
+        String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
         RuntimeException stackOut_6_0 = null;
         StringBuilder stackOut_6_1 = null;
-        RuntimeException stackOut_8_0 = null;
-        StringBuilder stackOut_8_1 = null;
-        String stackOut_8_2 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        String stackOut_7_2 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
         try {
-          L0: {
-            if (param2 <= -68) {
-              break L0;
-            } else {
-              var5 = null;
-              h.a((vn[]) null, -98, 92, (byte) 28, 20);
-              break L0;
-            }
-          }
           if (ph.a(param1, 31043, param3, param0)) {
-            return di.a(-79);
+            int discarded$2 = -79;
+            return di.a();
           } else {
             return null;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
+          L0: {
             var4 = decompiledCaughtException;
-            stackOut_6_0 = (RuntimeException) var4;
-            stackOut_6_1 = new StringBuilder().append("h.B(");
-            stackIn_8_0 = stackOut_6_0;
-            stackIn_8_1 = stackOut_6_1;
-            stackIn_7_0 = stackOut_6_0;
-            stackIn_7_1 = stackOut_6_1;
+            stackOut_4_0 = (RuntimeException) var4;
+            stackOut_4_1 = new StringBuilder().append("h.B(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
             if (param0 == null) {
-              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "null";
-              stackIn_9_0 = stackOut_8_0;
-              stackIn_9_1 = stackOut_8_1;
-              stackIn_9_2 = stackOut_8_2;
-              break L1;
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L0;
             } else {
-              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
-              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
-              stackOut_7_2 = "{...}";
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_9_1 = stackOut_7_1;
-              stackIn_9_2 = stackOut_7_2;
-              break L1;
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L0;
             }
           }
-          throw sh.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          throw sh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 44 + -87 + 44 + param3 + 41);
         }
     }
 

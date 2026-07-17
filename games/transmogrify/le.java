@@ -294,32 +294,49 @@ class le extends lj {
     }
 
     private final nj a(int param0, byte param1, int param2) {
+        nj var4 = null;
         nj var5 = null;
-        int var6 = Transmogrify.field_A ? 1 : 0;
-        nj var4 = (nj) (Object) ((le) this).field_E.a((byte) -95);
-        while (var4 != null) {
+        int var6 = 0;
+        var6 = Transmogrify.field_A ? 1 : 0;
+        var4 = (nj) (Object) ((le) this).field_E.a((byte) -95);
+        L0: while (true) {
+          if (var4 == null) {
+            return null;
+          } else {
             var5 = var4;
-            while (var5 != null) {
-                if (param2 >= var5.field_i) {
-                    if (param0 >= var5.field_h) {
-                        if (var5.field_q + var5.field_i > param2) {
-                            if (var5.field_h - -var5.field_o >= param0) {
-                                return var4;
-                            }
+            L1: while (true) {
+              if (var5 == null) {
+                var4 = (nj) (Object) ((le) this).field_E.a(true);
+                continue L0;
+              } else {
+                L2: {
+                  if (param2 < var5.field_i) {
+                    break L2;
+                  } else {
+                    if (param0 < var5.field_h) {
+                      break L2;
+                    } else {
+                      if (var5.field_q + var5.field_i <= param2) {
+                        break L2;
+                      } else {
+                        if (var5.field_h - -var5.field_o < param0) {
+                          break L2;
+                        } else {
+                          return var4;
                         }
+                      }
                     }
+                  }
                 }
                 var5 = var5.field_s;
+                continue L1;
+              }
             }
-            var4 = (nj) (Object) ((le) this).field_E.a(true);
+          }
         }
-        if (param1 == -5) {
-            return null;
-        }
-        return null;
     }
 
-    final static Boolean d(boolean param0) {
+    final static Boolean d() {
         Boolean var1 = ch.field_f;
         ch.field_f = null;
         return var1;

@@ -35,12 +35,12 @@ final class tc extends id {
         return dupTemp$0;
     }
 
-    final static void a(kl param0, int param1, boolean param2) {
+    final static void a(kl param0) {
         try {
             nl.field_e.b(-104, (gg) (Object) param0);
-            ca.a(param1, param0, (byte) 71);
+            ca.a(4, param0, (byte) 71);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) (Object) runtimeException, "tc.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 0 + 41);
+            throw ma.a((Throwable) (Object) runtimeException, "tc.F(" + (param0 != null ? "{...}" : "null") + 44 + 4 + 44 + 0 + 41);
         }
     }
 
@@ -53,7 +53,7 @@ final class tc extends id {
         }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_s = null;
         field_u = null;
         field_q = null;
@@ -146,7 +146,7 @@ final class tc extends id {
         }
     }
 
-    final static void d(int param0) {
+    final static void d() {
     }
 
     final static int a(int param0, byte param1) {
@@ -520,7 +520,7 @@ final class tc extends id {
         try {
           L0: {
             L1: {
-              var4_int = -94 % ((6 - param1) / 63);
+              var4_int = 0;
               super.a((id) (Object) param2, (byte) -34);
               if (!param0) {
                 ri.a((Object[]) (Object) ((tc) this).field_x, 0, (Object[]) (Object) param2.field_x, 0, 6);
@@ -575,7 +575,7 @@ final class tc extends id {
           L5: {
             var4 = decompiledCaughtException;
             stackOut_13_0 = (RuntimeException) var4;
-            stackOut_13_1 = new StringBuilder().append("tc.K(").append(param0).append(44).append(param1).append(44);
+            stackOut_13_1 = new StringBuilder().append("tc.K(").append(param0).append(44).append(-59).append(44);
             stackIn_15_0 = stackOut_13_0;
             stackIn_15_1 = stackOut_13_1;
             stackIn_14_0 = stackOut_13_0;

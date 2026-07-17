@@ -7,7 +7,7 @@ final class ml {
     static cn field_a;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
         field_b = null;
@@ -19,7 +19,8 @@ final class ml {
 
     private static void $cfr$clinit() {
         field_z = "ml.A(";
-        field_b = rb.b(16760960, 12615744, 64);
+        int discarded$0 = 64;
+        field_b = rb.b(16760960, 12615744);
         field_c = "Witch";
     }
 }

@@ -22,20 +22,12 @@ final class jb extends nk implements vg {
         }
     }
 
-    final static void q(int param0) {
+    final static void q() {
         nk.field_Hb = false;
         mo.field_g = null;
         sn.field_a = null;
-        if (param0 != 61270) {
-          field_Ub = null;
-          fd.field_b = null;
-          cp.field_Q = null;
-          return;
-        } else {
-          fd.field_b = null;
-          cp.field_Q = null;
-          return;
-        }
+        fd.field_b = null;
+        cp.field_Q = null;
     }
 
     final boolean f(byte param0) {
@@ -77,7 +69,7 @@ final class jb extends nk implements vg {
         }
     }
 
-    public static void p(int param0) {
+    public static void p() {
         field_Sb = null;
         field_Vb = null;
         field_Ub = null;
@@ -89,143 +81,30 @@ final class jb extends nk implements vg {
 
     final static void a(boolean param0, String param1, java.applet.Applet param2) {
         try {
-            Throwable var3 = null;
-            RuntimeException var3_ref = null;
-            String var4 = null;
+            String var6 = null;
             String var5 = null;
-            Object var6 = null;
+            String var4 = null;
             String var7 = null;
-            String var8 = null;
-            RuntimeException stackIn_11_0 = null;
-            StringBuilder stackIn_11_1 = null;
-            RuntimeException stackIn_12_0 = null;
-            StringBuilder stackIn_12_1 = null;
-            RuntimeException stackIn_13_0 = null;
-            StringBuilder stackIn_13_1 = null;
-            String stackIn_13_2 = null;
-            RuntimeException stackIn_14_0 = null;
-            StringBuilder stackIn_14_1 = null;
-            RuntimeException stackIn_15_0 = null;
-            StringBuilder stackIn_15_1 = null;
-            RuntimeException stackIn_16_0 = null;
-            StringBuilder stackIn_16_1 = null;
-            String stackIn_16_2 = null;
-            Throwable decompiledCaughtException = null;
-            RuntimeException stackOut_10_0 = null;
-            StringBuilder stackOut_10_1 = null;
-            RuntimeException stackOut_12_0 = null;
-            StringBuilder stackOut_12_1 = null;
-            String stackOut_12_2 = null;
-            RuntimeException stackOut_11_0 = null;
-            StringBuilder stackOut_11_1 = null;
-            String stackOut_11_2 = null;
-            RuntimeException stackOut_13_0 = null;
-            StringBuilder stackOut_13_1 = null;
-            RuntimeException stackOut_15_0 = null;
-            StringBuilder stackOut_15_1 = null;
-            String stackOut_15_2 = null;
-            RuntimeException stackOut_14_0 = null;
-            StringBuilder stackOut_14_1 = null;
-            String stackOut_14_2 = null;
             try {
-              L0: {
                 ql.field_a = param1;
-                try {
-                  L1: {
-                    L2: {
-                      var7 = param2.getParameter("cookieprefix");
-                      var5 = var7;
-                      var5 = var7;
-                      var4 = param2.getParameter("cookiehost");
-                      var5 = var4;
-                      var5 = var4;
-                      var8 = var7 + "settings=" + param1 + "; version=1; path=/; domain=" + var4;
-                      var5 = var8;
-                      var5 = var8;
-                      if (0 != param1.length()) {
-                        var5 = var8 + "; Expires=" + go.a(94608000000L + kd.c(-2456), 42) + "; Max-Age=" + 94608000L;
-                        break L2;
-                      } else {
-                        var5 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
-                        break L2;
-                      }
-                    }
-                    L3: {
-                      ee.a("document.cookie=\"" + var5 + "\"", (byte) -46, param2);
-                      if (param0) {
-                        break L3;
-                      } else {
-                        var6 = null;
-                        jb.a(true, (String) null, (java.applet.Applet) null);
-                        break L3;
-                      }
-                    }
-                    break L1;
-                  }
-                } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  L4: {
-                    var3 = decompiledCaughtException;
-                    break L4;
-                  }
+                var6 = param2.getParameter("cookieprefix");
+                var5 = var6;
+                var5 = var6;
+                var4 = param2.getParameter("cookiehost");
+                var5 = var4;
+                var5 = var4;
+                var7 = var6 + "settings=" + param1 + "; version=1; path=/; domain=" + var4;
+                var5 = var7;
+                var5 = var7;
+                if (0 == param1.length()) {
+                    var5 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+                } else {
+                    var5 = var7 + "; Expires=" + go.a(94608000000L + kd.c(-2456), 42) + "; Max-Age=" + 94608000L;
                 }
+                ee.a("document.cookie=\"" + var5 + "\"", (byte) -46, param2);
                 lm.a((byte) -106, param2);
-                break L0;
-              }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L5: {
-                var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackOut_10_0 = (RuntimeException) var3_ref;
-                stackOut_10_1 = new StringBuilder().append("jb.RA(").append(param0).append(44);
-                stackIn_12_0 = stackOut_10_0;
-                stackIn_12_1 = stackOut_10_1;
-                stackIn_11_0 = stackOut_10_0;
-                stackIn_11_1 = stackOut_10_1;
-                if (param1 == null) {
-                  stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
-                  stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
-                  stackOut_12_2 = "null";
-                  stackIn_13_0 = stackOut_12_0;
-                  stackIn_13_1 = stackOut_12_1;
-                  stackIn_13_2 = stackOut_12_2;
-                  break L5;
-                } else {
-                  stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
-                  stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
-                  stackOut_11_2 = "{...}";
-                  stackIn_13_0 = stackOut_11_0;
-                  stackIn_13_1 = stackOut_11_1;
-                  stackIn_13_2 = stackOut_11_2;
-                  break L5;
-                }
-              }
-              L6: {
-                stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
-                stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44);
-                stackIn_15_0 = stackOut_13_0;
-                stackIn_15_1 = stackOut_13_1;
-                stackIn_14_0 = stackOut_13_0;
-                stackIn_14_1 = stackOut_13_1;
-                if (param2 == null) {
-                  stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
-                  stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
-                  stackOut_15_2 = "null";
-                  stackIn_16_0 = stackOut_15_0;
-                  stackIn_16_1 = stackOut_15_1;
-                  stackIn_16_2 = stackOut_15_2;
-                  break L6;
-                } else {
-                  stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
-                  stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
-                  stackOut_14_2 = "{...}";
-                  stackIn_16_0 = stackOut_14_0;
-                  stackIn_16_1 = stackOut_14_1;
-                  stackIn_16_2 = stackOut_14_2;
-                  break L6;
-                }
-              }
-              throw vk.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
+            } catch (RuntimeException runtimeException) {
+                throw vk.a((Throwable) (Object) runtimeException, "jb.RA(" + 1 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -255,119 +134,93 @@ final class jb extends nk implements vg {
         String var4_ref = null;
         kc var5 = null;
         int var6 = 0;
-        Object stackIn_2_0 = null;
-        Object stackIn_3_0 = null;
-        Object stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
-        String stackIn_35_2 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        RuntimeException stackIn_32_0 = null;
+        StringBuilder stackIn_32_1 = null;
+        String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_1_0 = null;
-        Object stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        RuntimeException stackOut_32_0 = null;
-        StringBuilder stackOut_32_1 = null;
-        RuntimeException stackOut_34_0 = null;
-        StringBuilder stackOut_34_1 = null;
-        String stackOut_34_2 = null;
-        RuntimeException stackOut_33_0 = null;
-        StringBuilder stackOut_33_1 = null;
-        String stackOut_33_2 = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        RuntimeException stackOut_31_0 = null;
+        StringBuilder stackOut_31_1 = null;
+        String stackOut_31_2 = null;
+        RuntimeException stackOut_30_0 = null;
+        StringBuilder stackOut_30_1 = null;
+        String stackOut_30_2 = null;
         var6 = DungeonAssault.field_K;
         try {
           L0: {
             L1: {
-              stackOut_1_0 = this;
-              stackIn_3_0 = stackOut_1_0;
-              stackIn_2_0 = stackOut_1_0;
-              if (!param1) {
-                stackOut_3_0 = this;
-                stackOut_3_1 = 0;
-                stackIn_4_0 = stackOut_3_0;
-                stackIn_4_1 = stackOut_3_1;
-                break L1;
-              } else {
-                stackOut_2_0 = this;
-                stackOut_2_1 = 1;
-                stackIn_4_0 = stackOut_2_0;
-                stackIn_4_1 = stackOut_2_1;
-                break L1;
-              }
-            }
-            L2: {
-              ((jb) this).field_Rb = stackIn_4_1 != 0;
+              ((jb) this).field_Rb = true;
               if (param0.field_a) {
                 var4_ref = wa.field_e;
-                break L2;
+                break L1;
               } else {
                 if (null != param0.field_c) {
                   var4_ref = fp.field_a;
                   if (null != ((jb) this).field_Ob) {
                     ((jb) this).field_Ob.a(127);
-                    break L2;
+                    break L1;
                   } else {
-                    break L2;
+                    break L1;
                   }
                 } else {
                   var4_ref = param0.field_g;
                   if (param0.field_d != 248) {
-                    break L2;
+                    break L1;
                   } else {
-                    L3: {
+                    L2: {
                       if (!param2) {
-                        li.a(-8);
-                        break L3;
+                        int discarded$3 = -8;
+                        li.a();
+                        break L2;
                       } else {
-                        break L3;
+                        break L2;
                       }
                     }
                     var4_ref = im.field_l;
                     ((jb) this).field_Wb = true;
-                    break L2;
+                    break L1;
                   }
                 }
               }
             }
-            L4: {
+            L3: {
               var5 = new kc((nk) this, hc.field_f, var4_ref);
               if (!param0.field_a) {
-                L5: {
+                L4: {
                   if (((jb) this).field_Wb) {
-                    ck discarded$2 = var5.a(gl.field_Jb, (pg) this, (byte) -83);
-                    break L5;
+                    ck discarded$4 = var5.a(gl.field_Jb, (pg) this, (byte) -83);
+                    break L4;
                   } else {
                     if (param0.field_d != 5) {
                       var5.a(-1, 6824, gk.field_O);
-                      break L5;
+                      break L4;
                     } else {
                       var5.a(11, 6824, oh.field_b);
                       var5.a(17, 6824, db.field_u);
-                      break L5;
+                      break L4;
                     }
                   }
                 }
                 if (param0.field_d != 3) {
                   if (param0.field_d == 6) {
                     var5.a(9, 6824, ip.field_i);
-                    break L4;
+                    break L3;
                   } else {
-                    break L4;
+                    break L3;
                   }
                 } else {
                   var5.a(7, 6824, mo.field_d);
-                  break L4;
+                  break L3;
                 }
               } else {
                 if (!param0.field_f) {
-                  ck discarded$3 = var5.a(gl.field_Jb, (pg) this, (byte) -91);
-                  break L4;
+                  ck discarded$5 = var5.a(gl.field_Jb, (pg) this, (byte) -91);
+                  break L3;
                 } else {
                   ((jb) this).b(1, (lm) (Object) new cm((jb) this));
                   return;
@@ -379,49 +232,51 @@ final class jb extends nk implements vg {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
+          L5: {
             var4 = decompiledCaughtException;
-            stackOut_32_0 = (RuntimeException) var4;
-            stackOut_32_1 = new StringBuilder().append("jb.QA(");
-            stackIn_34_0 = stackOut_32_0;
-            stackIn_34_1 = stackOut_32_1;
-            stackIn_33_0 = stackOut_32_0;
-            stackIn_33_1 = stackOut_32_1;
+            stackOut_29_0 = (RuntimeException) var4;
+            stackOut_29_1 = new StringBuilder().append("jb.QA(");
+            stackIn_31_0 = stackOut_29_0;
+            stackIn_31_1 = stackOut_29_1;
+            stackIn_30_0 = stackOut_29_0;
+            stackIn_30_1 = stackOut_29_1;
             if (param0 == null) {
-              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
-              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
-              stackOut_34_2 = "null";
-              stackIn_35_0 = stackOut_34_0;
-              stackIn_35_1 = stackOut_34_1;
-              stackIn_35_2 = stackOut_34_2;
-              break L6;
+              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
+              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_2 = "null";
+              stackIn_32_0 = stackOut_31_0;
+              stackIn_32_1 = stackOut_31_1;
+              stackIn_32_2 = stackOut_31_2;
+              break L5;
             } else {
-              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
-              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
-              stackOut_33_2 = "{...}";
-              stackIn_35_0 = stackOut_33_0;
-              stackIn_35_1 = stackOut_33_1;
-              stackIn_35_2 = stackOut_33_2;
-              break L6;
+              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
+              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_2 = "{...}";
+              stackIn_32_0 = stackOut_30_0;
+              stackIn_32_1 = stackOut_30_1;
+              stackIn_32_2 = stackOut_30_2;
+              break L5;
             }
           }
-          throw vk.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + 44 + param1 + 44 + param2 + 41);
+          throw vk.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 44 + 1 + 44 + param2 + 41);
         }
     }
 
     final void r(int param0) {
         int var2 = -20 / ((param0 - -37) / 34);
-        this.a(p.a(248, im.field_l, -28323), true, true);
+        int discarded$0 = -28323;
+        this.a(p.a(248, im.field_l), true, true);
     }
 
-    final static void k(byte param0) {
+    final static void k() {
         if (!(lg.field_w == null)) {
             lg.field_w.j(-33);
         }
         if (!(null == hg.field_r)) {
             hg.field_r.j((byte) -115);
         }
-        tb.a((byte) -81);
+        int discarded$0 = -81;
+        tb.a();
     }
 
     final static cn a(byte param0, int param1) {
@@ -467,46 +322,15 @@ final class jb extends nk implements vg {
                                                                   if (param1 == 31) {
                                                                     return oo.field_c;
                                                                   } else {
-                                                                    if (param0 == -70) {
-                                                                      if (param1 == 32) {
-                                                                        return h.field_E;
-                                                                      } else {
-                                                                        if (param1 != 33) {
-                                                                          if (param1 != 34) {
-                                                                            if (param1 != 35) {
-                                                                              if (param1 != 36) {
-                                                                                if (param1 == 37) {
-                                                                                  return null;
-                                                                                } else {
-                                                                                  return null;
-                                                                                }
-                                                                              } else {
-                                                                                return null;
-                                                                              }
-                                                                            } else {
-                                                                              return null;
-                                                                            }
-                                                                          } else {
-                                                                            return lb.field_v;
-                                                                          }
-                                                                        } else {
-                                                                          return bn.field_h;
-                                                                        }
-                                                                      }
+                                                                    if (param1 == 32) {
+                                                                      return h.field_E;
                                                                     } else {
-                                                                      jb.q(-42);
-                                                                      if (param1 == 32) {
-                                                                        return h.field_E;
-                                                                      } else {
-                                                                        if (param1 != 33) {
-                                                                          if (param1 != 34) {
-                                                                            if (param1 != 35) {
-                                                                              if (param1 != 36) {
-                                                                                if (param1 == 37) {
-                                                                                  return null;
-                                                                                } else {
-                                                                                  return null;
-                                                                                }
+                                                                      if (param1 != 33) {
+                                                                        if (param1 != 34) {
+                                                                          if (param1 != 35) {
+                                                                            if (param1 != 36) {
+                                                                              if (param1 == 37) {
+                                                                                return null;
                                                                               } else {
                                                                                 return null;
                                                                               }
@@ -514,11 +338,13 @@ final class jb extends nk implements vg {
                                                                               return null;
                                                                             }
                                                                           } else {
-                                                                            return lb.field_v;
+                                                                            return null;
                                                                           }
                                                                         } else {
-                                                                          return bn.field_h;
+                                                                          return lb.field_v;
                                                                         }
+                                                                      } else {
+                                                                        return bn.field_h;
                                                                       }
                                                                     }
                                                                   }

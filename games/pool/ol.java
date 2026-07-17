@@ -336,7 +336,7 @@ final class ol {
         }
     }
 
-    final static float[] a(int[] param0, byte param1) {
+    final static float[] a(int[] param0) {
         RuntimeException var2 = null;
         float[] stackIn_1_0 = null;
         RuntimeException stackIn_3_0 = null;
@@ -358,7 +358,8 @@ final class ol {
         String stackOut_3_2 = null;
         try {
           L0: {
-            stackOut_0_0 = op.a(16, param0, 97);
+            int discarded$2 = 97;
+            stackOut_0_0 = op.a(16, param0);
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }

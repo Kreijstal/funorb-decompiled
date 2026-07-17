@@ -6,7 +6,7 @@ final class ag {
     static boolean field_b;
     static dl[] field_c;
 
-    final static void a(String param0, int param1) {
+    final static void a(String param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -58,7 +58,7 @@ final class ag {
         }
     }
 
-    final static boolean a(char param0, int param1) {
+    final static boolean a(char param0) {
         if (param0 < 48) {
             return false;
         }
@@ -68,7 +68,7 @@ final class ag {
         return true;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
     }

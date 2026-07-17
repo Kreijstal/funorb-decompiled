@@ -15,7 +15,7 @@ final class eg extends hf {
     int field_f;
     static String field_l;
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_q = null;
         field_p = null;
         field_l = null;

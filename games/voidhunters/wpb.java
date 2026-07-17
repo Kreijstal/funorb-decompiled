@@ -9,7 +9,7 @@ final class wpb extends rqa {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_o = null;
         field_p = null;
     }
@@ -84,7 +84,7 @@ final class wpb extends rqa {
         return stackIn_3_0;
     }
 
-    final static boolean a(int[] param0, int[] param1, byte param2) {
+    final static boolean a(int[] param0, int[] param1) {
         RuntimeException var3 = null;
         int var3_int = 0;
         int var4 = 0;
@@ -291,41 +291,24 @@ final class wpb extends rqa {
 
     final static asb a(int param0, int param1) {
         asb stackIn_5_0 = null;
-        asb stackIn_11_0 = null;
-        asb stackOut_9_0 = null;
-        asb stackOut_4_0 = null;
         asb stackOut_3_0 = null;
-        if (param1 == 11835) {
-          if (akb.field_a == null) {
-            if (-1 == param0) {
-              return akb.field_a;
-            } else {
-              return mla.a(true, false, -52, true, param0, 1);
-            }
-          } else {
-            stackOut_9_0 = akb.field_a;
-            stackIn_11_0 = stackOut_9_0;
-            return stackIn_11_0;
-          }
-        } else {
-          field_o = null;
+        asb stackOut_4_0 = null;
+        L0: {
           if (akb.field_a != null) {
-            return akb.field_a;
+            stackOut_3_0 = akb.field_a;
+            stackIn_5_0 = stackOut_3_0;
+            break L0;
           } else {
-            L0: {
-              if (-1 != param0) {
-                stackOut_4_0 = mla.a(true, false, -52, true, param0, 1);
-                stackIn_5_0 = stackOut_4_0;
-                break L0;
-              } else {
-                stackOut_3_0 = akb.field_a;
-                stackIn_5_0 = stackOut_3_0;
-                break L0;
-              }
+            if (-1 != param0) {
+              stackOut_4_0 = mla.a(true, false, -52, true, param0, 1);
+              stackIn_5_0 = stackOut_4_0;
+              break L0;
+            } else {
+              return akb.field_a;
             }
-            return stackIn_5_0;
           }
         }
+        return stackIn_5_0;
     }
 
     static {

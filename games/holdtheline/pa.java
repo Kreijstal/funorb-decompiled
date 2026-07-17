@@ -14,7 +14,7 @@ final class pa {
     private int field_a;
     private long[] field_b;
 
-    final static void a(byte param0) {
+    final static void a() {
         fo var1 = (fo) (Object) ji.field_a.b((byte) 87);
         if (!(var1 != null)) {
             r.a(-28036);
@@ -59,13 +59,14 @@ final class pa {
               } else {
                 L2: while (true) {
                   if (((pa) this).field_e >= 64) {
-                    this.c(true);
+                    int discarded$4 = 1;
+                    this.c();
                     ((pa) this).field_e = 0;
                     break L1;
                   } else {
-                    int fieldTemp$2 = ((pa) this).field_e;
+                    int fieldTemp$5 = ((pa) this).field_e;
                     ((pa) this).field_e = ((pa) this).field_e + 1;
-                    ((pa) this).field_f[fieldTemp$2] = (byte) 0;
+                    ((pa) this).field_f[fieldTemp$5] = (byte) 0;
                     continue L2;
                   }
                 }
@@ -74,7 +75,8 @@ final class pa {
             L3: while (true) {
               if (((pa) this).field_e >= 32) {
                 bc.a(((pa) this).field_c, 0, ((pa) this).field_f, 32, 32);
-                this.c(true);
+                int discarded$6 = 1;
+                this.c();
                 var4_int = 0;
                 var5 = param2;
                 L4: while (true) {
@@ -105,9 +107,9 @@ final class pa {
                   }
                 }
               } else {
-                int fieldTemp$3 = ((pa) this).field_e;
+                int fieldTemp$7 = ((pa) this).field_e;
                 ((pa) this).field_e = ((pa) this).field_e + 1;
-                ((pa) this).field_f[fieldTemp$3] = (byte) 0;
+                ((pa) this).field_f[fieldTemp$7] = (byte) 0;
                 continue L3;
               }
             }
@@ -169,18 +171,15 @@ final class pa {
         mk.field_i = param2;
     }
 
-    final static void a(qi param0, qi param1, byte param2, int param3) {
+    final static void a(qi param0, qi param1) {
         sj.field_G = param1;
         q.field_a = param0;
-        if (param2 > -39) {
-            return;
-        }
         try {
-            p.field_j = param3;
+            p.field_j = 480;
             pa.a(-90, tc.field_c / 2, tc.field_j / 2);
             dd.a(param1.field_s, param0.field_s, param0.field_s + param0.field_I, param1.field_I + param1.field_s, (byte) -108);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) (Object) runtimeException, "pa.B(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw kk.a((Throwable) (Object) runtimeException, "pa.B(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + -112 + 44 + 480 + 41);
         }
     }
 
@@ -350,7 +349,7 @@ final class pa {
         }
     }
 
-    private final void c(boolean param0) {
+    private final void c() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -529,7 +528,8 @@ final class pa {
                           if (((pa) this).field_a != 512) {
                             break L5;
                           } else {
-                            this.c(true);
+                            int discarded$2 = 1;
+                            this.c();
                             ((pa) this).field_e = 0;
                             ((pa) this).field_a = 0;
                             break L5;
@@ -557,7 +557,8 @@ final class pa {
                             if (((pa) this).field_a != 512) {
                               break L7;
                             } else {
-                              this.c(true);
+                              int discarded$3 = 1;
+                              this.c();
                               ((pa) this).field_e = 0;
                               ((pa) this).field_a = 0;
                               break L7;

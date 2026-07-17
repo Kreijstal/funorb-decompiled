@@ -13,7 +13,7 @@ final class sc implements db {
     static int[] field_h;
     static Boolean field_g;
 
-    final static void a(qd param0, int param1, int param2) {
+    final static void a(qd param0) {
         RuntimeException var3 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -33,7 +33,9 @@ final class sc implements db {
         String stackOut_3_2 = null;
         try {
           mi.field_l.a(-12328, (hg) (Object) param0);
-          sm.a(param0, param1, true);
+          int discarded$4 = 1;
+          int discarded$5 = 4;
+          sm.a(param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -63,7 +65,7 @@ final class sc implements db {
               break L0;
             }
           }
-          throw t.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + 1 + 41);
+          throw t.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 4 + 44 + 1 + 41);
         }
     }
 
@@ -224,7 +226,7 @@ final class sc implements db {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_g = null;
         field_h = null;
     }

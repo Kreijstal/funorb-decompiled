@@ -157,7 +157,7 @@ final class qm implements Iterable {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_d = null;
         field_a = null;
         field_f = null;

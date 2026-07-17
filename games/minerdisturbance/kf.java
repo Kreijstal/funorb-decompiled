@@ -9,7 +9,7 @@ final class kf {
     static int[] field_e;
     static l field_d;
 
-    final static void a(MinerDisturbance param0, int param1) {
+    final static void a(MinerDisturbance param0) {
         int[] var2 = null;
         RuntimeException var2_ref = null;
         int[] var3 = null;

@@ -15,24 +15,24 @@ final class mf {
     final static void c(byte param0) {
         if (param0 <= 111) {
             kk discarded$0 = mf.a(45, (byte) -128);
-            p.a((byte) 25);
+            int discarded$1 = 25;
+            p.a();
             return;
         }
-        p.a((byte) 25);
+        int discarded$2 = 25;
+        p.a();
     }
 
     final static void a(int param0, boolean param1, int param2, uf param3, java.awt.Component param4, nb param5) {
-        if (param0 != 15) {
-            return;
-        }
         try {
-            jb.a((byte) -109, param1, param5, param2, param4, 1024, param3, param2);
+            int discarded$0 = 22050;
+            jb.a((byte) -109, true, param5, 22050, param4, 1024, param3);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "mf.A(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "mf.A(" + 15 + 44 + 1 + 44 + 22050 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 41);
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -136,36 +136,19 @@ final class mf {
         }
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_h = null;
         field_e = null;
         field_d = null;
-        if (param0 >= -16) {
-          field_c = 67;
-          field_a = null;
-          field_i = null;
-          field_b = null;
-          field_f = null;
-          return;
-        } else {
-          field_a = null;
-          field_i = null;
-          field_b = null;
-          field_f = null;
-          return;
-        }
+        field_a = null;
+        field_i = null;
+        field_b = null;
+        field_f = null;
     }
 
     final static int a(int param0, int param1, int param2) {
-        int var3 = 0;
-        if (param1 != 14) {
-          field_b = null;
-          var3 = param2 >>> 31;
-          return -var3 + (param2 + var3) / param0;
-        } else {
-          var3 = param2 >>> 31;
-          return -var3 + (param2 + var3) / param0;
-        }
+        int var3 = param2 >>> 31;
+        return -var3 + (param2 + var3) / param0;
     }
 
     final static void a(int param0, be param1) {
@@ -176,19 +159,16 @@ final class mf {
             kf.field_c = kf.field_c + (var2_int >> 3);
             ai.field_d = 1835008 & var2_int << 18;
             ai.field_d = ai.field_d + (param1.d((byte) -97) << 2);
-            var2_int = param1.h(param0 ^ 16369);
+            var2_int = param1.h(16383);
             ai.field_d = ai.field_d + (var2_int >> 6);
             fe.field_Q = 2064384 & var2_int << 15;
             fe.field_Q = fe.field_Q + (param1.h(16383) << 7);
-            if (param0 != 14) {
-                mf.b((byte) 127);
-            }
-            var2_int = param1.h(param0 ^ 16369);
+            var2_int = param1.h(16383);
             nh.field_a = var2_int << 16 & 65536;
             fe.field_Q = fe.field_Q + (var2_int >> 1);
             nh.field_a = nh.field_a + param1.d((byte) -50);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "mf.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "mf.E(" + 14 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

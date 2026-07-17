@@ -185,7 +185,7 @@ final class gqb implements ntb {
         }
     }
 
-    final static sg a(boolean param0) {
+    final static sg a() {
         sg var9 = new sg();
         ml var2 = new ml(0);
         ml var4 = new ml(14);

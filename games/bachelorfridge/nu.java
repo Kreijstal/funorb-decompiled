@@ -25,7 +25,7 @@ abstract class nu {
         field_f = null;
     }
 
-    final static int a(String param0, lu param1, int param2) {
+    final static int a(String param0, lu param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;

@@ -25,68 +25,64 @@ final class lw extends ksa {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_e = null;
         field_i = null;
     }
 
     final static int a(byte param0, int param1) {
-        if (param0 == -73) {
-          if ((long)param1 >= 65536L) {
-            if (16777216L <= (long)param1) {
-              if ((long)param1 >= 268435456L) {
-                if ((long)param1 >= 1073741824L) {
-                  return eo.field_o[param1 >> 24];
-                } else {
-                  return eo.field_o[param1 >> 22] >> 1;
-                }
+        if ((long)param1 >= 65536L) {
+          if (16777216L <= (long)param1) {
+            if ((long)param1 >= 268435456L) {
+              if ((long)param1 >= 1073741824L) {
+                return eo.field_o[param1 >> 24];
               } else {
-                if ((long)param1 >= 67108864L) {
-                  return eo.field_o[param1 >> 20] >> 2;
-                } else {
-                  return eo.field_o[param1 >> 18] >> 3;
-                }
+                return eo.field_o[param1 >> 22] >> 1;
               }
             } else {
-              if ((long)param1 < 1048576L) {
-                if ((long)param1 >= 262144L) {
-                  return eo.field_o[param1 >> 12] >> 6;
-                } else {
-                  return eo.field_o[param1 >> 10] >> 7;
-                }
+              if ((long)param1 >= 67108864L) {
+                return eo.field_o[param1 >> 20] >> 2;
               } else {
-                if ((long)param1 < 4194304L) {
-                  return eo.field_o[param1 >> 14] >> 5;
-                } else {
-                  return eo.field_o[param1 >> 16] >> 4;
-                }
+                return eo.field_o[param1 >> 18] >> 3;
               }
             }
           } else {
-            if ((long)param1 >= 256L) {
-              if ((long)param1 >= 4096L) {
-                if (16384L > (long)param1) {
-                  return eo.field_o[param1 >> 6] >> 9;
-                } else {
-                  return eo.field_o[param1 >> 8] >> 8;
-                }
+            if ((long)param1 < 1048576L) {
+              if ((long)param1 >= 262144L) {
+                return eo.field_o[param1 >> 12] >> 6;
               } else {
-                if ((long)param1 < 1024L) {
-                  return eo.field_o[param1 >> 2] >> 11;
-                } else {
-                  return eo.field_o[param1 >> 4] >> 10;
-                }
+                return eo.field_o[param1 >> 10] >> 7;
               }
             } else {
-              if (param1 >= 0) {
-                return eo.field_o[param1] >> 12;
+              if ((long)param1 < 4194304L) {
+                return eo.field_o[param1 >> 14] >> 5;
               } else {
-                return -1;
+                return eo.field_o[param1 >> 16] >> 4;
               }
             }
           }
         } else {
-          return -8;
+          if ((long)param1 >= 256L) {
+            if ((long)param1 >= 4096L) {
+              if (16384L > (long)param1) {
+                return eo.field_o[param1 >> 6] >> 9;
+              } else {
+                return eo.field_o[param1 >> 8] >> 8;
+              }
+            } else {
+              if ((long)param1 < 1024L) {
+                return eo.field_o[param1 >> 2] >> 11;
+              } else {
+                return eo.field_o[param1 >> 4] >> 10;
+              }
+            }
+          } else {
+            if (param1 >= 0) {
+              return eo.field_o[param1] >> 12;
+            } else {
+              return -1;
+            }
+          }
         }
     }
 

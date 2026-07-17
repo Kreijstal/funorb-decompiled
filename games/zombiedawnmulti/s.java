@@ -20,7 +20,7 @@ final class s {
         field_h = null;
     }
 
-    final static md a(ga param0, byte param1) {
+    final static md a(ga param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -83,7 +83,7 @@ final class s {
                 if (var5 == 0) {
                   break L2;
                 } else {
-                  int discarded$1 = param0.h(16, 14862);
+                  int discarded$3 = param0.h(16, 14862);
                   var6.field_M = lo.a(16, var6.field_M, param0, (byte) -117);
                   var6.field_s = lo.a(16, var6.field_s, param0, (byte) -126);
                   var6.field_g = lo.a(16, var6.field_g, param0, (byte) -128);
@@ -104,7 +104,9 @@ final class s {
                 if (!fq.a(-92, param0)) {
                   break L4;
                 } else {
-                  var6.field_z = dn.a(param0, var6.field_z, (byte) -102, 16);
+                  int discarded$4 = 16;
+                  int discarded$5 = -102;
+                  var6.field_z = dn.a(param0, var6.field_z);
                   var7 = 0;
                   var8 = 0;
                   L5: while (true) {
@@ -305,7 +307,7 @@ final class s {
                       }
                     }
                     L8: {
-                      if (null != param2[param1]) {
+                      if (null != param2[0]) {
                         oo.e(param3, param0, var16, var18);
                         param2[0].g(param3, param0);
                         oo.b(qa.field_f);
@@ -482,7 +484,7 @@ final class s {
           L23: {
             var6 = decompiledCaughtException;
             stackOut_71_0 = (RuntimeException) var6;
-            stackOut_71_1 = new StringBuilder().append("s.A(").append(param0).append(44).append(param1).append(44);
+            stackOut_71_1 = new StringBuilder().append("s.A(").append(param0).append(44).append(0).append(44);
             stackIn_73_0 = stackOut_71_0;
             stackIn_73_1 = stackOut_71_1;
             stackIn_72_0 = stackOut_71_0;
@@ -509,7 +511,7 @@ final class s {
         }
     }
 
-    final static String a(byte param0) {
+    final static String a() {
         if (!(dj.field_k != id.field_B)) {
             return ch.field_j;
         }
@@ -647,7 +649,7 @@ final class s {
         lj.field_n = 0;
         ba.field_m = -2147483648;
         up.field_d = -2147483648;
-        var3 = -105 / ((param1 - 6) / 47);
+        var3 = -52;
         ab.field_j = 2147483647;
         mj.field_Ub = 2147483647;
     }

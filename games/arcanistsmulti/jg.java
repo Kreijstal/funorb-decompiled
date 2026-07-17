@@ -68,7 +68,7 @@ final class jg {
         return 2;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         int var2 = 0;
         var2 = ArcanistsMulti.field_G ? 1 : 0;
         if (null != jb.field_z) {
@@ -89,7 +89,7 @@ final class jg {
         }
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_p = null;
         field_j = null;
         field_l = null;
@@ -97,9 +97,6 @@ final class jg {
     }
 
     final static int a(int param0, int param1, int param2) {
-        if (param1 != -271087521) {
-            return -96;
-        }
         int var3 = param2 >>> 31;
         return (var3 + param2) / param0 + -var3;
     }

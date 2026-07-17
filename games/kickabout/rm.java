@@ -284,11 +284,11 @@ final class rm extends qt {
         return null != sr.field_f ? (qb) (Object) sr.field_f.a(-3611, (long)param0) : null;
     }
 
-    private final void g(byte param0) {
+    private final void g() {
         pb.field_C.d(sh.field_b, 192 + ((rm) this).field_j, q.field_d.field_G + 237, 16777215, -1);
     }
 
-    final static void e(int param0) {
+    final static void e() {
         np.field_Jb.a((gn) (Object) new pq(), 3);
     }
 
@@ -342,15 +342,16 @@ final class rm extends qt {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void a() {
         java.awt.Canvas var1 = null;
         if (!dr.field_a) {
             dr.field_a = true;
-            var1 = ln.l(64);
+            int discarded$0 = 64;
+            var1 = ln.l();
             wt.field_x = el.field_A;
             us.field_j = n.field_m;
-            wu discarded$0 = oo.field_c.a((byte) 76, 240, 320, (java.awt.Component) (Object) var1);
-            wu discarded$1 = oo.field_c.a(-126, (java.awt.Component) (Object) var1, false);
+            wu discarded$1 = oo.field_c.a((byte) 76, 240, 320, (java.awt.Component) (Object) var1);
+            wu discarded$2 = oo.field_c.a(-126, (java.awt.Component) (Object) var1, false);
             el.field_A = 320;
             n.field_m = 240;
         }
@@ -382,92 +383,160 @@ final class rm extends qt {
         String[] var11 = null;
         String var12 = null;
         String var13 = null;
+        String[] var14 = null;
+        String var15 = null;
         var10 = Kickabout.field_G;
         pt.a(374 - -((rm) this).field_j, -22914, ((rm) this).field_j + 10, 390, 80);
         on.a(10 + ((rm) this).field_j, 80, 364, 320, 10, 0, 128);
         ta.e(126);
         super.a(param0, param1);
         if (la.a(param0 ^ -97)) {
-          this.g((byte) -4);
+          int discarded$5 = -4;
+          this.g();
           return;
         } else {
-          L0: {
-            if (ug.field_e != null) {
-              break L0;
-            } else {
-              ug.field_e = jt.a(10, (byte) 100, 0, 7);
-              break L0;
-            }
-          }
-          var3 = 99;
-          var4 = 11184810;
-          q.field_d.d(wm.field_p, ml.field_r[0] - -((rm) this).field_j, var3, var4, -1);
-          q.field_d.d(k.field_e, ((rm) this).field_j + ml.field_r[1], var3, var4, -1);
-          q.field_d.d(mt.field_e, ((rm) this).field_j + ml.field_r[2], var3, var4, -1);
-          q.field_d.d(ta.field_D, ml.field_r[3] - -((rm) this).field_j, var3, var4, -1);
-          q.field_d.d(ku.field_e, ml.field_r[4] + ((rm) this).field_j, var3, var4, -1);
-          var3 = var3 + (q.field_d.field_G - -8);
-          if (ug.field_e.field_e) {
-            if (null == ug.field_e.field_i) {
-              var12 = bg.field_o;
-              var13 = var12;
-              var13 = var12;
-              var3 = 385 - -q.field_d.field_G;
-              un.field_d.d(var12.toLowerCase(), ((rm) this).field_j + 185, 260, 16777215, -1);
-              return;
-            } else {
-              var5 = jw.field_Fb;
-              var11 = ug.field_e.field_i[wv.field_ib];
-              var6 = var11;
-              var7 = ug.field_e.field_o[wv.field_ib];
-              var8 = 0;
-              var9 = 0;
-              L1: while (true) {
-                if (var9 >= 10) {
-                  L2: {
-                    if (var8 == 0) {
-                      var4 = 16777215;
-                      this.a(ug.field_e.field_f, ug.field_e.field_h, (byte) 105, ow.field_e, ug.field_e.field_m, var4, ug.field_e.field_j, -1, var3);
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  }
-                  var3 = 385 - -q.field_d.field_G;
-                  un.field_d.d(var5.toLowerCase(), ((rm) this).field_j + 185, 260, 16777215, -1);
-                  return;
-                } else {
-                  if (null != var11[var9]) {
-                    L3: {
-                      var4 = 16777215;
-                      if (hm.a((byte) -101, var11[var9])) {
-                        var4 = 16750882;
-                        var8 = 1;
-                        break L3;
+          if (ug.field_e != null) {
+            var3 = 99;
+            var4 = 11184810;
+            q.field_d.d(wm.field_p, ml.field_r[0] - -((rm) this).field_j, var3, var4, -1);
+            q.field_d.d(k.field_e, ((rm) this).field_j + ml.field_r[1], var3, var4, -1);
+            q.field_d.d(mt.field_e, ((rm) this).field_j + ml.field_r[2], var3, var4, -1);
+            q.field_d.d(ta.field_D, ml.field_r[3] - -((rm) this).field_j, var3, var4, -1);
+            q.field_d.d(ku.field_e, ml.field_r[4] + ((rm) this).field_j, var3, var4, -1);
+            var3 = var3 + (q.field_d.field_G - -8);
+            if (ug.field_e.field_e) {
+              if (null == ug.field_e.field_i) {
+                var15 = bg.field_o;
+                var3 = 385 - -q.field_d.field_G;
+                un.field_d.d(var15.toLowerCase(), ((rm) this).field_j + 185, 260, 16777215, -1);
+                return;
+              } else {
+                var5 = jw.field_Fb;
+                var14 = ug.field_e.field_i[wv.field_ib];
+                var7 = ug.field_e.field_o[wv.field_ib];
+                var8 = 0;
+                var9 = 0;
+                L0: while (true) {
+                  if (var9 >= 10) {
+                    L1: {
+                      if (var8 == 0) {
+                        var4 = 16777215;
+                        this.a(ug.field_e.field_f, ug.field_e.field_h, (byte) 105, ow.field_e, ug.field_e.field_m, var4, ug.field_e.field_j, -1, var3);
+                        break L1;
                       } else {
-                        break L3;
+                        break L1;
                       }
                     }
-                    var5 = "";
-                    var13 = var5;
-                    var13 = var5;
-                    this.a(var7[4 * var9], var7[2 + 4 * var9], (byte) 104, var11[var9], var7[1 + 4 * var9], var4, var7[4 * var9 - -3], var9, var3);
-                    var3 += 25;
-                    var9++;
-                    continue L1;
+                    var3 = 385 - -q.field_d.field_G;
+                    un.field_d.d(var5.toLowerCase(), ((rm) this).field_j + 185, 260, 16777215, -1);
+                    return;
                   } else {
-                    var3 += 25;
-                    var9++;
-                    continue L1;
+                    if (null != var14[var9]) {
+                      L2: {
+                        var4 = 16777215;
+                        if (hm.a((byte) -101, var14[var9])) {
+                          var4 = 16750882;
+                          var8 = 1;
+                          break L2;
+                        } else {
+                          break L2;
+                        }
+                      }
+                      var5 = "";
+                      this.a(var7[4 * var9], var7[2 + 4 * var9], (byte) 104, var14[var9], var7[1 + 4 * var9], var4, var7[4 * var9 - -3], var9, var3);
+                      var3 += 25;
+                      var9++;
+                      continue L0;
+                    } else {
+                      var3 += 25;
+                      var9++;
+                      continue L0;
+                    }
                   }
                 }
               }
+            } else {
+              var5 = uf.field_a;
+              var3 = 385 - -q.field_d.field_G;
+              un.field_d.d(var5.toLowerCase(), ((rm) this).field_j + 185, 260, 16777215, -1);
+              return;
             }
           } else {
-            var5 = uf.field_a;
-            var3 = 385 - -q.field_d.field_G;
-            un.field_d.d(var5.toLowerCase(), ((rm) this).field_j + 185, 260, 16777215, -1);
-            return;
+            int discarded$6 = 7;
+            int discarded$7 = 0;
+            int discarded$8 = 100;
+            int discarded$9 = 10;
+            ug.field_e = jt.a();
+            var3 = 99;
+            var4 = 11184810;
+            q.field_d.d(wm.field_p, ml.field_r[0] - -((rm) this).field_j, var3, var4, -1);
+            q.field_d.d(k.field_e, ((rm) this).field_j + ml.field_r[1], var3, var4, -1);
+            q.field_d.d(mt.field_e, ((rm) this).field_j + ml.field_r[2], var3, var4, -1);
+            q.field_d.d(ta.field_D, ml.field_r[3] - -((rm) this).field_j, var3, var4, -1);
+            q.field_d.d(ku.field_e, ml.field_r[4] + ((rm) this).field_j, var3, var4, -1);
+            var3 = var3 + (q.field_d.field_G - -8);
+            if (ug.field_e.field_e) {
+              if (null == ug.field_e.field_i) {
+                var12 = bg.field_o;
+                var13 = var12;
+                var13 = var12;
+                var3 = 385 - -q.field_d.field_G;
+                un.field_d.d(var12.toLowerCase(), ((rm) this).field_j + 185, 260, 16777215, -1);
+                return;
+              } else {
+                var5 = jw.field_Fb;
+                var11 = ug.field_e.field_i[wv.field_ib];
+                var6 = var11;
+                var7 = ug.field_e.field_o[wv.field_ib];
+                var8 = 0;
+                var9 = 0;
+                L3: while (true) {
+                  if (var9 >= 10) {
+                    L4: {
+                      if (var8 == 0) {
+                        var4 = 16777215;
+                        this.a(ug.field_e.field_f, ug.field_e.field_h, (byte) 105, ow.field_e, ug.field_e.field_m, var4, ug.field_e.field_j, -1, var3);
+                        break L4;
+                      } else {
+                        break L4;
+                      }
+                    }
+                    var3 = 385 - -q.field_d.field_G;
+                    un.field_d.d(var5.toLowerCase(), ((rm) this).field_j + 185, 260, 16777215, -1);
+                    return;
+                  } else {
+                    if (null != var11[var9]) {
+                      L5: {
+                        var4 = 16777215;
+                        if (hm.a((byte) -101, var11[var9])) {
+                          var4 = 16750882;
+                          var8 = 1;
+                          break L5;
+                        } else {
+                          break L5;
+                        }
+                      }
+                      var5 = "";
+                      var13 = var5;
+                      var13 = var5;
+                      this.a(var7[4 * var9], var7[2 + 4 * var9], (byte) 104, var11[var9], var7[1 + 4 * var9], var4, var7[4 * var9 - -3], var9, var3);
+                      var3 += 25;
+                      var9++;
+                      continue L3;
+                    } else {
+                      var3 += 25;
+                      var9++;
+                      continue L3;
+                    }
+                  }
+                }
+              }
+            } else {
+              var5 = uf.field_a;
+              var3 = 385 - -q.field_d.field_G;
+              un.field_d.d(var5.toLowerCase(), ((rm) this).field_j + 185, 260, 16777215, -1);
+              return;
+            }
           }
         }
     }

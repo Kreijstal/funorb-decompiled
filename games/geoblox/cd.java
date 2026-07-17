@@ -72,13 +72,13 @@ final class cd extends jg {
         }
     }
 
-    public static void e(int param0) {
+    public static void e() {
         field_m = null;
         field_l = null;
         field_i = null;
     }
 
-    private final java.net.Socket a(java.net.Proxy param0, byte param1) throws IOException {
+    private final java.net.Socket a(java.net.Proxy param0) throws IOException {
         RuntimeException var3 = null;
         java.net.SocketAddress var3_ref = null;
         Object var4 = null;
@@ -297,7 +297,7 @@ final class cd extends jg {
           if (Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
             break L0;
           } else {
-            String discarded$4 = System.setProperty("java.net.useSystemProxies", "true");
+            String discarded$11 = System.setProperty("java.net.useSystemProxies", "true");
             break L0;
           }
         }
@@ -402,7 +402,7 @@ final class cd extends jg {
           uRISyntaxException = (java.net.URISyntaxException) (Object) decompiledCaughtException;
           return ((cd) this).a(1);
         }
-        boolean discarded$5 = var3.addAll((Collection) (Object) var4);
+        boolean discarded$12 = var3.addAll((Collection) (Object) var4);
         var6 = var3.toArray();
         var7 = null;
         var8 = var6;
@@ -419,7 +419,8 @@ final class cd extends jg {
             var11 = (java.net.Proxy) var10;
             try {
               L6: {
-                var12 = this.a(var11, (byte) -18);
+                int discarded$13 = -18;
+                var12 = this.a(var11);
                 if (var12 != null) {
                   stackOut_20_0 = (java.net.Socket) var12;
                   stackIn_21_0 = stackOut_20_0;
@@ -523,7 +524,7 @@ final class cd extends jg {
             L2: {
               var6.flush();
               var7 = new BufferedReader((Reader) (Object) new InputStreamReader(var14.getInputStream()));
-              var9 = -22 % ((3 - param0) / 53);
+              var9 = 0;
               var8 = var7.readLine();
               if (var8 != null) {
                 L3: {
@@ -603,7 +604,7 @@ final class cd extends jg {
           L8: {
             var5 = decompiledCaughtException;
             stackOut_25_0 = (RuntimeException) var5;
-            stackOut_25_1 = new StringBuilder().append("cd.J(").append(param0).append(44);
+            stackOut_25_1 = new StringBuilder().append("cd.J(").append(-60).append(44);
             stackIn_27_0 = stackOut_25_0;
             stackIn_27_1 = stackOut_25_1;
             stackIn_26_0 = stackOut_25_0;

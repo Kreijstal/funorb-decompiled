@@ -83,7 +83,7 @@ final class hn extends kb implements fk {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_k = null;
     }
 
@@ -93,16 +93,12 @@ final class hn extends kb implements fk {
 
     final static int a(boolean param0, int param1) {
         param1--;
-        if (param0) {
-          return -71;
-        } else {
-          param1 = param1 | param1 >>> 1;
-          param1 = param1 | param1 >>> 2;
-          param1 = param1 | param1 >>> 4;
-          param1 = param1 | param1 >>> 8;
-          param1 = param1 | param1 >>> 16;
-          return param1 - -1;
-        }
+        param1 = param1 | param1 >>> 1;
+        param1 = param1 | param1 >>> 2;
+        param1 = param1 | param1 >>> 4;
+        param1 = param1 | param1 >>> 8;
+        param1 = param1 | param1 >>> 16;
+        return param1 - -1;
     }
 
     static {

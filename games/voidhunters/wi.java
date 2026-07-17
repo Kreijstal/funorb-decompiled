@@ -169,9 +169,9 @@ public abstract class wi extends java.applet.Applet implements Runnable, java.aw
         return stackIn_14_0;
     }
 
-    private final void a(byte param0) {
-        RuntimeException runtimeException = null;
+    private final void a() {
         long var2_long = 0L;
+        RuntimeException var2 = null;
         long var4 = 0L;
         Object var6 = null;
         Throwable var7 = null;
@@ -200,17 +200,13 @@ public abstract class wi extends java.applet.Applet implements Runnable, java.aw
                 break L2;
               }
             }
-            if (param0 == -83) {
-              ((wi) this).a(89);
-              break L0;
-            } else {
-              return;
-            }
+            ((wi) this).a(89);
+            break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-          throw rta.a((Throwable) (Object) runtimeException, "wi.AB(" + param0 + 41);
+          var2 = (RuntimeException) (Object) decompiledCaughtException;
+          throw rta.a((Throwable) (Object) var2, "wi.AB(" + -83 + 41);
         }
     }
 
@@ -742,68 +738,60 @@ public abstract class wi extends java.applet.Applet implements Runnable, java.aw
     }
 
     private final void c(byte param0) {
-        RuntimeException runtimeException = null;
         long var2_long = 0L;
+        RuntimeException var2 = null;
         long var4 = 0L;
-        java.awt.Insets var6 = null;
         int var6_int = 0;
+        java.awt.Insets var6 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           L0: {
+            var2_long = wt.a(false);
+            var4 = sga.field_o[bhb.field_f];
+            sga.field_o[bhb.field_f] = var2_long;
             L1: {
-              var2_long = wt.a(false);
-              var4 = sga.field_o[bhb.field_f];
-              sga.field_o[bhb.field_f] = var2_long;
-              if (param0 == -5) {
-                break L1;
-              } else {
-                ((wi) this).field_c = false;
-                break L1;
-              }
-            }
-            L2: {
               bhb.field_f = bhb.field_f + 1 & 31;
               if (var4 == 0L) {
-                break L2;
+                break L1;
               } else {
                 if (~var4 > ~var2_long) {
                   var6_int = (int)(var2_long - var4);
                   ffa.field_a = ((var6_int >> 1) + 32000) / var6_int;
-                  break L2;
+                  break L1;
                 } else {
-                  break L2;
+                  break L1;
                 }
               }
             }
-            L3: {
-              int fieldTemp$2 = ncb.field_b;
+            L2: {
+              int fieldTemp$1 = ncb.field_b;
               ncb.field_b = ncb.field_b + 1;
-              if (50 >= fieldTemp$2) {
-                break L3;
+              if (50 >= fieldTemp$1) {
+                break L2;
               } else {
-                L4: {
+                L3: {
                   aob.field_o = true;
                   ncb.field_b = ncb.field_b - 50;
                   igb.field_a.setSize(rda.field_p, fua.field_p);
                   igb.field_a.setVisible(true);
                   if (ira.field_c == null) {
-                    break L4;
+                    break L3;
                   } else {
                     if (null != uf.field_E) {
-                      break L4;
+                      break L3;
                     } else {
                       var6 = ira.field_c.getInsets();
                       igb.field_a.setLocation(var6.left + qtb.field_o, hqb.field_f + var6.top);
                       if (VoidHunters.field_G == 0) {
-                        break L3;
+                        break L2;
                       } else {
-                        break L4;
+                        break L3;
                       }
                     }
                   }
                 }
                 igb.field_a.setLocation(qtb.field_o, hqb.field_f);
-                break L3;
+                break L2;
               }
             }
             ((wi) this).d(-105);
@@ -811,8 +799,8 @@ public abstract class wi extends java.applet.Applet implements Runnable, java.aw
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          throw rta.a((Throwable) (Object) runtimeException, "wi.BB(" + param0 + 41);
+          var2 = decompiledCaughtException;
+          throw rta.a((Throwable) (Object) var2, "wi.BB(" + -5 + 41);
         }
     }
 
@@ -1083,7 +1071,8 @@ public abstract class wi extends java.applet.Applet implements Runnable, java.aw
                                     if (var3 >= var2.length()) {
                                       break L10;
                                     } else {
-                                      stackOut_47_0 = haa.a(var2.charAt(var3), true);
+                                      int discarded$4 = 1;
+                                      stackOut_47_0 = haa.a(var2.charAt(var3));
                                       stackIn_66_0 = stackOut_47_0;
                                       stackIn_48_0 = stackOut_47_0;
                                       if (var5 != 0) {
@@ -1199,7 +1188,7 @@ public abstract class wi extends java.applet.Applet implements Runnable, java.aw
                         } else {
                           try {
                             L16: {
-                              Object discarded$1 = var2_ref.invoke(var1, new Object[1]);
+                              Object discarded$5 = var2_ref.invoke(var1, new Object[1]);
                               break L16;
                             }
                           } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -1212,7 +1201,8 @@ public abstract class wi extends java.applet.Applet implements Runnable, java.aw
                           break L15;
                         }
                       }
-                      ara.a(27671);
+                      int discarded$6 = 27671;
+                      ara.a();
                       ((wi) this).c(-78);
                       jl.field_q = qm.a((byte) 3, (java.awt.Component) (Object) igb.field_a, fua.field_p, rda.field_p);
                       ((wi) this).a(false);
@@ -1249,7 +1239,8 @@ public abstract class wi extends java.applet.Applet implements Runnable, java.aw
                               if (~var3 <= ~dn.field_p) {
                                 break L23;
                               } else {
-                                this.a((byte) -83);
+                                int discarded$7 = -83;
+                                this.a();
                                 var3++;
                                 if (var5 != 0) {
                                   break L22;
@@ -1544,17 +1535,16 @@ public abstract class wi extends java.applet.Applet implements Runnable, java.aw
     abstract void d(int param0);
 
     private final void a(boolean param0, int param1) {
-        Exception exception = null;
-        Throwable throwable = null;
-        RuntimeException runtimeException = null;
         Object var3 = null;
-        Object var3_ref = null;
+        Exception var3_ref = null;
+        Throwable var3_ref2 = null;
+        RuntimeException var3_ref3 = null;
         Throwable var4 = null;
         Throwable decompiledCaughtException = null;
         try {
           L0: {
-            var3_ref = this;
-            synchronized (var3_ref) {
+            var3 = this;
+            synchronized (var3) {
               L1: {
                 if (!mb.field_i) {
                   mb.field_i = true;
@@ -1580,7 +1570,7 @@ public abstract class wi extends java.applet.Applet implements Runnable, java.aw
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               L4: {
-                exception = (Exception) (Object) decompiledCaughtException;
+                var3_ref = (Exception) (Object) decompiledCaughtException;
                 break L4;
               }
             }
@@ -1597,7 +1587,7 @@ public abstract class wi extends java.applet.Applet implements Runnable, java.aw
                 } catch (java.lang.Exception decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   L7: {
-                    exception = (Exception) (Object) decompiledCaughtException;
+                    var3_ref = (Exception) (Object) decompiledCaughtException;
                     break L7;
                   }
                 }
@@ -1614,7 +1604,7 @@ public abstract class wi extends java.applet.Applet implements Runnable, java.aw
                 } catch (java.lang.Exception decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   L10: {
-                    exception = (Exception) (Object) decompiledCaughtException;
+                    var3_ref = (Exception) (Object) decompiledCaughtException;
                     break L10;
                   }
                 }
@@ -1624,31 +1614,23 @@ public abstract class wi extends java.applet.Applet implements Runnable, java.aw
               }
             }
             L11: {
-              if (param1 == 10) {
-                break L11;
-              } else {
-                ((wi) this).field_c = true;
-                break L11;
-              }
-            }
-            L12: {
               ((wi) this).b(false);
               if (null == ira.field_c) {
-                break L12;
+                break L11;
               } else {
                 try {
-                  L13: {
+                  L12: {
                     System.exit(0);
-                    break L13;
+                    break L12;
                   }
                 } catch (java.lang.Throwable decompiledCaughtParameter3) {
                   decompiledCaughtException = decompiledCaughtParameter3;
-                  L14: {
-                    throwable = decompiledCaughtException;
-                    break L14;
+                  L13: {
+                    var3_ref2 = decompiledCaughtException;
+                    break L13;
                   }
                 }
-                break L12;
+                break L11;
               }
             }
             System.out.println("Shutdown complete - clean:" + param0);
@@ -1656,8 +1638,8 @@ public abstract class wi extends java.applet.Applet implements Runnable, java.aw
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter4) {
           decompiledCaughtException = decompiledCaughtParameter4;
-          runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-          throw rta.a((Throwable) (Object) runtimeException, "wi.EB(" + param0 + 44 + param1 + 41);
+          var3_ref3 = (RuntimeException) (Object) decompiledCaughtException;
+          throw rta.a((Throwable) (Object) var3_ref3, "wi.EB(" + param0 + 44 + 10 + 41);
         }
     }
 

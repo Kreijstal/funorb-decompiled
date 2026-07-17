@@ -12,7 +12,7 @@ final class qu extends tc {
     long field_l;
     static String[] field_s;
 
-    final static void e(int param0) {
+    final static void e() {
         if (iu.field_h) {
             e.a((byte) -93);
             return;
@@ -141,683 +141,768 @@ final class qu extends tc {
               break L4;
             }
             L6: {
-              L7: {
-                if (null == pe.field_s) {
-                  break L7;
-                } else {
-                  if (param2 <= pe.field_s.length) {
-                    break L6;
-                  } else {
-                    break L7;
-                  }
-                }
-              }
-              pe.field_s = new int[param2 * 2];
-              break L6;
-            }
-            if (tb.field_h == null) {
-              L8: {
-                L9: {
-                  tb.field_h = new int[2 * param2];
-                  if (vt.field_m == null) {
-                    break L9;
-                  } else {
-                    if (param2 + param1 <= vt.field_m.length) {
-                      break L8;
-                    } else {
-                      break L9;
-                    }
-                  }
-                }
-                vt.field_m = new int[(param2 + param1) * 2];
-                break L8;
-              }
-              if (cl.field_q == null) {
-                cl.field_q = new boolean[2 * param2];
-                kt.field_p = 0;
-                if (param0 == 2) {
-                  pd.field_e = 2147483647;
-                  sq.field_k = 2147483647;
-                  df.field_T = -2147483648;
-                  se.field_e = -2147483648;
-                  return;
-                } else {
-                  return;
-                }
+              if (null == pe.field_s) {
+                break L6;
               } else {
-                if (cl.field_q.length >= param2) {
-                  kt.field_p = 0;
-                  if (param0 == 2) {
-                    pd.field_e = 2147483647;
-                    sq.field_k = 2147483647;
-                    df.field_T = -2147483648;
-                    se.field_e = -2147483648;
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  cl.field_q = new boolean[2 * param2];
-                  kt.field_p = 0;
-                  if (param0 == 2) {
-                    pd.field_e = 2147483647;
-                    sq.field_k = 2147483647;
-                    df.field_T = -2147483648;
-                    se.field_e = -2147483648;
-                    return;
-                  } else {
-                    return;
-                  }
-                }
-              }
-            } else {
-              if (tb.field_h.length >= param2) {
-                if (vt.field_m == null) {
-                  vt.field_m = new int[(param2 + param1) * 2];
-                  if (cl.field_q == null) {
-                    cl.field_q = new boolean[2 * param2];
-                    kt.field_p = 0;
-                    if (param0 == 2) {
+                if (param2 <= pe.field_s.length) {
+                  if (tb.field_h == null) {
+                    tb.field_h = new int[2 * param2];
+                    if (vt.field_m == null) {
+                      L7: {
+                        vt.field_m = new int[(param2 + param1) * 2];
+                        if (cl.field_q == null) {
+                          break L7;
+                        } else {
+                          if (cl.field_q.length >= param2) {
+                            kt.field_p = 0;
+                            pd.field_e = 2147483647;
+                            sq.field_k = 2147483647;
+                            df.field_T = -2147483648;
+                            se.field_e = -2147483648;
+                            return;
+                          } else {
+                            break L7;
+                          }
+                        }
+                      }
+                      cl.field_q = new boolean[2 * param2];
+                      kt.field_p = 0;
                       pd.field_e = 2147483647;
                       sq.field_k = 2147483647;
                       df.field_T = -2147483648;
                       se.field_e = -2147483648;
                       return;
                     } else {
-                      return;
-                    }
-                  } else {
-                    if (cl.field_q.length >= param2) {
-                      kt.field_p = 0;
-                      if (param0 == 2) {
+                      if (param2 + param1 <= vt.field_m.length) {
+                        if (cl.field_q == null) {
+                          cl.field_q = new boolean[2 * param2];
+                          kt.field_p = 0;
+                          pd.field_e = 2147483647;
+                          sq.field_k = 2147483647;
+                          df.field_T = -2147483648;
+                          se.field_e = -2147483648;
+                          return;
+                        } else {
+                          if (cl.field_q.length >= param2) {
+                            kt.field_p = 0;
+                            pd.field_e = 2147483647;
+                            sq.field_k = 2147483647;
+                            df.field_T = -2147483648;
+                            se.field_e = -2147483648;
+                            return;
+                          } else {
+                            cl.field_q = new boolean[2 * param2];
+                            kt.field_p = 0;
+                            pd.field_e = 2147483647;
+                            sq.field_k = 2147483647;
+                            df.field_T = -2147483648;
+                            se.field_e = -2147483648;
+                            return;
+                          }
+                        }
+                      } else {
+                        L8: {
+                          vt.field_m = new int[(param2 + param1) * 2];
+                          if (cl.field_q == null) {
+                            break L8;
+                          } else {
+                            if (cl.field_q.length >= param2) {
+                              kt.field_p = 0;
+                              pd.field_e = 2147483647;
+                              sq.field_k = 2147483647;
+                              df.field_T = -2147483648;
+                              se.field_e = -2147483648;
+                              return;
+                            } else {
+                              break L8;
+                            }
+                          }
+                        }
+                        cl.field_q = new boolean[2 * param2];
+                        kt.field_p = 0;
                         pd.field_e = 2147483647;
                         sq.field_k = 2147483647;
                         df.field_T = -2147483648;
                         se.field_e = -2147483648;
-                        return;
-                      } else {
                         return;
                       }
+                    }
+                  } else {
+                    if (tb.field_h.length >= param2) {
+                      if (vt.field_m == null) {
+                        vt.field_m = new int[(param2 + param1) * 2];
+                        if (cl.field_q == null) {
+                          cl.field_q = new boolean[2 * param2];
+                          kt.field_p = 0;
+                          pd.field_e = 2147483647;
+                          sq.field_k = 2147483647;
+                          df.field_T = -2147483648;
+                          se.field_e = -2147483648;
+                          return;
+                        } else {
+                          if (cl.field_q.length >= param2) {
+                            kt.field_p = 0;
+                            pd.field_e = 2147483647;
+                            sq.field_k = 2147483647;
+                            df.field_T = -2147483648;
+                            se.field_e = -2147483648;
+                            return;
+                          } else {
+                            cl.field_q = new boolean[2 * param2];
+                            kt.field_p = 0;
+                            pd.field_e = 2147483647;
+                            sq.field_k = 2147483647;
+                            df.field_T = -2147483648;
+                            se.field_e = -2147483648;
+                            return;
+                          }
+                        }
+                      } else {
+                        if (param2 + param1 <= vt.field_m.length) {
+                          if (cl.field_q == null) {
+                            cl.field_q = new boolean[2 * param2];
+                            kt.field_p = 0;
+                            pd.field_e = 2147483647;
+                            sq.field_k = 2147483647;
+                            df.field_T = -2147483648;
+                            se.field_e = -2147483648;
+                            return;
+                          } else {
+                            if (cl.field_q.length >= param2) {
+                              kt.field_p = 0;
+                              pd.field_e = 2147483647;
+                              sq.field_k = 2147483647;
+                              df.field_T = -2147483648;
+                              se.field_e = -2147483648;
+                              return;
+                            } else {
+                              cl.field_q = new boolean[2 * param2];
+                              kt.field_p = 0;
+                              pd.field_e = 2147483647;
+                              sq.field_k = 2147483647;
+                              df.field_T = -2147483648;
+                              se.field_e = -2147483648;
+                              return;
+                            }
+                          }
+                        } else {
+                          vt.field_m = new int[(param2 + param1) * 2];
+                          if (cl.field_q == null) {
+                            cl.field_q = new boolean[2 * param2];
+                            kt.field_p = 0;
+                            pd.field_e = 2147483647;
+                            sq.field_k = 2147483647;
+                            df.field_T = -2147483648;
+                            se.field_e = -2147483648;
+                            return;
+                          } else {
+                            if (cl.field_q.length >= param2) {
+                              kt.field_p = 0;
+                              pd.field_e = 2147483647;
+                              sq.field_k = 2147483647;
+                              df.field_T = -2147483648;
+                              se.field_e = -2147483648;
+                              return;
+                            } else {
+                              cl.field_q = new boolean[2 * param2];
+                              kt.field_p = 0;
+                              pd.field_e = 2147483647;
+                              sq.field_k = 2147483647;
+                              df.field_T = -2147483648;
+                              se.field_e = -2147483648;
+                              return;
+                            }
+                          }
+                        }
+                      }
                     } else {
-                      cl.field_q = new boolean[2 * param2];
-                      kt.field_p = 0;
-                      if (param0 == 2) {
+                      L9: {
+                        L10: {
+                          tb.field_h = new int[2 * param2];
+                          if (vt.field_m == null) {
+                            break L10;
+                          } else {
+                            if (param2 + param1 <= vt.field_m.length) {
+                              break L9;
+                            } else {
+                              break L10;
+                            }
+                          }
+                        }
+                        vt.field_m = new int[(param2 + param1) * 2];
+                        break L9;
+                      }
+                      if (cl.field_q == null) {
+                        cl.field_q = new boolean[2 * param2];
+                        kt.field_p = 0;
                         pd.field_e = 2147483647;
                         sq.field_k = 2147483647;
                         df.field_T = -2147483648;
                         se.field_e = -2147483648;
                         return;
                       } else {
-                        return;
+                        if (cl.field_q.length >= param2) {
+                          kt.field_p = 0;
+                          pd.field_e = 2147483647;
+                          sq.field_k = 2147483647;
+                          df.field_T = -2147483648;
+                          se.field_e = -2147483648;
+                          return;
+                        } else {
+                          cl.field_q = new boolean[2 * param2];
+                          kt.field_p = 0;
+                          pd.field_e = 2147483647;
+                          sq.field_k = 2147483647;
+                          df.field_T = -2147483648;
+                          se.field_e = -2147483648;
+                          return;
+                        }
                       }
                     }
                   }
                 } else {
-                  if (param2 + param1 <= vt.field_m.length) {
-                    if (cl.field_q == null) {
-                      cl.field_q = new boolean[2 * param2];
-                      kt.field_p = 0;
-                      if (param0 == 2) {
-                        pd.field_e = 2147483647;
-                        sq.field_k = 2147483647;
-                        df.field_T = -2147483648;
-                        se.field_e = -2147483648;
-                        return;
-                      } else {
-                        return;
-                      }
-                    } else {
-                      if (cl.field_q.length >= param2) {
-                        kt.field_p = 0;
-                        if (param0 == 2) {
-                          pd.field_e = 2147483647;
-                          sq.field_k = 2147483647;
-                          df.field_T = -2147483648;
-                          se.field_e = -2147483648;
-                          return;
-                        } else {
-                          return;
-                        }
-                      } else {
-                        cl.field_q = new boolean[2 * param2];
-                        kt.field_p = 0;
-                        if (param0 == 2) {
-                          pd.field_e = 2147483647;
-                          sq.field_k = 2147483647;
-                          df.field_T = -2147483648;
-                          se.field_e = -2147483648;
-                          return;
-                        } else {
-                          return;
-                        }
-                      }
-                    }
-                  } else {
-                    vt.field_m = new int[(param2 + param1) * 2];
-                    if (cl.field_q == null) {
-                      cl.field_q = new boolean[2 * param2];
-                      kt.field_p = 0;
-                      if (param0 == 2) {
-                        pd.field_e = 2147483647;
-                        sq.field_k = 2147483647;
-                        df.field_T = -2147483648;
-                        se.field_e = -2147483648;
-                        return;
-                      } else {
-                        return;
-                      }
-                    } else {
-                      if (cl.field_q.length >= param2) {
-                        kt.field_p = 0;
-                        if (param0 == 2) {
-                          pd.field_e = 2147483647;
-                          sq.field_k = 2147483647;
-                          df.field_T = -2147483648;
-                          se.field_e = -2147483648;
-                          return;
-                        } else {
-                          return;
-                        }
-                      } else {
-                        cl.field_q = new boolean[2 * param2];
-                        kt.field_p = 0;
-                        if (param0 == 2) {
-                          pd.field_e = 2147483647;
-                          sq.field_k = 2147483647;
-                          df.field_T = -2147483648;
-                          se.field_e = -2147483648;
-                          return;
-                        } else {
-                          return;
-                        }
-                      }
-                    }
-                  }
+                  break L6;
                 }
-              } else {
-                L10: {
-                  L11: {
-                    tb.field_h = new int[2 * param2];
-                    if (vt.field_m == null) {
-                      break L11;
-                    } else {
-                      if (param2 + param1 <= vt.field_m.length) {
-                        break L10;
-                      } else {
-                        break L11;
-                      }
-                    }
-                  }
-                  vt.field_m = new int[(param2 + param1) * 2];
-                  break L10;
-                }
-                L12: {
-                  L13: {
-                    if (cl.field_q == null) {
-                      break L13;
-                    } else {
-                      if (cl.field_q.length >= param2) {
-                        break L12;
-                      } else {
-                        break L13;
-                      }
-                    }
-                  }
-                  cl.field_q = new boolean[2 * param2];
+              }
+            }
+            L11: {
+              L12: {
+                pe.field_s = new int[param2 * 2];
+                if (tb.field_h == null) {
                   break L12;
+                } else {
+                  if (tb.field_h.length >= param2) {
+                    break L11;
+                  } else {
+                    break L12;
+                  }
                 }
-                kt.field_p = 0;
-                if (param0 == 2) {
+              }
+              tb.field_h = new int[2 * param2];
+              break L11;
+            }
+            L13: {
+              L14: {
+                if (vt.field_m == null) {
+                  break L14;
+                } else {
+                  if (param2 + param1 <= vt.field_m.length) {
+                    break L13;
+                  } else {
+                    break L14;
+                  }
+                }
+              }
+              vt.field_m = new int[(param2 + param1) * 2];
+              break L13;
+            }
+            L15: {
+              if (cl.field_q == null) {
+                break L15;
+              } else {
+                if (cl.field_q.length >= param2) {
+                  kt.field_p = 0;
                   pd.field_e = 2147483647;
                   sq.field_k = 2147483647;
                   df.field_T = -2147483648;
                   se.field_e = -2147483648;
                   return;
                 } else {
-                  return;
+                  break L15;
                 }
               }
             }
+            cl.field_q = new boolean[2 * param2];
+            kt.field_p = 0;
+            pd.field_e = 2147483647;
+            sq.field_k = 2147483647;
+            df.field_T = -2147483648;
+            se.field_e = -2147483648;
+            return;
           } else {
-            L14: {
-              L15: {
+            L16: {
+              L17: {
                 if (no.field_U == null) {
-                  break L15;
+                  break L17;
                 } else {
                   if (param2 <= no.field_U.length) {
-                    break L14;
+                    break L16;
                   } else {
-                    break L15;
+                    break L17;
                   }
                 }
               }
               no.field_U = new int[param2 * 2];
-              break L14;
-            }
-            L16: {
-              L17: {
-                if (wp.field_w == null) {
-                  break L17;
-                } else {
-                  if (param2 > wp.field_w.length) {
-                    break L17;
-                  } else {
-                    break L16;
-                  }
-                }
-              }
-              wp.field_w = new int[param2 * 2];
               break L16;
             }
             L18: {
               L19: {
-                if (ci.field_c == null) {
+                if (wp.field_w == null) {
                   break L19;
                 } else {
-                  if (param2 <= ci.field_c.length) {
-                    break L18;
-                  } else {
+                  if (param2 > wp.field_w.length) {
                     break L19;
+                  } else {
+                    break L18;
                   }
                 }
               }
-              ci.field_c = new int[param2 * 2];
+              wp.field_w = new int[param2 * 2];
               break L18;
             }
             L20: {
               L21: {
-                if (null == pe.field_s) {
+                if (ci.field_c == null) {
                   break L21;
                 } else {
-                  if (param2 <= pe.field_s.length) {
+                  if (param2 <= ci.field_c.length) {
                     break L20;
                   } else {
                     break L21;
                   }
                 }
               }
-              pe.field_s = new int[param2 * 2];
+              ci.field_c = new int[param2 * 2];
               break L20;
             }
-            if (tb.field_h == null) {
-              L22: {
-                L23: {
-                  tb.field_h = new int[2 * param2];
-                  if (vt.field_m == null) {
-                    break L23;
-                  } else {
-                    if (param2 + param1 <= vt.field_m.length) {
-                      break L22;
-                    } else {
+            L22: {
+              if (null == pe.field_s) {
+                break L22;
+              } else {
+                if (param2 <= pe.field_s.length) {
+                  if (tb.field_h == null) {
+                    L23: {
+                      L24: {
+                        tb.field_h = new int[2 * param2];
+                        if (vt.field_m == null) {
+                          break L24;
+                        } else {
+                          if (param2 + param1 <= vt.field_m.length) {
+                            break L23;
+                          } else {
+                            break L24;
+                          }
+                        }
+                      }
+                      vt.field_m = new int[(param2 + param1) * 2];
                       break L23;
                     }
-                  }
-                }
-                vt.field_m = new int[(param2 + param1) * 2];
-                break L22;
-              }
-              L24: {
-                L25: {
-                  if (cl.field_q == null) {
-                    break L25;
-                  } else {
-                    if (cl.field_q.length >= param2) {
-                      break L24;
-                    } else {
-                      break L25;
-                    }
-                  }
-                }
-                cl.field_q = new boolean[2 * param2];
-                break L24;
-              }
-              kt.field_p = 0;
-              if (param0 == 2) {
-                pd.field_e = 2147483647;
-                sq.field_k = 2147483647;
-                df.field_T = -2147483648;
-                se.field_e = -2147483648;
-                return;
-              } else {
-                return;
-              }
-            } else {
-              if (tb.field_h.length >= param2) {
-                if (vt.field_m == null) {
-                  L26: {
-                    L27: {
-                      vt.field_m = new int[(param2 + param1) * 2];
+                    L25: {
                       if (cl.field_q == null) {
-                        break L27;
+                        break L25;
                       } else {
                         if (cl.field_q.length >= param2) {
-                          break L26;
+                          kt.field_p = 0;
+                          pd.field_e = 2147483647;
+                          sq.field_k = 2147483647;
+                          df.field_T = -2147483648;
+                          se.field_e = -2147483648;
+                          return;
                         } else {
-                          break L27;
+                          break L25;
                         }
                       }
                     }
                     cl.field_q = new boolean[2 * param2];
-                    break L26;
-                  }
-                  kt.field_p = 0;
-                  if (param0 == 2) {
+                    kt.field_p = 0;
                     pd.field_e = 2147483647;
                     sq.field_k = 2147483647;
                     df.field_T = -2147483648;
                     se.field_e = -2147483648;
                     return;
                   } else {
-                    return;
-                  }
-                } else {
-                  if (param2 + param1 <= vt.field_m.length) {
-                    if (cl.field_q == null) {
-                      cl.field_q = new boolean[2 * param2];
-                      kt.field_p = 0;
-                      if (param0 == 2) {
+                    if (tb.field_h.length >= param2) {
+                      if (vt.field_m == null) {
+                        L26: {
+                          vt.field_m = new int[(param2 + param1) * 2];
+                          if (cl.field_q == null) {
+                            break L26;
+                          } else {
+                            if (cl.field_q.length >= param2) {
+                              kt.field_p = 0;
+                              pd.field_e = 2147483647;
+                              sq.field_k = 2147483647;
+                              df.field_T = -2147483648;
+                              se.field_e = -2147483648;
+                              return;
+                            } else {
+                              break L26;
+                            }
+                          }
+                        }
+                        cl.field_q = new boolean[2 * param2];
+                        kt.field_p = 0;
                         pd.field_e = 2147483647;
                         sq.field_k = 2147483647;
                         df.field_T = -2147483648;
                         se.field_e = -2147483648;
                         return;
                       } else {
-                        return;
+                        if (param2 + param1 <= vt.field_m.length) {
+                          if (cl.field_q == null) {
+                            cl.field_q = new boolean[2 * param2];
+                            kt.field_p = 0;
+                            pd.field_e = 2147483647;
+                            sq.field_k = 2147483647;
+                            df.field_T = -2147483648;
+                            se.field_e = -2147483648;
+                            return;
+                          } else {
+                            if (cl.field_q.length >= param2) {
+                              kt.field_p = 0;
+                              pd.field_e = 2147483647;
+                              sq.field_k = 2147483647;
+                              df.field_T = -2147483648;
+                              se.field_e = -2147483648;
+                              return;
+                            } else {
+                              cl.field_q = new boolean[2 * param2];
+                              kt.field_p = 0;
+                              pd.field_e = 2147483647;
+                              sq.field_k = 2147483647;
+                              df.field_T = -2147483648;
+                              se.field_e = -2147483648;
+                              return;
+                            }
+                          }
+                        } else {
+                          L27: {
+                            vt.field_m = new int[(param2 + param1) * 2];
+                            if (cl.field_q == null) {
+                              break L27;
+                            } else {
+                              if (cl.field_q.length >= param2) {
+                                kt.field_p = 0;
+                                pd.field_e = 2147483647;
+                                sq.field_k = 2147483647;
+                                df.field_T = -2147483648;
+                                se.field_e = -2147483648;
+                                return;
+                              } else {
+                                break L27;
+                              }
+                            }
+                          }
+                          cl.field_q = new boolean[2 * param2];
+                          kt.field_p = 0;
+                          pd.field_e = 2147483647;
+                          sq.field_k = 2147483647;
+                          df.field_T = -2147483648;
+                          se.field_e = -2147483648;
+                          return;
+                        }
                       }
                     } else {
-                      if (cl.field_q.length >= param2) {
-                        kt.field_p = 0;
-                        if (param0 == 2) {
-                          pd.field_e = 2147483647;
-                          sq.field_k = 2147483647;
-                          df.field_T = -2147483648;
-                          se.field_e = -2147483648;
-                          return;
-                        } else {
-                          return;
+                      L28: {
+                        L29: {
+                          tb.field_h = new int[2 * param2];
+                          if (vt.field_m == null) {
+                            break L29;
+                          } else {
+                            if (param2 + param1 <= vt.field_m.length) {
+                              break L28;
+                            } else {
+                              break L29;
+                            }
+                          }
                         }
-                      } else {
-                        cl.field_q = new boolean[2 * param2];
-                        kt.field_p = 0;
-                        if (param0 == 2) {
-                          pd.field_e = 2147483647;
-                          sq.field_k = 2147483647;
-                          df.field_T = -2147483648;
-                          se.field_e = -2147483648;
-                          return;
-                        } else {
-                          return;
-                        }
-                      }
-                    }
-                  } else {
-                    L28: {
-                      L29: {
                         vt.field_m = new int[(param2 + param1) * 2];
+                        break L28;
+                      }
+                      L30: {
                         if (cl.field_q == null) {
-                          break L29;
+                          break L30;
                         } else {
                           if (cl.field_q.length >= param2) {
-                            break L28;
+                            kt.field_p = 0;
+                            pd.field_e = 2147483647;
+                            sq.field_k = 2147483647;
+                            df.field_T = -2147483648;
+                            se.field_e = -2147483648;
+                            return;
                           } else {
-                            break L29;
+                            break L30;
                           }
                         }
                       }
                       cl.field_q = new boolean[2 * param2];
-                      break L28;
-                    }
-                    kt.field_p = 0;
-                    if (param0 == 2) {
+                      kt.field_p = 0;
                       pd.field_e = 2147483647;
                       sq.field_k = 2147483647;
                       df.field_T = -2147483648;
                       se.field_e = -2147483648;
                       return;
-                    } else {
-                      return;
                     }
                   }
-                }
-              } else {
-                L30: {
-                  L31: {
-                    tb.field_h = new int[2 * param2];
-                    if (vt.field_m == null) {
-                      break L31;
-                    } else {
-                      if (param2 + param1 <= vt.field_m.length) {
-                        break L30;
-                      } else {
-                        break L31;
-                      }
-                    }
-                  }
-                  vt.field_m = new int[(param2 + param1) * 2];
-                  break L30;
-                }
-                L32: {
-                  L33: {
-                    if (cl.field_q == null) {
-                      break L33;
-                    } else {
-                      if (cl.field_q.length >= param2) {
-                        break L32;
-                      } else {
-                        break L33;
-                      }
-                    }
-                  }
-                  cl.field_q = new boolean[2 * param2];
-                  break L32;
-                }
-                kt.field_p = 0;
-                if (param0 != 2) {
-                  return;
                 } else {
+                  break L22;
+                }
+              }
+            }
+            L31: {
+              L32: {
+                pe.field_s = new int[param2 * 2];
+                if (tb.field_h == null) {
+                  break L32;
+                } else {
+                  if (tb.field_h.length >= param2) {
+                    break L31;
+                  } else {
+                    break L32;
+                  }
+                }
+              }
+              tb.field_h = new int[2 * param2];
+              break L31;
+            }
+            L33: {
+              L34: {
+                if (vt.field_m == null) {
+                  break L34;
+                } else {
+                  if (param2 + param1 <= vt.field_m.length) {
+                    break L33;
+                  } else {
+                    break L34;
+                  }
+                }
+              }
+              vt.field_m = new int[(param2 + param1) * 2];
+              break L33;
+            }
+            L35: {
+              if (cl.field_q == null) {
+                break L35;
+              } else {
+                if (cl.field_q.length >= param2) {
+                  kt.field_p = 0;
                   pd.field_e = 2147483647;
                   sq.field_k = 2147483647;
                   df.field_T = -2147483648;
                   se.field_e = -2147483648;
                   return;
-                }
-              }
-            }
-          }
-        } else {
-          L34: {
-            L35: {
-              pp.field_R = new int[param2 * 2];
-              if (no.field_U == null) {
-                break L35;
-              } else {
-                if (param2 <= no.field_U.length) {
-                  break L34;
                 } else {
                   break L35;
                 }
               }
             }
-            no.field_U = new int[param2 * 2];
-            break L34;
+            cl.field_q = new boolean[2 * param2];
+            kt.field_p = 0;
+            pd.field_e = 2147483647;
+            sq.field_k = 2147483647;
+            df.field_T = -2147483648;
+            se.field_e = -2147483648;
+            return;
           }
+        } else {
           L36: {
             L37: {
-              if (wp.field_w == null) {
+              pp.field_R = new int[param2 * 2];
+              if (no.field_U == null) {
                 break L37;
               } else {
-                if (param2 > wp.field_w.length) {
-                  break L37;
-                } else {
+                if (param2 <= no.field_U.length) {
                   break L36;
+                } else {
+                  break L37;
                 }
               }
             }
-            wp.field_w = new int[param2 * 2];
+            no.field_U = new int[param2 * 2];
             break L36;
           }
           L38: {
             L39: {
-              if (ci.field_c == null) {
+              if (wp.field_w == null) {
                 break L39;
               } else {
-                if (param2 <= ci.field_c.length) {
-                  break L38;
-                } else {
+                if (param2 > wp.field_w.length) {
                   break L39;
+                } else {
+                  break L38;
                 }
               }
             }
-            ci.field_c = new int[param2 * 2];
+            wp.field_w = new int[param2 * 2];
             break L38;
           }
           L40: {
             L41: {
-              if (null == pe.field_s) {
+              if (ci.field_c == null) {
                 break L41;
               } else {
-                if (param2 <= pe.field_s.length) {
+                if (param2 <= ci.field_c.length) {
                   break L40;
                 } else {
                   break L41;
                 }
               }
             }
-            pe.field_s = new int[param2 * 2];
+            ci.field_c = new int[param2 * 2];
             break L40;
           }
-          if (tb.field_h == null) {
-            L42: {
-              L43: {
-                tb.field_h = new int[2 * param2];
-                if (vt.field_m == null) {
-                  break L43;
-                } else {
-                  if (param2 + param1 <= vt.field_m.length) {
-                    break L42;
-                  } else {
+          L42: {
+            if (null == pe.field_s) {
+              break L42;
+            } else {
+              if (param2 <= pe.field_s.length) {
+                if (tb.field_h == null) {
+                  L43: {
+                    L44: {
+                      tb.field_h = new int[2 * param2];
+                      if (vt.field_m == null) {
+                        break L44;
+                      } else {
+                        if (param2 + param1 <= vt.field_m.length) {
+                          break L43;
+                        } else {
+                          break L44;
+                        }
+                      }
+                    }
+                    vt.field_m = new int[(param2 + param1) * 2];
                     break L43;
                   }
-                }
-              }
-              vt.field_m = new int[(param2 + param1) * 2];
-              break L42;
-            }
-            L44: {
-              L45: {
-                if (cl.field_q == null) {
-                  break L45;
-                } else {
-                  if (cl.field_q.length >= param2) {
-                    break L44;
-                  } else {
-                    break L45;
-                  }
-                }
-              }
-              cl.field_q = new boolean[2 * param2];
-              break L44;
-            }
-            kt.field_p = 0;
-            if (param0 != 2) {
-              return;
-            } else {
-              pd.field_e = 2147483647;
-              sq.field_k = 2147483647;
-              df.field_T = -2147483648;
-              se.field_e = -2147483648;
-              return;
-            }
-          } else {
-            if (tb.field_h.length >= param2) {
-              if (vt.field_m == null) {
-                L46: {
-                  L47: {
-                    vt.field_m = new int[(param2 + param1) * 2];
+                  L45: {
                     if (cl.field_q == null) {
-                      break L47;
+                      break L45;
                     } else {
                       if (cl.field_q.length >= param2) {
-                        break L46;
+                        kt.field_p = 0;
+                        pd.field_e = 2147483647;
+                        sq.field_k = 2147483647;
+                        df.field_T = -2147483648;
+                        se.field_e = -2147483648;
+                        return;
                       } else {
-                        break L47;
+                        break L45;
                       }
                     }
                   }
                   cl.field_q = new boolean[2 * param2];
-                  break L46;
-                }
-                kt.field_p = 0;
-                if (param0 != 2) {
-                  return;
-                } else {
+                  kt.field_p = 0;
                   pd.field_e = 2147483647;
                   sq.field_k = 2147483647;
                   df.field_T = -2147483648;
                   se.field_e = -2147483648;
                   return;
-                }
-              } else {
-                if (param2 + param1 <= vt.field_m.length) {
-                  if (cl.field_q == null) {
-                    cl.field_q = new boolean[2 * param2];
-                    kt.field_p = 0;
-                    if (param0 != 2) {
-                      return;
-                    } else {
+                } else {
+                  if (tb.field_h.length >= param2) {
+                    if (vt.field_m == null) {
+                      L46: {
+                        vt.field_m = new int[(param2 + param1) * 2];
+                        if (cl.field_q == null) {
+                          break L46;
+                        } else {
+                          if (cl.field_q.length >= param2) {
+                            kt.field_p = 0;
+                            pd.field_e = 2147483647;
+                            sq.field_k = 2147483647;
+                            df.field_T = -2147483648;
+                            se.field_e = -2147483648;
+                            return;
+                          } else {
+                            break L46;
+                          }
+                        }
+                      }
+                      cl.field_q = new boolean[2 * param2];
+                      kt.field_p = 0;
                       pd.field_e = 2147483647;
                       sq.field_k = 2147483647;
                       df.field_T = -2147483648;
                       se.field_e = -2147483648;
                       return;
+                    } else {
+                      if (param2 + param1 <= vt.field_m.length) {
+                        if (cl.field_q == null) {
+                          cl.field_q = new boolean[2 * param2];
+                          kt.field_p = 0;
+                          pd.field_e = 2147483647;
+                          sq.field_k = 2147483647;
+                          df.field_T = -2147483648;
+                          se.field_e = -2147483648;
+                          return;
+                        } else {
+                          if (cl.field_q.length >= param2) {
+                            kt.field_p = 0;
+                            pd.field_e = 2147483647;
+                            sq.field_k = 2147483647;
+                            df.field_T = -2147483648;
+                            se.field_e = -2147483648;
+                            return;
+                          } else {
+                            cl.field_q = new boolean[2 * param2];
+                            kt.field_p = 0;
+                            pd.field_e = 2147483647;
+                            sq.field_k = 2147483647;
+                            df.field_T = -2147483648;
+                            se.field_e = -2147483648;
+                            return;
+                          }
+                        }
+                      } else {
+                        L47: {
+                          vt.field_m = new int[(param2 + param1) * 2];
+                          if (cl.field_q == null) {
+                            break L47;
+                          } else {
+                            if (cl.field_q.length >= param2) {
+                              kt.field_p = 0;
+                              pd.field_e = 2147483647;
+                              sq.field_k = 2147483647;
+                              df.field_T = -2147483648;
+                              se.field_e = -2147483648;
+                              return;
+                            } else {
+                              break L47;
+                            }
+                          }
+                        }
+                        cl.field_q = new boolean[2 * param2];
+                        kt.field_p = 0;
+                        pd.field_e = 2147483647;
+                        sq.field_k = 2147483647;
+                        df.field_T = -2147483648;
+                        se.field_e = -2147483648;
+                        return;
+                      }
                     }
                   } else {
-                    if (cl.field_q.length >= param2) {
-                      kt.field_p = 0;
-                      if (param0 != 2) {
-                        return;
-                      } else {
-                        pd.field_e = 2147483647;
-                        sq.field_k = 2147483647;
-                        df.field_T = -2147483648;
-                        se.field_e = -2147483648;
-                        return;
+                    L48: {
+                      L49: {
+                        tb.field_h = new int[2 * param2];
+                        if (vt.field_m == null) {
+                          break L49;
+                        } else {
+                          if (param2 + param1 <= vt.field_m.length) {
+                            break L48;
+                          } else {
+                            break L49;
+                          }
+                        }
                       }
-                    } else {
-                      cl.field_q = new boolean[2 * param2];
-                      kt.field_p = 0;
-                      if (param0 != 2) {
-                        return;
-                      } else {
-                        pd.field_e = 2147483647;
-                        sq.field_k = 2147483647;
-                        df.field_T = -2147483648;
-                        se.field_e = -2147483648;
-                        return;
-                      }
-                    }
-                  }
-                } else {
-                  L48: {
-                    L49: {
                       vt.field_m = new int[(param2 + param1) * 2];
+                      break L48;
+                    }
+                    L50: {
                       if (cl.field_q == null) {
-                        break L49;
+                        break L50;
                       } else {
                         if (cl.field_q.length >= param2) {
-                          break L48;
+                          kt.field_p = 0;
+                          pd.field_e = 2147483647;
+                          sq.field_k = 2147483647;
+                          df.field_T = -2147483648;
+                          se.field_e = -2147483648;
+                          return;
                         } else {
-                          break L49;
+                          break L50;
                         }
                       }
                     }
                     cl.field_q = new boolean[2 * param2];
-                    break L48;
-                  }
-                  kt.field_p = 0;
-                  if (param0 != 2) {
-                    return;
-                  } else {
+                    kt.field_p = 0;
                     pd.field_e = 2147483647;
                     sq.field_k = 2147483647;
                     df.field_T = -2147483648;
@@ -825,51 +910,65 @@ final class qu extends tc {
                     return;
                   }
                 }
-              }
-            } else {
-              L50: {
-                L51: {
-                  tb.field_h = new int[2 * param2];
-                  if (vt.field_m == null) {
-                    break L51;
-                  } else {
-                    if (param2 + param1 <= vt.field_m.length) {
-                      break L50;
-                    } else {
-                      break L51;
-                    }
-                  }
-                }
-                vt.field_m = new int[(param2 + param1) * 2];
-                break L50;
-              }
-              L52: {
-                L53: {
-                  if (cl.field_q == null) {
-                    break L53;
-                  } else {
-                    if (cl.field_q.length >= param2) {
-                      break L52;
-                    } else {
-                      break L53;
-                    }
-                  }
-                }
-                cl.field_q = new boolean[2 * param2];
-                break L52;
-              }
-              kt.field_p = 0;
-              if (param0 != 2) {
-                return;
               } else {
+                break L42;
+              }
+            }
+          }
+          L51: {
+            L52: {
+              pe.field_s = new int[param2 * 2];
+              if (tb.field_h == null) {
+                break L52;
+              } else {
+                if (tb.field_h.length >= param2) {
+                  break L51;
+                } else {
+                  break L52;
+                }
+              }
+            }
+            tb.field_h = new int[2 * param2];
+            break L51;
+          }
+          L53: {
+            L54: {
+              if (vt.field_m == null) {
+                break L54;
+              } else {
+                if (param2 + param1 <= vt.field_m.length) {
+                  break L53;
+                } else {
+                  break L54;
+                }
+              }
+            }
+            vt.field_m = new int[(param2 + param1) * 2];
+            break L53;
+          }
+          L55: {
+            if (cl.field_q == null) {
+              break L55;
+            } else {
+              if (cl.field_q.length >= param2) {
+                kt.field_p = 0;
                 pd.field_e = 2147483647;
                 sq.field_k = 2147483647;
                 df.field_T = -2147483648;
                 se.field_e = -2147483648;
                 return;
+              } else {
+                break L55;
               }
             }
           }
+          cl.field_q = new boolean[2 * param2];
+          kt.field_p = 0;
+          pd.field_e = 2147483647;
+          sq.field_k = 2147483647;
+          df.field_T = -2147483648;
+          se.field_e = -2147483648;
+          return;
         }
     }
 

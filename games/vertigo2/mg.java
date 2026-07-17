@@ -234,14 +234,11 @@ final class mg extends oh {
             ch.field_e.b((iq) (Object) bb.field_F, 0);
         }
         bb.field_F.a(param2, 4210752, param1, param3);
-        if (param0 != 1) {
-            return;
-        }
         try {
             bi.c();
             mh.a(true, false);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) (Object) runtimeException, "mg.A(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+            throw wn.a((Throwable) (Object) runtimeException, "mg.A(" + 1 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -494,7 +491,8 @@ final class mg extends oh {
           } else {
             L2: {
               L3: {
-                if (!cn.b(false)) {
+                int discarded$3 = 0;
+                if (!cn.b()) {
                   break L3;
                 } else {
                   if (param3.field_kc) {
@@ -515,7 +513,7 @@ final class mg extends oh {
           }
         }
         L4: {
-          var5 = param0 ? 1 : 0;
+          var5 = 0;
           if (param2) {
             break L4;
           } else {
@@ -523,7 +521,8 @@ final class mg extends oh {
             L5: while (true) {
               if (var6 >= 5) {
                 if (field_S[0][2].field_G) {
-                  if (cn.b(false)) {
+                  int discarded$4 = 0;
+                  if (cn.b()) {
                     ko.field_S = qn.field_z;
                     break L4;
                   } else {
@@ -967,7 +966,7 @@ final class mg extends oh {
                       if (param2) {
                         break L39;
                       } else {
-                        ar.a(953354214, param1);
+                        ar.a(953354214, 11);
                         break L38;
                       }
                     }
@@ -1015,7 +1014,8 @@ final class mg extends oh {
                                 if ((il.field_b[var7][var9] & ~ob.field_L) <= 0) {
                                   break L43;
                                 } else {
-                                  var15 = ib.a(~ob.field_L & il.field_b[var7][var9], (byte) 79);
+                                  int discarded$5 = 79;
+                                  var15 = ib.a(~ob.field_L & il.field_b[var7][var9]);
                                   var14 = 1;
                                   break L43;
                                 }
@@ -1774,7 +1774,7 @@ final class mg extends oh {
         }
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_L = null;
         field_G = null;
         field_R = null;

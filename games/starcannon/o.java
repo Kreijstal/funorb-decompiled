@@ -7,7 +7,7 @@ final class o {
     static String field_b;
     static String field_c;
 
-    final static id a(ue param0, String param1, String param2, boolean param3) {
+    final static id a(ue param0, String param1, String param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -154,22 +154,19 @@ final class o {
         ta.field_e = param1.i(-1174051992) << 5;
         int var2_int = param1.j(7909);
         mc.field_f = (var2_int & 7) << 18;
-        if (param0 != -20954) {
-            return;
-        }
         try {
             ta.field_e = ta.field_e + (var2_int >> 3);
-            mc.field_f = mc.field_f + (param1.i(param0 ^ 1174064462) << 2);
-            var2_int = param1.j(param0 + 28863);
+            mc.field_f = mc.field_f + (param1.i(-1174051992) << 2);
+            var2_int = param1.j(7909);
             rb.field_i = var2_int << 15 & 2064384;
             mc.field_f = mc.field_f + (var2_int >> 6);
             rb.field_i = rb.field_i + (param1.j(7909) << 7);
             var2_int = param1.j(7909);
             og.field_f = (var2_int & 1) << 16;
             rb.field_i = rb.field_i + (var2_int >> 1);
-            og.field_f = og.field_f + param1.i(param0 + -1174031038);
+            og.field_f = og.field_f + param1.i(-1174051992);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) (Object) runtimeException, "o.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw sd.a((Throwable) (Object) runtimeException, "o.D(" + -20954 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -201,7 +198,7 @@ final class o {
         mj.field_c[9] = hj.field_b[1];
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_b = null;
     }
@@ -252,7 +249,7 @@ final class o {
         String stackOut_74_2 = null;
         try {
           L0: {
-            var6_int = param1 - param3;
+            var6_int = param1;
             var7 = 0;
             L1: while (true) {
               if (var6_int <= var7) {
@@ -269,7 +266,7 @@ final class o {
                 L2: {
                   L3: {
                     L4: {
-                      var8 = param2.charAt(var7 + param3);
+                      var8 = param2.charAt(var7);
                       if (var8 <= 0) {
                         break L4;
                       } else {
@@ -467,7 +464,7 @@ final class o {
           }
           L7: {
             stackOut_73_0 = (RuntimeException) (Object) stackIn_73_0;
-            stackOut_73_1 = ((StringBuilder) (Object) stackIn_73_1).append(stackIn_73_2).append(44).append(param3).append(44).append(param4).append(44);
+            stackOut_73_1 = ((StringBuilder) (Object) stackIn_73_1).append(stackIn_73_2).append(44).append(0).append(44).append(param4).append(44);
             stackIn_75_0 = stackOut_73_0;
             stackIn_75_1 = stackOut_73_1;
             stackIn_74_0 = stackOut_73_0;

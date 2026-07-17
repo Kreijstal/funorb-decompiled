@@ -13,9 +13,6 @@ final class el {
     final static ik a(int param0, int param1, int param2) {
         ik var3 = kr.b((byte) -103);
         var3.a(param2, (byte) 38, param1);
-        if (param0 != 0) {
-            return null;
-        }
         return var3;
     }
 
@@ -70,7 +67,7 @@ final class el {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
     }
 

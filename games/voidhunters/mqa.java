@@ -139,7 +139,7 @@ final class mqa extends rqa {
         return (lkb) (Object) stackIn_25_0;
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_p = null;
         field_r = null;
     }

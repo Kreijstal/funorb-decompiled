@@ -10,13 +10,10 @@ final class ri implements j {
     private mg field_e;
 
     final static boolean a(int param0, int param1) {
-        if (param0 != -6873) {
-            field_f = -71;
-        }
-        return (-param1 & param1) == param1 ? true : false;
+        return (-param1 & param1) == param1;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_d = null;
         field_a = null;
     }

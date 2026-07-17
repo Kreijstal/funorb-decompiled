@@ -6,7 +6,7 @@ final class vj {
     static int[] field_c;
     static volatile boolean field_b;
 
-    final static String a(boolean param0, boolean param1, boolean param2, int param3) {
+    final static String a(boolean param0, boolean param1, boolean param2) {
         int var4 = 59;
         int var5 = 0;
         if (!(!param0)) {
@@ -21,7 +21,7 @@ final class vj {
         return dk.field_b[var5];
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_c = null;
         field_a = null;
     }

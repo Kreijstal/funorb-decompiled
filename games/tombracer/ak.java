@@ -203,7 +203,7 @@ final class ak extends ela {
         return stackIn_10_0;
     }
 
-    public static void f(int param0) {
+    public static void f() {
         field_o = null;
         field_p = null;
     }
@@ -212,66 +212,36 @@ final class ak extends ela {
         super(param0, param1, param2);
     }
 
-    final static void g(int param0) {
+    final static void g() {
         int var1 = 0;
         int var2 = 0;
         var2 = TombRacer.field_G ? 1 : 0;
         nfa.field_p = false;
-        if (param0 == 0) {
-          sea.field_o = null;
-          if (!jf.field_r) {
-            var1 = lsa.field_a;
-            if (0 < var1) {
-              if (var1 != 1) {
-                sea.field_o = gl.a((byte) 100, nw.field_s, new String[1]);
-                sea.field_o = uj.a((byte) 121, new CharSequence[3]);
-                ci.field_l.i((byte) 101);
-                wt.a((byte) -117);
-                return;
-              } else {
-                sea.field_o = aga.field_a;
-                sea.field_o = uj.a((byte) 121, new CharSequence[3]);
-                ci.field_l.i((byte) 101);
-                wt.a((byte) -117);
-                return;
-              }
+        sea.field_o = null;
+        if (!jf.field_r) {
+          var1 = lsa.field_a;
+          if (0 < var1) {
+            if (var1 != 1) {
+              sea.field_o = gl.a((byte) 100, nw.field_s, new String[1]);
+              sea.field_o = uj.a((byte) 121, new CharSequence[3]);
+              ci.field_l.i((byte) 101);
+              wt.a((byte) -117);
+              return;
             } else {
+              sea.field_o = aga.field_a;
+              sea.field_o = uj.a((byte) 121, new CharSequence[3]);
               ci.field_l.i((byte) 101);
               wt.a((byte) -117);
               return;
             }
           } else {
-            ci.field_l.f(true);
+            ci.field_l.i((byte) 101);
+            wt.a((byte) -117);
             return;
           }
         } else {
-          field_o = null;
-          sea.field_o = null;
-          if (!jf.field_r) {
-            var1 = lsa.field_a;
-            if (0 < var1) {
-              if (var1 != 1) {
-                sea.field_o = gl.a((byte) 100, nw.field_s, new String[1]);
-                sea.field_o = uj.a((byte) 121, new CharSequence[3]);
-                ci.field_l.i((byte) 101);
-                wt.a((byte) -117);
-                return;
-              } else {
-                sea.field_o = aga.field_a;
-                sea.field_o = uj.a((byte) 121, new CharSequence[3]);
-                ci.field_l.i((byte) 101);
-                wt.a((byte) -117);
-                return;
-              }
-            } else {
-              ci.field_l.i((byte) 101);
-              wt.a((byte) -117);
-              return;
-            }
-          } else {
-            ci.field_l.f(true);
-            return;
-          }
+          ci.field_l.f(true);
+          return;
         }
     }
 

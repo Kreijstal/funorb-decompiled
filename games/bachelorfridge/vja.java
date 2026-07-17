@@ -510,13 +510,13 @@ class vja extends ii {
                               if (var6 == 0) {
                                 break L0;
                               } else {
-                                boolean discarded$3 = var9.a(var6, var9, (byte) 2);
+                                boolean discarded$4 = var9.a(var6, var9, (byte) 2);
                                 return;
                               }
                             }
                           }
                         }
-                        boolean discarded$4 = var9.a(-var5, var9, (byte) 2);
+                        boolean discarded$5 = var9.a(-var5, var9, (byte) 2);
                         return;
                       } else {
                         if (var4 instanceof iv) {
@@ -525,7 +525,7 @@ class vja extends ii {
                             if (!((iv) (Object) var4).field_j) {
                               L8: {
                                 if (var6_ref_aga.a(13, (byte) -95)) {
-                                  boolean discarded$5 = var9.a(5, var6_ref_aga, (byte) 2);
+                                  boolean discarded$6 = var9.a(5, var6_ref_aga, (byte) 2);
                                   break L8;
                                 } else {
                                   break L8;
@@ -543,7 +543,8 @@ class vja extends ii {
                             }
                           }
                           if (this instanceof hba) {
-                            var7 = nn.a(var6_ref_aga, var9, (byte) 104);
+                            int discarded$7 = 104;
+                            var7 = nn.a(var6_ref_aga, var9);
                             ((iv) (Object) var4).a((byte) -21, var9, param0, var7);
                             var4 = (pp) (Object) ((vja) this).field_o.c(0);
                             continue L3;

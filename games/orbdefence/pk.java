@@ -28,7 +28,7 @@ final class pk extends ta implements jb, ai {
         return ((pk) this).field_N.field_l;
     }
 
-    public static void l(int param0) {
+    public static void l() {
         field_B = null;
         field_G = null;
         field_F = null;
@@ -322,7 +322,8 @@ final class pk extends ta implements jb, ai {
                         break L2;
                       } else {
                         if (!((pk) this).field_D) {
-                          dk.a((byte) 19);
+                          int discarded$13 = 19;
+                          dk.a();
                           break L2;
                         } else {
                           qd.a((byte) 127);

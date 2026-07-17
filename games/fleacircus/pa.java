@@ -194,13 +194,10 @@ class pa extends lh {
     }
 
     final static void a(boolean param0, dd param1) {
-        if (param0) {
-            return;
-        }
         try {
             dl.field_s = param1;
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) (Object) runtimeException, "pa.L(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw pf.a((Throwable) (Object) runtimeException, "pa.L(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -542,53 +539,45 @@ class pa extends lh {
               var35 = bl.field_b[param7];
               L14: while (true) {
                 if (param7 >= param14) {
-                  L15: {
-                    if (param15 == 32679) {
-                      break L15;
-                    } else {
-                      field_i = null;
-                      break L15;
-                    }
-                  }
                   return;
                 } else {
-                  L16: {
+                  L15: {
                     var36 = var17_int >> 16;
                     if (bl.field_f > var36) {
                       var37 = -(var17_int >> 16) + (var18 >> 16);
                       if (var37 == 0) {
                         if (0 > var36) {
-                          break L16;
+                          break L15;
                         } else {
                           if (var36 < bl.field_f) {
                             ue.a(var36 + var35, 0, var21, var29, var37, (byte) -117, var25, 0, 0, param11);
-                            break L16;
+                            break L15;
                           } else {
-                            break L16;
+                            break L15;
                           }
                         }
                       } else {
-                        L17: {
+                        L16: {
                           var38 = (-var21 + var22) / var37;
                           var39 = (var26 + -var25) / var37;
                           var40 = (var30 - var29) / var37;
                           if (bl.field_f > var36 - -var37) {
-                            break L17;
+                            break L16;
                           } else {
                             var37 = bl.field_f - var36 + -1;
-                            break L17;
+                            break L16;
                           }
                         }
                         if (var36 < 0) {
                           ue.a(var35, var40, -(var36 * var38) + var21, -(var40 * var36) + var29, var36 + var37, (byte) -117, var25 - var36 * var39, var39, var38, param11);
-                          break L16;
+                          break L15;
                         } else {
                           ue.a(var35 + var36, var40, var21, var29, var37, (byte) -117, var25, var39, var38, param11);
-                          break L16;
+                          break L15;
                         }
                       }
                     } else {
-                      break L16;
+                      break L15;
                     }
                   }
                   param7++;

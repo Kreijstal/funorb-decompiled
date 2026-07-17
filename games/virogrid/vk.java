@@ -88,16 +88,6 @@ final class vk {
     }
 
     private final void a(int param0, java.awt.Frame param1) {
-        Object var4 = null;
-        L0: {
-          if (param0 == -543583998) {
-            break L0;
-          } else {
-            var4 = null;
-            ((vk) this).enter((java.awt.Frame) null, -64, -22, 80, -92);
-            break L0;
-          }
-        }
         ((vk) this).field_a.setFullScreenWindow((java.awt.Window) (Object) param1);
     }
 

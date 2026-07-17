@@ -16,7 +16,7 @@ abstract class wj {
             fj.field_T = param8;
             sa.field_T = param6;
             kf.field_a = param5;
-            int var9_int = 41 % ((-36 - param7) / 32);
+            int var9_int = 1;
             fc.field_g = param4;
             vk.field_j = param2;
             ga.field_e = param0;
@@ -24,7 +24,7 @@ abstract class wj {
             rb.field_a = new sd(param1);
             ij.field_d = new wg(rj.field_d, rb.field_a);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "wj.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "wj.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + param6 + 44 + 101 + 44 + param8 + 41);
         }
     }
 
@@ -35,7 +35,8 @@ abstract class wj {
             field_a = null;
             var4 = ((wj) this).a(-27042);
             if (var4 > 0L) {
-              wl.a(var4, false);
+              int discarded$4 = 0;
+              wl.a(var4);
               break L0;
             } else {
               break L0;
@@ -46,7 +47,8 @@ abstract class wj {
           L1: {
             var4 = ((wj) this).a(-27042);
             if (var4 > 0L) {
-              wl.a(var4, false);
+              int discarded$5 = 0;
+              wl.a(var4);
               break L1;
             } else {
               break L1;
@@ -61,7 +63,7 @@ abstract class wj {
         int var3 = 0;
         int var4 = 0;
         var4 = TrackController.field_F ? 1 : 0;
-        var2 = -64 / ((44 - param0) / 37);
+        var2 = 64;
         if (0 < hk.field_d) {
           if (null == tk.field_u) {
             L0: {
@@ -88,7 +90,9 @@ abstract class wj {
           } else {
             L1: {
               og.field_rb = tk.field_u.c(0);
-              ni.a(-127, 2);
+              int discarded$2 = 2;
+              int discarded$3 = -127;
+              ni.a();
               if (og.field_rb == null) {
                 var3 = 3;
                 break L1;

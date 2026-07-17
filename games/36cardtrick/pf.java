@@ -10,7 +10,7 @@ final class pf extends qb {
         field_g = null;
     }
 
-    final static void d(int param0) {
+    final static void d() {
         int var1_int = 0;
         RuntimeException var1 = null;
         double var2 = 0.0;
@@ -52,7 +52,7 @@ final class pf extends qb {
         }
     }
 
-    final static kc[] a(int param0) {
+    final static kc[] a() {
         int var2 = 0;
         int var4 = 0;
         byte[] var5 = null;
@@ -60,7 +60,7 @@ final class pf extends qb {
         int var7 = 0;
         int var8 = Main.field_T;
         kc[] var1 = new kc[cf.field_c];
-        int var3 = -56 / ((param0 - 69) / 40);
+        int var3 = -56;
         for (var2 = 0; var2 < cf.field_c; var2++) {
             var4 = na.field_q[var2] * hb.field_a[var2];
             var5 = rd.field_k[var2];
@@ -78,7 +78,7 @@ final class pf extends qb {
         throw new Error();
     }
 
-    final static String a(qk param0, String param1, String param2, boolean param3) {
+    final static String a(qk param0, String param1, String param2) {
         RuntimeException var4 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -225,7 +225,7 @@ final class pf extends qb {
         return stackIn_4_0;
     }
 
-    final static void b(byte param0) {
+    final static void b() {
         if (!(vg.field_d)) {
             throw new IllegalStateException();
         }

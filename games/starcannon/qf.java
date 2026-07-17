@@ -16,9 +16,10 @@ abstract class qf extends uc implements si {
         int var4 = 0;
         o[] var5 = null;
         var4 = StarCannon.field_A;
-        var5 = a.b(-23508);
+        int discarded$2 = -23508;
+        var5 = a.b();
         var2 = var5;
-        var3 = param1;
+        var3 = 0;
         L0: while (true) {
           if (var3 < var5.length) {
             if (var5[var3].field_d != param0) {
@@ -200,7 +201,7 @@ abstract class qf extends uc implements si {
         return stackIn_7_0 != 0;
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_i = null;
     }
 

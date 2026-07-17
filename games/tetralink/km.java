@@ -11,7 +11,7 @@ final class km extends mc {
         throw new Error();
     }
 
-    public static void b(byte param0) {
+    public static void b() {
         field_n = null;
         int var1 = 124;
         field_p = null;

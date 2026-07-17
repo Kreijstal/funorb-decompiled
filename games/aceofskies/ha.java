@@ -15,7 +15,7 @@ abstract class ha {
 
     abstract void e();
 
-    private final static ha a(java.awt.Canvas param0, int param1, d param2, int param3, byte param4) {
+    private final static ha a(java.awt.Canvas param0, int param1, d param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         oa stackIn_1_0 = null;
@@ -190,12 +190,13 @@ abstract class ha {
         try {
           if (param2 != 0) {
             if (2 == param2) {
-              stackOut_5_0 = ha.a(param3, param6, param7, param0, (byte) -64);
+              int discarded$2 = -64;
+              stackOut_5_0 = ha.a(param3, param6, param7, param0);
               stackIn_6_0 = stackOut_5_0;
               return stackIn_6_0;
             } else {
               if (param2 != 1) {
-                if (param2 != param5) {
+                if (param2 != 5) {
                   if (param2 != 3) {
                     throw new IllegalArgumentException("UM");
                   } else {
@@ -274,7 +275,7 @@ abstract class ha {
           }
           L2: {
             stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
-            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44);
+            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(44).append(param4).append(44).append(5).append(44).append(param6).append(44);
             stackIn_25_0 = stackOut_23_0;
             stackIn_25_1 = stackOut_23_1;
             stackIn_24_0 = stackOut_23_0;
@@ -413,7 +414,7 @@ abstract class ha {
 
     abstract void T(int param0, int param1, int param2, int param3);
 
-    final static void a(ap param0, byte param1, boolean param2, int param3) {
+    final static void a(ap param0, byte param1, boolean param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Object var5 = null;
@@ -437,7 +438,7 @@ abstract class ha {
         try {
           L0: {
             L1: {
-              var4_int = -3 / ((param1 - 13) / 46);
+              var4_int = 1;
               if (null == wt.field_e) {
                 break L1;
               } else {
@@ -504,7 +505,7 @@ abstract class ha {
               break L5;
             }
           }
-          throw pn.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param1 + 44 + param2 + 44 + 256 + 41);
+          throw pn.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + -109 + 44 + param2 + 44 + 256 + 41);
         }
     }
 

@@ -108,7 +108,7 @@ abstract class fi extends qg implements pb {
         ((fi) this).field_v.c((byte) 85);
     }
 
-    private final boolean b(qg param0, int param1) {
+    private final boolean b(qg param0) {
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -596,7 +596,7 @@ abstract class fi extends qg implements pb {
         return stackIn_6_0 != 0;
     }
 
-    final static uk b(String param0, byte param1) {
+    final static uk b(String param0) {
         Object var2 = null;
         uk var3 = null;
         String var4 = null;
@@ -743,11 +743,13 @@ abstract class fi extends qg implements pb {
             if (80 == var5_int) {
               L2: {
                 if (!ve.field_B[81]) {
-                  stackOut_9_0 = this.a(param1, (byte) -128);
+                  int discarded$5 = -128;
+                  stackOut_9_0 = this.a(param1);
                   stackIn_10_0 = stackOut_9_0;
                   break L2;
                 } else {
-                  stackOut_8_0 = this.b(param1, 32);
+                  int discarded$6 = 32;
+                  stackOut_8_0 = this.b(param1);
                   stackIn_10_0 = stackOut_8_0;
                   break L2;
                 }
@@ -988,7 +990,7 @@ abstract class fi extends qg implements pb {
         ud.field_b = ud.field_b + (param2 + -255);
         if (!mg.field_d) {
           var3 = 1 << param2;
-          if (param0 != (var3 & rh.field_n)) {
+          if (0 != (var3 & rh.field_n)) {
             return false;
           } else {
             L0: {
@@ -1007,7 +1009,9 @@ abstract class fi extends qg implements pb {
                 mc.field_c.a((wf) (Object) new gd(param2, param1, nc.field_t, ud.field_b, jk.field_B, gh.field_l), -94);
                 return true;
               } else {
-                gd discarded$2 = nh.a(jk.field_B, ud.field_b, param1, nc.field_t, param2, gh.field_l, 4, 75);
+                int discarded$3 = 75;
+                int discarded$4 = 4;
+                gd discarded$5 = nh.a(jk.field_B, ud.field_b, param1, nc.field_t, param2, gh.field_l);
                 return true;
               }
             } else {
@@ -1082,7 +1086,7 @@ abstract class fi extends qg implements pb {
         }
     }
 
-    private final boolean a(qg param0, byte param1) {
+    private final boolean a(qg param0) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;

@@ -8,17 +8,14 @@ final class pi {
     static ut field_a;
 
     final static void a(int param0, sp param1) {
-        if (param0 != 6022) {
-            return;
-        }
         try {
             np.field_Jb.a((gn) (Object) new ce(param1), 3);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "pi.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "pi.D(" + 6022 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_c = null;
         field_b = null;
@@ -27,46 +24,16 @@ final class pi {
     }
 
     final static boolean a(int param0, char param1) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        if (param0 == -41) {
-          if (param1 != 32) {
-            if (param1 != 40) {
-              if (param1 == 41) {
-                return true;
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          } else {
+        if (param1 == 32) {
             return true;
-          }
-        } else {
-          field_c = null;
-          if (param1 != 32) {
-            if (param1 == 40) {
-              return true;
-            } else {
-              L0: {
-                if (param1 != 41) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L0;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L0;
-                }
-              }
-              return stackIn_7_0 != 0;
-            }
-          } else {
-            return true;
-          }
         }
+        if (param1 == 40) {
+            return true;
+        }
+        if (param1 == 41) {
+            return true;
+        }
+        return false;
     }
 
     final static vn a(int param0, int param1, int param2, up param3, int param4, boolean param5) {

@@ -121,448 +121,422 @@ final class sl {
               break L10;
             }
           }
-          if (param0) {
-            L11: {
-              if (param1 == 15) {
-                var4 = 1;
-                var5 = 1;
-                break L11;
-              } else {
-                break L11;
-              }
+          L11: {
+            if (param1 == 15) {
+              var4 = 1;
+              var5 = 1;
+              break L11;
+            } else {
+              break L11;
             }
-            jc.field_n = dl.a(0, var5 * var2, var2 * var4);
-            return;
-          } else {
-            L12: {
-              sl.a((byte) 45);
-              if (param1 == 15) {
-                var4 = 1;
-                var5 = 1;
-                break L12;
-              } else {
-                break L12;
-              }
-            }
-            jc.field_n = dl.a(0, var5 * var2, var2 * var4);
-            return;
           }
+          jc.field_n = dl.a(0, var5 * var2, var2 * var4);
+          return;
         } else {
           if (var3 < 105) {
-            L13: {
+            L12: {
               var2 = (-40960 + var3 * 16384) / 220;
               var4 = 1;
               var5 = 0;
               if (param1 != 1) {
-                break L13;
+                break L12;
               } else {
                 var5 = 1;
+                break L12;
+              }
+            }
+            L13: {
+              if (param1 == 3) {
+                var4 = -1;
+                break L13;
+              } else {
                 break L13;
               }
             }
             L14: {
-              if (param1 == 3) {
-                var4 = -1;
+              if (param1 != 4) {
                 break L14;
               } else {
+                var5 = 1;
+                var4 = 1;
                 break L14;
               }
             }
             L15: {
-              if (param1 != 4) {
+              if (param1 == 5) {
+                var4 = -1;
+                var5 = 1;
                 break L15;
               } else {
-                var5 = 1;
-                var4 = 1;
                 break L15;
               }
             }
             L16: {
-              if (param1 == 5) {
-                var4 = -1;
-                var5 = 1;
+              if (param1 == 6) {
+                var5 = -1;
+                var4 = 1;
                 break L16;
               } else {
                 break L16;
               }
             }
             L17: {
-              if (param1 == 6) {
-                var5 = -1;
-                var4 = 1;
-                break L17;
+              L18: {
+                if (param1 == 7) {
+                  break L18;
+                } else {
+                  if (param1 == 8) {
+                    break L18;
+                  } else {
+                    break L17;
+                  }
+                }
+              }
+              var5 = -1;
+              var4 = -1;
+              break L17;
+            }
+            L19: {
+              if (param1 != 11) {
+                break L19;
               } else {
-                break L17;
+                var4 = -1;
+                break L19;
               }
             }
-            if (param1 != 7) {
-              if (param1 != 8) {
-                L18: {
-                  if (param1 != 11) {
-                    break L18;
-                  } else {
-                    var4 = -1;
-                    break L18;
-                  }
-                }
-                L19: {
-                  if (param1 == 12) {
-                    var5 = -1;
-                    var4 = -1;
-                    break L19;
-                  } else {
-                    break L19;
-                  }
-                }
-                L20: {
-                  if (param1 == 13) {
-                    var4 = 1;
-                    var5 = -1;
-                    break L20;
-                  } else {
-                    break L20;
-                  }
-                }
-                L21: {
-                  if (14 != param1) {
-                    break L21;
-                  } else {
-                    var5 = 1;
-                    var4 = -1;
-                    break L21;
-                  }
-                }
-                if (param0) {
-                  L22: {
-                    if (param1 == 15) {
-                      var4 = 1;
-                      var5 = 1;
-                      break L22;
-                    } else {
-                      break L22;
-                    }
-                  }
-                  jc.field_n = dl.a(0, var5 * var2, var2 * var4);
-                  return;
-                } else {
-                  L23: {
-                    sl.a((byte) 45);
-                    if (param1 == 15) {
-                      var4 = 1;
-                      var5 = 1;
-                      break L23;
-                    } else {
-                      break L23;
-                    }
-                  }
-                  jc.field_n = dl.a(0, var5 * var2, var2 * var4);
-                  return;
-                }
-              } else {
-                L24: {
-                  var5 = -1;
-                  var4 = -1;
-                  if (param1 != 11) {
-                    break L24;
-                  } else {
-                    var4 = -1;
-                    break L24;
-                  }
-                }
-                L25: {
-                  if (param1 == 12) {
-                    var5 = -1;
-                    var4 = -1;
-                    break L25;
-                  } else {
-                    break L25;
-                  }
-                }
-                L26: {
-                  if (param1 == 13) {
-                    var4 = 1;
-                    var5 = -1;
-                    break L26;
-                  } else {
-                    break L26;
-                  }
-                }
-                L27: {
-                  if (14 != param1) {
-                    break L27;
-                  } else {
-                    var5 = 1;
-                    var4 = -1;
-                    break L27;
-                  }
-                }
-                if (param0) {
-                  L28: {
-                    if (param1 == 15) {
-                      var4 = 1;
-                      var5 = 1;
-                      break L28;
-                    } else {
-                      break L28;
-                    }
-                  }
-                  jc.field_n = dl.a(0, var5 * var2, var2 * var4);
-                  return;
-                } else {
-                  L29: {
-                    sl.a((byte) 45);
-                    if (param1 == 15) {
-                      var4 = 1;
-                      var5 = 1;
-                      break L29;
-                    } else {
-                      break L29;
-                    }
-                  }
-                  jc.field_n = dl.a(0, var5 * var2, var2 * var4);
-                  return;
-                }
-              }
-            } else {
-              L30: {
+            L20: {
+              if (param1 == 12) {
                 var5 = -1;
                 var4 = -1;
-                if (param1 != 11) {
-                  break L30;
-                } else {
-                  var4 = -1;
-                  break L30;
-                }
-              }
-              L31: {
-                if (param1 == 12) {
-                  var5 = -1;
-                  var4 = -1;
-                  break L31;
-                } else {
-                  break L31;
-                }
-              }
-              L32: {
-                if (param1 == 13) {
-                  var4 = 1;
-                  var5 = -1;
-                  break L32;
-                } else {
-                  break L32;
-                }
-              }
-              L33: {
-                if (14 != param1) {
-                  break L33;
-                } else {
-                  var5 = 1;
-                  var4 = -1;
-                  break L33;
-                }
-              }
-              if (param0) {
-                L34: {
-                  if (param1 == 15) {
-                    var4 = 1;
-                    var5 = 1;
-                    break L34;
-                  } else {
-                    break L34;
-                  }
-                }
-                jc.field_n = dl.a(0, var5 * var2, var2 * var4);
-                return;
+                break L20;
               } else {
-                L35: {
-                  sl.a((byte) 45);
-                  if (param1 == 15) {
-                    var4 = 1;
-                    var5 = 1;
-                    break L35;
-                  } else {
-                    break L35;
-                  }
-                }
-                jc.field_n = dl.a(0, var5 * var2, var2 * var4);
-                return;
+                break L20;
               }
             }
+            L21: {
+              if (param1 == 13) {
+                var4 = 1;
+                var5 = -1;
+                break L21;
+              } else {
+                break L21;
+              }
+            }
+            L22: {
+              if (14 != param1) {
+                break L22;
+              } else {
+                var5 = 1;
+                var4 = -1;
+                break L22;
+              }
+            }
+            L23: {
+              if (param1 == 15) {
+                var4 = 1;
+                var5 = 1;
+                break L23;
+              } else {
+                break L23;
+              }
+            }
+            jc.field_n = dl.a(0, var5 * var2, var2 * var4);
+            return;
           } else {
             if (var3 < 120) {
-              L36: {
+              L24: {
                 var3 = 120 - var3;
                 var2 = -(8192 * (var3 * var3) / 3300) + 8192;
                 var4 = 1;
                 var5 = 0;
                 if (param1 != 1) {
-                  break L36;
+                  break L24;
                 } else {
                   var5 = 1;
-                  break L36;
+                  break L24;
                 }
               }
-              L37: {
+              L25: {
                 if (param1 == 3) {
                   var4 = -1;
-                  break L37;
+                  break L25;
                 } else {
-                  break L37;
+                  break L25;
                 }
               }
-              L38: {
+              L26: {
                 if (param1 != 4) {
-                  break L38;
+                  break L26;
                 } else {
                   var5 = 1;
                   var4 = 1;
-                  break L38;
+                  break L26;
                 }
               }
-              L39: {
+              L27: {
                 if (param1 == 5) {
                   var4 = -1;
                   var5 = 1;
-                  break L39;
+                  break L27;
                 } else {
-                  break L39;
+                  break L27;
                 }
               }
-              L40: {
+              L28: {
                 if (param1 == 6) {
                   var5 = -1;
                   var4 = 1;
-                  break L40;
+                  break L28;
                 } else {
-                  break L40;
+                  break L28;
                 }
               }
-              L41: {
-                L42: {
-                  if (param1 == 7) {
-                    break L42;
-                  } else {
-                    if (param1 == 8) {
-                      break L42;
+              if (param1 != 7) {
+                if (param1 != 8) {
+                  L29: {
+                    if (param1 != 11) {
+                      break L29;
                     } else {
-                      break L41;
+                      var4 = -1;
+                      break L29;
                     }
                   }
-                }
-                var5 = -1;
-                var4 = -1;
-                break L41;
-              }
-              L43: {
-                if (param1 != 11) {
-                  break L43;
+                  L30: {
+                    if (param1 == 12) {
+                      var5 = -1;
+                      var4 = -1;
+                      break L30;
+                    } else {
+                      break L30;
+                    }
+                  }
+                  L31: {
+                    if (param1 == 13) {
+                      var4 = 1;
+                      var5 = -1;
+                      break L31;
+                    } else {
+                      break L31;
+                    }
+                  }
+                  L32: {
+                    if (14 != param1) {
+                      break L32;
+                    } else {
+                      var5 = 1;
+                      var4 = -1;
+                      break L32;
+                    }
+                  }
+                  L33: {
+                    if (param1 == 15) {
+                      var4 = 1;
+                      var5 = 1;
+                      break L33;
+                    } else {
+                      break L33;
+                    }
+                  }
+                  jc.field_n = dl.a(0, var5 * var2, var2 * var4);
+                  return;
                 } else {
-                  var4 = -1;
-                  break L43;
+                  L34: {
+                    var5 = -1;
+                    var4 = -1;
+                    if (param1 != 11) {
+                      break L34;
+                    } else {
+                      var4 = -1;
+                      break L34;
+                    }
+                  }
+                  L35: {
+                    if (param1 == 12) {
+                      var5 = -1;
+                      var4 = -1;
+                      break L35;
+                    } else {
+                      break L35;
+                    }
+                  }
+                  L36: {
+                    if (param1 == 13) {
+                      var4 = 1;
+                      var5 = -1;
+                      break L36;
+                    } else {
+                      break L36;
+                    }
+                  }
+                  L37: {
+                    if (14 != param1) {
+                      break L37;
+                    } else {
+                      var5 = 1;
+                      var4 = -1;
+                      break L37;
+                    }
+                  }
+                  L38: {
+                    if (param1 == 15) {
+                      var4 = 1;
+                      var5 = 1;
+                      break L38;
+                    } else {
+                      break L38;
+                    }
+                  }
+                  jc.field_n = dl.a(0, var5 * var2, var2 * var4);
+                  return;
                 }
-              }
-              L44: {
-                if (param1 == 12) {
+              } else {
+                L39: {
                   var5 = -1;
                   var4 = -1;
+                  if (param1 != 11) {
+                    break L39;
+                  } else {
+                    var4 = -1;
+                    break L39;
+                  }
+                }
+                L40: {
+                  if (param1 == 12) {
+                    var5 = -1;
+                    var4 = -1;
+                    break L40;
+                  } else {
+                    break L40;
+                  }
+                }
+                L41: {
+                  if (param1 == 13) {
+                    var4 = 1;
+                    var5 = -1;
+                    break L41;
+                  } else {
+                    break L41;
+                  }
+                }
+                L42: {
+                  if (14 != param1) {
+                    break L42;
+                  } else {
+                    var5 = 1;
+                    var4 = -1;
+                    break L42;
+                  }
+                }
+                L43: {
+                  if (param1 == 15) {
+                    var4 = 1;
+                    var5 = 1;
+                    break L43;
+                  } else {
+                    break L43;
+                  }
+                }
+                jc.field_n = dl.a(0, var5 * var2, var2 * var4);
+                return;
+              }
+            } else {
+              L44: {
+                var4 = 1;
+                var5 = 0;
+                if (param1 != 1) {
                   break L44;
                 } else {
+                  var5 = 1;
                   break L44;
                 }
               }
               L45: {
-                if (param1 == 13) {
-                  var4 = 1;
-                  var5 = -1;
+                if (param1 == 3) {
+                  var4 = -1;
                   break L45;
                 } else {
                   break L45;
                 }
               }
               L46: {
-                if (14 != param1) {
-                  break L46;
-                } else {
-                  var5 = 1;
-                  var4 = -1;
-                  break L46;
-                }
-              }
-              if (param0) {
-                L47: {
-                  if (param1 == 15) {
-                    var4 = 1;
-                    var5 = 1;
-                    break L47;
-                  } else {
-                    break L47;
-                  }
-                }
-                jc.field_n = dl.a(0, var5 * var2, var2 * var4);
-                return;
-              } else {
-                L48: {
-                  sl.a((byte) 45);
-                  if (param1 == 15) {
-                    var4 = 1;
-                    var5 = 1;
-                    break L48;
-                  } else {
-                    break L48;
-                  }
-                }
-                jc.field_n = dl.a(0, var5 * var2, var2 * var4);
-                return;
-              }
-            } else {
-              L49: {
-                var4 = 1;
-                var5 = 0;
-                if (param1 != 1) {
-                  break L49;
-                } else {
-                  var5 = 1;
-                  break L49;
-                }
-              }
-              L50: {
-                if (param1 == 3) {
-                  var4 = -1;
-                  break L50;
-                } else {
-                  break L50;
-                }
-              }
-              L51: {
                 if (param1 != 4) {
-                  break L51;
+                  break L46;
                 } else {
                   var5 = 1;
                   var4 = 1;
-                  break L51;
+                  break L46;
                 }
               }
-              L52: {
+              L47: {
                 if (param1 == 5) {
                   var4 = -1;
                   var5 = 1;
-                  break L52;
+                  break L47;
                 } else {
-                  break L52;
+                  break L47;
                 }
               }
-              L53: {
+              L48: {
                 if (param1 == 6) {
                   var5 = -1;
                   var4 = 1;
-                  break L53;
+                  break L48;
                 } else {
-                  break L53;
+                  break L48;
                 }
               }
               if (param1 != 7) {
                 if (param1 != 8) {
+                  L49: {
+                    if (param1 != 11) {
+                      break L49;
+                    } else {
+                      var4 = -1;
+                      break L49;
+                    }
+                  }
+                  L50: {
+                    if (param1 == 12) {
+                      var5 = -1;
+                      var4 = -1;
+                      break L50;
+                    } else {
+                      break L50;
+                    }
+                  }
+                  L51: {
+                    if (param1 == 13) {
+                      var4 = 1;
+                      var5 = -1;
+                      break L51;
+                    } else {
+                      break L51;
+                    }
+                  }
+                  L52: {
+                    if (14 != param1) {
+                      break L52;
+                    } else {
+                      var5 = 1;
+                      var4 = -1;
+                      break L52;
+                    }
+                  }
+                  L53: {
+                    if (param1 == 15) {
+                      var4 = 1;
+                      var5 = 1;
+                      break L53;
+                    } else {
+                      break L53;
+                    }
+                  }
+                  jc.field_n = dl.a(0, var5 * var2, var2 * var4);
+                  return;
+                } else {
                   L54: {
+                    var5 = -1;
+                    var4 = -1;
                     if (param1 != 11) {
                       break L54;
                     } else {
@@ -597,143 +571,63 @@ final class sl {
                       break L57;
                     }
                   }
-                  if (param0) {
-                    L58: {
-                      if (param1 == 15) {
-                        var4 = 1;
-                        var5 = 1;
-                        break L58;
-                      } else {
-                        break L58;
-                      }
-                    }
-                    jc.field_n = dl.a(0, var5 * var2, var2 * var4);
-                    return;
-                  } else {
-                    L59: {
-                      sl.a((byte) 45);
-                      if (param1 == 15) {
-                        var4 = 1;
-                        var5 = 1;
-                        break L59;
-                      } else {
-                        break L59;
-                      }
-                    }
-                    jc.field_n = dl.a(0, var5 * var2, var2 * var4);
-                    return;
-                  }
-                } else {
-                  L60: {
-                    var5 = -1;
-                    var4 = -1;
-                    if (param1 != 11) {
-                      break L60;
-                    } else {
-                      var4 = -1;
-                      break L60;
-                    }
-                  }
-                  L61: {
-                    if (param1 == 12) {
-                      var5 = -1;
-                      var4 = -1;
-                      break L61;
-                    } else {
-                      break L61;
-                    }
-                  }
-                  L62: {
-                    if (param1 == 13) {
-                      var4 = 1;
-                      var5 = -1;
-                      break L62;
-                    } else {
-                      break L62;
-                    }
-                  }
-                  L63: {
-                    if (14 != param1) {
-                      break L63;
-                    } else {
-                      var5 = 1;
-                      var4 = -1;
-                      break L63;
-                    }
-                  }
-                  L64: {
-                    if (param0) {
-                      break L64;
-                    } else {
-                      sl.a((byte) 45);
-                      break L64;
-                    }
-                  }
-                  L65: {
+                  L58: {
                     if (param1 == 15) {
                       var4 = 1;
                       var5 = 1;
-                      break L65;
+                      break L58;
                     } else {
-                      break L65;
+                      break L58;
                     }
                   }
                   jc.field_n = dl.a(0, var5 * var2, var2 * var4);
                   return;
                 }
               } else {
-                L66: {
+                L59: {
                   var5 = -1;
                   var4 = -1;
                   if (param1 != 11) {
-                    break L66;
+                    break L59;
                   } else {
                     var4 = -1;
-                    break L66;
+                    break L59;
                   }
                 }
-                L67: {
+                L60: {
                   if (param1 == 12) {
                     var5 = -1;
                     var4 = -1;
-                    break L67;
+                    break L60;
                   } else {
-                    break L67;
+                    break L60;
                   }
                 }
-                L68: {
+                L61: {
                   if (param1 == 13) {
                     var4 = 1;
                     var5 = -1;
-                    break L68;
+                    break L61;
                   } else {
-                    break L68;
+                    break L61;
                   }
                 }
-                L69: {
+                L62: {
                   if (14 != param1) {
-                    break L69;
+                    break L62;
                   } else {
                     var5 = 1;
                     var4 = -1;
-                    break L69;
+                    break L62;
                   }
                 }
-                L70: {
-                  if (param0) {
-                    break L70;
-                  } else {
-                    sl.a((byte) 45);
-                    break L70;
-                  }
-                }
-                L71: {
+                L63: {
                   if (param1 == 15) {
                     var4 = 1;
                     var5 = 1;
-                    break L71;
+                    break L63;
                   } else {
-                    break L71;
+                    break L63;
                   }
                 }
                 jc.field_n = dl.a(0, var5 * var2, var2 * var4);
@@ -744,7 +638,7 @@ final class sl {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_a = null;
         field_b = null;

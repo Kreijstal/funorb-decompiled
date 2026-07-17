@@ -38,28 +38,20 @@ final class oda {
         try {
           L0: {
             L1: {
-              if (param4 > 122) {
-                break L1;
-              } else {
-                field_a = null;
-                break L1;
-              }
-            }
-            L2: {
               if (param1 != param5) {
-                break L2;
+                break L1;
               } else {
                 if (param7 != param3) {
-                  break L2;
+                  break L1;
                 } else {
                   if (param9 != param6) {
-                    break L2;
+                    break L1;
                   } else {
                     if (param2 == param0) {
                       oe.a(param3, param8, -117, param9, param0, param5);
                       return;
                     } else {
-                      break L2;
+                      break L1;
                     }
                   }
                 }
@@ -80,7 +72,7 @@ final class oda {
             var22 = -var12 + var14;
             var23 = -var13 + var15;
             var24 = 128;
-            L3: while (true) {
+            L2: while (true) {
               if (4096 < var24) {
                 break L0;
               } else {
@@ -98,14 +90,14 @@ final class oda {
                 var10_int = var33;
                 var11 = var34;
                 var24 += 128;
-                continue L3;
+                continue L2;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var10 = decompiledCaughtException;
-          throw pe.a((Throwable) (Object) var10, "oda.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
+          throw pe.a((Throwable) (Object) var10, "oda.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + 123 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
         }
     }
 
@@ -178,7 +170,7 @@ final class oda {
         return (pp) (Object) stackIn_3_0;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -196,7 +188,7 @@ final class oda {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_a = null;
         field_b = null;
     }

@@ -117,7 +117,7 @@ final class qa extends a {
         return stackIn_11_0;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_r = null;
         field_o = null;
         field_n = null;
@@ -170,7 +170,8 @@ final class qa extends a {
                 if (param0.equals((Object) (Object) ((qa) this).field_j)) {
                   break L2;
                 } else {
-                  var3 = tg.a(param0, -44);
+                  int discarded$2 = -44;
+                  var3 = tg.a(param0);
                   if (var3.a(false)) {
                     ((qa) this).field_j = param0;
                     ((qa) this).field_l = var3.a(-15004);

@@ -60,7 +60,7 @@ final class a {
               var16 = var9 << 2;
               var17 = ((var6_int << 1) + 3) * var10;
               var18 = var11 * ((var7 << 1) - 3);
-              var21 = -103 % ((82 - param3) / 34);
+              var21 = 0;
               var19 = var16 * (1 + var6_int);
               if (j.field_q > param4) {
                 break L1;
@@ -147,7 +147,7 @@ final class a {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw rb.a((Throwable) (Object) var6, "a.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+          throw rb.a((Throwable) (Object) var6, "a.C(" + param0 + 44 + param1 + 44 + param2 + 44 + 123 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
@@ -191,7 +191,8 @@ final class a {
               L0: {
                 L1: {
                   if (vh.field_i.startsWith("win")) {
-                    if (fq.a(param1, 0)) {
+                    int discarded$8 = 0;
+                    if (fq.a(param1)) {
                       return;
                     } else {
                       break L1;

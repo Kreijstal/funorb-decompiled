@@ -19,12 +19,9 @@ final class ud {
     final static void a(int param0, float param1, String param2) {
         try {
             pb.field_a = param1;
-            if (param0 != 128) {
-                field_a = null;
-            }
             qi.field_k = param2;
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) (Object) runtimeException, "ud.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw sl.a((Throwable) (Object) runtimeException, "ud.B(" + 128 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -91,7 +88,7 @@ final class ud {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }

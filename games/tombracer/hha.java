@@ -6,7 +6,7 @@ abstract class hha extends od {
     boolean field_l;
     boolean field_k;
 
-    final static String a(boolean param0) {
+    final static String a() {
         if (kl.field_a != gsa.field_y) {
           if (gva.field_b.b(88)) {
             if (gsa.field_y == wt.field_d) {
@@ -101,10 +101,7 @@ abstract class hha extends od {
     abstract byte[] b(byte param0);
 
     final static boolean a(int param0, int param1, int param2) {
-        if (param1 != 0) {
-            return true;
-        }
-        return (param2 & 2048) != 0 ? true : false;
+        return (param2 & 2048) != 0;
     }
 
     abstract int a(byte param0);

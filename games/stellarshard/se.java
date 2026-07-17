@@ -114,7 +114,7 @@ final class se extends g implements oi {
         field_B = null;
     }
 
-    final static void a(int param0, int param1) {
+    final static void a() {
         gg var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -131,13 +131,13 @@ final class se extends g implements oi {
                   if (var2 == null) {
                     break L0;
                   } else {
-                    bf.a(param0, (byte) -106);
+                    bf.a(4, (byte) -106);
                     var2 = pl.field_W.b((byte) -124);
                     continue L2;
                   }
                 }
               } else {
-                ca.a(param0, var4, (byte) 93);
+                ca.a(4, var4, (byte) 93);
                 var4 = (kl) (Object) nl.field_e.b((byte) 117);
                 continue L1;
               }
@@ -146,7 +146,7 @@ final class se extends g implements oi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var2_ref, "se.A(" + param0 + 44 + -91 + 41);
+          throw ma.a((Throwable) (Object) var2_ref, "se.A(" + 4 + 44 + -91 + 41);
         }
     }
 
@@ -183,7 +183,8 @@ final class se extends g implements oi {
             }
           }
           if (param2 == ((se) this).field_F) {
-            ll.c(32270);
+            int discarded$4 = 32270;
+            ll.c();
             return;
           } else {
             if (param2 != ((se) this).field_D) {
@@ -205,7 +206,8 @@ final class se extends g implements oi {
                 return;
               }
             } else {
-              ta.a((byte) 91);
+              int discarded$5 = 91;
+              ta.a();
               return;
             }
           }

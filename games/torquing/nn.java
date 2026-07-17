@@ -13,7 +13,7 @@ final class nn {
     static jp field_c;
     static java.util.zip.CRC32 field_d;
 
-    final static void a(int param0) {
+    final static void a() {
         if (null != dh.field_a) {
           return;
         } else {
@@ -383,7 +383,7 @@ final class nn {
         }
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_c = null;
         field_d = null;
         field_a = null;

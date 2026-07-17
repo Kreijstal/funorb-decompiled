@@ -10,9 +10,6 @@ final class cl {
     }
 
     final static Object a(java.applet.Applet param0, int param1, String param2) throws Throwable {
-        if (param1 != -3264) {
-            return null;
-        }
         return netscape.javascript.JSObject.getWindow(param0).call(param2, (Object[]) null);
     }
 

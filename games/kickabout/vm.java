@@ -1821,7 +1821,7 @@ final class vm extends lq {
           if (param0.field_i.length == 0) {
             return null;
           } else {
-            return new vm(param0, (int)((long)param0.field_f * 256L * (long)param1 / (long)(100 * uh.field_i)), param2 << 6, param3 << 6);
+            return new vm(param0, (int)((long)param0.field_f * 256L * 100L / (long)(100 * uh.field_i)), param2 << 6, param3 << 6);
           }
         } else {
           return null;

@@ -11,13 +11,13 @@ final class gj extends fj {
         pk var3 = null;
         try {
             var3 = fj.field_q;
-            var3.a(param1, (byte) -80);
-            int var4 = 66 % ((param0 - 23) / 51);
+            var3.a(5, (byte) -80);
+            int var4 = 0;
             var3.d((byte) 122, 2);
             var3.d((byte) 125, 0);
             var3.d((byte) -90, param2.field_f);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) (Object) runtimeException, "gj.E(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+            throw t.a((Throwable) (Object) runtimeException, "gj.E(" + -88 + 44 + 5 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -70,14 +70,16 @@ final class gj extends fj {
           if (param2 == 30) {
             if (param1 != 255) {
               if (param1 < 100) {
-                dl.field_a = ig.a(param0, param1, false);
+                int discarded$4 = 0;
+                dl.field_a = ig.a(param0, param1);
                 return;
               } else {
                 if (param1 <= 105) {
                   dl.field_a = ac.a(28, param3);
                   return;
                 } else {
-                  dl.field_a = ig.a(param0, param1, false);
+                  int discarded$5 = 0;
+                  dl.field_a = ig.a(param0, param1);
                   return;
                 }
               }

@@ -226,7 +226,7 @@ final class jn {
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_d = null;
         field_c = null;
     }

@@ -17,7 +17,7 @@ final class fa extends gg {
         return true;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_p = null;
         field_k = null;
         field_n = null;
@@ -52,7 +52,9 @@ final class fa extends gg {
                 if (var4 == null) {
                   break L0;
                 } else {
-                  ii.a(var4, param0, (byte) 107);
+                  int discarded$8 = 107;
+                  int discarded$9 = 2;
+                  ii.a(var4);
                   var4 = (u) (Object) i.field_c.b((byte) 95);
                   continue L1;
                 }
@@ -64,7 +66,7 @@ final class fa extends gg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ma.a((Throwable) (Object) var2, "fa.B(" + param0 + 44 + param1 + 41);
+          throw ma.a((Throwable) (Object) var2, "fa.B(" + 2 + 44 + param1 + 41);
         }
     }
 

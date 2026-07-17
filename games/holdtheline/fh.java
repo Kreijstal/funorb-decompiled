@@ -8,7 +8,7 @@ final class fh extends sd {
     private String field_f;
     static int field_e;
 
-    public static void b(byte param0) {
+    public static void b() {
         field_d = null;
     }
 
@@ -28,7 +28,7 @@ final class fh extends sd {
         }
     }
 
-    final static void a(int param0, int param1, int param2, hj param3, int param4, int param5, int param6, int param7) {
+    final static void a(int param0, int param1, int param2, hj param3, int param4, int param5) {
         RuntimeException var8 = null;
         int var10 = 0;
         int var11 = 0;
@@ -141,7 +141,7 @@ final class fh extends sd {
                                 break L8;
                               } else {
                                 if (var15[var13 + -1] == 0) {
-                                  tc.d(var17, var16, param0, param6);
+                                  tc.d(var17, var16, param0, 1);
                                   var13++;
                                   var17++;
                                   continue L7;
@@ -155,7 +155,7 @@ final class fh extends sd {
                                 break L9;
                               } else {
                                 if (var15[-param3.field_s + var13] == 0) {
-                                  tc.d(var17, var16, param0, param6);
+                                  tc.d(var17, var16, param0, 1);
                                   var13++;
                                   var17++;
                                   continue L7;
@@ -169,7 +169,7 @@ final class fh extends sd {
                                 break L10;
                               } else {
                                 if (var15[1 + var13] == 0) {
-                                  tc.d(var17, var16, param0, param6);
+                                  tc.d(var17, var16, param0, 1);
                                   var13++;
                                   var17++;
                                   continue L7;
@@ -184,7 +184,7 @@ final class fh extends sd {
                               continue L7;
                             } else {
                               if (var15[param3.field_s + var13] == 0) {
-                                tc.d(var17, var16, param0, param6);
+                                tc.d(var17, var16, param0, 1);
                                 var13++;
                                 var17++;
                                 continue L7;
@@ -238,7 +238,7 @@ final class fh extends sd {
               break L11;
             }
           }
-          throw kk.a((Throwable) (Object) stackIn_50_0, stackIn_50_2 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + -24983 + 41);
+          throw kk.a((Throwable) (Object) stackIn_50_0, stackIn_50_2 + 44 + param4 + 44 + param5 + 44 + 1 + 44 + -24983 + 41);
         }
     }
 

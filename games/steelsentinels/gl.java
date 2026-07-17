@@ -182,7 +182,8 @@ final class gl extends al {
     }
 
     final long a(byte param0) {
-        ((gl) this).field_k = ((gl) this).field_k + this.d((byte) -84);
+        int discarded$0 = -84;
+        ((gl) this).field_k = ((gl) this).field_k + this.d();
         if (!(((gl) this).field_k >= ((gl) this).field_m)) {
             return (-((gl) this).field_k + ((gl) this).field_m) / 1000000L;
         }
@@ -192,7 +193,7 @@ final class gl extends al {
         return 0L;
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_l = null;
         field_j = null;
         field_y = null;
@@ -204,6 +205,9 @@ final class gl extends al {
     }
 
     final static java.awt.Canvas a(boolean param0) {
+        if (param0) {
+            field_w = null;
+        }
         return null == wb.field_c ? sl.field_n : (java.awt.Canvas) (Object) wb.field_c;
     }
 
@@ -249,7 +253,7 @@ final class gl extends al {
         }
     }
 
-    private final long d(byte param0) {
+    private final long d() {
         long var2 = 0L;
         long var4 = 0L;
         long var6 = 0L;

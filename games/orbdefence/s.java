@@ -14,7 +14,7 @@ class s extends pj {
     boolean field_F;
     static mg field_C;
 
-    public static void i(int param0) {
+    public static void i() {
         field_y = null;
         field_A = null;
         field_E = null;

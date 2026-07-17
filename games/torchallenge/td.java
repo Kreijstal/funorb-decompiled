@@ -172,7 +172,8 @@ final class td {
             if (param0 < 105) {
                 field_q = null;
             }
-            ie.b((byte) -9);
+            int discarded$0 = -9;
+            ie.b();
         } catch (RuntimeException runtimeException) {
             throw oj.a((Throwable) (Object) runtimeException, "td.A(" + param0 + 41);
         }
@@ -493,7 +494,8 @@ final class td {
                   if (param1 == null) {
                     break L1;
                   } else {
-                    var3_ref = fk.a(param1, -1);
+                    int discarded$2 = -1;
+                    var3_ref = fk.a(param1);
                     break L1;
                   }
                 }
@@ -583,7 +585,7 @@ final class td {
                           break L7;
                         } else {
                           var5 = (DataInputStream) var4.field_g;
-                          int discarded$1 = var5.read();
+                          int discarded$3 = var5.read();
                           var5.close();
                           break L7;
                         }
@@ -610,7 +612,7 @@ final class td {
         }
     }
 
-    final static String a(long param0, byte param1) {
+    final static String a(long param0) {
         cf.field_e.setTime(new Date(param0));
         int var3 = cf.field_e.get(7);
         int var4 = cf.field_e.get(5);
@@ -636,7 +638,7 @@ final class td {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean a() {
         return qf.field_a != null && aj.field_c.b(668905488);
     }
 

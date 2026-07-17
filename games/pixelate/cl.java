@@ -13,7 +13,7 @@ final class cl {
     static String field_c;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void a() {
         field_b = null;
         field_c = null;
         field_i = null;
@@ -73,7 +73,7 @@ final class cl {
         var9 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
-            var6_int = param2 - param4;
+            var6_int = param2;
             var7 = 0;
             L1: while (true) {
               if (var6_int <= var7) {
@@ -92,7 +92,7 @@ final class cl {
                 L3: {
                   L4: {
                     L5: {
-                      var8 = param3.charAt(param4 + var7);
+                      var8 = param3.charAt(var7);
                       if (var8 <= 0) {
                         break L5;
                       } else {
@@ -313,7 +313,7 @@ final class cl {
               break L8;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_76_0, stackIn_76_2 + 44 + param4 + 44 + param5 + 41);
+          throw aa.a((Throwable) (Object) stackIn_76_0, stackIn_76_2 + 44 + 0 + 44 + param5 + 41);
         }
         return stackIn_69_0;
     }
@@ -346,9 +346,10 @@ final class cl {
     }
 
     final static void a(byte param0, boolean param1) {
-        int var2 = -93 / ((-55 - param0) / 55);
+        int var2 = 46;
         if (!(null == up.field_o)) {
-            dp.a(up.field_o, -2);
+            int discarded$0 = -2;
+            dp.a(up.field_o);
         }
         if (!(null == eg.field_n)) {
             eg.field_n.a(param1, (byte) 20);
@@ -357,7 +358,8 @@ final class cl {
         if (!(hc.field_M == null)) {
             hc.field_M.a(param1, 0);
         }
-        kd.c(param1, -24721);
+        int discarded$1 = -24721;
+        kd.c(param1);
     }
 
     static {

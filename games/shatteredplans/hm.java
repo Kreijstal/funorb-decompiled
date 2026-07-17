@@ -6,7 +6,7 @@ class hm extends df {
     static sq field_q;
     static String[] field_p;
 
-    final static String a(CharSequence[] param0, int param1, int param2, byte param3) {
+    final static String a(CharSequence[] param0, int param1, int param2) {
         CharSequence var4 = null;
         int var4_int = 0;
         RuntimeException var4_ref = null;
@@ -45,7 +45,7 @@ class hm extends df {
           L0: {
             if (0 != param2) {
               if (1 == param2) {
-                var10 = param0[param1];
+                var10 = param0[0];
                 var4 = var10;
                 if (var4 == null) {
                   stackOut_8_0 = "null";
@@ -55,13 +55,13 @@ class hm extends df {
                   return ((Object) (Object) var10).toString();
                 }
               } else {
-                var4_int = param2 + param1;
+                var4_int = param2;
                 var5 = 0;
-                var6_int = param1;
+                var6_int = 0;
                 L1: while (true) {
                   if (var6_int >= var4_int) {
                     var6 = new StringBuilder(var5);
-                    var7 = param1;
+                    var7 = 0;
                     L2: while (true) {
                       if (var7 >= var4_int) {
                         stackOut_22_0 = var6.toString();
@@ -132,7 +132,7 @@ class hm extends df {
               break L5;
             }
           }
-          throw r.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 44 + param1 + 44 + param2 + 44 + 28 + 41);
+          throw r.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 44 + 0 + 44 + param2 + 44 + 28 + 41);
         }
         return stackIn_23_0;
     }
@@ -140,16 +140,19 @@ class hm extends df {
     final static void a(qa param0, ob param1, boolean param2) {
         try {
             di.a(param0.field_u, false, param1);
+            if (!param2) {
+                field_q = null;
+            }
             param1.d(param0.field_v, 255);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) (Object) runtimeException, "hm.HA(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 1 + 41);
+            throw r.a((Throwable) (Object) runtimeException, "hm.HA(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
     hm() {
     }
 
-    public static void d(boolean param0) {
+    public static void d() {
         field_p = null;
         field_q = null;
     }

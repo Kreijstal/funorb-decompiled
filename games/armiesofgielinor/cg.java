@@ -16,7 +16,7 @@ final class cg {
     static int field_j;
     static boolean[] field_m;
 
-    private final void a(int param0) {
+    private final void a() {
         int var2 = 0;
         int var3 = 0;
         int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
@@ -29,9 +29,9 @@ final class cg {
     }
 
     private final int a(int param0, int param1, int param2) {
-        int var4 = th.a(param0, 1, param1);
-        if (!(var4 <= param1 / 2)) {
-            var4 = param1 - var4;
+        int var4 = th.a(param0, 1, 160);
+        if (!(var4 <= 80)) {
+            var4 = 160 - var4;
         }
         return var4;
     }
@@ -129,7 +129,8 @@ final class cg {
             var2 = 0;
             L1: while (true) {
               if (var2 >= ((cg) this).field_h) {
-                this.a(0);
+                int discarded$1 = 0;
+                this.a();
                 return;
               } else {
                 var3 = 0;

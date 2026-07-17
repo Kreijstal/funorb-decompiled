@@ -58,11 +58,13 @@ final class dg extends se implements in {
                   if (param2 != ((dg) this).field_H) {
                     break L1;
                   } else {
-                    bo.b(4);
+                    int discarded$5 = 4;
+                    bo.b();
                     break L1;
                   }
                 } else {
-                  hb.a(0);
+                  int discarded$6 = 0;
+                  hb.a();
                   break L1;
                 }
               } else {
@@ -109,7 +111,7 @@ final class dg extends se implements in {
         }
     }
 
-    final static void a(eh param0, int param1) {
+    final static void a(eh param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_3_0 = null;
         StringBuilder stackIn_3_1 = null;
@@ -162,7 +164,7 @@ final class dg extends se implements in {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_K = null;
         field_O = null;
         field_I = null;

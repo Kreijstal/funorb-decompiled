@@ -805,7 +805,7 @@ final class dma {
         }
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -823,8 +823,8 @@ final class dma {
         int var22 = 0;
         int var23 = 0;
         L0: {
-          var8 = 16384 / (2 * param3 + 1);
-          var9 = 1 + param3 - param5 - param4;
+          var8 = 1820;
+          var9 = -535;
           if (0 >= var9) {
             break L0;
           } else {
@@ -833,7 +833,7 @@ final class dma {
           }
         }
         L1: {
-          var10 = field_g - param4 - param5 - param3;
+          var10 = field_g - 544;
           if (0 >= var10) {
             break L1;
           } else {
@@ -843,7 +843,7 @@ final class dma {
         }
         L2: {
           var11 = 0;
-          var12 = param4 + param3 + 1;
+          var12 = 5;
           if (field_g >= var12) {
             break L2;
           } else {
@@ -852,7 +852,7 @@ final class dma {
             break L2;
           }
         }
-        var13 = -param7;
+        var13 = -140;
         L3: while (true) {
           if (var13 >= 0) {
             return;
@@ -861,9 +861,9 @@ final class dma {
               var14 = 0;
               var15 = 0;
               var16 = 0;
-              var17 = param2 - param3;
-              var18 = var17 - (param3 << 1) - 1;
-              var19 = param4 - param3;
+              var17 = param2 - 4;
+              var18 = var17 - 9;
+              var19 = -4;
               if (var19 >= 0) {
                 break L4;
               } else {
@@ -880,7 +880,7 @@ final class dma {
                 int incrementValue$6 = param2;
                 param2++;
                 param0[incrementValue$6] = (var14 / var20 << 16) + (var15 / var20 << 8) + var16 / var20;
-                var19 = 1 - param5;
+                var19 = -539;
                 L6: while (true) {
                   if (var19 >= var9) {
                     L7: while (true) {
@@ -1020,7 +1020,7 @@ final class dma {
                   } else {
                     L18: {
                       var18++;
-                      if (param4 + param5 + var19 + param3 >= field_a) {
+                      if (540 + var19 + 4 >= field_a) {
                         break L18;
                       } else {
                         param1 = param0[var17];
@@ -1625,8 +1625,9 @@ final class dma {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        dma.a(field_i, 0, param2 + param3 * field_g, param0, param2, param4, field_g - param4, 140);
-        dma.a(field_i, 0, param2 + param3 * field_g, param1, param3, 140, field_g - param4, param2, param4);
+        int discarded$0 = 140;
+        dma.a(field_i, 0, 0 * field_g, 4, 0, 540, field_g - 540);
+        dma.a(field_i, 0, 0 * field_g, 4, 0, 140, field_g - 540, 0, 540);
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
@@ -1751,16 +1752,16 @@ final class dma {
             if (field_l == null) {
               break L1;
             } else {
-              if (field_l.length >= param8) {
+              if (field_l.length >= 540) {
                 break L0;
               } else {
                 break L1;
               }
             }
           }
-          field_l = new int[param8];
-          field_k = new int[param8];
-          field_e = new int[param8];
+          field_l = new int[540];
+          field_k = new int[540];
+          field_e = new int[540];
           break L0;
         }
         L2: {
@@ -1779,11 +1780,11 @@ final class dma {
           var29 = var32;
           var26 = var29;
           var11 = var26;
-          cua.a(var33, 0, param8);
-          cua.a(var34, 0, param8);
-          cua.a(var35, 0, param8);
-          var12 = 16384 / (2 * param3 + 1);
-          var13 = param4 - param3;
+          cua.a(var33, 0, 540);
+          cua.a(var34, 0, 540);
+          cua.a(var35, 0, 540);
+          var12 = 1820;
+          var13 = -4;
           if (var13 >= 0) {
             break L2;
           } else {
@@ -1792,8 +1793,8 @@ final class dma {
           }
         }
         L3: {
-          var14 = param7 + var13 * field_g;
-          var15 = param4 + param3;
+          var14 = var13 * field_g;
+          var15 = 4;
           var16 = 0;
           if (var15 < field_j) {
             break L3;
@@ -1809,11 +1810,11 @@ final class dma {
             var14 = var14 + var16 * field_g;
             var18 = 0;
             L5: while (true) {
-              if (var18 >= param8) {
+              if (var18 >= 540) {
                 L6: {
                   param2 = param2 + param6;
-                  var13 = 1 - param5;
-                  var18 = 1 + param3 - param5 - param4;
+                  var13 = -139;
+                  var18 = -135;
                   if (0 >= var18) {
                     break L6;
                   } else {
@@ -1822,7 +1823,7 @@ final class dma {
                   }
                 }
                 L7: {
-                  var19 = param7 + (param4 - param3) * field_g;
+                  var19 = -4 * field_g;
                   if (var13 >= var18) {
                     break L7;
                   } else {
@@ -1833,7 +1834,7 @@ final class dma {
                 L8: while (true) {
                   if (var13 >= var18) {
                     L9: {
-                      var18 = field_j - param4 - param5 - param3;
+                      var18 = field_j - 144;
                       if (0 >= var18) {
                         break L9;
                       } else {
@@ -1849,12 +1850,12 @@ final class dma {
                           } else {
                             var20 = 0;
                             L12: while (true) {
-                              if (var20 >= param8) {
+                              if (var20 >= 540) {
                                 var19 = var19 + param6;
                                 var17--;
                                 var20 = 0;
                                 L13: while (true) {
-                                  if (var20 >= param8) {
+                                  if (var20 >= 540) {
                                     param2 = param2 + param6;
                                     var13++;
                                     continue L11;
@@ -1924,15 +1925,15 @@ final class dma {
                       } else {
                         var20 = 0;
                         L17: while (true) {
-                          if (var20 >= param8) {
+                          if (var20 >= 540) {
                             var19 = var19 + param6;
                             var20 = 0;
                             L18: while (true) {
-                              if (var20 >= param8) {
+                              if (var20 >= 540) {
                                 var14 = var14 + param6;
                                 var20 = 0;
                                 L19: while (true) {
-                                  if (var20 >= param8) {
+                                  if (var20 >= 540) {
                                     param2 = param2 + param6;
                                     var13++;
                                     continue L10;
@@ -2075,13 +2076,13 @@ final class dma {
                     }
                   } else {
                     L26: {
-                      if (var13 + param4 + param5 + param3 >= field_f) {
+                      if (var13 + 144 >= field_f) {
                         var14 = var14 + field_g;
                         break L26;
                       } else {
                         var20 = 0;
                         L27: while (true) {
-                          if (var20 >= param8) {
+                          if (var20 >= 540) {
                             var14 = var14 + param6;
                             var17++;
                             break L26;
@@ -2100,7 +2101,7 @@ final class dma {
                     }
                     var20 = 0;
                     L28: while (true) {
-                      if (var20 >= param8) {
+                      if (var20 >= 540) {
                         param2 = param2 + param6;
                         var13++;
                         continue L8;
@@ -2128,7 +2129,7 @@ final class dma {
           } else {
             var18 = 0;
             L29: while (true) {
-              if (var18 >= param8) {
+              if (var18 >= 540) {
                 var14 = var14 + param6;
                 var13++;
                 continue L4;

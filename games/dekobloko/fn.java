@@ -17,7 +17,7 @@ final class fn extends mk {
         return var3;
     }
 
-    final static void a(ji param0, ji param1, ji param2, int param3) {
+    final static void a(ji param0, ji param1, ji param2) {
         RuntimeException var4 = null;
         pi[] var5 = null;
         pi[][] var6 = null;
@@ -124,7 +124,7 @@ final class fn extends mk {
                     var15 = new ck(var9, var9);
                     var18 = var15;
                     var18.a();
-                    var17.e(0, param3);
+                    var17.e(0, 0);
                     var11 = new ck(var9, var9);
                     var11.a();
                     var17.e(var9 - var17.field_I, 0);
@@ -235,14 +235,14 @@ final class fn extends mk {
               break L6;
             }
           }
-          throw dh.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param3 + 41);
+          throw dh.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + 0 + 41);
         }
     }
 
     fn() {
     }
 
-    public static void b(int param0) {
+    public static void b() {
         field_g = null;
         field_f = null;
     }

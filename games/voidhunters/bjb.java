@@ -74,7 +74,7 @@ final class bjb extends rqa {
         return stackIn_4_0;
     }
 
-    final static void a(int param0) {
+    final static void a() {
         if (!(!ssa.b(2))) {
             vc.a(kt.field_r, 2182, 0);
         }
@@ -90,13 +90,8 @@ final class bjb extends rqa {
         super(param0, param1, param2);
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_q = null;
-        if (param0) {
-            bjb.b(false);
-            field_p = null;
-            return;
-        }
         field_p = null;
     }
 

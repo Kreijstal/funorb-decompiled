@@ -150,16 +150,13 @@ final class ao {
     }
 
     final static void a(boolean param0, java.awt.Component param1) {
-        if (param0) {
-            return;
-        }
         try {
             param1.removeMouseListener((java.awt.event.MouseListener) (Object) lw.field_e);
             param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) lw.field_e);
             param1.removeFocusListener((java.awt.event.FocusListener) (Object) lw.field_e);
             field_d = 0;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "ao.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "ao.A(" + 0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

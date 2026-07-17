@@ -285,8 +285,10 @@ final class j implements Runnable {
                       qd.field_Q = aa.field_l;
                       break L9;
                     } else {
-                      boolean discarded$1 = ta.a(0, hl.a(-92));
-                      mf.field_a = new Boolean(bh.a((sb) (Object) kj.field_a, -29320));
+                      int discarded$4 = -92;
+                      boolean discarded$5 = ta.a(0, hl.a());
+                      int discarded$6 = -29320;
+                      mf.field_a = new Boolean(bh.a((sb) (Object) kj.field_a));
                       kj.field_a.field_o = 0;
                       break L9;
                     }
@@ -330,7 +332,8 @@ final class j implements Runnable {
             }
             L13: {
               if (qd.field_Q == aa.field_l) {
-                if (!kj.b(-9319)) {
+                int discarded$7 = -9319;
+                if (!kj.b()) {
                   break L13;
                 } else {
                   L14: {
@@ -490,7 +493,8 @@ final class j implements Runnable {
                         var2.e();
                     }
                 }
-                gf.a(10L, -10309);
+                int discarded$0 = -10309;
+                gf.a(10L);
                 Object var5 = null;
                 jk.a(-23765, ((j) this).field_c, (Object) null);
             }
@@ -511,7 +515,7 @@ final class j implements Runnable {
         return param0 >= 6144 ? ta.field_g[param0 - 6144] : -ta.field_g[6144 - param0];
     }
 
-    final static boolean a(byte param0) {
+    final static boolean a() {
         return ci.field_e == bd.field_h;
     }
 

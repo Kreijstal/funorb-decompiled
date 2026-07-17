@@ -43,7 +43,7 @@ final class cr implements gj {
         }
     }
 
-    final static boolean b(int param0) {
+    final static boolean b() {
         if (null == op.field_y) {
             return false;
         }

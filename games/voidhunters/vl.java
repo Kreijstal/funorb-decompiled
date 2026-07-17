@@ -73,7 +73,7 @@ final class vl extends rqa {
         return stackIn_3_0;
     }
 
-    final static void e(byte param0) {
+    final static void e() {
         Object var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;

@@ -85,73 +85,65 @@ final class eq extends af {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
+        boolean stackIn_4_0 = false;
+        boolean stackIn_5_0 = false;
         boolean stackIn_6_0 = false;
-        boolean stackIn_7_0 = false;
-        boolean stackIn_8_0 = false;
-        int stackIn_8_1 = 0;
+        int stackIn_6_1 = 0;
         RuntimeException decompiledCaughtException = null;
+        boolean stackOut_3_0 = false;
         boolean stackOut_5_0 = false;
-        boolean stackOut_7_0 = false;
-        int stackOut_7_1 = 0;
-        boolean stackOut_6_0 = false;
-        int stackOut_6_1 = 0;
+        int stackOut_5_1 = 0;
+        boolean stackOut_4_0 = false;
+        int stackOut_4_1 = 0;
         var12 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           L0: {
-            L1: {
-              if (param2 > 125) {
-                break L1;
-              } else {
-                field_g = null;
-                break L1;
-              }
-            }
             param3 = param3 | param3 << 8;
             var8_int = param3 ^ param3 >> 1;
             var11 = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (var11 >= 4) {
                 break L0;
               } else {
-                L3: {
+                L2: {
                   var9 = -44 + bm.field_y[var11][0] + (param6 - -(7 & var8_int));
                   var10 = -64 + (param0 - -bm.field_y[var11][1] + (param3 & 3));
-                  stackOut_5_0 = param1;
-                  stackIn_7_0 = stackOut_5_0;
-                  stackIn_6_0 = stackOut_5_0;
+                  stackOut_3_0 = param1;
+                  stackIn_5_0 = stackOut_3_0;
+                  stackIn_4_0 = stackOut_3_0;
                   if (var10 <= param0 + -60) {
-                    stackOut_7_0 = stackIn_7_0;
-                    stackOut_7_1 = 0;
-                    stackIn_8_0 = stackOut_7_0;
-                    stackIn_8_1 = stackOut_7_1;
-                    break L3;
+                    stackOut_5_0 = stackIn_5_0;
+                    stackOut_5_1 = 0;
+                    stackIn_6_0 = stackOut_5_0;
+                    stackIn_6_1 = stackOut_5_1;
+                    break L2;
                   } else {
-                    stackOut_6_0 = stackIn_6_0;
-                    stackOut_6_1 = 1;
-                    stackIn_8_0 = stackOut_6_0;
-                    stackIn_8_1 = stackOut_6_1;
-                    break L3;
+                    stackOut_4_0 = stackIn_4_0;
+                    stackOut_4_1 = 1;
+                    stackIn_6_0 = stackOut_4_0;
+                    stackIn_6_1 = stackOut_4_1;
+                    break L2;
                   }
                 }
-                L4: {
-                  if (stackIn_8_0 ^ stackIn_8_1 != 0) {
+                L3: {
+                  if (stackIn_6_0 ^ stackIn_6_1 != 0) {
                     nr.field_c[param3 % 6].b(var9, var10, param4, param7);
-                    break L4;
+                    break L3;
                   } else {
-                    break L4;
+                    break L3;
                   }
                 }
                 var8_int = var8_int >> 1;
                 param3 = param3 >> 1;
                 var11++;
-                continue L2;
+                continue L1;
               }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw ig.a((Throwable) (Object) var8, "eq.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+          throw ig.a((Throwable) (Object) var8, "eq.A(" + param0 + 44 + param1 + 44 + 126 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
         }
     }
 
@@ -160,7 +152,7 @@ final class eq extends af {
         return pt.field_db;
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_n = null;
         field_m = null;
         field_h = null;

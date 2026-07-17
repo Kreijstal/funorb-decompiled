@@ -7,10 +7,7 @@ final class ub extends RuntimeException {
     static tp[] field_d;
     static int[] field_b;
 
-    final static int a(int param0) {
-        if (param0 != 255) {
-            return -99;
-        }
+    final static int a() {
         return ri.field_a - bf.field_c;
     }
 
@@ -24,7 +21,7 @@ final class ub extends RuntimeException {
         ((ub) this).field_c = param0;
     }
 
-    final static void b(int param0) {
+    final static void b() {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
@@ -36,10 +33,12 @@ final class ub extends RuntimeException {
               break L0;
             }
           }
-          int discarded$5 = ub.a(-12);
+          int discarded$10 = -12;
+          int discarded$11 = ub.a();
           return;
         } else {
-          int discarded$6 = ub.a(-12);
+          int discarded$12 = -12;
+          int discarded$13 = ub.a();
           return;
         }
     }

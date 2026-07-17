@@ -313,7 +313,7 @@ final class rn extends rd {
         return (mg) (Object) stackIn_11_0;
     }
 
-    public static void c(int param0) {
+    public static void c() {
         field_r = null;
         field_j = null;
         field_o = null;
@@ -327,8 +327,8 @@ final class rn extends rd {
         ((rn) this).field_m = 0;
     }
 
-    final static String d(int param0) {
-        if (param0 < ~eq.field_j) {
+    final static String d() {
+        if (eq.field_j < 2) {
             return hd.field_b;
         }
         if (null != be.field_e) {
@@ -346,7 +346,7 @@ final class rn extends rd {
         if (!(ok.field_c.a((byte) 102))) {
             return ld.field_w;
         }
-        if (!ok.field_c.a(param0 ^ 20403, "commonui")) {
+        if (!ok.field_c.a(-20402, "commonui")) {
             return jn.field_k + " - " + ok.field_c.b("commonui", -60) + "%";
         }
         if (!dd.field_a.a((byte) 102)) {

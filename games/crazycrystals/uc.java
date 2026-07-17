@@ -13,16 +13,13 @@ abstract class uc {
 
     abstract boolean b(byte param0);
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
         field_a = null;
     }
 
     final static int a(boolean param0, byte param1, int param2, int param3) {
-        if (param1 < 36) {
-            return 92;
-        }
         return ga.p(-1);
     }
 

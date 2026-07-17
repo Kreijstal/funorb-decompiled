@@ -234,14 +234,11 @@ final class sl {
         }
     }
 
-    public static void a(byte param0) {
+    public static void a() {
         field_e = null;
         field_d = null;
         field_b = null;
         field_g = null;
-        if (param0 != 110) {
-            field_c = true;
-        }
         field_a = null;
     }
 
@@ -250,18 +247,12 @@ final class sl {
         int var5 = mc.field_b[(jm.field_p - -1) % mc.field_b.length];
         int var6 = fl.a(var5, jg.field_g, param3, var4, 110);
         int var7 = sb.field_o[jm.field_p];
-        if (param1 >= -35) {
-            sl.a((byte) 86);
-        }
         int var8 = sb.field_o[(jm.field_p - -1) % mc.field_b.length];
         int var9 = fl.a(var8, jg.field_g, param3, var7, 114);
-        hk.d(param2, param0, 640, 480, var6, var9);
+        hk.d(0, param0, 640, 480, var6, var9);
     }
 
     final static long a(int param0) {
-        if (param0 != -1) {
-            sl.a((String) null, (int[]) null, (byte) 24, (nm) null, (w) null, (String) null, -106L, 12, -60);
-        }
         return -p.field_a + ik.a(4);
     }
 

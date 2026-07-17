@@ -17,44 +17,36 @@ final class hha extends ana {
     }
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        int stackIn_8_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_7_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_5_0 = 0;
         L0: {
-          if (param3 == 1) {
-            break L0;
-          } else {
-            hha.g(-64);
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
+          L1: {
             if (param6 < param4) {
-              break L2;
+              break L1;
             } else {
               if (param6 >= param4 + param2) {
-                break L2;
+                break L1;
               } else {
                 if (param1 < param5) {
-                  break L2;
+                  break L1;
                 } else {
                   if (param5 - -param0 <= param1) {
-                    break L2;
-                  } else {
-                    stackOut_6_0 = 1;
-                    stackIn_8_0 = stackOut_6_0;
                     break L1;
+                  } else {
+                    stackOut_4_0 = 1;
+                    stackIn_6_0 = stackOut_4_0;
+                    break L0;
                   }
                 }
               }
             }
           }
-          stackOut_7_0 = 0;
-          stackIn_8_0 = stackOut_7_0;
-          break L1;
+          stackOut_5_0 = 0;
+          stackIn_6_0 = stackOut_5_0;
+          break L0;
         }
-        return stackIn_8_0 != 0;
+        return stackIn_6_0 != 0;
     }
 
     private final void d(int param0) {
@@ -69,7 +61,7 @@ final class hha extends ana {
         }
     }
 
-    private final void f(int param0) {
+    private final void f() {
     }
 
     hha(gj param0, mna param1) {
@@ -92,7 +84,8 @@ final class hha extends ana {
             }
             return false;
         }
-        this.f(1532);
+        int discarded$1 = 1532;
+        this.f();
         return true;
     }
 
@@ -103,61 +96,54 @@ final class hha extends ana {
         int var4 = 0;
         hk var5 = null;
         int var6 = 0;
-        hk stackIn_6_0 = null;
-        hk stackIn_12_0 = null;
-        hk stackIn_15_0 = null;
+        hk stackIn_4_0 = null;
+        hk stackIn_10_0 = null;
+        hk stackIn_13_0 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        String stackIn_19_2 = null;
+        String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        hk stackOut_5_0 = null;
-        hk stackOut_14_0 = null;
-        hk stackOut_11_0 = null;
+        hk stackOut_3_0 = null;
+        hk stackOut_12_0 = null;
+        hk stackOut_9_0 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
         RuntimeException stackOut_16_0 = null;
         StringBuilder stackOut_16_1 = null;
-        RuntimeException stackOut_18_0 = null;
-        StringBuilder stackOut_18_1 = null;
-        String stackOut_18_2 = null;
-        RuntimeException stackOut_17_0 = null;
-        StringBuilder stackOut_17_1 = null;
-        String stackOut_17_2 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
         var6 = BachelorFridge.field_y;
         try {
           L0: {
-            L1: {
-              var2 = fi.a("jagex-last-login-method", 61, param1);
-              if (param0 >= 121) {
-                break L1;
-              } else {
-                hha.g(78);
-                break L1;
-              }
-            }
+            var2 = fi.a("jagex-last-login-method", 61, param1);
             if (var2 == null) {
-              stackOut_5_0 = uka.field_k;
-              stackIn_6_0 = stackOut_5_0;
-              return stackIn_6_0;
+              stackOut_3_0 = uka.field_k;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0;
             } else {
-              var3 = gh.c((byte) -67);
+              int discarded$2 = -67;
+              var3 = gh.c();
               var4 = 0;
-              L2: while (true) {
+              L1: while (true) {
                 if (var4 >= var3.length) {
-                  stackOut_14_0 = uka.field_k;
-                  stackIn_15_0 = stackOut_14_0;
+                  stackOut_12_0 = uka.field_k;
+                  stackIn_13_0 = stackOut_12_0;
                   break L0;
                 } else {
                   var5 = var3[var4];
                   if (var5.a(var2, 91)) {
-                    stackOut_11_0 = (hk) var5;
-                    stackIn_12_0 = stackOut_11_0;
-                    return stackIn_12_0;
+                    stackOut_9_0 = (hk) var5;
+                    stackIn_10_0 = stackOut_9_0;
+                    return stackIn_10_0;
                   } else {
                     var4++;
-                    continue L2;
+                    continue L1;
                   }
                 }
               }
@@ -165,43 +151,40 @@ final class hha extends ana {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
+          L2: {
             var2_ref = decompiledCaughtException;
-            stackOut_16_0 = (RuntimeException) var2_ref;
-            stackOut_16_1 = new StringBuilder().append("hha.F(").append(param0).append(44);
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            stackIn_17_0 = stackOut_16_0;
-            stackIn_17_1 = stackOut_16_1;
+            stackOut_14_0 = (RuntimeException) var2_ref;
+            stackOut_14_1 = new StringBuilder().append("hha.F(").append(127).append(44);
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
             if (param1 == null) {
-              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
-              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
-              stackOut_18_2 = "null";
-              stackIn_19_0 = stackOut_18_0;
-              stackIn_19_1 = stackOut_18_1;
-              stackIn_19_2 = stackOut_18_2;
-              break L3;
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L2;
             } else {
-              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
-              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
-              stackOut_17_2 = "{...}";
-              stackIn_19_0 = stackOut_17_0;
-              stackIn_19_1 = stackOut_17_1;
-              stackIn_19_2 = stackOut_17_2;
-              break L3;
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L2;
             }
           }
-          throw pe.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
+          throw pe.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
         }
-        return stackIn_15_0;
+        return stackIn_13_0;
     }
 
-    public static void g(int param0) {
+    public static void g() {
         field_z = null;
         field_v = null;
-        if (param0 != 0) {
-            boolean discarded$0 = hha.e(-114);
-        }
         field_w = null;
         field_y = null;
         field_A = null;

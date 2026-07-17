@@ -7,22 +7,6 @@ final class rtb extends pib {
     private int field_i;
 
     final static boolean a(int param0, int param1, int param2, int param3) {
-        if (param1 >= -37) {
-            field_h = null;
-            if (!(!erb.field_p)) {
-                return ada.field_b.a(-9445, pma.field_o, jl.field_r);
-            }
-            if (!(!uga.field_d)) {
-                return ic.a(param3, -9307, param2);
-            }
-            if (!(!qt.a(param3, 2, param2))) {
-                return true;
-            }
-            if (!(!hb.field_c)) {
-                return false;
-            }
-            return tl.b(param0, param3, -85);
-        }
         if (!(!erb.field_p)) {
             return ada.field_b.a(-9445, pma.field_o, jl.field_r);
         }
@@ -38,7 +22,7 @@ final class rtb extends pib {
         return tl.b(param0, param3, -85);
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_h = null;
     }
 

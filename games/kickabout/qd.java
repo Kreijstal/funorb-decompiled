@@ -16,9 +16,6 @@ abstract class qd {
 
     final static void b(int param0, int param1) {
         kt.field_j = param1;
-        if (param0 != 38) {
-            field_f = null;
-        }
     }
 
     abstract void a(int param0, int param1);
@@ -139,7 +136,8 @@ abstract class qd {
             Object var3 = null;
             qd.a((byte) -25, (String) null);
         }
-        if (!(!vl.a(false))) {
+        int discarded$4 = 0;
+        if (!(!vl.a())) {
             return;
         }
         try {

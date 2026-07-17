@@ -52,8 +52,8 @@ final class s extends le {
             String stackOut_16_2 = null;
             try {
               L0: {
-                fj.field_g = new am(param1);
-                dp.field_e = new am(param7);
+                fj.field_g = new am(5000);
+                dp.field_e = new am(5000);
                 h.field_b = param5;
                 var15_int = 112 / ((56 - param12) / 57);
                 jm.field_B = param10;
@@ -103,7 +103,7 @@ final class s extends le {
               L3: {
                 var15 = (RuntimeException) (Object) decompiledCaughtException;
                 stackOut_12_0 = (RuntimeException) var15;
-                stackOut_12_1 = new StringBuilder().append("s.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44).append(param8).append(44).append(param9).append(44);
+                stackOut_12_1 = new StringBuilder().append("s.D(").append(param0).append(44).append(5000).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(5000).append(44).append(param8).append(44).append(param9).append(44);
                 stackIn_14_0 = stackOut_12_0;
                 stackIn_14_1 = stackOut_12_1;
                 stackIn_13_0 = stackOut_12_0;
@@ -202,7 +202,7 @@ final class s extends le {
         var8 = ZombieDawn.field_J;
         try {
           L0: {
-            var3_int = 83 % ((param0 - -39) / 39);
+            var3_int = 2;
             if (ac.field_m <= 1428) {
               L1: {
                 if (0 != ac.field_m % 35) {
@@ -369,7 +369,7 @@ final class s extends le {
           L11: {
             var3 = decompiledCaughtException;
             stackOut_51_0 = (RuntimeException) var3;
-            stackOut_51_1 = new StringBuilder().append("s.B(").append(param0).append(44);
+            stackOut_51_1 = new StringBuilder().append("s.B(").append(80).append(44);
             stackIn_53_0 = stackOut_51_0;
             stackIn_53_1 = stackOut_51_1;
             stackIn_52_0 = stackOut_51_0;
@@ -421,7 +421,7 @@ final class s extends le {
         }
     }
 
-    public static void c(byte param0) {
+    public static void c() {
         field_j = null;
     }
 

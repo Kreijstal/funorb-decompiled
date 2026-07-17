@@ -16,7 +16,7 @@ final class ig {
     static int field_d;
     static String field_j;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_a = null;
         field_k = null;
         field_i = null;
@@ -27,7 +27,7 @@ final class ig {
         field_h = null;
     }
 
-    final static void b(int param0, int param1) {
+    final static void b(int param0) {
         RuntimeException var2 = null;
         int var2_int = 0;
         int var3 = 0;
@@ -279,7 +279,7 @@ final class ig {
                         on.a(-var9 + 644, var11, var9, var10, 2, 0, param2);
                         var12 = 619 - (var4 + 20);
                         var13 = 6 + var11 + rb.field_yb;
-                        ((hu) (Object) var3_ref).c(var22, 599, var13, param1, -1);
+                        ((hu) (Object) var3_ref).c(var22, 599, var13, 16777215, -1);
                         var13 = var13 + (rb.field_yb + 6);
                         var14 = 0;
                         L7: while (true) {
@@ -342,16 +342,13 @@ final class ig {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw nb.a((Throwable) (Object) var3, "ig.D(" + param0 + 44 + param1 + 44 + param2 + 41);
+          throw nb.a((Throwable) (Object) var3, "ig.D(" + param0 + 44 + 16777215 + 44 + param2 + 41);
         }
     }
 
     final static int a(byte param0, int param1) {
         param1--;
         param1 = param1 | param1 >>> 1;
-        if (param0 != 6) {
-            return -2;
-        }
         param1 = param1 | param1 >>> 2;
         param1 = param1 | param1 >>> 4;
         param1 = param1 | param1 >>> 8;

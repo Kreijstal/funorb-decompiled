@@ -21,14 +21,17 @@ final class hd extends ob {
         L0: {
           var3 = Pool.field_O;
           pn.field_l.a(0, 0);
-          if (cm.f((byte) 109)) {
-            ae.a(-2);
+          int discarded$28 = 109;
+          if (cm.f()) {
+            int discarded$29 = -2;
+            ae.a();
             if (!ea.field_l) {
               var2 = 0;
               L1: while (true) {
                 if (var2 >= cr.field_m.field_D.length) {
                   ea.field_l = true;
-                  ae.a(-2);
+                  int discarded$30 = -2;
+                  ae.a();
                   break L0;
                 } else {
                   if ((cr.field_m.field_D[var2] & -16777216) == 0) {
@@ -135,24 +138,20 @@ final class hd extends ob {
         var11 = Pool.field_O;
         try {
           L0: {
-            if (param2) {
-              var7_int = param1;
-              L1: while (true) {
-                if (param0 <= var7_int) {
-                  break L0;
-                } else {
-                  var8 = param3[var7_int];
-                  var9 = param5[var7_int];
-                  var10 = param4[var7_int];
-                  param3[var7_int] = (var8 * param6[3] - (-(param6[4] * var9) + -(var10 * param6[5])) >> 16) + param6[0];
-                  param5[var7_int] = (param6[6] * var8 + param6[7] * var9 - -(var10 * param6[8]) >> 16) + param6[1];
-                  param4[var7_int] = param6[2] + (param6[11] * var10 + (var9 * param6[10] + var8 * param6[9]) >> 16);
-                  var7_int++;
-                  continue L1;
-                }
+            var7_int = 0;
+            L1: while (true) {
+              if (24 <= var7_int) {
+                break L0;
+              } else {
+                var8 = param3[var7_int];
+                var9 = param5[var7_int];
+                var10 = param4[var7_int];
+                param3[var7_int] = (var8 * param6[3] - (-(param6[4] * var9) + -(var10 * param6[5])) >> 16) + param6[0];
+                param5[var7_int] = (param6[6] * var8 + param6[7] * var9 - -(var10 * param6[8]) >> 16) + param6[1];
+                param4[var7_int] = param6[2] + (param6[11] * var10 + (var9 * param6[10] + var8 * param6[9]) >> 16);
+                var7_int++;
+                continue L1;
               }
-            } else {
-              return;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -160,7 +159,7 @@ final class hd extends ob {
           L2: {
             var7 = decompiledCaughtException;
             stackOut_7_0 = (RuntimeException) var7;
-            stackOut_7_1 = new StringBuilder().append("hd.E(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackOut_7_1 = new StringBuilder().append("hd.E(").append(24).append(44).append(0).append(44).append(1).append(44);
             stackIn_9_0 = stackOut_7_0;
             stackIn_9_1 = stackOut_7_1;
             stackIn_8_0 = stackOut_7_0;
@@ -267,18 +266,17 @@ final class hd extends ob {
     }
 
     final void d(int param0) {
-        int var2 = 0;
-        if (param0 == -1) {
-            var2 = fd.a(!ue.a(11) ? true : false, (byte) 65);
-        } else {
+        if (param0 != -1) {
             hd.b(false);
-            var2 = fd.a(!ue.a(11) ? true : false, (byte) 65);
         }
+        int discarded$4 = 11;
+        int var2 = fd.a(!ue.a() ? true : false, (byte) 65);
         if (3 == var2) {
             if (!(ne.field_u == null)) {
                 tq.d((byte) -106);
             }
-            s.a(hk.d(58), 2056898529);
+            int discarded$5 = 2056898529;
+            s.a(hk.d(58));
         }
         if (!(var2 != 1)) {
             fq.a(-3405, 0, sq.field_b, false);

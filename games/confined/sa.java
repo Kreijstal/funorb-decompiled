@@ -28,78 +28,68 @@ abstract class sa extends ee {
     }
 
     private final void a(int param0, ee param1) {
-        RuntimeException runtimeException = null;
+        RuntimeException var3 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_10_2 = null;
+        String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
-        RuntimeException stackOut_9_0 = null;
-        StringBuilder stackOut_9_1 = null;
-        String stackOut_9_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
         String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
         try {
           L0: {
-            L1: {
-              if (((sa) this).field_X != param1) {
-                break L1;
+            if (((sa) this).field_X != param1) {
+              break L0;
+            } else {
+              if (((sa) this).field_T <= 0) {
+                break L0;
               } else {
-                if (((sa) this).field_T <= 0) {
-                  break L1;
-                } else {
-                  ((sa) this).field_T = ((sa) this).field_T + 1;
-                  return;
-                }
+                ((sa) this).field_T = ((sa) this).field_T + 1;
+                return;
               }
             }
-            L2: {
-              ((sa) this).a(param1, 1.0, -67);
-              ((sa) this).d(10797);
-              if (param0 >= 98) {
-                break L2;
-              } else {
-                ((sa) this).field_Y = 0.723536474622876;
-                break L2;
-              }
-            }
-            break L0;
           }
+          ((sa) this).a(param1, 1.0, -67);
+          ((sa) this).d(10797);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackOut_7_0 = (RuntimeException) runtimeException;
-            stackOut_7_1 = new StringBuilder().append("sa.J(").append(param0).append(44);
-            stackIn_9_0 = stackOut_7_0;
-            stackIn_9_1 = stackOut_7_1;
-            stackIn_8_0 = stackOut_7_0;
-            stackIn_8_1 = stackOut_7_1;
+          L1: {
+            var3 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var3;
+            stackOut_6_1 = new StringBuilder().append("sa.J(").append(116).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
             if (param1 == null) {
-              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
-              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
-              stackOut_9_2 = "null";
-              stackIn_10_0 = stackOut_9_0;
-              stackIn_10_1 = stackOut_9_1;
-              stackIn_10_2 = stackOut_9_2;
-              break L3;
-            } else {
               stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
               stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-              stackOut_8_2 = "{...}";
-              stackIn_10_0 = stackOut_8_0;
-              stackIn_10_1 = stackOut_8_1;
-              stackIn_10_2 = stackOut_8_2;
-              break L3;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L1;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L1;
             }
           }
-          throw sd.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+          throw sd.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
     }
 
@@ -774,13 +764,8 @@ abstract class sa extends ee {
         }
     }
 
-    final static void a(byte param0, int param1) {
+    final static void a() {
         em.field_a = 20;
-        if (param0 != -35) {
-            field_V = null;
-            gd.field_u = 4;
-            return;
-        }
         gd.field_u = 4;
     }
 
@@ -858,7 +843,8 @@ abstract class sa extends ee {
     private static void $cfr$clinit() {
         field_W = "Others have tried#and failed.#If you succeed, your reward#will be#immeasurable.";
         field_V = new byte[65536];
-        lj.a(field_V, 0, 65536, (byte) -128);
+        int discarded$0 = -128;
+        lj.a(field_V, 0, 65536);
         field_R = false;
     }
 }

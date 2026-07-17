@@ -7,7 +7,7 @@ final class jf extends pu {
     static ee field_l;
     private static String field_z;
 
-    public static void b(int param0) {
+    public static void b() {
         field_n = null;
         field_l = null;
     }

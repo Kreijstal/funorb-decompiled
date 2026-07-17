@@ -20,12 +20,11 @@ final class bd extends en {
         int var12 = 0;
         int var14 = 0;
         int var15 = 0;
-        Object var16 = null;
-        int var17 = 0;
-        String[] var18 = null;
-        String var19 = null;
-        wb[] var20 = null;
-        wb var21 = null;
+        int var16 = 0;
+        String[] var17 = null;
+        String var18 = null;
+        wb[] var19 = null;
+        wb var20 = null;
         wb[] stackIn_3_0 = null;
         boolean stackIn_9_0 = false;
         int stackIn_10_0 = 0;
@@ -132,81 +131,72 @@ final class bd extends en {
             break L5;
           }
         }
-        L6: {
-          var10 = new cn(param1, var6);
-          var10.e();
-          db.field_v.c(((bd) this).field_h.field_z.toUpperCase(), param1 >> 1, var7, 16777215, -1);
-          var7 = var7 + la.field_b.field_H * 2;
-          if (param0) {
-            break L6;
-          } else {
-            var16 = null;
-            ((bd) this).a(80, (sa) null);
-            break L6;
-          }
-        }
-        var18 = var4;
+        var10 = new cn(param1, var6);
+        var10.e();
+        db.field_v.c(((bd) this).field_h.field_z.toUpperCase(), param1 >> 1, var7, 16777215, -1);
+        var7 = var7 + la.field_b.field_H * 2;
+        var17 = var4;
         var12 = 0;
-        L7: while (true) {
-          if (var12 >= var18.length) {
-            L8: {
+        L6: while (true) {
+          if (var12 >= var17.length) {
+            L7: {
               if (var9 == 0) {
-                break L8;
+                break L7;
               } else {
-                L9: {
+                L8: {
                   var7 = var7 + la.field_b.field_H;
                   if (2 == ((bd) this).field_h.field_g) {
                     db.field_v.c(rb.field_K, param1 >> 1, var7, 16711680, -1);
-                    break L9;
+                    break L8;
                   } else {
                     if (((bd) this).field_h.field_g != 1) {
                       if (3 != ((bd) this).field_h.field_g) {
-                        break L9;
+                        break L8;
                       } else {
                         db.field_v.c(lf.field_m, param1 >> 1, var7, 16711680, -1);
-                        break L9;
+                        break L8;
                       }
                     } else {
                       db.field_v.c(gm.field_a, param1 >> 1, var7, 16711680, -1);
-                      break L9;
+                      break L8;
                     }
                   }
                 }
                 var7 = var7 + la.field_b.field_H;
-                break L8;
+                break L7;
               }
             }
-            L10: {
+            L9: {
               if (var8 != null) {
                 var7 = var7 + la.field_b.field_H;
-                var20 = var8;
-                var17 = 0;
-                var12 = var17;
-                L11: while (true) {
-                  if (var17 >= var20.length) {
-                    break L10;
+                var19 = var8;
+                var16 = 0;
+                var12 = var16;
+                L10: while (true) {
+                  if (var16 >= var19.length) {
+                    break L9;
                   } else {
-                    var21 = var20[var17];
-                    var14 = db.field_v.b(var21.field_b) - -24;
-                    var21.field_c.c(-var14 + param1 >> 1, -(-var21.field_c.field_v + la.field_b.field_H * 3 >> 1) + var7, var21.field_a);
-                    db.field_v.b(ck.field_H.a(var21.field_b, (byte) -48), 24 + (-var14 + param1 >> 1), var7, var21.field_a, -1);
+                    var20 = var19[var16];
+                    var14 = db.field_v.b(var20.field_b) - -24;
+                    var20.field_c.c(-var14 + param1 >> 1, -(-var20.field_c.field_v + la.field_b.field_H * 3 >> 1) + var7, var20.field_a);
+                    db.field_v.b(ck.field_H.a(var20.field_b, (byte) -48), 24 + (-var14 + param1 >> 1), var7, var20.field_a, -1);
                     var7 = var7 + la.field_b.field_H;
-                    var17++;
-                    continue L11;
+                    var16++;
+                    continue L10;
                   }
                 }
               } else {
-                break L10;
+                break L9;
               }
             }
             jh.b();
             return var10;
           } else {
-            var19 = var18[var12];
-            la.field_b.c(var19, param1 >> 1, var7, 16777215, -1);
+            var18 = var17[var12];
+            la.field_b.c(var18, param1 >> 1, var7, 16777215, -1);
             var7 = var7 + la.field_b.field_H;
             var12++;
-            continue L7;
+            continue L6;
           }
         }
     }
@@ -263,8 +253,10 @@ final class bd extends en {
           if (var2 == null) {
             break L1;
           } else {
-            var4_ref_String = jk.a(new String[1], "<col=178B8B><%0></col>", 30496);
-            var11 = ck.field_H.a(jk.a(new String[1], var2, 30496), (byte) -48);
+            int discarded$2 = 30496;
+            var4_ref_String = jk.a(new String[1], "<col=178B8B><%0></col>");
+            int discarded$3 = 30496;
+            var11 = ck.field_H.a(jk.a(new String[1], var2), (byte) -48);
             var2 = var11;
             var3 = (Object) (Object) jn.a(var11, new int[1], -122, (se) (Object) db.field_v);
             break L1;

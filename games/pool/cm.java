@@ -19,7 +19,7 @@ final class cm extends ob {
         return ((cm) this).field_x;
     }
 
-    final static eg[] a(eg param0, int[] param1, boolean param2) {
+    final static eg[] a(eg param0, int[] param1) {
         RuntimeException var3 = null;
         eg[] var3_array = null;
         eg var4 = null;
@@ -203,7 +203,7 @@ final class cm extends ob {
         return stackIn_22_0;
     }
 
-    final static boolean f(byte param0) {
+    final static boolean f() {
         RuntimeException var1 = null;
         int var1_int = 0;
         int var2 = 0;
@@ -242,9 +242,17 @@ final class cm extends ob {
                         if (var2 >= dn.field_o.length) {
                           sh.field_P.b(15100);
                           ef.a(-2107, cr.field_m, wm.field_Yb);
-                          bq.a(40, qp.field_Rb, 80, 80, 15, -2400, 2, -1, 40);
+                          int discarded$8 = 40;
+                          int discarded$9 = -1;
+                          int discarded$10 = 2;
+                          int discarded$11 = -2400;
+                          int discarded$12 = 15;
+                          int discarded$13 = 80;
+                          int discarded$14 = 80;
+                          bq.a(40, qp.field_Rb);
                           kq.a(dn.field_o, -58);
-                          hl.a(rf.field_g, 106);
+                          int discarded$15 = 106;
+                          hl.a(rf.field_g);
                           stackOut_21_0 = 1;
                           stackIn_22_0 = stackOut_21_0;
                           break L0;
@@ -400,7 +408,8 @@ final class cm extends ob {
             if (!((cm) this).field_B.b((byte) 64)) {
               break L0;
             } else {
-              if (!dl.a(0)) {
+              int discarded$1 = 0;
+              if (!dl.a()) {
                 break L0;
               } else {
                 ((cm) this).c(param0 ^ -16474, param1);
@@ -419,7 +428,7 @@ final class cm extends ob {
         }
     }
 
-    private final void h(int param0) {
+    private final void h() {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -448,12 +457,12 @@ final class cm extends ob {
         bm.field_e.field_F = rm.field_g;
         bm.field_e.field_Kb = ln.field_s;
         nm.field_a.a(-114, bm.field_e);
-        vh dupTemp$6 = u.a((byte) 68, 10, 55, false, 28);
-        cj.field_V = dupTemp$6;
-        bm.field_e.a(-102, dupTemp$6);
-        vh dupTemp$7 = u.a((byte) 120, 210, 55, true, 27);
-        we.field_f = dupTemp$7;
-        bm.field_e.a(122, dupTemp$7);
+        vh dupTemp$9 = u.a((byte) 68, 10, 55, false, 28);
+        cj.field_V = dupTemp$9;
+        bm.field_e.a(-102, dupTemp$9);
+        vh dupTemp$10 = u.a((byte) 120, 210, 55, true, 27);
+        we.field_f = dupTemp$10;
+        bm.field_e.a(122, dupTemp$10);
         va.a(false, bm.field_e, cj.field_V);
         va.a(false, bm.field_e, we.field_f);
         jq.field_f = new vh(-1L, (vh) null, 0, 0, 160, 150, (String) null);
@@ -466,19 +475,20 @@ final class cm extends ob {
         al.field_v.field_hb = dq.a(4, 0, ab.field_h);
         al.field_v.field_hb.field_G = 10;
         al.field_v.field_F = rm.field_g;
-        dk.a(al.field_v, (byte) 93);
+        int discarded$11 = 93;
+        dk.a(al.field_v);
         qk.field_f = new vh(-1L, (vh) null, 130, 10, 100, 40, (String) null);
         qk.field_f.field_cb = 1;
         qk.field_f.field_Fb = 1;
         qk.field_f.field_F = mp.field_N;
         al.field_v.a(-106, qk.field_f);
         va.a(false, al.field_v, qk.field_f);
-        vh dupTemp$8 = u.a((byte) 67, 100, 10, false, 64);
-        tn.field_w = dupTemp$8;
-        al.field_v.a(114, dupTemp$8);
-        vh dupTemp$9 = u.a((byte) 112, 235, 10, true, 63);
-        ih.field_e = dupTemp$9;
-        al.field_v.a(33, dupTemp$9);
+        vh dupTemp$12 = u.a((byte) 67, 100, 10, false, 64);
+        tn.field_w = dupTemp$12;
+        al.field_v.a(114, dupTemp$12);
+        vh dupTemp$13 = u.a((byte) 112, 235, 10, true, 63);
+        ih.field_e = dupTemp$13;
+        al.field_v.a(33, dupTemp$13);
         va.a(false, al.field_v, tn.field_w);
         va.a(false, al.field_v, ih.field_e);
         rj.c((byte) -45);
@@ -488,19 +498,20 @@ final class cm extends ob {
         hg.field_c.field_F = rm.field_g;
         hg.field_c.field_hb = dq.a(4, 0, bf.field_e);
         hg.field_c.field_hb.field_G = al.field_v.field_hb.field_G;
-        dk.a(hg.field_c, (byte) 93);
+        int discarded$14 = 93;
+        dk.a(hg.field_c);
         nm.field_a.a(-99, hg.field_c);
         db.field_Nb = new vh(-1L, (vh) null, qk.field_f.field_qb, qk.field_f.field_eb, qk.field_f.field_gb, qk.field_f.field_Db, (String) null);
         db.field_Nb.field_Fb = 1;
         db.field_Nb.field_F = mp.field_N;
         db.field_Nb.field_cb = 1;
         hg.field_c.a(49, db.field_Nb);
-        vh dupTemp$10 = u.a((byte) 102, tn.field_w.field_qb, tn.field_w.field_eb, false, 45);
-        tk.field_f = dupTemp$10;
-        hg.field_c.a(112, dupTemp$10);
-        vh dupTemp$11 = u.a((byte) 124, ih.field_e.field_qb, tn.field_w.field_eb, true, 44);
-        kb.field_i = dupTemp$11;
-        hg.field_c.a(84, dupTemp$11);
+        vh dupTemp$15 = u.a((byte) 102, tn.field_w.field_qb, tn.field_w.field_eb, false, 45);
+        tk.field_f = dupTemp$15;
+        hg.field_c.a(112, dupTemp$15);
+        vh dupTemp$16 = u.a((byte) 124, ih.field_e.field_qb, tn.field_w.field_eb, true, 44);
+        kb.field_i = dupTemp$16;
+        hg.field_c.a(84, dupTemp$16);
         va.a(false, hg.field_c, tk.field_f);
         va.a(false, hg.field_c, kb.field_i);
         kn.c(13);
@@ -512,7 +523,8 @@ final class cm extends ob {
         kk.field_x.field_yb = dq.a(3, 0, s.field_d[3]);
         kk.field_x.field_hb.field_G = al.field_v.field_hb.field_G;
         kk.field_x.field_yb.field_G = al.field_v.field_hb.field_G;
-        dk.a(kk.field_x, (byte) 93);
+        int discarded$17 = 93;
+        dk.a(kk.field_x);
         dp.field_c = new vh(-1L, (vh) null, qk.field_f.field_qb, qk.field_f.field_eb, qk.field_f.field_gb, qk.field_f.field_Db, (String) null);
         dp.field_c.field_Fb = 1;
         dp.field_c.field_F = mp.field_N;
@@ -533,13 +545,15 @@ final class cm extends ob {
         if (65 != ((cm) this).field_h[param0]) {
             return true;
         }
-        return dl.a(0);
+        int discarded$0 = 0;
+        return dl.a();
     }
 
     private final void g(int param0) {
         bm.field_e.field_hb = dq.a(param0, 0, im.field_ic[er.field_W]);
         jq.field_f.field_hb = sb.field_c[er.field_W];
-        dp.a(bm.field_e, jq.field_f, -89);
+        int discarded$0 = -89;
+        dp.a(bm.field_e, jq.field_f);
     }
 
     final void c(int param0) {
@@ -569,7 +583,7 @@ final class cm extends ob {
         }
     }
 
-    public static void g(byte param0) {
+    public static void g() {
         field_K = null;
         field_H = null;
         field_I = null;
@@ -587,7 +601,8 @@ final class cm extends ob {
     cm(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(db.field_Wb, param0, param1, param2, param3, param4, param5);
         try {
-            this.h(-108);
+            int discarded$0 = -108;
+            this.h();
         } catch (RuntimeException runtimeException) {
             throw wm.a((Throwable) (Object) runtimeException, "cm.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
         }

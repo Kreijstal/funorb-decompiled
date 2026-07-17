@@ -34,7 +34,7 @@ final class sfa {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_d = null;
     }
 

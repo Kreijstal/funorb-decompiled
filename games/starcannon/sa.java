@@ -30,17 +30,13 @@ final class sa {
           if (u.a(9476, param1)) {
             return true;
           } else {
-            if (param0 == -121) {
-              if (param1 != 45) {
-                if (param1 != 160) {
-                  if (32 != param1) {
-                    if (95 == param1) {
-                      return true;
-                    } else {
-                      return false;
-                    }
-                  } else {
+            if (param1 != 45) {
+              if (param1 != 160) {
+                if (32 != param1) {
+                  if (95 == param1) {
                     return true;
+                  } else {
+                    return false;
                   }
                 } else {
                   return true;
@@ -49,24 +45,7 @@ final class sa {
                 return true;
               }
             } else {
-              field_a = null;
-              if (param1 != 45) {
-                if (param1 != 160) {
-                  if (32 != param1) {
-                    if (95 == param1) {
-                      return true;
-                    } else {
-                      return false;
-                    }
-                  } else {
-                    return true;
-                  }
-                } else {
-                  return true;
-                }
-              } else {
-                return true;
-              }
+              return true;
             }
           }
         } else {
@@ -74,7 +53,7 @@ final class sa {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_a = null;
     }
 

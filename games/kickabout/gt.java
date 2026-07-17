@@ -70,7 +70,7 @@ final class gt extends mo {
         }
     }
 
-    final static ak c(int param0) {
+    final static ak c() {
         ak var2 = new ak(5);
         ak var1 = var2;
         var2.field_e = ((ot) (Object) lu.field_p[2]).h();
@@ -98,19 +98,27 @@ final class gt extends mo {
     }
 
     final void c(ml param0, int param1) {
-        if (!mu.a(param0, (byte) -39)) {
+        int discarded$3 = -39;
+        if (!mu.a(param0)) {
             return;
         }
         try {
             ((gt) this).field_g = -1 + param0.l(3, 59);
             ((gt) this).field_p = param0.l(3, param1 ^ 58) - param1;
-            ((gt) this).field_k = mu.a(param0, (byte) -39);
-            ((gt) this).field_q = mu.a(param0, (byte) -39);
-            ((gt) this).field_s = mu.a(param0, (byte) -39);
-            ((gt) this).field_v = mu.a(param0, (byte) -39);
-            ((gt) this).field_i = mu.a(param0, (byte) -39);
-            ((gt) this).field_n = mu.a(param0, (byte) -39);
-            ((gt) this).field_u = mu.a(param0, (byte) -39);
+            int discarded$4 = -39;
+            ((gt) this).field_k = mu.a(param0);
+            int discarded$5 = -39;
+            ((gt) this).field_q = mu.a(param0);
+            int discarded$6 = -39;
+            ((gt) this).field_s = mu.a(param0);
+            int discarded$7 = -39;
+            ((gt) this).field_v = mu.a(param0);
+            int discarded$8 = -39;
+            ((gt) this).field_i = mu.a(param0);
+            int discarded$9 = -39;
+            ((gt) this).field_n = mu.a(param0);
+            int discarded$10 = -39;
+            ((gt) this).field_u = mu.a(param0);
             ((gt) this).field_l = param0.l(8, 59);
         } catch (RuntimeException runtimeException) {
             throw nb.a((Throwable) (Object) runtimeException, "gt.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
@@ -144,7 +152,7 @@ final class gt extends mo {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_r = null;
         field_t = null;
         field_j = null;
@@ -195,7 +203,8 @@ final class gt extends mo {
                         ns.field_a = ns.field_a + 1;
                         return;
                       } else {
-                        na.h(0);
+                        int discarded$3 = 0;
+                        na.h();
                         ns.field_a = ns.field_a + 1;
                         return;
                       }
@@ -293,7 +302,8 @@ final class gt extends mo {
                             ns.field_a = ns.field_a + 1;
                             return;
                           } else {
-                            na.h(0);
+                            int discarded$4 = 0;
+                            na.h();
                             ns.field_a = ns.field_a + 1;
                             return;
                           }
@@ -390,7 +400,8 @@ final class gt extends mo {
                           ns.field_a = ns.field_a + 1;
                           return;
                         } else {
-                          na.h(0);
+                          int discarded$5 = 0;
+                          na.h();
                           ns.field_a = ns.field_a + 1;
                           return;
                         }

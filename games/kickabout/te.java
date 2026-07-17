@@ -6,111 +6,97 @@ final class te {
     static String field_b;
 
     final static void a(boolean param0, String param1) {
-        RuntimeException runtimeException = null;
+        RuntimeException var2 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_6_2 = null;
+        String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException stackOut_3_0 = null;
-        StringBuilder stackOut_3_1 = null;
-        RuntimeException stackOut_5_0 = null;
-        StringBuilder stackOut_5_1 = null;
-        String stackOut_5_2 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
         RuntimeException stackOut_4_0 = null;
         StringBuilder stackOut_4_1 = null;
         String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
         try {
           L0: {
-            L1: {
-              lh.field_A = param1;
-              if (param0) {
-                break L1;
-              } else {
-                ut[] discarded$2 = te.a(-69, -48, -126, true, -8);
-                break L1;
-              }
-            }
+            lh.field_A = param1;
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackOut_3_0 = (RuntimeException) runtimeException;
-            stackOut_3_1 = new StringBuilder().append("te.C(").append(param0).append(44);
-            stackIn_5_0 = stackOut_3_0;
-            stackIn_5_1 = stackOut_3_1;
-            stackIn_4_0 = stackOut_3_0;
-            stackIn_4_1 = stackOut_3_1;
+          L1: {
+            var2 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_1 = new StringBuilder().append("te.C(").append(1).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
             if (param1 == null) {
-              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
-              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
-              stackOut_5_2 = "null";
-              stackIn_6_0 = stackOut_5_0;
-              stackIn_6_1 = stackOut_5_1;
-              stackIn_6_2 = stackOut_5_2;
-              break L2;
-            } else {
               stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
               stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
-              stackOut_4_2 = "{...}";
-              stackIn_6_0 = stackOut_4_0;
-              stackIn_6_1 = stackOut_4_1;
-              stackIn_6_2 = stackOut_4_2;
-              break L2;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
             }
           }
-          throw nb.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
+          throw nb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
         }
     }
 
-    public static void a(boolean param0) {
+    public static void a() {
         field_a = null;
         field_b = null;
     }
 
-    final static void a(int param0, ii param1, byte param2) {
-        ml var5 = null;
+    final static void a(int param0, ii param1) {
+        ml var3 = null;
         int var4 = 0;
         try {
-            var5 = or.field_d;
-            var5.b(param0, (byte) 114);
-            var5.field_n = var5.field_n + 1;
-            var4 = var5.field_n;
-            var5.a(107, 1);
-            var5.a(param2 ^ -4, param1.field_g);
-            var5.a(param2 ^ -22, param1.field_f);
-            var5.b(-121, param1.field_e);
-            var5.b(-40, param1.field_k);
-            var5.b(-62, param1.field_i);
-            var5.b(-91, param1.field_j);
-            if (param2 != -112) {
-                field_b = null;
-            }
-            int discarded$0 = var5.a(var4, false);
-            var5.c(62, var5.field_n - var4);
+            var3 = or.field_d;
+            var3.b(param0, (byte) 114);
+            var3.field_n = var3.field_n + 1;
+            var4 = var3.field_n;
+            var3.a(107, 1);
+            var3.a(108, param1.field_g);
+            var3.a(122, param1.field_f);
+            var3.b(-121, param1.field_e);
+            var3.b(-40, param1.field_k);
+            var3.b(-62, param1.field_i);
+            var3.b(-91, param1.field_j);
+            int discarded$0 = var3.a(var4, false);
+            var3.c(62, var3.field_n - var4);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) (Object) runtimeException, "te.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+            throw nb.a((Throwable) (Object) runtimeException, "te.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + -112 + 41);
         }
     }
 
     final static ut[] a(int param0, int param1, int param2, boolean param3, int param4) {
         ut[] var6 = new ut[9];
         ut[] var5 = var6;
-        if (param3) {
-            return null;
-        }
-        ut dupTemp$0 = lh.a(param4, (byte) -96, param0);
+        ut dupTemp$0 = lh.a(param4, (byte) -96, 1);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        ut dupTemp$1 = lh.a(param2, (byte) -96, param0);
+        ut dupTemp$1 = lh.a(param2, (byte) -96, 1);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
@@ -359,11 +345,9 @@ final class te {
     }
 
     final static void a(int param0, byte param1, int param2, boolean param3, int param4, boolean param5, int param6, boolean param7, int param8, boolean param9, int param10, boolean param11) {
-        if (param1 > -64) {
-            Object var13 = null;
-            te.a(80, (ii) null, (byte) -28);
-        }
-        gm.a(-79, param4, param5, 16777215, param2, param8, param9, 16777215, param6, param3, false, param7, param10, param0);
+        int discarded$0 = 0;
+        int discarded$1 = 13;
+        gm.a(-79, 14, param5, 16777215, 15, 11, true, 16777215, param6, param3, param11, param7);
     }
 
     static {

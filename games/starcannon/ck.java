@@ -37,7 +37,7 @@ final class ck implements Runnable {
         }
     }
 
-    final static int a(byte param0) {
+    final static int a() {
         try {
             IOException var1 = null;
             int var1_int = 0;
@@ -161,8 +161,8 @@ final class ck implements Runnable {
         }
     }
 
-    final static int b(byte param0) {
-        int var1 = -97 / ((param0 - 32) / 58);
+    final static int b() {
+        int var1 = 97;
         return ie.field_D;
     }
 

@@ -1486,18 +1486,12 @@ final class ek {
     final static boolean a(int param0, int param1, boolean param2, int param3) {
         int var4 = 0;
         int var5 = 0;
-        int stackIn_27_0 = 0;
-        int stackIn_36_0 = 0;
-        int stackIn_46_0 = 0;
-        int stackIn_55_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_26_0 = 0;
+        int stackIn_26_0 = 0;
+        int stackIn_35_0 = 0;
         int stackOut_25_0 = 0;
-        int stackOut_54_0 = 0;
-        int stackOut_53_0 = 0;
-        int stackOut_45_0 = 0;
-        int stackOut_44_0 = 0;
+        int stackOut_24_0 = 0;
+        int stackOut_34_0 = 0;
+        int stackOut_33_0 = 0;
         if (param2) {
           if (an.field_n[param3] >= an.field_n[param1]) {
             if (an.field_n[param1] >= an.field_n[param3]) {
@@ -1505,53 +1499,27 @@ final class ek {
                 return true;
               } else {
                 if (ik.field_cb[param3] <= ik.field_cb[param1]) {
-                  if (param0 >= -77) {
-                    int[] discarded$2 = ek.c(-125);
-                    var4 = oc.field_m[param3] + am.field_I[param3] + em.field_b[param3];
-                    var5 = em.field_b[param1] + (am.field_I[param1] + oc.field_m[param1]);
-                    if (var4 >= var5) {
-                      if (var4 > var5) {
-                        return false;
-                      } else {
-                        L0: {
-                          if (param3 >= param1) {
-                            stackOut_35_0 = 0;
-                            stackIn_36_0 = stackOut_35_0;
-                            break L0;
-                          } else {
-                            stackOut_34_0 = 1;
-                            stackIn_36_0 = stackOut_34_0;
-                            break L0;
-                          }
-                        }
-                        return stackIn_36_0 != 0;
-                      }
+                  var4 = oc.field_m[param3] + am.field_I[param3] + em.field_b[param3];
+                  var5 = em.field_b[param1] + (am.field_I[param1] + oc.field_m[param1]);
+                  if (var4 >= var5) {
+                    if (var4 > var5) {
+                      return false;
                     } else {
-                      return true;
+                      L0: {
+                        if (param3 >= param1) {
+                          stackOut_25_0 = 0;
+                          stackIn_26_0 = stackOut_25_0;
+                          break L0;
+                        } else {
+                          stackOut_24_0 = 1;
+                          stackIn_26_0 = stackOut_24_0;
+                          break L0;
+                        }
+                      }
+                      return stackIn_26_0 != 0;
                     }
                   } else {
-                    var4 = oc.field_m[param3] + am.field_I[param3] + em.field_b[param3];
-                    var5 = em.field_b[param1] + (am.field_I[param1] + oc.field_m[param1]);
-                    if (var4 >= var5) {
-                      if (var4 > var5) {
-                        return false;
-                      } else {
-                        L1: {
-                          if (param3 >= param1) {
-                            stackOut_26_0 = 0;
-                            stackIn_27_0 = stackOut_26_0;
-                            break L1;
-                          } else {
-                            stackOut_25_0 = 1;
-                            stackIn_27_0 = stackOut_25_0;
-                            break L1;
-                          }
-                        }
-                        return stackIn_27_0 != 0;
-                      }
-                    } else {
-                      return true;
-                    }
+                    return true;
                   }
                 } else {
                   return false;
@@ -1568,53 +1536,27 @@ final class ek {
             if (ik.field_cb[param3] <= ik.field_cb[param1]) {
               if (an.field_n[param3] >= an.field_n[param1]) {
                 if (an.field_n[param3] <= an.field_n[param1]) {
-                  if (param0 < -77) {
-                    var4 = oc.field_m[param3] + am.field_I[param3] + em.field_b[param3];
-                    var5 = em.field_b[param1] + (am.field_I[param1] + oc.field_m[param1]);
-                    if (var4 >= var5) {
-                      if (var4 > var5) {
-                        return false;
-                      } else {
-                        L2: {
-                          if (param3 >= param1) {
-                            stackOut_54_0 = 0;
-                            stackIn_55_0 = stackOut_54_0;
-                            break L2;
-                          } else {
-                            stackOut_53_0 = 1;
-                            stackIn_55_0 = stackOut_53_0;
-                            break L2;
-                          }
-                        }
-                        return stackIn_55_0 != 0;
-                      }
+                  var4 = oc.field_m[param3] + am.field_I[param3] + em.field_b[param3];
+                  var5 = em.field_b[param1] + (am.field_I[param1] + oc.field_m[param1]);
+                  if (var4 >= var5) {
+                    if (var4 > var5) {
+                      return false;
                     } else {
-                      return true;
+                      L1: {
+                        if (param3 >= param1) {
+                          stackOut_34_0 = 0;
+                          stackIn_35_0 = stackOut_34_0;
+                          break L1;
+                        } else {
+                          stackOut_33_0 = 1;
+                          stackIn_35_0 = stackOut_33_0;
+                          break L1;
+                        }
+                      }
+                      return stackIn_35_0 != 0;
                     }
                   } else {
-                    int[] discarded$3 = ek.c(-125);
-                    var4 = oc.field_m[param3] + am.field_I[param3] + em.field_b[param3];
-                    var5 = em.field_b[param1] + (am.field_I[param1] + oc.field_m[param1]);
-                    if (var4 >= var5) {
-                      if (var4 > var5) {
-                        return false;
-                      } else {
-                        L3: {
-                          if (param3 >= param1) {
-                            stackOut_45_0 = 0;
-                            stackIn_46_0 = stackOut_45_0;
-                            break L3;
-                          } else {
-                            stackOut_44_0 = 1;
-                            stackIn_46_0 = stackOut_44_0;
-                            break L3;
-                          }
-                        }
-                        return stackIn_46_0 != 0;
-                      }
-                    } else {
-                      return true;
-                    }
+                    return true;
                   }
                 } else {
                   return false;

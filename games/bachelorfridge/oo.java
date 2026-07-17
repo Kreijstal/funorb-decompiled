@@ -135,14 +135,6 @@ final class oo extends bca {
             var7 = 0;
             L1: while (true) {
               if (var6.length <= var7) {
-                L2: {
-                  if (param1 == -77) {
-                    break L2;
-                  } else {
-                    field_q = null;
-                    break L2;
-                  }
-                }
                 stackOut_9_0 = new hs(param3, param0, var6, var5);
                 stackIn_10_0 = stackOut_9_0;
                 break L0;
@@ -150,7 +142,7 @@ final class oo extends bca {
                 var8 = new cda();
                 var8.field_a = var11.e((byte) 66);
                 var9 = 0;
-                L3: while (true) {
+                L2: while (true) {
                   if (var9 >= 11) {
                     var6[var7] = var8;
                     var7++;
@@ -162,7 +154,7 @@ final class oo extends bca {
                     var8.field_b[var9].field_e = var11.c((byte) -85);
                     var8.field_b[var9].field_j = var11.f(52);
                     var9++;
-                    continue L3;
+                    continue L2;
                   }
                 }
               }
@@ -170,10 +162,10 @@ final class oo extends bca {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
+          L3: {
             var4 = decompiledCaughtException;
             stackOut_11_0 = (RuntimeException) var4;
-            stackOut_11_1 = new StringBuilder().append("oo.B(").append(param0).append(44).append(param1).append(44);
+            stackOut_11_1 = new StringBuilder().append("oo.B(").append(param0).append(44).append(-77).append(44);
             stackIn_13_0 = stackOut_11_0;
             stackIn_13_1 = stackOut_11_1;
             stackIn_12_0 = stackOut_11_0;
@@ -185,7 +177,7 @@ final class oo extends bca {
               stackIn_14_0 = stackOut_13_0;
               stackIn_14_1 = stackOut_13_1;
               stackIn_14_2 = stackOut_13_2;
-              break L4;
+              break L3;
             } else {
               stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
               stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
@@ -193,7 +185,7 @@ final class oo extends bca {
               stackIn_14_0 = stackOut_12_0;
               stackIn_14_1 = stackOut_12_1;
               stackIn_14_2 = stackOut_12_2;
-              break L4;
+              break L3;
             }
           }
           throw pe.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param3 + 41);
@@ -361,7 +353,7 @@ final class oo extends bca {
         }
     }
 
-    public static void d(byte param0) {
+    public static void d() {
         field_q = null;
         int var1 = -102;
     }

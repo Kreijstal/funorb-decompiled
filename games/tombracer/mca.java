@@ -15,12 +15,13 @@ final class mca {
         if (0 == param1) {
           return true;
         } else {
-          if (pl.a((byte) 64) != param1) {
+          int discarded$4 = 64;
+          if (pl.a() != param1) {
             L0: {
               if (param0 == 6) {
                 break L0;
               } else {
-                boolean discarded$2 = mca.a((byte) 65, -116);
+                boolean discarded$5 = mca.a((byte) 65, -116);
                 break L0;
               }
             }
@@ -135,7 +136,7 @@ final class mca {
         }
     }
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
     }
 

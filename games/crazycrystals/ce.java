@@ -101,7 +101,7 @@ final class ce extends dj {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_eb = null;
         field_bb = null;
     }

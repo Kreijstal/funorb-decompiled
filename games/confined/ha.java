@@ -12,7 +12,7 @@ final class ha {
     static String[] field_d;
     static int[] field_c;
 
-    public static void a(int param0) {
+    public static void a() {
         field_d = null;
         field_c = null;
         field_f = null;
@@ -85,7 +85,7 @@ final class ha {
         return stackIn_3_0;
     }
 
-    final static String a(long param0, int param1) {
+    final static String a(long param0) {
         jg.field_c.setTime(new Date(param0));
         int var3 = jg.field_c.get(7);
         int var4 = jg.field_c.get(5);

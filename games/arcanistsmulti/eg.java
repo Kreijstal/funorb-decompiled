@@ -671,7 +671,7 @@ final class eg {
         if (!((eg) this).c(-10923)) {
             return false;
         }
-        if (param2 >= param1) {
+        if (param2 >= 0) {
             if (param0 >= 0) {
                 if (((eg) this).field_i.field_i.length > param2) {
                     if (param0 < ((eg) this).field_i.field_i[param2]) {
@@ -703,9 +703,11 @@ final class eg {
         return false;
     }
 
-    final static void b(int param0) {
-        int var1 = mb.j((byte) 19);
-        int var2 = mo.b(25117);
+    final static void b() {
+        int discarded$0 = 19;
+        int var1 = mb.j();
+        int discarded$1 = 25117;
+        int var2 = mo.b();
         ol.field_f.a(-mj.field_r + bk.field_I, -tg.field_d + qe.field_o, -98, var1 - -(mj.field_r << 1), (tg.field_d << 1) + var2);
         mn.d(-1);
     }
@@ -1284,100 +1286,92 @@ final class eg {
     private final synchronized byte[] a(int param0, int param1, int param2, int[] param3) {
         Object var5 = null;
         byte[] var7 = null;
-        Object stackIn_5_0 = null;
+        Object stackIn_24_0 = null;
+        Object stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
         Object stackIn_27_0 = null;
-        Object stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
-        Object stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
-        Object stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        String stackIn_31_2 = null;
+        StringBuilder stackIn_27_1 = null;
+        Object stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
+        Object stackOut_23_0 = null;
+        Object stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        Object stackOut_27_0 = null;
+        StringBuilder stackOut_27_1 = null;
+        String stackOut_27_2 = null;
         Object stackOut_26_0 = null;
-        Object stackOut_4_0 = null;
-        Object stackOut_28_0 = null;
-        StringBuilder stackOut_28_1 = null;
-        Object stackOut_30_0 = null;
-        StringBuilder stackOut_30_1 = null;
-        String stackOut_30_2 = null;
-        Object stackOut_29_0 = null;
-        StringBuilder stackOut_29_1 = null;
-        String stackOut_29_2 = null;
+        StringBuilder stackOut_26_1 = null;
+        String stackOut_26_2 = null;
         try {
           L0: {
             if (this.a(param0, 0, param1)) {
-              if (param2 == -10452) {
-                L1: {
-                  L2: {
-                    var5 = null;
-                    if (((eg) this).field_b[param1] == null) {
-                      break L2;
-                    } else {
-                      if (null != ((eg) this).field_b[param1][param0]) {
-                        break L1;
-                      } else {
-                        break L2;
-                      }
-                    }
-                  }
-                  if (this.a(param0, param3, (byte) 80, param1)) {
-                    break L1;
+              L1: {
+                L2: {
+                  var5 = null;
+                  if (((eg) this).field_b[param1] == null) {
+                    break L2;
                   } else {
-                    this.c(param1, -125);
-                    if (this.a(param0, param3, (byte) 84, param1)) {
+                    if (null != ((eg) this).field_b[param1][param0]) {
                       break L1;
                     } else {
-                      return null;
+                      break L2;
                     }
                   }
                 }
-                if (((eg) this).field_b[param1] == null) {
-                  throw new RuntimeException("");
+                if (this.a(param0, param3, (byte) 80, param1)) {
+                  break L1;
                 } else {
-                  L3: {
-                    if (null != ((eg) this).field_b[param1][param0]) {
-                      var7 = td.a(((eg) this).field_b[param1][param0], param2 ^ -10399, false);
-                      var5 = (Object) (Object) var7;
-                      if (var7 != null) {
-                        break L3;
-                      } else {
-                        throw new RuntimeException("");
-                      }
-                    } else {
-                      break L3;
-                    }
+                  this.c(param1, -125);
+                  if (this.a(param0, param3, (byte) 84, param1)) {
+                    break L1;
+                  } else {
+                    return null;
                   }
-                  L4: {
-                    if (var5 == null) {
-                      break L4;
-                    } else {
-                      if (((eg) this).field_f == 1) {
-                        ((eg) this).field_b[param1][param0] = null;
-                        if (((eg) this).field_i.field_i[param1] != 1) {
-                          break L4;
-                        } else {
-                          ((eg) this).field_b[param1] = null;
-                          break L4;
-                        }
-                      } else {
-                        if (((eg) this).field_f != 2) {
-                          break L4;
-                        } else {
-                          ((eg) this).field_b[param1] = null;
-                          break L4;
-                        }
-                      }
-                    }
-                  }
-                  stackOut_26_0 = var5;
-                  stackIn_27_0 = stackOut_26_0;
-                  break L0;
                 }
+              }
+              if (((eg) this).field_b[param1] == null) {
+                throw new RuntimeException("");
               } else {
-                stackOut_4_0 = null;
-                stackIn_5_0 = stackOut_4_0;
-                return (byte[]) (Object) stackIn_5_0;
+                L3: {
+                  if (null != ((eg) this).field_b[param1][param0]) {
+                    var7 = td.a(((eg) this).field_b[param1][param0], 77, false);
+                    var5 = (Object) (Object) var7;
+                    if (var7 != null) {
+                      break L3;
+                    } else {
+                      throw new RuntimeException("");
+                    }
+                  } else {
+                    break L3;
+                  }
+                }
+                L4: {
+                  if (var5 == null) {
+                    break L4;
+                  } else {
+                    if (((eg) this).field_f == 1) {
+                      ((eg) this).field_b[param1][param0] = null;
+                      if (((eg) this).field_i.field_i[param1] != 1) {
+                        break L4;
+                      } else {
+                        ((eg) this).field_b[param1] = null;
+                        break L4;
+                      }
+                    } else {
+                      if (((eg) this).field_f != 2) {
+                        break L4;
+                      } else {
+                        ((eg) this).field_b[param1] = null;
+                        break L4;
+                      }
+                    }
+                  }
+                }
+                stackOut_23_0 = var5;
+                stackIn_24_0 = stackOut_23_0;
+                break L0;
               }
             } else {
               return null;
@@ -1387,33 +1381,33 @@ final class eg {
           decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
             var5 = (Object) (Object) decompiledCaughtException;
-            stackOut_28_0 = var5;
-            stackOut_28_1 = new StringBuilder().append("eg.BA(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
-            stackIn_30_0 = stackOut_28_0;
-            stackIn_30_1 = stackOut_28_1;
-            stackIn_29_0 = stackOut_28_0;
-            stackIn_29_1 = stackOut_28_1;
+            stackOut_25_0 = var5;
+            stackOut_25_1 = new StringBuilder().append("eg.BA(").append(param0).append(44).append(param1).append(44).append(-10452).append(44);
+            stackIn_27_0 = stackOut_25_0;
+            stackIn_27_1 = stackOut_25_1;
+            stackIn_26_0 = stackOut_25_0;
+            stackIn_26_1 = stackOut_25_1;
             if (param3 == null) {
-              stackOut_30_0 = stackIn_30_0;
-              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
-              stackOut_30_2 = "null";
-              stackIn_31_0 = stackOut_30_0;
-              stackIn_31_1 = stackOut_30_1;
-              stackIn_31_2 = stackOut_30_2;
+              stackOut_27_0 = stackIn_27_0;
+              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_2 = "null";
+              stackIn_28_0 = stackOut_27_0;
+              stackIn_28_1 = stackOut_27_1;
+              stackIn_28_2 = stackOut_27_2;
               break L5;
             } else {
-              stackOut_29_0 = stackIn_29_0;
-              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
-              stackOut_29_2 = "{...}";
-              stackIn_31_0 = stackOut_29_0;
-              stackIn_31_1 = stackOut_29_1;
-              stackIn_31_2 = stackOut_29_2;
+              stackOut_26_0 = stackIn_26_0;
+              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_2 = "{...}";
+              stackIn_28_0 = stackOut_26_0;
+              stackIn_28_1 = stackOut_26_1;
+              stackIn_28_2 = stackOut_26_2;
               break L5;
             }
           }
-          throw aa.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 41);
+          throw aa.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 41);
         }
-        return (byte[]) (Object) stackIn_27_0;
+        return (byte[]) (Object) stackIn_24_0;
     }
 
     final synchronized byte[] a(String param0, String param1, int param2) {
@@ -1656,7 +1650,8 @@ final class eg {
           L0: {
             L1: {
               if (11 == fj.field_j) {
-                pe.h(7807);
+                int discarded$2 = 7807;
+                pe.h();
                 break L1;
               } else {
                 break L1;

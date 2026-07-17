@@ -16,7 +16,7 @@ final class pj extends cb {
         return false;
     }
 
-    final static void e(byte param0) {
+    final static void e() {
         RuntimeException var1 = null;
         int var2 = 0;
         hg var3 = null;
@@ -89,7 +89,8 @@ final class pj extends cb {
                                       var20[1][var15 * 4 + 1] = kk.field_b[var11];
                                       var20[1][4 * var15 - -2] = hg.field_q[var11];
                                       var20[1][3 + 4 * var15] = vh.field_i[var11];
-                                      if (!ng.a(hm.field_c[var11], (byte) 7)) {
+                                      int discarded$2 = 7;
+                                      if (!ng.a(hm.field_c[var11])) {
                                         break L8;
                                       } else {
                                         if (0 != vh.field_i[var11] + (hg.field_q[var11] + kk.field_b[var11])) {
@@ -117,7 +118,8 @@ final class pj extends cb {
                                   var20[0][1 + var10 * 4] = kk.field_b[var11];
                                   var20[0][4 * var10 + 2] = hg.field_q[var11];
                                   var20[0][4 * var10 + 3] = vh.field_i[var11];
-                                  if (ng.a(hm.field_c[var11], (byte) 7)) {
+                                  int discarded$3 = 7;
+                                  if (ng.a(hm.field_c[var11])) {
                                     if (kk.field_b[var11] - -hg.field_q[var11] + vh.field_i[var11] == 0) {
                                       var6[0][var10] = null;
                                       var10--;
@@ -183,11 +185,11 @@ final class pj extends cb {
         }
     }
 
-    public static void h(int param0) {
+    public static void h() {
         field_y = null;
         field_z = null;
         field_x = null;
-        int var1 = 88 / ((-41 - param0) / 58);
+        int var1 = 88;
     }
 
     final static void a(byte param0, int param1, int param2, int param3, int param4) {
@@ -225,14 +227,6 @@ final class pj extends cb {
             var7 = var5_int;
             L3: while (true) {
               if (var6 <= var7) {
-                L4: {
-                  if (param0 == 127) {
-                    break L4;
-                  } else {
-                    pj.h(100);
-                    break L4;
-                  }
-                }
                 break L0;
               } else {
                 var8 = 152 + 48 * var7 / param4;
@@ -247,11 +241,11 @@ final class pj extends cb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw pf.a((Throwable) (Object) var5, "pj.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+          throw pf.a((Throwable) (Object) var5, "pj.A(" + 127 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
-    final static void d(byte param0) {
+    final static void d() {
         try {
             int var1_int = 0;
             RuntimeException var1 = null;

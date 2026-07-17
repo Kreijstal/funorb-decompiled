@@ -12,25 +12,20 @@ abstract class fh {
     static String[][] field_c;
     static ih field_g;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_i = null;
         field_f = null;
-        if (param0 != 86) {
-          return;
-        } else {
-          field_b = null;
-          field_h = null;
-          field_d = null;
-          field_g = null;
-          field_c = null;
-          field_e = null;
-          return;
-        }
+        field_b = null;
+        field_h = null;
+        field_d = null;
+        field_g = null;
+        field_c = null;
+        field_e = null;
     }
 
     abstract byte[] a(int param0);
 
-    final static void b(int param0) {
+    final static void b() {
         lj.a(17, 27);
     }
 

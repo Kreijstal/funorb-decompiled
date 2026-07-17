@@ -14,7 +14,7 @@ final class wq implements ms {
         return 140;
     }
 
-    public static void b(boolean param0) {
+    public static void b() {
         field_a = null;
         field_d = null;
     }
@@ -275,7 +275,7 @@ final class wq implements ms {
         }
     }
 
-    final static int a(String param0, uia param1, int param2) {
+    final static int a(String param0, uia param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;
@@ -387,7 +387,7 @@ final class wq implements ms {
         ((wq) this).field_b.a(((wq) this).a(false) / 2, 15 + ((wq) this).a(-8660) / 2, 1823844912);
     }
 
-    final static boolean b(int param0, int param1, int param2) {
+    final static boolean b(int param0, int param1) {
         return (param1 & 65536) != 0;
     }
 

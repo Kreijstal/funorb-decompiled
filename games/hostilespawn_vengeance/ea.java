@@ -9,7 +9,7 @@ final class ea {
     static float field_d;
     static bd field_e;
 
-    public static void a(int param0) {
+    public static void a() {
         field_f = null;
         field_b = null;
         field_a = null;
@@ -38,7 +38,8 @@ final class ea {
         try {
           L0: {
             L1: {
-              me.a((java.awt.Component) (Object) param0, 118);
+              int discarded$6 = 118;
+              me.a((java.awt.Component) (Object) param0);
               dc.a((java.awt.Component) (Object) param0, (byte) 48);
               if (null == h.field_b) {
                 break L1;
@@ -129,7 +130,7 @@ final class ea {
           L0: {
             var7 = s.field_b;
             var8 = var7;
-            var8.i(19319, param1);
+            var8.i(19319, 3);
             var8.field_i = var8.field_i + 1;
             var4 = var8.field_i;
             var8.d(103, 1);
@@ -190,7 +191,7 @@ final class ea {
               break L3;
             }
           }
-          throw wg.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 44 + param2 + 41);
+          throw wg.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + 3 + 44 + param2 + 41);
         }
     }
 

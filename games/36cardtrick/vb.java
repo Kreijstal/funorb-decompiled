@@ -205,7 +205,7 @@ final class vb {
         }
     }
 
-    final static void a(byte param0) {
+    final static void a() {
         Main.field_G = 0;
         ti.field_a = -1;
         t.field_e = null;

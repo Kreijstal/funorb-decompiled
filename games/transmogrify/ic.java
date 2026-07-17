@@ -89,15 +89,8 @@ final class ic {
     }
 
     final static int a(int param0, byte param1, int param2) {
-        int var3 = 0;
-        if (param1 >= -18) {
-          field_c = null;
-          var3 = param2 >> 31 & param0 - 1;
-          return var3 + ((param2 >>> 31) + param2) % param0;
-        } else {
-          var3 = param2 >> 31 & param0 - 1;
-          return var3 + ((param2 >>> 31) + param2) % param0;
-        }
+        int var3 = param2 >> 31 & param0 - 1;
+        return var3 + ((param2 >>> 31) + param2) % param0;
     }
 
     static {

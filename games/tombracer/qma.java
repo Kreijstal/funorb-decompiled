@@ -10,7 +10,7 @@ class qma implements d {
     private cn field_d;
     private cn field_g;
 
-    public static void a(byte param0) {
+    public static void a() {
         field_f = null;
     }
 
@@ -48,16 +48,13 @@ class qma implements d {
         return ((qma) this).field_a;
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void a(java.awt.Component param0) {
         param0.setFocusTraversalKeysEnabled(false);
         param0.addKeyListener((java.awt.event.KeyListener) (Object) nfa.field_n);
-        if (param1 > -4) {
-            return;
-        }
         try {
             param0.addFocusListener((java.awt.event.FocusListener) (Object) nfa.field_n);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "qma.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "qma.E(" + (param0 != null ? "{...}" : "null") + 44 + -71 + 41);
         }
     }
 

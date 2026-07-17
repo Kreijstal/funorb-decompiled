@@ -180,7 +180,7 @@ final class ed {
               stackOut_13_0 = (ht) param1;
               stackIn_15_0 = stackOut_13_0;
               stackIn_14_0 = stackOut_13_0;
-              if ((var4_int & param0) == 0) {
+              if ((var4_int & 32) == 0) {
                 stackOut_15_0 = (ht) (Object) stackIn_15_0;
                 stackOut_15_1 = 0;
                 stackIn_16_0 = stackOut_15_0;
@@ -269,10 +269,10 @@ final class ed {
             }
             L11: {
               var6 = stackIn_29_0;
-              param1.field_Wb = param3.d(param0 + 93);
+              param1.field_Wb = param3.d(125);
               param1.field_Gb = bva.b((byte) -107) - (long)param3.e(-105);
               if (var5 != 0) {
-                param1.field_Kb = param3.e(param0 ^ 64);
+                param1.field_Kb = param3.e(96);
                 break L11;
               } else {
                 param1.field_Kb = -1;
@@ -308,7 +308,7 @@ final class ed {
           L14: {
             var4 = decompiledCaughtException;
             stackOut_38_0 = (RuntimeException) var4;
-            stackOut_38_1 = new StringBuilder().append("ed.A(").append(param0).append(44);
+            stackOut_38_1 = new StringBuilder().append("ed.A(").append(32).append(44);
             stackIn_40_0 = stackOut_38_0;
             stackIn_40_1 = stackOut_38_1;
             stackIn_39_0 = stackOut_38_0;
@@ -360,7 +360,7 @@ final class ed {
         }
     }
 
-    final static mi a(cr param0, int param1) throws jj {
+    final static mi a(cr param0) throws jj {
         RuntimeException var2 = null;
         mi var4 = null;
         mi var5 = null;
@@ -415,7 +415,8 @@ final class ed {
                             } else {
                               if (param0.c((byte) -127).field_p != rs.field_a) {
                                 param0.field_c = param0.field_c - 1;
-                                var4.field_i.b((byte) -127, (vg) (Object) ed.a(param0, -31733));
+                                int discarded$1 = -31733;
+                                var4.field_i.b((byte) -127, (vg) (Object) ed.a(param0));
                                 if (param0.a((byte) 125)) {
                                   throw new jj(var4.field_h);
                                 } else {

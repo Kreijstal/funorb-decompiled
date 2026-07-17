@@ -269,7 +269,8 @@ final class ala extends dfa {
         int stackOut_4_5 = 0;
         int stackOut_4_6 = 0;
         pk.field_C = pk.field_C + 1;
-        bna.a((byte) 10);
+        int discarded$19 = 10;
+        bna.a();
         if (null != uu.field_a) {
           if (eo.d(73, uu.field_a.field_Mb)) {
             var4 = 1;
@@ -280,10 +281,12 @@ final class ala extends dfa {
                   break L0;
                 } else {
                   L1: {
+                    int discarded$20 = -88;
+                    int discarded$21 = 0;
                     stackOut_83_0 = 1;
                     stackOut_83_1 = 14;
                     stackOut_83_2 = pg.field_y;
-                    stackOut_83_3 = ga.r((byte) -88);
+                    stackOut_83_3 = ga.r();
                     stackOut_83_4 = 13;
                     stackOut_83_5 = 61;
                     stackIn_85_0 = stackOut_83_0;
@@ -298,7 +301,7 @@ final class ala extends dfa {
                     stackIn_84_3 = stackOut_83_3;
                     stackIn_84_4 = stackOut_83_4;
                     stackIn_84_5 = stackOut_83_5;
-                    if (50 >= ada.b(false)) {
+                    if (50 >= ada.b()) {
                       stackOut_85_0 = stackIn_85_0;
                       stackOut_85_1 = stackIn_85_1;
                       stackOut_85_2 = stackIn_85_2;
@@ -356,7 +359,8 @@ final class ala extends dfa {
               }
               L4: {
                 if (qp.field_s) {
-                  wja.a(jk.field_i, 15165);
+                  int discarded$22 = 15165;
+                  wja.a(jk.field_i);
                   qp.field_s = false;
                   break L4;
                 } else {
@@ -370,10 +374,12 @@ final class ala extends dfa {
                   break L5;
                 } else {
                   L6: {
+                    int discarded$23 = -88;
+                    int discarded$24 = 0;
                     stackOut_68_0 = 1;
                     stackOut_68_1 = 14;
                     stackOut_68_2 = pg.field_y;
-                    stackOut_68_3 = ga.r((byte) -88);
+                    stackOut_68_3 = ga.r();
                     stackOut_68_4 = 13;
                     stackOut_68_5 = 61;
                     stackIn_70_0 = stackOut_68_0;
@@ -388,7 +394,7 @@ final class ala extends dfa {
                     stackIn_69_3 = stackOut_68_3;
                     stackIn_69_4 = stackOut_68_4;
                     stackIn_69_5 = stackOut_68_5;
-                    if (50 >= ada.b(false)) {
+                    if (50 >= ada.b()) {
                       stackOut_70_0 = stackIn_70_0;
                       stackOut_70_1 = stackIn_70_1;
                       stackOut_70_2 = stackIn_70_2;
@@ -446,7 +452,8 @@ final class ala extends dfa {
               }
               L9: {
                 if (qp.field_s) {
-                  wja.a(jk.field_i, 15165);
+                  int discarded$25 = 15165;
+                  wja.a(jk.field_i);
                   qp.field_s = false;
                   break L9;
                 } else {
@@ -464,10 +471,12 @@ final class ala extends dfa {
                   break L10;
                 } else {
                   L11: {
+                    int discarded$26 = -88;
+                    int discarded$27 = 0;
                     stackOut_51_0 = 1;
                     stackOut_51_1 = 14;
                     stackOut_51_2 = pg.field_y;
-                    stackOut_51_3 = ga.r((byte) -88);
+                    stackOut_51_3 = ga.r();
                     stackOut_51_4 = 13;
                     stackOut_51_5 = 61;
                     stackIn_53_0 = stackOut_51_0;
@@ -482,7 +491,7 @@ final class ala extends dfa {
                     stackIn_52_3 = stackOut_51_3;
                     stackIn_52_4 = stackOut_51_4;
                     stackIn_52_5 = stackOut_51_5;
-                    if (50 >= ada.b(false)) {
+                    if (50 >= ada.b()) {
                       stackOut_53_0 = stackIn_53_0;
                       stackOut_53_1 = stackIn_53_1;
                       stackOut_53_2 = stackIn_53_2;
@@ -540,7 +549,8 @@ final class ala extends dfa {
               }
               L14: {
                 if (qp.field_s) {
-                  wja.a(jk.field_i, 15165);
+                  int discarded$28 = 15165;
+                  wja.a(jk.field_i);
                   qp.field_s = false;
                   break L14;
                 } else {
@@ -554,10 +564,12 @@ final class ala extends dfa {
                   break L15;
                 } else {
                   L16: {
+                    int discarded$29 = -88;
+                    int discarded$30 = 0;
                     stackOut_36_0 = 1;
                     stackOut_36_1 = 14;
                     stackOut_36_2 = pg.field_y;
-                    stackOut_36_3 = ga.r((byte) -88);
+                    stackOut_36_3 = ga.r();
                     stackOut_36_4 = 13;
                     stackOut_36_5 = 61;
                     stackIn_38_0 = stackOut_36_0;
@@ -572,7 +584,7 @@ final class ala extends dfa {
                     stackIn_37_3 = stackOut_36_3;
                     stackIn_37_4 = stackOut_36_4;
                     stackIn_37_5 = stackOut_36_5;
-                    if (50 >= ada.b(false)) {
+                    if (50 >= ada.b()) {
                       stackOut_38_0 = stackIn_38_0;
                       stackOut_38_1 = stackIn_38_1;
                       stackOut_38_2 = stackIn_38_2;
@@ -630,7 +642,8 @@ final class ala extends dfa {
               }
               L19: {
                 if (qp.field_s) {
-                  wja.a(jk.field_i, 15165);
+                  int discarded$31 = 15165;
+                  wja.a(jk.field_i);
                   qp.field_s = false;
                   break L19;
                 } else {
@@ -649,10 +662,12 @@ final class ala extends dfa {
                 break L20;
               } else {
                 L21: {
+                  int discarded$32 = -88;
+                  int discarded$33 = 0;
                   stackOut_18_0 = 1;
                   stackOut_18_1 = 14;
                   stackOut_18_2 = pg.field_y;
-                  stackOut_18_3 = ga.r((byte) -88);
+                  stackOut_18_3 = ga.r();
                   stackOut_18_4 = 13;
                   stackOut_18_5 = 61;
                   stackIn_20_0 = stackOut_18_0;
@@ -667,7 +682,7 @@ final class ala extends dfa {
                   stackIn_19_3 = stackOut_18_3;
                   stackIn_19_4 = stackOut_18_4;
                   stackIn_19_5 = stackOut_18_5;
-                  if (50 >= ada.b(false)) {
+                  if (50 >= ada.b()) {
                     stackOut_20_0 = stackIn_20_0;
                     stackOut_20_1 = stackIn_20_1;
                     stackOut_20_2 = stackIn_20_2;
@@ -725,7 +740,8 @@ final class ala extends dfa {
             }
             L24: {
               if (qp.field_s) {
-                wja.a(jk.field_i, 15165);
+                int discarded$34 = 15165;
+                wja.a(jk.field_i);
                 qp.field_s = false;
                 break L24;
               } else {
@@ -739,10 +755,12 @@ final class ala extends dfa {
                 break L25;
               } else {
                 L26: {
+                  int discarded$35 = -88;
+                  int discarded$36 = 0;
                   stackOut_3_0 = 1;
                   stackOut_3_1 = 14;
                   stackOut_3_2 = pg.field_y;
-                  stackOut_3_3 = ga.r((byte) -88);
+                  stackOut_3_3 = ga.r();
                   stackOut_3_4 = 13;
                   stackOut_3_5 = 61;
                   stackIn_5_0 = stackOut_3_0;
@@ -757,7 +775,7 @@ final class ala extends dfa {
                   stackIn_4_3 = stackOut_3_3;
                   stackIn_4_4 = stackOut_3_4;
                   stackIn_4_5 = stackOut_3_5;
-                  if (50 >= ada.b(false)) {
+                  if (50 >= ada.b()) {
                     stackOut_5_0 = stackIn_5_0;
                     stackOut_5_1 = stackIn_5_1;
                     stackOut_5_2 = stackIn_5_2;
@@ -815,7 +833,8 @@ final class ala extends dfa {
             }
             L29: {
               if (qp.field_s) {
-                wja.a(jk.field_i, 15165);
+                int discarded$37 = 15165;
+                wja.a(jk.field_i);
                 qp.field_s = false;
                 break L29;
               } else {
@@ -936,13 +955,10 @@ final class ala extends dfa {
         }
         ena.field_p.a(param3, param1, param2, (byte) 110);
         bea.a();
-        if (param0 != -30) {
-            return;
-        }
         try {
             tqa.a(true, (byte) 99);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) (Object) runtimeException, "ala.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+            throw tba.a((Throwable) (Object) runtimeException, "ala.F(" + -30 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -950,12 +966,18 @@ final class ala extends dfa {
         if (param2 != 1) {
             return true;
         }
-        return dja.a(15, 12, (byte) -106, 13);
+        int discarded$0 = 13;
+        int discarded$1 = -106;
+        int discarded$2 = 12;
+        int discarded$3 = 15;
+        return dja.a();
     }
 
     final void a(byte param0, boolean param1) {
         this.a(true, 68);
-        fca.a(qr.a(0), 7);
+        int discarded$6 = 0;
+        int discarded$11 = 7;
+        fca.a(qr.a());
         if (param0 != -28) {
             ((ala) this).a((byte) 98);
         }
